@@ -1,0 +1,135 @@
+<Type Name="AnyReturnReader" FullName="System.Web.Services.Protocols.AnyReturnReader">
+  <TypeSignature Language="C#" Value="public class AnyReturnReader : System.Web.Services.Protocols.MimeReturnReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AnyReturnReader extends System.Web.Services.Protocols.MimeReturnReader" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.AnyReturnReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.MimeReturnReader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen minimalen Reader eingehende Antwort zurückgegebene Werte bereit, für webdiensteclients, die mithilfe von HTTP implementiert, aber ohne SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Services.Protocols.AnyReturnReader>und andere Klassen in der <xref:System.Web.Services.Protocols> Namespace unterstützt die .NET Framework-Implementierungen von Webdiensten über HTTP-GET und HTTP-POST-Vorgänge. Web Service Autoren und Leser serialisieren und deserialisieren, bzw. die Parameter oder Rückgabeobjekt Webmethoden und den HTTP-Anforderung oder Antwort Streams. Web Service Autoren und Leser HTTP für den Transport verwenden, jedoch nicht mit den standardmäßigen SOAP-Nachrichten austauschen.  
+  
+ Die <xref:System.Web.Services.Protocols.AnyReturnReader> -Klasse stellt eine minimale Implementierung der Schnittstelle, die übergeordnete abstrakte Klasse <xref:System.Web.Services.Protocols.MimeReturnReader>. Sie in der Regel nicht benötigen, verwenden Sie <xref:System.Web.Services.Protocols.AnyReturnReader> direkt. Wenn das Tool Wsdl.exe Clientproxycode entsprechend der HTTP-GET oder HTTP-POST-Implementierungen generiert, gilt die <xref:System.Web.Services.Protocols.HttpMethodAttribute> jede Webmethode und standardmäßig legt des Attributs <xref:System.Web.Services.Protocols.HttpMethodAttribute.ReturnFormatter%2A> Eigenschaft, um <xref:System.Web.Services.Protocols.XmlReturnReader>, einer anderen Klasse abgeleitet <xref:System.Web.Services.Protocols.MimeReturnReader>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnyReturnReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.AnyReturnReader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.AnyReturnReader" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInitializer">
+      <MemberSignature Language="C#" Value="public override object GetInitializer (System.Web.Services.Protocols.LogicalMethodInfo methodInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetInitializer(class System.Web.Services.Protocols.LogicalMethodInfo methodInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.AnyReturnReader.GetInitializer(System.Web.Services.Protocols.LogicalMethodInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodInfo" Type="System.Web.Services.Protocols.LogicalMethodInfo" />
+      </Parameters>
+      <Docs>
+        <param name="methodInfo">Ein <see cref="T:System.Web.Services.Protocols.LogicalMethodInfo" /> , die angibt, dass der Webmethode, für die die Initialisierung abgerufen wird.</param>
+        <summary>Gibt zurück, den an übergebenen Parameter der <see cref="M:System.Web.Services.Protocols.AnyReturnReader.Initialize(System.Object)" /> Methode.</summary>
+        <returns>Der Parameter zu übergeben, um die <see cref="M:System.Web.Services.Protocols.AnyReturnReader.Initialize(System.Object)" /> Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Initialisierer ist ein Objekt übergeben, die als Parameter an die <xref:System.Web.Services.Protocols.AnyReturnReader.Initialize%2A> Methode. Für die <xref:System.Web.Services.Protocols.AnyReturnReader> Klasse, die Initialisierung ist die Instanz, die durch das Schlüsselwort bezeichnet `this`, es sei denn, die <xref:System.Web.Services.Protocols.LogicalMethodInfo> Parameterwert hat einen void-Rückgabetyp, in dem Fall Initialisierer, um festgelegt ist `null`.  
+  
+ Die <xref:System.Web.Services.Protocols.AnyReturnReader.GetInitializer%2A> Methode wird aufgerufen, während der dienstinitialisierung. Später bei der Verarbeitung eine Antwort, die Initialisierung <xref:System.Web.Services.Protocols.AnyReturnReader> Objekt wird zum Übergeben der <xref:System.Web.Services.Protocols.AnyReturnReader.Initialize%2A> Methode einer anderen <xref:System.Web.Services.Protocols.AnyReturnReader> Instanz. Die andere Instanz hat den Aufruf von der <xref:System.Web.Services.Protocols.AnyReturnReader.Read%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.AnyReturnReader.Initialize(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Eine andere Instanz von der <see cref="T:System.Web.Services.Protocols.AnyReturnReader" /> -Klasse, auf denen die <see cref="M:System.Web.Services.Protocols.AnyReturnReader.GetInitializer(System.Web.Services.Protocols.LogicalMethodInfo)" /> -Methode zuvor aufgerufen wurde.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Web.Services.Protocols.AnyReturnReader" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.AnyReturnReader.Initialize%2A> Methode hat keine Funktion.  
+  
+ Diese Methode wird zu dem Zeitpunkt aufgerufen, wenn eine Antwort verarbeitet wird. Der Eingabeparameter `initializer`, wird eine andere Instanz von <xref:System.Web.Services.Protocols.AnyReturnReader>, während der Clientinitialisierung abgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override object Read (System.Net.WebResponse response, System.IO.Stream responseStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Read(class System.Net.WebResponse response, class System.IO.Stream responseStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.AnyReturnReader.Read(System.Net.WebResponse,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="response" Type="System.Net.WebResponse" />
+        <Parameter Name="responseStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="response">Eine Darstellung der HTTP-Antwort gesendet, die von einem Webdienst, das die ausgabemeldung für einen Vorgang enthält.</param>
+        <param name="responseStream">Ein zurück, deren Inhalt der Hauptteil der HTTP-Antwort ist-Ausgabestream dargestellt werden, indem die <c>Antwort</c> Parameter.</param>
+        <summary>Gibt den HTTP-Antwort-Eingabedatenstrom.</summary>
+        <returns>Der HTTP-Antwort Eingabedatenstrom.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.AnyReturnReader> Implementierung der Klasse die <xref:System.Web.Services.Protocols.AnyReturnReader.Read%2A> Methode führt keine Lesevorgänge. Gibt stattdessen einfach die <xref:System.IO.Stream> Objekt als Parameter übergeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

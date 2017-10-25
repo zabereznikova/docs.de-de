@@ -1,0 +1,2341 @@
+<Type Name="DataRow" FullName="System.Data.DataRow">
+  <TypeSignature Language="C#" Value="public class DataRow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataRow extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataRow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Zeile mit Daten in einem <see cref="T:System.Data.DataTable" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataRow> und <xref:System.Data.DataColumn> Objekte sind die primären Komponenten von einer <xref:System.Data.DataTable>. Verwenden der <xref:System.Data.DataRow> Objekt und seine Eigenschaften und Methoden abzurufen und ausgewertet; und einfügen, löschen und aktualisieren Sie die Werte in der <xref:System.Data.DataTable>. Die <xref:System.Data.DataRowCollection> stellt den tatsächlichen <xref:System.Data.DataRow> Objekte in der <xref:System.Data.DataTable>, und die <xref:System.Data.DataColumnCollection> enthält die <xref:System.Data.DataColumn> Objekte, die das Schema der beschreiben die <xref:System.Data.DataTable>. Verwenden Sie die überladene <xref:System.Data.DataRow.Item%2A> zurückkehren, oder legen Sie den Wert der Eigenschaft eine <xref:System.Data.DataColumn>.  
+  
+ Verwenden der <xref:System.Data.DataRow.HasVersion%2A> und <xref:System.Data.DataRow.IsNull%2A> Eigenschaften, um den Status einer bestimmten Zeilenwerts zu bestimmen und die <xref:System.Data.DataRow.RowState*> Eigenschaft zum Ermitteln des Status der Zeile relativ zu seinem übergeordneten <xref:System.Data.DataTable>.  
+  
+ Zum Erstellen eines neuen <xref:System.Data.DataRow>, verwenden Sie die <xref:System.Data.DataTable.NewRow%2A> Methode der <xref:System.Data.DataTable> Objekt. Nach dem Erstellen eines neuen <xref:System.Data.DataRow>, verwenden Sie die <xref:System.Data.DataRowCollection.Add%2A> Methode zum Hinzufügen der neuen <xref:System.Data.DataRow> auf die <xref:System.Data.DataRowCollection>. Rufen Sie zum Schluss die <xref:System.Data.DataRow.AcceptChanges%2A> Methode der <xref:System.Data.DataTable> Objekt, das Hinzufügen zu bestätigen. Weitere Informationen zum Hinzufügen von Daten an eine <xref:System.Data.DataTable>, finden Sie unter [Hinzufügen von Daten zu einer "DataTable"](~/docs/framework/data/adonet/dataset-datatable-dataview/adding-data-to-a-datatable.md).  
+  
+ Können gelöscht werden eine <xref:System.Data.DataRow> aus der <xref:System.Data.DataRowCollection> durch Aufrufen der <xref:System.Data.DataRowCollection.Remove%2A> Methode der <xref:System.Data.DataRowCollection>, oder durch Aufrufen der <xref:System.Data.DataRow.Delete%2A> Methode der <xref:System.Data.DataRow> Objekt. Die <xref:System.Data.DataRowCollection.Remove%2A> Methode entfernt die Zeile aus der Auflistung. Im Gegensatz dazu <xref:System.Data.DataRow.Delete%2A> markiert die <xref:System.Data.DataRow> entfernt. Das eigentliche löschen erfolgt beim Aufruf von <xref:System.Data.DataRow.AcceptChanges%2A> Methode. Durch Aufrufen von <xref:System.Data.DataRow.Delete%2A>, Sie können programmgesteuert überprüfen, welche Zeilen entfernen, bevor Sie tatsächlich zu löschen markiert sind. Weitere Informationen finden Sie unter ["DataRow"-Löschung](~/docs/framework/data/adonet/dataset-datatable-dataview/datarow-deletion.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.DataRow> durch Aufrufen der <xref:System.Data.DataTable.NewRow%2A> Methode der <xref:System.Data.DataTable> Objekt.  
+  
+ [!code-csharp[Classic WebData DataRow Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist für schreibgeschützte Vorgänge mit mehreren Threads sicher. Sie müssen alle Schreibvorgänge synchronisieren.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataRow (System.Data.DataRowBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class System.Data.DataRowBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.#ctor(System.Data.DataRowBuilder)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Data.DataRowBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">der Generator.</param>
+        <summary>Initialisiert eine neue Instanz von DataRow. Erstellt eine Zeile aus dem Generator. Nur zur internen Verwendung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptChanges">
+      <MemberSignature Language="C#" Value="public void AcceptChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AcceptChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.AcceptChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Commit für alle Änderungen, die versucht, diese Zeile seit dem letzten <see cref="M:System.Data.DataRow.AcceptChanges" /> aufgerufen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen von <xref:System.Data.DataRow.AcceptChanges%2A>die <xref:System.Data.DataRow.EndEdit%2A> Methode wird implizit aufgerufen, um alle Änderungen zu beenden. Wenn die < xref:System.Data.DataRow.RowState*> der Zeile wurde Added "oder" geändert "", die < xref:System.Data.DataRow.RowState*> wird unverändert. Wenn die <xref:System.Data.DataRow.RowState*> wurde gelöscht, wird die Zeile entfernt.  
+  
+ Weitere Informationen finden Sie unter der <xref:System.Data.DataRow.BeginEdit%2A>-Methode.  
+  
+ Die <xref:System.Data.DataTable> -Klasse verfügt auch über eine <xref:System.Data.DataTable.AcceptChanges%2A> Methode, die Änderungen auf die gesamte Tabelle beeinflusst. Weitere Informationen und ein Codebeispiel, das veranschaulicht, wie akzeptieren und Zurückweisen von Änderungen an Daten für die einzelnen Zeilen finden Sie unter [AcceptChanges und "RejectChanges"](~/docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt zuerst eine neue <xref:System.Data.DataTable> mit einer Spalte, und erstellt dann ein einzelnes <xref:System.Data.DataRow>. Als die <xref:System.Data.DataRow> erstellt, hinzugefügt, geändert und gelöscht wird, wird seine <xref:System.Data.DataRow.RowState*> gedruckt wird.  
+  
+ [!code-csharp[Classic WebData DataRow.AcceptChanges Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.AcceptChanges Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.AcceptChanges Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.AcceptChanges Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.RowNotInTableException">Die Zeile gehört nicht zur Tabelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEdit">
+      <MemberSignature Language="C#" Value="public void BeginEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BeginEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.BeginEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet einen Bearbeitungsvorgang an, auf eine <see cref="T:System.Data.DataRow" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Data.DataRow.BeginEdit%2A> Übernahme eine <xref:System.Data.DataRow> in den Bearbeitungsmodus. In diesem Modus werden Ereignisse vorübergehend angehalten und teilt dem Benutzer Änderungen an mehr als eine Zeile vornehmen, ohne dass Validierungsregeln. Z. B. Wenn Sie-Spalten in einer Zeile Guthaben und Sie sicher stellen, dass der Wert der Spalte für einen Gesamtbetrag gleich den Werten für die Debit müssen, können Sie jede Zeile in versetzen Bearbeitungsmodus wechseln, um die Überprüfung mit den Zeilenwerten anzuhalten, bis der Benutzer die Werte eines Commits versucht.  
+  
+ Die <xref:System.Data.DataRow.BeginEdit%2A> Methode wird implizit aufgerufen, wenn der Benutzer den Wert eines datengebundenen Steuerelements; ändert die <xref:System.Data.DataRow.EndEdit%2A> Methode wird implizit aufgerufen, wenn Sie Aufrufen der <xref:System.Data.DataTable.AcceptChanges%2A> Methode für die <xref:System.Data.DataTable> Objekt. In diesem Bearbeitungsmodus der <xref:System.Data.DataRow> speichert Darstellungen der ursprünglichen und neue Werte vorgeschlagen. Aus diesem Grund so lange die <xref:System.Data.DataRow.EndEdit%2A> Methode nicht aufgerufen wurde, können Sie die ursprüngliche oder einen vorgeschlagene Version abrufen, indem übergeben entweder `DataRowVersion.Original` oder `DataRowVersion.Proposed` für die `version` Parameter von der <xref:System.Data.DataRow.Item%2A> Eigenschaft. Sie können auch alle Änderungen an diesem Punkt abgebrochen, durch den Aufruf der <xref:System.Data.DataRow.CancelEdit%2A> Methode.  
+  
+ Um festzustellen, ob die Zeile einen ursprünglichen oder einen vorgeschlagenen Wert enthält, rufen Sie die <xref:System.Data.DataRow.HasVersion%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Data.DataRow.BeginEdit%2A> Methode vorübergehend ausgesetzt <xref:System.Data.DataTable.RowChanging> Ereignisse, aber die `delete` Vorgang nicht.  
+  
+   
+  
+## Examples  
+ Das Beispiel erstellt eine einfache <xref:System.Data.DataTable> mit einem <xref:System.Data.DataColumn> und fünf <xref:System.Data.DataRow> Objekte, und ein <xref:System.Data.UniqueConstraint>. Ein <xref:System.Data.DataTable.RowChanged> -Ereignishandler wird ebenfalls hinzugefügt, um zu überwachen, den Wert der Zeile geändert wird. Nach dem Aufrufen <xref:System.Data.DataRow.BeginEdit%2A> auf den vorhandenen Zeilen, die Einschränkung und das Ereignis vorübergehend deaktiviert, und die ursprünglichen und die vorgeschlagenen Werte werden gedruckt. Die <xref:System.Data.DataRow.BeginEdit%2A> wird erneut aufgerufen, um zwei Zeilen denselben Wert festzulegen. Wenn <xref:System.Data.DataRow.EndEdit%2A> aufgerufen wird, die <xref:System.Data.UniqueConstraint> auf identische Werte erzwungen wird.  
+  
+ [!code-csharp[Classic WebData DataRow.BeginEdit Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.BeginEdit Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.BeginEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.BeginEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.InRowChangingEventException">Die Methode wurde aufgerufen, in dem <see cref="E:System.Data.DataTable.RowChanging" /> Ereignis.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Die Methode wurde für eine gelöschte Zeile aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelEdit">
+      <MemberSignature Language="C#" Value="public void CancelEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.CancelEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht den aktuellen Bearbeitungsvorgang in der Zeile ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der <xref:System.Data.DataRow.BeginEdit%2A>-Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird bearbeitet den Wert einer Spalte in der letzten Zeile eine <xref:System.Windows.Forms.DataGrid> Steuerelement. Im Beispiel wird die <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A>, Methoden, um den Wert der Spalte zu bearbeiten und die Änderung auf die Zeile zu übernehmen.  
+  
+ [!code-csharp[Classic WebData DataRow.CancelEdit Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.CancelEdit Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.CancelEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.CancelEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.InRowChangingEventException">Die Methode wurde aufgerufen, in dem <see cref="E:System.Data.DataTable.RowChanging" /> Ereignis.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearErrors">
+      <MemberSignature Language="C#" Value="public void ClearErrors ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearErrors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.ClearErrors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Fehler für die Zeile an. Dies schließt die <see cref="P:System.Data.DataRow.RowError" /> und legen Sie die Fehler mit <see cref="M:System.Data.DataRow.SetColumnError(System.Int32,System.String)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Data.DataRow.SetColumnError%2A> und <xref:System.Data.DataRow.GetColumnError%2A> auf Fehler für einzelne Spalten festzulegen und zurückzugeben.  
+  
+ Legen Sie die <xref:System.Data.DataRow.RowError%2A> Eigenschaft, um einen Fehler festzulegen, die für die gesamte Zeile gilt.  
+  
+ Um zu bestimmen, ob alle Fehler für die Auflistung der Spalten vorhanden sind, verwenden die <xref:System.Data.DataRow.HasErrors%2A> Methode. Daher können Sie die <xref:System.Data.DataRow.GetColumnsInError%2A> Methode, um alle Spalten mit dem Fehler abzurufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRow.HasErrors%2A> nach Fehlern suchen. Wenn die Zeile Fehler enthält, die <xref:System.Data.DataRow.GetColumnsInError%2A> Methodenrückgabe das Array von Spalten mit Fehlern, die aufgelöst werden können. Die <xref:System.Data.DataRow.ClearErrors%2A> Methode wird aufgerufen, um alle Fehler zu löschen.  
+  
+ [!code-csharp[Classic WebData DataRow.ClearErrors Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.ClearErrors Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.ClearErrors Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.ClearErrors Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die <see cref="T:System.Data.DataRow" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die < xref:System.Data.DataRow.RowState*> der Zeile hinzugefügt, die < xref:System.Data.DataRow.RowState*> wird `Detached` und die Zeile aus der Tabelle entfernt wird, beim Aufrufen von <xref:System.Data.DataRow.AcceptChanges%2A>.  
+  
+ Die <xref:System.Data.DataRow.RowState*> wird `Deleted` nach der Verwendung der <xref:System.Data.DataRow.Delete%2A> Methode für ein vorhandenes <xref:System.Data.DataRow>. Es bleibt `Deleted` bis zum Aufruf von <xref:System.Data.DataRow.AcceptChanges%2A>. Zu diesem Zeitpunkt die <xref:System.Data.DataRow> aus der Tabelle entfernt wird.  
+  
+ <xref:System.Data.DataRow.Delete%2A>nicht aufgerufen werden in einer foreach-Schleife beim Durchlaufen einer <xref:System.Data.DataRowCollection> Objekt. <xref:System.Data.DataRow.Delete%2A>Ändert den Zustand des Sammlungssatzes an.  
+  
+ Eine gelöschte Zeile kann wiederhergestellt werden, durch den Aufruf <xref:System.Data.DataRow.RejectChanges%2A>.  
+  
+> [!NOTE]
+>  Die <xref:System.Data.DataRow.BeginEdit%2A> Methode vorübergehend ausgesetzt <xref:System.Data.DataTable.RowChanging> Ereignisse, der Löschvorgang hingegen nicht.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine einfache <xref:System.Data.DataTable> mit zwei Spalten und zehn Zeilen. Nach dem Löschen mehrerer <xref:System.Data.DataRow> Elemente mit dem <xref:System.Data.DataRow.Delete%2A> -Methode, eine der Zeilen durch den Aufruf wiederhergestellt <xref:System.Data.DataRow.RejectChanges%2A>.  
+  
+ [!code-csharp[Classic WebData DataRow.Delete Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.Delete Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.Delete Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.Delete Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Die <see cref="T:System.Data.DataRow" /> bereits gelöscht wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEdit">
+      <MemberSignature Language="C#" Value="public void EndEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.EndEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet den Bearbeitungsvorgang an der Zeile an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die Eigenschaft festlegen, wird eine Ausnahme ausgelöst, wenn eine Ausnahme, in auftritt der <xref:System.Data.DataTable.RowChanging> Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRow.EndEdit%2A> Methode, um die Bearbeitung des Enden einer <xref:System.Data.DataRow> -Wert, wenn die Validierungsfunktion gibt "true" zurück.  
+  
+ [!code-csharp[Classic WebData DataRow.CancelEdit Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.CancelEdit Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.CancelEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.CancelEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.InRowChangingEventException">Die Methode wurde aufgerufen, in dem <see cref="E:System.Data.DataTable.RowChanging" /> Ereignis.</exception>
+        <exception cref="T:System.Data.ConstraintException">Die Bearbeitung wurde eine Einschränkung verletzt.</exception>
+        <exception cref="T:System.Data.ReadOnlyException">Die Zeile in die Tabelle gehört, und die Bearbeitung wurde versucht, den Wert einer Spalte ohne Schreibzugriff zu ändern.</exception>
+        <exception cref="T:System.Data.NoNullAllowedException">Die Bearbeitung versucht, einen null-Wert in eine Spalte eingefügt werden soll, in denen <see cref="P:System.Data.DataColumn.AllowDBNull" /> lautet "false".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetChildRows (System.Data.DataRelation relation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetChildRows(class System.Data.DataRelation relation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetChildRows(System.Data.DataRelation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+      </Parameters>
+      <Docs>
+        <param name="relation">Der zu verwendende <see cref="T:System.Data.DataRelation" />.</param>
+        <summary>Ruft die untergeordneten Zeilen dieser <see cref="T:System.Data.DataRow" /> unter Verwendung des angegebenen <see cref="T:System.Data.DataRelation" />.</summary>
+        <returns>Ein Array von <see cref="T:System.Data.DataRow" /> Objekte oder ein Array der Länge 0 (null).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataTable> enthält auch eine Auflistung von <xref:System.Data.DataRelation> Objekte, die von zurückgegeben wird die <xref:System.Data.DataTable.ChildRelations%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRow.GetChildRows%2A> zurückzugebenden untergeordneten <xref:System.Data.DataRow> für jede untergeordnete Objekte <xref:System.Data.DataRelation> in einer <xref:System.Data.DataTable>. Der Wert der einzelnen Spalten in der Zeile wird dann ausgegeben.  
+  
+ [!code-csharp[Classic WebData DataRow.GetChildRows2 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.GetChildRows2 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.GetChildRows2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetChildRows2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Beziehung und die Zeile gehören nicht derselben Tabelle.</exception>
+        <exception cref="T:System.ArgumentNullException">Die Beziehung ist <see langword="null" />.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">Die Zeile gehört nicht zur Tabelle.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">Diese Version der Daten keinen die Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetChildRows (string relationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetChildRows(string relationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetChildRows(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relationName">Die <see cref="P:System.Data.DataRelation.RelationName" /> von der <see cref="T:System.Data.DataRelation" /> verwenden.</param>
+        <summary>Ruft die untergeordneten Zeilen ab einer <see cref="T:System.Data.DataRow" /> unter Verwendung des angegebenen <see cref="P:System.Data.DataRelation.RelationName" /> von einem <see cref="T:System.Data.DataRelation" />.</summary>
+        <returns>Ein Array von <see cref="T:System.Data.DataRow" /> Objekte oder ein Array der Länge 0 (null).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataTable> enthält auch eine Auflistung von <xref:System.Data.DataRelation> Objekte, die von zurückgegeben wird die <xref:System.Data.DataTable.ChildRelations%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Beziehung und die Zeile gehören nicht derselben Tabelle.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">Die Zeile gehört nicht zur Tabelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetChildRows (System.Data.DataRelation relation, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetChildRows(class System.Data.DataRelation relation, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetChildRows(System.Data.DataRelation,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="relation">Der zu verwendende <see cref="T:System.Data.DataRelation" />.</param>
+        <param name="version">Eines der <see cref="T:System.Data.DataRowVersion" /> Werte, die die Version der abzurufenden Daten angeben. Mögliche Werte sind <see langword="Default" />, <see langword="Original" />, <see langword="Current" /> und <see langword="Proposed" />.</param>
+        <summary>Ruft die untergeordneten Zeilen ab einer <see cref="T:System.Data.DataRow" /> unter Verwendung des angegebenen <see cref="T:System.Data.DataRelation" />, und <see cref="T:System.Data.DataRowVersion" />.</summary>
+        <returns>Ein Array von <see cref="T:System.Data.DataRow" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataTable> enthält auch eine Auflistung von <xref:System.Data.DataRelation> Objekte, die von zurückgegeben wird die <xref:System.Data.DataTable.ChildRelations%2A> Eigenschaft.  
+  
+ Verwenden der <xref:System.Data.DataRow.HasVersion%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Data.DataRowVersion> wirklich vorhanden ist.  
+  
+ Wenn <xref:System.Data.DataRowVersion.Default> angegeben ist, wird die Version, die verwendet wird, hängt die <xref:System.Data.DataRow.RowState*> der Zeile, auf der `GetChildRows` aufgerufen wird. Wenn die Zeile, auf der `GetChildRows` wird aufgerufen, hat eine `RowState` von `Modified`, `New`, oder `Unchanged`, die <xref:System.Data.DataRowVersion.Current> Version der Zeile dient zum Abrufen von verknüpften untergeordneten Zeilen mit übereinstimmenden Werten in die aktuellen Versionen. Wenn die Zeile, auf der `GetChildRows` wird aufgerufen, hat eine `RowState` von `Deleted`, die <xref:System.Data.DataRowVersion.Original> Version der Zeile dient zum Abrufen von verknüpften untergeordneten Zeilen mit übereinstimmenden Werten in die ursprünglichen Versionen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRow.GetChildRows%2A> zurückzugebenden untergeordneten <xref:System.Data.DataRow> für jede untergeordnete Objekte <xref:System.Data.DataRelation> in einer <xref:System.Data.DataTable>. Der Wert jeder Spalte mit der angegebenen Version in der Zeile wird dann ausgegeben.  
+  
+ [!code-csharp[Classic WebData DataRow.GetChildRows3 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.GetChildRows3 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.GetChildRows3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetChildRows3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Beziehung und die Zeile gehören nicht derselben Tabelle.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="relation" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">Die Zeile gehört nicht zur Tabelle.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">Die Datenzeile ist keine der angeforderten <see cref="T:System.Data.DataRowVersion" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetChildRows (string relationName, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetChildRows(string relationName, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetChildRows(System.String,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationName" Type="System.String" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="relationName">Die <see cref="P:System.Data.DataRelation.RelationName" /> von der <see cref="T:System.Data.DataRelation" /> verwenden.</param>
+        <param name="version">Eines der <see cref="T:System.Data.DataRowVersion" /> Werte, die die Version der abzurufenden Daten angeben. Mögliche Werte sind <see langword="Default" />, <see langword="Original" />, <see langword="Current" /> und <see langword="Proposed" />.</param>
+        <summary>Ruft die untergeordneten Zeilen ab einer <see cref="T:System.Data.DataRow" /> unter Verwendung des angegebenen <see cref="P:System.Data.DataRelation.RelationName" /> von einem <see cref="T:System.Data.DataRelation" />, und <see cref="T:System.Data.DataRowVersion" />.</summary>
+        <returns>Ein Array von <see cref="T:System.Data.DataRow" /> Objekte oder ein Array der Länge 0 (null).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataTable> enthält auch eine Auflistung von <xref:System.Data.DataRelation> Objekte, die von zurückgegeben wird die <xref:System.Data.DataTable.ChildRelations%2A> Eigenschaft.  
+  
+ Verwenden der <xref:System.Data.DataRow.HasVersion%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Data.DataRowVersion> wirklich vorhanden ist.  
+  
+ Wenn <xref:System.Data.DataRowVersion.Default> angegeben ist, wird die Version, die verwendet wird, hängt die <xref:System.Data.DataRow.RowState*> der Zeile, auf der `GetChildRows` aufgerufen wird. Wenn die Zeile, auf der `GetChildRows` wird aufgerufen, hat eine `RowState` von `Modified`, `New`, oder `Unchanged`, die <xref:System.Data.DataRowVersion.Current> Version der Zeile dient zum Abrufen von verknüpften untergeordneten Zeilen mit übereinstimmenden Werten in die aktuellen Versionen. Wenn die Zeile, auf der `GetChildRows` wird aufgerufen, hat eine `RowState` von `Deleted`, die <xref:System.Data.DataRowVersion.Original> Version der Zeile dient zum Abrufen von verknüpften untergeordneten Zeilen mit übereinstimmenden Werten in die ursprünglichen Versionen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Beziehung und die Zeile gehören nicht derselben Tabelle.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="relation" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">Die Zeile gehört nicht zur Tabelle.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">Die Datenzeile ist keine der angeforderten <see cref="T:System.Data.DataRowVersion" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnError">
+      <MemberSignature Language="C#" Value="public string GetColumnError (System.Data.DataColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetColumnError(class System.Data.DataColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetColumnError(System.Data.DataColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Ein <see cref="T:System.Data.DataColumn" />.</param>
+        <summary>Ruft die fehlerbeschreibung des angegebenen <see cref="T:System.Data.DataColumn" />.</summary>
+        <returns>Der Text der fehlerbeschreibung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Data.DataRow.SetColumnError%2A> Methode Spaltenfehler festgelegt.  
+  
+ Um zu bestimmen, ob alle Fehler für die Auflistung der Spalten vorhanden sind, verwenden die <xref:System.Data.DataRow.HasErrors%2A> Methode. Daher können Sie die <xref:System.Data.DataRow.GetColumnsInError%2A> Methode, um alle Spalten mit dem Fehler abzurufen. Alternativ können Sie die <xref:System.Data.DataTable.GetErrors%2A> Methode der <xref:System.Data.DataTable> gibt alle Zeilen mit Fehlern zurück.  
+  
+ Alle Fehler für die Auflistung der Spalten verwenden, um die <xref:System.Data.DataRow.ClearErrors%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Beschreibung für ein angegebenes <xref:System.Data.DataRow>.  
+  
+ [!code-csharp[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnError">
+      <MemberSignature Language="C#" Value="public string GetColumnError (int columnIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetColumnError(int32 columnIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetColumnError(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="columnIndex">Der nullbasierte Index der Spalte.</param>
+        <summary>Ruft die fehlerbeschreibung für die vom Index angegebene Spalte ab.</summary>
+        <returns>Der Text der fehlerbeschreibung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Data.DataRow.SetColumnError%2A> Methode Spaltenfehler festgelegt.  
+  
+ Um zu bestimmen, ob alle Fehler für die Auflistung der Spalten vorhanden sind, verwenden die <xref:System.Data.DataRow.HasErrors%2A> Methode. Daher können Sie die <xref:System.Data.DataRow.GetColumnsInError%2A> Methode, um alle Spalten mit dem Fehler abzurufen.  
+  
+ Alle Fehler für die Auflistung der Spalten verwenden, um die <xref:System.Data.DataRow.ClearErrors%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Beschreibung für ein angegebenes <xref:System.Data.DataRow>.  
+  
+ [!code-csharp[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Die <paramref name="columnIndex" /> Argument liegt außerhalb des Bereichs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnError">
+      <MemberSignature Language="C#" Value="public string GetColumnError (string columnName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetColumnError(string columnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetColumnError(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">Der Name der Spalte.</param>
+        <summary>Ruft die fehlerbeschreibung für eine Spalte, die durch den Namen angegebenen ab.</summary>
+        <returns>Der Text der fehlerbeschreibung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Data.DataRow.SetColumnError%2A> Methode Spaltenfehler festgelegt.  
+  
+ Um zu bestimmen, ob alle Fehler für die Auflistung der Spalten vorhanden sind, verwenden die <xref:System.Data.DataRow.HasErrors%2A> Methode. Daher können Sie die <xref:System.Data.DataRow.GetColumnsInError%2A> Methode, um alle Spalten mit dem Fehler abzurufen.  
+  
+ Alle Fehler für die Auflistung der Spalten verwenden, um die <xref:System.Data.DataRow.ClearErrors%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Beschreibung für ein angegebenes <xref:System.Data.DataRow>.  
+  
+ [!code-csharp[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnsInError">
+      <MemberSignature Language="C#" Value="public System.Data.DataColumn[] GetColumnsInError ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataColumn[] GetColumnsInError() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetColumnsInError" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataColumn[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array von Spalten, die Fehler enthalten.</summary>
+        <returns>Ein Array von <see cref="T:System.Data.DataColumn" /> Objekte, die Fehler enthalten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataRow.GetColumnsInError%2A> können Sie die Reduzierung der <xref:System.Data.DataColumn> Objekte, die für Fehler verarbeitet werden müssen, nur die Spalten, die einen Fehler zurückgeben. Fehler festgelegt werden können, um die einzelnen Spalten mit den <xref:System.Data.DataRow.SetColumnError%2A> Methode. Um die Anzahl der Verarbeitung weiter zu verringern, untersuchen die <xref:System.Data.DataRow.HasErrors%2A> Eigenschaft von der <xref:System.Data.DataRow> Klasse, um zu bestimmen, ob eine <xref:System.Data.DataRow> weist einen Fehler vor dem Aufrufen <xref:System.Data.DataRow.GetColumnsInError%2A>.  
+  
+ Verwenden der <xref:System.Data.DataRow.ClearErrors%2A> Methode, um alle Fehler in der Zeile zu löschen. Dies schließt <xref:System.Data.DataRow.RowError%2A> ein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRow.HasErrors%2A> nach Fehlern suchen. Wenn die Zeile Fehler enthält, die <xref:System.Data.DataRow.GetColumnsInError%2A> Methodenrückgabe das Array von Spalten mit Fehlern, die aufgelöst werden können. Die <xref:System.Data.DataRow.ClearErrors%2A> Methode wird aufgerufen, um alle Fehler zu löschen.  
+  
+ [!code-csharp[Classic WebData DataRow.ClearErrors Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.ClearErrors Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.ClearErrors Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.ClearErrors Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRow">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow GetParentRow (System.Data.DataRelation relation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow GetParentRow(class System.Data.DataRelation relation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRow(System.Data.DataRelation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+      </Parameters>
+      <Docs>
+        <param name="relation">Der zu verwendende <see cref="T:System.Data.DataRelation" />.</param>
+        <summary>Ruft die übergeordnete Zeile eine <see cref="T:System.Data.DataRow" /> unter Verwendung des angegebenen <see cref="T:System.Data.DataRelation" />.</summary>
+        <returns>Das übergeordnete Element <see cref="T:System.Data.DataRow" /> der aktuellen Zeile.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem <xref:System.Data.DataSet>, die Auflistung von allen übergeordneten <xref:System.Data.DataRelation> -Objekte für das Dataset, indem zurückgegeben wird die <xref:System.Data.DataRow.GetParentRows%2A> Methode.  
+  
+ Die <xref:System.Data.DataTable> enthält auch eine Auflistung von <xref:System.Data.DataRelation> zurückgegebenen Objekte die <xref:System.Data.DataTable.ParentRelations%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRow.GetParentRow%2A> zurückzugebenden untergeordneten <xref:System.Data.DataRow> für jede untergeordnete Objekte <xref:System.Data.DataRelation> in einer <xref:System.Data.DataTable>. Der Wert der einzelnen Spalten in der Zeile wird dann ausgegeben.  
+  
+ [!code-csharp[Classic WebData DataRow.GetParentRow2 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow2 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.GetParentRow2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="relation" /> gehört nicht zu den <see cref="T:System.Data.DataTable" />.  
+  
+ Die Zeile ist <see langword="null" />.</exception>
+        <exception cref="T:System.Data.DataException">Eine untergeordnete Zeile verfügt über mehrere übergeordnete Elemente.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">Diese Zeile gehört nicht zur untergeordneten Tabelle der <see cref="T:System.Data.DataRelation" /> Objekt.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">Die Zeile gehört nicht zu einer Tabelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRow">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow GetParentRow (string relationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow GetParentRow(string relationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRow(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relationName">Die <see cref="P:System.Data.DataRelation.RelationName" /> von einem <see cref="T:System.Data.DataRelation" />.</param>
+        <summary>Ruft die übergeordnete Zeile eine <see cref="T:System.Data.DataRow" /> unter Verwendung des angegebenen <see cref="P:System.Data.DataRelation.RelationName" /> von einem <see cref="T:System.Data.DataRelation" />.</summary>
+        <returns>Das übergeordnete Element <see cref="T:System.Data.DataRow" /> der aktuellen Zeile.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem <xref:System.Data.DataSet>, die Auflistung von allen übergeordneten <xref:System.Data.DataRelation> -Objekte für das Dataset, indem zurückgegeben wird die <xref:System.Data.DataRow.GetParentRows%2A> Methode.  
+  
+ Die <xref:System.Data.DataTable> enthält auch eine Auflistung von <xref:System.Data.DataRelation> zurückgegebenen Objekte die <xref:System.Data.DataTable.ParentRelations%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRow.GetParentRow%2A> So drucken Sie einen Wert von allen übergeordneten Zeilen jeder <xref:System.Data.DataRow> in einem <xref:System.Data.DataTable>.  
+  
+ [!code-csharp[Classic WebData DataRow.GetParentRow Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.GetParentRow Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Beziehung und die Zeile gehören nicht derselben Tabelle.</exception>
+        <exception cref="T:System.Data.DataException">Eine untergeordnete Zeile verfügt über mehrere übergeordnete Elemente.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">Die Zeile gehört nicht zur Tabelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRow">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow GetParentRow (System.Data.DataRelation relation, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow GetParentRow(class System.Data.DataRelation relation, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRow(System.Data.DataRelation,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="relation">Der zu verwendende <see cref="T:System.Data.DataRelation" />.</param>
+        <param name="version">Eines der <see cref="T:System.Data.DataRowVersion" /> Werte, die die Version der abzurufenden Daten angeben.</param>
+        <summary>Ruft die übergeordnete Zeile eine <see cref="T:System.Data.DataRow" /> unter Verwendung des angegebenen <see cref="T:System.Data.DataRelation" />, und <see cref="T:System.Data.DataRowVersion" />.</summary>
+        <returns>Das übergeordnete Element <see cref="T:System.Data.DataRow" /> der aktuellen Zeile.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem <xref:System.Data.DataSet>, die Auflistung von allen übergeordneten <xref:System.Data.DataRelation> -Objekte für das Dataset, indem zurückgegeben wird die <xref:System.Data.DataRow.GetParentRows%2A> Methode.  
+  
+ Die <xref:System.Data.DataTable> enthält auch eine Auflistung von <xref:System.Data.DataRelation> zurückgegebenen Objekte die <xref:System.Data.DataTable.ParentRelations%2A> Eigenschaft.  
+  
+ Verwenden der <xref:System.Data.DataRow.HasVersion%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Data.DataRowVersion> wirklich vorhanden ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRow.GetParentRow%2A> zurückzugebenden untergeordneten <xref:System.Data.DataRow> für jede untergeordnete Objekte <xref:System.Data.DataRelation> in einer <xref:System.Data.DataTable>. Der Wert der einzelnen Spalten in der Zeile wird dann ausgegeben.  
+  
+ [!code-csharp[Classic WebData DataRow.GetParentRow3 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow3 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.GetParentRow3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Zeile ist <see langword="null" />.  
+  
+ Die <paramref name="relation" /> gehört nicht zu dieser Tabelle übergeordneten Beziehungen.</exception>
+        <exception cref="T:System.Data.DataException">Eine untergeordnete Zeile verfügt über mehrere übergeordnete Elemente.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">Die untergeordnete Tabelle der Beziehung ist nicht die Tabelle, zu der die Zeile gehört.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">Die Zeile gehört nicht zu einer Tabelle.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">Diese Version der Daten keinen die Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRow">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow GetParentRow (string relationName, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow GetParentRow(string relationName, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRow(System.String,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationName" Type="System.String" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="relationName">Die <see cref="P:System.Data.DataRelation.RelationName" /> von einem <see cref="T:System.Data.DataRelation" />.</param>
+        <param name="version">Einer der <see cref="T:System.Data.DataRowVersion" />-Werte.</param>
+        <summary>Ruft die übergeordnete Zeile eine <see cref="T:System.Data.DataRow" /> unter Verwendung des angegebenen <see cref="P:System.Data.DataRelation.RelationName" /> von einem <see cref="T:System.Data.DataRelation" />, und <see cref="T:System.Data.DataRowVersion" />.</summary>
+        <returns>Das übergeordnete Element <see cref="T:System.Data.DataRow" /> der aktuellen Zeile.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem <xref:System.Data.DataSet>, die Auflistung von allen übergeordneten <xref:System.Data.DataRelation> -Objekte für das Dataset, indem zurückgegeben wird die <xref:System.Data.DataRow.GetParentRows%2A> Methode.  
+  
+ Die <xref:System.Data.DataTable> enthält auch eine Auflistung von <xref:System.Data.DataRelation> zurückgegebenen Objekte die <xref:System.Data.DataTable.ParentRelations%2A> Eigenschaft.  
+  
+ Verwenden der <xref:System.Data.DataRow.HasVersion%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Data.DataRowVersion> wirklich vorhanden ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRow.GetParentRow%2A> So drucken Sie einen Wert von allen übergeordneten Zeilen jeder <xref:System.Data.DataRow> in einem <xref:System.Data.DataTable>.  
+  
+ [!code-csharp[Classic WebData DataRow.GetParentRow1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.GetParentRow1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Beziehung und die Zeile gehören nicht derselben Tabelle.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="relation" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Data.DataException">Eine untergeordnete Zeile verfügt über mehrere übergeordnete Elemente.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">Die Zeile gehört nicht zur Tabelle.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">Die Datenzeile ist keine der angeforderten <see cref="T:System.Data.DataRowVersion" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetParentRows (System.Data.DataRelation relation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetParentRows(class System.Data.DataRelation relation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRows(System.Data.DataRelation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+      </Parameters>
+      <Docs>
+        <param name="relation">Der zu verwendende <see cref="T:System.Data.DataRelation" />.</param>
+        <summary>Ruft die übergeordnete Zeilen ab einer <see cref="T:System.Data.DataRow" /> unter Verwendung des angegebenen <see cref="T:System.Data.DataRelation" />.</summary>
+        <returns>Ein Array von <see cref="T:System.Data.DataRow" /> Objekte oder ein Array der Länge 0 (null).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem <xref:System.Data.DataSet>, die Auflistung von allen übergeordneten <xref:System.Data.DataRelation> -Objekte für das Dataset, indem zurückgegeben wird die <xref:System.Data.DataRow.GetParentRows%2A> Methode.  
+  
+ Die <xref:System.Data.DataTable> enthält auch eine Auflistung von <xref:System.Data.DataRelation> zurückgegebenen Objekte die <xref:System.Data.DataTable.ParentRelations%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRow.GetParentRows%2A> zurückzugebenden untergeordneten <xref:System.Data.DataRow> für jede untergeordnete Objekte <xref:System.Data.DataRelation> in einer <xref:System.Data.DataTable>. Der Wert der einzelnen Spalten in der Zeile wird dann ausgegeben.  
+  
+ [!code-vb[Classic WebData DataRow.GetParentRows2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRows2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Data.DataRelation" /> gehört nicht zu dieser Zeile <see cref="T:System.Data.DataSet" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Die Zeile ist <see langword="null" />.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">Die untergeordnete Tabelle der Beziehung ist nicht die Tabelle, zu der die Zeile gehört.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">Die Zeile gehört nicht zu einer <see cref="T:System.Data.DataTable" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetParentRows (string relationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetParentRows(string relationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRows(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relationName">Die <see cref="P:System.Data.DataRelation.RelationName" /> von einem <see cref="T:System.Data.DataRelation" />.</param>
+        <summary>Ruft die übergeordnete Zeilen ab einer <see cref="T:System.Data.DataRow" /> unter Verwendung des angegebenen <see cref="P:System.Data.DataRelation.RelationName" /> von einer <see cref="T:System.Data.DataRelation" />.</summary>
+        <returns>Ein Array von <see cref="T:System.Data.DataRow" /> Objekte oder ein Array der Länge 0 (null).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem <xref:System.Data.DataSet>, die Auflistung von allen übergeordneten <xref:System.Data.DataRelation> -Objekte für das Dataset, indem zurückgegeben wird die <xref:System.Data.DataRow.GetParentRows%2A> Methode.  
+  
+ Die <xref:System.Data.DataTable> enthält auch eine Auflistung von <xref:System.Data.DataRelation> zurückgegebenen Objekte die <xref:System.Data.DataTable.ParentRelations%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Beziehung und die Zeile gehören nicht derselben Tabelle.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">Die Zeile gehört nicht zur Tabelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetParentRows (System.Data.DataRelation relation, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetParentRows(class System.Data.DataRelation relation, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRows(System.Data.DataRelation,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="relation">Der zu verwendende <see cref="T:System.Data.DataRelation" />.</param>
+        <param name="version">Eines der <see cref="T:System.Data.DataRowVersion" /> Werte, die die Version der abzurufenden Daten angeben.</param>
+        <summary>Ruft die übergeordnete Zeilen ab einer <see cref="T:System.Data.DataRow" /> unter Verwendung des angegebenen <see cref="T:System.Data.DataRelation" />, und <see cref="T:System.Data.DataRowVersion" />.</summary>
+        <returns>Ein Array von <see cref="T:System.Data.DataRow" /> Objekte oder ein Array der Länge 0 (null).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem <xref:System.Data.DataSet>, die Auflistung von allen übergeordneten <xref:System.Data.DataRelation> -Objekte für das Dataset, indem zurückgegeben wird die <xref:System.Data.DataRow.GetParentRows%2A> Methode.  
+  
+ Die <xref:System.Data.DataTable> enthält auch eine Auflistung von <xref:System.Data.DataRelation> zurückgegebenen Objekte die <xref:System.Data.DataTable.ParentRelations%2A> Eigenschaft.  
+  
+ Verwenden der <xref:System.Data.DataRow.HasVersion%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Data.DataRowVersion> wirklich vorhanden ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRow.GetParentRows%2A> zurückzugebenden untergeordneten <xref:System.Data.DataRow> für jede untergeordnete Objekte <xref:System.Data.DataRelation> in einer <xref:System.Data.DataTable>. Der Wert der einzelnen Spalten in der Zeile wird dann ausgegeben.  
+  
+ [!code-vb[Classic WebData DataRow.GetParentRows3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRows3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Data.DataRelation" /> gehört nicht zu dieser Zeile <see cref="T:System.Data.DataSet" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Die Zeile ist <see langword="null" />.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">Die untergeordnete Tabelle der Beziehung ist nicht die Tabelle, zu der die Zeile gehört.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">Die Zeile gehört nicht zu einer <see cref="T:System.Data.DataTable" />.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">Die Datenzeile ist keine der angeforderten <see cref="T:System.Data.DataRowVersion" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetParentRows (string relationName, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetParentRows(string relationName, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRows(System.String,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationName" Type="System.String" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="relationName">Die <see cref="P:System.Data.DataRelation.RelationName" /> von einem <see cref="T:System.Data.DataRelation" />.</param>
+        <param name="version">Eines der <see cref="T:System.Data.DataRowVersion" /> Werte, die die Version der abzurufenden Daten angeben. Mögliche Werte sind <see langword="Default" />, <see langword="Original" />, <see langword="Current" /> und <see langword="Proposed" />.</param>
+        <summary>Ruft die übergeordnete Zeilen ab einer <see cref="T:System.Data.DataRow" /> unter Verwendung des angegebenen <see cref="P:System.Data.DataRelation.RelationName" /> von einer <see cref="T:System.Data.DataRelation" />, und <see cref="T:System.Data.DataRowVersion" />.</summary>
+        <returns>Ein Array von <see cref="T:System.Data.DataRow" /> Objekte oder ein Array der Länge 0 (null).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem <xref:System.Data.DataSet>, die Auflistung von allen übergeordneten <xref:System.Data.DataRelation> -Objekte für das Dataset, indem zurückgegeben wird die <xref:System.Data.DataRow.GetParentRows%2A> Methode.  
+  
+ Die <xref:System.Data.DataTable> enthält auch eine Auflistung von <xref:System.Data.DataRelation> zurückgegebenen Objekte die <xref:System.Data.DataTable.ParentRelations%2A> Eigenschaft.  
+  
+ Verwenden der <xref:System.Data.DataRow.HasVersion%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Data.DataRowVersion> wirklich vorhanden ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Beziehung und die Zeile gehören nicht derselben Tabelle.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="relation" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">Die Zeile gehört nicht zur Tabelle.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">Die Datenzeile ist keine der angeforderten <see cref="T:System.Data.DataRowVersion" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasErrors">
+      <MemberSignature Language="C#" Value="public bool HasErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.HasErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Fehler in einer Zeile vorliegen.</summary>
+        <value>
+          <see langword="true" />Wenn die Zeile einen Fehler enthält; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `HasErrors`Gibt `true` ggf. <xref:System.Data.DataColumn> Objekt in der Zeile enthält einen Fehler, oder wenn die <xref:System.Data.DataRow.RowError%2A> Eigenschaft von der <xref:System.Data.DataRow> ist eine leere Zeichenfolge.  
+  
+ Bei der Validierung von Daten können Sie einen Fehler in jeder Spalte in einer Zeile festlegen. Eine solche Spalte angezeigt, in der <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> steuern, die mit einem roten Ausrufezeichen, für den Benutzer darauf hinweisen, dass die Spalte Fehler gekennzeichnet ist.  
+  
+ Verwendung <xref:System.Data.DataRow.SetColumnError%2A> einen Fehler auf eine beliebige Spalte festlegen.  
+  
+ Verwenden der <xref:System.Data.DataRow.GetColumnError%2A> und `GetColumnsInError` Methoden, um Spalten mit Fehlern zurückzugeben.  
+  
+ Die <xref:System.Data.DataRow.ClearErrors%2A> Methode löscht alle Fehler für die Zeile.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRow.HasErrors%2A> nach Fehlern suchen. Wenn die Zeile Fehler enthält, die <xref:System.Data.DataRow.GetColumnsInError%2A> Methodenrückgabe das Array von Spalten mit Fehlern, die aufgelöst werden können. Die <xref:System.Data.DataRow.ClearErrors%2A> Methode wird aufgerufen, um alle Fehler zu löschen.  
+  
+ [!code-csharp[Classic WebData DataRow.HasErrors Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.HasErrors Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.HasErrors Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.HasErrors Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasVersion">
+      <MemberSignature Language="C#" Value="public bool HasVersion (System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasVersion(valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.HasVersion(System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">Eines der <see cref="T:System.Data.DataRowVersion" /> Werten, die die Zeilenversion angibt.</param>
+        <summary>Ruft einen Wert, der angibt, ob eine angegebene Version vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Version vorhanden ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der <xref:System.Data.DataRow.BeginEdit%2A>-Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRow.HasVersion%2A> Methode, um zu bestimmen, ob der aktuelle Wert einer Spalte und der vorgeschlagene Wert identisch sind. Wenn dies der Fall ist, wird die Bearbeitung abgebrochen. Andernfalls die <xref:System.Data.DataRow.AcceptChanges%2A> Methode wird aufgerufen, um die Bearbeitung zu beenden.  
+  
+ [!code-vb[Classic WebData DataRow.HasVersion Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.HasVersion Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull (System.Data.DataColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsNull(class System.Data.DataColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.IsNull(System.Data.DataColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Ein <see cref="T:System.Data.DataColumn" />.</param>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene <see cref="T:System.Data.DataColumn" /> enthält einen null-Wert.</summary>
+        <returns>
+          <see langword="true" />Wenn die Spalte einen null-Wert enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird jede Spalte jeder Zeile in jeder Tabelle mit einer <xref:System.Data.DataSet>. Wenn die Zeile auf einen null-Wert festgelegt ist, wird der Wert nicht gedruckt.  
+  
+ [!code-vb[Classic WebData DataRow.IsNull2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.IsNull2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull (int columnIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsNull(int32 columnIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.IsNull(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="columnIndex">Der nullbasierte Index der Spalte.</param>
+        <summary>Ruft einen Wert, der angibt, ob die Spalte am angegebenen Index einen null-Wert enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn die Spalte einen null-Wert enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ändert den Wert einer Spalte in einen null-Wert, und verwendet dann die <xref:System.Data.DataRow.IsNull%2A> Methode, um zu bestimmen, ob der Wert null ist.  
+  
+ [!code-vb[Classic WebData DataRow.IsNull Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.IsNull Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull (string columnName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsNull(string columnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.IsNull(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">Der Name der Spalte.</param>
+        <summary>Ruft einen Wert, der angibt, ob die Spalte einen null-Wert enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn die Spalte einen null-Wert enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ändert den Wert einer Spalte in einen null-Wert, und verwendet dann die <xref:System.Data.DataRow.IsNull%2A> Methode, um zu bestimmen, ob der Wert null ist.  
+  
+ [!code-vb[Classic WebData DataRow.IsNull1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.IsNull1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull (System.Data.DataColumn column, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsNull(class System.Data.DataColumn column, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.IsNull(System.Data.DataColumn,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="column">Ein <see cref="T:System.Data.DataColumn" />.</param>
+        <param name="version">Eines der <see cref="T:System.Data.DataRowVersion" /> Werten, die die Zeilenversion angibt. Mögliche Werte sind <see langword="Default" />, <see langword="Original" />, <see langword="Current" /> und <see langword="Proposed" />.</param>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene <see cref="T:System.Data.DataColumn" /> und <see cref="T:System.Data.DataRowVersion" /> enthält einen null-Wert.</summary>
+        <returns>
+          <see langword="true" />Wenn die Spalte einen null-Wert enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[System.Data.DataColumn column] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(class System.Data.DataColumn)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.Item(System.Data.DataColumn)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Ein <see cref="T:System.Data.DataColumn" /> , das Daten enthält.</param>
+        <summary>Ruft ab oder legt die in der angegebenen gespeicherten Daten <see cref="T:System.Data.DataColumn" />.</summary>
+        <value>Eine Instanz von <see cref="T:System.Object" />, die die Daten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die Eigenschaft festlegen, wird eine Ausnahme ausgelöst, wenn eine Ausnahme, in auftritt der <xref:System.Data.DataTable.ColumnChanging> Ereignis.  
+  
+ Wenn dies eine sofortige Bearbeitung ist, finden Sie unter <xref:System.Data.DataRow.EndEdit%2A> für die Ausnahmen, die generiert werden können.  
+  
+   
+  
+## Examples  
+ Die folgenden Beispiele veranschaulichen die Verwendung der <xref:System.Data.DataRow.Item%2A> Eigenschaft abrufen, und legen Sie den Wert, der einen bestimmten Index. Im erste Beispiel ruft den Wert der ersten Spalte in jede Zeile, die in ein Benutzer klickt auf eine <xref:System.Windows.Forms.DataGrid> Steuerelement. Die zweite legt einen Wert, der als Argument an die Methode übergeben.  
+  
+ [!code-vb[Classic WebData DataRow.this2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.this2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Spalte gehört nicht zu dieser Tabelle.</exception>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="column" /> ist null.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Es wurde versucht, einen Wert für eine gelöschte Zeile festzulegen.</exception>
+        <exception cref="T:System.InvalidCastException">Die Datentypen der Werte und die Spalte stimmen nicht überein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int columnIndex] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="columnIndex">Der nullbasierte Index der Spalte.</param>
+        <summary>Ruft ab oder legt die in der Spalte, die durch den Index angegebenen gespeicherten Daten.</summary>
+        <value>Eine Instanz von <see cref="T:System.Object" />, die die Daten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die Eigenschaft festlegen, wird eine Ausnahme ausgelöst, wenn eine Ausnahme, in auftritt der <xref:System.Data.DataTable.ColumnChanging> Ereignis.  
+  
+ Wenn dies eine Bearbeitung ist, finden Sie unter <xref:System.Data.DataRow.EndEdit%2A> für die Ausnahmen, die generiert werden können.  
+  
+   
+  
+## Examples  
+ Die folgenden Beispiele veranschaulichen die Verwendung der <xref:System.Data.DataRow.Item%2A> Eigenschaft abrufen, und legen Sie den Wert, der einen bestimmten Index. Im erste Beispiel ruft den Wert der ersten Spalte in jede Zeile, die in ein Benutzer klickt auf eine <xref:System.Windows.Forms.DataGrid> Steuerelement.  
+  
+ [!code-csharp[Classic WebData DataRow.this Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.this Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Tritt auf, wenn Sie versuchen, einen Wert für eine gelöschte Zeile festzulegen.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">Die <paramref name="columnIndex" /> Argument liegt außerhalb des Bereichs.</exception>
+        <exception cref="T:System.InvalidCastException">Tritt auf, wenn Sie den Wert und des neuen Werts festlegen <see cref="T:System.Type" /> entspricht nicht <see cref="P:System.Data.DataColumn.DataType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string columnName] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">Der Name der Spalte.</param>
+        <summary>Ruft ab oder legt die in der Spalte namentlich angegebene gespeicherten Daten.</summary>
+        <value>Eine Instanz von <see cref="T:System.Object" />, die die Daten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die Eigenschaft festlegen, wird eine Ausnahme ausgelöst, wenn eine Ausnahme, in auftritt der <xref:System.Data.DataTable.ColumnChanging> Ereignis.  
+  
+ Wenn dies eine sofortige Bearbeitung ist, finden Sie unter <xref:System.Data.DataRow.EndEdit%2A> für die Ausnahmen, die generiert werden können.  
+  
+   
+  
+## Examples  
+ Die folgenden Beispiele veranschaulichen die Verwendung der <xref:System.Data.DataRow.Item%2A> Eigenschaft abrufen, und legen Sie den Wert, der einen bestimmten Index. Im erste Beispiel ruft den Wert der ersten Spalte in jede Zeile, die in ein Benutzer klickt auf eine <xref:System.Windows.Forms.DataGrid> Steuerelement. Die zweite legt einen Wert, der als Argument an die Methode übergeben.  
+  
+ [!code-csharp[Classic WebData DataRow.this1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.this1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.this1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.this1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die durch angegebene Spalte <paramref name="columnName" /> kann nicht gefunden werden.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Tritt auf, wenn Sie versuchen, einen Wert für eine gelöschte Zeile festzulegen.</exception>
+        <exception cref="T:System.InvalidCastException">Tritt auf, wenn Sie einen Wert festlegen und die zugehörige <see cref="T:System.Type" /> entspricht nicht <see cref="P:System.Data.DataColumn.DataType" />.</exception>
+        <exception cref="T:System.Data.NoNullAllowedException">Tritt auf, wenn Sie versuchen, einen null-Wert in eine Spalte einzufügen, in denen <see cref="P:System.Data.DataColumn.AllowDBNull" /> festgelegt ist, um <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[System.Data.DataColumn column, System.Data.DataRowVersion version] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(class System.Data.DataColumn, valuetype System.Data.DataRowVersion)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.Item(System.Data.DataColumn,System.Data.DataRowVersion)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="column">Eine <see cref="T:System.Data.DataColumn" />, die Informationen über die Spalte enthält.</param>
+        <param name="version">Eines der <see cref="T:System.Data.DataRowVersion" /> Werte, die die Zeilenversion Angabe der gewünschten. Mögliche Werte sind <see langword="Default" />, <see langword="Original" />, <see langword="Current" /> und <see langword="Proposed" />.</param>
+        <summary>Ruft die angegebene Version der Daten in der angegebenen <see cref="T:System.Data.DataColumn" />.</summary>
+        <value>Eine Instanz von <see cref="T:System.Object" />, die die Daten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `version` darf nicht mit verwechselt werden die <xref:System.Data.DataRow.RowState*> Eigenschaft. Die `version` Argument beschreibt den Status der Daten, die von der Spalte relativ zum ursprünglichen Wert der Spalte enthalten ist.  
+  
+ Wenn Sie die Eigenschaft festlegen, wird eine Ausnahme ausgelöst, wenn eine Ausnahme, in auftritt der <xref:System.Data.DataTable.ColumnChanging> Ereignis.  
+  
+ Wenn dies eine sofortige Bearbeitung ist, finden Sie unter <xref:System.Data.DataRow.EndEdit%2A> für die Ausnahmen, die generiert werden können.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird den aktuellen Wert einer Zelle geklickt wurde, in der <xref:System.Windows.Forms.DataGrid> Steuerelement.  
+  
+ [!code-csharp[Classic WebData DataRow.this5 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.this5 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.this5 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.this5 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Spalte gehört nicht zur Tabelle.</exception>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="column" /> -Argument ist Null.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">Diese Version der Daten keinen die Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int columnIndex, System.Data.DataRowVersion version] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32, valuetype System.Data.DataRowVersion)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.Item(System.Int32,System.Data.DataRowVersion)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnIndex" Type="System.Int32" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="columnIndex">Der nullbasierte Index der Spalte.</param>
+        <param name="version">Eines der <see cref="T:System.Data.DataRowVersion" /> Werte, die die Zeilenversion Angabe der gewünschten. Mögliche Werte sind <see langword="Default" />, <see langword="Original" />, <see langword="Current" /> und <see langword="Proposed" />.</param>
+        <summary>Ruft die Daten in der Spalte gemäß Index und die Version der abzurufenden Daten gespeichert.</summary>
+        <value>Eine Instanz von <see cref="T:System.Object" />, die die Daten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kann nur erstellen oder Aktualisieren einer Zeile aus, nach dem Aufruf der <xref:System.Data.DataRow.BeginEdit%2A> Methode; entsprechend der <xref:System.Data.DataRow.EndEdit%2A> -Methode muss aufgerufen werden, um die Bearbeitung einen Commit auszuführen. Nach dem Aufruf der <xref:System.Data.DataRow.EndEdit%2A> -Methode und vor dem Aufruf der <xref:System.Data.DataRow.AcceptChanges%2A> -Methode, interne Darstellungen des ursprünglichen und neue vorgeschlagenen Werte werden gespeichert. Daher erst nach dem Aufruf der <xref:System.Data.DataRow.AcceptChanges%2A>, können Sie die `version` Argument, um anzugeben, welche Version der Wert einer Spalte, müssen Sie entweder die `DataRowVersion.Original` oder `DataRowVersion.Proposed`. Jedoch so bald wie rufen Sie die <xref:System.Data.DataRow.AcceptChanges%2A> Methode, die Version der Spalte auf zurückgesetzt `DataRowVersion.Original`. Wenn die Zeile neu ist, können Sie auch übergeben `DataRowVersion.Default` für den Parameter, der Standardwert der Spalte abzurufen. Bei der Übergabe von `DataRowVersion.Current`, die Eigenschaft gibt den aktuellen Wert jeder beliebigen Version sein kann.  
+  
+> [!NOTE]
+>  Die <xref:System.Data.DataRow.BeginEdit%2A> Methode wird implizit aufgerufen, wenn Sie den Wert eines datengebundenen Steuerelements ändern oder eine <xref:System.Data.DataRow> Objekt hinzugefügt wird die <xref:System.Data.DataRowCollection>; das <xref:System.Data.DataRow.EndEdit%2A> Methode wird implizit aufgerufen, wenn Sie die folgenden Methoden aufrufen: die <xref:System.Data.DataRow.AcceptChanges%2A> Methode der <xref:System.Data.DataRow> -Objekt, der <xref:System.Data.DataTable.AcceptChanges%2A> Methode der <xref:System.Data.DataTable> -Objekt, oder die <xref:System.Data.DataRow.CancelEdit%2A> Methode.  
+  
+ Im Gegensatz dazu, die <xref:System.Data.DataRowVersion> Enumeration `Current` gibt die Version der Daten nach der <xref:System.Data.DataRow.EndEdit%2A> -Methode aufgerufen wurde.  
+  
+ Die `version` Argument darf nicht mit verwechselt werden dem < xref:System.Data.DataRow.RowState*> Eigenschaft. Die `version` Argument beschreibt den Status der Daten, die von der Spalte relativ zum ursprünglichen Wert der Spalte enthalten ist. Die < xref:System.Data.DataRow.RowState*>-Eigenschaft beschreibt den Status der gesamten Zeile relativ zu seinem übergeordneten <xref:System.Data.DataTable>.  
+  
+ Wenn Sie die Eigenschaft festlegen, wird eine Ausnahme ausgelöst, wenn eine Ausnahme, in auftritt der <xref:System.Data.DataTable.ColumnChanging> Ereignis.  
+  
+ Wenn dies eine sofortige Bearbeitung ist, finden Sie unter <xref:System.Data.DataRow.EndEdit%2A> für die Ausnahmen, die generiert werden können.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird den aktuellen Wert einer Spalte über die <xref:System.Data.DataRow.Item%2A> Eigenschaft von der <xref:System.Data.DataRow> Objekt.  
+  
+ [!code-vb[Classic WebData DataRow.this3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.this3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Die <paramref name="columnIndex" /> Argument liegt außerhalb des Bereichs.</exception>
+        <exception cref="T:System.InvalidCastException">Die Datentypen der Werte und die Spalte stimmen nicht überein.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">Diese Version der Daten keinen die Zeile.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Es wurde versucht, einen Wert für eine gelöschte Zeile festzulegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string columnName, System.Data.DataRowVersion version] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string, valuetype System.Data.DataRowVersion)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.Item(System.String,System.Data.DataRowVersion)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">Der Name der Spalte.</param>
+        <param name="version">Eines der <see cref="T:System.Data.DataRowVersion" /> Werte, die die Zeilenversion Angabe der gewünschten. Mögliche Werte sind <see langword="Default" />, <see langword="Original" />, <see langword="Current" /> und <see langword="Proposed" />.</param>
+        <summary>Ruft die angegebene Version der in der Spalte gespeicherten Daten ab.</summary>
+        <value>Eine Instanz von <see cref="T:System.Object" />, die die Daten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Version darf nicht mit verwechselt werden dem < xref:System.Data.DataRow.RowState*> Eigenschaft. Die `version` Argument beschreibt den Status der Daten, die von der Spalte relativ zum ursprünglichen Wert der Spalte enthalten ist. Die < xref:System.Data.DataRow.RowState*>-Eigenschaft beschreibt den Status der gesamten Zeile relativ zu seinem übergeordneten <xref:System.Data.DataTable>.  
+  
+ Wenn Sie die Eigenschaft festlegen, wird eine Ausnahme ausgelöst, wenn eine Ausnahme, in auftritt der <xref:System.Data.DataTable.ColumnChanging> Ereignis.  
+  
+ Wenn dies eine sofortige Bearbeitung ist, finden Sie unter <xref:System.Data.DataRow.EndEdit%2A> für die Ausnahmen, die generiert werden können.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel ruft die aktuelle Version der Daten in einer Zelle geklickt wurde, der eine <xref:System.Windows.Forms.DataGrid> Steuerelement.  
+  
+ [!code-csharp[Classic WebData DataRow.this4 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.this4 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.this4 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.this4 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die durch angegebene Spalte <paramref name="columnName" /> kann nicht gefunden werden.</exception>
+        <exception cref="T:System.InvalidCastException">Die Datentypen der Werte und die Spalte stimmen nicht überein.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">Diese Version der Daten keinen die Zeile.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Die Zeile wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemArray">
+      <MemberSignature Language="C#" Value="public object[] ItemArray { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] ItemArray" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.ItemArray" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt alle Werte für diese Zeile durch ein Array.</summary>
+        <value>Ein Array vom Typ <see cref="T:System.Object" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft festlegen oder Abrufen von Werten für diese Zeile durch ein Array. Wenn Sie diese Eigenschaft verwenden, um Werte festzulegen, muss das Array die gleiche Größe und Reihenfolge der spaltenauflistung aufweisen. Übergeben von `null` in der <xref:System.Data.DataRow.ItemArray%2A> gibt an, dass kein Wert angegeben wurde.  
+  
+ Benutzer können generieren Ausnahmen in der <xref:System.Data.DataTable.ColumnChanging> Ereignis oder den <xref:System.Data.DataTable.RowChanging> Ereignis.  
+  
+   
+  
+## Examples  
+ Die folgenden Beispiele zeigen, wie zum Abrufen und Festlegen der Werte, die mit der <xref:System.Data.DataRow.ItemArray%2A> Eigenschaft.  
+  
+ [!code-csharp[Classic WebData DataRow.ItemArray Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.ItemArray Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.ItemArray Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.ItemArray Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Array ist größer als die Anzahl der Spalten in der Tabelle.</exception>
+        <exception cref="T:System.InvalidCastException">Ein Wert im Array entspricht nicht der <see cref="P:System.Data.DataColumn.DataType" /> in die jeweiligen <see cref="T:System.Data.DataColumn" />.</exception>
+        <exception cref="T:System.Data.ConstraintException">Eine Bearbeitung wurde eine Einschränkung verletzt.</exception>
+        <exception cref="T:System.Data.ReadOnlyException">Eine Bearbeitung wurde versucht, den Wert einer Spalte ohne Schreibzugriff zu ändern.</exception>
+        <exception cref="T:System.Data.NoNullAllowedException">Eine Bearbeitung wurde versucht, einen null-Wert in einer Spalte zu platzieren, wo <see cref="P:System.Data.DataColumn.AllowDBNull" /> von der <see cref="T:System.Data.DataColumn" /> Objekt ist <see langword="false" />.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Die Zeile wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RejectChanges">
+      <MemberSignature Language="C#" Value="public void RejectChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RejectChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.RejectChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lehnt alle Änderungen auf die Zeile seit <see cref="M:System.Data.DataRow.AcceptChanges" /> zuletzt aufgerufen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen der <xref:System.Data.DataRow.RejectChanges%2A> -Methode, die <xref:System.Data.DataRow.CancelEdit%2A> Methode implizit aufgerufen, um alle Änderungen abzubrechen. Wenn < xref:System.Data.DataRow.RowState*> gelöscht oder geändert haben, wird die Zeile auf die vorherigen Werte zurückgesetzt, und < xref:System.Data.DataRow.RowState*> wird nicht geändert. Wenn die <xref:System.Data.DataRow.RowState*> hinzugefügt wird, wird die Zeile entfernt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine einfache <xref:System.Data.DataTable> mit 2 Spalten und 10 Zeilen. Nach mehreren <xref:System.Data.DataRow> Elemente werden gelöscht, mit der <xref:System.Data.DataRow.Delete%2A> -Methode, eine der Zeilen durch den Aufruf wiederhergestellt <xref:System.Data.DataRow.RejectChanges%2A>.  
+  
+ [!code-csharp[Classic WebData DataRow.Delete Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.Delete Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.Delete Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.Delete Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.RowNotInTableException">Die Zeile gehört nicht zur Tabelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RowError">
+      <MemberSignature Language="C#" Value="public string RowError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RowError" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.RowError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die fehlerbeschreibung benutzerdefinierte für eine Zeile fest.</summary>
+        <value>Der Text, der einen Fehler beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet die <xref:System.Data.DataRow.HasErrors%2A> -Eigenschaft können Sie zuerst bestimmen, ob eine <xref:System.Data.DataRow> enthält Fehler.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Fehlertext für zehn Zeilen einer Tabelle angezeigt, die einem <xref:System.Windows.Forms.DataGrid> Steuerelement.  
+  
+ [!code-csharp[Classic WebData DataRow.RowError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.RowError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.RowError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.RowError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowState">
+      <MemberSignature Language="C#" Value="public System.Data.DataRowState RowState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DataRowState RowState" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.RowState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Zustand der Zeile im Hinblick auf ihre Beziehung zu den <see cref="T:System.Data.DataRowCollection" />.</summary>
+        <value>Einer der <see cref="T:System.Data.DataRowState" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert des der <xref:System.Data.DataRow.RowState*> hängt von zwei Faktoren ab: die Art der Vorgang ausgeführt wurde, auf die Zeile und gibt an, ob <xref:System.Data.DataRow.AcceptChanges%2A> auf aufgerufen wurde die <xref:System.Data.DataRow>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt zuerst eine neue <xref:System.Data.DataTable> mit einer Spalte, und erstellt dann ein einzelnes <xref:System.Data.DataRow>. Als die <xref:System.Data.DataRow> erstellt, hinzugefügt, geändert und gelöscht wird, wird seine <xref:System.Data.DataRow.RowState*> gedruckt wird.  
+  
+ [!code-csharp[Classic WebData DataRow.RowState Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.RowState Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.RowState Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.RowState Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAdded">
+      <MemberSignature Language="C#" Value="public void SetAdded ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAdded() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetAdded" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Änderungen der <see cref="P:System.Data.DataRow.Rowstate" /> von einem <see cref="T:System.Data.DataRow" /> auf <see langword="Added" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Änderungen der <xref:System.Data.DataRow.RowState*> von einem <xref:System.Data.DataRow> auf `Added`. Ist die aktuelle Zeile nicht in beiden ein `Unchanged` oder ein `Added` Zustand befindet, löst ein <xref:System.InvalidOperationException> mit der Meldung, die `SetAdded` kann nur aufgerufen werden, auf eine `DataRow` -Instanz, auf die `RowState` ist `Unchanged`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColumnError">
+      <MemberSignature Language="C#" Value="public void SetColumnError (System.Data.DataColumn column, string error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColumnError(class System.Data.DataColumn column, string error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetColumnError(System.Data.DataColumn,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+        <Parameter Name="error" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="column">Die <see cref="T:System.Data.DataColumn" /> die fehlerbeschreibung festlegen.</param>
+        <param name="error">Die fehlerbeschreibung.</param>
+        <summary>Legt die fehlerbeschreibung für eine angegebene Spalte als eine <see cref="T:System.Data.DataColumn" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um fehlerbeschreibungen zu überprüfen, verwenden Sie die <xref:System.Data.DataRow.GetColumnError%2A> Methode.  
+  
+ Um zu bestimmen, ob alle Fehler für die Auflistung der Spalten vorhanden sind, verwenden die <xref:System.Data.DataRow.HasErrors%2A> Eigenschaft. Daher können Sie die <xref:System.Data.DataRow.GetColumnsInError%2A> Methode, um alle Spalten mit dem Fehler abzurufen.  
+  
+ Wenn `null` oder eine leere Zeichenfolge wird als übergeben der `error` Parameter, die <xref:System.Data.DataRow> verhält sich, als wäre kein Fehler festgelegt wurde und die <xref:System.Data.DataRow.HasErrors%2A> Eigenschaft wird "false" zurückgeben.  
+  
+ Um eine benutzerdefinierte Beschreibung für die gesamte Zeile festzulegen, verwenden Sie die <xref:System.Data.DataRow.RowError%2A> Eigenschaft.  
+  
+ Um zu bestimmen, ob alle Fehler für die Auflistung der Spalten vorhanden sind, verwenden die <xref:System.Data.DataRow.HasErrors%2A> Methode.  
+  
+ Alle Fehler für die Auflistung der Spalten verwenden, um die <xref:System.Data.DataRow.ClearErrors%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Beschreibung für ein angegebenes <xref:System.Data.DataRow>.  
+  
+ [!code-csharp[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColumnError">
+      <MemberSignature Language="C#" Value="public void SetColumnError (int columnIndex, string error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColumnError(int32 columnIndex, string error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetColumnError(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnIndex" Type="System.Int32" />
+        <Parameter Name="error" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnIndex">Der nullbasierte Index der Spalte.</param>
+        <param name="error">Die fehlerbeschreibung.</param>
+        <summary>Legt die fehlerbeschreibung für eine Spalte, die über einen Index angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode wird verwendet, um benutzerdefinierte fehlerbeschreibungen in angegebenen Spalten festlegen. Sie können die <xref:System.Windows.Forms.ErrorProvider> Steuerelement, um den Text des Fehlers anzuzeigen.  
+  
+ Um fehlerbeschreibungen zu überprüfen, verwenden Sie die <xref:System.Data.DataRow.GetColumnError%2A> Methode.  
+  
+ Um zu bestimmen, ob alle Fehler für die Auflistung der Spalten vorhanden sind, verwenden die <xref:System.Data.DataRow.HasErrors%2A> Eigenschaft. Daher können Sie die <xref:System.Data.DataRow.GetColumnsInError%2A> Methode, um alle Spalten mit dem Fehler abzurufen.  
+  
+ Wenn `null` oder eine leere Zeichenfolge wird als übergeben der `error` Parameter, die <xref:System.Data.DataRow> verhält sich, als wäre kein Fehler festgelegt wurde und die <xref:System.Data.DataRow.HasErrors%2A> Eigenschaft wird "false" zurückgeben.  
+  
+ Um eine benutzerdefinierte Beschreibung für die gesamte Zeile festzulegen, verwenden Sie die <xref:System.Data.DataRow.RowError%2A> Eigenschaft.  
+  
+ Alle Fehler für die Auflistung der Spalten verwenden, um die <xref:System.Data.DataRow.ClearErrors%2A> Methode.  
+  
+ Um Fehlertext festzulegen, die für eine ganze Zeile gilt, müssen die <xref:System.Data.DataRow.RowError%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Beschreibung für ein angegebenes <xref:System.Data.DataRow>.  
+  
+ [!code-csharp[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Die <paramref name="columnIndex" /> Argument liegt außerhalb des Bereichs</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColumnError">
+      <MemberSignature Language="C#" Value="public void SetColumnError (string columnName, string error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColumnError(string columnName, string error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetColumnError(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+        <Parameter Name="error" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">Der Name der Spalte.</param>
+        <param name="error">Die fehlerbeschreibung.</param>
+        <summary>Legt die fehlerbeschreibung für eine namentlich angegebene Spalte fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name einer Spalte wird festgelegt, mit der <xref:System.Data.DataColumn.ColumnName%2A> Eigenschaft von der <xref:System.Data.DataColumn> Klasse.  
+  
+ Um fehlerbeschreibungen zu überprüfen, verwenden Sie die <xref:System.Data.DataRow.GetColumnError%2A> Methode.  
+  
+ Um zu bestimmen, ob alle Fehler für die Auflistung der Spalten vorhanden sind, verwenden die <xref:System.Data.DataRow.HasErrors%2A> Eigenschaft. Daher können Sie die <xref:System.Data.DataRow.GetColumnsInError%2A> Methode, um alle Spalten mit dem Fehler abzurufen.  
+  
+ Wenn `null` oder eine leere Zeichenfolge wird als übergeben der `error` Parameter, die <xref:System.Data.DataRow> verhält sich, als wäre kein Fehler festgelegt wurde und die <xref:System.Data.DataRow.HasErrors%2A> Eigenschaft wird "false" zurückgeben.  
+  
+ Um eine benutzerdefinierte Beschreibung für die gesamte Zeile festzulegen, verwenden Sie die <xref:System.Data.DataRow.RowError%2A> Eigenschaft.  
+  
+ Um zu bestimmen, ob alle Fehler für die Auflistung der Spalten vorhanden sind, verwenden die <xref:System.Data.DataRow.HasErrors%2A> Methode.  
+  
+ Alle Fehler für die Auflistung der Spalten verwenden, um die <xref:System.Data.DataRow.ClearErrors%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Beschreibung für ein angegebenes <xref:System.Data.DataRow>.  
+  
+ [!code-csharp[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetModified">
+      <MemberSignature Language="C#" Value="public void SetModified ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetModified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetModified" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Änderungen der <see cref="P:System.Data.DataRow.Rowstate" /> von einem <see cref="T:System.Data.DataRow" /> auf <see langword="Modified" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Änderungen der <xref:System.Data.DataRow.RowState*> von einem <xref:System.Data.DataRow> auf `Modified`. Ist die aktuelle Zeile nicht in beiden ein `Unchanged` oder ein `Added` Zustand befindet, löst ein <xref:System.InvalidOperationException> mit der Meldung, die `SetModified` kann nur aufgerufen werden, auf eine `DataRow` -Instanz, auf die `RowState` ist `Unchanged`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNull">
+      <MemberSignature Language="C#" Value="protected void SetNull (System.Data.DataColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetNull(class System.Data.DataColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetNull(System.Data.DataColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Ein <see cref="T:System.Data.DataColumn" />.</param>
+        <summary>Legt den Wert des angegebenen <see cref="T:System.Data.DataColumn" /> auf einen null-Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Data.DataRow.IsNull%2A> Methode, um zu bestimmen, ob eine Spalte einen null-Wert enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParentRow">
+      <MemberSignature Language="C#" Value="public void SetParentRow (System.Data.DataRow parentRow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetParentRow(class System.Data.DataRow parentRow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetParentRow(System.Data.DataRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentRow" Type="System.Data.DataRow" />
+      </Parameters>
+      <Docs>
+        <param name="parentRow">Das neue übergeordnete Element <see cref="T:System.Data.DataRow" />.</param>
+        <summary>Legt die übergeordnete Zeile eine <see cref="T:System.Data.DataRow" /> mit der angegebenen neuen übergeordneten <see cref="T:System.Data.DataRow" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParentRow">
+      <MemberSignature Language="C#" Value="public void SetParentRow (System.Data.DataRow parentRow, System.Data.DataRelation relation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetParentRow(class System.Data.DataRow parentRow, class System.Data.DataRelation relation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetParentRow(System.Data.DataRow,System.Data.DataRelation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentRow" Type="System.Data.DataRow" />
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+      </Parameters>
+      <Docs>
+        <param name="parentRow">Das neue übergeordnete Element <see cref="T:System.Data.DataRow" />.</param>
+        <param name="relation">Die Beziehung <see cref="T:System.Data.DataRelation" /> verwenden.</param>
+        <summary>Legt die übergeordnete Zeile eine <see cref="T:System.Data.DataRow" /> mit der angegebenen neuen übergeordneten <see cref="T:System.Data.DataRow" /> und <see cref="T:System.Data.DataRelation" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die übergeordnete Zeile einer bestimmten untergeordneten Zeile.  
+  
+ [!code-vb[Classic WebData DataRow.SetParentRow1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.SetParentRow1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.RowNotInTableException">Eine der Zeilen gehört nicht zu einer Tabelle</exception>
+        <exception cref="T:System.ArgumentNullException">Eine der Zeilen ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Beziehung gehört nicht zu den <see cref="T:System.Data.DataRelationCollection" /> von der <see cref="T:System.Data.DataSet" /> Objekt.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">Die Beziehung untergeordneten <see cref="T:System.Data.DataTable" /> ist nicht die Tabelle, die diese Zeile gehört.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable Table { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataTable Table" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.DataTable" /> für die diese Zeile verfügt über ein Schema.</summary>
+        <value>Die <see cref="T:System.Data.DataTable" /> zu dem diese Zeile gehört.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Data.DataRow> gehört nicht unbedingt zur Auflistung der Zeilen einer Tabelle. Dieses Verhalten tritt auf, wenn die <xref:System.Data.DataRow> erstellt, aber nicht hinzugefügt wurden die <xref:System.Data.DataRowCollection>. Wenn die <xref:System.Data.DataRow.RowState*> -Eigenschaft gibt `DataRowState.Detached`, die Zeile ist nicht in jeder Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRow.Table%2A> -Eigenschaft zum Zurückgeben von eines Verweis auf die Auflistung der Spalten von der <xref:System.Data.DataTable>.  
+  
+ [!code-csharp[Classic WebData DataRow.Table Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.Table Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.Table Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.Table Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

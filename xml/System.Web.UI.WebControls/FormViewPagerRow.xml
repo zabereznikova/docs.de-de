@@ -1,0 +1,57 @@
+<Type Name="FormViewPagerRow" FullName="System.Web.UI.WebControls.FormViewPagerRow">
+  <TypeSignature Language="C#" Value="public class FormViewPagerRow : System.Web.UI.WebControls.FormViewRow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormViewPagerRow extends System.Web.UI.WebControls.FormViewRow implements class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewPagerRow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.FormViewRow</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Pagerzeile in einem <see cref="T:System.Web.UI.WebControls.FormView" />-Steuerelement dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von der <xref:System.Web.UI.WebControls.FormViewPagerRow> wird erstellt, um die Pager-Steuerelemente in einem <xref:System.Web.UI.WebControls.FormView> Steuerelement. Die <xref:System.Web.UI.INamingContainer> -Schnittstelle ist ein Marker, der angibt, die <xref:System.Web.UI.WebControls.FormViewPagerRow> ist Teil von der <xref:System.Web.UI.Page> Hierarchie des Objekts.  
+  
+ Diese Klasse wird hauptsächlich von Steuerelemententwicklern verwendet. Entwickler von Steuerelementen können außer Kraft setzen der <xref:System.Web.UI.WebControls.FormViewPagerRow.%23ctor%2A> Konstruktor und die <xref:System.Web.UI.WebControls.FormView.CreateRow%2A> und <xref:System.Web.UI.WebControls.FormView.InitializePager%2A> Methoden der <xref:System.Web.UI.WebControls.FormView> Klasse zum Erstellen einer benutzerdefinierten Pagerzeile.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormViewPagerRow (int rowIndex, System.Web.UI.WebControls.DataControlRowType rowType, System.Web.UI.WebControls.DataControlRowState rowState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 rowIndex, valuetype System.Web.UI.WebControls.DataControlRowType rowType, valuetype System.Web.UI.WebControls.DataControlRowState rowState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FormViewPagerRow.#ctor(System.Int32,System.Web.UI.WebControls.DataControlRowType,System.Web.UI.WebControls.DataControlRowState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="rowType" Type="System.Web.UI.WebControls.DataControlRowType" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index der Zeile in der <see cref="T:System.Web.UI.WebControls.FormView" /> Steuerelement.</param>
+        <param name="rowType">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowType" />-Enumerationswerte.</param>
+        <param name="rowState">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowState" />-Enumerationswerte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.FormViewPagerRow" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FormViewPagerRow.%23ctor%2A> Konstruktor ruft den Basisklassenkonstruktor <xref:System.Web.UI.WebControls.FormViewRow.%23ctor%2A>, mit den angegebenen Parametern. Für eine <xref:System.Web.UI.WebControls.FormViewPagerRow> -Steuerelement in einem <xref:System.Web.UI.WebControls.FormView> -Steuerelement, der Aufruf erfolgt `rowType` gleich <xref:System.Web.UI.WebControls.DataControlRowType.Pager> und `rowState` gleich <xref:System.Web.UI.WebControls.DataControlRowState.Normal>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,476 @@
+<Type Name="MachineKeySection" FullName="System.Web.Configuration.MachineKeySection">
+  <TypeSignature Language="C#" Value="public sealed class MachineKeySection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MachineKeySection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.MachineKeySection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Konfigurationseinstellungen, die die Schlüsselgenerierung und die Algorithmen steuern, die für die Verschlüsselung, Entschlüsselung, MAC (Message Authentication Code)-Operationen bei der Windows Forms-Authentifizierung, Ansichtszustandsvalidierung und die Isolierung von Sitzungszuständen zwischen Anwendungen verwendet werden. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.MachineKeySection> -Klasse bietet eine Möglichkeit zum programmgesteuerten Zugriff auf und ändern Sie den Inhalt der `MachineKey` Abschnitt in der Konfigurationsdatei. Die `MachineKey` Abschnitt auf dem Computer ("Machine.config") oder Anwendungsebene ("Web.config") konfiguriert werden können, und steuert die Schlüssel und Algorithmen, die für Windows Forms-Authentifizierung, anzeigestatusüberprüfung- und Sitzungsstatus Anwendung verwendet werden Isolation. Für diese Funktionen in einem Netzwerk von Webservern (einer Webfarm), funktioniert die `DecryptionKey` und `ValidationKey` Attribute der `MachineKey` Abschnitt muss konfiguriert werden explizit und identisch mit gültigen Schlüsselwerten. Die `AutoGenerate` Wert funktioniert nicht für Webfarmen, da er auf einen zufälligen kryptografischen Schlüssel bezieht, der wird beibehalten Computer lokalen Schutz verwenden und sind nicht identisch über mehrere Computer hinweg.  
+  
+   
+  
+## Examples  
+ Im Beispiel in diesem Abschnitt wird veranschaulicht, wie Werte für verschiedene Attribute des Abschnitts, deklarativ angegeben, die auch als Member zugegriffen werden kann die <xref:System.Web.Configuration.MachineKeySection> Klasse.  
+  
+ Aus einer Konfigurationsdatei im folgende Beispiel wird gezeigt, wie Werte für den Abschnitt deklarativ angegeben werden.  
+  
+```  
+<system.web>  
+  <machineKey validationKey="AutoGenerate,IsolateApps"   
+    decryptionKey="AutoGenerate,IsolateApps"   
+    validation="SHA1"/>  
+</system.web>  
+```  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.MachineKeySection> -Klasse im Code.  
+  
+ [!code-csharp[System.Web.Configuration.MachineKeySection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.MachineKeySection/CS/machinekeysection.cs#1)]
+ [!code-vb[System.Web.Configuration.MachineKeySection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.MachineKeySection/VB/machinekeysection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Wenn Ihnen die Angabe von Schlüsseln in diesem Konfigurationsabschnitt als in der Webfarm Szenarien erforderlich ist, wird empfohlen, dass in diesem Abschnitt mithilfe der geschützten Konfiguration zu verschlüsseln.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MachineKeySection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.MachineKeySection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.MachineKeySection" />-Klasse mit Standardeinstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Sie wird vom Konfigurationssystem von ASP.NET aufgerufen. Sie rufen Sie eine Instanz von der <xref:System.Web.Configuration.MachineKeySection> Klasse, indem die <xref:System.Configuration.Configuration.GetSection%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.MachineKeySection.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.WhiteSpaceTrimStringConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("applicationName", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Anwendung ab oder legt diesen fest.</summary>
+        <value>Der Name der Anwendung. Die Standardeinstellung ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss festgelegt werden, wenn Sie festlegen, die <xref:System.Web.Configuration.MachineKeySection.DataProtectorType%2A> Eigenschaft. Der Eigenschaftswert wird zum Übergeben der <xref:System.Security.Cryptography.DataProtector.Create%2A?displayProperty=nameWithType> Factorymethode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompatibilityMode">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.MachineKeyCompatibilityMode CompatibilityMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.MachineKeyCompatibilityMode CompatibilityMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.MachineKeySection.CompatibilityMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("compatibilityMode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyCompatibilityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob aktualisierte Verschlüsselungsmethoden für den Ansichtszustand verwendet werden, die nach .NET Framework 2.0 Service Pack 1 eingeführt wurden, oder legt diesen Wert fest.</summary>
+        <value>Ein Wert, der angibt, ob Verschlüsselungsmethoden, die nach der .NET Framework 2.0 SP1-Version eingeführt wurden, verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktualisierte Verschlüsselungsmethoden in höheren Versionen von .NET Framework reduziert das Risiko, die erfolgreich ein Angreifer kann Rückentwicklung der `DecryptionKey` Wert. Die älteren Verschlüsselungsmethoden stehen zur Verfügung, um Abwärtskompatibilität zu gewährleisten.  
+  
+ Sollte auf allen Servern in einer Webfarm verwenden die <xref:System.Web.Configuration.MachineKeySection.CompatibilityMode%2A> -Eigenschaft auf den gleichen Wert festgelegt. Wenn der Server, der eine Formularauthentifizierungsticket liest ein anderes hat <xref:System.Web.Configuration.MachineKeySection.CompatibilityMode%2A> festlegen als die Server, die das Ticket erstellt, das Ticket wird nicht erkannt.  
+  
+ Die folgenden Werte angegeben werden können, für die <xref:System.Web.Configuration.MachineKeySection.CompatibilityMode%2A> Eigenschaft:  
+  
+-   `Framework20SP1`. Dieser Wert gibt an, dass ASP.NET Verschlüsselungsmethoden verwendet, die in früheren Versionen von ASP.NET 2.0 SP2 verfügbar waren. Verwenden Sie diesen Wert für alle Server in einer Webfarm, verfügt jeder Server über eine Version von .NET Framework-Versionen als Version 2.0 SP2. Dies ist der Standardwert, es sei denn, der Anwendungsdatei "Web.config" der `targetFramework` Attribut von der `httpRuntime` -Elementgruppe "4.5".  
+  
+-   `Framework20SP2`. Dieser Wert gibt an, dass ASP.NET aktualisierte Verschlüsselungsmethoden verwendet, die in .NET Framework 2.0 SP2 eingeführt wurden. Verwenden Sie diesen Wert für alle Server in einer Webfarm, wenn auf allen Servern .NET Framework 2.0 SP2 verwenden oder höher jedoch mindestens ein verfügt nicht über .NET Framework 4.5.  
+  
+-   `Framework45`. Kryptografische Erweiterungen für ASP.NET 4.5 gelten. Dies ist der Standardwert, wenn der Anwendungsdatei "Web.config" verfügt die `targetFramework` Attribut von der `httpRuntime` -Elementgruppe "4.5".  
+  
+ Wenn diese Eigenschaft festgelegt wird, um `Framework45`, die folgenden Einschränkungen gelten:  
+  
+-   Wenn die <xref:System.Web.Configuration.MachineKeySection.DataProtectorType%2A> Eigenschaft hat den Wert der <xref:System.Web.Configuration.MachineKeySection.ApplicationName%2A> Eigenschaft muss auch einen Wert aufweisen. Die <xref:System.Security.Cryptography.DataProtector> Klasse ordnet an, dass der Anwendungsname eines nicht leeren angegeben werden.  
+  
+-   Die <xref:System.Web.Configuration.MachineKeySection.Validation%2A> -Attribut muss eine tatsächliche Validierungsalgorithmus (z. B. MD5, SHA1, HMACSHA256, HMACSHA384, HMACSHA512) oder eines benutzerdefinierten Algorithmus diese Unterklassen werden die <xref:System.Security.Cryptography.KeyedHashAlgorithm> Typ. Die Werte AES- und 3DES-Verschlüsselungsalgorithmen sind unzulässig.  
+  
+-   Das Framework erstellt keine signiert nur-Nutzlasten. Formularauthentifizierungstickets immer sowohl verschlüsselt und signiert, unabhängig davon, wie der `protection` Attribut von der `forms` Element in der Datei "Web.config" festgelegt ist. Ansicht Status immer sowohl verschlüsselt und signiert, wenn entweder `EnableViewStateMac` oder `RequireViewStateEncryption` für eine angegebene Seite festgelegt ist.  
+  
+ Als Ergebnis des Sicherheitsupdates, die in beschriebenen [Microsoft Security Bulletin MS10-070](http://technet.microsoft.com/security/bulletin/MS10-070), das Standardverhalten für die Verschlüsselung gilt für die `Framework20SP1` und `Framework20SP2` Einstellungen. Ändern des Standardverhaltens wird nicht empfohlen, aber wenn Sie möchten, sollten Sie dies tun, finden Sie unter [zum Konfigurieren der Vorgängerversion blockverschlüsselungs in ASP.NET](http://support.microsoft.com/kb/2425938).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataProtectorType">
+      <MemberSignature Language="C#" Value="public string DataProtectorType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataProtectorType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.MachineKeySection.DataProtectorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.WhiteSpaceTrimStringConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("dataProtectorType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Schutzkomponenten-Typs ab oder legt diesen fest. Die Standardeinstellung ist <see cref="F:System.String.Empty" />.</summary>
+        <value>Der Name des Schutzkomponenten-Typs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie zum Angeben von benutzerdefinierten Data Protection-Algorithmen für ASP.NET die <xref:System.Web.Configuration.MachineKeySection.CompatibilityMode%2A?displayProperty=nameWithType> Eigenschaft <xref:System.Web.Configuration.MachineKeyCompatibilityMode.Framework45> und legen Sie diese Eigenschaft auf eine Zeichenfolge, die eine Klasse, das darstellt von abgeleitet ist die <xref:System.Security.Cryptography.DataProtector> Klasse. Diese Zeichenfolge entspricht der `providerClass` Parameter, der statischen übergeben wird <xref:System.Security.Cryptography.DataProtector.Create%2A?displayProperty=nameWithType> Factorymethode. Die Klasse, die Sie angeben, wird verwendet, durch die <xref:System.Web.Security.MachineKey.Protect%2A?displayProperty=nameWithType> und <xref:System.Web.Security.MachineKey.Unprotect%2A?displayProperty=nameWithType> Methoden sogar, wenn Sie keinen angeben der <xref:System.Web.Configuration.MachineKeyCompatibilityMode.Framework45> Option.  
+  
+ Wenn Sie diese Eigenschaft festlegen, müssen Sie auch Festlegen der <xref:System.Web.Configuration.MachineKeySection.ApplicationName%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Decryption">
+      <MemberSignature Language="C#" Value="public string Decryption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Decryption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.MachineKeySection.Decryption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.WhiteSpaceTrimStringConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("decryption", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Verschlüsselungsalgorithmus an, der zum Verschlüsseln und Entschlüsseln von Formularauthentifizierungsdaten verwendet wird.</summary>
+        <value>Ein Wert, der den Algorithmus angibt, der verwendet wird, um Formularauthentifizierungsdaten zu verschlüsseln und zu entschlüsseln. (Informationen zum Angeben des Algorithmus, der verwendet wird, wenn der Ansichtszustand verschlüsselt wird, finden Sie in der <see cref="P:System.Web.Configuration.MachineKeySection.Validation" />-Eigenschaft.) <see langword="Auto" /> ist der Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.MachineKeySection.Decryption%2A> Eigenschaft unterstützt die folgenden Entschlüsselungswerte:  
+  
+-   `Auto`, also der Standardwert gibt an, dass ASP.NET die zu verwendenden Verschlüsselungsalgorithmus bestimmt anhand der Standardeinstellungen für die Konfiguration.  
+  
+-   `AES`, der angibt, dass ASP.NET verwendet die <xref:System.Web.Configuration.MachineKeyValidation.AES> Algorithmus zum Verschlüsseln von Daten. `AES`ist der Standardalgorithmus zum Verschlüsseln von Daten.  
+  
+-   `3DES`, der angibt, dass ASP.NET verwendet die <xref:System.Web.Configuration.MachineKeyValidation.TripleDES> Algorithmus zum Verschlüsseln von Daten.  
+  
+-   Ein benutzerdefinierter Algorithmus.  
+  
+ Diese Eigenschaft wird in der Regel deklarativ festgelegt, dem `decryption` -Attribut des Elements der Datei "Web.config". Weitere Informationen finden Sie unter dem Element.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Der ausgewählte Wert ist keiner der Entschlüsselungswerte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptionKey">
+      <MemberSignature Language="C#" Value="public string DecryptionKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DecryptionKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.MachineKeySection.DecryptionKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.WhiteSpaceTrimStringConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("decryptionKey", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüssel ab, mit dem Daten verschlüsselt und entschlüsselt werden, oder den Prozess, durch den der Schlüssel generiert wird, oder legt den Schlüssel bzw. den Prozess fest.</summary>
+        <value>Ein Schlüsselwert oder ein Wert, der angibt, wie der Schlüssel generiert wird. Der Standardwert ist "AutoGenerate,IsolateApps".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.MachineKeySection.DecryptionKey%2A> Eigenschaft wird verwendet, für die Ver- und Entschlüsselung, z. B. in Windows Forms-Authentifizierung und für die Sicht Zustand über, wenn die <xref:System.Web.Configuration.MachineKeySection.Validation%2A> Eigenschaft auf "3DES" oder "AES" festgelegt ist.  
+  
+ Verwenden Sie die Option "AutoGenerate", um anzugeben, dass ASP.NET einen zufälligen Schlüssel generiert und ihn in die lokale Sicherheitsautorität speichert. Die Option "AutoGenerate" ist Teil des Standardwerts.  
+  
+ Wenn Sie den Modifizierer "IsolateApps" der "AutoGenerate" hinzufügen <xref:System.Web.Configuration.MachineKeySection.ValidationKey%2A> Wert ASP.NET generiert einen eindeutigen verschlüsselte Schlüssel für jede Anwendung, indem Sie jede Anwendung <xref:System.Web.HttpRuntime.AppDomainAppVirtualPath%2A>. Dies ist die Standardeinstellung.  
+  
+ Wenn Sie den Modifizierer "IsolateByAppId" der "AutoGenerate" hinzufügen <xref:System.Web.Configuration.MachineKeySection.ValidationKey%2A> Wert ASP.NET generiert einen eindeutigen verschlüsselte Schlüssel für jede Anwendung, indem Sie jede Anwendung <xref:System.Web.HttpRuntime.AppDomainAppId%2A>. Wenn zwei unterschiedliche Anwendungen einen virtuellen Pfad zu nutzen (z. B. weil diese Anträge auf unterschiedliche Ports ausgeführt werden), dieses Flag kann verwendet werden, um weitere voneinander zu unterscheiden. Das Flag "IsolateByAppId" wird nur von ASP.NET 4.5 verstanden, aber es kann verwendet werden, unabhängig von der <xref:System.Web.Configuration.MachineKeySection.CompatibilityMode?displayProperty=nameWithType> Einstellung.  
+  
+ Wenn Sie die Konfiguration in einem Netzwerk von Webservern (einer Webfarm) unterstützen müssen, legen Sie die <xref:System.Web.Configuration.MachineKeySection.DecryptionKey%2A> -Eigenschaft manuell auf die konsistente Konfiguration zu gewährleisten. Informationen dazu, wie Sie manuell Generieren von Werten für die `DecryptionKey` -Attribut angegeben wird, finden Sie unter [Vorgehensweise: Konfigurieren von MachineKey in ASP.NET 2.0](http://go.microsoft.com/fwlink/?linkid=155113).  
+  
+ Diese Eigenschaft wird in der Regel deklarativ festgelegt, dem `DecryptionKey` -Attribut des Elements der Datei "Web.config". Weitere Informationen finden Sie unter dem Element.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Festlegen der <xref:System.Web.Configuration.MachineKeySection.DecryptionKey%2A> Eigenschaft mithilfe von Code. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.MachineKeySection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.MachineKeySection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.MachineKeySection/CS/machinekeysection.cs#3)]
+ [!code-vb[System.Web.Configuration.MachineKeySection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.MachineKeySection/VB/machinekeysection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.MachineKeySection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="protected override void Reset (System.Configuration.ConfigurationElement parentElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Reset(class System.Configuration.ConfigurationElement parentElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.MachineKeySection.Reset(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="parentElement">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReadOnly">
+      <MemberSignature Language="C#" Value="protected override void SetReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.MachineKeySection.SetReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validation">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.MachineKeyValidation Validation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.MachineKeyValidation Validation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.MachineKeySection.Validation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyValidation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Hashalgorithmus an, der zum Überprüfen von Formularauthentifizierungs- und Anzeigezustandsdaten verwendet wird.</summary>
+        <value>Ein Wert, der den Hashalgorithmus angibt, der verwendet wird, um Formularauthentifizierungs- und Anzeigezustandsdaten zu überprüfen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.MachineKeySection.Validation%2A> Eigenschaft unterstützt die Verschlüsselung von Algorithmen, die von definiert sind die <xref:System.Web.Configuration.MachineKeyValidation> Enumeration. Diese Eigenschaft wird in der Regel deklarativ festgelegt, dem `decryption` -Attribut des Elements der Datei "Web.config". Weitere Informationen finden Sie unter dem Element.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Festlegen der <xref:System.Web.Configuration.MachineKeySection.Validation%2A> Eigenschaft mithilfe von Code. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.MachineKeySection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.MachineKeySection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.MachineKeySection/CS/machinekeysection.cs#4)]
+ [!code-vb[System.Web.Configuration.MachineKeySection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.MachineKeySection/VB/machinekeysection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationAlgorithm">
+      <MemberSignature Language="C#" Value="public string ValidationAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.MachineKeySection.ValidationAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.WhiteSpaceTrimStringConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("validation", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen eines benutzerdefinierten Algorithmus ab, der verwendet wird, um Formularauthentifizierungs- und Anzeigezustandsdaten zu überprüfen, oder legt ihn fest.</summary>
+        <value>Eine Zeichenfolge, die den Namen eines vordefinierten Algorithmus oder den Namen eines benutzerdefinierten Algorithmus enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die vordefinierten Algorithmen, die zur Verfügung stehen werden definiert, indem die <xref:System.Web.Configuration.MachineKeyValidation> Enumeration. Wenn Sie einen benutzerdefinierten Algorithmus verwenden möchten, müssen Sie nicht diese Eigenschaft festgelegt. Legen Sie die <xref:System.Web.Configuration.MachineKeySection.Validation%2A> Eigenschaft der auf den Namen des benutzerdefinierten Algorithmus. Wenn Sie dies tun, diese Eigenschaft automatisch festgelegt <xref:System.Web.Configuration.MachineKeyValidation.Custom>.  
+  
+ Sie können festlegen, die <xref:System.Web.Configuration.MachineKeySection.ValidationAlgorithm%2A> Eigenschaft deklarativ in der Datei "Web.config" oder programmgesteuert im Code.  
+  
+ Um diese Eigenschaft deklarativ festzulegen, verwenden Sie die `validationAlgorithm` Attribut des Elements in der Konfigurationsdatei. Dieses Attribut kann auf den Namen eines vordefinierten Algorithmus oder eines benutzerdefinierten Algorithmus festgelegt werden. Die vordefinierten Algorithmen werden definiert, indem die <xref:System.Web.Configuration.MachineKeyValidation> Enumeration. Benutzerdefinierte Algorithmen werden angegeben, der `validationAlgorithm` Attribut mithilfe der "" alg ":" Präfix gefolgt vom Namen des Algorithmus. Wenn Sie dieses Format zum Angeben eines benutzerdefinierten Algorithmus verwenden die <xref:System.Web.Configuration.MachineKeySection.Validation%2A> -Eigenschaftensatz auf <xref:System.Web.Configuration.MachineKeyValidation.Custom> und diese Eigenschaft wird festgelegt, der folgende, Name der "" alg ":" Präfix.  
+  
+ Verwenden Sie zum programmgesteuerten Festlegen dieser Eigenschaft den Wert eines vordefinierten Algorithmen, die von definiert sind die <xref:System.Web.Configuration.MachineKeyValidation> -Enumeration, oder legen Sie diese Eigenschaft auf einen benutzerdefinierten Algorithmusnamen. Wenn Sie diese Eigenschaft auf den Namen eines benutzerdefinierten Algorithmus festlegen, legen Sie die <xref:System.Web.Configuration.MachineKeySection.Validation%2A> Eigenschaft <xref:System.Web.Configuration.MachineKeyValidation.Custom>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationKey">
+      <MemberSignature Language="C#" Value="public string ValidationKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.MachineKeySection.ValidationKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.WhiteSpaceTrimStringConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("validationKey", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüssel ab, mit dem Formularauthentifizierungs- und Ansichtszustandsdaten validiert werden, oder den Prozess, durch den der Schlüssel generiert wird, oder legt den Schlüssel bzw. den Prozess fest.</summary>
+        <value>Ein Schlüsselwert oder ein Wert, der angibt, wie der Schlüssel generiert wird. Der Standardwert ist "AutoGenerate,IsolateApps".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.MachineKeySection.ValidationKey%2A> Eigenschaft wird verwendet, wenn `enableViewStateMAC` ist `true` So erstellen einen Nachrichtenauthentifizierungscode (MAC), um ASP.NET zu bestimmen, ob Ansichtszustand manipulierten zu aktivieren. Die <xref:System.Web.Configuration.MachineKeySection.ValidationKey%2A> Eigenschaft dient außerdem zum Generieren von Out-of-Process, anwendungsspezifische Sitzungs-IDs, um diese Sitzung Zustandsvariablen sicherzustellen, dass zwischen Anwendungen isoliert sind.  
+  
+ Verwenden Sie die Option "AutoGenerate", um anzugeben, dass ASP.NET einen zufälligen Schlüssel generiert und ihn in die lokale Sicherheitsautorität speichert. Die Option "AutoGenerate" ist Teil des Standardwerts.  
+  
+ Wenn Sie den Modifizierer "IsolateApps" der "AutoGenerate" hinzufügen <xref:System.Web.Configuration.MachineKeySection.ValidationKey%2A> Wert ASP.NET generiert einen eindeutigen verschlüsselte Schlüssel für jede Anwendung, indem Sie jede Anwendung <xref:System.Web.HttpRuntime.AppDomainAppVirtualPath%2A>. Dies ist die Standardeinstellung.  
+  
+ Wenn Sie den Modifizierer "IsolateByAppId" der "AutoGenerate" hinzufügen <xref:System.Web.Configuration.MachineKeySection.ValidationKey%2A> Wert ASP.NET generiert einen eindeutigen verschlüsselte Schlüssel für jede Anwendung, indem Sie jede Anwendung <xref:System.Web.HttpRuntime.AppDomainAppId%2A>. Wenn zwei unterschiedliche Anwendungen einen virtuellen Pfad zu nutzen (z. B. weil diese Anträge auf unterschiedliche Ports ausgeführt werden), dieses Flag kann verwendet werden, um weitere voneinander zu unterscheiden. Das Flag "IsolateByAppId" wird nur von ASP.NET 4.5 verstanden, aber es kann verwendet werden, unabhängig von der <xref:System.Web.Configuration.MachineKeySection.CompatibilityMode?displayProperty=nameWithType> Einstellung.  
+  
+ Wenn Sie die Konfiguration in einem Netzwerk von Webservern (einer Webfarm) unterstützen müssen, legen Sie die <xref:System.Web.Configuration.MachineKeySection.ValidationKey%2A> -Eigenschaft manuell auf die konsistente Konfiguration zu gewährleisten. Informationen dazu, wie Sie manuell Generieren von Werten für die `DecryptionKey` -Attribut angegeben wird, finden Sie unter [Vorgehensweise: Konfigurieren von MachineKey in ASP.NET 2.0](http://go.microsoft.com/fwlink/?linkid=155113).  
+  
+ Diese Eigenschaft wird in der Regel deklarativ festgelegt, dem `validationKey` -Attribut des Elements der Datei "Web.config".  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Web.Configuration.MachineKeySection.ValidationKey%2A> Eigenschaft mithilfe von Code. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.MachineKeySection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.MachineKeySection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.MachineKeySection/CS/machinekeysection.cs#2)]
+ [!code-vb[System.Web.Configuration.MachineKeySection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.MachineKeySection/VB/machinekeysection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,545 @@
+<Type Name="ReservationCollection" FullName="System.IO.Log.ReservationCollection">
+  <TypeSignature Language="C#" Value="public abstract class ReservationCollection : System.Collections.Generic.ICollection&lt;long&gt;, System.Collections.Generic.IEnumerable&lt;long&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ReservationCollection extends System.Object implements class System.Collections.Generic.ICollection`1&lt;int64&gt;, class System.Collections.Generic.IEnumerable`1&lt;int64&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.ReservationCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Int64&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Int64&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Verwaltet die Auflistung von Speicherplatzreservierungen, die in einer Datensatzsequenz vorgenommen wurden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt einen Satz Reservierungsbereiche dar, die in einer Datensatzsequenz erstellt werden. Durch das Hinzufügen von Elementen zur Auflistung werden neue Reservierungen zugeordnet. Werden Elemente aus der Auflistung entfernt, werden diese Reservierungen freigegeben.  
+  
+ Eine Anwendung reserviert Speicherplatz im Protokoll, wenn sie über Daten verfügt, die in Zukunft in das Protokoll geschrieben werden sollen, aber nicht unmittelbar geschrieben werden können. Reservierungen gewährleisten, dass die Daten in das Protokoll geschrieben werden können, wenn sie für den Schreibvorgang verfügbar sind. Wenn sie Protokolle verwenden, reservieren Anwendungen oft einen oder mehrere Protokolldatensätze in einem Marshallingbereich. Sie müssen Datensätze vor dem Anfügen reservieren.  
+  
+ Mit Reservierungen kann gewährleistet werden, dass ein Vorgang abgeschlossen werden kann, bevor die Daten übertragen werden. Andernfalls werden die Änderungen zurückgesetzt. Außerdem können Reservierungen verwendet werden, um eine "Rückgängigaktion" im Protokoll aufzuzeichnen. Während eines Rollbackvorgangs muss ein Ressourcen-Manager (RM) für Transaktionen in der Lage sein, seinen Status wiederherzustellen, wenn der RM während des Rollbackvorgangs unterbrochen wird. Durch die Verwendung eines Reservierungsbereichs kann ein RM Speicherplatz in einem Protokoll reservieren, bevor es verwendet wird.  
+  
+ Die <xref:System.IO.Log.IRecordSequence.ReserveAndAppend%2A>-Methode kann je nach den Parametern, die beim Aufruf angegeben werden, Speicherplatz reservieren und/oder Daten anfügen. Im Lauf der Transaktion kann eine Anwendung die Rückgängiginformationen anfügen und Speicherplatz für Kompensierungsdatensätze reservieren. Während eines Rollbackvorgangs geben Kompensierungsdatensätze, die erstellt werden, an, welche Aktionen auf dem Datenträger rückgängig gemacht wurden. Die Datensätze werden mit zuvor reserviertem Speicherplatz angefügt. Dadurch ist gewährleistet, dass einem RM während eines Rollbackvorgangs nicht genügend Protokollspeicherplatz zur Verfügung steht, was ein schwerwiegender Fehler ist. Wenn ein Protokoll während einer Transaktion aufgefüllt wird, kann eine Anwendung eine Transaktion sicher zurücksetzen, ohne dauerhafte Daten zu beschädigen.  
+  
+ CLFS ist ein ARIES-kompatibles Protokollierungssystem, das für das Write-Ahead-Logging eingesetzt wird. Beim Write-Ahead-Logging schreibt eine Anwendung einen Rückgängigdatensatz, bevor sie den Vorgang ausführt und reserviert den Speicherplatz, der im Protokoll zum Schreiben eines Kompensierungsdatensatzes erforderlich ist, der unter Umständen während des Rollbackvorgangs verwendet wird. Später wird der reservierte Speicherplatz verwendet, wenn der Kompensierungsdatensatz tatsächlich geschrieben wird.  
+  
+ Anwendungen können Protokollspeicherplatz zu einem beliebigen Zeitpunkt reservieren oder darauf zugreifen (diese Vorgänge schließen sich gegenseitig aus). Wenn ein Commit-Datensatz in das Protokoll geschrieben wurde, kann eine Anwendung Reservierungen für die Kompensierungsdatensätze freigeben. Diese Aktion kann ausgeführt werden, indem die <xref:System.IO.Log.ReservationCollection.FreeReservation%2A>-Methode oder die <xref:System.IO.Log.IRecordSequence.ReserveAndAppend%2A>-Methode aufgerufen wird. Das Aufrufen der <xref:System.IO.Log.IRecordSequence.ReserveAndAppend%2A>-Methode gewährleistet, dass der Vorgang unteilbar ist, während ein Aufruf der <xref:System.IO.Log.ReservationCollection.FreeReservation%2A>-Methode dies nicht gewährleistet.  
+  
+ Wenn Sie Datensätze freigeben, müssen Sie dieselben Datensätze freigeben, die Sie in einem vorherigen Aufruf der <xref:System.IO.Log.IRecordSequence.ReserveAndAppend%2A>-Methode zusammen reserviert haben.  
+  
+> [!NOTE]
+>  Ihre Implementierung von <xref:System.IO.Log.IRecordSequence> muss die <xref:System.IO.Log.ReservationCollection.MakeReservation%2A>-Methode und die <xref:System.IO.Log.ReservationCollection.FreeReservation%2A>-Methode implementieren, um die eigentliche Reservierung und Freigabe vorzunehmen. Darüber hinaus muss die Implementierung auch <xref:System.IO.Log.ReservationCollection.ReservationFreed%2A> aufrufen, wenn ein Datensatz in reservierten Speicherplatz geschrieben wird.  
+  
+   
+  
+## Examples  
+ Reservierungen können auf zwei Arten vorgenommen werden, wie in den nachstehenden Beispielen beschrieben. Sie können die Vorgehensweise aus den Beispielen für stabile Verarbeitung übernehmen. Beachten Sie, dass diese Aufgabe nur bei Verwendung der CLFS-basierten <xref:System.IO.Log.LogRecordSequence>-Klasse ausgeführt werden kann.  
+  
+```  
+//Using the ReserveAndAppend Method  
+ReservationCollection reservations = recordSequence.CreateReservationCollection();  
+long[] lengthOfUndoRecords = new long[] { 1000 };  
+recordSequence.ReserveAndAppend(recordData,  
+                                                     userSqn,  
+                                                     previousSqn,  
+                                                     RecordSequenceAppendOptions.None,  
+                                                     reservations,  
+                                                     lengthOfUndoRecords);  
+recordSequence.Append(undoRecordData,    // If necessary …  
+                                    userSqn,  
+                                    previousSqn,  
+                                    RecordSequenceAppendOptions.ForceFlush,  
+                                    reservations);  
+  
+// Using the Manual Approach  
+ReservationCollection reservations = recordSequence.CreateReservationCollection();  
+reservations.Add(lengthOfUndoRecord);  
+try  
+{  
+   recordSequence.Append(recordData, userSqn, previousSqn, RecordAppendOptions.None);  
+}  
+catch (Exception)  
+{  
+   reservations.Remove(lengthOfUndoRecord);  
+   throw;  
+}  
+  
+recordSequence.Append(undoRecordData, userSqn, previousSqn, RecordAppendOptions.ForceFlush, reservations);  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ReservationCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Log.ReservationCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (long size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.Add(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="size">Die Größe der angeforderten Reservierung in Byte.</param>
+        <summary>Ordnet eine Reservierung zu und fügt sie der Auflistung hinzu. Diese Methode kann nicht vererbt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel stellt dar, wie Sie manuell eine Reservierung vornehmen. Beachten Sie, dass diese Aufgabe nur bei Verwendung der CLFS-basierten <xref:System.IO.Log.LogRecordSequence>-Klasse ausgeführt werden kann.  
+  
+```  
+ReservationCollection reservations = recordSequence.CreateReservationCollection();  
+reservations.Add(lengthOfUndoRecord);  
+try  
+{  
+   recordSequence.Append(recordData, userSqn, previousSqn, RecordAppendOptions.None);  
+}  
+catch (Exception)  
+{  
+   reservations.Remove(lengthOfUndoRecord);  
+   throw;  
+}  
+  
+recordSequence.Append(undoRecordData, userSqn, previousSqn, RecordAppendOptions.ForceFlush, reservations);  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="archiveTail" /> befindet sich nicht zwischen der Basissequenznummer und der letzten Sequenznummer dieser Sequenz.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="size" /> ist ungültig oder übersteigt die maximale Reservierungsgröße.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf, wenn die Archivmomentaufnahme erstellt wird.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung des Programms fortzusetzen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">Die Datensatzsequenz ist voll.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle Reservierungen in der Auflistung frei. Diese Methode kann nicht vererbt werden.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="size" /> ist ungültig oder übersteigt die maximale Reservierungsgröße.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf, wenn die Archivmomentaufnahme erstellt wird.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung des Programms fortzusetzen.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">Die Datensatzsequenz ist voll.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (long size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.Contains(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="size">Die in der Auflistung zu suchende Größe.</param>
+        <summary>Ermittelt, ob eine Reservierung der angegebenen Größe vorgenommen wurde. Diese Methode kann nicht vererbt werden.</summary>
+        <returns>
+          <see langword="true" />, wenn wenigstens eine Reservierung der angegebenen Größe vorgenommen wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung des Programms fortzusetzen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (long[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(int64[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.CopyTo(System.Int64[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Int64[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array, das das Ziel des Kopiervorgangs ist.</param>
+        <param name="arrayIndex">Der nullbasierte Index im Array, ab dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die gesamte Auflistung in ein kompatibles Array, wobei am angegebenen Index im Zielarray begonnen wird. Diese Methode kann nicht vererbt werden.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> oder <paramref name="arrayIndex" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="arrayIndex" /> ist kleiner als 0 (null) oder größer oder gleich der Länge von <paramref name="array" />.</exception>
+        <exception cref="T:System.ArgumentException">Das angegebene Array verfügt nicht über genügend Speicherplatz, um die Daten zu kopieren.  
+  
+ - oder -   
+  
+ <paramref name="array" /> ist kein eindimensionales Array, das der einzige für die angeforderte Aktion unterstützte Typ ist.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung des Programms fortzusetzen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.ReservationCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Reservierungen in der Auflistung ab.</summary>
+        <value>Die Anzahl der Reservierungen in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ReservationCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ermöglicht <see cref="T:System.IO.Log.ReservationCollection" /> das Freigeben von Ressourcen, bevor die Zerstörung durch den Garbage Collector stattfindet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FreeReservation">
+      <MemberSignature Language="C#" Value="protected abstract void FreeReservation (long size);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void FreeReservation(int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.FreeReservation(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="size">Die Größe der freizugebenden Reservierung.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse eine Reservierung der angegebenen Größe frei.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie aus <see cref="T:System.IO.Log.ReservationCollection" /> übernehmen, müssen Sie diese Methode implementieren, um tatsächlich Speicherplatz in der Datensatzsequenz freizugeben. Sie sollten <see cref="M:System.IO.Log.ReservationCollection.ReservationFreed(System.Int64)" /> nicht aufrufen, wenn diese Methode vollständig ist; diese Logik wird für Sie verarbeitet.  
+  
+ Wenn Sie Datensätze freigeben, müssen Sie dieselben Datensätze freigeben, die Sie in einem vorherigen Aufruf der <see cref="Overload:System.IO.Log.IRecordSequence.ReserveAndAppend" />-Methode zusammen reserviert haben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBestMatchingReservation">
+      <MemberSignature Language="C#" Value="protected long GetBestMatchingReservation (long size);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance int64 GetBestMatchingReservation(int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.GetBestMatchingReservation(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="size">Die Größe der Reservierung, die geeignet sein muss.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die am besten passende Reservierung für eine bestimmte Größe ab.</summary>
+        <returns>Eine Reservierung aus der Auflistung, die größer oder gleich der angegebenen Größe ist, oder -1, wenn keine derartige Reservierung vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird in der Regel aufgerufen, wenn Sie einen Datensatz aus reserviertem Speicherplatz an eine Datensatzsequenz anfügen. Bei der Ausgabe wurde eine Reservierung der zurückgegebenen Größe aus der Auflistung entfernt. Wenn aus einem beliebigen Grund nicht auf den reservierten Speicherplatz zugegriffen wird, sollte die <xref:System.IO.Log.ReservationCollection.ReservationMade%2A>-Methode aufgerufen werden, um zu gewährleisten, dass die <xref:System.IO.Log.ReservationCollection> den reservierten Speicherplatz in der Datensatzsequenz genau darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;long&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;int64&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die <see cref="T:System.IO.Log.ReservationCollection" /> durchlaufen kann. Diese Methode kann nicht vererbt werden.</summary>
+        <returns>Ein Enumerator, der die <see cref="T:System.IO.Log.ReservationCollection" /> durchlaufen kann.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der Vorgang ist aus einem der folgenden Gründe ungültig:  
+  
+-   Die Enumeration wurde beendet.  
+  
+-   Die Auflistung wurde geändert.  
+  
+-   Die Enumeration wurde nicht gestartet. Ein Aufruf von <see cref="M:System.Collections.IEnumerator.MoveNext" /> muss erfolgen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung des Programms fortzusetzen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.ReservationCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung schreibgeschützt ist.</summary>
+        <value>Diese Eigenschaft gibt immer <see langword="false" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine <xref:System.IO.Log.ReservationCollection> ist nie schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeReservation">
+      <MemberSignature Language="C#" Value="protected abstract void MakeReservation (long size);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void MakeReservation(int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.MakeReservation(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="size">Die Größe der zuzuordnenden Reservierung.</param>
+        <summary>Ordnet beim Überschreiben in einer abgeleiteten Klasse eine Reservierung der angegebenen Größe zu.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie aus <see cref="T:System.IO.Log.ReservationCollection" /> übernehmen, müssen Sie diese Methode implementieren, um tatsächlich Speicherplatz in der Datensatzsequenz zu reservieren. Sie sollten <see cref="M:System.IO.Log.ReservationCollection.ReservationMade(System.Int64)" /> nicht aufrufen, wenn diese Methode vollständig ist; diese Logik wird für Sie verarbeitet.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (long item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(int64 item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.Remove(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="item">Die Größe der freizugebenden Reservierung.</param>
+        <summary>Gibt eine Reservierung der angegebenen Größe frei, wenn eine Reservierung vorgenommen wurde. Diese Methode kann nicht vererbt werden.</summary>
+        <returns>
+          <see langword="true" />, wenn eine Reservierung der angegebenen Größe gefunden und entfernt wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel stellt dar, wie Sie manuell eine Reservierung vornehmen. Beachten Sie, dass diese Aufgabe nur bei Verwendung der CLFS-basierten <xref:System.IO.Log.LogRecordSequence>-Klasse ausgeführt werden kann.  
+  
+```  
+ReservationCollection reservations = recordSequence.CreateReservationCollection();  
+reservations.Add(lengthOfUndoRecord);  
+try  
+{  
+   recordSequence.Append(recordData, userSqn, previousSqn, RecordAppendOptions.None);  
+}  
+catch (Exception)  
+{  
+   reservations.Remove(lengthOfUndoRecord);  
+   throw;  
+}  
+  
+recordSequence.Append(undoRecordData, userSqn, previousSqn, RecordAppendOptions.ForceFlush, reservations);  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">In der angegebenen Reservierungsauflistung wurde keine Reservierung gefunden, die groß genug für den angegebenen Datensatz ist.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf, wenn die Archivmomentaufnahme erstellt wird.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung des Programms fortzusetzen.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">Die Datensatzsequenz ist voll.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReservationFreed">
+      <MemberSignature Language="C#" Value="protected void ReservationFreed (long size);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ReservationFreed(int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.ReservationFreed(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="size">Die Größe der Reservierung, die freigegeben wurde.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse an, dass eine Reservierung freigegeben wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie aus <xref:System.IO.Log.ReservationCollection> übernehmen, müssen Sie diese Methode aufrufen, wenn eine Reservierung aus einem anderen Grund als dem Entfernen aus der Auflistung freigegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReservationMade">
+      <MemberSignature Language="C#" Value="protected void ReservationMade (long size);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ReservationMade(int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.ReservationMade(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="size">Die Größe der Reservierung, die vorgenommen wurde.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse an, dass eine Reservierung vorgenommen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie Elemente aus <xref:System.IO.Log.ReservationCollection> übernehmen, muss diese Methode aufgerufen werden, wenn eine Reservierung außerhalb eines Aufrufs von <xref:System.IO.Log.ReservationCollection.Add%2A> vorgenommen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die <see cref="T:System.IO.Log.ReservationCollection" /> durchlaufen kann. Diese Methode kann nicht vererbt werden.</summary>
+        <returns>Ein Enumerator, der die <see cref="T:System.IO.Log.ReservationCollection" /> durchlaufen kann.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der Vorgang ist aus einem der folgenden Gründe ungültig:  
+  
+-   Die Enumeration wurde beendet.  
+  
+-   Die Auflistung wurde geändert.  
+  
+-   Die Enumeration wurde nicht gestartet. Ein Aufruf von <see cref="M:System.Collections.IEnumerator.MoveNext" /> muss erfolgen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung des Programms fortzusetzen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

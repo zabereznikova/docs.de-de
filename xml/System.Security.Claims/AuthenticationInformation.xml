@@ -1,0 +1,124 @@
+<Type Name="AuthenticationInformation" FullName="System.Security.Claims.AuthenticationInformation">
+  <TypeSignature Language="C#" Value="public class AuthenticationInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AuthenticationInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Claims.AuthenticationInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält die Authentifizierungsinformationen, dass eine Autorität, wenn übergeben ein Token für ein Thema erstellen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthenticationInformation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.AuthenticationInformation.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Claims.AuthenticationInformation" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public string Address { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Address" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.AuthenticationInformation.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Adresse der Autorisierungsstelle, die das Token erstellt hat.</summary>
+        <value>Die Adresse.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorizationContexts">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Tokens.AuthenticationContext&gt; AuthorizationContexts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.IdentityModel.Tokens.AuthenticationContext&gt; AuthorizationContexts" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.AuthenticationInformation.AuthorizationContexts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Tokens.AuthenticationContext&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Security.Claims.AuthorizationContext" /> von der Authentifizierungsstelle beim Ausstellen von Token verwendet.</summary>
+        <value>Eine Auflistung von <see cref="T:System.IdentityModel.Tokens.AuthenticationContext" /> , die den Autorisierungskontext darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsName">
+      <MemberSignature Language="C#" Value="public string DnsName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DnsName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.AuthenticationInformation.DnsName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den DNS-Namen der Autorisierungsstelle, die das Token erstellt hat.</summary>
+        <value>Der DNS-Name der Autorisierungsstelle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotOnOrAfter">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; NotOnOrAfter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; NotOnOrAfter" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.AuthenticationInformation.NotOnOrAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeit, die die Sitzung, die gemäß des Indexes für die Sitzung beendet berücksichtigt werden muss.</summary>
+        <value>Die Zeit, die die Sitzung berücksichtigt werden muss, wurde beendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="public string Session { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Session" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.AuthenticationInformation.Session" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Sitzung Index, der die Sitzung zwischen dem Autorität und dem Client beschreibt.</summary>
+        <value>Der Index der Sitzung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

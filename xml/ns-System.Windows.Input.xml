@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Input">
+  <Docs>
+    <summary>Stellt Typen bereit, um das Windows Presentation Foundation-Eingabesystem (WPF) zu unterstützen. Dies schließt Abstraktion Geräteklassen für Maus, Tastatur und Tablettstiftgeräte, eine allgemeine Eingabe-Manager-Klasse, Unterstützung für Befehle und benutzerdefinierte Befehle und verschiedene Hilfsklassen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

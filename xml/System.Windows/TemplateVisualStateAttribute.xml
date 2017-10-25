@@ -1,0 +1,120 @@
+<Type Name="TemplateVisualStateAttribute" FullName="System.Windows.TemplateVisualStateAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TemplateVisualStateAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TemplateVisualStateAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.TemplateVisualStateAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass ein Steuerelement in einem bestimmten Zustand befinden, und die kann eine <see cref="T:System.Windows.VisualState" /> sollte sich in des Steuerelements <see cref="T:System.Windows.Controls.ControlTemplate" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuerelemententwickler verwenden Sie dieses Attribut an die <xref:System.Windows.VisualState> und <xref:System.Windows.VisualStateGroup> Objekte, die in ihren Steuerelement gehören <xref:System.Windows.Controls.ControlTemplate>.  Nehmen wir beispielsweise an, dass Sie ein neues Steuerelement erstellen, die zwei visuelle Zustände, die mit dem Namen `Focused` und `Unfocused`, die beide von welchem ein <xref:System.Windows.VisualStateGroup> mit dem Namen `FocusStates`.  Angeben von zu <xref:System.Windows.Controls.ControlTemplate> Autoren die Verwendung dieser visuelle Zustände fügen zwei <xref:System.Windows.TemplateVisualStateAttribute> -Attribute verwenden, um die Klassensignatur des Steuerelements.  Angeben, die die <xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A> Eigenschaft ist `FocusStates` und dass die <xref:System.Windows.TemplateVisualStateAttribute.Name%2A> Eigenschaft ist `Focused` für einen und `Unfocused` für die anderen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Klassensignatur für die `NumericUpDown` Steuerelement.  In diesem Beispiel gibt an, dass die `NumericUpDown` Steuerelement vier visuelle Zustände verwendet.  Zwei Zuständen, mit dem Namen `Positive` und `Negative`, befinden sich in der <xref:System.Windows.VisualStateGroup> mit dem Namen `ValueStates`.  Nennen Sie die beiden Zustände `Focused` und `Unfocused`, befinden sich in der <xref:System.Windows.VisualStateGroup> mit dem Namen `FocusedStates`.  Das vollständige Beispiel finden Sie unter [erstellen ein Steuerelement, hat eine anpassbare Darstellung](~/docs/framework/wpf/controls/creating-a-control-that-has-a-customizable-appearance.md).  
+  
+ [!code-csharp[VSMCustomControl#ClassAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#classattributes)]
+ [!code-vb[VSMCustomControl#ClassAttributes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#classattributes)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateVisualStateAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.TemplateVisualStateAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.TemplateVisualStateAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupName">
+      <MemberSignature Language="C#" Value="public string GroupName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TemplateVisualStateAttribute.GroupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Gruppe, der der Status zu gehört.</summary>
+        <value>Der Name des der <see cref="T:System.Windows.VisualStateGroup" /> , das der Status zu gehört.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A> Eigenschaft entspricht der <xref:System.Windows.VisualStateGroup.Name%2A?displayProperty=nameWithType> Eigenschaft ein <xref:System.Windows.VisualStateGroup> Objekt. Um anzugeben, was <xref:System.Windows.VisualStateGroup> eine <xref:System.Windows.VisualState> gehört, legen Sie die <xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Klassensignatur für die `NumericUpDown` Steuerelement.  In diesem Beispiel gibt an, dass die `NumericUpDown` Steuerelement vier visuelle Zustände verwendet.  Zwei Zuständen, mit dem Namen `Positive` und `Negative`, befinden sich in der <xref:System.Windows.VisualStateGroup> mit dem Namen `ValueStates`.  Nennen Sie die beiden Zustände `Focused` und `Unfocused`, befinden sich in der <xref:System.Windows.VisualStateGroup> mit dem Namen `FocusedStates`.  Das vollständige Beispiel finden Sie unter [erstellen ein Steuerelement, hat eine anpassbare Darstellung](~/docs/framework/wpf/controls/creating-a-control-that-has-a-customizable-appearance.md).  
+  
+ [!code-csharp[VSMCustomControl#ClassAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#classattributes)]
+ [!code-vb[VSMCustomControl#ClassAttributes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#classattributes)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TemplateVisualStateAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Zustands, die das Steuerelement in werden kann.</summary>
+        <value>Der Name des Zustands, die das Steuerelement in werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.TemplateVisualStateAttribute.Name%2A?displayProperty=nameWithType> Eigenschaft entspricht der <xref:System.Windows.VisualState.Name%2A?displayProperty=nameWithType> Eigenschaft eine <xref:System.Windows.VisualState>. Um anzugeben, was <xref:System.Windows.VisualState> in einem Steuerelement gehört <xref:System.Windows.Controls.ControlTemplate>legen die <xref:System.Windows.TemplateVisualStateAttribute.Name%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Klassensignatur für die `NumericUpDown` Steuerelement.  In diesem Beispiel gibt an, dass die `NumericUpDown` Steuerelement vier visuelle Zustände verwendet.  Zwei Zuständen, mit dem Namen `Positive` und `Negative`, befinden sich in der <xref:System.Windows.VisualStateGroup> mit dem Namen `ValueStates`.  Nennen Sie die beiden Zustände `Focused` und `Unfocused`, befinden sich in der <xref:System.Windows.VisualStateGroup> mit dem Namen `FocusedStates`.  Das vollständige Beispiel finden Sie unter [erstellen ein Steuerelement, hat eine anpassbare Darstellung](~/docs/framework/wpf/controls/creating-a-control-that-has-a-customizable-appearance.md).  
+  
+ [!code-csharp[VSMCustomControl#ClassAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#classattributes)]
+ [!code-vb[VSMCustomControl#ClassAttributes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#classattributes)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

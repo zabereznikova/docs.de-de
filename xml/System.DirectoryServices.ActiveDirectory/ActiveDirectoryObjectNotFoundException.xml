@@ -1,0 +1,183 @@
+<Type Name="ActiveDirectoryObjectNotFoundException" FullName="System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">
+  <TypeSignature Language="C#" Value="public class ActiveDirectoryObjectNotFoundException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ActiveDirectoryObjectNotFoundException extends System.Exception implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException" /> Klassenausnahme wird ausgelöst, wenn ein angefordertes Objekt nicht im zugrunde liegenden Verzeichnisspeicher gefunden wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectoryObjectNotFoundException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectoryObjectNotFoundException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung mit einer Beschreibung des Fehlers.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException" />-Klasse mit einer angegebenen Fehlermeldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ActiveDirectoryObjectNotFoundException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> -Objekt für die Ausnahme.</param>
+        <param name="context">Die <see cref="T:System.Runtime.Serialization.StreamingContext" /> für die Ausnahme.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException" /> -Klasse, mithilfe der angegebenen Serialisierungsinformationen und Streamingkontext.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectoryObjectNotFoundException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung mit einer Beschreibung des Fehlers.</param>
+        <param name="inner">Ein <see cref="T:System.Exception" /> Objekt, das Informationen über die zugrunde liegende Ausnahme enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException" /> Klasse mit einer angegebenen Fehlermeldung und einem zugrunde liegenden Ausnahmeobjekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectoryObjectNotFoundException (string message, Type type, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Type type, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException.#ctor(System.String,System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung mit einer Beschreibung des Fehlers.</param>
+        <param name="type">Ein <see cref="T:System.Type" /> -Objekt, das den Typ des angeforderten Objekts beschreibt.</param>
+        <param name="name">Ein <see cref="T:System.String" /> , der den Namen des angeforderten Objekts enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException" /> -Klasse mit einer angegebenen Fehlermeldung und Informationen über das angeforderte Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> Objekt mit serialisierten Objektdaten für die Ausnahme, die ausgelöst wird.</param>
+        <param name="streamingContext">Das <see cref="T:System.Runtime.Serialization.StreamingContext" />-Objekt, das die Kontextinformationen für die Quelle oder das Ziel enthält.</param>
+        <summary>Legt das <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit Informationen zur Ausnahme fest.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des angeforderten Objekts ab.</summary>
+        <value>Eine Zeichenfolge, die den Namen des angeforderten Objekts enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des angeforderten Objekts ab.</summary>
+        <value>Ein <see cref="T:System.Type" /> -Objekt, das den Typ des angeforderten Objekts darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

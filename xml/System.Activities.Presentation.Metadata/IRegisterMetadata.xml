@@ -1,0 +1,48 @@
+<Type Name="IRegisterMetadata" FullName="System.Activities.Presentation.Metadata.IRegisterMetadata">
+  <TypeSignature Language="C#" Value="public interface IRegisterMetadata" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRegisterMetadata" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Metadata.IRegisterMetadata" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt eine Klasse an, die dem Metadatenspeicher zusätzliche Attribute hinzufügt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.Presentation.Metadata.IRegisterMetadata>-Typen bieten eine Möglichkeit, die Zuordnung von Entwurfszeitattributen zu Laufzeittypen in einer lose gekoppelten Weise zu kapseln. Eine Anwendung, die [!INCLUDE[wfd1](~/includes/wfd1-md.md)] hostet, kann die Attribute für die Aktivität mithilfe der <xref:System.Activities.Presentation.Metadata.IRegisterMetadata>-Schnittstelle registrieren. Neben der Suche nach Typen in den *.design-Assemblys sucht [!INCLUDE[vs2010](~/includes/vs2010-md.md)] z. B. nach Typen, die <xref:System.Activities.Presentation.Metadata.IRegisterMetadata> implementieren, wenn Assemblys geladen werden, die diese Typen enthalten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public void Register ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Register() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Metadata.IRegisterMetadata.Register" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt dem Metadatenspeicher bei der Initialisierung des Designers weitere Metadaten hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementierungen sollten <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A> aufrufen, um dem Metadatenspeicher Daten hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

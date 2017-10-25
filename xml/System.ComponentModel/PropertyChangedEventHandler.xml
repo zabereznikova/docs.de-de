@@ -1,0 +1,43 @@
+<Type Name="PropertyChangedEventHandler" FullName="System.ComponentModel.PropertyChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void PropertyChangedEventHandler(object sender, PropertyChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PropertyChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.PropertyChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.ObjectModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.ComponentModel.PropertyChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.ComponentModel.PropertyChangedEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged" /> Ereignis ausgelöst, wenn eine Eigenschaft für eine Komponente geändert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.ComponentModel.PropertyChangedEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Die Ereignishandlermethode ist bei Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

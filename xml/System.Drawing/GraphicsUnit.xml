@@ -1,0 +1,143 @@
+<Type Name="GraphicsUnit" FullName="System.Drawing.GraphicsUnit">
+  <TypeSignature Language="C#" Value="public enum GraphicsUnit" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GraphicsUnit extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.GraphicsUnit" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Maßeinheit für die angegebenen Daten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Bitmap aus geladen ein <xref:System.Drawing.Icon> behandeln Sie mithilfe der <xref:System.Drawing.GraphicsUnit> Enumeration und die Verwendung von der <xref:System.Drawing.Rectangle.Round%2A> Methode Rechtecks einer Bitmap gezeichnet werden soll.  
+  
+ In diesem Beispiel dient, die mit Windows Forms verwendet werden. Erstellen Sie ein Formular, das eine Schaltfläche Button2 enthält. Fügen Sie den Code in das Formular, und ordnen Sie diese Methode mit der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignis.  
+  
+ [!code-cpp[System.Drawing.BitmapMembers#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.BitmapMembers#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.BitmapMembers#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.BitmapMembers/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="Display" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.GraphicsUnit Display = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.GraphicsUnit.Display" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.GraphicsUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Maßeinheit des Geräts angezeigt. In der Regel Pixel für video zeigt, und 1/100 Zoll für Drucker.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="Document" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.GraphicsUnit Document = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.GraphicsUnit.Document" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.GraphicsUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Dokumenteinheit (1/300 Zoll) als Maßeinheit an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inch">
+      <MemberSignature Language="C#" Value="Inch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.GraphicsUnit Inch = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.GraphicsUnit.Inch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.GraphicsUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Zoll als Maßeinheit an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Millimeter">
+      <MemberSignature Language="C#" Value="Millimeter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.GraphicsUnit Millimeter = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.GraphicsUnit.Millimeter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.GraphicsUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Millimeter als Maßeinheit an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pixel">
+      <MemberSignature Language="C#" Value="Pixel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.GraphicsUnit Pixel = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.GraphicsUnit.Pixel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.GraphicsUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein Gerätepixel als Maßeinheit.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Point">
+      <MemberSignature Language="C#" Value="Point" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.GraphicsUnit Point = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.GraphicsUnit.Point" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.GraphicsUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Drucker (1/72 Zoll) als Maßeinheit.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="World">
+      <MemberSignature Language="C#" Value="World" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.GraphicsUnit World = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.GraphicsUnit.World" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.GraphicsUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Einheit der Welt Koordinatensystem als Maßeinheit an.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

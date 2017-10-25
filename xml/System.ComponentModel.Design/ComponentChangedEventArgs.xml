@@ -1,0 +1,233 @@
+<Type Name="ComponentChangedEventArgs" FullName="System.ComponentModel.Design.ComponentChangedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ComponentChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ComponentChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.ComponentChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanged" />-Ereignis bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.ComponentChangedEventArgs>Stellt Daten für ein <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> Ereignis. Die <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> Ereignis benachrichtigt den <xref:System.ComponentModel.Design.IComponentChangeService> und registrierten Ereignishandler an, dass eine bestimmte Komponente in das aktuell aktive Dokument geändert wurde.  
+  
+ Ein <xref:System.ComponentModel.Design.ComponentChangedEventArgs> enthält die folgenden Informationen:  
+  
+-   Ein <xref:System.ComponentModel.Design.ComponentChangedEventArgs.Component%2A> Eigenschaft, die die Komponente angibt, die geändert wurde.  
+  
+-   Ein <xref:System.ComponentModel.Design.ComponentChangedEventArgs.Member%2A> Eigenschaft, die das Element angibt, der geändert wurde.  
+  
+-   Ein <xref:System.ComponentModel.Design.ComponentChangedEventArgs.NewValue%2A> Eigenschaft, die den neuen Wert des Elements angibt.  
+  
+-   Ein <xref:System.ComponentModel.Design.ComponentChangedEventArgs.OldValue%2A> Eigenschaft, die den alten Wert des Elements angibt.  
+  
+ Komponenten-Designer in der Regel lösen die <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> Ereignis automatisch, wenn Komponenten hinzugefügt, entfernt oder geändert. Ein <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> Ereignis wird während des Formulars laden und entladen nicht ausgelöst, weil Änderungen zu diesem Zeitpunkt erwartet werden. Ein Komponenten-Designer lösen möglicherweise die <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> Ereignis danach ändert eine Eigenschaft der Komponente; dadurch wird sichergestellt, dass im Eigenschaftenfenster auf die aktualisierte Eigenschaft angezeigt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Erstellen einer <xref:System.ComponentModel.Design.ComponentChangedEventArgs>.  
+  
+ [!code-cpp[ComponentChangedEventArgsExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ComponentChangedEventArgsExample/CPP/componentchangedeventargsexample.cpp#1)]
+ [!code-csharp[ComponentChangedEventArgsExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ComponentChangedEventArgsExample/CS/componentchangedeventargsexample.cs#1)]
+ [!code-vb[ComponentChangedEventArgsExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ComponentChangedEventArgsExample/VB/componentchangedeventargsexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Wenn diese Klasse als Basisklasse einer anderen Klasse angegeben wird, tritt ein Compilerfehler auf.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComponentChangedEventArgs (object component, System.ComponentModel.MemberDescriptor member, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object component, class System.ComponentModel.MemberDescriptor member, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentChangedEventArgs.#ctor(System.Object,System.ComponentModel.MemberDescriptor,System.Object,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, die geändert wurde.</param>
+        <param name="member">Ein <see cref="T:System.ComponentModel.MemberDescriptor" /> , die geänderten Member darstellt.</param>
+        <param name="oldValue">Der alte Wert des geänderten Members.</param>
+        <param name="newValue">Der neue Wert des geänderten Members.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.ComponentChangedEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachdem sie eine Eigenschaft der Komponente geändert wurde, ruft der Designer für eine Komponente dieses Konstruktors. Dadurch wird sichergestellt, dass im Eigenschaftenfenster den Wert der Eigenschaft aktualisierte angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Component">
+      <MemberSignature Language="C#" Value="public object Component { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Component" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentChangedEventArgs.Component" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Komponente, die geändert wurde.</summary>
+        <value>Eine <see cref="T:System.Object" /> , die die Komponente, die Änderung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.MemberDescriptor Member { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.MemberDescriptor Member" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentChangedEventArgs.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MemberDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element, das geändert wurde.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.MemberDescriptor" /> , der angibt, dass des Elements, das geändert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann `null` Wenn das Element unbekannt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValue">
+      <MemberSignature Language="C#" Value="public object NewValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object NewValue" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentChangedEventArgs.NewValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den neuen Wert des geänderten Members.</summary>
+        <value>Der neue Wert des geänderten Members. Diese Eigenschaft kann <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist bedeutungslos, wenn das Element nicht `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldValue">
+      <MemberSignature Language="C#" Value="public object OldValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object OldValue" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentChangedEventArgs.OldValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den alten Wert des geänderten Members.</summary>
+        <value>Der alte Wert des geänderten Members. Diese Eigenschaft kann <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist bedeutungslos, wenn das Element nicht `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

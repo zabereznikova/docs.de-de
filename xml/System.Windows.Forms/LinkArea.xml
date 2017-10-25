@@ -1,0 +1,259 @@
+<Type Name="LinkArea" FullName="System.Windows.Forms.LinkArea">
+  <TypeSignature Language="C#" Value="public struct LinkArea" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit LinkArea extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.LinkArea" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.LinkArea/LinkAreaConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Bereich innerhalb einer <see cref="T:System.Windows.Forms.LinkLabel" /> Steuerelement, das einen Link innerhalb des Steuerelements darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt zwei Möglichkeiten, um einen Link für den Text des Hinzufügen einer <xref:System.Windows.Forms.LinkLabel> Steuerelement. Sie erreichen die <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A> Methode der <xref:System.Windows.Forms.LinkLabel.LinkCollection> -Klasse über die <xref:System.Windows.Forms.LinkLabel.Links%2A> Eigenschaft von der <xref:System.Windows.Forms.LinkLabel> Text des Steuerelements mehrere Hyperlinks hinzufügen. Wenn Sie nur einen einzelnen Link zu den Text des Steuerelements hinzufügen müssen, können Sie die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Eigenschaft von der <xref:System.Windows.Forms.LinkLabel>. Diese Eigenschaft akzeptiert einen <xref:System.Windows.Forms.LinkArea> zum Definieren der Position des Links im Text des Steuerelements. Wenn ein Link mit angegeben wird die <xref:System.Windows.Forms.LinkArea> -Eigenschaft des Linkbereichs wird hinzugefügt die <xref:System.Windows.Forms.LinkLabel.LinkCollection> auf die gleiche Weise wie das Hinzufügen der Verknüpfung mit der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A> Methode der <xref:System.Windows.Forms.LinkLabel.LinkCollection>.  
+  
+ Die <xref:System.Windows.Forms.LinkArea.Length%2A> Eigenschaft gibt die Anzahl der Zeichen im Text des an die <xref:System.Windows.Forms.LinkLabel> des Linkbereichs einschließt. Die <xref:System.Windows.Forms.LinkArea.Start%2A> Eigenschaft gibt das erste Zeichen in der Steuerelementtext links einschließt. Sollten Sie bestimmen, ob ein bestimmtes <xref:System.Windows.Forms.LinkArea> ist leer ist, können Sie die <xref:System.Windows.Forms.LinkArea.IsEmpty%2A> Eigenschaft anstelle der Überprüfung von Werten der <xref:System.Windows.Forms.LinkArea.Start%2A> und <xref:System.Windows.Forms.LinkArea.Length%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.LinkLabel> -Klasse, mit mehreren <xref:System.Windows.Forms.LinkArea> Abschnitten definiert sind, um eine Bezeichnung auf einem Formular angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.Label.AutoSize%2A>, <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften zum Anpassen des Aussehens von der <xref:System.Windows.Forms.LinkLabel>. Die erste <xref:System.Windows.Forms.LinkArea> wird angegeben, mit der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A?displayProperty=nameWithType> Eigenschaft. Zusätzliche Links werden hinzugefügt, um die <xref:System.Windows.Forms.LinkLabel> mithilfe der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A?displayProperty=nameWithType> Methode. Die Beispiel-Handles die <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis durch Starten des Webbrowsers für Links und zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> für andere Links.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CPP/linklabel.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CS/linklabel.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/VB/linklabel.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkArea (int start, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 start, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkArea.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="start">Die nullbasierte Anfangsposition des des Linkbereichs im Text des der <see cref="T:System.Windows.Forms.LinkLabel" />.</param>
+        <param name="length">Die Anzahl der Zeichen, nach dem Anfangszeichen des Linkbereichs einschließt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.LinkArea" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkArea.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Das Objekt, das zu vergleichende <see cref="T:System.Windows.Forms.LinkArea" />.</param>
+        <summary>Bestimmt, ob dies <see cref="T:System.Windows.Forms.LinkArea" /> mit dem angegebenen Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene Objekt und die aktuelle <see cref="T:System.Windows.Forms.LinkArea" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkArea.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen. Diese ist der Hashcode für die Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkArea.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.LinkArea" /> ist leer.</summary>
+        <value>
+          <see langword="true" />Wenn die angegebenen Start- und die Länge einer leeren Linkbereichs zurückgegeben. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, um zu bestimmen, ob eine gültige Linkbereichs in dieses Objekt anstelle der Auswertung der Werte der angegeben wurde die <xref:System.Windows.Forms.LinkArea.Length%2A> und <xref:System.Windows.Forms.LinkArea.Start%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkArea.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Zeichen im Bereich "Link".</summary>
+        <value>Die Anzahl der Zeichen einschließlich Leerzeichen, die im Bereich "Link".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Angeben von Text aus der <xref:System.Windows.Forms.LinkLabel> als Link anzeigen zu können, legen Sie die <xref:System.Windows.Forms.LinkArea.Start%2A> Eigenschaft, um die Position in der Text, der mit dem Erstellen der Verknüpfung beginnen. Nach der <xref:System.Windows.Forms.LinkArea.Start%2A> Eigenschaft festgelegt ist, legen Sie den Wert von der <xref:System.Windows.Forms.LinkArea.Length%2A> Eigenschaft, um die Anzahl der Zeichen, z. B. die Position des Zeichens im angegebenen die <xref:System.Windows.Forms.LinkArea.Start%2A> Eigenschaft, die den Text des Links machen möchten. Angenommen, wenn Sie dem ersten Wort des Texts "The quick brown Fox" eine Verknüpfung erstellen möchten, Sie legen die <xref:System.Windows.Forms.LinkArea.Start%2A> Eigenschaft auf Null (0) und die <xref:System.Windows.Forms.LinkArea.Length%2A> -Eigenschaft auf drei (3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Forms.LinkArea linkArea1, System.Windows.Forms.LinkArea linkArea2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Forms.LinkArea linkArea1, valuetype System.Windows.Forms.LinkArea linkArea2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkArea.op_Equality(System.Windows.Forms.LinkArea,System.Windows.Forms.LinkArea)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="linkArea1" Type="System.Windows.Forms.LinkArea" />
+        <Parameter Name="linkArea2" Type="System.Windows.Forms.LinkArea" />
+      </Parameters>
+      <Docs>
+        <param name="linkArea1">Ein zu vergleichender <see cref="T:System.Windows.Forms.LinkArea" />.</param>
+        <param name="linkArea2">Ein zu vergleichender <see cref="T:System.Windows.Forms.LinkArea" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob zwei Instanzen der <see cref="T:System.Windows.Forms.LinkArea" />-Klasse gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn zwei Instanzen der <see cref="T:System.Windows.Forms.LinkArea" />-Klasse gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Forms.LinkArea.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Forms.LinkArea linkArea1, System.Windows.Forms.LinkArea linkArea2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Forms.LinkArea linkArea1, valuetype System.Windows.Forms.LinkArea linkArea2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkArea.op_Inequality(System.Windows.Forms.LinkArea,System.Windows.Forms.LinkArea)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="linkArea1" Type="System.Windows.Forms.LinkArea" />
+        <Parameter Name="linkArea2" Type="System.Windows.Forms.LinkArea" />
+      </Parameters>
+      <Docs>
+        <param name="linkArea1">Ein zu vergleichender <see cref="T:System.Windows.Forms.LinkArea" />.</param>
+        <param name="linkArea2">Ein zu vergleichender <see cref="T:System.Windows.Forms.LinkArea" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob zwei Instanzen der <see cref="T:System.Windows.Forms.LinkArea" />-Klasse ungleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn zwei Instanzen der <see cref="T:System.Windows.Forms.LinkArea" />-Klasse ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public int Start { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Start" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkArea.Start" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anfangsposition des des Linkbereichs im Text des der <see cref="T:System.Windows.Forms.LinkLabel" />.</summary>
+        <value>Die Position innerhalb des Texts von der <see cref="T:System.Windows.Forms.LinkLabel" /> Steuerelement, in dem der Link beginnt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Angeben von Text aus der <xref:System.Windows.Forms.LinkLabel> als Link anzeigen zu können, legen Sie die <xref:System.Windows.Forms.LinkArea.Start%2A> Eigenschaft, um die Position in der Text, der mit dem Erstellen der Verknüpfung beginnen. Nach der <xref:System.Windows.Forms.LinkArea.Start%2A> Eigenschaft festgelegt ist, legen Sie den Wert von der <xref:System.Windows.Forms.LinkArea.Length%2A> Eigenschaft, um die Anzahl der Zeichen, z. B. die Position des Zeichens im angegebenen die <xref:System.Windows.Forms.LinkArea.Start%2A> Eigenschaft, die den Text des Links machen möchten. Angenommen, wenn Sie dem ersten Wort des Texts "The quick brown Fox" eine Verknüpfung erstellen möchten, Sie legen die <xref:System.Windows.Forms.LinkArea.Start%2A> Eigenschaft auf Null (0) und die <xref:System.Windows.Forms.LinkArea.Length%2A> -Eigenschaft auf drei (3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkArea.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den voll qualifizierten Typnamen dieser Instanz zurück.</summary>
+        <returns>Eine <see cref="T:System.String" />-Klasse, die den voll qualifizierten Typnamen enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

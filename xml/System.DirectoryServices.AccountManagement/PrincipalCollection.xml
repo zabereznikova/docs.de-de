@@ -1,0 +1,962 @@
+<Type Name="PrincipalCollection" FullName="System.DirectoryServices.AccountManagement.PrincipalCollection">
+  <TypeSignature Language="C#" Value="public class PrincipalCollection : System.Collections.Generic.ICollection&lt;System.DirectoryServices.AccountManagement.Principal&gt;, System.Collections.Generic.IEnumerable&lt;System.DirectoryServices.AccountManagement.Principal&gt;, System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PrincipalCollection extends System.Object implements class System.Collections.Generic.ICollection`1&lt;class System.DirectoryServices.AccountManagement.Principal&gt;, class System.Collections.Generic.IEnumerable`1&lt;class System.DirectoryServices.AccountManagement.Principal&gt;, class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.DirectoryServices.AccountManagement.Principal&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.DirectoryServices.AccountManagement.Principal&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Eine änderbare Auflistung von Objekten, die von abgeleiteten der <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> Klasse.  Diese Klasse ist für die Verwendung mit Eigenschaften mit mehreren Werten konzipiert, die Prinzipale enthalten.  Bearbeiten den Inhalt dieser Auflistung ändert sich der Inhalt dem entsprechenden Store-Eigenschaft, die permanente wann erfolgt <see cref="M:System.DirectoryServices.AccountManagement.Principal.Save" /> für das entsprechende Prinzipalobjekt aufgerufen wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="Add">
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Fügt den angegebenen Prinzipal am Ende der Auflistung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wie bei <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove%2A> und <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains%2A>, es gibt vier Überladungen dieser Funktion, aber alle identisch sind.  Zusätzlichen Überladungen sind nur zur Verbesserung der benutzerfreundlichkeit implementiert, sodass Überladungen von Entwicklern mithilfe von Intellisense angezeigt werden, die akzeptieren ein <xref:System.DirectoryServices.AccountManagement.UserPrincipal>, <xref:System.DirectoryServices.AccountManagement.GroupPrincipal>, oder <xref:System.DirectoryServices.AccountManagement.ComputerPrincipal> Objekt.  Aufrufen eines Benutzer, Gruppe oder Computer Überladungen entspricht genau dem Aufruf der <xref:System.DirectoryServices.AccountManagement.Principal> überladen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.DirectoryServices.AccountManagement.ComputerPrincipal computer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.DirectoryServices.AccountManagement.ComputerPrincipal computer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Add(System.DirectoryServices.AccountManagement.ComputerPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="computer" Type="System.DirectoryServices.AccountManagement.ComputerPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="computer">Ein <see cref="T:System.DirectoryServices.AccountManagement.ComputerPrincipal" />-Objekt.</param>
+        <summary>Fügt das angegebene <see cref="T:System.DirectoryServices.AccountManagement.ComputerPrincipal" />-Objekt am Ende der Sammlung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion kann die folgenden Ausnahmen auslösen:  
+  
+|Ausnahme|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.DirectoryServices.AccountManagement.PrincipalExistsException>|`computer` ist bereits in der Auflistung vorhanden.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.DirectoryServices.AccountManagement.GroupPrincipal group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.DirectoryServices.AccountManagement.GroupPrincipal group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Add(System.DirectoryServices.AccountManagement.GroupPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.DirectoryServices.AccountManagement.GroupPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="group">Ein <see cref="T:System.DirectoryServices.AccountManagement.ComputerPrincipal" />-Objekt.</param>
+        <summary>Fügt das angegebene <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" />-Objekt am Ende der Sammlung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion kann die folgenden Ausnahmen auslösen:  
+  
+|Ausnahme|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.DirectoryServices.AccountManagement.PrincipalExistsException>|`group` ist bereits in der Auflistung vorhanden.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.DirectoryServices.AccountManagement.Principal principal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.DirectoryServices.AccountManagement.Principal principal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Add(System.DirectoryServices.AccountManagement.Principal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="principal" Type="System.DirectoryServices.AccountManagement.Principal" />
+      </Parameters>
+      <Docs>
+        <param name="principal">Ein <see cref="T:System.DirectoryServices.AccountManagement.Principal" />-Objekt.</param>
+        <summary>Fügt das angegebene <see cref="T:System.DirectoryServices.AccountManagement.Principal" />-Objekt am Ende der Sammlung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion kann die folgenden Ausnahmen auslösen:  
+  
+|Ausnahme|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.DirectoryServices.AccountManagement.PrincipalExistsException>|`principal` ist bereits in der Auflistung vorhanden.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.DirectoryServices.AccountManagement.UserPrincipal user);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.DirectoryServices.AccountManagement.UserPrincipal user) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Add(System.DirectoryServices.AccountManagement.UserPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="user" Type="System.DirectoryServices.AccountManagement.UserPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="user">Ein <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" />-Objekt.</param>
+        <summary>Fügt das angegebene <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" />-Objekt am Ende der Sammlung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion kann die folgenden Ausnahmen auslösen:  
+  
+|Ausnahme|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.DirectoryServices.AccountManagement.PrincipalExistsException>|`user` ist bereits in der Auflistung vorhanden.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.DirectoryServices.AccountManagement.PrincipalContext context, System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.DirectoryServices.AccountManagement.PrincipalContext context, valuetype System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Add(System.DirectoryServices.AccountManagement.PrincipalContext,System.DirectoryServices.AccountManagement.IdentityType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+        <Parameter Name="identityType" Type="System.DirectoryServices.AccountManagement.IdentityType" />
+        <Parameter Name="identityValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> Objekt für den Prinzipal der Auflistung hinzugefügt werden.</param>
+        <param name="identityType">Ein <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> -Objekt, das das Format von <c>IdentityValue</c></param>
+        <param name="identityValue">Eine Zeichenfolge, die den Prinzipal an, in dem vom angegebenen Format identifiziert <c>IdentityType</c></param>
+        <summary>Sucht nach einem <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> -Objekt, das den Parametern entspricht, und fügt es am Ende der Auflistung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion kann die folgenden Ausnahmen auslösen:  
+  
+|Ausnahme|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.DirectoryServices.AccountManagement.PrincipalExistsException>|Der Prinzipal, der bereits übereinstimmende diese Parameter vorhanden in der Auflistung.|  
+|<xref:System.DirectoryServices.AccountManagement.NoMatchingPrincipalException>|Es wurde kein Prinzipal, der die angegebenen Parametern übereinstimmenden gefunden.|  
+|<xref:System.DirectoryServices.AccountManagement.MultipleMatchesException>|Mehr als einen Prinzipal mit die angegebenen Parametern übereinstimmt.|  
+|<xref:System.DirectoryServices.AccountManagement.ArgumentException>|Wird ausgelöst, wenn `identityType` ist eine leere Zeichenfolge|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Prinzipale aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion kann die folgenden Ausnahmen auslösen:  
+  
+|Ausnahme|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.InvalidOperation>|Wenn diese Methode aufgerufen wird, auf die <xref:System.DirectoryServices.AccountManagement.GroupPrincipal.Members> PrincipalCollection, die <xref:System.DirectoryServices.AccountManagement.GroupPrincipal.Members> Eigenschaft kann nicht gelöscht werden, da mindestens eines der Gruppe Mitglieder dieser Gruppe als ihre primäre Gruppe haben|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Contains">
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt "true" zurück, wenn der angegebene Prinzipal ein Mitglied der PrincipalCollection ist.  Der Prinzipal kann angegeben werden, auf die gleiche Weise wie in der <see cref="Overload:System.DirectoryServices.AccountManagement.PrincipalCollection.Add" />-Methoden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wie bei <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Add%2A>, und <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove%2A> es gibt vier Überladungen dieser Funktion, dies aber Fall dasselbe.  Zusätzlichen Überladungen sind nur zur Verbesserung der benutzerfreundlichkeit implementiert, sodass Überladungen von Entwicklern mithilfe von Intellisense angezeigt werden, die akzeptieren ein <xref:System.DirectoryServices.AccountManagement.UserPrincipal>, <xref:System.DirectoryServices.AccountManagement.GroupPrincipal>, oder <xref:System.DirectoryServices.AccountManagement.ComputerPrincipal> Objekt.  Aufrufen eines Benutzer, Gruppe oder Computer Überladungen entspricht genau dem Aufruf der <xref:System.DirectoryServices.AccountManagement.Principal> überladen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.DirectoryServices.AccountManagement.ComputerPrincipal computer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.DirectoryServices.AccountManagement.ComputerPrincipal computer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains(System.DirectoryServices.AccountManagement.ComputerPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="computer" Type="System.DirectoryServices.AccountManagement.ComputerPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="computer">Ein <see cref="T:System.DirectoryServices.AccountManagement.ComputerPrincipal" />-Objekt.</param>
+        <summary>Gibt "true" zurück, wenn die Auflistung das angegebene enthält <see cref="T:System.DirectoryServices.AccountManagement.ComputerPrincipal" /> Objekt.</summary>
+        <returns>Gibt einen Wert vom Typ <see langword="bool" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.DirectoryServices.AccountManagement.GroupPrincipal group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.DirectoryServices.AccountManagement.GroupPrincipal group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains(System.DirectoryServices.AccountManagement.GroupPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.DirectoryServices.AccountManagement.GroupPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="group">Ein <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" />-Objekt.</param>
+        <summary>Gibt "true" zurück, wenn die Auflistung das angegebene enthält <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> Objekt.</summary>
+        <returns>Gibt einen Wert vom Typ <see langword="bool" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.DirectoryServices.AccountManagement.Principal principal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(class System.DirectoryServices.AccountManagement.Principal principal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains(System.DirectoryServices.AccountManagement.Principal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="principal" Type="System.DirectoryServices.AccountManagement.Principal" />
+      </Parameters>
+      <Docs>
+        <param name="principal">Ein <see cref="T:System.DirectoryServices.AccountManagement.Principal" />-Objekt.</param>
+        <summary>Gibt "true" zurück, wenn die Auflistung das angegebene enthält <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> Objekt.</summary>
+        <returns>Gibt einen Wert vom Typ <see langword="bool" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.DirectoryServices.AccountManagement.UserPrincipal user);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.DirectoryServices.AccountManagement.UserPrincipal user) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains(System.DirectoryServices.AccountManagement.UserPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="user" Type="System.DirectoryServices.AccountManagement.UserPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="user">Ein <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" />-Objekt.</param>
+        <summary>Gibt "true" zurück, wenn die Auflistung das angegebene enthält <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" /> Objekt.</summary>
+        <returns>Gibt einen Wert vom Typ <see langword="bool" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.DirectoryServices.AccountManagement.PrincipalContext context, System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.DirectoryServices.AccountManagement.PrincipalContext context, valuetype System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains(System.DirectoryServices.AccountManagement.PrincipalContext,System.DirectoryServices.AccountManagement.IdentityType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+        <Parameter Name="identityType" Type="System.DirectoryServices.AccountManagement.IdentityType" />
+        <Parameter Name="identityValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> Objekt des Prinzipals.</param>
+        <param name="identityType">Ein <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> -Objekt, das das Format von <c>IdentityValue</c></param>
+        <param name="identityValue">Eine Zeichenfolge, die den Prinzipal an, in dem vom angegebenen Format identifiziert <c>IdentityType</c></param>
+        <summary>Gibt "true" zurück, wenn die <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> Objekt Abgleich der <paramref name="indentityType" /> / <paramref name="idendityValue" /> Paar ist in der Auflistung</summary>
+        <returns>Gibt einen Wert vom Typ <see langword="bool" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion kann die folgenden Ausnahmen auslösen:  
+  
+|Ausnahme|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.DirectoryServices.AccountManagement.MultipleMatchesException>|Es gibt mehrere Prinzipale, die diesen Parametern entsprechen.|  
+|<xref:System.DirectoryServices.AccountManagement.ArgumentException>|Die `identityType` Parameter darf nicht leer sein.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.DirectoryServices.AccountManagement.Principal[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.DirectoryServices.AccountManagement.Principal[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.CopyTo(System.DirectoryServices.AccountManagement.Principal[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.DirectoryServices.AccountManagement.Principal[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Die <see cref="T:System.Array" /> , die aufgefüllt werden soll, mit <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> Objekte.</param>
+        <param name="index">Die Position im <c>Array</c> in dem das erste principal-Objekt in der Auflistung kopiert werden sollen.</param>
+        <summary>Kopiert die <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> Objekte aus dieser <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" /> in das angegebene Array, beginnend bei der Index angegebenen Position im Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `array`müssen eindimensional sein.  Wenn es nicht der Fall ist ein <xref:System.ArgumentException> ausgelöst wird.  Weitere Ausnahmen werden ausgelöst, wenn die Anzahl der zu kopierenden Elemente größer als der verfügbare Platz vom ist `index` bis zum Ende des `array`, wenn `array` ist `null`, oder wenn `index` ist kleiner als 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.PrincipalCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Anzahl der Prinzipal in dieser Auflistung Objekte.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.DirectoryServices.AccountManagement.Principal&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.DirectoryServices.AccountManagement.Principal&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.DirectoryServices.AccountManagement.Principal&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zum Durchlaufen der Prinzipale in der <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> , enthält die Prinzipale in der <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Prinzip jede Instanz des <xref:System.DirectoryServices.AccountManagement.PrincipalCollection> ein einzelnes Enumerators zugeordnet wurde.  Obwohl mehrere Aufrufe <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.System.Collections.IEnumerable.GetEnumerator%2A> zurückgeben distinct <xref:System.Collections.IEnumerator> Objekte, die sie den gleichen internen Zustand aufweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.PrincipalCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt false zurück.  Dies ist eine schreibgeschützte Auflistung.</summary>
+        <value>Gibt einen Wert vom Typ <see langword="bool" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.PrincipalCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt false zurück.  Es ist Aufgabe der Anwendung, die Serialisierung des Zugriffs auf diese Auflistung.</summary>
+        <value>Gibt einen Wert vom Typ <see langword="bool" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Remove">
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Entfernt den angegebenen Prinzipal aus der Auflistung und gibt <see langword="true" /> war das angegebene principal-Objekt ein Element der Auflistung und <see langword="false" /> andernfalls (in diesem Fall wird kein Vorgang ausgeführt wird).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wie bei <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Add%2A>, und <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains%2A> es gibt vier Überladungen dieser Funktion, dies aber Fall dasselbe.  Zusätzlichen Überladungen sind nur zur Verbesserung der benutzerfreundlichkeit implementiert, sodass Überladungen von Entwicklern mithilfe von Intellisense angezeigt werden, die akzeptieren ein <xref:System.DirectoryServices.AccountManagement.UserPrincipal>, <xref:System.DirectoryServices.AccountManagement.GroupPrincipal>, oder <xref:System.DirectoryServices.AccountManagement.ComputerPrincipal> Objekt.  Aufrufen eines Benutzer, Gruppe oder Computer Überladungen entspricht genau dem Aufruf der <xref:System.DirectoryServices.AccountManagement.Principal> überladen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.DirectoryServices.AccountManagement.ComputerPrincipal computer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Remove(class System.DirectoryServices.AccountManagement.ComputerPrincipal computer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove(System.DirectoryServices.AccountManagement.ComputerPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="computer" Type="System.DirectoryServices.AccountManagement.ComputerPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="computer">Ein <see cref="T:System.DirectoryServices.AccountManagement.ComputerPrincipal" />-Objekt.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.DirectoryServices.AccountManagement.ComputerPrincipal" /> Objekt aus der Auflistung und gibt <see langword="true" /> Wenn die <see cref="T:System.DirectoryServices.AccountManagement.ComputerPrincipal" /> wurde von einem Mitglied dieses <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />, und <see langword="false" /> andernfalls (in diesem Fall die Methode keinen Vorgang ausführt).</summary>
+        <returns>Gibt einen Wert vom Typ <see langword="bool" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion kann die folgenden Ausnahmen auslösen:  
+  
+|Ausnahme|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.InvalidOperation>|Diese Methode wurde aufgerufen, auf die <xref:System.DirectoryServices.AccountManagement.GroupPrincipal.Members> Sammlung für eine Domänengruppe sowie der Domänenprinzipal entfernt werden soll, ist ein Mitglied der Gruppe-ASP.NET-Kompatibilitätsmodus seine `primaryGroupId` Attribut.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.DirectoryServices.AccountManagement.GroupPrincipal group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Remove(class System.DirectoryServices.AccountManagement.GroupPrincipal group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove(System.DirectoryServices.AccountManagement.GroupPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.DirectoryServices.AccountManagement.GroupPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="group">Ein <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" />-Objekt.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> Objekt aus der Auflistung und gibt <see langword="true" /> Wenn die <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> wurde von einem Mitglied dieses <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />, und <see langword="false" /> andernfalls (in diesem Fall die Methode keinen Vorgang ausführt).</summary>
+        <returns>Gibt einen Wert vom Typ <see langword="bool" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion kann die folgenden Ausnahmen auslösen:  
+  
+|Ausnahme|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.InvalidOperation>|Diese Methode wurde aufgerufen, auf die <xref:System.DirectoryServices.AccountManagement.GroupPrincipal.Members> Sammlung für eine Domänengruppe sowie der Domänenprinzipal entfernt werden soll, ist ein Mitglied der Gruppe-ASP.NET-Kompatibilitätsmodus seine `primaryGroupId` Attribut.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.DirectoryServices.AccountManagement.Principal principal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(class System.DirectoryServices.AccountManagement.Principal principal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove(System.DirectoryServices.AccountManagement.Principal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="principal" Type="System.DirectoryServices.AccountManagement.Principal" />
+      </Parameters>
+      <Docs>
+        <param name="principal">Ein <see cref="T:System.DirectoryServices.AccountManagement.Principal" />-Objekt.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> Objekt aus der Auflistung und gibt <see langword="true" /> Wenn die <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> wurde von einem Mitglied dieses <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />, und <see langword="false" /> andernfalls (in diesem Fall die Methode keinen Vorgang ausführt).</summary>
+        <returns>Gibt einen Wert vom Typ <see langword="bool" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion kann die folgenden Ausnahmen auslösen:  
+  
+|Ausnahme|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.InvalidOperation>|Diese Methode wurde aufgerufen, auf die <xref:System.DirectoryServices.AccountManagement.GroupPrincipal.Members> Sammlung für eine Domänengruppe sowie der Domänenprinzipal entfernt werden soll, ist ein Mitglied der Gruppe-ASP.NET-Kompatibilitätsmodus seine `primaryGroupId` Attribut.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.DirectoryServices.AccountManagement.UserPrincipal user);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Remove(class System.DirectoryServices.AccountManagement.UserPrincipal user) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove(System.DirectoryServices.AccountManagement.UserPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="user" Type="System.DirectoryServices.AccountManagement.UserPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="user">Ein <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" />-Objekt.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" /> Objekt aus der Auflistung und gibt <see langword="true" /> Wenn die <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" /> wurde von einem Mitglied dieses <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />, und <see langword="false" /> andernfalls (in diesem Fall die Methode keinen Vorgang ausführt).</summary>
+        <returns>Gibt einen Wert vom Typ <see langword="bool" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion kann die folgenden Ausnahmen auslösen:  
+  
+|Ausnahme|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.InvalidOperation>|Diese Methode wurde aufgerufen, auf die <xref:System.DirectoryServices.AccountManagement.GroupPrincipal.Members> Sammlung für eine Domänengruppe sowie der Domänenprinzipal entfernt werden soll, ist ein Mitglied der Gruppe-ASP.NET-Kompatibilitätsmodus seine `primaryGroupId` Attribut.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.DirectoryServices.AccountManagement.PrincipalContext context, System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Remove(class System.DirectoryServices.AccountManagement.PrincipalContext context, valuetype System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove(System.DirectoryServices.AccountManagement.PrincipalContext,System.DirectoryServices.AccountManagement.IdentityType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+        <Parameter Name="identityType" Type="System.DirectoryServices.AccountManagement.IdentityType" />
+        <Parameter Name="identityValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" />-Objekt.</param>
+        <param name="identityType">Ein <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> , identifiziert das Format der <c>IdentityValue</c>.</param>
+        <param name="identityValue">Eine Zeichenfolge.</param>
+        <summary>Sucht nach der <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" /> angegebene Objekt der angegebenen <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> und <paramref name="identityType" /> / <paramref name="identityValue" /> -Paar aus der Auflistung und gibt <see langword="true" /> Wenn die identifizierten <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> wurde von einem Mitglied dieses <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />, und <see langword="false" /> andernfalls (in diesem Fall die Methode keinen Vorgang ausführt).</summary>
+        <returns>Gibt einen Wert vom Typ <see langword="bool" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion kann die folgenden Ausnahmen auslösen:  
+  
+|Ausnahme|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.InvalidOperation>|Diese Methode wurde aufgerufen, auf die <xref:System.DirectoryServices.AccountManagement.GroupPrincipal.Members> Sammlung für eine Domänengruppe sowie der Domänenprinzipal entfernt werden soll, ist ein Mitglied der Gruppe-ASP.NET-Kompatibilitätsmodus seine `primaryGroupId` Attribut.|  
+|<xref:System.DirectoryServices.AccountManagement.NoMatchingPrincipalException>|Es wurde kein Prinzipal, der die angegebenen Parametern übereinstimmenden gefunden.|  
+|<xref:System.DirectoryServices.AccountManagement.MultipleMatchesException>|Mehr als einen Prinzipal mit die angegebenen Parametern übereinstimmt.  In der Theorie, dies sollte nie eintreten, da <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Add%2A> löst eine Ausnahme aus, wenn der Versuch doppelte Prinzipale in der Auflistung hinzu.  Es ist jedoch möglich, dass eine andere API das Duplikat erstellt.|  
+|<xref:System.DirectoryServices.AccountManagement.ArgumentException>|Wird ausgelöst, wenn `identityType` ist eine leere Zeichenfolge.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.PrincipalCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein Synchronisierungsobjekt, das zum Synchronisieren des Zugriffs auf diese Auflistung verwendet werden kann.</summary>
+        <value>Gibt die <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" /> Objekt selbst.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">T: System.Array, die mit aufgefüllt werden soll <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> Objekte.</param>
+        <param name="index">Die Position im <c>Array</c> , der das erste <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> Objekt kopiert werden soll.</param>
+        <summary>Kopiert die <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> Objekte aus dieser <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" /> in das angegebene Array, beginnend bei der Index angegebenen Position im Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `array`müssen eindimensional sein.  Wenn es nicht der Fall ist ein <xref:System.ArgumentException> ausgelöst wird.  Weitere Ausnahmen werden ausgelöst, wenn die Anzahl der zu kopierenden Elemente größer als der verfügbare Platz vom ist `index` bis zum Ende des `array`, wenn `array` ist `null`, oder wenn `index` ist kleiner als 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.Count">
+      <MemberSignature Language="C#" Value="int System.Collections.ICollection.Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.ICollection.Count" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.PrincipalCollection.System#Collections#ICollection#Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Anzahl der Prinzipal in dieser Auflistung Objekte.</summary>
+        <value>Gibt einen <see langword="integer" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.PrincipalCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt immer <see langword="false" /> zurück.  Es ist hängt von der Anwendung mit dem der Zugriff auf diese Auflistung synchronisiert.</summary>
+        <value>Gibt einen Wert vom Typ <see langword="bool" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt immer `false` zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.PrincipalCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein Synchronisierungsobjekt, das zum Synchronisieren des Zugriffs auf diese Auflistung verwendet werden kann.  Gibt die <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" /> Objekt selbst.</summary>
+        <value>Das <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zum Durchlaufen der Prinzipale in der <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> , enthält die Prinzipale in der <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Prinzip jede Instanz des <xref:System.DirectoryServices.AccountManagement.PrincipalCollection> ein einzelnes Enumerators zugeordnet wurde.  Obwohl mehrere Aufrufe <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.System.Collections.IEnumerable.GetEnumerator%2A> zurückgeben distinct <xref:System.Collections.IEnumerator> Objekte, die sie den gleichen internen Zustand aufweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

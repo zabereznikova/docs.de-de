@@ -1,0 +1,144 @@
+<Type Name="ReliabilityContractAttribute" FullName="System.Runtime.ConstrainedExecution.ReliabilityContractAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ReliabilityContractAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ReliabilityContractAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method | System.AttributeTargets.Interface, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert einen Vertrag Zuverlässigkeitsvertrags zwischen der Autor der Teil des Codes und die Entwickler, die eine Abhängigkeit auf diesen Code besitzen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> Attribut stellt ein Mechanismus für die Sie den Code zu dokumentieren und um anzugeben, welche Art von Zuverlässigkeit Sie garantiert möglich Ausnahmebedingungen, die zu einem inkonsistenten Status führen kann. In diesem Kontext werden Ausnahmebedingungen als asynchrone Ausnahmen, die zur Laufzeit durch die common Language Runtime, wie z. B. generiert können Threads, die Out-of-Memory-Situationen beendete und Stapelüberläufe definiert. Sie können Anwenden der <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> -Attribut auf Assemblys, Typen und Methoden.  
+  
+ Verwenden Sie dieses Attribut mit dem <xref:System.Runtime.ConstrainedExecution.Consistency> Enumeration, um einen Zuverlässigkeitsvertrag zu definieren, indem Sie das Maß an Zuverlässigkeit in einen bestimmten durch Code zu dokumentieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> Attribut, das Maß an Zuverlässigkeit einer Assembly zu dokumentieren.  
+  
+ [!code-cpp[FxCop.Reliability.ReliabilityContract#1](~/samples/snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Reliability.ReliabilityContract/cpp/FxCop.Reliability.ReliabilityContract.cpp#1)]
+ [!code-csharp[FxCop.Reliability.ReliabilityContract#1](~/samples/snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Reliability.ReliabilityContract/cs/FxCop.Reliability.ReliabilityContract.cs#1)]
+ [!code-vb[FxCop.Reliability.ReliabilityContract#1](~/samples/snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Reliability.ReliabilityContract/vb/FxCop.Reliability.ReliabilityContract.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReliabilityContractAttribute (System.Runtime.ConstrainedExecution.Consistency consistencyGuarantee, System.Runtime.ConstrainedExecution.Cer cer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.ConstrainedExecution.Consistency consistencyGuarantee, valuetype System.Runtime.ConstrainedExecution.Cer cer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute.#ctor(System.Runtime.ConstrainedExecution.Consistency,System.Runtime.ConstrainedExecution.Cer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="consistencyGuarantee" Type="System.Runtime.ConstrainedExecution.Consistency" />
+        <Parameter Name="cer" Type="System.Runtime.ConstrainedExecution.Cer" />
+      </Parameters>
+      <Docs>
+        <param name="consistencyGuarantee">Einer der <see cref="T:System.Runtime.ConstrainedExecution.Consistency" />-Werte.</param>
+        <param name="cer">Einer der <see cref="T:System.Runtime.ConstrainedExecution.Cer" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute" /> Klasse mit dem angegebenen <see cref="T:System.Runtime.ConstrainedExecution.Consistency" /> zu gewährleisten und <see cref="T:System.Runtime.ConstrainedExecution.Cer" /> Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute.%23ctor%2A> Konstruktor zur Erstellung von eines eingeschränkten Ausführungsbereichs und ein `finally` Block, der ausgeführt wird.  
+  
+ [!code-csharp[System.Runtime.ConstrainedExecution#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.ConstrainedExecution/cs/program.cs#1)]
+ [!code-vb[System.Runtime.ConstrainedExecution#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.ConstrainedExecution/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cer">
+      <MemberSignature Language="C#" Value="public System.Runtime.ConstrainedExecution.Cer Cer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.ConstrainedExecution.Cer Cer" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute.Cer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.ConstrainedExecution.Cer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der das Verhalten einer Methode, eines Typs oder einer Assembly bestimmt, wenn sie bzw. er in einem eingeschränkten Ausführungsbereich (Constrained Execution Region, CER) aufgerufen wird.</summary>
+        <value>Einer der <see cref="T:System.Runtime.ConstrainedExecution.Cer" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsistencyGuarantee">
+      <MemberSignature Language="C#" Value="public System.Runtime.ConstrainedExecution.Consistency ConsistencyGuarantee { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.ConstrainedExecution.Consistency ConsistencyGuarantee" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute.ConsistencyGuarantee" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.ConstrainedExecution.Consistency</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see cref="T:System.Runtime.ConstrainedExecution.Consistency" /> Zuverlässigkeitsvertrag.</summary>
+        <value>Einer der <see cref="T:System.Runtime.ConstrainedExecution.Consistency" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

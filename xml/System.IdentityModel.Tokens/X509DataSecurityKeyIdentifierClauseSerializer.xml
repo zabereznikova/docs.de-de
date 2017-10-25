@@ -1,0 +1,174 @@
+<Type Name="X509DataSecurityKeyIdentifierClauseSerializer" FullName="System.IdentityModel.Tokens.X509DataSecurityKeyIdentifierClauseSerializer">
+  <TypeSignature Language="C#" Value="public class X509DataSecurityKeyIdentifierClauseSerializer : System.IdentityModel.Tokens.SecurityKeyIdentifierClauseSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509DataSecurityKeyIdentifierClauseSerializer extends System.IdentityModel.Tokens.SecurityKeyIdentifierClauseSerializer" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.X509DataSecurityKeyIdentifierClauseSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClauseSerializer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClauseSerializer" /> , x. 509-Zertifikat Verweistypen verarbeiten kann.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509DataSecurityKeyIdentifierClauseSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509DataSecurityKeyIdentifierClauseSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.X509DataSecurityKeyIdentifierClauseSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override bool CanReadKeyIdentifierClause (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanReadKeyIdentifierClause(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509DataSecurityKeyIdentifierClauseSerializer.CanReadKeyIdentifierClause(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader am Startelement des der schlüsselbezeichnerklausel.</param>
+        <summary>Gibt einen Wert, der angibt, ob auf das angegebene Reader positioniert ist ein <see langword="&lt;ds:X509Data&gt;" /> Element.</summary>
+        <returns>
+          <see langword="true" />Wenn der Reader auf bezieht eine <see langword="&lt;ds:X509Data&gt;" /> Element ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override bool CanWriteKeyIdentifierClause (System.IdentityModel.Tokens.SecurityKeyIdentifierClause securityKeyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanWriteKeyIdentifierClause(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause securityKeyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509DataSecurityKeyIdentifierClauseSerializer.CanWriteKeyIdentifierClause(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityKeyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="securityKeyIdentifierClause">Die schlüsselbezeichnerklausel zu überprüfen.</param>
+        <summary>Gibt einen Wert, der angibt, ob die angegebene schlüsselbezeichnerklausel von diesem Handler serialisiert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn die schlüsselbezeichnerklausel von diesem Handler unterstützt wird. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die unterstützten Typen sind:  
+  
+1.  <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause>  
+  
+2.  <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause>  
+  
+3.  <xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="securityKeyIdentifierClause" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClause (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClause(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509DataSecurityKeyIdentifierClauseSerializer.ReadKeyIdentifierClause(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XML-Reader am Startelement des der schlüsselbezeichnerklausel zu lesen.</param>
+        <summary>Deserialisiert eine schlüsselbezeichnerklausel aus XML mit dem angegebenen XML-Reader.</summary>
+        <returns>Die schlüsselbezeichnerklausel, das aus XML deserialisiert wurde oder <see langword="null" /> , wenn eine schlüsselbezeichnerklausel konnte nicht gelesen werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.X509DataSecurityKeyIdentifierClauseSerializer.ReadKeyIdentifierClause%2A> -Methode liest `<ds:X509IssuerSerial>`, `<ds:X509SKI>`, und `<ds:X509Certificate>` -Elemente und gibt das erste Schema gefunden werden, als ein <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause>, <xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause>, oder ein <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause>. Wenn eines dieser Elemente nicht, unter gefunden wird der `<ds:X509Data>` Element der Methodenrückgabe `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="reader" />befindet sich nicht auf eine <see langword="&lt;ds:X509Data&gt;" /> Element. (Die <see cref="M:System.IdentityModel.Tokens.X509DataSecurityKeyIdentifierClauseSerializer.CanReadKeyIdentifierClause(System.Xml.XmlReader)" /> -Methode zurückkehrt <see langword="false" />.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override void WriteKeyIdentifierClause (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityKeyIdentifierClause securityKeyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteKeyIdentifierClause(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityKeyIdentifierClause securityKeyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509DataSecurityKeyIdentifierClauseSerializer.WriteKeyIdentifierClause(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="securityKeyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der XML-Writer verwenden, um die dazugehörige schlüsselbezeichnerklausel zu serialisieren.</param>
+        <param name="securityKeyIdentifierClause">Die schlüsselbezeichnerklausel zu serialisieren.</param>
+        <summary>Serialisiert die angegebene schlüsselbezeichnerklausel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die unterstützten Typen sind:  
+  
+1.  <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause>  
+  
+2.  <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause>  
+  
+3.  <xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="securityKeyIdentifierClause" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="securityKeyIdentifierClause" />ist kein unterstützter Klauseltyp.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

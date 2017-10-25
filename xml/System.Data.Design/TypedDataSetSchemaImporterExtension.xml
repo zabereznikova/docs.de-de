@@ -1,0 +1,203 @@
+<Type Name="TypedDataSetSchemaImporterExtension" FullName="System.Data.Design.TypedDataSetSchemaImporterExtension">
+  <TypeSignature Language="C#" Value="public class TypedDataSetSchemaImporterExtension : System.Xml.Serialization.Advanced.SchemaImporterExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TypedDataSetSchemaImporterExtension extends System.Xml.Serialization.Advanced.SchemaImporterExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Design.TypedDataSetSchemaImporterExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Serialization.Advanced.SchemaImporterExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Generiert interne Zuordnungen zu .NET Framework-Typen für XML-Schemaelementdeklarationen, einschließlich literal XSD-Nachrichtenteile in einem WSDL-Dokument.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erweitert die <xref:System.Xml.Serialization.XmlSchemaImporter> um zusätzliche Funktionen für typisierte Datasets bereitzustellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Design.TypedDataSetSchemaImporterExtension" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erweitert die <xref:System.Xml.Serialization.XmlSchemaImporter> bereitstellen, zusätzliche Funktionen für typisierte Datasets und generiert interne Zuordnungen zu .NET Framework-Typen für XML-Schemaelementdeklarationen, einschließlich literal XSD-Nachrichtenteile in einem WSDL-Dokument.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypedDataSetSchemaImporterExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetSchemaImporterExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Design.TypedDataSetSchemaImporterExtension" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erweitert die <xref:System.Xml.Serialization.XmlSchemaImporter> bereitstellen, zusätzliche Funktionen für typisierte Datasets und generiert interne Zuordnungen zu .NET Framework-Typen für XML-Schemaelementdeklarationen, einschließlich literal XSD-Nachrichtenteile in einem WSDL-Dokument.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TypedDataSetSchemaImporterExtension (System.Data.Design.TypedDataSetGenerator.GenerateOption dataSetGenerateOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Data.Design.TypedDataSetGenerator/GenerateOption dataSetGenerateOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetSchemaImporterExtension.#ctor(System.Data.Design.TypedDataSetGenerator.GenerateOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataSetGenerateOptions" Type="System.Data.Design.TypedDataSetGenerator+GenerateOption" />
+      </Parameters>
+      <Docs>
+        <param name="dataSetGenerateOptions">Die <see cref="T:System.Data.Design.TypedDataSetGenerator.GenerateOption" /> Wert zum Generieren von typisierten "Datasets", die LINQ to DataSet- und hierarchische Aktualisierung ermöglichen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Design.TypedDataSetSchemaImporterExtension" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser geschützte Konstruktor wird verwendet, um die gewünschte übergeben <xref:System.Data.Design.TypedDataSetGenerator.GenerateOption> -Wert an die <xref:System.Data.Design.TypedDataSetGenerator>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="ImportSchemaType">
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Generiert interne Zuordnung Typinformationen für ein Element in einem XML-Schema-Dokument definiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erweitert die <xref:System.Xml.Serialization.XmlSchemaImporter> bereitstellen, zusätzliche Funktionen für typisierte Datasets und generiert interne Zuordnungen zu .NET Framework-Typen für XML-Schemaelementdeklarationen, einschließlich literal XSD-Nachrichtenteile in einem WSDL-Dokument.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="ImportSchemaType">
+      <MemberSignature Language="C#" Value="public override string ImportSchemaType (System.Xml.Schema.XmlSchemaType type, System.Xml.Schema.XmlSchemaObject context, System.Xml.Serialization.XmlSchemas schemas, System.Xml.Serialization.XmlSchemaImporter importer, System.CodeDom.CodeCompileUnit compileUnit, System.CodeDom.CodeNamespace mainNamespace, System.Xml.Serialization.CodeGenerationOptions options, System.CodeDom.Compiler.CodeDomProvider codeProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ImportSchemaType(class System.Xml.Schema.XmlSchemaType type, class System.Xml.Schema.XmlSchemaObject context, class System.Xml.Serialization.XmlSchemas schemas, class System.Xml.Serialization.XmlSchemaImporter importer, class System.CodeDom.CodeCompileUnit compileUnit, class System.CodeDom.CodeNamespace mainNamespace, valuetype System.Xml.Serialization.CodeGenerationOptions options, class System.CodeDom.Compiler.CodeDomProvider codeProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetSchemaImporterExtension.ImportSchemaType(System.Xml.Schema.XmlSchemaType,System.Xml.Schema.XmlSchemaObject,System.Xml.Serialization.XmlSchemas,System.Xml.Serialization.XmlSchemaImporter,System.CodeDom.CodeCompileUnit,System.CodeDom.CodeNamespace,System.Xml.Serialization.CodeGenerationOptions,System.CodeDom.Compiler.CodeDomProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Xml.Schema.XmlSchemaType" />
+        <Parameter Name="context" Type="System.Xml.Schema.XmlSchemaObject" />
+        <Parameter Name="schemas" Type="System.Xml.Serialization.XmlSchemas" />
+        <Parameter Name="importer" Type="System.Xml.Serialization.XmlSchemaImporter" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="mainNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="options" Type="System.Xml.Serialization.CodeGenerationOptions" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+      </Parameters>
+      <Docs>
+        <param name="type">XMLSchemaType</param>
+        <param name="context">Ein <see cref="T:System.Xml.Schema.XmlSchemaObject" /> , stellt die Stammklasse für die XML-Schema-Objektmodellhierarchie dar und dient als Basisklasse für Klassen, z. B. die XmlSchema-Klasse.</param>
+        <param name="schemas">Ein <see cref="T:System.Xml.Schema.XmlSchema" /> -Klasse, die eine Auflistung von XML-Schemas darstellt.</param>
+        <param name="importer">Die Basis <see cref="T:System.Xml.Serialization.XmlSchemaImporter" /> generiert interne Zuordnungen zu .NET Framework-Typen für XML-Schemaelementdeklarationen, einschließlich literal XSD-Nachrichtenteile in einem WSDL-Dokument.</param>
+        <param name="compileUnit">Die <see cref="T:System.CodeDom.CodeCompileUnit" />, die den generierten Code enthalten soll.</param>
+        <param name="mainNamespace">CodeNamespace</param>
+        <param name="options">Die <see cref="T:System.Xml.Serialization.CodeGenerationOptions" /> , die verschiedene Optionen zum Verwenden von .NET Framework-Typen für die Verwendung mit einem XML-Webdienst während der Generierung angibt.</param>
+        <param name="codeProvider">Der sprachspezifische <see cref="T:System.CodeDom.Compiler.CodeDomProvider" />, der zum Generieren des Datasets verwendet werden soll.</param>
+        <summary>Generiert interne Zuordnung Typinformationen für ein Element in einem XML-Schema-Dokument definiert.</summary>
+        <returns>Gibt eine <see cref="T:System.String" /> , die den Namen der Klasse des typisierten Datasets darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Beim Aufrufen dieser Methode mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Rufen Sie diese Methode nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Erweitert die <xref:System.Xml.Serialization.XmlSchemaImporter> bereitstellen, zusätzliche Funktionen für typisierte Datasets und generiert interne Zuordnungen zu .NET Framework-Typen für XML-Schemaelementdeklarationen, einschließlich literal XSD-Nachrichtenteile in einem WSDL-Dokument.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportSchemaType">
+      <MemberSignature Language="C#" Value="public override string ImportSchemaType (string name, string namespaceName, System.Xml.Schema.XmlSchemaObject context, System.Xml.Serialization.XmlSchemas schemas, System.Xml.Serialization.XmlSchemaImporter importer, System.CodeDom.CodeCompileUnit compileUnit, System.CodeDom.CodeNamespace mainNamespace, System.Xml.Serialization.CodeGenerationOptions options, System.CodeDom.Compiler.CodeDomProvider codeProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ImportSchemaType(string name, string namespaceName, class System.Xml.Schema.XmlSchemaObject context, class System.Xml.Serialization.XmlSchemas schemas, class System.Xml.Serialization.XmlSchemaImporter importer, class System.CodeDom.CodeCompileUnit compileUnit, class System.CodeDom.CodeNamespace mainNamespace, valuetype System.Xml.Serialization.CodeGenerationOptions options, class System.CodeDom.Compiler.CodeDomProvider codeProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.TypedDataSetSchemaImporterExtension.ImportSchemaType(System.String,System.String,System.Xml.Schema.XmlSchemaObject,System.Xml.Serialization.XmlSchemas,System.Xml.Serialization.XmlSchemaImporter,System.CodeDom.CodeCompileUnit,System.CodeDom.CodeNamespace,System.Xml.Serialization.CodeGenerationOptions,System.CodeDom.Compiler.CodeDomProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="context" Type="System.Xml.Schema.XmlSchemaObject" />
+        <Parameter Name="schemas" Type="System.Xml.Serialization.XmlSchemas" />
+        <Parameter Name="importer" Type="System.Xml.Serialization.XmlSchemaImporter" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="mainNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="options" Type="System.Xml.Serialization.CodeGenerationOptions" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein <see cref="T:System.String" /> , die den Namen des Schemas, zu importieren.</param>
+        <param name="namespaceName">Ein <see cref="T:System.String" /> den Namespace des XML-Schemas darstellt.</param>
+        <param name="context">Ein <see cref="T:System.Xml.Schema.XmlSchemaObject" /> , stellt die Stammklasse für die XML-Schema-Objektmodellhierarchie dar und dient als Basisklasse für Klassen, z. B. die XmlSchema-Klasse.</param>
+        <param name="schemas">Ein <see cref="T:System.Xml.Schema.XmlSchema" /> -Klasse, die eine Auflistung von XML-Schemas darstellt.</param>
+        <param name="importer">Die Basis <see cref="T:System.Xml.Serialization.XmlSchemaImporter" /> generiert interne Zuordnungen zu .NET Framework-Typen für XML-Schemaelementdeklarationen, einschließlich literal XSD-Nachrichtenteile in einem WSDL-Dokument.</param>
+        <param name="compileUnit">Die <see cref="T:System.CodeDom.CodeCompileUnit" />, die den generierten Code enthalten soll.</param>
+        <param name="mainNamespace">Der <see cref="T:System.CodeDom.CodeNamespace" />, der das generierte Dataset enthält.</param>
+        <param name="options">Die <see cref="T:System.Xml.Serialization.CodeGenerationOptions" /> , die verschiedene Optionen zum Verwenden von .NET Framework-Typen für die Verwendung mit einem XML-Webdienst während der Generierung angibt.</param>
+        <param name="codeProvider">Der sprachspezifische <see cref="T:System.CodeDom.Compiler.CodeDomProvider" />, der zum Generieren des Datasets verwendet werden soll.</param>
+        <summary>Generiert interne Zuordnung Typinformationen für ein Element in einem XML-Schema-Dokument definiert.</summary>
+        <returns>Gibt eine <see cref="T:System.String" /> , die den Namen der Klasse des typisierten Datasets darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Beim Aufrufen dieser Methode mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Rufen Sie diese Methode nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Erweitert die <xref:System.Xml.Serialization.XmlSchemaImporter> bereitstellen, zusätzliche Funktionen für typisierte Datasets und generiert interne Zuordnungen zu .NET Framework-Typen für XML-Schemaelementdeklarationen, einschließlich literal XSD-Nachrichtenteile in einem WSDL-Dokument.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

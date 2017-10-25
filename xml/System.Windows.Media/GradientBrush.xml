@@ -1,0 +1,351 @@
+<Type Name="GradientBrush" FullName="System.Windows.Media.GradientBrush">
+  <TypeSignature Language="C#" Value="public abstract class GradientBrush : System.Windows.Media.Brush" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract GradientBrush extends System.Windows.Media.Brush" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.GradientBrush" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Brush</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("GradientStops")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine abstrakte Klasse, die einen Farbverlauf beschreibt, der aus Farbverlaufsstopps besteht. Klassen, die von erben <see cref="T:System.Windows.Media.GradientBrush" /> beschreiben verschiedene Möglichkeiten zum Interpretieren von Farbverlaufsstopps.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Media.GradientBrush> ist eine Art von <xref:System.Windows.Freezable> Objekt und kann daher fixiert werden, um die Leistung zu verbessern. Informationen zu <xref:System.Windows.Freezable> Funktionen, z. B. Einfrieren und Klonen, finden Sie unter der [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von der <see cref="T:System.Windows.Media.GradientBrush" /> -Klasse, die Sie überschreiben müssen die <see cref="M:System.Windows.Freezable.CreateInstanceCore" /> Methode. Je nachdem, ob die Klasse zusätzliche Initialisierungsfunktionen ausführen muss oder nicht Abhängigkeitseigenschaft-Datenmember enthält, müssen möglicherweise außer Kraft setzen zusätzliche <see cref="T:System.Windows.Freezable" /> Methoden. Weitere Informationen über das Vererben von <see cref="T:System.Windows.Freezable" /> , finden Sie unter der [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected GradientBrush ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GradientBrush.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.GradientBrush" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected GradientBrush (System.Windows.Media.GradientStopCollection gradientStopCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.GradientStopCollection gradientStopCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GradientBrush.#ctor(System.Windows.Media.GradientStopCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="gradientStopCollection" Type="System.Windows.Media.GradientStopCollection" />
+      </Parameters>
+      <Docs>
+        <param name="gradientStopCollection">Die <see cref="T:System.Windows.Media.GradientStopCollection" /> verwendet, um die Position und Farbe der Übergangspunkte in einem Farbverlauf anzugeben.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.GradientBrush" />-Klasse mit der angegebenen <see cref="T:System.Windows.Media.GradientStopCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.GradientBrush Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.GradientBrush Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GradientBrush.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GradientBrush</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.GradientBrush" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.GradientBrush CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.GradientBrush CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GradientBrush.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GradientBrush</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.GradientBrush" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Des geklonten Objekts <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft <see langword="false" /> selbst wenn der Quelle <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft ist <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorInterpolationMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ColorInterpolationMode ColorInterpolationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.ColorInterpolationMode ColorInterpolationMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GradientBrush.ColorInterpolationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ColorInterpolationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Media.ColorInterpolationMode" /> -Enumeration, der angibt, wie die Farben des Farbverlaufs interpoliert werden.</summary>
+        <value>Gibt an, wie die Farben in einem Farbverlauf interpoliert werden. Die Standardeinstellung ist <see cref="F:System.Windows.Media.ColorInterpolationMode.SRgbLinearInterpolation" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ColorInterpolationMode"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.GradientBrush.ColorInterpolationModeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt zwei ähnliche Farbverläufe mit unterschiedlichen Modi der Farbinterpolation, die bewirkt, dass die Interpolation in unterschiedlichen Farbräumen durchgeführt werden soll.  
+  
+ [!code-xaml[GradientBrushExamples_snip#ColorInterpolationModeExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/ColorInterpolationModeExample.xaml#colorinterpolationmodeexamplewholepage)]  
+  
+ Die folgende Abbildung zeigt, wie im vorherige Beispiel erstellt.  
+  
+ ![Zwei Farbverläufe mit unterschiedlichen Interpolationsmodi](~/add/media/graphicscolorinterpolationmode.gif "zwei Farbverläufe mit unterschiedlichen Interpolationsmodi")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorInterpolationModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ColorInterpolationModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ColorInterpolationModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.GradientBrush.ColorInterpolationModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.GradientBrush.ColorInterpolationMode" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GradientStops">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.GradientStopCollection GradientStops { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.GradientStopCollection GradientStops" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GradientBrush.GradientStops" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GradientStopCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Farbverlaufsstopps des Pinsels ab oder legt diese fest.</summary>
+        <value>Eine Auflistung von der <see cref="T:System.Windows.Media.GradientStop" /> Objekte zugeordnet sind und der Pinsel, von denen jedes eine Farbe und einen Offset entlang der Farbverlaufsachse des Pinsels angibt. Standard ist eine leere <see cref="T:System.Windows.Media.GradientStopCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_GradientStops"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.GradientBrush.GradientStopsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GradientStopsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty GradientStopsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty GradientStopsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.GradientBrush.GradientStopsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.GradientBrush.GradientStops" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MappingMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.BrushMappingMode MappingMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.BrushMappingMode MappingMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GradientBrush.MappingMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.BrushMappingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Media.BrushMappingMode" /> -Enumeration, der angibt, ob der Farbverlauf Farbverlaufspinsels absolut oder relativ zum Ausgabebereich zu werden.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.BrushMappingMode" /> Wert, der angibt, wie der Farbverlauf Farbverlaufspinsels interpretiert werden. Die Standardeinstellung ist <see cref="F:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert <xref:System.Windows.Media.BrushMappingMode.Absolute> gibt an, die Koordinaten des Farbverlaufspinsels werden mithilfe von geräteunabhängigen Pixeln ausgedrückt.  
+  
+<a name="dependencyPropertyInfo_MappingMode"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.GradientBrush.MappingModeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Media.GradientBrush.MappingMode%2A> Eigenschaft an, welche Koordinatensystem für den <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> und <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> des Farbverlaufs.  
+  
+ [!code-xaml[GradientBrushExamples_snip#GradientBrushMappingModeExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/GradientBrushMappingModeExample.xaml#gradientbrushmappingmodeexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MappingModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MappingModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MappingModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.GradientBrush.MappingModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.GradientBrush.MappingMode" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpreadMethod">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.GradientSpreadMethod SpreadMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.GradientSpreadMethod SpreadMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GradientBrush.SpreadMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GradientSpreadMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des Spread-Methode, der angibt, wie Sie einen Farbverlauf zu zeichnen, der am Anfang oder Ende innerhalb der Begrenzung des Objekts gezeichnet werden.</summary>
+        <value>Der Typ des Spread-Methode, die zum Zeichnen des Farbverlaufs. Die Standardeinstellung ist <see cref="F:System.Windows.Media.GradientSpreadMethod.Pad" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung zeigt die verfügbaren Spread-Methoden und deren Auswirkung auf <xref:System.Windows.Media.LinearGradientBrush> und <xref:System.Windows.Media.RadialGradientBrush>. Die rote Linie gibt den Farbverlauf Speicherplatz an. Ein <xref:System.Windows.Media.LinearGradientBrush> definiert einen Farbverlauf Namespace mit dessen <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> und <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> Eigenschaften. Ein <xref:System.Windows.Media.RadialGradientBrush> definiert einen Farbverlauf Namespace mit dessen <xref:System.Windows.Media.RadialGradientBrush.Center%2A>, <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>, und <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> Eigenschaften.  
+  
+ ![Unterschiedliche GradientSpread-Einstellungen](~/add/media/img-mmgraphics-gradientspread.png "unterschiedliche GradientSpread-Einstellungen")  
+Farbverlauf Spread-Methoden  
+  
+<a name="dependencyPropertyInfo_SpreadMethod"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.GradientBrush.SpreadMethodProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet verschiedene <xref:System.Windows.Media.GradientBrush.SpreadMethod%2A> Einstellungen auf mehreren <xref:System.Windows.Media.LinearGradientBrush> und <xref:System.Windows.Media.RadialGradientBrush> Objekte.  
+  
+ [!code-xaml[BrushesIntroduction_snip#GraphicsmmGradientSpreadExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/GradientSpreadExample.xaml#graphicsmmgradientspreadexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpreadMethodProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SpreadMethodProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SpreadMethodProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.GradientBrush.SpreadMethodProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.GradientBrush.SpreadMethod" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

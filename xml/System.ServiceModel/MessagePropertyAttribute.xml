@@ -1,0 +1,87 @@
+<Type Name="MessagePropertyAttribute" FullName="System.ServiceModel.MessagePropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MessagePropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MessagePropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MessagePropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten dar, die lokale mit einem benutzerdefinierten Nachrichtentyp übergeben aber nicht in eine SOAP-Nachricht serialisiert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hängen Sie mit dem <xref:System.ServiceModel.MessagePropertyAttribute>-Attribut Daten an den benutzerdefinierten Nachrichtentyp an, während dieser durch das [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-System übergeben wird, ohne dass die Dateien in eine SOAP-Nachricht serialisiert werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung des <xref:System.ServiceModel.MessagePropertyAttribute>-Attributs veranschaulicht.  
+  
+ [!code-csharp[messagepropertyattribute#0](~/samples/snippets/csharp/VS_Snippets_CFX/messagepropertyattribute/cs/source.cs#0)]
+ [!code-vb[messagepropertyattribute#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/messagepropertyattribute/vb/source.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessagePropertyAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessagePropertyAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MessagePropertyAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessagePropertyAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Eigenschaft ab oder legt diesen fest.</summary>
+        <value>Der Name des <see cref="T:System.ServiceModel.MessagePropertyAttribute" />-Attributs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

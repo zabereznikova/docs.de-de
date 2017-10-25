@@ -1,0 +1,95 @@
+<Type Name="DataReceivedEventArgs" FullName="System.Diagnostics.DataReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public class DataReceivedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataReceivedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DataReceivedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Process</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Diagnostics.Process.OutputDataReceived" />-Ereignis und das <see cref="E:System.Diagnostics.Process.ErrorDataReceived" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Asynchron im umgeleiteten sammeln <xref:System.Diagnostics.Process.StandardOutput%2A> oder <xref:System.Diagnostics.Process.StandardError%2A> Ausgabestream eines Prozesses, müssen Sie eine Methode, die Ausgabeereignisse umgeleiteten Stream behandelt, erstellen. Der Ereignishandler wird aufgerufen, wenn der Prozess in den umgeleiteten Stream schreibt. Der Ereignisdelegat ruft den Ereignishandler mit einer Instanz von <xref:System.Diagnostics.DataReceivedEventArgs>. Die <xref:System.Diagnostics.DataReceivedEventArgs.Data%2A> Eigenschaft enthält die Textzeile, die vom Prozess in den umgeleiteten Stream geschrieben wurde.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie asynchrone Lesevorgänge im umgeleiteten auszuführenden <xref:System.Diagnostics.Process.StandardOutput%2A> Stream, der die `sort` Befehl. Die `sort` Befehl ist eine Konsolenanwendung, liest und Texteingabe sortiert.  
+  
+ Das Beispiel erstellt einen Delegaten für die `SortOutputHandler` Ereignishandler und ordnet sie der <xref:System.Diagnostics.Process.OutputDataReceived> Ereignis. Der Ereignishandler empfängt Textzeilen vom umgeleiteten <xref:System.Diagnostics.Process.StandardOutput%2A> Stream, den Text formatiert und schreibt den Text auf dem Bildschirm.  
+  
+ [!code-cpp[Process_AsyncStreams#1](~/samples/snippets/cpp/VS_Snippets_CLR/process_asyncstreams/CPP/sort_async.cpp#1)]
+ [!code-csharp[Process_AsyncStreams#1](~/samples/snippets/csharp/VS_Snippets_CLR/process_asyncstreams/CS/sort_async.cs#1)]
+ [!code-vb[Process_AsyncStreams#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/process_asyncstreams/VB/sort_async.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public string Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Data" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DataReceivedEventArgs.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeile von Zeichen, die geschrieben wird, wurde in einem umgeleiteten <see cref="T:System.Diagnostics.Process" /> Ausgabestream.</summary>
+        <value>Die Zeile, die geschrieben wurde von einem zugeordneten <see cref="T:System.Diagnostics.Process" /> in ihren umgeleiteten <see cref="P:System.Diagnostics.Process.StandardOutput" /> oder <see cref="P:System.Diagnostics.Process.StandardError" /> Stream.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Umleiten der <xref:System.Diagnostics.Process.StandardOutput%2A> oder <xref:System.Diagnostics.Process.StandardError%2A> Datenstrom von einem <xref:System.Diagnostics.Process> an Ihren Ereignishandler ein Ereignis wird jedes Mal der Prozess eine Zeile in den umgeleiteten Stream schreibt. Die <xref:System.Diagnostics.DataReceivedEventArgs.Data%2A> Eigenschaft ist für die Zeile, die die <xref:System.Diagnostics.Process> wurde in den umgeleiteten Ausgabestream geschrieben. Der Ereignishandler kann mithilfe der <xref:System.Diagnostics.DataReceivedEventArgs.Data%2A> Eigenschaft filtern oder die Ausgabe an einen anderen Speicherort zu schreiben. Sie können z. B. einen Ereignishandler erstellen, in dem alle Fehlerausgabezeilen in einer angegebenen Protokolldatei gespeichert.  
+  
+ Eine Zeile ist definiert, wie eine Sequenz von Zeichen gefolgt von einem Zeilenvorschub ("\n") oder einem Wagenrücklauf, unmittelbar gefolgt von einer Zeile Zeilenvorschub ("\r\n"). Die Zeilenzeichen wurden mit der voreingestellten System ANSI-Codepage verschlüsselt. Die <xref:System.Diagnostics.DataReceivedEventArgs.Data%2A> Eigenschaft nicht enthalten die abschließende Carriage return, Wagenrücklauf oder Zeilenvorschub.  
+  
+ Wenn der umgeleitete Stream geschlossen ist, wird eine null-Zeile an den Ereignishandler gesendet. Stellen Sie sicher Ihre-Ereignishandler prüft die <xref:System.Diagnostics.DataReceivedEventArgs.Data%2A> Eigenschaft entsprechend, bevor Sie darauf zugreifen. Beispielsweise können Sie die statische Methode <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> zum Überprüfen der <xref:System.Diagnostics.DataReceivedEventArgs.Data%2A> Eigenschaft im Ereignishandler.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht einen einfache zugeordneten Ereignishandler die <xref:System.Diagnostics.Process.OutputDataReceived> Ereignis. Der Ereignishandler empfängt Textzeilen vom umgeleiteten <xref:System.Diagnostics.Process.StandardOutput%2A> Stream, den Text formatiert und schreibt den Text auf dem Bildschirm.  
+  
+ [!code-cpp[Process_AsyncStreams#4](~/samples/snippets/cpp/VS_Snippets_CLR/process_asyncstreams/CPP/datareceivedevent.cpp#4)]
+ [!code-csharp[Process_AsyncStreams#4](~/samples/snippets/csharp/VS_Snippets_CLR/process_asyncstreams/CS/datareceivedevent.cs#4)]
+ [!code-vb[Process_AsyncStreams#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/process_asyncstreams/VB/datareceivedevent.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

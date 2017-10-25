@@ -1,0 +1,593 @@
+<Type Name="EntityKey" FullName="System.Data.EntityKey">
+  <TypeSignature Language="C#" Value="public sealed class EntityKey : IEquatable&lt;System.Data.EntityKey&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit EntityKey extends System.Object implements class System.IEquatable`1&lt;class System.Data.EntityKey&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Data.EntityKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Data.EntityKey&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{ConcatKeyValue()}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract(IsReference=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine permanente Referenz auf ein Objekt bereit, das eine Instanz eines Entitätstyps ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.EntityKey>-Objekte sind unveränderlich, d. h. sie können nach ihrer Erstellung nicht geändert werden.  
+  
+ Weitere Informationen finden Sie unter [arbeiten mit Entitätsschlüsseln passen](http://msdn.microsoft.com/en-us/fe3f4206-d277-43a1-a72f-4e86fdf12b9f).  
+  
+   
+  
+## Examples  
+ Diese Beispiele beruhen auf den [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Die Beispiele veranschaulichen, wie zum Erstellen und Verwenden einer <xref:System.Data.EntityKey>.  
+  
+ [!code-csharp[DP ObjectServices Concepts#EntityKeyClass_TryGetObjectByKey](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#entitykeyclass_trygetobjectbykey)]
+ [!code-vb[DP ObjectServices Concepts#EntityKeyClass_TryGetObjectByKey](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#entitykeyclass_trygetobjectbykey)]  
+  
+ [!code-csharp[DP ObjectServices Concepts#AddObjectUsingKey](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#addobjectusingkey)]
+ [!code-vb[DP ObjectServices Concepts#AddObjectUsingKey](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#addobjectusingkey)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityKey.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.EntityKey" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityKey (string qualifiedEntitySetName, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,object&gt;&gt; entityKeyValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string qualifiedEntitySetName, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, object&gt;&gt; entityKeyValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityKey.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="qualifiedEntitySetName" Type="System.String" />
+        <Parameter Name="entityKeyValues" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Object&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="qualifiedEntitySetName">Ein <see cref="T:System.String" />, der den vom Entitätencontainernamen qualifizierten Entitätenmengennamen darstellt.</param>
+        <param name="entityKeyValues">Eine generische <see cref="T:System.Collections.Generic.KeyValuePair" />-Auflistung.  
+  
+ Jedes Schlüssel/Wert-Paar hat einen Eigenschaftsnamen als Schlüssel und den Wert dieser Eigenschaft als Wert. Für jede Eigenschaft, die zu <see cref="T:System.Data.EntityKey" /> gehört, sollte ein Paar existieren. Die Reihenfolge der Schlüssel/Wert-Paare ist nicht von Bedeutung. Es sollte jedoch jede Schlüsseleigenschaft enthalten sein. Die Eigenschaftsnamen sind einfache Namen, die nicht mit einem Entitätstypennamen oder dem Schemanamen qualifiziert sind.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.EntityKey" />-Klasse mit einem Entitätenmengennamen und einer generischen <see cref="T:System.Collections.Generic.KeyValuePair" />-Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieses Beispiel beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Das Beispiel zeigt, wie zum Erstellen und Verwenden einer <xref:System.Data.EntityKey>.  
+  
+ [!code-csharp[DP ObjectServices Concepts#AddObjectUsingKey](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#addobjectusingkey)]
+ [!code-vb[DP ObjectServices Concepts#AddObjectUsingKey](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#addobjectusingkey)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityKey (string qualifiedEntitySetName, System.Collections.Generic.IEnumerable&lt;System.Data.EntityKeyMember&gt; entityKeyValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string qualifiedEntitySetName, class System.Collections.Generic.IEnumerable`1&lt;class System.Data.EntityKeyMember&gt; entityKeyValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityKey.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Data.EntityKeyMember})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="qualifiedEntitySetName" Type="System.String" />
+        <Parameter Name="entityKeyValues" Type="System.Collections.Generic.IEnumerable&lt;System.Data.EntityKeyMember&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="qualifiedEntitySetName">Ein <see cref="T:System.String" />, der den vom Entitätencontainernamen qualifizierten Entitätenmengennamen darstellt.</param>
+        <param name="entityKeyValues">Eine <see cref="T:System.Collections.Generic.IEnumerable`1" />-Auflistung von <see cref="T:System.Data.EntityKeyMember" />-Objekten, mit denen der Schlüssel initialisiert werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.EntityKey" />-Klasse mit einem Entitätenmengennamen und einer <see cref="T:System.Collections.Generic.IEnumerable`1" />-Auflistung von <see cref="T:System.Data.EntityKeyMember" />-Objekten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityKey (string qualifiedEntitySetName, string keyName, object keyValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string qualifiedEntitySetName, string keyName, object keyValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityKey.#ctor(System.String,System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="qualifiedEntitySetName" Type="System.String" />
+        <Parameter Name="keyName" Type="System.String" />
+        <Parameter Name="keyValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="qualifiedEntitySetName">Ein <see cref="T:System.String" />, der den vom Entitätencontainernamen qualifizierten Entitätenmengennamen darstellt.</param>
+        <param name="keyName">Ein <see cref="T:System.String" />, der den Namen des Schlüssels darstellt.</param>
+        <param name="keyValue">Ein <see cref="T:System.Object" />, das den Schlüsselwert darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.EntityKey" />-Klasse mit einem Entitätenmengennamen und einem spezifischen Entitätsschlüsselpaar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieses Beispiel beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Das Beispiel zeigt, wie zum Erstellen und Verwenden einer <xref:System.Data.EntityKey>.  
+  
+ [!code-csharp[DP ObjectServices Concepts#AddObjectUsingKey](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#addobjectusingkey)]
+ [!code-vb[DP ObjectServices Concepts#AddObjectUsingKey](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#addobjectusingkey)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityContainerName">
+      <MemberSignature Language="C#" Value="public string EntityContainerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EntityContainerName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityKey.EntityContainerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Entitätscontainers handelt.</summary>
+        <value>Ein <see cref="T:System.String" />-Wert, der den Namen des Entitätencontainers für die Entität darstellt, zu der der <see cref="T:System.Data.EntityKey" /> gehört.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityKeyValues">
+      <MemberSignature Language="C#" Value="public System.Data.EntityKeyMember[] EntityKeyValues { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.EntityKeyMember[] EntityKeyValues" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityKey.EntityKeyValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityKeyMember[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schlüsselwerten zugeordneten <see cref="T:System.Data.EntityKey" />.</summary>
+        <value>Eine <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> von Schlüsselwerten für diesen <see cref="T:System.Data.EntityKey" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.EntityKey>-Klasse enthält eine Kopie der Werte, aus denen der für diesen Entitätstyp angegebene logische Schlüssel besteht.  
+  
+ Die Member der <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> haben je einen Eigenschaftsnamen und einen Wert in einem <xref:System.Collections.Generic.KeyValuePair%602>. Dabei ist der Eigenschaftsname der Schlüssel und der tatsächliche Wert dieser Eigenschaft für dieses Objekt der Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityNotValidKey">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.EntityKey EntityNotValidKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Data.EntityKey EntityNotValidKey" />
+      <MemberSignature Language="DocId" Value="F:System.Data.EntityKey.EntityNotValidKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine einfache <see cref="T:System.Data.EntityKey" /> identifiziert eine Entität, die bei einer fehlgeschlagenen [BEHANDELN](~/docs/framework/data/adonet/ef/language-reference/treat-entity-sql.md) Vorgang.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt verschiedene Möglichkeiten, eine ungültige Entität abzurufen. Das häufigste Szenario ist, wenn ein [!INCLUDE[esql](~/includes/esql-md.md)] Abfrage verwendet die [BEHANDELN](~/docs/framework/data/adonet/ef/language-reference/treat-entity-sql.md) Operator zum Interpretieren von einer Instanz von einen polymorphen Typ als einen bestimmten Typ und die betreffende Instanz stimmt nicht überein. ([BEHANDELN](~/docs/framework/data/adonet/ef/language-reference/treat-entity-sql.md) ähnelt der C#- `as` Operator). In diesem Fall gibt die Abfrage eine ungültige Entität zurück, deren Entitätsschlüssel auf <xref:System.Data.EntityKey.EntityNotValidKey> festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntitySetName">
+      <MemberSignature Language="C#" Value="public string EntitySetName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EntitySetName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityKey.EntitySetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Entitätenmenge fest.</summary>
+        <value>Ein <see cref="T:System.String" />-Wert, der den Namen der Entitätenmenge für die Entität darstellt, zu der der <see cref="T:System.Data.EntityKey" /> gehört.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Data.EntityKey other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Data.EntityKey other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityKey.Equals(System.Data.EntityKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Data.EntityKey" />
+      </Parameters>
+      <Docs>
+        <param name="other">Ein <see cref="T:System.Data.EntityKey" />-Objekt, das mit dieser Instanz verglichen werden soll.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen <see cref="T:System.Data.EntityKey" /> ist.</summary>
+        <returns>
+          <see langword="true" />Wenn diese Instanz und <paramref name="other" /> gleiche Werte aufweisen, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Temporäre Schlüssel verfügen über eine andere Vergleichssemantik als permanente Schlüssel:  
+  
+-   Temporäre Schlüssel verwenden Verweisgleichheit. Das heißt, zwei Verweise auf dieselbe temporäre <xref:System.Data.EntityKey>-Instanz sind gleich. Andere <xref:System.Data.EntityKey>-Instanzen sind nicht gleich.  
+  
+-   Permanente Schlüssel bestimmen Gleichheit auf Grundlage der Werte der enthaltenen Schlüsseleigenschaften und der <xref:System.Data.Metadata.Edm.EntitySet>. Das heißt, dass zwei verschiedene <xref:System.Data.EntityKey>-Instanzen gleich sind, wenn ihre Entitätenmengen und ihre Schlüsselwerte gleich sind.  
+  
+ Außerdem verfügen temporäre Schlüssel im Gegensatz zu permanenten Schlüsseln über keine <xref:System.Data.Metadata.Edm.EntitySet> oder Schlüsselwerte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityKey.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein <see cref="T:System.Object" />, das mit dieser Instanz verglichen werden soll.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />Wenn diese Instanz und <paramref name="obj" /> gleiche Werte aufweisen, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Temporäre Schlüssel verfügen über eine andere Vergleichssemantik als permanente Schlüssel:  
+  
+-   Temporäre Schlüssel verwenden Verweisgleichheit. Das heißt, zwei Verweise auf dieselbe temporäre <xref:System.Data.EntityKey>-Instanz sind gleich. Andere <xref:System.Data.EntityKey>-Instanzen sind nicht gleich.  
+  
+-   Permanente Schlüssel bestimmen Gleichheit auf Grundlage der Werte der enthaltenen Schlüsseleigenschaften und der <xref:System.Data.Metadata.Edm.EntitySet>. Das heißt, dass zwei verschiedene <xref:System.Data.EntityKey>-Instanzen gleich sind, wenn sie über dieselben <xref:System.Data.Metadata.Edm.EntitySet>-Objekte verfügen und ihre Schlüsselwerte gleich sind.  
+  
+ Außerdem verfügen temporäre Schlüssel im Gegensatz zu permanenten Schlüsseln über keine <xref:System.Data.Metadata.Edm.EntitySet> oder Schlüsselwerte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntitySet">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EntitySet GetEntitySet (System.Data.Metadata.Edm.MetadataWorkspace metadataWorkspace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.EntitySet GetEntitySet(class System.Data.Metadata.Edm.MetadataWorkspace metadataWorkspace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityKey.GetEntitySet(System.Data.Metadata.Edm.MetadataWorkspace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EntitySet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataWorkspace" Type="System.Data.Metadata.Edm.MetadataWorkspace" />
+      </Parameters>
+      <Docs>
+        <param name="metadataWorkspace">Die Metadaten-Arbeitsbereich, der die Entität enthält.</param>
+        <summary>Ruft die Entitätenmenge für diesen Entitätsschlüssel vom angegebenen Metadaten-Arbeitsbereich ab.</summary>
+        <returns>Die <see cref="T:System.Data.Metadata.Edm.EntitySet" /> für den Entitätsschlüssel.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf die Entitätenmenge wird mithilfe der Entitätencontainer- und Entitätenmengennamen des Schlüssels zugegriffen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Entitätenmenge konnte im angegebenen Metadaten-Arbeitsbereich nicht gefunden werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityKey.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für die aktuelle <see cref="T:System.Data.EntityKey" /> Objekt. <see cref="M:System.Data.EntityKey.GetHashCode" />eignet sich für Hashalgorithmen und Datenstrukturen wie Hashtabellen.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.Data.EntityKey" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTemporary">
+      <MemberSignature Language="C#" Value="public bool IsTemporary { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTemporary" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityKey.IsTemporary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der <see cref="T:System.Data.EntityKey" /> temporär ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Data.EntityKey" /> temporär ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Erstellung einer neuen Entität definiert [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)] einen temporären Schlüssel und legt die <xref:System.Data.EntityKey.IsTemporary%2A>-Eigenschaft auf `true` fest. Beim Aufrufen der <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> -Methode, die [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)] weist einen permanenten Schlüssels und legt die <xref:System.Data.EntityKey.IsTemporary%2A> Eigenschaft `false`.  
+  
+> [!NOTE]
+>  Temporäre Schlüssel werden automatisch vom Framework erstellt. Sie können vom Benutzer nicht direkt erstellt werden.  
+  
+ Temporäre Schlüssel verfügen über eine andere Vergleichssemantik als permanente Schlüssel:  
+  
+-   Temporäre Schlüssel verwenden Verweisgleichheit. Das heißt, zwei Verweise auf dieselbe temporäre <xref:System.Data.EntityKey>-Instanz sind gleich. Andere <xref:System.Data.EntityKey>-Instanzen sind nicht gleich.  
+  
+-   Permanente Schlüssel bestimmen Gleichheit auf Grundlage der Werte der enthaltenen Schlüsseleigenschaften und der <xref:System.Data.Metadata.Edm.EntitySet>. Das heißt, dass zwei verschiedene <xref:System.Data.EntityKey>-Instanzen gleich sind, wenn ihre Entitätenmengen und ihre Schlüsselwerte gleich sind.  
+  
+ Außerdem verfügen temporäre Schlüssel im Gegensatz zu permanenten Schlüsseln über keine <xref:System.Data.Metadata.Edm.EntitySet> oder Schlüsselwerte.  
+  
+ Wenn die <xref:System.Data.Objects.ObjectStateEntry.AcceptChanges%2A>-Methode für den <xref:System.Data.Objects.ObjectStateEntry> einer Entität aufgerufen wird und die Entität aus dem <xref:System.Data.EntityState.Added>-Zustand in den <xref:System.Data.EntityState.Unchanged>-Zustand übergeht, berechnet [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)] automatisch einen neuen permanenten Schlüssel für die Entität und synchronisiert alle temporären Schlüsselverweise.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoEntitySetKey">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.EntityKey NoEntitySetKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Data.EntityKey NoEntitySetKey" />
+      <MemberSignature Language="DocId" Value="F:System.Data.EntityKey.NoEntitySetKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Singleton-<see cref="T:System.Data.EntityKey" />, durch den eine schreibgeschützte Entität identifiziert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine schreibgeschützte Entität identifiziert eine Entität, die in jeder Hinsicht gültig ist, jedoch nicht mit einer tatsächlichen Entitätenmenge verknüpft ist. Dies kann als Ergebnis einer [!INCLUDE[esql](~/includes/esql-md.md)]-Abfrage auftreten, die eine im Text der Abfrage angegebene Entitätsinstanz erstellt und zurückgibt (im Gegensatz zu einer von einer Datenbanktabelle abgerufenen Entität). Eine Entität ohne Entitätenmenge kann nicht in der Datenbank gespeichert werden, bevor sie einer Entitätenmenge zugeordnet wird. Daher behandelt das Objektmaterialisierungsprogramm diese Art von Entität so, als wäre die <xref:System.Data.Objects.MergeOption.NoTracking>-Zusammenführungsoption angegeben, unabhängig von der tatsächlich angegebenen Zusammenführungsoption. Ein Entitätsobjekt wird erstellt, jedoch wird dessen Identität nicht aufgelöst, und es wird dem Status-Manager für den Materialisierungsvorgang nicht hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserialized">
+      <MemberSignature Language="C#" Value="public void OnDeserialized (System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OnDeserialized(valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityKey.OnDeserialized(System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.OnDeserialized</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Beschreibt die Quelle und das Ziel eines angegebenen serialisierten Streams und stellt einen zusätzlichen, vom Aufrufer definierten Kontext bereit.</param>
+        <summary>Hilfsmethode zur Deserialisierung eines <see cref="T:System.Data.EntityKey" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Object Services verwendet <xref:System.Data.EntityKey.OnDeserialized%2A> zur Deserialisierung eines <xref:System.Data.EntityKey>. Weitere Informationen finden Sie unter [Serialisieren von Objekten](http://msdn.microsoft.com/en-us/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserializing">
+      <MemberSignature Language="C#" Value="public void OnDeserializing (System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OnDeserializing(valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityKey.OnDeserializing(System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.OnDeserializing</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Beschreibt die Quelle und das Ziel eines angegebenen serialisierten Streams und stellt einen zusätzlichen, vom Aufrufer definierten Kontext bereit.</param>
+        <summary>Hilfsmethode zur Deserialisierung eines <see cref="T:System.Data.EntityKey" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Object Services verwendet <xref:System.Data.EntityKey.OnDeserializing%2A> zur Deserialisierung eines <xref:System.Data.EntityKey>. Weitere Informationen finden Sie unter [Serialisieren von Objekten](http://msdn.microsoft.com/en-us/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Data.EntityKey key1, System.Data.EntityKey key2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Data.EntityKey key1, class System.Data.EntityKey key2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityKey.op_Equality(System.Data.EntityKey,System.Data.EntityKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key1" Type="System.Data.EntityKey" />
+        <Parameter Name="key2" Type="System.Data.EntityKey" />
+      </Parameters>
+      <Docs>
+        <param name="key1">Ein zu vergleichender <see cref="T:System.Data.EntityKey" />.</param>
+        <param name="key2">Ein zu vergleichender <see cref="T:System.Data.EntityKey" />.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.EntityKey" />-Objekte.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="key1" /> und <paramref name="key2" /> Werte gleich sind; andernfalls, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Temporäre Schlüssel verfügen über eine andere Vergleichssemantik als permanente Schlüssel:  
+  
+-   Temporäre Schlüssel verwenden Verweisgleichheit. Das heißt, zwei Verweise auf dieselbe temporäre <xref:System.Data.EntityKey>-Instanz sind gleich. Andere <xref:System.Data.EntityKey>-Instanzen sind nicht gleich.  
+  
+-   Permanente Schlüssel bestimmen Gleichheit auf Grundlage der Werte der enthaltenen Schlüsseleigenschaften und der <xref:System.Data.Metadata.Edm.EntitySet>. Das heißt, dass zwei verschiedene <xref:System.Data.EntityKey>-Instanzen gleich sind, wenn ihre Entitätenmengen und ihre Schlüsselwerte gleich sind.  
+  
+ Außerdem verfügen temporäre Schlüssel im Gegensatz zu permanenten Schlüsseln über keine <xref:System.Data.Metadata.Edm.EntitySet> oder Schlüsselwerte.  
+  
+ Ist die entsprechende Methode für diesen Operator <xref:System.Data.EntityKey.Equals%28System.Data.EntityKey%29?displayProperty=nameWithType> </format> </remarks> </Docs> 
+     </Member> 
+     <Member MemberName="op_Inequality"> <MemberSignature Language="C#" Value="public static bool op_Inequality (System.Data.EntityKey key1, System.Data.EntityKey key2);" /> <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Data.EntityKey key1, class System.Data.EntityKey key2) cil managed" /> <MemberSignature Language="DocId" Value="M:System.Data.EntityKey.op_Inequality(System.Data.EntityKey,System.Data.EntityKey)" /> <MemberType> Methode</MemberType> <AssemblyInfo> <AssemblyName>System.Data.Entity</AssemblyName> <AssemblyVersion>4.0.0.0</AssemblyVersion> </AssemblyInfo> <ReturnValue> <ReturnType>System.Boolean</ReturnType> </ReturnValue> <Parameters> <Parameter Name="key1" Type="System.Data.EntityKey" /> <Parameter Name="key2" Type="System.Data.EntityKey" /> </Parameters> <Docs> <param name="key1">Ein <see cref="T:System.Data.EntityKey" /> , verglichen werden soll.</param>
+        <param name="key2">Ein <see cref="T:System.Data.EntityKey" /> , verglichen werden soll.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Data.EntityKey" /> Objekte.</summary>
+        <returns><see langword="true" /> Wenn die <paramref name="key1" /> und <paramref name="key2" /> Werte sind nicht gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks><format type="text/markdown"><! [CDATA [  
+  
+## Remarks  
+ Temporäre Schlüssel verfügen über eine andere Vergleichssemantik als permanente Schlüssel:  
+  
+-   Temporäre Schlüssel verwenden Verweisgleichheit. Das heißt, zwei Verweise auf dieselbe temporäre <xref:System.Data.EntityKey>-Instanz sind gleich. Andere <xref:System.Data.EntityKey>-Instanzen sind nicht gleich.  
+  
+-   Permanente Schlüssel bestimmen Gleichheit auf Grundlage der Werte der enthaltenen Schlüsseleigenschaften und der <xref:System.Data.Metadata.Edm.EntitySet>. Das heißt, dass zwei verschiedene <xref:System.Data.EntityKey>-Instanzen gleich sind, wenn ihre Entitätenmengen und ihre Schlüsselwerte gleich sind.  
+  
+ Außerdem verfügen temporäre Schlüssel im Gegensatz zu regulären Schlüsseln über keine <xref:System.Data.Metadata.Edm.EntitySet> oder Schlüsselwerte.  
+  
+ Die entsprechende Methode für diesen Operator ist <xref:System.Data.EntityKey.Equals%28System.Data.EntityKey%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Data.EntityKey key1, System.Data.EntityKey key2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Data.EntityKey key1, class System.Data.EntityKey key2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityKey.op_Inequality(System.Data.EntityKey,System.Data.EntityKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key1" Type="System.Data.EntityKey" />
+        <Parameter Name="key2" Type="System.Data.EntityKey" />
+      </Parameters>
+      <Docs>
+        <param name="key1">To be added.</param>
+        <param name="key2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

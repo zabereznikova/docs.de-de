@@ -1,0 +1,72 @@
+<Type Name="TagRegex" FullName="System.Web.RegularExpressions.TagRegex">
+  <TypeSignature Language="C#" Value="public class TagRegex : System.Text.RegularExpressions.Regex" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi TagRegex extends System.Text.RegularExpressions.Regex" />
+  <TypeSignature Language="DocId" Value="T:System.Web.RegularExpressions.TagRegex" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.RegularExpressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Text.RegularExpressions.Regex</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen regulären Ausdruck zum Analysieren des öffnenden Tags des HTML-Elements, ein XML-Element oder eine ASP.NET Web Control Servertag bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.RegularExpressions.TagRegex> Klasse stellt einen regulären Ausdruck, die ASP.NET verwendet intern beim Analysieren des öffnenden Tags des HTML-Element, ein XML-Element oder ASP.NET Web-Server-Steuerelement für ein Tag, Anwendungen, die als Ziel der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] oder höhere Versionen. ASP.NET verwendet die <xref:System.Web.RegularExpressions.TagRegex35?displayProperty=nameWithType> Klasse für Anwendungen, die auf die [!INCLUDE[net_v35_short](~/includes/net-v35-short-md.md)] und früheren Versionen.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.RegularExpressions> Klassen werden von .NET Framework intern verwendet, um ASP.NET-Seiten zu analysieren.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TagRegex ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.RegularExpressions.TagRegex.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.RegularExpressions.TagRegex" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TagRegex (TimeSpan A_1);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(valuetype System.TimeSpan A_1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.RegularExpressions.TagRegex.#ctor(System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="A_1" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="A_1">Ein Timeoutintervall oder <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> Wenn Vorgänge entsprechender sollte kein Timeout.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.RegularExpressions.TagRegex" /> -Klasse mit einem angegebenen Timeoutwert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `A_1` Parameter darstellt, das maximale Zeitintervall, das dem Modul für reguläre Ausdrücke keine Übereinstimmung gefunden wird, bevor der Vorgang ein Timeout eintritt und eine versucht <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> Ausdruck ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

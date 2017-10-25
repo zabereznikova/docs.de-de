@@ -1,0 +1,114 @@
+<Type Name="View" FullName="System.Windows.Forms.View">
+  <TypeSignature Language="C#" Value="public enum View" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed View extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.View" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie Listenelemente angezeigt werden, in einem <see cref="T:System.Windows.Forms.ListView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Member dieser Enumeration zum Festlegen des Werts, der die <xref:System.Windows.Forms.ListView.View%2A> Eigenschaft von der <xref:System.Windows.Forms.ListView> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType> Eigenschaft in eines der <xref:System.Windows.Forms.View> Enumerationswerte. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, und rufen die `InitializeListView` -Methode im Konstruktor des Formulars oder `Load` Methode.  
+  
+ [!code-cpp[System.Windows.Forms.ListViewItemStyle#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewItemStyle/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListViewItemStyle#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewItemStyle/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListViewItemStyle#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewItemStyle/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Details">
+      <MemberSignature Language="C#" Value="Details" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.View Details = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.View.Details" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.View</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Jedes Element wird in einer separaten Zeile mit weiteren Informationen zu den einzelnen Elementen in Spalten angeordnet sind. Die Spalte ganz links enthält ein kleines Symbol und eine Bezeichnung, und nachfolgende Spalten enthalten die Unterelemente entsprechend den Angaben von der Anwendung. Eine Spalte zeigt einen Header, der eine Beschriftung für die Spalte angezeigt werden kann. Der Benutzer kann jede Spalte zur Laufzeit ändern.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeIcon">
+      <MemberSignature Language="C#" Value="LargeIcon" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.View LargeIcon = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.View.LargeIcon" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.View</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Jedes Element wird als ein großes Symbol mit einer Bezeichnung darunter angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="List" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.View List = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.View.List" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.View</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Jedes Element wird als ein kleines Symbol mit einer Bezeichnung rechts daneben angezeigt. Elemente sind keine Spaltenüberschriften in Spalten angeordnet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallIcon">
+      <MemberSignature Language="C#" Value="SmallIcon" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.View SmallIcon = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.View.SmallIcon" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.View</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Jedes Element wird als ein kleines Symbol mit einer Bezeichnung rechts daneben angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tile">
+      <MemberSignature Language="C#" Value="Tile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.View Tile = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.View.Tile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.View</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Jedes Element wird als ein großes Symbol mit dem Element Label und Unterelement rechts davon. Unterelementinformationen, die angezeigt wird, wird von der Anwendung angegeben. Diese Ansicht ist nur unter Windows XP und Windows Server 2003-Produktfamilie verfügbar. Unter früheren Betriebssystemen wird dieser Wert ignoriert und die <see cref="T:System.Windows.Forms.ListView" /> -Steuerelement wird in der <see cref="F:System.Windows.Forms.View.LargeIcon" /> anzeigen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

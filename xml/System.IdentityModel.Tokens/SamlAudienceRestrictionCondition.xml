@@ -1,0 +1,213 @@
+<Type Name="SamlAudienceRestrictionCondition" FullName="System.IdentityModel.Tokens.SamlAudienceRestrictionCondition">
+  <TypeSignature Language="C#" Value="public class SamlAudienceRestrictionCondition : System.IdentityModel.Tokens.SamlCondition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SamlAudienceRestrictionCondition extends System.IdentityModel.Tokens.SamlCondition" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SamlCondition</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, dass eine SAML-Assertion an eine besondere Zielgruppe adressiert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> Klasse entspricht dem `<saml:AudienceRestrictionCondition>` XML-Element, das in der OASIS SAML 1.1-Spezifikation definiert ist. Die <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> ist eine von mehreren <xref:System.IdentityModel.Tokens.SamlConditions>, die verwendet werden können, um eine SAML-Assertion zu bewerten.  
+  
+ Verwenden Sie die <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition>-Klasse, um anzugeben, dass eine <xref:System.IdentityModel.Tokens.SamlAssertion> für eine bestimmte Zielgruppe bestimmt ist und dass die ausgebende SAML-Behörde für eine SAML-Assertion für andere Zielgruppen, die das Sicherheitstoken erhalten, keine Gewährleistung übernimmt. Die Ansprüche an die <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken werden als Teil einer <xref:System.IdentityModel.Tokens.SamlAssertion> ausgedrückt, die optional bestimmte Bedingungen aufweisen kann, die die Gültigkeit der Assertion beeinflussen. Eine dieser Bedingungen ist eine <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition>, in der angegeben wird, dass die Assertion für eine oder mehrere Zielgruppen bestimmt ist. Die ausgebende SAML-Behörde kann nicht verhindern, dass ein unerwünschter Empfänger auf der Basis der in der SAML-Assertion enthaltenen Informationen Schritte einleitet. Durch die <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition>-Klasse kann die SAML-Behörde jedoch ausdrücklich erklären, dass sie für derartige Empfänger keine Gewährleistung in maschinenlesbarer Form oder im Klartextformat übernimmt.  
+  
+ Um den Satz bestimmter Zielgruppen anzugeben, verwenden Sie den <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Uri%7D%29>-Konstruktor, der einen Satz von Zielgruppen annimmt. Um den Satz bestimmter Zielgruppen abzurufen, greifen Sie auf die <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.Audiences%2A>-Eigenschaft zu.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlAudienceRestrictionCondition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlAudienceRestrictionCondition (System.Collections.Generic.IEnumerable&lt;Uri&gt; audiences);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Uri&gt; audiences) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.#ctor(System.Collections.Generic.IEnumerable{System.Uri})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="audiences" Type="System.Collections.Generic.IEnumerable&lt;System.Uri&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="audiences">Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> des Typs <see cref="T:System.Uri" />, der einen Satz bestimmter Zielgruppen enthält.</param>
+        <summary>Initialisiert eine neue Instanz für die <see cref="T:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition" />-Klasse mit dem angegebenen Zielgruppensatz, für den eine SAML-Assertion bestimmt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.Audiences%2A>-Eigenschaft fest.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="audiences" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Audiences">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Uri&gt; Audiences { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Uri&gt; Audiences" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.Audiences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Uri&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Satz von Zielgruppen ab, für den eine SAML-Assertion bestimmt ist.</summary>
+        <value>Ein <see cref="T:System.Collections.Generic.IList`1" /> des Typs <see cref="T:System.Uri" />, der einen Satz bestimmter Zielgruppen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Festlegen der <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.Audiences%2A>-Eigenschaft den <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Uri%7D%29>-Konstruktor, der einen Satz an Zielgruppen akzeptiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Eigenschaften dieser Instanz schreibgeschützt sind.</summary>
+        <value>
+          <see langword="true" />, wenn die Eigenschaften dieser Instanz schreibgeschützt sind, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Instanz der <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition>-Klasse schreibgeschützt machen möchten, rufen Sie die <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.MakeReadOnly%2A>-Methode auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeReadOnly">
+      <MemberSignature Language="C#" Value="public override void MakeReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void MakeReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.MakeReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass diese Instanz schreibgeschützt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.MakeReadOnly%2A>-Methode aufgerufen wird, wird die <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.IsReadOnly%2A>-Eigenschaft auf `true` festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadXml">
+      <MemberSignature Language="C#" Value="public override void ReadXml (System.Xml.XmlDictionaryReader reader, System.IdentityModel.Tokens.SamlSerializer samlSerializer, System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoSerializer, System.IdentityModel.Selectors.SecurityTokenResolver outOfBandTokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ReadXml(class System.Xml.XmlDictionaryReader reader, class System.IdentityModel.Tokens.SamlSerializer samlSerializer, class System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoSerializer, class System.IdentityModel.Selectors.SecurityTokenResolver outOfBandTokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.ReadXml(System.Xml.XmlDictionaryReader,System.IdentityModel.Tokens.SamlSerializer,System.IdentityModel.Selectors.SecurityTokenSerializer,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+        <Parameter Name="samlSerializer" Type="System.IdentityModel.Tokens.SamlSerializer" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+        <Parameter Name="outOfBandTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein <see cref="T:System.Xml.XmlDictionaryReader" />, um das <see langword="&lt;AudienceRestrictionCondition&gt;" />-Element zu lesen.</param>
+        <param name="samlSerializer">Ein <see cref="T:System.IdentityModel.Tokens.SamlSerializer" />, der XML-Elemente in der SAML-Assertion lesen kann, die in der SAML-Spezifikation festgelegt wurden.</param>
+        <param name="keyInfoSerializer">Ein <see cref="T:System.IdentityModel.Selectors.SecurityTokenSerializer" />, der die <see langword="KeyInfo" />-Klausel der digitalen Signatur liest.</param>
+        <param name="outOfBandTokenResolver">Ein <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" />, der das Sicherheitstoken bestimmt, das die digitale Signatur erstellt hat.</param>
+        <summary>Liest das <see langword="&lt;AudienceRestrictionCondition&gt;" />-Element vom angegebenen XML-Reader.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="samlSerializer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenException">Das <see langword="&lt;AudienceRestrictionCondition&gt;" />-Element verfügt über ein untergeordnetes <see langword="&lt;Audience&gt;" />-Element ohne Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteXml">
+      <MemberSignature Language="C#" Value="public override void WriteXml (System.Xml.XmlDictionaryWriter writer, System.IdentityModel.Tokens.SamlSerializer samlSerializer, System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoSerializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteXml(class System.Xml.XmlDictionaryWriter writer, class System.IdentityModel.Tokens.SamlSerializer samlSerializer, class System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoSerializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.WriteXml(System.Xml.XmlDictionaryWriter,System.IdentityModel.Tokens.SamlSerializer,System.IdentityModel.Selectors.SecurityTokenSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="samlSerializer" Type="System.IdentityModel.Tokens.SamlSerializer" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Xml.XmlDictionaryWriter" /> zum Schreiben des <see langword="&lt;AudienceRestrictionCondition&gt;" />-Elements.</param>
+        <param name="samlSerializer">Ein <see cref="T:System.IdentityModel.Tokens.SamlSerializer" />, der XML-Elemente in die SAML-Assertion schreiben kann, die in der SAML-Spezifikation angegeben ist.</param>
+        <param name="keyInfoSerializer">Ein <see cref="T:System.IdentityModel.Selectors.SecurityTokenSerializer" />, der <see langword="KeyInfo" />-Klauseln schreiben kann.</param>
+        <summary>Schreibt das <see langword="&lt;AudienceRestrictionCondition&gt;" />-Element in das angegebene XML-Serialisierungsprogramm.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="samlSerializer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

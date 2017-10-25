@@ -1,0 +1,298 @@
+<Type Name="ServiceModelSectionGroup" FullName="System.ServiceModel.Configuration.ServiceModelSectionGroup">
+  <TypeSignature Language="C#" Value="public sealed class ServiceModelSectionGroup : System.Configuration.ConfigurationSectionGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServiceModelSectionGroup extends System.Configuration.ConfigurationSectionGroup" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.ServiceModelSectionGroup" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSectionGroup</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Hauptkonfigurationsabschnitt für Windows Communication Foundation (WCF) dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle [!INCLUDE[indigo2](~/includes/indigo2-md.md)] Konfigurationselemente im geschachtelt sind die `system.serviceModel` Element der Konfigurationsdatei. [!INCLUDE[indigo2](~/includes/indigo2-md.md)] fügt den Konfigurationsabschnitten anderer Produkte keine Elemente hinzu.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceModelSectionGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelSectionGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.ServiceModelSectionGroup" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Behaviors">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.BehaviorsSection Behaviors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.BehaviorsSection Behaviors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelSectionGroup.Behaviors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.BehaviorsSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Konfigurationsabschnitt ab, der untergeordnete Einträge enthält, die Verhaltenselementen entsprechen.</summary>
+        <value>Der Konfigurationsabschnitt, der untergeordnete Einträge enthält, die verhaltenselementen entsprechen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Abschnitt `behavior` definiert Verhaltenselemente. Jeder Eintrag wird mit seinem eindeutigen `name` identifiziert, der von Diensten verwendet wird, wenn Verknüpfungen zu Verhaltensweisen hergestellt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bindings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.BindingsSection Bindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.BindingsSection Bindings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelSectionGroup.Bindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.BindingsSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Konfigurationsabschnitt ab, der alle Bindungen enthält.</summary>
+        <value>Der Konfigurationsabschnitt, der alle Bindungen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Abschnitt enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen. Jeder Eintrag wird mit seinem eindeutigen Namen identifiziert, der von Diensten verwendet wird, wenn Verknüpfungen zu Bindungen hergestellt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Client">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.ClientSection Client { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.ClientSection Client" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelSectionGroup.Client" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.ClientSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Konfigurationsabschnitt ab, der eine Liste von Endpunkten enthält, die ein Client für die Verbindung zu einem Dienst verwendet.</summary>
+        <value>Der Konfigurationsabschnitt, der eine Liste von Endpunkten enthält, die ein Client für die Verbindung zu einem Dienst verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComContracts">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.ComContractsSection ComContracts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.ComContractsSection ComContracts" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelSectionGroup.ComContracts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.ComContractsSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Konfigurationsabschnitt ab, der den Namespace und den Vertragsnamen für einen Dienstvertrag definiert, der in der COM+-Interoperabilität verwendet wird.</summary>
+        <value>Der Konfigurationsabschnitt, der den Namen der Namespace und Vertrag für einen Dienstvertrag in COM+-Interoperabilität verwendet definiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonBehaviors">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.CommonBehaviorsSection CommonBehaviors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.CommonBehaviorsSection CommonBehaviors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelSectionGroup.CommonBehaviors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.CommonBehaviorsSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Konfigurationsabschnitt ab, der eine Liste der Verhaltensweisen enthält, die auf alle [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Dienste auf dem Computer angewendet werden, bevor die Verhaltensweisen im <see langword="behaviors" />-Abschnitt angewendet werden.</summary>
+        <value>Der Konfigurationsabschnitt, der eine Liste der Verhaltensweisen enthält, die auf alle gilt [!INCLUDE[indigo2](~/includes/indigo2-md.md)] Dienste auf dem Computer, bevor die Verhaltensweisen in der <see langword="behaviors" /> -Abschnitt angewendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Abschnitt wird in der Datei 'Machine.config' definiert. Sie enthält eine Liste der Verhaltensweisen, die auf alle [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Dienste auf dem Computer angewendet werden, bevor die Verhaltensweisen in der Verhaltenssammlung angewendet werden. Wenn ein Verhalten in beiden Abschnitten definiert wird, gilt das Verhalten in den Verhaltensabschnitten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Diagnostic">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.DiagnosticSection Diagnostic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.DiagnosticSection Diagnostic" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelSectionGroup.Diagnostic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.DiagnosticSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Konfigurationsabschnitt für die Diagnosefunktionen von [!INCLUDE[indigo2](~/includes/indigo2-md.md)] ab.</summary>
+        <value>Der Konfigurationsabschnitt für die Diagnosefunktionen von [!INCLUDE[indigo2](~/includes/indigo2-md.md)].</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Abschnitt `diagnostics` enthält Einstellungen für die Diagnosefunktionen von [!INCLUDE[indigo2](~/includes/indigo2-md.md)]. Der Benutzer kann Ablaufverfolgung, Leistungsindikatoren und den WMI-Anbieter aktivieren/deaktivieren und benutzerdefinierte Meldungsfilter hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.ExtensionsSection Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.ExtensionsSection Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelSectionGroup.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.ExtensionsSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Konfigurationsabschnitt ab, der alle Erweiterungen definiert.</summary>
+        <value>Ein Konfigurationsabschnitt, der alle Erweiterungen definiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSectionGroup">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Configuration.ServiceModelSectionGroup GetSectionGroup (System.Configuration.Configuration config);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Configuration.ServiceModelSectionGroup GetSectionGroup(class System.Configuration.Configuration config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelSectionGroup.GetSectionGroup(System.Configuration.Configuration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.ServiceModelSectionGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="config" Type="System.Configuration.Configuration" />
+      </Parameters>
+      <Docs>
+        <param name="config">Eine <see cref="T:System.Configuration.Configuration" />, die eine Konfigurationsdatei darstellt.</param>
+        <summary>Ruft die <see langword="system.ServiceModel" />-Konfigurationsabschnittsgruppe aus der angegebenen Konfigurationsdatei ab.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Configuration.ServiceModelSectionGroup" />, das die <see langword="system.ServiceModel" />-Konfigurationseinstellungen darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="config" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtocolMapping">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.ProtocolMappingSection ProtocolMapping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.ProtocolMappingSection ProtocolMapping" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelSectionGroup.ProtocolMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.ProtocolMappingSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Endpunktkonfigurationsabschnitt ab, der das Kommunikationsprotokoll definiert.</summary>
+        <value>Ein Endpunkt-Konfigurationsabschnitt, der das Kommunikationsprotokoll definiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceHostingEnvironment">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.ServiceHostingEnvironmentSection ServiceHostingEnvironment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.ServiceHostingEnvironmentSection ServiceHostingEnvironment" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelSectionGroup.ServiceHostingEnvironment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.ServiceHostingEnvironmentSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Konfigurationsabschnitt ab, der definiert, welchen Typ die Diensthostumgebung für einen besonderen Transport instanziiert.</summary>
+        <value>Der Konfigurationsabschnitt, der definiert, welchen Typ von hostumgebung des Diensts wird für einen besonderen Transport instanziiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Services">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.ServicesSection Services { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.ServicesSection Services" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelSectionGroup.Services" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.ServicesSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Konfigurationsabschnitt ab, der eine Sammlung von Diensten definiert.</summary>
+        <value>Der Konfigurationsabschnitt, der eine Auflistung von Diensten definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für jeden in der Assembly definierten Dienst enthält dieser Abschnitt ein Dienstelement mit den Einstellungen für den Dienst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardEndpoints">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.StandardEndpointsSection StandardEndpoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.StandardEndpointsSection StandardEndpoints" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelSectionGroup.StandardEndpoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.StandardEndpointsSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Konfigurationsabschnitt für die Standardendpunkte ab.</summary>
+        <value>Das Elementobjekt eines Standardendpunktabschnitts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

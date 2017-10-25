@@ -1,0 +1,1879 @@
+<Type Name="Axis" FullName="System.Windows.Forms.DataVisualization.Charting.Axis">
+  <TypeSignature Language="C#" Value="public class Axis : System.Windows.Forms.DataVisualization.Charting.ChartNamedElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Axis extends System.Windows.Forms.DataVisualization.Charting.ChartNamedElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.Axis" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.ChartNamedElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Enabled")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Methoden und Eigenschaften, die Verwalten von Achsen in der <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse kapselt die gesamte Funktionalität für Achsen in der <xref:System.Windows.Forms.DataVisualization.Charting.Chart> steuern und verfügbar gemacht wird, werden durch die <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.AxisX%2A>, <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.AxisY%2A>, <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.AxisX2%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.AxisY2%2A> Eigenschaften des <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> Objekte.  
+  
+ Für alle Diagramme – mit Ausnahme von Balken-, gestapelte Balken-, Kreis- und Ringdiagramme – die primären und sekundären Achsen sind wie folgt:  
+  
+|Der Achsentyp|Beschreibung|  
+|---------------|-----------------|  
+|Primäre X-Achse|Untere horizontale Achse.|  
+|Sekundäre X-Achse|Obere horizontale Achse.|  
+|Primäre Y-Achse|Linke vertikale Achse.|  
+|Sekundäre Y-Achse|Vertikale Achse.|  
+  
+ Diagramme verfügen über Achsen um 90 Grad im Uhrzeigersinn gedreht Balken- und gestapelte Balkendiagramme daher die primäre X-Achse für diese zwei Diagrammtypen ist die linke vertikale Achse.  
+  
+ **Hinweis** kann nur eine Menge von Achsen – zwei vertikale und horizontale zwei – für jedes <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> Objekt.  
+  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.Axis> -Klasse enthält auch mehrere Methoden, die zum Konvertieren von Achsenwerten in absolute Pixelkoordinaten, die für eine 2D benutzerdefinierte Zeichnung nützlich sind, oder relative Koordinaten, die nützlich für 3D benutzerdefinierte Zeichnung sind verwendet werden können. Absolute und relative Koordinaten können auch in Achsenwerte konvertiert werden.  
+  
+ Im folgenden sind die wichtigsten Achsenelemente verfügbar gemacht werden, indem die <xref:System.Windows.Forms.DataVisualization.Charting.Axis> Klasse:  
+  
+|Axis-Element|Beschreibung|  
+|------------------|-----------------|  
+|Achsenbezeichnungen|Die Bezeichnungen einer Achse, und die zugehörigen Eigenschaften.|  
+|Rasterlinien|Die Haupt- und Nebenversionsnummern Rasterlinien einer Achse.|  
+|Teilstriche|Die Haupt- und Nebenversionsnummern Teilstriche einer Achse.|  
+|Bereichsstreifen|Bereichsstreifen.|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Axis ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Axis.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataVisualization.Charting.Axis" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Axis (System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea, System.Windows.Forms.DataVisualization.Charting.AxisName axisTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea, valuetype System.Windows.Forms.DataVisualization.Charting.AxisName axisTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Axis.#ctor(System.Windows.Forms.DataVisualization.Charting.ChartArea,System.Windows.Forms.DataVisualization.Charting.AxisName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="chartArea" Type="System.Windows.Forms.DataVisualization.Charting.ChartArea" />
+        <Parameter Name="axisTypeName" Type="System.Windows.Forms.DataVisualization.Charting.AxisName" />
+      </Parameters>
+      <Docs>
+        <param name="chartArea">Der Diagrammbereich.</param>
+        <param name="axisTypeName">Der Achsenname.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataVisualization.Charting.Axis" />-Klasse mit den angegebenen <paramref name="chartArea" />- und <paramref name="axisTypeName" />-Werten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrowStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle ArrowStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle ArrowStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.ArrowStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Art des Pfeils eine 2D Achse; Dieses Format wird nicht auf 3D-Diagrammbereiche angewendet.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle" />-Enumerationswert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AxisName">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataVisualization.Charting.AxisName AxisName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.AxisName AxisName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.AxisName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AxisName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Achse, die entweder X, Y, X2 oder Y2 sein kann.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.AxisName" />-Enumerationswert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Crossing">
+      <MemberSignature Language="C#" Value="public virtual double Crossing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Crossing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.Crossing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(NaN)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.AxisCrossingValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Speicherort, an dem eine Achse von der zugeordneten Achse geschnitten wird.</summary>
+        <value>Ein <see langword="double" /> Wert, der darstellt, an eine Achse von der zugeordneten Achse geschnitten wird. Der Standardwert ist <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft für eine primäre Achse wird bestimmt, in denen die anderen Primärachse schneidet, und für eine sekundäre Achse auf ähnliche Weise festlegen, an denen Sie die andere sekundäre Achse gekreuzt bestimmt. Z. B. die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Crossing%2A> Eigenschaft der primären X-Achse bestimmt, in dem Sie die primäre Y-Achse gekreuzt werden wird.  
+  
+ Vier Modi können verwendet werden, für die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Crossing%2A> Eigenschaft einer Achse:  
+  
+-   "Auto", was bedeutet, dass der Schnittwert auf die minimale oder maximale Wert für die relevante Achse festgelegt wird. Wenn die Achse primären enthält, werden der Wert der minimale Wert ist die Achse sekundäre wird den maximalen Wert. Verwenden Sie zum Festlegen auf "Auto" zur Laufzeit eine <xref:System.Double.NaN> Wert.  
+  
+-   "Minimum", d. der Schnittwert der Achse h. wird der minimale Wert sein. Festlegen auf "Minimum" zur Laufzeit verwenden Sie zur ein <xref:System.Double.MinValue> Wert.  
+  
+-   "Maximum", d. der Schnittwert der Achse h. wird der maximale Wert sein. Festlegen auf "Maximum" zur Laufzeit verwenden Sie zur ein <xref:System.Double.MaxValue> Wert.  
+  
+-   Ein angegebenes `double` Wert, der zwischen den minimalen und maximalen Werten für die relevante Achse ist. Wenn der Schnittwert kleiner als der minimale Wert ist oder der Schnittwert größer als der maximale Wert ist, wird eine Ausnahme ausgelöst.  
+  
+ Beim ein nicht standardmäßiger Schnittwert verwendet wird, die Bezeichnungen und Teilstriche der Achse oder kann nicht folgen die Überschreitung-Achse, abhängig von der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.IsMarksNextToAxis%2A> Einstellung der Eigenschaft. Standardmäßig werden sie mit der Achse Überschreitung verschoben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomLabels">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.CustomLabelsCollection CustomLabels { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.CustomLabelsCollection CustomLabels" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.CustomLabels" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartCollectionEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.CustomLabelsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Forms.DataVisualization.Charting.CustomLabelsCollection" /> Objekt zum Speichern von <see cref="T:System.Windows.Forms.DataVisualization.Charting.CustomLabel" /> Objekte.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.CustomLabelsCollection" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft zum Hinzufügen oder Entfernen von benutzerdefinierte Bezeichnungen für eine Achse. Mit <xref:System.Windows.Forms.DataVisualization.Charting.CustomLabel> Objekten kann der Entwickler den Text für achsenbezeichnungen nach dem Zufallsprinzip festgelegt.  
+  
+ Nur benutzerdefinierte Bezeichnungen können in der zweiten Zeile von Bezeichnungen verwendet werden. Wenn eine benutzerdefinierte Bezeichnung in der ersten Bezeichnungszeile verwendet wird, müssen alle Bezeichnungen in dieser ersten Zeile außerdem benutzerdefinierte Bezeichnungen sein.  
+  
+ Bezeichnungen können auch über die Datenpunkte festgelegt oder aus der Achsenskalierung automatisch generiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Axis.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="True" />um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben. <see langword="false" /> um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt nicht verwaltete und optional auch die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.AxisEnabled Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.AxisEnabled Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Windows.Forms.DataVisualization.Charting.AxisEnabled), "Auto")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AxisEnabled</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Achse aktiviert ist.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.AxisEnabled" />-Enumerationswert. Der Standardwert ist <see cref="F:System.Windows.Forms.DataVisualization.Charting.AxisEnabled.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Achse nicht aktiviert ist, wird die Achse, zusammen mit seiner Attribute (Teilstriche, Bereichsstreifen, Bezeichnungen usw.) nicht angezeigt werden.  
+  
+ Wenn eine Achse aktiviert ist, wird die Achse, zusammen mit seiner Attribute (Teilstriche, Bereichsstreifen Etiketten und usw.), angezeigt werden, unabhängig davon, ob es zum Zeichnen verwendet wird einer <xref:System.Windows.Forms.DataVisualization.Charting.Series>.  
+  
+ Wenn ein Wert von <xref:System.Windows.Forms.DataVisualization.Charting.AxisEnabled.Auto> wird verwendet, eine Achse kann "oder" nicht angezeigt, je nachdem, ob sie zum Zeichnen verwendet wird einer <xref:System.Windows.Forms.DataVisualization.Charting.Series>. Die Achsen, die verwendet werden, um Daten zu zeichnen, werden durch bestimmt die <xref:System.Windows.Forms.DataVisualization.Charting.Series.XAxisType%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.Series.YAxisType%2A> eigenschafteneinstellungen.  
+  
+> [!NOTE]
+>  Wenn eine Achse ist nicht aktiviert, aber eine benachbarte Achse Rasterlinien verwendet, wird eine jener Rasterlinien anstelle der Achse angezeigt werden, die nicht aktiviert ist. Die gleiche Situation tritt auf, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Enabled%2A> einer Achse ist-Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.AxisEnabled.Auto>, aber die Achse nicht zum Zeichnen von Daten verwendet wird; stattdessen die Rasterlinie einer benachbarten Achse gezeichnet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPosition">
+      <MemberSignature Language="C#" Value="public double GetPosition (double axisValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 GetPosition(float64 axisValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Axis.GetPosition(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="axisValue" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="axisValue">Der Achsenwert.</param>
+        <summary>Konvertiert einen Achsenwert in einer relativen Position (0-100 %). Wenn eine Achse logarithmisch ist, wird der Wert in eine lineare Skala konvertiert.</summary>
+        <returns>Ein <see langword="double" /> Wert, der die relative Position darstellt (0-100 %).</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterlacedColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color InterlacedColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color InterlacedColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.InterlacedColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe der zeilensprungstreifen fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Objekt, das die Farbe der zeilensprungstreifen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie die Farbe der zeilensprungstreifen angeben, die angezeigt werden, beim Aufrufen der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.InterlacedColor%2A> Eigenschaft.  
+  
+ Um die Rahmenfarbe der verschachtelten Bereichsstreifen anzugeben, müssen Sie die Streifen mit Anzeigen der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.StripLines%2A> Auflistungseigenschaft anstelle der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.InterlacedColor%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interval">
+      <MemberSignature Language="C#" Value="public double Interval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Interval" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.Interval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.AxisIntervalValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Intervall von einer Achse fest.</summary>
+        <value>Ein <see langword="double" /> Wert, der das Intervall einer Achse darstellt. Der Standardwert ist "Auto", der durch den Wert NULL (0) dargestellt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bestimmt, wie oft die Bezeichnungen und Hauptteilstriche markiert und verknüpft sind, mit der Achse Rasterlinien gezeichnet werden, wenn die `Interval` Eigenschaftswert, der eine Bezeichnung, die Teilstriche oder die Gitternetzlinie festgelegt ist, um <xref:System.Double.NaN>, der gibt an, dass sie nicht festgelegt ist.  
+  
+ Die `Interval` Eigenschaft eines Hauptteilstrichs, Rasterlinie oder Bezeichnung der Achse hat Priorität gegenüber der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Interval%2A> eigenschaftseinstellung der <xref:System.Windows.Forms.DataVisualization.Charting.Axis> Objekt.  
+  
+ Ein Wert von 0 (null) stellt einen Wert für "Auto". Dies <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Interval%2A> Eigenschaft kann nicht festgelegt werden, um <xref:System.Double.NaN>. Wenn Sie diese Eigenschaft einen Wert zuweisen <xref:System.Double.NaN>, der Wert NULL wird stattdessen verwendet.  
+  
+ **Hinweis** verwenden Sie diese Eigenschaft die Hilfsrasterlinien und die Teilstriche einer Achse nie für ihr Intervall.  
+  
+ Der Intervalltyp der Achse richtet sich nach der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.IntervalType%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalAutoMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode IntervalAutoMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode IntervalAutoMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.IntervalAutoMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das bestimmt, ob eine feste Anzahl von Intervallen auf der Achse verwendet wird, oder wenn die Anzahl der Intervalle von der Achsengröße abhängig ist.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode" />-Enumerationswert. Der Standardwert ist <see cref="F:System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.FixedCount" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Interval%2A> Eigenschaftensatz wird auf "Auto", die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.IntervalAutoMode%2A> Eigenschaft bestimmt, wie viele Intervalle berechnet werden soll. Wenn das Diagramm vergrößert bzw. verkleinert oder oft neu gezeichnet, legen Sie die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.IntervalAutoMode%2A> Eigenschaft <xref:System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount>, in diesem Fall das Diagramm fügt Achsenintervalle dynamisch berechnet wird. Dies ist besonders nützlich in Situationen, in denen das Diagramm Intervalle unterschiedlich, abhängig von ihren Daten angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalOffset">
+      <MemberSignature Language="C#" Value="public double IntervalOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 IntervalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.IntervalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.AxisIntervalValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Intervalloffset einer Achse.</summary>
+        <value>Ein <see langword="double" /> Wert, der den Intervalloffset einer Achse darstellt. Der Standardwert ist "Auto", der durch den Wert NULL (0) dargestellt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.IntervalOffset%2A> Eigenschaft bestimmt den Intervalloffset einer Achse. Dieser Wert wird verwendet, als das Intervalloffset der Bezeichnungen einer Achse und Hauptteilstriche und Gitternetzlinien mit der Achse zugeordnet ist, wenn die `IntervalOffset` Eigenschaftswert der Bezeichnungen, Teilstriche oder Rasterlinien nicht festgelegt ist, wird die durch den Wert dargestellt <xref:System.Double.NaN>.  
+  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.IntervalOffset%2A> Eigenschaft der Teilstriche, Beschriftungen und Gitternetzlinien einer Achse hat Priorität gegenüber der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.IntervalOffset%2A> eigenschaftseinstellung der <xref:System.Windows.Forms.DataVisualization.Charting.Axis> Objekt.  
+  
+ Ein Wert von 0 (null) stellt einen Wert für "Auto". Darüber hinaus <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Interval%2A> kann nicht festgelegt werden, nicht festgelegt (d. h. eine <xref:System.Double.NaN>). Wenn Sie zuweisen <xref:System.Double.NaN>, einen Wert von "Auto" – d. h., ein Wert von 0 (null) – wird stattdessen verwendet.  
+  
+ **Hinweis** verwenden Sie diese Eigenschaft die Hilfsrasterlinien und die Teilstriche einer Achse niemals für ihre Intervalloffset.  
+  
+ Intervalloffsettyp der Achse richtet sich nach der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.IntervalOffsetType%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalOffsetType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType IntervalOffsetType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType IntervalOffsetType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.IntervalOffsetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Intervalloffsettyp einer Achse.</summary>
+        <value>Der Intervalloffsettyp einer Achse. Der Standardwert ist <see cref="F:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bestimmt den Intervalloffsettyp einer Achse, und für den Intervalloffsettyp der Bezeichnungen, und Hauptteilstriche oder Rasterlinien in einer Achse verwendet wird, wenn der Axis-Element des eigenen `IntervalOffsetType` Eigenschaftswert festgelegt ist, um <xref:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.NotSet>.  
+  
+ Wenn diese Eigenschaft auf <xref:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.NotSet> führt zu einem Wert von <xref:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto> verwendet wird (nur für die Achsenelemente wie Hauptrasterlinien usw. festgelegt werden können, um <xref:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.NotSet>).  
+  
+> [!NOTE]
+>  Die Hilfsrasterlinien und die Teilstriche einer Achse verwenden nie diese Eigenschaft für ihren Intervalloffsettyp.  
+  
+ Das Intervall der Achse richtet sich nach der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.IntervalOffset%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType IntervalType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType IntervalType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.IntervalType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Intervalltyp einer Achse.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType" /> , der den Intervalltyp einer Achse darstellt. Der Standardwert ist <see cref="F:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bestimmt den Intervalltyp einer Achse, und für den Intervalltyp der Bezeichnungen, Hauptteilstriche werden oder Hauptrasterlinien einer Achse verwendet wird, wenn der Axis-Element des eigenen `IntervalType` Eigenschaftswert festgelegt ist, um <xref:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.NotSet>.  
+  
+ Wenn diese Eigenschaft auf <xref:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.NotSet> führt zu einem Wert von <xref:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto> verwendet wird. Nur die Achsenelemente verwendet werden, z. B. Rasterlinien, festgelegt werden können, um <xref:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.NotSet>.  
+  
+ **Hinweis** verwenden Sie diese Eigenschaft die Hilfsrasterlinien und die Teilstriche einer Achse nie für ihren Intervalltyp.  
+  
+ Das Intervall der Achse richtet sich nach der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Interval%2A> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  Wenn der Intervalltyp der Achse, einer Uhrzeit z. B. Stunden, Minuten und So weiter, und dann in der Reihenfolge dargestellt wird für vergrößern/verkleinern, um ordnungsgemäß zu funktionieren die <xref:System.Windows.Forms.DataVisualization.Charting.Cursor.IntervalType%2A> muss auf einen Time-Wert festgelegt werden. Z. B. wenn ChartArea1.AxisX.IntervalType auf Stunden festgelegt ist, kann dann kann ChartArea1.CursorX.IntervalType auf Minuten festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInterlaced">
+      <MemberSignature Language="C#" Value="public bool IsInterlaced { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInterlaced" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.IsInterlaced" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das bestimmt, ob für eine Achse zeilensprungstreifen angezeigt werden.</summary>
+        <value>
+          <see langword="True" />Wenn für eine Achse zeilensprungstreifen angezeigt werden. andernfalls <see langword="False" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLabelAutoFit">
+      <MemberSignature Language="C#" Value="public bool IsLabelAutoFit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLabelAutoFit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.IsLabelAutoFit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das bestimmt, ob achsenbezeichnungen automatisch eingefügt werden.</summary>
+        <value>
+          <see langword="True" />Wenn achsenbezeichnungen automatisch eingebaut sind; andernfalls <see langword="False" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLogarithmic">
+      <MemberSignature Language="C#" Value="public bool IsLogarithmic { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLogarithmic" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.IsLogarithmic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob die Achse logarithmisch ist. Nullen oder negativen Datenwerte sind in logarithmischen Diagrammen nicht zulässig.</summary>
+        <value>
+          <see langword="True" />Wenn die Achse logarithmisch ist; andernfalls <see langword="False" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMarginVisible">
+      <MemberSignature Language="C#" Value="public bool IsMarginVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMarginVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.IsMarginVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das bestimmt, ob die Achse einen Rand hinzu.</summary>
+        <value>
+          <see langword="True" />Wenn ein Leerzeichen zwischen dem ersten oder letzten Datenpunkt und dem Rahmen der Diagrammfläche hinzugefügt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMarksNextToAxis">
+      <MemberSignature Language="C#" Value="public virtual bool IsMarksNextToAxis { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMarksNextToAxis" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.IsMarksNextToAxis" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das bestimmt, ob Teilstriche und achsenbezeichnungen mit einer Achse verschieben, wenn sich der Schnittpunkt einer Achse ändern.</summary>
+        <value>
+          <see langword="True" />Falls bei der Schnittpunkt einer Achse ändert; Teilstrichen und achsenbezeichnungen mit einer Achse verschieben andernfalls <see langword="False" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReversed">
+      <MemberSignature Language="C#" Value="public bool IsReversed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReversed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.IsReversed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob die Achse umgekehrt wird.</summary>
+        <value>
+          <see langword="True" />Wenn die Achse umgekehrt ist; andernfalls <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn auf umgekehrt festgelegt, die Werte auf der Achse in umgekehrter Reihenfolge werden und die Richtung der Werte auf der Achse gekippt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStartedFromZero">
+      <MemberSignature Language="C#" Value="public bool IsStartedFromZero { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStartedFromZero" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.IsStartedFromZero" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob der Mindestwert der Achse automatisch auf 0 (null) festgelegt wird, wenn alle Datenpunktwerte positiv sind. Wenn negative Daten zeigen Werte vorhanden sind, wird der minimale Wert der Datenpunkte verwendet werden.</summary>
+        <value>
+          <see langword="True" />Werte sind positiv, wenn der Mindestwert der Achse automatisch auf 0 (null), wenn alle Daten zeigen festgelegt ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LabelAutoFitMaxFontSize">
+      <MemberSignature Language="C#" Value="public int LabelAutoFitMaxFontSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LabelAutoFitMaxFontSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.LabelAutoFitMaxFontSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(10)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den maximalen Schriftgrad, der vom Algorithmus automatische Anpassung Bezeichnung verwendet werden kann.</summary>
+        <value>Ein <see langword="integer" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Schriftgrad darf nicht kleiner als 5 sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LabelAutoFitMinFontSize">
+      <MemberSignature Language="C#" Value="public int LabelAutoFitMinFontSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LabelAutoFitMinFontSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.LabelAutoFitMinFontSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(6)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den minimalen Schriftgrad, der vom Algorithmus automatische Anpassung Bezeichnung verwendet werden kann.</summary>
+        <value>Ein <see langword="integer" />-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LabelAutoFitStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles LabelAutoFitStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles LabelAutoFitStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.LabelAutoFitStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.FlagsEnumUITypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert zulässige Bezeichnung ändert, die vorgenommen werden können, so aktivieren Sie die Bezeichnung, die auf einer Achse geeignet sein.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles" />-Enumerationswert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.IsLabelAutoFit%2A> Eigenschaft muss festgelegt werden, um `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LabelStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.LabelStyle LabelStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.LabelStyle LabelStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.LabelStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.NoNameExpandableObjectConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LabelStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Forms.DataVisualization.Charting.LabelStyle" /> Eigenschaften einer Achse.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.LabelStyle" /> -Objekt, das die Bezeichnungsart Achse definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft an die Formatierung und usw. der achsenbezeichnungen an.  
+  
+ Wenn die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.IsLabelAutoFit%2A> Eigenschaft `true`, den Schriftgrad, schriftartwinkel und die Verwendung von Offsetbezeichnungen automatisch bestimmt werden. Wenn Sie eine der Eigenschaften LabelStyle.Font.Size festgelegt <xref:System.Windows.Forms.DataVisualization.Charting.LabelStyle.Angle%2A> oder <xref:System.Windows.Forms.DataVisualization.Charting.LabelStyle.IsStaggered%2A> Eigenschaften, die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.IsLabelAutoFit%2A> -Eigenschaftensatz auf `false`.  
+  
+ Beachten Sie, dass bei einem Format, das ein Datum besteht, ohne eine Zeit für Bezeichnungen, verwendet wird und die <xref:System.DateTime> Datenpunktwerte, die verwendet werden, geben Sie Zeiten, die Zeiten hat Auswirkungen auf die Positionen der Datenpunkte an, auch wenn sie aufgrund der Bezeichnung Formatierung nicht angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color LineColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color LineColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.LineColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Linienfarbe einer Achse.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Objekt, das die Linienfarbe darstellt zum Zeichnen der Achse. Die Standardeinstellung ist <see cref="P:System.Drawing.Color.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.LineColor%2A> Eigenschaft, um die Linienfarbe einer Achse anzugeben.  
+  
+ **Hinweis** Wenn eine Achse ist nicht aktiviert, aber eine benachbarte Achse Rasterlinien verwendet, wird eine jener Rasterlinien anstelle der Achse, die nicht aktiviert wird angezeigt. Die gleiche Situation tritt auf, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Enabled%2A> einer Achse ist-Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.AxisEnabled.Auto>. In diesem Fall wird die Achse wird nicht verwendet wird, um Daten zu zeichnen, und stattdessen die Rasterlinie einer benachbarten Achse gezeichnet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineDashStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartDashStyle LineDashStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartDashStyle LineDashStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.LineDashStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartDashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Linienart einer Achse.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartDashStyle" />-Enumerationswert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.LineDashStyle%2A> Eigenschaft bestimmt die Linienart für eine Achse verwendet. Die Zeile kann einfarbig, gepunktet usw. sein.  
+  
+ **Hinweis** Wenn eine Achse ist nicht aktiviert, aber eine benachbarte Achse Rasterlinien verwendet, wird eine jener Rasterlinien anstelle der Achse, die nicht aktiviert wird angezeigt. Die gleiche Situation tritt auf, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Enabled%2A> einer Achse ist-Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.AxisEnabled.Auto>. In diesem Fall wird die Achse wird nicht verwendet wird, um Daten zu zeichnen, und stattdessen die Rasterlinie einer benachbarten Achse gezeichnet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineWidth">
+      <MemberSignature Language="C#" Value="public int LineWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.LineWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite einer Achse in Pixel.</summary>
+        <value>Ein <see langword="integer" /> Wert, der die Breite einer Achsenlinie darstellt. Der Standardwert ist eins (1) Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.LineWidth%2A> Eigenschaft ruft ab oder legt die Breite einer Achsenlinie in Pixel. Die Breite auf 0 (null) festgelegt ist, wird die Zeile nicht angezeigt werden.  
+  
+ **Hinweis** Wenn eine Achse ist nicht aktiviert, aber eine benachbarte Achse Rasterlinien verwendet, wird eine jener Rasterlinien anstelle der Achse, die nicht aktiviert wird angezeigt. Die gleiche Situation tritt auf, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Enabled%2A> einer Achse ist-Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.AxisEnabled.Auto>. In diesem Fall wird die Achse wird nicht verwendet wird, um Daten zu zeichnen, und stattdessen die Rasterlinie einer benachbarten Achse gezeichnet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogarithmBase">
+      <MemberSignature Language="C#" Value="public double LogarithmBase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LogarithmBase" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.LogarithmBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(10)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert für den Logarithmus zur Basis für die Achse logarithmisch.</summary>
+        <value>Ein <see langword="double" />-Wert. Der Standardwert ist die Basis 10.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft hat nur Auswirkungen bei der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.IsLogarithmic%2A> -Eigenschaftensatz auf `true`.  
+  
+ Beachten Sie, dass diese Eigenschaft nur für Wertachsen, die verwendet werden, um Daten zu zeichnen. Durch Festlegen dieser Eigenschaft für eine Kategorieachse führt eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MajorGrid">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.Grid MajorGrid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.Grid MajorGrid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.MajorGrid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.NoNameExpandableObjectConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Grid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Forms.DataVisualization.Charting.Grid" /> Objekt, mit dem Hauptraster Linieneigenschaften für eine Achse festgelegt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.Grid" /> Objekt, das zum Abrufen oder Festlegen der Eigenschaften Hauptraster einer Achse verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hauptrasterlinien werden immer in Verbindung mit einem Datenpunkt gezeichnet werden. D. h., werden sie an der gleichen Stelle auf einer Achse als einen Datenpunkt, für die Kategorieachsenteilstriche auftreten. Für Wertachsen werden die Hauptrasterlinien standardmäßig gezeichnet, wenn Bezeichnungen vorkommen.  
+  
+ Sie können diese Eigenschaft verwenden, Hauptrasterlinienfrequenz, Farbe usw. ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MajorTickMark">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.TickMark MajorTickMark { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.TickMark MajorTickMark" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.MajorTickMark" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.NoNameExpandableObjectConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.TickMark</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Forms.DataVisualization.Charting.TickMark" /> Objekt, mit dem die Hauptteilstriche die Eigenschaften einer Achse festgelegt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.TickMark" /> Objekt, das zum Festlegen der Eigenschaften des Hauptteilstrichs einer Achse verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hauptteilstriche werden immer in Verbindung mit einem Datenpunkt gezeichnet werden. Kategorieachsenteilstriche erfolgt an der gleichen Stelle auf einer Achse als einen Datenpunkt. Hauptteilstriche werden für Wertachsen standardmäßig gezeichnet, wenn Bezeichnungen vorkommen.  
+  
+ Sie können diese Eigenschaft verwenden, die Hauptteilstricheigenschaften wie z. B. Häufigkeit, Farbe oder Größe ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public double Maximum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Maximum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(NaN)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.AxisMinMaxAutoValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den maximalen Wert einer Achse.</summary>
+        <value>Ein <see langword="double" /> Wert, der den maximalen Wert einer Achse darstellt. Der Standardwert ist <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gerundet wird, automatisch die Achse maximale und minimale Werte Aufruf der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.RoundAxisValues%2A> Methode. Die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Maximum%2A> Wert muss größer sein als die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Minimum%2A> Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumAutoSize">
+      <MemberSignature Language="C#" Value="public float MaximumAutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 MaximumAutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.MaximumAutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(75)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Größe der Achse, gemessen als Prozentsatz der Diagrammfläche. Dieser Wert wird vom Algorithmus automatische Layout verwendet.</summary>
+        <value>Ein <see langword="float" /> Wert, der die maximale Größe der Achse darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public double Minimum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Minimum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(NaN)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.AxisMinMaxAutoValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den minimalen Wert einer Achse fest.</summary>
+        <value>Ein <see langword="double" /> Wert, der den minimalen Wert einer Achse darstellt. Der Standardwert ist <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass wenn Sie diesen Wert explizit festlegen, die X-Werte von Datenelementen berücksichtigt werden müssen. Wenn alle Datenpunkte X-Werte von 0 (null), haben die <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Steuerelement davon aus, dass der erste Datenpunkt auf 0 (null). Auch wenn die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Minimum%2A> Wert explizit festgelegt ist, die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.IsStartedFromZero%2A> Eigenschaft wird ignoriert. Die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Minimum%2A> Wert muss kleiner als das <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Maximum%2A> Wert.  
+  
+ Die maximalen und minimalen Achsenwerten automatisch gerundet wird. Rufen Sie die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.RoundAxisValues%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinorGrid">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.Grid MinorGrid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.Grid MinorGrid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.MinorGrid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.NoNameExpandableObjectConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Grid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Forms.DataVisualization.Charting.Grid" /> Objekt verwendet, um anzugeben, der Hilfsrasterlinien Attribute einer Achse.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.Grid" /> Objekt, das zum Abrufen oder Festlegen der Attribute der Hilfsrasterlinien einer Achse verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hilfsrasterlinien werden zwischen den Hauptrasterlinien gezeichnet.  
+  
+ Verwenden Sie diese Eigenschaft, um die Attribute einer geringfügigen Rasterlinie, z. B. Häufigkeit, Farbe und So weiter zu ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinorTickMark">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.TickMark MinorTickMark { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.TickMark MinorTickMark" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.MinorTickMark" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.NoNameExpandableObjectConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.TickMark</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Forms.DataVisualization.Charting.TickMark" /> Objekt, mit dem die Hilfsteilstriche die Eigenschaften einer Achse festgelegt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.TickMark" /> Objekt, das für die Eigenschaften der Hilfsteilstriche einer Achse verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hilfsteilstriche sollte zwischen Hauptteilstrichen, gezeichnet werden soll, wo die Bezeichnungen in der Regel auftreten.  
+  
+ Verwenden Sie diese Eigenschaft, um Hilfsteilstriche Markierung Häufigkeit, Farbe und So weiter zu ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Achse fest.</summary>
+        <value>Ein <see langword="string" /> Wert, der den Textnamen der Achse darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelPositionToValue">
+      <MemberSignature Language="C#" Value="public double PixelPositionToValue (double position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 PixelPositionToValue(float64 position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="position">Die Pixelposition.</param>
+        <summary>Konvertiert eine absolute Pixelkoordinaten Position auf einer Achse auf einen Achsenwert an. Diese Methode funktioniert nur in Paint-Ereignissen.</summary>
+        <returns>Ein <see langword="double" /> Wert, der den Achsenwert darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionToValue">
+      <MemberSignature Language="C#" Value="public double PositionToValue (double position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 PositionToValue(float64 position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="position">Die relative Position (0-100 %).</param>
+        <summary>Konvertiert eine relative Koordinate auf einer Achse auf einen Achsenwert an. Diese Methode funktioniert nur in Paint-Ereignissen.</summary>
+        <returns>Ein <see langword="double" /> Wert, der den Achsenwert darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RoundAxisValues">
+      <MemberSignature Language="C#" Value="public void RoundAxisValues ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RoundAxisValues() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Axis.RoundAxisValues" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rundet automatisch Achsenwerte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.RoundAxisValues%2A> Methode, um die Werte einer Achse gerundet werden. Beachten Sie, dass das Intervall für die Achse verwendete beim Aufrufen dieser Methode nicht geändert werden. Diese Methode wird nur unterstützt, für das "X" und X2 Achsen. Standardmäßig werden die Werte der Achsen J "und" Y2 gerundet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleBreakStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle ScaleBreakStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle ScaleBreakStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.ScaleBreakStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.NoNameExpandableObjectConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Achse Skalierung Break-Stil.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle" /> Objekt, das die Skalierung Break-Stil für die Diagrammachse darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleView">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.AxisScaleView ScaleView { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.AxisScaleView ScaleView" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.ScaleView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.NoNameExpandableObjectConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AxisScaleView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ansicht einer Achse fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.AxisScaleView" /> Objekt, das die Skalierungsansicht einer Achse darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollBar">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.AxisScrollBar ScrollBar { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.AxisScrollBar ScrollBar" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.ScrollBar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.NoNameExpandableObjectConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AxisScrollBar</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen einer Achsenbildlaufleiste.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.AxisScrollbar" /> Objekt, das die Bildlaufleiste einer Achse darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um die Bildlaufleiste einer Achse zu bearbeiten.  
+  
+ Weitere Informationen finden Sie in der <xref:System.Windows.Forms.DataVisualization.Charting.AxisScrollBar> -Klasse Dokumentation.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StripLines">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.StripLinesCollection StripLines { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.StripLinesCollection StripLines" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.StripLines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartCollectionEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.StripLinesCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Forms.DataVisualization.Charting.StripLinesCollection" /> Auflistungsobjekt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.StripLinesCollection" /> Auflistungsobjekt, das alle speichert <see cref="T:System.Windows.Forms.DataVisualization.Charting.StripLine" /> Objekte für eine Achse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bereichsstreifen werden verwendet, um die rechteckige leisten über Zeichnen einer <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> Objekt, und werden immer für die gesamte gezeichnet \<A Href = "" > Bereich.  
+  
+ Diese Bereichsstreifen Zeilen beziehen sich nicht auf die Rasterlinien.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextOrientation">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.TextOrientation TextOrientation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.TextOrientation TextOrientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.TextOrientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.TextOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung des Texts in den Titel der Achse fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.TextOrientation" />-Enumerationswert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Titel der Achse fest.</summary>
+        <value>Ein <see langword="string" /> Wert, der den Titel der Achse darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft ab oder legt den Titel der Achse fest.  
+  
+ Sie können die Schriftarteigenschaften des Titels mit Festlegen der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.TitleFont%2A> Eigenschaft.  
+  
+ Sie können festlegen, dass die Farbe des Titels mit der <xref:System.Windows.Forms.DataVisualization.Charting.Axis.TitleForeColor%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleAlignment">
+      <MemberSignature Language="C#" Value="public System.Drawing.StringAlignment TitleAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.StringAlignment TitleAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.TitleAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.StringAlignment), "Center")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung des Achsentitels.</summary>
+        <value>Ein <see cref="T:System.Drawing.StringAlignment" />-Enumerationswert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mögliche Werte sind <xref:System.Drawing.StringAlignment.Center>, <xref:System.Drawing.StringAlignment.Far>, und <xref:System.Drawing.StringAlignment.Near>. Ein Wert von <xref:System.Drawing.StringAlignment.Far> entspricht eine Ausrichtung oben oder nach rechts, je nach Ausrichtung der Achse oder des Bereichsstreifens an. Auf die gleiche Weise, einen Wert von <xref:System.Drawing.StringAlignment.Near> entspricht einer Ausrichtung nach unten oder rechts.  
+  
+ Wenn Sie mehr Kontrolle über die Positionierung des Achsentitels möchten, müssen Sie benutzerdefinierte Zeichnung mithilfe von Ausführen der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.PostPaint> oder <xref:System.Windows.Forms.DataVisualization.Charting.Chart.PrePaint> Ereignis.  
+  
+ Können Sie weitere ausrichten und positionieren Sie die Titel von <xref:System.Windows.Forms.DataVisualization.Charting.StripLine> Objekte mit ihren <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.TextLineAlignment%2A> und der TitleAngle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleFont">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font TitleFont { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font TitleFont" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.TitleFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Font), "Microsoft Sans Serif, 8pt")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Titel einer Achse Schriftarteigenschaften fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Font" /> Objekt, das für die Schriftarteigenschaften eines Titels verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft ab, oder legt ihn fest Titelschriftarteigenschaften, z. B. gesichtserkennung oder Größe.  
+  
+ Schriftarteigenschaften am festgelegt wird, zur Laufzeit wird eine neue <xref:System.Windows.Forms.DataVisualization.Charting.AnnotationGroup.Font%2A> Objekt erstellt werden muss. Jeder Versuch zum Ändern der Eigenschaften des aktuellen <xref:System.Windows.Forms.DataVisualization.Charting.AnnotationGroup.Font%2A> Objekt zur Laufzeit führt zu einem Kompilierungsfehler.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color TitleForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color TitleForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.TitleForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Textfarbe des Achsentitels fest.</summary>
+        <value>Eine <see cref="T:System.Drawing.Color" />-Struktur. Die Standardfarbe ist <see cref="P:System.Drawing.Color.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft ab oder legt die Textfarbe für eine <xref:System.Windows.Forms.DataVisualization.Charting.Axis> Title-Objekt.  
+  
+ Sie können eine beliebige gültige ARGB (Alpha, Rot, Grün, Blau)-Farbe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Axis.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die QuickInfo für die Achse verwendet.</summary>
+        <value>Ein <see langword="string" />-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueToPixelPosition">
+      <MemberSignature Language="C#" Value="public double ValueToPixelPosition (double axisValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 ValueToPixelPosition(float64 axisValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Axis.ValueToPixelPosition(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="axisValue" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="axisValue">Der Achsenwert.</param>
+        <summary>Konvertiert einen Achsenwert auf eine absolute Koordinate auf einer Achse. In Pixel gemessen. Diese Methode funktioniert nur in Paint-Ereignissen.</summary>
+        <returns>Ein <see langword="double" /> Wert, der die Pixelposition darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueToPosition">
+      <MemberSignature Language="C#" Value="public double ValueToPosition (double axisValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 ValueToPosition(float64 axisValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Axis.ValueToPosition(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="axisValue" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="axisValue">Der Achsenwert.</param>
+        <summary>Konvertiert einen Achsenwert in seiner relativen Position (0-100 %). Wenn eine Achse eine logarithmische Skalierung aufweist, ist der Wert in eine lineare Skala konvertiert. Diese Methode funktioniert nur in Paint-Ereignissen.</summary>
+        <returns>Ein <see langword="double" /> Wert, der die relative Position darstellt (0-100 %).</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

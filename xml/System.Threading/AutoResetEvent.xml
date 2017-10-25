@@ -1,0 +1,124 @@
+<Type Name="AutoResetEvent" FullName="System.Threading.AutoResetEvent">
+  <TypeSignature Language="C#" Value="public sealed class AutoResetEvent : System.Threading.EventWaitHandle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AutoResetEvent extends System.Threading.EventWaitHandle" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.AutoResetEvent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Threading.EventWaitHandle</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Benachrichtigt einen wartenden Thread über das Eintreten eines Ereignisses. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `AutoResetEvent`können Threads durch Signalisieren miteinander kommunizieren. In der Regel verwenden Sie diese Klasse, wenn Threads exklusiven Zugriff auf eine Ressource benötigen.  
+  
+> [!IMPORTANT]
+>  Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+ Ein Thread wartet auf ein Signal durch Aufrufen von <xref:System.Threading.WaitHandle.WaitOne%2A> auf die `AutoResetEvent`. Wenn die `AutoResetEvent` im nicht signalisierten Zustand befindet, der Thread blockiert und Warten auf der Thread, der derzeit steuert die Ressource, um zu signalisieren, dass die Ressource verfügbar, durch den Aufruf ist <xref:System.Threading.EventWaitHandle.Set%2A>.  
+  
+ Aufrufen von `Set` Signale `AutoResetEvent` einen wartenden Thread freigeben. `AutoResetEvent`bleibt signalisiert, bis ein einzelnen wartenden Threads freigegeben wird und dann automatisch in den nicht signalisierten Zustand zurück. Wenn keine wartenden Threads vorhanden sind, bleibt der Status unbegrenzt signalisiert.  
+  
+ Wenn ein Thread aufruft, <xref:System.Threading.WaitHandle.WaitOne%2A> während der <xref:System.Threading.AutoResetEvent> ist in den signalisierten Zustand aufweisen, wird der Thread nicht blockiert. Die <xref:System.Threading.AutoResetEvent> gibt der Thread sofort frei, und in den nicht signalisierten Zustand zurück.  
+  
+> [!IMPORTANT]
+>  Es gibt keine Garantie, jeder Aufruf der <xref:System.Threading.EventWaitHandle.Set%2A> Methode ein Thread freigegeben wird. Wenn zwei Aufrufe zu nahe beieinander sind, so, dass der zweite Aufruf tritt auf, bevor ein Thread freigegeben wurde, wird nur ein Thread freigegeben. Dabei wird angenommen, der zweite Aufruf nicht der Fall. Auch wenn <xref:System.Threading.EventWaitHandle.Set%2A> wird aufgerufen, wenn es werden keine wartenden Threads und die <xref:System.Threading.AutoResetEvent> bereits signalisiert wird, wird der Aufruf hat keine Auswirkungen.  
+  
+ Sie können steuern, im Anfangszustand erzielt eine `AutoResetEvent` durch einen booleschen Wert an den Konstruktor übergeben: `true` , wenn der anfängliche Zustand signalisiert wird, und `false` andernfalls.  
+  
+ `AutoResetEvent`kann auch verwendet werden, mit der `static` <xref:System.Threading.WaitHandle.WaitAll%2A> und <xref:System.Threading.WaitHandle.WaitAny%2A> Methoden.  
+  
+ Weitere Informationen zu Threadsynchronisierung, finden Sie unter [AutoResetEvent](~/docs/standard/threading/autoresetevent.md) in der Dokumentation.  
+  
+ Ab .NET Framework, Version 2.0, <xref:System.Threading.AutoResetEvent> leitet sich von der neuen <xref:System.Threading.EventWaitHandle> Klasse. Ein <xref:System.Threading.AutoResetEvent> ist funktionell gleichwertig mit einem <xref:System.Threading.EventWaitHandle> mit erstellt <xref:System.Threading.EventResetMode?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Im Gegensatz zu den <xref:System.Threading.AutoResetEvent> -Klasse, die <xref:System.Threading.EventWaitHandle> Klasse bietet Zugriff auf benannte Synchronisierungsereignisse.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Threading.AutoResetEvent> einen Thread zu einem Zeitpunkt freigegeben, durch Aufrufen der <xref:System.Threading.EventWaitHandle.Set%2A> -Methode (in der Basisklasse) jedes Mal der Benutzer drückt die **EINGABETASTE** Schlüssel. Im Beispiel startet drei Threads, die warten auf eine <xref:System.Threading.AutoResetEvent> , die in den Zustand "signalisiert" erstellt wurde. Der erste Thread wird sofort freigegeben, da die <xref:System.Threading.AutoResetEvent> ist bereits in den signalisierten Zustand aufweisen. Dies setzt die <xref:System.Threading.AutoResetEvent> in den nicht signalisierten Zustand, sodass nachfolgende Threads blockiert. Blockierte Threads werden nicht freigegeben werden, bis der Benutzer sie in der eine loslässt zu einem Zeitpunkt durch Drücken der **EINGABETASTE** Schlüssel.  
+  
+ Nachdem die Threads, aus dem ersten freigegeben werden <xref:System.Threading.AutoResetEvent>, warten sie auf einem anderen <xref:System.Threading.AutoResetEvent> , die im Status "nicht signalisiert" erstellt wurde. Alle drei Threads zu blockieren, sodass der <xref:System.Threading.EventWaitHandle.Set%2A> -Methode muss dreimal aufgerufen werden, um alle freizugeben.  
+  
+ [!code-cpp[System.Threading.AutoResetEvent#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.AutoResetEvent/CPP/simplerisbetter.cpp#3)]
+ [!code-csharp[System.Threading.AutoResetEvent#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.AutoResetEvent/CS/simplerisbetter.cs#3)]
+ [!code-vb[System.Threading.AutoResetEvent#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.AutoResetEvent/VB/simplerisbetter.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Diese Klasse ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AutoResetEvent (bool initialState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool initialState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AutoResetEvent.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialState" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="initialState">
+          <see langword="true" />auf den Ausgangszustand signalisierten Zustand festgelegt werden soll; <see langword="false" /> auf den Ausgangszustand nicht signalisierten festgelegt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.AutoResetEvent" /> Klasse mit einem booleschen Wert, der angibt, ob auf den Ausgangszustand signalisierten Zustand festgelegt werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird ein <xref:System.Threading.AutoResetEvent> zum Synchronisieren der Aktivitäten von zwei Threads. Der erste Thread, der Thread der Anwendung ist, führt `Main`. Er schreibt Werte in die geschützte Ressource, also eine `static` (`Shared` in Visual Basic) Feld mit dem Namen `number`. Der zweite Thread führt die statische `ThreadProc` -Methode, die die Werte von geschrieben liest `Main`.  
+  
+ Die `ThreadProc` Methode wartet der <xref:System.Threading.AutoResetEvent>. Wenn `Main` Aufrufe der <xref:System.Threading.EventWaitHandle.Set%2A> Methode für die <xref:System.Threading.AutoResetEvent>, die `ThreadProc` Methode liest einen Wert. Die <xref:System.Threading.AutoResetEvent> sofort zurückgesetzt, sodass der `ThreadProc` -Methode wartet erneut.  
+  
+ Die Programmlogik wird sichergestellt, dass die `ThreadProc` Methode wird nie den gleichen Wert gelesen zweimal. Er garantiert nicht, dass die `ThreadProc` -Methode liest jeden Wert von geschrieben `Main`. Diese Garantie, müsste ein zweites <xref:System.Threading.AutoResetEvent> Sperre.  
+  
+ Nach jedem Schreibvorgang `Main` ergibt durch Aufrufen der <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> Methode, um vom zweiten Thread ausgeführt werden kann. Hingegen auf einen Computer mit einem Prozessor `Main` schreiben viele Werte zwischen zwei Lesevorgänge.  
+  
+ [!code-cpp[System.Threading.AutoResetEvent#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.AutoResetEvent/CPP/class1.cpp#1)]
+ [!code-csharp[System.Threading.AutoResetEvent#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.AutoResetEvent/CS/class1.cs#1)]
+ [!code-vb[System.Threading.AutoResetEvent#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.AutoResetEvent/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

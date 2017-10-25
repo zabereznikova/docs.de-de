@@ -1,0 +1,498 @@
+<Type Name="DropShadowBitmapEffect" FullName="System.Windows.Media.Effects.DropShadowBitmapEffect">
+  <TypeSignature Language="C#" Value="public sealed class DropShadowBitmapEffect : System.Windows.Media.Effects.BitmapEffect" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DropShadowBitmapEffect extends System.Windows.Media.Effects.BitmapEffect" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Effects.DropShadowBitmapEffect" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Effects.BitmapEffect</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Wendet einen Schatten hinter einem visuellen Objekt mit einem geringen Offset an. Der Offset wird bestimmt, indem ein Schlagschatten von einer imaginären Lichtquelle imitiert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)]Bitmapeffekte handelt es sich um Software gerendert. Jedes Objekt, das einen Effekt anwendet, wird auch in der Software gerendert werden. Bitmapeffekte sollten nicht auf große visuelle Objekte oder Animationen angewendet werden, da dies die Leistung beeinträchtigen kann.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.UIPermission">Erstellen Sie eine Instanz der <see cref="T:System.Windows.Media.Effects.DropShadowBitmapEffect" /> Klasse. Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DropShadowBitmapEffect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.DropShadowBitmapEffect.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Effects.DropShadowBitmapEffect" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.DropShadowBitmapEffect Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Effects.DropShadowBitmapEffect Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.DropShadowBitmapEffect.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.DropShadowBitmapEffect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Effects.DropShadowBitmapEffect" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.DropShadowBitmapEffect CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Effects.DropShadowBitmapEffect CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.DropShadowBitmapEffect.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.DropShadowBitmapEffect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Effects.DropShadowBitmapEffect" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Color">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Color Color { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Color Color" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.DropShadowBitmapEffect.Color" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Ruft die Farbe des Schattens ab oder legt diese fest.</summary>
+        <value>Die Farbe des Schattens. Der Standardwert ist <c>FF000000</c> (Schwarz).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der alphanumerische Wert, der die <xref:System.Windows.Media.Color> Struktur wird von dieser Eigenschaft ignoriert. Um den Betrag der Transparenz (Alpha) der Farbe festzulegen, verwenden die <xref:System.Windows.Media.Effects.DropShadowBitmapEffect.Opacity%2A> Eigenschaft.  
+  
+ Die folgende Abbildung veranschaulicht die Wirkung dieser Eigenschaft.  
+  
+ ![Bildschirmabbildung: Vergleichen von schattenfarbeigenschaftswerten](~/add/media/effects-dropshadowcolor.png "Bildschirmabbildung: Vergleichen von schattenfarbeigenschaftswerten")  
+  
+<a name="dependencyPropertyInfo_Color"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Effects.DropShadowBitmapEffect.ColorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ColorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ColorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.DropShadowBitmapEffect.ColorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Bezeichnet die <see cref="P:System.Windows.Media.Effects.DropShadowBitmapEffect.Color" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.DropShadowBitmapEffect.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUnmanagedEffect">
+      <MemberSignature Language="C#" Value="protected override System.Runtime.InteropServices.SafeHandle CreateUnmanagedEffect ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Runtime.InteropServices.SafeHandle CreateUnmanagedEffect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.DropShadowBitmapEffect.CreateUnmanagedEffect" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("BitmapEffects are deprecated and no longer function.  Consider using Effects where appropriate instead.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.SafeHandle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public double Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.DropShadowBitmapEffect.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Ruft den Winkel ab, in dem der Schatten geworfen wird, oder legt ihn fest.</summary>
+        <value>Der Winkel, in dem der Schatten geworfen wird. Der gültige Wertebereich liegt zwischen 0 und 360. Der Wert 0 platziert den Schatten unmittelbar rechts neben dem Objekt. Nachfolgende Werte bewegen den Schatten entgegen dem Uhrzeigersinn um das Objekt herum. Der Wert 90 gibt beispielsweise an, dass der Schatten vom Objekt aus direkt nach oben geworfen wird. Ein Wert von 180 wirft den Schatten direkt auf die linke Seite des Objekts usw. Der Standardwert ist 315.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Diagramm zeigt, in welche Richtung der Schatten geworfen wird, nach einem angegebenen Wert dieser Eigenschaft.  
+  
+ ![Diagramm: DropShadow-Richtung](~/add/media/effects-dropshadowdirection2.png "Diagramm: DropShadow-Richtung")  
+  
+ Die folgende Abbildung veranschaulicht die Wirkung dieser Eigenschaft.  
+  
+ ![Bildschirmabbildung: Vergleichen der schattenrichtung](~/add/media/effects-dropshadowdirection.png "Bildschirmabbildung: Vergleichen der schattenrichtung")  
+  
+<a name="dependencyPropertyInfo_Direction"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Effects.DropShadowBitmapEffect.DirectionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.DropShadowBitmapEffect.DirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Bezeichnet die <see cref="P:System.Windows.Media.Effects.DropShadowBitmapEffect.Direction" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Noise">
+      <MemberSignature Language="C#" Value="public double Noise { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Noise" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.DropShadowBitmapEffect.Noise" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Ruft ab oder legt sie fest die Körnigkeit "Rauschpegel" des Schattens.</summary>
+        <value>Der Rauschpegel des Schattens. Der gültige Wertebereich liegt zwischen 0 und 1. Der Wert 0 gibt kein Rauschen und 1 gibt die maximale Rauschen an. Der Wert 0,5 gibt ein 50%iges Rauschen an, der Wert 0,75 ein 75%iges Rauschen usw. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung veranschaulicht die Wirkung dieser Eigenschaft.  
+  
+ ![Bildschirmabbildung: Vergleichen von rauscheigenschaftswerten](~/add/media/effects-dropshadownoise.png "Bildschirmabbildung: Vergleichen rauscheigenschaftswerten")  
+  
+<a name="dependencyPropertyInfo_Noise"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Effects.DropShadowBitmapEffect.NoiseProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoiseProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty NoiseProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty NoiseProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.DropShadowBitmapEffect.NoiseProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Bezeichnet die <see cref="P:System.Windows.Media.Effects.DropShadowBitmapEffect.Noise" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opacity">
+      <MemberSignature Language="C#" Value="public double Opacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Opacity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.DropShadowBitmapEffect.Opacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Ruft den Grad der Deckkraft des Schattens ab oder legt ihn fest.</summary>
+        <value>Der Grad der Deckkraft. Der gültige Wertebereich liegt zwischen 0 und 1. Der Wert 0 gibt an, dass der Schatten völlig transparent ist, während der Wert 1 angibt, dass der Schatten vollständig deckend ist. Der Wert 0,5 gibt an, dass der Schatten zu 50 Prozent deckt, der Wert 0,725 bedeutet, dass der Schatten zu 72,5 Prozent deckend ist, usw. Kleinere Werte als 0 werden als 0 behandelt, größere Werte als 1 als 1. Der Standard ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss die Deckkraft des festzulegenden verwendet werden die <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> da die Ebene Alphaanteil von der <xref:System.Windows.Media.Effects.DropShadowBitmapEffect.Color%2A?displayProperty=nameWithType> Eigenschaft wird ignoriert.  
+  
+ Die folgende Abbildung veranschaulicht die Wirkung dieser Eigenschaft.  
+  
+ ![Bildschirmabbildung mit Beschriftungen: DropShadowBitmapEffect](~/add/media/effects-dropshadowopacity.png "Bildschirmabbildung mit Beschriftungen: DropShadowBitmapEffect")  
+  
+<a name="dependencyPropertyInfo_Opacity"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Effects.DropShadowBitmapEffect.OpacityProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpacityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OpacityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OpacityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.DropShadowBitmapEffect.OpacityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Bezeichnet die <see cref="P:System.Windows.Media.Effects.DropShadowBitmapEffect.Opacity" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowDepth">
+      <MemberSignature Language="C#" Value="public double ShadowDepth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ShadowDepth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.DropShadowBitmapEffect.ShadowDepth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Ruft den Abstand zwischen dem Objekt und seinem Schattenwurf ab oder legt ihn fest.</summary>
+        <value>Der Abstand zwischen der Ebene des den Schatten wirft Objekts und der Ebene des Schattens, gemessen in [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]. Der gültige Wertebereich liegt zwischen 0 und 300. Der Standard ist 5.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung veranschaulicht die Wirkung dieser Eigenschaft.  
+  
+ ![Bildschirmabbildung: Vergleichen von ShadowDepth-Eigenschaftswerten](~/add/media/effects-dropshadowshadowdepth.png "Bildschirmabbildung: Vergleichen von ShadowDepth-Eigenschaftswerten")  
+  
+<a name="dependencyPropertyInfo_ShadowDepth"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Effects.DropShadowBitmapEffect.ShadowDepthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowDepthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ShadowDepthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ShadowDepthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.DropShadowBitmapEffect.ShadowDepthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Bezeichnet die <see cref="P:System.Windows.Media.Effects.DropShadowBitmapEffect.ShadowDepth" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Softness">
+      <MemberSignature Language="C#" Value="public double Softness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Softness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.DropShadowBitmapEffect.Softness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Ruft die Weichheit des Schattens ab oder legt sie fest.</summary>
+        <value>Die Weichheit des Schattens. Der gültige Wertebereich liegt zwischen 0 und 1. Der Wert 0,0 zeigt an, dass keine Weichheit vorhanden ist (ein deutlich definierter Schatten), während 1,0 die maximale Weichheit anzeigt (ein sehr diffuser Schatten). Der Wert 0,5 gibt eine 50 %ige Weichheit an, der Wert 0,75 eine 75 %ige Weichheit usw. Die Standardeinstellung ist 0,5.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung veranschaulicht die Wirkung dieser Eigenschaft.  
+  
+ ![Bildschirmabbildung: Vergleichen von weichheitseigenschaftswerten](~/add/media/effects-dropshadowsoftness.png "Bildschirmabbildung: Vergleichen weichheitseigenschaftswerten")  
+  
+<a name="dependencyPropertyInfo_Softness"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Effects.DropShadowBitmapEffect.SoftnessProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SoftnessProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SoftnessProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SoftnessProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.DropShadowBitmapEffect.SoftnessProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.DropShadowEffect" />. Bezeichnet die <see cref="P:System.Windows.Media.Effects.DropShadowBitmapEffect.Softness" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateUnmanagedPropertyState">
+      <MemberSignature Language="C#" Value="protected override void UpdateUnmanagedPropertyState (System.Runtime.InteropServices.SafeHandle unmanagedEffect);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void UpdateUnmanagedPropertyState(class System.Runtime.InteropServices.SafeHandle unmanagedEffect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.DropShadowBitmapEffect.UpdateUnmanagedPropertyState(System.Runtime.InteropServices.SafeHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("BitmapEffects are deprecated and no longer function.  Consider using Effects where appropriate instead.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unmanagedEffect" Type="System.Runtime.InteropServices.SafeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="unmanagedEffect">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

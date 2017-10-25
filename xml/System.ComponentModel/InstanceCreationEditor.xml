@@ -1,0 +1,119 @@
+<Type Name="InstanceCreationEditor" FullName="System.ComponentModel.InstanceCreationEditor">
+  <TypeSignature Language="C#" Value="public abstract class InstanceCreationEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit InstanceCreationEditor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.InstanceCreationEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt eine Instanz eines bestimmten Typs der Eigenschaft aus einem Dropdown-Listenfeld innerhalb der <see cref="T:System.Windows.Forms.PropertyGrid" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel auf den angegebenen Text <xref:System.ComponentModel.InstanceCreationEditor.Text%2A> wird angezeigt, auf das Dropdown-Feld aus der <xref:System.Windows.Forms.PropertyGrid> als einen Link oder eine Schaltfläche. Beim Klicken auf die <xref:System.ComponentModel.InstanceCreationEditor.CreateInstance%2A> -Methode aufgerufen wird und die <xref:System.Type> des zu erstellenden Objekts.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InstanceCreationEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.InstanceCreationEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.InstanceCreationEditor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public abstract object CreateInstance (System.ComponentModel.ITypeDescriptorContext context, Type instanceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateInstance(class System.ComponentModel.ITypeDescriptorContext context, class System.Type instanceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.InstanceCreationEditor.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="instanceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die Kontextinformationen.</param>
+        <param name="instanceType">Der angegebene Typ.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse zurückgegeben eine Instanz des angegebenen Typs.</summary>
+        <returns>Eine Instanz des angegebenen Typs oder <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.InstanceCreationEditor.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den angegebenen Text.</summary>
+        <value>Der angegebene Text.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1416 @@
+<Type Name="SerializerWriter" FullName="System.Windows.Documents.Serialization.SerializerWriter">
+  <TypeSignature Language="C#" Value="public abstract class SerializerWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SerializerWriter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Serialization.SerializerWriter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die abstrakten Methoden und Ereignisse, die erforderlich sind, um einen Plug-In-Dokumentausgabeserialisierer zu implementieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ [!code-csharp[DocumentSerialize#DocSerializeFileFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SerializerWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Documents.Serialization.SerializerWriter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instanzen von <xref:System.Windows.Documents.Serialization.SerializerWriter> erstellt werden soll, mithilfe der <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> Methode eine <xref:System.Windows.Documents.Serialization.SerializerProvider> -Objekt und nicht die <xref:System.Windows.Documents.Serialization.ISerializerFactory.CreateSerializerWriter%2A> Methode ein <xref:System.Windows.Documents.Serialization.ISerializerFactory> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Documents.Serialization.SerializerWriter> mithilfe der <xref:System.Windows.Documents.Serialization.SerializerProvider>.<xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> Methode.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelAsync">
+      <MemberSignature Language="C#" Value="public abstract void CancelAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CancelAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.CancelAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet beim Überschreiben in einer abgeleiteten Klasse einen asynchronen Schreibvorgang.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateVisualsCollator">
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse eine <see cref="T:System.Windows.Documents.Serialization.SerializerWriterCollator" /> , der Schreibvorgänge sortierte <see cref="T:System.Windows.Media.Visual" /> Elemente in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator%2A> Methode.  
+  
+ [!code-csharp[XpsSave#CreateAndWriteToVisualsCollator](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#createandwritetovisualscollator)]
+ [!code-vb[XpsSave#CreateAndWriteToVisualsCollator](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#createandwritetovisualscollator)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateVisualsCollator">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Documents.Serialization.SerializerWriterCollator CreateVisualsCollator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Documents.Serialization.SerializerWriterCollator CreateVisualsCollator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.SerializerWriterCollator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse einen <see cref="T:System.Windows.Documents.Serialization.SerializerWriterCollator" /> zurück, der sortierte <see cref="T:System.Windows.Media.Visual" />-Elemente schreibt.</summary>
+        <returns>Ein <see cref="T:System.Windows.Documents.Serialization.SerializerWriterCollator" /> , der Schreibvorgänge sortierte <see cref="T:System.Windows.Media.Visual" /> Elemente dem Dokument Ausgabe Serialisierung <see cref="T:System.IO.Stream" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator%2A> Methode.  
+  
+ [!code-csharp[XpsSave#CreateAndWriteToVisualsCollator](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#createandwritetovisualscollator)]
+ [!code-vb[XpsSave#CreateAndWriteToVisualsCollator](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#createandwritetovisualscollator)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator" />zurückgeben sollte eine <see cref="T:System.Windows.Documents.Serialization.SerializerWriterCollator" /> , in der gleichen Serialisierung schreibt <see cref="T:System.IO.Stream" /> als die <see cref="T:System.Windows.Documents.Serialization.SerializerWriter" /> , wird verwendet, um ihn zu erstellen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateVisualsCollator">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Documents.Serialization.SerializerWriterCollator CreateVisualsCollator (System.Printing.PrintTicket documentSequencePT, System.Printing.PrintTicket documentPT);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Documents.Serialization.SerializerWriterCollator CreateVisualsCollator(class System.Printing.PrintTicket documentSequencePT, class System.Printing.PrintTicket documentPT) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator(System.Printing.PrintTicket,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.SerializerWriterCollator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentSequencePT" Type="System.Printing.PrintTicket" />
+        <Parameter Name="documentPT" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="documentSequencePT">Die Standarddruckeinstellungen für den <see cref="T:System.Windows.Documents.FixedDocumentSequence" />-Inhalt.</param>
+        <param name="documentPT">Die Standarddruckeinstellungen für den <see cref="T:System.Windows.Documents.FixedDocument" />-Inhalt.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse einen <see cref="T:System.Windows.Documents.Serialization.SerializerWriterCollator" /> zurück, der sortierte <see cref="T:System.Windows.Media.Visual" />-Elemente zusammen mit den angegebenen Drucktickets schreibt.</summary>
+        <returns>Ein <see cref="T:System.Windows.Documents.Serialization.SerializerWriterCollator" /> , der Schreibvorgänge sortierte <see cref="T:System.Windows.Media.Visual" /> Elemente dem Dokument Ausgabe Serialisierung <see cref="T:System.IO.Stream" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `documentSequencePT`oder `documentPT` kann `null` Wenn keine bevorzugten drucken Einstellungen vorhanden sind.  
+  
+ Diese Methode nicht überprüfen oder ändern Sie den angegebenen Drucktickets für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator%2A> Methode.  
+  
+ [!code-csharp[XpsSave#CreateAndWriteToVisualsCollator](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#createandwritetovisualscollator)]
+ [!code-vb[XpsSave#CreateAndWriteToVisualsCollator](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#createandwritetovisualscollator)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator(System.Printing.PrintTicket,System.Printing.PrintTicket)" />zurückgeben sollte eine <see cref="T:System.Windows.Documents.Serialization.SerializerWriterCollator" /> , in der gleichen Serialisierung schreibt <see cref="T:System.IO.Stream" /> als die <see cref="T:System.Windows.Documents.Serialization.SerializerWriter" /> wird erstellt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Write">
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Schreibt den Inhalt beim Überschreiben in einer abgeleiteten Klasse synchron in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> Methode, um ein Flussdokument in eine Ausgabedatei zu serialisieren.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (System.Windows.Documents.DocumentPaginator documentPaginator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Windows.Documents.DocumentPaginator documentPaginator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.Write(System.Windows.Documents.DocumentPaginator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPaginator" Type="System.Windows.Documents.DocumentPaginator" />
+      </Parameters>
+      <Docs>
+        <param name="documentPaginator">Der Dokumentpaginator, der den Inhalt zum Schreiben in die Serialisierung definiert <see cref="T:System.IO.Stream" />.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse synchron schreibt den Inhalt einer angegebenen <see cref="T:System.Windows.Documents.DocumentPaginator" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%28System.Windows.Documents.DocumentPaginator%2CSystem.Printing.PrintTicket%29> Methode, um ein Flussdokument in eine Ausgabedatei zu serialisieren.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (System.Windows.Documents.FixedDocument fixedDocument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Windows.Documents.FixedDocument fixedDocument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.Write(System.Windows.Documents.FixedDocument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocument" Type="System.Windows.Documents.FixedDocument" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocument">Das Dokument zum Schreiben in den Serialisierungs- <see cref="T:System.IO.Stream" />.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse synchron eine bestimmte <see cref="T:System.Windows.Documents.FixedDocument" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%28System.Windows.Documents.DocumentPaginator%2CSystem.Printing.PrintTicket%29> Methode, um ein Flussdokument in eine Ausgabedatei zu serialisieren.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.Write(System.Windows.Documents.FixedDocumentSequence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocumentSequence" Type="System.Windows.Documents.FixedDocumentSequence" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocumentSequence">Die Dokumentsequenz, die den Inhalt zum Schreiben in die Serialisierung definiert <see cref="T:System.IO.Stream" />.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse synchron eine bestimmte <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%28System.Windows.Documents.DocumentPaginator%2CSystem.Printing.PrintTicket%29> Methode, um ein Flussdokument in eine Ausgabedatei zu serialisieren.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (System.Windows.Documents.FixedPage fixedPage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Windows.Documents.FixedPage fixedPage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.Write(System.Windows.Documents.FixedPage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedPage" Type="System.Windows.Documents.FixedPage" />
+      </Parameters>
+      <Docs>
+        <param name="fixedPage">Die Seite zum Schreiben in den Serialisierungs- <see cref="T:System.IO.Stream" />.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse synchron eine bestimmte <see cref="T:System.Windows.Documents.FixedPage" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%28System.Windows.Documents.DocumentPaginator%2CSystem.Printing.PrintTicket%29> Methode, um ein Flussdokument in eine Ausgabedatei zu serialisieren.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (System.Windows.Media.Visual visual);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Windows.Media.Visual visual) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.Write(System.Windows.Media.Visual)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Die <see cref="T:System.Windows.Media.Visual" /> in den Serialisierungs-zu schreibende Element <see cref="T:System.IO.Stream" />.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse synchron eine bestimmte <see cref="T:System.Windows.Media.Visual" /> Element in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%28System.Windows.Documents.DocumentPaginator%2CSystem.Printing.PrintTicket%29> Methode, um ein Flussdokument in eine Ausgabedatei zu serialisieren.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (System.Windows.Documents.DocumentPaginator documentPaginator, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Windows.Documents.DocumentPaginator documentPaginator, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.Write(System.Windows.Documents.DocumentPaginator,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPaginator" Type="System.Windows.Documents.DocumentPaginator" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="documentPaginator">Der Dokumentpaginator, der den Inhalt zum Schreiben in die Serialisierung definiert <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">Die standarddruckeinstellungen für das <c>DocumentPaginator</c> Inhalt.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt paginierten Inhalt zusammen mit einem zugeordneten <see cref="T:System.Printing.PrintTicket" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `printTicket`kann `null` Wenn keine bevorzugten drucken Einstellungen vorhanden sind.  
+  
+ Diese Methode nicht überprüfen oder Ändern der angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%28System.Windows.Documents.DocumentPaginator%2CSystem.Printing.PrintTicket%29> Methode, um ein Flussdokument in eine Ausgabedatei zu serialisieren.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (System.Windows.Documents.FixedDocument fixedDocument, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Windows.Documents.FixedDocument fixedDocument, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.Write(System.Windows.Documents.FixedDocument,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocument" Type="System.Windows.Documents.FixedDocument" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocument">Das Dokument zum Schreiben in den Serialisierungs- <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">Die standarddruckeinstellungen für das <c>FixedDocument</c> Inhalt.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse synchron eine bestimmte <see cref="T:System.Windows.Documents.FixedDocument" /> zusammen mit einem zugeordneten <see cref="T:System.Printing.PrintTicket" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `printTicket`kann `null` Wenn keine bevorzugten drucken Einstellungen vorhanden sind.  
+  
+ Diese Methode nicht überprüfen oder Ändern der angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%28System.Windows.Documents.DocumentPaginator%2CSystem.Printing.PrintTicket%29> Methode, um ein Flussdokument in eine Ausgabedatei zu serialisieren.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.Write(System.Windows.Documents.FixedDocumentSequence,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocumentSequence" Type="System.Windows.Documents.FixedDocumentSequence" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocumentSequence">Die Dokumentsequenz, die den Inhalt zum Schreiben in die Serialisierung definiert <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">Die standarddruckeinstellungen für das <c>FixedDocumentSequence</c> Inhalt.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse synchron eine bestimmte <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> zusammen mit einem zugeordneten <see cref="T:System.Printing.PrintTicket" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `printTicket`kann `null` Wenn keine bevorzugten drucken Einstellungen vorhanden sind.  
+  
+ Diese Methode nicht überprüfen oder Ändern der angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%28System.Windows.Documents.DocumentPaginator%2CSystem.Printing.PrintTicket%29> Methode, um ein Flussdokument in eine Ausgabedatei zu serialisieren.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (System.Windows.Documents.FixedPage fixedPage, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Windows.Documents.FixedPage fixedPage, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.Write(System.Windows.Documents.FixedPage,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedPage" Type="System.Windows.Documents.FixedPage" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="fixedPage">Die Seite zum Schreiben in den Serialisierungs- <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">Die standarddruckeinstellungen für das <c>FixedPage</c> Inhalt.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse synchron eine bestimmte <see cref="T:System.Windows.Documents.FixedPage" /> zusammen mit einem zugeordneten <see cref="T:System.Printing.PrintTicket" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `printTicket`kann `null` Wenn keine bevorzugten drucken Einstellungen vorhanden sind.  
+  
+ Diese Methode nicht überprüfen oder Ändern der angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%28System.Windows.Documents.DocumentPaginator%2CSystem.Printing.PrintTicket%29> Methode, um ein Flussdokument in eine Ausgabedatei zu serialisieren.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (System.Windows.Media.Visual visual, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Windows.Media.Visual visual, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.Write(System.Windows.Media.Visual,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Die <see cref="T:System.Windows.Media.Visual" /> in den Serialisierungs-zu schreibende Element <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">Die standarddruckeinstellungen für das <c>visual</c> Element.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse synchron eine bestimmte <see cref="T:System.Windows.Media.Visual" /> Element zusammen mit einem zugeordneten <see cref="T:System.Printing.PrintTicket" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `printTicket`kann `null` Wenn keine bevorzugten drucken Einstellungen vorhanden sind.  
+  
+ Diese Methode nicht überprüfen oder Ändern der angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%28System.Windows.Documents.DocumentPaginator%2CSystem.Printing.PrintTicket%29> Methode, um ein Flussdokument in eine Ausgabedatei zu serialisieren.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="WriteAsync">
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Schreibt den Inhalt beim Überschreiben in einer abgeleiteten Klasse asynchron in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.DocumentPaginator documentPaginator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.DocumentPaginator documentPaginator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.DocumentPaginator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPaginator" Type="System.Windows.Documents.DocumentPaginator" />
+      </Parameters>
+      <Docs>
+        <param name="documentPaginator">Der Dokumentpaginator, der den Inhalt zum Schreiben in die Serialisierung definiert <see cref="T:System.IO.Stream" />.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse asynchron schreibt den Inhalt einer angegebenen <see cref="T:System.Windows.Documents.DocumentPaginator" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.FixedDocument fixedDocument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.FixedDocument fixedDocument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.FixedDocument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocument" Type="System.Windows.Documents.FixedDocument" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocument">Das Dokument zum Schreiben in den Serialisierungs- <see cref="T:System.IO.Stream" />.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Documents.FixedDocument" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.FixedDocumentSequence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocumentSequence" Type="System.Windows.Documents.FixedDocumentSequence" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocumentSequence">Die Dokumentsequenz, die den Inhalt zum Schreiben in die Serialisierung definiert <see cref="T:System.IO.Stream" />.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.FixedPage fixedPage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.FixedPage fixedPage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.FixedPage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedPage" Type="System.Windows.Documents.FixedPage" />
+      </Parameters>
+      <Docs>
+        <param name="fixedPage">Die Seite zum Schreiben in den Serialisierungs- <see cref="T:System.IO.Stream" />.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Documents.FixedPage" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Media.Visual visual);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Media.Visual visual) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Media.Visual)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Die <see cref="T:System.Windows.Media.Visual" /> in den Serialisierungs-zu schreibende Element <see cref="T:System.IO.Stream" />.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Media.Visual" /> Element in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.DocumentPaginator documentPaginator, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.DocumentPaginator documentPaginator, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.DocumentPaginator,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPaginator" Type="System.Windows.Documents.DocumentPaginator" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="documentPaginator">Der Dokumentpaginator, der den Inhalt zum Schreiben in die Serialisierung definiert <see cref="T:System.IO.Stream" />.</param>
+        <param name="userState">Ein vom Aufrufer angegebenes Objekt, mit dem der asynchrone Schreibvorgang angegeben wird.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse asynchron schreibt den Inhalt einer angegebenen <see cref="T:System.Windows.Documents.DocumentPaginator" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `userState`wird zum Übergeben der <xref:System.Windows.Documents.Serialization.WritingCompletedEventHandler> bei der <xref:System.Windows.Documents.Serialization.SerializerWriter.WritingCompleted> Ereignis tritt auf.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.DocumentPaginator documentPaginator, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.DocumentPaginator documentPaginator, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.DocumentPaginator,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPaginator" Type="System.Windows.Documents.DocumentPaginator" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="documentPaginator">Der Dokumentpaginator, der den Inhalt zum Schreiben in die Serialisierung definiert <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">Die standarddruckeinstellungen für das <c>DocumentPaginator</c> Inhalt.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse asynchron schreibt den Inhalt einer angegebenen <see cref="T:System.Windows.Documents.DocumentPaginator" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `printTicket`kann `null` Wenn keine bevorzugten drucken Einstellungen vorhanden sind.  
+  
+ Diese Methode nicht überprüfen oder Ändern der angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.FixedDocument fixedDocument, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.FixedDocument fixedDocument, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.FixedDocument,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocument" Type="System.Windows.Documents.FixedDocument" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocument">Das Dokument zum Schreiben in den Serialisierungs- <see cref="T:System.IO.Stream" />.</param>
+        <param name="userState">Ein vom Aufrufer angegebenes Objekt, mit dem der asynchrone Schreibvorgang angegeben wird.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Documents.FixedDocument" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `userState`wird zum Übergeben der <xref:System.Windows.Documents.Serialization.WritingCompletedEventHandler> bei der <xref:System.Windows.Documents.Serialization.SerializerWriter.WritingCompleted> Ereignis tritt auf.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.FixedDocument fixedDocument, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.FixedDocument fixedDocument, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.FixedDocument,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocument" Type="System.Windows.Documents.FixedDocument" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocument">Das Dokument zum Schreiben in den Serialisierungs- <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">Die standarddruckeinstellungen für das <c>FixedDocument</c> Inhalt.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Documents.FixedDocument" /> zusammen mit einem zugeordneten <see cref="T:System.Printing.PrintTicket" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `printTicket`kann `null` Wenn keine bevorzugten drucken Einstellungen vorhanden sind.  
+  
+ Diese Methode nicht überprüfen oder Ändern der angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.FixedDocumentSequence,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocumentSequence" Type="System.Windows.Documents.FixedDocumentSequence" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocumentSequence">Die Dokumentsequenz, die den Inhalt zum Schreiben in die Serialisierung definiert <see cref="T:System.IO.Stream" />.</param>
+        <param name="userState">Ein vom Aufrufer angegebenes Objekt, mit dem der asynchrone Schreibvorgang angegeben wird.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `userState`wird zum Übergeben der <xref:System.Windows.Documents.Serialization.WritingCompletedEventHandler> bei der <xref:System.Windows.Documents.Serialization.SerializerWriter.WritingCompleted> Ereignis tritt auf.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.FixedDocumentSequence,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocumentSequence" Type="System.Windows.Documents.FixedDocumentSequence" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocumentSequence">Die Dokumentsequenz, die den Inhalt zum Schreiben in die Serialisierung definiert <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">Die standarddruckeinstellungen für das <c>FixedDocumentSequence</c> Inhalt.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> zusammen mit einem zugeordneten <see cref="T:System.Printing.PrintTicket" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `printTicket`kann `null` Wenn keine bevorzugten drucken Einstellungen vorhanden sind.  
+  
+ Diese Methode nicht überprüfen oder Ändern der angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.FixedPage fixedPage, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.FixedPage fixedPage, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.FixedPage,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedPage" Type="System.Windows.Documents.FixedPage" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fixedPage">Die Seite zum Schreiben in den Serialisierungs- <see cref="T:System.IO.Stream" />.</param>
+        <param name="userState">Ein vom Aufrufer angegebenes Objekt, mit dem der asynchrone Schreibvorgang angegeben wird.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Documents.FixedPage" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `userState`wird zum Übergeben der <xref:System.Windows.Documents.Serialization.WritingCompletedEventHandler> bei der <xref:System.Windows.Documents.Serialization.SerializerWriter.WritingCompleted> Ereignis tritt auf.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.FixedPage fixedPage, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.FixedPage fixedPage, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.FixedPage,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedPage" Type="System.Windows.Documents.FixedPage" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="fixedPage">Die Seite zum Schreiben in den Serialisierungs- <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">Die standarddruckeinstellungen für das <c>FixedPage</c> Inhalt.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Documents.FixedPage" /> zusammen mit einem zugeordneten <see cref="T:System.Printing.PrintTicket" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `printTicket`kann `null` Wenn keine bevorzugten drucken Einstellungen vorhanden sind.  
+  
+ Diese Methode nicht überprüfen oder Ändern der angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Media.Visual visual, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Media.Visual visual, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Media.Visual,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Die <see cref="T:System.Windows.Media.Visual" /> in den Serialisierungs-zu schreibende Element <see cref="T:System.IO.Stream" />.</param>
+        <param name="userState">Ein vom Aufrufer angegebenes Objekt, mit dem der asynchrone Schreibvorgang angegeben wird.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Media.Visual" /> Element in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `userState`wird zum Übergeben der <xref:System.Windows.Documents.Serialization.WritingCompletedEventHandler> bei der <xref:System.Windows.Documents.Serialization.SerializerWriter.WritingCompleted> Ereignis tritt auf.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Media.Visual visual, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Media.Visual visual, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Media.Visual,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Die <see cref="T:System.Windows.Media.Visual" /> in den Serialisierungs-zu schreibende Element <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">Die standarddruckeinstellungen für das <c>visual</c> Element.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Media.Visual" /> Element zusammen mit einem zugeordneten <see cref="T:System.Printing.PrintTicket" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode nicht überprüfen oder Ändern der angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.DocumentPaginator documentPaginator, System.Printing.PrintTicket printTicket, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.DocumentPaginator documentPaginator, class System.Printing.PrintTicket printTicket, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.DocumentPaginator,System.Printing.PrintTicket,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPaginator" Type="System.Windows.Documents.DocumentPaginator" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="documentPaginator">Der Dokumentpaginator, der den Inhalt zum Schreiben in die Serialisierung definiert <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">Die standarddruckeinstellungen für das <c>DocumentPaginator</c> Inhalt.</param>
+        <param name="userState">Ein vom Aufrufer angegebenes Objekt, mit dem der asynchrone Schreibvorgang angegeben wird.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse asynchron schreibt paginierten Inhalt zusammen mit einem zugeordneten <see cref="T:System.Printing.PrintTicket" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `printTicket`kann `null` Wenn keine bevorzugten drucken Einstellungen vorhanden sind.  
+  
+ Diese Methode nicht überprüfen oder Ändern der angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ `userState`wird zum Übergeben der <xref:System.Windows.Documents.Serialization.WritingCompletedEventHandler> bei der <xref:System.Windows.Documents.Serialization.SerializerWriter.WritingCompleted> Ereignis tritt auf.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.FixedDocument fixedDocument, System.Printing.PrintTicket printTicket, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.FixedDocument fixedDocument, class System.Printing.PrintTicket printTicket, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.FixedDocument,System.Printing.PrintTicket,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocument" Type="System.Windows.Documents.FixedDocument" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocument">Das Dokument zum Schreiben in den Serialisierungs- <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">Die standarddruckeinstellungen für das <c>FixedDocument</c> Inhalt.</param>
+        <param name="userState">Ein vom Aufrufer angegebenes Objekt, mit dem der asynchrone Schreibvorgang angegeben wird.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Documents.FixedDocument" /> zusammen mit einem zugeordneten <see cref="T:System.Printing.PrintTicket" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `printTicket`kann `null` Wenn keine bevorzugten drucken Einstellungen vorhanden sind.  
+  
+ Diese Methode nicht überprüfen oder Ändern der angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ `userState`wird zum Übergeben der <xref:System.Windows.Documents.Serialization.WritingCompletedEventHandler> bei der <xref:System.Windows.Documents.Serialization.SerializerWriter.WritingCompleted> Ereignis tritt auf.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, System.Printing.PrintTicket printTicket, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, class System.Printing.PrintTicket printTicket, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.FixedDocumentSequence,System.Printing.PrintTicket,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocumentSequence" Type="System.Windows.Documents.FixedDocumentSequence" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocumentSequence">Die Dokumentsequenz, die den Inhalt zum Schreiben in die Serialisierung definiert <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">Die standarddruckeinstellungen für das <c>FixedDocumentSequence</c> Inhalt.</param>
+        <param name="userState">Ein vom Aufrufer angegebenes Objekt, mit dem der asynchrone Schreibvorgang angegeben wird.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> zusammen mit einem zugeordneten <see cref="T:System.Printing.PrintTicket" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `printTicket`kann `null` Wenn keine bevorzugten drucken Einstellungen vorhanden sind.  
+  
+ Diese Methode nicht überprüfen oder Ändern der angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ `userState`wird zum Übergeben der <xref:System.Windows.Documents.Serialization.WritingCompletedEventHandler> bei der <xref:System.Windows.Documents.Serialization.SerializerWriter.WritingCompleted> Ereignis tritt auf.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Documents.FixedPage fixedPage, System.Printing.PrintTicket printTicket, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Documents.FixedPage fixedPage, class System.Printing.PrintTicket printTicket, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Documents.FixedPage,System.Printing.PrintTicket,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedPage" Type="System.Windows.Documents.FixedPage" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fixedPage">Die Seite zum Schreiben in den Serialisierungs- <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">Die standarddruckeinstellungen für das <c>FixedPage</c> Inhalt.</param>
+        <param name="userState">Ein vom Aufrufer angegebenes Objekt, mit dem der asynchrone Schreibvorgang angegeben wird.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Documents.FixedPage" /> zusammen mit einem zugeordneten <see cref="T:System.Printing.PrintTicket" /> in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `printTicket`kann `null` Wenn keine bevorzugten drucken Einstellungen vorhanden sind.  
+  
+ Diese Methode nicht überprüfen oder Ändern der angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ `userState`wird zum Übergeben der <xref:System.Windows.Documents.Serialization.WritingCompletedEventHandler> bei der <xref:System.Windows.Documents.Serialization.SerializerWriter.WritingCompleted> Ereignis tritt auf.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Media.Visual visual, System.Printing.PrintTicket printTicket, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Media.Visual visual, class System.Printing.PrintTicket printTicket, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync(System.Windows.Media.Visual,System.Printing.PrintTicket,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Die <see cref="T:System.Windows.Media.Visual" /> in den Serialisierungs-zu schreibende Element <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">Die standarddruckeinstellungen für das <c>visual</c> Element.</param>
+        <param name="userState">Ein vom Aufrufer angegebenes Objekt, mit dem der asynchrone Schreibvorgang angegeben wird.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse asynchron eine angegebene <see cref="T:System.Windows.Media.Visual" /> Element zusammen mit einem zugeordneten <see cref="T:System.Printing.PrintTicket" /> und Bezeichner in den Serialisierungs- <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `printTicket`kann `null` Wenn keine bevorzugten drucken Einstellungen vorhanden sind.  
+  
+ Diese Methode nicht überprüfen oder Ändern der angegebenen `printTicket` für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ `userState`wird zum Übergeben der <xref:System.Windows.Documents.Serialization.WritingCompletedEventHandler> bei der <xref:System.Windows.Documents.Serialization.SerializerWriter.WritingCompleted> Ereignis tritt auf.  
+  
+ Die Ausgabe <xref:System.IO.Stream> schreiben Operation wird normalerweise angegeben als Parameter an den Konstruktor der abgeleiteten Klasse, die implementiert <xref:System.Windows.Documents.Serialization.SerializerWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritingCancelled">
+      <MemberSignature Language="C#" Value="public abstract event System.Windows.Documents.Serialization.WritingCancelledEventHandler WritingCancelled;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Documents.Serialization.WritingCancelledEventHandler WritingCancelled" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Documents.Serialization.SerializerWriter.WritingCancelled" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.WritingCancelledEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse tritt auf, wenn ein <see cref="M:System.Windows.Documents.Serialization.SerializerWriter.CancelAsync" /> Vorgang ausgeführt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritingCompleted">
+      <MemberSignature Language="C#" Value="public abstract event System.Windows.Documents.Serialization.WritingCompletedEventHandler WritingCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Documents.Serialization.WritingCompletedEventHandler WritingCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Documents.Serialization.SerializerWriter.WritingCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.WritingCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse tritt auf, wenn ein Schreibvorgang abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritingPrintTicketRequired">
+      <MemberSignature Language="C#" Value="public abstract event System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventHandler WritingPrintTicketRequired;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventHandler WritingPrintTicketRequired" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Documents.Serialization.SerializerWriter.WritingPrintTicketRequired" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse erfolgt direkt vor einer <see cref="T:System.Printing.PrintTicket" /> wird hinzugefügt, in einen Stream von einer <see cref="Overload:System.Windows.Documents.Serialization.SerializerWriter.Write" /> oder <see cref="Overload:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.Serialization.SerializerWriter.WritingPrintTicketRequired> -Ereignis können Sie den Ereignishandler zu ersetzen, ein neues <xref:System.Printing.PrintTicket> für die die <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> oder <xref:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync%2A> -Methodenaufruf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritingProgressChanged">
+      <MemberSignature Language="C#" Value="public abstract event System.Windows.Documents.Serialization.WritingProgressChangedEventHandler WritingProgressChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Documents.Serialization.WritingProgressChangedEventHandler WritingProgressChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Documents.Serialization.SerializerWriter.WritingProgressChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.WritingProgressChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse tritt auf, wenn die <see cref="T:System.Windows.Documents.Serialization.SerializerWriter" /> seinen Fortschritt aktualisiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Z. B. die <xref:System.Windows.Documents.Serialization.SerializerWriter> konnte den Status aktualisiert, nach jeder Seite oder jedes Dokument in einem Dokument mit mehreren Schreibvorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

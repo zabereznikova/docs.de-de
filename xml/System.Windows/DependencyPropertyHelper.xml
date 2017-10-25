@@ -1,0 +1,59 @@
+<Type Name="DependencyPropertyHelper" FullName="System.Windows.DependencyPropertyHelper">
+  <TypeSignature Language="C#" Value="public static class DependencyPropertyHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DependencyPropertyHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DependencyPropertyHelper" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine einzelne Hilfsmethode (<see cref="M:System.Windows.DependencyPropertyHelper.GetValueSource(System.Windows.DependencyObject,System.Windows.DependencyProperty)" />) bereit, die die Systemquelle für Eigenschaften für den effektiven Wert einer Abhängigkeitseigenschaft meldet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die[!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem recht komplex, und auf dem die Werte, die potenziell aus einer Vielzahl von Eingaben stammen, basierend auf einer festgelegten Wert Bestimmung Rangfolge rationalisieren basiert. Da diese Quellen potenziell Laufzeitcode aus kompiliertem Markup stammen oder sogar von benutzereinstellungen zur Laufzeit, es hilfreich sein kann, wissen genau welcher Teilnehmer Abhängigkeitseigenschaftensystem Wert den Wert hergestellt, Sie beim Aufrufen von erhalten<xref:System.Windows.DependencyObject.GetValue%2A>zur Laufzeit für diese Eigenschaft. Wenn der Wert aus einer anderen Quelle stammt, als Sie wollten, müssen Sie möglicherweise einige Aspekte der Anwendung anpassen. Die Wertquelle möglicherweise ein Format, ein Design, einen lokalen Wert, eine Animation, eine Bindung oder einen Wert zur Laufzeit basierend, z. B. Systemeinstellungen über Designs oder Systemressourcen verfügbar sind. Weitere Informationen finden Sie unter [Priorität von Abhängigkeitseigenschaftswerten](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+ Ein weiterer Mechanismus, der die Eigenschaft im Allgemeinen anstelle einer bestimmten Instanz der Eigenschaft für ein Objekt, das angibt, ist die Eigenschaftenmetadaten. Die Metadaten der Eigenschaft wird durch den Aufruf Suche nach <xref:System.Windows.DependencyProperty.GetMetadata%2A> und das zurückgegebene <xref:System.Windows.PropertyMetadata> (oder eine der möglichen abgeleiteten Klassen, die die zurückgegebenen Metadaten in ist).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetValueSource">
+      <MemberSignature Language="C#" Value="public static System.Windows.ValueSource GetValueSource (System.Windows.DependencyObject dependencyObject, System.Windows.DependencyProperty dependencyProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.ValueSource GetValueSource(class System.Windows.DependencyObject dependencyObject, class System.Windows.DependencyProperty dependencyProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyPropertyHelper.GetValueSource(System.Windows.DependencyObject,System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ValueSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyObject" Type="System.Windows.DependencyObject" />
+        <Parameter Name="dependencyProperty" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyObject">Das Element, enthält die <c>DependencyProperty</c> Informationen gemeldet.</param>
+        <param name="dependencyProperty">Der Bezeichner für die Abhängigkeitseigenschaft, zu der Informationen gemeldet werden sollen.</param>
+        <summary>Gibt eine Struktur, die auf einem bestimmten verschiedene Metadaten und eigenschaftssystemmerkmale einer angegebenen Abhängigkeitseigenschaft meldet <see cref="T:System.Windows.DependencyObject" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.ValueSource" /> -Struktur, die die spezifischen Informationen meldet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten diese Methode in einem Kontext aufrufen, sodass spät Teilnehmer an der Bestimmung der Eigenschaft-Wert für eine Eigenschaft fungieren können. Z. B. Bindungen möglicherweise nicht auf eine Eigenschaft aktiv, wenn alle Teilnehmer Elemente in der Struktur werden geladen und die asynchrone Bindung weitergegeben wird und das Bindungsquellobjekt verbunden ist. Ebenso sollten Ressourcen einschließlich aller erforderlichen Designwörterbücher verfügbar sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

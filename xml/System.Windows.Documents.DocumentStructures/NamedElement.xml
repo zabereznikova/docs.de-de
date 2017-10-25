@@ -1,0 +1,82 @@
+<Type Name="NamedElement" FullName="System.Windows.Documents.DocumentStructures.NamedElement">
+  <TypeSignature Language="C#" Value="public class NamedElement : System.Windows.Documents.DocumentStructures.BlockElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NamedElement extends System.Windows.Documents.DocumentStructures.BlockElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.DocumentStructures.NamedElement" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.DocumentStructures.BlockElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Identifiziert ein Element innerhalb der Hierarchie von Elementen unter einem <see cref="T:System.Windows.Documents.FixedPage" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Seite des ein [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Dokument enthält eine <xref:System.Windows.Documents.FixedPage> Element, das definiert seine *Inhalt* in Form von Text mit Feldern fester Breite ausgeführt wird und Grafiken.  Durch die Verwendung von Strukturelemente Seiten des Dokuments ein [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Dokument kann auch zugeordnete <xref:System.Windows.Documents.DocumentStructures.StoryFragment> Elemente, die definieren die *Struktur* Rand der Seite in Form von Abschnitten, Absätze, Listen, Zahlen, und Tabellen.  Die <xref:System.Windows.Documents.DocumentStructures.NamedElement> Klasse wird verwendet, um die Zuordnungen zwischen den Inhalt und die Struktur der Markup des Dokuments definieren.  Ein <xref:System.Windows.Documents.DocumentStructures.NamedElement> das untergeordnete Element eines Strukturelements, z. B. eine Tabelle Tabellenzelle oder Listenelement, die befindet sich im die <xref:System.Windows.Documents.DocumentStructures.StoryFragment> Hierarchie einer Seite.  Ein <xref:System.Windows.Documents.DocumentStructures.NamedElement> kennzeichnet ein Element in der <xref:System.Windows.Documents.FixedPage> Hierarchie der gleichen Seite.  Das Element, dem er verweist ist des Inhalts der das strukturelle Element.  
+  
+ Weitere Informationen zu den Strukturelementen eines [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Dokumente, finden Sie in Kapitel 9 "und" Anhang E von der *XML Paper Specification (XPS)* zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=67000](http://go.microsoft.com/fwlink/?LinkID=67000).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung von <xref:System.Windows.Documents.DocumentStructures.ParagraphStructure> und <xref:System.Windows.Documents.DocumentStructures.FigureStructure> Elemente in einer [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] dokumentieren, mit jeweils einer <xref:System.Windows.Documents.DocumentStructures.NamedElement> untergeordneten.  
+  
+ [!code-xaml[DocumentStructure#DocStructParaStruct2](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentStructure/CSharp/Content/FixedPage2_structure.xaml#docstructparastruct2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentStructures.NamedElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Documents.DocumentStructures.NamedElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameReference">
+      <MemberSignature Language="C#" Value="public string NameReference { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NameReference" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.DocumentStructures.NamedElement.NameReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Elements in der <see cref="T:System.Windows.Documents.FixedPage" /> Markuphierarchie, die für das übergeordnete Element enthält die <see cref="T:System.Windows.Documents.DocumentStructures.NamedElement" />.</summary>
+        <value>Der Name des Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.DocumentStructures.NamedElement.NameReference%2A>sollte die <xref:System.Windows.FrameworkElement.Name%2A> Attribut des Elements, das die <xref:System.Windows.Documents.DocumentStructures.NamedElement> verweist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt mehrere <xref:System.Windows.Documents.DocumentStructures.NamedElement> Elemente, jeweils mit einem <xref:System.Windows.Documents.DocumentStructures.NamedElement.NameReference%2A> Attribut.  
+  
+ [!code-xaml[DocumentStructure#DocStructParaStruct2](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentStructure/CSharp/Content/FixedPage2_structure.xaml#docstructparastruct2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

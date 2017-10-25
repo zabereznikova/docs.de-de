@@ -1,0 +1,426 @@
+<Type Name="Buffer" FullName="System.Buffer">
+  <TypeSignature Language="C#" Value="public static class Buffer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Buffer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Buffer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verändert Arrays von primitiven Typen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Buffer>wirkt sich nur auf Arrays von primitiven Typen; Diese Klasse gilt nicht für Objekte. Als eine Reihe von Bytes, unabhängig von der alle Verhalten oder die Beschränkung der Grundtyp zugeordnet wird jedes primitiven Typs behandelt.  
+  
+ <xref:System.Buffer>Stellt Methoden zum Kopieren von Bytes aus einem Array von primitiven Typen in ein anderes Array von primitiven Typen ist einen Byte aus einem Array abrufen, einen Byte in einem Array festgelegt und die Länge eines Arrays zu erhalten. Diese Klasse bietet eine bessere Leistung für die Bearbeitung von primitiven Typen als ähnliche Methoden in der <xref:System.Array?displayProperty=nameWithType> Klasse.  
+  
+ <xref:System.Buffer>gilt für die folgenden primitiven Typen: <xref:System.Boolean>, <xref:System.Char>, <xref:System.SByte>, <xref:System.Byte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>, <xref:System.IntPtr> , <xref:System.UIntPtr>, <xref:System.Single>, und <xref:System.Double>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung mehrerer `Buffer` -Klassenmethoden.  
+  
+ [!code-cpp[System.Buffer.BlockCopy#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Buffer.BlockCopy/CPP/buffer.cpp#1)]
+ [!code-csharp[System.Buffer.BlockCopy#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Buffer.BlockCopy/CS/buffer.cs#1)]
+ [!code-vb[System.Buffer.BlockCopy#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Buffer.BlockCopy/VB/buffer.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BlockCopy">
+      <MemberSignature Language="C#" Value="public static void BlockCopy (Array src, int srcOffset, Array dst, int dstOffset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void BlockCopy(class System.Array src, int32 srcOffset, class System.Array dst, int32 dstOffset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffer.BlockCopy(System.Array,System.Int32,System.Array,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="src" Type="System.Array" />
+        <Parameter Name="srcOffset" Type="System.Int32" />
+        <Parameter Name="dst" Type="System.Array" />
+        <Parameter Name="dstOffset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="src">Der Quellpuffer.</param>
+        <param name="srcOffset">Der nullbasierte Byteoffset in <c>Src</c>.</param>
+        <param name="dst">Der Zielpuffer.</param>
+        <param name="dstOffset">Der nullbasierte Byteoffset in <c>dst</c>.</param>
+        <param name="count">Die Anzahl der zu kopierenden Bytes.</param>
+        <summary>Kopiert eine angegebene Anzahl von Bytes aus einem Quellarray in ein Zielarray, jeweils beginnend bei einem bestimmten Offset.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kopiert `count` Bytes vom `src`, beginnend bei `srcOffset`in `dst`, beginnend bei `dstOffset`. Beide `srcOffset` und `dstOffset` sind nullbasiert, d. h. das erste Byte in den einzelnen Puffern ist an Position 0 nicht an der position 1.  
+  
+ Die <xref:System.Buffer.BlockCopy%2A> Methode greift auf die Bytes in der `src` Parameterarray Offsets in den Arbeitsspeicher verwenden, nicht die Programmierkonstrukte, z. B. Indizes oder oberen und unteren Arraygrenzen. Wenn in der Programmiersprache Ihrer Anwendung, die Sie deklarieren z. B. eine <xref:System.Int32> array mit einer nullbasierten Untergrenze von-50, und übergeben Sie das Array und einen Offset von 5, um die <xref:System.Buffer.BlockCopy%2A> -Methode, das erste Arrayelement auf die Methode greifen ist die zweite Element des Arrays, die am Index-49 ist. Darüber hinaus hängt erfolgt die Byte des Arrayelements-49 zuerst das Endianness des Computers, der die Anwendung ausgeführt wird.  
+  
+ Wie der Name andeutet, die <xref:System.Buffer.BlockCopy%2A> Methode kopiert einen Block von Bytes als Ganzes, anstatt jeweils ein Byte kopieren. Aus diesem Grund Wenn `src` und `dst` verweisen desselben Arrays, und der Bereich von `srcOffset`  +  `count` -1 überschneidet sich mit einem Bereich von `dstOffset`  +  `count` - 1, die Werte der überlappender Bytes werden nicht überschrieben werden, bevor sie an das Ziel kopiert werden. Im folgenden Beispiel die Werte der Bytes 0-16 in einem Array mit dem Namen `arr` in Bytes 12-28 kopiert werden. Trotz der überlappenden Bereichs werden die Werte der Quellbytes erfolgreich kopiert.  
+  
+ [!code-cpp[System.Buffer.BlockCopy#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Buffer.BlockCopy/CPP/overlap1.cpp#3)]
+ [!code-csharp[System.Buffer.BlockCopy#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Buffer.BlockCopy/CS/overlap1.cs#3)]
+ [!code-vb[System.Buffer.BlockCopy#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Buffer.BlockCopy/VB/overlap1.vb#3)]  
+  
+ Im folgenden Beispiel die Werte der Bytes 12-28 in einem Array mit dem Namen `arr` in Bytes 0-16 kopiert werden. Trotz der überlappenden Bereichs werden die Werte der Quellbytes erneut erfolgreich kopiert.  
+  
+ [!code-cpp[System.Buffer.BlockCopy#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Buffer.BlockCopy/CPP/overlap1.cpp#4)]
+ [!code-csharp[System.Buffer.BlockCopy#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Buffer.BlockCopy/CS/overlap1.cs#4)]
+ [!code-vb[System.Buffer.BlockCopy#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Buffer.BlockCopy/VB/overlap1.vb#4)]  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden die Bereiche von Arrays mithilfe der <xref:System.Buffer.BlockCopy%2A> Methode. Für jede <xref:System.Buffer.BlockCopy%2A> Vorgang, führt es die Quell- und Zielarrays als ein Array von Werten und als eine Folge von Bytes. Das Beispiel veranschaulicht die Wichtigkeit der Berücksichtigung eines Systems Endianness beim Arbeiten mit der <xref:System.Buffer.BlockCopy%2A> Methode: Da Windows-Systeme little-Endian sind, die niederwertigen Bytes ein primitiver Datentyp Wert vorausgehen, die höherwertigen Bytes.  
+  
+ [!code-cpp[System.Buffer.BlockCopy#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Buffer.BlockCopy/CPP/bcopy.cpp#2)]
+ [!code-csharp[System.Buffer.BlockCopy#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Buffer.BlockCopy/CS/bcopy.cs#2)]
+ [!code-vb[System.Buffer.BlockCopy#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Buffer.BlockCopy/VB/bcopy.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="src" /> oder <paramref name="dst" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="src" /> oder <paramref name="dst" /> ist kein Array primitiver Datentypen.  
+  
+ - oder -   
+  
+ Die Anzahl der Bytes in <paramref name="src" /> ist kleiner als <paramref name="srcOffset" /> plus <paramref name="count" />.  
+  
+ - oder -   
+  
+ Die Anzahl der Bytes in <paramref name="dst" /> ist kleiner als <paramref name="dstOffset" /> plus <paramref name="count" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="srcOffset" />, <paramref name="dstOffset" /> oder <paramref name="count" /> ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ByteLength">
+      <MemberSignature Language="C#" Value="public static int ByteLength (Array array);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ByteLength(class System.Array array) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffer.ByteLength(System.Array)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Array.</param>
+        <summary>Gibt die Anzahl der Bytes im angegebenen Array zurück.</summary>
+        <returns>Die Anzahl der Bytes im Array.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der `ByteLength` Methode, um die Anzahl der Bytes in einem Array zurückzugeben.  
+  
+ [!code-cpp[System.Buffer.Bytes#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Buffer.Bytes/CPP/bytelength.cpp#1)]
+ [!code-csharp[System.Buffer.Bytes#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Buffer.Bytes/CS/bytelength.cs#1)]
+ [!code-vb[System.Buffer.Bytes#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Buffer.Bytes/VB/bytelength.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" />ist keine Primitive.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="array" />ist größer als 2 Gigabyte (GB).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByte">
+      <MemberSignature Language="C#" Value="public static byte GetByte (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8 GetByte(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffer.GetByte(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Array.</param>
+        <param name="index">Eine Position im Array.</param>
+        <summary>Ruft das Byte an einer angegebenen Position in einem angegebenen Array ab.</summary>
+        <returns>Gibt das <paramref name="index" />-Byte im Array zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `GetByte` Methode ruft ein bestimmtes Byte aus dem Array ab. Das Array muss ein Array von primitiven Typen sein.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Bytewerte an bestimmten Positionen innerhalb von Arrays mit den `GetByte` Methode.  
+  
+ [!code-cpp[System.Buffer.Bytes#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Buffer.Bytes/CPP/getbyte.cpp#3)]
+ [!code-csharp[System.Buffer.Bytes#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Buffer.Bytes/CS/getbyte.cs#3)]
+ [!code-vb[System.Buffer.Bytes#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Buffer.Bytes/VB/getbyte.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" />ist keine Primitive.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />ist negativ oder größer als die Länge des <paramref name="array" />.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="array" />ist größer als 2 Gigabyte (GB).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MemoryCopy">
+      <MemberSignature Language="C#" Value="public static void MemoryCopy (void* source, void* destination, long destinationSizeInBytes, long sourceBytesToCopy);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void MemoryCopy(void* source, void* destination, int64 destinationSizeInBytes, int64 sourceBytesToCopy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffer.MemoryCopy(System.Void*,System.Void*,System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Void*" />
+        <Parameter Name="destination" Type="System.Void*" />
+        <Parameter Name="destinationSizeInBytes" Type="System.Int64" />
+        <Parameter Name="sourceBytesToCopy" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Adresse der zu kopierenden Bytes.</param>
+        <param name="destination">Die Zieladresse.</param>
+        <param name="destinationSizeInBytes">Die Anzahl der im Ziel-Speicherblock verfügbaren Bytes.</param>
+        <param name="sourceBytesToCopy">Die Anzahl der zu kopierenden Bytes.</param>
+        <summary>Kopiert eine als Long Integer-Wert angegebene Anzahl von Bytes aus einer Speicheradresse in eine andere Speicheradresse.  
+  
+ Diese API ist nicht CLS-kompatibel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kopiert `sourceBytesToCopy` Bytes vom durch die angegebene Adresse `source` an der Adresse angegebene `destination`. Wenn der Puffer überlappen und den Unterschied zwischen `destination` minus `source` ist kleiner als `sourceBytesToCopy`, Quellblock wird an den Zielblock in umgekehrter Reihenfolge kopiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="sourceBytesToCopy" /> ist größer als <paramref name="destinationSizeInBytes" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MemoryCopy">
+      <MemberSignature Language="C#" Value="public static void MemoryCopy (void* source, void* destination, ulong destinationSizeInBytes, ulong sourceBytesToCopy);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void MemoryCopy(void* source, void* destination, unsigned int64 destinationSizeInBytes, unsigned int64 sourceBytesToCopy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffer.MemoryCopy(System.Void*,System.Void*,System.UInt64,System.UInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Void*" />
+        <Parameter Name="destination" Type="System.Void*" />
+        <Parameter Name="destinationSizeInBytes" Type="System.UInt64" />
+        <Parameter Name="sourceBytesToCopy" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Adresse der zu kopierenden Bytes.</param>
+        <param name="destination">Die Zieladresse.</param>
+        <param name="destinationSizeInBytes">Die Anzahl der im Ziel-Speicherblock verfügbaren Bytes.</param>
+        <param name="sourceBytesToCopy">Die Anzahl der zu kopierenden Bytes.</param>
+        <summary>Kopiert eine als Unsigned Long Integer-Wert angegebene Anzahl von Bytes aus einer Speicheradresse in eine andere Speicheradresse.  
+  
+ Diese API ist nicht CLS-kompatibel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kopiert `sourceBytesToCopy` Bytes vom durch die angegebene Adresse `source` an der Adresse angegebene `destination`. Wenn der Puffer überlappen und den Unterschied zwischen `destination` minus `source` ist kleiner als `sourceBytesToCopy`, Quellblock wird an den Zielblock in umgekehrter Reihenfolge kopiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="sourceBytesToCopy" /> ist größer als <paramref name="destinationSizeInBytes" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetByte">
+      <MemberSignature Language="C#" Value="public static void SetByte (Array array, int index, byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetByte(class System.Array array, int32 index, unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffer.SetByte(System.Array,System.Int32,System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Array.</param>
+        <param name="index">Eine Position im Array.</param>
+        <param name="value">Ein zuzuweisender Wert.</param>
+        <summary>Weist einem Byte an einer bestimmten Position eines angegebenen Arrays einen bestimmten Wert zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `array`muss ein Array von primitiven Typen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird weist Werte auf Byte an bestimmten Positionen im von Arrays mit den `SetByte` Methode.  
+  
+ [!code-cpp[System.Buffer.Bytes#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Buffer.Bytes/CPP/setbyte.cpp#2)]
+ [!code-csharp[System.Buffer.Bytes#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Buffer.Bytes/CS/setbyte.cs#2)]
+ [!code-vb[System.Buffer.Bytes#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Buffer.Bytes/VB/setbyte.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" />ist keine Primitive.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />ist negativ oder größer als die Länge des <paramref name="array" />.</exception>
+        <exception cref="T:System.OverflowException">
+          <paramref name="array" />ist größer als 2 Gigabyte (GB).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

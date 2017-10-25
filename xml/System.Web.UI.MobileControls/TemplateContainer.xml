@@ -1,0 +1,97 @@
+<Type Name="TemplateContainer" FullName="System.Web.UI.MobileControls.TemplateContainer">
+  <TypeSignature Language="C#" Value="public class TemplateContainer : System.Web.UI.MobileControls.Panel, System.Web.UI.INamingContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplateContainer extends System.Web.UI.MobileControls.Panel implements class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.TemplateContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.Panel</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.INamingContainer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Abgeleitet von der <see cref="T:System.Web.UI.MobileControls.Panel" /> Klasse und von ASP.NET verwendet, um enthalten <see cref="T:System.Web.UI.MobileControls.DeviceSpecificChoice" /> Vorlagen. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein mobiles Steuerelement auf Vorlagen basierende Renderingfunktionen über Gerätevorlagen bereitstellt, müssen sie Instanzen von jeder Vorlage in einem separaten Steuerelement des Typs erstellen <xref:System.Web.UI.MobileControls.TemplateContainer>. Wenn ein Datenbindungsausdruck in einem Steuerelement in einer Vorlage ist die `Container` Variable des Ausdrucks ist immer vom Typ <xref:System.Web.UI.MobileControls.TemplateContainer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.Web.UI.MobileControls.TemplateContainer> Objekte zum Erstellen von Vorlagen in einem <xref:System.Web.UI.MobileControls.DeviceSpecific> Objekt in einem mobilen Formular.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileTemplateContainerSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileTemplateContainerSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobileTemplateContainerSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileTemplateContainerSample/vb/Default.aspx#1)]  
+  
+ Alle obigen Code kann durch Folgendes Markup deklarativ ersetzt werden:  
+  
+  
+  
+ Die Datei "Web.config" müssen die folgenden Zeilen:  
+  
+  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateContainer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.TemplateContainer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.TemplateContainer" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakAfter">
+      <MemberSignature Language="C#" Value="public override bool BreakAfter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BreakAfter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.TemplateContainer.BreakAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Eigenschaft ab oder legt eine Eigenschaft fest, die bestimmt, ob ein zusätzlicher Umbruch nach dem Steuerelement gerendert wird. Dieser Umbruch bewirkt, dass nachfolgender Inhalt in der nächsten Zeile beginnt. Die Standardeinstellung ist <see langword="true" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />, wenn ein zusätzlicher Umbruch nach dem Steuerelement gerendert wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

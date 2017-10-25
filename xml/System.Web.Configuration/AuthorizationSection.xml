@@ -1,0 +1,148 @@
+<Type Name="AuthorizationSection" FullName="System.Web.Configuration.AuthorizationSection">
+  <TypeSignature Language="C#" Value="public sealed class AuthorizationSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AuthorizationSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.AuthorizationSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konfiguriert die Autorisierung einer Web-Anwendung. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.AuthorizationSection> -Klasse bietet eine Möglichkeit zum programmgesteuerten Zugriff auf und Ändern der `authorization` Abschnitt einer Konfigurationsdatei.  
+  
+ Dieser Typ ist Teil einer Gruppe, umfasst die <xref:System.Web.Configuration.AuthorizationRule>, <xref:System.Web.Configuration.AuthorizationRuleCollection>, und die <xref:System.Web.Configuration.AuthorizationRuleAction> Typen.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.Configuration.AuthorizationSection> können Informationen lesen und Schreiben von und zu dem jeweiligen Abschnitt der Konfigurationsdatei gemäß der Abschnittseigenschaft <xref:System.Configuration.SectionInformation.AllowDefinition%2A> , dessen Wert <xref:System.Configuration.ConfigurationAllowDefinition.Everywhere>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Web.Configuration.AuthorizationSection> Objekt aus der Konfigurationsdatei von einer vorhandenen Webanwendung. Sie können dieses Objekt verwenden, auf ihre Member zuzugreifen. Die Konfigurationsdatei enthält einen Setup folgt oder ähnlich.  
+  
+> [!NOTE]
+>  Bei Verwendung der `credentials` Abschnitt, achten Sie darauf, dass Sie die Einhaltung der Richtlinien zur erläutert [ASP.NET-Authentifizierung](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1). Für Skalierbarkeit und eine bessere Sicherheit-Funktion wird empfohlen, dass Sie eine externe Datenbank verwenden, um die Benutzer-Anmeldeinformationen zu speichern. Suchen Sie für Weitere Informationen zum Erstellen von secure ASP.NET-Anwendungen die Microsoft MSDN-Website ("MSDN.Microsoft.com") für "Sichern Ihrer ASP.NET-Anwendung" und "Building Secure ASP.NET Applications: Authentifizierung, Autorisierung und sichere Die Kommunikation auf."  
+  
+```  
+<authorization>  
+  <allow users="userName" roles="admin" verbs="post" />  
+  <deny users="*" verbs="post"/>  
+</authorization>  
+```  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#1)]
+ [!code-vb[System.Web.Configuration.Authorization#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#1)]  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#2)]
+ [!code-vb[System.Web.Configuration.Authorization#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthorizationSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.AuthorizationSection" />-Klasse mit Standardeinstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.AuthorizationSection.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Sie wird vom Konfigurationssystem von ASP.NET aufgerufen. Sie rufen Sie eine Instanz von der <xref:System.Web.Configuration.AuthorizationSection> Klasse, indem die <xref:System.Configuration.Configuration.GetSection%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostDeserialize">
+      <MemberSignature Language="C#" Value="protected override void PostDeserialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PostDeserialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationSection.PostDeserialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AuthorizationSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rules">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.AuthorizationRuleCollection Rules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.AuthorizationRuleCollection Rules" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AuthorizationSection.Rules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("", IsDefaultCollection=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.AuthorizationRuleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Configuration.AuthorizationRuleCollection" /> von <see cref="T:System.Web.Configuration.AuthorizationRule" /> Regeln.</summary>
+        <value>Ruft die <see cref="T:System.Web.Configuration.AuthorizationRuleCollection" /> von <see cref="T:System.Web.Configuration.AuthorizationRule" /> definierten Regeln die <see cref="T:System.Web.Configuration.AuthorizationSection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.AuthorizationSection.Rules%2A> von dieser Methode zurückgegebene Auflistung verweist nicht auf ein vorhandenes Element in der zugrunde liegenden Konfigurationsdatei. Es ist ein Konstrukt, das einfachen Zugriff auf die Regeln kann darin enthaltenen. Dies ist ein allgemeines Muster für die Behandlung der Elemente einer Konfigurationsdatei.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.AuthorizationSection.Rules%2A>.  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#6)]
+ [!code-vb[System.Web.Configuration.Authorization#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

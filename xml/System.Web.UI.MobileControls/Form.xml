@@ -1,0 +1,1043 @@
+<Type Name="Form" FullName="System.Web.UI.MobileControls.Form">
+  <TypeSignature Language="C#" Value="public class Form : System.Web.UI.MobileControls.Panel, System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Form extends System.Web.UI.MobileControls.Panel implements class System.Web.UI.IPostBackEventHandler, class System.Web.UI.MobileControls.ITemplateable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Form" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.Panel</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Activate")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Web.UI.Design.MobileControls.FormDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Web.UI.Design.WebControlToolboxItem, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.MobileControls.FormControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.MobileControls.DesignerAdapter(typeof(System.Web.UI.MobileControls.Adapters.HtmlFormAdapter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:Form runat="server"&gt;&lt;/{0}:Form&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Funktion zum Gruppieren von Steuerelementen bereit. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Formular stellt die äußerste Gruppierung von Steuerelementen in einer ASP.NET mobile-Webseite dar. Eine einzelne mobile Webseite kann mehrere Formen auf der obersten Ebene enthalten. Formulare können nicht geschachtelt werden. Verwenden Sie <xref:System.Web.UI.MobileControls.Panel> steuert, ob der Container geschachtelt werden sollen. Weitere Informationen finden Sie unter [Einführung in das Form-Steuerelement](http://msdn.microsoft.com/en-us/24a1946a-bb3c-41c8-90cd-f00643525016). Um eine bestimmte Form anzuzeigen, legen Sie entweder die <xref:System.Web.UI.MobileControls.MobilePage.ActiveForm%2A> -Eigenschaft auf der aktuellen Seite auf das gewünschte Formular oder die <xref:System.Web.UI.MobileControls.Link.NavigateUrl%2A> Eigenschaft in einer <xref:System.Web.UI.MobileControls.Link> Steuerelement auf das gewünschte Formular. Sie können Literaltext zusammen mit den zugehörigen Markuptags in den Textinhalt einschließen der <xref:System.Web.UI.MobileControls.Form> Steuerelement. Bei Vorlagen zu verwenden, ist es wichtig zu beachten, dass die <xref:System.Web.UI.MobileControls.Form> Steuerelement erstellt Instanzen von Vorlagen in die <xref:System.Web.UI.MobileControls.Form.OnInit%2A> Methode für das Formular. Die <xref:System.Web.UI.MobileControls.Form.OnInit%2A> Methode für das Formular wird aufgerufen, bevor `Page_Load` und `Page_Init`. Darüber hinaus die Page-Konstruktor führt zu früh zum Festlegen von Vorlagen die <xref:System.Web.UI.MobileControls.Form.OnInit%2A> Methode, da das Formular noch nicht erstellt wurde. Um dies zu korrigieren, verknüpfen Sie des Formulars eigenen <xref:System.Web.UI.MobileControls.Form.OnInit%2A> -Methode, und erstellen Sie eine Instanz der Vorlage vorhanden. Weitere Informationen finden Sie unter [Implementing Templated Rendering](http://msdn.microsoft.com/en-us/b86d9d1d-ab18-4cad-a825-092826bb3922).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Seite mit zwei Formen sowie Links zwischen den beiden Formaten erstellen. Ein Formular verfügt über ein Kontrollkästchen-Liste. Wenn Elemente ausgewählt werden und die **Absenden** Schaltfläche geklickt wird, wird das Formular wird eine Liste mit den ausgewählten Elementen und deren Werte. Beachten Sie, dass die <xref:System.Web.UI.MobileControls.Form.Activate> Ereignismethoden Vorbereiten der jeweiligen Formulare zum Anzeigen  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. Dieses Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen finden Sie unter [ASP.NET Web Forms-Seite Syntaxübersicht](http://msdn.microsoft.com/library/09074b20-ece9-46fa-bc8f-ab2595ed2c02).  
+  
+ [!code-aspx-csharp[MobileFormSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileFormSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobileFormSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileFormSample/vb/Default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Form ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.Form" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public string Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Form.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.UrlEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL, zu dem das Formular gesendet wird. Der Standardwert ist eine leere Zeichenfolge („“). Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die URL, zu dem das Formular gesendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert, eine leere Zeichenfolge (""), führt dazu, dass Postbacks auf der Seite, die das aktuelle Formular enthält. Sie können den Standardwert der Übermittlung des Formulars zu einer anderen URL überschreiben.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.MobileControls.Form.Action%2A> Eigenschaft geerbt wird, die <xref:System.Web.UI.MobileControls.Command> Steuerelement sendet den Inhalt an den geerbten URL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate">
+      <MemberSignature Language="C#" Value="public event EventHandler Activate;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Activate" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.Form.Activate" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Formular aktiv ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Form.Activate> Ereignis tritt auf, in den folgenden Situationen:  
+  
+-   Wenn eine Seite zuerst angefordert wird, wird die erste Form aktiviert.  
+  
+-   Wenn die <xref:System.Web.UI.MobileControls.MobilePage.ActiveForm%2A> -Eigenschaft der Seite programmgesteuert festgelegt ist.  
+  
+-   Wenn der Benutzer navigiert zu einem Formular über einen <xref:System.Web.UI.MobileControls.Link> , deren Ziel eine Art ist, Steuerelement.  
+  
+ Dieses Ereignis Position in der Ereigniskette ist es sehr wichtig, für die Bindung der untergeordneten Steuerelemente an Datenquellen oder zum Festlegen einer Formulareigenschaft, die von allen untergeordneten Steuerelementen geerbt werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Festlegen der `OnActivate` Attribut in der <xref:System.Web.UI.MobileControls.Form> Element an eine Methode zu verweisen, die beim Instanziieren der <xref:System.Web.UI.MobileControls.Form.Activate> Ereignis tritt auf. Die `Form2_Activate` Methode wird die zweite Form für die Anzeige vorbereitet. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.MobileControls.Form> (Übersicht).  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. Dieses Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen finden Sie unter [ASP.NET Web Forms-Seite Syntaxübersicht](http://msdn.microsoft.com/library/09074b20-ece9-46fa-bc8f-ab2595ed2c02).  
+  
+ [!code-csharp[MobileFormSample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileFormSample/cs/Default.aspx#3)]
+ [!code-vb[MobileFormSample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileFormSample/vb/Default.aspx#3)]  
+[!code-aspx-vb[MobileFormSample#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileFormSample/vb/Default2.aspx#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakAfter">
+      <MemberSignature Language="C#" Value="public override bool BreakAfter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BreakAfter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Form.BreakAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Eigenschaft ab oder legt eine Eigenschaft fest, die bestimmt, ob ein zusätzlicher Umbruch nach dem Steuerelement gerendert wird. Dieser Umbruch bewirkt, dass nachfolgender Inhalt in der nächsten Zeile beginnt. Die Standardeinstellung ist <see langword="true" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />, wenn ein zusätzlicher Umbruch nach dem Steuerelement gerendert wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird ignoriert, durch die <xref:System.Web.UI.MobileControls.Form> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Die Eigenschaft, die zur Entwurfszeit gelesen wurde.  
+  
+ - oder -   
+  
+ Es wurde versucht, die Eigenschaft festgelegt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlToPaginate">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control ControlToPaginate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control ControlToPaginate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Form.ControlToPaginate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Steuerelement im Formular, die paginiert werden kann. Die Standardeinstellung ist <see langword="null" /> (<see langword="Nothing" /> in Visual Basic). Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das Steuerelement im Formular, die paginiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Form.ControlToPaginate%2A> Eigenschaft wird verwendet, um ein einzelnes Steuerelement in einem Formular an seinen Inhalt über mehrere Ansichten auf mobilen Geräten und mit vorherigen und nächsten Navigation zwischen Ansichten Paginieren zu ermöglichen. Ein Steuerelement kann seine Inhalte, selbst wenn paginiert ein mit <xref:System.Web.UI.MobileControls.Panel> -Steuerelement seine <xref:System.Web.UI.MobileControls.Panel.Paginate%2A> -Eigenschaftensatz auf `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.Form.ControlToPaginate%2A> Eigenschaft von der <xref:System.Web.UI.MobileControls.Form> Klasse, um anzugeben, welches Steuerelement paginieren.  
+  
+ Im Beispiel wird eine Seite mit zwei Formen erstellt. Ein Formular verfügt über eine sehr lange Zeichenfolge, die auf einigen Geräten paginiert werden muss, um dem Benutzer den Zugriff auf den gesamten Text zu ermöglichen. Um die Paginierung in Aktion zu sehen, müssen Sie das Beispiel auf einem Gerät anzeigen, die Paginierung behandelt. In [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], können Sie einen der Geräteemulatoren zur Verfügung, mit der **Geräteemulator-Manager** auf die **Tools** Menü.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. Dieses Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen finden Sie unter [ASP.NET Web Forms-Seite Syntaxübersicht](http://msdn.microsoft.com/library/09074b20-ece9-46fa-bc8f-ab2595ed2c02).  
+  
+ [!code-aspx-csharp[MobileFormSample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileFormSample/cs/Default2.aspx#4)]
+ [!code-aspx-vb[MobileFormSample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileFormSample/vb/Default2.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultTemplatedUI">
+      <MemberSignature Language="C#" Value="public override void CreateDefaultTemplatedUI (bool doDataBind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CreateDefaultTemplatedUI(bool doDataBind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.CreateDefaultTemplatedUI(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doDataBind" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="doDataBind">Legen Sie auf "true", wenn die instanziierten Vorlagen an verfügbare Daten gebunden werden müssen (die in der Regel geschieht bei der ersten Anforderung). Auf "false" festgelegt werden, wenn die Vorlagen nicht an Daten gebunden, und müssen stattdessen auf den Ansichtszustand zum Ausfüllen greifen in (das geschieht in der Regel bei nachfolgenden Postbacks).</param>
+        <summary>Wird von Geräteadaptern aufgerufen, um die vorlagenbasierte Standardbenutzeroberfläche für das Steuerelement zu erstellen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPage">
+      <MemberSignature Language="C#" Value="public int CurrentPage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Form.CurrentPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Index der aktuellen Seite in das aktive Formular fest. Der Standardwert ist <see langword="0" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Index der aktuellen Seite in das aktive Formular.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für die Paginierung von Formularen verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deactivate">
+      <MemberSignature Language="C#" Value="public event EventHandler Deactivate;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Deactivate" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.Form.Deactivate" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein aktive Formular nicht mehr aktiv ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Formular inaktiv in den folgenden Situationen:  
+  
+-   Wenn die <xref:System.Web.UI.MobileControls.MobilePage.ActiveForm%2A> -Eigenschaft der Seite programmgesteuert in ein anderes Format festgelegt ist.  
+  
+-   Wenn der Benutzer navigiert zu einem Formular über einen <xref:System.Web.UI.MobileControls.Link> , deren Ziel eine Art ist, Steuerelement.  
+  
+ Wenn keines dieser Aktionen auftritt, wird das aktive Formular nie Empfangen einer <xref:System.Web.UI.MobileControls.Form.Deactivate> Ereignis. Dieses Ereignis Position in der Ereigniskette ist es sehr wichtig, Zurücksetzen der untergeordneten Steuerelemente, DataSet und globale Variablen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abfangen der <xref:System.Web.UI.MobileControls.Form.Deactivate> -Ereignisses zum Löschen der <xref:System.Web.UI.MobileControls.SelectionList>. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.MobileControls.Form> (Übersicht).  
+  
+ [!code-csharp[MobileFormSample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileFormSample/cs/Default.aspx#2)]
+ [!code-vb[MobileFormSample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileFormSample/vb/Default.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Footer">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.Panel Footer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.Panel Footer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Form.Footer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Panel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Bereich, der die Fußzeile für das Formular darstellt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die <see cref="T:System.Web.UI.MobileControls.Panel" /> , die Fußzeile für das Formular darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.Form.Footer%2A> Eigenschaft zum Zugreifen auf den Inhalt der `FooterTemplate`.  
+  
+ Dieses Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.MobileControls.Form.ControlToPaginate%2A> Eigenschaft.  
+  
+ [!code-csharp[MobileFormSample#5](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileFormSample/cs/Default2.aspx#5)]
+ [!code-vb[MobileFormSample#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileFormSample/vb/Default2.aspx#5)]  
+  
+ In diesem Beispiel, da kein Filter, für angegeben wird die `<Choice>` Element, es werden immer die <xref:System.Web.UI.MobileControls.DeviceSpecific.SelectedChoice%2A>. Einen Filter ändern, geben Sie das Element: `<Choice Filter="isPocketIE">` und enthalten eine Web.config-Datei, die die Filter definiert, Sie verwenden möchten.  
+  
+ [!code-aspx-vb[MobileFormSample#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileFormSample/vb/Default2.aspx#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLinkedForms">
+      <MemberSignature Language="C#" Value="public System.Collections.IList GetLinkedForms (int optimumPageWeight);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IList GetLinkedForms(int32 optimumPageWeight) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.GetLinkedForms(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="optimumPageWeight" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="optimumPageWeight">Das Gesamtgewicht für das Zielgerät die resultierende verknüpfte Formen darf maximal (bei der Paginierung verwendet). Wenn der Wert-1 ist, wird das Gesamtgewicht nicht berücksichtigt werden, wenn verknüpfte Formulare zur Liste hinzugefügt werden.</param>
+        <summary>Gibt einen Satz von Formularen, die auf das aktuelle Formular verknüpft sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Ein Satz von Formularen, die auf das aktuelle Formular verknüpft sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Formular Navigationselementen, die eine andere Form enthält ohne Interaktion mit dem Server aktivieren, gilt es als verknüpftes Formular. Es sind mehrere Faktoren Beteiligten für ein Formular berücksichtigt werden verknüpft. Z. B. wenn die folgenden drei Vorgaben erfüllt sind, Formular B gilt die Formen in einer Form: verknüpft werden  
+  
+-   Formular A enthält ein <xref:System.Web.UI.MobileControls.Link> -Steuerelement mit Formular b als Ziel.  
+  
+-   Formular A enthält kein <xref:System.Web.UI.MobileControls.Form.OnDeactivate%2A> -Ereignishandler.  
+  
+-   Formular B verfügt über keine <xref:System.Web.UI.MobileControls.Form.OnActivate%2A> -Ereignishandler.  
+  
+ Der Unterschied ist der Satz aller Formulare, die keine Server von Interaktionen an die Übertragung der Steuerung zwischen erforderlich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasActivateHandler">
+      <MemberSignature Language="C#" Value="public virtual bool HasActivateHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasActivateHandler() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.HasActivateHandler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt <see langword="true" /> hat die Form einen Handler für das <see cref="E:System.Web.UI.MobileControls.Form.Activate" /> Ereignis. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn das Formular einen Handler für das <see cref="E:System.Web.UI.MobileControls.Form.Activate" /> Ereignis ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDeactivateHandler">
+      <MemberSignature Language="C#" Value="public virtual bool HasDeactivateHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasDeactivateHandler() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.HasDeactivateHandler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt <see langword="true" /> Wenn die <see cref="E:System.Web.UI.MobileControls.Form.Deactivate" /> Ereignis vorhanden ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="E:System.Web.UI.MobileControls.Form.Deactivate" /> Ereignis vorhanden ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.Panel Header { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.Panel Header" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Form.Header" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Panel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Bereich, der den Header für das Formular darstellt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die <see cref="T:System.Web.UI.MobileControls.Panel" /> , die die Header für das Formular darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Siehe das Beispiel für die <xref:System.Web.UI.MobileControls.Form.Footer%2A> Eigenschaft. Die Funktionalität ist praktisch die gleichen wie für die <xref:System.Web.UI.MobileControls.Form.Header%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPrivateViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadPrivateViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadPrivateViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.LoadPrivateViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Aktueller Ansichtszustand des Steuerelements.</param>
+        <summary>Lädt den Ansichtszustand aus einer privaten Quelle. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.FormMethod Method { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.MobileControls.FormMethod Method" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Form.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.FormMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Methode zum Senden des Formulars fest. Der Standardwert ist <see langword="post" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Methode, die zum Senden des Formulars verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `get` Anforderung ist begrenzt hinsichtlich der Menge an Daten bereitgestellt. Einige Typen von Postbacks fehlschlagen, wenn mit einem `get` Anforderung. Der Vorteil einer `get` Anforderung ist, dass alle Parameter angegeben werden, als Teil der URL und die URL zwischengespeichert oder gespeichert werden kann. Die Elemente einer `post` Anforderung enthaltenen der <xref:System.Web.HttpRequest.Form%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivate">
+      <MemberSignature Language="C#" Value="protected virtual void OnActivate (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnActivate(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.OnActivate(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein Objekt, das definiert, indem die <see cref="T:System.EventArgs" /> -Objekt, das Ereignisdaten enthält.</param>
+        <summary>Wird aufgerufen, wenn das Formular aktiviert ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung löst die <xref:System.Web.UI.MobileControls.Form.Activate> Ereignis. Erbende Klassen kann überschreiben diese Methode, um andere Aufgaben ausführen, wenn das Formular aktiviert ist.  
+  
+   
+  
+## Examples  
+ Ein Codebeispiel finden Sie im Beispiel für die <xref:System.Web.UI.MobileControls.Form.Activate> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataBinding">
+      <MemberSignature Language="C#" Value="protected override void OnDataBinding (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDataBinding(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.OnDataBinding(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see langword="EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.DataBinding" />-Ereignis aus. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeactivate">
+      <MemberSignature Language="C#" Value="protected virtual void OnDeactivate (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDeactivate(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.OnDeactivate(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein Objekt, das definiert, indem ein <see cref="T:System.EventArgs" /> -Objekt, das Ereignisdaten enthält.</param>
+        <summary>Wird aufgerufen, wenn das Formular aktiviert ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung löst die <xref:System.Web.UI.MobileControls.Form.Deactivate> Ereignis. Erbende Klassen kann überschreiben diese Methode, um andere Aufgaben ausführen, wenn das Formular deaktiviert wird.  
+  
+   
+  
+## Examples  
+ Ein Codebeispiel finden Sie im Beispiel für die <xref:System.Web.UI.MobileControls.Form.Activate> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Init" />-Ereignis aus. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Benachrichtigung durch diese Methode müssen Serversteuerelemente alle Initialisierungsschritte auszuführen, die zum Erstellen und Einrichten einer Instanz erforderlich sind. In dieser Phase des Lebenszyklus des Serversteuerelements muss Ansichtszustand des Steuerelements noch aufgefüllt werden. Darüber hinaus können keine Sie anderen Serversteuerelementen zugreifen, wenn diese Methode, entweder aufgerufen wird, unabhängig davon, ob es sich um ein untergeordnetes oder übergeordnetes Steuerelement handelt. Andere Steuerelemente sind nicht bestimmten erstellt und für den Zugriff bereit ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Das Formular wird ein anderes Format enthalten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaginated">
+      <MemberSignature Language="C#" Value="protected virtual void OnPaginated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPaginated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.OnPaginated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" /> -Objekt, das Ereignisdaten enthält.</param>
+        <summary>Tritt auf, wenn ein Formular paginiert ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Ein vollständiges Codebeispiel finden Sie im Beispiel für die <xref:System.Web.UI.MobileControls.Form.ControlToPaginate%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein EventArgs-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis aus. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageCount">
+      <MemberSignature Language="C#" Value="public int PageCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Form.PageCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Anzahl der Seiten in der Form zurück, nachdem die Paginierung des Formulars. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Anzahl der Seiten im Formular nach der Paginierung des Formulars.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Form> steuern macht die <xref:System.Web.UI.MobileControls.Form.PageCount%2A> Eigenschaft und die <xref:System.Web.UI.MobileControls.Form.CurrentPage%2A> -Eigenschaft, die Aufschluss darüber, wie die Paginierung des aktuellen Formulars. Die <xref:System.Web.UI.MobileControls.Form.PageCount%2A> -Eigenschaft unterstützt außerdem die Funktion der Navigation zu einer anderen Seite bereitzustellen. Angenommen, möglicherweise beim Rendern auf einem Gerät umfangreichere Formular mit Suchergebnissen gerätespezifischen Benutzeroberflächenelemente enthalten, mit die den Benutzer auf eine Seite der Ergebnisse über Anzahl statt über den Link Navigationsbereich durchsuchen können.  
+  
+> [!NOTE]
+>  Dieser Wert ist verfügbar, nachdem die <xref:System.Web.UI.MobileControls.Form.Paginated> Ereignis ist aufgetreten. Zum Abrufen der <xref:System.Web.UI.MobileControls.Form.PageCount%2A> -Eigenschaft, die Sie behandeln die <xref:System.Web.UI.MobileControls.Form.Paginated> -Ereignis des Formulars.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.Form.PageCount%2A> Eigenschaft von der <xref:System.Web.UI.MobileControls.Form> Steuerelement. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.MobileControls.Form.ControlToPaginate%2A> Eigenschaft.  
+  
+ [!code-csharp[MobileFormSample#5](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileFormSample/cs/Default2.aspx#5)]
+ [!code-vb[MobileFormSample#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileFormSample/vb/Default2.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagerStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.PagerStyle PagerStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.PagerStyle PagerStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Form.PagerStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.PagerStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Format, das zum Rendern des Formulars Paginierung der Benutzeroberfläche verwendet. Der Standardwert ist eine leere Zeichenfolge („“). Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das Format, das zum Rendern des Formulars Paginierung der Benutzeroberfläche verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft programmgesteuert festgelegt wird, ist es nicht für jede Anforderung beibehalten. Wenn die Eigenschaft deklarativ festgelegt ist, wird die Eigenschaft für jede Anforderung beibehalten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.Form.PagerStyle%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.MobileControls.Form.ControlToPaginate%2A> Eigenschaft.  
+  
+ [!code-csharp[MobileFormSample#6](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileFormSample/cs/Default2.aspx#6)]
+ [!code-vb[MobileFormSample#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileFormSample/vb/Default2.aspx#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaginateChildren">
+      <MemberSignature Language="C#" Value="protected override bool PaginateChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PaginateChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Form.PaginateChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt zurück, und zwar unabhängig davon, ob die untergeordneten Elemente des Steuerelements paginiert werden müssen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn die untergeordneten Elemente des Steuerelements paginiert werden müssen; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paginated">
+      <MemberSignature Language="C#" Value="public event EventHandler Paginated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Paginated" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.Form.Paginated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Formular paginiert ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Formular ist vor dem Rendern jede Anforderung paginiert. Nach Abschluss der Paginierung der <xref:System.Web.UI.MobileControls.Form.Paginated> Ereignis auftritt. Nachdem dieses Ereignis tritt auf, die <xref:System.Web.UI.MobileControls.Form.CurrentPage%2A> -Eigenschaft des Formulars enthält die tatsächliche Anzahl der Seiten, die für das Formular.  
+  
+   
+  
+## Examples  
+ Ein vollständiges Codebeispiel finden Sie im Beispiel für die <xref:System.Web.UI.MobileControls.Form.ControlToPaginate%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaginateRecursive">
+      <MemberSignature Language="C#" Value="public override void PaginateRecursive (System.Web.UI.MobileControls.ControlPager pager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void PaginateRecursive(class System.Web.UI.MobileControls.ControlPager pager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.PaginateRecursive(System.Web.UI.MobileControls.ControlPager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pager" Type="System.Web.UI.MobileControls.ControlPager" />
+      </Parameters>
+      <Docs>
+        <param name="pager">Der Pager.</param>
+        <summary>Paginiert das Steuerelement und seine untergeordneten Elemente. Wird intern von ASP.NET aufgerufen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Ein <see cref="T:System.String" />, der ein optionales Ereignisargument darstellt, das an den Ereignishandler übergeben wird.</param>
+        <summary>Benachrichtigt das <see cref="T:System.Web.UI.MobileControls.Form" />-Objekt über ein Postbackereignis. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Schreibt Markupzeichen und Text in einen Ausgabestream an.</param>
+        <summary>Sendet den Inhalt des Steuerelements an ein angegebenes <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt, das den auf dem Client zu rendernden Inhalt schreibt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SavePrivateViewState">
+      <MemberSignature Language="C#" Value="protected override object SavePrivateViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SavePrivateViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.SavePrivateViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert alle privaten Ansichtszustandsänderungen, die seit dem Laden der Seite aus dem persistenten Speicher aufgetreten sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Ein Objekt, das den geänderten privaten Ansichtszustand enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Script">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.Panel Script { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.Panel Script" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Form.Script" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Panel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Bereich, der jedes gerätespezifische Skripts für das Formular enthält, eine Skriptvorlage definiert und für das Zielgerät ausgewählt wurde. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Bereich, der jedes gerätespezifische Skripts für das Formular enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Form.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Ein <see cref="T:System.String" />, der ein optionales Ereignisargument darstellt, das an den Ereignishandler übergeben wird.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(System.String)" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.MobileControls.Form>-Instanz in eine <xref:System.Web.UI.IPostBackEventHandler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Form.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Titel des angegebenen Formulars. Der Standardwert ist eine leere <see langword="string" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Titel kann als Teil des Formulars, auf Geräten gerendert werden, die einen Titel, der getrennt von der Seiteninhalt (z. B. auf der Titelleiste eines Browsers mit dem Titel-Tag im HTML-Format) zu unterstützen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Geräte, die von der Seiteninhalt getrennte Titel unterstützen, können Sie den Titel als Teil des Formulars rendern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,153 @@
+<Type Name="DataGridViewAutoSizeColumnsMode" FullName="System.Windows.Forms.DataGridViewAutoSizeColumnsMode">
+  <TypeSignature Language="C#" Value="public enum DataGridViewAutoSizeColumnsMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewAutoSizeColumnsMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewAutoSizeColumnsMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert Werte für die Angabe, wie die Breite der Spalten angepasst werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridView> Steuerelement kann die Größe ändern deren Spalten zu machen die verfügbare Breite des Steuerelements zu füllen oder damit sie den vollständigen Inhalt aller Zellen oder der angegebenen Zellen angezeigt werden können.  
+  
+ Mit <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill> abgesicherte Modus, die bevorzugte Breite einer Spalte wird durch die Größe aller Spalten in diesem Modus ändern, sodass alle sichtbare Spalten im Steuerelement genau die horizontale Breite des verfügbaren Anzeigebereichs ausfüllen. Mit anderen Modi ist die bevorzugte Spaltenbreite die Mindestbreite erforderlich, um den größten Zellenwert über alle Zellen oder eine Teilmenge der Zellen in dieser Spalte, z. B. die Teilmenge der Zellen angezeigt, die in der aktuell angezeigten Zeilen sind. Eine Teilmenge von Zellen verwenden, um zu bestimmen, die neue Breite auf ist nützlich, um Leistungseinbußen zu vermeiden, bei der Arbeit mit vielen Zeilen mit Daten.  
+  
+ Inhaltsbasierte automatische Größenänderung wird verhindert, dass Benutzer mit der Maus Spaltenbreite anpassen. Ändern der Größe von Benutzer ist jedoch im Füllmodus aktiviert.  
+  
+ Diese Enumeration wird verwendet, durch die <xref:System.Windows.Forms.DataGridView> Steuerelement <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> Eigenschaft und <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> Methode.  
+  
+ Weitere Informationen zu Größenanpassungsmodi, finden Sie unter [Sizing Optionen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md). Weitere Informationen zu Spaltenfüllmodus finden Sie unter [Spaltenfüllmodus im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Enumeration in einem Master-/Detail-Szenario, zwei <xref:System.Windows.Forms.DataGridView> Steuerelemente zeigen Daten aus zwei Tabellen in einer über-/unterordnungsbeziehung. In diesem Beispiel ist "None" den Größenanpassungsmodus für die master-Steuerelement, und die jeweilige Spaltenbreite werden programmgesteuert initialisiert, um die geladenen Werte aufnehmen. Das Detailsteuerelement wird auf einen Modus der automatischen Größenänderung festgelegt, sodass Spalten automatisch angepasst werden, wenn die Werte ändern (z. B. wenn der Benutzer die aktuelle Zeile in der übergeordneten Tabelle ändert). In diesem Beispiel ist Teil eines umfangreicheren Beispiels in [Vorgehensweise: Erstellen einer Master/Detail-Formular mithilfe von zwei Windows Forms DataGridView-Steuerelementen](~/docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllCells">
+      <MemberSignature Language="C#" Value="AllCells" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeColumnsMode AllCells = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die jeweilige Spaltenbreite anpassen, um den Inhalt des alle Zellen in den Spalten, einschließlich der Headerzellen an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AllCellsExceptHeader">
+      <MemberSignature Language="C#" Value="AllCellsExceptHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeColumnsMode AllCellsExceptHeader = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die jeweilige Spaltenbreite anpassen, um den Inhalt aller Zellen in den Spalten, ausgenommen Headerzellen anzupassen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnHeader">
+      <MemberSignature Language="C#" Value="ColumnHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeColumnsMode ColumnHeader = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die jeweilige Spaltenbreite anpassen, um den Inhalt der Spaltenheaderzellen angepasst.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayedCells">
+      <MemberSignature Language="C#" Value="DisplayedCells" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeColumnsMode DisplayedCells = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die jeweilige Spaltenbreite anpassen, um den Inhalt aller Zellen in den Spalten angepasst, die in der aktuell angezeigten Zeilen auf dem Bildschirm, einschließlich der Headerzellen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayedCellsExceptHeader">
+      <MemberSignature Language="C#" Value="DisplayedCellsExceptHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeColumnsMode DisplayedCellsExceptHeader = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die jeweilige Spaltenbreite anpassen, um den Inhalt aller Zellen in den Spalten angepasst, die in der aktuell angezeigten Zeilen auf dem Bildschirm, Headerzellen ausschließen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="Fill" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeColumnsMode Fill = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Spaltenbreite anzupassen, damit die Breite aller Spalten genau den Anzeigebereich des Steuerelements horizontalen Bildlauf, nur um die Spaltenbreite, die oben genannten beibehalten Ausfüllen der <see cref="P:System.Windows.Forms.DataGridViewColumn.MinimumWidth" /> Eigenschaftswerte. Relative Spaltenbreiten werden durch die Relative bestimmt <see cref="P:System.Windows.Forms.DataGridViewColumn.FillWeight" /> Eigenschaftswerte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeColumnsMode None = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die jeweilige Spaltenbreite werden nicht automatisch angepasst.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

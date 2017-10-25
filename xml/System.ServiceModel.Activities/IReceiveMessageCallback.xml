@@ -1,0 +1,57 @@
+<Type Name="IReceiveMessageCallback" FullName="System.ServiceModel.Activities.IReceiveMessageCallback">
+  <TypeSignature Language="C#" Value="public interface IReceiveMessageCallback" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IReceiveMessageCallback" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.IReceiveMessageCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert einen Rückruf, der ausgeführt werden soll, wenn eine Dienstmeldung von der <see cref="T:System.ServiceModel.Activities.Receive" />-Aktivität und der <see cref="T:System.ServiceModel.Activities.ReceiveParameters" />-Aktivität empfangen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie die <xref:System.ServiceModel.Activities.IReceiveMessageCallback>-Schnittstelle implementiert wird, um beim Empfang einer Nachricht auf einen Nachrichtenheader zuzugreifen.  
+  
+ [!code-csharp[AccessingOperationContext#1](~/samples/snippets/csharp/VS_Snippets_CFX/accessingoperationcontext/cs/receiveinstanceidcallback.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OnReceiveMessage">
+      <MemberSignature Language="C#" Value="public void OnReceiveMessage (System.ServiceModel.OperationContext operationContext, System.Activities.ExecutionProperties activityExecutionProperties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnReceiveMessage(class System.ServiceModel.OperationContext operationContext, class System.Activities.ExecutionProperties activityExecutionProperties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationContext" Type="System.ServiceModel.OperationContext" />
+        <Parameter Name="activityExecutionProperties" Type="System.Activities.ExecutionProperties" />
+      </Parameters>
+      <Docs>
+        <param name="operationContext">Der Vorgangskontext, unter dem die Meldung empfangen wurde.</param>
+        <param name="activityExecutionProperties">Der Satz von Ausführungseigenschaften, die innerhalb des Workflows verfügbar sind.</param>
+        <summary>Ausgeführt, wenn eine Dienstmeldung empfangen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie die <xref:System.ServiceModel.Activities.IReceiveMessageCallback>-Schnittstelle implementiert wird, um beim Empfang einer Nachricht auf einen Nachrichtenheader zuzugreifen.  
+  
+ [!code-csharp[AccessingOperationContext#1](~/samples/snippets/csharp/VS_Snippets_CFX/accessingoperationcontext/cs/receiveinstanceidcallback.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

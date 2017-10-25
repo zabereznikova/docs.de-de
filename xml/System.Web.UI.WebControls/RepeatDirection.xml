@@ -1,0 +1,82 @@
+<Type Name="RepeatDirection" FullName="System.Web.UI.WebControls.RepeatDirection">
+  <TypeSignature Language="C#" Value="public enum RepeatDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RepeatDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.RepeatDirection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Richtung, in der Elemente einer Liste Steuerelement angezeigt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.RepeatDirection> -Enumeration stellt dar, die verschiedenen Richtungen in der die Elemente eines Steuerelements angezeigt werden können.  
+  
+> [!NOTE]
+>  Die Anzahl der angezeigten Spalten immer gemäß der `RepeatColumns` Eigenschaft des Steuerelements.  
+  
+ Horizontale gibt an, dass die Elemente eines Steuerelements angezeigt werden, in Zeilen, die von links nach rechts und dann von oben nach unten, geladen, bis alle Elemente gerendert werden. Beispielsweise, wenn die `RepeatColumns` Eigenschaft des Listensteuerelements auf drei festgelegt ist, werden die Elemente des Listensteuerelements in drei Spalten angezeigt.  
+  
+||||  
+|-|-|-|  
+|1|2|3|  
+|4|5|6|  
+|7|8||  
+  
+ Vertikal gibt an, dass die Elemente eines Steuerelements in Spalten, die von oben nach unten und dann von links nach rechts und geladen angezeigt werden, bis alle Elemente gerendert werden. Beispielsweise, wenn die `RepeatColumns` Eigenschaft des Listensteuerelements auf drei festgelegt ist, werden die Elemente des Listensteuerelements in Zeilen mit drei Elementen angezeigt.  
+  
+||||  
+|-|-|-|  
+|1|4|7|  
+|2|5|8|  
+|3|6||  
+  
+   
+  
+## Examples  
+ [!code-aspx-csharp[DataListLayout#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataListLayout/CS/datalistlayoutcs.aspx#1)]
+ [!code-aspx-vb[DataListLayout#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListLayout/VB/datalistlayoutvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Horizontal">
+      <MemberSignature Language="C#" Value="Horizontal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.RepeatDirection Horizontal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.RepeatDirection.Horizontal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeatDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Elemente einer Liste werden horizontal in Zeilen von links nach rechts und dann von oben nach unten angezeigt, bis alle Elemente gerendert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Vertical">
+      <MemberSignature Language="C#" Value="Vertical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.RepeatDirection Vertical = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.RepeatDirection.Vertical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeatDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Elemente einer Liste werden vertikal in Spalten von oben nach unten angezeigt wird, und dann von links nach rechts, bis alle Elemente gerendert werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

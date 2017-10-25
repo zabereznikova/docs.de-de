@@ -1,0 +1,108 @@
+<Type Name="ModelMetadataProvider" FullName="System.Web.ModelBinding.ModelMetadataProvider">
+  <TypeSignature Language="C#" Value="public abstract class ModelMetadataProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ModelMetadataProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ModelBinding.ModelMetadataProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine abstrakte Basisklasse für einen benutzerdefinierten Metadatenanbieter bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ModelMetadataProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelMetadataProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse initialisiert eine neue Instanz des Objekts, das von abgeleitet ist die <see cref="T:System.Web.ModelBinding.ModelMetadataProvider" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadataForProperties">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;System.Web.ModelBinding.ModelMetadata&gt; GetMetadataForProperties (object container, Type containerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.ModelBinding.ModelMetadata&gt; GetMetadataForProperties(object container, class System.Type containerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelMetadataProvider.GetMetadataForProperties(System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.ModelBinding.ModelMetadata&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+        <Parameter Name="containerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="container">Das Containerobjekt.</param>
+        <param name="containerType">Der Typ des Container-Objekt.</param>
+        <summary>Gibt eine <see cref="T:System.Web.ModelBinding.ModelMetadata" /> Objekt für alle Eigenschaften eines Modells.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.Web.ModelBinding.ModelMetadata" />-Objekten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadataForProperty">
+      <MemberSignature Language="C#" Value="public abstract System.Web.ModelBinding.ModelMetadata GetMetadataForProperty (Func&lt;object&gt; modelAccessor, Type containerType, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.ModelBinding.ModelMetadata GetMetadataForProperty(class System.Func`1&lt;object&gt; modelAccessor, class System.Type containerType, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelMetadataProvider.GetMetadataForProperty(System.Func{System.Object},System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.ModelMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelAccessor" Type="System.Func&lt;System.Object&gt;" />
+        <Parameter Name="containerType" Type="System.Type" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="modelAccessor">Der Modellaccessor.</param>
+        <param name="containerType">Der Typ des Containers.</param>
+        <param name="propertyName">Den Namen der Eigenschaft.</param>
+        <summary>Gibt Metadaten für die angegebene Eigenschaft zurück.</summary>
+        <returns>Die Metadaten für die angegebene Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadataForType">
+      <MemberSignature Language="C#" Value="public abstract System.Web.ModelBinding.ModelMetadata GetMetadataForType (Func&lt;object&gt; modelAccessor, Type modelType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.ModelBinding.ModelMetadata GetMetadataForType(class System.Func`1&lt;object&gt; modelAccessor, class System.Type modelType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelMetadataProvider.GetMetadataForType(System.Func{System.Object},System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.ModelMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelAccessor" Type="System.Func&lt;System.Object&gt;" />
+        <Parameter Name="modelType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="modelAccessor">Der Modellaccessor.</param>
+        <param name="modelType">Der Typ des Modells.</param>
+        <summary>Gibt Metadaten für den angegebenen Modelltyp zurück.</summary>
+        <returns>Metadaten für den angegebenen Modelltyp.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

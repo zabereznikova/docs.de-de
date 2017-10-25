@@ -1,0 +1,100 @@
+<Type Name="ValidatingPropertiesEventArgs" FullName="System.Web.ApplicationServices.ValidatingPropertiesEventArgs">
+  <TypeSignature Language="C#" Value="public class ValidatingPropertiesEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ValidatingPropertiesEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ApplicationServices.ValidatingPropertiesEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.ApplicationServices.ProfileService.ValidatingProperties" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie erstellen einen Ereignishandler für das <xref:System.Web.ApplicationServices.ProfileService.ValidatingProperties> Ereignis, um anzupassen, wie Profileigenschaftswerte überprüft werden. Die <xref:System.Web.ApplicationServices.ProfileService.ValidatingProperties> Ereignis wird ausgelöst, wenn Profileigenschaften für einen Benutzer festgelegt werden. Alle Eigenschaftswerte schlägt die Überprüfung fehl, fügen Sie sie der Sammlung in der <xref:System.Web.ApplicationServices.ValidatingPropertiesEventArgs.FailedProperties%2A> Eigenschaft. Die <xref:System.Web.ApplicationServices.ProfileService.SetPropertiesForCurrentUser%2A> Methodenrückgabe die Auflistung in der <xref:System.Web.ApplicationServices.ValidatingPropertiesEventArgs.FailedProperties%2A> Eigenschaft, damit Sie bestimmen können, welche Eigenschaften Fehler bei der Überprüfung.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Ereignishandler für das <xref:System.Web.ApplicationServices.ProfileService.ValidatingProperties> Ereignis. Wenn der Wert für `FirstName` -Eigenschaft ist leer oder `null`, `FirstName` Eigenschaft hinzugefügt wird die <xref:System.Web.ApplicationServices.ValidatingPropertiesEventArgs.FailedProperties%2A> Auflistung.  
+  
+ [!code-csharp[System.Web.ApplicationServices.ProfileService#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ApplicationServices.ProfileService/cs/Global.asax#1)]
+ [!code-vb[System.Web.ApplicationServices.ProfileService#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ApplicationServices.ProfileService/vb/Global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FailedProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; FailedProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; FailedProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.ValidatingPropertiesEventArgs.FailedProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung, die Profileigenschaften enthält, die Validierung nicht bestanden haben.</summary>
+        <value>Die Profileigenschaften, die Validierung nicht bestanden haben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.ApplicationServices.ValidatingPropertiesEventArgs.FailedProperties%2A> Eigenschaft enthält eine Auflistung der Namen der Eigenschaften, die Validierung nicht bestanden haben. Bei der Erstellung eines ereignishandlers für das <xref:System.Web.ApplicationServices.ProfileService.ValidatingProperties> Ereignis, fügen Sie die Namen der Eigenschaften, bei denen Überprüfung der Sammlung in der <xref:System.Web.ApplicationServices.ValidatingPropertiesEventArgs.FailedProperties%2A> Eigenschaft. Die <xref:System.Web.ApplicationServices.ProfileService.SetPropertiesForCurrentUser%2A> Methodenrückgabe die Auflistung in der <xref:System.Web.ApplicationServices.ValidatingPropertiesEventArgs.FailedProperties%2A> Eigenschaft, damit Sie bestimmen können, welche Eigenschaften Fehler bei der Überprüfung.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Ereignishandler für das <xref:System.Web.ApplicationServices.ProfileService.ValidatingProperties> Ereignis. Wenn der Wert für `FirstName` -Eigenschaft ist leer oder `null`, `FirstName` Eigenschaft hinzugefügt wird die <xref:System.Web.ApplicationServices.ValidatingPropertiesEventArgs.FailedProperties%2A> Auflistung.  
+  
+ [!code-csharp[System.Web.ApplicationServices.ProfileService#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ApplicationServices.ProfileService/cs/Global.asax#1)]
+ [!code-vb[System.Web.ApplicationServices.ProfileService#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ApplicationServices.ProfileService/vb/Global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.ValidatingPropertiesEventArgs.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Namen und Werte der Profileigenschaften zu überprüfen.</summary>
+        <value>Die Namen und Werte der Profileigenschaften zu überprüfen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.ApplicationServices.ValidatingPropertiesEventArgs.Properties%2A> -Eigenschaft gibt ein <xref:System.Collections.IDictionary> Objekt, das die Namen und Werte der Profileigenschaften festzulegende für den Benutzer enthält. Bei der Erstellung eines ereignishandlers für das <xref:System.Web.ApplicationServices.ProfileService.ValidatingProperties> -Ereignis können Sie die Eigenschaften zum Überprüfen von Abrufen der <xref:System.Web.ApplicationServices.ValidatingPropertiesEventArgs.Properties%2A> Eigenschaft. Alle Werte schlägt die Überprüfung fehl, fügen sie die <xref:System.Web.ApplicationServices.ValidatingPropertiesEventArgs.FailedProperties%2A> Eigenschaft. Die <xref:System.Web.ApplicationServices.ProfileService.SetPropertiesForCurrentUser%2A> Methodenrückgabe die Auflistung in der <xref:System.Web.ApplicationServices.ValidatingPropertiesEventArgs.FailedProperties%2A> Eigenschaft, damit Sie bestimmen können, welche Eigenschaften Fehler bei der Überprüfung.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Ereignishandler für das <xref:System.Web.ApplicationServices.ProfileService.ValidatingProperties> Ereignis. Wenn der Wert für `FirstName` -Eigenschaft ist leer oder `null`, `FirstName` Eigenschaft hinzugefügt wird die <xref:System.Web.ApplicationServices.ValidatingPropertiesEventArgs.FailedProperties%2A> Auflistung.  
+  
+ [!code-csharp[System.Web.ApplicationServices.ProfileService#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ApplicationServices.ProfileService/cs/Global.asax#1)]
+ [!code-vb[System.Web.ApplicationServices.ProfileService#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ApplicationServices.ProfileService/vb/Global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

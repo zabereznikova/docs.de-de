@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Framework.XamlTypes">
+  <Docs>
+    <summary>Klassen, mit denen Verwendung von XAML-Typen darstellen, die aus Dateien, Regeln und anderen Quellen analysiert werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

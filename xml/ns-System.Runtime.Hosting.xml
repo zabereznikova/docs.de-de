@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.Hosting">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Hosting" /> -Namespace enthält erweiterte Typen, die in anwendungsaktivierung in Anwendungsdomänen verwendet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

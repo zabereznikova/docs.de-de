@@ -1,0 +1,98 @@
+<Type Name="PartialTrustVisibleAssembliesSection" FullName="System.Web.Configuration.PartialTrustVisibleAssembliesSection">
+  <TypeSignature Language="C#" Value="public sealed class PartialTrustVisibleAssembliesSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PartialTrustVisibleAssembliesSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.PartialTrustVisibleAssembliesSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konfiguriert eine Gruppe von teilweise vertrauenswürdigen Assemblys. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig definiert ASP.NET intern einen bekannten Satz von Assemblys, die mit der teilweise vertrauenswürdigen Aufrufern-Attribut (APTCA) für die Verwendung in teilweise vertrauenswürdigen ASP.NET-Anwendungen gekennzeichnet sind. Die <xref:System.Web.Configuration.PartialTrustVisibleAssembliesSection> APTCA markierten Assemblys der Liste hinzufügen können.  
+  
+ Um eine Assembly zu konfigurieren, benötigen Sie die hexadezimale Zeichenfolgendarstellung seinen öffentlichen Schlüssel. Sie rufen diesen Schlüssel mit dem Strong Name-Tool (Sn.exe). Dieses Tool erzeugt öffentlichem Schlüssel hexadezimale Zeichenfolgendarstellung, die Sie für die Konfiguration zu verwenden und auch das Token für öffentliche Schlüssel erzeugt.  
+  
+ Weitere Informationen über das Strong Name-Tool finden Sie unter [Sn.exe (Strong Name-Tool)](~/docs/framework/tools/sn-exe-strong-name-tool.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie so konfigurieren Sie eine teilweise vertrauenswürdige Assembly mithilfe der `partialTrustVisibleAssemblies` Abschnitt in einer Konfigurationsdatei.  
+  
+```  
+<partialTrustVisibleAssemblies>  
+  <add assemblyName="MyAssembly"   
+    publicKey="hex_key_representation"/>  
+</partialTrustVisibleAssemblies>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PartialTrustVisibleAssembliesSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.PartialTrustVisibleAssembliesSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.PartialTrustVisibleAssembliesSection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartialTrustVisibleAssemblies">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.PartialTrustVisibleAssemblyCollection PartialTrustVisibleAssemblies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.PartialTrustVisibleAssemblyCollection PartialTrustVisibleAssemblies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.PartialTrustVisibleAssembliesSection.PartialTrustVisibleAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("", IsDefaultCollection=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.PartialTrustVisibleAssemblyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Configuration.PartialTrustVisibleAssembliesSection" /> Auflistung APTCA markierten Assemblys zur Verwendung in teilweise vertrauenswürdigen ASP.NET-Anwendungen.</summary>
+        <value>Eine Auflistung der APTCA markierten Assemblys in teilweise vertrauenswürdigen ASP.NET-Anwendungen verwendet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.PartialTrustVisibleAssembliesSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

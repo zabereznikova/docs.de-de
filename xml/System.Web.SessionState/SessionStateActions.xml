@@ -1,0 +1,69 @@
+<Type Name="SessionStateActions" FullName="System.Web.SessionState.SessionStateActions">
+  <TypeSignature Language="C#" Value="public enum SessionStateActions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SessionStateActions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.SessionStateActions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bestimmt, ob ein Sitzungselement aus einem Datenspeicher für eine Sitzung, die die Initialisierung sind erforderlich.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.SessionState.SessionStateActions> Enumeration wird verwendet, durch die <xref:System.Web.SessionState.SessionStateStoreProviderBase.GetItem%2A> und <xref:System.Web.SessionState.SessionStateStoreProviderBase.GetItemExclusive%2A> Methoden eine <xref:System.Web.SessionState.SessionStateStoreProviderBase> Implementierung. Wenn ein Sitzungselement aus dem Datenspeicher abgerufen werden, gibt der Enumerationswert an, ob die Sitzung Initialisierung erforderlich ist oder nicht auf einem Wert, der mit den Daten gespeichert basierend. Die <xref:System.Web.SessionState.SessionStateStoreProviderBase.GetItem%2A> und <xref:System.Web.SessionState.SessionStateStoreProviderBase.GetItemExclusive%2A> Satz von Methoden einer `actions` Parameter an eine <xref:System.Web.SessionState.SessionStateActions> Enumerationswert basierend auf diesen Wert mit dem Sitzungselement abgerufen. Wenn der Wert des der `actions` Parametersatz InitializeItem, ist die <xref:System.Web.SessionState.SessionStateModule> initialisiert die Sitzung und führt die `Session_OnStart` Ereignis in der Datei "Global.asax" für die ASP.NET-Anwendung definiert. Wenn der Wert der `actions` Parameter ist "None", für die aktuelle Sitzung keine zusätzlichen Schritte ausgeführt.  
+  
+ Ein Sitzungselement erstellt, indem die <xref:System.Web.SessionState.SessionStateStoreProviderBase.CreateUninitializedItem%2A> -Methode mit einem Wert, der angibt, dass das Element erforderlich, Initialisierung und ist erstellt die <xref:System.Web.SessionState.SessionStateStoreProviderBase.GetItem%2A> und <xref:System.Web.SessionState.SessionStateStoreProviderBase.GetItemExclusive%2A> Methoden sollten Festlegen der `actions` InitializeItem Parameter.  
+  
+   
+  
+## Examples  
+ Speichern Sie ein Beispiel eines Sitzungsstatus für anbieterimplementierung, die verwendet die <xref:System.Web.SessionState.SessionStateActions> -Enumeration, finden Sie unter [implementieren einen Sitzungszustands-Speicheranbieters](http://msdn.microsoft.com/library/baadfec5-c881-468a-9681-7d8796b05a66).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InitializeItem">
+      <MemberSignature Language="C#" Value="InitializeItem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.SessionState.SessionStateActions InitializeItem = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.SessionState.SessionStateActions.InitializeItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateActions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Sitzungselement aus dem Datenspeicher ist für eine Sitzung, die die Initialisierung sind erforderlich.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.SessionState.SessionStateActions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.SessionState.SessionStateActions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateActions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Initialisierungsaktionen müssen vom aufrufenden Code ausgeführt werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

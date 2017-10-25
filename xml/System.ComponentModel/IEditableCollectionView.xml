@@ -1,0 +1,498 @@
+<Type Name="IEditableCollectionView" FullName="System.ComponentModel.IEditableCollectionView">
+  <TypeSignature Language="C#" Value="public interface IEditableCollectionView" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEditableCollectionView" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.IEditableCollectionView" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Methoden und Eigenschaften, die eine <see cref="T:System.Windows.Data.CollectionView" /> implementiert, um Bearbeitungsfunktionen für eine Sammlung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Auflistungsansicht implementiert die <xref:System.ComponentModel.IEditableCollectionView> -Schnittstelle, Sie können direkt ändern die zugrunde liegenden Auflistung Änderungen vorgenommen werden, mithilfe der Methoden und Eigenschaften, zulässt, <xref:System.ComponentModel.IEditableCollectionView> verfügbar macht, unabhängig vom Typ der Auflistung.  
+  
+ Die Typen <xref:System.Windows.Controls.ItemCollection>, <xref:System.Windows.Data.BindingListCollectionView>, und <xref:System.Windows.Data.ListCollectionView> sind die Typen, die im Lieferumfang enthaltenen [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] , die von erben <xref:System.Windows.Data.CollectionView>.  Diese Typen implementieren darüber hinaus die <xref:System.ComponentModel.IEditableCollectionView>, sodass Sie eine Auflistung bearbeiten können, die einen dieser Typen verwendet.  <xref:System.Windows.Controls.ItemCollection>, insbesondere wird häufig verwendet, da die <xref:System.Windows.Controls.ItemsControl.Items%2A?displayProperty=nameWithType> Eigenschaft ist ein <xref:System.Windows.Controls.ItemCollection>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Hinzufügen eines Elements zu einer Auflistung mit Methoden, die von definiert sind <xref:System.ComponentModel.IEditableCollectionView>.  Diese Anwendung zeigt eine Liste von Elementen für den Verkauf und gewährt dem Benutzer die Möglichkeit, hinzufügen, bearbeiten oder Entfernen eines Elements.  Wenn der Benutzer hinzugefügt oder ein Element bearbeitet, fordert ein Formular den Benutzer zur Eingabe eines neuen Elements an.  Wenn der Benutzer das Formular sendet, ist das Element der Auflistung ein Commit ausgeführt.  Wenn der Benutzer das Formular abbricht, wird das Element verworfen. Das vollständige Beispiel finden Sie unter [Ändern einer Sammlungssatzkonfiguration mit IEditableCollectionView](http://go.microsoft.com/fwlink/?LinkID=159974).  
+  
+ [!code-csharp[EditingCollectionsSnippets#AddItem](~/samples/snippets/csharp/VS_Snippets_Wpf/EditingCollectionsSnippets/CSharp/Window1.xaml.cs#additem)]
+ [!code-vb[EditingCollectionsSnippets#AddItem](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EditingCollectionsSnippets/visualbasic/window1.xaml.vb#additem)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddNew">
+      <MemberSignature Language="C#" Value="public object AddNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object AddNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IEditableCollectionView.AddNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt der Auflistung ein neues Element hinzu.</summary>
+        <returns>Das neue Element, das der Auflistung hinzugefügt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.ComponentModel.IEditableCollectionView.AddNew%2A> beginnt eine Transaktion zum Hinzufügen.  Rufen Sie <xref:System.ComponentModel.IEditableCollectionView.CommitNew%2A> oder <xref:System.ComponentModel.IEditableCollectionView.CancelNew%2A> beendet die Transaktion zum Hinzufügen. Es wird immer ein neues Element in der Auflistungsansicht angezeigt. Ist keine Filterung, Sortierung oder Gruppierung wird angewendet auf die Ansicht wird angewendet, auf das neue Element <xref:System.ComponentModel.IEditableCollectionView.CommitNew%2A> aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Window> , die der Benutzer aufgefordert, ein neues Element hinzufügen.  Anschließend ruft <xref:System.ComponentModel.IEditableCollectionView.AddNew%2A> zum Erstellen eines neuen Objekts und legt die <xref:System.Windows.FrameworkElement.DataContext%2A> von der <xref:System.Windows.Window> auf dieses Objekt. Das vollständige Beispiel finden Sie unter [Ändern einer Sammlungssatzkonfiguration mit IEditableCollectionView](http://go.microsoft.com/fwlink/?LinkID=159974).  
+  
+ [!code-csharp[EditingCollectionsSnippets#AddItem](~/samples/snippets/csharp/VS_Snippets_Wpf/EditingCollectionsSnippets/CSharp/Window1.xaml.cs#additem)]
+ [!code-vb[EditingCollectionsSnippets#AddItem](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EditingCollectionsSnippets/visualbasic/window1.xaml.vb#additem)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanAddNew">
+      <MemberSignature Language="C#" Value="public bool CanAddNew { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanAddNew" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IEditableCollectionView.CanAddNew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Auflistung ein neues Element hinzugefügt werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn der Auflistung ein neues Element hinzugefügt werden kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ComponentModel.IEditableCollectionView> können ein neues Element hinzufügen, wenn Folgendes zutrifft:  
+  
+-   Die zugrunde liegende Auflistung kann ein Element hinzugefügt.  Wenn die Auflistung schreibgeschützt ist, ist beispielsweise <xref:System.ComponentModel.IEditableCollectionView.CanAddNew%2A> ist `false`.  
+  
+-   Die <xref:System.ComponentModel.IEditableCollectionView> können erstellen Sie ein Objekt des Typs, der in der Auflistung vorhanden ist.  Angenommen, wenn die Auflistung des Typs <xref:System.Collections.ObjectModel.ObservableCollection%601>, die <xref:System.ComponentModel.IEditableCollectionView> muss in der Lage, erstellen Sie ein Objekt vom Typ `T`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft, ob ein Element der Auflistung hinzugefügt werden kann.  Wenn <xref:System.ComponentModel.IEditableCollectionView.CanAddNew%2A> ist `false`, im Beispiel wird dem Benutzer mitgeteilt, dass ein Element hinzugefügt werden kann.  Andernfalls wird ein Formular, das den Benutzer auffordert, ein neues Element hinzufügen. Das vollständige Beispiel finden Sie unter [Ändern einer Sammlungssatzkonfiguration mit IEditableCollectionView](http://go.microsoft.com/fwlink/?LinkID=159974) .  
+  
+ [!code-csharp[EditingCollectionsSnippets#AddItem](~/samples/snippets/csharp/VS_Snippets_Wpf/EditingCollectionsSnippets/CSharp/Window1.xaml.cs#additem)]
+ [!code-vb[EditingCollectionsSnippets#AddItem](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EditingCollectionsSnippets/visualbasic/window1.xaml.vb#additem)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCancelEdit">
+      <MemberSignature Language="C#" Value="public bool CanCancelEdit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanCancelEdit" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IEditableCollectionView.CanCancelEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistungsansicht ausstehende Änderungen verwerfen und die ursprünglichen Werte eines bearbeiteten Objekts wiederherstellen kann.</summary>
+        <value>
+          <see langword="true" />, wenn die Auflistungsansicht ausstehende Änderungen verwerfen und die ursprünglichen Werte eines bearbeiteten Objekts wiederherstellen kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.IEditableCollectionView.CanCancelEdit%2A>ist `true` , wenn die Ansicht den Begriff "ausstehende Änderungen" für das derzeit bearbeitete Element unterstützt.   Z. B. möglicherweise eine Auflistungsansicht zurück `true` , wenn das bearbeitete Element implementiert <xref:System.ComponentModel.IEditableObject>, oder wenn die Sicht Informationen zum Zustand des Elements enthält, mit denen es installierter sichern Änderungen. <xref:System.ComponentModel.IEditableCollectionView.CanCancelEdit%2A>ist `false` Ansicht Änderungen für ein Objekt wiederherstellen nicht möglich.  In diesem Fall rufen <xref:System.ComponentModel.IEditableCollectionView.CancelEdit%2A> , dazu führen, dass die Ansicht, um den Bearbeitungsstatus zu beenden, und geben Sie die Logik, um die Änderungen für das Objekt, das geändert wurde, rückgängig zu machen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.ComponentModel.IEditableCollectionView.CanCancelEdit%2A> zu überprüfen, ob die ursprünglichen Werte eines bearbeiteten Elements wiederhergestellt werden können, bevor er ruft <xref:System.ComponentModel.IEditableCollectionView.CancelEdit%2A>.  Wenn die Werte nicht wiederhergestellt werden können, müssen Sie zusätzliche Logik zu diesem Zweck angeben.  Sie werden können, werden die Werte wiederhergestellt, wenn das Beispiel ruft <xref:System.ComponentModel.IEditableCollectionView.CancelEdit%2A>.   Das vollständige Beispiel finden Sie unter [Ändern einer Sammlungssatzkonfiguration mit IEditableCollectionView](http://go.microsoft.com/fwlink/?LinkID=159974).  
+  
+ [!code-csharp[EditingCollectionsSnippets#CancelEdit](~/samples/snippets/csharp/VS_Snippets_Wpf/EditingCollectionsSnippets/CSharp/Window1.xaml.cs#canceledit)]
+ [!code-vb[EditingCollectionsSnippets#CancelEdit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EditingCollectionsSnippets/visualbasic/window1.xaml.vb#canceledit)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelEdit">
+      <MemberSignature Language="C#" Value="public void CancelEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CancelEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IEditableCollectionView.CancelEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Transaktion zum Bearbeiten und stellt, wenn möglich, den ursprünglichen Wert des Elements wieder her.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.IEditableCollectionView.CancelEdit%2A>Legt <xref:System.ComponentModel.IEditableCollectionView.CurrentEditItem%2A> auf `null` und bewirkt, dass die Auflistungsansicht, um den Bearbeitungsstatus zu beenden.  Wenn <xref:System.ComponentModel.IEditableCollectionView.CanCancelEdit%2A> ist `true`, <xref:System.ComponentModel.IEditableCollectionView.CancelEdit%2A> stellt auch die ursprünglichen Werte eines bearbeiteten Objekts.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.ComponentModel.IEditableCollectionView.CanCancelEdit%2A> zu überprüfen, ob die ursprünglichen Werte eines bearbeiteten Elements wiederhergestellt werden können, bevor er ruft <xref:System.ComponentModel.IEditableCollectionView.CancelEdit%2A>.  Wenn die Werte nicht wiederhergestellt werden können, müssen Sie zusätzliche Logik zu diesem Zweck angeben.  Sie werden können, werden die Werte wiederhergestellt, wenn das Beispiel ruft <xref:System.ComponentModel.IEditableCollectionView.CancelEdit%2A>. Das vollständige Beispiel finden Sie unter [Ändern einer Sammlungssatzkonfiguration mit IEditableCollectionView](http://go.microsoft.com/fwlink/?LinkID=159974).  
+  
+ [!code-csharp[EditingCollectionsSnippets#CancelEdit](~/samples/snippets/csharp/VS_Snippets_Wpf/EditingCollectionsSnippets/CSharp/Window1.xaml.cs#canceledit)]
+ [!code-vb[EditingCollectionsSnippets#CancelEdit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EditingCollectionsSnippets/visualbasic/window1.xaml.vb#canceledit)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelNew">
+      <MemberSignature Language="C#" Value="public void CancelNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CancelNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IEditableCollectionView.CancelNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Transaktion zum Hinzufügen und verwirft das ausstehende neue Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt ein Formular, das den Benutzer auffordert, ein neues Element hinzufügen.  Im Beispiel wird aufgerufen, wenn der Benutzer das Formular sendet, <xref:System.ComponentModel.IEditableCollectionView.CommitNew%2A> auf das Element der Auflistung hinzuzufügen.  Im Beispiel wird aufgerufen, wenn der Benutzer das Formular abbricht, <xref:System.ComponentModel.IEditableCollectionView.CancelNew%2A> auf das Element zu verwerfen. Das vollständige Beispiel finden Sie unter [Ändern einer Sammlungssatzkonfiguration mit IEditableCollectionView](http://go.microsoft.com/fwlink/?LinkID=159974).  
+  
+ [!code-csharp[EditingCollectionsSnippets#AddItem](~/samples/snippets/csharp/VS_Snippets_Wpf/EditingCollectionsSnippets/CSharp/Window1.xaml.cs#additem)]
+ [!code-vb[EditingCollectionsSnippets#AddItem](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EditingCollectionsSnippets/visualbasic/window1.xaml.vb#additem)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRemove">
+      <MemberSignature Language="C#" Value="public bool CanRemove { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRemove" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IEditableCollectionView.CanRemove" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Element aus der Auflistung entfernt werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn ein Element aus der Auflistung entfernt werden kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.IEditableCollectionView.CanRemove%2A>ist `false` , wenn die zugrunde liegende Auflistung schreibgeschützt ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.ComponentModel.IEditableCollectionView.CanRemove%2A> zu überprüfen, ob ein Element aus der Auflistung entfernt werden kann.  Wenn ein Element entfernt werden kann, wird im Beispiel fordert den Benutzer zum Bestätigen der Aktion und Aufrufe <xref:System.ComponentModel.IEditableCollectionView.Remove%2A> klickt der Benutzer **Ja**. Das vollständige Beispiel finden Sie unter [Ändern einer Sammlungssatzkonfiguration mit IEditableCollectionView](http://go.microsoft.com/fwlink/?LinkID=159974).  
+  
+ [!code-csharp[EditingCollectionsSnippets#RemoveItem](~/samples/snippets/csharp/VS_Snippets_Wpf/EditingCollectionsSnippets/CSharp/Window1.xaml.cs#removeitem)]
+ [!code-vb[EditingCollectionsSnippets#RemoveItem](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EditingCollectionsSnippets/visualbasic/window1.xaml.vb#removeitem)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommitEdit">
+      <MemberSignature Language="C#" Value="public void CommitEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CommitEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IEditableCollectionView.CommitEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Transaktion zum Bearbeiten und speichert die ausstehenden Änderungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein Formular, das den Benutzer auffordert, ein vorhandenes Element zu bearbeiten.  Im Beispiel wird aufgerufen, wenn der Benutzer das Formular sendet, <xref:System.ComponentModel.IEditableCollectionView.CommitEdit%2A> zum Speichern der Änderungen auf die Auflistung.  Im Beispiel wird aufgerufen, wenn der Benutzer das Formular abbricht, <xref:System.ComponentModel.IEditableCollectionView.CancelEdit%2A> um die Änderungen zu verwerfen. Das vollständige Beispiel finden Sie unter [Ändern einer Sammlungssatzkonfiguration mit IEditableCollectionView](http://go.microsoft.com/fwlink/?LinkID=159974).  
+  
+ [!code-csharp[EditingCollectionsSnippets#EditItem](~/samples/snippets/csharp/VS_Snippets_Wpf/EditingCollectionsSnippets/CSharp/Window1.xaml.cs#edititem)]
+ [!code-vb[EditingCollectionsSnippets#EditItem](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EditingCollectionsSnippets/visualbasic/window1.xaml.vb#edititem)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommitNew">
+      <MemberSignature Language="C#" Value="public void CommitNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CommitNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IEditableCollectionView.CommitNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Transaktion zum Hinzufügen und speichert das ausstehende neue Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ist keine Filterung, Sortierung oder Gruppierung wird angewendet die <xref:System.Windows.Data.CollectionView> angewendet wird, auf das neue Element <xref:System.ComponentModel.IEditableCollectionView.CommitNew%2A> aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt ein Formular, das den Benutzer auffordert, ein neues Element hinzufügen.  Im Beispiel wird aufgerufen, wenn der Benutzer das Formular sendet, <xref:System.ComponentModel.IEditableCollectionView.CommitNew%2A> auf das Element der Auflistung hinzuzufügen.  Im Beispiel wird aufgerufen, wenn der Benutzer das Formular abbricht, <xref:System.ComponentModel.IEditableCollectionView.CancelNew%2A> auf das Element zu verwerfen. Das vollständige Beispiel finden Sie unter [Ändern einer Sammlungssatzkonfiguration mit IEditableCollectionView](http://go.microsoft.com/fwlink/?LinkID=159974).  
+  
+ [!code-csharp[EditingCollectionsSnippets#AddItem](~/samples/snippets/csharp/VS_Snippets_Wpf/EditingCollectionsSnippets/CSharp/Window1.xaml.cs#additem)]
+ [!code-vb[EditingCollectionsSnippets#AddItem](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EditingCollectionsSnippets/visualbasic/window1.xaml.vb#additem)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentAddItem">
+      <MemberSignature Language="C#" Value="public object CurrentAddItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CurrentAddItem" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IEditableCollectionView.CurrentAddItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element ab, das während der aktuellen Hinzufügetransaktion hinzugefügt wird.</summary>
+        <value>Das Element, das hinzugefügt wird, wenn <see cref="P:System.ComponentModel.IEditableCollectionView.IsAddingNew" /> <see langword="true" /> ist, andernfalls <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentEditItem">
+      <MemberSignature Language="C#" Value="public object CurrentEditItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CurrentEditItem" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IEditableCollectionView.CurrentEditItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element in der Auflistung ab, das gerade bearbeitet wird.</summary>
+        <value>Das Element in der Auflistung, die gerade bearbeitet wird, wenn <see cref="P:System.ComponentModel.IEditableCollectionView.IsEditingItem" /> gleich <see langword="true" /> ist, andernfalls <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditItem">
+      <MemberSignature Language="C#" Value="public void EditItem (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EditItem(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IEditableCollectionView.EditItem(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu bearbeitende Element.</param>
+        <summary>Startet eine Transaktion zum Bearbeiten des angegebenen Elements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein Formular, das den Benutzer auffordert, ein vorhandenes Element zu bearbeiten.  Wenn der Benutzer das Formular sendet, werden die Änderungen ein Commit ausgeführt wurde, auf die Auflistung.  Wenn der Benutzer das Formular abbricht, werden die Änderungen verworfen. Das vollständige Beispiel finden Sie unter [Ändern einer Sammlungssatzkonfiguration mit IEditableCollectionView](http://go.microsoft.com/fwlink/?LinkID=159974) .  
+  
+ [!code-csharp[EditingCollectionsSnippets#EditItem](~/samples/snippets/csharp/VS_Snippets_Wpf/EditingCollectionsSnippets/CSharp/Window1.xaml.cs#edititem)]
+ [!code-vb[EditingCollectionsSnippets#EditItem](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EditingCollectionsSnippets/visualbasic/window1.xaml.vb#edititem)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAddingNew">
+      <MemberSignature Language="C#" Value="public bool IsAddingNew { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAddingNew" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IEditableCollectionView.IsAddingNew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob gerade eine Transaktion zum Hinzufügen ausgeführt wird.</summary>
+        <value>
+          <see langword="true" />Wenn eine Transaktion zum Hinzufügen ausgeführt wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Starten Sie eine Transaktion zum Hinzufügen, durch einen Aufruf <xref:System.ComponentModel.IEditableCollectionView.AddNew%2A> und beenden die Transaktion durch Aufrufen von <xref:System.ComponentModel.IEditableCollectionView.CommitNew%2A> oder <xref:System.ComponentModel.IEditableCollectionView.CancelNew%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEditingItem">
+      <MemberSignature Language="C#" Value="public bool IsEditingItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEditingItem" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IEditableCollectionView.IsEditingItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob gerade eine Transaktion zum Bearbeiten ausgeführt wird.</summary>
+        <value>
+          <see langword="true" />Wenn eine Transaktion zum Bearbeiten ausgeführt wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Starten Sie eine Transaktion zum Bearbeiten, durch einen Aufruf <xref:System.ComponentModel.IEditableCollectionView.EditItem%2A> und beendet die Transaktion durch Aufrufen von <xref:System.ComponentModel.IEditableCollectionView.CommitEdit%2A> oder <xref:System.ComponentModel.IEditableCollectionView.CancelEdit%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewItemPlaceholderPosition">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.NewItemPlaceholderPosition NewItemPlaceholderPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.NewItemPlaceholderPosition NewItemPlaceholderPosition" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IEditableCollectionView.NewItemPlaceholderPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.NewItemPlaceholderPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position des neuen Elementplatzhalters in der Auflistungsansicht ab oder legt diese fest.</summary>
+        <value>Einer der Enumerationswerte, der die Position des neuen Elementplatzhalters in der Auflistungsansicht angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IEditableCollectionView.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu entfernende Element.</param>
+        <summary>Entfernt das angegebene Element aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `item` befindet sich nicht in der Auflistung <xref:System.ComponentModel.IEditableCollectionView.Remove%2A> wird keine Aktion ausgeführt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.ComponentModel.IEditableCollectionView.CanRemove%2A> zu überprüfen, ob ein Element aus der Auflistung entfernt werden kann.  Wenn ein Element entfernt werden kann, wird im Beispiel fordert den Benutzer zum Bestätigen der Aktion und Aufrufe <xref:System.ComponentModel.IEditableCollectionView.Remove%2A> klickt der Benutzer **Ja**. Das vollständige Beispiel finden Sie unter [Ändern einer Sammlungssatzkonfiguration mit IEditableCollectionView](http://go.microsoft.com/fwlink/?LinkID=159974).  
+  
+ [!code-csharp[EditingCollectionsSnippets#RemoveItem](~/samples/snippets/csharp/VS_Snippets_Wpf/EditingCollectionsSnippets/CSharp/Window1.xaml.cs#removeitem)]
+ [!code-vb[EditingCollectionsSnippets#RemoveItem](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EditingCollectionsSnippets/visualbasic/window1.xaml.vb#removeitem)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IEditableCollectionView.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element an der angegebenen Position aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `index`ist relativ zu der Auflistungsansicht nicht in der Auflistung.  Angenommen, wenn die Auflistung 10 Elemente und die Sicht hat hat eine <xref:System.ComponentModel.ICollectionView.Filter%2A> , damit 7 Elemente angezeigt werden, die gültigen Werte der `index` sind 0 bis 6.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />ist kleiner als 0 oder größer als die Anzahl der Elemente in der Auflistungsansicht.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

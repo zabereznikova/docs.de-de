@@ -1,0 +1,954 @@
+<Type Name="ValueTuple" FullName="System.ValueTuple">
+  <TypeSignature Language="C#" Value="public struct ValueTuple : IComparable, IComparable&lt;ValueTuple&gt;, IEquatable&lt;ValueTuple&gt;, System.Collections.IStructuralComparable, System.Collections.IStructuralEquatable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ValueTuple extends System.ValueType implements class System.Collections.IStructuralComparable, class System.Collections.IStructuralEquatable, class System.IComparable, class System.IComparable`1&lt;valuetype System.ValueTuple&gt;, class System.IEquatable`1&lt;valuetype System.ValueTuple&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ValueTuple" />
+  <AssemblyInfo>
+    <AssemblyName>System.ValueTuple</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IStructuralComparable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IStructuralEquatable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IComparable&lt;System.ValueTuple&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.ValueTuple&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt statische Methoden zum Erstellen von Werttupeln bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+Ein Tupel ist eine Datenstruktur, die eine bestimmte Anzahl und die Sequenz von Elementen verfügt. Ein Beispiel eines Tupels ist eine Datenstruktur mit drei Elementen (bekannt als ein 3-Tupel bzw. Tripel), die verwendet wird, um einen Bezeichner, z. B. den Namen einer Person in das erste Element, ein Jahr in das zweite Element, und die Person Einkommen für dieses Jahr in das dritte Element zu speichern.  
+  
+Wert-Tupel werden Tupeltypen, die in eingeführt der [!INCLUDE[net_v463](~/includes/net-v463-md.md)] der Common Language Runtime Implementierung der [Tupel in c#](~/docs/csharp/tuples.md) und Struktur Tupel in f#. Sie unterscheiden sich von den Tupelklassen, z. B. <xref:System.Tuple%601>, <xref:System.Tuple%602>usw., wie folgt:  
+  
+-   Sie sind Strukturen (Werttypen) anstatt Klassen (Referenztypen).  
+  
+-   Sie sind änderbare statt schreibgeschützt. D. h. können den Wert der Tupelkomponenten ändern.  
+  
+-   Ihre Datenmember, z. B. `Item1`, `Item2`usw., sind Eigenschaften, statt die Felder.  
+  
+Die <xref:System.ValueTuple> Struktur darstellt, ein Tupel, das über keine Elemente verfügt. Es eignet sich hauptsächlich für die statischen Methoden, mit denen Sie das Erstellen und Instanzen von Werttypen für Tupel zu vergleichen. Deren Hilfsmethoden können Sie die Wert-Tupel zu instanziieren, ohne den Typ der einzelnen Tupel Wertkomponente explizit angeben zu müssen. Durch Aufrufen der statischen <xref:System.ValueTuple.Create%2A> Methoden, können Sie die Wert-Tupel, denen erstellen, von 0 bis acht Komponenten. Sie müssen für die Wert-Tupel mit mehr als acht Komponenten Aufrufen der <xref:System.ValueTuple%608.%23ctor%2A> Konstruktor.  
+
+### <a name="serialization-and-value-tuples"></a>Serialisierung und -Wert-Tupel
+
+Die <xref:System.ValueTuple> Typ ist nicht im .NET-Kern serialisierbar 1.x oder in der .NET Framework 4.7 und früheren Versionen. Darüber hinaus .NET Standard, einschließlich des standardmäßigen .NET 2.0 nicht anordnet Serialisierung <xref:System.ValueTuple> Instanzen; und zwar unabhängig davon, ob eine <xref:System.ValueTuple> Instanz ist serialisierbar richtet sich nach den einzelnen .NET Standard-Implementierung. Um zu bestimmen, ob eine <xref:System.ValueTuple> Typ für die Implementierung einer bestimmten .NET serialisierbar ist, erhalten eine <xref:System.Type> Objekt, das darstellt der <xref:System.ValueTuple> eingeben und Abrufen des Werts eines seiner <xref:System.Type.IsSerializable%2A> Eigenschaft. Eine Liste der serialisierbaren Typen in .NET Core und .NET Framework, finden Sie unter [Binärserialisierung](~/docs/standard/serialization/binary-serialization.md).
+
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (ValueTuple other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(valuetype System.ValueTuple other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.CompareTo(System.ValueTuple)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.ValueTuple" />
+      </Parameters>
+      <Docs>
+        <param name="other">Das Objekt, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Vergleicht die aktuelle <see cref="T:System.ValueTuple" />-Instanz mit einer angegebenen <see cref="T:System.ValueTuple" />-Instanz. </summary>
+        <returns>Diese Methode gibt immer 0 zurück. </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+        Because a <xref:System.ValueTuple> instance has no elements, any two <xref:System.ValueTuple> instances are considered to be equivalent.
+           ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static ValueTuple Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.ValueTuple Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Werttupel mit null Komponenten.</summary>
+        <returns>Ein neues Werttupel ohne Komponenten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1&gt;">
+      <MemberSignature Language="C#" Value="public static ValueTuple&lt;T1&gt; Create&lt;T1&gt; (T1 item1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.ValueTuple`1&lt;!!T1&gt; Create&lt;T1&gt;(!!T1 item1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.Create``1(``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;T1&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der einzigen Komponente des Werttupels.</typeparam>
+        <param name="item1">Der Wert der einzigen Komponente des Werttupels.</param>
+        <summary>Erstellt ein neues Werttupel mit einer Komponente (ein Singleton).</summary>
+        <returns>Ein Werttupel mit einer Komponente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ValueTuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um ein 1-Komponente-Wert-Tupel zu instanziieren, ohne den Typ der Komponente explizit angeben zu müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2&gt;">
+      <MemberSignature Language="C#" Value="public static ValueTuple&lt;T1,T2&gt; Create&lt;T1,T2&gt; (T1 item1, T2 item2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.ValueTuple`2&lt;!!T1, !!T2&gt; Create&lt;T1, T2&gt;(!!T1 item1, !!T2 item2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.Create``2(``0,``1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;T1,T2&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der ersten Komponente des Werttupels.</typeparam>
+        <typeparam name="T2">Der Typ der zweiten Komponente des Werttupels.</typeparam>
+        <param name="item1">Der Wert der ersten Komponente des Werttupels.</param>
+        <param name="item2">Der Wert der zweiten Komponente des Werttupels.</param>
+        <summary>Erstellt ein neues Werttupel mit zwei Komponenten (ein Paar).</summary>
+        <returns>Ein Werttupel mit zwei Komponenten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ValueTuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um ein 2-Wert-Tupel zu instanziieren, ohne die Typen seiner Komponenten explizit angeben zu müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3&gt;">
+      <MemberSignature Language="C#" Value="public static ValueTuple&lt;T1,T2,T3&gt; Create&lt;T1,T2,T3&gt; (T1 item1, T2 item2, T3 item3);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.ValueTuple`3&lt;!!T1, !!T2, !!T3&gt; Create&lt;T1, T2, T3&gt;(!!T1 item1, !!T2 item2, !!T3 item3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.Create``3(``0,``1,``2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;T1,T2,T3&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der ersten Komponente des Werttupels.</typeparam>
+        <typeparam name="T2">Der Typ der zweiten Komponente des Werttupels.</typeparam>
+        <typeparam name="T3">Der Typ der dritten Komponente des Werttupels.</typeparam>
+        <param name="item1">Der Wert der ersten Komponente des Werttupels.</param>
+        <param name="item2">Der Wert der zweiten Komponente des Werttupels.</param>
+        <param name="item3">Der Wert der dritten Komponente des Werttupels.</param>
+        <summary>Erstellt ein neues Werttupel mit drei Komponenten (ein Tripel).</summary>
+        <returns>Ein Werttupel mit drei Komponenten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ValueTuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um ein Tupel Wert 3-Komponente zu instanziieren, ohne die Typen seiner Komponenten explizit angeben zu müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3,T4&gt;">
+      <MemberSignature Language="C#" Value="public static ValueTuple&lt;T1,T2,T3,T4&gt; Create&lt;T1,T2,T3,T4&gt; (T1 item1, T2 item2, T3 item3, T4 item4);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.ValueTuple`4&lt;!!T1, !!T2, !!T3, !!T4&gt; Create&lt;T1, T2, T3, T4&gt;(!!T1 item1, !!T2 item2, !!T3 item3, !!T4 item4) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.Create``4(``0,``1,``2,``3)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;T1,T2,T3,T4&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+        <TypeParameter Name="T4" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+        <Parameter Name="item4" Type="T4" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der ersten Komponente des Werttupels.</typeparam>
+        <typeparam name="T2">Der Typ der zweiten Komponente des Werttupels.</typeparam>
+        <typeparam name="T3">Der Typ der dritten Komponente des Werttupels.</typeparam>
+        <typeparam name="T4">Der Typ der vierten Komponente des Werttupels.</typeparam>
+        <param name="item1">Der Wert der ersten Komponente des Werttupels.</param>
+        <param name="item2">Der Wert der zweiten Komponente des Werttupels.</param>
+        <param name="item3">Der Wert der dritten Komponente des Werttupels.</param>
+        <param name="item4">Der Wert der vierten Komponente des Werttupels.</param>
+        <summary>Erstellt ein neues Werttupel mit vier Komponenten (ein Quadrupel).</summary>
+        <returns>Ein Werttupel mit vier Komponenten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ValueTuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um eine Komponente 4-Wert-Tupel zu instanziieren, ohne die Typen seiner Komponenten explizit angeben zu müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3,T4,T5&gt;">
+      <MemberSignature Language="C#" Value="public static ValueTuple&lt;T1,T2,T3,T4,T5&gt; Create&lt;T1,T2,T3,T4,T5&gt; (T1 item1, T2 item2, T3 item3, T4 item4, T5 item5);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.ValueTuple`5&lt;!!T1, !!T2, !!T3, !!T4, !!T5&gt; Create&lt;T1, T2, T3, T4, T5&gt;(!!T1 item1, !!T2 item2, !!T3 item3, !!T4 item4, !!T5 item5) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.Create``5(``0,``1,``2,``3,``4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;T1,T2,T3,T4,T5&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+        <TypeParameter Name="T4" />
+        <TypeParameter Name="T5" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+        <Parameter Name="item4" Type="T4" />
+        <Parameter Name="item5" Type="T5" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der ersten Komponente des Werttupels.</typeparam>
+        <typeparam name="T2">Der Typ der zweiten Komponente des Werttupels.</typeparam>
+        <typeparam name="T3">Der Typ der dritten Komponente des Werttupels.</typeparam>
+        <typeparam name="T4">Der Typ der vierten Komponente des Werttupels.</typeparam>
+        <typeparam name="T5">Der Typ der fünften Komponente des Werttupels.</typeparam>
+        <param name="item1">Der Wert der ersten Komponente des Werttupels.</param>
+        <param name="item2">Der Wert der zweiten Komponente des Werttupels.</param>
+        <param name="item3">Der Wert der dritten Komponente des Werttupels.</param>
+        <param name="item4">Der Wert der vierten Komponente des Werttupels.</param>
+        <param name="item5">Der Wert der fünften Komponente des Werttupels.</param>
+        <summary>Erstellt ein neues Werttupel mit fünf Komponenten (ein Quintupel).</summary>
+        <returns>Ein Werttupel mit fünf Komponenten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ValueTuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um ein 5-Komponente-Wert-Tupel zu instanziieren, ohne die Typen seiner Komponenten explizit angeben zu müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3,T4,T5,T6&gt;">
+      <MemberSignature Language="C#" Value="public static ValueTuple&lt;T1,T2,T3,T4,T5,T6&gt; Create&lt;T1,T2,T3,T4,T5,T6&gt; (T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.ValueTuple`6&lt;!!T1, !!T2, !!T3, !!T4, !!T5, !!T6&gt; Create&lt;T1, T2, T3, T4, T5, T6&gt;(!!T1 item1, !!T2 item2, !!T3 item3, !!T4 item4, !!T5 item5, !!T6 item6) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.Create``6(``0,``1,``2,``3,``4,``5)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;T1,T2,T3,T4,T5,T6&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+        <TypeParameter Name="T4" />
+        <TypeParameter Name="T5" />
+        <TypeParameter Name="T6" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+        <Parameter Name="item4" Type="T4" />
+        <Parameter Name="item5" Type="T5" />
+        <Parameter Name="item6" Type="T6" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der ersten Komponente des Werttupels.</typeparam>
+        <typeparam name="T2">Der Typ der zweiten Komponente des Werttupels.</typeparam>
+        <typeparam name="T3">Der Typ der dritten Komponente des Werttupels.</typeparam>
+        <typeparam name="T4">Der Typ der vierten Komponente des Werttupels.</typeparam>
+        <typeparam name="T5">Der Typ der fünften Komponente des Werttupels.</typeparam>
+        <typeparam name="T6">Der Typ der sechsten Komponente des Werttupels.</typeparam>
+        <param name="item1">Der Wert der ersten Komponente des Werttupels.</param>
+        <param name="item2">Der Wert der zweiten Komponente des Werttupels.</param>
+        <param name="item3">Der Wert der dritten Komponente des Werttupels.</param>
+        <param name="item4">Der Wert der vierten Komponente des Werttupels.</param>
+        <param name="item5">Der Wert der fünften Komponente des Werttupels.</param>
+        <param name="item6">Der Wert der sechsten Komponente des Werttupels.</param>
+        <summary>Erstellt ein neues Werttupel mit sechs Komponenten.</summary>
+        <returns>Ein Werttupel mit sechs Komponenten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ValueTuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um ein 6-Komponente-Wert-Tupel zu instanziieren, ohne die Typen seiner Komponenten explizit angeben zu müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3,T4,T5,T6,T7&gt;">
+      <MemberSignature Language="C#" Value="public static ValueTuple&lt;T1,T2,T3,T4,T5,T6,T7&gt; Create&lt;T1,T2,T3,T4,T5,T6,T7&gt; (T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.ValueTuple`7&lt;!!T1, !!T2, !!T3, !!T4, !!T5, !!T6, !!T7&gt; Create&lt;T1, T2, T3, T4, T5, T6, T7&gt;(!!T1 item1, !!T2 item2, !!T3 item3, !!T4 item4, !!T5 item5, !!T6 item6, !!T7 item7) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.Create``7(``0,``1,``2,``3,``4,``5,``6)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;T1,T2,T3,T4,T5,T6,T7&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+        <TypeParameter Name="T4" />
+        <TypeParameter Name="T5" />
+        <TypeParameter Name="T6" />
+        <TypeParameter Name="T7" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+        <Parameter Name="item4" Type="T4" />
+        <Parameter Name="item5" Type="T5" />
+        <Parameter Name="item6" Type="T6" />
+        <Parameter Name="item7" Type="T7" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der ersten Komponente des Werttupels.</typeparam>
+        <typeparam name="T2">Der Typ der zweiten Komponente des Werttupels.</typeparam>
+        <typeparam name="T3">Der Typ der dritten Komponente des Werttupels.</typeparam>
+        <typeparam name="T4">Der Typ der vierten Komponente des Werttupels.</typeparam>
+        <typeparam name="T5">Der Typ der fünften Komponente des Werttupels.</typeparam>
+        <typeparam name="T6">Der Typ der sechsten Komponente des Werttupels.</typeparam>
+        <typeparam name="T7">Der Typ der siebten Komponente des Werttupels.</typeparam>
+        <param name="item1">Der Wert der ersten Komponente des Werttupels.</param>
+        <param name="item2">Der Wert der zweiten Komponente des Werttupels.</param>
+        <param name="item3">Der Wert der dritten Komponente des Werttupels.</param>
+        <param name="item4">Der Wert der vierten Komponente des Werttupels.</param>
+        <param name="item5">Der Wert der fünften Komponente des Werttupels.</param>
+        <param name="item6">Der Wert der sechsten Komponente des Werttupels.</param>
+        <param name="item7">Der Wert der siebten Komponente des Werttupels.</param>
+        <summary>Erstellt ein neues Werttupel mit sieben Komponenten.</summary>
+        <returns>Ein Werttupel mit sieben Komponenten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ValueTuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um ein Tupel Wert 7-Komponente zu instanziieren, ohne die Typen seiner Komponenten explizit angeben zu müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3,T4,T5,T6,T7,T8&gt;">
+      <MemberSignature Language="C#" Value="public static ValueTuple&lt;T1,T2,T3,T4,T5,T6,T7,ValueTuple&lt;T8&gt;&gt; Create&lt;T1,T2,T3,T4,T5,T6,T7,T8&gt; (T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.ValueTuple`8&lt;!!T1, !!T2, !!T3, !!T4, !!T5, !!T6, !!T7, valuetype System.ValueTuple`1&lt;!!T8&gt;&gt; Create&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;(!!T1 item1, !!T2 item2, !!T3 item3, !!T4 item4, !!T5 item5, !!T6 item6, !!T7 item7, !!T8 item8) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.Create``8(``0,``1,``2,``3,``4,``5,``6,``7)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;T1,T2,T3,T4,T5,T6,T7,System.ValueTuple&lt;T8&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+        <TypeParameter Name="T4" />
+        <TypeParameter Name="T5" />
+        <TypeParameter Name="T6" />
+        <TypeParameter Name="T7" />
+        <TypeParameter Name="T8" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+        <Parameter Name="item4" Type="T4" />
+        <Parameter Name="item5" Type="T5" />
+        <Parameter Name="item6" Type="T6" />
+        <Parameter Name="item7" Type="T7" />
+        <Parameter Name="item8" Type="T8" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Der Typ der ersten Komponente des Werttupels.</typeparam>
+        <typeparam name="T2">Der Typ der zweiten Komponente des Werttupels.</typeparam>
+        <typeparam name="T3">Der Typ der dritten Komponente des Werttupels.</typeparam>
+        <typeparam name="T4">Der Typ der vierten Komponente des Werttupels.</typeparam>
+        <typeparam name="T5">Der Typ der fünften Komponente des Werttupels.</typeparam>
+        <typeparam name="T6">Der Typ der sechsten Komponente des Werttupels.</typeparam>
+        <typeparam name="T7">Der Typ der siebten Komponente des Werttupels.</typeparam>
+        <typeparam name="T8">Der Typ der achten Komponente des Werttupels.</typeparam>
+        <param name="item1">Der Wert der ersten Komponente des Werttupels.</param>
+        <param name="item2">Der Wert der zweiten Komponente des Werttupels.</param>
+        <param name="item3">Der Wert der dritten Komponente des Werttupels.</param>
+        <param name="item4">Der Wert der vierten Komponente des Werttupels.</param>
+        <param name="item5">Der Wert der fünften Komponente des Werttupels.</param>
+        <param name="item6">Der Wert der sechsten Komponente des Werttupels.</param>
+        <param name="item7">Der Wert der siebten Komponente des Werttupels.</param>
+        <param name="item8">Der Wert der achten Komponente des Werttupels.</param>
+        <summary>Erstellt ein neues Werttupel mit acht Komponenten (ein Oktupel).</summary>
+        <returns>Ein Werttupel mit acht Komponenten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ValueTuple.Create%2A>ist eine Hilfsmethode, die Sie aufrufen können, um ein 8-Wert-Tupel zu instanziieren, ohne die Typen seiner Komponenten explizit angeben zu müssen.  
+  
+> [!NOTE]
+>  Rufen Sie die <xref:System.ValueTuple%608.%23ctor%2A> Konstruktor zum Erstellen eines Tupels mit neun oder mehrere Komponenten, es sei denn, die Sprache für diesen Zweck eine spezielle Syntax bereitstellt. Die statischen Methoden von der <xref:System.ValueTuple> Struktur kann nicht zum Erstellen eines Tupels mit neun oder mehr Komponenten verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob die aktuelle <see cref="T:System.ValueTuple" />-Instanz gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> eine <see cref="T:System.ValueTuple" />-Instanz ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (ValueTuple other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.ValueTuple other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.Equals(System.ValueTuple)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.ValueTuple" />
+      </Parameters>
+      <Docs>
+        <param name="other">Das Werttupel, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Stellt fest, ob zwei <see cref="T:System.ValueTuple" />-Instanzen gleich sind. Diese Methode gibt immer <see langword="true" /> zurück.</summary>
+        <returns>Diese Methode gibt immer <see langword="true" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für die aktuelle <see cref="T:System.ValueTuple" />-Instanz zurück.</summary>
+        <returns>Der Hashcode für die aktuelle <see cref="T:System.ValueTuple" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IStructuralComparable.CompareTo">
+      <MemberSignature Language="C#" Value="int IStructuralComparable.CompareTo (object other, System.Collections.IComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IStructuralComparable.CompareTo(object other, class System.Collections.IComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.System#Collections#IStructuralComparable#CompareTo(System.Object,System.Collections.IComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+        <Parameter Name="comparer" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="other">Das Objekt, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <param name="comparer">Ein Objekt, das benutzerdefinierte Regeln für Vergleiche bereitstellt. Dieser Parameter wird ignoriert.</param>
+        <summary>Vergleicht die aktuelle <see cref="T:System.ValueTuple" />-Instanz mit einem angegebenen Objekt.</summary>
+        <returns>Gibt 0 zurück, wenn <paramref name="other" /> eine <see cref="T:System.ValueTuple" />-Instanz ist, und 1, wenn <paramref name="other" /> den Wert <see langword="null" /> hat.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="other" /> ist keine <see cref="T:System.ValueTuple" />-Instanz.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IStructuralEquatable.Equals">
+      <MemberSignature Language="C#" Value="bool IStructuralEquatable.Equals (object other, System.Collections.IEqualityComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IStructuralEquatable.Equals(object other, class System.Collections.IEqualityComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.System#Collections#IStructuralEquatable#Equals(System.Object,System.Collections.IEqualityComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+        <Parameter Name="comparer" Type="System.Collections.IEqualityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="other">Das Objekt, das mit dieser Instanz verglichen werden soll.</param>
+        <param name="comparer">Ein Objekt, das die Methode definiert, mit der ermittelt wird, ob die beiden Objekte gleich sind.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob die aktuelle <see cref="T:System.ValueTuple" />-Instanz nach einer angegebenen Vergleichsmethode gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Instanz gleich dem angegebenen Objekt ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Member ist eine explizite Schnittstellenimplementierung. Es kann nur verwendet werden verwendet, wenn die <xref:System.ValueTuple>t >-Instanz umgewandelt wird eine <xref:System.Collections.IStructuralEquatable> Schnittstelle. Die <xref:System.Collections.IEqualityComparer.Equals%2A?displayProperty=nameWithType> Implementierung wird nur aufgerufen, wenn `other` nicht `null`, umgewandelt und ob es erfolgreich sein kann ein <xref:System.ValueTuple> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IStructuralEquatable.GetHashCode">
+      <MemberSignature Language="C#" Value="int IStructuralEquatable.GetHashCode (System.Collections.IEqualityComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IStructuralEquatable.GetHashCode(class System.Collections.IEqualityComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.System#Collections#IStructuralEquatable#GetHashCode(System.Collections.IEqualityComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparer" Type="System.Collections.IEqualityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">Ein Objekt, dessen <see cref="M:System.Collections.IEqualityComparer.GetHashCode(System.Object)" />-Methode den Hashcode berechnet. Dieser Parameter wird ignoriert.</param>
+        <summary>Gibt den Hashcode für diese <see cref="T:System.ValueTuple" />-Instanz zurück.</summary>
+        <returns>Der Hashcode für diese <see cref="T:System.ValueTuple" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IComparable.CompareTo">
+      <MemberSignature Language="C#" Value="int IComparable.CompareTo (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.IComparable.CompareTo(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.System#IComparable#CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">Das Objekt, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Vergleicht diese <see cref="T:System.ValueTuple" />-Instanz mit einem angegebenen Objekt und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.</summary>
+        <returns>0, wenn <paramref name="other" /> eine <see cref="T:System.ValueTuple" />-Instanz ist, andernfalls 1, wenn <paramref name="other" /> den Wert <see langword="null" /> hat.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="other" /> ist keine <see cref="T:System.ValueTuple" />-Instanz.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.CompilerServices.ITuple.Item">
+      <MemberSignature Language="C#" Value="object System.Runtime.CompilerServices.ITuple.Item[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Runtime.CompilerServices.ITuple.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.ValueTuple.System#Runtime#CompilerServices#ITuple#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.CompilerServices.ITuple.Length">
+      <MemberSignature Language="C#" Value="int System.Runtime.CompilerServices.ITuple.Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Runtime.CompilerServices.ITuple.Length" />
+      <MemberSignature Language="DocId" Value="P:System.ValueTuple.System#Runtime#CompilerServices#ITuple#Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ValueTuple.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ValueTuple</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolgendarstellung dieser <see cref="T:System.ValueTuple" />-Instanz zurück.</summary>
+        <returns>Diese Methode gibt immer „()“ zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

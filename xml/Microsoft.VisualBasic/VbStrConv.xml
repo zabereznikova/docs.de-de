@@ -1,0 +1,206 @@
+<Type Name="VbStrConv" FullName="Microsoft.VisualBasic.VbStrConv">
+  <TypeSignature Language="C#" Value="public enum VbStrConv" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VbStrConv extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.VbStrConv" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, welche Art der Konvertierung beim Aufruf der <see langword="StrConv" />-Funktion ausgeführt werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen der `StrConv` -Funktion können Sie im Code anstelle der eigentlichen Werte der folgenden Enumerationsmember. Die `Conversion` Argument übernimmt die `VbStrConv` Enumerationsmember.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Hiragana">
+      <MemberSignature Language="C#" Value="Hiragana" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv Hiragana = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VbStrConv.Hiragana" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Konvertiert Katakana-Zeichen in der Zeichenfolge in Hiragana-Zeichen. Gilt nur für das japanische Gebietsschema. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbHiragana" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Katakana">
+      <MemberSignature Language="C#" Value="Katakana" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv Katakana = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VbStrConv.Katakana" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Konvertiert Hiragana-Zeichen in der Zeichenfolge in Katakana-Zeichen. Gilt nur für das japanische Gebietsschema. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbKatakana" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LinguisticCasing">
+      <MemberSignature Language="C#" Value="LinguisticCasing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv LinguisticCasing = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VbStrConv.LinguisticCasing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Konvertiert die Zeichenfolge von einer Schreibweise gemäß Dateisystemregeln in eine Schreibweise gemäß linguistischer Regeln. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbLinguisticCasing" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Lowercase">
+      <MemberSignature Language="C#" Value="Lowercase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv Lowercase = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VbStrConv.Lowercase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Konvertiert die Zeichenfolge in Kleinbuchstaben. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbLowerCase" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Narrow">
+      <MemberSignature Language="C#" Value="Narrow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv Narrow = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VbStrConv.Narrow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Konvertiert Doppelbytezeichen in der Zeichenfolge in Einzelbytezeichen. Gilt für asiatische Gebietsschemas. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbNarrow" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VbStrConv.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Führt keine Konvertierung aus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProperCase">
+      <MemberSignature Language="C#" Value="ProperCase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv ProperCase = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VbStrConv.ProperCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Konvertiert den ersten Buchstaben jedes Worts in der Zeichenfolge in einen Großbuchstaben. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbProperCase" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SimplifiedChinese">
+      <MemberSignature Language="C#" Value="SimplifiedChinese" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv SimplifiedChinese = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VbStrConv.SimplifiedChinese" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Konvertiert die Zeichenfolge in vereinfachte chinesische Zeichen. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbSimplifiedChinese" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TraditionalChinese">
+      <MemberSignature Language="C#" Value="TraditionalChinese" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv TraditionalChinese = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VbStrConv.TraditionalChinese" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Konvertiert die Zeichenfolge in traditionelle chinesische Zeichen. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbTraditionalChinese" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Uppercase">
+      <MemberSignature Language="C#" Value="Uppercase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv Uppercase = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VbStrConv.Uppercase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Konvertiert die Zeichenfolge in Großbuchstaben. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbUpperCase" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Wide">
+      <MemberSignature Language="C#" Value="Wide" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv Wide = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.VbStrConv.Wide" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Konvertiert Einzelbytezeichen in der Zeichenfolge in Doppelbytezeichen. Gilt für asiatische Gebietsschemas. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbWide" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,260 @@
+<Type Name="JSMethod" FullName="Microsoft.JScript.JSMethod">
+  <TypeSignature Language="C#" Value="public abstract class JSMethod : System.Reflection.MethodInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit JSMethod extends System.Reflection.MethodInfo" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.JSMethod" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.MethodInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("561AC104-8869-4368-902F-4E0D7DDEDDDD")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine JScript-Methode dar. Diese Klasse gehört zur Namensbindungskategorie.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetBaseDefinition">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodInfo GetBaseDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.MethodInfo GetBaseDefinition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSMethod.GetBaseDefinition" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Reflection.MethodInfo" /> -Objekt für die Methode für die direkte oder indirekte Basisklasse, die in der diese Methode zuerst deklariert wurde.</summary>
+        <returns>
+          <see langword="this" /> in allen Fällen.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSMethod.GetCustomAttributes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inherit">
+          <see langword="true" />Bei diesem Member Vererbungshierarchie zum Suchen der Attribute zu suchen.</param>
+        <summary>Gibt ein Array, das die benutzerdefinierten Attribute enthält, die an diese Methode angefügt sind.</summary>
+        <returns>Ein Array von <see cref="T:System.Object" /> Objekte, die 0 (null) Elemente verfügt.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (Type t, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(class System.Type t, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSMethod.GetCustomAttributes(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="t">Der Typ des zu suchenden Attributs.</param>
+        <param name="inherit">
+          <see langword="true" />Bei diesem Member Vererbungshierarchie zum Suchen der Attribute zu suchen.</param>
+        <summary>Gibt ein Array, das die benutzerdefinierten Attribute enthält, die mit dieser Methode wird nur für Attribute des angegebenen Typs suchen verbunden sind.</summary>
+        <returns>Ein Array von <see cref="T:System.Object" /> Objekte, die 0 (null) Elemente verfügt.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodImplementationFlags">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodImplAttributes GetMethodImplementationFlags ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Reflection.MethodImplAttributes GetMethodImplementationFlags() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSMethod.GetMethodImplementationFlags" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodImplAttributes</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt Informationen über die Implementierung dieser Methode zurück.</summary>
+        <returns>
+          <see cref="F:System.Reflection.MethodImplAttributes.Managed" /> und <see cref="F:System.Reflection.MethodImplAttributes.IL" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public override object Invoke (object obj, System.Reflection.BindingFlags options, System.Reflection.Binder binder, object[] parameters, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Invoke(object obj, valuetype System.Reflection.BindingFlags options, class System.Reflection.Binder binder, object[] parameters, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSMethod.Invoke(System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="options" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt zum Aufrufen der Methode auf.</param>
+        <param name="options">Eine bitweise Kombination der Enumerationswerte, die die Bindung steuern.</param>
+        <param name="binder">Ein Objekt, das den Typ von tatsächlicher Argumenttyp zum Typ des formalen Arguments konvertiert.</param>
+        <param name="parameters">Die Argumentliste, die an die Methode übergeben.</param>
+        <param name="culture">Enthält Informationen über eine bestimmte Kultur oder ein Gebietsschema. Zur ordnungsgemäßen Formatierung von Zahlen, Datumsangaben und Zeichenfolgen verwendet.</param>
+        <summary>Ruft die Methode unter Verwendung den angegebenen Informationen.</summary>
+        <returns>Der Rückgabewert des Aufrufs der Methode.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public override sealed bool IsDefined (Type type, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefined(class System.Type type, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSMethod.IsDefined(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ des zu suchenden Attributs.</param>
+        <param name="inherit">
+          <see langword="true" />Bei diesem Member Vererbungshierarchie zum Suchen der Attribute zu suchen.</param>
+        <summary>Bestimmt, ob der Typ des angegebenen Attributs an diese Methode angefügt ist.</summary>
+        <returns>
+          <see langword="false" /> in allen Fällen.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MemberTypes MemberType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.MemberTypes MemberType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JSMethod.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Members, der diese Methode ist. Gibt den Typ der abgeleiteten Klasse <see cref="T:System.Reflection.MemberInfo" /> , die diese Klasse abgeleitet wurde.</summary>
+        <value>
+          <see cref="F:System.Reflection.MemberTypes.Method" />, da diese Klasse abgeleitet <see cref="T:System.Reflection.MethodInfo" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MethodHandle">
+      <MemberSignature Language="C#" Value="public override RuntimeMethodHandle MethodHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.RuntimeMethodHandle MethodHandle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JSMethod.MethodHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeMethodHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Handle für die interne Metadatendarstellung dieser Methode ab.</summary>
+        <value>Ein Handle für die interne Metadatendarstellung dieser Methode.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectedType">
+      <MemberSignature Language="C#" Value="public override Type ReflectedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReflectedType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JSMethod.ReflectedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Klassenobjekt, mit dem diese Instanz durch Reflektion abgerufen wurde.</summary>
+        <value>Der Typ, der diese Methode deklariert.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnTypeCustomAttributes">
+      <MemberSignature Language="C#" Value="public override System.Reflection.ICustomAttributeProvider ReturnTypeCustomAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.ICustomAttributeProvider ReturnTypeCustomAttributes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JSMethod.ReturnTypeCustomAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ICustomAttributeProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die benutzerdefinierten Attribute für den Typ des Rückgabewerts dieser Methode ab.</summary>
+        <value>NULL in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

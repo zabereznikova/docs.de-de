@@ -1,0 +1,33 @@
+<Type Name="IOutputSession" FullName="System.ServiceModel.Channels.IOutputSession">
+  <TypeSignature Language="C#" Value="public interface IOutputSession : System.ServiceModel.Channels.ISession" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IOutputSession implements class System.ServiceModel.Channels.ISession" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IOutputSession" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.ISession</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert die Schnittstelle für die Sitzung, die auf der sendenden Seite einer unidirektionalen Kommunikation zwischen Messagingendpunkten implementiert ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf der anderen Seite des Nachrichtenaustausches stellt die <xref:System.ServiceModel.Channels.IInputSession>-Schnittstelle eine eingehende <xref:System.ServiceModel.Channels.ISession> dar, die auf der Empfangsseite einer unidirektionalen Kommunikation zwischen Messagingendpunkten implementiert ist. Beachten Sie, dass sich diese zwei Sitzungen unterscheiden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

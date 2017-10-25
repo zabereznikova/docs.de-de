@@ -1,0 +1,169 @@
+<Type Name="SchemaImporterExtensionElement" FullName="System.Xml.Serialization.Configuration.SchemaImporterExtensionElement">
+  <TypeSignature Language="C#" Value="public sealed class SchemaImporterExtensionElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SchemaImporterExtensionElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.Configuration.SchemaImporterExtensionElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Behandelt die Konfiguration für die <see cref="T:System.Xml.Serialization.XmlSchemaImporter" /> Klasse. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird von der Serialisierungsinfrastruktur zur Behandlung von Konfiguration verwendet und kann nicht direkt verwendet werden. Weitere Informationen zu Konfigurationsdateien finden Sie unter [Konfigurationsdateienschema](~/docs/framework/configure-apps/file-schema/index.md).  
+  
+ Stattdessen so konfigurieren Sie die <xref:System.Xml.Serialization.XmlSchemaImporter>, erstellen Sie eine Anwendungskonfigurationsdatei, und verwenden Sie die folgenden XML-Elemente, um Typen, die von der Klasse verwendet werden, wenn die Zuordnung von XSD-Typen in .net Framework-Typen anzugeben:  
+  
+-   [&lt;System.Xml.Serialization&gt; Element](~/docs/standard/serialization/system-xml-serialization-element.md)  
+  
+-   [&lt;SchemaImporterExtensions&gt; Element](~/docs/standard/serialization/schemaimporterextensions-element.md)  
+  
+-   [&lt;Hinzufügen&gt; -Element für &lt;XmlSchemaImporterExtensions&gt;](~/docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SchemaImporterExtensionElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Configuration.SchemaImporterExtensionElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.Configuration.SchemaImporterExtensionElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SchemaImporterExtensionElement (string name, string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Configuration.SchemaImporterExtensionElement.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der neuen Erweiterung. Der Name muss eindeutig sein.</param>
+        <param name="type">Der Typ der neuen Erweiterung, die als Zeichenfolge angegeben.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Serialization.Configuration.SchemaImporterExtensionElement" /> -Klasse und gibt den Namen und Typ der Erweiterung.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SchemaImporterExtensionElement (string name, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Configuration.SchemaImporterExtensionElement.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der neuen Erweiterung. Der Name muss eindeutig sein.</param>
+        <param name="type">Die <see cref="T:System.Type" /> der neuen Erweiterung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Serialization.Configuration.SchemaImporterExtensionElement" /> -Klasse mit dem angegebenen Namen und Typ.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.Configuration.SchemaImporterExtensionElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Erweiterung.</summary>
+        <value>Der Name der Erweiterung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name muss eindeutig sein.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.Configuration.SchemaImporterExtensionElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.Configuration.SchemaImporterExtensionElement.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Xml.Serialization.Configuration.SchemaImporterExtensionElement/TypeTypeConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("type", IsKey=false, IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Erweiterung fest.</summary>
+        <value>Ein Typ der Erweiterung.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

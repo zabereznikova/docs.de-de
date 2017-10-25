@@ -1,0 +1,87 @@
+<Type Name="WorkflowApplicationEventArgs" FullName="System.Activities.WorkflowApplicationEventArgs">
+  <TypeSignature Language="C#" Value="public class WorkflowApplicationEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowApplicationEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.WorkflowApplicationEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Basisklasse für Ereignisse, die einer <see cref="T:System.Activities.WorkflowApplication" /> zugeordnet sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.WorkflowApplicationEventArgs> wird auch im <xref:System.Activities.WorkflowApplication.Unloaded%2A>-Handler einer <xref:System.Activities.WorkflowApplication>-Instanz verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel werden die in den <xref:System.Activities.WorkflowApplicationEventArgs>-Handler einer <xref:System.Activities.WorkflowApplication.Unloaded%2A>-Instanz übergebenen <xref:System.Activities.WorkflowApplication> überprüft, und die <xref:System.Activities.WorkflowApplicationEventArgs.InstanceId%2A> des Workflows, der entladen wurde, wird angezeigt.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#3](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetInstanceExtensions&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;T&gt; GetInstanceExtensions&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; GetInstanceExtensions&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationEventArgs.GetInstanceExtensions``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Der Typ der Erweiterung.</typeparam>
+        <summary>Ruft die Auflistung der Erweiterungen des angegebenen Typs ab.</summary>
+        <returns>Die Auflistung der Erweiterungen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowApplicationEventArgs.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der eindeutige Bezeichner der Workflowinstanz.</summary>
+        <value>Ein eindeutiger Bezeichner.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel werden die in den <xref:System.Activities.WorkflowApplicationEventArgs>-Handler einer <xref:System.Activities.WorkflowApplication.Unloaded%2A>-Instanz übergebenen <xref:System.Activities.WorkflowApplication> überprüft, und die <xref:System.Activities.WorkflowApplicationEventArgs.InstanceId%2A> des Workflows, der entladen wurde, wird angezeigt.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#3](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

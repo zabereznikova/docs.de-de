@@ -1,0 +1,429 @@
+<Type Name="XmlDocumentFragment" FullName="System.Xml.XmlDocumentFragment">
+  <TypeSignature Language="C#" Value="public class XmlDocumentFragment : System.Xml.XmlNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlDocumentFragment extends System.Xml.XmlNode" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlDocumentFragment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlNode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein einfaches Objekt dar, das für das Einfügen in Strukturen nützlich ist.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlDocumentFragment (System.Xml.XmlDocument ownerDocument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlDocument ownerDocument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlDocumentFragment.#ctor(System.Xml.XmlDocument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerDocument" Type="System.Xml.XmlDocument" />
+      </Parameters>
+      <Docs>
+        <param name="ownerDocument">Das XML-Dokument, der die Quelle des Fragments.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlDocumentFragment" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instanziieren Sie keine <xref:System.Xml.XmlDocumentFragment> direkt; stattdessen verwenden Sie Methoden wie <xref:System.Xml.XmlDocument.CreateDocumentFragment%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneNode">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode CloneNode (bool deep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlNode CloneNode(bool deep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlDocumentFragment.CloneNode(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deep" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="deep">
+          <see langword="true" />, wenn die Teilstruktur unter dem angegebenen Knoten rekursiv geklont werden soll, <see langword="false" />, wenn nur der Knoten selbst geklont werden soll.</param>
+        <summary>Erstellt ein Duplikat dieses Knotens.</summary>
+        <returns>Der geklonte Knoten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `CloneNode`Dient als einen Kopierkonstruktor für Knoten. Verhalten von dieser Methode mit anderen Knotentypen finden Sie unter <xref:System.Xml.XmlNode.CloneNode%2A?displayProperty=nameWithType>.  
+  
+ Der geklonte Knoten weist kein übergeordnetes Element (<xref:System.Xml.XmlDocumentFragment.ParentNode%2A> gibt `null`).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Unterschied zwischen einem Tiefe und flache Klon.  
+  
+ [!code-cpp[Classic WebData XmlDocumentFragment.CloneNode Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlDocumentFragment.CloneNode Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlDocumentFragment.CloneNode Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlDocumentFragment.CloneNode Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlDocumentFragment.CloneNode Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlDocumentFragment.CloneNode Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerXml">
+      <MemberSignature Language="C#" Value="public override string InnerXml { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerXml" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDocumentFragment.InnerXml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Markup, das die untergeordneten Elemente dieses Knotens darstellt.</summary>
+        <value>Das Markup der untergeordneten Elemente dieses Knotens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft ersetzt die untergeordneten Knoten durch analysierten Inhalt der angegebenen Zeichenfolge. Die Analyse wird im Kontext des aktuellen Namespaces durchgeführt.  
+  
+ Diese Eigenschaft ist eine Microsoft-Erweiterung des Dokumentobjektmodells (DOM).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel verwendet die InnerXml-Eigenschaft, um den Inhalt des Dokumentfragments festzulegen.  
+  
+ [!code-cpp[Classic WebData XmlDocumentFragment.InnerXml Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlDocumentFragment.InnerXml Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlDocumentFragment.InnerXml Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlDocumentFragment.InnerXml Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlDocumentFragment.InnerXml Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlDocumentFragment.InnerXml Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">Der beim Festlegen dieser Eigenschaft angegebene XML-Code ist nicht ordnungsgemäß formatiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalName">
+      <MemberSignature Language="C#" Value="public override string LocalName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDocumentFragment.LocalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den lokalen Namen des Knotens ab.</summary>
+        <value>Für <see langword="XmlDocumentFragment" /> Knoten, der lokale Name ist <see langword="#document-fragment" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDocumentFragment.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den qualifizierten Namen des Knotens ab.</summary>
+        <value>Für <see langword="XmlDocumentFragment" />, heißt <see langword="#document-fragment" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDocumentFragment.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des aktuellen Knotens ab.</summary>
+        <value>Für <see langword="XmlDocumentFragment" /> -Knoten ist dieser Wert XmlNodeType.DocumentFragment.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDocument">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlDocument OwnerDocument { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlDocument OwnerDocument" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDocumentFragment.OwnerDocument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDocument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Xml.XmlDocument" /> ab, zu dem dieser Knoten gehört.</summary>
+        <value>Das <see langword="XmlDocument" />, zu dem dieser Knoten gehört.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie beim Hinzufügen von Knoten auf den aktuellen Knoten die `XmlDocument` zurückgegebenes der `OwnerDocument` Eigenschaft, um den Knoten zu erstellen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird der Dokument-Fragment einen neuen Knoten hinzugefügt.  
+  
+ [!code-cpp[Classic WebData XmlDocumentFragment.OwnerDocument Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlDocumentFragment.OwnerDocument Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlDocumentFragment.OwnerDocument Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlDocumentFragment.OwnerDocument Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlDocumentFragment.OwnerDocument Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlDocumentFragment.OwnerDocument Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentNode">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode ParentNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNode ParentNode" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDocumentFragment.ParentNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das übergeordnete Element dieses Knotens ab (bei Knoten, die über übergeordnete Elemente verfügen können).</summary>
+        <value>Das übergeordnete Element dieses Knotens.  
+  
+ Für <see langword="XmlDocumentFragment" /> -Knoten ist diese Eigenschaft ist immer <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteContentTo">
+      <MemberSignature Language="C#" Value="public override void WriteContentTo (System.Xml.XmlWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteContentTo(class System.Xml.XmlWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlDocumentFragment.WriteContentTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">Der <see langword="XmlWriter" />, in dem gespeichert werden soll.</param>
+        <summary>Speichert alle untergeordneten Elemente des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine Microsoft-Erweiterung, die (DOKUMENTOBJEKTMODELL).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public override void WriteTo (System.Xml.XmlWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteTo(class System.Xml.XmlWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlDocumentFragment.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">Der <see langword="XmlWriter" />, in dem gespeichert werden soll.</param>
+        <summary>Speichert den Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine Microsoft-Erweiterung, die (DOKUMENTOBJEKTMODELL).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,82 @@
+<Type Name="PngInterlaceOption" FullName="System.Windows.Media.Imaging.PngInterlaceOption">
+  <TypeSignature Language="C#" Value="public enum PngInterlaceOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PngInterlaceOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.PngInterlaceOption" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob ein Bild im Portable Network Graphics (PNG)-Format während der Codierung das Zeilensprungverfahren angewendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeilensprung bezieht sich auf die Anzeige einer [!INCLUDE[TLA2#tla_png](~/includes/tla2sharptla-png-md.md)] Frame in zwei Felder. Ein Feld enthält der geraden Zeilen des Rahmens, während das andere Feld der ungeraden Zeilen des Frames enthält. Wenn die [!INCLUDE[TLA2#tla_png](~/includes/tla2sharptla-png-md.md)] wird angezeigt, die Zeilen in einem Feld angezeigt werden, und klicken Sie dann die Zeilen im zweiten Feld angezeigt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Media.Imaging.PngBitmapEncoder.Interlace%2A> Eigenschaft von der <xref:System.Windows.Media.Imaging.PngBitmapEncoder> Klasse.  
+  
+ [!code-cpp[pngbitmapdecoderencoder#3](~/samples/snippets/cpp/VS_Snippets_Wpf/PngBitmapDecoderEncoder/CPP/PngEncoderDecoder.cpp#3)]
+ [!code-csharp[pngbitmapdecoderencoder#3](~/samples/snippets/csharp/VS_Snippets_Wpf/PngBitmapDecoderEncoder/CSharp/PngEncoderDecoder.cs#3)]
+ [!code-vb[pngbitmapdecoderencoder#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PngBitmapDecoderEncoder/VB/PngEncoderDecoder.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Imaging.PngInterlaceOption Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.PngInterlaceOption.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.PngInterlaceOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Media.Imaging.PngBitmapEncoder" /> bestimmt, ob das Bild mit Zeilensprung dargestellt werden soll.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Off">
+      <MemberSignature Language="C#" Value="Off" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Imaging.PngInterlaceOption Off = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.PngInterlaceOption.Off" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.PngInterlaceOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das resultierende Bitmap-Bild wird ohne Zeilensprung dargestellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="On">
+      <MemberSignature Language="C#" Value="On" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Imaging.PngInterlaceOption On = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.PngInterlaceOption.On" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.PngInterlaceOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das resultierende Bitmap-Bild wird mit Zeilensprung dargestellt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

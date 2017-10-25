@@ -1,0 +1,128 @@
+<Type Name="FileDialogCustomPlacesCollection" FullName="System.Windows.Forms.FileDialogCustomPlacesCollection">
+  <TypeSignature Language="C#" Value="public class FileDialogCustomPlacesCollection : System.Collections.ObjectModel.Collection&lt;System.Windows.Forms.FileDialogCustomPlace&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileDialogCustomPlacesCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.Windows.Forms.FileDialogCustomPlace&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FileDialogCustomPlacesCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.Windows.Forms.FileDialogCustomPlace&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Windows.Forms.FileDialogCustomPlace</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von Windows Vista benutzerdefinierter Speicherorte für die <see cref="T:System.Windows.Forms.FileDialog" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf [!INCLUDE[winxp](~/includes/winxp-md.md)] oder [!INCLUDE[winxpsvr](~/includes/winxpsvr-md.md)], diese Klasse keine Auswirkung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.FileDialogCustomPlacesCollection>. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in einem Windows Form, und rufen `InitializeDialogAndButton` aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-csharp[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileDialogCustomPlacesCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FileDialogCustomPlacesCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.FileDialogCustomPlacesCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (Guid knownFolderGuid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(valuetype System.Guid knownFolderGuid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FileDialogCustomPlacesCollection.Add(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="knownFolderGuid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="knownFolderGuid">Ein <see cref="T:System.Guid" /> darstellt, die eine [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] Ordner bezeichnet.</param>
+        <summary>Fügt einen benutzerdefinierten Speicherort auf dem <see cref="T:System.Windows.Forms.FileDialogCustomPlacesCollection" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzerdefinierte Umgebungen nur für einen bestimmten Ordner hinzugefügt <xref:System.Windows.Forms.FileDialog> und keine System- oder Breite ändern.  
+  
+ Die Ordner werden in den benutzerdefinierten Speicherorten in der Reihenfolge, die sie hinzugefügt werden positioniert das <xref:System.Windows.Forms.FileDialog>. Oben ist das letzte Lesezeichen hinzugefügt werden. Wenn Sie einen benutzerdefinierten Speicherort zur Auflistung, die auf dem Computer mit der Anwendung nicht vorhanden ist hinzufügen, wird der benutzerdefinierte Speicherort nicht angezeigt werden. GUIDs Groß-/Kleinschreibung unterschieden. Eine Liste der verfügbaren [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] bekannte Ordner finden Sie unter [bekannte Ordner-GUIDs für benutzerdefinierte im Dateidialogfeld](~/docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md) Datei KnownFolders.h in der [!INCLUDE[winSDK](~/includes/winsdk-md.md)].  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in einem Windows Form, und rufen `InitializeDialogAndButton` aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-csharp[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FileDialogCustomPlacesCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Einen Ordnerpfad zum benutzerdefinierten Speicherort.</param>
+        <summary>Fügt einen benutzerdefinierten Speicherort auf dem <see cref="T:System.Windows.Forms.FileDialogCustomPlacesCollection" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzerdefinierte Umgebungen nur für einen bestimmten Ordner hinzugefügt <xref:System.Windows.Forms.FileDialog> und keine System- oder Breite ändern.  
+  
+ Die Ordner werden in den benutzerdefinierten Speicherorten in der Reihenfolge, die sie hinzugefügt werden positioniert das <xref:System.Windows.Forms.FileDialog>. Oben ist das letzte Lesezeichen hinzugefügt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in einem Windows Form, und rufen `InitializeDialogAndButton` aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-csharp[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

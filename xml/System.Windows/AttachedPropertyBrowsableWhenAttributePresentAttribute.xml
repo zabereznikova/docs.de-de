@@ -1,0 +1,134 @@
+<Type Name="AttachedPropertyBrowsableWhenAttributePresentAttribute" FullName="System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AttachedPropertyBrowsableWhenAttributePresentAttribute : System.Windows.AttachedPropertyBrowsableAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AttachedPropertyBrowsableWhenAttributePresentAttribute extends System.Windows.AttachedPropertyBrowsableAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.AttachedPropertyBrowsableAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine angefügte Eigenschaft nur für ein Element gesucht werden kann, die auch eine andere bestimmtes .NET Framework-Attribut auf dessen Klassendefinition angewendet wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Bedeutung des Begriffs `browsable` wie dies bei Beschreibungen für diesen [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] ist analog zu die Beschreibungen für <xref:System.ComponentModel.BrowsableAttribute>, aber der durchsuchbarkeitszustand für eine angefügte Eigenschaft ist besonders relevant für die Eigenschaftsinformationen für [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], da in erster Linie eine angefügte Eigenschaft ist ein [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Konzept.  
+  
+ Dies [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] sollte nur auf Get-Accessor der angefügten Eigenschaftsdefinitionen angewendet werden. Dies sind nicht anwendbar [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] für die Set-Zugriffsmethode. Obwohl intuitiv die Set-Operation, die durchsuchbar für bereitgestellt werden [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] auf den entsprechenden Elementen ist das Vorhandensein und die Merkmale der Get-Accessor für die Eigenschaft, die das "true" Verhalten steuert-Element definiert.  
+  
+ Allgemeine Informationen zum Deklarieren von angefügten Eigenschaften finden Sie unter [Eigenschaftenübersicht angefügt](~/docs/framework/wpf/advanced/attached-properties-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AttachedPropertyBrowsableWhenAttributePresentAttribute (Type attributeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type attributeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Die <see cref="T:System.Type" /> von der [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] auch auf eine Klasse in der Reihenfolge für die angefügte Eigenschaft gesucht werden kann, auf die Klasse sein angewendet werden muss, in denen <see cref="T:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute" /> angewendet wird...</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeType">
+      <MemberSignature Language="C#" Value="public Type AttributeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AttributeType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute.AttributeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des der [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] auch auf eine Klasse angewendet werden muss.</summary>
+        <value>Die [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] Typ.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute.AttributeType%2A> Wert kann nur festgelegt werden, über die `attributeType` Parameter von der <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute" /> zum Vergleichen mit der aktuellen <see cref="T:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute" />.</param>
+        <summary>Bestimmt, ob die aktuelle <see cref="T:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute" /> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] mit einem angegebenen Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene <see cref="T:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute" /> gleich der aktuellen <see cref="T:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung unterstützt Wertgleichheit des einen möglichen festlegbaren Werts, der von diesem Attribut verfügbar gemacht <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute.AttributeType%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese <see cref="T:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute" /> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)].</summary>
+        <returns>Ein 32-Bit-Ganzzahlwert ohne Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung unterstützt mehrere mögliche Hashwerte basierend auf einen möglichen festlegbaren Werts, der von diesem Attribut verfügbar gemacht <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute.AttributeType%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,261 @@
+<Type Name="SchemaImporterExtensionCollection" FullName="System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection">
+  <TypeSignature Language="C#" Value="public class SchemaImporterExtensionCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SchemaImporterExtensionCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtension" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Zugriff auf die <xref:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection> erfolgt über die <xref:System.Xml.Serialization.SchemaImporter.Extensions%2A>-Eigenschaft der <xref:System.Xml.Serialization.XmlSchemaImporter>-Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SchemaImporterExtensionCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Xml.Serialization.Advanced.SchemaImporterExtension extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Xml.Serialization.Advanced.SchemaImporterExtension extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection.Add(System.Xml.Serialization.Advanced.SchemaImporterExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="System.Xml.Serialization.Advanced.SchemaImporterExtension" />
+      </Parameters>
+      <Docs>
+        <param name="extension">Das hinzuzufügende <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection" />.</param>
+        <summary>Die Auflistung hinzugefügt die angegebene Importer Erweiterung.</summary>
+        <returns>Der Index der hinzugefügten Erweiterung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (string name, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(string name, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection.Add(System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">Einen benutzerdefinierten Namen für die Erweiterung.</param>
+        <param name="type">Das hinzuzufügende <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection" />.</param>
+        <summary>Die Auflistung hinzugefügt die angegebene Importer Erweiterung. Die *Namen* Parameter können Sie einen benutzerdefinierten Namen für die Erweiterung bereitzustellen.</summary>
+        <returns>Der Index des neu hinzugefügten Elements.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Der Wert der *Typ* erbt nicht von <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Auflistung der Erweiterungen Importer-Tool.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Xml.Serialization.Advanced.SchemaImporterExtension extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Xml.Serialization.Advanced.SchemaImporterExtension extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection.Contains(System.Xml.Serialization.Advanced.SchemaImporterExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="System.Xml.Serialization.Advanced.SchemaImporterExtension" />
+      </Parameters>
+      <Docs>
+        <param name="extension">Die zu suchende <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection" />.</param>
+        <summary>Ruft einen Wert, der angibt, ob die angegebenen Importer-Erweiterung in der Auflistung vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Erweiterung gefunden wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Xml.Serialization.Advanced.SchemaImporterExtension[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Xml.Serialization.Advanced.SchemaImporterExtension[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection.CopyTo(System.Xml.Serialization.Advanced.SchemaImporterExtension[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Xml.Serialization.Advanced.SchemaImporterExtension[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Die <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtension" /> in der aktuellen Auflistung kopiert.</param>
+        <param name="index">Der nullbasierte Index, an dem die Auflistung hinzugefügt wird.</param>
+        <summary>Kopiert alle Elemente des aktuellen <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection" /> in das angegebene Array von <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtension" /> Objekte am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Xml.Serialization.Advanced.SchemaImporterExtension extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Xml.Serialization.Advanced.SchemaImporterExtension extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection.IndexOf(System.Xml.Serialization.Advanced.SchemaImporterExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="System.Xml.Serialization.Advanced.SchemaImporterExtension" />
+      </Parameters>
+      <Docs>
+        <param name="extension">Die zu suchende <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtension" />.</param>
+        <summary>Sucht nach dem angegebenen Element und gibt den nullbasierten Index des ersten Vorkommens innerhalb der Auflistung.</summary>
+        <returns>Der Index des gefundenen Elements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Xml.Serialization.Advanced.SchemaImporterExtension extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Xml.Serialization.Advanced.SchemaImporterExtension extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection.Insert(System.Int32,System.Xml.Serialization.Advanced.SchemaImporterExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="extension" Type="System.Xml.Serialization.Advanced.SchemaImporterExtension" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem die <c>Erweiterung</c> eingefügt werden soll.</param>
+        <param name="extension">Der einzufügende <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtension" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtension" /> am angegebenen Index in die Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.Advanced.SchemaImporterExtension this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.Advanced.SchemaImporterExtension Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.Advanced.SchemaImporterExtension</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Elements gefunden.</param>
+        <summary>Ruft den <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection" /> am angegebenen Index ab.</summary>
+        <value>Der <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection" /> am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu entfernenden <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtension" />. Der Name wird festgelegt, mit der <see cref="M:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection.Add(System.String,System.Type)" /> Methode.</param>
+        <summary>Entfernt die <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtension" />den Angaben von Namen, aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Xml.Serialization.Advanced.SchemaImporterExtension extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Xml.Serialization.Advanced.SchemaImporterExtension extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection.Remove(System.Xml.Serialization.Advanced.SchemaImporterExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="System.Xml.Serialization.Advanced.SchemaImporterExtension" />
+      </Parameters>
+      <Docs>
+        <param name="extension">Das zu entfernende <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtension" />-Element.</param>
+        <summary>Entfernt den angegebenen <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtension" /> aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Media.TextFormatting">
+  <Docs>
+    <summary>Stellt Typen bereit, die die Formatierung des Texts an, in der Regel auf einer niedrigeren Ebene als-Steuerelement-basierte Textpräsentation oder die Textobjektmodell Steuerelement.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

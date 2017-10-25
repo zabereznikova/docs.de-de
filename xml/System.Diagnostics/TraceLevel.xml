@@ -1,0 +1,200 @@
+<Type Name="TraceLevel" FullName="System.Diagnostics.TraceLevel">
+  <TypeSignature Language="C#" Value="public enum TraceLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TraceLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.TraceLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, welche Ausgabe für Meldungen der <see cref="T:System.Diagnostics.Debug" />, <see cref="T:System.Diagnostics.Trace" /> und <see cref="T:System.Diagnostics.TraceSwitch" /> Klassen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird von der <xref:System.Diagnostics.TraceSwitch>-Klasse verwendet.  
+  
+ Ablaufverfolgung oder Debuggen, um einen Schalter verwenden, müssen Sie aktivieren. Die folgende Syntax ist compilerspezifisch. Wenn Sie den Compiler als c# oder Visual Basic verwenden, finden Sie in der Dokumentation für den Compiler.  
+  
+-   Fügen Sie zum Aktivieren des Debuggens in C# geschrieben, die `/d:DEBUG` Flag an die Befehlszeile des Compilers beim Kompilieren des Codes, oder Sie fügen `#define DEBUG` an den Anfang der Datei. Fügen Sie in Visual Basic die `/d:DEBUG=True` -Kennzeichen an die Befehlszeile des Compilers.  
+  
+-   Fügen Sie zum Aktivieren der Ablaufverfolgung in c# die `/d:TRACE` Flag an die Befehlszeile des Compilers beim Kompilieren des Codes, oder fügen `#define TRACE` an den Anfang der Datei. Fügen Sie in Visual Basic die `/d:TRACE=True` -Kennzeichen an die Befehlszeile des Compilers.  
+  
+ Weitere Informationen zum Instrumentieren der Anwendung finden Sie unter <xref:System.Diagnostics.Debug> und <xref:System.Diagnostics.Trace>.  
+  
+> [!NOTE]
+>  In .NET Framework 2.0 können Sie Text verwenden, um den Wert eines Schalters anzugeben. Beispielsweise `true` für einen <xref:System.Diagnostics.BooleanSwitch> oder den Text, der einem Enumerationswert entspricht, etwa `Error`, für einen <xref:System.Diagnostics.TraceSwitch>. Die Zeile `<add name="mySwitch" value="Error" />` ist gleichbedeutend mit `<add name="mySwitch" value="1" />`.  
+  
+ Die .NET Framework-Versionen 1.0 und 1.1, Ablaufverfolgungsebenen in Konfigurationsdateien festgelegt werden, mithilfe den ganzzahlige Wert entspricht dem Enumerationsmember anstelle der Enumerationsmember zeigt selbst, wie im folgenden Beispiel.  
+  
+```  
+<configuration>  
+    <system.diagnostics>  
+       <switches>  
+          <add name="mySwitch" value="4" />  
+       </switches>  
+    </system.diagnostics>  
+</configuration>  
+```  
+  
+ Zusätzlich zum Festlegen von Ablaufverfolgungsebenen, die den ganzzahligen Wert der Enumeration verwenden, können der .NET Framework Version 2.0 Ablaufverfolgungsebenen verwenden die Textdarstellung der Enumerationswert festgelegt werden. Beispielsweise `Verbose` für eine <xref:System.Diagnostics.TraceSwitch>. Die Zeile `<add name="mySwitch" value="Verbose" />` ist gleichbedeutend mit `<add name="mySwitch" value="4" />`.  
+  
+ Die folgende Tabelle zeigt die Beziehung zwischen der <xref:System.Diagnostics.TraceLevel> Enumerationsmember und ihre entsprechenden Konfiguration Datei Einträge.  
+  
+|Ablaufverfolgungsebene|Wert aus der Konfigurationsdatei|  
+|-----------------|------------------------------|  
+|Aus|0|  
+|Fehler|1|  
+|Warnung|2|  
+|Info|3|  
+|Ausführlich|4|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceLevel Error = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceLevel.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ausgabe von fehlerbehandlungsmeldungen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Info">
+      <MemberSignature Language="C#" Value="Info" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceLevel Info = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceLevel.Info" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ausgabe von informationsmeldungen, Warnungen und fehlerbehandlungsmeldungen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Off">
+      <MemberSignature Language="C#" Value="Off" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceLevel Off = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceLevel.Off" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ausgabe von keine Ablaufverfolgungs- oder Debugmeldungen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbose">
+      <MemberSignature Language="C#" Value="Verbose" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceLevel Verbose = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceLevel.Verbose" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ausgabe aller Debug- und Ablaufverfolgungsmeldungen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Warning">
+      <MemberSignature Language="C#" Value="Warning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceLevel Warning = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceLevel.Warning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ausgabe von Warnungen und fehlerbehandlungsmeldungen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,21 @@
+<Namespace Name="System.Data">
+  <Docs>
+    <summary>Der <see cref="N:System.Data" />-Namespace stellt Zugriff auf Klassen bereit, die die ADO.NET-Architektur darstellen. Mithilfe von ADO.NET können Komponenten erstellt werden, die Daten aus mehreren Datenquellen effizient verwalten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem abgetrennten Szenario wie beispielsweise dem Internet bietet ADO.NET die Tools, die notwendig sind, um Daten in Systemen mit mehreren Ebenen abzufragen, zu aktualisieren und abzugleichen. Die ADO.NET-Architektur ist auch in Clientanwendungen wie Windows Forms oder in von ASP.NET erstellten HTML-Seiten implementiert.  
+  
+ Das Kernstück der ADO.NET-Architektur ist die <xref:System.Data.DataSet>-Klasse. Jedes <xref:System.Data.DataSet> kann mehrere <xref:System.Data.DataTable>-Objekte enthalten. Dabei enthält jede <xref:System.Data.DataTable> Daten aus einer einzelnen Datenquelle wie SQL Server.  
+  
+ Jede <xref:System.Data.DataTable> enthält eine <xref:System.Data.DataColumnCollection> (eine Auflistung von <xref:System.Data.DataColumn>-Objekten), die das Schema für jede <xref:System.Data.DataTable> festlegt. Die <xref:System.Data.DataColumn.DataType%2A>-Eigenschaft bestimmt den Typ der in der <xref:System.Data.DataColumn> gespeicherten Daten. Mit der <xref:System.Data.DataColumn.ReadOnly%2A>-Eigenschaft und der <xref:System.Data.DataColumn.AllowDBNull%2A>-Eigenschaft kann die Integrität der Daten noch stärker sichergestellt werden. Mit der <xref:System.Data.DataColumn.Expression%2A>-Eigenschaft können berechnete Spalten erstellt werden.  
+  
+ Wenn eine <xref:System.Data.DataTable> zusammen mit einer anderen <xref:System.Data.DataTable> Teil einer Beziehung zwischen einem übergeordneten und einem untergeordneten Element ist, wird die Beziehung durch Hinzufügen einer <xref:System.Data.DataRelation> zur <xref:System.Data.DataRelationCollection> eines <xref:System.Data.DataSet>-Objekts erstellt. Beim Hinzufügen einer solchen Beziehung werden abhängig von den Parametereinstellungen des Konstruktors automatisch eine <xref:System.Data.UniqueConstraint> und eine <xref:System.Data.ForeignKeyConstraint> erstellt. Mit <xref:System.Data.UniqueConstraint> wird garantiert, dass die in einer Spalte enthaltenen Werte eindeutig sind. Mit <xref:System.Data.ForeignKeyConstraint> wird festgelegt, welche Aktion für die untergeordnete Zeile oder Spalte beim Ändern oder Löschen eines Primärschlüsselwerts ausgeführt wird.  
+  
+ Mit dem <xref:System.Data.SqlClient>-Namespace (.NET Framework-Datenanbieter für SQL Server), dem <xref:System.Data.Odbc>-Namespace (.NET Framework-Datenanbieter für ODBC), dem <xref:System.Data.OleDb>-Namespace (.NET Framework-Datenanbieter für OLE DB) oder dem <xref:System.Data.OracleClient>-Namespace (.NET Framework-Datenanbieter für Oracle) kann auf eine Datenquelle zugegriffen werden, um diese mit einem <xref:System.Data.DataSet> zu verwenden. Jeder.NET Framework-Datenanbieter verfügt über ein entsprechendes **"DataAdapter"** , mit denen Sie als Brücke zwischen einer Datenquelle und einem <xref:System.Data.DataSet>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

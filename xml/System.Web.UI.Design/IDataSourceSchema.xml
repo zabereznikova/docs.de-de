@@ -1,0 +1,51 @@
+<Type Name="IDataSourceSchema" FullName="System.Web.UI.Design.IDataSourceSchema">
+  <TypeSignature Language="C#" Value="public interface IDataSourceSchema" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataSourceSchema" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.IDataSourceSchema" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die grundlegende Funktionalität zum Beschreiben der Datenstruktur einer Datenquelle zur Entwurfszeit bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren der <xref:System.Web.UI.Design.IDataSourceSchema> Schnittstelle, um eine benutzerdefinierte Datenquelle zur Entwurfszeit zu beschreiben. Z. B. die <xref:System.Web.UI.Design.DataSetSchema>, <xref:System.Web.UI.Design.XmlDocumentSchema>, und <xref:System.Web.UI.Design.TypeSchema> Klassen implementieren die <xref:System.Web.UI.Design.IDataSourceSchema> Schnittstelle.  
+  
+ Klassen, in denen die <xref:System.Web.UI.Design.IDataSourceSchema> von benutzerdefiniertes Steuerelement-Designer-Komponenten zum Bereitstellen von Listen von Feldern und Ansichten für datengebundene Steuerelemente zur Entwurfszeit verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetViews">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IDataSourceViewSchema[] GetViews ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.IDataSourceViewSchema[] GetViews() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IDataSourceSchema.GetViews" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceViewSchema[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array von Schemadeskriptoren für Ansichten, die in der Datenquelle enthalten sind.</summary>
+        <returns>Ein Array von <see cref="T:System.Web.UI.Design.IDataSourceViewSchema" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Klasse, implementiert die <xref:System.Web.UI.Design.IDataSourceSchema.GetViews%2A> -Methode gibt ein Array von Objekten, implementieren die <xref:System.Web.UI.Design.IDataSourceViewSchema> Schnittstelle. Beispielsweise ist in das zurückgegebene Array die <xref:System.Web.UI.Design.DataSetSchema.GetViews%2A?displayProperty=nameWithType> -Methode, um jedes Element des Arrays ist ein <xref:System.Web.UI.Design.DataSetViewSchema> Objekt, das implementiert <xref:System.Web.UI.Design.IDataSourceViewSchema>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

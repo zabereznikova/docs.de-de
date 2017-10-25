@@ -1,0 +1,469 @@
+<Type Name="CustomAttributeBuilder" FullName="System.Reflection.Emit.CustomAttributeBuilder">
+  <TypeSignature Language="C#" Value="public class CustomAttributeBuilder : System.Runtime.InteropServices._CustomAttributeBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi beforefieldinit CustomAttributeBuilder extends System.Object implements class System.Runtime.InteropServices._CustomAttributeBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.CustomAttributeBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._CustomAttributeBuilder</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._CustomAttributeBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Hilft beim Erstellen benutzerdefinierter Attribute.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der `CustomAttributeBuilder` vom Konstruktor zum Beschreiben des benutzerdefinierten Attributs zurückgegebene Objekt. Ordnen Sie die `CustomAttribute` mit einem-Generator-Instanz durch Aufrufen der `SetCustomAttribute` Methode in dieser Generatorinstanz. Erstellen Sie z. B. eine `CustomAttributeBuilder` zum Beschreiben einer Instanz von `AssemblyCultureAttribute` durch Angabe des Konstruktors der <xref:System.Reflection.AssemblyCultureAttribute> und die zugehörigen Argumente. Rufen Sie anschließend <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> auf eine `AssemblyBuilder` um die Zuordnung einzurichten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `CustomAttributeBuilder`.  
+  
+ [!code-cpp[System.Reflection.Emit.CustomAttributeBuilder Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.CustomAttributeBuilder Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.CustomAttributeBuilder Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.CustomAttributeBuilder Example/CS/source.cs#1)]
+ [!code-vb[System.Reflection.Emit.CustomAttributeBuilder Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.CustomAttributeBuilder Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomAttributeBuilder (System.Reflection.ConstructorInfo con, object[] constructorArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.ConstructorInfo con, object[] constructorArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.CustomAttributeBuilder.#ctor(System.Reflection.ConstructorInfo,System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="con" Type="System.Reflection.ConstructorInfo" />
+        <Parameter Name="constructorArgs" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="con">Der Konstruktor für das benutzerdefinierte Attribut.</param>
+        <param name="constructorArgs">Die Argumente für den Konstruktor des benutzerdefinierten Attributs.</param>
+        <summary>Initialisiert eine Instanz der <see langword="CustomAttributeBuilder" />-Klasse mit dem Konstruktor für das benutzerdefinierte Attribut und den Argumenten für den Konstruktor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Elemente der `constructorArgs` Array auf Elementtypen beschränkt sind. Sie können sein `byte`, `sbyte`, `int`, `uint`, `long`, `ulong`, `float`, `double`, `String`, `char`, `bool`, eine Enumeration, ein Typ, eine der vorherigen Typen, die in ein Objekt oder eine eindimensionale und nullbasierte Array von den vorherigen Typen umgewandelt wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="con" /> ist statisch oder privat.  
+  
+ - oder -   
+  
+ Die Anzahl der bereitgestellten Argumente entspricht nicht der Anzahl der Parameter des Konstruktors, wie für die Aufrufkonvention des Konstruktors erforderlich.  
+  
+ - oder -   
+  
+ Der Typ des bereitgestellten Arguments entspricht nicht dem Typ des Parameters, der im Konstruktor deklariert wurde.  
+  
+ - oder -   
+  
+ Ein bereitgestelltes Argument ist ein anderer Verweistyp als <see cref="T:System.String" /> oder <see cref="T:System.Type" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="con" /> oder <paramref name="constructorArgs" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomAttributeBuilder (System.Reflection.ConstructorInfo con, object[] constructorArgs, System.Reflection.FieldInfo[] namedFields, object[] fieldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.ConstructorInfo con, object[] constructorArgs, class System.Reflection.FieldInfo[] namedFields, object[] fieldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.CustomAttributeBuilder.#ctor(System.Reflection.ConstructorInfo,System.Object[],System.Reflection.FieldInfo[],System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="con" Type="System.Reflection.ConstructorInfo" />
+        <Parameter Name="constructorArgs" Type="System.Object[]" />
+        <Parameter Name="namedFields" Type="System.Reflection.FieldInfo[]" />
+        <Parameter Name="fieldValues" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="con">Der Konstruktor für das benutzerdefinierte Attribut.</param>
+        <param name="constructorArgs">Die Argumente für den Konstruktor des benutzerdefinierten Attributs.</param>
+        <param name="namedFields">Benannte Felder des benutzerdefinierten Attributs.</param>
+        <param name="fieldValues">Die Werte für die benannten Felder des benutzerdefinierten Attributs.</param>
+        <summary>Initialisiert eine Instanz von der <see langword="CustomAttributeBuilder" /> Klasse, wobei den Konstruktor für das benutzerdefinierte Attribut, das die Argumente des Konstruktors und einen Satz von benannten Feld-/Wert-Paaren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Elemente der `constructorArgs` und `fieldValues` Arrays sind auf Elementtypen beschränkt. Sie können sein `byte`, `sbyte`, `int`, `uint`, `long`, `ulong`, `float`, `double`, `String`, `char`, `bool`, eine Enumeration, ein Typ, eine der vorherigen Typen, die in ein Objekt oder eine eindimensionale und nullbasierte Array von den vorherigen Typen umgewandelt wurde.  
+  
+> [!IMPORTANT]
+>  Verwenden Sie keine privaten Felder im `namedFields`. Auf diese Weise führt dazu, dass <xref:System.Reflection.CustomAttributeFormatException> ausgelöst, wenn die <xref:System.Attribute.GetCustomAttributes%2A> -Methode später für den abgeschlossenen Typ aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Länge von der <paramref name="namedFields" /> und <paramref name="fieldValues" /> Arrays unterscheiden.  
+  
+ - oder -   
+  
+ <paramref name="con" /> ist statisch oder privat.  
+  
+ - oder -   
+  
+ Die Anzahl der bereitgestellten Argumente entspricht nicht der Anzahl der Parameter des Konstruktors, wie für die Aufrufkonvention des Konstruktors erforderlich.  
+  
+ - oder -   
+  
+ Der Typ des bereitgestellten Arguments entspricht nicht dem Typ des Parameters, der im Konstruktor deklariert wurde.  
+  
+ - oder -   
+  
+ Die Typen der Feldwerte stimmen nicht mit den Typen der benannten Felder überein.  
+  
+ - oder -   
+  
+ Das Feld gehört nicht zu derselben Klasse oder Basisklasse wie der Konstruktor.  
+  
+ - oder -   
+  
+ Ein angegebenes Argument oder benannten Felds ist ein Verweistyp außer <see cref="T:System.String" /> oder <see cref="T:System.Type" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Einer der Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomAttributeBuilder (System.Reflection.ConstructorInfo con, object[] constructorArgs, System.Reflection.PropertyInfo[] namedProperties, object[] propertyValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.ConstructorInfo con, object[] constructorArgs, class System.Reflection.PropertyInfo[] namedProperties, object[] propertyValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.CustomAttributeBuilder.#ctor(System.Reflection.ConstructorInfo,System.Object[],System.Reflection.PropertyInfo[],System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="con" Type="System.Reflection.ConstructorInfo" />
+        <Parameter Name="constructorArgs" Type="System.Object[]" />
+        <Parameter Name="namedProperties" Type="System.Reflection.PropertyInfo[]" />
+        <Parameter Name="propertyValues" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="con">Der Konstruktor für das benutzerdefinierte Attribut.</param>
+        <param name="constructorArgs">Die Argumente für den Konstruktor des benutzerdefinierten Attributs.</param>
+        <param name="namedProperties">Benannte Eigenschaften des benutzerdefinierten Attributs.</param>
+        <param name="propertyValues">Die Werte für die benannten Eigenschaften des benutzerdefinierten Attributs.</param>
+        <summary>Initialisiert eine Instanz von der <see langword="CustomAttributeBuilder" /> Klasse, wobei den Konstruktor für das benutzerdefinierte Attribut, das die Argumente des Konstruktors und einen Satz von benannten Eigenschaft oder den Wert-Paaren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Elemente der `constructorArgs` und `propertyValues` Arrays sind auf Elementtypen beschränkt. Sie können sein `byte`, `sbyte`, `int`, `uint`, `long`, `ulong`, `float`, `double`, `String`, `char`, `bool`, eine Enumeration, ein Typ, eine der vorherigen Typen, die in ein Objekt oder eine eindimensionale und nullbasierte Array von den vorherigen Typen umgewandelt wurde.  
+  
+> [!IMPORTANT]
+>  Verwenden Sie keine private Eigenschaften in `namedProperties`. Auf diese Weise führt dazu, dass <xref:System.Reflection.CustomAttributeFormatException> ausgelöst, wenn die <xref:System.Attribute.GetCustomAttributes%2A> -Methode später für den abgeschlossenen Typ aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Länge von der <paramref name="namedProperties" /> und <paramref name="propertyValues" /> Arrays unterscheiden.  
+  
+ - oder -   
+  
+ <paramref name="con" /> ist statisch oder privat.  
+  
+ - oder -   
+  
+ Die Anzahl der bereitgestellten Argumente entspricht nicht der Anzahl der Parameter des Konstruktors, wie für die Aufrufkonvention des Konstruktors erforderlich.  
+  
+ - oder -   
+  
+ Der Typ des bereitgestellten Arguments entspricht nicht dem Typ des Parameters, der im Konstruktor deklariert wurde.  
+  
+ - oder -   
+  
+ Die Typen der Eigenschaftswerte stimmen nicht mit den Typen der benannten Eigenschaften überein.  
+  
+ - oder -   
+  
+ Eine Eigenschaft hat keine Set-Methode.  
+  
+ - oder -   
+  
+ Die Eigenschaft gehört nicht zu derselben Klasse oder Basisklasse wie der Konstruktor.  
+  
+ - oder -   
+  
+ Ein angegebenes Argument oder eine benannte Eigenschaft ist ein Verweistyp außer <see cref="T:System.String" /> oder <see cref="T:System.Type" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Einer der Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomAttributeBuilder (System.Reflection.ConstructorInfo con, object[] constructorArgs, System.Reflection.PropertyInfo[] namedProperties, object[] propertyValues, System.Reflection.FieldInfo[] namedFields, object[] fieldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.ConstructorInfo con, object[] constructorArgs, class System.Reflection.PropertyInfo[] namedProperties, object[] propertyValues, class System.Reflection.FieldInfo[] namedFields, object[] fieldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.CustomAttributeBuilder.#ctor(System.Reflection.ConstructorInfo,System.Object[],System.Reflection.PropertyInfo[],System.Object[],System.Reflection.FieldInfo[],System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="con" Type="System.Reflection.ConstructorInfo" />
+        <Parameter Name="constructorArgs" Type="System.Object[]" />
+        <Parameter Name="namedProperties" Type="System.Reflection.PropertyInfo[]" />
+        <Parameter Name="propertyValues" Type="System.Object[]" />
+        <Parameter Name="namedFields" Type="System.Reflection.FieldInfo[]" />
+        <Parameter Name="fieldValues" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="con">Der Konstruktor für das benutzerdefinierte Attribut.</param>
+        <param name="constructorArgs">Die Argumente für den Konstruktor des benutzerdefinierten Attributs.</param>
+        <param name="namedProperties">Benannte Eigenschaften des benutzerdefinierten Attributs.</param>
+        <param name="propertyValues">Die Werte für die benannten Eigenschaften des benutzerdefinierten Attributs.</param>
+        <param name="namedFields">Benannte Felder des benutzerdefinierten Attributs.</param>
+        <param name="fieldValues">Die Werte für die benannten Felder des benutzerdefinierten Attributs.</param>
+        <summary>Initialisiert eine Instanz der <see langword="CustomAttributeBuilder" /> -Klasse, wobei den Konstruktor für das benutzerdefinierte Attribut, das die Argumente des Konstruktors, ein Satz von benannten Eigenschaft oder den Wert-Paaren und einen Satz von mit dem Namen Feld oder Wert-Paare.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Elemente der `constructorArgs`, `propertyValues`, oder `fieldValues` Arrays sind auf Elementtypen beschränkt. Sie können sein `byte`, `sbyte`, `int`, `uint`, `long`, `ulong`, `float`, `double`, `String`, `char`, `bool`, eine Enumeration, ein Typ, eine der vorherigen Typen, die in ein Objekt oder eine eindimensionale und nullbasierte Array von den vorherigen Typen umgewandelt wurde.  
+  
+> [!IMPORTANT]
+>  Verwenden Sie keine privaten Eigenschaften oder Felder im `namedProperties` oder `namedFields`. Auf diese Weise führt dazu, dass <xref:System.Reflection.CustomAttributeFormatException> ausgelöst, wenn die <xref:System.Attribute.GetCustomAttributes%2A> -Methode später für den abgeschlossenen Typ aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Länge von der <paramref name="namedProperties" /> und <paramref name="propertyValues" /> Arrays unterscheiden.  
+  
+ - oder -   
+  
+ Die Länge von der <paramref name="namedFields" /> und <paramref name="fieldValues" /> Arrays unterscheiden.  
+  
+ - oder -   
+  
+ <paramref name="con" /> ist statisch oder privat.  
+  
+ - oder -   
+  
+ Die Anzahl der bereitgestellten Argumente entspricht nicht der Anzahl der Parameter des Konstruktors, wie für die Aufrufkonvention des Konstruktors erforderlich.  
+  
+ - oder -   
+  
+ Der Typ des bereitgestellten Arguments entspricht nicht dem Typ des Parameters, der im Konstruktor deklariert wurde.  
+  
+ - oder -   
+  
+ Die Typen der Eigenschaftswerte stimmen nicht mit den Typen der benannten Eigenschaften überein.  
+  
+ - oder -   
+  
+ Die Typen der Feldwerte stimmen nicht mit den Typen der entsprechenden Feldtypen überein.  
+  
+ - oder -   
+  
+ Eine Eigenschaft hat keine Set-Methode.  
+  
+ - oder -   
+  
+ Die Eigenschaft oder das Feld nicht zu derselben Klasse oder Basisklasse wie der Konstruktor gehört.  
+  
+ - oder -   
+  
+ Ein angegebenes Argument, eine benannte Eigenschaft oder ein benanntes Feld ist ein Verweistyp außer <see cref="T:System.String" /> oder <see cref="T:System.Type" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Einer der Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._CustomAttributeBuilder.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _CustomAttributeBuilder.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._CustomAttributeBuilder.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.CustomAttributeBuilder.System#Runtime#InteropServices#_CustomAttributeBuilder#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="rgszNames">Das übergebene Array von zuzuordnenden Namen.</param>
+        <param name="cNames">Die Anzahl der zuzuordnenden Namen.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem die Namen interpretiert werden sollen.</param>
+        <param name="rgDispId">Das vom Aufrufer zugewiesene Array, das die IDs entsprechend den Namen empfängt.</param>
+        <summary>Ordnet eine Reihe von Namen einer entsprechenden Reihe von Dispatchbezeichnern zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetIDsOfNames`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._CustomAttributeBuilder.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _CustomAttributeBuilder.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._CustomAttributeBuilder.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.CustomAttributeBuilder.System#Runtime#InteropServices#_CustomAttributeBuilder#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">Die zurückzugebenden Typinformationen.</param>
+        <param name="lcid">Der Gebietsschemabezeichner für die Typinformationen.</param>
+        <param name="ppTInfo">Empfängt einen Zeiger auf das angeforderte Objekt mit den Typinformationen.</param>
+        <summary>Ruft die Typinformationen für ein Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfo`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._CustomAttributeBuilder.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _CustomAttributeBuilder.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._CustomAttributeBuilder.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.CustomAttributeBuilder.System#Runtime#InteropServices#_CustomAttributeBuilder#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Zeigt auf einen Speicherort, der die Anzahl der Schnittstellen mit Typinformationen empfängt, die vom Objekt bereitgestellt werden.</param>
+        <summary>Ruft die Anzahl der Schnittstellen mit Typinformationen ab, die von einem Objekt bereitgestellt werden (0 oder 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfoCount`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._CustomAttributeBuilder.Invoke">
+      <MemberSignature Language="C#" Value="void _CustomAttributeBuilder.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._CustomAttributeBuilder.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.CustomAttributeBuilder.System#Runtime#InteropServices#_CustomAttributeBuilder#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Bezeichnet den Member.</param>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem Argumente interpretiert werden sollen.</param>
+        <param name="wFlags">Flags, die den Kontext des Aufrufs beschreiben.</param>
+        <param name="pDispParams">Ein Zeiger auf eine Struktur, die ein Array von Argumenten und ein Array von Argument-DISPIDs für benannte Argumente sowie Zähler für die Anzahl der Elemente in jedem Array enthält.</param>
+        <param name="pVarResult">Ein Verweis auf den Speicherort, an dem das Ergebnis gespeichert werden soll.</param>
+        <param name="pExcepInfo">Ein Zeiger auf eine Struktur mit Ausnahmeinformationen.</param>
+        <param name="puArgErr">Der Index des ersten Arguments mit einem Fehler.</param>
+        <summary>Stellt den Zugriff auf von einem Objekt verfügbar gemachte Eigenschaften und Methoden bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::Invoke`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

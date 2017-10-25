@@ -1,0 +1,173 @@
+<Type Name="FillErrorEventArgs" FullName="System.Data.FillErrorEventArgs">
+  <TypeSignature Language="C#" Value="public class FillErrorEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FillErrorEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Data.FillErrorEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Data.Common.DataAdapter.FillError" /> -Ereignis für ein <see cref="T:System.Data.Common.DbDataAdapter" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Daten werden verwendet, durch die <xref:System.Data.Common.DataAdapter.OnFillError*> Methode der <xref:System.Data.Common.DbDataAdapter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FillErrorEventArgs (System.Data.DataTable dataTable, object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataTable dataTable, object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.FillErrorEventArgs.#ctor(System.Data.DataTable,System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataTable" Type="System.Data.DataTable" />
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="dataTable">Die <see cref="T:System.Data.DataTable" /> aktualisiert wird.</param>
+        <param name="values">Die Werte für die Zeile aktualisiert wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.FillErrorEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Continue">
+      <MemberSignature Language="C#" Value="public bool Continue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Continue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.FillErrorEventArgs.Continue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Füllvorgang trotz des Fehlers fortgesetzt.</summary>
+        <value>
+          <see langword="true" />Wenn es sich bei der Füllvorgang fortgesetzt werden soll; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTable">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable DataTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataTable DataTable" />
+      <MemberSignature Language="DocId" Value="P:System.Data.FillErrorEventArgs.DataTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.DataTable" /> aktualisiert werden, wenn der Fehler aufgetreten ist.</summary>
+        <value>Die <see cref="T:System.Data.DataTable" /> aktualisiert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public Exception Errors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Errors" />
+      <MemberSignature Language="DocId" Value="P:System.Data.FillErrorEventArgs.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Fehler behandelt wird.</summary>
+        <value>Die Fehler behandelt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public object[] Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] Values" />
+      <MemberSignature Language="DocId" Value="P:System.Data.FillErrorEventArgs.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Werte für die Zeile aktualisiert werden, wenn der Fehler aufgetreten ist.</summary>
+        <value>Die Werte für die Zeile aktualisiert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

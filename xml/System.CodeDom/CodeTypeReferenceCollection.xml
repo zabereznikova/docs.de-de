@@ -1,0 +1,493 @@
+<Type Name="CodeTypeReferenceCollection" FullName="System.CodeDom.CodeTypeReferenceCollection">
+  <TypeSignature Language="C#" Value="public class CodeTypeReferenceCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeTypeReferenceCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeTypeReferenceCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.CodeDom.CodeTypeReference" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.CodeDom.CodeTypeReferenceCollection>-Klasse stellt ein einfaches Auflistungsobjekt bereit, mit dem ein Satz von <xref:System.CodeDom.CodeTypeReference>-Objekten gespeichert werden kann.  
+  
+   
+  
+## Examples  
+ [!code-cpp[CodeTypeReferenceCollection#1](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTypeReferenceCollection/CPP/class1.cpp#1)]
+ [!code-csharp[CodeTypeReferenceCollection#1](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTypeReferenceCollection/CS/class1.cs#1)]
+ [!code-vb[CodeTypeReferenceCollection#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTypeReferenceCollection/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeReferenceCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReferenceCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeTypeReferenceCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CodeTypeReferenceCollection#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTypeReferenceCollection/CPP/class1.cpp#2)]
+ [!code-csharp[CodeTypeReferenceCollection#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTypeReferenceCollection/CS/class1.cs#2)]
+ [!code-vb[CodeTypeReferenceCollection#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTypeReferenceCollection/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeReferenceCollection (System.CodeDom.CodeTypeReference[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeTypeReference[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReferenceCollection.#ctor(System.CodeDom.CodeTypeReference[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeReference[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Array von <see cref="T:System.CodeDom.CodeTypeReference" /> Objekten, mit denen die Auflistung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeTypeReferenceCollection" /> Klasse, die das angegebene Array von enthält <see cref="T:System.CodeDom.CodeTypeReference" /> Objekte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeReferenceCollection (System.CodeDom.CodeTypeReferenceCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeTypeReferenceCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReferenceCollection.#ctor(System.CodeDom.CodeTypeReferenceCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeReferenceCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.CodeDom.CodeTypeReferenceCollection" /> mit dem die Auflistung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeTypeReferenceCollection" /> Klasse, die die Elemente der Auflistung angegebenen Quelle enthält.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.CodeDom.CodeTypeReference value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.CodeDom.CodeTypeReference value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReferenceCollection.Add(System.CodeDom.CodeTypeReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeReference" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende <see cref="T:System.CodeDom.CodeTypeReference" />.</param>
+        <summary>Fügt der Auflistung den angegebenen <see cref="T:System.CodeDom.CodeTypeReference" /> hinzu.</summary>
+        <returns>Der Index, an dem das neue Element eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CodeTypeReferenceCollection#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTypeReferenceCollection/CPP/class1.cpp#3)]
+ [!code-csharp[CodeTypeReferenceCollection#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTypeReferenceCollection/CS/class1.cs#3)]
+ [!code-vb[CodeTypeReferenceCollection#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTypeReferenceCollection/VB/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReferenceCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Name eines Datentyps für das Hinzufügen einer <see cref="T:System.CodeDom.CodeTypeReference" /> auf die Auflistung.</param>
+        <summary>Fügt eine <see cref="T:System.CodeDom.CodeTypeReference" /> auf die Auflistung mit den Namen des angegebenen Datentyps.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (Type value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Type value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReferenceCollection.Add(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Datentyp für das Hinzufügen einer <see cref="T:System.CodeDom.CodeTypeReference" /> auf die Auflistung.</param>
+        <summary>Fügt eine <see cref="T:System.CodeDom.CodeTypeReference" /> auf die Auflistung mit den angegebenen Datentyp.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.CodeDom.CodeTypeReference[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.CodeDom.CodeTypeReference[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReferenceCollection.AddRange(System.CodeDom.CodeTypeReference[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeReference[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Array vom Typ <see cref="T:System.CodeDom.CodeTypeReference" /> mit den Objekten, das der Auflistung hinzugefügt.</param>
+        <summary>Kopiert die Elemente des angegebenen <see cref="T:System.CodeDom.CodeTypeReference" /> Array an das Ende der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CodeTypeReferenceCollection#4](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTypeReferenceCollection/CPP/class1.cpp#4)]
+ [!code-csharp[CodeTypeReferenceCollection#4](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTypeReferenceCollection/CS/class1.cs#4)]
+ [!code-vb[CodeTypeReferenceCollection#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTypeReferenceCollection/VB/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.CodeDom.CodeTypeReferenceCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.CodeDom.CodeTypeReferenceCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReferenceCollection.AddRange(System.CodeDom.CodeTypeReferenceCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeReferenceCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.CodeDom.CodeTypeReferenceCollection" /> mit den Objekten, das der Auflistung hinzugefügt.</param>
+        <summary>Fügt den Inhalt des angegebenen <see cref="T:System.CodeDom.CodeTypeReferenceCollection" /> an das Ende der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CodeTypeReferenceCollection#4](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTypeReferenceCollection/CPP/class1.cpp#4)]
+ [!code-csharp[CodeTypeReferenceCollection#4](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTypeReferenceCollection/CS/class1.cs#4)]
+ [!code-vb[CodeTypeReferenceCollection#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTypeReferenceCollection/VB/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.CodeDom.CodeTypeReference value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.CodeDom.CodeTypeReference value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReferenceCollection.Contains(System.CodeDom.CodeTypeReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeReference" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.CodeDom.CodeTypeReference" /> , in der Auflistung gesucht werden soll.</param>
+        <summary>Ruft einen Wert, der angibt, ob die Auflistung das angegebene enthält <see cref="T:System.CodeDom.CodeTypeReference" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.CodeDom.CodeTypeReference" /> in der Auflistung enthalten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CodeTypeReferenceCollection#5](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTypeReferenceCollection/CPP/class1.cpp#5)]
+ [!code-csharp[CodeTypeReferenceCollection#5](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTypeReferenceCollection/CS/class1.cs#5)]
+ [!code-vb[CodeTypeReferenceCollection#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTypeReferenceCollection/VB/class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.CodeDom.CodeTypeReference[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.CodeDom.CodeTypeReference[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReferenceCollection.CopyTo(System.CodeDom.CodeTypeReference[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.CodeDom.CodeTypeReference[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" /> , die das Ziel der aus der Auflistung kopierten Werte ist.</param>
+        <param name="index">Der Index des Arrays, bei dem eingefügt werden soll.</param>
+        <summary>Kopiert die Elemente in der Auflistung in das angegebene eindimensionale <see cref="T:System.Array" /> am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CodeTypeReferenceCollection#6](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTypeReferenceCollection/CPP/class1.cpp#6)]
+ [!code-csharp[CodeTypeReferenceCollection#6](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTypeReferenceCollection/CS/class1.cs#6)]
+ [!code-vb[CodeTypeReferenceCollection#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTypeReferenceCollection/VB/class1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="array" />-Parameter ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der <see cref="T:System.CodeDom.CodeTypeReferenceCollection" /> ist größer als der verfügbare Platz zwischen dem Index des Zielarrays gemäß der <paramref name="index" /> Parameter und dem Ende des Zielarrays.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="array" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> -Parameter ist kleiner als der minimale Index im Zielarray.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.CodeDom.CodeTypeReference value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.CodeDom.CodeTypeReference value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReferenceCollection.IndexOf(System.CodeDom.CodeTypeReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeReference" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.CodeDom.CodeTypeReference" />, die in der Auflistung gesucht werden soll.</param>
+        <summary>Ruft den Index in der Auflistung des angegebenen <see cref="T:System.CodeDom.CodeTypeReference" />, wenn sie in der Auflistung vorhanden ist.</summary>
+        <returns>Der Index des angegebenen <see cref="T:System.CodeDom.CodeTypeReference" /> in der Auflistung, sofern gefunden, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CodeTypeReferenceCollection#5](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTypeReferenceCollection/CPP/class1.cpp#5)]
+ [!code-csharp[CodeTypeReferenceCollection#5](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTypeReferenceCollection/CS/class1.cs#5)]
+ [!code-vb[CodeTypeReferenceCollection#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTypeReferenceCollection/VB/class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.CodeDom.CodeTypeReference value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.CodeDom.CodeTypeReference value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReferenceCollection.Insert(System.Int32,System.CodeDom.CodeTypeReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeReference" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, in dem das Element eingefügt werden soll.</param>
+        <param name="value">Der einzufügende <see cref="T:System.CodeDom.CodeTypeReference" />.</param>
+        <summary>Fügt eine <see cref="T:System.CodeDom.CodeTypeReference" /> in der Auflistung am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CodeTypeReferenceCollection#8](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTypeReferenceCollection/CPP/class1.cpp#8)]
+ [!code-csharp[CodeTypeReferenceCollection#8](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTypeReferenceCollection/CS/class1.cs#8)]
+ [!code-vb[CodeTypeReferenceCollection#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTypeReferenceCollection/VB/class1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeReferenceCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index der Auflistung zuzugreifen.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.CodeDom.CodeTypeReference" /> am angegebenen Index in der Auflistung.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeTypeReference" /> an jedem gültigen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist ein Indexer, der zum Zugriff auf die Auflistung verwendet werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="index" />-Parameter liegt außerhalb des gültigen Bereichs von Indizes für die Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.CodeDom.CodeTypeReference value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.CodeDom.CodeTypeReference value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReferenceCollection.Remove(System.CodeDom.CodeTypeReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeReference" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die aus der Auflistung zu entfernende <see cref="T:System.CodeDom.CodeTypeReference" />.</param>
+        <summary>Entfernt den angegebenen <see cref="T:System.CodeDom.CodeTypeReference" /> aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CodeTypeReferenceCollection#9](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTypeReferenceCollection/CPP/class1.cpp#9)]
+ [!code-csharp[CodeTypeReferenceCollection#9](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTypeReferenceCollection/CS/class1.cs#9)]
+ [!code-vb[CodeTypeReferenceCollection#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTypeReferenceCollection/VB/class1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das angegebene Objekt ist nicht in der Auflistung gefunden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

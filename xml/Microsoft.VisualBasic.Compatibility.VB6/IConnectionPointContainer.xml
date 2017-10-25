@@ -1,0 +1,98 @@
+<Type Name="IConnectionPointContainer" FullName="Microsoft.VisualBasic.Compatibility.VB6.IConnectionPointContainer">
+  <TypeSignature Language="C#" Value="public interface IConnectionPointContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IConnectionPointContainer" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.IConnectionPointContainer" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("B196B284-BAB4-101A-B69C-00AA00341D07")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Implementierung der OLE DB <see langword="IConnectionPointContainer" /> Schnittstelle für die Verwendung von Anwendungen, die ein Upgrade von Visual Basic 6.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Neuentwicklungen finden Sie unter <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EnumConnectionPoints">
+      <MemberSignature Language="C#" Value="public void EnumConnectionPoints (out Microsoft.VisualBasic.Compatibility.VB6.IEnumConnectionPoints enumC);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void EnumConnectionPoints([out] class Microsoft.VisualBasic.Compatibility.VB6.IEnumConnectionPoints&amp; enumC) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IConnectionPointContainer.EnumConnectionPoints(Microsoft.VisualBasic.Compatibility.VB6.IEnumConnectionPoints@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumC" Type="Microsoft.VisualBasic.Compatibility.VB6.IEnumConnectionPoints&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="enumC">Wenn die Methode zurückkehrt, enthält dieser Parameter den Schnittstellenzeiger des Enumerators. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Erstellt einen Enumerator aller Verbindungspunkte unterstützt das verbindungsfähige Objekt einen Verbindungspunkt pro IID.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Neuentwicklungen finden Sie unter <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindConnectionPoint">
+      <MemberSignature Language="C#" Value="public void FindConnectionPoint (ref Guid riid, out Microsoft.VisualBasic.Compatibility.VB6.IConnectionPoint cp);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void FindConnectionPoint([in]valuetype System.Guid&amp; riid, [out] class Microsoft.VisualBasic.Compatibility.VB6.IConnectionPoint&amp; cp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IConnectionPointContainer.FindConnectionPoint(System.Guid@,Microsoft.VisualBasic.Compatibility.VB6.IConnectionPoint@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="cp" Type="Microsoft.VisualBasic.Compatibility.VB6.IConnectionPoint&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Ein Verweis auf die Ausgangsschnittstelle IID, deren Verbindungspunkt angefordert wird.</param>
+        <param name="cp">Wenn die Methode zurückkehrt, wird dieser Parameter enthält den Verbindungspunkt, der die Ausgangsschnittstelle verwaltet <c>Riid</c>. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Fragt das verbindungsfähige Objekt zu, ob sie eine Verbindung für eine bestimmte IID zeigen verfügt, und wenn dies der Fall ist, gibt die <see langword="IConnectionPoint" /> Schnittstellenzeiger auf bis zu diesem Zeitpunkt für die Verbindung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Neuentwicklungen finden Sie unter <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer>.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

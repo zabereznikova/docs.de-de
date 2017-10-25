@@ -1,0 +1,1481 @@
+<Type Name="Version" FullName="System.Version">
+  <TypeSignature Language="C#" Value="public sealed class Version : ICloneable, IComparable, IComparable&lt;Version&gt;, IEquatable&lt;Version&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit Version extends System.Object implements class System.ICloneable, class System.IComparable, class System.IComparable`1&lt;class System.Version&gt;, class System.IEquatable`1&lt;class System.Version&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Version" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IComparable&lt;System.Version&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Version&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Versionsnummer einer Assembly, eines Betriebssystems oder der Common Language Runtime dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Versionsnummern bestehen aus zwei bis vier Komponenten: Haupt- und Nebenversion, Build und Revision. Die Haupt- und Nebenversionsnummern Komponenten sind erforderlich; die Build- und Revisionsnummern Komponenten sind optional, aber die Buildkomponente ist erforderlich, wenn die Revisionskomponente definiert ist. Alle definierte Komponenten müssen ganze Zahlen größer oder gleich 0 sein. Das Format der Versionsnummer lautet wie folgt (optionale Komponenten werden angezeigt, in eckige Klammern ([und]):  
+  
+ *wichtige*.* kleinere*[.* Erstellen Sie*[.* Revision*]]  
+  
+ Die Komponenten werden gemäß der Konvention verwendet:  
+  
+-   *Wichtige*: Assemblys mit demselben Namen, aber unterschiedlichen Hauptversionen sind nicht austauschbar. Eine höhere Versionsnummer möglicherweise eine wichtige neue Version eines Produkts, in dem Abwärtskompatibilität ausgegangen werden kann.  
+  
+-   *Kleinere*: Wenn Sie den Namen und die Hauptversionsnummer für zwei Assemblys identisch sind, aber die Nebenversionsnummer unterscheidet, wird hiermit bedeutende Verbesserung um Abwärtskompatibilität zu gewährleisten. Diese höhere Nebenversionsnummer hinweisen, dass eine Punkt-Version eines Produkts oder eine vollständig abwärtskompatibel ist für die neue Version eines Produkts.  
+  
+-   *Erstellen Sie*: ein Unterschied in Buildnummer stellt eine Neukompilierung der gleichen Quelle. Andere Buildnummern können verwendet werden, wenn sich der Prozessor, der Plattform oder der Compiler ändert.  
+  
+-   *Revision*: Assemblys mit dem gleichen Namen, Haupt-und Nebenversionsnummern Zahlen, aber unterschiedlichen Revisionen sollten vollständig austauschbar verwendet werden. Eine höhere Revisionsnummer kann in einem Build verwendet werden, die in einer zuvor veröffentlichten Assembly eine Sicherheitslücke geschlossen wurde.  
+  
+ Nachfolgende Versionen einer Assembly, die nur durch Build-oder Revisionsnummer unterscheiden gelten als Hotfix-Updates von der früheren Version.  
+  
+> [!IMPORTANT]
+>  Der Wert der <xref:System.Version> Eigenschaften, die nicht explizit ein Wert zugewiesen wurde, ist nicht definiert (-1).  
+  
+ Beginnend mit .NET Framework 2.0, die <xref:System.Version.MajorRevision%2A> und <xref:System.Version.MinorRevision%2A> Eigenschaften ermöglichen es Ihnen, eine temporäre Version Ihrer Anwendung zu identifizieren, die z. B. ein Problem behebt, bis Sie eine dauerhafte Lösung freigeben können.  Außerdem verwendet die Windows NT-Betriebssystem die <xref:System.Version.MajorRevision%2A> Eigenschaft, um die Service Pack-Nummer zu codieren.  
+  
+## <a name="assigning-version-information-to-assemblies"></a>Zuweisen von Versionsinformationen zu Assemblys  
+ Normalerweise die <xref:System.Version> Klasse wird nicht verwendet, eine Assembly eine Versionsnummer zugewiesen. Stattdessen die <xref:System.Reflection.AssemblyVersionAttribute> Klasse wird verwendet, um eine Assemblyversion zu definieren, wie im Beispiel in diesem Thema veranschaulicht.  
+  
+## <a name="retrieving-version-information"></a>Abrufen von Versionsinformationen  
+ <xref:System.Version>Objekte werden am häufigsten verwendet, um Versionsinformationen für eine System- oder anwendungskonfigurationseinstellungen-Komponente (z. B. das Betriebssystem), die common Language Runtime, die ausführbare Datei der aktuellen Anwendung oder einer bestimmten Assembly zu speichern. Die folgenden Beispiele veranschaulichen einige der häufigsten Szenarios:  
+  
+-   Abrufen der Betriebssystemversion an. Im folgenden Beispiel wird die <xref:System.OperatingSystem.Version%2A?displayProperty=nameWithType> Eigenschaft, um die Versionsnummer des Betriebssystems abzurufen.  
+  
+     [!code-csharp[System.Version.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Version.Class/cs/GettingVersions1.cs#1)]
+     [!code-vb[System.Version.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Version.Class/vb/GettingVersions1.vb#1)]  
+  
+-   Abrufen der Version der common Language Runtime. Im folgenden Beispiel wird die <xref:System.Environment.Version%2A?displayProperty=nameWithType> Eigenschaft zum Abrufen von Informationen über die common Language Runtime Version.  
+  
+     [!code-csharp[System.Version.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Version.Class/cs/GettingVersions1.cs#2)]
+     [!code-vb[System.Version.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Version.Class/vb/GettingVersions1.vb#2)]  
+  
+-   Abrufen der aktuellen Anwendung Assemblyversion. Im folgenden Beispiel wird die <xref:System.Reflection.Assembly.GetEntryAssembly%2A?displayProperty=nameWithType> Methode zum Abrufen eines Verweises auf ein <xref:System.Reflection.Assembly> Objekt, das ausführbare Datei der Anwendung darstellt, und ruft dann die Versionsnummer der Assembly ab.  
+  
+     [!code-csharp[System.Version.Class#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Version.Class/cs/currentapp.cs#5)]
+     [!code-vb[System.Version.Class#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Version.Class/vb/currentapp.vb#5)]  
+  
+-   Abrufen der aktuellen Assembly Assemblyversion. Im folgenden Beispiel wird die <xref:System.Type.Assembly%2A?displayProperty=nameWithType> Eigenschaft zum Abrufen eines Verweises auf ein <xref:System.Reflection.Assembly> Objekt, das die Assembly, der Einstiegspunkt der Anwendung enthält darstellt, und klicken Sie dann die Versionsinformationen abgerufen.  
+  
+     [!code-csharp[System.Version.Class#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Version.Class/cs/currentassem.cs#4)]
+     [!code-vb[System.Version.Class#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Version.Class/vb/currentassem.vb#4)]  
+  
+-   Abrufen der Version einer bestimmten Assembly. Im folgenden Beispiel wird die <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> Methode zum Abrufen eines Verweises auf ein <xref:System.Reflection.Assembly> -Objekt, verfügt über einen bestimmten Dateinamen, und klicken Sie dann die Versionsinformationen abgerufen. Beachten Sie, dass mehrere andere Methoden auch vorhanden, zum Instanziieren sein einer <xref:System.Reflection.Assembly> Objekt anhand des Dateinamens oder durch einen starken Namen.  
+  
+     [!code-csharp[System.Version.Class#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Version.Class/cs/specificassem.cs#3)]
+     [!code-vb[System.Version.Class#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Version.Class/vb/specificassem.vb#3)]  
+  
+-   Abrufen der Version Veröffentlichen einer ClickOnce-Anwendung. Im folgenden Beispiel wird die <xref:System.Deployment.Application.ApplicationDeployment.CurrentVersion%2A?displayProperty=nameWithType> Eigenschaft, um einer Anwendungsverzeichnis Veröffentlichungsversion anzuzeigen. Beachten Sie, dass die erfolgreiche Ausführung der Beispiel-Anwendungsidentität festgelegt werden muss. Dies erfolgt automatisch durch die Visual Studio-Veröffentlichungs-Assistenten.  
+  
+     [!code-csharp[System.Version.Class#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Version.Class/cs/clickonce.cs#7)]
+     [!code-vb[System.Version.Class#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Version.Class/vb/clickonce.vb#7)]  
+  
+    > [!IMPORTANT]
+    >  Die Version Veröffentlichen einer Anwendung für die ClickOnce-Bereitstellung ist unabhängig von der Version der Assembly.  
+  
+## <a name="comparing-version-objects"></a>Vergleichen von Versionsobjekten  
+ Können Sie die <xref:System.Version.CompareTo%2A> Methode, um zu bestimmen, ob eine <xref:System.Version> -Objekt liegt vor, die gleiche, oder später als eine Sekunde <xref:System.Version> Objekt. Das folgende Beispiel gibt an, dass Version 2.1 höher als Version 2.0.  
+  
+ [!code-csharp[System.Version.Class.Comparing#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.version.class.comparing/cs/comparisons1.cs#1)]
+ [!code-vb[System.Version.Class.Comparing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.version.class.comparing/vb/comparisons1.vb#1)]  
+  
+ Für zwei Versionen gleich, die Haupt-und Nebenversionsnummern, build, und Revisionsnummern des ersten <xref:System.Version> Objekt muss identisch mit denen des zweiten <xref:System.Version> Objekt. Wenn der Build oder Revision Anzahl von einer <xref:System.Version> Objekt ist nicht definiert ist, <xref:System.Version> Objekt gilt als liegen ein <xref:System.Version> -Objekt, dessen Build oder Revisionsnummer gleich 0 (null). Das folgende Beispiel veranschaulicht dies durch Vergleichen der drei <xref:System.Version> Objekte, die nicht Versionskomponenten definiert haben.  
+  
+ [!code-csharp[System.Version.Class.Comparing#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.version.class.comparing/cs/comparisons2.cs#2)]
+ [!code-vb[System.Version.Class.Comparing#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.version.class.comparing/vb/comparisons2.vb#2)]  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Reflection.AssemblyVersionAttribute> Attribut auf eine Assembly eine Versionsnummer zugewiesen. Zum Zeitpunkt der Kompilierung wird diese Versionsinformationen mit den Metadaten der Assembly gespeichert. Zur Laufzeit ruft das Beispiel den Wert ab, mit der <xref:System.Type.Assembly%2A?displayProperty=nameWithType> Eigenschaft für einen Typ in der Assembly zum Abrufen eines Verweises auf die derzeit ausgeführte Assembly gefunden, und es ruft Versionsinformationen aus der Assembly ab der <xref:System.Reflection.AssemblyName.Version%2A> Eigenschaft der <xref:System.Reflection.AssemblyName> zurückgegebenes Objekt die <xref:System.Reflection.Assembly.GetName%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-csharp[System.Version.Class#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Version.Class/cs/example1.cs#6)]
+ [!code-vb[System.Version.Class#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Version.Class/vb/example1.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Version ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Version" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein <xref:System.Version> Objekt mit den folgenden Eigenschaftswerten.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Version.Major%2A>|0|  
+|<xref:System.Version.Minor%2A>|0|  
+|<xref:System.Version.Build%2A>|nicht definiert (-1)|  
+|<xref:System.Version.Revision%2A>|nicht definiert (-1)|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Version (string version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="version">Eine Zeichenfolge, enthält die Haupt-und Nebenversion, Build und Revisionsnummern auf, wobei jede Zahl mit einem Punkt begrenzt wird (".").</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Version" />-Klasse unter Verwendung der angegebenen Zeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `version` Parameter darf nur die Komponenten Haupt-und Nebenversion, Build und Revision in dieser Reihenfolge und durch Punkte getrennt. Es muss mindestens zwei Komponenten und höchstens vier vorhanden sein. Es wird angenommen, dass die ersten beiden Komponenten Haupt-und Nebenversion. Der Wert nicht angegebener Komponenten ist nicht definiert.  
+  
+ Das Format der Versionsnummer lautet wie folgt. Optionale Komponenten werden in eckigen Klammern angezeigt ('[' und ']'):  
+  
+ Hauptversion.Nebenversion[.Build[.Revision]]  
+  
+ Alle definierte Komponenten müssen ganze Zahlen größer oder gleich 0 sein. Beispielsweise ist die Nummer der Hauptversion 6, Nummer die Nebenversion ist 2 die Build-Nummer 1, und die Revisionsnummer ist 3, dann `version` sollte "6.2.1.3" sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="version" />verfügt über weniger als zwei oder mehr als vier Komponenten.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="version" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Eine Haupt-und Nebenversion, build oder Revisionskomponente ist kleiner als 0 (null).</exception>
+        <exception cref="T:System.FormatException">Mindestens eine Komponente von <paramref name="version" /> ist nicht in eine ganze Zahl analysiert werden.</exception>
+        <exception cref="T:System.OverflowException">Mindestens eine Komponente von <paramref name="version" /> eine Zahl ein, der größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Version (int major, int minor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 major, int32 minor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="major" Type="System.Int32" />
+        <Parameter Name="minor" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="major">Die Hauptversionsnummer.</param>
+        <param name="minor">Die Nebenversionsnummer.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Version" /> -Klasse mit den angegebenen Werten für Haupt- und Hilfsteilstriche.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein <xref:System.Version> Objekt mit den folgenden Eigenschaftswerten.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Version.Major%2A>|`major`|  
+|<xref:System.Version.Minor%2A>|`minor`|  
+|<xref:System.Version.Build%2A>|nicht definiert (-1)|  
+|<xref:System.Version.Revision%2A>|nicht definiert (-1)|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="major" /> oder <paramref name="minor" /> ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Version (int major, int minor, int build);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 major, int32 minor, int32 build) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.#ctor(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="major" Type="System.Int32" />
+        <Parameter Name="minor" Type="System.Int32" />
+        <Parameter Name="build" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="major">Die Hauptversionsnummer.</param>
+        <param name="minor">Die Nebenversionsnummer.</param>
+        <param name="build">Die Buildnummer.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Version" /> -Klasse unter Verwendung der angegebene Haupt-oder Nebenversion, und Werte zu erstellen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein <xref:System.Version> Objekt mit den folgenden Eigenschaftswerten.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Version.Major%2A>|`major`|  
+|<xref:System.Version.Minor%2A>|`minor`|  
+|<xref:System.Version.Build%2A>|`build`|  
+|<xref:System.Version.Revision%2A>|nicht definiert (-1)|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="major" />, <paramref name="minor" />, oder <paramref name="build" /> ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Version (int major, int minor, int build, int revision);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 major, int32 minor, int32 build, int32 revision) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="major" Type="System.Int32" />
+        <Parameter Name="minor" Type="System.Int32" />
+        <Parameter Name="build" Type="System.Int32" />
+        <Parameter Name="revision" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="major">Die Hauptversionsnummer.</param>
+        <param name="minor">Die Nebenversionsnummer.</param>
+        <param name="build">Die Buildnummer.</param>
+        <param name="revision">Die Revisionsnummer.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Version" /> -Klasse mit angegebenen Haupt-oder Nebenversion, Build- und Revisionsnummern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein <xref:System.Version> Objekt mit den folgenden Eigenschaftswerten.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Version.Major%2A>|`major`|  
+|<xref:System.Version.Minor%2A>|`minor`|  
+|<xref:System.Version.Build%2A>|`build`|  
+|<xref:System.Version.Revision%2A>|`revision`|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Version.%23ctor%2A> -Konstruktor und <xref:System.Version.Major%2A>, <xref:System.Version.Minor%2A>, <xref:System.Version.Build%2A>, <xref:System.Version.Revision%2A>, <xref:System.Version.MajorRevision%2A>, und <xref:System.Version.MinorRevision%2A> Eigenschaften.  
+  
+ [!code-cpp[system.version.revision#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.version.revision/cpp/rev.cpp#1)]
+ [!code-csharp[system.version.revision#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.version.revision/cs/rev.cs#1)]
+ [!code-vb[system.version.revision#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.version.revision/vb/rev.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="major" />, <paramref name="minor" />, <paramref name="build" /> oder <paramref name="revision" /> ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public int Build { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Build" />
+      <MemberSignature Language="DocId" Value="P:System.Version.Build" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der Buildkomponente der Versionsnummer für das aktuelle <see cref="T:System.Version" /> Objekt.</summary>
+        <value>Die Buildnummer oder -1, wenn diese nicht definiert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Versionsnummer 6.2.1.3 ist, ist die Nummer des Builds z. B. 1. Wenn die Versionsnummer 6.2 ist, ist die Buildnummer nicht definiert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Version.%23ctor%2A> -Konstruktor und <xref:System.Version.Major%2A>, <xref:System.Version.Minor%2A>, <xref:System.Version.Build%2A>, <xref:System.Version.Revision%2A>, <xref:System.Version.MajorRevision%2A>, und <xref:System.Version.MinorRevision%2A> Eigenschaften.  
+  
+ [!code-cpp[system.version.revision#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.version.revision/cpp/rev.cpp#1)]
+ [!code-csharp[system.version.revision#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.version.revision/cs/rev.cs#1)]
+ [!code-vb[system.version.revision#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.version.revision/vb/rev.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine neue <see cref="T:System.Version" /> -Objekt, dessen Wert identisch mit der aktuellen ist <see cref="T:System.Version" /> Objekt.</summary>
+        <returns>Ein neues <see cref="T:System.Object" /> , deren Werte eine Kopie des aktuellen <see cref="T:System.Version" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Typ des Rückgabewerts wichtig ist, wandeln Sie die <xref:System.Object> -Instanz, die von dieser Methode zurückgegeben wird ein <xref:System.Version> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="version">Ein Vergleichsobjekt oder <see langword="null" />.</param>
+        <summary>Vergleicht den aktuellen <see cref="T:System.Version" /> Objekt mit einem angegebenen Objekt und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.</summary>
+        <returns>Eine Ganzzahl mit Vorzeichen, die die relativen Werte der beiden Objekte angibt, wie in der folgenden Tabelle veranschaulicht.  
+  
+ <list type="table"><listheader><term>Rückgabewert  
+  
+ </term><description>Bedeutung  
+  
+ </description></listheader><item><term>Kleiner als 0 (null)  
+  
+ </term><description>Die aktuelle <see cref="T:System.Version" /> Objekt ist eine Version vor <paramref name="version" />.  
+  
+ </description></item><item><term>0 (null)  
+  
+ </term><description>Die aktuelle <see cref="T:System.Version" /> Objekt ist die gleiche Version wie <paramref name="version" />.  
+  
+ </description></item><item><term>Größer als 0 (null)  
+  
+ </term><description>Die aktuelle <see cref="T:System.Version" /> Objekt ist eine Version nach <paramref name="version" />.  
+  
+ - oder -   
+  
+ <paramref name="version" /> ist <see langword="null" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Komponenten der `Version` werden in absteigender Reihenfolge ihrer Wichtigkeit: Haupt- und Nebenversion, Build und Revision. Eine unbekannte Komponente wird davon ausgegangen, dass älter als alle bekannten Komponenten.  
+  
+ Zum Beispiel:  
+  
+-   Version 1.1 ist älter als Version 1.1.0  
+  
+-   Version 1.1 ist älter als Version 1.1.1  
+  
+-   Version 1.1 ist älter als Version 1.1.2.3.  
+  
+-   1.1.2-Version ist älter als Version 1.1.2.4.  
+  
+-   Version 1.2.5 ist neuer als die Version "1.2.3.4"  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="version" /> ist nicht vom Typ <see cref="T:System.Version" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (Version value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(class System.Version value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.CompareTo(System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Version" /> mit der aktuellen zu vergleichende Objekt <see cref="T:System.Version" /> -Objekt, oder <see langword="null" />.</param>
+        <summary>Vergleicht den aktuellen <see cref="T:System.Version" /> mit einem angegebenen Objekt <see cref="T:System.Version" /> -Objekt und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.</summary>
+        <returns>Eine Ganzzahl mit Vorzeichen, die die relativen Werte der beiden Objekte angibt, wie in der folgenden Tabelle veranschaulicht.  
+  
+ <list type="table"><listheader><term>Rückgabewert  
+  
+ </term><description>Bedeutung  
+  
+ </description></listheader><item><term>Kleiner als 0 (null)  
+  
+ </term><description>Die aktuelle <see cref="T:System.Version" /> Objekt ist eine Version vor <paramref name="value" />.  
+  
+ </description></item><item><term>0 (null)  
+  
+ </term><description>Die aktuelle <see cref="T:System.Version" /> Objekt ist die gleiche Version wie <paramref name="value" />.  
+  
+ </description></item><item><term>Größer als 0 (null)  
+  
+ </term><description>Die aktuelle <see cref="T:System.Version" /> Objekt ist eine Version nach <paramref name="value" />.  
+  
+ - oder -   
+  
+ <paramref name="value" /> ist <see langword="null" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert die <xref:System.IComparable%601?displayProperty=nameWithType> Schnittstelle, und führt etwas bessere Leistung als die <xref:System.Version.CompareTo%2A> Methode, da sie keinen Unboxing der `value` Parameter.  
+  
+ Die Komponenten der `Version` werden in absteigender Reihenfolge ihrer Wichtigkeit: Haupt- und Nebenversion, Build und Revision. Eine unbekannte Komponente wird davon ausgegangen, dass älter als alle bekannten Komponenten. Zum Beispiel:  
+  
+-   Version 1.1 ist älter als Version 1.1.0.  
+  
+-   Version 1.1 ist älter als Version 1.1.1.  
+  
+-   Version 1.1 ist älter als Version 1.1.2.3.  
+  
+-   1.1.2-Version ist älter als Version 1.1.2.4.  
+  
+-   Version 1.2.5 ist neuer als die Version "1.2.3.4".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, generische und nicht generische Versionen der `CompareTo` Methode für verschiedene Wert- und Referenztypen.  
+  
+ [!code-cpp[T.CompareTo#1](~/samples/snippets/cpp/VS_Snippets_CLR/T.CompareTo/CPP/cat.cpp#1)]
+ [!code-csharp[T.CompareTo#1](~/samples/snippets/csharp/VS_Snippets_CLR/T.CompareTo/CS/cat.cs#1)]
+ [!code-vb[T.CompareTo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/T.CompareTo/VB/cat.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt mit dem aktuellen zu vergleichende <see cref="T:System.Version" /> -Objekt, oder <see langword="null" />.</param>
+        <summary>Gibt einen Wert, der angibt, ob die aktuelle <see cref="T:System.Version" /> -Objekt mit einem angegebenen Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle <see cref="T:System.Version" /> Objekt und <paramref name="obj" /> sind beide <see cref="T:System.Version" /> Objekte und jede Komponente des aktuellen <see cref="T:System.Version" /> Objekt übereinstimmt, den entsprechenden Komponenten von <paramref name="obj" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Version obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Version obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.Equals(System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein <see cref="T:System.Version" /> mit der aktuellen zu vergleichende Objekt <see cref="T:System.Version" /> -Objekt, oder <see langword="null" />.</param>
+        <summary>Gibt einen Wert, der angibt, ob der aktuellen <see cref="T:System.Version" /> Objekt und ein angegebenes <see cref="T:System.Version" /> Objekt denselben Wert darstellen.</summary>
+        <returns>
+          <see langword="true" />Wenn jede Komponente des aktuellen <see cref="T:System.Version" /> Objekt übereinstimmt, den entsprechenden Komponenten von der <paramref name="obj" /> Parameter ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert die <xref:System.IEquatable%601> Schnittstelle, und führt etwas bessere Leistung als die <xref:System.Version.Equals%2A> Methode, da sie keinen Unboxing der `obj` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Hashcode für die aktuelle <see cref="T:System.Version" /> Objekt.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Version.%23ctor%2A> -Konstruktor und <xref:System.Version.Major%2A>, <xref:System.Version.Minor%2A>, <xref:System.Version.Build%2A>, <xref:System.Version.Revision%2A>, <xref:System.Version.MajorRevision%2A>, und <xref:System.Version.MinorRevision%2A> Eigenschaften.  
+  
+ [!code-cpp[system.version.revision#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.version.revision/cpp/rev.cpp#1)]
+ [!code-csharp[system.version.revision#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.version.revision/cs/rev.cs#1)]
+ [!code-vb[system.version.revision#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.version.revision/vb/rev.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Major">
+      <MemberSignature Language="C#" Value="public int Major { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Major" />
+      <MemberSignature Language="DocId" Value="P:System.Version.Major" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der Hauptkomponente der Versionsnummer für das aktuelle <see cref="T:System.Version" /> Objekt.</summary>
+        <value>Die Hauptversionsnummer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Versionsnummer 6.2 ist, ist die Hauptversion z. B. 6.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MajorRevision">
+      <MemberSignature Language="C#" Value="public short MajorRevision { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 MajorRevision" />
+      <MemberSignature Language="DocId" Value="P:System.Version.MajorRevision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die oberen 16 Bits der Revisionsnummer ab.</summary>
+        <value>Eine 16-Bit-Ganzzahl mit Vorzeichen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Angenommen Sie, Sie freigeben eine vorläufige Version der Anwendung, um ein Problem vorübergehend zu beheben, bis Sie eine dauerhafte Lösung freigeben können. Die temporäre Version rechtfertigt keine neue Revisionsnummer, aber es muss als eine andere Version identifiziert werden. Codieren Sie in diesem Fall die Identifikationsinformationen in der oberen und unteren 16-Bit-Teile der 32-Bit-Revisionsnummer. Verwenden Sie die <xref:System.Version.Revision%2A> -Eigenschaft zum Abrufen der gesamten Revisionsnummer, die verwenden die <xref:System.Version.MajorRevision%2A> Eigenschaft, um die oberen 16 Bits abrufen und verwenden die <xref:System.Version.MinorRevision%2A> Eigenschaft, um die unteren 16 Bits zu erhalten.  
+  
+ Ab .NET Framework, Version 2.0 der Windows NT-Betriebssystem Verwendungen des Systems die <xref:System.Version.MajorRevision%2A> Eigenschaft, um die Service Pack-Nummer zu codieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Version.%23ctor%2A> -Konstruktor und die <xref:System.Version.Major%2A>, <xref:System.Version.Minor%2A>, <xref:System.Version.Build%2A>, <xref:System.Version.Revision%2A>, <xref:System.Version.MajorRevision%2A>, und <xref:System.Version.MinorRevision%2A> Eigenschaften.  
+  
+ [!code-cpp[system.version.revision#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.version.revision/cpp/rev.cpp#1)]
+ [!code-csharp[system.version.revision#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.version.revision/cs/rev.cs#1)]
+ [!code-vb[system.version.revision#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.version.revision/vb/rev.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minor">
+      <MemberSignature Language="C#" Value="public int Minor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Minor" />
+      <MemberSignature Language="DocId" Value="P:System.Version.Minor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der Nebenversionskomponente der Versionsnummer für das aktuelle <see cref="T:System.Version" /> Objekt.</summary>
+        <value>Die Nebenversionsnummer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Versionsnummer 6.2 ist, ist die Nebenversion z. B. 2.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Version.%23ctor%2A> -Konstruktor und <xref:System.Version.Major%2A>, <xref:System.Version.Minor%2A>, <xref:System.Version.Build%2A>, <xref:System.Version.Revision%2A>, <xref:System.Version.MajorRevision%2A>, und <xref:System.Version.MinorRevision%2A> Eigenschaften.  
+  
+ [!code-cpp[system.version.revision#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.version.revision/cpp/rev.cpp#1)]
+ [!code-csharp[system.version.revision#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.version.revision/cs/rev.cs#1)]
+ [!code-vb[system.version.revision#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.version.revision/vb/rev.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinorRevision">
+      <MemberSignature Language="C#" Value="public short MinorRevision { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 MinorRevision" />
+      <MemberSignature Language="DocId" Value="P:System.Version.MinorRevision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die unteren 16 Bits der Revisionsnummer ab.</summary>
+        <value>Eine 16-Bit-Ganzzahl mit Vorzeichen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Angenommen Sie, Sie freigeben eine vorläufige Version der Anwendung, um ein Problem vorübergehend zu beheben, bis Sie eine dauerhafte Lösung freigeben können. Die temporäre Version rechtfertigt keine neue Revisionsnummer, aber es muss als eine andere Version identifiziert werden. Codieren Sie in diesem Fall die Identifikationsinformationen in der oberen und unteren 16-Bit-Teile der 32-Bit-Revisionsnummer. Verwenden Sie die <xref:System.Version.Revision%2A> -Eigenschaft zum Abrufen der gesamten Revisionsnummer, die verwenden die <xref:System.Version.MajorRevision%2A> Eigenschaft, um die oberen 16 Bits abrufen und verwenden die <xref:System.Version.MinorRevision%2A> Eigenschaft, um die unteren 16 Bits zu erhalten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Version.%23ctor%2A> -Konstruktor und die <xref:System.Version.Major%2A>, <xref:System.Version.Minor%2A>, <xref:System.Version.Build%2A>, <xref:System.Version.Revision%2A>, <xref:System.Version.MajorRevision%2A>, und <xref:System.Version.MinorRevision%2A> Eigenschaften.  
+  
+ [!code-cpp[system.version.revision#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.version.revision/cpp/rev.cpp#1)]
+ [!code-csharp[system.version.revision#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.version.revision/cs/rev.cs#1)]
+ [!code-vb[system.version.revision#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.version.revision/vb/rev.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Version v1, Version v2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Version v1, class System.Version v2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.op_Equality(System.Version,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v1" Type="System.Version" />
+        <Parameter Name="v2" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="v1">Das erste <see cref="T:System.Version" />-Objekt.</param>
+        <param name="v2">Das zweite <see cref="T:System.Version" />-Objekt.</param>
+        <summary>Bestimmt, ob zwei <see cref="T:System.Version" />-Objekte gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="v1" /> gleich <paramref name="v2" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Version.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThan">
+      <MemberSignature Language="C#" Value="public static bool operator &gt; (Version v1, Version v2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_GreaterThan(class System.Version v1, class System.Version v2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.op_GreaterThan(System.Version,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v1" Type="System.Version" />
+        <Parameter Name="v2" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="v1">Das erste <see cref="T:System.Version" />-Objekt.</param>
+        <param name="v2">Das zweite <see cref="T:System.Version" />-Objekt.</param>
+        <summary>Bestimmt, ob das erste angegebene <see cref="T:System.Version" /> -Quellobjekt ist größer als das zweite angegebene <see cref="T:System.Version" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="v1" /> größer als <paramref name="v2" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Version.CompareTo%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static bool operator &gt;= (Version v1, Version v2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_GreaterThanOrEqual(class System.Version v1, class System.Version v2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.op_GreaterThanOrEqual(System.Version,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v1" Type="System.Version" />
+        <Parameter Name="v2" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="v1">Das erste <see cref="T:System.Version" />-Objekt.</param>
+        <param name="v2">Das zweite <see cref="T:System.Version" />-Objekt.</param>
+        <summary>Bestimmt, ob das erste angegebene <see cref="T:System.Version" /> Objekt ist größer als oder gleich dem zweiten angegebenen <see cref="T:System.Version" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="v1" /> größer oder gleich <paramref name="v2" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Version.CompareTo%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Version v1, Version v2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Version v1, class System.Version v2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.op_Inequality(System.Version,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v1" Type="System.Version" />
+        <Parameter Name="v2" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="v1">Das erste <see cref="T:System.Version" />-Objekt.</param>
+        <param name="v2">Das zweite <see cref="T:System.Version" />-Objekt.</param>
+        <summary>Bestimmt, ob zwei angegebene <see cref="T:System.Version" />-Objekte ungleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="v1" /> ungleich <paramref name="v2" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Version.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThan">
+      <MemberSignature Language="C#" Value="public static bool operator &lt; (Version v1, Version v2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_LessThan(class System.Version v1, class System.Version v2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.op_LessThan(System.Version,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v1" Type="System.Version" />
+        <Parameter Name="v2" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="v1">Das erste <see cref="T:System.Version" />-Objekt.</param>
+        <param name="v2">Das zweite <see cref="T:System.Version" />-Objekt.</param>
+        <summary>Bestimmt, ob das erste angegebene <see cref="T:System.Version" /> -Objekts kleiner ist als das zweite angegebene <see cref="T:System.Version" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="v1" /> kleiner als <paramref name="v2" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Version.CompareTo%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="v1" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static bool operator &lt;= (Version v1, Version v2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_LessThanOrEqual(class System.Version v1, class System.Version v2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.op_LessThanOrEqual(System.Version,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v1" Type="System.Version" />
+        <Parameter Name="v2" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="v1">Das erste <see cref="T:System.Version" />-Objekt.</param>
+        <param name="v2">Das zweite <see cref="T:System.Version" />-Objekt.</param>
+        <summary>Bestimmt, ob das erste angegebene <see cref="T:System.Version" /> Objekt ist kleiner als oder gleich dem zweiten <see cref="T:System.Version" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="v1" /> kleiner oder gleich <paramref name="v2" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Version.CompareTo%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="v1" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static Version Parse (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Version Parse(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">Eine Zeichenfolge, die eine zu konvertierende Versionsnummer enthält.</param>
+        <summary>Konvertiert die Zeichenfolgendarstellung eine Versionsnummer in eine gleichbedeutende <see cref="T:System.Version" /> Objekt.</summary>
+        <returns>Ein Objekt, das die im angegebenen Versionsnummer entspricht der <paramref name="input" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `input` Parameter muss folgende Format aufweisen:  
+  
+```  
+  
+major.minor[.build[.revision]]  
+```  
+  
+ auf dem *wichtigen*, *kleinere*, *erstellen*, und *Revision* sind die zeichenfolgendarstellungen für die Version des Anzahl vier Komponenten: Haupt- Versionsnummer, Nummer der Nebenversion, Build-Nummer und Revisionsnummer. Optionale Komponenten werden in eckigen Klammern angezeigt ([und]). Die Komponenten müssen in der angegebenen Reihenfolge angezeigt werden und müssen durch Punkte getrennt sein.  
+  
+> [!IMPORTANT]
+>  Da die Darstellung einer Versionsnummer erkannten Muster entsprechen muss, Anwendungen sollten immer mithilfe der Ausnahmebehandlung beim Aufrufen der <xref:System.Version.Parse%2A> Methode, um Benutzereingaben zu analysieren. Alternativ können Sie rufen die <xref:System.Version.TryParse%2A> Methode, um die Darstellung einer Versionsnummer analysiert und Zurückgeben eines Werts, der angibt, ob der Analysevorgang erfolgreich war.  
+  
+ Die <xref:System.Version.Parse%2A> Methode ist eine bequeme Methode; dies entspricht dem Aufrufen der <xref:System.Version.%23ctor%28System.String%29> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Version.Parse%2A> Methode zum Analysieren einer Zahl von Zeichenfolgen, die Versionsinformationen enthalten.  
+  
+ [!code-csharp[System.Version.Parse#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.version.parse/cs/parse1.cs#1)]
+ [!code-vb[System.Version.Parse#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.version.parse/vb/parse1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="input" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="input" />verfügt über weniger als zwei oder mehr als vier Versionskomponenten.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Mindestens eine Komponente in <paramref name="input" /> ist kleiner als 0 (null).</exception>
+        <exception cref="T:System.FormatException">Mindestens eine Komponente in <paramref name="input" /> ist nicht Integer.</exception>
+        <exception cref="T:System.OverflowException">Mindestens eine Komponente in <paramref name="input" /> eine Zahl größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Revision">
+      <MemberSignature Language="C#" Value="public int Revision { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Revision" />
+      <MemberSignature Language="DocId" Value="P:System.Version.Revision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert von Revisionskomponente der Versionsnummer für das aktuelle <see cref="T:System.Version" /> Objekt.</summary>
+        <value>Die Revisionsnummer oder -1, wenn diese nicht definiert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Versionsnummer 6.2.1.3 ist, ist die Revisionsnummer beispielsweise 3 an. Wenn die Versionsnummer 6.2 ist, ist die Revisionsnummer nicht definiert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Version.%23ctor%2A> -Konstruktor und <xref:System.Version.Major%2A>, <xref:System.Version.Minor%2A>, <xref:System.Version.Build%2A>, <xref:System.Version.Revision%2A>, <xref:System.Version.MajorRevision%2A>, und <xref:System.Version.MinorRevision%2A> Eigenschaften.  
+  
+ [!code-cpp[system.version.revision#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.version.revision/cpp/rev.cpp#1)]
+ [!code-csharp[system.version.revision#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.version.revision/cs/rev.cs#1)]
+ [!code-vb[system.version.revision#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.version.revision/vb/rev.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IComparable.CompareTo">
+      <MemberSignature Language="C#" Value="int IComparable.CompareTo (object version);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.IComparable.CompareTo(object version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.System#IComparable#CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="version">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert den Wert des aktuellen <see cref="T:System.Version" /> Objekt in die entsprechende <see cref="T:System.String" /> Darstellung.</summary>
+        <returns>Die <see cref="T:System.String" /> Darstellung der Werte der Haupt-oder Nebenversion, Build und Revisionskomponenten des aktuellen <see cref="T:System.Version" /> -Objekts, wie im folgenden Format dargestellt. Die einzelnen Komponenten sind durch Punkte (".") getrennt. Eckige Klammern ("[" und "]") geben eine Komponente an, die bei fehlender Definition nicht im Rückgabewert enthalten ist:  
+  
+ Hauptversion.Nebenversion[.Build[.Revision]]  
+  
+ Angenommen, Sie erstellen eine <see cref="T:System.Version" /> -Objekt mithilfe des Konstruktors <c>Version(1,1)</c>, die zurückgegebene Zeichenfolge ist "1.1". Wenn Sie erstellen eine <see cref="T:System.Version" /> -Objekt mithilfe des Konstruktors <c>Version(1,3,4,2)</c>, zurückgegebene Zeichenfolge lautet "1.3.4.2".</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (int fieldCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(int32 fieldCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.ToString(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fieldCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="fieldCount">Die Anzahl der zurückzugebenden Komponenten. Die <c>FieldCount</c> liegt zwischen 0 und 4.</param>
+        <summary>Konvertiert den Wert des aktuellen <see cref="T:System.Version" /> Objekt in die entsprechende <see cref="T:System.String" /> Darstellung. Eine angegebene Anzahl bezieht sich auf die Anzahl der zurückzugebenden Komponenten.</summary>
+        <returns>Die <see cref="T:System.String" /> Darstellung der Werte der Haupt-oder Nebenversion, Build und Revisionskomponenten des aktuellen <see cref="T:System.Version" /> -Objekt, durch Punkte getrennt sind ("."). Die <paramref name="fieldCount" /> Parameter bestimmt, wie viele Komponenten zurückgegeben werden.  
+  
+ <list type="table"><listheader><term>fieldCount  
+  
+ </term><description>Rückgabewert  
+  
+ </description></listheader><item><term> 0  
+  
+ </term><description>Eine leere Zeichenfolge ("").  
+  
+ </description></item><item><term> 1  
+  
+ </term><description>wichtige  
+  
+ </description></item><item><term> 2  
+  
+ </term><description>größer.kleiner  
+  
+ </description></item><item><term> 3  
+  
+ </term><description>Hauptversion.Nebenversion.Build  
+  
+ </description></item><item><term> 4  
+  
+ </term><description>"Hauptversion.Nebenversion.Build.Revision" vorliegen  
+  
+ </description></item></list>  
+  
+ Angenommen, Sie erstellen <see cref="T:System.Version" /> -Objekt mithilfe des Konstruktors <c>Version(1,3,5)</c>, <c>ToString(2)</c> "1.3" zurückgibt und <c>ToString(4)</c> löst eine Ausnahme aus.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="fieldCount" />ist kleiner als 0 oder größer als 4.  
+  
+ - oder -   
+  
+ <paramref name="fieldCount" />ist größer als die Anzahl der Komponenten, die in der aktuellen definiert <see cref="T:System.Version" /> Objekt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParse">
+      <MemberSignature Language="C#" Value="public static bool TryParse (string input, out Version result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse(string input, [out] class System.Version&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Version.TryParse(System.String,System.Version@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="result" Type="System.Version&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="input">Eine Zeichenfolge, die eine zu konvertierende Versionsnummer enthält.</param>
+        <param name="result">Enthält bei Rückgabe dieser Methode die <see cref="T:System.Version" /> entspricht der Anzahl der im enthaltene <c>input</c>, wenn die Konvertierung erfolgreich abgeschlossen wurde, bzw. einen <see cref="T:System.Version" /> -Objekt, dessen Haupt-und Nebenversionsnummern Zahlen sind 0, wenn die Konvertierung fehlgeschlagen ist. Wenn <c>input</c> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />, <c>Ergebnis</c> ist <see langword="null" /> bei Rückgabe der Methode.</param>
+        <summary>Versucht, konvertieren die Darstellung einer Versionsnummer in eine gleichbedeutende <see cref="T:System.Version" /> -Objekt und gibt einen Wert, der angibt, ob die Konvertierung erfolgreich war.</summary>
+        <returns>
+          <see langword="true" />, wenn der <paramref name="input" />-Parameter erfolgreich konvertiert wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Version.TryParse%2A> Methode ist vergleichbar mit der <xref:System.Version.Parse%2A> -Methode, mit dem Unterschied, dass die It keine Ausnahme auslöst, wenn die Konvertierung fehlschlägt. Stattdessen gibt es `false` Wenn `input` null ist, verfügt über weniger als zwei oder mehr als vier Komponenten, verfügt über mindestens eine Komponente, die nicht auf eine ganze Zahl ist, wurde mindestens eine Komponente, die kleiner als 0 (null) oder verfügt über mindestens eine Komponente, die größer als ist<xref:System.Int32.MaxValue?displayProperty=nameWithType>.  
+  
+ Damit der Analysevorgang erfolgreich ausgeführt werden kann die `input` -Parameter muss im folgenden Format sein:  
+  
+```  
+  
+major.minor[.build[.revision]]  
+```  
+  
+ auf dem *wichtigen*, *kleinere*, *erstellen*, und *Revision* sind die zeichenfolgendarstellungen für die Version des Anzahl vier Komponenten: Haupt- Versionsnummer, Nummer der Nebenversion, Build-Nummer und Revisionsnummer. Optionale Komponenten werden in eckigen Klammern angezeigt ([und]). Die Komponenten müssen in der Reihenfolge angezeigt werden und müssen durch Punkte getrennt sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Version.TryParse%2A> Methode zum Analysieren einer Zahl von Zeichenfolgen, die Versionsinformationen enthalten.  
+  
+ [!code-csharp[System.Version.TryParse#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.version.tryparse/cs/tryparse1.cs#1)]
+ [!code-vb[System.Version.TryParse#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.version.tryparse/vb/tryparse1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

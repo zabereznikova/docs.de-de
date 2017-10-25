@@ -1,0 +1,80 @@
+<Type Name="MarkupExtensionBracketCharactersAttribute" FullName="System.Windows.Markup.MarkupExtensionBracketCharactersAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MarkupExtensionBracketCharactersAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MarkupExtensionBracketCharactersAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.MarkupExtensionBracketCharactersAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Meldet die Klammerzeichen, die eine Markuperweiterung zurückgeben kann.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MarkupExtensionBracketCharactersAttribute (char openingBracket, char closingBracket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(char openingBracket, char closingBracket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.MarkupExtensionBracketCharactersAttribute.#ctor(System.Char,System.Char)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="openingBracket" Type="System.Char" />
+        <Parameter Name="closingBracket" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="openingBracket">Ein <see cref="T:System.Char" />, das das Zeichen für die öffnende Klammer definiert.</param>
+        <param name="closingBracket">Ein <see cref="T:System.Char" />, das das Zeichen für die schließende Klammer definiert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.MarkupExtensionBracketCharactersAttribute" />-Klasse unter Verwendung der bereitgestellten Zeichen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClosingBracket">
+      <MemberSignature Language="C#" Value="public char ClosingBracket { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char ClosingBracket" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.MarkupExtensionBracketCharactersAttribute.ClosingBracket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Zeichen an, das als schließendes Trennzeichen in einer <see cref="T:System.Windows.Markup.MarkupExtension" /> verwendet werden soll.</summary>
+        <value>Ein <see cref="T:System.Char" />, das für das Zeichen steht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpeningBracket">
+      <MemberSignature Language="C#" Value="public char OpeningBracket { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char OpeningBracket" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.MarkupExtensionBracketCharactersAttribute.OpeningBracket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Zeichen an, das als öffnendes Trennzeichen in einer <see cref="T:System.Windows.Markup.MarkupExtension" /> verwendet werden soll.</summary>
+        <value>Ein <see cref="T:System.Char" />, das für das Zeichen steht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

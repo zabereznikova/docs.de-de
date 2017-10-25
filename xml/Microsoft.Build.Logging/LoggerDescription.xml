@@ -1,0 +1,114 @@
+<Type Name="LoggerDescription" FullName="Microsoft.Build.Logging.LoggerDescription">
+  <TypeSignature Language="C#" Value="public class LoggerDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LoggerDescription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Logging.LoggerDescription" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen zu einer Protokollierung als eine Auflistung von Werten, die können verwendet werden, um die Protokollierung zu instanziieren und serialisiert werden können, um zwischen verschiedenen Prozessen übergeben werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LoggerDescription (string loggerClassName, string loggerAssemblyName, string loggerAssemblyFile, string loggerSwitchParameters, Microsoft.Build.Framework.LoggerVerbosity verbosity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string loggerClassName, string loggerAssemblyName, string loggerAssemblyFile, string loggerSwitchParameters, valuetype Microsoft.Build.Framework.LoggerVerbosity verbosity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.LoggerDescription.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.LoggerVerbosity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="loggerClassName" Type="System.String" />
+        <Parameter Name="loggerAssemblyName" Type="System.String" />
+        <Parameter Name="loggerAssemblyFile" Type="System.String" />
+        <Parameter Name="loggerSwitchParameters" Type="System.String" />
+        <Parameter Name="verbosity" Type="Microsoft.Build.Framework.LoggerVerbosity" />
+      </Parameters>
+      <Docs>
+        <param name="loggerClassName">Der Klassenname der Protokollierung.</param>
+        <param name="loggerAssemblyName">Der Name der Assembly, die die Protokollierung implementiert.</param>
+        <param name="loggerAssemblyFile">Die Assemblydatei, die die Protokollierung implementiert.</param>
+        <param name="loggerSwitchParameters">Switch-Parameter für die Protokollierung.</param>
+        <param name="verbosity">Der Ausführlichkeitsgrad.</param>
+        <summary>Erstellt eine Beschreibung für die Protokollierung aus den angegebenen Daten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLogger">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ILogger CreateLogger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Framework.ILogger CreateLogger() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.LoggerDescription.CreateLogger" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ILogger</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine ILogger-Instanz aus den Daten in dieser Beschreibung an.</summary>
+        <returns>Gibt eine ILogger-Instanz aus den Daten in dieser Beschreibung zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann eine Vielzahl von Reflektionsausnahmen auslösen, wenn die Daten ungültig sind. Es ist die Aufgabe des Aufrufers, diese Ausnahmen zu behandeln, falls gewünscht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoggerSwitchParameters">
+      <MemberSignature Language="C#" Value="public string LoggerSwitchParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LoggerSwitchParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.LoggerDescription.LoggerSwitchParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zeichenfolge des Protokollierungsparameter ab.</summary>
+        <value>Gibt die Zeichenfolge der Protokollierungsparameter zurück.  Gibt null zurück, wenn keine Parameter vorhanden sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbosity">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.LoggerVerbosity Verbosity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.LoggerDescription.Verbosity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.LoggerVerbosity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Ausführlichkeitsgrad für diese Protokollierung zurück.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die Anzeige der Befehlszeile erhalten alle Protokollierungen den gleichen Ausführlichkeitsgrad.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

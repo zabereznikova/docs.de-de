@@ -1,0 +1,240 @@
+<Type Name="RedirectionDuration" FullName="System.ServiceModel.Channels.RedirectionDuration">
+  <TypeSignature Language="C#" Value="public class RedirectionDuration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit RedirectionDuration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.RedirectionDuration" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Dauer dar, die eine SOAP-Umleitung gültig ist.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.RedirectionDuration Create (string duration, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.RedirectionDuration Create(string duration, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RedirectionDuration.Create(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.RedirectionDuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="duration" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="duration">Die Umleitungsdauer.</param>
+        <param name="ns">Der Umleitungsnamespace.</param>
+        <summary>Erstellt eine neue <see cref="T:System.ServiceModel.Channels.RedirectionDuration" />-Instanz mit der angegebenen Dauer und dem angegebenen Namespace.</summary>
+        <returns>Eine Umleitungsdauer.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RedirectionDuration.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit der aktuellen <see cref="T:System.ServiceModel.Channels.RedirectionDuration" />-Instanz verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene Objekt mit der aktuellen <see cref="T:System.ServiceModel.Channels.RedirectionDuration" />-Instanz übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene Objekt und die aktuelle <see cref="T:System.ServiceModel.Channels.RedirectionDuration" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RedirectionDuration.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für diese Instanz ab.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.RedirectionDuration.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace von <see cref="T:System.ServiceModel.Channels.RedirectionDuration" /> ab.</summary>
+        <value>Der Namespace der Umleitungsdauer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.ServiceModel.Channels.RedirectionDuration left, System.ServiceModel.Channels.RedirectionDuration right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.ServiceModel.Channels.RedirectionDuration left, class System.ServiceModel.Channels.RedirectionDuration right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RedirectionDuration.op_Equality(System.ServiceModel.Channels.RedirectionDuration,System.ServiceModel.Channels.RedirectionDuration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.ServiceModel.Channels.RedirectionDuration" />
+        <Parameter Name="right" Type="System.ServiceModel.Channels.RedirectionDuration" />
+      </Parameters>
+      <Docs>
+        <param name="left">Eine <see cref="T:System.ServiceModel.Channels.RedirectionDuration" />-Instanz.</param>
+        <param name="right">Eine <see cref="T:System.ServiceModel.Channels.RedirectionDuration" />-Instanz.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob zwei Instanzen der <see cref="T:System.ServiceModel.Channels.RedirectionDuration" />-Typen gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die Werte von <paramref name="left" /> und <paramref name="right" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.ServiceModel.Channels.RedirectionDuration left, System.ServiceModel.Channels.RedirectionDuration right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.ServiceModel.Channels.RedirectionDuration left, class System.ServiceModel.Channels.RedirectionDuration right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RedirectionDuration.op_Inequality(System.ServiceModel.Channels.RedirectionDuration,System.ServiceModel.Channels.RedirectionDuration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.ServiceModel.Channels.RedirectionDuration" />
+        <Parameter Name="right" Type="System.ServiceModel.Channels.RedirectionDuration" />
+      </Parameters>
+      <Docs>
+        <param name="left">Eine <see cref="T:System.ServiceModel.Channels.RedirectionDuration" />-Instanz.</param>
+        <param name="right">Eine <see cref="T:System.ServiceModel.Channels.RedirectionDuration" />-Instanz.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob zwei Instanzen der <see cref="T:System.ServiceModel.Channels.RedirectionDuration" />-Typen nicht gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die Werte von <paramref name="left" /> und <paramref name="right" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Permanent">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.RedirectionDuration Permanent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.RedirectionDuration Permanent" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.RedirectionDuration.Permanent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.RedirectionDuration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.ServiceModel.Channels.RedirectionDuration" /> ab, die eine permanente Umleitung darstellt.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.Channels.RedirectionDuration" />, die einen Wert enthält, der eine permanente Umleitung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine permanente Umleitungsdauer gibt an, dass die neuen angegebenen Speicherorte für den angegebenen Bereich permanent verwendet werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Temporary">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.RedirectionDuration Temporary { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.RedirectionDuration Temporary" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.RedirectionDuration.Temporary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.RedirectionDuration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.ServiceModel.Channels.RedirectionDuration" /> ab, die eine temporäre Umleitung darstellt.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.Channels.RedirectionDuration" />, die einen Wert enthält, der eine temporäre Umleitung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine temporäre Umleitungsdauer gibt die neuen Speicherorte an, die für den angegebenen Bereich für einen begrenzten Zeitraum gültig ist. Dies ist der Standardwert für <xref:System.ServiceModel.Channels.RedirectionDuration>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RedirectionDuration.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert das aktuelle <see cref="T:System.ServiceModel.Channels.RedirectionDuration" />-Objekt in die entsprechende Zeichenfolgendarstellung.</summary>
+        <returns>Die Zeichenfolgendarstellung des Werts des aktuellen <see cref="T:System.ServiceModel.Channels.RedirectionDuration" />-Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.RedirectionDuration.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see cref="T:System.ServiceModel.Channels.RedirectionDuration" />-Instanz ab.</summary>
+        <value>Der Wert der Umleitungsdauer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

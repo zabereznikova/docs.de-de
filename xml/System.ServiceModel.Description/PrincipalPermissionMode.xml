@@ -1,0 +1,175 @@
+<Type Name="PrincipalPermissionMode" FullName="System.ServiceModel.Description.PrincipalPermissionMode">
+  <TypeSignature Language="C#" Value="public enum PrincipalPermissionMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PrincipalPermissionMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.PrincipalPermissionMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Legt den Modus für Autorisierungsprüfungen fest, wenn das <see cref="T:System.Security.Permissions.PrincipalPermissionAttribute" /> zum Steuern des Zugriffs auf eine Methode verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Anwenden des <xref:System.Security.Permissions.PrincipalPermissionAttribute>s auf eine Methode wird mit diesem Modus festgelegt, welche Rollen beim Autorisieren des Zugriffs verwendet werden sollen. Standardmäßig verwendet das Attribut Windows-Gruppen (wie `Administrator` oder `Users`) zum Festlegen der Rolle, der der Benutzer angehören muss.  
+  
+ Um den Modus programmgesteuert festzulegen, müssen Sie eine Instanz der `ServiceHost`-Klasse erstellen, dann das <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> in der Verhaltensauflistung suchen und den <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> auf die geeignete Enumeration festlegen. Im folgende Beispiel legt die Eigenschaft auf UseAspNetRoles fest.  
+  
+ [!code-csharp[PrincipalPermissionMode#1](~/samples/snippets/csharp/VS_Snippets_CFX/principalpermissionmode/cs/source.cs#1)]
+ [!code-vb[PrincipalPermissionMode#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/principalpermissionmode/vb/source.vb#1)]  
+  
+ Sie können auch das Verhalten in der Konfiguration festlegen, durch Hinzufügen einer [ &lt;ServiceAuthorization&gt; ](~/docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) auf die [ &lt;ServiceBehaviors&gt; ](~/docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) des eine Konfigurationsdatei wie im folgenden Code gezeigt.  
+  
+ [!code-csharp[PrincipalPermissionMode#10](~/samples/snippets/csharp/VS_Snippets_CFX/principalpermissionmode/cs/source.cs#10)]
+ [!code-vb[PrincipalPermissionMode#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/principalpermissionmode/vb/source.vb#10)]  
+  
+ Die Enumeration beeinflusst, wie das <xref:System.Security.Permissions.PrincipalPermissionAttribute>-Attribut einen Benutzer autorisiert, wenn sie auf eine Methode angewendet wird. Im folgenden Beispiel wird das Attribut auf eine Methode angewendet und außerdem gefordert, dass der Benutzer der Benutzergruppe auf dem Computer angehört. Dieser Code funktioniert nur, wenn <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> auf `UseWindowsGroup` (die Standardeinstellung) festgelegt ist.  
+  
+ [!code-csharp[PrincipalPermissionMode#2](~/samples/snippets/csharp/VS_Snippets_CFX/principalpermissionmode/cs/source.cs#2)]
+ [!code-vb[PrincipalPermissionMode#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/principalpermissionmode/vb/source.vb#2)]  
+  
+## <a name="useaspnetroles"></a>UseAspNetRoles  
+ Der UseAspNetRoles-Wert ist für alle anmeldeinformationentypen verwendet. Dieser Modus aktiviert [!INCLUDE[indigo1](~/includes/indigo1-md.md)], um den ASP.NET-Rollenanbieter für Autorisierungsentscheidungen zu verwenden.  
+  
+ Wenn die Anmeldeinformationen für einen Dienst von einem X.509-Zertifikat bereitgestellt werden, können Sie die `Name`-Eigenschaft von <xref:System.Security.Permissions.PrincipalPermissionAttribute> auf eine Zeichenfolge festlegen, die aus den verketteten Werten des Betreff- und Fingerabdruckfelds besteht, wie in folgendem Beispiel gezeigt.  
+  
+ [!code-csharp[PrincipalPermissionMode#3](~/samples/snippets/csharp/VS_Snippets_CFX/principalpermissionmode/cs/source.cs#3)]
+ [!code-vb[PrincipalPermissionMode#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/principalpermissionmode/vb/source.vb#3)]  
+  
+ Die verkettete Zeichenfolge besteht aus den Betreff- und Fingerabdruckwerten, die durch ein Semikolon und ein Leerzeichen voneinander getrennt werden.  
+  
+ Es ist auch möglich, dass das Betrefffeld eines Zertifikats auf eine NULL-Zeichenfolge festgelegt wird. In diesem Fall können Sie die `Name`-Eigenschaft auf ein Semikolon, gefolgt von einem Leerzeichen und dem Fingerabdruck, festlegen, wie in folgendem Beispiel gezeigt.  
+  
+ [!code-csharp[PrincipalPermissionMode#4](~/samples/snippets/csharp/VS_Snippets_CFX/principalpermissionmode/cs/source.cs#4)]
+ [!code-vb[PrincipalPermissionMode#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/principalpermissionmode/vb/source.vb#4)]  
+  
+ Wenn ein ASP.NET-Rollenanbieter vorhanden ist, können Sie die <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>-Eigenschaft auf eine Rolle in der Datenbank festlegen. Standardmäßig wird die Datenbank durch <xref:System.Web.Security.SqlRoleProvider> dargestellt. Sie können auch einen benutzerdefinierten Rollenanbieter mit der <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.RoleProvider%2A>-Eigenschaft der <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>-Klasse festlegen. Im folgenden Code wird die Rolle auf `Administrators` festgelegt. Beachten Sie, dass der Rollenanbieter das Benutzerkonto dieser Rolle zuordnen muss.  
+  
+ [!code-csharp[PrincipalPermissionMode#13](~/samples/snippets/csharp/VS_Snippets_CFX/principalpermissionmode/cs/source.cs#13)]
+ [!code-vb[PrincipalPermissionMode#13](~/samples/snippets/visualbasic/VS_Snippets_CFX/principalpermissionmode/vb/source.vb#13)]  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]des ASP.NET-Rollenanbieters finden Sie unter [Vorgehensweise: Verwenden von Rollen-Manager in ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=96692).  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]mit [!INCLUDE[indigo2](~/includes/indigo2-md.md)] und des Rollenanbieters finden Sie unter [wie: Verwenden des ASP.NET-Rollenanbieters bei einem Dienst](~/docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
+  
+## <a name="custom"></a>Benutzerdefiniert  
+ Wenn die Eigenschaft auf Custom festgelegt ist, müssen Sie auch angeben, auf eine benutzerdefinierte Klasse, implementiert die <xref:System.IdentityModel.Policy.IAuthorizationPolicy> Klasse. Diese Klasse stellt die `IPrincipal`-Darstellung des Aufrufers in der <xref:System.IdentityModel.Policy.EvaluationContext.Properties%2A>-Auflistung bereit. Sie muss die `IPrincipal`-Instanz in der Eigenschaftenauflistung unter Verwendung des Zeichenfolgeschlüssels "Principal" speichern, wie im folgenden Beispiel gezeigt.  
+  
+```  
+evaluationContext.Properties["Principal"]=new CustomPrincipal(identity);  
+```  
+  
+## <a name="background"></a>Hintergrund  
+ Mit der rollenbasierten Sicherheit in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] können Anwendungen Autorisierungen durch Code angeben. Durch Angeben des Bedarfs für <xref:System.Security.Permissions.PrincipalPermission> muss <xref:System.Threading.Thread.CurrentPrincipal%2A> der Anforderung für `PrincipalPermission` entsprechen. Beispiel: Der Benutzer muss sich in einer bestimmten Rolle oder Gruppe befinden. Andernfalls ist der Thread nicht berechtigt, den Code auszuführen, wodurch eine Ausnahme ausgelöst wird. [!INCLUDE[indigo2](~/includes/indigo2-md.md)] stellt eine Reihe von <xref:System.ServiceModel.Description.PrincipalPermissionMode>-Auswahlmöglichkeiten bereit, mit denen der <xref:System.Threading.Thread.CurrentPrincipal%2A>, der auf <xref:System.Security.SecurityContext> basiert, entsprechend angegeben werden kann.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie UseAspNetRoles angeben.  
+  
+ [!code-csharp[PrincipalPermissionMode#7](~/samples/snippets/csharp/VS_Snippets_CFX/principalpermissionmode/cs/source.cs#7)]
+ [!code-vb[PrincipalPermissionMode#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/principalpermissionmode/vb/source.vb#7)]  
+  
+ Das folgende Beispiel zeigt, wie benutzerdefinierte angeben.  
+  
+ [!code-csharp[PrincipalPermissionMode#8](~/samples/snippets/csharp/VS_Snippets_CFX/principalpermissionmode/cs/source.cs#8)]
+ [!code-vb[PrincipalPermissionMode#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/principalpermissionmode/vb/source.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Always">
+      <MemberSignature Language="C#" Value="Always" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Description.PrincipalPermissionMode Always = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Description.PrincipalPermissionMode.Always" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PrincipalPermissionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Immer ermöglicht die Angabe einer <see cref="T:System.Security.Principal.IPrincipal" /> für-Klasse <see cref="P:System.Threading.Thread.CurrentPrincipal" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Description.PrincipalPermissionMode Custom = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Description.PrincipalPermissionMode.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PrincipalPermissionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermöglicht es dem Benutzer, eine benutzerdefinierte <see cref="T:System.Security.Principal.IPrincipal" />-Klasse für <see cref="P:System.Threading.Thread.CurrentPrincipal" /> anzugeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Description.PrincipalPermissionMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Description.PrincipalPermissionMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PrincipalPermissionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="P:System.Threading.Thread.CurrentPrincipal" /> wird nicht festgelegt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAspNetRoles">
+      <MemberSignature Language="C#" Value="UseAspNetRoles" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Description.PrincipalPermissionMode UseAspNetRoles = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PrincipalPermissionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="P:System.Threading.Thread.CurrentPrincipal" /> wird basierend auf dem [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]-Rollenanbieter (<see cref="T:System.Web.Security.RoleProvider" />) festgelegt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseWindowsGroups">
+      <MemberSignature Language="C#" Value="UseWindowsGroups" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Description.PrincipalPermissionMode UseWindowsGroups = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Description.PrincipalPermissionMode.UseWindowsGroups" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PrincipalPermissionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="P:System.Threading.Thread.CurrentPrincipal" /> wird basierend auf Windows (<see cref="T:System.Security.Principal.WindowsPrincipal" />) festgelegt. Wenn die Benutzeridentität nicht einem Windows-Konto zugeordnet ist, wird ein anonymer Windows-Modus verwendet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,15 @@
+<Namespace Name="System.Windows.Xps">
+  <Docs>
+    <summary>Enthält Klassen, die XPS-Dokumente in einem Datenspeicher zu schreiben oder eine Druckwarteschlange.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Xps.XpsDocumentWriter> -Klasse stellt die <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> und <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> Methoden, die Ausgabe [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Dokumente mit einer Datenquelle zu speichern oder eine Druckwarteschlange.  Getrennte Gruppen von Write-Methoden werden bereitgestellt, für verschiedene Inhaltstypen, einschließlich <xref:System.Windows.Documents.DocumentPaginator>, <xref:System.Windows.Media.Visual>, <xref:System.Windows.Documents.FixedPage>, <xref:System.Windows.Documents.FixedDocument>, und <xref:System.Windows.Documents.FixedDocumentSequence>.  Die <xref:System.Windows.Xps.XpsDocumentWriter> Methoden ermöglichen es Ihnen auch eine <xref:System.Printing.PrintTicket> mit dem Dokument sowie auf übergeben von zusätzlichen Informationen an den Handler des der <xref:System.Windows.Xps.XpsDocumentWriter.WritingCompleted>, <xref:System.Windows.Xps.XpsDocumentWriter.WritingProgressChanged>, und <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired> Ereignisse.  
+  
+ Weitere Informationen zu [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] finden Sie unter XML Paper Specification (XPS), die am [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

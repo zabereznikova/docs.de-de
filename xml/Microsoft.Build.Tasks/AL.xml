@@ -1,0 +1,939 @@
+<Type Name="AL" FullName="Microsoft.Build.Tasks.AL">
+  <TypeSignature Language="C#" Value="public class AL : Microsoft.Build.Tasks.ToolTaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AL extends Microsoft.Build.Tasks.ToolTaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.AL" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.ToolTaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert die <c>AL</c> Aufgabe. Verwenden der <c>AL</c> Element in der Projektdatei erstellen und Ausführen dieser Aufgabe. Weitere Informationen zu Verwendung und Parametern finden Sie unter [AL (Assembly Linker)-Aufgabe](http://msdn.microsoft.com/library/2ddefbf2-5662-4d55-99a6-ac383bf44560).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AL ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AL.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.AL" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddResponseFileCommands">
+      <MemberSignature Language="C#" Value="protected override void AddResponseFileCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void AddResponseFileCommands(class Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AL.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandLine" Type="Microsoft.Build.Tasks.CommandLineBuilderExtension" />
+      </Parameters>
+      <Docs>
+        <param name="commandLine">Befehlszeilen-Generator, dem Argumente hinzugefügt werden sollen.</param>
+        <summary>Füllt den angegebenen <paramref name="commandLine" />-Parameter mit Schaltern und anderen Informationen, die in eine Antwortdatei aufgenommen werden können.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AlgorithmId">
+      <MemberSignature Language="C#" Value="public string AlgorithmId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AlgorithmId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.AlgorithmId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Algorithmus zum Hashen aller Dateien in einer Mehrfachdateiassembly mit Ausnahme der Datei ab, die das Assemblymanifest enthält, oder legt ihn fest.</summary>
+        <value>Der Algorithmus zum Hashen aller Dateien in einer Mehrfachdateiassembly mit Ausnahme der Datei, die das Assemblymanifest enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in der Dokumentation zur Option `/algid` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="BaseAddress">
+      <MemberSignature Language="C#" Value="public string BaseAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseAddress" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.BaseAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Adresse ab oder legt diese fest, an der eine DLL zur Laufzeit auf dem Computer des Benutzers geladen wird.</summary>
+        <value>Die Adresse, an der eine DLL zur Laufzeit auf dem Computer des Benutzers geladen wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Laden von Anwendungen kann beschleunigt werden, wenn nicht das Betriebssystem die DLLs im Prozessbereich verschiebt, sondern die Basisadresse der DLLs angegeben wird. Diese Eigenschaft entspricht der Befehlszeilenoption "/ Base [Address]" in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CompanyName">
+      <MemberSignature Language="C#" Value="public string CompanyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CompanyName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.CompanyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <c>Unternehmen</c> -Feld in der Assembly.</summary>
+        <value>Die <c>Unternehmen</c> -Feld in der Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in der Dokumentation zur Option `/comp[any]` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Configuration">
+      <MemberSignature Language="C#" Value="public string Configuration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Configuration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.Configuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <c>Konfiguration</c> -Feld in der Assembly.</summary>
+        <value>Die <c>Konfiguration</c> -Feld in der Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in der Dokumentation zur Option `/config[uration]` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Copyright">
+      <MemberSignature Language="C#" Value="public string Copyright { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Copyright" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.Copyright" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <c>Copyright</c> -Feld in der Assembly.</summary>
+        <value>Die <c>Copyright</c> -Feld in der Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in der Dokumentation zur Option `/copy[right]` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public string Culture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Culture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kulturzeichenfolge ab, die mit der Assembly verknüpft werden soll, oder legt sie fest.</summary>
+        <value>Die Kulturzeichenfolge, die mit der Assembly verknüpft werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in der Dokumentation zur Option `/c[ulture]` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DelaySign">
+      <MemberSignature Language="C#" Value="public bool DelaySign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DelaySign" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.DelaySign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert oder legt diesen fest, der angibt, ob nur der öffentliche Schlüssel in der Assembly (<see langword="true" />) platziert oder die Assembly vollständig signiert (<see langword="false" />) werden soll.</summary>
+        <value>
+          <see langword="true" />, wenn nur der öffentliche Schlüssel in der Assembly platziert wird. <see langword="false" />, wenn die Assembly vollständig signiert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in der Dokumentation zur Option `/delay[sign]` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <c>Beschreibung</c> -Feld in der Assembly.</summary>
+        <value>Die <c>Beschreibung</c> -Feld in der Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in der Dokumentation zur Option `/descr[iption]` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EmbedResources">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] EmbedResources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] EmbedResources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.EmbedResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Ressourcen zum Einbetten in das Image ab, das das Assemblymanifest enthält, oder legt sie fest.</summary>
+        <value>Die Ressourcen zum Einbetten in das Image, das das Assemblymanifest enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Aufgabe kopiert den Inhalt der Ressourcendatei in das Image. Die Elemente in dieser Eigenschaft festgelegte möglicherweise optionale Metadaten, die mit den Namen angefügt `LogicalName` und `Access`. Mit den `LogicalName`-Metadaten wird der interne Bezeichner für die Ressource angegeben.  Die `Access`-Metadaten können auf `private` festgelegt werden, damit die Ressource für andere Assemblys nicht sichtbar ist. Weitere Informationen finden Sie in der Dokumentation zur Option `/embed[resource]` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EvidenceFile">
+      <MemberSignature Language="C#" Value="public string EvidenceFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EvidenceFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.EvidenceFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie die Datei zum Einbetten in die Assembly mit dem Ressourcennamen <c>"Security.Evidence" ein</c>.</summary>
+        <value>Die Datei zum Einbetten in die Assembly mit dem Ressourcennamen <c>"Security.Evidence" ein</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können `Security.Evidence` nicht für normale Ressourcen verwenden. Diese Eigenschaft entspricht der `/e[vidence]` option [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AL.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die <c>AL</c> Aufgabe.</summary>
+        <returns>
+          <see langword="true" />, wenn die Aufgabe erfolgreich ausgeführt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FileVersion">
+      <MemberSignature Language="C#" Value="public string FileVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.FileVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <c>Dateiversion</c> -Feld in der Assembly.</summary>
+        <value>Die <c>Dateiversion</c> -Feld in der Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in der Dokumentation zur Option `/fileversion` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public string Flags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Flags" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <c>Flags</c> -Feld in der Assembly.</summary>
+        <value>Die <c>Flags</c> -Feld in der Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in der Dokumentation zur Option `/flags` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateFullPaths">
+      <MemberSignature Language="C#" Value="public bool GenerateFullPaths { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool GenerateFullPaths" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.GenerateFullPaths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen eines booleschen Werts, der angibt, ob die Aufgabe für alle Dateien, die in einer Fehlermeldung gemeldet werden, den absoluten Pfad verwenden soll.</summary>
+        <value>
+          <see langword="true" />Wenn die Aufgabe den absoluten Pfad für alle Dateien verwendet, die in einer Fehlermeldung gemeldet werden. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht der `/fullpaths` option [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateFullPathToTool">
+      <MemberSignature Language="C#" Value="protected override string GenerateFullPathToTool ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GenerateFullPathToTool() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AL.GenerateFullPathToTool" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den vollständigen Dateipfad zum AL-Tool zurück.</summary>
+        <returns>Der vollständige Dateipfad zum AL-Tool.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="KeyContainer">
+      <MemberSignature Language="C#" Value="public string KeyContainer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyContainer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.KeyContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Container ab, der ein Schlüsselpaar enthält, oder legt ihn fest.</summary>
+        <value>Der Container, der ein Schlüsselpaar enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser wird zum Signieren der Assembly (d. h. zum Zuweisen eines starken Namens zur Assembly) verwendet, indem ein öffentlicher Schlüssel in das Assemblymanifest eingefügt wird. Dann wird die endgültige Assembly von der Aufgabe mit dem privaten Schlüssel signiert. Weitere Informationen finden Sie in der Dokumentation zur Option `/keyn[ame]` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="KeyFile">
+      <MemberSignature Language="C#" Value="public string KeyFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.KeyFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Datei ab oder legt diese fest, die ein Schlüsselpaar oder einfach einen öffentlichen Schlüssel zum Signieren einer Assembly enthält.</summary>
+        <value>Die Datei, die ein Schlüsselpaar oder einfach einen öffentlichen Schlüssel zum Signieren einer Assembly enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Compiler fügt den öffentlichen Schlüssel in das Assemblymanifest ein und signiert anschließend die endgültige Assembly mit dem privaten Schlüssel. Weitere Informationen finden Sie in der Dokumentation zur Option `/keyf[ile]` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LinkResources">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] LinkResources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] LinkResources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.LinkResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab die Ressourcendateien, die mit einer Assembly verknüpft werden sollen, oder ruft diese Dateien ab.</summary>
+        <value>Die Ressourcendateien, die mit einer Assembly verknüpft werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ressource wird Teil der Assembly, aber die Datei wird nicht kopiert. An Elemente, die an diesen Parameter übergeben werden, sind möglicherweise die optionalen `LogicalName`-, `Target`- und `Access`-Metadaten angefügt. Mit den `LogicalName`-Metadaten wird der interne Bezeichner für die Ressource angegeben. Die `Target`-Metadaten können angeben, in welchen Pfad und mit welchem Dateinamen die Aufgabe die Datei kopiert, bevor sie diese neue Datei in die Assembly kompiliert. Die `Access`-Metadaten können auf `private` festgelegt werden, damit die Ressource für andere Assemblys nicht sichtbar ist. Weitere Informationen finden Sie in der Dokumentation zur Option `/link[resource]` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MainEntryPoint">
+      <MemberSignature Language="C#" Value="public string MainEntryPoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MainEntryPoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.MainEntryPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den vollqualifizierten Namen (*Klasse.Methode*) der Methode, die als Einstiegspunkt verwendet werden soll, wenn ein Modul in eine ausführbare Datei konvertiert.</summary>
+        <value>Der vollqualifizierte Name (*Klasse.Methode*) der Methode, die als Einstiegspunkt verwendet werden soll, wenn ein Modul in eine ausführbare Datei konvertiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht der `/main` option [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OutputAssembly">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem OutputAssembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem OutputAssembly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.OutputAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der von dieser Aufgabe generierten Datei ab oder legt ihn fest.</summary>
+        <value>Der Name der von dieser Aufgabe generierten Datei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht der `/out` option [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Platform">
+      <MemberSignature Language="C#" Value="public string Platform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Platform" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.Platform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Zeichenfolge, die die Plattform schränkt dieser Code ausgeführt werden kann. muss einer der <c>X86</c>, <c>Itanium</c>, <c>X64</c>, oder <c>"anycpu"</c>.</summary>
+        <value>Eine Zeichenfolge, die die Plattform schränkt können diesen Code ausführen, auf; muss einer der <c>X86</c>, <c>Itanium</c>, <c>X64</c>, oder <c>"anycpu"</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung ist `anycpu`. Diese Eigenschaft entspricht der `/platform` option [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Prefer32Bit">
+      <MemberSignature Language="C#" Value="public bool Prefer32Bit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Prefer32Bit" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.Prefer32Bit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag fest, der angibt, ob die Aufgabe auf einer 32-Bit-Plattform ausgeführt wird.</summary>
+        <value>Gibt den Wert des Flags.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ProductName">
+      <MemberSignature Language="C#" Value="public string ProductName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProductName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.ProductName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <c>Produkt</c> -Feld in der Assembly.</summary>
+        <value>Die <c>Produkt</c> -Feld in der Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in der Dokumentation zur Option `/prod[uct]` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ProductVersion">
+      <MemberSignature Language="C#" Value="public string ProductVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProductVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.ProductVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <c>ProductVersion</c> -Feld in der Assembly.</summary>
+        <value>Die <c>ProductVersion</c> -Feld in der Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in der Dokumentation zur Option `/productv[ersion]` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseFiles">
+      <MemberSignature Language="C#" Value="public string[] ResponseFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ResponseFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.ResponseFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Namen der Antwortdateien ab, die Befehle für das AL-Tool enthalten, oder legt diese Namen fest.</summary>
+        <value>Die Namen der Antwortdateien, die Befehle für das AL-Tool enthalten.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SdkToolsPath">
+      <MemberSignature Language="C#" Value="public string SdkToolsPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SdkToolsPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.SdkToolsPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad zu den SDK-Tools fest.</summary>
+        <value>Gibt den Pfad zu den SDK-Tools zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SourceModules">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] SourceModules { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] SourceModules" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.SourceModules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Module ab oder legt diese fest, die in einer Assembly kompiliert werden.</summary>
+        <value>Die Module, die in einer Assembly kompiliert werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Module werden im Manifest der resultierenden Assembly aufgelistet und müssen noch verteilt werden und verfügbar sein, damit die Assembly sie laden kann. Die an diesen Parameter übergebenen Elemente haben möglicherweise zusätzliche Metadaten mit dem Namen `Target`, die angeben, in welchen Pfad und mit welchem Dateinamen die Aufgabe die Datei kopiert, bevor sie diese neue Datei in die Assembly kompiliert. Weitere Informationen finden Sie in der Dokumentation zu [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md). Diese Eigenschaft entspricht der Liste der Module, die ohne einen bestimmten Schalter an Al.exe übergeben.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetType">
+      <MemberSignature Language="C#" Value="public string TargetType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.TargetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Dateiformat der Ausgabedatei: <c>Bibliothek</c> (Codebibliothek), <c>Exe</c> (Konsolenanwendung) oder <c>win</c> (Windows-basierte Anwendung).</summary>
+        <value>Das Dateiformat der Ausgabedatei: <c>Bibliothek</c> (Codebibliothek), <c>Exe</c> (Konsolenanwendung) oder <c>win</c> (Windows-basierte Anwendung).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung ist `library`. Diese Eigenschaft entspricht der `/t[arget]` option [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateFile">
+      <MemberSignature Language="C#" Value="public string TemplateFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TemplateFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.TemplateFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen und Festlegen der Assembly, von der mit Ausnahme des Felds für die Kultur alle Assemblymetadaten geerbt werden.</summary>
+        <value>Die Assembly, von der mit Ausnahme des Felds für die Kultur alle Assemblymetadaten geerbt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die angegebene Assembly muss über einen starken Namen verfügen. Eine Assembly, die Sie mit dem Parameter `TemplateFile` erstellen, ist eine Satellitenassembly. Diese Eigenschaft entspricht der `/template` option [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <c>Titel</c> -Feld in der Assembly.</summary>
+        <value>Die <c>Titel</c> -Feld in der Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in der Dokumentation zur Option `/title` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToolName">
+      <MemberSignature Language="C#" Value="protected override string ToolName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.ToolName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Tools (Al.exe) ab.</summary>
+        <value>Der Name des Tools.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Trademark">
+      <MemberSignature Language="C#" Value="public string Trademark { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Trademark" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.Trademark" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <c>Marke</c> -Feld in der Assembly.</summary>
+        <value>Die <c>Marke</c> -Feld in der Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in der Dokumentation zur Option `/trade[mark]` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public string Version { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Versionsinformationen für diese Assembly ab oder legt sie fest.</summary>
+        <value>Die Versionsinformationen für diese Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Format der Zeichenfolge ist *major.minor.build.revision*. Der Standardwert ist 0. Weitere Informationen finden Sie in der Dokumentation zur Option `/v[ersion]` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Win32Icon">
+      <MemberSignature Language="C#" Value="public string Win32Icon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Win32Icon" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.Win32Icon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ICO-Datei ab, die in die Assembly eingefügt werden soll, oder legt sie fest.</summary>
+        <value>Die ICO-Datei, die in die Assembly eingefügt werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die ICO-Datei verleiht der Ausgabedatei in Windows-Explorer das gewünschte Aussehen. Diese Eigenschaft entspricht der `/win32icon` option [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Win32Resource">
+      <MemberSignature Language="C#" Value="public string Win32Resource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Win32Resource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AL.Win32Resource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Win32-Ressource (RES-Datei) ab, die in die Ausgabedatei eingefügt werden soll, oder legt diese fest.</summary>
+        <value>Die Win32-Ressource (RES-Datei), die in die Ausgabedatei eingefügt werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in der Dokumentation zur Option `/win32res` in [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

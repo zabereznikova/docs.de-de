@@ -1,0 +1,388 @@
+<Type Name="Grid" FullName="System.Web.UI.DataVisualization.Charting.Grid">
+  <TypeSignature Language="C#" Value="public class Grid" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Grid extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.Grid" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Enabled")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Methoden und Eigenschaften, die die Haupt- und Nebenversionsnummern Rastern untergeordneter Ebenen des verwalten <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt die Funktionalität für das Raster im Diagramm bereit und wird verfügbar gemacht, mit der <xref:System.Web.UI.DataVisualization.Charting.Axis.MajorGrid%2A> und <xref:System.Web.UI.DataVisualization.Charting.Axis.MinorGrid%2A> Eigenschaften jedes <xref:System.Web.UI.DataVisualization.Charting.Axis> Objekt.  
+  
+ Hauptrasterlinien standardmäßig verfügen nicht über ihre <xref:System.Web.UI.DataVisualization.Charting.Grid.Interval%2A>, <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffset%2A>, <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalType%2A>, und <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffsetType%2A> festgelegten Eigenschaften. Wenn diese Eigenschaften für Hauptrasterlinien nicht festgelegt werden, die <xref:System.Web.UI.DataVisualization.Charting.Chart> Steuerelement die entsprechenden Werte für Rasterlinien automatisch bestimmt.  
+  
+ Die Achse und ihre Hilfsrasterlinien standardmäßig haben ihre <xref:System.Web.UI.DataVisualization.Charting.Grid.Interval%2A>, <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffset%2A>, <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalType%2A>, und <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffsetType%2A> Eigenschaften festlegen, um **Auto** (0). Wenn achsenbezeichnungen oder Hilfsgitternetzlinien aktiviert sind, und diese Eigenschaften nicht geändert werden werden, die <xref:System.Web.UI.DataVisualization.Charting.Chart> Steuerelement automatisch bestimmt, wie oft die Hilfsgitternetzlinien gezeichnet werden soll.  
+  
+ Achse-Raster:  
+  
+-   Aktiviert oder deaktiviert werden können.  
+  
+-   Haben Sie einen Ausgangspunkt, der bestimmt, wo sie zuerst gezeichnet werden.  
+  
+-   Anzeigen von Zeilen, die für die Art, Breite und Farbe festgelegt werden können.  
+  
+-   Können Sie entweder Automatische Intervalle oder, die manuell festgelegt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grid ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Grid.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.DataVisualization.Charting.Grid" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das bestimmt, ob Haupt-oder Hilfsgitternetzlinien aktiviert sind.</summary>
+        <value>
+          <see langword="True" />Wenn aktiviert, <see langword="false" /> ist deaktiviert. Die Standardeinstellung ist <see langword="true" /> für Hauptrasterobjekte und <see langword="false" /> für nebenraster-Objekte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Haupt- und Nebenversionsnummern Raster sind sichtbar, wenn aktiviert und nicht sichtbar, wenn deaktiviert.  
+  
+ Teilstriche werden nicht angezeigt werden, wenn deaktiviert.  
+  
+ Sie können die Teilstriche deaktivieren, indem die <xref:System.Web.UI.DataVisualization.Charting.TickMark.TickMarkStyle%2A> Eigenschaft <xref:System.Web.UI.DataVisualization.Charting.TickMarkStyle.None>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interval">
+      <MemberSignature Language="C#" Value="public double Interval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Interval" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.Interval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.AxisElementIntervalValueConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Intervall zwischen Haupt-oder Hilfsgitternetzlinien fest.</summary>
+        <value>Ein <see langword="double" /> Wert, der das Intervall zwischen Gitternetzlinien darstellt. Standardmäßig wird der Wert nicht festgelegt (<see cref="F:System.Double.NaN" />) für Hauptrasterlinien. Für die Hilfsrasterlinien ist der Standardwert 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist diese Eigenschaft nicht für achsenbezeichnungen "," Hauptteilstriche "und" Hauptrasterlinien festgelegt. Wenn sie nicht festgelegt ist – entweder explizit mithilfe der standardmäßig <xref:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.NotSet> zur Entwurfszeit oder durch Zuweisen eines Werts von <xref:System.Double.NaN> zur Laufzeit – der tatsächliche Wert dieser Eigenschaft richtet sich nach der <xref:System.Web.UI.DataVisualization.Charting.Axis.Interval%2A> Eigenschaft der <xref:System.Web.UI.DataVisualization.Charting.Axis> Objekt, mit dem das Diagramm Element, wie z. B. ein Raster oder ein Teilstrich Markierung gehört.  
+  
+ Das Intervall für Hilfsteilstriche und Rasterlinien ist nie betroffen von dem <xref:System.Web.UI.DataVisualization.Charting.Axis.Interval%2A> Eigenschaftswert.  
+  
+ Das Intervall in Achseneinheiten gemessen wird, und bestimmt, wie oft ein anwendbares Diagrammelement gezeichnet wird. Nehmen wir beispielsweise an, ein Säulendiagramm hat ein achsenschritt X 1 (d. h. 1, 2, 3, 4, usw.); Wenn Sie festlegen, die <xref:System.Windows.Forms.DataVisualization.Charting.LabelStyle.Interval%2A> Eigenschaft für die x-Achse auf 2, wird eine Bezeichnung für jede andere Spalte angezeigt werden.  
+  
+ Das gleiche gilt für alle anwendbaren Diagrammelemente. Mit anderen Worten, wenn im vorherigen Beispiel Band Linien verwendet wurden, mit einer <xref:System.Web.UI.DataVisualization.Charting.StripLine.IntervalOffset%2A> von 0,5 und ihre <xref:System.Web.UI.DataVisualization.Charting.StripLine.Interval%2A> -Eigenschaft 2 war, würde ein Bereichsstreifen auf 0,5, 2.5, 4.5 und So weiter angezeigt werden.  
+  
+ Wenn Sie festlegen, dass ein Diagrammelement `Interval` -Eigenschaft auf 0 (null), ein Intervall wird automatisch durch bestimmt die <xref:System.Web.UI.DataVisualization.Charting.Chart> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalOffset">
+      <MemberSignature Language="C#" Value="public double IntervalOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 IntervalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.AxisElementIntervalValueConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Offset der Datenblattlinien fest.</summary>
+        <value>Ein <see langword="double" /> Wert, der den Intervalloffset darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist diese Eigenschaft nicht für achsenbezeichnungen "," Hauptteilstriche "und" Hauptrasterlinien festgelegt. Wenn sie nicht festgelegt ist – standardmäßig, indem zur Entwurfszeit explizit angeben "Nicht konfiguriert" oder durch Zuweisen eines Werts von <xref:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.NotSet> zur Laufzeit – der tatsächliche Wert dieser Eigenschaft richtet sich nach der <xref:System.Web.UI.DataVisualization.Charting.Axis.IntervalOffset%2A> Eigenschaft der <xref:System.Web.UI.DataVisualization.Charting.Axis> Objekt, mit im Diagramm Element, z. B. eine Rasterlinie oder eines Teilstrichs angehört.  
+  
+ Der Intervalloffset Hilfsteilstriche und Rasterlinien ist nie den Wert des betroffen der <xref:System.Web.UI.DataVisualization.Charting.Axis.IntervalOffset%2A> Eigenschaft von der <xref:System.Web.UI.DataVisualization.Charting.Axis> Objekt.  
+  
+ Die <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffsetType%2A> Einstellung der Eigenschaft definiert die Maßeinheiten für den Offset.  
+  
+ Die <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffset%2A> kann kein negativer Wert sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalOffsetType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.DateTimeIntervalType IntervalOffsetType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.DateTimeIntervalType IntervalOffsetType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffsetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.DateTimeIntervalType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest Intervalloffsettyp der Haupt- und Nebenversionsnummern Datenblattlinien.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" /> -Enumerationswert, der den Intervalltyp angibt. Standardmäßig ist es nicht für Hauptrasterlinien festgelegt. Der Standardwert für Hilfsrasterlinien ist <see cref="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist diese Eigenschaft nicht für achsenbezeichnungen "," Hauptteilstriche "und" Hauptrasterlinien festgelegt. Wenn sie nicht festgelegt ist – standardmäßig, indem zur Entwurfszeit explizit angeben "Nicht konfiguriert" oder durch Zuweisen eines Werts von <xref:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.NotSet> zur Laufzeit – der tatsächliche Wert dieser Eigenschaft richtet sich nach der <xref:System.Web.UI.DataVisualization.Charting.Axis.IntervalOffsetType%2A> Eigenschaft der <xref:System.Web.UI.DataVisualization.Charting.Axis> Objekt, mit im Diagramm Element – eine Rasterlinie oder ein Teilstrich z. B. – gehört.  
+  
+ Intervalloffsettyp der Hilfsteilstriche und Rasterlinien ist nie betroffen von dem <xref:System.Web.UI.DataVisualization.Charting.Axis.IntervalOffsetType%2A> Eigenschaftswert.  
+  
+ Wenn dieser Intervalloffsettyp wird festgelegt, um <xref:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Auto>die <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalType%2A> Eigenschaft verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.DateTimeIntervalType IntervalType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.DateTimeIntervalType IntervalType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.IntervalType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.DateTimeIntervalType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Intervalltyp für Haupt-oder Hilfsgitternetzlinien.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" /> -Enumerationswert, der den Intervalltyp angibt. Standardmäßig wird für die achsenbezeichnungen "," Hauptteilstriche "und" Hauptrasterlinien nicht festgelegt, durch die Verwendung der <see cref="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.NotSet" /> -Enumerationswert. Der Standardwert für Hilfsteilstriche und Rasterlinien ist <see cref="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist diese Eigenschaft nicht für achsenbezeichnungen "," Hauptteilstriche "und" Hauptrasterlinien festgelegt. Wenn sie nicht festgelegt ist – standardmäßig, explizit zur Entwurfszeit mit "Nicht konfiguriert" oder durch Zuweisen eines Werts von <xref:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.NotSet> zur Laufzeit – der tatsächliche Wert dieser Eigenschaft richtet sich nach der <xref:System.Web.UI.DataVisualization.Charting.Axis.IntervalOffsetType%2A> Eigenschaft von der <xref:System.Web.UI.DataVisualization.Charting.Axis> Objekt, mit das Diagrammelement – eine Rasterlinie oder ein Teilstrich z. B. – gehört.  
+  
+ Der Intervalltyp der Hilfsteilstriche und Rasterlinien wird nie durch den Wert des beeinflusst die <xref:System.Web.UI.DataVisualization.Charting.Axis.IntervalType%2A> Eigenschaft.  
+  
+ Intervalltypen festgelegt werden können, um <xref:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Auto>; der Typ des Intervalls dann abhängig ist, auf der x- oder Y-Werten der gezeichneten <xref:System.Web.UI.DataVisualization.Charting.DataPoint> Objekte, je nachdem welche Achse die betreffenden Elemente gehören.  
+  
+ Festlegen der <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalType%2A> -Eigenschaft für eine Wertachse haben nur Auswirkungen, wenn die Werte der Datenpunkte sind <xref:System.DateTime> oder `double` Werte. Darüber hinaus die <xref:System.Web.UI.DataVisualization.Charting.Series.XValueType%2A> oder <xref:System.Web.UI.DataVisualization.Charting.Series.YValueType%2A> Eigenschaft der gezeichneten <xref:System.Web.UI.DataVisualization.Charting.Series> muss festgelegt werden, um <xref:System.Windows.Forms.DataVisualization.Charting.ChartValueType.Auto> oder <xref:System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime>.  
+  
+ Festlegen der <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalType%2A> -Eigenschaft für eine Kategorieachse hat nur eine Auswirkung, wenn die <xref:System.Web.UI.DataVisualization.Charting.Series.XValueType%2A> Eigenschaft (oder <xref:System.Web.UI.DataVisualization.Charting.Series.YValueType%2A> -Eigenschaft, abhängig von der betreffenden Achse) der gezeichneten <xref:System.Web.UI.DataVisualization.Charting.Series> Objekt ist entweder <xref:System.Windows.Forms.DataVisualization.Charting.ChartValueType.Auto> oder <xref:System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime>.  
+  
+> [!NOTE]
+>  Sonntag, gilt der erste Tag der Woche.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color LineColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color LineColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.LineColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Linienfarbe eines Rasters.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" />-Objekt. Der Standardwert ist <see cref="P:System.Drawing.Color.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.Grid.LineColor%2A> Eigenschaft wird verwendet, um die Farbe der Haupt-und Hilfsteilstriche oder Rastern anzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineDashStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartDashStyle LineDashStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartDashStyle LineDashStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.LineDashStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartDashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Linienart eines Rasters.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartDashStyle" />-Enumerationswert. Die Standardeinstellung ist <see cref="F:System.Web.UI.DataVisualization.Charting.ChartDashStyle.Solid" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.Grid.LineDashStyle%2A> Eigenschaft kann verwendet werden, um die Linienart des Haupt-und Hilfsteilstriche oder Rastern angeben. Die Zeile kann einfarbig, gepunktet usw. sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineWidth">
+      <MemberSignature Language="C#" Value="public int LineWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.LineWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Linienstärke des Haupt- und Nebenversionsnummern Rasterlinien.</summary>
+        <value>Ein <see langword="integer" /> , der die Linienstärke in Pixel darstellt. Der Standardwert ist eins (1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.Grid.LineWidth%2A> Eigenschaft kann verwendet werden, um die Linienstärke des Haupt-und Hilfsteilstriche oder Rastern in Pixel angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

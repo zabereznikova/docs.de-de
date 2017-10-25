@@ -1,0 +1,141 @@
+<Type Name="AuthenticationOption" FullName="System.EnterpriseServices.AuthenticationOption">
+  <TypeSignature Language="C#" Value="public enum AuthenticationOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed AuthenticationOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.AuthenticationOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Authentifizierungsmechanismus der Remoteprozeduraufruf-Remoteprozeduraufruf (RPC) an. Gilt nur, wenn die <see cref="T:System.EnterpriseServices.ActivationOption" /> festgelegt ist, um <see langword="Server" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Enumeration in Verbindung mit der <xref:System.EnterpriseServices.ApplicationAccessControlAttribute> Attribut.  
+  
+ [!code-cpp[EnterpriseServices_Security#2](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Security/CPP/employeeinformation.cpp#2)]
+ [!code-csharp[EnterpriseServices_Security#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Security/CS/employeeinformation.cs#2)]
+ [!code-vb[EnterpriseServices_Security#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Security/VB/employeeinformation.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Call">
+      <MemberSignature Language="C#" Value="Call" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.AuthenticationOption Call = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.AuthenticationOption.Call" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.AuthenticationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Am Anfang jeder Aufruf-Anmeldeinformationen authentifiziert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="Connect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.AuthenticationOption Connect = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.AuthenticationOption.Connect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.AuthenticationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Anmeldeinformationen authentifiziert, nur, wenn die Verbindung hergestellt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.AuthenticationOption Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.AuthenticationOption.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.AuthenticationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwendet die Standardebene für die Authentifizierung für den angegebenen Authentifizierungsdienst. In COM+-diese Einstellung wird bereitgestellt, durch die <see langword="DefaultAuthenticationLevel" /> Eigenschaft in der <see langword="LocalComputer" /> Auflistung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Integrity">
+      <MemberSignature Language="C#" Value="Integrity" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.AuthenticationOption Integrity = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.AuthenticationOption.Integrity" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.AuthenticationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Authentifiziert die Anmeldeinformationen und stellt sicher, dass keine Daten während der Übertragung geändert wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.AuthenticationOption None = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.AuthenticationOption.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.AuthenticationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es erfolgt keine Authentifizierung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Packet">
+      <MemberSignature Language="C#" Value="Packet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.AuthenticationOption Packet = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.AuthenticationOption.Packet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.AuthenticationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Authentifiziert die Anmeldeinformationen und stellt sicher, dass alle Daten des Aufrufs empfangen wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Privacy">
+      <MemberSignature Language="C#" Value="Privacy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.AuthenticationOption Privacy = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.AuthenticationOption.Privacy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.AuthenticationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Anmeldeinformationen authentifiziert und verschlüsselt das Paket, einschließlich der Identität und Signatur der Daten und des Absenders.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

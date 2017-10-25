@@ -1,0 +1,20 @@
+<Namespace Name="System.Runtime.Remoting">
+  <Docs>
+    <summary>Der <see cref="N:System.Runtime.Remoting" />-Namespace stellt Klassen und Schnittstellen bereit, die Entwicklern das Erstellen und Konfigurieren verteilter Anwendungen ermöglichen. Einige der wichtigeren Klassen des <see cref="N:System.Runtime.Remoting" />-Namespaces sind die <see cref="T:System.Runtime.Remoting.RemotingConfiguration" />-Klasse, die <see cref="T:System.Runtime.Remoting.RemotingServices" />-Klasse und die <see cref="T:System.Runtime.Remoting.ObjRef" />-Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.RemotingConfiguration> Klasse enthält statische Methoden für die Interaktion mit Konfigurationseinstellungen. Die <xref:System.Runtime.Remoting.RemotingConfiguration.Configure%2A?displayProperty=nameWithType> -Methode können Entwickler so konfigurieren Sie die Infrastruktur für den Remotezugriff mithilfe von Konfigurationsdateien für die XML-Format. Die <xref:System.Runtime.Remoting.RemotingConfiguration> -Klasse enthält auch mehrere Methoden für die Client- und Server-End-Registrierung des Clients und Server aktivierten Objekte, die auf dem Server gespeichert sind.  
+  
+ Die <xref:System.Runtime.Remoting.RemotingServices> -Klasse bietet eine Reihe von Methoden, die als Hilfe bei der Verwendung und Veröffentlichung von Remoteobjekten. Die <xref:System.Runtime.Remoting.RemotingServices.Marshal%2A?displayProperty=nameWithType> Methode bietet Funktionen zum Speichern von allen relevanten Informationen, die für die Aktivierung und die Kommunikation mit einem remote-Objekt in einer Instanz von der <xref:System.Runtime.Remoting.ObjRef> Klasse für die spätere Serialisierung und die Übertragung an einem Remotestandort. Die <xref:System.Runtime.Remoting.RemotingServices.Unmarshal%2A?displayProperty=nameWithType> Methode kehrt diesen Prozess, erstellen einen Proxy für eine remote-Objekt, das von einer Anwendung ohne Beachtung von Remote-Untereinheiten verwendet werden kann.  
+  
+ Die <xref:System.Runtime.Remoting.ObjRef> Klasse enthält alle relevanten Informationen, die für die Aktivierung und die Kommunikation mit einem Remoteobjekt. Diese Klasse ist eine serialisierbare Darstellung eines Objekts, das an einem Remotestandort mithilfe eines Kanals, wo, rückgängig gemacht werden übertragen wird (siehe <xref:System.Runtime.Remoting.RemotingServices.Unmarshal%2A>) und kann verwendet werden, um einen lokalen Proxy prozessübergreifendes Remoteobjekt erstellen.  
+  
+> [!NOTE]
+>  Marshal-by-Reference-Objekte (MBR) nicht dauerhaft im Arbeitsspeicher befinden. Stattdessen, es sei denn, der Typ überschreibt <xref:System.MarshalByRefObject.InitializeLifetimeService%2A?displayProperty=nameWithType> um eine eigene Lebensdauerrichtlinien zu steuern, hat jede MBR eine begrenzte Lebensdauer vor Beginn der .NET Framework Remoting-System den Prozess löschen und Freigeben des Speichers. Weitere Informationen finden Sie unter [Lebensdauer Leases](https://msdn.microsoft.com/library/23bk23zc.aspx).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

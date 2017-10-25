@@ -1,0 +1,177 @@
+<Type Name="HttpPostedFile" FullName="System.Web.HttpPostedFile">
+  <TypeSignature Language="C#" Value="public sealed class HttpPostedFile" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpPostedFile extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpPostedFile" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Zugriff auf einzelne Dateien, die von einem Client hochgeladen wurden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpFileCollection> Klasse ermöglicht den Zugriff auf alle Dateien, die hochgeladen werden von einem Client als eine Dateisammlung. Die <xref:System.Web.HttpPostedFile> Klasse enthält Eigenschaften und Methoden zum Abrufen von Informationen zu einer einzelnen Datei und zum Lesen und speichern Sie die Datei.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputFile> -Steuerelement auswählen und Hochladen von Dateien von einem Client verwendet werden kann.  
+  
+ Dateien werden im MIME-Multipart/Form-Data-Format hochgeladen. Standardmäßig werden alle Anforderungen, einschließlich der Felder des Formulars und Dateien, die größer als 256 KB hochgeladen auf den Datenträger gepuffert, anstatt im Arbeitsspeicher des Servers gespeichert.  
+  
+ Sie können die maximale zulässige Größe der Anforderung angeben, indem Sie den Zugriff auf die <xref:System.Web.Configuration.HttpRuntimeSection.MaxRequestLength%2A> Eigenschaft oder durch Festlegen der `maxRequestLength` Attribut des der [HttpRuntime-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369) Element innerhalb der Datei Machine.config oder Datei "Web.config". Der Standardwert ist 4 MB.  
+  
+ Die Menge der Daten, die im Arbeitsspeicher des Servers für eine Anforderung gepuffert werden, einschließlich Dateiuploads kann angegeben werden, durch den Zugriff auf die <xref:System.Web.Configuration.HttpRuntimeSection.RequestLengthDiskThreshold%2A> Eigenschaft oder durch Festlegen der `requestLengthDiskThreshold` Attribut von der [HttpRuntime-Element (ASP.NET-Einstellungen Schema)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369) Element in der Datei "Machine.config" oder "Web.config".  
+  
+ Durch Anpassen der <xref:System.Web.Configuration.HttpRuntimeSection.MaxRequestLength%2A> und <xref:System.Web.Configuration.HttpRuntimeSection.RequestLengthDiskThreshold%2A> Eigenschaften, Sie können eine Feinabstimmung durchzuführen die Leistung des Servers. Darüber hinaus sollten Sie die Einstellung der <xref:System.Web.Configuration.HttpRuntimeSection.MaxRequestLength%2A> um DOS-Angriffe zurückzuführen, dass Benutzer große Dateien an den Server senden zu verhindern.  
+  
+ Serverressourcen, die zugewiesen werden, um die hochgeladene Datei Puffer werden zerstört werden, wenn die Anforderung beendet. Um eine permanente Kopie der Datei zu speichern, verwenden die <xref:System.Web.HttpPostedFile.SaveAs%2A> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContentLength">
+      <MemberSignature Language="C#" Value="public int ContentLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ContentLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpPostedFile.ContentLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe einer hochgeladenen Datei in Bytes ab.</summary>
+        <value>Die Dateilänge in Bytes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public string ContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpPostedFile.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den MIME-Inhaltstyp einer Datei, die von einem Client gesendet.</summary>
+        <value>Der MIME-Inhaltstyp der hochgeladenen Datei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie alle Dateien in der Auflistung der hochgeladenen Datei durchlaufen und Maßnahmen, wenn der MIME-einer Datei Typ `US-ASCII`.  
+  
+ [!code-csharp[Classic HttpPostedFile.ContentType Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpPostedFile.ContentType Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpPostedFile.ContentType Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpPostedFile.ContentType Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="public string FileName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpPostedFile.FileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollqualifizierten Namen der Datei auf dem Client ab.</summary>
+        <value>Der Name der Datei mit des Clients, einschließlich des Verzeichnispfades.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie der Name einer hochgeladenen Datei (die erste Datei in der Dateisammlung) an eine Zeichenfolgenvariable zugewiesen wird.  
+  
+ [!code-csharp[Classic HttpPostedFile.FileName Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpPostedFile.FileName Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpPostedFile.FileName Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpPostedFile.FileName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream InputStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream InputStream" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpPostedFile.InputStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.IO.Stream" /> -Objekt, das auf eine hochgeladene Datei vorbereiten, lesen den Inhalt der Datei verweist.</summary>
+        <value>Ein <see cref="T:System.IO.Stream" /> auf eine Datei verweist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf den Inhalt der ersten Datei in der Client-Dateisammlung in ein Bytearray lesen, und kopieren Sie das Bytearray in eine Zeichenfolge.  
+  
+ [!code-csharp[Classic HttpPostedFile.InputStream Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpPostedFile.InputStream Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpPostedFile.InputStream Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpPostedFile.InputStream Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAs">
+      <MemberSignature Language="C#" Value="public void SaveAs (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveAs(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpPostedFile.SaveAs(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Der Name der gespeicherten Datei.</param>
+        <summary>Speichert den Inhalt einer hochgeladenen Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die maximale zulässige Größe für eine Anforderung, die hochgeladene Dateien einschließt, beträgt 4 MB, standardmäßig an. Maximale Größe der Anforderung angegeben werden kann, in der Datei "Machine.config" oder "Web.config" in der `maxRequestLength` Attribut des der [HttpRuntime-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369) Element. Die maximale Anforderungsgröße für eine bestimmte Seite kann angegeben werden, mithilfe der [Speicherort Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/922ef7d5-da38-4661-b1c6-5b9e5ceda1d5) Element in einer Datei "Web.config".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie alle Dateien zu speichern, die vom Client in den Ordner C:\TempFiles auf dem Webserver lokalen Datenträger hochgeladen werden.  
+  
+ [!code-csharp[Classic HttpPostedFile.SaveAs Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpPostedFile.SaveAs Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpPostedFile.SaveAs Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpPostedFile.SaveAs Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="P:System.Web.Configuration.HttpRuntimeSection.RequireRootedSaveAsPath" /> Eigenschaft von der <see cref="T:System.Web.Configuration.HttpRuntimeSection" /> -Objekts festgelegt wird, um <see langword="true" />, aber <paramref name="filename" /> ist kein absoluter Pfad.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

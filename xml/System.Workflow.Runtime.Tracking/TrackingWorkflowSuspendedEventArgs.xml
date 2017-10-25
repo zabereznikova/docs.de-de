@@ -1,0 +1,66 @@
+<Type Name="TrackingWorkflowSuspendedEventArgs" FullName="System.Workflow.Runtime.Tracking.TrackingWorkflowSuspendedEventArgs">
+  <TypeSignature Language="C#" Value="public class TrackingWorkflowSuspendedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TrackingWorkflowSuspendedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.TrackingWorkflowSuspendedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Informationen zum Grund für die Unterbrechung einer Workflowinstanz.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowSuspendedEventArgs> wird bei einer Unterbrechung einer Workflowinstanz von der Laufzeitverfolgungsinfrastruktur generiert. Wenn das einer Workflowinstanz zugeordnete <xref:System.Workflow.Runtime.Tracking.TrackingProfile> einen <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> enthält, der für ein <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent> konfiguriert ist, platziert die Laufzeitverfolgungsinfrastruktur <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowSuspendedEventArgs> in <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.EventArgs%2A> in den <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord>, den sie an den Überwachungsdienst sendet.  
+  
+> [!NOTE]
+>  <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowSuspendedEventArgs> wird nur von der Laufzeitverfolgungsinfrastruktur verwendet, um Informationen in einem <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord> zu übergeben. Die Daten für ein <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowSuspended?displayProperty=nameWithType>-Ereignis werden in <xref:System.Workflow.Runtime.WorkflowSuspendedEventArgs> übergeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Methode mit der Bezeichnung `WriteSuspendedEventArgs` veranschaulicht, die <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowSuspendedEventArgs> erfasst. Der Code schreibt Informationen aus den Argumenten der Methode in die Konsole, einschließlich des Werts der <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowSuspendedEventArgs.Error%2A>-Eigenschaft.  
+  
+ Dieses Codebeispiel stammt aus dem EventArgs Tracking SDK-Beispiel in der Datei Program.cs. Weitere Informationen finden Sie unter [EventArgs Tracking-Beispiel](http://msdn.microsoft.com/en-us/94818da2-c3c4-4a13-b47a-a0fb30dbbf1c).  
+  
+ [!code-csharp[WF_Samples#287](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#287)]
+ [!code-vb[WF_Samples#287](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#287)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public string Error { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Error" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingWorkflowSuspendedEventArgs.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält Informationen zum Grund für die Unterbrechung einer Workflowinstanz. Diese können von <see cref="M:System.Workflow.Runtime.WorkflowInstance.Suspend(System.String)" /> (Zeichenfolgenfehler) oder der <see cref="P:System.Workflow.ComponentModel.SuspendActivity.Error" />-Eigenschaft stammen, die Sie für die <see cref="T:System.Workflow.ComponentModel.SuspendActivity" />-Aktivität festlegen.</summary>
+        <value>Zeichenfolgenwert mit dem Grund für die Unterbrechung einer Workflowinstanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,65 @@
+<Type Name="ListItemCollection" FullName="System.Windows.Documents.ListItemCollection">
+  <TypeSignature Language="C#" Value="public class ListItemCollection : System.Windows.Documents.TextElementCollection&lt;System.Windows.Documents.ListItem&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListItemCollection extends System.Windows.Documents.TextElementCollection`1&lt;class System.Windows.Documents.ListItem&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.ListItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.TextElementCollection&lt;System.Windows.Documents.ListItem&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TextElementType">System.Windows.Documents.ListItem</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Windows.Documents.ListItem" />-Elementen dar. <see cref="T:System.Windows.Documents.ListItemCollection" />definiert den zulässigen untergeordneten Inhalt von einem <see cref="T:System.Windows.Documents.List" /> Element.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.ListItemCollection>Erstellen ist nur zulässig, in einem <xref:System.Windows.Documents.List> Objekt. Daher ist es möglich, eine <xref:System.Windows.Documents.ListItemCollection> kann nicht direkt instanziiert werden und hat keinen Standardwert oder überladenen Konstruktor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FirstListItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.ListItem FirstListItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.ListItem FirstListItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.ListItemCollection.FirstListItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.ListItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das erste <see cref="T:System.Windows.Documents.ListItem" /> Element in dieser Instanz des <see cref="T:System.Windows.Documents.ListItemCollection" />.</summary>
+        <value>Die erste <see cref="T:System.Windows.Documents.ListItem" /> Element in dieser Instanz des <see cref="T:System.Windows.Documents.ListItemCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastListItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.ListItem LastListItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.ListItem LastListItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.ListItemCollection.LastListItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.ListItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den letzten <see cref="T:System.Windows.Documents.ListItem" /> Element in dieser Instanz des <see cref="T:System.Windows.Documents.ListItemCollection" />.</summary>
+        <value>Der letzte <see cref="T:System.Windows.Documents.ListItem" /> Element in dieser Instanz des <see cref="T:System.Windows.Documents.ListItemCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

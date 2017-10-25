@@ -1,0 +1,183 @@
+<Type Name="_AssemblyBuilder" FullName="System.Runtime.InteropServices._AssemblyBuilder">
+  <TypeSignature Language="C#" Value="public interface _AssemblyBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract _AssemblyBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices._AssemblyBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("BEBB2505-8B54-3443-AEAD-142A16DD9CC7")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibImportClass(typeof(System.Reflection.Emit.AssemblyBuilder))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht die <see cref="T:System.Reflection.Emit.AssemblyBuilder" /> Klasse an nicht verwalteten Code.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetIDsOfNames">
+      <MemberSignature Language="C#" Value="public void GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._AssemblyBuilder.GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="rgszNames">Ein Array von zuzuordnenden Namen.</param>
+        <param name="cNames">Die Anzahl der zuzuordnenden Namen.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem die Namen interpretiert werden sollen.</param>
+        <param name="rgDispId">Ein vom Aufrufer zugeordnete Array, das die IDs entsprechend den Namen empfängt.</param>
+        <summary>Ordnet eine Reihe von Namen einer entsprechenden Reihe von Dispatchbezeichnern zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetIDsOfNames`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeInfo">
+      <MemberSignature Language="C#" Value="public void GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._AssemblyBuilder.GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">Die zurückzugebenden Typinformationen.</param>
+        <param name="lcid">Der Gebietsschemabezeichner für die Typinformationen.</param>
+        <param name="ppTInfo">Ein Zeiger auf das angeforderte Objekt mit den Typinformationen.</param>
+        <summary>Ruft die Typinformationen für ein Objekt ab, mit deren Hilfe die Typinformationen für eine Schnittstelle abgerufen werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfo`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="public void GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._AssemblyBuilder.GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Diese Methode gibt einen Zeiger auf einen Speicherort zurück, der die Anzahl der von dem Objekt bereitgestellten Schnittstellen mit Typinformationen empfängt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft die Anzahl der Schnittstellen mit Typinformationen ab, die von einem Objekt bereitgestellt werden (0 oder 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfoCount`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public void Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._AssemblyBuilder.Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Ein Bezeichner eines Elements.</param>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem Argumente interpretiert werden sollen.</param>
+        <param name="wFlags">Flags, die den Kontext des Aufrufs beschreiben.</param>
+        <param name="pDispParams">Ein Zeiger auf eine Struktur, die ein Array von Argumenten und ein Array von Argument-DISPIDs für benannte Argumente sowie Zähler für die Anzahl der Elemente in den Arrays enthält.</param>
+        <param name="pVarResult">Ein Zeiger auf den Speicherort, in dem das Ergebnis gespeichert werden soll.</param>
+        <param name="pExcepInfo">Ein Zeiger auf eine Struktur mit Ausnahmeinformationen.</param>
+        <param name="puArgErr">Der Index des ersten Arguments mit einem Fehler.</param>
+        <summary>Stellt den Zugriff auf von einem Objekt verfügbar gemachte Eigenschaften und Methoden bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::Invoke`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

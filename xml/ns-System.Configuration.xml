@@ -1,0 +1,6 @@
+<Namespace Name="System.Configuration">
+  <Docs>
+    <summary>Die <see cref="N:System.Configuration" /> -Namespace enthält Typen, die das Programmiermodell zum Behandeln von Konfigurationsdaten bereitzustellen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

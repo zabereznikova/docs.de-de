@@ -1,0 +1,383 @@
+<Type Name="DesignerCategoryAttribute" FullName="System.ComponentModel.DesignerCategoryAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DesignerCategoryAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignerCategoryAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DesignerCategoryAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass der Designer für eine Klasse zu einer bestimmten Kategorie gehört.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein visuellen Designer kann einen Kategorie-Designer verwenden, um eine Entwicklungsumgebung des Typs des Designers zu informieren, die implementiert werden. Wenn kein Designer-Kategorie für eine Klasse angegeben ist, wird eine Entwicklungsumgebung kann, oder die Klasse so entwickelt werden möglicherweise nicht zugelassen. Eine Kategorie kann für einen beliebigen Namen erstellt werden.  
+  
+ Wenn Sie eine Klasse mit diesem Attribut kennzeichnen, wird er auf einen Konstanten Member festgelegt. Wenn Sie den Wert dieses Attributs im Code überprüfen möchten, müssen Sie die Konstante Memberfunktion angeben. Der Beschreibungsspalte in der folgenden Tabelle listet die Konstanten Member, den jeder Wert festgelegt ist.  
+  
+ Die <xref:System.ComponentModel.DesignerCategoryAttribute> Klasse definiert die folgenden allgemeinen Kategorien:  
+  
+|Kategorie|Beschreibung|  
+|--------------|-----------------|  
+|Komponente|Designer, die mit Komponenten verwendet werden. Das Attribut wird festgelegt, auf den Konstanten Member <xref:System.ComponentModel.DesignerCategoryAttribute.Component?displayProperty=nameWithType>.|  
+|Formular|Designer, die mit Formularen verwendet werden. Das Attribut wird festgelegt, auf den Konstanten Member <xref:System.ComponentModel.DesignerCategoryAttribute.Form?displayProperty=nameWithType>.|  
+|Designer|Designer, die mit Designer verwendet werden. Das Attribut wird festgelegt, auf den Konstanten Member <xref:System.ComponentModel.DesignerCategoryAttribute.Generic?displayProperty=nameWithType>.|  
+|Leere Zeichenfolge ("")|Dies ist die Standardkategorie.|  
+  
+ Weitere Informationen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Klasse mit dem Namen `MyForm`. `MyForm`verfügt über zwei Attribute einer <xref:System.ComponentModel.DesignerAttribute> , der angibt, verwendet diese Klasse die <xref:System.Windows.Forms.Design.DocumentDesigner>, und ein <xref:System.ComponentModel.DesignerCategoryAttribute> , die angibt, die <xref:System.ComponentModel.DesignerCategoryAttribute.Form> Kategorie.  
+  
+ [!code-cpp[Classic DesignerCategoryAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DesignerCategoryAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DesignerCategoryAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DesignerCategoryAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic DesignerCategoryAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DesignerCategoryAttribute Example/VB/source.vb#1)]  
+  
+ Im nächste Beispiel erstellt eine Instanz des `MyForm`. Dann wird die Attribute für die Klasse und extrahiert die <xref:System.ComponentModel.DesignerCategoryAttribute>, und gibt den Namen des Designers.  
+  
+ [!code-cpp[Classic DesignerCategoryAttribute Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DesignerCategoryAttribute Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic DesignerCategoryAttribute Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DesignerCategoryAttribute Example/CS/source.cs#2)]
+ [!code-vb[Classic DesignerCategoryAttribute Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DesignerCategoryAttribute Example/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerCategoryAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerCategoryAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DesignerCategoryAttribute" /> Klasse mit einer leeren Zeichenfolge ("").</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerCategoryAttribute (string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerCategoryAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="category">Der Name der Kategorie.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DesignerCategoryAttribute" /> Klasse mit dem angegebenen Kategorienamen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public string Category { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Category" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DesignerCategoryAttribute.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Kategorie ab.</summary>
+        <value>Der Name der Kategorie.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Component">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.DesignerCategoryAttribute Component;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.DesignerCategoryAttribute Component" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DesignerCategoryAttribute.Component" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignerCategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Komponente mit dieser Kategorie einen Komponenten-Designer verwendet gekennzeichnete. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.DesignerCategoryAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.DesignerCategoryAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DesignerCategoryAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignerCategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Komponente, die mit dieser Kategorie gekennzeichnete einen visuellen Designer verwenden kann. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist die Standardkategorie.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerCategoryAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, dessen auf Wertgleichheit geprüft.</param>
+        <summary>Gibt zurück, ob der Wert des angegebenen Objekts gleich dem aktuellen <see cref="T:System.ComponentModel.DesignOnlyAttribute" />.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert des angegebenen Objekts gleich der aktuellen ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Form">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.DesignerCategoryAttribute Form;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.DesignerCategoryAttribute Form" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DesignerCategoryAttribute.Form" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignerCategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Komponente dieser Kategorie mit einen Formular-Designer markiert. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Generic">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.DesignerCategoryAttribute Generic;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.DesignerCategoryAttribute Generic" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DesignerCategoryAttribute.Generic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignerCategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Komponente mit dieser Kategorie einen Standard-Designer verwendet gekennzeichnete. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerCategoryAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerCategoryAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob dieses Attribut die Standardeinstellung ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Attribut der Standardwert für diese Attributklasse ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeId">
+      <MemberSignature Language="C#" Value="public override object TypeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypeId" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DesignerCategoryAttribute.TypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen eindeutigen Bezeichner für dieses Attribut ab.</summary>
+        <value>Ein <see cref="T:System.Object" /> also einen eindeutigen Bezeichner für das Attribut.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

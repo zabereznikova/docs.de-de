@@ -1,0 +1,99 @@
+<Type Name="ExpandDirection" FullName="System.Windows.Controls.ExpandDirection">
+  <TypeSignature Language="C#" Value="public enum ExpandDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ExpandDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ExpandDirection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Richtung, in dem ein <see cref="T:System.Windows.Controls.Expander" /> steuern wird geöffnet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um die Richtung anzugeben, die eine <xref:System.Windows.Controls.Expander> -Steuerelement nach unten erweitert, legen Sie die <xref:System.Windows.Controls.Expander.ExpandDirection%2A> -Eigenschaft auf einen Member der Enumeration.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.Expander.ExpandDirection%2A> Eigenschaft, um eine <xref:System.Windows.Controls.ExpandDirection> Enumerationsmember.  
+  
+ [!code-xaml[ExpanderExample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#1)]  
+  
+ [!code-csharp[ExpanderExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml.cs#3)]
+ [!code-vb[ExpanderExample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderExample/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Down">
+      <MemberSignature Language="C#" Value="Down" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.ExpandDirection Down = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ExpandDirection.Down" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ExpandDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Controls.Expander" /> -Steuerelement geöffnet wird, nach unten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.ExpandDirection Left = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ExpandDirection.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ExpandDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Controls.Expander" /> -Steuerelement geöffnet wird, nach links.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.ExpandDirection Right = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ExpandDirection.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ExpandDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Controls.Expander" /> -Steuerelement geöffnet wird, nach rechts.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Up">
+      <MemberSignature Language="C#" Value="Up" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.ExpandDirection Up = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ExpandDirection.Up" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ExpandDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Controls.Expander" /> Steuerelement wird geöffnet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,208 @@
+<Type Name="CounterData" FullName="System.Diagnostics.PerformanceData.CounterData">
+  <TypeSignature Language="C#" Value="public sealed class CounterData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CounterData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.PerformanceData.CounterData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält die unformatierten Daten für einen Indikator an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet.Item%2A?displayProperty=nameWithType> Eigenschaft gibt eine Instanz dieser Klasse zurück.  
+  
+ Diese Klasse stellt eine threadsichere Methoden zum Lesen und Schreiben von Leistungsindikatordaten bereit.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Decrement">
+      <MemberSignature Language="C#" Value="public void Decrement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Decrement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceData.CounterData.Decrement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dekrementiert den Leistungsindikatorwert um 1.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sicher dekrementiert den Leistungsindikatorwert für Multithreadanwendungen.  
+  
+ Aufrufen, um den Zählerwert durch einen bestimmten Wert zu verringern, die <xref:System.Diagnostics.PerformanceData.CounterData.IncrementBy%2A> -Methode, und legen die `value` Parameter auf eine negative Zahl.  
+  
+ Verwenden Sie zum Festlegen des Wert dieses Indikators die <xref:System.Diagnostics.PerformanceData.CounterData.Value%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Increment">
+      <MemberSignature Language="C#" Value="public void Increment ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Increment() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceData.CounterData.Increment" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird den Wert dieses Indikators um 1 erhöht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode inkrementiert sicher den Wert dieses Indikators für Multithreadanwendungen.  
+  
+ Verwenden Sie zum Festlegen des Wert dieses Indikators die <xref:System.Diagnostics.PerformanceData.CounterData.Value%2A> Eigenschaft.  
+  
+ Um der Wert dieses Indikators durch einen bestimmten Wert zu erhöhen, rufen Sie die <xref:System.Diagnostics.PerformanceData.CounterData.IncrementBy%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncrementBy">
+      <MemberSignature Language="C#" Value="public void IncrementBy (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void IncrementBy(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceData.CounterData.IncrementBy(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Betrag, den Wert dieses Indikators erhöht. Der inkrementellen Wert kann positiv oder negativ sein.</param>
+        <summary>Inkrementiert den Wert des Indikators um den angegebenen Betrag an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode inkrementiert sicher den Wert dieses Indikators für Multithreadanwendungen.  
+  
+ Verwenden Sie zum Festlegen des Wert dieses Indikators die <xref:System.Diagnostics.PerformanceData.CounterData.Value%2A> Eigenschaft.  
+  
+ Um den Wert des Indikators um 1 erhöhen möchten, rufen die <xref:System.Diagnostics.PerformanceData.CounterData.Increment%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawValue">
+      <MemberSignature Language="C#" Value="public long RawValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RawValue" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceData.CounterData.RawValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt fest oder ruft die unformatierte Zähler Daten ab.</summary>
+        <value>Die unformatierten Indikatordaten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nicht threadsicher und eignet sich nur für Singlethread-Zugriff. Für Multithreadzugriff auf die Indikatordaten verwenden die <xref:System.Diagnostics.PerformanceData.CounterData.Value%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public long Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceData.CounterData.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt fest oder ruft die Leistungsindikatorendaten ab.</summary>
+        <value>Die Leistungsindikatorendaten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bietet sicheren Zugriff auf die Leistungsindikatordaten für Multithreadanwendungen. Wenn Leistung von Bedeutung ist, verwenden Sie die <xref:System.Diagnostics.PerformanceData.CounterData.RawValue%2A> Eigenschaft, aber die <xref:System.Diagnostics.PerformanceData.CounterData.RawValue%2A> Eigenschaft ist nicht threadsicher.  
+  
+ Beachten Sie, dass die <xref:System.Diagnostics.PerformanceData.CounterData.Value%2A> Eigenschaft ist nicht threadsicher in .NET Framework 3.5.  
+  
+ Um den Zählerwert zu erhöhen, sollten Sie mithilfe der <xref:System.Diagnostics.PerformanceData.CounterData.Increment%2A> oder <xref:System.Diagnostics.PerformanceData.CounterData.IncrementBy%2A> Methode.  
+  
+   
+  
+## Examples  
+ Ein Beispiel finden Sie unter <xref:System.Diagnostics.PerformanceData>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

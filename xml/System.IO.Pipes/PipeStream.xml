@@ -1,0 +1,1528 @@
+<Type Name="PipeStream" FullName="System.IO.Pipes.PipeStream">
+  <TypeSignature Language="C#" Value="public abstract class PipeStream : System.IO.Stream" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PipeStream extends System.IO.Stream" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Pipes.PipeStream" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Pipes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.Stream</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Macht ein <see cref="T:System.IO.Stream" />-Objekt um eine Pipe verfügbar, das sowohl anonyme als auch benannte Pipes unterstützt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Pipes.PipeStream> -Klasse stellt die Basisklasse für benannte und anonyme Pipeoperationen in .NET Framework bereit. Verwenden der <xref:System.IO.Pipes.NamedPipeServerStream> und <xref:System.IO.Pipes.NamedPipeClientStream> Klassen für die named Pipe-Vorgänge. Verwenden der <xref:System.IO.Pipes.AnonymousPipeServerStream> und <xref:System.IO.Pipes.AnonymousPipeClientStream> Klassen für anonyme Pipeoperationen.  
+  
+ Weitere Informationen über Pipes finden Sie unter [Pipes](~/docs/standard/io/pipe-operations.md). Ein Beispiel für anonyme Pipes, finden Sie unter [wie: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation](~/docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md). Ein Beispiel der named Pipes finden Sie unter [wie: Verwenden von Named Pipes für die prozessübergreifende Kommunikation](~/docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PipeStream (System.IO.Pipes.PipeDirection direction, int bufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.IO.Pipes.PipeDirection direction, int32 bufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.#ctor(System.IO.Pipes.PipeDirection,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Einer der <see cref="T:System.IO.Pipes.PipeDirection" />-Werte, die die Richtung des Pipeobjekts angeben.</param>
+        <param name="bufferSize">Ein positiver <see cref="T:System.Int32" />-Wert größer oder gleich 0, der die Puffergröße angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Pipes.PipeStream" />-Klasse unter Verwendung des angegebenen <see cref="T:System.IO.Pipes.PipeDirection" />-Werts und der angegebenen Puffergröße.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor verwendet ein Pipeübertragungsmodus <xref:System.IO.Pipes.PipeTransmissionMode.Byte>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="direction" /> ist kein gültiger <see cref="T:System.IO.Pipes.PipeDirection" />-Wert.  
+  
+ - oder -   
+  
+ <paramref name="bufferSize" /> ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PipeStream (System.IO.Pipes.PipeDirection direction, System.IO.Pipes.PipeTransmissionMode transmissionMode, int outBufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.IO.Pipes.PipeDirection direction, valuetype System.IO.Pipes.PipeTransmissionMode transmissionMode, int32 outBufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.#ctor(System.IO.Pipes.PipeDirection,System.IO.Pipes.PipeTransmissionMode,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="transmissionMode" Type="System.IO.Pipes.PipeTransmissionMode" />
+        <Parameter Name="outBufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Einer der <see cref="T:System.IO.Pipes.PipeDirection" />-Werte, die die Richtung des Pipeobjekts angeben.</param>
+        <param name="transmissionMode">Einer der <see cref="T:System.IO.Pipes.PipeTransmissionMode" />-Werte, die den Übertragungsmodus des Pipeobjekts angeben.</param>
+        <param name="outBufferSize">Ein positiver <see cref="T:System.Int32" />-Wert größer oder gleich 0, der die Puffergröße angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Pipes.PipeStream" />-Klasse mit der angegebenen <see cref="T:System.IO.Pipes.PipeDirection" />, dem angegebenen <see cref="T:System.IO.Pipes.PipeTransmissionMode" /> und der angegebenen Puffergröße.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="direction" /> ist kein gültiger <see cref="T:System.IO.Pipes.PipeDirection" />-Wert.  
+  
+ - oder -   
+  
+ <paramref name="transmissionMode" /> ist kein gültiger <see cref="T:System.IO.Pipes.PipeTransmissionMode" />-Wert.  
+  
+ - oder -   
+  
+ <paramref name="bufferSize" /> ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRead">
+      <MemberSignature Language="C#" Value="public override IAsyncResult BeginRead (byte[] buffer, int offset, int count, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IAsyncResult BeginRead(unsigned int8[] buffer, int32 offset, int32 count, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, in den Daten gelesen werden sollen.</param>
+        <param name="offset">Der Byteoffset im <c>Puffer</c> an der Lesevorgang beginnen soll.</param>
+        <param name="count">Die maximale Anzahl der zu lesenden Bytes.</param>
+        <param name="callback">Die Methode, die aufgerufen wird, wenn der asynchrone Lesevorgang abgeschlossen ist.</param>
+        <param name="state">Ein vom Benutzer bereitgestelltes Objekt, das diese asynchrone Leseanforderung von anderen Anforderungen unterscheidet.</param>
+        <summary>Beginnt einen asynchronen Lesevorgang.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" />-Objekt, das auf den asynchronen Lesevorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Übergeben Sie das zurückgegebene <xref:System.IAsyncResult> -Objekt an die <xref:System.IO.Pipes.PipeStream.EndRead%2A> Methode, um zu bestimmen, wie viele Bytes gelesen wurden, und zum Freigeben von Betriebssystemressourcen, die zum Lesen. <xref:System.IO.Pipes.PipeStream.EndRead%2A>muss einmal für jeden Aufruf aufgerufen werden <xref:System.IO.Pipes.PipeStream.BeginRead%2A>. Dies kann dafür den gleichen Code, der aufgerufen <xref:System.IO.Pipes.PipeStream.BeginRead%2A> oder einen Rückruf, der an übergebene <xref:System.IO.Pipes.PipeStream.BeginRead%2A>.  
+  
+ Verwenden der <xref:System.IO.Pipes.PipeStream.CanRead%2A> -Eigenschaft können Sie bestimmen, ob die aktuelle <xref:System.IO.Pipes.PipeStream> -Objekt Lesevorgänge unterstützt.  
+  
+ Wenn die Pipe ist geschlossen, oder ein ungültiges Argument, um übergeben wird <xref:System.IO.Pipes.PipeStream.BeginRead%2A>, die erforderlichen Ausnahmen werden sofort ausgelöst. Während einer asynchronen leseanforderung auftretende Fehler auftreten, auf dem Thread des Threadpools, die die Anforderung ausführt. Die Ausnahmen werden ausgelöst, wenn der Code Ruft die <xref:System.IO.Pipes.PipeStream.EndRead%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als 0.  
+  
+ - oder -   
+  
+ <paramref name="count" /> ist kleiner als 0.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="count" /> ist größer als die im <paramref name="buffer" /> verfügbare Anzahl von Bytes.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Pipe ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">Die Pipe unterstützt keine Lesevorgänge.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung der Pipe ist getrennt, die Pipe wartet auf eine Verbindung, oder das Handle wurde nicht festgelegt.</exception>
+        <exception cref="T:System.IO.IOException">Die Pipe wurde unterbrochen, oder es ist ein anderer E/A-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWrite">
+      <MemberSignature Language="C#" Value="public override IAsyncResult BeginWrite (byte[] buffer, int offset, int count, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IAsyncResult BeginWrite(unsigned int8[] buffer, int32 offset, int32 count, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer mit den Daten, die in den aktuellen Stream geschrieben werden sollen.</param>
+        <param name="offset">Der nullbasierte Byteoffset im <c>Puffer</c> ab dem Bytes in den aktuellen Stream kopiert werden sollen.</param>
+        <param name="count">Die maximale Anzahl der zu schreibenden Bytes.</param>
+        <param name="callback">Die Methode, die aufgerufen wird, wenn der asynchrone Schreibvorgang abgeschlossen ist.</param>
+        <param name="state">Ein vom Benutzer bereitgestelltes Objekt, das diese asynchrone Schreibanforderung von anderen Anforderungen unterscheidet.</param>
+        <summary>Beginnt einen asynchronen Schreibvorgang.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" />-Objekt, das auf den asynchronen Schreibvorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Pipes.PipeStream.EndWrite%2A>muss einmal für jeden Aufruf aufgerufen werden <xref:System.IO.Pipes.PipeStream.BeginWrite%2A>. Dies kann dafür den gleichen Code, der aufgerufen <xref:System.IO.Pipes.PipeStream.BeginWrite%2A> oder einen Rückruf, der an übergebene <xref:System.IO.Pipes.PipeStream.BeginWrite%2A>.  
+  
+ Verwenden der <xref:System.IO.Pipes.PipeStream.CanWrite%2A> -Eigenschaft können Sie bestimmen, ob die aktuelle <xref:System.IO.Pipes.PipeStream> -Objekt Schreibvorgänge unterstützt.  
+  
+ Wenn die Pipe ist geschlossen, oder ein ungültiges Argument, um übergeben wird <xref:System.IO.Pipes.PipeStream.BeginWrite%2A>, die erforderlichen Ausnahmen werden sofort ausgelöst. Während einer asynchronen schreibanforderung auftretende Fehler auftreten, auf dem Thread des Threadpools, die die Anforderung ausführt. Die Ausnahmen werden ausgelöst, wenn der Code Ruft die <xref:System.IO.Pipes.PipeStream.EndWrite%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als 0.  
+  
+ - oder -   
+  
+ <paramref name="count" /> ist kleiner als 0.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="count" /> ist größer als die im <paramref name="buffer" /> verfügbare Anzahl von Bytes.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Pipe ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">Die Pipe unterstützt keine Schreibvorgänge.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung der Pipe ist getrennt, die Pipe wartet auf eine Verbindung, oder das Handle wurde nicht festgelegt.</exception>
+        <exception cref="T:System.IO.IOException">Die Pipe wurde unterbrochen, oder es ist ein anderer E/A-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public override bool CanRead { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRead" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeStream.CanRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der aktuelle Stream Lesevorgänge unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Stream Lesevorgänge unterstützt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IO.Pipes.PipeStream> -Objekt geschlossen ist, gibt diese Eigenschaft zurück `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSeek">
+      <MemberSignature Language="C#" Value="public override bool CanSeek { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSeek" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeStream.CanSeek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der aktuelle Stream Suchvorgänge unterstützt.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IO.Pipes.PipeStream> -Objekt geschlossen ist, gibt diese Eigenschaft zurück `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWrite">
+      <MemberSignature Language="C#" Value="public override bool CanWrite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanWrite" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeStream.CanWrite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der aktuelle Stream Schreibvorgänge unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Stream Schreibvorgänge unterstützt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IO.Pipes.PipeStream> -Objekt geschlossen ist, gibt diese Eigenschaft zurück `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckPipePropertyOperations">
+      <MemberSignature Language="C#" Value="protected virtual void CheckPipePropertyOperations ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void CheckPipePropertyOperations() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.CheckPipePropertyOperations" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft, ob sich die Pipe in einem ordnungsgemäßen Zustand zum Abrufen oder Festlegen von Eigenschaften befindet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckReadOperations">
+      <MemberSignature Language="C#" Value="protected void CheckReadOperations ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void CheckReadOperations() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.CheckReadOperations" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft, ob die Pipe verbunden ist, um Lesevorgänge auszuführen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckWriteOperations">
+      <MemberSignature Language="C#" Value="protected void CheckWriteOperations ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void CheckWriteOperations() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.CheckWriteOperations" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft, ob die Pipe verbunden ist, um Schreibvorgänge auszuführen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von der <see cref="T:System.IO.Pipes.PipeStream" />-Klasse verwendeten nicht verwalteten Ressourcen frei und gibt (optional) auch die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich <xref:System.ComponentModel.Component.Dispose%2A> Methode und die <xref:System.Object.Finalize%2A> Methode. <xref:System.ComponentModel.Component.Dispose%2A>Ruft die geschützte <xref:System.IO.Pipes.PipeStream.Dispose%2A> Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft <xref:System.IO.Pipes.PipeStream.Dispose%2A> mit `disposing` festgelegt `false`. Wenn der disposing-Parameter ist `true`, diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte frei, die von diesem <xref:System.IO.Pipes.PipeStream> -Objekt verweist. Diese Methode ruft die <xref:System.IO.Pipes.PipeStream.Dispose%2A>-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>In abgeleiteten Klassen versetzen Sie alle <see cref="T:System.IO.Stream" /> Bereinigungslogik in die <see cref="M:System.IO.Pipes.PipeStream.Dispose(System.Boolean)" /> Methode.  
+  
+ <see cref="M:System.ComponentModel.Component.Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Beim Überschreiben von <see cref="M:System.IO.Pipes.PipeStream.Dispose(System.Boolean)" /> müssen Sie darauf achten, nicht auf Objekte zu verweisen, die durch einen früheren Aufruf von <see cref="M:System.ComponentModel.Component.Dispose" /> freigegeben wurden. Weitere Informationen zum Implementieren <see cref="M:System.IO.Pipes.PipeStream.Dispose(System.Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see cref="M:System.ComponentModel.Component.Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRead">
+      <MemberSignature Language="C#" Value="public override int EndRead (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 EndRead(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.EndRead(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Der Verweis auf die ausstehende asynchrone Anforderung.</param>
+        <summary>Beendet eine ausstehende asynchrone Leseanforderung.</summary>
+        <returns>Die Anzahl von Bytes, die gelesen wurden. Der Rückgabewert 0 (null) gibt das Ende des Streams an (d. h., die Pipe wurde geschlossen).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt die Anzahl der Bytes im Bytearray, angegeben durch den früheren Aufruf von gelesen <xref:System.IO.Pipes.PipeStream.BeginRead%2A>.  
+  
+ Übergeben Sie das zurückgegebene <xref:System.IAsyncResult> -Objekt an die <xref:System.IO.Pipes.PipeStream.EndRead%2A> Methode, um zu bestimmen, wie viele Bytes gelesen wurden, und zum Freigeben von Betriebssystemressourcen, die zum Lesen. <xref:System.IO.Pipes.PipeStream.EndRead%2A>muss einmal für jeden Aufruf aufgerufen werden <xref:System.IO.Pipes.PipeStream.BeginRead%2A>. Dies kann dafür den gleichen Code, der aufgerufen <xref:System.IO.Pipes.PipeStream.BeginRead%2A> oder einen Rückruf, der an übergebene <xref:System.IO.Pipes.PipeStream.BeginRead%2A>.  
+  
+ Verwenden der <xref:System.IO.Pipes.PipeStream.CanRead%2A> -Eigenschaft können Sie bestimmen, ob die aktuelle <xref:System.IO.Pipes.PipeStream> -Objekt Lesevorgänge unterstützt.  
+  
+ Wenn die Pipe ist geschlossen, oder ein ungültiges Argument, um übergeben wird <xref:System.IO.Pipes.PipeStream.BeginRead%2A>, die erforderlichen Ausnahmen werden sofort ausgelöst. Während einer asynchronen leseanforderung auftretende Fehler auftreten, auf dem Thread des Threadpools, die die Anforderung ausführt. Die Ausnahmen werden ausgelöst, wenn der Code Ruft die <xref:System.IO.Pipes.PipeStream.EndRead%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asyncResult" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="asyncResult" /> basiert nicht auf einer <see cref="M:System.IO.Pipes.PipeStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />-Methode im aktuellen Stream.</exception>
+        <exception cref="T:System.IO.IOException">Der Stream ist geschlossen, oder ein interner Fehler ist aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWrite">
+      <MemberSignature Language="C#" Value="public override void EndWrite (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndWrite(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.EndWrite(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Der Verweis auf die ausstehende asynchrone Anforderung.</param>
+        <summary>Beendet eine ausstehende asynchrone Schreibanforderung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Pipes.PipeStream.EndWrite%2A>muss einmal für jeden Aufruf aufgerufen werden <xref:System.IO.Pipes.PipeStream.BeginWrite%2A>. Dies kann dafür den gleichen Code, der aufgerufen <xref:System.IO.Pipes.PipeStream.BeginWrite%2A> oder einen Rückruf, der an übergebene <xref:System.IO.Pipes.PipeStream.BeginWrite%2A>.  
+  
+ Verwenden der <xref:System.IO.Pipes.PipeStream.CanWrite%2A> -Eigenschaft können Sie bestimmen, ob die aktuelle <xref:System.IO.Pipes.PipeStream> -Objekt Schreibvorgänge unterstützt.  
+  
+ Wenn die Pipe ist geschlossen, oder ein ungültiges Argument, um übergeben wird <xref:System.IO.Pipes.PipeStream.BeginWrite%2A>, die erforderlichen Ausnahmen werden sofort ausgelöst. Während einer asynchronen schreibanforderung auftretende Fehler auftreten, auf dem Thread des Threadpools, die die Anforderung ausführt. Die Ausnahmen werden ausgelöst, wenn der Code Ruft die <xref:System.IO.Pipes.PipeStream.EndWrite%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asyncResult" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="asyncResult" /> basiert nicht auf einer <see cref="M:System.IO.Pipes.PipeStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />-Methode im aktuellen Stream.</exception>
+        <exception cref="T:System.IO.IOException">Der Stream ist geschlossen, oder ein interner Fehler ist aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht den Puffer für den aktuellen Stream und veranlasst die Ausgabe aller gepufferten Daten an das zugrunde liegende Gerät.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Pipes.PipeStream.Flush%2A> Methode wird nicht unterstützt, der <xref:System.IO.Pipes.PipeStream> -Klasse, jedoch nichts, wenn sie aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die Pipe ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">Die Pipe unterstützt keine Schreibvorgänge.</exception>
+        <exception cref="T:System.IO.IOException">Die Pipe wurde unterbrochen, oder es ist ein anderer E/A-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessControl">
+      <MemberSignature Language="C#" Value="public System.IO.Pipes.PipeSecurity GetAccessControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Pipes.PipeSecurity GetAccessControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.GetAccessControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Pipes.PipeSecurity</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.IO.Pipes.PipeSecurity" />-Objekt ab, das die Einträge in der Zugriffssteuerungsliste für die Pipe kapselt, die vom aktuellen <see cref="T:System.IO.Pipes.PipeStream" />-Objekt beschrieben wird.</summary>
+        <returns>Ein <see cref="T:System.IO.Pipes.PipeSecurity" />-Objekt, das die Einträge in der Zugriffssteuerungsliste für die Pipe kapselt, die vom aktuellen <see cref="T:System.IO.Pipes.PipeStream" />-Objekt beschrieben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Zugriffssteuerungsliste (ACL) beschreibt Einzelpersonen und/oder Gruppen, die oder verfügen nicht über, Rechte zum Ausführen bestimmter Aktionen auf einer angegebenen Datei. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](~/docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die Pipe ist geschlossen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Fehler beim zugrunde liegenden Aufruf zum Festlegen der Sicherheitsinformationen.</exception>
+        <exception cref="T:System.InvalidOperationException">Fehler beim zugrunde liegenden Aufruf zum Festlegen der Sicherheitsinformationen.</exception>
+        <exception cref="T:System.NotSupportedException">Fehler beim zugrunde liegenden Aufruf zum Festlegen der Sicherheitsinformationen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InBufferSize">
+      <MemberSignature Language="C#" Value="public virtual int InBufferSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeStream.InBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des Eingangspuffers für eine Pipe in Bytes ab.</summary>
+        <value>Ein Ganzzahlwert, der die Größe des Eingangspuffers in Bytes darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.IO.Pipes.PipeStream.InBufferSize%2A> gleich 0 ist, wird die Größe des Puffers Bedarf zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Der Datenstrom ist nicht lesbar.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Pipe wartet auf eine Verbindung.</exception>
+        <exception cref="T:System.IO.IOException">Die Pipe wurde unterbrochen, oder es ist ein anderer E/A-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeHandle">
+      <MemberSignature Language="C#" Value="protected void InitializeHandle (Microsoft.Win32.SafeHandles.SafePipeHandle handle, bool isExposed, bool isAsync);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitializeHandle(class Microsoft.Win32.SafeHandles.SafePipeHandle handle, bool isExposed, bool isAsync) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.InitializeHandle(Microsoft.Win32.SafeHandles.SafePipeHandle,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="Microsoft.Win32.SafeHandles.SafePipeHandle" />
+        <Parameter Name="isExposed" Type="System.Boolean" />
+        <Parameter Name="isAsync" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Das <see cref="T:Microsoft.Win32.SafeHandles.SafePipeHandle" />-Objekt der zu initialisierenden Pipe.</param>
+        <param name="isExposed">
+          <see langword="true" />, um das Handle verfügbar zu machen, andernfalls <see langword="false" />.</param>
+        <param name="isAsync">
+          <see langword="true" />, um anzugeben, dass das Handle asynchron geöffnet wurde, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert ein <see cref="T:System.IO.Pipes.PipeStream" />-Objekt aus dem angegebenen <see cref="T:Microsoft.Win32.SafeHandles.SafePipeHandle" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Pipe verbunden ist, legt diese Methode auch die <xref:System.IO.Pipes.PipeStream.IsConnected%2A> Eigenschaft `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein Handle kann nicht an die Pipe gebunden werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAsync">
+      <MemberSignature Language="C#" Value="public bool IsAsync { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAsync" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeStream.IsAsync" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein <see cref="T:System.IO.Pipes.PipeStream" />-Objekt asynchron oder synchron geöffnet wurde.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.IO.Pipes.PipeStream" />-Objekt asynchron geöffnet wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht den Code so die <xref:System.IO.Pipes.PipeStream.SafePipeHandle%2A> Eigenschaft ordnungsgemäß.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConnected">
+      <MemberSignature Language="C#" Value="public bool IsConnected { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConnected" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeStream.IsConnected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein <see cref="T:System.IO.Pipes.PipeStream" />-Objekt verbunden ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.IO.Pipes.PipeStream" />-Objekt verbunden ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Pipes.PipeStream.IsConnected%2A> -Eigenschaft gibt `true` nur, wenn die <xref:System.IO.Pipes.PipeStream> -Objekt verbunden ist. Wenn diese Eigenschaft gibt `false`, die Pipe kann wartet, eine Verbindung herstellen, möglicherweise werden getrennt, geschlossen oder unterbrochen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHandleExposed">
+      <MemberSignature Language="C#" Value="protected bool IsHandleExposed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHandleExposed" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeStream.IsHandleExposed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Handle für ein <see cref="T:System.IO.Pipes.PipeStream" />-Objekt verfügbar gemacht wurde.</summary>
+        <value>
+          <see langword="true" />, wenn ein Handle für das <see cref="T:System.IO.Pipes.PipeStream" />-Objekt verfügbar gemacht wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft wird festgelegt, wenn ein Handle für die Pipe abrufen, die vom aktuellen gekapselt ist <xref:System.IO.Pipes.PipeStream> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMessageComplete">
+      <MemberSignature Language="C#" Value="public bool IsMessageComplete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMessageComplete" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeStream.IsMessageComplete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob in der vom letzten Lesevorgang zurückgegebenen Meldung weitere Daten vorhanden sind.</summary>
+        <value>
+          <see langword="true" />, wenn in der Meldung keine weiteren zu lesenden Zeichen vorhanden sind, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist relevant, wenn der Pipes <xref:System.IO.Pipes.PipeStream.ReadMode%2A> -Eigenschaft wurde festgelegt, um <xref:System.IO.Pipes.PipeTransmissionMode.Message> durch den letzten Aufruf von <xref:System.IO.Pipes.PipeStream.Read%2A> oder <xref:System.IO.Pipes.PipeStream.EndRead%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Pipe ist nicht verbunden.  
+  
+ - oder -   
+  
+ Das Pipehandle wurde nicht festgelegt.  
+  
+ - oder -   
+  
+ Der <see cref="P:System.IO.Pipes.PipeStream.ReadMode" />-Eigenschaftswert der Pipe ist nicht <see cref="F:System.IO.Pipes.PipeTransmissionMode.Message" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Pipe ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public override long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeStream.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge eines Streams in Bytes ab.</summary>
+        <value>0 in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Pipes.PipeStream> -Klasse bietet keine Unterstützung der <xref:System.IO.Pipes.PipeStream.Length%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Wird immer ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OutBufferSize">
+      <MemberSignature Language="C#" Value="public virtual int OutBufferSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OutBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeStream.OutBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des Ausgangspuffers für eine Pipe in Bytes ab.</summary>
+        <value>Die Größe des Ausgangspuffers in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.IO.Pipes.PipeStream.OutBufferSize%2A> gleich 0 ist, wird die Größe des Puffers Bedarf zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Der Stream ist nicht schreibbar.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Pipe wartet auf eine Verbindung.</exception>
+        <exception cref="T:System.IO.IOException">Die Pipe wurde unterbrochen, oder es ist ein anderer E/A-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public override long Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Position" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeStream.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Position des aktuellen Streams ab oder legt diese fest.</summary>
+        <value>0 in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Pipes.PipeStream> -Klasse bietet keine Unterstützung der <xref:System.IO.Pipes.PipeStream.Position%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Wird immer ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override int Read (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Read([in]unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.Read(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Enthält nach Rückkehr dieser Methode das angegebene Bytearray mit den Werten zwischen <c>Offset</c> und (<c>Offset</c> + <c>Anzahl</c> - 1) durch die aus gelesenen Bytes ersetzt der aktuellen Quelle.</param>
+        <param name="offset">Der Byteoffset im die <c>Puffer</c> array, an dem die gelesenen Bytes platziert werden.</param>
+        <param name="count">Die maximale Anzahl der zu lesenden Bytes.</param>
+        <summary>Liest einen Byteblock aus einem Stream und schreibt die Daten in einen angegebenen Puffer.</summary>
+        <returns>Die Gesamtanzahl der in den <paramref name="buffer" /> gelesenen Bytes. Dies kann weniger als die Anzahl der angeforderten Bytes sein, wenn diese Anzahl an Bytes derzeit nicht verfügbar ist, oder 0, wenn das Streamende erreicht ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.IO.Pipes.PipeStream.CanRead%2A> -Eigenschaft können Sie bestimmen, ob die aktuelle <xref:System.IO.Pipes.PipeStream> -Objekt Lesevorgänge unterstützt.  
+  
+ Aufrufen der <xref:System.IO.Pipes.PipeStream.Read%2A> Methode blockiert, bis `count` Bytes gelesen wurden, oder das Ende des Streams erreicht ist. Für asynchrone Lesevorgänge finden Sie unter <xref:System.IO.Pipes.PipeStream.BeginRead%2A> und <xref:System.IO.Pipes.PipeStream.EndRead%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine anonyme Pipes Client- und Pipe. Der Pipeserver verwendet die <xref:System.IO.Pipes.PipeStream.Read%2A> Methode, um eine Reihe von Bytes aus der Pipeclient als Validierungscode zu lesen. Der Pipeclient und dem Pipeserver sind Teil des gleichen Beispiels. Der Serverteil des Beispiels erstellt einen Clientprozess und übergibt es ein anonymes Pipehandle als Argument.  
+  
+ [!code-cpp[System.IO.Pipes.PipeStream#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.io.pipes.pipestream/cpp/sample.cpp#1)]
+ [!code-csharp[System.IO.Pipes.PipeStream#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.pipes.pipestream/cs/sample.cs#1)]
+ [!code-vb[System.IO.Pipes.PipeStream#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.pipes.pipestream/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als 0.  
+  
+ - oder -   
+  
+ <paramref name="count" /> ist kleiner als 0.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="count" /> ist größer als die im <paramref name="buffer" /> verfügbare Anzahl von Bytes.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Pipe ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">Die Pipe unterstützt keine Lesevorgänge.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung der Pipe ist getrennt, die Pipe wartet auf eine Verbindung, oder das Handle wurde nicht festgelegt.</exception>
+        <exception cref="T:System.IO.IOException">Es ist ein E/A-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;int&gt; ReadAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;int32&gt; ReadAsync(unsigned int8[] buffer, int32 offset, int32 count, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">To be added.</param>
+        <param name="offset">To be added.</param>
+        <param name="count">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadByte">
+      <MemberSignature Language="C#" Value="public override int ReadByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ReadByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.ReadByte" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liest ein Byte aus einer Pipe.</summary>
+        <returns>Das in <see cref="T:System.Int32" /> umgewandelte Byte oder -1, wenn das Ende des Streams erreicht wurde (die Pipe wurde geschlossen).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.IO.Pipes.PipeStream.CanRead%2A> -Eigenschaft können Sie bestimmen, ob die aktuelle <xref:System.IO.Pipes.PipeStream> -Objekt Lesevorgänge unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die Pipe ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">Die Pipe unterstützt keine Lesevorgänge.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung der Pipe ist getrennt, die Pipe wartet auf eine Verbindung, oder das Handle wurde nicht festgelegt.</exception>
+        <exception cref="T:System.IO.IOException">Es ist ein E/A-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMode">
+      <MemberSignature Language="C#" Value="public virtual System.IO.Pipes.PipeTransmissionMode ReadMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Pipes.PipeTransmissionMode ReadMode" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeStream.ReadMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Pipes.PipeTransmissionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Lesemodus für ein <see cref="T:System.IO.Pipes.PipeStream" />-Objekt ab oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.IO.Pipes.PipeTransmissionMode" />-Werte, die angeben, wie das <see cref="T:System.IO.Pipes.PipeStream" />-Objekt aus der Pipe liest.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anonyme Pipes unterstützen keine <xref:System.IO.Pipes.PipeTransmissionMode.Message> Modus nachrichtenübertragung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der bereitgestellte Wert ist kein gültiger <see cref="T:System.IO.Pipes.PipeTransmissionMode" />-Wert.</exception>
+        <exception cref="T:System.NotSupportedException">Der bereitgestellte Wert ist kein unterstützter <see cref="T:System.IO.Pipes.PipeTransmissionMode" />-Wert für diesen Pipestream.</exception>
+        <exception cref="T:System.InvalidOperationException">Das Handle wurde nicht festgelegt.  
+  
+ - oder -   
+  
+ Die Pipe wartet auf die Verbindung mit einem benannten Client.</exception>
+        <exception cref="T:System.IO.IOException">Die Pipe wurde unterbrochen, oder mit einem benannten Client ist ein E/A-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SafePipeHandle">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.SafeHandles.SafePipeHandle SafePipeHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.SafeHandles.SafePipeHandle SafePipeHandle" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeStream.SafePipeHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SafeHandles.SafePipeHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das sichere Handle für das lokale Ende der Pipe ab, die vom aktuellen <see cref="T:System.IO.Pipes.PipeStream" />-Objekt gekapselt wird.</summary>
+        <value>Ein <see cref="T:Microsoft.Win32.SafeHandles.SafePipeHandle" />-Objekt für die Pipe, die vom aktuellen <see cref="T:System.IO.Pipes.PipeStream" />-Objekt gekapselt wird.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Das Pipehandle wurde nicht festgelegt.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Pipe ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public override long Seek (long offset, System.IO.SeekOrigin origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 Seek(int64 offset, valuetype System.IO.SeekOrigin origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.Seek(System.Int64,System.IO.SeekOrigin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="origin" Type="System.IO.SeekOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Der Punkt relativ zu <c>Ursprung</c>, ab dem gesucht werden soll.</param>
+        <param name="origin">Gibt den Anfang, am Ende oder die aktuelle Position als Bezugspunkt für <c>Offset</c>, anhand eines Werts vom Typ <see cref="T:System.IO.SeekOrigin" />.</param>
+        <summary>Legt die aktuelle Position des aktuellen Streams auf den angegebenen Wert fest.</summary>
+        <returns>Die neue Position im Stream.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Pipes.PipeStream.Seek%2A> Methode wird nicht unterstützt, Pipes und löst eine <xref:System.NotSupportedException> bei Aufruf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccessControl">
+      <MemberSignature Language="C#" Value="public void SetAccessControl (System.IO.Pipes.PipeSecurity pipeSecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccessControl(class System.IO.Pipes.PipeSecurity pipeSecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.SetAccessControl(System.IO.Pipes.PipeSecurity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pipeSecurity" Type="System.IO.Pipes.PipeSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="pipeSecurity">Ein <see cref="T:System.IO.Pipes.PipeSecurity" />-Objekt, das einen Eintrag in einer Zugriffssteuerungsliste angibt, der auf die aktuelle Pipe angewendet werden soll.</param>
+        <summary>Wendet von einem <see cref="T:System.IO.Pipes.PipeSecurity" />-Objekt angegebene Einträge in Zugriffssteuerungslisten auf die vom aktuellen <see cref="T:System.IO.Pipes.PipeStream" />-Objekt angegebene Pipe an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Zugriffssteuerungsliste (ACL) beschreibt Einzelpersonen und/oder Gruppen, die oder verfügen nicht über, Rechte zum Ausführen bestimmter Aktionen auf einer angegebenen Datei. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](~/docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die Pipe ist geschlossen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pipeSecurity" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Fehler beim zugrunde liegenden Aufruf zum Festlegen der Sicherheitsinformationen.</exception>
+        <exception cref="T:System.InvalidOperationException">Fehler beim zugrunde liegenden Aufruf zum Festlegen der Sicherheitsinformationen.</exception>
+        <exception cref="T:System.NotSupportedException">Fehler beim zugrunde liegenden Aufruf zum Festlegen der Sicherheitsinformationen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLength">
+      <MemberSignature Language="C#" Value="public override void SetLength (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetLength(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.SetLength(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die neue Länge des Streams.</param>
+        <summary>Legt die Länge des aktuellen Streams auf den angegebenen Wert fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Pipes.PipeStream> -Klasse bietet keine Unterstützung der <xref:System.IO.Pipes.PipeStream.SetLength%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransmissionMode">
+      <MemberSignature Language="C#" Value="public virtual System.IO.Pipes.PipeTransmissionMode TransmissionMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Pipes.PipeTransmissionMode TransmissionMode" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeStream.TransmissionMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Pipes.PipeTransmissionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den von der aktuellen Pipe unterstützten Pipeübertragungsmodus ab.</summary>
+        <value>Einer der <see cref="T:System.IO.Pipes.PipeTransmissionMode" />-Werte, die den von der aktuellen Pipe unterstützten Übertragungsmodus angeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anonyme Pipes unterstützen keine <xref:System.IO.Pipes.PipeTransmissionMode.Message> Modus nachrichtenübertragung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die Pipe ist geschlossen.</exception>
+        <exception cref="T:System.InvalidOperationException">Das Handle wurde noch nicht festgelegt.  
+  
+ - oder -   
+  
+ Die Pipe wartet auf die Verbindung in einem anonymen Client/Server-Vorgang oder mit einem benannten Client.</exception>
+        <exception cref="T:System.IO.IOException">Die Pipe wurde unterbrochen, oder es ist ein anderer E/A-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForPipeDrain">
+      <MemberSignature Language="C#" Value="public void WaitForPipeDrain ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WaitForPipeDrain() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.WaitForPipeDrain" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wartet, bis das andere Ende der Pipe alle gesendeten Bytes gelesen hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Pipes.PipeStream.WaitForPipeDrain%2A> Methode blockiert, bis das andere Ende der Pipe alle gesendeten Bytes gelesen hat.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die Pipe ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">Die Pipe unterstützt keine Schreibvorgänge.</exception>
+        <exception cref="T:System.IO.IOException">Die Pipe wurde unterbrochen, oder es ist ein anderer E/A-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.Write(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, der Daten enthält, die in die Pipe geschrieben werden sollen.</param>
+        <param name="offset">Der nullbasierte Byteoffset im <c>Puffer</c> ab dem Bytes in den aktuellen Stream kopiert werden sollen.</param>
+        <param name="count">Die maximale Anzahl an Bytes, die in den aktuellen Stream geschrieben werden sollen.</param>
+        <summary>Schreibt einen Byteblock mit den Daten aus einem Puffer in den aktuellen Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.IO.Pipes.PipeStream.CanWrite%2A> -Eigenschaft können Sie bestimmen, ob die aktuelle <xref:System.IO.Pipes.PipeStream> -Objekt Schreibvorgänge unterstützt.  
+  
+ Aufrufen der <xref:System.IO.Pipes.PipeStream.Write%2A> Methode blockiert, bis `count` Bytes gelesen wurden, oder das Ende des Streams erreicht ist. Für asynchrone Lesevorgänge finden Sie unter <xref:System.IO.Pipes.PipeStream.BeginWrite%2A> und <xref:System.IO.Pipes.PipeStream.EndWrite%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als 0.  
+  
+ - oder -   
+  
+ <paramref name="count" /> ist kleiner als 0.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="count" /> ist größer als die im <paramref name="buffer" /> verfügbare Anzahl von Bytes.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Pipe ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">Die Pipe unterstützt keine Schreibvorgänge.</exception>
+        <exception cref="T:System.IO.IOException">Die Pipe wurde unterbrochen, oder es ist ein anderer E/A-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteAsync(unsigned int8[] buffer, int32 offset, int32 count, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">To be added.</param>
+        <param name="offset">To be added.</param>
+        <param name="count">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteByte">
+      <MemberSignature Language="C#" Value="public override void WriteByte (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteByte(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeStream.WriteByte(System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Byte, das in den Stream geschrieben werden soll.</param>
+        <summary>Schreibt ein Byte in den aktuellen Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.IO.Pipes.PipeStream.CanWrite%2A> -Eigenschaft können Sie bestimmen, ob die aktuelle <xref:System.IO.Pipes.PipeStream> -Objekt Schreibvorgänge unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die Pipe ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">Die Pipe unterstützt keine Schreibvorgänge.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung der Pipe ist getrennt, die Pipe wartet auf eine Verbindung, oder das Handle wurde nicht festgelegt.</exception>
+        <exception cref="T:System.IO.IOException">Die Pipe wurde unterbrochen, oder es ist ein anderer E/A-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

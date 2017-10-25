@@ -1,0 +1,2118 @@
+<Type Name="TreeNode" FullName="System.Windows.Forms.TreeNode">
+  <TypeSignature Language="C#" Value="public class TreeNode : MarshalByRefObject, ICloneable, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TreeNode extends System.MarshalByRefObject implements class System.ICloneable, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TreeNode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.TreeNodeConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Knoten von einem <see cref="T:System.Windows.Forms.TreeView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.Nodes%2A> Auflistung enthält alle untergeordneten <xref:System.Windows.Forms.TreeNode> zugewiesenen Objekte an das aktuelle <xref:System.Windows.Forms.TreeNode>. Hinzufügen, entfernen oder Klonen eine <xref:System.Windows.Forms.TreeNode>; Wenn Sie dazu, alle untergeordneten Struktur Knoten hinzugefügt, entfernt oder geklont werden. Jede <xref:System.Windows.Forms.TreeNode> darf eine Auflistung von anderen <xref:System.Windows.Forms.TreeNode> Objekte. Dies kann schwer zu bestimmen, in welcher befinden der <xref:System.Windows.Forms.TreeView> beim Durchlaufen der Auflistung. Um Ihre Position in einer Struktur zu ermitteln, verwenden Sie die <xref:System.Windows.Forms.TreeNode.FullPath%2A> Eigenschaft. Die <xref:System.Windows.Forms.TreeNode.FullPath%2A> Zeichenfolge kann analysiert werden, mithilfe der <xref:System.Windows.Forms.TreeView.PathSeparator%2A> Zeichenfolgenwert zu bestimmen, wo eine <xref:System.Windows.Forms.TreeNode> Bezeichnung beginnt und endet.  
+  
+ Die <xref:System.Windows.Forms.TreeNode> Bezeichnung festgelegt wird, durch Festlegen der <xref:System.Windows.Forms.TreeNode.Text%2A> Eigenschaft explizit. Die Alternative ist die Erstellung den Strukturknoten mit einem der der <xref:System.Windows.Forms.TreeNode.%23ctor%2A> Konstruktoren, die einen Zeichenfolgenparameter ist, die die <xref:System.Windows.Forms.TreeNode.Text%2A> Eigenschaft. Die Bezeichnung wird neben der <xref:System.Windows.Forms.TreeNode> image, sofern angezeigt.  
+  
+ Weisen Sie zum Anzeigen von Bildern neben den Strukturknoten ein <xref:System.Windows.Forms.ImageList> auf die <xref:System.Windows.Forms.TreeView.ImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView> steuern und weisen eine <xref:System.Drawing.Image> durch Verweisen auf seinen Indexwert in der <xref:System.Windows.Forms.ImageList> Eigenschaft. Legen Sie die <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> Eigenschaft, um den Indexwert des der <xref:System.Drawing.Image> angezeigt wird, wenn Sie möchten die <xref:System.Windows.Forms.TreeNode> nicht ausgewählt ist. Ebenso festlegen, die <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> Eigenschaft, um den Indexwert des der <xref:System.Drawing.Image> angezeigt wird, wenn Sie möchten die <xref:System.Windows.Forms.TreeNode> ausgewählt ist.  
+  
+ Bestimmte Strukturknoten auch das Durchlaufen der <xref:System.Windows.Forms.TreeView.Nodes%2A> Auflistung erreichen, indem Sie mit den folgenden Eigenschaftswerten: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, <xref:System.Windows.Forms.TreeNode.NextVisibleNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevVisibleNode%2A>. Zuweisen der <xref:System.Windows.Forms.TreeNode> zurückgegeben, die von einer der oben genannten Eigenschaften der <xref:System.Windows.Forms.TreeView.SelectedNode%2A?displayProperty=nameWithType> Eigenschaft, um auszuwählen, Strukturknotens in der <xref:System.Windows.Forms.TreeView> Steuerelement.  
+  
+ Strukturknoten können erweitert werden, um die nächste Ebene der untergeordneten Knoten anzuzeigen. Der Benutzer kann erweitern die <xref:System.Windows.Forms.TreeNode> durch Drücken der Plus (+) neben der <xref:System.Windows.Forms.TreeNode>angezeigt wird, und Sie erweitern können, die <xref:System.Windows.Forms.TreeNode> durch Aufrufen der <xref:System.Windows.Forms.TreeNode.Expand%2A> Methode. Um alle Ebenen von untergeordneten Strukturknoten im Erweitern der <xref:System.Windows.Forms.TreeNode.Nodes%2A> Auflistung, rufen die <xref:System.Windows.Forms.TreeNode.ExpandAll%2A> Methode. Können Sie das untergeordnete Element reduzieren <xref:System.Windows.Forms.TreeNode> Ebene durch Aufrufen der <xref:System.Windows.Forms.TreeNode.Collapse%2A> -Methode oder der Benutzer kann drücken, das Minuszeichen (-) Schaltfläche neben der <xref:System.Windows.Forms.TreeNode>, sofern angezeigt. Sie können auch aufrufen, die <xref:System.Windows.Forms.TreeNode.Toggle%2A> Methode, um die <xref:System.Windows.Forms.TreeNode> zwischen der erweiterten und reduzierten Zustand.  
+  
+ Strukturknoten können optional ein Kontrollkästchen angezeigt. Um die Kontrollkästchen anzuzeigen, legen Sie die <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> Eigenschaft der <xref:System.Windows.Forms.TreeView> auf `true`. Die <xref:System.Windows.Forms.TreeNode.Checked%2A> -Eigenschaftensatz auf `true` für Knoten in der Ausdrucksbaumstruktur, die in einem aktivierten Zustand befinden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Kundeninformationen in einem <xref:System.Windows.Forms.TreeView> Steuerelement. Der Stammknoten der Struktur anzuzeigen, Kundennamen und die untergeordneten Knoten anzuzeigen, die Auftragsnummern auf den einzelnen Kunden zugewiesen. In diesem Beispiel werden 1.000 Kunden mit jeweils 15 Aufträgen angezeigt. Das Neuzeichnen der der <xref:System.Windows.Forms.TreeView> unterdrückt wird, mithilfe der <xref:System.Windows.Forms.TreeView.BeginUpdate%2A> und <xref:System.Windows.Forms.TreeView.EndUpdate%2A> Methoden und einer Wartezeit von <xref:System.Windows.Forms.Cursor> wird angezeigt, während die <xref:System.Windows.Forms.TreeView> erstellt und zeichnet die <xref:System.Windows.Forms.TreeNode> Objekte. Dieses Beispiel benötigen Sie ein `Customer` -Objekt, das eine Auflistung von aufnehmen kann `Order` Objekte. Darüber hinaus müssen Sie eine Instanz von erstellt haben eine <xref:System.Windows.Forms.TreeView> control für eine <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[TreeView#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeView/CPP/treeview.cpp#1)]
+ [!code-csharp[TreeView#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeView/CS/treeview.cs#1)]
+ [!code-vb[TreeView#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeView/VB/treeview.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.TreeNode" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen Stammknoten aus, um die untergeordneten Strukturknoten zugewiesen. Einem untergeordneten Strukturknoten für jede `Customer` -Objekt in ein <xref:System.Collections.ArrayList> wird für den Stammknoten der Struktur als auch von einem untergeordneten Strukturknoten für jede hinzugefügt `Order` zugewiesene Objekt die `Customer` Objekt. Die `Customer` Objekt zugewiesen ist die <xref:System.Windows.Forms.TreeNode.Tag%2A> -Eigenschaft und die Strukturknoten darstellt `Customer` Objekte werden angezeigt, mit <xref:System.Drawing.Color.Orange%2A> Text. Dieses Beispiel benötigen Sie eine `Customer` und `Order` definierten Objekts, einer <xref:System.Windows.Forms.TreeView> control für eine <xref:System.Windows.Forms.Form>, und ein <xref:System.Collections.ArrayList> mit dem Namen `customerArray` enthält `Customer` Objekte.  
+  
+ [!code-cpp[TreeNode_Bounds#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Bounds/CPP/treenode_bounds.cpp#1)]
+ [!code-csharp[TreeNode_Bounds#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Bounds/CS/treenode_bounds.cs#1)]
+ [!code-vb[TreeNode_Bounds#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Bounds/VB/treenode_bounds.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNode (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Die Bezeichnung <see cref="P:System.Windows.Forms.TreeNode.Text" /> des neuen Strukturknotens.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.TreeNode" /> -Klasse mit der angegebenen Beschriftungstext.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `text` Parameterwert zugewiesen ist, auf des Knotens <xref:System.Windows.Forms.TreeNode.Text%2A> Eigenschaft und wird die Bezeichnung des Strukturknotens.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Kundeninformationen in einem <xref:System.Windows.Forms.TreeView> Steuerelement. Der Stammknoten der Struktur anzuzeigen, Kundennamen und die untergeordneten Knoten anzuzeigen, die Auftragsnummern auf den einzelnen Kunden zugewiesen. In diesem Beispiel werden 1.000 Kunden mit jeweils 15 Aufträgen angezeigt. Das Neuzeichnen der der <xref:System.Windows.Forms.TreeView> unterdrückt wird, mithilfe der <xref:System.Windows.Forms.TreeView.BeginUpdate%2A> und <xref:System.Windows.Forms.TreeView.EndUpdate%2A> Methoden und einer Wartezeit von <xref:System.Windows.Forms.Cursor> wird angezeigt, während die <xref:System.Windows.Forms.TreeView> erstellt und zeichnet die <xref:System.Windows.Forms.TreeNode> Objekte. Dieses Beispiel benötigen Sie ein `Customer` -Objekt, das eine Auflistung von aufnehmen kann `Order` Objekte. Darüber hinaus müssen Sie eine Instanz von erstellt haben eine <xref:System.Windows.Forms.TreeView> control für eine <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[TreeView#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeView/CPP/treeview.cpp#1)]
+ [!code-csharp[TreeView#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeView/CS/treeview.cs#1)]
+ [!code-vb[TreeView#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeView/VB/treeview.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TreeNode (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> , das Daten zum Deserialisieren der Klasse enthält.</param>
+        <param name="context">Die <see cref="T:System.Runtime.Serialization.StreamingContext" /> , die die Quelle und Ziel des serialisierten Streams enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.TreeNode" /> -Klasse mit den angegebenen Serialisierungsinformationen und Kontextobjekten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNode (string text, System.Windows.Forms.TreeNode[] children);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, class System.Windows.Forms.TreeNode[] children) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.#ctor(System.String,System.Windows.Forms.TreeNode[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="children" Type="System.Windows.Forms.TreeNode[]" />
+      </Parameters>
+      <Docs>
+        <param name="text">Die Bezeichnung <see cref="P:System.Windows.Forms.TreeNode.Text" /> des neuen Strukturknotens.</param>
+        <param name="children">Ein Array des untergeordneten <see cref="T:System.Windows.Forms.TreeNode" /> Objekte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.TreeNode" /> -Klasse mit der angegebenen Beschriftung und untergeordneten Strukturknoten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `text` Parameterwert zugewiesen ist, auf des Knotens <xref:System.Windows.Forms.TreeNode.Text%2A> Eigenschaft und wird die Bezeichnung des Strukturknotens. Die Strukturknoten, die in enthaltenen der `children` Array hinzugefügt werden die <xref:System.Windows.Forms.TreeNodeCollection> , befindet sich in der <xref:System.Windows.Forms.TreeNode.Nodes%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen Stammknoten aus, um die untergeordneten Strukturknoten zugewiesen. Einem untergeordneten Strukturknoten für jede `Customer` -Objekt in ein <xref:System.Collections.ArrayList> wird für den Stammknoten der Struktur als auch von einem untergeordneten Strukturknoten für jede hinzugefügt `Order` zugewiesene Objekt die `Customer` Objekt. Die `Customer` Objekt zugewiesen ist die <xref:System.Windows.Forms.TreeNode.Tag%2A> -Eigenschaft und die Strukturknoten darstellt `Customer` Objekte werden angezeigt, mit <xref:System.Drawing.Color.Orange%2A> Text. Dieses Beispiel benötigen Sie eine `Customer` und `Order` definierten Objekts, einer <xref:System.Windows.Forms.TreeView> control für eine <xref:System.Windows.Forms.Form>, und ein <xref:System.Collections.ArrayList> mit dem Namen `customerArray` enthält `Customer` Objekte.  
+  
+ [!code-cpp[TreeNode_Bounds#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Bounds/CPP/treenode_bounds.cpp#1)]
+ [!code-csharp[TreeNode_Bounds#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Bounds/CS/treenode_bounds.cs#1)]
+ [!code-vb[TreeNode_Bounds#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Bounds/VB/treenode_bounds.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNode (string text, int imageIndex, int selectedImageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, int32 imageIndex, int32 selectedImageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.#ctor(System.String,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageIndex" Type="System.Int32" />
+        <Parameter Name="selectedImageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="text">Die Bezeichnung <see cref="P:System.Windows.Forms.TreeNode.Text" /> des neuen Strukturknotens.</param>
+        <param name="imageIndex">Der Indexwert des <see cref="T:System.Drawing.Image" /> angezeigt, wenn der Strukturknoten nicht ausgewählt ist.</param>
+        <param name="selectedImageIndex">Der Indexwert des <see cref="T:System.Drawing.Image" /> angezeigt, wenn der Strukturknoten ausgewählt wurde.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.TreeNode" /> -Klasse mit der angegebenen Bezeichnungstext und Bilder angezeigt, wenn der Strukturknoten in einem ausgewählten und nicht ausgewählten Zustand befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `text` Parameterwert zugewiesen ist, auf des Knotens <xref:System.Windows.Forms.TreeNode.Text%2A> Eigenschaft und wird die Bezeichnung des Strukturknotens. Die `imageIndex` und `selectedImageIndex` Werte sind, der die Indexwerte des ein <xref:System.Drawing.Image> gespeichert, der <xref:System.Windows.Forms.ImageList> zugewiesen der <xref:System.Windows.Forms.TreeView.ImageList%2A?displayProperty=nameWithType> Eigenschaft. Das Image verwiesen wird, der `imageIndex` Eigenschaft wird angezeigt, wenn der Strukturknoten nicht ausgewählt ist. Entsprechend wird das Bild verwiesen wird, der `selectedImageIndex` Eigenschaft wird angezeigt, wenn der Strukturknoten ausgewählt ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und weist eine <xref:System.Windows.Forms.ImageList> auf eine <xref:System.Windows.Forms.TreeView> Steuerelement und füllt die <xref:System.Windows.Forms.TreeView> steuern mit <xref:System.Windows.Forms.TreeNode> Objekte. Der Strukturknoten zugewiesen sind Bilder aus der <xref:System.Windows.Forms.ImageList> , wird angezeigt, wenn der Strukturknoten in einem Zustand aktiviert oder deaktiviert ist. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.TreeView>, und ein <xref:System.Collections.ArrayList> enthält `Customer` Objekte, die jeweils `Order` Objekte. Sie erfordert außerdem, dass die `Customer` und `Order` Objekte definiert sind.  
+  
+ [!code-cpp[TreeNode_TreeNode#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_TreeNode/CPP/treenode_treenode.cpp#1)]
+ [!code-csharp[TreeNode_TreeNode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_TreeNode/CS/treenode_treenode.cs#1)]
+ [!code-vb[TreeNode_TreeNode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_TreeNode/VB/treenode_treenode.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNode (string text, int imageIndex, int selectedImageIndex, System.Windows.Forms.TreeNode[] children);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, int32 imageIndex, int32 selectedImageIndex, class System.Windows.Forms.TreeNode[] children) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.#ctor(System.String,System.Int32,System.Int32,System.Windows.Forms.TreeNode[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageIndex" Type="System.Int32" />
+        <Parameter Name="selectedImageIndex" Type="System.Int32" />
+        <Parameter Name="children" Type="System.Windows.Forms.TreeNode[]" />
+      </Parameters>
+      <Docs>
+        <param name="text">Die Bezeichnung <see cref="P:System.Windows.Forms.TreeNode.Text" /> des neuen Strukturknotens.</param>
+        <param name="imageIndex">Der Indexwert des <see cref="T:System.Drawing.Image" /> angezeigt, wenn der Strukturknoten nicht ausgewählt ist.</param>
+        <param name="selectedImageIndex">Der Indexwert des <see cref="T:System.Drawing.Image" /> angezeigt, wenn der Strukturknoten ausgewählt wurde.</param>
+        <param name="children">Ein Array des untergeordneten <see cref="T:System.Windows.Forms.TreeNode" /> Objekte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.TreeNode" /> -Klasse mit dem angegebenen Bezeichnungstext, den untergeordneten Knoten und die Bilder angezeigt, wenn der Strukturknoten in einem ausgewählten und nicht ausgewählten Zustand befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `text` Parameterwert zugewiesen ist, auf des Knotens <xref:System.Windows.Forms.TreeNode.Text%2A> Eigenschaft und wird die Bezeichnung des Strukturknotens. Die `imageIndex` und `selectedImageIndex` Werte sind, der die Indexwerte des ein <xref:System.Drawing.Image> gespeichert, der <xref:System.Windows.Forms.ImageList> zugewiesen der <xref:System.Windows.Forms.TreeView.ImageList%2A?displayProperty=nameWithType> Eigenschaft. Das Image verwiesen wird, der `imageIndex` Parameter wird angezeigt, wenn der Strukturknoten nicht ausgewählt ist. Entsprechend wird das Bild verwiesen wird, der `selectedImageIndex` Parameter wird angezeigt, wenn der Strukturknoten ausgewählt ist. Die Strukturknoten, die in enthaltenen der `children` Array hinzugefügt werden die <xref:System.Windows.Forms.TreeNodeCollection> , befindet sich in der <xref:System.Windows.Forms.TreeNode.Nodes%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und weist eine <xref:System.Windows.Forms.ImageList> auf eine <xref:System.Windows.Forms.TreeView> Steuerelement und füllt die <xref:System.Windows.Forms.TreeView> steuern mit <xref:System.Windows.Forms.TreeNode> Objekte. Der Strukturknoten zugewiesen sind Bilder aus der <xref:System.Windows.Forms.ImageList> , wird angezeigt, wenn der Strukturknoten in einem Zustand aktiviert oder deaktiviert ist. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.TreeView>, und ein <xref:System.Collections.ArrayList> enthält `Customer` Objekte, die jeweils `Order` Objekte. Sie erfordert außerdem, dass die `Customer` und `Order` Objekte definiert sind.  
+  
+ [!code-cpp[TreeNode_TreeNode#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_TreeNode/CPP/treenode_treenode.cpp#1)]
+ [!code-csharp[TreeNode_TreeNode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_TreeNode/CS/treenode_treenode.cs#1)]
+ [!code-vb[TreeNode_TreeNode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_TreeNode/VB/treenode_treenode.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe des Hintergrunds des Strukturknotens.</summary>
+        <value>Hintergrund <see cref="T:System.Drawing.Color" /> des Strukturknotens. Die Standardeinstellung ist <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.TreeNode.BackColor%2A> -Eigenschaftensatz auf <xref:System.Drawing.Color?displayProperty=nameWithType>, die <xref:System.Drawing.Color> verwendet wird die <xref:System.Windows.Forms.Control.BackColor%2A> Eigenschaftswert, der die <xref:System.Windows.Forms.TreeView> Steuerelement, das der Strukturknoten zugewiesen ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird hervorgehoben, alle <xref:System.Windows.Forms.TreeNode> Objekte eine <xref:System.Windows.Forms.TreeView> -Steuerelement mit seiner <xref:System.Windows.Forms.TreeNode.Checked%2A> -Eigenschaftensatz auf `true` durch Festlegen seiner <xref:System.Windows.Forms.TreeNode.BackColor%2A> Eigenschaft, um <xref:System.Drawing.Color.Yellow%2A>. Dieser Code erfordert, dass Sie haben eine <xref:System.Windows.Forms.TreeView> control für eine <xref:System.Windows.Forms.Form> mit einer Auflistung von <xref:System.Windows.Forms.TreeNode> Objekte.  
+  
+ [!code-cpp[TreeNode_Checked#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Checked/CPP/treenode_checked.cpp#1)]
+ [!code-csharp[TreeNode_Checked#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Checked/CS/treenode_checked.cs#1)]
+ [!code-vb[TreeNode_Checked#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Checked/VB/treenode_checked.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEdit">
+      <MemberSignature Language="C#" Value="public void BeginEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BeginEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.BeginEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initiiert die Bearbeitung der Bezeichnung des Strukturknotens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein typisches Szenario für diese Methode verwenden, ist für die aufzurufende auf die <xref:System.Windows.Forms.MenuItem.Click> -Ereignis für ein <xref:System.Windows.Forms.MenuItem> oder <xref:System.Windows.Forms.ContextMenu>.  
+  
+> [!NOTE]
+>  Diese Methode funktioniert nur, wenn die <xref:System.Windows.Forms.TreeView.LabelEdit%2A> Eigenschaft von der <xref:System.Windows.Forms.TreeView> festgelegt ist, um `true`. Wenn <xref:System.Windows.Forms.TreeView.LabelEdit%2A> festgelegt ist, um `false`, wird eine Ausnahme ausgelöst und der Konsolenstrukturknoten "" wird nicht in einem bearbeitbaren Zustand versetzt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ermöglicht dem Benutzer, das Bearbeiten von Strukturknoten mit einem <xref:System.Windows.Forms.ContextMenu>. Wenn der Benutzer die Maus klickt der <xref:System.Windows.Forms.TreeNode> Position bestimmt ist, und die an, die in einer benannten Variablen gespeichert `mySelectedNode`. Wenn ein Strukturknoten ausgewählt wurde, wird es in einem bearbeitbaren Zustand versetzt ermöglicht die Benutzer, der die knotenbezeichnung bearbeiten. Nachdem der Benutzer das Bearbeiten der Bezeichnung des Strukturknotens beendet, ist der neue Bezeichnungstext ausgewertet und gespeichert. In diesem Beispiel werden mehrere Zeichen nicht in den Bezeichnungstext gültig angesehen. Wenn eine ungültiges Zeichen gemäß der in der Bezeichnungszeichenfolge ist, oder die Zeichenfolge leer ist, wird der Benutzer des Fehlers benachrichtigt, und die Bezeichnung wird an seinen vorherigen Text zurückgegeben.  
+  
+ [!code-cpp[classic treenode.beginedit example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/CPP/source.cpp#1)]
+ [!code-csharp[classic treenode.beginedit example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/CS/source.cs#1)]
+ [!code-vb[classic treenode.beginedit example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          Für <see cref="P:System.Windows.Forms.TreeView.LabelEdit" /> ist <see langword="false" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Grenzen des Strukturknotens ab.</summary>
+        <value>Die <see cref="T:System.Drawing.Rectangle" /> , das die Grenzen des Strukturknotens darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Koordinaten sind relativ zur linken oberen Ecke von der <xref:System.Windows.Forms.TreeView> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ändert die Größe <xref:System.Windows.Forms.TreeNode.NodeFont%2A> der angegebenen Größe und passt die <xref:System.Windows.Forms.TreeView.ItemHeight%2A> der Strukturknoten übergeordneten <xref:System.Windows.Forms.TreeView> Steuerelement. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.TreeView> Steuerelement mit einer Auflistung von <xref:System.Windows.Forms.TreeNode> Objekte, und ein <xref:System.Windows.Forms.ComboBox> , der Schriftgrade Ihren Bedürfnissen enthält.  
+  
+ [!code-cpp[TreeNode_Bounds#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Bounds/CPP/treenode_bounds.cpp#2)]
+ [!code-csharp[TreeNode_Bounds#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Bounds/CS/treenode_bounds.cs#2)]
+ [!code-vb[TreeNode_Bounds#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Bounds/VB/treenode_bounds.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="public bool Checked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Checked" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.Checked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Strukturknoten in einem aktivierten Zustand befindet.</summary>
+        <value>
+          <see langword="true" />Wenn der Strukturknoten im aktivierten Zustand ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird hervorgehoben, alle <xref:System.Windows.Forms.TreeNode> Objekte eine <xref:System.Windows.Forms.TreeView> -Steuerelement mit seiner <xref:System.Windows.Forms.TreeNode.Checked%2A> -Eigenschaftensatz auf `true` durch Festlegen seiner <xref:System.Windows.Forms.TreeNode.BackColor%2A> Eigenschaft, um <xref:System.Drawing.Color.Yellow%2A>. Dieser Code erfordert, dass Sie haben eine <xref:System.Windows.Forms.TreeView> control für eine <xref:System.Windows.Forms.Form> mit einer Auflistung von <xref:System.Windows.Forms.TreeNode> Objekte.  
+  
+ [!code-cpp[TreeNode_Checked#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Checked/CPP/treenode_checked.cpp#1)]
+ [!code-csharp[TreeNode_Checked#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Checked/CS/treenode_checked.cs#1)]
+ [!code-vb[TreeNode_Checked#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Checked/VB/treenode_checked.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Kopiert den Strukturknoten und die gesamte Unterstruktur, die diesem Knoten als Stammknoten.</summary>
+        <returns>Die <see cref="T:System.Object" /> , darstellt, das die geklonte <see cref="T:System.Windows.Forms.TreeNode" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Baumstruktur vom geklonten Strukturknoten und unten wird kopiert. Alle untergeordneten Strukturknoten zugewiesen der <xref:System.Windows.Forms.TreeNode> geklonte neue Strukturknoten und der Unterstruktur enthalten sind.  
+  
+ Die <xref:System.Windows.Forms.TreeNode.Clone%2A> Methode führt eine flache Kopie des Knotens. Wenn der Wert von der <xref:System.Windows.Forms.TreeNode.Tag%2A> Eigenschaft ist ein Verweistyp, zeigen die ursprüngliche und geklonte Kopie auf derselben einzelnen Instanz von der <xref:System.Windows.Forms.TreeNode.Tag%2A> Wert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der letzten untergeordneten Strukturknoten des letzten Stammknoten klont und fügt Sie den Klon als ersten Stammknoten in der `TreeNodeCollection`. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.TreeView> control für eine <xref:System.Windows.Forms.Form> , enthält eine Auflistung von <xref:System.Windows.Forms.TreeNode> Objekte und eine <xref:System.Windows.Forms.Button>.  
+  
+ [!code-cpp[TreeNode_EnsureVisible_4#3](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/CPP/treenode_ensurevisible_4.cpp#3)]
+ [!code-csharp[TreeNode_EnsureVisible_4#3](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/CS/treenode_ensurevisible_4.cs#3)]
+ [!code-vb[TreeNode_EnsureVisible_4#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/VB/treenode_ensurevisible_4.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Collapse">
+      <MemberSignature Language="C#" Value="public void Collapse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Collapse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.Collapse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reduziert den Strukturknoten an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.Collapse%2A> -Methode reduziert den aktuellen <xref:System.Windows.Forms.TreeNode> und dessen untergeordneter Knoten. Wenn Sie nur die aktuellen reduzieren möchten <xref:System.Windows.Forms.TreeNode>, verwenden Sie die <xref:System.Windows.Forms.TreeNode.Collapse%28System.Boolean%29?displayProperty=nameWithType> Überladung übergeben `true` , dessen untergeordnete Knoten ignoriert werden sollen.  
+  
+> [!NOTE]
+>  Den Status einer <xref:System.Windows.Forms.TreeNode> wird beibehalten. Angenommen, wenn die nächste Ebene der untergeordneten Knoten beim zuvor nicht reduziert wurde die <xref:System.Windows.Forms.TreeNode.Expand%2A> -Methode aufgerufen wird, die untergeordneten Knoten werden im erweiterten Zustand angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird den ausgewählten Knoten wechselt, wenn auf eine Schaltfläche geklickt wird. Wenn der ausgewählte Knoten reduziert ist, er wird erweitert, wenn er durch den Aufruf erweitert ist die <xref:System.Windows.Forms.TreeNode.Expand%2A> -Methode, es reduziert ist, durch Aufrufen der <xref:System.Windows.Forms.TreeNode.Collapse%2A> Methode. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> -Steuerelement mit mindestens einer <xref:System.Windows.Forms.TreeNode> mit mindestens einem untergeordneten <xref:System.Windows.Forms.TreeNode>.  
+  
+ [!code-cpp[TreeNode_EnsureVisible_4#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/CPP/treenode_ensurevisible_4.cpp#1)]
+ [!code-csharp[TreeNode_EnsureVisible_4#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/CS/treenode_ensurevisible_4.cs#1)]
+ [!code-vb[TreeNode_EnsureVisible_4#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/VB/treenode_ensurevisible_4.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Collapse">
+      <MemberSignature Language="C#" Value="public void Collapse (bool ignoreChildren);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Collapse(bool ignoreChildren) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.Collapse(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ignoreChildren" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="ignoreChildren">
+          <see langword="true" />um die untergeordneten Knoten in ihrem aktuellen Zustand lassen. <see langword="false" /> um die untergeordneten Knoten zu reduzieren.</param>
+        <summary>Reduziert die <see cref="T:System.Windows.Forms.TreeNode" /> und optional ihre untergeordneten Elemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.TreeNode.Collapse%2A> -Methode auf und übergibt `true`, wenn der Knoten reduziert, aber seine untergeordneten Knoten im erweiterten Zustand belassen werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenu">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.ContextMenu ContextMenu { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ContextMenu ContextMenu" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.ContextMenu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenu</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Kontextmenü, das diesem Knoten zugeordnet ist.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.ContextMenu" /> , dem Strukturknoten zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die bevorzugte Methode zum Zuordnen eines Kontextmenüs mit einem Strukturknoten ist mit der <xref:System.Windows.Forms.TreeNode.ContextMenuStrip%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuStrip">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.ContextMenuStrip ContextMenuStrip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ContextMenuStrip ContextMenuStrip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.ContextMenuStrip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenuStrip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der diesem Knoten zugeordnete Kontextmenü.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.ContextMenuStrip" /> dem Strukturknoten zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Kontextmenü wird angezeigt, wenn der Benutzer den Strukturknoten klickt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="protected virtual void Deserialize (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Deserialize(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.Deserialize(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Der <see cref="T:System.Runtime.Serialization.SerializationInfo" />, der die <see cref="T:System.Windows.Forms.TreeNode" /> beschreibt.</param>
+        <param name="context">Die <see cref="T:System.Runtime.Serialization.StreamingContext" /> , die den Zustand des Datenstroms während der Deserialisierung angibt.</param>
+        <summary>Lädt den Zustand der der <see cref="T:System.Windows.Forms.TreeNode" /> aus dem angegebenen <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEdit">
+      <MemberSignature Language="C#" Value="public void EndEdit (bool cancel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndEdit(bool cancel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.EndEdit(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancel" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="cancel">
+          <see langword="true" />Wenn die Bearbeitung der Text der strukturknotenbezeichnung abgebrochen wurde, ohne gespeichert zu werden. andernfalls <see langword="false" />.</param>
+        <summary>Beendet die Bearbeitung der Bezeichnung des Strukturknotens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird ermöglicht dem Benutzer, das Bearbeiten von Strukturknoten mit einem <xref:System.Windows.Forms.ContextMenu>. Wenn der Benutzer mit der rechten Maustaste auf die Maus klickt der <xref:System.Windows.Forms.TreeNode> Position bestimmt ist, und die an, die in einer benannten Variablen gespeichert `mySelectedNode`. Wenn ein Strukturknoten ausgewählt wurde, wird es in einem bearbeitbaren Zustand versetzt ermöglicht die Benutzer, der die knotenbezeichnung bearbeiten. Nachdem der Benutzer das Bearbeiten der Bezeichnung des Strukturknotens beendet, ist der neue Bezeichnungstext ausgewertet und gespeichert. In diesem Beispiel werden mehrere Zeichen nicht in den Bezeichnungstext gültig angesehen. Wenn eine ungültiges Zeichen gemäß der in der Bezeichnungszeichenfolge ist, oder die Zeichenfolge leer ist, wird der Benutzer des Fehlers benachrichtigt, und die Bezeichnung wird an seinen vorherigen Text zurückgegeben.  
+  
+ [!code-cpp[classic treenode.beginedit example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/CPP/source.cpp#1)]
+ [!code-csharp[classic treenode.beginedit example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/CS/source.cs#1)]
+ [!code-vb[classic treenode.beginedit example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureVisible">
+      <MemberSignature Language="C#" Value="public void EnsureVisible ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnsureVisible() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.EnsureVisible" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird sichergestellt, dass der Strukturknoten Strukturknoten erweitern und Durchführen eines Bildlaufs nach Bedarf das Strukturansicht-Steuerelement angezeigt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.TreeNode.EnsureVisible%2A> -Methode aufgerufen wird, die Struktur wird erweitert, und ein Bildlauf durchgeführt, um sicherzustellen, dass die aktuellen Strukturknotens im sichtbar ist die <xref:System.Windows.Forms.TreeView>. Diese Methode ist nützlich, wenn Sie einen Strukturknoten im Code basierend auf bestimmten Kriterien auswählen. Der Benutzer kann durch Aufruf dieser Methode aus, nachdem Sie den Knoten auswählen, finden Sie unter und interagieren mit dem ausgewählten Knoten.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Windows.Forms.TreeView.ItemHeight%2A?displayProperty=nameWithType> Eigenschaftensatz wird auf einen Wert, der größer als die Höhe des Strukturansicht-Steuerelement, das Aufrufen dieser Methode hat unerwartete Ergebnisse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird wird das letzte untergeordnete Element Strukturknoten des letzten in in der Strukturansicht, wenn eine Schaltfläche geklickt wird. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.TreeView> control für eine <xref:System.Windows.Forms.Form> , enthält eine Auflistung von <xref:System.Windows.Forms.TreeNode> Objekte, und ein <xref:System.Windows.Forms.Button>. Es sollte genügend Strukturknoten vorhanden sein, so, dass sie nicht alle in der Strukturansicht-Steuerelement sichtbar sind.  
+  
+ [!code-cpp[TreeNode_EnsureVisible_4#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/CPP/treenode_ensurevisible_4.cpp#2)]
+ [!code-csharp[TreeNode_EnsureVisible_4#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/CS/treenode_ensurevisible_4.cs#2)]
+ [!code-vb[TreeNode_EnsureVisible_4#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/VB/treenode_ensurevisible_4.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expand">
+      <MemberSignature Language="C#" Value="public void Expand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Expand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.Expand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird den Strukturknoten Erweitert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.Expand%2A> erweitert die aktuelle Methode <xref:System.Windows.Forms.TreeNode> an die nächste Ebene von Knoten.  
+  
+> [!NOTE]
+>  Den Status einer <xref:System.Windows.Forms.TreeNode> wird beibehalten. Angenommen, wenn die nächste Ebene der untergeordneten Knoten beim zuvor nicht reduziert wurde die <xref:System.Windows.Forms.TreeNode.Expand%2A> -Methode aufgerufen wird, die untergeordneten Knoten werden im erweiterten Zustand angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird den ausgewählten Knoten wechselt, wenn auf eine Schaltfläche geklickt wird. Wenn der ausgewählte Knoten reduziert ist, er wird erweitert, wenn er durch den Aufruf erweitert ist die <xref:System.Windows.Forms.TreeNode.Expand%2A> -Methode, es reduziert ist, durch Aufrufen der <xref:System.Windows.Forms.TreeNode.Collapse%2A> Methode. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> -Steuerelement mit mindestens einer <xref:System.Windows.Forms.TreeNode> mit mindestens einem untergeordneten <xref:System.Windows.Forms.TreeNode>.  
+  
+ [!code-cpp[TreeNode_EnsureVisible_4#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/CPP/treenode_ensurevisible_4.cpp#1)]
+ [!code-csharp[TreeNode_EnsureVisible_4#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/CS/treenode_ensurevisible_4.cs#1)]
+ [!code-vb[TreeNode_EnsureVisible_4#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/VB/treenode_ensurevisible_4.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandAll">
+      <MemberSignature Language="C#" Value="public void ExpandAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExpandAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.ExpandAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erweitert alle untergeordneten Strukturknoten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.ExpandAll%2A> erweitert alle untergeordneten Strukturknoten zugewiesen Methode der <xref:System.Windows.Forms.TreeNode.Nodes%2A> Auflistung.  
+  
+> [!NOTE]
+>  Den Status einer <xref:System.Windows.Forms.TreeNode> wird beibehalten. Angenommen, wenn die nächste Ebene der untergeordneten Knoten beim zuvor nicht reduziert wurde die <xref:System.Windows.Forms.TreeNode.Expand%2A> -Methode aufgerufen wird, die untergeordneten Knoten werden im erweiterten Zustand angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erweitert alle Strukturknoten in eine <xref:System.Windows.Forms.TreeView> steuern, wann eine <xref:System.Windows.Forms.CheckBox> aktiviert ist, und reduziert die <xref:System.Windows.Forms.TreeNode.FirstNode%2A> bei der <xref:System.Windows.Forms.CheckBox> deaktiviert ist. Dieses Beispiel benötigen Sie eine <xref:System.Windows.Forms.Form> mit einer <xref:System.Windows.Forms.CheckBox>, und ein <xref:System.Windows.Forms.TreeView> steuern, mit einer <xref:System.Windows.Forms.TreeNodeCollection> , die besitzt mehrere <xref:System.Windows.Forms.TreeNode> Objekte (vorzugsweise mit drei oder mehr Ebenen).  
+  
+ [!code-cpp[TreeNode_ForeColor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_ForeColor/CPP/treenode_forecolor.cpp#1)]
+ [!code-csharp[TreeNode_ForeColor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_ForeColor/CS/treenode_forecolor.cs#1)]
+ [!code-vb[TreeNode_ForeColor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_ForeColor/VB/treenode_forecolor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstNode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode FirstNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode FirstNode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.FirstNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Strukturknoten das erste untergeordnete Element in der Auflistung der Strukturknoten ab.</summary>
+        <value>Das erste untergeordnete Element <see cref="T:System.Windows.Forms.TreeNode" /> in der <see cref="P:System.Windows.Forms.TreeNode.Nodes" /> Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.FirstNode%2A> ist das erste untergeordnete Element <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection> gespeichert, der <xref:System.Windows.Forms.TreeNode.Nodes%2A> Eigenschaft des aktuellen Strukturknotens. Wenn die <xref:System.Windows.Forms.TreeNode> verfügt über keine untergeordneten Strukturknoten der <xref:System.Windows.Forms.TreeNode.FirstNode%2A> -Eigenschaft gibt `null`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die entsprechende wählt <xref:System.Windows.Forms.TreeNode> nach bestimmen, ob die <xref:System.Windows.Forms.TreeNode> übergeben ausgewählt ist und welche <xref:System.Windows.Forms.TreeNode> auswählen. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> -Steuerelement mit einer <xref:System.Windows.Forms.TreeNodeCollection> , enthält mehrere <xref:System.Windows.Forms.TreeNode> Objekte. Darüber hinaus müssen Sie haben eine <xref:System.Windows.Forms.ComboBox> mit den folgenden Elementen: "Zurück", "PreviousVisible", "Weiter", "NextVisible", "First" und "Last".  
+  
+ [!code-cpp[TreeNode_Parent#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Parent/CPP/treenode_parent.cpp#1)]
+ [!code-csharp[TreeNode_Parent#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Parent/CS/treenode_parent.cs#1)]
+ [!code-vb[TreeNode_Parent#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Parent/VB/treenode_parent.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vordergrundfarbe des Strukturknotens.</summary>
+        <value>Vordergrund <see cref="T:System.Drawing.Color" /> des Strukturknotens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `null`, die <xref:System.Drawing.Color> verwendet die <xref:System.Windows.Forms.Control.ForeColor%2A> Eigenschaftswert, der die <xref:System.Windows.Forms.TreeView> Steuerelement, das der Strukturknoten zugewiesen ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen Stammknoten aus, um die untergeordneten Strukturknoten zugewiesen. Einem untergeordneten Strukturknoten für jede `Customer` -Objekt in ein <xref:System.Collections.ArrayList> wird für den Stammknoten der Struktur als auch von einem untergeordneten Strukturknoten für jede hinzugefügt `Order` zugewiesene Objekt die `Customer` Objekt. Die `Customer` Objekt zugewiesen ist die <xref:System.Windows.Forms.TreeNode.Tag%2A> -Eigenschaft und die Strukturknoten darstellt `Customer` Objekte werden angezeigt, mit <xref:System.Drawing.Color.Orange%2A> Text. Dieses Beispiel benötigen Sie eine `Customer` und `Order` definierten Objekts, einer <xref:System.Windows.Forms.TreeView> control für eine <xref:System.Windows.Forms.Form>, und ein <xref:System.Collections.ArrayList> mit dem Namen `customerArray` enthält `Customer` Objekte.  
+  
+ [!code-cpp[TreeNode_Bounds#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Bounds/CPP/treenode_bounds.cpp#1)]
+ [!code-csharp[TreeNode_Bounds#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Bounds/CS/treenode_bounds.cs#1)]
+ [!code-vb[TreeNode_Bounds#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Bounds/VB/treenode_bounds.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromHandle">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.TreeNode FromHandle (System.Windows.Forms.TreeView tree, IntPtr handle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Forms.TreeNode FromHandle(class System.Windows.Forms.TreeView tree, native int handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.FromHandle(System.Windows.Forms.TreeView,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tree" Type="System.Windows.Forms.TreeView" />
+        <Parameter Name="handle" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="tree">Die <see cref="T:System.Windows.Forms.TreeView" /> , die den Strukturknoten enthält.</param>
+        <param name="handle">Das Handle des Strukturknotens.</param>
+        <summary>Gibt der Strukturknoten mit dem angegebenen behandeln und der angegebenen Struktur zugewiesen Steuerelement anzeigen</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.TreeNode" /> , der den Strukturknoten zugewiesen, mit dem angegebenen darstellt <see cref="T:System.Windows.Forms.TreeView" /> Steuerelement mit dem angegebenen Handle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Knoten hinzugefügt wird, um die <xref:System.Windows.Forms.TreeView.Nodes%2A?displayProperty=nameWithType> -Auflistung, die <xref:System.Windows.Forms.TreeView> Steuerelement sendet eine Benachrichtigung NM_CUSTOMDRAW, bevor die knotenhandles verfügbar ist. Wenn Sie außer Kraft setzen die <xref:System.Windows.Forms.Control.WndProc%2A> Methode der <xref:System.Windows.Forms.TreeView> um benutzerdefinierte Zeichnung als Antwort auf diese Benachrichtigung zu gewährleisten, sollten Sie immer überprüfen den Rückgabewert dieser Methode für `null` bevor Sie versuchen, Zugriff auf den Clusterknoten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.TreeNode> , wurde reduziert und erstellt eine Kopie des mit seiner <xref:System.Windows.Forms.TreeNode.Handle%2A> Eigenschaft. Die ursprüngliche <xref:System.Windows.Forms.TreeNode> wird daraus der <xref:System.Windows.Forms.TreeNodeCollection>, und die Kopie der Auflistung hinzugefügt wird. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> Steuerelement. Die <xref:System.Windows.Forms.TreeView> Steuerelement muss mindestens zwei Stammknoten jeweils über mindestens einen untergeordneten Knoten verfügen.  
+  
+ [!code-cpp[Windows.Forms.TreeNode#3](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.TreeNode/CPP/treenode.cpp#3)]
+ [!code-csharp[Windows.Forms.TreeNode#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.TreeNode/CS/treenode.cs#3)]
+ [!code-vb[Windows.Forms.TreeNode#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.TreeNode/VB/treenode.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullPath">
+      <MemberSignature Language="C#" Value="public string FullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.FullPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad der aktuellen Strukturknotens aus dem Stammknoten der Struktur.</summary>
+        <value>Der Pfad aus dem Stammknoten der Struktur auf den aktuellen Strukturknoten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Pfad besteht aus der Bezeichnungen von der Strukturknoten, die zum Erreichen dieser Strukturknoten, beginnend ab dem Stammknoten navigiert werden müssen. Die Bezeichnungen Knoten werden durch die im angegebenen Trennzeichen getrennt der <xref:System.Windows.Forms.TreeView.PathSeparator%2A> Eigenschaft von der <xref:System.Windows.Forms.TreeView> Steuerelement, das diesen Knoten enthält. Wenn das Trennzeichen des Strukturansicht-Steuerelement mit der Bezeichnung "Location" wird z. B. auf den umgekehrten Schrägstrich festgelegt (\\), wird die <xref:System.Windows.Forms.TreeNode.FullPath%2A> Eigenschaftswert ist "Country\Region\State".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.TreeView.PathSeparator%2A> Eigenschaft eine <xref:System.Windows.Forms.TreeView> und zeigt die Anzahl der untergeordneten Knoten, die in enthaltenen der <xref:System.Windows.Forms.TreeNodeCollection> von der <xref:System.Windows.Forms.TreeView.SelectedNode%2A>. Der Prozentsatz der untergeordneten Strukturknoten insgesamt Strukturknoten im Strukturansicht-Steuerelement wird ebenfalls angezeigt. Dieses Beispiel benötigen Sie eine <xref:System.Windows.Forms.Form> mit einer <xref:System.Windows.Forms.Button>, und ein <xref:System.Windows.Forms.TreeView> steuern, mit einer <xref:System.Windows.Forms.TreeNodeCollection> , die besitzt mehrere <xref:System.Windows.Forms.TreeNode> Objekte (vorzugsweise mit drei oder mehr Ebenen).  
+  
+ [!code-cpp[TreeNode_ForeColor#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_ForeColor/CPP/treenode_forecolor.cpp#2)]
+ [!code-csharp[TreeNode_ForeColor#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_ForeColor/CS/treenode_forecolor.cs#2)]
+ [!code-vb[TreeNode_ForeColor#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_ForeColor/VB/treenode_forecolor.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Knoten ist nicht Bestandteil einer <see cref="T:System.Windows.Forms.TreeView" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNodeCount">
+      <MemberSignature Language="C#" Value="public int GetNodeCount (bool includeSubTrees);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetNodeCount(bool includeSubTrees) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.GetNodeCount(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includeSubTrees" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includeSubTrees">
+          <see langword="true" />Wenn das Rekursionsergebnis aller Strukturknoten indirekt Knotenpunkt diese Struktur enthält. andernfalls <see langword="false" />.</param>
+        <summary>Gibt die Anzahl der untergeordneten Knoten zurück.</summary>
+        <returns>Die Anzahl der untergeordneten Knoten zugewiesen werden, um die <see cref="P:System.Windows.Forms.TreeNode.Nodes" /> Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.TreeView.PathSeparator%2A> Eigenschaft eine <xref:System.Windows.Forms.TreeView> und zeigt die Anzahl der untergeordneten Knoten, die in enthaltenen der <xref:System.Windows.Forms.TreeNodeCollection> von der <xref:System.Windows.Forms.TreeView.SelectedNode%2A>. Der Prozentsatz der untergeordneten Strukturknoten insgesamt Strukturknoten im Strukturansicht-Steuerelement wird ebenfalls angezeigt. Dieses Beispiel benötigen Sie eine <xref:System.Windows.Forms.Form> mit einer <xref:System.Windows.Forms.Button>, und ein <xref:System.Windows.Forms.TreeView> steuern, mit einer <xref:System.Windows.Forms.TreeNodeCollection> , die besitzt mehrere <xref:System.Windows.Forms.TreeNode> Objekte (vorzugsweise mit drei oder mehr Ebenen).  
+  
+ [!code-cpp[TreeNode_ForeColor#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_ForeColor/CPP/treenode_forecolor.cpp#2)]
+ [!code-csharp[TreeNode_ForeColor#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_ForeColor/CS/treenode_forecolor.cs#2)]
+ [!code-vb[TreeNode_ForeColor#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_ForeColor/VB/treenode_forecolor.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public IntPtr Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Handle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Handle des Strukturknotens ab.</summary>
+        <value>Das Handle des Strukturknotens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Handle nicht bereits bei erstellt, wird die <xref:System.Windows.Forms.TreeNode.Handle%2A> Eigenschaft verwiesen wird, wird diese erstellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.TreeNode> , wurde reduziert und erstellt eine Kopie des mit seiner <xref:System.Windows.Forms.TreeNode.Handle%2A> Eigenschaft. Die ursprüngliche <xref:System.Windows.Forms.TreeNode> wird daraus der <xref:System.Windows.Forms.TreeNodeCollection>, und die Kopie der Auflistung hinzugefügt wird. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> Steuerelement. Die <xref:System.Windows.Forms.TreeView> Steuerelement muss mindestens zwei Stammknoten jeweils über mindestens einen untergeordneten Knoten verfügen.  
+  
+ [!code-cpp[Windows.Forms.TreeNode#3](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.TreeNode/CPP/treenode.cpp#3)]
+ [!code-csharp[Windows.Forms.TreeNode#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.TreeNode/CS/treenode.cs#3)]
+ [!code-vb[Windows.Forms.TreeNode#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.TreeNode/VB/treenode.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageIndex">
+      <MemberSignature Language="C#" Value="public int ImageIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ImageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.ImageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.TreeViewImageIndexConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Forms.RelatedImageList("TreeView.ImageList")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Indexwert des Bilds angezeigt, wenn der Strukturknoten im Status "deaktiviert" ist.</summary>
+        <value>Ein nullbasierter Indexwert, der die Bildposition in der zugewiesenen <see cref="T:System.Windows.Forms.ImageList" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> Wert ist der Indexwert des ein <xref:System.Drawing.Image> gespeichert, der <xref:System.Windows.Forms.ImageList> zugewiesen der <xref:System.Windows.Forms.TreeView.ImageList%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+> [!NOTE]
+>  Der Standardwert der <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> Eigenschaft ist identisch mit der <xref:System.Windows.Forms.TreeView.ImageIndex%2A> Eigenschaft von der <xref:System.Windows.Forms.TreeView> zu steuern, die die <xref:System.Windows.Forms.TreeNode> zugewiesen ist.  
+  
+ Die <xref:System.Windows.Forms.TreeNode.ImageKey%2A> und <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> Eigenschaften schließen sich gegenseitig; Wenn eine Eigenschaft festgelegt ist, die andere wird daher ignoriert. Wenn Sie festlegen, die <xref:System.Windows.Forms.TreeNode.ImageKey%2A> -Eigenschaft, die <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> Eigenschaft automatisch auf-1 festgelegt ist. Auch wenn Sie festlegen, <xref:System.Windows.Forms.TreeNode.ImageIndex%2A>, <xref:System.Windows.Forms.TreeNode.ImageKey%2A> automatisch auf eine leere Zeichenfolge festgelegt ist ("").  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und weist eine <xref:System.Windows.Forms.ImageList> auf eine <xref:System.Windows.Forms.TreeView> Steuerelement und füllt die <xref:System.Windows.Forms.TreeView> steuern mit <xref:System.Windows.Forms.TreeNode> Objekte. Der Strukturknoten zugewiesen sind Bilder aus der <xref:System.Windows.Forms.ImageList> , wird angezeigt, wenn der Strukturknoten in einem Zustand aktiviert oder deaktiviert ist. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.TreeView>, und ein <xref:System.Collections.ArrayList> enthält `Customer` Objekte, die jeweils `Order` Objekte. Sie erfordert außerdem, dass die `Customer` und `Order` Objekte definiert sind.  
+  
+ [!code-cpp[TreeNode_TreeNode#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_TreeNode/CPP/treenode_treenode.cpp#1)]
+ [!code-csharp[TreeNode_TreeNode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_TreeNode/CS/treenode_treenode.cs#1)]
+ [!code-vb[TreeNode_TreeNode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_TreeNode/VB/treenode_treenode.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageKey">
+      <MemberSignature Language="C#" Value="public string ImageKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.ImageKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.TreeViewImageKeyConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Forms.RelatedImageList("TreeView.ImageList")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schlüssel für das Bild, das diesem Strukturknoten zugeordnet wird, wenn der Knoten nicht ausgewählt ist.</summary>
+        <value>Der Schlüssel für das Bild, das diesem Strukturknoten zugeordnet wird, wenn der Knoten nicht ausgewählt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Image-Schlüssel, die von dieser Eigenschaft zurückgegebene ist Bestandteil der <xref:System.Windows.Forms.TreeView.ImageList%2A> -Eigenschaft der enthaltenden <xref:System.Windows.Forms.TreeView> Steuerelement.  
+  
+ Die <xref:System.Windows.Forms.TreeNode.ImageKey%2A> wird Groß-/Kleinschreibung.  
+  
+ Die <xref:System.Windows.Forms.TreeNode.ImageKey%2A> und <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> Eigenschaften schließen sich gegenseitig, wenn eine Eigenschaft festgelegt ist, wird die andere ignoriert. Wenn Sie festlegen, die <xref:System.Windows.Forms.TreeNode.ImageKey%2A> -Eigenschaft, die <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> Eigenschaft automatisch auf-1 festgelegt ist. Auch wenn Sie festlegen, <xref:System.Windows.Forms.TreeNode.ImageIndex%2A>, <xref:System.Windows.Forms.TreeNode.ImageKey%2A> automatisch auf eine leere Zeichenfolge festgelegt ist ("").  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public int Index { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.Index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position des Strukturknotens in der Auflistung der Strukturknoten ab.</summary>
+        <value>Ein nullbasierter Indexwert, der die Position des Strukturknotens in der <see cref="P:System.Windows.Forms.TreeNode.Nodes" /> Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.TreeNode.Text%2A> und <xref:System.Windows.Forms.TreeNode.Index%2A> Eigenschaftswerte der <xref:System.Windows.Forms.TreeNode> dargestellte der <xref:System.Windows.Forms.TreeNode.Parent%2A> Eigenschaft von der <xref:System.Windows.Forms.TreeView.SelectedNode%2A?displayProperty=nameWithType>. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> Steuerelement. Die <xref:System.Windows.Forms.TreeView> muss über mindestens zwei Stammknoten, die jeweils über mindestens einen untergeordneten Knoten verfügen.  
+  
+ [!code-cpp[Windows.Forms.TreeNode#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.TreeNode/CPP/treenode.cpp#2)]
+ [!code-csharp[Windows.Forms.TreeNode#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.TreeNode/CS/treenode.cs#2)]
+ [!code-vb[Windows.Forms.TreeNode#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.TreeNode/VB/treenode.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEditing">
+      <MemberSignature Language="C#" Value="public bool IsEditing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEditing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.IsEditing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Strukturknoten in einem bearbeitbaren Zustand ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Strukturknoten in einem bearbeitbaren Zustand ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird ermöglicht dem Benutzer, das Bearbeiten von Strukturknoten mit einem <xref:System.Windows.Forms.ContextMenu>. Wenn der Benutzer mit der rechten Maustaste auf die Maus klickt der <xref:System.Windows.Forms.TreeNode> Position bestimmt ist, und die an, die in einer benannten Variablen gespeichert `mySelectedNode`. Wenn ein Strukturknoten ausgewählt wurde, wird es in einem bearbeitbaren Zustand versetzt und teilt dem Benutzer, der die knotenbezeichnung bearbeiten. Nachdem der Benutzer das Bearbeiten der Bezeichnung des Strukturknotens beendet, ist der neue Bezeichnungstext ausgewertet und gespeichert. In diesem Beispiel werden mehrere Zeichen nicht in den Bezeichnungstext gültig angesehen. Wenn eine ungültiges Zeichen gemäß der in der Bezeichnungszeichenfolge ist, oder die Zeichenfolge leer ist, wird der Benutzer des Fehlers benachrichtigt, und die Bezeichnung wird an seinen vorherigen Text zurückgegeben.  
+  
+ [!code-cpp[classic treenode.beginedit example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/CPP/source.cpp#1)]
+ [!code-csharp[classic treenode.beginedit example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/CS/source.cs#1)]
+ [!code-vb[classic treenode.beginedit example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TreeNode.BeginEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExpanded">
+      <MemberSignature Language="C#" Value="public bool IsExpanded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsExpanded" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.IsExpanded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Strukturknoten erweitert wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Strukturknoten erweitert wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird den ausgewählten Knoten wechselt, wenn auf eine Schaltfläche geklickt wird. Wenn der ausgewählte Knoten reduziert ist, er wird erweitert, wenn er durch den Aufruf erweitert ist die <xref:System.Windows.Forms.TreeNode.Expand%2A> -Methode, es reduziert ist, durch Aufrufen der <xref:System.Windows.Forms.TreeNode.Collapse%2A> Methode. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> -Steuerelement mit mindestens einer <xref:System.Windows.Forms.TreeNode> mit mindestens einem untergeordneten <xref:System.Windows.Forms.TreeNode>.  
+  
+ [!code-cpp[TreeNode_EnsureVisible_4#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/CPP/treenode_ensurevisible_4.cpp#1)]
+ [!code-csharp[TreeNode_EnsureVisible_4#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/CS/treenode_ensurevisible_4.cs#1)]
+ [!code-vb[TreeNode_EnsureVisible_4#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/VB/treenode_ensurevisible_4.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelected">
+      <MemberSignature Language="C#" Value="public bool IsSelected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelected" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.IsSelected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Strukturknoten ausgewählt ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Strukturknoten in den ausgewählten Zustand aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die entsprechende wählt <xref:System.Windows.Forms.TreeNode> nach bestimmen, ob die <xref:System.Windows.Forms.TreeNode> übergeben ausgewählt ist und welche <xref:System.Windows.Forms.TreeNode> auswählen. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> -Steuerelement mit einem <xref:System.Windows.Forms.TreeNodeCollection> mit mehreren <xref:System.Windows.Forms.TreeNode> Objekte. Darüber hinaus müssen Sie haben eine <xref:System.Windows.Forms.ComboBox> mit den folgenden Elementen: "Zurück", "PreviousVisible", "Weiter", "NextVisible", "First" und "Last".  
+  
+ [!code-cpp[TreeNode_Parent#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Parent/CPP/treenode_parent.cpp#1)]
+ [!code-csharp[TreeNode_Parent#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Parent/CS/treenode_parent.cs#1)]
+ [!code-vb[TreeNode_Parent#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Parent/VB/treenode_parent.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.IsVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Strukturknoten vollständig oder teilweise sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Strukturknoten vollständig oder teilweise sichtbar ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird wird das letzte untergeordnete Element Strukturknoten des letzten in in der Strukturansicht, wenn eine Schaltfläche geklickt wird. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.TreeView> control für eine <xref:System.Windows.Forms.Form> , enthält eine Auflistung von <xref:System.Windows.Forms.TreeNode> Objekte, und ein <xref:System.Windows.Forms.Button>. Es sollte genügend Strukturknoten vorhanden sein, so, dass sie nicht alle in der Strukturansicht-Steuerelement sichtbar sind.  
+  
+ [!code-cpp[TreeNode_EnsureVisible_4#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/CPP/treenode_ensurevisible_4.cpp#2)]
+ [!code-csharp[TreeNode_EnsureVisible_4#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/CS/treenode_ensurevisible_4.cs#2)]
+ [!code-vb[TreeNode_EnsureVisible_4#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_EnsureVisible_4/VB/treenode_ensurevisible_4.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastNode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode LastNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode LastNode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.LastNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das letzte untergeordnete Element Strukturknoten ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.TreeNode" /> , der den letzten untergeordneten Strukturknoten darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.LastNode%2A> ist das letzte untergeordnete Element <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection> gespeichert, der <xref:System.Windows.Forms.TreeNode.Nodes%2A> Eigenschaft des aktuellen Strukturknotens. Wenn die <xref:System.Windows.Forms.TreeNode> verfügt über keine untergeordneten Strukturknoten der <xref:System.Windows.Forms.TreeNode.LastNode%2A> -Eigenschaft gibt `null`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die entsprechende wählt <xref:System.Windows.Forms.TreeNode> nach bestimmen, ob die <xref:System.Windows.Forms.TreeNode> übergeben ausgewählt ist und welche <xref:System.Windows.Forms.TreeNode> auswählen. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> -Steuerelement mit einer <xref:System.Windows.Forms.TreeNodeCollection> , enthält mehrere <xref:System.Windows.Forms.TreeNode> Objekte. Darüber hinaus müssen Sie haben eine <xref:System.Windows.Forms.ComboBox> mit den folgenden Elementen: "Zurück", "PreviousVisible", "Weiter", "NextVisible", "First" und "Last".  
+  
+ [!code-cpp[TreeNode_Parent#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Parent/CPP/treenode_parent.cpp#1)]
+ [!code-csharp[TreeNode_Parent#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Parent/CS/treenode_parent.cs#1)]
+ [!code-vb[TreeNode_Parent#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Parent/VB/treenode_parent.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public int Level { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Level" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die nullbasierte Tiefe des Strukturknotens in der <see cref="T:System.Windows.Forms.TreeView" /> Steuerelement.</summary>
+        <value>Die nullbasierte Tiefe des Strukturknotens in der <see cref="T:System.Windows.Forms.TreeView" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die <xref:System.Windows.Forms.TreeNode.Level%2A> -Eigenschaft, der Stammknoten als erste Schachtelungsebene und gibt 0 zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Strukturknotens.</summary>
+        <value>Ein <see cref="T:System.String" /> , der den Namen des Strukturknotens darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> von einem <xref:System.Windows.Forms.TreeNode> ist auch der Knoten-Schlüssel, wenn der Knoten Teil ist eine <xref:System.Windows.Forms.TreeNodeCollection>. Wenn der Knoten keinen Namen <xref:System.Windows.Forms.TreeNode.Name%2A> gibt eine leere Zeichenfolge ("").  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextNode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode NextNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode NextNode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.NextNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das nächste gleichgeordnete Strukturknoten ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.TreeNode" /> , den nächsten nebengeordneten Strukturknoten darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.NextNode%2A> ist das nächste gleichgeordnete Element <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection> gespeichert, der <xref:System.Windows.Forms.TreeNode.Nodes%2A> Eigenschaft der Strukturknoten übergeordneten <xref:System.Windows.Forms.TreeNode>. Es ist kein nächster Strukturknoten, die <xref:System.Windows.Forms.TreeNode.NextNode%2A> -Eigenschaft gibt `null`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die entsprechende wählt <xref:System.Windows.Forms.TreeNode> nach bestimmen, ob die <xref:System.Windows.Forms.TreeNode> übergeben ausgewählt ist und welche <xref:System.Windows.Forms.TreeNode> auswählen. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> -Steuerelement mit einer <xref:System.Windows.Forms.TreeNodeCollection> , enthält mehrere <xref:System.Windows.Forms.TreeNode> Objekte. Darüber hinaus müssen Sie haben eine <xref:System.Windows.Forms.ComboBox> mit den folgenden Elementen: "Zurück", "PreviousVisible", "Weiter", "NextVisible", "First" und "Last".  
+  
+ [!code-cpp[TreeNode_Parent#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Parent/CPP/treenode_parent.cpp#1)]
+ [!code-csharp[TreeNode_Parent#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Parent/CS/treenode_parent.cs#1)]
+ [!code-vb[TreeNode_Parent#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Parent/VB/treenode_parent.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextVisibleNode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode NextVisibleNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode NextVisibleNode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.NextVisibleNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den nächsten sichtbaren Strukturknoten ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.TreeNode" /> , den nächsten sichtbaren Strukturknoten darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.NextVisibleNode%2A> kann ein untergeordnetes Element, gleichgeordneten Element oder einem Strukturknoten aus einer anderen Verzweigung sein. Es ist kein nächster Strukturknoten, die <xref:System.Windows.Forms.TreeNode.NextVisibleNode%2A> -Eigenschaft gibt `null`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die entsprechende wählt <xref:System.Windows.Forms.TreeNode> nach bestimmen, ob die <xref:System.Windows.Forms.TreeNode> übergeben ausgewählt ist und welche <xref:System.Windows.Forms.TreeNode> auswählen. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> -Steuerelement mit einer <xref:System.Windows.Forms.TreeNodeCollection> , enthält mehrere <xref:System.Windows.Forms.TreeNode> Objekte. Darüber hinaus müssen Sie haben eine <xref:System.Windows.Forms.ComboBox> mit den folgenden Elementen: "Zurück", "PreviousVisible", "Weiter", "NextVisible", "First" und "Last".  
+  
+ [!code-cpp[TreeNode_Parent#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Parent/CPP/treenode_parent.cpp#1)]
+ [!code-csharp[TreeNode_Parent#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Parent/CS/treenode_parent.cs#1)]
+ [!code-vb[TreeNode_Parent#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Parent/VB/treenode_parent.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeFont">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font NodeFont { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font NodeFont" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.NodeFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schriftart, die verwendet wird, um den Text anzuzeigen, auf die Bezeichnung des Strukturknotens.</summary>
+        <value>Die <see cref="T:System.Drawing.Font" /> , um den Text anzuzeigen, auf die Bezeichnung des Strukturknotens verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `null`, die <xref:System.Drawing.Font> verwendet die <xref:System.Windows.Forms.Control.Font%2A> Eigenschaftswert, der die <xref:System.Windows.Forms.TreeView> Steuerelement, das diesem Knoten zugeordnet ist.  
+  
+> [!NOTE]
+>  Wenn die Knotenschriftart größer als die <xref:System.Windows.Forms.Control.Font%2A> -Eigenschaftswert ab, der festgelegt wird, in der <xref:System.Windows.Forms.TreeView> Steuerelement den Text der strukturknotenbezeichnung wird abgeschnitten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ändert die Größe des <xref:System.Windows.Forms.TreeNode.NodeFont%2A> der angegebenen Größe und passt die <xref:System.Windows.Forms.TreeView.ItemHeight%2A> der Strukturknoten übergeordneten <xref:System.Windows.Forms.TreeView> Steuerelement. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einer <xref:System.Windows.Forms.TreeView> Steuerelement, das eine Auflistung von enthält <xref:System.Windows.Forms.TreeNode> Objekte, und ein <xref:System.Windows.Forms.ComboBox> , der Schriftgrade Ihren Bedürfnissen enthält.  
+  
+ [!code-cpp[TreeNode_Bounds#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Bounds/CPP/treenode_bounds.cpp#2)]
+ [!code-csharp[TreeNode_Bounds#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Bounds/CS/treenode_bounds.cs#2)]
+ [!code-vb[TreeNode_Bounds#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Bounds/VB/treenode_bounds.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Nodes">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNodeCollection Nodes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNodeCollection Nodes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.Nodes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der <see cref="T:System.Windows.Forms.TreeNode" /> zugewiesenen Objekte an die aktuellen Strukturknotens.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.TreeNodeCollection" /> , der der Strukturknoten zugewiesen, auf den aktuellen Strukturknoten darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.Nodes%2A> Eigenschaft kann eine Auflistung von anderen enthalten <xref:System.Windows.Forms.TreeNode> Objekte. Jede der Strukturknoten in der Auflistung verfügt über eine <xref:System.Windows.Forms.TreeNode.Nodes%2A> -Eigenschaft, die einen eigenen enthalten kann <xref:System.Windows.Forms.TreeNodeCollection>. Diese Schachtelung von Strukturknoten erschweren das eine Struktur zu navigieren. Die <xref:System.Windows.Forms.TreeNode.FullPath%2A> Eigenschaft erleichtert es, Ihre Position in einer Struktur zu ermitteln.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird den ausgewählte Strukturknoten entfernt, von einem <xref:System.Windows.Forms.TreeView> und fügt es in eine andere hinzu, wenn beide Auflistungen der Struktur der Knoten nicht schreibgeschützt sind. Beim ein <xref:System.Windows.Forms.Button> geklickt wird, die <xref:System.Windows.Forms.TreeView.SelectedNode%2A?displayProperty=nameWithType> wird gelöscht, von einem <xref:System.Windows.Forms.TreeView> mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> Methode und die andere hinzugefügt <xref:System.Windows.Forms.TreeView> mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> Methode. Dieses Beispiel benötigen Sie, dass zwei <xref:System.Windows.Forms.TreeView> -Steuerelemente namens `treeView1` und `treeView2`, und ein <xref:System.Windows.Forms.Button> auf eine <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[TreeNodeCollection#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp#1)]
+ [!code-csharp[TreeNodeCollection#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection/CS/treenodecollection.cs#1)]
+ [!code-vb[TreeNodeCollection#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den übergeordneten Strukturknoten des aktuellen Strukturknotens ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.TreeNode" /> , das das übergeordnete Element des aktuellen Strukturknotens darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Strukturknoten auf der Stammebene ist die <xref:System.Windows.Forms.TreeNode.Parent%2A> -Eigenschaft gibt `null`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.TreeNode.Text%2A> und <xref:System.Windows.Forms.TreeNode.Index%2A> Eigenschaftswerte der <xref:System.Windows.Forms.TreeNode> dargestellte der <xref:System.Windows.Forms.TreeNode.Parent%2A> Eigenschaft von der <xref:System.Windows.Forms.TreeView.SelectedNode%2A?displayProperty=nameWithType>. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> Steuerelement. Die <xref:System.Windows.Forms.TreeView> muss über mindestens zwei Stammknoten, die jeweils über mindestens einen untergeordneten Knoten verfügen.  
+  
+ [!code-cpp[Windows.Forms.TreeNode#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.TreeNode/CPP/treenode.cpp#2)]
+ [!code-csharp[Windows.Forms.TreeNode#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.TreeNode/CS/treenode.cs#2)]
+ [!code-vb[Windows.Forms.TreeNode#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.TreeNode/VB/treenode.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrevNode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode PrevNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode PrevNode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.PrevNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das vorherige gleichgeordnete Element Strukturknoten ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.TreeNode" /> , die den vorherigen nebengeordneten Strukturknoten darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.PrevNode%2A> ist das vorherige gleichgeordnete Element <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection> gespeichert, der <xref:System.Windows.Forms.TreeNode.Nodes%2A> Eigenschaft der Strukturknoten übergeordneten <xref:System.Windows.Forms.TreeNode>. Es ist keine vorherigen Strukturknoten der <xref:System.Windows.Forms.TreeNode.PrevNode%2A> -Eigenschaft gibt `null`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die entsprechende wählt <xref:System.Windows.Forms.TreeNode> nach bestimmen, ob die <xref:System.Windows.Forms.TreeNode> übergeben ausgewählt ist und welche <xref:System.Windows.Forms.TreeNode> auswählen. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> -Steuerelement mit einer <xref:System.Windows.Forms.TreeNodeCollection> , enthält mehrere <xref:System.Windows.Forms.TreeNode> Objekte. Darüber hinaus müssen Sie haben eine <xref:System.Windows.Forms.ComboBox> mit den folgenden Elementen: "Zurück", "PreviousVisible", "Weiter", "NextVisible", "First" und "Last".  
+  
+ [!code-cpp[TreeNode_Parent#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Parent/CPP/treenode_parent.cpp#1)]
+ [!code-csharp[TreeNode_Parent#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Parent/CS/treenode_parent.cs#1)]
+ [!code-vb[TreeNode_Parent#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Parent/VB/treenode_parent.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrevVisibleNode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode PrevVisibleNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode PrevVisibleNode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.PrevVisibleNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vorherigen sichtbaren Strukturknoten ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.TreeNode" /> , die den vorherigen sichtbaren Strukturknoten darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.PrevVisibleNode%2A> kann ein untergeordnetes Element, gleichgeordneten Element oder einem Strukturknoten aus einer anderen Verzweigung sein. Es ist keine vorherigen Strukturknoten der <xref:System.Windows.Forms.TreeNode.PrevVisibleNode%2A> -Eigenschaft gibt `null`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die entsprechende wählt <xref:System.Windows.Forms.TreeNode> nach bestimmen, ob die <xref:System.Windows.Forms.TreeNode> übergeben ausgewählt ist und welche <xref:System.Windows.Forms.TreeNode> auswählen. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> -Steuerelement mit einer <xref:System.Windows.Forms.TreeNodeCollection> , enthält mehrere <xref:System.Windows.Forms.TreeNode> Objekte. Darüber hinaus müssen Sie haben eine <xref:System.Windows.Forms.ComboBox> mit den folgenden Elementen: "Zurück", "PreviousVisible", "Weiter", "NextVisible", "First" und "Last".  
+  
+ [!code-cpp[TreeNode_Parent#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Parent/CPP/treenode_parent.cpp#1)]
+ [!code-csharp[TreeNode_Parent#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Parent/CS/treenode_parent.cs#1)]
+ [!code-vb[TreeNode_Parent#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Parent/VB/treenode_parent.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.Remove" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt den aktuellen Strukturknoten aus dem Strukturansicht-Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.TreeNode.Remove%2A> -Methode aufgerufen wird, wird der Konsolenstrukturknoten "", und alle untergeordneten Knoten, die zugewiesen werden die <xref:System.Windows.Forms.TreeNode>, aus entfernt die <xref:System.Windows.Forms.TreeView>. Entfernten untergeordneten Knoten werden entfernt, von der <xref:System.Windows.Forms.TreeView> jedoch weiterhin auf diese Strukturknoten zugeordnet sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiel entfernt eine <xref:System.Windows.Forms.TreeNode> Wenn der Benutzer die Maus über diese klickt und schaltet sie aus erweitert zu reduziert, wenn der Benutzer das Mausrad darauf klickt. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> Steuerelement. Die <xref:System.Windows.Forms.TreeView> muss mindestens zwei Stammknoten aufweisen, die jeweils über mindestens einen untergeordneten Knoten verfügen.  
+  
+ [!code-cpp[Windows.Forms.TreeNode#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.TreeNode/CPP/treenode.cpp#1)]
+ [!code-csharp[Windows.Forms.TreeNode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.TreeNode/CS/treenode.cs#1)]
+ [!code-vb[Windows.Forms.TreeNode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.TreeNode/VB/treenode.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedImageIndex">
+      <MemberSignature Language="C#" Value="public int SelectedImageIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectedImageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.SelectedImageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.TreeViewImageIndexConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Forms.RelatedImageList("TreeView.ImageList")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Indexwert des Bilds, das angezeigt wird, wenn der Strukturknoten ausgewählt ist.</summary>
+        <value>Ein nullbasierter Indexwert, der Position des Bilds in darstellt, der eine <see cref="T:System.Windows.Forms.ImageList" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> Wert ist der Indexwert des ein <xref:System.Drawing.Image> gespeichert, der <xref:System.Windows.Forms.ImageList> zugewiesen der <xref:System.Windows.Forms.TreeView.ImageList%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+> [!NOTE]
+>  Der Standardwert der <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> Eigenschaft ist identisch mit der <xref:System.Windows.Forms.TreeView.SelectedImageIndex%2A> Eigenschaft von der <xref:System.Windows.Forms.TreeView> zu steuern, die die <xref:System.Windows.Forms.TreeNode> zugewiesen ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und weist eine <xref:System.Windows.Forms.ImageList> auf eine <xref:System.Windows.Forms.TreeView> Steuerelement und füllt die <xref:System.Windows.Forms.TreeView> steuern mit <xref:System.Windows.Forms.TreeNode> Objekte. Der Strukturknoten zugewiesen sind Bilder aus der <xref:System.Windows.Forms.ImageList> , wird angezeigt, wenn der Strukturknoten in einem Zustand aktiviert oder deaktiviert ist. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.TreeView>, und ein <xref:System.Collections.ArrayList> mit `Customer` Objekte, die jeweils `Order` Objekte. Sie erfordert außerdem, dass die `Customer` und `Order` Objekte definiert sind.  
+  
+ [!code-cpp[TreeNode_TreeNode#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_TreeNode/CPP/treenode_treenode.cpp#1)]
+ [!code-csharp[TreeNode_TreeNode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_TreeNode/CS/treenode_treenode.cs#1)]
+ [!code-vb[TreeNode_TreeNode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_TreeNode/VB/treenode_treenode.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedImageKey">
+      <MemberSignature Language="C#" Value="public string SelectedImageKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectedImageKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.SelectedImageKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.TreeViewImageKeyConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Forms.RelatedImageList("TreeView.ImageList")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schlüssel des Bilds im Strukturknoten angezeigt wird, wenn es in einem ausgewählten Zustand befindet.</summary>
+        <value>Der Schlüssel des Bilds angezeigt, wenn der Strukturknoten ausgewählt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Image-Schlüssel, die von dieser Eigenschaft zurückgegebene ist Bestandteil der <xref:System.Windows.Forms.TreeView.ImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="protected virtual void Serialize (System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Serialize(class System.Runtime.Serialization.SerializationInfo si, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.Serialize(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="si" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="si">Der <see cref="T:System.Runtime.Serialization.SerializationInfo" />, der die <see cref="T:System.Windows.Forms.TreeNode" /> beschreibt.</param>
+        <param name="context">Die <see cref="T:System.Runtime.Serialization.StreamingContext" /> , den Zustand des Streams angibt, während der Serialisierung</param>
+        <summary>Speichert den Zustand der <see cref="T:System.Windows.Forms.TreeNode" /> in den angegebenen <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für Serialisierungsdienste. Zugeordnete Enumeration:<see cref="P:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="StateImageIndex">
+      <MemberSignature Language="C#" Value="public int StateImageIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StateImageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.StateImageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.NoneExcludedImageIndexConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Forms.RelatedImageList("TreeView.StateImageList")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Index des Bilds, das verwendet wird, um den Status des angeben der <see cref="T:System.Windows.Forms.TreeNode" /> Wenn das übergeordnete Element <see cref="T:System.Windows.Forms.TreeView" /> hat seine <see cref="P:System.Windows.Forms.TreeView.CheckBoxes" /> -Eigenschaftensatz auf <see langword="false" />.</summary>
+        <value>Der Index des Bilds, das verwendet wird, um den Status der an die <see cref="T:System.Windows.Forms.TreeNode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Image-Index, der von dieser Eigenschaft zurückgegeben wird ist Bestandteil der <xref:System.Windows.Forms.TreeView.StateImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView> Steuerelement.  
+  
+ Wenn das übergeordnete Element <xref:System.Windows.Forms.TreeView> Kontrollkästchen aktiviert ist, hat die <xref:System.Windows.Forms.TreeNode.StateImageIndex%2A> wird ignoriert, und der Knoten zeigt das erste oder zweite Bild in der <xref:System.Windows.Forms.TreeView.StateImageList%2A> legen Sie auf die übergeordnete <xref:System.Windows.Forms.TreeView> bzw. an einem aktivierten bzw. deaktivierten Status. Umschalten der <xref:System.Windows.Forms.TreeNode.Checked%2A> Eigenschaft wirkt sich nicht auf den Wert, der die <xref:System.Windows.Forms.TreeNode.StateImageIndex%2A>.  
+  
+ Die <xref:System.Windows.Forms.TreeNode.StateImageIndex%2A> gibt-1 zurück, wenn nicht festgelegt. Die <xref:System.Windows.Forms.TreeNode.StateImageKey%2A> und <xref:System.Windows.Forms.TreeNode.StateImageIndex%2A> Eigenschaften sind sich gegenseitig ausschließende, d. h., wenn diese festgelegt ist, wird die andere ignoriert. Wenn Sie festlegen, die <xref:System.Windows.Forms.TreeNode.StateImageKey%2A> -Eigenschaft, die <xref:System.Windows.Forms.TreeNode.StateImageIndex%2A> Eigenschaft automatisch auf-1 festgelegt ist. Auch wenn Sie festlegen, <xref:System.Windows.Forms.TreeNode.StateImageIndex%2A>, <xref:System.Windows.Forms.TreeNode.StateImageKey%2A> automatisch auf eine leere Zeichenfolge festgelegt ist ("").  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Index ist kleiner als-1 oder größer als 14.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StateImageKey">
+      <MemberSignature Language="C#" Value="public string StateImageKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StateImageKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.StateImageKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ImageKeyConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Forms.RelatedImageList("TreeView.StateImageList")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schlüssel des Bilds, das verwendet wird, um den Status des angeben der <see cref="T:System.Windows.Forms.TreeNode" /> Wenn das übergeordnete Element <see cref="T:System.Windows.Forms.TreeView" /> hat seine <see cref="P:System.Windows.Forms.TreeView.CheckBoxes" /> -Eigenschaftensatz auf <see langword="false" />.</summary>
+        <value>Der Schlüssel des Bilds, das verwendet wird, um den Status der an die <see cref="T:System.Windows.Forms.TreeNode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Image-Schlüssel, der von dieser Eigenschaft zurückgegeben wird ist Bestandteil der <xref:System.Windows.Forms.TreeView.StateImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView> Steuerelement.  
+  
+ Wenn das übergeordnete Element <xref:System.Windows.Forms.TreeView> Kontrollkästchen aktiviert ist, hat die <xref:System.Windows.Forms.TreeNode.StateImageKey%2A> wird ignoriert, und der Knoten zeigt das erste oder zweite Bild in der <xref:System.Windows.Forms.TreeView.StateImageList%2A> legen Sie auf die übergeordnete <xref:System.Windows.Forms.TreeView> bzw. an einem aktivierten bzw. deaktivierten Status. Umschalten der <xref:System.Windows.Forms.TreeNode.Checked%2A> Eigenschaft wirkt sich nicht auf den Wert, der die <xref:System.Windows.Forms.TreeNode.StateImageKey%2A>.  
+  
+ Die <xref:System.Windows.Forms.TreeNode.StateImageKey%2A> und <xref:System.Windows.Forms.TreeNode.StateImageIndex%2A> Eigenschaften sind sich gegenseitig ausschließende, d. h., wenn diese festgelegt ist, wird die andere ignoriert. Wenn Sie festlegen, die <xref:System.Windows.Forms.TreeNode.StateImageKey%2A> -Eigenschaft, die <xref:System.Windows.Forms.TreeNode.StateImageIndex%2A> Eigenschaft automatisch auf-1 festgelegt ist. Auch wenn Sie festlegen, <xref:System.Windows.Forms.TreeNode.StateImageIndex%2A>, <xref:System.Windows.Forms.TreeNode.StateImageKey%2A> automatisch auf eine leere Zeichenfolge festgelegt ist (""). Sie sollten festlegen, die <xref:System.Windows.Forms.TreeNode.StateImageKey%2A> auf ein Bild mit einem entsprechenden Index zwischen 0 und 14. Sie können festlegen, die <xref:System.Windows.Forms.TreeNode.StateImageKey%2A> auf ein Bild mit einem Index größer als 14 (eine Ausnahme wird nicht ausgelöst werden), aber das Bild kann nicht angezeigt werden  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo si, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="si" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="si">Ein <see cref="T:System.Runtime.Serialization.SerializationInfo" /> enthält die Daten zum Serialisieren der <see cref="T:System.Windows.Forms.TreeNode" />.</param>
+        <param name="context">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" /> mit Zielinformationen zum dieser Serialisierung enthält.</param>
+        <summary>Füllt ein Serialisierungsinformationsobjekt mit den Daten auf, die zum Serialisieren des <see cref="T:System.Windows.Forms.TreeNode" /> erforderlich sind.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für Serialisierungsdienste. Zugeordnete Enumeration:<see cref="P:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Objekt, das Daten über den Strukturknoten enthält.</summary>
+        <value>Ein <see cref="T:System.Object" /> , das Daten über den Knoten "Struktur" enthält. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle <xref:System.Object> abgeleiteter Typ kann diese Eigenschaft zugewiesen werden. Wenn diese Eigenschaft mit dem Windows Forms-Designer festgelegt wird, kann nur Text zugewiesen werden.  
+  
+> [!CAUTION]
+>  Die <xref:System.Windows.Forms.TreeNode.Clone%2A> Methode führt eine flache Kopie des Knotens. Wenn der Wert von der <xref:System.Windows.Forms.TreeNode.Tag%2A> Eigenschaft ist ein Verweistyp, zeigen die ursprüngliche und geklonte Kopie auf derselben einzelnen Instanz von der <xref:System.Windows.Forms.TreeNode.Tag%2A> Wert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen Stammknoten aus, um die untergeordneten Strukturknoten zugewiesen. Einem untergeordneten Strukturknoten für jede `Customer` -Objekt in ein <xref:System.Collections.ArrayList> wird für den Stammknoten der Struktur als auch von einem untergeordneten Strukturknoten für jede hinzugefügt `Order` zugewiesene Objekt die `Customer` Objekt. Die `Customer` Objekt zugewiesen ist die <xref:System.Windows.Forms.TreeNode.Tag%2A> -Eigenschaft und die Strukturknoten darstellt `Customer` Objekte werden angezeigt, mit <xref:System.Drawing.Color.Orange%2A> Text. Dieses Beispiel benötigen Sie eine `Customer` und `Order` definierten Objekts, einer <xref:System.Windows.Forms.TreeView> control für eine <xref:System.Windows.Forms.Form>, und ein <xref:System.Collections.ArrayList> mit dem Namen `customerArray` enthält `Customer` Objekte.  
+  
+ [!code-cpp[TreeNode_Bounds#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Bounds/CPP/treenode_bounds.cpp#1)]
+ [!code-csharp[TreeNode_Bounds#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Bounds/CS/treenode_bounds.cs#1)]
+ [!code-vb[TreeNode_Bounds#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Bounds/VB/treenode_bounds.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text in der Bezeichnung des Strukturknotens angezeigt.</summary>
+        <value>In der Bezeichnung des Strukturknotens angezeigte Text.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die maximale Anzahl von Zeichen, die eine <xref:System.Windows.Forms.TreeNode> können Anzeige ist 259. Wenn eine <xref:System.String> , besitzt mehr als 259 Zeichen ist diese Eigenschaft zugewiesen ist, werden nur die ersten 259 Zeichen angezeigt.  
+  
+ Diese Eigenschaft kann nicht vom Benutzer festgelegt werden, wenn die <xref:System.Windows.Forms.TreeView.LabelEdit%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView> festgelegt ist, um `false`. Die Alternative zur explizit festlegen dieser Eigenschaft ist die Erstellung den Strukturknoten mithilfe einer der der <xref:System.Windows.Forms.TreeNode.%23ctor%2A> Konstruktoren, die einen Zeichenfolgenparameter ist, die die <xref:System.Windows.Forms.TreeNode.Text%2A> Eigenschaft. Die Bezeichnung wird neben der <xref:System.Windows.Forms.TreeNode> image, sofern angezeigt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen Stammknoten aus, um die untergeordneten Strukturknoten zugewiesen. Einem untergeordneten Strukturknoten für jede `Customer` -Objekt in ein <xref:System.Collections.ArrayList> wird für den Stammknoten der Struktur als auch von einem untergeordneten Strukturknoten für jede hinzugefügt `Order` zugewiesene Objekt die `Customer` Objekt. Die `Customer` Objekt zugewiesen ist die <xref:System.Windows.Forms.TreeNode.Tag%2A> -Eigenschaft und die Strukturknoten darstellt `Customer` Objekte werden angezeigt, mit <xref:System.Drawing.Color.Orange%2A> Text. Dieses Beispiel benötigen Sie eine `Customer` und `Order` definierten Objekts, einer <xref:System.Windows.Forms.TreeView> control für eine <xref:System.Windows.Forms.Form>, und ein <xref:System.Collections.ArrayList> mit dem Namen `customerArray` enthält `Customer` Objekte.  
+  
+ [!code-cpp[TreeNode_Bounds#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Bounds/CPP/treenode_bounds.cpp#1)]
+ [!code-csharp[TreeNode_Bounds#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Bounds/CS/treenode_bounds.cs#1)]
+ [!code-vb[TreeNode_Bounds#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Bounds/VB/treenode_bounds.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Toggle">
+      <MemberSignature Language="C#" Value="public void Toggle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Toggle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.Toggle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schaltet dem Strukturknoten entweder das erweitert oder reduziert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Konsolenstrukturknoten "" ist in den Zustand gegenüber seinen aktuellen Status, entweder erweitert oder reduziert ein-/ausgeschaltet.  
+  
+> [!NOTE]
+>  Den Status einer <xref:System.Windows.Forms.TreeNode> wird beibehalten. Angenommen, wenn die nächste Ebene der untergeordneten Knoten beim zuvor nicht reduziert wurde die <xref:System.Windows.Forms.TreeNode.Expand%2A> -Methode aufgerufen wird, die untergeordneten Knoten werden im erweiterten Zustand angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiel entfernt eine <xref:System.Windows.Forms.TreeNode> Wenn der Benutzer die Maus über diese klickt und schaltet sie aus erweitert zu reduziert, wenn der Benutzer das Mausrad darauf klickt. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> Steuerelement. Die <xref:System.Windows.Forms.TreeView> muss mindestens zwei Stammknoten aufweisen, die jeweils über mindestens einen untergeordneten Knoten verfügen.  
+  
+ [!code-cpp[Windows.Forms.TreeNode#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.TreeNode/CPP/treenode.cpp#1)]
+ [!code-csharp[Windows.Forms.TreeNode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.TreeNode/CS/treenode.cs#1)]
+ [!code-vb[Windows.Forms.TreeNode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.TreeNode/VB/treenode.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipText">
+      <MemberSignature Language="C#" Value="public string ToolTipText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTipText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.ToolTipText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der angezeigt wird, wenn der Mauszeiger bewegt, über wird eine <see cref="T:System.Windows.Forms.TreeNode" />.</summary>
+        <value>Ruft den Text ab, der angezeigt wird, wenn der Mauszeiger bewegt, über wird eine <see cref="T:System.Windows.Forms.TreeNode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Müssen Sie festlegen der <xref:System.Windows.Forms.TreeView.ShowNodeToolTips%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView> auf `true` für die <xref:System.Windows.Forms.TreeNode.ToolTipText%2A> zur Laufzeit sichtbar sein.  
+  
+ Wenn die <xref:System.Windows.Forms.TreeView> Steuerelement verfügt über eine QuickInfo und enthält darüber hinaus eine <xref:System.Windows.Forms.TreeNode> , besitzt eine <xref:System.Windows.Forms.ToolTip>, nur die <xref:System.Windows.Forms.ToolTip> für der Knoten angezeigt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.TreeNode.ToolTipText%2A> und <xref:System.Windows.Forms.TreeView.ShowNodeToolTips%2A> Eigenschaften. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in einem Windows Form, und rufen `InitializeTreeViewWithToolTips` aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> -Ereignishandler.  
+  
+ [!code-csharp[System.Windows.Forms.TreeViewWhidbeyMembers#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TreeViewWhidbeyMembers/CS/Form1.cs#7)]
+ [!code-vb[System.Windows.Forms.TreeViewWhidbeyMembers#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TreeViewWhidbeyMembers/VB/Form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNode.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle Objekt darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TreeView">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeView TreeView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeView TreeView" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNode.TreeView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die übergeordnete Strukturansicht, die der Strukturknoten zugewiesen ist.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.TreeView" /> , die die übergeordnete Strukturansicht, die der Strukturknoten zugewiesen ist, darstellt oder <see langword="null" /> , wenn der Knoten nicht mit einer Strukturansicht zugewiesen wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die entsprechende wählt <xref:System.Windows.Forms.TreeNode> nach bestimmen, ob die <xref:System.Windows.Forms.TreeNode> übergeben ausgewählt ist und welche <xref:System.Windows.Forms.TreeNode> auswählen. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einem <xref:System.Windows.Forms.TreeView> -Steuerelement mit einer <xref:System.Windows.Forms.TreeNodeCollection> , enthält mehrere <xref:System.Windows.Forms.TreeNode> Objekte. Darüber hinaus müssen Sie haben eine <xref:System.Windows.Forms.ComboBox> mit den folgenden Elementen: "Zurück", "PreviousVisible", "Weiter", "NextVisible", "First" und "Last".  
+  
+ [!code-cpp[TreeNode_Parent#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNode_Parent/CPP/treenode_parent.cpp#1)]
+ [!code-csharp[TreeNode_Parent#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNode_Parent/CS/treenode_parent.cs#1)]
+ [!code-vb[TreeNode_Parent#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNode_Parent/VB/treenode_parent.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

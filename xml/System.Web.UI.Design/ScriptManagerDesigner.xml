@@ -1,0 +1,264 @@
+<Type Name="ScriptManagerDesigner" FullName="System.Web.UI.Design.ScriptManagerDesigner">
+  <TypeSignature Language="C#" Value="public class ScriptManagerDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScriptManagerDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ScriptManagerDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet zur Entwurfszeit Unterstützung für die <see cref="T:System.Web.UI.ScriptManager" /> Steuerelement in einem visuellen Designer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der <xref:System.Web.UI.Design.ControlDesigner> -Klasse Dokumentation.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptManagerDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ScriptManagerDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.ScriptManagerDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] intern erstellt eine neue Instanz der dem <xref:System.Web.UI.Design.ScriptManagerDesigner> Klasse bei der Erstellung der zugeordneten <xref:System.Web.UI.ScriptManager> Steuerelement oder eine Kopie des Steuerelements auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetApplicationServices">
+      <MemberSignature Language="C#" Value="public static string GetApplicationServices (System.Web.UI.ScriptManager scriptManager, System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptManagerProxy&gt; proxies);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetApplicationServices(class System.Web.UI.ScriptManager scriptManager, class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptManagerProxy&gt; proxies) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ScriptManagerDesigner.GetApplicationServices(System.Web.UI.ScriptManager,System.Collections.Generic.IEnumerable{System.Web.UI.ScriptManagerProxy})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptManager" Type="System.Web.UI.ScriptManager" />
+        <Parameter Name="proxies" Type="System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptManagerProxy&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="scriptManager">Das <see cref="T:System.Web.UI.ScriptManager" />-Steuerelement, das der Webseite zugeordnet ist.</param>
+        <param name="proxies">Die Sammlung von <see cref="T:System.Web.UI.ScriptManagerProxy" />-Steuerelementen, die der Webseite zugeordnet sind.</param>
+        <summary>Gibt ECMAScript-Code (JavaScript) zurück, der die in den Steuerelementen <see cref="T:System.Web.UI.ScriptManager" /> und <see cref="T:System.Web.UI.ScriptManagerProxy" /> einer Webseite definierten Profildiensteigenschaften darstellt.</summary>
+        <returns>Der JavaScript-Code, der die Profildiensteigenschaften definiert.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="scriptManager" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ScriptManagerDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das HTML-Markup, das stellt die <see cref="T:System.Web.UI.ScriptManager" /> -Steuerelements zur Entwurfszeit.</summary>
+        <returns>Das Markup ab, das Rendern der <see cref="T:System.Web.UI.ScriptManager" /> zur Entwurfszeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie diese Methode zum Ändern des generierten HTML-Code von der <xref:System.Web.UI.ScriptManager> -Steuerelements zur Entwurfszeit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProxyScript">
+      <MemberSignature Language="C#" Value="public static string GetProxyScript (System.Web.UI.ScriptManager scriptManager, System.Web.UI.ServiceReference serviceReference);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetProxyScript(class System.Web.UI.ScriptManager scriptManager, class System.Web.UI.ServiceReference serviceReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ScriptManagerDesigner.GetProxyScript(System.Web.UI.ScriptManager,System.Web.UI.ServiceReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptManager" Type="System.Web.UI.ScriptManager" />
+        <Parameter Name="serviceReference" Type="System.Web.UI.ServiceReference" />
+      </Parameters>
+      <Docs>
+        <param name="scriptManager">Das <see cref="T:System.Web.UI.ScriptManager" />-Steuerelement auf der Seite.</param>
+        <param name="serviceReference">Die <see cref="T:System.Web.UI.ServiceReference" /> -Steuerelement, das verwendet wird, um einen Webdienst für die Verwendung auf der Seite zu registrieren.</param>
+        <summary>Bietet ein Proxyskript aus einem abgeleiteten <see cref="T:System.Web.UI.ServiceReference" /> Objekt.</summary>
+        <returns>Das Proxyskript.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProxyUrl">
+      <MemberSignature Language="C#" Value="public static string GetProxyUrl (System.Web.UI.ScriptManager scriptManager, System.Web.UI.ServiceReference serviceReference);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetProxyUrl(class System.Web.UI.ScriptManager scriptManager, class System.Web.UI.ServiceReference serviceReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ScriptManagerDesigner.GetProxyUrl(System.Web.UI.ScriptManager,System.Web.UI.ServiceReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptManager" Type="System.Web.UI.ScriptManager" />
+        <Parameter Name="serviceReference" Type="System.Web.UI.ServiceReference" />
+      </Parameters>
+      <Docs>
+        <param name="scriptManager">Das <see cref="T:System.Web.UI.ScriptManager" />-Steuerelement auf der Seite.</param>
+        <param name="serviceReference">Die <see cref="T:System.Web.UI.ServiceReference" /> -Steuerelement, das verwendet wird, um einen Webdienst für die Verwendung auf der Seite zu registrieren.</param>
+        <summary>Stellt eine Proxy-URL von einem abgeleiteten <see cref="T:System.Web.UI.ServiceReference" /> Objekt.</summary>
+        <returns>Eine Proxy-URL.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScriptFromWebResource">
+      <MemberSignature Language="C#" Value="public static string GetScriptFromWebResource (System.Reflection.Assembly assembly, string resourceName, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetScriptFromWebResource(class System.Reflection.Assembly assembly, string resourceName, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ScriptManagerDesigner.GetScriptFromWebResource(System.Reflection.Assembly,System.String,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+        <Parameter Name="resourceName" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">Die Assembly mit der Ressource.</param>
+        <param name="resourceName">Der vollqualifizierte Name der Ressource in der Assembly.</param>
+        <param name="culture">Die Kultur, der für die Ressource angegeben ist.</param>
+        <summary>Gibt ECMAScript (JavaScript)-Code, der definiert wird die <see cref="T:System.Web.UI.ScriptResourceAttribute" /> Attribut.</summary>
+        <returns>Die JavaScript-Ressource.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScriptReferences">
+      <MemberSignature Language="C#" Value="public static System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Web.UI.ScriptReference&gt; GetScriptReferences (System.Web.UI.ScriptManager scriptManager, System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptManagerProxy&gt; proxies);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Web.UI.ScriptReference&gt; GetScriptReferences(class System.Web.UI.ScriptManager scriptManager, class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptManagerProxy&gt; proxies) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ScriptManagerDesigner.GetScriptReferences(System.Web.UI.ScriptManager,System.Collections.Generic.IEnumerable{System.Web.UI.ScriptManagerProxy})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Web.UI.ScriptReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptManager" Type="System.Web.UI.ScriptManager" />
+        <Parameter Name="proxies" Type="System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptManagerProxy&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="scriptManager">Die <see cref="T:System.Web.UI.ScriptManager" /> -Steuerelement, das die Webseite zugeordnet ist.</param>
+        <param name="proxies">Die Sammlung von <see cref="T:System.Web.UI.ScriptManagerProxy" />-Steuerelementen, die der Webseite zugeordnet sind.</param>
+        <summary>Gibt eine Auflistung aller <see cref="T:System.Web.UI.ScriptReference" /> Steuerelemente, die auf einer Webseite definiert sind <see cref="T:System.Web.UI.ScriptManager" /> Steuerelement und <see cref="T:System.Web.UI.ScriptManagerProxy" /> Steuerelemente.</summary>
+        <returns>Eine schreibgeschützte Auflistung von <see cref="T:System.Web.UI.ScriptReference" /> Steuerelemente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung, die zurückgegeben wird enthält Frameworkskripts, die automatisch an den Client gesendet werden, um AJAX-Funktionen zu unterstützen, wie z. B. die <xref:System.Web.UI.ScriptManager> und <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+ Bei Verwendung der <xref:System.Web.UI.Design.ScriptManagerDesigner.GetScriptReferences%2A> -Methode, werden die folgenden Richtlinien beachten:  
+  
+-   <xref:System.Web.UI.ScriptReference>Objekte mit demselben <xref:System.Web.UI.ScriptReference.Name%2A> und <xref:System.Web.UI.ScriptReference.Assembly%2A> Eigenschaften werden als Duplikate entfernt.  
+  
+-   <xref:System.Web.UI.ScriptReference>Objekte mit dem gleichen <xref:System.Web.UI.ScriptReferenceBase.Path%2A> werden zur Entwurfszeit nicht als Duplikate entfernt. Allerdings werden sie zur Laufzeit als Duplikate entfernt.  
+  
+-   Die <xref:System.Web.UI.Control.ResolveClientUrl%2A> Methode wird verwendet, um eine vollqualifizierte URL für Zurückgeben der <xref:System.Web.UI.ScriptReferenceBase.Path%2A> Eigenschaft ein <xref:System.Web.UI.ScriptReference> Objekt.  
+  
+-   Die <xref:System.Web.UI.ScriptReference> Objekte in der zurückgegebenen Auflistung sind geklonte Versionen der ursprünglichen Skriptverweise und kann daher mithilfe dieser Auflistung in Designer-Code geändert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="scriptManager" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetServiceReferences">
+      <MemberSignature Language="C#" Value="public static System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Web.UI.ServiceReference&gt; GetServiceReferences (System.Web.UI.ScriptManager scriptManager, System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptManagerProxy&gt; proxies);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Web.UI.ServiceReference&gt; GetServiceReferences(class System.Web.UI.ScriptManager scriptManager, class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptManagerProxy&gt; proxies) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ScriptManagerDesigner.GetServiceReferences(System.Web.UI.ScriptManager,System.Collections.Generic.IEnumerable{System.Web.UI.ScriptManagerProxy})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Web.UI.ServiceReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptManager" Type="System.Web.UI.ScriptManager" />
+        <Parameter Name="proxies" Type="System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptManagerProxy&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="scriptManager">Die <see cref="T:System.Web.UI.ScriptManager" /> -Steuerelement, das die Webseite zugeordnet ist.</param>
+        <param name="proxies">Die Auflistung der <see cref="T:System.Web.UI.ScriptManagerProxy" /> Steuerelemente, die auf der Webseite zugeordnet ist.</param>
+        <summary>Gibt eine Auflistung aller <see cref="T:System.Web.UI.ServiceReference" /> Steuerelemente, die auf einer Webseite definiert sind <see cref="T:System.Web.UI.ScriptManager" /> Steuerelement und <see cref="T:System.Web.UI.ScriptManagerProxy" /> Steuerelemente.</summary>
+        <returns>Eine schreibgeschützte Auflistung von <see cref="T:System.Web.UI.ServiceReference" /> Steuerelemente.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="scriptManager" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ScriptManagerDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Ein <see cref="T:System.Web.UI.ScriptManager" /> Komponente, implementiert die <see cref="T:System.ComponentModel.IComponent" /> Schnittstelle.</param>
+        <summary>Initialisiert die angegebene Komponente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

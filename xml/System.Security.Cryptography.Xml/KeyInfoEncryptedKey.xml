@@ -1,0 +1,198 @@
+<Type Name="KeyInfoEncryptedKey" FullName="System.Security.Cryptography.Xml.KeyInfoEncryptedKey">
+  <TypeSignature Language="C#" Value="public class KeyInfoEncryptedKey : System.Security.Cryptography.Xml.KeyInfoClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeyInfoEncryptedKey extends System.Security.Cryptography.Xml.KeyInfoClause" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.KeyInfoEncryptedKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.KeyInfoClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dient als Wrapper für die <see cref="T:System.Security.Cryptography.Xml.EncryptedKey" /> Klasse als Unterelement des abgelegt werden die <see cref="T:System.Security.Cryptography.Xml.KeyInfo" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.KeyInfoEncryptedKey> -Klasse umschließt die <xref:System.Security.Cryptography.Xml.EncryptedKey> -Klasse, die Sie hinzufügen kann die <xref:System.Security.Cryptography.Xml.EncryptedKey> Klasse als Unterelement des der <xref:System.Security.Cryptography.Xml.KeyInfo> Klasse.  Initialisieren der <xref:System.Security.Cryptography.Xml.KeyInfoEncryptedKey> Klasse mit einer Instanz von der <xref:System.Security.Cryptography.Xml.EncryptedKey> Klasse bei der Sie die verschlüsselten XML-Dokument verschlüsselten Sitzungsschlüssel hinzufügen müssen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines asymmetrischen Schlüssels zu verschlüsseln. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann den asymmetrischen Schlüssel verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.KeyInfoEncryptedKey" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines asymmetrischen Schlüssels zu verschlüsseln. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann den asymmetrischen Schlüssel verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyInfoEncryptedKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoEncryptedKey.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.KeyInfoEncryptedKey" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ist nicht initialisiert werden, die <xref:System.Security.Cryptography.Xml.KeyInfoEncryptedKey> -Klasse mit einer Instanz von der <xref:System.Security.Cryptography.Xml.EncryptedKey> Klasse.  Verwenden Sie die <xref:System.Security.Cryptography.Xml.KeyInfoEncryptedKey.EncryptedKey%2A> -Eigenschaft an ein <xref:System.Security.Cryptography.Xml.EncryptedKey> Objekt, wenn Sie diesen Konstruktor verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyInfoEncryptedKey (System.Security.Cryptography.Xml.EncryptedKey ek);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.Xml.EncryptedKey ek) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoEncryptedKey.#ctor(System.Security.Cryptography.Xml.EncryptedKey)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encryptedKey" Type="System.Security.Cryptography.Xml.EncryptedKey" />
+      </Parameters>
+      <Docs>
+        <param name="ek">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Xml.KeyInfoEncryptedKey" /> -Klasse unter Verwendung einer <see cref="T:System.Security.Cryptography.Xml.EncryptedKey" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines asymmetrischen Schlüssels zu verschlüsseln. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann den asymmetrischen Schlüssel verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptedKey">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.EncryptedKey EncryptedKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.EncryptedKey EncryptedKey" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.KeyInfoEncryptedKey.EncryptedKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.EncryptedKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein <see cref="T:System.Security.Cryptography.Xml.EncryptedKey" /> Objekt, das einen verschlüsselten Schlüssel kapselt.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.Xml.EncryptedKey" /> Objekt, das einen verschlüsselten Schlüssel kapselt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.KeyInfoEncryptedKey> -Klasse umschließt die <xref:System.Security.Cryptography.Xml.EncryptedKey> -Klasse, die Sie hinzufügen kann die <xref:System.Security.Cryptography.Xml.EncryptedKey> Klasse als Unterelement des der <xref:System.Security.Cryptography.Xml.KeyInfo> Klasse.  Verwenden der <xref:System.Security.Cryptography.Xml.KeyInfoEncryptedKey.EncryptedKey%2A> aufzurufende Eigenschaft der <xref:System.Security.Cryptography.Xml.EncryptedKey> Klasse, die als Bestandteil der <xref:System.Security.Cryptography.Xml.KeyInfoEncryptedKey> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die <see cref="P:System.Security.Cryptography.Xml.KeyInfoEncryptedKey.EncryptedKey" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoEncryptedKey.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine XML-Darstellung einer <see cref="T:System.Security.Cryptography.Xml.KeyInfoEncryptedKey" /> Objekt.</summary>
+        <returns>Eine XML-Darstellung einer <see cref="T:System.Security.Cryptography.Xml.KeyInfoEncryptedKey" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der verschlüsselte Schlüssel ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public override void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoEncryptedKey.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Xml.XmlElement" /> -Objekt, das den Status der gibt an, die <see cref="T:System.Security.Cryptography.Xml.KeyInfoEncryptedKey" /> Objekt.</param>
+        <summary>Die Eingabe analysiert <see cref="T:System.Xml.XmlElement" /> -Objekt und konfiguriert den internen Zustand des der <see cref="T:System.Security.Cryptography.Xml.KeyInfoEncryptedKey" /> -Objekts auf.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

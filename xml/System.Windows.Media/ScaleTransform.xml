@@ -1,0 +1,388 @@
+<Type Name="ScaleTransform" FullName="System.Windows.Media.ScaleTransform">
+  <TypeSignature Language="C#" Value="public sealed class ScaleTransform : System.Windows.Media.Transform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ScaleTransform extends System.Windows.Media.Transform" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.ScaleTransform" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Transform</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Skaliert ein Objekt in der 2D---x / y-Koordinatensystem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden einer <xref:System.Windows.Media.ScaleTransform> gestreckt oder verkleinert ein Objekt horizontal oder vertikal.  Die <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> -Eigenschaft gibt an, wie viel gestreckt oder verkleinert wird ein Objekt entlang der x-Achse und die <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> -Eigenschaft gibt an, wie viel gestreckt oder verkleinert wird ein Objekt entlang der y-Achse. Skalierungsvorgänge sind auf die vom angegebenen Punkt zentriert die <xref:System.Windows.Media.ScaleTransform.CenterX%2A> und <xref:System.Windows.Media.ScaleTransform.CenterY%2A> Eigenschaften.  
+  
+ **Features von Freezable:** , da es erbt die <xref:System.Windows.Freezable> -Klasse, die <xref:System.Windows.Media.ScaleTransform> Klasse bietet verschiedene spezielle Funktionen: <xref:System.Windows.Media.ScaleTransform> Objekte deklariert werden können, wie für mehrere Objekte, die zur Verbesserung der Schreibschutz versehen wurden freigegeben Leistung, geklont und als threadsicher. Weitere Informationen zu den verschiedenen Features von <xref:System.Windows.Freezable> anzuzeigen, [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScaleTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ScaleTransform.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.ScaleTransform" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScaleTransform (double scaleX, double scaleY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 scaleX, float64 scaleY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ScaleTransform.#ctor(System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scaleX" Type="System.Double" />
+        <Parameter Name="scaleY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="scaleX">Der Skalierungsfaktor für die x-Achse.</param>
+        <param name="scaleY">Der Skalierungsfaktor für die y-Achse.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.ScaleTransform" /> Klasse mit dem angegebenen x und y-Skalierungsfaktor. Der Skalierungsvorgang ist (0,0) zentriert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScaleTransform (double scaleX, double scaleY, double centerX, double centerY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 scaleX, float64 scaleY, float64 centerX, float64 centerY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ScaleTransform.#ctor(System.Double,System.Double,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scaleX" Type="System.Double" />
+        <Parameter Name="scaleY" Type="System.Double" />
+        <Parameter Name="centerX" Type="System.Double" />
+        <Parameter Name="centerY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="scaleX">Der Skalierungsfaktor für die x-Achse. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Windows.Media.ScaleTransform.ScaleX" />-Eigenschaft.</param>
+        <param name="scaleY">Der Skalierungsfaktor für die y-Achse. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Windows.Media.ScaleTransform.ScaleY" />-Eigenschaft.</param>
+        <param name="centerX">Die X-Koordinate des Mittelpunkts dieser <see cref="T:System.Windows.Media.ScaleTransform" />. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Windows.Media.ScaleTransform.CenterX" />-Eigenschaft.</param>
+        <param name="centerY">Die y-Koordinate des Mittelpunkts dieser <see cref="T:System.Windows.Media.ScaleTransform" />. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Windows.Media.ScaleTransform.CenterY" />-Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.ScaleTransform" /> -Klasse, die dem angegebenen Skalierungsfaktoren und Mittelpunkt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterX">
+      <MemberSignature Language="C#" Value="public double CenterX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 CenterX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.ScaleTransform.CenterX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die X-Koordinate des Mittelpunkts dieser <see cref="T:System.Windows.Media.ScaleTransform" />.</summary>
+        <value>Die X-Koordinate des Mittelpunkts dieser <see cref="T:System.Windows.Media.ScaleTransform" />. Die Standardeinstellung ist <c>0</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CenterX"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.ScaleTransform.CenterXProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterXProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CenterXProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CenterXProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.ScaleTransform.CenterXProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.ScaleTransform.CenterX" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterY">
+      <MemberSignature Language="C#" Value="public double CenterY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 CenterY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.ScaleTransform.CenterY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Y-Koordinate des Mittelpunkts dieser <see cref="T:System.Windows.Media.ScaleTransform" /> ab oder legt diese fest.</summary>
+        <value>Die X-Koordinate des Mittelpunkts dieser <see cref="T:System.Windows.Media.ScaleTransform" />. Die Standardeinstellung ist <c>0</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CenterY"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.ScaleTransform.CenterYProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterYProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CenterYProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CenterYProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.ScaleTransform.CenterYProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.ScaleTransform.CenterY" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ScaleTransform Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.ScaleTransform Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ScaleTransform.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ScaleTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine änderbare Kopie dieses <see cref="T:System.Windows.Media.ScaleTransform" />-Objekts, indem tiefe Kopien seiner Werte erzeugt werden.</summary>
+        <returns>Eine änderbare tiefe Kopie des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts gibt <see langword="false" /> zurück, selbst wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie schreibgeschützte änderbare Kopien erzeugen <xref:System.Windows.Freezable> Objekte. Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Wenn Abhängigkeitseigenschaften diese Methode kopiert kopiert Ressource Ressourcenverweise und datenbindungen, obwohl sie nicht mehr aufgelöst werden können. Er kopiert keine Animationen oder ihre aktuellen Werte.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ScaleTransform CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.ScaleTransform CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ScaleTransform.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ScaleTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine änderbare Kopie dieses <see cref="T:System.Windows.Media.ScaleTransform" /> Objekt, indem tiefe Kopien seiner Werte. Diese Methode wird nicht Ressourcenverweise, datenbindungen und Animationen, kopiert, auch wenn sie ihre aktuellen Werte kopiert.</summary>
+        <returns>Eine änderbare tiefe Kopie des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" /> -Eigenschaft des geklonten Objekts ist <see langword="false" /> selbst wenn die <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft der Quelle ist <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie schreibgeschützte änderbare Kopien erzeugen <xref:System.Windows.Freezable> Objekte. Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ScaleTransform.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleX">
+      <MemberSignature Language="C#" Value="public double ScaleX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ScaleX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.ScaleTransform.ScaleX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Skalierungsfaktor für die x-Achse ab oder legt ihn fest.</summary>
+        <value>Der Skalierungsfaktor entlang der x-Achse. Der Standard ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Werte zwischen 0 und 1 verringern Sie die Breite des skalierten Objekts; Werte größer als 1 wird die Breite des skalierten Objekts erhöht. Der Wert 1 gibt an, dass das Objekt nicht in der X-Richtung skaliert wird.  
+  
+ Negative Werte werden die skalierte Objekte horizontal kippen. Werte zwischen 0 und-1 das skalierungsobjekt kippen und verringern die Breite. Werte kleiner als-1 kippt die Objekte, und erhöhen Sie seine Breite. Der Wert-1 spiegelt skalierten Objekts ändert jedoch nicht die horizontale Größe.  
+  
+ Weitere Informationen und Beispiele finden Sie unter [Vorgehensweise: Skalieren eines Elements](~/docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md) und [Vorgehensweise: Kippen eines UIElement horizontal oder vertikal](~/docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md).  
+  
+<a name="dependencyPropertyInfo_ScaleX"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.ScaleTransform.ScaleXProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleXProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ScaleXProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ScaleXProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.ScaleTransform.ScaleXProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.ScaleTransform.ScaleX" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleY">
+      <MemberSignature Language="C#" Value="public double ScaleY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ScaleY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.ScaleTransform.ScaleY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Skalierungsfaktor für die y-Achse ab oder legt ihn fest.</summary>
+        <value>Der Skalierungsfaktor entlang der y-Achse. Der Standard ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Werte zwischen 0 und 1 Verringern der Höhe des skalierten Objekts; Werte größer als 1 Vergrößern der Höhe des skalierten Objekts. Der Wert 1 gibt an, dass das Objekt nicht in der y-Richtung skaliert wird.  
+  
+ Negative Werte wird die skalierte Objekte vertikal kippen. Werte zwischen 0 und-1 kippen das skalierungsobjekt und seine Höhe wird verringert. Werte kleiner als-1 kippt die Objekte, und erhöhen seine Höhe. Der Wert-1 spiegelt skalierten Objekts ändert jedoch nicht die vertikale Größe.  
+  
+ Weitere Informationen und Beispiele finden Sie unter [Vorgehensweise: Skalieren eines Elements](~/docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md) und [Vorgehensweise: Kippen eines UIElement horizontal oder vertikal](~/docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md)).  
+  
+<a name="dependencyPropertyInfo_ScaleY"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.ScaleTransform.ScaleYProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleYProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ScaleYProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ScaleYProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.ScaleTransform.ScaleYProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.ScaleTransform.ScaleY" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Matrix Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Matrix Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.ScaleTransform.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Skalierungstransformation als ein <see cref="T:System.Windows.Media.Matrix" /> Objekt.</summary>
+        <value>Die aktuelle Skalierungstransformation zurückgegeben, als ein <see cref="T:System.Windows.Media.Matrix" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

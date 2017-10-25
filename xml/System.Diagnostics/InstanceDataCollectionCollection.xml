@@ -1,0 +1,229 @@
+<Type Name="InstanceDataCollectionCollection" FullName="System.Diagnostics.InstanceDataCollectionCollection">
+  <TypeSignature Language="C#" Value="public class InstanceDataCollectionCollection : System.Collections.DictionaryBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InstanceDataCollectionCollection extends System.Collections.DictionaryBase" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.InstanceDataCollectionCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.DictionaryBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine stark typisierte Auflistung von <see cref="T:System.Diagnostics.InstanceDataCollection" />-Objekten bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.InstanceDataCollectionCollection> Klasse stellt die Auflistung, die zurückgegeben werden, aus der <xref:System.Diagnostics.PerformanceCounterCategory.ReadCategory%2A> Methode. Diese Auflistung enthält alle Daten für die Leistungsindikatoren und Instanzen. Die Auflistung enthält ein <xref:System.Diagnostics.InstanceDataCollection> Objekt für jeden Leistungsindikator. Jede <xref:System.Diagnostics.InstanceDataCollection> Objekt enthält die Leistungsdaten für alle Indikatoren für diese Instanz. Daher werden die Daten nach Name des Leistungsindikators und dann nach dem Instanznamen indiziert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Instanzdaten für einen bestimmten <xref:System.Diagnostics.PerformanceCounterCategory> auf dem lokalen Computer. Es zeigt zunächst eine nummerierte Liste mit <xref:System.Diagnostics.PerformanceCounterCategory> Namen. Nachdem der Benutzer die Anzahl der Kategorien eingegeben hat, wird im Beispiel ruft die <xref:System.Diagnostics.InstanceDataCollectionCollection> für diesen <xref:System.Diagnostics.PerformanceCounterCategory>. Die zurückgegebene Auflistung anschließend konvertiert der <xref:System.Diagnostics.InstanceDataCollectionCollection.Values%2A> Eigenschaft auf ein Array von <xref:System.Diagnostics.InstanceDataCollection> Objekte. Das Beispiel zeigt die Daten der einzelnen zugeordnet <xref:System.Diagnostics.InstanceData> jedes <xref:System.Diagnostics.InstanceDataCollection>.  
+  
+ [!code-csharp[System.Diagnostics.InstanceData.KeysValues#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.KeysValues/CS/instdatakeysvalues.cs#1)]
+ [!code-vb[System.Diagnostics.InstanceData.KeysValues#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.KeysValues/VB/instdatakeysvalues.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceDataCollectionCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.InstanceDataCollectionCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use PerformanceCounterCategory.ReadCategory()")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.InstanceDataCollectionCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string counterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string counterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.InstanceDataCollectionCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="counterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="counterName">Der Name des Leistungsindikators "".</param>
+        <summary>Bestimmt, ob eine Instanz die Datensammlung für den angegebenen Leistungsindikator (identifiziert durch eines der indizierten <see cref="T:System.Diagnostics.InstanceDataCollection" /> Objekte) in der Auflistung vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Auflistung der Instanzdaten, enthält des angegebenen Leistungsindikators in der Auflistung vorhanden ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `counterName` Parameter wird die Groß-/Kleinschreibung.  
+  
+ Jede <xref:System.Diagnostics.InstanceDataCollection> Objekt in der Auflistung enthält die Leistungsdaten für alle Indikatoren für eine Instanz. Die Daten werden nach Name des Leistungsindikators und dann nach dem Instanznamen indiziert. <xref:System.Diagnostics.InstanceDataCollectionCollection.Contains%2A>Gibt `true` ist ein <xref:System.Diagnostics.InstanceDataCollection> Objekt, dessen Zähler zugeordnet ist, den Namen hat, gemäß der `counterName` Parameter.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird akzeptiert eine <xref:System.Diagnostics.PerformanceCounter> Kategorienamen ein und demselben Zählernamen über die Befehlszeile. Es ruft die <xref:System.Diagnostics.InstanceDataCollectionCollection> für die <xref:System.Diagnostics.PerformanceCounterCategory> und verwendet dann die <xref:System.Diagnostics.InstanceDataCollectionCollection.Contains%2A> Methode, um zu bestimmen, ob der angegebene Leistungsindikator vorhanden ist. Der Zähler vorhanden ist, im Beispiel wird die zugeordnete abgerufen <xref:System.Diagnostics.InstanceDataCollection> und zeigt die Instanznamen aus der Auflistung.  
+  
+ [!code-csharp[System.Diagnostics.InstanceDataCollectionCollection.ItemContains#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceDataCollectionCollection.ItemContains/CS/instdatacolcolitermcontains.cs#2)]
+ [!code-vb[System.Diagnostics.InstanceDataCollectionCollection.ItemContains#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceDataCollectionCollection.ItemContains/VB/instdatacolcolitemcontains.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="counterName" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Diagnostics.InstanceDataCollection[] counters, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Diagnostics.InstanceDataCollection[] counters, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.InstanceDataCollectionCollection.CopyTo(System.Diagnostics.InstanceDataCollection[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="counters" Type="System.Diagnostics.InstanceDataCollection[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="counters">Ein Array von <see cref="T:System.Diagnostics.InstanceDataCollection" /> Instanzen (identifiziert durch die Leistungsindikatoren, die sie enthalten), das der Auflistung hinzugefügt.</param>
+        <param name="index">Der Speicherort, an dem die neuen Instanzen hinzugefügt werden sollen.</param>
+        <summary>Kopiert ein Array von <see cref="T:System.Diagnostics.InstanceDataCollection" />-Instanzen am angegebenen Index in die Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Diagnostics.InstanceDataCollectionCollection.CopyTo%2A> -Methode zum Konvertieren einer <xref:System.Diagnostics.InstanceDataCollectionCollection> in ein Array von <xref:System.Diagnostics.InstanceDataCollection> Objekte. Jedes Element der <xref:System.Diagnostics.InstanceDataCollection> Array zur weiteren Verarbeitung an eine Funktion übergeben wird.  
+  
+ [!code-csharp[System.Diagnostics.InstanceData.CopyTo#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/CS/instdatacopyto.cs#5)]
+ [!code-vb[System.Diagnostics.InstanceData.CopyTo#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/VB/instdatacopyto.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.InstanceDataCollection this[string counterName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.InstanceDataCollection Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.InstanceDataCollectionCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.InstanceDataCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="counterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="counterName">Der Name des Leistungsindikators "".</param>
+        <summary>Ruft die Instanzdaten für den angegebenen Leistungsindikator an.</summary>
+        <value>Ein <see cref="T:System.Diagnostics.InstanceDataCollection" /> Element, mit dem die <see cref="T:System.Diagnostics.InstanceDataCollectionCollection" /> -Objekt indiziert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `counterName` Parameter wird die Groß-/Kleinschreibung.  
+  
+ Jede <xref:System.Diagnostics.InstanceDataCollection> Objekt in der Auflistung enthält die Leistungsdaten für alle Indikatoren für eine Instanz. Die Daten werden nach Name des Leistungsindikators und dann nach dem Instanznamen indiziert. Der Indexer verwendet die `counterName` Parameter schrittweise Durchlaufen dieser Auflistung von Instanzdaten zugeordneten Leistungsindikatoren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird akzeptiert eine <xref:System.Diagnostics.PerformanceCounter> Kategorienamen ein und demselben Zählernamen über die Befehlszeile. Es ruft die <xref:System.Diagnostics.InstanceDataCollectionCollection> für die <xref:System.Diagnostics.PerformanceCounterCategory>. Wenn danach die <xref:System.Diagnostics.PerformanceCounter> vorhanden ist, wird im Beispiel wird die <xref:System.Diagnostics.InstanceDataCollectionCollection.Item%2A> (als Indexer verwiesen)-Eigenschaft zum Abrufen des zugeordneten <xref:System.Diagnostics.InstanceDataCollection> und zeigt die Instanznamen aus der Auflistung.  
+  
+ [!code-csharp[System.Diagnostics.InstanceDataCollectionCollection.ItemContains#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceDataCollectionCollection.ItemContains/CS/instdatacolcolitermcontains.cs#2)]
+ [!code-vb[System.Diagnostics.InstanceDataCollectionCollection.ItemContains#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceDataCollectionCollection.ItemContains/VB/instdatacolcolitemcontains.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="counterName" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.InstanceDataCollectionCollection.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt und Leistungsindikator Registrierungsschlüssel für diese Datenerfassung Instanz zugeordneten Objekte.</summary>
+        <value>Eine <see cref="T:System.Collections.ICollection" /> , die einen Satz von objektspezifischen Registrierungsschlüsseln darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Softwarekomponente erstellt Schlüssel für die Objekte und Leistungsindikatoren auf, wenn er installiert ist, und schreibt Leistungsindikatordaten erfasst werden, während er ausgeführt wird. Sie können diese Daten zugreifen, wie der Zugriff auf alle anderen Registrierungsdaten würde. Obwohl Sie die Registrierung zum Sammeln von Leistungsdaten verwenden, ist die Daten nicht in der Registrierungsdatenbank gespeichert. Stattdessen sammelt das System die Daten aus der entsprechenden Objekt-Manager.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Diagnostics.InstanceDataCollectionCollection.Keys%2A> Eigenschaft ein <xref:System.Diagnostics.InstanceDataCollectionCollection> zum Zurückgeben einer Auflistung von Zählernamen, die es in ein Array von konvertiert <xref:System.String>. Ein Array von FailureThreshold <xref:System.Diagnostics.InstanceDataCollection> -Objekten mit den <xref:System.Diagnostics.InstanceDataCollectionCollection.Values%2A> Eigenschaft. Für jedes Element im Array der Namen der Leistungsindikatoren, zeigt den Namen und ruft eine Funktion zum Verarbeiten der zugeordneten <xref:System.Diagnostics.InstanceDataCollection>.  
+  
+ [!code-csharp[System.Diagnostics.InstanceData.KeysValues#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.KeysValues/CS/instdatakeysvalues.cs#4)]
+ [!code-vb[System.Diagnostics.InstanceData.KeysValues#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.KeysValues/VB/instdatakeysvalues.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.InstanceDataCollectionCollection.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Datenwerte, die die Auflistung von Instanzen des Leistungsindikators zu bilden.</summary>
+        <value>Eine <see cref="T:System.Collections.ICollection" /> , die Instanzen des Zählers und die zugeordneten Datenwerte darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Diagnostics.InstanceDataCollectionCollection.Values%2A> Eigenschaft ein <xref:System.Diagnostics.InstanceDataCollectionCollection> zum Zurückgeben einer Auflistung von <xref:System.Diagnostics.InstanceDataCollection> -Objekte, die es in ein Array konvertiert. Generiert ein Array von Indikatornamen mithilfe der <xref:System.Diagnostics.InstanceDataCollectionCollection.Keys%2A> Eigenschaft. Für jedes Element im Array der <xref:System.Diagnostics.InstanceDataCollection> Objekte, und es zeigt den Leistungsindikatornamen der zugeordneten und ruft eine Funktion zum Verarbeiten der <xref:System.Diagnostics.InstanceDataCollection>.  
+  
+ [!code-csharp[System.Diagnostics.InstanceData.KeysValues#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.KeysValues/CS/instdatakeysvalues.cs#4)]
+ [!code-vb[System.Diagnostics.InstanceData.KeysValues#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.KeysValues/VB/instdatakeysvalues.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,36 @@
+<Type Name="RequestBringIntoViewEventHandler" FullName="System.Windows.RequestBringIntoViewEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void RequestBringIntoViewEventHandler(object sender, RequestBringIntoViewEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RequestBringIntoViewEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.RequestBringIntoViewEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.RequestBringIntoViewEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Das Objekt, an das der Ereignishandler angefügt ist.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Windows.FrameworkElement.RequestBringIntoView" /> Routingereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandlung dieses Ereignisses ist in der Regel nur in den Elementen, die einen bildlauffähigen Bereich unterstützen, oder andernfalls legen ihre Renderinggröße kleiner als die kombinierten gewünschte Größe des ihre untergeordneten Elementinhalts und erfolgt nur durch die absichtlich Behandlung der das Ereignis, sobald es in der Elementstruktur nach oben weitergeleitet wurde und die erste übergeordneten Element, das Durchführen eines Bildlaufs Region-Unterstützung bietet erreicht hat. Wird eine vorhandene Implementierung, die bildlauffähige Bereiche in einer Weise behandelt, die in der Regel für Benutzersteuerelemente wünschenswert ist <xref:System.Windows.Controls.ScrollViewer>. Ableiten von <xref:System.Windows.Controls.ScrollViewer>, Sie können einen Klassenhandler für registrieren <xref:System.Windows.FrameworkElement.RequestBringIntoView?displayProperty=nameWithType> und die Basisklasse Behandlung des Ereignisses ergänzen. Sie sollten auch berücksichtigen, verwenden oder die klassenbasierte Klassenbehandlung <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> Ereignis anstelle von <xref:System.Windows.FrameworkElement.RequestBringIntoView?displayProperty=nameWithType>. Auch wenn eine vollständig benutzerdefinierte Klasse zu erstellen, die nicht von abgeleitet ist <xref:System.Windows.Controls.ScrollViewer>, können Sie immer noch eine Klassenbehandlung durch Aufrufen von hinzufügen <xref:System.Windows.EventManager.RegisterClassHandler%2A?displayProperty=nameWithType> in Ihrer Klasseninstanziierung.  Ausführliche Informationen zu Klassenbehandlung, finden Sie unter [Routingereignisse als bearbeitete sowie die Behandlung von Klasse markieren](~/docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+  
+ Inhaltselemente können dazu führen, dass das Ereignis von deren Inhalt Hosts ausgelöst wird (durch Aufrufen von <xref:System.Windows.FrameworkContentElement.BringIntoView%2A> und Auslösen von <xref:System.Windows.FrameworkElement.RequestBringIntoView?displayProperty=nameWithType> vom Inhaltshost). Auf ähnliche Weise können Sie anfordern, Elemente der logischen Struktur in die Ansicht mit der Hilfsmethode eingebunden werden <xref:System.Windows.LogicalTreeHelper.BringIntoView%2A?displayProperty=nameWithType>.  
+  
+ Ein <xref:System.Windows.Controls.ListBox> implementiert eine ähnliche, aber andere Methode <xref:System.Windows.Controls.ListBox.ScrollIntoView%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

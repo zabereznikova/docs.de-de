@@ -1,0 +1,43 @@
+<Type Name="QueryAccessibilityHelpEventHandler" FullName="System.Windows.Forms.QueryAccessibilityHelpEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void QueryAccessibilityHelpEventHandler(object sender, QueryAccessibilityHelpEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed QueryAccessibilityHelpEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.QueryAccessibilityHelpEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.QueryAccessibilityHelpEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.QueryAccessibilityHelpEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Windows.Forms.Control.QueryAccessibilityHelp" /> -Ereignis für ein Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Windows.Forms.QueryAccessibilityHelpEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Erstellung eines Diagramms Eingabehilfen-fähig zu steuern, mit der <xref:System.Windows.Forms.AccessibleObject> und <xref:System.Windows.Forms.Control.ControlAccessibleObject> Klassen zum Offenlegen von Informationen zugegriffen werden kann. Das Steuerelement zeichnet zwei Kurven geteilt zusammen mit einer Legende an. Die `ChartControlAccessibleObject` -Klasse, abgeleitet von `ControlAccessibleObject`, werden in der <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> Methode, um benutzerdefinierte barrierefreie Informationen für das Diagrammsteuerelement bereitzustellen. Da die Diagrammlegende nicht tatsächlich <xref:System.Windows.Forms.Control>-basierte Steuerelement, sondern gezeichnet wird vom Diagrammsteuerelement, er enthält keine integrierten Informationen zugegriffen werden kann. Aus diesem Grund die `ChartControlAccessibleObject` -Klasse überschreibt die <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> -Methode zur Rückgabe der `CurveLegendAccessibleObject` , zugegriffen werden Informationen für jeden Teil der Legende darstellt. Wenn eine zugänglich-fähige Anwendung dieses Steuerelement verwendet wird, bieten das Steuerelement die erforderlichen Informationen zugegriffen werden kann.  
+  
+ Dieser Code veranschaulicht die Verwendung der <xref:System.Windows.Forms.QueryAccessibilityHelpEventHandler> mit Delegieren der <xref:System.Windows.Forms.Control.QueryAccessibilityHelp> Ereignis. Das vollständige Codebeispiel finden Sie unter <xref:System.Windows.Forms.AccessibleObject>.  
+  
+ [!code-cpp[System.Windows.Forms.AccessibleObject#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CPP/chartcontrol.cpp#2)]
+ [!code-csharp[System.Windows.Forms.AccessibleObject#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CS/chartcontrol.cs#2)]
+ [!code-vb[System.Windows.Forms.AccessibleObject#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/VB/chartcontrol.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

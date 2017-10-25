@@ -1,0 +1,150 @@
+<Type Name="RoutingBehavior" FullName="System.ServiceModel.Routing.RoutingBehavior">
+  <TypeSignature Language="C#" Value="public sealed class RoutingBehavior : System.ServiceModel.Description.IServiceBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RoutingBehavior extends System.Object implements class System.ServiceModel.Description.IServiceBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Routing.RoutingBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IServiceBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert das Routingverhalten, das zum Konfigurieren der Zielendpunkte, Filter und Filteroptionen verwendet wird, die während des Routings verwendet werden sollen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.ServiceModel.Routing.RoutingBehavior> registriert alle vom Routingdienst verwendeten Laufzeitkomponenten, einschließlich Channelinitialisierer, <xref:System.ServiceModel.Routing.SoapProcessingBehavior> und  <xref:System.ServiceModel.Routing.RoutingExtension>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RoutingBehavior (System.ServiceModel.Routing.RoutingConfiguration routingConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Routing.RoutingConfiguration routingConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.RoutingBehavior.#ctor(System.ServiceModel.Routing.RoutingConfiguration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="routingConfiguration" Type="System.ServiceModel.Routing.RoutingConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="routingConfiguration">Die Routingkonfiguration.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.ServiceModel.Routing.RoutingBehavior" /> Klasse mit dem angegebenen Routingkonfiguration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.ServiceModel.Routing.RoutingBehavior> registriert alle vom Routingdienst verwendeten Laufzeitkomponenten, einschließlich Channelinitialisierer, <xref:System.ServiceModel.Routing.SoapProcessingBehavior> und  <xref:System.ServiceModel.Routing.RoutingExtension>, die die angegebene <xref:System.ServiceModel.Routing.RoutingConfiguration> verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContractForDescription">
+      <MemberSignature Language="C#" Value="public static Type GetContractForDescription (System.ServiceModel.Description.ContractDescription description);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Type GetContractForDescription(class System.ServiceModel.Description.ContractDescription description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.RoutingBehavior.GetContractForDescription(System.ServiceModel.Description.ContractDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.ContractDescription" />
+      </Parameters>
+      <Docs>
+        <param name="description">Die Vertragsbeschreibung zum Abrufen des Typs.</param>
+        <summary>Ruft den Vertragstyp für die angegebene <see cref="T:System.ServiceModel.Description.ContractDescription" /> ab.</summary>
+        <returns>Der Typ der angegebenen <see cref="T:System.ServiceModel.Description.ContractDescription" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IServiceBehavior.AddBindingParameters">
+      <MemberSignature Language="C#" Value="void IServiceBehavior.AddBindingParameters (System.ServiceModel.Description.ServiceDescription serviceDescription, System.ServiceModel.ServiceHostBase serviceHostBase, System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt; endpoints, System.ServiceModel.Channels.BindingParameterCollection bindingParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IServiceBehavior.AddBindingParameters(class System.ServiceModel.Description.ServiceDescription serviceDescription, class System.ServiceModel.ServiceHostBase serviceHostBase, class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.ServiceEndpoint&gt; endpoints, class System.ServiceModel.Channels.BindingParameterCollection bindingParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.RoutingBehavior.System#ServiceModel#Description#IServiceBehavior#AddBindingParameters(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase,System.Collections.ObjectModel.Collection{System.ServiceModel.Description.ServiceEndpoint},System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+        <Parameter Name="endpoints" Type="System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt;" />
+        <Parameter Name="bindingParameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">Die Beschreibung des Diensts.</param>
+        <param name="serviceHostBase">Der Host des Diensts.</param>
+        <param name="endpoints">Die Dienstendpunkte.</param>
+        <param name="bindingParameters">Benutzerdefinierte Objekte, auf die Bindungselemente Zugriff haben.</param>
+        <summary>Implementiert die <see cref="M:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase,System.Collections.ObjectModel.Collection{System.ServiceModel.Description.ServiceEndpoint},System.ServiceModel.Channels.BindingParameterCollection)" />-Methode zur Unterstützung des Verhaltens.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="void IServiceBehavior.ApplyDispatchBehavior (System.ServiceModel.Description.ServiceDescription serviceDescription, System.ServiceModel.ServiceHostBase serviceHostBase);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceDescription serviceDescription, class System.ServiceModel.ServiceHostBase serviceHostBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.RoutingBehavior.System#ServiceModel#Description#IServiceBehavior#ApplyDispatchBehavior(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">Die Beschreibung des Diensts.</param>
+        <param name="serviceHostBase">Der Host des Diensts.</param>
+        <summary>Implementiert die <see cref="M:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />-Methode zur Unterstützung des Verhaltens.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IServiceBehavior.Validate">
+      <MemberSignature Language="C#" Value="void IServiceBehavior.Validate (System.ServiceModel.Description.ServiceDescription serviceDescription, System.ServiceModel.ServiceHostBase serviceHostBase);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IServiceBehavior.Validate(class System.ServiceModel.Description.ServiceDescription serviceDescription, class System.ServiceModel.ServiceHostBase serviceHostBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.RoutingBehavior.System#ServiceModel#Description#IServiceBehavior#Validate(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">Die Beschreibung des Diensts.</param>
+        <param name="serviceHostBase">Der Host des Diensts.</param>
+        <summary>Implementiert die <see cref="M:System.ServiceModel.Description.IServiceBehavior.Validate(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />-Methode zur Unterstützung des Verhaltens.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

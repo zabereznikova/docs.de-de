@@ -1,0 +1,92 @@
+<Type Name="AcceptRejectRule" FullName="System.Data.AcceptRejectRule">
+  <TypeSignature Language="C#" Value="public enum AcceptRejectRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AcceptRejectRule extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.AcceptRejectRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Bestimmt die Aktion, die auftritt, wenn die <see cref="M:System.Data.DataSet.AcceptChanges" /> oder <see cref="M:System.Data.DataTable.RejectChanges" /> Methode wird aufgerufen, auf eine <see cref="T:System.Data.DataTable" /> mit eine <see cref="T:System.Data.ForeignKeyConstraint" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Änderungen an einer <xref:System.Data.DataTable> ist nicht endgültig erst nach dem Aufruf der <xref:System.Data.DataTable.AcceptChanges%2A> Methode. Wenn entweder <xref:System.Data.DataTable.AcceptChanges%2A> oder <xref:System.Data.DataTable.RejectChanges%2A> aufgerufen wird, auf eine Zeile in der übergeordneten Tabelle, die <xref:System.Data.AcceptRejectRule> Wert legt fest, ob Änderungen an den entsprechenden Zeilen in der untergeordneten Tabelle weitergegeben werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.ForeignKeyConstraint>, legt verschiedene Eigenschaften, einschließlich der <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>, und fügt es ein <xref:System.Data.DataTable> des Objekts <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-csharp[DataWorks Data.AcceptRejectRule#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/CS/source.cs#1)]
+ [!code-vb[DataWorks Data.AcceptRejectRule#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cascade">
+      <MemberSignature Language="C#" Value="Cascade" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.AcceptRejectRule Cascade = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.AcceptRejectRule.Cascade" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.AcceptRejectRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Änderungen werden über die Beziehung kaskadiert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.AcceptRejectRule None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.AcceptRejectRule.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.AcceptRejectRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Aktion ausgeführt wird (Standard).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

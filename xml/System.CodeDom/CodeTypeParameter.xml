@@ -1,0 +1,245 @@
+<Type Name="CodeTypeParameter" FullName="System.CodeDom.CodeTypeParameter">
+  <TypeSignature Language="C#" Value="public class CodeTypeParameter : System.CodeDom.CodeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeTypeParameter extends System.CodeDom.CodeObject" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeTypeParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Typparameter einer generischen Typ- oder dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.CodeDom.CodeTypeParameter> Klasse einen Typparameter in der Deklaration eines generischen Typs oder einer Methode darstellt.  
+  
+ Ein generischen Typ oder eine Methodendeklaration enthält mindestens ein oder mehrere Typen bezeichnet werden, als Typparameter angegeben. Ein Typparametername steht für den Typ innerhalb des Texts der generischen Deklaration verwendet wird. Z. B. die generische Deklaration für die <xref:System.Collections.Generic.List%601> Klasse enthält den Typparameter `T`.  
+  
+ Weitere Informationen zu Generika finden Sie unter [Generika in .NET Framework-Klassenbibliothek](~/docs/csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.CodeDom.CodeTypeParameter> -Klasse zum Erstellen eines CodeDOM-Diagramms, um eine Anwendung mit Generikacode zu generieren.  
+  
+ [!code-csharp[System.CodeDom.Generics.1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDOM.Generics.1/CS/codedomgenerics.cs#1)]
+ [!code-vb[System.CodeDom.Generics.1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDOM.Generics.1/VB/codedomgenerics.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeParameter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeTypeParameter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diesen Konstruktor verwenden, legen Sie die <xref:System.CodeDom.CodeTypeParameter.Name%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeParameter (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeParameter.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Typparameters.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeTypeParameter" /> Klasse mit dem angegebenen Typnamen für den Parameter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von <xref:System.CodeDom.CodeTypeParameter.%23ctor%2A> Konstruktor, um einen Typparameter hinzufügen.  In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.CodeTypeParameter> Klasse.  
+  
+ [!code-csharp[System.CodeDom.Generics.1#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDOM.Generics.1/CS/codedomgenerics.cs#10)]
+ [!code-vb[System.CodeDom.Generics.1#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDOM.Generics.1/VB/codedomgenerics.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Constraints">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReferenceCollection Constraints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReferenceCollection Constraints" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeParameter.Constraints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReferenceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Einschränkungen für den Typparameter.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeTypeReferenceCollection" /> Objekt, das die Einschränkungen für den Typparameter enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Einschränkung gibt den Typ, den der Typparameter abgeleitet werden muss, oder implementieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.CodeDom.CodeTypeParameter.Constraints%2A> Eigenschaft, um eine neue Einschränkung hinzufügen.  In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.CodeTypeParameter> Klasse.  
+  
+ [!code-csharp[System.CodeDom.Generics.1#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDOM.Generics.1/CS/codedomgenerics.cs#4)]
+ [!code-vb[System.CodeDom.Generics.1#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDOM.Generics.1/VB/codedomgenerics.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomAttributes">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeAttributeDeclarationCollection CustomAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeAttributeDeclarationCollection CustomAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeParameter.CustomAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeAttributeDeclarationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die benutzerdefinierten Attribute des Typparameters ab.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeAttributeDeclarationCollection" /> , der die benutzerdefinierten Attribute des Typparameters angibt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann verwendet werden, die Deklaration des Typparameters Metadatenattribute hinzu.  
+  
+> [!CAUTION]
+>  Diese Eigenschaft ist `null` standardmäßig und sollte aktiviert sein, bevor auf Sie verwiesen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.CodeDom.CodeTypeParameter.CustomAttributes%2A> Eigenschaft, um ein neues benutzerdefiniertes Attribut hinzuzufügen.  In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.CodeTypeParameter> Klasse.  
+  
+ [!code-csharp[System.CodeDom.Generics.1#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDOM.Generics.1/CS/codedomgenerics.cs#5)]
+ [!code-vb[System.CodeDom.Generics.1#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDOM.Generics.1/VB/codedomgenerics.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasConstructorConstraint">
+      <MemberSignature Language="C#" Value="public bool HasConstructorConstraint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasConstructorConstraint" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeParameter.HasConstructorConstraint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Typparameter eine Konstruktoreinschränkung aufweist.</summary>
+        <value>
+          <see langword="true" />Wenn der Typparameter eine Konstruktoreinschränkung aufweist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Konstruktoreinschränkung weist den Compiler an, dass der Typparameter einen öffentlichen Standardkonstruktor (einen öffentlichen Konstruktor ohne Parameter) verfügbar macht.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.CodeDom.CodeTypeParameter.HasConstructorConstraint%2A> Eigenschaft ermitteln, ob der Typparameter eine Konstruktoreinschränkung aufweist.  In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.CodeTypeParameter> Klasse.  
+  
+ [!code-csharp[System.CodeDom.Generics.1#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDOM.Generics.1/CS/codedomgenerics.cs#3)]
+ [!code-vb[System.CodeDom.Generics.1#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDOM.Generics.1/VB/codedomgenerics.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeParameter.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Typparameters.</summary>
+        <value>Der Name des Typparameters. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

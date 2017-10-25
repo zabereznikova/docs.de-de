@@ -1,0 +1,716 @@
+<Type Name="WSSecurityTokenSerializer" FullName="System.ServiceModel.Security.WSSecurityTokenSerializer">
+  <TypeSignature Language="C#" Value="public class WSSecurityTokenSerializer : System.IdentityModel.Selectors.SecurityTokenSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WSSecurityTokenSerializer extends System.IdentityModel.Selectors.SecurityTokenSerializer" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.WSSecurityTokenSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.SecurityTokenSerializer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Klasse, die zum Serialisieren und Deserialisieren von Sicherheitstoken, Sicherheitsschlüsselbezeichnern und Sicherheitsschlüsselbezeichnerklauseln verwendet wird, die in den Sicherheitsspezifikationen WS-Sicherheit, WS-Trust und WS-SecureConversation definiert sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Code wird eine benutzerdefinierte Überschreibung dieser Klasse veranschaulicht.  
+  
+ [!code-csharp[c_CustomToken#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#3)]
+ [!code-vb[c_CustomToken#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSSecurityTokenSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.WSSecurityTokenSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSSecurityTokenSerializer (bool emitBspRequiredAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool emitBspRequiredAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="emitBspRequiredAttributes" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="emitBspRequiredAttributes">Der für die <see cref="P:System.ServiceModel.Security.WSSecurityTokenSerializer.EmitBspRequiredAttributes" />-Eigenschaft zu verwendende Wert. Wenn <see langword="true" />, dazu gehören <see langword="ValueType" /> und <see langword="EncodingType" /> Attribute, sofern zutreffend, während die Serialisierung von Sicherheitstoken.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.WSSecurityTokenSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSSecurityTokenSerializer (System.ServiceModel.Security.SecurityVersion securityVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.SecurityVersion securityVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.#ctor(System.ServiceModel.Security.SecurityVersion)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityVersion" Type="System.ServiceModel.Security.SecurityVersion" />
+      </Parameters>
+      <Docs>
+        <param name="securityVersion">Die Sicherheitsversion.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.WSSecurityTokenSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSSecurityTokenSerializer (System.ServiceModel.Security.SecurityVersion securityVersion, bool emitBspRequiredAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.SecurityVersion securityVersion, bool emitBspRequiredAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.#ctor(System.ServiceModel.Security.SecurityVersion,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityVersion" Type="System.ServiceModel.Security.SecurityVersion" />
+        <Parameter Name="emitBspRequiredAttributes" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="securityVersion">Die Sicherheitsversion.</param>
+        <param name="emitBspRequiredAttributes">Der für die <see cref="P:System.ServiceModel.Security.WSSecurityTokenSerializer.EmitBspRequiredAttributes" />-Eigenschaft zu verwendende Wert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.WSSecurityTokenSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSSecurityTokenSerializer (System.ServiceModel.Security.SecurityVersion securityVersion, bool emitBspRequiredAttributes, System.IdentityModel.Tokens.SamlSerializer samlSerializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.SecurityVersion securityVersion, bool emitBspRequiredAttributes, class System.IdentityModel.Tokens.SamlSerializer samlSerializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.#ctor(System.ServiceModel.Security.SecurityVersion,System.Boolean,System.IdentityModel.Tokens.SamlSerializer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityVersion" Type="System.ServiceModel.Security.SecurityVersion" />
+        <Parameter Name="emitBspRequiredAttributes" Type="System.Boolean" />
+        <Parameter Name="samlSerializer" Type="System.IdentityModel.Tokens.SamlSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="securityVersion">Die Sicherheitsversion.</param>
+        <param name="emitBspRequiredAttributes">Der für die <see cref="P:System.ServiceModel.Security.WSSecurityTokenSerializer.EmitBspRequiredAttributes" />-Eigenschaft zu verwendende Wert.</param>
+        <param name="samlSerializer">Der Erweiterungspunkt, der zum Serialisieren und Deserialisieren von SAML-Token verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.WSSecurityTokenSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSSecurityTokenSerializer (System.ServiceModel.Security.SecurityVersion securityVersion, bool emitBspRequiredAttributes, System.IdentityModel.Tokens.SamlSerializer samlSerializer, System.ServiceModel.Security.SecurityStateEncoder securityStateEncoder, System.Collections.Generic.IEnumerable&lt;Type&gt; knownTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.SecurityVersion securityVersion, bool emitBspRequiredAttributes, class System.IdentityModel.Tokens.SamlSerializer samlSerializer, class System.ServiceModel.Security.SecurityStateEncoder securityStateEncoder, class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; knownTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.#ctor(System.ServiceModel.Security.SecurityVersion,System.Boolean,System.IdentityModel.Tokens.SamlSerializer,System.ServiceModel.Security.SecurityStateEncoder,System.Collections.Generic.IEnumerable{System.Type})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityVersion" Type="System.ServiceModel.Security.SecurityVersion" />
+        <Parameter Name="emitBspRequiredAttributes" Type="System.Boolean" />
+        <Parameter Name="samlSerializer" Type="System.IdentityModel.Tokens.SamlSerializer" />
+        <Parameter Name="securityStateEncoder" Type="System.ServiceModel.Security.SecurityStateEncoder" />
+        <Parameter Name="knownTypes" Type="System.Collections.Generic.IEnumerable&lt;System.Type&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="securityVersion">Die Sicherheitsversion.</param>
+        <param name="emitBspRequiredAttributes">Der für die <see cref="P:System.ServiceModel.Security.WSSecurityTokenSerializer.EmitBspRequiredAttributes" />-Eigenschaft zu verwendende Wert.</param>
+        <param name="samlSerializer">Der Erweiterungspunkt, der zum Serialisieren und Deserialisieren von SAML-Token verwendet wird.</param>
+        <param name="securityStateEncoder">Der Encoder, der zum Codieren und Decodieren von Sicherheitszuständen verwendet wird, die in Form von Cookies an die Sicherheitskontexttokens angehängt sind.</param>
+        <param name="knownTypes">Eine Auflistung von Typen. Diese bekannten Typen müssen deklariert werden, um benutzerdefinierte Ansprüche als Teil des Sicherheitskontexttoken-Cookies verwenden zu können.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.WSSecurityTokenSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="securityVersion" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSSecurityTokenSerializer (System.ServiceModel.Security.SecurityVersion securityVersion, System.ServiceModel.Security.TrustVersion trustVersion, System.ServiceModel.Security.SecureConversationVersion secureConversationVersion, bool emitBspRequiredAttributes, System.IdentityModel.Tokens.SamlSerializer samlSerializer, System.ServiceModel.Security.SecurityStateEncoder securityStateEncoder, System.Collections.Generic.IEnumerable&lt;Type&gt; knownTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.SecurityVersion securityVersion, class System.ServiceModel.Security.TrustVersion trustVersion, class System.ServiceModel.Security.SecureConversationVersion secureConversationVersion, bool emitBspRequiredAttributes, class System.IdentityModel.Tokens.SamlSerializer samlSerializer, class System.ServiceModel.Security.SecurityStateEncoder securityStateEncoder, class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; knownTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.#ctor(System.ServiceModel.Security.SecurityVersion,System.ServiceModel.Security.TrustVersion,System.ServiceModel.Security.SecureConversationVersion,System.Boolean,System.IdentityModel.Tokens.SamlSerializer,System.ServiceModel.Security.SecurityStateEncoder,System.Collections.Generic.IEnumerable{System.Type})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityVersion" Type="System.ServiceModel.Security.SecurityVersion" />
+        <Parameter Name="trustVersion" Type="System.ServiceModel.Security.TrustVersion" />
+        <Parameter Name="secureConversationVersion" Type="System.ServiceModel.Security.SecureConversationVersion" />
+        <Parameter Name="emitBspRequiredAttributes" Type="System.Boolean" />
+        <Parameter Name="samlSerializer" Type="System.IdentityModel.Tokens.SamlSerializer" />
+        <Parameter Name="securityStateEncoder" Type="System.ServiceModel.Security.SecurityStateEncoder" />
+        <Parameter Name="knownTypes" Type="System.Collections.Generic.IEnumerable&lt;System.Type&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="securityVersion">Die Sicherheitsversion.</param>
+        <param name="trustVersion">Der Satz an unterstützten Versionen der WS-Trust-Spezifikation.</param>
+        <param name="secureConversationVersion">Der Satz an unterstützten Versionen der WS-SecureConversation-Spezifikation.</param>
+        <param name="emitBspRequiredAttributes">Der für die <see cref="P:System.ServiceModel.Security.WSSecurityTokenSerializer.EmitBspRequiredAttributes" />-Eigenschaft zu verwendende Wert.</param>
+        <param name="samlSerializer">Der Erweiterungspunkt, der zum Serialisieren und Deserialisieren von SAML-Token verwendet wird.</param>
+        <param name="securityStateEncoder">Der Encoder, der zum Codieren und Decodieren von Sicherheitszuständen verwendet wird, die in Form von Cookies an die Sicherheitskontexttokens angehängt sind.</param>
+        <param name="knownTypes">Eine Auflistung bekannter Typen. Diese bekannten Typen müssen deklariert werden, um benutzerdefinierte Ansprüche als Teil des Sicherheitskontexttoken-Cookies verwenden zu können.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.WSSecurityTokenSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSSecurityTokenSerializer (System.ServiceModel.Security.SecurityVersion securityVersion, bool emitBspRequiredAttributes, System.IdentityModel.Tokens.SamlSerializer samlSerializer, System.ServiceModel.Security.SecurityStateEncoder securityStateEncoder, System.Collections.Generic.IEnumerable&lt;Type&gt; knownTypes, int maximumKeyDerivationOffset, int maximumKeyDerivationLabelLength, int maximumKeyDerivationNonceLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.SecurityVersion securityVersion, bool emitBspRequiredAttributes, class System.IdentityModel.Tokens.SamlSerializer samlSerializer, class System.ServiceModel.Security.SecurityStateEncoder securityStateEncoder, class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; knownTypes, int32 maximumKeyDerivationOffset, int32 maximumKeyDerivationLabelLength, int32 maximumKeyDerivationNonceLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.#ctor(System.ServiceModel.Security.SecurityVersion,System.Boolean,System.IdentityModel.Tokens.SamlSerializer,System.ServiceModel.Security.SecurityStateEncoder,System.Collections.Generic.IEnumerable{System.Type},System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityVersion" Type="System.ServiceModel.Security.SecurityVersion" />
+        <Parameter Name="emitBspRequiredAttributes" Type="System.Boolean" />
+        <Parameter Name="samlSerializer" Type="System.IdentityModel.Tokens.SamlSerializer" />
+        <Parameter Name="securityStateEncoder" Type="System.ServiceModel.Security.SecurityStateEncoder" />
+        <Parameter Name="knownTypes" Type="System.Collections.Generic.IEnumerable&lt;System.Type&gt;" />
+        <Parameter Name="maximumKeyDerivationOffset" Type="System.Int32" />
+        <Parameter Name="maximumKeyDerivationLabelLength" Type="System.Int32" />
+        <Parameter Name="maximumKeyDerivationNonceLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="securityVersion">Die Sicherheitsversion.</param>
+        <param name="emitBspRequiredAttributes">Der für die <see cref="P:System.ServiceModel.Security.WSSecurityTokenSerializer.EmitBspRequiredAttributes" />-Eigenschaft zu verwendende Wert.</param>
+        <param name="samlSerializer">Der Erweiterungspunkt, der zum Serialisieren und Deserialisieren von SAML-Token verwendet wird.</param>
+        <param name="securityStateEncoder">Der Encoder, der zum Codieren und Decodieren von Sicherheitszuständen verwendet wird, die in Form von Cookies an die Sicherheitskontexttokens angehängt sind.</param>
+        <param name="knownTypes">Eine Auflistung bekannter Typen. Diese bekannten Typen müssen deklariert werden, um benutzerdefinierte Ansprüche als Teil des Sicherheitskontexttoken-Cookies verwenden zu können.</param>
+        <param name="maximumKeyDerivationOffset">Der maximale Schlüsselableitungsoffset. Mit dieser Einstellung wird die Verarbeitungsleistung des Servers bei der Deserialisierung von Derived Key-Token begrenzt.</param>
+        <param name="maximumKeyDerivationLabelLength">Die maximale Schlüsselableitungs-Bezeichnungslänge. Mit dieser Einstellung wird die Verarbeitungsleistung des Servers bei der Deserialisierung von Derived Key-Token begrenzt.</param>
+        <param name="maximumKeyDerivationNonceLength">Die maximale Schlüsselableitungs-Noncelänge. Mit dieser Einstellung wird die Verarbeitungsleistung des Servers bei der Deserialisierung von Derived Key-Token begrenzt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.WSSecurityTokenSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="securityVersion" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="maximumKeyDerivationOffset" /> ist kleiner als 0 (null), die <paramref name="maximumKeyDerivationLabelLength" /> ist kleiner als 0 (null) oder die <paramref name="maximumKeyDerivationNonceLength" /> ist kleiner oder gleich 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSSecurityTokenSerializer (System.ServiceModel.Security.SecurityVersion securityVersion, System.ServiceModel.Security.TrustVersion trustVersion, System.ServiceModel.Security.SecureConversationVersion secureConversationVersion, bool emitBspRequiredAttributes, System.IdentityModel.Tokens.SamlSerializer samlSerializer, System.ServiceModel.Security.SecurityStateEncoder securityStateEncoder, System.Collections.Generic.IEnumerable&lt;Type&gt; knownTypes, int maximumKeyDerivationOffset, int maximumKeyDerivationLabelLength, int maximumKeyDerivationNonceLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.SecurityVersion securityVersion, class System.ServiceModel.Security.TrustVersion trustVersion, class System.ServiceModel.Security.SecureConversationVersion secureConversationVersion, bool emitBspRequiredAttributes, class System.IdentityModel.Tokens.SamlSerializer samlSerializer, class System.ServiceModel.Security.SecurityStateEncoder securityStateEncoder, class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; knownTypes, int32 maximumKeyDerivationOffset, int32 maximumKeyDerivationLabelLength, int32 maximumKeyDerivationNonceLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.#ctor(System.ServiceModel.Security.SecurityVersion,System.ServiceModel.Security.TrustVersion,System.ServiceModel.Security.SecureConversationVersion,System.Boolean,System.IdentityModel.Tokens.SamlSerializer,System.ServiceModel.Security.SecurityStateEncoder,System.Collections.Generic.IEnumerable{System.Type},System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityVersion" Type="System.ServiceModel.Security.SecurityVersion" />
+        <Parameter Name="trustVersion" Type="System.ServiceModel.Security.TrustVersion" />
+        <Parameter Name="secureConversationVersion" Type="System.ServiceModel.Security.SecureConversationVersion" />
+        <Parameter Name="emitBspRequiredAttributes" Type="System.Boolean" />
+        <Parameter Name="samlSerializer" Type="System.IdentityModel.Tokens.SamlSerializer" />
+        <Parameter Name="securityStateEncoder" Type="System.ServiceModel.Security.SecurityStateEncoder" />
+        <Parameter Name="knownTypes" Type="System.Collections.Generic.IEnumerable&lt;System.Type&gt;" />
+        <Parameter Name="maximumKeyDerivationOffset" Type="System.Int32" />
+        <Parameter Name="maximumKeyDerivationLabelLength" Type="System.Int32" />
+        <Parameter Name="maximumKeyDerivationNonceLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="securityVersion">Die Sicherheitsversion.</param>
+        <param name="trustVersion">Der Satz an unterstützten Versionen der WS-Trust-Spezifikation.</param>
+        <param name="secureConversationVersion">Der Satz an unterstützten Versionen der WS-SecureConversation-Spezifikation.</param>
+        <param name="emitBspRequiredAttributes">Der für die <see cref="P:System.ServiceModel.Security.WSSecurityTokenSerializer.EmitBspRequiredAttributes" />-Eigenschaft zu verwendende Wert.</param>
+        <param name="samlSerializer">Der Erweiterungspunkt, der zum Serialisieren und Deserialisieren von SAML-Token verwendet wird.</param>
+        <param name="securityStateEncoder">Der Encoder, der zum Codieren und Decodieren von Sicherheitszuständen verwendet wird, die in Form von Cookies an die Sicherheitskontexttokens angehängt sind.</param>
+        <param name="knownTypes">Eine Auflistung bekannter Typen. Diese bekannten Typen müssen deklariert werden, um benutzerdefinierte Ansprüche als Teil des Sicherheitskontexttoken-Cookies verwenden zu können.</param>
+        <param name="maximumKeyDerivationOffset">Der maximale Schlüsselableitungsoffset. Mit dieser Einstellung wird die Verarbeitungsleistung des Servers bei der Deserialisierung von Derived Key-Token begrenzt.</param>
+        <param name="maximumKeyDerivationLabelLength">Die maximale Schlüsselableitungs-Bezeichnungslänge. Mit dieser Einstellung wird die Verarbeitungsleistung des Servers bei der Deserialisierung von Derived Key-Token begrenzt.</param>
+        <param name="maximumKeyDerivationNonceLength">Die maximale Schlüsselableitungs-Noncelänge. Mit dieser Einstellung wird die Verarbeitungsleistung des Servers bei der Deserialisierung von Derived Key-Token begrenzt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.WSSecurityTokenSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadKeyIdentifierClauseCore">
+      <MemberSignature Language="C#" Value="protected override bool CanReadKeyIdentifierClauseCore (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanReadKeyIdentifierClauseCore(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadKeyIdentifierClauseCore(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der XmlReader.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob die Schlüsselbezeichnerklausel mit dem angegebenen Reader gelesen werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der Schlüsselbezeichner-Klauselkern mit dem angegebenen Reader gelesen werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadKeyIdentifierCore">
+      <MemberSignature Language="C#" Value="protected override bool CanReadKeyIdentifierCore (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanReadKeyIdentifierCore(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadKeyIdentifierCore(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der XmlReader.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob die Schlüsselbezeichner-Klauselkern mit dem angegebenen Reader gelesen werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der Schlüsselbezeichnerkern mit dem angegebenen Reader gelesen werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadTokenCore">
+      <MemberSignature Language="C#" Value="protected override bool CanReadTokenCore (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanReadTokenCore(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der XmlReader.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob der Tokenkern mit dem angegebenen Reader gelesen werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der Tokenkern mit dem angegebenen Reader gelesen werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteKeyIdentifierClauseCore">
+      <MemberSignature Language="C#" Value="protected override bool CanWriteKeyIdentifierClauseCore (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanWriteKeyIdentifierClauseCore(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteKeyIdentifierClauseCore(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Die Sicherheitsschlüsselbezeichnerklausel.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob der Schlüsselbezeichner-Klauselkern mit einer angegebenen Schlüsselbezeichnerklausel geschrieben werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der Schlüsselbezeichner-Klauselkern mit der angegebenen Schlüsselbezeichnerklausel geschrieben werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteKeyIdentifierCore">
+      <MemberSignature Language="C#" Value="protected override bool CanWriteKeyIdentifierCore (System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanWriteKeyIdentifierCore(class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteKeyIdentifierCore(System.IdentityModel.Tokens.SecurityKeyIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">Der Sicherheitsschlüsselbezeichner.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob der Schlüsselbezeichnerkern mit einer angegebenen Schlüsselbezeichnerklausel geschrieben werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der Schlüsselbezeichnerkern mit der angegebenen Schlüsselbezeichnerklausel geschrieben werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteTokenCore">
+      <MemberSignature Language="C#" Value="protected override bool CanWriteTokenCore (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanWriteTokenCore(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das Sicherheitstoken.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob der Tokenkern mit einem angegebenen Sicherheitstoken geschrieben werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der Tokenkern mit dem angegebenen Sicherheitstoken geschrieben werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKeyIdentifierClauseFromTokenXml">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SecurityKeyIdentifierClause CreateKeyIdentifierClauseFromTokenXml (System.Xml.XmlElement element, System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle tokenReferenceStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause CreateKeyIdentifierClauseFromTokenXml(class System.Xml.XmlElement element, valuetype System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle tokenReferenceStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.CreateKeyIdentifierClauseFromTokenXml(System.Xml.XmlElement,System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Xml.XmlElement" />
+        <Parameter Name="tokenReferenceStyle" Type="System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Sicherheitstoken.</param>
+        <param name="tokenReferenceStyle">Die <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle" />.</param>
+        <summary>Erstellt eine Schlüsselbezeichnerklausel aus einem als XML ausgedrückten Token.</summary>
+        <returns>Der erstellte Sicherheitsschlüsselbezeichner.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xml.XmlException">Ein Fehler ist beim Deserialisieren der Schlüsselbezeichnerklausel aufgetreten, oder die Schlüsselbezeichnerklausel konnte nicht gelesen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultInstance">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.WSSecurityTokenSerializer DefaultInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.WSSecurityTokenSerializer DefaultInstance" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.WSSecurityTokenSerializer.DefaultInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.WSSecurityTokenSerializer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Standardinstanz dieser Klasse ab.</summary>
+        <value>Eine Standardinstanz dieser Klasse.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmitBspRequiredAttributes">
+      <MemberSignature Language="C#" Value="public bool EmitBspRequiredAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EmitBspRequiredAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.WSSecurityTokenSerializer.EmitBspRequiredAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob von BSP erforderliche Attribute ausgegeben werden müssen.</summary>
+        <value>
+          <see langword="true" />, wenn von BSP erforderliche Attribute ausgegeben werden müssen, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenTypeUri">
+      <MemberSignature Language="C#" Value="protected virtual string GetTokenTypeUri (Type tokenType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string GetTokenTypeUri(class System.Type tokenType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.GetTokenTypeUri(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokenType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="tokenType">Der Typ des Sicherheitstokens.</param>
+        <summary>Ruft den URI des Sicherheitstokens des angegebenen Typs ab.</summary>
+        <returns>Der URI des Sicherheitstokens des angegebenen Typs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumKeyDerivationLabelLength">
+      <MemberSignature Language="C#" Value="public int MaximumKeyDerivationLabelLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumKeyDerivationLabelLength" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.WSSecurityTokenSerializer.MaximumKeyDerivationLabelLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Schlüsselableitungs-Bezeichnungslänge ab.</summary>
+        <value>Die maximale Schlüsselableitungs-Bezeichnungslänge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumKeyDerivationNonceLength">
+      <MemberSignature Language="C#" Value="public int MaximumKeyDerivationNonceLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumKeyDerivationNonceLength" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.WSSecurityTokenSerializer.MaximumKeyDerivationNonceLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Schlüsselableitungs-Noncelänge ab.</summary>
+        <value>Die maximale Schlüsselableitungs-Noncelänge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumKeyDerivationOffset">
+      <MemberSignature Language="C#" Value="public int MaximumKeyDerivationOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumKeyDerivationOffset" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.WSSecurityTokenSerializer.MaximumKeyDerivationOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den maximalen Schlüsselableitungsoffset ab.</summary>
+        <value>Der maximale Schlüsselableitungsoffset.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadKeyIdentifierClauseCore">
+      <MemberSignature Language="C#" Value="protected override System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClauseCore (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClauseCore(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadKeyIdentifierClauseCore(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der angegebene XmlReader.</param>
+        <summary>Liest den Schlüsselbezeichner-Klauselkern mit dem angegebenen <see cref="T:System.Xml.XmlReader" />.</summary>
+        <returns>Die gelesene Sicherheitsschlüsselbezeichnerklausel.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xml.XmlException">Ein Fehler ist beim Deserialisieren der Schlüsselbezeichnerklausel aufgetreten, oder die Schlüsselbezeichnerklausel konnte nicht gelesen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadKeyIdentifierCore">
+      <MemberSignature Language="C#" Value="protected override System.IdentityModel.Tokens.SecurityKeyIdentifier ReadKeyIdentifierCore (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifier ReadKeyIdentifierCore(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadKeyIdentifierCore(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifier</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der angegebene XmlReader.</param>
+        <summary>Liest den Schlüsselbezeichnerkern mit dem angegebenen <see cref="T:System.Xml.XmlReader" />.</summary>
+        <returns>Der gelesene Sicherheitsschlüsselbezeichner.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xml.XmlException">Ein Fehler ist beim Deserialisieren des Schlüsselbezeichners aufgetreten, oder der Schlüsselbezeichner konnte nicht gelesen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadTokenCore">
+      <MemberSignature Language="C#" Value="protected override System.IdentityModel.Tokens.SecurityToken ReadTokenCore (System.Xml.XmlReader reader, System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IdentityModel.Tokens.SecurityToken ReadTokenCore(class System.Xml.XmlReader reader, class System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore(System.Xml.XmlReader,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="tokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der angegebene XmlReader.</param>
+        <param name="tokenResolver">Der Sicherheitstokenresolver.</param>
+        <summary>Liest den Tokenkern mit dem angegebenen <see cref="T:System.Xml.XmlReader" />.</summary>
+        <returns>Das gelesene Sicherheitstoken.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xml.XmlException">Ein Fehler ist beim Deserialisieren des Tokens aufgetreten, oder das Token konnte nicht gelesen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityVersion SecurityVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityVersion SecurityVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.WSSecurityTokenSerializer.SecurityVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Sicherheitsversion ab.</summary>
+        <value>Die Sicherheitsversion.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryCreateKeyIdentifierClauseFromTokenXml">
+      <MemberSignature Language="C#" Value="public virtual bool TryCreateKeyIdentifierClauseFromTokenXml (System.Xml.XmlElement element, System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle tokenReferenceStyle, out System.IdentityModel.Tokens.SecurityKeyIdentifierClause securityKeyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryCreateKeyIdentifierClauseFromTokenXml(class System.Xml.XmlElement element, valuetype System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle tokenReferenceStyle, [out] class System.IdentityModel.Tokens.SecurityKeyIdentifierClause&amp; securityKeyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.TryCreateKeyIdentifierClauseFromTokenXml(System.Xml.XmlElement,System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle,System.IdentityModel.Tokens.SecurityKeyIdentifierClause@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Xml.XmlElement" />
+        <Parameter Name="tokenReferenceStyle" Type="System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle" />
+        <Parameter Name="securityKeyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Sicherheitstoken.</param>
+        <param name="tokenReferenceStyle">Die <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle" />.</param>
+        <param name="securityKeyIdentifierClause">Eine Untereinheit eines Elements, das ein Sicherheitsschlüsselbezeichnertoken enthält.</param>
+        <summary>Versucht, eine Schlüsselbezeichnerklausel aus einem als XML ausgedrückten Token zu erstellen.</summary>
+        <returns>
+          <see langword="true" />Wenn die schlüsselbezeichnerklausel erstellt wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteKeyIdentifierClauseCore">
+      <MemberSignature Language="C#" Value="protected override void WriteKeyIdentifierClauseCore (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WriteKeyIdentifierClauseCore(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteKeyIdentifierClauseCore(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der angegebene XmlWriter.</param>
+        <param name="keyIdentifierClause">Die Sicherheitsschlüsselbezeichnerklausel.</param>
+        <summary>Schreibt den Schlüsselbezeichner-Klauselkern mit einer angegebenen Schlüsselbezeichnerklausel unter Verwendung des angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xml.XmlException">Ein Fehler ist beim Serialisieren der Schlüsselbezeichnerklausel aufgetreten.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Schlüsselbezeichnerklausel wurde nicht erfolgreich geschrieben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteKeyIdentifierCore">
+      <MemberSignature Language="C#" Value="protected override void WriteKeyIdentifierCore (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WriteKeyIdentifierCore(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteKeyIdentifierCore(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityKeyIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der angegebene XmlWriter.</param>
+        <param name="keyIdentifier">Die Sicherheitsschlüsselbezeichnerklausel.</param>
+        <summary>Schreibt den Schlüsselbezeichnerkern mit einer angegebenen Schlüsselbezeichnerklausel unter Verwendung des angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xml.XmlException">Ein Fehler ist beim Serialisieren des Schlüsselbezeichners aufgetreten.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Schlüsselbezeichner wurde nicht erfolgreich geschrieben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTokenCore">
+      <MemberSignature Language="C#" Value="protected override void WriteTokenCore (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WriteTokenCore(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der angegebene XmlWriter.</param>
+        <param name="token">Das Sicherheitstoken.</param>
+        <summary>Schreibt den Tokenkern mit einem angegebenen Sicherheitstoken unter Verwendung des angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xml.XmlException">Ein Fehler ist beim Serialisieren des Sicherheitstokens aufgetreten.</exception>
+        <exception cref="T:System.InvalidOperationException">Das Token wurde nicht erfolgreich geschrieben.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

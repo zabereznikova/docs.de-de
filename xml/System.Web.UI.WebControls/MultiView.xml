@@ -1,0 +1,841 @@
+<Type Name="MultiView" FullName="System.Web.UI.WebControls.MultiView">
+  <TypeSignature Language="C#" Value="public class MultiView : System.Web.UI.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MultiView extends System.Web.UI.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.MultiView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ActiveViewChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.MultiViewDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.WebControls.MultiViewControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(typeof(System.Web.UI.WebControls.View))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:MultiView runat="server"&gt;&lt;/{0}:MultiView&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement, das als Container für eine Gruppe von fungiert <see cref="T:System.Web.UI.WebControls.View" /> Steuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [Deklarationssyntax](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Die <xref:System.Web.UI.WebControls.MultiView> Steuerelement ist ein Container für eine Gruppe von <xref:System.Web.UI.WebControls.View> Steuerelemente. Können Sie definieren eine Gruppe von <xref:System.Web.UI.WebControls.View> -Steuerelemente, in dem jede <xref:System.Web.UI.WebControls.View> Steuerelement untergeordnete Steuerelemente enthält. Rendern der Anwendung kann dann eine bestimmte <xref:System.Web.UI.WebControls.View> Steuerelement an den Client basierend auf Kriterien, wie z. B. die Benutzeridentität, benutzereinstellungen und Informationen in einem Abfragezeichenfolgen-Parameter übergeben. Sie können auch die <xref:System.Web.UI.WebControls.MultiView> Steuerelement Assistenten erstellen. In diesem Szenario wird jede <xref:System.Web.UI.WebControls.View> Steuerelement im ein <xref:System.Web.UI.WebControls.MultiView> Steuerelement darstellt, einen anderen Schritt oder eine Seite des Assistenten. Sie sollten dieses Steuerelement auch mehrere Bildschirm Anwendungsentwicklung für mobile Geräte verwenden. Dieses Steuerelement stellt die gleiche Funktionalität wie das Mobile <xref:System.Web.UI.MobileControls.Form> -Steuerelement in .NET Framework, Version 1.1.  
+  
+ Nur ein <xref:System.Web.UI.WebControls.View> Steuerelement zu einem Zeitpunkt kann definiert werden, als die aktive Ansicht in einem <xref:System.Web.UI.WebControls.MultiView> Steuerelement. Wenn ein <xref:System.Web.UI.WebControls.View> Steuerelement als aktive Ansicht definiert ist, die die darin enthaltenen untergeordneten Steuerelemente werden an den Client gerendert. Verwenden Sie entweder die <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft oder die <xref:System.Web.UI.WebControls.MultiView.SetActiveView%2A> Methode, um die aktive Ansicht zu definieren. Wenn die <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft leer ist, ist die <xref:System.Web.UI.WebControls.MultiView> Rendern Steuerelements alle Inhalte, die nicht an dem Client. Wenn die aktive Ansicht, um festgelegt ist eine <xref:System.Web.UI.WebControls.View> , die in nicht vorhanden die <xref:System.Web.UI.WebControls.MultiView> -Steuerelement, ein <xref:System.ArgumentOutOfRangeException> wird zur Laufzeit ausgelöst.  
+  
+ Sie können die aktive Ansicht deklarativ oder programmgesteuert definieren. Festlegen der <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft deklarativ beim Definieren der <xref:System.Web.UI.WebControls.MultiView> Ursachen steuern die <xref:System.Web.UI.WebControls.View> Steuerelement, das als aktive Ansicht festgelegt ist, auf die Zeit des Clients das erste gerendert werden soll die <xref:System.Web.UI.WebControls.MultiView> Steuerelement aufgerufen wird. Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft deklarativ.  
+  
+```  
+<asp:MultiView id="MultiView1" ActiveViewIndex=0 runat="Server">   
+```  
+  
+ Festlegen der <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft programmgesteuert oder zum Aufrufen der <xref:System.Web.UI.WebControls.MultiView.SetActiveView%2A> -Methode, kann die Anwendung ermitteln, welche <xref:System.Web.UI.WebControls.View> Steuerelement zur Laufzeit an den Client Rendern auf der Grundlage von Kriterien wie z. B. die Identität oder die Einstellungen eines Benutzers.  
+  
+ Ermöglicht Benutzern das Navigieren zwischen <xref:System.Web.UI.WebControls.View> steuert innerhalb einer <xref:System.Web.UI.WebControls.MultiView> -Steuerelement, fügen Sie eine <xref:System.Web.UI.WebControls.LinkButton> oder <xref:System.Web.UI.WebControls.Button> steuern, auf die einzelnen <xref:System.Web.UI.WebControls.View> Steuerelement. Nutzen der <xref:System.Web.UI.WebControls.MultiView> des Steuerelements automatische Aktualisierung der derzeit aktiven <xref:System.Web.UI.WebControls.View>legen die `CommandName` Eigenschaft auf die Schaltfläche oder Link auf den Wert eines der folgenden Befehlsnamen Felder, die den gewünschten entspricht Navigationsverhalten: <xref:System.Web.UI.WebControls.MultiView.PreviousViewCommandName>, <xref:System.Web.UI.WebControls.MultiView.NextViewCommandName>, <xref:System.Web.UI.WebControls.MultiView.SwitchViewByIDCommandName>, oder <xref:System.Web.UI.WebControls.MultiView.SwitchViewByIndexCommandName>.  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:MultiView  
+    ActiveViewIndex="integer"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    OnActiveViewChanged="ActiveViewChanged event handler"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Visible="True|False"  
+>  
+            <asp:TemplatedWizardStep  
+                AllowReturn="True|False"  
+                ContentTemplateContainer="string"  
+                EnableTheming="True|False"  
+                EnableViewState="True|False"  
+                ID="string"  
+                OnActivate="Activate event handler"  
+                OnDataBinding="DataBinding event handler"  
+                OnDeactivate="Deactivate event handler"  
+                OnDisposed="Disposed event handler"  
+                OnInit="Init event handler"  
+                OnLoad="Load event handler"  
+                OnPreRender="PreRender event handler"  
+                OnUnload="Unload event handler"  
+                runat="server"  
+                SkinID="string"  
+                StepType="Auto|Complete|Finish|Start|Step"  
+                Title="string"  
+                Visible="True|False"  
+>  
+                        <ContentTemplate>  
+                            <!-- child controls -->  
+                        </ContentTemplate>  
+                        <CustomNavigationTemplate>  
+                            <!-- child controls -->  
+                        </CustomNavigationTemplate>  
+            </asp:TemplatedWizardStep>  
+            <asp:View  
+                EnableTheming="True|False"  
+                EnableViewState="True|False"  
+                ID="string"  
+                OnActivate="Activate event handler"  
+                OnDataBinding="DataBinding event handler"  
+                OnDeactivate="Deactivate event handler"  
+                OnDisposed="Disposed event handler"  
+                OnInit="Init event handler"  
+                OnLoad="Load event handler"  
+                OnPreRender="PreRender event handler"  
+                OnUnload="Unload event handler"  
+                runat="server"  
+                SkinID="string"  
+                Visible="True|False"  
+            />  
+            <asp:WizardStep  
+                AllowReturn="True|False"  
+                EnableTheming="True|False"  
+                EnableViewState="True|False"  
+                ID="string"  
+                OnActivate="Activate event handler"  
+                OnDataBinding="DataBinding event handler"  
+                OnDeactivate="Deactivate event handler"  
+                OnDisposed="Disposed event handler"  
+                OnInit="Init event handler"  
+                OnLoad="Load event handler"  
+                OnPreRender="PreRender event handler"  
+                OnUnload="Unload event handler"  
+                runat="server"  
+                SkinID="string"  
+                StepType="Auto|Complete|Finish|Start|Step"  
+                Title="string"  
+                Visible="True|False"  
+            />  
+</asp:MultiView>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.MultiView> Steuerelement um eine einfache Umfrage zu erstellen. Jede <xref:System.Web.UI.WebControls.View> Steuerelement ist eine separate Frage. Klickt der Benutzer die **vorherige** Schaltfläche auf einer beliebigen Seite der <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft wird wieder um eins erniedrigt, navigieren Sie zur vorherigen <xref:System.Web.UI.WebControls.View> Steuerelement. Klickt der Benutzer die **Weiter** Schaltfläche auf einer beliebigen Seite der <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> -Eigenschaft inkrementiert, um zum nächsten navigieren <xref:System.Web.UI.WebControls.View> Steuerelement.  
+  
+> [!NOTE]
+>  Die folgenden Codebeispiele verwenden die einfach-Codemodell und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MultiView.ActiveViewIndex Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MultiView.ActiveViewIndex Example/cs/multiviewactiveviewindexcs.aspx#1)]
+ [!code-aspx-vb[MultiView.ActiveViewIndex Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MultiView.ActiveViewIndex Example/VB/multiviewactiveviewindexvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer grundlegenden <xref:System.Web.UI.WebControls.MultiView> Steuerelement, das drei enthält <xref:System.Web.UI.WebControls.View> Steuerelemente. Die Ansicht, die der Benutzer aus dem Listenfeld auswählt legen Sie auf die aktive Ansicht und dem Benutzer angezeigt. Ein ausführlicheres Beispiel für die <xref:System.Web.UI.WebControls.MultiView> steuern, finden Sie unter den anderen in diesem Thema bereitgestellten Codebeispiele.  
+  
+ [!code-aspx-vb[MultiView Class Example 2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MultiView Class Example 2/VB/multiviewclass2vb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Web.UI.WebControls.MultiView> Steuerelement, das drei enthält <xref:System.Web.UI.WebControls.View> Steuerelemente. Ein <xref:System.Web.UI.WebControls.View> Steuerelement enthält keine Stileigenschaften. Aus diesem Grund jede <xref:System.Web.UI.WebControls.View> Steuerelement enthält eine <xref:System.Web.UI.WebControls.Panel> Steuerelement, damit Stile für festgelegt werden können die <xref:System.Web.UI.WebControls.View> Steuerelement. Die ersten Mal die Seite geladen ist, die `DefaultView` festgelegt ist, als die aktive Ansicht mithilfe der <xref:System.Web.UI.WebControls.MultiView.SetActiveView%2A> Methode. Jede <xref:System.Web.UI.WebControls.View> Steuerelement enthält Verknüpfungsschaltflächen, damit der Benutzer zu anderen Ansichten navigieren kann.  
+  
+ [!code-aspx-vb[MultiView Class Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MultiView Class Example/VB/multiviewclass1vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MultiView ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MultiView.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.MultiView" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.MultiView> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveViewChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ActiveViewChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ActiveViewChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.MultiView.ActiveViewChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die aktive <see cref="T:System.Web.UI.WebControls.View" /> Kontrolle über eine <see cref="T:System.Web.UI.WebControls.MultiView" /> Änderungen zwischen Übertragungen zum Server zu steuern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.MultiView.ActiveViewChanged> Ereignis wird ausgelöst, wenn die aktive <xref:System.Web.UI.WebControls.View> -Steuerelement innerhalb eine <xref:System.Web.UI.WebControls.MultiView> Änderungen zwischen Übertragungen zum Server zu steuern.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [wie: Behandeln von Ereignissen in einer Web Forms-Anwendung](~/docs/standard/events/how-to-consume-events-in-a-web-forms-application.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.WebControls.MultiView.ActiveViewChanged> -Ereignis für ein <xref:System.Web.UI.WebControls.MultiView> Steuerelement. Wenn die aktive Ansicht geändert wird, wird eine Meldung angezeigt einem <xref:System.Web.UI.WebControls.Label> Steuerelement auf der Seite.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MultiView.ActiveViewChanged Event Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MultiView.ActiveViewChanged Event Example/cs/multiviewactiveviewchangedeventcs.aspx#1)]
+ [!code-aspx-vb[MultiView.ActiveViewChanged Event Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MultiView.ActiveViewChanged Event Example/VB/multiviewactiveviewchangedeventvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveViewIndex">
+      <MemberSignature Language="C#" Value="public virtual int ActiveViewIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ActiveViewIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MultiView.ActiveViewIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Index des aktiven <see cref="T:System.Web.UI.WebControls.View" /> -Steuerelement innerhalb einer <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</summary>
+        <value>Der nullbasierte Index des aktiven <see cref="T:System.Web.UI.WebControls.View" /> -Steuerelement innerhalb einer <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement. Der Standardwert ist-1 und gibt an, dass keine Ansicht als aktiv festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> festzulegende Eigenschaft eine <xref:System.Web.UI.WebControls.View> -Steuerelement innerhalb einer <xref:System.Web.UI.WebControls.MultiView> Steuerelement als aktive Ansicht. Sie können diese Eigenschaft auch verwenden, den Index des zurückzugebenden der <xref:System.Web.UI.WebControls.View> Steuerelement, das derzeit als aktive Ansicht festgelegt ist. Der Index des eine <xref:System.Web.UI.WebControls.View> Steuerelement richtet sich nach der Reihenfolge in der sie deklariert wird, innerhalb einer <xref:System.Web.UI.WebControls.MultiView> Steuerelement. Z. B. die erste <xref:System.Web.UI.WebControls.View> Steuerelement deklariert innerhalb einer <xref:System.Web.UI.WebControls.MultiView> Steuerelement hat den Index 0.  
+  
+ Nur ein <xref:System.Web.UI.WebControls.View> Steuerelement zu einem Zeitpunkt kann in als aktiv definiert eine <xref:System.Web.UI.WebControls.MultiView> Steuerelement. Die <xref:System.Web.UI.WebControls.View> Steuerelement, das festgelegt wird, um die <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft wird an den Client gerendert werden. Wenn die <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft auf festgelegt ist eine <xref:System.Web.UI.WebControls.View> , nicht vorhanden ist innerhalb der <xref:System.Web.UI.WebControls.MultiView> -Steuerelement, ein <xref:System.ArgumentOutOfRangeException> wird zur Laufzeit ausgelöst. Wenn die Eigenschaft leer ist, ist die <xref:System.Web.UI.WebControls.MultiView> Rendern Steuerelements alle Inhalte, die nicht an dem Client.  
+  
+ Sie können festlegen, die <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft deklarativ zur Entwicklungszeit oder programmgesteuert zur Laufzeit. Festlegen der <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft deklarativ beim Definieren der <xref:System.Web.UI.WebControls.MultiView> Ursachen steuern die <xref:System.Web.UI.WebControls.View> Steuerelement, das als aktive Ansicht festgelegt ist, auf die Zeit des Clients das erste gerendert werden soll die <xref:System.Web.UI.WebControls.MultiView> Steuerelement aufgerufen wird. Festlegen der <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft programmgesteuert ermöglicht die Anwendung ermitteln, welche <xref:System.Web.UI.WebControls.View> Steuerelement an den Client zur Laufzeit gerendert anhand bestimmter Kriterien wie der Identität eines Benutzers oder die Einstellungen.  
+  
+ Alternativ können Sie die <xref:System.Web.UI.WebControls.MultiView.SetActiveView%2A> und <xref:System.Web.UI.WebControls.MultiView.GetActiveView%2A> Methoden zum Festlegen oder Abrufen von aktive Ansicht innerhalb der <xref:System.Web.UI.WebControls.MultiView> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.MultiView> Steuerelement um eine einfache Umfrage zu erstellen. Jede <xref:System.Web.UI.WebControls.View> Steuerelement ist eine separate Frage. Klickt der Benutzer die **vorherige** Schaltfläche auf einer beliebigen Seite der <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft wird wieder um eins erniedrigt, navigieren Sie zur vorherigen <xref:System.Web.UI.WebControls.View> Steuerelement. Klickt der Benutzer die **Weiter** Schaltfläche auf einer beliebigen Seite der <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> -Eigenschaft inkrementiert, um zum nächsten navigieren <xref:System.Web.UI.WebControls.View> Steuerelement.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MultiView.ActiveViewIndex Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MultiView.ActiveViewIndex Example/cs/multiviewactiveviewindexcs.aspx#1)]
+ [!code-aspx-vb[MultiView.ActiveViewIndex Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MultiView.ActiveViewIndex Example/VB/multiviewactiveviewindexvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Index wurde kleiner als -1 oder größer als oder gleich der Anzahl der Elemente in der Liste festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParsedSubObject">
+      <MemberSignature Language="C#" Value="protected override void AddParsedSubObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddParsedSubObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MultiView.AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein <see cref="T:System.Object" />, das das analysierte Element darstellt.</param>
+        <summary>Benachrichtigt den <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement, das einem XML- oder HTML-Element analysiert wurde, und fügt das Element an der <see cref="T:System.Web.UI.WebControls.ViewCollection" /> Auflistung von der <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt die Implementierung der Basisklasse nur <xref:System.Web.UI.WebControls.View> Steuerelemente hinzugefügt werden die <xref:System.Web.UI.WebControls.ViewCollection>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Das angegebene <see cref="T:System.Object" /> ist ein <see cref="T:System.Web.UI.WebControls.View" /> Steuerelement.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MultiView.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine <see cref="T:System.Web.UI.ControlCollection" /> an die untergeordneten Steuerelemente des enthält die <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.ViewCollection" /> enthalten die <see cref="T:System.Web.UI.WebControls.View" /> Steuerelemente des aktuellen <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt die basisimplementierung immer Zurückgeben einer <xref:System.Web.UI.WebControls.ViewCollection> enthalten die <xref:System.Web.UI.WebControls.View> Steuerelemente des aktuellen <xref:System.Web.UI.WebControls.MultiView> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTheming">
+      <MemberSignature Language="C#" Value="public override bool EnableTheming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableTheming" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MultiView.EnableTheming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Designs anwenden, die <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</summary>
+        <value>
+          <see langword="true" />Wenn Designs verwendet werden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.MultiView.EnableTheming%2A> Eigenschaft gibt an, ob Designs, für aktiviert sind die <xref:System.Web.UI.WebControls.MultiView> Steuerelement. Die <xref:System.Web.UI.WebControls.MultiView.EnableTheming%2A> Eigenschaft bestimmt außerdem, ob Designs, für die Steuerelemente aktiviert sind seiner <xref:System.Web.UI.Control.Controls%2A> Auflistung. Wenn die <xref:System.Web.UI.WebControls.MultiView.EnableTheming%2A> Eigenschaft ist `true`, Design-Verzeichnis der Anwendung wird gesucht Steuerelementdesigns angewendet. Wenn kein Design für das jeweilige Steuerelement im Designverzeichnis vorhanden ist, wird ein Design angewendet. Wenn die <xref:System.Web.UI.WebControls.MultiView.EnableTheming%2A> Eigenschaft ist `false`, Designverzeichnis nicht durchsucht und den Inhalt von der <xref:System.Web.UI.Control.SkinID%2A> -Eigenschaft nicht verwendet werden.  
+  
+ Ein Steuerelement kann überschreiben die <xref:System.Web.UI.WebControls.MultiView.EnableTheming%2A> Wert festgelegt, durch das übergeordnete Steuerelement oder der Seite. Z. B. wenn ein <xref:System.Web.UI.WebControls.MultiView> -Steuerelement <xref:System.Web.UI.WebControls.MultiView.EnableTheming%2A> festgelegt `false`, können Sie selektiv Designs anwenden, um einzelne <xref:System.Web.UI.WebControls.View> enthaltenen Steuerelemente der <xref:System.Web.UI.WebControls.MultiView> Steuerelement durch Festlegen der <xref:System.Web.UI.Control.EnableTheming%2A> Eigenschaft `true`auf einzelne untergeordnete Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetActiveView">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.View GetActiveView ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.WebControls.View GetActiveView() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MultiView.GetActiveView" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.View</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die aktuelle aktive <see cref="T:System.Web.UI.WebControls.View" /> -Steuerelement innerhalb einer <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.View" /> Steuerelement, das die aktive Ansicht in einem <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Zurückgeben der <xref:System.Web.UI.WebControls.View> -Steuerelement innerhalb einer <xref:System.Web.UI.WebControls.MultiView> Steuerelement, das derzeit als aktive Ansicht festgelegt ist. Diese Methode gibt ein <xref:System.Web.UI.WebControls.View> steuern und kann daher verwendet werden, um die Eigenschaften der aktiven Ansicht zuzugreifen. Beispielsweise `MultiView1.GetActiveView.ID` gibt den Wert der <xref:System.Web.UI.Control.ID%2A> -Eigenschaft der aktuellen aktiven Ansicht in MultiView1 zurück.  
+  
+ Alternativ können Sie die <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft zum Abrufen oder Festlegen des nullbasierten Indexes des derzeit aktiven Ansicht in einem <xref:System.Web.UI.WebControls.MultiView> Steuerelement. Diese Eigenschaft kann entweder deklarativ oder programmgesteuert zugegriffen werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Web.UI.WebControls.MultiView> Steuerelement, das drei enthält <xref:System.Web.UI.WebControls.View> Steuerelemente. Wenn die <xref:System.Web.UI.WebControls.MultiView.ActiveViewChanged> Ereignis wird ausgelöst, die <xref:System.Web.UI.WebControls.MultiView.GetActiveView%2A> Methode wird verwendet, um die zurzeit aktive Sicht zurück, und zeigen Sie es in ein <xref:System.Web.UI.WebControls.Label> Steuerelement auf der Seite.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MultiView.ActiveViewChanged Event Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MultiView.ActiveViewChanged Event Example/cs/multiviewactiveviewchangedeventcs.aspx#1)]
+ [!code-aspx-vb[MultiView.ActiveViewChanged Event Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MultiView.ActiveViewChanged Event Example/VB/multiviewactiveviewchangedeventvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Die <see cref="P:System.Web.UI.WebControls.MultiView.ActiveViewIndex" /> Eigenschaftensatz ist nicht auf eine gültige <see cref="T:System.Web.UI.WebControls.View" /> -Steuerelement innerhalb der <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadControlState">
+      <MemberSignature Language="C#" Value="protected override void LoadControlState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void LoadControlState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MultiView.LoadControlState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Ein <see cref="T:System.Object" /> , die den Status des darstellt der <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</param>
+        <summary>Lädt den aktuellen Zustand, der die <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextViewCommandName">
+      <MemberSignature Language="C#" Value="public static readonly string NextViewCommandName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string NextViewCommandName" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.MultiView.NextViewCommandName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Den Befehlsnamen verknüpft sind, mit der nächsten <see cref="T:System.Web.UI.WebControls.View" /> -Steuerelement zum Anzeigen von in einem <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MultiView.NextViewCommandName> -Feld wird der Befehlsname "NextView" dargestellt.  
+  
+ Können Sie den Wert dieses Felds nutzen die <xref:System.Web.UI.WebControls.MultiView> des Steuerelements automatische Aktualisierung, des aktiven <xref:System.Web.UI.WebControls.View> Steuerelement. Z. B. wenn ein <xref:System.Web.UI.WebControls.View> Steuerelement enthält eine <xref:System.Web.UI.WebControls.Button> Steuerelement, das zur vorherigen navigiert <xref:System.Web.UI.WebControls.View>, können Sie festlegen, die <xref:System.Web.UI.WebControls.Button.CommandName%2A> auf den Wert der Eigenschaft der <xref:System.Web.UI.WebControls.MultiView.NextViewCommandName> Feld, das "NextView" ist. Dies bewirkt, dass die <xref:System.Web.UI.WebControls.MultiView> Steuerelement automatisch den Wert des dekrementiert die <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft auf die Schaltfläche geklickt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.MultiView> Steuerelement um eine einfache Umfrage zu erstellen. Jede <xref:System.Web.UI.WebControls.View> Steuerelement ist eine separate Frage. Die <xref:System.Web.UI.WebControls.MultiView.PreviousViewCommandName> und <xref:System.Web.UI.WebControls.MultiView.NextViewCommandName> Felder werden verwendet, um die automatische Navigation zwischen dem vorherigen und nächsten bieten <xref:System.Web.UI.WebControls.View> Steuerelemente in der Umfrage.  
+  
+ [!code-aspx-csharp[MultiView.NextViewCommandName#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MultiView.NextViewCommandName/CS/multiview.nextviewcommandnamecs.aspx#1)]
+ [!code-aspx-vb[MultiView.NextViewCommandName#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MultiView.NextViewCommandName/VB/multiview.nextviewcommandnamevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActiveViewChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnActiveViewChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnActiveViewChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MultiView.OnActiveViewChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.MultiView.ActiveViewChanged" /> -Ereignis für ein <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.MultiView.ActiveViewChanged> Ereignis wird ausgelöst, wenn die aktive <xref:System.Web.UI.WebControls.View> -Steuerelement innerhalb einer <xref:System.Web.UI.WebControls.MultiView> Steuerelement zwischen Übertragungen zum Server geändert wird, und Sie können einen benutzerdefinierten Handler für dieses Ereignis bereitstellen.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [wie: Behandeln von Ereignissen in einer Web Forms-Anwendung](~/docs/standard/events/how-to-consume-events-in-a-web-forms-application.md).  
+  
+ Mit der <xref:System.Web.UI.WebControls.MultiView.OnActiveViewChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.WebControls.MultiView.ActiveViewChanged> -Ereignis für ein <xref:System.Web.UI.WebControls.MultiView> Steuerelement. Wenn die aktive Ansicht geändert wird, wird eine Meldung angezeigt einem <xref:System.Web.UI.WebControls.Label> Steuerelement auf der Seite.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MultiView.ActiveViewChanged Event Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MultiView.ActiveViewChanged Event Example/cs/multiviewactiveviewchangedeventcs.aspx#1)]
+ [!code-aspx-vb[MultiView.ActiveViewChanged Event Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MultiView.ActiveViewChanged Event Example/VB/multiviewactiveviewchangedeventvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.WebControls.MultiView.OnActiveViewChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.WebControls.MultiView.OnActiveViewChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MultiView.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Bestimmt, ob das Ereignis für die <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement zu UI-Serversteuerelementhierarchie der Seite übergeben wird.</summary>
+        <returns>
+          <see langword="true" />, wenn das Ereignis abgebrochen wurde, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.WebControls.MultiView> Steuerelement enthält <xref:System.Web.UI.WebControls.View> Steuerelemente, die Ereignisse auslösen. Diese Methode überschreibt die basisimplementierung zum Behandeln der Navigation zwischen <xref:System.Web.UI.WebControls.View> Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement wurde nicht gefunden. der <see cref="T:System.Web.UI.WebControls.View" /> angegebenen in der <see cref="P:System.Web.UI.WebControls.CommandEventArgs.CommandArgument" /> Eigenschaft <paramref name="e" />.</exception>
+        <exception cref="T:System.FormatException">Die <see cref="P:System.Web.UI.WebControls.CommandEventArgs.CommandArgument" /> Eigenschaft <paramref name="e" /> kann nicht als ganze Zahl analysiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MultiView.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Init" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Benachrichtigung durch diese Methode eine <xref:System.Web.UI.WebControls.MultiView> Steuerelement muss alle Schritte zum Initialisieren, die erforderlich sind, erstellen und richten Sie eine Instanz ausführen. In dieser Phase des Lebenszyklus des Serversteuerelements muss Ansichtszustand des Steuerelements noch aufgefüllt werden. Sie können nicht ein anderes Steuerelement zugreifen, wenn diese Methode aufgerufen wird, auch wenn es sich um ein untergeordnetes oder übergeordnetes dieses Steuerelements ist. Andere Steuerelemente sind nicht bestimmten erstellt und für den Zugriff bereit ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousViewCommandName">
+      <MemberSignature Language="C#" Value="public static readonly string PreviousViewCommandName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string PreviousViewCommandName" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.MultiView.PreviousViewCommandName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Den Befehlsnamen verknüpft sind, mit dem vorherigen <see cref="T:System.Web.UI.WebControls.View" /> -Steuerelement zum Anzeigen von in einem <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MultiView.PreviousViewCommandName> -Feld wird der Befehlsname "PrevView" dargestellt.  
+  
+ Können Sie den Wert dieses Felds nutzen die <xref:System.Web.UI.WebControls.MultiView> des Steuerelements automatische Aktualisierung, des aktiven <xref:System.Web.UI.WebControls.View> Steuerelement. Z. B. wenn eine <xref:System.Web.UI.WebControls.View> Steuerelement enthält eine <xref:System.Web.UI.WebControls.Button> , zu der navigiert zum nächsten Steuerelement <xref:System.Web.UI.WebControls.View>, können Sie festlegen, die <xref:System.Web.UI.WebControls.Button.CommandName%2A> auf den Wert der Eigenschaft der <xref:System.Web.UI.WebControls.MultiView.PreviousViewCommandName> Feld, das "PrevView" ist. Dies bewirkt, dass die <xref:System.Web.UI.WebControls.MultiView> kontrollieren automatisch erhöhen den Wert der <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft auf die Schaltfläche geklickt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.MultiView> Steuerelement um eine einfache Umfrage zu erstellen. Jede <xref:System.Web.UI.WebControls.View> Steuerelement ist eine separate Frage. Die <xref:System.Web.UI.WebControls.MultiView.PreviousViewCommandName> und <xref:System.Web.UI.WebControls.MultiView.NextViewCommandName> Felder werden verwendet, um die automatische Navigation zwischen dem vorherigen und nächsten bieten <xref:System.Web.UI.WebControls.View> Steuerelemente in der Umfrage.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MultiView.NextViewCommandName#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MultiView.NextViewCommandName/CS/multiview.nextviewcommandnamecs.aspx#1)]
+ [!code-aspx-vb[MultiView.NextViewCommandName#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MultiView.NextViewCommandName/VB/multiview.nextviewcommandnamevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovedControl">
+      <MemberSignature Language="C#" Value="protected override void RemovedControl (System.Web.UI.Control ctl);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RemovedControl(class System.Web.UI.Control ctl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MultiView.RemovedControl(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctl" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="ctl">Die <see cref="T:System.Web.UI.WebControls.View" /> -Steuerelement, das entfernt wurde.</param>
+        <summary>Wird aufgerufen, nachdem ein <see cref="T:System.Web.UI.WebControls.View" /> Entfernen des Steuerelements wird von der <see cref="P:System.Web.UI.Control.Controls" /> Auflistung von einer <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Control.RemovedControl%2A> Methode wird aufgerufen, unmittelbar nach einer <xref:System.Web.UI.WebControls.View> Entfernen des Steuerelements wird von der <xref:System.Web.UI.Control.Controls%2A> Auflistung von einer <xref:System.Web.UI.WebControls.MultiView> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MultiView.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />, der den Ausgabestream für das Rendering von HTML-Inhalten auf dem Client darstellt.</param>
+        <summary>Schreibt die <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuern des Inhalts auf den angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt, für die Anzeige auf dem Client.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.MultiView.Render%2A> Methode wird hauptsächlich von Steuerelemententwicklern verwendet, wenn eine benutzerdefinierte Klasse von Ableiten der <xref:System.Web.UI.WebControls.MultiView> Steuerelement.  
+  
+ Die <xref:System.Web.UI.WebControls.MultiView.Render%2A> Methode schreibt den gerenderten Inhalt der aktiven Ansicht an den Client mit dem angegebenen <xref:System.Web.UI.HtmlTextWriter>. Sie können die aktive Ansicht festlegen, in eine <xref:System.Web.UI.WebControls.MultiView> steuern Sie mithilfe der <xref:System.Web.UI.WebControls.MultiView.SetActiveView%2A> Methode oder die <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft. Können Sie bestimmen, welche die <xref:System.Web.UI.WebControls.View> steuert in der <xref:System.Web.UI.WebControls.MultiView.Views%2A> Auflistung ist die aktive Ansicht aus, sofern vorhanden, mit der <xref:System.Web.UI.WebControls.MultiView.GetActiveView%2A> Methode oder die <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft.  
+  
+ Wenn eine aktive Ansicht, für festgelegt ist die <xref:System.Web.UI.WebControls.MultiView> zu steuern, die aktive <xref:System.Web.UI.WebControls.View> Steuerelement wird zum Rendern von Inhalt für diese Sicht und seine untergeordneten Steuerelemente verwendet. Wenn eine aktive Ansicht für nicht festgelegt ist die <xref:System.Web.UI.WebControls.MultiView> Steuerelement keinen Inhalt wird gerendert, auf die <xref:System.Web.UI.HtmlTextWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveControlState">
+      <MemberSignature Language="C#" Value="protected override object SaveControlState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object SaveControlState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MultiView.SaveControlState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert den aktuellen Zustand der <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , die den Status des darstellt der <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement. Wenn kein zugeordnet Zustand der <see cref="T:System.Web.UI.WebControls.MultiView" /> zu steuern, gibt diese Methode <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetActiveView">
+      <MemberSignature Language="C#" Value="public void SetActiveView (System.Web.UI.WebControls.View view);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetActiveView(class System.Web.UI.WebControls.View view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MultiView.SetActiveView(System.Web.UI.WebControls.View)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="System.Web.UI.WebControls.View" />
+      </Parameters>
+      <Docs>
+        <param name="view">Ein <see cref="T:System.Web.UI.WebControls.View" /> als aktive Ansicht innerhalb der festzulegenden Steuerelements ein <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</param>
+        <summary>Setzt den angegebenen <see cref="T:System.Web.UI.WebControls.View" /> Steuerelement auf die aktive Ansicht innerhalb einer <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie festlegen einer <xref:System.Web.UI.WebControls.View> -Steuerelement innerhalb einer <xref:System.Web.UI.WebControls.MultiView> Steuerelement als aktive Ansicht. Nur ein <xref:System.Web.UI.WebControls.View> Steuerelement zu einem Zeitpunkt kann in als aktiv definiert eine <xref:System.Web.UI.WebControls.MultiView> Steuerelement. Die <xref:System.Web.UI.WebControls.View> -Steuerelement, das festgelegt wird, wie an dem Client die aktive Ansicht gerendert wird. Wenn eine <xref:System.Web.UI.WebControls.View> Steuerelement, das nicht in vorhanden ist die <xref:System.Web.UI.WebControls.MultiView> Steuerelement als aktiv festgelegt ist, wird zur Laufzeit eine Ausnahme ausgelöst. Wenn kein <xref:System.Web.UI.WebControls.View> Steuerelement festgelegt ist, als die aktive Ansicht der <xref:System.Web.UI.WebControls.MultiView> Rendern Steuerelements alle Inhalte, die nicht an dem Client.  
+  
+ Mithilfe der <xref:System.Web.UI.WebControls.MultiView.SetActiveView%2A> Methode, um die aktive Ansicht programmgesteuert festlegen, kann die Anwendung ermitteln, welche <xref:System.Web.UI.WebControls.View> Steuerelement zur Laufzeit an den Client Rendern auf der Grundlage von Kriterien wie z. B. die Identität und die Einstellungen eines Benutzers.  
+  
+ Alternativ können Sie die <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft zum Abrufen oder Festlegen des nullbasierten Indexes des derzeit aktiven Ansicht in einem <xref:System.Web.UI.WebControls.MultiView> Steuerelement. Diese Eigenschaft kann entweder deklarativ oder programmgesteuert zugegriffen werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Web.UI.WebControls.MultiView> Steuerelement, das drei enthält <xref:System.Web.UI.WebControls.View> Steuerelemente. Die ersten Mal die Seite geladen ist, die `DefaultView` festgelegt ist, als die aktive Ansicht mithilfe der <xref:System.Web.UI.WebControls.MultiView.SetActiveView%2A> Methode. Jede <xref:System.Web.UI.WebControls.View> Steuerelement enthält Verknüpfungsschaltflächen, damit der Benutzer zu anderen Ansichten navigieren kann.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-vb[MultiView Class Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MultiView Class Example/VB/multiviewclass1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Das angegebene <paramref name="view" /> Parameterwert wurde nicht innerhalb der <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchViewByIDCommandName">
+      <MemberSignature Language="C#" Value="public static readonly string SwitchViewByIDCommandName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string SwitchViewByIDCommandName" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.MultiView.SwitchViewByIDCommandName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Den Befehlsnamen zugeordnet, ändern den aktiven <see cref="T:System.Web.UI.WebControls.View" /> -Steuerelement in einem <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement, basierend auf einer angegebenen <see cref="T:System.Web.UI.WebControls.View" /> Id. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MultiView.SwitchViewByIDCommandName> -Feld wird der Befehlsname "SwitchViewByID" dargestellt.  
+  
+ Können Sie den Wert dieses Felds nutzen die <xref:System.Web.UI.WebControls.MultiView> des Steuerelements automatische Aktualisierung, des aktiven <xref:System.Web.UI.WebControls.View> Steuerelement. Z. B. wenn ein <xref:System.Web.UI.WebControls.View> Steuerelement enthält eine <xref:System.Web.UI.WebControls.Button> Steuerelement, das mit dem ersten navigiert <xref:System.Web.UI.WebControls.View> beim geklickt haben, können Sie festlegen der <xref:System.Web.UI.WebControls.Button.CommandName%2A> auf den Wert der Eigenschaft der <xref:System.Web.UI.WebControls.MultiView.SwitchViewByIDCommandName> Feld, das "SwitchViewByID" ist. Legen Sie die <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> Eigenschaft, um die ID des ersten <xref:System.Web.UI.WebControls.View> in die <xref:System.Web.UI.WebControls.MultiView> Kontrolle, z. B. "Page1". Dies bewirkt, dass die <xref:System.Web.UI.WebControls.MultiView> -Steuerelement automatisch "Page1" als aktive <xref:System.Web.UI.WebControls.View> Wenn die Schaltfläche geklickt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.MultiView> Steuerelement um eine einfache Umfrage zu erstellen. Jede <xref:System.Web.UI.WebControls.View> Steuerelement ist eine separate Frage. Die <xref:System.Web.UI.WebControls.MultiView.PreviousViewCommandName> und <xref:System.Web.UI.WebControls.MultiView.NextViewCommandName> Felder werden verwendet, um die automatische Navigation zwischen dem vorherigen und nächsten bieten <xref:System.Web.UI.WebControls.View> Steuerelemente in der Umfrage. Wenn der Benutzer klickt auf die **Umfrage wiederholen** Schaltfläche in den letzten <xref:System.Web.UI.WebControls.View> der Umfrage, die <xref:System.Web.UI.WebControls.MultiView.SwitchViewByIDCommandName> Feld wird zusammen mit einem Befehlsargument "Page1" verwendet, zum Umleiten des Benutzers zurück an das erste <xref:System.Web.UI.WebControls.View> der Umfrage.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MultiView.NextViewCommandName#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MultiView.NextViewCommandName/CS/multiview.nextviewcommandnamecs.aspx#1)]
+ [!code-aspx-vb[MultiView.NextViewCommandName#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MultiView.NextViewCommandName/VB/multiview.nextviewcommandnamevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchViewByIndexCommandName">
+      <MemberSignature Language="C#" Value="public static readonly string SwitchViewByIndexCommandName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string SwitchViewByIndexCommandName" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.MultiView.SwitchViewByIndexCommandName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Den Befehlsnamen zugeordnet, ändern den aktiven <see cref="T:System.Web.UI.WebControls.View" /> -Steuerelement in einem <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement auf der Grundlage eines angegebenen <see cref="T:System.Web.UI.WebControls.View" /> Index. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MultiView.SwitchViewByIndexCommandName> -Feld wird der Befehlsname "SwitchViewByIndex" dargestellt.  
+  
+ Können Sie den Wert dieses Felds nutzen die <xref:System.Web.UI.WebControls.MultiView> des Steuerelements automatische Aktualisierung, des aktiven <xref:System.Web.UI.WebControls.View> Steuerelement. Z. B. wenn ein <xref:System.Web.UI.WebControls.View> Steuerelement enthält eine <xref:System.Web.UI.WebControls.Button> Steuerelement, das mit dem ersten navigiert <xref:System.Web.UI.WebControls.View> beim geklickt haben, können Sie festlegen der <xref:System.Web.UI.WebControls.Button.CommandName%2A> auf den Wert der Eigenschaft der <xref:System.Web.UI.WebControls.MultiView.SwitchViewByIndexCommandName> Feld, das "SwitchViewByIndex" ist. Festlegen der <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> Eigenschaft auf den Index des ersten <xref:System.Web.UI.WebControls.View> in die <xref:System.Web.UI.WebControls.MultiView> Steuerelement, das 0 ist. Dies bewirkt, dass die <xref:System.Web.UI.WebControls.MultiView> -Steuerelement automatisch die <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> Eigenschaft auf 0, wenn die Schaltfläche geklickt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.MultiView> Steuerelement um eine einfache Umfrage zu erstellen. Jede <xref:System.Web.UI.WebControls.View> Steuerelement ist eine separate Frage. Die <xref:System.Web.UI.WebControls.MultiView.PreviousViewCommandName> und <xref:System.Web.UI.WebControls.MultiView.NextViewCommandName> Felder werden verwendet, um die automatische Navigation zwischen dem vorherigen und nächsten bieten <xref:System.Web.UI.WebControls.View> Steuerelemente in der Umfrage. Wenn der Benutzer klickt auf die **Umfrage wiederholen** Schaltfläche in den letzten <xref:System.Web.UI.WebControls.View> der Umfrage, die <xref:System.Web.UI.WebControls.MultiView.SwitchViewByIndexCommandName> Feld wird zusammen mit einem Befehlsargument von 0 verwendet, zum Umleiten des Benutzers zurück an das erste <xref:System.Web.UI.WebControls.View> der Umfrage.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MultiView.SwitchViewByIndexCommandName#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MultiView.SwitchViewByIndexCommandName/CS/multiview.switchviewbyindexcommandnamecs.aspx#1)]
+ [!code-aspx-vb[MultiView.SwitchViewByIndexCommandName#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MultiView.SwitchViewByIndexCommandName/VB/multiview.switchviewbyindexcommandnamevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Views">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ViewCollection Views { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ViewCollection Views" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MultiView.Views" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ViewCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der <see cref="T:System.Web.UI.WebControls.View" /> steuert in der <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.ViewCollection" /> , die stellt eine Auflistung von <see cref="T:System.Web.UI.WebControls.View" /> steuert innerhalb einer <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft für die programmgesteuerte der <xref:System.Web.UI.WebControls.View> Steuerelemente in einem <xref:System.Web.UI.WebControls.MultiView> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie programmgesteuert hinzufügen <xref:System.Web.UI.WebControls.View> -Steuerelementen an eine <xref:System.Web.UI.WebControls.MultiView> Steuerelement. Nach jedem <xref:System.Web.UI.WebControls.View> Steuerelement erstellt, die `MultiView.Views.Add()` Syntax wird verwendet, um das Hinzufügen der <xref:System.Web.UI.WebControls.View> die Steuerung an die <xref:System.Web.UI.WebControls.ViewCollection> Auflistung von der <xref:System.Web.UI.WebControls.MultiView> Steuerelement.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-vb[MultiView.Views Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MultiView.Views Example/VB/multiviewviewsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

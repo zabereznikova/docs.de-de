@@ -1,0 +1,96 @@
+<Type Name="GetChildAtPointSkip" FullName="System.Windows.Forms.GetChildAtPointSkip">
+  <TypeSignature Language="C#" Value="public enum GetChildAtPointSkip" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GetChildAtPointSkip extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.GetChildAtPointSkip" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, welche untergeordneten Steuerelemente übersprungen werden sollen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das System verwaltet eine interne Liste, die ein übergeordnetes Fenster zugeordneten untergeordneten Steuerelemente enthält. Die Reihenfolge der Steuerelemente in der Liste hängt von der Z-Reihenfolge der untergeordneten Steuerelemente ab. Wenn mehr als ein untergeordnetes Fenster den angegebenen Punkt enthält, gibt das System das erste Steuerelement in der Liste, die den Punkt enthält und die vom angegebenen Kriterien erfüllt <xref:System.Windows.Forms.GetChildAtPointSkip>.  
+  
+ Weitere Informationen finden Sie unter `ChildWindowFromPointEx` in der Platform SDK-Dokumentation.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Disabled">
+      <MemberSignature Language="C#" Value="Disabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.GetChildAtPointSkip Disabled = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.GetChildAtPointSkip.Disabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GetChildAtPointSkip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überspringt deaktivierte untergeordnete Fenster.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Invisible">
+      <MemberSignature Language="C#" Value="Invisible" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.GetChildAtPointSkip Invisible = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.GetChildAtPointSkip.Invisible" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GetChildAtPointSkip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überspringt die unsichtbar untergeordnete Fenster.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.GetChildAtPointSkip None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.GetChildAtPointSkip.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GetChildAtPointSkip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überspringen keine untergeordneten Fenster nicht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Transparent">
+      <MemberSignature Language="C#" Value="Transparent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.GetChildAtPointSkip Transparent = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.GetChildAtPointSkip.Transparent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GetChildAtPointSkip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überspringt die transparente untergeordnete Fenster.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

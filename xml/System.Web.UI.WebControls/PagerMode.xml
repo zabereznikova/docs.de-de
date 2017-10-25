@@ -1,0 +1,57 @@
+<Type Name="PagerMode" FullName="System.Web.UI.WebControls.PagerMode">
+  <TypeSignature Language="C#" Value="public enum PagerMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PagerMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.PagerMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Modus des Pagers für den Zugriff auf verschiedene Seiten innerhalb der <see cref="T:System.Web.UI.WebControls.DataGrid" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.PagerMode> Enumeration stellt die Anzeigemodi für den Pager des ein <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. NextPrev zeigt die Pagersteuerelemente, die mithilfe von `Next` und `Previous` Schaltflächen; NumericPages Zeigt numerische Schaltflächen, die die einzelnen Seitenzahlen darstellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NextPrev">
+      <MemberSignature Language="C#" Value="NextPrev" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.PagerMode NextPrev = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.PagerMode.NextPrev" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.PagerMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Pager mit <see langword="Previous" /> und <see langword="Next" /> Schaltflächen auf der nächsten und vorhergehenden Seiten zugreifen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NumericPages">
+      <MemberSignature Language="C#" Value="NumericPages" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.PagerMode NumericPages = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.PagerMode.NumericPages" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.PagerMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Pager mit nummerierten Schaltflächen auf Seiten direkt zugreifen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

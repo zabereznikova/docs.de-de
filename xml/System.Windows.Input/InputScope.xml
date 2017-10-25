@@ -1,0 +1,163 @@
+<Type Name="InputScope" FullName="System.Windows.Input.InputScope">
+  <TypeSignature Language="C#" Value="public class InputScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InputScope extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.InputScope" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter("System.Windows.Input.InputScopeConverter, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Informationen bezüglich des Gültigkeitsbereichs, der durch eine Eingabemethode bereitgestellte Daten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.FrameworkElement.InputScope%2A> und <xref:System.Windows.FrameworkContentElement.InputScope%2A> Eigenschaften zum Abrufen einer <xref:System.Windows.Input.InputScope> für ein bestimmtes Element.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InputScope ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputScope.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Input.InputScope" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Names">
+      <MemberSignature Language="C#" Value="public System.Collections.IList Names { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList Names" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputScope.Names" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Eingabebereich Namen.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Windows.Input.InputScopeName" /> -Enumeration, die einen Namen für diesen Eingabebereich angibt.  
+  
+ Der Standardwert ist <see cref="F:System.Windows.Input.InputScopeNameValue.Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Eingabebereich verwendet, ist die einfachste Möglichkeit zum Verweisen auf eine <xref:System.Windows.Input.InputScope> nach einem Element.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn versucht wird, legen Sie diese Eigenschaft auf einen anderen Wert als ein gültiges Mitglied der <see cref="T:System.Windows.Input.InputScopeName" /> Enumeration.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PhraseList">
+      <MemberSignature Language="C#" Value="public System.Collections.IList PhraseList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList PhraseList" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputScope.PhraseList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Ausdrücken als Vorschläge Eingabemuster Eingabemuster verwendet werden.</summary>
+        <value>Ein Objekt mit einer Auflistung von Ausdrücken als Vorschläge Eingabemuster Eingabemuster verwendet werden.  Dieses Objekt implementiert die <see cref="T:System.Collections.IList" /> Schnittstelle.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegularExpression">
+      <MemberSignature Language="C#" Value="public string RegularExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RegularExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputScope.RegularExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen regulären Ausdruck als eine vorgeschlagene Texteingabemuster Eingabemuster verwendet werden.</summary>
+        <value>Eine Zeichenfolge, die einen regulären Ausdruck als eine vorgeschlagene Texteingabemuster Eingabemuster zu verwendende definiert.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn versucht wird, diese Eigenschaft festzulegen, um **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SrgsMarkup">
+      <MemberSignature Language="C#" Value="public string SrgsMarkup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SrgsMarkup" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputScope.SrgsMarkup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Zeichenfolge mit Markup Speech Recognition Grammatik Specification (SRGS) als eine vorgeschlagene Eingabemuster Eingabemuster verwendet werden.</summary>
+        <value>Eine Zeichenfolge, die alle SRGS Markup als vorgeschlagenes Eingabemuster verwendet werden soll.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist derzeit nur auf Spracheingaben anwendbar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn versucht wird, diese Eigenschaft festzulegen, um **null**.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

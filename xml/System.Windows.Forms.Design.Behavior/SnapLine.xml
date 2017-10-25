@@ -1,0 +1,426 @@
+<Type Name="SnapLine" FullName="System.Windows.Forms.Design.Behavior.SnapLine">
+  <TypeSignature Language="C#" Value="public sealed class SnapLine" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SnapLine extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.Behavior.SnapLine" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das horizontale und das vertikale Liniensegment dar, die auf der Benutzeroberfläche dynamisch erstellt werden, um das Layout von Steuerelementen in einem Container zur Entwurfszeit zu unterstützen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle enthält die gängigen Modi, die visuellen Entwurfstools unterstützen, um Sie mit der Position und Größe der Steuerelemente auf einer Entwurfsoberfläche zu unterstützen.  
+  
+|Modus|Beschreibung|  
+|----------|-----------------|  
+|Freihandform|Ermöglicht es Ihnen frei Layout von Steuerelementen.|  
+|Raster|Zeigt ein statische überlagerten Raster, das Ihnen dabei hilft, Anordnen von Steuerelementen.|  
+|Ausrichtungslinie|Zeigt die Führungslinien, die Sie bei der Anordnung Containersteuerelementen relativ zueinander. Ausrichtungslinien stammen aus den Steuerelementen und deren Container.|  
+  
+ Die <xref:System.Windows.Forms.Design.Behavior.SnapLine> -Klasse und verwandte Typen Hilfe und Unterstützung den Ausrichtungslinie-Modus.  
+  
+ Ausrichtungslinien werden dynamisch generiert und automatisch als ein Steuerelement Edge verschiebt in der Nähe eines anderen Steuerelements oder in der Nähe der Grenzen des Containers. Dies kann auftreten, wenn ein Steuerelement aus der Toolbox hinzugefügt oder verschoben oder Größe von Maus oder Tastaturbefehle. -Steuerelement hat normalerweise die horizontale und vertikale Ausrichtungslinien definiert; für rechteckige Steuerelemente erweitern diese in der Regel über alle vier Seiten.  
+  
+ Die <xref:System.Windows.Forms.Design.Behavior.SnapLine> Klasse verwendet nur wenige Eigenschaften jedes Ausrichtungslinie beschreiben, wie in der folgenden Tabelle gezeigt.  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Windows.Forms.Design.Behavior.SnapLine.SnapLineType%2A>|Gibt den Speicherort und die Richtung der Zeile in Bezug auf das zugeordnete Steuerelement an. In der Regel werden nur Ausrichtungslinien ähnliche Typen automatische-zueinander ausgerichtet.|  
+|<xref:System.Windows.Forms.Design.Behavior.SnapLine.Offset%2A>|Gibt den Abstand in Pixel vom Ursprung, d., der h. der oberen linken Ecke des Steuerelements, um, in der Ausrichtungslinie beginnt.|  
+|<xref:System.Windows.Forms.Design.Behavior.SnapLine.Priority%2A>|Gibt die relative Wichtigkeit der Ausrichtungslinie an. Bei jeder angegebenen Layout entscheidender Aspekt werden nur die Ausrichtungslinien, die aktiv sind und haben die höchste Priorität angezeigt.|  
+|<xref:System.Windows.Forms.Design.Behavior.SnapLine.Filter%2A>|Definiert benutzerdefinierte Kategorien von Ausrichtungslinien an. Dies ist eine optionale Zeichenfolge.|  
+|<xref:System.Windows.Forms.Design.Behavior.SnapLine.IsHorizontal%2A> und <xref:System.Windows.Forms.Design.Behavior.SnapLine.IsVertical%2A>|Gibt an, ob es sich bei eine Ausrichtungslinie horizontale oder vertikale Ausrichtung aufweist.|  
+  
+ Die <xref:System.Windows.Forms.Design.ControlDesigner> Klasse speichert Ausrichtungslinien für den entsprechenden Steuerelementtyp in der <xref:System.Windows.Forms.Design.ControlDesigner.SnapLines%2A> Eigenschaft. Diese Basisklasse Behandlung von Ausrichtungslinien reicht für die meisten Steuerelemente, die definiert werden, die <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Left>, <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Right>, <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Top>, und <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Bottom> Ausrichtungslinien, die an den Rändern des Steuerelements ausgerichtet werden. Wenn Sie ein benutzerdefiniertes Steuerelement entwickeln, wenn diese Standardorganisation nicht ausreicht, überschreiben die <xref:System.Windows.Forms.Design.ControlDesigner.SnapLines%2A> Eigenschaft der Klasse abgeleitet <xref:System.Windows.Forms.Design.ControlDesigner>. Beispielsweise empfiehlt es sich zum Ausrichten von horizontalen Ausrichtungslinien textbasierte Steuerelemente wie Beschriftungen, mit dem nach oben und Base Textzeilen der (statt der oberen und unteren Randes des Steuerelements).  
+  
+ Die <xref:System.Windows.Forms.Design.Behavior.SnapLine.SnapLineType%2A> Klasse kann nicht abgeleitet werden.  
+  
+ Bietet umfassende Unterstützung für dieses Feature in Visual Studio, finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](~/docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten nur explizit Ausrichtungslinien ersetzen oder ergänzen der Ausrichtungslinie Standardverhalten angeboten, die vom visuellen Designer erstellen. Um einer Ausrichtungslinie zu erstellen, sollten Sie eine Instanz der Ausrichtungslinie und fügen Sie es auf die <xref:System.Windows.Forms.Design.ControlDesigner.SnapLines%2A> Eigenschaft von der <xref:System.Windows.Forms.Design.ControlDesigner> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SnapLine (System.Windows.Forms.Design.Behavior.SnapLineType type, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.Design.Behavior.SnapLineType type, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.SnapLine.#ctor(System.Windows.Forms.Design.Behavior.SnapLineType,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.Design.Behavior.SnapLineType" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die zu erstellende <see cref="T:System.Windows.Forms.Design.Behavior.SnapLineType" />. Beschreibt die relative Position und die Ausrichtung der Ausrichtungslinie.</param>
+        <param name="offset">Die Position der Ausrichtungslinie in Pixel in Bezug auf den linken oberen Ursprung des besitzenden Steuerelements.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" />-Klasse unter Verwendung des angegebenen Ausrichtungslinientyps und des angegebenen Offsets.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.Windows.Forms.Design.Behavior.SnapLine.Filter%2A> Eigenschaft `null` und die <xref:System.Windows.Forms.Design.Behavior.SnapLine.Priority%2A> Eigenschaft <xref:System.Windows.Forms.Design.Behavior.SnapLinePriority.Low>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SnapLine (System.Windows.Forms.Design.Behavior.SnapLineType type, int offset, string filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.Design.Behavior.SnapLineType type, int32 offset, string filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.SnapLine.#ctor(System.Windows.Forms.Design.Behavior.SnapLineType,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.Design.Behavior.SnapLineType" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="filter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die zu erstellende <see cref="T:System.Windows.Forms.Design.Behavior.SnapLineType" />. Beschreibt die relative Position und die Ausrichtung der Ausrichtungslinie.</param>
+        <param name="offset">Die Position der Ausrichtungslinie in Pixel in Bezug auf den linken oberen Ursprung des besitzenden Steuerelements.</param>
+        <param name="filter">Eine <see cref="T:System.String" />, die verwendet wird, um eine durch den Programmierer definierte Kategorie von Ausrichtungslinien anzugeben.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" />-Klasse unter Verwendung des angegebenen Ausrichtungslinientyps, des angegebenen Offsets und des angegebenen Filternamens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.Windows.Forms.Design.Behavior.SnapLine.Priority%2A> Eigenschaft <xref:System.Windows.Forms.Design.Behavior.SnapLinePriority.Low>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SnapLine (System.Windows.Forms.Design.Behavior.SnapLineType type, int offset, System.Windows.Forms.Design.Behavior.SnapLinePriority priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.Design.Behavior.SnapLineType type, int32 offset, valuetype System.Windows.Forms.Design.Behavior.SnapLinePriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.SnapLine.#ctor(System.Windows.Forms.Design.Behavior.SnapLineType,System.Int32,System.Windows.Forms.Design.Behavior.SnapLinePriority)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.Design.Behavior.SnapLineType" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="priority" Type="System.Windows.Forms.Design.Behavior.SnapLinePriority" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die zu erstellende <see cref="T:System.Windows.Forms.Design.Behavior.SnapLineType" />. Beschreibt die relative Position und die Ausrichtung der Ausrichtungslinie.</param>
+        <param name="offset">Die Position der Ausrichtungslinie in Pixel in Bezug auf den linken oberen Ursprung des besitzenden Steuerelements.</param>
+        <param name="priority">Die <see cref="T:System.Windows.Forms.Design.Behavior.SnapLinePriority" /> der Ausrichtungslinie.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" />-Klasse unter Verwendung des angegebenen Ausrichtungslinientyps, des angegebenen Offsets und der angegebenen Priorität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.Windows.Forms.Design.Behavior.SnapLine.Filter%2A> Eigenschaft `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SnapLine (System.Windows.Forms.Design.Behavior.SnapLineType type, int offset, string filter, System.Windows.Forms.Design.Behavior.SnapLinePriority priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.Design.Behavior.SnapLineType type, int32 offset, string filter, valuetype System.Windows.Forms.Design.Behavior.SnapLinePriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.SnapLine.#ctor(System.Windows.Forms.Design.Behavior.SnapLineType,System.Int32,System.String,System.Windows.Forms.Design.Behavior.SnapLinePriority)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.Design.Behavior.SnapLineType" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="filter" Type="System.String" />
+        <Parameter Name="priority" Type="System.Windows.Forms.Design.Behavior.SnapLinePriority" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die zu erstellende <see cref="T:System.Windows.Forms.Design.Behavior.SnapLineType" />. Beschreibt die relative Position und die Ausrichtung der Ausrichtungslinie.</param>
+        <param name="offset">Die Position der Ausrichtungslinie in Pixel in Bezug auf den linken oberen Ursprung des besitzenden Steuerelements.</param>
+        <param name="filter">Eine <see cref="T:System.String" />, die verwendet wird, um eine durch den Programmierer definierte Kategorie von Ausrichtungslinien anzugeben.</param>
+        <param name="priority">Die <see cref="T:System.Windows.Forms.Design.Behavior.SnapLinePriority" /> der Ausrichtungslinie.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" />-Klasse unter Verwendung des angegebenen Ausrichtungslinientyps, des angegebenen Offsets, des angegebenen Filternamens und der angegebenen Priorität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt alle Eigenschaften einer Ausrichtungslinie Programmierer bereitgestellten Werten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdjustOffset">
+      <MemberSignature Language="C#" Value="public void AdjustOffset (int adjustment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AdjustOffset(int32 adjustment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.SnapLine.AdjustOffset(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adjustment" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="adjustment">Die Anzahl der Pixel, um die der Offset der Ausrichtungslinie geändert werden soll.</param>
+        <summary>Passt die <see cref="P:System.Windows.Forms.Design.Behavior.SnapLine.Offset" />-Eigenschaft der Ausrichtungslinie an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Offset einer Ausrichtungslinie ist der Abstand in Pixel der Ausrichtungslinie aus die linken oberen Ursprung des zugeordneten Steuerelements befindet. Obwohl der Offset auf einen ganzzahligen Wert festgelegt werden kann, in der Regel Ausrichtungslinien behalten die räumliche Beziehungen impliziert durch ihre <xref:System.Windows.Forms.Design.Behavior.SnapLine.SnapLineType%2A> Eigenschaftswert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public string Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.SnapLine.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vom Programmierer definierte Filterkategorie ab, die dieser Ausrichtungslinie zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.String" />, der die Filterkategorie definiert. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.Behavior.SnapLine.Filter%2A> Eigenschaft wird verwendet, um benutzerdefinierte Kategorien von Ausrichtungslinien zu definieren. Zueinander ausgerichtet werden soll, können nur Ausrichtungslinien mit dem gleichen Filternamen. Diese Eigenschaft kann im benutzerdefinierten Steuerelement-Designer verwendet werden, um verschiedene Kategorien von Ausrichtungslinien abhängig von den Zustand des Steuerelements oder den Typ des ausgeführten Vorgang verfügbar zu machen. Round-Steuerelemente können z. B. eine benutzerdefinierte Ausrichtungslinie mit dem Filterwert "Center" bieten.  
+  
+ Diese Eigenschaft wird während der Erstellung initialisiert und kann nicht geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHorizontal">
+      <MemberSignature Language="C#" Value="public bool IsHorizontal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHorizontal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.SnapLine.IsHorizontal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Ausrichtungslinie horizontal ausgerichtet ist.</summary>
+        <value>
+          <see langword="true" />, wenn es sich um eine horizontale Ausrichtungslinie handelt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Ausrichtungslinientypen sind horizontale: <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Top>, <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Bottom>, <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Horizontal>, und <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Baseline>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVertical">
+      <MemberSignature Language="C#" Value="public bool IsVertical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVertical" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.SnapLine.IsVertical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Ausrichtungslinie vertikal ausgerichtet ist.</summary>
+        <value>
+          <see langword="true" />, wenn es sich um eine vertikale Ausrichtungslinie handelt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Ausrichtungslinientypen vertikal sind: <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Left>, <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Right>, und <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Vertical>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public int Offset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Offset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.SnapLine.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Offset in Pixel der Ausrichtungslinie in Bezug auf den Ursprung des zugeordneten Steuerelements ab.</summary>
+        <value>Der Offset der Ausrichtungslinie in Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Ursprung eines Steuerelements ist die linke obere Punkt des Steuerelements. Ein einzelnen Offset die Position einer Ausrichtungslinie beschreiben, da vertikale Ausrichtungslinien nur ein Wert ungleich NULL x-Achse Offset haben können, wohingegen horizontale Ausrichtungslinien nur eine Wert ungleich NULL y-Achse sind möglicherweise Offset.  
+  
+ Die <xref:System.Windows.Forms.Design.Behavior.SnapLine.Offset%2A> Eigenschaft wird bei der Konstruktion initialisiert, aber danach mit geändert werden die <xref:System.Windows.Forms.Design.Behavior.SnapLine.AdjustOffset%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Design.Behavior.SnapLinePriority Priority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Design.Behavior.SnapLinePriority Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.SnapLine.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.SnapLinePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die relative Wichtigkeit der Ausrichtungslinie angibt.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.Design.Behavior.SnapLinePriority" />, die die Prioritätskategorie einer Ausrichtungslinie darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.Behavior.SnapLine.Priority%2A> Eigenschaft richtet Kategorien für die Ausrichtungslinien, die einem Steuerelement zugeordnete Wichtigkeit.  
+  
+ Windows Forms-Designer verwendet diese Eigenschaft, um zu bestimmen, welche Ausrichtungslinien, während ein Steuerelement hinzugefügt, zum Anzeigen, Ändern der Größe oder Verschiebevorgang ab. Weitere Informationen finden Sie unter der <xref:System.Windows.Forms.Design.Behavior.SnapLinePriority>-Enumeration.  
+  
+ Diese Eigenschaft wird während der Erstellung initialisiert und kann nicht geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSnap">
+      <MemberSignature Language="C#" Value="public static bool ShouldSnap (System.Windows.Forms.Design.Behavior.SnapLine line1, System.Windows.Forms.Design.Behavior.SnapLine line2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ShouldSnap(class System.Windows.Forms.Design.Behavior.SnapLine line1, class System.Windows.Forms.Design.Behavior.SnapLine line2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.SnapLine.ShouldSnap(System.Windows.Forms.Design.Behavior.SnapLine,System.Windows.Forms.Design.Behavior.SnapLine)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="line1" Type="System.Windows.Forms.Design.Behavior.SnapLine" />
+        <Parameter Name="line2" Type="System.Windows.Forms.Design.Behavior.SnapLine" />
+      </Parameters>
+      <Docs>
+        <param name="line1">Das angegebene <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" />.</param>
+        <param name="line2">Die <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" />, an der die angegebene <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> ausgerichtet werden soll.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob die angegebene <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> an einer anderen <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> ausgerichtet werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="line1" /> an <paramref name="line2" /> ausgerichtet werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SnapLineType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Design.Behavior.SnapLineType SnapLineType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Design.Behavior.SnapLineType SnapLineType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.SnapLine.SnapLineType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.SnapLineType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ einer Ausrichtungslinie ab, der die allgemeine Position und die allgemeine Ausrichtung angibt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Design.Behavior.SnapLineType" />, der die Ausrichtung und die allgemeine Position einer Ausrichtungslinie in Bezug auf die Ränder des Steuerelements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die visuelle Designern die <xref:System.Windows.Forms.Design.Behavior.SnapLine.SnapLineType%2A> Eigenschaft, um Ausrichtungsvorgänge. In der Regel können nur die Ausrichtungslinien, die auf ähnliche Weise ausgerichtet sind zueinander ausgerichtet werden. Beispielsweise zwei Ausrichtungslinien vom Typ <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Horizontal> zusammen ausrichten können jedoch eine <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Horizontal> und ein <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Vertical> Ausrichtungslinie kann nicht.  
+  
+ Diese Eigenschaft wird während der Erstellung initialisiert und kann nicht geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.SnapLine.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung der aktuellen Ausrichtungslinie zurück.</summary>
+        <returns>Ein <see cref="T:System.String" />, der den aktuellen <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Zeichenfolge, die Details zu den Typ, Offset, Priorität und Filterwerten der Ausrichtungslinie enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

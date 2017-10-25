@@ -1,0 +1,300 @@
+<Type Name="CustomReflectionContext" FullName="System.Reflection.Context.CustomReflectionContext">
+  <TypeSignature Language="C#" Value="public abstract class CustomReflectionContext : System.Reflection.ReflectionContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CustomReflectionContext extends System.Reflection.ReflectionContext" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Context.CustomReflectionContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Context</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.ReflectionContext</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen benutzerdefinierten Reflektionskontext dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Reflection.Context.CustomReflectionContext>bietet eine Möglichkeit für die Sie hinzufügen oder Entfernen von benutzerdefinierten Attributen aus Reflektionsobjekte oder dummy-Eigenschaften auf diese Objekte hinzufügen, ohne das Reflektionsmodell der vollständigen erneut zu implementieren. Die Standardeinstellung <xref:System.Reflection.Context.CustomReflectionContext> einfach umschließt Reflektion ohne jegliche Änderungen vornehmen, umfasst jedoch Unterklasse erstellen und die entsprechenden Methoden überschreiben, können hinzufügen, entfernen oder ändern Sie die Attribute, die für alle reflektierte Parameter- oder Membernamen gelten, oder neue Eigenschaften hinzufügen, eine reflektierten Typ.  
+  
+ Nehmen wir beispielsweise an, dass Code folgt der Konvention Factorymethoden ein bestimmtes Attribut zuweisen, aber Sie müssen nun zum Arbeiten mit Code von Drittanbietern, die nicht über Attribute verfügt. Sie können <xref:System.Reflection.Context.CustomReflectionContext> an eine Regel zum Identifizieren der Objekte, die Attribute haben sollen, und die Objekte mit diesen Attributen angeben, wenn sie aus dem Code angezeigt werden.  
+  
+ Mit <xref:System.Reflection.Context.CustomReflectionContext> effektiv, muss der Code die reflektierte Objekte verwendet unterstützen das Konzept der Angabe von Reflektionskontext, anstatt davon ausgegangen, dass alle reflektiert Objekte sind der Reflektion Laufzeitkontext zugeordnet. Viele Reflektionsmethoden in .NET Framework bieten eine <xref:System.Reflection.ReflectionContext> -Parameter für diesen Zweck.  
+  
+ Um die Attribute zu ändern, die eine reflektierte Parameter- oder Membernamen angewendet werden, überschreiben die <xref:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes%28System.Reflection.ParameterInfo%2CSystem.Collections.Generic.IEnumerable%7BSystem.Object%7D%29> oder <xref:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes%28System.Reflection.MemberInfo%2CSystem.Collections.Generic.IEnumerable%7BSystem.Object%7D%29> Methode. Diese Methoden nehmen die reflektierte Objekt und die Liste der Attribute unter seiner aktuellen Reflektionskontext und Zurückgeben der Liste der Attribute, die unter der benutzerdefinierten Reflektionskontext verfügen sollte.  
+  
+> [!WARNING]
+>  <xref:System.Reflection.Context.CustomReflectionContext>sollte nicht den Zugriff auf Methoden die Liste der Attribute einer reflektierte Objekt oder die Methode direkt durch Aufrufen der <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A> Methode zur angegebenen <xref:System.Reflection.MemberInfo> oder <xref:System.Reflection.ParameterInfo> -Instanz, sondern müssen stattdessen verwenden die `declaredAttributes` Liste aus, die als Parameter übergeben wird um die <xref:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes%2A> methodenüberladungen.  
+  
+ Um Eigenschaften, die einen reflektierten Typ hinzuzufügen, überschreiben die <xref:System.Reflection.Context.CustomReflectionContext.AddProperties%2A> Methode. Die Methode akzeptiert einen Parameter, der gibt den reflektierten Typ und gibt eine Liste von zusätzlichen Eigenschaften zurück. Verwenden Sie die <xref:System.Reflection.Context.CustomReflectionContext.CreateProperty%2A> Methode zum Erstellen der Property-Objekte zurückgegeben. Sie können Delegaten angeben, wenn die Eigenschaft erstellen, als-Accessor der Eigenschaft dient, und Sie einen der Accessoren zum Erstellen einer nur-Lese oder nur-Schreiben Eigenschaft lassen. Beachten Sie, dass solche dummy-Eigenschaften keine Metadaten oder der Common Intermediate Language (CIL) sichern.  
+  
+> [!WARNING]
+>  Seien Sie vorsichtig bezüglich der Gleichheit zwischen reflektierte Objekten bei der Arbeit mit reflektionskontexte, da Objekte reflektierte dasselbe Objekt in mehreren Kontexten darstellen. Sie können die <xref:System.Reflection.Context.CustomReflectionContext.MapType%2A> Methode, um einen bestimmten Reflektionskontext Version eines reflektierte Objekts abzurufen.  
+  
+> [!WARNING]
+>  Ein <xref:System.Reflection.Context.CustomReflectionContext> Objekt ändert die Attribute zurückgegeben, die von einem bestimmten Reflektionsobjekt, z. B. die erhalten, indem die <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A> Methode. Es wird nicht von zurückgegebenen benutzerdefinierten Attributdaten verändert die <xref:System.Reflection.MemberInfo.GetCustomAttributesData%2A> -Methode, und diese zwei Listen stimmen nicht überein, wenn Sie einen benutzerdefinierten Reflektionskontext verwenden.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie Sie Unterklasse <xref:System.Reflection.Context.CustomReflectionContext> zum Hinzufügen eines benutzerdefinierten Attributs auf alle Elemente eines angegebenen Typs, deren Namen beginnen mit "Zu". Um diesen Code auszuführen, fügen Sie ihn in einem leeren Konsole-Projekt, und achten Sie darauf, einen Verweis auf System.Reflection.Context.dll verfügen.  
+  
+ [!code-csharp[System.Reflection.Context.CustomReflectionContext#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.context.customreflectioncontext/cs/program.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CustomReflectionContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Context.CustomReflectionContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Context</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.Context.CustomReflectionContext" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CustomReflectionContext (System.Reflection.ReflectionContext source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Reflection.ReflectionContext source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Context.CustomReflectionContext.#ctor(System.Reflection.ReflectionContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Context</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.Reflection.ReflectionContext" />
+      </Parameters>
+      <Docs>
+        <param name="source">Der als Basisklasse verwendete Reflexionskontext.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Reflection.Context.CustomReflectionContext" /> -Klasse mit der angegebenen Reflektionskontext als Basis verwendet wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddProperties">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.Generic.IEnumerable&lt;System.Reflection.PropertyInfo&gt; AddProperties (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Reflection.PropertyInfo&gt; AddProperties(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Context</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Reflection.PropertyInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ dem Eigenschaften hinzugefügt werden sollen.</param>
+        <summary>Stellt beim Überschreiben in einer abgeleiteten Klasse eine Auflistung für zusätzliche Eigenschaften für den angegebenen Typ bereit, wie in diesem Reflexionskontext dargestellt.</summary>
+        <returns>Eine Sammlung von zusätzlichen Eigenschaften für den angegebenen Typ.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie diese Methode, um anzugeben, welche Eigenschaften in einen angegebenen Typ hinzugefügt werden soll. Um die Eigenschaften zu erstellen, verwenden die <xref:System.Reflection.Context.CustomReflectionContext.CreateProperty%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateProperty">
+      <MemberSignature Language="C#" Value="protected System.Reflection.PropertyInfo CreateProperty (Type propertyType, string name, Func&lt;object,object&gt; getter, Action&lt;object,object&gt; setter);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Reflection.PropertyInfo CreateProperty(class System.Type propertyType, string name, class System.Func`2&lt;object, object&gt; getter, class System.Action`2&lt;object, object&gt; setter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Context</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="getter" Type="System.Func&lt;System.Object,System.Object&gt;" />
+        <Parameter Name="setter" Type="System.Action&lt;System.Object,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="propertyType">Der Typ der zu erstellenden Eigenschaft.</param>
+        <param name="name">Der Name der zu erstellenden Eigenschaft.</param>
+        <param name="getter">Ein Objekt, das die Eigenschaft darstellt <see langword="get" /> Accessor.</param>
+        <param name="setter">Ein Objekt, das die Eigenschaft darstellt <see langword="set" /> Accessor.</param>
+        <summary>Erstellt ein Objekt, das eine Eigenschaft in einen Typ mit hinzuzufügende stellt die <see cref="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" /> Methode.</summary>
+        <returns>Ein Objekt, das die Eigenschaft darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objekte, die von dieser Methode zurückgegeben werden, sind nicht vollständig <xref:System.Reflection.PropertyInfo> Objekte und sollte nur im Kontext verwendet werden die <xref:System.Reflection.Context.CustomReflectionContext.AddProperties%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateProperty">
+      <MemberSignature Language="C#" Value="protected System.Reflection.PropertyInfo CreateProperty (Type propertyType, string name, Func&lt;object,object&gt; getter, Action&lt;object,object&gt; setter, System.Collections.Generic.IEnumerable&lt;Attribute&gt; propertyCustomAttributes, System.Collections.Generic.IEnumerable&lt;Attribute&gt; getterCustomAttributes, System.Collections.Generic.IEnumerable&lt;Attribute&gt; setterCustomAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Reflection.PropertyInfo CreateProperty(class System.Type propertyType, string name, class System.Func`2&lt;object, object&gt; getter, class System.Action`2&lt;object, object&gt; setter, class System.Collections.Generic.IEnumerable`1&lt;class System.Attribute&gt; propertyCustomAttributes, class System.Collections.Generic.IEnumerable`1&lt;class System.Attribute&gt; getterCustomAttributes, class System.Collections.Generic.IEnumerable`1&lt;class System.Attribute&gt; setterCustomAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Context</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="getter" Type="System.Func&lt;System.Object,System.Object&gt;" />
+        <Parameter Name="setter" Type="System.Action&lt;System.Object,System.Object&gt;" />
+        <Parameter Name="propertyCustomAttributes" Type="System.Collections.Generic.IEnumerable&lt;System.Attribute&gt;" />
+        <Parameter Name="getterCustomAttributes" Type="System.Collections.Generic.IEnumerable&lt;System.Attribute&gt;" />
+        <Parameter Name="setterCustomAttributes" Type="System.Collections.Generic.IEnumerable&lt;System.Attribute&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="propertyType">Der Typ der zu erstellenden Eigenschaft.</param>
+        <param name="name">Der Name der zu erstellenden Eigenschaft.</param>
+        <param name="getter">Ein Objekt, das die Eigenschaft darstellt <see langword="get" /> Accessor.</param>
+        <param name="setter">Ein Objekt, das die Eigenschaft darstellt <see langword="set" /> Accessor.</param>
+        <param name="propertyCustomAttributes">Eine Sammlung benutzerdefinierter Attribute auf die Eigenschaft angewendet werden sollen.</param>
+        <param name="getterCustomAttributes">Eine Auflistung benutzerdefinierter Attribute für der Eigenschaft angewendet <see langword="get" /> Accessor.</param>
+        <param name="setterCustomAttributes">Eine Auflistung benutzerdefinierter Attribute für der Eigenschaft angewendet <see langword="set" /> Accessor.</param>
+        <summary>Erstellt ein Objekt, das eine Eigenschaft in einen Typ mit hinzuzufügende stellt die <see cref="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" /> -Methode und der Verwendung der angegebenen benutzerdefinierten Attribute.</summary>
+        <returns>Ein Objekt, das die Eigenschaft darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objekte, die von dieser Methode zurückgegeben werden, sind nicht vollständig <xref:System.Reflection.PropertyInfo> Objekte und sollte nur im Kontext verwendet werden die <xref:System.Reflection.Context.CustomReflectionContext.AddProperties%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.Generic.IEnumerable&lt;object&gt; GetCustomAttributes (System.Reflection.MemberInfo member, System.Collections.Generic.IEnumerable&lt;object&gt; declaredAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;object&gt; GetCustomAttributes(class System.Reflection.MemberInfo member, class System.Collections.Generic.IEnumerable`1&lt;object&gt; declaredAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.MemberInfo,System.Collections.Generic.IEnumerable{System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Context</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="member" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="declaredAttributes" Type="System.Collections.Generic.IEnumerable&lt;System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="member">Der Member, deren benutzerdefinierte Attribute zurückgegeben werden.</param>
+        <param name="declaredAttributes">Eine Sammlung der Attribute des Members im aktuellen Kontext.</param>
+        <summary>Stellt beim Überschreiben in einer abgeleiteten Klasse eine Liste benutzerdefinierter Attribute für den angegebenen Member bereit, wie in diesem Reflexionskontext dargestellt.</summary>
+        <returns>Eine Sammlung, die die benutzerdefinierten Attribute des angegebenen Members in diesem Reflexionskontext darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.Generic.IEnumerable&lt;object&gt; GetCustomAttributes (System.Reflection.ParameterInfo parameter, System.Collections.Generic.IEnumerable&lt;object&gt; declaredAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;object&gt; GetCustomAttributes(class System.Reflection.ParameterInfo parameter, class System.Collections.Generic.IEnumerable`1&lt;object&gt; declaredAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.ParameterInfo,System.Collections.Generic.IEnumerable{System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Context</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Reflection.ParameterInfo" />
+        <Parameter Name="declaredAttributes" Type="System.Collections.Generic.IEnumerable&lt;System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Der Parameter, dessen benutzerdefinierte Attribute zurückgegeben werden.</param>
+        <param name="declaredAttributes">Eine Sammlung der Attribute des Parameters im aktuellen Kontext.</param>
+        <summary>Stellt beim Überschreiben in einer abgeleiteten Klasse eine Liste benutzerdefinierter Attribute für den angegebenen Parameter bereit, wie in diesem Reflexionskontext dargestellt.</summary>
+        <returns>Eine Sammlung, die die benutzerdefinierten Attribute des angegebenen Parameters in diesem Reflexionskontext darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapAssembly">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Assembly MapAssembly (System.Reflection.Assembly assembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.Assembly MapAssembly(class System.Reflection.Assembly assembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Context.CustomReflectionContext.MapAssembly(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Context</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">Die externe Darstellung der in diesem Kontext darzustellenden Assembly.</param>
+        <summary>Ruft die Darstellung einer Assembly, die durch ein Objekt aus einem anderen Reflexionskontext dargestellt wird, in diesem Reflexionskontext ab.</summary>
+        <returns>Die Darstellung der Assembly in diesem Reflexionskontext.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapType">
+      <MemberSignature Language="C#" Value="public override System.Reflection.TypeInfo MapType (System.Reflection.TypeInfo type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.TypeInfo MapType(class System.Reflection.TypeInfo type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Context.CustomReflectionContext.MapType(System.Reflection.TypeInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Context</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.TypeInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Reflection.TypeInfo" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die externe Darstellung des in diesem Kontext darzustellenden Typs.</param>
+        <summary>Ruft die Darstellung eines Typs, der durch ein Objekt aus einem anderen Reflexionskontext dargestellt wird, in diesem Reflexionskontext ab.</summary>
+        <returns>Die Darstellung des Typs in diesem Reflexionskontext.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

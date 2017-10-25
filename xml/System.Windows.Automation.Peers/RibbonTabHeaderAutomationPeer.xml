@@ -1,0 +1,56 @@
+<Type Name="RibbonTabHeaderAutomationPeer" FullName="System.Windows.Automation.Peers.RibbonTabHeaderAutomationPeer">
+  <TypeSignature Language="C#" Value="public class RibbonTabHeaderAutomationPeer : System.Windows.Automation.Peers.FrameworkElementAutomationPeer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RibbonTabHeaderAutomationPeer extends System.Windows.Automation.Peers.FrameworkElementAutomationPeer" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.RibbonTabHeaderAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.FrameworkElementAutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Macht <see cref="T:System.Windows.Controls.Ribbon.RibbonTabHeader" /> Typen für die UI-Automatisierung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RibbonTabHeaderAutomationPeer (System.Windows.Controls.Ribbon.RibbonTabHeader owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Controls.Ribbon.RibbonTabHeader owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonTabHeaderAutomationPeer.#ctor(System.Windows.Controls.Ribbon.RibbonTabHeader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Controls.Ribbon.RibbonTabHeader" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Das diesem Automatisierungspeer zugeordnete Element.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Automation.Peers.RibbonTabHeaderAutomationPeer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetClassNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetClassNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonTabHeaderAutomationPeer.GetClassNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Klassennamen der <see cref="T:System.Windows.Controls.Ribbon.RibbonTabHeader" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonTabHeaderAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" /> aufgerufen.</summary>
+        <returns>Der Klassenname des der <see cref="T:System.Windows.Controls.Ribbon.RibbonTabHeader" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonTabHeaderAutomationPeer" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Services.Client">
+  <Docs>
+    <summary>Stellt die .NET Framework-Clientbibliothek, die Anwendungen verwenden können, für die Interaktion mit WCF Data Services dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

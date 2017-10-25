@@ -1,0 +1,1426 @@
+<Type Name="ChartArea" FullName="System.Web.UI.DataVisualization.Charting.ChartArea">
+  <TypeSignature Language="C#" Value="public class ChartArea : System.Web.UI.DataVisualization.Charting.ChartNamedElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChartArea extends System.Web.UI.DataVisualization.Charting.ChartNamedElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.ChartArea" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartNamedElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Axes")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Diagrammfläche im Diagrammbild dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Innerhalb jedes gegebenen Diagramms die *innere Zeichnungsposition* ist ein rechteckiger Bereich, in den x- und y-Achse Linien, in dem die Datenpunkte gezeichnet werden. Die *zeichnen Position* ist ein rechteckiger Bereich, der die innere Zeichnungsposition, Teilstriche und die achsenbezeichnungen umfasst. Die *Diagrammfläche* ist ein rechteckiger Bereich, der die Zeichnungsposition, Teilstriche, die achsenbezeichnungen und den Achsentitel im Diagramm umfasst.  
+  
+ Eine Diagrammfläche wird dargestellt, indem eine <xref:System.Web.UI.DataVisualization.Charting.ChartArea> Klasse. <xref:System.Web.UI.DataVisualization.Charting.ChartArea> Objekte gespeichert werden, der <xref:System.Web.UI.DataVisualization.Charting.ChartAreaCollection> Klasse.  
+  
+ Die Anzahl der Diagrammreihe, die in einer Diagrammfläche gezeichnet werden können, ist unbegrenzt.  
+  
+ Ein <xref:System.Web.UI.DataVisualization.Charting.ChartArea> Objekt:  
+  
+-   Verwendet eine unterschiedliche inneren Zeichnungsbereich an.  
+  
+-   Wird verwendet, um eine oder mehrere Diagrammreihen zu zeichnen.  
+  
+-   Verfügt über primäre und sekundäre x- und y-Achsen, außer Kreis- und Ringdiagramme Diagrammtypen.  
+  
+ Bei Verwendung von Formdiagrammtypen Kreis-, Ring-, Trichter-, Pyramidendiagramme, Polar-, darunter und Netzdiagramme definiert die innere Zeichenposition die Größe des Diagramms-Typform aus. Wenn Sie beispielsweise den Wert der erhöhen die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.InnerPlotPosition%2A> Eigenschaft in einem Kreisdiagramm, erhöhen Sie den Radius der Kreisform.  
+  
+ Für alle anderen Diagrammtypen hat jeder Diagrammbereich zwei Sätze von x- und y-Achse zu, die primären und sekundären. Um Eigenschaften für diese Achsen zuzugreifen, verwenden die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AxisX%2A>, <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AxisX2%2A>, <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AxisY%2A> und <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AxisY2%2A> Eigenschaften. Sie müssen eine Eigenschaft festlegen, die alle Achsen im Diagramm beeinflusst, verwenden Sie die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.Axes%2A> Eigenschaft.  
+  
+ Einer oder mehrerer Reihen sind eine Diagrammfläche zugeordnet. Die Serie verfügt über eine <xref:System.Web.UI.DataVisualization.Charting.Series.ChartArea%2A> Eigenschaft, die die Diagrammfläche bestimmt, die jede Reihe gehört. Standardmäßig ist die Reihen der standarddiagrammfläche verbunden. Um die Anzeige einer Reihe zu deaktivieren, legen die <xref:System.Web.UI.DataVisualization.Charting.Series.ChartArea%2A> -Eigenschaft der Reihe auf eine Zeichenfolge der Länge 0 (null).  
+  
+ Wenn eine andere Diagrammfläche aus dem Diagramm hinzugefügt wird, können Sie die neue Diagrammfläche eine beliebige Reihe zuordnen. In allen Formdiagrammtypen sowie Balken- und gestapelten Balkendiagrammen muss jede Reihe in einer separaten Diagrammfläche gezeichnet werden. Bei allen anderen Diagrammtypen können mehrere Reihen im gleichen Diagrammbereich kombiniert werden.  
+  
+ Ein 3D-Diagramm wird auf Grundlage von Flächendiagramm Diagrammbereich angezeigt. Sie können die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.Area3DStyle%2A> Eigenschaft zum Aktivieren und das Diagramm in 3D anpassen.  
+  
+ Die Mindest- und Höchstwerte wird nicht automatisch neu berechnet werden, wenn Sie neue Daten hinzufügen, damit das Diagramm keine automatisch ändert wird.  Sie können anfordern, dass der Diagrammfläche, sodass diese Werte mit neu berechnen der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.RecalculateAxesScale%2A> Methode.  
+  
+ Um mehrere Diagrammflächen vertikal auszurichten, legen die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentOrientation%2A> Eigenschaft. Um mehrere Diagrammflächen horizontal ausgerichtet werden, müssen Sie zuerst die Diagrammbereiche mithilfe Positionieren der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.Position%2A> -Eigenschaft, und legen Sie anschließend die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentOrientation%2A> Eigenschaft zu Horizontal.  
+  
+ Um die Anzeige einer Reihe zu unterdrücken, legen die <xref:System.Windows.Forms.DataVisualization.Charting.Series> -Eigenschaft der Reihe auf eine Zeichenfolge der Länge 0 (null).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChartArea ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartArea.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.DataVisualization.Charting.ChartArea> Klasse.  
+  
+> [!NOTE]
+>  Es wird dringend empfohlen, dass Sie eine der verwenden die `Add` oder `Insert` Methoden die <xref:System.Web.UI.DataVisualization.Charting.Chart.ChartAreas%2A> Auflistungseigenschaft eine Diagrammfläche zur Laufzeit hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChartArea (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartArea.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name für die neue <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> -Klasse mit den Namen der angegebenen Diagrammfläche an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignmentOrientation">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.AreaAlignmentOrientations AlignmentOrientation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.AreaAlignmentOrientations AlignmentOrientation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentOrientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.FlagsEnumUITypeEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.AreaAlignmentOrientations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung einer Diagrammfläche.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.AreaAlignmentOrientations" />-Enumerationswert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Verwendung von der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignWithChartArea%2A>, <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentOrientation%2A> und <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentStyle%2A> Eigenschaften, es ist möglich, synchronisieren zwei oder mehr Diagrammflächen horizontal und/oder vertikal auszurichten bzw. zu oder beides.  
+  
+ Legen Sie zuerst die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignWithChartArea%2A> auf den Namen der Eigenschaft ein <xref:System.Web.UI.DataVisualization.Charting.ChartArea> Objekt. Diese Diagrammfläche wird dann ausgerichtet, basierend auf den <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentStyle%2A> Einstellung, die die zu verwendende Ausrichtung definiert, und die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentOrientation%2A> Einstellung, die die Elemente der Diagrammfläche, die verwendet werden soll definiert, um die Ausrichtung festzulegen.  
+  
+ Wenn die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignWithChartArea%2A> Eigenschaft nicht festgelegt ist, die Diagrammfläche werden nicht ausgerichtet, unabhängig von der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentStyle%2A> und <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentOrientation%2A> Einstellungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignmentStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.AreaAlignmentStyles AlignmentStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.AreaAlignmentStyles AlignmentStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.FlagsEnumUITypeEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.AreaAlignmentStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ausrichtungsstil des der <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" />.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.AreaAlignmentStyles" /> -Enumerationswert ab, der einen einzelnen Wert oder die bitweise OR-Operation für mehrere Werte, die die zu verwendende Ausrichtung definieren darstellen kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentStyle%2A> Eigenschaft, um zwei oder mehr Diagrammflächen horizontal und/oder vertikal auszurichten. Die Ausrichtung ist einer der folgenden Werte oder eine bitweise OR-Kombination der folgenden Werte.  
+  
+|Membername|Beschreibung|  
+|-----------------|-----------------|  
+|Alle|Diagrammflächen sind mit allen Werten ausgerichtet.|  
+|AxesView|Diagrammflächen ausgerichtet sind, verwenden die Ansicht des angegebenen <xref:System.Web.UI.DataVisualization.Charting.ChartArea>.|  
+|Keine|Diagrammbereiche werden nicht automatisch ausgerichtet.|  
+|Position|Diagrammflächen ausgerichtet sind, mit der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.Position%2A> der Diagrammfläche angegeben.|  
+|InnerPlotPosition|Diagrammflächen ausgerichtet sind, mit der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.InnerPlotPosition%2A> der Diagrammfläche angegeben.|  
+  
+ Wenn die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignWithChartArea%2A> Wert nicht festgelegt ist, die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentStyle%2A> Eigenschaft hat keine Auswirkung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignWithChartArea">
+      <MemberSignature Language="C#" Value="public string AlignWithChartArea { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AlignWithChartArea" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.AlignWithChartArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("NotSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.LegendAreaNameConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des dem <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> -Objekt an der diese Diagrammfläche ausgerichtet werden soll.</summary>
+        <value>Ein <see langword="string" /> -Wert, der den Namen des darstellt ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> -Objekt an der diese Diagrammfläche ausgerichtet werden soll. Die Standardeinstellung ist die leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Verwendung von der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignWithChartArea%2A>, <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentOrientation%2A> und <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentStyle%2A> Eigenschaften, es ist möglich, synchronisieren zwei oder mehr Diagrammflächen horizontal und/oder vertikal auszurichten bzw. zu oder beides.  
+  
+ Legen Sie zuerst die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignWithChartArea%2A> auf den Namen der Eigenschaft ein <xref:System.Web.UI.DataVisualization.Charting.ChartArea> Objekt. Diese Diagrammfläche wird dann ausgerichtet, basierend auf den <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentStyle%2A> Einstellung, die die zu verwendende Ausrichtung definiert, und die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentOrientation%2A> Einstellung, die die Elemente der Diagrammfläche, die verwendet werden soll definiert, um die Ausrichtung festzulegen.  
+  
+ Wenn die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignWithChartArea%2A> Eigenschaft nicht festgelegt ist, die Diagrammfläche werden nicht ausgerichtet, unabhängig von der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentStyle%2A> und <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AlignmentOrientation%2A> Einstellungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Area3DStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartArea3DStyle Area3DStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.ChartArea3DStyle Area3DStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.Area3DStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.NoNameExpandableObjectConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartArea3DStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle" /> -Objekt, das zum Implementieren von 3D für alle Reihen in einer Diagrammfläche verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle" /> Objekt, das implementiert 3D für alle Reihen in einer Diagrammfläche gezeichnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie zum Aktivieren oder Deaktivieren von 3D für einen Diagrammbereich, den <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.Enable3D%2A> Eigenschaft.  
+  
+ Wenn das Diagramm in 3D gezeichnet wird, werden skalierungsunterbrechungen nicht auf der Achse unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Axes">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.Axis[] Axes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.Axis[] Axes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.Axes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.AxesArrayEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.AxesArrayConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.Axis[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Array, das alle Achsen für eine Diagrammfläche darstellt.</summary>
+        <value>Ein Array von <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> -Objekten, die alle von einer Diagrammfläche verwendeten Achsen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Hauptzweck dieser Eigenschaft ist für den Zugriff auf die Eigenschaften von X, Y, X2 und Y2-Achsen zur Entwurfszeit.  
+  
+ Zur Laufzeit die Achsen für eine Diagrammfläche zugegriffen werden soll mit den einzelnen Achseneigenschaften wie <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AxisX%2A>, <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AxisX2%2A>usw. lauten.  
+  
+ Wenn Sie diese Eigenschaft zur Laufzeit verwenden möchten – z. B. in einem Ereignis – können Sie ein Element in diesem Array zugreifen, durch Angeben einer <xref:System.Web.UI.DataVisualization.Charting.AxisName> Enumerationsmember als Bezeichner.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AxisX">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.Axis AxisX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.Axis AxisX" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.AxisX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.NoNameExpandableObjectConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.Axis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> -Objekt, das die primäre X-Achse darstellt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> -Objekt, das die primäre X-Achse darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft zum Bearbeiten von der primären X-Achse im Diagrammbereich dargestellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AxisX2">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.Axis AxisX2 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.Axis AxisX2" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.AxisX2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.NoNameExpandableObjectConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.Axis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> -Objekt, das die sekundäre X-Achse darstellt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> -Objekt, das die sekundäre X-Achse darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um die sekundäre X-Achse im Diagrammbereich zu bearbeiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AxisY">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.Axis AxisY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.Axis AxisY" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.AxisY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.NoNameExpandableObjectConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.Axis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> -Objekt, das die primäre Y-Achse darstellt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> -Objekt, das die primäre Y-Achse darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um die primäre Y-Achse in der Diagrammfläche zu bearbeiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AxisY2">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.Axis AxisY2 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.Axis AxisY2" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.AxisY2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.NoNameExpandableObjectConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.Axis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> -Objekt, das die sekundäre Y-Achse darstellt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> -Objekt, das die sekundäre Y-Achse darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft zum Bearbeiten von der sekundären Y-Achse im Diagrammbereich dargestellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe des Hintergrunds einer <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" />-Wert. Die Standardfarbe ist <see cref="T:System.Drawing.Color.White" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft auf einen beliebigen gültigen ARGB (Alpha, Rot, Grün, Blau) Wert festlegen.  
+  
+ Die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackColor%2A> Wert wird auf der ersten Farbe verwendet, wenn Sie für den Hintergrund Verlaufsfarben angegeben haben.  
+  
+ Der Alphawert steuert die Deckkraft einer Farbe. Wenn Sie diese Farbe auf "transparent" festlegen – d. h. bei Verwendung der Alphawert 0 – dem Hintergrund des Diagrammbereichs, wird keine Farbe zugewiesen werden. Daher wird der Hintergrund transparent sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackGradientStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.GradientStyle BackGradientStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.GradientStyle BackGradientStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.BackGradientStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.GradientEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.GradientStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung für den Hintergrundfarbverlauf einer Diagrammfläche fest und bestimmt außerdem, und zwar unabhängig davon, ob ein Farbverlauf verwendet wird.</summary>
+        <value>Eine <see cref="T:System.Web.UI.DataVisualization.Charting.GradientStyle" />-Enumeration. Der Standardwert ist <see cref="F:System.Web.UI.DataVisualization.Charting.GradientStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackGradientStyle%2A> Eigenschaft, um zu bestimmen, ob eine Diagrammfläche wird einen Farbverlauf angezeigt, und die Ausrichtung des Verlaufs zu bestimmen, ob verwendet.  
+  
+ Eine Liste der verfügbaren Muster, finden Sie in der <xref:System.Web.UI.DataVisualization.Charting.GradientStyle> Enumeration.  
+  
+ So verwenden Sie Verlaufsfarben:  
+  
+-   Legen Sie die primäre Farbe für den Hintergrund des Diagrammbereichs mit der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackColor%2A> Eigenschaft.  
+  
+-   Legen Sie die Sekundärfarbe der den Hintergrund des Diagrammbereichs mit der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackSecondaryColor%2A> Eigenschaft.  
+  
+-   Legen Sie diese <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackGradientStyle%2A> Eigenschaft, um die gewünschte Art des Farbverlaufs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackHatchStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartHatchStyle BackHatchStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartHatchStyle BackHatchStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.BackHatchStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.HatchStyleEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartHatchStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schraffurart des ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt.</summary>
+        <value>Eine <see cref="T:System.Web.UI.DataVisualization.Charting.ChartHatchStyle" />-Enumeration. Der Standardwert ist <see cref="F:System.Web.UI.DataVisualization.Charting.ChartHatchStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.ChartHatchStyle> Enumeration gibt an, die von einem Pinsel des Typs verwendete Schraffur <xref:System.Drawing.Drawing2D.HatchBrush>. Die Schraffur besteht aus einer Hintergrundfarbe und über dem Hintergrund gezeichneten Linien verwendet werden.  
+  
+ Eine Liste der verfügbaren schraffurstile, finden Sie in der <xref:System.Web.UI.DataVisualization.Charting.ChartHatchStyle> Enumeration.  
+  
+> [!NOTE]
+>  Die Farbe der Linien Schraffurmuster richtet sich nach der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackSecondaryColor%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImage">
+      <MemberSignature Language="C#" Value="public string BackImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BackImage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.BackImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ImageValueEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Hintergrundbild des ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt.</summary>
+        <value>Ein <see langword="string" /> Wert, der die URL einer Bilddatei darstellt. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft definiert einen Pfad zu einem Hintergrundbild für einen <xref:System.Web.UI.DataVisualization.Charting.ChartArea>, und Sie können eine absolute oder relative URL sein.  
+  
+ Um das Bild zu positionieren, verwenden die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackImageAlignment%2A> und <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackImageWrapMode%2A> Eigenschaften.  
+  
+ Sie können auch angeben einer der Farben im Bild als "transparent" angezeigt wird, indem die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackImageTransparentColor%2A> Eigenschaft.  
+  
+ Ein Bild darstellen, eine beliebige gültige Grafikdatei unterstützt von .NET Framework, einschließlich der Symbole.  
+  
+ Hintergrundbilder haben Vorrang vor anderen Hintergrundeigenschaften, z. B. Farbverlauf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageAlignment">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle BackImageAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle BackImageAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.BackImageAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung einer <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Hintergrundbild.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle" />-Enumerationswert. Der Standardwert ist <see cref="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.TopLeft" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bestimmt die Ausrichtung des Hintergrundbilds für die Diagrammfläche, und wird nur angewendet, wenn die <xref:System.Web.UI.DataVisualization.Charting.ChartImageWrapMode> -Eigenschaftensatz auf <xref:System.Web.UI.DataVisualization.Charting.ChartImageWrapMode.Unscaled>.  
+  
+ Weitere Informationen zu den verfügbaren Ausrichtungen, finden Sie unter der <xref:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle> Enumerationsthema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageTransparentColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackImageTransparentColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackImageTransparentColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.BackImageTransparentColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe des ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt Hintergrundbild, das als transparent gezeichnet werden soll.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" />-Wert. Der Standardwert ist <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageWrapMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartImageWrapMode BackImageWrapMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartImageWrapMode BackImageWrapMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.BackImageWrapMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartImageWrapMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Zeichnungsmodus für das Hintergrundbild des ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartImageWrapMode" />-Enumerationswert. Der Standardwert ist <see cref="F:System.Web.UI.DataVisualization.Charting.ChartImageWrapMode.Tile" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackImageWrapMode%2A> Eigenschaft bestimmt, wie das Bild angezeigt wird; das Bild kann skalierte usw. gekachelt.  
+  
+ Wenn ein Bild skaliert wird, wird es gestreckt werden, um innerhalb der Grenzen der Diagrammfläche zu passen. Wenn das Bild wird gekachelt, ist, wird es wiederholt gezeichnet, beginnend mit der linken oberen Ecke der Diagrammfläche.  
+  
+ Weitere Informationen zu den verfügbaren Wrapping-Modi, finden Sie unter der <xref:System.Web.UI.DataVisualization.Charting.ChartImageWrapMode> Enumerationsthema.  
+  
+ Wenn die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackImageWrapMode%2A> -Eigenschaftensatz auf <xref:System.Web.UI.DataVisualization.Charting.ChartImageWrapMode.Unscaled>, der Speicherort, in dem das Bild gezeichnet wird, richtet sich nach der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackImageAlignment%2A> Einstellung der Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackSecondaryColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackSecondaryColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackSecondaryColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.BackSecondaryColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die sekundäre Farbe für den Hintergrund einer <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" />-Wert. Der Standardwert ist <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackSecondaryColor%2A> -Eigenschaft ist eine mehrerer verwandter Eigenschaften, die bestimmen, die sekundäre Hintergrundfarbe <xref:System.Web.UI.DataVisualization.Charting.Chart> -Objekte und wird verwendet, wenn Farbverlauf übernommen werden.  
+  
+ Sie können festlegen, <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackSecondaryColor%2A> auf einen beliebigen gültigen ARGB (Alpha, Rot, Grün, Blau)-Wert.  
+  
+ Wenn Schraffuren verwendet wird, die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackSecondaryColor%2A> Eigenschaft bestimmt die Farbe der Linien für die Diagrammfläche Schraffurmuster.  
+  
+ So verwenden Farbverlauf für den Hintergrund des Diagrammbereichs:  
+  
+-   Legen Sie die primäre Farbe mit der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackColor%2A> Eigenschaft.  
+  
+-   Legen Sie die sekundäre Farbe, mit der <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackSecondaryColor%2A> Eigenschaft.  
+  
+-   Legen Sie die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BackGradientStyle%2A> Eigenschaft, um die gewünschte Art des Farbverlaufs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BorderColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.BorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rahmenfarbe eines <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" />-Objekts ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" />-Wert. Die Standardfarbe ist <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können festlegen, die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BorderColor%2A> Eigenschaft auf einen beliebigen gültigen ARGB (Alpha, Rot, Grün, Blau)-Wert.  
+  
+> [!NOTE]
+>  Für Kreis- und Ringdiagramme, diese Eigenschaft bestimmt die Farbe der radialen und horizontalen Linien, wenn Sie datenpunktbezeichnungen außerhalb der Kreis- oder Ringdiagramm gezeichnet werden – d. h., wenn die `LabelStyle` benutzerdefinierte Eigenschaft auf "Außen" festgelegt ist.  
+  
+ Diese Eigenschaft bestimmt außerdem die Markerlinien für 3D-Diagramme, ob die `ShowMarkerLines` benutzerdefinierte Eigenschaft festgelegt wird, um `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderDashStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartDashStyle BorderDashStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartDashStyle BorderDashStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.BorderDashStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartDashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Rahmenart des ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartDashStyle" /> -Enumerationswert, der die Rahmenart des Diagrammbereichs bestimmt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BorderDashStyle%2A> Eigenschaft bestimmt die Linienart für einen Rahmen verwenden. Die Zeile kann einfarbig, gepunktet usw. sein.  
+  
+ Andere Rahmenarten finden Sie unter der <xref:System.Web.UI.DataVisualization.Charting.ChartDashStyle> Enumerationsthema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderWidth">
+      <MemberSignature Language="C#" Value="public int BorderWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BorderWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.BorderWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite des Rahmens des ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt.</summary>
+        <value>Ein <see langword="integer" /> Wert, der die Breite des Rahmens in Pixel der Diagrammfläche bestimmt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.BorderWidth%2A> Eigenschaft kann auch die Breite der Linien für ein Liniendiagramm, benutzerdefinierte Legendenelemente angezeigt, wobei eine Linienart usw. festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartArea.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben. <see langword="false" /> um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von der <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" />-Klasse verwendeten nicht verwalteten Ressourcen frei und gibt (optional) auch die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSeriesDepth">
+      <MemberSignature Language="C#" Value="public float GetSeriesDepth (System.Web.UI.DataVisualization.Charting.Series series);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 GetSeriesDepth(class System.Web.UI.DataVisualization.Charting.Series series) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartArea.GetSeriesDepth(System.Web.UI.DataVisualization.Charting.Series)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="series" Type="System.Web.UI.DataVisualization.Charting.Series" />
+      </Parameters>
+      <Docs>
+        <param name="series">Die <see cref="T:System.Web.UI.DataVisualization.Charting.Series" /> für die die Tiefe abgerufen wird.</param>
+        <summary>Gibt die Tiefe einer <see cref="T:System.Web.UI.DataVisualization.Charting.Series" /> in einer Diagrammfläche.</summary>
+        <returns>Ein <see langword="float" /> -Wert, der die Tiefe des angegebenen <see cref="T:System.Web.UI.DataVisualization.Charting.Series" />, die als Prozentsatz der Tiefe der Diagrammfläche gemessen wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode, um die Tiefe der eine festgelegte Reihe zu erhalten. Der zurückgegebene Wert wird gemessen, wie Anteil der Tiefe der Diagrammfläche, die der gleichen Maßeinheit angegeben ist in der <xref:System.Web.UI.DataVisualization.Charting.Point3D.Z%2A> Eigenschaft.  
+  
+ Alle Reihen haben eine Tiefe, unabhängig von deren Diagrammtyp. Beispielsweise auch und Blasenreihen haben eine Tiefe, obwohl die gesamte Tiefe nicht verwendet wird, die Punkte oder Blasen gezeichnet werden soll.  
+  
+ Die Tiefe einer Reihe kann verwendet werden, um einen Z-Wert für einen Punkt zu bestimmen, die in eine benutzerdefinierte Zeichnung Routine verwendet wird.  
+  
+> [!NOTE]
+>  Alle in 3D Zeichnen verwendeten Punkte müssen mit relativen 3D Koordinaten in relative 2D-Koordinaten mit transformiert werden die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.TransformPoints%2A> Methode.  
+  
+ Verwenden Sie zum Abrufen von relativen X- und Y-Werte von einer Achse die <xref:System.Web.UI.DataVisualization.Charting.Axis.ValueToPosition%2A> Methode für die X-und die Y-Achse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSeriesZPosition">
+      <MemberSignature Language="C#" Value="public float GetSeriesZPosition (System.Web.UI.DataVisualization.Charting.Series series);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 GetSeriesZPosition(class System.Web.UI.DataVisualization.Charting.Series series) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartArea.GetSeriesZPosition(System.Web.UI.DataVisualization.Charting.Series)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="series" Type="System.Web.UI.DataVisualization.Charting.Series" />
+      </Parameters>
+      <Docs>
+        <param name="series">Die <see cref="T:System.Web.UI.DataVisualization.Charting.Series" /> für die die Position der Z abgerufen wird.</param>
+        <summary>Gibt die Z-Position einer Reihe, die für eine benutzerdefinierte Zeichnung nützlich ist.</summary>
+        <returns>Ein <see langword="float" /> Wert, der die Z-Position des angegebenen Reihe darstellt, der als Prozentsatz der die Tiefe einer Diagrammfläche gemessen wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode, um die Z-Position einer Reihe zu erhalten. Die Position der Z wird von der Rückseite der Diagrammfläche an der Mitte einer Datenreihe gemessen und als Prozentsatz der Tiefe der Diagrammfläche dargestellt wird. Beispielsweise weist einer Reihe, die während des laufenden Vorgangs entlang der z-Achse gezeichnet wird eine Z-Position von 50.  
+  
+ Die Z-Position einer Reihe wird normalerweise für eine benutzerdefinierte Zeichnung Routine verwendet.  
+  
+> [!NOTE]
+>  Alle in 3D Zeichnen verwendeten Punkte müssen mit relativen 3D Koordinaten in relative 2D-Koordinaten mit transformiert werden die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.TransformPoints%2A> Methode.  
+  
+ Verwenden Sie zum Abrufen von relativen X- und Y-Werte von einer Achse die <xref:System.Web.UI.DataVisualization.Charting.Axis.ValueToPosition%2A> Methode für die X-und die Y-Achse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerPlotPosition">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ElementPosition InnerPlotPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.ElementPosition InnerPlotPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.InnerPlotPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.ElementPositionConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ElementPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein <see cref="T:System.Web.UI.DataVisualization.Charting.ElementPosition" /> -Objekt, das die innere Zeichnungsposition eines Diagramms Bereich-Objekts definiert.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ElementPosition" /> -Objekt, das die innere Zeichnungsposition von definiert eine <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.InnerPlotPosition%2A> -Eigenschaft definiert das Rechteck in einem Diagramm Area-Element, das zum Zeichnen von Daten verwendet wird; es schließt Teilstriche, achsenbezeichnungen und So weiter.  
+  
+ Die Koordinaten, die für diese Eigenschaft (0,0 bis 100,100) verwendet werden, im Zusammenhang mit der <xref:System.Web.UI.DataVisualization.Charting.ChartArea> -Objekt, und nicht auf die gesamte <xref:System.Web.UI.DataVisualization.Charting.Chart>.  
+  
+ Die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.InnerPlotPosition%2A> Eigenschaft kann verwendet werden, um mehrere Diagrammflächen auszurichten. Allerdings verfügt ein Diagramm eine Diagrammfläche, Teilstriche und achsenbezeichnungen und eine andere, die eine nicht der Fall ist, können nicht die Achsenlinien ausgerichtet werden.  
+  
+> [!IMPORTANT]
+>  Diese Eigenschaft kann auch verwendet werden, um die Größe von Diagrammen, z. B. Kreis- oder Ringdiagramm, zu ändern, ohne die Größe des generierten Diagrammbilds zu ändern.  
+  
+ So ändern Sie die Position eines ganzen <xref:System.Web.UI.DataVisualization.Charting.ChartArea> Objekts verwenden den <xref:System.Web.UI.DataVisualization.Charting.ChartArea.Position%2A> Eigenschaft stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSameFontSizeForAllAxes">
+      <MemberSignature Language="C#" Value="public bool IsSameFontSizeForAllAxes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSameFontSizeForAllAxes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.IsSameFontSizeForAllAxes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das bestimmt, ob die Bezeichnungen der relevanten diagrammflächenachsen gleicher Größe.</summary>
+        <value>
+          <see langword="true" />Wenn alle Achsen, die verfügen ihre <see cref="P:System.Web.UI.DataVisualization.Charting.Axis.IsLabelAutoFit" /> -Eigenschaftensatz auf <see langword="true" /> zeigt deren Bezeichnungen mit der gleichen Schriftart Größe ist, andernfalls<see langword="false." /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Schriftgrad wird automatisch berechnet, indem die <xref:System.Web.UI.DataVisualization.Charting.Chart> -Steuerelement, mit die größte Größe an, die geeignet ist, verwendet wird.  
+  
+ Diese Eigenschaft gilt für alle Diagrammbereichsachsen denen ihre <xref:System.Web.UI.DataVisualization.Charting.Axis.IsLabelAutoFit%2A> -Eigenschaftensatz auf `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den eindeutigen Namen einer <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt.</summary>
+        <value>Ein <see langword="string" /> -Wert, der den Namen des darstellt ein <see langword="ChartArea" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name des ein <xref:System.Web.UI.DataVisualization.Charting.ChartArea> Objekt muss eindeutig sein, andernfalls wird eine Ausnahme ausgelöst.  
+  
+ Diese Eigenschaft kann als Indexer verwendet werden, beim Abrufen einer <xref:System.Web.UI.DataVisualization.Charting.ChartArea> -Objekt aus der <xref:System.Web.UI.DataVisualization.Charting.ChartAreaCollection> Objekt.  
+  
+ Wenn Sie diese Eigenschaft auf eine Zeichenfolge der Länge 0 (null) festgelegt. eine Ausnahme wird ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ElementPosition Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.ElementPosition Position" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.ElementPositionConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ElementPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest ein <see cref="T:System.Web.UI.DataVisualization.Charting.ElementPosition" /> Objekt, das die Position des definiert eine <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> -Objekts innerhalb der <see cref="T:System.Web.UI.DataVisualization.Charting.Chart" />.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ElementPosition" /> Objekt, das die Position des ein Diagrammobjekt der Bereich innerhalb des Diagrammbilds definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft definiert, der die Position des eine <xref:System.Web.UI.DataVisualization.Charting.ChartArea> -Objekts innerhalb der <xref:System.Web.UI.DataVisualization.Charting.Chart>, und Teilstriche, achsenbezeichnungen usw. enthält.  
+  
+ Die Koordinaten, die für diese Eigenschaft (0,0 bis 100,100) verwendet beziehen sich auf das gesamte Diagrammbild.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecalculateAxesScale">
+      <MemberSignature Language="C#" Value="public void RecalculateAxesScale ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RecalculateAxesScale() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartArea.RecalculateAxesScale" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die Eigenschaften der Diagrammfläche berechnet, nachdem Änderungen am Diagramm im vorgenommen wurden die <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.Customize" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung der <xref:System.Web.UI.DataVisualization.Charting.Chart.Customize> Ereignis Änderungen manchmal ist es erforderlich, diagrammflächeneigenschaften neu zu berechnen, damit das Diagramm ordnungsgemäß gerendert wird. Z. B. wenn ein Achsenbereich geändert wird, müssen die Bezeichnungen für die betreffende Achse neu berechnet werden.  
+  
+ Diese Methode aufrufen, nachdem Sie mithilfe der <xref:System.Web.UI.DataVisualization.Charting.Chart.Customize> Ereignis eine an einer Diagrammfläche ändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ShadowColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ShadowColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.ShadowColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "128,0,0,0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe des Schattens einen <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" />-Wert. Die Standardfarbe ist <see cref="P:System.Drawing.Color.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann auf einen beliebigen gültigen ARGB (Alpha, Rot, Grün, Blau) Wert festgelegt werden.  
+  
+ Der alpha-Wert kann verwendet werden, um eine "realistische" shadowing Effekt zu erzielen; Wiederholen Sie dann einen Farbwert "128,0,0,0" für Schatten.  
+  
+ Um einen Schatten zu implementieren, legen Sie die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.ShadowOffset%2A> Eigenschaft auf einen Wert ungleich 0 (null).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowOffset">
+      <MemberSignature Language="C#" Value="public int ShadowOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ShadowOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.ShadowOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schattenoffset in Pixel, der eine <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> Objekt.</summary>
+        <value>Eine <see langword="integer" /> , die den Schattenoffset der Diagrammfläche in Pixel darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie einen anderen Wert als 0 (null), um Schatten zu implementieren. Ein positiver Wert führt einen Schatten, die nach unten und rechts verschiebt. Ein negativer Wert führt einen Schatten, die oben "und" auf der linken Seite verschiebt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformPoints">
+      <MemberSignature Language="C#" Value="public void TransformPoints (System.Web.UI.DataVisualization.Charting.Point3D[] points);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TransformPoints(class System.Web.UI.DataVisualization.Charting.Point3D[] points) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartArea.TransformPoints(System.Web.UI.DataVisualization.Charting.Point3D[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="points" Type="System.Web.UI.DataVisualization.Charting.Point3D[]" />
+      </Parameters>
+      <Docs>
+        <param name="points">Ein Array von 3D Punkten.</param>
+        <summary>Wendet 3D Transformationen auf ein Array von Punkten 3D: erfolgen muss, bevor GDI + zeichnen Methoden aufgerufen werden kann.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public virtual bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Diagrammfläche sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Diagrammfläche sichtbar ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieses Flag festgelegt ist, um `false`, alle Reihen, Legenden, Titel und Anmerkung Objekte, die die Diagrammfläche zugeordnet sind, ebenfalls ausgeblendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1808 @@
+<Type Name="WaitHandle" FullName="System.Threading.WaitHandle">
+  <TypeSignature Language="C#" Value="public abstract class WaitHandle : MarshalByRefObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi abstract beforefieldinit WaitHandle extends System.MarshalByRefObject implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.WaitHandle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Kapselt betriebssystemspezifische Objekte, die auf exklusiven Zugriff auf gemeinsam genutzte Ressourcen warten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.WaitHandle> Klasse Win32-Synchronisierungshandles kapselt und wird verwendet, um alle Synchronisierungsobjekte in der Laufzeit darstellen, die mehrere Wartevorgänge ermöglichen. Einen Vergleich der Wait-Handles mit anderen Synchronisierungsobjekten, finden Sie unter [Übersicht über Synchronisierungsprimitiven](~/docs/standard/threading/overview-of-synchronization-primitives.md).  
+  
+ Die <xref:System.Threading.WaitHandle> Klasse selbst ist abstrakt. Abgeleitete Klassen von <xref:System.Threading.WaitHandle> definieren Sie einen signaling Mechanismus zum aufnehmen oder Freigeben von Zugriff auf eine freigegebene Ressource anzugeben, aber sie verwenden die geerbte <xref:System.Threading.WaitHandle> Methoden zu blockieren, bis für den Zugriff auf freigegebene Ressourcen. Von abgeleiteten Klassen <xref:System.Threading.WaitHandle> enthalten:  
+  
+-   Der <xref:System.Threading.Mutex>-Klasse. Finden Sie unter [Mutexe](~/docs/standard/threading/mutexes.md).  
+  
+-   Die <xref:System.Threading.EventWaitHandle> Klasse und abgeleitete Klassen, <xref:System.Threading.AutoResetEvent> und <xref:System.Threading.ManualResetEvent>. Finden Sie unter [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](~/docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md).  
+  
+-   Der <xref:System.Threading.Semaphore>-Klasse. Finden Sie unter [Semaphore und SemaphoreSlim](~/docs/standard/threading/semaphore-and-semaphoreslim.md).  
+  
+ Threads können auf einem einzelnen Wait-Handle durch Aufrufen der Instanzmethode blockieren <xref:System.Threading.WaitHandle.WaitOne%2A>, die von von abgeleiteten Klassen geerbt wird <xref:System.Threading.WaitHandle>.  
+  
+ Die abgeleiteten Klassen von <xref:System.Threading.WaitHandle> unterscheiden sich in deren Threadaffinität. Ereignis-wait-Handles (<xref:System.Threading.EventWaitHandle>, <xref:System.Threading.AutoResetEvent>, und <xref:System.Threading.ManualResetEvent>) und Semaphore keine Threadaffinität; einen beliebigen Thread kann ein Ereignis-Wait-Handle oder einen Semaphore zu signalisieren. Mutexe bezeichnet, führen Sie auf der anderen Seite Threadaffinität; der Thread, der einen Mutex besitzt muss freigegeben werden, und eine Ausnahme wird ausgelöst, wenn ein Thread aufruft, die <xref:System.Threading.Mutex.ReleaseMutex%2A> Methode einen Mutex, deren Besitzer er nicht ist.  
+  
+ Da die <xref:System.Threading.WaitHandle> Klasse leitet sich von <xref:System.MarshalByRefObject>, diese Klassen können verwendet werden, um die Aktivitäten von Threads über Anwendungsdomänengrenzen hinweg zu synchronisieren.  
+  
+ Zusätzlich zu den davon abgeleiteten Klassen die <xref:System.Threading.WaitHandle> -Klasse verfügt über eine Reihe von statischen Methoden, die einen Thread, bis eine blockiert oder mehrere Synchronisierungsobjekte empfangen eines Signals... Dazu gehören:  
+  
+-   <xref:System.Threading.WaitHandle.SignalAndWait%2A>, der ermöglicht es einem Thread ein Wait-Handle zu signalisieren und sofort auf einen anderen warten.  
+  
+-   <xref:System.Threading.WaitHandle.WaitAll%2A>, womit auf einen Thread zu warten, bis alle Wait-Handles in einem Array ein Signal empfangen.  
+  
+-   <xref:System.Threading.WaitHandle.WaitAny%2A>, womit auf einen Thread zu warten, bis eine von einem angegebenen Satz von Wait-Handles signalisiert wurde.  
+  
+ Die Überladungen dieser Methoden bereitstellen, befehlstimeoutintervalle zum Aufgeben der Warte- und die Möglichkeit, einen Synchronisierungskontext beenden Sie vor dem Wartevorgang, verwenden Sie den Synchronisierungskontext anderer Threads zugelassen wird.  
+  
+> [!IMPORTANT]
+>  Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mit den Typ oder eine davon abgeleitete Typ abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.Threading.WaitHandle.Close%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+ <xref:System.Threading.WaitHandle>implementiert die <xref:System.IDisposable.Dispose%2A> Muster. Finden Sie unter [Dispose-Muster](~/docs/standard/design-guidelines/dispose-pattern.md). Beim Ableiten von <xref:System.Threading.WaitHandle>, verwenden Sie die <xref:System.Threading.WaitHandle.SafeWaitHandle%2A> Eigenschaft, um Ihre systemeigene Betriebssystemhandle zu speichern. Sie müssen nicht den geschützten überschreiben <xref:System.Threading.WaitHandle.Dispose%2A> Methode, wenn Sie zusätzliche verwaltete Ressourcen verwenden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie zwei Threads können führen Hintergrundaufgaben während der Hauptthread thread wartet, bis die Aufgaben mithilfe der statischen <xref:System.Threading.WaitHandle.WaitAny%2A> und <xref:System.Threading.WaitHandle.WaitAll%2A> Methoden die <xref:System.Threading.WaitHandle> Klasse.  
+  
+ [!code-cpp[WaitHandle#1](~/samples/snippets/cpp/VS_Snippets_CLR/WaitHandle/cpp/WaitHandle.cpp#1)]
+ [!code-csharp[WaitHandle#1](~/samples/snippets/csharp/VS_Snippets_CLR/WaitHandle/CS/WaitHandle.cs#1)]
+ [!code-vb[WaitHandle#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/WaitHandle/VB/WaitHandle.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WaitHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Threading.WaitHandle" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public virtual void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen <see cref="T:System.Threading.WaitHandle" />-Klasse reservierten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist die öffentliche Implementierung der <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> Methode für die <xref:System.Threading.WaitHandle> Klasse und abgeleitete Klassen. Es stellt eine Standardimplementierung, die aufruft der `Dispose(Boolean)` -Überladung mit einer `true` Argument und ruft dann die <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> Methode. Rufen Sie diese Methode sämtliche Ressourcen frei, die von einer Instanz von Version `WaitHandle` oder eine abgeleitete Klasse.  
+  
+ Sobald diese Methode aufgerufen wird, werden Verweise auf die aktuelle Instanz nicht definiertes Verhalten verursachen.  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Threading.WaitHandle.Close%2A> oder <xref:System.Threading.WaitHandle.Dispose> , bevor Sie den letzten Verweis auf Freigeben der <xref:System.Threading.WaitHandle>. Andernfalls bleiben die verwendeten Ressourcen nicht reserviert.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie sollten überschreiben die <see langword="Dispose(Boolean)" /> Methode zum Freigeben von Ressourcen, die abgeleiteten Klassen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.Threading.WaitHandle" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entspricht der <xref:System.Threading.WaitHandle.Close%2A> Methode.  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Threading.WaitHandle.Close%2A> oder <xref:System.Threading.WaitHandle.Dispose> , bevor Sie den letzten Verweis auf Freigeben der <xref:System.Threading.WaitHandle>. Andernfalls bleiben die verwendeten Ressourcen nicht reserviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool explicitDisposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool explicitDisposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="explicitDisposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="explicitDisposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse die von <see cref="T:System.Threading.WaitHandle" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Threading.WaitHandle.Close%2A> und die <xref:System.Threading.WaitHandle.Dispose> Methoden mit der `explicitDisposing` Parametersatz auf `true`.  Wenn die `explicitDisposing` Parameter ist `true`, diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte frei, die von diesem <xref:System.Threading.WaitHandle> -Objekt verweist.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie sollten überschreiben die <see cref="M:System.Threading.WaitHandle.Dispose(System.Boolean)" /> Methode zum Freigeben von Ressourcen, die abgeleiteten Klassen.  
+  
+ Die <see cref="M:System.Threading.WaitHandle.Close" /> oder <see cref="M:System.Threading.WaitHandle.Dispose" /> Methode kann von anderen Objekten mehrmals aufgerufen werden. Beim Überschreiben dieser Methode werden nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" /> oder <see langword="Close" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public virtual IntPtr Handle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Handle" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.WaitHandle.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use the SafeWaitHandle property instead.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das systemeigene Betriebssystemhandle auf oder legt dieses fest.</summary>
+        <value>Ein <see langword="IntPtr" />, das das systemeigene Betriebssystemhandle darstellt. Der Standardwert ist der Wert des <see cref="F:System.Threading.WaitHandle.InvalidHandle" />-Felds.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zuweisen eines neuen Werts auf die <xref:System.Threading.WaitHandle.Handle%2A> Eigenschaft wird das vorherige Handle nicht geschlossen. Dies kann zu einem unkontrollierten Handle führen.  
+  
+ Verwenden Sie diese Eigenschaft nicht in .NET Framework, Version 2.0 oder höher. Verwenden Sie die <xref:System.Threading.WaitHandle.SafeWaitHandle%2A> Eigenschaft stattdessen. Festlegen dieser Eigenschaft auf ein gültiges Handle, wird auch die <xref:System.Threading.WaitHandle.SafeWaitHandle%2A> -Eigenschaft, aber bei der Einstellung <xref:System.Threading.WaitHandle.InvalidHandle> kann zu einem unkontrollierten Handle führen.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer zum Festlegen des Werts der Eigenschaft. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code festgelegt werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">Abgeleitete Typen müssen <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /> zum Festlegen des Werts der Eigenschaft.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidHandle">
+      <MemberSignature Language="C#" Value="protected static readonly IntPtr InvalidHandle;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly native int InvalidHandle" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.WaitHandle.InvalidHandle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt ein ungültiges systemeigenes Betriebssystemhandle dar. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Intern verwendet, um das Initialisieren der <xref:System.Threading.WaitHandle.Handle%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können diesen Wert verwenden, um zu bestimmen, ob die <see cref="P:System.Threading.WaitHandle.Handle" /> Eigenschaft enthält ein gültigen systemeigenes Betriebssystemhandle.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeWaitHandle">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.SafeHandles.SafeWaitHandle SafeWaitHandle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.SafeHandles.SafeWaitHandle SafeWaitHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.WaitHandle.SafeWaitHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SafeHandles.SafeWaitHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das systemeigene Betriebssystemhandle auf oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:Microsoft.Win32.SafeHandles.SafeWaitHandle" />, das das systemeigene Betriebssystemhandle darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen neuen Wert zuweisen der <xref:System.Threading.WaitHandle.SafeWaitHandle%2A> -Eigenschaft, die vorherige Handle wird geschlossen, wenn der vorherige <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> Objekt gesammelt. Schließen Sie nicht manuell das Handle, da dadurch ein <xref:System.ObjectDisposedException> beim der <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> versucht, das Handle nicht geschlossen.  
+  
+ <xref:System.Threading.WaitHandle>implementiert die <xref:System.IDisposable.Dispose%2A> Muster. Finden Sie unter [Dispose-Muster](~/docs/standard/design-guidelines/dispose-pattern.md). Beim Ableiten von <xref:System.Threading.WaitHandle>, verwenden Sie die <xref:System.Threading.WaitHandle.SafeWaitHandle%2A> Eigenschaft, um Ihre systemeigene Betriebssystemhandle zu speichern. Sie müssen nicht den geschützten überschreiben <xref:System.Threading.WaitHandle.Dispose%2A> Methode, wenn Sie zusätzliche verwaltete Ressourcen verwenden.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">Abgeleitete Typen müssen <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /> bei diesem Member aufrufen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SignalAndWait">
+      <MemberSignature Language="C#" Value="public static bool SignalAndWait (System.Threading.WaitHandle toSignal, System.Threading.WaitHandle toWaitOn);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool SignalAndWait(class System.Threading.WaitHandle toSignal, class System.Threading.WaitHandle toWaitOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.SignalAndWait(System.Threading.WaitHandle,System.Threading.WaitHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toSignal" Type="System.Threading.WaitHandle" />
+        <Parameter Name="toWaitOn" Type="System.Threading.WaitHandle" />
+      </Parameters>
+      <Docs>
+        <param name="toSignal">Das zu signalisierende <see cref="T:System.Threading.WaitHandle" />.</param>
+        <param name="toWaitOn">Das <see cref="T:System.Threading.WaitHandle" />, auf das gewartet werden soll.</param>
+        <summary>Signalisiert ein <see cref="T:System.Threading.WaitHandle" /> und wartet auf einen anderen.</summary>
+        <returns>
+          <see langword="true" />, wenn das Signal und der Wartevorgang erfolgreich abgeschlossen wurden. Wenn der Wartevorgang nicht abgeschlossen wird, wird die Methode nicht beendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang ist nicht garantiert, um atomar zu sein. Nach dem aktuellen Thread Signale `toSignal` , aber bevor er wartet auf `toWaitOn`, ein Thread, der auf einem anderen Prozessor ausgeführt wird, möglicherweise signalisieren `toWaitOn` oder darauf zu warten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Threading.WaitHandle.SignalAndWait%28System.Threading.WaitHandle%2CSystem.Threading.WaitHandle%29> -methodenüberladung ermöglichen den Hauptthread zu einen blockierten Thread zu signalisieren und warten Sie, bis der Thread eine Aufgabe beendet ist.  
+  
+ Im Beispiel werden fünf Threads gestartet, ermöglicht es ihnen, blockiert ein <xref:System.Threading.EventWaitHandle> erstellt, mit der <xref:System.Threading.EventResetMode?displayProperty=nameWithType> Flag und dann Versionen nur ein Thread-Mal die EINGABETASTE drückt. Anschließend fünf weitere Threads und freigegeben, alle mit einem <xref:System.Threading.EventWaitHandle> erstellt, mit der <xref:System.Threading.EventResetMode?displayProperty=nameWithType> Flag.  
+  
+ [!code-cpp[System.Threading.WaitHandle.SignalAndWait#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.WaitHandle.SignalAndWait/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.WaitHandle.SignalAndWait#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.WaitHandle.SignalAndWait/CS/source.cs#1)]
+ [!code-vb[System.Threading.WaitHandle.SignalAndWait#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.WaitHandle.SignalAndWait/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="toSignal" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="toWaitOn" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Die Methode wurde aufgerufen, auf einen Thread, der hat <see cref="T:System.STAThreadAttribute" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Diese Methode wird unter Windows 98 oder Windows Millennium Edition nicht unterstützt.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="toSignal" />ist ein Semaphor, und es wurde bereits eine vollständige Zählung.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird abgeschlossen, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignalAndWait">
+      <MemberSignature Language="C#" Value="public static bool SignalAndWait (System.Threading.WaitHandle toSignal, System.Threading.WaitHandle toWaitOn, int millisecondsTimeout, bool exitContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool SignalAndWait(class System.Threading.WaitHandle toSignal, class System.Threading.WaitHandle toWaitOn, int32 millisecondsTimeout, bool exitContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.SignalAndWait(System.Threading.WaitHandle,System.Threading.WaitHandle,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toSignal" Type="System.Threading.WaitHandle" />
+        <Parameter Name="toWaitOn" Type="System.Threading.WaitHandle" />
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+        <Parameter Name="exitContext" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="toSignal">Das zu signalisierende <see cref="T:System.Threading.WaitHandle" />.</param>
+        <param name="toWaitOn">Das <see cref="T:System.Threading.WaitHandle" />, auf das gewartet werden soll.</param>
+        <param name="millisecondsTimeout">Eine Ganzzahl, die das Wartezeitintervall darstellt. Wenn der Wert <see cref="F:System.Threading.Timeout.Infinite" /> (d. h. -1) ist, ist die Wartezeit unendlich.</param>
+        <param name="exitContext">
+          <see langword="true" />, um die Synchronisierungsdomäne für den Kontext vor dem Wartevorgang (sofern in einem synchronisierten Kontext) zu verlassen und diese anschließend erneut abzurufen, andernfalls <see langword="false" />.</param>
+        <summary>Signalisiert ein <see cref="T:System.Threading.WaitHandle" /> und wartet auf ein weiteres, wobei ein Timeoutintervall als 32-Bit-Ganzzahl mit Vorzeichen angegeben und festgelegt wird, ob die Synchronisierungsdomäne des Kontexts vor dem Wartevorgang verlassen werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn das Signal und die Wartezeit erfolgreich abgeschlossen wurden, oder <see langword="false" />, wenn das Signal abgeschlossen wurde, für die Wartezeit jedoch ein Timeout aufgetreten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang ist nicht garantiert, um atomar zu sein. Nach dem aktuellen Thread Signale `toSignal` , aber bevor er wartet auf `toWaitOn`, ein Thread, der auf einem anderen Prozessor ausgeführt wird, möglicherweise signalisieren `toWaitOn` oder darauf zu warten.  
+  
+ Wenn `millisecondsTimeout` NULL ist, wird die Methode wird nicht blockiert. Anhand eines tests den Zustand der `toWaitOn` und kehrt sofort zurück.  
+  
+## <a name="notes-on-exiting-the-context"></a>Hinweise zum Beenden des Kontexts  
+ Die `exitContext` Parameter hat keine Auswirkungen, es sei denn, die <xref:System.Threading.WaitHandle.SignalAndWait%2A> Methode aus, in einem nicht standardmäßigen verwalteten Kontext aufgerufen wird. Dies kann geschehen, wenn der Thread in einem Aufruf mit einer Instanz einer Klasse abgeleitet ist <xref:System.ContextBoundObject>. Selbst wenn derzeit eine Methode einer Klasse ausgeführt werden, die nicht von abgeleitet ist <xref:System.ContextBoundObject>, z. B. <xref:System.String>, Sie kann in einem nicht standardmäßigen Kontext Wenn eine <xref:System.ContextBoundObject> befindet sich auf dem Stapel in der aktuellen Anwendungsdomäne.  
+  
+ Beim Code in einem nicht standardmäßigen Kontext und ausgeführt wird die Angabe `true` für `exitContext` bewirkt, dass der Thread den nicht standardmäßigen verwalteten Kontext zu beenden (d. h. für den Übergang in den Standardkontext) vor dem Ausführen der <xref:System.Threading.WaitHandle.SignalAndWait%2A> Methode. Der Thread zurück in den ursprünglich nicht standardmäßige nach dem Aufruf der <xref:System.Threading.WaitHandle.SignalAndWait%2A> Methode abgeschlossen wird.  
+  
+ Dies kann nützlich sein, wenn die kontextgebundene-Klasse verfügt über <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>. In diesem Fall werden alle Aufrufe von Membern der Klasse werden automatisch synchronisiert, und die Synchronisierungsdomäne ist der gesamte Text der Code für die Klasse. Wenn Code in der Aufrufliste eines Members Ruft die <xref:System.Threading.WaitHandle.SignalAndWait%2A> Methode und gibt an, `true` für `exitContext`, der Thread beendet wird, die Synchronisierungsdomäne ermöglicht einen Thread, der bei einem Aufruf auf einen Member des Objekts zu fortfahren blockiert wird. Wenn die <xref:System.Threading.WaitHandle.SignalAndWait%2A> Methode zurückgegeben wird, der Thread, der der Aufruf muss warten, um die Synchronisierungsdomäne.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="toSignal" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="toWaitOn" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Die Methode wird aufgerufen, auf einen Thread, der hat <see cref="T:System.STAThreadAttribute" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Diese Methode wird unter Windows 98 oder Windows Millennium Edition nicht unterstützt.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Threading.WaitHandle" /> kann nicht signalisiert werden, da die maximale Anzahl überschritten würde.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" /> ist eine negative Zahl, jedoch nicht -1, was einen unbeschränkten Timeout darstellt.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird abgeschlossen, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignalAndWait">
+      <MemberSignature Language="C#" Value="public static bool SignalAndWait (System.Threading.WaitHandle toSignal, System.Threading.WaitHandle toWaitOn, TimeSpan timeout, bool exitContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool SignalAndWait(class System.Threading.WaitHandle toSignal, class System.Threading.WaitHandle toWaitOn, valuetype System.TimeSpan timeout, bool exitContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.SignalAndWait(System.Threading.WaitHandle,System.Threading.WaitHandle,System.TimeSpan,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toSignal" Type="System.Threading.WaitHandle" />
+        <Parameter Name="toWaitOn" Type="System.Threading.WaitHandle" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="exitContext" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="toSignal">Das zu signalisierende <see cref="T:System.Threading.WaitHandle" />.</param>
+        <param name="toWaitOn">Das <see cref="T:System.Threading.WaitHandle" />, auf das gewartet werden soll.</param>
+        <param name="timeout">Ein <see cref="T:System.TimeSpan" />-Wert, der das Wartezeitintervall darstellt. Wenn der Wert -1 ist, ist die Wartezeit unendlich.</param>
+        <param name="exitContext">
+          <see langword="true" />, um die Synchronisierungsdomäne für den Kontext vor dem Wartevorgang (sofern in einem synchronisierten Kontext) zu verlassen und diese anschließend erneut abzurufen, andernfalls <see langword="false" />.</param>
+        <summary>Signalisiert ein <see cref="T:System.Threading.WaitHandle" /> und wartet auf ein weiteres, wobei das Timeoutintervall als <see cref="T:System.TimeSpan" /> angegeben und festgelegt wird, ob die Synchronisierungsdomäne des Kontexts vor dem Wartevorgang verlassen werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn das Signal und die Wartezeit erfolgreich abgeschlossen wurden, oder <see langword="false" />, wenn das Signal abgeschlossen wurde, für die Wartezeit jedoch ein Timeout aufgetreten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang ist nicht garantiert, um atomar zu sein. Nach dem aktuellen Thread Signale `toSignal` , aber bevor er wartet auf `toWaitOn`, ein Thread, der auf einem anderen Prozessor ausgeführt wird, möglicherweise signalisieren `toWaitOn` oder darauf zu warten.  
+  
+ Der Höchstwert für `timeout` ist <xref:System.Int32.MaxValue?displayProperty=nameWithType>.  
+  
+ Wenn `timeout` NULL ist, wird die Methode wird nicht blockiert. Anhand eines tests den Zustand der `toWaitOn` und kehrt sofort zurück.  
+  
+## <a name="notes-on-exiting-the-context"></a>Hinweise zum Beenden des Kontexts  
+ Die `exitContext` Parameter hat keine Auswirkungen, es sei denn, die <xref:System.Threading.WaitHandle.SignalAndWait%2A> Methode aus, in einem nicht standardmäßigen verwalteten Kontext aufgerufen wird. Dies kann geschehen, wenn der Thread in einem Aufruf mit einer Instanz einer Klasse abgeleitet ist <xref:System.ContextBoundObject>. Selbst wenn derzeit eine Methode einer Klasse ausgeführt werden, die nicht von abgeleitet ist <xref:System.ContextBoundObject>, z. B. <xref:System.String>, Sie kann in einem nicht standardmäßigen Kontext Wenn eine <xref:System.ContextBoundObject> befindet sich auf dem Stapel in der aktuellen Anwendungsdomäne.  
+  
+ Beim Code in einem nicht standardmäßigen Kontext und ausgeführt wird die Angabe `true` für `exitContext` bewirkt, dass der Thread den nicht standardmäßigen verwalteten Kontext zu beenden (d. h. für den Übergang in den Standardkontext) vor dem Ausführen der <xref:System.Threading.WaitHandle.SignalAndWait%2A> Methode. Der Thread zurück in den ursprünglich nicht standardmäßige nach dem Aufruf der <xref:System.Threading.WaitHandle.SignalAndWait%2A> Methode abgeschlossen wird.  
+  
+ Dies kann nützlich sein, wenn die kontextgebundene-Klasse verfügt über <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>. In diesem Fall werden alle Aufrufe von Membern der Klasse werden automatisch synchronisiert, und die Synchronisierungsdomäne ist der gesamte Text der Code für die Klasse. Wenn Code in der Aufrufliste eines Members Ruft die <xref:System.Threading.WaitHandle.SignalAndWait%2A> Methode und gibt an, `true` für `exitContext`, der Thread beendet wird, die Synchronisierungsdomäne ermöglicht einen Thread, der bei einem Aufruf auf einen Member des Objekts zu fortfahren blockiert wird. Wenn die <xref:System.Threading.WaitHandle.SignalAndWait%2A> Methode zurückgegeben wird, der Thread, der der Aufruf muss warten, um die Synchronisierungsdomäne.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="toSignal" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="toWaitOn" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Die Methode wurde aufgerufen, auf einen Thread, der hat <see cref="T:System.STAThreadAttribute" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Diese Methode wird unter Windows 98 oder Windows Millennium Edition nicht unterstützt.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="toSignal" />ist ein Semaphor, und es wurde bereits eine vollständige Zählung.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" />eine negative Zahl ungleich-1 Millisekunden ergibt.  
+  
+ - oder -   
+  
+ <paramref name="timeout" /> ist größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird abgeschlossen, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAll">
+      <MemberSignature Language="C#" Value="public static bool WaitAll (System.Threading.WaitHandle[] waitHandles);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool WaitAll(class System.Threading.WaitHandle[] waitHandles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.WaitAll(System.Threading.WaitHandle[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandles" Type="System.Threading.WaitHandle[]" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandles">Ein <see langword="WaitHandle" />-Array mit den Objekten, auf die die aktuelle Instanz wartet. Dieses Array kann nicht mehrere Verweise auf dasselbe Objekt enthalten.</param>
+        <summary>Wartet, bis alle Elemente im angegebenen Array ein Signal empfangen.</summary>
+        <returns>
+          <see langword="true" />, wenn jedes Element in <paramref name="waitHandles" /> ein Signal empfangen hat, andernfalls wird die Methode nicht beendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.AbandonedMutexException>ist neu in .NET Framework, Version 2.0. In früheren Versionen der <xref:System.Threading.WaitHandle.WaitAll%2A> -Methode zurückkehrt `true` Wenn ein Mutex abgebrochen wird. Ein abgebrochenes Mutex weist häufig einen schwerwiegenden Fehler im Code. Im Fall einer systemweiten Mutex kann dies darauf hinweisen, dass eine Anwendung plötzlich beendet wurde (z. B. mithilfe von Windows Task-Manager). Die Ausnahme enthält Informationen zum Debuggen nützlich.  
+  
+ Die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode zurückgegeben, wenn alle Handles signalisiert werden. Auf einigen Implementierungen, wenn mehr als 64 Handles übergeben werden eine <xref:System.NotSupportedException> ausgelöst wird. Wenn das Array Duplikate enthält, wird der Aufruf fehlschlägt, mit einem <xref:System.DuplicateWaitObjectException>.  
+  
+> [!NOTE]
+>  Die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode wird nicht unterstützt, auf denen Threads <xref:System.STAThreadAttribute>.  
+  
+ Das Aufrufen dieser methodenüberladung entspricht dem Aufrufen der <xref:System.Threading.WaitHandle.WaitAll%28System.Threading.WaitHandle%5B%5D%2CSystem.Int32%2CSystem.Boolean%29> methodenüberladung und-1 angeben (oder <xref:System.Threading.Timeout.Infinite?displayProperty=nameWithType>) für `millisecondsTimeout` und `true` für `exitContext`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf den Threadpool verwenden, um asynchron erstellungs- und Schreibberechtigungen für eine Gruppe von Dateien. Jeder Schreibvorgang wird als ein Arbeitselement und Signalen in die Warteschlange, wenn er abgeschlossen ist. Der Hauptthread wartet, bis alle Elemente, um zu signalisieren und wird dann beendet.  
+  
+ [!code-cpp[System.Threading.WaitHandle.WaitAll1#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAll1/CPP/source1.cpp#1)]
+ [!code-csharp[System.Threading.WaitHandle.WaitAll1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAll1/CS/source1.cs#1)]
+ [!code-vb[System.Threading.WaitHandle.WaitAll1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAll1/VB/source1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="waitHandles" />-Parameter ist <see langword="null" />. - oder -   
+  
+ Mindestens ein Objekt im <paramref name="waitHandles" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="waitHandles" /> ist ein Array ohne Elemente, und die .NET Framework-Version ist 2.0 oder höher.</exception>
+        <exception cref="T:System.DuplicateWaitObjectException">
+          <block subset="none" type="note">
+            <para>  
+ In der [.NET für Windows Store-apps](http://go.microsoft.com/fwlink/?LinkID=247912) oder [Portable Class Library](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), fangen Sie die basisklassenausnahme <see cref="T:System.ArgumentException" />, stattdessen.  
+  
+</para>
+          </block>  
+  
+ Das <paramref name="waitHandles" />-Array enthält doppelte Elemente.</exception>
+        <exception cref="T:System.NotSupportedException">Die Anzahl von Objekten in <paramref name="waitHandles" /> ist größer, als das System erlaubt.  
+  
+ - oder -   
+  
+ Das <see cref="T:System.STAThreadAttribute" />-Attribut wird für den aktuellen Thread auf die Threadprozedur angewendet, und <paramref name="waitHandles" /> enthält mehrere Elemente.</exception>
+        <exception cref="T:System.ApplicationException">
+          <paramref name="waitHandles" /> ist ein Array ohne Elemente, und die .NET Framework-Version ist 1.0 oder 1.1.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird beendet, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+        <exception cref="T:System.InvalidOperationException">Das <paramref name="waitHandles" />-Array enthält einen transparenten Proxy für ein <see cref="T:System.Threading.WaitHandle" /> in einer anderen Anwendungsdomäne.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAll">
+      <MemberSignature Language="C#" Value="public static bool WaitAll (System.Threading.WaitHandle[] waitHandles, int millisecondsTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool WaitAll(class System.Threading.WaitHandle[] waitHandles, int32 millisecondsTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.WaitAll(System.Threading.WaitHandle[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandles" Type="System.Threading.WaitHandle[]" />
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandles">Ein <see langword="WaitHandle" />-Array mit den Objekten, auf die die aktuelle Instanz wartet. Dieses Array kann nicht mehrere Verweise auf dasselbe Objekt (Duplikate) enthalten.</param>
+        <param name="millisecondsTimeout">Die Anzahl von Millisekunden, die gewartet wird, oder <see cref="F:System.Threading.Timeout.Infinite" /> (-1) für Warten ohne Timeout.</param>
+        <summary>Wartet auf den Empfang eines Signals für alle Elemente im angegebenen Array und gibt das Zeitintervall mit einem <see cref="T:System.Int32" />-Wert an.</summary>
+        <returns>
+          <see langword="true" />, wenn jedes Element in <paramref name="waitHandles" /> ein Signal empfangen hat, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `millisecondsTimeout` NULL ist, wird die Methode wird nicht blockiert. Er überprüft den Status des Wait-Handles und kehrt sofort zurück.  
+  
+ Die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode zurückgegeben, wenn der Wartevorgang wird beendet, d. h., wenn alle Handles signalisiert werden oder ein Timeout auftritt. Auf einigen Implementierungen, wenn mehr als 64 Handles übergeben werden eine <xref:System.NotSupportedException> ausgelöst wird. Wenn Duplikate im Array vorhanden sind, wird der Aufruf fehlschlägt, mit einem <xref:System.DuplicateWaitObjectException>.  
+  
+> [!NOTE]
+>  Die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode wird nicht unterstützt, auf denen Threads <xref:System.STAThreadAttribute>.  
+  
+ Das Aufrufen dieser methodenüberladung ist der gleiche wie das Aufrufen der <xref:System.Threading.WaitHandle.WaitAll%28System.Threading.WaitHandle%5B%5D%2CSystem.Int32%2CSystem.Boolean%29> Überladung und Angeben von `false` für `exitContext`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="waitHandles" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Mindestens ein Objekt im <paramref name="waitHandles" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="waitHandles" /> ist ein Array ohne Elemente.</exception>
+        <exception cref="T:System.DuplicateWaitObjectException">
+          <block subset="none" type="note">
+            <para>  
+ In der [.NET für Windows Store-apps](http://go.microsoft.com/fwlink/?LinkID=247912) oder [Portable Class Library](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), fangen Sie die basisklassenausnahme <see cref="T:System.ArgumentException" />, stattdessen.  
+  
+</para>
+          </block>  
+  
+ Das <paramref name="waitHandles" />-Array enthält doppelte Elemente.</exception>
+        <exception cref="T:System.NotSupportedException">Die Anzahl von Objekten in <paramref name="waitHandles" /> ist größer, als das System erlaubt.  
+  
+ - oder -   
+  
+ Das <see cref="T:System.STAThreadAttribute" />-Attribut wird für den aktuellen Thread auf die Threadprozedur angewendet, und <paramref name="waitHandles" /> enthält mehrere Elemente.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" /> ist eine negative Zahl, jedoch nicht -1, was einen unbeschränkten Timeout darstellt.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird abgeschlossen, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+        <exception cref="T:System.InvalidOperationException">Das <paramref name="waitHandles" />-Array enthält einen transparenten Proxy für ein <see cref="T:System.Threading.WaitHandle" /> in einer anderen Anwendungsdomäne.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAll">
+      <MemberSignature Language="C#" Value="public static bool WaitAll (System.Threading.WaitHandle[] waitHandles, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool WaitAll(class System.Threading.WaitHandle[] waitHandles, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.WaitAll(System.Threading.WaitHandle[],System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandles" Type="System.Threading.WaitHandle[]" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandles">Ein <see langword="WaitHandle" />-Array mit den Objekten, auf die die aktuelle Instanz wartet. Dieses Array kann nicht mehrere Verweise auf dasselbe Objekt enthalten.</param>
+        <param name="timeout">Eine <see cref="T:System.TimeSpan" />-Struktur, die die Anzahl der zu Millisekunden für die Wartezeit angibt, oder eine <see cref="T:System.TimeSpan" />-Struktur, die -1 Millisekunden angibt, also eine unbeschränkte Wartezeit.</param>
+        <summary>Wartet auf den Empfang eines Signals für alle Elemente im angegebenen Array und gibt das Zeitintervall mit einem <see cref="T:System.TimeSpan" />-Wert an.</summary>
+        <returns>
+          <see langword="true" />, wenn jedes Element in <paramref name="waitHandles" /> ein Signal empfangen hat, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `timeout` NULL ist, wird die Methode wird nicht blockiert. Er überprüft den Status des Wait-Handles und kehrt sofort zurück.  
+  
+ Die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode zurückgegeben, wenn der Wartevorgang wird beendet, d. h. alle Handles signalisiert werden oder ein Timeout auftritt. Auf einigen Implementierungen, wenn mehr als 64 Handles übergeben werden eine <xref:System.NotSupportedException> ausgelöst wird. Wenn das Array Duplikate enthält, schlägt der Aufruf fehl.  
+  
+> [!NOTE]
+>  Die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode wird nicht unterstützt, auf denen Threads <xref:System.STAThreadAttribute>.  
+  
+ Der Höchstwert für `timeout` ist <xref:System.Int32.MaxValue?displayProperty=nameWithType>.  
+  
+ Das Aufrufen dieser methodenüberladung ist der gleiche wie das Aufrufen der <xref:System.Threading.WaitHandle.WaitAll%28System.Threading.WaitHandle%5B%5D%2CSystem.TimeSpan%2CSystem.Boolean%29> Überladung und Angeben von `false` für `exitContext`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="waitHandles" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Mindestens ein Objekt im <paramref name="waitHandles" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="waitHandles" /> ist ein Array ohne Elemente.</exception>
+        <exception cref="T:System.DuplicateWaitObjectException">
+          <block subset="none" type="note">
+            <para>  
+ In der [.NET für Windows Store-apps](http://go.microsoft.com/fwlink/?LinkID=247912) oder [Portable Class Library](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), fangen Sie die basisklassenausnahme <see cref="T:System.ArgumentException" />, stattdessen.  
+  
+</para>
+          </block>  
+  
+ Das <paramref name="waitHandles" />-Array enthält doppelte Elemente.</exception>
+        <exception cref="T:System.NotSupportedException">Die Anzahl von Objekten in <paramref name="waitHandles" /> ist größer, als das System erlaubt.  
+  
+ - oder -   
+  
+ Das <see cref="T:System.STAThreadAttribute" />-Attribut wird für den aktuellen Thread auf die Threadprozedur angewendet, und <paramref name="waitHandles" /> enthält mehr als ein Element.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> ist eine negative Zahl ungleich „-1 Millisekunden“, die ein unendliches Timeout darstellt.  
+  
+ - oder -   
+  
+ <paramref name="timeout" /> ist größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird beendet, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+        <exception cref="T:System.InvalidOperationException">Das <paramref name="waitHandles" />-Array enthält einen transparenten Proxy für ein <see cref="T:System.Threading.WaitHandle" /> in einer anderen Anwendungsdomäne.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAll">
+      <MemberSignature Language="C#" Value="public static bool WaitAll (System.Threading.WaitHandle[] waitHandles, int millisecondsTimeout, bool exitContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool WaitAll(class System.Threading.WaitHandle[] waitHandles, int32 millisecondsTimeout, bool exitContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.WaitAll(System.Threading.WaitHandle[],System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandles" Type="System.Threading.WaitHandle[]" />
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+        <Parameter Name="exitContext" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandles">Ein <see langword="WaitHandle" />-Array mit den Objekten, auf die die aktuelle Instanz wartet. Dieses Array kann nicht mehrere Verweise auf dasselbe Objekt (Duplikate) enthalten.</param>
+        <param name="millisecondsTimeout">Die Anzahl von Millisekunden, die gewartet wird, oder <see cref="F:System.Threading.Timeout.Infinite" /> (-1) für Warten ohne Timeout.</param>
+        <param name="exitContext">
+          <see langword="true" />, um die Synchronisierungsdomäne für den Kontext vor dem Wartevorgang (sofern in einem synchronisierten Kontext) zu verlassen und diese anschließend erneut abzurufen, andernfalls <see langword="false" />.</param>
+        <summary>Wartet, bis alle Elemente im angegebenen Array ein Signal empfangen, wobei ein <see cref="T:System.Int32" />-Wert zum Angeben des Zeitintervalls verwendet wird, und gibt an, ob die Synchronisierungsdomäne vor dem Wartevorgang verlassen werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn jedes Element in <paramref name="waitHandles" /> ein Signal empfangen hat, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `millisecondsTimeout` NULL ist, wird die Methode wird nicht blockiert. Er überprüft den Status des Wait-Handles und kehrt sofort zurück.  
+  
+ <xref:System.Threading.AbandonedMutexException>ist neu in .NET Framework, Version 2.0. In früheren Versionen der <xref:System.Threading.WaitHandle.WaitAll%2A> -Methode zurückkehrt `true` Wenn ein Mutex abgebrochen wird. Ein abgebrochenes Mutex weist häufig einen schwerwiegenden Fehler im Code. Im Fall einer systemweiten Mutex kann dies darauf hinweisen, dass eine Anwendung plötzlich beendet wurde (z. B. mithilfe von Windows Task-Manager). Die Ausnahme enthält Informationen zum Debuggen nützlich.  
+  
+ Die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode zurückgegeben, wenn der Wartevorgang wird beendet, d. h., wenn alle Handles signalisiert werden oder ein Timeout auftritt. Auf einigen Implementierungen, wenn mehr als 64 Handles übergeben werden eine <xref:System.NotSupportedException> ausgelöst wird. Wenn Duplikate im Array vorhanden sind, wird der Aufruf fehlschlägt, mit einem <xref:System.DuplicateWaitObjectException>.  
+  
+> [!NOTE]
+>  Die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode wird nicht unterstützt, auf denen Threads <xref:System.STAThreadAttribute>.  
+  
+## <a name="notes-on-exiting-the-context"></a>Hinweise zum Beenden des Kontexts  
+ Die `exitContext` Parameter hat keine Auswirkungen, es sei denn, die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode aus, in einem nicht standardmäßigen verwalteten Kontext aufgerufen wird. Dies kann geschehen, wenn der Thread in einem Aufruf mit einer Instanz einer Klasse abgeleitet ist <xref:System.ContextBoundObject>. Selbst wenn derzeit eine Methode einer Klasse ausgeführt werden, die nicht von abgeleitet ist <xref:System.ContextBoundObject>, z. B. <xref:System.String>, Sie kann in einem nicht standardmäßigen Kontext Wenn eine <xref:System.ContextBoundObject> befindet sich auf dem Stapel in der aktuellen Anwendungsdomäne.  
+  
+ Beim Code in einem nicht standardmäßigen Kontext und ausgeführt wird die Angabe `true` für `exitContext` bewirkt, dass der Thread den nicht standardmäßigen verwalteten Kontext zu beenden (d. h. für den Übergang in den Standardkontext) vor dem Ausführen der <xref:System.Threading.WaitHandle.WaitAll%2A> Methode. Der Thread zurück in den ursprünglich nicht standardmäßige nach dem Aufruf der <xref:System.Threading.WaitHandle.WaitAll%2A> Methode abgeschlossen wird.  
+  
+ Dies kann nützlich sein, wenn die kontextgebundene-Klasse verfügt über die <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> Attribut. In diesem Fall werden alle Aufrufe von Membern der Klasse werden automatisch synchronisiert, und die Synchronisierungsdomäne ist der gesamte Text der Code für die Klasse. Wenn Code in der Aufrufliste eines Members Ruft die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode und gibt an, `true` für `exitContext`, der Thread beendet wird, die Synchronisierungsdomäne ermöglicht einen Thread, der bei einem Aufruf auf einen Member des Objekts zu fortfahren blockiert wird. Wenn die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode zurückgegeben wird, der Thread, der der Aufruf muss warten, um die Synchronisierungsdomäne.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf den Threadpool verwenden, um asynchron erstellungs- und Schreibberechtigungen für eine Gruppe von Dateien. Jeder Schreibvorgang wird als ein Arbeitselement und Signalen in die Warteschlange, wenn er abgeschlossen ist. Der Hauptthread wartet, bis alle Elemente, um zu signalisieren und wird dann beendet.  
+  
+ [!code-cpp[System.Threading.WaitHandle.WaitAll2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAll2/CPP/source2.cpp#1)]
+ [!code-csharp[System.Threading.WaitHandle.WaitAll2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAll2/CS/source2.cs#1)]
+ [!code-vb[System.Threading.WaitHandle.WaitAll2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAll2/VB/source2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="waitHandles" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Mindestens ein Objekt im <paramref name="waitHandles" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="waitHandles" /> ist ein Array ohne Elemente, und die .NET Framework-Version ist 2.0 oder höher.</exception>
+        <exception cref="T:System.DuplicateWaitObjectException">Das <paramref name="waitHandles" />-Array enthält doppelte Elemente.</exception>
+        <exception cref="T:System.NotSupportedException">Die Anzahl von Objekten in <paramref name="waitHandles" /> ist größer, als das System erlaubt.  
+  
+ - oder -   
+  
+ Das <see cref="T:System.STAThreadAttribute" />-Attribut wird für den aktuellen Thread auf die Threadprozedur angewendet, und <paramref name="waitHandles" /> enthält mehrere Elemente.</exception>
+        <exception cref="T:System.ApplicationException">
+          <paramref name="waitHandles" /> ist ein Array ohne Elemente, und die .NET Framework-Version ist 1.0 oder 1.1.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" /> ist eine negative Zahl, jedoch nicht -1, was einen unbeschränkten Timeout darstellt.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird abgeschlossen, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+        <exception cref="T:System.InvalidOperationException">Das <paramref name="waitHandles" />-Array enthält einen transparenten Proxy für ein <see cref="T:System.Threading.WaitHandle" /> in einer anderen Anwendungsdomäne.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAll">
+      <MemberSignature Language="C#" Value="public static bool WaitAll (System.Threading.WaitHandle[] waitHandles, TimeSpan timeout, bool exitContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool WaitAll(class System.Threading.WaitHandle[] waitHandles, valuetype System.TimeSpan timeout, bool exitContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.WaitAll(System.Threading.WaitHandle[],System.TimeSpan,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandles" Type="System.Threading.WaitHandle[]" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="exitContext" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandles">Ein <see langword="WaitHandle" />-Array mit den Objekten, auf die die aktuelle Instanz wartet. Dieses Array kann nicht mehrere Verweise auf dasselbe Objekt enthalten.</param>
+        <param name="timeout">Eine <see cref="T:System.TimeSpan" />-Struktur, die die Anzahl der zu Millisekunden für die Wartezeit angibt, oder eine <see cref="T:System.TimeSpan" />-Struktur, die -1 Millisekunden angibt, also eine unbeschränkte Wartezeit.</param>
+        <param name="exitContext">
+          <see langword="true" />, um die Synchronisierungsdomäne für den Kontext vor dem Wartevorgang (sofern in einem synchronisierten Kontext) zu verlassen und diese anschließend erneut abzurufen, andernfalls <see langword="false" />.</param>
+        <summary>Wartet, bis alle Elemente im angegebenen Array ein Signal empfangen, wobei ein <see cref="T:System.TimeSpan" />-Wert zum Angeben des Zeitintervalls verwendet wird, und gibt an, ob die Synchronisierungsdomäne vor dem Wartevorgang verlassen werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn jedes Element in <paramref name="waitHandles" /> ein Signal empfangen hat, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `timeout` NULL ist, wird die Methode wird nicht blockiert. Er überprüft den Status des Wait-Handles und kehrt sofort zurück.  
+  
+ <xref:System.Threading.AbandonedMutexException>ist neu in .NET Framework, Version 2.0. In früheren Versionen der <xref:System.Threading.WaitHandle.WaitAll%2A> -Methode zurückkehrt `true` Wenn ein Mutex abgebrochen wird. Ein abgebrochenes Mutex weist häufig einen schwerwiegenden Fehler im Code. Im Fall einer systemweiten Mutex kann dies darauf hinweisen, dass eine Anwendung plötzlich beendet wurde (z. B. mithilfe von Windows Task-Manager). Die Ausnahme enthält Informationen zum Debuggen nützlich.  
+  
+ Die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode zurückgegeben, wenn der Wartevorgang wird beendet, d. h. alle Handles signalisiert werden oder ein Timeout auftritt. Auf einigen Implementierungen, wenn mehr als 64 Handles übergeben werden eine <xref:System.NotSupportedException> ausgelöst wird. Wenn das Array Duplikate enthält, schlägt der Aufruf fehl.  
+  
+> [!NOTE]
+>  Die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode wird nicht unterstützt, auf denen Threads <xref:System.STAThreadAttribute>.  
+  
+ Der Höchstwert für `timeout` ist <xref:System.Int32.MaxValue?displayProperty=nameWithType>.  
+  
+## <a name="notes-on-exiting-the-context"></a>Hinweise zum Beenden des Kontexts  
+ Die `exitContext` Parameter hat keine Auswirkungen, es sei denn, die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode aus, in einem nicht standardmäßigen verwalteten Kontext aufgerufen wird. Dies kann geschehen, wenn der Thread in einem Aufruf mit einer Instanz einer Klasse abgeleitet ist <xref:System.ContextBoundObject>. Selbst wenn derzeit eine Methode einer Klasse ausgeführt werden, die nicht von abgeleitet ist <xref:System.ContextBoundObject>, z. B. <xref:System.String>, Sie kann in einem nicht standardmäßigen Kontext Wenn eine <xref:System.ContextBoundObject> befindet sich auf dem Stapel in der aktuellen Anwendungsdomäne.  
+  
+ Beim Code in einem nicht standardmäßigen Kontext und ausgeführt wird die Angabe `true` für `exitContext` bewirkt, dass der Thread den nicht standardmäßigen verwalteten Kontext zu beenden (d. h. für den Übergang in den Standardkontext) vor dem Ausführen der <xref:System.Threading.WaitHandle.WaitAll%2A> Methode. Es gibt in den ursprünglich nicht standardmäßige nach dem Aufruf von der <xref:System.Threading.WaitHandle.WaitAll%2A> Methode abgeschlossen wird.  
+  
+ Dies kann nützlich sein, wenn die kontextgebundene-Klasse verfügt über <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>. In diesem Fall werden alle Aufrufe von Membern der Klasse werden automatisch synchronisiert, und die Synchronisierungsdomäne ist der gesamte Text der Code für die Klasse. Wenn Code in der Aufrufliste eines Members Ruft die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode und gibt an, `true` für `exitContext`, der Thread beendet wird, die Synchronisierungsdomäne ermöglicht einen Thread, der bei einem Aufruf auf einen Member des Objekts zu fortfahren blockiert wird. Wenn die <xref:System.Threading.WaitHandle.WaitAll%2A> Methode zurückgegeben wird, der Thread, der der Aufruf muss warten, um die Synchronisierungsdomäne.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf den Threadpool verwenden, um asynchron erstellungs- und Schreibberechtigungen für eine Gruppe von Dateien. Jeder Schreibvorgang wird als ein Arbeitselement und Signalen in die Warteschlange, wenn er abgeschlossen ist. Der Hauptthread wartet, bis alle Elemente, um zu signalisieren und wird dann beendet.  
+  
+ [!code-cpp[System.Threading.WaitHandle.WaitAll3#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAll3/CPP/source3.cpp#1)]
+ [!code-csharp[System.Threading.WaitHandle.WaitAll3#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAll3/CS/source3.cs#1)]
+ [!code-vb[System.Threading.WaitHandle.WaitAll3#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAll3/VB/source3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="waitHandles" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Mindestens ein Objekt im <paramref name="waitHandles" />-Array ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="waitHandles" /> ist ein Array ohne Elemente, und die .NET Framework-Version ist 2.0 oder höher.</exception>
+        <exception cref="T:System.DuplicateWaitObjectException">Das <paramref name="waitHandles" />-Array enthält doppelte Elemente.</exception>
+        <exception cref="T:System.NotSupportedException">Die Anzahl von Objekten in <paramref name="waitHandles" /> ist größer, als das System erlaubt.  
+  
+ - oder -   
+  
+ Das <see cref="T:System.STAThreadAttribute" />-Attribut wird für den aktuellen Thread auf die Threadprozedur angewendet, und <paramref name="waitHandles" /> enthält mehrere Elemente.</exception>
+        <exception cref="T:System.ApplicationException">
+          <paramref name="waitHandles" /> ist ein Array ohne Elemente, und die .NET Framework-Version ist 1.0 oder 1.1.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> ist eine negative Zahl ungleich „-1 Millisekunden“, die ein unendliches Timeout darstellt.  
+  
+ - oder -   
+  
+ <paramref name="timeout" /> ist größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird beendet, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+        <exception cref="T:System.InvalidOperationException">Das <paramref name="waitHandles" />-Array enthält einen transparenten Proxy für ein <see cref="T:System.Threading.WaitHandle" /> in einer anderen Anwendungsdomäne.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAny">
+      <MemberSignature Language="C#" Value="public static int WaitAny (System.Threading.WaitHandle[] waitHandles);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 WaitAny(class System.Threading.WaitHandle[] waitHandles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.WaitAny(System.Threading.WaitHandle[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandles" Type="System.Threading.WaitHandle[]" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandles">Ein <see langword="WaitHandle" />-Array mit den Objekten, auf die die aktuelle Instanz wartet.</param>
+        <summary>Wartet, bis Elemente im angegebenen Array ein Signal empfangen.</summary>
+        <returns>Der Arrayindex des Objekts, das den Wartevorgang erfüllt hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.AbandonedMutexException>ist neu in .NET Framework, Version 2.0. In früheren Versionen der <xref:System.Threading.WaitHandle.WaitAny%2A> -Methode zurückkehrt `true` , wenn der Wartevorgang abgeschlossen wird, weil ein Mutex abgebrochen wird. Ein abgebrochenes Mutex weist häufig einen schwerwiegenden Fehler im Code. Im Fall einer systemweiten Mutex kann dies darauf hinweisen, dass eine Anwendung plötzlich beendet wurde (z. B. mithilfe von Windows Task-Manager). Die Ausnahme enthält Informationen zum Debuggen nützlich.  
+  
+ Die <xref:System.Threading.WaitHandle.WaitAny%2A> -Methode löst eine <xref:System.Threading.AbandonedMutexException> nur wenn der Wartevorgang aufgrund ein abgebrochenes Mutex abgeschlossen ist. Wenn `waitHandles` enthält einen freigegebenen Mutex mit einer niedrigeren Indexnummer als die abgebrochenes Mutex der <xref:System.Threading.WaitHandle.WaitAny%2A> -Methode normal abgeschlossen und die Ausnahme wird nicht ausgelöst.  
+  
+> [!NOTE]
+>  In Versionen von .NET Framework-Versionen vor Version 2.0, wenn ein Thread beendet oder abgebrochen, die nicht explizit freigegeben wird eine <xref:System.Threading.Mutex>, und dass `Mutex` ist bei Index 0 (null) in einer `WaitAny` Array auf einem anderen Thread, der von zurückgegebene Index `WaitAny` ist 128 statt 0.  
+  
+ Diese Methode gibt zurück, wenn alle Handle signalisiert wird. Wenn mehr als ein Objekt während des Aufrufs signalisiert wird, ist der Rückgabewert der Arrayindex des Objekts mit dem niedrigsten Indexwert aller signalisierten Objekte signalisiert. Auf einigen Implementierungen, wenn weitere herunter, die 64-Handles übergeben werden, eine <xref:System.NotSupportedException> ausgelöst wird.  
+  
+ Das Aufrufen dieser methodenüberladung entspricht dem Aufrufen der <xref:System.Threading.WaitHandle.WaitAny%28System.Threading.WaitHandle%5B%5D%2CSystem.Int32%2CSystem.Boolean%29> methodenüberladung und-1 angeben (oder <xref:System.Threading.Timeout.Infinite?displayProperty=nameWithType>) für `millisecondsTimeout` und `true` für `exitContext`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Aufrufen der <xref:System.Threading.WaitHandle.WaitAny%2A> Methode.  
+  
+ [!code-cpp[WaitHandle#1](~/samples/snippets/cpp/VS_Snippets_CLR/WaitHandle/cpp/WaitHandle.cpp#1)]
+ [!code-csharp[WaitHandle#1](~/samples/snippets/csharp/VS_Snippets_CLR/WaitHandle/CS/WaitHandle.cs#1)]
+ [!code-vb[WaitHandle#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/WaitHandle/VB/WaitHandle.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="waitHandles" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Mindestens ein Objekt im <paramref name="waitHandles" />-Array ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Die Anzahl von Objekten in <paramref name="waitHandles" /> ist größer, als das System erlaubt.</exception>
+        <exception cref="T:System.ApplicationException">
+          <paramref name="waitHandles" />ist ein Array ohne Elemente, und die .NET Framework-Version ist 1.0 oder 1.1.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird abgeschlossen, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="waitHandles" />ist ein Array ohne Elemente, und wird von .NET Framework, Version 2.0 oder höher.</exception>
+        <exception cref="T:System.InvalidOperationException">Das <paramref name="waitHandles" />-Array enthält einen transparenten Proxy für ein <see cref="T:System.Threading.WaitHandle" /> in einer anderen Anwendungsdomäne.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAny">
+      <MemberSignature Language="C#" Value="public static int WaitAny (System.Threading.WaitHandle[] waitHandles, int millisecondsTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 WaitAny(class System.Threading.WaitHandle[] waitHandles, int32 millisecondsTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.WaitAny(System.Threading.WaitHandle[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandles" Type="System.Threading.WaitHandle[]" />
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandles">Ein <see langword="WaitHandle" />-Array mit den Objekten, auf die die aktuelle Instanz wartet.</param>
+        <param name="millisecondsTimeout">Die Anzahl von Millisekunden, die gewartet wird, oder <see cref="F:System.Threading.Timeout.Infinite" /> (-1) für Warten ohne Timeout.</param>
+        <summary>Wartet auf den Empfang eines Signals für alle Elemente im angegebenen Array und gibt das Zeitintervall mit einer 32-Bit-Ganzzahl mit Vorzeichen an.</summary>
+        <returns>Der Arrayindex des Objekts, das den Wartevorgang erfüllt hat, oder <see cref="F:System.Threading.WaitHandle.WaitTimeout" />, wenn keines der Objekte den Wartevorgang erfüllt hat und ein Zeitintervall äquivalent zu <paramref name="millisecondsTimeout" /> vergangen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `millisecondsTimeout` NULL ist, wird die Methode wird nicht blockiert. Er überprüft den Status des Wait-Handles und kehrt sofort zurück.  
+  
+ Die <xref:System.Threading.WaitHandle.WaitAny%2A> -Methode löst eine <xref:System.Threading.AbandonedMutexException> nur wenn der Wartevorgang aufgrund ein abgebrochenes Mutex abgeschlossen ist. Wenn `waitHandles` enthält einen freigegebenen Mutex mit einer niedrigeren Indexnummer als die abgebrochenes Mutex der <xref:System.Threading.WaitHandle.WaitAny%2A> -Methode normal abgeschlossen und die Ausnahme wird nicht ausgelöst.  
+  
+ Diese Methode gibt zurück, wenn der Wartevorgang wird beendet, wenn eines der Handles signalisiert werden oder ein Timeout auftritt. Wenn mehr als ein Objekt während des Aufrufs signalisiert wird, ist der Rückgabewert der Arrayindex des Objekts mit dem niedrigsten Indexwert aller signalisierten Objekte signalisiert. Auf einigen Implementierungen, wenn weitere herunter, die 64-Handles übergeben werden, eine <xref:System.NotSupportedException> ausgelöst wird.  
+  
+ Das Aufrufen dieser methodenüberladung ist der gleiche wie das Aufrufen der <xref:System.Threading.WaitHandle.WaitAny%28System.Threading.WaitHandle%5B%5D%2CSystem.Int32%2CSystem.Boolean%29> Überladung und Angeben von `false` für `exitContext`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="waitHandles" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Mindestens ein Objekt im <paramref name="waitHandles" />-Array ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Die Anzahl von Objekten in <paramref name="waitHandles" /> ist größer, als das System erlaubt.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" /> ist eine negative Zahl, jedoch nicht -1, was einen unbeschränkten Timeout darstellt.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird abgeschlossen, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="waitHandles" /> ist ein Array ohne Elemente.</exception>
+        <exception cref="T:System.InvalidOperationException">Das <paramref name="waitHandles" />-Array enthält einen transparenten Proxy für ein <see cref="T:System.Threading.WaitHandle" /> in einer anderen Anwendungsdomäne.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAny">
+      <MemberSignature Language="C#" Value="public static int WaitAny (System.Threading.WaitHandle[] waitHandles, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 WaitAny(class System.Threading.WaitHandle[] waitHandles, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.WaitAny(System.Threading.WaitHandle[],System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandles" Type="System.Threading.WaitHandle[]" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandles">Ein <see langword="WaitHandle" />-Array mit den Objekten, auf die die aktuelle Instanz wartet.</param>
+        <param name="timeout">Eine <see cref="T:System.TimeSpan" />-Struktur, die die Anzahl der zu wartenden Millisekunden angibt, oder eine <see cref="T:System.TimeSpan" />-Struktur, die -1 Millisekunden zum unendlichen Warten angibt.</param>
+        <summary>Wartet auf den Empfang eines Signals für alle Elemente im angegebenen Array und gibt das Zeitintervall mit einem <see cref="T:System.TimeSpan" />-Wert an.</summary>
+        <returns>Der Arrayindex des Objekts, das den Wartevorgang erfüllt hat, oder <see cref="F:System.Threading.WaitHandle.WaitTimeout" />, wenn keines der Objekte den Wartevorgang erfüllt hat und ein Zeitintervall äquivalent zu <paramref name="timeout" /> vergangen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `timeout` NULL ist, wird die Methode wird nicht blockiert. Er überprüft den Status des Wait-Handles und kehrt sofort zurück.  
+  
+ Die <xref:System.Threading.WaitHandle.WaitAny%2A> -Methode löst eine <xref:System.Threading.AbandonedMutexException> nur wenn der Wartevorgang aufgrund ein abgebrochenes Mutex abgeschlossen ist. Wenn `waitHandles` enthält einen freigegebenen Mutex mit einer niedrigeren Indexnummer als die abgebrochenes Mutex der <xref:System.Threading.WaitHandle.WaitAny%2A> -Methode normal abgeschlossen und die Ausnahme wird nicht ausgelöst.  
+  
+ Diese Methode gibt zurück, wenn der Wartevorgang wird beendet, wenn eines der Handles signalisiert werden oder ein Timeout auftritt. Wenn mehr als ein Objekt während des Aufrufs signalisiert wird, ist der Rückgabewert der Arrayindex des Objekts mit dem niedrigsten Indexwert aller signalisierten Objekte signalisiert. Auf einigen Implementierungen, wenn weitere herunter, die 64-Handles übergeben werden, eine <xref:System.NotSupportedException> ausgelöst wird.  
+  
+ Der Höchstwert für `timeout` ist <xref:System.Int32.MaxValue?displayProperty=nameWithType>.  
+  
+ Das Aufrufen dieser methodenüberladung ist der gleiche wie das Aufrufen der <xref:System.Threading.WaitHandle.WaitAny%28System.Threading.WaitHandle%5B%5D%2CSystem.TimeSpan%2CSystem.Boolean%29> Überladung und Angeben von `false` für `exitContext`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="waitHandles" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Mindestens ein Objekt im <paramref name="waitHandles" />-Array ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Die Anzahl von Objekten in <paramref name="waitHandles" /> ist größer, als das System erlaubt.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> ist eine negative Zahl ungleich „-1 Millisekunden“, die ein unendliches Timeout darstellt.  
+  
+ - oder -   
+  
+ <paramref name="timeout" /> ist größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird abgeschlossen, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="waitHandles" /> ist ein Array ohne Elemente.</exception>
+        <exception cref="T:System.InvalidOperationException">Das <paramref name="waitHandles" />-Array enthält einen transparenten Proxy für ein <see cref="T:System.Threading.WaitHandle" /> in einer anderen Anwendungsdomäne.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAny">
+      <MemberSignature Language="C#" Value="public static int WaitAny (System.Threading.WaitHandle[] waitHandles, int millisecondsTimeout, bool exitContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 WaitAny(class System.Threading.WaitHandle[] waitHandles, int32 millisecondsTimeout, bool exitContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.WaitAny(System.Threading.WaitHandle[],System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandles" Type="System.Threading.WaitHandle[]" />
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+        <Parameter Name="exitContext" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandles">Ein <see langword="WaitHandle" />-Array mit den Objekten, auf die die aktuelle Instanz wartet.</param>
+        <param name="millisecondsTimeout">Die Anzahl von Millisekunden, die gewartet wird, oder <see cref="F:System.Threading.Timeout.Infinite" /> (-1) für Warten ohne Timeout.</param>
+        <param name="exitContext">
+          <see langword="true" />, um die Synchronisierungsdomäne für den Kontext vor dem Wartevorgang (sofern in einem synchronisierten Kontext) zu verlassen und diese anschließend erneut abzurufen, andernfalls <see langword="false" />.</param>
+        <summary>Wartet, bis Elemente im angegebenen Array ein Signal empfangen, wobei eine 32-Bit-Ganzzahl mit Vorzeichen zum Angeben des Zeitintervalls verwendet wird, und gibt an, ob die Synchronisierungsdomäne vor dem Wartevorgang verlassen werden soll.</summary>
+        <returns>Der Arrayindex des Objekts, das den Wartevorgang erfüllt hat, oder <see cref="F:System.Threading.WaitHandle.WaitTimeout" />, wenn keines der Objekte den Wartevorgang erfüllt hat und ein Zeitintervall äquivalent zu <paramref name="millisecondsTimeout" /> vergangen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `millisecondsTimeout` NULL ist, wird die Methode wird nicht blockiert. Er überprüft den Status des Wait-Handles und kehrt sofort zurück.  
+  
+ <xref:System.Threading.AbandonedMutexException>ist neu in .NET Framework, Version 2.0. In früheren Versionen der <xref:System.Threading.WaitHandle.WaitAny%2A> -Methode zurückkehrt `true` , wenn der Wartevorgang abgeschlossen wird, weil ein Mutex abgebrochen wird. Ein abgebrochenes Mutex weist häufig einen schwerwiegenden Fehler im Code. Im Fall einer systemweiten Mutex kann dies darauf hinweisen, dass eine Anwendung plötzlich beendet wurde (z. B. mithilfe von Windows Task-Manager). Die Ausnahme enthält Informationen zum Debuggen nützlich.  
+  
+ Die <xref:System.Threading.WaitHandle.WaitAny%2A> -Methode löst eine <xref:System.Threading.AbandonedMutexException> nur wenn der Wartevorgang aufgrund ein abgebrochenes Mutex abgeschlossen ist. Wenn `waitHandles` enthält einen freigegebenen Mutex mit einer niedrigeren Indexnummer als die abgebrochenes Mutex der <xref:System.Threading.WaitHandle.WaitAny%2A> -Methode normal abgeschlossen und die Ausnahme wird nicht ausgelöst.  
+  
+> [!NOTE]
+>  In Versionen von .NET Framework-Versionen vor Version 2.0, wenn ein Thread beendet oder abgebrochen, die nicht explizit freigegeben wird eine <xref:System.Threading.Mutex>, und dass `Mutex` ist bei Index 0 (null) in einer `WaitAny` Array auf einem anderen Thread, der von zurückgegebene Index `WaitAny` ist 128 statt 0.  
+  
+ Diese Methode gibt zurück, wenn der Wartevorgang wird beendet, wenn eines der Handles signalisiert werden oder ein Timeout auftritt. Wenn mehr als ein Objekt während des Aufrufs signalisiert wird, ist der Rückgabewert der Arrayindex des Objekts mit dem niedrigsten Indexwert aller signalisierten Objekte signalisiert. Auf einigen Implementierungen, wenn weitere herunter, die 64-Handles übergeben werden, eine <xref:System.NotSupportedException> ausgelöst wird.  
+  
+## <a name="notes-on-exiting-the-context"></a>Hinweise zum Beenden des Kontexts  
+ Die `exitContext` Parameter hat keine Auswirkungen, es sei denn, die <xref:System.Threading.WaitHandle.WaitAny%2A> Methode aus, in einem nicht standardmäßigen verwalteten Kontext aufgerufen wird. Dies kann geschehen, wenn der Thread in einem Aufruf mit einer Instanz einer Klasse abgeleitet ist <xref:System.ContextBoundObject>. Selbst wenn derzeit eine Methode einer Klasse ausgeführt werden, die nicht von abgeleitet ist <xref:System.ContextBoundObject>, z. B. <xref:System.String>, Sie kann in einem nicht standardmäßigen Kontext Wenn eine <xref:System.ContextBoundObject> befindet sich auf dem Stapel in der aktuellen Anwendungsdomäne.  
+  
+ Beim Code in einem nicht standardmäßigen Kontext und ausgeführt wird die Angabe `true` für `exitContext` bewirkt, dass der Thread den nicht standardmäßigen verwalteten Kontext zu beenden (d. h. für den Übergang in den Standardkontext) vor dem Ausführen der <xref:System.Threading.WaitHandle.WaitAny%2A> Methode. Der Thread zurück in den ursprünglich nicht standardmäßige nach dem Aufruf der <xref:System.Threading.WaitHandle.WaitAny%2A> Methode abgeschlossen wird.  
+  
+ Dies kann nützlich sein, wenn die kontextgebundene-Klasse verfügt über <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>. In diesem Fall werden alle Aufrufe von Membern der Klasse werden automatisch synchronisiert, und die Synchronisierungsdomäne ist der gesamte Text der Code für die Klasse. Wenn Code in der Aufrufliste eines Members Ruft die <xref:System.Threading.WaitHandle.WaitAny%2A> Methode und gibt an, `true` für `exitContext`, der Thread beendet wird, die Synchronisierungsdomäne ermöglicht einen Thread, der bei einem Aufruf auf einen Member des Objekts zu fortfahren blockiert wird. Wenn die <xref:System.Threading.WaitHandle.WaitAny%2A> Methode zurückgegeben wird, der Thread, der der Aufruf muss warten, um die Synchronisierungsdomäne.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf den Threadpool zu verwenden, um gleichzeitig für eine Datei auf mehreren Datenträgern zu suchen. Aus Platzgründen wird nur das Stammverzeichnis für die einzelnen Datenträger durchsucht.  
+  
+ [!code-cpp[System.Threading.WaitHandle.WaitAny2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAny2/CPP/source2.cpp#1)]
+ [!code-csharp[System.Threading.WaitHandle.WaitAny2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAny2/CS/source2.cs#1)]
+ [!code-vb[System.Threading.WaitHandle.WaitAny2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAny2/VB/source2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="waitHandles" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Mindestens ein Objekt im <paramref name="waitHandles" />-Array ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Die Anzahl von Objekten in <paramref name="waitHandles" /> ist größer, als das System erlaubt.</exception>
+        <exception cref="T:System.ApplicationException">
+          <paramref name="waitHandles" />ist ein Array ohne Elemente, und die .NET Framework-Version ist 1.0 oder 1.1.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" /> ist eine negative Zahl, jedoch nicht -1, was einen unbeschränkten Timeout darstellt.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird abgeschlossen, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="waitHandles" />ist ein Array ohne Elemente, und wird von .NET Framework, Version 2.0 oder höher.</exception>
+        <exception cref="T:System.InvalidOperationException">Das <paramref name="waitHandles" />-Array enthält einen transparenten Proxy für ein <see cref="T:System.Threading.WaitHandle" /> in einer anderen Anwendungsdomäne.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAny">
+      <MemberSignature Language="C#" Value="public static int WaitAny (System.Threading.WaitHandle[] waitHandles, TimeSpan timeout, bool exitContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 WaitAny(class System.Threading.WaitHandle[] waitHandles, valuetype System.TimeSpan timeout, bool exitContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.WaitAny(System.Threading.WaitHandle[],System.TimeSpan,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandles" Type="System.Threading.WaitHandle[]" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="exitContext" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandles">Ein <see langword="WaitHandle" />-Array mit den Objekten, auf die die aktuelle Instanz wartet.</param>
+        <param name="timeout">Eine <see cref="T:System.TimeSpan" />-Struktur, die die Anzahl der zu wartenden Millisekunden angibt, oder eine <see cref="T:System.TimeSpan" />-Struktur, die -1 Millisekunden zum unendlichen Warten angibt.</param>
+        <param name="exitContext">
+          <see langword="true" />, um die Synchronisierungsdomäne für den Kontext vor dem Wartevorgang (sofern in einem synchronisierten Kontext) zu verlassen und diese anschließend erneut abzurufen, andernfalls <see langword="false" />.</param>
+        <summary>Wartet, bis alle Elemente im angegebenen Array ein Signal empfangen, wobei ein <see cref="T:System.TimeSpan" /> zum Angeben des Zeitintervalls verwendet wird, und gibt an, ob die Synchronisierungsdomäne vor dem Wartevorgang verlassen werden soll.</summary>
+        <returns>Der Arrayindex des Objekts, das den Wartevorgang erfüllt hat, oder <see cref="F:System.Threading.WaitHandle.WaitTimeout" />, wenn keines der Objekte den Wartevorgang erfüllt hat und ein Zeitintervall äquivalent zu <paramref name="timeout" /> vergangen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `timeout` NULL ist, wird die Methode wird nicht blockiert. Er überprüft den Status des Wait-Handles und kehrt sofort zurück.  
+  
+ <xref:System.Threading.AbandonedMutexException>ist neu in .NET Framework, Version 2.0. In früheren Versionen der <xref:System.Threading.WaitHandle.WaitAny%2A> -Methode zurückkehrt `true` , wenn der Wartevorgang abgeschlossen wird, weil ein Mutex abgebrochen wird. Ein abgebrochenes Mutex weist häufig einen schwerwiegenden Fehler im Code. Im Fall einer systemweiten Mutex kann dies darauf hinweisen, dass eine Anwendung plötzlich beendet wurde (z. B. mithilfe von Windows Task-Manager). Die Ausnahme enthält Informationen zum Debuggen nützlich.  
+  
+ Die <xref:System.Threading.WaitHandle.WaitAny%2A> -Methode löst eine <xref:System.Threading.AbandonedMutexException> nur wenn der Wartevorgang aufgrund ein abgebrochenes Mutex abgeschlossen ist. Wenn `waitHandles` enthält einen freigegebenen Mutex mit einer niedrigeren Indexnummer als die abgebrochenes Mutex der <xref:System.Threading.WaitHandle.WaitAny%2A> -Methode normal abgeschlossen und die Ausnahme wird nicht ausgelöst.  
+  
+> [!NOTE]
+>  In Versionen von .NET Framework-Versionen vor Version 2.0, wenn ein Thread beendet oder abgebrochen, die nicht explizit freigegeben wird eine <xref:System.Threading.Mutex>, und dass `Mutex` ist bei Index 0 (null) in einer `WaitAny` Array auf einem anderen Thread, der von zurückgegebene Index `WaitAny` ist 128 statt 0.  
+  
+ Diese Methode gibt zurück, wenn der Wartevorgang wird beendet, wenn eines der Handles signalisiert werden oder ein Timeout auftritt. Wenn mehr als ein Objekt während des Aufrufs signalisiert wird, ist der Rückgabewert der Arrayindex des Objekts mit dem niedrigsten Indexwert aller signalisierten Objekte signalisiert. Auf einigen Implementierungen, wenn weitere herunter, die 64-Handles übergeben werden, eine <xref:System.NotSupportedException> ausgelöst wird.  
+  
+ Der Höchstwert für `timeout` ist <xref:System.Int32.MaxValue?displayProperty=nameWithType>.  
+  
+## <a name="notes-on-exiting-the-context"></a>Hinweise zum Beenden des Kontexts  
+ Die `exitContext` Parameter hat keine Auswirkungen, es sei denn, die <xref:System.Threading.WaitHandle.WaitAny%2A> Methode aus, in einem nicht standardmäßigen verwalteten Kontext aufgerufen wird. Dies kann geschehen, wenn der Thread in einem Aufruf mit einer Instanz einer Klasse abgeleitet ist <xref:System.ContextBoundObject>. Selbst wenn derzeit eine Methode einer Klasse ausgeführt werden, die nicht von abgeleitet ist <xref:System.ContextBoundObject>, z. B. <xref:System.String>, Sie kann in einem nicht standardmäßigen Kontext Wenn eine <xref:System.ContextBoundObject> befindet sich auf dem Stapel in der aktuellen Anwendungsdomäne.  
+  
+ Beim Code in einem nicht standardmäßigen Kontext und ausgeführt wird die Angabe `true` für `exitContext` bewirkt, dass der Thread den nicht standardmäßigen verwalteten Kontext zu beenden (d. h. für den Übergang in den Standardkontext) vor dem Ausführen der <xref:System.Threading.WaitHandle.WaitAny%2A> Methode. Der Thread zurück in den ursprünglich nicht standardmäßige nach dem Aufruf der <xref:System.Threading.WaitHandle.WaitAny%2A> Methode abgeschlossen wird.  
+  
+ Dies kann nützlich sein, wenn die kontextgebundene-Klasse verfügt über <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>. In diesem Fall werden alle Aufrufe von Membern der Klasse werden automatisch synchronisiert, und die Synchronisierungsdomäne ist der gesamte Text der Code für die Klasse. Wenn Code in der Aufrufliste eines Members Ruft die <xref:System.Threading.WaitHandle.WaitAny%2A> Methode und gibt an, `true` für `exitContext`, der Thread beendet wird, die Synchronisierungsdomäne ermöglicht einen Thread, der bei einem Aufruf auf einen Member des Objekts zu fortfahren blockiert wird. Wenn die <xref:System.Threading.WaitHandle.WaitAny%2A> Methode zurückgegeben wird, der Thread, der der Aufruf muss warten, um die Synchronisierungsdomäne.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf den Threadpool zu verwenden, um gleichzeitig für eine Datei auf mehreren Datenträgern zu suchen. Aus Platzgründen wird nur das Stammverzeichnis für die einzelnen Datenträger durchsucht.  
+  
+ [!code-cpp[System.Threading.WaitHandle.WaitAny3#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAny3/CPP/source3.cpp#1)]
+ [!code-csharp[System.Threading.WaitHandle.WaitAny3#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAny3/CS/source3.cs#1)]
+ [!code-vb[System.Threading.WaitHandle.WaitAny3#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAny3/VB/source3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="waitHandles" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Mindestens ein Objekt im <paramref name="waitHandles" />-Array ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Die Anzahl von Objekten in <paramref name="waitHandles" /> ist größer, als das System erlaubt.</exception>
+        <exception cref="T:System.ApplicationException">
+          <paramref name="waitHandles" />ist ein Array ohne Elemente, und die .NET Framework-Version ist 1.0 oder 1.1.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> ist eine negative Zahl ungleich „-1 Millisekunden“, die ein unendliches Timeout darstellt.  
+  
+ - oder -   
+  
+ <paramref name="timeout" /> ist größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird abgeschlossen, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="waitHandles" />ist ein Array ohne Elemente, und wird von .NET Framework, Version 2.0 oder höher.</exception>
+        <exception cref="T:System.InvalidOperationException">Das <paramref name="waitHandles" />-Array enthält einen transparenten Proxy für ein <see cref="T:System.Threading.WaitHandle" /> in einer anderen Anwendungsdomäne.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitOne">
+      <MemberSignature Language="C#" Value="public virtual bool WaitOne ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool WaitOne() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.WaitOne" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Blockiert den aktuellen Thread, bis das aktuelle <see cref="T:System.Threading.WaitHandle" /> ein Signal empfängt.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Instanz ein Signal empfängt. Wenn die aktuelle Instanz kein Signal erhält, wird <see cref="M:System.Threading.WaitHandle.WaitOne(System.Int32,System.Boolean)" /> nicht beendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.AbandonedMutexException>ist neu in .NET Framework, Version 2.0. In früheren Versionen der <xref:System.Threading.WaitHandle.WaitOne%2A> -Methode zurückkehrt `true` Wenn ein Mutex abgebrochen wird. Ein abgebrochenes Mutex weist häufig einen schwerwiegenden Fehler im Code. Im Fall einer systemweiten Mutex kann dies darauf hinweisen, dass eine Anwendung plötzlich beendet wurde (z. B. mithilfe von Windows Task-Manager). Die Ausnahme enthält Informationen zum Debuggen nützlich.  
+  
+ Der Aufrufer diese Methode blockiert, unbegrenzt, bis die aktuelle Instanz ein Signal empfängt. Mit dieser Methode können Sie blockieren, bis eine <xref:System.Threading.WaitHandle> aus einem anderen Thread ein Signal empfängt, wie z. B. wird generiert, wenn ein asynchroner Vorgang abgeschlossen ist. Weitere Informationen finden Sie unter der <xref:System.IAsyncResult>-Schnittstelle.  
+  
+ Das Aufrufen dieser methodenüberladung entspricht dem Aufrufen der <xref:System.Threading.WaitHandle.WaitOne%28System.Int32%2CSystem.Boolean%29> methodenüberladung und Angeben von-1 oder <xref:System.Threading.Timeout.Infinite?displayProperty=nameWithType> für den ersten Parameter und `false` für den zweiten Parameter.  
+  
+ Überschreiben Sie diese Methode zum Anpassen des Verhaltens von abgeleiteten Klassen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie ein Wait-Handle, mit der verhindert, dass eines Prozess beendet wird, während er darauf wartet, dass einem Hintergrundthread ausführen abgeschlossen wird.  
+  
+ [!code-cpp[System.Threading.WaitHandle.WaitOne1#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitOne1/CPP/source1.cpp#1)]
+ [!code-csharp[System.Threading.WaitHandle.WaitOne1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitOne1/CS/source1.cs#1)]
+ [!code-vb[System.Threading.WaitHandle.WaitOne1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitOne1/VB/source1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Instanz wurde bereits verworfen.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird abgeschlossen, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle Instanz ist ein transparenter Proxy für eine <see cref="T:System.Threading.WaitHandle" /> in einer anderen Anwendungsdomäne.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitOne">
+      <MemberSignature Language="C#" Value="public virtual bool WaitOne (int millisecondsTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool WaitOne(int32 millisecondsTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.WaitOne(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsTimeout">Die Anzahl von Millisekunden, die gewartet wird, oder <see cref="F:System.Threading.Timeout.Infinite" /> (-1) für Warten ohne Timeout.</param>
+        <summary>Blockiert den aktuellen Thread, bis das aktuelle <see cref="T:System.Threading.WaitHandle" /> ein Signal empfängt, wobei eine 32-Bit-Ganzzahl mit Vorzeichen zum Angeben des Zeitintervalls in Millisekunden verwendet wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Instanz ein Signal empfängt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `millisecondsTimeout` NULL ist, wird die Methode wird nicht blockiert. Er überprüft den Status des Wait-Handle und kehrt sofort zurück.  
+  
+ Der Aufrufer diese Methode blockiert, bis die aktuelle Instanz ein Signal oder eines Timeouts empfängt auftritt. Mit dieser Methode können Sie blockieren, bis eine <xref:System.Threading.WaitHandle> aus einem anderen Thread ein Signal empfängt, wie z. B. wird generiert, wenn ein asynchroner Vorgang abgeschlossen ist. Weitere Informationen finden Sie unter der <xref:System.IAsyncResult>-Schnittstelle.  
+  
+ Überschreiben Sie diese Methode zum Anpassen des Verhaltens von abgeleiteten Klassen.  
+  
+ Das Aufrufen dieser methodenüberladung ist der gleiche wie das Aufrufen der <xref:System.Threading.WaitHandle.WaitOne%28System.Int32%2CSystem.Boolean%29> Überladung und Angeben von `false` für `exitContext`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie ein Wait-Handle, mit der verhindert, dass eines Prozess beendet wird, während er darauf wartet, dass einem Hintergrundthread ausführen abgeschlossen wird.  
+  
+ [!code-cpp[System.Threading.WaitHandle.WaitOne2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitOne2/CPP/source2.cpp#1)]
+ [!code-csharp[System.Threading.WaitHandle.WaitOne2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitOne2/CS/source2.cs#1)]
+ [!code-vb[System.Threading.WaitHandle.WaitOne2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitOne2/VB/source2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Instanz wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" /> ist eine negative Zahl, jedoch nicht -1, was einen unbeschränkten Timeout darstellt.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird abgeschlossen, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle Instanz ist ein transparenter Proxy für eine <see cref="T:System.Threading.WaitHandle" /> in einer anderen Anwendungsdomäne.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitOne">
+      <MemberSignature Language="C#" Value="public virtual bool WaitOne (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool WaitOne(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.WaitOne(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Eine <see cref="T:System.TimeSpan" />-Struktur, die die Anzahl der zu wartenden Millisekunden angibt, oder eine <see cref="T:System.TimeSpan" />-Struktur, die -1 Millisekunden zum unendlichen Warten angibt.</param>
+        <summary>Blockiert den aktuellen Thread, bis die aktuelle Instanz ein Signal empfängt, wobei eine <see cref="T:System.TimeSpan" /> zum Angeben des Zeitintervalls verwendet wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Instanz ein Signal empfängt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `timeout` NULL ist, wird die Methode wird nicht blockiert. Er überprüft den Status des Wait-Handle und kehrt sofort zurück.  
+  
+ Der Aufrufer diese Methode blockiert, bis die aktuelle Instanz ein Signal oder eines Timeouts empfängt auftritt. Mit dieser Methode können Sie blockieren, bis eine <xref:System.Threading.WaitHandle> aus einem anderen Thread ein Signal empfängt, wie z. B. wird generiert, wenn ein asynchroner Vorgang abgeschlossen ist. Weitere Informationen finden Sie unter der <xref:System.IAsyncResult>-Schnittstelle.  
+  
+ Überschreiben Sie diese Methode zum Anpassen des Verhaltens von abgeleiteten Klassen.  
+  
+ Der Höchstwert für `timeout` ist <xref:System.Int32.MaxValue?displayProperty=nameWithType>.  
+  
+ Das Aufrufen dieser methodenüberladung ist der gleiche wie das Aufrufen der <xref:System.Threading.WaitHandle.WaitOne%28System.TimeSpan%2CSystem.Boolean%29> Überladung und Angeben von `false` für `exitContext`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Instanz wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> ist eine negative Zahl ungleich „-1 Millisekunden“, die ein unendliches Timeout darstellt.  
+  
+ - oder -   
+  
+ <paramref name="timeout" /> ist größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird abgeschlossen, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle Instanz ist ein transparenter Proxy für eine <see cref="T:System.Threading.WaitHandle" /> in einer anderen Anwendungsdomäne.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitOne">
+      <MemberSignature Language="C#" Value="public virtual bool WaitOne (int millisecondsTimeout, bool exitContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool WaitOne(int32 millisecondsTimeout, bool exitContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.WaitOne(System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+        <Parameter Name="exitContext" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsTimeout">Die Anzahl von Millisekunden, die gewartet wird, oder <see cref="F:System.Threading.Timeout.Infinite" /> (-1) für Warten ohne Timeout.</param>
+        <param name="exitContext">
+          <see langword="true" />, um die Synchronisierungsdomäne für den Kontext vor dem Wartevorgang (sofern in einem synchronisierten Kontext) zu verlassen und diese anschließend erneut abzurufen, andernfalls <see langword="false" />.</param>
+        <summary>Blockiert den aktuellen Thread, bis das aktuelle <see cref="T:System.Threading.WaitHandle" /> ein Signal empfängt, wobei eine 32-Bit-Ganzzahl mit Vorzeichen zum Angeben des Zeitintervalls verwendet und angegeben wird, ob die Synchronisierungsdomäne vor dem Wartevorgang verlassen werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Instanz ein Signal empfängt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `millisecondsTimeout` NULL ist, wird die Methode wird nicht blockiert. Er überprüft den Status des Wait-Handle und kehrt sofort zurück.  
+  
+ <xref:System.Threading.AbandonedMutexException>ist neu in .NET Framework, Version 2.0. In früheren Versionen der <xref:System.Threading.WaitHandle.WaitOne%2A> -Methode zurückkehrt `true` Wenn ein Mutex abgebrochen wird. Ein abgebrochenes Mutex weist häufig einen schwerwiegenden Fehler im Code. Im Fall einer systemweiten Mutex kann dies darauf hinweisen, dass eine Anwendung plötzlich beendet wurde (z. B. mithilfe von Windows Task-Manager). Die Ausnahme enthält Informationen zum Debuggen nützlich.  
+  
+ Der Aufrufer diese Methode blockiert, bis die aktuelle Instanz ein Signal oder eines Timeouts empfängt auftritt. Mit dieser Methode können Sie blockieren, bis eine <xref:System.Threading.WaitHandle> aus einem anderen Thread ein Signal empfängt, wie z. B. wird generiert, wenn ein asynchroner Vorgang abgeschlossen ist. Weitere Informationen finden Sie unter der <xref:System.IAsyncResult>-Schnittstelle.  
+  
+ Überschreiben Sie diese Methode zum Anpassen des Verhaltens von abgeleiteten Klassen.  
+  
+## <a name="notes-on-exiting-the-context"></a>Hinweise zum Beenden des Kontexts  
+ Die `exitContext` Parameter hat keine Auswirkungen, es sei denn, die <xref:System.Threading.WaitHandle.WaitOne%2A> Methode aus, in einem nicht standardmäßigen verwalteten Kontext aufgerufen wird. Dies kann geschehen, wenn der Thread in einem Aufruf mit einer Instanz einer Klasse abgeleitet ist <xref:System.ContextBoundObject>. Selbst wenn derzeit eine Methode einer Klasse ausgeführt werden, die nicht von abgeleitet ist <xref:System.ContextBoundObject>, z. B. <xref:System.String>, Sie kann in einem nicht standardmäßigen Kontext Wenn eine <xref:System.ContextBoundObject> befindet sich auf dem Stapel in der aktuellen Anwendungsdomäne.  
+  
+ Beim Code in einem nicht standardmäßigen Kontext und ausgeführt wird die Angabe `true` für `exitContext` bewirkt, dass der Thread den nicht standardmäßigen verwalteten Kontext zu beenden (d. h. für den Übergang in den Standardkontext) vor dem Ausführen der <xref:System.Threading.WaitHandle.WaitOne%2A> Methode. Der Thread zurück in den ursprünglich nicht standardmäßige nach dem Aufruf der <xref:System.Threading.WaitHandle.WaitOne%2A> Methode abgeschlossen wird.  
+  
+ Dies kann nützlich sein, wenn die kontextgebundene-Klasse verfügt über <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>. In diesem Fall werden alle Aufrufe von Membern der Klasse werden automatisch synchronisiert, und die Synchronisierungsdomäne ist der gesamte Text der Code für die Klasse. Wenn Code in der Aufrufliste eines Members Ruft die <xref:System.Threading.WaitHandle.WaitOne%2A> Methode und gibt an, `true` für `exitContext`, der Thread beendet wird, die Synchronisierungsdomäne ermöglicht einen Thread, der bei einem Aufruf auf einen Member des Objekts zu fortfahren blockiert wird. Wenn die <xref:System.Threading.WaitHandle.WaitOne%2A> Methode zurückgegeben wird, der Thread, der der Aufruf muss warten, um die Synchronisierungsdomäne.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt wie die <xref:System.Threading.WaitHandle.WaitOne%28System.Int32%2CSystem.Boolean%29> methodenüberladung verhält sich, wenn sie innerhalb einer Synchronisierungsdomäne aufgerufen wird. Zunächst wartet ein Thread mit `exitContext` festgelegt `false` und blockiert, bis das Zeitlimit abgelaufen ist. Ein zweiter Thread ausgeführt wird, nachdem der erste Thread beendet und wartet mit `exitContext` festgelegt `true`. Der Aufruf von signalisieren das Wait-Handle für diesen zweiten Thread wird nicht blockiert, und der Thread abgeschlossen ist, bevor das Wartetimeout.  
+  
+ [!code-cpp[System.Threading.WaitHandle.WaitOne4#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.threading.waithandle.waitone4/cpp/source.cpp#1)]
+ [!code-csharp[System.Threading.WaitHandle.WaitOne4#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.waithandle.waitone4/cs/source.cs#1)]
+ [!code-vb[System.Threading.WaitHandle.WaitOne4#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.waithandle.waitone4/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Instanz wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" /> ist eine negative Zahl, jedoch nicht -1, was einen unbeschränkten Timeout darstellt.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird abgeschlossen, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle Instanz ist ein transparenter Proxy für eine <see cref="T:System.Threading.WaitHandle" /> in einer anderen Anwendungsdomäne.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitOne">
+      <MemberSignature Language="C#" Value="public virtual bool WaitOne (TimeSpan timeout, bool exitContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool WaitOne(valuetype System.TimeSpan timeout, bool exitContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandle.WaitOne(System.TimeSpan,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="exitContext" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Eine <see cref="T:System.TimeSpan" />-Struktur, die die Anzahl der zu wartenden Millisekunden angibt, oder eine <see cref="T:System.TimeSpan" />-Struktur, die -1 Millisekunden zum unendlichen Warten angibt.</param>
+        <param name="exitContext">
+          <see langword="true" />, um die Synchronisierungsdomäne für den Kontext vor dem Wartevorgang (sofern in einem synchronisierten Kontext) zu verlassen und diese anschließend erneut abzurufen, andernfalls <see langword="false" />.</param>
+        <summary>Blockiert den aktuellen Thread, bis die aktuelle Instanz ein Signal empfängt, wobei eine <see cref="T:System.TimeSpan" /> zum Angeben des Zeitintervalls verwendet und angegeben wird, ob die Synchronisierungsdomäne vor dem Wartevorgang verlassen werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Instanz ein Signal empfängt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `timeout` NULL ist, wird die Methode wird nicht blockiert. Er überprüft den Status des Wait-Handle und kehrt sofort zurück.  
+  
+ <xref:System.Threading.AbandonedMutexException>ist neu in .NET Framework, Version 2.0. In früheren Versionen der <xref:System.Threading.WaitHandle.WaitOne%2A> -Methode zurückkehrt `true` Wenn ein Mutex abgebrochen wird. Ein abgebrochenes Mutex weist häufig einen schwerwiegenden Fehler im Code. Im Fall einer systemweiten Mutex kann dies darauf hinweisen, dass eine Anwendung plötzlich beendet wurde (z. B. mithilfe von Windows Task-Manager). Die Ausnahme enthält Informationen zum Debuggen nützlich.  
+  
+ Der Aufrufer diese Methode blockiert, bis die aktuelle Instanz ein Signal oder eines Timeouts empfängt auftritt. Mit dieser Methode können Sie blockieren, bis eine <xref:System.Threading.WaitHandle> aus einem anderen Thread ein Signal empfängt, wie z. B. wird generiert, wenn ein asynchroner Vorgang abgeschlossen ist. Weitere Informationen finden Sie unter der <xref:System.IAsyncResult>-Schnittstelle.  
+  
+ Überschreiben Sie diese Methode zum Anpassen des Verhaltens von abgeleiteten Klassen.  
+  
+ Der Höchstwert für `timeout` ist <xref:System.Int32.MaxValue?displayProperty=nameWithType>.  
+  
+## <a name="notes-on-exiting-the-context"></a>Hinweise zum Beenden des Kontexts  
+ Die `exitContext` Parameter hat keine Auswirkungen, es sei denn, die <xref:System.Threading.WaitHandle.WaitOne%2A> Methode aus, in einem nicht standardmäßigen verwalteten Kontext aufgerufen wird. Dies kann geschehen, wenn der Thread in einem Aufruf mit einer Instanz einer Klasse abgeleitet ist <xref:System.ContextBoundObject>. Selbst wenn derzeit eine Methode einer Klasse ausgeführt werden, die nicht von abgeleitet ist <xref:System.ContextBoundObject>, z. B. <xref:System.String>, Sie kann in einem nicht standardmäßigen Kontext Wenn eine <xref:System.ContextBoundObject> befindet sich auf dem Stapel in der aktuellen Anwendungsdomäne.  
+  
+ Beim Code in einem nicht standardmäßigen Kontext und ausgeführt wird die Angabe `true` für `exitContext` bewirkt, dass der Thread den nicht standardmäßigen verwalteten Kontext zu beenden (d. h. für den Übergang in den Standardkontext) vor dem Ausführen der <xref:System.Threading.WaitHandle.WaitOne%2A> Methode. Der Thread zurück in den ursprünglich nicht standardmäßige nach dem Aufruf der <xref:System.Threading.WaitHandle.WaitOne%2A> Methode abgeschlossen wird.  
+  
+ Dies kann nützlich sein, wenn die kontextgebundene-Klasse verfügt über <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>. In diesem Fall werden alle Aufrufe von Membern der Klasse werden automatisch synchronisiert, und die Synchronisierungsdomäne ist der gesamte Text der Code für die Klasse. Wenn Code in der Aufrufliste eines Members Ruft die <xref:System.Threading.WaitHandle.WaitOne%2A> Methode und gibt an, `true` für `exitContext`, der Thread beendet wird, die Synchronisierungsdomäne ermöglicht einen Thread, der bei einem Aufruf auf einen Member des Objekts zu fortfahren blockiert wird. Wenn die <xref:System.Threading.WaitHandle.WaitOne%2A> Methode zurückgegeben wird, der Thread, der der Aufruf muss warten, um die Synchronisierungsdomäne.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie ein Wait-Handle, mit der verhindert, dass eines Prozess beendet wird, während er darauf wartet, dass einem Hintergrundthread ausführen abgeschlossen wird.  
+  
+ [!code-cpp[System.Threading.WaitHandle.WaitOne3#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitOne3/CPP/source3.cpp#1)]
+ [!code-csharp[System.Threading.WaitHandle.WaitOne3#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitOne3/CS/source3.cs#1)]
+ [!code-vb[System.Threading.WaitHandle.WaitOne3#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitOne3/VB/source3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Instanz wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> ist eine negative Zahl ungleich „-1 Millisekunden“, die ein unendliches Timeout darstellt.  
+  
+ - oder -   
+  
+ <paramref name="timeout" /> ist größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.Threading.AbandonedMutexException">Der Wartevorgang wird abgeschlossen, weil ein Thread beendet wurde, ohne ein Mutex freizugeben. Diese Ausnahme wird unter Windows 98 oder Windows Millennium Edition nicht ausgelöst.</exception>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle Instanz ist ein transparenter Proxy für eine <see cref="T:System.Threading.WaitHandle" /> in einer anderen Anwendungsdomäne.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitTimeout">
+      <MemberSignature Language="C#" Value="public const int WaitTimeout = 258;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 WaitTimeout = (258)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.WaitHandle.WaitTimeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>258</MemberValue>
+      <Docs>
+        <summary>Gibt an, dass ein Timeout für einen <see cref="M:System.Threading.WaitHandle.WaitAny(System.Threading.WaitHandle[],System.Int32,System.Boolean)" />-Vorgang überschritten wurde, bevor ein Signal an eines der WaitHandles gesendet wurde. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist eine der möglichen Rückgabewerte von `WaitAny`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf den Threadpool zu verwenden, um gleichzeitig für eine Datei auf mehreren Datenträgern zu suchen. Aus Platzgründen wird nur das Stammverzeichnis für die einzelnen Datenträger durchsucht.  
+  
+ [!code-cpp[System.Threading.WaitHandle.WaitAny2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAny2/CPP/source2.cpp#1)]
+ [!code-csharp[System.Threading.WaitHandle.WaitAny2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAny2/CS/source2.cs#1)]
+ [!code-vb[System.Threading.WaitHandle.WaitAny2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.WaitHandle.WaitAny2/VB/source2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

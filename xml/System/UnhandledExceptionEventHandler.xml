@@ -1,0 +1,48 @@
+<Type Name="UnhandledExceptionEventHandler" FullName="System.UnhandledExceptionEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void UnhandledExceptionEventHandler(object sender, UnhandledExceptionEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed UnhandledExceptionEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.UnhandledExceptionEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.UnhandledExceptionEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des nicht behandelten Ausnahmeereignisses.</param>
+    <param name="e">Ein <c>UnhandledExceptionEventArgs</c> , das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung des Ereignisses dar, das durch eine nicht von der Anwendungsdomäne behandelte Ausnahme ausgelöst wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.UnhandledExceptionEventHandler> kann nur angegeben werden, für die Standardanwendungsdomäne, die vom System zum Ausführen einer Anwendung erstellt wird. Angeben einer <xref:System.UnhandledExceptionEventHandler> für eine <xref:System.AppDomain> erstellt, indem eine Anwendung hat keine Auswirkungen.  
+  
+ Beim Erstellen eines <xref:System.UnhandledExceptionEventHandler>-Delegaten geben Sie die Methode für die Ereignisbehandlung an. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie eine Instanz des Delegaten das Ereignis ein. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

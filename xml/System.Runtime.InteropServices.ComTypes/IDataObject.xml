@@ -1,0 +1,511 @@
+<Type Name="IDataObject" FullName="System.Runtime.InteropServices.ComTypes.IDataObject">
+  <TypeSignature Language="C#" Value="public interface IDataObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataObject" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComTypes.IDataObject" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("0000010e-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die verwaltete Definition der der <see langword="IDataObject" /> Schnittstelle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den `IDataObject` Schnittstelle, finden Sie in der MSDN Library.  
+  
+ Die common Language Runtime löst eine Ausnahme aus, wenn eine COM-Methode in systemeigenem Code ein HRESULT zurückgibt. Weitere Informationen finden Sie unter [Vorgehensweise: Zuordnen von HRESULTs und Ausnahmen](~/docs/framework/interop/how-to-map-hresults-and-exceptions.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DAdvise">
+      <MemberSignature Language="C#" Value="public int DAdvise (ref System.Runtime.InteropServices.ComTypes.FORMATETC pFormatetc, System.Runtime.InteropServices.ComTypes.ADVF advf, System.Runtime.InteropServices.ComTypes.IAdviseSink adviseSink, out int connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 DAdvise([in]valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; pFormatetc, valuetype System.Runtime.InteropServices.ComTypes.ADVF advf, class System.Runtime.InteropServices.ComTypes.IAdviseSink adviseSink, [out] int32&amp; connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.ADVF,System.Runtime.InteropServices.ComTypes.IAdviseSink,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pFormatetc" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="advf" Type="System.Runtime.InteropServices.ComTypes.ADVF" />
+        <Parameter Name="adviseSink" Type="System.Runtime.InteropServices.ComTypes.IAdviseSink" />
+        <Parameter Name="connection" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pFormatetc">Ein <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur übergeben als Verweis, der definiert, das Format, Zielgerät Aspekt und Mittel, die für zukünftige Benachrichtigungen verwendet werden.</param>
+        <param name="advf">Eines der <see cref="T:System.Runtime.InteropServices.ComTypes.ADVF" /> Werte, die eine Gruppe von Flags zum Kontrollieren der Advise-Verbindungs angibt.</param>
+        <param name="adviseSink">Ein Zeiger auf die <see cref="T:System.Runtime.InteropServices.ComTypes.IAdviseSink" /> Schnittstelle auf die Advise-Senke, die die Benachrichtigung erhalten sollen.</param>
+        <param name="connection">Enthält nach dem Beenden dieser Methode einen Zeiger auf ein DWORD-Token, das diese Verbindung identifiziert. Sie können dieses Token später die Advise-Verbindung löschen, indem Sie die Übergabe an <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.DUnadvise(System.Int32)" />. Wenn dieser Wert 0 (null) ist, wurde die Verbindung nicht hergestellt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Erstellt eine Verbindung zwischen einem Datenobjekt und einer Advise-Senke. Diese Methode wird von einem Objekt aufgerufen, das eine Advise-Senke unterstützt, und aktiviert die Advise-Senke für den Empfang von Änderungsbenachrichtigungen für Daten des Objekts.</summary>
+        <returns>Diese Methode unterstützt die Standardrückgabewerte E_INVALIDARG, E_UNEXPECTED und E_OUTOFMEMORY sowie die folgenden Werte:  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term>S_OK  
+  
+ </term><description>Die Advise-Verbindung erstellt wurde.  
+  
+ </description></item><item><term>E_NOTIMPL  
+  
+ </term><description>Diese Methode ist für das Datenobjekt nicht implementiert.  
+  
+ </description></item><item><term>DV_E_LINDEX  
+  
+ </term><description>Es ist kein gültiger Wert für <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex" />; derzeit wird nur-1 unterstützt.  
+  
+ </description></item><item><term>DV_E_FORMATETC  
+  
+ </term><description>Es ist kein gültiger Wert für die <paramref name="pFormatetc" /> Parameter.  
+  
+ </description></item><item><term>OLE_E_ADVISENOTSUPPORTED  
+  
+ </term><description>Das Datenobjekt unterstützt keine änderungsbenachrichtigung.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IDataObject::DAdvise`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DUnadvise">
+      <MemberSignature Language="C#" Value="public void DUnadvise (int connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DUnadvise(int32 connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IDataObject.DUnadvise(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connection" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="connection">Ein DWORD-Token, das die zu entfernende Verbindung angibt. Verwenden Sie den von <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.ADVF,System.Runtime.InteropServices.ComTypes.IAdviseSink,System.Int32@)" /> beim Herstellen der ursprünglichen Verbindung zurückgegebenen Wert.</param>
+        <summary>Zerstört eine Benachrichtigungsverbindung, die zuvor hergestellt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IDataObject::DUnAdvise`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumDAdvise">
+      <MemberSignature Language="C#" Value="public int EnumDAdvise (out System.Runtime.InteropServices.ComTypes.IEnumSTATDATA enumAdvise);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 EnumDAdvise([out] class System.Runtime.InteropServices.ComTypes.IEnumSTATDATA&amp; enumAdvise) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IDataObject.EnumDAdvise(System.Runtime.InteropServices.ComTypes.IEnumSTATDATA@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumAdvise" Type="System.Runtime.InteropServices.ComTypes.IEnumSTATDATA&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="enumAdvise">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.Runtime.InteropServices.ComTypes.IEnumSTATDATA" /> , die den Schnittstellenzeiger auf das neue Enumeratorobjekt empfängt. Wenn die Implementierung legt <c>EnumAdvise</c> zu <see langword="null" />, zu diesem Zeitpunkt keine Verbindungen zu Advise-Senken sind. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Erstellt ein Objekt, mit dem die aktuellen Advise-Verbindungen aufgelistet werden können.</summary>
+        <returns>Diese Methode unterstützt den Standardrückgabewert E_OUTOFMEMORY sowie die folgenden Werte:  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term>S_OK  
+  
+ </term><description>Das Enumeratorobjekt wurde erfolgreich instanziiert, oder es sind keine Verbindungen.  
+  
+ </description></item><item><term>OLE_E_ADVISENOTSUPPORTED  
+  
+ </term><description>Dieses Objekt unterstützt keine Advise-Benachrichtigungen.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IDataObject::EnumDAdvise`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumFormatEtc">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.ComTypes.IEnumFORMATETC EnumFormatEtc (System.Runtime.InteropServices.ComTypes.DATADIR direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.InteropServices.ComTypes.IEnumFORMATETC EnumFormatEtc(valuetype System.Runtime.InteropServices.ComTypes.DATADIR direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IDataObject.EnumFormatEtc(System.Runtime.InteropServices.ComTypes.DATADIR)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.IEnumFORMATETC</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="direction" Type="System.Runtime.InteropServices.ComTypes.DATADIR" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Eines der <see cref="T:System.Runtime.InteropServices.ComTypes.DATADIR" /> Werte, der die Richtung der Daten angibt.</param>
+        <summary>Erstellt ein Objekt zum Aufzählen der <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Strukturen für ein Datenobjekt. Diese Strukturen sind in Aufrufen verwendet <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> oder <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System.Boolean)" />.</summary>
+        <returns>Diese Methode unterstützt die Standardrückgabewerte E_INVALIDARG und E_OUTOFMEMORY sowie die folgenden Werte:  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term>S_OK  
+  
+ </term><description>Das Enumeratorobjekt wurde erfolgreich erstellt.  
+  
+ </description></item><item><term>E_NOTIMPL  
+  
+ </term><description>Die Richtung, die gemäß der <paramref name="direction" /> Parameter wird nicht unterstützt.  
+  
+ </description></item><item><term>OLE_S_USEREG  
+  
+ </term><description>Fordert an, dass OLE aufgelistet, die Formate aus der Registrierung.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IDataObject::EnumFormatEtc`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCanonicalFormatEtc">
+      <MemberSignature Language="C#" Value="public int GetCanonicalFormatEtc (ref System.Runtime.InteropServices.ComTypes.FORMATETC formatIn, out System.Runtime.InteropServices.ComTypes.FORMATETC formatOut);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetCanonicalFormatEtc([in]valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; formatIn, [out] valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; formatOut) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetCanonicalFormatEtc(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.FORMATETC@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatIn" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="formatOut" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="formatIn">Ein Zeiger auf eine <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur übergeben als Verweis, der definiert, das Format, Mittel und Zielgerät, das der Aufrufer verwenden, z. B. in einem nachfolgenden Aufruf Datenempfang möchten <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />. Die <see cref="T:System.Runtime.InteropServices.ComTypes.TYMED" /> Member spielt keine Rolle in diesem Fall und sollte ignoriert werden.</param>
+        <param name="formatOut">Wenn diese Methode zurückgibt, enthält einen Zeiger auf eine <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> -Struktur, die meisten allgemeine Informationen für ein bestimmtes Rendering, wodurch die kanonisch äquivalent zu enthält <c>FormatetIn</c>. Der Aufrufer muss diese Struktur zuordnen und die <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetCanonicalFormatEtc(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.FORMATETC@)" /> Methode muss in den Daten füllen. Zum Abrufen von Daten in einem nachfolgenden Aufruf wie z. B. <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />, der Aufrufer verwendet den angegebenen Wert des <c>FormatOut</c>, es sei denn, der bereitgestellte Wert ist <see langword="null" />. Dieser Wert ist <see langword="null" /> , wenn der Methodenrückgabe <see langword="DATA_S_SAMEFORMATETC" />. Die <see cref="T:System.Runtime.InteropServices.ComTypes.TYMED" /> Member spielt keine Rolle in diesem Fall und sollte ignoriert werden. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ein Standard <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> -Struktur, die einer komplexeren Struktur logisch entspricht. Verwenden Sie diese Methode, um festzustellen, ob zwei unterschiedliche <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Strukturen würde die gleichen Daten, die Erfordernis für doppelte Rendering zurückgeben.</summary>
+        <returns>Diese Methode unterstützt die Standardrückgabewerte E_INVALIDARG, E_UNEXPECTED und E_OUTOFMEMORY sowie die folgenden Werte:  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term>S_OK  
+  
+ </term><description>Das zurückgegebene <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur unterscheidet sich vom das Projekt, das übergeben wurde.  
+  
+ </description></item><item><term>DATA_S_SAMEFORMATETC  
+  
+ </term><description>Die <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Strukturen sind identisch und <see langword="null" /> wird zurückgegeben, der <paramref name="formatOut" /> Parameter.  
+  
+ </description></item><item><term>DV_E_LINDEX  
+  
+ </term><description>Es ist kein gültiger Wert für <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex" />; derzeit wird nur-1 unterstützt.  
+  
+ </description></item><item><term>DV_E_FORMATETC  
+  
+ </term><description>Es ist kein gültiger Wert für die <paramref name="pFormatetc" /> Parameter.  
+  
+ </description></item><item><term>OLE_E_NOTRUNNING  
+  
+ </term><description>Die Anwendung wird nicht ausgeführt.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IDataObject::GetCanonicalFormatEtc`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public void GetData (ref System.Runtime.InteropServices.ComTypes.FORMATETC format, out System.Runtime.InteropServices.ComTypes.STGMEDIUM medium);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetData([in]valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; format, [out] valuetype System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp; medium) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="medium" Type="System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="format">Ein Zeiger auf eine <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur übergeben als Verweis, der das Format, Mittel und Zielgerät zu verwendende übergeben der Daten definiert. Mithilfe des booleschen Operators OR können auch mehrere Medien angegeben werden, sodass die Methode das beste Medium aus den angegebenen Medien auswählen kann.</param>
+        <param name="medium">Rückkehr dieser Methode enthält einen Zeiger auf die <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> -Struktur, die das Speichermedium mit den zurückgegebenen Daten über ihre <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.tymed" /> Element und die Verantwortung für die Freigabe der Mittel über den Wert von dessen <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" />Member. Wenn <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> ist <see langword="null" />, der Empfänger des Mediums ist verantwortlich für die freigegeben wurde, andernfalls <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> verweist auf die <see langword="IUnknown" /> -Schnittstelle für das entsprechende Objekt also die <see langword="Release" /> Methode kann aufgerufen werden. Das Medium zugeordnet und ausgefüllt werden muss <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft Daten aus einem Quelldatenobjekt ab. Die <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> -Methode, die von einem Datenconsumer aufgerufen wird, rendert die Daten beschrieben, die im angegebenen <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur und überträgt diese über den angegebenen <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> Struktur. Der Aufrufer übernimmt die Verantwortung für die Freigabe, klicken Sie dann die <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IDataObject::GetData`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataHere">
+      <MemberSignature Language="C#" Value="public void GetDataHere (ref System.Runtime.InteropServices.ComTypes.FORMATETC format, ref System.Runtime.InteropServices.ComTypes.STGMEDIUM medium);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetDataHere([in]valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; format, valuetype System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp; medium) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="medium" Type="System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="format">Ein Zeiger auf eine <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur übergeben als Verweis, der das Format, Mittel und Zielgerät zu verwendende übergeben der Daten definiert. Nur ein Medium kann angegeben werden, <see cref="T:System.Runtime.InteropServices.ComTypes.TYMED" />, und nur die folgenden <see cref="T:System.Runtime.InteropServices.ComTypes.TYMED" /> Werte sind gültig: <see cref="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_ISTORAGE" />, <see cref="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_ISTREAM" />, <see cref="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_HGLOBAL" />, oder <see cref="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_FILE" />.</param>
+        <param name="medium">Ein <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" />, übergeben als Verweis, der das Speichermedium mit der übertragenen Daten definiert. Das Medium muss vom Aufrufer zugeordnet wird und von ausgefüllt <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />. Der Aufrufer muss das Medium auch freigeben. Die Implementierung dieser Methode muss immer den Wert der <see langword="null" /> für die <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> Mitglied der <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> -Struktur, die dieser Parameter verweist.</param>
+        <summary>Ruft Daten aus einem Quelldatenobjekt ab. Diese Methode, die von einem Datenconsumer aufgerufen wird, unterscheidet sich von der <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> Methode insofern, dass der Aufrufer muss reservieren und Freigeben von der angegebenen Speichermedium.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IDataObject::GetDataHere`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryGetData">
+      <MemberSignature Language="C#" Value="public int QueryGetData (ref System.Runtime.InteropServices.ComTypes.FORMATETC format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 QueryGetData([in]valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IDataObject.QueryGetData(System.Runtime.InteropServices.ComTypes.FORMATETC@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="format">Ein Zeiger auf eine <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur übergeben als Verweis, der das Format, Mittel und Zielgerät für die Abfrage definiert.</param>
+        <summary>Bestimmt, ob das Datenobjekt Rendern der Daten, die in beschriebenen kann die <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur. Versucht, einen einfügen oder Drop-Vorgang kann diese Methode vor dem Aufruf aufrufen Objekte <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> um zu bestimmen, ob der Vorgang erfolgreich durchgeführt werden kann.</summary>
+        <returns>Diese Methode unterstützt die Standardrückgabewerte E_INVALIDARG, E_UNEXPECTED und E_OUTOFMEMORY sowie die folgenden Werte:  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term>S_OK  
+  
+ </term><description>Ein nachfolgender Aufruf von <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> wäre wahrscheinlich erfolgreich.  
+  
+ </description></item><item><term>DV_E_LINDEX  
+  
+ </term><description>Ein ungültiger Wert für <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex" />; derzeit wird nur-1 unterstützt.  
+  
+ </description></item><item><term>DV_E_FORMATETC  
+  
+ </term><description>Ein ungültiger Wert für die <paramref name="pFormatetc" /> Parameter.  
+  
+ </description></item><item><term>DV_E_TYMED  
+  
+ </term><description>Eine ungültige <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.tymed" /> Wert.  
+  
+ </description></item><item><term>DV_E_DVASPECT  
+  
+ </term><description>Eine ungültige <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.dwAspect" /> Wert.  
+  
+ </description></item><item><term>OLE_E_NOTRUNNING  
+  
+ </term><description>Die Anwendung wird nicht ausgeführt.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IDataObject::QueryGetData`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (ref System.Runtime.InteropServices.ComTypes.FORMATETC formatIn, ref System.Runtime.InteropServices.ComTypes.STGMEDIUM medium, bool release);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData([in]valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; formatIn, [in]valuetype System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp; medium, bool release) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatIn" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="medium" Type="System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp;" RefType="ref" />
+        <Parameter Name="release" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="formatIn">Ein <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> Struktur übergeben als Verweis, der das Format von das Datenobjekt beim Interpretieren der Daten in das Speichermedium definiert.</param>
+        <param name="medium">Ein <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> Struktur übergeben als Verweis, der das Speichermedium definiert, in dem die Daten übergeben werden.</param>
+        <param name="release">
+          <see langword="true" />um anzugeben, dass das Datenobjekt aufgerufen wird, implementiert <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System.Boolean)" />, das Speichermedium nach der Rückkehr des Aufrufs besitzt. Dies bedeutet, dass das Datenobjekt das Medium freigeben muss, nachdem es durch den Aufruf verwendet wurde, hat die <see langword="ReleaseStgMedium" /> Funktion. <see langword="false" />um anzugeben, dass der Aufrufer das Speichermedium behält, und das Datenobjekt wird aufgerufen, das Speichermedium für die Dauer des Aufrufs nur verwendet an.</param>
+        <summary>Überträgt Daten an das Objekt, das diese Methode implementiert. Diese Methode wird von einem Objekt aufgerufen, das eine Datenquelle enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IDataObject::SetData`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

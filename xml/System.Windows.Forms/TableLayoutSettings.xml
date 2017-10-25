@@ -1,0 +1,572 @@
+<Type Name="TableLayoutSettings" FullName="System.Windows.Forms.TableLayoutSettings">
+  <TypeSignature Language="C#" Value="public sealed class TableLayoutSettings : System.Windows.Forms.LayoutSettings, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit TableLayoutSettings extends System.Windows.Forms.LayoutSettings implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TableLayoutSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.LayoutSettings</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.Layout.TableLayoutSettingsTypeConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Erfasst die Tabellenlayouts zugeordneten Eigenschaften.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TableLayoutSettings> -Klasse erfasst und verwaltet das Schema der Tabelle zugeordneten Eigenschaften. Diese Klasse wird intern von verwendet die <xref:System.Windows.Forms.TableLayoutPanel> und <xref:System.Windows.Forms.ToolStrip> Klassen als auch die Tabellenlayoutmodul. Die <xref:System.Windows.Forms.TableLayoutSettings> -Klasse wird von der Layoutmodul verwendet, um zu bestimmen, wie die untergeordneten Steuerelemente des Containers angeordnet.  
+  
+ Die <xref:System.Windows.Forms.TableLayoutSettings> Klasse verwaltet die folgende Informationen:  
+  
+-   Die <xref:System.Windows.Forms.TableLayoutPanelGrowStyle> verwendet wird.  
+  
+-   Die maximale Anzahl von Spalten und Zeilen im Layout.  
+  
+-   Die Auflistung von Formaten, die für die enthaltenen Spalten und Zeilen verwendet werden soll.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Initialisieren einer <xref:System.Windows.Forms.TableLayoutSettings> -Objekt für eine <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement. Eine vollständige Codebeispiel finden Sie unter [Vorgehensweise: Implementieren eines benutzerdefinierten ToolStripRenderer](~/docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ColumnCount">
+      <MemberSignature Language="C#" Value="public int ColumnCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutSettings.ColumnCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Anzahl zulässiger Spalten in das Tabellenlayout.</summary>
+        <value>Die maximale Anzahl zulässiger Spalten in das Tabellenlayout. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Forms.TableLayoutSettings.ColumnCount%2A> Eigenschaft nicht die Zuordnung der Spalten oder zusätzlicher Arbeitsspeicher belegt. Diese Zuordnung tritt auf, wenn die Spalten erstellt werden.  
+  
+ Durch Festlegen dieser Eigenschaft führt dazu, dass die Tabelle auf eine andere-Layoutvorgang unterzogen werden.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Initialisieren einer <xref:System.Windows.Forms.TableLayoutSettings> -Objekt für eine <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement. Eine vollständige Codebeispiel finden Sie unter [Vorgehensweise: Implementieren eines benutzerdefinierten ToolStripRenderer](~/docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Eigenschaftswert ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnStyles">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TableLayoutColumnStyleCollection ColumnStyles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TableLayoutColumnStyleCollection ColumnStyles" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutSettings.ColumnStyles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutColumnStyleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Formaten verwendet, um das Aussehen und Verhalten der Tabellenspalten Layout zu bestimmen.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.TableLayoutColumnStyleCollection" /> , enthält der Spaltenformate für das Layouttabelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.TableLayoutSettings.ColumnStyles%2A> Eigenschaft, um die Formateigenschaften bestimmter Spalten zuzugreifen. Die Reihenfolge der Formate in einem <xref:System.Windows.Forms.TableLayoutColumnStyleCollection?displayProperty=nameWithType> stimmt mit der die entsprechenden Spalten in der Tabelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCellPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TableLayoutPanelCellPosition GetCellPosition (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Forms.TableLayoutPanelCellPosition GetCellPosition(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.GetCellPosition(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutPanelCellPosition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">Ein in einer Zelle enthaltenes Steuerelement.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> ab, die die Zeile und die Spalte der Zelle darstellt.</summary>
+        <returns>Eine <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" />, die die Zellposition darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Forms.TableLayoutSettings> Objekt eine Zellenposition abgerufen, einem <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement. Eine vollständige Codebeispiel finden Sie unter [Vorgehensweise: Implementieren eines benutzerdefinierten ToolStripRenderer](~/docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumn">
+      <MemberSignature Language="C#" Value="public int GetColumn (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetColumn(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.GetColumn(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">Ein in einer Zelle enthaltenes Steuerelement.</param>
+        <summary>Ruft die Spaltenposition des angegebenen untergeordneten Steuerelements ab.</summary>
+        <returns>Die Spaltenposition des angegebenen untergeordneten Steuerelements.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnSpan">
+      <MemberSignature Language="C#" Value="public int GetColumnSpan (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetColumnSpan(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.GetColumnSpan(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">Ein in einer Zelle enthaltenes Steuerelement.</param>
+        <summary>Ruft die Anzahl der Spalten, die die Zelle mit dem das untergeordnete Steuerelement erstreckt.</summary>
+        <returns>Die Anzahl der Spalten, die die Zelle mit dem das untergeordnete Steuerelement erstreckt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRow">
+      <MemberSignature Language="C#" Value="public int GetRow (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetRow(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.GetRow(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">Ein in einer Zelle enthaltenes Steuerelement.</param>
+        <summary>Ruft die Zeilenposition des angegebenen untergeordneten Steuerelements ab.</summary>
+        <returns>Die Zeilenposition des angegebenen untergeordneten Steuerelements.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRowSpan">
+      <MemberSignature Language="C#" Value="public int GetRowSpan (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetRowSpan(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.GetRowSpan(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">Ein in einer Zelle enthaltenes Steuerelement.</param>
+        <summary>Ruft die Anzahl der Zeilen, die die Zelle mit dem das untergeordnete Steuerelement erstreckt.</summary>
+        <returns>Die Anzahl der Zeilen, die die Zelle mit dem das untergeordnete Steuerelement erstreckt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GrowStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TableLayoutPanelGrowStyle GrowStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.TableLayoutPanelGrowStyle GrowStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutSettings.GrowStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutPanelGrowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, wie das Tabellenlayout erweitern soll, um neue Zellen erweitert werden, wenn alle vorhandene Zellen belegt sind.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.TableLayoutPanelGrowStyle" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.TableLayoutPanelGrowStyle.AddRows" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TableLayoutSettings.GrowStyle%2A> Eigenschaft bestimmt, wie das Layoutmodul eine neue Zelle eine vollständige Tabelle hinzugefügt werden soll. Diese Eigenschaft kann festgelegt werden, um <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.AddRows> um anzugeben, dass Zeilen hinzugefügt werden sollen, <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns> , um anzugeben, dass Spalten hinzugefügt werden sollen, oder <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize> , die Erweiterung zu unterbinden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Eigenschaftswert ist ungültig für den Enumerationstyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LayoutEngine">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.Layout.LayoutEngine LayoutEngine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Layout.LayoutEngine LayoutEngine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutSettings.LayoutEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Layout.LayoutEngine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Tabellenlayoutmodul ab.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.Layout.LayoutEngine" /> zurzeit verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TableLayoutSettings.LayoutEngine%2A> Eigenschaft wird in der Regel in zwei Kontexten verwendet:  
+  
+-   Ein Container, der einem Tabellenlayout verwendet.  
+  
+-   Ein in einem Tabellenlayoutcontainer, z. B. eine Schaltfläche in einer Zelle des enthaltenen enthaltenes Steuerelement eine <xref:System.Windows.Forms.TableLayoutPanel>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowCount">
+      <MemberSignature Language="C#" Value="public int RowCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutSettings.RowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Anzahl von Zeilen, die in das Tabellenlayout zulässig.</summary>
+        <value>Die maximale Anzahl von Zeilen, die in das Tabellenlayout zulässig. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Forms.TableLayoutSettings.RowCount%2A> Eigenschaft Zeilen oder Arbeitsspeicher nicht reserviert. Diese Zuordnung tritt auf, wenn die Zeilen erstellt werden.  
+  
+ Durch Festlegen dieser Eigenschaft führt dazu, dass die Tabelle auf eine andere-Layoutvorgang unterzogen werden.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Initialisieren einer <xref:System.Windows.Forms.TableLayoutSettings> -Objekt für eine <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement. Eine vollständige Codebeispiel finden Sie unter [Vorgehensweise: Implementieren eines benutzerdefinierten ToolStripRenderer](~/docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Eigenschaftswert ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RowStyles">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TableLayoutRowStyleCollection RowStyles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TableLayoutRowStyleCollection RowStyles" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutSettings.RowStyles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutRowStyleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Formaten verwendet, um das Aussehen und Verhalten der Tabellenzeilen Layout zu bestimmen.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.TableLayoutRowStyleCollection" /> , enthält die Zeilenstilen für das Layouttabelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.TableLayoutSettings.RowStyles%2A> Eigenschaft, um die Formateigenschaften bestimmter Zeilen zuzugreifen. Die Reihenfolge der Formate in einem <xref:System.Windows.Forms.TableLayoutRowStyleCollection?displayProperty=nameWithType> stimmt mit der entsprechenden Zeilen in der Tabelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCellPosition">
+      <MemberSignature Language="C#" Value="public void SetCellPosition (object control, System.Windows.Forms.TableLayoutPanelCellPosition cellPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCellPosition(object control, valuetype System.Windows.Forms.TableLayoutPanelCellPosition cellPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.SetCellPosition(System.Object,System.Windows.Forms.TableLayoutPanelCellPosition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+        <Parameter Name="cellPosition" Type="System.Windows.Forms.TableLayoutPanelCellPosition" />
+      </Parameters>
+      <Docs>
+        <param name="control">Ein in einer Zelle enthaltenes Steuerelement.</param>
+        <param name="cellPosition">Eine <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" />, die die Zellposition darstellt.</param>
+        <summary>Legt die <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> fest, die die Zeile und die Spalte der Zelle darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Forms.TableLayoutSettings> Objekt eine Zellenposition festgelegt, einem <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement. Eine vollständige Codebeispiel finden Sie unter [Vorgehensweise: Implementieren eines benutzerdefinierten ToolStripRenderer](~/docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColumn">
+      <MemberSignature Language="C#" Value="public void SetColumn (object control, int column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColumn(object control, int32 column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.SetColumn(System.Object,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+        <Parameter Name="column" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="control">Ein in einer Zelle enthaltenes Steuerelement.</param>
+        <param name="column">Die Spaltenposition des angegebenen untergeordneten Steuerelements.</param>
+        <summary>Legt die Spaltenposition des angegebenen untergeordneten Steuerelements fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="column" />ist kleiner als -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColumnSpan">
+      <MemberSignature Language="C#" Value="public void SetColumnSpan (object control, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColumnSpan(object control, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.SetColumnSpan(System.Object,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="control">Ein in einer Zelle enthaltenes Steuerelement.</param>
+        <param name="value">Die Anzahl der Spalten, die die Zelle mit dem das untergeordnete Steuerelement erstreckt.</param>
+        <summary>Legt die Anzahl der Spalten, die die Zelle mit dem das untergeordnete Steuerelement erstreckt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="value" /> ist kleiner als 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRow">
+      <MemberSignature Language="C#" Value="public void SetRow (object control, int row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetRow(object control, int32 row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.SetRow(System.Object,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+        <Parameter Name="row" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="control">Ein in einer Zelle enthaltenes Steuerelement.</param>
+        <param name="row">Die Zeilenposition des angegebenen untergeordneten Steuerelements.</param>
+        <summary>Legt die Zeilenposition des angegebenen untergeordneten Steuerelements fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="row" />ist kleiner als -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRowSpan">
+      <MemberSignature Language="C#" Value="public void SetRowSpan (object control, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetRowSpan(object control, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.SetRowSpan(System.Object,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="control">Ein in einer Zelle enthaltenes Steuerelement.</param>
+        <param name="value">Die Anzahl der Zeilen, die die Zelle mit dem das untergeordnete Steuerelement erstreckt.</param>
+        <summary>Legt die Anzahl der Zeilen, die die Zelle mit dem das untergeordnete Steuerelement erstreckt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="value" /> ist kleiner als 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo si, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="si" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="si">Das Objekt, das mit Serialisierungsinformationen aufgefüllt werden soll.</param>
+        <param name="context">Der Zielkontext der Serialisierung.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.TableLayoutSettings>-Instanz in eine <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

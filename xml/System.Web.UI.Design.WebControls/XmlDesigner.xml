@@ -1,0 +1,140 @@
+<Type Name="XmlDesigner" FullName="System.Web.UI.Design.WebControls.XmlDesigner">
+  <TypeSignature Language="C#" Value="public class XmlDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.XmlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erweitert das Entwurfszeitverhalten für das <see cref="T:System.Web.UI.WebControls.Xml" />-Webserversteuerelement.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.XmlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.XmlDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.XmlDesigner.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt den nicht verwalteten Ressourcen, mit denen, die <see cref="T:System.Web.UI.Design.WebControls.XmlDesigner" /> steuern und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Web.UI.Design.WebControls.XmlDesigner.Dispose%2A> sobald Sie fertig sind mit den <xref:System.Web.UI.Design.WebControls.XmlDesigner> Klasse. Die <xref:System.Web.UI.Design.WebControls.XmlDesigner.Dispose%2A>-Methode bewirkt, dass <xref:System.Web.UI.Design.WebControls.XmlDesigner> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Web.UI.Design.WebControls.XmlDesigner.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.Web.UI.Design.WebControls.XmlDesigner> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Web.UI.Design.WebControls.XmlDesigner> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Web.UI.Design.WebControls.XmlDesigner.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.Web.UI.Design.WebControls.XmlDesigner> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Web.UI.Design.WebControls.XmlDesigner>-Methode des `Finalize`-Objekts aufruft.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.XmlDesigner.Dispose%2A> Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. Die `Dispose()` Ruft die geschützte `Dispose(Boolean)` Methode mit `disposing` festgelegt `true`. Die <xref:System.Object.Finalize%2A> ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn `disposing` ist `true`, <xref:System.Web.UI.Design.WebControls.XmlDesigner.Dispose%2A> Methode gibt alle Ressourcen, die für verwaltete Objekte reserviert sind, die von diesem <xref:System.Web.UI.Design.WebControls.XmlDesigner> Verweise. Die <xref:System.Web.UI.Design.WebControls.XmlDesigner.Dispose%2A> Methode ruft die `Dispose()` -Methode aller Objekte auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see langword="Dispose(Boolean)" />, da die <see langword="Dispose" /> Methode kann mehrfach aufgerufen werden von anderen Objekten darauf achten, nicht auf Objekte zu verweisen, die einen früheren Aufruf freigegeben wurden die <see langword="Dispose" /> Methode. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md)  
+  
+ [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3)</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.XmlDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das HTML-Markup ab, das für die Darstellung des Steuerelements zur Entwurfszeit verwendet wird.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmptyDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected override string GetEmptyDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetEmptyDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.XmlDesigner.GetEmptyDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den HTML-Code, der verwendet wird, um ein leeres Steuerelement zu füllen.</summary>
+        <returns>Der HTML-Code verwendet, um ein leeres Steuerelement zu füllen.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.XmlDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Das zugeordnete Steuerelement.</param>
+        <summary>Initialisiert den Designer mit dem Steuerelement, dem dieser Instanz des Designers zugeordnet ist.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,104 @@
+<Type Name="OdbcInfoMessageEventArgs" FullName="System.Data.Odbc.OdbcInfoMessageEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class OdbcInfoMessageEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OdbcInfoMessageEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Odbc.OdbcInfoMessageEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Odbc</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Data.Odbc.OdbcConnection.InfoMessage" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Odbc.OdbcConnection.InfoMessage> Ereignis enthält einen <xref:System.Data.Odbc.OdbcErrorCollection> Auflistung mit Warnungen, die aus der Datenquelle gesendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcErrorCollection Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Odbc.OdbcErrorCollection Errors" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcInfoMessageEventArgs.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcErrorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Warnungen, die aus der Datenquelle gesendet.</summary>
+        <value>Die Auflistung von Warnungen, die aus der Datenquelle gesendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcInfoMessageEventArgs.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen Text des Fehlers aus der Datenbank gesendet.</summary>
+        <value>Der vollständige Text des Fehlers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein Wrapper für die <xref:System.Data.Odbc.OdbcError.Message%2A> Eigenschaft des ersten <xref:System.Data.Odbc.OdbcError> in der <xref:System.Data.Odbc.OdbcInfoMessageEventArgs.Errors%2A> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcInfoMessageEventArgs.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolgendarstellung der <see cref="E:System.Data.Odbc.OdbcConnection.InfoMessage" /> Ereignis.</summary>
+        <returns>Eine Zeichenfolge, die <see cref="E:System.Data.Odbc.OdbcConnection.InfoMessage" /> Ereignis.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

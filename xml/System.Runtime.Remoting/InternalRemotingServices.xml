@@ -1,0 +1,233 @@
+<Type Name="InternalRemotingServices" FullName="System.Runtime.Remoting.InternalRemotingServices">
+  <TypeSignature Language="C#" Value="public class InternalRemotingServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InternalRemotingServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.InternalRemotingServices" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Hilfsmethoden für die Verwendung von der .NET Framework Remoting-Infrastruktur.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen nicht aufrufen, die `static` Methoden der <xref:System.Runtime.Remoting.InternalRemotingServices> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InternalRemotingServices ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.InternalRemotingServices.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz von <see cref="T:System.Runtime.Remoting.InternalRemotingServices" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebugOutChnl">
+      <MemberSignature Language="C#" Value="public static void DebugOutChnl (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DebugOutChnl(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.InternalRemotingServices.DebugOutChnl(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("_LOGGING")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Eine Zeichenfolge, die in der Nachricht platziert.</param>
+        <summary>Sendet eine Nachricht über einen Remoting-Kanal zu einem nicht verwalteten Debugger.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen nicht aufrufen, die `static` Methoden der <xref:System.Runtime.Remoting.InternalRemotingServices> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCachedSoapAttribute">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.Metadata.SoapAttribute GetCachedSoapAttribute (object reflectionObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.Metadata.SoapAttribute GetCachedSoapAttribute(object reflectionObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.InternalRemotingServices.GetCachedSoapAttribute(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Metadata.SoapAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reflectionObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="reflectionObject">Eine Klasse oder die Methodenparameter.</param>
+        <summary>Ruft ein entsprechendes, SOAP-bezogenen Attribut für die angegebene Klasse oder Methodenparameter ab.</summary>
+        <returns>Die SOAP-bezogenen Attribut für die angegebene Klasse Member oder Methodenparameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen nicht aufrufen, die `static` Methoden der <xref:System.Runtime.Remoting.InternalRemotingServices> Klasse.  
+  
+ Ein `"_LOGGING"` Vorverarbeitungssymbol wird angewendet, an die Methode mithilfe von der <xref:System.Diagnostics.ConditionalAttribute> Attribut.  
+  
+ Die <xref:System.Runtime.Remoting.Metadata.SoapAttribute> Klasse ist die Basisklasse für verschiedene Attributklassen von SOAP-bezogenen in der <xref:System.Runtime.Remoting.Metadata> Namespace.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemotingAssert">
+      <MemberSignature Language="C#" Value="public static void RemotingAssert (bool condition, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemotingAssert(bool condition, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.InternalRemotingServices.RemotingAssert(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("_DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">
+          <see langword="true" />um zu verhindern, dass eine Meldung angezeigt wird; andernfalls <see langword="false" />.</param>
+        <param name="message">Die Meldung anzeigen, wenn <c>Bedingung</c> ist <see langword="false" />.</param>
+        <summary>Weist einen internen Debugger zu prüfen, ob eine Bedingung und eine Meldung angezeigt, wenn die Bedingung <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen nicht aufrufen, die `static` Methoden der <xref:System.Runtime.Remoting.InternalRemotingServices> Klasse.  
+  
+ Ein `"_DEBUG"` Vorverarbeitungssymbol wird angewendet, an die Methode mithilfe von der <xref:System.Diagnostics.ConditionalAttribute> Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemotingTrace">
+      <MemberSignature Language="C#" Value="public static void RemotingTrace (params object[] messages);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemotingTrace(object[] messages) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.InternalRemotingServices.RemotingTrace(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("_LOGGING")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messages" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="messages">Ein Array vom Typ <see cref="T:System.Object" /> , die eine beliebige Anzahl von Nachrichten enthält.</param>
+        <summary>Sendet eine beliebige Anzahl von Nachrichten zu einem internen Debugger Remoting-Kanäle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen nicht aufrufen, die `static` Methoden der <xref:System.Runtime.Remoting.InternalRemotingServices> Klasse.  
+  
+ Ein `"_LOGGING"` Vorverarbeitungssymbol wird angewendet, an die Methode mithilfe von der <xref:System.Diagnostics.ConditionalAttribute> Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetServerIdentity">
+      <MemberSignature Language="C#" Value="public static void SetServerIdentity (System.Runtime.Remoting.Messaging.MethodCall m, object srvID);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetServerIdentity(class System.Runtime.Remoting.Messaging.MethodCall m, object srvID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.InternalRemotingServices.SetServerIdentity(System.Runtime.Remoting.Messaging.MethodCall,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Runtime.Remoting.Messaging.MethodCall" />
+        <Parameter Name="srvID" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="m">Ein <see cref="T:System.Runtime.Remoting.Messaging.MethodCall" /> , der einen Methodenaufruf für eine remote-Objekt darstellt.</param>
+        <param name="srvID">Interne identifizierende Informationen für ein Remote-Serverobjekt.</param>
+        <summary>Legt interne identifizierende Informationen für ein Remote-Serverobjekt für jeden Methodenaufruf vom Client zum Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen nicht aufrufen, die `static` Methoden der <xref:System.Runtime.Remoting.InternalRemotingServices> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

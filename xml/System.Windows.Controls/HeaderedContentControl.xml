@@ -1,0 +1,581 @@
+<Type Name="HeaderedContentControl" FullName="System.Windows.Controls.HeaderedContentControl">
+  <TypeSignature Language="C#" Value="public class HeaderedContentControl : System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi HeaderedContentControl extends System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.HeaderedContentControl" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ContentControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Text)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die basisimplementierung für alle Steuerelemente, die einzelnen Inhalt und enthalten einen Header an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.HeaderedContentControl>erbt die <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft von <xref:System.Windows.Controls.ContentControl> und definiert die <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> -Eigenschaft, die vom Typ <xref:System.Object>.  <xref:System.Windows.Controls.HeaderedContentControl.Header%2A>Stellt eine Überschrift für das Steuerelement bereit. Wie die <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft eine <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> können einem beliebigen Typ sein.  
+  
+ Die folgende Abbildung zeigt zwei <xref:System.Windows.Controls.TabItem> Objekte, die von erben <xref:System.Windows.Controls.HeaderedContentControl>. Die erste <xref:System.Windows.Controls.TabItem> hat <xref:System.Windows.UIElement> Objekte, die den Inhalt in beiden die <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> und die <xref:System.Windows.Controls.ContentControl.Content%2A>: die <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> auf festgelegt ist eine <xref:System.Windows.Controls.StackPanel> , enthält ein <xref:System.Windows.Shapes.Ellipse> und ein <xref:System.Windows.Controls.TextBlock>; das <xref:System.Windows.Controls.ContentControl.Content%2A> auf festgelegt ist ein <xref:System.Windows.Controls.StackPanel> , enthält eine <xref:System.Windows.Controls.TextBlock> und ein <xref:System.Windows.Controls.Label>.  Die <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> des zweiten <xref:System.Windows.Controls.TabItem> in eine Zeichenfolge festgelegt ist und die <xref:System.Windows.Controls.ContentControl.Content%2A> festgelegt ist, auf einen einzelnen <xref:System.Windows.Controls.TextBlock>.  
+  
+ ![TabControl](~/add/media/controlcontentmodelteabitem.PNG "TabControl")  
+TabControl mit unterschiedlichen Typen in den Header-Eigenschaft  
+  
+ Ein <xref:System.Windows.Controls.HeaderedContentControl> verfügt über einen beschränkten Standardstil. Erstellen Sie ein Anwendungsentwickler kann eine <xref:System.Windows.Controls.HeaderedContentControl>, aber seine Darstellung ist sehr einfach sein. Wenn Sie die Darstellung des Steuerelements zu verbessern möchten, können Sie ein neues erstellen <xref:System.Windows.Controls.ControlTemplate>. Ein <xref:System.Windows.Controls.HeaderedContentControl> eignet sich für die Erstellung benutzerdefinierter Steuerelemente, da sie ein Modell für einzelne Content-Steuerelemente mit Headern bereitstellt.  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden.  Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird.  Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen der <xref:System.Windows.Controls.TabControl> angezeigt, die im Abschnitt "Hinweise".  
+  
+ [!code-xaml[ControlContentOverviewSnippets#16](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml#16)]  
+  
+ Die folgenden Beispiele zeigen, wie zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.HeaderedContentControl>.  
+  
+ [!code-xaml[HeaderedContentControl#HeaderedContentControlStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/HeaderedContentControl/CSharp/Page1.xaml#headeredcontentcontrolstyle)]  
+  
+ [!code-xaml[HeaderedContentControl#HeaderedContentControl](~/samples/snippets/csharp/VS_Snippets_Wpf/HeaderedContentControl/CSharp/Page1.xaml#headeredcontentcontrol)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HeaderedContentControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.HeaderedContentControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.HeaderedContentControl" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasHeader">
+      <MemberSignature Language="C#" Value="public bool HasHeader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.HeaderedContentControl.HasHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Header <see langword="null" />.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="P:System.Windows.Controls.HeaderedContentControl.Header" />-Eigenschaft nicht <see langword="null" /> ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_HasHeader"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.HeaderedContentControl.HasHeaderProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel testet, ob das Steuerelement einen Header mit Inhalt hat.  
+  
+ [!code-csharp[HeaderedContentControl#HasHeader](~/samples/snippets/csharp/VS_Snippets_Wpf/HeaderedContentControl/CSharp/Page1.xaml.cs#hasheader)]
+ [!code-vb[HeaderedContentControl#HasHeader](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HeaderedContentControl/VisualBasic/Page1.xaml.vb#hasheader)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasHeaderProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HasHeaderProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HasHeaderProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.HeaderedContentControl.HasHeaderProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.HeaderedContentControl.HasHeader" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="public object Header { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Header" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.HeaderedContentControl.Header" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Content")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Label)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Daten für den Header der einzelnen Steuerelemente verwendet.</summary>
+        <value>Ein Headerobjekt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wie die <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft eine <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> können einem beliebigen Typ sein. Die <xref:System.Windows.Controls.HeaderedContentControl> verwendet die gleiche Logik zum Anzeigen der <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> beschriebene <xref:System.Windows.Controls.ContentControl.Content%2A?displayProperty=nameWithType>.  
+  
+<a name="dependencyPropertyInfo_Header"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.HeaderedContentControl.HeaderProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.TabControl> enthält zwei <xref:System.Windows.Controls.TabItem> Objekte, die von erben <xref:System.Windows.Controls.HeaderedContentControl>.  Die erste <xref:System.Windows.Controls.TabItem> hat <xref:System.Windows.UIElement> Objekte, die den Inhalt in beiden die <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> und die <xref:System.Windows.Controls.ContentControl.Content%2A>: die <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> auf festgelegt ist eine <xref:System.Windows.Controls.StackPanel> , enthält ein <xref:System.Windows.Shapes.Ellipse> und ein <xref:System.Windows.Controls.TextBlock>; das <xref:System.Windows.Controls.ContentControl.Content%2A> auf festgelegt ist ein <xref:System.Windows.Controls.StackPanel> , enthält eine <xref:System.Windows.Controls.TextBlock> und ein <xref:System.Windows.Controls.Label>.  Die <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> des zweiten <xref:System.Windows.Controls.TabItem> in eine Zeichenfolge festgelegt ist und die <xref:System.Windows.Controls.ContentControl.Content%2A> festgelegt ist, auf einen einzelnen <xref:System.Windows.Controls.TextBlock>.  
+  
+ [!code-xaml[ControlContentOverviewSnippets#16](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml#16)]  
+  
+ Die folgende Abbildung zeigt die <xref:System.Windows.Controls.TabControl> im vorherigen Beispiel erstellt.  
+  
+ ![TabControl](~/add/media/controlcontentmodelteabitem.PNG "TabControl")  
+TabControl mit unterschiedlichen Typen in den Header-Eigenschaft  
+  
+ Das folgende Beispiel erstellt zwei <xref:System.Windows.DataTemplate> Objekte an, die Darstellung der <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> und <xref:System.Windows.Controls.ContentControl.Content%2A> von der <xref:System.Windows.Controls.HeaderedContentControl>.  
+  
+ [!code-xaml[HeaderedContentControl#HeaderTemplate1](~/samples/snippets/csharp/VS_Snippets_Wpf/HeaderedContentControl/CSharp/Page1.xaml#headertemplate1)]  
+[!code-xaml[HeaderedContentControl#HeaderTemplate2](~/samples/snippets/csharp/VS_Snippets_Wpf/HeaderedContentControl/CSharp/Page1.xaml#headertemplate2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.HeaderedContentControl.HeaderProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.HeaderedContentControl.Header" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderStringFormat">
+      <MemberSignature Language="C#" Value="public string HeaderStringFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderStringFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.HeaderedContentControl.HeaderStringFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine zusammengesetzte Zeichenfolge, die angibt, wie formatiert die <see cref="P:System.Windows.Controls.HeaderedContentControl.Header" /> Eigenschaft, wenn er als Zeichenfolge angezeigt wird.</summary>
+        <value>Eine zusammengesetzte Zeichenfolge, die angibt, wie formatiert die <see cref="P:System.Windows.Controls.HeaderedContentControl.Header" /> Eigenschaft, wenn er als Zeichenfolge angezeigt wird. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.HeaderedContentControl.HeaderStringFormat%2A>eine vordefinierte, zusammengesetzten oder ein benutzerdefiniertes Zeichenfolgenformat kann sein. Weitere Informationen zu Zeichenfolgenformate, finden Sie unter [Formatierung von Typen](~/docs/standard/base-types/formatting-types.md). Wenn Sie festlegen, der <xref:System.Windows.Controls.HeaderedContentControl.HeaderTemplate%2A> oder <xref:System.Windows.Controls.HeaderedContentControl.HeaderTemplateSelector%2A> Eigenschaft eine <xref:System.Windows.Controls.HeaderedContentControl>, die <xref:System.Windows.Controls.HeaderedContentControl.HeaderStringFormat%2A> Eigenschaft wird ignoriert.  
+  
+<a name="dependencyPropertyInfo_HeaderStringFormat"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.HeaderedContentControl.HeaderStringFormatProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel bindet ein <xref:System.Windows.Controls.TabControl> auf eine Auflistung von `Student` Objekte.  Die `Student` -Klasse verfügt über eine `Name` -Eigenschaft, die eine Auflistung von `Course` -Objekten und implementiert die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> Methode, um entweder zurückzugeben der `Name` des Studenten oder eine Zeichenfolge, die die Studenten Kurse aufgelistet sind.  Im Beispiel wird <xref:System.Windows.Controls.HeaderedContentControl.HeaderStringFormat%2A> in den Namen eines Studenten versetzt die <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> jedes <xref:System.Windows.Controls.TabItem> (geerbt von <xref:System.Windows.Controls.HeaderedContentControl>), und die <xref:System.Windows.Controls.TabControl.ContentStringFormat%2A?displayProperty=nameWithType> zum Anzeigen der Kursliste für Studenten im Inhalt des der <xref:System.Windows.Controls.TabItem>.  
+  
+ [!code-xaml[ContentStringSnippets#TabControl](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentStringSnippets/CSharp/Window1.xaml#tabcontrol)]  
+  
+ Das folgende Beispiel implementiert die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> Methode zurückzugebenden entweder die `Name` des Studenten oder eine Zeichenfolge, die die Studenten Kurse aufgelistet sind.  
+  
+ [!code-csharp[ContentStringSnippets#TabControlToString](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentStringSnippets/CSharp/Window1.xaml.cs#tabcontroltostring)]
+ [!code-vb[ContentStringSnippets#TabControlToString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContentStringSnippets/visualbasic/window1.xaml.vb#tabcontroltostring)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderStringFormatProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderStringFormatProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderStringFormatProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.HeaderedContentControl.HeaderStringFormatProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.HeaderedContentControl.HeaderStringFormat" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate HeaderTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate HeaderTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Content")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage verwendet, um den Inhalt der Header des Steuerelements anzuzeigen.</summary>
+        <value>Eine Datenvorlage. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_HeaderTemplate"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object HeaderTemplate="{ResourceExtension TemplateResourceKey}"/>  
+```  
+  
+<a name="xamlPropertyElementUsage_HeaderTemplate"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+<a name="xamlValues_HeaderTemplate"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *ResourceExtension*  
+ Eines der folgenden: `StaticResource`, oder `DynamicResource`. Finden Sie unter [XAML-Ressourcen](~/docs/framework/wpf/advanced/xaml-resources.md).  
+  
+ *TemplateResourceKey*  
+ Der Schlüssel, der die die angeforderte Vorlage identifiziert. Der Schlüssel verweist auf eine vorhandene Ressource in einem <xref:System.Windows.ResourceDictionary>.  
+  
+> [!NOTE]
+>  Eigenschaftenelementsyntax ist technisch zwar möglich, aber nicht empfehlenswert. Finden Sie unter [Inlinestile und Vorlagen](~/docs/framework/wpf/advanced/inline-styles-and-templates.md). Eine Bindung mit verweisen oder ist auch möglich, aber ungewöhnlich.  
+  
+<a name="dependencyPropertyInfo_HeaderTemplate"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.HeaderedContentControl.HeaderTemplateProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt zwei <xref:System.Windows.DataTemplate> Objekte an, die Darstellung der <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> und <xref:System.Windows.Controls.ContentControl.Content%2A> von der <xref:System.Windows.Controls.HeaderedContentControl>.  
+  
+ [!code-xaml[HeaderedContentControl#HeaderTemplate1](~/samples/snippets/csharp/VS_Snippets_Wpf/HeaderedContentControl/CSharp/Page1.xaml#headertemplate1)]  
+[!code-xaml[HeaderedContentControl#HeaderTemplate2](~/samples/snippets/csharp/VS_Snippets_Wpf/HeaderedContentControl/CSharp/Page1.xaml#headertemplate2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.HeaderedContentControl.HeaderTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplate" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplateSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataTemplateSelector HeaderTemplateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataTemplateSelector HeaderTemplateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Content")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataTemplateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen einer Vorlage Datenauswahl, benutzerdefinierten Logik für das Auswählen der Vorlage verwendet, um die Kopfzeile anzeigen bereitstellt.</summary>
+        <value>Ein Daten-Template-Selektor-Objekt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn beide die <xref:System.Windows.Controls.HeaderedContentControl.HeaderTemplateSelector%2A> und <xref:System.Windows.Controls.HeaderedContentControl.HeaderTemplate%2A> Eigenschaften festgelegt sind, die Vorlage Auswahlzeiger-Eigenschaft wird ignoriert.  
+  
+<a name="xamlAttributeUsage_HeaderTemplateSelector"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object HeaderTemplateSelector="{ResourceExtension DataTemplateSelectorClassKey}"/>  
+```  
+  
+<a name="xamlPropertyElementUsage_HeaderTemplateSelector"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.HeaderTemplateSelector>  
+    <MyDataTemplateSelectorImplementation .../>  
+  </object.HeaderTemplateSelector>  
+</object>  
+```  
+  
+<a name="xamlValues_HeaderTemplateSelector"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *MyDataTemplateSelectorImplementation*  
+ Eine abgeleitete Klasse <xref:System.Windows.Controls.DataTemplateSelector> implementiert eine praktische <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> außer Kraft setzen. Weitere Informationen dazu, wie Ihre benutzerdefinierte Klasse zuordnen, finden Sie unter [XAML-Namespaces und Namespace-Zuordnung für WPF-XAML](~/docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+  
+ *ResourceExtension*  
+ Eines der folgenden: `StaticResource`, oder `DynamicResource`. Finden Sie unter [XAML-Ressourcen](~/docs/framework/wpf/advanced/xaml-resources.md).  
+  
+ *DataTemplateSelectorClassKey*  
+ Der Schlüssel, der die Selektor Implementierung angeforderten identifiziert. Der Schlüssel verweist auf eine abgeleitete Klasse, die eine praktische implementiert <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> außer Kraft setzen. Weitere Informationen dazu, wie Ihre benutzerdefinierte Klasse zuordnen, finden Sie unter [XAML-Namespaces und Namespace-Zuordnung für WPF-XAML](~/docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md). Sie können auch programmgesteuert hinzufügen, eine Instanz von Ihrem <xref:System.Windows.Controls.DataTemplateSelector> Klasse als Ressource zu einem Ressourcenwörterbuch.  
+  
+<a name="dependencyPropertyInfo_HeaderTemplateSelector"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.HeaderedContentControl.HeaderTemplateSelectorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplateSelectorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderTemplateSelectorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderTemplateSelectorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.HeaderedContentControl.HeaderTemplateSelectorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplateSelector" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.HeaderedContentControl.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerator für die logischen untergeordneten Elemente von der <see cref="T:System.Windows.Controls.ControlTemplate" />.</summary>
+        <value>Ein Enumerator.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHeaderChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnHeaderChanged (object oldHeader, object newHeader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnHeaderChanged(object oldHeader, object newHeader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.HeaderedContentControl.OnHeaderChanged(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldHeader" Type="System.Object" />
+        <Parameter Name="newHeader" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="oldHeader">Der alte Wert der <see cref="P:System.Windows.Controls.HeaderedContentControl.Header" /> Eigenschaft.</param>
+        <param name="newHeader">Der neue Wert der <see cref="P:System.Windows.Controls.HeaderedContentControl.Header" /> Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.HeaderedContentControl.Header" /> Eigenschaft von einem <see cref="T:System.Windows.Controls.HeaderedContentControl" /> Änderungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHeaderStringFormatChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnHeaderStringFormatChanged (string oldHeaderStringFormat, string newHeaderStringFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnHeaderStringFormatChanged(string oldHeaderStringFormat, string newHeaderStringFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.HeaderedContentControl.OnHeaderStringFormatChanged(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldHeaderStringFormat" Type="System.String" />
+        <Parameter Name="newHeaderStringFormat" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="oldHeaderStringFormat">Der alte Wert der <see cref="P:System.Windows.Controls.HeaderedContentControl.HeaderStringFormat" />-Eigenschaft.</param>
+        <param name="newHeaderStringFormat">Der neue Wert der <see cref="P:System.Windows.Controls.HeaderedContentControl.HeaderStringFormat" />-Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.HeaderedContentControl.HeaderStringFormat" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHeaderTemplateChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnHeaderTemplateChanged (System.Windows.DataTemplate oldHeaderTemplate, System.Windows.DataTemplate newHeaderTemplate);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnHeaderTemplateChanged(class System.Windows.DataTemplate oldHeaderTemplate, class System.Windows.DataTemplate newHeaderTemplate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.HeaderedContentControl.OnHeaderTemplateChanged(System.Windows.DataTemplate,System.Windows.DataTemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldHeaderTemplate" Type="System.Windows.DataTemplate" />
+        <Parameter Name="newHeaderTemplate" Type="System.Windows.DataTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="oldHeaderTemplate">Der alte Wert der <see cref="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplate" /> Eigenschaft.</param>
+        <param name="newHeaderTemplate">Der neue Wert der <see cref="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplate" /> Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplate" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHeaderTemplateSelectorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnHeaderTemplateSelectorChanged (System.Windows.Controls.DataTemplateSelector oldHeaderTemplateSelector, System.Windows.Controls.DataTemplateSelector newHeaderTemplateSelector);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnHeaderTemplateSelectorChanged(class System.Windows.Controls.DataTemplateSelector oldHeaderTemplateSelector, class System.Windows.Controls.DataTemplateSelector newHeaderTemplateSelector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.HeaderedContentControl.OnHeaderTemplateSelectorChanged(System.Windows.Controls.DataTemplateSelector,System.Windows.Controls.DataTemplateSelector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldHeaderTemplateSelector" Type="System.Windows.Controls.DataTemplateSelector" />
+        <Parameter Name="newHeaderTemplateSelector" Type="System.Windows.Controls.DataTemplateSelector" />
+      </Parameters>
+      <Docs>
+        <param name="oldHeaderTemplateSelector">Der alte Wert der <see cref="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplateSelector" /> Eigenschaft.</param>
+        <param name="newHeaderTemplateSelector">Der neue Wert der <see cref="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplateSelector" /> Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.HeaderedContentControl.HeaderTemplateSelector" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.HeaderedContentControl.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine Zeichenfolgendarstellung einer <see cref="T:System.Windows.Controls.HeaderedContentControl" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

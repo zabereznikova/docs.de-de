@@ -1,0 +1,50 @@
+<Type Name="ElapsedEventHandler" FullName="System.Timers.ElapsedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ElapsedEventHandler(object sender, ElapsedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ElapsedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Timers.ElapsedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Timers.ElapsedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Timers.ElapsedEventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Timers.Timer.Elapsed" />-Ereignisses eines <see cref="T:System.Timers.Timer" />-Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer <xref:System.Timers.ElapsedEventHandler> -Delegaten bestimmen Sie die Methode für die Behandlung der <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> Ereignis. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt einen Ereignishandler für das <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> -Ereignis, wird ein Zeitgeber erstellt und startet den Timer. Der Ereignishandler verfügt über die gleiche Signatur wie die <xref:System.Timers.ElapsedEventHandler> delegieren. Der Ereignishandler zeigt die <xref:System.Timers.ElapsedEventArgs.SignalTime%2A> Eigenschaft jedes Mal, es wird ausgelöst.  
+  
+ [!code-cpp[Classic Timer Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Timer Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Timer Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Timer Example/CS/source.cs#1)]
+ [!code-vb[Classic Timer Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Timer Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

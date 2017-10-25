@@ -1,0 +1,428 @@
+<Type Name="IDbConnection" FullName="System.Data.IDbConnection">
+  <TypeSignature Language="C#" Value="public interface IDbConnection : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDbConnection implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.IDbConnection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine offene Verbindung mit einer Datenquelle dar und wird von den .NET Framework-Datenanbietern implementiert, die auf relationale Datenbanken zugreifen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.IDbConnection> Schnittstelle ermöglicht eine erbende Klasse zum Implementieren einer Connection-Klasse, eine eindeutige Sitzung mit einer Datenquelle (z. B. eine Netzwerkverbindung mit einem Server) dar. Weitere Informationen zu Verbindungsklassen, finden Sie unter [Herstellen einer Verbindung mit einer Datenquelle](~/docs/framework/data/adonet/connecting-to-a-data-source.md).  
+  
+ Eine Anwendung erstellt eine Instanz der nicht der <xref:System.Data.IDbConnection> -Schnittstelle direkt, sondern erstellt eine Instanz einer Klasse, die erbt <xref:System.Data.IDbConnection>.  
+  
+ Klassen, erben <xref:System.Data.IDbConnection> müssen alle geerbten Member implementieren und definieren Sie in der Regel zusätzliche Elemente, um die anbieterspezifische Funktionalität hinzufügen. Z. B. die <xref:System.Data.IDbConnection> Schnittstelle definiert die <xref:System.Data.IDbConnection.ConnectionTimeout%2A> Eigenschaft. Wiederum die <xref:System.Data.SqlClient.SqlConnection> Klasse erbt Sie diese Eigenschaft, und definiert auch die <xref:System.Data.SqlClient.SqlConnection.PacketSize%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt Instanzen der abgeleiteten Klassen <xref:System.Data.SqlClient.SqlCommand> und <xref:System.Data.SqlClient.SqlConnection>. Die <xref:System.Data.SqlClient.SqlConnection> geöffnet ist, und legen Sie als die <xref:System.Data.SqlClient.SqlCommand.Connection%2A> für die <xref:System.Data.SqlClient.SqlCommand>. Das Beispiel ruft dann <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>, und schließt die Verbindung. Zu diesem Zweck die <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> übergeben wird, eine Verbindungszeichenfolge und eine Abfragezeichenfolge, die eine Transact-SQL-INSERT-Anweisung ist.  
+  
+ [!code-csharp[Classic WebData SqlConnection Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlConnection Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlConnection Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlConnection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Zur Förderung der Konsistenz zwischen .NET Framework-Datenanbieter, benennen Sie die erbende Klasse in der Form <paramref name="PrvClassname" /> , in denen <paramref name="Prv" /> ist die einheitliche Präfix für alle Klassen in einem bestimmten .NET Framework Data Provider-Namespace. Beispielsweise <paramref name="Sql" /> ist das Präfix des der <see cref="T:System.Data.SqlClient.SqlConnection" /> -Klasse in der <see langword="System.Data.SqlClient" /> Namespace.  
+  
+ Beim Erben von der <see cref="T:System.Data.IDbConnection" /> -Schnittstelle, implementieren Sie die folgenden Konstruktoren:  
+  
+ <list type="table"><listheader><term>Element  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term>PrvConnection()  
+  
+ </term><description>Initialisiert eine neue Instanz der PrvConnection-Klasse.  
+  
+ </description></item><item><term>PrvConnection (Zeichenfolge "ConnectionString")  
+  
+ </term><description>Initialisiert eine neue Instanz der PrvConnection-Klasse, wenn eine Zeichenfolge mit der Verbindungszeichenfolge angegeben.  
+  
+ </description></item></list></para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginTransaction">
+      <MemberSignature Language="C#" Value="public System.Data.IDbTransaction BeginTransaction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.IDbTransaction BeginTransaction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDbConnection.BeginTransaction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beginnt eine Datenbanktransaktion.</summary>
+        <returns>Ein Objekt, das die neue Transaktion darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sobald die Transaktion abgeschlossen ist, müssen Sie explizit commit oder Rollback die Transaktion mithilfe der <xref:System.Data.IDbTransaction.Commit%2A> oder <xref:System.Data.IDbTransaction.Rollback%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTransaction">
+      <MemberSignature Language="C#" Value="public System.Data.IDbTransaction BeginTransaction (System.Data.IsolationLevel il);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.IDbTransaction BeginTransaction(valuetype System.Data.IsolationLevel il) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDbConnection.BeginTransaction(System.Data.IsolationLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="il" Type="System.Data.IsolationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="il">Einer der <see cref="T:System.Data.IsolationLevel" />-Werte.</param>
+        <summary>Beginnt eine Datenbanktransaktion mit dem angegebenen <see cref="T:System.Data.IsolationLevel" />-Wert.</summary>
+        <returns>Ein Objekt, das die neue Transaktion darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sobald die Transaktion abgeschlossen ist, Sie müssen explizit einen commit oder Rollback der Transaktion verwendet die <xref:System.Data.IDbTransaction.Commit%2A> oder <xref:System.Data.IDbTransaction.Rollback%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeDatabase">
+      <MemberSignature Language="C#" Value="public void ChangeDatabase (string databaseName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ChangeDatabase(string databaseName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDbConnection.ChangeDatabase(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="databaseName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="databaseName">Der Name der Datenbank, die anstelle der aktuellen Datenbank verwendet werden soll.</param>
+        <summary>Ändert die aktuelle Datenbank für ein offenes <see langword="Connection" />-Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDbConnection.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt die Verbindung mit der Datenbank.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.IDbConnection.Close%2A> -Methode einen Rollback aller anstehenden Transaktionen. Klicken Sie dann die Verbindung zum Verbindungspool frei oder schließt die Verbindung, wenn Verbindungspooling deaktiviert ist.  
+  
+ Eine Anwendung kann Aufrufen `Close` mehr als einmal ohne Auslösen einer Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionString">
+      <MemberSignature Language="C#" Value="public string ConnectionString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectionString" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDbConnection.ConnectionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeichenfolge ab, mit der eine Datenbank geöffnet wird, oder legt diese fest.</summary>
+        <value>Eine Zeichenfolge mit Verbindungseinstellungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `ConnectionString` Eigenschaft kann festgelegt werden, nur, wenn die Verbindung geschlossen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Instanz einer abgeleiteten Klasse <xref:System.Data.OleDb.OleDbConnection>, legt dessen <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A>, und zeigt seine <xref:System.Data.OleDb.OleDbConnection.State%2A>.  
+  
+ [!code-csharp[Classic WebData IDbConnection.ConnectionString Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData IDbConnection.ConnectionString Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData IDbConnection.ConnectionString Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData IDbConnection.ConnectionString Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionTimeout">
+      <MemberSignature Language="C#" Value="public int ConnectionTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConnectionTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDbConnection.ConnectionTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeit ab, die beim Verbindungsaufbau gewartet werden soll, bis der Versuch beendet und ein Fehler generiert wird.</summary>
+        <value>Der Zeitraum in Sekunden, in dem auf das Öffnen einer Verbindung gewartet werden soll. Der Standardwert ist 15 Sekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert 0 gibt an, keine Beschränkung für die Wartezeit, anstatt keine Wartezeit und sollte vermieden werden, einem <xref:System.Data.IDbConnection.ConnectionString%2A> , da er den Verbindungsversuch für Warten ohne Timeout verursachen würde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCommand">
+      <MemberSignature Language="C#" Value="public System.Data.IDbCommand CreateCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.IDbCommand CreateCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDbConnection.CreateCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein Command-Objekt, das der Verbindung zugeordnet ist, und gibt dieses zurück.</summary>
+        <returns>Ein Command-Objekt, das der Verbindung zugeordnet ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Database">
+      <MemberSignature Language="C#" Value="public string Database { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Database" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDbConnection.Database" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der aktuellen Datenbank oder der nach dem Öffnen einer Verbindung zu verwendenden Datenbank ab.</summary>
+        <value>Der Name der aktuellen Datenbank oder der Name der nach dem Öffnen einer Verbindung zu verwendenden Datenbank. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Database` Eigenschaft kann dynamisch aktualisiert werden, mithilfe der <xref:System.Data.IDbConnection.ChangeDatabase%2A> Methode oder durch eine SQL-Anweisung mit einer Execute-Methoden übergeben. (Anfänglich wird die Datenbank mithilfe der Verbindungszeichenfolge festgelegt.) Wenn Sie die aktuelle Datenbank mithilfe einer SQL-Anweisung ändern oder die `ChangeDatabase` -Methode, eine informative Meldung gesendet wird, und klicken Sie dann die Eigenschaft wird aktualisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public void Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDbConnection.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Öffnet eine Datenbankverbindung mit den Einstellungen, die durch die <see langword="ConnectionString" />-Eigenschaft des anbieterspezifischen Verbindungsobjekts angegebenen werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Data.ConnectionState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.ConnectionState State" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDbConnection.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ConnectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Zustand der Verbindung ab.</summary>
+        <value>Einer der <see cref="T:System.Data.ConnectionState" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wechselt der zulässig sind:  
+  
+-   Von `Closed` auf `Open`unter Verwendung der `Open` -Methode des Verbindungsobjekts.  
+  
+-   Von `Open` auf `Closed`, entweder die `Close` Methode oder die `Dispose` -Methode des Verbindungsobjekts.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Instanz einer abgeleiteten Klasse <xref:System.Data.OleDb.OleDbConnection>, legt dessen <xref:System.Data.IDbConnection.ConnectionString%2A>, und zeigt seine <xref:System.Data.IDbConnection.State%2A>.  
+  
+ [!code-csharp[Classic WebData IDbConnection.ConnectionString Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData IDbConnection.ConnectionString Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData IDbConnection.ConnectionString Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData IDbConnection.ConnectionString Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

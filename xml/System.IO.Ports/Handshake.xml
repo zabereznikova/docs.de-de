@@ -1,0 +1,118 @@
+<Type Name="Handshake" FullName="System.IO.Ports.Handshake">
+  <TypeSignature Language="C#" Value="public enum Handshake" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Handshake extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Ports.Handshake" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Ports</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt das Steuerungsprotokoll an, das beim Herstellen einer Kommunikation eines seriellen Anschlusses für ein <see cref="T:System.IO.Ports.SerialPort" />-Objekt verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird von der <xref:System.IO.Ports.SerialPort.Handshake%2A>-Eigenschaft verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die möglichen Werte für die <xref:System.IO.Ports.Handshake> Enumeration an die Konsole, fordert den Benutzer um eines auszuwählen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#05](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#05)]
+ [!code-csharp[System.IO.Ports.SerialPort#05](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#05)]
+ [!code-vb[System.IO.Ports.SerialPort#05](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#05)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.Handshake None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.Handshake.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.Handshake</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für den Handshake wird kein Steuerelement verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestToSend">
+      <MemberSignature Language="C#" Value="RequestToSend" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.Handshake RequestToSend = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.Handshake.RequestToSend" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.Handshake</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Request to Send (RTS) Hardware flusssteuerung wird verwendet. RTS signalisiert, dass Daten für die Übertragung verfügbar ist. Wenn der Puffer voll ist, wird die RTS-Zeile auf festgelegt <see langword="false" />. Die RTS-Zeile festgelegt, um <see langword="true" /> verfügbar, wenn mehr Platz im Eingabepuffer.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestToSendXOnXOff">
+      <MemberSignature Language="C#" Value="RequestToSendXOnXOff" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.Handshake RequestToSendXOnXOff = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.Handshake.RequestToSendXOnXOff" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.Handshake</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Request to Send (RTS) Hardware-Steuerelement und die XON/XOFF-Software-Steuerelemente werden verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XOnXOff">
+      <MemberSignature Language="C#" Value="XOnXOff" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.Handshake XOnXOff = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.Handshake.XOnXOff" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.Handshake</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>XON/XOFF Software-Control-Protokoll wird verwendet. XOFF-Steuerelement wird gesendet, um die Übertragung der Daten zu beenden. Das Steuerelement XON ist zum Fortsetzen der Übertragung gesendet. Diese Software-Steuerelemente werden anstelle der Anforderung Send (RTS) verwendet, und senden (CTS) Hardware-Steuerelemente löschen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,86 @@
+<Type Name="XhtmlLabelAdapter" FullName="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlLabelAdapter">
+  <TypeSignature Language="C#" Value="public class XhtmlLabelAdapter : System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XhtmlLabelAdapter extends System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlLabelAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Label-Adapterklasse für die XHTML-Adaptergruppe bereit. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Steuerelementadapter in der <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters> Namespace stellen XHTML-rendering und-Verarbeitung für mobile Steuerelemente auf einer Vielzahl von Anzeigegeräten bereit.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XhtmlLabelAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlLabelAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlLabelAdapter" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.Label Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.Label Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlLabelAdapter.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Label</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen stark typisierten Verweis auf das zugeordnete Steuerelement ab. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein <see cref="T:System.Web.UI.MobileControls.Label" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="public override void Render (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Render(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlLabelAdapter.Render(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <summary>Zeigt das zugeordnete Steuerelement und alle zu ihm gehörenden untergeordneten Steuerelemente auf dem Client an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

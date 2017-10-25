@@ -1,0 +1,170 @@
+<Type Name="DisplayAttributes" FullName="System.Speech.Recognition.DisplayAttributes">
+  <TypeSignature Language="C#" Value="public enum DisplayAttributes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DisplayAttributes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.DisplayAttributes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Listet die Optionen, die die <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> Objekt können Leerzeichen für die Anzeige eines Worts oder Satzzeichen angeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Windows-Desktop-Sprache gibt erkannten Ausdrücke als Auflistungen von <xref:System.Speech.Recognition.RecognizedWordUnit> oder <xref:System.Speech.Recognition.ReplacementText> Objekte. Jedes Objekt entspricht ein einzelnes Wort oder Satzzeichen. Die `DisplayAttributes` Eigenschaft eine <xref:System.Speech.Recognition.RecognizedWordUnit> oder <xref:System.Speech.Recognition.ReplacementText> verwendet ein Mitglied der <xref:System.Speech.Recognition.DisplayAttributes> -Enumeration wird beschrieben, wie print Abstand behandelt wird, um ein Wort oder Satzzeichen.  
+  
+ Zwei oder mehr Elemente von der `DisplayAttributes` Enumeration kann kombiniert werden, indem eine bitweise `OR` angeben, wie ein bestimmtes Wort angezeigt werden soll.  
+  
+> [!NOTE]
+>  Die anzeigeformatierung, dass die von der Spracherkennung verwendet ist sprachspezifisch.  
+  
+ Nehmen wir beispielsweise an der Eingabe einen Satz ein Erkennungsmodul, das mit der Standard-System-Grammatik gebotenen <xref:System.Speech.Recognition.DictationGrammar> wird "Hello Komma Zeitraum meinte". Das Erkennungsmodul zurück eine <xref:System.Speech.Recognition.RecognizedPhrase> , enthält fünf <xref:System.Speech.Recognition.RecognizedWordUnit> , enthält die folgenden Objekte mit der folgenden Zeichenfolgen `DisplayAttributes` Werte.  
+  
+|Element|`DisplayAttributes`|  
+|----------|-------------------------|  
+|Hello|OneTrailingSpace|  
+|,|OneTrailingSpace &#124; ConsumeLeadingSpaces|  
+|er|OneTrailingSpace|  
+|als|OneTrailingSpace|  
+|.|OneTrailingSpace &#124; ConsumeLeadingSpaces|  
+  
+ Der Text zurückgegeben, wie dieser erkannte Ausdruck gedruckt ist: "Hello, meinte."  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Speech.Recognition.RecognizedWordUnit.DisplayAttributes%2A> Eigenschaft aus einer Liste von <xref:System.Speech.Recognition.RecognizedWordUnit> zu die Wörtern wie ein Ausdruck zu formatierenden Objekten.  
+  
+```csharp  
+  
+// Use the DisplayAttributes property to format speech as text.   
+  
+static string GetDisplayText(List<RecognizedWordUnit> words)  
+{  
+  StringBuilder sb = new StringBuilder();  
+  
+  // Concatenate the word units together. Use the DisplayAttributes  
+  // property of each word unit to add or remove white space around  
+  // the word unit.  
+  foreach (RecognizedWordUnit word in words)  
+  {  
+    if ((word.DisplayAttributes  
+      & DisplayAttributes.ConsumeLeadingSpaces) != 0))  
+    {  
+      sb = new StringBuilder(sb.ToString().TrimEnd());  
+    }  
+  
+    sb.Append(word.Text);  
+  
+    if ((word.DisplayAttributes  
+      & DisplayAttributes.OneTrailingSpace) != 0)  
+    {  
+      sb.Append(" ");  
+    }  
+    else if ((word.DisplayAttributes  
+      & DisplayAttributes.TwoTrailingSpaces) != 0)  
+    {  
+      sb.Append("  ");  
+    }  
+  }  
+  
+  return sb.ToString();  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ConsumeLeadingSpaces">
+      <MemberSignature Language="C#" Value="ConsumeLeadingSpaces" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.DisplayAttributes ConsumeLeadingSpaces = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.DisplayAttributes.ConsumeLeadingSpaces" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.DisplayAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Element ist keine Leerzeichen vorangeht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.DisplayAttributes None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.DisplayAttributes.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.DisplayAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Element gibt nicht an, wie Leerraum behandelt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OneTrailingSpace">
+      <MemberSignature Language="C#" Value="OneTrailingSpace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.DisplayAttributes OneTrailingSpace = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.DisplayAttributes.OneTrailingSpace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.DisplayAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Element ist ein Leerzeichen folgt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoTrailingSpaces">
+      <MemberSignature Language="C#" Value="TwoTrailingSpaces" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.DisplayAttributes TwoTrailingSpaces = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.DisplayAttributes.TwoTrailingSpaces" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.DisplayAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Element verfügt über zwei Leerzeichen folgt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZeroTrailingSpaces">
+      <MemberSignature Language="C#" Value="ZeroTrailingSpaces" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.DisplayAttributes ZeroTrailingSpaces = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.DisplayAttributes.ZeroTrailingSpaces" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.DisplayAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Element ist keine nachfolgenden Leerzeichen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

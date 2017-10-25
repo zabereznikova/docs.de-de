@@ -1,0 +1,173 @@
+<Type Name="BookmarkScope" FullName="System.Activities.BookmarkScope">
+  <TypeSignature Language="C#" Value="public sealed class BookmarkScope : IEquatable&lt;System.Activities.BookmarkScope&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BookmarkScope extends System.Object implements class System.IEquatable`1&lt;class System.Activities.BookmarkScope&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.BookmarkScope" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Activities.BookmarkScope&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Legt einen Gültigkeitsbereich für eine Gruppe von <see cref="T:System.Activities.Bookmark" />-Objekten fest, die als unter demselben Protokoll ausgeführt kategorisiert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine versiegelte Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BookmarkScope (Guid id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.BookmarkScope.#ctor(System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="id">Identifikationsnummer eines GUID-Bereichs.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.BookmarkScope" />-Klasse mit dem angegebenen GUID-Bereich und der angegebenen Identifikationsnummer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.Activities.BookmarkScope Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Activities.BookmarkScope Default" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.BookmarkScope.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.BookmarkScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den standardmäßigen <see cref="T:System.Activities.BookmarkScope" /> ab.</summary>
+        <value>Der standardmäßige <see cref="T:System.Activities.BookmarkScope" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Activities.BookmarkScope other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Activities.BookmarkScope other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.BookmarkScope.Equals(System.Activities.BookmarkScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Activities.BookmarkScope" />
+      </Parameters>
+      <Docs>
+        <param name="other">Ein Lesezeichen-Bereichsobjekt.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob der aktuelle <see cref="T:System.Activities.BookmarkScope" /> und der angegebene  <see cref="T:System.Activities.BookmarkScope" /> identisch sind</summary>
+        <returns>
+          <see langword="true" />Wenn das Lesezeichen Bereiche identisch sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.BookmarkScope.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert eine Identifikationsnummer für den aktuellen <see cref="T:System.Activities.BookmarkScope" />.</summary>
+        <returns>Ein Hashcode.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public Guid Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Id" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.BookmarkScope.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die GUID ab, die die aktuelle <see cref="T:System.Activities.BookmarkScope" /> kennzeichnet.</summary>
+        <value>Ein GUID.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (System.Activities.NativeActivityContext context, Guid id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Initialize(class System.Activities.NativeActivityContext context, valuetype System.Guid id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.BookmarkScope.Initialize(System.Activities.NativeActivityContext,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+        <Parameter Name="id" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die aktuelle Workflowaktivitätsausführungsumgebung.</param>
+        <param name="id">Die GUID, die dem <see cref="T:System.Activities.BookmarkScope" /> zugewiesen werden soll.</param>
+        <summary>Initialisiert den aktuellen <see cref="T:System.Activities.BookmarkScope" />mit der angegebenen GUID.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitialized">
+      <MemberSignature Language="C#" Value="public bool IsInitialized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInitialized" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.BookmarkScope.IsInitialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, mit dem angegeben wird, ob der aktuelle <see cref="T:System.Activities.BookmarkScope" /> initialisiert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Activities.BookmarkScope" /> wurde initialisiert wurde, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

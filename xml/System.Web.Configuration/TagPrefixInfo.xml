@@ -1,0 +1,379 @@
+<Type Name="TagPrefixInfo" FullName="System.Web.Configuration.TagPrefixInfo">
+  <TypeSignature Language="C#" Value="public sealed class TagPrefixInfo : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TagPrefixInfo extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.TagPrefixInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert ein Konfigurationselement, das RFID-Transponder bezogenen Informationen enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.TagPrefixInfo> -Klasse ermöglicht den programmgesteuerten Zugriff auf und ändern die Tagpräfix Informationen in einer Konfigurationsdatei gespeichert. Es bietet die gleiche Funktionalität wie ASP.NET `@Register` Richtlinie. Tagpräfixe ordnen Sie einen "Namespace" in ASP.NET auf die Assemblys und Namespaces, die aus Gründen der benutzerdefinierten Steuerelemente und Benutzersteuerelemente ordnungsgemäß ausgeführt werden muss. <xref:System.Web.Configuration.TagPrefixInfo>Objekte werden als Mitglieder gespeichert ein <xref:System.Web.Configuration.TagPrefixCollection> Objekt. Die <xref:System.Web.Configuration.TagPrefixCollection> -Klasse ermöglicht den programmgesteuerten Zugriff auf und Ändern der `controls` -Unterabschnitt des der `pages` Abschnitt einer Konfigurationsdatei.  
+  
+ <xref:System.Web.Configuration.TagPrefixInfo>Objekte werden hinzugefügt, um die Auflistung mit den `add` Element- und Angabe eines Werts für die `tagPrefix` Attribut zusammen mit Werten für andere relevante Attribute. Die anderen erforderliche Informationen hängt von der Art des Steuerelements, das Sie mit dem angegebenen Tagpräfix verwenden:  
+  
+-   Wenn sie ein benutzerdefiniertes Steuerelement ist, müssen Sie definieren die <xref:System.Web.Configuration.TagPrefixInfo.TagPrefix%2A>, <xref:System.Web.Configuration.TagPrefixInfo.TagName%2A>, und <xref:System.Web.Configuration.TagPrefixInfo.Source%2A> Eigenschaften.  
+  
+-   Wenn sie ein benutzerdefiniertes Steuerelement ist, müssen Sie definieren die <xref:System.Web.Configuration.TagPrefixInfo.TagPrefix%2A>, <xref:System.Web.Configuration.TagPrefixInfo.Namespace%2A>, und <xref:System.Web.Configuration.TagPrefixInfo.Assembly%2A> Eigenschaften. Die <xref:System.Web.Configuration.TagPrefixInfo.Assembly%2A> Eigenschaft ist nicht erforderlich, wenn das Steuerelement im Anwendungscodeverzeichnis befindet.  
+  
+ Die gleiche `tagPrefix` Wert kann zum Zuordnen mehrerer Assemblys oder Namespaces verwendet werden.  
+  
+> [!NOTE]
+>  Wenn eine Quelle angegeben wird, muss das Benutzersteuerelement selbst nicht im selben Verzeichnis wie die Seite. Wenn dies der Fall, erhalten Sie einen Laufzeitfehler beim Laden der Seite.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie Werte für verschiedene Attribute der deklarativ angeben, die `controls` Abschnitt, die auch als Member zugegriffen werden kann die <xref:System.Web.Configuration.TagPrefixInfo> Klasse.  
+  
+```  
+  
+<system.web>  
+  <pages>  
+    <controls>  
+      <!—- Searches all linked assemblies for the namespace -->  
+      <add tagPrefix="MyTags1" namespace=" MyNameSpace "/>  
+      <!-- Uses a specified assembly -->  
+      <add tagPrefix="MyTags2" namespace="MyNameSpace"   
+        assembly="MyAssembly"/>  
+      <!-- Uses the specified source for the user control -->  
+      <add tagprefix="MyTags3" tagname="MyCtrl" src="MyControl.ascx"/>  
+    </controls>  
+   </pages>  
+</system.web>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.TagPrefixInfo> Klasse Tag Präfix Einstellungen programmgesteuert ändern. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#12)]
+ [!code-vb[System.Web.Configuration.PagesSection#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TagPrefixInfo (string tagPrefix, string nameSpace, string assembly, string tagName, string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tagPrefix, string nameSpace, string assembly, string tagName, string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TagPrefixInfo.#ctor(System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tagPrefix" Type="System.String" />
+        <Parameter Name="nameSpace" Type="System.String" />
+        <Parameter Name="assembly" Type="System.String" />
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tagPrefix">Das Tagpräfix an, das einer Quelldatei oder Namespace und Assembly zugeordnet wird.</param>
+        <param name="nameSpace">Der Namespace, der dem Tagpräfix zugeordnet wird.</param>
+        <param name="assembly">Die Assembly, in dem sich der Namespace befindet.</param>
+        <param name="tagName">Der Name des Steuerelements auf der Seite verwendet werden.</param>
+        <param name="source">Der Name der Datei, die das Benutzersteuerelement enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Configuration.TagPrefixInfo" /> -Klasse unter Verwendung der übergebenen Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine Instanz von der <xref:System.Web.Configuration.TagPrefixInfo> -Klasse und initialisiert sie mit den übergebenen Parametern. Die Parameter für die Angabe von Werten richten sich nach der Art des Steuerelements auf die Sie mit dem angegebenen Tagpräfix verweisen. Für dieses Tagpräfix nicht erforderliche Parameter sollte leer bleiben. (Verwenden Sie eine leere Zeichenfolge.)  
+  
+-   Wenn das Steuerelement ein benutzerdefiniertes Steuerelement ist, müssen Sie angeben, dass die Werte für die `tagPrefix`, `tagName`, und `source` Parameter.  
+  
+-   Wenn das Steuerelement ein benutzerdefiniertes Steuerelement ist, müssen Sie angeben, dass die Werte für die `tagPrefix` und `nameSpace` Parameter. Wenn das Steuerelement nicht im Anwendungscodeverzeichnis ist, müssen Sie auch angeben der `assembly` Parameter.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.TagPrefixInfo.%23ctor%2A> Konstruktor. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#32](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#32)]
+ [!code-vb[System.Web.Configuration.PagesSection#32](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="public string Assembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Assembly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.Assembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("assembly")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Assembly mit der Implementierung des Steuerelements fest.</summary>
+        <value>Der Name der Assembly (ohne Erweiterung). Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die Assembly, in der sich das Steuerelement befindet. Es gilt nur für ein benutzerdefiniertes Steuerelement und ist nicht erforderlich, wenn das Steuerelement im Anwendungscodeverzeichnis befindet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.TagPrefixInfo.Assembly%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementProperty">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElementProperty ElementProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationElementProperty ElementProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.ElementProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TagPrefixInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Zu vergleichende Objekt.</param>
+        <summary>Vergleicht diese Instanz mit einem anderen Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Objekte identisch sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TagPrefixInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Hashwert für die aktuelle Instanz zurück.</summary>
+        <returns>Einen Hashwert für die aktuelle Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("namespace")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namespace, in dem sich das Steuerelement befindet.</summary>
+        <value>Der Name des Namespaces. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den Namespace, in dem sich das Steuerelement befindet. Dies gilt nur für benutzerdefinierte Steuerelemente.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.TagPrefixInfo.Namespace%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("src")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen und Pfad der Datei, die das Benutzersteuerelement enthält.</summary>
+        <value>Der Name und Pfad der Datei, die das Benutzersteuerelement enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den Namen und Pfad der Datei mit der Implementierung des Steuerelements. Dies gilt nur für Benutzersteuerelemente. Der Pfad kann relativ zu der Anwendung oder das Stammverzeichnis der Anwendung sein.  
+  
+> [!NOTE]
+>  Das Benutzersteuerelement selbst darf nicht im selben Verzeichnis wie die Seite sein. Wenn dies der Fall, erhalten Sie einen Laufzeitfehler beim Laden der Seite.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.TagPrefixInfo.Source%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagName">
+      <MemberSignature Language="C#" Value="public string TagName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TagName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.TagName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("tagName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Benutzersteuerelements.</summary>
+        <value>Der Name des Benutzersteuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den Namen des Steuerelements. Dies gilt nur für Benutzersteuerelemente. Dies ist der Wert, der das Tagpräfix in der ASP-Code ausführen muss. Z. B. "MyControl" in `<myTag: myControl />`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.TagPrefixInfo.TagName%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagPrefix">
+      <MemberSignature Language="C#" Value="public string TagPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TagPrefix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.TagPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("tagPrefix", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Tagpräfix an, das mit einer Quelldatei oder Namespace und Assembly zugeordnet ist.</summary>
+        <value>Das Tagpräfix.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.TagPrefixInfo.TagPrefix%2A> -Eigenschaft definiert den Alias für den Namespace verwendet werden, in dem sich das Steuerelement befindet. Dies gilt für Benutzer und benutzerdefinierte Steuerelemente. Dies ist der Wert, der in der ASP-Code vor der Tagname. Beispiel: "MyTag" in `<myTag: myControl />`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.TagPrefixInfo.TagPrefix%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.PagesSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#30](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#30)]
+ [!code-vb[System.Web.Configuration.PagesSection#30](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

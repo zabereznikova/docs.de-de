@@ -1,0 +1,127 @@
+<Type Name="RefreshResponseInfo" FullName="System.ServiceModel.PeerResolvers.RefreshResponseInfo">
+  <TypeSignature Language="C#" Value="public class RefreshResponseInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RefreshResponseInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerResolvers.RefreshResponseInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.MessageContract(IsWrapped=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Antwortinformationen, die als Ergebnis eines Registrierungssuchtabellen-Aktualisierungsvorgangs auf dem Peerresolver zurückgegeben wurden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Refresh%28System.ServiceModel.PeerResolvers.RefreshInfo%29> oder eine Implementierung von <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Refresh%28System.ServiceModel.PeerResolvers.RefreshInfo%29> aufgerufen wird, wird dieses Objekt an den Client zurückgegeben. Es enthält den aktualisierten Registrierungseintrag mit dem neuen Ablauftimestamp und wird zurückgegeben, wenn eine vorherige <xref:System.ServiceModel.PeerResolvers.RefreshInfo>-Instanz im Rahmen einer Anforderung zur Aktualisierung des Ablaufs eines Registrierungseintrags an den Peerresolver gesendet wird.  
+  
+ Instanzen dieser Klasse werden vorwiegend zur Übergabe von Informationen vom Resolverdienst an einen Netzwerkclient dieses Diensts verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RefreshResponseInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.RefreshResponseInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Standardinstanz der <see cref="T:System.ServiceModel.PeerResolvers.RefreshResponseInfo" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RefreshResponseInfo (TimeSpan registrationLifetime, System.ServiceModel.PeerResolvers.RefreshResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.TimeSpan registrationLifetime, valuetype System.ServiceModel.PeerResolvers.RefreshResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.RefreshResponseInfo.#ctor(System.TimeSpan,System.ServiceModel.PeerResolvers.RefreshResult)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="registrationLifetime" Type="System.TimeSpan" />
+        <Parameter Name="result" Type="System.ServiceModel.PeerResolvers.RefreshResult" />
+      </Parameters>
+      <Docs>
+        <param name="registrationLifetime">
+          <see cref="T:System.TimeSpan" />, der die neue Lebensdauer der Peerregistrierung angibt.</param>
+        <param name="result">
+          Ein <see cref="T:System.ServiceModel.PeerResolvers.RefreshResult" />, das das Ergebnis der Aktualisierung angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.PeerResolvers.RefreshResponseInfo" />-Klasse mit der bereitgestellten Registrierungslebensdauer und den Aktualisierungsergebnissen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBody">
+      <MemberSignature Language="C#" Value="public bool HasBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.RefreshResponseInfo.HasBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob der Text der Nachricht, die eine serialisierte Instanz dieses Typs enthält, richtig formatiert ist.</summary>
+        <returns>True, wenn der Aktualisierungs-Antwortinformationstext vom Absender richtig formatiert wurde, False, wenn dies nicht der Fall ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegistrationLifetime">
+      <MemberSignature Language="C#" Value="public TimeSpan RegistrationLifetime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan RegistrationLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.RefreshResponseInfo.RegistrationLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeitspanne vor Ablauf und Entfernung einer Registrierung durch den Resolverdienst fest.</summary>
+        <value>
+          <see cref="T:System.TimeSpan" />, der die neue Zeitspanne vor Ablauf und Entfernung des Registrierungseintrags durch den Resolverdienst angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.PeerResolvers.RefreshResult Result { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.PeerResolvers.RefreshResult Result" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.RefreshResponseInfo.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.RefreshResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Ergebnis eines Aktualisierungsvorgangs fest.</summary>
+        <value>
+          <see cref="T:System.ServiceModel.PeerResolvers.RefreshResult" />-Enumerationswert, der das Ergebnis eines Aktualisierungsvorgangs auf dem Peerresolver angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

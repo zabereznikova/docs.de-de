@@ -1,0 +1,580 @@
+<Type Name="EntityDataSourceView" FullName="System.Web.UI.WebControls.EntityDataSourceView">
+  <TypeSignature Language="C#" Value="public class EntityDataSourceView : System.Web.UI.DataSourceView, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EntityDataSourceView extends System.Web.UI.DataSourceView implements class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.EntityDataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataSourceView</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Unterstützt das <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Steuerelement und stellt eine Schnittstelle für datengebundene Steuerelemente zum Ausführen von Abfragen und anderen Vorgängen mit Entitätsdaten bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityDataSourceView (System.Web.UI.WebControls.EntityDataSource owner, string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.EntityDataSource owner, string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSourceView.#ctor(System.Web.UI.WebControls.EntityDataSource,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.WebControls.EntityDataSource" />
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die Datenquelle zu steuern, die die <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> Objekt zugeordnet ist.</param>
+        <param name="viewName">Zeigen Sie ein eindeutiger Namen für die Datenquelle innerhalb des Bereichs des Datenquellen-Steuerelements, die er besitzt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> Klasse, indem das angegebene <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> Steuerelement als Besitzer der aktuellen Sicht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDelete">
+      <MemberSignature Language="C#" Value="public override bool CanDelete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanDelete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSourceView.CanDelete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Steuerelement zugeordnet ist, den Löschvorgang unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanInsert">
+      <MemberSignature Language="C#" Value="public override bool CanInsert { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSourceView.CanInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Steuerelement zugeordnet ist, den Einfügevorgang unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanPage">
+      <MemberSignature Language="C#" Value="public override bool CanPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSourceView.CanPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Steuerelement zugeordnet ist, das Paging der abgerufenen Daten unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRetrieveTotalRowCount">
+      <MemberSignature Language="C#" Value="public override bool CanRetrieveTotalRowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRetrieveTotalRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSourceView.CanRetrieveTotalRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Steuerelement zugeordnet ist, das Abrufen der Gesamtanzahl der Datenzeilen (zusätzlich zum Abrufen der Daten) unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSort">
+      <MemberSignature Language="C#" Value="public override bool CanSort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSort" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSourceView.CanSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Steuerelement zugeordnet ist, eine sortierte Ansicht der abgerufenen Daten unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUpdate">
+      <MemberSignature Language="C#" Value="public override bool CanUpdate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanUpdate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSourceView.CanUpdate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Steuerelement zugeordnet ist, den Aktualisierungsvorgang unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextCreated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextCreatedEventArgs&gt; ContextCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceContextCreatedEventArgs&gt; ContextCreated" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSourceView.ContextCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextCreatedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> wurde erstellt die <see cref="T:System.Data.Objects.ObjectContext" /> verwendet, um Daten an Steuerelemente binden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextCreating">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextCreatingEventArgs&gt; ContextCreating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceContextCreatingEventArgs&gt; ContextCreating" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSourceView.ContextCreating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextCreatingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> erstellt die <see cref="T:System.Data.Objects.ObjectContext" /> bei der Datenbindung verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextDisposing">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextDisposingEventArgs&gt; ContextDisposing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceContextDisposingEventArgs&gt; ContextDisposing" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSourceView.ContextDisposing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextDisposingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, bevor ein <see cref="T:System.Data.Objects.ObjectContext" /> verworfen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; Deleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; Deleted" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSourceView.Deleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem ein Objekt aus der Datenquelle gelöscht wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deleting">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; Deleting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; Deleting" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSourceView.Deleting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor ein Objekt aus der Datenquelle gelöscht wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.DynamicData.DynamicValidatorEventArgs&gt; Exception;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.DynamicData.DynamicValidatorEventArgs&gt; Exception" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSourceView.Exception" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.DynamicData.DynamicValidatorEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Überprüfung fehlschlägt, in einer partiellen Methode, oder wenn eine Ausnahme ausgelöst wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteDelete">
+      <MemberSignature Language="C#" Value="protected override int ExecuteDelete (System.Collections.IDictionary keys, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteDelete(class System.Collections.IDictionary keys, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Die Schlüssel der Entität, die gelöscht werden.</param>
+        <param name="oldValues">Die Werte der zu löschenden Entität.</param>
+        <summary>Führt einen Löschvorgang an.</summary>
+        <returns>Die Anzahl der gelöschten Zeilen; 1, wenn der Vorgang fehlschlägt oder die Anzahl ist, andernfalls nicht bekannt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteInsert">
+      <MemberSignature Language="C#" Value="protected override int ExecuteInsert (System.Collections.IDictionary values);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteInsert(class System.Collections.IDictionary values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSourceView.ExecuteInsert(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="values">Die Werte der Entität, die eingefügt werden soll.</param>
+        <summary>Führt einen Einfügevorgang an.</summary>
+        <returns>Die Anzahl der eingefügten Zeilen; 1, wenn der Vorgang fehlschlägt oder die Anzahl ist, andernfalls nicht bekannt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteSelect">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerable ExecuteSelect (System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.IEnumerable ExecuteSelect(class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Die Auswahlvorgangsargumente.</param>
+        <summary>Führt einen select-Vorgang.</summary>
+        <returns>Das Ergebnis des Auswählen-Vorgangs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteUpdate">
+      <MemberSignature Language="C#" Value="protected override int ExecuteUpdate (System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteUpdate(class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Die Schlüssel der Entität aktualisiert werden.</param>
+        <param name="values">Die neuen Werte der Entität aktualisiert werden.</param>
+        <param name="oldValues">Die alten Werte der Entität aktualisiert werden.</param>
+        <summary>Führt einen Updatevorgang an.</summary>
+        <returns>Die Anzahl der Zeilen, die aktualisiert werden soll; 1, wenn der Vorgang fehlschlägt oder die Anzahl ist, andernfalls nicht bekannt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewSchema">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable GetViewSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataTable GetViewSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSourceView.GetViewSchema" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Tabelle, die repräsentiert die <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" />.</summary>
+        <returns>Eine Tabelle, die die Eigenschaften enthält die <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inserted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; Inserted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; Inserted" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSourceView.Inserted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem ein neues Objekt in der Datenquelle erstellt wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inserting">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; Inserting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; Inserting" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSourceView.Inserting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor ein neues Objekt mit der Datenquelle beibehalten wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryCreated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.QueryCreatedEventArgs&gt; QueryCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.QueryCreatedEventArgs&gt; QueryCreated" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSourceView.QueryCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.QueryCreatedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem die <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> eine Entity SQL-Abfrage erstellt hat, die während der Konfiguration des <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Steuerelements angegeben wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Anwenden von LINQ-Abfragen EntityDataSource](http://msdn.microsoft.com/en-us/cb70db56-9f9d-4b79-98fe-f03dd5ad1e38).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs&gt; Selected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs&gt; Selected" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSourceView.Selected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem eine Abfrage ausgeführt wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selecting">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceSelectingEventArgs&gt; Selecting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceSelectingEventArgs&gt; Selecting" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSourceView.Selecting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceSelectingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor eine Abfrage erstellt und ausgeführt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSourceView.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> Objekt Änderungen an seinem Ansichtszustand speichert.</summary>
+        <value>
+          <see langword="true" />Wenn die Datenquellensicht ist zum Speichern ihres Zustands markiert; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSourceView.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Die <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> steuern Sie den wiederherzustellenden Zustand.</param>
+        <summary>Stellt den zuvor gespeicherten Ansichtszustand für die Datenquellensicht an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSourceView.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die Änderungen am Ansichtszustand für die <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> Steuerelement seit dem Zeitpunkt, der die Seite an den Server zurückgesendet wurde.</summary>
+        <returns>Das Objekt, das die Änderungen an der <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> Ansichtszustand des Steuerelements, oder <see langword="null" /> (<see langword="Nothing" /> in Visual Basic), wenn es kein Ansichtszustand, der dem Objekt zugeordnet ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSourceView.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verfolgt anzeigen Zustandsänderungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Updated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; Updated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; Updated" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSourceView.Updated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem Änderungen an einem Objekt mit der Datenquelle persistent gespeichert wurden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Updating">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; Updating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; Updating" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSourceView.Updating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor Sie Änderungen an einem Objekt mit der Datenquelle beibehalten werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

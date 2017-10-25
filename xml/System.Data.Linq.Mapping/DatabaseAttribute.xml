@@ -1,0 +1,97 @@
+<Type Name="DatabaseAttribute" FullName="System.Data.Linq.Mapping.DatabaseAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DatabaseAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DatabaseAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.Mapping.DatabaseAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, bestimmte Attribute einer Klasse, die eine Datenbank darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können Anwenden der <xref:System.Data.Linq.Mapping.DatabaseAttribute> -Attribut auf eine beliebige stark typisierte <xref:System.Data.Linq.DataContext> Deklaration.  
+  
+ Das <xref:System.Data.Linq.Mapping.DatabaseAttribute>-Attribut ist optional. Wenn Sie es verwenden, müssen Sie verwenden die <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> Eigenschaft, um einen Namen angeben.  
+  
+ Wenn Sie dieses Attribut nicht anwenden und die Verbindung wurde ein Name nicht angegeben, die Datenbank wird davon ausgegangen, dass haben den gleichen Namen wie die <xref:System.Data.Linq.DataContext> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DatabaseAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Mapping.DatabaseAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Linq.Mapping.DatabaseAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.DatabaseAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Datenbank fest.</summary>
+        <value>Der Name.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist erforderlich, wenn Sie verwenden die <xref:System.Data.Linq.Mapping.DatabaseAttribute> Attribut.  
+  
+ Die Informationen werden verwendet, nur dann, wenn die Verbindung selbst den Datenbanknamen nicht angegeben ist.  
+  
+   
+  
+## Examples  
+  
+```vb  
+<Database(Name:="Database#5")> _  
+Public Class Database5  
+    Inherits DataContext  
+    …  
+End Class  
+```  
+  
+```csharp  
+[Database(Name="Database#5")]  
+public class Database5 : DataContext  
+{  
+    …  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

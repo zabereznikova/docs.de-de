@@ -1,0 +1,536 @@
+<Type Name="TypeCode" FullName="System.TypeCode">
+  <TypeSignature Language="C#" Value="public enum TypeCode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed TypeCode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.TypeCode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Typ eines Objekts an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.IConvertible.GetTypeCode%2A> Methode auf Klassen, in denen die <xref:System.IConvertible> Schnittstelle zum Abrufen des Typencode für eine Instanz dieser Klasse.  
+  
+ Rufen Sie andernfalls auf ein Objekt <xref:System.Object.GetType%2A> Methode zum Abrufen der <xref:System.Type> -Objekt, und rufen Sie dann die `Type` des Objekts <xref:System.Type.GetTypeCode%2A> Methode, um Code für das Objekt abzurufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.TypeCode> Enumeration verwendet werden kann. In einen Entscheidungsblock in WriteObjectInfo-Methode der <xref:System.TypeCode> von einem <xref:System.Object> Parameter wird untersucht und eine entsprechende Meldung in die Konsole geschrieben wird.  
+  
+ [!code-cpp[System.TypeCode#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.TypeCode/CPP/iconvertible.cpp#2)]
+ [!code-csharp[System.TypeCode#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TypeCode/CS/iconvertible.cs#2)]
+ [!code-vb[System.TypeCode#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TypeCode/VB/iconvertible.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Boolean">
+      <MemberSignature Language="C#" Value="Boolean" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode Boolean = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.Boolean" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein einfacher Typ zur Darstellung der booleschen Werte <see langword="true" /> oder <see langword="false" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Byte">
+      <MemberSignature Language="C#" Value="Byte" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode Byte = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.Byte" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein ganzzahliger Typ, der 8-Bit-Ganzzahlen ohne Vorzeichen mit Werten zwischen 0 und 255 darstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Char">
+      <MemberSignature Language="C#" Value="Char" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode Char = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.Char" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein ganzzahliger Typ, der 16-Bit-Ganzzahlen ohne Vorzeichen mit Werten zwischen 0 und 65535 darstellt. Der Satz möglicher Werte für die <see cref="F:System.TypeCode.Char" /> Typ entspricht dem Unicode-Zeichensatz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DateTime">
+      <MemberSignature Language="C#" Value="DateTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode DateTime = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.DateTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Typ, der ein Datum und die Uhrzeit darstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DBNull">
+      <MemberSignature Language="C#" Value="DBNull" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode DBNull = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.DBNull" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Wert für den Datenbank-Null (Spalte).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Decimal">
+      <MemberSignature Language="C#" Value="Decimal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode Decimal = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.Decimal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein einfacher Typ zur Darstellung der Werte im Bereich von 1,0 x 10 <sup>-28</sup> ungefähr 7.9 x 10 <sup>28</sup> mit 28 bis 29 signifikanten Stellen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Double">
+      <MemberSignature Language="C#" Value="Double" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode Double = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.Double" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Gleitkommatyp Werte im Bereich von ungefähr 5,0 x 10 <sup>-324</sup> 1.7 x 10 <sup>308</sup> mit einer Genauigkeit von 15 bis 16 Ziffern.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="Empty" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode Empty = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein NULL-Verweis.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Int16">
+      <MemberSignature Language="C#" Value="Int16" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode Int16 = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.Int16" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein ganzzahliger Typ darstellt, signiert 16-Bit-Ganzzahlen mit Werten zwischen-32768 und 32767 liegen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Int32">
+      <MemberSignature Language="C#" Value="Int32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode Int32 = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.Int32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein ganzzahliger Typ darstellt, signiert, 32-Bit-Ganzzahlen mit Werten zwischen-2147483648 und 2147483647.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Int64">
+      <MemberSignature Language="C#" Value="Int64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode Int64 = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.Int64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein ganzzahliger Typ darstellt, signiert, 64-Bit-Ganzzahlen mit Werten-9223372036854775808 bis 9223372036854775807.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Object">
+      <MemberSignature Language="C#" Value="Object" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode Object = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.Object" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein allgemeiner Typ, der alle Verweis- oder Werttyp darstellt, der nicht explizit durch eine andere dargestellt <see langword="TypeCode" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SByte">
+      <MemberSignature Language="C#" Value="SByte" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode SByte = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.SByte" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein ganzzahliger Typ darstellt, signiert, 8-Bit-Ganzzahlen mit Werten zwischen-128 und 127.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Single">
+      <MemberSignature Language="C#" Value="Single" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode Single = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.Single" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Gleitkommatyp Werte im Bereich von ca. 1,5 x 10 <sup>-45</sup> 3.4 x 10 <sup>38</sup> mit einer Genauigkeit von 7 Dezimalstellen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="String">
+      <MemberSignature Language="C#" Value="String" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode String = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.String" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine versiegelte Klasse-Typ, die Unicode-Zeichenfolgen darstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UInt16">
+      <MemberSignature Language="C#" Value="UInt16" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode UInt16 = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.UInt16" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein ganzzahliger Typ, der 16-Bit-Ganzzahlen ohne Vorzeichen mit Werten zwischen 0 und 65535 darstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UInt32">
+      <MemberSignature Language="C#" Value="UInt32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode UInt32 = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.UInt32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein ganzzahliger Typ, der 32-Bit-Ganzzahlen ohne Vorzeichen mit Werten zwischen 0 und 4294967295 darstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UInt64">
+      <MemberSignature Language="C#" Value="UInt64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.TypeCode UInt64 = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.TypeCode.UInt64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein ganzzahliger Typ, der 64-Bit-Ganzzahlen ohne Vorzeichen mit den Werten 0 bis 18446744073709551615 darstellt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

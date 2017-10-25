@@ -1,0 +1,410 @@
+<Type Name="ServiceAuthorizationBehavior" FullName="System.ServiceModel.Description.ServiceAuthorizationBehavior">
+  <TypeSignature Language="C#" Value="public sealed class ServiceAuthorizationBehavior : System.ServiceModel.Description.IServiceBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServiceAuthorizationBehavior extends System.Object implements class System.ServiceModel.Description.IServiceBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.ServiceAuthorizationBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IServiceBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt Eigenschaften bereit, die sich auf das Dienstautorisierungsverhalten beziehen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Autorisierung tritt auf der Dienstebene und der Vorgangsebene auf. Diese Klasse enthält Eigenschaften, die sich auf die Autorisierung auf Dienstebene beziehen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceAuthorizationBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceAuthorizationBehavior.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.ServiceAuthorizationBehavior" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalerweise rufen Anwendungen den Konstruktor nicht direkt auf. Sie rufen stattdessen eine Instanz dieser Klasse durch den Aufruf von `ServiceHostBase.Description.Behaviors.Find<ServiceAuthorizationBehavior>` ab.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie eine Instanz dieser Klasse abgerufen wird.  
+  
+ [!code-csharp[c_ImpersonationAndDelegation#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#3)]
+ [!code-vb[c_ImpersonationAndDelegation#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExternalAuthorizationPolicies">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt; ExternalAuthorizationPolicies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Policy.IAuthorizationPolicy&gt; ExternalAuthorizationPolicies" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung externer Autorisierungsrichtlinien ab oder legt diese fest.</summary>
+        <value>Eine Auflistung externer Autorisierungsrichtlinien.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die externen Autorisierungsrichtlinien sind am Richtlinienevaluierungsprozess beteiligt, wodurch sein ein Benutzer-<xref:System.ServiceModel.ServiceSecurityContext> ergibt.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie diese Eigenschaft für die Verwendung eines Satzes externer Autorisierungrichtlinien festgelegt wird.  
+  
+ [!code-csharp[PrincipalPermissionMode#3](~/samples/snippets/csharp/VS_Snippets_CFX/principalpermissionmode/cs/source.cs#3)]
+ [!code-vb[PrincipalPermissionMode#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/principalpermissionmode/vb/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Verhalten ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImpersonateCallerForAllOperations">
+      <MemberSignature Language="C#" Value="public bool ImpersonateCallerForAllOperations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ImpersonateCallerForAllOperations" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceAuthorizationBehavior.ImpersonateCallerForAllOperations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Dienst einen Identitätswechsel für alle Vorgänge, die er unterstützt, durchführt.</summary>
+        <value>
+          <see langword="true" />, wenn der Dienst einen Identitätswechsel für alle unterstützten Vorgänge durchführt, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert `false` gibt an, dass Identitätswechsel für jeden Vorgang festgelegt ist.  
+  
+   
+  
+## Examples  
+ Dieser Code zeigt, wie diese Eigenschaft festgelegt wird.  
+  
+ [!code-csharp[c_ImpersonationAndDelegation#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#3)]
+ [!code-vb[c_ImpersonationAndDelegation#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Verhalten ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImpersonateOnSerializingReply">
+      <MemberSignature Language="C#" Value="public bool ImpersonateOnSerializingReply { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ImpersonateOnSerializingReply" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceAuthorizationBehavior.ImpersonateOnSerializingReply" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Dienst Identitätswechsel ausführt, auf die Serialisierung der Antwort fest.</summary>
+        <value>
+          <see langword="True" />Wenn der Dienst Identitätswechsel ausführt, auf die Antwort serialisieren; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrincipalPermissionMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.PrincipalPermissionMode PrincipalPermissionMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Description.PrincipalPermissionMode PrincipalPermissionMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PrincipalPermissionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Prinzipalberechtigungsmodus ab oder legt ihn fest.</summary>
+        <value>Den prinzipalberechtigungsmodus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft beinhaltet einen der Member der <xref:System.ServiceModel.Description.PrincipalPermissionMode>-Enumeration. Gültige Werte sind:  
+  
+-   <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom>. Eine benutzerdefinierte `IAuthorizationPolicy`-Implementierung wird verwendet, um `Thread.CurrentPrincipal` aufzufüllen.  
+  
+-   <xref:System.ServiceModel.Description.PrincipalPermissionMode.None>. Die `Thread.CurrentPrincipal`-Eigenschaft ist nicht festgelegt.  
+  
+-   <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>. Die `Thread.CurrentPrincipal`-Eigenschaft wird auf Grundlage der ASP.NET-Rolleninformationen auf einen `IPrincipal` festgelegt.  
+  
+-   <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseWindowsGroups>. Die `Thread.CurrentPrincipal`-Eigenschaft wird basierend auf den Benutzeranmeldeinformationen der eingehenden Nachricht auf einen `WindowsPrincipal` festgelegt.  
+  
+   
+  
+## Examples  
+ Dieser Code zeigt, wie diese Eigenschaft festgelegt wird.  
+  
+ [!code-csharp[c_PrincipalPermissionAttribute#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#3)]
+ [!code-vb[c_PrincipalPermissionAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RoleProvider">
+      <MemberSignature Language="C#" Value="public System.Web.Security.RoleProvider RoleProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Security.RoleProvider RoleProvider" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceAuthorizationBehavior.RoleProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.RoleProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen benutzerdefinierten Rollenanbieter ab oder legt diesen fest.</summary>
+        <value>Einen benutzerdefinierten Rollenanbieter.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:System.Web.Security.RoleProvider>-Objekt ist eine Implementierung eines benutzerdefinierten Rollenanbieters.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie diese Eigenschaft abgerufen wird.  
+  
+ [!code-csharp[PrincipalPermissionMode#6](~/samples/snippets/csharp/VS_Snippets_CFX/principalpermissionmode/cs/source.cs#6)]
+ [!code-vb[PrincipalPermissionMode#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/principalpermissionmode/vb/source.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Verhalten ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceAuthorizationManager">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.ServiceAuthorizationManager ServiceAuthorizationManager { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.ServiceAuthorizationManager ServiceAuthorizationManager" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ServiceAuthorizationManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Dienstautorisierungs-Manager ab oder legt ihn fest.</summary>
+        <value>Dienstautorisierungs-Managers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.ServiceAuthorizationManager>-Klasse ist für die Auswertung aller Richtlinien, die Vorwärts- und Rückwärtsverkettung, das optionale Verbinden des resultierenden <xref:System.IdentityModel.Policy.AuthorizationContext> mit dem <xref:System.ServiceModel.ServiceSecurityContext> sowie das Zurückgeben der Autorisierungsentscheidung von `true` oder `false`, um Zugriff zu ermöglichen oder zu verhindern, verantwortlich.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie diese Eigenschaft für die Verwendung eines benutzerdefinierten Dienstautorisierungs-Managers festgelegt wird.  
+  
+ [!code-csharp[PrincipalPermissionMode#3](~/samples/snippets/csharp/VS_Snippets_CFX/principalpermissionmode/cs/source.cs#3)]
+ [!code-vb[PrincipalPermissionMode#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/principalpermissionmode/vb/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeExternalAuthorizationPolicies">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeExternalAuthorizationPolicies ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeExternalAuthorizationPolicies() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceAuthorizationBehavior.ShouldSerializeExternalAuthorizationPolicies" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die <see cref="P:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies" />-Eigenschaft ihren Standardwert geändert hat und serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeServiceAuthorizationManager">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeServiceAuthorizationManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeServiceAuthorizationManager() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceAuthorizationBehavior.ShouldSerializeServiceAuthorizationManager" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die <see cref="P:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager" />-Eigenschaft ihren Standardwert geändert hat und serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IServiceBehavior.AddBindingParameters">
+      <MemberSignature Language="C#" Value="void IServiceBehavior.AddBindingParameters (System.ServiceModel.Description.ServiceDescription description, System.ServiceModel.ServiceHostBase serviceHostBase, System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt; endpoints, System.ServiceModel.Channels.BindingParameterCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IServiceBehavior.AddBindingParameters(class System.ServiceModel.Description.ServiceDescription description, class System.ServiceModel.ServiceHostBase serviceHostBase, class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.ServiceEndpoint&gt; endpoints, class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceAuthorizationBehavior.System#ServiceModel#Description#IServiceBehavior#AddBindingParameters(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase,System.Collections.ObjectModel.Collection{System.ServiceModel.Description.ServiceEndpoint},System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+        <Parameter Name="endpoints" Type="System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt;" />
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="description">Die Beschreibung des Diensts.</param>
+        <param name="serviceHostBase">Der Host des Diensts.</param>
+        <param name="endpoints">Die Dienstendpunkte.</param>
+        <param name="parameters">Die benutzerdefinierten Objekte, auf die Bindungselemente Zugriff haben.</param>
+        <summary>Bietet die Möglichkeit, benutzerdefinierte Daten an Bindungselemente zu übergeben, um die Vertragsimplementierung zu unterstützen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>-Instanz in eine <xref:System.ServiceModel.Description.IServiceBehavior>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="void IServiceBehavior.ApplyDispatchBehavior (System.ServiceModel.Description.ServiceDescription description, System.ServiceModel.ServiceHostBase serviceHostBase);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceDescription description, class System.ServiceModel.ServiceHostBase serviceHostBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceAuthorizationBehavior.System#ServiceModel#Description#IServiceBehavior#ApplyDispatchBehavior(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="description">Die Dienstbeschreibung.</param>
+        <param name="serviceHostBase">Der Host, der gerade erstellt wird.</param>
+        <summary>Definiert eine explizite schnittstellenimplementierung, die Verteilung von Verhaltensweisen zum Konfigurieren der Bindung hinzufügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>-Instanz in eine <xref:System.ServiceModel.Description.IServiceBehavior>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IServiceBehavior.Validate">
+      <MemberSignature Language="C#" Value="void IServiceBehavior.Validate (System.ServiceModel.Description.ServiceDescription description, System.ServiceModel.ServiceHostBase serviceHostBase);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IServiceBehavior.Validate(class System.ServiceModel.Description.ServiceDescription description, class System.ServiceModel.ServiceHostBase serviceHostBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceAuthorizationBehavior.System#ServiceModel#Description#IServiceBehavior#Validate(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="description">Die Dienstbeschreibung.</param>
+        <param name="serviceHostBase">Der Diensthost, der gerade erstellt wird.</param>
+        <summary>Stellt die Funktion zur Verfügung, mit der der Diensthost und die Dienstbeschreibung geprüft werden können, um sicherzustellen, dass der Dienst erfolgreich ausgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>-Instanz in eine <xref:System.ServiceModel.Description.IServiceBehavior>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

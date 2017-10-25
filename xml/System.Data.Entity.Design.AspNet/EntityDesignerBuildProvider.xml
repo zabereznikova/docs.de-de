@@ -1,0 +1,103 @@
+<Type Name="EntityDesignerBuildProvider" FullName="System.Data.Entity.Design.AspNet.EntityDesignerBuildProvider">
+  <TypeSignature Language="C#" Value="public class EntityDesignerBuildProvider : System.Web.Compilation.BuildProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EntityDesignerBuildProvider extends System.Web.Compilation.BuildProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Entity.Design.AspNet.EntityDesignerBuildProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Compilation.BuildProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Compilation.BuildProviderAppliesTo(System.Web.Compilation.BuildProviderAppliesTo.Code)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Extrahiert das Modell und die Zuordnung Teile der EDMX-Dateien im Verzeichnis App_Code einer ASP.NET-Website und bettet diese als Ressourcen in der Assembly, die durch die ASP.NET-Laufzeit dynamisch kompiliert wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityDesignerBuildProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.AspNet.EntityDesignerBuildProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Entity.Design.AspNet.EntityDesignerBuildProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor soll nur vom ASP.NET-Compiler aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCode">
+      <MemberSignature Language="C#" Value="public override void GenerateCode (System.Web.Compilation.AssemblyBuilder assemblyBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GenerateCode(class System.Web.Compilation.AssemblyBuilder assemblyBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.AspNet.EntityDesignerBuildProvider.GenerateCode(System.Web.Compilation.AssemblyBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyBuilder" Type="System.Web.Compilation.AssemblyBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyBuilder">Ein Container zum Erstellen einer Assembly.</param>
+        <summary>C#- oder Visual Basic-Code basierend auf das Modell und die Teile der Zuordnung einer EDMX-Datei generiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode soll nur vom ASP.NET-Compiler aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResultFlags">
+      <MemberSignature Language="C#" Value="public override System.Web.Compilation.BuildProviderResultFlags GetResultFlags (System.CodeDom.Compiler.CompilerResults results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Web.Compilation.BuildProviderResultFlags GetResultFlags(class System.CodeDom.Compiler.CompilerResults results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.AspNet.EntityDesignerBuildProvider.GetResultFlags(System.CodeDom.Compiler.CompilerResults)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.BuildProviderResultFlags</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="results" Type="System.CodeDom.Compiler.CompilerResults" />
+      </Parameters>
+      <Docs>
+        <param name="results">Die vom ASP.NET-Compiler zurückgegebenen Kompilierungsergebnisse.</param>
+        <summary>Stellt für den ASP.NET-Compiler Anweisungen zum Erstellen eines Projekts bereit.</summary>
+        <returns>Das erforderliche Verhalten, wenn ein virtueller Pfad erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode soll nur vom ASP.NET-Compiler aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

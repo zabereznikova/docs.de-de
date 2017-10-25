@@ -1,0 +1,57 @@
+<Type Name="CacheItemUpdateReason" FullName="System.Web.Caching.CacheItemUpdateReason">
+  <TypeSignature Language="C#" Value="public enum CacheItemUpdateReason" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CacheItemUpdateReason extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.CacheItemUpdateReason" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Grund, das Entfernen eines zwischengespeicherten Elements von der <see cref="T:System.Web.Caching.Cache" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Web.Caching.CacheItemRemovedReason> Enumeration wird diese Enumeration schließt nicht die `Removed` oder `Underused` Werte. Aktualisierbare Elemente im Cache können nicht entfernt und können daher nicht automatisch entfernt werden von ASP.NET auch wenn es erforderlich, um Arbeitsspeicher freizugeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DependencyChanged">
+      <MemberSignature Language="C#" Value="DependencyChanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Caching.CacheItemUpdateReason DependencyChanged = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Caching.CacheItemUpdateReason.DependencyChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.CacheItemUpdateReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Element aus dem Cache entfernt werden, ist da die zugeordnete <see cref="T:System.Web.Caching.CacheDependency" /> Objekt geändert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Expired">
+      <MemberSignature Language="C#" Value="Expired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Caching.CacheItemUpdateReason Expired = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Caching.CacheItemUpdateReason.Expired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.CacheItemUpdateReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Element aus dem Cache entfernt wird, weil die absolut oder gleitend Ablaufintervall abgelaufen ist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

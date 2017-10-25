@@ -1,0 +1,1288 @@
+<Type Name="ControlDesigner" FullName="System.Windows.Forms.Design.ControlDesigner">
+  <TypeSignature Language="C#" Value="public class ControlDesigner : System.ComponentModel.Design.ComponentDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlDesigner extends System.ComponentModel.Design.ComponentDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.ControlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.ComponentDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erweitert das Entwurfsmodusverhalten eines <see cref="T:System.Windows.Forms.Control" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.Design.ControlDesigner>Stellt eine Basisklasse für Designer von Komponenten, die davon Herleiten <xref:System.Windows.Forms.Control>. Zusätzlich zu den Methoden und Funktionen von geerbt der <xref:System.ComponentModel.Design.ComponentDesigner> -Klasse, <xref:System.Windows.Forms.Design.ControlDesigner> stellt zusätzliche Methoden zur Unterstützung der erweitern, und ändern das Verhalten eines zugeordneten <xref:System.Windows.Forms.Control> zur Entwurfszeit.  
+  
+ Sie können einen Designer Zuordnen eines Typs unter Verwendung einer <xref:System.ComponentModel.DesignerAttribute>. Einen Überblick über das Anpassen des Verhaltens der Design-Time finden Sie unter [Erweitern der Entwurfszeitunterstützung](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel <xref:System.Windows.Forms.Design.ControlDesigner> Implementierung veranschaulicht die Behandlung `MouseEnter` und `MouseLeave` Ereignisse, zeichnen in einem Steuerelement-Designer-Code, und verwenden Teil der <xref:System.ComponentModel.Design.IDesignerFilter> Schnittstelle, um eine Eigenschaft für das Steuerelement zur Entwurfszeit hinzufügen. Der folgende Code enthält einen Designer und ein Beispiel-Benutzersteuerelement, die dem Designer zugeordnete. Um dieses Beispiel zu erstellen, kompilieren Sie das Beispiel in einer Klassenbibliothek, ein Windows Forms-Projekt einen Verweis auf die Bibliothek hinzugefügt, fügen Sie das Steuerelement zur Toolbox und fügen Sie eine Instanz des Steuerelements zum Formular. Wenn Sie auf das Steuerelement zeigen, die innere Überblick über den Umriss des Steuerelements markiert ist, und die Farbe verwendet, um die Kontur zeichnen entspricht der `OutlineColor` -Eigenschaft, die der Designer, auf die Eigenschaften hinzugefügt hat aufgeführt, für das Steuerelement.  
+  
+ Fügen Sie einen Verweis auf die Assembly System.Design, um das Codebeispiel zu kompilieren.  
+  
+ [!code-cpp[ControlDesignerExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ControlDesignerExample/CPP/controldesignerexample.cpp#1)]
+ [!code-csharp[ControlDesignerExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ControlDesignerExample/CS/controldesignerexample.cs#1)]
+ [!code-vb[ControlDesignerExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ControlDesignerExample/VB/controldesignerexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Design.ControlDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="accessibilityObj">
+      <MemberSignature Language="C#" Value="protected System.Windows.Forms.AccessibleObject accessibilityObj;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Windows.Forms.AccessibleObject accessibilityObj" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.ControlDesigner.accessibilityObj" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Objekt für die Barrierefreiheit für den Designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessibilityObject">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.AccessibleObject AccessibilityObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.AccessibleObject AccessibilityObject" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ControlDesigner.AccessibilityObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das dem Steuerelement zugewiesene <see cref="T:System.Windows.Forms.AccessibleObject" /> ab.</summary>
+        <value>Das dem Steuerelement zugewiesene <see cref="T:System.Windows.Forms.AccessibleObject" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu Barrierefreiheitsobjekten finden Sie in der MSDN Library im Abschnitt Active Accessibility.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedComponents">
+      <MemberSignature Language="C#" Value="public override System.Collections.ICollection AssociatedComponents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection AssociatedComponents" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ControlDesigner.AssociatedComponents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Komponenten, die mit der Komponente, die vom Designer verwaltet.</summary>
+        <value>Die Komponenten, die die vom Designer verwalteten Komponente zugeordnet sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, alle Komponenten, kopiert oder verschoben werden, zusammen mit der Komponente, die vom Designer verwaltet wird, während eines Kopiervorgangs ziehen oder Verschiebevorgang ab.  
+  
+ Wenn diese Auflistung Verweise auf andere Komponenten in das aktuelle Dokument im Entwurfsmodus enthält, werden diese Komponenten zusammen mit der Komponente, die vom Designer verwaltet wird, während eines Kopiervorgangs kopiert.  
+  
+ Wenn die vom Designer verwaltete Komponente ausgewählt ist, wird diese Auflistung mit allen verschachtelten Steuerelementen gefüllt. Dieser Auflistung kann auch andere Komponenten, wie z. B. die Schaltflächen einer Symbolleiste enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoResizeHandles">
+      <MemberSignature Language="C#" Value="public bool AutoResizeHandles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoResizeHandles" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ControlDesigner.AutoResizeHandles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Größe Handle Zuordnung hängt vom Wert von der <see cref="P:System.Windows.Forms.Control.AutoSize" /> Eigenschaft.</summary>
+        <value>
+          <see langword="true" />Wenn Größe Handle Zuordnung hängt vom Wert von der <see cref="P:System.Windows.Forms.Control.AutoSize" /> und <see langword="AutoSizeMode" /> Eigenschaften ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseWndProc">
+      <MemberSignature Language="C#" Value="protected void BaseWndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void BaseWndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.BaseWndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Der zu verarbeitende <see cref="T:System.Windows.Forms.Message" />.</param>
+        <summary>Verarbeitet Windows-Meldungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird die Nachricht von Windows, verarbeitenden überspringen das Steuerelement. Dies ist hilfreich, wenn Sie die Meldung an das Steuerelement blockieren möchten, aber Sie möchten nicht verhindern, dass Sie Windows selbst abrufen, da es anderen Nachrichten zu generierenden führen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BehaviorService">
+      <MemberSignature Language="C#" Value="protected System.Windows.Forms.Design.Behavior.BehaviorService BehaviorService { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Design.Behavior.BehaviorService BehaviorService" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ControlDesigner.BehaviorService" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.BehaviorService</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" /> aus der entwurfsumgebung.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />, oder <see langword="null" /> , wenn der Dienst nicht verfügbar ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBeParentedTo">
+      <MemberSignature Language="C#" Value="public virtual bool CanBeParentedTo (System.ComponentModel.Design.IDesigner parentDesigner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanBeParentedTo(class System.ComponentModel.Design.IDesigner parentDesigner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.CanBeParentedTo(System.ComponentModel.Design.IDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentDesigner" Type="System.ComponentModel.Design.IDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="parentDesigner">Die <see cref="T:System.ComponentModel.Design.IDesigner" /> , die das zu überprüfende Steuerelement verwaltet.</param>
+        <summary>Gibt an, ob dieser Designer vom Steuerelement des angegebenen Designers untergeordnet sein können.</summary>
+        <returns>
+          <see langword="true" />Wenn das vom angegebenen Designer Steuerelement verwaltete kann das von diesem Designer verwaltete Steuerelement übergeordnete; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode eignet sich zum Testen, ob ein Steuerelement von einem bestimmten Typ des übergeordneten Elements untergeordnet werden kann. Beispielsweise <xref:System.Windows.Forms.TabPage> können Steuerelemente nur untergeordnet sein <xref:System.Windows.Forms.TabControl> Steuerelemente.  
+  
+> [!NOTE]
+>  Diese Methode wird nicht aufgerufen, wenn ein Element gezogen wird, aus der **Toolbox** auf die Entwurfsoberfläche.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.Control Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control Control" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ControlDesigner.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Steuerelement, das der Designer entworfen wird.</summary>
+        <value>Das Steuerelement, das der Designer entworfen wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefWndProc">
+      <MemberSignature Language="C#" Value="protected void DefWndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void DefWndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.DefWndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Der zu verarbeitende <see cref="T:System.Windows.Forms.Message" />.</param>
+        <summary>Stellt die standardverarbeitung für Windows-Meldungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bewirkt, dass die Meldung vom Steuerelement und nicht vom Designer verarbeitet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayError">
+      <MemberSignature Language="C#" Value="protected void DisplayError (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void DisplayError(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.DisplayError(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die <see cref="T:System.Exception" /> angezeigt.</param>
+        <summary>Zeigt Informationen über die angegebene Ausnahme an den Benutzer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Windows.Forms.Design.ControlDesigner" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.Windows.Forms.Design.ControlDesigner> verweist. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" />müssen Sie darauf achten, nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDesignMode">
+      <MemberSignature Language="C#" Value="protected bool EnableDesignMode (System.Windows.Forms.Control child, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool EnableDesignMode(class System.Windows.Forms.Control child, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.EnableDesignMode(System.Windows.Forms.Control,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Windows.Forms.Control" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="child">Das untergeordnete Steuerelement an, für welche Entwurf im Modus aktiviert wird.</param>
+        <param name="name">Der Name des <c>untergeordneten</c> für den Endbenutzer verfügbar gemacht.</param>
+        <summary>Aktiviert die Entwurfszeitfunktionen für ein untergeordnetes Steuerelement aus.</summary>
+        <returns>
+          <see langword="true" />Wenn das untergeordnete Steuerelement für die Entwurfszeit aktiviert werden konnte. <see langword="false" /> Falls die-Hostinfrastruktur wird nicht unterstützt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch angegebene untergeordnete Steuerelement `child` ist ein untergeordnetes Element des Steuerelements für dieses Steuerelement-Designer. Das untergeordnete Element nicht direkt an der Persistenz teilzunehmen, aber es tritt ein, wenn es als Eigenschaft des Haupt-Steuerelements verfügbar gemacht wird. Betrachten Sie ein Steuerelement wie die <xref:System.Windows.Forms.SplitContainer>: Es weist zwei Bereiche `Panel1` und `Panel2`. Diese Bereiche sind durch nur den Lesezugriff verfügbar gemacht <xref:System.Windows.Forms.SplitContainer.Panel1%2A> und <xref:System.Windows.Forms.SplitContainer.Panel2%2A> Eigenschaften auf der <xref:System.Windows.Forms.SplitContainer> Steuerelement. Die <xref:System.Windows.Forms.SplitContainer> des Steuerelements Designer ruft <xref:System.Windows.Forms.Design.ControlDesigner.EnableDesignMode%2A> für jeden Bereich, wodurch andere Komponenten auf dem sie abgelegt werden sollen. Aber in der Reihenfolge für den Inhalt der <xref:System.Windows.Forms.SplitContainer.Panel1%2A> und <xref:System.Windows.Forms.SplitContainer.Panel2%2A> gespeichert werden sollen, die <xref:System.Windows.Forms.SplitContainer> Steuerelement selbst muss die Bereiche als öffentliche Eigenschaften verfügbar machen.  
+  
+ Steuerelementnamen müssen in einem Steuerelement-Designer eindeutig sein, aber sie sind nicht erforderlich, um in Bezug auf die untergeordneten Elemente des anderen Steuerelement-Designer eindeutig sein.  
+  
+ Um dieses Feature zu unterstützen, muss die-Hostinfrastruktur verfügbar machen die <xref:System.ComponentModel.INestedContainer> Klasse als Dienst über die Website.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="child" /> oder <paramref name="name" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDragDrop">
+      <MemberSignature Language="C#" Value="protected void EnableDragDrop (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void EnableDragDrop(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.EnableDragDrop(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+          <see langword="true" />Drag &amp; Drop-Unterstützung für das Steuerelement zu aktivieren; <see langword="false" /> Wenn das Steuerelement Drag &amp; Drop-Unterstützung nicht verfügen sollen. Die Standardeinstellung ist <see langword="false" />.</param>
+        <summary>Aktiviert oder deaktiviert die Drag-and-Drop-Unterstützung für das Steuerelement entworfen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert von `false` gibt an, dass ein Steuerelement untergeordnete Elemente zur Entwurfszeit gezogen haben kann. Um ein Steuerelement mit dem übergeordneten von anderen Steuerelementen zur Entwurfszeit zu ermöglichen, eine-Designer zuordnen, die abgeleitet <xref:System.Windows.Forms.Design.ParentControlDesigner>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDragRect">
+      <MemberSignature Language="C#" Value="protected virtual bool EnableDragRect { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableDragRect" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ControlDesigner.EnableDragRect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Rechtecke können auf diese Designer-Komponente hergestellt werden.</summary>
+        <value>
+          <see langword="true" />Wenn Rechtecke gezeichnet werden können; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetControlGlyph">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Forms.Design.Behavior.ControlBodyGlyph GetControlGlyph (System.Windows.Forms.Design.Behavior.GlyphSelectionType selectionType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.Forms.Design.Behavior.ControlBodyGlyph GetControlGlyph(valuetype System.Windows.Forms.Design.Behavior.GlyphSelectionType selectionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.GetControlGlyph(System.Windows.Forms.Design.Behavior.GlyphSelectionType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.ControlBodyGlyph</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectionType" Type="System.Windows.Forms.Design.Behavior.GlyphSelectionType" />
+      </Parameters>
+      <Docs>
+        <param name="selectionType">Ein <see cref="T:System.Windows.Forms.Design.Behavior.GlyphSelectionType" /> Wert, der den Auswahlzustand angibt.</param>
+        <summary>Gibt eine <see cref="T:System.Windows.Forms.Design.Behavior.ControlBodyGlyph" /> , die die Grenzen des Steuerelements darstellt.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.Design.Behavior.ControlBodyGlyph" /> , das die Begrenzungen dieses Steuerelements darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGlyphs">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.Design.Behavior.GlyphCollection GetGlyphs (System.Windows.Forms.Design.Behavior.GlyphSelectionType selectionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.Design.Behavior.GlyphCollection GetGlyphs(valuetype System.Windows.Forms.Design.Behavior.GlyphSelectionType selectionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.GetGlyphs(System.Windows.Forms.Design.Behavior.GlyphSelectionType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.GlyphCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectionType" Type="System.Windows.Forms.Design.Behavior.GlyphSelectionType" />
+      </Parameters>
+      <Docs>
+        <param name="selectionType">Ein <see cref="T:System.Windows.Forms.Design.Behavior.GlyphSelectionType" /> Wert, der den Auswahlzustand angibt.</param>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> Objekte, die die Markierungsrahmen und Ziehpunkte für ein standard-Steuerelement darstellt.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie auf der Grundlage `selectionType`, die <xref:System.Windows.Forms.Design.Behavior.Glyph> zurückgegebenen Objekte einem dieser Auswahlzustände dar:  
+  
+-   Ein vollständig in der Größe veränderbaren Auswahlrahmen mit Ziehpunkten;  
+  
+-   Ein gesperrtes Auswahlrahmen;  
+  
+-   Eine einzelne 'hidden' Auswahl <xref:System.Windows.Forms.Design.Behavior.Glyph>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHitTest">
+      <MemberSignature Language="C#" Value="protected virtual bool GetHitTest (System.Drawing.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool GetHitTest(valuetype System.Drawing.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.GetHitTest(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Ein <see cref="T:System.Drawing.Point" /> die Position, an dem die Maus, in Bildschirmkoordinaten geklickt wurde, angibt.</param>
+        <summary>Gibt an, ob ein Mausklick an der angegebenen Position vom Steuerelement behandelt werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Mausklick an der angegebenen Position vom Steuerelement behandelt werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.ControlDesigner.GetHitTest%2A> Methode bestimmt, ob ein Mausklick an der angegebenen Position an das Steuerelement übergeben werden sollen, während das Steuerelement im Entwurfsmodus befindet. Sie können überschreiben und implementieren diese Methode, um das Steuerelement klickt in der entwurfszeitumgebung empfangen aktivieren.  
+  
+> [!NOTE]
+>  Sie können einen Punkt in Bildschirmkoordinaten um übergeben der <xref:System.Windows.Forms.Control.PointToClient%2A> Methode der <xref:System.Windows.Forms.Control> Klasse, um die Koordinaten des Punkts relativ zur linken oberen Ecke des Steuerelements abzurufen.  
+  
+ Die <xref:System.Windows.Forms.Design.ControlDesigner.GetHitTest%2A> Methode wird als Antwort auf eine WM_NCHITTEST-Meldung aufgerufen, damit sie auf jedem Umzug Maus aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HookChildControls">
+      <MemberSignature Language="C#" Value="protected void HookChildControls (System.Windows.Forms.Control firstChild);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void HookChildControls(class System.Windows.Forms.Control firstChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.HookChildControls(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="firstChild" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="firstChild">Das erste untergeordnete Element <see cref="T:System.Windows.Forms.Control" /> den Prozess. Dieser kann rekursiv Methodenaufruf selbst für die untergeordneten Elemente des Steuerelements.</param>
+        <summary>Leitet die Nachrichten von der untergeordneten Steuerelemente des angegebenen Steuerelements in den Designer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InheritanceAttribute">
+      <MemberSignature Language="C#" Value="protected override System.ComponentModel.InheritanceAttribute InheritanceAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.InheritanceAttribute InheritanceAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ControlDesigner.InheritanceAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.InheritanceAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.ComponentModel.InheritanceAttribute" /> des Designers.</summary>
+        <value>
+          <see cref="F:System.ComponentModel.InheritanceAttribute.Inherited" />Wenn der Designer ein Stammdesigner ist; andernfalls der Wert, der den übergeordneten Designer <see cref="P:System.ComponentModel.Design.ComponentDesigner.InheritanceAttribute" /> Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die <see cref="T:System.ComponentModel.IComponent" /> auf den Designer zugeordnet werden soll. Diese Komponente muss immer eine Instanz von oder abgeleitet, <see cref="T:System.Windows.Forms.Control" />.</param>
+        <summary>Initialisiert den Designer mit der angegebenen Komponente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird vom Designerhost zum Initialisieren des Designers aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeExistingComponent">
+      <MemberSignature Language="C#" Value="public override void InitializeExistingComponent (System.Collections.IDictionary defaultValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InitializeExistingComponent(class System.Collections.IDictionary defaultValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.InitializeExistingComponent(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValues">Ein Name/Wert-Wörterbuch mit Standardwerten, die auf Eigenschaften angewendet werden können. Möglicherweise <see langword="null" /> , wenn keine Standardwerte angegeben werden.</param>
+        <summary>Initialisiert eine vorhandene Komponente sich wieder.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.ControlDesigner> Klasse überschreibt diese Methode, um After Drop Fälle zu behandeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeNewComponent">
+      <MemberSignature Language="C#" Value="public override void InitializeNewComponent (System.Collections.IDictionary defaultValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InitializeNewComponent(class System.Collections.IDictionary defaultValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.InitializeNewComponent(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValues">Ein Name/Wert-Wörterbuch mit Standardwerten, die auf Eigenschaften angewendet werden können. Möglicherweise <see langword="null" /> , wenn keine Standardwerte angegeben werden.</param>
+        <summary>Initialisiert eine neu erstellte Komponente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.ControlDesigner> Klasse überschreibt diese Methode. Dabei wird die Standardeigenschaft für das Steuerelement betrachtet und, wenn es vom Typ `string`, wird der Wert dieser Eigenschaft auf den Namen der Komponente festgelegt. Dies geschieht nur, wenn der Designer mit dieser Option im Optionen-Dienst konfiguriert wurde. Diese Methode wird auch das Steuerelement mit seinem übergeordneten Element verbindet und positioniert. Wenn Sie diese Methode überschreiben, sollten Sie immer Basis aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalControlDesigner">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.Design.ControlDesigner InternalControlDesigner (int internalControlIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.Design.ControlDesigner InternalControlDesigner(int32 internalControlIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.InternalControlDesigner(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.ControlDesigner</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="internalControlIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="internalControlIndex">Einem angegebenen Index den internen Steuerelement-Designer auswählen. Dieser Index ist nullbasiert.</param>
+        <summary>Gibt den internen Steuerelement-Designer mit dem angegebenen Index in die <see cref="T:System.Windows.Forms.Design.ControlDesigner" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.Design.ControlDesigner" /> am angegebenen Index.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein interne Steuerelement ist ein Steuerelement, der nicht der <xref:System.ComponentModel.IContainer.Components%2A> Auflistung von der <xref:System.ComponentModel.Design.IDesignerHost.Container%2A>. <xref:System.Windows.Forms.SplitterPanel>ist ein Beispiel für ein solches Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidPoint">
+      <MemberSignature Language="C#" Value="protected static readonly System.Drawing.Point InvalidPoint;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly valuetype System.Drawing.Point InvalidPoint" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.ControlDesigner.InvalidPoint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Definiert einen lokalen <see cref="T:System.Drawing.Point" /> , die die Werte eines ungültigen darstellt <see cref="T:System.Drawing.Point" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.Design.ControlDesigner.InvalidPoint>verfügt über eine <xref:System.Drawing.Point.X%2A> und <xref:System.Drawing.Point.Y%2A> -Eigenschaft auf den Mindestwert für den Integer-Datentyp festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfInternalControlDesigners">
+      <MemberSignature Language="C#" Value="public virtual int NumberOfInternalControlDesigners ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 NumberOfInternalControlDesigners() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.NumberOfInternalControlDesigners" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Anzahl der internen Steuerelement-Designer in der <see cref="T:System.Windows.Forms.Design.ControlDesigner" />.</summary>
+        <returns>Die Anzahl der internen Steuerelement-Designer in der <see cref="T:System.Windows.Forms.Design.ControlDesigner" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein interne Steuerelement ist ein Steuerelement, der nicht der <xref:System.ComponentModel.IContainer.Components%2A> Auflistung von der <xref:System.ComponentModel.Design.IDesignerHost.Container%2A>. <xref:System.Windows.Forms.SplitterPanel>ist ein Beispiel für ein solches Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContextMenu">
+      <MemberSignature Language="C#" Value="protected virtual void OnContextMenu (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnContextMenu(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnContextMenu(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Koordinate, in dem das Kontextmenü angezeigt werden soll.</param>
+        <param name="y">Die y-Koordinate, in dem das Kontextmenü angezeigt werden soll.</param>
+        <summary>Zeigt das Kontextmenü, und bietet die Möglichkeit, weitere Verarbeitung wird im Kontextmenü angezeigt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateHandle">
+      <MemberSignature Language="C#" Value="protected virtual void OnCreateHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCreateHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnCreateHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bietet die Möglichkeit, weitere Verarbeitung sofort, nachdem das Steuerelementhandle erstellt wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragComplete">
+      <MemberSignature Language="C#" Value="protected virtual void OnDragComplete (System.Windows.Forms.DragEventArgs de);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDragComplete(class System.Windows.Forms.DragEventArgs de) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnDragComplete(System.Windows.Forms.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="de" Type="System.Windows.Forms.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="de">Ein <see cref="T:System.Windows.Forms.DragEventArgs" />, das Daten für das Ereignis bereitstellt.</param>
+        <summary>Empfängt einen Aufruf, um einen Drag-and-Drop-Vorgang zu bereinigen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragDrop">
+      <MemberSignature Language="C#" Value="protected virtual void OnDragDrop (System.Windows.Forms.DragEventArgs de);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDragDrop(class System.Windows.Forms.DragEventArgs de) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnDragDrop(System.Windows.Forms.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="de" Type="System.Windows.Forms.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="de">Ein <see cref="T:System.Windows.Forms.DragEventArgs" />, das Daten für das Ereignis bereitstellt.</param>
+        <summary>Empfängt einen Aufruf aus, wenn ein Drag &amp; Drop-Objekt die Steuerelement-Designer abgelegt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragEnter">
+      <MemberSignature Language="C#" Value="protected virtual void OnDragEnter (System.Windows.Forms.DragEventArgs de);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDragEnter(class System.Windows.Forms.DragEventArgs de) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnDragEnter(System.Windows.Forms.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="de" Type="System.Windows.Forms.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="de">Ein <see cref="T:System.Windows.Forms.DragEventArgs" />, das Daten für das Ereignis bereitstellt.</param>
+        <summary>Empfängt einen Aufruf aus, gelangt ein Drag &amp; Drop-Vorgang der Designeransicht Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragLeave">
+      <MemberSignature Language="C#" Value="protected virtual void OnDragLeave (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDragLeave(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnDragLeave(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" /> , das Daten für das Ereignis bereitstellt.</param>
+        <summary>Empfängt einen Aufruf aus, wenn ein Drag &amp; Drop-Vorgang der Designeransicht Steuerelement verlässt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragOver">
+      <MemberSignature Language="C#" Value="protected virtual void OnDragOver (System.Windows.Forms.DragEventArgs de);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDragOver(class System.Windows.Forms.DragEventArgs de) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnDragOver(System.Windows.Forms.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="de" Type="System.Windows.Forms.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="de">Ein <see cref="T:System.Windows.Forms.DragEventArgs" />, das Daten für das Ereignis bereitstellt.</param>
+        <summary>Empfängt einen Aufruf aus, wenn ein Drag &amp; Drop-Objekt über die Steuerelement-Designer gezogen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGiveFeedback">
+      <MemberSignature Language="C#" Value="protected virtual void OnGiveFeedback (System.Windows.Forms.GiveFeedbackEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnGiveFeedback(class System.Windows.Forms.GiveFeedbackEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnGiveFeedback(System.Windows.Forms.GiveFeedbackEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.GiveFeedbackEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.GiveFeedbackEventArgs" />, das Daten für das Ereignis bereitstellt.</param>
+        <summary>Empfängt einen Aufruf aus, wenn ein Drag &amp; Drop-Vorgang ausgeführt wird, um visuelle Hinweise, die basierend auf den Speicherort der Maus während ein Ziehvorgangs läuft bereitzustellen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Designerhost ruft diese Methode auf, wenn ein OLE-Drag-Ereignis auftritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDragBegin">
+      <MemberSignature Language="C#" Value="protected virtual void OnMouseDragBegin (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMouseDragBegin(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnMouseDragBegin(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Position der Maus in Bildschirmkoordinaten.</param>
+        <param name="y">Die y-Position der Maus in Bildschirmkoordinaten.</param>
+        <summary>Erhält einen Anruf als Antwort auf die linke Maustaste Schaltfläche wird gedrückt gehalten wird, während er sich über die Komponente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird zu Beginn eines Drag-and-Drop-Vorgangs aufgerufen.  
+  
+> [!NOTE]
+>  Sie können einen Punkt in Bildschirmkoordinaten um übergeben der <xref:System.Windows.Forms.Control.PointToClient%2A> Methode der <xref:System.Windows.Forms.Control> Klasse, um die Koordinaten des Punkts relativ zur linken oberen Ecke des Steuerelements abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDragEnd">
+      <MemberSignature Language="C#" Value="protected virtual void OnMouseDragEnd (bool cancel);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMouseDragEnd(bool cancel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnMouseDragEnd(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancel" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="cancel">
+          <see langword="true" />um die Ziehquelle abzubrechen; <see langword="false" /> um es verbindlich.</param>
+        <summary>Empfängt einen Aufruf an das Ende eines Drag-and-Drop-Vorgangs abgeschlossen, oder brechen den Vorgang.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDragMove">
+      <MemberSignature Language="C#" Value="protected virtual void OnMouseDragMove (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMouseDragMove(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnMouseDragMove(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Position der Maus in Bildschirmkoordinaten.</param>
+        <param name="y">Die y-Position der Maus in Bildschirmkoordinaten.</param>
+        <summary>Empfängt einen Aufruf für jede Bewegung der Maus während eines Drag &amp; Drop-Vorgangs an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Sie können einen Punkt in Bildschirmkoordinaten um übergeben der <xref:System.Windows.Forms.Control.PointToClient%2A> Methode der <xref:System.Windows.Forms.Control> Klasse, um die Koordinaten des Punkts relativ zur linken oberen Ecke des Steuerelements abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseEnter">
+      <MemberSignature Language="C#" Value="protected virtual void OnMouseEnter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMouseEnter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnMouseEnter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Empfängt einen Aufruf aus, wenn die Maus erstmals an das Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseHover">
+      <MemberSignature Language="C#" Value="protected virtual void OnMouseHover ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMouseHover() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnMouseHover" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Empfängt einen Aufruf aus, nachdem Sie die Maus über dem Steuerelement bewegt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected virtual void OnMouseLeave ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMouseLeave() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnMouseLeave" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Empfängt einen Aufruf aus, wenn die Maus erstmals an das Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaintAdornments">
+      <MemberSignature Language="C#" Value="protected virtual void OnPaintAdornments (System.Windows.Forms.PaintEventArgs pe);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPaintAdornments(class System.Windows.Forms.PaintEventArgs pe) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnPaintAdornments(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pe" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="pe">Ein <see cref="T:System.Windows.Forms.PaintEventArgs" /> der Designer zum Zeichnen auf dem Steuerelement verwenden kann.</param>
+        <summary>Empfängt einen Aufruf aus, wenn das Steuerelement, das der Designer verwaltet Oberfläche gezeichnet wurde, damit der Designer die Darstellung des Steuerelements bearbeiten kann.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSetComponentDefaults">
+      <MemberSignature Language="C#" Value="public override void OnSetComponentDefaults ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnSetComponentDefaults() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnSetComponentDefaults" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method has been deprecated. Use InitializeNewComponent instead.  http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn der Designer initialisiert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSetCursor">
+      <MemberSignature Language="C#" Value="protected virtual void OnSetCursor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSetCursor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.OnSetCursor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Empfängt einen Aufruf jedes Mal, dass der Cursor muss festgelegt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode behandelt Umleitung und Behandlung des Ereignisses Cursor festlegen. Wenn der Toolboxdienst ein Tool ausgewählt ist, wird diese Methode der Toolboxdienst zum Festlegen des Cursors erlaubt. Wenn die Auswahl UI-Dienst eine gesperrte oder ist keine Positionseigenschaft für das Steuerelement, wird der Standardpfeilcursor festgelegt werden. Wenn ein Benutzer eine Komponente zieht, wird der Fadenkreuzcursor festgelegt werden. Andernfalls wird ein Pfeil mit vier Spitzen Cursor festgelegt werden, um anzugeben, dass die Komponente geklickt und verschoben werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentComponent">
+      <MemberSignature Language="C#" Value="protected override System.ComponentModel.IComponent ParentComponent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent ParentComponent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ControlDesigner.ParentComponent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die übergeordnete Komponente für die <see cref="T:System.Windows.Forms.Design.ControlDesigner" />.</summary>
+        <value>Die übergeordnete Komponente für die <see cref="T:System.Windows.Forms.Design.ControlDesigner" />ist, andernfalls <see langword="null" /> , wenn keine übergeordnete Komponente vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung einfach ermitteln, ob die Komponente entworfen wird ein Steuerelement ist und wenn dies der Fall, überprüft <xref:System.Windows.Forms.Design.ControlDesigner.ParentComponent%2A> gibt zurück, die das übergeordnete Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipatesWithSnapLines">
+      <MemberSignature Language="C#" Value="public virtual bool ParticipatesWithSnapLines { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ParticipatesWithSnapLines" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ControlDesigner.ParticipatesWithSnapLines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.Design.ControlDesigner" /> lässt während eines Ziehvorgangs die Ausrichtung der Ausrichtungslinie.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Forms.Design.ControlDesigner" /> lässt die Ausrichtung der Ausrichtungslinie während eines Ziehvorgangs beim primären Drag-Steuerelements über diesen; andernfalls ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Gibt die standardmäßige Implementierung immer <see langword="true" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Ein <see cref="T:System.Collections.IDictionary" /> mit den Eigenschaften für die Klasse der Komponente.</param>
+        <summary>Passt die Gruppe von Eigenschaften, die die Komponente verfügbar, über macht eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies <xref:System.ComponentModel.Design.IDesignerFilter> -Schnittstellenmethode fügt einen Satz von Eigenschaften für diesen Designer-Komponente zur Entwurfszeit. Diese Methode fügt die folgenden durchsuchbaren Eigenschaften: `Visible`, `Enabled`, `ContextMenu`, `AllowDrop`, `Location`, `Name`, `Controls`, und `Locked`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionRules">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.Design.SelectionRules SelectionRules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Design.SelectionRules SelectionRules" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ControlDesigner.SelectionRules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.SelectionRules</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auswahlregeln, die angeben, die Bewegungsfunktionen einer Komponente ab.</summary>
+        <value>Eine bitweise Kombination von <see cref="T:System.Windows.Forms.Design.SelectionRules" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn kein Designer Regeln für eine Komponente enthält, wird die Komponente keine Benutzeroberflächendienste abgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SnapLines">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IList SnapLines { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList SnapLines" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ControlDesigner.SnapLines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> Objekte, die signifikante Ausrichtungspunkte für dieses Steuerelement darstellt.</summary>
+        <value>Eine Liste der <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> Objekte, die signifikante Ausrichtungspunkte für dieses Steuerelement darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die angebotenen <xref:System.Windows.Forms.Design.Behavior.SnapLine> Objekte beim Positionieren eines Steuerelements auf einer Entwurfsoberfläche.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnhookChildControls">
+      <MemberSignature Language="C#" Value="protected void UnhookChildControls (System.Windows.Forms.Control firstChild);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UnhookChildControls(class System.Windows.Forms.Control firstChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.UnhookChildControls(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="firstChild" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="firstChild">Das erste untergeordnete Element <see cref="T:System.Windows.Forms.Control" /> den Prozess. Dieser kann rekursiv Methodenaufruf selbst für die untergeordneten Elemente des Steuerelements.</param>
+        <summary>Leitet Nachrichten für die untergeordneten Elemente des angegebenen Steuerelements auf jedes Steuerelement anstatt in einem übergeordneten Designer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected virtual void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ControlDesigner.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Der zu verarbeitende <see cref="T:System.Windows.Forms.Message" />.</param>
+        <summary>Verarbeitet Windows-Meldungen und leitet sie optional auf das Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird für jede Nachricht aufgerufen, die das Steuerelement in der Regel erhalten würden. Dies ermöglicht dem Designer für die vorverarbeitung Nachrichten vor der Weiterleitung sie optional auf das Steuerelement.  
+  
+ Zum Senden der Nachricht an des Steuerelements <xref:System.Windows.Forms.Control.WndProc%2A?displayProperty=nameWithType> -Methode, rufen <xref:System.Windows.Forms.Design.ControlDesigner.WndProc%2A> auf das Steuerelement-Designer.  
+  
+> [!NOTE]
+>  Der Designer filtert Nachrichten, sodass einige Nachrichten nicht an das Steuerelement gesendet werden. Beispielsweise werden Nachrichten Maus vom Designer abgefangen. Wenn dies nicht das Verhalten werden sollen ist, rufen <xref:System.Windows.Forms.Design.ControlDesigner.DefWndProc%2A> stattdessen.  
+  
+ Übergeben Sie `m` als Parameter. Optional können Sie ändern oder erstellen Sie ein neues <xref:System.Windows.Forms.Message?displayProperty=nameWithType> an das Steuerelement-Methode übergeben.  
+  
+ Die folgende Tabelle zeigt den Fluss der Nachrichten.  
+  
+|Ohne einen designer|Mit einem designer|  
+|------------------------|---------------------|  
+|USER32<br /><br /> <xref:System.Windows.Forms.Control.WndProc%2A?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Forms.Control.DefWndProc%2A?displayProperty=nameWithType><br /><br /> USER32|USER32<br /><br /> `Control.Designer.` <xref:System.Windows.Forms.Design.ControlDesigner.WndProc%2A><br /><br /> <xref:System.Windows.Forms.Design.ControlDesigner.DefWndProc%2A><br /><br /> <xref:System.Windows.Forms.Control.WndProc%2A?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Forms.Control.DefWndProc%2A?displayProperty=nameWithType><br /><br /> USER32|  
+  
+ Der Designer fängt Nachrichten durch Ersetzen der <xref:System.Windows.Forms.Control.WindowTarget%2A?displayProperty=nameWithType> Eigenschaft des Steuerelements. In der Regel <xref:System.Windows.Forms.Control.WindowTarget%2A> verweist auf die <xref:System.Windows.Forms.NativeWindow> im Steuerelement enthaltene. Während der Entwurfszeit wird der Designer ersetzt, mit einem eigenen Fenster Ziel und den ursprünglichen Wert zwischengespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

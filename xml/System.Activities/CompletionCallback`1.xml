@@ -1,0 +1,31 @@
+<Type Name="CompletionCallback&lt;TResult&gt;" FullName="System.Activities.CompletionCallback&lt;TResult&gt;">
+  <TypeSignature Language="C#" Value="public delegate void CompletionCallback&lt;TResult&gt;(NativeActivityContext context, ActivityInstance completedInstance, TResult result);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CompletionCallback`1&lt;TResult&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.CompletionCallback`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TResult" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+    <Parameter Name="completedInstance" Type="System.Activities.ActivityInstance" />
+    <Parameter Name="result" Type="TResult" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="TResult">Den Typ des Ergebniswerts.</typeparam>
+    <param name="context">Die Ausführungsumgebung der Aktivität.</param>
+    <param name="completedInstance">Die Aktivität, die abgeschlossen wurde.</param>
+    <param name="result">Der <see cref="P:System.Activities.WorkflowElement`1.Result" />-Wert der abgeschlossenen Aktivität.</param>
+    <summary>Die Methode, die beim Abschluss einer Aktivität aufgerufen wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

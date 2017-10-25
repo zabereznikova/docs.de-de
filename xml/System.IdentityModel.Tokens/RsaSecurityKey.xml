@@ -1,0 +1,307 @@
+<Type Name="RsaSecurityKey" FullName="System.IdentityModel.Tokens.RsaSecurityKey">
+  <TypeSignature Language="C#" Value="public sealed class RsaSecurityKey : System.IdentityModel.Tokens.AsymmetricSecurityKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RsaSecurityKey extends System.IdentityModel.Tokens.AsymmetricSecurityKey" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.RsaSecurityKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.AsymmetricSecurityKey</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Sicherheitsschlüssel dar, der mit dem RSA-Algorithmus generiert wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RsaSecurityKey (System.Security.Cryptography.RSA rsa);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.RSA rsa) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaSecurityKey.#ctor(System.Security.Cryptography.RSA)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rsa" Type="System.Security.Cryptography.RSA" />
+      </Parameters>
+      <Docs>
+        <param name="rsa">Ein <see cref="T:System.Security.Cryptography.RSA" />, der einen RSA-Algorithmus darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.RsaSecurityKey" />-Klasse unter Verwendung des angegebenen RSA-Algorithmus.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rsa" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptKey">
+      <MemberSignature Language="C#" Value="public override byte[] DecryptKey (string algorithm, byte[] keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] DecryptKey(string algorithm, unsigned int8[] keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaSecurityKey.DecryptKey(System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+        <Parameter Name="keyData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der kryptografische Algorithmus, der verwendet wurde, um den Schlüssel zu verschlüsseln. Es werden die folgenden Algorithmen unterstützt: <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaV15KeyWrap" /> und <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaOaepKeyWrap" />.</param>
+        <param name="keyData">Ein <see cref="T:System.Byte" />-Array, das den verschlüsselten Schlüssel enthält.</param>
+        <summary>Entschlüsselt den angegebenen verschlüsselten Schlüssel.</summary>
+        <returns>Ein <see cref="T:System.Byte" />-Array, das den entschlüsselten Schlüssel enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="algorithm" /> wird nicht unterstützt. Es werden die folgenden Algorithmen unterstützt: <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaV15KeyWrap" /> und <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaOaepKeyWrap" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyData" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptKey">
+      <MemberSignature Language="C#" Value="public override byte[] EncryptKey (string algorithm, byte[] keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] EncryptKey(string algorithm, unsigned int8[] keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaSecurityKey.EncryptKey(System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+        <Parameter Name="keyData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der kryptografische Algorithmus zum Verschlüsseln des Schlüssels.</param>
+        <param name="keyData">Ein <see cref="T:System.Byte" />-Array, das den Schlüssel enthält.</param>
+        <summary>Verschlüsselt den angegebenen Schlüssel mit dem angegebenen Algorithmus.</summary>
+        <returns>Ein <see cref="T:System.Byte" />-Array, das den verschlüsselten Schlüssel enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="algorithm" /> wird nicht unterstützt. Es werden die folgenden Algorithmen unterstützt: <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaV15KeyWrap" /> und <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaOaepKeyWrap" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyData" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsymmetricAlgorithm">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.AsymmetricAlgorithm GetAsymmetricAlgorithm (string algorithm, bool privateKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.AsymmetricAlgorithm GetAsymmetricAlgorithm(string algorithm, bool privateKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaSecurityKey.GetAsymmetricAlgorithm(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsymmetricAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+        <Parameter Name="requiresPrivateKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der zu erstellende asymmetrische Algorithmus.</param>
+        <param name="privateKey">To be added.</param>
+        <summary>Ruft den angegebenen asymmetrischen kryptografischen Algorithmus ab.</summary>
+        <returns>Ein <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm" />, der den angegebenen asymmetrischen kryptografischen Algorithmus darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="requiresPrivateKey" />ist <see langword="true" /> und ein privater Schlüssel ist nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashAlgorithmForSignature">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.HashAlgorithm GetHashAlgorithmForSignature (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.HashAlgorithm GetHashAlgorithmForSignature(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaSecurityKey.GetHashAlgorithmForSignature(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der Hashalgorithmus. Der folgende Algorithmus wird unterstützt: <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha1Signature" />.</param>
+        <summary>Ruft einen kryptografischen Algorithmus ab, der einen Hash für eine digitale Signatur generiert.</summary>
+        <returns>Ein <see cref="T:System.Security.Cryptography.HashAlgorithm" />, der Hashs für digitale Signaturen generiert.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="algorithm" /> wird nicht unterstützt. Der folgende Algorithmus wird unterstützt: <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha1Signature" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSignatureDeformatter">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.AsymmetricSignatureDeformatter GetSignatureDeformatter (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.AsymmetricSignatureDeformatter GetSignatureDeformatter(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaSecurityKey.GetSignatureDeformatter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsymmetricSignatureDeformatter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der Deformatierungsalgorithmus für die digitale Signatur, von der eine Instanz abgerufen werden soll. Der folgende Algorithmus wird unterstützt: <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha1Signature" />.</param>
+        <summary>Ruft den Deformatierungsalgorithmus für die digitale Signatur ab.</summary>
+        <returns>Ein <see cref="T:System.Security.Cryptography.AsymmetricSignatureDeformatter" />, der den Deformatierungsalgorithmus für die digitale Signatur darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="algorithm" /> wird nicht unterstützt. Der folgende Algorithmus wird unterstützt: <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha1Signature" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSignatureFormatter">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.AsymmetricSignatureFormatter GetSignatureFormatter (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.AsymmetricSignatureFormatter GetSignatureFormatter(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaSecurityKey.GetSignatureFormatter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsymmetricSignatureFormatter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der Formatierungsalgorithmus für die digitale Signatur, von der eine Instanz abgerufen werden soll. Der folgende Algorithmus wird unterstützt: <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha1Signature" />.</param>
+        <summary>Ruft den Formatierungsalgorithmus für die digitale Signatur ab.</summary>
+        <returns>Ein <see cref="T:System.Security.Cryptography.AsymmetricSignatureDeformatter" />, der den Formatierungsalgorithmus für die digitale Signatur darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="algorithm" /> wird nicht unterstützt. Der folgende Algorithmus wird unterstützt: <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha1Signature" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasPrivateKey">
+      <MemberSignature Language="C#" Value="public override bool HasPrivateKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool HasPrivateKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaSecurityKey.HasPrivateKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der private Schlüssel verfügbar ist.</summary>
+        <returns>
+          <see langword="true" />, wenn der private Schlüssel verfügbar ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAsymmetricAlgorithm">
+      <MemberSignature Language="C#" Value="public override bool IsAsymmetricAlgorithm (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsAsymmetricAlgorithm(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaSecurityKey.IsAsymmetricAlgorithm(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der kryptografische Algorithmus.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob der angegebene Algorithmus asymmetrische Schlüssel verwendet.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Algorithmus asymmetrische Schlüssel verwendet, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupportedAlgorithm">
+      <MemberSignature Language="C#" Value="public override bool IsSupportedAlgorithm (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSupportedAlgorithm(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaSecurityKey.IsSupportedAlgorithm(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der kryptografische Algorithmus.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob der angegebene Algorithmus von dieser Klasse unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Algorithmus <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaV15KeyWrap" />, <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaOaepKeyWrap" /> oder <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha1Signature" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSymmetricAlgorithm">
+      <MemberSignature Language="C#" Value="public override bool IsSymmetricAlgorithm (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSymmetricAlgorithm(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaSecurityKey.IsSymmetricAlgorithm(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der kryptografische Algorithmus.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob der angegebene Algorithmus symmetrische Schlüssel verwendet.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Algorithmus symmetrische Schlüssel verwendet, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySize">
+      <MemberSignature Language="C#" Value="public override int KeySize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySize" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.RsaSecurityKey.KeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des Schlüssels in Bits ab.</summary>
+        <value>Die Größe des Schlüssels in Bits.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Security.Cryptography.RSACryptoServiceProvider> unterstützt Schlüssellängen zwischen 384 Bits und 16.384 Bits in Schritten von 8 Bits, wenn der Microsoft Enhanced Cryptographic Provider installiert ist. Wenn der Microsoft Base Cryptographic Provider installiert ist, werden Schlüssellängen zwischen 384 Bits und 512 Bits in Schritten von 8 Bits unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

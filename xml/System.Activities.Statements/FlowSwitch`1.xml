@@ -1,0 +1,180 @@
+<Type Name="FlowSwitch&lt;T&gt;" FullName="System.Activities.Statements.FlowSwitch&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class FlowSwitch&lt;T&gt; : System.Activities.Statements.FlowNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FlowSwitch`1&lt;T&gt; extends System.Activities.Statements.FlowNode" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.FlowSwitch`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Activities.Statements.FlowNode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Cases")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">Der Typ des Ausdrucks, anhand dessen Fälle ausgewertet werden.</typeparam>
+    <summary>Ein spezieller <see cref="T:System.Activities.Statements.FlowNode" />, der die Modellierung eines Schalterkonstrukts erlaubt, mit einem Ausdruck und einem Ergebnis für jede Übereinstimmung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen eines <xref:System.Activities.Statements.FlowSwitch%601>-Knotens veranschaulicht. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#5](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlowSwitch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.FlowSwitch`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Statements.FlowSwitch`1" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Erstellen eines <xref:System.Activities.Statements.FlowSwitch%601>-Knotens veranschaulicht. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#5](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cases">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;T,System.Activities.Statements.FlowNode&gt; Cases { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;!T, class System.Activities.Statements.FlowNode&gt; Cases" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.FlowSwitch`1.Cases" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;T,System.Activities.Statements.FlowNode&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch von Fällen ab, das vom <see cref="T:System.Activities.Statements.FlowSwitch`1" />-Element verarbeitet werden soll.</summary>
+        <value>Die Auflistung von Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Element im Wörterbuch besteht aus einem Objekt des generischen Typs (in <xref:System.Activities.Statements.FlowSwitch%601.%23ctor%2A> angegeben) sowie einem entsprechenden <xref:System.Activities.Statements.FlowNode> zur Ausführung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Festlegen der Cases-Eigenschaft eines <xref:System.Activities.Statements.FlowSwitch%601>-Knotens gezeigt. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#5](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public System.Activities.Statements.FlowNode Default { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Statements.FlowNode Default" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.FlowSwitch`1.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Statements.FlowNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der <see cref="T:System.Activities.Statements.FlowNode" />, der ausgeführt werden soll, wenn keine Elemente in der <see cref="P:System.Activities.Statements.FlowSwitch`1.Cases" />-Auflistung mit dem Ergebnis der Auswertung des <see cref="P:System.Activities.Statements.FlowSwitch`1.Expression" /> übereinstimmen.</summary>
+        <value>Der standardmäßige <see cref="T:System.Activities.Statements.FlowNode" />, der ausgeführt werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Festlegen der Default-Eigenschaft eines <xref:System.Activities.Statements.FlowSwitch%601>-Knotens gezeigt. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#5](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.FlowSwitch`1.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("Switch")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen dieses Flow-Switches, die im Aktivitätsdesigner angezeigt werden.</summary>
+        <value>Der Name des Schalters Datenfluss.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity&lt;T&gt; Expression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity`1&lt;!T&gt; Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.FlowSwitch`1.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Ausdruck der anhand der Auflistung von <see cref="P:System.Activities.Statements.FlowSwitch`1.Cases" /> ausgewertet werden soll.</summary>
+        <value>Der auszuwertende Ausdruck.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Festlegen der Expression-Eigenschaft eines <xref:System.Activities.Statements.FlowSwitch%601>-Knotens gezeigt. Dieses Beispiel stammt aus dem [Fehler zu behandeln, in einem Flussdiagramm Aktivität mithilfe von TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) Beispiel.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#5](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

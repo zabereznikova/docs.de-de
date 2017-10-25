@@ -1,0 +1,65 @@
+<Type Name="PathDirection" FullName="System.Web.UI.WebControls.PathDirection">
+  <TypeSignature Language="C#" Value="public enum PathDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PathDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.PathDirection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die hierarchische Reihenfolge in der Navigationsknoten für Website-Navigationssteuerelemente gerendert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.PathDirection> Enumeration wird verwendet, durch die <xref:System.Web.UI.WebControls.SiteMapPath> Steuerelement an die Sortierung verwendet, um den Websiteknoten für die Zuordnung zu rendern. Wenn die <xref:System.Web.UI.WebControls.SiteMapPath.PathDirection%2A> Eigenschaft auf RootToCurrent festgelegt ist, wird der Pfad in die gängigste Methode, von der oberste Knoten auf den aktuellen Knoten von links nach rechts angezeigt. Wenn die <xref:System.Web.UI.WebControls.SiteMapPath.PathDirection%2A> festgelegt ist, CurrentToRoot, der Navigationspfad aus dem aktuellen Knoten auf den obersten Knoten, von links nach rechts angezeigt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarative Festlegen der <xref:System.Web.UI.WebControls.SiteMapPath.PathDirection%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.SiteMapPath> in Web Forms-Seite.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.NavigationPath_decl_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.NavigationPath_decl_4/CS/catalog3cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.NavigationPath_decl_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.NavigationPath_decl_4/VB/catalog3vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CurrentToRoot">
+      <MemberSignature Language="C#" Value="CurrentToRoot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.PathDirection CurrentToRoot = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.PathDirection.CurrentToRoot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.PathDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Knoten werden in einer hierarchischen Reihenfolge vom aktuellen Knoten auf den obersten Knoten von links nach rechts gerendert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RootToCurrent">
+      <MemberSignature Language="C#" Value="RootToCurrent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.PathDirection RootToCurrent = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.PathDirection.RootToCurrent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.PathDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Knoten werden in einer hierarchischen Reihenfolge aus der oberste Knoten auf den aktuellen Knoten von links nach rechts gerendert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

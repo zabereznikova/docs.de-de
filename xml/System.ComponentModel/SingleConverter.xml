@@ -1,0 +1,73 @@
+<Type Name="SingleConverter" FullName="System.ComponentModel.SingleConverter">
+  <TypeSignature Language="C#" Value="public class SingleConverter : System.ComponentModel.BaseNumberConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SingleConverter extends System.ComponentModel.BaseNumberConverter" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.SingleConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.BaseNumberConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Typkonverter für das Konvertieren von mit einfacher Genauigkeit, gleitkommazahlobjekten verschiedene andere und aus verschiedenen anderen Darstellungen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konverter kann nur eine mit einfacher Genauigkeit, floating Point-Number-Objekt auf und aus einer Zeichenfolge konvertieren. Die <xref:System.Single> Werttyp stellt eine 32-Bit-Zahl mit einfacher Genauigkeit mit Werten, die im Bereich von negativen 3. 402823E38 bis positive 3. 402823e38 dar.  
+  
+> [!NOTE]
+>  Erstellen Sie nie eine Instanz von <xref:System.ComponentModel.SingleConverter>. Rufen Sie stattdessen die <xref:System.ComponentModel.TypeDescriptor.GetConverter%2A> Methode <xref:System.ComponentModel.TypeDescriptor>. Weitere Informationen finden Sie in den Beispielen in der <xref:System.ComponentModel.TypeConverter> Basisklasse und [Vorgehensweise: Implementieren eines Typkonverters](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Variable vom Typ <xref:System.Single> in eine Zeichenfolge (und umgekehrt).  
+  
+ [!code-cpp[Converters#19](~/samples/snippets/cpp/VS_Snippets_Winforms/Converters/CPP/converters.cpp#19)]
+ [!code-csharp[Converters#19](~/samples/snippets/csharp/VS_Snippets_Winforms/Converters/CS/converters.cs#19)]
+ [!code-vb[Converters#19](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Converters/VB/converters.vb#19)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SingleConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.SingleConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.SingleConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

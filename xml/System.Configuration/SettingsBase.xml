@@ -1,0 +1,318 @@
+<Type Name="SettingsBase" FullName="System.Configuration.SettingsBase">
+  <TypeSignature Language="C#" Value="public abstract class SettingsBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SettingsBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsBase" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Basisklasse, die zur Unterstützung von benutzereinstellungen für die Eigenschaft verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET Web Forms und Windows Forms verwenden die gleiche Konfiguration-Einstellungen-Infrastruktur zur Unterstützung von benutzereinstellungen. Benutzereinstellungen innerhalb von ASP.NET werden häufig als ASP.NET Profil bezeichnet. Die Einstellungen-Infrastruktur enthält die <xref:System.Configuration.SettingsBase> Basisklasse, die <xref:System.Configuration.SettingsProperty> -Klasse, die <xref:System.Configuration.SettingsPropertyValue> -Klasse, die <xref:System.Configuration.SettingsContext> -Klasse, die <xref:System.Configuration.SettingsProvider> -Klasse, und die<xref:System.Configuration.SettingAttribute>  
+  
+ -Klasse.  
+  
+ Die Einstellungen für Basisklassen bieten nur eine allgemeine Infrastruktur zum Definieren und Beibehalten von Einstellungseigenschaften. Je nachdem wie diese Basisklassen abgeleitet sind und ihre Laufzeitumgebung kann die Einstellungen-API unterschiedliche Grade an Funktionalität bereitstellen. Beispielsweise verwendet ASP.NET Profil die Basisklassen für die Einstellungen, um benutzerspezifische Einstellungen bereitzustellen, die gemäß Anforderung Semantik geladen und gespeichert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SettingsBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.SettingsBase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public virtual System.Configuration.SettingsContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.SettingsContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsBase.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zugehörigen Einstellungskontext ab.</summary>
+        <value>Ein <see cref="T:System.Configuration.SettingsContext" /> der Einstellungsinstanz zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Configuration.SettingsContext> wird von der Anwendung verwendet, um kontextbezogene Informationen bereitzustellen, die der Anbieter verwenden kann, um Einstellungen beizubehalten.  
+  
+ Jede Settings-Klasse abgeleitet <xref:System.Configuration.SettingsBase> hat einen Kontext zugeordnet. Der Kontext wird an den Einstellungsanbieter zu Identität zusätzliche Informationen über die Einstellungsinformationen übergeben. Kontext fungiert daher als Hinweis für den Einstellungsanbieter bestimmen, wie die Werte der entsprechenden Einstellungen beizubehalten, unterstützen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (System.Configuration.SettingsContext context, System.Configuration.SettingsPropertyCollection properties, System.Configuration.SettingsProviderCollection providers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Initialize(class System.Configuration.SettingsContext context, class System.Configuration.SettingsPropertyCollection properties, class System.Configuration.SettingsProviderCollection providers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsBase.Initialize(System.Configuration.SettingsContext,System.Configuration.SettingsPropertyCollection,System.Configuration.SettingsProviderCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="properties" Type="System.Configuration.SettingsPropertyCollection" />
+        <Parameter Name="providers" Type="System.Configuration.SettingsProviderCollection" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Einstellungskontext im Zusammenhang mit der Einstellungseigenschaften.</param>
+        <param name="properties">Die Eigenschaften, die aus zugegriffen werden können die <see cref="T:System.Configuration.SettingsBase" /> Instanz.</param>
+        <param name="providers">Die initialisierten Anbieter, die beim Laden und Speichern von Eigenschaftswerten verwendet werden soll.</param>
+        <summary>Initialisiert die interne Eigenschaften verwendet werden, indem <see cref="T:System.Configuration.SettingsBase" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsBase.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Zugriff auf das Objekt synchronisiert (threadsicher).</summary>
+        <value>
+          <see langword="true" />, wenn der Zugriff auf <see cref="T:System.Configuration.SettingsBase" /> synchronisiert ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual object this[string propertyName] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsBase.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Ein <see cref="T:System.String" /> mit dem Namen der Eigenschaft auf.</param>
+        <summary>Ruft ab oder legt den Wert der angegebenen Eigenschaft fest.</summary>
+        <value>Wenn festgestellt wird, der Wert von der benannten Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.SettingsBase.Item%2A> -Eigenschaft, auch bekannt als Indexer wird üblicherweise verwendet, in der Settings-Klasse abgeleitet <xref:System.Configuration.SettingsBase>. Die <xref:System.Configuration.SettingsBase.Item%2A> Eigenschaft bindet die öffentliche Eigenschaft der Klasse an die entsprechenden Einstellungseigenschaft.  
+  
+ Beim ersten Zugriff auf eine Eigenschaft, die <xref:System.Configuration.SettingsBase> Instanz findet alle anderen Eigenschaften, die den gleichen Anbieter als die angeforderte Eigenschaft gemeinsam nutzen. Die <xref:System.Configuration.SettingsBase> Instanz ruft dann den Anbieter, und übergeben sie den Satz von <xref:System.Configuration.SettingsProperty> Objekte, die die Daten darstellen, der Anbieter abrufen soll.  
+  
+ Beachten Sie, dass der Indexer abrufen und Eigenschaftendaten auf threadsichere Weise festgelegt werden, wenn <xref:System.Configuration.SettingsBase.IsSynchronized%2A> ist `true`. Ein <xref:System.Configuration.SettingsBase> Instanz in der Standardeinstellung ist nicht threadsicher. Sie können jedoch aufrufen <xref:System.Configuration.SettingsBase.Synchronized%2A>, und übergeben Sie eine <xref:System.Configuration.SettingsBase> Instanznamen zur der <xref:System.Configuration.SettingsBase> Indexer auf threadsichere Weise ausgeführt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.SettingsPropertyNotFoundException">Es sind keine Eigenschaften mit dem aktuellen Objekt verbundenen oder die angegebene Eigenschaft wurde nicht gefunden werden.</exception>
+        <exception cref="T:System.Configuration.SettingsPropertyIsReadOnlyException">Es wurde versucht, eine schreibgeschützte Eigenschaft festzulegen.</exception>
+        <exception cref="T:System.Configuration.SettingsPropertyWrongTypeException">Der angegebene Wert ist eines Typs, der nicht kompatibel mit der Eigenschaft, während eine Set-Vorgang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public virtual System.Configuration.SettingsPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.SettingsPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsBase.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Einstellungseigenschaften.</summary>
+        <value>Ein <see cref="T:System.Configuration.SettingsPropertyCollection" /> Auflistung mit allen der <see cref="T:System.Configuration.SettingsProperty" /> Objekte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `get` Accessor, der die <xref:System.Configuration.SettingsBase.Properties%2A> Eigenschaft gibt die Auflistung der <xref:System.Configuration.SettingsProperty> verbundenen mit den Eigenschaften, die von verwalteten Instanzen der <xref:System.Configuration.SettingsBase> Instanz.  
+  
+ Die <xref:System.Configuration.SettingsBase> Klasse erkennt bestimmte Eigenschaften einer Einstellung, z. B. den Namen, Eigenschaftentyp, Einstellungsanbieter, Standardwert, und nur-Lese Status und eine Einstellung für die Serialisierung. Diese Eigenschaften werden als Eigenschaften in gespiegelt der <xref:System.Configuration.SettingsProperty> Klasse. Alle anderen Attribute von der <xref:System.Configuration.SettingsProperty> Klasse nur an den zugeordneten Einstellungsanbieter als übergeben einer <xref:System.Configuration.SettingsAttributeDictionary>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyValues">
+      <MemberSignature Language="C#" Value="public virtual System.Configuration.SettingsPropertyValueCollection PropertyValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.SettingsPropertyValueCollection PropertyValues" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsBase.PropertyValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsPropertyValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Einstellungen Eigenschaftswerte ab.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Configuration.SettingsPropertyValue" /> Objekten, die die tatsächlichen Datenwerte für die Eigenschaften, die von verwalteten darstellen der <see cref="T:System.Configuration.SettingsBase" /> Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public virtual System.Configuration.SettingsProviderCollection Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.SettingsProviderCollection Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsBase.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsProviderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Einstellungsanbietern ab.</summary>
+        <value>Eine <see cref="T:System.Configuration.SettingsProviderCollection" />-Methode, die <see cref="T:System.Configuration.SettingsProvider" />-Objekte enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public virtual void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsBase.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die aktuellen Werte der Einstellungseigenschaften.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.SettingsBase> Instanz gruppiert Eigenschaften, die basierend auf den Anbieter, der jede Eigenschaft zugeordnet ist. Jeder Anbieter wird dann nacheinander aufgerufen und übergeben den Satz von Eigenschaften, die der Anbieter speichern soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronized">
+      <MemberSignature Language="C#" Value="public static System.Configuration.SettingsBase Synchronized (System.Configuration.SettingsBase settingsBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.SettingsBase Synchronized(class System.Configuration.SettingsBase settingsBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsBase.Synchronized(System.Configuration.SettingsBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="settingsBase" Type="System.Configuration.SettingsBase" />
+      </Parameters>
+      <Docs>
+        <param name="settingsBase">Die Klasse, die zur Unterstützung von benutzereinstellungen für die Eigenschaft verwendet wird.</param>
+        <summary>Stellt eine <see cref="T:System.Configuration.SettingsBase" /> Klasse, die synchronisiert (threadsicher).</summary>
+        <returns>Ein <see cref="T:System.Configuration.SettingsBase" /> -Klasse, die synchronisiert wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Indexer abrufen und Eigenschaftendaten auf threadsichere Weise festgelegt werden, wenn die <xref:System.Configuration.SettingsBase.IsSynchronized%2A> -Eigenschaftensatz auf `true`.  Ein <xref:System.Configuration.SettingsBase> Instanz in der Standardeinstellung ist nicht threadsicher.  Sie können jedoch aufrufen <xref:System.Configuration.SettingsBase.Synchronized%2A> übergeben eine <xref:System.Configuration.SettingsBase> Instanznamen zur der <xref:System.Configuration.SettingsBase> Indexer auf threadsichere Weise ausgeführt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

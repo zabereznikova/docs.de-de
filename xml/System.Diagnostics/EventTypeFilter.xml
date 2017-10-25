@@ -1,0 +1,179 @@
+<Type Name="EventTypeFilter" FullName="System.Diagnostics.EventTypeFilter">
+  <TypeSignature Language="C#" Value="public class EventTypeFilter : System.Diagnostics.TraceFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventTypeFilter extends System.Diagnostics.TraceFilter" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventTypeFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.TraceFilter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, ob ein Listener verfolgen soll basierend auf den Ereignistyp.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einer der mehrere verschiedene Arten von Filtern kann über einen Ablaufverfolgungslistener zugewiesen werden die <xref:System.Diagnostics.TraceListener.Filter%2A> Eigenschaft, um eine Ebene der Überwachung von bereitgestellten Rahmen hinaus bereitzustellen der <xref:System.Diagnostics.TraceSwitch>. Der Filter kann verwendet werden, um die Ereignistypen zu steuern, die vom Listener erstellt werden.  
+  
+ Diese Klasse filtert Ereignisse basierend auf dem Wert, der die <xref:System.Diagnostics.EventTypeFilter.EventType%2A> Eigenschaft.  Diese Eigenschaft kann durch Code oder in einer Konfigurationsdatei festgelegt werden, um den Ereignistyp der Nachrichten anzugeben, die vom Listener nachverfolgt werden sollen. Der Wert der Eigenschaft gibt an, der Schwellenwert für die Ablaufverfolgung zu starten. Ereignistypen oder oberhalb der angegebenen Ebene werden verfolgt. Die <xref:System.Diagnostics.TraceFilter.ShouldTrace%2A> von den Listenern zu bestimmen, ob ein Ereignis nachverfolgt werden sollen, aufgerufene Methode verwendet den Wert der <xref:System.Diagnostics.EventTypeFilter.EventType%2A> Eigenschaft.  
+  
+ Das Ereignis ab dem Typ tracing, bearbeiten, um festzulegen die Konfigurationsdatei, die den Namen der Anwendung entspricht. In dieser Datei können Sie einen Listener hinzufügen, legen Sie deren Filtertyp und den Ereignistyp für die Ablaufverfolgung angeben. Die Konfigurationsdatei sollte wie folgt formatiert werden.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <sharedListeners>  
+      <add name="Console" type="System.Diagnostics.ConsoleTraceListener">  
+        <filter type="System.Diagnostics.EventTypeFilter"   
+          initializeData="Warning" />  
+      </add>  
+    </sharedListeners>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ Weitere Informationen zum Initialisieren von Daten für ein <xref:System.Diagnostics.EventTypeFilter>, finden Sie unter [ &lt;Filter&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventTypeFilter (System.Diagnostics.SourceLevels level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Diagnostics.SourceLevels level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventTypeFilter.#ctor(System.Diagnostics.SourceLevels)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="level" Type="System.Diagnostics.SourceLevels" />
+      </Parameters>
+      <Docs>
+        <param name="level">Eine bitweise Kombination der <see cref="T:System.Diagnostics.SourceLevels" /> Werten, die den Ereignistyp der Nachrichten für die Ablaufverfolgung angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.EventTypeFilter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert von der `level` Parameter zur Initialisierung der <xref:System.Diagnostics.EventTypeFilter.EventType%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventType">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SourceLevels EventType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.SourceLevels EventType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventTypeFilter.EventType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SourceLevels</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ereignistyp der Nachrichten für die Ablaufverfolgung.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Diagnostics.SourceLevels" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.EventTypeFilter.EventType%2A> Eigenschaft gibt die Ebene für die Ablaufverfolgung an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldTrace">
+      <MemberSignature Language="C#" Value="public override bool ShouldTrace (System.Diagnostics.TraceEventCache cache, string source, System.Diagnostics.TraceEventType eventType, int id, string formatOrMessage, object[] args, object data1, object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ShouldTrace(class System.Diagnostics.TraceEventCache cache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string formatOrMessage, object[] args, object data1, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventTypeFilter.ShouldTrace(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[],System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="formatOrMessage" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="data1" Type="System.Object" />
+        <Parameter Name="data" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="cache">Ein <see cref="T:System.Diagnostics.TraceEventCache" /> , die den Cache für das Ablaufverfolgungsereignis darstellt.</param>
+        <param name="source">Der Name der Quelle.</param>
+        <param name="eventType">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Werte.</param>
+        <param name="id">Eine Ablaufverfolgung-ID-Nummer.</param>
+        <param name="formatOrMessage">Das Format zum Schreiben ein Array von Argumenten oder eine Nachricht um zu schreiben.</param>
+        <param name="args">Ein Array von Argumentobjekten.</param>
+        <param name="data1">Ein Trace-Datenobjekt.</param>
+        <param name="data">Ein Array von Datenobjekten Ablaufverfolgung.</param>
+        <summary>Bestimmt, ob der Ablaufverfolgungslistener das Ereignis verfolgen soll.</summary>
+        <returns>
+          <see langword="true" />Wenn die Ablaufverfolgung erzeugt werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert des der `eventType` Parameter ist größer als oder gleich dem Wert von der <xref:System.Diagnostics.EventTypeFilter.EventType%2A> -Eigenschaft, die Methode gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

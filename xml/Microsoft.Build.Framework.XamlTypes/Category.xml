@@ -1,0 +1,225 @@
+<Type Name="Category" FullName="Microsoft.Build.Framework.XamlTypes.Category">
+  <TypeSignature Language="C#" Value="public sealed class Category : Microsoft.Build.Framework.XamlTypes.CategorySchema, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Category extends Microsoft.Build.Framework.XamlTypes.CategorySchema implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.XamlTypes.Category" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.XamlTypes.CategorySchema</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Kategorie dar, zu dem eine <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> gehören können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Klasse manuell instanziieren, rufen Sie <xref:Microsoft.Build.Framework.XamlTypes.Category.BeginInit%2A> , bevor Sie die erste Eigenschaft des Objekts festlegen und <xref:Microsoft.Build.Framework.XamlTypes.Category.EndInit%2A> nach dem Festlegen der Eigenschaft "letzten".  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Category ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.Category.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Standardkonstruktor Während der Deserialisierung aufgerufen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.Category.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Siehe <see cref="M:System.ComponentModel.ISupportInitialize.BeginInit" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Category.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschreibung dieser <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />.</summary>
+        <value>Gibt die Beschreibung dieser Kategorie zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist optional, und es ist kulturabhängig.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Category.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Namen, die von einem potenziellen Benutzeroberflächenautomatisierungs-Client verwendet werden kann, um diese anzuzeigen <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />.</summary>
+        <value>Gibt den Anzeigenamen dieser Kategorie zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist optional, und es ist kulturabhängig. Wenn diese Eigenschaft nicht festgelegt ist, hat er denselben Wert wie die <xref:Microsoft.Build.Framework.XamlTypes.Category.Name%2A> -Eigenschaft (und würde deshalb nicht lokalisiert werden).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.Category.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Siehe <see cref="M:System.ComponentModel.ISupportInitialize.EndInit" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpString">
+      <MemberSignature Language="C#" Value="public string HelpString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpString" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Category.HelpString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest Hilfeinformationen für diesen <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />.</summary>
+        <value>Gibt die Hilfeinformationen für diese Kategorie zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kann verwendet werden, um eine Hilfe-URL anzugeben. Dieses Feld ist optional, und es ist kulturabhängig.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Category.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen dieses <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />.</summary>
+        <value>Gibt den Namen dieser Kategorie zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist obligatorisch und Kultur.  
+  
+ Das Feld kann nicht auf eine leere Zeichenfolge festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtype">
+      <MemberSignature Language="C#" Value="public string Subtype { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subtype" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.Category.Subtype" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Untertyp davon <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert des Untertyps muss entweder `Grid` (Standard) oder `CommandLine`.  
+  
+ Untertypen unterstützen die Anzeige der Benutzeroberfläche eine Kategorie in einer geeigneten Form. Beispielsweise werden Eigenschaften, die nicht Befehlszeilen sind in der Regel in Form von einem Eigenschaftenraster angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

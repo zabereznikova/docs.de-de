@@ -1,0 +1,547 @@
+<Type Name="RibbonSplitMenuItem" FullName="System.Windows.Controls.Ribbon.RibbonSplitMenuItem">
+  <TypeSignature Language="C#" Value="public class RibbonSplitMenuItem : System.Windows.Controls.Ribbon.RibbonMenuItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi RibbonSplitMenuItem extends System.Windows.Controls.Ribbon.RibbonMenuItem" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Ribbon.RibbonSplitMenuItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Ribbon.RibbonMenuItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_ArrowToggleButton", Type=typeof(System.Windows.Controls.Ribbon.RibbonToggleButton))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_HeaderButton", Type=typeof(System.Windows.Controls.Ribbon.RibbonButton))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_SideBarBorder", Type=typeof(System.Windows.Controls.Border))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Menüelement innerhalb einer <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> Menü, das einen Befehl aufrufen und ein Untermenü anzeigen kann.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RibbonSplitMenuItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Ribbon.RibbonSplitMenuItem" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownToolTipDescription">
+      <MemberSignature Language="C#" Value="public string DropDownToolTipDescription { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DropDownToolTipDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den beschreibenden Text, der in der QuickInfo für den Dropdownbereich dieses Steuerelements angezeigt wird.</summary>
+        <value>Die beschreibenden Text, der in der QuickInfo anzuzeigen. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_DropDownToolTipDescription"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipDescriptionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownToolTipDescriptionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DropDownToolTipDescriptionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DropDownToolTipDescriptionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipDescriptionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipDescription" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownToolTipFooterDescription">
+      <MemberSignature Language="C#" Value="public string DropDownToolTipFooterDescription { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DropDownToolTipFooterDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipFooterDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den beschreibenden Text, der in der Fußzeile der QuickInfo für den Dropdownbereich dieses Steuerelements angezeigt wird.</summary>
+        <value>Den beschreibenden Text in der Fußzeile der QuickInfo angezeigt. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_DropDownToolTipFooterDescription"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipFooterDescriptionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownToolTipFooterDescriptionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DropDownToolTipFooterDescriptionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DropDownToolTipFooterDescriptionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipFooterDescriptionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipFooterDescription" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownToolTipFooterImageSource">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ImageSource DropDownToolTipFooterImageSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.ImageSource DropDownToolTipFooterImageSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipFooterImageSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ImageSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Bild, das in der Fußzeile der QuickInfo für den Dropdownbereich dieses Steuerelements angezeigt wird.</summary>
+        <value>Das Bild, das in der Fußzeile der QuickInfo angezeigt. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_DropDownToolTipFooterImageSource"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipFooterImageSourceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownToolTipFooterImageSourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DropDownToolTipFooterImageSourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DropDownToolTipFooterImageSourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipFooterImageSourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipFooterImageSource" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownToolTipFooterTitle">
+      <MemberSignature Language="C#" Value="public string DropDownToolTipFooterTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DropDownToolTipFooterTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipFooterTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Titeltext, der in der Fußzeile der QuickInfo für den Dropdownbereich dieses Steuerelements angezeigt wird.</summary>
+        <value>Der Titeltext in der Fußzeile der QuickInfo angezeigt. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_DropDownToolTipFooterTitle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipFooterTitleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownToolTipFooterTitleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DropDownToolTipFooterTitleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DropDownToolTipFooterTitleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipFooterTitleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipFooterTitle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownToolTipImageSource">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ImageSource DropDownToolTipImageSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.ImageSource DropDownToolTipImageSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipImageSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ImageSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Bild, das in der QuickInfo für den Dropdownbereich dieses Steuerelements angezeigt wird.</summary>
+        <value>Das Bild, das in der QuickInfo anzuzeigen. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_DropDownToolTipImageSource"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipImageSourceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownToolTipImageSourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DropDownToolTipImageSourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DropDownToolTipImageSourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipImageSourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipImageSource" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownToolTipTitle">
+      <MemberSignature Language="C#" Value="public string DropDownToolTipTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DropDownToolTipTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Titeltext, der in der QuickInfo für den Dropdownbereich dieses Steuerelements angezeigt wird.</summary>
+        <value>Der Titeltext, der in der QuickInfo anzuzeigen. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_DropDownToolTipTitle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipTitleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownToolTipTitleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DropDownToolTipTitleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DropDownToolTipTitleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipTitleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.DropDownToolTipTitle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderKeyTip">
+      <MemberSignature Language="C#" Value="public string HeaderKeyTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderKeyTip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.HeaderKeyTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Tastenkombination für den Headerbereich dieses Steuerelements fest.</summary>
+        <value>Die Tastenkombination für den Headerbereich dieses Steuerelements. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Zugriffstasteninfo muss einen Wert von 1 bis 3 Großbuchstaben und darf keine Leerzeichen, Tabulatoren oder Zeilenvorschubzeichen.  
+  
+ Zugriffstasteninfos werden manchmal als Zugriffstasten bezeichnet und dienen als Tastenkombinationen, die Steuerelemente zu aktivieren. Zugriffstasteninfos angezeigt werden, auf die <xref:System.Windows.Controls.Ribbon.Ribbon> Wenn Sie die ALT-Taste drücken.  
+  
+<a name="dependencyPropertyInfo_HeaderKeyTip"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.HeaderKeyTipProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderKeyTipProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderKeyTipProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderKeyTipProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.HeaderKeyTipProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.HeaderKeyTip" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderQuickAccessToolBarId">
+      <MemberSignature Language="C#" Value="public object HeaderQuickAccessToolBarId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object HeaderQuickAccessToolBarId" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.HeaderQuickAccessToolBarId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, das einen Link ein Menübandsteuerelement einem eindeutigen Bezeichner, um ein entsprechendes Steuerelement in der Symbolleiste für den Schnellzugriff.</summary>
+        <value>Ein eindeutiger Bezeichner für ein Steuerelement in der Symbolleiste für den Schnellzugriff.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_HeaderQuickAccessToolBarId"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.HeaderQuickAccessToolBarIdProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderQuickAccessToolBarIdProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderQuickAccessToolBarIdProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderQuickAccessToolBarIdProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.HeaderQuickAccessToolBarIdProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.HeaderQuickAccessToolBarId" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabledCore">
+      <MemberSignature Language="C#" Value="protected override bool IsEnabledCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabledCore" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.IsEnabledCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Steuerelement aktiviert ist.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivatingKeyTip">
+      <MemberSignature Language="C#" Value="protected override void OnActivatingKeyTip (System.Windows.Controls.ActivatingKeyTipEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnActivatingKeyTip(class System.Windows.Controls.ActivatingKeyTipEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.OnActivatingKeyTip(System.Windows.Controls.ActivatingKeyTipEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.ActivatingKeyTipEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Enthält Daten über die Aktivierung.</param>
+        <summary>Wird aufgerufen, wenn die Zugriffstasteninfo oder Accelerator-Taste gedrückt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die visuelle Struktur für die <see cref="T:System.Windows.Controls.Ribbon.RibbonSplitMenuItem" />, wenn eine neue Vorlage angewendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird immer dann aufgerufen, wenn Anwendungscode oder ein interner Prozess, z. B. eine Layout-Wiederaufbau-Übergabe, die <xref:System.Windows.FrameworkElement.ApplyTemplate%2A>-Methode aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.KeyDown" />-Ereignis bereit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyTipAccessed">
+      <MemberSignature Language="C#" Value="protected override void OnKeyTipAccessed (System.Windows.Controls.KeyTipAccessedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyTipAccessed(class System.Windows.Controls.KeyTipAccessedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonSplitMenuItem.OnKeyTipAccessed(System.Windows.Controls.KeyTipAccessedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.KeyTipAccessedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Enthält Daten über die Aktivierung.</param>
+        <summary>Wird aufgerufen, wenn der Schlüssel Zugriffstasteninfo oder die Tastenkombination zugegriffen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

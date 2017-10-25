@@ -1,0 +1,182 @@
+<Type Name="Polygon" FullName="System.Windows.Shapes.Polygon">
+  <TypeSignature Language="C#" Value="public sealed class Polygon : System.Windows.Shapes.Shape" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Polygon extends System.Windows.Shapes.Shape" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Shapes.Polygon" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Shapes.Shape</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Zeichnet ein Polygon, das aus einer Reihe verbundener Linien besteht, die eine geschlossene Form bilden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Objekt ähnelt der <xref:System.Windows.Shapes.Polyline> Objekt, mit dem Unterschied, dass dieses Objekt eine geschlossene Form sein muss.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Shapes.Polygon> Element, und legen dessen Eigenschaften mithilfe von code.  
+  
+ [!code-cpp[shapesprocedural#ShapesProceduralPolygon](~/samples/snippets/cpp/VS_Snippets_Wpf/ShapesProcedural/CPP/ShapesProcedural.cpp#shapesproceduralpolygon)]
+ [!code-csharp[shapesprocedural#ShapesProceduralPolygon](~/samples/snippets/csharp/VS_Snippets_Wpf/ShapesProcedural/Csharp/ShapesProcedural.cs#shapesproceduralpolygon)]
+ [!code-vb[shapesprocedural#ShapesProceduralPolygon](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ShapesProcedural/VisualBasic/ShapesProceduralVB.vb#shapesproceduralpolygon)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Polygon ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shapes.Polygon.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Shapes.Polygon" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefiningGeometry">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Geometry DefiningGeometry { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Geometry DefiningGeometry" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Polygon.DefiningGeometry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillRule">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.FillRule FillRule { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.FillRule FillRule" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Polygon.FillRule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FillRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Media.FillRule" /> Enumeration, der angibt, wie die innere Füllung der Form bestimmt wird.</summary>
+        <value>Einer der <see cref="T:System.Windows.Media.FillRule" />-Enumerationswerte. Die Standardeinstellung ist <see cref="F:System.Windows.Media.FillRule.EvenOdd" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.FillRule.EvenOdd> Enumerationswert bestimmt, ob"eines Punkts auf der Form. Es einem Strahl ab dem Punkt unendlich in eine beliebige Richtung gezeichnet und zählt die Anzahl der Pfadsegmente in der angegebenen Form, die den Strahl schneidet. Wenn die Zahl ungerade ist, liegt der Punkt innen. Wenn sie selbst der Fall ist, ist der Punkt außerhalb.  
+  
+ Die <xref:System.Windows.Media.FillRule.Nonzero> Enumerationswert bestimmt, ob"eines Punkts auf der Form. Es einem Strahl ab dem Punkt unendlich in eine beliebige Richtung gezeichnet und dann untersucht die Stellen, in denen ein Segment der Form den Strahl schneidet. Beginnend mit der Anzahl 0 (null), es hinzugefügt jedes Mal ein Segment den Strahl von links nach rechts und subtrahiert jeweils eine Stelle ein Pfadsegment den Strahl von rechts nach links schneidet. Nachdem sie die überschneidungen zählt, wenn das Ergebnis 0 (null) ist, ist der Punkt außerhalb des Pfads. Andernfalls liegt er innerhalb des Pfads.  
+  
+ ![Füllungsregel-Darstellung](~/add/media/ref-mil-fillrule-stars.PNG "Füllungsregel-Darstellung")  
+Beispiel für FillRule  
+  
+<a name="dependencyPropertyInfo_FillRule"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Shapes.Polygon.FillRuleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillRuleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FillRuleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FillRuleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shapes.Polygon.FillRuleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shapes.Polygon.FillRule" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Points">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PointCollection Points { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.PointCollection Points" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shapes.Polygon.Points" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PointCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung ab, die die Vertexpunkte des Polygons enthält, oder legt diese fest.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Windows.Point" /> Strukturen, die die Vertexpunkte des Polygons beschreiben. Der Standardwert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], eine Leerzeichen getrennte Liste von durch Kommas getrennten x- und y-Koordinate Paaren verwenden, um dieses Attribut festzulegen. Verwenden Sie die einfache Notation, d. h. `x1,y1 x2,y2 ... xn,yn`.  
+  
+<a name="dependencyPropertyInfo_Points"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Shapes.Polygon.PointsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Shapes.Polygon> Element, und legen die <xref:System.Windows.Shapes.Polygon.Points%2A> Eigenschaft mithilfe von Code.  
+  
+ [!code-cpp[shapesprocedural#ShapesProceduralPolygon](~/samples/snippets/cpp/VS_Snippets_Wpf/ShapesProcedural/CPP/ShapesProcedural.cpp#shapesproceduralpolygon)]
+ [!code-csharp[shapesprocedural#ShapesProceduralPolygon](~/samples/snippets/csharp/VS_Snippets_Wpf/ShapesProcedural/Csharp/ShapesProcedural.cs#shapesproceduralpolygon)]
+ [!code-vb[shapesprocedural#ShapesProceduralPolygon](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ShapesProcedural/VisualBasic/ShapesProceduralVB.vb#shapesproceduralpolygon)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PointsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PointsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PointsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shapes.Polygon.PointsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shapes.Polygon.Points" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

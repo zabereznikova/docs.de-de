@@ -1,0 +1,308 @@
+<Type Name="RSAParameters" FullName="System.Security.Cryptography.RSAParameters">
+  <TypeSignature Language="C#" Value="public struct RSAParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit RSAParameters extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.RSAParameters" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Standardparameter für den <see cref="T:System.Security.Cryptography.RSA" />-Algorithmus dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.RSA> -Klasse verfügbar macht eine <xref:System.Security.Cryptography.RSA.ExportParameters%2A> Methode, die Sie zum Abrufen des unformatierten RSA-Schlüssels in Form von ermöglicht eine <xref:System.Security.Cryptography.RSAParameters> Struktur. Grundlegendes zu den Inhalt dieser Struktur erfordert Vertrautheit mit der Funktionsweise des <xref:System.Security.Cryptography.RSA> Algorithmus funktioniert. Im nächste Abschnitt wird den Algorithmus kurz erläutert.  
+  
+## <a name="rsa-algorithm"></a>RSA-Algorithmus  
+ Um ein Schlüsselpaar zu generieren, starten Sie durch das Erstellen von zwei großen Primzahlen p und q aus. Diese Zahlen multipliziert werden, und das Ergebnis wird n aufgerufen. Da p und Q Primzahlen, die nur Faktoren von n sind 1, p, Q und n sind.  
+  
+ Wenn wir nur Zahlen berücksichtigt, die kleiner als n sind, die Anzahl der Zahlen, die relativ wesentlichen bis n, d. h. haben keine Faktoren gemeinsam mit n gleich (p - 1)(q-1).  
+  
+ Nun wählen Sie eine Zahl e, relative Primzahlen auf den Wert an, die, den Sie berechnet, ist. Der öffentliche Schlüssel wird jetzt als {e, n} dargestellt.  
+  
+ Um den privaten Schlüssel zu erstellen, müssen Sie berechnen, d, wenn eine Zahl ist, dass (d)(e) mod (p - 1)(q-1) = 1. In Übereinstimmung mit den euklidischen Algorithmus, der private Schlüssel ist jetzt {d, n}.  
+  
+ Verschlüsselung von nur-Text-m Chiffretext c ist definiert als c = (m ^ e) mod n. Entschlüsselung würde dann als definiert werden, m = (c# ^ d) mod n.  
+  
+## <a name="summary-of-fields"></a>Zusammenfassung von Feldern  
+ A.1.2 des Themas die [PKCS #1: RSA Cryptography Standard](http://go.microsoft.com/fwlink/?LinkId=113155) im RSA Laboratories Web Site ein Format für private RSA-Schlüssel definiert.  
+  
+ Die folgende Tabelle enthält die Felder von der <xref:System.Security.Cryptography.RSAParameters> Struktur. Die dritte Spalte enthält das entsprechende Feld im Abschnitt A.1.2 der [PKCS #1: RSA Cryptography Standard](http://go.microsoft.com/fwlink/?LinkId=113155).  
+  
+|<xref:System.Security.Cryptography.RSAParameters>-Feld|Enthält|Entsprechende PKCS #1-Feld|  
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------|  
+|<xref:System.Security.Cryptography.RSAParameters.D>|d, Exponent des privaten Schlüssels|privateExponent|  
+|<xref:System.Security.Cryptography.RSAParameters.DP>|d mod (p - 1)|exponent1|  
+|<xref:System.Security.Cryptography.RSAParameters.DQ>|d mod (Q - 1)|exponent2|  
+|<xref:System.Security.Cryptography.RSAParameters.Exponent>|e, den öffentlichen Exponenten|publicExponent|  
+|<xref:System.Security.Cryptography.RSAParameters.InverseQ>|(InverseQ) (Q) = 1 mod p|Koeffizienten|  
+|<xref:System.Security.Cryptography.RSAParameters.Modulus>|n|modulus|  
+|<xref:System.Security.Cryptography.RSAParameters.P>|d|prime1|  
+|<xref:System.Security.Cryptography.RSAParameters.Q>|q|prime2|  
+  
+ Die Sicherheit von RSA leitet sich von der Tatsache, dass, wenn Sie den öffentlichen Schlüssel {e, n}, es rechnerisch d, entweder direkt oder durch die Einteilung von n in p und q berechnet. Aus diesem Grund muss alle Teile des Schlüssels im Zusammenhang mit d, p und q geheim gehalten werden. Beim Aufrufen  
+  
+ <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A>und fordern Sie nur die öffentlichen Schlüsselinformationen daher erhalten Sie nur <xref:System.Security.Cryptography.RSAParameters.Exponent> und <xref:System.Security.Cryptography.RSAParameters.Modulus>. Die anderen Felder sind verfügbar, nur, wenn Sie Zugriff auf den privaten Schlüssel haben, und fordern sie.  
+  
+ <xref:System.Security.Cryptography.RSAParameters>ist nicht in keiner Weise verschlüsselt werden, damit Sie vorsichtig sein müssen, wenn Sie mit den Informationen des privaten Schlüssels verwenden. In der Tat können keines der Felder, die private Schlüsselinformationen enthalten serialisiert werden. Wenn Sie versuchen, Serialisieren einer <xref:System.Security.Cryptography.RSAParameters> Struktur mit einem Remote aufrufen oder mithilfe eines der Serialisierungsprogramme, erhalten Sie nur Informationen des öffentlichen Schlüssels. Wenn Sie private Schlüsselinformationen übergeben möchten, müssen Sie diese Daten manuell zu senden. Wenn jeder Benutzer die Parameter ableiten kann, wird der Schlüssel, mit dem Sie übertragen in allen Fällen nutzlos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="D">
+      <MemberSignature Language="C#" Value="public byte[] D;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] D" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.D" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den <see langword="D" />-Parameter für den <see cref="T:System.Security.Cryptography.RSA" />-Algorithmus dar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DP">
+      <MemberSignature Language="C#" Value="public byte[] DP;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] DP" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.DP" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den <see langword="DP" />-Parameter für den <see cref="T:System.Security.Cryptography.RSA" />-Algorithmus dar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DQ">
+      <MemberSignature Language="C#" Value="public byte[] DQ;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] DQ" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.DQ" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den <see langword="DQ" />-Parameter für den <see cref="T:System.Security.Cryptography.RSA" />-Algorithmus dar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exponent">
+      <MemberSignature Language="C#" Value="public byte[] Exponent;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] Exponent" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.Exponent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den <see langword="Exponent" />-Parameter für den <see cref="T:System.Security.Cryptography.RSA" />-Algorithmus dar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InverseQ">
+      <MemberSignature Language="C#" Value="public byte[] InverseQ;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] InverseQ" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.InverseQ" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den <see langword="InverseQ" />-Parameter für den <see cref="T:System.Security.Cryptography.RSA" />-Algorithmus dar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modulus">
+      <MemberSignature Language="C#" Value="public byte[] Modulus;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] Modulus" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.Modulus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den <see langword="Modulus" />-Parameter für den <see cref="T:System.Security.Cryptography.RSA" />-Algorithmus dar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="P">
+      <MemberSignature Language="C#" Value="public byte[] P;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] P" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.P" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den <see langword="P" />-Parameter für den <see cref="T:System.Security.Cryptography.RSA" />-Algorithmus dar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Q">
+      <MemberSignature Language="C#" Value="public byte[] Q;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] Q" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.Q" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den <see langword="Q" />-Parameter für den <see cref="T:System.Security.Cryptography.RSA" />-Algorithmus dar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

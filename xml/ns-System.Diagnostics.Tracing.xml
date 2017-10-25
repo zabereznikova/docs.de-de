@@ -1,0 +1,13 @@
+<Namespace Name="System.Diagnostics.Tracing">
+  <Docs>
+    <summary>Die <see cref="N:System.Diagnostics.Tracing" /> -Namespace stellt Typen und Member, die Ihnen ermöglichen, stark erstellen typisiert Ereignisse durch die ereignisablaufverfolgung für Windows (ETW) aufgezeichnet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein stark typisiertes Ereignis wird anhand des Namens identifiziert und enthält Beschreibungen der Nutzlast. Sie können die Liste der Ereignisse ermitteln, die ein Programm mit Reflektion erstellt werden kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,91 @@
+<Type Name="FontNumeralStyle" FullName="System.Windows.FontNumeralStyle">
+  <TypeSignature Language="C#" Value="public enum FontNumeralStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FontNumeralStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FontNumeralStyle" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt das Ziffernformat für ein <see cref="T:System.Windows.Documents.Typography" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ OpenType-Schriftarten unterstützen ein altes Format Ziffer-Format. Dieses Format dient der Anzeige von Ziffern in nicht mehr üblichen Stilen. Im folgenden Text wird ein Datum aus dem 18. Jahrhundert im Standardformat und mit Mediävalziffern in der Schriftart Palatino Linotype gezeigt.  
+  
+ ![Text mit OpenType-Mediävalziffern](~/add/media/opentypefont24.gif "Text mit OpenType-Mediävalziffern")  
+Beispiel für standard und Mediävalziffern  
+  
+ Im folgenden Text werden in der Schriftart Palatino Linotype zuerst Standardziffern und dann Mediävalziffern gezeigt.  
+  
+ ![Text mit OpenType-Mediävalziffernsätzen](~/add/media/opentypefont13.gif "Text mit OpenType-Mediävalziffernsätzen")  
+Beispiel für Standard- und Mediävalziffern  
+  
+> [!NOTE]
+>  Die meisten OpenType-Schriftarten verfügbar machen nur eine Teilmenge der insgesamt verfügbaren OpenType-Funktionen. Wenn eine angegebene Schriftart eine bestimmte Funktion nicht unterstützt, werden die Standardglyphen stattdessen verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Mediävalziffern für die Schriftart Palatino Linotype, die mit den Eigenschaften des definieren die <xref:System.Windows.Documents.Typography> Objekt.  
+  
+ [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Lining">
+      <MemberSignature Language="C#" Value="Lining" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontNumeralStyle Lining = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontNumeralStyle.Lining" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontNumeralStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aneinanderreihen Ziffernformat wird verwendet. Standardglyphen ersetzt durch numerische Formen von sogar Höhe.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontNumeralStyle Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontNumeralStyle.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontNumeralStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Standard-Ziffernformat wird verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OldStyle">
+      <MemberSignature Language="C#" Value="OldStyle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontNumeralStyle OldStyle = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontNumeralStyle.OldStyle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontNumeralStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alte Ziffer Stil wird verwendet. Ersetzt Standardglyphen durch eine Abbildung-Format, das Kleinbuchstaben in Höhe und Farbe entspricht.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

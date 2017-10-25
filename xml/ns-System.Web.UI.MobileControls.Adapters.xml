@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.UI.MobileControls.Adapters">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.UI.MobileControls.Adapters" /> -Namespace enthält Klassen, die die Phasen im Lebenszyklus eines mobile-Steuerelements so ändern Sie das Standard-HTML, CHTML oder WML-Markup oder Verhalten für neue Markupstandards oder für bestimmte Browsern und mobilen Geräten außer Kraft setzen können.  Die APIs in diesem Namespace sind veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der <see href="http://go.microsoft.com/fwlink/?LinkID=182900">www.asp.net/mobile</see> Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter>Klasse wird direkt oder indirekt von allen anderen Adapterklassen geerbt in diesem Namespace auf, wie z. B. <xref:System.Web.UI.MobileControls.Adapters.HtmlControlAdapter> und <xref:System.Web.UI.MobileControls.Adapters.WmlControlAdapter>, als auch <xref:System.Web.UI.MobileControls.Adapters.HtmlPageAdapter>, <xref:System.Web.UI.MobileControls.Adapters.ChtmlPageAdapter>, und <xref:System.Web.UI.MobileControls.Adapters.WmlPageAdapter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

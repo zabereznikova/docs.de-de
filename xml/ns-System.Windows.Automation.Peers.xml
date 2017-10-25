@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Automation.Peers">
+  <Docs>
+    <summary>Definiert die <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> -Basisklasse und einen Satz von Typen, die davon abgeleitet und Microsoft .NET Framework-Steuerelementen entsprechen. Jede <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> macht das entsprechende Steuerelement für Microsoft .NET Framework für die Microsoft-Benutzeroberflächenautomatisierung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

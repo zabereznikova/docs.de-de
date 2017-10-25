@@ -1,0 +1,270 @@
+<Type Name="DataFormula" FullName="System.Web.UI.DataVisualization.Charting.DataFormula">
+  <TypeSignature Language="C#" Value="public class DataFormula" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataFormula extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.DataFormula" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Eigenschaften und Methoden zum Vorbereiten der Reihendaten für die technische Analyse für die Reihendaten Formeln anwenden und Vorbereiten von Ausgabedaten, die als Diagramm angezeigt werden. Die tatsächliche Berechnungen erfolgen der <see cref="T:System.Web.UI.DataVisualization.Charting.StatisticFormula" /> Klasse.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataFormula ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataFormula.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.DataVisualization.Charting.DataFormula" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopySeriesValues">
+      <MemberSignature Language="C#" Value="public void CopySeriesValues (string inputSeries, string outputSeries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopySeriesValues(string inputSeries, string outputSeries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataFormula.CopySeriesValues(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputSeries" Type="System.String" />
+        <Parameter Name="outputSeries" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="inputSeries">Namen für eine durch Trennzeichen getrennte Liste der Reihennamen Eingabedaten und optionale X und Y-Werte.</param>
+        <param name="outputSeries">Namen für eine durch Trennzeichen getrennte Liste der Namen von Datenreihen Ausgabe und die optionale X- und Y-Werte.</param>
+        <summary>Führt, teilt oder verschiebt Y-Werte in der Reihe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinancialFormula">
+      <MemberSignature Language="C#" Value="public void FinancialFormula (System.Web.UI.DataVisualization.Charting.FinancialFormula formulaName, string inputSeries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FinancialFormula(valuetype System.Web.UI.DataVisualization.Charting.FinancialFormula formulaName, string inputSeries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataFormula.FinancialFormula(System.Web.UI.DataVisualization.Charting.FinancialFormula,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formulaName" Type="System.Web.UI.DataVisualization.Charting.FinancialFormula" />
+        <Parameter Name="inputSeries" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="formulaName">Formelname.</param>
+        <param name="inputSeries">Namen für eine durch Trennzeichen getrennte Liste von Eingabereihennamen und optional X und Y-Werte.</param>
+        <summary>Ruft eine Methode aus einem Formelmodul mit dem angegebenen Formelnamen und Eingabereihe/r/s an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinancialFormula">
+      <MemberSignature Language="C#" Value="public void FinancialFormula (System.Web.UI.DataVisualization.Charting.FinancialFormula formulaName, System.Web.UI.DataVisualization.Charting.Series inputSeries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FinancialFormula(valuetype System.Web.UI.DataVisualization.Charting.FinancialFormula formulaName, class System.Web.UI.DataVisualization.Charting.Series inputSeries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataFormula.FinancialFormula(System.Web.UI.DataVisualization.Charting.FinancialFormula,System.Web.UI.DataVisualization.Charting.Series)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formulaName" Type="System.Web.UI.DataVisualization.Charting.FinancialFormula" />
+        <Parameter Name="inputSeries" Type="System.Web.UI.DataVisualization.Charting.Series" />
+      </Parameters>
+      <Docs>
+        <param name="formulaName">Formelname.</param>
+        <param name="inputSeries">Eingabereihe.</param>
+        <summary>Ruft eine Methode aus einem Formelmodul mit dem angegebenen Formelnamen und Eingabereihe an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinancialFormula">
+      <MemberSignature Language="C#" Value="public void FinancialFormula (System.Web.UI.DataVisualization.Charting.FinancialFormula formulaName, string inputSeries, string outputSeries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FinancialFormula(valuetype System.Web.UI.DataVisualization.Charting.FinancialFormula formulaName, string inputSeries, string outputSeries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataFormula.FinancialFormula(System.Web.UI.DataVisualization.Charting.FinancialFormula,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formulaName" Type="System.Web.UI.DataVisualization.Charting.FinancialFormula" />
+        <Parameter Name="inputSeries" Type="System.String" />
+        <Parameter Name="outputSeries" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="formulaName">Formelname.</param>
+        <param name="inputSeries">Namen für eine durch Trennzeichen getrennte Liste von Eingabereihennamen und optional X und Y-Werte.</param>
+        <param name="outputSeries">Namen für eine durch Trennzeichen getrennte Liste der Ausgabereihennamen und die optionale X- und Y-Werte.</param>
+        <summary>Ruft eine Methode aus einem Formelmodul mit dem angegebenen Formelnamen, Eingabereihe/r/s und mindestens einen Ausgabe-Serie.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinancialFormula">
+      <MemberSignature Language="C#" Value="public void FinancialFormula (System.Web.UI.DataVisualization.Charting.FinancialFormula formulaName, System.Web.UI.DataVisualization.Charting.Series inputSeries, System.Web.UI.DataVisualization.Charting.Series outputSeries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FinancialFormula(valuetype System.Web.UI.DataVisualization.Charting.FinancialFormula formulaName, class System.Web.UI.DataVisualization.Charting.Series inputSeries, class System.Web.UI.DataVisualization.Charting.Series outputSeries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataFormula.FinancialFormula(System.Web.UI.DataVisualization.Charting.FinancialFormula,System.Web.UI.DataVisualization.Charting.Series,System.Web.UI.DataVisualization.Charting.Series)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formulaName" Type="System.Web.UI.DataVisualization.Charting.FinancialFormula" />
+        <Parameter Name="inputSeries" Type="System.Web.UI.DataVisualization.Charting.Series" />
+        <Parameter Name="outputSeries" Type="System.Web.UI.DataVisualization.Charting.Series" />
+      </Parameters>
+      <Docs>
+        <param name="formulaName">Formelname.</param>
+        <param name="inputSeries">Die Eingabereihe.</param>
+        <param name="outputSeries">Die Ausgabe-Serie.</param>
+        <summary>Ruft eine Methode aus einem Formelmodul mit dem angegebenen Formelnamen, Eingabereihe und Ausgabereihen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinancialFormula">
+      <MemberSignature Language="C#" Value="public void FinancialFormula (System.Web.UI.DataVisualization.Charting.FinancialFormula formulaName, string parameters, string inputSeries, string outputSeries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FinancialFormula(valuetype System.Web.UI.DataVisualization.Charting.FinancialFormula formulaName, string parameters, string inputSeries, string outputSeries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataFormula.FinancialFormula(System.Web.UI.DataVisualization.Charting.FinancialFormula,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formulaName" Type="System.Web.UI.DataVisualization.Charting.FinancialFormula" />
+        <Parameter Name="parameters" Type="System.String" />
+        <Parameter Name="inputSeries" Type="System.String" />
+        <Parameter Name="outputSeries" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="formulaName">Formelname.</param>
+        <param name="parameters">Formelparameter.</param>
+        <param name="inputSeries">Namen für eine durch Trennzeichen getrennte Liste von Eingabereihennamen und optional X und Y-Werte.</param>
+        <param name="outputSeries">Namen für eine durch Trennzeichen getrennte Liste der Ausgabereihennamen und die optionale X- und Y-Werte.</param>
+        <summary>Ruft eine Methode aus einem Formelmodul mit angegebenen Formelname, Formelparameter, Eingabereihe/r/s und mindestens einen Ausgabe-Serie.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinancialFormula">
+      <MemberSignature Language="C#" Value="public void FinancialFormula (System.Web.UI.DataVisualization.Charting.FinancialFormula formulaName, string parameters, System.Web.UI.DataVisualization.Charting.Series inputSeries, System.Web.UI.DataVisualization.Charting.Series outputSeries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FinancialFormula(valuetype System.Web.UI.DataVisualization.Charting.FinancialFormula formulaName, string parameters, class System.Web.UI.DataVisualization.Charting.Series inputSeries, class System.Web.UI.DataVisualization.Charting.Series outputSeries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.DataFormula.FinancialFormula(System.Web.UI.DataVisualization.Charting.FinancialFormula,System.String,System.Web.UI.DataVisualization.Charting.Series,System.Web.UI.DataVisualization.Charting.Series)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formulaName" Type="System.Web.UI.DataVisualization.Charting.FinancialFormula" />
+        <Parameter Name="parameters" Type="System.String" />
+        <Parameter Name="inputSeries" Type="System.Web.UI.DataVisualization.Charting.Series" />
+        <Parameter Name="outputSeries" Type="System.Web.UI.DataVisualization.Charting.Series" />
+      </Parameters>
+      <Docs>
+        <param name="formulaName">Formelname.</param>
+        <param name="parameters">Formelparameter.</param>
+        <param name="inputSeries">Die Eingabereihe.</param>
+        <param name="outputSeries">Die Ausgabe-Serie.</param>
+        <summary>Ruft eine Methode aus einem Formelmodul mit dem angegebenen Formelnamen, Formelparameter Eingabereihe und Ausgabereihen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmptyPointIgnored">
+      <MemberSignature Language="C#" Value="public bool IsEmptyPointIgnored { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmptyPointIgnored" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.DataFormula.IsEmptyPointIgnored" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob leere Punkte beim Ausführen von Berechnungen ignoriert werden.</summary>
+        <value>
+          <see langword="True" />Wenn Sie leere Punkte ignoriert werden, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt den Wert ist `true`, leere Punkte werden ignoriert, während der Berechnung. Andernfalls werden leere Punkte als Nullen (0) behandelt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStartFromFirst">
+      <MemberSignature Language="C#" Value="public bool IsStartFromFirst { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStartFromFirst" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.DataFormula.IsStartFromFirst" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob Formeln, z. B. ein gleitender Durchschnitt von 0 (null) zu starten.</summary>
+        <value>
+          <see langword="True" />Wenn Formeln, z. B. "Gleitender Durchschnitt", beginnen Sie mit 0 (null); andernfalls <see langword="False" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Statistics">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.StatisticFormula Statistics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.StatisticFormula Statistics" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.DataFormula.Statistics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.StatisticFormula</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Verweis auf die <see cref="T:System.Web.UI.DataVisualization.Charting.StatisticFormula" /> Klasse.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.StatisticFormula" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

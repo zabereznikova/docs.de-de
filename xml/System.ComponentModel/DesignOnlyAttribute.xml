@@ -1,0 +1,301 @@
+<Type Name="DesignOnlyAttribute" FullName="System.ComponentModel.DesignOnlyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DesignOnlyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignOnlyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DesignOnlyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, ob eine Eigenschaft nur zur Entwurfszeit festgelegt werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mitglieder mit markiert die <xref:System.ComponentModel.DesignOnlyAttribute> festgelegt `true` kann nur zur Entwurfszeit festgelegt werden. In der Regel werden diese Eigenschaften sind nur zur Entwurfszeit und entsprechen nicht auf eine Real-Eigenschaft für das Objekt zur Laufzeit.  
+  
+ Elemente, die entweder kein Attribut oder gekennzeichnet werden, mit der <xref:System.ComponentModel.DesignOnlyAttribute> festgelegt `false` kann zur Laufzeit festgelegt werden. Die Standardeinstellung ist `false`.  
+  
+ Eine Eigenschaft mit dem <xref:System.ComponentModel.DesignOnlyAttribute> festgelegt `true` verfügt über einen Wert in die RESX-Datei anstelle von serialisiert die `InitializeComponent` Methode.  
+  
+ Weitere Informationen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine `GetLanguage` Eigenschaft. Die Eigenschaft wird markiert, mit einem <xref:System.ComponentModel.DesignOnlyAttribute>.  
+  
+ [!code-cpp[Classic DesignOnlyAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DesignOnlyAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DesignOnlyAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DesignOnlyAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic DesignOnlyAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DesignOnlyAttribute Example/VB/source.vb#1)]  
+  
+ Im nächsten Beispiel wird den Wert, der die <xref:System.ComponentModel.DesignOnlyAttribute>. Der Code zunächst Ruft eine <xref:System.ComponentModel.PropertyDescriptorCollection> mit allen Eigenschaften für das Objekt. Als Nächstes sie Indizes in der <xref:System.ComponentModel.PropertyDescriptorCollection> zum Suchen der `GetLanguage` Eigenschaft. Klicken Sie dann die Attribute für diese Eigenschaft zurückgegeben, und speichert sie in der Variablen Attribute wird.  
+  
+ Im Beispiel wird dann ausgegeben, ob die Eigenschaft nur durch Abrufen von Design ist <xref:System.ComponentModel.DesignOnlyAttribute> aus der <xref:System.ComponentModel.AttributeCollection>, und sie in das Konsolenfenster geschrieben.  
+  
+ [!code-cpp[Classic DesignOnlyAttribute Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DesignOnlyAttribute Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic DesignOnlyAttribute Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DesignOnlyAttribute Example/CS/source.cs#2)]
+ [!code-vb[Classic DesignOnlyAttribute Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DesignOnlyAttribute Example/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignOnlyAttribute (bool isDesignOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isDesignOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignOnlyAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isDesignOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isDesignOnly">
+          <see langword="true" />Wenn eine Eigenschaft nur zur Entwurfszeit festgelegt werden kann. <see langword="false" /> ist die Eigenschaft zur Entwurfszeit und zur Laufzeit festgelegt werden kann.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DesignOnlyAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.DesignOnlyAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.DesignOnlyAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DesignOnlyAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignOnlyAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Standardwert für die <see cref="T:System.ComponentModel.DesignOnlyAttribute" />, also <see cref="F:System.ComponentModel.DesignOnlyAttribute.No" />. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignOnlyAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, dessen auf Wertgleichheit geprüft.</param>
+        <summary>Gibt zurück, ob der Wert des angegebenen Objekts gleich dem aktuellen <see cref="T:System.ComponentModel.DesignOnlyAttribute" />.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert des angegebenen Objekts gleich der aktuellen ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignOnlyAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignOnlyAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob dieses Attribut die Standardeinstellung ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Attribut der Standardwert für diese Attributklasse ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDesignOnly">
+      <MemberSignature Language="C#" Value="public bool IsDesignOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDesignOnly" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DesignOnlyAttribute.IsDesignOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob eine Eigenschaft nur zur Entwurfszeit festgelegt werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn eine Eigenschaft nur zur Entwurfszeit festgelegt werden kann. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.DesignOnlyAttribute No;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.DesignOnlyAttribute No" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DesignOnlyAttribute.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignOnlyAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Eigenschaft zur Entwurfszeit oder zur Laufzeit festgelegt werden kann. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.DesignOnlyAttribute.No> Feld ist die Standardeinstellung für dieses Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.DesignOnlyAttribute Yes;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.DesignOnlyAttribute Yes" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DesignOnlyAttribute.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignOnlyAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Eigenschaft nur zur Entwurfszeit festgelegt werden kann. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

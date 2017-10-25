@@ -1,0 +1,884 @@
+<Type Name="Selector" FullName="System.Windows.Controls.Primitives.Selector">
+  <TypeSignature Language="C#" Value="public abstract class Selector : System.Windows.Controls.ItemsControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract Selector extends System.Windows.Controls.ItemsControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.Selector" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ItemsControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("SelectionChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("SelectedIndex")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement, das einem Benutzer ermöglicht, Elemente aus den untergeordneten Elementen auszuwählen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Primitives.Selector>ist ein <xref:System.Windows.Controls.ItemsControl>, was bedeutet, dass eine Auflistung von Objekten eines beliebigen Typs (z. B. die Zeichenfolge "," Image "oder" Bereich ") enthalten kann. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Controls.ItemsControl>-Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Selector ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Selector.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Primitives.Selector" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSelectedHandler">
+      <MemberSignature Language="C#" Value="public static void AddSelectedHandler (System.Windows.DependencyObject element, System.Windows.RoutedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddSelectedHandler(class System.Windows.DependencyObject element, class System.Windows.RoutedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Selector.AddSelectedHandler(System.Windows.DependencyObject,System.Windows.RoutedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.RoutedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Element, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler hinzufügen.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Controls.Primitives.Selector.Selected" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddUnselectedHandler">
+      <MemberSignature Language="C#" Value="public static void AddUnselectedHandler (System.Windows.DependencyObject element, System.Windows.RoutedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddUnselectedHandler(class System.Windows.DependencyObject element, class System.Windows.RoutedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Selector.AddUnselectedHandler(System.Windows.DependencyObject,System.Windows.RoutedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.RoutedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Element, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler hinzufügen.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Controls.Primitives.Selector.Unselected" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override void ClearContainerForItemOverride (System.Windows.DependencyObject element, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearContainerForItemOverride(class System.Windows.DependencyObject element, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Selector.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Containerelement des Elements.</param>
+        <param name="item">Das Datenelement.</param>
+        <summary>Gibt einen Elementcontainer in den Zustand vor dem war <see cref="M:System.Windows.Controls.ItemsControl.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Primitives.Selector.ClearContainerForItemOverride%2A>Löscht die <xref:System.Windows.Controls.Primitives.Selector.IsSelected%2A?displayProperty=nameWithType> -Eigenschaft, wenn die Elementcontainer aus der visuellen Struktur entfernt wird.  Dies erfolgt, damit Elementcontainer ordnungsgemäße Verhalten bei der <xref:System.Windows.Controls.Primitives.Selector> Container Wiederverwendung verwendet.  Weitere Informationen finden Sie unter <xref:System.Windows.Controls.VirtualizationMode> und Container "Recycling", in [Optimieren der Leistung: Steuerelemente](~/docs/framework/wpf/advanced/optimizing-performance-controls.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsSelected">
+      <MemberSignature Language="C#" Value="public static bool GetIsSelected (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsSelected(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Selector.GetIsSelected(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Objekt bereit, die Abfrage die <see cref="P:System.Windows.Controls.Primitives.Selector.IsSelected" /> Eigenschaft.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.Primitives.Selector.IsSelected" /> -Eigenschaft, der angibt, ob ein Element ausgewählt ist.</summary>
+        <returns>Boolescher Wert **"true"** Wenn die <see cref="P:System.Windows.Controls.Primitives.Selector.IsSelected" /> Eigenschaft **"true"**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsSelectionActive">
+      <MemberSignature Language="C#" Value="public static bool GetIsSelectionActive (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsSelectionActive(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Selector.GetIsSelectionActive(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem die angefügte Eigenschaft gelesen werden soll.</param>
+        <summary>Ruft einen Wert, der angibt, ob sich der Tastaturfokus innerhalb der<see cref="T:System.Windows.Controls.Primitives.Selector" /></summary>
+        <returns>Wert der Eigenschaft, **"true"** ist der Tastaturfokus innerhalb der <see cref="T:System.Windows.Controls.Primitives.Selector" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSelectedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSelectedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Selector.IsSelectedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.Primitives.Selector.IsSelected" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionActiveProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSelectionActiveProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSelectionActiveProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Selector.IsSelectionActiveProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.Primitives.Selector.IsSelectionActive" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronizedWithCurrentItem">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsSynchronizedWithCurrentItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsSynchronizedWithCurrentItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.NullableBoolConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein <see cref="T:System.Windows.Controls.Primitives.Selector" /> sollten die <see cref="P:System.Windows.Controls.Primitives.Selector.SelectedItem" /> synchronisiert mit dem aktuellen Element in der <see cref="P:System.Windows.Controls.ItemsControl.Items" /> Eigenschaft.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Windows.Controls.Primitives.Selector.SelectedItem" /> ist immer mit dem aktuellen Element synchronisiert die <see cref="T:System.Windows.Controls.ItemCollection" />; <see langword="false" /> Wenn die <see cref="P:System.Windows.Controls.Primitives.Selector.SelectedItem" /> wird nie mit dem aktuellen Element; synchronisiert <see langword="null" /> Wenn die <see cref="P:System.Windows.Controls.Primitives.Selector.SelectedItem" /> synchronisiert mit dem aktuellen Element nur, wenn die <see cref="T:System.Windows.Controls.Primitives.Selector" /> verwendet eine <see cref="T:System.Windows.Data.CollectionView" />.  Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können festlegen, die <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> Eigenschaft, um `true` , stellen Sie sicher, dass das ausgewählte Element immer entspricht der <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A> Eigenschaft in der <xref:System.Windows.Controls.ItemCollection>. Nehmen wir beispielsweise an, dass es zwei existieren <xref:System.Windows.Controls.ListBox> Steuerelemente mit ihren <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> -Eigenschaft auf der gleichen Quelle festgelegt.  Legen Sie <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> auf `true` auf beide Listenfelder, um sicherzustellen, dass das ausgewählte Element in den einzelnen <xref:System.Windows.Controls.ListBox> ist identisch.  
+  
+<a name="xamlAttributeUsage_IsSynchronizedWithCurrentItem"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ <*Objekt* `IsSynchronizedWithCurrentItem`= "<xref:System.Boolean>" / >  
+  
+ \- oder –  
+  
+ <*Objekt* `IsSynchronizedWithCurrentItem`= "{}" / >  
+  
+<a name="dependencyPropertyInfo_IsSynchronizedWithCurrentItem"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItemProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel bindet zwei <xref:System.Windows.Controls.ListBox> -Steuerelemente an die gleiche <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Da <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> festgelegt ist, um `true` auf jedem <xref:System.Windows.Controls.ListBox>, das ausgewählte Element ist immer für beide Steuerelemente  
+  
+ [!code-xaml[Selector#2](~/samples/snippets/csharp/VS_Snippets_Wpf/Selector/CS/Window1.xaml#2)]
+ [!code-xaml[Selector#4](~/samples/snippets/csharp/VS_Snippets_Wpf/Selector/CS/Window1.xaml#4)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronizedWithCurrentItemProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSynchronizedWithCurrentItemProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSynchronizedWithCurrentItemProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItemProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInitialized">
+      <MemberSignature Language="C#" Value="protected override void OnInitialized (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInitialized(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Selector.OnInitialized(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Das <see cref="T:System.Windows.RoutedEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.FrameworkElement.Initialized" />-Ereignis aus. Diese Methode wird immer aufgerufen, wenn <see cref="P:System.Windows.FrameworkElement.IsInitialized" /> intern auf <see langword="true" /> festgelegt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIsKeyboardFocusWithinChanged">
+      <MemberSignature Language="C#" Value="protected override void OnIsKeyboardFocusWithinChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnIsKeyboardFocusWithinChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Selector.OnIsKeyboardFocusWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.UIElement.IsKeyboardFocusWithin" /> -Eigenschaft geändert hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemsChanged">
+      <MemberSignature Language="C#" Value="protected override void OnItemsChanged (System.Collections.Specialized.NotifyCollectionChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnItemsChanged(class System.Collections.Specialized.NotifyCollectionChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Selector.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Collections.Specialized.NotifyCollectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Aktualisiert die aktuelle Auswahl, wenn ein Element in der <see cref="T:System.Windows.Controls.Primitives.Selector" /> hat sich geändert</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemsSourceChanged">
+      <MemberSignature Language="C#" Value="protected override void OnItemsSourceChanged (System.Collections.IEnumerable oldValue, System.Collections.IEnumerable newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnItemsSourceChanged(class System.Collections.IEnumerable oldValue, class System.Collections.IEnumerable newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Selector.OnItemsSourceChanged(System.Collections.IEnumerable,System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldValue" Type="System.Collections.IEnumerable" />
+        <Parameter Name="newValue" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="oldValue">Alter Wert der Quelle.</param>
+        <param name="newValue">Neue Wert der Quelle.</param>
+        <summary>Wird aufgerufen, wenn die Quelle eines Elements in einer Auswahl ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectionChanged (System.Windows.Controls.SelectionChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectionChanged(class System.Windows.Controls.SelectionChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Selector.OnSelectionChanged(System.Windows.Controls.SelectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.SelectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Wird aufgerufen, wenn die Auswahl ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override void PrepareContainerForItemOverride (System.Windows.DependencyObject element, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PrepareContainerForItemOverride(class System.Windows.DependencyObject element, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Selector.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, das zum Anzeigen des angegebenen Elements verwendet wird.</param>
+        <param name="item">Das angegebene Element angezeigt.</param>
+        <summary>Bereitet das angegebene Element auf die Anzeige des angegebenen Eintrags vor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSelectedHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveSelectedHandler (System.Windows.DependencyObject element, System.Windows.RoutedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveSelectedHandler(class System.Windows.DependencyObject element, class System.Windows.RoutedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Selector.RemoveSelectedHandler(System.Windows.DependencyObject,System.Windows.RoutedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.RoutedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Element, das dieses Ereignis überwacht.</param>
+        <param name="handler">Zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Controls.Primitives.Selector.Selected" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveUnselectedHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveUnselectedHandler (System.Windows.DependencyObject element, System.Windows.RoutedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveUnselectedHandler(class System.Windows.DependencyObject element, class System.Windows.RoutedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Selector.RemoveUnselectedHandler(System.Windows.DependencyObject,System.Windows.RoutedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.RoutedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Element, das dieses Ereignis überwacht.</param>
+        <param name="handler">Zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Controls.Primitives.Selector.Unselected" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent SelectedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent SelectedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Selector.SelectedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.Primitives.Selector.Selected" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedIndex">
+      <MemberSignature Language="C#" Value="public int SelectedIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectedIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Selector.SelectedIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt der Index des ersten Elements in der aktuellen Auswahl oder gibt minus eins (1) Wenn die Auswahl leer ist.</summary>
+        <value>Der Index des ersten Elements in der aktuellen Auswahl. Der Standardwert ist ein negativer Wert eins (1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Windows.Controls.Primitives.Selector> unterstützt ein einzelnes Element auswählen die <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> Eigenschaft gibt den Index des ausgewählten Elements zurück. Wenn eine <xref:System.Windows.Controls.Primitives.Selector> unterstützt mehrere Auswahlmöglichkeiten <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> gibt den Index des Elements, das der Benutzer zunächst ausgewählt.  
+  
+ Festlegen von <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> in einem <xref:System.Windows.Controls.Primitives.Selector> , unterstützt Mehrfachauswahl aller ausgewählten Elemente und legt die Auswahl, die vom Index angegebene Element fest. <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A>Gibt-1 zurück, wenn die Auswahl leer ist.  
+  
+ Wenn Sie festlegen, <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> auf einen Wert kleiner-1 festgelegt wird, eine <xref:System.ArgumentException> ausgelöst wird.  Wenn Sie festlegen, <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> auf einen Wert gleich oder größer als die Anzahl von untergeordneten Elementen der Wert wird ignoriert.  
+  
+<a name="dependencyPropertyInfo_SelectedIndex"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.Selector.SelectedIndexProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.ListBox> und legt die <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> -Eigenschaft auf 1 fest, das das zweite Element im auswählt der <xref:System.Windows.Controls.ListBox>.  
+  
+ [!code-xaml[ListBoxItems_snip#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxItems_snip/CSharp/Window1.xaml#2)]  
+  
+ Im folgenden Beispiel wird die <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> Eigenschaft, um zu bestimmen, ob das Element bei Index 0 das erste Element in der Auswahl ist.  
+  
+ [!code-csharp[ListBoxItems_snip#SelectorSelectedIndex](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxItems_snip/CSharp/Window1.xaml.cs#selectorselectedindex)]
+ [!code-vb[ListBoxItems_snip#SelectorSelectedIndex](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListBoxItems_snip/visualbasic/window1.xaml.vb#selectorselectedindex)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedIndexProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectedIndexProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectedIndexProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Selector.SelectedIndexProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.Selector.SelectedIndex" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedItem">
+      <MemberSignature Language="C#" Value="public object SelectedItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SelectedItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Selector.SelectedItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das erste Element in der aktuellen Auswahl oder gibt null, wenn die Auswahl leer ist.</summary>
+        <value>Das erste Element in der aktuellen Auswahl oder <see langword="null" /> , wenn die Auswahl leer ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Windows.Controls.Primitives.Selector> unterstützt ein einzelnes Element auswählen die <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A> Eigenschaft gibt das ausgewählte Element zurück. Wenn eine <xref:System.Windows.Controls.Primitives.Selector> unterstützt mehrere Auswahlmöglichkeiten <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A> gibt das Element, das der Benutzer zunächst ausgewählt.  
+  
+ Festlegen von <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A> in einem <xref:System.Windows.Controls.Primitives.Selector> , unterstützt Mehrfachauswahl aller ausgewählten Elemente und legt die Auswahl in das angegebene Element fest.  
+  
+<a name="dependencyPropertyInfo_SelectedItem"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.Selector.SelectedItemProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A> aus einem <xref:System.Windows.Controls.ListBox>.  
+  
+ [!code-csharp[ListBoxEvent#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml.cs#2)]
+ [!code-vb[ListBoxEvent#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListBoxEvent/VisualBasic/Pane1.xaml.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedItemProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectedItemProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectedItemProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Selector.SelectedItemProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.Selector.SelectedItem" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedValue">
+      <MemberSignature Language="C#" Value="public object SelectedValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SelectedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Selector.SelectedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die <see cref="P:System.Windows.Controls.Primitives.Selector.SelectedItem" />mithilfe <see cref="P:System.Windows.Controls.Primitives.Selector.SelectedValuePath" />.</summary>
+        <value>Der Wert des ausgewählten Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A> Eigenschaft gibt den Pfad zu der Eigenschaft, die verwendet wird, um den Wert der Festlegen der <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> Eigenschaft. Festlegen von <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> auf einen Wert X Versuche, ein Element auswählen, dessen Wert X ergibt; Wenn kein solches Element gefunden werden kann, wird die Auswahl aufgehoben.  
+  
+<a name="dependencyPropertyInfo_SelectedValue"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.Selector.SelectedValueProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel bindet ein <xref:System.Windows.Controls.ListBox> auf eine Auflistung von `Employee` Objekte. Im Beispiel wird <xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A> auf `@EmployeeNumber` und <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> auf `12345`.  Wählt die `Employee` mit dem `12345` als Wert des `EmployeeNumber`.  In diesem Beispiel bindet zudem eine <xref:System.Windows.Controls.TextBlock> auf die <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> von der <xref:System.Windows.Controls.ListBox>.  Wenn der Benutzer die Auswahl in ändert die <xref:System.Windows.Controls.ListBox>, die <xref:System.Windows.Controls.TextBlock> aktualisiert, um die Anzahl der Mitarbeiter des aktuell ausgewählten Mitarbeiters anzuzeigen.  
+  
+ [!code-xaml[Selector#2](~/samples/snippets/csharp/VS_Snippets_Wpf/Selector/CS/Window1.xaml#2)]
+ [!code-xaml[Selector#3](~/samples/snippets/csharp/VS_Snippets_Wpf/Selector/CS/Window1.xaml#3)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedValuePath">
+      <MemberSignature Language="C#" Value="public string SelectedValuePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectedValuePath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Selector.SelectedValuePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad, der verwendet wird, zum Abrufen der <see cref="P:System.Windows.Controls.Primitives.Selector.SelectedValue" /> aus der <see cref="P:System.Windows.Controls.Primitives.Selector.SelectedItem" />.</summary>
+        <value>Der Pfad zum Abrufen der <see cref="P:System.Windows.Controls.Primitives.Selector.SelectedValue" />. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A> Eigenschaft gibt den Pfad zu der Eigenschaft, die verwendet wird, um den Wert der Festlegen der <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> Eigenschaft.  
+  
+<a name="dependencyPropertyInfo_SelectedValuePath"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.Selector.SelectedValuePathProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel bindet ein <xref:System.Windows.Controls.ListBox> auf eine Auflistung von `Employee` Objekte. Im Beispiel wird <xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A> auf `@EmployeeNumber` und <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> auf `12345`.  Wählt die `Employee` mit dem `12345` als Wert des `EmployeeNumber`.  In diesem Beispiel bindet zudem eine <xref:System.Windows.Controls.TextBlock> auf die <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> von der <xref:System.Windows.Controls.ListBox>.  Wenn der Benutzer die Auswahl in ändert die <xref:System.Windows.Controls.ListBox>, die <xref:System.Windows.Controls.TextBlock> aktualisiert, um die Anzahl der Mitarbeiter des aktuell ausgewählten Mitarbeiters anzuzeigen.  
+  
+ [!code-xaml[Selector#2](~/samples/snippets/csharp/VS_Snippets_Wpf/Selector/CS/Window1.xaml#2)] 
+ [!code-xaml[Selector#3](~/samples/snippets/csharp/VS_Snippets_Wpf/Selector/CS/Window1.xaml#3)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedValuePathProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectedValuePathProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectedValuePathProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Selector.SelectedValuePathProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.Selector.SelectedValuePath" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedValueProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectedValueProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectedValueProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Selector.SelectedValueProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.Selector.SelectedValue" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.SelectionChangedEventHandler SelectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.SelectionChangedEventHandler SelectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Primitives.Selector.SelectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.SelectionChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Auswahl einer <see cref="T:System.Windows.Controls.Primitives.Selector" /> Änderungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt auf, wenn eine an einer Auswahl Änderung. Eine Auswahl kann geändert werden, nicht nur durch Benutzerinteraktion, sondern auch von der Bindung als auch andere Werte festgelegt.  
+  
+<a name="routedEventInfo_SelectionChanged"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.Selector.SelectionChangedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.Controls.SelectionChangedEventHandler>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie die Verbindung der <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> Ereignis, um ein Listenfeld-Steuerelement.  
+  
+ [!code-xaml[ListBoxEvent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#1)]  
+  
+ Das folgende Beispiel zeigt, wie behandelt die <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> Ereignis.  
+  
+ [!code-csharp[ListBoxEvent#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml.cs#2)]
+ [!code-vb[ListBoxEvent#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListBoxEvent/VisualBasic/Pane1.xaml.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionChangedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent SelectionChangedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent SelectionChangedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Selector.SelectionChangedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.Primitives.Selector.SelectionChanged" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsSelected">
+      <MemberSignature Language="C#" Value="public static void SetIsSelected (System.Windows.DependencyObject element, bool isSelected);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsSelected(class System.Windows.DependencyObject element, bool isSelected) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Selector.SetIsSelected(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="isSelected" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Objekt, auf dem die Eigenschaft festgelegt.</param>
+        <param name="isSelected">Der festzulegende Wert.</param>
+        <summary>Legt den Wert einer Eigenschaft, der angibt, ob ein Element in einem <see cref="T:System.Windows.Controls.Primitives.Selector" /> ausgewählt ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnselectedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent UnselectedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent UnselectedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Selector.UnselectedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.Primitives.Selector.Unselected" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

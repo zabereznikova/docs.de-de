@@ -1,0 +1,233 @@
+<Type Name="XmlLanguage" FullName="System.Windows.Markup.XmlLanguage">
+  <TypeSignature Language="C#" Value="public class XmlLanguage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlLanguage extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.XmlLanguage" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Markup.XmlLanguageConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Sprachtag für die Verwendung in XAML-Markup dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die-Sprachtag, vielleicht aber verfügen möglicherweise nicht über ein registriertes <xref:System.Globalization.CultureInfo> vorhanden Systemlast, bei dem der XAML-Code interpretiert wird.  
+  
+ Diese Klasse ist hilfreich für den Umgang mit Werten, die mit dargestellt `xml:lang` im XML-Format.  
+  
+ Sprachtags können in Form von zwei Zeichen oder in einer getrennten Sprachgebietsschema Form angegeben werden. Finden Sie unter [RFC 3066](http://go.microsoft.com/fwlink/?LinkId=132454).  
+  
+ Beachten Sie, dass die XML-Spezifikation für eine leere Zeichenfolge ermöglicht `xml:lang`, RFC 3066 nicht zulässig ist daher die <xref:System.Windows.Markup.XmlLanguage> erlaubt geben "" (leere Zeichenfolge). Ein mit den Standardwerten konstruiertes <xref:System.Windows.Markup.XmlLanguage> verhält sich wie mit erstellt "" (leere Zeichenfolge).  
+  
+<a name="xamlAttributeUsage_XmlLanguage"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="prefix"/>  
+- or -  
+<object property="prefix-subcode"/>  
+```  
+  
+<a name="xamlValues_XmlLanguage"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *Präfix*  
+ Language-Präfix, verwenden die Präfixwerte für ISO 639-1-Sprache. Z. B. "En" oder "Zh". Werte in Großbuchstaben werden akzeptiert und in Kleinbuchstaben konvertiert wurden. Dies kann auch ein leeres Attribut sein "".  
+  
+ *Subcode*  
+ Wenn angegeben, muss einen einzelnen Bindestrich vorangestellt sein. Klicken Sie dann ein Untercode gemäß RFC 3066. Die häufigste Verwendung, und derjenigen, die höchstwahrscheinlich ordnungsgemäß zugeordnet ist eine <xref:System.Globalization.CultureInfo>, ist ein Land oder eine Bezeichnung wie "-de" oder "-Hk". Werte in Großbuchstaben werden akzeptiert und in Kleinbuchstaben konvertiert wurden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Windows.Markup.XmlLanguage Empty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Markup.XmlLanguage Empty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlLanguage.Empty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.XmlLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen statischen <see cref="T:System.Windows.Markup.XmlLanguage" /> -Instanz als von zu erstellenden würde <see cref="M:System.Windows.Markup.XmlLanguage.GetLanguage(System.String)" /> mit als leere Attributzeichenfolge-Sprachtag.</summary>
+        <value>Leere Tags Sprachversion des <see cref="T:System.Windows.Markup.XmlLanguage" />, für die Verwendung in Vergleichsvorgängen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert ist faktisch die <xref:System.Windows.Markup.XmlLanguage> entspricht <xref:System.String.Empty?displayProperty=nameWithType>, deren <xref:System.Windows.Markup.XmlLanguage.GetEquivalentCulture%2A> Ergebnis <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEquivalentCulture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo GetEquivalentCulture ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Globalization.CultureInfo GetEquivalentCulture() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlLanguage.GetEquivalentCulture" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die entsprechenden Entsprechung <see cref="T:System.Globalization.CultureInfo" /> für diesen <see cref="T:System.Windows.Markup.XmlLanguage" />, wenn und nur solche eine <see cref="T:System.Globalization.CultureInfo" /> registriert ist, für die <see cref="P:System.Windows.Markup.XmlLanguage.IetfLanguageTag" /> Wert dieses<see cref="T:System.Windows.Markup.XmlLanguage" /></summary>
+        <returns>Ein <see cref="T:System.Globalization.CultureInfo" /> , die verwendet werden kann, für die Lokalisierung Globalisierung API-Aufrufe, die diesen Typ als Argument akzeptieren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Entsprechung <xref:System.Globalization.CultureInfo> möglich erzeugt, gibt diese Methode eine Ausnahme auslöst. Wenn Sie nicht, um Ausnahmen zu behandeln möchten, rufen <xref:System.Windows.Markup.XmlLanguage.GetSpecificCulture%2A> stattdessen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nein, die registriert <see cref="T:System.Globalization.CultureInfo" /> für die bereitgestellte <see cref="T:System.Windows.Markup.XmlLanguage" /> vorhanden ist, bestimmt durch den Aufruf von <see cref="M:System.Globalization.CultureInfo.GetCultureInfoByIetfLanguageTag(System.String)" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLanguage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Markup.XmlLanguage GetLanguage (string ietfLanguageTag);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Markup.XmlLanguage GetLanguage(string ietfLanguageTag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlLanguage.GetLanguage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.XmlLanguage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ietfLanguageTag" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ietfLanguageTag">Ein RFC 3066 Sprachenzeichenfolge oder eine leere Zeichenfolge.</param>
+        <summary>Gibt eine <see cref="T:System.Windows.Markup.XmlLanguage" /> Instanz basierend auf eine Zeichenfolge, die gemäß RFC 3066 die Sprache darstellt.</summary>
+        <returns>Ein neues <see cref="T:System.Windows.Markup.XmlLanguage" /> mit der angegebenen Zeichenfolge als seine <see cref="P:System.Windows.Markup.XmlLanguage.IetfLanguageTag" /> Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist effektiv der Konstruktor.  
+  
+ Die Sprachenzeichenfolge kann leer sein, sonst entsprechen [RFC 3066](http://go.microsoft.com/fwlink/?LinkId=132454) Regeln:  
+  
+-   Das erste untergeordnete Tag muss bestehen nur [!INCLUDE[TLA#tla_ascii](~/includes/tlasharptla-ascii-md.md)] Buchstaben.  
+  
+-   Die weiteren untergeordneten Tags bestehen müssen [!INCLUDE[TLA#tla_ascii](~/includes/tlasharptla-ascii-md.md)] Buchstaben oder Ziffern.  
+  
+-   Untergeordnete Tags werden durch einen einzelnen Bindestrich getrennt.  
+  
+-   Jedes untergeordnete Tag muss 1 bis 8 Zeichen lang sein.  
+  
+-   Keine führenden oder nachgestellten Bindestriche sind nicht zulässig.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ietfLanguageTag" />Parameter darf nicht null sein.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ietfLanguageTag" />Parameter nicht leer war, jedoch entsprach nicht der Syntax, die in RFC 3066 angegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSpecificCulture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo GetSpecificCulture ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Globalization.CultureInfo GetSpecificCulture() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlLanguage.GetSpecificCulture" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, die eng miteinander verknüpfte nicht-neutralen <see cref="T:System.Globalization.CultureInfo" /> dafür <see cref="T:System.Windows.Markup.XmlLanguage" />.</summary>
+        <returns>Ein <see cref="T:System.Globalization.CultureInfo" /> , die verwendet werden kann, für die Lokalisierung Globalisierung [!INCLUDE[TLA2#tla_api](~/includes/tla2sharptla-api-md.md)] Aufrufe, die diesen Typ als Argument akzeptieren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese <xref:System.Windows.Markup.XmlLanguage> gleich <xref:System.Windows.Markup.XmlLanguage.Empty%2A?displayProperty=nameWithType> dieser Methode zurückgegeben <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
+  
+ Diese Methode sucht die registrierte <xref:System.Globalization.CultureInfo> Präfixsuche längsten möglichen dieses <xref:System.Windows.Markup.XmlLanguage>. Wenn die registrierte <xref:System.Globalization.CultureInfo> ist neutral (<xref:System.Globalization.CultureInfo.IsNeutralCulture%2A> ist `true`), und klicken Sie dann einen Aufruf dieser Methode abhängt <xref:System.Globalization.CultureInfo.CreateSpecificCulture%2A> für die Zuordnung einer neutrale <xref:System.Globalization.CultureInfo> auf eine bestimmte Einstellung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Keine verknüpften nicht Neutral <see cref="T:System.Globalization.CultureInfo" /> registriert ist, für die aktuelle <see cref="T:System.Windows.Markup.XmlLanguage" /> <see cref="P:System.Windows.Markup.XmlLanguage.IetfLanguageTag" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IetfLanguageTag">
+      <MemberSignature Language="C#" Value="public string IetfLanguageTag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IetfLanguageTag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlLanguage.IetfLanguageTag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeichenfolgendarstellung der Sprachtag ab.</summary>
+        <value>Die Zeichenfolgendarstellung der-Sprachtag.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann eine normalisierte Version der ursprünglich angegebenen Zeichenfolge zurück, wie für die <xref:System.Windows.Markup.XmlLanguage.GetLanguage%2A>.  
+  
+ Diese Eigenschaft kann auch zurückgeben <xref:System.String.Empty> , wenn eine leere Zeichenfolge bereitgestellt wurde <xref:System.Windows.Markup.XmlLanguage.GetLanguage%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlLanguage.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.String" /> zurück, die das aktuelle <see cref="T:System.Windows.Markup.XmlLanguage" /> darstellt.</summary>
+        <returns>Ein <see cref="T:System.String" />, der den aktuellen <see cref="T:System.Windows.Markup.XmlLanguage" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies gibt die <xref:System.Windows.Markup.XmlLanguage.IetfLanguageTag%2A> Wert des aktuellen <xref:System.Windows.Markup.XmlLanguage>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1298 @@
+<Type Name="DirectorySearcher" FullName="System.DirectoryServices.DirectorySearcher">
+  <TypeSignature Language="C#" Value="public class DirectorySearcher : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DirectorySearcher extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.DirectorySearcher" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.DirectoryServices.DSDescription("DirectorySearcherDesc")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Führt Abfragen in Active Directory-Domänendienste.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden einer <xref:System.DirectoryServices.DirectorySearcher> Objekt suchen und Ausführen von Abfragen in einer Active Directory-Domänendienste-Hierarchie (LDAP = Lightweight Directory Access Protocol) verwenden. LDAP ist der einzige vom System bereitgestellten Active Directory Service Interfaces (ADSI) Anbieter, der das Durchsuchen unterstützt. Ein Administrator kann vornehmen, ändern und Löschen von Objekten, die in der Hierarchie gefunden werden. Weitere Informationen finden Sie unter [mithilfe System.DirectoryServices](http://msdn.microsoft.com/en-us/ffa2f003-3a9a-4e2a-815e-825c8ddd7949).  
+  
+ Beim Erstellen einer Instanz von <xref:System.DirectoryServices.DirectorySearcher>, Sie geben den Stamm, die Sie abrufen möchten, und eine optionale Liste mit Eigenschaften abgerufen werden. Die <xref:System.DirectoryServices.DirectorySearcher.SearchRoot%2A> Eigenschaft können Sie zur Festlegung zusätzlicher Eigenschaften die folgenden Aufgaben ausführen:  
+  
+-   Zwischenspeichern der Suchergebnisse auf dem lokalen Computer an. Legen Sie die <xref:System.DirectoryServices.DirectorySearcher.CacheResults%2A> Eigenschaft `true` Verzeichnisinformationen auf dem lokalen Computer speichern. Updates in dieser lokalen Cache vorgenommen und ein Commit ausgeführt, um Active Directory-Domänendiensten nur, wenn die <xref:System.DirectoryServices.DirectoryEntry.CommitChanges%2A?displayProperty=nameWithType> -Methode aufgerufen wird.  
+  
+-   Geben Sie die Zeitdauer für die Suche mithilfe der <xref:System.DirectoryServices.DirectorySearcher.ServerTimeLimit%2A> Eigenschaft.  
+  
+-   Abgerufen Sie nur Attributnamen werden. Legen Sie die <xref:System.DirectoryServices.DirectorySearcher.PropertyNamesOnly%2A> Eigenschaft `true` um nur die Namen der Attribute abzurufen, auf die Werte zugewiesen wurden.  
+  
+-   Führen Sie eine seitenweise Suche. Legen Sie die <xref:System.DirectoryServices.DirectorySearcher.PageSize%2A> Eigenschaft, um die maximale Anzahl der Objekte anzugeben, die in eine seitenweise Suche zurückgegeben werden. Wenn Sie keine seitenweise Suche durchführen möchten, legen Sie die <xref:System.DirectoryServices.DirectorySearcher.PageSize%2A> Eigenschaft auf den Standardwert 0 (null).  
+  
+-   Geben Sie die maximale Anzahl von Einträgen, die zurückgegeben werden, mithilfe der <xref:System.DirectoryServices.DirectorySearcher.SizeLimit%2A> Eigenschaft. Wenn Sie festlegen, die <xref:System.DirectoryServices.DirectorySearcher.SizeLimit%2A> Eigenschaft auf den Standardwert 0 (null), und der Server als Standard ist 1000 Einträge.  
+  
+> [!NOTE]
+>  Wenn die maximale Anzahl von zurückgegebenen Einträge und Fristen Einschränkungen, die auf dem Server festgelegt sind überschreiten, die servereinstellungen außer Kraft setzen die Einstellungen der Komponente.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.DirectoryServices.DirectorySearcher>-Klasse finden Sie im <xref:System.DirectoryServices.DirectorySearcher.%23ctor>-Konstruktor.  
+  
+> [!NOTE]
+>  Es wird davon ausgegangen, dass Sie mit dieser Klasse werden allgemeine Kenntnisse im Umgang mit Active Directory-Domänendienste verfügen. Weitere Informationen finden Sie unter der <xref:System.DirectoryServices?displayProperty=nameWithType> (Übersicht).  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+      <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+    </permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectorySearcher ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySearcher.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.DirectoryServices.DirectorySearcher" />-Klasse mit Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftenwerte für die <xref:System.DirectoryServices.DirectorySearcher> Objekt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.DirectoryServices.DirectorySearcher.SearchRoot%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.DirectoryServices.DirectorySearcher.Filter%2A>|"(objectClass=*)"|  
+|<xref:System.DirectoryServices.DirectorySearcher.PropertiesToLoad%2A>|Ein leeres <xref:System.Collections.Specialized.StringCollection>-Objekt.|  
+|<xref:System.DirectoryServices.DirectorySearcher.SearchScope%2A>|<xref:System.DirectoryServices.SearchScope.Subtree>|  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.Demand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectorySearcher (System.DirectoryServices.DirectoryEntry searchRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.DirectoryEntry searchRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySearcher.#ctor(System.DirectoryServices.DirectoryEntry)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="searchRoot" Type="System.DirectoryServices.DirectoryEntry" />
+      </Parameters>
+      <Docs>
+        <param name="searchRoot">Der Knoten in der Active Directory-Domänendienste-Hierarchie, in dem die Suche beginnt. Die <see cref="P:System.DirectoryServices.DirectorySearcher.SearchRoot" />-Eigenschaft wird mit diesem Wert initialisiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.DirectorySearcher" /> -Klasse unter Verwendung des angegebenen Stammverzeichnis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftenwerte für die <xref:System.DirectoryServices.DirectorySearcher> Objekt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.DirectoryServices.DirectorySearcher.Filter%2A>|"(objectClass=*)"|  
+|<xref:System.DirectoryServices.DirectorySearcher.PropertiesToLoad%2A>|Ein leeres <xref:System.Collections.Specialized.StringCollection>-Objekt.|  
+|<xref:System.DirectoryServices.DirectorySearcher.SearchScope%2A>|<xref:System.DirectoryServices.SearchScope.Subtree>|  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.Demand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectorySearcher (string filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySearcher.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Die Filter Suchzeichenfolge in Lightweight Directory Access Protocol (LDAP)-Format. Die <see cref="P:System.DirectoryServices.DirectorySearcher.Filter" />-Eigenschaft wird mit diesem Wert initialisiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.DirectorySearcher" /> Klasse mit dem angegebenen Suchfilter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftenwerte für die <xref:System.DirectoryServices.DirectorySearcher> Objekt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.DirectoryServices.DirectorySearcher.SearchRoot%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.DirectoryServices.DirectorySearcher.PropertiesToLoad%2A>|Ein leeres <xref:System.Collections.Specialized.StringCollection>-Objekt.|  
+|<xref:System.DirectoryServices.DirectorySearcher.SearchScope%2A>|<xref:System.DirectoryServices.SearchScope.Subtree>|  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.Demand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectorySearcher (System.DirectoryServices.DirectoryEntry searchRoot, string filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.DirectoryEntry searchRoot, string filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySearcher.#ctor(System.DirectoryServices.DirectoryEntry,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="searchRoot" Type="System.DirectoryServices.DirectoryEntry" />
+        <Parameter Name="filter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="searchRoot">Der Knoten in der Active Directory-Domänendienste-Hierarchie, in dem die Suche beginnt. Die <see cref="P:System.DirectoryServices.DirectorySearcher.SearchRoot" />-Eigenschaft wird mit diesem Wert initialisiert.</param>
+        <param name="filter">Die Filter Suchzeichenfolge in Lightweight Directory Access Protocol (LDAP)-Format. Die <see cref="P:System.DirectoryServices.DirectorySearcher.Filter" />-Eigenschaft wird mit diesem Wert initialisiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.DirectorySearcher" /> Klasse mit dem angegebenen Suchfilter Stamm "und" suchen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftenwerte für die <xref:System.DirectoryServices.DirectorySearcher> Objekt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.DirectoryServices.DirectorySearcher.PropertiesToLoad%2A>|Ein leeres <xref:System.Collections.Specialized.StringCollection>-Objekt.|  
+|<xref:System.DirectoryServices.DirectorySearcher.SearchScope%2A>|<xref:System.DirectoryServices.SearchScope.Subtree>|  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.Demand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectorySearcher (string filter, string[] propertiesToLoad);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filter, string[] propertiesToLoad) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySearcher.#ctor(System.String,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filter" Type="System.String" />
+        <Parameter Name="propertiesToLoad" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Die Filter Suchzeichenfolge in Lightweight Directory Access Protocol (LDAP)-Format. Die <see cref="P:System.DirectoryServices.DirectorySearcher.Filter" /> Eigenschaft mit diesem Wert initialisiert wird.</param>
+        <param name="propertiesToLoad">Der Satz von Eigenschaften, die während der Suche abgerufen. Die <see cref="P:System.DirectoryServices.DirectorySearcher.PropertiesToLoad" />-Eigenschaft wird mit diesem Wert initialisiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.DirectorySearcher" /> Klasse mit dem angegebenen Suchfilter und den abzurufenden Eigenschaften.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftenwerte für die <xref:System.DirectoryServices.DirectorySearcher> Objekt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.DirectoryServices.DirectorySearcher.SearchRoot%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.DirectoryServices.DirectorySearcher.SearchScope%2A>|<xref:System.DirectoryServices.SearchScope.Subtree>|  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.Demand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectorySearcher (System.DirectoryServices.DirectoryEntry searchRoot, string filter, string[] propertiesToLoad);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.DirectoryEntry searchRoot, string filter, string[] propertiesToLoad) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySearcher.#ctor(System.DirectoryServices.DirectoryEntry,System.String,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="searchRoot" Type="System.DirectoryServices.DirectoryEntry" />
+        <Parameter Name="filter" Type="System.String" />
+        <Parameter Name="propertiesToLoad" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="searchRoot">Der Knoten in der Active Directory-Domänendienste-Hierarchie, in dem die Suche beginnt. Die <see cref="P:System.DirectoryServices.DirectorySearcher.SearchRoot" />-Eigenschaft wird mit diesem Wert initialisiert.</param>
+        <param name="filter">Die Filter Suchzeichenfolge in Lightweight Directory Access Protocol (LDAP)-Format. Die <see cref="P:System.DirectoryServices.DirectorySearcher.Filter" />-Eigenschaft wird mit diesem Wert initialisiert.</param>
+        <param name="propertiesToLoad">Der Satz von Eigenschaften, die während der Suche abgerufen werden. Die <see cref="P:System.DirectoryServices.DirectorySearcher.PropertiesToLoad" />-Eigenschaft wird mit diesem Wert initialisiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.DirectorySearcher" /> -Klasse mit den angegebenen Suchkriterien Stamm Suchfilter und abzurufenden Eigenschaften...</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftenwerte für die <xref:System.DirectoryServices.DirectorySearcher> Objekt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.DirectoryServices.DirectorySearcher.SearchScope%2A>|<xref:System.DirectoryServices.SearchScope.Subtree>|  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.Demand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectorySearcher (string filter, string[] propertiesToLoad, System.DirectoryServices.SearchScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filter, string[] propertiesToLoad, valuetype System.DirectoryServices.SearchScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySearcher.#ctor(System.String,System.String[],System.DirectoryServices.SearchScope)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filter" Type="System.String" />
+        <Parameter Name="propertiesToLoad" Type="System.String[]" />
+        <Parameter Name="scope" Type="System.DirectoryServices.SearchScope" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Die Filter Suchzeichenfolge in Lightweight Directory Access Protocol (LDAP)-Format. Die <see cref="P:System.DirectoryServices.DirectorySearcher.Filter" />-Eigenschaft wird mit diesem Wert initialisiert.</param>
+        <param name="propertiesToLoad">Der Satz von Eigenschaften, die während der Suche abgerufen. Die <see cref="P:System.DirectoryServices.DirectorySearcher.PropertiesToLoad" />-Eigenschaft wird mit diesem Wert initialisiert.</param>
+        <param name="scope">Der Bereich der Suche, die vom Server eingehalten wird. Die <see cref="T:System.DirectoryServices.SearchScope" />-Eigenschaft wird mit diesem Wert initialisiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.DirectorySearcher" /> -Klasse mit den angegebenen Suchkriterien Filtereigenschaften, abgerufen und Suchbereich.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftenwerte für die <xref:System.DirectoryServices.DirectorySearcher> Objekt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.DirectoryServices.DirectorySearcher.SearchRoot%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.Demand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectorySearcher (System.DirectoryServices.DirectoryEntry searchRoot, string filter, string[] propertiesToLoad, System.DirectoryServices.SearchScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.DirectoryEntry searchRoot, string filter, string[] propertiesToLoad, valuetype System.DirectoryServices.SearchScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySearcher.#ctor(System.DirectoryServices.DirectoryEntry,System.String,System.String[],System.DirectoryServices.SearchScope)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="searchRoot" Type="System.DirectoryServices.DirectoryEntry" />
+        <Parameter Name="filter" Type="System.String" />
+        <Parameter Name="propertiesToLoad" Type="System.String[]" />
+        <Parameter Name="scope" Type="System.DirectoryServices.SearchScope" />
+      </Parameters>
+      <Docs>
+        <param name="searchRoot">Der Knoten in der Active Directory-Domänendienste-Hierarchie, in dem die Suche beginnt. Die <see cref="P:System.DirectoryServices.DirectorySearcher.SearchRoot" />-Eigenschaft wird mit diesem Wert initialisiert.</param>
+        <param name="filter">Die Filter Suchzeichenfolge in Lightweight Directory Access Protocol (LDAP)-Format. Die <see cref="P:System.DirectoryServices.DirectorySearcher.Filter" />-Eigenschaft wird mit diesem Wert initialisiert.</param>
+        <param name="propertiesToLoad">Der Satz von Eigenschaften, die während der Suche abgerufen. Die <see cref="P:System.DirectoryServices.DirectorySearcher.PropertiesToLoad" />-Eigenschaft wird mit diesem Wert initialisiert.</param>
+        <param name="scope">Der Bereich der Suche, die vom Server eingehalten wird. Die <see cref="T:System.DirectoryServices.SearchScope" />-Eigenschaft wird mit diesem Wert initialisiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.DirectorySearcher" /> -Klasse mit den angegebenen Suchkriterien Stamm, die Suchfilter, die Eigenschaften zum Abrufen und Suchbereich.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.Demand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Asynchronous">
+      <MemberSignature Language="C#" Value="public bool Asynchronous { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Asynchronous" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.Asynchronous" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSAsynchronous")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Suche asynchron ausgeführt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Suche asynchron ist; <see langword="false" /> andernfalls.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine asynchrone Suche kann die Ergebnisse zeigen, wie sie bei der Suche gleichzeitig für zusätzliche Ergebnisse gefunden werden. Dies ist hilfreich für Aufgaben wie z. B. Listenfelder auffüllen.  
+  
+ Die Standardeinstellung für diese Eigenschaft ist `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden C#-Beispiel zeigt, wie eine asynchrone Suche zu erstellen.  
+  
+```csharp  
+using System.DirectoryServices;  
+...  
+// Bind to the users container.  
+DirectoryEntry entry = new DirectoryEntry("LDAP://CN=users,DC=fabrikam,DC=com");  
+// Create a DirectorySearcher object.  
+DirectorySearcher mySearcher = new DirectorySearcher(entry);  
+//Set the Asynchronous property to true.  
+src.Asynchronous = true;  
+//Use the FindAll method to get search results.  
+SearchResultCollection res = src.FindAll();  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeScopeQuery">
+      <MemberSignature Language="C#" Value="public string AttributeScopeQuery { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AttributeScopeQuery" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.AttributeScopeQuery" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSAttributeQuery")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den LDAP-Anzeigenamen des distinguished Name-Attributs in gesucht werden soll. Nur ein Attribut kann für diese Art von Suche verwendet werden.</summary>
+        <value>Der LDAP-Anzeigename des Attributs für die Suche ausgeführt, oder eine leere Zeichenfolge, der keine Attributbereichsabfrage festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Attribut, das diese Eigenschaft festgelegt ist, muss ein definiertes Namensattribut, z. B. Member oder ManagedBy sein. Das Attribut kann entweder ein- oder mehrwertige sein. Weitere Informationen finden Sie unter den Themen zu Adschema "[Member](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/adschema/adschema/a_member.asp)"und"[verwaltet von](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/adschema/adschema/a_managedby.asp)" in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+ Die Suche erfolgt anhand der Objekte, die durch den distinguished Name identifiziert werden, die im Attribut des Basisobjekts angegeben wird. Beispielsweise ist das Basisobjekt eine Adschema Gruppe-Klasse und die <xref:System.DirectoryServices.DirectorySearcher.AttributeScopeQuery%2A> , "Mitglied" festgelegt wird, dann wird die Suche für alle Objekte ausgeführt wird, die Mitglieder der Gruppe sind. Weitere Informationen finden Sie im Thema Adschema "Group"-Klasse, in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+ Wenn die <xref:System.DirectoryServices.DirectorySearcher.AttributeScopeQuery%2A> Eigenschaft wird verwendet, die <xref:System.DirectoryServices.DirectorySearcher.SearchScope%2A> Eigenschaft muss festgelegt werden, um <xref:System.DirectoryServices.SearchScope.Base>. Wenn die <xref:System.DirectoryServices.DirectorySearcher.SearchScope%2A> Eigenschaftensatz wird auf einen anderen Wert festlegen die <xref:System.DirectoryServices.DirectorySearcher.AttributeScopeQuery%2A> -Eigenschaft löst eine <xref:System.ArgumentException>.  
+  
+ Weitere Informationen finden Sie im Thema "Ausführen einer Attribute Scope Query" in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library)).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.DirectoryServices.DirectorySearcher.AttributeScopeQuery%2A> Eigenschaft mit dem Elementattribut zum Abrufen der Mitglieder einer Gruppe. Anschließend gibt er die vor- und Nachnamen-Namen, der die Elemente und ihre Telefonnummern.  
+  
+```csharp  
+using System.DirectoryServices;  
+DirectoryEntry group = new DirectoryEntry("LDAP://CN=MyGroup, …");  
+DirectorySearcher src = new DirectorySearcher(group "(&(objectClass=user)(objectCategory=Person))");  
+src.AttributeScopedQuery = "member";  
+src.PropertiesToLoad.Add("sn");  
+src.PropertiesToLoad.Add("givenName");  
+src.PropertiesToLoad.Add("telephoneNumber");  
+foreach(SearchResult res in src.FindAll())  
+{  
+    Console.WriteLine("…");  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.DirectoryServices.DirectorySearcher.SearchScope" /> Eigenschaft wird auf einen Wert festgelegt, außer <see cref="F:System.DirectoryServices.SearchScope.Base" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheResults">
+      <MemberSignature Language="C#" Value="public bool CacheResults { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CacheResults" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.CacheResults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSCacheResults")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Ergebnis auf dem Clientcomputer zwischengespeichert wird.</summary>
+        <value>
+          <see langword="true" />Wenn das Ergebnis auf dem Clientcomputer; zwischengespeichert wird andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Suche ein großes Resultset zurückgibt, wird die Suche effizienter, wenn diese Eigenschaft, um festgelegt wird sein `false` um die Übertragung des Resultsets an den Clientcomputer zu vermeiden.  Wenn Sie dies tun, jedoch wird nicht, können die Ergebnisse aufzuzählen, zweimal, da die <xref:System.DirectoryServices.SearchResultCollection> Objekt ein neue Enumeratorobjekt erstellt jedes Mal aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan ClientTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ClientTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.ClientTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSClientTimeout")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Zeitspanne, die der Client für den Server zurückzugebenden Ergebnisse wartet. Wenn der Server innerhalb dieses Zeitraums nicht reagiert, wird die Suche abgebrochen und keine Ergebnisse zurückgegeben werden.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> -Struktur, die die maximale Zeitspanne für den Client warten, für den Server zurückzugebenden Ergebnisse enthält.  
+  
+ Der Standardwert ist-1 Sekunde, d. h. unbegrenzt zu warten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die minimale Auflösung dieser Eigenschaft ist eine Sekunde. Sekundenbruchteile werden ignoriert.  
+  
+ Wenn die <xref:System.DirectoryServices.DirectorySearcher.ServerTimeLimit%2A> erreicht wird, bevor der Client ein Timeout auftritt, gibt der Server seine Ergebnisse zurück, und der Client, warten beendet. Das Zeitlimit für die größte entstandene ist 120 Sekunden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DerefAlias">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.DereferenceAlias DerefAlias { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.DereferenceAlias DerefAlias" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.DerefAlias" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSDerefAlias")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DereferenceAlias</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, wie die Aliase von Objekten, die bei einer Suche werden aufgelöst werden sollen.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.DereferenceAlias" /> Wert, der das Verhalten gibt an, in dem Aliase dereferenziert werden. Die Standardeinstellung für diese Eigenschaft ist <see cref="F:System.DirectoryServices.DereferenceAlias.Never" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden C#-Beispiel veranschaulicht das Festlegen der <xref:System.DirectoryServices.DirectorySearcher.DerefAlias%2A> Eigenschaft <xref:System.DirectoryServices.DereferenceAlias.Always> , sodass sie Aliase dereferenziert, beim Suchen der untergeordneten Elemente sowohl Suchen von Objekten basieren.  
+  
+```  
+using System.DirectoryServices;  
+...  
+// Bind to the users container.  
+DirectoryEntry entry = new DirectoryEntry("LDAP://CN=users,DC=fabrikam,DC=com");  
+// Create a DirectorySearcher object.  
+DirectorySearcher mySearcher = new DirectorySearcher(entry);  
+// Set DerefAlias to Always.  
+src.DerefAlias = DerefenceAlias.Always;  
+//Use the FindAll method to get search results.  
+SearchResultCollection res = src.FindAll();  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectorySynchronization">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.DirectorySynchronization DirectorySynchronization { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.DirectorySynchronization DirectorySynchronization" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.DirectorySynchronization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSDirectorySynchronization")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectorySynchronization</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Objekt, das die Directory-Synchronisierung-Steuerelement für die Verwendung mit der Suche darstellt.</summary>
+        <value>Die <see cref="T:System.DirectoryServices.DirectorySynchronization" /> Objekt für die Suche. <see langword="null" />Wenn das Steuerelement der Directory-Synchronisierung nicht verwendet werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Synchronisierung verzeichnissteuerung gemeinhin als die "DirSync"-Steuerung ist ein LDAP-Steuerelement, mit der Suche nach Objekten, die seit einem vorherigen Zustand geändert haben.  
+  
+ Weitere Informationen finden Sie im Thema "[abrufen für die Verwendung von Änderungen, die" DirSync "-Steuerung](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ad/ad/polling_for_changes_using_the_dirsync_control.asp)" in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySearcher.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />Wenn diese Methode sowohl verwaltete als auch nicht verwaltete Ressourcen frei. <see langword="false" /> , wenn sie ausschließlich nicht verwaltete Ressourcen frei.</param>
+        <summary>Gibt die verwalteten Ressourcen, mit denen, die <see cref="T:System.DirectoryServices.DirectorySearcher" /> Objekt und optional Versionen nicht verwalteten Ressourcen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedDN">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ExtendedDN ExtendedDN { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ExtendedDN ExtendedDN" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.ExtendedDN" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSExtendedDn")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ExtendedDN</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der das Format der distinguished Names angibt.</summary>
+        <value>Einer der <see cref="T:System.DirectoryServices.ExtendedDN" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Auflistung von distinguished Names im Hexadezimalformat zurückgegeben wird.  
+  
+```csharp  
+using System.DirectoryServices;  
+...  
+DirectorySearcher src = new DirectorySearcher("…");  
+src.PropertiesToLoad = new string[] {ntSecurityDescriptor,…};  
+src.ExtendedDN = ExtendedDN.HexString;  
+SearchResultCollection res = src.FindAll();  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public string Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("(objectClass=*)")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.SettingsBindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSFilter")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der Filterzeichenfolge für Lightweight Directory Access Protocol (LDAP)-Format.</summary>
+        <value>Die Suchzeichenfolge für die Filter im LDAP-format, z. B. "(objectClass=user)". Die Standardeinstellung ist "(objectClass=*)", wodurch alle Objekte abgerufen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Filter verwendet die folgenden Richtlinien:  
+  
+1.  Die Zeichenfolge muss in Klammern eingeschlossen werden.  
+  
+2.  Ausdrücke können die relationalen Operatoren verwenden: <, \<=, =, > = und >. Ein Beispiel ist "(objectClass=user)". Ein weiteres Beispiel ist "(LastName > = Davis)".  
+  
+3.  Zusammengesetzte Ausdrücke sind mit dem Präfixoperatoren gebildete & und &#124;. Ein Beispiel ist "(&(objectClass=user) (LastName = Davis))". Ein weiteres Beispiel ist "(&(objectClass=Printer) (&#124;(building=42)(building=43)))".  
+  
+ Wenn der Filter ein Attribut vom Typ ADS_UTC_TIME enthält, muss sein Wert im Format yyyymmddhhmmssZ aufweisen, wobei minute y, m, d, h, m und s jeweils für Jahr, Monat, Tag, Stunde, und Zweitens, bzw.. Der Wert für die Sekunden (ss) ist optional. Der letzte Buchstabe Z bedeutet differenzielle keine Zeit vorhanden ist. In diesem Format "10:20:00 Uhr Möglicherweise 13, 1999" wird"19990513102000Z". Beachten Sie, dass Active Directory Domain Services, das Datum und Uhrzeit als koordinierte Weltzeit (Greenwich Mean Time) gespeichert. Wenn Sie eine Zeit ohne Zeitdifferenz angeben, legen Sie die Zeit in GMT-Zeit fest.  
+  
+ Wenn Sie nicht in der UTC-Zeitzone sind, können Sie einen differenziellen Wert hinzufügen, um die Coordinated Universal Time (statt angeben, Z), eine Zeit entsprechend Ihrer Zeitzone anzugeben. Die differenzielle basiert auf den folgenden: differenzielle = koordinierte Weltzeit - Local. Um eine differenzielle anzugeben, verwenden Sie das folgende Format: Yyyymmddhhmmss [+/-] Hhmm. Z. B. "8:52:58 Uhr März 23, 1999" Neuseeland Normalzeit (die Differenz beträgt 12 Stunden) als"19990323205258.0 + 1200"angegeben ist.  
+  
+ Weitere Informationen zum Format LDAP-Suche finden Sie unter "Search Filter Syntax" in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.SearchResultCollection FindAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.SearchResultCollection FindAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySearcher.FindAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.SearchResultCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Suche, und gibt eine Auflistung der Einträge, die gefunden werden.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.SearchResultCollection" /> Objekt, das die Ergebnisse der Suche enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufgrund von Einschränkungen für die Implementierung der <xref:System.DirectoryServices.SearchResultCollection> Klasse kann nicht mit alle nicht verwalteten Ressourcen freizugeben, wenn der Garbage Collection ist. Um einen Speicherverlust zu verhindern, rufen Sie die <xref:System.DirectoryServices.SearchResultCollection.Dispose%2A> Methode bei der <xref:System.DirectoryServices.SearchResultCollection> Objekt nicht mehr benötigt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das angegebene <see cref="T:System.DirectoryServices.DirectoryEntry" /> ist kein Container.</exception>
+        <exception cref="T:System.NotSupportedException">Suche wird vom Anbieter, der verwendet wird, nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindOne">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.SearchResult FindOne ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.SearchResult FindOne() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySearcher.FindOne" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.SearchResult</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Suche aus, und gibt nur den ersten Eintrag, der gefunden wird.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.SearchResult" /> -Objekt, das den ersten Eintrag enthält, die während der Suche enthalten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn während der Suche mehr als ein Eintrag gefunden wird, wird nur der erste Eintrag zurückgegeben. Wenn keine Einträge gefunden werden, um die Suchkriterien ein null-Verweis (`Nothing` in Visual Basic) zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageSize">
+      <MemberSignature Language="C#" Value="public int PageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageSize" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.PageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSPageSize")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, des Seitenformat in eine seitenweise Suche fest.</summary>
+        <value>Die maximale Anzahl von Objekten, die die Server in eine seitenweise Suche zurückgegeben werden kann. Der Standardwert ist 0, d. h. keine seitenweise Suche.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachdem der Server die Anzahl der Objekte, die vom angegebenen gefunden wurde die <xref:System.DirectoryServices.DirectorySearcher.PageSize%2A> -Eigenschaft, wird er Suche beendet und die Ergebnisse an den Client zurückzugeben. Wenn der Client mehr Daten anfordert, startet den Server neu, die Suche von, in dem sie wurde unterbrochen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der neue Wert ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertiesToLoad">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection PropertiesToLoad { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection PropertiesToLoad" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.PropertiesToLoad" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.StringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSPropertiesToLoad")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, der Liste der Eigenschaften, die während der Suche abgerufen.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.StringCollection" /> Objekt, das den Satz von Eigenschaften für die abzurufenden während der Suche enthält.  
+  
+ Der Standardwert ist eine leere <see cref="T:System.Collections.Specialized.StringCollection" />, die alle Eigenschaften abruft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um bestimmte Eigenschaften abzurufen, fügen Sie diese Sammlung vor dem Beginn der Suche. Beispielsweise `searcher.PropertiesToLoad.Add("phone");` wird die Liste der Eigenschaften in der Suche Abrufen die Phone-Eigenschaft hinzugefügt.  
+  
+ Die Eigenschaft "ADsPath" wird immer während der Suche abgerufen. Auf [!INCLUDE[Win2kFamily](~/includes/win2kfamily-md.md)] und älteren Betriebssystemen muss das Konto, das die Suche führt ein Mitglied der Gruppe "Administratoren" beim Abrufen einer Eigenschaft NtSecurityDescriptor sein. Wenn dies nicht der Fall ist, wird der Eigenschaftswert, der für NtSecurityDescriptor zurückgegebene werden `null`. Weitere Informationen finden Sie im Thema "NT-Security-Descriptor" in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyNamesOnly">
+      <MemberSignature Language="C#" Value="public bool PropertyNamesOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PropertyNamesOnly" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.PropertyNamesOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSPropertyNamesOnly")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Suche ruft nur die Namen der Attribute ab, mit Werten zugewiesenen, fest.</summary>
+        <value>
+          <see langword="true" />Wenn die Suche nur die Namen der Attribute mit Werten zugewiesenen abgerufen wird; <see langword="false" /> , wenn die Suche den Namen und Werte für die angeforderte Attribute abruft. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferralChasing">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ReferralChasingOption ReferralChasing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ReferralChasingOption ReferralChasing" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.ReferralChasing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSReferralChasing")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ReferralChasingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, wie Referenzen ausgewertet werden.</summary>
+        <value>Einer der <see cref="T:System.DirectoryServices.ReferralChasingOption" />-Werte. Die Standardeinstellung ist <see cref="F:System.DirectoryServices.ReferralChasingOption.External" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Stamm-Suche nicht angegeben wird, in den Namenskontext des Servers oder wenn die Suchergebnisse cross ein Namenskontexts (z. B., wenn Sie die untergeordneten Domänen und suchen Sie in der übergeordneten Domäne haben), sendet der Server eine Referral-Nachricht an den Client, den der Client entweder können  ignorieren oder chase.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Wert ist keiner der <see cref="T:System.DirectoryServices.ReferralChasingOption" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SearchRoot">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.DirectoryEntry SearchRoot { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.DirectoryEntry SearchRoot" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.SearchRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSSearchRoot")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectoryEntry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, die Knoten in der Active Directory-Domänendienste-Hierarchie, in dem die Suche beginnt.</summary>
+        <value>Die <see cref="T:System.DirectoryServices.DirectoryEntry" /> Objekt in der Active Directory-Domänendienste-Hierarchie, in dem die Suche beginnt. Der Standardwert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.DirectoryServices.DirectorySearcher.SearchRoot%2A> ist ein null-Verweis (`Nothing` in Visual Basic), das Stammverzeichnis für die Suche wird festgelegt, auf den Stamm der Domäne, die der Server derzeit verwendet wird.  
+  
+ Es gibt mehrere Möglichkeiten, im globalen Katalog gesucht werden soll:  
+  
+-   Auflisten Sie des globalen Katalogs ein, und wählen Sie das erste untergeordnete Element.  
+  
+-   Geben Sie den Servernamen ein. Verwenden Sie die DsGetDcName-Funktion, um den globalen Katalog suchen.  Weitere Informationen über die DsGetDcName-Funktion finden Sie im Thema "DsGetDcName" in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+-   Rufen Sie die RootDSE des globalen Katalogs ein, und bitten Sie "rootNamingContext".  
+  
+-   Verwenden Sie den globalen Katalog, einen Suchpfad angeben, wie bei Verwendung von LDAP. Z. B. "GC: / / OU =..., DC =..., DC =...".  
+  
+-   Der folgende C#-Code veranschaulicht das Auflisten des globalen Katalogs ein, und wählen Sie das erste untergeordnete Element.  
+  
+    ```csharp  
+    DirectoryEntry entry = new DirectoryEntry("GC://forestname");  
+    IEnumerator ie = entry.Children.GetEnumerator();  
+    ie.MoveNext();  
+    entry = (DirectoryEntry)ie.Current;  
+    DirectorySearcher search = new DirectorySearcher(entry);  
+    ```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SearchScope">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.SearchScope SearchScope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.SearchScope SearchScope" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.SearchScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.SettingsBindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSSearchScope")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.SearchScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, den Bereich der Suche, die vom Server eingehalten wird.</summary>
+        <value>Einer der <see cref="T:System.DirectoryServices.SearchScope" />-Werte. Die Standardeinstellung ist <see cref="F:System.DirectoryServices.SearchScope.Subtree" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Wert ist keiner der <see cref="T:System.DirectoryServices.ReferralChasingOption" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityMasks">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.SecurityMasks SecurityMasks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.SecurityMasks SecurityMasks" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.SecurityMasks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSSecurityMasks")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.SecurityMasks</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, welche Sicherheit den Zugriff auf Informationen für die angegebenen Attribute von der Suche zurückgegeben werden soll.</summary>
+        <value>Einer der <see cref="T:System.DirectoryServices.SecurityMasks" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+  
+```csharp  
+using System.DirectoryServices;  
+...  
+DirectorySearcher src = new DirectorySearcher("…");  
+src.PropertiesToLoad = new string[] {ntSecurityDescriptor,…};  
+src.SecurityMasks = SecurityMasks.Dacl | SecurityMasks.Owner;  
+SearchResultCollection res = src.FindAll();  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerPageTimeLimit">
+      <MemberSignature Language="C#" Value="public TimeSpan ServerPageTimeLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ServerPageTimeLimit" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.ServerPageTimeLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSServerPageTimeLimit")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, die maximale Zeitdauer, die der Server durchsuchen soll für eine einzelne Seite mit Ergebnissen. Dies entspricht nicht dem als das Zeitlimit für die gesamte Suche.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> , das die Zeitspanne der Server soll suchen für eine Seite der Ergebnisse darstellt.  
+  
+ Der Standardwert ist-1 Sekunden, d. h., um unbegrenzt zu suchen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die minimale Auflösung dieser Eigenschaft ist eine Sekunde. Sekundenbruchteile werden ignoriert.  
+  
+ Wenn das Zeitlimit erreicht ist, wird der Server beendet die Suche und gibt die Ergebnisse, die bis zu gesammelt haben, die zusammen mit einem Cookie mit Informationen dazu, wo Sie die Suche fortsetzen verweisen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für Suchvorgänge, in denen <xref:System.DirectoryServices.DirectorySearcher.PageSize%2A> festgelegt ist, auf einen Wert, der nicht den Standardwert-1 ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerTimeLimit">
+      <MemberSignature Language="C#" Value="public TimeSpan ServerTimeLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ServerTimeLimit" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.ServerTimeLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSServerTimeLimit")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.DirectorySearcher.ServerTimeLimit" /> Eigenschaft ruft ab oder legt einen Wert, der angibt, die maximalen Zeitdauer, die der Server suchen benötigt. Wenn das Zeitlimit erreicht ist, werden nur Einträge, die bis zu gefunden werden, zeigen zurückgegeben.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> , das die Zeitspanne, die der Server durchsuchen soll darstellt.  
+  
+ Der Standardwert ist-1 Sekunden, d. h., wenn der Server als Standard-von 120 Sekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die minimale Auflösung dieser Eigenschaft ist eine Sekunde. Sekundenbruchteile werden ignoriert.  
+  
+ Im Gegensatz zu den <xref:System.DirectoryServices.DirectorySearcher.ServerPageTimeLimit%2A> -Eigenschaft, die <xref:System.DirectoryServices.DirectorySearcher.ServerTimeLimit%2A> Eigenschaft gibt die Gesamtmenge der Zeit, die der Server für eine Suche an. Wenn das Zeitlimit erreicht ist, wird der Server beendet die Suche und gibt die Ergebnisse, die bis zu diesem Zeitpunkt gesammelt haben.  
+  
+ Legen Sie <xref:System.DirectoryServices.DirectorySearcher.ServerTimeLimit%2A> auf-1 fest, um den Server als Standard verwenden.  
+  
+> [!NOTE]
+>  Wenn Sie festlegen, <xref:System.DirectoryServices.DirectorySearcher.ServerTimeLimit%2A> auf einen Wert, der größer als der Server als Standardwert von 120 Sekunden ist, wird der Server als Standardwert verwendet. Nachdem das Zeitlimit für den Server erreicht wird, können Sie nicht fortsetzen eine Suche aus, in dem sie wurde unterbrochen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeLimit">
+      <MemberSignature Language="C#" Value="public int SizeLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SizeLimit" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.SizeLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSSizeLimit")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der maximalen Anzahl von Objekten, die der Server bei einer Suche zurückgegeben.</summary>
+        <value>Die maximale Anzahl von Objekten, die Server bei einer Suche zurückgegeben, werden soll. Der Standardwert ist 0 (null), d. h. der Server bestimmt Standardgrenzwert von 1000 Einträge verwenden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Server beendet wird, Suchen nach der die maximale Größe erreicht ist und die Ergebnisse zurückgegeben werden gesammelt, bis zu diesem Zeitpunkt.  
+  
+> [!NOTE]
+>  Wenn Sie festlegen, <xref:System.DirectoryServices.DirectorySearcher.SizeLimit%2A> auf einen Wert, der größer als der Server als Standardwert 1000 Einträge ist, wird der Server als Standardwert verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der neue Wert ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.SortOption Sort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.SortOption Sort" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.Sort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ExpandableObjectConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSSort")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.SortOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der Eigenschaft, die auf der die Ergebnisse sortiert werden.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.SortOption" /> Objekt, das angibt, die Eigenschaft und die Richtung, die die Ergebnisse sortiert werden sollen.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Eigenschaftswert ist <see langword="null" /> (Nothing in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Tombstone">
+      <MemberSignature Language="C#" Value="public bool Tombstone { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Tombstone" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.Tombstone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSTombstone")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Suche auch zurückgeben soll Objekte gelöscht, die den Filter entsprechen.</summary>
+        <value>
+          <see langword="true" />Wenn der gelöschte Objekte in die Suche einbezogen werden. <see langword="false" /> andernfalls. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden C#-Beispiel veranschaulicht das Festlegen der <xref:System.DirectoryServices.DirectorySearcher.Tombstone%2A> Eigenschaft `true`.  
+  
+```csharp  
+using System.DirectoryServices;  
+...  
+// Create a DirectorySearcher object.  
+DirectorySearcher src = new DirectorySearcher("(isDeleted=true)");  
+//Set the Tombstone property to true.  
+src.Tombstone = true;  
+//Use the FindAll method to get search results.  
+SearchResultCollection res = src.FindAll();  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualListView">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.DirectoryVirtualListView VirtualListView { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.DirectoryVirtualListView VirtualListView" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySearcher.VirtualListView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSVirtualListView")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectoryVirtualListView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der Liste der virtuellen View-Optionen für die Suche fest.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.DirectoryVirtualListView" /> Objekt, das die Liste der virtuellen Suche Sichtinformationen enthält. Der Standardwert für diese Eigenschaft ist <see langword="null" />, also verwenden Sie die Liste der virtuellen Ansicht Suchoption nicht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

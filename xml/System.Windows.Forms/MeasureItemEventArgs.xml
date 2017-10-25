@@ -1,0 +1,203 @@
+<Type Name="MeasureItemEventArgs" FullName="System.Windows.Forms.MeasureItemEventArgs">
+  <TypeSignature Language="C#" Value="public class MeasureItemEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MeasureItemEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MeasureItemEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see langword="MeasureItem" /> -Ereignis für die <see cref="T:System.Windows.Forms.ListBox" />, <see cref="T:System.Windows.Forms.ComboBox" />, <see cref="T:System.Windows.Forms.CheckedListBox" />, und <see cref="T:System.Windows.Forms.MenuItem" /> Steuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis gesendet wird, wenn die `OwnerDraw` Eigenschaft <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.CheckedListBox>, oder <xref:System.Windows.Forms.MenuItem> festgelegt ist, um `true`. Hiermit wird die Zeichnungsfunktion anweisen, wie die Größe eines Elements.  
+  
+ Informationen über das Ereignismodell finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.Graphics> Eigenschaft benutzerdefinierte Zeichnen der Elemente in einer <xref:System.Windows.Forms.ListBox>.  
+  
+ [!code-cpp[MeasureItemEventArgs#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MeasureItemEventArgs/CPP/form1.cpp#1)]
+ [!code-csharp[MeasureItemEventArgs#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MeasureItemEventArgs/CS/form1.cs#1)]
+ [!code-vb[MeasureItemEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MeasureItemEventArgs/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MeasureItemEventArgs (System.Drawing.Graphics graphics, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics graphics, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MeasureItemEventArgs.#ctor(System.Drawing.Graphics,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> Objekt geschrieben wird.</param>
+        <param name="index">Der Index des Elements, für das die Höhe oder Breite benötigen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.MeasureItemEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MeasureItemEventArgs (System.Drawing.Graphics graphics, int index, int itemHeight);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics graphics, int32 index, int32 itemHeight) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MeasureItemEventArgs.#ctor(System.Drawing.Graphics,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="itemHeight" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> Objekt geschrieben wird.</param>
+        <param name="index">Der Index des Elements, für das die Höhe oder Breite benötigen.</param>
+        <param name="itemHeight">Die Höhe des Elements, das relativ zum Messen der <c>Grafiken</c> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.MeasureItemEventArgs" /> Klasse, die einen Parameter für die Höhe des Elements bereitstellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Graphics">
+      <MemberSignature Language="C#" Value="public System.Drawing.Graphics Graphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Graphics Graphics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MeasureItemEventArgs.Graphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Drawing.Graphics" /> Objekt gegen gemessen.</summary>
+        <value>Die <see cref="T:System.Drawing.Graphics" /> Objekt, mit dem die Skalierung des Elements bestimmen Sie gezeichnet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie verwenden eine <xref:System.Drawing.Graphics> Objekts bestimmen, verwenden Sie beim Skalieren der <xref:System.Windows.Forms.MeasureItemEventArgs.ItemHeight%2A> und <xref:System.Windows.Forms.MeasureItemEventArgs.ItemWidth%2A>. Verschiedene Arten von Grafikobjekten können unterschiedliche Skalen, beispielsweise den Unterschied in Messung Skalierung zwischen einem Bildschirm und einen Drucker haben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.Graphics> Eigenschaft benutzerdefinierte Zeichnen der Elemente in einer <xref:System.Windows.Forms.ListBox>.  
+  
+ [!code-cpp[MeasureItemEventArgs#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MeasureItemEventArgs/CPP/form1.cpp#1)]
+ [!code-csharp[MeasureItemEventArgs#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MeasureItemEventArgs/CS/form1.cs#1)]
+ [!code-vb[MeasureItemEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MeasureItemEventArgs/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public int Index { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MeasureItemEventArgs.Index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des Elements ab, für das Höhe und Breite benötigt werden.</summary>
+        <value>Der Index des zu messenden Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[MeasureItemEventArgs#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MeasureItemEventArgs/CPP/form1.cpp#1)]
+ [!code-csharp[MeasureItemEventArgs#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MeasureItemEventArgs/CS/form1.cs#1)]
+ [!code-vb[MeasureItemEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MeasureItemEventArgs/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemHeight">
+      <MemberSignature Language="C#" Value="public int ItemHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MeasureItemEventArgs.ItemHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Höhe des Elements gemäß der <see cref="P:System.Windows.Forms.MeasureItemEventArgs.Index" />.</summary>
+        <value>Die Höhe des gemessenen Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.Graphics> Eigenschaft benutzerdefinierte Zeichnen der Elemente in einer <xref:System.Windows.Forms.ListBox>.  
+  
+ [!code-cpp[MeasureItemEventArgs#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MeasureItemEventArgs/CPP/form1.cpp#1)]
+ [!code-csharp[MeasureItemEventArgs#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MeasureItemEventArgs/CS/form1.cs#1)]
+ [!code-vb[MeasureItemEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MeasureItemEventArgs/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemWidth">
+      <MemberSignature Language="C#" Value="public int ItemWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MeasureItemEventArgs.ItemWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite des Elements gemäß der <see cref="P:System.Windows.Forms.MeasureItemEventArgs.Index" />.</summary>
+        <value>Die Breite des gemessenen Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Element wird nur verwendet, durch <xref:System.Windows.Forms.MenuItem>. Sie können diese Eigenschaft verwenden, um sicherzustellen, dass das Menü mindestens so breit wie die umfassendsten Menüelement in der Liste ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.Graphics> Eigenschaft benutzerdefinierte Zeichnen der Elemente in einer <xref:System.Windows.Forms.ListBox>.  
+  
+ [!code-cpp[MeasureItemEventArgs#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MeasureItemEventArgs/CPP/form1.cpp#1)]
+ [!code-csharp[MeasureItemEventArgs#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MeasureItemEventArgs/CS/form1.cs#1)]
+ [!code-vb[MeasureItemEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MeasureItemEventArgs/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

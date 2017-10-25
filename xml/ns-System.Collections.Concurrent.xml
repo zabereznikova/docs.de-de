@@ -1,0 +1,8 @@
+<Namespace Name="System.Collections.Concurrent">
+  <Docs>
+    <summary>Der <see langword="System.Collections.Concurrent" />-Namespace stellt mehrere threadsichere Auflistungsklassen bereit, die anstelle der entsprechenden Typen im <see cref="N:System.Collections" />- und im <see cref="N:System.Collections.Generic" />-Namespace verwendet werden sollen, wenn mehrere Threads gleichzeitig auf die Auflistung zugreifen.  
+  
+ Member, auf die durch eine der Schnittstellen, die von den aktuellen Auflistungen implementiert werden, zugegriffen wird, einschließlich Erweiterungsmethoden, sind nicht unbedingt threadsicher und müssen möglicherweise vom Anrufer synchronisiert werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

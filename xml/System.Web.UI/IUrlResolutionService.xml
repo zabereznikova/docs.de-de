@@ -1,0 +1,54 @@
+<Type Name="IUrlResolutionService" FullName="System.Web.UI.IUrlResolutionService">
+  <TypeSignature Language="C#" Value="public interface IUrlResolutionService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IUrlResolutionService" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IUrlResolutionService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Dienst, der von Objekten zum Auflösen relativer URLs basierend auf Kontextinformationen implementiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle definiert den Dienst, mit dem URL-Pfade aufgelöst werden. Die <xref:System.Web.UI.IUrlResolutionService> Schnittstelle wird verwendet, für die Auflösung relativer Pfade und Pfade mit dem Zeichen der ~-Operator. Serversteuerelemente, die auf Ressourcen verweisen, können die Pfade definieren, auf die Ressourcen über die ~-Operator, der den Stamm der aktuellen Anwendung darstellt. Ein Pfad mit der ~-Operator kann nicht ausgeführt werden, wenn der Browser an. Das Serversteuerelement muss der Pfad in einen absoluten oder relativen Pfad konvertiert, vor der Übergabe an den Browser.  
+  
+ <xref:System.Web.UI.Control>Diese Schnittstelle implementiert wird. Ein Steuerelement, das von abgeleitet ist <xref:System.Web.UI.Control> konnte diese-überschreibungsimplementierung verwenden, um angepasste Auflösung von URLs bereitzustellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ResolveClientUrl">
+      <MemberSignature Language="C#" Value="public string ResolveClientUrl (string relativeUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ResolveClientUrl(string relativeUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IUrlResolutionService.ResolveClientUrl(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativeUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relativeUrl">Eine URL relativ zur aktuellen Seite.</param>
+        <summary>Gibt eine aufgelöste URL, die für den Client geeignet ist.</summary>
+        <returns>Ein <see cref="T:System.String" /> , die aufgelöste URL enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die angegebene URL absolut ist, wird die absolute URL unverändert zurückgegeben. Andernfalls wird die URL eine relative URL konvertiert, die den Client aufgelöst werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

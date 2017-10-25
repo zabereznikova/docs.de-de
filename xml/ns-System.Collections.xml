@@ -1,0 +1,6 @@
+<Namespace Name="System.Collections">
+  <Docs>
+    <summary>Die <see cref="N:System.Collections" /> -Namespace enthält Schnittstellen und Klassen, die verschiedene Auflistungen von Objekten, z. B. Listen, Warteschlangen, Bitarrays, Hashtabellen und Wörterbücher definieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

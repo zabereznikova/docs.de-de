@@ -1,0 +1,125 @@
+<Type Name="UriKind" FullName="System.UriKind">
+  <TypeSignature Language="C#" Value="public enum UriKind" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UriKind extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.UriKind" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert die Arten von <see cref="T:System.Uri" />s für die <see cref="M:System.Uri.IsWellFormedUriString(System.String,System.UriKind)" /> und mehrere <see cref="Overload:System.Uri.#ctor" /> Methoden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Absolute URIs sind gekennzeichnet durch einen vollständigen Verweis auf die Ressource (Beispiel: http://www.contoso.com/index.html), während ein relativer Uri von einem zuvor definierten Basis-URI abhängig ist (Beispiel: / Index.HTML).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Absolute">
+      <MemberSignature Language="C#" Value="Absolute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.UriKind Absolute = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.UriKind.Absolute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UriKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Uri ist ein absoluter Uri.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Relative">
+      <MemberSignature Language="C#" Value="Relative" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.UriKind Relative = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.UriKind.Relative" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UriKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Uri ist ein relativer Uri ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativeOrAbsolute">
+      <MemberSignature Language="C#" Value="RelativeOrAbsolute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.UriKind RelativeOrAbsolute = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.UriKind.RelativeOrAbsolute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UriKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Art des URIs ist unbestimmt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

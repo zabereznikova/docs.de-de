@@ -1,0 +1,94 @@
+<Type Name="UpdateOperations" FullName="System.Data.Services.UpdateOperations">
+  <TypeSignature Language="C#" Value="public enum UpdateOperations" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UpdateOperations extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.UpdateOperations" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine Enumeration, die Updatevorgänge angegeben werden, die für eine Entität ausgeführt wurden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird auf Interceptors verwendet, um zu bestimmen, welche Art von Änderungen an Entitäten ausgeführt wurden, bevor sie gespeichert wurden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="Add" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.UpdateOperations Add = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.UpdateOperations.Add" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.UpdateOperations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Entität wurde hinzugefügt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Change">
+      <MemberSignature Language="C#" Value="Change" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.UpdateOperations Change = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.UpdateOperations.Change" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.UpdateOperations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Entität wurde geändert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="Delete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.UpdateOperations Delete = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.UpdateOperations.Delete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.UpdateOperations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Entität wurde gelöscht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.UpdateOperations None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.UpdateOperations.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.UpdateOperations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für die Ressource wurden keine Vorgänge ausgeführt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

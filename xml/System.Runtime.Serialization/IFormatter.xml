@@ -1,0 +1,227 @@
+<Type Name="IFormatter" FullName="System.Runtime.Serialization.IFormatter">
+  <TypeSignature Language="C#" Value="public interface IFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.IFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Funktionalität für die Formatierung serialisierte Objekte bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle muss implementiert werden, durch alle Klassen, die als Formatierung in identifiziert die <xref:System.Runtime.Serialization> Architektur.  
+  
+ Objekte, steuern ihre eigene Serialisierung dazu implementieren die <xref:System.Runtime.Serialization.ISerializable> Schnittstelle. Damit für ein Objekt serialisiert werden können müssen Sie dieses Objekt als serialisierbar markieren. Dazu können Sie die serializable-Attribut auf eine Klasse anwenden. Wenn ein Objekt in das Diagramm nicht serialisierbar ist, schlägt die Serialisierung fehl.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Alle Formatierungsprogramm müssen diese Schnittstelle implementieren. Verwendung <see cref="M:System.Runtime.Serialization.IFormatter.Serialize(System.IO.Stream,System.Object)" /> serialisiert ein Objekt oder ein Diagramm von Objekten. Verwendung <see cref="M:System.Runtime.Serialization.IFormatter.Deserialize(System.IO.Stream)" /> zu einen Stream deserialisiert, und erstellen Sie einen Klon des ursprünglichen Objekts oder Diagramm von Objekten.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Binder">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.SerializationBinder Binder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.SerializationBinder Binder" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.IFormatter.Binder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.SerializationBinder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Runtime.Serialization.SerializationBinder" /> , Typ Suchvorgänge während der Deserialisierung ausführt.</summary>
+        <value>Die <see cref="T:System.Runtime.Serialization.SerializationBinder" /> , Typ Suchvorgänge während der Deserialisierung ausführt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn versuchen, einen Typ von Informationen zu lösen codiert auf den Stream und das Formatierungsprogramm Aufrufe der <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> Methode für die <xref:System.Runtime.Serialization.SerializationBinder>. Diese Methode löst diese Parameter an eine <xref:System.Type> Objekt. Der Binder finde eine <xref:System.Type> während der Deserialisierung, die in einer anderen Assembly ist, als es bei der Serialisierung war.  
+  
+ Durch Festlegen dieser Eigenschaft hat keine Auswirkungen während der Serialisierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.StreamingContext Context { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.StreamingContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.IFormatter.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.StreamingContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Runtime.Serialization.StreamingContext" /> für die Serialisierung und Deserialisierung verwendet.</summary>
+        <value>Die <see cref="T:System.Runtime.Serialization.StreamingContext" /> für die Serialisierung und Deserialisierung verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft wird an eine beliebige Objekt, durch übergeben <xref:System.Runtime.Serialization.ISerializable> oder <xref:System.Runtime.Serialization.ISerializationSurrogate>. Die <xref:System.Runtime.Serialization.StreamingContext> gibt an, das Ziel (während der Serialisierung) oder die Quelle der Daten (während der Deserialisierung). Ein Objekt, durch <xref:System.Runtime.Serialization.ISerializable> können ändern, die Daten, die sie je nach Wert von überträgt die <xref:System.Runtime.Serialization.IFormatter.Context%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (System.IO.Stream serializationStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Deserialize(class System.IO.Stream serializationStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.IFormatter.Deserialize(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">Der Stream, der zu deserialisierenden Daten enthält.</param>
+        <summary>Deserialisiert die Daten auf den angegebenen Stream und Empfängerseite das Diagramm von Objekten.</summary>
+        <returns>Das oberste Objekt des deserialisierten Diagramms.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Serialization.IFormatter.Deserialize%2A> Methode Graph Informationen aus dem Datenstrom gelesen und rekonstruiert einen Klon des ursprünglichen Diagramms. Die Topologie des Diagramms wird beibehalten.  
+  
+ Bei der Deserialisierung wird ein leeres Objekt des entsprechenden Typs zugewiesen, und ihre Felder aus den Daten im übertragen der `serializationStream` Stream. Es ist wichtig zu beachten, dass kein Konstruktor während der Deserialisierung des Objekts aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.IO.Stream serializationStream, object graph);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Serialize(class System.IO.Stream serializationStream, object graph) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.IFormatter.Serialize(System.IO.Stream,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+        <Parameter Name="graph" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">Der Stream, in dem das Formatierungsprogramm die serialisierten Daten einfügt. In diesem Datenstrom kann eine Vielzahl von Sicherungsspeicher (z. B. Dateien, Netzwerk, Speicher usw.) verweisen.</param>
+        <param name="graph">Das Objekt, oder den Stamm des Objektdiagramms, zu serialisieren. Alle untergeordneten Objekte dieses Stammobjekts werden automatisch serialisiert.</param>
+        <summary>Serialisiert ein Objekt oder ein Diagramm von Objekten mit dem angegebenen Stamm in den angegebenen Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Serialization.IFormatter.Serialize%2A> Methode automatisch serialisiert die angegebenen Objekte und alle mit ihr verbundenen Objekte, in den angegebenen Stream.  
+  
+ Standardmäßig zeichnet den Serialisierungsprozess für die der Status eines Objekts durch das Sammeln von die Werte ihrer Felder (öffentlich und privat). Diese Felder werden in den Stream zusammen mit Informationen über das Objekt, z. B. den Namen, die durch die Assembly für seinen Typ qualifiziert gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SurrogateSelector">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.ISurrogateSelector SurrogateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.ISurrogateSelector SurrogateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.IFormatter.SurrogateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ISurrogateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Runtime.Serialization.SurrogateSelector" /> von dem aktuellen Formatierungsprogramm verwendet.</summary>
+        <value>Die <see cref="T:System.Runtime.Serialization.SurrogateSelector" /> von diesem Formatierer verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Runtime.Serialization.ISerializationSurrogate> ermöglicht dem Benutzer, geben Sie ein Objekt, das beste geeignet, um die Serialisierung für ein bestimmtes Objekt oder eine Klasse von Objekten zu behandeln. Betrachten Sie es als eine Implementierung der <xref:System.Runtime.Serialization.ISerializable> jedoch von einem anderen Objekt bereitgestellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,193 @@
+<Type Name="DelegatingHandler" FullName="System.Net.Http.DelegatingHandler">
+  <TypeSignature Language="C#" Value="public abstract class DelegatingHandler : System.Net.Http.HttpMessageHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DelegatingHandler extends System.Net.Http.HttpMessageHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Http.DelegatingHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Http</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.Http.HttpMessageHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Typ für HTTP-Handler, die die Verarbeitung von HTTP-Antwortnachrichten an einen anderen Handler delegieren so genannten inneren Handler.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Anwendung sollte einen inneren Handler im Konstruktor oder durch Bereitstellen der <xref:System.Net.Http.DelegatingHandler.InnerHandler%2A> Eigenschaft vor dem Aufruf <xref:System.Net.Http.DelegatingHandler.SendAsync%2A>ist, andernfalls ein <xref:System.InvalidOperationException> ausgelöst.
+  
+ Beachten Sie, dass <xref:System.Net.Http.DelegatingHandler.InnerHandler%2A> Eigenschaft ist möglicherweise auch einen delegierenden Handler. Dieser Ansatz ermöglicht die Erstellung von Stapeln von Handler zum Verarbeiten der HTTP-Antwort-Nachrichten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DelegatingHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.DelegatingHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Net.Http.DelegatingHandler" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das interne Handle kann festgelegt werden, mithilfe der <xref:System.Net.Http.DelegatingHandler.InnerHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DelegatingHandler (System.Net.Http.HttpMessageHandler innerHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Net.Http.HttpMessageHandler innerHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.DelegatingHandler.#ctor(System.Net.Http.HttpMessageHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="innerHandler" Type="System.Net.Http.HttpMessageHandler" />
+      </Parameters>
+      <Docs>
+        <param name="innerHandler">Der interne Handler, der für die Verarbeitung der HTTP-Antwortnachrichten verantwortlich ist.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Net.Http.DelegatingHandler" /> Klasse mit einem angegebenen internen Handler.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.DelegatingHandler.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben. <see langword="false" />, wenn ausschließlich nicht verwaltete Ressourcen freigegeben werden sollen.</param>
+        <summary>Gibt die vom <see cref="T:System.Net.Http.DelegatingHandler" /> verwendeten, nicht verwalteten Ressourcen frei und verwirft optional auch die verwalteten Ressourcen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerHandler">
+      <MemberSignature Language="C#" Value="public System.Net.Http.HttpMessageHandler InnerHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Http.HttpMessageHandler InnerHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.DelegatingHandler.InnerHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.HttpMessageHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den inneren Handler ab, der die HTTP-Antwortnachrichten verarbeitet, oder legt ihn fest.</summary>
+        <value>Der innere Handler für HTTP-Antwortnachrichten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies <xref:System.Net.Http.DelegatingHandler.InnerHandler%2A> Eigenschaft kann nur festgelegt werden, bevor die Klasse verwendet wird (die <xref:System.Net.Http.DelegatingHandler.SendAsync%2A> -Methode aufgerufen wird).  
+  
+ Beachten Sie, dass <xref:System.Net.Http.DelegatingHandler.InnerHandler%2A> Eigenschaft ist möglicherweise ein delegierenden Handler zu, auch wenn dies nicht üblich ist. Dieser Ansatz ermöglicht die Erstellung von Stapeln der Handler für den HTTP-Antwortnachrichten an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; SendAsync(class System.Net.Http.HttpRequestMessage request, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.DelegatingHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.Http.HttpRequestMessage" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="request">Die an den Server zu sendende HTTP-Anforderungsmeldung.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, um den Vorgang abzubrechen.</param>
+        <summary>Sendet eine HTTP-Anforderung an den inneren Handler, der als asynchroner Vorgang an den Server gesendet werden soll.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Diese überschreibbare Implementierung der <xref:System.Net.Http.HttpClientHandler.SendAsync%2A> Methode leitet die HTTP-Anforderung an den internen Handler, an den Server als asynchronen Vorgang senden.  
+  
+ Die <xref:System.Net.Http.DelegatingHandler.SendAsync%2A> Methode wird hauptsächlich verwendet, vom System und nicht von Anwendungen. Wenn diese Methode aufgerufen wird, ruft er die <xref:System.Net.Http.DelegatingHandler.SendAsync%2A> -Methode für den inneren Handler.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="request" /> war <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

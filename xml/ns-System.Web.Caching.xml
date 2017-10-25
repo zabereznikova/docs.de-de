@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.Caching">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Caching" />-Namespace stellt Klassen zum Zwischenspeichern häufig verwendeter Daten auf dem Server bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Namespace enthält die <xref:System.Web.Caching.Cache> -Klasse ein Wörterbuch, das Sie zum Speichern von von Datenobjekten wie z. B. Hashtabellen und Datasets ermöglicht. Darüber hinaus Ablauf-Funktionalität für diese Objekte und Methoden, mit denen Sie zum Hinzufügen und entfernen Sie die Objekte. Sie können die Objekte in den Cache mit einer Abhängigkeit auf andere Dateien oder Cacheeinträge hinzufügen. In diesem Fall die <xref:System.Web.Caching.Cache> Objekt kann aufrufen, eine Rückrufmethode, um die Anwendung zu benachrichtigen, wenn ein Objekt aus dem Cache entfernt wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

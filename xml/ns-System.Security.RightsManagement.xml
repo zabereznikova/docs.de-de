@@ -1,0 +1,13 @@
+<Namespace Name="System.Security.RightsManagement">
+  <Docs>
+    <summary>Stellt Typen zur Unterstützung von rechteverwaltung von Inhalt Anwendung erstellt, z. B. in gespeicherten eine <see cref="T:System.IO.Packaging.Package" /> oder <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Verwendung und Implementierung von Rights Management steht online in der MSDN-Dokumentation für die [Rights Management Services SDK](http://go.microsoft.com/fwlink/?LinkId=74491).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,188 @@
+<Type Name="SecurityTokenHandlerCollectionManager" FullName="System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager">
+  <TypeSignature Language="C#" Value="public class SecurityTokenHandlerCollectionManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SecurityTokenHandlerCollectionManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Klasse, die mehrere verwaltet mit Namen versehene Sicherheit Tokenhandler Sammlungen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenHandlerCollectionManager (string serviceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string serviceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serviceName">Der Name des zugehörigen Diensts. Die <see cref="P:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager.ServiceName" /> -Eigenschaft ist auf diesen Namen festgelegt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager" /> für die angegebene Klasse mit dem Namen Service.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public bool ContainsKey (string usage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsKey(string usage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="usage">Die Verwendung für die eine Tokenhandler Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt, ob diese Instanz eine Sicherheit Tokenhandler-Auflistung für die angegebene Verwendung enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn diese Instanz eine Tokenhandler-Auflistung für die angegebene Verwendung enthält; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Sicherheit Tokenhandler Sammlungen, die von dieser Instanz verwaltet werden.</summary>
+        <value>Die Anzahl der Tokenhandler Sammlungen, die von dieser Instanz verwaltet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultSecurityTokenHandlerCollectionManager">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager CreateDefaultSecurityTokenHandlerCollectionManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager CreateDefaultSecurityTokenHandlerCollectionManager() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager.CreateDefaultSecurityTokenHandlerCollectionManager" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Auflistung Tokenhandler-Manager mit einer Ereignishandler-Auflistung, die den Standardsatz von Tokenhandler enthält.</summary>
+        <returns>Ein Manager, der eine Auflistung mit den Standard-Tokenhandler enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neue Instanz, die den standarddienstnamen aus der Konfiguration zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEmptySecurityTokenHandlerCollectionManager">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager CreateEmptySecurityTokenHandlerCollectionManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager CreateEmptySecurityTokenHandlerCollectionManager() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager.CreateEmptySecurityTokenHandlerCollectionManager" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine leere Tokenhandler Auflistung-Manager.</summary>
+        <returns>Eine Auflistung-Manager, der keine Handler enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenHandlerCollection this[string usage] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenHandlerCollection Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandlerCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="usage">Der Name der Auslastung für die Tokenhandler-Auflistung.</param>
+        <summary>Gibt die Sicherheit Tokenhandler-Auflistung für die angegebene Verwendung.</summary>
+        <value>Die Tokenhandler-Auflistung die angegebene Verwendung zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme wird ausgelöst, wenn keine Tokenhandler mit dem angegebenen Schlüssel (Verwendung) verknüpft sind Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityTokenHandlerCollections">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.SecurityTokenHandlerCollection&gt; SecurityTokenHandlerCollections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.IdentityModel.Tokens.SecurityTokenHandlerCollection&gt; SecurityTokenHandlerCollections" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager.SecurityTokenHandlerCollections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.SecurityTokenHandlerCollection&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Sicherheitstoken Tokenhandler Auflistungen verwaltet, die von dieser Instanz ab.</summary>
+        <value>Die Tokenhandler-Auflistungen, die von dieser Instanz verwaltet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceName">
+      <MemberSignature Language="C#" Value="public string ServiceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServiceName" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager.ServiceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Dienstnamen ab.</summary>
+        <value>Der Name des Diensts, der dieser Instanz zugeordnet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

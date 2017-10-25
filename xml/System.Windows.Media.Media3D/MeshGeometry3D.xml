@@ -1,0 +1,407 @@
+<Type Name="MeshGeometry3D" FullName="System.Windows.Media.Media3D.MeshGeometry3D">
+  <TypeSignature Language="C#" Value="public sealed class MeshGeometry3D : System.Windows.Media.Media3D.Geometry3D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MeshGeometry3D extends System.Windows.Media.Media3D.Geometry3D" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.MeshGeometry3D" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.Geometry3D</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dreieck zum Erstellen einer 3D Form von primitiven.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ MeshGeometry3D ermöglicht den Entwickler, die Position, Normal und Textur-Koordinate Informationen angeben.  Die <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> ist eine erforderliche Eigenschaft.  
+  
+ Es wird angenommen, dass normale der Vorderseite eines Netzes primitiven zugeordnet werden.  Die windungsreihenfolge (die Reihenfolge, in dem die Positionen, die jedes Dreieck des Netzes bilden angegeben werden) bestimmt, ob ein Schriftbild an bestimmten nach außen gerichtete oder verbundene zurück.  Nach außen gerichtete Dreiecke werden gegen den Uhrzeigersinn nacheinander in Fällen; Dreiecke werden gegen den Uhrzeigersinn nacheinander in Fällen.  
+  
+   
+  
+## Examples  
+ [!code-xaml[basic3d#Basic3DXAML3DN3](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MeshGeometry3D ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.MeshGeometry3D.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Media3D.MeshGeometry3D" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[3dgallery_procedural_snip#Basic3DShapeCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Basic3DShapeExample.cs#basic3dshapecodeexamplewholepage)]
+ [!code-vb[3dgallery_procedural_snip#Basic3DShapeCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Media3D.Rect3D Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Media3D.Rect3D Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.MeshGeometry3D.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Rect3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das umschließende <see cref="T:System.Windows.Media.Media3D.Rect3D" /> dafür <see cref="T:System.Windows.Media.Media3D.MeshGeometry3D" />.</summary>
+        <value>Umgebendes <see cref="T:System.Windows.Media.Media3D.Rect3D" /> für die <see cref="T:System.Windows.Media.Media3D.MeshGeometry3D" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.MeshGeometry3D Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.MeshGeometry3D Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.MeshGeometry3D.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.MeshGeometry3D</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Media3D.MeshGeometry3D" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.MeshGeometry3D CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.MeshGeometry3D CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.MeshGeometry3D.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.MeshGeometry3D</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Media3D.MeshGeometry3D" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.MeshGeometry3D.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normals">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Vector3DCollection Normals { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.Vector3DCollection Normals" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.MeshGeometry3D.Normals" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Vector3DCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Auflistung von normalen Vektoren für die <see cref="T:System.Windows.Media.Media3D.MeshGeometry3D" />.</summary>
+        <value>
+          <see cref="T:System.Windows.Media.Media3D.Vector3DCollection" />die normale Vektoren enthält für die MeshGeometry3D.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normale Vektoren sind Vektoren senkrecht, das die Vorderseite eines einzelnen Dreieck ab, das einem Netz definiert. Normale bestimmen, ob es sich bei einem gegebenen Dreieck Gesicht leuchtet.  
+  
+ <xref:System.Windows.Media.Media3D.MeshGeometry3D>ermöglicht es dem Entwickler an der Position, Normal und Textur-Koordinate Informationen ein.  
+  
+ Es wird angenommen, dass normale der Vorderseite eines Netzes primitiven zugeordnet werden.  Die windungsreihenfolge (die Reihenfolge, in dem die Positionen, die jedes Dreieck des Netzes bilden angegeben werden) bestimmt, ob ein Schriftbild an bestimmten nach außen gerichtete oder verbundene zurück.  
+  
+ Wenn normale nicht angegeben werden, ihrer Generierung richtet sich danach, ob der Entwickler Dreiecksindizes für das Netz angegeben wurde.  Wenn Dreiecksindizes angegeben werden, werden normale Berücksichtigung angrenzender Flächen generiert.  Wenn keine Dreiecksindizes angegeben werden, wird nur eine normale für das angegebene Dreieck generiert.  Dies kann dazu führen, dass eine ungleichmäßigen Darstellung im Netz.  
+  
+<a name="dependencyPropertyInfo_Normals"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.MeshGeometry3D.NormalsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ [!code-xaml[basic3d#Basic3DXAML3DN3](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty NormalsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty NormalsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.MeshGeometry3D.NormalsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.MeshGeometry3D.Normals" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override void OnPropertyChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPropertyChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.MeshGeometry3D.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Positions">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Point3DCollection Positions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.Point3DCollection Positions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.MeshGeometry3D.Positions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point3DCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Auflistung von Vertexpositionen für ein <see cref="T:System.Windows.Media.Media3D.MeshGeometry3D" />.</summary>
+        <value>
+          <see cref="T:System.Windows.Media.Media3D.Point3DCollection" />die Vertexpositionen von der MeshGeometry3D enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Von dieser Eigenschaft angegebenen Punkte stellen die Eckpunkte des den Dreiecken ablegt wird, aus denen ein 3D Netz dar.  
+  
+ Die windungsreihenfolge (die Reihenfolge, in dem die Positionen, die jedes Dreieck des Netzes bilden angegeben werden) bestimmt, ob ein Schriftbild an bestimmten nach außen gerichtete oder verbundene zurück.  Nach außen gerichtete Dreiecke werden gegen den Uhrzeigersinn nacheinander in Fällen; Dreiecke werden gegen den Uhrzeigersinn nacheinander in Fällen.  
+  
+<a name="dependencyPropertyInfo_Positions"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.MeshGeometry3D.PositionsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ [!code-xaml[basic3d#Basic3DXAML3DN3](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PositionsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PositionsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.MeshGeometry3D.PositionsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.MeshGeometry3D.Positions" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextureCoordinates">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PointCollection TextureCoordinates { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.PointCollection TextureCoordinates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PointCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Auflistung von Texturkoordinaten für die <see cref="T:System.Windows.Media.Media3D.MeshGeometry3D" />.</summary>
+        <value>
+          <see cref="T:System.Windows.Media.PointCollection" />die Texturkoordinaten enthält für die MeshGeometry3D.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bestimmen von Texturkoordinaten wie eine <xref:System.Windows.Media.Media3D.Material> die Eckpunkte des den Dreiecken ablegt wird, die einem Netz bilden zugeordnet ist.  
+  
+ **Hinweis** keine Texturkoordinaten für eine MeshGeometry3D angegeben werden, dessen Material möglicherweise Rendering nicht wie erwartet.  
+  
+<a name="dependencyPropertyInfo_TextureCoordinates"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinatesProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ [!code-xaml[basic3d#Basic3DXAML3DN3](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextureCoordinatesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextureCoordinatesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextureCoordinatesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinatesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TriangleIndices">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Int32Collection TriangleIndices { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Int32Collection TriangleIndices" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Int32Collection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Auflistung von Dreiecksindizes für die <see cref="T:System.Windows.Media.Media3D.MeshGeometry3D" />.</summary>
+        <value>Auflistung, die MeshGeometry3D Dreiecksindizes enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für ein Dreieck in einem bestimmten 3D die Reihenfolge, in dem das Dreieck Vertex festgelegten Positionen bestimmt, ob dem Zifferblatt der Dreieck an der Vorderseite, oder Gesicht sichern.  
+  
+ Die [Windows Presentation Foundation](http://msdn.microsoft.com/library/f667bd15-2134-41e9-b4af-5ced6fafab5d) 3D Implementierung verwendet ein gegen den Uhrzeigersinn windungsreihenfolge; d. h. sollte die Punkte, die bestimmen, eine nach außen gerichtete Gitterdreiecks Positionen gegen den Uhrzeigersinn angegeben angegeben werden, als ausgehend vom Anfang des Netzes angezeigt.  
+  
+ Festlegen der <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A> Eigenschaft ist optional. Wenn die Indizes nicht angegeben werden, werden in einer nicht indizierten Weise Dreiecke gezeichnet. Jeder Satz von drei Positionen wird ein Dreieck.  
+  
+<a name="dependencyPropertyInfo_TriangleIndices"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndicesProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ [!code-xaml[basic3d#Basic3DXAML3DN3](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TriangleIndicesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TriangleIndicesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TriangleIndicesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndicesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

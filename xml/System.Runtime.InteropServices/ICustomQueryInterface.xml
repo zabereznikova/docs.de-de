@@ -1,0 +1,103 @@
+<Type Name="ICustomQueryInterface" FullName="System.Runtime.InteropServices.ICustomQueryInterface">
+  <TypeSignature Language="C#" Value="public interface ICustomQueryInterface" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICustomQueryInterface" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ICustomQueryInterface" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht Entwicklern das Bereitstellen einer benutzerdefinierten, verwalteten Implementierung der [IUnknown:: QueryInterface (REFIID Riid, void ** PpvObject)](http://go.microsoft.com/fwlink/?LinkID=144867) Methode.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse erlaubt fortgeschrittenen Benutzern, eine benutzerdefinierte verwaltete Implementierung der bieten die `QueryInterface` Methode.  
+  
+ Verwaltete und systemeigene Anwendungen können die benutzerdefinierte Implementierung verwenden, um eine bestimmte Schnittstelle für eine angegebene Schnittstellen-ID, mit Ausnahme von IID_IUnknown zurückzugeben. D. h., wenn `QueryInterface` wird aufgerufen, es wird eine ignoriert benutzerdefinierte Implementierungen der `riid` -Parameter auf IID_IUnknown festgelegt ist. Allerdings können Sie weiterhin zurückgeben [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) als die `ppvObject`.  
+  
+ Entwickler können benutzerdefinierte Implementierungen für alle Schnittstellen bereitstellen (mit Ausnahme von `IUnknown`) Wenn sie definieren und eine gültige entsprechenden Schnittstelle zu implementieren.  
+  
+ Eine gültige benutzerdefinierte Schnittstelle verfügt über eine vtable-Layout, die nicht verwaltete COM-Schnittstelle genau übereinstimmt und die zugehörige <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> ist <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetInterface">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.CustomQueryInterfaceResult GetInterface (ref Guid iid, out IntPtr ppv);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Runtime.InteropServices.CustomQueryInterfaceResult GetInterface([in]valuetype System.Guid&amp; iid, [out] native int&amp; ppv) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ICustomQueryInterface.GetInterface(System.Guid@,System.IntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CustomQueryInterfaceResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="ppv" Type="System.IntPtr&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="iid">Die GUID der angeforderten Schnittstelle.</param>
+        <param name="ppv">Ein Verweis auf die angeforderte Schnittstelle ab, wenn diese Methode zurückgegeben wird.</param>
+        <summary>Gibt eine Schnittstelle gemäß einem angegebene Schnittstellen-ID</summary>
+        <returns>Einer der Enumerationswerte, der angibt, ob eine benutzerdefinierte Implementierung von [IUnknown:: QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) verwendet wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwalteten Code können eine Anwendung eine eigene Implementierung für benutzerdefinierte und Standardlaufzeitschnittstellen angeben.  
+  
+ Die <xref:System.Runtime.InteropServices.CustomQueryInterfaceResult> zurückgeben Wert verwendet werden, aktivieren oder Deaktivieren von benutzerdefinierten Implementierungen durch ein- oder Ausblenden von bestimmten Schnittstellen während COM-Zugriff.  
+  
+ Diese Methode ist nicht für COM sichtbar  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

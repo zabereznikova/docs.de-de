@@ -1,0 +1,157 @@
+<Type Name="FileRegion" FullName="System.IO.Log.FileRegion">
+  <TypeSignature Language="C#" Value="public sealed class FileRegion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FileRegion extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.FileRegion" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen zu archivierenden Bereich einer Datei dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.IO.Log.LogArchiveSnapshot>-Objekt enthält die Informationen, die erforderlich sind, um regelmäßige Sicherungskopien der Daten in einem <xref:System.IO.Log.LogStore> zu generieren. Die tatsächlichen Daten sind in der zählbaren Auflistung von <xref:System.IO.Log.FileRegion>-Objekten enthalten, die von der <xref:System.IO.Log.LogArchiveSnapshot.ArchiveRegions%2A>-Eigenschaft zurückgegeben wird. Jede <xref:System.IO.Log.FileRegion>-Instanz stellt eine Bytesequenz in einer Datei dar, die archiviert werden muss.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Protokollspeicher mit der <xref:System.IO.Log.LogStore>-Klasse und der <xref:System.IO.Log.FileRegion>-Klasse im XML-Format archiviert werden kann.  
+  
+ [!code-csharp[FileRegion#0](~/samples/snippets/csharp/VS_Snippets_CFX/fileregion/cs/fileregion.cs#0)]
+ [!code-vb[FileRegion#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/fileregion/vb/fileregion.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FileLength">
+      <MemberSignature Language="C#" Value="public long FileLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 FileLength" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.FileRegion.FileLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge der Datei in Byte ab.</summary>
+        <value>Die Länge der Datei in Byte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaft gibt die Länge der gesamten Datei anstelle eines einzelnen Bereichs der Datei zurück. Die Länge des Bereichs der Datei kann ermittelt werden, in dem die <xref:System.IO.Log.LogStore.Length%2A>-Eigenschaft des Streams überprüft wird, der von der <xref:System.IO.Log.FileRegion.GetStream%2A>-Methode zurückgegeben wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Protokollspeicher mit der <xref:System.IO.Log.LogStore>-Klasse und der <xref:System.IO.Log.FileRegion>-Klasse im XML-Format archiviert werden kann.  
+  
+ [!code-csharp[FileRegion#0](~/samples/snippets/csharp/VS_Snippets_CFX/fileregion/cs/fileregion.cs#0)]
+ [!code-vb[FileRegion#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/fileregion/vb/fileregion.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream GetStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.FileRegion.GetStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Stream zurück, der verwendet werden kann, um die zu archivierenden Daten zu lesen.</summary>
+        <returns>Ein Stream, der die zu archivierenden Daten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Protokollspeicher mit der <xref:System.IO.Log.LogStore>-Klasse und der <xref:System.IO.Log.FileRegion>-Klasse im XML-Format archiviert werden kann.  
+  
+ [!code-csharp[FileRegion#0](~/samples/snippets/csharp/VS_Snippets_CFX/fileregion/cs/fileregion.cs#0)]
+ [!code-vb[FileRegion#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/fileregion/vb/fileregion.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Die Anforderung konnte aufgrund einer unerwarteten E/A-Ausnahme nicht ausgeführt werden.</exception>
+        <exception cref="T:System.NotSupportedException">Der Vorgang wird nicht unterstützt.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung des Programms fortzusetzen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public long Offset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Offset" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.FileRegion.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bringt den Offset in die Datei, wo die Daten anfangen.</summary>
+        <value>Der Offset in der Datei, wo die Daten anfangen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Protokollspeicher mit der <xref:System.IO.Log.LogStore>-Klasse und der <xref:System.IO.Log.FileRegion>-Klasse im XML-Format archiviert werden kann.  
+  
+ [!code-csharp[FileRegion#0](~/samples/snippets/csharp/VS_Snippets_CFX/fileregion/cs/fileregion.cs#0)]
+ [!code-vb[FileRegion#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/fileregion/vb/fileregion.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.FileRegion.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollqualifizierten Speicherort der Datei ab, der diesen Bereich enthält.</summary>
+        <value>Der vollqualifizierte Speicherort der Datei, der diesen Bereich enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Protokollspeicher mit der <xref:System.IO.Log.LogStore>-Klasse und der <xref:System.IO.Log.FileRegion>-Klasse im XML-Format archiviert werden kann.  
+  
+ [!code-csharp[FileRegion#0](~/samples/snippets/csharp/VS_Snippets_CFX/fileregion/cs/fileregion.cs#0)]
+ [!code-vb[FileRegion#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/fileregion/vb/fileregion.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

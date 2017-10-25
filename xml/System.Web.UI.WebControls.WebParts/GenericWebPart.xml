@@ -1,0 +1,617 @@
+<Type Name="GenericWebPart" FullName="System.Web.UI.WebControls.WebParts.GenericWebPart">
+  <TypeSignature Language="C#" Value="public class GenericWebPart : System.Web.UI.WebControls.WebParts.WebPart" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GenericWebPart extends System.Web.UI.WebControls.WebParts.WebPart" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.GenericWebPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.WebPart</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Umschließt Serversteuerelemente, die nicht <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> steuert, damit sie angezeigt werden können und sich so wie "Wahr Verhalten" <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente zur Laufzeit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement vorhanden ist, um einen Laufzeit-Wrapper für Webserversteuerelemente bereitstellen, die nicht <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert, sodass solche Steuerelemente im Webparts-Seiten und Anwendungen verwendet werden können. Wenn Entwickler fügen Serversteuerelemente – z. B. Benutzersteuerelemente, ASP.NET-Serversteuerelemente oder vorhandene benutzerdefinierte Steuerelemente – eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> -Steuerelement, das <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement umschließt Serversteuerelemente automatisch zur Laufzeit, damit sie die gleiche aufweisen können Funktionen als "true" <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+ Die folgende Tabelle vergleicht und steht im Gegensatz zu <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelemente und <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+|<xref:System.Web.UI.WebControls.WebParts.GenericWebPart>-Steuerelement|<xref:System.Web.UI.WebControls.WebParts.WebPart>-Steuerelement|  
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|Ist vorhanden, um Serversteuerelemente auszustatten, die nicht <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert mit den Webparts-Funktionen so, dass alle ASP.NET, benutzerdefinierte oder einem Benutzersteuerelement kann Webparts-Anwendungen beteiligt.|Ist vorhanden, um benutzerdefinierte ASP.NET-Steuerelemente zu erstellen, die systemeigene Webparts-Funktionalität erstellt haben. Dies schließt Personalisierung, Verbindungen, Import und Export und Drag-and-Drop-Funktionen.|  
+|Im Markup der Seite ist nicht deklariert werden. Es wird nur für Steuerelemente zur Laufzeit zu umschließen und das umschlossene Steuerelement (oder ein untergeordnetes Steuerelement) Geben Sie die vollständige Funktionalität des ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.|Im Markup der Seite zur Entwurfszeit, wie ein ASP.NET-Serversteuerelement deklariert werden, außer dass in der Sie deklariert ist eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone.|  
+|Schließt und integriert Sie in den den Webparts, die Personalisierung verarbeitet werden, damit es als ein "true" fungieren kann untergeordneten Steuerelements <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Dies erfolgt automatisch, die es auf einfache Weise für Entwickler, Serversteuerelemente und Benutzersteuerelemente in Webparts-Anwendungen verwenden.|Wird automatisch in den Webparts Personalisierungsprozess einbezogen.|  
+|Zur Laufzeit programmgesteuert zugegriffen werden kann (mithilfe der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetGenericWebPart%2A> -Methode und übergibt Sie an das untergeordnete Element-Steuerelement), wie z. B. eine "true" <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelements oder standard ASP.NET.|Kann zur Laufzeit, z. B. einem Standardsteuerelement ASP.NET programmgesteuert zugegriffen werden.|  
+  
+ Der Benutzer profitiert von der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> steuern, da es sich um eine konsistente benutzererfahrung bietet. Alle Webserversteuerelement kann vorgenommen werden, funktionieren wie ein <xref:System.Web.UI.WebControls.WebParts.WebPart> steuern und dieselben Benutzer einheitliche Benutzeroberfläche (UI) Elemente wie z. B. Verben, Symbole, einen Titel und eine Kopfzeile haben. Entwickler profitieren von der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> steuern, da sie vorhandene Benutzersteuerelemente und Serversteuerelemente innerhalb von Webparts-Anwendungen wiederverwenden können.  
+  
+> [!NOTE]
+>  Wenn Sie Webparts-Seiten erstellen, müssen Sie nicht gar nichts Unternehmen, um eine vorhandene Benutzersteuerelement oder einem benutzerdefinierten Steuerelement mit einzubindende aktivieren die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement. Fügen Sie einfach Ihre Server oder das Benutzersteuerelement, ein <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zone, entweder programmgesteuert oder durch die Deklaration im Markup der Seite, und der Webparts-Steuerelementsatz automatisch dient als Wrapper für das Steuerelement mit einem <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Objekt zur Laufzeit.  
+  
+ Da Serversteuerelemente befinden sich im <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zonen mit umschlossen sind eine <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement zur Laufzeit können Entwickler gewöhnliche Server und Benutzersteuerelemente genau so, als ob sie wären <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Hinweis, die, wenn Sie benutzerdefinierte deklarieren, die steuert, die von der Basisklasse erben <xref:System.Web.UI.Control> -Klasse innerhalb einer <xref:System.Web.UI.WebControls.WebParts.WebPartZone>, diese Steuerelemente können nicht die Verwendung der systeminternen unterstützen <xref:System.Web.UI.WebControls.WebParts.WebPart> Eigenschaften. Sie können daher nicht deklariert die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Eigenschaften auf solche Steuerelemente, einschließlich Eigenschaften wie z. B. die <xref:System.Web.UI.WebControls.WebParts.IWebPart.Title%2A> Eigenschaft und die <xref:System.Web.UI.WebControls.WebParts.IWebPart.Description%2A> Eigenschaft. Im Gegensatz dazu andere Typen von Serversteuerelementen (z. B. <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente und Benutzersteuerelemente benutzerdefinierte Steuerelemente, die von erben <xref:System.Web.UI.WebControls.WebControl>) können diese Eigenschaften deklarieren, da sie die Verwendung von Expando-Eigenschaften unterstützt.  
+  
+ Expando-Eigenschaften sind eigentlich Zeichenfolgen, die auf eine Klasse dynamisch als eine Eigenschaft anhand der hinzugefügt werden können die <xref:System.Web.UI.IAttributeAccessor> Schnittstelle. Steuerelemente, die diese Schnittstelle implementieren, einschließlich der <xref:System.Web.UI.WebControls.WebControl> Klasse und seinen untergeordneten Elementen können Expando-Eigenschaften. Da die Basis <xref:System.Web.UI.Control> Klasse unterstützt keine Expando-Eigenschaften, wenn ein benutzerdefiniertes Steuerelement, das von erbt die <xref:System.Web.UI.Control> Klasse befindet sich einer <xref:System.Web.UI.WebControls.WebParts.WebPartZone> und umschlossene mit eine <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement zur Laufzeit die Webparts-Steuerelementsatzes kann nicht dynamisch hinzufügen, die systeminterne Funktion <xref:System.Web.UI.WebControls.WebParts.IWebPart> Eigenschaften für das benutzerdefinierte Steuerelement. In diesem Fall haben Sie zwei Möglichkeiten. Können Sie das benutzerdefinierte Steuerelement ohne die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Eigenschaften, oder Sie können implementieren die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle in das benutzerdefinierte Steuerelement aktivieren, um die Eigenschaften zu verwenden.  
+  
+ Als Beispiel für, die Steuerelemente Vererben <xref:System.Web.UI.WebControls.WebControl> können die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Eigenschaften, wenn Sie eine ASP.NET deklarieren <xref:System.Web.UI.WebControls.Calendar> Steuerelement im Markup der Seite (innerhalb einer <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone) zur Entwurfszeit, auch wenn dieses Steuerelement erbt nicht aus der <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse und keine systemintern enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Elemente können Sie weiterhin behandeln sie genau so wie eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Sie können deklarieren, <xref:System.Web.UI.WebControls.WebParts.WebPart> Eigenschaften auf dem Kalender zu steuern, wie z. B. <xref:System.Web.UI.WebControls.WebParts.IWebPart.Title%2A>, <xref:System.Web.UI.WebControls.WebParts.IWebPart.Description%2A>, und andere. Zur Laufzeit können Sie die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetGenericWebPart%2A> Methode, die zurückgibt der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement, das dynamisch wrapping das Kalender-Steuerelement, und Arbeiten mit programmgesteuert genau wie mit einer <xref:System.Web.UI.WebControls.WebParts.WebPart> zu steuern, mit Zugriff auf dieselben Eigenschaften, Ereignisse und Methoden.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement verfügt über eine wichtige Eigenschaft, die Sie auf das zugrunde liegende Serversteuerelement zugreifen kann: die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> Eigenschaft. Diese Eigenschaft ermöglicht Entwicklern das Webserversteuerelement programmgesteuert zugreifen. Die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> Eigenschaft wird auch verwendet, durch die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement Zugriff auf Personalisierungsdaten das untergeordnete Steuerelement, und klicken Sie zum Ausführen der Autorisierung, wenn die <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> festgelegt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement verfügt über mehrere weitere Eigenschaften, die von der Basisklasse geerbte Eigenschaften überschreiben <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse. Wie bereits erwähnt, können Sie diese Eigenschaften mit einem beliebigen untergeordneten Steuerelement, damit es als Verhalten kann eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Eine wichtige Eigenschaft ist die <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> Eigenschaft; sie bestimmt, ob die exportierbaren Eigenschaften oder nur die als nicht sensibel markiert, exportiert werden kann. Die UI-orientierten Eigenschaften geerbt werden, von der <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse, z. B. <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CatalogIconImageUrl%2A>, <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Description%2A>, <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Height%2A>, <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Title%2A>, <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleUrl%2A>, und <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Width%2A>, im deklarativen Markup für alle Serversteuerelement, das festgelegt werden können platziert eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone.  
+  
+ Wichtige Methoden in der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> -Klasse enthalten die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CreateControlCollection%2A> -Methode, die die Auflistung der Steuerelemente, die (einschließlich der untergeordneten Steuerelemente) zugeordneten erstellt eine <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> -Steuerelement, und die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Render%2A> -Methode, die gesamte Rendering, delegiert die umschlossene untergeordneten Steuerelemente. Die Konstruktoren für die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Klasse geschützt sind und entweder für die interne Verwendung oder Erweiterbarkeitsszenarios gedacht sind.  
+  
+ Es gibt einige zusätzliche hilfreiche Hinweise für die Arbeit mit <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelemente. Wenn Sie Standardwerte für die außer Kraft gesetzte Eigenschaften festlegen möchten die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> kann Klasse, die Benutzersteuerelement oder benutzerdefiniertes Steuerelement implementieren, die <xref:System.Web.UI.WebControls.WebParts.IWebPart> und <xref:System.Web.UI.WebControls.WebParts.IWebActionable> Schnittstellen und deren Member überschreiben. Zur Laufzeit die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement rufen die Werte für die implementierten Eigenschaften aus das untergeordnete Steuerelement, das die Schnittstellen implementiert. Wenn jede ihrer Eigenschaften im Steuerelement als personalisierbar definiert (mithilfe der `Personalizable` Metadatenattribut), wird die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement aktiviert diese Eigenschaften für die Personalisierung zur Laufzeit, wie die personalisierbaren Eigenschaften automatisch auf eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ Wenn Sie Webparts-Bearbeitungsfeatures für das Steuerelement bereitstellen möchten, können Sie implementieren die <xref:System.Web.UI.WebControls.WebParts.IWebEditable> Schnittstelle. Zur Laufzeit, wenn die <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> -Methode aufgerufen wird, die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerungscode für die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.WebBrowsableObject%2A> Eigenschaft wird einen Aufruf an die gleiche Eigenschaft in das untergeordnete Steuerelement, und das untergeordnete Steuerelement-Implementierung erstellen zugeordneten benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement automatisch umschließt ein Serversteuerelement, der keinem <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement zur Laufzeit.  
+  
+ Der erste Teil des Codebeispiels enthält eine Webparts-Seite mit zwei <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelemente. Innerhalb jeder Zone die ist ein standard ASP.NET-Serversteuerelement aus. Da sind die Steuerelemente in eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Zone, sie werden automatisch eingebunden werden mit einem <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> steuern, wenn die Seite kompiliert wird. Sie können daher deklarieren <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasseneigenschaften für diese Steuerelemente. Nachdem die Seite in einem Browser zu laden, wenn Sie auf die **Anzeige alle Eigenschaftswerte** Schaltfläche, die Details für jedes Steuerelement in einer Beschriftung angezeigt werden. Anzuzeigende wie die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> -Steuerelement funktioniert, die <xref:System.Web.UI.WebControls.Calendar> -Steuerelement in der ersten Zone verfügt über einige der der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Festlegen von Eigenschaften im deklarativen Markup der ASPX-Seite, wohingegen die <xref:System.Web.UI.WebControls.BulletedList> Steuerelement nicht. Nachdem Sie die Seite geladen haben, beachten Sie die Unterschiede in der Eigenschaftswerte für die beiden Steuerelemente und über ein übergeordnetes Element verfügen <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_GenericWebPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpartcs.aspx#1)]
+ [!code-aspx-vb[WebParts_GenericWebPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpartvb.aspx#1)]  
+  
+ Der zweite Teil des Codebeispiels zeigt eine partielle Klasse, die einige Eigenschaften des greift auf die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> programmgesteuert zu steuern. Beachten Sie, dass in der `Page_Load` -Methode, die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetGenericWebPart%2A> Methode wird verwendet, um die Instanz-Laufzeit abzurufen der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement, das ein Serversteuerelement umschließt. Dieser Ansatz erhalten Sie einen Verweis auf das übergeordnete Element <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement können Sie programmgesteuert mit einem normalen Server oder das Benutzersteuerelement arbeiten, als wäre er ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement zur Laufzeit.  
+  
+ [!code-csharp[WebParts_GenericWebPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpart.cs#3)]
+ [!code-vb[WebParts_GenericWebPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpart.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Es gibt einige Situationen, in denen es notwendig ist, erben, die <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Klasse. Ein solcher Fall wäre, wenn ein Entwickler möchte eine benutzerdefinierte Aktion im Konstruktor implementieren bei einem <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement erstellt wird. Möglicherweise möchten z. B. speichern das untergeordnete Steuerelement an einer anderen Stelle als steuerelementauflistung innerhalb der <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Klasse. Erben von der <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> -Klasse, müssen Sie auch von erben die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Klasse, und überschreiben die <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.CreateWebPart(System.Web.UI.Control)" /> Methode zum Erstellen des benutzerdefinierten Steuerelements zu aktivieren.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected GenericWebPart (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.GenericWebPart.#ctor(System.Web.UI.Control)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Ein Serversteuerelement, das untergeordnete Steuerelement der wird, die <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Instanz des Steuerelements.</param>
+        <summary>Initialisiert eine neue Instanz von einem <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement durch einen Verweis auf ein Steuerelement, das untergeordnete Steuerelement wird, übergeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.%23ctor%28System.Web.UI.Control%29> Konstruktor wird aufgerufen, indem Sie die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern, seine <xref:System.Web.UI.WebControls.WebParts.WebPartManager.CreateWebPart%2A> -Methode zum Initialisieren einer Instanz von einer <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement durch einen Verweis auf ein untergeordnetes Serversteuerelement übergeben. Nach der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Objekt erstellt wurde, können Sie verweisen, das untergeordnete Steuerelement mithilfe der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="control" /> ist vom Typ <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />.  
+  
+ \- oder –  
+  
+ <paramref name="control" />verfügt über eine <see langword="null" /> oder leere <see cref="P:System.Web.UI.Control.ID" /> Eigenschaft.  
+  
+ \- oder –  
+  
+ <paramref name="control" />wurde Ausgabe zwischengespeichert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CatalogIconImageUrl">
+      <MemberSignature Language="C#" Value="public override string CatalogIconImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CatalogIconImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.CatalogIconImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild, das darstellt ein <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement in einem Katalog von Steuerelementen.</summary>
+        <value>Eine Zeichenfolge, die URL zu einem Bild verwendet, um die Darstellung des Steuerelements in einem Katalog darstellt. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Webanwendungen für die Webparts bieten häufig eines Katalogs (oder Liste) von Steuerelementen, die Benutzer zu einer Seite hinzufügen können. Die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CatalogIconImageUrl%2A> Eigenschaft für ein Steuerelement enthält die URL zu einem Bild, das das Steuerelement darstellt, wenn es in einem Katalog angezeigt wird. Diese Eigenschaft überschreibt die Basiseigenschaft, damit Sie die Eigenschaft auf das untergeordnete Steuerelement zugreifen können, als handele es sich um einen echten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ Sie können Werte für die Eigenschaft für das Steuerelement im deklarativen Markup einer Webseite oder programmgesteuert festlegen. Um einen Standardwert für die Eigenschaft angeben, wenn das Steuerelement verwendet wird, implementieren Sie die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CatalogIconImageUrl%2A> Eigenschaft. Der vollständigen Quellcode für das Beispiel befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Übersichtsthema.  
+  
+ Der erste Teil des Codebeispiels wird gezeigt, wie die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CatalogIconImageUrl%2A> Eigenschaft deklarativ festgelegt ist, auf ein Webserversteuerelement innerhalb einer <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_GenericWebPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpartcs.aspx#2)]
+ [!code-aspx-vb[WebParts_GenericWebPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpartvb.aspx#2)]  
+  
+ Der zweite Teil des Codebeispiels wird veranschaulicht, die Methode, die programmgesteuert auf den Wert der Eigenschaft zugreift, wenn ein Benutzer klickt auf die **Anzeige alle Eigenschaftswerte** Schaltfläche.  
+  
+ [!code-csharp[WebParts_GenericWebPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpart.cs#4)]
+ [!code-vb[WebParts_GenericWebPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildControl">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control ChildControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control ChildControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf das untergeordnete Steuerelement, das von umschlossen wird ein <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement zur Laufzeit.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Control" /> , die auf das umschlossene untergeordnete Steuerelement verweist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> Eigenschaft bietet die Möglichkeit zum untergeordneten Steuerelements durch Zugriff auf eine <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement. Z. B. die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern verwendet der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> Eigenschaft Personalisierungsdaten anhand des untergeordneten Steuerelements zu extrahieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> Eigenschaft. Die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> -Eigenschaft programmgesteuert aufgerufen, um das Abrufen von Informationen über das untergeordnete Steuerelement des ein <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement. Der vollständigen Quellcode für das Beispiel befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Übersichtsthema.  
+  
+ [!code-csharp[WebParts_GenericWebPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpart.cs#4)]
+ [!code-vb[WebParts_GenericWebPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.GenericWebPart.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird durch das ASP.NET-Seitenframework aufgerufen, um Serversteuerelemente anzuweisen, die eine kompositionsbasierte Implementierung verwenden, um alle untergeordneten Steuerelemente zu erstellen, die sie in Vorbereitung auf ein Postback oder Rendering enthalten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.GenericWebPart.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreibt die Basismethode, um eine schreibgeschützte Auflistung zu erstellen, das untergeordnete Steuerelement umschlossen umfasst, eine <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.ControlCollection" /> , enthält das untergeordnete Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CreateControlCollection%2A> Methode erstellt eine private, schreibgeschützte Auflistung, die von einem einzelnen Steuerelement besteht aus der das untergeordnete Steuerelement ist von einem <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement. Diese Auflistung wird erstellt, sodass Entwickler manuell andere Steuerelemente hinzufügen, können eine <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement.  
+  
+ Wenn Sie eine benutzerdefinierte erstellen möchten <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement ohne das untergeordnete Steuerelement privaten Auflistung hinzufügen, können Sie ableiten von der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> -Klasse außer Kraft, indem die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.%23ctor%2A> -Konstruktor, und geben Sie eine andere Methode zum Speichern des untergeordneten Steuerelements verwiesen wird, indem Sie die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEditorParts">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WebParts.EditorPartCollection CreateEditorParts ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.WebControls.WebParts.EditorPartCollection CreateEditorParts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.GenericWebPart.CreateEditorParts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.EditorPartCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung von benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente, die verwendet werden können, so bearbeiten Sie das untergeordnete Steuerelement von einem <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> steuern, wenn es sich um im Bearbeitungsmodus.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartCollection" /> enthält benutzerdefinierte <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente ein Serversteuerelement zugeordnet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CreateEditorParts%2A> Methode wird aufgerufen, wenn ein Steuerelement Anzeige Bearbeitungsmodus wechselt. Diese Methode überschreibt die Basismethode geerbt von der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klasse daran, dass im Fall von einer <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> , es ist das untergeordnete Steuerelement, die, nicht gerade bearbeitet wird, die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> selbst zu steuern. Die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CreateEditorParts%2A> -Methode wandelt das untergeordnete Steuerelement an die <xref:System.Web.UI.WebControls.WebParts.IWebEditable> -Schnittstelle, die das Steuerelement bearbeitet werden kann.  
+  
+ Diese Methode außer Kraft gesetzte wird ermöglicht, die nicht von abgeleitet sind, die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klasse – einschließlich ASP.NET-Serversteuerelemente und benutzerdefinierten Steuerelementen – wie gewohnt bearbeitet werden <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public override string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen kurzen Ausdruck, der ein Steuerelement, für die Verwendung in QuickInfos und Kataloge von Serversteuerelementen Wirkungsweise zusammenfasst.</summary>
+        <value>Eine Zeichenfolge, die Kurzform zusammenfasst die Funktionalität des Steuerelements. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Description%2A> Eigenschaftswert wird üblicherweise verwendet, als eine beschreibende Zeichenfolge, die für ein Steuerelement in Katalogen, die Listen von Serversteuerelementen bereitstellen und als QuickInfo in der Titelleiste des Steuerelements. Der Inhalt der Eigenschaft wird in einer QuickInfo angezeigt, wenn ein Benutzer den Mauszeiger über den Text in der Titelleiste des Steuerelements positioniert.  
+  
+ Diese Eigenschaft überschreibt die Basiseigenschaft, damit Sie die Eigenschaft auf das untergeordnete Steuerelement zugreifen können, als handele es sich um einen echten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ Sie können Werte für die Eigenschaft für das Steuerelement im deklarativen Markup einer Webseite oder programmgesteuert festlegen. Um einen Standardwert für die Eigenschaft angeben, wenn das Steuerelement verwendet wird, implementieren Sie die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Description%2A> Eigenschaft. Der vollständigen Quellcode für das Beispiel befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Übersichtsthema.  
+  
+ Der erste Teil des Codebeispiels wird gezeigt, wie die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Description%2A> Eigenschaft deklarativ festgelegt ist, auf ein Webserversteuerelement innerhalb einer <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_GenericWebPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpartcs.aspx#2)]
+ [!code-aspx-vb[WebParts_GenericWebPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpartvb.aspx#2)]  
+  
+ Der zweite Teil des Codebeispiels wird veranschaulicht, wie den Zugriff auf die Eigenschaft programmgesteuert, um deren Wert in eine Bezeichnung anzuzeigen.  
+  
+ [!code-csharp[WebParts_GenericWebPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpart.cs#4)]
+ [!code-vb[WebParts_GenericWebPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.Unit Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit Height" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Höhe (in Pixel) eines Steuerelements fest.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.Unit" /> , der die Höhe des Steuerelements angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft überschreibt die Basiseigenschaft, damit Sie abrufen können, oder legen Sie die Höhe des untergeordneten Steuerelements als handele es sich um einen echten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public override sealed string ID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ID eines Steuerelements fest. Dieser Wert kann nicht vererbt werden.</summary>
+        <value>Eine Zeichenfolge, die die ID des Steuerelements enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.GenericWebPart.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />, der den Ausgabestream für das Rendering von HTML-Inhalten auf dem Client darstellt.</param>
+        <summary>Delegaten, die den Inhalt des Steuerelements auf das untergeordnete Steuerelement rendern.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtitle">
+      <MemberSignature Language="C#" Value="public override string Subtitle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subtitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.Subtitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die verkettet wird, mit der <see cref="P:System.Web.UI.WebControls.WebParts.GenericWebPart.Title" /> Eigenschaftswert, um einen vollständigen Titel für ein Steuerelement zu bilden.</summary>
+        <value>Eine Zeichenfolge, die als Untertitel für das Steuerelement dient. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Subtitle%2A> Eigenschaft optional, um eine standardmäßige Untertitel-Zeichenfolge zurückzugeben, die an die benutzerdefinierte angefügt <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Titel des Steuerelements.  
+  
+ Diese Eigenschaft überschreibt die Basiseigenschaft, damit Sie die Eigenschaft auf das untergeordnete Steuerelement zugreifen können, als handele es sich um einen echten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ Wenn Sie implementieren die <xref:System.Web.UI.WebControls.WebParts.IWebPart.Subtitle%2A> -Eigenschaft in einem Benutzersteuerelement oder ein benutzerdefiniertes Steuerelement um einen Standardwert anzugeben, die Webparts-Steuerelementsatz automatisch fügt er auf den Wert des Steuerelements <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Title%2A> Eigenschaft zur Laufzeit zum Erstellen eines vollständigen Titels.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public override string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Titel einer <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die den Titel des Steuerelements darstellt. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der sichtbare Titeltext in der Titelleiste ein des Teilsteuerelements festgelegt ist, durch die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Title%2A> Eigenschaft.  
+  
+ Wenn Sie einen Titel für ein Steuerelement nicht angeben, berechnet der Webparts-Steuerelementsatz automatisch eine Standardzeichenfolge, die als Titel verwenden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.WebPart.DisplayTitle%2A>. Darüber hinaus ist es möglich, einen Untertitel bereitzustellen, der das die Titelzeichenfolge angefügt wird. Ausführliche Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Subtitle%2A>.  
+  
+ Diese Eigenschaft überschreibt die Basiseigenschaft, damit Sie die Eigenschaft auf das untergeordnete Steuerelement zugreifen können, als handele es sich um einen echten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ Sie können Werte für die Eigenschaft für das Steuerelement im deklarativen Markup einer Webseite oder programmgesteuert festlegen. Um einen Standardwert für die Eigenschaft angeben, wenn das Steuerelement verwendet wird, implementieren Sie die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Title%2A> Eigenschaft. Der vollständigen Quellcode für das Beispiel befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Übersichtsthema.  
+  
+ Der erste Teil des Codebeispiels wird gezeigt, wie die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Title%2A> Eigenschaft deklarativ festgelegt ist, auf ein Webserversteuerelement innerhalb einer <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_GenericWebPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpartcs.aspx#2)]
+ [!code-aspx-vb[WebParts_GenericWebPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpartvb.aspx#2)]  
+  
+ Der zweite Teil des Codebeispiels wird veranschaulicht, wie den Zugriff auf die Eigenschaft programmgesteuert, um deren Wert in eine Bezeichnung anzuzeigen.  
+  
+ [!code-csharp[WebParts_GenericWebPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpart.cs#4)]
+ [!code-vb[WebParts_GenericWebPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleIconImageUrl">
+      <MemberSignature Language="C#" Value="public override string TitleIconImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TitleIconImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleIconImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild zur Darstellung einer <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement in der Titelleiste des Steuerelements.</summary>
+        <value>Eine Zeichenfolge, die URL zu einem Bild darstellt. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleIconImageUrl%2A> Eigenschaft bietet eine Möglichkeit, ein Symbol zugeordnet ein <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement. Das Symbol wird in der Titelleiste des Steuerelements angezeigt. Aus Gründen der Konsistenz thematische Anwendungsentwickler häufig stellen dieses Symbol wie in der Abbildung, die das Steuerelement in einem Katalog von Webparts-Steuerelemente darstellt (das Image verwiesen wird, der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CatalogIconImageUrl%2A> Eigenschaft).  
+  
+ Wie in der Webparts-Steuerelementsatz implementiert, wird die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleIconImageUrl%2A> Eigenschaft personalisiert werden kann, von Endbenutzern so ändern Sie das Bild oder ein Symbol, das in der Titelleiste des Steuerelements angezeigt wird.  
+  
+ Diese Eigenschaft überschreibt die Basiseigenschaft, damit Sie die Eigenschaft auf das untergeordnete Steuerelement zugreifen können, als handele es sich um einen echten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ Sie können Werte für die Eigenschaft für das Steuerelement im deklarativen Markup einer Webseite oder programmgesteuert festlegen. Um einen Standardwert für die Eigenschaft angeben, wenn das Steuerelement verwendet wird, implementieren Sie die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleIconImageUrl%2A> Eigenschaft. Der vollständigen Quellcode für das Beispiel befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Übersichtsthema.  
+  
+ Der erste Teil des Codebeispiels wird gezeigt, wie die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleIconImageUrl%2A> Eigenschaft deklarativ festgelegt ist, auf ein Webserversteuerelement innerhalb einer <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_GenericWebPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpartcs.aspx#2)]
+ [!code-aspx-vb[WebParts_GenericWebPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpartvb.aspx#2)]  
+  
+ Der zweite Teil des Codebeispiels wird veranschaulicht, wie den Zugriff auf die Eigenschaft programmgesteuert, um deren Wert in eine Bezeichnung anzuzeigen.  
+  
+ [!code-csharp[WebParts_GenericWebPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpart.cs#4)]
+ [!code-vb[WebParts_GenericWebPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleUrl">
+      <MemberSignature Language="C#" Value="public override string TitleUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TitleUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine URL zu Zusatzinformationen zu einem <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die eine URL zu weiteren Informationen über stellt eine <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine URL zum Zuweisen der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleUrl%2A> -Eigenschaft, den Titel des Steuerelements wird ein Link. Diese Eigenschaft bietet eine einfache Möglichkeit für Endbenutzer, um zusätzliche Informationen über ein Steuerelement zuzugreifen. Die zusätzliche Informationen kann die Copyrightinformationen, Kontaktdaten, Details über den Ersteller des Steuerelements oder eine Zusammenfassung des Zwecks eines Steuerelements enthalten.  
+  
+ Diese Eigenschaft überschreibt die Basiseigenschaft, damit Sie die Eigenschaft auf das untergeordnete Steuerelement zugreifen können, als handele es sich um einen echten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ Sie können Werte für die Eigenschaft für das Steuerelement im deklarativen Markup einer Webseite oder programmgesteuert festlegen. Um einen Standardwert für die Eigenschaft angeben, wenn das Steuerelement verwendet wird, implementieren Sie die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleUrl%2A> Eigenschaft. Der vollständigen Quellcode für das Beispiel befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Übersichtsthema.  
+  
+ Der erste Teil des Codebeispiels wird gezeigt, wie die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleUrl%2A> Eigenschaft deklarativ festgelegt ist, auf ein Webserversteuerelement innerhalb einer <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_GenericWebPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpartcs.aspx#2)]
+ [!code-aspx-vb[WebParts_GenericWebPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpartvb.aspx#2)]  
+  
+ Der zweite Teil des Codebeispiels wird veranschaulicht, wie den Zugriff auf die Eigenschaft programmgesteuert, um deren Wert in eine Bezeichnung anzuzeigen.  
+  
+ [!code-csharp[WebParts_GenericWebPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpart.cs#4)]
+ [!code-vb[WebParts_GenericWebPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbs">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WebParts.WebPartVerbCollection Verbs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartVerbCollection Verbs" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.Verbs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerbCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von benutzerdefinierten zugeordneten Verben eine <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerbCollection" /> enthält benutzerdefinierte <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> Objekte zugeordnet sind und eine <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement. Der Standardwert ist <see cref="F:System.Web.UI.WebControls.WebParts.WebPartVerbCollection.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verben Ableiten der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Klasse, und geben Sie Benutzer Benutzeroberfläche (UI) Aktionen, die Benutzer ausführen können, auf eine <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement. In der Regel werden die Verben in der Benutzeroberfläche als Schaltflächen, Links oder Menüelemente dargestellt. Es gibt Standardverben zum Öffnen, schließen, bearbeiten und Minimieren eines Steuerelements und andere Verben zum Exportieren einer Definition für das Steuerelement oder das Laden einer Hilfedatei. Diese Verben sind nicht enthalten, der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Verbs%2A> Sammlung, da die Auflistung nur benutzerdefinierte Verben enthält.  
+  
+ Diese Eigenschaft überschreibt die Basiseigenschaft, damit Sie die Eigenschaft auf das untergeordnete Steuerelement zugreifen können, als handele es sich um einen echten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Wenn Sie untergeordnete Steuerelement implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebActionable> Schnittstelle und somit überschreibt seine <xref:System.Web.UI.WebControls.WebParts.IWebActionable.Verbs%2A?displayProperty=nameWithType> -Eigenschaft, die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement verwendet die Implementierung des untergeordneten Steuerelements beim der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Verbs%2A?displayProperty=nameWithType> Eigenschaft wird aufgerufen, auf die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement.  
+  
+ Wenn Sie benutzerdefinierte Verben erstellen und Hinzufügen der <xref:System.Web.UI.WebControls.WebParts.WebPart.Verbs%2A> -Auflistung kann zugegriffen werden die Verben programmgesteuert aus einem <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Verbs%2A> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebBrowsableObject">
+      <MemberSignature Language="C#" Value="public override object WebBrowsableObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object WebBrowsableObject" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.WebBrowsableObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf das untergeordnete Steuerelement, aktivieren Sie das Steuerelement für die Bearbeitung durch benutzerdefinierte <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente.</summary>
+        <value>Ein <see cref="T:System.Object" /> , besteht das untergeordnete Steuerelement von einem <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein untergeordnetes Steuerelement implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebEditable> -Schnittstelle und überschreibt die <xref:System.Web.UI.WebControls.WebParts.IWebEditable.WebBrowsableObject%2A> -Eigenschaft, wenn ein Benutzer das Steuerelement für die Bearbeitung aktiviert die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement wird das untergeordnete Steuerelement durch Aufrufen der <xref:System.Web.UI.WebControls.WebParts.IWebEditable.WebBrowsableObject%2A> -Eigenschaft, und verwenden Sie das untergeordnete Element Implementierung des Steuerelements die <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> Methode. Dieser Mechanismus ermöglicht es einem Server oder das Benutzersteuerelement, die keine <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement für die Arbeit mit benutzerdefinierten zugeordneten <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente in einer Webparts-Anwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.Unit Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit Width" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite (in Pixel) des Steuerelements fest.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.Unit" /> , der die Breite des Steuerelements angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft überschreibt die Basiseigenschaft, damit können Sie abrufen oder der Breite für das untergeordnete Steuerelement, Festlegen als handele es sich um einen echten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

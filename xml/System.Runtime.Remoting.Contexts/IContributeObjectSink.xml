@@ -1,0 +1,58 @@
+<Type Name="IContributeObjectSink" FullName="System.Runtime.Remoting.Contexts.IContributeObjectSink">
+  <TypeSignature Language="C#" Value="public interface IContributeObjectSink" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContributeObjectSink" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Contexts.IContributeObjectSink" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bei eine objektspezifischen abfangen Senke auf dem Server von einem Remotingaufruf einbezogen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Contexts.IContributeObjectSink> Schnittstelle wird implementiert von Kontexteigenschaften in einer <xref:System.Runtime.Remoting.Contexts.Context> -Klasse, die von der Senke eines Aufrufs Remoting auf dem Server ein objektspezifischen abfangen möchten.  
+  
+ Die Kette der Server-Objekt besteht aus den Kontexteigenschaften im Kontext des Serverobjekts, die implementieren <xref:System.Runtime.Remoting.Contexts.IContributeObjectSink>. [&#91; \<Topic://cpconjust-in-timeactivation > &#93; ](http://msdn.microsoft.com/en-us/6f7a7912-93cd-4c94-824f-42554c17c8d4) ist ein Beispiel einer solchen Eigenschaft; d. h. der Meldung Senke würde das Objekt aktivieren, nachdem der Aufruf eintrifft, und übergeben Sie die Nachricht an das Objekt.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetObjectSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageSink GetObjectSink (MarshalByRefObject obj, System.Runtime.Remoting.Messaging.IMessageSink nextSink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageSink GetObjectSink(class System.MarshalByRefObject obj, class System.Runtime.Remoting.Messaging.IMessageSink nextSink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContributeObjectSink.GetObjectSink(System.MarshalByRefObject,System.Runtime.Remoting.Messaging.IMessageSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.MarshalByRefObject" />
+        <Parameter Name="nextSink" Type="System.Runtime.Remoting.Messaging.IMessageSink" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Serverobjekt, das ab, der der Nachricht Senke bereitstellt, wird vor der Kette verkettet werden.</param>
+        <param name="nextSink">Die Kette der senken bisher zusammengesetzt.</param>
+        <summary>Verkettet die Senke Nachricht des bereitgestellten Serverobjekts vor der angegebenen Senkenkette ist.</summary>
+        <returns>Die zusammengesetzte Senkenkette.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

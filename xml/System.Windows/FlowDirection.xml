@@ -1,0 +1,74 @@
+<Type Name="FlowDirection" FullName="System.Windows.FlowDirection">
+  <TypeSignature Language="C#" Value="public enum FlowDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FlowDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FlowDirection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Konstanten, die die Richtung des fortlaufenden Inhalts für die Elemente für die Benutzeroberfläche (UI) von Text und Benutzer angeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die flussrichtung von Inhalten entspricht in der Regel die Standard-flussrichtung der Sprache, dargestellt wird. Geben Sie Beispiele für Sprachen, die natürliche Weise von rechts nach links fließen, Hebräisch und Arabisch. Geben Sie Beispiele für Sprachen, die natürliche Weise von links nach rechts fließen, Englisch, Deutsch und Russisch.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.FlowDirection> Enumeration zum Festlegen der <xref:System.Windows.Documents.Block.FlowDirection%2A> Attribut einen fließenden Inhalts <xref:System.Windows.Documents.Block> Element (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_FlowDirectionXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_flowdirectionxaml)]  
+  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.FlowDirection> Enumeration programmgesteuert.  
+  
+ [!code-csharp[BlockSnippets#_Block_FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_flowdirection)]
+ [!code-vb[BlockSnippets#_Block_FlowDirection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_flowdirection)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LeftToRight">
+      <MemberSignature Language="C#" Value="LeftToRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FlowDirection LeftToRight = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FlowDirection.LeftToRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Inhalt von links nach rechts fließen sollten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeft">
+      <MemberSignature Language="C#" Value="RightToLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FlowDirection RightToLeft = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FlowDirection.RightToLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Inhalt von rechts nach links fließen sollten.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

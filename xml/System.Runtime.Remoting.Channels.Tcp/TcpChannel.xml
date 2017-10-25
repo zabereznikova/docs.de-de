@@ -1,0 +1,479 @@
+<Type Name="TcpChannel" FullName="System.Runtime.Remoting.Channels.Tcp.TcpChannel">
+  <TypeSignature Language="C#" Value="public class TcpChannel : System.Runtime.Remoting.Channels.IChannelReceiver, System.Runtime.Remoting.Channels.IChannelSender, System.Runtime.Remoting.Channels.ISecurableChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TcpChannel extends System.Object implements class System.Runtime.Remoting.Channels.IChannel, class System.Runtime.Remoting.Channels.IChannelReceiver, class System.Runtime.Remoting.Channels.IChannelSender, class System.Runtime.Remoting.Channels.ISecurableChannel" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IChannelReceiver</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IChannelSender</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.ISecurableChannel</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Kanal-Implementierung, die das TCP-Protokoll verwendet wird, um Nachrichten zu übertragen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kanäle Transportnachrichten Remotegrenzen hinweg (z. B. zwischen Computern Anwendungsdomänen). Die <xref:System.Runtime.Remoting.Channels.Tcp.TcpChannel> Klasse ist eine Hilfsklasse kombiniert die Funktionalität der <xref:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel> Klasse und die <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel> Klasse.  
+  
+ Kanäle werden von der .NET Framework Remoting-Infrastruktur zum Remoteaufrufe zu transportieren. Wenn ein Client einem Remoteobjekt aufruft, wird der Aufruf in einer Nachricht serialisiert, die vom Clientkanal gesendet und von einem Server-Kanal empfangen wurde. Anschließend wird deserialisiert und verarbeitet. Alle zurückgegebenen Werte werden vom Serverchannel übertragen und von der Clientkanal empfangen wurde.  
+  
+ Auszuführenden zusätzliche Verarbeitung von Nachrichten, können Sie angeben, die Implementierung von der <xref:System.Runtime.Remoting.Channels.IClientChannelSinkProvider> und <xref:System.Runtime.Remoting.Channels.IServerChannelSinkProvider> über die alle Nachrichten, durch verarbeitet die <xref:System.Runtime.Remoting.Channels.Tcp.TcpChannel> übergeben werden.  
+  
+ Ein <xref:System.Runtime.Remoting.Channels.Tcp.TcpChannel> -Objekt verfügt über zugeordnete Konfigurationseigenschaften, die zur festgelegt werden können zur Laufzeit entweder in einer Konfigurationsdatei (durch Aufrufen der statischen <xref:System.Runtime.Remoting.RemotingConfiguration.Configure%2A?displayProperty=nameWithType> Methode) oder programmgesteuert (durch Übergeben einer <xref:System.Collections.IDictionary> -Auflistung, um die <xref:System.Runtime.Remoting.Channels.Tcp.TcpChannel.%23ctor%2A> Konstruktor). Weitere Informationen zu den Konfigurationseigenschaften für Channel, finden Sie unter [Kanal- und Formatierer Konfigurationseigenschaften](http://msdn.microsoft.com/en-us/226ecf74-ebbd-4ea0-a701-dcf4441deefe).  
+  
+> [!NOTE]
+>  Wenn der Server-Computer Windows 95/98/Me, der Server läuft <xref:System.Runtime.Remoting.Channels.Tcp.TcpChannel> kann nicht als sicher angegeben werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.Runtime.Remoting.Channels.Tcp.TcpChannel> zum Einrichten von einem Remoting-Server und Client. Das Beispiel enthält drei Teile, einen Server, ein Client und einem Remoteobjekt vom Server und der Client verwendet.  
+  
+ Das folgende Codebeispiel zeigt einen Server an:  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CPP/server.cpp#1)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CS/server.cs#1)]  
+  
+ Das folgende Codebeispiel zeigt einen Client für diesen Server an:  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#10](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CPP/client.cpp#10)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#10](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CS/client.cs#10)]  
+  
+ Das folgende Codebeispiel zeigt das Remoteobjekt vom Server und der Client verwendet:  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#20](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CPP/common.cpp#20)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#20](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CS/common.cs#20)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TcpChannel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> -Klasse, nur einen Clientkanal und nicht Serverchannel aktivieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor initialisiert alle Felder mit ihren Standardwerten. Wenn der Standardkonstruktor verwendet wird, wird der Kanal dient nur als ein Clientkanal und lauscht nicht auf allen Ports.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#11](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CPP/client.cpp#11)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#11](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CS/client.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TcpChannel (int port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="port" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="port">Der Port, den der Server-Kanal überwacht.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> Klasse mit einem Server-Kanal, der am angegebenen Port überwacht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie Port 0 (null), um anzufordern, dass das Remoting-System einen geöffneten Port in Ihrem Namen auswählen. Dadurch entsteht eine <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel> Instanz dynamisch zugewiesenen Port auf Anforderungen lauschen. Dies erfolgt in der Regel auf dem Client, um sicherzustellen, dass eine <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel> Rückrufmethoden überwacht.  
+  
+ Wenn 0 an den Konstruktor übergeben, wird die <xref:System.Runtime.Remoting.Channels.Tcp.TcpChannel> instanziiert wird, um einen Port frei verwenden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht die Verwendung dieser Methode. Um anzufordern, dass ein verfügbarer Port dynamisch zugewiesen werden, legen die `port` Parameter auf 0 (null).  
+  
+ [!code-cpp[RemotingConfiguration.ServerActivation#2](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation/CPP/server.cpp#2)]
+ [!code-csharp[RemotingConfiguration.ServerActivation#2](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation/CS/server.cs#2)]
+ [!code-vb[RemotingConfiguration.ServerActivation#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation/VB/server.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TcpChannel (System.Collections.IDictionary properties, System.Runtime.Remoting.Channels.IClientChannelSinkProvider clientSinkProvider, System.Runtime.Remoting.Channels.IServerChannelSinkProvider serverSinkProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.IDictionary properties, class System.Runtime.Remoting.Channels.IClientChannelSinkProvider clientSinkProvider, class System.Runtime.Remoting.Channels.IServerChannelSinkProvider serverSinkProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+        <Parameter Name="clientSinkProvider" Type="System.Runtime.Remoting.Channels.IClientChannelSinkProvider" />
+        <Parameter Name="serverSinkProvider" Type="System.Runtime.Remoting.Channels.IServerChannelSinkProvider" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Ein <see cref="T:System.Collections.IDictionary" /> -Auflistung, die Werte für Eigenschaften von Client und Server Kanäle zu verwendende Konfiguration angibt.</param>
+        <param name="clientSinkProvider">Die <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> -Implementierung, die von der Clientkanal verwendet werden.</param>
+        <param name="serverSinkProvider">Die <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> Implementierung, die vom Serverchannel verwendet werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> -Klasse mit den angegebenen Konfigurationseigenschaften und senken.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den Konfigurationseigenschaften für Channel, finden Sie unter [Kanal- und Formatierer Konfigurationseigenschaften](http://msdn.microsoft.com/en-us/226ecf74-ebbd-4ea0-a701-dcf4441deefe).  
+  
+> [!NOTE]
+>  Wenn der Server-Computer Windows 95/98/Me, der Server läuft <xref:System.Runtime.Remoting.Channels.Tcp.TcpChannel> kann nicht als sicher angegeben werden.  
+  
+ Kanal senken ermöglichen-Plug-Ins, die Zugriff auf die zugrunde liegenden Nachrichten, die durch den Kanal sowie der Stream, der zum Senden von Nachrichten zu einem Remoteobjekt vom Transportmechanismus verwendet fließen können. Kanal senken sind auch für die Übermittlung von Nachrichten zwischen dem Client und Server verantwortlich. Kanal senken in einer Kette miteinander verknüpft sind, und alle Nachrichten durchlaufen diese Kette von senken Kanal, bevor die Nachricht schließlich serialisiert und transportiert wird. Wenn Sie nicht über die Senke Funktionalität benötigen, legen Sie die `clientSinkProvider` und `serverSinkProvider` Parameter `null`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Tcp.TcpChannel2#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel2/CPP/server.cpp#1)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Tcp.TcpChannel2#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel2/CS/server.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Eine bereitgestellte Channeleigenschaft ist falsch formatiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelData">
+      <MemberSignature Language="C#" Value="public object ChannelData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ChannelData" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Tcp.TcpChannel.ChannelData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die channelspezifische Daten ab.</summary>
+        <value>Ein <see cref="T:System.Runtime.Remoting.Channels.ChannelDataStore" /> -Instanz, channelspezifische Daten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl zurückgegeben, als eine Instanz von <xref:System.Object?displayProperty=nameWithType>, der Wert dieser Eigenschaft umgewandelt werden kann, mit einer Instanz von <xref:System.Runtime.Remoting.Channels.ChannelDataStore> beschreiben den Kanal an, die <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> -Objekt überwacht.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie diese Eigenschaft verwendet wird.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#5](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CPP/server.cpp#5)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#5](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CS/server.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelName">
+      <MemberSignature Language="C#" Value="public string ChannelName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ChannelName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Tcp.TcpChannel.ChannelName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des aktuellen Kanals ab.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält den Namen des Kanals.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder registrierte Channel hat einen eindeutigen Namen an. Der Name wird verwendet, um einen bestimmten Kanal abzurufen, beim Aufrufen von <xref:System.Runtime.Remoting.Channels.ChannelServices.GetChannel%2A>. Festlegen der <xref:System.Runtime.Remoting.Channels.Tcp.TcpChannel.ChannelName%2A> Eigenschaft, weisen Sie der Wert der "Name" Standardeigenschaft im Wörterbuch indizierte, das an die <xref:System.Runtime.Remoting.Channels.Tcp.TcpChannel.%23ctor%28System.Collections.IDictionary%2CSystem.Runtime.Remoting.Channels.IClientChannelSinkProvider%2CSystem.Runtime.Remoting.Channels.IServerChannelSinkProvider%29> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie diese Eigenschaft verwendet wird.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#3](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CPP/server.cpp#3)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#3](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CS/server.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelPriority">
+      <MemberSignature Language="C#" Value="public int ChannelPriority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ChannelPriority" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Tcp.TcpChannel.ChannelPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Priorität des aktuellen Kanals ab.</summary>
+        <value>Eine ganze Zahl, die die Priorität an den Kanal darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie diese Eigenschaft verwendet wird.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#4](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CPP/server.cpp#4)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#4](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CS/server.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessageSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageSink CreateMessageSink (string url, object remoteChannelData, out string objectURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageSink CreateMessageSink(string url, object remoteChannelData, [out] string&amp; objectURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.CreateMessageSink(System.String,System.Object,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="remoteChannelData" Type="System.Object" />
+        <Parameter Name="objectURI" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die URL, an dem der neue Empfänger Nachrichten übermitteln soll. Kann <see langword="null" />.</param>
+        <param name="remoteChannelData">Das Kanal-Datenobjekt des Remotehosts, an dem der neue Empfänger Nachrichten übermitteln soll. Kann <see langword="null" />.</param>
+        <param name="objectURI">Bei der Rückgabe dieser Methode enthält einen URI der neuen Kanal Nachricht besteht, die Nachrichten an die angegebene URL oder den Kanal-Datenobjekt übermittelt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt eine Kanal Nachricht Senke, die Nachrichten an die angegebene URL oder den Kanal Datenobjekt übermittelt zurück.</summary>
+        <returns>Ein Kanal Nachrichten Senke, die Nachrichten an die angegebene URL oder den Kanal Datenobjekt übermittelt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Channels.Tcp.TcpChannel.CreateMessageSink%2A> Methodenrückgabe Kanal Nachricht Senke, die Nachrichten an die angegebene URL oder den Kanal Datenobjekt übermittelt. Wenn die `uri` Parameter ist `null`, `remoteChannelData` , die als Ziel für die Senke verwendet wird. Entweder die `url` oder `remoteChannelData` Parameter möglich `null`, aber nicht beides.  
+  
+ Kanal senken ermöglichen-Plug-Ins, die Zugriff auf die zugrunde liegenden Nachrichten, die durch den Kanal sowie der Stream, der zum Senden von Nachrichten zu einem Remoteobjekt vom Transportmechanismus verwendet fließen können. Senken der Kanal miteinander verknüpft sind, in einer Kette von `ChannelSinkProviders` und alle Nachrichten durchlaufen diese Kette von senken Kanal, bevor die Nachricht schließlich serialisiert und transportiert wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#12](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CPP/client.cpp#12)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#12](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CS/client.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUrlsForUri">
+      <MemberSignature Language="C#" Value="public string[] GetUrlsForUri (string objectURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetUrlsForUri(string objectURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.GetUrlsForUri(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectURI" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="objectURI">Der URI des Objekts, für die URLs erforderlich sind.</param>
+        <summary>Gibt ein Array aller URLs für ein Objekt mit dem angegebenen URI, mit dem aktuellen <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" />.</summary>
+        <returns>Ein Array von URLs für ein Objekt mit dem angegebenen URI, mit dem aktuellen <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, indem Sie <xref:System.Runtime.Remoting.Channels.ChannelServices.GetUrlsForObject%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht.  
+  
+ [!code-cpp[TcpChannel.GetUrlsForUri#1](~/samples/snippets/cpp/VS_Snippets_Remoting/TcpChannel.GetUrlsForUri/CPP/class1.cpp#1)]
+ [!code-csharp[TcpChannel.GetUrlsForUri#1](~/samples/snippets/csharp/VS_Snippets_Remoting/TcpChannel.GetUrlsForUri/CS/class1.cs#1)]
+ [!code-vb[TcpChannel.GetUrlsForUri#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/TcpChannel.GetUrlsForUri/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecured">
+      <MemberSignature Language="C#" Value="public bool IsSecured { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecured" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Tcp.TcpChannel.IsSecured" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob der aktuelle Kanal sicher ist.</summary>
+        <value>Ein boolescher Wert, der angibt, ob die aktuelle Instanz sicher ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss nicht explizit festgelegt werden, da es ausreichend ist, legen Sie die EnsureSecurity-Parameter von <xref:System.Runtime.Remoting.RemotingConfiguration.Configure%28System.String%2CSystem.Boolean%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public string Parse (string url, out string objectURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Parse(string url, [out] string&amp; objectURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.Parse(System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="objectURI" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die URL, aus dem den URI des bekannten Remoteobjekts extrahiert werden soll.</param>
+        <param name="objectURI">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.String" /> , die den URI des bekannten Remoteobjekts enthält. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Extrahiert die Kanal-URI und den URI des bekannten Remoteobjekts aus der angegebenen URL an.</summary>
+        <returns>Der URI des aktuellen Kanals.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein URI eines Objekts ist ein Wert, der eine bestimmte Objektinstanz eindeutig identifiziert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieser Methode veranschaulicht.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#6](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CPP/server.cpp#6)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Tcp.TcpChannel#6](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Tcp.TcpChannel/CS/server.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartListening">
+      <MemberSignature Language="C#" Value="public void StartListening (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartListening(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.StartListening(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Optionale Initialisierungsinformationen.</param>
+        <summary>Weist den aktuellen Kanal mit dem Anforderungen überwachen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht erforderlich, diese Methode zum Beginnen des Lauschens für einen neu initialisierte Kanal aufgerufen.  
+  
+ Mit dieser Methode können Lauscht auf einem Kanal nach dem Neustart der <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.StopListening%2A> -Methode aufgerufen wurde.  
+  
+ Wenn der Kanal eine dynamisch zugewiesene Portnummer verwendet wird, kann die Portnummer ändern, beim Starten der Überwachung.  
+  
+ Die `data` Parameter kann verwendet werden, um eine bestimmte Initialisierungszustand in den Kanal übergeben. Wenn Sie keinen bestimmten Zustand in den Kanal übergeben möchten, legen `data` auf `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopListening">
+      <MemberSignature Language="C#" Value="public void StopListening (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopListening(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.StopListening(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Optionale Zustandsinformationen für den Kanal.</param>
+        <summary>Weist den aktuellen Kanal zum Beenden der Überwachung für Anforderungen an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Beenden der Überwachung von einem Kanal. Verwenden Sie zum Neustarten der Überwachung der <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.StartListening%2A> Methode.  
+  
+ Wenn der Kanal eine dynamisch zugewiesene Portnummer verwendet wird, kann die Portnummer ändern, beim Starten der Überwachung.  
+  
+ Die `data` Parameter kann verwendet werden, um eine bestimmte Initialisierungszustand in den Kanal übergeben. Wenn Sie keinen bestimmten Zustand in den Kanal übergeben möchten, legen `data` auf `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

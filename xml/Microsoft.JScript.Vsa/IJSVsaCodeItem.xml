@@ -1,0 +1,135 @@
+<Type Name="IJSVsaCodeItem" FullName="Microsoft.JScript.Vsa.IJSVsaCodeItem">
+  <TypeSignature Language="C#" Value="public interface IJSVsaCodeItem : Microsoft.JScript.Vsa.IJSVsaItem" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IJSVsaCodeItem implements class Microsoft.JScript.Vsa.IJSVsaItem" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.Vsa.IJSVsaCodeItem" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.JScript.Vsa.IJSVsaItem</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use of this type is not recommended because it is being deprecated in Visual Studio 2005; there will be no replacement for this feature. Please see the ICodeCompiler documentation for additional help.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("528BBC87-CCDC-4F07-B29C-9B10575DEB2F")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein vom Skriptmodul zu kompilierendes Codeelement dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddEventSource">
+      <MemberSignature Language="C#" Value="public void AddEventSource (string eventSourceName, string eventSourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddEventSource(string eventSourceName, string eventSourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaCodeItem.AddEventSource(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSourceName" Type="System.String" />
+        <Parameter Name="eventSourceType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventSourceName">Ein programmgesteuerter Name der Ereignisquelle.</param>
+        <param name="eventSourceType">Der Typname der Ereignisquelle.</param>
+        <summary>Fügt dem Codeelement eine Ereignisquelle hinzu. Das Codeelement verwendet die Ereignisquelle, um ein Ereignis mit der benannten Ereignisquelle zu verknüpfen, indem es die vom Host implementierte IVsaSite.GetEventSourceInstance-Methode aufruft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSourceText">
+      <MemberSignature Language="C#" Value="public void AppendSourceText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AppendSourceText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaCodeItem.AppendSourceText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der an das Codeelement anzufügende Text.</param>
+        <summary>Fügt den angegebenen Text an das Ende des Codeelements an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeDOM">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeObject CodeDOM { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeObject CodeDOM" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaCodeItem.CodeDOM" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das im Codeelement dargestellte CodeDOM (Code Document Object Model) ab.</summary>
+        <value>Gibt das CodeDOM für das Codeelement zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEventSource">
+      <MemberSignature Language="C#" Value="public void RemoveEventSource (string eventSourceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveEventSource(string eventSourceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaCodeItem.RemoveEventSource(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSourceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventSourceName">Der programmgesteuerte Name der zu entfernenden Ereignisquelle.</param>
+        <summary>Entfernt die angegebene Ereignisquelle aus dem Codeelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceText">
+      <MemberSignature Language="C#" Value="public string SourceText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaCodeItem.SourceText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt den Text für ein angegebenes Codeelement (ggf. einschließlich automatisch generiertem Code) fest oder ruft diesen ab.</summary>
+        <value>Gibt den Quelltext des Codeelements zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

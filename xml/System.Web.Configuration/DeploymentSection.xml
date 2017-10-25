@@ -1,0 +1,107 @@
+<Type Name="DeploymentSection" FullName="System.Web.Configuration.DeploymentSection">
+  <TypeSignature Language="C#" Value="public sealed class DeploymentSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DeploymentSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.DeploymentSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Konfigurationseinstellung, die in der Regel auf einem Produktionsserver verwendet wird, auf Anwendungsebene-Einstellungen außer Kraft gesetzt, die nur auf Entwicklungscomputern geeignet sind.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeploymentSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.DeploymentSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.DeploymentSection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird vom Konfigurationssystem von ASP.NET aufgerufen. Sie rufen Sie eine Instanz von der <xref:System.Web.Configuration.DeploymentSection> Klasse, indem die <xref:System.Configuration.Configuration.GetSection%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.DeploymentSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Retail">
+      <MemberSignature Language="C#" Value="public bool Retail { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Retail" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.DeploymentSection.Retail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("retail", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Webanwendungen auf dem Computer, in bereitgestellt werden <see langword="retail" /> Modus.</summary>
+        <value>
+          <see langword="true" />Wenn in Webanwendungen werden <see langword="retail" /> Modus ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Web.Configuration.DeploymentSection.Retail%2A> ist `true`, ASP.NET deaktiviert die Ablaufverfolgungsausgabe, deaktiviert das Debuggen, Funktionen und deaktiviert die detaillierte Fehlermeldungen für Remotebenutzer systemgenerierte. Für Anwendungen, die eine `customErrors` Element in der Datei "Web.config", die `mode` Attribut gezwungen, `On`. Diese Einstellungen überschreiben alle Einstellungen, die in der Anwendung "Web.config"-Dateien vorgenommen werden.  
+  
+> [!NOTE]
+>  Bei Verwendung der `retail` festlegen, sollten Sie festzulegende weiterhin die `debug` -Attribut auf `false` in Web.config-Dateien, die auf dem Server bereitgestellt werden. Die `debug` Einstellung deaktiviert die Ausführung Anforderungstimeout und dies wird nicht überschrieben, indem die `retail` Einstellung. Weitere Informationen finden Sie unter. [Die meisten allgemeinen ASP.NET-Unterstützung Probleme - Berichte aus im Microsoft Developer Support](http://www.hanselman.com/blog/MostCommonASPNETSupportIssuesReportingFromDeepInsideMicrosoftDeveloperSupport.aspx) Scott Hanselman Blog.  
+  
+   
+  
+## Examples  
+ Im folgenden Konfigurationsbeispiel-Datei zeigt, wie diese Eigenschaft festgelegt wird, um `true` in der Datei "Machine.config". Die Datei "Machine.config" befindet sich in diesem Ordner:  
+  
+ `%windir%\Microsoft.NET\Framework\<frameworkversion>\Config`  
+  
+```  
+<system.web>  
+  <deployment   
+    retail="true" />  
+</system.web>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

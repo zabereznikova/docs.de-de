@@ -1,0 +1,181 @@
+<Type Name="ActivatingKeyTipEventArgs" FullName="System.Windows.Controls.ActivatingKeyTipEventArgs">
+  <TypeSignature Language="C#" Value="public class ActivatingKeyTipEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivatingKeyTipEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ActivatingKeyTipEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Controls.KeyTipService.ActivatingKeyTip" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivatingKeyTipEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ActivatingKeyTipEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.ActivatingKeyTipEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ActivatingKeyTipEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">Der Ereignishandler aufgerufen.</param>
+        <param name="genericTarget">Das Ziel, auf dem der Handler aufgerufen wird.</param>
+        <summary>Ruft den angegebenen Ereignishandler für das angegebene Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung wandelt den generischen Handler, ein <xref:System.Windows.Controls.ActivatingKeyTipEventHandler> -Instanz und ruft diese auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyTipHorizontalOffset">
+      <MemberSignature Language="C#" Value="public double KeyTipHorizontalOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 KeyTipHorizontalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ActivatingKeyTipEventArgs.KeyTipHorizontalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den horizontalen Offset von der angegebenen horizontale Position.</summary>
+        <value>Der Betrag, um die Zugriffstasteninfo Horizontal versetzt werden soll.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft wird auf einen Wert festgelegt, die entweder negativ oder positiv unendlich ergibt, oder keine Zahl ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyTipHorizontalPlacement">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.KeyTipHorizontalPlacement KeyTipHorizontalPlacement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.KeyTipHorizontalPlacement KeyTipHorizontalPlacement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ActivatingKeyTipEventArgs.KeyTipHorizontalPlacement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.KeyTipHorizontalPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die horizontale Position der Zugriffstasteninfo relativ zur Platzierung Target-Element.</summary>
+        <value>Die horizontale Position der Zugriffstasteninfo relativ zur Platzierung Target-Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyTipVerticalOffset">
+      <MemberSignature Language="C#" Value="public double KeyTipVerticalOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 KeyTipVerticalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ActivatingKeyTipEventArgs.KeyTipVerticalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den vertikalen Offset von der angegebenen vertikalen Position.</summary>
+        <value>Der Betrag, um die Zugriffstasteninfo vertikal versetzt werden soll.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft wird auf einen Wert festgelegt, die entweder negativ oder positiv unendlich ergibt, oder keine Zahl ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyTipVerticalPlacement">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.KeyTipVerticalPlacement KeyTipVerticalPlacement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.KeyTipVerticalPlacement KeyTipVerticalPlacement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ActivatingKeyTipEventArgs.KeyTipVerticalPlacement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.KeyTipVerticalPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die vertikale Position der Zugriffstasteninfo relativ zur Platzierung Target-Element.</summary>
+        <value>Die vertikale Position der Zugriffstasteninfo relativ zur Platzierung Target-Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyTipVisibility">
+      <MemberSignature Language="C#" Value="public System.Windows.Visibility KeyTipVisibility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Visibility KeyTipVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ActivatingKeyTipEventArgs.KeyTipVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Visibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert, der angibt, ob der Zugriffstasteninfo angezeigt und verfügbar ist.</summary>
+        <value>Der Wert, der angibt, ob der Zugriffstasteninfo angezeigt und verfügbar ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Controls.ActivatingKeyTipEventArgs.KeyTipVisibility%2A> -Eigenschaftensatz auf <xref:System.Windows.Visibility.Visible>, der Zugriffstasteninfo ist sichtbar und zugreifbar. Wenn die <xref:System.Windows.Controls.ActivatingKeyTipEventArgs.KeyTipVisibility%2A> -Eigenschaftensatz auf <xref:System.Windows.Visibility.Hidden>, der Zugriffstasteninfo wird ausgeblendet, aber immer noch zugegriffen werden kann. Wenn die <xref:System.Windows.Controls.ActivatingKeyTipEventArgs.KeyTipVisibility%2A> -Eigenschaftensatz auf <xref:System.Windows.Visibility.Collapsed>, der Zugriffstasteninfo ist nicht sichtbar und kann nicht zugegriffen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementTarget">
+      <MemberSignature Language="C#" Value="public System.Windows.UIElement PlacementTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement PlacementTarget" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ActivatingKeyTipEventArgs.PlacementTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Element der Benutzeroberfläche, das als Ziel für das Platzieren der Zugriffstasteninfo dient.</summary>
+        <value>Das Element, das als Ziel für das Platzieren der Zugriffstasteninfo dient.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

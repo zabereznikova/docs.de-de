@@ -1,0 +1,211 @@
+<Type Name="GridItemCollection" FullName="System.Windows.Forms.GridItemCollection">
+  <TypeSignature Language="C#" Value="public class GridItemCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridItemCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.GridItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Enthält eine Auflistung von <see cref="T:System.Windows.Forms.GridItem" />-Objekten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt eine Auflistung von <xref:System.Windows.Forms.GridItem> in gespeicherten Objekte eine <xref:System.Windows.Forms.PropertyGrid>.  
+  
+ Sie können einen bestimmten abrufen <xref:System.Windows.Forms.GridItem> mit entweder einen Index in der Auflistung oder die Bezeichnung eines Elements Raster in der Auflistung, die Sie durch den Indexer zugreifen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItemCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Rasterelemente in der Auflistung ab.</summary>
+        <value>Die Anzahl der Rasterelemente in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.GridItemCollection Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static class System.Windows.Forms.GridItemCollection Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.GridItemCollection.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GridItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Windows.Forms.GridItemCollection" /> enthält keine Einträge.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridItemCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Enumeration aller Raster Elemente in der Auflistung zurück.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> für das <see cref="T:System.Windows.Forms.GridItemCollection" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.GridItem this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.GridItem Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItemCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GridItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des zurückzugebenden Elements Raster.</param>
+        <summary>Ruft den <see cref="T:System.Windows.Forms.GridItem" /> am angegebenen Index ab.</summary>
+        <value>Der <see cref="T:System.Windows.Forms.GridItem" /> am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.GridItem this[string label] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.GridItem Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItemCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GridItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="label" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="label">Ein Zeichenfolgenwert, der ein Raster-Elementnamen entsprechen.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.GridItem" /> mit der übereinstimmenden Bezeichnung.</summary>
+        <value>Das Rasterelement, dessen Bezeichnung entspricht, der <paramref name="label" /> Parameter.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridItemCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">Das eindimensionales Array, bei dem es sich um das Ziel der aus der Auflistung kopierten Elemente handelt. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im Array, ab dem der Kopiervorgang beginnt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.GridItemCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItemCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.IsSynchronized" />.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.GridItemCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItemCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.SyncRoot" />.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Windows.Forms.GridItemCollection" /> synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.GridItemCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

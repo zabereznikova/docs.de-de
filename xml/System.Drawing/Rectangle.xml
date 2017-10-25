@@ -1,0 +1,1383 @@
+<Type Name="Rectangle" FullName="System.Drawing.Rectangle">
+  <TypeSignature Language="C#" Value="public struct Rectangle" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Rectangle extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Rectangle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+  </Interfaces>
+  <Docs>
+    <summary>Speichert einen Satz von vier ganzen Zahlen, die die Position und Größe eines Rechtecks angeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Rechteck wird definiert, indem seine <xref:System.Drawing.Rectangle.Width%2A>, <xref:System.Drawing.Rectangle.Height%2A>, und die linke obere Ecke, dargestellt durch die <xref:System.Drawing.Rectangle.Location%2A> Eigenschaft.  
+  
+ Zum Zeichnen von Rechtecken, müssen Sie eine <xref:System.Drawing.Graphics> Objekt und ein <xref:System.Drawing.Pen> Objekt. Die <xref:System.Drawing.Graphics> Objekt enthält die <xref:System.Drawing.Graphics.DrawRectangle%2A> -Methode, und die <xref:System.Drawing.Pen> Objekt speichert die Funktionen der Zeile, z. B. Farbe und Breite. Die Einheiten, die in das Rechteck gezeichnet richtet sich nach der <xref:System.Drawing.Graphics.PageUnit%2A> und <xref:System.Drawing.Graphics.PageScale%2A> Eigenschaften der Grafiken Objekt zum Zeichnen verwendet. Die Standardeinheit ist Pixel.  
+  
+ Zum Zeichnen einer <xref:System.Drawing.Rectangle> mit Farbe gefüllt wird, müssen Sie eine <xref:System.Drawing.Graphics> Objekt und einem Objekt abgeleitet wurde. <xref:System.Drawing.Brush> wie z. B. <xref:System.Drawing.SolidBrush> oder <xref:System.Drawing.Drawing2D.LinearGradientBrush>. Die <xref:System.Drawing.Graphics> Objekt enthält die <xref:System.Drawing.Graphics.FillRectangle%2A> Methode und die <xref:System.Drawing.Brush> Objekt enthält die Farbe und die Füllung Informationen.  
+  
+ Verwenden Sie für erweiterte Formen ein <xref:System.Drawing.Region> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel zeichnet ein Rechteck mit der linken oberen Ecke an (10, 10). Das Rechteck hat eine Breite von 100 und eine Höhe von 50. Das zweite Argument zu übergeben, um die <xref:System.Drawing.Pen.%23ctor%2A> Konstruktor gibt an, dass die Stiftbreite 5 Pixel beträgt.  
+  
+ Wenn das Rechteck gezeichnet wird, ist der Stift auf der Begrenzung des Rechtecks zentriert. Da die Stiftbreite 5 ist, werden die Seiten des Rechtecks 5 Pixel breit, z. B. 1 Pixel gezeichnet wird auf die Begrenzung selbst, 2 Pixel innerhalb gezeichnet werden, und 2 Pixel an der Außenseite gezeichnet werden. Ausführliche Informationen auf Stift Ausrichtung finden Sie unter [Vorgehensweise: Festlegen von Stiftbreite und-Ausrichtung](~/docs/framework/winforms/advanced/how-to-set-pen-width-and-alignment.md).  
+  
+ Die folgende Abbildung zeigt das resultierende Rechteck. Die gepunkteten Linien anzeigen, in denen das Rechteck gezeichnet worden wäre, wenn die Stiftbreite ein Pixel gewesen wäre. Die vergrößerte Ansicht von der linken oberen Ecke des Rechtecks zeigt, dass die dicken schwarzen Linien auf die gepunktete Linien zentriert werden.  
+  
+ ![Stifte](~/add/media/pens1.gif "Stifte")  
+  
+ Das Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.  
+  
+ [!code-csharp[System.Drawing.UsingAPen#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.UsingAPen#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#21)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rectangle (System.Drawing.Point location, System.Drawing.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Point location, valuetype System.Drawing.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.#ctor(System.Drawing.Point,System.Drawing.Size)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="location" Type="System.Drawing.Point" />
+        <Parameter Name="size" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="location">Ein <see cref="T:System.Drawing.Point" />, der die linke obere Ecke des rechteckigen Bereichs darstellt.</param>
+        <param name="size">Eine <see cref="T:System.Drawing.Size" />, die die Breite und Höhe des rechteckigen Bereichs darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.Rectangle" />-Klasse mit der angegebenen Position und Größe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rectangle (int x, int y, int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 x, int32 y, int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die x-Koordinate der linken oberen Ecke des Rechtecks.</param>
+        <param name="y">Die y-Koordinate der linken oberen Ecke des Rechtecks.</param>
+        <param name="width">Die Breite des Rechtecks.</param>
+        <param name="height">Die Höhe des Rechtecks.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.Rectangle" />-Klasse mit der angegebenen Position und Größe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Drawing.Rectangle.%23ctor%2A>, <xref:System.Drawing.Rectangle.Intersect%2A>, <xref:System.Drawing.Rectangle.IsEmpty%2A>, und <xref:System.Drawing.Rectangle.IntersectsWith%2A> Elemente. In diesem Beispiel sollte mit einem Windows Form verwendet werden. Fügen Sie diesen Code in ein Formular, und rufen Sie diese Methode, bei der Verarbeitung des Formulars von <xref:System.Windows.Forms.Control.Paint> Ereignis, und übergeben Sie `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.RectanglesAndPoints#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.RectanglesAndPoints#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.RectanglesAndPoints#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="public int Bottom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Bottom" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Rectangle.Bottom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die y-Koordinate ab, die die Summe aus dem <see cref="P:System.Drawing.Rectangle.Y" />-Eigenschaftswert und dem <see cref="P:System.Drawing.Rectangle.Height" />-Eigenschaftswert dieser <see cref="T:System.Drawing.Rectangle" />-Struktur ist.</summary>
+        <value>Die y-Koordinate, die die Summe aus <see cref="P:System.Drawing.Rectangle.Y" /> und <see cref="P:System.Drawing.Rectangle.Height" /> dieses <see cref="T:System.Drawing.Rectangle" /> ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert des der <xref:System.Drawing.Rectangle.Bottom%2A> Eigenschaft darstellt, die y-Koordinate des ersten Punkts am unteren Rand der <xref:System.Drawing.Rectangle> in nicht enthaltenen der <xref:System.Drawing.Rectangle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ceiling">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Rectangle Ceiling (System.Drawing.RectangleF value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Rectangle Ceiling(valuetype System.Drawing.RectangleF value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Ceiling(System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende <see cref="T:System.Drawing.RectangleF" />-Struktur.</param>
+        <summary>Konvertiert die angegebene <see cref="T:System.Drawing.RectangleF" />-Struktur in eine <see cref="T:System.Drawing.Rectangle" />-Struktur, indem die <see cref="T:System.Drawing.RectangleF" />-Werte auf die nächste ganze Zahl aufgerundet werden.</summary>
+        <returns>Gibt einen Wert vom Typ <see cref="T:System.Drawing.Rectangle" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Drawing.Point pt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(valuetype System.Drawing.Point pt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Contains(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="pt">Der zu überprüfende <see cref="T:System.Drawing.Point" />.</param>
+        <summary>Bestimmt, ob der angegebene Punkt in dieser <see cref="T:System.Drawing.Rectangle" />-Struktur enthalten ist.</summary>
+        <returns>Diese Methode gibt <see langword="true" /> zurück, wenn der von <paramref name="pt" /> dargestellte Punkt in dieser <see cref="T:System.Drawing.Rectangle" />-Struktur enthalten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das enthaltende Rechteck muss für diese Methode gibt exakten Ergebnisse normalisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Drawing.Rectangle rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(valuetype System.Drawing.Rectangle rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Contains(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Der zu überprüfende <see cref="T:System.Drawing.Rectangle" />.</param>
+        <summary>Bestimmt, ob der von <paramref name="rect" /> dargestellte rechteckige Bereich vollständig in dieser <see cref="T:System.Drawing.Rectangle" />-Struktur enthalten ist.</summary>
+        <returns>Diese Methode gibt <see langword="true" /> zurück, wenn der von <paramref name="rect" /> dargestellte rechteckige Bereich vollständig in dieser <see cref="T:System.Drawing.Rectangle" />-Struktur enthalten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das enthaltende Rechteck muss für diese Methode gibt exakten Ergebnisse normalisiert werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Drawing.Rectangle.Contains%2A> Methode und die <xref:System.Drawing.SystemPens> Klasse. In diesem Beispiel dient zur Verwendung mit einem Windows Form. Fügen Sie diesen Code in ein Formular, das eine Schaltfläche mit dem Namen enthält `Button1`, rufen Sie `DrawFirstRectangle` aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> -Methode, und ordnen die `Button1_Click` Methode mit der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignis.  
+  
+ [!code-cpp[System.Drawing.RectanglesAndPoints#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.RectanglesAndPoints#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.RectanglesAndPoints#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Contains(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die x-Koordinate des Punktes, der überprüft werden soll.</param>
+        <param name="y">Die y-Koordinate des Punktes, der überprüft werden soll.</param>
+        <summary>Bestimmt, ob der angegebene Punkt in dieser <see cref="T:System.Drawing.Rectangle" />-Struktur enthalten ist.</summary>
+        <returns>Diese Methode gibt <see langword="true" /> zurück, wenn der von <paramref name="x" /> und <paramref name="y" /> definierte Punkt in dieser <see cref="T:System.Drawing.Rectangle" />-Struktur enthalten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das enthaltende Rechteck muss für diese Methode gibt exakten Ergebnisse normalisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Rectangle Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Drawing.Rectangle Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Rectangle.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine <see cref="T:System.Drawing.Rectangle" />-Struktur mit nicht initialisierten Eigenschaften dar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Rechteck wird durch seine Breite, Höhe und die linke obere Ecke definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Drawing.Rectangle other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Drawing.Rectangle other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Equals(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Der zu überprüfende <see cref="T:System.Object" />.</param>
+        <summary>Überprüft, ob <paramref name="obj" /> eine <see cref="T:System.Drawing.Rectangle" />-Struktur mit derselben Position und Größe wie diese <see cref="T:System.Drawing.Rectangle" />-Struktur ist.</summary>
+        <returns>Diese Methode gibt <see langword="true" /> zurück, wenn <paramref name="obj" /> eine <see cref="T:System.Drawing.Rectangle" />-Struktur ist und deren <see cref="P:System.Drawing.Rectangle.X" />-Eigenschaft, <see cref="P:System.Drawing.Rectangle.Y" />-Eigenschaft, <see cref="P:System.Drawing.Rectangle.Width" />-Eigenschaft und <see cref="P:System.Drawing.Rectangle.Height" />-Eigenschaft gleich den entsprechenden Eigenschaften dieser <see cref="T:System.Drawing.Rectangle" />-Struktur sind. Andernfalls gibt die Methode <see langword="false" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromLTRB">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Rectangle FromLTRB (int left, int top, int right, int bottom);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Rectangle FromLTRB(int32 left, int32 top, int32 right, int32 bottom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.FromLTRB(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Int32" />
+        <Parameter Name="top" Type="System.Int32" />
+        <Parameter Name="right" Type="System.Int32" />
+        <Parameter Name="bottom" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die x-Koordinate der linken oberen Ecke dieser <see cref="T:System.Drawing.Rectangle" />-Struktur.</param>
+        <param name="top">Die y-Koordinate der linken oberen Ecke dieser <see cref="T:System.Drawing.Rectangle" />-Struktur.</param>
+        <param name="right">Die x-Koordinate der rechten unteren Ecke dieser <see cref="T:System.Drawing.Rectangle" />-Struktur.</param>
+        <param name="bottom">Die y-Koordinate der rechten unteren Ecke dieser <see cref="T:System.Drawing.Rectangle" />-Struktur.</param>
+        <summary>Erstellt eine <see cref="T:System.Drawing.Rectangle" />-Struktur mit den angegebenen Randpositionen.</summary>
+        <returns>Das neue <see cref="T:System.Drawing.Rectangle" />, das von dieser Methode erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine <xref:System.Drawing.Rectangle> mit der angegebenen linken, oberen und unteren rechten Ecke.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen eines Rechtecks mithilfe der <xref:System.Drawing.Rectangle.FromLTRB%2A> Methode. In diesem Beispiel dient, die mit einem Windows Form verwendet werden. Fügen Sie diesen Code in ein Formular, und rufen die `CreateARectangleFromLTRB` Methode beim Verarbeiten des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und übergeben Sie `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.RectanglesAndPoints#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.RectanglesAndPoints#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.RectanglesAndPoints#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese <see cref="T:System.Drawing.Rectangle" />-Struktur zurück. Informationen über die Verwendung von Hashcodes finden Sie unter <see cref="M:System.Object.GetHashCode" />.</summary>
+        <returns>Eine ganze Zahl, die den Hashcode für dieses Rechteck darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Rectangle.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe dieser <see cref="T:System.Drawing.Rectangle" />-Struktur ab oder legt diese fest.</summary>
+        <value>Die Höhe der <see cref="T:System.Drawing.Rectangle" />-Struktur. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ändern der <xref:System.Drawing.Rectangle.Height%2A> Eigenschaft führt auch dazu, dass eine Änderung in der <xref:System.Drawing.Rectangle.Bottom%2A> Eigenschaft von der <xref:System.Drawing.Rectangle>. Die Einheiten, die in das Rechteck gezeichnet richtet sich nach der <xref:System.Drawing.Graphics.PageUnit%2A> und <xref:System.Drawing.Graphics.PageScale%2A> Eigenschaften der Grafiken Objekt zum Zeichnen verwendet. Die Standardeinheit ist Pixel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inflate">
+      <MemberSignature Language="C#" Value="public void Inflate (System.Drawing.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Inflate(valuetype System.Drawing.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Inflate(System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="size">Der Betrag, um den das Rechteck vergrößert werden soll.</param>
+        <summary>Vergrößert dieses <see cref="T:System.Drawing.Rectangle" /> um den angegebenen Betrag.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode vergrößert das Rechteck und keine Kopie des Zertifikats. Das Rechteck wird in beide Richtungen auf einer Achse vergrößert.  Z. B. wenn ein 50 x 50 Rechteck der x-Achse um 50 vergrößert wird, das resultierende Rechteck werden 150 Einheiten lang (die ursprüngliche 50, 50 in Richtung minus und 50 in Richtung plus) verwalten geometrische Zentrum des Rechtecks.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code erstellt ein <xref:System.Drawing.Rectangle> und um 50 Einheiten in beiden Achsen vergrößert. Das Rechteck gezeichnet wird auf dem Bildschirm vor der Vergrößerung (Schwarz) und nach der Vergrößerung (Rot).  
+  
+ [!code-cpp[System.Drawing.ClassicRectangleExamples#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRectangleExamples/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ClassicRectangleExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRectangleExamples/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ClassicRectangleExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRectangleExamples/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inflate">
+      <MemberSignature Language="C#" Value="public void Inflate (int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Inflate(int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Inflate(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="width">Der Betrag, um den dieses <see cref="T:System.Drawing.Rectangle" /> horizontal vergrößert werden soll.</param>
+        <param name="height">Der Betrag, um den dieses <see cref="T:System.Drawing.Rectangle" /> vertikal vergrößert werden soll.</param>
+        <summary>Vergrößert dieses <see cref="T:System.Drawing.Rectangle" /> um den angegebenen Betrag.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode vergrößert das Rechteck und keine Kopie des Zertifikats. Das Rechteck wird in beide Richtungen auf einer Achse vergrößert. Z. B. wenn ein 50 x 50 Rechteck der x-Achse um 50 vergrößert wird, das resultierende Rechteck werden 150 Einheiten lang (die ursprüngliche 50, 50 in Richtung minus und 50 in Richtung plus) verwalten geometrische Zentrum des Rechtecks.  
+  
+ Wenn entweder `x` oder `y` ist ein negativer Wert, der <xref:System.Drawing.Rectangle> Struktur in der entsprechenden Richtung verkleinert wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Drawing.Rectangle> Struktur, und um 100 Einheiten in Richtung der x-Achse vergrößert:  
+  
+ [!code-cpp[System.Drawing.ClassicRectangleExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRectangleExamples/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.ClassicRectangleExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRectangleExamples/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.ClassicRectangleExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRectangleExamples/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inflate">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Rectangle Inflate (System.Drawing.Rectangle rect, int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Rectangle Inflate(valuetype System.Drawing.Rectangle rect, int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Inflate(System.Drawing.Rectangle,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Das Ausgangs-<see cref="T:System.Drawing.Rectangle" />. Dieses Rechteck wird nicht geändert.</param>
+        <param name="x">Der Betrag, um den dieses <see cref="T:System.Drawing.Rectangle" /> horizontal vergrößert werden soll.</param>
+        <param name="y">Der Betrag, um den dieses <see cref="T:System.Drawing.Rectangle" /> vertikal vergrößert werden soll.</param>
+        <summary>Erstellt eine vergrößerte Kopie der angegebenen <see cref="T:System.Drawing.Rectangle" />-Struktur und gibt die Kopie zurück. Die Kopie wird um den angegebenen Betrag vergrößert. Die ursprüngliche <see cref="T:System.Drawing.Rectangle" />-Struktur wird nicht geändert.</summary>
+        <returns>Das vergrößerte <see cref="T:System.Drawing.Rectangle" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine Kopie des `rect`, vergrößert, und klicken Sie dann die vergrößerte Kopie zurück. Das Rechteck wird in beide Richtungen auf einer Achse vergrößert. Z. B. wenn ein 50 x 50 Rechteck der x-Achse um 50 vergrößert wird, das resultierende Rechteck werden 150 Einheiten lang (die ursprüngliche 50, 50 in Richtung minus und 50 in Richtung plus) verwalten geometrische Zentrum des Rechtecks.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code erstellt ein <xref:System.Drawing.Rectangle> und um 50 Einheiten in beiden Achsen vergrößert. Beachten Sie, dass das resultierende Rechteck (Rot) in beiden Achsen 150 Einheiten ist.  
+  
+ [!code-cpp[System.Drawing.ClassicRectangleExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRectangleExamples/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ClassicRectangleExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRectangleExamples/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ClassicRectangleExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRectangleExamples/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public void Intersect (System.Drawing.Rectangle rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Intersect(valuetype System.Drawing.Rectangle rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Intersect(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Das <see cref="T:System.Drawing.Rectangle" />, mit dem die Schnittmenge gebildet werden soll.</param>
+        <summary>Ersetzt dieses <see cref="T:System.Drawing.Rectangle" /> durch die Schnittmenge dieses Rechtecks und des angegebenen <see cref="T:System.Drawing.Rectangle" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Drawing.Rectangle.Intersect%2A>, <xref:System.Drawing.Rectangle.IsEmpty%2A> und die <xref:System.Drawing.Rectangle.IntersectsWith%2A> Elemente. In diesem Beispiel sollte mit einem Windows Form verwendet werden. Fügen Sie diesen Code in ein Formular, und rufen Sie diese Methode, bei der Verarbeitung des Formulars von <xref:System.Windows.Forms.Control.Paint> Ereignis, und übergeben Sie `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.RectanglesAndPoints#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.RectanglesAndPoints#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.RectanglesAndPoints#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Rectangle Intersect (System.Drawing.Rectangle a, System.Drawing.Rectangle b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Rectangle Intersect(valuetype System.Drawing.Rectangle a, valuetype System.Drawing.Rectangle b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Intersect(System.Drawing.Rectangle,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Drawing.Rectangle" />
+        <Parameter Name="b" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein Rechteck, mit dem eine Schnittmenge gebildet werden soll.</param>
+        <param name="b">Ein Rechteck, mit dem eine Schnittmenge gebildet werden soll.</param>
+        <summary>Gibt eine dritte <see cref="T:System.Drawing.Rectangle" />-Struktur zurück, die die Schnittmenge zweier anderer <see cref="T:System.Drawing.Rectangle" />-Strukturen darstellt. Wenn keine Schnittmenge vorliegt, wird ein leeres <see cref="T:System.Drawing.Rectangle" /> zurückgegeben.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Rectangle" />, das die Schnittmenge von <paramref name="a" /> und <paramref name="b" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Drawing.Rectangle.Intersect%2A>, <xref:System.Drawing.Rectangle.IsEmpty%2A> und die <xref:System.Drawing.Rectangle.IntersectsWith%2A> Elemente. In diesem Beispiel sollte mit einem Windows Form verwendet werden. Fügen Sie diesen Code in ein Formular, und rufen Sie diese Methode, bei der Verarbeitung des Formulars von <xref:System.Windows.Forms.Control.Paint> Ereignis, und übergeben Sie `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.RectanglesAndPoints#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.RectanglesAndPoints#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.RectanglesAndPoints#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntersectsWith">
+      <MemberSignature Language="C#" Value="public bool IntersectsWith (System.Drawing.Rectangle rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IntersectsWith(valuetype System.Drawing.Rectangle rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.IntersectsWith(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Das zu überprüfende Rechteck.</param>
+        <summary>Bestimmt, ob dieses Rechteck eine Schnittmenge mit <paramref name="rect" /> bildet.</summary>
+        <returns>Diese Methode gibt <see langword="true" /> zurück, wenn eine Schnittmenge vorliegt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Drawing.Rectangle.Intersect%2A>, <xref:System.Drawing.Rectangle.IsEmpty%2A> und die <xref:System.Drawing.Rectangle.IntersectsWith%2A> Elemente. In diesem Beispiel sollte mit einem Windows Form verwendet werden. Fügen Sie diesen Code in ein Formular, und rufen Sie diese Methode, bei der Verarbeitung des Formulars von <xref:System.Windows.Forms.Control.Paint> Ereignis, und übergeben Sie `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.RectanglesAndPoints#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.RectanglesAndPoints#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.RectanglesAndPoints#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Rectangle.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überprüft, ob alle numerischen Eigenschaften dieses <see cref="T:System.Drawing.Rectangle" /> den Wert 0 (null) haben.</summary>
+        <value>Diese Eigenschaft gibt <see langword="true" /> zurück, wenn die <see cref="P:System.Drawing.Rectangle.Width" />-Eigenschaft, die <see cref="P:System.Drawing.Rectangle.Height" />-Eigenschaft, die <see cref="P:System.Drawing.Rectangle.X" />-Eigenschaft sowie die <see cref="P:System.Drawing.Rectangle.Y" />-Eigenschaft dieses <see cref="T:System.Drawing.Rectangle" /> den Wert 0 (null) haben, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Drawing.Rectangle.Intersect%2A>, <xref:System.Drawing.Rectangle.IsEmpty%2A> und die <xref:System.Drawing.Rectangle.IntersectsWith%2A> Elemente. In diesem Beispiel sollte mit einem Windows Form verwendet werden. Fügen Sie diesen Code in ein Formular, und rufen Sie diese Methode, bei der Verarbeitung des Formulars von <xref:System.Windows.Forms.Control.Paint> Ereignis, und übergeben Sie `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.RectanglesAndPoints#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.RectanglesAndPoints#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.RectanglesAndPoints#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public int Left { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Left" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Rectangle.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die x-Koordinate des linken Randes dieser <see cref="T:System.Drawing.Rectangle" />-Struktur ab.</summary>
+        <value>Die x-Koordinate des linken Randes dieser <see cref="T:System.Drawing.Rectangle" />-Struktur.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point Location" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Rectangle.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Koordinaten der linken oberen Ecke dieser <see cref="T:System.Drawing.Rectangle" />-Struktur ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Point" />, der die linke obere Ecke dieser <see cref="T:System.Drawing.Rectangle" />-Struktur darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public void Offset (System.Drawing.Point pos);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Offset(valuetype System.Drawing.Point pos) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Offset(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pos" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="pos">Betrag für den Offset der Position.</param>
+        <summary>Passt die Position dieses Rechtecks um den angegebenen Betrag an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode passt die Position der linken oberen Ecke horizontal, indem Sie die X-Koordinate des angegebenen Punkt und vertikal die y-Koordinate des angegebenen Punkt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Drawing.Rectangle.Contains%2A>, und <xref:System.Drawing.Rectangle.Offset%2A> Methoden und die <xref:System.Drawing.SystemPens> Klasse. In diesem Beispiel dient zur Verwendung mit einem Windows Form. Fügen Sie diesen Code in ein Formular, das eine Schaltfläche mit dem Namen enthält `Button1`, rufen Sie `DrawFirstRectangle` aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> -Methode, und ordnen die `Button1_Click` Methode mit der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignis.  
+  
+ [!code-cpp[System.Drawing.RectanglesAndPoints#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.RectanglesAndPoints#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.RectanglesAndPoints#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public void Offset (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Offset(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Offset(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Der horizontale Offset.</param>
+        <param name="y">Der vertikale Offset.</param>
+        <summary>Passt die Position dieses Rechtecks um den angegebenen Betrag an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Drawing.Rectangle left, System.Drawing.Rectangle right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Drawing.Rectangle left, valuetype System.Drawing.Rectangle right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.op_Equality(System.Drawing.Rectangle,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Drawing.Rectangle" />
+        <Parameter Name="right" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die <see cref="T:System.Drawing.Rectangle" />-Struktur auf der linken Seite des Gleichheitsoperators.</param>
+        <param name="right">Die <see cref="T:System.Drawing.Rectangle" />-Struktur auf der rechten Seite des Gleichheitsoperators.</param>
+        <summary>Überprüft, ob zwei <see cref="T:System.Drawing.Rectangle" />-Strukturen die gleiche Position und Größe haben.</summary>
+        <returns>Dieser Operator gibt <see langword="true" /> zurück, wenn die beiden <see cref="T:System.Drawing.Rectangle" />-Strukturen die gleiche <see cref="P:System.Drawing.Rectangle.X" />-Eigenschaft, <see cref="P:System.Drawing.Rectangle.Y" />-Eigenschaft, <see cref="P:System.Drawing.Rectangle.Width" />-Eigenschaft und <see cref="P:System.Drawing.Rectangle.Height" />-Eigenschaft aufweisen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Drawing.Rectangle left, System.Drawing.Rectangle right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Drawing.Rectangle left, valuetype System.Drawing.Rectangle right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.op_Inequality(System.Drawing.Rectangle,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Drawing.Rectangle" />
+        <Parameter Name="right" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die <see cref="T:System.Drawing.Rectangle" />-Struktur auf der linken Seite des Ungleichheitsoperators.</param>
+        <param name="right">Die <see cref="T:System.Drawing.Rectangle" />-Struktur auf der rechten Seite des Ungleichheitsoperators.</param>
+        <summary>Überprüft, ob sich zwei <see cref="T:System.Drawing.Rectangle" />-Strukturen in Position und Größe unterscheiden.</summary>
+        <returns>Dieser Operator gibt <see langword="true" /> zurück, wenn sich die beiden <see cref="P:System.Drawing.Rectangle.X" />-Strukturen in der <see cref="P:System.Drawing.Rectangle.Y" />-Eigenschaft, der <see cref="P:System.Drawing.Rectangle.Width" />-Eigenschaft, der <see cref="P:System.Drawing.Rectangle.Height" />-Eigenschaft oder der <see cref="T:System.Drawing.Rectangle" />-Eigenschaft unterscheiden, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public int Right { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Right" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Rectangle.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die x-Koordinate ab, die die Summe aus dem <see cref="P:System.Drawing.Rectangle.X" />-Eigenschaftswert und dem <see cref="P:System.Drawing.Rectangle.Width" />-Eigenschaftswert dieser <see cref="T:System.Drawing.Rectangle" />-Struktur ist.</summary>
+        <value>Die x-Koordinate, die die Summe aus <see cref="P:System.Drawing.Rectangle.X" /> und <see cref="P:System.Drawing.Rectangle.Width" /> dieses <see cref="T:System.Drawing.Rectangle" /> ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Drawing.Rectangle.Right%2A> Eigenschaft darstellt, die X-Koordinate des ersten Punkts am rechten Rand des Rechtecks, das nicht im Rechteck enthalten ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Round">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Rectangle Round (System.Drawing.RectangleF value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Rectangle Round(valuetype System.Drawing.RectangleF value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Round(System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende <see cref="T:System.Drawing.RectangleF" />.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.Drawing.RectangleF" /> in ein <see cref="T:System.Drawing.Rectangle" />, indem die <see cref="T:System.Drawing.RectangleF" />-Werte auf die nächste ganze Zahl gerundet werden.</summary>
+        <returns>Der gerundete Ganzzahl-Wert von <see cref="T:System.Drawing.Rectangle" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.Rectangle.Round%2A> und <xref:System.Drawing.Rectangle.Truncate%2A> Methoden. In diesem Beispiel dient zur Verwendung mit einem Windows Form.  Fügen Sie diesen Code in ein Formular, und rufen die `RoundingAndTruncatingRectangles` Methode beim Verarbeiten des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und übergeben Sie `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.RectanglesAndPoints#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.RectanglesAndPoints#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.RectanglesAndPoints#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size Size" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Rectangle.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe dieses <see cref="T:System.Drawing.Rectangle" /> ab oder legt sie fest.</summary>
+        <value>Eine <see cref="T:System.Drawing.Size" />, die die Breite und Höhe dieser <see cref="T:System.Drawing.Rectangle" />-Struktur darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="public int Top { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Top" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Rectangle.Top" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die y-Koordinate des oberen Randes dieser <see cref="T:System.Drawing.Rectangle" />-Struktur ab.</summary>
+        <value>Die y-Koordinate des oberen Randes dieser <see cref="T:System.Drawing.Rectangle" />-Struktur.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert die Attribute für dieses <see cref="T:System.Drawing.Rectangle" /> in eine Klartextzeichenfolge.</summary>
+        <returns>Eine Zeichenfolge, die die Position, Breite und Höhe dieser <see cref="T:System.Drawing.Rectangle" />-Struktur enthält, z. B. "{X=20, Y=20, Width=100, Height=50}".</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Truncate">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Rectangle Truncate (System.Drawing.RectangleF value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Rectangle Truncate(valuetype System.Drawing.RectangleF value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Truncate(System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende <see cref="T:System.Drawing.RectangleF" />.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.Drawing.RectangleF" /> in ein <see cref="T:System.Drawing.Rectangle" />, indem die <see cref="T:System.Drawing.RectangleF" />-Werte abgeschnitten werden.</summary>
+        <returns>Der gekürzte Wert von <see cref="T:System.Drawing.Rectangle" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.Rectangle.Round%2A> und <xref:System.Drawing.Rectangle.Truncate%2A> Methoden. In diesem Beispiel dient zur Verwendung mit einem Windows Form. Fügen Sie diesen Code in ein Formular, und rufen die `RoundingAndTruncatingRectangles` Methode beim Verarbeiten des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und übergeben Sie `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.RectanglesAndPoints#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.RectanglesAndPoints#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.RectanglesAndPoints#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Rectangle Union (System.Drawing.Rectangle a, System.Drawing.Rectangle b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Rectangle Union(valuetype System.Drawing.Rectangle a, valuetype System.Drawing.Rectangle b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Rectangle.Union(System.Drawing.Rectangle,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Drawing.Rectangle" />
+        <Parameter Name="b" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein Rechteck, mit dem die Gesamtmenge gebildet werden soll.</param>
+        <param name="b">Ein Rechteck, mit dem die Gesamtmenge gebildet werden soll.</param>
+        <summary>Ruft eine <see cref="T:System.Drawing.Rectangle" />-Struktur ab, die die Gesamtmenge zweier <see cref="T:System.Drawing.Rectangle" />-Strukturen enthält.</summary>
+        <returns>Eine <see cref="T:System.Drawing.Rectangle" />-Struktur, die die Gesamtmenge der beiden <see cref="T:System.Drawing.Rectangle" />-Strukturen umgrenzt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eines der beiden Rechtecke leer ist, d. h. alle Werte sind 0 (null), ist die <xref:System.Drawing.Rectangle.Union%2A> Methode gibt ein Rechteck mit den Ausgangspunkt der (0, 0), und die Höhe und Breite des Rechtecks nicht leer. Angenommen, Sie haben zwei Rechtecken: A = (0, 0; 0, 0) und B = (1, 1, 2, 2), klicken Sie dann die Vereinigung von A und B ist (0, 0, 2, 2).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Drawing.Rectangle.Union%2A>-Methode verwenden. In diesem Beispiel dient zur Verwendung mit einem Windows Form. Fügen Sie diesen Code in ein Formular, und rufen die `ShowRectangleUnion` Methode beim Verarbeiten des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und übergeben Sie `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.RectanglesAndPoints#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.RectanglesAndPoints#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.RectanglesAndPoints#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Rectangle.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Breite dieser <see cref="T:System.Drawing.Rectangle" />-Struktur ab oder legt diese fest.</summary>
+        <value>Die Breite dieser <see cref="T:System.Drawing.Rectangle" />-Struktur. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ändern der <xref:System.Drawing.Rectangle.Width%2A> Eigenschaft führt auch dazu, dass eine Änderung in der <xref:System.Drawing.Rectangle.Right%2A> Eigenschaft von der <xref:System.Drawing.Rectangle>. Die Einheiten, die in das Rechteck gezeichnet richtet sich nach der <xref:System.Drawing.Graphics.PageUnit%2A> und <xref:System.Drawing.Graphics.PageScale%2A> Eigenschaften der Grafiken Objekt zum Zeichnen verwendet. Die Standardeinheit ist Pixel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public int X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 X" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Rectangle.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die x-Koordinate der linken oberen Ecke dieser <see cref="T:System.Drawing.Rectangle" />-Struktur ab oder legt diese fest.</summary>
+        <value>Die x-Koordinate der linken oberen Ecke dieser <see cref="T:System.Drawing.Rectangle" />-Struktur. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ändern der <xref:System.Drawing.Rectangle.X%2A> Eigenschaft führt auch dazu, dass eine Änderung in der <xref:System.Drawing.Rectangle.Right%2A> Eigenschaft von der <xref:System.Drawing.Rectangle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public int Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Rectangle.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die y-Koordinate der linken oberen Ecke dieser <see cref="T:System.Drawing.Rectangle" />-Struktur ab oder legt diese fest.</summary>
+        <value>Die y-Koordinate der linken oberen Ecke dieser <see cref="T:System.Drawing.Rectangle" />-Struktur. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ändern der <xref:System.Drawing.Rectangle.Y%2A> Eigenschaft führt auch dazu, dass eine Änderung in der <xref:System.Drawing.Rectangle.Bottom%2A> Eigenschaft von der <xref:System.Drawing.Rectangle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

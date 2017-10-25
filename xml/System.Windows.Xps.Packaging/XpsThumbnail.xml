@@ -1,0 +1,27 @@
+<Type Name="XpsThumbnail" FullName="System.Windows.Xps.Packaging.XpsThumbnail">
+  <TypeSignature Language="C#" Value="public class XpsThumbnail : System.Windows.Xps.Packaging.XpsResource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XpsThumbnail extends System.Windows.Xps.Packaging.XpsResource" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.XpsThumbnail" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Xps.Packaging.XpsResource</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Miniaturbild eines Dokumentsequenz, einzelnes Dokument oder einer einzelnen Seite dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Xps.Packaging.XpsThumbnail> -Klasse verfügt über keinen öffentlichen Konstruktor.  Ein Verweis auf ein <xref:System.Windows.Xps.Packaging.XpsThumbnail> erfolgt über die <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddThumbnail%2A?displayProperty=nameWithType>, <xref:System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.AddThumbnail%2A?displayProperty=nameWithType>, oder <xref:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.AddThumbnail%2A?displayProperty=nameWithType> Methoden.  
+  
+ Es wird empfohlen, wenn eine in Seite einem <xref:System.Windows.Xps.Packaging.XpsDocument> verfügt über eine Miniaturansicht, die alle Seiten mit Miniaturansichten angegeben werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

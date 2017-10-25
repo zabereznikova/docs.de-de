@@ -1,0 +1,21 @@
+<Namespace Name="System.Web.ApplicationServices">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.ApplicationServices" /> Namespace enthält Klassen, mit denen Sie Zugriff ASP.NET-Formularauthentifizierung, Rollen und Profile-Application-Dienste als Dienste für Windows Communication Foundation (WCF).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.ApplicationServices.AuthenticationService>, <xref:System.Web.ApplicationServices.RoleService>, und <xref:System.Web.ApplicationServices.ProfileService> Klassen enthalten Methoden, mit denen Sie Benutzer überprüfen, welche Rollen der aktuelle Benutzer gehört, sich anmelden und Abrufen von Eigenschaften des Profils für den Benutzer über WCF-Dienste. Der Namespace beinhaltet auch die folgenden Klassen:  
+  
+-   <xref:System.Web.ApplicationServices.CreatingCookieEventArgs>, der verwendet wird, passen das Authentifizierungscookie aus der <xref:System.Web.ApplicationServices.AuthenticationService> Klasse.  
+  
+-   <xref:System.Web.ApplicationServices.AuthenticatingEventArgs>, der verwendet wird, wählen Sie den Mitgliedschaftsanbieter zur Laufzeit.  
+  
+-   <xref:System.Web.ApplicationServices.SelectingProviderEventArgs>, der verwendet wird, wählen Sie den Rollenanbieter zur Laufzeit.  
+  
+-   <xref:System.Web.ApplicationServices.ValidatingPropertiesEventArgs>, die zum Erstellen von benutzerdefinierten Validierung für Benutzerprofileigenschaften verwendet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

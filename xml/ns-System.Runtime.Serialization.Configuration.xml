@@ -1,0 +1,8 @@
+<Namespace Name="System.Runtime.Serialization.Configuration">
+  <Docs>
+    <summary>Der System.Runtime.Serialization.Configuration-Namespace enthält Klassen, mit denen die Werte in der Konfigurationsdatei der Anwendung unter system.xml.serialization Abschnitt gelesen.  
+  
+ Die Klassen in diesem Namespace werden von der Serialisierungsinfrastruktur zur Behandlung von Konfigurationselementen verwendet und können nicht direkt verwendet werden. Erstellen Sie stattdessen zum Konfigurieren von DataContractSerializer eine Anwendungskonfigurationsdatei, und verwenden Sie die folgenden XML-Elemente. &lt;System.Xml.Serialization&gt;&lt;"DataContractSerializer"&gt;&lt;DeclaredTypes&gt;&lt;hinzufügen&gt; -Element für &lt;DeclaredTypes&gt; &lt;KnownType&gt; Element</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

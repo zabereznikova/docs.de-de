@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.UI.WebControls">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.UI.WebControls" /> -Namespace enthält Klassen, die Ihnen die Erstellung von Webserversteuerelementen auf einer Webseite zu ermöglichen. Webserversteuerelemente auf dem Server ausgeführt und Formularsteuerelemente, z. B. Schaltflächen und Textfeldern. Sie enthalten auch spezielle Steuerelemente, z. B. ein Kalender. Da Webserversteuerelemente ausführen auf dem Server können Sie programmgesteuert kontrollieren dieser Elemente. Obwohl Webserversteuerelemente als HTML gerendert werden, ist ihr Objektmodell nicht notwendigerweise HTML-Syntax wider.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls> -Namespace enthält Klassen, die als HTML-Tags, wie z. B. gerendert werden die <xref:System.Web.UI.WebControls.TextBox> Steuerelement und dem <xref:System.Web.UI.WebControls.ListBox> Steuerelement. Der Namespace enthält auch Klassen, die nicht auf der Webseite gerendert werden, jedoch unterstützen Datenvorgänge, wie z. B. die <xref:System.Web.UI.WebControls.SqlDataSource> und <xref:System.Web.UI.WebControls.ObjectDataSource> Klassen. Andere Steuerelemente, z. B. die <xref:System.Web.UI.WebControls.GridView> und <xref:System.Web.UI.WebControls.DetailsView> Steuerelemente, Unterstützung Daten anzeigen und bearbeiten. Die <xref:System.Web.UI.WebControls.WebControl> Klasse fungiert als Basisklasse für viele der Klassen in der <xref:System.Web.UI.WebControls> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,315 @@
+<Type Name="Panel" FullName="System.Web.UI.MobileControls.Panel">
+  <TypeSignature Language="C#" Value="public class Panel : System.Web.UI.MobileControls.MobileControl, System.Web.UI.MobileControls.ITemplateable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Panel extends System.Web.UI.MobileControls.MobileControl implements class System.Web.UI.MobileControls.ITemplateable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Panel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.MobileControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.MobileControls.ITemplateable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Web.UI.Design.MobileControls.PanelDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Web.UI.Design.WebControlToolboxItem, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.MobileControls.PanelControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.MobileControls.DesignerAdapter(typeof(System.Web.UI.MobileControls.Adapters.HtmlPanelAdapter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:Panel runat="server"&gt;&lt;/{0}:Panel&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Container für die Verwaltung von Steuerelementen auf einer mobilen Web Forms-Seite bereit. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bereiche sind Containersteuerelemente, die geschachtelt werden können. Attribute, die in einem Bereich festgelegt, werden von den Steuerelementen geerbt, die in diesem Bereich enthalten sind.  
+  
+ Sie können einen Bereich für jede der folgenden Funktionen:  
+  
+-   Logisch gruppieren von Steuerelementen, damit sie angezeigt oder ausgeblendet werden können.  
+  
+-   Definieren einen geeigneten Container, in dem Steuerelemente erstellt oder dynamisch entfernt werden können.  
+  
+-   Verwenden einen einzelnen Fehlerpunkt Format angewendet Attribute auf einen Satz von Steuerelementen, über die Einstellungen im Bereich. Da Stil Vererbung für Bereiche gilt, können Attribute, die in einem Bereich festgelegt werden von allen Steuerelementen geerbt werden, die in diesem Bereich enthalten sind.  
+  
+-   Bereitstellen von Informationen für das ASP.NET-Seitenframework über die Steuerelemente, die beim Paginieren zusammengehalten. Standardmäßig werden die Inhalte eines Bereichs auf einer Seite zusammengehalten. Sie können dieses Verhalten ändern, indem Sie die Einstellung der <xref:System.Web.UI.MobileControls.Panel.Paginate%2A> Eigenschaft des Panels.  
+  
+ Sie können Literaltext zusammen mit den zugehörigen Markuptags in den Textinhalt einschließen der <xref:System.Web.UI.MobileControls.Panel>. Weitere Informationen finden Sie unter [Literal Text Inside Form Markup](http://msdn.microsoft.com/en-us/05e061ed-9916-4ece-bfc8-7bf131fe232e).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie beim Laden der Seite Eigenschaften für einen Bereich festgelegt und zum Definieren von Funktionen, um Eigenschaften für einen Bereich zu bearbeiten, sodass der Befehl Klicks Verwaltungstasks. Beim Laden der Seite "der Code sucht auch nach und ändert eine Bezeichnung in einem gerätespezifischen Inhaltsvorlage in einem zweiten Bereich.  
+  
+ [!code-aspx-csharp[MobilePanelSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobilePanelSample/cs/Default.aspx#1)]  
+  
+ Sie müssen auch in diesem Abschnitt der Datei "Web.config" hinzufügen:  
+  
+  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Panel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Panel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.Panel" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLinkedForms">
+      <MemberSignature Language="C#" Value="public override void AddLinkedForms (System.Collections.IList linkedForms);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddLinkedForms(class System.Collections.IList linkedForms) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Panel.AddLinkedForms(System.Collections.IList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="linkedForms" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="linkedForms">Der Satz von Formularen, die Links zu dem angegebenen Steuerelement enthalten.</param>
+        <summary>Fügt der angegebenen Liste einen Satz von Formularen hinzu, der Links zu dem angegebenen Steuerelement enthält. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakAfter">
+      <MemberSignature Language="C#" Value="public override bool BreakAfter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BreakAfter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Panel.BreakAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Eigenschaft ab oder legt eine Eigenschaft fest, die bestimmt, ob ein zusätzlicher Umbruch nach dem Steuerelement gerendert wird. Dieser Umbruch bewirkt, dass nachfolgender Inhalt in der nächsten Zeile beginnt. Die Standardeinstellung ist <see langword="true" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />, wenn ein zusätzlicher Umbruch nach dem Steuerelement gerendert wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.Panel Content { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.Panel Content" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Panel.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Panel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Bereich, der gerätespezifischen Inhalt enthält. Eine Inhaltsvorlage muss definiert sein und für das Zielgerät ausgewählt werden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Bereich, gerätespezifischen Inhalt enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.Panel.Content%2A> zu einem Steuerelement beim Laden der Seite zu suchenden Eigenschaft.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobilePanelSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobilePanelSample/cs/Default.aspx#1)]  
+  
+ Sie müssen auch in diesem Abschnitt der Datei "Web.config" hinzufügen:  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultTemplatedUI">
+      <MemberSignature Language="C#" Value="public override void CreateDefaultTemplatedUI (bool doDataBind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CreateDefaultTemplatedUI(bool doDataBind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Panel.CreateDefaultTemplatedUI(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doDataBind" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="doDataBind">Auf <see langword="true" /> festgelegt, wenn die instanziierten Vorlagen an verfügbare Daten gebunden werden müssen (dies geschieht in der Regel bei der ersten Anforderung). Auf <see langword="false" /> festgelegt, wenn die Vorlagen nicht an Daten gebunden werden dürfen, sondern stattdessen den Ansichtszustand zum Ausfüllen verwenden (dies geschieht in der Regel bei nachfolgenden Postbacks).</param>
+        <summary>Wird von Geräteadaptern aufgerufen, um die vorlagenbasierte Standardbenutzeroberfläche für das Steuerelement zu erstellen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Panel.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Init" />-Ereignis aus. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paginate">
+      <MemberSignature Language="C#" Value="public virtual bool Paginate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Paginate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Panel.Paginate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob Paginieren der <see cref="T:System.Web.UI.MobileControls.Panel" /> Steuerelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />für die Paginierung der <see cref="T:System.Web.UI.MobileControls.Panel" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Form.Paginated> Ereignis wird ausgelöst, nachdem Paginierung von Formularen auftritt.  
+  
+> [!NOTE]
+>  Auch wenn die <xref:System.Web.UI.MobileControls.Panel.Paginate%2A> -Eigenschaftensatz auf `false`, Paginierung kann weiterhin auftreten, wenn ein Formular <xref:System.Web.UI.MobileControls.Form.ControlToPaginate%2A> festgelegt wird.  
+  
+> [!NOTE]
+>  Paginierung in ermöglichen eine <xref:System.Web.UI.MobileControls.Panel> Steuerelement innerhalb eines Formulars müssen Sie festlegen <xref:System.Web.UI.MobileControls.Panel.Paginate%2A> zu `true` in das Formular und im Bereich.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird, wenn auf einem Gerät angezeigt, die die Seiten paginiert wird gezeigt, wie ein Bereich enthält weitere Steuerelemente, die als für eine einzelne Seite passen Paginierung sind, um Benutzern Zugriff auf alle Elemente im Bereich.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobilePanelSample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/MobilePanelSample/cs/Default2.aspx#3)]
+ [!code-aspx-vb[MobilePanelSample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobilePanelSample/vb/Default2.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaginateChildren">
+      <MemberSignature Language="C#" Value="protected override bool PaginateChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PaginateChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Panel.PaginateChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die untergeordneten Elemente des Steuerelements paginiert werden müssen. Für die Paginierung von Formularen verwendet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn die untergeordneten Elemente des Steuerelements paginiert werden müssen; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaginateRecursive">
+      <MemberSignature Language="C#" Value="public override void PaginateRecursive (System.Web.UI.MobileControls.ControlPager pager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void PaginateRecursive(class System.Web.UI.MobileControls.ControlPager pager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Panel.PaginateRecursive(System.Web.UI.MobileControls.ControlPager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pager" Type="System.Web.UI.MobileControls.ControlPager" />
+      </Parameters>
+      <Docs>
+        <param name="pager">Der Pager.</param>
+        <summary>Paginiert das Steuerelement und seine untergeordneten Elemente. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

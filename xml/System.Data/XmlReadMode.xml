@@ -1,0 +1,238 @@
+<Type Name="XmlReadMode" FullName="System.Data.XmlReadMode">
+  <TypeSignature Language="C#" Value="public enum XmlReadMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlReadMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.XmlReadMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie zum Lesen von XML-Daten und ein relationales Schema in einer <see cref="T:System.Data.DataSet" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Elemente dieser Enumeration, der zum Einstellen der `ReadMode` Parameter von der <xref:System.Data.DataSet.ReadXml%2A> Methode.  
+  
+> [!NOTE]
+>  `Auto`Modus ist möglicherweise langsamer als die Einstellung <xref:System.Data.XmlReadMode> um eine explizite Option.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.XmlReadMode Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.XmlReadMode.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.XmlReadMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Standard.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Führt die am besten geeignete der folgenden Aktionen aus:  
+  
+ Wenn die Daten eines DiffGram-Objekts ist, legt `XmlReadMode` auf `DiffGram`.  
+  
+ - oder -   
+  
+ Wenn das Dataset bereits ein Schema aufweist, oder das Dokument eine Inline-Schema enthält, legt `XmlReadMode` auf `ReadSchema`.  
+  
+ - oder -   
+  
+ Wenn das Dataset verfügt noch nicht über ein Schema und das Dokument enthält kein Inline Schema, legt `XmlReadMode` auf `InferSchema`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiffGram">
+      <MemberSignature Language="C#" Value="DiffGram" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.XmlReadMode DiffGram = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.XmlReadMode.DiffGram" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.XmlReadMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Liest ein DiffGram, Anwenden von Änderungen aus dem DiffGram, um die <see cref="T:System.Data.DataSet" />. Die Semantik sind identisch mit denen von einem <see cref="M:System.Data.DataSet.Merge(System.Data.DataSet)" /> Vorgang. Wie bei der <see cref="M:System.Data.DataSet.Merge(System.Data.DataSet)" /> Vorgang <see cref="P:System.Data.DataRow.RowState" /> Werte beibehalten werden. Die Eingabe in <see cref="M:System.Data.DataSet.ReadXml(System.Xml.XmlReader)" /> mit DiffGrams sollte nur abgerufen werden mithilfe der Ausgabe <see cref="M:System.Data.DataSet.WriteXml(System.IO.Stream)" /> als DiffGram.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ziel <xref:System.Data.DataSet> müssen das gleiche Schema wie die <xref:System.Data.DataSet> auf dem <xref:System.Data.DataSet.WriteXml%2A> als DiffGram aufgerufen wird. Andernfalls das DiffGram-Merge-Vorgang fehl, und eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fragment">
+      <MemberSignature Language="C#" Value="Fragment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.XmlReadMode Fragment = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.XmlReadMode.Fragment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.XmlReadMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Liest die XML-Fragmente, z. B. durch Ausführen von FOR XML-Abfragen für eine Instanz von SQL Server generiert. Wenn <see cref="T:System.Data.XmlReadMode" /> festgelegt ist, um <see langword="Fragment" />, wird der Standardnamespace als Inlineschema gelesen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreSchema">
+      <MemberSignature Language="C#" Value="IgnoreSchema" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.XmlReadMode IgnoreSchema = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.XmlReadMode.IgnoreSchema" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.XmlReadMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ignoriert alle Inlineschemata und liest Daten in das vorhandene <see cref="T:System.Data.DataSet" />-Schema ein. Wenn Daten nicht mit das vorhandene Schema übereinstimmt, wird Sie verworfen (einschließlich Daten aus anderen Namespaces definiert, die für die <see cref="T:System.Data.DataSet" />). Wenn die Daten eines Diffgrams <see langword="IgnoreSchema" /> hat die gleiche Funktion wie <see langword="DiffGram" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InferSchema">
+      <MemberSignature Language="C#" Value="InferSchema" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.XmlReadMode InferSchema = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.XmlReadMode.InferSchema" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.XmlReadMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ignoriert alle Inlineschemata, leitet das Schema aus den Daten ab und lädt die Daten. Wenn die <see cref="T:System.Data.DataSet" /> bereits ein Schema enthält, wird das aktuelle Schema durch Hinzufügen neuer Tabellen oder Hinzufügen von Spalten zu vorhandenen Tabellen erweitert. Eine Ausnahme wird ausgelöst, wenn die abgeleitete Tabelle bereits vorhanden ist, jedoch mit einem anderen Namespace oder wenn hergeleitete Spalten mit vorhandenen Spalten kollidieren.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InferTypedSchema">
+      <MemberSignature Language="C#" Value="InferTypedSchema" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.XmlReadMode InferTypedSchema = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.XmlReadMode.InferTypedSchema" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.XmlReadMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ignoriert alle Inlineschemata, leitet ein stark typisiertes Schema aus den Daten ab und lädt die Daten. Wenn der Typ aus den Daten abgeleitet werden kann, wird er als Zeichenfolge interpretiert. Wenn die <see cref="T:System.Data.DataSet" /> bereits ein Schema enthält, das aktuelle Schema erweitert, indem neue Tabellen hinzufügen oder indem Sie vorhandenen Tabellen Spalten hinzufügen. Eine Ausnahme wird ausgelöst, wenn die abgeleitete Tabelle bereits vorhanden ist, jedoch mit einem anderen Namespace oder wenn hergeleitete Spalten mit vorhandenen Spalten kollidieren.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSchema">
+      <MemberSignature Language="C#" Value="ReadSchema" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.XmlReadMode ReadSchema = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.XmlReadMode.ReadSchema" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.XmlReadMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Liest beliebige Inlineschemata und lädt die Daten. Wenn die <see cref="T:System.Data.DataSet" /> bereits Schema enthält, das Schema können neue Tabellen hinzugefügt werden, aber eine Ausnahme wird ausgelöst, wenn alle Tabellen im Inlineschema in bereits vorhanden sind die <see cref="T:System.Data.DataSet" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

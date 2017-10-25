@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.DynamicData.Design">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.DynamicData.Design" /> -Namespace enthält Klassen, die zur Entwurfszeit Unterstützung für die Klassen in bieten die <see cref="N:System.Web.DynamicData" /> Namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,238 @@
+<Type Name="ValidationRule" FullName="System.Windows.Controls.ValidationRule">
+  <TypeSignature Language="C#" Value="public abstract class ValidationRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ValidationRule extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ValidationRule" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Möglichkeit, eine benutzerdefinierte Regel zu erstellen, um die Gültigkeit von Benutzereingaben zu überprüfen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Modell Binden von Daten, die Sie zuordnen <xref:System.Windows.Data.Binding.ValidationRules%2A> mit Binding-Objekts. Um benutzerdefinierte Regeln zu erstellen, stellen Sie eine Unterklasse von dieser Klasse und Implementieren der <xref:System.Windows.Controls.ValidationRule.Validate%2A> Methode. Verwenden Sie optional die integrierte <xref:System.Windows.Controls.ExceptionValidationRule>, die während einer quellenaktualisierungen, ausgelöste Ausnahmen abfängt oder <xref:System.Windows.Controls.DataErrorValidationRule>, der überprüft werden vom verursachten Fehlern der <xref:System.ComponentModel.IDataErrorInfo> Implementierung des Quellobjekts.  
+  
+ Das Bindungsmodul prüft jede <xref:System.Windows.Controls.ValidationRule> , die jedes Mal, wenn sie einen Eingabewert überträgt die Bindung der Wert der Zieleigenschaft, an die Bindungsquelleigenschaft ist keine Bindung zugeordnet ist.  
+  
+ Ausführliche Informationen zum Überprüfen von Daten finden Sie unter [Übersicht über Datenbindung](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ Informationen zum Überprüfen der vom Benutzer bereitgestellte Daten in einem Dialogfeld finden Sie unter [Dialog Boxes Overview](~/docs/framework/wpf/app-development/dialog-boxes-overview.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Validierungsregel implementiert wird. Der Eingabewert ist ungültig, wenn er nicht numerische Zeichen enthält oder außerhalb der unteren und oberen Grenzen liegt. Wenn der Wert des zurückgegebenen <xref:System.Windows.Controls.ValidationResult> ist ungültig, die <xref:System.Windows.Controls.ValidationResult.ErrorContent%2A> in die entsprechende Fehlermeldung die Eigenschaft festgelegt ist und die <xref:System.Windows.Controls.ValidationResult.IsValid%2A> -Eigenschaftensatz auf `false`.  
+  
+ Das vollständige Beispiel finden Sie unter [How to: Implement Binding Validation](~/docs/framework/wpf/data/how-to-implement-binding-validation.md).  
+  
+ [!code-csharp[BindValidation#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/AgeRangeRule.cs#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ValidationRule ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ValidationRule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.ValidationRule" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ValidationRule (System.Windows.Controls.ValidationStep validationStep, bool validatesOnTargetUpdated);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Controls.ValidationStep validationStep, bool validatesOnTargetUpdated) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ValidationRule.#ctor(System.Windows.Controls.ValidationStep,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validationStep" Type="System.Windows.Controls.ValidationStep" />
+        <Parameter Name="validatesOnTargetUpdated" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="validationStep">Einer der Enumerationswerte, der angibt, wann die Validierungsregel ausgeführt wird.</param>
+        <param name="validatesOnTargetUpdated">
+          <see langword="true" />Damit die Validierungsregel ausgeführt werden, wenn das Ziel der <see cref="T:System.Windows.Data.Binding" /> aktualisiert wurde, andernfalls wird <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Controls.ValidationRule" /> Klasse mit dem angegebenen Validierungsschritt und einem Wert, der angibt, ob die Validierungsregel ausgeführt wird, wenn das Ziel aktualisiert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Controls.ValidationResult Validate (object value, System.Globalization.CultureInfo cultureInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Controls.ValidationResult Validate(object value, class System.Globalization.CultureInfo cultureInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ValidationRule.Validate(System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ValidationResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert aus dem zu überprüfenden Bindungsziel.</param>
+        <param name="cultureInfo">Die in dieser Regel zu verwendende Kultur.</param>
+        <summary>Führt beim Überschreiben in einer abgeleiteten Klasse Validierungsüberprüfungen für einen Wert aus.</summary>
+        <returns>Ein <see cref="T:System.Windows.Controls.ValidationResult" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen diese Methode implementieren, wenn Sie eine Unterklasse von erstellen die <xref:System.Windows.Controls.ValidationRule> Klasse, um eine benutzerdefinierte Validierungsregel zu erstellen.  
+  
+ Jedes Mal das Datenbindungsmodul überträgt einen Wert vom Bindungsziel-Eigenschaft (aus Benutzereingaben) an die Bindungsquelleigenschaft (die zugrunde liegenden Daten), überprüft er, ob bei einem <xref:System.Windows.Data.Binding.ValidationRules%2A> für diese Bindung definiert sind. Wenn <xref:System.Windows.Data.Binding.ValidationRules%2A> werden für die Bindung, die das Modul ruft definiert die <xref:System.Windows.Controls.ValidationRule.Validate%2A> -Methode für jedes <xref:System.Windows.Controls.ValidationRule> bis eine von ihnen ein Fehler gefunden wird oder alle übergeben.  
+  
+ Ausführliche Informationen zum Überprüfen von Daten finden Sie unter [Übersicht über Datenbindung](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Validierungsregel implementiert wird. Im folgenden Beispiel ist der Eingabewert ungültig, wenn er nicht numerische Zeichen enthält oder außerhalb der unteren und oberen Grenzen liegt. Wenn der Eingabewert ungültig ist, wird der <xref:System.Windows.Controls.ValidationResult.ErrorContent%2A> Eigenschaftensatz in die entsprechende Fehlermeldung und die <xref:System.Windows.Controls.ValidationResult.IsValid%2A> -Eigenschaftensatz auf `false`.  
+  
+ Das vollständige Beispiel finden Sie unter [How to: Implement Binding Validation](~/docs/framework/wpf/data/how-to-implement-binding-validation.md).  
+  
+ [!code-csharp[BindValidation#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/AgeRangeRule.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Controls.ValidationResult Validate (object value, System.Globalization.CultureInfo cultureInfo, System.Windows.Data.BindingExpressionBase owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Controls.ValidationResult Validate(object value, class System.Globalization.CultureInfo cultureInfo, class System.Windows.Data.BindingExpressionBase owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ValidationRule.Validate(System.Object,System.Globalization.CultureInfo,System.Windows.Data.BindingExpressionBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ValidationResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="owner" Type="System.Windows.Data.BindingExpressionBase" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert aus dem zu überprüfenden Bindungsziel.</param>
+        <param name="cultureInfo">Die in dieser Regel zu verwendende Kultur.</param>
+        <param name="owner">Die Bindungsausdruck, der die Validierungsregel verwendet.</param>
+        <summary>Führt Überprüfungen auf einen Wert an.</summary>
+        <returns>Ein <see cref="T:System.Windows.Controls.ValidationResult" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Controls.ValidationResult Validate (object value, System.Globalization.CultureInfo cultureInfo, System.Windows.Data.BindingGroup owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Controls.ValidationResult Validate(object value, class System.Globalization.CultureInfo cultureInfo, class System.Windows.Data.BindingGroup owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ValidationRule.Validate(System.Object,System.Globalization.CultureInfo,System.Windows.Data.BindingGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ValidationResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="owner" Type="System.Windows.Data.BindingGroup" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert aus dem zu überprüfenden Bindungsziel.</param>
+        <param name="cultureInfo">Die in dieser Regel zu verwendende Kultur.</param>
+        <param name="owner">Die Bindungsgruppe, die die Validierungsregel verwendet.</param>
+        <summary>Führt Überprüfungen auf einen Wert an.</summary>
+        <returns>Ein <see cref="T:System.Windows.Controls.ValidationResult" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatesOnTargetUpdated">
+      <MemberSignature Language="C#" Value="public bool ValidatesOnTargetUpdated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidatesOnTargetUpdated" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ValidationRule.ValidatesOnTargetUpdated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Validierungsregel ausgeführt, wenn wird das Ziel der <see cref="T:System.Windows.Data.Binding" /> wird aktualisiert.</summary>
+        <value>
+          <see langword="true" />Wenn die Validierungsregel ausgeführt, wenn wird das Ziel der <see cref="T:System.Windows.Data.Binding" /> aktualisiert wurde, andernfalls wird <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird überprüft, ob die <xref:System.Windows.Controls.TextBox> ist leer. Die <xref:System.Windows.Controls.ValidationRule>, `ValueIsNotNull`, hat <xref:System.Windows.Controls.ValidationRule.ValidatesOnTargetUpdated%2A> festgelegt `true`, sodass beim Starten der Anwendung die <xref:System.Windows.Controls.ValidationRule> ausgeführt wird und eine Meldung angezeigt, wenn die <xref:System.Windows.Controls.TextBox> ist leer.  
+  
+ [!code-xaml[BindingGroupSnippets#ValidatesOnTargetUpdated](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window3.xaml#validatesontargetupdated)]  
+  
+ Das folgende Beispiel zeigt die <xref:System.Windows.Controls.ValidationRule> wird, in dem vorherigen Beispiel und den Ereignishandler für das <xref:System.Windows.Controls.Validation.Error> Ereignis.  
+  
+ [!code-csharp[BindingGroupSnippets#ValueIsNotNull](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window3.xaml.cs#valueisnotnull)]
+ [!code-vb[BindingGroupSnippets#ValueIsNotNull](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/window3.xaml.vb#valueisnotnull)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationStep">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ValidationStep ValidationStep { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.ValidationStep ValidationStep" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ValidationRule.ValidationStep" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ValidationStep</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, wenn die Validierungsregel ausgeführt wird.</summary>
+        <value>Einer der Enumerationswerte.  Die Standardeinstellung ist <see cref="F:System.Windows.Controls.ValidationStep.RawProposedValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> auf <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue> auf die <xref:System.Windows.Controls.ValidationRule> aufgerufen `ValidateDateAndPrice` , damit bei der Ausführung, die <xref:System.Windows.Controls.ValidationRule.Validate%2A> Methode hat Zugriff auf die Werte des Typs für die Source-Eigenschaft. Wenn die Regeln `PriceIsAPositiveNumber` und `FutureDateRule` ausführen, die Werte in den einzelnen <xref:System.Windows.Controls.ValidationRule.Validate%2A> Methode sind Zeichenfolgen, da die Regeln ausgeführt, bevor die Werte in ihren entsprechenden Typen konvertiert werden.  
+  
+ [!code-xaml[BindingGroupSnippets#WindowLayout](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window1.xaml#windowlayout)]  
+  
+ Das folgende Beispiel zeigt die <xref:System.Windows.Controls.ValidationRule> `ValidateDateAndPrice`. In der `Validate` Überschreibung, die `Price` -Eigenschaft ist vom Typ <xref:System.Double> und `OfferExpires` -Eigenschaft ist vom Typ <xref:System.DateTime> , da die Zeichenfolgen vom Typ der in ihren entsprechenden Typen konvertiert wurden die <xref:System.Windows.Controls.ValidationRule> ausgeführt wird.  
+  
+ [!code-csharp[BindingGroupSnippets#ValidateObject](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Data.cs#validateobject)]
+ [!code-vb[BindingGroupSnippets#ValidateObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/data.vb#validateobject)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

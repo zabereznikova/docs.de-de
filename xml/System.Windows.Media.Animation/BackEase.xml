@@ -1,0 +1,197 @@
+<Type Name="BackEase" FullName="System.Windows.Media.Animation.BackEase">
+  <TypeSignature Language="C#" Value="public class BackEase : System.Windows.Media.Animation.EasingFunctionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BackEase extends System.Windows.Media.Animation.EasingFunctionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.BackEase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.EasingFunctionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Beschleunigungsfunktion, die die Bewegung einer Animation leicht zurückzieht, bevor sie die zu animierende im angegebenen Pfad beginnt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können steuern, wenn das Verhalten "Sichern" in einer Animation auftritt, durch Angeben der <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> Eigenschaftswert auf eine Animation. Das folgende Diagramm veranschaulicht die unterschiedlichen Werte von <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>, wobei *f*(*t*) den Animationsstatus und *t* Uhrzeit darstellt.  
+  
+ ![BackEase EasingMode-Diagramme. ] (~/add/media/backease-graph.png "BackEase EasingMode-Diagramme.")  
+  
+ Die Formel für diese Funktion verwendet, lautet wie folgt.  
+  
+ ![BackEase-Formel. ] (~/add/media/backease-formula.png "BackEase-Formel.")  
+  
+> [!NOTE]
+>  Da diese Animation Werte entfernen, wenn vor der Planung des hierarchieentwurfs dazu führt, kann die Animation unerwartet in negative Zahlen interpoliert. Dies kann Fehler verursachen, beim Animieren von Eigenschaften, die keine negative Zahlen zulassen. Z. B., wenn Sie diese Animation zum Anwenden der <xref:System.Windows.FrameworkElement.Height%2A> eines Objekts (z. B. von 0 bis 200 mit einer <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> von <xref:System.Windows.Media.Animation.EasingMode.EaseIn>), versucht die Animation interpoliert, durch negative Zahlen für <xref:System.Windows.FrameworkElement.Height%2A> die löst einen Fehler aus.  
+  
+ Es gibt mehrere andere Beschleunigungsfunktionen neben <xref:System.Windows.Media.Animation.BackEase> die Sie mit dem folgenden Silverlight-Beispiel untersuchen können.  
+  
+ [Dieses Beispiel ausführen](http://go.microsoft.com/fwlink/?LinkId=139798&sref=easing_functions_gallery)  
+  
+ Zusätzlich zur Verwendung der in der Laufzeit enthaltenen Beschleunigungsfunktionen, können Sie eigene benutzerdefinierten Beschleunigungsfunktionen erstellen, durch Vererben von <xref:System.Windows.Media.Animation.EasingFunctionBase>.  
+  
+<a name="xamlObjectElementUsage_BackEase"></a>   
+## <a name="xaml-object-element-usage"></a>Verwendung von XAML-Objektelementen  
+  
+```  
+<BackEase .../>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet eine <xref:System.Windows.Media.Animation.BackEase> Beschleunigungsfunktionen-Funktion, um eine <xref:System.Windows.Media.Animation.DoubleAnimation> zum Erstellen einer Animation an, die zurückzieht etwas am Anfang und Ende der Animation.  
+  
+ [!code-xaml[BackEase_scale#BackEase_scale](~/samples/snippets/csharp/VS_Snippets_Wpf/backease_scale/CS/window1.xaml#backease_scale)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BackEase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.BackEase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.BackEase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Amplitude">
+      <MemberSignature Language="C#" Value="public double Amplitude { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Amplitude" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.BackEase.Amplitude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Amplitude der zugeordneten Zurückziehen einer <see cref="T:System.Windows.Media.Animation.BackEase" /> Animation.</summary>
+        <value>Die Amplitude der zugeordneten Zurückziehen einer <see cref="T:System.Windows.Media.Animation.BackEase" /> Animation. Dieser Wert muss größer als oder gleich 0 sein.  
+  
+ Der Standardwert ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DP_ID_field_label](~/includes/dp-id-field-label-md.md)] <xref:System.Windows.Media.Animation.BackEase.AmplitudeProperty>  
+  
+ Je größer die Amplitude, desto größer ist das Zurückziehen vor und/oder nach der Animation.  
+  
+ ![Zeigt unterschiedliche Amplitudenwerte an. ] (~/add/media/backease-amplitude.png "Zeigt unterschiedliche Amplitudenwerte.")  
+  
+<a name="xamlAttributeUsage_Opacity"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object Amplitude="double" .../>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet eine <xref:System.Windows.Media.Animation.BackEase> Beschleunigungsfunktionen-Funktion, um eine <xref:System.Windows.Media.Animation.DoubleAnimation> zum Erstellen einer Animation an, die zurückzieht etwas am Anfang und Ende der Animation.  
+  
+ [!code-xaml[BackEase_scale#BackEase_scale](~/samples/snippets/csharp/VS_Snippets_Wpf/backease_scale/CS/window1.xaml#backease_scale)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AmplitudeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AmplitudeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AmplitudeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.BackEase.AmplitudeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.BackEase.Amplitude" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.BackEase.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der aus <see cref="T:System.Windows.Freezable" /> abgeleiteten Klasse. Beim Erstellen einer abgeleiteten Klasse muss diese Methode überschrieben werden.</summary>
+        <returns>Die neue Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Animation-Klassen erben indirekt von <xref:System.Windows.Freezable>. Aus diesem Grund müssen Sie überschreiben die <xref:System.Windows.Media.Animation.BackEase.CreateInstanceCore%2A> Methode zum Erstellen einer benutzerdefinierten Animation-Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine typische Implementierung der <xref:System.Windows.Freezable.CreateInstanceCore%2A>.  
+  
+ [!code-csharp[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#createinstancecoreexample)]
+ [!code-vb[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#createinstancecoreexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInCore">
+      <MemberSignature Language="C#" Value="protected override double EaseInCore (double normalizedTime);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance float64 EaseInCore(float64 normalizedTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.BackEase.EaseInCore(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="normalizedTime" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="normalizedTime">Die normalisierte Zeit (Fortschritt) der Animation.</param>
+        <summary>Stellt die Logik der Beschleunigungsfunktion bereit, die überschrieben werden kann, um den <see cref="F:System.Windows.Media.Animation.EasingMode.EaseIn" />-Modus der benutzerdefinierten Beschleunigungsfunktion zu erzeugen.</summary>
+        <returns>Ein Double-Wert, der den transformierten Fortschritt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode transformiert die normalisierte Zeit zu steuern, der die Geschwindigkeit der Animation für die <xref:System.Windows.Media.Animation.EasingMode.EaseIn> der Groß-/Kleinschreibung <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>.  
+  
+ Müssen nur die Beschleunigungsfunktion für angeben der <xref:System.Windows.Media.Animation.EasingMode.EaseIn> Fall, da die Implementierung der <xref:System.Windows.Media.Animation.EasingFunctionBase.Ease%2A> Methode Transformationen `normalizedTime` für die <xref:System.Windows.Media.Animation.EasingMode.EaseOut> und <xref:System.Windows.Media.Animation.EasingMode.EaseInOut> Fällen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

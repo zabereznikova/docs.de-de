@@ -1,0 +1,51 @@
+<Type Name="InviteCompletedEventArgs" FullName="System.Net.PeerToPeer.Collaboration.InviteCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class InviteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InviteCompletedEventArgs extends System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.InviteCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.AsyncCompletedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Qualifizierenden Informationen an eine Rückrufmethode beim ein <see cref="E:System.Net.PeerToPeer.Collaboration.Peer.InviteCompleted" /> Ereignis auftritt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.PeerToPeer.Collaboration.Peer.InviteCompleted> Ereignis wird ausgelöst, wenn ein remote-Peer auf eine Einladung für die Zusammenarbeit mit einem Peer-Hosts oder einer hostanwendung reagiert. Dies tritt auf, wenn die Einladung abgeschlossen wurde, unabhängig davon, ob der eingeladene Peer Zusammenarbeit beabsichtigt. Methoden zum Verwalten von Peer-Einladungen verwendet werden, der <xref:System.Net.PeerToPeer.Collaboration.PeerContact> und <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe> Unterklassen und <xref:System.Net.PeerToPeer.Collaboration.Peer> abstrakte Klasse. Rückrufmethode, Delegaten und typsicheren Funktionszeiger sind Synonyme für die Delegatmethoden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InviteResponse">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerInvitationResponse InviteResponse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerInvitationResponse InviteResponse" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.InviteCompletedEventArgs.InviteResponse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerInvitationResponse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse" /> für eine Einladung ab.</summary>
+        <value>Die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse" /> zur Einladung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sofern nicht angegeben, wird der Standardwert für diese Eigenschaft ist `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

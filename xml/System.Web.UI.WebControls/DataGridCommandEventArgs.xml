@@ -1,0 +1,151 @@
+<Type Name="DataGridCommandEventArgs" FullName="System.Web.UI.WebControls.DataGridCommandEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridCommandEventArgs : System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridCommandEventArgs extends System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataGridCommandEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.CommandEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Web.UI.WebControls.DataGrid.CancelCommand" />, <see cref="E:System.Web.UI.WebControls.DataGrid.DeleteCommand" />, <see cref="E:System.Web.UI.WebControls.DataGrid.EditCommand" />, <see cref="E:System.Web.UI.WebControls.DataGrid.ItemCommand" />, und <see cref="E:System.Web.UI.WebControls.DataGrid.UpdateCommand" /> Ereignisse der <see cref="T:System.Web.UI.WebControls.DataGrid" /> Steuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataGrid.CancelCommand> Ereignis wird ausgelöst, wenn die "Abbrechen"-Schaltfläche für ein Element in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement geklickt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.DataGrid.DeleteCommand> Ereignis wird ausgelöst, wenn der Löschvorgang-Schaltfläche für ein Element in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement geklickt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.DataGrid.EditCommand> Ereignis wird ausgelöst, wenn die Bearbeitung-Schaltfläche für ein Element in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement geklickt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.DataGrid.ItemCommand> Ereignis wird ausgelöst, wenn für ein Element in eine beliebige Taste, die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement geklickt wird. Dadurch können Sie programmgesteuert testen, ob ein bestimmter Befehl geklickt wird, und ergreifen Sie entsprechende Maßnahmen. Dieses Ereignis wird häufig verwendet, um benutzerdefinierte Befehlsschaltflächen zum Behandeln der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+ Die <xref:System.Web.UI.WebControls.DataGrid.UpdateCommand> Ereignis wird ausgelöst, wenn die Update-Schaltfläche für ein Element in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement geklickt wird.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.DataGridCommandEventArgs>, finden Sie unter der <xref:System.Web.UI.WebControls.DataGridCommandEventArgs.%23ctor%2A> Konstruktor.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angeben und codieren Ereignishandler für die <xref:System.Web.UI.WebControls.DataGrid.EditCommand>, <xref:System.Web.UI.WebControls.DataGrid.CancelCommand>, und <xref:System.Web.UI.WebControls.DataGrid.UpdateCommand> Ereignisse so bearbeiten Sie die Elemente in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+ [!code-aspx-csharp[DataGridEdit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridEdit/CS/datagrideditcs.aspx#1)]
+ [!code-aspx-vb[DataGridEdit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridEdit/VB/datagrideditvb.aspx#1)]  
+  
+ [!code-aspx-csharp[DataGridEdit2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridEdit2/CS/datagridedit2cs.aspx#1)]
+ [!code-aspx-vb[DataGridEdit2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridEdit2/VB/datagridedit2vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridCommandEventArgs (System.Web.UI.WebControls.DataGridItem item, object commandSource, System.Web.UI.WebControls.CommandEventArgs originalArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.DataGridItem item, object commandSource, class System.Web.UI.WebControls.CommandEventArgs originalArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridCommandEventArgs.#ctor(System.Web.UI.WebControls.DataGridItem,System.Object,System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.WebControls.DataGridItem" />
+        <Parameter Name="commandSource" Type="System.Object" />
+        <Parameter Name="originalArgs" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="item">Ein <see cref="T:System.Web.UI.WebControls.DataGridItem" /> , darstellt, dass das ausgewählte Element in der <see cref="T:System.Web.UI.WebControls.DataGrid" />.</param>
+        <param name="commandSource">Die Quelle des Befehls.</param>
+        <param name="originalArgs">Ein <see cref="T:System.Web.UI.WebControls.CommandEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DataGridCommandEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.DataGridCommandEventArgs> Klasse.  
+  
+ Wenn eine Instanz von <xref:System.Web.UI.WebControls.DataGridCommandEventArgs> wird erstellt durch einen Aufruf an diesen Konstruktor, werden die folgenden Eigenschaften auf den angegebenen Werten initialisiert.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.DataGridCommandEventArgs.CommandSource%2A>|Der Wert des `commandSource`-Parameters.|  
+|<xref:System.Web.UI.WebControls.DataGridCommandEventArgs.Item%2A>|Der Wert des `item`-Parameters.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandSource">
+      <MemberSignature Language="C#" Value="public object CommandSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridCommandEventArgs.CommandSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Quelle des Befehls ab.</summary>
+        <value>Die Quelle des Befehls.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridCommandEventArgs.CommandSource%2A> Eigenschaft, um die Befehlsquelle zu bestimmen, die das Ereignis ausgelöst hat. Diese Eigenschaft wird häufig verwendet, um zu bestimmen, welcher Befehl das Ereignis ausgelöst hat.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, um zu bestimmen, die Quelle der Befehl unter Verwendung der <xref:System.Web.UI.WebControls.DataGridCommandEventArgs.CommandSource%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[DataGridCommandEventArgsCommandSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridCommandEventArgsCommandSource/CS/datagridcommandeventargscommandsourcecs.aspx#1)]
+ [!code-aspx-vb[DataGridCommandEventArgsCommandSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridCommandEventArgsCommandSource/VB/datagridcommandeventargscommandsourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataGridItem Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataGridItem Item" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridCommandEventArgs.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataGridItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element mit der Befehlsquelle in die <see cref="T:System.Web.UI.WebControls.DataGrid" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.DataGridItem" /> , darstellt, dass das ausgewählte Element in der <see cref="T:System.Web.UI.WebControls.DataGrid" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataGridCommandEventArgs.Item%2A> Eigenschaft wird verwendet, um Zugriff auf die Eigenschaften des ausgewählten Elements in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der Beschreibung und der Preis eines Elements in der <xref:System.Web.UI.WebControls.DataGrid> steuern Sie mithilfe der <xref:System.Web.UI.WebControls.DataGridCommandEventArgs.Item%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[DataGridEdit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridEdit/CS/datagrideditcs.aspx#1)]
+ [!code-aspx-vb[DataGridEdit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridEdit/VB/datagrideditvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

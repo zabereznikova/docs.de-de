@@ -1,0 +1,6 @@
+<Namespace Name="System.EnterpriseServices.Internal">
+  <Docs>
+    <summary>Die <see cref="N:System.EnterpriseServices.Internal" /> -Namespace stellt eine Infrastruktur zur Unterstützung für die COM+-Dienste bereit. Die Klassen und Schnittstellen in diesem Namespace dienen insbesondere zur Unterstützung der Aufrufe an <see cref="N:System.EnterpriseServices" /> aus dem nicht verwalteten COM+-Klassen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

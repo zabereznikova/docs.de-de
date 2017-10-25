@@ -1,0 +1,143 @@
+<Type Name="SqlTriggerContext" FullName="Microsoft.SqlServer.Server.SqlTriggerContext">
+  <TypeSignature Language="C#" Value="public sealed class SqlTriggerContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SqlTriggerContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.SqlTriggerContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Kontextinformationen über den Trigger, der ausgelöst wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die bereitgestellten Kontextinformationen umfassen den Typ der Aktion, die den Trigger ausgelöst wird, verursacht hat, welche Spalten in einem Updatevorgang und im Falle einer Datendefinitionssprache (DDL) Triggers, einer EventData-XML-Struktur geändert wurden (siehe "Transact-SQL Referenz"in der Onlinedokumentation zu SQL Server), die den auslösenden Vorgang beschreibt.  
+  
+ Eine Instanz von <xref:Microsoft.SqlServer.Server.SqlTriggerContext> steht über den <xref:Microsoft.SqlServer.Server.SqlContext> Klasse, wenn der Code, innerhalb eines Triggers durch ausgeführt wird die <xref:Microsoft.SqlServer.Server.SqlContext.TriggerContext%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine <xref:Microsoft.SqlServer.Server.SqlTriggerContext> Objekt verwendet wird, um festzustellen, wo ein <xref:Microsoft.SqlServer.Server.TriggerAction.Insert> Aktion aufgetreten ist. Wenn eine Zeile eingefügt wurde die `user`Tabelle, den Benutzernamen und den tatsächlichen Namen werden aus der eingefügten Zeile abgerufen und dann hinzugefügt, um die **UserNameAudit** Tabelle.  
+  
+ [!code-csharp[DataWorks SqlTriggerContext Sample#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTriggerContext Sample/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlTriggerContext Sample#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTriggerContext Sample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ColumnCount">
+      <MemberSignature Language="C#" Value="public int ColumnCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlTriggerContext.ColumnCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Spalten in der Datentabelle, die an den Trigger gebunden. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Die Anzahl der Spalten in der Datentabelle, die als ganze Zahl an den Trigger gebunden werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.SqlServer.Server.SqlTriggerContext.ColumnCount%2A>Eigenschaft ist nützlich, um zu bestimmen, die maximale Ordnungszahl, <xref:Microsoft.SqlServer.Server.SqlTriggerContext.IsUpdatedColumn%2A> für einen bestimmten Triggeraufruf ermöglicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventData">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlXml EventData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.SqlTypes.SqlXml EventData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlTriggerContext.EventData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlXml</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ereignisdaten ab, das speziell für die Aktion, die den Trigger ausgelöst hat.</summary>
+        <value>Die Ereignisdaten, die spezifisch für die Aktion, die der Trigger als ausgelöst eine <see cref="T:System.Data.SqlTypes.SqlXml" /> Wenn mehr Informationen vorliegen; <see langword="null" /> andernfalls.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Informationen sind für Trigger Data Definition Language (DDL) verfügbar. Es sind keine Informationen über diese Eigenschaft für Trigger Data Manipulation Language (DML, Datenbearbeitungssprache) verfügbar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUpdatedColumn">
+      <MemberSignature Language="C#" Value="public bool IsUpdatedColumn (int columnOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsUpdatedColumn(int32 columnOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlTriggerContext.IsUpdatedColumn(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnOrdinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="columnOrdinal">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Gibt <see langword="true" /> , wenn eine Spalte von einer INSERT- oder UPDATE-Anweisung betroffen war.</summary>
+        <returns>
+          <see langword="true" />Wenn die Spalte von einer INSERT- oder UPDATE-Vorgang betroffen war.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Im Kontext eines Triggers aufgerufen, in dem der Wert der <see cref="P:Microsoft.SqlServer.Server.SqlTriggerContext.TriggerAction" /> Eigenschaft ist nicht <see langword="Insert" /> oder <see langword="Update" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TriggerAction">
+      <MemberSignature Language="C#" Value="public Microsoft.SqlServer.Server.TriggerAction TriggerAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.SqlServer.Server.TriggerAction TriggerAction" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlTriggerContext.TriggerAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.SqlServer.Server.TriggerAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, welche Aktion den Trigger ausgelöst hat.</summary>
+        <value>Die Aktion, die ausgelöst, die Trigger wie wird eine <see cref="T:Microsoft.SqlServer.Server.TriggerAction" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Audit-Trigger. Wenn ein <xref:Microsoft.SqlServer.Server.TriggerAction.Insert> oder <xref:Microsoft.SqlServer.Server.TriggerAction.Delete> Aktion aufgetreten ist, werden die betroffenen Zeilen aus den Tabellen INSERTED und DELETED abgerufen.  
+  
+ [!code-csharp[DataWorks SqlTriggerContext Sample#2](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTriggerContext Sample/CS/source.cs#2)]
+ [!code-vb[DataWorks SqlTriggerContext Sample#2](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTriggerContext Sample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

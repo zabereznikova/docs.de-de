@@ -1,0 +1,111 @@
+<Type Name="MergeFailedEventArgs" FullName="System.Data.MergeFailedEventArgs">
+  <TypeSignature Language="C#" Value="public class MergeFailedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MergeFailedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Data.MergeFailedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Tritt auf, wenn ein Ziel und Quelle <see langword="DataRow" /> gleichen Primärschlüsselwert aufweisen und die <see cref="P:System.Data.DataSet.EnforceConstraints" /> Eigenschaftensatz wird auf "true".</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MergeFailedEventArgs (System.Data.DataTable table, string conflict);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataTable table, string conflict) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.MergeFailedEventArgs.#ctor(System.Data.DataTable,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="table" Type="System.Data.DataTable" />
+        <Parameter Name="conflict" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="table">Das <see cref="T:System.Data.DataTable" />-Objekt.</param>
+        <param name="conflict">Eine Beschreibung des Konflikts zusammenführen.</param>
+        <summary>Initialisiert eine neue Instanz der eine <see cref="T:System.Data.MergeFailedEventArgs" /> -Klasse mit der <see cref="T:System.Data.DataTable" /> und eine Beschreibung für den Merge-Konflikt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Conflict">
+      <MemberSignature Language="C#" Value="public string Conflict { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Conflict" />
+      <MemberSignature Language="DocId" Value="P:System.Data.MergeFailedEventArgs.Conflict" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Beschreibung des Mergekonflikts zurück.</summary>
+        <value>Eine Beschreibung des Konflikts zusammenführen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable Table { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataTable Table" />
+      <MemberSignature Language="DocId" Value="P:System.Data.MergeFailedEventArgs.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Data.DataTable" /> Objekt.</summary>
+        <value>Das <see cref="T:System.Data.DataTable" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

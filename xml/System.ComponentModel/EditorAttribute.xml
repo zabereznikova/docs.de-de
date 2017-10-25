@@ -1,0 +1,358 @@
+<Type Name="EditorAttribute" FullName="System.ComponentModel.EditorAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EditorAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EditorAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.EditorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Editor an, der zum Ändern einer Eigenschaft verwendet wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die Eigenschaft zu bearbeiten, sollten in ein visuellen Designer eine neue Instanz des angegebenen Editors über ein Dialogfeld oder im Dropdownfenster erstellen.  
+  
+ Verwenden der <xref:System.ComponentModel.EditorAttribute.EditorBaseTypeName%2A> Eigenschaft, um diesen Editor-Basistyp zu suchen. Der einzige verfügbare Basistyp ist <xref:System.Drawing.Design.UITypeEditor>.  
+  
+ Verwenden der <xref:System.ComponentModel.EditorAttribute.EditorTypeName%2A> Eigenschaft, um den Namen des Typs des Editors für dieses Attribut zugeordnet ist.  
+  
+ Allgemeine Informationen zur Verwendung von Attributen. finden Sie unter [Attribute](~/docs/standard/attributes/index.md). Weitere Informationen zur Entwurfszeit Attribute, finden Sie unter [Attribute und Entwurfszeitunterstützung](http://msdn.microsoft.com/library/7aed9eb4-124b-4a15-a0a3-458f37ac9ef7).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt die `MyImage` Klasse. Die Klasse wird mit markiert ein <xref:System.ComponentModel.EditorAttribute> , die angibt, die <xref:System.Drawing.Design.ImageEditor> als Editor.  
+  
+ [!code-cpp[Classic EditorAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic EditorAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic EditorAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic EditorAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic EditorAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic EditorAttribute Example/VB/source.vb#1)]  
+  
+ Das folgende Codebeispiel erstellt eine Instanz von der `MyImage` -Klasse, ruft die Attribute für die Klasse ab und gibt dann den Namen des Editors verwendeten `myNewImage`.  
+  
+ [!code-cpp[Classic EditorAttribute Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic EditorAttribute Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic EditorAttribute Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic EditorAttribute Example/CS/source.cs#2)]
+ [!code-vb[Classic EditorAttribute Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic EditorAttribute Example/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditorAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EditorAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.EditorAttribute" /> Klasse mit der Standard-Editor, d. h. ohne Editor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditorAttribute (string typeName, string baseTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName, string baseTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EditorAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="baseTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der vollqualifizierte Typname des Editors.</param>
+        <param name="baseTypeName">Der vollqualifizierte Typname der Basisklasse oder Schnittstelle für den Editor als Suchschlüssel verwendet. Diese Klasse werden muss oder eine Ableitung von <see cref="T:System.Drawing.Design.UITypeEditor" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.EditorAttribute" /> -Klasse mit dem Typnamen und die Namen der Basistyp des Editors.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `typeName` Parameter muss der <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> Format.  
+  
+ Die <xref:System.Type> dargestellt durch die `typeName` Parameter muss entweder abgeleitet werden oder die Basisklasse zu implementieren.  
+  
+ Die <xref:System.Type> dargestellt durch die `baseTypeName` Parameter wird als Schlüssel zum Suchen eines bestimmten Editors verwendet, da für ein Datentyp mehr als einer der Redakteure zugeordnet werden kann. Dies kann jede Klasse sein, jedoch ist in der Regel <xref:System.Drawing.Design.UITypeEditor> oder <xref:System.ComponentModel.ComponentEditor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditorAttribute (string typeName, Type baseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName, class System.Type baseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EditorAttribute.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="baseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der vollqualifizierte Typname des Editors.</param>
+        <param name="baseType">Die <see cref="T:System.Type" /> der Basisklasse oder Schnittstelle für den Editor als Suchschlüssel verwendet. Diese Klasse werden muss oder eine Ableitung von <see cref="T:System.Drawing.Design.UITypeEditor" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.EditorAttribute" /> Klasse mit dem Typnamen und den Basistyp.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `typeName` Parameter muss der <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> Format.  
+  
+ Die <xref:System.Type> dargestellt durch die `typeName` muss entweder abgeleitet werden oder die Basisklasse zu implementieren.  
+  
+ Die `baseType` Parameter wird als Schlüssel zum Suchen eines bestimmten Editors verwendet, da für ein Datentyp mehr als einer der Redakteure zugeordnet werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditorAttribute (Type type, Type baseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, class System.Type baseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EditorAttribute.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="baseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein <see cref="T:System.Type" /> , der den Typ des Editors darstellt.</param>
+        <param name="baseType">Die <see cref="T:System.Type" /> der Basisklasse oder Schnittstelle für den Editor als Suchschlüssel verwendet. Diese Klasse werden muss oder eine Ableitung von <see cref="T:System.Drawing.Design.UITypeEditor" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.EditorAttribute" /> Klasse mit dem Typ und den Basistyp.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Type> dargestellt durch die `type` Parameter muss entweder abgeleitet werden oder die Basisklasse zu implementieren.  
+  
+ Die `baseType` Parameter wird als Schlüssel zum Suchen eines bestimmten Editors verwendet, da für ein Datentyp mehr als einer der Redakteure zugeordnet werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditorBaseTypeName">
+      <MemberSignature Language="C#" Value="public string EditorBaseTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EditorBaseTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EditorAttribute.EditorBaseTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Basisklasse oder Schnittstelle, die als Suchschlüssel für diesen Editor ab.</summary>
+        <value>Der Name der Basisklasse oder Schnittstelle, die als Suchschlüssel für diesen Editor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.EditorAttribute.EditorBaseTypeName%2A> Eigenschaft ist für eine Assembly qualifizierten Typnamen. Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] bietet sowohl <xref:System.Drawing.Design.UITypeEditor> und <xref:System.ComponentModel.ComponentEditor> als gültige Basisklassen, aber einen beliebigen Wert sind hier gültig.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditorTypeName">
+      <MemberSignature Language="C#" Value="public string EditorTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EditorTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EditorAttribute.EditorTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Editor-Klasse in der <see cref="P:System.Type.AssemblyQualifiedName" /> Format.</summary>
+        <value>Der Name des Editor-Klasse in der <see cref="P:System.Type.AssemblyQualifiedName" /> Format.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EditorAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, dessen auf Wertgleichheit geprüft.</param>
+        <summary>Gibt zurück, ob der Wert des angegebenen Objekts gleich dem aktuellen <see cref="T:System.ComponentModel.EditorAttribute" />.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert des angegebenen Objekts, das aktuelle Objekt gleich ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EditorAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeId">
+      <MemberSignature Language="C#" Value="public override object TypeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypeId" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EditorAttribute.TypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine eindeutige ID für diesen Typ des Attributs ab.</summary>
+        <value>Eine eindeutige ID für diesen Typ des Attributs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.EditorAttribute.TypeId%2A> Eigenschaft wird durch das Filtern von Algorithmen verwendet, um zwei Attribute zu identifizieren, die den gleichen Typ sind. Für die meisten Attribute gibt dies nur die <xref:System.Type> Instanz für das Attribut. <xref:System.ComponentModel.EditorAttribute>überschreibt diese Option, um den Typ des Editorbasistyps enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

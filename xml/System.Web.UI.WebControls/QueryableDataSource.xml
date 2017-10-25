@@ -1,0 +1,238 @@
+<Type Name="QueryableDataSource" FullName="System.Web.UI.WebControls.QueryableDataSource">
+  <TypeSignature Language="C#" Value="public abstract class QueryableDataSource : System.Web.UI.DataSourceControl, System.Web.UI.WebControls.IQueryableDataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit QueryableDataSource extends System.Web.UI.DataSourceControl implements class System.Web.UI.IDataSource, class System.Web.UI.WebControls.IQueryableDataSource" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.QueryableDataSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataSourceControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.IQueryableDataSource</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Basisklasse für Datenquellenobjekte dar, die Daten mithilfe von LINQ-Abfragen abrufen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected QueryableDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.QueryableDataSource" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateQueryableView">
+      <MemberSignature Language="C#" Value="protected abstract System.Web.UI.WebControls.QueryableDataSourceView CreateQueryableView ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.QueryableDataSourceView CreateQueryableView() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSource.CreateQueryableView" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.QueryableDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.UI.WebControls.QueryableDataSourceView" /> -Objekt, das mit dieser verknüpft ist <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Steuerelement.</summary>
+        <returns>Der Standarddaten-Datenquellensicht zeigen an, die mit zugeordnetem der <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetView">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.DataSourceView GetView (string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.DataSourceView GetView(string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSource.GetView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewName">Der Name des ausgewählten Datenquellensicht zu erhalten.</param>
+        <summary>Ruft die Datenquellensicht an, die mit zugeordnetem der <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Objekt.</summary>
+        <returns>Der Standarddaten-Datenquellensicht zeigen an, die mit zugeordnetem der <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewNames">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ICollection GetViewNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ICollection GetViewNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSource.GetViewNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung von Namen, die Ansichten darstellen, die zugeordnet sind die <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Steuerelement.</summary>
+        <returns>Eine Auflistung von Namen, die Ansichten darstellen, die zugeordnet sind die <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSource.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein Objekt, das den Status des darstellt der <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Steuerelement.</param>
+        <summary>Lädt den Zustand der Werte in der <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Steuerelement, die beibehalten werden muss.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSource.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten</param>
+        <summary>Initialisiert die <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Objekt mit den Ereignisdaten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryCreated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.QueryCreatedEventArgs&gt; QueryCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.QueryCreatedEventArgs&gt; QueryCreated" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.QueryableDataSource.QueryCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.QueryCreatedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Abfrage hinzugefügt oder aus einem Datenquellensteuerelement entfernt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseViewChanged">
+      <MemberSignature Language="C#" Value="public void RaiseViewChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RaiseViewChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSource.RaiseViewChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="M:System.Web.UI.DataSourceView.OnDataSourceViewChanged(System.EventArgs)" /> Methode der <see cref="T:System.Web.UI.DataSourceView" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSource.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert den aktuellen Ansichtszustand des der <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Steuerelement.</summary>
+        <returns>Der gespeicherte Status des der <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSource.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verfolgt nach, Änderungen am Ansichtszustand des der <see cref="T:System.Web.UI.WebControls.QueryableDataSource" /> steuern, sodass die Änderungen können, in gespeichert werden der <see cref="T:System.Web.UI.StateBag" /> Objekt für das Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateParameterVales">
+      <MemberSignature Language="C#" Value="protected virtual void UpdateParameterVales ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void UpdateParameterVales() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryableDataSource.UpdateParameterVales" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert die Parameterwerte, die seit der vorherigen Anforderung geändert haben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

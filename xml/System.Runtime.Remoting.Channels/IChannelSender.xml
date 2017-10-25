@@ -1,0 +1,83 @@
+<Type Name="IChannelSender" FullName="System.Runtime.Remoting.Channels.IChannelSender">
+  <TypeSignature Language="C#" Value="public interface IChannelSender : System.Runtime.Remoting.Channels.IChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IChannelSender implements class System.Runtime.Remoting.Channels.IChannel" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.IChannelSender" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IChannel</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt erforderliche Funktionen und Eigenschaften für die Absender-Kanäle bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die sendende Seite Kanäle verfügbar machen muss die <xref:System.Runtime.Remoting.Channels.IChannelSender> Schnittstelle.  
+  
+   
+  
+## Examples  
+ [!code-cpp[IChannelSender#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IChannelSender/CPP/ichannelsender_2_client.cpp#1)]
+ [!code-csharp[IChannelSender#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IChannelSender/CS/ichannelsender_2_client.cs#1)]
+ [!code-vb[IChannelSender#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IChannelSender/VB/ichannelsender_2_client.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateMessageSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageSink CreateMessageSink (string url, object remoteChannelData, out string objectURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageSink CreateMessageSink(string url, object remoteChannelData, [out] string&amp; objectURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IChannelSender.CreateMessageSink(System.String,System.Object,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="remoteChannelData" Type="System.Object" />
+        <Parameter Name="objectURI" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die URL, zu dem der neue Empfänger Nachrichten übermittelt werden. Kann <see langword="null" />.</param>
+        <param name="remoteChannelData">Das Kanal-Datenobjekt des Remotehosts, zu dem der neue Empfänger Nachrichten übermittelt werden. Kann <see langword="null" />.</param>
+        <param name="objectURI">Bei der Rückgabe dieser Methode enthält einen URI der neuen Kanal Nachricht besteht, die Nachrichten an die angegebene URL oder den Kanal-Datenobjekt übermittelt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt eine Kanal Nachricht Senke, die Nachrichten an die angegebene URL oder den Kanal Datenobjekt übermittelt zurück.</summary>
+        <returns>Ein Kanal Nachrichten Senke, die Nachrichten an die angegebene URL oder den Kanal-Datenobjekt, übermittelt oder <see langword="null" /> der Kanal an den angegebenen Endpunkt herstellen kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Channels.IChannelSender.CreateMessageSink%2A> Methodenrückgabe Kanal Nachricht Senke, die Nachrichten an die angegebene URL oder den Kanal-Datenobjekt übermittelt. Wenn die `uri` Parameter ist `null`die `remoteChannelData` Parameter wird als Ziel für die Senke verwendet. Entweder die `url` Parameter oder die `remoteChannelData` Parameter möglich `null`, aber nicht beides.  
+  
+   
+  
+## Examples  
+ [!code-cpp[IChannelSender#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IChannelSender/CPP/ichannelsender_2_client.cpp#1)]
+ [!code-csharp[IChannelSender#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IChannelSender/CS/ichannelsender_2_client.cs#1)]
+ [!code-vb[IChannelSender#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IChannelSender/VB/ichannelsender_2_client.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,259 @@
+<Type Name="GeneralTransform3DTo2D" FullName="System.Windows.Media.Media3D.GeneralTransform3DTo2D">
+  <TypeSignature Language="C#" Value="public class GeneralTransform3DTo2D : System.Windows.Freezable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GeneralTransform3DTo2D extends System.Windows.Freezable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.GeneralTransform3DTo2D" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Freezable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet 3D zur Unterstützung von 2D-Transformation an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse kann transformiert werden eine <xref:System.Windows.Media.Media3D.Point3D> auf eine <xref:System.Windows.Point> und ein <xref:System.Windows.Media.Media3D.Rect3D> auf eine <xref:System.Windows.Rect>. Die <xref:System.Windows.Media.Media3D.Visual3D.TransformToAncestor%2A>-Methode gibt ein <xref:System.Windows.Media.Media3D.GeneralTransform3DTo2D>-Objekt zurück.  
+  
+ <xref:System.Windows.Media.Media3D.GeneralTransform3DTo2D>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.GeneralTransform3DTo2D.CloneCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">Das zu klonende Objekt.</param>
+        <summary>Definiert die Instanz als Klon (tiefe Kopie) des angegebenen <see cref="T:System.Windows.Freezable" />-Elements, indem Basiseigenschaftenwerte (nicht animiert) verwendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.GeneralTransform3DTo2D.CloneCore%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCurrentValueCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCurrentValueCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.GeneralTransform3DTo2D.CloneCurrentValueCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">Der <see cref="T:System.Windows.Freezable" />, der geklont werden soll.</param>
+        <summary>Macht die Instanz mithilfe aktueller Eigenschaftswerte zu einem Klon (tiefe Kopie) des angegebenen <see cref="T:System.Windows.Freezable" />-Elements, der geändert werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.GeneralTransform3DTo2D.CloneCurrentValueCore%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.GeneralTransform3DTo2D.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der aus <see cref="T:System.Windows.Freezable" /> abgeleiteten Klasse.</summary>
+        <returns>Die neue Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.GeneralTransform3DTo2D.CreateInstanceCore%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.GeneralTransform3DTo2D.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">Die zu kopierende Instanz.</param>
+        <summary>Macht die Instanz als fixierten Klon des angegebenen <see cref="T:System.Windows.Freezable" /> Basiseigenschaftenwerte (nicht animiert).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.GeneralTransform3DTo2D.GetAsFrozenCore%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetCurrentValueAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetCurrentValueAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.GeneralTransform3DTo2D.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">Das <see cref="T:System.Windows.Freezable" />, das kopiert und fixiert werden soll.</param>
+        <summary>Macht die aktuelle Instanz als fixierten Klon des angegebenen <see cref="T:System.Windows.Freezable" />. Wenn das Objekt über animierte Abhängigkeitseigenschaften verfügt, werden die aktuellen animierten Werte kopiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.GeneralTransform3DTo2D.GetCurrentValueAsFrozenCore%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Transform (System.Windows.Media.Media3D.Point3D point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Point Transform(valuetype System.Windows.Media.Media3D.Point3D point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.GeneralTransform3DTo2D.Transform(System.Windows.Media.Media3D.Point3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Media.Media3D.Point3D" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der 3D-Punkt zu transformieren.</param>
+        <summary>Transformiert den angegebenen 3D-Punkt und gibt das Ergebnis zurück.</summary>
+        <returns>Das Ergebnis der Transformation <paramref name="point" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.GeneralTransform3DTo2D.Transform%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Transformation war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformBounds">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect TransformBounds (System.Windows.Media.Media3D.Rect3D rect3D);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Rect TransformBounds(valuetype System.Windows.Media.Media3D.Rect3D rect3D) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.GeneralTransform3DTo2D.TransformBounds(System.Windows.Media.Media3D.Rect3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect3D" Type="System.Windows.Media.Media3D.Rect3D" />
+      </Parameters>
+      <Docs>
+        <param name="rect3D">3D umgebenden Felds zu transformieren.</param>
+        <summary>Transformiert die angegebene 3D umgebende Feld aus, und gibt eine Achse ausgerichtete umgebende Feld, die alle Punkte in der ursprünglichen 3D umgebenden Feld enthält.</summary>
+        <returns>Eine Achse ausgerichtete umgebende Rechteck, das alle Punkte in der angegebenen 3D Begrenzungsrahmen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.GeneralTransform3DTo2D.TransformBounds%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryTransform">
+      <MemberSignature Language="C#" Value="public bool TryTransform (System.Windows.Media.Media3D.Point3D inPoint, out System.Windows.Point result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryTransform(valuetype System.Windows.Media.Media3D.Point3D inPoint, [out] valuetype System.Windows.Point&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.GeneralTransform3DTo2D.TryTransform(System.Windows.Media.Media3D.Point3D,System.Windows.Point@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inPoint" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="result" Type="System.Windows.Point&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="inPoint">Der 3D-Punkt zu transformieren.</param>
+        <param name="result">Das Ergebnis der Transformation <c>InPoint</c>.</param>
+        <summary>Transformiert den angegebenen 3D-Punkt und gibt das Ergebnis zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="inPoint" /> wurde transformierten; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Windows.Media.Media3D.GeneralTransform3DTo2D.Transform%2A> -Methode, diese Methode ist keine Ausnahme ausgelöst, wenn die Transformation fehlgeschlagen ist.  
+  
+ <xref:System.Windows.Media.Media3D.GeneralTransform3DTo2D.TryTransform%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

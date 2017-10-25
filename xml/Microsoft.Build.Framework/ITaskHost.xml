@@ -1,0 +1,35 @@
+<Type Name="ITaskHost" FullName="Microsoft.Build.Framework.ITaskHost">
+  <TypeSignature Language="C#" Value="public interface ITaskHost" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITaskHost" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.ITaskHost" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("9049A481-D0E9-414f-8F92-D4F67A0359A6")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Übergibt Hostobjekte eine integrierte Entwicklungsumgebung (IDE) für einzelne Aufgaben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Leere Schnittstelle.  
+  
+ Abhängig von der Aufgabe selbst und welche Arten von Parametern und Funktionen, die sie verfügbar macht, die Aufgabe sollte definieren Sie eine eigene Schnittstelle, die von diesem erbt, und verwenden Sie diese Schnittstelle für die Kommunikation mit dem Host.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

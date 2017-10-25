@@ -1,0 +1,125 @@
+<Type Name="SecurityTokenReceivedEventArgs" FullName="System.IdentityModel.Services.SecurityTokenReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public class SecurityTokenReceivedEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SecurityTokenReceivedEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.SecurityTokenReceivedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ereignis wird ausgelöst, wenn ein ausgestelltes Token vom Sicherheitstokendienst (STS) empfangen wird während der Anmeldung mithilfe von WS-Verbund. Es wird ausgelöst, bevor das Token überprüft wird. Sie erreichen das ausgestellte Token über die <xref:System.IdentityModel.Services.SecurityTokenReceivedEventArgs.SecurityToken%2A> Eigenschaft und ihre Eigenschaften ändern oder Ersetzen Sie es. Sie können-in Verarbeitung "Abbrechen", durch Festlegen der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenReceivedEventArgs (System.IdentityModel.Tokens.SecurityToken securityToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SecurityToken securityToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.SecurityTokenReceivedEventArgs.#ctor(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityToken" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="securityToken">Das ausgegebene Sicherheitstoken.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Services.SecurityTokenReceivedEventArgs" /> Klasse, indem das angegebene Sicherheitstoken.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der neuen Instanz der <xref:System.IdentityModel.Services.SecurityTokenReceivedEventArgs.SecurityToken%2A> Eigenschaft festgelegt ist, auf das Token gemäß der `securityToken` Parameter und die <xref:System.IdentityModel.Services.SecurityTokenReceivedEventArgs.SignInContext%2A> -Eigenschaftensatz auf `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="securityToken" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenReceivedEventArgs (System.IdentityModel.Tokens.SecurityToken securityToken, string signInContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SecurityToken securityToken, string signInContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.SecurityTokenReceivedEventArgs.#ctor(System.IdentityModel.Tokens.SecurityToken,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityToken" Type="System.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="signInContext" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="securityToken">Das ausgegebene Sicherheitstoken.</param>
+        <param name="signInContext">Die Anmeldung angegebene Kontext im Steuerelement.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Services.SecurityTokenReceivedEventArgs" /> Klasse, indem das angegebene Sicherheitstoken und Anmeldekontext.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der neuen Instanz der <xref:System.IdentityModel.Services.SecurityTokenReceivedEventArgs.SecurityToken%2A> Eigenschaft festgelegt ist, auf das Token gemäß der `securityToken` Parameter und die <xref:System.IdentityModel.Services.SecurityTokenReceivedEventArgs.SignInContext%2A> auf den Wert der Eigenschaft festgelegt ist die `signInContext` Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="securityToken" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken SecurityToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityToken SecurityToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SecurityTokenReceivedEventArgs.SecurityToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das ausgestellte Sicherheitstoken.</summary>
+        <value>Das ausgegebene Sicherheitstoken.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die Eigenschaften des ausgegebenen Sicherheitstokens ändern oder vollständig zu ersetzen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignInContext">
+      <MemberSignature Language="C#" Value="public string SignInContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SignInContext" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SecurityTokenReceivedEventArgs.SignInContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kontext-Anmeldung angegeben, die im Steuerelement ab.</summary>
+        <value>Der Anmeldekontext.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

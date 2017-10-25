@@ -1,0 +1,541 @@
+<Type Name="CodeIdentifiers" FullName="System.Xml.Serialization.CodeIdentifiers">
+  <TypeSignature Language="C#" Value="public class CodeIdentifiers" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CodeIdentifiers extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.CodeIdentifiers" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet eine Gruppe von Namen für die verwandte Entitäten oder Zuordnungen, die von .NET Framework XML-Serialisierungsinfrastruktur generiert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Liste werden die Tools und Klassen, bei denen die <xref:System.Xml.Serialization.CodeIdentifiers>:  
+  
+-   Die [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88), oder die <xref:System.Web.Services.Description.ServiceDescriptionImporter> -Klasse, bei der Generierung von Clientproxyklassen oder abstrakten Klassen aus einem Dokument Web Services Description Language (WSDL).  
+  
+-   Die [XML-Schemadefinitionstools (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md) Tool beim Generieren von Klassen aus XML-Schemadefinition (XSD)-Dokumenten.  
+  
+-   Die <xref:System.Web.Services.Description.ServiceDescriptionReflector> Klasse beim Erstellen von <xref:System.Web.Services.Description.ServiceDescription> Objekte von Klassen, die als Webdienste über identifiziert werden die <xref:System.Web.Services.WebServiceAttribute> Attribut.  
+  
+ Anstatt die <xref:System.Xml.Serialization.CodeIdentifiers> -Klasse direkt, verwenden Sie die obigen Tools und Klassen. Wenn Sie möchten die Namen der Entitäten zu steuern, die an XML-Schema oder Webdienstdefinitionen gebunden sind, verwenden Sie die zugehörigen Attribute.  
+  
+ Je nach ihrem Gültigkeitsbereich einer <xref:System.Xml.Serialization.CodeIdentifiers> kann Instanz verwendet, um die Namen aller Elemente in der folgenden Liste beibehalten:  
+  
+-   Typen, Methoden oder Felder.  
+  
+-   Die Parameter und Rückgabewert einer Methode, die WSDL für Eingabe- und Ausgabenachrichten.  
+  
+-   -Objekte innerhalb einer <xref:System.Web.Services.Description.ServiceDescription> -Instanz, die in einem WSDL-Dokument serialisiert werden kann.  
+  
+ In der Regel wird die Klasse zum Vermeiden Namenskonflikte zwischen Entitäten innerhalb eines bestimmten Bereichs, einschließlich der Konflikte mit dem Namen einer enthaltenden Entität verwendet.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeIdentifiers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifiers.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.CodeIdentifiers" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeIdentifiers (bool caseSensitive);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool caseSensitive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifiers.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="caseSensitive" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="caseSensitive">
+          <see langword="true" />Wenn IDs Groß-/Kleinschreibung beachtet werden; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Klasse, und bestimmt, ob Codebezeichner Groß-/Kleinschreibung beachtet werden.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string identifier, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string identifier, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifiers.Add(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Ein Name, der verwendet wird, um die Codeentität zu indizieren.</param>
+        <param name="value">Der Code Entität oder Zuordnung Typinformationen.</param>
+        <summary>Fügt eine benannte Code Entität oder den Typ der Zuordnung zu den <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Instanz des Bereichs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Xml.Serialization.CodeIdentifiers.AddUnique%2A> -Methode, die <xref:System.Xml.Serialization.CodeIdentifiers.Add%2A> Methode wird nicht verhindert Namenskonflikte.  
+  
+ Wenn Sie möchten die Namen der Entitäten zu steuern, die an XML-Schema oder Webdienstdefinitionen gebunden sind, verwenden Sie die zugehörigen Attribute anstatt Erstellen einer Instanz von der <xref:System.Xml.Serialization.CodeIdentifiers> Klasse. Eine vollständige Liste finden Sie unter [Attribute, XML-Serialisierung](~/docs/standard/serialization/attributes-that-control-xml-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddReserved">
+      <MemberSignature Language="C#" Value="public void AddReserved (string identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddReserved(string identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifiers.AddReserved(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Einen Namen, die nicht verfügbar sind, innerhalb der <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Instanz des Bereichs.</param>
+        <summary>Verhindert, dass den angegebenen Namen verwendet werden innerhalb der <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Instanz des Bereichs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein reservierter Name kann eine enthaltende Codeentität, z. B. einen Typ angehören für den Elementnamen auch generiert werden müssen.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddUnique">
+      <MemberSignature Language="C#" Value="public string AddUnique (string identifier, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string AddUnique(string identifier, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifiers.AddUnique(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Ein möglicher-Name, der verwendet wird, um die Codeentität zu indizieren.</param>
+        <param name="value">Der Code Entität oder Zuordnung Typinformationen.</param>
+        <summary>Fügt eine benannte Code Entität oder den Typ der Zuordnung zu den <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Instanz des Bereichs, sicherstellen, dass der Name innerhalb des Bereichs eindeutig ist.</summary>
+        <returns>Der Wert des ID-Parameters oder geänderte Zeichenfolge, wenn ein Namenskonflikt vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert des ID-Parameters nicht einzigartig ist die <xref:System.Xml.Serialization.CodeIdentifiers> Instanz des Bereichs, eine neue, eindeutige Zeichenfolge generiert und an seiner Stelle verwendet. Die neue Zeichenfolge wird durch das Anfügen an den Eingabenamen generiert. Der ursprüngliche Name ist nicht eindeutig, wenn er zuvor, um übergeben wurde die <xref:System.Xml.Serialization.CodeIdentifiers.Add%2A>, <xref:System.Xml.Serialization.CodeIdentifiers.AddUnique%2A>, oder <xref:System.Xml.Serialization.CodeIdentifiers.AddReserved%2A> -Methode, oder wenn sie von einem vorherigen Aufruf generiert wurde die <xref:System.Xml.Serialization.CodeIdentifiers.AddUnique%2A> Methode. In jedem Fall ist der neue Bezeichner nicht eindeutig ist, wird zuerst Übergabe an die <xref:System.Xml.Serialization.CodeIdentifiers.MakeUnique%2A> Methode, um einen neuen eindeutigen Bezeichner zu erstellen.  
+  
+ Wenn Sie möchten die Namen der Entitäten zu steuern, die an XML-Schema oder Webdienstdefinitionen gebunden sind, verwenden Sie die zugehörigen Attribute anstatt Erstellen einer Instanz von der <xref:System.Xml.Serialization.CodeIdentifiers> Klasse. Eine vollständige Liste finden Sie unter [Attribute, XML-Serialisierung](~/docs/standard/serialization/attributes-that-control-xml-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifiers.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Entitäten oder Zuordnungen, einschließlich ihrer Namen, aus der <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Instanz des Bereichs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Reservierte Namen, über hinzugefügte der <xref:System.Xml.Serialization.CodeIdentifiers.AddReserved%2A> -Methode, werden nicht entfernt.  
+  
+ Wenn Sie möchten die Namen der Entitäten zu steuern, die an XML-Schema oder Webdienstdefinitionen gebunden sind, verwenden Sie die zugehörigen Attribute anstatt Erstellen einer Instanz von der <xref:System.Xml.Serialization.CodeIdentifiers> Klasse. Eine vollständige Liste finden Sie unter [Attribute, XML-Serialisierung](~/docs/standard/serialization/attributes-that-control-xml-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsInUse">
+      <MemberSignature Language="C#" Value="public bool IsInUse (string identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsInUse(string identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifiers.IsInUse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Der Name, überprüfen Sie für die Verwendung innerhalb der <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Instanz des Bereichs.</param>
+        <summary>Bestimmt, ob es sich bei der angegebenen Namen bereits im verwendet wird die <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Instanz des Bereichs.</summary>
+        <returns>
+          <see langword="true" />Wenn der Name bereits verwendet wird; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Eingabenamen ist nicht eindeutig, wenn er zuvor übergeben wurde die <xref:System.Xml.Serialization.CodeIdentifiers.Add%2A>, <xref:System.Xml.Serialization.CodeIdentifiers.AddUnique%2A>, oder <xref:System.Xml.Serialization.CodeIdentifiers.AddReserved%2A> -Methode, oder es wurde vom generiert die <xref:System.Xml.Serialization.CodeIdentifiers.AddUnique%2A> Methode.  
+  
+ Wenn Sie möchten die Namen der Entitäten zu steuern, die an XML-Schema oder Webdienstdefinitionen gebunden sind, verwenden Sie die zugehörigen Attribute anstatt Erstellen einer Instanz von der <xref:System.Xml.Serialization.CodeIdentifiers> Klasse. Eine vollständige Liste finden Sie unter [Attribute, XML-Serialisierung](~/docs/standard/serialization/attributes-that-control-xml-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MakeRightCase">
+      <MemberSignature Language="C#" Value="public string MakeRightCase (string identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string MakeRightCase(string identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifiers.MakeRightCase(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Der Name, der ggf. geändert werden soll.</param>
+        <summary>Stellt sicher, dass die Eingabe für die korrekte Groß-/Kleinschreibung ist, durch die Änderung des Namens nach dem Wert des der <see cref="P:System.Xml.Serialization.CodeIdentifiers.UseCamelCasing" /> Eigenschaft.</summary>
+        <returns>Eine Zeichenfolge, die noch der erste Buchstabe Groß-/Kleinschreibung ist identisch mit der Eingabe-ID. geändert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert der <xref:System.Xml.Serialization.CodeIdentifiers.UseCamelCasing%2A> Eigenschaft ist `true` und das erste Zeichen der Eingabe ein Buchstabe ist, erfolgt sie bei Bedarf in Kleinbuchstaben. Wenn der Wert der <xref:System.Xml.Serialization.CodeIdentifiers.UseCamelCasing%2A> ist `false`Pascal-Schreibweise im Endeffekt dasselbe ist, und das erste Zeichen, wenn ein Buchstabe großgeschrieben ist, falls erforderlich.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MakeUnique">
+      <MemberSignature Language="C#" Value="public string MakeUnique (string identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string MakeUnique(string identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifiers.MakeUnique(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Den Namen ändern, wenn sie noch nicht eindeutig ist.</param>
+        <summary>Bestimmt, ob es sich bei der Eingabenamen mit einem anderen Namen in Konflikt steht die <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Instanz Bereich, und wenn dies der Fall ist, generiert eine geänderte Zeichenfolge.</summary>
+        <returns>Der Wert des ID-Parameters oder geänderte Zeichenfolge, wenn ein Namenskonflikt vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Eingabenamen ist nicht eindeutig, wenn er zuvor übergeben wurde die <xref:System.Xml.Serialization.CodeIdentifiers.Add%2A>, <xref:System.Xml.Serialization.CodeIdentifiers.AddUnique%2A>, oder <xref:System.Xml.Serialization.CodeIdentifiers.AddReserved%2A> -Methode, oder es wurde vom generiert die <xref:System.Xml.Serialization.CodeIdentifiers.AddUnique%2A> Methode. Wenn der Name nicht eindeutig ist, wird eine neue Zeichenfolge durch das Anfügen an die ursprüngliche Zeichenfolge generiert.  
+  
+ Wenn Sie möchten die Namen der Entitäten zu steuern, die an XML-Schema oder Webdienstdefinitionen gebunden sind, verwenden Sie die zugehörigen Attribute anstatt Erstellen einer Instanz von der <xref:System.Xml.Serialization.CodeIdentifiers> Klasse. Eine vollständige Liste finden Sie unter [Attribute, XML-Serialisierung](~/docs/standard/serialization/attributes-that-control-xml-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifiers.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Der Name der Zuordnungsinformationen für die Code Entität oder des Typs zu entfernen.</param>
+        <summary>Entfernt aus der <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Instanz Bereich der Entität oder des Typs codezuordnung durch die Eingabe identifiziert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie möchten die Namen der Entitäten zu steuern, die an XML-Schema oder Webdienstdefinitionen gebunden sind, verwenden Sie die zugehörigen Attribute anstatt Erstellen einer Instanz von der <xref:System.Xml.Serialization.CodeIdentifiers> Klasse. Eine vollständige Liste finden Sie unter [Attribute, XML-Serialisierung](~/docs/standard/serialization/attributes-that-control-xml-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveReserved">
+      <MemberSignature Language="C#" Value="public void RemoveReserved (string identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveReserved(string identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifiers.RemoveReserved(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Ein Name, der in verfügbar gemacht werden die <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Instanz des Bereichs.</param>
+        <summary>Entfernt den Eingabenamen aus dem <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Instanz des reservierten Namen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie möchten die Namen der Entitäten zu steuern, die an XML-Schema oder Webdienstdefinitionen gebunden sind, verwenden Sie die zugehörigen Attribute anstatt Erstellen einer Instanz von der <xref:System.Xml.Serialization.CodeIdentifiers> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToArray">
+      <MemberSignature Language="C#" Value="public object ToArray (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object ToArray(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.CodeIdentifiers.ToArray(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ aller Entitäten oder Zuordnungen für die Instanz.</param>
+        <summary>Gibt ein Array der Entitäten oder Zuordnungen innerhalb der <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Instanz des Bereichs.</summary>
+        <returns>Ein Array von Codeentitäten oder Zuordnungen, die vom gespeichert ist die <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie möchten die Namen der Entitäten zu steuern, die an XML-Schema oder Webdienstdefinitionen gebunden sind, verwenden Sie die zugehörigen Attribute anstatt Erstellen einer Instanz von der <xref:System.Xml.Serialization.CodeIdentifiers> Klasse. Eine vollständige Liste finden Sie unter [Attribute, XML-Serialisierung](~/docs/standard/serialization/attributes-that-control-xml-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UseCamelCasing">
+      <MemberSignature Language="C#" Value="public bool UseCamelCasing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseCamelCasing" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.CodeIdentifiers.UseCamelCasing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Instanz Camel-Case verwendet.</summary>
+        <value>
+          <see langword="true" />um anzugeben, dass die Instanz Camel-Case verwendet. <see langword="false" /> um anzugeben, dass die Instanz die Pascal-Schreibweise verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Camel-Case ist das erste Zeichen eines Bezeichners ein Buchstabe, muss es Kleinbuchstaben sein. Pascal-Schreibweise ist das erste Zeichen ein Buchstabe, muss er in Großbuchstaben angegeben werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

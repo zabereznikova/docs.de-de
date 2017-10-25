@@ -1,0 +1,662 @@
+<Type Name="MultiBinding" FullName="System.Windows.Data.MultiBinding">
+  <TypeSignature Language="C#" Value="public class MultiBinding : System.Windows.Data.BindingBase, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MultiBinding extends System.Windows.Data.BindingBase implements class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.MultiBinding" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Data.BindingBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Bindings")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Beschreibt eine Auflistung von <see cref="T:System.Windows.Data.Binding" /> Objekte an eine einzelne Bindungszieleigenschaft angefügt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können angeben, dass mehrere Bindungen in eine <xref:System.Windows.Data.MultiBinding> Objekt. Bei Verwendung der <xref:System.Windows.Data.MultiBinding> Objekt einen Konverter wird einen letzte Wert für das Bindungsziel basierend auf den Werten dieser Bindungen erzeugt. Z. B. möglicherweise Farbe aus roten, blauen und grünen Werten berechnet werden, die Werte aus der gleichen oder unterschiedliche Quelle Bindungsquellenobjekte werden können. Wenn ein Wert aus der Zieldatenbank zu Quellen verschoben wird, wird der Wert der Zieleigenschaft in einen Satz von Werten übersetzt, die wieder in den Bindungen eingelesen werden.  
+  
+ Die Werte von der <xref:System.Windows.Data.MultiBinding.Mode%2A> und <xref:System.Windows.Data.MultiBinding.UpdateSourceTrigger%2A> Eigenschaften zu bestimmen, die Funktionalität von der <xref:System.Windows.Data.MultiBinding> und als Standardwerte für alle Bindungen in der Auflistung verwendet werden, es sei denn, eine individuelle Bindung dieser Eigenschaften überschreibt. Z. B. wenn die <xref:System.Windows.Data.MultiBinding.Mode%2A> Eigenschaft auf die <xref:System.Windows.Data.MultiBinding> -Objekts festgelegt wird, um <xref:System.Windows.Data.BindingMode.TwoWay>, und klicken Sie dann alle Bindungen in der Auflistung betrachtet werden <xref:System.Windows.Data.BindingMode.TwoWay> , wenn Sie ein anderes festgelegt <xref:System.Windows.Data.MultiBinding.Mode%2A> Wert auf eine der Bindungen explizit. Weitere Informationen finden Sie unter der <xref:System.Windows.Data.Binding.Mode%2A?displayProperty=nameWithType> und <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A?displayProperty=nameWithType> Eigenschaften.  
+  
+ <xref:System.Windows.Data.MultiBinding>unterstützt derzeit nur Objekte vom Typ <xref:System.Windows.Data.Binding> und nicht <xref:System.Windows.Data.MultiBinding> oder <xref:System.Windows.Data.PriorityBinding>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MultiBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.MultiBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Data.MultiBinding" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bindings">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Windows.Data.BindingBase&gt; Bindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Windows.Data.BindingBase&gt; Bindings" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.MultiBinding.Bindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Windows.Data.BindingBase&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der <see cref="T:System.Windows.Data.Binding" /> Objekte innerhalb dieser <see cref="T:System.Windows.Data.MultiBinding" /> Instanz.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Windows.Data.Binding" />-Objekten. <see cref="T:System.Windows.Data.MultiBinding" />unterstützt derzeit nur Objekte vom Typ <see cref="T:System.Windows.Data.Binding" /> und nicht <see cref="T:System.Windows.Data.MultiBinding" /> oder <see cref="T:System.Windows.Data.PriorityBinding" />. Hinzufügen einer <see cref="T:System.Windows.Data.Binding" /> untergeordnetes Element einer <see cref="T:System.Windows.Data.MultiBinding" /> Objekt implizit des untergeordneten Elements hinzugefügt der <see cref="T:System.Windows.Data.BindingBase" /> Auflistung für die <see cref="T:System.Windows.Data.MultiBinding" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Diese Eigenschaft kann festgelegt werden, [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] nur mithilfe der Syntax, die angezeigt wird, oder den Zugriff auf das Sammlungsobjekt und über verschiedene Methoden, wie z. B. `Add`. Die Eigenschaft, die Zugriff auf das Auflistungsobjekt verwendet ist schreibgeschützt, während die Auflistung selbst Lese-/Schreibzugriff verfügt.  
+  
+<a name="xamlPropertyElementUsage_Bindings"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  oneOrMoreBindings  
+</object>  
+  
+```  
+  
+<a name="xamlValues_Bindings"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *oneOrMoreBindings*  
+ Eine oder mehrere <xref:System.Windows.Data.Binding> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Converter">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.IMultiValueConverter Converter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.IMultiValueConverter Converter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.MultiBinding.Converter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.IMultiValueConverter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Konverter ab oder legt ihn fest, der zum Konvertieren der Quellwerte in oder aus dem Zielwert verwendet wird.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Windows.Data.IMultiValueConverter" />, der den zu verwendenden Konverter angibt. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einzelne Bindungen in der Auflistung können einen eigenen Wert <xref:System.Windows.Data.Binding.Converter%2A>. Weitere Informationen finden Sie unter <xref:System.Windows.Data.IValueConverter>.  
+  
+<a name="xamlAttributeUsage_Converter"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object Converter="myConverter"/>  
+```  
+  
+<a name="xamlValues_Converter"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *myConverter*  
+ Einen Ressourcenverweis auf eine Klasse, die implementiert die <xref:System.Windows.Data.IMultiValueConverter> -Schnittstelle, die Implementierungen von umfasst die <xref:System.Windows.Data.IMultiValueConverter.Convert%2A> und <xref:System.Windows.Data.IMultiValueConverter.ConvertBack%2A> Methoden. Verwenden Sie zum Verweisen auf ein Wertkonverter der [Markuperweiterungen und WPF-XAML](~/docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConverterCulture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo ConverterCulture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo ConverterCulture" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.MultiBinding.ConverterCulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.CultureInfoIetfLanguageTagConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Globalization.CultureInfo" /> -Objekt, das für alle Bindungen, die umschlossen zugewiesene Konverter gilt die <see cref="T:System.Windows.Data.MultiBinding" /> oder auf die <see cref="T:System.Windows.Data.MultiBinding" /> selbst.</summary>
+        <value>Ein gültiges <see cref="T:System.Globalization.CultureInfo" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_ConverterCulture"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object ConverterCulture="ietfLanguageTag"/>  
+```  
+  
+<a name="xamlValues_ConverterCulture"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *ietfLanguageTag*  
+ Eine Zeichenfolge, die zum Festlegen der <xref:System.Globalization.CultureInfo>. Diese Zeichenfolge wird intern aufgerufen. <xref:System.Globalization.CultureInfo.GetCultureInfoByIetfLanguageTag%2A>. Informationen über das Format der Zeichenfolge und finden Sie unter <xref:System.Globalization.CultureInfo.GetCultureInfoByIetfLanguageTag%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConverterParameter">
+      <MemberSignature Language="C#" Value="public object ConverterParameter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ConverterParameter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.MultiBinding.ConverterParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen optionalen Parameter ab, der als zusätzliche Information an einen Konverter übergeben wird, oder legt diesen fest.</summary>
+        <value>Ein Parameter, der an einen Konverter übergeben werden soll. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlPropertyElementUsage_ConverterParameter"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.ConverterParameter>  
+    converterParameter  
+  </object.ConverterParameter>  
+</object>  
+```  
+  
+<a name="xamlAttributeUsage_ConverterParameter"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="converterParameter" />  
+```  
+  
+<a name="xamlValues_ConverterParameter"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *converterParameter*  
+ Ein Wert vom Typ erwartet vom Konverter, der möglicherweise ein Object-Element oder eine Zeichenfolge, abhängig von der Definition und Verwendung von XAML-Funktionen, die beide die Eigenschaft eingeben, verwendet wird und der Implementierung des Konverters. Der Konverter nimmt in diesem Typ über die `parameter` Parameter gemäß seiner <xref:System.Windows.Data.IValueConverter.Convert%2A> und <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> Implementierungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.BindingMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Data.BindingMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.MultiBinding.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die Richtung des Datenflusses dieser Bindung angibt, oder legt ihn fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Data.BindingMode" />-Werte. Der Standardwert ist <see cref="F:System.Windows.Data.BindingMode.Default" />, wobei der Bindungsmodus-Standardwert der Zielabhängigkeitseigenschaft zurückgegeben. Der Standardwert ist aber für jede Abhängigkeitseigenschaft unterschiedlich. In der Regel haben von einem Benutzer bearbeitbare Steuerelementeigenschaften z. B. <see cref="P:System.Windows.Controls.TextBox.Text" />, standardmäßig bidirektionale Bindungen, wogegen die meisten anderen Eigenschaften standardmäßig unidirektionale Bindungen haben.  
+  
+ Eine programmgesteuerte Methode zum bestimmen, ob eine Abhängigkeitseigenschaft standardmäßig uni- oder bidirektional bindet wird zum Abrufen der Metadaten der Eigenschaft mit <see cref="M:System.Windows.DependencyProperty.GetMetadata(System.Type)" /> und überprüfen Sie dann den booleschen Wert, der die <see cref="P:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte von der <xref:System.Windows.Data.MultiBinding.Mode%2A> und <xref:System.Windows.Data.MultiBinding.UpdateSourceTrigger%2A> Eigenschaften zu bestimmen, die Funktionalität von der <xref:System.Windows.Data.MultiBinding> und als Standardwerte für alle Bindungen in der Auflistung verwendet werden, es sei denn, eine individuelle Bindung dieser Eigenschaften überschreibt. Z. B. wenn die <xref:System.Windows.Data.MultiBinding.Mode%2A> Eigenschaft auf die <xref:System.Windows.Data.MultiBinding> -Objekts festgelegt wird, um <xref:System.Windows.Data.BindingMode.TwoWay>, und klicken Sie dann alle Bindungen in der Auflistung betrachtet werden <xref:System.Windows.Data.BindingMode.TwoWay> , wenn Sie ein anderes festgelegt <xref:System.Windows.Data.MultiBinding.Mode%2A> Wert auf eine der Bindungen explizit. Weitere Informationen finden Sie unter der <xref:System.Windows.Data.Binding.Mode%2A?displayProperty=nameWithType> und <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A?displayProperty=nameWithType> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyOnSourceUpdated">
+      <MemberSignature Language="C#" Value="public bool NotifyOnSourceUpdated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NotifyOnSourceUpdated" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.MultiBinding.NotifyOnSourceUpdated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob zum Auslösen der <see cref="E:System.Windows.FrameworkElement.SourceUpdated" /> Ereignis aus, wenn ein Wert vom Bindungsziel zur Bindungsquelle übertragen wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="E:System.Windows.FrameworkElement.SourceUpdated" /> Ereignis ausgelöst, wenn der Quellwert Bindung, aktualisiert wurde, andernfalls ist <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyOnTargetUpdated">
+      <MemberSignature Language="C#" Value="public bool NotifyOnTargetUpdated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NotifyOnTargetUpdated" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.MultiBinding.NotifyOnTargetUpdated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob zum Auslösen der <see cref="E:System.Windows.FrameworkElement.TargetUpdated" /> Ereignis aus, wenn ein Wert von der Bindungsquelle zum Bindungsziel übertragen wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="E:System.Windows.FrameworkElement.TargetUpdated" /> Ereignis ausgelöst, wenn die bindungszielwert ist das aktualisiert wurde, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyOnValidationError">
+      <MemberSignature Language="C#" Value="public bool NotifyOnValidationError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NotifyOnValidationError" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.MultiBinding.NotifyOnValidationError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob zum Auslösen der <see cref="E:System.Windows.Controls.Validation.Error" /> angefügtes Ereignis für das gebundene Element.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="E:System.Windows.Controls.Validation.Error" /> angefügtes Ereignis wird für das gebundene Element ein Validierungsfehler vorliegt, bei quellenaktualisierungen ausgelöst wurde, andernfalls werden <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeBindings">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeBindings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeBindings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.MultiBinding.ShouldSerializeBindings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die <see cref="P:System.Windows.Data.MultiBinding.Bindings" />-Eigenschaft beibehalten werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der Eigenschaftswert geändert wurde und nicht mehr dem Standardwert entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies `ShouldSerialize` Methode wird bereitgestellt, da die <xref:System.Windows.Data.MultiBinding.Bindings%2A> Eigenschaft verfügt nicht über einen einfachen Standardwert. Diese Methode gibt an, ob die-Eigenschaft ihren Standardwert geändert hat. Diese Methode wird in der Regel aufgerufen, wenn Sie entweder einen Designer für das Entwickeln der <xref:System.Windows.Data.MultiBinding> oder entwickeln eine eigene Steuerelement einbinden der <xref:System.Windows.Data.MultiBinding>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeValidationRules">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeValidationRules ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeValidationRules() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.MultiBinding.ShouldSerializeValidationRules" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die <see cref="P:System.Windows.Data.MultiBinding.ValidationRules" />-Eigenschaft beibehalten werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der Eigenschaftswert geändert wurde und nicht mehr dem Standardwert entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies `ShouldSerialize` Methode wird bereitgestellt, da die <xref:System.Windows.Data.MultiBinding.ValidationRules%2A> Eigenschaft verfügt nicht über einen einfachen Standardwert. Diese Methode gibt an, ob die-Eigenschaft ihren Standardwert geändert hat. Diese Methode wird in der Regel aufgerufen, wenn Sie entweder einen Designer für das Entwickeln der <xref:System.Windows.Data.MultiBinding> oder entwickeln eine eigene Steuerelement einbinden der <xref:System.Windows.Data.MultiBinding>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.MultiBinding.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende untergeordnete Objekt.</param>
+        <summary>Fügt ein untergeordnetes Objekt hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.MultiBinding.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der dem Objekt hinzuzufügende Text.</param>
+        <summary>Fügt dem Objekt den Textinhalt eines Knotens hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateSourceExceptionFilter">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.UpdateSourceExceptionFilterCallback UpdateSourceExceptionFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.UpdateSourceExceptionFilterCallback UpdateSourceExceptionFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.MultiBinding.UpdateSourceExceptionFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.UpdateSourceExceptionFilterCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Handler ab oder legt ihn fest, mit dem Sie benutzerdefinierte Logik für das Behandeln von Ausnahmen bereitstellen können, die beim Aktualisieren des Bindungsquellwerts durch das Bindungsmodul auftreten. Dies gilt nur, wenn Sie verknüpft haben die <see cref="T:System.Windows.Controls.ExceptionValidationRule" /> mit Ihrem <see cref="T:System.Windows.Data.MultiBinding" /> Objekt.</summary>
+        <value>Eine Methode, die eine benutzerdefinierte Logik für das Behandeln von Ausnahmen bereitstellt, die beim Aktualisieren des Bindungsquellwerts durch das Bindungsmodul auftreten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.ExceptionValidationRule> Klasse stellt eine integrierte Validierungsregel, die auf Ausnahmen prüft, die während der Aktualisierung von den Bindungsquelleigenschaften ausgelöst werden. Wenn Sie verknüpft haben die <xref:System.Windows.Controls.ExceptionValidationRule> -Objekt mit Ihrer <xref:System.Windows.Data.MultiBinding> Objekt ist, können Sie diese Eigenschaft einen Handler, benutzerdefinierten Logik für die Behandlung dieser Ausnahmen bereitzustellen.  
+  
+ Ein Beispiel finden Sie unter <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A?displayProperty=nameWithType>.  
+  
+ Weitere Informationen zu den Überprüfungsprozess für <xref:System.Windows.Data.MultiBinding> anzuzeigen, die <xref:System.Windows.Data.MultiBinding.ValidationRules%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateSourceTrigger">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.UpdateSourceTrigger UpdateSourceTrigger { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Data.UpdateSourceTrigger UpdateSourceTrigger" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.MultiBinding.UpdateSourceTrigger" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.UpdateSourceTrigger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die zeitliche Steuerung der Updates für die Bindungsquelle bestimmt, oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Data.UpdateSourceTrigger" />-Werte. Der Standardwert ist <see cref="F:System.Windows.Data.UpdateSourceTrigger.Default" />, gibt die <see cref="T:System.Windows.Data.UpdateSourceTrigger" /> Wert, der Ziel-Abhängigkeitseigenschaft. Der Standardwert für die meisten Abhängigkeitseigenschaften ist jedoch <see cref="F:System.Windows.Data.UpdateSourceTrigger.PropertyChanged" />, während die <see cref="P:System.Windows.Controls.TextBox.Text" /> Eigenschaft hat den Standardwert <see cref="F:System.Windows.Data.UpdateSourceTrigger.LostFocus" />.  
+  
+ Eine programmgesteuerte Methode zum Bestimmen des standardmäßigen <see cref="P:System.Windows.Data.Binding.UpdateSourceTrigger" /> Wert einer Abhängigkeitseigenschaft ist das die Metadaten der Eigenschaft mit abrufen <see cref="M:System.Windows.DependencyProperty.GetMetadata(System.Type)" /> und überprüfen Sie den Wert der <see cref="P:System.Windows.FrameworkPropertyMetadata.DefaultUpdateSourceTrigger" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte von der <xref:System.Windows.Data.MultiBinding.Mode%2A> und <xref:System.Windows.Data.MultiBinding.UpdateSourceTrigger%2A> Eigenschaften zu bestimmen, die Funktionalität von der <xref:System.Windows.Data.MultiBinding> und als Standardwerte für alle Bindungen in der Auflistung verwendet werden, es sei denn, eine individuelle Bindung dieser Eigenschaften überschreibt. Z. B. wenn die <xref:System.Windows.Data.MultiBinding.Mode%2A> Eigenschaft auf die <xref:System.Windows.Data.MultiBinding> -Objekts festgelegt wird, um <xref:System.Windows.Data.BindingMode.TwoWay>, und klicken Sie dann alle Bindungen in der Auflistung betrachtet werden <xref:System.Windows.Data.BindingMode.TwoWay> , wenn Sie ein anderes festgelegt <xref:System.Windows.Data.MultiBinding.Mode%2A> Wert auf eine der Bindungen explizit. Weitere Informationen finden Sie unter der <xref:System.Windows.Data.Binding.Mode%2A?displayProperty=nameWithType> und <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A?displayProperty=nameWithType> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatesOnDataErrors">
+      <MemberSignature Language="C#" Value="public bool ValidatesOnDataErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidatesOnDataErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.MultiBinding.ValidatesOnDataErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob enthalten die <see cref="T:System.Windows.Controls.DataErrorValidationRule" />.</summary>
+        <value>
+          <see langword="true" />enthalten die <see cref="T:System.Windows.Controls.DataErrorValidationRule" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft stellt eine Alternative zur Verwendung der <xref:System.Windows.Controls.DataErrorValidationRule> Element explizit. Die <xref:System.Windows.Controls.DataErrorValidationRule> ist eine integrierte Validierungsregel, die auf Fehler geprüft wird, die vom ausgelöst werden die <xref:System.ComponentModel.IDataErrorInfo> Implementierung des Quellobjekts. Wenn ein Fehler ausgelöst wird, erstellt das Bindungsmodul einen <xref:System.Windows.Controls.ValidationError> mit dem Fehler und fügt es der <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> Auflistung von das gebundene Element. Das Fehlen eines Fehlers löscht dieses Feedbacks Überprüfung, es sei denn, eine andere Regel löst ein Überprüfungsproblem aus.  
+  
+ Weitere Informationen zu den Überprüfungsprozess für <xref:System.Windows.Data.MultiBinding> anzuzeigen, die <xref:System.Windows.Data.MultiBinding.ValidationRules%2A> Eigenschaft.  
+  
+ <xref:System.Windows.Data.MultiBinding.ValidatesOnDataErrors%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatesOnExceptions">
+      <MemberSignature Language="C#" Value="public bool ValidatesOnExceptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidatesOnExceptions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.MultiBinding.ValidatesOnExceptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob enthalten die <see cref="T:System.Windows.Controls.ExceptionValidationRule" />.</summary>
+        <value>
+          <see langword="true" />enthalten die <see cref="T:System.Windows.Controls.ExceptionValidationRule" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft stellt eine Alternative zur Verwendung der <xref:System.Windows.Controls.ExceptionValidationRule> Element explizit. Die <xref:System.Windows.Controls.ExceptionValidationRule> ist eine integrierte Validierungsregel, die auf Ausnahmen prüft, die während der Aktualisierung der Source-Eigenschaft ausgelöst werden. Wenn eine Ausnahme ausgelöst wird, erstellt das Bindungsmodul einen <xref:System.Windows.Controls.ValidationError> mit der Ausnahme und fügt es der <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> Auflistung von das gebundene Element. Das Fehlen eines Fehlers löscht dieses Feedbacks Überprüfung, es sei denn, eine andere Regel löst ein Überprüfungsproblem aus.  
+  
+ Weitere Informationen zu den Überprüfungsprozess für <xref:System.Windows.Data.MultiBinding> anzuzeigen, die <xref:System.Windows.Data.MultiBinding.ValidationRules%2A> Eigenschaft.  
+  
+ <xref:System.Windows.Data.MultiBinding.ValidatesOnExceptions%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatesOnNotifyDataErrors">
+      <MemberSignature Language="C#" Value="public bool ValidatesOnNotifyDataErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidatesOnNotifyDataErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.MultiBinding.ValidatesOnNotifyDataErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob enthalten die <see cref="T:System.Windows.Controls.NotifyDataErrorValidationRule" />.</summary>
+        <value>
+          <see langword="true" />enthalten die <see cref="T:System.Windows.Controls.NotifyDataErrorValidationRule" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Data.MultiBinding.ValidatesOnNotifyDataErrors%2A> ist `true`, die Bindung überprüft und berichtet über Fehler, die von einer Datenquelle ausgelöst werden, die implementiert <xref:System.ComponentModel.INotifyDataErrorInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationRules">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Windows.Controls.ValidationRule&gt; ValidationRules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Windows.Controls.ValidationRule&gt; ValidationRules" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.MultiBinding.ValidationRules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Windows.Controls.ValidationRule&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der <see cref="T:System.Windows.Controls.ValidationRule" /> Objekte für diese Instanz von <see cref="T:System.Windows.Data.MultiBinding" />.</summary>
+        <value>Die Auflistung der <see cref="T:System.Windows.Controls.ValidationRule" /> Objekte für diese Instanz von <see cref="T:System.Windows.Data.MultiBinding" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können Validierungsregeln für beide Festlegen der <xref:System.Windows.Data.MultiBinding> -Objekt und die einzelnen <xref:System.Windows.Data.Binding> Objekte in der <xref:System.Windows.Data.MultiBinding> Objekt. Wertet das Bindungsmodul die <xref:System.Windows.Data.MultiBinding.ValidationRules%2A> auf die <xref:System.Windows.Data.MultiBinding> Objekt, wenn ein Wert vom Bindungsziel-Eigenschaft, verschiebt der <xref:System.Windows.Data.IMultiValueConverter> Objekt. Danach, wenn ein Wert vom Konverter, an die Bindungsquelleigenschaft von eine individuelle Bindung verschoben das Bindungsmodul wertet die <xref:System.Windows.Data.Binding.ValidationRules%2A> darauf <xref:System.Windows.Data.Binding> Objekt.  
+  
+ Weitere Informationen zu den Überprüfungsprozess und wie bei Ungültigkeit visuelles Feedback bereitstellen, finden Sie unter "Data Validation" in [Übersicht über Datenbindung](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+> [!NOTE]
+>  Diese Eigenschaft kann festgelegt werden, [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] nur über die dargestellte Syntax, oder durch den Zugriff auf das Sammlungsobjekt und über verschiedene Methoden, z. B. `Add`. Die Zugriff auf das Auflistungsobjekt verwendete Eigenschaft ist schreibgeschützt, während der die Auflistung selbst Lese-/ Schreibzugriff ist.  
+  
+<a name="xamlPropertyElementUsage_ValidationRules"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.ValidationRules>  
+    oneOrMoreValidationRules  
+  </object.ValidationRules>  
+</object>  
+```  
+  
+<a name="xamlValues_ValidationRules"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *oneOrMoreValidationRules*  
+ Eine oder mehrere <xref:System.Windows.Controls.ValidationRule> Objekte. Können Sie die <xref:System.Windows.Controls.ExceptionValidationRule> Klasse oder eigene benutzerdefinierte Regeln erstellen, durch die Erstellung von Unterklassen von der <xref:System.Windows.Controls.ValidationRule> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

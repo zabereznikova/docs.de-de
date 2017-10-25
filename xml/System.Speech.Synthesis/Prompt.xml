@@ -1,0 +1,202 @@
+<Type Name="Prompt" FullName="System.Speech.Synthesis.Prompt">
+  <TypeSignature Language="C#" Value="public class Prompt" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Prompt extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.Prompt" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{_text}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Informationen dazu, was, Text oder eine Audiodatei von gerendert werden kann die <see cref="T:System.Speech.Synthesis.SpeechSynthesizer" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Speech.Synthesis.Prompt> Objekt kann nur-Text-Text mit Markup Language oder audio-Dateien enthalten.  
+  
+ Ein leeres <xref:System.Speech.Synthesis.Prompt> -Objekt wird erstellt, wobei jede neue Instanz von <xref:System.Speech.Synthesis.PromptBuilder>.  Die <xref:System.Speech.Synthesis.PromptBuilder> Klasse enthält Methoden zum Hinzufügen von Inhalt, einschließlich Text, SSML-Markup, Lesezeichen und aufgezeichnete audio-Dateien (z. B. wav-Dateien), auf die leere <xref:System.Speech.Synthesis.Prompt> -Objekt, das sie enthält. Anwendungen verwenden normalerweise <xref:System.Speech.Synthesis.PromptBuilder>, anstelle eines <xref:System.Speech.Synthesis.Prompt> Objekt, das Sie Abfragen erstellen und füllen diese mit Inhalt.  
+  
+ Zum Generieren von Sprache aus dem Inhalt einer <xref:System.Speech.Synthesis.Prompt> -Objekts die <xref:System.Speech.Synthesis.SpeechSynthesizer.Speak%2A> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Prompt (System.Speech.Synthesis.PromptBuilder promptBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Speech.Synthesis.PromptBuilder promptBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.Prompt.#ctor(System.Speech.Synthesis.PromptBuilder)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="promptBuilder" Type="System.Speech.Synthesis.PromptBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="promptBuilder">Der zu sprechende Inhalt.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Speech.Synthesis.Prompt" /> -Klasse aus einem <see cref="T:System.Speech.Synthesis.PromptBuilder" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Prompt (string textToSpeak);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string textToSpeak) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.Prompt.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="textToSpeak" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="textToSpeak">Der zu sprechende Text.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Speech.Synthesis.Prompt" /> -Klasse und gibt an, die zu sprechenden Text.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Speech.Synthesis.Prompt> Objekt aus einer Zeichenfolge und übergibt das Objekt als Argument an die <xref:System.Speech.Synthesis.SpeechSynthesizer.Speak%2A> Methode.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Create a prompt from a string.  
+        Prompt color = new Prompt("What is your favorite color?");  
+  
+        // Speak the contents of the prompt synchronously.  
+        synth.Speak(color);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Prompt (string textToSpeak, System.Speech.Synthesis.SynthesisTextFormat media);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string textToSpeak, valuetype System.Speech.Synthesis.SynthesisTextFormat media) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.Prompt.#ctor(System.String,System.Speech.Synthesis.SynthesisTextFormat)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="textToSpeak" Type="System.String" />
+        <Parameter Name="media" Type="System.Speech.Synthesis.SynthesisTextFormat" />
+      </Parameters>
+      <Docs>
+        <param name="textToSpeak">Der zu sprechende Text.</param>
+        <param name="media">Ein Wert, der das Format des Texts angibt.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Speech.Synthesis.Prompt" /> -Klasse und gibt an, die zu sprechenden Text und gibt an, ob das Format nur-Text oder Markupsprache ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Den Inhalt der `textToSpeak` -Parameter enthalten muss eine `speak` Element und entsprechen der [Speech Sprachsynthese Markup Language (SSML) Version 1.0](http://go.microsoft.com/fwlink/?LinkId=201763). Weitere Informationen finden Sie unter [Spracherkennung Sprachsynthese Markup Language Reference](http://msdn.microsoft.com/en-us/0c51279e-84d2-4f73-a924-8832039abf94).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Zeichenfolge, die SSML-Markup enthält, erstellt eine <xref:System.Speech.Synthesis.Prompt> Objekt aus der Zeichenfolge und spricht aufgefordert.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Build an SSML prompt in a string.  
+        string fileName = "<speak version=\"1.0\" ";  
+        fileName += "xmlns=\"http://www.w3.org/2001/10/synthesis\" ";  
+        fileName += "xml:lang=\"en-US\">";  
+        fileName += "Say a name for the new file <mark name=\"fileName\" />.";  
+        fileName += "</speak>";  
+  
+        // Create a Prompt object from the string.  
+        Prompt ssmlFile = new Prompt(fileName, SynthesisTextFormat.Ssml);  
+  
+        // Speak the contents of the SSML prompt.  
+        synth.Speak(ssmlFile);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCompleted">
+      <MemberSignature Language="C#" Value="public bool IsCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompleted" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.Prompt.IsCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob die <see cref="T:System.Speech.Synthesis.Prompt" /> hat die Wiedergabe beendet wurde.</summary>
+        <value>Gibt <see langword="true" /> , wenn die Eingabeaufforderung abgeschlossen wurde; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

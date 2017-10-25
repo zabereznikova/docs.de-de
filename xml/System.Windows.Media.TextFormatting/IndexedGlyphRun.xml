@@ -1,0 +1,87 @@
+<Type Name="IndexedGlyphRun" FullName="System.Windows.Media.TextFormatting.IndexedGlyphRun">
+  <TypeSignature Language="C#" Value="public sealed class IndexedGlyphRun" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit IndexedGlyphRun extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.IndexedGlyphRun" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Text des Datenbankmoduls es Clients ermöglicht, ordnen Sie Zeichenindex einer Text-Quelle in die entsprechende <see cref="T:System.Windows.Media.GlyphRun" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.TextFormatting.IndexedGlyphRun> Objekt kann ein Text-Modul Client Glyphe Informationen für ein Textzeichen Quelle, z. B. das Symbol Cluster Kartentyp, Glyphe Indizes und Symbolschriftart zu erhalten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GlyphRun">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.GlyphRun GlyphRun { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.GlyphRun GlyphRun" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.IndexedGlyphRun.GlyphRun" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GlyphRun</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Media.GlyphRun" /> , entspricht die <see cref="T:System.Windows.Media.TextFormatting.IndexedGlyphRun" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.GlyphRun" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextSourceCharacterIndex">
+      <MemberSignature Language="C#" Value="public int TextSourceCharacterIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TextSourceCharacterIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.IndexedGlyphRun.TextSourceCharacterIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Text Zeichen Quellindex, die auf den Anfang des entspricht der <see cref="T:System.Windows.Media.GlyphRun" />.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der den Text Zeichen Quellindex darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextSourceLength">
+      <MemberSignature Language="C#" Value="public int TextSourceLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TextSourceLength" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.IndexedGlyphRun.TextSourceLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Quelle-Zeichenlänge, die entspricht der <see cref="T:System.Windows.Media.TextFormatting.IndexedGlyphRun" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der die Länge des quellzeichensatzes Text darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Windows.Media.TextFormatting.IndexedGlyphRun.TextSourceLength%2A> Eigenschaft ist nicht unbedingt gleich der Anzahl der Zeichen des entsprechenden <xref:System.Windows.Media.GlyphRun>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

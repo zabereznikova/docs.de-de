@@ -1,0 +1,149 @@
+<Type Name="DataGridPageChangedEventArgs" FullName="System.Web.UI.WebControls.DataGridPageChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridPageChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridPageChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataGridPageChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Web.UI.WebControls.DataGrid.PageIndexChanged" /> -Ereignis für die <see cref="T:System.Web.UI.WebControls.DataGrid" /> Steuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataGrid.PageIndexChanged> Ereignis wird ausgelöst, wenn auf eine Schaltfläche in das Seitenelement für die Auswahl des der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement geklickt wird.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.DataGridPageChangedEventArgs>, finden Sie unter der <xref:System.Web.UI.WebControls.DataGridPageChangedEventArgs.%23ctor%2A> Konstruktor.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angegeben und code für die <xref:System.Web.UI.WebControls.DataGrid.PageIndexChanged> Ereignis. Es zeigt Seiten auf der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement in Schritten von 10-Element.  
+  
+ [!code-aspx-csharp[DataGridAllowPaging#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridAllowPaging/CS/datagridallowpagingcs.aspx#1)]
+ [!code-aspx-vb[DataGridAllowPaging#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridAllowPaging/VB/datagridallowpagingvb.aspx#1)]  
+  
+ [!code-aspx-csharp[PageIndexChanged#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PageIndexChanged/CS/datagridpageindexchangedcs.aspx#1)]
+ [!code-aspx-vb[PageIndexChanged#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PageIndexChanged/VB/datagridpageindexchangedvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridPageChangedEventArgs (object commandSource, int newPageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object commandSource, int32 newPageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridPageChangedEventArgs.#ctor(System.Object,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandSource" Type="System.Object" />
+        <Parameter Name="newPageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="commandSource">Die Quelle des Befehls.</param>
+        <param name="newPageIndex">Der Index des ausgewählten vom Benutzer über das Seitenelement für die Auswahl der Seite der <see cref="T:System.Web.UI.WebControls.DataGrid" /> Steuerelement.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DataGridPageChangedEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.DataGridPageChangedEventArgs> Klasse.  
+  
+ Wenn eine Instanz von <xref:System.Web.UI.WebControls.DataGridCommandEventArgs> wird erstellt durch einen Aufruf an diesen Konstruktor, werden die folgenden Eigenschaften auf den angegebenen Werten initialisiert.  
+  
+|Eigenschaften|Anfangswert|  
+|----------------|-------------------|  
+|<xref:System.Web.UI.WebControls.DataGridPageChangedEventArgs.CommandSource%2A>|Die `commandSource` Parameter.|  
+|<xref:System.Web.UI.WebControls.DataGridPageChangedEventArgs.NewPageIndex%2A>|Die `newPageIndex` Parameter.|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen und initialisieren eine neue Instanz der dem <xref:System.Web.UI.WebControls.DataGridPageChangedEventArgs> Klasse.  
+  
+ [!code-csharp[Classic DataGridPageChangedEventArgs.DataGridPageChangedEventArgs Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridPageChangedEventArgs.DataGridPageChangedEventArgs Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridPageChangedEventArgs.DataGridPageChangedEventArgs Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridPageChangedEventArgs.DataGridPageChangedEventArgs Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandSource">
+      <MemberSignature Language="C#" Value="public object CommandSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridPageChangedEventArgs.CommandSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Quelle des Befehls ab.</summary>
+        <value>Die Quelle des Befehls.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridPageChangedEventArgs.CommandSource%2A> Eigenschaft, um die Quelle des Befehls zu bestimmen, die das Ereignis ausgelöst hat. Da dieses Ereignis ausgelöst wird, nur, wenn auf eine Schaltfläche in das Seitenelement für die Auswahl von der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement geklickt wird, wird die zurückgegebene Quelle ist ein <xref:System.Web.UI.WebControls.DataGridItem> Objekt, das das Seitenelement für die Auswahl darstellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridPageChangedEventArgs.CommandSource%2A> Eigenschaft, um die Befehlsquelle programmgesteuert zu steuern, die das Ereignis auslöst.  
+  
+ [!code-aspx-csharp[DataGridAllowPaging#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridAllowPaging/CS/datagridallowpagingcs.aspx#1)]
+ [!code-aspx-vb[DataGridAllowPaging#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridAllowPaging/VB/datagridallowpagingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewPageIndex">
+      <MemberSignature Language="C#" Value="public int NewPageIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewPageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridPageChangedEventArgs.NewPageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des ausgewählten vom Benutzer auf das Seitenelement für die Auswahl der Seite der <see cref="T:System.Web.UI.WebControls.DataGrid" /> Steuerelement.</summary>
+        <value>Der Index des ausgewählten vom Benutzer auf das Seitenelement für die Auswahl der Seite der <see cref="T:System.Web.UI.WebControls.DataGrid" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridPageChangedEventArgs.NewPageIndex%2A> -Eigenschaft können Sie den Index des vom Benutzer auf das Seitenelement für die Auswahl des ausgewählten Seite bestimmen die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. Dieser Wert wird häufig verwendet, zum Festlegen der <xref:System.Web.UI.WebControls.DataGrid.CurrentPageIndex%2A> Eigenschaft der <xref:System.Web.UI.WebControls.DataGrid> -Steuerelement zum Anzeigen von widergespiegelt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridPageChangedEventArgs.NewPageIndex%2A> -Eigenschaft können Sie den Index des vom Benutzer auf das Seitenelement für die Auswahl des ausgewählten Seite bestimmen die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. Dieser Wert dient dann Festlegen der <xref:System.Web.UI.WebControls.DataGrid.CurrentPageIndex%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.DataGrid> -Steuerelement zum Anzeigen von widergespiegelt.  
+  
+ [!code-aspx-csharp[DataGridAllowPaging#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridAllowPaging/CS/datagridallowpagingcs.aspx#1)]
+ [!code-aspx-vb[DataGridAllowPaging#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridAllowPaging/VB/datagridallowpagingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

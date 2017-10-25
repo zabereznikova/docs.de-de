@@ -1,0 +1,131 @@
+<Type Name="NameScopePropertyAttribute" FullName="System.Windows.Markup.NameScopePropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class NameScopePropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NameScopePropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.NameScopePropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt eine Eigenschaft der zugeordneten Klasse an, die den Wert des XAML-Namescopes bereitstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem typischen Objektmodell / Anwendung Modell Kombination, in dem XAML wird verwendet, die Klassen, die als einen XAML-Namensbereich verwendet werden, werden die Klassen, die in der Regel als Stammelemente verwendet werden, oder, die eine Seite Metapher unterstützen. Diese Klassen implementieren, im allgemeinen <xref:System.Windows.Markup.INameScope> und die Verwendung von XAML-Namensbereich entspricht, in das Stammverzeichnis von normalen Verhaltens einer XAML-Verarbeitung im Kontext von einem Framework Programmiermodell und Anwendungsmodell erstellt.  
+  
+ Wenn <xref:System.Windows.Markup.NameScopePropertyAttribute> wird verwendet, die Verwendung von XAML-Namensbereich-Eigenschaftswert muss ein Objekt sein, die implementiert <xref:System.Windows.Markup.INameScope> und enthält die tatsächliche Verwendung von XAML-Namensbereich und sein Verhalten.  
+  
+ Es gibt zwei Formen für dieses Attribut: nur Eigenschaftsname oder Typ- und Eigenschaftennamens. Die letztgenannte Form sollte nur für Fälle verwendet werden, wobei die Eigenschaft, die den XAML-Namensbereich enthält eine anfügbaren Members ist. Das angefügte Member Verfahren hat den Vorteil, dass Dienstklassen ein XAML-Namensbereich Konzept implementieren können, die mehrere verschiedene Objekttypen unterstützen können. Dann müssen diese Objekttypen nicht explizit im klassenvererbung verknüpft sein.  
+  
+ In früheren Versionen von .NET Framework war diese Klasse in der WPF-spezifischen Assembly WindowsBase. In [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.NameScopePropertyAttribute> befindet sich in der System.Xaml-Assembly. Weitere Informationen finden Sie unter [aus WPF zu System.Xaml migrierte Typen](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
+ In WPF ist dieses Attribut angewendet, um nur einen einzigen Typ <xref:System.Windows.DependencyObject>. In diesem Fall ist die attributierte Eigenschaft die Dienstklasse <xref:System.Windows.NameScope> und dessen <xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType> -Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NameScopePropertyAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.NameScopePropertyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Eigenschaft des Attributtyps, der den XAML-Namensbereich bereitstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.NameScopePropertyAttribute" />-Klasse mit dem angegebenen Namen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NameScopePropertyAttribute (string name, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.NameScopePropertyAttribute.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des anfügbaren Members, der den XAML-Namensbereich bereitstellt.</param>
+        <param name="type">Der Besitzertyp des anfügbaren Members, der den XAML-Namensbereich bereitstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.NameScopePropertyAttribute" />-Klasse mit dem angegebenen Namen und Typ.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.NameScopePropertyAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Eigenschaft ab, die den XAML-Namensbereich bereitstellt.</summary>
+        <value>Ein Zeichenfolgenwert, bei dem es sich um den Namen der Eigenschaft handelt, die den XAML-Namensbereich bereitstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Bedeutung der <xref:System.Windows.Markup.NameScopePropertyAttribute.Name%2A> davon abhängig, ob <xref:System.Windows.Markup.NameScopePropertyAttribute.Type%2A> festgelegt ist. Wenn <xref:System.Windows.Markup.NameScopePropertyAttribute.Type%2A> null ist, <xref:System.Windows.Markup.NameScopePropertyAttribute.Name%2A> verweist auf eine Eigenschaft für den Typ, der gerade mit Attributen versehen. Wenn <xref:System.Windows.Markup.NameScopePropertyAttribute.Type%2A> einen Wert enthält, klicken Sie dann <xref:System.Windows.Markup.NameScopePropertyAttribute.Name%2A> verweist auf eine Eigenschaft für das angezeigte <xref:System.Windows.Markup.NameScopePropertyAttribute.Type%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.NameScopePropertyAttribute.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Besitzertyp der angefügten Eigenschaft, die Unterstützung für den XAML-Namescape bietet.</summary>
+        <value>Ein <see cref="T:System.Type" /> Wert, der den Besitzertyp der angefügten Eigenschaft, die die Unterstützung für XAML-Namensbereich bereitstellt oder <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nur relevant, wenn die Verwendung von XAML-Namensbereich implementierende-Eigenschaft einer anfügbaren Members ist, in diesem Fall Besitzertyp des anfügbaren Members ist dies. Andernfalls kann dieser Wert null sein. Wenn Sie allgemeine reflektionsbasierte Logik, die eine Namensbereich-Eigenschaft den Typ definieren, in allen Fällen meldet benötigen, können Sie den Typ, in dem das Attribut angewendet wird, sobald Sie auftreten, ersetzen `null` für diese Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

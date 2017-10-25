@@ -1,0 +1,255 @@
+<Type Name="RightsManagementInformation" FullName="System.IO.Packaging.RightsManagementInformation">
+  <TypeSignature Language="C#" Value="public class RightsManagementInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RightsManagementInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.RightsManagementInformation" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Informationen Digital Rights Management (DRM), die in gespeichert ist ein <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.RightsManagementInformation>ermöglicht den Zugriff auf die <xref:System.Security.RightsManagement.PublishLicense> und <xref:System.Security.RightsManagement.UseLicense> in die Zugriffsrechte einer gespeicherte Daten verwaltet geschützten <xref:System.IO.Packaging.Package>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Initialisieren einer <xref:System.IO.Packaging.RightsManagementInformation> Objekt für die Verschlüsselung.  
+  
+ [!code-csharp[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackagePublish/CSharp/Window1.xaml.cs#rmpkgpubencrypt)]
+ [!code-vb[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackagePublish/visualbasic/window1.xaml.vb#rmpkgpubencrypt)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Initialisieren einer <xref:System.IO.Packaging.RightsManagementInformation> Objekt für die Entschlüsselung.  
+  
+ [!code-csharp[RightsManagedPackageViewer#RmPkgViewOpenPkg](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackageViewer/CSharp/Window1.xaml.cs#rmpkgviewopenpkg)]
+ [!code-vb[RightsManagedPackageViewer#RmPkgViewOpenPkg](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackageViewer/visualbasic/window1.xaml.vb#rmpkgviewopenpkg)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CryptoProvider">
+      <MemberSignature Language="C#" Value="public System.Security.RightsManagement.CryptoProvider CryptoProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.RightsManagement.CryptoProvider CryptoProvider" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.RightsManagementInformation.CryptoProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.CryptoProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Security.RightsManagement.CryptoProvider" /> für den Zugriff auf das Paket des Rights Management-Datenstrom verschlüsselt.</summary>
+        <value>Die <see cref="T:System.Security.RightsManagement.CryptoProvider" /> für den Zugriff auf die Rights Management-Informationen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird das Festlegen der <xref:System.IO.Packaging.RightsManagementInformation.CryptoProvider%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[RightsManagedPackageViewer#RmPkgViewBind](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackageViewer/CSharp/Window1.xaml.cs#rmpkgviewbind)]
+ [!code-vb[RightsManagedPackageViewer#RmPkgViewBind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackageViewer/visualbasic/window1.xaml.vb#rmpkgviewbind)]  
+  
+ Im folgenden Beispiel wird der Zugriff auf die <xref:System.IO.Packaging.RightsManagementInformation.CryptoProvider%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[RightsManagedPackageViewer#RmPkgViewDecrypt](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackageViewer/CSharp/Window1.xaml.cs#rmpkgviewdecrypt)]
+ [!code-vb[RightsManagedPackageViewer#RmPkgViewDecrypt](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackageViewer/visualbasic/window1.xaml.vb#rmpkgviewdecrypt)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteUseLicense">
+      <MemberSignature Language="C#" Value="public void DeleteUseLicense (System.Security.RightsManagement.ContentUser userKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteUseLicense(class System.Security.RightsManagement.ContentUser userKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.RightsManagementInformation.DeleteUseLicense(System.Security.RightsManagement.ContentUser)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userKey" Type="System.Security.RightsManagement.ContentUser" />
+      </Parameters>
+      <Docs>
+        <param name="userKey">Der Benutzer die <see cref="T:System.Security.RightsManagement.UseLicense" /> gelöscht werden soll.</param>
+        <summary>Löscht die <see cref="T:System.Security.RightsManagement.UseLicense" /> für einen angegebenen Benutzer aus dem verschlüsselten Rights Management-Datenstream.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmbeddedUseLicenses">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Security.RightsManagement.ContentUser,System.Security.RightsManagement.UseLicense&gt; GetEmbeddedUseLicenses ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IDictionary`2&lt;class System.Security.RightsManagement.ContentUser, class System.Security.RightsManagement.UseLicense&gt; GetEmbeddedUseLicenses() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.RightsManagementInformation.GetEmbeddedUseLicenses" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Security.RightsManagement.ContentUser,System.Security.RightsManagement.UseLicense&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Dictionary-Auflistung des Benutzers und <see cref="T:System.Security.RightsManagement.UseLicense" /> Schlüssel/Wert-Paare aus den verschlüsselten Rights Management-Datenstrom.</summary>
+        <returns>Eine Auflistung benutzerdefinierter und <see cref="T:System.Security.RightsManagement.UseLicense" /> Schlüssel/Wert-Paaren, die die rechteverwaltung enthalten sind geschützt Paket.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.RightsManagementInformation.GetEmbeddedUseLicenses%2A>Gibt nur die Nutzungslizenzen, die derzeit im Paket eingebettet sind zurück.  Es ist keine andere Zwecke enthalten, die Lizenzen, die die Anwendung aus einem Rechteverwaltungsserver jedoch separat erworben haben möglicherweise noch nicht in das Paket eingebettet sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPublishLicense">
+      <MemberSignature Language="C#" Value="public System.Security.RightsManagement.PublishLicense LoadPublishLicense ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.RightsManagement.PublishLicense LoadPublishLicense() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.RightsManagementInformation.LoadPublishLicense" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.PublishLicense</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den eingebetteten <see cref="T:System.Security.RightsManagement.PublishLicense" /> aus dem verschlüsselten Rights Management-Datenstream.</summary>
+        <returns>Der eingebettete <see cref="T:System.Security.RightsManagement.PublishLicense" />; oder <see langword="null" />, wenn das Paket keine <see cref="T:System.Security.RightsManagement.PublishLicense" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.IO.Packaging.RightsManagementInformation.LoadPublishLicense%2A>-Methode gezeigt.  
+  
+ [!code-csharp[RightsManagedPackageViewer#RmPkgViewOpenPkg](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackageViewer/CSharp/Window1.xaml.cs#rmpkgviewopenpkg)]
+ [!code-vb[RightsManagedPackageViewer#RmPkgViewOpenPkg](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackageViewer/visualbasic/window1.xaml.vb#rmpkgviewopenpkg)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.FileFormatException">Die Rights Management-Informationen in diesem Paket kann nicht von der aktuellen Version dieser Klasse nicht gelesen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadUseLicense">
+      <MemberSignature Language="C#" Value="public System.Security.RightsManagement.UseLicense LoadUseLicense (System.Security.RightsManagement.ContentUser userKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.RightsManagement.UseLicense LoadUseLicense(class System.Security.RightsManagement.ContentUser userKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.RightsManagementInformation.LoadUseLicense(System.Security.RightsManagement.ContentUser)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.UseLicense</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userKey" Type="System.Security.RightsManagement.ContentUser" />
+      </Parameters>
+      <Docs>
+        <param name="userKey">Der Benutzer oder eine Benutzergruppe, zurückzugebenden der <see cref="T:System.Security.RightsManagement.UseLicense" /> für.</param>
+        <summary>Gibt ein angegebenen Benutzer des eingebetteten <see cref="T:System.Security.RightsManagement.UseLicense" /> aus dem verschlüsselten Rights Management-Datenstream.</summary>
+        <returns>Die <see cref="T:System.Security.RightsManagement.UseLicense" /> für den angegebenen Benutzer oder <see langword="null" />, wenn das Paket keine <see cref="T:System.Security.RightsManagement.UseLicense" /> , entspricht der angegebenen <paramref name="userKey" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.IO.Packaging.RightsManagementInformation.LoadUseLicense%2A>-Methode gezeigt.  
+  
+ [!code-csharp[RightsManagedPackageViewer#RmPkgViewOpenPkg](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackageViewer/CSharp/Window1.xaml.cs#rmpkgviewopenpkg)]
+ [!code-vb[RightsManagedPackageViewer#RmPkgViewOpenPkg](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackageViewer/visualbasic/window1.xaml.vb#rmpkgviewopenpkg)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="userKey" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileFormatException">Die Rights Management-Informationen in diesem Paket kann nicht von der aktuellen Version dieser Klasse nicht gelesen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SavePublishLicense">
+      <MemberSignature Language="C#" Value="public void SavePublishLicense (System.Security.RightsManagement.PublishLicense publishLicense);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SavePublishLicense(class System.Security.RightsManagement.PublishLicense publishLicense) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.RightsManagementInformation.SavePublishLicense(System.Security.RightsManagement.PublishLicense)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="publishLicense" Type="System.Security.RightsManagement.PublishLicense" />
+      </Parameters>
+      <Docs>
+        <param name="publishLicense">Die Veröffentlichungslizenz, gespeichert und in das Paket eingebettet.</param>
+        <summary>Speichert einen bestimmten <see cref="T:System.Security.RightsManagement.PublishLicense" /> dem verschlüsselten Rights Management-Datenstrom.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede <xref:System.IO.Packaging.EncryptedPackageEnvelope> darf nur eine <xref:System.Security.RightsManagement.PublishLicense>.  Jeder Aufruf von <xref:System.IO.Packaging.RightsManagementInformation.SavePublishLicense%2A> überschreibt alle vorherigen <xref:System.Security.RightsManagement.PublishLicense> enthalten sind, der <xref:System.IO.Packaging.EncryptedPackageEnvelope>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="publishLicense" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileFormatException">Die Rights Management-Informationen in diesem Paket kann nicht von der aktuellen Version dieser Klasse nicht gelesen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveUseLicense">
+      <MemberSignature Language="C#" Value="public void SaveUseLicense (System.Security.RightsManagement.ContentUser userKey, System.Security.RightsManagement.UseLicense useLicense);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveUseLicense(class System.Security.RightsManagement.ContentUser userKey, class System.Security.RightsManagement.UseLicense useLicense) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.RightsManagementInformation.SaveUseLicense(System.Security.RightsManagement.ContentUser,System.Security.RightsManagement.UseLicense)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userKey" Type="System.Security.RightsManagement.ContentUser" />
+        <Parameter Name="useLicense" Type="System.Security.RightsManagement.UseLicense" />
+      </Parameters>
+      <Docs>
+        <param name="userKey">Der Benutzer die <see cref="T:System.Security.RightsManagement.UseLicense" />.</param>
+        <param name="useLicense">Die Lizenz, gespeichert und in das Paket eingebettet.</param>
+        <summary>Speichert einen bestimmten <see cref="T:System.Security.RightsManagement.UseLicense" /> für einen angegebenen Benutzer auf den verschlüsselten Rights Management-Datenstrom.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach der <xref:System.Security.RightsManagement.UseLicense> für der angegebene Benutzer gespeichert wurde, können sie durch Abrufen der <xref:System.IO.Packaging.RightsManagementInformation.LoadUseLicense%2A> Methode und aus der Auflistung zurückgegebenes <xref:System.IO.Packaging.RightsManagementInformation.GetEmbeddedUseLicenses%2A>.  
+  
+ Ein <xref:System.IO.Packaging.Package> können speichern die <xref:System.Security.RightsManagement.UseLicense> Informationen für mehrere Inhaltsbenutzer Rechte.  Jeder ContentUser kann höchstens eine haben <xref:System.Security.RightsManagement.UseLicense>.  Wenn <xref:System.IO.Packaging.RightsManagementInformation.SaveUseLicense%2A> wird aufgerufen, um ein neues speichern <xref:System.Security.RightsManagement.UseLicense> für eine <xref:System.Security.RightsManagement.ContentUser> , die bereits über eine <xref:System.Security.RightsManagement.UseLicense>, die vorherige Lizenz mit der neuen Lizenz, überschrieben werden.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie die Verwendung der <xref:System.IO.Packaging.RightsManagementInformation.SaveUseLicense%2A> Methode.  
+  
+ [!code-csharp[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackagePublish/CSharp/Window1.xaml.cs#rmpkgpubencrypt)]
+ [!code-vb[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackagePublish/visualbasic/window1.xaml.vb#rmpkgpubencrypt)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Entweder der <paramref name="userKey" />- oder der <paramref name="useLicense" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileFormatException">Die Rights Management-Informationen in diesem Paket kann nicht von der aktuellen Version dieser Klasse nicht gelesen werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

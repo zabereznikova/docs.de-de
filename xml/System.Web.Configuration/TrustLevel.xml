@@ -1,0 +1,156 @@
+<Type Name="TrustLevel" FullName="System.Web.Configuration.TrustLevel">
+  <TypeSignature Language="C#" Value="public sealed class TrustLevel : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TrustLevel extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.TrustLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Zuordnung von bestimmten Sicherheitsstufen zu benannten Richtliniendateien. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die Sicherheit Ihrer Web-Anwendung erweitern, indem Sie eigene benannte erstellen <xref:System.Web.Configuration.TrustLevel> Objekt, das eine angegebene Datei zugeordnet ist, die `policyFile` Attribut.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.TrustLevel> Typ.  
+  
+ [!code-csharp[System.Web.Configuration.TrustLevel#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TrustLevel/CS/trustlevel.cs#1)]
+ [!code-vb[System.Web.Configuration.TrustLevel#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TrustLevel/VB/trustlevel.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrustLevel (string name, string policyFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string policyFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TrustLevel.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="policyFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Eine benannte Sicherheitsstufe, die eine Datei mit der Richtlinie zugeordnet ist.</param>
+        <param name="policyFile">Die Konfigurationsdatei, die sicherheitsrichtlinieneinstellungen für die benannte Sicherheitsstufe enthält.</param>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Web.Configuration.TrustLevel" /> Klasse, die initialisiert wird, basierend auf den bereitgestellten Werten, die die Zuordnung von bestimmten Sicherheitsstufen zu definieren, mit dem Namen Richtliniendateien.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.TrustLevel.%23ctor%2A> Konstruktor erstellt ein <xref:System.Web.Configuration.TrustLevel> Objekt mit den angegebenen Parametern.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.TrustLevel.%23ctor%2A> Konstruktor. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.TrustLevel> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.TrustLevel#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TrustLevel/CS/trustlevel.cs#4)]
+ [!code-vb[System.Web.Configuration.TrustLevel#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TrustLevel/VB/trustlevel.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustLevel.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert eine benannten Sicherheitsstufe, die eine Datei mit der Richtlinie zugeordnet ist.</summary>
+        <value>Die <see cref="P:System.Web.Configuration.TrustLevel.Name" /> , eine Datei mit der Richtlinie zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.TrustLevel.Name%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.TrustLevel> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.TrustLevel#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TrustLevel/CS/trustlevel.cs#3)]
+ [!code-vb[System.Web.Configuration.TrustLevel#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TrustLevel/VB/trustlevel.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PolicyFile">
+      <MemberSignature Language="C#" Value="public string PolicyFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PolicyFile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustLevel.PolicyFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("policyFile", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die konfigurationsdateireferenz, die Einstellungen der Sicherheitsrichtlinien für die benannte Sicherheitsstufe enthält.</summary>
+        <value>Die Konfigurationsdatei Referenz, die Einstellungen der Sicherheitsrichtlinien für die zugeordneten Sicherheitsstufe enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.TrustLevel.PolicyFile%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.TrustLevel> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.TrustLevel#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TrustLevel/CS/trustlevel.cs#5)]
+ [!code-vb[System.Web.Configuration.TrustLevel#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TrustLevel/VB/trustlevel.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustLevel.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

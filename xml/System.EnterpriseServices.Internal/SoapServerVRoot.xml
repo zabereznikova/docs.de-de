@@ -1,0 +1,178 @@
+<Type Name="SoapServerVRoot" FullName="System.EnterpriseServices.Internal.SoapServerVRoot">
+  <TypeSignature Language="C#" Value="public sealed class SoapServerVRoot : System.EnterpriseServices.Internal.ISoapServerVRoot" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapServerVRoot extends System.Object implements class System.EnterpriseServices.Internal.ISoapServerVRoot" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.Internal.SoapServerVRoot" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.EnterpriseServices.Internal.ISoapServerVRoot</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("CAA817CC-0C04-4d22-A05C-2B7E162F4E8F")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Veröffentlicht authentifizierte und verschlüsselte SOAP virtuellen Stammverzeichnisse auf Servern. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.Internal.SoapServerVRoot>wird intern von .NET Framework verwendet werden. Sie müssen nicht direkt im Code verwenden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapServerVRoot ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.SoapServerVRoot.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.EnterpriseServices.Internal.SoapServerVRoot" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateVirtualRootEx">
+      <MemberSignature Language="C#" Value="public void CreateVirtualRootEx (string rootWebServer, string inBaseUrl, string inVirtualRoot, string homePage, string discoFile, string secureSockets, string authentication, string operation, out string baseUrl, out string virtualRoot, out string physicalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateVirtualRootEx(string rootWebServer, string inBaseUrl, string inVirtualRoot, string homePage, string discoFile, string secureSockets, string authentication, string operation, [out] string&amp; baseUrl, [out] string&amp; virtualRoot, [out] string&amp; physicalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.SoapServerVRoot.CreateVirtualRootEx(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String@,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rootWebServer" Type="System.String" />
+        <Parameter Name="inBaseUrl" Type="System.String" />
+        <Parameter Name="inVirtualRoot" Type="System.String" />
+        <Parameter Name="homePage" Type="System.String" />
+        <Parameter Name="discoFile" Type="System.String" />
+        <Parameter Name="secureSockets" Type="System.String" />
+        <Parameter Name="authentication" Type="System.String" />
+        <Parameter Name="operation" Type="System.String" />
+        <Parameter Name="baseUrl" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="virtualRoot" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="physicalPath" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="rootWebServer">Der Stamm-Web-Server. Der Standardwert ist "IIS://localhost/W3SVC/1/ROOT".</param>
+        <param name="inBaseUrl">Die Basis-URL, die das virtuelle Stammverzeichnis enthält.</param>
+        <param name="inVirtualRoot">Der Name des virtuellen Stamms.</param>
+        <param name="homePage">Die URL der Homepage angezeigt.</param>
+        <param name="discoFile">
+          <see langword="true" />Wenn eine Standarddatei für die Ermittlung ist erstellt werden soll. <see langword="false" /> Wenn es keine Discovery-Datei werden soll. Wenn <see langword="false" /> und eine Default.disco-Datei vorhanden ist, wird die Datei wird gelöscht.</param>
+        <param name="secureSockets">
+          <see langword="true" />Wenn SSL-Verschlüsselung erforderlich ist. andernfalls <see langword="false" />.</param>
+        <param name="authentication">Geben Sie "Anonym" aus, wenn keine Authentifizierung (anonyme Benutzer) verwendet werden soll. Geben Sie andernfalls eine leere Zeichenfolge.</param>
+        <param name="operation">Nicht verwendet. Geben Sie <see langword="null" /> für diesen Parameter.</param>
+        <param name="baseUrl">Bei der Rückgabe dieser Methode enthält dieser Parameter die base-URL an.</param>
+        <param name="virtualRoot">Bei der Rückgabe dieser Methode enthält dieser Parameter den Namen des virtuellen Stammverzeichnisses an.</param>
+        <param name="physicalPath">Bei der Rückgabe dieser Methode enthält dieser Parameter die Datenträgeradresse des virtuellen Stammverzeichnisses an.</param>
+        <summary>Erstellt ein virtuelles Stammverzeichnis der SOAP-mit Sicherheitsoptionen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Ein Aufrufer in der Aufrufkette nicht über die Berechtigung zum Zugriff auf nicht verwalteten Code.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die SOAP-Hilfsprogramm ist nicht verfügbar.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteVirtualRootEx">
+      <MemberSignature Language="C#" Value="public void DeleteVirtualRootEx (string rootWebServer, string inBaseUrl, string inVirtualRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DeleteVirtualRootEx(string rootWebServer, string inBaseUrl, string inVirtualRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.SoapServerVRoot.DeleteVirtualRootEx(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rootWebServer" Type="System.String" />
+        <Parameter Name="inBaseUrl" Type="System.String" />
+        <Parameter Name="inVirtualRoot" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="rootWebServer">Der Stamm-Web-Server. Der Standardwert ist "IIS://localhost/W3SVC/1/ROOT".</param>
+        <param name="inBaseUrl">Die Basis-URL, die das virtuelle Stammverzeichnis enthält.</param>
+        <param name="inVirtualRoot">Der Name des virtuellen Stamms.</param>
+        <summary>Löscht ein virtuelles Stammverzeichnis. Nicht vollständig implementiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Funktionen zum Löschen eines virtuellen Stammverzeichnisses ist noch nicht verfügbar.  
+  
+> [!CAUTION]
+>  Diese Methode gibt zurück, ohne das Löschen des virtuellen Stammverzeichnisses.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Ein Aufrufer in der Aufrufkette nicht über die Berechtigung zum Zugriff auf nicht verwalteten Code.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die SOAP-Hilfsprogramm ist nicht verfügbar.</exception>
+        <exception cref="T:System.EnterpriseServices.ServicedComponentException">Der Aufruf zum Abrufen von Verzeichnis "System" ist fehlgeschlagen.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVirtualRootStatus">
+      <MemberSignature Language="C#" Value="public void GetVirtualRootStatus (string RootWebServer, string inBaseUrl, string inVirtualRoot, out string Exists, out string SSL, out string WindowsAuth, out string Anonymous, out string HomePage, out string DiscoFile, out string PhysicalPath, out string BaseUrl, out string VirtualRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetVirtualRootStatus(string RootWebServer, string inBaseUrl, string inVirtualRoot, [out] string&amp; Exists, [out] string&amp; SSL, [out] string&amp; WindowsAuth, [out] string&amp; Anonymous, [out] string&amp; HomePage, [out] string&amp; DiscoFile, [out] string&amp; PhysicalPath, [out] string&amp; BaseUrl, [out] string&amp; VirtualRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.SoapServerVRoot.GetVirtualRootStatus(System.String,System.String,System.String,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="RootWebServer" Type="System.String" />
+        <Parameter Name="inBaseUrl" Type="System.String" />
+        <Parameter Name="inVirtualRoot" Type="System.String" />
+        <Parameter Name="Exists" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="SSL" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="WindowsAuth" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="Anonymous" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="HomePage" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="DiscoFile" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="PhysicalPath" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="BaseUrl" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="VirtualRoot" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="RootWebServer">Der Stamm-Web-Server. Der Standardwert ist "IIS://localhost/W3SVC/1/ROOT".</param>
+        <param name="inBaseUrl">Die Basis-URL, die das virtuelle Stammverzeichnis enthält.</param>
+        <param name="inVirtualRoot">Der Name des virtuellen Stamms.</param>
+        <param name="Exists">Wenn diese Methode zurückgibt, wird dieser Parameter enthält einen <see langword="true" /> Wenn das virtuelle Verzeichnis vorhanden ist, andernfalls <see langword="false" />.</param>
+        <param name="SSL">Wenn diese Methode zurückgibt, wird dieser Parameter enthält einen <see langword="true" /> ist SSL-Verschlüsselung erforderlich ist, andernfalls <see langword="false" />.</param>
+        <param name="WindowsAuth">Wenn diese Methode zurückgibt, wird dieser Parameter enthält <see langword="true" /> Wenn Windows-Authentifizierung, andernfalls festgelegt ist <see langword="false" />.</param>
+        <param name="Anonymous">Wenn diese Methode zurückgibt, wird dieser Parameter enthält <see langword="true" /> , wenn keine Authentifizierung (anonyme Benutzer) festgelegt ist, andernfalls <see langword="false" />.</param>
+        <param name="HomePage">Wenn diese Methode zurückgibt, wird dieser Parameter enthält eine <see langword="true" /> Wenn das virtuelle Stammverzeichnis <see langword="EnableDefaultDoc" /> Eigenschaft festgelegt ist, andernfalls <see langword="false" />.</param>
+        <param name="DiscoFile">Wenn diese Methode zurückgibt, enthält dieser Parameter eine <see langword="true" /> Wenn Datei Default.disco vorhanden ist, andernfalls <see langword="false" />.</param>
+        <param name="PhysicalPath">Bei der Rückgabe dieser Methode enthält dieser Parameter die Datenträgeradresse des virtuellen Stammverzeichnisses an.</param>
+        <param name="BaseUrl">Bei der Rückgabe dieser Methode enthält dieser Parameter die base-URL an.</param>
+        <param name="VirtualRoot">Bei der Rückgabe dieser Methode enthält dieser Parameter den Namen des virtuellen Stammverzeichnisses an.</param>
+        <summary>Gibt den Sicherheitsstatus eines vorhandenen virtuellen SOAP-Stamms an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

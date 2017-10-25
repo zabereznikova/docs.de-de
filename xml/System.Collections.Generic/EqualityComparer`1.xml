@@ -1,0 +1,312 @@
+<Type Name="EqualityComparer&lt;T&gt;" FullName="System.Collections.Generic.EqualityComparer&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public abstract class EqualityComparer&lt;T&gt; : System.Collections.Generic.IEqualityComparer&lt;T&gt;, System.Collections.IEqualityComparer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit EqualityComparer`1&lt;T&gt; extends System.Object implements class System.Collections.Generic.IEqualityComparer`1&lt;!T&gt;, class System.Collections.IEqualityComparer" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.EqualityComparer`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEqualityComparer&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEqualityComparer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">Der Typ der zu vergleichenden Objekte.</typeparam>
+    <summary>Stellt eine Basisklasse für Implementierungen der <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> generische Schnittstelle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ableiten von dieser Klasse, die eine benutzerdefinierte Implementierung von der <xref:System.Collections.Generic.IEqualityComparer%601> generische Schnittstelle für die Verwendung mit Auflistung Klassen wie der <xref:System.Collections.Generic.Dictionary%602> generische Klasse oder mit Methoden wie z. B. <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>.  
+  
+ Die <xref:System.Collections.Generic.EqualityComparer%601.Default%2A> -Eigenschaft überprüft, ob der Typ `T` implementiert die <xref:System.IEquatable%601?displayProperty=nameWithType> generische Schnittstelle und gibt Sie zurück, wenn dies der Fall ist, ein <xref:System.Collections.Generic.EqualityComparer%601> , die die Implementierung der aufruft die <xref:System.IEquatable%601.Equals%2A?displayProperty=nameWithType> Methode. Andernfalls gibt es eine <xref:System.Collections.Generic.EqualityComparer%601>, vom bereitgestellten `T`.  
+  
+ Es wird empfohlen, dass beim Ableiten von der <xref:System.Collections.Generic.EqualityComparer%601> Klasse anstatt zu implementieren die <xref:System.Collections.Generic.IEqualityComparer%601> Schnittstelle, da die <xref:System.Collections.Generic.EqualityComparer%601> -Klasse Tests für die Verwendung von Gleichheit der <xref:System.IEquatable%601.Equals%2A?displayProperty=nameWithType> -Methode anstelle der <xref:System.Object.Equals%2A?displayProperty=nameWithType> Methode. Dies ist konsistent mit der `Contains`, `IndexOf`, `LastIndexOf`, und `Remove` Methoden die <xref:System.Collections.Generic.Dictionary%602> Klassen- und andere generischen Auflistungen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Dictionary-Auflistung von Objekten des Typs `Box` mit einen Gleichheitsvergleich. Zwei Felder als gleich betrachtet, wenn ihre Dimensionen identisch sind. Anschließend werden der Auflistung der Felder hinzugefügt.  
+  
+ Das Wörterbuch wird neu erstellt, mit einem Gleichheitsvergleich, der Gleichheit auf eine andere Weise definiert: zwei Felder werden als gleich betrachtet, wenn ihre Volumes identisch sind.  
+  
+ [!code-csharp[System.Collections.Generic.EqualityComparer#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.equalitycomparer/cs/program.cs#1)]
+ [!code-vb[System.Collections.Generic.EqualityComparer#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.equalitycomparer/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EqualityComparer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.EqualityComparer`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Collections.Generic.EqualityComparer`1" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.EqualityComparer&lt;T&gt; Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.EqualityComparer`1&lt;!T&gt; Default" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.EqualityComparer`1.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.EqualityComparer&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt für den vom generischen Argument angegebenen Typ einen Standardgleichheitsvergleich zurück.</summary>
+        <value>Die Standardinstanz von die <see cref="T:System.Collections.Generic.EqualityComparer`1" /> Klasse für den Typ <typeparamref name="T" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Collections.Generic.EqualityComparer%601.Default%2A> -Eigenschaft überprüft, ob der Typ `T` implementiert die <xref:System.IEquatable%601?displayProperty=nameWithType> Schnittstelle, und wenn dies der Fall ist, gibt eine <xref:System.Collections.Generic.EqualityComparer%601> , diese Implementierung verwendet. Zurückgegeben, andernfalls ein <xref:System.Collections.Generic.EqualityComparer%601> , verwendet das Überschreibungsverhalten für <xref:System.Object.Equals%2A?displayProperty=nameWithType> und <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> gebotenen `T`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt zwei wörterbuchsammlungen vom Typ `Box`. Beide Wörterbücher werden erstellt, mit dem Konstruktor, verwendet eine <xref:System.Collections.Generic.EqualityComparer%601> als Parameter.  
+  
+ Bestimmen die Gleichheit der Wörterbuchschlüssel, die `boxesByDim` Wörterbuch verwendet einen Gleichheitsvergleich (`BoxEqDimensions`), verwendet die Implementierung von der <xref:System.IEquatable%601.Equals%2A?displayProperty=nameWithType> Methode in der `Box` Klasse. Zwei Felder als gleich betrachtet, wenn ihre Dimensionen identisch sind.  
+  
+ Die `boxesByVol` Wörterbuch verwendet einen Gleichheitsvergleich (`BoxEqVolume`), der auf Gleichheit nach Volume definiert. Zwei Felder als gleich betrachtet, wenn ihre Volumes identisch sind.  
+  
+ [!code-cpp[System.Collections.Generic.EqualityComparer.Default#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.collections.generic.equalitycomparer.default/cpp/program.cpp#1)]
+ [!code-csharp[System.Collections.Generic.EqualityComparer.Default#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.equalitycomparer.default/cs/program.cs#1)]
+ [!code-vb[System.Collections.Generic.EqualityComparer.Default#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.equalitycomparer.default/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public abstract bool Equals (T x, T y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(!T x, !T y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.EqualityComparer`1.Equals(`0,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="T" />
+        <Parameter Name="y" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="x">Das erste zu vergleichende Objekt.</param>
+        <param name="y">Das zweite zu vergleichende Objekt.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse bestimmt, ob zwei Objekte des Typs <typeparamref name="T" /> gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die angegebenen Objekte gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Collections.Generic.EqualityComparer%601.Equals%2A> Methode ist reflexiv, symmetrisch und transitiv. Das heißt, die Rückgabe `true` Wenn verwendet, um ein Objekt mit sich selbst; verglichen werden soll. `true` für zwei Objekte `x` und `y` wird jedoch `true` für `y` und `x`; und `true` für zwei Objekte `x` und `z` wird jedoch `true` für `x` und `y` sowie `true` für `y` und `z`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Implementierungen sind erforderlich, um sicherzustellen, dass bei der <see cref="M:System.Collections.Generic.EqualityComparer`1.Equals(`0,`0)" /> -Methode zurückkehrt <see langword="true" /> für zwei Objekte <c>x</c> und <c>y</c>, klicken Sie dann den Rückgabewert von der <see cref="M:System.Collections.Generic.EqualityComparer`1.GetHashCode(`0)" /> Methode zum <c>x</c> für zurückgegebenen Wert muss gleich <c>y</c>.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public abstract int GetHashCode (T obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetHashCode(!T obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.EqualityComparer`1.GetHashCode(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, für das ein Hashcode abgerufen werden soll.</param>
+        <summary>Dient beim Überschreiben in einer abgeleiteten Klasse für das angegebene Objekt als Hashfunktion für Hashalgorithmen und Datenstrukturen wie Hashtabellen.</summary>
+        <returns>Ein Hashcode für das angegebene Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Typ des <paramref name="obj" /> einen Referenztyp darstellt und <paramref name="obj" /> ist <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Implementierungen sind erforderlich, um sicherzustellen, dass bei der <see cref="M:System.Collections.Generic.EqualityComparer`1.Equals(`0,`0)" /> -Methode zurückkehrt <see langword="true" /> für zwei Objekte <c>x</c> und <c>y</c>, klicken Sie dann den Rückgabewert von der <see cref="M:System.Collections.Generic.EqualityComparer`1.GetHashCode(`0)" /> Methode zum <c>x</c> für zurückgegebenen Wert muss gleich <c>y</c>.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEqualityComparer.Equals">
+      <MemberSignature Language="C#" Value="bool IEqualityComparer.Equals (object x, object y);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IEqualityComparer.Equals(object x, object y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.EqualityComparer`1.System#Collections#IEqualityComparer#Equals(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Object" />
+        <Parameter Name="y" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="x">Das erste zu vergleichende Objekt.</param>
+        <param name="y">Das zweite zu vergleichende Objekt.</param>
+        <summary>Bestimmt, ob die angegebenen Objekte gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die angegebenen Objekte gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist ein Wrapper für die <xref:System.Collections.Generic.EqualityComparer%601.Equals%28%600%2C%600%29> Methode, sodass `obj` müssen in den vom generischen Argument angegebenen Typ umgewandelt werden `T` der aktuellen Instanz. Wenn es in umgewandelt werden kann `T`, wird eine <xref:System.ArgumentException> ausgelöst wird.  
+  
+ Vergleichen von `null` ist zulässig und löst keine Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="x" />oder <paramref name="y" /> umgewandelt Typ ein Typ, der nicht möglich ist <typeparamref name="T" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEqualityComparer.GetHashCode">
+      <MemberSignature Language="C#" Value="int IEqualityComparer.GetHashCode (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IEqualityComparer.GetHashCode(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.EqualityComparer`1.System#Collections#IEqualityComparer#GetHashCode(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das <see cref="T:System.Object" />, für das ein Hashcode zurückgegeben werden soll.</param>
+        <summary>Gibt einen Hashcode für das angegebene Objekt zurück.</summary>
+        <returns>Ein Hashcode für das angegebene Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist ein Wrapper für die <xref:System.Collections.Generic.EqualityComparer%601.GetHashCode%28%600%29> Methode, sodass `obj` muss ein Typ, der in den vom generischen Argument angegebenen Typ umgewandelt werden kann `T` der aktuellen Instanz.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Typ des <paramref name="obj" /> einen Referenztyp darstellt und <paramref name="obj" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="obj" />ist ein Typ, der nicht möglich in den Typ umgewandelt <typeparamref name="T" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

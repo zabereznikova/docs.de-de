@@ -1,0 +1,847 @@
+<Type Name="Semaphore" FullName="System.Threading.Semaphore">
+  <TypeSignature Language="C#" Value="public sealed class Semaphore : System.Threading.WaitHandle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Semaphore extends System.Threading.WaitHandle" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Semaphore" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Threading.WaitHandle</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Schränkt die Anzahl von Threads ein, die gleichzeitig auf eine Ressource oder einen Pool von Ressourcen zugreifen können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Threading.Semaphore> Klasse zum Steuern des Zugriffs auf einen Pool von Ressourcen. Threads das Semaphor durch Aufrufen der <xref:System.Threading.WaitHandle.WaitOne%2A> -Methode, die von geerbt wird die <xref:System.Threading.WaitHandle> Klasse, und geben Sie das Semaphor durch Aufrufen der <xref:System.Threading.Semaphore.Release%2A> Methode.  
+  
+ Anzahl die für einen Semaphore wird wieder um eins erniedrigt jedes Mal ein Thread das Semaphor eingibt, und inkrementiert, wenn ein Thread das Semaphor freigibt. Wenn die Anzahl 0 (null) ist, blockieren nachfolgende Anforderungen, bis andere Threads das Semaphor freizugeben. Wenn alle Threads das Semaphor freigegeben haben, wird die Anzahl der zulässige Höchstwert angegeben, wenn das Semaphor erstellt wurde.  
+  
+ Es gibt keine festgelegte Reihenfolge, z. B. FIFO oder LIFO, in denen blockierte Threads das Semaphor.  
+  
+ Ein Thread kann das Semaphor mehrfach durch Aufrufen der <xref:System.Threading.WaitHandle.WaitOne%2A> Methode wiederholt. Um einige oder alle diese Einträge freizugeben, kann der Thread die parameterlose Aufrufen <xref:System.Threading.Semaphore.Release> methodenüberladung, die mehrere Male, oder es kann Aufrufen der <xref:System.Threading.Semaphore.Release%28System.Int32%29> methodenüberladung, die die Anzahl der freizugebenden Einträge angibt.  
+  
+ Die <xref:System.Threading.Semaphore> Klasse erzwingt keine Threadidentität für Aufrufe von <xref:System.Threading.WaitHandle.WaitOne%2A> oder <xref:System.Threading.Semaphore.Release%2A>. Es ist der Verantwortung des Programmierers, stellen Sie sicher, dass Threads das Semaphor nicht zu oft freigeben. Angenommen, ein Semaphor hat einen maximalen Zähler von zwei und Thread A sowie Thread B wechseln beide in das Semaphor. Wenn ein Programmierfehler in Thread B aufrufen verursacht <xref:System.Threading.Semaphore.Release%2A> zweimal, beide Aufrufe erfolgreich. Der Zähler des Semaphors ist voll, und wenn thread A Schließlich ruft <xref:System.Threading.Semaphore.Release%2A>, eine <xref:System.Threading.SemaphoreFullException> ausgelöst wird.  
+  
+ Semaphoren sind zwei Typen: lokale Semaphore und benanntes Semaphore. Bei Erstellung einer <xref:System.Threading.Semaphore> -Objekt mithilfe eines Konstruktors, der einen Namen akzeptiert ein Betriebssystem-Semaphor mit diesem Namen zugeordnet ist. Benannte Semaphoren sind im gesamten Betriebssystem sichtbar und können verwendet werden, um die Aktivitäten von Prozessen zu synchronisieren. Sie können mehrere erstellen <xref:System.Threading.Semaphore> benannte Systemsemaphor Objekte, die die gleiche darstellen, und Sie können die <xref:System.Threading.Semaphore.OpenExisting%2A> Methode zum Öffnen einer vorhandenen benannte Systemsemaphor.  
+  
+ Ein lokales Semaphor ist nur innerhalb des Prozesses vorhanden. Es kann von jedem Thread innerhalb des Prozesses, der einen Verweis auf die lokale verwendet werden <xref:System.Threading.Semaphore> Objekt. Jede <xref:System.Threading.Semaphore> Objekt ist ein separates lokales Semaphor.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Semaphore mit einen maximalen Zähler von drei und eine anfängliche Anzahl von 0 (null). Das Beispiel beginnt fünf Threads das Semaphor warten zu blockieren. Der Hauptthread verwendet die <xref:System.Threading.Semaphore.Release%28System.Int32%29> -methodenüberladung, um den Zähler des Semaphors auf seinen Maximalwert, sodass drei Threads in das Semaphor zu erhöhen. Jeder Thread verwendet die <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> Methode, um eine Sekunde warten, bis zum Simulieren von Arbeit und ruft dann die <xref:System.Threading.Semaphore.Release> -methodenüberladung, um das Semaphor freizugeben. Jedes Mal, wenn das Semaphor freigegeben wird, wird die vorherige Anzahl des Semaphors angezeigt. Konsole Nachrichten nachverfolgen Semaphore verwenden. Das simulierte Intervall wird für jeden Thread, um die Ausgabe leichter lesbar zu machen etwas erhöht.  
+  
+ [!code-cpp[System.Threading.Semaphore2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Semaphore2/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.Semaphore2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Semaphore2/CS/source.cs#1)]
+ [!code-vb[System.Threading.Semaphore2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Semaphore2/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Semaphore (int initialCount, int maximumCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 initialCount, int32 maximumCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Semaphore.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="initialCount" Type="System.Int32" />
+        <Parameter Name="maximumCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="initialCount">Die anfängliche Anzahl von Anforderungen für das Semaphor, die gleichzeitig gewährt werden können.</param>
+        <param name="maximumCount">Die maximale Anzahl von Anforderungen für das Semaphor, die gleichzeitig gewährt werden können.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Threading.Semaphore" />-Klasse und gibt die ursprüngliche Anzahl von Einträgen und die maximale Anzahl von gleichzeitigen Einträgen an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert ein unbenanntes Semaphor. Alle Threads, die eine Instanz eines solchen Semaphors verwenden, müssen Verweise auf die Instanz haben.  
+  
+ Wenn `initialCount` ist kleiner als `maximumCount`, der Effekt ist derselbe, als ob der aktuelle Thread aufgerufen hätten <xref:System.Threading.WaitHandle.WaitOne%2A> (`maximumCount` minus `initialCount`) Zeiten. Wenn keine Einträge für den Thread zu reservieren, die das Semaphor erstellt werden soll, verwenden Sie die gleiche Anzahl für `maximumCount` und `initialCount`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Semaphore mit einer maximalen Anzahl von drei und eine anfängliche Anzahl von 0 (null). Das Beispiel beginnt fünf Threads das Semaphor warten zu blockieren. Der Hauptthread verwendet die <xref:System.Threading.Semaphore.Release%28System.Int32%29> -methodenüberladung, um den Zähler des Semaphors auf seinen Maximalwert, sodass drei Threads in das Semaphor zu erhöhen. Jeder Thread verwendet die <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> Methode, um eine Sekunde warten, bis zum Simulieren von Arbeit und ruft dann die <xref:System.Threading.Semaphore.Release> -methodenüberladung, um das Semaphor freizugeben. Jedes Mal, wenn das Semaphor freigegeben wird, wird die vorherige Anzahl des Semaphors angezeigt. Konsole Nachrichten nachverfolgen Semaphore verwenden. Das simulierte Intervall wird für jeden Thread, um die Ausgabe leichter lesbar zu machen etwas erhöht.  
+  
+ [!code-cpp[System.Threading.Semaphore2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Semaphore2/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.Semaphore2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Semaphore2/CS/source.cs#1)]
+ [!code-vb[System.Threading.Semaphore2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Semaphore2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="initialCount" /> ist größer als <paramref name="maximumCount" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="maximumCount" /> ist kleiner als 1.  
+  
+ - oder -   
+  
+ <paramref name="initialCount" /> ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Semaphore (int initialCount, int maximumCount, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 initialCount, int32 maximumCount, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Semaphore.#ctor(System.Int32,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialCount" Type="System.Int32" />
+        <Parameter Name="maximumCount" Type="System.Int32" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="initialCount">Die anfängliche Anzahl von Anforderungen für das Semaphor, die gleichzeitig gewährt werden können.</param>
+        <param name="maximumCount">Die maximale Anzahl von Anforderungen für das Semaphor, die gleichzeitig gewährt werden können.</param>
+        <param name="name">Der Name eines benannten Systemsemaphorobjekts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Threading.Semaphore" />-Klasse, gibt die ursprüngliche Anzahl von Einträgen und die maximale Anzahl von gleichzeitigen Einträgen sowie optional den Namen eines Systemsemaphorobjekts an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert ein <xref:System.Threading.Semaphore> Objekt, das ein benanntes Systemsemaphor darstellt. Sie können mehrere erstellen <xref:System.Threading.Semaphore> benannte Systemsemaphor Objekte, die die gleiche darstellen.  
+  
+ Wenn das benannte Systemsemaphor nicht vorhanden ist, wird Sie mit dem anfänglichen Zähler und die maximale Anzahl von angegebenen erstellt `initialCount` und `maximumCount`. Wenn das benannte Systemsemaphor bereits vorhanden ist, `initialCount` und `maximumCount` nicht verwendet, obwohl ungültige Werte immer noch Ausnahmen auslösen. Wenn Sie bestimmen müssen, und zwar unabhängig davon, ob ein benanntes Systemsemaphor erstellt wurde, verwenden Sie die <xref:System.Threading.Semaphore.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.String%2CSystem.Boolean%40%29> Konstruktor überladen stattdessen.  
+  
+> [!IMPORTANT]
+>  Wenn Sie diese Konstruktorüberladung verwenden, ist die empfohlene Vorgehensweise für die gleiche Anzahl an `initialCount` und `maximumCount`. Wenn `initialCount` ist kleiner als `maximumCount`, und ein benanntes Systemsemaphor erstellt wird, der Effekt ist derselbe, als ob der aktuelle Thread aufgerufen hätten <xref:System.Threading.WaitHandle.WaitOne%2A> (`maximumCount` minus `initialCount`) Zeiten. Mit dieser Konstruktorüberladung ist jedoch keine Möglichkeit zu bestimmen, ob ein benanntes Systemsemaphor erstellt wurde.  
+  
+ Bei Angabe von `null` oder eine leere Zeichenfolge für `name`, ein lokales Semaphor erstellt, wie bei einem Aufruf der <xref:System.Threading.Semaphore.%23ctor%28System.Int32%2CSystem.Int32%29> Überladung des Konstruktors.  
+  
+ Da benannte Semaphoren im gesamten Betriebssystem sichtbar sind, können sie verwendet werden, um Ressourcen über Prozessgrenzen hinweg koordinieren.  
+  
+ Wenn Sie herausfinden, ob ein benanntes Systemsemaphor vorhanden ist, verwenden Sie möchten die <xref:System.Threading.Semaphore.OpenExisting%2A> Methode. Die <xref:System.Threading.Semaphore.OpenExisting%2A> Methode versucht, ein vorhandenes benanntes Semaphor zu öffnen, und löst eine Ausnahme aus, wenn das Systemsemaphor nicht vorhanden ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Verhalten prozessübergreifend ein benanntes Semaphor. Das Beispiel erstellt ein benanntes Semaphor mit einen maximalen Zähler von fünf und eine anfängliche Anzahl von fünf. Das Programm sendet drei Aufrufe, die <xref:System.Threading.WaitHandle.WaitOne%2A> Methode. Daher, wenn Sie das kompilierte Beispiel über zwei Befehlsfenstern ausgeführt, beim zweiten Kopiervorgang blockiert der dritte Aufruf von <xref:System.Threading.WaitHandle.WaitOne%2A>. Lassen Sie eine oder mehrere Einträge in der ersten Kopie des Programms für die zweite aufheben.  
+  
+ [!code-cpp[System.Threading.Semaphore.ctor named 3#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 3/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.Semaphore.ctor named 3#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 3/CS/source.cs#1)]
+ [!code-vb[System.Threading.Semaphore.ctor named 3#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 3/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="initialCount" /> ist größer als <paramref name="maximumCount" />.  
+  
+ - oder -   
+  
+ <paramref name="name" /> ist länger als 260 Zeichen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="maximumCount" /> ist kleiner als 1.  
+  
+ - oder -   
+  
+ <paramref name="initialCount" /> ist kleiner als 0.</exception>
+        <exception cref="T:System.IO.IOException">Win32-Fehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der benannte Semaphor ist vorhanden und verfügt über Zugriffssteuerungssicherheit, und der Benutzer verfügt nicht über <see cref="F:System.Security.AccessControl.SemaphoreRights.FullControl" />.</exception>
+        <exception cref="T:System.Threading.WaitHandleCannotBeOpenedException">Der benannte Semaphor kann nicht erstellt werden, möglicherweise, weil ein Wait-Handle eines anderen Typs den gleichen Namen hat.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von nicht verwaltetem Code, um ein benanntes Systemsemaphor zu erstellen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.  
+  
+ Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Semaphore (int initialCount, int maximumCount, string name, out bool createdNew);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 initialCount, int32 maximumCount, string name, [out] bool&amp; createdNew) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Semaphore.#ctor(System.Int32,System.Int32,System.String,System.Boolean@)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialCount" Type="System.Int32" />
+        <Parameter Name="maximumCount" Type="System.Int32" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="createdNew" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="initialCount">Die ursprüngliche Anzahl von Anforderungen für das Semaphor, die gleichzeitig ausgeführt werden können.</param>
+        <param name="maximumCount">Die maximale Anzahl von Anforderungen für das Semaphor, die gleichzeitig ausgeführt werden können.</param>
+        <param name="name">Der Name eines benannten Systemsemaphorobjekts.</param>
+        <param name="createdNew">Enthält bei Rückgabe dieser Methode <see langword="true" /> , wenn ein lokales Semaphor erstellt wurde (d. h., wenn <c>Namen</c> ist <see langword="null" /> oder eine leere Zeichenfolge) oder wenn das angegebene benannte Systemsemaphor erstellt wurde. <see langword="false" /> , wenn das angegebene Systemsemaphor bereits benannte vorhanden war. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Threading.Semaphore" />-Klasse, gibt die ursprüngliche Anzahl von Einträgen und die maximale Anzahl von gleichzeitigen Einträgen sowie optional den Namen eines Systemsemaphorobjekts an, gibt eine Variable an, die einen Wert empfängt, der angibt, ob ein neues Systemsemaphor erstellt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert ein <xref:System.Threading.Semaphore> Objekt, das ein benanntes Systemsemaphor darstellt. Sie können mehrere erstellen <xref:System.Threading.Semaphore> benannte Systemsemaphor Objekte, die die gleiche darstellen.  
+  
+ Wenn das benannte Systemsemaphor nicht vorhanden ist, wird Sie mit dem anfänglichen Zähler und die maximale Anzahl von angegebenen erstellt `initialCount` und `maximumCount`. Wenn das benannte Systemsemaphor bereits vorhanden ist, `initialCount` und `maximumCount` nicht verwendet, obwohl ungültige Werte immer noch Ausnahmen auslösen. Verwendung `createdNew` um zu bestimmen, ob das Systemsemaphor erstellt wurde.  
+  
+ Wenn `initialCount` ist kleiner als `maximumCount`, und `createdNew` ist `true`, der Effekt ist derselbe, als ob der aktuelle Thread aufgerufen hätten <xref:System.Threading.WaitHandle.WaitOne%2A> (`maximumCount` minus `initialCount`) Zeiten.  
+  
+ Bei Angabe von `null` oder eine leere Zeichenfolge für `name`, ein lokales Semaphor erstellt, wie bei einem Aufruf der <xref:System.Threading.Semaphore.%23ctor%28System.Int32%2CSystem.Int32%29> Überladung des Konstruktors. In diesem Fall `createdNew` ist immer `true`.  
+  
+ Da benannte Semaphoren im gesamten Betriebssystem sichtbar sind, können sie verwendet werden, um Ressourcen über Prozessgrenzen hinweg koordinieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Verhalten prozessübergreifend ein benanntes Semaphor. Das Beispiel erstellt ein benanntes Semaphor mit einen maximalen Zähler von fünf und einem anfänglichen Zähler von zwei. D. h., sie behält sich vor drei Einträge für den Thread, der den Konstruktor aufruft. Wenn `createNew` ist `false`, das Programm sendet drei Aufrufe, die <xref:System.Threading.WaitHandle.WaitOne%2A> Methode. Daher, wenn Sie das kompilierte Beispiel über zwei Befehlsfenstern ausgeführt, beim zweiten Kopiervorgang blockiert der dritte Aufruf von <xref:System.Threading.WaitHandle.WaitOne%2A>. Lassen Sie eine oder mehrere Einträge in der ersten Kopie des Programms für die zweite aufheben.  
+  
+ [!code-cpp[System.Threading.Semaphore.ctor named 4#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 4/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.Semaphore.ctor named 4#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 4/CS/source.cs#1)]
+ [!code-vb[System.Threading.Semaphore.ctor named 4#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 4/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="initialCount" /> ist größer als <paramref name="maximumCount" />.  
+  
+ - oder -   
+  
+ <paramref name="name" /> ist länger als 260 Zeichen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="maximumCount" /> ist kleiner als 1.  
+  
+ - oder -   
+  
+ <paramref name="initialCount" /> ist kleiner als 0.</exception>
+        <exception cref="T:System.IO.IOException">Win32-Fehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der benannte Semaphor ist vorhanden und verfügt über Zugriffssteuerungssicherheit, und der Benutzer verfügt nicht über <see cref="F:System.Security.AccessControl.SemaphoreRights.FullControl" />.</exception>
+        <exception cref="T:System.Threading.WaitHandleCannotBeOpenedException">Der benannte Semaphor kann nicht erstellt werden, möglicherweise, weil ein Wait-Handle eines anderen Typs den gleichen Namen hat.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von nicht verwaltetem Code, um ein benanntes Systemsemaphor zu erstellen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.  
+  
+ Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Semaphore (int initialCount, int maximumCount, string name, out bool createdNew, System.Security.AccessControl.SemaphoreSecurity semaphoreSecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 initialCount, int32 maximumCount, string name, [out] bool&amp; createdNew, class System.Security.AccessControl.SemaphoreSecurity semaphoreSecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Semaphore.#ctor(System.Int32,System.Int32,System.String,System.Boolean@,System.Security.AccessControl.SemaphoreSecurity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialCount" Type="System.Int32" />
+        <Parameter Name="maximumCount" Type="System.Int32" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="createdNew" Type="System.Boolean&amp;" RefType="out" />
+        <Parameter Name="semaphoreSecurity" Type="System.Security.AccessControl.SemaphoreSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="initialCount">Die ursprüngliche Anzahl von Anforderungen für das Semaphor, die gleichzeitig ausgeführt werden können.</param>
+        <param name="maximumCount">Die maximale Anzahl von Anforderungen für das Semaphor, die gleichzeitig ausgeführt werden können.</param>
+        <param name="name">Der Name eines benannten Systemsemaphorobjekts.</param>
+        <param name="createdNew">Enthält bei Rückgabe dieser Methode <see langword="true" /> , wenn ein lokales Semaphor erstellt wurde (d. h., wenn <c>Namen</c> ist <see langword="null" /> oder eine leere Zeichenfolge) oder wenn das angegebene benannte Systemsemaphor erstellt wurde. <see langword="false" /> , wenn das angegebene Systemsemaphor bereits benannte vorhanden war. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="semaphoreSecurity">Ein <see cref="T:System.Security.AccessControl.SemaphoreSecurity" /> -Objekt, das die zugriffssteuerungssicherheit, die auf das benannte Systemsemaphor angewendet werden darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Threading.Semaphore" />-Klasse, gibt die ursprüngliche Anzahl von Einträgen und die maximale Anzahl von gleichzeitigen Einträgen an, gibt optional den Namen eines Systemsemaphorobjekts an, gibt eine Variable an, die einen Wert empfängt, der angibt, ob ein neues Systemsemaphor erstellt wurde, und gibt die Sicherheitszugriffssteuerung für das Systemsemaphor an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zur Steuerung des Zugriffs auf ein benanntes Systemsemaphor anzuwenden verhindert, dass anderer Code Kontrolle über das Semaphor erstellt wurde, ein.  
+  
+ Dieser Konstruktor initialisiert ein <xref:System.Threading.Semaphore> Objekt, das ein benanntes Systemsemaphor darstellt. Sie können mehrere erstellen <xref:System.Threading.Semaphore> benannte Systemsemaphor Objekte, die die gleiche darstellen.  
+  
+ Wenn das benannte Systemsemaphor nicht vorhanden ist, wird er mit dem angegebenen zugriffssteuerungssicherheit erstellt. Wenn das benannte Semaphor vorhanden ist, wird die angegebene zugriffssteuerungssicherheit ignoriert.  
+  
+> [!NOTE]
+>  Der Aufrufer hat Vollzugriff auf das neu erstellte <xref:System.Threading.Semaphore> Objekt erstellen, selbst wenn `semaphoreSecurity` verweigert oder einige über die Zugriffsrechte für den aktuellen Benutzer zu erteilen. Jedoch wenn der aktuelle Benutzer versucht, erhalten eine andere <xref:System.Threading.Semaphore> Objekt zur Darstellung identisch benannte Semaphor, die entweder einen Konstruktor oder die <xref:System.Threading.Semaphore.OpenExisting%2A> -Methode, Windows-zugriffssteuerungssicherheit angewendet wird.  
+  
+ Wenn das benannte Systemsemaphor nicht vorhanden ist, wird Sie mit dem anfänglichen Zähler und die maximale Anzahl von angegebenen erstellt `initialCount` und `maximumCount`. Wenn das benannte Systemsemaphor bereits vorhanden ist, `initialCount` und `maximumCount` nicht verwendet, obwohl ungültige Werte immer noch Ausnahmen auslösen. Verwenden der `createdNew` Parameter, um zu bestimmen, ob von diesem Konstruktor die Systemsemaphor erstellt wurde.  
+  
+ Wenn `initialCount` ist kleiner als `maximumCount`, und `createdNew` ist `true`, der Effekt ist derselbe, als ob der aktuelle Thread aufgerufen hätten <xref:System.Threading.WaitHandle.WaitOne%2A> (`maximumCount` minus `initialCount`) Zeiten.  
+  
+ Bei Angabe von `null` oder eine leere Zeichenfolge für `name`, ein lokales Semaphor erstellt, wie bei einem Aufruf der <xref:System.Threading.Semaphore.%23ctor%28System.Int32%2CSystem.Int32%29> Überladung des Konstruktors. In diesem Fall `createdNew` ist immer `true`.  
+  
+ Da benannte Semaphoren im gesamten Betriebssystem sichtbar sind, können sie verwendet werden, um Ressourcen über Prozessgrenzen hinweg koordinieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Verhalten prozessübergreifend ein benanntes Semaphor mit zugriffssteuerungssicherheit veranschaulicht. Im Beispiel wird die <xref:System.Threading.Semaphore.OpenExisting%28System.String%29> -methodenüberladung, um das Vorhandensein des ein benanntes Semaphor testen. Wenn das Semaphor nicht vorhanden ist, wird es erstellt, mit einer maximalen Zähler von zwei und zugriffssteuerungssicherheit, die verweigert des aktuellen Benutzers des rechts, das Semaphor verwenden, aber das Recht zum Lesen und Ändern von Berechtigungen für das Semaphor gewährt. Wenn Sie das kompilierte Beispiel aus zwei Befehlsfenstern ausführen, löst die zweite Kopie eine Zugriffsverletzungsausnahme beim Aufruf von der <xref:System.Threading.Semaphore.OpenExisting%28System.String%29> Methode. Die Ausnahme abgefangen wird, und im Beispiel wird die <xref:System.Threading.Semaphore.OpenExisting%28System.String%2CSystem.Security.AccessControl.SemaphoreRights%29> -methodenüberladung, um das Semaphor mit den Berechtigungen zum Lesen und ändern Sie die Berechtigungen zu öffnen.  
+  
+ Nachdem die Berechtigungen geändert werden, wird das Semaphor geöffnet, mit den erforderlichen Benutzerrechten zum eingeben und freigeben. Wenn Sie das kompilierte Beispiel in einem dritten Befehlsfenster ausführen, wird die Verwendung der neuen Berechtigungen ausgeführt.  
+  
+ [!code-cpp[System.Threading.Semaphore.ctor named 5a#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 5a/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.Semaphore.ctor named 5a#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 5a/CS/source.cs#1)]
+ [!code-vb[System.Threading.Semaphore.ctor named 5a#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 5a/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="initialCount" /> ist größer als <paramref name="maximumCount" />.  
+  
+ - oder -   
+  
+ <paramref name="name" /> ist länger als 260 Zeichen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="maximumCount" /> ist kleiner als 1.  
+  
+ - oder -   
+  
+ <paramref name="initialCount" /> ist kleiner als 0.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der benannte Semaphor ist vorhanden und verfügt über Zugriffssteuerungssicherheit, und der Benutzer verfügt nicht über <see cref="F:System.Security.AccessControl.SemaphoreRights.FullControl" />.</exception>
+        <exception cref="T:System.IO.IOException">Win32-Fehler.</exception>
+        <exception cref="T:System.Threading.WaitHandleCannotBeOpenedException">Der benannte Semaphor kann nicht erstellt werden, möglicherweise, weil ein Wait-Handle eines anderen Typs den gleichen Namen hat.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von nicht verwaltetem Code, um ein benanntes Systemsemaphor zu erstellen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessControl">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.SemaphoreSecurity GetAccessControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.AccessControl.SemaphoreSecurity GetAccessControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Semaphore.GetAccessControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.SemaphoreSecurity</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Zugriffssteuerungssicherheit für ein benanntes Systemsemaphor ab.</summary>
+        <returns>Ein <see cref="T:System.Security.AccessControl.SemaphoreSecurity" />-Objekt, das die Zugriffssteuerungssicherheit für das benannte Systemsemaphor darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.Semaphore.GetAccessControl%2A> Methode verwendet die folgende Kombination von Flags, die (mit dem bitweisen OR-Operation kombiniert) zu suchende Berechtigungen: <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType>, <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType>, und <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType>.  
+  
+ Der Benutzer benötigt <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Rechte für diese Methode aufzurufen, und das Semaphor müssen mit geöffnet wurden <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Rechte.  
+  
+ Auf ein lokales Semaphor ist zugriffssteuerungssicherheit spielt keine Rolle. Wenn die <xref:System.Threading.Semaphore> Objekt stellt kein benanntes Systemsemaphor dar, die diese Methode gibt ein <xref:System.Security.AccessControl.SemaphoreSecurity> -Objekt, das für jeden Benutzer alle Rechte gewährt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Verhalten prozessübergreifend ein benanntes Semaphor mit zugriffssteuerungssicherheit veranschaulicht. Im Beispiel wird die <xref:System.Threading.Semaphore.OpenExisting%28System.String%29> -methodenüberladung, um das Vorhandensein des ein benanntes Semaphor testen.  
+  
+ Wenn das Semaphor nicht vorhanden ist, wird es erstellt, mit einer maximalen Zähler von zwei und zugriffssteuerungssicherheit, die verweigert des aktuellen Benutzers des rechts, das Semaphor verwenden, aber das Recht zum Lesen und Ändern von Berechtigungen für das Semaphor gewährt.  
+  
+ Wenn Sie das kompilierte Beispiel aus zwei Befehlsfenstern ausführen, löst die zweite Kopie eine Zugriffsverletzungsausnahme beim Aufruf von der <xref:System.Threading.Semaphore.OpenExisting%28System.String%29> Methode. Die Ausnahme abgefangen wird, und im Beispiel wird die <xref:System.Threading.Semaphore.OpenExisting%28System.String%2CSystem.Security.AccessControl.SemaphoreRights%29> -methodenüberladung, um das Semaphor mit den Berechtigungen zum Lesen und ändern Sie die Berechtigungen zu öffnen. Die zugriffssteuerungssicherheit für das Systemsemaphor abgerufen wird, mithilfe der <xref:System.Threading.Semaphore.GetAccessControl%2A> Methode.  
+  
+ Nachdem die Berechtigungen geändert werden, wird das Semaphor geöffnet, mit den erforderlichen Benutzerrechten zum eingeben und freigeben. Wenn Sie das kompilierte Beispiel in einem dritten Befehlsfenster ausführen, wird die Verwendung der neuen Berechtigungen ausgeführt.  
+  
+ [!code-cpp[System.Threading.Semaphore.ctor named 5a#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 5a/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.Semaphore.ctor named 5a#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 5a/CS/source.cs#1)]
+ [!code-vb[System.Threading.Semaphore.ctor named 5a#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 5a/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Das aktuelle <see cref="T:System.Threading.Semaphore" />-Objekt stellt einen benannten Systemsemaphor dar, und der Benutzer verfügt nicht über <see cref="F:System.Security.AccessControl.SemaphoreRights.ReadPermissions" />-Berechtigung.  
+  
+ - oder -   
+  
+ Das aktuelle <see cref="T:System.Threading.Semaphore" />-Objekt stellt einen benannten Systemsemaphor dar und wurde nicht mit <see cref="F:System.Security.AccessControl.SemaphoreRights.ReadPermissions" />-Berechtigung geöffnet.</exception>
+        <exception cref="T:System.NotSupportedException">Wird nicht für Windows 98 oder Windows Millennium Edition unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenExisting">
+      <MemberSignature Language="C#" Value="public static System.Threading.Semaphore OpenExisting (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Semaphore OpenExisting(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Semaphore.OpenExisting(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Semaphore</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu öffnenden Systemsemaphors.</param>
+        <summary>Öffnet das angegebene benannte Semaphor, wenn es bereits vorhanden ist.</summary>
+        <returns>Ein Objekt, das das benannte Systemsemaphor darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.Semaphore.OpenExisting%2A> Methode versucht, das angegebene benannte Semaphor öffnen. Wenn das Systemsemaphor nicht vorhanden ist, löst diese Methode eine Ausnahme aus, statt das Systemsemaphor an. Das Systemsemaphor erstellt, wenn sie nicht bereits vorhanden ist, gehen Sie die <xref:System.Threading.Semaphore.%23ctor%2A> Konstruktoren, die verfügt über eine `name` Parameter.  
+  
+ Mehrere Aufrufe dieser Methode, die den gleichen Wert für `name` nicht unbedingt zurück, die gleiche <xref:System.Threading.Semaphore> -Objekt, auch wenn die Objekte, die zurückgegeben werden, stellen den gleichen Systemsemaphor Namen.  
+  
+ Überladung dieser Methode entspricht dem Aufrufen der <xref:System.Threading.Semaphore.OpenExisting%2A> methodenüberladung und Angeben von <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> und <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Rechte, die mit dem bitweisen OR-Operation kombiniert.  
+  
+ Angeben der <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Flag ermöglicht, dass einen Thread das Semaphor und Angeben der <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Flag ermöglicht, dass einen Thread aufrufen, die <xref:System.Threading.Semaphore.Release%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Verhalten prozessübergreifend ein benanntes Semaphor mit zugriffssteuerungssicherheit veranschaulicht. Im Beispiel wird die <xref:System.Threading.Semaphore.OpenExisting%28System.String%29> -methodenüberladung, um das Vorhandensein des ein benanntes Semaphor testen.  
+  
+ Wenn das Semaphor nicht vorhanden ist, wird es erstellt, mit einer maximalen Zähler von zwei und zugriffssteuerungssicherheit, die dem aktuellen Benutzer das Recht, verwenden Sie das Semaphor verweigert, aber denen erteilt die Berechtigung zum Lesen und Ändern von Berechtigungen für das Semaphor.  
+  
+ Wenn Sie das kompilierte Beispiel aus zwei Befehlsfenstern ausführen, löst die zweite Kopie eine Zugriffsverletzungsausnahme beim Aufruf von der <xref:System.Threading.Semaphore.OpenExisting%28System.String%29> -methodenüberladung. Die Ausnahme abgefangen wird, und im Beispiel wird die <xref:System.Threading.Semaphore.OpenExisting%28System.String%2CSystem.Security.AccessControl.SemaphoreRights%29> -methodenüberladung, um das Semaphor mit den Berechtigungen zum Lesen und ändern Sie die Berechtigungen zu öffnen.  
+  
+ Nachdem die Berechtigungen geändert werden, wird das Semaphor mit den erforderlichen Benutzerrechten zum eingeben und freigegeben werden, geöffnet. Wenn Sie das kompilierte Beispiel in einem dritten Befehlsfenster ausführen, wird die Verwendung der neuen Berechtigungen ausgeführt.  
+  
+ [!code-cpp[System.Threading.Semaphore.ctor named 5a#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 5a/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.Semaphore.ctor named 5a#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 5a/CS/source.cs#1)]
+ [!code-vb[System.Threading.Semaphore.ctor named 5a#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 5a/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="name" /> ist länger als 260 Zeichen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Threading.WaitHandleCannotBeOpenedException">Das benannte Semaphor ist nicht vorhanden.</exception>
+        <exception cref="T:System.IO.IOException">Win32-Fehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der benannte Semaphor ist vorhanden, aber der Benutzer verfügt nicht über den Sicherheitszugriff, der für die Verwendung erforderlich ist.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von nicht verwaltetem Code, um ein benanntes Systemsemaphor zu öffnen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.  
+  
+ Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenExisting">
+      <MemberSignature Language="C#" Value="public static System.Threading.Semaphore OpenExisting (string name, System.Security.AccessControl.SemaphoreRights rights);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Semaphore OpenExisting(string name, valuetype System.Security.AccessControl.SemaphoreRights rights) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Semaphore.OpenExisting(System.String,System.Security.AccessControl.SemaphoreRights)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Semaphore</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="rights" Type="System.Security.AccessControl.SemaphoreRights" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu öffnenden Systemsemaphors.</param>
+        <param name="rights">Eine bitweise Kombination von Enumerationswerten, die die gewünschten Sicherheitszugriffsrechte darstellen.</param>
+        <summary>Öffnet das angegebene benannte Semaphor, wenn es bereits vorhanden ist, mit dem gewünschten Sicherheitszugriff.</summary>
+        <returns>Ein Objekt, das das benannte Systemsemaphor darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `rights` Parameter umfasst die <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Flag, um Threads das Semaphor ermöglichen und die <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> -Kennzeichen an die Threads ermöglichen, rufen Sie die <xref:System.Threading.Semaphore.Release%2A> Methode.  
+  
+ Die <xref:System.Threading.Semaphore.OpenExisting%2A> Methode versucht, öffnen Sie eine vorhandene benannte Semaphor. Wenn das Systemsemaphor nicht vorhanden ist, löst diese Methode eine Ausnahme aus, statt das Systemsemaphor an. Das Systemsemaphor erstellt, wenn sie nicht bereits vorhanden ist, gehen Sie die <xref:System.Threading.Semaphore.%23ctor%2A> Konstruktoren, die verfügt über eine `name` Parameter.  
+  
+ Mehrere Aufrufe dieser Methode, die den gleichen Wert für `name` nicht unbedingt zurück, die gleiche <xref:System.Threading.Semaphore> -Objekt, auch wenn die Objekte, die zurückgegeben werden, stellen den gleichen Systemsemaphor Namen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Verhalten prozessübergreifend ein benanntes Semaphor mit zugriffssteuerungssicherheit veranschaulicht. Im Beispiel wird die <xref:System.Threading.Semaphore.OpenExisting%28System.String%29> -methodenüberladung, um das Vorhandensein des ein benanntes Semaphor testen.  
+  
+ Wenn das Semaphor nicht vorhanden ist, wird es erstellt, mit einer maximalen Zähler von zwei und zugriffssteuerungssicherheit, die verweigert des aktuellen Benutzers des rechts, das Semaphor verwenden, aber das Recht zum Lesen und Ändern von Berechtigungen für das Semaphor gewährt.  
+  
+ Wenn Sie das kompilierte Beispiel aus zwei Befehlsfenstern ausführen, löst die zweite Kopie eine Zugriffsverletzungsausnahme beim Aufruf von der <xref:System.Threading.Semaphore.OpenExisting%28System.String%29> Methode. Die Ausnahme abgefangen wird, und im Beispiel wird die <xref:System.Threading.Semaphore.OpenExisting%28System.String%2CSystem.Security.AccessControl.SemaphoreRights%29> -methodenüberladung, um das Semaphor mit den Berechtigungen zum Lesen und ändern Sie die Berechtigungen zu öffnen.  
+  
+ Nachdem die Berechtigungen geändert werden, wird das Semaphor mit den erforderlichen Benutzerrechten zum eingeben und freigegeben werden, geöffnet. Wenn Sie das kompilierte Beispiel in einem dritten Befehlsfenster ausführen, wird die Verwendung der neuen Berechtigungen ausgeführt.  
+  
+ [!code-cpp[System.Threading.Semaphore.ctor named 5a#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 5a/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.Semaphore.ctor named 5a#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 5a/CS/source.cs#1)]
+ [!code-vb[System.Threading.Semaphore.ctor named 5a#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 5a/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="name" /> ist länger als 260 Zeichen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Threading.WaitHandleCannotBeOpenedException">Das benannte Semaphor ist nicht vorhanden.</exception>
+        <exception cref="T:System.IO.IOException">Win32-Fehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das benannte Semaphor ist vorhanden, aber der Benutzer verfügt nicht über die gewünschten Sicherheitszugriffsrechte.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von nicht verwaltetem Code, um ein benanntes Systemsemaphor zu erstellen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.  
+  
+ Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Release">
+      <MemberSignature Language="C#" Value="public int Release ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Release() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Semaphore.Release" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.PrePrepareMethod</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet das Semaphor und gibt die vorherige Anzahl zurück.</summary>
+        <returns>Die Anzahl für das Semaphor vor dem Aufruf der <see cref="Overload:System.Threading.Semaphore.Release" />-Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden von Threads in der Regel die <xref:System.Threading.WaitHandle.WaitOne%2A> Methode, um in der Regel geben das Semaphor, und sie verwenden eine Überladung dieser Methode um zu beenden.  
+  
+ Wenn eine <xref:System.Threading.SemaphoreFullException> wird ausgelöst, durch die <xref:System.Threading.Semaphore.Release%2A> -Methode, ein Problem mit dem aufrufenden Thread nicht notwendigerweise. Ein Programmierfehler in einem anderen Thread möglicherweise Thread das Semaphor mehrfach als er vorliegt.  
+  
+ Wenn die aktuelle <xref:System.Threading.Semaphore> -Objekt stellt ein benanntes Systemsemaphor dar, die der Benutzer benötigt <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Rechte und das Semaphor müssen geöffnet wurden mit <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Rechte.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Semaphore mit einen maximalen Zähler von drei und eine anfängliche Anzahl von 0 (null). Das Beispiel beginnt fünf Threads das Semaphor warten zu blockieren. Der Hauptthread verwendet die <xref:System.Threading.Semaphore.Release%28System.Int32%29> -methodenüberladung, um den Zähler des Semaphors auf seinen Maximalwert, sodass drei Threads in das Semaphor zu erhöhen. Jeder Thread verwendet die <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> Methode, um eine Sekunde warten, bis zum Simulieren von Arbeit und ruft dann die <xref:System.Threading.Semaphore.Release> -methodenüberladung, um das Semaphor freizugeben.  
+  
+ Jedes Mal, wenn das Semaphor freigegeben wird, wird die vorherige Anzahl des Semaphors angezeigt. Konsole Nachrichten nachverfolgen Semaphore verwenden. Das simulierte Intervall wird für jeden Thread, um die Ausgabe leichter lesbar zu machen etwas erhöht.  
+  
+ [!code-cpp[System.Threading.Semaphore2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Semaphore2/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.Semaphore2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Semaphore2/CS/source.cs#1)]
+ [!code-vb[System.Threading.Semaphore2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Semaphore2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Threading.SemaphoreFullException">Den Zähler des Semaphors ist bereits der zulässige Höchstwert.</exception>
+        <exception cref="T:System.IO.IOException">Mit der ein benanntes Semaphor ist ein Win32-Fehler aufgetreten.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das aktuelle Semaphor stellt ein benanntes Systemsemaphor, aber der Benutzer verfügt nicht über <see cref="F:System.Security.AccessControl.SemaphoreRights.Modify" />.  
+  
+ - oder -   
+  
+ Das aktuelle Semaphor stellt ein benanntes Systemsemaphor, aber nicht mit geöffnet wurde <see cref="F:System.Security.AccessControl.SemaphoreRights.Modify" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Release">
+      <MemberSignature Language="C#" Value="public int Release (int releaseCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Release(int32 releaseCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Semaphore.Release(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="releaseCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="releaseCount">Die Anzahl von Malen, die das Semaphor freigegeben werden soll.</param>
+        <summary>Gibt das Semaphor eine festgelegte Anzahl von Malen frei und gibt die vorherige Anzahl zurück.</summary>
+        <returns>Die Anzahl für das Semaphor vor dem Aufruf der <see cref="Overload:System.Threading.Semaphore.Release" />-Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Thread das Semaphor mehrfach eingegeben hat, kann Überladung dieser Methode die gesamte Semaphorenanzahl mit einem Aufruf wiederhergestellt werden.  
+  
+ Wenn eine <xref:System.Threading.SemaphoreFullException> wird ausgelöst, durch die <xref:System.Threading.Semaphore.Release%2A> -Methode, ein Problem mit dem aufrufenden Thread nicht notwendigerweise. Ein Programmierfehler in einem anderen Thread möglicherweise Thread das Semaphor mehrfach als er vorliegt.  
+  
+ Wenn die aktuelle <xref:System.Threading.Semaphore> -Objekt stellt ein benanntes Systemsemaphor dar, die der Benutzer benötigt <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Rechte und das Semaphor müssen geöffnet wurden mit <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Rechte.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Semaphore mit einen maximalen Zähler von drei und eine anfängliche Anzahl von 0 (null). Das Beispiel beginnt fünf Threads das Semaphor warten zu blockieren. Der Hauptthread verwendet die <xref:System.Threading.Semaphore.Release%28System.Int32%29> -methodenüberladung, um den Zähler des Semaphors auf seinen Maximalwert, sodass drei Threads in das Semaphor zu erhöhen. Jeder Thread verwendet die <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> Methode, um eine Sekunde warten, bis zum Simulieren von Arbeit und ruft dann die <xref:System.Threading.Semaphore.Release> -methodenüberladung, um das Semaphor freizugeben.  
+  
+ Jedes Mal, wenn das Semaphor freigegeben wird, wird die vorherige Anzahl des Semaphors angezeigt. Konsole Nachrichten nachverfolgen Semaphore verwenden. Das simulierte Intervall wird für jeden Thread, um die Ausgabe leichter lesbar zu machen etwas erhöht.  
+  
+ [!code-cpp[System.Threading.Semaphore2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Semaphore2/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.Semaphore2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Semaphore2/CS/source.cs#1)]
+ [!code-vb[System.Threading.Semaphore2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Semaphore2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="releaseCount" /> ist kleiner als 1.</exception>
+        <exception cref="T:System.Threading.SemaphoreFullException">Den Zähler des Semaphors ist bereits der zulässige Höchstwert.</exception>
+        <exception cref="T:System.IO.IOException">Mit der ein benanntes Semaphor ist ein Win32-Fehler aufgetreten.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das aktuelle Semaphor stellt ein benanntes Systemsemaphor, aber der Benutzer verfügt nicht über <see cref="F:System.Security.AccessControl.SemaphoreRights.Modify" /> Rechte.  
+  
+ - oder -   
+  
+ Das aktuelle Semaphor stellt ein benanntes Systemsemaphor, aber nicht mit geöffnet wurde <see cref="F:System.Security.AccessControl.SemaphoreRights.Modify" /> Rechte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccessControl">
+      <MemberSignature Language="C#" Value="public void SetAccessControl (System.Security.AccessControl.SemaphoreSecurity semaphoreSecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccessControl(class System.Security.AccessControl.SemaphoreSecurity semaphoreSecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Semaphore.SetAccessControl(System.Security.AccessControl.SemaphoreSecurity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="semaphoreSecurity" Type="System.Security.AccessControl.SemaphoreSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="semaphoreSecurity">Ein <see cref="T:System.Security.AccessControl.SemaphoreSecurity" /> -Objekt, das die zugriffssteuerungssicherheit, die auf das benannte Systemsemaphor angewendet werden darstellt.</param>
+        <summary>Legt die Zugriffssteuerungssicherheit für ein benanntes Systemsemaphor fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die zugriffssteuerungssicherheit festlegen, nur auf <xref:System.Threading.Semaphore> Objekte, die benanntes Semaphore darstellen.  
+  
+ Der Benutzer benötigt <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Rechte für diese Methode aufzurufen, und das Semaphor müssen mit geöffnet wurden <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Rechte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Verhalten prozessübergreifend ein benanntes Semaphor mit zugriffssteuerungssicherheit veranschaulicht. Im Beispiel wird die <xref:System.Threading.Semaphore.OpenExisting%28System.String%29> -methodenüberladung, um das Vorhandensein des ein benanntes Semaphor testen.  
+  
+ Wenn das Semaphor nicht vorhanden ist, wird es erstellt, mit einer maximalen Zähler von zwei und zugriffssteuerungssicherheit, die verweigert des aktuellen Benutzers des rechts, das Semaphor verwenden, aber das Recht zum Lesen und Ändern von Berechtigungen für das Semaphor gewährt.  
+  
+ Wenn Sie das kompilierte Beispiel aus zwei Befehlsfenstern ausführen, löst die zweite Kopie eine Zugriffsverletzungsausnahme beim Aufruf von der <xref:System.Threading.Semaphore.OpenExisting%28System.String%29> Methode. Die Ausnahme abgefangen wird, und im Beispiel wird die <xref:System.Threading.Semaphore.OpenExisting%28System.String%2CSystem.Security.AccessControl.SemaphoreRights%29> -methodenüberladung, um das Semaphor mit den Berechtigungen zum Lesen und ändern Sie die Berechtigungen zu öffnen.  
+  
+ Nach dem Ändern der Berechtigungen mithilfe der <xref:System.Threading.Semaphore.SetAccessControl%2A> mit den erforderlichen Benutzerrechten zum eingeben und release-Methode, das Semaphor geöffnet wird. Wenn Sie das kompilierte Beispiel in einem dritten Befehlsfenster ausführen, wird die Verwendung der neuen Berechtigungen ausgeführt.  
+  
+ [!code-cpp[System.Threading.Semaphore.ctor named 5a#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 5a/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.Semaphore.ctor named 5a#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 5a/CS/source.cs#1)]
+ [!code-vb[System.Threading.Semaphore.ctor named 5a#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Semaphore.ctor named 5a/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="semaphoreSecurity" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Benutzer verfügt nicht über <see cref="F:System.Security.AccessControl.SemaphoreRights.ChangePermissions" /> Rechte.  
+  
+ - oder -   
+  
+ Das Semaphor wurde nicht mit geöffnet <see cref="F:System.Security.AccessControl.SemaphoreRights.ChangePermissions" /> Rechte.</exception>
+        <exception cref="T:System.NotSupportedException">Die aktuelle <see cref="T:System.Threading.Semaphore" /> Objekt stellt ein benanntes Systemsemaphor keine dar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryOpenExisting">
+      <MemberSignature Language="C#" Value="public static bool TryOpenExisting (string name, out System.Threading.Semaphore result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryOpenExisting(string name, [out] class System.Threading.Semaphore&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Semaphore.TryOpenExisting(System.String,System.Threading.Semaphore@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="result" Type="System.Threading.Semaphore&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu öffnenden Systemsemaphors.</param>
+        <param name="result">Enthält nach Beenden der Methode ein <see cref="T:System.Threading.Semaphore" />-Objekt, das das benannte Semaphor darstellt, wenn der Aufruf erfolgreich ausgeführt wurde, oder <see langword="null" />, wenn der Aufruf fehlgeschlagen ist. Dieser Parameter wird nicht initialisiert behandelt.</param>
+        <summary>Öffnet das angegebene benannte Semaphor, wenn es bereits vorhanden ist, und gibt einen Wert zurück, der angibt, ob der Vorgang erfolgreich war.</summary>
+        <returns>
+          <see langword="true" />, wenn das benannte Semaphor erfolgreich geöffnet wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das benannte Semaphor nicht vorhanden ist, wird es von dieser Methode nicht erstellt. Das Systemsemaphor erstellt, wenn sie nicht bereits vorhanden ist, gehen Sie die <xref:System.Threading.Semaphore.%23ctor%2A> Konstruktoren, die verfügt über eine `name` Parameter.  
+  
+ Wenn Sie unsicher sind, ob ein benanntes Semaphor vorhanden ist, verwenden Sie die Überladung dieser Methode anstelle des dem <xref:System.Threading.Semaphore.OpenExisting%28System.String%29> methodenüberladung, die eine Ausnahme auslöst, wenn das Semaphor nicht vorhanden ist.  
+  
+ Überladung dieser Methode entspricht dem Aufrufen der <xref:System.Threading.Semaphore.TryOpenExisting%2A> methodenüberladung und Angeben von <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> und <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Rechte, die mit dem bitweisen OR-Operation kombiniert. Angeben der <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Flag ermöglicht, dass einen Thread das Semaphor und Angeben der <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Flag ermöglicht, dass einen Thread aufrufen, die <xref:System.Threading.Semaphore.Release%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="name" /> ist länger als 260 Zeichen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">Win32-Fehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der benannte Semaphor ist vorhanden, aber der Benutzer verfügt nicht über den Sicherheitszugriff, der für die Verwendung erforderlich ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryOpenExisting">
+      <MemberSignature Language="C#" Value="public static bool TryOpenExisting (string name, System.Security.AccessControl.SemaphoreRights rights, out System.Threading.Semaphore result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryOpenExisting(string name, valuetype System.Security.AccessControl.SemaphoreRights rights, [out] class System.Threading.Semaphore&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Semaphore.TryOpenExisting(System.String,System.Security.AccessControl.SemaphoreRights,System.Threading.Semaphore@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="rights" Type="System.Security.AccessControl.SemaphoreRights" />
+        <Parameter Name="result" Type="System.Threading.Semaphore&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu öffnenden Systemsemaphors.</param>
+        <param name="rights">Eine bitweise Kombination von Enumerationswerten, die die gewünschten Sicherheitszugriffsrechte darstellen.</param>
+        <param name="result">Enthält nach Beenden der Methode ein <see cref="T:System.Threading.Semaphore" />-Objekt, das das benannte Semaphor darstellt, wenn der Aufruf erfolgreich ausgeführt wurde, oder <see langword="null" />, wenn der Aufruf fehlgeschlagen ist. Dieser Parameter wird nicht initialisiert behandelt.</param>
+        <summary>Öffnet das angegebene benannte Semaphor, wenn es bereits mit dem gewünschten Sicherheitszugriff vorhanden ist und gibt einen Wert zurück, der angibt, ob der Vorgang erfolgreich war.</summary>
+        <returns>
+          <see langword="true" />, wenn das benannte Semaphor erfolgreich geöffnet wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das benannte Semaphor nicht vorhanden ist, wird es von dieser Methode nicht erstellt. Das Systemsemaphor erstellt, wenn sie nicht bereits vorhanden ist, gehen Sie die <xref:System.Threading.Semaphore.%23ctor%2A> Konstruktoren, die verfügt über eine `name` Parameter.  
+  
+ Wenn Sie unsicher sind, ob ein benanntes Semaphor vorhanden ist, verwenden Sie die Überladung dieser Methode anstelle des dem <xref:System.Threading.Semaphore.OpenExisting%28System.String%2CSystem.Security.AccessControl.SemaphoreRights%29> methodenüberladung, die eine Ausnahme auslöst, wenn das Semaphor nicht vorhanden ist.  
+  
+ Die `rights` Parameter umfasst die <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> Flag, um Threads das Semaphor ermöglichen und die <xref:System.Security.AccessControl.SemaphoreRights?displayProperty=nameWithType> -Kennzeichen an die Threads ermöglichen, rufen Sie die <xref:System.Threading.Semaphore.Release%2A> Methode.  
+  
+ Mehrere Aufrufe dieser Methode, die den gleichen Wert für `name` nicht unbedingt zurück, die gleiche <xref:System.Threading.Semaphore> -Objekt, auch wenn die Objekte, die zurückgegeben werden, stellen den gleichen Systemsemaphor Namen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> ist eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ <paramref name="name" /> ist länger als 260 Zeichen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">Win32-Fehler.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der benannte Semaphor ist vorhanden, aber der Benutzer verfügt nicht über den Sicherheitszugriff, der für die Verwendung erforderlich ist.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

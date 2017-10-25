@@ -1,0 +1,913 @@
+<Type Name="SqlChars" FullName="System.Data.SqlTypes.SqlChars">
+  <TypeSignature Language="C#" Value="public sealed class SqlChars : System.Data.SqlTypes.INullable, System.Runtime.Serialization.ISerializable, System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SqlChars extends System.Object implements class System.Data.SqlTypes.INullable, class System.Runtime.Serialization.ISerializable, class System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlTypes.SqlChars" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.SqlTypes.INullable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Xml.Serialization.IXmlSerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlSchemaProvider("GetXsdType")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <see cref="T:System.Data.SqlTypes.SqlChars" />ein änderbaren Referenztyp, der umschließt ist ein <see cref="T:System.Char" /> Array oder ein <see cref="T:System.Data.SqlTypes.SqlString" /> Instanz.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.SqlTypes.SqlChars>abgerufen werden kann, für `varchar`, `nvarchar`, `char`, `nchar`, `text`, und `ntext` Werte oder über einen nicht verwalteten Puffer erstellt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.SqlTypes.SqlChars" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die maximal zulässige Länge für <xref:System.Data.SqlTypes.SqlChars> gebunden ist, durch die common Language Runtime Maximalgröße von Int32 (2.147.483.647).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlChars ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlChars.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.SqlTypes.SqlChars" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die maximal zulässige Länge für <xref:System.Data.SqlTypes.SqlChars> gebunden ist, durch die common Language Runtime Maximalgröße von Int32 (2.147.483.647).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlChars (char[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(char[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlChars.#ctor(System.Char[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Ein <see cref="T:System.Char" />-Array.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.SqlTypes.SqlChars" /> -Klasse basierend auf dem angegebenen Zeichenarray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die maximal zulässige Länge für <xref:System.Data.SqlTypes.SqlChars> gebunden ist, durch die common Language Runtime Maximalgröße von Int32 (2.147.483.647).  
+  
+ Die Instanz wird festgelegt, wenn ein null-Verweis übergeben wird, auf Null.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlChars (System.Data.SqlTypes.SqlString value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Data.SqlTypes.SqlString value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlChars.#ctor(System.Data.SqlTypes.SqlString)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlString" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Data.SqlTypes.SqlString" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.SqlTypes.SqlChars" /> Klasse auf der Grundlage der angegebenen <see cref="T:System.Data.SqlTypes.SqlString" /> Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die maximal zulässige Länge für <xref:System.Data.SqlTypes.SqlChars> gebunden ist, durch die common Language Runtime Maximalgröße von Int32 (2.147.483.647).  
+  
+ Die Instanz wird festgelegt, wenn ein null-Verweis übergeben wird, auf Null.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Buffer">
+      <MemberSignature Language="C#" Value="public char[] Buffer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char[] Buffer" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlTypes.SqlChars.Buffer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Verweis auf den internen Puffer zurück.</summary>
+        <value>Gibt einen Verweis auf den internen Puffer zurück. Für <see cref="T:System.Data.SqlTypes.SqlChars" /> Instanzen basierend auf nicht verwalteten Zeiger erstellt, gibt eine verwaltete Kopie des internen Puffers zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt einen null-Verweis für null-Wert <xref:System.Data.SqlTypes.SqlChars>.  
+  
+ Löst ein <xref:System.InvalidOperationException> für Instanzen von Stream umschlossene <xref:System.Data.SqlTypes.SqlChars>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXsdType">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlQualifiedName GetXsdType (System.Xml.Schema.XmlSchemaSet schemaSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlQualifiedName GetXsdType(class System.Xml.Schema.XmlSchemaSet schemaSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlChars.GetXsdType(System.Xml.Schema.XmlSchemaSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemaSet" Type="System.Xml.Schema.XmlSchemaSet" />
+      </Parameters>
+      <Docs>
+        <param name="schemaSet">Ein <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</param>
+        <summary>Gibt die XML-Schemadefinitionssprache (XSD) des angegebenen <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <returns>Ein <see langword="string" /> Wert an der angegebenen XSD <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNull" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlTypes.SqlChars.IsNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert, der angibt, ob dies <see cref="T:System.Data.SqlTypes.SqlChars" /> ist null.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Data.SqlTypes.SqlChars" /> ist null. Andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `false`. Weitere Informationen finden Sie unter [Behandlung von Null-Werte](~/docs/framework/data/adonet/sql/handling-null-values.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public char this[long offset] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char Item(int64)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlTypes.SqlChars.Item(System.Int64)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Ein <see cref="T:System.Int64" />-Wert.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Data.SqlTypes.SqlChars" /> Instanz am angegebenen Index.</summary>
+        <value>Ein <see cref="T:System.Char" />-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlTypes.SqlChars.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge des Werts, der in enthalten ist ab dem <see cref="T:System.Data.SqlTypes.SqlChars" /> Instanz.</summary>
+        <value>Ein <see cref="T:System.Int64" /> -Wert, der die Länge in Zeichen des Werts gibt an, die in enthalten ist das <see cref="T:System.Data.SqlTypes.SqlChars" /> Instanz.  
+  
+ Gibt-1 zurück, wenn keine Puffer für die Instanz verfügbar ist, oder wenn der Wert null ist.  
+  
+ Gibt eine <see cref="P:System.IO.Stream.Length" /> für eine Instanz Datenstrom eingeschlossen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxLength">
+      <MemberSignature Language="C#" Value="public long MaxLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxLength" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlTypes.SqlChars.MaxLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Länge in Doppelbyte-Zeichen des Werts, der interne Puffer aufnehmen kann.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die maximale Länge in Doppelbyte-Zeichen des Werts des internen Puffers darstellt.  
+  
+ Gibt-1 zurück, für einen Stream umschlossene <see cref="T:System.Data.SqlTypes.SqlChars" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlChars Null { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Data.SqlTypes.SqlChars Null" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlTypes.SqlChars.Null" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlChars</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine null-Instanz dieses <see cref="T:System.Data.SqlTypes.SqlChars" />.</summary>
+        <value>Gibt eine Instanz so zurück, die <see cref="P:System.Data.SqlTypes.SqlChars.IsNull" /> gibt <see langword="true" />. Weitere Informationen finden Sie unter [Behandlung von Null-Werte](~/docs/framework/data/adonet/sql/handling-null-values.md).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Data.SqlTypes.SqlString (System.Data.SqlTypes.SqlChars value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlString op_Explicit(class System.Data.SqlTypes.SqlChars value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlChars.op_Explicit(System.Data.SqlTypes.SqlChars)~System.Data.SqlTypes.SqlString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlString</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlChars" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Data.SqlTypes.SqlChars (System.Data.SqlTypes.SqlString value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Data.SqlTypes.SqlChars op_Explicit(valuetype System.Data.SqlTypes.SqlString value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlChars.op_Explicit(System.Data.SqlTypes.SqlString)~System.Data.SqlTypes.SqlChars" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlChars</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlString" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public long Read (long offset, char[] buffer, int offsetInBuffer, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 Read(int64 offset, char[] buffer, int32 offsetInBuffer, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlChars.Read(System.Int64,System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="offsetInBuffer" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Ein <see cref="T:System.Int64" /> <see langword="long" /> Wertoffset in enthaltene Wert der <see cref="T:System.Data.SqlTypes.SqlChars" /> Instanz.</param>
+        <param name="buffer">Der Zeichenpuffer des Array in kopieren.</param>
+        <param name="offsetInBuffer">Ein <see cref="T:System.Int32" /> Ganzzahloffset im Puffer Kopieren gestartet werden.</param>
+        <param name="count">Ein <see cref="T:System.Int32" /> Integer-Wert, der die Anzahl der zu kopierenden Zeichen.</param>
+        <summary>Kopiert Zeichen aus dieser <see cref="T:System.Data.SqlTypes.SqlChars" /> Instanz in den übergebenen Puffer und gibt die Anzahl der kopierten Zeichen zurück.</summary>
+        <returns>Ein <see cref="T:System.Int64" /> <see langword="long" /> Wert, der die Anzahl der kopierten Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn versucht wird, über die Lesen <xref:System.Data.SqlTypes.SqlChars.MaxLength%2A>, wird eine Ausnahme ausgelöst.  
+  
+ Wenn `count` weitere Zeichen kopiert werden sollen, als verfügbar sind, gibt die `offsetInBuffer` bis zum Ende des Werts, nur die verfügbaren Zeichen kopiert werden.  
+  
+ Eine Ausnahme wird ausgelöst, wenn der Zielpuffer ein null-Verweis ist.  
+  
+ Eine Ausnahme wird ausgelöst, wenn der Zielpuffer nicht so viele Zeichen wie angefordert empfangen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLength">
+      <MemberSignature Language="C#" Value="public void SetLength (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLength(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlChars.SetLength(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Int64" /> <see langword="long" /> Wert, der die Länge darstellt.</param>
+        <summary>Legt die Länge dieses <see cref="T:System.Data.SqlTypes.SqlChars" /> Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird eine interne Konvertierung in einen verwalteten Puffer für eine Instanz einer nicht verwalteten Puffer baut auf den ausgelöst werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNull">
+      <MemberSignature Language="C#" Value="public void SetNull ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetNull() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlChars.SetNull" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hiermit <see cref="T:System.Data.SqlTypes.SqlChars" /> Instanz auf null.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Storage">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.StorageState Storage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.SqlTypes.StorageState Storage" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlTypes.SqlChars.Storage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.StorageState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt Informationen zu den Speicherzustand dieses <see cref="T:System.Data.SqlTypes.SqlChars" /> Instanz.</summary>
+        <value>Eine <see cref="T:System.Data.SqlTypes.StorageState" />-Enumeration.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlChars.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das mit Serialisierungsinformationen aufgefüllt werden soll.</param>
+        <param name="context">Der Zielkontext der Serialisierung.</param>
+        <summary>Ruft Serialisierungsinformationen mit allen Daten, die erforderlich, um das erneute Instanziieren dieser <see cref="T:System.Data.SqlTypes.SqlChars" /> Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.GetSchema">
+      <MemberSignature Language="C#" Value="System.Xml.Schema.XmlSchema IXmlSerializable.GetSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Xml.Schema.XmlSchema System.Xml.Serialization.IXmlSerializable.GetSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlChars.System#Xml#Serialization#IXmlSerializable#GetSchema" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.</summary>
+        <returns>Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.ReadXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.ReadXml (System.Xml.XmlReader r);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.ReadXml(class System.Xml.XmlReader r) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlChars.System#Xml#Serialization#IXmlSerializable#ReadXml(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="r">
+          <see langword="XmlReader" />
+        </param>
+        <summary>Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.WriteXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.WriteXml (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.WriteXml(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlChars.System#Xml#Serialization#IXmlSerializable#WriteXml(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">
+          <see langword="XmlWriter" />
+        </param>
+        <summary>Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSqlString">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlString ToSqlString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlString ToSqlString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlChars.ToSqlString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlString</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert dieses <see cref="T:System.Data.SqlTypes.SqlChars" /> Instanz in die entsprechende <see cref="T:System.Data.SqlTypes.SqlString" /> Darstellung.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlTypes.SqlString" /> Darstellung dieses Typs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public char[] Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char[] Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlTypes.SqlChars.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine verwaltete Kopie des Werts von diesem <see cref="T:System.Data.SqlTypes.SqlChars" />.</summary>
+        <value>Der Wert dieses <see cref="T:System.Data.SqlTypes.SqlChars" /> als ein Array von Zeichen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt einen null-Verweis für null-Wert <xref:System.Data.SqlTypes.SqlChars>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (long offset, char[] buffer, int offsetInBuffer, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(int64 offset, char[] buffer, int32 offsetInBuffer, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlChars.Write(System.Int64,System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="offsetInBuffer" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Ein <see langword="long" /> Wertoffset in enthaltene Wert der <see cref="T:System.Data.SqlTypes.SqlChars" /> Instanz.</param>
+        <param name="buffer">Der Zeichenpuffer des Array in kopieren.</param>
+        <param name="offsetInBuffer">Ein <see cref="T:System.Int32" /> Ganzzahloffset im Puffer Kopieren gestartet werden.</param>
+        <param name="count">Ein <see cref="T:System.Int32" /> Integer-Zahl, die Anzahl der Zeichen zu kopieren.</param>
+        <summary>Kopiert Zeichen aus dem übergebenen Puffer zu diesem <see cref="T:System.Data.SqlTypes.SqlChars" /> Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Operation auf eine Position hinter schreibt <xref:System.Data.SqlTypes.SqlChars.Length%2A> jedoch in <xref:System.Data.SqlTypes.SqlChars.MaxLength%2A>, <xref:System.Data.SqlTypes.SqlChars.Length%2A> wird die neue Endposition entsprechend aktualisiert.  
+  
+ Der Wert der `offsetInBuffer` muss kleiner als oder gleich <xref:System.Data.SqlTypes.SqlChars.Length%2A>. Andernfalls wird eine Ausnahme ausgelöst. Beim Schreiben in eine Instanz null-Wert, kann nur der Wert 0 angegeben werden.  
+  
+ Wenn versucht wird, über schreiben <xref:System.Data.SqlTypes.SqlChars.MaxLength%2A>, wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

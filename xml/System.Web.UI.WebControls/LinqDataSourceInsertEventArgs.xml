@@ -1,0 +1,265 @@
+<Type Name="LinqDataSourceInsertEventArgs" FullName="System.Web.UI.WebControls.LinqDataSourceInsertEventArgs">
+  <TypeSignature Language="C#" Value="public class LinqDataSourceInsertEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinqDataSourceInsertEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.LinqDataSource.Inserting" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs> Objekt übergeben wird, um einen Ereignishandler für das <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> Ereignis. Die <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.NewObject%2A> Eigenschaft enthält die Daten, die eingefügt werden.  
+  
+ Sie können die <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs> Objekt, das die Daten zu überprüfen, bevor der Einfügevorgang in der Datenquelle ausgeführt wird. Sie können dann überprüfen Sie die Daten, zu überprüfen Validierungsfehler von der Datenklasse fest oder ändern Sie einen Wert vor dem Update. Sie können auch die Insert-Vorgang "Abbrechen".  
+  
+ Wenn das Objekt, das die Datenquelle repräsentiert, eine Validierungsausnahme ausgelöst, bevor die Daten eingefügt die <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.Exception%2A> Eigenschaft enthält eine Instanz von der <xref:System.Web.UI.WebControls.LinqDataSourceValidationException> Klasse. Sie können alle Validierungsausnahmen durch Abrufen der <xref:System.Web.UI.WebControls.LinqDataSourceValidationException.InnerExceptions%2A> Eigenschaft. Wenn keine Validierungsausnahme ausgelöst wird, die <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.Exception%2A> Eigenschaft enthält `null`. Wenn Sie die Validierungsausnahmen behandeln und nicht die Ausnahme erneut ausgelöst werden soll, legen Sie die <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.ExceptionHandled%2A> Eigenschaft `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Handler für das <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> Ereignis. Das Objekt aus der <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.NewObject%2A> Eigenschaft umgewandelt wird, auf einen Typ mit dem Namen `Product`. Die `DateModified` Eigenschaft von der `Product` -Objekts auf das aktuelle Datum und die Uhrzeit festgelegt wird.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSource.Inserting#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Inserting/cs/Default.aspx.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSource.Inserting#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Inserting/vb/Default.aspx.vb#1)]  
+  
+ Das folgende Beispiel zeigt einen Ereignishandler für das <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> Ereignis. Es zeigt ausnahmemeldungen für die Validierung mithilfe einer <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+```vb  
+Protected Sub LinqDataSource_Inserting(ByVal sender As Object, _  
+        ByVal e As LinqDataSourceInsertEventArgs)  
+    If (e.Exception IsNot Nothing) Then  
+        For Each innerException As KeyValuePair(Of String, Exception) _  
+               In e.Exception.InnerExceptions  
+            Label1.Text &= innerException.Key & ": " & _  
+                innerException.Value.Message + "<br />"  
+        Next  
+        e.ExceptionHandled = True  
+    End If  
+End Sub  
+```  
+  
+```csharp  
+protected void LinqDataSource_Inserting(object sender,   
+        LinqDataSourceInsertEventArgs e)  
+{  
+    if (e.Exception != null)  
+    {  
+        foreach (KeyValuePair<string, Exception> innerException in   
+             e.Exception.InnerExceptions)  
+        {  
+        Label1.Text += innerException.Key + ": " +   
+            innerException.Value.Message + "<br />";  
+        }  
+        e.ExceptionHandled = true;  
+    }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinqDataSourceInsertEventArgs (object newObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object newObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="newObject">Ein Objekt, das die einzufügenden Daten enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinqDataSourceInsertEventArgs (System.Web.UI.WebControls.LinqDataSourceValidationException exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.LinqDataSourceValidationException exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.#ctor(System.Web.UI.WebControls.LinqDataSourceValidationException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Web.UI.WebControls.LinqDataSourceValidationException" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die Ausnahme, die aufgetreten sind, wenn die einzufügenden Daten validiert wurde.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs" /> -Klasse und gibt die angegebene Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.LinqDataSourceValidationException Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.LinqDataSourceValidationException Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LinqDataSourceValidationException</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausnahme, die ausgelöst wurde, während die Daten vor der Insert-Vorgang validiert wurde.</summary>
+        <value>Die Ausnahme, wenn ein Fehler aufgetreten; andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Validierungsausnahme ausgelöst wird, bevor der Einfügevorgang ausgeführt wird, wird die Ausnahme gespeichert, der <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.Exception%2A> Eigenschaft. In einem Ereignishandler für das <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> -Ereignis können Sie die Ausnahme durch Abrufen der <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.Exception%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Handler für das <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> Ereignis. Es zeigt ausnahmemeldungen für die Validierung mithilfe einer <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+```vb  
+Protected Sub LinqDataSource_Inserting(ByVal sender As Object, _  
+        ByVal e As LinqDataSourceInsertEventArgs)  
+    If (e.Exception IsNot Nothing) Then  
+        For Each innerException As KeyValuePair(Of String, Exception) _  
+               In e.Exception.InnerExceptions  
+            Label1.Text &= innerException.Key & ": " & _  
+                innerException.Value.Message + "<br />"  
+        Next  
+        e.ExceptionHandled = True  
+    End If  
+End Sub  
+```  
+  
+```csharp  
+protected void LinqDataSource_Inserting(object sender,   
+        LinqDataSourceInsertEventArgs e)  
+{  
+    if (e.Exception != null)  
+    {  
+        foreach (KeyValuePair<string, Exception> innerException in   
+             e.Exception.InnerExceptions)  
+        {  
+        Label1.Text += innerException.Key + ": " +   
+            innerException.Value.Message + "<br />";  
+        }  
+        e.ExceptionHandled = true;  
+    }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionHandled">
+      <MemberSignature Language="C#" Value="public bool ExceptionHandled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExceptionHandled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.ExceptionHandled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Ausnahme behandelt wurde, sodass es nicht erneut ausgelöst werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn die Ausnahme verarbeitet wurde. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ereignishandler für erstellen Sie die <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> Ereignis Validierungsausnahmen untersucht, die vor der Insert-Vorgang aufgetreten ist. Wenn Sie die Ausnahme behandeln und nicht erneut ausgelöst werden soll möchten, legen Sie die <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.ExceptionHandled%2A> Eigenschaft `true`. Wenn Sie nicht festlegen, die <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.ExceptionHandled%2A> Eigenschaft `true`, wird die Ausnahme an den nächsten Ereignishandler in der Aufrufliste weitergegeben werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Ereignishandler für das <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> Ereignis. Es zeigt ausnahmemeldungen für die Validierung mithilfe einer <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+```vb  
+Protected Sub LinqDataSource_Inserting(ByVal sender As Object, _  
+        ByVal e As LinqDataSourceInsertEventArgs)  
+    If (e.Exception IsNot Nothing) Then  
+        For Each innerException As KeyValuePair(Of String, Exception) _  
+               In e.Exception.InnerExceptions  
+            Label1.Text &= innerException.Key & ": " & _  
+                innerException.Value.Message + "<br />"  
+        Next  
+        e.ExceptionHandled = True  
+    End If  
+End Sub  
+```  
+  
+```csharp  
+protected void LinqDataSource_Inserting(object sender,   
+        LinqDataSourceInsertEventArgs e)  
+{  
+    if (e.Exception != null)  
+    {  
+        foreach (KeyValuePair<string, Exception> innerException in   
+             e.Exception.InnerExceptions)  
+        {  
+        Label1.Text += innerException.Key + ": " +   
+            innerException.Value.Message + "<br />";  
+        }  
+        e.ExceptionHandled = true;  
+    }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewObject">
+      <MemberSignature Language="C#" Value="public object NewObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object NewObject" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.NewObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das die einzufügenden Daten enthält.</summary>
+        <value>Ein Objekt, das die einzufügenden Daten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.NewObject%2A> Eigenschaft enthält die Daten, die in der Datenquelle eingefügt werden. Erstellen Sie einen Ereignishandler für das <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> Ereignis, und rufen die <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.NewObject%2A> Eigenschaft zum Überprüfen der Daten, die Daten ändern oder den Insert-Vorgang "Abbrechen", bevor die Datenvorgang ausgeführt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.NewObject%2A> Eigenschaft gibt ein Objekt vom Typ <xref:System.Object>. Sie können dieses Objekt in den Typ der Klasse umgewandelt, die das Daten darstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Handler für das <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> Ereignis. Das Objekt aus der <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.NewObject%2A> Eigenschaft umgewandelt wird, auf einen Typ mit dem Namen `Product`. Die `DateModified` Eigenschaft von der `Product` -Objekts auf das aktuelle Datum und die Uhrzeit festgelegt wird.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSource.Inserting#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Inserting/cs/Default.aspx.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSource.Inserting#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Inserting/vb/Default.aspx.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,389 @@
+<Type Name="DesignerAttribute" FullName="System.ComponentModel.DesignerAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DesignerAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignerAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DesignerAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Klasse an, die zum Implementieren von Entwurfszeitdiensten für eine Komponente verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die Klasse, die Sie für die Entwurfszeit Dienste verwenden muss die <xref:System.ComponentModel.Design.IDesigner> Schnittstelle.  
+  
+ Verwenden der <xref:System.ComponentModel.DesignerAttribute.DesignerBaseTypeName%2A> Eigenschaft, um den Basistyp des Designers zu suchen. Verwenden der <xref:System.ComponentModel.DesignerAttribute.DesignerTypeName%2A> Eigenschaft, um den Namen des Typs des Designers, die diesem Element zugeordnet sind.  
+  
+ Weitere Informationen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Klasse mit dem Namen `MyForm`. `MyForm`verfügt über zwei Attribute einer <xref:System.ComponentModel.DesignerAttribute> , der angibt, verwendet diese Klasse die <xref:System.Windows.Forms.Design.DocumentDesigner>, und ein <xref:System.ComponentModel.DesignerCategoryAttribute> , die angibt, die <xref:System.ComponentModel.DesignerCategoryAttribute.Form> Kategorie.  
+  
+ [!code-cpp[Classic DesignerAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DesignerAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DesignerAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DesignerAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic DesignerAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DesignerAttribute Example/VB/source.vb#1)]  
+  
+ Im nächste Beispiel erstellt eine Instanz des `MyForm`. Dann wird die Attribute für die Klasse und extrahiert die <xref:System.ComponentModel.DesignerAttribute>, und gibt den Namen des Designers.  
+  
+ [!code-cpp[Classic DesignerAttribute Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DesignerAttribute Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic DesignerAttribute Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DesignerAttribute Example/CS/source.cs#2)]
+ [!code-vb[Classic DesignerAttribute Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DesignerAttribute Example/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerAttribute (string designerTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string designerTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="designerTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="designerTypeName">Die Verkettung von der vollqualifizierte Name des Typs, der Entwurfszeitdienste für die Komponente dieses Attribut enthält gebunden ist, und der Name der Assembly befindet sich dieses Typs in.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DesignerAttribute" /> -Klasse mit dem Namen des Typs, die zur Entwurfszeit Dienste bereitstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die Klasse, die Sie für die Entwurfszeit Dienste verwenden muss die <xref:System.ComponentModel.Design.IDesigner> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerAttribute (Type designerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type designerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="designerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="designerType">Ein <see cref="T:System.Type" /> , stellt die Klasse mit Entwurfszeitdienste für die Komponente dieses Attribut gebunden ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DesignerAttribute" /> -Klasse unter Verwendung der Typ, der zur Entwurfszeit Dienste bereitstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die Klasse, die Sie für die Entwurfszeit Dienste verwenden muss die <xref:System.ComponentModel.Design.IDesigner> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerAttribute (string designerTypeName, string designerBaseTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string designerTypeName, string designerBaseTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="designerTypeName" Type="System.String" />
+        <Parameter Name="designerBaseTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="designerTypeName">Die Verkettung von der vollqualifizierte Name des Typs, der Entwurfszeitdienste für die Komponente dieses Attribut enthält gebunden ist, und der Name der Assembly befindet sich dieses Typs in.</param>
+        <param name="designerBaseTypeName">Der vollqualifizierte Name der Basisklasse der Designerklasse zugeordnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DesignerAttribute" /> -Klasse unter Verwendung der Designertyp und die Basisklasse für den Designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die Klasse, die Sie für die Entwurfszeit Dienste verwenden muss die <xref:System.ComponentModel.Design.IDesigner> Schnittstelle.  
+  
+ Die `designerBaseTypeName` Parameter können Sie mehrere Typen des Designers für eine bestimmte Klasse anfügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerAttribute (string designerTypeName, Type designerBaseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string designerTypeName, class System.Type designerBaseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerAttribute.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="designerTypeName" Type="System.String" />
+        <Parameter Name="designerBaseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="designerTypeName">Die Verkettung von der vollqualifizierte Name des Typs, der Entwurfszeitdienste für die Komponente dieses Attribut enthält gebunden ist, und der Name der Assembly befindet sich dieses Typs in.</param>
+        <param name="designerBaseType">Ein <see cref="T:System.Type" /> , die die Basisklasse zuzuordnende darstellt der <c>dem DesignerTypeName</c>.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DesignerAttribute" /> -Klasse mit den Namen der Designerklasse und die Basisklasse für den Designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die Klasse, die Sie für die Entwurfszeit Dienste verwenden muss die <xref:System.ComponentModel.Design.IDesigner> Schnittstelle.  
+  
+ Die `designerBaseType` Parameter können Sie mehrere Typen des Designers für eine bestimmte Klasse anfügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerAttribute (Type designerType, Type designerBaseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type designerType, class System.Type designerBaseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerAttribute.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="designerType" Type="System.Type" />
+        <Parameter Name="designerBaseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="designerType">Ein <see cref="T:System.Type" /> , stellt die Klasse mit Entwurfszeitdienste für die Komponente dieses Attribut gebunden ist.</param>
+        <param name="designerBaseType">Ein <see cref="T:System.Type" /> , die die Basisklasse zuzuordnende darstellt der <c>DesignerType</c>.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DesignerAttribute" /> -Klasse mit den Typen der Designer und Basis-Designer-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die Klasse, die Sie für die Entwurfszeit Dienste verwenden muss die <xref:System.ComponentModel.Design.IDesigner> Schnittstelle.  
+  
+ Die `designerBaseType` Parameter können Sie mehrere Typen des Designers für eine bestimmte Klasse anfügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerBaseTypeName">
+      <MemberSignature Language="C#" Value="public string DesignerBaseTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DesignerBaseTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DesignerAttribute.DesignerBaseTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Basistyps dieses Designers ab.</summary>
+        <value>Der Name des Basistyps dieses Designers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerTypeName">
+      <MemberSignature Language="C#" Value="public string DesignerTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DesignerTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DesignerAttribute.DesignerTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Designertyps dieser Designerattribut zugeordnet.</summary>
+        <value>Der Name des Designertyps, die diesem Designer-Attribut zugeordnet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, dessen auf Wertgleichheit geprüft.</param>
+        <summary>Gibt zurück, ob der Wert des angegebenen Objekts gleich dem aktuellen <see cref="T:System.ComponentModel.DesignerAttribute" />.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert des angegebenen Objekts gleich der aktuellen ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DesignerAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeId">
+      <MemberSignature Language="C#" Value="public override object TypeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypeId" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DesignerAttribute.TypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine eindeutige ID für diesen Typ des Attributs ab.</summary>
+        <value>Eine eindeutige ID für diesen Typ des Attributs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es wird durch das Filtern von Algorithmen verwendet, um zwei Attribute zu identifizieren, die den gleichen Typ sind. Für die meisten Attribute gibt dies nur die <xref:System.Type> Instanz für das Attribut. <xref:System.ComponentModel.DesignerAttribute>überschreibt diese Option, um den Typ des Designers Basistyps enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

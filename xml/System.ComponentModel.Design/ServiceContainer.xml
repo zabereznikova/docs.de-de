@@ -1,0 +1,515 @@
+<Type Name="ServiceContainer" FullName="System.ComponentModel.Design.ServiceContainer">
+  <TypeSignature Language="C#" Value="public class ServiceContainer : IDisposable, IServiceProvider, System.ComponentModel.Design.IServiceContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceContainer extends System.Object implements class System.ComponentModel.Design.IServiceContainer, class System.IDisposable, class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.ServiceContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.IServiceContainer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Bietet eine einfache Implementierung der <see cref="T:System.ComponentModel.Design.IServiceContainer" /> Schnittstelle. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.ServiceContainer> Objekt zum Speichern und Bereitstellen von Diensten verwendet werden kann. <xref:System.ComponentModel.Design.ServiceContainer> implementiert die <xref:System.ComponentModel.Design.IServiceContainer>-Schnittstelle.  
+  
+ Die <xref:System.ComponentModel.Design.ServiceContainer> Objekt kann erstellt werden, mit einem Konstruktor, der ein übergeordnetes Element hinzufügt <xref:System.ComponentModel.Design.IServiceContainer> über welche Dienste können optional hinzugefügt oder entfernt von allen übergeordneten <xref:System.ComponentModel.Design.IServiceContainer> Objekte, einschließlich des unmittelbar übergeordneten <xref:System.ComponentModel.Design.IServiceContainer>. Zum Hinzufügen oder Entfernen eines Diensts aus allen <xref:System.ComponentModel.Design.IServiceContainer> Implementierungen, die mit diesem verknüpft sind <xref:System.ComponentModel.Design.IServiceContainer> über Überordnung, rufen Sie die <xref:System.ComponentModel.Design.ServiceContainer.AddService%2A> oder <xref:System.ComponentModel.Design.ServiceContainer.RemoveService%2A> methodenüberladung, die akzeptiert einen booleschen Wert, der angibt, ob der Service Request höher stufen .  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.SharedState>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispielprogramm zeigt Verketten von Diensten und verknüpft die resultierenden dienstverfügbarkeit einer Kette von <xref:System.ComponentModel.Design.ServiceContainer> Objekte. Das Programm bietet eine Benutzeroberfläche, können Sie die Verfügbarkeit von Diensten in einer Kette von verknüpften Diensten finden Sie unter, und verwendet, die <xref:System.ComponentModel.Design.ServiceContainer.AddService%2A>, <xref:System.ComponentModel.Design.ServiceContainer.GetService%2A>, und <xref:System.ComponentModel.Design.ServiceContainer.RemoveService%2A> Methoden sowie verknüpfte Dienstcontainer.  
+  
+ [!code-cpp[ServiceArchitectureExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ServiceArchitectureExample/CPP/serviceform.cpp#1)]
+ [!code-csharp[ServiceArchitectureExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ServiceArchitectureExample/CS/serviceform.cs#1)]
+ [!code-vb[ServiceArchitectureExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ServiceArchitectureExample/VB/serviceform.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceContainer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ServiceContainer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.ServiceContainer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceContainer (IServiceProvider parentProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider parentProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ServiceContainer.#ctor(System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parentProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="parentProvider">Ein übergeordneter Dienstanbieter.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Design.ServiceContainer" /> -Klasse unter Verwendung des angegebenen übergeordneten Dienstanbieters.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Dienstcontainer verwendet dieses Objekt Dienstanbieter zum Abrufen von Diensten, sofern diese nicht lokal im Container verfügbar sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddService">
+      <MemberSignature Language="C#" Value="public void AddService (Type serviceType, System.ComponentModel.Design.ServiceCreatorCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddService(class System.Type serviceType, class System.ComponentModel.Design.ServiceCreatorCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ServiceContainer.AddService(System.Type,System.ComponentModel.Design.ServiceCreatorCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="callback" Type="System.ComponentModel.Design.ServiceCreatorCallback" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Typ des hinzuzufügenden Diensts.</param>
+        <param name="callback">Ein Rückrufobjekt, das den Dienst erstellen kann. Dies ermöglicht es einem Dienst als verfügbar deklariert werden, jedoch wird die Erstellung des Objekts verzögert, bis der Dienst angefordert wird.</param>
+        <summary>Fügt dem Dienstcontainer den angegebenen Dienst.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie zum Hinzufügen eines Diensts zu einem <xref:System.ComponentModel.Design.ServiceContainer>.  
+  
+ [!code-cpp[ServiceContainerExample#3](~/samples/snippets/cpp/VS_Snippets_Winforms/ServiceContainerExample/CPP/form1.cpp#3)]
+ [!code-csharp[ServiceContainerExample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ServiceContainerExample/CS/form1.cs#3)]
+ [!code-vb[ServiceContainerExample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ServiceContainerExample/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> oder <paramref name="callback" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Ein Dienst des Typs <paramref name="serviceType" /> bereits im Container vorhanden ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddService">
+      <MemberSignature Language="C#" Value="public void AddService (Type serviceType, object serviceInstance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddService(class System.Type serviceType, object serviceInstance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ServiceContainer.AddService(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="serviceInstance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Typ des hinzuzufügenden Diensts.</param>
+        <param name="serviceInstance">Eine Instanz des Diensts hinzufügen. Dieses Objekt implementieren oder erben von der vom angegebenen Typ der <c>ServiceType</c> Parameter.</param>
+        <summary>Fügt dem Dienstcontainer den angegebenen Dienst.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie zum Hinzufügen eines Diensts zu einem <xref:System.ComponentModel.Design.ServiceContainer>.  
+  
+ [!code-cpp[ServiceContainerExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/ServiceContainerExample/CPP/form1.cpp#2)]
+ [!code-csharp[ServiceContainerExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ServiceContainerExample/CS/form1.cs#2)]
+ [!code-vb[ServiceContainerExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ServiceContainerExample/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> oder <paramref name="serviceInstance" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Ein Dienst des Typs <paramref name="serviceType" /> bereits im Container vorhanden ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddService">
+      <MemberSignature Language="C#" Value="public virtual void AddService (Type serviceType, System.ComponentModel.Design.ServiceCreatorCallback callback, bool promote);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddService(class System.Type serviceType, class System.ComponentModel.Design.ServiceCreatorCallback callback, bool promote) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ServiceContainer.AddService(System.Type,System.ComponentModel.Design.ServiceCreatorCallback,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="callback" Type="System.ComponentModel.Design.ServiceCreatorCallback" />
+        <Parameter Name="promote" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Typ des hinzuzufügenden Diensts.</param>
+        <param name="callback">Ein Rückrufobjekt, das den Dienst erstellen kann. Dies ermöglicht es einem Dienst als verfügbar deklariert werden, jedoch wird die Erstellung des Objekts verzögert, bis der Dienst angefordert wird.</param>
+        <param name="promote">
+          <see langword="true" />Wenn dieser Dienst auf einen beliebigen übergeordneten Dienstcontainer hinzugefügt werden soll; andernfalls <see langword="false" />.</param>
+        <summary>Fügt dem Dienstcontainer den angegebenen Dienst.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> oder <paramref name="callback" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Ein Dienst des Typs <paramref name="serviceType" /> bereits im Container vorhanden ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddService">
+      <MemberSignature Language="C#" Value="public virtual void AddService (Type serviceType, object serviceInstance, bool promote);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddService(class System.Type serviceType, object serviceInstance, bool promote) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ServiceContainer.AddService(System.Type,System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="serviceInstance" Type="System.Object" />
+        <Parameter Name="promote" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Typ des hinzuzufügenden Diensts.</param>
+        <param name="serviceInstance">Eine Instanz des hinzuzufügenden Diensttyps. Dieses Objekt implementieren oder erben von der vom angegebenen Typ der <c>ServiceType</c> Parameter.</param>
+        <param name="promote">
+          <see langword="true" />Wenn dieser Dienst auf einen beliebigen übergeordneten Dienstcontainer hinzugefügt werden soll; andernfalls <see langword="false" />.</param>
+        <summary>Fügt dem Dienstcontainer den angegebenen Dienst.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> oder <paramref name="serviceInstance" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Ein Dienst des Typs <paramref name="serviceType" /> bereits im Container vorhanden ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultServices">
+      <MemberSignature Language="C#" Value="protected virtual Type[] DefaultServices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] DefaultServices" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ServiceContainer.DefaultServices" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standarddienste direkt vom <see cref="T:System.ComponentModel.Design.ServiceContainer" />.</summary>
+        <value>Die Standarddienste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die Standarddienste, die direkt auf diesem implementiert werden <xref:System.ComponentModel.Design.IServiceContainer>. die standardmäßige Implementierung dieser Eigenschaft besteht in der Rückgabe der <xref:System.ComponentModel.Design.IServiceContainer> und <xref:System.ComponentModel.Design.ServiceContainer> Typen. Sie können diese Eigenschaft überschreiben und eigene Typen zurückgeben, Ändern des Standardverhaltens des <xref:System.ComponentModel.Component.GetService%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ServiceContainer.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verwirft dieses Dienstcontainer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.ServiceContainer.Dispose%2A>Führt alle instanziierten Dienste innerhalb des Containers und verwirft alle implementiert, <xref:System.IDisposable>, und löscht die Liste der Dienste.  
+  
+ Rufen Sie <xref:System.ComponentModel.Design.ServiceContainer.Dispose%2A> auf, wenn Sie <xref:System.ComponentModel.Design.ServiceContainer> nicht mehr benötigen. Die <xref:System.ComponentModel.Design.ServiceContainer.Dispose%2A>-Methode bewirkt, dass <xref:System.ComponentModel.Design.ServiceContainer> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.ComponentModel.Design.ServiceContainer.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.ComponentModel.Design.ServiceContainer> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.ComponentModel.Design.ServiceContainer> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.ComponentModel.Design.ServiceContainer.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.ComponentModel.Design.ServiceContainer> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.ComponentModel.Design.ServiceContainer>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ServiceContainer.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />Wenn die <see cref="T:System.ComponentModel.Design.ServiceContainer" /> wird gerade freigegeben ist, andernfalls wird <see langword="false" />.</param>
+        <summary>Verwirft dieses Dienstcontainer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.ServiceContainer.Dispose%2A>Führt alle instanziierten Dienste innerhalb des Containers und verwirft alle implementiert, <xref:System.IDisposable>, und löscht die Liste der Dienste.  
+  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.ComponentModel.Design.ServiceContainer> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public virtual object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ServiceContainer.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Typ des abzurufenden Diensts.</param>
+        <summary>Ruft den angeforderten Dienst ab.</summary>
+        <returns>Eine Instanz des Dienstes, wenn es gefunden wurde, oder <see langword="null" /> , wenn es nicht gefunden werden konnte.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveService">
+      <MemberSignature Language="C#" Value="public void RemoveService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ServiceContainer.RemoveService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Typ des zu entfernenden Diensts.</param>
+        <summary>Entfernt den angegebenen Diensttyp aus dem Dienstcontainer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Vorgehensweise beim Entfernen eines Diensts aus einem <xref:System.ComponentModel.Design.ServiceContainer>.  
+  
+ [!code-cpp[ServiceContainerExample#4](~/samples/snippets/cpp/VS_Snippets_Winforms/ServiceContainerExample/CPP/form1.cpp#4)]
+ [!code-csharp[ServiceContainerExample#4](~/samples/snippets/csharp/VS_Snippets_Winforms/ServiceContainerExample/CS/form1.cs#4)]
+ [!code-vb[ServiceContainerExample#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ServiceContainerExample/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveService">
+      <MemberSignature Language="C#" Value="public virtual void RemoveService (Type serviceType, bool promote);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveService(class System.Type serviceType, bool promote) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ServiceContainer.RemoveService(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="promote" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Typ des zu entfernenden Diensts.</param>
+        <param name="promote">
+          <see langword="true" />Wenn dieser Dienst über einen beliebigen übergeordneten Dienstcontainer entfernt werden sollen; andernfalls <see langword="false" />.</param>
+        <summary>Entfernt den angegebenen Diensttyp aus dem Dienstcontainer.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

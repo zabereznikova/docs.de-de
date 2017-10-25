@@ -1,0 +1,87 @@
+<Type Name="CompatibleFramework" FullName="System.Deployment.Application.CompatibleFramework">
+  <TypeSignature Language="C#" Value="public class CompatibleFramework" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CompatibleFramework extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Deployment.Application.CompatibleFramework" />
+  <AssemblyInfo>
+    <AssemblyName>System.Deployment</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Version von .NET Framework, in denen eine Anwendung installieren und ausführen kann.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Profile">
+      <MemberSignature Language="C#" Value="public string Profile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Profile" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.CompatibleFramework.Profile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Profil des .NET Framework-Version, in denen eine Anwendung installieren und ausführen kann.</summary>
+        <value>Eine Zeichenfolge, die das Profil darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die .NET Framework-Version ist [!INCLUDE[net_client_v40_long](~/includes/net-client-v40-long-md.md)], die <xref:System.Deployment.Application.CompatibleFramework.Profile%2A> Eigenschaft gibt den "Client". Wenn die .NET Framework-Version ist [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], die <xref:System.Deployment.Application.CompatibleFramework.Profile%2A> Eigenschaft gibt "Full".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedRuntime">
+      <MemberSignature Language="C#" Value="public string SupportedRuntime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SupportedRuntime" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.CompatibleFramework.SupportedRuntime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Versionsnummer der Common Language Runtime von .NET Framework, in denen eine Anwendung installieren und ausführen kann.</summary>
+        <value>Eine Zeichenfolge, die Common Language Runtime-Version darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neue Versionen von .NET Framework möglicherweise bereits veröffentlichten Versionen der Laufzeit ausgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetVersion">
+      <MemberSignature Language="C#" Value="public string TargetVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.CompatibleFramework.TargetVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Version von .NET Framework, in denen eine Anwendung installieren und ausführen kann.</summary>
+        <value>Eine Zeichenfolge, die Version darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

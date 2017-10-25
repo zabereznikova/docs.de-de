@@ -1,0 +1,311 @@
+<Type Name="HandleCollector" FullName="System.Runtime.InteropServices.HandleCollector">
+  <TypeSignature Language="C#" Value="public sealed class HandleCollector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HandleCollector extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.HandleCollector" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verfolgt ausstehende Handles nach und erzwingt bei Erreichen des angegebenen Schwellenwerts eine Garbage Collection.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.InteropServices.HandleCollector> Klasse behält den Überblick über einer begrenzten Anzahl von Handles für nicht verwalteten Ressourcen.  Nicht verwaltete Ressourcen enthalten i. d. r. Handles für `HDC`s, `HWnd`s und So weiter.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HandleCollector (string name, int initialThreshold);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, int32 initialThreshold) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.HandleCollector.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="initialThreshold" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein Name für den Datensammler. Dieser Parameter ermöglicht, dass Sie das Benennen von Collectors, die zum Nachverfolgen, Typen getrennt behandelt.</param>
+        <param name="initialThreshold">Ein Wert, der den Punkt angibt, an dem Sammlungen beginnen soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.HandleCollector" /> -Klasse mit einem Namen und einen Schwellenwert, an dem die Handle-Erfassung beginnen soll.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="initialThreshold" /> Parameter ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HandleCollector (string name, int initialThreshold, int maximumThreshold);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, int32 initialThreshold, int32 maximumThreshold) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.HandleCollector.#ctor(System.String,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="initialThreshold" Type="System.Int32" />
+        <Parameter Name="maximumThreshold" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein Name für den Datensammler.  Dieser Parameter ermöglicht, dass Sie das Benennen von Collectors, die zum Nachverfolgen, Typen getrennt behandelt.</param>
+        <param name="initialThreshold">Ein Wert, der den Punkt angibt, an dem Sammlungen beginnen soll.</param>
+        <param name="maximumThreshold">Ein Wert, der den Punkt angibt, an dem Collections stattfinden müssen. Dies sollte auf die maximale Anzahl verfügbarer Handles festgelegt werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.HandleCollector" /> -Klasse mit einem Namen, ein Schwellenwert ab dem handle-Auflistung und einen Schwellenwert, an welche Handle Auflistung auftreten muss.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="initialThreshold" /> Parameter ist kleiner als 0.  
+  
+ - oder -   
+  
+ Die <paramref name="maximumThreshold" /> Parameter ist kleiner als 0.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="maximumThreshold" /> Parameter ist kleiner als das <paramref name="initialThreshold" /> Parameter.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.HandleCollector.Add" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erhöht die aktuelle Anzahl der Handles an.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Runtime.InteropServices.HandleCollector.Count" /> -Eigenschaft ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.HandleCollector.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der erfassten Handles ab.</summary>
+        <value>Die Anzahl der Handles gesammelt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialThreshold">
+      <MemberSignature Language="C#" Value="public int InitialThreshold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InitialThreshold" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.HandleCollector.InitialThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der den Punkt angibt, an dem Sammlungen beginnen soll.</summary>
+        <value>Ein Wert, der den Punkt angibt, an dem Sammlungen beginnen soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumThreshold">
+      <MemberSignature Language="C#" Value="public int MaximumThreshold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumThreshold" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.HandleCollector.MaximumThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der den Punkt angibt, mit dem Sammlungen ausgeführt werden müssen.</summary>
+        <value>Ein Wert, der den Punkt angibt, an dem Collections stattfinden müssen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.HandleCollector.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des ein <see cref="T:System.Runtime.InteropServices.HandleCollector" /> Objekt.</summary>
+        <value>Dies <see cref="P:System.Runtime.InteropServices.HandleCollector.Name" /> Eigenschaft ermöglicht Ihnen das Name-Collectors, mit denen Handletypen separat nachverfolgt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.HandleCollector.Remove" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verringert die Sperrenanzahl für des aktuellen Handles.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Runtime.InteropServices.HandleCollector.Count" /> -Eigenschaft ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

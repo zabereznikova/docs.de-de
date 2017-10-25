@@ -1,0 +1,13 @@
+<Namespace Name="Microsoft.Win32.SafeHandles">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.Win32.SafeHandles" /> -Namespace enthält Klassen, die abstrakte ableitungen von SafeHandle-Klassen, die allgemeine Funktionalität zur Unterstützung von Datei und Betriebssystemhandles bereitstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klassen abgeleitet werden die <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> und <xref:System.Runtime.InteropServices.CriticalHandle?displayProperty=nameWithType> Klassen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,175 @@
+<Type Name="DispatcherProcessingDisabled" FullName="System.Windows.Threading.DispatcherProcessingDisabled">
+  <TypeSignature Language="C#" Value="public struct DispatcherProcessingDisabled : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit DispatcherProcessingDisabled extends System.ValueType implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Threading.DispatcherProcessingDisabled" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Den Verteiler darstellt, wenn er befindet sich im deaktivierten Zustand und bietet die Möglichkeit, die Verarbeitung durch den Verteiler erneut zu aktivieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>Gibt eine <xref:System.Windows.Threading.DispatcherProcessingDisabled> Objekt, wenn sie aufgerufen wird.  
+  
+ Deaktivieren von Verteiler, die Verarbeitung ist eine erweiterte Methode, die vorgesehen ist, um das Risiko von nicht verknüpfte Reentranz zu vermeiden.  
+  
+ Die Auswirkungen des Deaktivierens von Verarbeitung lauten wie folgt:  
+  
+-   [!INCLUDE[TLA2#tla_clr#initcap](~/includes/tla2sharptla-clrsharpinitcap-md.md)]Sperren werden intern nicht Nachrichten weiterleiten.  
+  
+-   <xref:System.Windows.Threading.DispatcherFrame>Objekte dürfen nicht verschoben werden.  
+  
+-   Verarbeitung von Nachrichten ist nicht zulässig.  
+  
+ Aufrufen von <xref:System.Windows.Threading.DispatcherProcessingDisabled.Dispose%2A> auf die <xref:System.Windows.Threading.DispatcherProcessingDisabled> Objekt wird die Verarbeitung durch den Verteiler erneut aktiviert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verarbeitung durch den Verteiler deaktivieren und erneutes Aktivieren Verarbeitung durch den Verteiler.  <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>wird aufgerufen, einem **mit** Anweisung.  <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>Gibt eine <xref:System.Windows.Threading.DispatcherProcessingDisabled> Struktur wie das Objekt dient zum freigegeben sein, wenn die **mit** -block abgeschlossen ist.  Aufrufen von <xref:System.Windows.Threading.DispatcherProcessingDisabled.Dispose%2A> auf die <xref:System.Windows.Threading.DispatcherProcessingDisabled> Struktur reaktiviert Verarbeitung durch den Verteiler.  
+  
+ [!code-csharp[DispatcherSnippets#DispatcherDisableProcessing](~/samples/snippets/csharp/VS_Snippets_Wpf/DispatcherSnippets/CSharp/Window1.xaml.cs#dispatcherdisableprocessing)]
+ [!code-vb[DispatcherSnippets#DispatcherDisableProcessing](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DispatcherSnippets/visualbasic/window1.xaml.vb#dispatcherdisableprocessing)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherProcessingDisabled.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktiviert die Verarbeitung durch den Verteiler erneut.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Deaktivieren von Verteiler, die Verarbeitung ist eine erweiterte Methode, die vorgesehen ist, um das Risiko von nicht verknüpfte Reentranz zu vermeiden.  
+  
+ Die Auswirkungen des Deaktivierens von Verarbeitung lauten wie folgt:  
+  
+-   [!INCLUDE[TLA2#tla_clr#initcap](~/includes/tla2sharptla-clrsharpinitcap-md.md)]Sperren werden intern nicht Nachrichten weiterleiten.  
+  
+-   <xref:System.Windows.Threading.DispatcherFrame>Objekte dürfen nicht verschoben werden.  
+  
+-   Verarbeitung von Nachrichten ist nicht zulässig.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherProcessingDisabled.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, für die auf Gleichheit zu testen.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Windows.Threading.DispatcherProcessingDisabled" /> Objekt gleich diesem <see cref="T:System.Windows.Threading.DispatcherProcessingDisabled" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Objekt gleich diesem ist <see cref="T:System.Windows.Threading.DispatcherProcessingDisabled" /> Objekt; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherProcessingDisabled.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Hashcode für diese Instanz ab.</summary>
+        <returns>Ein 32-Bit-Ganzzahl-Hashcode mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Threading.DispatcherProcessingDisabled left, System.Windows.Threading.DispatcherProcessingDisabled right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Threading.DispatcherProcessingDisabled left, valuetype System.Windows.Threading.DispatcherProcessingDisabled right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherProcessingDisabled.op_Equality(System.Windows.Threading.DispatcherProcessingDisabled,System.Windows.Threading.DispatcherProcessingDisabled)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.Threading.DispatcherProcessingDisabled" />
+        <Parameter Name="right" Type="System.Windows.Threading.DispatcherProcessingDisabled" />
+      </Parameters>
+      <Docs>
+        <param name="left">Das erste zu vergleichende Objekt.</param>
+        <param name="right">Das zweite zu vergleichende Objekt.</param>
+        <summary>Bestimmt, ob zwei <see cref="T:System.Windows.Threading.DispatcherProcessingDisabled" />-Objekte gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Threading.DispatcherProcessingDisabled" /> Objekte sind gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Threading.DispatcherProcessingDisabled left, System.Windows.Threading.DispatcherProcessingDisabled right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Threading.DispatcherProcessingDisabled left, valuetype System.Windows.Threading.DispatcherProcessingDisabled right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherProcessingDisabled.op_Inequality(System.Windows.Threading.DispatcherProcessingDisabled,System.Windows.Threading.DispatcherProcessingDisabled)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.Threading.DispatcherProcessingDisabled" />
+        <Parameter Name="right" Type="System.Windows.Threading.DispatcherProcessingDisabled" />
+      </Parameters>
+      <Docs>
+        <param name="left">Das erste zu vergleichende Objekt.</param>
+        <param name="right">Das zweite zu vergleichende Objekt.</param>
+        <summary>Bestimmt, ob zwei <see cref="T:System.Windows.Threading.DispatcherProcessingDisabled" /> -Objekte ungleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Threading.DispatcherProcessingDisabled" /> Objekte sind nicht gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

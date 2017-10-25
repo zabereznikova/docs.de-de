@@ -1,0 +1,1186 @@
+<Type Name="Exception" FullName="System.Exception">
+  <TypeSignature Language="C#" Value="public class Exception : System.Runtime.InteropServices._Exception, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable beforefieldinit Exception extends System.Object implements class System.Runtime.InteropServices._Exception, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Exception" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._Exception</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._Exception))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Fehler dar, die beim Ausführen einer Anwendung auftreten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die .NET Framework-Quellcodes für diesen Typ finden Sie unter der [Verweisquelle](http://referencesource.microsoft.com/#mscorlib/system/exception.cs#f092fb2b893a0162). Sie können den Quellcode online Durchsuchen, Referenz für die Offlineanzeige herunterladen und schrittweise durchlaufen (inklusive Patches und Updates) während des Debuggens; finden Sie unter [Anweisungen](http://referencesource.microsoft.com/).  
+  
+ Diese Klasse ist die Basisklasse für alle Ausnahmen. Wenn ein Fehler auftritt, das System oder der aktuell ausgeführten Anwendung wird gemeldet durch Auslösen einer Ausnahme, die Informationen zum Fehler enthält. Nachdem eine Ausnahme ausgelöst wird, wird sie von der Anwendung oder vom Standardausnahmehandler verarbeitet.  
+  
+ In diesem Abschnitt  
+  
+ [Fehler und Ausnahmen](#Errors)   
+ [Try/Catch-Blöcke](#TryCatch)   
+ [Features von Ausnahmetypen](#Features)   
+ [Eigenschaften der Ausnahme-Klasse](#Properties)   
+ [Überlegungen zur Leistung](#Performance)   
+ [Eine Ausnahme auszulösen erneut.](#Rethrow)   
+ [Standardausnahmen auswählen](#Standard)   
+ [Implementieren benutzerdefinierte Ausnahmen](#Custom)  
+  
+<a name="Errors"></a>   
+## <a name="errors-and-exceptions"></a>Fehler und Ausnahmen  
+ Laufzeitfehler können eine Vielzahl von Gründen auftreten. Allerdings sollten nicht für alle Fehler als Ausnahmen im Code behandelt werden. Hier sind einige Arten von Fehlern, die zur Laufzeit und die entsprechenden Methoden auf diese reagieren auftreten können.  
+  
+-   **Verwendungsfehler.** Anwendungsfehler stellt einen Fehler in der Programmlogik, die zu einer Ausnahme führen können. Der Fehler sollten jedoch nicht über die Behandlung von Ausnahmen, aber ändern den fehlerhaften Code behandelt werden. Z. B. die Außerkraftsetzung von der <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> Methode im folgenden Beispiel wird vorausgesetzt, dass die `obj` Argument muss immer ungleich Null sein.  
+  
+     [!code-csharp[System.Exception.Class#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.exception.class/cs/usageerrors1.cs#4)]
+     [!code-vb[System.Exception.Class#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.exception.class/vb/usageerrors1.vb#4)]  
+  
+     Die <xref:System.NullReferenceException> Ausnahme, die Ergebnisse beim `obj` ist `null` kann durch Ändern des Quellcodes So testen Sie explizit für Null-Zeichen vor dem Aufrufen nicht eliminiert werden die <xref:System.Object.Equals%2A?displayProperty=nameWithType> "Override" und dann neu kompilieren. Das folgende Beispiel enthält den korrigierten Quellcode, die behandelt eine `null` Argument.  
+  
+     [!code-csharp[System.Exception.Class#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.exception.class/cs/usageerrors2.cs#5)]
+     [!code-vb[System.Exception.Class#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.exception.class/vb/usageerrors2.vb#5)]  
+  
+     Anstatt die Ausnahmebehandlung für Fehler, können Sie die <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> Methode, um Fehler in der Debug-Builds zu identifizieren und die <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> Methode zur Identifizierung von Syntaxfehler in Debugversion und Releaseversion erstellt. Weitere Informationen finden Sie unter [Assertionen in verwaltetem Code](http://msdn.microsoft.com/library/70ab2522-6486-4076-a1a9-e0f11cd0f3a1).  
+  
+-   **Programmfehler.** Ein Programmfehler ist ein Laufzeitfehler auf, die unbedingt vermieden werden kann, fehlerfreien Code zu schreiben.  
+  
+     In einigen Fällen kann ein Programmfehler erwartet oder routinemäßige Fehlerzustand wider. In diesem Fall empfiehlt es sich um zu vermeiden, verwenden der Ausnahmebehandlung auf die Anwendung Fehler behandeln und stattdessen wiederholen den Vorgang. Z. B. wenn der Benutzer zur Eingabe eines Datums in einem bestimmten Format erwartet wird, Sie können analysieren, die Datumszeichenfolge durch Aufrufen der <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType> -Methode, die gibt eine <xref:System.Boolean> Wert, der angibt, ob der Analysevorgang erfolgreich war, anstatt die ,<xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>-Methode, die löst eine <xref:System.FormatException> -Ausnahme aus, wenn in die Datumszeichenfolge konvertiert werden kann ein <xref:System.DateTime> Wert. Auf ähnliche Weise, wenn ein Benutzer versucht, eine Datei zu öffnen, die nicht vorhanden ist, Sie können rufen Sie zuerst die <xref:System.IO.File.Exists%2A?displayProperty=nameWithType> -Methode überprüft, ob die Datei vorhanden ist, und wenn es nicht der Fall ist der Benutzer aufgefordert, ob er wünscht, ihn zu erstellen.  
+  
+     In anderen Fällen gibt ein Programmfehler einen Unerwarteter Fehlerzustand, der in Ihrem Code behandelt werden können. Beispielsweise, selbst wenn Sie sichergestellt haben, um sicherzustellen, dass eine Datei vorhanden ist, kann es gelöscht werden bevor können Sie es öffnen, oder sie ist beschädigt. In diesem Fall versuchen, beim Öffnen der Datei durch Instanziierung einer <xref:System.IO.StreamReader> -Objekts oder das Aufrufen der <xref:System.IO.File.Open%2A> Methode Auslösen einer <xref:System.IO.FileNotFoundException> Ausnahme. In diesen Fällen sollten Sie die Ausnahmebehandlung zum Beheben des Fehlers verwenden.  
+  
+-   **Systemfehler.** Aufgrund eines Systemfehlers wird ein Laufzeitfehler auf, die programmgesteuert auf sinnvolle Weise behandelt werden kann. Beispielsweise kann eine beliebige Methode Auslösen einer <xref:System.OutOfMemoryException> -Ausnahme aus, wenn die common Language Runtime keinen zusätzlichen Arbeitsspeicher zuweisen kann. Systemfehler werden normalerweise nicht mit der Behandlung von Ausnahmen behandelt. Stattdessen möglicherweise auf ein Ereignis zu verwenden, z. B. <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType> , und rufen Sie die <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> Methode zum Protokollieren von Ausnahmeinformationen und den Benutzer des Fehlers zu benachrichtigen, bevor die Anwendung beendet wird.  
+  
+<a name="TryCatch"></a>   
+## <a name="trycatch-blocks"></a>Try/Catch-Blöcke  
+ Die common Language Runtime stellt ein Modell zur Ausnahmebehandlung, die auf Basis der Darstellung von Ausnahmen als Objekte und die Trennung von Programmcode und Ausnahmebehandlungscode in `try` Blöcke und `catch` blockiert. Es kann sein, eine oder mehrere `catch` blockiert wird, jeweils einen bestimmten Typ von Ausnahme oder ein Zeilenblock, die entwickelt, um eine spezifischere Ausnahme als einen anderen Block abfangen behandeln soll.  
+  
+ Wenn eine Anwendung Ausnahmen, die während der Ausführung eines Codeblocks Anwendungscode auftreten behandelt, muss der Code platziert werden, innerhalb einer `try` Anweisung aufgerufen, eine `try` Block. Anwendungscode, der ausgelöste Ausnahmen behandelt eine `try` Block befindet sich innerhalb einer `catch` Anweisung und heißt ein `catch` Block. NULL oder mehr `catch` Blöcke zugeordnet sind ein `try` Block, und jedes `catch` -Block enthält einen Filter, der die Arten von Ausnahmen bestimmt es behandelt.  
+  
+ Wenn eine Ausnahme auftritt, eine `try` Block, das System durchsucht die zugeordnete `catch` Blöcke in der Reihenfolge im Anwendungscode, bis er findet eine `catch` Block, der die Ausnahme behandelt. Ein `catch` -Block verarbeitet eine Ausnahme vom Typ `T` Wenn Typfilter des Catch-Blockes gibt `T` oder einen Typ, der `T` abgeleitet. Das System beendet die Suche nach dem Auffinden der ersten `catch` Block, der die Ausnahme behandelt. Aus diesem Grund in Anwendungscode eine `catch` Block, einen Typ behandelt, muss angegeben werden, bevor Sie eine `catch` Block, dessen Basistypen behandelt, wie im Beispiel veranschaulicht, die in diesem Abschnitt folgt. Ein CatchBlock, behandelt `System.Exception` letzten angegeben ist.  
+  
+ Wenn keines der `catch` blockiert den aktuellen zugeordnet `try` Block Behandeln der Ausnahme und die aktuelle `try` innerhalb anderer Block geschachtelt ist `try` im aktuellen Aufruf blockiert die `catch` Blöcke, die das nächste zugeordnet Einschließen von `try` Block durchsucht werden. Wenn kein `catch` Block für die Ausnahme gefunden wird, wird das System durchsucht Schachtelungsebenen im aktuellen Aufruf. Wenn kein `catch` -Block für die Ausnahme im aktuellen Aufruf gefunden wird, die Ausnahme der Aufrufliste übergeben wird und der vorherigen Stapelrahmen gesucht eine `catch` Block, der die Ausnahme behandelt. Die Suche der Aufrufliste wird fortgesetzt, bis die Ausnahme behandelt wird oder in der Aufrufliste keine Frames mehr vorhanden. Wenn am Anfang der Aufrufliste, ohne suchen erreicht ist eine `catch` Block, die Ausnahme, die der Standardausnahmehandler behandelt, verarbeitet sie und die Anwendung beendet wird.  
+  
+<a name="Features"></a>   
+## <a name="exception-type-features"></a>Features von Ausnahmetypen  
+ Ausnahmetypen unterstützen die folgenden Funktionen:  
+  
+-   Einem von Menschen lesbaren Text, der den Fehler beschreibt. Wenn eine Ausnahme auftritt, wird die Common Language Runtime eine Textnachricht verfügbar, um die Benutzer über die Art des Fehlers zu informieren und Aktion wird empfohlen, um das Problem zu beheben. Diese Textnachricht gehalten wird, der <xref:System.Exception.Message%2A> -Eigenschaft des Ausnahmeobjekts. Während der Erstellung des Ausnahmeobjekts können Sie eine Textzeichenfolge an den Konstruktor aus, um die Details dieser bestimmten Ausnahme beschreiben übergeben. Wenn keine Fehler Argument für die Nachricht an den Konstruktor bereitgestellt wird, wird die Standardfehlermeldung verwendet. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Exception.Message%2A>-Eigenschaft.  
+  
+-   Der Status der Aufrufliste, wenn die Ausnahme ausgelöst wurde. Die <xref:System.Exception.StackTrace%2A> Eigenschaft führt eine stapelüberwachung, die verwendet werden kann, um zu bestimmen, wo der Fehler im Code auftritt. Die stapelüberwachung Listet alle aufgerufenen Methoden und die Zeilennummern in der Quelldatei, in denen die Aufrufe ausgeführt werden.  
+  
+<a name="Properties"></a>   
+## <a name="exception-class-properties"></a>Eigenschaften der Ausnahme-Klasse  
+ Die <xref:System.Exception> Klasse umfasst eine Reihe von Eigenschaften, die den Speicherort der Code, den Typ der Hilfedatei und die Ursache der Ausnahme zu ermitteln: <xref:System.Exception.StackTrace%2A>, <xref:System.Exception.InnerException%2A>, <xref:System.Exception.Message%2A>, <xref:System.Exception.HelpLink%2A>, <xref:System.Exception.HResult%2A>, <xref:System.Exception.Source%2A>, <xref:System.Exception.TargetSite%2A>, und <xref:System.Exception.Data%2A>.  
+  
+ Wenn eine kausale Beziehung zwischen zwei oder mehr Ausnahmen besteht die <xref:System.Exception.InnerException%2A> Eigenschaft verwaltet diese Informationen. Die äußere Ausnahme wird als Antwort auf diese innere Ausnahme ausgelöst. Der Code, der die äußeren Ausnahme behandelt kann die Informationen über die innere Ausnahme verwenden, um den Fehler besser zu behandeln. Zusätzliche Informationen über die Ausnahme kann gespeichert werden, als eine Auflistung von Schlüssel/Wert-Paare in der <xref:System.Exception.Data%2A> Eigenschaft.  
+  
+ Die Zeichenfolge der Fehlermeldung, die an den Konstruktor, während der Erstellung des Ausnahmeobjekts übergeben wird lokalisiert werden soll, und aus einer Ressourcendatei angegeben werden, mithilfe der <xref:System.Resources.ResourceManager> Klasse. Weitere Informationen über lokalisierte Ressourcen finden Sie unter der [Erstellen von Satellitenassemblys](~/docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) und [Verpacken und Bereitstellen von Ressourcen](~/docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) Themen.  
+  
+ Ausführliche Informationen zur Ursache der Ausnahme bereitstellen, den Benutzer die <xref:System.Exception.HelpLink%2A> Eigenschaft kann eine URL (oder URN) zu einer Hilfedatei enthalten.  
+  
+ Die <xref:System.Exception> Klasse verwendet HRESULT COR_E_EXCEPTION mit den Wert 0 x 80131500.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von der <xref:System.Exception> Klasse, finden Sie unter der <xref:System.Exception.%23ctor%2A> Konstruktoren.  
+  
+<a name="Performance"></a>   
+## <a name="performance-considerations"></a>Überlegungen zur Leistung  
+ Das Auslösen und die Behandlung von Ausnahmen nutzt eine beträchtliche Menge an Systemressourcen und Ausführungszeit. Lösen Sie Ausnahmen nur um tatsächlich außergewöhnlicher Bedingungen, nicht um vorhersagbare Ereignisse behandeln oder die flusssteuerung zu behandeln. In einigen Fällen, z. B. Wenn Sie eine Klassenbibliothek, entwickeln, ist es beispielsweise sinnvoll, eine Ausnahme auslöst, wenn das Argument für eine Methode ungültig ist, da Sie erwarten, dass die Methode, die mit gültigen Parametern aufgerufen werden. Ungültige Methodenargument, bedeutet ist er nicht das Ergebnis eines verwendungsfehlers, dass etwas außergewöhnliches aufgetreten ist. Im Gegensatz dazu keine Ausnahme ausgelöst wenn Benutzereingaben ungültig ist, da Sie Benutzer gelegentlich ungültige Daten eingeben erwarten können. Stattdessen geben Sie einen Wiederholungsmechanismus, damit Benutzer eine gültige Eingabe eingeben können. Noch sollten Sie Ausnahmen verwenden, um Fehler zu behandeln. Verwenden Sie stattdessen [Assertionen](http://msdn.microsoft.com/library/70ab2522-6486-4076-a1a9-e0f11cd0f3a1) zu identifizieren und beheben Fehler.  
+  
+ Darüber hinaus keine Ausnahme ausgelöst, wenn ein Rückgabecode ausreichend ist; Konvertieren Sie einen Rückgabecode nicht auf eine Ausnahme. und bewirken nicht routinemäßig Catch eine Ausnahme, ignorieren Sie ihn, und klicken Sie dann die Verarbeitung fortgesetzt.  
+  
+<a name="Rethrow"></a>   
+## <a name="re-throwing-an-exception"></a>Erneutes Auslösen einer Ausnahme  
+ In vielen Fällen möchte ein Ausnahmehandler einfach die Ausnahme an den Aufrufer übergeben. Dieses Verfahren kommt besonders häufig:  
+  
+-   Eine Klassenbibliothek, die wiederum Aufrufe von Methoden in der .NET Framework-Klassenbibliothek oder anderen Klassenbibliotheken umschließt.  
+  
+-   Eine Anwendung oder eine Bibliothek, die eine schwerwiegende Ausnahme festgestellt wird. Der Ausnahmehandler kann die Ausnahme protokollieren und die Ausnahme erneut auslösen.  
+  
+ Die empfohlene Methode eine Ausnahme erneut ausgelöst wird, verwenden Sie einfach die [auslösen](~/docs/csharp/language-reference/keywords/throw.md) -Anweisung in c# und die [auslösen](~/docs/visual-basic/language-reference/statements/throw-statement.md) -Anweisung in Visual Basic, ohne einen Ausdruck. Dadurch wird sichergestellt, dass alle Aufruflisteninformationen beibehalten wird, wenn die Ausnahme an den Aufrufer weitergegeben wird. Dies wird anhand des folgenden Beispiels veranschaulicht. Eine Erweiterungsmethode Zeichenfolge `FindOccurrences`, dient als Wrapper für eine oder mehrere Aufrufe von <xref:System.String.IndexOf%28System.String%2CSystem.Int32%29?displayProperty=nameWithType> ohne Argumente im Vorfeld zu überprüfen.  
+  
+ [!code-csharp[System.Exception.Class#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.exception.class/cs/rethrow1.cs#6)]
+ [!code-vb[System.Exception.Class#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.exception.class/vb/rethrow1.vb#6)]  
+  
+ Ein Aufrufer ruft dann `FindOccurrences` zweimal. Im zweiten Aufruf `FindOccurrences`, der Aufrufer übergibt eine `null` als die zu suchende Zeichenfolge, welche Fälle der <xref:System.String.IndexOf%28System.String%2CSystem.Int32%29?displayProperty=nameWithType> -Methode auslöst ein <xref:System.ArgumentNullException> Ausnahme. Diese Ausnahme erfolgt durch die `FindOccurrences` -Methode und übergebene zurück an den Aufrufer. Da die Throw-Anweisung ohne Ausdruck verwendet wird, zeigt die Ausgabe des Beispiels an, dass die Aufrufliste beibehalten wird.  
+  
+ [!code-csharp[System.Exception.Class#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.exception.class/cs/rethrow1.cs#7)]
+ [!code-vb[System.Exception.Class#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.exception.class/vb/rethrow1.vb#7)]  
+  
+ Im Gegensatz dazu wird die Ausnahme erneut mit ausgelöst wird die  
+  
+```csharp  
+throw e  
+```  
+  
+```vb  
+Throw e  
+```  
+  
+ die vollständige Aufrufliste-Anweisung wird nicht beibehalten, und das Beispiel erzeugt die folgende Ausgabe:  
+  
+```Output  
+  
+'a' occurs at the following character positions: 4, 7, 15  
+  
+An exception (ArgumentNullException) occurred.  
+Message:  
+   Value cannot be null.  
+Parameter name: value  
+  
+Stack Trace:  
+      at Library.FindOccurrences(String s, String f)  
+   at Example.Main()  
+  
+```  
+  
+ Eine Alternative etwas komplizierter ist eine neue Ausnahme ausgelöst und die ursprüngliche Ausnahme Aufruflisteninformationen in eine interne Ausnahme beibehalten. Der Aufrufer können Sie der neuen Ausnahme <xref:System.Exception.InnerException%2A> abzurufende Stapelrahmen und andere Informationen über die ursprüngliche Ausnahme. In diesem Fall wird die Throw-Anweisung aus:  
+  
+ [!code-csharp[System.Exception.Class#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.exception.class/cs/rethrow3.cs#8)]
+ [!code-vb[System.Exception.Class#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.exception.class/vb/rethrow3.vb#8)]  
+  
+ Der Benutzercode, der die Ausnahme behandelt hat, zu wissen, dass die <xref:System.Exception.InnerException%2A> Eigenschaft enthält Informationen über die ursprüngliche Ausnahme an, wie die folgenden Ausnahmehandler veranschaulicht wird.  
+  
+ [!code-csharp[System.Exception.Class#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.exception.class/cs/rethrow3.cs#9)]
+ [!code-vb[System.Exception.Class#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.exception.class/vb/rethrow3.vb#9)]  
+  
+<a name="Standard"></a>   
+## <a name="choosing-standard-exceptions"></a>Standardausnahmen auswählen  
+ Sie müssen eine Ausnahme auslöst, können Sie häufig einen vorhandenen Ausnahmetyp in .NET Framework statt Implementieren einer benutzerdefinierten Ausnahme ein. Verwenden Sie einen standard Ausnahmetyp unter diesen zwei Bedingungen:  
+  
+-   Sie sind eine Ausnahme, die durch einen Syntaxfehler verursacht wird (d. h. durch einen Fehler in der Programmlogik, die durch die Methode aufrufen Entwickler vorgenommen). In der Regel Sie eine Auslösung ausgeben würde z. B. <xref:System.ArgumentException>, <xref:System.ArgumentNullException>, <xref:System.InvalidOperationException>, oder <xref:System.NotSupportedException>. Die Zeichenfolge, die Sie für das Ausnahmeobjekt-Konstruktor angeben, wenn instanziieren das Ausnahmeobjekt, das den Fehler beschreiben sollten, sodass der Entwickler sie diesen Fehler beheben kann. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Exception.Message%2A>-Eigenschaft.  
+  
+-   Sie sind einen Fehler behandeln, der an den Aufrufer mit einer vorhandenen .NET Framework-Ausnahme mitgeteilt werden kann. Sie sollten die am stärksten abgeleitete mögliche Ausnahme auslösen. Z. B. wenn eine Methode ein Argument ist ein gültiges Mitglied eines Enumerationstyps erforderlich ist, lösen Sie eine <xref:System.ComponentModel.InvalidEnumArgumentException> (am meisten abgeleitete Klasse) anstelle einer <xref:System.ArgumentException>.  
+  
+ Die folgende Tabelle enthält allgemeine Ausnahmetypen und die Bedingungen, unter denen Sie diese auslösen würde.  
+  
+|Ausnahme|Bedingung|  
+|---------------|---------------|  
+|<xref:System.ArgumentException>|Ein nicht-Null-Argument, das an eine Methode übergeben wird, ist ungültig.|  
+|<xref:System.ArgumentNullException>|Ein Argument, das an eine Methode übergeben wird, ist `null`.|  
+|<xref:System.ArgumentOutOfRangeException>|Ein Argument liegt außerhalb des Bereichs der gültigen Werte.|  
+|<xref:System.IO.DirectoryNotFoundException>|Teil einen Verzeichnispfad ist ungültig.|  
+|<xref:System.DivideByZeroException>|Der Nenner in eine ganze Zahl oder <xref:System.Decimal> Divisionsvorgang ist 0 (null).|  
+|<xref:System.IO.DriveNotFoundException>|Ein Laufwerk ist nicht verfügbar oder nicht vorhanden.|  
+|<xref:System.IO.FileNotFoundException>|Eine Datei ist nicht vorhanden.|  
+|<xref:System.FormatException>|Ein Wert ist kein geeignetes Format aus einer Zeichenfolge durch eine Konvertierungsmethode wie z. B. wechselkursmeasure `Parse`.|  
+|<xref:System.IndexOutOfRangeException>|Ein Index ist außerhalb des gültigen Bereichs eines Arrays oder einer Auflistung.|  
+|<xref:System.InvalidOperationException>|Ein Methodenaufruf ist im aktuellen Zustand des Objekts ungültig.|  
+|<xref:System.Collections.Generic.KeyNotFoundException>|Der angegebene Schlüssel für den Zugriff auf ein Element in einer Auflistung kann nicht gefunden werden.|  
+|<xref:System.NotImplementedException>|Eine Methode oder Operation ist nicht implementiert.|  
+|<xref:System.NotSupportedException>|Eine Methode oder Operation wird nicht unterstützt.|  
+|<xref:System.ObjectDisposedException>|Für ein Objekt, das verworfen wurde, wird ein Vorgang ausgeführt.|  
+|<xref:System.OverflowException>|Ein Arithmetik-, Umwandlungs- oder Konvertierungsvorgang führt zu einem Überlauf.|  
+|<xref:System.IO.PathTooLongException>|Ein Pfad oder Dateiname überschreitet die maximale Länge für den systemdefinierten.|  
+|<xref:System.PlatformNotSupportedException>|Der Vorgang wird auf der aktuellen Plattform nicht unterstützt.|  
+|<xref:System.RankException>|Es wird ein Array mit der falschen Anzahl von Dimensionen an eine Methode übergeben.|  
+|<xref:System.TimeoutException>|Das Zeitintervall für einen Vorgang vorgesehene ist abgelaufen.|  
+|<xref:System.UriFormatException>|Ein ungültiger Uniform Resource Identifier (URI) wird verwendet.|  
+  
+<a name="Custom"></a>   
+## <a name="implementing-custom-exceptions"></a>Implementieren benutzerdefinierte Ausnahmen  
+ In den folgenden Fällen ist das Verwenden einer vorhandenen .NET Framework-Ausnahme behandeln eine fehlerbedingung nicht ausreichend:  
+  
+-   Wenn die Ausnahme eine eindeutige Programmfehlern angibt, die eine vorhandene .NET Framework-Ausnahme zugeordnet werden kann.  
+  
+-   Wenn die Ausnahme behandeln, die von der Bearbeitung unterscheidet, die für eine vorhandene .NET Framework-Ausnahme oder die Ausnahme eignet erfordert muss über eine ähnliche Ausnahme eindeutig gemacht werden. Angenommen, Sie löst eine <xref:System.ArgumentOutOfRangeException> -Ausnahme aus, wenn die numerische Darstellung einer Zeichenfolge zu analysieren, die außerhalb des gültigen Bereichs des ganzzahligen Zieltyps ist, Sie möchten nicht die gleiche Ausnahme bei einem Fehler verwenden, die vom Aufrufer keine Angabe der entsprechende Werte eingeschränkt, beim Aufrufen der Methode.  
+  
+ Die <xref:System.Exception> Klasse ist die Basisklasse für alle Ausnahmen in .NET Framework. Viele abgeleitete Klassen die geerbte Verhalten der Elemente verwenden, die <xref:System.Exception> -Klasse überschreiben sie nicht die Mitglieder der <xref:System.Exception>, und definieren sie speziellen Elemente.  
+  
+ So definieren Sie Ihre eigene Ausnahmeklasse  
+  
+1.  Definieren Sie eine Klasse, die von erben <xref:System.Exception>. Falls notwendig, definieren Sie speziellen Elemente von Ihrer Klasse benötigt wird, um zusätzliche Informationen zur Ausnahme bereitzustellen. Z. B. die <xref:System.ArgumentException> Klasse enthält eine <xref:System.ArgumentException.ParamName%2A> Eigenschaft, die den Namen des Parameters angibt, deren Argument der Ausnahme verursacht hat, und die <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> Eigenschaft enthält eine <xref:System.Text.RegularExpressions.RegexMatchTimeoutException.MatchTimeout%2A> Eigenschaft, die das Timeoutintervall angibt.  
+  
+2.  Überschreiben Sie ggf. alle geerbten Member, deren Funktionalität, die Sie ändern möchten. Beachten Sie, dass die meisten vorhandenen Klassen von abgeleitete <xref:System.Exception> nicht das Verhalten des geerbten Member überschreiben.  
+  
+3.  Bestimmen Sie, ob Ihre benutzerdefinierten Ausnahme ein Objekt serialisierbar ist. Serialisierung ermöglicht Ihnen das Speichern von Informationen über die Ausnahme und Ausnahmeinformationen in einem Remoting-Kontext durch einen Server und einem Clientproxy freigegeben werden kann. Um das Ausnahmeobjekt serialisierbar zu machen, kennzeichnen Sie ihn mit der <xref:System.SerializableAttribute> Attribut.  
+  
+4.  Definieren Sie die Konstruktoren der Exception-Klasse. In der Regel haben Ausnahmeklassen eine oder mehrere der folgenden Konstruktoren:  
+  
+    -   <xref:System.Exception.%23ctor>, die Standardwerte verwendet, um die Eigenschaften eines neuen Objekts für die Ausnahme zu initialisieren.  
+  
+    -   <xref:System.Exception.%23ctor%28System.String%29>, der Initialisiert eine neue Ausnahmeobjekt mit einer angegebenen Fehlermeldung.  
+  
+    -   <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, der Initialisiert eine neue Ausnahmeobjekt mit einer angegebenen Fehlermeldung und der internen Ausnahme.  
+  
+    -   <xref:System.Exception.%23ctor%28System.Runtime.Serialization.SerializationInfo%2CSystem.Runtime.Serialization.StreamingContext%29>, also eine `protected` Konstruktor, initialisiert ein neues Ausnahmeobjekt aus, serialisierten Daten. Sie sollten diesen Konstruktor implementieren, wenn Sie ausgewählt haben, dass Ihr Ausnahmeobjekt serialisierbar zu machen.  
+  
+ Das folgende Beispiel veranschaulicht die Verwendung einer benutzerdefinierten Ausnahme-Klasse. Definiert eine `NotPrimeException` Ausnahme wird ausgelöst, wenn ein Client versucht, abzurufender eine Anfangszahl, die keine Primzahl ist eine Sequenz von Primzahlen enthalten. Die Ausnahme definiert eine neue Eigenschaft `NonPrime`, die nicht-Primzahlen gibt die Anzahl zurück, die die Ausnahme verursacht hat. Zusätzlich implementieren einen geschützten parameterlosen Konstruktor und einen Konstruktor mit <xref:System.Runtime.Serialization.SerializationInfo> und <xref:System.Runtime.Serialization.StreamingContext> Parameter für die Serialisierung der `NotPrimeException` Klasse definiert drei zusätzliche Konstruktoren zur Unterstützung der `NonPrime` Eigenschaft.  Jeder Konstruktor ruft einen Basisklassenkonstruktor zusätzlich zu den Wert des nicht-Primzahlen numerische beibehalten. Die `NotPrimeException` Klasse wird ebenfalls mit markiert die <xref:System.SerializableAttribute> Attribut.  
+  
+ [!code-csharp[System.Exception.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.exception.class/cs/notprimeexception.cs#1)]
+ [!code-vb[System.Exception.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.exception.class/vb/notprimeexception.vb#1)]  
+  
+ Die `PrimeNumberGenerator` Klasse im folgenden Beispiel gezeigt die Sieb des Eratosthenes verwendet, um die Abfolge von Primzahlen von 2 eine Grenze angegeben, die vom Client im Aufruf an den Klassenkonstruktor zu berechnen. Die `GetPrimesFrom` Methode gibt alle Primzahlen, die größer als oder gleich einem angegebenen Untergrenze sind, löst jedoch eine `NotPrimeException` Wenn unteren Grenzwerts keine Primzahl ist.  
+  
+ [!code-csharp[System.Exception.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.exception.class/cs/primenumbergenerator.cs#2)]
+ [!code-vb[System.Exception.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.exception.class/vb/primenumbergenerator.vb#2)]  
+  
+ Im folgenden Beispiel wird die beiden Aufrufe von der `GetPrimesFrom` Methode mit nicht-Primzahlen, von denen Grenzen von Anwendungsdomänen hinweg überschreitet. In beiden Fällen wird die Ausnahme ausgelöst und im Clientcode erfolgreich behandelt.  
+  
+ [!code-csharp[System.Exception.Class#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.exception.class/cs/example.cs#3)]
+ [!code-vb[System.Exception.Class#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.exception.class/vb/example.vb#3)]  
+  
+## <a name="windows-runtime-and-includenetv451includesnet-v451-mdmd"></a>Windows-Runtime und[!INCLUDE[net_v451](~/includes/net-v451-md.md)]  
+ In [!INCLUDE[net_win8_profile](~/includes/net-win8-profile-md.md)] für [!INCLUDE[win8](~/includes/win8-md.md)], einige Informationen zur Ausnahme ist in der Regel verloren, wenn eine Ausnahme über Stapelrahmen nicht in .NET Framework weitergegeben wird. Beginnend mit der [!INCLUDE[net_v451](~/includes/net-v451-md.md)] und [!INCLUDE[win81](~/includes/win81-md.md)], die common Language Runtime verwendet weiterhin die ursprüngliche <xref:System.Exception> -Objekt, das ausgelöst wurde, es sei denn, diese Ausnahme in einem Stapelrahmen nicht in .NET Framework geändert wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine `catch` blockieren, die definiert wird, um behandeln <xref:System.ArithmeticException> Fehler. Dies `catch` -Block fängt auch <xref:System.DivideByZeroException> Fehler, da <xref:System.DivideByZeroException> leitet sich von <xref:System.ArithmeticException> und es gibt keine `catch` Block für explizit definierte <xref:System.DivideByZeroException> Fehler.  
+  
+ [!code-cpp[CatchException#1](~/samples/snippets/cpp/VS_Snippets_CLR/CatchException/CPP/catchexception.cpp#1)]
+ [!code-csharp[CatchException#1](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception.cs#1)]
+ [!code-vb[CatchException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Exception ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Exception.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Exception" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Exception.Message%2A>-Eigenschaft der neuen Instanz mit einer Systemmeldung, die den Fehler beschreibt und die aktuelle Systemkultur berücksichtigt.  
+  
+ Die abgeleiteten Klassen sollten diese Standardkonstruktor bereit. In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Exception>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Eine im System enthaltene lokalisierte Beschreibung.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird abgeleitet ist ein `Exception` , verwendet eine vordefinierte Meldung. Der Code veranschaulicht die Verwendung des parameterlosen Konstruktors für die abgeleitete Klasse und die Basis `Exception` Klasse.  
+  
+ [!code-cpp[System.Exception.Ctor#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Exception.Ctor/CPP/new.cpp#1)]
+ [!code-csharp[System.Exception.Ctor#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Exception.Ctor/CS/new.cs#1)]
+ [!code-vb[System.Exception.Ctor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Exception.Ctor/VB/new.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Exception (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Exception.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Exception" />-Klasse mit einer angegebenen Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Exception.Message%2A> Eigenschaft der neuen Instanz unter Verwendung der `message` Parameter. Wenn die `message` Parameter ist `null`, dies ist der gleiche wie das Aufrufen der <xref:System.Exception.%23ctor%2A> Konstruktor.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Exception>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird abgeleitet ist ein `Exception` für eine bestimmte Bedingung. Das Codebeispiel veranschaulicht die Verwendung des Konstruktors, der eine Nachricht vom Aufrufer angegebenes als Parameter für die abgeleitete Klasse und die Basis akzeptiert `Exception` Klasse.  
+  
+ [!code-cpp[System.Exception.Ctor#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Exception.Ctor/CPP/news.cpp#2)]
+ [!code-csharp[System.Exception.Ctor#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Exception.Ctor/CS/news.cs#2)]
+ [!code-vb[System.Exception.Ctor#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Exception.Ctor/VB/news.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Exception (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Der <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen über die Quelle oder das Ziel enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Exception" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung aufgerufen, um das über einen Stream übertragene Ausnahmeobjekt wiederherzustellen. Weitere Informationen finden Sie unter [XML- und SOAP-Serialisierung](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert eine abgeleitete serialisierbare `Exception` Klasse. Der Code wird ein Fehler aufgrund einer Division durch 0 erzwungen und erstellt dann eine Instanz der abgeleiteten Ausnahme unter Verwendung der (<xref:System.Runtime.Serialization.SerializationInfo>, <xref:System.Runtime.Serialization.StreamingContext>) Konstruktor. Der Code wird die Instanz in eine Datei serialisiert, deserialisiert Sie die Datei in eine neue Ausnahme ausgelöst und abgefangen werden Daten für die Ausnahme angezeigt.  
+  
+ [!code-cpp[System.Exception.GetObjectData#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Exception.GetObjectData/CPP/getobjdata.cpp#1)]
+ [!code-csharp[System.Exception.GetObjectData#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Exception.GetObjectData/CS/getobjdata.cs#1)]
+ [!code-vb[System.Exception.GetObjectData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Exception.GetObjectData/VB/getobjdata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="info" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Der Klassenname ist <see langword="null" />, oder <see cref="P:System.Exception.HResult" /> ist 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Exception (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Exception.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat, oder ein Nullverweis (<see langword="Nothing" /> in Visual Basic), wenn keine innere Ausnahme angegeben ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Exception" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt denselben Wert zurück, der an den Konstruktor übergeben wurde, bzw. einen NULL-Verweis (`Nothing` in Visual Basic), wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft nicht den Wert für die innere Ausnahme für den Konstruktor bereitstellt.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Exception>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Der Verweis auf die interne Ausnahme.|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird abgeleitet ist ein `Exception` für eine bestimmte Bedingung. Das Codebeispiel veranschaulicht die Verwendung des Konstruktors, der eine Nachricht und eine innere Ausnahme als Parameter für die abgeleitete Klasse und die Basis akzeptiert `Exception` Klasse.  
+  
+ [!code-cpp[System.Exception.Ctor#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Exception.Ctor/CPP/newsi.cpp#3)]
+ [!code-csharp[System.Exception.Ctor#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Exception.Ctor/CS/newsi.cs#3)]
+ [!code-vb[System.Exception.Ctor#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Exception.Ctor/VB/newsi.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IDictionary Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Data" />
+      <MemberSignature Language="DocId" Value="P:System.Exception.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Schlüssel-Wert-Paaren ab, die zusätzliche benutzerdefinierte Informationen über die Ausnahme bereitstellen.</summary>
+        <value>Ein Objekt, das die <see cref="T:System.Collections.IDictionary" />-Schnittstelle implementiert und eine Auflistung benutzerdefinierter Schlüssel-Wert-Paare enthält. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Collections.IDictionary?displayProperty=nameWithType> zurückgegebenes Objekt die <xref:System.Exception.Data%2A> Eigenschaft zum Speichern und Abrufen von zusätzlichen Informationen über die Ausnahme. Die Informationen sind in Form von einer beliebigen Anzahl von benutzerdefinierten Schlüssel/Wert-Paaren. Die Schlüsselkomponente jedes Schlüssel/Wert-Paars ist in der Regel eine identifizierende Zeichenfolge ist, während die Wertkomponente des Paars Objekt beliebigen Typs sein kann.  
+  
+## <a name="keyvalue-pair-security"></a>Schlüssel/Wert-Paar-Sicherheit  
+ Die Schlüssel-/Wertpaaren, die in der Auflistung zurückgegebenes gespeicherten der <xref:System.Exception.Data%2A> Eigenschaft sind nicht sicher. Wenn eine geschachtelte Reihe von Routinen, die von Ihrer Anwendung aufgerufen, und jede Routine Ausnahmehandler enthält, enthält die daraus entstehende Aufrufliste eine Hierarchie der Ausnahmehandler. Wenn eine Routine auf niedrigerer Ebene eine Ausnahme auslöst, kann alle oberen Ebene Ausnahmehandler in der Stapel Aufrufhierarchie lesen und/oder ändern die Schlüssel-Wert-Paare, die in der Auflistung, die von einem beliebigen anderen Ausnahmehandler gespeichert werden. Dies bedeutet, dass Sie sicherstellen müssen, dass die Informationen in den Schlüssel/Wert-Paaren nicht vertraulich ist und dass die Anwendung ordnungsgemäß ausgeführt wird, wenn die Informationen in den Schlüssel/Wert-Paaren beschädigt ist.  
+  
+## <a name="key-conflicts"></a>ID-Konflikte  
+ Ein Schlüssel Konflikt tritt auf, wenn unterschiedliche Ausnahmehandler ein Schlüssel/Wert-Paar auf den gleichen Schlüssel angeben. Seien Sie vorsichtig, wenn die Anwendung zu entwickeln, da die Folge eines Konflikts Schlüssel ist, dass Ausnahmehandler auf niedrigerer Ebene mit höherer Ausnahmehandler versehentlich kommunizieren können, und diese Kommunikation möglicherweise geringfügige Programmfehler. Allerdings vorsichtig Domänenmodus können Konflikte Sie um Ihre Anwendung zu optimieren.  
+  
+## <a name="avoiding-key-conflicts"></a>Vermeiden von Konflikten Schlüssel  
+ Vermeiden Sie nach Übernahme eine Benennungskonvention, um eindeutige Schlüssel für Schlüssel/Wert-Paare zu generieren. Beispielsweise könnte eine Benennungskonvention ergeben, einen Schlüssel, der der Punkt getrennte Name der Anwendung besteht, die Methode, die zusätzliche Informationen für das Paar und einen eindeutigen Bezeichner enthält.  
+  
+ Angenommen, zwei Anwendungen, mit dem Namen Produkte und Lieferanten, wurde jeweils eine Methode mit dem Namen Sales. Die Sales-Methode in der Products-Anwendung enthält die ID-Nummer (die Stock keeping Unit bzw. SKU) eines Produkts. Die Sales-Methode in der Lieferanten-Anwendung enthält die ID oder die SID, von einem anderen Lieferanten. Die Namenskonvention für dieses Beispiel ergibt daher den Schlüssel "Products.Sales.SKU" und "Suppliers.Sales.SID".  
+  
+## <a name="exploiting-key-conflicts"></a>Ausnutzen-Konflikte  
+ Nutzen Sie aus, indem Sie einen oder mehrere spezielle, vordefinierten Schlüssel zur Steuerung der Verarbeitung verwenden. Nehmen Sie an, in einem Szenario der höchsten Ebene Ausnahmehandler in der Stapel Aufrufhierarchie fängt alle Ausnahmen, die vom Ausnahmehandler auf niedrigerer Ebene ausgelöst wird, ab. Wenn ein Schlüssel/Wert-Paar mit einem speziellen Schlüssel vorhanden ist, formatiert der Ausnahmehandler auf höherer Ebene verbleibenden Schlüssel/Wert-Paare in der <xref:System.Collections.IDictionary> Objekt nicht dem Standard entsprechende folglich; andernfalls werden die verbleibenden Schlüssel/Wert-Paare in eine normale Weise formatiert.  
+  
+ Jetzt nehmen wir an, in einem anderen Szenario der Ausnahmehandler auf jeder Ebene der Hierarchie Stapel Aufruf von der nächsten untergeordneten Ausnahmehandler ausgelöste Ausnahme abgefangen. Darüber hinaus jeden Ausnahmehandler von zurückgegebene Auflistung kennt die <xref:System.Exception.Data%2A> -Eigenschaft enthält einen Satz von Schlüssel/Wert-Paaren, die zugegriffen werden kann, mit einem vordefinierten Satz von Schlüsseln.  
+  
+ Jeder Ausnahmehandler verwendet den vordefinierten Satz von Schlüsseln, um die Wertkomponente des entsprechenden Schlüssel/Wert-Paar mit Informationen zu dieser Ausnahmehandler eindeutig zu aktualisieren. Nachdem das Update abgeschlossen ist, löst der Ausnahmehandler auf höherer Ebene Ausnahmehandler eine Ausnahme aus. Schließlich wird der höchsten Ebene Ausnahmehandler greift auf die Schlüssel/Wert-Paare und zeigt die konsolidierten Updateinformationen über die auf niedrigerer Ebene Ausnahmehandler.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Hinzufügen und Abrufen von Informationen mithilfe der <xref:System.Exception.Data%2A> Eigenschaft.  
+  
+ [!code-cpp[exception.data#1](~/samples/snippets/cpp/VS_Snippets_CLR/exception.data/CPP/data.cpp#1)]
+ [!code-csharp[exception.data#1](~/samples/snippets/csharp/VS_Snippets_CLR/exception.data/CS/data.cs#1)]
+ [!code-vb[exception.data#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/exception.data/VB/data.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBaseException">
+      <MemberSignature Language="C#" Value="public virtual Exception GetBaseException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Exception GetBaseException() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Exception.GetBaseException" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse eine <see cref="T:System.Exception" /> zurück, die die ursprüngliche Ursache für eine oder mehrere nachfolgende Ausnahmen ist.</summary>
+        <returns>Die erste Ausnahme, die in einer Kette von Ausnahmen ausgelöst wird. Wenn die <see cref="P:System.Exception.InnerException" />-Eigenschaft der aktuellen Ausnahme ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic) ist, gibt diese Eigenschaft die aktuelle Ausnahme zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Kette von Ausnahmen besteht aus einem Satz von Ausnahmen, dass jede Ausnahme in der Kette, als direktes Ergebnis der Ausnahme verwiesen wird ausgelöst wurde, dessen `InnerException` Eigenschaft. Für eine bestimmte Kette kann genau eine Ausnahme, die die Ursache für alle anderen Ausnahmen in der Kette ist vorhanden sein. Diese Ausnahme wird die Basisausnahme aufgerufen und die zugehörige `InnerException` Eigenschaft enthält immer einen null-Verweis.  
+  
+ Für alle Ausnahmen in einer Kette von Ausnahmen die `GetBaseException` Methode muss das gleiche Objekt (die Basisausnahme) zurückgeben.  
+  
+ Verwenden der `GetBaseException` Methode, wenn Sie die Ursache einer Ausnahme suchen möchten, jedoch Informationen zu Ausnahmen, die möglicherweise zwischen der aktuellen Ausnahme und die erste Ausnahme aufgetreten ist nicht erforderlich.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert zwei abgeleitete `Exception` Klassen. Erzwingt, dass eine Ausnahme, und klicken Sie dann mit jedem der abgeleiteten Klassen erneut auslöst. Der Code zeigt die Verwendung der `GetBaseException` Methode, um die ursprüngliche Ausnahme abzurufen.  
+  
+ [!code-cpp[System.Exception.GetBaseException#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Exception.GetBaseException/CPP/getbaseexc.cpp#1)]
+ [!code-csharp[System.Exception.GetBaseException#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Exception.GetBaseException/CS/getbaseexc.cs#1)]
+ [!code-vb[System.Exception.GetBaseException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Exception.GetBaseException/VB/getbaseexc.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see langword="GetBaseException" /> in Klassen, die Kontrolle über den Inhalt oder das Format erfordern-Methode überschrieben wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Der <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen über die Quelle oder das Ziel enthält.</param>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit Informationen über die Ausnahme fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `GetObjectData` legt die <xref:System.Runtime.Serialization.SerializationInfo> mit allen Daten für das Ausnahmeobjekt fest, das für die Serialisierung vorgesehen ist. Während der Deserialisierung wird die Ausnahme aus der über den Stream übertragenen `SerializationInfo` wiederhergestellt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert eine abgeleitete serialisierbare `Exception` Klasse, die implementiert `GetObjectData`, wodurch kleinere Änderungen an zwei Eigenschaften, und dann Ruft die Basisklasse aus, die Serialisierungen durchführen. Im Beispiel wird ein Fehler aufgrund einer Division durch 0 erzwungen und dann eine Instanz der abgeleiteten Ausnahme erstellt. Der Code wird die Instanz in eine Datei serialisiert, deserialisiert Sie die Datei in eine neue Ausnahme ausgelöst und abgefangen werden Daten für die Ausnahme angezeigt.  
+  
+ [!code-cpp[System.Exception.GetObjectData#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Exception.GetObjectData/CPP/getobjdata.cpp#1)]
+ [!code-csharp[System.Exception.GetObjectData#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Exception.GetObjectData/CS/getobjdata.cs#1)]
+ [!code-vb[System.Exception.GetObjectData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Exception.GetObjectData/VB/getobjdata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="info" /> Parameter ist ein null-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Exception.GetType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Laufzeittyp der aktuellen Instanz ab.</summary>
+        <returns>Ein <see cref="T:System.Type" />-Objekt, das den exakten Laufzeittyp der aktuellen Instanz darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Exception.GetType%2A> Methode zur Unterstützung von .NET Framework-Infrastruktur vorhanden ist und intern Ruft die grundlegende Methode <xref:System.Object.GetType%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpLink">
+      <MemberSignature Language="C#" Value="public virtual string HelpLink { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpLink" />
+      <MemberSignature Language="DocId" Value="P:System.Exception.HelpLink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Link zur Hilfedatei ab, die dieser Ausnahme zugeordnet ist, oder legt einen Link fest.</summary>
+        <value>Der URN (Uniform Resource Name) oder die URL (Uniform Resource Locator).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert, der eine Hilfedatei darstellt, ist ein URN oder ein URL. Z. B. die `HelpLink` Wert kann sein:  
+  
+ "file:///C:/Applications/Bazzal/help.html#ErrorNum42"  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel löst das Beispiel ein `Exception` festlegt, die die `HelpLink` Eigenschaft in ihren Konstruktor ein, und fängt die Ausnahme und zeigt `HelpLink`.  
+  
+ [!code-cpp[System.Exception.Properties#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Exception.Properties/CPP/properties.cpp#1)]
+ [!code-csharp[System.Exception.Properties#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Exception.Properties/CS/properties.cs#1)]
+ [!code-vb[System.Exception.Properties#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Exception.Properties/VB/properties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HResult">
+      <MemberSignature Language="C#" Value="public int HResult { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 HResult" />
+      <MemberSignature Language="DocId" Value="P:System.Exception.HResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft HRESULT ab oder legt HRESULT fest. Dies ist ein codierter Wert, der einer bestimmten Ausnahme zugeordnet ist.</summary>
+        <value>Der HRESULT-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ HRESULT ist eine 32-Bit-Wert, der in drei separate Felder unterteilt: fehlergewichtung, Funktionscode und Fehlercode. Die fehlergewichtung gibt an, ob der Rückgabewert Informationen, Warnung oder Fehler darstellt. Der Funktionscode identifiziert den Bereich des Systems für den Fehler verantwortlich. Der Fehlercode ist eine eindeutige Nummer, die zum Darstellen der Ausnahme zugeordnet ist. Jede Ausnahme ist einem eindeutigen HRESULT zugeordnet. Wenn verwalteter Code eine Ausnahme auslöst, übergibt die Common Language Runtime HRESULT an COM-Client. Bei nicht verwalteter Code einen Fehler zurückgibt, wird HRESULT auf eine Ausnahme konvertiert, die dann von der Laufzeit ausgelöst wird. Weitere Informationen zu HRESULT-Werte und ihre entsprechenden .NET Framework-Ausnahmen, finden Sie unter [Vorgehensweise: Zuordnen von HRESULTs und Ausnahmen](~/docs/framework/interop/how-to-map-hresults-and-exceptions.md). Finden Sie unter [häufig auftretende HRESULT-Werte](http://msdn.microsoft.com/library/windows/desktop/aa378137.aspx) in der Windows-Dokumentation finden Sie eine Liste der Werte, die am wahrscheinlichsten mit auftreten.  
+  
+ Beginnend mit der [!INCLUDE[net_v45](~/includes/net-v45-md.md)]die <xref:System.Exception.HResult%2A> Setter für eine Eigenschaft des geschützt werden, während die Getter-Methode öffentlich ist.  In früheren Versionen von .NET Framework sind Getter und Setter geschützt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert einen abgeleiteten `Exception` Klasse, die festlegt der `HResult` Eigenschaft, um einen benutzerdefinierten Wert im entsprechenden Konstruktor.  
+  
+ [!code-cpp[System.Exception.HResult#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Exception.HResult/CPP/hresult.cpp#1)]
+ [!code-csharp[System.Exception.HResult#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Exception.HResult/CS/hresult.cs#1)]
+ [!code-vb[System.Exception.HResult#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Exception.HResult/VB/hresult.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerException">
+      <MemberSignature Language="C#" Value="public Exception InnerException { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception InnerException" />
+      <MemberSignature Language="DocId" Value="P:System.Exception.InnerException" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Exception" />-Instanz ab, die die aktuelle Ausnahme verursacht hat.</summary>
+        <value>Eine Instanz, die den Fehler beschreibt, der die aktuelle Ausnahme verursacht hat. Die <see cref="P:System.Exception.InnerException" />-Eigenschaft gibt gleichen Wert zurück, der an den <see cref="M:System.Exception.#ctor(System.String,System.Exception)" />-Konstruktor übergeben wurde, oder <see langword="null" />, wenn der Wert der inneren Ausnahme nicht an den Konstruktor übergeben wurde. Diese Eigenschaft ist schreibgeschützt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Ausnahme `X` , die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird `Y`, <xref:System.Exception.InnerException%2A> Eigenschaft `X` sollten enthalten einen Verweis auf `Y`.  
+  
+ Über die <xref:System.Exception.InnerException%2A>-Eigenschaft kann die Gruppe von Ausnahmen abgerufen werden, die zur aktuellen Ausnahme geführt hat.  
+  
+ Sie können eine neue Ausnahme erstellen, die eine frühere Ausnahme abfängt. Der Code, der Handles, die zweite Ausnahme vornehmen, kann, die zusätzlichen Informationen aus der früheren Ausnahme verwenden, um den Fehler besser zu behandeln.  
+  
+ Nehmen Sie an, dass eine Funktion, die eine Datei liest und formatiert die Daten aus dieser Datei vorhanden ist. In diesem Beispiel, wenn der Code versucht, zum Lesen der Datei ein <xref:System.IO.IOException> ausgelöst wird. Die Funktion fängt die <xref:System.IO.IOException> und löst eine <xref:System.IO.FileNotFoundException>. Der <xref:System.IO.IOException> gespeichert werden konnten, der <xref:System.Exception.InnerException%2A> Eigenschaft der <xref:System.IO.FileNotFoundException>, aktivieren den Code, abfängt der <xref:System.IO.FileNotFoundException> untersuchen Sie die Ursache für den ursprünglichen Fehler.  
+  
+ Die <xref:System.Exception.InnerException%2A> -Eigenschaft, die einen Verweis auf die innere Ausnahme enthält, bei der Initialisierung des Ausnahmeobjekts festgelegt ist.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, auslösen und Abfangen einer Ausnahme, die eine innere Ausnahme verweist.  
+  
+ [!code-cpp[InnerEx#1](~/samples/snippets/cpp/VS_Snippets_CLR/InnerEx/CPP/innerex.cpp#1)]
+ [!code-csharp[InnerEx#1](~/samples/snippets/csharp/VS_Snippets_CLR/InnerEx/CS/innerex.cs#1)]
+ [!code-vb[InnerEx#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/InnerEx/VB/innerex.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public virtual string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Exception.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Meldung ab, die die aktuelle Ausnahme beschreibt.</summary>
+        <value>Die Fehlermeldung, die die Ursache der Ausnahme erklärt, bzw. eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fehlermeldungen als Ziel den Entwickler, der die Ausnahmebehandlung. Der Text, der die <xref:System.Exception.Message%2A> Eigenschaft sollte den Fehler vollständig beschreiben und nach Möglichkeit sollte auch erläutert, wie Sie den Fehler zu beheben. Ausnahmehandler der obersten Ebene können Endbenutzer, die Meldung angezeigt, deshalb Sie sicherstellen sollten, dass sie grammatisch richtig ist und dass jeder Satz der Nachricht mit einem Punkt endet. Verwenden Sie Fragezeichen oder Ausrufezeichen. Wenn Ihre Anwendung lokalisierte ausnahmemeldungen verwendet, sollten Sie sicherstellen, dass sie genau übersetzt werden.  
+  
+> [!IMPORTANT]
+>  Legen Sie sicherheitsrelevante Informationen in der ausnahmemeldungen nicht ohne Überprüfung der erforderlichen Berechtigungen verfügen.  
+  
+ Der Wert, der die <xref:System.Exception.Message%2A> Eigenschaft ist in der zurückgegebenen Informationen enthalten <xref:System.Exception.ToString%2A>. Die <xref:System.Exception.Message%2A> Eigenschaftensatz wird nur beim Erstellen einer <xref:System.Exception>. Wenn keine Nachricht an den Konstruktor für die aktuelle Instanz angegeben wurde, stellt das System eine standardmeldung, die mit der aktuellen Systemkultur formatiert ist.  
+  
+## <a name="windows-runtime-and-includenetv451includesnet-v451-mdmd"></a>Windows-Runtime und[!INCLUDE[net_v451](~/includes/net-v451-md.md)]  
+ Beginnend mit der [!INCLUDE[net_v451](~/includes/net-v451-md.md)] und [!INCLUDE[win81](~/includes/win81-md.md)], verbessert die Genauigkeit der Fehlermeldungen von Ausnahmen, die von Windows-Runtime-Typen und Member, die nicht Teil von .NET Framework sind weitergegeben werden. Insbesondere Ausnahme von Meldungen von Visual C++-komponentenerweiterungen (C + c++ / CX) werden nun wieder in .NET Framework weitergegeben <xref:System.Exception> Objekte.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel löst aus, und klicken Sie dann fängt eine <xref:System.Exception> Ausnahme und zeigt die Ausnahme Text-Nachricht mithilfe der <xref:System.Exception.Message%2A> Eigenschaft.  
+  
+ [!code-cpp[System.Exception.Properties#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Exception.Properties/CPP/properties.cpp#1)]
+ [!code-csharp[System.Exception.Properties#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Exception.Properties/CS/properties.cs#1)]
+ [!code-vb[System.Exception.Properties#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Exception.Properties/VB/properties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn eine aus einer Eigenschaft Ausnahme, und Sie im Text des verweisen müssen <see cref="P:System.Exception.Message" /> das Eigenschaft-Argument, das festgelegt oder abgerufen wird, verwenden Sie "Value" als Namen für das Eigenschaftsargument.</para>
+        </block>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="P:System.Exception.Message" /> Eigenschaft in Klassen, die Kontrolle über den Nachrichteninhalt oder Format erfordern überschrieben wird. Anwendungscode greift diese Eigenschaft in der Regel auf, wenn er muss zum Anzeigen von Informationen zu einer Ausnahme, die abgefangen wurde.  
+  
+ Die Fehlermeldung sollte lokalisiert werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeObjectState">
+      <MemberSignature Language="C#" Value="protected event EventHandler&lt;System.Runtime.Serialization.SafeSerializationEventArgs&gt; SerializeObjectState;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Runtime.Serialization.SafeSerializationEventArgs&gt; SerializeObjectState" />
+      <MemberSignature Language="DocId" Value="E:System.Exception.SerializeObjectState" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Runtime.Serialization.SafeSerializationEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Ausnahme serialisiert wird, um ein Ausnahmezustandsobjekt zu erstellen, das serialisierte Daten für die Ausnahme enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausnahmezustandsobjekt implementiert die <xref:System.Runtime.Serialization.ISafeSerializationData> Schnittstelle.  
+  
+ Wenn die <xref:System.Exception.SerializeObjectState> Ereignis abonniert ist, wird die Ausnahme deserialisiert und als leere Ausnahme erstellt. Der Konstruktor der Ausnahme nicht ausgeführt wird, und Ausnahmezustand auch deserialisiert wird. Die <xref:System.Runtime.Serialization.ISafeSerializationData.CompleteDeserialization%2A> Rückrufmethode des Ausnahmeobjekts Zustand wird dann benachrichtigt, damit es deserialisierte Daten in die leere Ausnahme per Push übertragen kann.  
+  
+ Die <xref:System.Exception.SerializeObjectState> -Ereignis können transparente Ausnahmetypen zum Serialisieren und Deserialisieren der Ausnahmedaten. Transparenter Code kann Ausführungsbefehle innerhalb der Grenzen des Berechtigungssatzes, in denen sie innerhalb dieser ausgeführt wird, aber kann nicht ausgeführt, aufzurufen, abgeleitet oder kritischen Code enthalten.  
+  
+ Wenn die <xref:System.Exception.SerializeObjectState> Ereignis nicht abonniert ist, tritt die Deserialisierung wie gewohnt mithilfe der <xref:System.Exception.%23ctor%2A> Konstruktor.  
+  
+ In der Regel einen Handler für das <xref:System.Exception.SerializeObjectState> Ereignis im Konstruktor bereit, die Serialisierung der Ausnahme hinzugefügt wird. Weil der Konstruktor, nicht ist jedoch ausgeführt wird, wenn die <xref:System.Exception.SerializeObjectState> -Ereignishandler ausgeführt wird, serialisieren eine deserialisierte Ausnahme auslösen kann eine <xref:System.Runtime.Serialization.SerializationException> -Ausnahme aus, wenn Sie versuchen, die Ausnahme zu deserialisieren. Um dies zu vermeiden, sollten Sie auch den Handler für Hinzufügen der <xref:System.Exception.SerializeObjectState> Ereignis in der <xref:System.Runtime.Serialization.ISafeSerializationData.CompleteDeserialization%2A?displayProperty=nameWithType> Methode. Finden Sie im Abschnitt Beispiele veranschaulicht.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert eine `BadDivisionException` , verarbeitet die <xref:System.Exception.SerializeObjectState> Ereignis. Es enthält auch ein Zustandsobjekt, also eine geschachtelte Struktur mit dem Namen `BadDivisionExceptionState` , implementiert die <xref:System.Runtime.Serialization.ISafeSerializationData> Schnittstelle.  
+  
+ [!code-csharp[System.Exception.SerializeObjectState#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.exception.serializeobjectstate/cs/example2.cs#1)]
+ [!code-vb[System.Exception.SerializeObjectState#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.exception.serializeobjectstate/vb/example2.vb#1)]  
+  
+ Die `BadDivisionException` Ausnahme wird ausgelöst, wenn eine Gleitkomma Division durch Null auftritt. Während der ersten Division durch 0 (null) werden im Beispiel wird instanziiert einen `BadDivisionException` -Objekt, serialisiert es und löst die Ausnahme aus. Beim Auftreten von nachfolgenden Abteilungen durch 0 (null) wird im Beispiel das zuvor serialisierte Objekt deserialisiert, serialisiert es dann erneut und löst die Ausnahme aus. Um für die Serialisierung, Deserialisierung, Reserialization und Deserialisierung zu ermöglichen, das Beispiel fügt die <xref:System.Exception.SerializeObjectState> -Ereignishandler sowohl in der `BadDivisionException` Klassenkonstruktor und klicken Sie in der <xref:System.Runtime.Serialization.ISafeSerializationData.CompleteDeserialization%2A?displayProperty=nameWithType> Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn dieses Ereignis abonniert und verwendet wird, müssen alle abgeleitete Typen, die in der Vererbungshierarchie folgen denselben Serialisierungsmechanismus implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public virtual string Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Exception.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Namen der Anwendung oder des Objekts zurück, die bzw. das den Fehler verursacht hat, oder legt diesen fest.</summary>
+        <value>Der Name der Anwendung oder des Objekts, die bzw. das den Fehler verursacht hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Exception.Source%2A> Eigenschaft nicht explizit festgelegt wurde, die Common Language Runtime automatisch wird auf den Namen der Assembly, aus die Ausnahme stammt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel löst eine `Exception` festlegt, die die `Source` Eigenschaft in ihren Konstruktor ein, und fängt die Ausnahme und zeigt `Source`.  
+  
+ [!code-cpp[System.Exception.Properties#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Exception.Properties/CPP/properties.cpp#1)]
+ [!code-csharp[System.Exception.Properties#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Exception.Properties/CS/properties.cs#1)]
+ [!code-vb[System.Exception.Properties#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Exception.Properties/VB/properties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Objekt muss ein <see cref="N:System.Reflection" />-Laufzeitobjekt sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StackTrace">
+      <MemberSignature Language="C#" Value="public virtual string StackTrace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StackTrace" />
+      <MemberSignature Language="DocId" Value="P:System.Exception.StackTrace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolgendarstellung der unmittelbaren Frames in der Aufrufliste ab.</summary>
+        <value>Eine Zeichenfolge, die die unmittelbaren Frames der Aufrufliste beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Ausführungsstapel verfolgt alle Methoden, die zu einem angegebenen Zeitpunkt gerade ausgeführt werden. Ein Überwachungsprotokoll der Methodenaufrufe wird als Stapelüberwachung bezeichnet. Der Stapel-Trace-Angebot bietet eine Möglichkeit, befolgen die Aufrufliste der Zeilennummer in der Methode, in der die Ausnahme auftritt.  
+  
+ Die <xref:System.Exception.StackTrace%2A> Eigenschaft gibt die Frames der Aufrufliste, die am Speicherort stammen, in dem die Ausnahme ausgelöst wurde. Erhalten Sie Informationen zu zusätzlichen Frames in der Aufrufliste durch Erstellen einer neuen Instanz der <xref:System.Diagnostics.StackTrace?displayProperty=nameWithType> -Klasse festlegen und seine <xref:System.Diagnostics.StackTrace.ToString%2A?displayProperty=nameWithType> Methode.  
+  
+ Die common Language Runtime (CLR) aktualisiert Stapelrahmen, sobald im Anwendungscode eine Ausnahme ausgelöst wird (mithilfe der `throw` Schlüsselwort). Wenn die Ausnahme in einer Methode erneut, die unterscheidet sich von der Methode ausgelöst wurde, in dem es ursprünglich ausgelöst wurde, enthält die stapelüberwachung sowohl den Speicherort in der Methode, in dem die Ausnahme ursprünglich ausgelöst wurde, und den Speicherort in der Methode, in dem die Ausnahme war erneut ausgelöst. Wenn die Ausnahme ausgelöst wird, und später erneut ausgelöst, in der gleichen Methode enthält die stapelüberwachung nur den Speicherort, in dem die Ausnahme erneut ausgelöst wurde, und schließt nicht den Speicherort, in dem die Ausnahme ursprünglich ausgelöst wurde.  
+  
+ Die <xref:System.Exception.StackTrace%2A> Eigenschaft meldet möglicherweise nicht so viele Methodenaufrufe erwartungsgemäß aufgrund Codetransformationen, z. B. inlining dar, die während der Optimierung auftreten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel löst das Beispiel ein `Exception` abgefangen und zeigt einen Stapel datenzugriffsablaufverfolgung unter Verwendung der `StackTrace` Eigenschaft.  
+  
+ [!code-cpp[System.Exception.Properties#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Exception.Properties/CPP/properties.cpp#1)]
+ [!code-csharp[System.Exception.Properties#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Exception.Properties/CS/properties.cs#1)]
+ [!code-vb[System.Exception.Properties#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Exception.Properties/VB/properties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see langword="StackTrace" /> Eigenschaft in Klassen, die Kontrolle über den Stapel Ablaufverfolgungsinhalt oder das Format erfordern überschrieben wird.  
+  
+ Standardmäßig wird die stapelüberwachung erfasst, unmittelbar bevor ein Exception-Objekt ausgelöst wird. Verwendung <see cref="P:System.Environment.StackTrace" /> Stapelüberwachungsinformationen abgerufen, wenn keine Ausnahme ausgelöst wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetSite">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodBase TargetSite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodBase TargetSite" />
+      <MemberSignature Language="DocId" Value="P:System.Exception.TargetSite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Methode ab, die die aktuelle Ausnahme auslöst.</summary>
+        <value>Die <see cref="T:System.Reflection.MethodBase" />, die die aktuelle Ausnahme ausgelöst hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Methode, die diese Ausnahme auslöst, nicht verfügbar ist, und es nicht die stapelüberwachung ein null-Verweis ist (`Nothing` in Visual Basic), <xref:System.Exception.TargetSite%2A> erhält die Methode von der stapelüberwachung. Wenn die Stapelüberwachung ein NULL-Verweis ist, gibt <xref:System.Exception.TargetSite%2A> ebenfalls einen NULL-Verweis zurück.  
+  
+> [!NOTE]
+>  Die <xref:System.Exception.TargetSite%2A> Eigenschaft möglicherweise nicht genau melden kann, den Namen der Methode in der eine Ausnahme ausgelöst wurde, wenn der Ausnahmehandler eine Ausnahme über Anwendungsdomänengrenzen hinweg behandelt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel löst das Beispiel ein `Exception` abgefangen und zeigt die ursprüngliche Methode mithilfe der `TargetSite` Eigenschaft.  
+  
+ [!code-cpp[System.Exception.Properties#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Exception.Properties/CPP/properties.cpp#1)]
+ [!code-csharp[System.Exception.Properties#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Exception.Properties/CS/properties.cs#1)]
+ [!code-vb[System.Exception.Properties#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Exception.Properties/VB/properties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Exception.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Zeichenfolgendarstellung der aktuellen Ausnahme und gibt diese zurück.</summary>
+        <returns>Eine Zeichenfolgendarstellung der aktuellen Ausnahme.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Exception.ToString%2A>Gibt eine Darstellung der aktuellen Ausnahme, die vorgesehen ist, für Personen verständlich sein. Die Ausnahme kulturabhängige Daten enthält, die Zeichenfolgendarstellung zurückgegebenes `ToString` ist erforderlich, um die aktuelle Systemkultur berücksichtigt. Es gibt, zwar keine Bindungen die Anforderungen für das Format der zurückgegebenen Zeichenfolge sollte es der Wert des Objekts als vom Benutzer wahrgenommene wider.  
+  
+ Die standardmäßige Implementierung des <xref:System.Exception.ToString%2A> erhält den Namen der Klasse, die ausgelöst, die aktuelle Ausnahme, die die Nachricht, die das Ergebnis des Aufrufs hat <xref:System.Exception.ToString%2A> auf die innere Ausnahme und das Ergebnis des Aufrufs <xref:System.Environment.StackTrace%2A?displayProperty=nameWithType>. Wenn eine dieser Member ist `null`, dessen Wert nicht in der zurückgegebenen Zeichenfolge enthalten ist.  
+  
+ Es ist keine Fehlermeldung oder ist eine leere Zeichenfolge (""), wird keine Fehlermeldung zurückgegeben. Der Namen der inneren Ausnahme und die stapelüberwachung werden nur zurückgegeben, wenn sie nicht sind `null`.  
+  
+ Diese Methode überschreibt <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Ausnahme ausgelöst und zeigt das Ergebnis des Aufrufs <xref:System.Exception.ToString%2A> für diese Ausnahme. Beachten Sie, dass die <xref:System.Exception.ToString%2A?displayProperty=nameWithType> Methode wird implizit aufgerufen, wenn die Instanz einer Klasse in der Argumentliste der angezeigt wird die <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-cpp[System.Exception.ToString#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.exception.tostring/cpp/ToStringEx1.cpp#1)]
+ [!code-csharp[System.Exception.ToString#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.exception.tostring/cs/ToStringEx1.cs#1)]
+ [!code-vb[System.Exception.ToString#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.exception.tostring/vb/ToStringEx1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

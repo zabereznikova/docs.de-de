@@ -1,0 +1,262 @@
+<Type Name="HttpStaticObjectsCollectionBase" FullName="System.Web.HttpStaticObjectsCollectionBase">
+  <TypeSignature Language="C#" Value="public abstract class HttpStaticObjectsCollectionBase : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HttpStaticObjectsCollectionBase extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpStaticObjectsCollectionBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Abstractions, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient als Basisklasse für Klassen, die eine Auflistung von Objekten im Anwendungsbereich für die <see cref="P:System.Web.HttpApplicationState.StaticObjects" />-Eigenschaft bereitstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpStaticObjectsCollectionBase> Klasse ist eine abstrakte Klasse, die dieselben Member wie enthält die <xref:System.Web.HttpStaticObjectsCollection> Klasse. Die <xref:System.Web.HttpStaticObjectsCollectionBase> -Klasse können Sie die abgeleitete Klassen zu erstellen, z. B. sind, die <xref:System.Web.HttpStaticObjectsCollection> -Klasse jedoch, die Sie anpassen können und außerhalb der ASP.NET-Pipeline arbeiten. Beim Ausführen von Komponententests verwenden Sie in der Regel eine abgeleitete Klasse auf um Member mit angepasstem Verhalten zu implementieren, die das Szenario erfüllt, das Sie testen.  
+  
+ Die <xref:System.Web.HttpStaticObjectsCollectionWrapper>-Klasse wird aus der <xref:System.Web.HttpStaticObjectsCollectionBase>-Klasse abgeleitet. Die <xref:System.Web.HttpStaticObjectsCollectionWrapper> Klasse dient als Wrapper für die <xref:System.Web.HttpStaticObjectsCollection> Klasse. Zur Laufzeit verwenden Sie in der Regel eine Instanz von der <xref:System.Web.HttpStaticObjectsCollectionWrapper> zum Aufrufen von Membern der Klasse die <xref:System.Web.HttpStaticObjectsCollection> Objekt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HttpStaticObjectsCollectionBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpStaticObjectsCollectionBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die Klasse zur Verwendung durch eine geerbte Klasseninstanz. Dieser Konstruktor kann nur von einer geerbten Klasse aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public virtual void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpStaticObjectsCollectionBase.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionales Array, bei dem es sich um das Ziel der aus der Auflistung kopierten Elemente handelt. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an der Kopiervorgang beginnt.</param>
+        <summary>Kopiert beim Überschreiben in einer abgeleiteten Klasse die Elemente dieser Auflistung in ein Array, wobei am angegebenen Index im Array begonnen wird.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpStaticObjectsCollectionBase.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die Anzahl der Objekte in der Auflistung ab.</summary>
+        <value>Die Anzahl der Objekte in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpStaticObjectsCollectionBase.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse einen Enumerator zurück, der zum Durchlaufen der Auflistung verwendet werden kann.</summary>
+        <returns>Ein Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public virtual object GetObject (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetObject(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpStaticObjectsCollectionBase.GetObject(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zurückzugebenden Objekts, ohne Berücksichtigung der Groß- und Kleinschreibung.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse das Objekt, das den angegebenen Namen hat, aus der Auflistung zurück.</summary>
+        <returns>Das Objekt, das durch angegebenen <paramref name="name" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpStaticObjectsCollectionBase.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft bei Überschreibung in einer abgeleiteten Klasse einen Wert ab, der angibt, ob die Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Auflistung schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public virtual bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpStaticObjectsCollectionBase.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse einen Wert ab, der angibt, ob die Auflistung threadsicher ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Auflistung threadsicher ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual object this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpStaticObjectsCollectionBase.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des abzurufenden Objekts, ohne Berücksichtigung der Groß- und Kleinschreibung.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse das Objekt, das den angegebenen Namen hat, aus der Auflistung ab.</summary>
+        <value>Das Objekt, das durch angegebenen <paramref name="name" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NeverAccessed">
+      <MemberSignature Language="C#" Value="public virtual bool NeverAccessed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NeverAccessed" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpStaticObjectsCollectionBase.NeverAccessed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse einen Wert ab, der angibt, ob auf die Auflistung zugegriffen wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Auflistung nie zugegriffen wurde. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public virtual void Serialize (System.IO.BinaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Serialize(class System.IO.BinaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpStaticObjectsCollectionBase.Serialize(System.IO.BinaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.BinaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das Objekt, mit dem die serialisierte Auflistung in einen Stream oder eine codierte Zeichenfolge geschrieben wird.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse schreibt den Inhalt der Auflistung in ein <see cref="T:System.IO.BinaryWriter" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public virtual object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpStaticObjectsCollectionBase.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ein Objekt ab, das verwendet werden kann, um den Zugriff auf die Auflistung zu synchronisieren.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Immer</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

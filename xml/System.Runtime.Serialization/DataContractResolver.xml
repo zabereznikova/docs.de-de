@@ -1,0 +1,178 @@
+<Type Name="DataContractResolver" FullName="System.Runtime.Serialization.DataContractResolver">
+  <TypeSignature Language="C#" Value="public abstract class DataContractResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataContractResolver extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.DataContractResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet einen Mechanismus zum Zuordnen von Typen dynamisch in und aus <see langword="xsi:type" /> Darstellungen der Serialisierung oder Deserialisierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entwickler sollten berücksichtigen, welche Daten über das Netz gesendet wird, werden sein. Sie können Transport- oder Sicherheit verwenden, um diese Daten zu sichern. [!INCLUDE[crdefault](~/includes/crdefault-md.md)]finden Sie unter [Sicherheit](~/docs/framework/wcf/samples/security-in-wcf.md).  
+  
+> [!WARNING]
+>  Verwenden Sie nur <xref:System.Runtime.Serialization.DataContractResolver> Domänenmodus vollständig genau wissen, welche Informationen serialisiert wird. Bösartige Typen können zu unerwartetem Verhalten führen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Klasse von <xref:System.Runtime.Serialization.DataContractResolver> abgeleitet wird. Ein funktionierendes Beispiel finden Sie unter [DataContractResolver](~/docs/framework/wcf/samples/datacontractresolver.md).  
+  
+ [!code-csharp[DataContractResolver#2](~/samples/snippets/csharp/VS_Snippets_CFX/datacontractresolver/cs/datacontractresolver.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataContractResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.DataContractResolver.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.DataContractResolver" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveName">
+      <MemberSignature Language="C#" Value="public abstract Type ResolveName (string typeName, string typeNamespace, Type declaredType, System.Runtime.Serialization.DataContractResolver knownTypeResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type ResolveName(string typeName, string typeNamespace, class System.Type declaredType, class System.Runtime.Serialization.DataContractResolver knownTypeResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.DataContractResolver.ResolveName(System.String,System.String,System.Type,System.Runtime.Serialization.DataContractResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="typeNamespace" Type="System.String" />
+        <Parameter Name="declaredType" Type="System.Type" />
+        <Parameter Name="knownTypeResolver" Type="System.Runtime.Serialization.DataContractResolver" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Die <see langword="xsi:type" /> Namen zuordnen.</param>
+        <param name="typeNamespace">Die <see langword="xsi:type" /> Namespace zugeordnet.</param>
+        <param name="declaredType">Der im Datenvertrag deklarierte Typ.</param>
+        <param name="knownTypeResolver">Der Resolver des bekannten Typs.</param>
+        <summary>Überschreiben Sie diese Methode, um die angegebene Zuordnung <see langword="xsi:type" /> Namen und Namespace zu einem Vertragstyp während der Deserialisierung.</summary>
+        <returns>Der Typ der <see langword="xsi:type" /> Namen und Namespace zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die Logik zur Auflösung bekannter Typen in der Implementierung verwenden möchten, wird ein Verweis darauf als `knownTypeResolver`-Parameter übergeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Implementierung der <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[DataContractResolver#0](~/samples/snippets/csharp/VS_Snippets_CFX/datacontractresolver/cs/datacontractresolver.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveType">
+      <MemberSignature Language="C#" Value="public abstract bool TryResolveType (Type type, Type declaredType, System.Runtime.Serialization.DataContractResolver knownTypeResolver, out System.Xml.XmlDictionaryString typeName, out System.Xml.XmlDictionaryString typeNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryResolveType(class System.Type type, class System.Type declaredType, class System.Runtime.Serialization.DataContractResolver knownTypeResolver, [out] class System.Xml.XmlDictionaryString&amp; typeName, [out] class System.Xml.XmlDictionaryString&amp; typeNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.DataContractResolver.TryResolveType(System.Type,System.Type,System.Runtime.Serialization.DataContractResolver,System.Xml.XmlDictionaryString@,System.Xml.XmlDictionaryString@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="declaredType" Type="System.Type" />
+        <Parameter Name="knownTypeResolver" Type="System.Runtime.Serialization.DataContractResolver" />
+        <Parameter Name="typeName" Type="System.Xml.XmlDictionaryString&amp;" RefType="out" />
+        <Parameter Name="typeNamespace" Type="System.Xml.XmlDictionaryString&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der zuzuordnende Typ.</param>
+        <param name="declaredType">Der im Datenvertrag deklarierte Typ.</param>
+        <param name="knownTypeResolver">Der Resolver des bekannten Typs.</param>
+        <param name="typeName">Der xsi:type-Name.</param>
+        <param name="typeNamespace">Der xsi:type-Namespace.</param>
+        <summary>Überschreiben Sie diese Methode, um einen Datenvertragstyp zum Zuordnen einer <see langword="xsi:type" /> Namen und Namespace während der Serialisierung.</summary>
+        <returns>
+          <see langword="true" />Wenn die Zuordnung erfolgreich ausgeführt wurde andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die Logik zur Auflösung bekannter Typen in der Implementierung verwenden möchten, wird ein Verweis darauf als `knownTypeResolver`-Parameter übergeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Implementierung der <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[DataContractResolver#1](~/samples/snippets/csharp/VS_Snippets_CFX/datacontractresolver/cs/datacontractresolver.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

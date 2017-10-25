@@ -1,0 +1,105 @@
+<Type Name="ProtectedProviderSettings" FullName="System.Configuration.ProtectedProviderSettings">
+  <TypeSignature Language="C#" Value="public class ProtectedProviderSettings : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ProtectedProviderSettings extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ProtectedProviderSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Gruppe von Konfigurationselementen dar, die die Anbieter für den <see langword="&lt;configProtectedData&gt;" />-Konfigurationsbereich konfigurieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProtectedProviderSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ProtectedProviderSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ProtectedProviderSettings" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ProtectedProviderSettings.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> Auflistung, die die Eigenschaften der Anbieter für die geschützte Konfigurationsdaten darstellt.</summary>
+        <value>Ein <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> , die die Eigenschaften der Anbieter für die geschützte Konfigurationsdaten darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Configuration.ProtectedProviderSettings.Providers%2A> Eigenschaft, die Eigenschaften der Anbieter für den Zugriff auf geschützte Konfigurationsdaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public System.Configuration.ProviderSettingsCollection Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ProviderSettingsCollection Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ProtectedProviderSettings.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("", Options=System.Configuration.ConfigurationPropertyOptions.IsDefaultCollection)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ProviderSettingsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Configuration.ProviderSettings" /> Objekte, die die Eigenschaften der Anbieter für die geschützte Konfigurationsdaten darstellen.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Configuration.ProviderSettings" /> Objekte, die die Eigenschaften der Anbieter für die geschützte Konfigurationsdaten darstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft den Zugriff auf die Eigenschaften der Anbieter für die geschützte Konfigurationsdaten anstelle der <xref:System.Configuration.ProtectedProviderSettings.Properties%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

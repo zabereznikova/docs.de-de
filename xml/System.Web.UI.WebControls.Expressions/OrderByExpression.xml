@@ -1,0 +1,201 @@
+<Type Name="OrderByExpression" FullName="System.Web.UI.WebControls.Expressions.OrderByExpression">
+  <TypeSignature Language="C#" Value="public class OrderByExpression : System.Web.UI.WebControls.Expressions.DataSourceExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OrderByExpression extends System.Web.UI.WebControls.Expressions.DataSourceExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Expressions.OrderByExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Expressions.DataSourceExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true, "ThenByExpressions")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet eine Möglichkeit zum Anwenden eines Sortierausdrucks auf ein <see cref="T:System.Linq.IQueryable" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Expressions.OrderByExpression> Klasse wird verwendet, der <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement, um Daten in aufsteigender oder absteigender Reihenfolge zu sortieren. Die Sortierung erfolgt mit dem Standardvergleich für den Typ des Elements.  
+  
+ Die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement unterstützt eine Vielzahl von Optionen, die Sie verwenden können, um Daten zu filtern. Nachdem Sie die Filteroptionen verwenden, können Sie mithilfe der <xref:System.Web.UI.WebControls.Expressions.OrderByExpression> Objekt, das die Daten zu sortieren.  
+  
+ Geben Sie das Feld "Daten" mit sortiert die <xref:System.Web.UI.WebControls.Expressions.OrderByExpression.DataField%2A> Eigenschaft. Geben Sie die Sortierreihenfolge an, mit der <xref:System.Web.UI.WebControls.Expressions.OrderByExpression.Direction%2A> Eigenschaft. Nach der <xref:System.Web.UI.WebControls.Expressions.OrderByExpression> Objekt mit der Datenquelle angewendet wurde, können Sie mithilfe der <xref:System.Web.UI.WebControls.Expressions.ThenBy> Ausdrücke, um eine nachfolgende Sortierung auf einem anderen Feld "Daten" ausführen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die Products-Tabelle der AdventureWorks-Datenbank für Produkte zu suchen, deren Namen mit der Zeichenfolge, die im angegebenen beginnen der `SearchTextBox` Textfeld. Die <xref:System.Web.UI.WebControls.Expressions.OrderByExpression> Objekt sortiert die Daten nach der ListPrice-Datenfeld in absteigender Reihenfolge und dann nach der Produkt-ID-Feld in aufsteigender Reihenfolge. Das Ergebnis der Abfrage, die von zurückgegeben wird das <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement wird angezeigt, einem <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, die in bereitgestellten [Exemplarische Vorgehensweise: Filtern von Daten in einer Webseite mithilfe von deklarativer Syntax](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+  
+  
+ ]]></format>
+    </remarks>
+    <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.WebControls.Expressions.OrderByExpression.DataField" />-Eigenschaft ist <see langword="null" />.</exception>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OrderByExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.OrderByExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Expressions.OrderByExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataField">
+      <MemberSignature Language="C#" Value="public string DataField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.OrderByExpression.DataField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Eigenschaft der <see cref="T:System.Linq.IQueryable" /> Objekt, das nach zu sortieren.</summary>
+        <value>Die Eigenschaft der <see cref="T:System.Linq.IQueryable" /> Datenquellenobjekt nach zu sortieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Expressions.OrderByExpression> Objekt sortiert die Daten in einem Datenfeld. Nachfolgende Sortiervorgang kann auf ein anderes Datenfeld ausgeführt werden, mithilfe der <xref:System.Web.UI.WebControls.Expressions.OrderByExpression.ThenByExpressions%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Daten nach dem ListPrice-Feld in absteigender Reihenfolge und dann nach Produkt-ID-Feld in aufsteigender Reihenfolge sortiert wird. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, die in bereitgestellten [Exemplarische Vorgehensweise: Filtern von Daten in einer Webseite mithilfe von deklarativer Syntax](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+```  
+<asp:OrderByExpression DataField="ListPrice"   
+    Direction="Descending">  
+  <asp:ThenBy DataField="ProductID" Direction="Ascending"/>  
+</asp:OrderByExpression>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.SortDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.SortDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.OrderByExpression.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.SortDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die Sortierrichtung der <see cref="T:System.Linq.IQueryable" /> -Datenquellenobjekt.</summary>
+        <value>Die Sortierrichtung des Datenquellenobjekts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Expressions.OrderByExpression> Klasse wird verwendet, der <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement, um Daten in aufsteigender oder absteigender Reihenfolge zu sortieren. Die Richtung des Sortiervorgangs wird angegeben, mit der <xref:System.Web.UI.WebControls.Expressions.OrderByExpression.Direction%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Daten nach dem ListPrice-Feld in absteigender Reihenfolge und dann nach dem Feld "ProductID" in aufsteigender Reihenfolge sortiert wird. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [Exemplarische Vorgehensweise: Filtern von Daten in einer Webseite mithilfe von deklarativer Syntax](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+```  
+<asp:OrderByExpression DataField="ListPrice"   
+    Direction="Descending">  
+  <asp:ThenBy DataField="ProductID" Direction="Ascending"/>  
+</asp:OrderByExpression>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQueryable">
+      <MemberSignature Language="C#" Value="public override System.Linq.IQueryable GetQueryable (System.Linq.IQueryable source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Linq.IQueryable GetQueryable(class System.Linq.IQueryable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.OrderByExpression.GetQueryable(System.Linq.IQueryable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Linq.IQueryable" />
+      </Parameters>
+      <Docs>
+        <param name="source">Gibt die Datenquelle, um die Sortierung angewendet.</param>
+        <summary>Wendet einen Sortierungsausdruck an ein <see cref="T:System.Linq.IQueryable" /> -Objekt auf Grundlage einer <see cref="P:System.Web.UI.WebControls.Expressions.OrderByExpression.DataField" /> Wert und eine <see cref="P:System.Web.UI.WebControls.Expressions.OrderByExpression.Direction" /> Wert.</summary>
+        <returns>Eine Instanz der Datenquelle, der auf der Ausdruck angewendet wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThenByExpressions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Web.UI.WebControls.Expressions.ThenBy&gt; ThenByExpressions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Web.UI.WebControls.Expressions.ThenBy&gt; ThenByExpressions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.OrderByExpression.ThenByExpressions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Web.UI.WebControls.Expressions.ThenBy&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auflistung der <see cref="T:System.Web.UI.WebControls.Expressions.ThenBy" /> Ausdrücke, die nach dem Anwenden einer <see cref="T:System.Web.UI.WebControls.Expressions.OrderByExpression" /> Wert auf die Datenquelle angewendet wird.</summary>
+        <value>Die Auflistung der <see cref="T:System.Web.UI.WebControls.Expressions.ThenBy" /> Ausdrücke, die nach dem Anwenden der <see cref="T:System.Web.UI.WebControls.Expressions.OrderByExpression" /> auf die Datenquelle angewendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach einer Sortierung Vorgang erfolgt über die <xref:System.Web.UI.WebControls.Expressions.OrderByExpression> in der <xref:System.Web.UI.WebControls.QueryExtender> zu steuern, nachfolgende Sortierung Vorgänge können mithilfe der <xref:System.Web.UI.WebControls.Expressions.OrderByExpression.ThenByExpressions%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie so sortieren Sie Daten nach dem ListPrice-Feld in absteigender Reihenfolge und dann nach dem Produkt-ID-Feld in aufsteigender Reihenfolge mit der <xref:System.Web.UI.WebControls.Expressions.OrderByExpression.ThenByExpressions%2A>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, die in bereitgestellten [Exemplarische Vorgehensweise: Filtern von Daten in einer Webseite mithilfe von deklarativer Syntax](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+```  
+<asp:OrderByExpression DataField="ListPrice"   
+    Direction="Descending">  
+  <asp:ThenBy DataField="ProductID" Direction="Ascending"/>  
+</asp:OrderByExpression>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

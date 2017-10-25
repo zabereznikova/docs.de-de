@@ -1,0 +1,344 @@
+<Type Name="LinkLabel+Link" FullName="System.Windows.Forms.LinkLabel+Link">
+  <TypeSignature Language="C#" Value="public class LinkLabel.Link" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit LinkLabel/Link extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.LinkLabel.Link" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.LinkConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Link in einem <see cref="T:System.Windows.Forms.LinkLabel" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.LinkLabel.Link> Klasse definiert die Eigenschaften eines Links in einem <xref:System.Windows.Forms.LinkLabel> Steuerelement. Sie können diese Eigenschaften verwenden, um Daten zur Verfügung stellen die <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis für die <xref:System.Windows.Forms.LinkLabel> Steuerelement Aufgaben ausführen, wenn auf der Link im Steuerelement geklickt wird. Die <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> -Eigenschaft ermöglicht es Ihnen, Informationen zu definieren, die die <xref:System.Windows.Forms.LinkLabel.LinkClicked> Ereignis kann verwenden, um eine URL in Microsoft Internet Explorer anzeigen oder eine Datei zu öffnen.  
+  
+ Zusätzlich zu den Informationen im Zusammenhang mit den Link, der die Eigenschaften der <xref:System.Windows.Forms.LinkLabel.Link> Klasse auch dazu beitragen, definieren Sie den Text der der <xref:System.Windows.Forms.LinkLabel.Link> und deren Anzeigestatus. Die <xref:System.Windows.Forms.LinkLabel.Link.Start%2A> und <xref:System.Windows.Forms.LinkLabel.Link.Length%2A> Eigenschaften zu definieren, die Position und Länge des Texts aus dem Text der <xref:System.Windows.Forms.LinkLabel> Steuerelement als Link angezeigt. Die <xref:System.Windows.Forms.LinkLabel.Link.Enabled%2A> -Eigenschaft können Sie die Verknüpfung als eine deaktivierte Verknüpfung anzuzeigen und die <xref:System.Windows.Forms.LinkLabel.Link.Visited%2A> Eigenschaft kann der Benutzer gewarnt werden, dass sie bereits die angegebene Verknüpfung in der aktuellen Instanz der besucht die <xref:System.Windows.Forms.LinkLabel>.  
+  
+ Sie können mehrere Links anzeigen, in einer einzelnen <xref:System.Windows.Forms.LinkLabel> Steuerelement. Jede <xref:System.Windows.Forms.LinkLabel.Link> wird hinzugefügt, in der <xref:System.Windows.Forms.LinkLabel.LinkCollection> zugeordnet der <xref:System.Windows.Forms.LinkLabel> Steuerelement. Zum Abrufen der Auflistung der Links in einer <xref:System.Windows.Forms.LinkLabel> steuern, verwenden Sie die <xref:System.Windows.Forms.LinkLabel.Links%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.LinkLabel> -Klasse, mit mehreren <xref:System.Windows.Forms.LinkArea> Abschnitten definiert sind, um eine Bezeichnung auf einem Formular angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.Label.AutoSize%2A>, <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften zum Anpassen des Aussehens von der <xref:System.Windows.Forms.LinkLabel>. Die erste <xref:System.Windows.Forms.LinkArea> wird angegeben, mit der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A?displayProperty=nameWithType> Eigenschaft. Zusätzliche Links werden hinzugefügt, um die <xref:System.Windows.Forms.LinkLabel> mithilfe der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A?displayProperty=nameWithType> Methode. Die Beispiel-Handles die <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis durch Starten des Webbrowsers für Links und zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> für andere Links.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CPP/linklabel.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CS/linklabel.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/VB/linklabel.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Link ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.Link.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.LinkLabel.Link" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Link (int start, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 start, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.Link.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="start">Die nullbasierte Anfangsposition des des Linkbereichs im Text des der <see cref="T:System.Windows.Forms.LinkLabel" />.</param>
+        <param name="length">Die Anzahl der Zeichen, nach dem Anfangszeichen des Linkbereichs einschließt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.LinkLabel.Link" /> Klasse mit der angegebenen Anfangsposition und die Anzahl der Zeichen, nach die Startposition innerhalb der <see cref="T:System.Windows.Forms.LinkLabel" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Link (int start, int length, object linkData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 start, int32 length, object linkData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.Link.#ctor(System.Int32,System.Int32,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+        <Parameter Name="linkData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="start">Die nullbasierte Anfangsposition des des Linkbereichs im Text des der <see cref="T:System.Windows.Forms.LinkLabel" />.</param>
+        <param name="length">Die Anzahl der Zeichen, nach dem Anfangszeichen des Linkbereichs einschließt.</param>
+        <param name="linkData">Die Daten, die den Link zugeordnet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.LinkLabel.Link" /> -Klasse mit der angegebenen Anfangsposition, Anzahl der Zeichen, nach die Startposition innerhalb der <see cref="T:System.Windows.Forms.LinkLabel" />, und die Daten mit dem Link zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.Link.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine textbeschreibung des Links.</summary>
+        <value>Ein <see cref="T:System.String" /> , der eine textbeschreibung des Links darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.Link.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Verknüpfung aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Verknüpfung aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft in einem deaktivierten Zustand in einen Link Anzeigen der <xref:System.Windows.Forms.LinkLabel> Steuerelement. Wenn ein Link deaktiviert ist, klicken auf den Link bewirkt nicht, die <xref:System.Windows.Forms.LinkLabel> Steuerelement zum Auslösen der <xref:System.Windows.Forms.LinkLabel.LinkClicked> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.Link.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Zeichen in der Text des Links fest.</summary>
+        <value>Die Anzahl der Zeichen, Leerzeichen, in der Text des Links.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Angeben von Text aus der <xref:System.Windows.Forms.LinkLabel> als Link anzeigen zu können, legen Sie die <xref:System.Windows.Forms.LinkLabel.Link.Start%2A> Eigenschaft, um die Position in der Text, der mit dem Erstellen der Verknüpfung beginnen. Nach der <xref:System.Windows.Forms.LinkLabel.Link.Start%2A> Eigenschaft festgelegt ist, legen Sie den Wert von der <xref:System.Windows.Forms.LinkLabel.Link.Length%2A> Eigenschaft, um die Anzahl der Zeichen, z. B. die Position des Zeichens im angegebenen die <xref:System.Windows.Forms.LinkLabel.Link.Start%2A> Eigenschaft, die den Text des Links machen möchten. Angenommen, wenn Sie dem ersten Wort des Texts "The quick brown Fox" eine Verknüpfung erstellen möchten, Sie legen die <xref:System.Windows.Forms.LinkLabel.Link.Start%2A> Eigenschaft auf Null (0) und die <xref:System.Windows.Forms.LinkLabel.Link.Length%2A> -Eigenschaft auf drei (3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkData">
+      <MemberSignature Language="C#" Value="public object LinkData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object LinkData" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.Link.LinkData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Daten, die den Link zugeordnet.</summary>
+        <value>Eine <see cref="T:System.Object" /> Darstellung der Daten, die den Link zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, Informationen im Zusammenhang mit den Link angeben. Die Informationen bereitgestellt, die von dieser Eigenschaft kann verwendet werden, in der <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis der <xref:System.Windows.Forms.LinkLabel> Informationen über den Link bereitstellen, die verwendet werden kann, verarbeiten Sie den Link geklickt wird. Geben Sie z. B. die URL in Internet Explorer angezeigt werden soll, wenn als Wert für der Link geklickt wird die <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> Eigenschaft. Sie können auch die <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> Eigenschaft, um ein Dialogfeld angezeigt, wenn der Benutzer auf den Link klickt identifiziert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.LinkLabel> -Klasse, mit mehreren <xref:System.Windows.Forms.LinkArea> Abschnitten definiert sind, um eine Bezeichnung auf einem Formular angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.Label.AutoSize%2A>, <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften zum Anpassen des Aussehens von der <xref:System.Windows.Forms.LinkLabel>. Die erste <xref:System.Windows.Forms.LinkArea> wird angegeben, mit der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A?displayProperty=nameWithType> Eigenschaft. Zusätzliche Links werden hinzugefügt, um die <xref:System.Windows.Forms.LinkLabel> mithilfe der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A?displayProperty=nameWithType> Methode. Die Beispiel-Handles die <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis durch Starten des Webbrowsers für Links und zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> für andere Links.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CPP/linklabel.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CS/linklabel.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/VB/linklabel.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.Link.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der <see cref="T:System.Windows.Forms.LinkLabel.Link" /> ab oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.String" />, der den Namen des <see cref="T:System.Windows.Forms.LinkLabel.Link" /> darstellt. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.LinkLabel.Link.Name%2A> Eigenschaft ist nützlich für die Indizierung anhand von Schlüsseln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public int Start { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Start" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.Link.Start" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anfangsposition des innerhalb des Texts des Links die <see cref="T:System.Windows.Forms.LinkLabel" />.</summary>
+        <value>Die Position innerhalb des Texts von der <see cref="T:System.Windows.Forms.LinkLabel" /> Steuerelement, in dem der Link beginnt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Angeben von Text aus der <xref:System.Windows.Forms.LinkLabel> als Link anzeigen zu können, legen Sie die <xref:System.Windows.Forms.LinkLabel.Link.Start%2A> Eigenschaft, um die Position in der Text, der mit dem Erstellen der Verknüpfung beginnen. Nach der <xref:System.Windows.Forms.LinkLabel.Link.Start%2A> Eigenschaft festgelegt ist, legen Sie den Wert von der <xref:System.Windows.Forms.LinkLabel.Link.Length%2A> Eigenschaft, um die Anzahl der Zeichen, z. B. die Position des Zeichens im angegebenen die <xref:System.Windows.Forms.LinkLabel.Link.Start%2A> Eigenschaft, die den Text des Links machen möchten. Angenommen, wenn Sie dem ersten Wort des Texts "The quick brown Fox" eine Verknüpfung erstellen möchten, Sie legen die <xref:System.Windows.Forms.LinkLabel.Link.Start%2A> Eigenschaft auf Null (0) und die <xref:System.Windows.Forms.LinkLabel.Link.Length%2A> -Eigenschaft auf drei (3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.Link.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt ab, das Daten über <see cref="T:System.Windows.Forms.LinkLabel.Link" /> enthält, oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:System.Object" />, das Daten über das Steuerelement enthält. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visited">
+      <MemberSignature Language="C#" Value="public bool Visited { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visited" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.Link.Visited" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Benutzer auf den Link besucht hat.</summary>
+        <value>
+          <see langword="true" />Wenn der Link aktiviert wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Forms.LinkLabel> Steuerelement ist nicht automatisch darauf hin, dass ein Link auf ein bereits besuchter Link ist. Um die Verknüpfung als ein bereits besuchter Link anzuzeigen, können Sie den Wert dieser Eigenschaft auf festgelegt `true` in einem Ereignishandler für das <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis für ein <xref:System.Windows.Forms.LinkLabel>. Ein bereits besuchter Link angezeigt, über die angegebene Farbe der <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaft von der <xref:System.Windows.Forms.LinkLabel> Steuerelement. Wenn das Formular mit der <xref:System.Windows.Forms.LinkLabel> Steuerelement geschlossen wird, werden alle Anzeigezustand, der mit dem Link wird gelöscht. Um den Anzeigezustand der Link beibehalten werden sollen, müssen Sie zum Speichern des Anzeigestatus des Links in einer Einstellung in der Registrierung Ihrer Anwendung zugeordnet.  
+  
+> [!NOTE]
+>  Wenn Sie nur einen Link in angegeben haben eine <xref:System.Windows.Forms.LinkLabel> -Steuerelement, können Sie die <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> Eigenschaft der <xref:System.Windows.Forms.LinkLabel> an den Link als besucht. Sie können auch die <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> Eigenschaft, wenn Sie mehrere Verknüpfungen definiert haben, aber die Einstellung nur für den ersten Link in das Steuerelement definiert gilt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.LinkLabel> -Klasse, mit mehreren <xref:System.Windows.Forms.LinkArea> Abschnitten definiert sind, um eine Bezeichnung auf einem Formular angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.Label.AutoSize%2A>, <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften zum Anpassen des Aussehens von der <xref:System.Windows.Forms.LinkLabel>. Die erste <xref:System.Windows.Forms.LinkArea> wird angegeben, mit der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A?displayProperty=nameWithType> Eigenschaft. Zusätzliche Links werden hinzugefügt, um die <xref:System.Windows.Forms.LinkLabel> mithilfe der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A?displayProperty=nameWithType> Methode. Die Beispiel-Handles die <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis durch Starten des Webbrowsers für Links und zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> für andere Links.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CPP/linklabel.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CS/linklabel.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/VB/linklabel.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

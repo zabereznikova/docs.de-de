@@ -1,0 +1,106 @@
+<Type Name="IBuildEngine4" FullName="Microsoft.Build.Framework.IBuildEngine4">
+  <TypeSignature Language="C#" Value="public interface IBuildEngine4 : Microsoft.Build.Framework.IBuildEngine3" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBuildEngine4 implements class Microsoft.Build.Framework.IBuildEngine, class Microsoft.Build.Framework.IBuildEngine2, class Microsoft.Build.Framework.IBuildEngine3" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.IBuildEngine4" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.IBuildEngine3</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Diese Schnittstelle erweitert IBuildEngine, um einen Mechanismus, der Aufgaben zum Freigeben von Daten zwischen den Aufgabenaufrufen bereitzustellen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetRegisteredTaskObject">
+      <MemberSignature Language="C#" Value="public object GetRegisteredTaskObject (object key, Microsoft.Build.Framework.RegisteredTaskObjectLifetime lifetime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetRegisteredTaskObject(object key, valuetype Microsoft.Build.Framework.RegisteredTaskObjectLifetime lifetime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.IBuildEngine4.GetRegisteredTaskObject(System.Object,Microsoft.Build.Framework.RegisteredTaskObjectLifetime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="lifetime" Type="Microsoft.Build.Framework.RegisteredTaskObjectLifetime" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel, der zum Abrufen des Objekts verwendet wird.</param>
+        <param name="lifetime">Die Lebensdauer des Objekts.</param>
+        <summary>Ruft einen zuvor registrierten Task-Objekt, das gespeichert wird, mit dem angegebenen Schlüssel ab.</summary>
+        <returns>Eine registrierte Objekt oder Null, wenn kein Objekt vorhanden ist unter diesem Schlüssel registriert oder das Objekt wurde verworfen frühen Auflistung zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterTaskObject">
+      <MemberSignature Language="C#" Value="public void RegisterTaskObject (object key, object obj, Microsoft.Build.Framework.RegisteredTaskObjectLifetime lifetime, bool allowEarlyCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterTaskObject(object key, object obj, valuetype Microsoft.Build.Framework.RegisteredTaskObjectLifetime lifetime, bool allowEarlyCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.IBuildEngine4.RegisterTaskObject(System.Object,System.Object,Microsoft.Build.Framework.RegisteredTaskObjectLifetime,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="lifetime" Type="Microsoft.Build.Framework.RegisteredTaskObjectLifetime" />
+        <Parameter Name="allowEarlyCollection" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel, der zum Abrufen des Objekts verwendet wird.</param>
+        <param name="obj">Das Objekt, für die spätere Beseitigung gespeichert werden.</param>
+        <param name="lifetime">Die Lebensdauer des Objekts.</param>
+        <param name="allowEarlyCollection">Flag, die bestimmt, ob das Objekt älter als die angeforderte Zeit freigegeben werden kann.</param>
+        <summary>Registriert ein Objekt mit dem System, das zu einem angegebenen Zeitpunkt in der Zukunft verworfen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann von Tasks aufgerufen werden der Status für Aufrufe der Task, z. B. Daten Zwischenspeichern von Aufgaben verwalten müssen. Es wird dringend empfohlen, die `allowEarlyCollection` festgelegt werden, um `true` , wenn das Objekt erheblich mehr Daten beibehalten werden.  
+  
+ Der Thread, auf dem das Objekt verworfen wird, möglicherweise nach dem Zufallsprinzip, aber es wird nicht gelöscht werden, während die Aufgabe ausgeführt wird, selbst wenn `allowEarlyCollection` festgelegt ist, um `true`.  
+  
+ Wenn das Objekt IDisposable implementiert, wird IDisposable.Dispose vor verwirft, für das Objekt aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterTaskObject">
+      <MemberSignature Language="C#" Value="public object UnregisterTaskObject (object key, Microsoft.Build.Framework.RegisteredTaskObjectLifetime lifetime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object UnregisterTaskObject(object key, valuetype Microsoft.Build.Framework.RegisteredTaskObjectLifetime lifetime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.IBuildEngine4.UnregisterTaskObject(System.Object,Microsoft.Build.Framework.RegisteredTaskObjectLifetime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="lifetime" Type="Microsoft.Build.Framework.RegisteredTaskObjectLifetime" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel, der zum Abrufen des Objekts verwendet wird.</param>
+        <param name="lifetime">Die Lebensdauer des Objekts.</param>
+        <summary>Hebt die Registrierung einer zuvor registrierten Task-Objekt.</summary>
+        <returns>Gibt einen zuvor registrierten Objekt oder Null, wenn kein Objekt vorhanden ist unter diesem Schlüssel registriert oder, wenn das Objekt frühen Auflistung verworfen wurde zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

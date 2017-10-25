@@ -1,0 +1,100 @@
+<Type Name="XpsSerializationPrintTicketRequiredEventArgs" FullName="System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventArgs">
+  <TypeSignature Language="C#" Value="public class XpsSerializationPrintTicketRequiredEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XpsSerializationPrintTicketRequiredEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Xps.Serialization.XpsSerializationManager.XpsSerializationPrintTicketRequired" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XpsSerializationPrintTicketRequiredEventArgs (System.Windows.Xps.Serialization.PrintTicketLevel printTicketLevel, int sequence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Xps.Serialization.PrintTicketLevel printTicketLevel, int32 sequence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventArgs.#ctor(System.Windows.Xps.Serialization.PrintTicketLevel,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="printTicketLevel" Type="System.Windows.Xps.Serialization.PrintTicketLevel" />
+        <Parameter Name="sequence" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="printTicketLevel">Ein Objekt, das den Bereich der gibt an, die <see cref="T:System.Printing.PrintTicket" />.</param>
+        <param name="sequence">Die Gesamtanzahl der Seiten oder die Anzahl der Dokumente in dem Druckauftrag. Die angewendet wird, hängt davon ab, der Umfang der der <see cref="T:System.Printing.PrintTicket" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintTicket">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintTicket PrintTicket { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintTicket PrintTicket" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventArgs.PrintTicket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintTicket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Printing.PrintTicket" /> , die in den Schreibvorgang verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Printing.PrintTicket" /> , der definiert, wie der Drucker einen Druckauftrag behandelt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintTicketLevel">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Serialization.PrintTicketLevel PrintTicketLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Xps.Serialization.PrintTicketLevel PrintTicketLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventArgs.PrintTicketLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.PrintTicketLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der den Bereich, der angibt, ab der <see cref="T:System.Printing.PrintTicket" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Xps.Serialization.PrintTicketLevel" /> -Wert, der den Bereich, der angibt, die <see cref="T:System.Printing.PrintTicket" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sequence">
+      <MemberSignature Language="C#" Value="public int Sequence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Sequence" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventArgs.Sequence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtanzahl der Seiten oder die Anzahl der Dokumente in den Druckauftrag ab.</summary>
+        <value>Eine <see cref="T:System.Int32" /> , die die Gesamtanzahl der Seiten oder die Anzahl der Dokumente darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt an, ob diese Eigenschaft Seiten oder Dokumente darstellt, hängt davon ab, der Umfang (z. B. ein einzelnes Dokument oder mehrere Dokumente), der die <xref:System.Printing.PrintTicket>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

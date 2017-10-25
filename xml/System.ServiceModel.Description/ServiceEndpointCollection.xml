@@ -1,0 +1,370 @@
+<Type Name="ServiceEndpointCollection" FullName="System.ServiceModel.Description.ServiceEndpointCollection">
+  <TypeSignature Language="C#" Value="public class ServiceEndpointCollection : System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceEndpointCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.ServiceEndpoint&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.ServiceEndpointCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.ServiceModel.Description.ServiceEndpoint</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Auflistung, die die Endpunkte für einen Dienst enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Auflistung von Endpunkten für einen Dienst wird von der Metadaten-API zum Verwalten von Diensten mit mehreren Endpunkten verwendet. <xref:System.ServiceModel.Description.ServiceEndpointCollection> wird zurückgegeben, z.&#160; von der <xref:System.ServiceModel.Description.ServiceDescription.Endpoints%2A>-Eigenschaft und der <xref:System.ServiceModel.Description.WsdlImporter.ImportAllEndpoints%2A>-Methode, wenn Serviceendpunkte von WSDL-Anschlusstypen erstellt werden.  
+  
+ Diese Auflistung bietet die Funktion zum Auffinden der Endpunkte eines bestimmten Typs mit einem bestimmten Namen oder einer bestimmten Adresse mittels <xref:System.ServiceModel.Description.ServiceEndpointCollection.Find%2A> oder zum Auffinden der Endpunkte für einen Dienst, die einem bestimmten Vertragstypen oder Namenskriterium entsprechen, mittels <xref:System.ServiceModel.Description.ServiceEndpointCollection.FindAll%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.ServiceModel.Description.ServiceEndpointCollection.Find%2A>-Methode und <xref:System.ServiceModel.Description.ServiceEndpointCollection.FindAll%2A>-Methode zum Aufzählen von <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekten veranschaulicht, die verschiedene Suchkriterien erfüllen.  
+  
+ [!code-csharp[ServiceEndpointCollection#1](~/samples/snippets/csharp/VS_Snippets_CFX/serviceendpointcollection/cs/proxy.cs#1)]
+ [!code-csharp[ServiceEndpointCollection#1](~/samples/snippets/csharp/VS_Snippets_CFX/serviceendpointcollection/cs/serviceendpointcollection.service.overview.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="Find">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt den ersten Dienstendpunkt aus der Auflistung von Dienstendpunkten zurück, der bestimmte Kriterien erfüllt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt potenziell mehrere Endpunkte, die die Kriterien erfüllen können. Die Methode gibt den ersten Endpunkt zurück, der in der Auflistung gefunden wird. Wenn Sie alle <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte in der Auflistung anzeigen möchten, die den angegebenen Kriterien entsprechen, verwenden Sie stattdessen eine der <xref:System.ServiceModel.Description.ServiceEndpointCollection.FindAll%2A>-Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint Find (Type contractType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint Find(class System.Type contractType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceEndpointCollection.Find(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contractType">Der <see cref="T:System.Type" /> des Vertrags für den Dienstendpunkt.</param>
+        <summary>Gibt den ersten Dienstendpunkt aus der Auflistung von Dienstendpunkten zurück, der dem angegebenen Vertragstyp entspricht.</summary>
+        <returns>Der erste <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> des angegebenen Vertragstyps oder <see langword="null" />, wenn keiner gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese <xref:System.ServiceModel.Description.ServiceEndpointCollection.Find%28System.Type%29>-Überladung ist spezifisch für das [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Programmiermodell. Sie prüft die <xref:System.ServiceModel.Description.ContractDescription.ContractType%2A>-Eigenschaft für jeden Endpunkt. Der <xref:System.ServiceModel.Description.ContractDescription.ContractType%2A> ist unter Umständen `null`, wenn die <xref:System.ServiceModel.Description.ContractDescription> nicht aus dem [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Programmiermodell (Typen mit *Contract-Attributen) erstellt wurde.  
+  
+ Es gibt potenziell mehrere Endpunkte, die die Kriterien erfüllen können. Die Methode gibt den ersten Endpunkt zurück, der in der Auflistung gefunden wird. Wenn Sie alle <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte in der Auflistung anzeigen möchten, die den angegebenen Kriterien entsprechen, verwenden Sie stattdessen eine der <xref:System.ServiceModel.Description.ServiceEndpointCollection.FindAll%2A>-Methoden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contractType" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint Find (Uri address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint Find(class System.Uri address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceEndpointCollection.Find(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="address">Die <see cref="T:System.Uri" /> für den Dienstendpunkt.</param>
+        <summary>Gibt einen Dienstendpunkt mit einer angegebenen Adresse aus der Auflistung der Dienstendpunkte zurück.</summary>
+        <returns>Der erste <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> mit der angegebenen Adresse oder <see langword="null" />, wenn keiner gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt potenziell mehrere Endpunkte, die die Kriterien erfüllen können. Die Methode gibt den ersten Endpunkt zurück, der in der Auflistung gefunden wird. Wenn Sie alle <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte in der Auflistung anzeigen möchten, die den angegebenen Kriterien entsprechen, verwenden Sie stattdessen eine der <xref:System.ServiceModel.Description.ServiceEndpointCollection.FindAll%2A>-Methoden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint Find (System.Xml.XmlQualifiedName contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint Find(class System.Xml.XmlQualifiedName contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceEndpointCollection.Find(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="contractName">Der <see cref="T:System.Xml.XmlQualifiedName" /> für den Vertrag des Diensts.</param>
+        <summary>Gibt einen Dienstendpunkt mit einem angegebenen Namespace und Vertragsnamen aus der Auflistung von Dienstendpunkten zurück.</summary>
+        <returns>Der erste <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> mit dem angegebenen Namespace und Vertragsnamen oder <see langword="null" />, wenn keiner gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt potenziell mehrere Endpunkte, die die Kriterien erfüllen können. Die Methode gibt den ersten Endpunkt zurück, der in der Auflistung gefunden wird. Wenn Sie alle <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte in der Auflistung anzeigen möchten, die den angegebenen Kriterien entsprechen, verwenden Sie stattdessen eine der <xref:System.ServiceModel.Description.ServiceEndpointCollection.FindAll%2A>-Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint Find (Type contractType, System.Xml.XmlQualifiedName bindingName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint Find(class System.Type contractType, class System.Xml.XmlQualifiedName bindingName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceEndpointCollection.Find(System.Type,System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractType" Type="System.Type" />
+        <Parameter Name="bindingName" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="contractType">Der <see cref="T:System.Type" /> des Vertrags für den Dienstendpunkt.</param>
+        <param name="bindingName">Der <see cref="T:System.Xml.XmlQualifiedName" /> für die Bindung des Diensts.</param>
+        <summary>Gibt einen Dienstendpunkt eines angegebenen Vertragstyps und mit einem bestimmten Bindungsnamen und Namespace aus der Auflistung von Dienstendpunkten zurück.</summary>
+        <returns>Der erste <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> mit dem angegebenen Vertragstyp und Bindungsnamen und Namespace oder <see langword="null" />, wenn keiner gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt potenziell mehrere Endpunkte, die die Kriterien erfüllen können. Die Methode gibt den ersten Endpunkt zurück, der in der Auflistung gefunden wird. Wenn Sie alle <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte in der Auflistung anzeigen möchten, die den angegebenen Kriterien entsprechen, verwenden Sie stattdessen eine der <xref:System.ServiceModel.Description.ServiceEndpointCollection.FindAll%2A>-Methoden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contractType" /> oder <paramref name="bindingName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint Find (System.Xml.XmlQualifiedName contractName, System.Xml.XmlQualifiedName bindingName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint Find(class System.Xml.XmlQualifiedName contractName, class System.Xml.XmlQualifiedName bindingName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceEndpointCollection.Find(System.Xml.XmlQualifiedName,System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="bindingName" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="contractName">Der <see cref="T:System.Xml.XmlQualifiedName" /> für den Vertrag des Diensts.</param>
+        <param name="bindingName">Der <see cref="T:System.Xml.XmlQualifiedName" /> für die Bindung des Diensts.</param>
+        <summary>Gibt den ersten Dienstendpunkt mit dem angegebenen Vertragsnamen, Namespace und Bindungsnamen und Namespace aus der Auflistung von Dienstendpunkten zurück.</summary>
+        <returns>Der erste <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> mit der angegebenen Bindung und den angegebenen Vertragsnamen und Namespaces.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt potenziell mehrere Endpunkte, die die Kriterien erfüllen können. Die Methode gibt den ersten Endpunkt zurück, der in der Auflistung gefunden wird. Wenn Sie alle <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte in der Auflistung anzeigen möchten, die den angegebenen Kriterien entsprechen, verwenden Sie stattdessen eine der <xref:System.ServiceModel.Description.ServiceEndpointCollection.FindAll%2A>-Methoden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contractName" /> oder <paramref name="bindingName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="FindAll">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt eine Auflistung aller Dienstendpunkte zurück, die bestimmte Kriterien erfüllen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie nur den ersten <xref:System.ServiceModel.Description.ServiceEndpoint> auffinden müssen, der den angegebenen Kriterien entspricht, verwenden Sie stattdessen eine der <xref:System.ServiceModel.Description.ServiceEndpointCollection.Find%2A>-Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt; FindAll (Type contractType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.ServiceEndpoint&gt; FindAll(class System.Type contractType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceEndpointCollection.FindAll(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contractType">Der <see cref="T:System.Type" /> des Vertrags für den Dienstendpunkt.</param>
+        <summary>Gibt für einen angegebenen Diensttyp eine Auflistung aller Dienstendpunkte zurück.</summary>
+        <returns>Die <see cref="T:System.Collections.ObjectModel.Collection`1" /> vom Typ <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />, die Dienstendpunkte des angegebenen Typs enthält, oder die leere Auflistung, wenn keiner gefunden wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie nur den ersten <xref:System.ServiceModel.Description.ServiceEndpoint> auffinden müssen, der den angegebenen Kriterien entspricht, verwenden Sie stattdessen eine der <xref:System.ServiceModel.Description.ServiceEndpointCollection.Find%2A>-Methoden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contractType" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt; FindAll (System.Xml.XmlQualifiedName contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.ServiceEndpoint&gt; FindAll(class System.Xml.XmlQualifiedName contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceEndpointCollection.FindAll(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="contractName">Der <see cref="T:System.Xml.XmlQualifiedName" /> für den Dienst.</param>
+        <summary>Gibt eine Auflistung aller Dienstendpunkte für einen bestimmten Dienstnamen zurück.</summary>
+        <returns>Die <see cref="T:System.Collections.ObjectModel.Collection`1" /> vom Typ <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />, die Dienstendpunkte mit dem angegebenen Vertragsnamen und Namespace enthält, oder die leere Auflistung, wenn keiner gefunden wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie nur den ersten <xref:System.ServiceModel.Description.ServiceEndpoint> auffinden müssen, der den angegebenen Kriterien entspricht, verwenden Sie stattdessen eine der <xref:System.ServiceModel.Description.ServiceEndpointCollection.Find%2A>-Methoden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contractName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, System.ServiceModel.Description.ServiceEndpoint item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, class System.ServiceModel.Description.ServiceEndpoint item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceEndpointCollection.InsertItem(System.Int32,System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem das Element eingefügt werden soll.</param>
+        <param name="item">Die <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> Element am angegebenen einzufügende <c>Index</c>.</param>
+        <summary>Fügt ein Element am angegebenen Index in die Auflistung ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt die virtuelle <xref:System.Collections.ObjectModel.Collection%601.InsertItem%28System.Int32%2C%600%29>-Methode, die in der Basisklasse definiert ist, und wird für die Eingabevalidierung zur Verfügung gestellt, mit der sichergestellt wird, dass keine `null`-Werte in die Auflistung eingefügt werden. Sie ist nicht dazu gedacht, von Benutzern aufgerufen zu werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="index" /> ist größer als die Anzahl der Elemente in der Auflistung.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, System.ServiceModel.Description.ServiceEndpoint item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, class System.ServiceModel.Description.ServiceEndpoint item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceEndpointCollection.SetItem(System.Int32,System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu ersetzenden Elements.</param>
+        <param name="item">Der neue Wert für <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> Element an der angegebenen <c>Index</c>.</param>
+        <summary>Ersetzt ein Element in der Auflistung am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt die virtuelle <xref:System.Collections.ObjectModel.Collection%601.SetItem%28System.Int32%2C%600%29>-Methode, die in der Basisklasse definiert ist, und wird für die Eingabevalidierung zur Verfügung gestellt, mit der sichergestellt wird, dass keine `null`-Werte in die Auflistung eingefügt werden. Sie ist nicht dazu gedacht, von Benutzern aufgerufen zu werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="index" /> ist größer als die Anzahl der Elemente in der Auflistung.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

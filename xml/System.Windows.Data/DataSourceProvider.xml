@@ -1,0 +1,474 @@
+<Type Name="DataSourceProvider" FullName="System.Windows.Data.DataSourceProvider">
+  <TypeSignature Language="C#" Value="public abstract class DataSourceProvider : System.ComponentModel.INotifyPropertyChanged, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataSourceProvider extends System.Object implements class System.ComponentModel.INotifyPropertyChanged, class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.DataSourceProvider" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Allgemeine Basisklasse und Vertrag für <see cref="T:System.Windows.Data.DataSourceProvider" />-Objekte, die Factorys sind, die bestimmte Abfragen ausführen, um ein einzelnes Objekt oder eine Liste von Objekten zu erstellen, die Sie als Quelle Bindungsquellenobjekte verwenden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Data.DataSourceProvider>ist ein Hilfswrapper um ein vorhandenes Data Modell an. Sie können jedes beliebige Datenmodell wird nicht ersetzt. Ein Datenanbieter versucht nicht, die Komplexität und Vielseitigkeit eines Datenmodells, z. B. verkleinern [!INCLUDE[TLA2#tla_ado](~/includes/tla2sharptla-ado-md.md)] in einem einzelnen Objekt mit wenigen Eigenschaften.  
+  
+ <xref:System.Windows.Data.DataSourceProvider> ist eine abstrakte Klasse. Verwenden Sie eine der abgeleiteten Klassen, die <xref:System.Windows.Data.XmlDataProvider> und <xref:System.Windows.Data.ObjectDataProvider>. Die <xref:System.Windows.Data.DataSourceProvider> erkennt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] threading und Dispatcher-Modell. Es wird den Thread vorausgesetzt, zum Zeitpunkt der Erstellung werden die [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Thread. Ereignisse werden von einem Arbeitsthread zum UI-Thread der Anwendung gemarshallt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataSourceProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.DataSourceProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Data.DataSourceProvider" />-Klasse. Dies ist ein geschützter Konstruktor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="protected virtual void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.DataSourceProvider.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass die Initialisierung dieses Objekt wird in Kürze; nicht über ein implizites <see cref="M:System.Windows.Data.DataSourceProvider.Refresh" /> tritt auf, bis die übereinstimmende <see cref="M:System.Windows.Data.DataSourceProvider.EndInit" /> -Methode aufgerufen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginQuery">
+      <MemberSignature Language="C#" Value="protected virtual void BeginQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void BeginQuery() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.DataSourceProvider.BeginQuery" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft diese Basisklasse diese Methode beim <see cref="M:System.Windows.Data.DataSourceProvider.InitialLoad" /> oder <see cref="M:System.Windows.Data.DataSourceProvider.Refresh" /> aufgerufen wurde. Die Basisklasse verzögert den Aufruf, wenn, Aktualisierung verzögert oder anfänglich geladenen deaktiviert ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Hinweise für Implementierer:** Sie können auswählen, um die Abfrage auszuführen, auf dem gleichen Thread oder in einem Hintergrundthread Thread oder mit `IsAsynchronous`. Wenn die Abfrage abgeschlossen ist, rufen Sie <xref:System.Windows.Data.DataSourceProvider.OnQueryFinished%2A> die öffentlichen Eigenschaften aktualisiert haben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public object Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Data" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.DataSourceProvider.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das zugrunde liegende Datenobjekt ab.</summary>
+        <value>Ein Wert des Typs <see cref="T:System.Object" />, der das zugrunde liegende Datenobjekt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Data.DataSourceProvider> dient als Quelle für eine Bindung, die sich ergebende Bindungsquellobjekt sieht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler DataChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DataChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Data.DataSourceProvider.DataChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="P:System.Windows.Data.DataSourceProvider.Data" /> Eigenschaft hat einen neuen Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Hinweise für Implementierer:** lösen Sie dieses Ereignis, wenn ein neues Datenobjekt verfügbar auf wird die <xref:System.Windows.Data.DataSourceProvider.Data%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeferRefresh">
+      <MemberSignature Language="C#" Value="public virtual IDisposable DeferRefresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IDisposable DeferRefresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.DataSourceProvider.DeferRefresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IDisposable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wechselt in eine Verzögerungsschleife, die Sie verwenden können, so ändern Sie die Eigenschaften der automatischen Aktualisierung Anbieter und Verzögerung.</summary>
+        <returns>Ein <see cref="T:System.IDisposable" />-Objekt, das Sie verwenden können, um das aufrufende Objekt zu verwerfen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die typische Nutzung darin, zum Erstellen einer `using` mit dieser Methode Bereich, und legen Sie mehrere eigenschaftenänderungen innerhalb des Bereichs. Dadurch wird die automatische Aktualisierung verzögert, bis die Verzögerungsschleife beendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispatcher">
+      <MemberSignature Language="C#" Value="protected System.Windows.Threading.Dispatcher Dispatcher { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Threading.Dispatcher Dispatcher" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.DataSourceProvider.Dispatcher" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.Dispatcher</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den aktuellen <see cref="T:System.Windows.Threading.Dispatcher" /> -Objekt an die [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Thread verwendet.</summary>
+        <value>Die aktuelle <see cref="T:System.Windows.Threading.Dispatcher" /> -Objekt an die [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Thread verwendet. Standardmäßig ist dies die <see cref="T:System.Windows.Threading.Dispatcher" /> -Objekt, das dem Thread zugeordnet ist, auf dem diese Instanz erstellt wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="protected virtual void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.DataSourceProvider.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass die Initialisierung dieses Objekts abgeschlossen ist. Dies bewirkt, dass eine <see cref="M:System.Windows.Data.DataSourceProvider.Refresh" /> Wenn keine anderen <see cref="M:System.Windows.Data.DataSourceProvider.DeferRefresh" /> aussteht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public Exception Error { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Error" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.DataSourceProvider.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Fehler des letzten Abfragevorgangs ab.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Exception" /> also den Fehler des letzten Abfragevorgangs oder <see langword="null" /> , wenn keine Fehler aufgetreten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialLoad">
+      <MemberSignature Language="C#" Value="public void InitialLoad ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InitialLoad() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.DataSourceProvider.InitialLoad" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet die ursprüngliche Abfrage an das zugrunde liegende Datenmodell. Das Ergebnis wird zurückgegeben, auf die <see cref="P:System.Windows.Data.DataSourceProvider.Data" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird in der Regel durch das Bindungsmodul aufgerufen, wenn abhängige datenbindungen aktiviert werden. Legen Sie <xref:System.Windows.Data.DataSourceProvider.IsInitialLoadEnabled%2A> auf `false` zu verhindern, oder das automatische Laden von Daten zu verzögern.  
+  
+ Die <xref:System.Windows.Data.DataSourceProvider.InitialLoad%2A> Methode kann mehrfach aufgerufen werden. Nachdem sie die ursprüngliche Abfrage ausführen ausgelastet ist, ignoriert der Anbieter nachfolgende Aufrufe; Neustarten des Anbieters ist keinem bereits laufenden Abfragen beim <xref:System.Windows.Data.DataSourceProvider.InitialLoad%2A> erneut aufgerufen wird. Wenn die Abfrage erfolgreich abgeschlossen, eine <xref:System.Windows.Data.DataSourceProvider.InitialLoad%2A> Aufruf noch werden nicht erneut abgefragt Daten. Die <xref:System.Windows.Data.DataSourceProvider.InitialLoad%2A> Vorgang ist in der Regel asynchron eine <xref:System.Windows.Data.DataSourceProvider.DataChanged> Ereignis wird ausgelöst, wenn die <xref:System.Windows.Data.DataSourceProvider.Data%2A> Eigenschaft davon ausgegangen, dass einen neuen Wert.  
+  
+ Ruft die Anwendung <xref:System.Windows.Data.DataSourceProvider.Refresh%2A> eine Aktualisierung der Daten verursachen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitialLoadEnabled">
+      <MemberSignature Language="C#" Value="public bool IsInitialLoadEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInitialLoadEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.DataSourceProvider.IsInitialLoadEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob verhindert oder verzögert das automatische Laden von Daten fest.</summary>
+        <value>
+          <see langword="false" />um zu verhindern oder verzögert das automatische Laden von Daten; andernfalls <see langword="true" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel die <xref:System.Windows.Data.DataSourceProvider> führt die Abfrage aus und legt seine <xref:System.Windows.Data.DataSourceProvider.Data%2A> Eigenschaft erstmalig es von einer Bindung verwendet wird oder ein <xref:System.Windows.Data.CollectionViewSource>. Sie können diesen Schritt auslassen, durch Festlegen der <xref:System.Windows.Data.DataSourceProvider.IsInitialLoadEnabled%2A> Eigenschaft `false`. In diesem Fall muss die Anwendung explizit aufrufen <xref:System.Windows.Data.DataSourceProvider.Refresh%2A> , dazu führen, dass den Anbieter die Daten abruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRefreshDeferred">
+      <MemberSignature Language="C#" Value="protected bool IsRefreshDeferred { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRefreshDeferred" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.DataSourceProvider.IsRefreshDeferred" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob es einen ausstehenden <see cref="M:System.Windows.Data.DataSourceProvider.DeferRefresh" /> verwendet.</summary>
+        <value>
+          <see langword="true" />liegt eine ausstehende <see cref="M:System.Windows.Data.DataSourceProvider.DeferRefresh" /> verwendet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Hinweise für Implementierer:** rufen Sie zum Abrufen der optimalen Nutzung Out Aktualisierung Deferral nicht <xref:System.Windows.Data.DataSourceProvider.Refresh%2A> Wenn diese Eigenschaft den Wert `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPropertyChanged (System.ComponentModel.PropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPropertyChanged(class System.ComponentModel.PropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.DataSourceProvider.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.PropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumente des ausgelösten Ereignisses.</param>
+        <summary>Löst das <see cref="E:System.Windows.Data.DataSourceProvider.PropertyChanged" /> Ereignis mit der angegebenen Argumente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQueryFinished">
+      <MemberSignature Language="C#" Value="protected void OnQueryFinished (object newData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnQueryFinished(object newData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.DataSourceProvider.OnQueryFinished(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="newData">Die Daten, die das Ergebnis der Abfrage ist.</param>
+        <summary>Abgeleitete Klassen rufen diese Methode, um anzugeben, dass eine Abfrage beendet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Rückruf kann von jedem Thread aufgerufen werden. Diese Implementierung marshallt wieder das Ergebnis, das die [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Thread, bevor alle öffentlichen Eigenschaften und keine Ereignisse auslösen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQueryFinished">
+      <MemberSignature Language="C#" Value="protected virtual void OnQueryFinished (object newData, Exception error, System.Windows.Threading.DispatcherOperationCallback completionWork, object callbackArguments);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnQueryFinished(object newData, class System.Exception error, class System.Windows.Threading.DispatcherOperationCallback completionWork, object callbackArguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.DataSourceProvider.OnQueryFinished(System.Object,System.Exception,System.Windows.Threading.DispatcherOperationCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newData" Type="System.Object" />
+        <Parameter Name="error" Type="System.Exception" />
+        <Parameter Name="completionWork" Type="System.Windows.Threading.DispatcherOperationCallback" />
+        <Parameter Name="callbackArguments" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="newData">Die Daten, die das Ergebnis der Abfrage ist.</param>
+        <param name="error">Der Fehler, der während der Ausführung der Abfrage aufgetreten sind. Dieser Wert ist <see langword="null" /> , wenn kein Fehler vorliegt.</param>
+        <param name="completionWork">Optionaler Delegat, der verwendet wird, auf auszuführende Aufgaben zum Abschluss der [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Thread, z. B. zum Festlegen zusätzlicher Eigenschaften.</param>
+        <param name="callbackArguments">Optionale Argumente, die als Parameter mit dem Senden der <c>CompletionWork</c> delegieren.</param>
+        <summary>Abgeleitete Klassen rufen diese Methode, um anzugeben, dass eine Abfrage beendet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Rückruf kann von jedem Thread aufgerufen werden. Diese Implementierung marshallt wieder das Ergebnis, das die [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Thread, bevor alle öffentlichen Eigenschaften und keine Ereignisse auslösen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.PropertyChangedEventHandler PropertyChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Data.DataSourceProvider.PropertyChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich ein Eigenschaftswert ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.DataSourceProvider.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initiiert einen Aktualisierungsvorgang für das zugrunde liegende Datenmodell. Das Ergebnis wird zurückgegeben, auf die <see cref="P:System.Windows.Data.DataSourceProvider.Data" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Aktualisierungsvorgang ist in der Regel asynchron eine <xref:System.Windows.Data.DataSourceProvider.DataChanged> Ereignis wird ausgelöst, wenn die <xref:System.Windows.Data.DataSourceProvider.Data%2A> Eigenschaft davon ausgegangen, dass einen neuen Wert. Wenn der Aktualisierungsvorgang ein Fehler auftritt, die <xref:System.Windows.Data.DataSourceProvider.Data%2A> -Eigenschaftensatz auf `null`; das <xref:System.Windows.Data.DataSourceProvider.Error%2A> Eigenschaft mit der Fehlermeldung Ausnahme festgelegt ist. Die Anwendung kann Aufrufen <xref:System.Windows.Data.DataSourceProvider.Refresh%2A> während eine vorherige Aktualisierung weiterhin ausgeführt wird. Aufrufen von <xref:System.Windows.Data.DataSourceProvider.Refresh%2A> zweimal löst die <xref:System.Windows.Data.DataSourceProvider.DataChanged> Ereignis zweimal.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.BeginInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.ISupportInitialize.BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.DataSourceProvider.System#ComponentModel#ISupportInitialize#BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.EndInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.ISupportInitialize.EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.DataSourceProvider.System#ComponentModel#ISupportInitialize#EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

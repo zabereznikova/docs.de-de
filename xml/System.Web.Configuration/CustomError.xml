@@ -1,0 +1,227 @@
+<Type Name="CustomError" FullName="System.Web.Configuration.CustomError">
+  <TypeSignature Language="C#" Value="public sealed class CustomError : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CustomError extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.CustomError" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konfiguriert eine <see cref="T:System.Web.Configuration.CustomError" /> Abschnitt, um eine benutzerdefinierte Seite ASP.NET-Fehlercode zuzuordnen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.CustomError> -Klasse bietet eine Möglichkeit zum programmgesteuerten Zugriff auf und Ändern der `error` Abschnitt einer Konfigurationsdatei. Dieser Typ ist Teil einer Gruppe, umfasst die <xref:System.Web.Configuration.CustomErrorCollection>, <xref:System.Web.Configuration.CustomErrorsMode>, und <xref:System.Web.Configuration.CustomErrorsSection>.  
+  
+> [!NOTE]
+>  Wenn Sie einen benutzerdefinierten Fehler definieren, weist ASP.NET darauf Standardfehler, die normalerweise vom zugrunde liegenden Dienst, wie z. B. IIS ausgestellt. Für die Instanz, wenn Sie einen benutzerdefinierten Fehler für den Statuscode 404 definieren, ausstellt ASP.NET sie jedes Mal, wenn Sie auf eine nicht vorhandene ASPX-Seite verweisen. Die benutzerdefinierten Fehler werden nur für diese Elemente durch ASP.NET behandelt ausgegeben. Wenn Sie auf eine nicht vorhandene HTM-Seite verweisen, gibt IIS z. B. der standard-404-Fehler.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie Werte für verschiedene Attribute der deklarativ angeben, die `customErrors` Abschnitt, die auch als Member zugegriffen werden kann die <xref:System.Web.Configuration.CustomError> Klasse.  
+  
+ Im folgenden Konfigurationsbeispiel-Datei zeigt, wie Sie Werte für deklarativ angeben, die `customErrors` Abschnitt.  
+  
+```  
+<customErrors mode="RemoteOnly"  
+  defaultRedirect="customerror.htm">  
+    <error statusCode="404" redirect="customerror404.htm"/>  
+</customErrors>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.CustomError> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.CustomError#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CustomError/CS/customerror.cs#1)]
+ [!code-vb[System.Web.Configuration.CustomError#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CustomError/VB/customerror.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomError (int statusCode, string redirect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 statusCode, string redirect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomError.#ctor(System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="statusCode" Type="System.Int32" />
+        <Parameter Name="redirect" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="statusCode">Der HTTP-Statuscode, der Umleitung auf die Fehlerseite führt.</param>
+        <param name="redirect">Die URL der benutzerdefinierten Seite, die dem Fehlercode zugeordnet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.CustomError" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.CustomError.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Sie wird vom Konfigurationssystem von ASP.NET aufgerufen. Sie rufen Sie eine Instanz von der <xref:System.Web.Configuration.CustomError> Klasse, indem die <xref:System.Configuration.Configuration.GetSection%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object customError);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object customError) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomError.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customError" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="customError">Der Fehler, mit der verglichen werden soll.</param>
+        <summary>Vergleicht <see cref="T:System.Web.Configuration.CustomError" /> Fehler.</summary>
+        <returns>
+          <see langword="true" />Wenn die Fehler gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.CustomError.Equals%2A> Methode vergleicht alle Fehler für Objekte, die an die Methode übergeben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomError.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Configuration.CustomError" /> Objekt-Hashcode.</summary>
+        <returns>Die <see cref="T:System.Web.Configuration.CustomError" /> Objekt-Hashcode.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CustomError.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Redirect">
+      <MemberSignature Language="C#" Value="public string Redirect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Redirect" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CustomError.Redirect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("redirect", IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die umleitungs-URL.</summary>
+        <value>Die URL, zu der die Anwendung umgeleitet wird, wenn ein Fehler auftritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.CustomError.Redirect%2A> Eigenschaft identifiziert die URL der benutzerdefinierten Seite, die einem bestimmten Fehler zugewiesen ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die umleitungs-URL verwenden. Verweisen auf das Codebeispiel in die <xref:System.Web.Configuration.CustomError> klassenthema Informationen zum Abrufen der Auflistung.  
+  
+ [!code-csharp[System.Web.Configuration.CustomError#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CustomError/CS/customerror.cs#4)]
+ [!code-vb[System.Web.Configuration.CustomError#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CustomError/VB/customerror.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusCode">
+      <MemberSignature Language="C#" Value="public int StatusCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StatusCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CustomError.StatusCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("statusCode", IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MaxValue=999, MinValue=100)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Statuscode der HTTP-Fehler.</summary>
+        <value>Der HTTP-Fehlerstatuscode, die bewirkt, die Umleitung an die benutzerdefinierte Fehlerseite dass.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der HTTP-Statuscode wird durch die ASP.NET-Infrastruktur verwendet, um die Anwendung auf die Fehlerseite weitergeleitet wird, wenn ein bestimmter Fehler eintritt.  
+  
+> [!NOTE]
+>  Die benutzerdefinierte Fehlermeldung wird ausgegeben, nur dann, wenn er durch eine Entität behandelt, die von ASP.NET verursacht wird; Andernfalls wird ein Standard-Fehler ausgegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit dem Statuscode "". Verweisen auf das Codebeispiel in die <xref:System.Web.Configuration.CustomError> klassenthema Informationen zum Abrufen der Auflistung.  
+  
+ [!code-csharp[System.Web.Configuration.CustomError#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CustomError/CS/customerror.cs#5)]
+ [!code-vb[System.Web.Configuration.CustomError#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CustomError/VB/customerror.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

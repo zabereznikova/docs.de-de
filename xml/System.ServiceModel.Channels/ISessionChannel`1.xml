@@ -1,0 +1,72 @@
+<Type Name="ISessionChannel&lt;TSession&gt;" FullName="System.ServiceModel.Channels.ISessionChannel&lt;TSession&gt;">
+  <TypeSignature Language="C#" Value="public interface ISessionChannel&lt;TSession&gt; where TSession : ISession" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISessionChannel`1&lt;(class System.ServiceModel.Channels.ISession) TSession&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ISessionChannel`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TSession">
+      <Constraints>
+        <InterfaceName>System.ServiceModel.Channels.ISession</InterfaceName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TSession">Der <see cref="T:System.ServiceModel.Channels.ISession" />-Typ, der dem Kanal zugeordnet ist.</typeparam>
+    <summary>Definiert die Schnittstelle, die einem bestimmten Sitzungstyp einen Kanal zuordnet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Channels.ISessionChannel%601>-Schnittstelle ist die Basisschnittstelle für sitzungsbasierte Kanäle. Der Sitzungstyp wird dem Kanal zugeordnet, indem der generische Typparameter `TSession` auf einen Typ festgelegt wird, der die <xref:System.ServiceModel.Channels.ISession>-Schnittstelle entsprechend der Rolle im Nachrichtenaustausch implementiert. `TSession` ist beispielsweise für eine eingehende Sitzung auf der Empfangsseite einer unidirektionalen Kommunikation auf <xref:System.ServiceModel.Channels.IInputSession>, für eine ausgehende Sitzung auf der Senderseite einer unidirektionalen Kommunikation auf <xref:System.ServiceModel.Channels.IOutputSession> und für eine Duplexsitzung einer bidirektionalen Kommunikation auf <xref:System.ServiceModel.Channels.IDuplexSession> festgelegt.  
+  
+ Die <xref:System.ServiceModel.Channels.ISessionChannel%601>-Schnittstelle stellt eine <xref:System.ServiceModel.Channels.ISessionChannel%601.Session%2A>-Eigenschaft bereit, um die Sitzung abzurufen, der der Kanal zugeordnet ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="public TSession Session { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TSession Session" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ISessionChannel`1.Session" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Sitzungstyp ab, der dem Kanal zugeordnet ist.</summary>
+        <value>Der <see cref="T:System.ServiceModel.Channels.ISession" />-Typ, der dem Kanal zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies gibt den generischen Parameter `TSession` zurück, mit dem die Schnittstelle definiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

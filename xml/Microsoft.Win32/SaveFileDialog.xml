@@ -1,0 +1,172 @@
+<Type Name="SaveFileDialog" FullName="Microsoft.Win32.SaveFileDialog">
+  <TypeSignature Language="C#" Value="public sealed class SaveFileDialog : Microsoft.Win32.FileDialog" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SaveFileDialog extends Microsoft.Win32.FileDialog" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.SaveFileDialog" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Win32.FileDialog</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Standarddialogfeld an, die dem Benutzer ermöglicht, geben Sie einen Dateinamen zum Speichern einer Datei als dar. <see cref="T:Microsoft.Win32.SaveFileDialog" />kann nicht von einer Anwendung verwendet werden, die unter teilweiser Vertrauenswürdigkeit ausgeführt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung zeigt eine <xref:Microsoft.Win32.SaveFileDialog> für [!INCLUDE[TLA#tla_winvista](~/includes/tlasharptla-winvista-md.md)].  
+  
+ ![Dialogfeld Speichern unter](~/add/media/dialogboxesoverviewfigure3.png "speichern unter (Dialogfeld)")  
+  
+ Ab [!INCLUDE[TLA2#tla_winvista](~/includes/tla2sharptla-winvista-md.md)], öffnen und speichern Sie Dateidialogfelder eine **Linkfavoriten** Bereich auf der linken Seite des Dialogfelds, das dem Benutzer ermöglicht, schnell zu einem anderen Speicherort zu navigieren. Diese Links werden benutzerdefinierte Speicherorte bezeichnet. Verwenden der <xref:Microsoft.Win32.FileDialog.CustomPlaces%2A> Eigenschaft, um diese Liste mit Links festzulegen.  
+  
+<a name="xamlTextUsage_SaveFileDialog"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Sie können nicht in diese verwaltete Klasse deklarieren [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:Microsoft.Win32.SaveFileDialog> und das Ergebnis zu verarbeiten.  
+  
+ [!code-csharp[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#savefiledialogboxcodebehind)]
+ [!code-vb[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#savefiledialogboxcodebehind)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SaveFileDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SaveFileDialog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Win32.SaveFileDialog" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePrompt">
+      <MemberSignature Language="C#" Value="public bool CreatePrompt { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CreatePrompt" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.SaveFileDialog.CreatePrompt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob <see cref="T:Microsoft.Win32.SaveFileDialog" /> fordert den Benutzer eine Berechtigung zum Erstellen einer Datei, wenn der Benutzer eine Datei angibt, die nicht vorhanden ist.</summary>
+        <value>
+          <see langword="true" />Dialogfeld vor der Speicherung unter einem Dateinamen Fragen sollen, die nicht bereits vorhanden ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Dieses Dialogfeldoption festlegen zu können. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenFile">
+      <MemberSignature Language="C#" Value="public System.IO.Stream OpenFile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream OpenFile() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SaveFileDialog.OpenFile" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Datei mit Lese-/ Schreibzugriff Datenstrom für den Dateinamen, die vom Benutzer mit ausgewählten <see cref="T:Microsoft.Win32.SaveFileDialog" />.</summary>
+        <returns>Ein neues <see cref="T:System.IO.Stream" /> , die die ausgewählte Datei enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Datenstrom, der zurückgegeben wird mit Lese-/ Schreibzugriff geöffnet wird (<xref:System.IO.FileMode.Create> und <xref:System.IO.FileAccess.ReadWrite>).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Im Dialogfeld "" waren keine Dateien ausgewählt.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Dieses Dialogfeldoption festlegen zu können. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OverwritePrompt">
+      <MemberSignature Language="C#" Value="public bool OverwritePrompt { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OverwritePrompt" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.SaveFileDialog.OverwritePrompt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob <see cref="T:Microsoft.Win32.SaveFileDialog" /> wird eine Warnung angezeigt, wenn der Benutzer gibt den Namen einer Datei an, die bereits vorhanden ist.</summary>
+        <value>
+          <see langword="true" />Dialogfeld Fragen sollten war vor dem Speichern, das zuvor über einen Dateinamen; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Dieses Dialogfeldoption festlegen zu können. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SaveFileDialog.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt alle <see cref="T:Microsoft.Win32.SaveFileDialog" /> Eigenschaften mit ihren Standardwerten.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Dieses Dialogfeldoption festlegen zu können. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse ist versiegelt, damit Sie diese Methode nicht überschreiben.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

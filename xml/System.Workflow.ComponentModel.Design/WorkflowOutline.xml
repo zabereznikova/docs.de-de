@@ -1,0 +1,424 @@
+<Type Name="WorkflowOutline" FullName="System.Workflow.ComponentModel.Design.WorkflowOutline">
+  <TypeSignature Language="C#" Value="public class WorkflowOutline : System.Windows.Forms.UserControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowOutline extends System.Windows.Forms.UserControl" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.WorkflowOutline" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.UserControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Rendert die Dokumentgliederung für den Workflow, der gerade im Workflow-Designer entworfen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.ComponentModel.Design.WorkflowOutline> zeigt im Workflow-Designer eine hierarchische Darstellung des Workflows an.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowOutline (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowOutline.#ctor(System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Der <see cref="T:System.IServiceProvider" />, der ein Dienstobjekt für <see cref="T:System.Workflow.ComponentModel.Design.WorkflowOutline" /> abruft.</param>
+        <summary>Initialisiert mithilfe eines Objekts, das ein Dienstobjekt abruft, eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Design.WorkflowOutline" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceProvider" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.InvalidOperationException">Die durch <paramref name="serviceProvider" /> erhaltene Hostumgebung ist NULL (<see langword="Nothing" />).  
+  
+ \- oder –  
+  
+ Die durch <paramref name="serviceProvider" /> erhaltene Entwurfsoberfläche ist NULL (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewNode">
+      <MemberSignature Language="C#" Value="protected virtual System.Workflow.ComponentModel.Design.WorkflowOutlineNode CreateNewNode (System.Workflow.ComponentModel.Activity activity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Workflow.ComponentModel.Design.WorkflowOutlineNode CreateNewNode(class System.Workflow.ComponentModel.Activity activity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowOutline.CreateNewNode(System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.WorkflowOutlineNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="activity">Aktivität, für die ein neuer Knoten erstellt werden muss.</param>
+        <summary>Erstellt einen neuen Knoten für eine <see cref="T:System.Workflow.ComponentModel.Activity" />.</summary>
+        <returns><see cref="T:System.Workflow.ComponentModel.Design.WorkflowOutlineNode" /> für die Aktivität.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Aufrufen zum Erstellen eines neuen Workflowknotens für eine bestimmte Aktivität kann `null` zurückgegeben werden. Dies zeigt an, dass Sie keinen Knoten dafür erstellen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowOutline.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Workflow.ComponentModel.Design.WorkflowOutline" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expanding">
+      <MemberSignature Language="C#" Value="protected event System.Windows.Forms.TreeViewCancelEventHandler Expanding;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.TreeViewCancelEventHandler Expanding" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.ComponentModel.Design.WorkflowOutline.Expanding" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeViewCancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ereignis wird ausgelöst, wenn die TreeView für die Dokumentgliederung erweitert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNode">
+      <MemberSignature Language="C#" Value="protected System.Workflow.ComponentModel.Design.WorkflowOutlineNode GetNode (System.Workflow.ComponentModel.Activity activity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Workflow.ComponentModel.Design.WorkflowOutlineNode GetNode(class System.Workflow.ComponentModel.Activity activity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowOutline.GetNode(System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.WorkflowOutlineNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="activity">Die dem abzurufenden Knoten zugeordnete <see cref="T:System.Workflow.ComponentModel.Activity" />.</param>
+        <summary>Ruft den Knoten in der angegebenen <see cref="T:System.Workflow.ComponentModel.Design.WorkflowOutline" /> zugeordneten <see cref="T:System.Workflow.ComponentModel.Activity" /> ab.</summary>
+        <returns>Der der <see cref="T:System.Workflow.ComponentModel.Design.WorkflowOutlineNode" /> zugeordnete <paramref name="activity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine <xref:System.Workflow.ComponentModel.Design.WorkflowOutline> enthält einen <xref:System.Workflow.ComponentModel.Design.WorkflowOutlineNode> für jede Aktivität, die ein Benutzer einer Workflowentwurfsoberfläche hinzufügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="protected override object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowOutline.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der <see cref="T:System.Type" />, der einen durch <see cref="T:System.Workflow.ComponentModel.Design.WorkflowOutline" /> bereitgestellten Dienst darstellt.</param>
+        <summary>Gibt ein Objekt zurück, das einen von der <see cref="T:System.Workflow.ComponentModel.Design.WorkflowOutline" /> oder von deren <see cref="T:System.ComponentModel.Container" /> bereitgestellten Dienst darstellt.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das einen durch <see cref="T:System.Workflow.ComponentModel.Design.WorkflowOutline" /> bereitgestellten Dienst darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NeedsExpandAll">
+      <MemberSignature Language="C#" Value="protected bool NeedsExpandAll { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NeedsExpandAll" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowOutline.NeedsExpandAll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die TreeView der Dokumentgliederung erweitert werden muss, oder legt einen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die TreeView der Dokumentgliederung erweitert werden muss, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginUpdate">
+      <MemberSignature Language="C#" Value="protected virtual void OnBeginUpdate ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBeginUpdate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowOutline.OnBeginUpdate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn das mit dem Aktualisieren von <see cref="P:System.Workflow.ComponentModel.Design.WorkflowOutline.TreeView" /> beginnt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndUpdate">
+      <MemberSignature Language="C#" Value="protected virtual void OnEndUpdate ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnEndUpdate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowOutline.OnEndUpdate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn das Steuerelement das Aktualisieren von <see cref="P:System.Workflow.ComponentModel.Design.WorkflowOutline.TreeView" /> abgeschlossen hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoad">
+      <MemberSignature Language="C#" Value="protected override void OnLoad (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLoad(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowOutline.OnLoad(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Form.Load" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.Workflow.ComponentModel.Design.WorkflowOutline.OnLoad%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+> [!NOTE]
+>  Wenn Sie <xref:System.Workflow.ComponentModel.Design.WorkflowOutline.OnLoad%2A> in einer abgeleiteten Klasse überschreiben, müssen Sie die `OnLoad`-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNodeAdded">
+      <MemberSignature Language="C#" Value="protected virtual void OnNodeAdded (System.Workflow.ComponentModel.Design.WorkflowOutlineNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnNodeAdded(class System.Workflow.ComponentModel.Design.WorkflowOutlineNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowOutline.OnNodeAdded(System.Workflow.ComponentModel.Design.WorkflowOutlineNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Workflow.ComponentModel.Design.WorkflowOutlineNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Der der Aktivitätsstruktur hinzugefügte Knoten.</param>
+        <summary>Wird aufgerufen, nachdem ein neuer Knoten, der nicht NULL ist, der Aktivitätsstruktur hinzugefügt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNodeSelected">
+      <MemberSignature Language="C#" Value="protected virtual void OnNodeSelected (System.Workflow.ComponentModel.Design.WorkflowOutlineNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnNodeSelected(class System.Workflow.ComponentModel.Design.WorkflowOutlineNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowOutline.OnNodeSelected(System.Workflow.ComponentModel.Design.WorkflowOutlineNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Workflow.ComponentModel.Design.WorkflowOutlineNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Ausgewählter Knoten.</param>
+        <summary>Wird aufgerufen, wenn der Benutzer einen Knoten in der Aktivitätsstruktur auswählt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRefreshNode">
+      <MemberSignature Language="C#" Value="protected virtual void OnRefreshNode (System.Workflow.ComponentModel.Design.WorkflowOutlineNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRefreshNode(class System.Workflow.ComponentModel.Design.WorkflowOutlineNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowOutline.OnRefreshNode(System.Workflow.ComponentModel.Design.WorkflowOutlineNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Workflow.ComponentModel.Design.WorkflowOutlineNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Aktualisierter Workflowgliederungsknoten.</param>
+        <summary>Wird aufgerufen, wenn der Knoten aktualisiert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshNode">
+      <MemberSignature Language="C#" Value="protected void RefreshNode (System.Workflow.ComponentModel.Design.WorkflowOutlineNode nodeToUpdate, bool refreshChildNodes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RefreshNode(class System.Workflow.ComponentModel.Design.WorkflowOutlineNode nodeToUpdate, bool refreshChildNodes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowOutline.RefreshNode(System.Workflow.ComponentModel.Design.WorkflowOutlineNode,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodeToUpdate" Type="System.Workflow.ComponentModel.Design.WorkflowOutlineNode" />
+        <Parameter Name="refreshChildNodes" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="nodeToUpdate">Knoten, der aktualisiert werden muss.</param>
+        <param name="refreshChildNodes">
+          <see langword="Boolean" />-Wert, der angibt, ob untergeordnete Knoten aktualisiert werden müssen.</param>
+        <summary>Veranlasst zum Aktualisieren eines Knotens.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshWorkflowOutline">
+      <MemberSignature Language="C#" Value="public void RefreshWorkflowOutline ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RefreshWorkflowOutline() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowOutline.RefreshWorkflowOutline" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert Farbe und Symbole aller Dokumentgliederungsknoten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReloadWorkflowOutline">
+      <MemberSignature Language="C#" Value="public void ReloadWorkflowOutline ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReloadWorkflowOutline() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowOutline.ReloadWorkflowOutline" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lädt das Steuerelement für die Dokumentgliederung erneut.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootNode">
+      <MemberSignature Language="C#" Value="protected System.Windows.Forms.TreeNode RootNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode RootNode" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowOutline.RootNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stammknoten des Stammanbieters ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.TreeNode" />, der der Stammknoten ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TreeView">
+      <MemberSignature Language="C#" Value="protected System.Windows.Forms.TreeView TreeView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeView TreeView" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowOutline.TreeView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Windows.Forms.TreeView" />-Steuerelement ab, das zum Anzeigen der Dokumentgliederung verwendet wird</summary>
+        <value>Das <see cref="T:System.Windows.Forms.TreeView" />-Steuerelement, das zum Anzeigen der Dokumentgliederung verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

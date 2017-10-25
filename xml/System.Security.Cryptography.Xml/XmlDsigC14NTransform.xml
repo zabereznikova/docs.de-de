@@ -1,0 +1,407 @@
+<Type Name="XmlDsigC14NTransform" FullName="System.Security.Cryptography.Xml.XmlDsigC14NTransform">
+  <TypeSignature Language="C#" Value="public class XmlDsigC14NTransform : System.Security.Cryptography.Xml.Transform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlDsigC14NTransform extends System.Security.Cryptography.Xml.Transform" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.Transform</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Kanonisierung C14N XML-Transformation für eine digitale Signatur gemäß der Definition von World Wide Web Consortium (W3C), ohne Kommentare dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> -Klasse stellt die C14N XML-Kanonisierungsalgorithmus Transformation, die die kanonische Form eines XML-Dokuments beschreibt.  Diese Transformation ermöglicht es einen Signaturgeber zum Erstellen eines Digests (dient zum Erstellen einer digitalen Signatur) mit die kanonische Form eines XML-Dokuments.  Ein Empfänger kann dann die gleiche Transformation die gleiche kanonische Form des XML-Dokuments mit digitale XML-Signatur überprüfen.  
+  
+ Verwenden der <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> Klasse, wenn Sie ein XML-Dokument signieren, die keine Kommentare enthalten müssen.  
+  
+ In den meisten Fällen ist eine neue Instanz einer Klasse der Kanonisierung Transformation nicht erforderlich. Übergeben Sie zum Angeben einer Kanonisierungstransformation Uniform Resource Identifier (URI), die die Transformation, beschreibt die <xref:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethod%2A> -Eigenschaft, die aus zugänglich ist die <xref:System.Security.Cryptography.Xml.SignedXml.SignedInfo%2A> Eigenschaft.  Um einen Verweis auf die Kanonisierungstransformation abzurufen, verwenden die <xref:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethodObject%2A> -Eigenschaft, die aus zugänglich ist die <xref:System.Security.Cryptography.Xml.SignedXml.SignedInfo%2A> Eigenschaft.  
+  
+ Der URI, der beschreibt, die <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> Klasse definiert ist, durch die <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigC14NTransformUrl> Feld und die <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigCanonicalizationUrl> Feld.  
+  
+ Sie müssten nur zum Erstellen einer neuen Instanz einer Kanonisierung Transform-Klasse für die Verwendung in einem XML-Dokument manuell oder für die Verwendung Ihrer eigenen Kanonisierungsalgorithmus.  
+  
+ Weitere Informationen über die C14N-Transformation finden Sie unter Abschnitten 6.5 und 6.6.1 der XMLDSIG-Spezifikation des World Wide Web Consortium (W3C) unter www.w3.org/TR/xmldsig-core/. Der Kanonisierungsalgorithmus wird in der kanonischen W3C-XML-Spezifikation definiert, die unter www.w3.org/TR/xml-c14n verfügbar ist.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im erste Beispiel wird veranschaulicht, wie nicht-XML-Daten mithilfe einer getrennten Signatur signiert.  Beispiel #1 eine Signatur von www.microsoft.com in eine XML-Datei erstellt und überprüft dann die Datei.  Das zweite Beispiel veranschaulicht das Aufrufen von Membern der der <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> Klasse.  
+  
+ **Beispiel #1**  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CPP/xmldsigdetach.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CS/xmldsigdetach.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/VB/xmldsigdetach.vb#1)]  
+  
+ **Beispiel #2**  
+  
+ [!code-cpp[System.Security.Cryptography.XML.XMLDsigC14NTransform#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CPP/members.cpp#2)]
+ [!code-csharp[System.Security.Cryptography.XML.XMLDsigC14NTransform#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CS/members.cs#2)]
+ [!code-vb[System.Security.Cryptography.XML.XMLDsigC14NTransform#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/VB/members.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDsigC14NTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigC14NTransform.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform.%23ctor%2A> Konstruktor. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> Klasse.  
+  
+ [!code-cpp[System.Security.Cryptography.XML.XMLDsigC14NTransform#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CPP/members.cpp#3)]
+ [!code-csharp[System.Security.Cryptography.XML.XMLDsigC14NTransform#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CS/members.cs#3)]
+ [!code-vb[System.Security.Cryptography.XML.XMLDsigC14NTransform#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/VB/members.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDsigC14NTransform (bool includeComments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool includeComments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigC14NTransform.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="includeComments" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includeComments">
+          <see langword="true" />Kommentare eingeschlossen werden sollen; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> mit Kommentaren, Klasse, wenn angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform.%23ctor%2A> Konstruktor. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> Klasse.  
+  
+ [!code-cpp[System.Security.Cryptography.XML.XMLDsigC14NTransform#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CPP/members.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML.XMLDsigC14NTransform#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CS/members.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML.XMLDsigC14NTransform#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/VB/members.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDigestedOutput">
+      <MemberSignature Language="C#" Value="public override byte[] GetDigestedOutput (System.Security.Cryptography.HashAlgorithm hash);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] GetDigestedOutput(class System.Security.Cryptography.HashAlgorithm hash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigC14NTransform.GetDigestedOutput(System.Security.Cryptography.HashAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Security.Cryptography.HashAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="hash">Die <see cref="T:System.Security.Cryptography.HashAlgorithm" /> Objekt verwendet, um einen Nachrichtenhash zu erstellen.</param>
+        <summary>Gibt den zugeordneten Digest ein <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> Objekt.</summary>
+        <returns>Zugeordnete Digest ein <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInnerXml">
+      <MemberSignature Language="C#" Value="protected override System.Xml.XmlNodeList GetInnerXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Xml.XmlNodeList GetInnerXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigC14NTransform.GetInnerXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine XML-Darstellung der Parameter ein <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> -Objekt, das als Unterelemente des XMLDSIG einzuschließenden geeignet sind <see langword="&lt;Transform&gt;" /> Element.</summary>
+        <returns>Eine Liste der XML-Knoten, die den transformationsspezifischen Inhalt erforderlich, um die aktuelle beschreiben darstellen <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> Objekt in ein XMLDSIG <see langword="&lt;Transform&gt;" /> Element.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutput">
+      <MemberSignature Language="C#" Value="public override object GetOutput ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetOutput() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigC14NTransform.GetOutput" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Ausgabe des aktuellen <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> Objekt.</summary>
+        <returns>Die Ausgabe des aktuellen <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typ des zurückgegebenen Objekts muss <xref:System.IO.Stream>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform.GetOutput%2A> Methode zum Abrufen der Ausgabe des aktuellen <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> Objekt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> Klasse.  
+  
+ [!code-cpp[System.Security.Cryptography.Xml.XmlDsigC14NTransform#8](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CPP/members.cpp#8)]
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigC14NTransform#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CS/members.cs#8)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigC14NTransform#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/VB/members.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutput">
+      <MemberSignature Language="C#" Value="public override object GetOutput (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetOutput(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigC14NTransform.GetOutput(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ der Ausgabe zurückgegeben. <see cref="T:System.IO.Stream" />ist der einzige gültige Typ für diesen Parameter.</param>
+        <summary>Gibt die Ausgabe des aktuellen <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> Objekt des Typs <see cref="T:System.IO.Stream" />.</summary>
+        <returns>Die Ausgabe des aktuellen <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> Objekt des Typs <see cref="T:System.IO.Stream" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typ des zurückgegebenen Objekts muss <xref:System.IO.Stream>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform.GetOutput%2A> Methode zum Abrufen der Ausgabe des aktuellen <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> Objekt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> Klasse.  
+  
+ [!code-cpp[System.Security.Cryptography.Xml.XmlDsigC14NTransform#9](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CPP/members.cpp#9)]
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigC14NTransform#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CS/members.cs#9)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigC14NTransform#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/VB/members.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="type" /> -Parameter ist ein <see cref="T:System.IO.Stream" /> Objekt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InputTypes">
+      <MemberSignature Language="C#" Value="public override Type[] InputTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] InputTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.XmlDsigC14NTransform.InputTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von Typen, die gültige Eingaben sind die <see cref="M:System.Security.Cryptography.Xml.XmlDsigC14NTransform.LoadInput(System.Object)" /> Methode des aktuellen <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> Objekt.</summary>
+        <value>Ein Array von gültigen Eingabetypen für die aktuelle <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> Objekt; Sie können nur Objekte von einem dieser Typen zum Übergeben der <see cref="M:System.Security.Cryptography.Xml.XmlDsigC14NTransform.LoadInput(System.Object)" /> Methode des aktuellen <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die gültigen Eingabetypen für <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> sind <xref:System.IO.Stream>, <xref:System.Xml.XmlDocument>, und <xref:System.Xml.XmlNodeList>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Aufrufen der <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform.InputTypes%2A> Eigenschaft, um die gültigen Eingabetypen für die aktuelle Transformation abzurufen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> Klasse.  
+  
+ [!code-cpp[System.Security.Cryptography.Xml.XmlDsigC14NTransform#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CPP/members.cpp#5)]
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigC14NTransform#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CS/members.cs#5)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigC14NTransform#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/VB/members.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadInnerXml">
+      <MemberSignature Language="C#" Value="public override void LoadInnerXml (System.Xml.XmlNodeList nodeList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadInnerXml(class System.Xml.XmlNodeList nodeList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigC14NTransform.LoadInnerXml(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodeList" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="nodeList">Ein <see cref="T:System.Xml.XmlNodeList" /> zum Laden in das aktuelle Objekt <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> Objekt.</param>
+        <summary>Analysiert die angegebene <see cref="T:System.Xml.XmlNodeList" /> Objekt als Inhalt transformationsspezifischen ein <see langword="&lt;Transform&gt;" /> Element; diese Methode wird nicht unterstützt, da dieses Element keine inneren XML-Elemente verfügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht unterstützt, da die <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> Objekt hat keine inneren XML-Elemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadInput">
+      <MemberSignature Language="C#" Value="public override void LoadInput (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadInput(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigC14NTransform.LoadInput(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die Eingabe für das Laden in das aktuelle <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> Objekt.</param>
+        <summary>Lädt die angegebene Eingabe in das aktuelle <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typ des Eingabeobjekts muss einer der Typen in der <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform.InputTypes%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Aufrufen der <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform.LoadInput%2A> Methode unter Verwendung des angegebenen <xref:System.Xml.XmlDocument> Objekt als Eingabe. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> Klasse.  
+  
+ [!code-cpp[System.Security.Cryptography.Xml.XmlDsigC14NTransform#12](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CPP/members.cpp#12)]
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigC14NTransform#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CS/members.cs#12)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigC14NTransform#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/VB/members.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="obj" /> Parameter ist ein <see cref="T:System.IO.Stream" /> -Objekt, und es wird <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputTypes">
+      <MemberSignature Language="C#" Value="public override Type[] OutputTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] OutputTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.XmlDsigC14NTransform.OutputTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von Typen, die mögliche Ausgaben sind der <see cref="M:System.Security.Cryptography.Xml.XmlDsigC14NTransform.GetOutput" /> Methoden des aktuellen <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> Objekt.</summary>
+        <value>Ein Array von gültigen Ausgabetypen für die aktuelle <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> Objekt; die <see cref="M:System.Security.Cryptography.Xml.XmlDsigC14NTransform.GetOutput" /> Methoden des aktuellen <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NTransform" /> -Objekt nur Objekte von einem dieser Typen zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Stream>ist der einzige gültige Ausgabetyp für <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Aufrufen der <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform.OutputTypes%2A> Eigenschaft, um die gültigen Typen für die aktuelle Transformation abgerufen werden. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.Xml.XmlDsigC14NTransform> Klasse.  
+  
+ [!code-cpp[System.Security.Cryptography.Xml.XmlDsigC14NTransform#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CPP/members.cpp#6)]
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigC14NTransform#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/CS/members.cs#6)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigC14NTransform#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigC14NTransform/VB/members.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

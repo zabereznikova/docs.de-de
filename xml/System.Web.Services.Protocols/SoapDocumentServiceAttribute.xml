@@ -1,0 +1,162 @@
+<Type Name="SoapDocumentServiceAttribute" FullName="System.Web.Services.Protocols.SoapDocumentServiceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SoapDocumentServiceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapDocumentServiceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapDocumentServiceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Anwenden der optionalen <see cref="T:System.Web.Services.Protocols.SoapDocumentServiceAttribute" /> ein XML-Web-Dienst wird das Standardformat von SOAP-Anforderungen und Antworten zu und aus XML-Webdienstmethoden innerhalb des XML-Webdiensts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute> können Sie zum Festlegen des standardmäßigen-Formatvorlagen für XML-Webdienstmethoden in einen XML-Webdienst. Wenn eine einzelne XML-Webdienstmethode diese Standardeinstellungen ändern muss, wenden Sie eine <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> an diese XML-Webdienstmethode.  
+  
+ Web Services Description Language (WSDL) definiert zwei Stile für die Formatierung einer XML-Webdienstmethode, die es einen Vorgang aufruft, in eine SOAP-Anforderung oder SOAP-Antwort: `RPC` und `Document`. Genau wie die einzelnen Nachrichtenteile wird bestimmt durch die <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute.Use%2A> und <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute.ParameterStyle%2A> Eigenschaften. Die <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute.Use%2A> -Eigenschaft bestimmt, ob Parameter formatiert werden `Encoded` oder `Literal`. Die <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute.ParameterStyle%2A> bestimmt, ob der Parameter in einem Nachrichtenteil unter gekapselt werden die `Body` -Element, oder ob jeder Parameter einen einzelnen Nachrichtenteil.  
+  
+ Festzulegende Formatierung an Standardeinstellung Methodenebene `RPC`, Anwenden einer <xref:System.Web.Services.Protocols.SoapRpcServiceAttribute> auf die Klasse, die den XML-Webdienst implementiert.  
+  
+ Weitere Informationen finden Sie unter [&#91;\< Topic://cpconCustomizingSOAPInASPNETWebServicesWebServiceClients > &#93; ](http://msdn.microsoft.com/en-us/1d777288-c0d9-4e6a-b638-f010da031952).  
+  
+ Dieses Attribut kann auf eine Klasse implementieren eines XML-Webdiensts angewendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapDocumentServiceAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapDocumentServiceAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Protocols.SoapDocumentServiceAttribute" /> -Klasse legt alle Eigenschaften mit ihren Standardwerten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapDocumentServiceAttribute (System.Web.Services.Description.SoapBindingUse use);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.Services.Description.SoapBindingUse use) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapDocumentServiceAttribute.#ctor(System.Web.Services.Description.SoapBindingUse)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="use" Type="System.Web.Services.Description.SoapBindingUse" />
+      </Parameters>
+      <Docs>
+        <param name="use">Die Parameter Formatierung des XML-Webdiensts. Legt die <see cref="P:System.Web.Services.Protocols.SoapDocumentServiceAttribute.Use" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Protocols.SoapDocumentServiceAttribute" /> Klasse, die die Formatierung der Parameter festlegen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapDocumentServiceAttribute (System.Web.Services.Description.SoapBindingUse use, System.Web.Services.Protocols.SoapParameterStyle paramStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.Services.Description.SoapBindingUse use, valuetype System.Web.Services.Protocols.SoapParameterStyle paramStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapDocumentServiceAttribute.#ctor(System.Web.Services.Description.SoapBindingUse,System.Web.Services.Protocols.SoapParameterStyle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="use" Type="System.Web.Services.Description.SoapBindingUse" />
+        <Parameter Name="paramStyle" Type="System.Web.Services.Protocols.SoapParameterStyle" />
+      </Parameters>
+      <Docs>
+        <param name="use">Die Formatierung des Parameters. Legt die <see cref="P:System.Web.Services.Protocols.SoapDocumentServiceAttribute.Use" />-Eigenschaft fest.</param>
+        <param name="paramStyle">Legt fest, ob Parameter in einer einzelnen XML-Element gekapselt werden unter der <see langword="Body" /> Elements in SOAP-Nachrichten gesendet und aus XML-Webdienstmethoden innerhalb des XML-Webdiensts. Legt die <see cref="P:System.Web.Services.Protocols.SoapDocumentServiceAttribute.ParameterStyle" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Protocols.SoapDocumentServiceAttribute" /> -Klasse, legt die Formatierung des Parameters fest und legt fest, ob Parameter in einer einzelnen XML-Element gekapselt werden unter, der <see langword="Body" /> Elements in SOAP-Nachrichten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterStyle">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapParameterStyle ParameterStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Protocols.SoapParameterStyle ParameterStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapDocumentServiceAttribute.ParameterStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapParameterStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Standardwert festlegen, die steuert, ob der Parameter in einem einzelnen Element nach gekapselt werden die <see langword="&lt;Body&gt;" /> Element im XML-Teil einer SOAP-Nachricht für XML-Webdienstmethoden des XML-Webdiensts.</summary>
+        <value>Die Standardeinstellung <see cref="T:System.Web.Services.Protocols.SoapParameterStyle" /> für SOAP-Anforderungen und SOAP-Antworten zu und aus XML-Webdienstmethoden innerhalb des XML-Webdiensts. Wenn nicht festgelegt, der Standardwert ist <see cref="F:System.Web.Services.Protocols.SoapParameterStyle.Wrapped" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RoutingStyle">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapServiceRoutingStyle RoutingStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Protocols.SoapServiceRoutingStyle RoutingStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapDocumentServiceAttribute.RoutingStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapServiceRoutingStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, wie SOAP-Nachrichten an den XML-Webdienst weitergeleitet werden.</summary>
+        <value>Ein <see cref="T:System.Web.Services.Protocols.SoapServiceRoutingStyle" /> , die darstellt, wie SOAP-Nachrichten an den XML-Webdienst weitergeleitet werden. Der Standardwert ist <see cref="F:System.Web.Services.Protocols.SoapServiceRoutingStyle.SoapAction" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Use">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.SoapBindingUse Use { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Description.SoapBindingUse Use" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapDocumentServiceAttribute.Use" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.SoapBindingUse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Standardparameter, die Formatierung für ein XML-Webdienst.</summary>
+        <value>Die Standardeinstellung <see cref="T:System.Web.Services.Description.SoapBindingUse" /> für den XML-Webdienst. Wenn nicht festgelegt, der Standardwert ist <see cref="F:System.Web.Services.Description.SoapBindingUse.Literal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Web Services Description Language (WSDL) definiert zwei Formatierungsstile für Parameter gesendet und aus XML-Webdienste: <xref:System.Web.Services.Description.SoapBindingUse.Encoded> und <xref:System.Web.Services.Description.SoapBindingUse.Literal>. <xref:System.Web.Services.Description.SoapBindingUse.Encoded>bezieht sich auf die Formatierung der Parameter mit der SOAP-Codierung, die in der SOAP-Spezifikation in Abschnitt 5 erläutert. <xref:System.Web.Services.Description.SoapBindingUse.Literal>bezieht sich auf die Formatierung der Parameter mit einem vordefinierten XSD-Schema für jeden Parameter.  
+  
+ Weitere Informationen finden Sie unter [&#91;\< Topic://cpconCustomizingSOAPInASPNETWebServicesWebServiceClients > &#93; ](http://msdn.microsoft.com/en-us/1d777288-c0d9-4e6a-b638-f010da031952).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,2323 @@
+<Type Name="ItemsControl" FullName="System.Windows.Controls.ItemsControl">
+  <TypeSignature Language="C#" Value="public class ItemsControl : System.Windows.Controls.Control, System.Windows.Controls.Primitives.IContainItemStorage, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ItemsControl extends System.Windows.Controls.Control implements class System.Windows.Controls.Primitives.IContainItemStorage, class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ItemsControl" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Controls.Primitives.IContainItemStorage</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("OnItemsChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Items")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Items")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.StyleTypedProperty(Property="ItemContainerStyle", StyleTargetType=typeof(System.Windows.FrameworkElement))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement, das zum Darstellen einer Auflistung von Elementen verwendet werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.ItemsControl> ist eine Art von <xref:System.Windows.Controls.Control> , die mehrere Elemente, z. B. Zeichenfolgen, Objekte oder andere Elemente enthalten kann. Die folgende Abbildung zeigt ein <xref:System.Windows.Controls.ListBox> Steuerelement, das die folgenden Elementtypen enthält:  
+  
+-   Eine Zeichenfolge.  
+  
+-   Ein <xref:System.DateTime>-Objekt.  
+  
+-   Ein <xref:System.Windows.UIElement>-Objekt.  
+  
+-   Ein <xref:System.Windows.Controls.Panel> -Steuerelement, enthält ein <xref:System.Windows.Shapes.Ellipse> und ein <xref:System.Windows.Controls.TextBlock>.  
+  
+ ![ListBox mit vier Inhaltstypen](~/add/media/controlcontentmodellistbox2.PNG "ListBox mit vier Inhaltstypen")  
+Ein Listenfeld, das mehrere Inhaltstypen enthält  
+  
+ Verwenden Sie entweder die <xref:System.Windows.Controls.ItemsControl.Items%2A> oder <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> -Eigenschaft an die Sammlung aus, verwenden zum Generieren des Inhalts von Ihrer <xref:System.Windows.Controls.ItemsControl>. Sie können festlegen, die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft auf einen beliebigen Typ, der implementiert <xref:System.Collections.IEnumerable>. <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>wird normalerweise verwendet, um eine Datensammlung anzuzeigen oder zu binden einer <xref:System.Windows.Controls.ItemsControl> auf ein Auflistungsobjekt.  
+  
+ Wenn Sie nicht möchten, ein Objekt zu verwenden, implementiert <xref:System.Collections.IEnumerable> zum Auffüllen der <xref:System.Windows.Controls.ItemsControl>, können Sie Elemente hinzufügen, mit der <xref:System.Windows.Controls.ItemsControl.Items%2A> Eigenschaft. Die Elemente in einer <xref:System.Windows.Controls.ItemsControl> können unterschiedliche Typen aufweisen. Z. B. eine <xref:System.Windows.Controls.ListBox> darf ein Element, das eine Zeichenfolge ist und ein anderes Element, das eine <xref:System.Windows.Controls.Image>.  
+  
+ Wenn die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft festgelegt ist, die <xref:System.Windows.Controls.ItemsControl.Items%2A> Sammlungssatz wird in nur-Lese und fester Größe. Dies bedeutet, dass Sie Elemente direkt auf die Auflistung hinzufügen können. Wenn <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> wird verwendet, das Festlegen von `null` entfernt die Sammlung und Verwendung zu wiederhergestellt <xref:System.Windows.Controls.ItemsControl.Items%2A>, der ist eine leere <xref:System.Windows.Controls.ItemCollection>.  
+  
+ Jede <xref:System.Windows.Controls.ItemsControl> Typ weist einen entsprechenden Container-Elementtyp. Der entsprechende Elementcontainer für jedes <xref:System.Windows.Controls.ItemsControl> fügt `Item` wieder mit seinem Namen. Z. B. für <xref:System.Windows.Controls.ListBox>, sind Elementcontainer <xref:System.Windows.Controls.ListBoxItem> steuert; für <xref:System.Windows.Controls.ComboBox>, sie sind <xref:System.Windows.Controls.ComboBoxItem> Steuerelemente. Können Sie explizit für jedes Element in einen Containertyp erstellen die <xref:System.Windows.Controls.ItemsControl>, aber es ist nicht erforderlich. Wenn Sie den Typ des nicht explizit erstellen, wird eine generiert, die ein Datenelement in der Elementauflistung enthält. Z. B., wenn Sie eine Sammlung von zeichenfolgeobjekten zum Binden der <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft eine <xref:System.Windows.Controls.ListBox>, Sie nicht explizit erstellen <xref:System.Windows.Controls.ListBoxItem> Objekte, aber die <xref:System.Windows.Controls.ListBox> generiert einen für jede Zeichenfolge. Sie können auf einen generierten Elementcontainer zugreifen, mithilfe der <xref:System.Windows.Controls.ItemsControl.ItemContainerGenerator%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Bestimmte Funktionen der UI-Automatisierung funktionieren nicht ordnungsgemäß beim ein <xref:System.Windows.Controls.ItemsControl> doppelte Objekte enthält.   Wenn ein Objekt mehrmals angezeigt wird, wird nur die erste Instanz in der Automatisierungsstruktur angezeigt.   (Zwei Objekte **x** und **y** gelten als Duplikate angesehen werden, wenn `Object.Equals(x, y)` gibt `true`.)  
+>   
+>  Während ein Objekt **x** wird von einem <xref:System.Windows.Controls.ItemsControl> den Rückgabewert von **X.**`GetHashCode()` muss nicht geändert werden.  Änderungen an diesem Wert werden nicht unterstützt, und zu unvorhersehbarem Verhalten führen.  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden. Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird. Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+   
+  
+## Examples  
+ Die folgenden Beispiele veranschaulichen Binden von Daten an eine <xref:System.Windows.Controls.ItemsControl>. Im erste Beispiel erstellt eine Klasse mit dem Namen `MyData` also eine einfache zeichenfolgenauflistung.  
+  
+ [!code-csharp[ControlContentOverviewSnippets#8](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml.cs#8)]
+ [!code-vb[ControlContentOverviewSnippets#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlContentOverviewSnippets/VisualBasic/Window1.xaml.vb#8)]  
+  
+ Im folgenden Beispiel bindet der <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Objekt von einer <xref:System.Windows.Controls.ItemsControl> auf `MyData`.  
+  
+ [!code-xaml[ControlContentOverviewSnippets#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml#7)]  
+[!code-xaml[ControlContentOverviewSnippets#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml#6)]  
+  
+ [!code-csharp[ControlContentOverviewSnippets#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml.cs#9)]
+ [!code-vb[ControlContentOverviewSnippets#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlContentOverviewSnippets/VisualBasic/Window1.xaml.vb#9)]  
+  
+ Die folgende Abbildung zeigt die <xref:System.Windows.Controls.ListBox> im vorherigen Beispiel erstellte Steuerelement.  
+  
+ ![ListBox](~/add/media/controlcontentmodellistbox1.PNG "ListBox")  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Auffüllen einer <xref:System.Windows.Controls.ItemsControl> mithilfe der <xref:System.Windows.Controls.ItemsControl.Items%2A> Eigenschaft. Im Beispiel fügt die folgenden verschiedenen Typen von Elementen, die die <xref:System.Windows.Controls.ListBox>:  
+  
+-   Eine Zeichenfolge.  
+  
+-   Ein <xref:System.DateTime>-Objekt.  
+  
+-   Ein <xref:System.Windows.UIElement>-Objekt.  
+  
+-   Ein <xref:System.Windows.Controls.Panel> Steuerelement, das andere enthält <xref:System.Windows.UIElement> Objekte.  
+  
+ [!code-xaml[ControlContentOverviewSnippets#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml#3)]  
+  
+ [!code-csharp[ControlContentOverviewSnippets#4](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml.cs#4)]
+ [!code-vb[ControlContentOverviewSnippets#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlContentOverviewSnippets/VisualBasic/Window1.xaml.vb#4)]  
+  
+ Die folgende Abbildung zeigt die <xref:System.Windows.Controls.ListBox> im vorherigen Beispiel erstellt.  
+  
+ ![ListBox mit vier Inhaltstypen](~/add/media/controlcontentmodellistbox2.PNG "ListBox mit vier Inhaltstypen")  
+  
+ Das folgende Beispiel zeigt, wie die verschiedenen Erstellen von Formaten und Datenvorlagen-bezogene Eigenschaften, die von bereitgestellt werden die <xref:System.Windows.Controls.ItemsControl>. Die <xref:System.Windows.Controls.ItemsControl> in diesem Beispiel ist an eine Auflistung von gebunden `Task` Objekte. Zu Demonstrationszwecken werden die Formate und die Vorlagen in diesem Beispiel inline deklariert.  
+  
+ [!code-xaml[DataTemplatingIntro_snip#ItemsControlProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#itemscontrolproperties)]  
+  
+ Die folgende Abbildung ist einen Screenshot des Beispiels an, wenn er gerendert wird.  
+  
+ ![Screenshot der ItemsControl-Beispiel](~/add/media/databinding-itemscontrolproperties.png "ItemsControl-Beispiel-Screenshot")  
+  
+ Zwei weitere Formatvorlagen bezogenen Eigenschaften für die <xref:System.Windows.Controls.ItemsControl> , werden nicht angezeigt, sind hier <xref:System.Windows.Controls.ItemsControl.GroupStyle%2A> und <xref:System.Windows.Controls.ItemsControl.GroupStyleSelector%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ItemsControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.ItemsControl" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddChild">
+      <MemberSignature Language="C#" Value="protected virtual void AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das als untergeordnetes Element hinzuzufügende Objekt.</param>
+        <summary>Fügt das angegebene Objekt als untergeordnetes Element der <see cref="T:System.Windows.Controls.ItemsControl" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddText">
+      <MemberSignature Language="C#" Value="protected virtual void AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Die hinzuzufügende Zeichenfolge.</param>
+        <summary>Fügt die angegebene Textzeichenfolge an der <see cref="T:System.Windows.Controls.ItemsControl" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternationCount">
+      <MemberSignature Language="C#" Value="public int AlternationCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AlternationCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.AlternationCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Container für abwechselnde Elemente im <see cref="T:System.Windows.Controls.ItemsControl" />-Objekt ab, oder legt diese fest. Dadurch können abwechselnde Container unterschiedlich dargestellt werden.</summary>
+        <value>Die Anzahl der abwechselnden Elementcontainer im <see cref="T:System.Windows.Controls.ItemsControl" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.ItemsControl.AlternationCount%2A> und <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType> Eigenschaften ermöglichen es Ihnen, die Darstellung für zwei oder mehr Container für abwechselnde Elemente festzulegen. Sie können beispielsweise angeben, abwechselnde Hintergrundfarben für jedes dritte Element in einer <xref:System.Windows.Controls.ItemsControl>.  Die <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType> jeden Elementcontainer im zugewiesen ist die <xref:System.Windows.Controls.ItemsControl>.  <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType>bei 0 anfängt, erhöht, bis er ist <xref:System.Windows.Controls.ItemsControl.AlternationCount%2A> minus 1, und klicken Sie dann Neustarts bei 0. Z. B. wenn <xref:System.Windows.Controls.ItemsControl.AlternationCount%2A> 3 ist, und es gibt sieben Elemente in der <xref:System.Windows.Controls.ItemsControl>, die folgende Tabelle enthält die <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType> für jedes Element.  
+  
+|Position eines Elements in der<xref:System.Windows.Controls.ItemsControl>|<xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType>|  
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|1|0|  
+|2|1|  
+|3|2|  
+|4|0|  
+|5|1|  
+|6|2|  
+|7|0|  
+  
+ Es gibt mehrere Methoden, die Sie verwenden können, verschiedene eindeutigkeitsmetrik für den Container für abwechselnde Elemente angeben. Eine Methode besteht darin, Eigenschaften des Elementcontainers zum Binden der <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType>. Anschließend können Sie eine <xref:System.Windows.Controls.AlternationConverter> angeben, welcher Wert für den Elementcontainer angewendet werden soll, die einem bestimmten <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType> Wert. Sie können auch Trigger so ändern Sie den Wert der Eigenschaft ein Elementcontainer, abhängig vom Wert der <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel gibt an, dass die <xref:System.Windows.Controls.ListBox> (geerbt von <xref:System.Windows.Controls.ItemsControl>) wurde der abwechselnden Elementcontainer (vom Typ <xref:System.Windows.Controls.ListBoxItem>) und gibt eine andere Hintergrundfarbe und Vordergrund jeweils.  Im Beispiel bindet der <xref:System.Windows.Controls.Control.Background%2A> und <xref:System.Windows.Controls.Control.Foreground%2A> Eigenschaften der <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType> und bietet eine <xref:System.Windows.Controls.AlternationConverter> für jede Eigenschaft.  
+  
+ [!code-xaml[AlternationIndexSnippets#2](~/samples/snippets/csharp/VS_Snippets_Wpf/AlternationIndexSnippets/CS/Window1.xaml#2)]  
+  
+ Im folgende Beispiel hat die gleiche Funktion wie das vorherige Beispiel mit <xref:System.Windows.Trigger> Objekte.  
+  
+ [!code-xaml[AlternationIndexSnippets#1](~/samples/snippets/csharp/VS_Snippets_Wpf/AlternationIndexSnippets/CS/Window1.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternationCountProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AlternationCountProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AlternationCountProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.AlternationCountProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.AlternationCount" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternationIndexProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AlternationIndexProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AlternationIndexProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.AlternationIndexProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.AlternationIndex" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public override void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass die Initialisierung der <see cref="T:System.Windows.Controls.ItemsControl" /> Objekt wird gerade gestartet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected virtual void ClearContainerForItemOverride (System.Windows.DependencyObject element, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ClearContainerForItemOverride(class System.Windows.DependencyObject element, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Containerelement.</param>
+        <param name="item">Das Element.</param>
+        <summary>Macht beim Überschreiben in einer abgeleiteten Klasse die Auswirkungen der <see cref="M:System.Windows.Controls.ItemsControl.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)" />-Methode rückgängig.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die basisimplementierung wird keine Aktion ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerFromElement">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObject ContainerFromElement (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.DependencyObject ContainerFromElement(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.ContainerFromElement(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, für das der Container zurückgegeben werden soll.</param>
+        <summary>Gibt den Container zurück, der zum aktuellen <see cref="T:System.Windows.Controls.ItemsControl" /> gehört, in dessen Besitz sich das angegebene Element befindet.</summary>
+        <returns>Der Container, der zum aktuellen <see cref="T:System.Windows.Controls.ItemsControl" /> gehört, in dessen Besitz sich das angegebene Element befindet, oder <see langword="null" />, wenn kein solcher Container vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerFromElement">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyObject ContainerFromElement (System.Windows.Controls.ItemsControl itemsControl, System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyObject ContainerFromElement(class System.Windows.Controls.ItemsControl itemsControl, class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.ContainerFromElement(System.Windows.Controls.ItemsControl,System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemsControl" Type="System.Windows.Controls.ItemsControl" />
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="itemsControl">Das <see cref="T:System.Windows.Controls.ItemsControl" />, für das der Container zurückgegeben werden soll.</param>
+        <param name="element">Das Element, für das der Container zurückgegeben werden soll.</param>
+        <summary>Gibt den Container zurück, der zu dem angegebenen <see cref="T:System.Windows.Controls.ItemsControl" /> gehört, das das angegebene Containerelement besitzt.</summary>
+        <returns>Gibt den Container zurück, der zu dem angegebenen <see cref="T:System.Windows.Controls.ItemsControl" /> gehört, das das angegebene Containerelement besitzt, wenn <paramref name="itemsControl" /> nicht <see langword="null" /> ist. Wenn <paramref name="itemsControl" /> den Wert <see langword="null" /> aufweist, wird der nächste Container zurückgegeben, der zu einem <see cref="T:System.Windows.Controls.ItemsControl" /> gehört.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayMemberPath">
+      <MemberSignature Language="C#" Value="public string DisplayMemberPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayMemberPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.DisplayMemberPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad zu einem Wert für das Quellobjekt ab, der als optische Darstellung des Objekts dienen soll, oder legt diesen fest.</summary>
+        <value>Der Pfad zu einem Wert für das Quellobjekt. Dies kann einen beliebigen Pfad oder ein XPath sein wie sein "@Name". Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist eine einfache Möglichkeit, eine Standardvorlage definieren, die beschreibt, wie die Datenobjekte angezeigt.  
+  
+<a name="dependencyPropertyInfo_DisplayMemberPath"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ItemsControl.DisplayMemberPathProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel die statische Ressource mit dem Namen `places` ist definiert als eine Auflistung von `Place` -Objekte, in denen die einzelnen `Place` Objekt verfügt über eine `CityName` Eigenschaft und eine `State` Eigenschaft. Das Präfix `src` zugeordnet ist, auf den Namespace, in dem die Datenquelle `Places` definiert ist. Die Präfixe `scm` und `dat` zugeordnet sind die <xref:System.ComponentModel> und <xref:System.Windows.Data> Namespaces bzw..  
+  
+ Das folgende Beispiel erstellt einen Überblick über die Datensammlung, die nach dem Namen der Stadt sortiert und gruppiert nach dem der Zustand ist.  
+  
+ [!code-xaml[CollectionViewSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
+  
+ Die Sicht kann die Bindungsquelle, wie im folgenden Beispiel. Aufgrund der angegebenen <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>, die jeweils`Place` Objekt wird angezeigt, mit dessen `CityName` Wert. Wenn <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> nicht angegeben ist, und es ist keine <xref:System.Windows.DataTemplate>, die <xref:System.Windows.Controls.ListBox> eine Zeichenfolgendarstellung für jedes Objekt in der zugrunde liegenden Auflistung (in diesem Fall "SDKSample.Place") angezeigt.  
+  
+ [!code-xaml[CollectionViewSource#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayMemberPathProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DisplayMemberPathProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DisplayMemberPathProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.DisplayMemberPathProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.DisplayMemberPath" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public override void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass die Initialisierung des <see cref="T:System.Windows.Controls.ItemsControl" />-Objekts abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAlternationIndex">
+      <MemberSignature Language="C#" Value="public static int GetAlternationIndex (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetAlternationIndex(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.GetAlternationIndex(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Objekt aus, das Abrufen der <see cref="P:System.Windows.Controls.ItemsControl.AlternationIndex" />.</param>
+        <summary>Ruft die <see cref="P:System.Windows.Controls.ItemsControl.AlternationIndex" /> für das angegebene Objekt.</summary>
+        <returns>Der Wert von <see cref="P:System.Windows.Controls.ItemsControl.AlternationIndex" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.DependencyObject GetContainerForItemOverride ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.DependencyObject GetContainerForItemOverride() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.GetContainerForItemOverride" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt oder identifiziert das Element, das zum Anzeigen des angegebenen Elements verwendet wird.</summary>
+        <returns>Das Element, das zum Anzeigen des angegebenen Elements verwendet wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemsOwner">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.ItemsControl GetItemsOwner (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Controls.ItemsControl GetItemsOwner(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.GetItemsOwner(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ItemsControl</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Hostelement.</param>
+        <summary>Gibt die <see cref="T:System.Windows.Controls.ItemsControl" /> , dass das angegebene Element Einträge hostet.</summary>
+        <returns>Die <see cref="T:System.Windows.Controls.ItemsControl" /> , dass das angegebene Element Einträge hostet oder <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Controls.Panel.IsItemsHost%2A> festgelegt ist, um `true` auf `element` in einem Format oder, wenn `element` ist ein Bereich erstellt, indem die <xref:System.Windows.Controls.ItemsPresenter> für ein <xref:System.Windows.Controls.ItemsControl>, die <xref:System.Windows.Controls.ItemsControl> wird zurückgegeben, andernfalls `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupStyle">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ObservableCollection&lt;System.Windows.Controls.GroupStyle&gt; GroupStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;class System.Windows.Controls.GroupStyle&gt; GroupStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.GroupStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.Windows.Controls.GroupStyle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Windows.Controls.GroupStyle" /> -Objekten, die die Darstellung der einzelnen Gruppenebenen definieren.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Windows.Controls.GroupStyle" /> -Objekten, die die Darstellung der einzelnen Gruppenebenen definieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Eintrag am Index 0 werden die Gruppen der obersten Ebene beschrieben, die der Eintrag am Index 1 beschreibt die nächste Ebene, und so weiter. Wenn mehrere Ebenen von Gruppierung als Einträge in der Auflistung vorhanden sind, wird der letzte Eintrag für die zusätzlichen Ebenen verwendet.  
+  
+<a name="xamlPropertyElementUsage_GroupStyle"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.GroupStyle>  
+    OneOrMoreGroupStyleObjects  
+  </object.GroupStyle>  
+</object>  
+  
+```  
+  
+<a name="xamlValues_GroupStyle"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *OneOrMoreGroupStyleObjects*  
+ Eine oder mehrere <xref:System.Windows.Controls.GroupStyle> Objekte.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine <xref:System.Windows.Controls.ItemsControl> , gebunden ist, um eine <xref:System.Windows.Data.XmlDataProvider> und den Code-Behind-Inhalt, der enthält die Logik zum Hinzufügen und entfernen die Gruppierung. Wenn Sie dieses Kontrollkästchen aktiviert ist, wird der Inhalt von der <xref:System.Windows.Controls.ItemsControl> ist gruppiert nach den `Type` Attribut.  
+  
+ Jede Gruppe wird vom Typ <xref:System.Windows.Data.CollectionViewGroup>. Die <xref:System.Windows.Controls.GroupStyle> <xref:System.Windows.Controls.GroupStyle.HeaderTemplate%2A> wird angegeben, damit es als angezeigt wird eine <xref:System.Windows.Controls.TextBlock> , anzeigt die <xref:System.Windows.Data.CollectionViewGroup.Name%2A> jedes der Gruppe. In diesem Fall die <xref:System.Windows.Data.CollectionViewGroup.Name%2A> handelt es sich um `Work` oder `Home`.  
+  
+ [!code-xaml[GroupingSample#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupingSample/CSharp/Window1.xaml#xaml)]  
+  
+ [!code-csharp[GroupingSample#Code](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupingSample/CSharp/Window1.xaml.cs#code)]
+ [!code-vb[GroupingSample#Code](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GroupingSample/visualbasic/window1.xaml.vb#code)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupStyleSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.GroupStyleSelector GroupStyleSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.GroupStyleSelector GroupStyleSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.GroupStyleSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GroupStyleSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Methode, die Ihnen ermöglicht, benutzerdefinierte Auswahllogik für bieten eine <see cref="T:System.Windows.Controls.GroupStyle" /> für jede Gruppe in einer Auflistung anwenden.</summary>
+        <value>Eine Methode, die Ihnen ermöglicht, benutzerdefinierte Auswahllogik für bieten eine <see cref="T:System.Windows.Controls.GroupStyle" /> für jede Gruppe in einer Auflistung anwenden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_GroupStyleSelector"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ItemsControl.GroupStyleSelectorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupStyleSelectorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty GroupStyleSelectorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty GroupStyleSelectorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.GroupStyleSelectorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.GroupStyleSelector" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasItems">
+      <MemberSignature Language="C#" Value="public bool HasItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.HasItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.ItemsControl" /> Elemente enthält.</summary>
+        <value>
+          <see langword="true" />Wenn die Anzahl der Elemente größer als 0 ist. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_HasItems"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ItemsControl.HasItemsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasItemsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HasItemsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HasItemsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.HasItemsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.HasItems" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGrouping">
+      <MemberSignature Language="C#" Value="public bool IsGrouping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGrouping" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.IsGrouping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Steuerelement eine Gruppierung verwendet.</summary>
+        <value>
+          <see langword="true" />Wenn ein Steuerelement eine Gruppierung verwendet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsGrouping"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ItemsControl.IsGroupingProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGroupingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsGroupingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsGroupingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.IsGroupingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.IsGrouping" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemItsOwnContainer">
+      <MemberSignature Language="C#" Value="public bool IsItemItsOwnContainer (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsItemItsOwnContainer(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.IsItemItsOwnContainer(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu überprüfende Element.</param>
+        <summary>Bestimmt, ob das angegebene Element sein eigener Container ist (oder sein kann).</summary>
+        <returns>
+          <see langword="true" />Wenn das Element ist (oder sein kann) sein eigener Container; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die <xref:System.Windows.Controls.ItemsControl.IsItemItsOwnContainerOverride%2A>-Methode auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemItsOwnContainerOverride">
+      <MemberSignature Language="C#" Value="protected virtual bool IsItemItsOwnContainerOverride (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsItemItsOwnContainerOverride(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.IsItemItsOwnContainerOverride(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu überprüfende Element.</param>
+        <summary>Bestimmt, ob das angegebene Element sein eigener Container ist (oder sein kann).</summary>
+        <returns>
+          <see langword="true" />Wenn das Element ist (oder sein kann) sein eigener Container; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTextSearchCaseSensitive">
+      <MemberSignature Language="C#" Value="public bool IsTextSearchCaseSensitive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTextSearchCaseSensitive" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.IsTextSearchCaseSensitive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob beim Suchen nach Elementen die Groß-/Kleinschreibung beachtet werden muss, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn es sich bei Textsuchvorgängen die Groß-/Kleinschreibung; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Controls.ItemsControl.IsTextSearchEnabled%2A> -Eigenschaftensatz auf `true`, die <xref:System.Windows.Controls.ItemsControl.IsTextSearchCaseSensitive%2A> Eigenschaft gibt an, ob die Groß-/Kleinschreibung bestimmt, ob ein Element, in ausgewählt ist eine <xref:System.Windows.Controls.ItemsControl>. Z. B. wenn ein <xref:System.Windows.Controls.ItemsControl> enthalten zwei Zeichenfolgen, die unterscheiden sich nur in Groß-/Kleinschreibung, z. B. "ITEM" und "Item", die erste Zeichenfolge immer, unabhängig von der Groß-/Kleinschreibung der Eingabe ausgewählt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.ComboBox> , Zeichenfolgen, "DOG", "CAT", "Dog" und "Cat" enthält. Im Beispiel bindet der <xref:System.Windows.Controls.ItemsControl.IsTextSearchCaseSensitive%2A> Eigenschaft, um die <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> Eigenschaft eine <xref:System.Windows.Controls.CheckBox>. Wenn Sie dieses Kontrollkästchen aktiviert ist und der Benutzer "Hund", das dritte Element in gibt der <xref:System.Windows.Controls.ItemsControl> ausgewählt ist. Wenn der Benutzer das Kontrollkästchen und den Typen "Dog" hebt die Auswahl, ist das erste Element ausgewählt, da Fall keine Bedingung für die Suche ist.  
+  
+ [!code-xaml[ComboBoxProps_snip#4](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxProps_snip/CS/pane1.xaml#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTextSearchCaseSensitiveProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsTextSearchCaseSensitiveProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsTextSearchCaseSensitiveProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.IsTextSearchCaseSensitiveProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.IsTextSearchCaseSensitive" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTextSearchEnabled">
+      <MemberSignature Language="C#" Value="public bool IsTextSearchEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTextSearchEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.IsTextSearchEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob <see cref="T:System.Windows.Controls.TextSearch" /> aktiviert ist, auf die <see cref="T:System.Windows.Controls.ItemsControl" /> Instanz.</summary>
+        <value>
+          <see langword="true" />, wenn <see cref="T:System.Windows.Controls.TextSearch" /> aktiviert ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsTextSearchEnabled"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ItemsControl.IsTextSearchEnabledProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTextSearchEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsTextSearchEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsTextSearchEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.IsTextSearchEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.IsTextSearchEnabled" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemBindingGroup">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.BindingGroup ItemBindingGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.BindingGroup ItemBindingGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.ItemBindingGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Data.BindingGroup" /> kopiert, die auf jedes Element im die <see cref="T:System.Windows.Controls.ItemsControl" />.</summary>
+        <value>Die <see cref="T:System.Windows.Data.BindingGroup" /> kopiert, die auf jedes Element in der <see cref="T:System.Windows.Controls.ItemsControl" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen der <xref:System.Windows.Controls.ItemsControl.ItemBindingGroup%2A> -Eigenschaft, jedes Elementcontainer Ruft eine <xref:System.Windows.Data.BindingGroup> , hat die gleiche <xref:System.Windows.Controls.ValidationRule> Objekte wie die <xref:System.Windows.Controls.ItemsControl.ItemBindingGroup%2A>, jedoch die Eigenschaften, die beschreiben, wie z. B. die Daten in den Bindungen <xref:System.Windows.Data.BindingGroup.Items%2A> und <xref:System.Windows.Data.BindingGroup.BindingExpressions%2A>, sind auf die Daten für jedes Element in der <xref:System.Windows.Controls.ItemsControl>.  Sie müssen die Elementcontainer zugreifen <xref:System.Windows.FrameworkContentElement.BindingGroup%2A> auszuführenden Vorgänge wie Überprüfung der Daten und die Überprüfung auf Fehler für ein Element.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ist Teil einer Anwendung, die fordert den Benutzer zum Eingeben mehrerer Kunden, und weisen Sie jedem Kunden einen Vertriebsmitarbeiter und überprüft anschließend, dass der Vertriebsmitarbeiter und den Kunden zur selben Region gehören. Im Beispiel wird die <xref:System.Windows.Controls.ItemsControl.ItemBindingGroup%2A> von der <xref:System.Windows.Controls.ItemsControl> also die <xref:System.Windows.Controls.ValidationRule>, `AreasMatch`, wird überprüft, ob jedes Element. Das Beispiel erstellt außerdem eine <xref:System.Windows.Controls.Label> , die Validierungsfehler anzeigt. Beachten Sie, dass die <xref:System.Windows.Controls.ContentControl.Content%2A> von der <xref:System.Windows.Controls.Label> gebunden ist ein <xref:System.Windows.Controls.ValidationError> , die es abruft, aus der <xref:System.Windows.Controls.Validation.ValidationAdornerSiteForProperty?displayProperty=nameWithType> Eigenschaft. Der Wert des <xref:System.Windows.Controls.Validation.ValidationAdornerSiteForProperty?displayProperty=nameWithType> ist der Elementcontainer, die den Fehler enthält.  
+  
+ [!code-xaml[BindingGroupSnippets#ItemBindingGroup](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window2.xaml#itembindinggroup)]  
+[!code-xaml[BindingGroupSnippets#ValidationAdornerSiteFor](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window2.xaml#validationadornersitefor)]  
+  
+ Im folgenden Beispiel wird die Elementcontainer und ruft <xref:System.Windows.Data.BindingGroup.UpdateSources%2A> für des Containers <xref:System.Windows.Data.BindingGroup> zum Überprüfen der Daten. Sie müssen die Daten überprüfen, indem das Aufrufen einer Methode für die Elementcontainer <xref:System.Windows.FrameworkContentElement.BindingGroup%2A>nicht auf die <xref:System.Windows.Controls.ItemsControl.ItemBindingGroup%2A> von der <xref:System.Windows.Controls.ItemsControl>.  
+  
+ [!code-csharp[BindingGroupSnippets#UpdateSources](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window2.xaml.cs#updatesources)]
+ [!code-vb[BindingGroupSnippets#UpdateSources](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/window2.xaml.vb#updatesources)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemBindingGroupProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ItemBindingGroupProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ItemBindingGroupProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.ItemBindingGroupProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.ItemBindingGroup" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemContainerGenerator">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ItemContainerGenerator ItemContainerGenerator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.ItemContainerGenerator ItemContainerGenerator" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.ItemContainerGenerator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ItemContainerGenerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Controls.ItemContainerGenerator" /> , die dem Steuerelement zugeordnet ist.</summary>
+        <value>Die <see cref="T:System.Windows.Controls.ItemContainerGenerator" /> , die dem Steuerelement zugeordnet ist. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.ItemsControl.ItemContainerGenerator%2A> ist verantwortlich für das Generieren der [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] für seinen Host, z. B. ein <xref:System.Windows.Controls.ItemsControl>. Er verwaltet die Zuordnung zwischen den Elementen in der Datenansicht des Steuerelements und der entsprechenden <xref:System.Windows.UIElement> Objekte. Jede <xref:System.Windows.Controls.ItemsControl> verfügt über eine zugeordnete Element-Container, der ein Datenelement in der Elementauflistung enthält. Können Sie die <xref:System.Windows.Controls.ItemsControl.ItemContainerGenerator%2A> Eigenschaft Elementcontainers, die zugeordnet ist, den Zugriff auf Ihre <xref:System.Windows.Controls.ItemsControl>. Angenommen, Sie haben ein datengebundenes <xref:System.Windows.Controls.TreeView> -Steuerelement, und Sie abrufen möchten eine <xref:System.Windows.Controls.TreeViewItem> basierend auf ihren Index oder des zugeordneten Datenelements, können Sie die <xref:System.Windows.Controls.ItemContainerGenerator.ContainerFromIndex%2A?displayProperty=nameWithType> oder <xref:System.Windows.Controls.ItemContainerGenerator.ContainerFromItem%2A?displayProperty=nameWithType> Methode. Alternativ können Sie die <xref:System.Windows.Controls.ItemContainerGenerator.IndexFromContainer%2A?displayProperty=nameWithType> oder <xref:System.Windows.Controls.ItemContainerGenerator.ItemFromContainer%2A?displayProperty=nameWithType> Methode, um die Index- oder Element ab, das eine angegebene generierte Containerelement zugeordnet ist.  
+  
+ Die <xref:System.Windows.Controls.Primitives.IItemContainerGenerator> Schnittstelle wird auch in erweiterten Szenarios verwendet. Normalerweise rufen erweiterte Anwendungen, die über eine eigene Implementierung von einem virtualisierender Bereich Member der Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemContainerStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style ItemContainerStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style ItemContainerStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.ItemContainerStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Content")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Style" /> , die auf den für jedes Element erstellte Containerelement angewendet wird.</summary>
+        <value>Die <see cref="T:System.Windows.Style" /> , die auf den für jedes Element erstellte Containerelement angewendet wird. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft oder die <xref:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector%2A> Eigenschaft, legen Sie einen Stil für die Darstellung der Elemente beeinflussen, die die Datenelemente enthalten. Z. B. für <xref:System.Windows.Controls.ListBox>, sind die generierten Container <xref:System.Windows.Controls.ListBoxItem> steuert; für <xref:System.Windows.Controls.ComboBox>, sie sind <xref:System.Windows.Controls.ComboBoxItem> Steuerelemente.  
+  
+ Die <xref:System.Windows.Controls.ItemsControl> bietet große Flexibilität beim visuellen Anpassung und stellt viele Erstellen von Formaten und Vorlagen-Eigenschaften. Um das Layout der Elemente beeinflussen, verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> Eigenschaft. Wenn Sie die Gruppierung für das Steuerelement verwenden, können Sie mithilfe der <xref:System.Windows.Controls.ItemsControl.GroupStyle%2A> oder <xref:System.Windows.Controls.ItemsControl.GroupStyleSelector%2A> Eigenschaft. Um die Visualisierung der Datenobjekte anzugeben, verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> oder <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> Eigenschaft. Weitere Informationen zur Verwendung an einem <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, finden Sie unter [Übersicht über Datenvorlagen](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+<a name="xamlAttributeUsage_ItemContainerStyle"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object ItemContainerStyle="ResourceExtension StyleResourceKey"/>  
+```  
+  
+<a name="xamlValues_ItemContainerStyle"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *ResourceExtension*  
+ Eines der folgenden: `StaticResource`, oder `DynamicResource`. Wenn die Stile selbst Verweise auf potenzielle Laufzeitfehler Verweise z. B. Systemressourcen oder benutzereinstellungen, enthalten `StaticResource` Verweis auf ein Format wird in der Regel für Leistung empfohlen.  
+  
+ *StyleResourceKey*  
+ `x:Key`String-Wert verweist auf das Format, das als Ressource angefordert wird.  
+  
+<a name="dependencyPropertyInfo_ItemContainerStyle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ItemsControl.ItemContainerStyleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie diese Eigenschaft verwendet wird. Beachten Sie Folgendes datengebundenen <xref:System.Windows.Controls.ListBox>:  
+  
+ [!code-xaml[StylingIntroSnippet#UIListBox](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#uilistbox)]   
+  
+ Um einen Stil für die Elemente zu erstellen, die die Datenelemente enthalten, erstellen eine <xref:System.Windows.Controls.ListBoxItem> formatieren, wie im folgenden Beispiel gezeigt. Das Format gilt für alle <xref:System.Windows.Controls.ListBoxItem> Elemente innerhalb des Bereichs, der das Format definiert ist.  
+  
+ [!code-xaml[StylingIntroSnippet#ListBoxItemStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#listboxitemstyle)]   
+  
+ Die <xref:System.Windows.Controls.ListBoxItem> ist das Containerelement für die <xref:System.Windows.Controls.ListBox> Steuerelement. Aus diesem Grund ist eine Alternative zur vorangehenden festzulegende der <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Eigenschaft von der <xref:System.Windows.Controls.ListBox> auf das definierte Format. Geben Sie hierzu die <xref:System.Windows.Controls.ListBoxItem> Stil ein `x:Key` damit es als Ressource verfügbar ist:  
+  
+ [!code-xaml[StylingIntroSample_snippet#ContainerStyle1](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#containerstyle1)]   
+  
+ Legen Sie anschließend die <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Eigenschaft auf die Ressource, wie im folgenden Beispiel gezeigt:  
+  
+ [!code-xaml[StylingIntroSample_snippet#ListBox](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#listbox)]   
+  
+ Beide Szenarien erzielt das gleiche Ergebnis. Allerdings ist einer der Vorteile den Stil als Ressource verfügbar gemacht, dass Sie das Format wiederverwenden können. Festlegen der <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Eigenschaft explizit kann auch eine bessere Lesbarkeit bieten.  
+  
+ Das vollständige Beispiel finden Sie unter [Einführung zum Erstellen von Formaten und Datenvorlagen-Beispiel](http://go.microsoft.com/fwlink/?LinkID=160010).  
+  
+ Im folgende Beispiel dient zur Veranschaulichung der Funktion der verschiedenen Erstellen von Formaten und Vorlagen-bezogene Eigenschaften bereitgestellt, die durch die <xref:System.Windows.Controls.ItemsControl>. Die <xref:System.Windows.Controls.ItemsControl> in diesem Beispiel ist an eine Auflistung von gebunden `Task` Objekte. Zu Demonstrationszwecken werden die Formate und die Vorlagen in diesem Beispiel inline deklariert.  
+  
+ [!code-xaml[DataTemplatingIntro_snip#ItemsControlProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#itemscontrolproperties)]  
+  
+ Im Folgenden sehen Sie ein Bildschirmfoto des Beispiels nach dem Rendern:  
+  
+ ![Screenshot der ItemsControl-Beispiel](~/add/media/databinding-itemscontrolproperties.png "ItemsControl-Beispiel-Screenshot")  
+  
+ Zwei weitere Formatvorlagen bezogenen Eigenschaften für die <xref:System.Windows.Controls.ItemsControl> , werden nicht angezeigt, sind hier <xref:System.Windows.Controls.ItemsControl.GroupStyle%2A> und <xref:System.Windows.Controls.ItemsControl.GroupStyleSelector%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemContainerStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ItemContainerStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ItemContainerStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.ItemContainerStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.ItemContainerStyle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemContainerStyleSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.StyleSelector ItemContainerStyleSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.StyleSelector ItemContainerStyleSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Content")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.StyleSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine benutzerdefinierte Auswahllogik für einen Stil ab, der auf jedes generierte Containerelement angewendet werden kann, oder legt diese Auswahllogik fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Controls.StyleSelector" /> -Objekt, das Logik, die die enthält zu verwendenden Stils wählt die <see cref="P:System.Windows.Controls.ItemsControl.ItemContainerStyle" />. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Eigenschaft, legen Sie einen Stil für die Darstellung der Elemente beeinflussen, die die Datenelemente enthalten. Z. B. für <xref:System.Windows.Controls.ListBox>, sind die generierten Container <xref:System.Windows.Controls.ListBoxItem> steuert; für <xref:System.Windows.Controls.ComboBox>, sie sind <xref:System.Windows.Controls.ComboBoxItem> Steuerelemente. Wenn Sie mehr als eine Formatvorlage definiert haben und Logik, um die anzuwendende auswählen zur Verfügung stellen müssen, verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector%2A> -Eigenschaft anstelle der <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Eigenschaft. Beachten Sie, dass diese Eigenschaft ignoriert, wenn die <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> festgelegt wird.  
+  
+ Die <xref:System.Windows.Controls.ItemsControl> bietet große Flexibilität beim visuellen Anpassung und stellt viele Erstellen von Formaten und Vorlagen-Eigenschaften. Um das Layout der Elemente beeinflussen, verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> Eigenschaft. Wenn Sie die Gruppierung für das Steuerelement verwenden, können Sie mithilfe der <xref:System.Windows.Controls.ItemsControl.GroupStyle%2A> oder <xref:System.Windows.Controls.ItemsControl.GroupStyleSelector%2A> Eigenschaft. Um die Visualisierung der Datenobjekte anzugeben, verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> oder <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> Eigenschaft. Weitere Informationen zur Verwendung an einem <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, finden Sie unter [Übersicht über Datenvorlagen](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+<a name="dependencyPropertyInfo_ItemContainerStyleSelector"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ItemsControl.ItemContainerStyleSelectorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemContainerStyleSelectorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ItemContainerStyleSelectorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ItemContainerStyleSelectorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.ItemContainerStyleSelectorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ItemCollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.ItemCollection Items" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zum Generieren des Inhalts der Auflistung ab dem <see cref="T:System.Windows.Controls.ItemsControl" />.</summary>
+        <value>Die Auflistung, die zum Generieren des Inhalts von verwendet die <see cref="T:System.Windows.Controls.ItemsControl" />. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann verwendet werden, um Elemente zum Hinzufügen einer <xref:System.Windows.Controls.ItemsControl>. Hinzufügen eines untergeordneten Elements ein <xref:System.Windows.Controls.ItemsControl> Objekt implizit hinzugefügt der <xref:System.Windows.Controls.ItemCollection> für die <xref:System.Windows.Controls.ItemsControl> Objekt.  
+  
+> [!NOTE]
+>  Diese Eigenschaft kann nur festgelegt werden, [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] gezeigt Auflistungssyntax oder durch den Zugriff auf das Objekt und dessen verschiedene Methoden wie z. B. `Add`. Die Eigenschaft auf das Auflistungsobjekt selbst ist schreibgeschützt, und die Auflistung an sich ist Lese-/ Schreibzugriff.  
+  
+ Beachten Sie, dass Sie entweder die <xref:System.Windows.Controls.ItemsControl.Items%2A> oder <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft, um die Auflistung anzugeben, die zum Generieren des Inhalts von verwendet werden soll Ihr <xref:System.Windows.Controls.ItemsControl>. Wenn die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft festgelegt ist, die <xref:System.Windows.Controls.ItemsControl.Items%2A> Auflistung ist schreibgeschützt und mit fester Größe vorgenommen.  
+  
+ Wenn <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> wird verwendet, Festlegen der <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft `null` entfernt die Sammlung und Verwendung zu wiederhergestellt <xref:System.Windows.Controls.ItemsControl.Items%2A>, der ist eine leere <xref:System.Windows.Controls.ItemCollection>.  
+  
+<a name="xamlPropertyElementUsage_Items"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  OneOrMoreElements  
+</object>  
+```  
+  
+<a name="xamlValues_Items"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *OneOrMoreElements*  
+ Eine oder mehrere <xref:System.Windows.UIElement> Objekte.  
+  
+   
+  
+## Examples  
+ Die folgenden Beispiele veranschaulichen Binden von Daten an eine <xref:System.Windows.Controls.ItemsControl>. Im erste Beispiel erstellt eine Klasse mit dem Namen `MyData` also eine einfache zeichenfolgenauflistung.  
+  
+ [!code-csharp[ControlContentOverviewSnippets#8](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml.cs#8)]
+ [!code-vb[ControlContentOverviewSnippets#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlContentOverviewSnippets/VisualBasic/Window1.xaml.vb#8)]  
+  
+ Im folgenden Beispiel bindet der <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Objekt von einer <xref:System.Windows.Controls.ItemsControl> auf `MyData`.  
+  
+ [!code-xaml[ControlContentOverviewSnippets#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml#7)]  
+[!code-xaml[ControlContentOverviewSnippets#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml#6)]  
+  
+ [!code-csharp[ControlContentOverviewSnippets#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml.cs#9)]
+ [!code-vb[ControlContentOverviewSnippets#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlContentOverviewSnippets/VisualBasic/Window1.xaml.vb#9)]  
+  
+ Die folgende Abbildung zeigt die <xref:System.Windows.Controls.ListBox> im vorherigen Beispiel erstellte Steuerelement.  
+  
+ ![ListBox](~/add/media/controlcontentmodellistbox1.PNG "ListBox")  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Auffüllen einer <xref:System.Windows.Controls.ItemsControl> mithilfe der <xref:System.Windows.Controls.ItemsControl.Items%2A> Eigenschaft. Im Beispiel fügt die folgenden verschiedenen Typen von Elementen, die die <xref:System.Windows.Controls.ListBox>:  
+  
+-   Eine Zeichenfolge.  
+  
+-   Ein <xref:System.DateTime>-Objekt.  
+  
+-   Ein <xref:System.Windows.UIElement>-Objekt.  
+  
+-   Ein <xref:System.Windows.Controls.Panel> Steuerelement, das andere enthält <xref:System.Windows.UIElement> Objekte.  
+  
+ [!code-xaml[ControlContentOverviewSnippets#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml#3)]  
+  
+ [!code-csharp[ControlContentOverviewSnippets#4](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml.cs#4)]
+ [!code-vb[ControlContentOverviewSnippets#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlContentOverviewSnippets/VisualBasic/Window1.xaml.vb#4)]  
+  
+ Die folgende Abbildung zeigt die <xref:System.Windows.Controls.ListBox> im vorherigen Beispiel erstellt.  
+  
+ ![ListBox mit vier Inhaltstypen](~/add/media/controlcontentmodellistbox2.PNG "ListBox mit vier Inhaltstypen")  
+  
+ Beachten Sie, dass die <xref:System.Windows.Controls.ItemCollection> ist eine Sicht, damit Sie die Ansicht-bezogenen Funktionen wie sortieren, Filtern und Gruppieren verwenden können.  
+  
+ Angenommen, Sie haben eine Instanz von einem <xref:System.Windows.Controls.ListBox>, `myListBox`, erreichen Sie Folgendes ein, um den Inhalt des Sortieren der <xref:System.Windows.Controls.ListBox>. In diesem Beispiel `Content` ist der Name der Eigenschaft, die nach zu sortieren.  
+  
+ [!code-csharp[ListBoxSort_snip#Sort](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxSort_snip/CSharp/Window1.xaml.cs#sort)]
+ [!code-vb[ListBoxSort_snip#Sort](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListBoxSort_snip/visualbasic/window1.xaml.vb#sort)]  
+  
+ Beachten Sie, dass wenn Sie dies tun, wenn das Steuerelement direkt an eine Auflistung gebunden ist, die Standardansicht für die Auflistung verwendet wird, und die Sortierkriterien gelten für alle anderen Steuerelemente, die direkt an der gleichen Auflistung gebunden. Die Ansicht ist die Standardansicht nicht, wenn die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft gebunden ist eine <xref:System.Windows.Data.CollectionViewSource>.  
+  
+ Wenn Ihre <xref:System.Windows.Controls.ItemsControl> direkt an eine Auflistung gebunden ist, müssen Sie Folgendes ein, um die Standardansicht zu erhalten:  
+  
+ [!code-csharp[GroupingSample#MyView](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupingSample/CSharp/Window1.xaml.cs#myview)]
+ [!code-vb[GroupingSample#MyView](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GroupingSample/visualbasic/window1.xaml.vb#myview)]  
+[!code-csharp[GroupingSample#GetView](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupingSample/CSharp/Window1.xaml.cs#getview)]
+[!code-vb[GroupingSample#GetView](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GroupingSample/visualbasic/window1.xaml.vb#getview)]  
+  
+ Alternativ können Sie angeben, filtern, Sortieren und gruppieren die Kriterien in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] oder Code unter Verwendung einer <xref:System.Windows.Data.CollectionViewSource>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsControlFromItemContainer">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.ItemsControl ItemsControlFromItemContainer (System.Windows.DependencyObject container);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Controls.ItemsControl ItemsControlFromItemContainer(class System.Windows.DependencyObject container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.ItemsControlFromItemContainer(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ItemsControl</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="container">Das Containerelement zurückzugebenden der <see cref="T:System.Windows.Controls.ItemsControl" /> für.</param>
+        <summary>Gibt die <see cref="T:System.Windows.Controls.ItemsControl" /> , die das angegebene Containerelement besitzt.</summary>
+        <returns>Die <see cref="T:System.Windows.Controls.ItemsControl" /> , die das angegebene Containerelement besitzt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsPanel">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ItemsPanelTemplate ItemsPanel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.ItemsPanelTemplate ItemsPanel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.ItemsPanel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ItemsPanelTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vorlage ab (bzw. legt diese fest), mit der der Bereich definiert wird, der das Layout der Elemente steuert.</summary>
+        <value>Ein <see cref="T:System.Windows.Controls.ItemsPanelTemplate" /> , definiert den Bereich für das Layout der Elemente verwendet. Der Standardwert für die <see cref="T:System.Windows.Controls.ItemsControl" /> ist ein <see cref="T:System.Windows.Controls.ItemsPanelTemplate" /> , die angibt, eine <see cref="T:System.Windows.Controls.StackPanel" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die <xref:System.Windows.Controls.ListBox>, der Standardwert <xref:System.Windows.Controls.ItemsPanelTemplate> gibt an, die <xref:System.Windows.Controls.VirtualizingStackPanel>. Für <xref:System.Windows.Controls.MenuItem>, verwendet die standardmäßige <xref:System.Windows.Controls.WrapPanel>. Für <xref:System.Windows.Controls.Primitives.StatusBar>, verwendet die standardmäßige <xref:System.Windows.Controls.DockPanel>.  
+  
+ Um zu beeinflussen, das Layout der Elemente in ein <xref:System.Windows.Controls.ItemsControl>, verwenden Sie diese Eigenschaft an eine <xref:System.Windows.Controls.ItemsPanelTemplate>.  
+  
+ Die <xref:System.Windows.Controls.ItemsControl> bietet große Flexibilität beim visuellen Anpassung und stellt viele Erstellen von Formaten und Vorlagen-Eigenschaften. Verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Eigenschaft oder die <xref:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector%2A> Eigenschaft, legen Sie einen Stil für die Darstellung der Elemente beeinflussen, die die Datenelemente enthalten. Z. B. für <xref:System.Windows.Controls.ListBox>, sind die generierten Container <xref:System.Windows.Controls.ListBoxItem> steuert; für <xref:System.Windows.Controls.ComboBox>, sie sind <xref:System.Windows.Controls.ComboBoxItem> Steuerelemente. Wenn Sie die Gruppierung für das Steuerelement verwenden, können Sie mithilfe der <xref:System.Windows.Controls.ItemsControl.GroupStyle%2A> oder <xref:System.Windows.Controls.ItemsControl.GroupStyleSelector%2A> Eigenschaft. Um die Visualisierung der Datenobjekte anzugeben, verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> oder <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> Eigenschaft. Weitere Informationen finden Sie unter [Übersicht über Datenvorlagen](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+<a name="dependencyPropertyInfo_ItemsPanel"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ItemsControl.ItemsPanelProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Zum Erstellen einer horizontalen <xref:System.Windows.Controls.ListBox>, können Sie eine Vorlage, der angibt, eine horizontalen erstellen <xref:System.Windows.Controls.StackPanel> und legen Sie ihn als das <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> Eigenschaft. Das folgende Beispiel zeigt eine <xref:System.Windows.Controls.ListBox> <xref:System.Windows.Style> , erstellt eine horizontale <xref:System.Windows.Controls.ListBox>.  
+  
+ [!code-xaml[StylingIntroSample_snippet#ItemsPanel](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#itemspanel)] 
+  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Controls.ControlTemplate> zum Erstellen einer horizontalen <xref:System.Windows.Controls.ListBox> mit abgerundeten Ecken. In diesem Beispiel, anstatt durch die Einstellung der <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> Eigenschaft wie in vorherigen Beispiel, das horizontale <xref:System.Windows.Controls.StackPanel> wird angegeben, in der <xref:System.Windows.Controls.ControlTemplate>. Die <xref:System.Windows.Controls.Panel.IsItemsHost%2A> -Eigenschaftensatz auf `true` auf die <xref:System.Windows.Controls.StackPanel>, der angibt, die die generierten Elemente in der Systemsteuerung aufgenommen werden soll. Wenn Sie auf diese Weise angeben der <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> kann nicht vom Benutzer des Steuerelements ersetzt werden, ohne eine <xref:System.Windows.Controls.ControlTemplate>. Deshalb nur führt diese, wenn Sie wissen, dass Sie nicht im Bereich ohne Verwendung einer Vorlage ersetzt werden soll.  
+  
+ [!code-xaml[StylingIntroSnippet#ListBoxCT](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#listboxct)]   
+  
+ Alternativ können Sie Folgendes ein, um die gleichen Ergebnisse erzielen tun. In diesem Fall die <xref:System.Windows.Controls.ItemsPresenter> erstellt den Bereich für das Layout der Elemente auf Grundlage von angegebenen ist die <xref:System.Windows.Controls.ItemsPanelTemplate>.  
+  
+ [!code-xaml[StyleOvw01#ItemsPanelTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/StyleOvw01/CS/Page1.xaml#itemspaneltemplate)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsPanelProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ItemsPanelProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ItemsPanelProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.ItemsPanelProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.ItemsPanel" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsSource">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable ItemsSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable ItemsSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.ItemsSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Sammlung zum Generieren des Inhalts von den <see cref="T:System.Windows.Controls.ItemsControl" />.</summary>
+        <value>Eine Auflistung, die zum Generieren des Inhalts von verwendet die <see cref="T:System.Windows.Controls.ItemsControl" />. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Inhaltsmodell:** diese Eigenschaft kann verwendet werden, um Elemente zum Hinzufügen einer <xref:System.Windows.Controls.ItemsControl>.  
+  
+ Ein häufiges Szenario ist die Verwendung einer <xref:System.Windows.Controls.ItemsControl> wie z. B. eine <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListView>, oder <xref:System.Windows.Controls.TreeView> um eine Datensammlung anzuzeigen oder zu binden ein <xref:System.Windows.Controls.ItemsControl> auf ein Auflistungsobjekt. Binden einer <xref:System.Windows.Controls.ItemsControl> verwenden, um ein Auflistungsobjekt, das <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft. Beachten Sie, dass die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft unterstützt <xref:System.Windows.Data.BindingMode.OneWay> standardmäßig binden.  
+  
+ Wenn die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft festgelegt ist, die <xref:System.Windows.Controls.ItemsControl.Items%2A> Auflistung ist schreibgeschützt und mit fester Größe vorgenommen.  
+  
+ Wenn <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> wird verwendet, das Festlegen von `null` entfernt die Sammlung und Verwendung zu wiederhergestellt <xref:System.Windows.Controls.ItemsControl.Items%2A>, der ist eine leere <xref:System.Windows.Controls.ItemCollection>. Wenn <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> ist nicht in Gebrauch ist, wird der Wert dieser Eigenschaft `null`, und bei der Einstellung `null` hat keine Auswirkungen.  
+  
+> [!NOTE]
+>  In den meisten Fällen müssen Sie keine eigene Sammlungen zu implementieren. Verwenden Sie stattdessen <xref:System.Collections.ObjectModel.ObservableCollection%601> oder anderen vorhandenen Sammlungen. Weitere Informationen finden Sie unter "Verwenden von Auflistungsobjekten als Bindungsquelle" in [Quellen Übersicht über Datenbindung](~/docs/framework/wpf/data/binding-sources-overview.md).  
+  
+<a name="xamlAttributeUsage_ItemsSource"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object ItemsSource="bindingDeclaration"/>  
+```  
+  
+<a name="xamlValues_ItemsSource"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *bindingDeclaration*  
+ Ein <xref:System.Windows.Data.Binding> Deklaration. Finden Sie unter [Markuperweiterung binden](~/docs/framework/wpf/advanced/binding-markup-extension.md) für Weitere Informationen.  
+  
+<a name="dependencyPropertyInfo_ItemsSource"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ItemsControl.ItemsSourceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsSourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ItemsSourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ItemsSourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.ItemsSourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemStringFormat">
+      <MemberSignature Language="C#" Value="public string ItemStringFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemStringFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.ItemStringFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine zusammengesetzte Zeichenfolge, die angibt, wie die Elemente in formatiert die <see cref="T:System.Windows.Controls.ItemsControl" /> bei Anzeige als Zeichenfolgen.</summary>
+        <value>Eine zusammengesetzte Zeichenfolge, die angibt, wie die Elemente in formatiert die <see cref="T:System.Windows.Controls.ItemsControl" /> bei Anzeige als Zeichenfolgen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.ItemsControl.ItemStringFormat%2A>eine vordefinierte, zusammengesetzten oder ein benutzerdefiniertes Zeichenfolgenformat kann sein. Weitere Informationen zu Zeichenfolgenformate, finden Sie unter [Formatierung von Typen](~/docs/standard/base-types/formatting-types.md). Wenn Sie festlegen, die <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> oder <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> des eine <xref:System.Windows.Controls.ItemsControl>, die <xref:System.Windows.Controls.ItemsControl.ItemStringFormat%2A> Eigenschaft wird ignoriert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Controls.ItemsControl.ItemStringFormat%2A> zum Angeben des Formats einer Liste von <xref:System.DateTime> Objekte.  
+  
+ [!code-xaml[ContentStringSnippets#ItemsControl](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentStringSnippets/CSharp/Window1.xaml#itemscontrol)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemStringFormatProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ItemStringFormatProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ItemStringFormatProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.ItemStringFormatProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.ItemStringFormat" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate ItemTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate ItemTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.ItemTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.DataTemplate" /> verwendet, um jedes Element anzuzeigen.</summary>
+        <value>Ein <see cref="T:System.Windows.DataTemplate" /> , die die Visualisierung der Datenobjekte angibt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> um die Visualisierung der Datenobjekte anzugeben. Wenn Ihre <xref:System.Windows.Controls.ItemsControl> gebunden ist für eine Sammlung-Objekt, und Sie bieten keine bestimmte Anzeige-Anweisungen, die mit einem <xref:System.Windows.DataTemplate>, das resultierende [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] jedes Elements ist eine Darstellung der einzelnen Objekte in der zugrunde liegenden Auflistung.  
+  
+ Beim Festlegen einer <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> auf eine <xref:System.Windows.Controls.ItemsControl>, die [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] wird folgendermaßen generiert (mithilfe der <xref:System.Windows.Controls.ListBox> als Beispiel):  
+  
+1.  Während der Generierung von Inhalt der <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> initiiert eine Anforderung für die <xref:System.Windows.Controls.ItemsControl.ItemContainerGenerator%2A> um einen Container für jedes Datenelement erstellen. Für <xref:System.Windows.Controls.ListBox>, dem der Container eine <xref:System.Windows.Controls.ListBoxItem>. Der Generator wieder aufgerufen wird die <xref:System.Windows.Controls.ItemsControl> um den Container vorzubereiten.  
+  
+2.  Teil der Vorbereitung umfasst das Kopieren von der <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> von der <xref:System.Windows.Controls.ListBox> werden die <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> von der <xref:System.Windows.Controls.ListBoxItem>.  
+  
+3.  Ähnlich wie alle <xref:System.Windows.Controls.ContentControl> Typen, die <xref:System.Windows.Controls.ControlTemplate> von einem <xref:System.Windows.Controls.ListBoxItem> enthält eine <xref:System.Windows.Controls.ContentPresenter>. Wenn die Vorlage angewendet wird, erstellt er eine <xref:System.Windows.Controls.ContentPresenter> , deren <xref:System.Windows.Controls.ContentPresenter.ContentTemplate%2A> gebunden ist der <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> von der <xref:System.Windows.Controls.ListBoxItem>.  
+  
+4.  Schließlich die <xref:System.Windows.Controls.ContentPresenter> angewendet werden sollen, <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> auf sich selbst und erstellt die [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)].  
+  
+ Wenn mehrere vorhanden sein <xref:System.Windows.DataTemplate> definiert und Logik für die programmgesteuerte Auswahl und Anwendung bereitstellen möchten eine <xref:System.Windows.DataTemplate>, verwenden die <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> Eigenschaft.  
+  
+ Die <xref:System.Windows.Controls.ItemsControl> bietet große Flexibilität beim visuellen Anpassung und stellt viele Erstellen von Formaten und Vorlagen-Eigenschaften. Verwenden der <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Eigenschaft oder die <xref:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector%2A> Eigenschaft, legen Sie einen Stil für die Darstellung der Elemente beeinflussen, die die Datenelemente enthalten. Z. B. für <xref:System.Windows.Controls.ListBox>, sind die generierten Container <xref:System.Windows.Controls.ListBoxItem> steuert; für <xref:System.Windows.Controls.ComboBox>, sie sind <xref:System.Windows.Controls.ComboBoxItem> Steuerelemente. Um das Layout der Elemente beeinflussen, verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> Eigenschaft. Wenn Sie die Gruppierung für das Steuerelement verwenden, können Sie mithilfe der <xref:System.Windows.Controls.ItemsControl.GroupStyle%2A> oder <xref:System.Windows.Controls.ItemsControl.GroupStyleSelector%2A> Eigenschaft.  
+  
+ Weitere Informationen finden Sie unter [Übersicht über Datenvorlagen](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+<a name="xamlAttributeUsage_ItemTemplate"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object ItemTemplate=" ResourceExtension TemplateResourceKey"/>  
+```  
+  
+<a name="xamlValues_ItemTemplate"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *ResourceExtension*  
+ Eines der folgenden: [StaticResource Markuperweiterung](~/docs/framework/wpf/advanced/staticresource-markup-extension.md), oder [DynamicResource Markuperweiterung](~/docs/framework/wpf/advanced/dynamicresource-markup-extension.md). Wenn die Stile selbst Verweise auf potenzielle Laufzeitfehler Verweise z. B. Systemressourcen oder benutzereinstellungen, enthalten [StaticResource Markuperweiterung](~/docs/framework/wpf/advanced/staticresource-markup-extension.md) Verweis auf ein Format wird in der Regel für Leistung empfohlen.  
+  
+ *TemplateResourceKey*  
+ [X: Key-Anweisung](~/docs/framework/xaml-services/x-key-directive.md) Zeichenfolgenwert verweisen auf die Vorlage, die als Ressource angefordert wird.  
+  
+<a name="dependencyPropertyInfo_ItemTemplate"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ItemsControl.ItemTemplateProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.DataTemplate> Inline. Die <xref:System.Windows.DataTemplate> gibt an, dass jedes Datenelement wird, wie drei angezeigt <xref:System.Windows.Controls.TextBlock> Elemente innerhalb einer <xref:System.Windows.Controls.StackPanel>. In diesem Beispiel wird das Datenobjekt eine Klasse mit dem Namen `Task`. Beachten Sie, dass jedes <xref:System.Windows.Controls.TextBlock> Element in dieser Vorlage ist an eine Eigenschaft des gebundenen der `Task` Klasse.  
+  
+ [!code-xaml[DataTemplatingIntro_snip#Inline](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#inline)]  
+  
+ Es ist eher üblich, definieren Sie eine <xref:System.Windows.DataTemplate> im Ressourcenabschnitt, damit es ein wiederverwendbares Objekt, wie im folgenden Beispiel werden kann:  
+  
+ [!code-xaml[DataTemplatingIntro_snip#R1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r1)]  
+[!code-xaml[DataTemplatingIntro_snip#AsResource](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#asresource)]  
+[!code-xaml[DataTemplatingIntro_snip#R2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r2)]  
+  
+ Sie können `myTaskTemplate` nun als Ressource verwenden, wie im folgenden Beispiel veranschaulicht:  
+  
+ [!code-xaml[DataTemplatingIntro_snip#MyTaskTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#mytasktemplate)]  
+  
+ Das vollständige Beispiel finden Sie unter [Einführung in das Datenvorlagenbeispiel](http://go.microsoft.com/fwlink/?LinkID=160009).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ItemTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ItemTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.ItemTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.ItemTemplate" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemTemplateSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataTemplateSelector ItemTemplateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataTemplateSelector ItemTemplateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.ItemTemplateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataTemplateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die benutzerdefinierte Logik für das Auswählen einer Vorlage ab, die zum Anzeigen der einzelnen Elemente verwendet wird, oder legt diese fest.</summary>
+        <value>Eine benutzerdefinierte <see cref="T:System.Windows.Controls.DataTemplateSelector" /> -Objekt, das Logik bereitstellt und gibt eine <see cref="T:System.Windows.DataTemplate" />. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> um die Visualisierung der Datenobjekte anzugeben. Wenn Sie mehr als einer Vorlage definiert haben, und geben Sie die Logik zum Zurückgeben einer Vorlage verwenden möchten, verwenden Sie diese Eigenschaft. Beachten Sie, dass diese Eigenschaft ignoriert, wenn <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> festgelegt ist.  
+  
+ Die <xref:System.Windows.Controls.ItemsControl> bietet große Flexibilität beim visuellen Anpassung und stellt viele Erstellen von Formaten und Vorlagen-Eigenschaften. Verwenden der <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Eigenschaft oder die <xref:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector%2A> Eigenschaft, legen Sie einen Stil für die Darstellung der Elemente beeinflussen, die die Datenelemente enthalten. Z. B. für <xref:System.Windows.Controls.ListBox>, sind die generierten Container <xref:System.Windows.Controls.ListBoxItem> steuert; für <xref:System.Windows.Controls.ComboBox>, sie sind <xref:System.Windows.Controls.ComboBoxItem> Steuerelemente. Um das Layout der Elemente beeinflussen, verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> Eigenschaft. Wenn Sie die Gruppierung für das Steuerelement verwenden, können Sie mithilfe der <xref:System.Windows.Controls.ItemsControl.GroupStyle%2A> oder <xref:System.Windows.Controls.ItemsControl.GroupStyleSelector%2A> Eigenschaft.  
+  
+ Weitere Informationen finden Sie unter [Übersicht über Datenvorlagen](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+<a name="xamlAttributeUsage_ItemTemplateSelector"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object ItemTemplateSelector="ResourceExtension SelectorResourceKey"/>  
+```  
+  
+<a name="xamlValues_ItemTemplateSelector"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *ResourceExtension*  
+ Eines der folgenden: `StaticResource`, oder `DynamicResource`. Wenn die Stile selbst Verweise auf potenzielle Laufzeitfehler Verweise z. B. Systemressourcen oder benutzereinstellungen, enthalten `StaticResource` Verweis auf ein Format wird in der Regel für Leistung empfohlen.  
+  
+ *SelectorResourceKey*  
+ `x:Key`String-Wert verweist auf die Auswahl, die als Ressource angefordert wird.  
+  
+<a name="dependencyPropertyInfo_ItemTemplateSelector"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ItemsControl.ItemTemplateSelectorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel die `auctionItemDataTemplateSelector` Ressourcenname (entspricht einer `AuctionItemDataTemplateSelector` Klasse) zugewiesen ist der <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> Eigenschaft von der <xref:System.Windows.Controls.ItemsControl>.  
+  
+ [!code-xaml[DataTemplateSelector#ItemTemplateSelector](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplateSelector/CSharp/Window1.xaml#itemtemplateselector)]  
+  
+ Das folgende Beispiel zeigt die Implementierung der `AuctionItemDataTemplateSelector` Klasse mit einer Überschreibung der der <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> Methode:  
+  
+ [!code-csharp[DataTemplateSelector#DataTemplateSelector](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplateSelector/CSharp/AuctionItemDataTemplateSelector.cs#datatemplateselector)]
+ [!code-vb[DataTemplateSelector#DataTemplateSelector](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataTemplateSelector/visualbasic/auctionitemdatatemplateselector.vb#datatemplateselector)]  
+  
+ In diesem Fall in der <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> Methode der Klasse, besteht die Logik zum Zurückgeben der entsprechenden Vorlage basierend auf den Wert des der `SpecialFeatures` Eigenschaft von der `item` übergebene Objekt. Die Vorlage zurückzugebenden befindet sich in den Ressourcen des umschließenden <xref:System.Windows.Window> Element.  
+  
+ Beim Festlegen der <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> -Eigenschaft, die <xref:System.Windows.Controls.ItemsControl> gesteuert wird, um automatisch aufrufen, die <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> Methode `AuctionItemDataTemplateSelector` für jedes der Elemente in der Auflistung, an dem die <xref:System.Windows.Controls.ItemsControl> gebunden ist. Der Aufruf übergibt das Datenelement als ein Objekt an. Die <xref:System.Windows.DataTemplate> der zurückgegeben wird, indem die Methode wird dann verwendet, um dieses Datenelements angezeigt.  
+  
+ Ein weiteres Beispiel finden Sie unter [Übersicht über Datenvorlagen](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemTemplateSelectorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ItemTemplateSelectorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ItemTemplateSelectorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ItemsControl.ItemTemplateSelectorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ItemsControl.ItemTemplateSelector" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemsControl.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerator für die logischen untergeordneten Objekte von der <see cref="T:System.Windows.Controls.ItemsControl" /> Objekt.</summary>
+        <value>Ein Enumerator für die logischen untergeordneten Objekte von der <see cref="T:System.Windows.Controls.ItemsControl" /> Objekt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAlternationCountChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnAlternationCountChanged (int oldAlternationCount, int newAlternationCount);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAlternationCountChanged(int32 oldAlternationCount, int32 newAlternationCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.OnAlternationCountChanged(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldAlternationCount" Type="System.Int32" />
+        <Parameter Name="newAlternationCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="oldAlternationCount">Der alte Wert der <see cref="P:System.Windows.Controls.ItemsControl.AlternationCount" />.</param>
+        <param name="newAlternationCount">Der neue Wert von <see cref="P:System.Windows.Controls.ItemsControl.AlternationCount" />.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.ItemsControl.AlternationCount" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDisplayMemberPathChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDisplayMemberPathChanged (string oldDisplayMemberPath, string newDisplayMemberPath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDisplayMemberPathChanged(string oldDisplayMemberPath, string newDisplayMemberPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.OnDisplayMemberPathChanged(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldDisplayMemberPath" Type="System.String" />
+        <Parameter Name="newDisplayMemberPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="oldDisplayMemberPath">Der alte Wert der <see cref="P:System.Windows.Controls.ItemsControl.DisplayMemberPath" />-Eigenschaft.</param>
+        <param name="newDisplayMemberPath">Der neue Wert der <see cref="P:System.Windows.Controls.ItemsControl.DisplayMemberPath" /> Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.ItemsControl.DisplayMemberPath" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGroupStyleSelectorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnGroupStyleSelectorChanged (System.Windows.Controls.GroupStyleSelector oldGroupStyleSelector, System.Windows.Controls.GroupStyleSelector newGroupStyleSelector);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnGroupStyleSelectorChanged(class System.Windows.Controls.GroupStyleSelector oldGroupStyleSelector, class System.Windows.Controls.GroupStyleSelector newGroupStyleSelector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.OnGroupStyleSelectorChanged(System.Windows.Controls.GroupStyleSelector,System.Windows.Controls.GroupStyleSelector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldGroupStyleSelector" Type="System.Windows.Controls.GroupStyleSelector" />
+        <Parameter Name="newGroupStyleSelector" Type="System.Windows.Controls.GroupStyleSelector" />
+      </Parameters>
+      <Docs>
+        <param name="oldGroupStyleSelector">Der alte Wert der <see cref="P:System.Windows.Controls.ItemsControl.GroupStyleSelector" /> Eigenschaft.</param>
+        <param name="newGroupStyleSelector">Der neue Wert der <see cref="P:System.Windows.Controls.ItemsControl.GroupStyleSelector" /> Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.ItemsControl.GroupStyleSelector" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemBindingGroupChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemBindingGroupChanged (System.Windows.Data.BindingGroup oldItemBindingGroup, System.Windows.Data.BindingGroup newItemBindingGroup);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemBindingGroupChanged(class System.Windows.Data.BindingGroup oldItemBindingGroup, class System.Windows.Data.BindingGroup newItemBindingGroup) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.OnItemBindingGroupChanged(System.Windows.Data.BindingGroup,System.Windows.Data.BindingGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldItemBindingGroup" Type="System.Windows.Data.BindingGroup" />
+        <Parameter Name="newItemBindingGroup" Type="System.Windows.Data.BindingGroup" />
+      </Parameters>
+      <Docs>
+        <param name="oldItemBindingGroup">Der alte Wert von der <see cref="P:System.Windows.Controls.ItemsControl.ItemBindingGroup" />.</param>
+        <param name="newItemBindingGroup">Der neue Wert für die <see cref="P:System.Windows.Controls.ItemsControl.ItemBindingGroup" />.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.ItemsControl.ItemBindingGroup" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemContainerStyleChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemContainerStyleChanged (System.Windows.Style oldItemContainerStyle, System.Windows.Style newItemContainerStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemContainerStyleChanged(class System.Windows.Style oldItemContainerStyle, class System.Windows.Style newItemContainerStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.OnItemContainerStyleChanged(System.Windows.Style,System.Windows.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldItemContainerStyle" Type="System.Windows.Style" />
+        <Parameter Name="newItemContainerStyle" Type="System.Windows.Style" />
+      </Parameters>
+      <Docs>
+        <param name="oldItemContainerStyle">Der alte Wert der <see cref="P:System.Windows.Controls.ItemsControl.ItemContainerStyle" /> Eigenschaft.</param>
+        <param name="newItemContainerStyle">Der neue Wert der <see cref="P:System.Windows.Controls.ItemsControl.ItemContainerStyle" /> Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.ItemsControl.ItemContainerStyle" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemContainerStyleSelectorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemContainerStyleSelectorChanged (System.Windows.Controls.StyleSelector oldItemContainerStyleSelector, System.Windows.Controls.StyleSelector newItemContainerStyleSelector);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemContainerStyleSelectorChanged(class System.Windows.Controls.StyleSelector oldItemContainerStyleSelector, class System.Windows.Controls.StyleSelector newItemContainerStyleSelector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.OnItemContainerStyleSelectorChanged(System.Windows.Controls.StyleSelector,System.Windows.Controls.StyleSelector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldItemContainerStyleSelector" Type="System.Windows.Controls.StyleSelector" />
+        <Parameter Name="newItemContainerStyleSelector" Type="System.Windows.Controls.StyleSelector" />
+      </Parameters>
+      <Docs>
+        <param name="oldItemContainerStyleSelector">Der alte Wert der <see cref="P:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector" /> Eigenschaft.</param>
+        <param name="newItemContainerStyleSelector">Der neue Wert der <see cref="P:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector" /> Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemsChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemsChanged (System.Collections.Specialized.NotifyCollectionChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemsChanged(class System.Collections.Specialized.NotifyCollectionChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Collections.Specialized.NotifyCollectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Informationen zur Änderung.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.ItemsControl.Items" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemsPanelChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemsPanelChanged (System.Windows.Controls.ItemsPanelTemplate oldItemsPanel, System.Windows.Controls.ItemsPanelTemplate newItemsPanel);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemsPanelChanged(class System.Windows.Controls.ItemsPanelTemplate oldItemsPanel, class System.Windows.Controls.ItemsPanelTemplate newItemsPanel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.OnItemsPanelChanged(System.Windows.Controls.ItemsPanelTemplate,System.Windows.Controls.ItemsPanelTemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldItemsPanel" Type="System.Windows.Controls.ItemsPanelTemplate" />
+        <Parameter Name="newItemsPanel" Type="System.Windows.Controls.ItemsPanelTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="oldItemsPanel">Der alte Wert der <see cref="P:System.Windows.Controls.ItemsControl.ItemsPanel" /> Eigenschaft.</param>
+        <param name="newItemsPanel">Der neue Wert der <see cref="P:System.Windows.Controls.ItemsControl.ItemsPanel" /> Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.ItemsControl.ItemsPanel" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemsSourceChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemsSourceChanged (System.Collections.IEnumerable oldValue, System.Collections.IEnumerable newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemsSourceChanged(class System.Collections.IEnumerable oldValue, class System.Collections.IEnumerable newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.OnItemsSourceChanged(System.Collections.IEnumerable,System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldValue" Type="System.Collections.IEnumerable" />
+        <Parameter Name="newValue" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="oldValue">Der alte Wert der <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> Eigenschaft.</param>
+        <param name="newValue">Der neue Wert der <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemStringFormatChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemStringFormatChanged (string oldItemStringFormat, string newItemStringFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemStringFormatChanged(string oldItemStringFormat, string newItemStringFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.OnItemStringFormatChanged(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldItemStringFormat" Type="System.String" />
+        <Parameter Name="newItemStringFormat" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="oldItemStringFormat">Der alte Wert der <see cref="P:System.Windows.Controls.ItemsControl.ItemStringFormat" />-Eigenschaft.</param>
+        <param name="newItemStringFormat">Der neue Wert der <see cref="P:System.Windows.Controls.ItemsControl.ItemStringFormat" />-Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.ItemsControl.ItemStringFormat" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemTemplateChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemTemplateChanged (System.Windows.DataTemplate oldItemTemplate, System.Windows.DataTemplate newItemTemplate);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemTemplateChanged(class System.Windows.DataTemplate oldItemTemplate, class System.Windows.DataTemplate newItemTemplate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.OnItemTemplateChanged(System.Windows.DataTemplate,System.Windows.DataTemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldItemTemplate" Type="System.Windows.DataTemplate" />
+        <Parameter Name="newItemTemplate" Type="System.Windows.DataTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="oldItemTemplate">Die alte <see cref="P:System.Windows.Controls.ItemsControl.ItemTemplate" /> Eigenschaftswert.</param>
+        <param name="newItemTemplate">Die neue <see cref="P:System.Windows.Controls.ItemsControl.ItemTemplate" /> Eigenschaftswert.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.ItemsControl.ItemTemplate" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemTemplateSelectorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemTemplateSelectorChanged (System.Windows.Controls.DataTemplateSelector oldItemTemplateSelector, System.Windows.Controls.DataTemplateSelector newItemTemplateSelector);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemTemplateSelectorChanged(class System.Windows.Controls.DataTemplateSelector oldItemTemplateSelector, class System.Windows.Controls.DataTemplateSelector newItemTemplateSelector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.OnItemTemplateSelectorChanged(System.Windows.Controls.DataTemplateSelector,System.Windows.Controls.DataTemplateSelector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldItemTemplateSelector" Type="System.Windows.Controls.DataTemplateSelector" />
+        <Parameter Name="newItemTemplateSelector" Type="System.Windows.Controls.DataTemplateSelector" />
+      </Parameters>
+      <Docs>
+        <param name="oldItemTemplateSelector">Der alte Wert der <see cref="P:System.Windows.Controls.ItemsControl.ItemTemplateSelector" /> Eigenschaft.</param>
+        <param name="newItemTemplateSelector">Der neue Wert der <see cref="P:System.Windows.Controls.ItemsControl.ItemTemplateSelector" /> Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.ItemsControl.ItemTemplateSelector" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Informationen zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="E:System.Windows.UIElement.KeyDown" /> -Ereignis empfangen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextInput">
+      <MemberSignature Language="C#" Value="protected override void OnTextInput (System.Windows.Input.TextCompositionEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTextInput(class System.Windows.Input.TextCompositionEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.OnTextInput(System.Windows.Input.TextCompositionEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.TextCompositionEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Informationen zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="E:System.Windows.UIElement.TextInput" /> -Ereignis empfangen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected virtual void PrepareContainerForItemOverride (System.Windows.DependencyObject element, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PrepareContainerForItemOverride(class System.Windows.DependencyObject element, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das zum Anzeigen des angegebenen Eintrags verwendete Element.</param>
+        <param name="item">Der angegebene Eintrag.</param>
+        <summary>Bereitet das angegebene Element auf die Anzeige des angegebenen Eintrags vor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vorbereiten des Elements möglicherweise umfassen, Anwenden von Stilen, Bindungen, festlegen und so weiter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldApplyItemContainerStyle">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldApplyItemContainerStyle (System.Windows.DependencyObject container, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ShouldApplyItemContainerStyle(class System.Windows.DependencyObject container, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.ShouldApplyItemContainerStyle(System.Windows.DependencyObject,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Windows.DependencyObject" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="container">Das Containerelement.</param>
+        <param name="item">Das relevante Element.</param>
+        <summary>Gibt einen Wert, der angibt, ob den Stil aus gelten die <see cref="P:System.Windows.Controls.ItemsControl.ItemContainerStyle" /> oder <see cref="P:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector" /> Eigenschaft auf das Containerelement des angegebenen Elements.</summary>
+        <returns>Immer <see langword="true" /> für die grundlegende Implementierung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeGroupStyle">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeGroupStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeGroupStyle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.ShouldSerializeGroupStyle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob Serialisierungsprozesse den tatsächlichen Wert der serialisieren sollen die <see cref="P:System.Windows.Controls.ItemsControl.GroupStyle" /> Eigenschaft.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.Windows.Controls.ItemsControl.GroupStyle" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeItems">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.ShouldSerializeItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob Serialisierungsprozesse den tatsächlichen Wert der serialisieren sollen die <see cref="P:System.Windows.Controls.ItemsControl.Items" /> Eigenschaft.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.Windows.Controls.ItemsControl.Items" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Controls.Primitives.IContainItemStorage.Clear">
+      <MemberSignature Language="C#" Value="void IContainItemStorage.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Controls.Primitives.IContainItemStorage.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.System#Windows#Controls#Primitives#IContainItemStorage#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle Eigenschaftszuordnungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Controls.Primitives.IContainItemStorage.ClearItemValue">
+      <MemberSignature Language="C#" Value="void IContainItemStorage.ClearItemValue (object item, System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Controls.Primitives.IContainItemStorage.ClearItemValue(object item, class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.System#Windows#Controls#Primitives#IContainItemStorage#ClearItemValue(System.Object,System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zugeordnete Element.</param>
+        <param name="dp">Die zugeordnete Eigenschaft.</param>
+        <summary>Entfernt die Zuordnung zwischen dem angegebenen Element und der Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Controls.Primitives.IContainItemStorage.ClearValue">
+      <MemberSignature Language="C#" Value="void IContainItemStorage.ClearValue (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Controls.Primitives.IContainItemStorage.ClearValue(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.System#Windows#Controls#Primitives#IContainItemStorage#ClearValue(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Die zu entfernende Eigenschaft.</param>
+        <summary>Entfernt die angegebene Eigenschaft aus allen Eigenschaftenlisten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Controls.Primitives.IContainItemStorage.ReadItemValue">
+      <MemberSignature Language="C#" Value="object IContainItemStorage.ReadItemValue (object item, System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Windows.Controls.Primitives.IContainItemStorage.ReadItemValue(object item, class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.System#Windows#Controls#Primitives#IContainItemStorage#ReadItemValue(System.Object,System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, dem die angegebene Eigenschaft zugeordnet ist.</param>
+        <param name="dp">Die Eigenschaft, deren Wert zurückgegeben werden soll.</param>
+        <summary>Gibt den Wert der angegebenen Eigenschaft zurück, die dem angegebenen Element zugeordnet ist.</summary>
+        <returns>Der Wert der angegebenen Eigenschaft, die dem angegebenen Element zugeordnet ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Controls.Primitives.IContainItemStorage.StoreItemValue">
+      <MemberSignature Language="C#" Value="void IContainItemStorage.StoreItemValue (object item, System.Windows.DependencyProperty dp, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Controls.Primitives.IContainItemStorage.StoreItemValue(object item, class System.Windows.DependencyProperty dp, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.System#Windows#Controls#Primitives#IContainItemStorage#StoreItemValue(System.Object,System.Windows.DependencyProperty,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, dem der Wert und die Eigenschaft zugeordnet werden sollen.</param>
+        <param name="dp">Die Eigenschaft, die dem angegebenen Element zugeordnet wird.</param>
+        <param name="value">Der Wert der zugeordneten Eigenschaft.</param>
+        <summary>Speichert die angegebene Eigenschaft und den Wert und ordnet diese dem angegebenen Element zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das als untergeordnetes Element hinzuzufügende Objekt.</param>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der hinzuzufügende Text.</param>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemsControl.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine Zeichenfolgendarstellung der <see cref="T:System.Windows.Controls.ItemsControl" /> Objekt.</summary>
+        <returns>Die Zeichenfolgendarstellung des Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

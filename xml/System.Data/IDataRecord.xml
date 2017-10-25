@@ -1,0 +1,1011 @@
+<Type Name="IDataRecord" FullName="System.Data.IDataRecord">
+  <TypeSignature Language="C#" Value="public interface IDataRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataRecord" />
+  <TypeSignature Language="DocId" Value="T:System.Data.IDataRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht den Zugriff auf die Spaltenwerte in den einzelnen Zeilen für einen <see langword="DataReader" />, und wird von .NET Framework-Datenanbietern implementiert, die auf relationale Datenbanken zugreifen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.IDataReader> und <xref:System.Data.IDataRecord> Schnittstellen ermöglichen eine erbende Klasse zum Implementieren einer `DataReader` Klasse. Dies bietet die Möglichkeit, eine oder mehrere vorwärtsströme von Resultsets zu lesen. Weitere Informationen zu `DataReader` Klassen, finden Sie unter [Retrieving Data Using eines "DataReader"](~/docs/framework/data/adonet/retrieving-data-using-a-datareader.md).  
+  
+ Eine Anwendung erstellt eine Instanz der nicht der <xref:System.Data.IDataRecord> -Schnittstelle direkt, sondern erstellt eine Instanz einer Klasse, die erbt <xref:System.Data.IDataRecord>. Normalerweise geschieht dies durch Abrufen einer `DataReader` über die `ExecuteReader` Methode der `Command` Objekt.  
+  
+ Klassen, erben <xref:System.Data.IDataRecord> müssen alle geerbten Member implementieren und definieren Sie in der Regel zusätzliche Elemente, um die anbieterspezifische Funktionalität hinzufügen.  
+  
+ Anbieter implementieren eine `DataReader` sind erforderlich, um Daten in der common Language Runtime (CLR)-Typen verfügbar machen. Typkoersion wird für einige nicht enthalten, in der CLR-Typen definiert. Diese Werte können als alternative Typen entsprechen, die mit CLR-Typen zugegriffen werden. Beispielsweise sind in der folgenden Tabelle vorgeschlagenen Zuordnungen von OLE DB-Datentypen zu CLR-Typen, mit anderen Typen in Klammern aufgeführt.  
+  
+|OLE DB-Typ|CLR-Typ|  
+|-----------------|--------------|  
+|DBTYPE_BOOL|Int16|  
+|DBTYPE_BSTR|string|  
+|DBTYPE_BYTES|byte[]|  
+|DBTYPE_CY|Decimal|  
+|DBTYPE_DATE|DateTime|  
+|DBTYPE_DBDATE|DateTime|  
+|DBTYPE_DBTIME|DateTime|  
+|DBTYPE_DBTIMESTAMP|DateTime|  
+|DBTYPE_DECIMAL|Decimal|  
+|DBTYPE_EMPTY|NULL|  
+|DBTYPE_ERROR|ExternalException|  
+|DBTYPE_FILETIME|DateTime|  
+|DBTYPE_GUID|Guid|  
+|DBTYPE_HCHAPTER|wird nicht unterstützt|  
+|DBTYPE_I1|SByte|  
+|DBTYPE_I2|Int16|  
+|DBTYPE_I4|Int32|  
+|DBTYPE_I8|Int64|  
+|DBTYPE_IDISPATCH|object|  
+|DBTYPE_IUNKNOWN|object|  
+|DBTYPE_NULL|DBNull.Value|  
+|DBTYPE_NUMERIC|Decimal|  
+|DBTYPE_PROPVARIANT|object|  
+|DBTYPE_R4|Single|  
+|DBTYPE_R8|Double|  
+|DBTYPE_STR|string|  
+|DBTYPE_UDT|wird nicht unterstützt|  
+|DBTYPE_UI1|Byte (Int16)|  
+|DBTYPE_UI2|UInt16 (Int32)|  
+|DBTYPE_UI4|UInt32 (Int64)|  
+|DBTYPE_UI8|UInt64 (dezimal)|  
+|DBTYPE_VARIANT|object|  
+|DBTYPE_VARNUMERIC|wird nicht unterstützt|  
+|DBTYPE_WSTR|string|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt Instanzen der abgeleiteten Klassen <xref:System.Data.SqlClient.SqlConnection>, <xref:System.Data.SqlClient.SqlCommand>, und <xref:System.Data.SqlClient.SqlDataReader>. Das Beispiel liest durch die Daten, die an die Konsole schreiben. Im Beispiel wird schließlich schließt die <xref:System.Data.SqlClient.SqlDataReader>, und klicken Sie dann die <xref:System.Data.SqlClient.SqlConnection>.  
+  
+ [!code-csharp[Classic WebData SqlDataReader.Read Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlDataReader.Read Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlDataReader.Read Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlDataReader.Read Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FieldCount">
+      <MemberSignature Language="C#" Value="public int FieldCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FieldCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDataRecord.FieldCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Spalten in der aktuellen Zeile ab.</summary>
+        <value>Falls in keinem gültigen Recordset positioniert, 0; andernfalls die Anzahl der Spalten im aktuellen Datensatz. Der Standard ist -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Ausführen einer Abfrage, die keine Zeilen zurückgibt (z. B. die <xref:System.Data.IDbCommand.ExecuteNonQuery%2A> Methode), <xref:System.Data.IDataRecord.FieldCount%2A> gibt-1 zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoolean">
+      <MemberSignature Language="C#" Value="public bool GetBoolean (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetBoolean(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetBoolean(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als booleschen Wert ab.</summary>
+        <returns>Der Wert der Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden keine Konvertierungen ausgeführt. Aus diesem Grund muss die abgerufenen Daten bereits ein boolescher Wert; Andernfalls wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByte">
+      <MemberSignature Language="C#" Value="public byte GetByte (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 GetByte(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetByte(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den 8-Bit-Ganzzahlwert ohne Vorzeichen der angegebenen Spalte ab.</summary>
+        <returns>Der 8-Bit-Ganzzahlwert ohne Vorzeichen der angegebenen Spalte.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public long GetBytes (int i, long fieldOffset, byte[] buffer, int bufferoffset, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int64 GetBytes(int32 i, int64 fieldOffset, unsigned int8[] buffer, int32 bufferoffset, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+        <Parameter Name="fieldOffset" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="bufferoffset" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="fieldOffset">Der Index in dem Feld, in dem der Lesevorgang beginnen soll.</param>
+        <param name="buffer">Der Puffer, in den der Bytedatenstrom gelesen werden soll.</param>
+        <param name="bufferoffset">Der Index für <c>Puffer</c> den Lesevorgang gestartet.</param>
+        <param name="length">Die Anzahl der zu lesenden Bytes.</param>
+        <summary>Liest einen Datenstrom aus dem angegebenen Spaltenoffset als Array in den Puffer, beginnend am angegebenen Pufferoffset.</summary>
+        <returns>Die tatsächlich gelesene Anzahl von Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.IDataRecord.GetBytes%2A>Gibt die Anzahl der verfügbaren Bytes in das Feld zurück. Dies ist häufig die genaue Länge des Felds. Allerdings die zurückgegebene Anzahl möglicherweise kleiner als die tatsächliche Länge des Felds Wenn `GetBytes` bereits zum Abrufen von Bytes aus dem Feld verwendet wurde.  
+  
+ Wenn Sie einen Puffer übergeben, ist `null`, <xref:System.Data.IDataRecord.GetBytes%2A> gibt die Länge der Zeile in Bytes zurück.  
+  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund muss die abgerufenen Daten bereits ein Bytearray.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChar">
+      <MemberSignature Language="C#" Value="public char GetChar (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance char GetChar(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetChar(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Zeichenwert der angegebenen Spalte ab.</summary>
+        <returns>Der Zeichenwert der angegebenen Spalte.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChars">
+      <MemberSignature Language="C#" Value="public long GetChars (int i, long fieldoffset, char[] buffer, int bufferoffset, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int64 GetChars(int32 i, int64 fieldoffset, char[] buffer, int32 bufferoffset, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+        <Parameter Name="fieldoffset" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="bufferoffset" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="fieldoffset">Der Index in der Zeile, in der der Lesevorgang beginnen soll.</param>
+        <param name="buffer">Der Puffer, in den der Bytedatenstrom gelesen werden soll.</param>
+        <param name="bufferoffset">Der Index für <c>Puffer</c> den Lesevorgang gestartet.</param>
+        <param name="length">Die Anzahl der zu lesenden Bytes.</param>
+        <summary>Liest einen Zeichendatenstrom aus dem angegebenen Spaltenoffset als Array in den Puffer, beginnend am angegebenen Pufferoffset.</summary>
+        <returns>Die tatsächlich gelesene Anzahl von Zeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.IDataRecord.GetChars%2A>Gibt die Anzahl der verfügbaren Zeichen im Feld zurück. Dies ist häufig die genaue Länge des Felds. Allerdings die zurückgegebene Anzahl möglicherweise kleiner als die genaue Länge des Felds Wenn `GetChars` bereits zum Abrufen von Zeichen aus dem Feld verwendet wurde.  
+  
+ Wenn Sie einen Puffer übergeben, ist `null`, `GetChars` gibt die Länge des Felds in Zeichen zurück.  
+  
+ Es werden keine Konvertierungen ausgeführt; aus diesem Grund müssen die abgerufenen Daten bereits ein Zeichenarray sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public System.Data.IDataReader GetData (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.IDataReader GetData(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetData(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des zu suchenden Felds.</param>
+        <summary>Gibt einen <see cref="T:System.Data.IDataReader" /> für die angegebene Spaltenordnungszahl zurück.</summary>
+        <returns>Der <see cref="T:System.Data.IDataReader" /> für die angegebene Spaltenordnungszahl.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataTypeName">
+      <MemberSignature Language="C#" Value="public string GetDataTypeName (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetDataTypeName(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetDataTypeName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des zu suchenden Felds.</param>
+        <summary>Ruft die Datentypinformationen für das angegebene Feld ab.</summary>
+        <returns>Die Datentypinformationen für das angegebene Feld.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Datentypinformationen kann unterscheiden sich die Typinformationen zurückgegebenes `GetFieldType`, insbesondere, in dem die zugrundeliegenden Datentypen nicht eins zu eins den von der Sprache unterstützten Laufzeittypen zuordnen. (z. B. `DataTypeName` möglicherweise "Ganzzahl" sein, zwar `Type.Name` möglicherweise "Int32".)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDateTime">
+      <MemberSignature Language="C#" Value="public DateTime GetDateTime (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.DateTime GetDateTime(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetDateTime(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des zu suchenden Felds.</param>
+        <summary>Ruft das Datum und die Uhrzeit des angegebenen Felds ab.</summary>
+        <returns>Das Datum und die Uhrzeit des angegebenen Felds.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDecimal">
+      <MemberSignature Language="C#" Value="public decimal GetDecimal (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Decimal GetDecimal(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetDecimal(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des zu suchenden Felds.</param>
+        <summary>Ruft den an fester Position befindlichen numerischen Wert des angegebenen Felds ab.</summary>
+        <returns>Der an fester Position befindliche numerische Wert des angegebenen Felds.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDouble">
+      <MemberSignature Language="C#" Value="public double GetDouble (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 GetDouble(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetDouble(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des zu suchenden Felds.</param>
+        <summary>Ruft den Wert des angegebenen Felds als Gleitkommazahl mit doppelter Genauigkeit ab.</summary>
+        <returns>Der Wert des angegebenen Felds als Gleitkommazahl mit doppelter Genauigkeit.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFieldType">
+      <MemberSignature Language="C#" Value="public Type GetFieldType (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetFieldType(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetFieldType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des zu suchenden Felds.</param>
+        <summary>Ruft die <see cref="T:System.Type" />-Informationen entsprechend dem Typ von <see cref="T:System.Object" /> ab, die von <see cref="M:System.Data.IDataRecord.GetValue(System.Int32)" /> zurückgegeben würden.</summary>
+        <returns>Die <see cref="T:System.Type" />-Informationen entsprechend dem Typ von <see cref="T:System.Object" />, die von <see cref="M:System.Data.IDataRecord.GetValue(System.Int32)" /> zurückgegeben würden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Informationen können zum Erhöhen der Leistung, der angibt, die stark typisierte Accessor Aufrufen verwendet werden. (z. B. `GetInt32` ist etwa zehnmal schneller als die Verwendung `GetValue`.)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFloat">
+      <MemberSignature Language="C#" Value="public float GetFloat (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float32 GetFloat(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetFloat(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des zu suchenden Felds.</param>
+        <summary>Ruft den Wert des angegebenen Felds als Gleitkommazahl mit einfacher Genauigkeit ab.</summary>
+        <returns>Der Wert des angegebenen Felds als Gleitkommazahl mit einfacher Genauigkeit.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGuid">
+      <MemberSignature Language="C#" Value="public Guid GetGuid (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Guid GetGuid(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetGuid(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des zu suchenden Felds.</param>
+        <summary>Gibt den GUID-Wert des angegebenen Felds zurück.</summary>
+        <returns>Der GUID-Wert des angegebenen Felds.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt16">
+      <MemberSignature Language="C#" Value="public short GetInt16 (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int16 GetInt16(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetInt16(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des zu suchenden Felds.</param>
+        <summary>Ruft den 16-Bit-Ganzzahlwert mit Vorzeichen des angegebenen Felds ab.</summary>
+        <returns>Der 16-Bit-Ganzzahlwert mit Vorzeichen des angegebenen Felds.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt32">
+      <MemberSignature Language="C#" Value="public int GetInt32 (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetInt32(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetInt32(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des zu suchenden Felds.</param>
+        <summary>Ruft den 32-Bit-Ganzzahl-mit-Vorzeichen-Wert des angegebenen Felds ab.</summary>
+        <returns>Der 32-Bit-Ganzzahl-mit-Vorzeichen-Wert des angegebenen Felds.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt64">
+      <MemberSignature Language="C#" Value="public long GetInt64 (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int64 GetInt64(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetInt64(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des zu suchenden Felds.</param>
+        <summary>Ruft den 64-Bit-Ganzzahlwert mit Vorzeichen des angegebenen Felds ab.</summary>
+        <returns>Der 64-Bit-Ganzzahlwert mit Vorzeichen des angegebenen Felds.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public string GetName (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetName(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des zu suchenden Felds.</param>
+        <summary>Ruft den Namen des zu suchenden Felds ab.</summary>
+        <returns>Der Name des Felds oder eine leere Zeichenfolge (""), wenn kein Wert zurückgegeben werden kann.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrdinal">
+      <MemberSignature Language="C#" Value="public int GetOrdinal (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetOrdinal(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetOrdinal(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu suchenden Felds.</param>
+        <summary>Gibt den Index des benannten Felds zurück.</summary>
+        <returns>Der Index des benannten Felds.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `GetOrdinal`führt zuerst eine Suche Groß-/Kleinschreibung beachtet. Falls dies fehlschlägt, wird eine zweite Suche Groß-und Kleinschreibung hergestellt. `GetOrdinal`wird die Laufweite von Kana nicht beachtet. Wenn der Index des benannten Felds nicht gefunden wird, eine `IndexOutOfRangeException` ausgelöst wird.  
+  
+ Da Ordnungszahlen basierende Suchvorgänge effizienter als Nachschlagevorgänge nach Namen, ist es ineffizient, rufen Sie `GetOrdinal` innerhalb einer Schleife. Zeit sparen, indem Aufrufen `GetOrdinal` einmal und die Ergebnisse auf eine ganzzahlige Variable für die Verwendung innerhalb der Schleife zuweisen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die geerbte <xref:System.Data.Odbc.OdbcDataReader.GetOrdinal%2A> Methode.  
+  
+ [!code-csharp[Classic WebData OdbcDataReader.GetOrdinal#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcDataReader.GetOrdinal/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcDataReader.GetOrdinal#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcDataReader.GetOrdinal/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public string GetString (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetString(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetString(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des zu suchenden Felds.</param>
+        <summary>Ruft den Zeichenfolgenwert des angegebenen Felds ab.</summary>
+        <returns>Der Zeichenfolgenwert des angegebenen Felds.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetValue(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des zu suchenden Felds.</param>
+        <summary>Gibt den Wert des angegebenen Felds zurück.</summary>
+        <returns>Das <see cref="T:System.Object" />, das bei der Rückgabe den Feldwert enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public int GetValues (object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.GetValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Ein Array von <see cref="T:System.Object" />, in das die Attributfelder kopiert werden.</param>
+        <summary>Füllt ein Array von Objekten mit den Spaltenwerten des aktuellen Datensatzes.</summary>
+        <returns>Die Anzahl der Instanzen von <see cref="T:System.Object" /> im Array.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die meisten Anwendungen die <xref:System.Data.IDataRecord.GetValues%2A> Methode ein effizientes Instrument zum Abrufen aller Spalten, statt jede Spalte einzeln abzurufen.  
+  
+ Sie können übergeben ein <xref:System.Object> Array, das weniger als die Anzahl der Spalten enthält, die in der resultierenden Zeile enthalten sind. Nur die Menge der Daten die <xref:System.Object> Array enthält, wird in das Array kopiert. Sie können auch übergeben ein <xref:System.Object> Array, dessen Länge ist größer als die Anzahl der Spalten, die in der resultierenden Zeile enthalten sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDBNull">
+      <MemberSignature Language="C#" Value="public bool IsDBNull (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDBNull(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataRecord.IsDBNull(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Index des zu suchenden Felds.</param>
+        <summary>Gibt zurück, ob das angegebene Feld auf NULL festgelegt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene Feld auf NULL festgelegt ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode, um festzustellen, ob null-Spaltenwerte vor dem Aufrufen der typisierten Get-Methoden wurden (z. B. <xref:System.Data.SqlClient.SqlDataReader.GetByte%2A>, <xref:System.Data.SqlClient.SqlDataReader.GetChar%2A>usw.) das Auslösen eines Fehlers zu vermeiden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int i] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDataRecord.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der nullbasierte Index der Spalte, die abgerufen werden soll.</param>
+        <summary>Ruft die Spalte ab, die sich am angegebenen Index befindet.</summary>
+        <value>Die Spalte, die sich als <see cref="T:System.Object" /> am angegebenen Index befindet.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDataRecord.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu suchenden Spalte.</param>
+        <summary>Ruft die Spalte mit dem angegebenen Namen ab.</summary>
+        <value>Die Spalte mit dem angegebenen Namen als <see cref="T:System.Object" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Suche Groß-/Kleinschreibung beachtet wird zuerst ausgeführt. Falls dies fehlschlägt, wird eine zweite Suche Groß-und Kleinschreibung hergestellt.  
+  
+ Diese Methode ist die Laufweite von Kana nicht beachtet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Keine Spalte mit dem angegebenen Namen wurde gefunden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

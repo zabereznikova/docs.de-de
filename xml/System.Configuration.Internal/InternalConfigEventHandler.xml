@@ -1,0 +1,30 @@
+<Type Name="InternalConfigEventHandler" FullName="System.Configuration.Internal.InternalConfigEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void InternalConfigEventHandler(object sender, InternalConfigEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed InternalConfigEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Internal.InternalConfigEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Configuration.Internal.InternalConfigEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Das Quellobjekt des Ereignisses.</param>
+    <param name="e">Ein Argument für den Configuration-Ereignis.</param>
+    <summary>Definiert eine Klasse, die von der .NET Framework-Infrastruktur zur Unterstützung von Konfigurationsereignisse verwendet.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+</Type>

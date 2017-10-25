@@ -1,0 +1,176 @@
+<Type Name="GetReferenceAssemblyPaths" FullName="Microsoft.Build.Tasks.GetReferenceAssemblyPaths">
+  <TypeSignature Language="C#" Value="public class GetReferenceAssemblyPaths : Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GetReferenceAssemblyPaths extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.GetReferenceAssemblyPaths" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt das Assemblypfade zu den verschiedenen Frameworks zurück.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetReferenceAssemblyPaths ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der GetReferenceAssemblyPaths-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BypassFrameworkInstallChecks">
+      <MemberSignature Language="C#" Value="public bool BypassFrameworkInstallChecks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BypassFrameworkInstallChecks" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.BypassFrameworkInstallChecks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Schalter der gibt an, ob GetReferenceAssemblyPaths führt einfache Überprüfungen sichergestellt, dass je nachdem das Zielframework bestimmte Common Language Runtime-Frameworks installiert werden.</summary>
+        <value>Gibt "true" zurück, wenn GetReferenceAssemblyPaths einfache Prüfungen nicht ausgeführt werden soll; "false" andernfalls.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wenn der Zielframeworkmoniker festgelegt ist, generieren Sie die richtigen Pfade.</summary>
+        <returns>Gibt True zurück, wenn Pfade generiert wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullFrameworkReferenceAssemblyPaths">
+      <MemberSignature Language="C#" Value="public string[] FullFrameworkReferenceAssemblyPaths { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] FullFrameworkReferenceAssemblyPaths" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.FullFrameworkReferenceAssemblyPaths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Pfade auf Grundlage der übergebenen TargetFrameworkMoniker ohne Berücksichtigung des Profilteils des Monikers ab.</summary>
+        <value>Gibt die Pfade, die basierend auf dem übergebenen TargetFrameworkMoniker, ohne Berücksichtigung des Profilteils des Monikers. Wenn der TargetFrameworkMoniker null oder leer ist werden keine Pfade zurückgegeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferenceAssemblyPaths">
+      <MemberSignature Language="C#" Value="public string[] ReferenceAssemblyPaths { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ReferenceAssemblyPaths" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.ReferenceAssemblyPaths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Pfad, der basierend auf dem übergebenen TargetFrameworkMoniker zurück. Wenn der TargetFrameworkMoniker null oder leer ist. wird dieser Pfad null oder leer sein.</summary>
+        <value>Gibt den Pfad zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootPath">
+      <MemberSignature Language="C#" Value="public string RootPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RootPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.RootPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Stammpfad zum Generieren der Assembly Verweispfad</summary>
+        <value>Gibt den Pfad des Anwendungsstamms zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFrameworkMoniker">
+      <MemberSignature Language="C#" Value="public string TargetFrameworkMoniker { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkMoniker" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen der Verweises Assemblypfade für den Zielframeworkmoniker</summary>
+        <value>Gibt den Zielframeworkmoniker zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFrameworkMonikerDisplayName">
+      <MemberSignature Language="C#" Value="public string TargetFrameworkMonikerDisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkMonikerDisplayName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMonikerDisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Anzeigenamen für den Zielframeworkmoniker.</summary>
+        <value>Gibt den Anzeigenamen für den Zielframeworkmoniker an.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

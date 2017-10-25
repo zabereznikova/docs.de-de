@@ -1,0 +1,140 @@
+<Type Name="DirectoryControl" FullName="System.DirectoryServices.Protocols.DirectoryControl">
+  <TypeSignature Language="C#" Value="public class DirectoryControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DirectoryControl extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.DirectoryControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.DirectoryControl" /> Klasse gibt an, die Erweiterungsdaten für verschiedene LDAP-Vorgänge.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryControl (string type, byte[] value, bool isCritical, bool serverSide);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, unsigned int8[] value, bool isCritical, bool serverSide) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DirectoryControl.#ctor(System.String,System.Byte[],System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="isCritical" Type="System.Boolean" />
+        <Parameter Name="serverSide" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Steuerelementtyp.</param>
+        <param name="value">Der Wert, der dem Steuerelement zugeordnet wird.</param>
+        <param name="isCritical">Gibt an, ob das Steuerelement entscheidend ist. Die Standardeinstellung ist <see langword="true" />.</param>
+        <param name="serverSide">Gibt an, ob dies ein serverseitiges Steuerelement ist.  Die Standardeinstellung ist <see langword="true" />. <see langword="false" />Gibt eine clientseitige Steuerelement an.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.DirectoryControl.#ctor(System.String,System.Byte[],System.Boolean,System.Boolean)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.DirectoryControl" /> -Klasse mit den angegebenen Werten für den Typ, Wert, Gefährlichkeit und serverseitigen Eigenschaften.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" />Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public virtual byte[] GetValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DirectoryControl.GetValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.DirectoryControl.GetValue" /> Methode gibt die Daten, die dem Steuerelement zugeordnet.</summary>
+        <returns>Die Daten, die dem Steuerelement zugeordnet wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCritical">
+      <MemberSignature Language="C#" Value="public bool IsCritical { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCritical" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DirectoryControl.IsCritical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.DirectoryControl.IsCritical" /> Eigenschaft gibt an, ob das Steuerelement entscheidend ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement wichtig ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerSide">
+      <MemberSignature Language="C#" Value="public bool ServerSide { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ServerSide" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DirectoryControl.ServerSide" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.DirectoryControl.ServerSide" /> Eigenschaft gibt an, ob dies ein serverseitiges Steuerelement ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement ein serverseitiges Steuerelement ist. <see langword="false" />Gibt eine clientseitige Steuerelement an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DirectoryControl.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.DirectoryControl.Type" /> Eigenschaft enthält den Objektbezeichner (OID) des Steuerelements.</summary>
+        <value>Die OID des Steuerelements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

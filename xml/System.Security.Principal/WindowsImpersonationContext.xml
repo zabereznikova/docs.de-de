@@ -1,0 +1,161 @@
+<Type Name="WindowsImpersonationContext" FullName="System.Security.Principal.WindowsImpersonationContext">
+  <TypeSignature Language="C#" Value="public class WindowsImpersonationContext : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WindowsImpersonationContext extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Principal.WindowsImpersonationContext" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt den Windows-Benutzer vor dem Identitätswechsel dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird der Identität eines Benutzers zurückgesetzt, nachdem der Benutzer nimmt die Identität eines anderen Benutzers.  
+  
+> [!IMPORTANT]
+>  Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Identität eines Benutzers, und klicken Sie dann auf die ursprüngliche Identität zurücksetzen.  
+  
+ [!code-cpp[WindowsIdentity Impersonation#1](~/samples/snippets/cpp/VS_Snippets_CLR/WindowsIdentity Impersonation/CPP/source.cpp#1)]
+ [!code-csharp[WindowsIdentity Impersonation#1](~/samples/snippets/csharp/VS_Snippets_CLR/WindowsIdentity Impersonation/CS/source.cs#1)]
+ [!code-vb[WindowsIdentity Impersonation#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/WindowsIdentity Impersonation/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Da Microsoft Windows 98 und Windows Millennium Edition-Plattformen nicht Benutzern oder Benutzertoken verfügen, auf diesen Plattformen kein Identitätswechsel möglich.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.WindowsImpersonationContext.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Security.Principal.WindowsImpersonationContext" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Security.Principal.WindowsImpersonationContext.Dispose%2A> auf, wenn Sie <xref:System.Security.Principal.WindowsImpersonationContext> nicht mehr benötigen. Die <xref:System.Security.Principal.WindowsImpersonationContext.Dispose%2A>-Methode bewirkt, dass <xref:System.Security.Principal.WindowsImpersonationContext> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Security.Principal.WindowsImpersonationContext.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.Security.Principal.WindowsImpersonationContext> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Security.Principal.WindowsImpersonationContext> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ **Hinweis:** immer Aufruf <xref:System.Security.Principal.WindowsImpersonationContext.Dispose%2A> , bevor Sie den letzten Verweis auf Freigeben der <xref:System.Security.Principal.WindowsImpersonationContext>. Andernfalls werden die verwendeten Ressourcen reserviert, bis der Garbage Collector Ruft die <xref:System.Security.Principal.WindowsImpersonationContext> des Objekts **Finalize** Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.WindowsImpersonationContext.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Security.Principal.WindowsImpersonationContext" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.Security.Principal.WindowsImpersonationContext> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Undo">
+      <MemberSignature Language="C#" Value="public void Undo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Undo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.WindowsImpersonationContext.Undo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Benutzerkontext auf den Windows-Benutzer zurück, der durch dieses Objekt dargestellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine mithilfe des Tokens für einen angegebenen Benutzer Windows-Benutzeridentität angenommen wird.  
+  
+ [!code-cpp[Classic WindowsImpersonationContext.Undo Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic WindowsImpersonationContext.Undo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WindowsImpersonationContext.Undo Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic WindowsImpersonationContext.Undo Example/CS/source.cs#1)]
+ [!code-vb[Classic WindowsImpersonationContext.Undo Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic WindowsImpersonationContext.Undo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Es wird versucht, diese Methode für einen bestimmten Zweck anders als mit der Identität auf sich selbst zurücksetzen.</exception>
+        <block subset="none" type="overrides">
+          <para>Da Microsoft Windows 98 und Windows Millennium Edition-Plattformen nicht Benutzern oder Benutzertoken verfügen, auf diesen Plattformen kein Identitätswechsel möglich.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

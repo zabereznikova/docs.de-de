@@ -1,0 +1,81 @@
+<Type Name="IHashCodeProvider" FullName="System.Collections.IHashCodeProvider">
+  <TypeSignature Language="C#" Value="public interface IHashCodeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IHashCodeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.IHashCodeProvider" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Please use IEqualityComparer instead.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt einen Hashcode für ein Objekt, das mithilfe einer benutzerdefinierten Hashfunktion.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Collections.IHashCodeProvider> Schnittstelle dient in Verbindung mit der <xref:System.Collections.Hashtable> Klasse. Die Objekte, die als Schlüssel durch eine <xref:System.Collections.Hashtable> Objekt überschreiben, muss die <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> und <xref:System.Object.Equals%2A?displayProperty=nameWithType> Methoden. <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>oder-Implementierung eines Schlüssels <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> wird als der Hashcode-Standardanbieter verwendet. <xref:System.Object.Equals%2A?displayProperty=nameWithType>oder-Implementierung eines Schlüssels <xref:System.Object.Equals%2A?displayProperty=nameWithType> wird als Vergleich verwendet.  
+  
+ Allerdings einige Überladungen der der <xref:System.Collections.Hashtable> -Konstruktor akzeptiert einen Parameter, ist ein <xref:System.Collections.IHashCodeProvider> Implementierung oder ein Parameter einen <xref:System.Collections.IComparer> -Implementierung oder beides. Wenn ein <xref:System.Collections.IHashCodeProvider> Implementierung wird an den Konstruktor übergeben der <xref:System.Collections.IHashCodeProvider.GetHashCode%2A?displayProperty=nameWithType> -Methode dieser Implementierung wird als der Hashcode-Standardanbieter verwendet. Wenn ein <xref:System.Collections.IComparer> Implementierung wird an den Konstruktor übergeben der <xref:System.Collections.IComparer.Compare%2A?displayProperty=nameWithType> , dass diese Implementierung wird als Vergleich verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public int GetHashCode (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetHashCode(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IHashCodeProvider.GetHashCode(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das <see cref="T:System.Object" />, für das ein Hashcode zurückgegeben werden soll.</param>
+        <summary>Gibt einen Hashcode für das angegebene Objekt zurück.</summary>
+        <returns>Ein Hashcode für das angegebene Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert dieser Methode muss zwei Gründen nicht beibehalten werden. Zuerst kann der Hash-Funktion von einer Klasse zur besseren Verteilung, Rendern von Werten aus der alten Hashfunktion nutzlos geändert werden. Zweitens kann die standardmäßige Implementierung dieser Klasse nicht garantiert, dass es sich bei der gleiche Wert von anderen Instanzen zurückgegeben werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Typ des <paramref name="obj" /> einen Referenztyp darstellt und <paramref name="obj" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

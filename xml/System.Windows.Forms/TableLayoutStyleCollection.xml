@@ -1,0 +1,528 @@
+<Type Name="TableLayoutStyleCollection" FullName="System.Windows.Forms.TableLayoutStyleCollection">
+  <TypeSignature Language="C#" Value="public abstract class TableLayoutStyleCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TableLayoutStyleCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TableLayoutStyleCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.StyleCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert die grundlegende Funktionalität für eine Auflistung von Tabellenlayoutstilen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TableLayoutStyleCollection> Klasse stellt die Auflistung aller Stile verwendet, um die Spalten oder Zeilen in einem zugeordneten beschreiben <xref:System.Windows.Forms.TableLayoutPanel>. Abgeleitete Klassen von <xref:System.Windows.Forms.TableLayoutStyleCollection> wurden speziell wie folgt:  
+  
+-   Ein <xref:System.Windows.Forms.TableLayoutColumnStyleCollection> Spaltenstile als eine Auflistung von zusammen <xref:System.Windows.Forms.ColumnStyle> Objekte.  
+  
+-   Ein <xref:System.Windows.Forms.TableLayoutRowStyleCollection> Aggregate Zeilenstile als eine Auflistung von <xref:System.Windows.Forms.RowStyle> Objekte.  
+  
+ Die meisten der Member der <xref:System.Windows.Forms.TableLayoutStyleCollection> sind Implementierungen der <xref:System.Collections.IList>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Windows.Forms.TableLayoutStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Windows.Forms.TableLayoutStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutStyleCollection.Add(System.Windows.Forms.TableLayoutStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Windows.Forms.TableLayoutStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">Das <see cref="T:System.Windows.Forms.TableLayoutStyle" />, das in <see cref="T:System.Windows.Forms.TableLayoutStyleCollection" /> eingefügt werden soll.</param>
+        <summary>Fügt ein neues <see cref="T:System.Windows.Forms.TableLayoutStyle" /> an das Ende der aktuellen Auflistung.</summary>
+        <returns>Die Position, an der das neue Element eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TableLayoutStyleCollection.Add%2A> Methode das Tabellenlayout für alle Steuerelemente in der aktuellen <xref:System.Windows.Forms.TableLayoutPanel> Container.  
+  
+ Die Anzahl der in einer Auflistung gespeicherten Stile wird nur durch den verfügbaren Speicher beschränkt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="style" />ist bereits einem anderen Besitzer zugewiesen. Sie müssen zuerst aus der aktuellen Position zu entfernen oder Klonen Sie sie.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutStyleCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hebt die Zuordnung der Auflistung aus der zugeordneten <see cref="T:System.Windows.Forms.TableLayoutPanel" /> und leert die Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann nicht überschrieben werden.  
+  
+ Die <xref:System.Windows.Forms.TableLayoutStyleCollection.Clear%2A> -Methode führt zwei Hauptaktionen aus:  
+  
+-   Sie hebt die Zuordnung des aktuellen <xref:System.Windows.Forms.TableLayoutStyleCollection> aus seiner <xref:System.Windows.Forms.TableLayoutPanel> Container, damit die Stile länger werden angewendet, um das Layout der Steuerelemente im Bereich enthaltenen. Daher wird das Tabellenlayout für alle Steuerelemente in der Systemsteuerung erneut angewendet.  
+  
+-   Leert die Auflistung aller seiner <xref:System.Windows.Forms.TableLayoutStyle> Objekte. Daher die <xref:System.Windows.Forms.TableLayoutStyleCollection.Count%2A> Eigenschaft auf 0 festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutStyleCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der tatsächlich enthaltenen Formate der <see cref="T:System.Windows.Forms.TableLayoutStyleCollection" />.</summary>
+        <value>Die Anzahl der tatsächlich in enthaltenen Stile der <see cref="T:System.Windows.Forms.TableLayoutStyleCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anzahl der in einer Auflistung gespeicherten Stile wird nur durch den verfügbaren Speicher beschränkt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TableLayoutStyle this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TableLayoutStyle Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutStyleCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index von <see cref="T:System.Windows.Forms.TableLayoutStyle" />, der abgerufen oder festgelegt werden soll.</param>
+        <summary>Ruft ab oder legt ihn fest <see cref="T:System.Windows.Forms.TableLayoutStyle" /> am angegebenen Index.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.TableLayoutStyle" /> am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur eine der abgeleiteten <xref:System.Windows.Forms.TableLayoutStyle> Typen <xref:System.Windows.Forms.ColumnStyle> oder <xref:System.Windows.Forms.RowStyle>, gespeichert werden können, einem <xref:System.Windows.Forms.TableLayoutStyleCollection>.  
+  
+ Eine Instanz eines Stils kann nur einem einzelnen Container zugeordnet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Eigenschaftswert ist bereits ein anderer Besitzer zugewiesen. Sie müssen zuerst aus der aktuellen Position zu entfernen oder Klonen Sie sie.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutStyleCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, der die <see cref="T:System.Windows.Forms.TableLayoutStyle" /> entfernt werden soll.</param>
+        <summary>Entfernt das Format am angegebenen Index der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann nicht überschrieben werden.  
+  
+ Bevor Sie die <xref:System.Windows.Forms.TableLayoutStyle> wird entfernt, es wird aufgehoben seine <xref:System.Windows.Forms.TableLayoutPanel> Container. Daher wird das Tabellenlayout für alle Steuerelemente in der Systemsteuerung erneut angewendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutStyleCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.Collections.ICollection" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="startIndex">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Eine Beschreibung dieser Methode finden Sie in der <see cref="M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.TableLayoutStyleCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutStyleCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieser Methode finden Sie in der <see cref="P:System.Collections.ICollection.IsSynchronized" /> Eigenschaft.</summary>
+        <value>
+          <see langword="true" />, wenn der Zugriff auf das <see cref="T:System.Collections.ICollection" /> synchronisiert (threadsicher) ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.TableLayoutStyleCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutStyleCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieser Methode finden Sie in der <see cref="P:System.Collections.ICollection.SyncRoot" /> Eigenschaft.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Collections.ICollection" /> synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.TableLayoutStyleCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutStyleCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieser Methode finden Sie in der <see cref="M:System.Collections.IEnumerable.GetEnumerator" /> Methode.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.TableLayoutStyleCollection>-Instanz in eine <xref:System.Collections.IEnumerable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object style);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutStyleCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="style">Das <see cref="T:System.Object" />, das in <see cref="T:System.Collections.IList" /> eingefügt werden soll.</param>
+        <summary>Eine Beschreibung dieser Methode finden Sie in der <see cref="M:System.Collections.IList.Add(System.Object)" /> Methode.</summary>
+        <returns>Die Position, an der <paramref name="style" /> eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.TableLayoutStyleCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object style);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutStyleCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="style">Das <see cref="T:System.Object" />, das in der <see cref="T:System.Collections.IList" /> gesucht werden soll.</param>
+        <summary>Eine Beschreibung dieser Methode finden Sie in der <see cref="M:System.Collections.IList.Contains(System.Object)" /> Methode.</summary>
+        <returns>
+          <see langword="true" />, wenn das <paramref name="style" /> in der <see cref="T:System.Collections.IList" /> gefunden wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.TableLayoutStyleCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object style);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutStyleCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="style">Das <see cref="T:System.Object" />, das in der <see cref="T:System.Collections.IList" /> gesucht werden soll.</param>
+        <summary>Eine Beschreibung dieser Methode finden Sie in der <see cref="M:System.Collections.IList.IndexOf(System.Object)" /> Methode.</summary>
+        <returns>Der Index von <paramref name="style" />, wenn das Element in der Liste gefunden wird, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.TableLayoutStyleCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object style);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutStyleCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="style" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Stil</c> eingefügt werden soll.</param>
+        <param name="style">Die <see cref="T:System.Object" /> zum Einfügen in die <see cref="T:System.Collections.IList" />.</param>
+        <summary>Eine Beschreibung dieser Methode finden Sie in der <see cref="M:System.Collections.IList.Insert(System.Int32,System.Object)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.TableLayoutStyleCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="style" />ist bereits einem anderen Besitzer zugewiesen. Sie müssen zuerst aus der aktuellen Position zu entfernen oder Klonen Sie sie.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutStyleCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieser Methode finden Sie in der <see cref="P:System.Collections.IList.IsFixedSize" /> Eigenschaft.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Collections.IList" /> eine feste Größe aufweist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.TableLayoutStyleCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutStyleCollection.System#Collections#IList#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieser Methode finden Sie in der <see cref="P:System.Collections.IList.IsReadOnly" /> Eigenschaft.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Collections.IList" /> schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.TableLayoutStyleCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutStyleCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Elements, das abgerufen oder festgelegt werden soll.</param>
+        <summary>Eine Beschreibung dieser Methode finden Sie in der <see cref="P:System.Collections.IList.Item(System.Int32)" /> Eigenschaft.</summary>
+        <value>Das Element am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.TableLayoutStyleCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object style);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutStyleCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="style">Der <see cref="T:System.Object" />, der aus der <see cref="T:System.Collections.IList" /> entfernt werden soll.</param>
+        <summary>Eine Beschreibung dieser Methode finden Sie in der <see cref="M:System.Collections.IList.Remove(System.Object)" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.TableLayoutStyleCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

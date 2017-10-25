@@ -1,0 +1,30 @@
+<Type Name="IRequiresSessionState" FullName="System.Web.SessionState.IRequiresSessionState">
+  <TypeSignature Language="C#" Value="public interface IRequiresSessionState" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRequiresSessionState" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.IRequiresSessionState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, dass der Ziel-HTTP-Handler Lese- und Schreibzugriff auf Sitzungszustandswerte benötigt. Dies ist eine markerschnittstelle und verfügt über keine Methoden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren der <xref:System.Web.SessionState.IRequiresSessionState> -Schnittstelle in benutzerdefinierten HTTP-Handler, um anzugeben, dass der Handler Lese- und Schreibzugriff auf Sitzungszustandswerte benötigt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel überprüft die aktuelle HTTP <xref:System.Web.HttpContext.Handler%2A> Eigenschaft, um zu bestimmen, ob es sich um Lese- und Schreibzugriff auf Sitzungszustandswerte erfordert.  
+  
+ [!code-csharp[HttpSessionState#32](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpSessionState/CS/snippetscs.aspx#32)]
+ [!code-vb[HttpSessionState#32](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpSessionState/VB/snippetsvb.aspx#32)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

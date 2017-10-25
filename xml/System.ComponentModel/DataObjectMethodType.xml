@@ -1,0 +1,162 @@
+<Type Name="DataObjectMethodType" FullName="System.ComponentModel.DataObjectMethodType">
+  <TypeSignature Language="C#" Value="public enum DataObjectMethodType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataObjectMethodType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataObjectMethodType" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Identifiziert den Typ des von einer Methode, entsprechend den Angaben von ausgeführten Datenvorgang der <see cref="T:System.ComponentModel.DataObjectMethodAttribute" /> an die Methode angewendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie anwenden, die <xref:System.ComponentModel.DataObjectMethodAttribute> auf eine öffentlich verfügbar gemachte Methode und bestimmen Sie den Typ des Datenvorgangs ausgeführt, die auch, ob es sich um den Typ Daten Standardmethode handelt. In diesem Beispiel wird die `NorthwindEmployee` Typ macht zwei verschiedene Methoden verfügbar: eine zum Abrufen von bestimmten Daten, die mit dem Namen `GetAllEmployees`, und eine zum Löschen von Daten mit dem Namen `DeleteEmployeeByID`. Die <xref:System.ComponentModel.DataObjectMethodAttribute> auf beide Methoden angewendet wird.  
+  
+ [!code-csharp[System.ComponentModel.DataObjectMethodAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/CS/dataobjectmethodattribute.cs#3)]
+ [!code-vb[System.ComponentModel.DataObjectMethodAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/VB/dataobjectmethodattribute.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="Delete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataObjectMethodType Delete = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataObjectMethodType.Delete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataObjectMethodType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Methode für einen Datenvorgang verwendet wird, die Daten löscht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="Fill" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataObjectMethodType Fill = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataObjectMethodType.Fill" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataObjectMethodType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Methode für einen Datenvorgang verwendet wird, die füllt eine <see cref="T:System.Data.DataSet" /> Objekt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="Insert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataObjectMethodType Insert = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataObjectMethodType.Insert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataObjectMethodType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Methode für einen Datenvorgang verwendet wird, die Daten einfügt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="Select" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataObjectMethodType Select = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataObjectMethodType.Select" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataObjectMethodType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Methode für einen Datenvorgang verwendet wird, die Daten abruft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="Update" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataObjectMethodType Update = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataObjectMethodType.Update" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataObjectMethodType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Methode für einen Datenvorgang verwendet wird, die Daten aktualisiert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

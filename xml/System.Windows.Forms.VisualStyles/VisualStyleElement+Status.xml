@@ -1,0 +1,35 @@
+<Type Name="VisualStyleElement+Status" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+Status">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.Status" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/Status extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.Status" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Klassen, ermöglichen <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> Objekte für die Teile der Statusleiste. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Status> Klasse bietet eine Grundlage, die in der folgenden Klassen definiert werden:  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Status.Bar>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Status.Gripper>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Status.GripperPane>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Status.Pane>  
+  
+ Jede dieser Klassen stellt eine Eigenschaft, die gibt eine <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für durch den Klassennamen angegebenen Teils der Status.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

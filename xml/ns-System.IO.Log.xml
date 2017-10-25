@@ -1,0 +1,6 @@
+<Namespace Name="System.IO.Log">
+  <Docs>
+    <summary>Der System.IO.Log-Namespace definiert eine Schnittstelle für die Protokollierung, um einen datensatzorientierten sequenzielle e/a-System.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

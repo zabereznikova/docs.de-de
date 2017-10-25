@@ -1,0 +1,140 @@
+<Type Name="IDataGridViewEditingCell" FullName="System.Windows.Forms.IDataGridViewEditingCell">
+  <TypeSignature Language="C#" Value="public interface IDataGridViewEditingCell" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataGridViewEditingCell" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.IDataGridViewEditingCell" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die allgemeine Funktionalität für eine Zelle, die die Manipulation des Objektwerts ermöglicht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle wird von Klassen implementiert, wie z. B. <xref:System.Windows.Forms.DataGridViewCheckBoxCell> , abgeleitet <xref:System.Windows.Forms.DataGridViewCell> und bieten eine Benutzeroberfläche (UI) zum Angeben von Werten ohne ein Bearbeitungssteuerelement gehostet. In diesem Fall wird die Benutzeroberfläche angezeigt, unabhängig davon, ob die Zelle im Bearbeitungsmodus befindet.  
+  
+ Andere Zelle Typen, z. B. <xref:System.Windows.Forms.DataGridViewButtonCell>, stellen eine Benutzeroberfläche bereit, speichern jedoch keine benutzerdefinierten Werte. In diesem Fall der Zellentyp implementiert nicht <xref:System.Windows.Forms.IDataGridViewEditingCell> oder einem Bearbeitungssteuerelement hosten.  
+  
+ Zellentypen, die anzeigen, eine Bearbeitung gesteuert werden, z. B. wenn die Zelle im Bearbeitungsmodus befindet, ist <xref:System.Windows.Forms.DataGridViewTextBoxCell>, implementieren Sie nicht <xref:System.Windows.Forms.IDataGridViewEditingCell> vielmehr eine Begleitklasse, die implementiert <xref:System.Windows.Forms.IDataGridViewEditingControl>. Beispielsweise <xref:System.Windows.Forms.DataGridViewTextBoxCell> bietet eine <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl> abgeleitet, die die <xref:System.Windows.Forms.TextBox> Steuerelement und implementiert <xref:System.Windows.Forms.IDataGridViewEditingControl>. In diesem Fall wird die Zelle <xref:System.Windows.Forms.DataGridViewCell.EditType%2A> -Eigenschaftensatz auf eine <xref:System.Type> Objekt, das den Typ des Bearbeitungssteuerelements darstellt. Informationen zur Implementierung <xref:System.Windows.Forms.IDataGridViewEditingControl>, finden Sie unter [wie: Hosten-Steuerelementen in Windows Forms-DataGridView-Zellen](~/docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EditingCellFormattedValue">
+      <MemberSignature Language="C#" Value="public object EditingCellFormattedValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object EditingCellFormattedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.IDataGridViewEditingCell.EditingCellFormattedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den formatierten Wert der Zelle.</summary>
+        <value>Eine <see cref="T:System.Object" /> , die den Wert der Zelle enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der formatierte Wert stellt den Wert dar, wie er in der Benutzeroberfläche der Zelle angezeigt wird. Der formatierte Wert kann in absoluten Werts und auch des Datentyps der tatsächliche Wert, der in der Zelle enthaltenen sich unterscheiden.  
+  
+ Implementierungen dieser Eigenschaft in der Regel Rückgabewert abgerufen, die durch Aufrufen der <xref:System.Windows.Forms.IDataGridViewEditingCell.GetEditingCellFormattedValue%2A> -Methode und übergeben der <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Formatting> Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingCellValueChanged">
+      <MemberSignature Language="C#" Value="public bool EditingCellValueChanged { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EditingCellValueChanged" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.IDataGridViewEditingCell.EditingCellValueChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Wert der Zelle geändert hat.</summary>
+        <value>
+          <see langword="true" />Wenn sich der Wert der Zelle geändert hat andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird festgelegt, um `true` , um anzugeben, dass der Wert der Zelle geändert wurde und seine Benutzeroberfläche (UI) möglicherweise aktualisiert werden, damit diese Änderung in Werten angezeigt muss. Die besitzende Zelle bzw. Tabelle sollte diese Eigenschaft auf Zurücksetzen `false` nach einem Update.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditingCellFormattedValue">
+      <MemberSignature Language="C#" Value="public object GetEditingCellFormattedValue (System.Windows.Forms.DataGridViewDataErrorContexts context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetEditingCellFormattedValue(valuetype System.Windows.Forms.DataGridViewDataErrorContexts context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataGridViewEditingCell.GetEditingCellFormattedValue(System.Windows.Forms.DataGridViewDataErrorContexts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Windows.Forms.DataGridViewDataErrorContexts" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewDataErrorContexts" /> Werte, die den Kontext angibt, in dem die Daten benötigt werden.</param>
+        <summary>Ruft den formatierten Wert der Zelle ab.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , das die formatierte Version des Zelleninhalts darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der formatierte Wert stellt den Wert dar, wie er in der Benutzeroberfläche der Zelle angezeigt wird. Der formatierte Wert kann in absoluten Werts und auch des Datentyps der tatsächliche Wert, der in der Zelle enthaltenen sich unterscheiden.  
+  
+ Verwenden Sie zum Festlegen des formatierten Wert der Zelle die <xref:System.Windows.Forms.IDataGridViewEditingCell.EditingCellFormattedValue%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareEditingCellForEdit">
+      <MemberSignature Language="C#" Value="public void PrepareEditingCellForEdit (bool selectAll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PrepareEditingCellForEdit(bool selectAll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataGridViewEditingCell.PrepareEditingCellForEdit(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectAll" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="selectAll">
+          <see langword="true" />der Inhalt der Zelle auswählen; andernfalls <see langword="false" />.</param>
+        <summary>Bereitet die derzeit ausgewählte Zelle für die Bearbeitung</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient zum Bearbeiten der Zelle und dessen Inhalt vorbereitet. Sie möchten z. B. die Einfügemarke an das Ende der Zelleninhalt put "oder" ändern, wie der Textinhalt ausgerichtet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

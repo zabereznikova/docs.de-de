@@ -1,0 +1,180 @@
+<Type Name="ToolTipEventArgs" FullName="System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs">
+  <TypeSignature Language="C#" Value="public class ToolTipEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolTipEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwendet als ein Parameterobjekt in der <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText" /> Ereignis des Stamms <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird als verfügbar gemacht der `e` Parameter in der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> Ereignis, und bietet die Maus, Position, QuickInfo-Text, sofern vorhanden, und Details für das Diagrammelement über das der Mauszeiger gehalten werden, wenn das Ereignis ausgelöst wird.  
+  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> Ereignis wird ausgelöst, kurz nachdem der Mauszeiger über einem relevanten Diagrammelement gehalten wird.  
+  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs> Klasse enthält die folgenden Eigenschaften:  
+  
+-   Die <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.X%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.Y%2A> Eigenschaften, die verwendet werden, um die Mauskoordinaten abzurufen.  
+  
+-   Die <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.Text%2A> -Eigenschaft, die verwendet wird, um die QuickInfo für das Diagrammelement abzurufen, die für das Ereignis ausgelöst wird. Beachten Sie, dass viele der Diagrammelemente eine `ToolTip`, `LegendToolTip`, und/oder `LabelToolTip` -Eigenschaft, die Sie verwenden können, um eine QuickInfo zuzuweisen. Diese Elemente enthalten, Legenden, Anmerkungen, Datenpunkte, Reihen, Achsen, Titel, benutzerdefinierte Etiketten und Bereichsstreifen. Diese Eigenschaft kann auch verwendet, um die QuickInfo für ein Diagrammelement zu überschreiben oder eine QuickInfo für ein Diagrammelement festzulegen, die keine `ToolTip` Eigenschaft.  
+  
+-   Die <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.HitTestResult%2A> Eigenschaft, die Informationen für das Diagrammelement bereitstellt, für die das Ereignis ausgelöst wurde.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolTipEventArgs (int x, int y, string text, System.Windows.Forms.DataVisualization.Charting.HitTestResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 x, int32 y, string text, class System.Windows.Forms.DataVisualization.Charting.HitTestResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.#ctor(System.Int32,System.Int32,System.String,System.Windows.Forms.DataVisualization.Charting.HitTestResult)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="result" Type="System.Windows.Forms.DataVisualization.Charting.HitTestResult" />
+      </Parameters>
+      <Docs>
+        <param name="x">X-Koordinate der Maus.</param>
+        <param name="y">Y-Koordinate der Maus.</param>
+        <param name="text">Der QuickInfo-Text.</param>
+        <param name="result">Das <see cref="T:System.Windows.Forms.DataVisualization.Charting.HitTestResult" />-Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs" /> Klasse mit dem angegebenen <paramref name="x" />, <paramref name="y" />, <paramref name="text" /> und <paramref name="result" /> Parameter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTestResult">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.HitTestResult HitTestResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.HitTestResult HitTestResult" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.HitTestResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.HitTestResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Forms.DataVisualization.Charting.HitTestResult" /> Objekt, das Informationen über das Diagrammelement, die bereitstellt die <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText" /> -Ereignis ausgelöst wurde.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.HitTestResult" /> -Objekt, das Informationen für das Element stellt die <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText" /> -Ereignis ausgelöst wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft verfügbar gemacht wird, der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> Ereignis des Stamms <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Objekt.  
+  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.HitTestResult%2A> Eigenschaft kann verwendet werden, um rufen Sie das Objekt, das das Ereignis ausgelöst wurde, für der Typ des Diagrammelements das Ereignis ausgelöst wurde, und so weiter.  Weitere Informationen finden Sie unter der <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult> -Klassenübersicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die QuickInfo, sofern vorhanden, das Diagrammelement über das der Mauszeiger gehalten wird. Diese Eigenschaft kann auch in einer QuickInfo für das Diagrammelement festgelegt.</summary>
+        <value>Ein <see langword="string" /> Wert, der den QuickInfo-Text des Elements darstellt. die <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText" /> -Ereignis ausgelöst wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft verfügbar gemacht wird, der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> Ereignis des Stamms <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Objekt.  
+  
+-   Die <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.Text%2A> -Eigenschaft, die verwendet wird, um die QuickInfo für das Diagrammelement abzurufen, die für das Ereignis ausgelöst wird. Beachten Sie, dass viele der Diagrammelemente eine `ToolTip`, `LegendToolTip`, und/oder `LabelToolTip` -Eigenschaft, die Sie verwenden können, um eine QuickInfo zuzuweisen. Diese Elemente enthalten, Legenden, Anmerkungen, Datenpunkte, Reihen, Achsen, Titel, benutzerdefinierte Etiketten und Bereichsstreifen.  
+  
+-   Wenn diese Eigenschaft abgerufen wird, wird immer eine Zeichenfolge der Länge 0 (null) für alle Diagrammelemente-Element zurückgegeben werden, die nicht in einer QuickInfo verfügen.  
+  
+ Sie können diese Eigenschaft festlegen, um:  
+  
+-   Überschreiben Sie die QuickInfo für eine beliebige der Diagrammelemente QuickInfos zuweisen kann.  
+  
+-   Weisen Sie eine QuickInfo auf ein Diagrammelement, das keine QuickInfos unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public int X { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die X-Koordinate des Punkts, der der Cursor gehalten wird, wenn die <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText" /> Ereignis wird ausgelöst.</summary>
+        <value>Ein <see langword="integer" /> Wert, der die X-Koordinate des Mauszeigers darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft verfügbar gemacht wird, der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> Ereignis des Stamms <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Objekt.  
+  
+ Verwenden der <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.X%2A> Eigenschaft, um der X-Bildschirmkoordinate des Punktes, der den Cursor gehalten wird, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> Ereignis wird ausgelöst.  
+  
+ Beachten Sie, dass die X-Koordinate in Pixel gemessen wird. der Punkt (0,0) entspricht der linken oberen Ecke des Diagramms.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public int Y { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Y-Koordinate des Punkts, der der Cursor gehalten wird, wenn die <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText" /> Ereignis wird ausgelöst.</summary>
+        <value>Ein <see langword="integer" /> , der die Y-Koordinate des Mauszeigers darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft verfügbar gemacht wird, der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> Ereignis des Stamms <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Objekt.  
+  
+ Verwenden der <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.Y%2A> Eigenschaft, um der Y-Bildschirmkoordinate des Punktes, der den Cursor gehalten wird, wenn die <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> Ereignis wird ausgelöst.  
+  
+ Beachten Sie, dass die Y-Koordinate in Pixel gemessen wird. der Punkt (0,0) entspricht der linken oberen Ecke des Diagramms.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

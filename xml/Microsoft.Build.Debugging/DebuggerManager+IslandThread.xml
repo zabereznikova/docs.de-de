@@ -1,0 +1,74 @@
+<Type Name="DebuggerManager+IslandThread" FullName="Microsoft.Build.Debugging.DebuggerManager+IslandThread">
+  <TypeSignature Language="C#" Value="public sealed class DebuggerManager.IslandThread : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed beforefieldinit DebuggerManager/IslandThread extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Debugging.DebuggerManager.IslandThread" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Führt die Inseln auf einem dedizierten Arbeitsthread. Anschließend ordnet den Arbeitsthread physische Aufrufliste zu virtuellen Aufrufliste des Interpreters.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IslandWorker">
+      <MemberSignature Language="C#" Value="public static void IslandWorker (Microsoft.Build.Debugging.DebuggerManager.IslandThread controller);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void IslandWorker(class Microsoft.Build.Debugging.DebuggerManager/IslandThread controller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Debugging.DebuggerManager.IslandThread.IslandWorker(Microsoft.Build.Debugging.DebuggerManager.IslandThread)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controller" Type="Microsoft.Build.Debugging.DebuggerManager+IslandThread" />
+      </Parameters>
+      <Docs>
+        <param name="controller">Der Thread, der den Einstiegspunkt aufrufen.</param>
+        <summary>Private Einstiegspunkt, die von Inseln aufgerufen werden. Müssen öffentlich sein, damit die Inseln aufgerufen werden können. Für den Debuggerarbeitsthread aufgerufen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Debugging.DebuggerManager.IslandThread.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:Microsoft.Build.Debugging.DebuggerManager.IslandThread" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie `Dispose` auf, wenn Sie <xref:Microsoft.Build.Debugging.DebuggerManager.IslandThread> nicht mehr benötigen. Nach dem Aufruf `Dispose`, müssen Sie alle Verweise auf Freigeben der <xref:Microsoft.Build.Debugging.DebuggerManager.IslandThread> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die verwendet wurde.  
+  
+ Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer `Dispose` auf, bevor Sie den letzten Verweis auf das <xref:Microsoft.Build.Debugging.DebuggerManager.IslandThread> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:Microsoft.Build.Debugging.DebuggerManager.IslandThread>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

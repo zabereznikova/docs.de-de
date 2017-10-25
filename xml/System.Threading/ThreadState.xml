@@ -1,0 +1,331 @@
+<Type Name="ThreadState" FullName="System.Threading.ThreadState">
+  <TypeSignature Language="C#" Value="public enum ThreadState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed ThreadState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.ThreadState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Thread</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Ausführungszustände einer <see cref="T:System.Threading.Thread" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.ThreadState> Enumeration ist von Interesse sind nur in einigen Debugszenarien. Der Code sollte den Threadzustand niemals verwenden, zum Synchronisieren der Aktivitäten von Threads.  
+  
+ <xref:System.Threading.ThreadState>definiert einen Satz aller möglichen Ausführungszustände für Threads. Sobald ein Thread erstellt wurde, ist es in mindestens einer der Status, bis er beendet wird. Threads, die innerhalb der common Language Runtime erstellt werden anfänglich in der `Unstarted` Zustand, während die externen Threads, die in die Laufzeit stammen befinden sich bereits in der `Running` Zustand. Ein `Unstarted` Thread Spiegels der `Running` Status durch Aufrufen von <xref:System.Threading.Thread.Start%2A>. Nicht alle Kombinationen von `ThreadState` Werte sind gültig; z. B. ein Thread kann sowohl die `Aborted` und `Unstarted` Status.  
+  
+> [!IMPORTANT]
+>  Es gibt zwei Threads Zustand Enumerationen<xref:System.Threading.ThreadState?displayProperty=nameWithType> und <xref:System.Diagnostics.ThreadState?displayProperty=nameWithType>.  
+  
+ Die folgende Tabelle zeigt die Aktionen, die dazu führen, eine Änderung des Status dass.  
+  
+|Aktion|ThreadState|  
+|------------|-----------------|  
+|Ein Thread wird in der common Language Runtime erstellt.|Nicht gestartete|  
+|Ein anderer Thread Ruft die <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> auf den neuen Thread, und der Aufruf Methodenrückgabe.<br /><br /> Die <xref:System.Threading.Thread.Start%2A> Methode gibt keinen zurück, bis der neue Thread gestartet. Es gibt keine Möglichkeit zu wissen, an welcher Stelle der neue Thread gestartet wird ausgeführt, während des Aufrufs <xref:System.Threading.Thread.Start%2A>.|Wird ausgeführt|  
+|Der Thread Ruft<xref:System.Threading.Thread.Sleep%2A>|WaitSleepJoin|  
+|Der Thread ruft <xref:System.Threading.Monitor.Wait%2A> auf einem anderen Objekt.|WaitSleepJoin|  
+|Der Thread ruft <xref:System.Threading.Thread.Join%2A> in einem anderen Thread.|WaitSleepJoin|  
+|Ein anderer Thread Ruft<xref:System.Threading.Thread.Interrupt%2A>|Wird ausgeführt|  
+|Ein anderer Thread Ruft<xref:System.Threading.Thread.Suspend%2A>|SuspendRequested|  
+|Der Thread reagiert auf eine <xref:System.Threading.Thread.Suspend%2A> Anforderung.|Angehalten|  
+|Ein anderer Thread Ruft<xref:System.Threading.Thread.Resume%2A>|Wird ausgeführt|  
+|Ein anderer Thread Ruft<xref:System.Threading.Thread.Abort%2A>|Status AbortRequested|  
+|Der Thread reagiert auf eine <xref:System.Threading.Thread.Abort%2A> Anforderung.|Beendet|  
+|Ein Thread wird beendet.|Beendet|  
+  
+ Zusätzlich zu den oben aufgeführten Zuständen, es ist auch die `Background` Zustand, der angibt, ob der Thread im Hintergrund oder im Vordergrund ausgeführt wird.  
+  
+ Ein Thread kann in mehreren Status zu einem bestimmten Zeitpunkt. Angenommen, ein Thread blockiert ist, bei einem Aufruf von <xref:System.Threading.Monitor.Wait%2A>, und ein anderer Thread ruft <xref:System.Threading.Thread.Abort%2A> für den blockierten Thread werden sowohl in der blockierte Thread die `WaitSleepJoin` und die `AbortRequested` Zustände gleichzeitig. In diesem Fall ist, sobald der Thread aus dem Aufruf zurückgegeben <xref:System.Threading.Monitor.Wait%2A> oder unterbrochen wird, erhält er die <xref:System.Threading.ThreadAbortException> Abbruch beginnen.  
+  
+ Die <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> Eigenschaft von einem Thread ermöglicht, den aktuellen Status eines Threads. Anwendungen müssen eine Bitmaske verwenden, um zu bestimmen, ob ein Thread ausgeführt wird. Da der Wert für `Running` ist NULL (0), testen, ob ein Thread ausgeführt wird, mithilfe von C#-Code wie z. B. `(myThread.ThreadState & (ThreadState.Stopped | ThreadState.Unstarted)) == 0` oder Visual Basic-Code, z. B. `(myThread.ThreadState And (ThreadState.Stopped Or ThreadState.Unstarted)) = 0`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Aborted">
+      <MemberSignature Language="C#" Value="Aborted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadState Aborted = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadState.Aborted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zustand des Threads enthält <see cref="F:System.Threading.ThreadState.AbortRequested" /> und der Thread ist jetzt deaktiviert, aber der Zustand noch nicht auf geändert hat <see cref="F:System.Threading.ThreadState.Stopped" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AbortRequested">
+      <MemberSignature Language="C#" Value="AbortRequested" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadState AbortRequested = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadState.AbortRequested" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="M:System.Threading.Thread.Abort(System.Object)" /> Methode wurde auf dem Thread aufgerufen, aber der Thread wurde noch nicht empfangen. die ausstehende <see cref="T:System.Threading.ThreadAbortException" /> versucht, die ihn zu beenden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Background">
+      <MemberSignature Language="C#" Value="Background" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadState Background = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadState.Background" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Thread wird als einen Hintergrundthread, im Gegensatz zu einer Vordergrundthread ausgeführt wird. Dieser Status wird gesteuert, indem die <see cref="P:System.Threading.Thread.IsBackground" /> Eigenschaft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Running">
+      <MemberSignature Language="C#" Value="Running" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadState Running = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadState.Running" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Thread gestartet wurde, wird Sie nicht blockiert, und es gibt keine ausstehenden <see cref="T:System.Threading.ThreadAbortException" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stopped">
+      <MemberSignature Language="C#" Value="Stopped" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadState Stopped = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadState.Stopped" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Thread wurde beendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StopRequested">
+      <MemberSignature Language="C#" Value="StopRequested" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadState StopRequested = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadState.StopRequested" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ist eine Anforderung zum Beenden des Threads. Dies ist nur zur internen Verwendung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Suspended">
+      <MemberSignature Language="C#" Value="Suspended" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadState Suspended = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadState.Suspended" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Thread wurde angehalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendRequested">
+      <MemberSignature Language="C#" Value="SuspendRequested" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadState SuspendRequested = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadState.SuspendRequested" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ist eine Anforderung zum Anhalten des Threads.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unstarted">
+      <MemberSignature Language="C#" Value="Unstarted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadState Unstarted = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadState.Unstarted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="M:System.Threading.Thread.Start" /> Methode wurde nicht auf dem Thread aufgerufen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitSleepJoin">
+      <MemberSignature Language="C#" Value="WaitSleepJoin" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadState WaitSleepJoin = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadState.WaitSleepJoin" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Thread blockiert ist. Dies ist das Ergebnis des Aufrufs möglicherweise <see cref="M:System.Threading.Thread.Sleep(System.Int32)" /> oder <see cref="M:System.Threading.Thread.Join" />, für das Anfordern einer Sperre – z. B. durch Aufrufen von <see cref="M:System.Threading.Monitor.Enter(System.Object)" /> oder <see cref="M:System.Threading.Monitor.Wait(System.Object,System.Int32,System.Boolean)" /> – oder auf ein Threadsynchronisierungsobjekt darauf warten, z. B. <see cref="T:System.Threading.ManualResetEvent" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

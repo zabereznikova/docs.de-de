@@ -1,0 +1,337 @@
+<Type Name="EdmRelationshipAttribute" FullName="System.Data.Objects.DataClasses.EdmRelationshipAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EdmRelationshipAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EdmRelationshipAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.EdmRelationshipAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert auf Grundlage einer Zuordnung im konzeptionellen Modell eine Beziehung zwischen zwei Entitätstypen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut wird auf der Assemblyebene mit einer Instanz für jede Zuordnung angewendet. In einer Assembly kann es mehrere Attribute dieses Typs geben.  
+  
+ Die Details für die Rolle eines Entitätstyps in einer bestimmten Beziehung sollten mit der im konzeptionellen Schema definierten Zuordnung übereinstimmen.  
+  
+ Eine Zuordnung definiert keine Reihenfolge für die Rollen nicht. Dies bedeutet, dass die Eigenschaften, die die verknüpften Enden einer Zuordnung zu definieren, die in beliebiger Reihenfolge definiert werden können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EdmRelationshipAttribute (string relationshipNamespaceName, string relationshipName, string role1Name, System.Data.Metadata.Edm.RelationshipMultiplicity role1Multiplicity, Type role1Type, string role2Name, System.Data.Metadata.Edm.RelationshipMultiplicity role2Multiplicity, Type role2Type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string relationshipNamespaceName, string relationshipName, string role1Name, valuetype System.Data.Metadata.Edm.RelationshipMultiplicity role1Multiplicity, class System.Type role1Type, string role2Name, valuetype System.Data.Metadata.Edm.RelationshipMultiplicity role2Multiplicity, class System.Type role2Type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EdmRelationshipAttribute.#ctor(System.String,System.String,System.String,System.Data.Metadata.Edm.RelationshipMultiplicity,System.Type,System.String,System.Data.Metadata.Edm.RelationshipMultiplicity,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="relationshipNamespaceName" Type="System.String" />
+        <Parameter Name="relationshipName" Type="System.String" />
+        <Parameter Name="role1Name" Type="System.String" />
+        <Parameter Name="role1Multiplicity" Type="System.Data.Metadata.Edm.RelationshipMultiplicity" />
+        <Parameter Name="role1Type" Type="System.Type" />
+        <Parameter Name="role2Name" Type="System.String" />
+        <Parameter Name="role2Multiplicity" Type="System.Data.Metadata.Edm.RelationshipMultiplicity" />
+        <Parameter Name="role2Type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="relationshipNamespaceName">Der Name des Namespaces für die Zuordnung, an dem diese Entität teilnimmt.</param>
+        <param name="relationshipName">Der Name einer Beziehung, an der diese Entität teilnimmt.</param>
+        <param name="role1Name">Name der Rolle für den Typ an einem Ende der Zuordnung.</param>
+        <param name="role1Multiplicity">Ein <see cref="T:System.Data.Metadata.Edm.RelationshipMultiplicity" />-Wert, der die Multiplizität an einem Ende der Zuordnung angibt, beispielsweise 1 oder n.</param>
+        <param name="role1Type">Der Typ der Entität an einem Ende der Zuordnung.</param>
+        <param name="role2Name">Name der Rolle für den Typ am anderen Ende der Zuordnung.</param>
+        <param name="role2Multiplicity">Ein Wert von <see cref="T:System.Data.Metadata.Edm.RelationshipMultiplicity" />, der die Multiplizität am anderen Ende der Zuordnung angibt, beispielsweise 1 oder n.</param>
+        <param name="role2Type">Der Typ der Entität am anderen Ende der Zuordnung.</param>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Data.Objects.DataClasses.EdmRelationshipAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `typeof` Operator (`GetType` in Visual Basic) wird zum Zurückgeben der <xref:System.Type> Objekt für ein Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EdmRelationshipAttribute (string relationshipNamespaceName, string relationshipName, string role1Name, System.Data.Metadata.Edm.RelationshipMultiplicity role1Multiplicity, Type role1Type, string role2Name, System.Data.Metadata.Edm.RelationshipMultiplicity role2Multiplicity, Type role2Type, bool isForeignKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string relationshipNamespaceName, string relationshipName, string role1Name, valuetype System.Data.Metadata.Edm.RelationshipMultiplicity role1Multiplicity, class System.Type role1Type, string role2Name, valuetype System.Data.Metadata.Edm.RelationshipMultiplicity role2Multiplicity, class System.Type role2Type, bool isForeignKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EdmRelationshipAttribute.#ctor(System.String,System.String,System.String,System.Data.Metadata.Edm.RelationshipMultiplicity,System.Type,System.String,System.Data.Metadata.Edm.RelationshipMultiplicity,System.Type,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="relationshipNamespaceName" Type="System.String" />
+        <Parameter Name="relationshipName" Type="System.String" />
+        <Parameter Name="role1Name" Type="System.String" />
+        <Parameter Name="role1Multiplicity" Type="System.Data.Metadata.Edm.RelationshipMultiplicity" />
+        <Parameter Name="role1Type" Type="System.Type" />
+        <Parameter Name="role2Name" Type="System.String" />
+        <Parameter Name="role2Multiplicity" Type="System.Data.Metadata.Edm.RelationshipMultiplicity" />
+        <Parameter Name="role2Type" Type="System.Type" />
+        <Parameter Name="isForeignKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="relationshipNamespaceName">Der Name des Namespaces für die Zuordnung, an dem diese Entität teilnimmt.</param>
+        <param name="relationshipName">Der Name einer Beziehung, an der diese Entität teilnimmt.</param>
+        <param name="role1Name">Name der Rolle für den Typ an einem Ende der Zuordnung.</param>
+        <param name="role1Multiplicity">Ein <see cref="T:System.Data.Metadata.Edm.RelationshipMultiplicity" />-Wert, der die Multiplizität an einem Ende der Zuordnung angibt, beispielsweise 1 oder n.</param>
+        <param name="role1Type">Der Typ der Entität an einem Ende der Zuordnung.</param>
+        <param name="role2Name">Name der Rolle für den Typ am anderen Ende der Zuordnung.</param>
+        <param name="role2Multiplicity">Ein Wert von <see cref="T:System.Data.Metadata.Edm.RelationshipMultiplicity" />, der die Multiplizität am anderen Ende der Zuordnung angibt, beispielsweise 1 oder n.</param>
+        <param name="role2Type">Der Typ der Entität am anderen Ende der Zuordnung.</param>
+        <param name="isForeignKey">Ein Wert, der angibt, ob die Beziehung auf den Fremdschlüsselwert basiert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Objects.DataClasses.EdmRelationshipAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsForeignKey">
+      <MemberSignature Language="C#" Value="public bool IsForeignKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsForeignKey" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmRelationshipAttribute.IsForeignKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert, der angibt, ob die Beziehung auf den Fremdschlüsselwert basiert.</summary>
+        <value>
+          <see langword="true" />Wenn die Beziehung auf den Fremdschlüsselwert basiert; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelationshipName">
+      <MemberSignature Language="C#" Value="public string RelationshipName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RelationshipName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmRelationshipAttribute.RelationshipName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Name der Beziehung.</summary>
+        <value>Eine <see cref="T:System.String" />, die den Namen einer Beziehung darstellt, die von diesem <see cref="T:System.Data.Objects.DataClasses.EdmRelationshipAttribute" /> definiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name der Beziehung wird angegeben, durch die `Name` Attribut des der `Association` Element, das diese Beziehung im konzeptionellen Modell definiert. Weitere Informationen finden Sie unter [CSDL, SSDL- und MSL-Spezifikationen](~/docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelationshipNamespaceName">
+      <MemberSignature Language="C#" Value="public string RelationshipNamespaceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RelationshipNamespaceName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmRelationshipAttribute.RelationshipNamespaceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Namespace für die Beziehung.</summary>
+        <value>Eine <see cref="T:System.String" />, die den Namespace für die Beziehung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Namespace der Beziehung wird angegeben, indem die `Namespace` Attribut von der `Schema` Element, die Zuordnung enthält, das diese Beziehung im konzeptionellen Modell definiert. Weitere Informationen finden Sie unter [CSDL, SSDL- und MSL-Spezifikationen](~/docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role1Multiplicity">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.RelationshipMultiplicity Role1Multiplicity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Metadata.Edm.RelationshipMultiplicity Role1Multiplicity" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmRelationshipAttribute.Role1Multiplicity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.RelationshipMultiplicity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Multiplizität an einem Ende der Beziehung.</summary>
+        <value>Ein <see cref="T:System.Data.Metadata.Edm.RelationshipMultiplicity" />-Wert, der die Multiplizität angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaften, die die verknüpften Enden einer Zuordnung zu definieren, können in beliebiger Reihenfolge definiert werden.  
+  
+ Die Multiplizität wird angegeben, indem die `Multiplicity` Attribut von der `End` Element in der Zuordnung, die diese Beziehung im konzeptionellen Modell definiert. Weitere Informationen finden Sie unter [CSDL, SSDL- und MSL-Spezifikationen](~/docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role1Name">
+      <MemberSignature Language="C#" Value="public string Role1Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Role1Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmRelationshipAttribute.Role1Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Name der Rolle an einem Ende der Beziehung.</summary>
+        <value>Eine <see cref="T:System.String" />, die den Namen der Rolle darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rollenname wird angegeben, indem die `Role` Attribut von der `End` Element in der Zuordnung, die diese Beziehung im konzeptionellen Modell definiert. Weitere Informationen finden Sie unter [CSDL, SSDL- und MSL-Spezifikationen](~/docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role1Type">
+      <MemberSignature Language="C#" Value="public Type Role1Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Role1Type" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmRelationshipAttribute.Role1Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Typ der Entität an einem Ende der Beziehung.</summary>
+        <value>Ein <see cref="T:System.Type" />, der den Typ des Objekts an diesem Ende der Zuordnung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaften, die die verknüpften Enden einer Zuordnung zu definieren, können in beliebiger Reihenfolge definiert werden.  
+  
+ Der Typname wird angegeben, durch die `Type` Attribut von der `End` Element in der Zuordnung, die diese Beziehung im konzeptionellen Modell definiert. Weitere Informationen finden Sie unter [CSDL, SSDL- und MSL-Spezifikationen](~/docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role2Multiplicity">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.RelationshipMultiplicity Role2Multiplicity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Metadata.Edm.RelationshipMultiplicity Role2Multiplicity" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmRelationshipAttribute.Role2Multiplicity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.RelationshipMultiplicity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Multiplizität am anderen Ende der Beziehung.</summary>
+        <value>Ein <see cref="T:System.Data.Metadata.Edm.RelationshipMultiplicity" />-Wert, der die Multiplizität angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaften, die die verknüpften Enden einer Zuordnung zu definieren, können in beliebiger Reihenfolge definiert werden.  
+  
+ Die Multiplizität wird angegeben, indem die `Multiplicity` Attribut von der `End` Element in der Zuordnung, die diese Beziehung im konzeptionellen Modell definiert. Weitere Informationen finden Sie unter [CSDL, SSDL- und MSL-Spezifikationen](~/docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role2Name">
+      <MemberSignature Language="C#" Value="public string Role2Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Role2Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmRelationshipAttribute.Role2Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Name der Rolle am anderen Ende der Beziehung.</summary>
+        <value>Eine <see cref="T:System.String" />, die den Namen der Rolle darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaften, die die verknüpften Enden einer Zuordnung zu definieren, können in beliebiger Reihenfolge definiert werden.  
+  
+ Der Rollenname wird angegeben, indem die `Role` Attribut von der `End` Element in der Zuordnung, die diese Beziehung im konzeptionellen Modell definiert. Weitere Informationen finden Sie unter [CSDL, SSDL- und MSL-Spezifikationen](~/docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role2Type">
+      <MemberSignature Language="C#" Value="public Type Role2Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Role2Type" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmRelationshipAttribute.Role2Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Typ der Entität am anderen Ende der Beziehung.</summary>
+        <value>Ein <see cref="T:System.Type" />, der den Typ des Objekts am anderen Ende der Zuordnung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaften, die die verknüpften Enden einer Zuordnung zu definieren, können in beliebiger Reihenfolge definiert werden.  
+  
+ Der Typname wird angegeben, durch die `Type` Attribut von der `End` Element in der Zuordnung, die diese Beziehung im konzeptionellen Modell definiert. Weitere Informationen finden Sie unter [CSDL, SSDL- und MSL-Spezifikationen](~/docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

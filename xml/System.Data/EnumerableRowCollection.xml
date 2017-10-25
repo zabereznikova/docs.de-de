@@ -1,0 +1,58 @@
+<Type Name="EnumerableRowCollection" FullName="System.Data.EnumerableRowCollection">
+  <TypeSignature Language="C#" Value="public abstract class EnumerableRowCollection : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EnumerableRowCollection extends System.Object implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.EnumerableRowCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Data.DataRow" /> aus einer LINQ to DataSet-Abfrage zurückgegebenen Objekte. Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.EnumerableRowCollection>Stellt einen Einstiegspunkt, sodass der Umwandlungsvorgang innerhalb einer Erweiterungsmethode abgefangen werden kann. Die abgeleitete generische Klasse <xref:System.Data.EnumerableRowCollection%601> wird tatsächlich von .NET Framework verwendet, um die Ergebnisse einer Abfrage enthalten.  
+  
+ Diese Klasse kann nicht instanziiert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator für die Auflistung der <see cref="T:System.Data.DataRow" /> Objekte. Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> , die verwendet werden kann, durchläuft die Auflistung der <see cref="T:System.Data.DataRow" /> Objekte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die standardmäßige Implementierung immer `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,68 @@
+<Type Name="MouseEventHandler" FullName="System.Windows.Input.MouseEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void MouseEventHandler(object sender, MouseEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MouseEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.MouseEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Das Objekt, an das der Ereignishandler angefügt ist.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt die Methode für die Behandlung Maus bezogene Routingereignisse, die nicht spezifisch Maustasten oder das Mausrad beinhalten; beispielsweise <see cref="E:System.Windows.UIElement.MouseMove" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat wird mit den folgenden angefügten Ereignissen verwendet:  
+  
+-   <xref:System.Windows.Input.Mouse.GotMouseCapture?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Mouse.LostMouseCapture?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Mouse.MouseEnter?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Mouse.MouseLeave?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Mouse.MouseMove?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Mouse.PreviewMouseMove?displayProperty=nameWithType>  
+  
+ Dieser Delegat wird mit den folgenden Routingereignissen verwendet. Diese weitergeleitete Ereignisse weiterleiten, die zuvor aufgelisteten angefügte Ereignisse damit diese mehr zugegriffen werden kann, das Modell der allgemeinen Element im [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)].  
+  
+-   <xref:System.Windows.UIElement.MouseEnter?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.MouseLeave?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.MouseMove?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewMouseMove?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.MouseEnter?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.MouseLeave?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.MouseMove?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewMouseMove?displayProperty=nameWithType>  
+  
+ Angefügte Ereignisse und die Ereignisse weitergeleitet Basiselement nutzen ihre Ereignisdaten und die bubbling und tunneling-Versionen Routingereignisse Ereignisdaten auch freigeben. Dies kann die behandelten Eigenschaften des Ereignisses beeinträchtigen, während der Übertragung der Ereignisroute. Weitere Informationen finden Sie unter [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ Außer der <xref:System.Windows.RoutedEventArgs> Eigenschaften, die für alle Routingereignisse, die nützlichsten Eigenschaften der relevant sind <xref:System.Windows.Input.MouseEventArgs> , mit denen Sie möglicherweise einer <xref:System.Windows.Input.MouseEventHandler> Implementierung sind verschiedene Eigenschaften, die den aktuellen Zustand der Schaltfläche, z. B. verfügbarmachen.<xref:System.Windows.Input.MouseEventArgs.LeftButton%2A> und <xref:System.Windows.Input.MouseEventArgs.MouseDevice%2A>. <xref:System.Windows.Input.MouseEventArgs.MouseDevice%2A>eignet sich besonders, da Sie überprüfen können <xref:System.Windows.Input.MouseDevice.Captured%2A> darauf.  
+  
+ Beachten Sie, dass die Ereignisse, die speziell mit Mausereignisse-Schaltfläche ein anderes Delegaten verwenden <xref:System.Windows.Input.MouseButtonEventHandler>. Die Maus Schaltflächeneigenschaften stehen für <xref:System.Windows.Input.MouseEventArgs> für den Fall, dass Eingabemodus oder Interaktionen, die die Schaltflächen einschließen, auch wenn Sie ein Ereignis nicht Schaltfläche verarbeiten vorhanden sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

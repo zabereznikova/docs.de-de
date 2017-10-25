@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Linq.SqlClient.Implementation">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.Linq.SqlClient.Implementation" /> -Namespace enthält Typen, die für die interne Implementierungsdetails werden von SQL Server-Anbieter verwendet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

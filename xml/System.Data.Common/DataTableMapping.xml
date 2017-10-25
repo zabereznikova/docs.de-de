@@ -1,0 +1,557 @@
+<Type Name="DataTableMapping" FullName="System.Data.Common.DataTableMapping">
+  <TypeSignature Language="C#" Value="public sealed class DataTableMapping : MarshalByRefObject, ICloneable, System.Data.ITableMapping" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataTableMapping extends System.MarshalByRefObject implements class System.Data.ITableMapping, class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.DataTableMapping" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.ITableMapping</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.Common.DataTableMapping/DataTableMappingConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält eine Beschreibung einer zugeordneten Beziehung zwischen einer Quelltabelle und einer <see cref="T:System.Data.DataTable" />. Diese Klasse wird von einem <see cref="T:System.Data.Common.DataAdapter" /> verwendet, wenn ein <see cref="T:System.Data.DataSet" /> aufgefüllt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Data.Common.DataTableMapping> bietet eine master-Zuordnung zwischen den Daten aus einer Abfrage für eine Datenquelle zurückgegeben und ein <xref:System.Data.DataTable>. Die <xref:System.Data.Common.DataTableMapping> Name übergeben werden kann, anstelle von der <xref:System.Data.DataTable> -Namens an die `Fill` Methode der **"DataAdapter"**. Weitere Informationen finden Sie unter [DataAdapter DataTable- und DataColumn-Zuordnungen](~/docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.Common.DataTableMapping> -Objekt und fügt es einer <xref:System.Data.Common.DataTableMappingCollection>. Anschließend wird dem Benutzer darüber informiert, dass die Zuordnung der Auflistung hinzugefügt wurde und die übergeordnete Zuordnung zeigt.  
+  
+ [!code-csharp[Classic WebData DataTableMapping Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableMapping Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableMapping Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableMapping Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataTableMapping ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataTableMapping.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Common.DataTableMapping" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.Common.DataTableMapping> Objekt.  
+  
+ [!code-csharp[Classic WebData DataTableMapping.DataTableMapping Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.DataTableMapping Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableMapping.DataTableMapping Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.DataTableMapping Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataTableMapping (string sourceTable, string dataSetTable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sourceTable, string dataSetTable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataTableMapping.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceTable" Type="System.String" />
+        <Parameter Name="dataSetTable" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceTable">Die Groß-/Kleinschreibung Quelltabellenname aus einer Datenquelle.</param>
+        <param name="dataSetTable">Der Tabellenname aus einem <see cref="T:System.Data.DataSet" /> zuordnen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.Common.DataTableMapping" /> -Klasse mit einer Quelle, wenn kein Quelltabellenname angegeben und <see cref="T:System.Data.DataTable" /> Name.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.Common.DataTableMapping> -Objekt und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData DataTableMapping.DataTableMapping1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.DataTableMapping1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableMapping.DataTableMapping1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.DataTableMapping1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataTableMapping (string sourceTable, string dataSetTable, System.Data.Common.DataColumnMapping[] columnMappings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sourceTable, string dataSetTable, class System.Data.Common.DataColumnMapping[] columnMappings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataTableMapping.#ctor(System.String,System.String,System.Data.Common.DataColumnMapping[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceTable" Type="System.String" />
+        <Parameter Name="dataSetTable" Type="System.String" />
+        <Parameter Name="columnMappings" Type="System.Data.Common.DataColumnMapping[]" />
+      </Parameters>
+      <Docs>
+        <param name="sourceTable">Die Groß-/Kleinschreibung Quelltabellenname aus einer Datenquelle.</param>
+        <param name="dataSetTable">Der Tabellenname aus einem <see cref="T:System.Data.DataSet" /> zuordnen.</param>
+        <param name="columnMappings">Ein Array von <see cref="T:System.Data.Common.DataColumnMapping" />-Objekten.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Data.Common.DataTableMapping" /> Klasse, sofern kein Quelltabellenname einer <see cref="T:System.Data.DataTable" /> Name und ein Array von <see cref="T:System.Data.Common.DataColumnMapping" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.Common.DataTableMapping> Objekt, legt einige seiner Eigenschaften und Kopien seiner <xref:System.Data.Common.DataTableMapping.ColumnMappings%2A> in ein Array. In diesem Beispiel wird vorausgesetzt, dass eine <xref:System.Data.Common.DataColumnMappingCollection> erstellt wurde.  
+  
+ [!code-csharp[Classic WebData DataTableMapping.DataTableMapping2 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.DataTableMapping2 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableMapping.DataTableMapping2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.DataTableMapping2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnMappings">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DataColumnMappingCollection ColumnMappings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DataColumnMappingCollection ColumnMappings" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DataTableMapping.ColumnMappings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DataColumnMappingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Data.Common.DataColumnMappingCollection" /> für den <see cref="T:System.Data.DataTable" /> ab.</summary>
+        <value>Eine Auflistung der Daten Spalte-Zuordnung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.Common.DataTableMapping> Objekt, legt einige seiner Eigenschaften und Kopien seiner <xref:System.Data.Common.DataTableMapping.ColumnMappings%2A> in ein Array. In diesem Beispiel wird vorausgesetzt, dass eine <xref:System.Data.Common.DataColumnMappingCollection> erstellt wurde.  
+  
+ [!code-csharp[Classic WebData DataTableMapping.ColumnMappings Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.ColumnMappings Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableMapping.ColumnMappings Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.ColumnMappings Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSetTable">
+      <MemberSignature Language="C#" Value="public string DataSetTable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSetTable" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DataTableMapping.DataSetTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Tabellennamen aus einer <see cref="T:System.Data.DataSet" />.</summary>
+        <value>Der Tabellenname aus einem <see cref="T:System.Data.DataSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.Common.DataTableMapping> -Objekt und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData DataTableMapping.DataSetTable Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.DataSetTable Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableMapping.DataSetTable Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.DataSetTable Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnMappingBySchemaAction">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DataColumnMapping GetColumnMappingBySchemaAction (string sourceColumn, System.Data.MissingMappingAction mappingAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Common.DataColumnMapping GetColumnMappingBySchemaAction(string sourceColumn, valuetype System.Data.MissingMappingAction mappingAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataTableMapping.GetColumnMappingBySchemaAction(System.String,System.Data.MissingMappingAction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DataColumnMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceColumn" Type="System.String" />
+        <Parameter Name="mappingAction" Type="System.Data.MissingMappingAction" />
+      </Parameters>
+      <Docs>
+        <param name="sourceColumn">Der Name des <see cref="T:System.Data.DataColumn" />.</param>
+        <param name="mappingAction">Einer der <see cref="T:System.Data.MissingMappingAction" />-Werte.</param>
+        <summary>Ruft eine <see cref="T:System.Data.DataColumn" /> aus dem angegebenen <see cref="T:System.Data.DataTable" /> unter Verwendung des angegebenen <see cref="T:System.Data.MissingMappingAction" /> Wert und den Namen der <see cref="T:System.Data.DataColumn" />.</summary>
+        <returns>Eine Datenspalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Data.Common.DataColumnMapping> vorhanden ist, wird diese zurückgegeben.  
+  
+ Wenn die <xref:System.Data.Common.DataColumnMapping> nicht vorhanden ist, für einen bestimmten <xref:System.Data.MissingMappingAction>, die folgenden Aktionen ausgeführt:  
+  
+|MissingMappingAction|Aktion|  
+|--------------------------|------------------|  
+|`Passthrough`|Erstellt eine <xref:System.Data.Common.DataColumnMapping> mit den angegebenen Quellspaltennamen als sowohl der Name der Quellspalte und die <xref:System.Data.DataSet> Spaltenname. Dies <xref:System.Data.Common.DataColumnMapping> nicht aus der Teamprojektsammlung hinzugefügt.|  
+|`Error`|Ein <xref:System.InvalidOperationException> wird generiert, wenn die angegebene Spalte-Zuordnung nicht vorhanden ist.|  
+|`Ignore`|Ruft einen null-Wert.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <paramref name="mappingAction" /> Parametersatz wurde um <see langword="Error" />, und es wurde keine Zuordnung angegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataColumn">
+      <MemberSignature Language="C#" Value="public System.Data.DataColumn GetDataColumn (string sourceColumn, Type dataType, System.Data.DataTable dataTable, System.Data.MissingMappingAction mappingAction, System.Data.MissingSchemaAction schemaAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataColumn GetDataColumn(string sourceColumn, class System.Type dataType, class System.Data.DataTable dataTable, valuetype System.Data.MissingMappingAction mappingAction, valuetype System.Data.MissingSchemaAction schemaAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataTableMapping.GetDataColumn(System.String,System.Type,System.Data.DataTable,System.Data.MissingMappingAction,System.Data.MissingSchemaAction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataColumn</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceColumn" Type="System.String" />
+        <Parameter Name="dataType" Type="System.Type" />
+        <Parameter Name="dataTable" Type="System.Data.DataTable" />
+        <Parameter Name="mappingAction" Type="System.Data.MissingMappingAction" />
+        <Parameter Name="schemaAction" Type="System.Data.MissingSchemaAction" />
+      </Parameters>
+      <Docs>
+        <param name="sourceColumn">Der Name des <see cref="T:System.Data.DataColumn" />.</param>
+        <param name="dataType">Der Datentyp für <c>SourceColumn</c>.</param>
+        <param name="dataTable">Der Tabellenname aus einem <see cref="T:System.Data.DataSet" /> zuordnen.</param>
+        <param name="mappingAction">Einer der <see cref="T:System.Data.MissingMappingAction" />-Werte.</param>
+        <param name="schemaAction">Einer der <see cref="T:System.Data.MissingSchemaAction" />-Werte.</param>
+        <summary>Gibt eine <see cref="T:System.Data.DataColumn" /> Objekt für einen angegebenen Spaltennamen.</summary>
+        <returns>Ein <see cref="T:System.Data.DataColumn" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataTableBySchemaAction">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable GetDataTableBySchemaAction (System.Data.DataSet dataSet, System.Data.MissingSchemaAction schemaAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataTable GetDataTableBySchemaAction(class System.Data.DataSet dataSet, valuetype System.Data.MissingSchemaAction schemaAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataTableMapping.GetDataTableBySchemaAction(System.Data.DataSet,System.Data.MissingSchemaAction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSet" Type="System.Data.DataSet" />
+        <Parameter Name="schemaAction" Type="System.Data.MissingSchemaAction" />
+      </Parameters>
+      <Docs>
+        <param name="dataSet">Die <see cref="T:System.Data.DataSet" /> aus dem Abrufen der <see cref="T:System.Data.DataTable" />.</param>
+        <param name="schemaAction">Einer der <see cref="T:System.Data.MissingSchemaAction" />-Werte.</param>
+        <summary>Ruft die aktuellen <see cref="T:System.Data.DataTable" /> für den angegebenen <see cref="T:System.Data.DataSet" /> unter Verwendung des angegebenen <see cref="T:System.Data.MissingSchemaAction" /> Wert.</summary>
+        <returns>Eine Datentabelle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Data.DataTable> ist nicht vorhanden, den angegebenen <xref:System.Data.MissingSchemaAction> stammt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataTable> für einen bestimmten <xref:System.Data.DataSet>. Wenn es keine aktuelle Tabelle für die <xref:System.Data.DataSet>, `null` wird zurückgegeben. In diesem Beispiel wird vorausgesetzt, dass ein <xref:System.Data.DataSet> und eine <xref:System.Data.Common.DataTableMappingCollection> Auflistung erstellt wurden.  
+  
+ [!code-csharp[Classic WebData DataTableMapping.GetDataTableBySchemaAction Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.GetDataTableBySchemaAction Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableMapping.GetDataTableBySchemaAction Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.GetDataTableBySchemaAction Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceTable">
+      <MemberSignature Language="C#" Value="public string SourceTable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceTable" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DataTableMapping.SourceTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Groß-/Kleinschreibung Quelltabellenname aus einer Datenquelle.</summary>
+        <value>Die Groß-/Kleinschreibung Quelltabellenname aus einer Datenquelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.Common.DataTableMapping> -Objekt und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData DataTableMapping.DataSetTable Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.DataSetTable Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableMapping.DataSetTable Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.DataSetTable Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.ITableMapping.ColumnMappings">
+      <MemberSignature Language="C#" Value="System.Data.IColumnMappingCollection System.Data.ITableMapping.ColumnMappings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IColumnMappingCollection System.Data.ITableMapping.ColumnMappings" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DataTableMapping.System#Data#ITableMapping#ColumnMappings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IColumnMappingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die abgeleitete <see cref="T:System.Data.Common.DataColumnMappingCollection" /> für die <see cref="T:System.Data.DataTable" />.</summary>
+        <value>Eine Auflistung der Daten Spalte-Zuordnung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DataTableMapping>-Instanz in eine <xref:System.Data.ITableMapping>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Data.ITableMapping.ColumnMappings%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataTableMapping.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt, das eine Kopie der aktuellen Instanz darstellt.</summary>
+        <returns>Ein neues Objekt, das eine Kopie der aktuellen Instanz darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DataTableMapping>-Instanz in eine <xref:System.ICloneable>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.ICloneable.Clone%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DataTableMapping.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert das aktuelle <see cref="P:System.Data.Common.DataTableMapping.SourceTable" /> Name in eine Zeichenfolge.</summary>
+        <returns>Die aktuelle <see cref="P:System.Data.Common.DataTableMapping.SourceTable" /> Name als Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.Common.DataTableMapping> -Objekt und fügt es einer <xref:System.Data.Common.DataTableMappingCollection> Auflistung. Anschließend wird dem Benutzer darüber informiert, dass die Zuordnung der Auflistung hinzugefügt wurde und die übergeordnete Zuordnung zeigt.  
+  
+ [!code-csharp[Classic WebData DataTableMapping.ToString Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.ToString Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableMapping.ToString Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.ToString Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

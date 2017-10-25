@@ -1,0 +1,296 @@
+<Type Name="ChineseLunisolarCalendar" FullName="System.Globalization.ChineseLunisolarCalendar">
+  <TypeSignature Language="C#" Value="public class ChineseLunisolarCalendar : System.Globalization.EastAsianLunisolarCalendar" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ChineseLunisolarCalendar extends System.Globalization.EastAsianLunisolarCalendar" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.ChineseLunisolarCalendar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization.Calendars</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Globalization.EastAsianLunisolarCalendar</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Zeit in Abschnitten, z. B. Monate, Tage und Jahre. Jahre werden unter Verwendung des chinesischen Kalenders, Tage und Monate berechnet werden mit dem Mond-Sonne-Kalender berechnet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.ChineseLunisolarCalendar> von abgeleitete Klasse die <xref:System.Globalization.EastAsianLunisolarCalendar> Klasse, die den Mond-Sonne-Kalender darstellt. Die <xref:System.Globalization.EastAsianLunisolarCalendar> Klasse unterstützt den Zyklus des sexagenary Jahr (der alle 60 Jahre wiederholt), zusätzlich zu den Sonnenjahr und Monate nach Mondkalender. Jedes Sonnenjahr im Kalender ein Sexagenary Jahr, einen Astronomischer Stamm und einem Erdzweig zugeordnet ist können, und diesen Kalendern enthaltenen Leap Monate nach jedem Monat des Jahres. Die <xref:System.Globalization.ChineseLunisolarCalendar> -Klasse berechnet Jahresangaben Sonne und Monate und Tage auf Mondkalender Berechnungen basieren.  
+  
+> [!NOTE]
+>  Informationen zum Verwenden der <xref:System.Globalization.ChineseLunisolarCalendar> Klasse und der andere Klassen in .NET Framework "Kalender", finden Sie unter [arbeiten mit Kalendern](~/docs/standard/datetime/working-with-calendars.md).  
+  
+ Ein Schaltmonat kann nach einem beliebigen Monat eines Jahres auftreten. Z. B. die <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%2A> Methode gibt eine Zahl zwischen 1 und 13, der den einem bestimmten Datum zugeordneten Monat angibt. Wenn ein Schaltmonat zwischen dem achten und neunten Monate des Jahres, besteht die <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%2A> Methodenrückgabe 8 für den achten Monat, 9 für den Schaltmonat und 10 für den neunten Monat.  
+  
+ Derzeit ist der <xref:System.Globalization.ChineseLunisolarCalendar> wird nicht von einer der vom unterstützten Kulturen verwendet die <xref:System.Globalization.CultureInfo> Klasse. Daher kann diese Klasse verwendet werden, nur für die Datumsangaben im chinesischen Mond-Sonne-Kalender berechnet.  
+  
+ Jede <xref:System.Globalization.CultureInfo> Objekt unterstützt einen Satz von Kalendern. Die <xref:System.Globalization.CultureInfo.Calendar%2A> Eigenschaft gibt den Standardkalender für die Kultur und die <xref:System.Globalization.CultureInfo.OptionalCalendars%2A> Eigenschaft gibt ein Array mit allen Kalendern, die von der Kultur unterstützt. So ändern Sie den verwendeten Kalender ein <xref:System.Globalization.CultureInfo>, sollte die Anwendung Festlegen der <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> Eigenschaft <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> in ein neues <xref:System.Globalization.Calendar>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChineseLunisolarCalendar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ChineseLunisolarCalendar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Globalization.ChineseLunisolarCalendar" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChineseEra">
+      <MemberSignature Language="C#" Value="public const int ChineseEra = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ChineseEra = (1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.ChineseLunisolarCalendar.ChineseEra" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Gibt den Zeitraum, der die aktuelle entspricht <see cref="T:System.Globalization.ChineseLunisolarCalendar" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieses Felds ist 1.  
+  
+ Die <xref:System.Globalization.ChineseLunisolarCalendar> Klasse umfasst nur den aktuellen Zeitraum.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DaysInYearBeforeMinSupportedYear">
+      <MemberSignature Language="C#" Value="protected override int DaysInYearBeforeMinSupportedYear { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DaysInYearBeforeMinSupportedYear" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.ChineseLunisolarCalendar.DaysInYearBeforeMinSupportedYear" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Tage im Jahr, die das Jahr vor, die von angegeben wird die <see cref="P:System.Globalization.ChineseLunisolarCalendar.MinSupportedDateTime" /> Eigenschaft.</summary>
+        <value>Die Anzahl der Tage im Jahr, der vom angegebenen Jahr vorausgeht <see cref="P:System.Globalization.ChineseLunisolarCalendar.MinSupportedDateTime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt einen konstanten Wert von 384 zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eras">
+      <MemberSignature Language="C#" Value="public override int[] Eras { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] Eras" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.ChineseLunisolarCalendar.Eras" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeiträume, die auf den Bereich von Datums- und Zeitangaben, die vom aktuellen unterstützt entsprechen <see cref="T:System.Globalization.ChineseLunisolarCalendar" /> Objekt.</summary>
+        <value>Ein Array von 32-Bit-Ganzzahlen mit Vorzeichen, die die relevanten Zeiträume angeben. Der Rückgabewert für eine <see cref="T:System.Globalization.ChineseLunisolarCalendar" /> Objekt ist immer ein Array mit einem Element, das <see cref="F:System.Globalization.ChineseLunisolarCalendar.ChineseEra" /> Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEra">
+      <MemberSignature Language="C#" Value="public override int GetEra (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetEra(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ChineseLunisolarCalendar.GetEra(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Die <see cref="T:System.DateTime" /> Typ der zu lesenden.</param>
+        <summary>Ruft den Zeitraum, der dem angegebenen entspricht <see cref="T:System.DateTime" /> Typ.</summary>
+        <returns>Eine ganze Zahl, die für den Zeitraum in der <paramref name="time" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="time" /> ist kleiner als <see cref="P:System.Globalization.ChineseLunisolarCalendar.MinSupportedDateTime" /> oder größer als <see cref="P:System.Globalization.ChineseLunisolarCalendar.MaxSupportedDateTime" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSupportedDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime MaxSupportedDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MaxSupportedDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.ChineseLunisolarCalendar.MaxSupportedDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximalen Datums- und Uhrzeitangaben, die von unterstützt die <see cref="T:System.Globalization.ChineseLunisolarCalendar" /> Klasse.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> Typ, der den letzten Moment 28. Januar 2101 im gregorianischen Kalender darstellt <c>"DateTime" (2101, 1, 28, 23, 59, 59, 999)</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinSupportedDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime MinSupportedDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MinSupportedDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.ChineseLunisolarCalendar.MinSupportedDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das kleinstmögliche Datum und die Uhrzeit, die von unterstützt die <see cref="T:System.Globalization.ChineseLunisolarCalendar" /> Klasse.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> Typ, der 19. Februar 1901 im gregorianischen Kalender darstellt, die an den Konstruktor entspricht <c>"DateTime" (1901, 2, 19)</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

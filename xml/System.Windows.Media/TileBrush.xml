@@ -1,0 +1,683 @@
+<Type Name="TileBrush" FullName="System.Windows.Media.TileBrush">
+  <TypeSignature Language="C#" Value="public abstract class TileBrush : System.Windows.Media.Brush" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract TileBrush extends System.Windows.Media.Brush" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TileBrush" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Brush</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Beschreibt eine Möglichkeit, einen Bereich mithilfe von einer oder mehreren Kachel(n) zu zeichnen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die abgeleiteten Klassen von <xref:System.Windows.Media.TileBrush> definieren Sie den Inhalt der Kacheln, die Sie verwenden, um einen Bereich zu zeichnen. Verwenden Sie z. B. die <xref:System.Windows.Media.ImageBrush> Klasse, um einen Bereich mithilfe eines Bilds zu zeichnen.  
+  
+ Verwenden einer <xref:System.Windows.Media.TileBrush> steuern, wie Sie einen Bereich zu zeichnen. Beispielsweise [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] stellt verschiedene Arten von Pinseln bereit:  
+  
+-   Verwenden Sie zum Zeichnen mithilfe eines Bilds, das <xref:System.Windows.Media.ImageBrush>.  
+  
+-   Verwenden Sie zum Zeichnen von zeichnen die <xref:System.Windows.Media.DrawingBrush>.  
+  
+-   Mithilfe von Paint-Ereignis ein <xref:System.Windows.Media.Visual>, verwenden Sie die <xref:System.Windows.Media.VisualBrush>.  
+  
+ Bei Verwendung der <xref:System.Windows.Media.TileBrush> zum Zeichnen eines Bereichs, anstatt Zeichnen eines Bereichs mithilfe eines einzelnen gestreckten Images können Sie Zeichnen eines Bereichs mithilfe einer Reihe von Bildkacheln an, die ein Muster zu erstellen.  
+  
+ Wenn Sie einen Bereich zeichnen Sie mithilfe einer <xref:System.Windows.Media.TileBrush>, verwenden Sie drei Komponenten: Inhalt, Kacheln und Ausgabebereich. Die folgenden Abbildungen zeigen, wie diese drei <xref:System.Windows.Media.TileBrush> Komponenten aufeinander beziehen.  
+  
+ ![TileBrush-Komponenten](~/add/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "TileBrush-Komponenten")  
+Komponenten eines TileBrush mit einer einzelnen Kachel  
+  
+ ![Komponenten eines gekachelten TileBrush](~/add/media/graphicsmm-tiledprojection.png "Komponenten eines gekachelten TileBrush")  
+Komponenten eines TileBrush mit einer TileMode-Kachel  
+  
+ **Inhalt**: ein <xref:System.Windows.Media.TileBrush> können unterschiedliche Typen von Inhalt aufweisen:  
+  
+-   Wenn der Pinsel eine <xref:System.Windows.Media.ImageBrush>, diesen Inhalt ist ein Bild. Die <xref:System.Windows.Media.ImageBrush.ImageSource%2A> Eigenschaft gibt den Inhalt der <xref:System.Windows.Media.ImageBrush>.  
+  
+-   Wenn der Pinsel eine <xref:System.Windows.Media.DrawingBrush>, diesen Inhalt ist eine Zeichnung. Die <xref:System.Windows.Media.DrawingBrush.Drawing%2A> Eigenschaft gibt den Inhalt der <xref:System.Windows.Media.DrawingBrush>.  
+  
+-   Wenn der Pinsel eine <xref:System.Windows.Media.VisualBrush>, diesen Inhalt ist ein visuelles Element. Die <xref:System.Windows.Media.VisualBrush.Visual%2A> Eigenschaft gibt den Inhalt der <xref:System.Windows.Media.VisualBrush>.  
+  
+ Sie können angeben, die Position und Abmessungen der <xref:System.Windows.Media.TileBrush> Inhalt mithilfe der <xref:System.Windows.Media.TileBrush.Viewbox%2A> Eigenschaft.  
+  
+ **Kacheln**: ein <xref:System.Windows.Media.TileBrush> erzeugt eine oder mehrere Kacheln. Standardmäßig der Inhalt des Pinsels wird gestreckt, um eine einzige Kachel auszufüllen, und diese Kachel wird gestreckt, um den Ausgabebereich ausfüllen. Die <xref:System.Windows.Media.TileBrush.Viewport%2A> Eigenschaft wird verwendet, um die Größe und Position der Basiskachel für geben die <xref:System.Windows.Media.TileBrush>. Die <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> Eigenschaft bestimmt, ob die Größe und Position von der <xref:System.Windows.Media.TileBrush.Viewport%2A> sind relativ zum Ausgabebereich (das Standardverhalten) oder als Absolute Werte angegeben werden.  
+  
+ **Ausgabebereich**: Ausgabebereich ist der Bereich, der der Pinsel z. B. zeichnet der <xref:System.Windows.Shapes.Shape.Fill%2A> des ein <xref:System.Windows.Shapes.Ellipse> oder die <xref:System.Windows.Controls.Control.Background%2A> von eine <xref:System.Windows.Controls.Button>.  
+  
+ Weitere Informationen zu den <xref:System.Windows.Media.TileBrush> Klasse, finden Sie unter [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](~/docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md) .  
+  
+## <a name="freezable-features"></a>Funktionen von Freezable-Objekten  
+ Ein <xref:System.Windows.Media.TileBrush> ist eine <xref:System.Windows.Freezable> Typ. Informationen zu <xref:System.Windows.Freezable> Funktionen, z. B. Einfrieren und Klonen, finden Sie unter der [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von der <see cref="T:System.Windows.Media.TileBrush" /> -Klasse, die Sie überschreiben müssen die <see cref="M:System.Windows.Freezable.CreateInstanceCore" /> Methode. Weitere Informationen über das Vererben von <see cref="T:System.Windows.Freezable" /> , finden Sie unter der [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TileBrush ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TileBrush.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Stellt die Initialisierung für Basisklassenwerte beim Aufruf durch den Konstruktor einer abgeleiteten Klasse bereit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignmentX">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.AlignmentX AlignmentX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.AlignmentX AlignmentX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TileBrush.AlignmentX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.AlignmentX</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die horizontale Ausrichtung von Inhalt in die <see cref="T:System.Windows.Media.TileBrush" /> Basiskachel.</summary>
+        <value>Ein Wert, der die horizontale Position des gibt <see cref="T:System.Windows.Media.TileBrush" /> -Inhalt in seiner Basiskachel. Der Standardwert ist <see cref="F:System.Windows.HorizontalAlignment.Center" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.TileBrush.AlignmentX%2A> und <xref:System.Windows.Media.TileBrush.AlignmentY%2A> Eigenschaften einer <xref:System.Windows.Media.TileBrush> werden verwendet, wenn eine der folgenden Bedingungen zutrifft:  
+  
+-   Die <xref:System.Windows.Media.TileBrush.Stretch%2A> Eigenschaft <xref:System.Windows.Media.Stretch.Uniform> oder <xref:System.Windows.Media.Stretch.UniformToFill> und <xref:System.Windows.Media.TileBrush.Viewbox%2A> und <xref:System.Windows.Media.TileBrush.Viewport%2A> haben unterschiedliche Seitenverhältnissen.  
+  
+-   Die <xref:System.Windows.Media.TileBrush.Stretch%2A> Eigenschaft <xref:System.Windows.Media.Stretch.None> und <xref:System.Windows.Media.TileBrush.Viewbox%2A> und <xref:System.Windows.Media.TileBrush.Viewport%2A> unterschiedlich lang sind.  
+  
+ Beachten Sie, dass die Dimensionen der <xref:System.Windows.Media.TileBrush> Inhalt mithilfe der <xref:System.Windows.Media.TileBrush.Viewbox%2A> Eigenschaft; Sie geben die Position und Größe von der <xref:System.Windows.Media.TileBrush> Basiskachel mithilfe der <xref:System.Windows.Media.TileBrush.Viewport%2A> Eigenschaft.  
+  
+<a name="dependencyPropertyInfo_AlignmentX"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.TileBrush.AlignmentXProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignmentXProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AlignmentXProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AlignmentXProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TileBrush.AlignmentXProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.TileBrush.AlignmentX" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignmentY">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.AlignmentY AlignmentY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.AlignmentY AlignmentY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TileBrush.AlignmentY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.AlignmentY</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die vertikale Ausrichtung von Inhalt in die <see cref="T:System.Windows.Media.TileBrush" /> Basiskachel.</summary>
+        <value>Ein Wert, der die vertikale Position des an <see cref="T:System.Windows.Media.TileBrush" /> -Inhalt in seiner Basiskachel. Der Standardwert ist <see cref="F:System.Windows.Media.AlignmentY.Center" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.TileBrush.AlignmentX%2A> und <xref:System.Windows.Media.TileBrush.AlignmentY%2A> Eigenschaften einer <xref:System.Windows.Media.TileBrush> werden verwendet, wenn eine der folgenden Bedingungen erfüllt sind:  
+  
+-   Die <xref:System.Windows.Media.TileBrush.Stretch%2A> Eigenschaft <xref:System.Windows.Media.Stretch.Uniform> oder <xref:System.Windows.Media.Stretch.UniformToFill> und <xref:System.Windows.Media.TileBrush.Viewbox%2A> und <xref:System.Windows.Media.TileBrush.Viewport%2A> haben unterschiedliche Seitenverhältnissen.  
+  
+-   Die <xref:System.Windows.Media.TileBrush.Stretch%2A> Eigenschaft <xref:System.Windows.Media.Stretch.None> und <xref:System.Windows.Media.TileBrush.Viewbox%2A> und <xref:System.Windows.Media.TileBrush.Viewport%2A> unterschiedlich lang sind.  
+  
+ Beachten Sie, dass die Dimensionen der <xref:System.Windows.Media.TileBrush> Inhalt mithilfe der <xref:System.Windows.Media.TileBrush.Viewbox%2A> Eigenschaft; Sie geben die Position und Größe von der <xref:System.Windows.Media.TileBrush> Basiskachel mithilfe der <xref:System.Windows.Media.TileBrush.Viewport%2A> Eigenschaft.  
+  
+<a name="dependencyPropertyInfo_AlignmentY"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.TileBrush.AlignmentYProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignmentYProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AlignmentYProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AlignmentYProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TileBrush.AlignmentYProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.TileBrush.AlignmentY" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.TileBrush Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.TileBrush Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TileBrush.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TileBrush</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine änderbare Kopie dieses <see cref="T:System.Windows.Media.TileBrush" />-Objekts, indem tiefe Kopien seiner Werte erzeugt werden.</summary>
+        <returns>Eine änderbare tiefe Kopie des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts gibt <see langword="false" /> zurück, selbst wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie schreibgeschützte änderbare Kopien erzeugen <xref:System.Windows.Freezable> Objekte. Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Wenn Abhängigkeitseigenschaften diese Methode kopiert kopiert Ressource Ressourcenverweise und datenbindungen, obwohl sie nicht mehr aufgelöst werden können. Er kopiert keine Animationen oder ihre aktuellen Werte.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.TileBrush CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.TileBrush CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TileBrush.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TileBrush</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine änderbare Kopie dieses <see cref="T:System.Windows.Media.TileBrush" /> Objekt, indem tiefe Kopien seiner Werte. Diese Methode wird nicht Ressourcenverweise, datenbindungen und Animationen, kopiert, auch wenn sie ihre aktuellen Werte kopiert.</summary>
+        <returns>Eine änderbare tiefe Kopie des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" /> -Eigenschaft des geklonten Objekts ist <see langword="false" /> selbst wenn die <see cref="P:System.Windows.Freezable.IsFrozen" /> Prope-Rty der Quelle ist <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie schreibgeschützte änderbare Kopien erzeugen <xref:System.Windows.Freezable> Objekte. Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentBounds">
+      <MemberSignature Language="C#" Value="protected abstract void GetContentBounds (out System.Windows.Rect contentBounds);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetContentBounds([out] valuetype System.Windows.Rect&amp; contentBounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TileBrush.GetContentBounds(System.Windows.Rect@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentBounds" Type="System.Windows.Rect&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="contentBounds">Die Ausgabe Grenzen des dem <see cref="T:System.Windows.Media.TileBrush" /> Inhalt.</param>
+        <summary>Ruft die aktuelle Grenzen des dem <see cref="T:System.Windows.Media.TileBrush" /> Inhalt</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stretch">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Stretch Stretch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Stretch Stretch" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TileBrush.Stretch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Stretch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, wie der Inhalt dieses <see cref="T:System.Windows.Media.TileBrush" /> wird gestreckt, um seine Kacheln anzupassen.</summary>
+        <value>Ein Wert, der angibt, wie sich dieser <see cref="T:System.Windows.Media.TileBrush" /> Inhalt auf seine Basiskachel projiziert wird. Der Standardwert ist <see cref="F:System.Windows.Media.Stretch.Fill" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.TileBrush.Stretch%2A> Eigenschaft akzeptiert die folgenden Werte, die die <xref:System.Windows.Media.Stretch> -Enumeration definiert:  
+  
+-   <xref:System.Windows.Media.Stretch.None>: Der <xref:System.Windows.Media.TileBrush> Inhalt Schaltfläche erstreckt sich nicht um die Kachel auszufüllen.  
+  
+-   <xref:System.Windows.Media.Stretch.Uniform>: Der <xref:System.Windows.Media.TileBrush> Inhalt wird skaliert, und die kacheldimensionen angepasst. Das Seitenverhältnis des Inhalts wird jedoch beibehalten.  
+  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>: Der <xref:System.Windows.Media.TileBrush> Inhalt wird skaliert, sodass es vollständig den Ausgabebereich füllt, aber das ursprüngliche Seitenverhältnis beibehalten.  
+  
+-   <xref:System.Windows.Media.Stretch.Fill>: Der <xref:System.Windows.Media.TileBrush> Inhalt wird skaliert, um die Kachel passt. Da Höhe und Breite des Inhalts unabhängig voneinander skaliert werden, wird das ursprüngliche Seitenverhältnis des Inhalts möglicherweise nicht beibehalten. D. h. die <xref:System.Windows.Media.TileBrush> Inhalt möglicherweise verfälscht werden, um die Ausgabekachel vollständig zu füllen.  
+  
+ Das folgende Bild zeigt die verschiedenen <xref:System.Windows.Media.TileBrush.Stretch%2A> Einstellungen.  
+  
+ ![Unterschiedliche TileBrush-dehneinstellungen](~/add/media/img-mmgraphics-stretchenum.jpg "unterschiedliche TileBrush-dehneinstellungen")  
+Unterschiedliche Dehneinstellungen  
+  
+ Beachten Sie, dass die Dimensionen der <xref:System.Windows.Media.TileBrush> Inhalt mithilfe der <xref:System.Windows.Media.TileBrush.Viewbox%2A> Eigenschaft; Sie geben die Position und Größe von der <xref:System.Windows.Media.TileBrush> Basiskachel mithilfe der <xref:System.Windows.Media.TileBrush.Viewport%2A> Eigenschaft.  
+  
+## <a name="viewbox-clipping"></a>Viewbox Clipping  
+ <xref:System.Windows.Media.TileBrush>Inhalt werden nie abgeschnitten, um die <xref:System.Windows.Media.TileBrush.Viewbox%2A>. Jedoch <xref:System.Windows.Media.TileBrush> Inhalt *sind* an den Rändern eines abgeschnitten der <xref:System.Windows.Media.TileBrush.Viewport%2A>, wodurch die Dimensionen für der <xref:System.Windows.Media.TileBrush> Basiskachel.  
+  
+ Die folgende Abbildung zeigt die Auswirkungen verschiedener <xref:System.Windows.Media.TileBrush.Stretch%2A> Einstellungen auf eine <xref:System.Windows.Media.TileBrush> mit dem eine <xref:System.Windows.Media.TileBrush.Viewbox%2A> , die kleiner ist als seine <xref:System.Windows.Media.TileBrush.Viewport%2A>. Die Teile des Bilds, das sich außerhalb der <xref:System.Windows.Media.TileBrush.Viewbox%2A> sind grau getönt.  
+  
+ ![TileBrush mit unterschiedlichen dehneinstellungen](~/add/media/graphicsmm-viewbox-clipping.png "TileBrush mit unterschiedlichen dehneinstellungen")  
+TileBrush mit unterschiedlichen Dehneinstellungen  
+  
+<a name="dependencyPropertyInfo_Stretch"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.TileBrush.StretchProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StretchProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StretchProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StretchProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TileBrush.StretchProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.TileBrush.Stretch" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TileMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.TileMode TileMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.TileMode TileMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TileBrush.TileMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TileMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, wie eine <see cref="T:System.Windows.Media.TileBrush" /> füllt den Bereich, der zu zeichnenden werden, wenn die Basiskachel kleiner als der Ausgabebereich ist.</summary>
+        <value>Ein Wert, der angibt, wie die <see cref="T:System.Windows.Media.TileBrush" /> Kacheln den Ausgabebereich ausfüllen wenn die Basiskachel, wird von angegeben die <see cref="P:System.Windows.Media.TileBrush.Viewport" /> -Eigenschaft ist kleiner als der Ausgabebereich. Der Standardwert ist <see cref="F:System.Windows.Media.TileMode.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung zeigt die unterschiedlichen Kachelmodi, die durch definiert sind die <xref:System.Windows.Media.TileMode> Enumeration.  
+  
+ ![Unterschiedliche TileBrush-TileMode-Einstellungen](~/add/media/img-mmgraphics-tilemodes.gif "unterschiedliche TileBrush-TileMode-Einstellungen")  
+Verfügbare Kachelmodi für die TileMode-enumeration  
+  
+ Für die <xref:System.Windows.Media.TileBrush.TileMode%2A> Eigenschaft wirksam wird, müssen Sie festlegen der <xref:System.Windows.Media.TileBrush.Viewport%2A> für den Pinsel auf eine Größe, die kleiner als der Bereich ist, dass Sie (den Ausgabebereich) gezeichnet werden. Wenn die <xref:System.Windows.Media.TileBrush.Viewport%2A> Größe entspricht oder Ausgabebereich, erzeugt der Pinsel, eine einzige Kachel, die erweitert wird, um den Ausgabebereich und keine Kachelmuster zu füllen tritt.  
+  
+<a name="dependencyPropertyInfo_TileMode"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.TileBrush.TileModeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TileModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TileModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TileModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TileBrush.TileModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.TileBrush.TileMode" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Viewbox">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect Viewbox { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect Viewbox" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TileBrush.Viewbox" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, die Position und Abmessungen des Inhalts in einen <see cref="T:System.Windows.Media.TileBrush" /> Kachel.</summary>
+        <value>Die Position und Abmessungen des der <see cref="T:System.Windows.Media.TileBrush" /> Inhalt. Der Standardwert ist ein Rechteck (<see cref="T:System.Windows.Rect" />), hat eine <see cref="P:System.Windows.Rect.TopLeft" /> (0,0) und ein <see cref="P:System.Windows.Rect.Width" /> und <see cref="P:System.Windows.Rect.Height" /> 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Bereich zeichnen Sie mithilfe einer <xref:System.Windows.Media.TileBrush>, verwenden Sie drei Komponenten: Inhalt, Kacheln und Ausgabebereich. Die <xref:System.Windows.Media.TileBrush.Viewbox%2A> Eigenschaft gibt an, die Größe und Position des <xref:System.Windows.Media.TileBrush> Inhalt. Die folgende Abbildung zeigt, wie diese drei <xref:System.Windows.Media.TileBrush> Komponenten aufeinander beziehen.  
+  
+ ![TileBrush-Komponenten](~/add/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "TileBrush-Komponenten")  
+TileBrush-Komponenten  
+  
+ ![Komponenten eines gekachelten TileBrush](~/add/media/graphicsmm-tiledprojection.png "Komponenten eines gekachelten TileBrush")  
+  
+ Die <xref:System.Windows.Media.TileBrush.ViewboxUnits%2A> Eigenschaft bestimmt, ob die <xref:System.Windows.Media.TileBrush.Viewbox%2A> Wert wird als relativer oder absoluter Wert interpretiert. In der Standardeinstellung ist die <xref:System.Windows.Media.TileBrush.ViewboxUnits%2A>-Eigenschaft auf <xref:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox> festgelegt.  
+  
+## <a name="viewbox-clipping"></a>Viewbox Clipping  
+ <xref:System.Windows.Media.TileBrush>Inhalt werden nie abgeschnitten, um die <xref:System.Windows.Media.TileBrush.Viewbox%2A>. Allerdings <xref:System.Windows.Media.TileBrush> Inhalt *sind* an den Rändern eines abgeschnitten der <xref:System.Windows.Media.TileBrush.Viewport%2A>, die die Werte für die Basiskachel festlegt.  
+  
+ Die folgende Abbildung zeigt die Auswirkungen verschiedener <xref:System.Windows.Media.TileBrush.Stretch%2A> Einstellungen auf eine <xref:System.Windows.Media.TileBrush> mit dem eine <xref:System.Windows.Media.TileBrush.Viewbox%2A> , die kleiner ist als seine <xref:System.Windows.Media.TileBrush.Viewport%2A>. Die Teile des Bilds, das sich außerhalb der <xref:System.Windows.Media.TileBrush.Viewbox%2A> sind grau getönt.  
+  
+ ![TileBrush mit unterschiedlichen dehneinstellungen](~/add/media/graphicsmm-viewbox-clipping.png "TileBrush mit unterschiedlichen dehneinstellungen")  
+TileBrush mit unterschiedlichen Dehneinstellungen  
+  
+<a name="dependencyPropertyInfo_Viewbox"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.TileBrush.ViewboxProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Sie können angeben, die Größe und Position des <xref:System.Windows.Media.TileBrush> Inhalt mithilfe der <xref:System.Windows.Media.TileBrush.Viewbox%2A> Eigenschaft. Die <xref:System.Windows.Media.TileBrush.ViewboxUnits%2A> Eigenschaft bestimmt, ob die <xref:System.Windows.Media.TileBrush.Viewbox%2A> Wert ist relativ zu den Grenzen des der <xref:System.Windows.Media.TileBrush> Inhalt oder ob es sich um einen absoluten Wert handelt.  
+  
+ In der ersten Abbildung zeigt ein Bild mit 100 x 100 Pixeln und verwendet dann dieses Bild, um die Auswirkungen verschiedener anzeigen <xref:System.Windows.Media.TileBrush.Viewbox%2A> eigenschafteneinstellungen.  
+  
+ ![Ein Bild](~/add/media/graphicsmm-viewbox-sampleimage.jpg "ein Bild")  
+Erstes Beispielbild (Maßen 100 x 100 geräteunabhängige Pixel)  
+  
+ Die folgende Abbildung zeigt die Ausgabe des einen <xref:System.Windows.Media.TileBrush> , verwendet eine <xref:System.Windows.Media.TileBrush.Viewbox%2A> von 0.0,0.0, 0.25,0.5. Andere relevante Eigenschaftswerte umfassen Folgendes:  
+  
+-   <xref:System.Windows.Media.TileBrush.ViewboxUnits%2A>: <xref:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox> (Standard)  
+  
+-   <xref:System.Windows.Media.TileBrush.Viewport%2A>: 0,0,1,1  
+  
+-   <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>: <xref:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox>  
+  
+-   <xref:System.Windows.Media.TileBrush.AlignmentX%2A>, <xref:System.Windows.Media.TileBrush.AlignmentY%2A>: <xref:System.Windows.Media.AlignmentX.Center>  
+  
+ Diese Abbildung zeigt mehrere unterschiedliche <xref:System.Windows.Media.TileBrush.Stretch%2A> eigenschafteneinstellungen. Die <xref:System.Windows.Media.TileBrush.Stretch%2A> Eigenschaft bestimmt, wie eine <xref:System.Windows.Media.TileBrush> gestreckt wird, seine <xref:System.Windows.Media.TileBrush.Viewbox%2A> zum Ausfüllen der <xref:System.Windows.Media.TileBrush.Viewport%2A>.  
+  
+ ![TileBrush mit einer Viewbox von 0,0 0.25,0.5](~/add/media/graphicsmm-0-0-025-05-viewbox.png "TileBrush mit einer Viewbox von 0,0 0.25,0.5")  
+TileBrush mit einer relativen Viewbox von 0.0,0.0, 0.25,0.5  
+  
+ Die nächste Abbildung zeigt ein ähnliches <xref:System.Windows.Media.TileBrush> jedoch mit einer relativen <xref:System.Windows.Media.TileBrush.Viewbox%2A> von 0,5,0,25, 0.25,0.5.  
+  
+ ![TileBrush mit einer Viewbox von 0,5,0,25 0.25,0.5](~/add/media/graphicsmm-05-0-025-05-viewbox.png "TileBrush mit einer Viewbox von 0,5,0,25 0.25,0.5")  
+Ähnliche TileBrush mit einer anderen Viewbox-Einstellung  
+  
+ Die nächste Abbildung zeigt die gleiche <xref:System.Windows.Media.TileBrush> jedoch mit einer relativen <xref:System.Windows.Media.TileBrush.Viewport%2A> 0.0,0.0, Wert 0,5; 0,5 und ein <xref:System.Windows.Media.TileBrush.TileMode%2A> von <xref:System.Windows.Media.TileMode.Tile>.  
+  
+ ![TiledTileBrush mit einer Viewbox von 0,5,0,25 0.25,0.5](~/add/media/graphicsmm-05-0-025-05-viewbox-tiled.png "TiledTileBrush mit einer Viewbox von 0,5,0,25 0.25,0.5")  
+Ähnliche TileBrush jedoch mit Kacheln und eine andere Einstellung für den Viewport  
+  
+ Im folgende Beispiel wird gezeigt, wie ein gekachelter <xref:System.Windows.Media.TileBrush> , besitzt eine <xref:System.Windows.Media.TileBrush.Viewbox%2A> von 0,5,0,25, 0.25,0.5.  
+  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMTileBrushViewboxWithStretchTiling](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/ViewboxExample.xaml#graphicsmmtilebrushviewboxwithstretchtiling)]  
+  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMTileBrushViewboxWithStretchTiling](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/ViewboxExample.cs#graphicsmmtilebrushviewboxwithstretchtiling)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMTileBrushViewboxWithStretchTiling](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/viewboxexample.vb#graphicsmmtilebrushviewboxwithstretchtiling)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewboxProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ViewboxProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ViewboxProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TileBrush.ViewboxProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.TileBrush.Viewbox" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewboxUnits">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.BrushMappingMode ViewboxUnits { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.BrushMappingMode ViewboxUnits" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TileBrush.ViewboxUnits" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.BrushMappingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="P:System.Windows.Media.TileBrush.Viewbox" /> Wert wird relativ zum umgebenden Feld der <see cref="T:System.Windows.Media.TileBrush" /> Inhalt oder absoluter Wert interpretiert wird.</summary>
+        <value>Ein Wert, der angibt, ob die <see cref="P:System.Windows.Media.TileBrush.Viewbox" /> Wert wird relativ zum umgebenden Feld der <see cref="T:System.Windows.Media.TileBrush" /> Inhalt oder ob es sich um einen absoluten Wert handelt. Der Standardwert ist <see cref="F:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert <xref:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox> gibt an, dass die <xref:System.Windows.Media.TileBrush.ViewboxUnits%2A> sind relativ zum umgebenden Felds des Inhalts. Beachten Sie, dass der Wert <xref:System.Windows.Media.BrushMappingMode.Absolute> gibt geräteunabhängigen Pixeln anstelle von Gerätepixeln, die Gerät abhängig sind. Aus diesem Grund, wenn der Wert <xref:System.Windows.Media.BrushMappingMode.Absolute> angewendet wird, jedem Pixel "1" steht/96 Zoll.  
+  
+ Diese Unterscheidung Pixel müssen Sie berücksichtigen, wenn Sie angeben der <xref:System.Windows.Media.TileBrush.Viewbox%2A> des ein <xref:System.Windows.Media.ImageBrush> , besitzt eine <xref:System.Windows.Media.Imaging.BitmapImage> als Updatequelle. Z. B. Wenn Sie das standardmäßige Pixel als Measure verwenden, ist ein 300 x 300 Pixel großes Bild nur ein Zoll Breite Auflösung 300 dpi. Jedoch, wenn Sie einen absoluten Wert festlegen möchten, müssen Sie festlegen der <xref:System.Windows.Media.TileBrush.Viewbox%2A> auf (0, 0, 96, 96), um das gesamte Bild einzuschließen.  
+  
+ Sie können angeben, die Größe und Position des <xref:System.Windows.Media.TileBrush> Inhalt mithilfe der <xref:System.Windows.Media.TileBrush.Viewbox%2A> Eigenschaft. Die <xref:System.Windows.Media.TileBrush.ViewboxUnits%2A> Eigenschaft bestimmt, ob die <xref:System.Windows.Media.TileBrush.Viewbox%2A> Wert ist relativ zu den Grenzen des der <xref:System.Windows.Media.TileBrush> Inhalt oder ob es sich um einen absoluten Wert handelt.  
+  
+<a name="dependencyPropertyInfo_ViewboxUnits"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.TileBrush.ViewboxUnitsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewboxUnitsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ViewboxUnitsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ViewboxUnitsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TileBrush.ViewboxUnitsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.TileBrush.ViewboxUnits" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Viewport">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect Viewport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect Viewport" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TileBrush.Viewport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, die Position und Abmessungen der Basiskachel für einen <see cref="T:System.Windows.Media.TileBrush" />.</summary>
+        <value>Die Position und Abmessungen der Basiskachel für einen <see cref="T:System.Windows.Media.TileBrush" />. Der Standardwert ist ein Rechteck (<see cref="T:System.Windows.Rect" />) mit einem <see cref="P:System.Windows.Rect.TopLeft" /> (0,0) und ein <see cref="P:System.Windows.Rect.Width" /> und <see cref="P:System.Windows.Rect.Height" /> 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Bereich zeichnen Sie mithilfe einer <xref:System.Windows.Media.TileBrush>, verwenden Sie drei Komponenten: Inhalt, Kacheln und Ausgabebereich. Die folgende Abbildung zeigt, wie diese drei <xref:System.Windows.Media.TileBrush> Komponenten aufeinander beziehen.  
+  
+ ![TileBrush-Komponenten](~/add/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "TileBrush-Komponenten")  
+Komponenten eines TileBrush mit einer einzelnen Kachel  
+  
+ ![Komponenten eines gekachelten TileBrush](~/add/media/graphicsmm-tiledprojection.png "Komponenten eines gekachelten TileBrush")  
+Komponenten eines TileBrush mit einer TileMode-Kachel  
+  
+ Die <xref:System.Windows.Media.TileBrush.Viewport%2A> Eigenschaft bestimmt die Größe und Position der Kacheln in einem <xref:System.Windows.Media.TileBrush>. Wird standardmäßig ein <xref:System.Windows.Media.TileBrush> verfügt über eine einzige Kachel, die füllt den gesamten Ausgabebereichs verhält. Die <xref:System.Windows.Media.TileBrush.Stretch%2A> Eigenschaftensteuerelemente wie die <xref:System.Windows.Media.TileBrush> Inhalt passt in diese Kachel. Sie können dieses Standardverhalten überschreiben und geben Sie die Kachelgröße mithilfe der <xref:System.Windows.Media.TileBrush.Viewport%2A> Eigenschaft.  
+  
+ Verwenden der <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> Eigenschaft, um anzugeben, ob die <xref:System.Windows.Media.TileBrush.Viewport%2A> absolute oder relative Koordinaten verwendet. Wenn die Koordinaten relativ sind, sind sie relativ zur Größe des Ausgabebereichs. Der Punkt (0,0) stellt der oberen linken Ecke des Ausgabebereichs verhält, und (1,1) stellt den unteren rechten Ecke des Ausgabebereichs verhält. Angeben, dass die <xref:System.Windows.Media.TileBrush.Viewport%2A> -Eigenschaft absolute Koordinaten verwendet, legen Sie die <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> Eigenschaft <xref:System.Windows.Media.BrushMappingMode.Absolute>.  
+  
+ Die folgende Abbildung zeigt den Unterschied in der Ausgabe, wenn Sie festlegen, die <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> Eigenschaft eine <xref:System.Windows.Media.TileBrush> um relativ oder absolut.  
+  
+ ![Absolute und Relative Viewport-Einheiten](~/add/media/absolute-and-relative-viewports.png "Absolute und Relative Viewport-Einheiten")  
+Relative und absolute ViewportUnits  
+  
+<a name="dependencyPropertyInfo_Viewport"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.TileBrush.ViewportProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ViewportProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ViewportProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TileBrush.ViewportProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.TileBrush.Viewport" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportUnits">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.BrushMappingMode ViewportUnits { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.BrushMappingMode ViewportUnits" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TileBrush.ViewportUnits" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.BrushMappingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest eine <see cref="T:System.Windows.Media.BrushMappingMode" /> Enumeration, der angibt, ob der Wert des der <see cref="P:System.Windows.Media.TileBrush.Viewport" />, gibt an die Größe und Position von der <see cref="T:System.Windows.Media.TileBrush" /> -Basiskachel, relativ zur Größe des Ausgabebereichs verhält.</summary>
+        <value>Gibt an, ob der Wert des der <see cref="P:System.Windows.Media.TileBrush.Viewport" />, der beschrieben wird, die Größe und Position von der <see cref="T:System.Windows.Media.TileBrush" /> Kacheln, relativ zur Größe des gesamten Ausgabebereichs verhält. Der Standardwert ist <see cref="F:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.TileBrush.Viewport%2A> Eigenschaft bestimmt die Größe und Position der Kacheln in einem <xref:System.Windows.Media.TileBrush>. Wird standardmäßig ein <xref:System.Windows.Media.TileBrush> verfügt über eine einzige Kachel, die füllt den gesamten Ausgabebereichs verhält. Die <xref:System.Windows.Media.TileBrush.Stretch%2A> Eigenschaftensteuerelemente wie die <xref:System.Windows.Media.TileBrush> Inhalt passt in diese Kachel. Sie können dieses Standardverhalten überschreiben und geben Sie die Kachelgröße mithilfe der <xref:System.Windows.Media.TileBrush.Viewport%2A> Eigenschaft.  
+  
+ Verwenden der <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> Eigenschaft, um anzugeben, ob die <xref:System.Windows.Media.TileBrush.Viewport%2A> absolute oder relative Koordinaten verwendet. Wenn die Koordinaten relativ sind, sind sie relativ zur Größe des Ausgabebereichs. Der Punkt (0,0) stellt der oberen linken Ecke des Ausgabebereichs verhält, und (1,1) stellt den unteren rechten Ecke des Ausgabebereichs verhält. Angeben, dass die <xref:System.Windows.Media.TileBrush.Viewport%2A> -Eigenschaft absolute Koordinaten verwendet, legen Sie die <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> Eigenschaft <xref:System.Windows.Media.BrushMappingMode.Absolute>.  
+  
+ Die folgende Abbildung zeigt den Unterschied in der Ausgabe, wenn Sie festlegen, die <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> Eigenschaft eine <xref:System.Windows.Media.TileBrush> um relativ oder absolut.  
+  
+ ![Absolute und Relative Viewport-Einheiten](~/add/media/absolute-and-relative-viewports.png "Absolute und Relative Viewport-Einheiten")  
+Relative und absolute ViewportUnits  
+  
+<a name="dependencyPropertyInfo_ViewportUnits"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.TileBrush.ViewportUnitsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportUnitsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ViewportUnitsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ViewportUnitsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TileBrush.ViewportUnitsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.TileBrush.ViewportUnits" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

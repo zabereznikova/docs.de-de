@@ -1,0 +1,161 @@
+<Type Name="SqlContext" FullName="Microsoft.SqlServer.Server.SqlContext">
+  <TypeSignature Language="C#" Value="public sealed class SqlContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SqlContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.SqlContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Abstraktion der Kontext eines Aufrufers, dem Zugriff auf die <see cref="T:Microsoft.SqlServer.Server.SqlPipe" />, <see cref="T:Microsoft.SqlServer.Server.SqlTriggerContext" />, und <see cref="T:System.Security.Principal.WindowsIdentity" /> Objekte. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.SqlServer.Server.SqlContext> Objekt kann verwendet werden, die Triggerkontext (für die Ausführung von Code in einem Trigger) und das Pipeobjekt (falls verfügbar, z. B. in gespeicherten Prozeduren) abgerufen werden sollen. Es kann auch verwendet zum Abrufen einer <xref:System.Security.Principal.WindowsIdentity> Objekt, das die Microsoft Windows-Identität des aufrufenden Clients darstellt, wenn der Client, mit dem Server mithilfe authentifiziert der integrierten Authentifizierung.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:Microsoft.SqlServer.Server.SqlDataRecord> und dessen <xref:Microsoft.SqlServer.Server.SqlMetaData>. Im Beispiel wird dann kennzeichnet den Anfang eines Resultsets mithilfe der <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsStart%2A> Methode, sendet die Datensätze mit Beispieldaten zurück an den Client mithilfe der <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsRow%2A> -Methode und markiert das Ende des Resultsets festgelegt, mit der <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsEnd%2A> Methode.  
+  
+ [!code-csharp[DataWorks SqlPipe.SendResultsRow#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlPipe.SendResultsRow/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlPipe.SendResultsRow#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlPipe.SendResultsRow/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsAvailable">
+      <MemberSignature Language="C#" Value="public static bool IsAvailable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsAvailable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlContext.IsAvailable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob der aufrufende Code innerhalb von SQL Server ausgeführt wird und die kontextabhängigen Verbindung zugegriffen werden kann.</summary>
+        <value>
+          <see langword="True" />Wenn die kontextverbindung verfügbar ist und die andere <see cref="T:Microsoft.SqlServer.Server.SqlContext" /> Member zugegriffen werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft "false", alle anderen gibt <xref:Microsoft.SqlServer.Server.SqlContext> Member Auslösen einer <xref:System.InvalidOperationException> verwendet.  
+  
+ Wenn diese Eigenschaft auf "false" zurückgibt, jeder Versuch, ein Verbindungsobjekt zu öffnen, verfügt "Context Connection =" true "" in der Verbindungszeichenfolge ein Fehler auftritt.  
+  
+ Diese Eigenschaft ist schreibgeschützt.  
+  
+ Wenn ADO.NET für den Datenzugriff, zu verwenden, wenn ein Stück Code sowohl in SQL Server (mit der Integration der common Language Runtime) als auch außerhalb von SQL Server ausgeführt werden kann, kann diese Eigenschaft verwendet werden, zu überprüfen, ob die kontextverbindung verfügbar ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pipe">
+      <MemberSignature Language="C#" Value="public static Microsoft.SqlServer.Server.SqlPipe Pipe { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.SqlServer.Server.SqlPipe Pipe" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlContext.Pipe" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.SqlServer.Server.SqlPipe</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Pipeobjekt, das dem Aufrufer zum Senden von Resultsets, Nachrichten und die Ergebnisse der Ausführung von Befehlen an den Client ermöglicht.</summary>
+        <value>Eine Instanz von <see cref="T:Microsoft.SqlServer.Server.SqlPipe" /> , falls eine Pipe verfügbar ist oder <see langword="null" /> in einem Kontext aufgerufen, in dem kein Pipe verfügbar (z. B. in eine benutzerdefinierte Funktion).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn von außerhalb von SQL Server aufgerufen eine <xref:System.NotSupportedException> ausgelöst wird.  
+  
+ Diese Eigenschaft ist schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TriggerContext">
+      <MemberSignature Language="C#" Value="public static Microsoft.SqlServer.Server.SqlTriggerContext TriggerContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.SqlServer.Server.SqlTriggerContext TriggerContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlContext.TriggerContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.SqlServer.Server.SqlTriggerContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Triggerkontext verwendet, um dem Aufrufer bereitzustellen, mit Informationen zur Ursache zum Auslösen des Triggers und eine Zuordnung der Spalten, die aktualisiert wurden.</summary>
+        <value>Eine Instanz von <see cref="T:Microsoft.SqlServer.Server.SqlTriggerContext" /> , falls ein Triggerkontext verfügbar ist oder <see langword="null" /> außerhalb der Aufruf eines Triggers aufgerufen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.SqlServer.Server.SqlTriggerContext> Objekt kann nur von innerhalb einer common Language Runtime-Triggers abgerufen werden.  
+  
+ Wenn die <xref:Microsoft.SqlServer.Server.SqlContext.TriggerContext%2A> Eigenschaft erfolgt über außerhalb von SQL Server, eine <xref:System.NotSupportedException> ausgelöst wird.  
+  
+ Diese Eigenschaft ist schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowsIdentity">
+      <MemberSignature Language="C#" Value="public static System.Security.Principal.WindowsIdentity WindowsIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Principal.WindowsIdentity WindowsIdentity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlContext.WindowsIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Microsoft Windows-Identität des Aufrufers.</summary>
+        <value>Ein <see cref="T:System.Security.Principal.WindowsIdentity" /> Instanz, die die Windows-Identität des Aufrufers darstellt oder <see langword="null" /> , wenn der Client mithilfe der SQL Server-Authentifizierung authentifiziert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Common Language Runtime (CLR) Code innerhalb von SQL Server wird immer im Kontext des Prozesskontos aufgerufen. Wenn es für den Code zum Ausführen einer Aktion mit der Identität des aufrufenden Benutzers anstelle der SQL Server-Prozessidentität erforderlich ist, sollte ein Identitätswechseltoken über diese Eigenschaft abgerufen werden. Wenn das <xref:System.Security.Principal.WindowsIdentity>-Objekt abgerufen wurde, können Aufrufer das Clientkonto imitieren und in deren Namen Aktionen durchführen.  
+  
+ Wenn von außerhalb von SQL Server aufgerufen eine <xref:System.NotSupportedException> ausgelöst wird.  
+  
+ Auf diese Eigenschaft können nur die Assemblys zugreifen, die mit der `EXTERNAL_ACCESS`-Berechtigung oder der `UNSAFE`-Berechtigung markiert wurden.  
+  
+ Diese Eigenschaft ist schreibgeschützt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Abrufen der Windows-Identität des aufrufenden Clients und die Identität des Clients annehmen. Finden Sie unter "Impersonation-Beispiel" in SQL Server-Onlinedokumentation für ein Beispiel für Identitätswechsel unter Verwendung der <xref:Microsoft.SqlServer.Server.SqlContext.WindowsIdentity%2A> Eigenschaft.  
+  
+ [!code-csharp[DataWorks SqlContext.WindowsIdentity Sample#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlContext.WindowsIdentity Sample/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlContext.WindowsIdentity Sample#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlContext.WindowsIdentity Sample/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

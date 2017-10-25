@@ -1,0 +1,128 @@
+<Type Name="WqlObjectQuery" FullName="System.Management.WqlObjectQuery">
+  <TypeSignature Language="C#" Value="public class WqlObjectQuery : System.Management.ObjectQuery" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WqlObjectQuery extends System.Management.ObjectQuery" />
+  <TypeSignature Language="DocId" Value="T:System.Management.WqlObjectQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.ObjectQuery</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine WMI-Datenabfrage im WQL-Format dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WqlObjectQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.WqlObjectQuery.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Management.WqlObjectQuery" />-Klasse. Dies ist der Standardkonstruktor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WqlObjectQuery (string query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.WqlObjectQuery.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">Die Darstellung der Datenabfrage.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.WqlObjectQuery" /> Klasse für die angegebene Abfrage initialisiert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.WqlObjectQuery.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie des Objekts.</summary>
+        <returns>Das kopierte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryLanguage">
+      <MemberSignature Language="C#" Value="public override string QueryLanguage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string QueryLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Management.WqlObjectQuery.QueryLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Sprache der Abfrage ab.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der die Sprache der Abfrage enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Der Wert dieser Eigenschaft ist immer "WQL".  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

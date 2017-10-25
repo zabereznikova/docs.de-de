@@ -1,0 +1,263 @@
+<Type Name="StateActivity" FullName="System.Workflow.Activities.StateActivity">
+  <TypeSignature Language="C#" Value="public class StateActivity : System.Workflow.ComponentModel.CompositeActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StateActivity extends System.Workflow.ComponentModel.CompositeActivity" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.StateActivity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.CompositeActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Workflow.Activities.StateDesigner), typeof(System.ComponentModel.Design.IDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(typeof(System.Workflow.ComponentModel.Design.ActivityToolboxItem))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Workflow.Activities.StateActivity), "Resources.StateActivity.png")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Workflow.ComponentModel.Compiler.ActivityValidator(typeof(System.Workflow.Activities.StateActivityValidator))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Zustand in <see cref="T:System.Workflow.Activities.StateMachineWorkflowActivity" /> dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Activities.StateActivity> stellt einen Zustand in <xref:System.Workflow.Activities.StateMachineWorkflowActivity> dar. Zustandsaktivitäten können mindestens eine <xref:System.Workflow.Activities.EventDrivenActivity>-Klasse oder eine <xref:System.Workflow.Activities.StateActivity>-Klasse, eine <xref:System.Workflow.Activities.StateInitializationActivity>-Klasse und eine <xref:System.Workflow.Activities.StateFinalizationActivity>-Klasse beinhalten.  SetState-Aktivitäten werden in <xref:System.Workflow.Activities.EventHandlersActivity> und <xref:System.Workflow.Activities.StateInitializationActivity> verwendet, um den Zustand des Workflows zu ändern.  
+  
+ Beim Ausführen von <xref:System.Workflow.Activities.StateActivity> können nur Ereignisse empfangen werden, die von den <xref:System.Workflow.Activities.EventDrivenActivity>-Aktivitäten in <xref:System.Workflow.Activities.StateActivity> und auch den <xref:System.Workflow.Activities.EventDrivenActivity>-Aktivitäten, die den einschließenden <xref:System.Workflow.Activities.StateActivity>-Aktivitäten und der Stamm-<xref:System.Workflow.ComponentModel.Activity> angefügt sind, behandelt werden.  
+  
+ Bei Beginn der Ausführung von <xref:System.Workflow.Activities.StateActivity> wird von <xref:System.Workflow.Activities.StateActivity> überprüft, ob eine <xref:System.Workflow.Activities.StateInitializationActivity>-Aktivität vorhanden ist. <xref:System.Workflow.Activities.StateActivity> kann über 0 (null) oder eine <xref:System.Workflow.Activities.StateInitializationActivity>-Aktivität verfügen. Wenn eine <xref:System.Workflow.Activities.StateInitializationActivity>-Aktivität vorhanden ist, wird <xref:System.Workflow.Activities.StateInitializationActivity> ausgeführt. Beim Beenden der <xref:System.Workflow.Activities.StateInitializationActivity>-Aktivität werden Ereignisse von <xref:System.Workflow.Activities.StateActivity> blockiert, damit <xref:System.Workflow.Activities.StateActivity> lediglich Ereignisse empfängt, die von den <xref:System.Workflow.Activities.EventDrivenActivity>-Aktivitäten behandelt werden können.  
+  
+ <xref:System.Workflow.Activities.StateActivity> ist eine <xref:System.Workflow.ComponentModel.CompositeActivity>. Dies bedeutet, dass die <xref:System.Workflow.Activities.StateActivity>-Aktivität andere Aktivitäten enthalten kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie eine neue Instanz der <xref:System.Workflow.Activities.StateActivity>-Klasse erstellt und anschließend dazu verwendet wird, einen einfachen Statuscomputer zwischen drei Zuständen wechseln zu lassen. Dieses Codebeispiel stammt aus dem SimpleStateMachineWorkflow SDK-Beispiel in der Datei StateMachineWorkflow.cs. Weitere Informationen finden Sie unter [Simple State Machine](http://msdn.microsoft.com/en-us/1974edbd-253d-4e01-9095-38ff9c3e749e).  
+  
+ [!code-csharp[wf_samples#181](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#181)]
+ [!code-vb[wf_samples#181](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#181)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StateActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateActivity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.StateActivity" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie eine neue Instanz der <xref:System.Workflow.Activities.StateActivity>-Klasse erstellt wird.  Dieses Codebeispiel stammt aus dem SimpleStateMachineWorkflow SDK-Beispiel in der Datei StateMachineWorkflow.cs. Weitere Informationen finden Sie unter [Simple State Machine](http://msdn.microsoft.com/en-us/1974edbd-253d-4e01-9095-38ff9c3e749e).  
+  
+ [!code-csharp[WF_Samples#188](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#188)]
+ [!code-vb[WF_Samples#188](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#188)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StateActivity (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateActivity.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der benutzerdefinierte Name der Aktivität.</param>
+        <summary>Initialisiert mithilfe des Aktivitätsnamens eine neue Instanz der <see cref="T:System.Workflow.Activities.StateActivity" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.ActivityExecutionStatus Cancel (System.Workflow.ComponentModel.ActivityExecutionContext executionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Cancel(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateActivity.Cancel(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">Der Ausführungskontext für die Aktivität.</param>
+        <summary>Bricht die Ausführung von <see cref="T:System.Workflow.Activities.StateActivity" /> ab.</summary>
+        <returns>Der aktuelle Status von <see cref="T:System.Workflow.ComponentModel.Activity" /> in der ausgeführten Workflowinstanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.ActivityExecutionStatus Execute (System.Workflow.ComponentModel.ActivityExecutionContext executionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Execute(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateActivity.Execute(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">Der Ausführungskontext für die Aktivität.</param>
+        <summary>Führt <see cref="T:System.Workflow.Activities.StateActivity" /> aus.</summary>
+        <returns>Der aktuelle Status von <see cref="T:System.Workflow.ComponentModel.Activity" /> in der ausgeführten Workflowinstanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDynamicActivity">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Activity GetDynamicActivity (string childActivityName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.ComponentModel.Activity GetDynamicActivity(string childActivityName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateActivity.GetDynamicActivity(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="childActivityName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="childActivityName">Die untergeordnete Aktivität.</param>
+        <summary>Ruft die ausgeführte Instanz der <see cref="T:System.Workflow.ComponentModel.Activity" /> ab, die dem angegebenen untergeordneten Aktivitätsnamen entspricht.</summary>
+        <returns>Die dynamischen untergeordneten Aktivitäten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die ausführbaren Aktivitäten enthalten nicht <paramref name="childActivityName" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected override void Initialize (IServiceProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Initialize(class System.IServiceProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateActivity.Initialize(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Der Dienstanbieter, von dem Dienste abgerufen werden.</param>
+        <summary>Initialisiert <see cref="T:System.Workflow.Activities.StateActivity" /> mit dem Dienstanbieter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivityChangeAdd">
+      <MemberSignature Language="C#" Value="protected override void OnActivityChangeAdd (System.Workflow.ComponentModel.ActivityExecutionContext executionContext, System.Workflow.ComponentModel.Activity addedActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnActivityChangeAdd(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext, class System.Workflow.ComponentModel.Activity addedActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateActivity.OnActivityChangeAdd(System.Workflow.ComponentModel.ActivityExecutionContext,System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+        <Parameter Name="addedActivity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">Der Ausführungskontext für die Aktivität.</param>
+        <param name="addedActivity">Die <see cref="T:System.Workflow.Activities.StateActivity" /> hinzugefügte Aktivität.</param>
+        <summary>Bestimmt, ob es sich bei der hinzugefügten Aktivität um <see cref="T:System.Workflow.Activities.EventDrivenActivity" /> handelt und überprüft ggf., ob die neu hinzugefügte ereignisgesteuerte Aktivität abonniert werden muss.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird immer dann aufgerufen, wenn ein Benutzer <xref:System.Workflow.ComponentModel.CompositeActivity> durch Workflowänderungen ein untergeordnetes Element hinzufügt. Diese Methode ist in CompositeActivity definiert und wird von StateActivity überschrieben. Dabei wird festgestellt, ob die hinzugefügte Aktivität <xref:System.Workflow.Activities.EventDrivenActivity> ist und ggf. überprüft, ob die neu hinzugefügte ereignisgesteuerte Aktivität abonniert werden muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosed">
+      <MemberSignature Language="C#" Value="protected override void OnClosed (IServiceProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClosed(class System.IServiceProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateActivity.OnClosed(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Der Dienstanbieter, von dem Dienste abgerufen werden.</param>
+        <summary>Wird vom Workflow-Laufzeitmodul als Teil des Übergangs der Aktivität in den Zustand <see cref="F:System.Workflow.ComponentModel.ActivityExecutionStatus.Closed" /> aufgerufen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChangeTrackingDataKey">
+      <MemberSignature Language="C#" Value="public const string StateChangeTrackingDataKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string StateChangeTrackingDataKey" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.StateActivity.StateChangeTrackingDataKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beinhaltet den Zeichenfolgenwert des Änderungsverfolgungsdatenschlüssels; "StateActivity.StateChange". Dieses Feld ist konstant.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

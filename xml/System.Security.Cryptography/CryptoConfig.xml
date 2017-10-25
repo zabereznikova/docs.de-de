@@ -1,0 +1,447 @@
+<Type Name="CryptoConfig" FullName="System.Security.Cryptography.CryptoConfig">
+  <TypeSignature Language="C#" Value="public class CryptoConfig" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi CryptoConfig extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CryptoConfig" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Greift auf die Informationen zur Kryptografie.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die einfachen Namen erkannt, die von dieser Klasse und den Algorithmus-standardimplementierungen, die sie zugeordnet. Alternativ Sie können anderen Implementierungen zum Zuordnen dieser Namen wie in beschrieben [Zuordnen von Algorithmusnamen zu kryptografischen Klassen](~/docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md).  
+  
+|Einfacher name|Implementierung des Algorithmus|  
+|-----------------|------------------------------|  
+|3DES, Dreifach-DES, TripleDES, System.Security.Cryptography.TripleDES|<xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>|  
+|AES, System.Security.Cryptography.AesCryptoServiceProvider|<xref:System.Security.Cryptography.AesCryptoServiceProvider>|  
+|AesManaged System.Security.Cryptography.AesManaged|<xref:System.Security.Cryptography.AesManaged>|  
+|System.Security.Cryptography.AsymmetricAlgorithm|<xref:System.Security.Cryptography.RSACryptoServiceProvider>|  
+|DES System.Security.Cryptography.DES|<xref:System.Security.Cryptography.DESCryptoServiceProvider>|  
+|DSA System.Security.Cryptography.DSA|<xref:System.Security.Cryptography.DSACryptoServiceProvider>|  
+|ECDH ECDiffieHellman ECDiffieHellmanCng, System.Security.Cryptography.ECDiffieHellmanCng|<xref:System.Security.Cryptography.ECDiffieHellmanCng>|  
+|ECDsa ECDsaCng, System.Security.Cryptography.ECDsaCng|<xref:System.Security.Cryptography.ECDsaCng>|  
+|System.Security.Cryptography.HashAlgorithm|<xref:System.Security.Cryptography.SHA1CryptoServiceProvider>|  
+|HMAC System.Security.Cryptography.HMAC|<xref:System.Security.Cryptography.HMACSHA1>|  
+|HMACMD5 System.Security.Cryptography.HMACMD5|<xref:System.Security.Cryptography.HMACMD5>|  
+|HMACRIPEMD160 System.Security.Cryptography.HMACRIPEMD160|<xref:System.Security.Cryptography.HMACRIPEMD160>|  
+|HMACSHA1 System.Security.Cryptography.HMACSHA1|<xref:System.Security.Cryptography.HMACSHA1>|  
+|HMACSHA256 System.Security.Cryptography.HMACSHA256|<xref:System.Security.Cryptography.HMACSHA256>|  
+|HMACSHA384 System.Security.Cryptography.HMACSHA384|<xref:System.Security.Cryptography.HMACSHA384>|  
+|HMACSHA512 System.Security.Cryptography.HMACSHA512|<xref:System.Security.Cryptography.HMACSHA512>|  
+|System.Security.Cryptography.KeyedHashAlgorithm|<xref:System.Security.Cryptography.HMACSHA1>|  
+|MACTripleDES System.Security.Cryptography.MACTripleDES|<xref:System.Security.Cryptography.MACTripleDES>|  
+|MD5, System.Security.Cryptography.MD5|<xref:System.Security.Cryptography.MD5CryptoServiceProvider>|  
+|System.Security.Cryptography.MD5Cng|<xref:System.Security.Cryptography.MD5Cng>|  
+|RandomNumberGenerator|<xref:System.Security.Cryptography.RNGCryptoServiceProvider>|  
+|RC2 System.Security.Cryptography.RC2|<xref:System.Security.Cryptography.RC2CryptoServiceProvider>|  
+|Rijndael System.Security.Cryptography.Rijndael|<xref:System.Security.Cryptography.RijndaelManaged>|  
+|RIPEMD160, RIPEMD-160, System.Security.Cryptography.RIPEMD160Managed|<xref:System.Security.Cryptography.RIPEMD160Managed>|  
+|RSA System.Security.Cryptography.RSA|<xref:System.Security.Cryptography.RSACryptoServiceProvider>|  
+|SHA, SHA1, System.Security.Cryptography.SHA1|<xref:System.Security.Cryptography.SHA1CryptoServiceProvider>|  
+|System.Security.Cryptography.SHA1Cng|<xref:System.Security.Cryptography.SHA1Cng>|  
+|SHA256, SHA-256, System.Security.Cryptography.SHA256|<xref:System.Security.Cryptography.SHA256Managed>|  
+|System.Security.Cryptography.SHA256Cng|<xref:System.Security.Cryptography.SHA256Cng>|  
+|System.Security.Cryptography.SHA256CryptoServiceProvider|<xref:System.Security.Cryptography.SHA256CryptoServiceProvider>|  
+|SHA384, SHA-384 und System.Security.Cryptography.SHA384|<xref:System.Security.Cryptography.SHA384Managed>|  
+|System.Security.Cryptography.SHA384Cng|<xref:System.Security.Cryptography.SHA384Cng>|  
+|System.Security.Cryptography.SHA384CryptoServiceProvider|<xref:System.Security.Cryptography.SHA384CryptoServiceProvider>|  
+|"SHA512" verwendet, SHA-512, System.Security.Cryptography.SHA512|<xref:System.Security.Cryptography.SHA512Managed>|  
+|System.Security.Cryptography.SHA512Cng|<xref:System.Security.Cryptography.SHA512Cng>|  
+|SHA512CryptoServiceProvider|<xref:System.Security.Cryptography.SHA512CryptoServiceProvider>|  
+|System.Security.Cryptography.SymmetricAlgorithm|<xref:System.Security.Cryptography.RijndaelManaged>|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie Mitglieder der der <xref:System.Security.Cryptography.CryptoConfig> Klasse.  
+  
+ [!code-cpp[System.Security.Cryptography.CryptoConfig#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptoConfig/CPP/members.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.CryptoConfig#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptoConfig/CS/members.cs#1)]
+ [!code-vb[System.Security.Cryptography.CryptoConfig#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptoConfig/VB/members.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptoConfig ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoConfig.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.CryptoConfig" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAlgorithm">
+      <MemberSignature Language="C#" Value="public static void AddAlgorithm (Type algorithm, params string[] names);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddAlgorithm(class System.Type algorithm, string[] names) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.Type" />
+        <Parameter Name="names" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der Algorithmus zum zuweisen.</param>
+        <param name="names">Ein Array von Namen, die der Algorithmus zugeordnet.</param>
+        <summary>Fügt eine Reihe von Namen Algorithmus Zuordnungen für die aktuelle Anwendungsdomäne verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die angegebenen Zuordnungen haben Vorrang vor integrierten Zuordnungen und die Zuordnungen in der Datei "Machine.config". Die Zuordnungen werden verwendet, um die teilweise vertrauenswürdiger Code mithilfe von vertrauenswürdigen Kryptografievorgänge verhindern.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="algorithm" />-Parameter oder der <paramref name="names" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="algorithm" />kann nicht von außerhalb der Assembly zugegriffen werden.  
+  
+ - oder -   
+  
+ Einen der Einträge in der <paramref name="names" /> Parameter ist leer oder <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOID">
+      <MemberSignature Language="C#" Value="public static void AddOID (string oid, params string[] names);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddOID(string oid, string[] names) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoConfig.AddOID(System.String,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oid" Type="System.String" />
+        <Parameter Name="names" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="oid">Der Objektbezeichner (OID) zuordnen.</param>
+        <param name="names">Ein Array von Namen, die die OID zugeordnet.</param>
+        <summary>Fügt eine Reihe von Namen, Objekt-ID (OID)-Zuordnungen für die aktuelle Anwendungsdomäne verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die angegebenen Zuordnungen haben Vorrang vor integrierten Zuordnungen und die Zuordnungen in der Datei "Machine.config". Die Zuordnungen werden verwendet, um die teilweise vertrauenswürdiger Code mithilfe von vertrauenswürdigen Kryptografievorgänge verhindern.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="oid" />-Parameter oder der <paramref name="names" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Einen der Einträge in der <paramref name="names" /> Parameter ist leer oder <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowOnlyFipsAlgorithms">
+      <MemberSignature Language="C#" Value="public static bool AllowOnlyFipsAlgorithms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool AllowOnlyFipsAlgorithms" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CryptoConfig.AllowOnlyFipsAlgorithms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die Common Language Runtime die Richtlinie nur Federal Information Processing Standard (FIPS) zertifiziert Algorithmen erstellen erzwingen soll.</summary>
+        <value>
+          <see langword="true" />um die Richtlinie zu erzwingen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `false`, kann jeder Algorithmus erstellt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromName">
+      <MemberSignature Language="C#" Value="public static object CreateFromName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object CreateFromName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoConfig.CreateFromName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der einfache Name der Kryptografieobjekts, von denen eine Instanz zu erstellen.</param>
+        <summary>Erstellt eine neue Instanz des angegebenen kryptografischen Objekts an.</summary>
+        <returns>Eine neue Instanz des angegebenen kryptografischen Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der von dieser Klasse erkannten einfachen Namen, finden Sie unter <xref:System.Security.Cryptography.CryptoConfig>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Aufrufen der <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> Methode zum Erstellen eines neuen SHA1-Anbieters. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.CryptoConfig> Klasse.  
+  
+ [!code-cpp[System.Security.Cryptography.CryptoConfig#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptoConfig/CPP/members.cpp#4)]
+ [!code-csharp[System.Security.Cryptography.CryptoConfig#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptoConfig/CS/members.cs#4)]
+ [!code-vb[System.Security.Cryptography.CryptoConfig#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptoConfig/VB/members.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="name" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Reflection.TargetInvocationException">Der Algorithmus beschrieben, die von der <paramref name="name" /> Parameter mit aktiviertem Federal Information Processing Standards (FIPS) Modus verwendet wurde, jedoch ist nicht FIPS-kompatibel.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromName">
+      <MemberSignature Language="C#" Value="public static object CreateFromName (string name, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object CreateFromName(string name, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoConfig.CreateFromName(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="name">Der einfache Name der Kryptografieobjekts, von denen eine Instanz zu erstellen.</param>
+        <param name="args">Die Argumente, die zum Erstellen des angegebenen kryptografischen Objekts verwendet.</param>
+        <summary>Erstellt eine neue Instanz des angegebenen kryptografischen Objekts mit den angegebenen Argumenten.</summary>
+        <returns>Eine neue Instanz des angegebenen kryptografischen Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der von dieser Klasse erkannten einfachen Namen, finden Sie unter <xref:System.Security.Cryptography.CryptoConfig>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Aufrufen der <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> Methode zum Initialisieren einer neuen RSA Anbieter Instanz Zugriff auf die `TestContainer` Schlüsselcontainer. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.CryptoConfig> Klasse.  
+  
+ [!code-cpp[System.Security.Cryptography.CryptoConfig#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptoConfig/CPP/members.cpp#5)]
+ [!code-csharp[System.Security.Cryptography.CryptoConfig#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptoConfig/CS/members.cs#5)]
+ [!code-vb[System.Security.Cryptography.CryptoConfig#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptoConfig/VB/members.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="name" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Reflection.TargetInvocationException">Der Algorithmus beschrieben, die von der <paramref name="name" /> Parameter mit aktiviertem Federal Information Processing Standards (FIPS) Modus verwendet wurde, jedoch ist nicht FIPS-kompatibel.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodeOID">
+      <MemberSignature Language="C#" Value="public static byte[] EncodeOID (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] EncodeOID(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoConfig.EncodeOID(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">Der zu codierende OID.</param>
+        <summary>Codiert die angegebene Objekt-ID (OID) an.</summary>
+        <returns>Ein Bytearray, das den codierten OID enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Aufrufen der <xref:System.Security.Cryptography.CryptoConfig.EncodeOID%2A> Methode, um die angegebene Objekt-ID zu codieren. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.CryptoConfig> Klasse.  
+  
+ [!code-cpp[System.Security.Cryptography.CryptoConfig#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptoConfig/CPP/members.cpp#6)]
+ [!code-csharp[System.Security.Cryptography.CryptoConfig#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptoConfig/CS/members.cs#6)]
+ [!code-vb[System.Security.Cryptography.CryptoConfig#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptoConfig/VB/members.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="str" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException">Die OID-Codierung ist ein Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MapNameToOID">
+      <MemberSignature Language="C#" Value="public static string MapNameToOID (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string MapNameToOID(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoConfig.MapNameToOID(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der einfache Name des Algorithmus für die objektkennung (OID) abgerufen werden soll.</param>
+        <summary>Ruft den Objektbezeichner (OID) für den Algorithmus, den angegebenen einfachen Namen entspricht.</summary>
+        <returns>Die OID des angegebenen Algorithmus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der von dieser Klasse erkannten einfachen Namen, finden Sie unter <xref:System.Security.Cryptography.CryptoConfig>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Aufrufen der <xref:System.Security.Cryptography.CryptoConfig.MapNameToOID%2A> Methode, um ein Objektbezeichner (OID) aus den Zeichenfolgennamen des SHA1-Algorithmus abzurufen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.CryptoConfig> Klasse.  
+  
+ [!code-cpp[System.Security.Cryptography.CryptoConfig#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptoConfig/CPP/members.cpp#3)]
+ [!code-csharp[System.Security.Cryptography.CryptoConfig#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptoConfig/CS/members.cs#3)]
+ [!code-vb[System.Security.Cryptography.CryptoConfig#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptoConfig/VB/members.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="name" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

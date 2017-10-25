@@ -1,0 +1,129 @@
+<Type Name="XamlNodeQueue" FullName="System.Xaml.XamlNodeQueue">
+  <TypeSignature Language="C#" Value="public class XamlNodeQueue" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlNodeQueue extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlNodeQueue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Puffer zum Schreiben von Knoten, und sie erneut gelesen werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Knoten werden verarbeitet, aus der <xref:System.Xaml.XamlNodeQueue> Wenn sie die Verwendung von XAML-Reader gelesen werden. Falls gewünscht, eine Liste von XAML-Knoten, der wiedergegeben werden kann, oder eine Listenmodell, das zufälligen Zugriff unterstützt finden Sie unter <xref:System.Xaml.XamlNodeList>.  
+  
+ Beim Erstellen einer <xref:System.Xaml.XamlNodeQueue>, Sie erstellen ein Writer-Delegat, der als vorhanden ist die <xref:System.Xaml.XamlNodeQueue.Writer%2A> Wert. Der Writerdelegat basiert auf eine interne XAML-Writer-Klasse, die speziell für die Verwendung von XAML-Knoten ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlNodeQueue (System.Xaml.XamlSchemaContext schemaContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlSchemaContext schemaContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlNodeQueue.#ctor(System.Xaml.XamlSchemaContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+      </Parameters>
+      <Docs>
+        <param name="schemaContext">Der Schemakontext, die für von Knoten verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlNodeQueue" /> -Klasse mit einem angegebenen XAML-Schemakontext.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Schemakontext wird angewendet, die XAML-Writer, der als vorhanden ist die <xref:System.Xaml.XamlNodeQueue.Writer%2A> Wert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xamlSchemaContext" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlNodeQueue.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Knoten in der <see cref="T:System.Xaml.XamlNodeQueue" />.</summary>
+        <value>Die Anzahl der Knoten in der <see cref="T:System.Xaml.XamlNodeQueue" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlNodeQueue.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der bestimmt, ob dies <see cref="T:System.Xaml.XamlNodeQueue" /> enthält keine Knoten.</summary>
+        <value>
+          <see langword="true" />Wenn diese <see cref="T:System.Xaml.XamlNodeQueue" /> enthält keine Knoten <see langword="false" /> Wenn diese <see cref="T:System.Xaml.XamlNodeQueue" /> enthält Knoten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reader">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlReader Reader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlReader Reader" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlNodeQueue.Reader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlReader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen XAML-Reader Implementierung Delegaten ab.</summary>
+        <value>Ein Delegat der Verwendung von XAML-Reader-Implementierung.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xaml.XamlException">Der XAML-Writer, der für die Knotenliste verwendet wird, hat kein gültigen XAML-Schemakontext.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Writer">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlWriter Writer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlWriter Writer" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlNodeQueue.Writer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den zugeordneten XAML-Writer.</summary>
+        <value>Der zugeordnete XAML-Writer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

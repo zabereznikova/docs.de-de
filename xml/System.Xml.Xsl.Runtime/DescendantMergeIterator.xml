@@ -1,0 +1,116 @@
+<Type Name="DescendantMergeIterator" FullName="System.Xml.Xsl.Runtime.DescendantMergeIterator">
+  <TypeSignature Language="C#" Value="public struct DescendantMergeIterator" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit DescendantMergeIterator extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Xsl.Runtime.DescendantMergeIterator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlXml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Durchläuft alle Nachfolgerinhaltsknoten gemäß den XPath-Regeln für Nachfolgerachsen. Duplikate werden ausgeschlossen, da Knoten in der Teilstruktur des vorherigen Knotens nicht abgefragt werden.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public void Create (System.Xml.Xsl.Runtime.XmlNavigatorFilter filter, bool orSelf);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Create(class System.Xml.Xsl.Runtime.XmlNavigatorFilter filter, bool orSelf) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.DescendantMergeIterator.Create(System.Xml.Xsl.Runtime.XmlNavigatorFilter,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.Xml.Xsl.Runtime.XmlNavigatorFilter" />
+        <Parameter Name="orSelf" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Eine Instanz von der <see cref="T:System.Xml.Xsl.Runtime.XmlNavigatorFilter" /> Klasse, die Ihnen, Filtern von Knoten ermöglicht anhand des Namens. Weitere Informationen finden Sie unter <see cref="T:System.Xml.Xsl.Runtime.XmlNavigatorFilter" />.</param>
+        <param name="orSelf">
+          <see cref="T:System.Boolean" />der angibt, ob der aktuelle Knoten als Teil der Iteration zurückgegeben oder herausgefiltert wird.</param>
+        <summary>Initialisiert das <see cref="T:System.Xml.Xsl.Runtime.DescendantMergeIterator" />. Führt mehrere Sätze von Nachfolgerknoten in Dokumentreihenfolge zusammen und entfernt Duplikate.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Xml.XPath.XPathNavigator Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathNavigator Current" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.DescendantMergeIterator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt zurück, den aktuelle Ergebnisnavigator.</summary>
+        <value>Der aktuelle Ergebnisnavigator.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Xsl.Runtime.DescendantMergeIterator.Current%2A> Eigenschaft wird geändert, wenn <xref:System.Xml.Xsl.Runtime.DescendantMergeIterator.MoveNext%2A> Methode legt die <xref:System.Xml.Xsl.Runtime.DescendantMergeIterator.Current%2A> -Eigenschaft auf den nächsten Knoten und gibt <xref:System.Xml.Xsl.Runtime.IteratorResult.HaveCurrentNode>ist, andernfalls die <xref:System.Xml.Xsl.Runtime.DescendantMergeIterator.Current%2A> Eigenschaft bleibt unverändert.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public System.Xml.Xsl.Runtime.IteratorResult MoveNext (System.Xml.XPath.XPathNavigator input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Xml.Xsl.Runtime.IteratorResult MoveNext(class System.Xml.XPath.XPathNavigator input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.DescendantMergeIterator.MoveNext(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.Runtime.IteratorResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="input">
+          <see cref="T:System.Xml.XPath.XPathNavigator" />Objekt, das den Eingabeknoten identifiziert.</param>
+        <summary>Positionieren Sie diesen Iterator auf den nächsten untergeordneten Knoten.</summary>
+        <returns>Gibt <see cref="F:System.Xml.Xsl.Runtime.IteratorResult.NoMoreNodes" /> Wenn keine weiteren untergeordnete Knoten vorhanden sind. Gibt <see cref="F:System.Xml.Xsl.Runtime.IteratorResult.NeedInputNode" /> , wenn der nächste Eingabeknoten zuerst abgerufen werden muss. Gibt <see cref="F:System.Xml.Xsl.Runtime.IteratorResult.HaveCurrentNode" /> If beim Durchlaufen der Knoten der <see cref="P:System.Xml.Xsl.Runtime.DescendantMergeIterator.Current" /> -Eigenschaft wurde auf den nächsten Knoten festgelegt.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

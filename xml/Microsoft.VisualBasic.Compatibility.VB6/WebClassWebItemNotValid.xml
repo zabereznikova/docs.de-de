@@ -1,0 +1,62 @@
+<Type Name="WebClassWebItemNotValid" FullName="Microsoft.VisualBasic.Compatibility.VB6.WebClassWebItemNotValid">
+  <TypeSignature Language="C#" Value="public class WebClassWebItemNotValid : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi WebClassWebItemNotValid extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.WebClassWebItemNotValid" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Löst ein <see cref="T:System.Exception" /> Wenn die <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebItem" /> Wert ist ungültig.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.WebClass> Klasse wird von den Upgradetools verwendet, so aktualisieren Sie eine Visual Basic 6.0 `WebClass` Projekt eine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Website-Projekt.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebClassWebItemNotValid (string itemName);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string itemName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.WebClassWebItemNotValid.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">Eine Zeichenfolge, die stellt die <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebItem" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebClassWebItemNotValid" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.WebClass> Klasse wird von den Upgradetools verwendet, so aktualisieren Sie eine Visual Basic 6.0 `WebClass` Projekt eine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Website-Projekt.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

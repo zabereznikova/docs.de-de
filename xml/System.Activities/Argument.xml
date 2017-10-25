@@ -1,0 +1,294 @@
+<Type Name="Argument" FullName="System.Activities.Argument">
+  <TypeSignature Language="C#" Value="public abstract class Argument" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Argument extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Argument" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die abstrakte Basisklasse, die ein Bindungsterminal darstellt, mit dem der Fluss der Daten in eine und aus einer Aktivität unterstützt wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ArgumentType">
+      <MemberSignature Language="C#" Value="public Type ArgumentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ArgumentType" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Argument.ArgumentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Datentyp für die Daten ab, die an dieses <see cref="T:System.Activities.Argument" />-Element gebunden sind.</summary>
+        <value>Der Datentyp für die Daten, die an dieses <see cref="T:System.Activities.Argument" />-Element gebunden sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Activities.Argument Create (Type type, System.Activities.ArgumentDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Argument Create(class System.Type type, valuetype System.Activities.ArgumentDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Argument.Create(System.Type,System.Activities.ArgumentDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Argument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="direction" Type="System.Activities.ArgumentDirection" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Datentyp des <see cref="T:System.Activities.Argument" />-Elements.</param>
+        <param name="direction">Einer der Enumerationswerte, der die Richtung des Datenflusses durch das <see cref="T:System.Activities.Argument" /> angibt.</param>
+        <summary>Initialisiert ein <see cref="T:System.Activities.Argument" /> und gibt es zurück.</summary>
+        <returns>Das neu erstellte Argument.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateReference">
+      <MemberSignature Language="C#" Value="public static System.Activities.Argument CreateReference (System.Activities.Argument argumentToReference, string referencedArgumentName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Argument CreateReference(class System.Activities.Argument argumentToReference, string referencedArgumentName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Argument.CreateReference(System.Activities.Argument,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Argument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argumentToReference" Type="System.Activities.Argument" />
+        <Parameter Name="referencedArgumentName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="argumentToReference">Das Zielargument, auf das verwiesen wird.</param>
+        <param name="referencedArgumentName">Der Name des Arguments, auf das verwiesen wird.</param>
+        <summary>Erstellt ein neues Argument, das mithilfe des per Verweis angegebenen Argumentnamens auf das angegebene Zielargument verweist.</summary>
+        <returns>Ein neues Argument, das auf das angegebene Zielargument verweist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public System.Activities.ArgumentDirection Direction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Activities.ArgumentDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Argument.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.ArgumentDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Activities.ArgumentDirection" />-Element ab, mit dem angegeben wird, ob das <see cref="T:System.Activities.Argument" /> den Datenfluss in eine Aktivität, aus einer Aktivität oder in beide Richtungen darstellt.</summary>
+        <value>Einer der Enumerationswerte, der die Richtung des Datenflusses durch das <see cref="T:System.Activities.Argument" /> angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluationOrder">
+      <MemberSignature Language="C#" Value="public int EvaluationOrder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EvaluationOrder" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Argument.EvaluationOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen nullbasierten Wert ab (bzw. legt diesen fest), der die Reihenfolge angibt, in der das Argument ausgewertet wird.</summary>
+        <value>Ein nullbasierter Wert, der die Reihenfolge angibt, in der das Argument ausgewertet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist die Auswertungsreihenfolge des Arguments nicht angegeben und und entspricht dem <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>-Wert. Legen Sie <xref:System.Activities.Argument.EvaluationOrder%2A> auf einen Wert fest, der größer oder gleich null ist, um eine Auswertungsreihenfolge für dieses Argument anzugeben. [!INCLUDE[wf2](~/includes/wf2-md.md)] wertet Argumente mit einer angegebenen Auswertungsreihenfolge in aufsteigender Reihenfolge aus. Beachten Sie, dass Argumente mit einer nicht angegebenen Auswertungsreihenfolge vor Argumenten mit einer angegebenen Auswertungsreihenfolge ausgewertet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als null und ungleich <see cref="F:System.Activities.Argument.UnspecifiedEvaluationOrder" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public System.Activities.ActivityWithResult Expression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.ActivityWithResult Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Argument.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.IgnoreDataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.ActivityWithResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Activities.ActivityWithResult" />-Element ab (bzw. legt dieses fest), das den Wert der an das <see cref="T:System.Activities.Argument" /> gebundenen Daten darstellt.</summary>
+        <value>Der Wert der Daten, die an das <see cref="T:System.Activities.Argument" /> gebunden sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public object Get (System.Activities.ActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Get(class System.Activities.ActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Argument.Get(System.Activities.ActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.ActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der aktuelle Aktivitätskontext.</param>
+        <summary>Ruft den Wert des Arguments mithilfe des angegebenen Aktivitätskontexts ab.</summary>
+        <returns>Der Wert des Arguments.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Get&lt;T&gt; (System.Activities.ActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Get&lt;T&gt;(class System.Activities.ActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Argument.Get``1(System.Activities.ActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.ActivityContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Arguments.</typeparam>
+        <param name="context">Der aktuelle Aktivitätskontext.</param>
+        <summary>Ruft den Wert des Arguments mithilfe des angegebenen Typs und Aktivitätskontexts ab.</summary>
+        <returns>Der Wert des Arguments.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocation">
+      <MemberSignature Language="C#" Value="public System.Activities.Location GetLocation (System.Activities.ActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Activities.Location GetLocation(class System.Activities.ActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Argument.GetLocation(System.Activities.ActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Location</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.ActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Aktivitätskontext der ausführenden Aktivität.</param>
+        <summary>Ruft den <see cref="T:System.Activities.Location" /> für diesen <see cref="T:System.Activities.Argument" /> ab.</summary>
+        <returns>Die Position für dieses <see cref="T:System.Activities.Argument" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResultValue">
+      <MemberSignature Language="C#" Value="public const string ResultValue;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ResultValue" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Argument.ResultValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den konstanten Wert von "Ergebnis", die den Namen des entspricht der <see cref="P:System.Activities.ActivityWithResult.Result" /> Eigenschaft vom Typ <see cref="T:System.Activities.OutArgument" /> in der Basisklasse Ausdruck <see cref="T:System.Activities.ActivityWithResult" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Konstante, um bei der Nutzung der späten Bindung auf das Ergebnis einer Ausdrucksaktivität zu verweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (System.Activities.ActivityContext context, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(class System.Activities.ActivityContext context, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Argument.Set(System.Activities.ActivityContext,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.ActivityContext" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der aktuelle Aktivitätskontext.</param>
+        <param name="value">Der Wert für das Argument.</param>
+        <summary>Legt den Wert des Arguments mithilfe des angegebenen Aktivitätskontexts fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnspecifiedEvaluationOrder">
+      <MemberSignature Language="C#" Value="public static readonly int UnspecifiedEvaluationOrder;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 UnspecifiedEvaluationOrder" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Argument.UnspecifiedEvaluationOrder" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Wert der <see cref="P:System.Activities.Argument.EvaluationOrder" />-Eigenschaft für ein Argument mit einer nicht angegebenen Auswertungsreihenfolge dar. Dieser Wert ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

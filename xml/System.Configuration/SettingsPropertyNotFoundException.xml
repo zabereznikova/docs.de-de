@@ -1,0 +1,119 @@
+<Type Name="SettingsPropertyNotFoundException" FullName="System.Configuration.SettingsPropertyNotFoundException">
+  <TypeSignature Language="C#" Value="public class SettingsPropertyNotFoundException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SettingsPropertyNotFoundException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsPropertyNotFoundException" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Ausnahme für <see cref="T:System.Configuration.SettingsProperty" /> Objekte, die nicht gefunden werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Ausnahme wird ausgelöst, durch die <xref:System.Configuration.SettingsBase> Klasse bei der es wird versucht, den Zugriff auf eine Eigenschaft anhand des Namens, jedoch entweder die Eigenschaft wurde nie zugeordnet der <xref:System.Configuration.SettingsBase> Klasseninstanz oder den Anbieter für die Eigenschaft einen Wert, wenn Sie gefragt werden nicht zurückgegeben wurde konfiguriert um die Daten zu laden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsPropertyNotFoundException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsPropertyNotFoundException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.SettingsPropertyNotFoundException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsPropertyNotFoundException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsPropertyNotFoundException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Zeichenfolge mit der Meldung zu einer Ausnahme.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Configuration.SettingsPropertyNotFoundException" /> -Klasse auf Grundlage eines angegebenen Parameters.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SettingsPropertyNotFoundException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsPropertyNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt, das die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Die <see cref="T:System.Runtime.Serialization.StreamingContext" /> -Objekt, das Kontextinformationen zur Quelle bzw. zum Ziel des serialisierten Streams enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Configuration.SettingsPropertyNotFoundException" /> -Klasse auf Grundlage der angegebenen Parameter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsPropertyNotFoundException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsPropertyNotFoundException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Zeichenfolge mit der Meldung zu einer Ausnahme.</param>
+        <param name="innerException">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Configuration.SettingsPropertyNotFoundException" /> -Klasse auf Grundlage der angegebenen Parameter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

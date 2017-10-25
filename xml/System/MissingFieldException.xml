@@ -1,0 +1,298 @@
+<Type Name="MissingFieldException" FullName="System.MissingFieldException">
+  <TypeSignature Language="C#" Value="public class MissingFieldException : MissingMemberException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit MissingFieldException extends System.MissingMemberException implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.MissingFieldException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MissingMemberException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die Ausnahme wird bei dem Versuch ausgelöst, dynamisch auf ein nicht vorhandenes Feld zuzugreifen. Wenn ein Feld in einer Klassenbibliothek entfernt oder umbenannt wurde, kompilieren Sie alle Assemblys erneut, die diese Bibliothek verwenden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalerweise wird ein Fehler generiert, wenn Code versucht, einen nicht vorhandenen Member einer Klasse zuzugreifen. <xref:System.MissingFieldException>wurde entwickelt, um Fälle zu behandeln, in denen versucht wird, dynamisch auf eine gelöschte oder umbenannte Feld einer Assembly zuzugreifen, die nicht mit seinem starken Namen verwiesen wird. Die <xref:System.MissingFieldException> wird ausgelöst, wenn Code in einer abhängigen Assembly versucht, auf ein fehlendes Feld in einer Assembly zuzugreifen, die geändert wurde.  
+  
+ <xref:System.MissingFieldException>verwendet die HRESULT COR_E_MISSINGFIELD mit dem Wert 0 x 80131511 ab.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.MissingFieldException>, finden Sie unter der <xref:System.MissingFieldException.%23ctor%2A> Konstruktoren.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, was geschieht, wenn Sie versuchen, mithilfe der Reflektion zum Aufrufen einer Methode, die nicht vorhanden ist, und Zugriff ein Feld, das nicht vorhanden ist. Die Anwendung stellt wieder her, indem Sie Sie Abfangen der <xref:System.MissingMethodException>, <xref:System.MissingFieldException>, und <xref:System.MissingMemberException>.  
+  
+ [!code-cpp[MissingMethodException#1](~/samples/snippets/cpp/VS_Snippets_CLR/MissingMethodException/cpp/MissingMethodException.cpp#1)]
+ [!code-csharp[MissingMethodException#1](~/samples/snippets/csharp/VS_Snippets_CLR/MissingMethodException/CS/MissingMethodException.cs#1)]
+ [!code-vb[MissingMethodException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/MissingMethodException/vb/missingmethodexception.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MissingFieldException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MissingFieldException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.MissingFieldException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert <xref:System.MissingFieldException.Message%2A> -Eigenschaft der neuen Instanz mit einer vom System gelieferten Meldung, die den Fehler beschreibt, wie z. B. "versucht, ein nicht vorhandenes Feld zuzugreifen." Diese Meldung berücksichtigt die aktuelle Systemkultur.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.MissingFieldException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.MissingFieldException.Message%2A>|Die lokalisierte Zeichenfolge mit der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MissingFieldException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MissingFieldException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein <see cref="T:System.String" />, der den Fehler beschreibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.MissingFieldException" />-Klasse mit einer angegebenen Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt des `message` sollte für den Benutzer verständlich sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.MissingFieldException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.MissingFieldException.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MissingFieldException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MissingFieldException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die Daten des serialisierten Objekts enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.MissingFieldException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung aufgerufen, um das über einen Stream übertragene Ausnahmeobjekt wiederherzustellen. Weitere Informationen finden Sie unter [XML- und SOAP-Serialisierung](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MissingFieldException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MissingFieldException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="inner">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>innere</c> Parameter ist kein null-Verweis (<see langword="Nothing" /> in Visual Basic), die aktuelle Ausnahme wird ausgelöst, eine <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.MissingFieldException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, kann in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt denselben Wert zurück, der an den Konstruktor übergeben wurde, bzw. einen NULL-Verweis (`Nothing` in Visual Basic), wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft nicht den Wert für die innere Ausnahme für den Konstruktor bereitstellt.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.MissingFieldException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Der Verweis auf die interne Ausnahme.|  
+|<xref:System.MissingFieldException.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MissingFieldException (string className, string fieldName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string className, string fieldName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MissingFieldException.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="className" Type="System.String" />
+        <Parameter Name="fieldName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="className">Der Name der Klasse, in dem Zugriff auf ein nicht vorhandenes Feld versucht wurde.</param>
+        <param name="fieldName">Der Name des Felds, das nicht zugegriffen werden kann.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.MissingFieldException" /> Klasse mit dem angegebenen Klassennamen und der Name des Felds.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.MissingFieldException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Textzeichenfolge mit der Signatur des fehlenden Felds, den Klassennamen und den Feldnamen ab. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Die Zeichenfolge der Fehlermeldung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Name der Klasse nicht angegeben wird, wenn das Objekt erstellt wird, wird die Standardtextzeichenfolge erbt von der Basisklasse zurückgegeben. Diese Eigenschaft überschreibt <xref:System.MissingMemberException.Message%2A>. Die Fehlermeldung sollte lokalisiert werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.MissingFieldException.Message%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.MissingFieldException> Klasse.  
+  
+ [!code-cpp[MissingMethodException#3](~/samples/snippets/cpp/VS_Snippets_CLR/MissingMethodException/cpp/MissingMethodException.cpp#3)]
+ [!code-csharp[MissingMethodException#3](~/samples/snippets/csharp/VS_Snippets_CLR/MissingMethodException/CS/MissingMethodException.cs#3)]
+ [!code-vb[MissingMethodException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/MissingMethodException/vb/missingmethodexception.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

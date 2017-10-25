@@ -1,0 +1,280 @@
+<Type Name="LicenseProviderAttribute" FullName="System.ComponentModel.LicenseProviderAttribute">
+  <TypeSignature Language="C#" Value="public sealed class LicenseProviderAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LicenseProviderAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.LicenseProviderAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die <see cref="T:System.ComponentModel.LicenseProvider" /> für die Verwendung mit einer Klasse. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer Komponente, die zu lizenzieren, müssen Sie angeben, die <xref:System.ComponentModel.LicenseProvider> durch die Komponente mit einem <xref:System.ComponentModel.LicenseProviderAttribute>.  
+  
+ Verwenden der <xref:System.ComponentModel.LicenseProviderAttribute.LicenseProvider%2A> Eigenschaft, um die <xref:System.Type> von der <xref:System.ComponentModel.LicenseProvider>.  
+  
+ Weitere Informationen zu Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md). Weitere Informationen zur Lizenzierung finden Sie unter [Vorgehensweise: Lizenz-Komponenten und Steuerelementen](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57).  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.SharedState>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.ComponentModel.LicFileLicenseProvider> als Lizenzgeber für `MyControl`.  
+  
+ [!code-cpp[Classic LicenseProviderAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic LicenseProviderAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic LicenseProviderAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic LicenseProviderAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic LicenseProviderAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic LicenseProviderAttribute Example/VB/source.vb#1)]  
+  
+ Das nächste Codebeispiel erstellt eine Instanz von der `MyControl` Klasse. Anschließend ruft die Attribute für die Klasse ab, und gibt den Namen des verwendeten Lizenzanbieters `myNewControl`.  
+  
+ [!code-cpp[Classic LicenseProviderAttribute Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic LicenseProviderAttribute Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic LicenseProviderAttribute Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic LicenseProviderAttribute Example/CS/source.cs#2)]
+ [!code-vb[Classic LicenseProviderAttribute Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic LicenseProviderAttribute Example/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LicenseProviderAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseProviderAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.LicenseProviderAttribute" /> Klasse ohne eine Lizenzanbieter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LicenseProviderAttribute (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseProviderAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der vollqualifizierte Name der Lizenzgeber-Klasse.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.LicenseProviderAttribute" />-Klasse mit dem angegebenen Typ.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LicenseProviderAttribute (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseProviderAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein <see cref="T:System.Type" /> , der den Typ der Lizenzgeber-Klasse darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.LicenseProviderAttribute" /> Klasse mit dem angegebenen Typ des Lizenzanbieters.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.LicenseProviderAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.LicenseProviderAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.LicenseProviderAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.LicenseProviderAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, der Standardwert, der kein Anbieter ist. Dies <see langword="static" /> Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseProviderAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein weiteres Objekt für den Vergleich.</param>
+        <summary>Gibt an, ob diese Instanz und ein angegebenes Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value" /> gleich dieser Instanz ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseProviderAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.ComponentModel.LicenseProviderAttribute" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LicenseProvider">
+      <MemberSignature Language="C#" Value="public Type LicenseProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type LicenseProvider" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.LicenseProviderAttribute.LicenseProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Lizenzanbieter, der für die zugeordnete Klasse verwendet werden muss.</summary>
+        <value>Ein <see cref="T:System.Type" /> , der den Typ des Lizenzanbieters darstellt. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeId">
+      <MemberSignature Language="C#" Value="public override object TypeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypeId" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.LicenseProviderAttribute.TypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine eindeutige ID für diesen Typ des Attributs an.</summary>
+        <value>Eine eindeutige ID für diesen Typ des Attributs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,147 @@
+<Type Name="DefaultSettingsSection" FullName="System.Transactions.Configuration.DefaultSettingsSection">
+  <TypeSignature Language="C#" Value="public class DefaultSettingsSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DefaultSettingsSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.Configuration.DefaultSettingsSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen XML-Abschnitt in einer Konfigurationsdatei dar, der Standardwerte einer Transaktion enthält. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Wie folgt kann eine Beispielkonfigurationsdatei, die von Ihrer Anwendung für die Transaktion verwendet werden,  
+  
+ `<configuration>`  
+  
+ `<system.transactions>`  
+  
+ `<defaultSettings distributedTransactionManagerName="F04M25" timeout="02:00:00"/>`  
+  
+ `<machineSettings maxTimeout="02:00:00"/>`  
+  
+ `</system.transactions>`  
+  
+ `</configuration>`  
+  
+ In diesem Beispiel gibt die Standardwerte einer Transaktion an. Insbesondere wird die den Computernamen des Distributed Transaction Coordinator (MSDTC), die für alle verteilten Transaktionen zu koordinieren lokal Schritte verantwortlich ist und die Standardzeit, die nach dem Timeout einer Transaktion. Darüber hinaus gibt es eine Einstellung, die nur auf der Computerebene geändert werden kann, die die maximale Zeitdauer ist zulässig, bis zum Timeout einer Transaktions.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultSettingsSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Configuration.DefaultSettingsSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Transactions.Configuration.DefaultSettingsSection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistributedTransactionManagerName">
+      <MemberSignature Language="C#" Value="public string DistributedTransactionManagerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DistributedTransactionManagerName" />
+      <MemberSignature Language="DocId" Value="P:System.Transactions.Configuration.DefaultSettingsSection.DistributedTransactionManagerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("distributedTransactionManagerName", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Transaktions-Managers ab.</summary>
+        <value>Der Name des Transaktions-Managers. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält den Namen des Computers, von dem der Microsoft Distributed Transaction Coordinator (MSDTC) ausgeführt wird, und ist verantwortlich für alle lokal gestartete verteilte Transaktionen zu koordinieren.  
+  
+ Sie können festlegen, den Wert dieser Eigenschaft zum Aktivieren von remote-Transaktions-Manager unter <xref:System.Transactions>. Wenn diese Eigenschaft ist `null` oder eine leere Zeichenfolge enthält, wird der lokale Transaktions-Manager als remote-Transaktions-Manager verwendet. Wenn Sie diese Eigenschaft auf einen anderen Wert als die leere Zeichenfolge festlegen, müssen Sie Windows Server 2003 Service Pack 1 installieren. Andernfalls schlägt die jeden anderen Transaktionsvorgang mit <xref:System.NotSupportedException>. Eine Transaktion, die eskaliert wird, um vom MSDTC verwaltet zu werden verwenden nicht den lokalen MSDTC, können aber stattdessen verwenden Sie das Schema auf dem Computer, die von dieser Eigenschaft angegeben. Wenn die betreffenden Transaktions-Manager aus irgendeinem Grund nicht verfügbar ist, wird eine Ausnahme ausgelöst.  
+  
+ Diese Eigenschaft ist nicht in der Groß-/Kleinschreibung beachtet und sollte nur den kurzen Namen des Computers enthalten.  Vollständig qualifizierten Domänennamen, "localhost" oder die IP-Adressen werden nicht angenommen. Wenn diese Eigenschaft einen ungültigen Remotecomputernamen enthält, wird eine "kann nicht zum Lesen von Konfigurationsinformationen" Ausnahme ausgelöst.  
+  
+ Sie müssen die richtigen Sicherheitsberechtigung auf eine remote-MSDTC zu verwenden. Weitere Informationen zum Konfigurieren von DTC-Sicherheitseinstellungen finden Sie unter der [Konfigurieren von MSDTC Sicherheitseigenschaften](http://msdn.microsoft.com/library/cossdk/html/2627a956-60b3-4d26-bc04-e0676ec97786.asp?frame=true) Thema.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wurde versucht, diese Eigenschaft auf den vollqualifizierten Domänennamen oder die IP-Adressen festzulegen.</exception>
+        <exception cref="T:System.Transactions.TransactionAbortedException">Es wurde versucht, diese Eigenschaft auf "localhost" festzulegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Transactions.Configuration.DefaultSettingsSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public TimeSpan Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.Transactions.Configuration.DefaultSettingsSection.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("timeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.TimeSpanValidator(MaxValueString="10675199.02:48:05.4775807", MinValueString="00:00:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Standardzeit ab, nach deren Ablauf ein Timeout einer Transaktion auftritt, oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" />-Objekt. Die Standardeigenschaft ist 00:01:00.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft den Wert aus der Standard-Timeoutwert in der Datei "App.config" ab. Es wird automatisch angepasst, indem die <xref:System.Transactions.Configuration.MachineSettingsSection.MaxTimeout%2A> Wert zur Laufzeit.  
+  
+ Der Wert 00:00:00 (oder 0 (null)) wird als unendlich interpretiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Es wurde versucht, diese Eigenschaft auf negative Werte festzulegen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

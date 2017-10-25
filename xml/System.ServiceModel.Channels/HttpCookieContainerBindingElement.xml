@@ -1,0 +1,139 @@
+<Type Name="HttpCookieContainerBindingElement" FullName="System.ServiceModel.Channels.HttpCookieContainerBindingElement">
+  <TypeSignature Language="C#" Value="public class HttpCookieContainerBindingElement : System.ServiceModel.Channels.BindingElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpCookieContainerBindingElement extends System.ServiceModel.Channels.BindingElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.HttpCookieContainerBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.BindingElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use AllowCookies.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht die Verwaltung der Behandlung von HTTP-Cookies im HTTP-Anforderungen und Antworten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCookieContainerBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpCookieContainerBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.HttpCookieContainerBindingElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HttpCookieContainerBindingElement (System.ServiceModel.Channels.HttpCookieContainerBindingElement elementToBeCloned);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.HttpCookieContainerBindingElement elementToBeCloned) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpCookieContainerBindingElement.#ctor(System.ServiceModel.Channels.HttpCookieContainerBindingElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementToBeCloned" Type="System.ServiceModel.Channels.HttpCookieContainerBindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="elementToBeCloned">Das Bindungselement geklont wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.HttpCookieContainerBindingElement" />-Klasse aus einem angegebenen Bindungselement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpCookieContainerBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Typ der Kanalfactory.</typeparam>
+        <param name="context">
+          <see cref="T:System.ServiceModel.Channels.BindingContext" />-Member, mit denen Bindungen, Verhaltensweisen, Verträge und andere Informationen beschrieben werden, die zum Erstellen der Kanalfactory erforderlich sind.</param>
+        <summary>Erstellt eine Kanalfactory, mit der ein Kanal erstellt werden kann.</summary>
+        <returns>Eine Kanalfactory des angegebenen Typs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpCookieContainerBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Kopie des aktuellen bindungselementobjekts zurück.</summary>
+        <returns>Das-Objekt, das einen tiefen Klon des Originals handelt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpCookieContainerBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Das typisierte Objekt, das von der Methode abgefragt wird.</typeparam>
+        <param name="context">Der Bindungskontext für das Bindungselement.</param>
+        <summary>Gibt ggf. ein angefordertes typisiertes Objekt von der entsprechenden Ebene im Bindungsstapel zurück.</summary>
+        <returns>Das typisierte Objekt <paramref name="T" /> angefordert werden, sofern es vorhanden ist, oder <see langword="Nothing" /> , wenn es nicht vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,125 @@
+<Type Name="INameScope" FullName="System.Windows.Markup.INameScope">
+  <TypeSignature Language="C#" Value="public interface INameScope" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INameScope" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.INameScope" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert einen Vertrag dafür, wie in einem bestimmten XAML-Namensbereich auf Namen von Elementen zugegriffen werden soll und wie die Eindeutigkeit von Namen innerhalb dieses XAML-Namensbereichs durchgesetzt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle wird von Klassen implementiert, die über untergeordnete Elemente verfügen, die wiederverwendet werden, durch die Vorlage oder das Aufschieben Metapher vorgesehen sind. Vorlagen, Factorys und ähnliche Konstrukte müssen eindeutige Verwendung von XAML-Namensbereiche, die aus einem Diagramm Hauptobjekt getrennt sind und die Stamm-XAML. Hier das Prinzip ist, dass es darf keine Namenskonflikte, wenn Objekte, die von diesen untergeordneten Elementen erstellt in einer Anwendung Objektdiagramm eingeführt werden, und DOM-Operationen und Verwendung von XAML-Verweis Techniken, die auf der Namensbezeichner basieren auf Namen basieren können Eindeutigkeit in jeder XAML-Namensbereich.  
+  
+ In früheren Versionen von .NET Framework war diese Schnittstelle in der WPF-spezifischen Assembly WindowsBase. In [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.INameScope> befindet sich in der System.Xaml-Assembly. Weitere Informationen finden Sie unter [aus WPF zu System.Xaml migrierte Typen](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
+ Diese Schnittstelle wird von der WPF-Klasse implementiert <xref:System.Windows.NameScope>. Die meisten XAML-Namensbereich-Vorgänge in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] mithilfe der <xref:System.Windows.NameScope> Instanzen, aber Informationen wird gelegentlich intern mit kommuniziert <xref:System.Windows.Markup.INameScope> Verweise.  
+  
+ Beispiele für WPF-Klassen, die eine Factory verwenden oder das Aufschieben der Metapher in Kombination mit XAML-Darstellung sind <xref:System.Windows.Style> und <xref:System.Windows.FrameworkTemplate>. Diese Implementierungen abhängig die explizite Versionen erhältlich Schnittstellenmethoden in der Regel die <xref:System.Windows.NameScope> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FindName">
+      <MemberSignature Language="C#" Value="public object FindName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object FindName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.INameScope.FindName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Namensbezeichner für das angeforderte Objekt.</param>
+        <summary>Gibt ein Objekt zurück, das über den bereitgestellten kennzeichnenden Namen verfügt.</summary>
+        <returns>Das Objekt, falls gefunden. Gibt <see langword="null" /> , wenn kein Objekt dieses Namens gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Namenszeichenfolgen in XAML-Markup müssen die Anforderungen finden Sie im übereinstimmen [XamlName-Grammatik](~/docs/framework/xaml-services/xamlname-grammar.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterName">
+      <MemberSignature Language="C#" Value="public void RegisterName (string name, object scopedElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterName(string name, object scopedElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.INameScope.RegisterName(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="scopedElement" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der zu registrierende Name.</param>
+        <param name="scopedElement">Das bestimmte Element, das bereitgestellte <c>Namen</c> bezieht sich auf.</param>
+        <summary>Registriert den angegebenen Namen beim aktuellen XAML-Namensbereich.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Doppelte Namen in einem XAML-Namensbereich sind nicht zulässig.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Erlauben Sie keine doppelte Namen registriert werden. Wenn die Eingabe <paramref name="name" /> ist bereits mit einem vorhandenen Element in der internen Auflistung Darstellung der Verwendung von XAML-Namensbereich zugewiesen (auch wenn er als identisch ist <paramref name="scopedElement" />), lösen eine Ausnahme aus.  
+  
+ Auch in Betracht ziehen, eine Ausnahme auszulösen, wenn der angegebene Name nicht entspricht [XamlName-Grammatik](~/docs/framework/xaml-services/xamlname-grammar.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterName">
+      <MemberSignature Language="C#" Value="public void UnregisterName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnregisterName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.INameScope.UnregisterName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name, dessen Registrierung aufgehoben werden soll.</param>
+        <summary>Hebt die Registrierung des angegebenen Namens beim aktuellen XAML-Namensbereich auf.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn der input-Name nicht vorhanden ist, wird eine Ausnahme ausgelöst.  
+  
+ Sie sollten den Namen und das zuvor registrierten-Element, das aus der Auflistung-Darstellung der XAML-Namensbereich bezieht entfernen, sodass der gleichnamigen möglicherweise erneut in der Zukunft registriert werden konnte.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

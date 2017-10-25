@@ -1,0 +1,15 @@
+<Namespace Name="System.Data.OleDb">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.OleDb" /> Namespace ist.NET Framework-Datenanbieter für OLE DB.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework-Datenanbieter für OLE DB beschreibt eine Auflistung von Klassen, mit denen Zugriff auf eine OLE DB-Datenquelle im verwalteten Bereich an. Mithilfe der <xref:System.Data.OleDb.OleDbDataAdapter>, Sie können ggf. eine speicherresidente <xref:System.Data.DataSet> , dass Sie zum Abfragen und Aktualisieren der Datenquelle verwenden können.  
+  
+ Weitere Informationen zum Verwenden dieses Namespace finden Sie unter der <xref:System.Data.OleDb.OleDbDataAdapter>, <xref:System.Data.OleDb.OleDbDataReader>, <xref:System.Data.OleDb.OleDbCommand>, und <xref:System.Data.OleDb.OleDbConnection> Klassen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

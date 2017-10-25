@@ -1,0 +1,33 @@
+<Type Name="VisualStyleElement+TaskBand" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+TaskBand">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.TaskBand" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/TaskBand extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.TaskBand" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Klassen, die <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" />-Objekte für Teile der Taskleiste bereitstellen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TaskBand> Klasse bietet eine Grundlage, die in der folgenden Klassen definiert werden:  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TaskBand.FlashButton>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TaskBand.FlashButtonGroupMenu>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TaskBand.GroupCount>  
+  
+ Jede dieser Klassen stellt eine Eigenschaft, die gibt eine <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für den Teil der Taskleiste dem Klassennamen angegeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

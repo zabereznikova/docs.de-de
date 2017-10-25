@@ -1,0 +1,157 @@
+<Type Name="ToolStripDropDownItemAccessibleObject" FullName="System.Windows.Forms.ToolStripDropDownItemAccessibleObject">
+  <TypeSignature Language="C#" Value="public class ToolStripDropDownItemAccessibleObject : System.Windows.Forms.ToolStripItem.ToolStripItemAccessibleObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolStripDropDownItemAccessibleObject extends System.Windows.Forms.ToolStripItem/ToolStripItemAccessibleObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripDropDownItemAccessibleObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ToolStripItem+ToolStripItemAccessibleObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen, die von Eingabehilfen-Anwendungen zum Anpassen der Benutzeroberfläche von einem <see cref="T:System.Windows.Forms.ToolStripDropDown" /> für Benutzer mit Behinderung verwendet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripDropDownItemAccessibleObject (System.Windows.Forms.ToolStripDropDownItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ToolStripDropDownItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownItemAccessibleObject.#ctor(System.Windows.Forms.ToolStripDropDownItem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Forms.ToolStripDropDownItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Die <see cref="T:System.Windows.Forms.ToolStripDropDownItem" /> , besitzt dies <see cref="T:System.Windows.Forms.ToolStripDropDownItemAccessibleObject" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolStripDropDownItemAccessibleObject" />-Klasse mit der angegebenen <see cref="T:System.Windows.Forms.ToolStripDropDownItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoDefaultAction">
+      <MemberSignature Language="C#" Value="public override void DoDefaultAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DoDefaultAction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownItemAccessibleObject.DoDefaultAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Standardaktion, die dieses zugreifbaren Objekts zugeordnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Clients können Standardaktion des Objekts abrufen, indem Sie ein Objekt überprüfen <xref:System.Windows.Forms.AccessibleObject.DefaultAction%2A> Eigenschaft. Ein Client kann mithilfe der Automatisierung (sofern unterstützt) anstelle von <xref:System.Windows.Forms.AccessibleObject.DoDefaultAction%2A> zum Ausführen der Standardaktion des Objekts. Allerdings <xref:System.Windows.Forms.AccessibleObject.DoDefaultAction%2A> bietet eine einfache Möglichkeit, ein Objekt Ausführen der Aktion am häufigsten verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die Standardaktion, die vom System bereitgestellte Elemente der Benutzeroberfläche ausgeführt, hängt von den Tastaturstatus ab. Also wenn Modifizierertaste wie UMSCHALT, ALT oder STRG gedrückt ist (entweder durch eine Benutzeraktion oder programmgesteuert) Wenn <see cref="M:System.Windows.Forms.AccessibleObject.DoDefaultAction" /> aufgerufen wird, wird die standardmäßige Aktion möglicherweise nicht bei diesen Schlüssel nicht nach unten sind identisch. Nicht alle Objekte verfügen über eine Standardaktion.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChild">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject GetChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.AccessibleObject GetChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownItemAccessibleObject.GetChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Steuerelements zugreifbare untergeordnete Element.</param>
+        <summary>Ruft das zugreifbare untergeordnete Element-Steuerelement, das dem angegebenen Index entspricht.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.AccessibleObject" /> , das das zugreifbare untergeordnete Element-Steuerelement, das dem angegebenen Index entspricht darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Erstellung eines Diagramms Eingabehilfen-fähig zu steuern, mit der <xref:System.Windows.Forms.AccessibleObject> und <xref:System.Windows.Forms.Control.ControlAccessibleObject> Klassen zum Offenlegen von Informationen zugegriffen werden kann. Das Steuerelement zeichnet zwei Kurven geteilt zusammen mit einer Legende an. Die `ChartControlAccessibleObject` -Klasse, abgeleitet von <xref:System.Windows.Forms.Control.ControlAccessibleObject>, werden in der <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> Methode, um benutzerdefinierte barrierefreie Informationen für das Diagrammsteuerelement bereitzustellen. Da die Diagrammlegende nicht tatsächlich <xref:System.Windows.Forms.Control>-basierte Steuerelement, sondern gezeichnet wird vom Diagrammsteuerelement, ist es aber keine integrierten barrierefreien Informationen. Aus diesem Grund die `ChartControlAccessibleObject` -Klasse überschreibt die <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> -Methode zur Rückgabe der `CurveLegendAccessibleObject` , zugegriffen werden Informationen für jeden Teil der Legende darstellt. Wenn eine zugänglich-fähige Anwendung dieses Steuerelement verwendet wird, bieten das Steuerelement die erforderlichen Informationen zugegriffen werden kann.  
+  
+ Dieser Code veranschaulicht das Überschreiben der <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> Methode. Finden Sie unter der <xref:System.Windows.Forms.AccessibleObject> Übersicht über die Klasse für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CPP/chartcontrol.cpp#4)]
+ [!code-csharp[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CS/chartcontrol.cs#4)]
+ [!code-vb[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/VB/chartcontrol.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildCount">
+      <MemberSignature Language="C#" Value="public override int GetChildCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetChildCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownItemAccessibleObject.GetChildCount" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Anzahl der untergeordneten Elemente ab, die zu einem Objekt gehören, auf das zugegriffen werden kann.</summary>
+        <returns>Die Anzahl der untergeordneten Elemente, die zu einem Objekt gehören, auf das zugegriffen werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Erstellung eines Diagramms Eingabehilfen-fähig zu steuern, mit der <xref:System.Windows.Forms.AccessibleObject> und <xref:System.Windows.Forms.Control.ControlAccessibleObject> Klassen zum Offenlegen von Informationen zugegriffen werden kann. Das Steuerelement zeichnet zwei Kurven geteilt zusammen mit einer Legende an. Die `ChartControlAccessibleObject` -Klasse, abgeleitet von <xref:System.Windows.Forms.Control.ControlAccessibleObject>, werden in der <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> Methode, um benutzerdefinierte barrierefreie Informationen für das Diagrammsteuerelement bereitzustellen. Da die Diagrammlegende nicht tatsächlich <xref:System.Windows.Forms.Control>-basierte Steuerelement, sondern gezeichnet wird vom Diagrammsteuerelement, ist es aber keine integrierten barrierefreien Informationen. Aus diesem Grund die `ChartControlAccessibleObject` -Klasse überschreibt die <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> -Methode zur Rückgabe der `CurveLegendAccessibleObject` , zugegriffen werden Informationen für jeden Teil der Legende darstellt. Wenn eine zugänglich-fähige Anwendung dieses Steuerelement verwendet wird, bieten das Steuerelement die erforderlichen Informationen zugegriffen werden kann.  
+  
+ Dieser Code veranschaulicht das Überschreiben der <xref:System.Windows.Forms.AccessibleObject.GetChildCount%2A> Methode. Finden Sie unter der <xref:System.Windows.Forms.AccessibleObject> Übersicht über die Klasse für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CPP/chartcontrol.cpp#4)]
+ [!code-csharp[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CS/chartcontrol.cs#4)]
+ [!code-vb[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/VB/chartcontrol.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleRole Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleRole Role" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripDropDownItemAccessibleObject.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rolle dieses zugreifbaren Objekts ab.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.AccessibleRole" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Rolle des Objekts kann die Funktion des Objekts beschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

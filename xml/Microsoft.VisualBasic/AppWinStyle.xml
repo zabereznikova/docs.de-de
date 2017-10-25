@@ -1,0 +1,123 @@
+<Type Name="AppWinStyle" FullName="Microsoft.VisualBasic.AppWinStyle">
+  <TypeSignature Language="C#" Value="public enum AppWinStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AppWinStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.AppWinStyle" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Fensterstil für die aufgerufenen Programm verwenden, beim Aufrufen der <see langword="Shell" /> Funktion.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie ausgeben `Shell` Befehle können Sie in Ihrem Code anstelle der eigentlichen Werte der folgenden Enumerationsmember.  
+  
+ Die `Style` Argument übernimmt die `AppWinStyle` Enumerationsmember.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Hide">
+      <MemberSignature Language="C#" Value="Hide" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle Hide = int16(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.AppWinStyle.Hide" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fenster ausgeblendet, und den Fokus an das ausgeblendete Fenster übergeben wird. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbHide" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximizedFocus">
+      <MemberSignature Language="C#" Value="MaximizedFocus" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle MaximizedFocus = int16(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.AppWinStyle.MaximizedFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fenster ist mit dem Fokus maximiert. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbMaximizedFocus" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimizedFocus">
+      <MemberSignature Language="C#" Value="MinimizedFocus" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle MinimizedFocus = int16(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.AppWinStyle.MinimizedFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Als Symbol mit dem Fokus wird angezeigt. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbMinimizedFocus" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimizedNoFocus">
+      <MemberSignature Language="C#" Value="MinimizedNoFocus" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle MinimizedNoFocus = int16(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.AppWinStyle.MinimizedNoFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Als Symbol wird angezeigt. Das aktuell aktive Fenster bleibt aktiv. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbMinimizedNoFocus" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalFocus">
+      <MemberSignature Language="C#" Value="NormalFocus" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle NormalFocus = int16(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.AppWinStyle.NormalFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fenster den Fokus hat und in seiner ursprünglichen Größe und Position wiederhergestellt wird. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbNormalFocus" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalNoFocus">
+      <MemberSignature Language="C#" Value="NormalNoFocus" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle NormalNoFocus = int16(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.AppWinStyle.NormalNoFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fenster wird die letzte Größe und Position wiederhergestellt. Das aktuell aktive Fenster bleibt aktiv. Dieser Member ist identisch mit der Visual Basic-Konstanten <see langword="vbNormalNoFocus" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

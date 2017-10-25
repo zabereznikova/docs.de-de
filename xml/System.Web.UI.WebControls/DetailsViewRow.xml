@@ -1,0 +1,228 @@
+<Type Name="DetailsViewRow" FullName="System.Web.UI.WebControls.DetailsViewRow">
+  <TypeSignature Language="C#" Value="public class DetailsViewRow : System.Web.UI.WebControls.TableRow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DetailsViewRow extends System.Web.UI.WebControls.TableRow" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewRow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.TableRow</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Zeile in einem <see cref="T:System.Web.UI.WebControls.DetailsView" />-Steuerelement dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DetailsViewRow> Klasse dient zur Darstellung einer einzelnen Zeile in einem <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Jede Zeile in der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement verfügt über einen festgelegten Zeilentyp. Die folgende Tabelle enthält die Zeilentypen, die für die gelten die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+|Zeilentyp|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.DataRow>|Eine Datenzeile in die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.EmptyDataRow>|Die leere Datenzeile die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Die leere Datenzeile wird angezeigt, einem <xref:System.Web.UI.WebControls.DetailsView> steuern, wann es keine Datensätze sind angezeigt.|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.Footer>|In der Fußzeile der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.Header>|Die Kopfzeile in der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.Pager>|Eine Pagerzeile in die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+  
+ Um zu bestimmen, welche Zeile einer <xref:System.Web.UI.WebControls.DetailsViewRow> -Objekts die <xref:System.Web.UI.WebControls.DetailsViewRow.RowType%2A> Eigenschaft. Ein <xref:System.Web.UI.WebControls.DetailsViewRow> -Objekt verfügt außerdem über einen zugeordneten Zustand. Der Zustand kann eine bitweise Kombination der Werte in der folgenden Tabelle sein.  
+  
+|Statuswert|Beschreibung|  
+|-----------------|-----------------|  
+|<xref:System.Web.UI.WebControls.DataControlRowState.Alternate>|Die <xref:System.Web.UI.WebControls.DetailsViewRow> Objekt ist eine alternative Zeile in der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.DataControlRowState.Edit>|Die <xref:System.Web.UI.WebControls.DetailsViewRow> Objekt befindet sich im Bearbeitungsmodus befindet.|  
+|<xref:System.Web.UI.WebControls.DataControlRowState.Insert>|Die <xref:System.Web.UI.WebControls.DetailsViewRow> Objekt befindet sich im Einfügemodus.|  
+|<xref:System.Web.UI.WebControls.DataControlRowState.Normal>|Die <xref:System.Web.UI.WebControls.DetailsViewRow> Objekt befindet sich im Zustand Normal (Standard).|  
+  
+ Zum Ermitteln des Status von einem <xref:System.Web.UI.WebControls.DetailsViewRow> -Objekts die <xref:System.Web.UI.WebControls.DetailsViewRow.RowState%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement speichert die Datenzeilen in der <xref:System.Web.UI.WebControls.DetailsView.Rows%2A> Auflistung. Bestimmt den Index des eine <xref:System.Web.UI.WebControls.DetailsViewRow> Objekt in der <xref:System.Web.UI.WebControls.DetailsView.Rows%2A> Sammlung, Nutzung der <xref:System.Web.UI.WebControls.DetailsViewRow.RowIndex%2A> Eigenschaft.  
+  
+ Sie können die einzelnen Zellen der Zugriff der <xref:System.Web.UI.WebControls.DetailsViewRow> Objekt mithilfe der <xref:System.Web.UI.WebControls.TableRow.Cells%2A> Eigenschaft. Wenn eine Zelle Steuerelemente enthält, können Sie ein Steuerelement aus der Zelle abrufen, mithilfe der <xref:System.Web.UI.Control.Controls%2A> Auflistung der Zelle. Sie können auch die <xref:System.Web.UI.Control.FindControl%2A> Methode der Zelle, die das Steuerelement zu suchen, wenn das Steuerelement besitzt eine <xref:System.Web.UI.Control.ID%2A> -Eigenschaft angegeben.  
+  
+ Zum Abrufen eines Feldwerts aus einer <xref:System.Web.UI.WebControls.BoundField> Feld oder ein automatisch generiertes Feld-Spalte, verwenden Sie die <xref:System.Web.UI.WebControls.TableCell.Text%2A> -Eigenschaft der Zelle. Um einen Feldwert aus anderen Feldspaltentypen abzurufen, in dem der Wert des Felds an ein Steuerelement gebunden ist, zunächst rufen Sie das Steuerelement über die entsprechende Zelle ab und dann Zugriff auf die entsprechende Eigenschaft des Steuerelements.  
+  
+> [!NOTE]
+>  Es ist möglich, verwenden Sie einen Datenbindungsausdruck direkt in eine <xref:System.Web.UI.WebControls.TemplateField> Field-Spalte, ohne den Wert einer Eigenschaft eines Steuerelements binden. In diesem Fall wird der Wert des Felds automatisch platziert einem <xref:System.Web.UI.DataBoundLiteralControl> Steuerelement. Zum Abrufen des Wert des Felds müssen rufen Sie zuerst die <xref:System.Web.UI.DataBoundLiteralControl> steuern, über die entsprechende Zelle und verwenden Sie dann die <xref:System.Web.UI.DataBoundLiteralControl.Text%2A> Eigenschaft.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.DetailsViewRow>-Klasse finden Sie im <xref:System.Web.UI.WebControls.DetailsViewRow.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen des Werts eines Felds aus einem <xref:System.Web.UI.WebControls.DetailsViewRow> Objekt.  
+  
+ [!code-aspx-csharp[DetailsViewRowText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewRowText/CS/detailsviewrowcs.aspx#1)]
+ [!code-aspx-vb[DetailsViewRowText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewRowText/VB/detailsviewrowvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen einer <xref:System.Web.UI.WebControls.Image> -Steuerelement aus der <xref:System.Web.UI.WebControls.DetailsViewRow> Objekt, das die Kopfzeile darstellt. Die <xref:System.Web.UI.WebControls.Image> Steuerelement wird in der Headervorlage deklariert.  
+  
+ [!code-aspx-csharp[DetailsViewRowFindControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewRowFindControl/CS/detailsviewrow2cs.aspx#1)]
+ [!code-aspx-vb[DetailsViewRowFindControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewRowFindControl/VB/detailsviewrow2vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DetailsViewRow (int rowIndex, System.Web.UI.WebControls.DataControlRowType rowType, System.Web.UI.WebControls.DataControlRowState rowState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 rowIndex, valuetype System.Web.UI.WebControls.DataControlRowType rowType, valuetype System.Web.UI.WebControls.DataControlRowState rowState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewRow.#ctor(System.Int32,System.Web.UI.WebControls.DataControlRowType,System.Web.UI.WebControls.DataControlRowState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="rowType" Type="System.Web.UI.WebControls.DataControlRowType" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index der Zeile in der <see cref="P:System.Web.UI.WebControls.DetailsView.Rows" /> Auflistung von der <see cref="T:System.Web.UI.WebControls.DetailsView" /> Steuerelement.</param>
+        <param name="rowType">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowType" />-Enumerationswerte.</param>
+        <param name="rowState">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowState" />-Enumerationswerte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DetailsViewRow" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.DetailsViewRow> Klasse.  
+  
+ In der folgenden Tabelle werden anfängliche Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.DetailsViewRow>-Klasse aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.DetailsViewRow.RowIndex%2A>|Der Wert von der `itemIndex` Parameter.|  
+|<xref:System.Web.UI.WebControls.DetailsViewRow.RowType%2A>|Der Wert von der `rowType` Parameter.|  
+|<xref:System.Web.UI.WebControls.DetailsViewRow.RowState%2A>|Der Wert von der `rowState` Parameter.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewRow.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Bestimmt, ob ein Ereignis Serversteuerelementhierarchie der Seite ASP.NET übergeben.</summary>
+        <returns>
+          <see langword="true" />, wenn das Ereignis abgebrochen wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public virtual int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewRow.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des der <see cref="T:System.Web.UI.WebControls.DetailsViewRow" /> Objekt in der <see cref="P:System.Web.UI.WebControls.DetailsView.Rows" /> Auflistung von der <see cref="T:System.Web.UI.WebControls.DetailsView" /> Steuerelement.</summary>
+        <value>Der Index des der <see cref="T:System.Web.UI.WebControls.DetailsViewRow" /> in der <see cref="P:System.Web.UI.WebControls.DetailsView.Rows" /> Auflistung von der <see cref="T:System.Web.UI.WebControls.DetailsView" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DetailsViewRow.RowIndex%2A> -Eigenschaft bestimmt den Index des eine <xref:System.Web.UI.WebControls.DetailsViewRow> Objekt in der <xref:System.Web.UI.WebControls.DetailsView.Rows%2A> Auflistung von der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für Datenzeilen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowState">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.DataControlRowState RowState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.DataControlRowState RowState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewRow.RowState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Status der <see cref="T:System.Web.UI.WebControls.DetailsViewRow" /> Objekt.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Web.UI.WebControls.DataControlRowState" />-Enumerationswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DetailsViewRow.RowState%2A> Eigenschaft zum Ermitteln des Status der Zeile. Der Zustand kann eine bitweise Kombination der Werte in der folgenden Tabelle sein.  
+  
+|Statuswert|Beschreibung|  
+|-----------------|-----------------|  
+|`DataControlRowState.Alternate`|Die <xref:System.Web.UI.WebControls.DetailsViewRow> Objekt ist eine alternative Zeile in der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+|`DataControlRowState.Edit`|Die <xref:System.Web.UI.WebControls.DetailsViewRow> Objekt befindet sich im Bearbeitungsmodus befindet.|  
+|`DataControlRowState.Insert`|Die <xref:System.Web.UI.WebControls.DetailsViewRow> Objekt befindet sich im Einfügemodus.|  
+|`DataControlRowState.Normal`|Die <xref:System.Web.UI.WebControls.DetailsViewRow> Objekt befindet sich im Zustand Normal (Standard).|  
+  
+ Diese Eigenschaft wird häufig verwendet, um den Status einer Zeile, die vor dem Ausführen eines Vorgangs zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.DataControlRowType RowType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.DataControlRowType RowType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewRow.RowType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeilentyp ab der <see cref="T:System.Web.UI.WebControls.DetailsViewRow" /> Objekt.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowType" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DetailsViewRow.RowType%2A> Eigenschaft zum Bestimmen des Typs der Zeile, die die <xref:System.Web.UI.WebControls.DetailsViewRow> -Objekt darstellt. Die folgende Tabelle enthält die gültigen Zeile Typwerte.  
+  
+|Zeilentyp|Beschreibung|  
+|--------------|-----------------|  
+|`DataControlRowType.DataRow`|Eine Datenzeile in die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+|`DataControlRowType.EmptyDataRow`|Die leere Datenzeile die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Die leere Datenzeile wird angezeigt, einem <xref:System.Web.UI.WebControls.DetailsView> steuern, wann es keine Datensätze sind angezeigt.|  
+|`DataControlRowType.Footer`|In der Fußzeile der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+|`DataControlRowType.Header`|Die Kopfzeile in der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+|`DataControlRowType.Pager`|Eine Pagerzeile in die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+  
+ Diese Eigenschaft wird häufig verwendet, um den Typ einer Zeile vor dem Ausführen eines Vorgangs zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,129 @@
+<Type Name="TreeNodeTypes" FullName="System.Web.UI.WebControls.TreeNodeTypes">
+  <TypeSignature Language="C#" Value="public enum TreeNodeTypes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TreeNodeTypes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TreeNodeTypes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die verschiedenen Knotentypen (Blattelemente, übergeordnete und Stamm) in der <see cref="T:System.Web.UI.WebControls.TreeView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TreeNodeTypes> Enumeration wird verwendet, um die verschiedenen Knotentypen darstellen, die in verfügbaren der <xref:System.Web.UI.WebControls.TreeView> Steuerelement. Die folgende Tabelle beschreibt die drei verschiedenen Knotentypen.  
+  
+|Knotentyp|Beschreibung|  
+|---------------|-----------------|  
+|Blattebene|Ein Knoten ohne untergeordnete Knoten.|  
+|Parent (Übergeordnet)|Ein Knoten mit einem übergeordneten Knoten und einem oder mehreren untergeordneten Knoten.|  
+|Stamm|Ein Knoten keine übergeordneten Knoten und einem oder mehreren untergeordneten Knoten.|  
+  
+ Die <xref:System.Web.UI.WebControls.TreeNodeTypes> -Enumeration ist eine Flagenumeration, dem Sie Werte durch bitweise Operationen kombinieren kann. Beispielsweise um den übergeordneten Knoten und Endknoten darzustellen, können Sie Ausführen eines bitweisen `OR` -Vorgang für die übergeordnete und die Blattknoten-Werte.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.TreeView.ShowCheckBoxes%2A> Eigenschaft verwendet die <xref:System.Web.UI.WebControls.TreeNodeTypes.Leaf> Enumeration, um die Knotentypen darstellen, die Anzeigen von Kontrollkästchen in der <xref:System.Web.UI.WebControls.TreeView.ShowCheckBoxes%2A> Steuerelement. Wenn sie andere als die None-Wert auf einen Wert festgelegt ist, werden Kontrollkästchen neben dem angegebenen Knotentyp, die den Benutzern zum Auswählen von mehreren Elementen angezeigt der <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeTypes> Enumeration gibt an, dass die <xref:System.Web.UI.WebControls.TreeView> Steuerelement sollte ein Kontrollkästchen für jede von der übergeordneten Knoten und Blattknoten nur anzeigen.  
+  
+ [!code-aspx-csharp[TreeViewShowCheckBoxes#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewShowCheckBoxes/CS/treeviewshowcheckboxescs.aspx#1)]
+ [!code-aspx-vb[TreeViewShowCheckBoxes#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewShowCheckBoxes/VB/treeviewshowcheckboxesvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TreeNodeTypes All = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TreeNodeTypes.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNodeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle Knoten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Leaf">
+      <MemberSignature Language="C#" Value="Leaf" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TreeNodeTypes Leaf = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TreeNodeTypes.Leaf" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNodeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Knoten ohne untergeordnete Knoten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TreeNodeTypes None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TreeNodeTypes.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNodeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Knoten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="Parent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TreeNodeTypes Parent = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TreeNodeTypes.Parent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNodeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Knoten mit einem übergeordneten Knoten und einem oder mehreren untergeordneten Knoten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Root">
+      <MemberSignature Language="C#" Value="Root" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TreeNodeTypes Root = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TreeNodeTypes.Root" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNodeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Knoten keine übergeordneten Knoten und einem oder mehreren untergeordneten Knoten.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

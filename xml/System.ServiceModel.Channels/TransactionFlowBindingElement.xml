@@ -1,0 +1,395 @@
+<Type Name="TransactionFlowBindingElement" FullName="System.ServiceModel.Channels.TransactionFlowBindingElement">
+  <TypeSignature Language="C#" Value="public sealed class TransactionFlowBindingElement : System.ServiceModel.Channels.BindingElement, System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TransactionFlowBindingElement extends System.ServiceModel.Channels.BindingElement implements class System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.TransactionFlowBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.BindingElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IPolicyExportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt das Konfigurationselement dar, das die Transaktionsflussunterstützung für eine Bindung angibt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Element können Sie den eingehenden Transaktionsfluss in den Bindungseinstellungen eines Endpunkts aktivieren oder deaktivieren und das gewünschte Protokollformat für eingehende Transaktionen angeben.  
+  
+> [!CAUTION]
+>  Bei Verwendung des <xref:System.ServiceModel.TransactionProtocol.OleTransactions%2A>-Protokolls für den Transaktionsfluss von Endpunkt zu Endpunkt kann das Transaktionstimeout verloren gehen, wenn der Zielendpunkt mit einem anderen Protokoll als <xref:System.ServiceModel.TransactionProtocol.OleTransactions%2A> versucht, die Transaktion erneut weiterzugeben. Dies kann dazu führen, dass alle Knoten auf den unteren Ebenen nach dem <xref:System.ServiceModel.TransactionProtocol.OleTransactions%2A>-Hop später als erwartet das Timeout erreichen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionFlowBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransactionFlowBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.TransactionFlowBindingElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionFlowBindingElement (System.ServiceModel.TransactionProtocol transactionProtocol);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.TransactionProtocol transactionProtocol) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransactionFlowBindingElement.#ctor(System.ServiceModel.TransactionProtocol)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="transactionProtocol" Type="System.ServiceModel.TransactionProtocol" />
+      </Parameters>
+      <Docs>
+        <param name="transactionProtocol">Ein <see cref="T:System.ServiceModel.TransactionProtocol" />-Wert, der das zum Weitergeben einer Transaktion verwendete Transaktionsprotokoll enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.TransactionFlowBindingElement" />-Klasse mit dem angegebenen Protokoll, das zum Weitergeben einer Transaktion verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]Auswahl des Protokolls verwendet werden, finden Sie unter [Transaktionsfluss aktivieren](http://msdn.microsoft.com/en-us/31a6bc6a-4ef4-45ba-a753-1efa1a19d917).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowWildcardAction">
+      <MemberSignature Language="C#" Value="public bool AllowWildcardAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowWildcardAction" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TransactionFlowBindingElement.AllowWildcardAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob die Platzhalteraktion für ein zu klonendes Transaktionsflussbindungselement zulässig ist.</summary>
+        <value>
+          <see langword="true" />Wenn die platzhalteraktion zulässig ist andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransactionFlowBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp.</typeparam>
+        <param name="context"><see cref="T:System.ServiceModel.Channels.BindingContext" /> zum Erstellen der Kanalfactory.</param>
+        <summary>Initialisiert Kanalfactorys zum Erstellen von Kanälen eines bestimmten Typs aus einem Bindungskontext.</summary>
+        <returns><see cref="T:System.ServiceModel.Channels.IChannelFactory`1" /> des Typs <paramref name="TChannel" />, die von <paramref name="context" /> initialisiert wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine Kanalfactory, mit der ausgehende Kanäle des angegebenen Typs erstellt werden können. Diese Methode wird von der Infrastruktur aufgerufen, wenn der Kanalstapel erstellt wird. Sie sollten sie nur dann im Code verwenden, wenn Sie ein benutzerdefiniertes Bindungselement implementieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Eine Kanalfactory für einen bestimmten Kanaltyp kann nicht erstellt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransactionFlowBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> zum Erstellen des Kanallisteners verwendet werden soll.</param>
+        <summary>Initialisiert einen Kanallistener, der Kanäle eines bestimmten Typs aus dem Bindungskontext annimmt.</summary>
+        <returns><see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> des Typs <paramref name="TChannel" />, die von <paramref name="context" /> initialisiert wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt einen Kanallistener zum Empfangen von Nachrichten für diese Bindung.  
+  
+ Diese Methode wird von der Infrastruktur aufgerufen, wenn der Kanal erstellt wird. Sie sollten sie nur dann im Code verwenden, wenn Sie ein benutzerdefiniertes Bindungselement implementieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Ein Kanallistener für einen bestimmten Kanaltyp kann nicht erstellt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransactionFlowBindingElement.CanBuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp.</typeparam>
+        <param name="context"><see cref="T:System.ServiceModel.Channels.BindingContext" />, der verwendet werden soll, um zu ermitteln, ob eine Kanalfactory erstellt werden kann.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob der festgelegte Bindungskontext eine Kanalfactory zum Erstellen von Kanälen eines bestimmten Typs erzeugen kann.</summary>
+        <returns>
+          <see langword="true" />, wenn eine Kanalfactory für den angegebenen Kanaltyp aus <paramref name="context" /> erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten diese Methode aufrufen, um zu überprüfen, ob die Kanalfactory für Kanäle des Typs `TChannel` für den angegebenen `context` erstellt werden kann, bevor Sie versuchen, die Factory zu erstellen. Beachten Sie, dass <xref:System.ServiceModel.Channels.TransactionFlowBindingElement.BuildChannelFactory%2A> eine Ausnahme auslöst, wenn keine Kanalfactory für den angegebenen Kanaltyp erstellt werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransactionFlowBindingElement.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp.</typeparam>
+        <param name="context"><see cref="T:System.ServiceModel.Channels.BindingContext" />, der verwendet werden soll, um zu ermitteln, ob ein Kanallistener erstellt werden kann.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob der angegebene Bindungskontext einen Kanallistener zum Akzeptieren von Kanälen eines angegebenen Typs erstellen kann.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Kanallistener für den angegebenen Kanaltyp aus <paramref name="context" /> erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sollten diese Methode aufrufen, um zu überprüfen, dass der Kanallistener für Kanäle des Typs `TChannel` für den angegebenen `context` erstellt werden kann, bevor Sie versuchen, den Listener zu erstellen. Beachten Sie, dass <xref:System.ServiceModel.Channels.TransactionFlowBindingElement.BuildChannelListener%2A> eine Ausnahme auslöst, wenn kein Kanallistener für den angegebenen Kanaltyp erstellt werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransactionFlowBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein Duplikat dieses Elements.</summary>
+        <returns><see cref="T:System.ServiceModel.Channels.BindingElement" />, das ein Duplikat dieses Elements ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt einen tiefen Klon dieses Bindungselements. Mit einem tiefen Klon eines Objekts wird neben der Kopie des Objekts eine Kopie aller Elemente erstellt, auf die das betreffende Objekt direkt oder indirekt verweist. (Dieser Vorgang wird auch als Kopieren des gesamten Objektdiagramms bezeichnet.) Ein flacher Klon eines Objekts stellt im Gegensatz dazu nur eine Kopie des Objekts dar. Wenn das Objekt Verweise auf andere Objekte enthält, werden von der flachen Kopie keine Kopien der Objekte erstellt, auf die verwiesen wird. Stattdessen werden nur die Verweise auf die ursprünglichen Objekte kopiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransactionFlowBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Das typisierte Objekt, das von der Methode abgefragt wird.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" />  
+  
+ der zum Abrufen der angeforderten Eigenschaft verwendet werden soll.</param>
+        <summary>Ruft ggf. ein angefordertes typisiertes Objekt von der entsprechenden Schicht im Bindungsstapel ab.</summary>
+        <returns>Das von <paramref name="T" /> angeforderte, eingegebene Objekt, falls vorhanden; andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode zum Abrufen von Fähigkeiten, Anforderungen und Parametern aus dem Bindungselementstapel verwenden. Wenn ein Bindungselement das Zurückgeben des angeforderten Objekts unterstützt, wird der Vorgang ausgeführt. Andernfalls wird der Aufruf an das nächste Bindungselement im Stapel delegiert. Wenn das Ende des Stapels erreicht ist und kein Bindungselement das angeforderte Objekt unterstützt, gibt diese Methode `null` zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeTransactionProtocol">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeTransactionProtocol ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeTransactionProtocol() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransactionFlowBindingElement.ShouldSerializeTransactionProtocol" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob das für den Transaktionsfluss verwendete Transaktionsprotokoll serialisiert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn das Transaktionsprotokoll serialisiert werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy">
+      <MemberSignature Language="C#" Value="void IPolicyExportExtension.ExportPolicy (System.ServiceModel.Description.MetadataExporter exporter, System.ServiceModel.Description.PolicyConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy(class System.ServiceModel.Description.MetadataExporter exporter, class System.ServiceModel.Description.PolicyConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransactionFlowBindingElement.System#ServiceModel#Description#IPolicyExportExtension#ExportPolicy(System.ServiceModel.Description.MetadataExporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.MetadataExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter"><see cref="T:System.ServiceModel.Description.MetadataExporter" /> zum Exportieren der Richtlinie für dieses Bindungselement.</param>
+        <param name="context"><see cref="T:System.ServiceModel.Description.PolicyConversionContext" /> zum Exportieren der Richtlinie für dieses Bindungselement.</param>
+        <summary>Exportiert eine benutzerdefinierte Richtlinienassertion über die Bindung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionProtocol">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.TransactionProtocol TransactionProtocol { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.TransactionProtocol TransactionProtocol" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TransactionFlowBindingElement.TransactionProtocol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TransactionProtocol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Transaktionsprotokoll an, das beim Weitergeben einer Transaktion verwendet werden soll, oder legt es fest.</summary>
+        <value><see cref="T:System.ServiceModel.TransactionProtocol" />, das das Transaktionsprotokoll angibt, das mit diesem Transaktionsfluss verwendet werden soll. Die Standardeinstellung ist <see cref="P:System.ServiceModel.TransactionProtocol.OleTransactions" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]Auswahl des Protokolls verwendet werden, finden Sie unter [Transaktionsfluss aktivieren](http://msdn.microsoft.com/en-us/31a6bc6a-4ef4-45ba-a753-1efa1a19d917).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

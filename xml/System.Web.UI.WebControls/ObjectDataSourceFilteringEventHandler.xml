@@ -1,0 +1,53 @@
+<Type Name="ObjectDataSourceFilteringEventHandler" FullName="System.Web.UI.WebControls.ObjectDataSourceFilteringEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ObjectDataSourceFilteringEventHandler(object sender, ObjectDataSourceFilteringEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ObjectDataSourceFilteringEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ObjectDataSourceFilteringEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.ObjectDataSourceFilteringEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses, das <see cref="T:System.Web.UI.WebControls.ObjectDataSource" />.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.ObjectDataSourceFilteringEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Web.UI.WebControls.ObjectDataSourceView.Filtering" /> -Ereignis für die <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.ObjectDataSourceFilteringEventHandler>-Delegaten geben Sie die Methode für die Ereignisbehandlung an. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie zum Anzeigen von gefilterter Daten mithilfe einer <xref:System.Web.UI.WebControls.ObjectDataSource> zum Abrufen von Daten aus einem Geschäftsobjekt der mittleren Ebene steuern, und klicken Sie dann mithilfe einer <xref:System.Web.UI.WebControls.GridView> Steuerelement zum Anzeigen der Ergebnisse. Das zweite Codebeispiel enthält ein Beispiel für ein Geschäftsobjekt mit mittlerer Ebene, die von der ersten Codebeispiel verwendet wird.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anzeigen von gefilterter Daten mithilfe einer <xref:System.Web.UI.WebControls.ObjectDataSource> zum Abrufen von Daten aus einem Geschäftsobjekt der mittleren Ebene steuern, und klicken Sie dann mithilfe einer <xref:System.Web.UI.WebControls.GridView> Steuerelement zum Anzeigen der Ergebnisse. Die <xref:System.Web.UI.WebControls.ObjectDataSource> Steuerelement kann die Daten filtern, nur, wenn die Methode, die die Daten abruft, die als abruft eine <xref:System.Data.DataSet> oder <xref:System.Data.DataTable> Objekt. Aus diesem Grund die <xref:System.Web.UI.WebControls.ObjectDataSource.SelectMethod%2A> Eigenschaft identifiziert eine Business-Objekt-Methode, die Daten als abruft eine <xref:System.Data.DataSet> oder <xref:System.Data.DataTable> Objekt.  
+  
+ Im Codebeispiel besteht aus einer <xref:System.Web.UI.WebControls.TextBox> -Steuerelement, eine <xref:System.Web.UI.WebControls.GridView> -Steuerelement, die <xref:System.Web.UI.WebControls.ObjectDataSource> -Steuerelement, und ein **Absenden** Schaltfläche. Wird standardmäßig die <xref:System.Web.UI.WebControls.TextBox> Steuerelement mit dem Namen einer von den Mitarbeitern bei Northwind Traders aufgefüllt wird. Die <xref:System.Web.UI.WebControls.GridView> -Steuerelement zeigt Informationen zu den Mitarbeiter im namentlich identifiziert wird die <xref:System.Web.UI.WebControls.TextBox>. Zum Abrufen von Daten für eine andere Mitarbeiter in der <xref:System.Web.UI.WebControls.TextBox> steuern, geben Sie den vollständigen Namen des Mitarbeiters aus, und klicken Sie dann auf die **Absenden** Schaltfläche.  
+  
+ Die <xref:System.Web.UI.WebControls.ObjectDataSource.FilterExpression%2A> Eigenschaft gibt einen Ausdruck, der verwendet wird, um die Daten zu filtern, die von der Methode abgerufen werden, die von angegeben wird die <xref:System.Web.UI.WebControls.ObjectDataSource.SelectMethod%2A> Eigenschaft. Platzhalter für Parameter, die an die Parameter ausgewertet werden, die in enthaltenen verwendet die <xref:System.Web.UI.WebControls.ObjectDataSource.FilterParameters%2A> Auflistung. In diesem Beispiel wird die Parameterplatzhalter durch einfache Anführungszeichen (') eingeschlossen, da der Typ des Parameters einen Zeichenfolgentyp handelt, der Leerzeichen enthalten kann. Wenn der Typ des Parameters numerisch oder Datum ist, sind Anführungszeichen nicht erforderlich. Die <xref:System.Web.UI.WebControls.ObjectDataSource.FilterParameters%2A> Auflistung enthält einen Parameter, ein <xref:System.Web.UI.WebControls.FormParameter> -Objekt, das gebunden ist die <xref:System.Web.UI.WebControls.TextBox> Steuerelement.  
+  
+ Wenn kein Name, in angegeben wird der <xref:System.Web.UI.WebControls.TextBox> -Steuerelement, ein neuer Parameter hinzugefügt wird die <xref:System.Web.UI.WebControls.ObjectDataSourceFilteringEventArgs.ParameterValues%2A> Auflistung, damit die Suche erfolgreich ist.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_9#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_9/CS/objds9cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_9#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_9/VB/objds9vb.aspx#1)]  
+  
+ Das folgende Codebeispiel enthält ein Beispiel für ein Geschäftsobjekt mit mittlerer Ebene, die im vorherigen Codebeispiel verwendet. Das Codebeispiel besteht aus zwei einfachen Klassen: `EmployeeLogic` und `NorthwindEmployee`. Die `EmployeeLogic` -Klasse kapselt die Geschäftslogik und die `NorthwindEmployee` -Klasse ist eine Modellklasse, die nur die grundlegende Funktionen enthält, die zum Laden und Beibehalten von Daten aus der Datenebene erforderlich ist. Zur Vereinfachung der `EmployeeLogic` -Klasse erstellt einen statischen Satz von Daten, anstatt Abrufen der Daten aus einer Datenebene. Ein vollständiges Beispiel arbeiten müssen Sie kompilieren und verwenden Sie diese Klassen mit Web Forms-Codebeispiele, die bereitgestellt werden.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ObjectDataSource_9#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_9/CS/northwindemployee9.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.ObjectDataSource_9#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_9/VB/northwindemployee9.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

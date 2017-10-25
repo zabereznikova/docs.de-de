@@ -1,0 +1,224 @@
+<Type Name="DecimalAnimationBase" FullName="System.Windows.Media.Animation.DecimalAnimationBase">
+  <TypeSignature Language="C#" Value="public abstract class DecimalAnimationBase : System.Windows.Media.Animation.AnimationTimeline" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DecimalAnimationBase extends System.Windows.Media.Animation.AnimationTimeline" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.DecimalAnimationBase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.AnimationTimeline</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Abstrakte Klasse, die bei Implementierung einen <see cref="T:System.Decimal" />-Wert animiert.</summary>
+    <remarks>To be added.</remarks>
+    <block subset="none" type="overrides">
+      <para>Finden Sie unter der [Animationen-Übersicht über benutzerdefinierte](~/docs/framework/wpf/graphics-multimedia/custom-animations-overview.md) Informationen zum Erweitern der Animation-Klassen.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DecimalAnimationBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalAnimationBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.DecimalAnimationBase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.DecimalAnimationBase Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.DecimalAnimationBase Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalAnimationBase.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.DecimalAnimationBase</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Animation.DecimalAnimationBase" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValue">
+      <MemberSignature Language="C#" Value="public decimal GetCurrentValue (decimal defaultOriginValue, decimal defaultDestinationValue, System.Windows.Media.Animation.AnimationClock animationClock);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Decimal GetCurrentValue(valuetype System.Decimal defaultOriginValue, valuetype System.Decimal defaultDestinationValue, class System.Windows.Media.Animation.AnimationClock animationClock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalAnimationBase.GetCurrentValue(System.Decimal,System.Decimal,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultOriginValue" Type="System.Decimal" />
+        <Parameter Name="defaultDestinationValue" Type="System.Decimal" />
+        <Parameter Name="animationClock" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="defaultOriginValue">Der für die Animation bereitgestellte Ursprungswert, wenn die Animation keinen eigenen Anfangswert aufweist.</param>
+        <param name="defaultDestinationValue">Der für die Animation bereitgestellte Zielwert, wenn die Animation keinen eigenen Zielwert aufweist.</param>
+        <param name="animationClock">Die <see cref="T:System.Windows.Media.Animation.AnimationClock" /> kann das Generieren der <see cref="P:System.Windows.Media.Animation.Clock.CurrentTime" /> oder <see cref="P:System.Windows.Media.Animation.Clock.CurrentProgress" /> Wert, der von der Animation zum Generieren ihres Ausgabewerts verwendet werden.</param>
+        <summary>Ruft den aktuellen Wert der Animation ab.</summary>
+        <returns>Der Wert, den diese Animation annimmt, sollte der aktuelle Wert für die Eigenschaft sein.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die `defaultOriginValue` Parameters hängt von der Position der Animation in der Kompositionskette:  
+  
+-   Wenn die Animation in der ersten Position in einer Kompositionskette wird und einer anderen Animation ersetzt `defaultOriginValue` ist die Ausgabe der Animation zum Zeitpunkt es ersetzt wurde.  
+  
+-   Wenn die Animation in der ersten Position in einer Kompositionskette wird und keine Animation vorhanden ist, um zu ersetzen, `defaultOriginValue` ist der Basiswert der animierten Eigenschaft.  
+  
+-   Wenn diese Animation nicht in die erste Position einer Komposition verketten möchten, klicken Sie dann `defaultOriginValue` ist der Wert, der von der vorherigen Animation in der Kompositionskette zurückgegeben wird, die verfügt über eine <xref:System.Windows.Media.Animation.AnimationClock> , die sich nicht <xref:System.Windows.Media.Animation.Clock.Stopped%2A>.  
+  
+ Der Wert von der `defaultDestinationValue` Parameter hängt davon ab, ob ist eine vorherige Eigenschaft <xref:System.Windows.Trigger> Kompositionsebene.  
+  
+-   Wenn eine vorherige Eigenschaft <xref:System.Windows.Trigger> Zusammensetzung-Ebene `defaultDestinationValue` ist die Ausgabe von dieser Ebene.  
+  
+-   Es ist keine vorherigen Kompositionsebene `defaultDestinationValue` ist der Basiswert der Eigenschaft, die Sie animieren.  
+  
+ Weitere Informationen über Animation Zusammensetzung finden Sie unter der [Animationen und zeitlichen Steuerung Systemübersicht](~/docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md). Weitere Informationen zum Erstellen von benutzerdefinierten Animationstypen finden Sie unter der [Übersicht über benutzerdefinierte Animationen](~/docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValue">
+      <MemberSignature Language="C#" Value="public override sealed object GetCurrentValue (object defaultOriginValue, object defaultDestinationValue, System.Windows.Media.Animation.AnimationClock animationClock);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetCurrentValue(object defaultOriginValue, object defaultDestinationValue, class System.Windows.Media.Animation.AnimationClock animationClock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalAnimationBase.GetCurrentValue(System.Object,System.Object,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultOriginValue" Type="System.Object" />
+        <Parameter Name="defaultDestinationValue" Type="System.Object" />
+        <Parameter Name="animationClock" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="defaultOriginValue">Der für die Animation bereitgestellte Ursprungswert, wenn die Animation keinen eigenen Anfangswert aufweist.</param>
+        <param name="defaultDestinationValue">Der für die Animation bereitgestellte Zielwert, wenn die Animation keinen eigenen Zielwert aufweist.</param>
+        <param name="animationClock">Die <see cref="T:System.Windows.Media.Animation.AnimationClock" /> kann das Generieren der <see cref="P:System.Windows.Media.Animation.Clock.CurrentTime" /> oder <see cref="P:System.Windows.Media.Animation.Clock.CurrentProgress" /> Wert, der von der Animation zum Generieren ihres Ausgabewerts verwendet werden.</param>
+        <summary>Ruft den aktuellen Wert der Animation ab.</summary>
+        <returns>Der Wert, den diese Animation annimmt, sollte der aktuelle Wert für die Eigenschaft sein.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die `defaultOriginValue` Parameters hängt von der Position der Animation in der Kompositionskette:  
+  
+-   Wenn die Animation in der ersten Position in einer Kompositionskette wird und einer anderen Animation ersetzt `defaultOriginValue` ist die Ausgabe der Animation zum Zeitpunkt es ersetzt wurde.  
+  
+-   Wenn die Animation in der ersten Position in einer Kompositionskette wird und keine Animation vorhanden ist, um zu ersetzen, `defaultOriginValue` ist der Basiswert der animierten Eigenschaft.  
+  
+-   Wenn diese Animation nicht in die erste Position einer Komposition verketten möchten, klicken Sie dann `defaultOriginValue` ist der Wert, der von der vorherigen Animation in der Kompositionskette zurückgegeben wird, die verfügt über eine <xref:System.Windows.Media.Animation.AnimationClock> , die sich nicht <xref:System.Windows.Media.Animation.Clock.Stopped%2A>.  
+  
+ Der Wert von der `defaultDestinationValue` Parameter hängt davon ab, ob ist eine vorherige Eigenschaft <xref:System.Windows.Trigger> Kompositionsebene.  
+  
+-   Wenn eine vorherige Eigenschaft <xref:System.Windows.Trigger> Zusammensetzung-Ebene `defaultDestinationValue` ist die Ausgabe von dieser Ebene.  
+  
+-   Es ist keine vorherigen Kompositionsebene `defaultDestinationValue` ist der Basiswert der Eigenschaft, die Sie animieren.  
+  
+ Weitere Informationen über Animation Zusammensetzung finden Sie unter der [Animationen und zeitlichen Steuerung Systemübersicht](~/docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md). Weitere Informationen zum Erstellen von benutzerdefinierten Animationstypen finden Sie unter der [Übersicht über benutzerdefinierte Animationen](~/docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected abstract decimal GetCurrentValueCore (decimal defaultOriginValue, decimal defaultDestinationValue, System.Windows.Media.Animation.AnimationClock animationClock);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Decimal GetCurrentValueCore(valuetype System.Decimal defaultOriginValue, valuetype System.Decimal defaultDestinationValue, class System.Windows.Media.Animation.AnimationClock animationClock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalAnimationBase.GetCurrentValueCore(System.Decimal,System.Decimal,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultOriginValue" Type="System.Decimal" />
+        <Parameter Name="defaultDestinationValue" Type="System.Decimal" />
+        <Parameter Name="animationClock" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="defaultOriginValue">Der vorgeschlagene Ursprungswert, der verwendet wird, wenn die Animation nicht über einen eigenen explizit festgelegten Startwert verfügt.</param>
+        <param name="defaultDestinationValue">Der vorgeschlagene Zielwert, der verwendet wird, wenn die Animation nicht über einen eigenen explizit festgelegten Endwert verfügt.</param>
+        <param name="animationClock">Ein <see cref="T:System.Windows.Media.Animation.AnimationClock" /> , generiert der <see cref="P:System.Windows.Media.Animation.Clock.CurrentTime" /> oder <see cref="P:System.Windows.Media.Animation.Clock.CurrentProgress" /> von der Hostanimation verwendet.</param>
+        <summary>Berechnet einen Wert, der den aktuellen Wert der zu animierenden Eigenschaft gemäß der Hostanimation darstellt.</summary>
+        <returns>Der berechnete Wert der Eigenschaft, die durch die aktuelle Animation bestimmt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die `defaultOriginValue` Parameters hängt von der Position der Animation in der Kompositionskette:  
+  
+-   Wenn die Animation in der ersten Position in einer Kompositionskette wird und einer anderen Animation ersetzt `defaultOriginValue` ist die Ausgabe der Animation zum Zeitpunkt es ersetzt wurde.  
+  
+-   Wenn die Animation in der ersten Position in einer Kompositionskette wird und keine Animation vorhanden ist, um zu ersetzen, `defaultOriginValue` ist der Basiswert der animierten Eigenschaft.  
+  
+-   Wenn diese Animation nicht in die erste Position einer Komposition verketten möchten, klicken Sie dann `defaultOriginValue` ist der Wert, der von der vorherigen Animation in der Kompositionskette zurückgegeben wird, die verfügt über eine <xref:System.Windows.Media.Animation.AnimationClock> , die sich nicht <xref:System.Windows.Media.Animation.Clock.Stopped%2A>.  
+  
+ Der Wert von der `defaultDestinationValue` Parameter hängt davon ab, ob ist eine vorherige Eigenschaft <xref:System.Windows.Trigger> Kompositionsebene.  
+  
+-   Wenn eine vorherige Eigenschaft <xref:System.Windows.Trigger> Zusammensetzung-Ebene `defaultDestinationValue` ist die Ausgabe von dieser Ebene.  
+  
+-   Es ist keine vorherigen Kompositionsebene `defaultDestinationValue` ist der Basiswert der Eigenschaft, die Sie animieren.  
+  
+ Weitere Informationen über Animation Zusammensetzung finden Sie unter der [Animationen und zeitlichen Steuerung Systemübersicht](~/docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md). Weitere Informationen zum Erstellen von benutzerdefinierten Animationstypen finden Sie unter der [Übersicht über benutzerdefinierte Animationen](~/docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetPropertyType">
+      <MemberSignature Language="C#" Value="public override sealed Type TargetPropertyType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TargetPropertyType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.DecimalAnimationBase.TargetPropertyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Werts ab, den diese Animation generiert.</summary>
+        <value>Der Typ des von dieser Animation erzeugten Werts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

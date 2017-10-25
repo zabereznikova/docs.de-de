@@ -1,0 +1,1607 @@
+<Type Name="WmlMobileTextWriter" FullName="System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter">
+  <TypeSignature Language="C#" Value="public class WmlMobileTextWriter : System.Web.UI.MobileControls.Adapters.MobileTextWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WmlMobileTextWriter extends System.Web.UI.MobileControls.Adapters.MobileTextWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.Adapters.MobileTextWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine mobile TextWriter für die WML-Gerätegruppe Adapter bereit. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WmlMobileTextWriter (System.IO.TextWriter writer, System.Web.Mobile.MobileCapabilities device, System.Web.UI.MobileControls.MobilePage page);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer, class System.Web.Mobile.MobileCapabilities device, class System.Web.UI.MobileControls.MobilePage page) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.#ctor(System.IO.TextWriter,System.Web.Mobile.MobileCapabilities,System.Web.UI.MobileControls.MobilePage)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="device" Type="System.Web.Mobile.MobileCapabilities" />
+        <Parameter Name="page" Type="System.Web.UI.MobileControls.MobilePage" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die Basis-Writer-Objekt.</param>
+        <param name="device">Ein Objekt von der <see cref="T:System.Web.Mobile.MobileCapabilities" /> Klasse, die Informationen über die Funktionen für das jeweilige Gerät bereitstellt.</param>
+        <param name="page">Die mobilen Seite zu schreiben.</param>
+        <summary>Erstellt eine neue Instanz der angegebenen Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adapter werden von ASP.NET in der Regel automatisch erstellt und müssen über einen Standardkonstruktor verfügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFormVariable">
+      <MemberSignature Language="C#" Value="public void AddFormVariable (string clientID, string value, bool generateRandomID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddFormVariable(string clientID, string value, bool generateRandomID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.AddFormVariable(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientID" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="generateRandomID" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="clientID">Der Bezeichner für das Steuerelement, enthält die Variable initialisiert werden.</param>
+        <param name="value">Der Wert, den die Variable initialisiert wird, wenn der Browser das Formular rendert.</param>
+        <param name="generateRandomID">
+          <see langword="true" />den Bezeichner für das Steuerelement verschlüsselt; andernfalls <see langword="false" />.</param>
+        <summary>Fügt eine Variable initialisiert werden, wenn der Browser das Formular rendert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Verweise auf die Client-ID auf der Seite werden zugeordnet, sodass in der gleichen Postbacks unabhängig von der Zuordnung. Die <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.AddFormVariable%2A> Methode kann auch zum Verschlüsseln Client-IDs, die aus Sicherheitsgründen verschlüsselt werden müssen. Nur sichtbare Steuerelemente generieren Variablen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalyzeMode">
+      <MemberSignature Language="C#" Value="public bool AnalyzeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AnalyzeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.AnalyzeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt zurück, ob der Writer im Analysemodus befindet ab oder legt ihn fest. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn in der Writer Modus analysieren ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ WML-Rendering erfolgt in zwei Phasen. In der ersten Phase werden alle Aufrufe an den Renderer Richtigkeit analysiert. In der zweiten Phase erfolgt das Rendering.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalyzePostBack">
+      <MemberSignature Language="C#" Value="protected virtual void AnalyzePostBack (bool includeVariables, System.Web.UI.MobileControls.Adapters.WmlPostFieldType postBackType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AnalyzePostBack(bool includeVariables, valuetype System.Web.UI.MobileControls.Adapters.WmlPostFieldType postBackType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.AnalyzePostBack(System.Boolean,System.Web.UI.MobileControls.Adapters.WmlPostFieldType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includeVariables" Type="System.Boolean" />
+        <Parameter Name="postBackType" Type="System.Web.UI.MobileControls.Adapters.WmlPostFieldType" />
+      </Parameters>
+      <Docs>
+        <param name="includeVariables">
+          <see langword="true" />die Informationen für alle Post-Felder einschließt <see cref="T:System.Web.UI.IPostBackDataHandler" /> -Schnittstellen im Formular; <see langword="false" /> enthalten keine <see cref="T:System.Web.UI.IPostBackDataHandler" /> Informationen.</param>
+        <param name="postBackType">Die <see cref="T:System.Web.UI.MobileControls.Adapters.WmlPostFieldType" />.</param>
+        <summary>Analysiert ein einzelnes Postback. Wird vom Writer und geerbten Klassen intern aufgerufen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Außer Kraft gesetzt, oder rufen Sie diese Methode, wenn Erweiterbarkeit erforderlich, beim Erweitern ist der <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginCustomMarkup">
+      <MemberSignature Language="C#" Value="public virtual void BeginCustomMarkup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginCustomMarkup() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.BeginCustomMarkup" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet einen benutzerdefinierten Markupabschnitt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.BeginCustomMarkup%2A> und <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.EndCustomMarkup%2A> Methoden ermöglichen es einen Geräteadapter einen Abschnitt benutzerdefinierter Markupelemente zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginForm">
+      <MemberSignature Language="C#" Value="public virtual void BeginForm (System.Web.UI.MobileControls.Form form);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginForm(class System.Web.UI.MobileControls.Form form) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.BeginForm(System.Web.UI.MobileControls.Form)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="form" Type="System.Web.UI.MobileControls.Form" />
+      </Parameters>
+      <Docs>
+        <param name="form">Das zu beginnende Formular.</param>
+        <summary>Beginnt das angegebene Formular. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode und die <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.EndForm%2A> Methode beim Rendern eines Formulars.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateFormPostBackUrl">
+      <MemberSignature Language="C#" Value="protected virtual string CalculateFormPostBackUrl (bool externalSubmit, ref bool encode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string CalculateFormPostBackUrl(bool externalSubmit, bool&amp; encode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.CalculateFormPostBackUrl(System.Boolean,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="externalSubmit" Type="System.Boolean" />
+        <Parameter Name="encode" Type="System.Boolean&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="externalSubmit">
+          <see langword="true" />, um anzugeben, dass das aktuelle Formular an eine externe URL gesendet wird, andernfalls <see langword="false" />.</param>
+        <param name="encode">
+          <see langword="true" />, um die URL-Zeichenfolge zu codieren, andernfalls <see langword="false" />.</param>
+        <summary>Gibt die berechnete URL zurück, die zum Senden des Formulars an den Server erforderlich ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Die berechnete URL, die zum Senden des Formulars an den Server erforderlich ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer intern aufgerufen, und kann von einer erbenden Klasse (Writer) überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateFormQueryString">
+      <MemberSignature Language="C#" Value="protected virtual string CalculateFormQueryString ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string CalculateFormQueryString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.CalculateFormQueryString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die an die URL hinzuzufügende Abfragezeichenfolge zurück, um das Formular an den Server zu senden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Die Abfragezeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer intern aufgerufen und kann von einer erbenden Klasse überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseCharacterFormat">
+      <MemberSignature Language="C#" Value="protected virtual void CloseCharacterFormat ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CloseCharacterFormat() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.CloseCharacterFormat" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt alle aktuell geöffneten zeichenformatierung-Tags. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer intern aufgerufen und kann von einer erbenden Klasse überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseParagraph">
+      <MemberSignature Language="C#" Value="protected virtual void CloseParagraph ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CloseParagraph() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.CloseParagraph" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt einen geöffneten Absatz an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer intern aufgerufen und kann von einer erbenden Klasse überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentForm">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.MobileControls.Form CurrentForm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.Form CurrentForm" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.CurrentForm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Form</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das derzeit gerenderte Formular zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das Formular, das derzeit gerendert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultFormat">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat DefaultFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter/WmlFormat DefaultFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.DefaultFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter+WmlFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt zurück, der Zeichen standardformatierung vom Gerät verwendet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Standardeinstellung Zeichen Formatierung vom Gerät verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer intern aufgerufen und kann durch erbende Klassen überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultLayout">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlLayout DefaultLayout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter/WmlLayout DefaultLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.DefaultLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter+WmlLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Standardlayout vom Gerät verwendet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das Standardlayout, die vom Gerät verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer intern aufgerufen und kann durch erbende Klassen überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndCustomMarkup">
+      <MemberSignature Language="C#" Value="public virtual void EndCustomMarkup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndCustomMarkup() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.EndCustomMarkup" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet einen benutzerdefinierte Markuperweiterung-Abschnitt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.BeginCustomMarkup%2A> und <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.EndCustomMarkup%2A> Methoden ermöglichen es einen Geräteadapter einen Abschnitt benutzerdefinierter Markupelemente zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndForm">
+      <MemberSignature Language="C#" Value="public virtual void EndForm ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndForm() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.EndForm" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet das aktuelle Formular an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.BeginForm%2A> -Methode und diese Methode beim Rendern eines Formulars.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureFormat">
+      <MemberSignature Language="C#" Value="protected virtual void EnsureFormat ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EnsureFormat() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.EnsureFormat" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt sicher, dass für das aktuelle Format Formatierungstags geschrieben wurden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer intern aufgerufen und kann von einer erbenden Klasse überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureLayout">
+      <MemberSignature Language="C#" Value="protected virtual void EnsureLayout ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EnsureLayout() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.EnsureLayout" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt sicher, dass eine <see langword="&lt; p &gt;" /> -Tags zum aktuellen Layout geschrieben wurden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer intern aufgerufen und kann von einer erbenden Klasse überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterFormat">
+      <MemberSignature Language="C#" Value="public override void EnterFormat (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EnterFormat(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.EnterFormat(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Die angegebene Formatvorlage, die zum Formatieren von Zeichen verwendet werden soll</param>
+        <summary>Beginnt einen Block, indem die Zeichenformatierung aus einer angegebenen Formatvorlage verwendet wird. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterLayout">
+      <MemberSignature Language="C#" Value="public override void EnterLayout (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EnterLayout(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.EnterLayout(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Der Formatverweis.</param>
+        <summary>Beginnt einen Block durch Verwenden der Formatierung eines angegebenen Formats. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitFormat">
+      <MemberSignature Language="C#" Value="public override void ExitFormat (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ExitFormat(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.ExitFormat(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Die angegebene Formatvorlage, die zum Formatieren von Zeichen verwendet werden soll</param>
+        <summary>Beendet einen Block, der die Zeichenformatierung aus einer angegebenen Formatvorlage verwendet hat. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitLayout">
+      <MemberSignature Language="C#" Value="public override void ExitLayout (System.Web.UI.MobileControls.Style style, bool breakAfter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ExitLayout(class System.Web.UI.MobileControls.Style style, bool breakAfter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.ExitLayout(System.Web.UI.MobileControls.Style,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+        <Parameter Name="breakAfter" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="style">Der Formatverweis.</param>
+        <param name="breakAfter">Wenn <c>BreakAfter</c> ist "true", nach dem schließenden Formatelement ein Umbruch eingefügt. Die erste Form der Methode wird davon ausgegangen <c>BreakAfter</c> werden <see langword="true" />.</param>
+        <summary>Beendet einen Block durch Verwenden der Formatierung eines angegebenen Formats. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidSoftkeyLabel">
+      <MemberSignature Language="C#" Value="public virtual bool IsValidSoftkeyLabel (string label);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsValidSoftkeyLabel(string label) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.IsValidSoftkeyLabel(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="label" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="label">Die zu überprüfende Bezeichnung.</param>
+        <summary>Gibt Informationen dazu zurück, ob die angegebene Zeichenfolge eine gültige Bildschirmtastenbezeichnung für das Zielgerät ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />, wenn die angegebene Zeichenfolge eine gültige Bildschirmtastenbezeichnung für das Zielgerät ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adapter können diese Methode verwenden, um zu bestimmen, ob eine Bezeichnung für eine Bildschirmtaste geeignet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapClientIDToShortName">
+      <MemberSignature Language="C#" Value="protected string MapClientIDToShortName (string clientID, bool generateRandomID);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance string MapClientIDToShortName(string clientID, bool generateRandomID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.MapClientIDToShortName(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientID" Type="System.String" />
+        <Parameter Name="generateRandomID" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="clientID">Die Client-ID eines Steuerelements zuordnen.</param>
+        <param name="generateRandomID">Bestimmt, ob die Client-ID verschlüsselt ist.</param>
+        <summary>Ordnet die Client-ID eines Steuerelements in einen kurzen Namen beim Rendering auf dem Formular verwendet werden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Eine Zeichenfolgendarstellung der Client-ID des Steuerelements.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Client-ID eines Steuerelements mehr als 16 Zeichen ist, ersetzt ASP.NET einen eindeutig zugeordneten Kurznamen.  
+  
+ Alle Verweise auf die Client-ID auf der Seite werden zugeordnet, sodass in der gleichen Postbacks unabhängig von der Zuordnung. <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.MapClientIDToShortName%2A>kann auch Client-IDs verschlüsseln, die aus Sicherheitsgründen verschlüsselt werden müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfSoftkeys">
+      <MemberSignature Language="C#" Value="protected int NumberOfSoftkeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberOfSoftkeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.NumberOfSoftkeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Anzahl von Bildschirmtasten, die auf dem Gerät unterstützt. Der Standardwert ist 0. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Anzahl von Bildschirmtasten, die auf dem Gerät unterstützt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bildschirmtasten sind spezielle Schlüssel verwenden, die die Anwendung in der Regel für benutzerdefinierte Aufgaben zuordnen kann. Bildschirmtastentext wird auf die in der unteren linken und unteren rechten Ecke des Bildschirms angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenCharacterFormat">
+      <MemberSignature Language="C#" Value="protected virtual void OpenCharacterFormat (System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat format, bool writeBold, bool writeItalic, bool writeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OpenCharacterFormat(class System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter/WmlFormat format, bool writeBold, bool writeItalic, bool writeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.OpenCharacterFormat(System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat,System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter+WmlFormat" />
+        <Parameter Name="writeBold" Type="System.Boolean" />
+        <Parameter Name="writeItalic" Type="System.Boolean" />
+        <Parameter Name="writeSize" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="format">Ein Enumerationswert, der die WML-Format schreiben zu verwendende darstellt.</param>
+        <param name="writeBold">Gibt an, ob fett zu formatieren.</param>
+        <param name="writeItalic">Gibt an, ob kursiv zu formatieren.</param>
+        <param name="writeSize">Gibt an, ob die Formatierung der Zeichengröße.</param>
+        <summary>Öffnet zeichenformatierung Tags für das angegebene Format. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer intern aufgerufen und kann von einer erbenden Klasse überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenParagraph">
+      <MemberSignature Language="C#" Value="protected virtual void OpenParagraph (System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlLayout layout, bool writeAlignment, bool writeWrapping);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OpenParagraph(class System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter/WmlLayout layout, bool writeAlignment, bool writeWrapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.OpenParagraph(System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlLayout,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="layout" Type="System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter+WmlLayout" />
+        <Parameter Name="writeAlignment" Type="System.Boolean" />
+        <Parameter Name="writeWrapping" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="layout">Ein Enumerationswert, der das beim Öffnen eines Absatzes zu verwendende Layout darstellt.</param>
+        <param name="writeAlignment">Gibt an, ob die Formatierung der Absatzausrichtung angewendet werden soll.</param>
+        <param name="writeWrapping">Gibt an, ob die Formatierung des Absatzumbruchs angewendet werden soll.</param>
+        <summary>Öffnet einen Absatz mit dem angegebenen Layout. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer intern aufgerufen und kann von einer erbenden Klasse überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.MobileControls.MobilePage Page { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.MobilePage Page" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.Page" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobilePage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Seite, die dem Geräteadapter zugeordnet zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Seite, die dem Geräteadapter zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entspricht dem Aufrufen der `Control.MobilePage`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PendingBreak">
+      <MemberSignature Language="C#" Value="protected bool PendingBreak { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PendingBreak" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.PendingBreak" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die <see langword="&lt; br &gt;" /> Tag in den Ausgabestream zurückgesendet werden muss. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn die <see langword="&lt; br &gt;" /> Tag muss in den Ausgabedatenstrom gesendet werden, andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostAnalyzeForm">
+      <MemberSignature Language="C#" Value="protected virtual void PostAnalyzeForm ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PostAnalyzeForm() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.PostAnalyzeForm" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Analysiert ein Formular an, nachdem es während der Analysephase abgeschlossen ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer intern aufgerufen und kann von einer erbenden Klasse überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginForm">
+      <MemberSignature Language="C#" Value="protected virtual void RenderBeginForm (System.Web.UI.MobileControls.Form form);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderBeginForm(class System.Web.UI.MobileControls.Form form) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderBeginForm(System.Web.UI.MobileControls.Form)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="form" Type="System.Web.UI.MobileControls.Form" />
+      </Parameters>
+      <Docs>
+        <param name="form">Das Formular zu rendern.</param>
+        <summary>Rendert den Anfang eines Formulars an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer intern aufgerufen und kann von einer erbenden Klasse überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginHyperlink">
+      <MemberSignature Language="C#" Value="public virtual void RenderBeginHyperlink (string targetUrl, bool encodeUrl, string softkeyLabel, bool implicitSoftkeyLabel, bool mapToSoftkey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderBeginHyperlink(string targetUrl, bool encodeUrl, string softkeyLabel, bool implicitSoftkeyLabel, bool mapToSoftkey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderBeginHyperlink(System.String,System.Boolean,System.String,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetUrl" Type="System.String" />
+        <Parameter Name="encodeUrl" Type="System.Boolean" />
+        <Parameter Name="softkeyLabel" Type="System.String" />
+        <Parameter Name="implicitSoftkeyLabel" Type="System.Boolean" />
+        <Parameter Name="mapToSoftkey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="targetUrl">Das URL-Ziel.</param>
+        <param name="encodeUrl">Legen Sie auf <see langword="true" /> , wenn die URL codiert ist.</param>
+        <param name="softkeyLabel">Der Bildschirmtastentext des Links verwendet werden sollen, wenn die <c>MapToSoftKey</c> Parametersatz auf <see langword="true" />.</param>
+        <param name="implicitSoftkeyLabel">Legen Sie auf <see langword="true" /> , wenn die Bezeichnung der Bildschirmtaste des Adapters selbst stammen (the Default Label oder etwas Adapter angegeben, wie z. B. "rufen" für eine <see cref="T:System.Web.UI.MobileControls.PhoneCall" /> -Steuerelement, statt einer Bildschirmtaste vom anwendungsautor explizit angegeben).</param>
+        <param name="mapToSoftkey">Legen Sie auf <see langword="true" /> Zuordnen einer Bildschirmtaste auf dem Gerät.</param>
+        <summary>Startet das rendering eines Linkelements. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Aufruf kann folgen durch Aufrufe von Text zu rendern oder durch einen Aufruf der <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderImage%2A> Methode, um den Linkinhalt gerendert gefolgt von einem Aufruf der <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderEndHyperlink%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginPostBack">
+      <MemberSignature Language="C#" Value="public virtual void RenderBeginPostBack (string softkeyLabel, bool implicitSoftkeyLabel, bool mapToSoftkey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderBeginPostBack(string softkeyLabel, bool implicitSoftkeyLabel, bool mapToSoftkey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderBeginPostBack(System.String,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="softkeyLabel" Type="System.String" />
+        <Parameter Name="implicitSoftkeyLabel" Type="System.Boolean" />
+        <Parameter Name="mapToSoftkey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="softkeyLabel">Der Bildschirmtastentext des Links verwendet werden sollen, wenn die <c>MapToSoftKey</c> Parametersatz auf <see langword="true" />.</param>
+        <param name="implicitSoftkeyLabel">Legen Sie auf <see langword="true" /> , wenn die Bezeichnung der Bildschirmtaste ergibt sich aus dem Adapter selbst statt Bildschirmtaste explizit wird vom anwendungsautor angegeben.</param>
+        <param name="mapToSoftkey">Legen Sie auf <see langword="true" /> Zuordnen einer Bildschirmtaste auf dem Gerät.</param>
+        <summary>Startet das Rendering eines Postbacks. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginSelect">
+      <MemberSignature Language="C#" Value="public virtual void RenderBeginSelect (string name, string iname, string ivalue, string title, bool multiSelect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderBeginSelect(string name, string iname, string ivalue, string title, bool multiSelect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderBeginSelect(System.String,System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="iname" Type="System.String" />
+        <Parameter Name="ivalue" Type="System.String" />
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="multiSelect" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Steuerelements.</param>
+        <param name="iname">Der Name, den der Browser verwenden muss, um den ausgewählten Index zum Server zurückzusenden.</param>
+        <param name="ivalue">Der Anfangswert.</param>
+        <param name="title">Das <see langword="Title" />-Attribut auf WML-Geräten.</param>
+        <param name="multiSelect">Gibt an, ob die Mehrfachauswahl zulässig ist.</param>
+        <summary>Startet das rendering einer Auswahlliste. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entweder `name` oder `iname` darf nicht Null sein.  
+  
+ Diese Methode kann durch Aufrufe von Folgen der <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderSelectOption%2A> Methode für jede einzelne Option gefolgt von einem Aufruf der <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderEndSelect%2A> Methode zum Beenden der Auswahlliste.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderDoEvent">
+      <MemberSignature Language="C#" Value="protected void RenderDoEvent (string doType, string target, string arg, System.Web.UI.MobileControls.Adapters.WmlPostFieldType postBackType, string text, bool includeVariables);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RenderDoEvent(string doType, string target, string arg, valuetype System.Web.UI.MobileControls.Adapters.WmlPostFieldType postBackType, string text, bool includeVariables) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderDoEvent(System.String,System.String,System.String,System.Web.UI.MobileControls.Adapters.WmlPostFieldType,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doType" Type="System.String" />
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="arg" Type="System.String" />
+        <Parameter Name="postBackType" Type="System.Web.UI.MobileControls.Adapters.WmlPostFieldType" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="includeVariables" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="doType">Der Typ der Aktion zum Rendern. Führt eine Zuordnung zum das Typattribut der der <see langword="&lt; do &gt;" /> Element. In der Regel "Annehmen" oder "Optionen".</param>
+        <param name="target">Die ID des Steuerelements, das das Ziel der Aktions. Wenn der Benutzer die Aktion auswählt, für das durch diese ID angegebene Steuerelement ein Postback generiert.</param>
+        <param name="arg">Das Argument für die Aktion. Das Argument ist enthalten, in das Postback generiert, wenn der Benutzer wählt die Aktion aus.</param>
+        <param name="postBackType">Die <see cref="T:System.Web.UI.MobileControls.Adapters.WmlPostFieldType" /> für verwendeten Typ <c>Argument.</c></param>
+        <param name="text">Die Beschriftung der Aktion zugeordnete. Dies wird normalerweise als Bildschirmtaste auf dem Gerät angezeigt.</param>
+        <param name="includeVariables">Angibt, ob alle Variablen im Formular eingeschlossen, wenn Postback an den Server.</param>
+        <summary>Rendert eine <see langword="&lt; do &gt;" /> Ereignis. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Steuerelement, das Sie als Ziel dient, ist das aktuelle Formular und enthalten sein sollen alle Variablen mit dem Server sichern, können Sie mithilfe der <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderFormDoEvent%2A> Methode. Wird vom Writer und geerbten Klassen intern aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndForm">
+      <MemberSignature Language="C#" Value="protected virtual void RenderEndForm ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderEndForm() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderEndForm" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt Rendern eines Formulars an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer intern aufgerufen und kann von einer erbenden Klasse überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndHyperlink">
+      <MemberSignature Language="C#" Value="public virtual void RenderEndHyperlink (bool breakAfter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderEndHyperlink(bool breakAfter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderEndHyperlink(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="breakAfter" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="breakAfter">Legen Sie auf <see langword="true" /> Wenn nach der Verknüpfung ein Umbruch erforderlich ist.</param>
+        <summary>Schließt das Rendering eines Linkelements. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndPostBack">
+      <MemberSignature Language="C#" Value="public virtual void RenderEndPostBack (string target, string argument, System.Web.UI.MobileControls.Adapters.WmlPostFieldType postBackType, bool includeVariables, bool breakAfter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderEndPostBack(string target, string argument, valuetype System.Web.UI.MobileControls.Adapters.WmlPostFieldType postBackType, bool includeVariables, bool breakAfter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderEndPostBack(System.String,System.String,System.Web.UI.MobileControls.Adapters.WmlPostFieldType,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="argument" Type="System.String" />
+        <Parameter Name="postBackType" Type="System.Web.UI.MobileControls.Adapters.WmlPostFieldType" />
+        <Parameter Name="includeVariables" Type="System.Boolean" />
+        <Parameter Name="breakAfter" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="target">Enthält den Ziel-URL des Postbacks.</param>
+        <param name="argument">Enthält das Argument der Ziel-URL zugeordnet.</param>
+        <param name="postBackType">Gibt den Typ des Postbacks. Muss ein Wert aus der <see cref="T:System.Web.UI.MobileControls.Adapters.WmlPostFieldType" /> Enumeration.</param>
+        <param name="includeVariables">Enthält einen booleschen Wert, der angibt, ob postback Variablen berechnet werden soll.</param>
+        <param name="breakAfter">Enthält <see langword="true" /> ein Zeilenumbruch das Steuerelement folgen soll. Enthält <see langword="false" /> andernfalls.</param>
+        <summary>Schließt das Rendering eines Postbacks. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndSelect">
+      <MemberSignature Language="C#" Value="public virtual void RenderEndSelect (bool breakAfter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderEndSelect(bool breakAfter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderEndSelect(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="breakAfter" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="breakAfter">Gibt an, ob auf die Auswahlliste ein Umbruch folgen muss.</param>
+        <summary>Schließt das rendering einer Auswahlliste. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderExtraCards">
+      <MemberSignature Language="C#" Value="public virtual void RenderExtraCards ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderExtraCards() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderExtraCards" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rendert zusätzliche Karten, die der Writer an den Browser gesendet werden muss. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Je nach den Inhalt des Formulars muss der Writer ggf. zusätzliche Karten an den Browser gesendet wird. Vom Formularadapter aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderFormDoEvent">
+      <MemberSignature Language="C#" Value="protected void RenderFormDoEvent (string doType, string arg, System.Web.UI.MobileControls.Adapters.WmlPostFieldType postBackType, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RenderFormDoEvent(string doType, string arg, valuetype System.Web.UI.MobileControls.Adapters.WmlPostFieldType postBackType, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderFormDoEvent(System.String,System.String,System.Web.UI.MobileControls.Adapters.WmlPostFieldType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doType" Type="System.String" />
+        <Parameter Name="arg" Type="System.String" />
+        <Parameter Name="postBackType" Type="System.Web.UI.MobileControls.Adapters.WmlPostFieldType" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="doType">Der Typ der Aktion zum Rendern. Führt eine Zuordnung zum das Typattribut der der &lt;führen&gt; Element. In der Regel "Annehmen" oder "Optionen".</param>
+        <param name="arg">Das Argument für die Aktion. Das Argument ist enthalten, in das Postback generiert, wenn der Benutzer wählt die Aktion aus.</param>
+        <param name="postBackType">Die <see cref="T:System.Web.UI.MobileControls.Adapters.WmlPostFieldType" /> für verwendeten Typ <c>Argument.</c></param>
+        <param name="text">Die Beschriftung der Aktion zugeordnete. Dies wird normalerweise als Bildschirmtaste auf dem Gerät angezeigt.</param>
+        <summary>Rendert eine <see langword="&lt; do &gt;" /> -Ereignis für das aktuelle Formular. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer und geerbten Klassen intern aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderGoAction">
+      <MemberSignature Language="C#" Value="public virtual void RenderGoAction (string target, string argument, System.Web.UI.MobileControls.Adapters.WmlPostFieldType postBackType, bool includeVariables);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderGoAction(string target, string argument, valuetype System.Web.UI.MobileControls.Adapters.WmlPostFieldType postBackType, bool includeVariables) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderGoAction(System.String,System.String,System.Web.UI.MobileControls.Adapters.WmlPostFieldType,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="argument" Type="System.String" />
+        <Parameter Name="postBackType" Type="System.Web.UI.MobileControls.Adapters.WmlPostFieldType" />
+        <Parameter Name="includeVariables" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="target">Die ID des Steuerelements, das das Ziel der Aktions. Wenn der Benutzer die Aktion auswählt, für das durch diese ID angegebene Steuerelement ein Postback generiert.</param>
+        <param name="argument">Das Argument für die Aktion. Das Argument ist enthalten, in das Postback generiert, wenn der Benutzer wählt die Aktion aus.</param>
+        <param name="postBackType">Die <see cref="T:System.Web.UI.MobileControls.Adapters.WmlPostFieldType" /> für verwendeten Typ <c>Argument.</c></param>
+        <param name="includeVariables">Angibt, ob alle Variablen im Formular eingeschlossen, wenn Postback an den Server.</param>
+        <summary>Rendert eine <see langword="&lt; go &gt;" /> Aktion. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer intern aufgerufen oder geerbten Klassen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderImage">
+      <MemberSignature Language="C#" Value="public virtual void RenderImage (string source, string localSource, string alternateText, bool breakAfter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderImage(string source, string localSource, string alternateText, bool breakAfter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderImage(System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="localSource" Type="System.String" />
+        <Parameter Name="alternateText" Type="System.String" />
+        <Parameter Name="breakAfter" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="source">Gibt die Bild-URL an.</param>
+        <param name="localSource">Gibt einen optionalen lokalen Bildnamen an.</param>
+        <param name="alternateText">Gibt Text an, der angezeigt wird, wenn das Bild nicht angezeigt werden kann.</param>
+        <param name="breakAfter">Legen Sie auf <see langword="true" /> Wenn nach dem Bild ein Umbruch erforderlich ist.</param>
+        <summary>Rendert ein Image-Element. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderSelectOption">
+      <MemberSignature Language="C#" Value="public virtual void RenderSelectOption (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderSelectOption(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderSelectOption(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Optionstext.</param>
+        <summary>Rendert eine einzelne Option in einer Auswahlliste. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderSelectOption">
+      <MemberSignature Language="C#" Value="public virtual void RenderSelectOption (string text, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderSelectOption(string text, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderSelectOption(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Optionstext.</param>
+        <param name="value">(Optional) Der Optionswert.</param>
+        <summary>Rendert eine einzelne Option in einer Auswahlliste. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderText">
+      <MemberSignature Language="C#" Value="public void RenderText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RenderText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Die zu rendernde Textzeichenfolge.</param>
+        <summary>Rendert ein Textelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderText">
+      <MemberSignature Language="C#" Value="public void RenderText (string text, bool breakAfter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RenderText(string text, bool breakAfter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderText(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="breakAfter" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="text">Die zu rendernde Textzeichenfolge.</param>
+        <param name="breakAfter">Gibt an, ob auf das Element ein Umbruch folgen muss.</param>
+        <summary>Rendert ein Textelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderText">
+      <MemberSignature Language="C#" Value="public virtual void RenderText (string text, bool breakAfter, bool encodeText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderText(string text, bool breakAfter, bool encodeText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderText(System.String,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="breakAfter" Type="System.Boolean" />
+        <Parameter Name="encodeText" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="text">Die zu rendernde Textzeichenfolge.</param>
+        <param name="breakAfter">Gibt an, ob auf das Element ein Umbruch folgen muss.</param>
+        <param name="encodeText">Gibt an, ob der Text codiert werden muss.</param>
+        <summary>Rendert ein Textelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderTextBox">
+      <MemberSignature Language="C#" Value="public virtual void RenderTextBox (string id, string value, string format, string title, bool password, int size, int maxLength, bool generateRandomID, bool breakAfter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderTextBox(string id, string value, string format, string title, bool password, int32 size, int32 maxLength, bool generateRandomID, bool breakAfter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.RenderTextBox(System.String,System.String,System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="password" Type="System.Boolean" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="maxLength" Type="System.Int32" />
+        <Parameter Name="generateRandomID" Type="System.Boolean" />
+        <Parameter Name="breakAfter" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="id">Bezeichnet das Steuerelement.</param>
+        <param name="value">Gibt den Anfangswert des Textfelds an.</param>
+        <param name="format">Gibt eine optionale WML-Formatzeichenfolge an.</param>
+        <param name="title">Enthält den Titel des Textfelds.</param>
+        <param name="password">Gibt das Kennwort an.</param>
+        <param name="size">Legt die Größe der Zeichenfolge fest.</param>
+        <param name="maxLength">Gibt die maximale Länge der Zeichenfolge an.</param>
+        <param name="generateRandomID">Bestimmt, ob der Bezeichner für das Steuerelement (ID) verschlüsselt ist.</param>
+        <param name="breakAfter">Auf <see langword="true" /> festlegen, wenn nach dem Rendern des Steuerelements ein Umbruch erforderlich ist.</param>
+        <summary>Rendert ein Textfeld Element. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann auch zum Verschlüsseln von Client-IDs verwendet werden, die aus Sicherheitsgründen verschlüsselt werden müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetFormattingState">
+      <MemberSignature Language="C#" Value="public virtual void ResetFormattingState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResetFormattingState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.ResetFormattingState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die Formatierung der Zeichen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode schließt alle Zeichen Formatierungstags, z. B. `< b >`, geöffnet worden sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePostBackCard">
+      <MemberSignature Language="C#" Value="protected virtual bool UsePostBackCard (bool includeVariables);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool UsePostBackCard(bool includeVariables) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.UsePostBackCard(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includeVariables" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includeVariables">Angibt, ob alle Variablen in der Karte mit zusätzlichen eingeschlossen.</param>
+        <summary>Gibt an, ob der Writer eine zusätzliche Karte für Postbacks verwenden muss. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Falls der Writer eine zusätzliche Karte für Postbacks benötigen; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Writer intern aufgerufen und kann von einer erbenden Klasse überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAttribute">
+      <MemberSignature Language="C#" Value="public override void WriteAttribute (string attribute, string value, bool encode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAttribute(string attribute, string value, bool encode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WriteAttribute(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attribute" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="encode" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attribute">Das Markupattribut, das in den Ausgabestream geschrieben werden soll.</param>
+        <param name="value">Der Wert, der dem Attribut zugewiesen ist.</param>
+        <param name="encode">
+          <see langword="true" />, um das Attribut und seinen zugewiesenen Wert zu codieren, andernfalls <see langword="false" />.</param>
+        <summary>Schreibt das angegebene Markupattribut und den Wert in den Ausgabestream und schreibt den codierten Wert (falls angegeben). Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBreak">
+      <MemberSignature Language="C#" Value="protected void WriteBreak ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WriteBreak() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WriteBreak" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schreibt einen Zeilenumbruch.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEncodedText">
+      <MemberSignature Language="C#" Value="public override void WriteEncodedText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEncodedText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WriteEncodedText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Die Textzeichenfolge, die codiert und in den Ausgabestream geschrieben werden soll.</param>
+        <summary>Codiert den angegebenen Text für das anfordernde Gerät und schreibt ihn dann in den Ausgabestream. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEncodedUrl">
+      <MemberSignature Language="C#" Value="public override void WriteEncodedUrl (string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEncodedUrl(string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WriteEncodedUrl(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die URL-Zeichenfolge, die codiert und in den Ausgabestream geschrieben werden soll.</param>
+        <summary>Codiert die angegebene URL und schreibt sie dann in den Ausgabestream. Die URL kann Parameter enthalten. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritePostField">
+      <MemberSignature Language="C#" Value="public void WritePostField (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WritePostField(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WritePostField(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Feldname.</param>
+        <param name="value">Der Wert des Post-Felds.</param>
+        <summary>Schreibt eine <see langword="&lt; postfield &gt;" /> Element, das mit den angegebenen Parametern. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist ein angenommenen `type` Parameter, die standardmäßig <xref:System.Web.UI.MobileControls.Adapters.WmlPostFieldType.Normal>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritePostField">
+      <MemberSignature Language="C#" Value="public void WritePostField (string name, string value, System.Web.UI.MobileControls.Adapters.WmlPostFieldType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WritePostField(string name, string value, valuetype System.Web.UI.MobileControls.Adapters.WmlPostFieldType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WritePostField(System.String,System.String,System.Web.UI.MobileControls.Adapters.WmlPostFieldType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="type" Type="System.Web.UI.MobileControls.Adapters.WmlPostFieldType" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Feldname.</param>
+        <param name="value">Der Wert des Post-Felds.</param>
+        <param name="type">Die <see cref="T:System.Web.UI.MobileControls.Adapters.WmlPostFieldType" />.</param>
+        <summary>Schreibt eine &lt; <see langword="postfield" /> &gt; Element behandelt den Wert entsprechend den Angaben von der <paramref name="type" /> Parameter. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritePostFieldVariable">
+      <MemberSignature Language="C#" Value="public void WritePostFieldVariable (string name, string arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WritePostFieldVariable(string name, string arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WritePostFieldVariable(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="arg" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Feldname.</param>
+        <param name="arg">Der Variablenname, schreiben.</param>
+        <summary>Schreibt ein Post-Feld und zum Behandeln von der <paramref name="arg" /> Parameter wie ein Variablenname. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die Kurzform wie folgt verwenden: `WritePostField(name, value, WmlPostFieldType.Normal)`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteText">
+      <MemberSignature Language="C#" Value="public void WriteText (string text, bool encodeText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteText(string text, bool encodeText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WriteText(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="encodeText" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der zu schreibende Text.</param>
+        <param name="encodeText">Wenn <see langword="true" />, wird der Text codiert.</param>
+        <summary>Schreibt den angegebenen Text, der bei Bedarf codiert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Codierung umfasst das Zuordnen von Zeichen HTML/WML Bedeutungen für den entsprechenden Zeichencode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTextEncodedAttribute">
+      <MemberSignature Language="C#" Value="protected void WriteTextEncodedAttribute (string attribute, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WriteTextEncodedAttribute(string attribute, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WriteTextEncodedAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attribute" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attribute">Der Name des Attributs zu codieren.</param>
+        <param name="value">Der Wert des Attributs zu codieren.</param>
+        <summary>Schreibt das angegebene Attribut, den Wert mithilfe der textcodierung WML-Codierung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Codierung umfasst das Zuordnen von Zeichen HTML/WML Bedeutungen für den entsprechenden Zeichencode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

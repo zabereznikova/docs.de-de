@@ -1,0 +1,95 @@
+<Type Name="SqlDataSourceFilteringEventArgs" FullName="System.Web.UI.WebControls.SqlDataSourceFilteringEventArgs">
+  <TypeSignature Language="C#" Value="public class SqlDataSourceFilteringEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlDataSourceFilteringEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SqlDataSourceFilteringEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Web.UI.WebControls.SqlDataSource.Filtering" /> -Ereignis für die <see cref="T:System.Web.UI.WebControls.SqlDataSource" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.SqlDataSourceFilteringEventArgs> Klasse dient zum Übergeben von Daten an die <xref:System.Web.UI.WebControls.SqlDataSource.Filtering> -Ereignishandler des der <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement. Die <xref:System.Web.UI.WebControls.SqlDataSourceFilteringEventArgs.ParameterValues%2A> -Eigenschaft bietet Zugriff auf die Parameterwerte für den Filter aus, bevor der Filtervorgang ausgeführt wird. Können Sie Abbrechen der <xref:System.Web.UI.WebControls.SqlDataSource.Select%2A> Methode durch Festlegen der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.ObjectDataSourceFilteringEventArgs> auf `true`. Wird das Filtern unterstützt bei der <xref:System.Web.UI.WebControls.SqlDataSource.DataSourceMode%2A> -Eigenschaftensatz auf die <xref:System.Web.UI.WebControls.SqlDataSourceMode.DataSet> Wert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Daten aus der Northwind-Datenbank abgerufen und Filtern mithilfe einer <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> und <xref:System.Web.UI.WebControls.SqlDataSource.FilterParameters%2A>. Die <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> von der <xref:System.Web.UI.WebControls.SqlDataSource> angewendet wird, können Sie jederzeit die <xref:System.Web.UI.WebControls.SqlDataSource.Select%2A> Methode wird ausgeführt, um Daten abzurufen. In diesem Beispiel wird die <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> enthält einen Platzhalter für einen Filterparameter, der in enthalten ist das <xref:System.Web.UI.WebControls.SqlDataSource.FilterParameters%2A> Auflistung. In der <xref:System.Web.UI.WebControls.SqlDataSource.Filtering> Ereignis, das Filter-Parameter wird angezeigt, einem <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSourceFiltering#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSourceFiltering/CS/SDCFilteringCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSourceFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSourceFiltering/VB/SDCFilteringVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlDataSourceFilteringEventArgs (System.Collections.Specialized.IOrderedDictionary parameterValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.IOrderedDictionary parameterValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SqlDataSourceFilteringEventArgs.#ctor(System.Collections.Specialized.IOrderedDictionary)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameterValues" Type="System.Collections.Specialized.IOrderedDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="parameterValues">Eine <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> von <see cref="T:System.Web.UI.WebControls.Parameter" />-Objekten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.SqlDataSourceFilteringEventArgs" /> Klasse mithilfe des angegebenen Objekts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameter in der `parameterValues` Auflistung aller Parameter, die im angegebenen zugeordnet sind die <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> Eigenschaft bei der <xref:System.Web.UI.WebControls.SqlDataSourceView.Select%2A> Methode ausgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary ParameterValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary ParameterValues" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SqlDataSourceFilteringEventArgs.ParameterValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> -Objekt, das Zugriff auf die <see cref="T:System.Web.UI.WebControls.Parameter" /> Objekte von der <see cref="T:System.Web.UI.WebControls.SqlDataSource" /> Klasse.</summary>
+        <value>Eine <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> von <see cref="T:System.Web.UI.WebControls.Parameter" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.SqlDataSourceFilteringEventArgs> Klasse dient zum Übergeben von Daten an die <xref:System.Web.UI.WebControls.SqlDataSource.Filtering> -Ereignishandler des der <xref:System.Web.UI.WebControls.SqlDataSource>. Die <xref:System.Web.UI.WebControls.SqlDataSourceFilteringEventArgs.ParameterValues%2A> -Eigenschaft bietet Zugriff auf die Parameterwerte für den Filter aus, bevor der Filtervorgang ausgeführt wird.  
+  
+> [!IMPORTANT]
+>  Sie sollten alle Parameterwerte für den Filter überprüfen, dass Sie vom Client empfangen und die select-Vorgang "Abbrechen", wenn ungültige Parameter vorhanden sind. Die Common Language Runtime ersetzt den Wert des Parameters in der Filterausdruck einfach und wendet sie auf das Ergebnis der select-Methode. Es ist möglich, gefährdete Werte so ändern Sie den Filterausdruck so, dass mehr Zeilen als andernfalls an den Client sichtbar wären anzuzeigen. Bei Verwendung der <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> -Eigenschaft, wie eine Sicherheitsmaßnahme, um die Anzahl der Elemente, die zurückgegeben werden, müssen Sie die Parameterwerte überprüfen, bevor die Filterung erfolgt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Daten aus der Northwind-Datenbank abgerufen und Filtern mithilfe einer <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> und <xref:System.Web.UI.WebControls.SqlDataSource.FilterParameters%2A>. Die <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> von der <xref:System.Web.UI.WebControls.SqlDataSource> angewendet wird, können Sie jederzeit die <xref:System.Web.UI.WebControls.SqlDataSource.Select%2A> Methode wird ausgeführt, um Daten abzurufen. In diesem Beispiel wird die <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> enthält einen Platzhalter für einen Filterparameter, der in enthalten ist das <xref:System.Web.UI.WebControls.SqlDataSource.FilterParameters%2A> Auflistung. In der <xref:System.Web.UI.WebControls.SqlDataSource.Filtering> Ereignis, das Filter-Parameter wird angezeigt, einem <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSourceFiltering#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSourceFiltering/CS/SDCFilteringCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSourceFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSourceFiltering/VB/SDCFilteringVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

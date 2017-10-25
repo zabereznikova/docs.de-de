@@ -1,0 +1,139 @@
+<Type Name="SoapIncludeAttribute" FullName="System.Xml.Serialization.SoapIncludeAttribute">
+  <TypeSignature Language="C#" Value="public class SoapIncludeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapIncludeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.SoapIncludeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Method | System.AttributeTargets.Interface, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht die <see cref="T:System.Xml.Serialization.XmlSerializer" /> Erkennen eines Typs beim Serialisieren oder eines Objekts als Deserialisieren codiertes SOAP-XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.SoapIncludeAttribute> Klasse gehört zu einer Familie von Attributen, die steuert, wie die <xref:System.Xml.Serialization.XmlSerializer> Serialisieren oder Deserialisieren eines Objekts als codiertes SOAP-XML. Das resultierende XML entspricht Abschnitt 5 des World Wide Web Consortium (www.w3.org) Dokuments "Simple Object Access Protocol (SOAP) 1.1". Eine vollständige Liste ähnlicher Attribute finden Sie unter [Attribute, Steuerelement codierte SOAP-Serialisierung](~/docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+  
+ Um ein Objekt als codierte SOAP-Nachricht zu serialisieren, erstellen Sie die <xref:System.Xml.Serialization.XmlSerializer> verwenden ein <xref:System.Xml.Serialization.XmlTypeMapping> erstellt, mit der <xref:System.Xml.Serialization.SoapReflectionImporter.ImportTypeMapping%2A> Methode der <xref:System.Xml.Serialization.SoapReflectionImporter> Klasse.  
+  
+ Beim Anwenden der <xref:System.Xml.Serialization.SoapIncludeAttribute>, geben Sie die <xref:System.Type> der abgeleiteten Klasse. Wenn die <xref:System.Xml.Serialization.XmlSerializer> serialisiert Objekte, die sowohl der basisklassenvertrag als auch die abgeleiteten Klassen enthalten, können Sie dann beide Objekttypen erkannt.  
+  
+ Sie können die <xref:System.Xml.Serialization.SoapIncludeAttribute> Beschreibung datendienstdokumente abgeleitete Klassen einschließt, die in der Web Services Description Language (WSDL) geschrieben werden. Angenommen, eine Methode gibt ein <xref:System.Object>, gelten die <xref:System.Xml.Serialization.SoapIncludeAttribute> an die Methode, und geben Sie die tatsächlichen Typen, die zurückgegeben werden sollen.  
+  
+ Weitere Informationen zu WDSL finden Sie unter "Web Services Description Language (WSDL) 1.1" World Wide Web Consortium (www.w3.org)-Spezifikation.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet die <xref:System.Xml.Serialization.SoapIncludeAttribute> zweimal, um eine XML-Webdienstmethode. Die Methode gibt ein Objekt vom Typ `Vehicle` (Basisklasse). Die <xref:System.Xml.Serialization.SoapIncludeAttribute> können Sie die Methode zum Zurückgeben von Instanzen von Klassen abgeleitet wurde. die `Vehicle` Klasse.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapIncludeAttribute (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapIncludeAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ des Objekts eingeschlossen werden soll.</param>
+        <summary>Initialisiert mithilfe des angegebenen Typs eine neue Instanz der <see cref="T:System.Xml.Serialization.SoapIncludeAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mehrere Instanzen von Anwenden der <xref:System.Xml.Serialization.SoapIncludeAttribute> in ein Feld oder eine Eigenschaft, die entweder ein Array von Objekten zurückgibt ein <xref:System.Collections.ArrayList> , das eine Auflistung von Objekten oder ein Objekt, das mehrere Typen zurückgeben kann. Legen Sie die <xref:System.Xml.Serialization.SoapIncludeAttribute.Type%2A> Eigenschaft für jeden Typ, der das Feld oder Eigenschaft enthalten soll.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet die <xref:System.Xml.Serialization.SoapIncludeAttribute> zweimal, um eine XML-Web-services-Methode. Die Methode gibt ein Objekt vom Typ `Vehicle` (Basisklasse). Die <xref:System.Xml.Serialization.SoapIncludeAttribute> können Sie die Methode zum Zurückgeben von Instanzen von Klassen abgeleitet wurde. die `Vehicle` Klasse.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.SoapIncludeAttribute.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des Objekts verwendet werden, bei der Serialisierung oder Deserialisierung eines Objekts fest.</summary>
+        <value>Der Typ des Objekts eingeschlossen werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mehrere Instanzen von Anwenden der <xref:System.Xml.Serialization.SoapIncludeAttribute> in ein Feld oder eine Eigenschaft, die entweder ein Array von Objekten zurückgibt ein <xref:System.Collections.ArrayList> , das eine Auflistung von Objekten oder ein Objekt, das mehrere Typen zurückgeben kann. Legen Sie die <xref:System.Xml.Serialization.SoapIncludeAttribute.Type%2A> Eigenschaft für jeden Typ, der das Feld oder Eigenschaft enthalten soll.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet die <xref:System.Xml.Serialization.SoapIncludeAttribute> zweimal, um eine XML-Web-services-Methode. Die Methode gibt ein Objekt vom Typ `Vehicle` (Basisklasse). Die <xref:System.Xml.Serialization.SoapIncludeAttribute> können Sie die Methode zum Zurückgeben von Instanzen von Klassen abgeleitet wurde. die `Vehicle` Klasse.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,415 @@
+<Type Name="HttpException" FullName="System.Web.HttpException">
+  <TypeSignature Language="C#" Value="public class HttpException : System.Runtime.InteropServices.ExternalException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit HttpException extends System.Runtime.InteropServices.ExternalException" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.InteropServices.ExternalException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Beschreibt eine Ausnahme, die während der Verarbeitung der HTTP-Anforderungen aufgetreten sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpException> -Klasse ist eine HTTP-spezifische Ausnahmeklasse, die ASP.NET ermöglicht, Ausnahmeinformationen zu generieren. Weitere Informationen zum Auslösen und Behandeln von Ausnahmen finden Sie unter [Ausnahmen](http://msdn.microsoft.com/library/f99a1d29-a2a8-47af-9707-9909f9010735).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.HttpException> Klasse benutzerdefinierte Ausnahmen auslösen. Die `Button_Click` Methode bestimmt, welches Steuerelement die Schaltfläche geklickt wurde, und ruft dann die `CheckNumber` oder `CheckBoolean` Methode. Wenn der Benutzer eingegebenen Wert in das Textfeld nicht dem erwarteten Typ entspricht einem <xref:System.Web.HttpException> Ausnahme wird erstellt und mit einer benutzerdefinierten Meldung, die basierend auf den Fehler ausgelöst.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[HttpException#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpException/cs/httpexceptioncs.aspx#1)]
+ [!code-aspx-vb[HttpException#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpException/vb/httpexceptionvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.HttpException" /> -Klasse und erstellt ein leeres <see cref="T:System.Web.HttpException" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Behandlung von Ausnahmen kann es sinnvoll, eine Reihe von verwandten Ausnahmen mit der äußeren Ausnahme ausgelöst wird, als Antwort auf eine interne Ausnahme zu erfassen.  
+  
+ Ein Verweis auf die innere Ausnahme, die die äußeren Ausnahme verursacht hat steht über die <xref:System.Exception.InnerException%2A> -Eigenschaft der äußeren Ausnahme. Dieser Mechanismus behält die Fehlerinformationen, die von früheren Ausnahmen, z. B. die ursprünglichen Ausnahmen beim ermöglicht Ihnen die Erstellung von aussagekräftigere äußerer Ausnahmen übergeben werden. Weitere Informationen finden Sie unter <xref:System.Exception.InnerException%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die <xref:System.Web.HttpException.%23ctor%2A> Konstruktor, der die <xref:System.Web.HttpException> Klasse. Die `CheckNumber` Methode akzeptiert einen vom Benutzer eingegebenen Wert über ein Textfeld, und überprüft, ob es sich um eine ganze Zahl ist. Wenn der Wert keine ganze Zahl ist, wird eine Ausnahme ausgelöst, und klicken Sie dann eine neue <xref:System.Web.HttpException> Objekt erstellt und ausgelöst. Dass die Ausnahme abgefangen wird, in der `Button_Click` -Ereignishandler und die Fehlermeldung wird im Browser angezeigt.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[HttpException_Constructor1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpException_Constructor1/CS/httpexception_constructor1.cs.aspx#1)]
+ [!code-aspx-vb[HttpException_Constructor1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpException_Constructor1/VB/httpexception_constructor1.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung an den Client angezeigt wird, wenn die Ausnahme ausgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.HttpException" /> -Klasse mit einer angegebenen Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die <xref:System.Web.HttpException.%23ctor%2A> Konstruktor, der die <xref:System.Web.HttpException> Klasse. Ein <xref:System.Web.HttpException> wird ausgelöst, wenn ein vom Benutzer eingegebenen Wert 0 ist.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[Classic HttpException.HttpException1 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpException.HttpException1 Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpException.HttpException1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpException.HttpException1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpException (int httpCode, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 httpCode, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpException.#ctor(System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="httpCode" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="httpCode">HTTP-Statuscode der Antwort an den Client, der die entsprechende Fehlermeldung gesendet.</param>
+        <param name="message">Die Fehlermeldung an den Client angezeigt wird, wenn die Ausnahme ausgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.HttpException" /> -Klasse unter Verwendung einer HTTP-Antwortstatuscode und eine Fehlermeldung angezeigt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HttpException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Die <see cref="T:System.Runtime.Serialization.StreamingContext" /> , der die Kontextinformationen zur Quelle bzw. zum Ziel enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.HttpException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpException.%23ctor%2A> Konstruktor wird während der Deserialisierung, das über einen Stream übertragene Ausnahmeobjekt aufgerufen. Weitere Informationen finden Sie unter [XML- und SOAP-Serialisierung](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung an den Client angezeigt wird, wenn die Ausnahme ausgelöst wird.</param>
+        <param name="innerException">Die <see cref="P:System.Exception.InnerException" />, falls vorhanden, die die aktuelle Ausnahme ausgelöst hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.HttpException" /> -Klasse mit einer Fehlermeldung und der <see cref="P:System.Exception.InnerException" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Behandlung von Ausnahmen kann es sinnvoll, eine Reihe von verwandten Ausnahmen mit der äußeren Ausnahme ausgelöst wird, als Antwort auf eine interne Ausnahme zu erfassen.  
+  
+ Ein Verweis auf die innere Ausnahme, die die äußeren Ausnahme verursacht hat steht über die <xref:System.Exception.InnerException%2A> -Eigenschaft der äußeren Ausnahme. Dieser Mechanismus behält die Fehlerinformationen, die von früheren Ausnahmen, z. B. die ursprünglichen Ausnahmen beim ermöglicht Ihnen die Erstellung von aussagekräftigere äußerer Ausnahmen übergeben werden. Weitere Informationen finden Sie unter <xref:System.Exception.InnerException%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die <xref:System.Web.HttpException.%23ctor%2A> Konstruktor, der die <xref:System.Web.HttpException> Klasse. Die `CheckNumber` Methode akzeptiert einen vom Benutzer eingegebenen Wert über ein Textfeld, und überprüft, ob es sich um eine ganze Zahl ist. Wenn der Wert keine ganze Zahl ist, wird eine Ausnahme ausgelöst, und klicken Sie dann im Catch-Block ein neues <xref:System.Web.HttpException> Objekt erstellt und ausgelöst. Dass die Ausnahme abgefangen wird, in der `Button_Click` -Ereignishandler und die Fehlermeldung wird im Browser angezeigt.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[HttpException_Constructor2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpException_Constructor2/CS/httpexception_constructor2.cs.aspx#1)]
+ [!code-aspx-vb[HttpException_Constructor2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpException_Constructor2/VB/httpexception_constructor2.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpException (string message, int hr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, int32 hr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpException.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="hr" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung an den Client angezeigt wird, wenn die Ausnahme ausgelöst wird.</param>
+        <param name="hr">Die Ausnahmecode, der den Fehler definiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.HttpException" /> -Klasse mit einer Fehlermeldung und einen Ausnahmecode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die <xref:System.Web.HttpException.%23ctor%2A> Konstruktor, der die <xref:System.Web.HttpException> Klasse. Ein <xref:System.Web.HttpException> Ausnahme wird ausgelöst, wenn ein vom Benutzer eingegebenen Wert 0 ist.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[Classic HttpException.HttpException2 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpException.HttpException2 Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpException.HttpException2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpException.HttpException2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpException (int httpCode, string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 httpCode, string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpException.#ctor(System.Int32,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="httpCode" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="httpCode">HTTP-Statuscode der Antwort auf dem Client angezeigt.</param>
+        <param name="message">Die Fehlermeldung an den Client angezeigt wird, wenn die Ausnahme ausgelöst wird.</param>
+        <param name="innerException">Die <see cref="P:System.Exception.InnerException" />, falls vorhanden, die die aktuelle Ausnahme ausgelöst hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.HttpException" /> -Klasse unter Verwendung einer HTTP-Antwortstatuscode eine Fehlermeldung, und die <see cref="P:System.Exception.InnerException" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Behandlung von Ausnahmen kann es sinnvoll, eine Reihe von verwandten Ausnahmen mit der äußeren Ausnahme ausgelöst wird, als Antwort auf eine interne Ausnahme zu erfassen.  
+  
+ Ein Verweis auf die innere Ausnahme, die die äußeren Ausnahme verursacht hat steht über die <xref:System.Exception.InnerException%2A> -Eigenschaft der äußeren Ausnahme. Dieser Mechanismus behält die Fehlerinformationen, die von früheren Ausnahmen, z. B. die ursprünglichen Ausnahmen beim ermöglicht Ihnen die Erstellung von aussagekräftigere äußerer Ausnahmen übergeben werden. Weitere Informationen finden Sie unter <xref:System.Exception.InnerException%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die <xref:System.Web.HttpException.%23ctor%2A> Konstruktor, der die <xref:System.Web.HttpException> Klasse. Die `CheckNumber` Methode akzeptiert einen vom Benutzer eingegebenen Wert und überprüft, ob es sich um eine ganze Zahl ist. Wenn der Wert keine ganze Zahl ist, wird eine Ausnahme ausgelöst, und klicken Sie dann eine neue <xref:System.Web.HttpException> Objekt mit den Statuscode der HTTP-Antwort, die Ausnahmemeldung und alle inneren Ausnahmen wird erstellt. Dass die Ausnahme abgefangen wird, in der `Button_Click` -Ereignishandler und die Fehlermeldung, Fehlercode und die innere Ausnahme werden angezeigt.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[HttpException_Constructor3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpException_Constructor3/CS/httpexception_constructor3.cs.aspx#1)]
+ [!code-aspx-vb[HttpException_Constructor3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpException_Constructor3/VB/httpexception_constructor3.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpException (int httpCode, string message, int hr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 httpCode, string message, int32 hr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpException.#ctor(System.Int32,System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="httpCode" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="hr" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="httpCode">HTTP-Statuscode der Antwort auf dem Client angezeigt.</param>
+        <param name="message">Die Fehlermeldung an den Client angezeigt wird, wenn die Ausnahme ausgelöst wird.</param>
+        <param name="hr">Die Ausnahmecode, der den Fehler definiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.HttpException" /> -Klasse mithilfe einer HTTP-Antwort-Statuscode, eine Fehlermeldung und einen Ausnahmecode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die <xref:System.Web.HttpException.%23ctor%2A> Konstruktor, der die <xref:System.Web.HttpException> Klasse. Name und e-Mail-Benutzerinformationen sind vom Benutzer in die bereitgestellten Textfelder eingegeben. Wenn keines der Textfelder leer bleibt, wird ein <xref:System.Web.HttpException> Objekt erstellt und ausgelöst. Der Fehlercode, der die <xref:System.Web.HttpException> erhalten, indem Sie die <xref:System.Web.HttpException.GetHttpCode%2A> Methode und auf der Webseite angezeigt.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[HttpException_Constructor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpException_Constructor/CS/httpexception_constructor5.cs.aspx#1)]
+ [!code-aspx-vb[HttpException_Constructor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpException_Constructor/VB/httpexception_constructor5.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromLastError">
+      <MemberSignature Language="C#" Value="public static System.Web.HttpException CreateFromLastError (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.HttpException CreateFromLastError(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpException.CreateFromLastError(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpException</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung an den Client angezeigt wird, wenn die Ausnahme ausgelöst wird.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Web.HttpException" /> Ausnahme basierend auf den Fehlercode, der aus der Win32-API zurückgegeben wird <see langword="GetLastError()" /> Methode.</summary>
+        <returns>Ein <see cref="T:System.Web.HttpException" /> basierend auf den Fehlercode, der von einem Aufruf der Win32-API zurückgegeben wird <see langword="GetLastError()" /> Methode.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHtmlErrorMessage">
+      <MemberSignature Language="C#" Value="public string GetHtmlErrorMessage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetHtmlErrorMessage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpException.GetHtmlErrorMessage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die HTML-Fehlermeldung an den Client zurückgegeben.</summary>
+        <returns>Die HTML-Fehlermeldung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHttpCode">
+      <MemberSignature Language="C#" Value="public int GetHttpCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetHttpCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpException.GetHttpCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den HTTP-Antwort-Statuscode an den Client zurückgegeben.</summary>
+        <returns>HTTP-Code ungleich 0 (null), die die Ausnahme darstellt oder den <see cref="P:System.Exception.InnerException" /> Exitcode ";", andernfalls HTTP-Antwort-Status 500 code.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein HTTP-Code ungleich 0 (null) vorhanden ist, wird es zurückgegeben. Andernfalls die <xref:System.Exception.InnerException%2A> Code wird zurückgegeben. Wenn weder ein <xref:System.Exception.InnerException%2A> Code noch nicht 0 (null) HTTP-Code verfügbar ist, wird der HTTP-Antwort-Statuscode 500 zurückgegeben. Weitere Informationen zu HTTP-Antwortstatuscodes, finden Sie unter den Statuscodedefinitionen des Hypertext Transfer Protocol - HTTP/1.1 auf der ganzen Welt [Wide Web Consortium (W3C) Website](http://go.microsoft.com/fwlink/?linkid=37125).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Die <see cref="T:System.Runtime.Serialization.StreamingContext" /> , der die Kontextinformationen zur Quelle bzw. zum Ziel enthält.</param>
+        <summary>Ruft Informationen über die Ausnahme ab und fügt es der <see cref="T:System.Runtime.Serialization.SerializationInfo" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpException.GetObjectData%2A> Methode fügt Informationen über die Ausnahme, die <xref:System.Runtime.Serialization.SerializationInfo> -Objekt, das für die Serialisierung vorgesehen ist. Während der Deserialisierung wird die Ausnahme von übertragenen der <xref:System.Runtime.Serialization.SerializationInfo> , die über den Stream übertragen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebEventCode">
+      <MemberSignature Language="C#" Value="public int WebEventCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 WebEventCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpException.WebEventCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ereigniscodes an, die der HTTP-Ausnahme zugeordnet sind.</summary>
+        <value>Eine ganze Zahl, die einen Webcode-Ereignis darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

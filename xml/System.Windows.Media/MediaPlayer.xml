@@ -1,0 +1,835 @@
+<Type Name="MediaPlayer" FullName="System.Windows.Media.MediaPlayer">
+  <TypeSignature Language="C#" Value="public class MediaPlayer : System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MediaPlayer extends System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.MediaPlayer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Animatable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Wiedergabe von Medien für Zeichnungen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine Instanz dieser Klasse in deklarieren [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], Sie können nicht geladen werden und Wiedergeben von Medien ohne Verwendung von Code. Zum Wiedergeben von Medien in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] verwenden Sie nur eine <xref:System.Windows.Controls.MediaElement>. Darüber hinaus, wenn Sie eine Instanz im deklarieren [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], die nur praktische Verwendung besteht darin, füllen Eigenschaftenelementsyntax für die <xref:System.Windows.Media.VideoDrawing.Player%2A> Eigenschaft.  
+  
+ Wenn Sie Medien mit der Anwendung verteilen, ist es nicht möglich, eine Mediendatei als Projektressource zu verwenden. In der Projektdatei müssen Sie stattdessen den Medientyp auf `Content` festlegen, und `CopyToOutputDirectory` auf `PreserveNewest` oder `Always`.  
+  
+ <xref:System.Windows.Media.MediaPlayer>kann verwendet werden, in zwei verschiedenen Modi, je nachdem, was der Spieler gesteuert wird: unabhängige oder Uhrmodus. In unabhängigen Modus der <xref:System.Windows.Media.MediaPlayer> ist analog zu der Medien, die über geöffnet und ein Bild der <xref:System.Windows.Media.MediaPlayer.Open%2A> Methode Wiedergabe. Im Modus Uhr der <xref:System.Windows.Media.MediaPlayer> kann als Ziel für eine Animation betrachtet werden und daher haben sie entsprechende <xref:System.Windows.Media.Animation.Timeline> und <xref:System.Windows.Media.Animation.Clock> Einträge in der zeitlichen Steuerung Struktur, welche Steuerelemente Wiedergabe. Weitere Informationen zu Medienmodi, finden Sie unter der [Multimedia Overview](~/docs/framework/wpf/graphics-multimedia/multimedia-overview.md).  
+  
+ <xref:System.Windows.Media.MediaPlayer>unterscheidet sich von einem <xref:System.Windows.Controls.MediaElement> insofern, dass es kein Steuerelement, das direkt hinzugefügt werden kann, die [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] einer Anwendung. Anzuzeigende mit geladenen Mediums <xref:System.Windows.Media.MediaPlayer>, <xref:System.Windows.Media.VideoDrawing> oder <xref:System.Windows.Media.DrawingContext> muss verwendet werden.  
+  
+   
+  
+## Examples  
+ [Vorgehensweise: Wiedergeben von Medien mit einer VideoDrawing](~/docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaPlayer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaPlayer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.MediaPlayer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Balance">
+      <MemberSignature Language="C#" Value="public double Balance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Balance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.Balance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Gleichgewicht zwischen der linken und rechten Lautsprechers.</summary>
+        <value>Das Verhältnis des Volumes auf der linken und rechten Lautsprecher in einem Bereich zwischen-1 und 1. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert-1 stellt 100 % der linken Seite Lautsprecher und 1 stellt 100 % der Lautsprecher rechts dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferingEnded">
+      <MemberSignature Language="C#" Value="public event EventHandler BufferingEnded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BufferingEnded" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.MediaPlayer.BufferingEnded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn Pufferung abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferingProgress">
+      <MemberSignature Language="C#" Value="public double BufferingProgress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 BufferingProgress" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.BufferingProgress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Prozentsatz der abgeschlossenen Pufferung für das Streamen von Inhalt ab.</summary>
+        <value>Der Prozentsatz der abgeschlossenen Pufferung für das streaming-Inhalte, die einen Wert zwischen 0 und 1 dargestellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferingStarted">
+      <MemberSignature Language="C#" Value="public event EventHandler BufferingStarted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BufferingStarted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.MediaPlayer.BufferingStarted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn Pufferung gestartet wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanPause">
+      <MemberSignature Language="C#" Value="public bool CanPause { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanPause" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.CanPause" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Medium angehalten werden kann.</summary>
+        <value>"true", wenn das Medium angehalten werden kann; andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clock">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.MediaClock Clock { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.MediaClock Clock" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.Clock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.MediaClock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.MediaClock" /> zugeordnet der <see cref="T:System.Windows.Media.MediaTimeline" /> wiedergegeben werden soll.</summary>
+        <value>Die zugeordnete Uhr der <see cref="T:System.Windows.Media.MediaTimeline" /> wiedergegeben werden soll. Der Standardwert ist NULL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft teilt der <xref:System.Windows.Media.MediaPlayer> Uhr gesteuert werden und das Timing-Modul, platzieren den Player im Clock-Modus verwendet. Alle Medien, die Wiedergabe werden beendet und die <xref:System.Uri> verknüpft sind, mit dem neuen Format wird geöffnet.  
+  
+ Wenn der Spieler im Clock-Modus befindet, Suchvorgänge mit <xref:System.Windows.Media.MediaPlayer.Position%2A> oder zum Aufrufen der <xref:System.Windows.Media.MediaPlayer.Play%2A>, <xref:System.Windows.Media.MediaPlayer.Pause%2A>, oder <xref:System.Windows.Media.MediaPlayer.Stop%2A> Methoden lösen eine <xref:System.InvalidOperationException>. Diese Vorgänge sind nur verfügbar, wenn der Spieler <xref:System.Windows.Media.MediaPlayer.Clock%2A> ist null.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaPlayer.CloneCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">Das zu klonende <see cref="T:System.Windows.Media.MediaPlayer" />.</param>
+        <summary>Macht diese Instanz zu einer tiefen Kopie der angegebenen <see cref="T:System.Windows.Media.MediaPlayer" />. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Windows.Freezable.Clone%2A> Methode und sollte nicht aufgerufen werden direkt aus Ihrem Code, außer wenn beim Überschreiben dieser Methode die basisimplementierung aufrufen. Rufen Sie zum Erstellen einer änderbaren Kopie des aktuellen Objekts <xref:System.Windows.Freezable.Clone%2A> statt dieser Methode direkt aufzurufen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCurrentValueCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCurrentValueCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaPlayer.CloneCurrentValueCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">Das zu klonende <see cref="T:System.Windows.Media.MediaPlayer" />.</param>
+        <summary>Macht diese Instanz mithilfe aktueller Eigenschaftswerte zu einer tiefen Kopie der angegebenen <see cref="T:System.Windows.Media.MediaPlayer" />, die geändert werden kann. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Windows.Freezable.CloneCurrentValue%2A> Methode und sollte nicht aufgerufen werden direkt aus Ihrem Code, außer wenn beim Überschreiben dieser Methode die basisimplementierung aufrufen. Rufen Sie zum Erstellen einer änderbaren Kopie des aktuellen Objekts <xref:System.Windows.Freezable.CloneCurrentValue%2A> statt dieser Methode direkt aufzurufen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValueCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaPlayer.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt den zugrunde liegenden Medien.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.MediaPlayer> erneut geöffnet werden kann, durch Aufrufen der <xref:System.Windows.Media.MediaPlayer.Open%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaPlayer.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue <see cref="T:System.Windows.Media.MediaPlayer" />-Instanz.</summary>
+        <returns>Eine neue <see cref="T:System.Windows.Media.MediaPlayer" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DownloadProgress">
+      <MemberSignature Language="C#" Value="public double DownloadProgress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 DownloadProgress" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.DownloadProgress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Prozentsatz der Downloadstatus für Inhalte, die sich auf einem Remoteserver befindet.</summary>
+        <value>Der Prozentsatz der Downloadstatus für Inhalt auf einem Remoteserver, die durch einen Wert zwischen 0 und 1 dargestellt. Der Standard ist 0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaPlayer.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">Die <see cref="T:System.Windows.Media.MediaPlayer" /> zu klonende und einzufrierende Objekt.</param>
+        <summary>Macht diese Instanz zu einem Klon des angegebenen <see cref="T:System.Windows.Media.MediaPlayer" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte. Beachten Sie, dass, wenn diese Eigenschaften Ressourcenverweise oder datenbindungen, enthalten <xref:System.Windows.Freezable.GetAsFrozen%2A> schlägt fehl, wenn das Objekt fixieren möchten, und löst eine <xref:System.InvalidOperationException>.  
+  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Windows.Freezable.GetAsFrozen%2A> Methode und sollte nicht aufgerufen werden direkt aus Ihrem Code, außer wenn beim Überschreiben dieser Methode die basisimplementierung aufrufen. Rufen Sie zum Erstellen einer fixierten Kopie des aktuellen Objekts <xref:System.Windows.Freezable.GetAsFrozen%2A> statt dieser Methode direkt aufzurufen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.GetAsFrozenCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasAudio">
+      <MemberSignature Language="C#" Value="public bool HasAudio { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasAudio" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.HasAudio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Medien über Audioausgabe verfügen.</summary>
+        <value>True, wenn das Medium Audioausgabe; andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasVideo">
+      <MemberSignature Language="C#" Value="public bool HasVideo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasVideo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.HasVideo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Medium Videoausgabe verfügt.</summary>
+        <value>True, wenn das Medium Videoausgabe; andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBuffering">
+      <MemberSignature Language="C#" Value="public bool IsBuffering { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBuffering" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.IsBuffering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Medien gepuffert werden.</summary>
+        <value>"true", wenn die Medien gepuffert werden; andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMuted">
+      <MemberSignature Language="C#" Value="public bool IsMuted { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMuted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.IsMuted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Medien stumm geschaltet werden.</summary>
+        <value>"true", wenn das Medium stumm geschaltet wird; andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaEnded">
+      <MemberSignature Language="C#" Value="public event EventHandler MediaEnded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MediaEnded" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.MediaPlayer.MediaEnded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Medienwiedergabe beendet wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaFailed">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Media.ExceptionEventArgs&gt; MediaFailed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Media.ExceptionEventArgs&gt; MediaFailed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.MediaPlayer.MediaFailed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Media.ExceptionEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Fehler aufgetreten ist</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_MediaFailed"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object MediaFailed="EventHandler"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaOpened">
+      <MemberSignature Language="C#" Value="public event EventHandler MediaOpened;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MediaOpened" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.MediaPlayer.MediaOpened" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Medium geöffnet wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NaturalDuration">
+      <MemberSignature Language="C#" Value="public System.Windows.Duration NaturalDuration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Duration NaturalDuration" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.NaturalDuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die natürliche Dauer des Mediums ab.</summary>
+        <value>Die natürliche Dauer des Mediums. Die Standardeinstellung ist <see cref="P:System.Windows.Duration.Automatic" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.MediaPlayer.NaturalDuration%2A>kann erst bestimmt werden nach <xref:System.Windows.Media.MediaPlayer.MediaOpened> aufgetreten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NaturalVideoHeight">
+      <MemberSignature Language="C#" Value="public int NaturalVideoHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NaturalVideoHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.NaturalVideoHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe des Videos in Pixel ab.</summary>
+        <value>Die Höhe des Videos in Pixel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ NULL wird zurückgegeben, wenn der Medientyp audio ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NaturalVideoWidth">
+      <MemberSignature Language="C#" Value="public int NaturalVideoWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NaturalVideoWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.NaturalVideoWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Breite des Videos in Pixel ab.</summary>
+        <value>Die Pixelbreite des Videos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ NULL wird zurückgegeben, wenn der Medientyp audio ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public void Open (Uri source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Open(class System.Uri source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaPlayer.Open(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Medienquelle <see cref="T:System.Uri" />.</param>
+        <summary>Öffnet die angegebene <see cref="T:System.Uri" /> für die Wiedergabe von Medien.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pause">
+      <MemberSignature Language="C#" Value="public void Pause ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Pause() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaPlayer.Pause" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hält die Wiedergabe von Medien.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Windows.Media.MediaPlayer.Pause%2A> Wenn ein Player hat eine zugeordnete <xref:System.Windows.Media.MediaPlayer.Clock%2A> löst eine <xref:System.InvalidOperationException>. <xref:System.Windows.Media.MediaPlayer.Pause%2A>kann nicht aufgerufen werden, während das Timing Modul Medienwiedergabe steuert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Play">
+      <MemberSignature Language="C#" Value="public void Play ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Play() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaPlayer.Play" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wiedergabe von Medien aus dem aktuellen <see cref="P:System.Windows.Media.MediaPlayer.Position" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Windows.Media.MediaPlayer.Play%2A> Wenn ein Player hat eine zugeordnete <xref:System.Windows.Media.MediaPlayer.Clock%2A> löst eine <xref:System.InvalidOperationException>. <xref:System.Windows.Media.MediaPlayer.Play%2A>kann nicht aufgerufen werden, während das Timing Modul Medienwiedergabe steuert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public TimeSpan Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Position" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die aktuelle Position des Mediums fest.</summary>
+        <value>Die aktuelle Position des Mediums.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Spieler ein zugehöriges hat <xref:System.Windows.Media.MediaPlayer.Clock%2A>wird durch das Festlegen <xref:System.Windows.Media.MediaPlayer.Position%2A> löst eine <xref:System.InvalidOperationException>. <xref:System.Windows.Media.MediaPlayer.Position%2A>kann nicht festgelegt werden, während das Timing Modul Medienwiedergabe steuert.  
+  
+<a name="xamlTextUsage_Position"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Nicht in der Regel verwendet [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadPreamble">
+      <MemberSignature Language="C#" Value="protected void ReadPreamble ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ReadPreamble() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaPlayer.ReadPreamble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird sichergestellt, dass über einen gültigen Thread MediaPlayer zugegriffen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptCommand">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Media.MediaScriptCommandEventArgs&gt; ScriptCommand;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Media.MediaScriptCommandEventArgs&gt; ScriptCommand" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.MediaPlayer.ScriptCommand" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Media.MediaScriptCommandEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn Sie ein Skriptbefehl innerhalb des Mediensatzes aufgetreten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_ScriptCommand"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object ScriptCommand="EventHandler"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrubbingEnabled">
+      <MemberSignature Language="C#" Value="public bool ScrubbingEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ScrubbingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.ScrubbingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Bereinigen aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn Bereinigen aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public Uri Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Medium <see cref="T:System.Uri" />.</summary>
+        <value>Der aktuelle Datenträger <see cref="T:System.Uri" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.MediaPlayer.Source%2A>ist schreibgeschützt. Ruft diese Eigenschaft die <xref:System.Uri> , die geöffnet wird, über die <xref:System.Windows.Media.MediaPlayer.Open%2A> Methode oder die <xref:System.Uri> zugeordnet der <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpeedRatio">
+      <MemberSignature Language="C#" Value="public double SpeedRatio { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SpeedRatio" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.SpeedRatio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, die dem Geschwindigkeitsverhältnis der Medien an wiedergegeben werden.</summary>
+        <value>Das Verhältnis der Geschwindigkeit, die Medieninhalte wird wiedergegeben, dargestellt durch einen Wert zwischen 0 und der größte double-Wert zurück. Der Standardwert ist 1,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Werte kleiner als eine Yield langsamer als die normale Wiedergabe größere Werte als eine schneller als die normale Wiedergabe ergibt.  
+  
+ Wenn der Spieler ein zugehöriges hat <xref:System.Windows.Media.MediaPlayer.Clock%2A>, wobei <xref:System.Windows.Media.MediaPlayer.SpeedRatio%2A> ist nicht zulässig. <xref:System.Windows.Media.MediaPlayer.SpeedRatio%2A>kann nicht festgelegt werden, während das Timing Modul Medienwiedergabe steuert.  
+  
+ Audiowiedergabe ist nicht gewährleistet, wenn <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> nicht `1`.  
+  
+<a name="xamlTextUsage_SpeedRatio"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Nicht in der Regel verwendet [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaPlayer.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Wiedergabe von Medien.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Windows.Media.MediaPlayer.Stop%2A> Wenn ein Player hat eine zugeordnete <xref:System.Windows.Media.MediaPlayer.Clock%2A> löst eine <xref:System.InvalidOperationException>. <xref:System.Windows.Media.MediaPlayer.Stop%2A>kann nicht aufgerufen werden, während das Timing Modul Medienwiedergabe steuert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Volume">
+      <MemberSignature Language="C#" Value="public double Volume { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Volume" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaPlayer.Volume" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Lautstärke des Mediums ab oder legt sie fest.</summary>
+        <value>Die Lautstärke des Mediums, dargestellt auf einer linearen Skala zwischen 0 und 1. Die Standardeinstellung ist 0,5.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_Volume"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Nicht in der Regel verwendet [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritePreamble">
+      <MemberSignature Language="C#" Value="protected void WritePreamble ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WritePreamble() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.MediaPlayer.WritePreamble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt sicher, dass MediaPlayer nicht eingefroren ist und sie über einen gültigen Threadkontext zugegriffen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

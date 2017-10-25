@@ -1,0 +1,172 @@
+<Type Name="TextChangedEventArgs" FullName="System.Windows.Controls.TextChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class TextChangedEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextChangedEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.TextChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Controls.Primitives.TextBoxBase.TextChanged" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt der Anzahl den Text in einem <xref:System.Windows.Controls.TextBox> ändert. Im folgenden ist die Verwendung von XAML-Code für das Beispiel aus.  
+  
+ [!code-xaml[TextBoxMiscSnippets_snip#DetectChangedTextExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/detectchangedtextexample.xaml#detectchangedtextexamplewholepage)]  
+  
+ Im Folgenden sehen Sie den Code für das Beispiel.  
+  
+ [!code-csharp[TextBoxMiscSnippets_snip#DetectChangedTextCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/detectchangedtextexample.xaml.cs#detectchangedtextcodeexamplewholepage)]
+ [!code-vb[TextBoxMiscSnippets_snip#DetectChangedTextCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/visualbasic/detectchangedtextexample.xaml.vb#detectchangedtextcodeexamplewholepage)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextChangedEventArgs (System.Windows.RoutedEvent id, System.Windows.Controls.UndoAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.RoutedEvent id, valuetype System.Windows.Controls.UndoAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextChangedEventArgs.#ctor(System.Windows.RoutedEvent,System.Windows.Controls.UndoAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.Windows.RoutedEvent" />
+        <Parameter Name="action" Type="System.Windows.Controls.UndoAction" />
+      </Parameters>
+      <Docs>
+        <param name="id">Das Ereignis [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)].</param>
+        <param name="action">Die <see cref="P:System.Windows.Controls.TextChangedEventArgs.UndoAction" /> textänderung zurückzuführen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Controls.TextChangedEventArgs" /> -Klasse unter Verwendung der angegebenen Ereignis-ID und die Aktion rückgängig machen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextChangedEventArgs (System.Windows.RoutedEvent id, System.Windows.Controls.UndoAction action, System.Collections.Generic.ICollection&lt;System.Windows.Controls.TextChange&gt; changes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.RoutedEvent id, valuetype System.Windows.Controls.UndoAction action, class System.Collections.Generic.ICollection`1&lt;class System.Windows.Controls.TextChange&gt; changes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextChangedEventArgs.#ctor(System.Windows.RoutedEvent,System.Windows.Controls.UndoAction,System.Collections.Generic.ICollection{System.Windows.Controls.TextChange})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.Windows.RoutedEvent" />
+        <Parameter Name="action" Type="System.Windows.Controls.UndoAction" />
+        <Parameter Name="changes" Type="System.Collections.Generic.ICollection&lt;System.Windows.Controls.TextChange&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="id">Das Ereignis [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)].</param>
+        <param name="action">Die <see cref="P:System.Windows.Controls.TextChangedEventArgs.UndoAction" /> textänderung zurückzuführen.</param>
+        <param name="changes">Die Änderungen, die während dieses Ereignisses aufgetreten sind. Weitere Informationen finden Sie unter <see cref="P:System.Windows.Controls.TextChangedEventArgs.Changes" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Controls.TextChangedEventArgs" /> -Klasse unter Verwendung der angegebenen Ereignis-ID, die Rückgängig-Aktion und die Änderungen am Text.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.TextChangedEventArgs.%23ctor%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Changes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.Windows.Controls.TextChange&gt; Changes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.Windows.Controls.TextChange&gt; Changes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextChangedEventArgs.Changes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Windows.Controls.TextChange&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Objekten, die Informationen zu den Änderungen enthält, die aufgetreten sind.</summary>
+        <value>Eine Auflistung von Objekten, die Informationen zu den Änderungen enthält, die aufgetreten sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist eine <xref:System.Windows.Controls.TextChange> Objekt für jede aufeinander folgende Änderung an das Steuerelement. Mehrere aufeinander folgende Änderungen kann auftreten, während ein Vorkommen des der <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> Ereignis aus, wenn die Änderung umfasst das Ändern der Struktur der zugrunde liegenden Dokument.  
+  
+ Nehmen wir beispielsweise an, die eine <xref:System.Windows.Controls.RichTextBox> enthält die Zeichenfolge `"This is some text."` die Struktur der <xref:System.Windows.Controls.RichTextBox.Document%2A?displayProperty=nameWithType> ist `<Paragraph><Run>This is some text.</Run></Paragraph>`. Wenn der Benutzer fett formatiert die Wörter `"is some"`, die Struktur der zugrunde liegenden <xref:System.Windows.Documents.FlowDocument> ändert sich in `<Paragraph><Run>This </Run><Run  FontWeight="Bold">is some</Run><Run> text.</Run></Paragraph>`. Es gibt tatsächlich vier Änderungen, die aufgrund einer Benutzeraktion stattgefunden hat:  
+  
+1.  Die `<Run>` Symbol entfernt und erneut hinzugefügt werden, bevor das Wort `This`.  
+  
+2.  Die Symbole `</Run><Run>` werden hinzugefügt, nachdem das Wort `This`.  
+  
+3.  Die Symbole `</Run><Run>` werden hinzugefügt, nachdem das Wort `some`.  
+  
+4.  Die `</Run>` Symbol entfernt und erneut hinzugefügt werden, nachdem das Wort `Text`.  
+  
+ Im Allgemeinen wird Folgendes immer "true" sein:  
+  
+-   Das Ergebnis in das Dokument wird in einem gültigen Zustand auftretende Änderungen.  
+  
+-   Die Auflistung ist fortlaufend sortiert wird, im Zusammenhang mit, wo die Änderung im Steuerelement aufgetreten ist.  Z. B. eine <xref:System.Windows.Controls.TextChange> -Objekt, das eine Änderung an Position 2 ist, bevor Sie eine <xref:System.Windows.Controls.TextChange> Objekt, das eine Änderung an der Position 10 darstellt.  
+  
+-   Zwei <xref:System.Windows.Controls.TextChange> Objekte nicht überlappenden Bereich darstellen.  Der Wert der <xref:System.Windows.Controls.TextChange.Offset%2A> plus der Wert der <xref:System.Windows.Controls.TextChange.AddedLength%2A> einer <xref:System.Windows.Controls.TextChange> Objekt ist immer kleiner oder gleich dem Wert des <xref:System.Windows.Controls.TextChange.Offset%2A> der nächsten <xref:System.Windows.Controls.TextChange> Objekt in der Auflistung. Entsprechend den Wert der <xref:System.Windows.Controls.TextChange.Offset%2A> plus der Wert der <xref:System.Windows.Controls.TextChange.RemovedLength%2A> einer <xref:System.Windows.Controls.TextChange> Objekt ist immer kleiner oder gleich dem Wert des <xref:System.Windows.Controls.TextChange.Offset%2A> der nächsten <xref:System.Windows.Controls.TextChange> Objekt in der Auflistung.  
+  
+-   Die Auflistung widerspiegelt alle Änderungen, die aufgetreten ist, auch wenn es scheint keine Bewegung. Im vorherigen Beispiel weder die erste oder vierte Änderung führt eine Bewegung, da jede einfach entfernt und erneut hinzugefügt der `<Run>` und `</Run>` bzw. die Symbole. Aber die Symbole wurden tatsächlich entfernt und hinzugefügt werden, damit sie in der Auflistung enthalten sind.  
+  
+ Wenn die <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> Ereignis tritt auf, aufgrund der Änderung einer Eigenschaft <xref:System.Windows.Controls.TextChangedEventArgs.Changes%2A> ist eine leere Auflistung.  Im vorherigen Beispiel wenn der Benutzer fett formatiert die gesamte Zeichenfolge, die <xref:System.Windows.Documents.TextElement.FontWeight%2A> Eigenschaft der <xref:System.Windows.Documents.Run> auf festgelegt ist <xref:System.Windows.FontWeights.Bold%2A>, aber nichts hinzugefügt oder entfernt Sie aus dem Dokument so <xref:System.Windows.Controls.TextChangedEventArgs.Changes%2A> ist leer.  
+  
+ <xref:System.Windows.Controls.TextChangedEventArgs.Changes%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextChangedEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">Der Handler aufgerufen.</param>
+        <param name="genericTarget">Das aktuelle Objekt auf das Ereignis Route.</param>
+        <summary>Führt die entsprechende Typumwandlung rufen Sie die typsichere auf <see cref="T:System.Windows.Controls.TextChangedEventHandler" /> delegate für die <see cref="E:System.Windows.Controls.Primitives.TextBoxBase.TextChanged" /> Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoAction">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.UndoAction UndoAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.UndoAction UndoAction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextChangedEventArgs.UndoAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.UndoAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, wie die Rückgängig-Stapel verursacht hat oder diese textänderung betroffen</summary>
+        <value>Die <see cref="T:System.Windows.Controls.UndoAction" /> für diese textänderung geeignet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,494 @@
+<Type Name="Image" FullName="System.Windows.Controls.Image">
+  <TypeSignature Language="C#" Value="public class Image : System.Windows.FrameworkElement, System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Image extends System.Windows.FrameworkElement implements class System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Image" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IUriContext</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement dar, das ein Bild anzeigt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Image> -Klasse ermöglicht es Ihnen, laden die folgenden Bildtypen: .bmp, .gif, .ico, JPG, PNG, .wdp und TIFF.  
+  
+ Bei der Anzeige eines Multiframebilds wird nur der erste Frame angezeigt. Die Animation von Multiframebildern wird nicht von der <xref:System.Windows.Controls.Image> Steuerelement.  
+  
+ Bis der Inhalt geladen wird, die <xref:System.Windows.FrameworkElement.ActualWidth%2A> und <xref:System.Windows.FrameworkElement.ActualHeight%2A> des Steuerelements wird als 0 (null), da der Inhalt des Betriebssystemabbilds verwendet wird, um die endgültige Größe und Position des Steuerelements zu bestimmen.  
+  
+ Für ein Steuerelement fester Größe der <xref:System.Windows.FrameworkElement.Width%2A> und/oder <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaften können festgelegt werden. Um das Medium Seitenverhältnis beibehalten werden soll, legen Sie jedoch die <xref:System.Windows.FrameworkElement.Width%2A> oder <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaften jedoch nicht beides.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.MediaPermission">zum Anzeigen von Bildern aus, die Sie besitzen <see cref="T:System.Net.WebPermission" /> oder <see cref="T:System.Security.Permissions.FileIOPermission" /> zugreifen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.MediaPermissionImage.SafeImage" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Image ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Image.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Image" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Image.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">Die Größe, die zum Anordnen des Steuerelements verwendet wird.</param>
+        <summary>Ordnet ein, und die Größe eines Bildsteuerelements.</summary>
+        <returns>Die Größe des Steuerelements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseUri">
+      <MemberSignature Language="C#" Value="protected virtual Uri BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Image.BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Basis [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] für die <see cref="T:System.Windows.Controls.Image" />.</summary>
+        <value>Eine Basis [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] für die <see cref="T:System.Windows.Controls.Image" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DpiChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.DpiChangedEventHandler DpiChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.DpiChangedEventHandler DpiChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Image.DpiChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DpiChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem sich die DPI-Auflösung des Bildschirms geändert hat, auf dem das Bild angezeigt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DpiChangedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent DpiChangedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent DpiChangedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Image.DpiChangedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Windows.RoutedEvent" /> für den Fall, dass der DPI-Wert des Bildschirms, auf dem das Bild angezeigt wird, geändert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageFailed">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.ExceptionRoutedEventArgs&gt; ImageFailed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.ExceptionRoutedEventArgs&gt; ImageFailed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Image.ImageFailed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.ExceptionRoutedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt bei ein Fehler in der Abbildung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Controls.Image.Source%2A> ist ein <xref:System.Windows.Media.Imaging.BitmapImage> und ein Fehler auftritt, aufgrund einer beschädigten Header sowohl laden die <xref:System.Windows.Media.Imaging.BitmapSource.DecodeFailed> und <xref:System.Windows.Controls.Image.ImageFailed> Ereignisse auftreten.  
+  
+<a name="xamlTextUsage_ImageFailed"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ \<*Objekt* ImageFailed = "*EventHandler*" … / >  
+  
+<a name="routedEventInfo_ImageFailed"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Image.ImageFailedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.EventHandler%601>, durch eingeschränkt<xref:System.Windows.ExceptionRoutedEventArgs>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageFailedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ImageFailedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ImageFailedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Image.ImageFailedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.Image.ImageFailed" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Image.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Die Größe, die das Bild nicht überschreiten darf.</param>
+        <summary>Updates der <see cref="P:System.Windows.UIElement.DesiredSize" /> des Bilds. Diese Methode wird aufgerufen, durch das übergeordnete <see cref="T:System.Windows.UIElement" /> und ist das erste Element des Layouts.</summary>
+        <returns>Das Bild gewünschte Größe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Bild wird immer seiner natürliche Größe zurückgegeben, wenn es in der Einschränkung passt.  Wenn dies nicht der Fall ist, wird zurückgegeben, wie eine groß wie möglich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Image.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für dieses Objekt <see cref="T:System.Windows.Controls.Image" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für dieses Objekt <see cref="T:System.Windows.Controls.Image" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Windows.ContentElement.OnCreateAutomationPeer?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDpiChanged">
+      <MemberSignature Language="C#" Value="protected override void OnDpiChanged (System.Windows.DpiScale oldDpi, System.Windows.DpiScale newDpi);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDpiChanged(valuetype System.Windows.DpiScale oldDpi, valuetype System.Windows.DpiScale newDpi) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Image.OnDpiChanged(System.Windows.DpiScale,System.Windows.DpiScale)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldDpi" Type="System.Windows.DpiScale" />
+        <Parameter Name="newDpi" Type="System.Windows.DpiScale" />
+      </Parameters>
+      <Docs>
+        <param name="oldDpi">Die vorherige DPI-Größeneinstellung</param>
+        <param name="newDpi">Die neue DPI-Größeneinstellung</param>
+        <summary>Wird aufgerufen, wenn sich der DPI-Wert ändert, mit dem dieses Bild gerendert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRender">
+      <MemberSignature Language="C#" Value="protected override void OnRender (System.Windows.Media.DrawingContext dc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRender(class System.Windows.Media.DrawingContext dc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Image.OnRender(System.Windows.Media.DrawingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Windows.Media.DrawingContext" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Eine Instanz von <see cref="T:System.Windows.Media.DrawingContext" /> zum Rendern des Steuerelements verwendet.</param>
+        <summary>Rendert den Inhalt einer <see cref="T:System.Windows.Controls.Image" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ImageSource Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.ImageSource Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Image.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ImageSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.ImageSource" /> für das Bild.</summary>
+        <value>Die Quelle des gezeichneten Bilds. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_Source"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object Source="imageUri"/>  
+```  
+  
+<a name="xamlTextUsage_Source"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter den <xref:System.Windows.Media.ImageSource> Typ.  
+  
+<a name="xamlValues_Source"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *imageUri*  
+ <xref:System.String?displayProperty=nameWithType>  
+  
+ Ein [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] der Bilddatei.  
+  
+<a name="dependencyPropertyInfo_Source"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Image.SourceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>,<br /><br /> <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Image.Source%2A> Eigenschaft.  
+  
+ [!code-cpp[StackPanelOvw4#3](~/samples/snippets/cpp/VS_Snippets_Wpf/StackPanelOvw4/CPP/StackPanel_Ovw_Sample4.cpp#3)]
+ [!code-csharp[StackPanelOvw4#3](~/samples/snippets/csharp/VS_Snippets_Wpf/StackPanelOvw4/CSharp/StackPanel_Ovw_Sample4.cs#3)]
+ [!code-vb[StackPanelOvw4#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelOvw4/VisualBasic/StackPanelSamp.vb#3)]
+ [!code-xaml[StackPanelOvw4#3](~/samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Image.SourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Image.Source" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stretch">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Stretch Stretch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Stretch Stretch" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Image.Stretch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Stretch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der beschreibt, wie ein <see cref="T:System.Windows.Controls.Image" /> gestreckt werden sollte, um das Zielrechteck auszufüllen.</summary>
+        <value>Einer der <see cref="T:System.Windows.Media.Stretch" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Media.Stretch.Uniform" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Wert von <xref:System.Windows.Media.Stretch.Fill> führt dazu, dass das Bild gestreckt, um den Ausgabebereich vollständig auszufüllen. Wenn der Ausgabebereich und das Bild unterschiedliche Seitenverhältnisse aufweisen, wird das Bild durch dieses Strecken verzerrt. Vornehmen einer <xref:System.Windows.Controls.Image> das Seitenverhältnis des Bild beizubehalten, legen Sie diese Eigenschaft auf <xref:System.Windows.Media.Stretch.Uniform> (Standard) oder <xref:System.Windows.Media.Stretch.UniformToFill>.  
+  
+<a name="dependencyPropertyInfo_Stretch"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Image.StretchProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie diese Eigenschaft verwendet wird.  
+  
+ [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode2](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode2)]
+ [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StretchDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.StretchDirection StretchDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.StretchDirection StretchDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Image.StretchDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.StretchDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, wie das Bild skaliert wird.</summary>
+        <value>Einer der <see cref="T:System.Windows.Controls.StretchDirection" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Controls.StretchDirection.Both" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_StretchDirection"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Image.StretchDirectionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie diese Eigenschaft verwendet wird.  
+  
+ [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode2](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode2)]
+ [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StretchDirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StretchDirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StretchDirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Image.StretchDirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="T:System.Windows.Controls.StretchDirection" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StretchProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StretchProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StretchProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Image.StretchProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Image.Stretch" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IUriContext.BaseUri">
+      <MemberSignature Language="C#" Value="Uri System.Windows.Markup.IUriContext.BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri System.Windows.Markup.IUriContext.BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Image.System#Windows#Markup#IUriContext#BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <value>Die Basis-URI des aktuellen Kontexts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

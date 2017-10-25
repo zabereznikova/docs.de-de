@@ -1,0 +1,1808 @@
+<Type Name="HttpClient" FullName="System.Net.Http.HttpClient">
+  <TypeSignature Language="C#" Value="public class HttpClient : System.Net.Http.HttpMessageInvoker" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpClient extends System.Net.Http.HttpMessageInvoker" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Http.HttpClient" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Http</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.Http.HttpMessageInvoker</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Basisklasse zum Senden von HTTP-Anforderungen und Empfangen von HTTP-Antworten aus einer Ressource bereit, die von einem URI identifiziert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Http.HttpClient> Klasseninstanz fungiert als eine Sitzung zum Senden von HTTP-Anforderungen. Ein <xref:System.Net.Http.HttpClient> Instanz ist eine Sammlung von Einstellungen für alle Anforderungen, die von dieser Instanz ausgeführt. Darüber hinaus alle <xref:System.Net.Http.HttpClient> Instanz verwendet ihren eigenen Verbindungspool, Isolieren von Anforderungen aus von anderen ausgeführten Anforderungen, die <xref:System.Net.Http.HttpClient> Instanzen.  
+  
+ Die <xref:System.Net.Http.HttpClient> fungiert außerdem als Basisklasse für spezifischere HTTP-Clients. Ein Beispiel wäre eine zusätzliche Methoden spezifisch für einen Webdienst Facebook FacebookHttpClient (eine GetFriends-Methode für die Instanz). Abgeleitete Klassen sollten die virtuellen Methoden in der Klasse nicht überschreiben. Verwenden Sie stattdessen eine Überladung des Konstruktors, die akzeptiert <xref:System.Net.Http.HttpMessageHandler> so konfigurieren Sie die keine vor oder nach der Anforderung verarbeiten, stattdessen.
+  
+ Standardmäßig <xref:System.Net.HttpWebRequest> wird verwendet, um die Anforderungen an den Server gesendet. Dieses Verhalten kann geändert werden, durch Angeben von einem anderen Kanal in einem der Konstruktorüberladungen übernehmen eine <xref:System.Net.Http.HttpMessageHandler> Instanz als Parameter. Wenn Sie Funktionen wie die Authentifizierung oder die caching erforderlich sind, werden <xref:System.Net.Http.WebRequestHandler> kann verwendet werden, um Einstellungen zu konfigurieren und die Instanz kann an den Konstruktor übergeben werden. Der zurückgegebene Handler übergeben werden kann, auf einen der Konstruktorüberladungen übernehmen eine <xref:System.Net.Http.HttpMessageHandler> Parameter.  
+  
+ Wenn eine app mit <xref:System.Net.Http.HttpClient> und verwandten Klassen in der <xref:System.Net.Http> Namespace beabsichtigt, um große Mengen von Daten (50 MB oder mehr) herunterzuladen, und klicken Sie dann die app sollte diese Downloads Streamen und verwenden Sie nicht standardmäßige Pufferung. Wenn die standardmäßige Pufferung verwendet wird die Auslastung des Speichers erhalten sehr groß, was potenziell im Wesentlichen zu einer Beeinträchtigung der Leistung.  
+  
+ Die folgenden Methoden sind threadsicher:  
+  
+1.  <xref:System.Net.Http.HttpClient.CancelPendingRequests%2A>  
+  
+2.  <xref:System.Net.Http.HttpClient.DeleteAsync%2A>  
+  
+3.  <xref:System.Net.Http.HttpClient.GetAsync%2A>  
+  
+4.  <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>  
+  
+5.  <xref:System.Net.Http.HttpClient.GetStreamAsync%2A>  
+  
+6.  <xref:System.Net.Http.HttpClient.GetStringAsync%2A>  
+  
+7.  <xref:System.Net.Http.HttpClient.PostAsync%2A>  
+  
+8.  <xref:System.Net.Http.HttpClient.PutAsync%2A>  
+  
+9. <xref:System.Net.Http.HttpClient.SendAsync%2A>  
+  
+ <xref:System.Net.Http.HttpClient>soll einmal instanziiert und die Lebensdauer einer Anwendung wieder verwendet werden. Instanziieren einer Klasse "HttpClient" für jede Anforderung, wird die Anzahl von Sockets verfügbar bei starker Auslastung ausgeschöpft. Dies führt zu SocketException-Fehler. Es folgt ein Beispiel für "HttpClient" ordnungsgemäß zu verwenden.  
+  
+```csharp  
+public class GoodController : ApiController  
+{  
+    // OK  
+    private static readonly HttpClient HttpClient;  
+  
+    static GoodController()  
+    {  
+        HttpClient = new HttpClient();  
+    }  
+}  
+  
+```  
+  
+Die <xref:System.Net.Http.HttpClient> ist eine allgemeine API, die auf niedrigerer Ebene Funktionalität auf jeder Plattform ausgeführt wird, in denen es umschließt.
+
+Auf jeder Plattform <xref:System.Net.Http.HttpClient> versucht, die am besten Transport zu verwenden:
+
+| **Host-Laufzeit**            | **Back-End-**                                                                               |
+| --------------------------- | ----------------------------------------------------------------------------------------- |
+| Windows/.NET Framework      | <xref:System.Net.HttpWebRequest>                                                          |
+| Windows/Mono                | <xref:System.Net.HttpWebRequest>                                                          |
+| Windows-UWP                 | Windows-systemeigenen <xref:System.Net.Http.WinHttpHandler> (HTTP-2.0-fähig)                   |
+| Windows/.NET Core           | Windows-systemeigenen <xref:System.Net.Http.WinHttpHandler> (HTTP-2.0-fähig)                   |
+| Android/Xamarin             | Zum Zeitpunkt der Erstellung ausgewählt. Können entweder <xref:System.Net.HttpWebRequest> oder zum Verwenden von Android-Native konfiguriert[`HttpURLConnection`](https://developer.xamarin.com/api/type/Java.Net.HttpURLConnection/) |
+| iOS, tvos. außerdem wurden, WatchOS/Xamarin  | Zum Zeitpunkt der Erstellung ausgewählt. Können entweder <xref:System.Net.HttpWebRequest> oder zum Verwenden von Apple konfiguriert [ `NSUrlSession` ](https://developer.xamarin.com/api/type/MonoTouch.Foundation.NSUrlSession/) (HTTP-2.0-fähig) |
+| MacOS/Xamarin               | Zum Zeitpunkt der Erstellung ausgewählt. Können entweder <xref:System.Net.HttpWebRequest> oder zum Verwenden von Apple konfiguriert [ `NSUrlSession` ](https://developer.xamarin.com/api/type/MonoTouch.Foundation.NSUrlSession/) (HTTP-2.0-fähig) |
+| MacOS/Mono                  | <xref:System.Net.HttpWebRequest>                                                                          |
+| MacOS/.NET Core             | `libcurl`-basierte HTTP-Transport (HTTP-2.0-fähig)                                         |
+| Linux/Mono                  | <xref:System.Net.HttpWebRequest>                                                          |
+| Linux/.NET Core             | `libcurl`-basierte HTTP-Transport (HTTP-2.0-fähig)                                         |
+
+Benutzer können auch konfigurieren, einen bestimmten Transport für <xref:System.Net.Http.HttpClient> durch Aufrufen der <xref:System.Net.Http.HttpClient.%23ctor*> Konstruktor, akzeptiert eine <xref:System.Net.Http.HttpMessageHandler>.
+  
+## Examples  
+ [!code-csharp[System.Net.Http.HttpClient#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.net.http.httpclient/cs/source.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.HttpClient" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.Http.HttpClient>soll einmal instanziiert und die Lebensdauer einer Anwendung wieder verwendet werden. Instanziieren einer Klasse "HttpClient" für jede Anforderung, wird die Anzahl von Sockets verfügbar bei starker Auslastung ausgeschöpft. Dies führt zu SocketException-Fehler. Es folgt ein Beispiel für "HttpClient" ordnungsgemäß zu verwenden.  
+  
+```csharp  
+public class GoodController : ApiController  
+{  
+    // OK  
+    private static readonly HttpClient HttpClient;  
+  
+    static GoodController()  
+    {  
+        HttpClient = new HttpClient();  
+    }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpClient ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.HttpClient" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpClient (System.Net.Http.HttpMessageHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Http.HttpMessageHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.#ctor(System.Net.Http.HttpMessageHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Net.Http.HttpMessageHandler" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Der HTTP-Handlerstapel, der zum Senden von Anforderungen zu verwenden ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.HttpClient" />-Klasse mit einem bestimmten Handler.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `handler`durch den Aufruf verworfen [HttpClient.Dispose](xref:System.Net.Http.HttpMessageInvoker.Dispose).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="handler" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpClient (System.Net.Http.HttpMessageHandler handler, bool disposeHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Http.HttpMessageHandler handler, bool disposeHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.#ctor(System.Net.Http.HttpMessageHandler,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Net.Http.HttpMessageHandler" />
+        <Parameter Name="disposeHandler" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Der <see cref="T:System.Net.Http.HttpMessageHandler" />, der für die Verarbeitung der HTTP-Antwortnachrichten verantwortlich ist.</param>
+        <param name="disposeHandler">
+          <see langword="true" />Wenn der innere Handler von verworfen werden sollte [HttpClient.Dispose](xref:System.Net.Http.HttpMessageInvoker.Dispose), <see langword="false" /> Wenn Sie beabsichtigen, den inneren Handler wiederzuverwenden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.HttpClient" />-Klasse mit einem bestimmten Handler.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="handler" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseAddress">
+      <MemberSignature Language="C#" Value="public Uri BaseAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri BaseAddress" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClient.BaseAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Basisadresse des URI (Uniform Resource Identifier) der Internetressource ab, die verwendet wird, wenn Anforderungen gesendet werden, oder legt diese fest.</summary>
+        <value>Die Basisadresse des URI (Uniform Resource Identifier) der Internetressource, die verwendet wird, wenn Anforderungen gesendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Senden einer <xref:System.Net.Http.HttpRequestMessage> mit einem relativen Uri wird die Nachricht Uri zu hinzugefügt werden die <xref:System.Net.Http.HttpClient.BaseAddress%2A> Eigenschaft um einen absoluten Uri zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelPendingRequests">
+      <MemberSignature Language="C#" Value="public void CancelPendingRequests ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelPendingRequests() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.CancelPendingRequests" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Alle ausstehenden Anforderungen für diese Instanz abbrechen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Aufrufen dieser Methode die <xref:System.Net.Http.HttpClient> Instanz kann weiterhin verwendet, um zusätzliche Anforderungen ausgeführt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultRequestHeaders">
+      <MemberSignature Language="C#" Value="public System.Net.Http.Headers.HttpRequestHeaders DefaultRequestHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Http.Headers.HttpRequestHeaders DefaultRequestHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClient.DefaultRequestHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.Headers.HttpRequestHeaders</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Header ab, die mit jeder Anforderung gesendet werden sollen.</summary>
+        <value>Die Header, die mit jeder Anforderung gesendet werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Header legen Sie für diese Eigenschaft müssen nicht erneut für Anforderungsnachrichten festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; DeleteAsync (string requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; DeleteAsync(string requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.DeleteAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <summary>Eine DELETE-Anforderung an den angegebenen URI als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Anforderungsnachricht wurde bereits von der <see cref="T:System.Net.Http.HttpClient" />-Instanz gesendet.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; DeleteAsync (Uri requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; DeleteAsync(class System.Uri requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.DeleteAsync(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <summary>Eine DELETE-Anforderung an den angegebenen URI als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Anforderungsnachricht wurde bereits von der <see cref="T:System.Net.Http.HttpClient" />-Instanz gesendet.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; DeleteAsync (string requestUri, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; DeleteAsync(string requestUri, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.DeleteAsync(System.String,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, das von anderen Objekten oder Threads verwendet werden kann, um Nachricht vom Abbruch zu empfangen.</param>
+        <summary>Eine DELETE-Anforderung für den angegebenen URI mit einem Abbruchtoken als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Anforderungsnachricht wurde bereits von der <see cref="T:System.Net.Http.HttpClient" />-Instanz gesendet.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; DeleteAsync (Uri requestUri, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; DeleteAsync(class System.Uri requestUri, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.DeleteAsync(System.Uri,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, das von anderen Objekten oder Threads verwendet werden kann, um Nachricht vom Abbruch zu empfangen.</param>
+        <summary>Eine DELETE-Anforderung für den angegebenen URI mit einem Abbruchtoken als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Anforderungsnachricht wurde bereits von der <see cref="T:System.Net.Http.HttpClient" />-Instanz gesendet.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben. <see langword="false" />, wenn ausschließlich nicht verwaltete Ressourcen freigegeben werden sollen.</param>
+        <summary>Gibt die vom <see cref="T:System.Net.Http.HttpClient" /> verwendeten, nicht verwalteten Ressourcen frei und verwirft optional auch die verwalteten Ressourcen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.Net.Http.HttpClient> verweist. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ Wenn diese Methode aufgerufen wird, die <xref:System.Net.Http.HttpClient.CancelPendingRequests%2A> Methode wird aufgerufen, um alle ausstehenden Anforderungen abgebrochen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Eine GET-Anforderung an den angegebenen URI als asynchronen Vorgang senden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Vorgang wird nicht blockiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; GetAsync (string requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; GetAsync(string requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.GetAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <summary>Eine GET-Anforderung an den angegebenen URI als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; GetAsync (Uri requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; GetAsync(class System.Uri requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.GetAsync(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <summary>Eine GET-Anforderung an den angegebenen URI als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; GetAsync (string requestUri, System.Net.Http.HttpCompletionOption completionOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; GetAsync(string requestUri, valuetype System.Net.Http.HttpCompletionOption completionOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.GetAsync(System.String,System.Net.Http.HttpCompletionOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.String" />
+        <Parameter Name="completionOption" Type="System.Net.Http.HttpCompletionOption" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="completionOption">Ein HTTP-Abschlussoptions-Wert, der angibt, wann die Operation als abgeschlossen betrachtet werden soll.</param>
+        <summary>Eine GET-Anforderung an den angegebenen URI mit einer HTTP-Abschlussoption als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> -Objekt abgeschlossen wird basierend auf den `completionOption` Parameter, nachdem die Teils oder aller der Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; GetAsync (string requestUri, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; GetAsync(string requestUri, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, das von anderen Objekten oder Threads verwendet werden kann, um Nachricht vom Abbruch zu empfangen.</param>
+        <summary>Eine GET-Anforderung für den angegebenen URI mit einem Abbruchtoken als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; GetAsync (Uri requestUri, System.Net.Http.HttpCompletionOption completionOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; GetAsync(class System.Uri requestUri, valuetype System.Net.Http.HttpCompletionOption completionOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.GetAsync(System.Uri,System.Net.Http.HttpCompletionOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+        <Parameter Name="completionOption" Type="System.Net.Http.HttpCompletionOption" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="completionOption">Ein HTTP-Abschlussoptions-Wert, der angibt, wann die Operation als abgeschlossen betrachtet werden soll.</param>
+        <summary>Eine GET-Anforderung an den angegebenen URI mit einer HTTP-Abschlussoption als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> -Objekt abgeschlossen wird basierend auf den `completionOption` Parameter, nachdem die Teils oder aller der Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; GetAsync (Uri requestUri, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; GetAsync(class System.Uri requestUri, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.GetAsync(System.Uri,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, das von anderen Objekten oder Threads verwendet werden kann, um Nachricht vom Abbruch zu empfangen.</param>
+        <summary>Eine GET-Anforderung für den angegebenen URI mit einem Abbruchtoken als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; GetAsync (string requestUri, System.Net.Http.HttpCompletionOption completionOption, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; GetAsync(string requestUri, valuetype System.Net.Http.HttpCompletionOption completionOption, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.GetAsync(System.String,System.Net.Http.HttpCompletionOption,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.String" />
+        <Parameter Name="completionOption" Type="System.Net.Http.HttpCompletionOption" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="completionOption">Ein HTTP-Abschlussoptions-Wert, der angibt, wann die Operation als abgeschlossen betrachtet werden soll.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, das von anderen Objekten oder Threads verwendet werden kann, um Nachricht vom Abbruch zu empfangen.</param>
+        <summary>Eine GET-Anforderung an den angegebenen URI mit einer HTTP-Abschlussoption und einem Abbruchtoken als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> -Objekt abgeschlossen wird basierend auf den `completionOption` Parameter, nachdem die Teils oder aller der Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; GetAsync (Uri requestUri, System.Net.Http.HttpCompletionOption completionOption, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; GetAsync(class System.Uri requestUri, valuetype System.Net.Http.HttpCompletionOption completionOption, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.GetAsync(System.Uri,System.Net.Http.HttpCompletionOption,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+        <Parameter Name="completionOption" Type="System.Net.Http.HttpCompletionOption" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="completionOption">Ein HTTP-Abschlussoptions-Wert, der angibt, wann die Operation als abgeschlossen betrachtet werden soll.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, das von anderen Objekten oder Threads verwendet werden kann, um Nachricht vom Abbruch zu empfangen.</param>
+        <summary>Eine GET-Anforderung an den angegebenen URI mit einer HTTP-Abschlussoption und einem Abbruchtoken als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> -Objekt abgeschlossen wird basierend auf den `completionOption` Parameter, nachdem die Teils oder aller der Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetByteArrayAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Senden Sie eine GET-Anforderung an den angegebenen URI und geben Sie den Antworttext als Bytearray in einem asynchronen Vorgang zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Vorgang wird nicht blockiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetByteArrayAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;byte[]&gt; GetByteArrayAsync (string requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;unsigned int8[]&gt; GetByteArrayAsync(string requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.GetByteArrayAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(System.Net.Http.HttpClient/&lt;GetByteArrayAsync&gt;c__async1))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Byte[]&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <summary>Senden Sie eine GET-Anforderung an den angegebenen URI und geben Sie den Antworttext als Bytearray in einem asynchronen Vorgang zurück.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem der gesamte Antworttext gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByteArrayAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;byte[]&gt; GetByteArrayAsync (Uri requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;unsigned int8[]&gt; GetByteArrayAsync(class System.Uri requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.GetByteArrayAsync(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(System.Net.Http.HttpClient/&lt;GetByteArrayAsync&gt;c__async2))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Byte[]&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <summary>Senden Sie eine GET-Anforderung an den angegebenen URI und geben Sie den Antworttext als Bytearray in einem asynchronen Vorgang zurück.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem der gesamte Antworttext gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetStreamAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Senden Sie eine GET-Anforderung an den angegebenen URI und geben Sie den Antworttext als Datenstrom in einem asynchronen Vorgang zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Vorgang wird nicht blockiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetStreamAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.IO.Stream&gt; GetStreamAsync (string requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.IO.Stream&gt; GetStreamAsync(string requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.GetStreamAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(System.Net.Http.HttpClient/&lt;GetStreamAsync&gt;c__async3))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.IO.Stream&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <summary>Senden Sie eine GET-Anforderung an den angegebenen URI und geben Sie den Antworttext als Datenstrom in einem asynchronen Vorgang zurück.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem der gesamte Antworttext gelesen wurde. Den Stream wird von dieser Methode nicht puffert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStreamAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.IO.Stream&gt; GetStreamAsync (Uri requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.IO.Stream&gt; GetStreamAsync(class System.Uri requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.GetStreamAsync(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(System.Net.Http.HttpClient/&lt;GetStreamAsync&gt;c__async4))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.IO.Stream&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <summary>Senden Sie eine GET-Anforderung an den angegebenen URI und geben Sie den Antworttext als Datenstrom in einem asynchronen Vorgang zurück.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem der gesamte Antworttext gelesen wurde. Den Stream wird von dieser Methode nicht puffert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetStringAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Senden Sie eine GET-Anforderung an den angegebenen URI und geben Sie den Antworttext als Zeichenfolge in einem asynchronen Vorgang zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetStringAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; GetStringAsync (string requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; GetStringAsync(string requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.GetStringAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(System.Net.Http.HttpClient/&lt;GetStringAsync&gt;c__async5))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <summary>Senden Sie eine GET-Anforderung an den angegebenen URI und geben Sie den Antworttext als Zeichenfolge in einem asynchronen Vorgang zurück.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem der gesamte Antworttext gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStringAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; GetStringAsync (Uri requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; GetStringAsync(class System.Uri requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.GetStringAsync(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(System.Net.Http.HttpClient/&lt;GetStringAsync&gt;c__async6))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <summary>Senden Sie eine GET-Anforderung an den angegebenen URI und geben Sie den Antworttext als Zeichenfolge in einem asynchronen Vorgang zurück.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem der gesamte Antworttext gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxResponseContentBufferSize">
+      <MemberSignature Language="C#" Value="public long MaxResponseContentBufferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxResponseContentBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClient.MaxResponseContentBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Lesen des Antwortinhalts die maximale Anzahl zwischenzuspeichernder Bytes ab oder legt diese fest.</summary>
+        <value>Die maximale Anzahl zu puffernder Bytes, wenn der Antwortinhalt gelesen wird. Der Standardwert für diese Eigenschaft ist 2 GB.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie eine app kann die <xref:System.Net.Http.HttpClient.MaxResponseContentBufferSize%2A> Eigenschaft auf einen niedrigeren Wert die Größe der Antwort auf den Puffer zu beschränken, beim Lesen der Antwort. Wenn die Größe des Inhalts der Antwort übersteigt die <xref:System.Net.Http.HttpClient.MaxResponseContentBufferSize%2A> -Eigenschaft, eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die angegebene Größe ist kleiner oder gleich 0 (null).</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde bereits ein Vorgang für die aktuelle Instanz gestartet.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Instanz wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="PostAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Eine POST-Anforderung an den angegebenen URI als asynchronen Vorgang senden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="PostAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; PostAsync (string requestUri, System.Net.Http.HttpContent content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; PostAsync(string requestUri, class System.Net.Http.HttpContent content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.PostAsync(System.String,System.Net.Http.HttpContent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.String" />
+        <Parameter Name="content" Type="System.Net.Http.HttpContent" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="content">Der Inhalt der HTTP-Anforderung, die an den Server gesendet wird.</param>
+        <summary>Eine POST-Anforderung an den angegebenen URI als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PostAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; PostAsync (Uri requestUri, System.Net.Http.HttpContent content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; PostAsync(class System.Uri requestUri, class System.Net.Http.HttpContent content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.PostAsync(System.Uri,System.Net.Http.HttpContent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+        <Parameter Name="content" Type="System.Net.Http.HttpContent" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="content">Der Inhalt der HTTP-Anforderung, die an den Server gesendet wird.</param>
+        <summary>Eine POST-Anforderung an den angegebenen URI als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PostAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; PostAsync (string requestUri, System.Net.Http.HttpContent content, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; PostAsync(string requestUri, class System.Net.Http.HttpContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.PostAsync(System.String,System.Net.Http.HttpContent,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.String" />
+        <Parameter Name="content" Type="System.Net.Http.HttpContent" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="content">Der Inhalt der HTTP-Anforderung, die an den Server gesendet wird.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, das von anderen Objekten oder Threads verwendet werden kann, um Nachricht vom Abbruch zu empfangen.</param>
+        <summary>Eine POST-Anforderung mit einem Abbruchtoken als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PostAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; PostAsync (Uri requestUri, System.Net.Http.HttpContent content, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; PostAsync(class System.Uri requestUri, class System.Net.Http.HttpContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.PostAsync(System.Uri,System.Net.Http.HttpContent,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+        <Parameter Name="content" Type="System.Net.Http.HttpContent" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="content">Der Inhalt der HTTP-Anforderung, die an den Server gesendet wird.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, das von anderen Objekten oder Threads verwendet werden kann, um Nachricht vom Abbruch zu empfangen.</param>
+        <summary>Eine POST-Anforderung mit einem Abbruchtoken als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="PutAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Eine PUT-Anforderung an den angegebenen URI als asynchronen Vorgang senden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="PutAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; PutAsync (string requestUri, System.Net.Http.HttpContent content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; PutAsync(string requestUri, class System.Net.Http.HttpContent content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.PutAsync(System.String,System.Net.Http.HttpContent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.String" />
+        <Parameter Name="content" Type="System.Net.Http.HttpContent" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="content">Der Inhalt der HTTP-Anforderung, die an den Server gesendet wird.</param>
+        <summary>Eine PUT-Anforderung an den angegebenen URI als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PutAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; PutAsync (Uri requestUri, System.Net.Http.HttpContent content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; PutAsync(class System.Uri requestUri, class System.Net.Http.HttpContent content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.PutAsync(System.Uri,System.Net.Http.HttpContent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+        <Parameter Name="content" Type="System.Net.Http.HttpContent" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="content">Der Inhalt der HTTP-Anforderung, die an den Server gesendet wird.</param>
+        <summary>Eine PUT-Anforderung an den angegebenen URI als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PutAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; PutAsync (string requestUri, System.Net.Http.HttpContent content, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; PutAsync(string requestUri, class System.Net.Http.HttpContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.PutAsync(System.String,System.Net.Http.HttpContent,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.String" />
+        <Parameter Name="content" Type="System.Net.Http.HttpContent" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="content">Der Inhalt der HTTP-Anforderung, die an den Server gesendet wird.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, das von anderen Objekten oder Threads verwendet werden kann, um Nachricht vom Abbruch zu empfangen.</param>
+        <summary>Eine PUT-Anforderung mit einem Abbruchtoken als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PutAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; PutAsync (Uri requestUri, System.Net.Http.HttpContent content, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; PutAsync(class System.Uri requestUri, class System.Net.Http.HttpContent content, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.PutAsync(System.Uri,System.Net.Http.HttpContent,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+        <Parameter Name="content" Type="System.Net.Http.HttpContent" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, an den die Anforderung gesendet wird.</param>
+        <param name="content">Der Inhalt der HTTP-Anforderung, die an den Server gesendet wird.</param>
+        <param name="cancellationToken">Ein Abbruchtoken, das von anderen Objekten oder Threads verwendet werden kann, um Nachricht vom Abbruch zu empfangen.</param>
+        <summary>Eine PUT-Anforderung mit einem Abbruchtoken als asynchronen Vorgang senden.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, nachdem die gesamte Antwort (einschließlich Inhalt) gelesen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="SendAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Senden Sie eine HTTP-Anforderung als asynchronen Vorgang.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; SendAsync (System.Net.Http.HttpRequestMessage request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; SendAsync(class System.Net.Http.HttpRequestMessage request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.SendAsync(System.Net.Http.HttpRequestMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.Http.HttpRequestMessage" />
+      </Parameters>
+      <Docs>
+        <param name="request">Die zu sendende HTTP-Anforderungsmeldung.</param>
+        <summary>Senden Sie eine HTTP-Anforderung als asynchronen Vorgang.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, sobald die ganze Antwort einschließlich Inhalt gelesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="request" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Anforderungsnachricht wurde bereits von der <see cref="T:System.Net.Http.HttpClient" />-Instanz gesendet.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; SendAsync (System.Net.Http.HttpRequestMessage request, System.Net.Http.HttpCompletionOption completionOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; SendAsync(class System.Net.Http.HttpRequestMessage request, valuetype System.Net.Http.HttpCompletionOption completionOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.SendAsync(System.Net.Http.HttpRequestMessage,System.Net.Http.HttpCompletionOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.Http.HttpRequestMessage" />
+        <Parameter Name="completionOption" Type="System.Net.Http.HttpCompletionOption" />
+      </Parameters>
+      <Docs>
+        <param name="request">Die zu sendende HTTP-Anforderungsmeldung.</param>
+        <param name="completionOption">Wann der Vorgang abgeschlossen werden sollte (sobald eine Antwort verfügbar ist, oder nach dem Lesen des gesamten Inhalts der Antwort).</param>
+        <summary>Senden Sie eine HTTP-Anforderung als asynchronen Vorgang.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Abhängig vom Wert der `completionOption` Parameter, kann das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, sobald eine Antwort verfügbar ist oder die ganze Antwort einschließlich Inhalt gelesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="request" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Anforderungsnachricht wurde bereits von der <see cref="T:System.Net.Http.HttpClient" />-Instanz gesendet.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; SendAsync(class System.Net.Http.HttpRequestMessage request, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.Http.HttpRequestMessage" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="request">Die zu sendende HTTP-Anforderungsmeldung.</param>
+        <param name="cancellationToken">Das Abbruchtoken, um den Vorgang abzubrechen.</param>
+        <summary>Senden Sie eine HTTP-Anforderung als asynchronen Vorgang.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, sobald die ganze Antwort einschließlich Inhalt gelesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="request" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Anforderungsnachricht wurde bereits von der <see cref="T:System.Net.Http.HttpClient" />-Instanz gesendet.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; SendAsync (System.Net.Http.HttpRequestMessage request, System.Net.Http.HttpCompletionOption completionOption, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; SendAsync(class System.Net.Http.HttpRequestMessage request, valuetype System.Net.Http.HttpCompletionOption completionOption, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClient.SendAsync(System.Net.Http.HttpRequestMessage,System.Net.Http.HttpCompletionOption,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.Http.HttpRequestMessage" />
+        <Parameter Name="completionOption" Type="System.Net.Http.HttpCompletionOption" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="request">Die zu sendende HTTP-Anforderungsmeldung.</param>
+        <param name="completionOption">Wann der Vorgang abgeschlossen werden sollte (sobald eine Antwort verfügbar ist, oder nach dem Lesen des gesamten Inhalts der Antwort).</param>
+        <param name="cancellationToken">Das Abbruchtoken, um den Vorgang abzubrechen.</param>
+        <summary>Senden Sie eine HTTP-Anforderung als asynchronen Vorgang.</summary>
+        <returns>Das Aufgabenobjekt, das den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Abhängig vom Wert der `completionOption` Parameter, kann das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, sobald eine Antwort verfügbar ist oder die ganze Antwort einschließlich Inhalt gelesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="request" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Anforderungsnachricht wurde bereits von der <see cref="T:System.Net.Http.HttpClient" />-Instanz gesendet.</exception>
+        <exception cref="T:System.Net.Http.HttpRequestException">Die Anforderung konnte wg. eines zugrunde liegenden Problems wie Netzwerkkonnektivität, DNS-Fehler, Überprüfung des Serverzertifikats oder Timeout nicht durchgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public TimeSpan Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClient.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeitspanne ab, nach der das Zeitlimit der Anforderung überschritten ist, oder legt diese fest.</summary>
+        <value>Die Zeitspanne, nach der das Zeitlimit der Anforderung überschritten ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist 100.000 Millisekunden (100 Sekunden).  
+  
+ Um einen unendlichen Timeout festlegen möchten, legen Sie den Wert der Eigenschaft auf <xref:System.Threading.Timeout.InfiniteTimeSpan>.  
+  
+ Eine Domain Name System (DNS)-Abfrage kann bis zu 15 Sekunden zurückgegeben oder ein Timeout dauern. Ihre Anforderung enthält einen Hostnamen an, die Lösung erforderlich sind, und legen Sie <xref:System.Net.Http.HttpClient.Timeout%2A> auf einen Wert kleiner als 15 Sekunden dauert möglicherweise 15 Sekunden oder mehr vor einer <xref:System.Net.WebException> wird ausgelöst, um ein Timeout für die Anforderung anzugeben.  
+  
+ Das gleiche Timeout gilt für alle Anforderungen, die mit diesem <xref:System.Net.Http.HttpClient> Instanz.  Sie können auch festlegen, unterschiedlicher Timeouts für einzelne Anforderungen, die mit einem <xref:System.Threading.CancellationTokenSource> auf eine Aufgabe. Beachten Sie, dass nur der kürzere der beiden Timeouts angewendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Timeoutwert ist kleiner oder gleich 0 (null) und nicht <see cref="F:System.Threading.Timeout.InfiniteTimeSpan" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde bereits ein Vorgang für die aktuelle Instanz gestartet.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Instanz wurde verworfen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

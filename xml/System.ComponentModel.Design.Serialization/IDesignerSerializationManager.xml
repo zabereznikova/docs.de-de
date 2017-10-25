@@ -1,0 +1,509 @@
+<Type Name="IDesignerSerializationManager" FullName="System.ComponentModel.Design.Serialization.IDesignerSerializationManager">
+  <TypeSignature Language="C#" Value="public interface IDesignerSerializationManager : IServiceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerSerializationManager implements class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Schnittstelle, die Entwurfszeitserialisierung verwaltet werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Designer Clientfunktionen <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager> Dienste zugreifen, die zum Verwalten von Prozessen der Entwurfszeitserialisierung nützlich. Beispielsweise können eine Klasse, die den Designer Serialisierungs-Manager implementiert diese Schnittstelle zum Erstellen von Objekten, suchen Sie die Typen, Objekte identifiziert werden und die Serialisierung bestimmter Typen anzupassen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager> zum Serialisieren und Deserialisieren von CODEDOM-Anweisungen.  
+  
+ [!code-cpp[IDesignerSerializationManagerSample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IDesignerSerializationManagerSample/CPP/idesignerserializationmanagersample.cpp#1)]
+ [!code-csharp[IDesignerSerializationManagerSample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IDesignerSerializationManagerSample/CS/idesignerserializationmanagersample.cs#1)]
+ [!code-vb[IDesignerSerializationManagerSample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IDesignerSerializationManagerSample/VB/idesignerserializationmanagersample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddSerializationProvider">
+      <MemberSignature Language="C#" Value="public void AddSerializationProvider (System.ComponentModel.Design.Serialization.IDesignerSerializationProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddSerializationProvider(class System.ComponentModel.Design.Serialization.IDesignerSerializationProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.AddSerializationProvider(System.ComponentModel.Design.Serialization.IDesignerSerializationProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Der hinzuzufügende Serialisierungsanbieter.</param>
+        <summary>Fügt dem Serialisierungs-Manager den angegebenen Serialisierungsprovider hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird dem Serialisierungs-Manager einen benutzerdefinierten Serialisierungsprovider hinzugefügt. Serialisierungsprovider können benutzerdefinierte Serialisierungsprogramme für einen bestimmten Objekttyp oder eine Gruppe von Objekttypen bereitstellen. Während der Serialisierung wird jeder benutzerdefinierte Serialisierungsprovider abgefragt, um, wenn möglich, ein Serialisierungsprogramm für einen spezifischen Datentyp zurückzugeben. Der Serialisierungs-Manager verwendet das von dieser Methode bereitgestellte benutzerdefinierte Serialisierungsprogramm, ehe er das Standardserialisierungsprogramm für einen bestimmten Typ verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.Serialization.ContextStack Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.Serialization.ContextStack Context" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.ContextStack</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen stapelbasierten, benutzerdefinierten Speicherbereich ab, der die Kommunikation zwischen Serialisierungsprogrammen erleichtert.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.Design.Serialization.ContextStack" /> zur Speicherung der Daten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Speicherbereich bietet Kommunikation der Kontext der Objektinformationen für Serialisierungsprogramme. Kontextinformationen zu Objekten, die serialisiert werden, werden gespeichert und über diese zugegriffen werden <xref:System.ComponentModel.Design.Serialization.ContextStack>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public object CreateInstance (Type type, System.Collections.ICollection arguments, string name, bool addToContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateInstance(class System.Type type, class System.Collections.ICollection arguments, string name, bool addToContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.CreateInstance(System.Type,System.Collections.ICollection,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="arguments" Type="System.Collections.ICollection" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="addToContainer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Datentyp erstellen.</param>
+        <param name="arguments">Die Argumente für diesen Typ an den Konstruktor übergeben.</param>
+        <param name="name">Der Name des Objekts. Mit diesem Namen kann später über <see cref="M:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance(System.String)" /> auf das Objekt zugegriffen werden. Wenn <see langword="null" /> wird übergeben, das Objekt dennoch erstellt, jedoch nicht von Namen zugegriffen werden.</param>
+        <param name="addToContainer">Wenn <see langword="true" />, dieses Objekt dem Entwurfscontainer hinzugefügt wird. Dies wirkt sich nur dann aus, wenn das Objekt <see cref="T:System.ComponentModel.IComponent" /> implementiert.</param>
+        <summary>Erstellt eine Instanz des angegebenen Typs und fügt sie einer Auflistung benannter Instanzen hinzu.</summary>
+        <returns>Die neu erstellte Objektinstanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ -Objekte implementiert, <xref:System.ComponentModel.IComponent> auf den Container zur Entwurfszeit hinzugefügt werden, wenn die `addToContainer` Parameter ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInstance">
+      <MemberSignature Language="C#" Value="public object GetInstance (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetInstance(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des abzurufenden Objekts.</param>
+        <summary>Ruft eine Instanz eines erstellten Objekts mit dem angegebenen Namen ab oder <see langword="null" /> Wenn dieses Objekt nicht vorhanden ist.</summary>
+        <returns>Eine Instanz des Objekts mit dem angegebenen Namen unter oder <see langword="null" /> Falls kein Objekt mit diesem Namen gefunden werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name des abzurufenden Objekts muss durch einen vorherigen Aufruf festgelegt wurden <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.CreateInstance%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public string GetName (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetName(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetName(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, dessen Name abgerufen.</param>
+        <summary>Ruft den Namen des angegebenen Objekts ab oder <see langword="null" /> , wenn das Objekt keinen Namen hat.</summary>
+        <returns>Der Name des Objekts, oder <see langword="null" /> , wenn das Objekt nicht benannt ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSerializer">
+      <MemberSignature Language="C#" Value="public object GetSerializer (Type objectType, Type serializerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetSerializer(class System.Type objectType, class System.Type serializerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetSerializer(System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectType" Type="System.Type" />
+        <Parameter Name="serializerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="objectType">Der Typ des Objekts, das das Serialisierungsprogramm abgerufen werden soll.</param>
+        <param name="serializerType">Der Typ des Serialisierungsprogramms, das abgerufen werden.</param>
+        <summary>Ruft ein Serialisierungsprogramm des angeforderten Typs für den angegebenen Objekttyp ab.</summary>
+        <returns>Eine Instanz von das angeforderte Serialisierungsprogramm oder <see langword="null" /> Falls kein geeignetes Serialisierungsprogramm gefunden werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetType(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der vollqualifizierte Name des zu ladenden Typ.</param>
+        <summary>Ruft einen Typ mit dem angegebenen Namen ab.</summary>
+        <returns>Eine Instanz des Typs oder <see langword="null" /> , wenn der Typ kann nicht geladen werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptorCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, über benutzerdefinierte Eigenschaften, die mit verfügbaren Serialisierungsprogrammen serialisiert werden können.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> mit den Eigenschaften serialisiert werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann eine leere Auflistung enthalten. Ein Serialisierungsprogramm sollte niemals davon ausgehen, dass solche Eigenschaften vorhanden sind. Eine abgeleitete Klasse oder die Implementierung von <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager> definiert den Satz von Eigenschaften, die hier verfügbar gemacht werden.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Eigenschaft kann vom Benutzercode aufgefüllt werden. Möglicherweise ausreichend Aufrufen <see cref="M:System.ComponentModel.TypeDescriptor.GetProperties(System.Type)" /> von <see cref="T:System.ComponentModel.TypeDescriptor" /> zum Auffüllen dieser Auflistung. Der Serialisierungs-Manager muss eine leere Auflistung zurückgeben, wenn keine benutzerdefinierten Eigenschaften vorhanden sind.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSerializationProvider">
+      <MemberSignature Language="C#" Value="public void RemoveSerializationProvider (System.ComponentModel.Design.Serialization.IDesignerSerializationProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveSerializationProvider(class System.ComponentModel.Design.Serialization.IDesignerSerializationProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.RemoveSerializationProvider(System.ComponentModel.Design.Serialization.IDesignerSerializationProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Der zu entfernende Provider. Dieses Objekt muss hinzugefügten mit <see cref="M:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.AddSerializationProvider(System.ComponentModel.Design.Serialization.IDesignerSerializationProvider)" />.</param>
+        <summary>Entfernt einen benutzerdefinierten Serialisierungsprovider aus dem Serialisierungs-Manager.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportError">
+      <MemberSignature Language="C#" Value="public void ReportError (object errorInformation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportError(object errorInformation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.ReportError(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorInformation" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="errorInformation">Der zu meldende Fehler. Dieses Objekt kann einen beliebigen Objekttyp aufweisen. Wenn es sich um eine Ausnahme handelt, wird die Meldung der Ausnahme extrahiert und dem Benutzer angezeigt. Wenn es sich um einen anderen Typ handelt, wird <see cref="M:System.Object.ToString" /> aufgerufen, um dem Benutzer die Informationen anzuzeigen.</param>
+        <summary>Meldet einen Fehler bei der Serialisierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Serialisierungs-Manager unterstützt mehrere fehlerprotokollierung in seiner Implementierung von <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.ReportError%2A>, können sie das Fehlerobjekt-Informationen für einen zukünftigen Bericht, in dem die aufgetretenen Fehler werden gleichzeitig angezeigt können, speichern. Wenn diese Methode mehrere Fehler speichert, kann Serialisierung nach einem Aufruf dieser Methode fortgesetzt werden. Wenn diese Methode nicht unterstützt mehrere Fehler protokollieren, sollte diese Methode eine Ausnahme auslösen, die Serialisierung abbricht.  
+  
+> [!NOTE]
+>  Der Serialisierungs-Manager sollte nie eine Ausnahme während der Serialisierung aufgetretene Fehler auslösen. Es sollte nur eine Ausnahme während der Deserialisierung ausgelöst. Andernfalls sollten Benutzer verwirrt werden, da das Dokument speichern nie fehl.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveName">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.Serialization.ResolveNameEventHandler ResolveName;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.Serialization.ResolveNameEventHandler ResolveName" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.ResolveName" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.ResolveNameEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn <see cref="M:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetName(System.Object)" /> den angegebenen Namen in der Namenstabelle des Serialisierungs-Managers nicht finden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis bietet Serialisierungsprogrammen eine Möglichkeit, Objekte nach Bedarf zu erstellen, so dass bei der Anforderung zum Erstellen von Objekten keine Abhängigkeiten beachtet werden müssen. Der Delegat für dieses Ereignis wird unmittelbar nach Abschluss der Serialisierung oder Deserialisierung gelöscht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializationComplete">
+      <MemberSignature Language="C#" Value="public event EventHandler SerializationComplete;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SerializationComplete" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.SerializationComplete" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die Serialisierung abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die Serialisierung oder Deserialisierung abgeschlossen ist.  
+  
+ Im Allgemeinen wird Serialisierungscode für die Ausgabe von Serialisierungsdaten geschrieben und erfordert normalerweise keine Überprüfung und Verarbeitung von Zuständen. Wenn es für das Verwalten von Zustandsdaten während der Serialisierung erforderlich ist, kann ein Serialisierungsprogramm, das das <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.SerializationComplete>-Ereignis überwachen kann, Daten festlegen, auf diese zugreifen und die Daten nach der Serialisierung löschen. Wiederherstellen des richtigen Zustands an, nach der Serialisierung wichtig sein kann, da Serialisierungsprogramme während der Serialisierung wiederverwendet werden können und restliche Zustandsdaten oder offene Streams dann möglicherweise nicht richtig.  
+  
+ Z. B. wenn ein Serialisierungsprogramm zum Schreiben in eine andere Datei, z. B. eine Ressourcendatei benötigt ist es ineffizient, Entwerfen Sie das Serialisierungsprogramm, das die Datei nach Abschluss zu schließen. Serialisieren eines Objektdiagramms in der Regel erforderlich mehrere Serialisierungsprogramme. Die Ressourcendatei würde geöffnet und oft geschlossen werden. Stattdessen kann die Ressourcendatei am Ende der Serialisierung geschlossen werden, durch ein Objekt, das überwacht, die <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.SerializationComplete> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetName">
+      <MemberSignature Language="C#" Value="public void SetName (object instance, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetName(object instance, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.SetName(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Die Objektinstanz Namen.</param>
+        <param name="name">Der Name der Instanz verliehen wird.</param>
+        <summary>Legt den Namen des angegebenen vorhandenen Objekts fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nützlich, wenn es erforderlich ist, erstellen und benennen Sie eine Instanz eines Objekts ohne <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.CreateInstance%2A>. Es wird eine Ausnahme ausgelöst, wenn Sie versuchen, ein vorhandenes Objekt umzubenennen oder einem neuen Objekt einen bereits vergebenen Namen zu geben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

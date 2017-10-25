@@ -1,0 +1,101 @@
+<Type Name="IContainerControl" FullName="System.Windows.Forms.IContainerControl">
+  <TypeSignature Language="C#" Value="public interface IContainerControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContainerControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.IContainerControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Funktionalität für ein Steuerelement, das als übergeordnetes Element für andere Steuerelemente fungiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel erbt der <xref:System.Windows.Forms.ScrollableControl> -Klasse und implementiert die <xref:System.Windows.Forms.IContainerControl> Schnittstelle. Implementierung wird hinzugefügt, um die <xref:System.Windows.Forms.IContainerControl.ActiveControl%2A> Eigenschaft und die <xref:System.Windows.Forms.IContainerControl.ActivateControl%2A> Methode.  
+  
+ [!code-cpp[IContainerControl Implementation#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IContainerControl Implementation/CPP/mycontainercontrol.cpp#1)]
+ [!code-csharp[IContainerControl Implementation#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IContainerControl Implementation/CS/mycontainercontrol.cs#1)]
+ [!code-vb[IContainerControl Implementation#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IContainerControl Implementation/VB/mycontainercontrol.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Implementieren Sie diese Schnittstelle in Klassen, die eine Auflistung von Steuerelementen übergeordnet werden sollen. Die Elemente dieser Schnittstelle können Sie ein untergeordnetes Steuerelement zu aktivieren oder zu bestimmen, welches Steuerelement gerade aktiv ist. Beim Implementieren in einer Klasse <see cref="M:System.Windows.Forms.IContainerControl.ActivateControl(System.Windows.Forms.Control)" /> akzeptiert eine <see cref="T:System.Windows.Forms.Control" /> als Parameter und aktiviert das angegebene Steuerelement. Die <see cref="P:System.Windows.Forms.IContainerControl.ActiveControl" /> Eigenschaft aktiviert ist, oder ruft das Steuerelement ab, der aktiv ist.  
+  
+ In den meisten Fällen müssen Sie nicht direkt auf diese Schnittstelle implementieren. Wenn Sie ein Windows-Steuerelementbibliothek-Projekt erstellen, generiert Visual Studio eine anfängliche Klasse z. B. für Sie. Diese Klasse erbt die <see cref="T:System.Windows.Forms.UserControl" /> -Klasse, und <see cref="T:System.Windows.Forms.UserControl" /> implementiert <see cref="T:System.Windows.Forms.IContainerControl" /> für Sie.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="ActivateControl">
+      <MemberSignature Language="C#" Value="public bool ActivateControl (System.Windows.Forms.Control active);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ActivateControl(class System.Windows.Forms.Control active) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IContainerControl.ActivateControl(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="active" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="active">Die <see cref="T:System.Windows.Forms.Control" /> aktiviert wird.</param>
+        <summary>Aktiviert ein angegebenes Steuerelement.</summary>
+        <returns>
+          <see langword="true" />Wenn das Steuerelement aktiviert ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel erbt der <xref:System.Windows.Forms.ScrollableControl> -Klasse und implementiert die <xref:System.Windows.Forms.IContainerControl> Schnittstelle. Implementierung wird hinzugefügt, um die <xref:System.Windows.Forms.IContainerControl.ActiveControl%2A> Eigenschaft und die <xref:System.Windows.Forms.IContainerControl.ActivateControl%2A> Methode.  
+  
+ [!code-cpp[IContainerControl Implementation#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IContainerControl Implementation/CPP/mycontainercontrol.cpp#1)]
+ [!code-csharp[IContainerControl Implementation#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IContainerControl Implementation/CS/mycontainercontrol.cs#1)]
+ [!code-vb[IContainerControl Implementation#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IContainerControl Implementation/VB/mycontainercontrol.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Bei Implementierung in einer Klasse aktiviert diese Methode das angegebene <see cref="T:System.Windows.Forms.Control" />. Das Steuerelement muss ein untergeordnetes Element des Containersteuerelements sein.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveControl">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control ActiveControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control ActiveControl" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.IContainerControl.ActiveControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Steuerelement, das auf das Containersteuerelement aktiv ist.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.Control" /> , die auf das Containersteuerelement derzeit aktiv ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel erbt der <xref:System.Windows.Forms.ScrollableControl> -Klasse und implementiert die <xref:System.Windows.Forms.IContainerControl> Schnittstelle. Implementierung wird hinzugefügt, um die <xref:System.Windows.Forms.IContainerControl.ActiveControl%2A> Eigenschaft und die <xref:System.Windows.Forms.IContainerControl.ActivateControl%2A> Methode.  
+  
+ [!code-cpp[IContainerControl Implementation#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IContainerControl Implementation/CPP/mycontainercontrol.cpp#1)]
+ [!code-csharp[IContainerControl Implementation#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IContainerControl Implementation/CS/mycontainercontrol.cs#1)]
+ [!code-vb[IContainerControl Implementation#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IContainerControl Implementation/VB/mycontainercontrol.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Bei Implementierung in einer Klasse wird diese Eigenschaft aktiviert wird, oder ruft das aktive Steuerelement im Containersteuerelement ab.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

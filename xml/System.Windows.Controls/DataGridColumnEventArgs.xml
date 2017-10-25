@@ -1,0 +1,55 @@
+<Type Name="DataGridColumnEventArgs" FullName="System.Windows.Controls.DataGridColumnEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridColumnEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridColumnEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridColumnEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Controls.DataGrid.ColumnDisplayIndexChanged" />-Ereignis und das <see cref="E:System.Windows.Controls.DataGrid.ColumnReordered" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridColumnEventArgs (System.Windows.Controls.DataGridColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Controls.DataGridColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridColumnEventArgs.#ctor(System.Windows.Controls.DataGridColumn)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="column" Type="System.Windows.Controls.DataGridColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Die Spalte, die mit dem Ereignis verknüpft wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.DataGridColumnEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataGridColumn Column { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataGridColumn Column" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumnEventArgs.Column" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGridColumn</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Spalte mit dem Ereignis verknüpft.</summary>
+        <value>Ein Objekt, das die Spalte, die im Zusammenhang mit der das Ereignis darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

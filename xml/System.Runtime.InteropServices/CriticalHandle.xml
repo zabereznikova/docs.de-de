@@ -1,0 +1,612 @@
+<Type Name="CriticalHandle" FullName="System.Runtime.InteropServices.CriticalHandle">
+  <TypeSignature Language="C#" Value="public abstract class CriticalHandle : System.Runtime.ConstrainedExecution.CriticalFinalizerObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CriticalHandle extends System.Runtime.ConstrainedExecution.CriticalFinalizerObject implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.CriticalHandle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Handles</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.Runtime.ConstrainedExecution.CriticalFinalizerObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Wrapperklasse für Handleressourcen dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.InteropServices.CriticalHandle> -Klasse ähnelt der <xref:System.Runtime.InteropServices.SafeHandle> Klasse, außer dass <xref:System.Runtime.InteropServices.SafeHandle> verweiszählung implementiert. Können Sie <xref:System.Runtime.InteropServices.CriticalHandle> anstelle von <xref:System.Runtime.InteropServices.SafeHandle> , Leistungsaspekte Adresse, wenn Sie der erforderlichen Synchronisierung mehr angeben können effizient selbst.  
+  
+ Da die <xref:System.Runtime.InteropServices.CriticalHandle> Klasse führt keine verweiszählung, er bietet keinen Schutz vor Sicherheitsangriffen Wiederverwendung Handle. Da die verweiszählung Algorithmus implizit Vorgänge serialisiert, ist eine gewisse Threadsicherheit auch verloren. Beim Aufrufen der <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> oder <xref:System.Runtime.InteropServices.SafeHandle.Close%2A> Methode während ein Vorgangs, der das Handle verwendet in einem anderen Thread aussteht, oder beim Aufrufen <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> oder <xref:System.Runtime.InteropServices.SafeHandle.Close%2A> von zwei Threads gleichzeitig die Ergebnisse sind nicht deterministisch. Die <xref:System.Runtime.InteropServices.CriticalHandle> Klasse bietet weiterhin die garantierte Handleressourcen gebotenen der <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> Klasse.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+    <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CriticalHandle (IntPtr invalidHandleValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(native int invalidHandleValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CriticalHandle.#ctor(System.IntPtr)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Handles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="invalidHandleValue" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="invalidHandleValue">Der Wert eines ungültigen Handles (normalerweise 0 (null) oder -1).</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.InteropServices.CriticalHandle" />-Klasse mit dem angegebenen ungültigen Handlewert.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TypeLoadException">Die abgeleitete Klasse befindet sich in einer Assembly ohne Berechtigung für den Zugriff auf nicht verwalteten Code.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CriticalHandle.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Markiert das Handle für das Freigeben und Verfügbarmachen von Ressourcen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen der <xref:System.Runtime.InteropServices.CriticalHandle.Close%2A> oder <xref:System.Runtime.InteropServices.CriticalHandle.Dispose%2A> Methode ermöglicht die Ressourcen freigegeben werden. Im Gegensatz zu den <xref:System.Runtime.InteropServices.SafeHandle> -Klasse, dies geschieht immer dann sofort verwendet werden, da es ist keine Verweiszähler dieser Planergruppe, um anzugeben, dass andere Threads dieser Handle verwendet werden. Deshalb müssen Sie einen Synchronisierungsmechanismus sicherzustellen, dass es sicher ist, rufen Sie verwenden die <xref:System.Runtime.InteropServices.CriticalHandle.Close%2A> Methode. Obwohl die meisten Klassen, die verwenden die <xref:System.Runtime.InteropServices.CriticalHandle> Klasse erübrigt sich einen Finalizer bereitstellen, dies ist manchmal erforderlich (z. B. zum leeren Dateipuffer oder Schreiben von Daten zurück in den Arbeitsspeicher). In diesem Fall kann die Klasse einen Finalizer, der zum Ausführen vor unbedingt Bereitstellen der <xref:System.Runtime.InteropServices.CriticalHandle> kritischen Finalizer ausgeführt wird.  
+  
+ Rufen Sie die <xref:System.Runtime.InteropServices.CriticalHandle.Close%2A> oder <xref:System.Runtime.InteropServices.CriticalHandle.Dispose%2A> Methode, wenn Sie fertig sind mit den <xref:System.Runtime.InteropServices.CriticalHandle> Objekt. Die <xref:System.Runtime.InteropServices.CriticalHandle.Close%2A> -Methode bewirkt, dass die <xref:System.Runtime.InteropServices.CriticalHandle> Objekt in einem nicht verwendbaren Zustand.  
+  
+ **Hinweis** immer Aufruf <xref:System.Runtime.InteropServices.CriticalHandle.Close%2A> oder <xref:System.Runtime.InteropServices.CriticalHandle.Dispose%2A> , bevor Sie den letzten Verweis auf Freigeben der <xref:System.Runtime.InteropServices.CriticalHandle> Objekt. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Runtime.InteropServices.CriticalHandle>-Methode des <xref:System.Runtime.InteropServices.CriticalHandle.Finalize%2A>-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CriticalHandle.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Handles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Runtime.InteropServices.CriticalHandle" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen der <xref:System.Runtime.InteropServices.CriticalHandle.Close%2A> oder <xref:System.Runtime.InteropServices.CriticalHandle.Dispose%2A> Methode ermöglicht die Ressourcen freigegeben werden. Im Gegensatz zu den <xref:System.Runtime.InteropServices.SafeHandle> -Klasse, dies geschieht immer dann sofort verwendet werden, da es ist keine Verweiszähler dieser Planergruppe, um anzugeben, dass andere Threads dieser Handle verwendet werden. Deshalb müssen Sie einen Synchronisierungsmechanismus sicherzustellen, dass es sicher ist, rufen Sie verwenden die <xref:System.Runtime.InteropServices.CriticalHandle.Dispose%2A> Methode. Obwohl die meisten Klassen, die verwenden die <xref:System.Runtime.InteropServices.CriticalHandle> Klasse erübrigt sich einen Finalizer bereitstellen, dies ist manchmal erforderlich (z. B. zum leeren Dateipuffer oder Schreiben von Daten zurück in den Arbeitsspeicher). In diesem Fall kann die Klasse einen Finalizer, der zum Ausführen vor unbedingt Bereitstellen der <xref:System.Runtime.InteropServices.CriticalHandle> kritischen Finalizer ausgeführt wird.  
+  
+ Rufen Sie die <xref:System.Runtime.InteropServices.CriticalHandle.Close%2A> oder <xref:System.Runtime.InteropServices.CriticalHandle.Dispose%2A> Methode, wenn Sie fertig sind mit den <xref:System.Runtime.InteropServices.CriticalHandle> Objekt. Die <xref:System.Runtime.InteropServices.CriticalHandle.Close%2A> -Methode bewirkt, dass die <xref:System.Runtime.InteropServices.CriticalHandle> Objekt in einem nicht verwendbaren Zustand.  
+  
+ **Hinweis** immer Aufruf der <xref:System.Runtime.InteropServices.CriticalHandle.Close%2A> oder <xref:System.Runtime.InteropServices.CriticalHandle.Dispose%2A> -Methode auf, bevor Sie den letzten Verweis auf Freigeben der <xref:System.Runtime.InteropServices.CriticalHandle> Objekt. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Runtime.InteropServices.CriticalHandle>-Methode des <xref:System.Runtime.InteropServices.CriticalHandle.Finalize%2A>-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CriticalHandle.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Handles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> für einen normalen Freigabevorgang, <see langword="false" />, um das Handle zu beenden.</param>
+        <summary>Gibt die von der <see cref="T:System.Runtime.InteropServices.CriticalHandle" />-Klasse verwendeten, nicht verwalteten Ressourcen frei und gibt an, ob ein normaler Freigabevorgang ausgeführt werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie niemals explizit die <xref:System.Runtime.InteropServices.CriticalHandle.Dispose%2A> Methode mit der `disposing` Parametersatz auf `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~CriticalHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CriticalHandle.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Handles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle dem Handle zugeordneten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.InteropServices.CriticalHandle.Finalize%2A> Methode ist der Destruktor für die <xref:System.Runtime.InteropServices.CriticalHandle> Klasse. Diese Methode sollte nicht direkt vom Anwendungscode aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="handle">
+      <MemberSignature Language="C#" Value="protected IntPtr handle;" />
+      <MemberSignature Language="ILAsm" Value=".field family native int handle" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.CriticalHandle.handle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Handles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das zu umschließende Handle an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Handle nicht öffentlich verfügbar (d. h. außerhalb der abgeleiteten Klasse).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClosed">
+      <MemberSignature Language="C#" Value="public bool IsClosed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClosed" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.CriticalHandle.IsClosed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Handles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Handle geschlossen ist.</summary>
+        <value>
+          <see langword="true" />, wenn das Handle geschlossen ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.InteropServices.CriticalHandle.IsClosed%2A> Methodenrückgabe ein Wert, der angibt, ob die <xref:System.Runtime.InteropServices.CriticalHandle> Handle des Objekts ist nicht mehr eine systemeigene Ressource zugeordnet. Dies unterscheidet sich von der Definition der <xref:System.Runtime.InteropServices.CriticalHandle.IsInvalid%2A> -Eigenschaft, die berechnet, ob ein bestimmtes Handle immer als ungültig betrachtet wird. Die <xref:System.Runtime.InteropServices.CriticalHandle.IsClosed%2A> Methode gibt ein `true` Wert in den folgenden Fällen:  
+  
+-   Die <xref:System.Runtime.InteropServices.CriticalHandle.SetHandleAsInvalid%2A> -Methode wurde aufgerufen.  
+  
+-   Die <xref:System.Runtime.InteropServices.CriticalHandle.Dispose%2A> Methode oder <xref:System.Runtime.InteropServices.CriticalHandle.Close%2A> Methode wurde aufgerufen, und es werden keine Verweise auf die <xref:System.Runtime.InteropServices.CriticalHandle> Objekt für andere Threads.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInvalid">
+      <MemberSignature Language="C#" Value="public abstract bool IsInvalid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInvalid" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.CriticalHandle.IsInvalid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Handles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse einen Wert ab, der angibt, ob dieses Handle ungültig ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Handle gültig ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen müssen implementieren die <xref:System.Runtime.InteropServices.CriticalHandle.IsInvalid%2A> Eigenschaft, damit die common Language Runtime ermitteln kann, ob Handleressourcen erforderlich ist. Abgeleitete Klassen müssen eine Implementierung, die den allgemeinen Typ der Handle passt sie unterstützen bereitstellen (0 oder-1 ist ungültig). Diese Klassen können dann weitere für bestimmte SafeHandle-Typen abgeleitet werden.  
+  
+ Im Gegensatz zu der <xref:System.Runtime.InteropServices.CriticalHandle.IsClosed%2A> -Eigenschaft, die meldet, ob die <xref:System.Runtime.InteropServices.CriticalHandle> Objekt nicht mehr verwendet das zugrunde liegende Handle der <xref:System.Runtime.InteropServices.CriticalHandle.IsInvalid%2A> -Eigenschaft berechnet, ob der angegebene Handlewert immer als ungültig betrachtet wird. Aus diesem Grund die <xref:System.Runtime.InteropServices.CriticalHandle.IsInvalid%2A> Eigenschaft gibt immer den gleichen Wert für einen einzelnen Handlewert zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseHandle">
+      <MemberSignature Language="C#" Value="protected abstract bool ReleaseHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ReleaseHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CriticalHandle.ReleaseHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Handles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt beim Überschreiben in einer abgeleiteten Klasse den Code aus, der für das Freigeben des Handles erforderlich ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Handle erfolgreich freigegeben wurde; Andernfalls gilt bei einem schwerwiegenden Fehler <see langword="false" />. In diesem Fall generiert eine [ReleaseHandleFailed](~/docs/framework/debug-trace-profile/releasehandlefailed-mda.md) -Assistent für verwaltetes Debuggen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.InteropServices.CriticalHandle.ReleaseHandle%2A> -Methode wird garantiert nur einmal aufgerufen werden, vorausgesetzt, dass die Verwendung des richtigen Synchronisierungsmechanismen, um sicherzustellen, dass diese nur einen Aufruf von der <xref:System.Runtime.InteropServices.CriticalHandle.Close%2A> oder <xref:System.Runtime.InteropServices.CriticalHandle.Dispose%2A> Methode erfolgt. Die <xref:System.Runtime.InteropServices.CriticalHandle.ReleaseHandle%2A> Methode wird nicht aufgerufen werden, wenn die <xref:System.Runtime.InteropServices.CriticalHandle.IsInvalid%2A> oder <xref:System.Runtime.InteropServices.CriticalHandle.IsClosed%2A> Eigenschaft ist `true`. Implementieren Sie diese Methode in Ihrer <xref:System.Runtime.InteropServices.CriticalHandle> abgeleitete Klassen, um Code auszuführen, die zum Freigeben des Handles erforderlich ist. Da eine der Funktionen von <xref:System.Runtime.InteropServices.CriticalHandle> wird zum Gewährleisten der Vermeidung von Ressourcenverlusten, den Code in der Implementierung von <xref:System.Runtime.InteropServices.CriticalHandle.ReleaseHandle%2A> müssen nie ein Failover auf. Der Garbage Collector ruft <xref:System.Runtime.InteropServices.CriticalHandle.ReleaseHandle%2A> nach normale Finalizer für Objekte, die Garbage collection gleichzeitig wurden ausgeführt wurden und die Garantien, die die Ressourcen, aufrufen und wird nicht unterbrochen werden dagegen es läuft. Diese Methode wird zur Entwurfszeit (sowie alle Methoden in seiner statisch bestimmbare Aufrufdiagramm) Instanz als einem eingeschränkten Ausführungsbereich (CER) vorbereitet werden. Obwohl dies verhindert, dass ein Thread Abort Interrupts, noch achten Sie nicht, um alle Fehler Pfade in der überschriebenen einzuführen <xref:System.Runtime.InteropServices.CriticalHandle.ReleaseHandle%2A> Methode. Wenden Sie insbesondere die <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> -Attribut auf alle Methoden, die Sie von Aufrufen <xref:System.Runtime.InteropServices.CriticalHandle.ReleaseHandle%2A>. In den meisten Fällen sollte dieser Code sein:  
+  
+ `ReliabilityContract(Consistency.WillNotCorruptState, Cer.Success)`  
+  
+ Darüber hinaus für eine einfache Bereinigung (z. B. durch Aufruf der Win32-API `CloseHandle` für ein Dateihandle) überprüfen Sie den Rückgabewert, für die einzelnen Plattformaufruf. Bei einer komplexen Bereinigung müssen Sie möglicherweise viel Programmlogik und viele Methodenaufrufe, von die einige möglicherweise fehlschlagen. Sie müssen sicherstellen, dass die Programmlogik für jeden dieser Fälle fallback Code verfügt.  
+  
+ Wenn die <xref:System.Runtime.InteropServices.CriticalHandle.ReleaseHandle%2A> -Methode zurückkehrt `false` aus irgendeinem Grund generiert eine [ReleaseHandleFailed](~/docs/framework/debug-trace-profile/releasehandlefailed-mda.md) -Assistent für verwaltetes Debuggen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHandle">
+      <MemberSignature Language="C#" Value="protected void SetHandle (IntPtr handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetHandle(native int handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CriticalHandle.SetHandle(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Handles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Das bereits vorhandene Handle, das verwendet werden soll.</param>
+        <summary>Legt das Handle für das angegebene, bereits vorhandene Handle fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Runtime.InteropServices.CriticalHandle.SetHandle%2A> Methode nur, wenn Sie ein bereits vorhandenes Handle unterstützt werden (beispielsweise, wenn das Handle in einer Struktur zurückgegeben wird), weil die .NET Framework-COM-Interop-Infrastruktur keine Marshalling unterstützt müssen in einer Struktur verarbeitet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHandleAsInvalid">
+      <MemberSignature Language="C#" Value="public void SetHandleAsInvalid ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetHandleAsInvalid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CriticalHandle.SetHandleAsInvalid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Handles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Markiert ein Handle als ungültig.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.Runtime.InteropServices.CriticalHandle.SetHandleAsInvalid%2A> Methode, nur, wenn Sie wissen, dass das Handle ungültig ist, und Sie es als solche markieren möchten. Auf diese Weise ändert sich nicht auf den Wert, der die <xref:System.Runtime.InteropServices.CriticalHandle.handle> Feld; es wird nur das Handle als ungültig markiert. Das Handle kann dann möglicherweise veralteten Wert enthalten. Der Effekt dieses Aufrufs ist, dass kein Versuch unternommen wird, um die Ressourcen freizugeben.  
+  
+ Wie bei der <xref:System.Runtime.InteropServices.CriticalHandle.SetHandle%2A> -Methode <xref:System.Runtime.InteropServices.CriticalHandle.SetHandleAsInvalid%2A> nur, wenn Sie ein bereits vorhandenes Handle unterstützen müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,86 @@
+<Type Name="DataGridViewAutoSizeColumnsModeEventArgs" FullName="System.Windows.Forms.DataGridViewAutoSizeColumnsModeEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridViewAutoSizeColumnsModeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewAutoSizeColumnsModeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewAutoSizeColumnsModeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.DataGridView.AutoSizeColumnsModeChanged" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsModeChanged> Ereignis wird ausgelöst, wenn den Wert des der <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridView> Änderungen steuern.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsModeChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.DataGridView> mit dem Namen `DataGridView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsModeChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#257](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#257)]
+ [!code-vb[System.Windows.Forms.EventExamples#257](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#257)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewAutoSizeColumnsModeEventArgs (System.Windows.Forms.DataGridViewAutoSizeColumnMode[] previousModes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.DataGridViewAutoSizeColumnMode[] previousModes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewAutoSizeColumnsModeEventArgs.#ctor(System.Windows.Forms.DataGridViewAutoSizeColumnMode[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="previousModes" Type="System.Windows.Forms.DataGridViewAutoSizeColumnMode[]" />
+      </Parameters>
+      <Docs>
+        <param name="previousModes">Ein Array von <see cref="T:System.Windows.Forms.DataGridViewAutoSizeColumnMode" /> Werte, die die vorherigen darstellen <see cref="P:System.Windows.Forms.DataGridViewColumn.AutoSizeMode" /> Eigenschaftswerte der einzelnen Spalten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataGridViewAutoSizeColumnsModeEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousModes">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewAutoSizeColumnMode[] PreviousModes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewAutoSizeColumnMode[] PreviousModes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewAutoSizeColumnsModeEventArgs.PreviousModes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnMode[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von die vorherigen Werte der Spalte <see cref="P:System.Windows.Forms.DataGridViewColumn.AutoSizeMode" /> Eigenschaften.</summary>
+        <value>Ein Array von <see cref="T:System.Windows.Forms.DataGridViewAutoSizeColumnMode" /> Werte, die die vorherigen Werte der Spalte darstellen <see cref="P:System.Windows.Forms.DataGridViewColumn.AutoSizeMode" /> Eigenschaften.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsModeChanged?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.DataGridView> mit dem Namen `DataGridView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsModeChanged?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#257](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#257)]
+ [!code-vb[System.Windows.Forms.EventExamples#257](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#257)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

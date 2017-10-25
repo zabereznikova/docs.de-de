@@ -1,0 +1,168 @@
+<Type Name="ComEventInterfaceAttribute" FullName="System.Runtime.InteropServices.ComEventInterfaceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ComEventInterfaceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ComEventInterfaceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComEventInterfaceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Interface, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifiziert die Quellschnittstelle und die Klasse, die die Methoden der Ereignisschnittstelle implementiert, die beim Importieren einer Co-Klasse aus einer COM-Typbibliothek generiert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut auf Schnittstellen anwenden, obwohl die [Tlbimp.exe (Type Library Importer-Tool)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) in der Regel für Sie gilt, wenn es sich um eine Typbibliothek importiert.  
+  
+ Wenn eine Quellschnittstelle aus einer Typbibliothek importiert wird, werden keine Methoden implementiert eine Ereignisschnittstelle generierte als Ereignisse hinzugefügt. Tlbimp.exe wendet <xref:System.Runtime.InteropServices.ComEventInterfaceAttribute> auf die Ereignisschnittstelle, um die verwaltete Klasse zu identifizieren, die die Methoden der Ereignisschnittstelle implementiert, und die ursprüngliche Quellschnittstelle implementiert. Die common Language Runtime verwendet dieses Attribut zur Laufzeit verwendet, um die folgenden Aufgaben auszuführen:  
+  
+-   Zuordnen von verfügbar gemachten Ereignisse der Schnittstelle, um ihre Implementierung in der ereignismeldung Anbieterklasse.  
+  
+-   Verknüpfen Sie die Ereignisse mit der ursprünglichen Quelle COM-Schnittstelle.  
+  
+ Dieses Attribut wird selten angewendet. Wenn Sie beabsichtigen, den Quellcode zu schreiben, die Metadaten erstellt, die Simulation von Tlbimp.exe erstellten Metadaten darstellt, sollten Sie jedoch eine Ereignisschnittstelle für jede Schnittstelle der ursprünglichen Datenquelle erstellen. Eine ausführliche Beschreibung wie Tlbimp.exe Ereignisse importiert, finden Sie unter [Konvertieren importierter Member](http://msdn.microsoft.com/en-us/7a272adf-41d7-4409-b0e2-5c0c5ef5266d). Anweisungen dazu, wie ein COM-Ereignis an einen .NET Client verfügbar machen, finden Sie unter [wie: behandeln Ereignisse ausgelöst von einer COM-Quelle](http://msdn.microsoft.com/en-us/12bb67bd-91a2-4554-82fb-bdba3d2c8b04).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComEventInterfaceAttribute (Type SourceInterface, Type EventProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type SourceInterface, class System.Type EventProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComEventInterfaceAttribute.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="SourceInterface" Type="System.Type" />
+        <Parameter Name="EventProvider" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="SourceInterface">Ein <see cref="T:System.Type" /> , die die ursprüngliche Quellschnittstelle aus der Typbibliothek enthält. COM verwendet diese Schnittstelle aufrufen, mit der verwalteten Klasse zurück.</param>
+        <param name="EventProvider">Ein <see cref="T:System.Type" /> , enthält die Klasse, die die Methoden der Ereignisschnittstelle implementiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.ComEventInterfaceAttribute" /> Klasse mit der Quelle Schnittstelle und Ereignis-Provider-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventProvider">
+      <MemberSignature Language="C#" Value="public Type EventProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EventProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComEventInterfaceAttribute.EventProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Klasse, die die Methoden der Ereignisschnittstelle implementiert.</summary>
+        <value>Ein <see cref="T:System.Type" /> , enthält die Klasse, die die Methoden der Ereignisschnittstelle implementiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird festgelegt, in den Typ der Anbieter-Ereignisklasse, die generiert werden, indem Sie die [Tlbimp.exe (Type Library Importer-Tool)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md). Tlbimp.exe fügt den Namen der Quellschnittstelle EventProvider an. Beispielsweise wird IMyInterface zu IMyInterfaceEventProvider.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceInterface">
+      <MemberSignature Language="C#" Value="public Type SourceInterface { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type SourceInterface" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComEventInterfaceAttribute.SourceInterface" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ursprüngliche Quellschnittstelle aus der Typbibliothek ab.</summary>
+        <value>Ein <see cref="T:System.Type" /> , enthält die Quellschnittstelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Quellschnittstelle verfügt über mindestens ein Ereignismember und in der Regel eine für jede Methode der Quellschnittstelle. COM verwendet diese Schnittstelle aufrufen, mit der verwalteten Klasse zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

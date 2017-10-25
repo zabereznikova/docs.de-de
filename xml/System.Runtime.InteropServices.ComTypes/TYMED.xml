@@ -1,0 +1,286 @@
+<Type Name="TYMED" FullName="System.Runtime.InteropServices.ComTypes.TYMED">
+  <TypeSignature Language="C#" Value="public enum TYMED" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TYMED extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComTypes.TYMED" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die verwaltete Definition der der <see langword="TYMED" /> Struktur.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den `TYMED` -Struktur, finden Sie in der MSDN Library.  
+  
+ Die common Language Runtime löst eine Ausnahme aus, wenn eine COM-Methode in systemeigenem Code ein HRESULT zurückgibt. Weitere Informationen finden Sie unter [Vorgehensweise: Zuordnen von HRESULTs und Ausnahmen](~/docs/framework/interop/how-to-map-hresults-and-exceptions.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="TYMED_ENHMF">
+      <MemberSignature Language="C#" Value="TYMED_ENHMF" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.TYMED TYMED_ENHMF = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_ENHMF" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.TYMED</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Speichermedium ist eine erweiterte Metadatei. Wenn die <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> angehört <see langword="null" />, der Zielprozess die zu verwendende <see langword="DeleteEnhMetaFile" /> für das Löschen der Bitmap.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TYMED_FILE">
+      <MemberSignature Language="C#" Value="TYMED_FILE" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.TYMED TYMED_FILE = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_FILE" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.TYMED</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Speichermedium ist eine durch einen Pfad angegebenen Datei. Wenn die <see langword="STGMEDIUM" /> <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> angehört <see langword="null" />, der Zielprozess die zu verwendende <see langword="OpenFile" /> zum Löschen der Datei.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TYMED_GDI">
+      <MemberSignature Language="C#" Value="TYMED_GDI" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.TYMED TYMED_GDI = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_GDI" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.TYMED</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Speichermedium ist eine Graphics Device Interface (GDI)-Komponente (HBITMAP). Wenn die <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> angehört <see langword="null" />, der Zielprozess die zu verwendende <see langword="DeleteObject" /> für das Löschen der Bitmap.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TYMED_HGLOBAL">
+      <MemberSignature Language="C#" Value="TYMED_HGLOBAL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.TYMED TYMED_HGLOBAL = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_HGLOBAL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.TYMED</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Speichermedium ist ein globales Speicherhandle (HGLOBAL). Ordnen Sie das globale Handle mit dem Flag "GMEM_SHARE". Wenn die <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> angehört <see langword="null" />, der Zielprozess die zu verwendende <see langword="GlobalFree" /> zum Freigeben des Speichers.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TYMED_ISTORAGE">
+      <MemberSignature Language="C#" Value="TYMED_ISTORAGE" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.TYMED TYMED_ISTORAGE = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_ISTORAGE" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.TYMED</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Speichermedium ist eine Speicherkomponente durch eine <see langword="IStorage" /> Zeiger. Die Daten sind in den Datenströmen und speichern, die von diesem enthaltenen <see langword="IStorage" /> Instanz. Wenn die <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> Member hat keine <see langword="null" />, der Zielprozess die zu verwendende <see langword="IStorage::Release" /> Speicherkomponente freigeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TYMED_ISTREAM">
+      <MemberSignature Language="C#" Value="TYMED_ISTREAM" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.TYMED TYMED_ISTREAM = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_ISTREAM" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.TYMED</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Speichermedium ist ein Streamobjekt identifizierte ein <see langword="IStream" /> Zeiger. Verwendung <see langword="ISequentialStream::Read" /> zum Lesen der Daten. Wenn die <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> Member hat keine <see langword="null" />, der Zielprozess die zu verwendende <see langword="IStream::Release" /> die Streamkomponente freigeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TYMED_MFPICT">
+      <MemberSignature Language="C#" Value="TYMED_MFPICT" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.TYMED TYMED_MFPICT = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_MFPICT" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.TYMED</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Speichermedium ist eine Metadatei (HMETAFILE). Verwenden Sie die Windows- oder WIN32-Funktionen für die Metadatei-Datenzugriff. Wenn die <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> angehört <see langword="null" />, der Zielprozess die zu verwendende <see langword="DeleteMetaFile" /> für das Löschen der Bitmap.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TYMED_NULL">
+      <MemberSignature Language="C#" Value="TYMED_NULL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.TYMED TYMED_NULL = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_NULL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.TYMED</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es ist keine Daten übergeben werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,519 @@
+<Type Name="Component" FullName="System.ComponentModel.Component">
+  <TypeSignature Language="C#" Value="public class Component : MarshalByRefObject, IDisposable, System.ComponentModel.IComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Component extends System.MarshalByRefObject implements class System.ComponentModel.IComponent, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Component" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignerCategory("Component")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die basisimplementierung für die <see cref="T:System.ComponentModel.IComponent" /> Schnittstelle und ermöglicht das Objekt, die Anwendungen die gemeinsame Nutzung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Component>ist die Basisklasse für alle Komponenten in der common Language Runtime diese als Verweis gemarshallt werden. <xref:System.ComponentModel.Component>ist remotefähig und leitet sich von der <xref:System.MarshalByRefObject> Klasse. <xref:System.ComponentModel.Component>Stellt eine Implementierung von der <xref:System.ComponentModel.IComponent> Schnittstelle. Die <xref:System.ComponentModel.MarshalByValueComponent> stellt eine Implementierung von <xref:System.ComponentModel.IComponent> , die als Wert gemarshallt wird.  
+  
+ Sie können als host für eine <xref:System.ComponentModel.Component> in jedes Objekt, das implementiert die <xref:System.ComponentModel.IContainer> -Schnittstelle, und Sie können Abfragen und Abrufen von Diensten aus dem zugehörigen Container. Der Container erstellt eine <xref:System.ComponentModel.ISite> für jede <xref:System.ComponentModel.Component> es enthält. Der Container verwendet die Website zum Verwalten der <xref:System.ComponentModel.Component> und dient der <xref:System.ComponentModel.Component> für die Kommunikation mit seinem Container.  
+  
+ Ein <xref:System.ComponentModel.Component> sollte Ressourcen freigeben explizit durch Aufrufen seiner <xref:System.ComponentModel.Component.Dispose%2A> Methode, ohne zu warten, für die automatische Speicherverwaltung über einen impliziten Aufruf der <xref:System.Object.Finalize%2A> Methode. Wenn eine <xref:System.ComponentModel.Container> verworfen wird, alle Komponenten in der <xref:System.ComponentModel.Container> auch freigegeben werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Component ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Component.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Component" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRaiseEvents">
+      <MemberSignature Language="C#" Value="protected virtual bool CanRaiseEvents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRaiseEvents" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Component.CanRaiseEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Komponente ein Ereignis auslösen kann.</summary>
+        <value>
+          <see langword="true" />Wenn die Komponente Ereignisse auslösen kann. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die standardmäßige Implementierung dieser Eigenschaft immer `true`. Klassen, die von erben die <xref:System.ComponentModel.Component> Klasse sollte diese Eigenschaft, um die Möglichkeit bieten, deaktivieren Sie das Auslösen von Ereignissen überschreiben. Beispielsweise ist in der <xref:System.Windows.Forms.Control> Klasse, wenn das Steuerelement als ActiveX-Steuerelement gehostet wird die <xref:System.Windows.Forms.Control.CanRaiseEvents%2A> -Eigenschaft gibt `false` verfügt das ActiveX-Steuerelement seine Ereignisse fixiert.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie diese Methode in einer abgeleiteten Klasse überschreiben, und ändern Sie ihn zurückzugebenden <see langword="false" />, die <see cref="T:System.ComponentModel.EventHandlerList" /> zurückgegebene Auflistung der <see cref="P:System.ComponentModel.Component.Events" /> -Eigenschaft gibt <see langword="null" /> für ein Ereignis. Ereignisse können weiterhin hinzugefügt und entfernt Sie aus der Auflistung jedoch in der Auflistung <see cref="P:System.ComponentModel.EventHandlerList.Item(System.Object)" /> -Eigenschaft gibt stets <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Container">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IContainer Container { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IContainer Container" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Component.Container" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IContainer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.ComponentModel.IContainer" /> , enthält die <see cref="T:System.ComponentModel.Component" />.</summary>
+        <value>Die <see cref="T:System.ComponentModel.IContainer" /> , enthält die <see cref="T:System.ComponentModel.Component" />, sofern vorhanden, oder <see langword="null" /> Wenn die <see cref="T:System.ComponentModel.Component" /> sind nicht in eine <see cref="T:System.ComponentModel.IContainer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Komponenten in einem Container werden in eine First-in-First-Out Liste, nachverfolgt, die auch die Reihenfolge der Komponenten innerhalb des Containers definiert. Die letzte Komponente hinzugefügt ist die letzte Komponente in der Liste.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignMode">
+      <MemberSignature Language="C#" Value="protected bool DesignMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DesignMode" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Component.DesignMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.ComponentModel.Component" /> befindet sich derzeit im Entwurfsmodus zu wechseln.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.ComponentModel.Component" /> befindet sich im Entwurfsmodus befindet, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Entwurf Indikator befindet sich in der <xref:System.ComponentModel.ISite>daher Wenn die <xref:System.ComponentModel.Component> verfügt nicht über ein <xref:System.ComponentModel.ISite> zugeordnet, der Wert dieser Eigenschaft ist `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Component.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.ComponentModel.Component" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.ComponentModel.Component.Dispose%2A> auf, wenn Sie <xref:System.ComponentModel.Component> nicht mehr benötigen. Die <xref:System.ComponentModel.Component.Dispose%2A>-Methode bewirkt, dass <xref:System.ComponentModel.Component> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.ComponentModel.Component.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.ComponentModel.Component> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.ComponentModel.Component> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.ComponentModel.Component.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.ComponentModel.Component> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.ComponentModel.Component>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Component.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.ComponentModel.Component" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich <xref:System.ComponentModel.Component.Dispose%2A> Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.ComponentModel.Component> verweist. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Beim Überschreiben von <see langword="Dispose(Boolean)" /> müssen Sie darauf achten, nicht auf Objekte zu verweisen, die durch einen früheren Aufruf von <see langword="Dispose" /> freigegeben wurden. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Disposed">
+      <MemberSignature Language="C#" Value="public event EventHandler Disposed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Disposed" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Component.Disposed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Komponente durch einen Aufruf von verworfen wird die <see cref="M:System.ComponentModel.Component.Dispose" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.ComponentModel.Component.Disposed>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu den Ereignishandlerdelegaten, finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Events">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.EventHandlerList Events { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.EventHandlerList Events" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Component.Events" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventHandlerList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der Ereignishandler, die an diese angefügt sind <see cref="T:System.ComponentModel.Component" />.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.EventHandlerList" /> , das die Delegaten für diese Komponente bereitstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~Component ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Component.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt nicht verwaltete Ressourcen frei und führt andere Bereinigungsvorgänge durch, bevor die <see cref="T:System.ComponentModel.Component" /> durch die Garbage Collection wieder zugänglich gemacht wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Object.Finalize%2A>. Diese Methode sollte nicht von Anwendungscode aufgerufen werden. ein Objekt `Finalize` Methode wird automatisch während der Garbagecollection aufgerufen, durch einen Aufruf von seiner Finalisierung verfolgt, durch den Garbage Collector deaktiviert wurde die <xref:System.GC.SuppressFinalize%2A> Methode.  
+  
+ Weitere Informationen finden Sie unter [Finalize-Methoden und Destruktoren](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70), [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md), und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="protected virtual object GetService (Type service);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetService(class System.Type service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Component.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="service">Ein Dienst bereitgestellt werden, indem Sie die <see cref="T:System.ComponentModel.Component" />.</param>
+        <summary>Gibt ein Objekt zurück, das einen von der <see cref="T:System.ComponentModel.Component" /> oder von deren <see cref="T:System.ComponentModel.Container" /> bereitgestellten Dienst darstellt.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , der einen bereitgestellten Dienst darstellt der <see cref="T:System.ComponentModel.Component" />, oder <see langword="null" /> Wenn die <see cref="T:System.ComponentModel.Component" /> bietet sich nicht auf den angegebenen Dienst.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann durch eine abgeleitete Klasse überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Site">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.ISite Site { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ISite Site" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Component.Site" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ISite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ComponentModel.ISite" /> von <see cref="T:System.ComponentModel.Component" /> ab oder legt ihn fest.</summary>
+        <value>Die <see cref="T:System.ComponentModel.ISite" /> zugeordnet der <see cref="T:System.ComponentModel.Component" />, oder <see langword="null" /> Wenn die <see cref="T:System.ComponentModel.Component" /> sind nicht in ein <see cref="T:System.ComponentModel.IContainer" />, die <see cref="T:System.ComponentModel.Component" /> verfügt nicht über ein <see cref="T:System.ComponentModel.ISite" /> zugeordnet, oder die <see cref="T:System.ComponentModel.Component" /> aus entfernt wird seine <see cref="T:System.ComponentModel.IContainer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ComponentModel.Component> müssen eine <xref:System.ComponentModel.ISite> , wenn er hinzugefügt wurde ein <xref:System.ComponentModel.IContainer> und <xref:System.ComponentModel.IContainer> weist eine <xref:System.ComponentModel.ISite> darauf. Die <xref:System.ComponentModel.IContainer> ist verantwortlich für das Zuweisen von der <xref:System.ComponentModel.ISite> auf die <xref:System.ComponentModel.Component>. Ändern des Werts von der Komponente <xref:System.ComponentModel.ISite> ändert nicht den Namen des Standorts die <xref:System.ComponentModel.Component> zugewiesen ist. Die <xref:System.ComponentModel.Component.Site%2A> Eigenschaft sollte nur festgelegt werden ein <xref:System.ComponentModel.IContainer>.  
+  
+ Der Eigenschaftswert ist `null` Wenn die <xref:System.ComponentModel.Component> wird daraus der <xref:System.ComponentModel.IContainer>. Zuweisen von `null` für diese Eigenschaft nicht zwangsläufig entfernt die <xref:System.ComponentModel.Component> aus der <xref:System.ComponentModel.IContainer>.  
+  
+ Ein <xref:System.ComponentModel.Component> kann oder möglicherweise keinen Namen. Wenn eine <xref:System.ComponentModel.Component> ist ein Name gegeben, der Name muss eindeutig sein unter den anderen <xref:System.ComponentModel.Component> -Objekte innerhalb seiner <xref:System.ComponentModel.IContainer>. Die <xref:System.ComponentModel.ISite> speichert den Namen des der <xref:System.ComponentModel.Component>; deshalb können Sie nur Namen einer <xref:System.ComponentModel.Component> ist ein <xref:System.ComponentModel.ISite> zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Component.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.String" /> zurück, die den Namen der <see cref="T:System.ComponentModel.Component" /> enthält (sofern vorhanden). Diese Methode darf nicht überschrieben werden.</summary>
+        <returns>Eine <see cref="T:System.String" />, die den Namen der <see cref="T:System.ComponentModel.Component" /> enthält (sofern vorhanden), oder <see langword="null" />, wenn die <see cref="T:System.ComponentModel.Component" /> unbenannt ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ComponentModel.Component> , vielleicht aber möglicherweise nicht über einen Namen verfügen. Wenn eine <xref:System.ComponentModel.Component> ist ein Name gegeben, der Name ist eindeutig unter den anderen <xref:System.ComponentModel.Component> -Objekte innerhalb seiner <xref:System.ComponentModel.IContainer>.  
+  
+ Die <xref:System.ComponentModel.ISite> speichert den Namen des der <xref:System.ComponentModel.Component>. Ein <xref:System.ComponentModel.Component> nur ein <xref:System.ComponentModel.ISite> , wenn er hinzugefügt wurde ein <xref:System.ComponentModel.IContainer> und die <xref:System.ComponentModel.IContainer> weist eine <xref:System.ComponentModel.ISite> darauf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

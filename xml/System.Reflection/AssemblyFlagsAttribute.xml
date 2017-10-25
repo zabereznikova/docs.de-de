@@ -1,0 +1,274 @@
+<Type Name="AssemblyFlagsAttribute" FullName="System.Reflection.AssemblyFlagsAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyFlagsAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblyFlagsAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.AssemblyFlagsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt eine bitweise Kombination von <see cref="T:System.Reflection.AssemblyNameFlags" /> Flags für eine Assembly Compileroptionen für Just-in-Time (JIT), gibt an, ob die Assembly erneut zugewiesen werden und ob sie einen vollständigen oder als Token dargestellten öffentlichen Schlüssel besitzt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.AssemblyNameFlags> Enumeration beschreibt die Assembly-Eigenschaften, die mit diesem Attribut festgelegt werden können.  
+  
+ Verwenden, um die Flags zuzugreifen, die für eine Assembly angegeben wurden die <xref:System.Reflection.Assembly.GetName%2A?displayProperty=nameWithType> -Eigenschaft zum Abrufen einer <xref:System.Reflection.AssemblyName> Objekt, der <xref:System.Reflection.AssemblyName.Flags%2A?displayProperty=nameWithType> -Eigenschaft zum Abrufen einer <xref:System.Reflection.AssemblyNameFlags> Wert.  
+  
+ An <xref:System.Reflection.AssemblyNameFlags> Flags für eine dynamische Assembly festgelegt, die <xref:System.Reflection.AssemblyName.Flags%2A?displayProperty=nameWithType> Eigenschaft der <xref:System.Reflection.AssemblyName> -Objekt, das Sie übergeben die <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anwenden der <xref:System.Reflection.AssemblyFlagsAttribute> einer Assembly, und wie die Flags zur Laufzeit gelesen. Im Beispiel wird auch eine Instanz des Attributs erstellt und verwendet die <xref:System.Reflection.AssemblyFlagsAttribute.AssemblyFlags%2A> Eigenschaft zum Anzeigen der Flags. Ein Beispiel zur Anwendung von der <xref:System.Reflection.AssemblyFlagsAttribute> auf eine dynamische Assembly finden Sie in der <xref:System.Reflection.AssemblyName.Flags%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ [!code-cpp[AssemblyFlagsAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyFlagsAttribute/CPP/source.cpp#1)]
+ [!code-csharp[AssemblyFlagsAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyFlagsAttribute/CS/source.cs#1)]
+ [!code-vb[AssemblyFlagsAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyFlagsAttribute/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyFlagsAttribute (int assemblyFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 assemblyFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyFlagsAttribute.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This constructor has been deprecated. Please use AssemblyFlagsAttribute(AssemblyNameFlags) instead. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="assemblyFlags" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyFlags">Eine bitweise Kombination von <see cref="T:System.Reflection.AssemblyNameFlags" /> Flags, die Umwandlung, wie einem Ganzzahlenwert, Just-in-Time (JIT)-Compileroptionen, Lebensdauer, gibt an, ob eine Assembly erneut zugewiesen werden und ob sie einen vollständigen oder als Token dargestellten öffentlichen Schlüssel besitzt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Reflection.AssemblyFlagsAttribute" /> -Klasse mit der angegebenen Kombination von <see cref="T:System.Reflection.AssemblyNameFlags" /> Flags, die als ganze Zahl umgewandelt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser nicht typisierte Konstruktor ist mittlerweile veraltet. Nicht verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyFlagsAttribute (System.Reflection.AssemblyNameFlags assemblyFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Reflection.AssemblyNameFlags assemblyFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyFlagsAttribute.#ctor(System.Reflection.AssemblyNameFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assemblyFlags" Type="System.Reflection.AssemblyNameFlags" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyFlags">Eine bitweise Kombination von <see cref="T:System.Reflection.AssemblyNameFlags" /> Flags Just-in-Time (JIT)-Compileroptionen, Lebensdauer, gibt an, ob eine Assembly erneut zugewiesen werden und ob sie einen vollständigen oder als Token dargestellten öffentlichen Schlüssel besitzt darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Reflection.AssemblyFlagsAttribute" /> -Klasse mit der angegebenen Kombination von <see cref="T:System.Reflection.AssemblyNameFlags" /> Flags.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anwenden der <xref:System.Reflection.AssemblyFlagsAttribute> einer Assembly, und wie die Flags zur Laufzeit gelesen. Im Beispiel wird auch eine Instanz des Attributs erstellt und verwendet die <xref:System.Reflection.AssemblyFlagsAttribute.AssemblyFlags%2A> Eigenschaft zum Anzeigen der Flags. Ein Beispiel zur Anwendung von der <xref:System.Reflection.AssemblyFlagsAttribute> auf eine dynamische Assembly finden Sie in der <xref:System.Reflection.AssemblyName.Flags%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ [!code-cpp[AssemblyFlagsAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyFlagsAttribute/CPP/source.cpp#1)]
+ [!code-csharp[AssemblyFlagsAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyFlagsAttribute/CS/source.cs#1)]
+ [!code-vb[AssemblyFlagsAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyFlagsAttribute/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyFlagsAttribute (uint flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int32 flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyFlagsAttribute.#ctor(System.UInt32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This constructor has been deprecated. Please use AssemblyFlagsAttribute(AssemblyNameFlags) instead. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="flags" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Eine bitweise Kombination von <see cref="T:System.Reflection.AssemblyNameFlags" /> Flags, die umgewandelte unsigned Integer-Wert, Just-in-Time (JIT)-Compileroptionen, Lebensdauer, gibt an, ob eine Assembly erneut zugewiesen werden und ob sie einen vollständigen oder als Token dargestellten öffentlichen Schlüssel besitzt darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Reflection.AssemblyFlagsAttribute" /> -Klasse mit der angegebenen Kombination von <see cref="T:System.Reflection.AssemblyNameFlags" /> Flags, die als unsigned Integer-Wert umgewandelt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser nicht typisierte Konstruktor ist mittlerweile veraltet. Nicht verwenden.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Reflection.AssemblyFlagsAttribute.#ctor(System.Reflection.AssemblyNameFlags)" />
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyFlags">
+      <MemberSignature Language="C#" Value="public int AssemblyFlags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AssemblyFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyFlagsAttribute.AssemblyFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen ganzzahligen Wert, der die Kombination von <see cref="T:System.Reflection.AssemblyNameFlags" /> Flags angegeben, wenn dieses Attributinstanz erstellt wurde.</summary>
+        <value>Einem Ganzzahlenwert, die eine bitweise Kombination von <see cref="T:System.Reflection.AssemblyNameFlags" /> Flags.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt eine ganze Zahl für die Abwärtskompatibilität. Wandelt den Wert, der <xref:System.Reflection.AssemblyNameFlags> Typ, bevor Sie ihn verwenden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anwenden der <xref:System.Reflection.AssemblyFlagsAttribute> einer Assembly, und wie die Flags zur Laufzeit gelesen. Im Beispiel wird auch eine Instanz des Attributs erstellt und verwendet die <xref:System.Reflection.AssemblyFlagsAttribute.AssemblyFlags%2A> Eigenschaft zum Anzeigen der Flags. Ein Beispiel zur Anwendung von der <xref:System.Reflection.AssemblyFlagsAttribute> auf eine dynamische Assembly finden Sie in der <xref:System.Reflection.AssemblyName.Flags%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ [!code-cpp[AssemblyFlagsAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyFlagsAttribute/CPP/source.cpp#1)]
+ [!code-csharp[AssemblyFlagsAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyFlagsAttribute/CS/source.cs#1)]
+ [!code-vb[AssemblyFlagsAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyFlagsAttribute/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public uint Flags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyFlagsAttribute.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property has been deprecated. Please use AssemblyFlags instead. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, die die Kombination von darstellt unsigned Integer-Wert <see cref="T:System.Reflection.AssemblyNameFlags" /> Flags angegeben, wenn dieses Attributinstanz erstellt wurde.</summary>
+        <value>Unsigned Integer-Wert, die eine bitweise Kombination von darstellt <see cref="T:System.Reflection.AssemblyNameFlags" /> Flags.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt eine ganze Zahl für die Abwärtskompatibilität. Wandelt den Wert, der <xref:System.Reflection.AssemblyNameFlags> Typ, bevor Sie ihn verwenden.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="P:System.Reflection.AssemblyFlagsAttribute.AssemblyFlags" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,173 @@
+<Type Name="AggregateTokenResolver" FullName="System.IdentityModel.Tokens.AggregateTokenResolver">
+  <TypeSignature Language="C#" Value="public class AggregateTokenResolver : System.IdentityModel.Selectors.SecurityTokenResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AggregateTokenResolver extends System.IdentityModel.Selectors.SecurityTokenResolver" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.AggregateTokenResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.SecurityTokenResolver</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein sicherheitstokenresolver, die mehrere token Konfliktlöser umschließen und Token in allen der umschlossenen Konfliktlöser beheben kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.IdentityModel.Selectors.SecurityTokenResolver> Objekt stellt eine Dienstprogrammklasse, die Sicherheitstoken oder Schlüssel abrufen kann, wenn ein Schlüsselbezeichner oder eine schlüsselbezeichnerklausel vorliegt. Die <xref:System.IdentityModel.Tokens.AggregateTokenResolver> dient als Wrapper für mehrere <xref:System.IdentityModel.Selectors.SecurityTokenResolver> Objekte. Das token Konfliktlöser einzubindende werden im Konstruktor angegeben. Die <xref:System.IdentityModel.Tokens.AggregateTokenResolver.TokenResolvers%2A> Eigenschaft gibt die Auflistung der token Konfliktlöser, der durch aggregieren Resolver umschlossen ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AggregateTokenResolver (System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Selectors.SecurityTokenResolver&gt; tokenResolvers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.IdentityModel.Selectors.SecurityTokenResolver&gt; tokenResolvers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.AggregateTokenResolver.#ctor(System.Collections.Generic.IEnumerable{System.IdentityModel.Selectors.SecurityTokenResolver})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tokenResolvers" Type="System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Selectors.SecurityTokenResolver&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="tokenResolvers">Eine Liste der token Konfliktlöser Sicherheit, die von dieser Instanz umschlossen werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.AggregateTokenResolver" /> -Klasse unter Verwendung der angegebenen Liste von token Konfliktlöser.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.AggregateTokenResolver.TokenResolvers%2A> -Eigenschaft wird mit der angegebenen Liste von token Resolvern initialisiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="tokenResolvers" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenResolvers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Selectors.SecurityTokenResolver&gt; TokenResolvers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Selectors.SecurityTokenResolver&gt; TokenResolvers" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.AggregateTokenResolver.TokenResolvers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Selectors.SecurityTokenResolver&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Sicherheit token Konfliktlöser, die von dieser Instanz umschlossen ist.</summary>
+        <value>Eine schreibgeschützte Auflistung, die das token Resolver enthält, die von dieser Instanz umschlossen sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveSecurityKeyCore">
+      <MemberSignature Language="C#" Value="protected override bool TryResolveSecurityKeyCore (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, out System.IdentityModel.Tokens.SecurityKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool TryResolveSecurityKeyCore(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, [out] class System.IdentityModel.Tokens.SecurityKey&amp; key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.AggregateTokenResolver.TryResolveSecurityKeyCore(System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.IdentityModel.Tokens.SecurityKey@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="key" Type="System.IdentityModel.Tokens.SecurityKey&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Die schlüsselbezeichnerklausel, der Schlüssel abgerufen werden soll.</param>
+        <param name="key">Bei der Rückgabe dieser Methode enthält den Schlüssel, der in der angegebenen schlüsselbezeichnerklausel verwiesen wird. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, den Schlüssel abzurufen, auf den in der angegebenen Schlüsselbezeichnerklausel verwiesen wird.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Schlüssel für die angegebene Schlüsselbezeichnerklausel abgerufen werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.AggregateTokenResolver.TryResolveSecurityKeyCore%2A>-Methode wird von der <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKey%2A>-Methode und der <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveSecurityKey%2A>-Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifierClause" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveTokenCore">
+      <MemberSignature Language="C#" Value="protected override bool TryResolveTokenCore (System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier, out System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool TryResolveTokenCore(class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier, [out] class System.IdentityModel.Tokens.SecurityToken&amp; token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.AggregateTokenResolver.TryResolveTokenCore(System.IdentityModel.Tokens.SecurityKeyIdentifier,System.IdentityModel.Tokens.SecurityToken@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">Der Sicherheitsschlüsselbezeichner, das Token für abzurufen.</param>
+        <param name="token">Wenn diese Methode zurückgibt, enthält ein Token, das den angegebenen Schlüsselbezeichner darstellt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, das Sicherheitstoken abzurufen, das mindestens eine der schlüsselbezeichnerklauseln im angegebenen Schlüsselbezeichner enthalten entspricht.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Token für den angegebenen Schlüsselbezeichner abgerufen werden kann. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.AggregateTokenResolver.TryResolveTokenCore%2A>-Methode wird von der <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A>-Methode und der <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A>-Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifier" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveTokenCore">
+      <MemberSignature Language="C#" Value="protected override bool TryResolveTokenCore (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, out System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool TryResolveTokenCore(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, [out] class System.IdentityModel.Tokens.SecurityToken&amp; token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.AggregateTokenResolver.TryResolveTokenCore(System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.IdentityModel.Tokens.SecurityToken@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Die schlüsselbezeichnerklausel für ein Sicherheitstoken zu erstellen.</param>
+        <param name="token">Wenn diese Methode zurückgibt, enthält ein Sicherheitstoken, das die angegebene schlüsselbezeichnerklausel darstellt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, das Sicherheitstoken aufzulösen, das der angegebenen schlüsselbezeichnerklausel entspricht.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Sicherheitstoken für die angegebene Schlüsselbezeichnerklausel abgerufen werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.AggregateTokenResolver.TryResolveTokenCore%2A>-Methode wird von der <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A>-Methode und der <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A>-Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifierClause" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

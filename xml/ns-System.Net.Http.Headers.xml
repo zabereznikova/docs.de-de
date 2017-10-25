@@ -1,0 +1,13 @@
+<Namespace Name="System.Net.Http.Headers">
+  <Docs>
+    <summary>Bietet Unterstützung für Auflistungen von HTTP-Headern, die vom <see cref="N:System.Net.Http" />-Namespace verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Http.Headers> Namespace bietet Unterstützung für HTTP-Header, gemäß [RFC 2616](http://go.microsoft.com/fwlink/?LinkID=241642) durch die IETF.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

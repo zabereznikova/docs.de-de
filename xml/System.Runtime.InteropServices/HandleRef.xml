@@ -1,0 +1,193 @@
+<Type Name="HandleRef" FullName="System.Runtime.InteropServices.HandleRef">
+  <TypeSignature Language="C#" Value="public struct HandleRef" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit HandleRef extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.HandleRef" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Umschließt ein verwaltetes Objekt, das ein Handle zu einer Ressource enthält, die über einen Plattformaufruf an nicht verwalteten Code übergeben wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Beginnend mit .NET Framework 2.0, die Funktionalität der <xref:System.Runtime.InteropServices.HandleRef> Klasse wurde ersetzt durch die <xref:System.Runtime.InteropServices.SafeHandle> Klasse und abgeleitete Klassen, als auch durch die <xref:System.Runtime.InteropServices.CriticalHandle> Klasse.  
+  
+ Bei Verwendung von Plattform aufrufen, um ein verwaltetes Objekt aufzurufen und das Objekt ist nicht an anderer Stelle verwiesen, nach der Plattformaufruf, es ist möglich, dass der Garbage Collector das verwaltete Objekt abschließen. Diese Aktion gibt die Ressource frei und erklärt das Handle die Plattform verursacht Plattformaufrufs fehlschlägt. Ein Handle mit Wrapping <xref:System.Runtime.InteropServices.HandleRef> wird sichergestellt, dass das verwaltete Objekt wird keine Garbage Collection durchgeführt wird, bis der Plattformaufruf abgeschlossen ist. Eine Beschreibung der Plattform Dienste aufrufen, finden Sie unter [nicht verwaltete DLL-Funktionen nutzen](~/docs/framework/interop/consuming-unmanaged-dll-functions.md).  
+  
+ Die <xref:System.Runtime.InteropServices.HandleRef> Werttyp, z. B. <xref:System.Runtime.InteropServices.GCHandle>, ist ein spezieller Typ von der Interop-Marshaller erkannt. Ein normaler nicht fixiertes <xref:System.Runtime.InteropServices.GCHandle> vorzeitige Erfassung durch die Garbagecollection, wird außerdem verhindert <xref:System.Runtime.InteropServices.HandleRef> bietet eine bessere Leistung. Obwohl durch die Verwendung <xref:System.Runtime.InteropServices.HandleRef> auf ein Objekt am Leben zu erhalten, für die Dauer einer Plattform Plattformaufrufs werden bevorzugt, können Sie auch die <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> Methode für den gleichen Zweck.  
+  
+ Die <xref:System.Runtime.InteropServices.HandleRef> Konstruktor akzeptiert zwei Parameter: eine <xref:System.Object> , die den Wrapper darstellt und ein <xref:System.IntPtr> , die nicht verwaltete Handle darstellt. Der Interop-Marshaller übergibt nur das Handle zu nicht verwaltetem Code und stellt sicher, dass den Wrapper (als erster Parameter übergeben wird, an den Konstruktor der `HandleRef`) für die Dauer des Aufrufs aktiv bleibt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HandleRef (object wrapper, IntPtr handle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object wrapper, native int handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.HandleRef.#ctor(System.Object,System.IntPtr)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="wrapper" Type="System.Object" />
+        <Parameter Name="handle" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="wrapper">Ein verwaltetes Objekt, das nicht beendet werden sollte, bis der Plattformaufruf zurückgibt.</param>
+        <param name="handle">Ein <see cref="T:System.IntPtr" /> , der ein Handle für eine Ressource angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.HandleRef" /> Klasse mit dem Objekt um Wrap und ein Handle für die Ressource, die von nicht verwaltetem Code verwendet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public IntPtr Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Handle" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.HandleRef.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Handle für eine Ressource ab.</summary>
+        <value>Das Handle für eine Ressource.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator IntPtr (System.Runtime.InteropServices.HandleRef value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname native int op_Explicit(valuetype System.Runtime.InteropServices.HandleRef value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.HandleRef.op_Explicit(System.Runtime.InteropServices.HandleRef)~System.IntPtr" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Runtime.InteropServices.HandleRef" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToIntPtr">
+      <MemberSignature Language="C#" Value="public static IntPtr ToIntPtr (System.Runtime.InteropServices.HandleRef value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native int ToIntPtr(valuetype System.Runtime.InteropServices.HandleRef value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.HandleRef.ToIntPtr(System.Runtime.InteropServices.HandleRef)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Runtime.InteropServices.HandleRef" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Runtime.InteropServices.HandleRef" /> eine interne ganzzahlige Darstellung von abzurufenden Objekts.</param>
+        <summary>Gibt die interne ganzzahlige Darstellung einer <see cref="T:System.Runtime.InteropServices.HandleRef" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.IntPtr" /> -Objekt, das stellt einen <see cref="T:System.Runtime.InteropServices.HandleRef" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrapper">
+      <MemberSignature Language="C#" Value="public object Wrapper { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Wrapper" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.HandleRef.Wrapper" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das den Handle auf eine Ressource ab.</summary>
+        <value>Das Objekt, das den Handle auf eine Ressource.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

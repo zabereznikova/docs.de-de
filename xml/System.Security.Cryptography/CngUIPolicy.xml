@@ -1,0 +1,343 @@
+<Type Name="CngUIPolicy" FullName="System.Security.Cryptography.CngUIPolicy">
+  <TypeSignature Language="C#" Value="public sealed class CngUIPolicy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CngUIPolicy extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CngUIPolicy" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Kapselt optionale Konfigurationsparameter für die Benutzeroberfläche (UI), die von Cryptography Next Generation (CNG) angezeigt werden, wenn Sie auf einen geschützten Schlüssel zugreifen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ermöglicht Ihnen die Erstellung eine UI-Richtlinie für die Anzeige von aufforderungen zur Schlüsselvorgänge z. B. Smartcard PIN-Abfragen. Darüber hinaus können Sie Eingreifen des Benutzers für den Zugriff auf einen Schlüssel zu erzwingen, auch wenn der Schlüssel in einer Software Schlüsselspeicheranbieter (KSP) anstelle von in einer Smartcard gespeichert ist. CNG zeigt diese Konfigurationsparameter für die Benutzeroberfläche an, wenn Sie einen geschützten Schlüssel zugreifen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CngUIPolicy (System.Security.Cryptography.CngUIProtectionLevels protectionLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.CngUIProtectionLevels protectionLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngUIPolicy.#ctor(System.Security.Cryptography.CngUIProtectionLevels)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectionLevel" Type="System.Security.Cryptography.CngUIProtectionLevels" />
+      </Parameters>
+      <Docs>
+        <param name="protectionLevel">Eine bitweise Kombination der Enumerationswerte, die die Schutzebene festlegen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.CngUIPolicy" /> -Klasse unter Verwendung der angegebenen Schutzebene.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die Schutzebene für den Schlüssel in aufforderungsstufe UI-Szenarien.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CngUIPolicy (System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngUIPolicy.#ctor(System.Security.Cryptography.CngUIProtectionLevels,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectionLevel" Type="System.Security.Cryptography.CngUIProtectionLevels" />
+        <Parameter Name="friendlyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="protectionLevel">Eine bitweise Kombination der Enumerationswerte, die die Schutzebene festlegen.</param>
+        <param name="friendlyName">Ein Anzeigename für den Schlüssel in der UI-Eingabeaufforderung verwendet werden. Geben Sie eine null-Zeichenfolge um den Standardnamen verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Security.Cryptography.CngUIPolicy" /> Klasse mithilfe des angegebenen Schutzebene und aussagekräftigen Namen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CngUIPolicy (System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngUIPolicy.#ctor(System.Security.Cryptography.CngUIProtectionLevels,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectionLevel" Type="System.Security.Cryptography.CngUIProtectionLevels" />
+        <Parameter Name="friendlyName" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="protectionLevel">Eine bitweise Kombination der Enumerationswerte, die die Schutzebene festlegen.</param>
+        <param name="friendlyName">Ein Anzeigename für den Schlüssel in der UI-Eingabeaufforderung verwendet werden. Geben Sie eine null-Zeichenfolge um den Standardnamen verwenden.</param>
+        <param name="description">Die Volltext-Beschreibung des Schlüssels. Geben Sie eine null-Zeichenfolge um die standardbeschreibung zu verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.CngUIPolicy" /> -Klasse unter Verwendung der angegebenen Schutzebene, Anzeigename und Beschreibung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CngUIPolicy (System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName, string description, string useContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName, string description, string useContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngUIPolicy.#ctor(System.Security.Cryptography.CngUIProtectionLevels,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectionLevel" Type="System.Security.Cryptography.CngUIProtectionLevels" />
+        <Parameter Name="friendlyName" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="useContext" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="protectionLevel">Eine bitweise Kombination der Enumerationswerte, die die Schutzebene festlegen.</param>
+        <param name="friendlyName">Ein Anzeigename für den Schlüssel in der UI-Eingabeaufforderung verwendet werden. Geben Sie eine null-Zeichenfolge um den Standardnamen verwenden.</param>
+        <param name="description">Die Volltext-Beschreibung des Schlüssels. Geben Sie eine null-Zeichenfolge um die standardbeschreibung zu verwenden.</param>
+        <param name="useContext">Eine Beschreibung der Verwendung des Schlüssels. Geben Sie eine null-Zeichenfolge um die standardbeschreibung zu verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.CngUIPolicy" /> -Klasse unter Verwendung der angegebenen Schutzebene, Anzeigenamen, Beschreibung und Kontext verwenden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CngUIPolicy (System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName, string description, string useContext, string creationTitle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName, string description, string useContext, string creationTitle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngUIPolicy.#ctor(System.Security.Cryptography.CngUIProtectionLevels,System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectionLevel" Type="System.Security.Cryptography.CngUIProtectionLevels" />
+        <Parameter Name="friendlyName" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="useContext" Type="System.String" />
+        <Parameter Name="creationTitle" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="protectionLevel">Eine bitweise Kombination der Enumerationswerte, die die Schutzebene festlegen.</param>
+        <param name="friendlyName">Ein Anzeigename für den Schlüssel in der UI-Eingabeaufforderung verwendet werden. Geben Sie eine null-Zeichenfolge um den Standardnamen verwenden.</param>
+        <param name="description">Die Volltext-Beschreibung des Schlüssels. Geben Sie eine null-Zeichenfolge um die standardbeschreibung zu verwenden.</param>
+        <param name="useContext">Eine Beschreibung der Verwendung des Schlüssels. Geben Sie eine null-Zeichenfolge um die standardbeschreibung zu verwenden.</param>
+        <param name="creationTitle">Der Titel des Dialogfelds "-", die die UI-Aufforderung bereitstellt. Geben Sie eine null-Zeichenfolge um den Standardtitel zu verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.CngUIPolicy" /> Klasse mithilfe des angegebenen Schutzebene, Anzeigenamen, Beschreibung, Kontext verwenden und Titel.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreationTitle">
+      <MemberSignature Language="C#" Value="public string CreationTitle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CreationTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngUIPolicy.CreationTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Titel, der von der Benutzeroberfläche angezeigt wird Prompt ab.</summary>
+        <value>Der Titel des Dialogfelds, das angezeigt wird, wenn die Schlüssel zugegriffen wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngUIPolicy.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibungszeichenfolge, die von der Benutzeroberfläche angezeigt wird Prompt ab.</summary>
+        <value>Der Beschreibungstext für das Dialogfeld wird angezeigt, wenn Sie den Schlüssel zugegriffen wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FriendlyName">
+      <MemberSignature Language="C#" Value="public string FriendlyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FriendlyName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngUIPolicy.FriendlyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anzeigenamen ab, der von der Benutzeroberfläche angezeigt wird auffordern.</summary>
+        <value>Der Anzeigename, der verwendet wird, um den Schlüssel in das Dialogfeld zu beschreiben, die angezeigt wird, wenn Sie den Schlüssel zugegriffen wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngUIProtectionLevels ProtectionLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.CngUIProtectionLevels ProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngUIPolicy.ProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngUIProtectionLevels</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schutzebene für die Benutzeroberfläche für den Schlüssel ab.</summary>
+        <value>Ein Objekt, das beschreibt, das Maß an Schutz vor der Benutzeroberfläche auf den Schlüssel angewendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseContext">
+      <MemberSignature Language="C#" Value="public string UseContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UseContext" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngUIPolicy.UseContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibung der Verwendung des Schlüssels ab.</summary>
+        <value>Die Beschreibung der Verwendung des Schlüssels.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

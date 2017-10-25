@@ -1,0 +1,433 @@
+<Type Name="DataType" FullName="System.ComponentModel.DataAnnotations.DataType">
+  <TypeSignature Language="C#" Value="public enum DataType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.DataType" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Stellt eine Enumeration der Datentypen dar, die Datenfeldern und -parametern zugeordnet sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, geben Sie den Typ der Daten einer Datenspalte oder einem Parameter zugeordnet werden soll. Um den Datentyp anzugeben, die, den Sie mit dem Feld "Daten" oder die Parameter zuordnen möchten, verwenden Sie die Ttribute-Klasse. Wählen Sie den Datentyp aus dieser Enumeration.  
+  
+ Das Ttribute-Attribut können Sie das Markieren von Feldern mithilfe von ein Typ, der als die systeminternen Datenbanktypen genauer bestimmt ist. Beispielsweise kann ein Zeichenfolgenfeld für Daten, die e-Mail-Adressen enthält, mit dem Typ der EmailAddress zugeschrieben werden. Diese Informationen über das Feldvorlagen möglich, und ändern, wie das Feld "Daten" verarbeitet wird.  
+  
+ Die folgende Tabelle enthält die Datentypen, die dynamische Daten bereitstellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Ttribute, um die Anzeige der EmailAddress-Feld "Daten" der Tabelle in der AdventureWorksLT-Datenbank anpassen. Die e-Mail-Adressen werden als Links anstelle der einfachen Text, den ASP.NET Dynamic Data abgeleitete enthalten würde vom systeminternen Datentyp angezeigt.  
+  
+ Der Beispielcode:  
+  
+-   Implementiert eine partielle Klasse der Metadaten für die verknüpfte Tabelle und die zugehörigen Metadaten-Klasse.  
+  
+-   Das Ttribute-Attribut der EmailAddress-Datenfeld angewendet, durch Angeben des EmailAddress aufgezählt-Werts in der zugehörigen Metadaten-Klasse. Dies zeigt die Feldvorlage Text.ascx, dass die e-Mail-Adresse Anzeige angepasst wird.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DataTypeAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DataTypeAttribute/CS/Customer.cs#1)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DataTypeAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DataTypeAttribute/VB/Customer.vb#1)]  
+  
+ Zum Kompilieren des Beispielcodes benötigen Sie Folgendes:  
+  
+-   Visual Studio 2008 Service Pack 1 oder Visual Developer 2008 Express Edition Service Pack 1.  
+  
+-   Die Beispieldatenbank "AdventureWorksLT". Informationen zum Herunterladen und Installieren der SQL Server-Beispieldatenbank finden Sie unter [Microsoft SQL Server Product Samples: Database](http://go.microsoft.com/fwlink/?LinkId=117483) auf der CodePlex-Website. Stellen Sie sicher, dass Sie die richtige Version der Beispieldatenbank für die Version von SQL Server installieren, dass Sie (SQL Server 2005 oder SQL Server 2008) ausgeführt werden.  
+  
+-   Eine Dynamic Data-Website. Dadurch können Sie erstellen einen Datenkontext für die Datenbank und die Klasse, die im Datenfeld anpassen und die Methoden überschreiben. Außerdem erstellt es die Umgebung aus, die die zuvor beschriebene Seite verwenden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: erstellen eine neue dynamische Website mithilfe von Datengerüstbau](http://msdn.microsoft.com/library/1564aef2-9103-436a-9806-c8ad7abd616a).  
+  
+ Das vollständige Codebeispiel, das die Feldvorlage verwendet wird, um die Anzeige der Datenfelder EmailAddress anpassen, finden Sie unter Ttribute.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreditCard">
+      <MemberSignature Language="C#" Value="CreditCard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType CreditCard = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.CreditCard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine Kreditkartennummer dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Currency">
+      <MemberSignature Language="C#" Value="Currency" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType Currency = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.Currency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen Währungswert an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType Custom = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen benutzerdefinierten Datentyp dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Date">
+      <MemberSignature Language="C#" Value="Date" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType Date = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.Date" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen Datumswert dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DateTime">
+      <MemberSignature Language="C#" Value="DateTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType DateTime = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.DateTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Einen Zeitpunkt darstellt, Datum und Uhrzeit dargestellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="Duration" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType Duration = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.Duration" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen fortlaufenden Zeitraum, in dem ein Objekt vorhanden ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EmailAddress">
+      <MemberSignature Language="C#" Value="EmailAddress" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType EmailAddress = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.EmailAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine e-Mail-Adresse dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Html">
+      <MemberSignature Language="C#" Value="Html" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType Html = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.Html" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine HTML-Datei dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageUrl">
+      <MemberSignature Language="C#" Value="ImageUrl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType ImageUrl = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.ImageUrl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine URL darstellt zu einem Bild.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultilineText">
+      <MemberSignature Language="C#" Value="MultilineText" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType MultilineText = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.MultilineText" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Mehrzeilige Text darstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="Password" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType Password = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.Password" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellen Sie einen Kennwortwert dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PhoneNumber">
+      <MemberSignature Language="C#" Value="PhoneNumber" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType PhoneNumber = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.PhoneNumber" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen Phone Number-Wert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PostalCode">
+      <MemberSignature Language="C#" Value="PostalCode" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType PostalCode = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.PostalCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine Postleitzahl dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType Text = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt Text, der angezeigt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Time">
+      <MemberSignature Language="C#" Value="Time" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType Time = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.Time" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen Uhrzeitwert dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Upload">
+      <MemberSignature Language="C#" Value="Upload" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType Upload = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.Upload" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Datei hochladen-Datentyp darstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="Url" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataAnnotations.DataType Url = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataAnnotations.DataType.Url" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen URL-Wert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

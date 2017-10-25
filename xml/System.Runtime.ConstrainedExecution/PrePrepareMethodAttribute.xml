@@ -1,0 +1,64 @@
+<Type Name="PrePrepareMethodAttribute" FullName="System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PrePrepareMethodAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PrePrepareMethodAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Constructor | System.AttributeTargets.Method, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Weist der Dienst für systemeigene Abbilder Generation So bereiten Sie eine Methode für die Aufnahme in einem eingeschränkten Ausführungsbereich (CER) vor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwenden der <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute> Attribut an eine Methode oder einen Konstruktor, um den Dienst für systemeigene Abbilder Generation mitzuteilen, dass die Methode (und seine statisch bestimmbare Aufrufdiagramm) für die Verwendung in einem eingeschränkten Ausführungsbereich vorbereitet werden. Dieses Attribut ist hilfreich, wenn die Methode, die auf der es angewendet wird explizit zur Laufzeit vorbereitet werden, und der Autor der Methode dies Weiß und möchte den Aufwand der Vorbereitung zur Laufzeit zu vermeiden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrePrepareMethodAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

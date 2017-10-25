@@ -1,0 +1,577 @@
+<Type Name="HttpRequestCachePolicy" FullName="System.Net.Cache.HttpRequestCachePolicy">
+  <TypeSignature Language="C#" Value="public class HttpRequestCachePolicy : System.Net.Cache.RequestCachePolicy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpRequestCachePolicy extends System.Net.Cache.RequestCachePolicy" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Cache.HttpRequestCachePolicy" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Requests</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.Cache.RequestCachePolicy</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Anwendung cacheanforderungen für Ressourcen, die mithilfe der abgerufen <see cref="T:System.Net.HttpWebRequest" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine Standardcacherichtlinie für Ihre Anwendung angeben, mit der <xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A> Eigenschaft oder der Anwendung oder des Computers Konfigurationsdateien. Weitere Informationen finden Sie unter [ &lt;RequestCaching&gt; -Element (Netzwerkeinstellungen)](~/docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+  
+ Sie können die Cacherichtlinie für eine einzelne Anforderung angeben, mit der <xref:System.Net.WebRequest.CachePolicy%2A> Eigenschaft.  
+  
+ Zwischenspeichern von Web Services wird nicht unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Standardcacherichtlinie für die Anwendungsdomäne erstellt und für eine Anforderung überschrieben.  
+  
+ [!code-cpp[NclSimpleCache#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#2)]
+ [!code-csharp[NclSimpleCache#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpRequestCachePolicy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Cache.HttpRequestCachePolicy.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Cache.HttpRequestCachePolicy" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Net.Cache.HttpRequestCachePolicy.Level%2A>-Eigenschaft mit <xref:System.Net.Cache.HttpRequestCacheLevel.Default>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der Cacherichtlinie Verwendung dieses Konstruktors.  
+  
+ [!code-cpp[NclSimpleCache#11](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#11)]
+ [!code-csharp[NclSimpleCache#11](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpRequestCachePolicy (DateTime cacheSyncDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DateTime cacheSyncDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Cache.HttpRequestCachePolicy.#ctor(System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cacheSyncDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="cacheSyncDate">Ein <see cref="T:System.DateTime" /> Objekt, das die Zeit angibt, wenn im Cache gespeicherten Ressourcen erneut überprüft werden müssen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.Cache.HttpRequestCachePolicy" /> -Klasse unter Verwendung des angegebenen Cache Synchronisierung Datums.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Datum der Cachesynchronisierung können Sie ein absolutes Datum angeben, an dem die zwischengespeicherten Inhalte erneut überprüft werden müssen. Wenn der Cacheeintrag zuletzt vor dem Datum der Cache-Synchronisierung erneut überprüft wurde, tritt ein, erneute Überprüfung mit dem Server. Wenn der Cacheeintrag wurde nach dem Datum der Cache-Synchronisierung erneut überprüft, und es gibt keine serveranforderungen für die erneute Überprüfung, die den zwischengespeicherten Eintrag ungültig machen, wird der Eintrag aus dem Cache verwendet. Wenn das Datum der Cachesynchronisierung auf ein Datum in der Zukunft festgelegt ist, wird der Eintrag bei jedem Aufruf erneut überprüft, bis das Datum der Cachesynchronisierung vorüber ist.  
+  
+ Dieser Konstruktor initialisiert die <xref:System.Net.Cache.HttpRequestCachePolicy.Level%2A>-Eigenschaft mit <xref:System.Net.Cache.HttpRequestCacheLevel.Default>. Die <xref:System.Net.Cache.HttpRequestCachePolicy.CacheSyncDate%2A>-Eigenschaft wird mit `cacheSyncDate` initialisiert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen einer Cacherichtlinie basierend auf einem Cache Synchronisierungsdatum.  
+  
+ [!code-cpp[NclSimpleCache#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#3)]
+ [!code-csharp[NclSimpleCache#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpRequestCachePolicy (System.Net.Cache.HttpRequestCacheLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Net.Cache.HttpRequestCacheLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Cache.HttpRequestCachePolicy.#ctor(System.Net.Cache.HttpRequestCacheLevel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="level" Type="System.Net.Cache.HttpRequestCacheLevel" />
+      </Parameters>
+      <Docs>
+        <param name="level">Ein <see cref="T:System.Net.Cache.HttpRequestCacheLevel" />-Wert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.Cache.HttpRequestCachePolicy" /> -Klasse unter Verwendung der angegebenen Cacherichtlinie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Net.Cache.HttpRequestCachePolicy.Level%2A>-Eigenschaft mit `level`.  
+  
+ Die <xref:System.Net.Cache.HttpRequestCacheLevel> Wert steuert, ob das Zwischenspeichern aktiviert ist und wenn der Cache verwendet werden kann. Weitere Informationen finden Sie unter der <xref:System.Net.Cache.HttpRequestCacheLevel> Dokumentation.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen einer Cacherichtlinie, die ermöglicht, im Cache aus dem Cache zu verwendende Ressourcen gefunden.  
+  
+ [!code-cpp[NclSimpleCache#12](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#12)]
+ [!code-csharp[NclSimpleCache#12](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpRequestCachePolicy (System.Net.Cache.HttpCacheAgeControl cacheAgeControl, TimeSpan ageOrFreshOrStale);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Net.Cache.HttpCacheAgeControl cacheAgeControl, valuetype System.TimeSpan ageOrFreshOrStale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Cache.HttpRequestCachePolicy.#ctor(System.Net.Cache.HttpCacheAgeControl,System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cacheAgeControl" Type="System.Net.Cache.HttpCacheAgeControl" />
+        <Parameter Name="ageOrFreshOrStale" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="cacheAgeControl">Eines der folgenden <see cref="T:System.Net.Cache.HttpCacheAgeControl" /> Enumerationswerte: <see cref="F:System.Net.Cache.HttpCacheAgeControl.MaxAge" />, <see cref="F:System.Net.Cache.HttpCacheAgeControl.MaxStale" />, oder <see cref="F:System.Net.Cache.HttpCacheAgeControl.MinFresh" />.</param>
+        <param name="ageOrFreshOrStale">Ein <see cref="T:System.TimeSpan" /> Wert, der eine Zeitspanne angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.Cache.HttpRequestCachePolicy" /> -Klasse mithilfe der angegebenen Age-Steuerelement und die Uhrzeit-Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `cacheAgeControl` Wert definiert die Bedeutung der `ageOrFreshOrStale` Parameterwert und wird verwendet, um die zugeordnete Eigenschaft festgelegt. Wenn Sie z. B. angeben <xref:System.Net.Cache.HttpCacheAgeControl.MaxStale>, <xref:System.Net.Cache.HttpRequestCachePolicy.MaxStale%2A> auf den Wert der Eigenschaft festgelegt ist die `ageOrFreshOrStale` Parameter.  
+  
+ Dieser Konstruktor initialisiert die <xref:System.Net.Cache.HttpRequestCachePolicy.Level%2A>-Eigenschaft mit <xref:System.Net.Cache.HttpRequestCacheLevel.Default>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen einer Cacherichtlinie basierend auf zur minimalen Aktualität.  
+  
+ [!code-cpp[NclSimpleCache#5](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#5)]
+ [!code-csharp[NclSimpleCache#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert für die <paramref name="cacheAgeControl" /> Parameter kann nicht mit diesem Konstruktor verwendet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpRequestCachePolicy (System.Net.Cache.HttpCacheAgeControl cacheAgeControl, TimeSpan maxAge, TimeSpan freshOrStale);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Net.Cache.HttpCacheAgeControl cacheAgeControl, valuetype System.TimeSpan maxAge, valuetype System.TimeSpan freshOrStale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Cache.HttpRequestCachePolicy.#ctor(System.Net.Cache.HttpCacheAgeControl,System.TimeSpan,System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cacheAgeControl" Type="System.Net.Cache.HttpCacheAgeControl" />
+        <Parameter Name="maxAge" Type="System.TimeSpan" />
+        <Parameter Name="freshOrStale" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="cacheAgeControl">Ein <see cref="T:System.Net.Cache.HttpCacheAgeControl" />-Wert.</param>
+        <param name="maxAge">Ein <see cref="T:System.TimeSpan" /> Wert, der das maximale Alter für Ressourcen angibt.</param>
+        <param name="freshOrStale">Ein <see cref="T:System.TimeSpan" /> Wert, der eine Zeitspanne angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.Cache.HttpRequestCachePolicy" /> -Klasse unter Verwendung der angegebenen Maximales Alter, Alter, Control-Wert und Time-Werten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `cacheAgeControl` Wert wird verwendet, um die Bedeutung von der `freshOrStale` Parameterwert und die zugeordnete Eigenschaft festzulegen. Wenn Sie z. B. angeben <xref:System.Net.Cache.HttpCacheAgeControl.MaxStale>, <xref:System.Net.Cache.HttpRequestCachePolicy.MaxStale%2A> auf den Wert der Eigenschaft festgelegt ist die `freshOrStale` Parameter. Beim Angeben von <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMaxStale>, die <xref:System.Net.Cache.HttpRequestCachePolicy.MaxAge%2A> Eigenschaft festgelegt ist, mit dem Wert von der `maxAge` Parameter und die <xref:System.Net.Cache.HttpRequestCachePolicy.MaxStale%2A> Eigenschaft festgelegt ist, mit dem Wert des der `freshOrStale` Parameter.  
+  
+ Beachten Sie, dass es sei denn, Sie geben <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMaxStale> oder <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh>die <xref:System.Net.Cache.HttpRequestCachePolicy.MaxAge%2A> Eigenschaft nicht festgelegt ist.  
+  
+ Dieser Konstruktor initialisiert die <xref:System.Net.Cache.HttpRequestCachePolicy.Level%2A>-Eigenschaft mit <xref:System.Net.Cache.HttpRequestCacheLevel.Default>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen einer Cacherichtlinie Grundlage zur minimalen Aktualität und maximale Alter.  
+  
+ [!code-cpp[NclSimpleCache#9](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#9)]
+ [!code-csharp[NclSimpleCache#9](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert für die <paramref name="cacheAgeControl" /> -Parameter ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpRequestCachePolicy (System.Net.Cache.HttpCacheAgeControl cacheAgeControl, TimeSpan maxAge, TimeSpan freshOrStale, DateTime cacheSyncDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Net.Cache.HttpCacheAgeControl cacheAgeControl, valuetype System.TimeSpan maxAge, valuetype System.TimeSpan freshOrStale, valuetype System.DateTime cacheSyncDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Cache.HttpRequestCachePolicy.#ctor(System.Net.Cache.HttpCacheAgeControl,System.TimeSpan,System.TimeSpan,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cacheAgeControl" Type="System.Net.Cache.HttpCacheAgeControl" />
+        <Parameter Name="maxAge" Type="System.TimeSpan" />
+        <Parameter Name="freshOrStale" Type="System.TimeSpan" />
+        <Parameter Name="cacheSyncDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="cacheAgeControl">Ein <see cref="T:System.Net.Cache.HttpCacheAgeControl" />-Wert.</param>
+        <param name="maxAge">Ein <see cref="T:System.TimeSpan" /> Wert, der das maximale Alter für Ressourcen angibt.</param>
+        <param name="freshOrStale">Ein <see cref="T:System.TimeSpan" /> Wert, der eine Zeitspanne angibt.</param>
+        <param name="cacheSyncDate">Ein <see cref="T:System.DateTime" /> Objekt, das die Zeit angibt, wenn im Cache gespeicherten Ressourcen erneut überprüft werden müssen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.Cache.HttpRequestCachePolicy" /> -Klasse unter Verwendung der angegebenen Maximales Alter, Alter, Control-Wert, Time-Werten und Synchronisierungsdatum zwischengespeichert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `cacheAgeControl` Wert wird verwendet, um die Bedeutung von der `freshOrStale` Parameterwert und die zugeordnete Eigenschaft festzulegen. Wenn Sie z. B. angeben <xref:System.Net.Cache.HttpCacheAgeControl.MaxStale>, <xref:System.Net.Cache.HttpRequestCachePolicy.MaxStale%2A> auf den Wert der Eigenschaft festgelegt ist die `freshOrStale` Parameter. Beim Angeben von <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMaxStale>, die <xref:System.Net.Cache.HttpRequestCachePolicy.MaxAge%2A> Eigenschaft festgelegt ist, mit dem Wert von der `maxAge` Parameter und die <xref:System.Net.Cache.HttpRequestCachePolicy.MaxStale%2A> Eigenschaft festgelegt ist, mit dem Wert des der `freshOrStale` Parameter.  
+  
+ Beachten Sie, dass es sei denn, Sie geben <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMaxStale> oder <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh>die <xref:System.Net.Cache.HttpRequestCachePolicy.MaxAge%2A> Eigenschaft nicht festgelegt ist.  
+  
+ Dieser Konstruktor initialisiert die <xref:System.Net.Cache.HttpRequestCachePolicy.CacheSyncDate%2A> Eigenschaft `cacheSyncDate`, und initialisiert die <xref:System.Net.Cache.HttpRequestCachePolicy.Level%2A> Eigenschaft <xref:System.Net.Cache.HttpRequestCacheLevel.Default>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen einer Cacherichtlinie basierend auf zur minimalen Aktualität, Maximales Alter und ein Cache Synchronisierungsdatum.  
+  
+ [!code-cpp[NclSimpleCache#10](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#10)]
+ [!code-csharp[NclSimpleCache#10](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheSyncDate">
+      <MemberSignature Language="C#" Value="public DateTime CacheSyncDate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime CacheSyncDate" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Cache.HttpRequestCachePolicy.CacheSyncDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datum des Cache-Synchronisierung für diese Instanz ab.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> Wert das Datum angegeben, der Erstellung dieser Instanz. Wenn kein Datum angegeben wurde, wird der Wert dieser Eigenschaft <see cref="F:System.DateTime.MinValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Datum der Cachesynchronisierung können Sie ein absolutes Datum angeben, an dem die zwischengespeicherten Inhalte erneut überprüft werden müssen. Wenn der Cacheeintrag zuletzt vor dem Datum der Cache-Synchronisierung erneut überprüft wurde, tritt ein, erneute Überprüfung mit dem Server. Wenn der Cacheeintrag wurde nach dem Datum der Cache-Synchronisierung erneut überprüft, und es gibt keine serveranforderungen für die erneute Überprüfung, die den zwischengespeicherten Eintrag ungültig machen, wird der Eintrag aus dem Cache verwendet. Wenn das Datum der Cachesynchronisierung auf ein Datum in der Zukunft festgelegt ist, wird der Eintrag bei jedem Aufruf erneut überprüft, bis das Datum der Cachesynchronisierung vorüber ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NclSimpleCache#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#3)]
+ [!code-csharp[NclSimpleCache#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public System.Net.Cache.HttpRequestCacheLevel Level { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Cache.HttpRequestCacheLevel Level" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Cache.HttpRequestCachePolicy.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpRequestCacheLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Net.Cache.HttpRequestCacheLevel" /> -Wert, der beim Erstellen dieser Instanz angegeben wurde.</summary>
+        <value>Ein <see cref="T:System.Net.Cache.HttpRequestCacheLevel" /> Wert, der das Cacheverhalten für Ressourcen angibt, die mittels abgerufen wurden <see cref="T:System.Net.HttpWebRequest" /> Objekte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Anwendungen in der Regel <xref:System.Net.Cache.HttpRequestCacheLevel.Default> als ihren Cacherichtlinienebene. Die <xref:System.Net.WebRequest.CachePolicy%2A> Eigenschaft, wenn nicht `null`, bestimmt die Cacherichtlinie für eine Anforderung. Die Standardrichtlinie für die Anwendungsdomäne kann festgelegt werden, mithilfe der <xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A> Eigenschaft oder Einstellungen des Computers oder Anwendungskonfigurationsdateien. Weitere Informationen finden Sie unter [ &lt;RequestCaching&gt; -Element (Netzwerkeinstellungen)](~/docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NclSimpleCache#11](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#11)]
+ [!code-csharp[NclSimpleCache#11](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxAge">
+      <MemberSignature Language="C#" Value="public TimeSpan MaxAge { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaxAge" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Cache.HttpRequestCachePolicy.MaxAge" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale zulässige Alter für eine Ressource aus dem Cache zurückgegeben.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> Wert, der das maximale Alter Wert festgelegt ist angegeben, wenn diese Instanz erstellt wurde. Wenn kein Datum angegeben wurde, wird der Wert dieser Eigenschaft <see cref="F:System.DateTime.MinValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die zwischengespeicherte Kopie der Ressource älter als die angegebene Zeit-Wert ist, muss die Ressource erneut überprüft werden. Der Wert für diese Eigenschaft wird angegeben, wenn die Instanz erstellt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NclSimpleCache#7](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#7)]
+ [!code-csharp[NclSimpleCache#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxStale">
+      <MemberSignature Language="C#" Value="public TimeSpan MaxStale { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaxStale" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Cache.HttpRequestCachePolicy.MaxStale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Überalterung-Wert, der berechtigt ist für eine Ressource aus dem Cache zurückgegeben.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> Wert, der die maximale Überalterung Wert festgelegt ist angegeben, wenn diese Instanz erstellt wurde. Wenn kein Datum angegeben wurde, wird der Wert dieser Eigenschaft <see cref="F:System.DateTime.MinValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die Zeitdauer nach dem Ablauf von Inhalten während der die zwischengespeicherte Kopie der Ressource zulässig ist. Der Wert für diese Eigenschaft wird angegeben, wenn die Instanz erstellt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NclSimpleCache#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#6)]
+ [!code-csharp[NclSimpleCache#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinFresh">
+      <MemberSignature Language="C#" Value="public TimeSpan MinFresh { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MinFresh" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Cache.HttpRequestCachePolicy.MinFresh" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die minimale Aktualität, die zulässig ist für eine Ressource aus dem Cache zurückgegeben.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> Wert, der angibt, die zur minimale Aktualität angegeben, wenn dieses Objekt erstellt wurde. Wenn kein Datum angegeben wurde, wird der Wert dieser Eigenschaft <see cref="F:System.DateTime.MinValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert gibt die Zeitspanne vor Ablauf, bei denen die zwischengespeicherte Kopie der Ressource zulässig ist. Der Wert für diese Eigenschaft wird angegeben, wenn die Instanz erstellt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NclSimpleCache#5](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#5)]
+ [!code-csharp[NclSimpleCache#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Cache.HttpRequestCachePolicy.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung dieser Instanz zurück.</summary>
+        <returns>Ein <see cref="T:System.String" /> Wert, der die Eigenschaftswerte für diese Instanz enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichenfolge enthält eine Bezeichnung, die bezeichnet die Eigenschaft, gefolgt von einem Doppelpunkt (":") und dem Wert. Eigenschaften werden durch ein Leerzeichen getrennt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Aufrufen dieser Methode.  
+  
+ [!code-cpp[NclSimpleCache#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#1)]
+ [!code-csharp[NclSimpleCache#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,379 @@
+<Type Name="ListViewGroup" FullName="System.Windows.Forms.ListViewGroup">
+  <TypeSignature Language="C#" Value="public sealed class ListViewGroup : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ListViewGroup extends System.Object implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListViewGroup" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Header")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignTimeVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ListViewGroupConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Gruppe von Elementen angezeigt, die innerhalb einer <see cref="T:System.Windows.Forms.ListView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListView> gruppenfunktion ermöglicht die Erstellung visuelle Gruppen logisch zusammengehörigen <xref:System.Windows.Forms.ListView> Elemente. Jede Gruppe besteht aus einem textbasierten Header, gefolgt von einer horizontalen Linie und die Elemente, die dieser Gruppe zugewiesenen. Sie können den Headertext linksbündig, rechtsbündig oder zentriert des Steuerelements ausgerichtet. Alle Gruppen zugewiesen eine <xref:System.Windows.Forms.ListView> Steuerelement angezeigt werden, wenn die <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType> Eigenschaft wird auf einen Wert festgelegt, außer <xref:System.Windows.Forms.View?displayProperty=nameWithType>.  
+  
+ <xref:System.Windows.Forms.ListView>Gruppen können Ihre Benutzer die Elemente zu suchen, die sie suchen durch die Elemente in hilfreichen Kategorien unterteilen. Sie können die Kategorien erstellen, Sie müssen. Eine typische Möglichkeit zum Gruppieren der Elemente ist wie sie sortiert sind. Beispielsweise können Sie die Elemente gruppieren, nach dem ersten Buchstaben des Elementnamens, wenn sie in alphabetischer Reihenfolge sortiert sind, oder nach Unterelementen wie Typ oder Datum, wenn die Liste sortiert wird, indem Sie auf eine Spaltenüberschrift in der Detailansicht. Windows-Explorer verwendet diese Art der Gruppierung an.  
+  
+ Für die Verwendung die Grouping-Funktion hinzufügen, eine oder mehrere <xref:System.Windows.Forms.ListViewGroup> -Objekte und die <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> Auflistung von einem <xref:System.Windows.Forms.ListView> Steuerelement. Legen Sie den Text und die Ausrichtung die <xref:System.Windows.Forms.ListViewGroup.%23ctor%2A> Konstruktor, oder setzen Sie sie mithilfe der <xref:System.Windows.Forms.ListViewGroup.Header%2A> und <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A> Eigenschaften.  
+  
+ Zuweisen ein Elements zu einer Gruppe durch Angeben der Gruppe in der <xref:System.Windows.Forms.ListViewItem.%23ctor%2A> Konstruktor durch Festlegen der <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> -Eigenschaft, oder indem Sie direkt dem Element aus, um die <xref:System.Windows.Forms.ListViewGroup.Items%2A> Auflistung von einer Gruppe. Alle Elemente sollten Gruppen zugewiesen werden, bevor sie angezeigt werden. Alle Elemente, die nicht zu einer Gruppe zugewiesen sind erscheint in der Standardgruppe die Header-Bezeichnung "DefaultGroup {0}" besitzt. Die Standardgruppe ist nicht Bestandteil der <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> -Auflistung, und kann nicht geändert werden. Es ist in erster Linie erleichtert das Debuggen, um sicherzustellen, dass alle Elemente ordnungsgemäß Gruppen hinzugefügt wurden.  
+  
+ Ein Element kann jeweils nur in einer Gruppe sein. Sie können ändern, dass die Gruppe, zu dem ein Element, indem Sie festlegen gehört, der <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> Eigenschaft zur Laufzeit oder indem sie zum Hinzufügen der <xref:System.Windows.Forms.ListViewGroup.Items%2A> Sammlung einer anderen Gruppe automatisch aus der vorherigen Gruppe entfernt.  
+  
+> [!NOTE]
+>  Das Einfügemarkenfeature ist deaktiviert, bei Verwendung von Gruppen. Dies ist, da die gruppenfunktion Elemente durch Gruppenmitgliedschaft, sortiert während das Einfügemarkenfeature verwendet wird, mit Neupositionieren von Drag & Drop in eine <xref:System.Windows.Forms.ListView> Steuerelement, das noch nicht seine Elemente sortieren.  
+  
+> [!NOTE]
+>  <xref:System.Windows.Forms.ListView>Gruppen sind nur unter Windows XP und Windows Server 2003-Produktfamilie verfügbar, wenn Ihre Anwendung ruft die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Methode. Unter älteren Betriebssystemen Code in Zusammenhang mit Gruppen werden ignoriert, und die Gruppen werden nicht angezeigt. Jeglicher Code, der die Grouping-Funktion abhängt kann daher nicht ordnungsgemäß funktioniert. Sie können z. B. einen Test enthalten, der bestimmt, ob die Grouping-Funktion verfügbar ist, zu eine andere Funktionalität bereitstellen, wenn sie nicht verfügbar ist. Sie möchten z. B. Geben Sie alternative Sortierung, wenn die Ausführung unter Betriebssystemen, die Sortierung nach Gruppen nicht unterstützen.  
+>   
+>  Das Einfügemarkenfeature wird von der gleichen Bibliothek bereitgestellt, die das Feature des Betriebssystems Designs bereitstellt. Aufrufen, um die Verfügbarkeit dieser Bibliothek zu überprüfen, die <xref:System.Windows.Forms.FeatureSupport.IsPresent%28System.Object%29?displayProperty=nameWithType> -methodenüberladung, und übergeben Sie die <xref:System.Windows.Forms.OSFeature.Themes?displayProperty=nameWithType> Wert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ListView> gruppenfunktion, Elemente nach Unterelementwert in der Detailansicht zu organisieren. Diese Form der Gruppierung ähnelt der Gruppierung in Windows-Explorer verwendet. Im Beispiel werden die Gruppen dynamisch erstellt. Für jede Unterelementspalte ist eine Gruppe für jeden eindeutigen Unterelementwert erstellt. Für das übergeordnete Element-Spalte wird eine Gruppe für jeden eindeutigen Anfangsbuchstaben erstellt. Durch das Klicken auf eine Spalte sortiert die Elemente in den Gruppen, die für diese Spalte erstellt. Beim erneuten Klicken auf die gleiche Spaltenüberschrift kehrt die Reihenfolge der Gruppen.  
+  
+ [!code-cpp[System.Windows.Forms.ListView.Groups#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/CPP/listviewgroupsexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView.Groups#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/CS/listviewgroupsexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView.Groups#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/VB/listviewgroupsexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ListViewGroup" /> -Klasse unter Verwendung den Standardtext für die Header "ListViewGroup" und die Standard-verlassen-Header Ausrichtung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewGroup (string header);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string header) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroup.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="header" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="header">Der Text, der für die Kopfzeile angezeigt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ListViewGroup" /> -Klasse mit dem angegebenen Wert initialisiert werden, die <see cref="P:System.Windows.Forms.ListViewGroup.Header" /> -Eigenschaft und die Verwendung des standardmäßigen links Header Ausrichtung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewGroup (string key, string headerText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string key, string headerText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroup.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="headerText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Anfangswert von der <see cref="P:System.Windows.Forms.ListViewGroup.Name" /> Eigenschaft.</param>
+        <param name="headerText">Der Anfangswert von der <see cref="P:System.Windows.Forms.ListViewGroup.Header" /> Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ListViewGroup" /> -Klasse unter Verwendung der angegebenen Werte zum Initialisieren der <see cref="P:System.Windows.Forms.ListViewGroup.Name" /> und <see cref="P:System.Windows.Forms.ListViewGroup.Header" /> Eigenschaften.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewGroup (string header, System.Windows.Forms.HorizontalAlignment headerAlignment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string header, valuetype System.Windows.Forms.HorizontalAlignment headerAlignment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroup.#ctor(System.String,System.Windows.Forms.HorizontalAlignment)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="header" Type="System.String" />
+        <Parameter Name="headerAlignment" Type="System.Windows.Forms.HorizontalAlignment" />
+      </Parameters>
+      <Docs>
+        <param name="header">Der Text, der für die Kopfzeile angezeigt.</param>
+        <param name="headerAlignment">Eines der <see cref="T:System.Windows.Forms.HorizontalAlignment" /> Werte, der die Ausrichtung des den Headertext angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ListViewGroup" /> -Klasse unter Verwendung der angegebenen Headertext als auch die Ausrichtung des angegebenen Headers.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die `ListViewGroup` Konstruktor kann verwendet werden, in einer Anwendung, die organisiert <xref:System.Windows.Forms.ListView> Elemente als Unterelementwert in der Detailansicht. Diese Form der Gruppierung ähnelt der Gruppierung in Windows-Explorer verwendet. Im Beispiel werden die Gruppen dynamisch erstellt. Für jede Unterelementspalte ist eine Gruppe für jeden eindeutigen Unterelementwert erstellt. Für das übergeordnete Element-Spalte wird eine Gruppe für jeden eindeutigen Anfangsbuchstaben erstellt. Für jede Spalte erstellten Gruppen werden in einer Hashtabelle zusammen mit dem Unterelementtext oder Anfangsbuchstabens gespeichert. Wenn auf ein Spaltenheader geklickt wird, dient dieser Textwert Elementen-Gruppen für die entsprechende Spalte entsprechen.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.ListViewGroup> Verweis Übersichtsthema.  
+  
+ [!code-cpp[System.Windows.Forms.ListView.Groups#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/CPP/listviewgroupsexample.cpp#3)]
+ [!code-csharp[System.Windows.Forms.ListView.Groups#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/CS/listviewgroupsexample.cs#3)]
+ [!code-vb[System.Windows.Forms.ListView.Groups#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/VB/listviewgroupsexample.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="public string Header { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Header" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewGroup.Header" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Headertext für die Gruppe fest.</summary>
+        <value>Der Text, der für die Kopfzeile angezeigt. Der Standardwert ist "ListViewGroup".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um den Headertext abzurufen oder den Headerwert zur Laufzeit zu ändern. Sie können den Headertext auch festlegen, der <xref:System.Windows.Forms.ListViewGroup.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderAlignment">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HorizontalAlignment HeaderAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.HorizontalAlignment HeaderAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewGroup.HeaderAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HorizontalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung des Texts Header Gruppe fest.</summary>
+        <value>Eines der <see cref="T:System.Windows.Forms.HorizontalAlignment" /> Werte, der die Ausrichtung des den Headertext angibt. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.HorizontalAlignment.Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um die Ausrichtung der Kopfzeile abzurufen oder die Ausrichtung zur Laufzeit ändern. Sie können auch die Ausrichtung der Kopfzeile festlegen, der <xref:System.Windows.Forms.ListViewGroup.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der beim Festlegen dieser Eigenschaft angegebene Wert ist kein gültiger <see cref="T:System.Windows.Forms.HorizontalAlignment" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListView.ListViewItemCollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ListView/ListViewItemCollection Items" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewGroup.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListView+ListViewItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung mit allen Elementen, die mit dieser Gruppe verknüpft ist.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> , alle Elemente in der Gruppe enthalten. Wenn keine Elemente vorhanden, in der Gruppe, eine leere sind <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> Objekt wird zurückgegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zuweisen ein Elements zu einer Gruppe durch Angeben der Gruppe in der <xref:System.Windows.Forms.ListViewItem.%23ctor%2A> Konstruktor durch Festlegen der <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> -Eigenschaft, oder indem Sie direkt dem Element aus, um die <xref:System.Windows.Forms.ListViewGroup.Items%2A> Auflistung von einer Gruppe. Alle Elemente sollten Gruppen zugewiesen werden, bevor sie angezeigt werden. Alle Elemente, die nicht zu einer Gruppe zugewiesen sind erscheint in der Standardgruppe die Header-Bezeichnung "DefaultGroup {0}" besitzt. Die Standardgruppe ist nicht Bestandteil der <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> -Auflistung, und kann nicht geändert werden. Es ist in erster Linie erleichtert das Debuggen, um sicherzustellen, dass alle Elemente ordnungsgemäß Gruppen hinzugefügt wurden.  
+  
+ Ein Element kann jeweils nur in einer Gruppe sein. Sie können ändern, dass die Gruppe, zu dem ein Element, indem Sie festlegen gehört, der <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> Eigenschaft zur Laufzeit oder indem sie zum Hinzufügen der <xref:System.Windows.Forms.ListViewGroup.Items%2A> Sammlung einer anderen Gruppe automatisch aus der vorherigen Gruppe entfernt.  
+  
+> [!NOTE]
+>  Ein Element im vorhanden sein kann die <xref:System.Windows.Forms.ListViewGroup.Items%2A> Auflistung von einer Gruppe, aber wenn sie nicht auch in der <xref:System.Windows.Forms.ListView.Items%2A?displayProperty=nameWithType> Auflistung von der <xref:System.Windows.Forms.ListView> steuern selbst wird nicht im Steuerelement angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListView">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListView ListView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ListView ListView" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewGroup.ListView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.ListView" /> -Steuerelement, das diese Gruppe enthält.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.ListView" /> -Steuerelement, das diese Gruppe enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewGroup.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Gruppe fest.</summary>
+        <value>Der Name der Gruppe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroup.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die mit Daten zu füllende <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</param>
+        <param name="context">Das Ziel (siehe <see cref="T:System.Runtime.Serialization.StreamingContext" />) dieser Serialisierung.</param>
+        <summary>Füllt eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den Daten auf, die zum Serialisieren des Zielobjekts erforderlich sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewGroup.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Objekt, das Daten über die Gruppe enthält.</summary>
+        <value>Ein <see cref="T:System.Object" /> für die zusätzlichen Daten gespeichert werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Typ abgeleitet wurde. die <xref:System.Object> Klasse kann diese Eigenschaft zugewiesen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroup.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle Objekt darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

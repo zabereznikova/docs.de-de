@@ -1,0 +1,193 @@
+<Type Name="RuleHaltAction" FullName="System.Workflow.Activities.Rules.RuleHaltAction">
+  <TypeSignature Language="C#" Value="public class RuleHaltAction : System.Workflow.Activities.Rules.RuleAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit RuleHaltAction extends System.Workflow.Activities.Rules.RuleAction" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.RuleHaltAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Activities.Rules.RuleAction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Beendet das Ausführen von <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> und übergibt die Steuerung wieder an die aufrufende Methode.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Halt-Aktion ähnelt einem Unterbrechungsbefehl, obwohl sie das Ausführen von <xref:System.Workflow.Activities.Rules.RuleSet> beendet. Die Halt-Aktion beendet das Ausführen von <xref:System.Workflow.Activities.Rules.RuleSet>, nachdem alle Aktionen im selben Aktionsblock ausgeführt wurden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleHaltAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleHaltAction.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.RuleHaltAction" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.Workflow.Activities.Rules.RuleAction Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Workflow.Activities.Rules.RuleAction Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleHaltAction.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.Rules.RuleAction</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine tiefe Kopie der aktuellen <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</summary>
+        <returns>Eine <see cref="T:System.Workflow.Activities.Rules.RuleAction" />, die mit dieser Instanz identisch ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleHaltAction.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das <see cref="T:System.Object" />, das mit dem aktuellen <see cref="T:System.Object" /> verglichen werden soll.</param>
+        <summary>Stellt fest, ob zwei Objektinstanzen gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die Objekte gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override void Execute (System.Workflow.Activities.Rules.RuleExecution context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Execute(class System.Workflow.Activities.Rules.RuleExecution context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleHaltAction.Execute(System.Workflow.Activities.Rules.RuleExecution)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Workflow.Activities.Rules.RuleExecution" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der <see cref="T:System.Workflow.Activities.Rules.RuleExecution" />-Kontext zum Ausführen der <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</param>
+        <summary>Führt <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> mithilfe der angegebenen <see cref="T:System.Workflow.Activities.Rules.RuleExecution" /> aus.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleHaltAction.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Der Hashcode für diese Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSideEffects">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.ICollection&lt;string&gt; GetSideEffects (System.Workflow.Activities.Rules.RuleValidation validation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.ICollection`1&lt;string&gt; GetSideEffects(class System.Workflow.Activities.Rules.RuleValidation validation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleHaltAction.GetSideEffects(System.Workflow.Activities.Rules.RuleValidation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validation" Type="System.Workflow.Activities.Rules.RuleValidation" />
+      </Parameters>
+      <Docs>
+        <param name="validation"><see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> zum Verwalten der Validierung.</param>
+        <summary>Gibt die Felder und Eigenschaften zurück, die mit <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> aktualisiert werden.</summary>
+        <returns>Eine Liste der Felder und Eigenschaften, die von <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> geändert werden.  
+  
+ <block subset="none" type="note"><para>  
+ Da <see cref="T:System.Workflow.Activities.Rules.RuleHaltAction" /> über keine Parameter verfügt, ist der Rückgabewert immer eine leere Liste.  
+  
+</para></block></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleHaltAction.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolge "Halt" zurück.</summary>
+        <returns>Die Zeichenfolge "Halt".</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public override bool Validate (System.Workflow.Activities.Rules.RuleValidation validator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Validate(class System.Workflow.Activities.Rules.RuleValidation validator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleHaltAction.Validate(System.Workflow.Activities.Rules.RuleValidation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validator" Type="System.Workflow.Activities.Rules.RuleValidation" />
+      </Parameters>
+      <Docs>
+        <param name="validator"><see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> zum Verwalten der Validierung.</param>
+        <summary>Gibt true zurück, keine Validierung wird ausgeführt.</summary>
+        <returns>Gibt immer <see langword="true" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

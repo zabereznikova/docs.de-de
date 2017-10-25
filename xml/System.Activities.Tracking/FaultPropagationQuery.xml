@@ -1,0 +1,77 @@
+<Type Name="FaultPropagationQuery" FullName="System.Activities.Tracking.FaultPropagationQuery">
+  <TypeSignature Language="C#" Value="public sealed class FaultPropagationQuery : System.Activities.Tracking.TrackingQuery" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FaultPropagationQuery extends System.Activities.Tracking.TrackingQuery" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Tracking.FaultPropagationQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Tracking.TrackingQuery</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Beim Hinzufügen zur <see cref="P:System.Activities.Tracking.TrackingProfile.Queries" />-Auflistung werden Datensätze zur Fehlerweitergabe abonniert, wenn beim Nachverfolgungsprofil die Abfrage hinsichtlich Nachverfolgungsdatensätzen erfolgt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FaultPropagationQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.FaultPropagationQuery.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Tracking.FaultPropagationQuery" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FaultHandlerActivityName">
+      <MemberSignature Language="C#" Value="public string FaultHandlerActivityName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FaultHandlerActivityName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.FaultPropagationQuery.FaultHandlerActivityName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der fault hander-Aktivität ab, die den Fehler weitergegeben hat.</summary>
+        <value>Der Name der Aktivität.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung ist `*`, was bedeutet, dass Datensätze zur fehlerweitergabe für alle Aktivitäten zurückgegeben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FaultSourceActivityName">
+      <MemberSignature Language="C#" Value="public string FaultSourceActivityName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FaultSourceActivityName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.FaultPropagationQuery.FaultSourceActivityName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Aktivität ab, die die Quelle des Fehlers war.</summary>
+        <value>Der Aktivitätsname.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

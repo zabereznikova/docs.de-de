@@ -1,0 +1,452 @@
+<Type Name="KeyContainerPermission" FullName="System.Security.Permissions.KeyContainerPermission">
+  <TypeSignature Language="C#" Value="public sealed class KeyContainerPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit KeyContainerPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.KeyContainerPermission" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Steuert die Fähigkeit, auf Schlüsselcontainer zuzugreifen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch diese Berechtigung wird verwendet, um beschränkten Zugriff auf Schlüsselcontainer bereitzustellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyContainerPermission (System.Security.Permissions.KeyContainerPermissionFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.KeyContainerPermissionFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermission.#ctor(System.Security.Permissions.KeyContainerPermissionFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Security.Permissions.KeyContainerPermissionFlags" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Security.Permissions.KeyContainerPermissionFlags" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.KeyContainerPermission" /> Klasse mit dem angegebenen Zugriff.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.KeyContainerPermission.%23ctor%28System.Security.Permissions.KeyContainerPermissionFlags%29?displayProperty=nameWithType> Konstruktor.  
+  
+ [!code-cpp[System.Security.Permissions.KeyContainerPermission#20](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/CPP/keycontainerpermission.cpp#20)]
+ [!code-csharp[System.Security.Permissions.KeyContainerPermission#20](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/CS/keycontainerpermission.cs#20)]
+ [!code-vb[System.Security.Permissions.KeyContainerPermission#20](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/VB/Form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="flags" /> ist keine gültige Kombination von <see cref="T:System.Security.Permissions.KeyContainerPermissionFlags" />-Werten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyContainerPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Einer der <see cref="T:System.Security.Permissions.PermissionState" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.KeyContainerPermission" /> -Klasse mit eingeschränkter oder uneingeschränkter Berechtigung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt entweder `None` (vollständig eingeschränkt) oder `Unrestricted` Zugriff auf Schlüsselcontainer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="state" /> ist kein gültiger <see cref="T:System.Security.Permissions.PermissionState" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyContainerPermission (System.Security.Permissions.KeyContainerPermissionFlags flags, System.Security.Permissions.KeyContainerPermissionAccessEntry[] accessList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.KeyContainerPermissionFlags flags, class System.Security.Permissions.KeyContainerPermissionAccessEntry[] accessList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermission.#ctor(System.Security.Permissions.KeyContainerPermissionFlags,System.Security.Permissions.KeyContainerPermissionAccessEntry[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Security.Permissions.KeyContainerPermissionFlags" />
+        <Parameter Name="accessList" Type="System.Security.Permissions.KeyContainerPermissionAccessEntry[]" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Security.Permissions.KeyContainerPermissionFlags" />-Werte.</param>
+        <param name="accessList">Ein Array von <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> Objekte, die Zugriffsrechte für bestimmte Schlüsselcontainer identifiziert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.KeyContainerPermission" /> Klasse mit dem angegebenen globalen Zugriff und bestimmten Schlüsselcontainer Zugriffsrechte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.KeyContainerPermission.%23ctor%28System.Security.Permissions.KeyContainerPermissionFlags%2CSystem.Security.Permissions.KeyContainerPermissionAccessEntry%5B%5D%29?displayProperty=nameWithType> Konstruktor.  
+  
+ [!code-cpp[System.Security.Permissions.KeyContainerPermission#13](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/CPP/keycontainerpermission.cpp#13)]
+ [!code-csharp[System.Security.Permissions.KeyContainerPermission#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/CS/keycontainerpermission.cs#13)]
+ [!code-vb[System.Security.Permissions.KeyContainerPermission#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.KeyContainerPermission/VB/Form1.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="flags" /> ist keine gültige Kombination von <see cref="T:System.Security.Permissions.KeyContainerPermissionFlags" />-Werten.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="accessList" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessEntries">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.KeyContainerPermissionAccessEntryCollection AccessEntries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Permissions.KeyContainerPermissionAccessEntryCollection AccessEntries" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermission.AccessEntries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionAccessEntryCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" />-Objekten ab, die der aktuellen Berechtigung zugeordnet sind.</summary>
+        <value>Eine <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection" />, die die <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" />-Objekte für diese <see cref="T:System.Security.Permissions.KeyContainerPermission" /> enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry> Objekt in der Auflistung angibt, die Zugriffsrechte für einen bestimmten Schlüsselcontainer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine identische Kopie der aktuellen Berechtigung und gibt sie zurück.</summary>
+        <returns>Eine Kopie der aktuellen Berechtigung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Kopie der Berechtigung stellt den gleichen Zugriff auf Ressourcen wie die ursprüngliche Berechtigung dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.KeyContainerPermissionFlags Flags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.KeyContainerPermissionFlags Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermission.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schlüsselcontainer-Berechtigungsflags ab, die für alle der Berechtigung zugeordneten Schlüsselcontainer gelten.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Security.Permissions.KeyContainerPermissionFlags" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Permissions.KeyContainerPermission.Flags%2A> Eigenschaft wird vom Konstruktor festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement securityElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement securityElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityElement" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="securityElement">Ein <see cref="T:System.Security.SecurityElement" /> , enthält die XML-Codierung verwendet, um die Wiederherstellung der Berechtigung.</param>
+        <summary>Stellt eine Berechtigung mit einem angegebenen Zustand aus einer XML-Codierung wieder her.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Permissions.KeyContainerPermission.FromXml%2A> -Methode rekonstruiert ein <xref:System.Security.Permissions.KeyContainerPermission> Objekt aus einer XML-Codierung, die definiert, indem die <xref:System.Security.SecurityElement> Klasse. Verwenden der <xref:System.Security.Permissions.KeyContainerPermission.ToXml%2A> Methode für die XML-Codierung der <xref:System.Security.Permissions.KeyContainerPermission>, einschließlich Zustandsinformationen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="securityElement" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="securityElement" />ist kein gültiges Berechtigungselement.  
+  
+ - oder -   
+  
+ Die Versionsnummer des <paramref name="securityElement" /> wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Berechtigung für die Überschneidung mit der aktuellen Berechtigung. Sie muss vom selben Typ wie die aktuelle Berechtigung sein.</param>
+        <summary>Erstellt eine Berechtigung als Schnittmenge der aktuellen und der angegebenen Berechtigung und gibt diese zurück.</summary>
+        <returns>Eine neue Berechtigung, die die Schnittmenge der aktuellen und der angegebenen Berechtigung darstellt. Diese neue Berechtigung ist <see langword="null" /> , wenn die Schnittmenge leer ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Schnittmenge zweier Berechtigungen ist eine Berechtigung, die den Satz von Vorgänge zu beschreiben, den beide gemeinsam beschreiben. Nur eine Anforderung, die sowohl einzelne Berechtigungen erfolgreich durchläuft, wird die Schnittmenge übergeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" />ist kein <see langword="null" /> und gibt keine Berechtigung desselben Typs wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine für die Teilmengenbeziehung zu testende Berechtigung. Diese Berechtigung muss denselben Typ aufweisen wie die aktuelle Berechtigung.</param>
+        <summary>Bestimmt, ob die aktuelle Berechtigung eine Teilmenge der angegebenen Berechtigung ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle Berechtigung eine Teilmenge der angegebenen Berechtigung ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Berechtigung ist eine Teilmenge der angegebenen Berechtigung, wenn die aktuelle Berechtigung gibt eine Reihe von Vorgängen, die vollständig enthalten ist, in die angegebene Berechtigung. Angenommen, eine Berechtigung für <xref:System.Security.Permissions.KeyContainerPermissionFlags.Open> Zugriff ist eine Teilmenge einer Berechtigung für <xref:System.Security.Permissions.KeyContainerPermissionFlags.AllFlags> Zugriff.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" />ist kein <see langword="null" /> und gibt keine Berechtigung desselben Typs wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die aktuelle Berechtigung uneingeschränkt ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle Berechtigung uneingeschränkt ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine uneingeschränkte Berechtigung darstellt Zugriff auf alle Ressourcen, die durch die Berechtigung geschützten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine XML-Codierung der Berechtigung und ihres aktuellen Zustands.</summary>
+        <returns>Ein <see cref="T:System.Security.SecurityElement" /> , enthält eine XML-Codierung der Berechtigung, einschließlich Zustandsinformationen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Security.Permissions.KeyContainerPermission.FromXml%2A> Verfahren zum Wiederherstellen von Informationen über den Zustand aus einer <xref:System.Security.SecurityElement>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Berechtigung, die mit der aktuellen Berechtigung kombiniert werden soll. Sie muss denselben Typ aufweisen wie die aktuelle Berechtigung.</param>
+        <summary>Erstellt eine Berechtigung als Kombination der aktuellen und der angegebenen Berechtigung.</summary>
+        <returns>Eine neue Berechtigung, die die Kombination der aktuellen und der angegebenen Berechtigung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ergebnis eines Aufrufs von <xref:System.Security.Permissions.KeyContainerPermission.Union%2A> eine Berechtigung, alle Vorgänge dargestellt darstellt, wird von der aktuellen Berechtigung und der angegebenen Berechtigung ist. Jede Anforderung, entweder Berechtigung durchläuft, übergibt die Union.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" />ist kein <see langword="null" /> und gibt keine Berechtigung desselben Typs wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

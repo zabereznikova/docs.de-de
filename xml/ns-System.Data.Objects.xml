@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Objects">
+  <Docs>
+    <summary>Der <see cref="N:System.Data.Objects" />-Namespace enthält Klassen, die Zugriff auf die Kernfunktionen von Object Services gewähren. Diese Klassen ermöglichen das Abfragen, Einfügen, Aktualisieren und Löschen von Daten durch Verwendung stark typisierter CLR-Objekte, die Instanzen von Entitätstypen sind. Object Services unterstützt sowohl Language Integrated Query (LINQ) als auch Entity SQL-Abfragen für in einem Entity Data Model (EDM) definierte Typen. Object Services erstellt aus den zurückgegebenen Daten Objekte und gibt Objektänderungen an die Datenquelle weiter. Außerdem stellt es Funktionen zum Nachverfolgen von Änderungen, zum Binden von Objekten an Steuerelemente und zum Behandeln von Parallelität bereit. Weitere Informationen finden Sie unter <see href="http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038">Object Services Overview (Entity Framework)</see>.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

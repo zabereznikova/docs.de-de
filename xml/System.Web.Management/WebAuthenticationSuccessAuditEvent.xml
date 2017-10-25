@@ -1,0 +1,208 @@
+<Type Name="WebAuthenticationSuccessAuditEvent" FullName="System.Web.Management.WebAuthenticationSuccessAuditEvent">
+  <TypeSignature Language="C#" Value="public class WebAuthenticationSuccessAuditEvent : System.Web.Management.WebSuccessAuditEvent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebAuthenticationSuccessAuditEvent extends System.Web.Management.WebSuccessAuditEvent" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebAuthenticationSuccessAuditEvent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Management.WebSuccessAuditEvent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen über Ereignisse für erfolgreiche Nachrichtenauthentifizierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET-Systemüberwachung kann Produktions- und Vorgänge Mitarbeiter bereitgestellte Webanwendungen verwalten. Die <xref:System.Web.Management> Namespace enthält die integritätsereignis Typen, die verantwortlich für das Verpacken Integritätsstatus Anwendungsdaten und die Anbietertypen, die für die Verarbeitung dieser Daten verantwortlich. Darüber hinaus wird die unterstützende Typen, mit denen bei der Verwaltung von integritätsereignisse enthält.  
+  
+ Die folgende Liste beschreibt die Funktionen für die ASP.NET Ereignisse vom Typ löst <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent>.  
+  
+> [!NOTE]
+>  Standardmäßig konfiguriert ASP.NET können zum Protokollieren von fehlerbedingungen für die Überwachung nur, da die Protokollierung von erfolgreichen Bedingungen schwerwiegend Systemressourcen belasten.  Sie können das System zum Protokollieren der erfolgreichen Bedingungen immer konfigurieren.  
+  
+-   Formularauthentifizierung. Erfolgreiche Bedingungen geprüft werden. Erfolg Überwachungen gehören der Benutzername, der authentifiziert wurde. Fehlerüberwachungen sind den Benutzernamen, stattdessen nicht enthalten, da sie in der Regel durch ein Ticket verursacht, die Entschlüsselung oder Validierung fehlgeschlagen ist. Beide enthalten die Client-IP-Adresse. Verwandtes Ereignis Audit Code ist <xref:System.Web.Management.WebEventCodes.AuditFormsAuthenticationSuccess>.  
+  
+-   Mitgliedschaft. Erfolgreiche Bedingungen geprüft werden. Sowohl Erfolgs-als auch Überwachungen enthalten den Benutzernamen ab, der versucht wurde. Keine Form von Überwachungsprotokollen enthält das Kennwort, das versucht wurde, da die Gefahr besteht ein gültiges Kennwort in das Protokoll beibehalten. Verwandtes Ereignis Audit Code ist <xref:System.Web.Management.WebEventCodes.AuditMembershipAuthenticationSuccess>.  
+  
+ Wenn eine <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent> ausgelöst wird, standardmäßig den Leistungsindikator bei erfolgreicher Authentifizierung ausgelöste Ereignisse aktualisiert. Zum Anzeigen dieser Leistungsindikator des Systemmonitors (PerfMon) in der **Leistungsindikatoren hinzufügen** wählen Sie im Fenster **ASP.NET** in der **Leistungsobjekt** Dropdown-Liste der Authentifizierung ausgelöste Ereignisse Leistungsindikator, und klicken Sie auf die **hinzufügen** Schaltfläche. Weitere Informationen finden Sie unter [mithilfe des Systemmonitors (PerfMon) mit ASP.NET-Anwendungen](http://go.microsoft.com/fwlink/?linkid=36882&clcid=0x409) auf MSDN.  
+  
+> [!NOTE]
+>  In den meisten Fällen werden Sie die ASP.NET Systemüberwachung Typen verwenden, wie implementiert, und Sie werden das System Systemüberwachung steuern, durch Angeben von Werten in der `healthMonitoring` Konfigurationsabschnitt. Sie können auch aus den Typen Systemüberwachung, erstellen Sie eine eigene benutzerdefinierte Ereignisse und Anbieter ableiten. Ein Beispiel für das Ableiten von der <xref:System.Web.Management.WebBaseEvent> Klasse, finden Sie im Beispiel in diesem Thema.  
+  
+   
+  
+## Examples  
+ Dieses Codebeispiel besteht aus zwei Teilen: ein Auszug aus einer Konfigurationsdatei, gefolgt von Code, der zeigt, wie zum Anpassen der <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent> Ereignis.  
+  
+ Im folgenden finden Sie einen Auszug aus der Konfigurationsdatei `provider` und `eventMappings` Abschnitte. Sie sind bereits standardmäßig festgelegt. Das einzige, was Sie tun müssen, geben Sie das Setup für ist das `rules` Element in der `healthMonitoring` Abschnitt.  
+  
+```  
+<healthMonitoring  
+  enabled="true"  
+  heartBeatInterval="0">  
+  
+    <providers>  
+      // Configure the provider to process   
+      // the health events.  
+      <add name="EventLogProvider"  
+         type="System.Web.Management.EventLogWebEventProvider,  
+         System.Web,Version=2.0.3600.0,Culture=neutral,  
+         PublicKeyToken=b03f5f7f11d50a3a"/>  
+    </providers>  
+  
+    <eventMappings>  
+       <clear />  
+       // Configure the custom event   
+       // to handle the audit events.   
+        <add name="SampleWebAuthenticationSuccessAuditEvent"   
+          type="SamplesAspNet.SampleWebAuthenticationSuccessAuditEvent,  
+          webauthsuccessaudit, Version=1.0.1735.23144, Culture=neutral,   
+          PublicKeyToken=dd969eda3f3f6ae1, processorArchitecture=MSIL" />  
+  
+     </eventMappings>  
+     <rules>  
+       <clear/>  
+       // Establish the connection between custom event   
+       // and the provider that must process it.  
+      <add name="Log Authentication Success Audits"   
+        eventName="SampleWebAuthenticationFailureAuditEvent"  
+        provider="EventLogProvider"   
+        profile="Custom" />\  
+     </rules>  
+  
+</healthMonitoring>  
+```  
+  
+ Der folgende Code zeigt, wie Sie zum Anpassen der <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent> Ereignis.  
+  
+ [!code-csharp[System.Web.Management.WebAuthenticationSuccessAuditEvent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.management.WebAuthenticationSuccessAuditEvent/CS/WebAuthenticationSuccessAuditEvent.cs#1)]
+ [!code-vb[System.Web.Management.WebAuthenticationSuccessAuditEvent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.management.WebAuthenticationSuccessAuditEvent/VB/WebAuthenticationSuccessAuditEvent.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebAuthenticationSuccessAuditEvent (string message, object eventSource, int eventCode, string nameToAuthenticate);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode, string nameToAuthenticate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebAuthenticationSuccessAuditEvent.#ctor(System.String,System.Object,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+        <Parameter Name="nameToAuthenticate" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Beschreibung des Ereignisses.</param>
+        <param name="eventSource">Das Objekt, das die Quelle des Ereignisses ist.</param>
+        <param name="eventCode">Der Code, der dem Ereignis zugeordnet wird. Wenn Sie ein benutzerdefiniertes Ereignis implementieren, der Ereigniscode muss größer sein als <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <param name="nameToAuthenticate">Der Name des authentifizierten Benutzers.</param>
+        <summary>Initialisiert die <see cref="T:System.Web.Management.WebAuthenticationSuccessAuditEvent" /> -Klasse mit den angegebenen Parametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird intern vom ASP.NET Systemüberwachung System verwendet. Sie werden nie verwendet, um Instanziieren einer <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent> -Objekt, aber Sie können diesen Konstruktor beim Aufrufen eine eigene-Ereignis des Typs implementieren, die von dieser Klasse erbt.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Er wird von ASP.NET aufgerufen. Sie erreichen die <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent.%23ctor%2A> Konstruktor beim Ableiten von der <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie dieser Konstruktor anpassen.  
+  
+ [!code-csharp[System.Web.Management.WebAuthenticationSuccessAuditEvent#2](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.management.WebAuthenticationSuccessAuditEvent/CS/WebAuthenticationSuccessAuditEvent.cs#2)]
+ [!code-vb[System.Web.Management.WebAuthenticationSuccessAuditEvent#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.management.WebAuthenticationSuccessAuditEvent/VB/WebAuthenticationSuccessAuditEvent.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebAuthenticationSuccessAuditEvent (string message, object eventSource, int eventCode, int eventDetailCode, string nameToAuthenticate);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode, int32 eventDetailCode, string nameToAuthenticate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebAuthenticationSuccessAuditEvent.#ctor(System.String,System.Object,System.Int32,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+        <Parameter Name="eventDetailCode" Type="System.Int32" />
+        <Parameter Name="nameToAuthenticate" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Beschreibung des Ereignisses.</param>
+        <param name="eventSource">Das Objekt, das die Quelle des Ereignisses ist.</param>
+        <param name="eventCode">Der Code, der dem Ereignis zugeordnet wird. Wenn Sie ein benutzerdefiniertes Ereignis implementieren, der Ereigniscode muss größer sein als <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <param name="eventDetailCode">Die <see cref="T:System.Web.Management.WebEventCodes" /> Wert, der den ausführlichen Bezeichner für das Ereignis angibt.</param>
+        <param name="nameToAuthenticate">Der Name des authentifizierten Benutzers.</param>
+        <summary>Initialisiert die <see cref="T:System.Web.Management.WebSuccessAuditEvent" /> -Klasse mit den angegebenen Parametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird intern vom ASP.NET Systemüberwachung System verwendet. Sie werden nie verwendet, um Instanziieren einer <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent> -Objekt, aber Sie können diesen Konstruktor beim Aufrufen eine eigene-Ereignis des Typs implementieren, die von dieser Klasse erbt.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Er wird von ASP.NET aufgerufen. Sie erreichen die <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent.%23ctor%2A> Konstruktor beim Ableiten von der <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie dieser Konstruktor anpassen.  
+  
+ [!code-csharp[System.Web.Management.WebAuthenticationSuccessAuditEvent#3](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.management.WebAuthenticationSuccessAuditEvent/CS/WebAuthenticationSuccessAuditEvent.cs#3)]
+ [!code-vb[System.Web.Management.WebAuthenticationSuccessAuditEvent#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.management.WebAuthenticationSuccessAuditEvent/VB/WebAuthenticationSuccessAuditEvent.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameToAuthenticate">
+      <MemberSignature Language="C#" Value="public string NameToAuthenticate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NameToAuthenticate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebAuthenticationSuccessAuditEvent.NameToAuthenticate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des authentifizierten Benutzers ab.</summary>
+        <value>Der Name des authentifizierten Benutzers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur die Erfolg Überwachungen beinhalten den Namen des authentifizierten Benutzers. Fehlerüberwachungen enthalten nicht den Benutzernamen, da sie in der Regel durch eine fehlgeschlagene Entschlüsselung oder Validierung verursacht.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Management.WebAuthenticationSuccessAuditEvent.NameToAuthenticate%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Management.WebAuthenticationSuccessAuditEvent#3](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.management.WebAuthenticationSuccessAuditEvent/CS/WebAuthenticationSuccessAuditEvent.cs#3)]
+ [!code-vb[System.Web.Management.WebAuthenticationSuccessAuditEvent#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.management.WebAuthenticationSuccessAuditEvent/VB/WebAuthenticationSuccessAuditEvent.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1133 @@
+<Type Name="VirtualizingStackPanel" FullName="System.Windows.Controls.VirtualizingStackPanel">
+  <TypeSignature Language="C#" Value="public class VirtualizingStackPanel : System.Windows.Controls.VirtualizingPanel, System.Windows.Controls.Primitives.IScrollInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi VirtualizingStackPanel extends System.Windows.Controls.VirtualizingPanel implements class System.Windows.Controls.Primitives.IScrollInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.VirtualizingStackPanel" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.VirtualizingPanel</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Controls.Primitives.IScrollInfo</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ordnet Inhalt an und virtualisiert ihn in einer einzelnen Zeile, die horizontal oder vertikal ausgerichtet werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardlayout-System erstellt Elementcontainer und berechnet das Layout für jedes Element ein Listenfeld-Steuerelement zugeordnet. Das Wort "virtualisieren" bezieht sich auf eine Technik mit dem eine Teilmenge der [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente werden generiert, aus einer größeren Anzahl von Datenelementen, die basierend auf welche Elemente auf dem Bildschirm sichtbar sind. Generieren von vielen [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Elemente angezeigt, wenn nur wenige Elemente auf dem Bildschirm werden möglicherweise können die Leistung Ihrer Anwendung beeinträchtigen. Die <xref:System.Windows.Controls.VirtualizingStackPanel> berechnet die Anzahl der sichtbaren Elemente und arbeitet mit der <xref:System.Windows.Controls.ItemContainerGenerator> aus einer <xref:System.Windows.Controls.ItemsControl> (z. B. <xref:System.Windows.Controls.ListBox> oder <xref:System.Windows.Controls.ListView>) zum Erstellen [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Elemente nur für die sichtbaren Elemente.  
+  
+ Virtualisierung in einem <xref:System.Windows.Controls.StackPanel> erfolgt nur, wenn das Elementsteuerelement im Bereich eigene Elementcontainer erstellt. Sie können sicherstellen, dass dies geschieht durch Verwenden der Datenbindung. In Szenarien, in denen Elementcontainer erstellt und an das Elementsteuerelement hinzugefügt werden, eine <xref:System.Windows.Controls.VirtualizingStackPanel> bietet keine Leistungsvorteile gegenüber einem <xref:System.Windows.Controls.StackPanel>.  
+  
+ <xref:System.Windows.Controls.VirtualizingStackPanel>ist der Standardhost für die Elemente für die <xref:System.Windows.Controls.ListBox> Element. Wird standardmäßig die `VirtualizingStackPanel.IsVirtualizing` auf gesetzte angehängte Eigenschaft `true`.  
+  
+ Wenn die `VirtualizingStackPanel.IsVirtualizing` auf gesetzte angehängte Eigenschaft `false`, <xref:System.Windows.Controls.VirtualizingStackPanel> verhält sich wie eine normale <xref:System.Windows.Controls.StackPanel>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Verbindung zu einer XML-Datenquelle und virtualisieren angezeigtes einem <xref:System.Windows.Controls.ListBox> Element mit [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)]. Beachten Sie, dass die `VirtualizingStackPanel.IsVirtualizing` wird explizit auf gesetzte angehängte Eigenschaft `true`.  
+  
+ [!code-xaml[VirtualizingStackPanel_Intro#2](~/samples/snippets/csharp/VS_Snippets_Wpf/VirtualizingStackPanel_Intro/CS/default.xaml#2)]  
+  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.ListBox> und legt die `VirtualizingStackPanel.VirtualizationMode` angefügten Eigenschaft, um <xref:System.Windows.Controls.VirtualizationMode.Recycling>.  
+  
+ [!code-xaml[RecycleItemContainerShippets#VirtualizationMode](~/samples/snippets/csharp/VS_Snippets_Wpf/RecycleItemContainerShippets/CSharp/Window1.xaml#virtualizationmode)]  
+  
+ Das folgende Beispiel zeigt die Daten, die im vorherigen Beispiel verwendet.  
+  
+ [!code-csharp[RecycleItemContainerShippets#ListBoxData](~/samples/snippets/csharp/VS_Snippets_Wpf/RecycleItemContainerShippets/CSharp/Window1.xaml.cs#listboxdata)]
+ [!code-vb[RecycleItemContainerShippets#ListBoxData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RecycleItemContainerShippets/visualbasic/window1.xaml.vb#listboxdata)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VirtualizingStackPanel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.VirtualizingStackPanel" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCleanUpVirtualizedItemHandler">
+      <MemberSignature Language="C#" Value="public static void AddCleanUpVirtualizedItemHandler (System.Windows.DependencyObject element, System.Windows.Controls.CleanUpVirtualizedItemEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddCleanUpVirtualizedItemHandler(class System.Windows.DependencyObject element, class System.Windows.Controls.CleanUpVirtualizedItemEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.AddCleanUpVirtualizedItemHandler(System.Windows.DependencyObject,System.Windows.Controls.CleanUpVirtualizedItemEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Controls.CleanUpVirtualizedItemEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Die <see cref="T:System.Windows.DependencyObject" /> , die für dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der hinzugefügt werden soll.</param>
+        <summary>Fügt einen Ereignishandler für das <see langword="VirtualizingStackPanel.CleanUpVirtualizedItem" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardlayout-System erstellt Elementcontainer und berechnet das Layout für jedes Element ein Listenfeld-Steuerelement zugeordnet. Das Wort "virtualisieren" bezieht sich auf eine Technik mit dem eine Teilmenge der [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Elemente werden generiert, aus einer größeren Anzahl von Datenelementen, die basierend auf welche Elemente auf dem Bildschirm sichtbar sind. Generieren von vielen [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Elemente angezeigt, wenn nur wenige Elemente auf dem Bildschirm werden möglicherweise können die Leistung Ihrer Anwendung beeinträchtigen. Die <xref:System.Windows.Controls.VirtualizingStackPanel> berechnet die Anzahl der sichtbaren Elemente und arbeitet mit der <xref:System.Windows.Controls.ItemContainerGenerator> aus einer <xref:System.Windows.Controls.ItemsControl> (z. B. <xref:System.Windows.Controls.ListBox> oder <xref:System.Windows.Controls.ListView>) zum Erstellen [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Elemente nur für die sichtbaren Elemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">Die <see cref="T:System.Windows.Size" /> , dass dieses Element verwenden soll, um die untergeordneten Elemente anzuordnen.</param>
+        <summary>Ordnet den Inhalt einer <see cref="T:System.Windows.Controls.VirtualizingStackPanel" /> Element.</summary>
+        <returns>Die <see cref="T:System.Windows.Size" /> , die die angeordnete Größe dieses darstellt <see cref="T:System.Windows.Controls.VirtualizingStackPanel" /> Element und seine untergeordneten Elemente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können außer Kraft setzen die <xref:System.Windows.Controls.VirtualizingStackPanel.ArrangeOverride%2A> und <xref:System.Windows.Controls.VirtualizingStackPanel.MeasureOverride%2A> Methoden in einer abgeleiteten Klasse für ein benutzerdefiniertes Layout-Verhalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BringIndexIntoView">
+      <MemberSignature Language="C#" Value="protected override void BringIndexIntoView (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void BringIndexIntoView(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.BringIndexIntoView(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position des Elements, das Generieren und sichtbar machen.</param>
+        <summary>Generiert das Element an der angegebenen Indexposition aus und schaltet sie in der Ansicht.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> Position in der untergeordneten Auflistung nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanHierarchicallyScrollAndVirtualizeCore">
+      <MemberSignature Language="C#" Value="protected override bool CanHierarchicallyScrollAndVirtualizeCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanHierarchicallyScrollAndVirtualizeCore" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingStackPanel.CanHierarchicallyScrollAndVirtualizeCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Wert, der angibt, ob die <see cref="T:System.Windows.Controls.VirtualizingStackPanel" /> virtualisieren Elemente, die gruppiert oder in einer Hierarchie organisiert sind.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanHorizontallyScroll">
+      <MemberSignature Language="C#" Value="public bool CanHorizontallyScroll { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanHorizontallyScroll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingStackPanel.CanHorizontallyScroll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein <see cref="T:System.Windows.Controls.VirtualizingStackPanel" /> können in horizontaler Richtung einen Bildlauf durchführen.</summary>
+        <value>
+          <see langword="true" />Wenn Inhalt in horizontaler Richtung; gescrollt werden kann andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanVerticallyScroll">
+      <MemberSignature Language="C#" Value="public bool CanVerticallyScroll { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanVerticallyScroll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingStackPanel.CanVerticallyScroll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die vertikale Dimension Inhalt gescrollt werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn in vertikaler Richtung; Inhalt gescrollt werden kann andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CleanUpVirtualizedItemEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent CleanUpVirtualizedItemEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent CleanUpVirtualizedItemEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.VirtualizingStackPanel.CleanUpVirtualizedItemEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see langword="VirtualizingStackPanel.CleanUpVirtualizedItem" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentHeight">
+      <MemberSignature Language="C#" Value="public double ExtentHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingStackPanel.ExtentHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die vertikale Größe des Wertebereichs enthält.</summary>
+        <value>Ein <see cref="T:System.Double" />-Wert, der die vertikale Größe des Wertebereichs enthält. Der Standardwert ist 0,0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentWidth">
+      <MemberSignature Language="C#" Value="public double ExtentWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingStackPanel.ExtentWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die horizontale Größe des Wertebereichs enthält.</summary>
+        <value>Ein <see cref="T:System.Double" />-Wert, der die horizontale Größe des Wertebereichs darstellt. Der Standardwert ist 0,0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemOffsetCore">
+      <MemberSignature Language="C#" Value="protected override double GetItemOffsetCore (System.Windows.UIElement child);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance float64 GetItemOffsetCore(class System.Windows.UIElement child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.GetItemOffsetCore(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="child">Das Element, dessen Position gefunden.</param>
+        <summary>Gibt die Position des angegebenen Elements relativ zu den <see cref="T:System.Windows.Controls.VirtualizingStackPanel" />.</summary>
+        <returns>Die Position des angegebenen Elements relativ zu den <see cref="T:System.Windows.Controls.VirtualizingStackPanel" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasLogicalOrientation">
+      <MemberSignature Language="C#" Value="protected override bool HasLogicalOrientation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasLogicalOrientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingStackPanel.HasLogicalOrientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt Wenn diese <see cref="T:System.Windows.Controls.VirtualizingStackPanel" /> verfügt über eine vertikale oder horizontale Ausrichtung.</summary>
+        <value>Diese Eigenschaft gibt immer <see langword="true" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt diese Eigenschaft immer `true` da eine <xref:System.Windows.Controls.VirtualizingStackPanel> benötigen eine vertikale oder horizontale Ausrichtung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalOffset">
+      <MemberSignature Language="C#" Value="public double HorizontalOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HorizontalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingStackPanel.HorizontalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der den horizontalen Offset des gescrollten Inhalts enthält.</summary>
+        <value>
+          <see cref="T:System.Double" />die den horizontalen Offset des gescrollten Inhalts darstellt. Der Standardwert ist 0,0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVirtualizingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsVirtualizingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsVirtualizingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see langword="VirtualizingPanel.IsVirtualizing" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineDown">
+      <MemberSignature Language="C#" Value="public virtual void LineDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LineDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.LineDown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch Inhalte nach unten, um eine logische Einheit aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode in einer abgeleiteten Klasse zu ändern, wie die StackPanel-Element nach unten Inhalt verschiebt überschreiben. Beispielsweise können Sie Inhalt von zwei Einheiten statt in einem Bildlauf.  
+  
+ Wenn Sie statt logischer Bildläufe physische Bildläufe benötigen, umschließen die <xref:System.Windows.Controls.VirtualizingStackPanel> in einer <xref:System.Windows.Controls.ScrollViewer> und legen Sie seine <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> Eigenschaft, um `false`. In diesem Fall die <xref:System.Windows.Controls.ScrollViewer> bietet Durchführen eines Bildlaufs und Virtualisierung wird deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineLeft">
+      <MemberSignature Language="C#" Value="public virtual void LineLeft ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LineLeft() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.LineLeft" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch Inhalte auf der linken Seite, um eine logische Einheit aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode in einer abgeleiteten Klasse zu ändern, wie die StackPanel-Element nach unten Inhalt verschiebt überschreiben. Beispielsweise können Sie Inhalt von zwei Einheiten statt in einem Bildlauf.  
+  
+ Wenn Sie statt logischer Bildläufe physische Bildläufe benötigen, umschließen die <xref:System.Windows.Controls.VirtualizingStackPanel> in einer <xref:System.Windows.Controls.ScrollViewer> und legen Sie seine <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> Eigenschaft, um `false`. In diesem Fall die <xref:System.Windows.Controls.ScrollViewer> bietet Durchführen eines Bildlaufs und Virtualisierung wird deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineRight">
+      <MemberSignature Language="C#" Value="public virtual void LineRight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LineRight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.LineRight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch Inhalte auf der rechten Seite, um eine logische Einheit aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode in einer abgeleiteten Klasse zu ändern, wie die StackPanel-Element Inhalt nach rechts verschiebt überschreiben. Angenommen, Sie können einen Bildlauf nach rechts um zwei Einheiten statt in einem.  
+  
+ Wenn Sie statt logischer Bildläufe physische Bildläufe benötigen, umschließen die <xref:System.Windows.Controls.VirtualizingStackPanel> in einer <xref:System.Windows.Controls.ScrollViewer> und legen Sie seine <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> Eigenschaft, um `false`. In diesem Fall die <xref:System.Windows.Controls.ScrollViewer> bietet Durchführen eines Bildlaufs und Virtualisierung wird deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineUp">
+      <MemberSignature Language="C#" Value="public virtual void LineUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LineUp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.LineUp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch Inhalte, um eine logische Einheit nach oben aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode in einer abgeleiteten Klasse zu ändern, wie die StackPanel-Element nach oben Inhalt verschiebt überschreiben. Beispielsweise können Sie Sie zwei Einheiten statt in einem blättern.  
+  
+ Wenn Sie statt logischer Bildläufe physische Bildläufe benötigen, umschließen die <xref:System.Windows.Controls.VirtualizingStackPanel> in einer <xref:System.Windows.Controls.ScrollViewer> und legen Sie seine <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> Eigenschaft, um `false`. In diesem Fall die <xref:System.Windows.Controls.ScrollViewer> bietet Durchführen eines Bildlaufs und Virtualisierung wird deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalOrientation">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Controls.Orientation LogicalOrientation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Orientation LogicalOrientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingStackPanel.LogicalOrientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Orientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert darstellt, die die <see cref="T:System.Windows.Controls.Orientation" /> von der <see cref="T:System.Windows.Controls.VirtualizingStackPanel" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Controls.Orientation" />-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeVisible">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect MakeVisible (System.Windows.Media.Visual visual, System.Windows.Rect rectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Rect MakeVisible(class System.Windows.Media.Visual visual, valuetype System.Windows.Rect rectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.MakeVisible(System.Windows.Media.Visual,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="rectangle" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Die <see cref="T:System.Windows.Media.Visual" /> , das sichtbar wird.</param>
+        <param name="rectangle">Ein <see cref="T:System.Windows.Rect" /> , darstellt Koordinatenbereich in einen <see cref="T:System.Windows.Media.Visual" />.</param>
+        <summary>Führt einen Bildlauf zu den angegebenen Koordinaten und macht den Teil einer <see cref="T:System.Windows.Media.Visual" /> sichtbar.</summary>
+        <returns>Ein <see cref="T:System.Windows.Rect" /> , das sichtbar ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Eine Obergrenze <see cref="T:System.Windows.Size" /> nicht überschritten werden darf.</param>
+        <summary>Misst die untergeordneten Elemente von einem <see cref="T:System.Windows.Controls.VirtualizingStackPanel" /> in Vorwegnahme ihrer Anordnung während der <see cref="M:System.Windows.Controls.VirtualizingStackPanel.ArrangeOverride(System.Windows.Size)" /> übergeben.</summary>
+        <returns>Die <see cref="T:System.Windows.Size" /> , die die gewünschte Größe des Elements darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Durchführen eines Bildlaufs, <xref:System.Windows.Controls.VirtualizingStackPanel> ist keine Zunahme der Layoutgröße, jedoch fügt effektiv Nachfolger in ein Z-Ebene, die normalerweise von einem übergeordneten Element abgeschnitten wird (in der Regel eine <xref:System.Windows.Controls.ScrollContentPresenter>) auf die Größe des Stapels.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseWheelDown">
+      <MemberSignature Language="C#" Value="public virtual void MouseWheelDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MouseWheelDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.MouseWheelDown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch Inhalte, die logisch nach unten als Antwort auf einen Klick mit dem Mausrad.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können außer Kraft setzen <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelDown%2A> in einer abgeleiteten Klasse so ändern Sie die Reaktion von StackPanel-Element, das Mausrad nach unten.  
+  
+ Wenn Sie statt logischer Bildläufe physische Bildläufe benötigen, umschließen die <xref:System.Windows.Controls.VirtualizingStackPanel> in einer <xref:System.Windows.Controls.ScrollViewer> und legen Sie seine <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> Eigenschaft, um `false`. In diesem Fall die <xref:System.Windows.Controls.ScrollViewer> bietet Durchführen eines Bildlaufs und Virtualisierung wird deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseWheelLeft">
+      <MemberSignature Language="C#" Value="public virtual void MouseWheelLeft ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MouseWheelLeft() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.MouseWheelLeft" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch Inhalte logisch auf der linken Seite als Antwort auf einen Klick mit dem Mausrad.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können außer Kraft setzen <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelLeft%2A> in einer abgeleiteten Klasse zu ändern, wie StackPanel-Element auf der linken Wheel Mausaktion reagiert.  
+  
+ Wenn Sie statt logischer Bildläufe physische Bildläufe benötigen, umschließen die <xref:System.Windows.Controls.VirtualizingStackPanel> in einer <xref:System.Windows.Controls.ScrollViewer> und legen Sie seine <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> Eigenschaft, um `false`. In diesem Fall die <xref:System.Windows.Controls.ScrollViewer> bietet Durchführen eines Bildlaufs und Virtualisierung wird deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseWheelRight">
+      <MemberSignature Language="C#" Value="public virtual void MouseWheelRight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MouseWheelRight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.MouseWheelRight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch Inhalte logisch in Reaktion auf einen Rechtsklick das Mausrad nach rechts aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können außer Kraft setzen <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelRight%2A> in einer abgeleiteten Klasse zum Ändern von StackPanel-Element wie Rechte Wheel Mausaktion reagiert.  
+  
+ Wenn Sie statt logischer Bildläufe physische Bildläufe benötigen, umschließen die <xref:System.Windows.Controls.VirtualizingStackPanel> in einer <xref:System.Windows.Controls.ScrollViewer> und legen Sie seine <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> Eigenschaft, um `false`. In diesem Fall die <xref:System.Windows.Controls.ScrollViewer> bietet Durchführen eines Bildlaufs und Virtualisierung wird deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseWheelUp">
+      <MemberSignature Language="C#" Value="public virtual void MouseWheelUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MouseWheelUp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch Inhalte, die logisch nach oben in Reaktion auf einen Klick mit der das Mausrad.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können außer Kraft setzen <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A> in einer abgeleiteten Klasse zu ändern, wie die StackPanel-Element auf das Mausrad nach oben Aktion reagiert.  
+  
+ Wenn Sie statt logischer Bildläufe physische Bildläufe benötigen, umschließen die <xref:System.Windows.Controls.VirtualizingStackPanel> in einer <xref:System.Windows.Controls.ScrollViewer> und legen Sie seine <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> Eigenschaft, um `false`. In diesem Fall die <xref:System.Windows.Controls.ScrollViewer> bietet Durchführen eines Bildlaufs und Virtualisierung wird deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCleanUpVirtualizedItem">
+      <MemberSignature Language="C#" Value="protected virtual void OnCleanUpVirtualizedItem (System.Windows.Controls.CleanUpVirtualizedItemEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCleanUpVirtualizedItem(class System.Windows.Controls.CleanUpVirtualizedItemEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.OnCleanUpVirtualizedItem(System.Windows.Controls.CleanUpVirtualizedItemEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.CleanUpVirtualizedItemEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn ein Element, das von gehostet wird die <see cref="T:System.Windows.Controls.VirtualizingStackPanel" /> erneut virtualisiert ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardlayout-System erstellt Elementcontainer und berechnet das Layout für jedes Element ein Listenfeld-Steuerelement zugeordnet. Das Wort "virtualisieren" bezieht sich auf eine Technik mit dem eine Teilmenge der [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Elemente werden generiert, aus einer größeren Anzahl von Datenelementen, die basierend auf welche Elemente auf dem Bildschirm sichtbar sind. Generieren von vielen [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Elemente angezeigt, wenn nur wenige Elemente auf dem Bildschirm werden möglicherweise können die Leistung Ihrer Anwendung beeinträchtigen. Die <xref:System.Windows.Controls.VirtualizingStackPanel> berechnet die Anzahl der sichtbaren Elemente und arbeitet mit der <xref:System.Windows.Controls.ItemContainerGenerator> aus einer <xref:System.Windows.Controls.ItemsControl> (z. B. <xref:System.Windows.Controls.ListBox> oder <xref:System.Windows.Controls.ListView>) zum Erstellen [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Elemente nur für die sichtbaren Elemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClearChildren">
+      <MemberSignature Language="C#" Value="protected override void OnClearChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClearChildren() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.OnClearChildren" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn die Auflistung von untergeordneten Elementen vom Basistyp gelöscht wird <see cref="T:System.Windows.Controls.Panel" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemsChanged">
+      <MemberSignature Language="C#" Value="protected override void OnItemsChanged (object sender, System.Windows.Controls.Primitives.ItemsChangedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnItemsChanged(object sender, class System.Windows.Controls.Primitives.ItemsChangedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.OnItemsChanged(System.Object,System.Windows.Controls.Primitives.ItemsChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="args" Type="System.Windows.Controls.Primitives.ItemsChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Das <see cref="T:System.Object" />, das das Ereignis ausgelöst hat.</param>
+        <param name="args">Stellt Daten für das <see cref="E:System.Windows.Controls.ItemContainerGenerator.ItemsChanged" />-Ereignis bereit.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.ItemsControl.Items" /> -Auflistung, die mit zugeordnetem der <see cref="T:System.Windows.Controls.ItemsControl" /> dafür <see cref="T:System.Windows.Controls.Panel" /> Änderungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnViewportOffsetChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnViewportOffsetChanged (System.Windows.Vector oldViewportOffset, System.Windows.Vector newViewportOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnViewportOffsetChanged(valuetype System.Windows.Vector oldViewportOffset, valuetype System.Windows.Vector newViewportOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.OnViewportOffsetChanged(System.Windows.Vector,System.Windows.Vector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldViewportOffset" Type="System.Windows.Vector" />
+        <Parameter Name="newViewportOffset" Type="System.Windows.Vector" />
+      </Parameters>
+      <Docs>
+        <param name="oldViewportOffset">Der alte Offset des Viewports.</param>
+        <param name="newViewportOffset">Der neue Offset des Viewports</param>
+        <summary>Wird aufgerufen, wenn der Offset des Viewports ändert als ein Benutzer Inhalte einen Bildlauf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode in einer abgeleiteten Klasse, zu erkennen und reagieren auf Änderungen in den Viewport-Speicherort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnViewportSizeChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnViewportSizeChanged (System.Windows.Size oldViewportSize, System.Windows.Size newViewportSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnViewportSizeChanged(valuetype System.Windows.Size oldViewportSize, valuetype System.Windows.Size newViewportSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged(System.Windows.Size,System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldViewportSize" Type="System.Windows.Size" />
+        <Parameter Name="newViewportSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="oldViewportSize">Die alte Größe des Viewports.</param>
+        <param name="newViewportSize">Die neue Größe des Viewports.</param>
+        <summary>Wird aufgerufen, wenn sich die Größe des Viewports ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode in einer abgeleiteten Klasse, um zu erkennen und reagieren auf Änderungen in der Viewportgröße.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Orientation">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Orientation Orientation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Orientation Orientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingStackPanel.Orientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Orientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die horizontale oder vertikale Ausrichtung von gestapeltes Inhalt beschreibt.</summary>
+        <value>Die <see cref="T:System.Windows.Controls.Orientation" /> von untergeordnetem Inhalt. Die Standardeinstellung ist <see cref="F:System.Windows.Controls.Orientation.Vertical" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Orientation"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.VirtualizingStackPanel.OrientationProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrientationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OrientationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OrientationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.VirtualizingStackPanel.OrientationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.VirtualizingStackPanel.Orientation" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageDown">
+      <MemberSignature Language="C#" Value="public virtual void PageDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PageDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.PageDown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt Sie durch einen Bildlauf nach unten, um eine Seite zu erhalten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können außer Kraft setzen <xref:System.Windows.Controls.VirtualizingStackPanel.PageDown%2A> in einer abgeleiteten Klasse die Reaktion StackPanel-Element auf der Seite nach unten zu ändern.  
+  
+ Wenn Sie statt logischer Bildläufe physische Bildläufe benötigen, umschließen die <xref:System.Windows.Controls.VirtualizingStackPanel> in einer <xref:System.Windows.Controls.ScrollViewer> und legen Sie seine <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> Eigenschaft, um `false`. In diesem Fall die <xref:System.Windows.Controls.ScrollViewer> bietet Durchführen eines Bildlaufs und Virtualisierung wird deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageLeft">
+      <MemberSignature Language="C#" Value="public virtual void PageLeft ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PageLeft() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.PageLeft" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch Inhalte auf der linken Seite, um eine Seite aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können außer Kraft setzen <xref:System.Windows.Controls.VirtualizingStackPanel.PageLeft%2A> in einer abgeleiteten Klasse zu ändern, wie StackPanel-Element auf der Seite nach links Aktion reagiert.  
+  
+ Wenn Sie statt logischer Bildläufe physische Bildläufe benötigen, umschließen die <xref:System.Windows.Controls.VirtualizingStackPanel> in einer <xref:System.Windows.Controls.ScrollViewer> und legen Sie seine <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> Eigenschaft, um `false`. In diesem Fall die <xref:System.Windows.Controls.ScrollViewer> bietet Durchführen eines Bildlaufs und Virtualisierung wird deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageRight">
+      <MemberSignature Language="C#" Value="public virtual void PageRight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PageRight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.PageRight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch Inhalte nach rechts um eine Seite aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können außer Kraft setzen <xref:System.Windows.Controls.VirtualizingStackPanel.PageRight%2A> in einer abgeleiteten Klasse zu ändern, wie StackPanel-Element auf der rechten Seite Aktion reagiert.  
+  
+ Wenn Sie statt logischer Bildläufe physische Bildläufe benötigen, umschließen die <xref:System.Windows.Controls.VirtualizingStackPanel> in einer <xref:System.Windows.Controls.ScrollViewer> und legen Sie seine <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> Eigenschaft, um `false`. In diesem Fall die <xref:System.Windows.Controls.ScrollViewer> bietet Durchführen eines Bildlaufs und Virtualisierung wird deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageUp">
+      <MemberSignature Language="C#" Value="public virtual void PageUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PageUp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.PageUp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch Inhalte nach oben, um eine Seite.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können außer Kraft setzen <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A> in einer abgeleiteten Klasse zu ändern, wie die StackPanel-Element auf die Bild-auf Aktion reagiert.  
+  
+ Wenn Sie statt logischer Bildläufe physische Bildläufe benötigen, umschließen die <xref:System.Windows.Controls.VirtualizingStackPanel> in einer <xref:System.Windows.Controls.ScrollViewer> und legen Sie seine <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> Eigenschaft, um `false`. In diesem Fall die <xref:System.Windows.Controls.ScrollViewer> bietet Durchführen eines Bildlaufs und Virtualisierung wird deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCleanUpVirtualizedItemHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveCleanUpVirtualizedItemHandler (System.Windows.DependencyObject element, System.Windows.Controls.CleanUpVirtualizedItemEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveCleanUpVirtualizedItemHandler(class System.Windows.DependencyObject element, class System.Windows.Controls.CleanUpVirtualizedItemEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.RemoveCleanUpVirtualizedItemHandler(System.Windows.DependencyObject,System.Windows.Controls.CleanUpVirtualizedItemEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Controls.CleanUpVirtualizedItemEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Die <see cref="T:System.Windows.DependencyObject" /> aus dem der Ereignishandler entfernt wird.</param>
+        <param name="handler">Gibt die Ereignishandler, der entfernt werden soll.</param>
+        <summary>Entfernt einen Ereignishandler für das <see langword="VirtualizingStackPanel.CleanUpVirtualizedItem" /> angefügtes Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardlayout-System erstellt Elementcontainer und berechnet das Layout für jedes Element ein Listenfeld-Steuerelement zugeordnet. Das Wort "virtualisieren" bezieht sich auf eine Technik mit dem eine Teilmenge der [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Elemente werden generiert, aus einer größeren Anzahl von Datenelementen, die basierend auf welche Elemente auf dem Bildschirm sichtbar sind. Generieren von vielen [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Elemente angezeigt, wenn nur wenige Elemente auf dem Bildschirm werden möglicherweise können die Leistung Ihrer Anwendung beeinträchtigen. Die <xref:System.Windows.Controls.VirtualizingStackPanel> berechnet die Anzahl der sichtbaren Elemente und arbeitet mit der <xref:System.Windows.Controls.ItemContainerGenerator> aus einer <xref:System.Windows.Controls.ItemsControl> (z. B. <xref:System.Windows.Controls.ListBox> oder <xref:System.Windows.Controls.ListView>) zum Erstellen [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Elemente nur für die sichtbaren Elemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollOwner">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ScrollViewer ScrollOwner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.ScrollViewer ScrollOwner" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingStackPanel.ScrollOwner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ScrollViewer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der den Container identifiziert, die in diesem Scrollverhalten steuert <see cref="T:System.Windows.Controls.VirtualizingStackPanel" />.</summary>
+        <value>Die <see cref="T:System.Windows.Controls.ScrollViewer" /> , besitzt für diesen Bildlauf <see cref="T:System.Windows.Controls.VirtualizingStackPanel" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Windows.Controls.ScrollViewer> -Steuerelement ist die <xref:System.Windows.Controls.VirtualizingStackPanel.ScrollOwner%2A>, physische Bildlauf aktiviert ist. Wenn eine <xref:System.Windows.Controls.VirtualizingStackPanel> ist die <xref:System.Windows.Controls.VirtualizingStackPanel.ScrollOwner%2A>, scrollen logischen untergeordneten Element ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHorizontalOffset">
+      <MemberSignature Language="C#" Value="public void SetHorizontalOffset (double offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetHorizontalOffset(float64 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.SetHorizontalOffset(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Der Wert der <see cref="P:System.Windows.Controls.VirtualizingStackPanel.HorizontalOffset" />-Eigenschaft.</param>
+        <summary>Legt den Wert der <see cref="P:System.Windows.Controls.VirtualizingStackPanel.HorizontalOffset" />-Eigenschaft fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetVerticalOffset">
+      <MemberSignature Language="C#" Value="public void SetVerticalOffset (double offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetVerticalOffset(float64 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.SetVerticalOffset(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Der Wert der <see cref="P:System.Windows.Controls.VirtualizingStackPanel.VerticalOffset" />-Eigenschaft.</param>
+        <summary>Legt den Wert der <see cref="P:System.Windows.Controls.VirtualizingStackPanel.VerticalOffset" />-Eigenschaft fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldItemsChangeAffectLayoutCore">
+      <MemberSignature Language="C#" Value="protected override bool ShouldItemsChangeAffectLayoutCore (bool areItemChangesLocal, System.Windows.Controls.Primitives.ItemsChangedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ShouldItemsChangeAffectLayoutCore(bool areItemChangesLocal, class System.Windows.Controls.Primitives.ItemsChangedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingStackPanel.ShouldItemsChangeAffectLayoutCore(System.Boolean,System.Windows.Controls.Primitives.ItemsChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="areItemChangesLocal" Type="System.Boolean" />
+        <Parameter Name="args" Type="System.Windows.Controls.Primitives.ItemsChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="areItemChangesLocal">
+          <see langword="true" />Wenn das geänderte Element direkt untergeordnetes Element dieses <see cref="T:System.Windows.Controls.VirtualizingPanel" />; <see langword="false" /> das geänderte Element ist eine indirekte Nachfolger der <see cref="T:System.Windows.Controls.VirtualizingPanel" />.</param>
+        <param name="args">Enthält Daten über das geänderte Element.</param>
+        <summary>Gibt einen Wert, der angibt, ob eine geänderte Element in einer <see cref="T:System.Windows.Controls.ItemsControl" /> wirkt sich auf das Layout für diesen Bereich.</summary>
+        <returns>
+          <see langword="true" />Wenn das geänderte Element in einer <see cref="T:System.Windows.Controls.ItemsControl" /> wirkt sich auf das Layout für diesen Bereich; anderenfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalOffset">
+      <MemberSignature Language="C#" Value="public double VerticalOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VerticalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingStackPanel.VerticalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der den vertikalen Offset des Inhalts nach dem Bildlauf enthält.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der den vertikalen Offset des gescrollten Inhalts darstellt. Der Standardwert ist 0,0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportHeight">
+      <MemberSignature Language="C#" Value="public double ViewportHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingStackPanel.ViewportHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die vertikale Größe des Viewports des Inhalts enthält.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der die vertikale Größe des Viewports des Inhalts darstellt. Der Standardwert ist 0,0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportWidth">
+      <MemberSignature Language="C#" Value="public double ViewportWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingStackPanel.ViewportWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die horizontale Größe des Viewports des Inhalts enthält.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der die vertikale Größe des Viewports des Inhalts darstellt. Der Standardwert ist 0,0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualizationModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VirtualizationModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VirtualizationModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.VirtualizingStackPanel.VirtualizationModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see langword="VirtualizingStackPanel.VirtualizationMode" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

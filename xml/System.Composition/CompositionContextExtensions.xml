@@ -1,0 +1,87 @@
+<Type Name="CompositionContextExtensions" FullName="System.Composition.CompositionContextExtensions">
+  <TypeSignature Language="C#" Value="public static class CompositionContextExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit CompositionContextExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Composition.CompositionContextExtensions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Composition.TypedParts</AssemblyName>
+    <AssemblyVersion>1.0.31.0</AssemblyVersion>
+    <AssemblyVersion>1.0.32.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Komposition-Kontext, die spezifisch für das Modell typisierte Teile sind hinzugefügt Methoden.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SatisfyImports">
+      <MemberSignature Language="C#" Value="public static void SatisfyImports (this System.Composition.CompositionContext compositionContext, object objectWithLooseImports);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SatisfyImports(class System.Composition.CompositionContext compositionContext, object objectWithLooseImports) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.CompositionContextExtensions.SatisfyImports(System.Composition.CompositionContext,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.TypedParts</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="compositionContext" Type="System.Composition.CompositionContext" RefType="this" />
+        <Parameter Name="objectWithLooseImports" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="compositionContext">Der Kontext Exporte aus gezeichnet werden soll.</param>
+        <param name="objectWithLooseImports">Das Objekt, das auf Importe erfüllen.</param>
+        <summary>Erfüllt die Importe des angegebenen Objekts aus dem angegebenen Kontext.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="compositionContext" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="objectWithLooseImports" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Composition.Hosting.CompositionFailedException">
+          <paramref name="objectWithLooseImports" />weist eine Abhängigkeit fehlende.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SatisfyImports">
+      <MemberSignature Language="C#" Value="public static void SatisfyImports (this System.Composition.CompositionContext compositionContext, object objectWithLooseImports, System.Composition.Convention.AttributedModelProvider conventions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SatisfyImports(class System.Composition.CompositionContext compositionContext, object objectWithLooseImports, class System.Composition.Convention.AttributedModelProvider conventions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.CompositionContextExtensions.SatisfyImports(System.Composition.CompositionContext,System.Object,System.Composition.Convention.AttributedModelProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.TypedParts</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="compositionContext" Type="System.Composition.CompositionContext" RefType="this" />
+        <Parameter Name="objectWithLooseImports" Type="System.Object" />
+        <Parameter Name="conventions" Type="System.Composition.Convention.AttributedModelProvider" />
+      </Parameters>
+      <Docs>
+        <param name="compositionContext">Der Kontext Exporte aus gezeichnet werden soll.</param>
+        <param name="objectWithLooseImports">Das Objekt, das auf Importe erfüllen.</param>
+        <param name="conventions">Konventionen zu verwendende Importe erfüllen.</param>
+        <summary>Erfüllt die Importe des angegebenen Objekts aus dem angegebenen Kontext, mit den angegebenen Konventionen.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="compositionContext" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="objectWithLooseImports" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="conventions" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Composition.Hosting.CompositionFailedException">
+          <paramref name="objectWithLooseImports" />weist eine Abhängigkeit fehlende.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

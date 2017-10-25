@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Services.BuildProvider">
+  <Docs>
+    <summary>Klassen in diesem Namespace Generieren von c# oder Visual Basic-Code für einen WCF Data Services-Clientanwendung, die auf Grundlage der Metadaten, die vom Datendienst zurückgegeben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

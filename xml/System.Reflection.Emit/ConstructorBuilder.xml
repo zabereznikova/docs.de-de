@@ -1,0 +1,1305 @@
+<Type Name="ConstructorBuilder" FullName="System.Reflection.Emit.ConstructorBuilder">
+  <TypeSignature Language="C#" Value="public sealed class ConstructorBuilder : System.Reflection.ConstructorInfo, System.Runtime.InteropServices._ConstructorBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ConstructorBuilder extends System.Reflection.ConstructorInfo implements class System.Runtime.InteropServices._ConstructorBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.ConstructorBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Emit</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.ConstructorInfo</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._ConstructorBuilder</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._ConstructorBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert einen Konstruktor einer dynamischen Klasse und stellt diesen dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Reflection.Emit.ConstructorBuilder>wird verwendet, um einen Konstruktor in Microsoft intermediate Language (MSIL), einschließlich Namen, Attribute, Signatur und Konstruktortext vollständig zu beschreiben. Es dient in Verbindung mit der <xref:System.Reflection.Emit.TypeBuilder> Klasse zum Erstellen von Klassen zur Laufzeit. Rufen Sie <xref:System.Reflection.Emit.TypeBuilder.DefineConstructor%2A> zum Abrufen einer Instanz des <xref:System.Reflection.Emit.ConstructorBuilder>.  
+  
+ Wenn Sie keinen Konstruktor für den dynamischen Typ definieren, ein Standardkonstruktor wird automatisch bereitgestellt, und er ruft den Standardkonstruktor der Basisklasse.  
+  
+ Bei Verwendung von <xref:System.Reflection.Emit.ConstructorBuilder> um einen Konstruktor für den dynamischen Typ definieren, der ein trivialen Konstruktor wird nicht bereitgestellt. Sie haben die folgenden Optionen für die Bereitstellung eines Standardkonstruktors zusätzlich zu den Konstruktor aus, den Sie definiert:  
+  
+-   Wenn Sie einen Standardkonstruktor möchten, der einfach den Standardkonstruktor der Basisklasse aufruft, können Sie die <xref:System.Reflection.Emit.TypeBuilder.DefineDefaultConstructor%2A?displayProperty=nameWithType> Methode zum Erstellen einer (und optional Beschränken des Zugriffs auf diese). Stellen Sie eine Implementierung für diesen Standardkonstruktor nicht. Wenn Sie dies tun, wird eine Ausnahme ausgelöst, wenn Sie versuchen, den Konstruktor zu verwenden. Es werden keine Ausnahmen ausgelöst, wenn die <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> -Methode aufgerufen wird.  
+  
+-   Wenn Sie möchten einen Standardkonstruktor, der nicht mehr als einfach den Standardkonstruktor der Basisklasse aufrufen, oder einen anderen Konstruktor aufruft, etwas anderes die Basisklasse oder, die vollständig ist, müssen Sie die <xref:System.Reflection.Emit.TypeBuilder.DefineConstructor%2A?displayProperty=nameWithType> Methode zum Erstellen einer <xref:System.Reflection.Emit.ConstructorBuilder>, und eine eigene Implementierung bereitzustellen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die kontextabhängige Verwendung von einem `ConstructorBuilder`.  
+  
+ [!code-cpp[System.Reflection.Emit.ConstructorBuilder Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.ConstructorBuilder Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.ConstructorBuilder Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.ConstructorBuilder Example/CS/source.cs#1)]
+ [!code-vb[System.Reflection.Emit.ConstructorBuilder Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.ConstructorBuilder Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ConstructorBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDeclarativeSecurity">
+      <MemberSignature Language="C#" Value="public void AddDeclarativeSecurity (System.Security.Permissions.SecurityAction action, System.Security.PermissionSet pset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddDeclarativeSecurity(valuetype System.Security.Permissions.SecurityAction action, class System.Security.PermissionSet pset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.AddDeclarativeSecurity(System.Security.Permissions.SecurityAction,System.Security.PermissionSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+        <Parameter Name="pset" Type="System.Security.PermissionSet" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die auszuführende Sicherheitsaktion (z. B. Demand, Assert usw.).</param>
+        <param name="pset">Der Berechtigungssatz, für den die Aktion gilt.</param>
+        <summary>Fügt diesem Konstruktor deklarative Sicherheit hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Reflection.Emit.ConstructorBuilder.AddDeclarativeSecurity%2A>kann mehrere Male aufgerufen werden, mit jedem Aufruf eine Sicherheitsaktion angeben (z. B. `Demand`, `Assert`, und `Deny`) und einen Satz von Berechtigungen, die die Aktion gilt.  
+  
+> [!NOTE]
+>  Die deklarative Sicherheit-Attribute, die an den Konstruktor angewendet wird, indem Sie mit dieser Methode werden in der .NET Framework-Versionen 1.0, 1.1 und 2.0 im alten Format der XML-Metadaten gespeichert. Finden Sie unter deklarative Sicherheitsattribute ausgeben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `AddDeclarativeSecurity`.  
+  
+ [!code-cpp[ConstructorBuilder_Attributes_4#1](~/samples/snippets/cpp/VS_Snippets_CLR/ConstructorBuilder_Attributes_4/CPP/constructorbuilder_attributes_4.cpp#1)]
+ [!code-csharp[ConstructorBuilder_Attributes_4#1](~/samples/snippets/csharp/VS_Snippets_CLR/ConstructorBuilder_Attributes_4/CS/constructorbuilder_attributes_4.cs#1)]
+ [!code-vb[ConstructorBuilder_Attributes_4#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ConstructorBuilder_Attributes_4/VB/constructorbuilder_attributes_4.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="action" />ist ungültig (RequestMinimum, RequestOptional und RequestRefuse sind ungültig).</exception>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde zuvor mit <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> erstellt.  
+  
+ - oder -   
+  
+ Der Berechtigungssatz <paramref name="pset" /> enthält eine Aktion, die zuvor von hinzugefügten <see langword="AddDeclarativeSecurity" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pset" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodAttributes Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.MethodAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ConstructorBuilder.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Attribute für diesen Konstruktor ab.</summary>
+        <value>Gibt die Attribute für diesen Konstruktor zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `Attributes`.  
+  
+ [!code-cpp[ConstructorBuilder_Attributes_4#2](~/samples/snippets/cpp/VS_Snippets_CLR/ConstructorBuilder_Attributes_4/CPP/constructorbuilder_attributes_4.cpp#2)]
+ [!code-csharp[ConstructorBuilder_Attributes_4#2](~/samples/snippets/csharp/VS_Snippets_CLR/ConstructorBuilder_Attributes_4/CS/constructorbuilder_attributes_4.cs#2)]
+ [!code-vb[ConstructorBuilder_Attributes_4#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/ConstructorBuilder_Attributes_4/VB/constructorbuilder_attributes_4.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallingConvention">
+      <MemberSignature Language="C#" Value="public override System.Reflection.CallingConventions CallingConvention { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.CallingConventions CallingConvention" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ConstructorBuilder.CallingConvention" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.CallingConventions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Reflection.CallingConventions" />-Wert ab, der davon abhängt, ob der deklarierende Typ generisch ist.</summary>
+        <value>
+          <see cref="F:System.Reflection.CallingConventions.HasThis" />, wenn der deklarierende Typ generisch ist, andernfalls <see cref="F:System.Reflection.CallingConventions.Standard" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringType">
+      <MemberSignature Language="C#" Value="public override Type DeclaringType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DeclaringType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ConstructorBuilder.DeclaringType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf das <see cref="T:System.Type" />-Objekt für den Typ ab, der diesen Member deklariert.</summary>
+        <value>Gibt das <see cref="T:System.Type" />-Objekt für den Typ zurück, der diesen Member deklariert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Member einer Klasse (oder eine Schnittstelle) entweder deklarierte oder geerbte aus einer Basisklasse (oder eine Schnittstelle).  
+  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `DeclaringType`.  
+  
+ [!code-cpp[ConstructorBuilder_Attributes_4#2](~/samples/snippets/cpp/VS_Snippets_CLR/ConstructorBuilder_Attributes_4/CPP/constructorbuilder_attributes_4.cpp#2)]
+ [!code-csharp[ConstructorBuilder_Attributes_4#2](~/samples/snippets/csharp/VS_Snippets_CLR/ConstructorBuilder_Attributes_4/CS/constructorbuilder_attributes_4.cs#2)]
+ [!code-vb[ConstructorBuilder_Attributes_4#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/ConstructorBuilder_Attributes_4/VB/constructorbuilder_attributes_4.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineParameter">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ParameterBuilder DefineParameter (int iSequence, System.Reflection.ParameterAttributes attributes, string strParamName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.ParameterBuilder DefineParameter(int32 iSequence, valuetype System.Reflection.ParameterAttributes attributes, string strParamName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.DefineParameter(System.Int32,System.Reflection.ParameterAttributes,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.ParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iSequence" Type="System.Int32" />
+        <Parameter Name="attributes" Type="System.Reflection.ParameterAttributes" />
+        <Parameter Name="strParamName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="iSequence">Die Position des Parameters in der Parameterliste. Parameter werden beginnend mit der Zahl 1 (für den ersten Parameter) indiziert.</param>
+        <param name="attributes">Die Attribute des Parameters.</param>
+        <param name="strParamName">Der Name des Parameters. Der Name kann aus einer NULL-Zeichenfolge bestehen.</param>
+        <summary>Definiert einen Parameter dieses Konstruktors.</summary>
+        <returns>Gibt ein <see langword="ParameterBuilder" />-Objekt zurück, das den neuen Parameter dieses Konstruktors darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Angabe von 0 (null) für `iSequence`, gibt diese Methode eine <xref:System.Reflection.Emit.ParameterBuilder> anstatt eine Ausnahme auszulösen. Es gibt nichts nützliches, dass Sie dies tun können <xref:System.Reflection.Emit.ParameterBuilder>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="iSequence" /> ist kleiner als 0 (null) oder größer als die Anzahl der Parameter des Konstruktors.</exception>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde mithilfe von <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> erstellt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.GetCustomAttributes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inherit">Steuert die Vererbung benutzerdefinierter Attribute aus Basisklassen. Dieser Parameter wird ignoriert.</param>
+        <summary>Gibt alle benutzerdefinierten Attribute zurück, die für diesen Konstruktor definiert sind.</summary>
+        <returns>Gibt ein Array von Objekten, die die benutzerdefinierten Attribute des Konstruktors dargestellt, die von diesem darstellen <see cref="T:System.Reflection.Emit.ConstructorBuilder" /> Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `inherit` Parameter wird ignoriert, da eine Klasse niemals Konstruktoren von Basisklassen erbt.  
+  
+ Die Erstellung des Typs durch den Aufruf zum Abrufen der benutzerdefinierten Attribute abgeschlossen <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A>, rufen Sie den Konstruktor durch Aufrufen der <xref:System.Type.GetConstructor%2A> Methode auf der zurückgegebene Typ ein, und rufen Sie dann die <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A> Methode für das zurückgegebene <xref:System.Reflection.ConstructorInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.GetCustomAttributes(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Der benutzerdefinierte Attributtyp.</param>
+        <param name="inherit">Steuert die Vererbung benutzerdefinierter Attribute aus Basisklassen. Dieser Parameter wird ignoriert.</param>
+        <summary>Gibt die benutzerdefinierten Attribute zurück, die durch den angegebenen Typ identifiziert werden.</summary>
+        <returns>Gibt ein Array vom Typ <see cref="T:System.Object" /> , die die Attribute dieses Konstruktors darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `inherit` Parameter wird ignoriert, da eine Klasse niemals Konstruktoren von Basisklassen erbt.  
+  
+ Die Erstellung des Typs durch den Aufruf zum Abrufen der benutzerdefinierten Attribute abgeschlossen <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A>, rufen Sie den Konstruktor durch Aufrufen der <xref:System.Type.GetConstructor%2A> Methode auf der zurückgegebene Typ ein, und rufen Sie dann die <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A> Methode für das zurückgegebene <xref:System.Reflection.ConstructorInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetILGenerator">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ILGenerator GetILGenerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.ILGenerator GetILGenerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.GetILGenerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.ILGenerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Reflection.Emit.ILGenerator" /> für diesen Konstruktor ab.</summary>
+        <returns>Gibt ein <see cref="T:System.Reflection.Emit.ILGenerator" />-Objekt für diesen Konstruktor zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Common Language Runtime generiert den Code für standardmäßige Konstruktoren. Aus diesem Grund wird ein Versuch unternommen, zum Abrufen einer `ILGenerator`, wird eine Ausnahme ausgelöst werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der `GetILGenerator` Methode.  
+  
+ [!code-cpp[System.Reflection.Emit.ConstructorBuilder Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.ConstructorBuilder Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.ConstructorBuilder Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.ConstructorBuilder Example/CS/source.cs#1)]
+ [!code-vb[System.Reflection.Emit.ConstructorBuilder Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.ConstructorBuilder Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Konstruktor ist ein Standardkonstruktor.  
+  
+ - oder -   
+  
+ Der Konstruktor verfügt über <see cref="T:System.Reflection.MethodAttributes" />- oder <see cref="T:System.Reflection.MethodImplAttributes" />-Flags, die angeben, dass er keinen Methodentext enthalten sollte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetILGenerator">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ILGenerator GetILGenerator (int streamSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.ILGenerator GetILGenerator(int32 streamSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.GetILGenerator(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.ILGenerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="streamSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="streamSize">Die Größe des MSIL-Streams in Bytes.</param>
+        <summary>Ruft ein <see cref="T:System.Reflection.Emit.ILGenerator" />-Objekt mit der angegebenen MSIL-Streamgröße ab, mit dem ein Methodentext für diesen Konstruktor erstellt werden kann.</summary>
+        <returns>Ein <see cref="T:System.Reflection.Emit.ILGenerator" /> für diesen Konstruktor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Common Language Runtime generiert den Code für standardmäßige Konstruktoren. Aus diesem Grund wird ein Versuch unternommen, zum Abrufen einer `ILGenerator` für einen trivialen Konstruktor eine Ausnahme ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Konstruktor ist ein Standardkonstruktor.  
+  
+ - oder -   
+  
+ Der Konstruktor verfügt über <see cref="T:System.Reflection.MethodAttributes" />- oder <see cref="T:System.Reflection.MethodImplAttributes" />-Flags, die angeben, dass er keinen Methodentext enthalten sollte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodImplementationFlags">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodImplAttributes GetMethodImplementationFlags ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Reflection.MethodImplAttributes GetMethodImplementationFlags() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.GetMethodImplementationFlags" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodImplAttributes</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Methodenimplementierungsflags für diesen Konstruktor zurück.</summary>
+        <returns>Die Methodenimplementierungsflags für diesen Konstruktor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `GetMethodImplementationFlags`.  
+  
+ [!code-cpp[ConstructorBuilder_GetModule_4#3](~/samples/snippets/cpp/VS_Snippets_CLR/ConstructorBuilder_GetModule_4/CPP/constructorbuilder_getmodule_4.cpp#3)]
+ [!code-csharp[ConstructorBuilder_GetModule_4#3](~/samples/snippets/csharp/VS_Snippets_CLR/ConstructorBuilder_GetModule_4/CS/constructorbuilder_getmodule_4.cs#3)]
+ [!code-vb[ConstructorBuilder_GetModule_4#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/ConstructorBuilder_GetModule_4/VB/constructorbuilder_getmodule_4.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetModule">
+      <MemberSignature Language="C#" Value="public System.Reflection.Module GetModule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Module GetModule() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.GetModule" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Verweis auf das Modul zurück, das diesen Konstruktor enthält.</summary>
+        <returns>Das Modul, das diesen Konstruktor enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `GetModule`.  
+  
+ [!code-cpp[System.Reflection.Emit.MethodBuilder.GetModule#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.GetModule/CPP/source3.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.MethodBuilder.GetModule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.GetModule/CS/source3.cs#1)]
+ [!code-vb[System.Reflection.Emit.MethodBuilder.GetModule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.MethodBuilder.GetModule/VB/source3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameters">
+      <MemberSignature Language="C#" Value="public override System.Reflection.ParameterInfo[] GetParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.ParameterInfo[] GetParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.GetParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ParameterInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Parameter dieses Konstruktors zurück.</summary>
+        <returns>Gibt ein Array von <see cref="T:System.Reflection.ParameterInfo" />-Objekten zurück, die die Parameter dieses Konstruktors darstellen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird nicht unterstützt, erst nach der <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> -Methode aufgerufen wurde. In der .NET Framework-Versionen 1.0 und 1.1 <xref:System.InvalidOperationException> ausgelöst wird. In .NET Framework, Version 2.0 <xref:System.NotSupportedException> ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Das Codebeispiel veranschaulicht die Verwendung der `GetParameters`.  
+  
+ [!code-cpp[ConstructorBuilder_GetModule_4#4](~/samples/snippets/cpp/VS_Snippets_CLR/ConstructorBuilder_GetModule_4/CPP/constructorbuilder_getmodule_4.cpp#4)]
+ [!code-csharp[ConstructorBuilder_GetModule_4#4](~/samples/snippets/csharp/VS_Snippets_CLR/ConstructorBuilder_GetModule_4/CS/constructorbuilder_getmodule_4.cs#4)]
+ [!code-vb[ConstructorBuilder_GetModule_4#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/ConstructorBuilder_GetModule_4/VB/constructorbuilder_getmodule_4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> wurde für diesen Konstruktortyp in .NET Framework, Version 1.0 und 1.1, nicht aufgerufen.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> wurde für diesen Konstruktortyp in .NET Framework, Version 2.0, nicht aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToken">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.MethodToken GetToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Reflection.Emit.MethodToken GetToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.GetToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.MethodToken</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Reflection.Emit.MethodToken" /> , die das Token für diesen Konstruktor darstellt.</summary>
+        <returns>Gibt die <see cref="T:System.Reflection.Emit.MethodToken" /> dieses Konstruktors.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Codebeispiel veranschaulicht die Verwendung der `GetToken`.  
+  
+ [!code-cpp[ConstructorBuilder_GetModule_4#2](~/samples/snippets/cpp/VS_Snippets_CLR/ConstructorBuilder_GetModule_4/CPP/constructorbuilder_getmodule_4.cpp#2)]
+ [!code-csharp[ConstructorBuilder_GetModule_4#2](~/samples/snippets/csharp/VS_Snippets_CLR/ConstructorBuilder_GetModule_4/CS/constructorbuilder_getmodule_4.cs#2)]
+ [!code-vb[ConstructorBuilder_GetModule_4#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/ConstructorBuilder_GetModule_4/VB/constructorbuilder_getmodule_4.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitLocals">
+      <MemberSignature Language="C#" Value="public bool InitLocals { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InitLocals" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ConstructorBuilder.InitLocals" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Information ab, ob die lokalen Variablen in diesem Konstruktor mit 0 (null) initialisiert werden sollen, oder legt diese Information fest.</summary>
+        <value>Lese-/Schreibzugriff. Ruft die Information ab, ob die lokalen Variablen in diesem Konstruktor mit 0 (null) initialisiert werden sollen, oder legt diese Information fest.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public override object Invoke (System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object[] parameters, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Invoke(valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object[] parameters, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.Invoke(System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="invokeAttr">Diese Angabe muss ein Bitflag aus <see cref="T:System.Reflection.BindingFlags" />, z. B. InvokeMethod "," NonPublic "usw..</param>
+        <param name="binder">Ein Objekt, das die Bindung, die Umwandlung von Argumenttypen, das Aufrufen von Membern und das Abrufen von <see langword="MemberInfo" />-Objekten über Reflektion ermöglicht. Wenn der Binder ist <see langword="null" />, wird der Standardbinder verwendet. Siehe <see cref="T:System.Reflection.Binder" />.</param>
+        <param name="parameters">Eine Argumentliste. Diese ist ein Array von Argumenten, die hinsichtlich Anzahl, Reihenfolge und Typ mit den Parametern des aufzurufenden Konstruktors identisch sind. Wenn keine Parameter vorhanden sind dies dürfte <see langword="null" />.</param>
+        <param name="culture">Eine Instanz von <see cref="T:System.Globalization.CultureInfo" /> für die Steuerung der Umwandlung von Typen. Wenn diese gleich null ist, wird die <see cref="T:System.Globalization.CultureInfo" /> des aktuellen Threads verwendet wird. (Dies ist z. B. zum Konvertieren einer <see cref="T:System.String" /> , der 1000 darstellt, in eine <see cref="T:System.Double" /> Wert, da 1000 in verschiedenen Kulturen unterschiedlich dargestellt wird.)</param>
+        <summary>Ruft den von dieser Instanz dynamisch reflektierten Konstruktor für das angegebene Objekt auf und übergibt dabei die angegebenen Parameter unter den Einschränkungen des angegebenen Binders.</summary>
+        <returns>Gibt eine <see cref="T:System.Object" /> also der Rückgabewert des aufgerufenen Konstruktors.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Konstruktor keine Parameter, den Wert der hat die `parameters` Parameter muss `null`. Andernfalls, Anzahl, Typ und Reihenfolge der Elemente in der `parameters` Array sollte identisch mit der Anzahl, Typ und die Reihenfolge der Parameter des Konstruktors, der von dieser Instanz reflektiert werden.  
+  
+ Beispielsweise, wenn der Konstruktor, der von dieser Instanz reflektiert wird als öffentlich deklariert ist Klasse mit zwei Zeichenfolgen, und klicken Sie dann die `parameters` Parameter muss ein Array von <xref:System.Object> mit der Länge 2.  
+  
+> [!NOTE]
+>  Zugriffseinschränkungen werden bei vollständig vertrauenswürdigem Code ignoriert. D. h. private Konstruktoren, Methoden, Felder und Eigenschaften zugegriffen werden können, und Sie aufgerufen wird, mithilfe von Reflektion im Code vollständig vertrauenswürdig ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt. Sie können den Konstruktor mit abrufen <see cref="M:System.Type.GetConstructor(System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])" /> , und rufen Sie <see cref="M:System.Reflection.ConstructorInfo.Invoke(System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" /> für das zurückgegebene <see cref="T:System.Reflection.ConstructorInfo" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public override object Invoke (object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object[] parameters, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Invoke(object obj, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object[] parameters, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.Invoke(System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das neu initialisiert werden muss.</param>
+        <param name="invokeAttr">Eines der <see langword="BindingFlags" /> Werte, der den Typ der Bindung angibt, die gewünscht wird.</param>
+        <param name="binder">Ein <see langword="Binder" /> , das einen Satz von Eigenschaften definiert sowie die Bindung, die Umwandlung von Argumenttypen und das Aufrufen von Membern mittels Reflektion ermöglicht. Wenn <c>Binder</c> ist <see langword="null" />, "Binder.DefaultBinding" verwendet wird.</param>
+        <param name="parameters">Eine Argumentliste. Diese ist ein Array von Argumenten, die hinsichtlich Anzahl, Reihenfolge und Typ mit den Parametern des aufzurufenden Konstruktors identisch sind. Wenn keine Parameter vorhanden sind, sollte dies ein null-Verweis sein (<see langword="Nothing" /> in Visual Basic).</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> verwendet, um die Umwandlung von Typen. Wenn diese gleich null ist, wird die <see cref="T:System.Globalization.CultureInfo" /> des aktuellen Threads verwendet wird.</param>
+        <summary>Ruft dynamisch auf den von dieser Instanz mit den angegebenen Argumenten gemäß den Einschränkung des angegebenen reflektierten Konstruktor <see langword="Binder" />.</summary>
+        <returns>Eine Instanz der Klasse, die dem Konstruktor zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anzahl, Typ und Reihenfolge der Elemente im Parameterarray muss identisch mit der Anzahl, Typ und die Reihenfolge der Parameter des Konstruktors, der von dieser Instanz reflektiert wird.  
+  
+ Vor dem Aufruf des Konstruktors `Invoke` wird sichergestellt, dass der Aufrufer über Zugriffsberechtigungen verfügt und die richtige Anzahl, Reihenfolge und Typ der Parameter sind.  
+  
+ Zugriffseinschränkungen werden bei vollständig vertrauenswürdigem Code ignoriert. D. h. private Konstruktoren, Methoden, Felder und Eigenschaften zugegriffen werden können, und Sie aufgerufen wird, mithilfe von Reflektion im Code vollständig vertrauenswürdig ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt. Sie können den Konstruktor mit abrufen <see cref="M:System.Type.GetConstructor(System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])" /> , und rufen Sie <see cref="M:System.Reflection.ConstructorInfo.Invoke(System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" /> für das zurückgegebene <see cref="T:System.Reflection.ConstructorInfo" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public override bool IsDefined (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefined(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.IsDefined(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Ein benutzerdefinierter Attributtyp.</param>
+        <param name="inherit">Steuert die Vererbung benutzerdefinierter Attribute aus Basisklassen. Dieser Parameter wird ignoriert.</param>
+        <summary>Überprüft, ob der Typ des angegebenen benutzerdefinierten Attributs definiert ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Typ des angegebenen benutzerdefinierten Attributs definiert ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Metadatenspezifikation für die Details zum format finden Sie unter `binaryAttribute`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt. Sie können den Konstruktor mit abrufen <see cref="M:System.Type.GetConstructor(System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])" /> , und rufen Sie <see cref="M:System.Reflection.MemberInfo.IsDefined(System.Type,System.Boolean)" /> für das zurückgegebene <see cref="T:System.Reflection.ConstructorInfo" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodHandle">
+      <MemberSignature Language="C#" Value="public override RuntimeMethodHandle MethodHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.RuntimeMethodHandle MethodHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ConstructorBuilder.MethodHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeMethodHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das interne Handle für die Methode ab. Verwenden Sie dieses Handle, um auf das zugrunde liegende Metadatenhandle zuzugreifen.</summary>
+        <value>Gibt das interne Handle für die Methode zurück. Verwenden Sie dieses Handle, um auf das zugrunde liegende Metadatenhandle zuzugreifen.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Eigenschaft wird für diese Klasse nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodImplementationFlags">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodImplAttributes MethodImplementationFlags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.MethodImplAttributes MethodImplementationFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ConstructorBuilder.MethodImplementationFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodImplAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Module">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Module Module { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Module Module" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ConstructorBuilder.Module" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das dynamische Modul ab, in dem dieser Konstruktor definiert ist.</summary>
+        <value>Ein <see cref="T:System.Reflection.Module" /> Objekt, das das dynamische Modul darstellt, in dem dieser Konstruktor definiert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den gleichen Wert wie die <xref:System.Reflection.Emit.ConstructorBuilder.GetModule%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ConstructorBuilder.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Konstruktors ab.</summary>
+        <value>Gibt den Namen des Konstruktors zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `Name`.  
+  
+ [!code-cpp[ConstructorBuilder_Name_5#2](~/samples/snippets/cpp/VS_Snippets_CLR/ConstructorBuilder_Name_5/CPP/constructorbuilder_name_5.cpp#2)]
+ [!code-csharp[ConstructorBuilder_Name_5#2](~/samples/snippets/csharp/VS_Snippets_CLR/ConstructorBuilder_Name_5/CS/constructorbuilder_name_5.cs#2)]
+ [!code-vb[ConstructorBuilder_Name_5#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/ConstructorBuilder_Name_5/VB/constructorbuilder_name_5.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectedType">
+      <MemberSignature Language="C#" Value="public override Type ReflectedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReflectedType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ConstructorBuilder.ReflectedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält einen Verweis auf die <see cref="T:System.Type" /> -Objekt aus dem dieses Objekt abgerufen wurde.</summary>
+        <value>Gibt die <see langword="Type" /> -Objekt aus dem dieses Objekt abgerufen wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Reflection.Emit.ConstructorBuilder> -Objekt stellt einen Konstruktor für eine bestimmte Klasse dar. Um erhalten eine <xref:System.Reflection.ConstructorInfo> -Objekt, das <xref:System.Type> -Objekt, das die Klasse darstellt, das den Konstruktor unterstützt abgefragt wird. Diese Eigenschaft enthält einen Verweis auf dieses <xref:System.Type> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public Type ReturnType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReturnType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ConstructorBuilder.ReturnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft <see langword="null" />.</summary>
+        <value>Gibt <see langword="null" />zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann in einer zukünftigen Version entfernt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCustomAttribute">
+      <MemberSignature Language="C#" Value="public void SetCustomAttribute (System.Reflection.Emit.CustomAttributeBuilder customBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCustomAttribute(class System.Reflection.Emit.CustomAttributeBuilder customBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.SetCustomAttribute(System.Reflection.Emit.CustomAttributeBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customBuilder" Type="System.Reflection.Emit.CustomAttributeBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="customBuilder">Eine Instanz einer Hilfsklasse zum Definieren des benutzerdefinierten Attributs.</param>
+        <summary>Legt ein benutzerdefiniertes Attribut mithilfe eines benutzerdefinierten Attribut-Generators fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `SetCustomAttribute` des Kontexts einer <xref:System.Reflection.Emit.ConstructorBuilder>, und übergeben Sie eine <xref:System.Reflection.Emit.CustomAttributeBuilder>.  
+  
+ [!code-cpp[ConstructorBuilder_SetCustomAttribute1#1](~/samples/snippets/cpp/VS_Snippets_CLR/ConstructorBuilder_SetCustomAttribute1/CPP/constructorbuilder_setcustomattribute1.cpp#1)]
+ [!code-csharp[ConstructorBuilder_SetCustomAttribute1#1](~/samples/snippets/csharp/VS_Snippets_CLR/ConstructorBuilder_SetCustomAttribute1/CS/constructorbuilder_setcustomattribute1.cs#1)]
+ [!code-vb[ConstructorBuilder_SetCustomAttribute1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ConstructorBuilder_SetCustomAttribute1/VB/constructorbuilder_setcustomattribute1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="customBuilder" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCustomAttribute">
+      <MemberSignature Language="C#" Value="public void SetCustomAttribute (System.Reflection.ConstructorInfo con, byte[] binaryAttribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCustomAttribute(class System.Reflection.ConstructorInfo con, unsigned int8[] binaryAttribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.SetCustomAttribute(System.Reflection.ConstructorInfo,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="con" Type="System.Reflection.ConstructorInfo" />
+        <Parameter Name="binaryAttribute" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="con">Der Konstruktor für das benutzerdefinierte Attribut.</param>
+        <param name="binaryAttribute">Ein Byte-BLOB, das die Attribute darstellt.</param>
+        <summary>Legt ein benutzerdefiniertes Attribut mithilfe eines angegebenen benutzerdefinierten Attribut-BLOBs fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Metadatenspezifikation in der ECMA Partition II-Dokumentation weitere Informationen zum format finden Sie unter `binaryAttribute`. Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `SetCustomAttribute` des Kontexts einer <xref:System.Reflection.Emit.ConstructorBuilder>, ein Byte-Blob übergeben.  
+  
+ [!code-cpp[ConstructorBuilder_SetCustomAttribute2#1](~/samples/snippets/cpp/VS_Snippets_CLR/ConstructorBuilder_SetCustomAttribute2/CPP/constructorbuilder_setcustomattribute2.cpp#1)]
+ [!code-csharp[ConstructorBuilder_SetCustomAttribute2#1](~/samples/snippets/csharp/VS_Snippets_CLR/ConstructorBuilder_SetCustomAttribute2/CS/constructorbuilder_setcustomattribute2.cs#1)]
+ [!code-vb[ConstructorBuilder_SetCustomAttribute2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ConstructorBuilder_SetCustomAttribute2/VB/constructorbuilder_setcustomattribute2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="con" /> oder <paramref name="binaryAttribute" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetImplementationFlags">
+      <MemberSignature Language="C#" Value="public void SetImplementationFlags (System.Reflection.MethodImplAttributes attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetImplementationFlags(valuetype System.Reflection.MethodImplAttributes attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.SetImplementationFlags(System.Reflection.MethodImplAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Reflection.MethodImplAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die Methodenimplementierungsflags.</param>
+        <summary>Legt die Methodenimplementierungsflags für diesen Konstruktor fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `SetImplementationFlags`.  
+  
+ [!code-cpp[ConstructorBuilder_SetImplementationFlags#1](~/samples/snippets/cpp/VS_Snippets_CLR/ConstructorBuilder_SetImplementationFlags/CPP/constructorbuilder_setimplementationflags.cpp#1)]
+ [!code-csharp[ConstructorBuilder_SetImplementationFlags#1](~/samples/snippets/csharp/VS_Snippets_CLR/ConstructorBuilder_SetImplementationFlags/CS/constructorbuilder_setimplementationflags.cs#1)]
+ [!code-vb[ConstructorBuilder_SetImplementationFlags#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ConstructorBuilder_SetImplementationFlags/VB/constructorbuilder_setimplementationflags.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde mithilfe von <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> erstellt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMethodBody">
+      <MemberSignature Language="C#" Value="public void SetMethodBody (byte[] il, int maxStack, byte[] localSignature, System.Collections.Generic.IEnumerable&lt;System.Reflection.Emit.ExceptionHandler&gt; exceptionHandlers, System.Collections.Generic.IEnumerable&lt;int&gt; tokenFixups);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMethodBody(unsigned int8[] il, int32 maxStack, unsigned int8[] localSignature, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Reflection.Emit.ExceptionHandler&gt; exceptionHandlers, class System.Collections.Generic.IEnumerable`1&lt;int32&gt; tokenFixups) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.SetMethodBody(System.Byte[],System.Int32,System.Byte[],System.Collections.Generic.IEnumerable{System.Reflection.Emit.ExceptionHandler},System.Collections.Generic.IEnumerable{System.Int32})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="il" Type="System.Byte[]" />
+        <Parameter Name="maxStack" Type="System.Int32" />
+        <Parameter Name="localSignature" Type="System.Byte[]" />
+        <Parameter Name="exceptionHandlers" Type="System.Collections.Generic.IEnumerable&lt;System.Reflection.Emit.ExceptionHandler&gt;" />
+        <Parameter Name="tokenFixups" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="il">Ein Array, das gültige MSIL-Anweisungen enthält.</param>
+        <param name="maxStack">Die maximale Stapelauswertungstiefe.</param>
+        <param name="localSignature">Ein Array von Bytes, die die serialisierte lokale Variablenstruktur enthalten. Geben Sie <see langword="null" /> , wenn der Konstruktor keine lokalen Variablen enthält.</param>
+        <param name="exceptionHandlers">Eine Auflistung, die die Ausnahmehandler für den Konstruktor enthält. Geben Sie <see langword="null" /> , wenn der Konstruktor über keine Ausnahmehandler verfügt.</param>
+        <param name="tokenFixups">Eine Auflistung von Werten, die Offsets darstellen <c>il</c>, von denen jede gibt den Anfang eines Tokens, der geändert werden kann. Geben Sie <see langword="null" /> , wenn der Konstruktor über keine Token verfügt, die geändert werden müssen.</param>
+        <summary>Erstellt den Text des Konstruktors unter Verwendung eines angegebenen Bytearrays von MSIL-Anweisungen (Microsoft Intermediate Language).</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="il" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="maxStack" /> ist ein negativer Wert.  
+  
+ - oder -   
+  
+ Einer der <paramref name="exceptionHandlers" /> gibt einen Offset außerhalb von <paramref name="il" />.  
+  
+ - oder -   
+  
+ Einer der <paramref name="tokenFixups" /> gibt einen Offset außerhalb der <paramref name="il" /> Array.</exception>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde zuvor mit erstellt die <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> Methode.  
+  
+ - oder -   
+  
+ Diese Methode wurde zuvor für dieses aufgerufen <see cref="T:System.Reflection.Emit.ConstructorBuilder" /> Objekt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSymCustomAttribute">
+      <MemberSignature Language="C#" Value="public void SetSymCustomAttribute (string name, byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSymCustomAttribute(string name, unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.SetSymCustomAttribute(System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Wert des benutzerdefinierten Attributs.</param>
+        <param name="data">Der Wert des benutzerdefinierten Attributs.</param>
+        <summary>Legt das benutzerdefinierte Attribut dieses Konstruktors fest, das Symbolinformationen zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `SetSymCustomAttributes`.  
+  
+ [!code-cpp[ConstructorBuilder_SetSymCustomAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR/ConstructorBuilder_SetSymCustomAttribute/CPP/constructorbuilder_setsymcustomattribute.cpp#1)]
+ [!code-csharp[ConstructorBuilder_SetSymCustomAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/ConstructorBuilder_SetSymCustomAttribute/CS/constructorbuilder_setsymcustomattribute.cs#1)]
+ [!code-vb[ConstructorBuilder_SetSymCustomAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ConstructorBuilder_SetSymCustomAttribute/VB/constructorbuilder_setsymcustomattribute.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde mithilfe von <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> erstellt.  
+  
+ - oder -   
+  
+ Für das Modul ist kein Symbolwriter definiert. Das Modul ist z. B. kein Debugmodul.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Signature">
+      <MemberSignature Language="C#" Value="public string Signature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Signature" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ConstructorBuilder.Signature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Signatur des Felds in Form einer Zeichenfolge ab.</summary>
+        <value>Gibt die Signatur des Felds zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ConstructorBuilder.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _ConstructorBuilder.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._ConstructorBuilder.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.System#Runtime#InteropServices#_ConstructorBuilder#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="rgszNames">Das übergebene Array von zuzuordnenden Namen.</param>
+        <param name="cNames">Die Anzahl der zuzuordnenden Namen.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem die Namen interpretiert werden sollen.</param>
+        <param name="rgDispId">Das vom Aufrufer zugewiesene Array, das die IDs entsprechend den Namen empfängt.</param>
+        <summary>Ordnet eine Reihe von Namen einer entsprechenden Reihe von Dispatchbezeichnern zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetIDsOfNames`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ConstructorBuilder.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _ConstructorBuilder.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._ConstructorBuilder.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.System#Runtime#InteropServices#_ConstructorBuilder#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">Die zurückzugebenden Typinformationen.</param>
+        <param name="lcid">Der Gebietsschemabezeichner für die Typinformationen.</param>
+        <param name="ppTInfo">Empfängt einen Zeiger auf das angeforderte Objekt mit den Typinformationen.</param>
+        <summary>Ruft die Typinformationen für ein Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfo`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ConstructorBuilder.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _ConstructorBuilder.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._ConstructorBuilder.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.System#Runtime#InteropServices#_ConstructorBuilder#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Zeigt auf einen Speicherort, der die Anzahl der Schnittstellen mit Typinformationen empfängt, die vom Objekt bereitgestellt werden.</param>
+        <summary>Ruft die Anzahl der Schnittstellen mit Typinformationen ab, die von einem Objekt bereitgestellt werden (0 oder 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfoCount`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ConstructorBuilder.Invoke">
+      <MemberSignature Language="C#" Value="void _ConstructorBuilder.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._ConstructorBuilder.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.System#Runtime#InteropServices#_ConstructorBuilder#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Bezeichnet den Member.</param>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem Argumente interpretiert werden sollen.</param>
+        <param name="wFlags">Flags, die den Kontext des Aufrufs beschreiben.</param>
+        <param name="pDispParams">Ein Zeiger auf eine Struktur, die ein Array von Argumenten und ein Array von Argument-DISPIDs für benannte Argumente sowie Zähler für die Anzahl der Elemente in jedem Array enthält.</param>
+        <param name="pVarResult">Ein Verweis auf den Speicherort, an dem das Ergebnis gespeichert werden soll.</param>
+        <param name="pExcepInfo">Ein Zeiger auf eine Struktur mit Ausnahmeinformationen.</param>
+        <param name="puArgErr">Der Index des ersten Arguments mit einem Fehler.</param>
+        <summary>Stellt den Zugriff auf von einem Objekt verfügbar gemachte Eigenschaften und Methoden bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::Invoke`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ConstructorBuilder.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt diese <see cref="T:System.Reflection.Emit.ConstructorBuilder" />-Instanz als <see cref="T:System.String" /> zurück.</summary>
+        <returns>Gibt eine <see cref="T:System.String" /> zurück, die den Namen, Attribute und Ausnahmen dieses Konstruktors enthält, gefolgt vom aktuellen MSIL-Stream (Microsoft Intermediate Language).</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

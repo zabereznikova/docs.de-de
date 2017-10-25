@@ -1,0 +1,70 @@
+<Type Name="UpdateSourceExceptionFilterCallback" FullName="System.Windows.Data.UpdateSourceExceptionFilterCallback">
+  <TypeSignature Language="C#" Value="public delegate object UpdateSourceExceptionFilterCallback(object bindExpression, Exception exception);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UpdateSourceExceptionFilterCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.UpdateSourceExceptionFilterCallback" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="bindExpression" Type="System.Object" />
+    <Parameter Name="exception" Type="System.Exception" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Object</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="bindExpression">Das Objekt mit der Ausnahme.</param>
+    <param name="exception">Die aufgetretene Ausnahme.</param>
+    <summary>Stellt die Methode dar, die Ausnahmen behandelt, die während der Aktualisierung des Bindungsquellwerts ausgelöst werden. Dies muss verwendet werden, mit der <see cref="T:System.Windows.Controls.ExceptionValidationRule" />.</summary>
+    <returns>Ein Objekt, bei dem es sich in der Regel um Folgendes handelt:  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term><see langword="null" /></term><description>Um alle Ausnahmen zu ignorieren. Das Standardverhalten (befindet sich keine <see cref="T:System.Windows.Data.UpdateSourceExceptionFilterCallback" />) besteht im Erstellen einer <see cref="T:System.Windows.Controls.ValidationError" /> mit der Ausnahme und fügt es der <see cref="P:System.Windows.Controls.Validation.Errors" /> Auflistung von das gebundene Element.  
+  
+ </description></item><item><term>Jedes Objekt  
+  
+ </term><description>Zum Erstellen einer <see cref="T:System.Windows.Controls.ValidationError" /> -Objekt mit der <see cref="P:System.Windows.Controls.ValidationError.ErrorContent" /> auf dieses Objekt festlegen.  
+  
+ Die <see cref="T:System.Windows.Controls.ValidationError" /> Objekt hinzugefügt wird <see cref="P:System.Windows.Controls.Validation.Errors" /> Auflistung von das gebundene Element.  
+  
+ </description></item><item><term>Ein <see cref="T:System.Windows.Controls.ValidationError" /> Objekt  
+  
+ </term><description>Festlegen der <see cref="T:System.Windows.Data.BindingExpression" /> oder <see cref="T:System.Windows.Data.MultiBindingExpression" /> -Objekts entsprechend der <see cref="P:System.Windows.Controls.ValidationError.BindingInError" />. Die <see cref="T:System.Windows.Controls.ValidationError" /> Objekt hinzugefügt wird <see cref="P:System.Windows.Controls.Validation.Errors" /> Auflistung von das gebundene Element.  
+  
+ </description></item></list></returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie verknüpft haben die <xref:System.Windows.Controls.ExceptionValidationRule> mit Ihrer <xref:System.Windows.Data.Binding> Objekt stehen Ihnen die Option zum Verwenden der <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A> -Eigenschaft zum Festlegen von diesem Rückruf benutzerdefinierten Logik zum Behandeln von Ausnahmen bereitstellen. Dieser Rückruf wird immer dann aufgerufen, wenn jede Ausnahme beim Aktualisieren des Bindungsquellwerts durch das Bindungsmodul gefunden.  
+  
+ Wenn ein <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A> nicht angegeben wird, auf die <xref:System.Windows.Data.Binding>, erstellt das Bindungsmodul ein <xref:System.Windows.Controls.ValidationError> mit der Ausnahme und fügt es der <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> Auflistung von das gebundene Element.  
+  
+   
+  
+## Examples  
+ Die <xref:System.Windows.Controls.TextBox.Text%2A> Eigenschaft der folgenden <xref:System.Windows.Controls.TextBox> ist datengebunden, Quelleigenschaft `Age3` vom Typ `int`. Die <xref:System.Windows.Controls.ExceptionValidationRule> Überprüfungen für Ausnahmen, die ausgelöst werden, während der Aktualisierung der Source-Eigenschaft (z. B. wenn der Benutzer einen Wert, der in eine ganze Zahl konvertiert werden kann eingibt).  
+  
+ [!code-xaml[BindValidation#tbExceptionFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#tbexceptionfilter)]  
+  
+ Sie haben die Möglichkeit, benutzerdefinierte Logik zum Behandeln von Ausnahmen bereitstellen. Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A> festzulegende Eigenschaft ein <xref:System.Windows.Data.UpdateSourceExceptionFilterCallback>:  
+  
+ [!code-csharp[BindValidation#filtercallback](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml.cs#filtercallback)]  
+  
+ Im folgenden finden Sie eine beispielimplementierung einer <xref:System.Windows.Data.UpdateSourceExceptionFilterCallback>:  
+  
+ [!code-csharp[BindValidation#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml.cs#handler)]  
+  
+ Das vollständige Beispiel finden Sie unter [Binding Validation Sample](http://go.microsoft.com/fwlink/?LinkID=159972).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

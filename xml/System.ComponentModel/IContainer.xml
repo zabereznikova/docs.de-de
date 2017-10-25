@@ -1,0 +1,201 @@
+<Type Name="IContainer" FullName="System.ComponentModel.IContainer">
+  <TypeSignature Language="C#" Value="public interface IContainer : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContainer implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.IContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Funktionalität für ein Container bereit. Container sind Objekte, die logischerweise 0 oder mehr Komponenten enthalten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Container sind Objekte, die zu kapseln und NULL oder mehr Komponenten nachverfolgen. In diesem Kontext bezieht sich auf logische Einkapselung, nicht visual Containment "Containment". Sie können Komponenten und Container in einer Vielzahl von Szenarien, z. B. in Szenarien, die visuellen und nicht visuellen sind.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Implementieren der <xref:System.ComponentModel.IContainer> Schnittstelle.  
+  
+ [!code-cpp[ContainerExmpl#2](~/samples/snippets/cpp/VS_Snippets_Winforms/ContainerExmpl/CPP/librarycontainer.cpp#2)]
+ [!code-csharp[ContainerExmpl#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ContainerExmpl/CS/librarycontainer.cs#2)]
+ [!code-vb[ContainerExmpl#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ContainerExmpl/VB/librarycontainer.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Um einen Container zu sein, muss die Klasse implementiert die <see cref="T:System.ComponentModel.IContainer" /> Schnittstelle, die Methoden zum Hinzufügen, entfernen und Abrufen von Komponenten unterstützt.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IContainer.Add(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Das hinzuzufügende <see cref="T:System.ComponentModel.IComponent" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.ComponentModel.IComponent" /> auf die <see cref="T:System.ComponentModel.IContainer" /> am Ende der Liste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neue <xref:System.ComponentModel.IComponent> wird am Ende der Liste hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.ComponentModel.IComponent component, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.ComponentModel.IComponent component, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IContainer.Add(System.ComponentModel.IComponent,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="component">Das hinzuzufügende <see cref="T:System.ComponentModel.IComponent" />.</param>
+        <param name="name">Der eindeutige, Groß-/Kleinschreibung der Name der Komponente zuweisen.  
+  
+ - oder -   
+  
+ <see langword="null" />die bewirkt, dass die Komponente nicht benannt ist.</param>
+        <summary>Fügt das angegebene <see cref="T:System.ComponentModel.IComponent" /> auf die <see cref="T:System.ComponentModel.IContainer" /> am Ende der Liste aus, und weist einen Namen für die Komponente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neue <xref:System.ComponentModel.IComponent> wird am Ende der Liste hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von <see cref="M:System.ComponentModel.IContainer.Add(System.ComponentModel.IComponent)" />, müssen Sie sicherstellen, dass <paramref name="name" />, sofern Sie nicht <see langword="null" />, ist für diese eindeutige <see cref="T:System.ComponentModel.IContainer" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Components">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ComponentCollection Components { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ComponentCollection Components" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IContainer.Components" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ComponentCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle Komponenten der <see cref="T:System.ComponentModel.IContainer" />.</summary>
+        <value>Eine Auflistung von <see cref="T:System.ComponentModel.IComponent" /> Objekte, die für alle Komponenten in der <see cref="T:System.ComponentModel.IContainer" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IContainer.Remove(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Das zu entfernende <see cref="T:System.ComponentModel.IComponent" />-Element.</param>
+        <summary>Entfernt eine Komponente aus der <see cref="T:System.ComponentModel.IContainer" />.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="M:System.ComponentModel.IContainer.Remove(System.ComponentModel.IComponent)" /> -Methode, müssen Sie auch Entfernen der <see cref="T:System.ComponentModel.ISite" />, sofern vorhanden, zugeordnete <see cref="T:System.ComponentModel.IComponent" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

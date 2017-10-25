@@ -1,0 +1,211 @@
+<Type Name="ListViewItem" FullName="System.Web.UI.WebControls.ListViewItem">
+  <TypeSignature Language="C#" Value="public class ListViewItem : System.Web.UI.Control, System.Web.UI.IDataItemContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewItem extends System.Web.UI.Control implements class System.Web.UI.IDataItemContainer, class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IDataItemContainer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Entspricht einem einzelnen Element in einem <see cref="T:System.Web.UI.WebControls.ListView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListViewItem> Klasse dient zur Darstellung eines einzelnen Elements in einem <xref:System.Web.UI.WebControls.ListView> Steuerelement. Ein einzelnes Element in der Regel stellt einen Datensatz in der zugrunde liegenden Datenquelle von einem <xref:System.Web.UI.WebControls.ListView> Steuerelement.  
+  
+ Jedes Element in der <xref:System.Web.UI.WebControls.ListView> Steuerelement besitzt einen festgelegten Elementtyp aus, wie in der folgenden Tabelle aufgeführt.  
+  
+|Elementtyp|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.Web.UI.WebControls.ListViewItemType.DataItem>|Ein Datenelement in der <xref:System.Web.UI.WebControls.ListView> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.ListViewItemType.InsertItem>|Ein Insert-Element in der <xref:System.Web.UI.WebControls.ListView> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.ListViewItemType.EmptyItem>|Ein leeres Element in der <xref:System.Web.UI.WebControls.ListView> Steuerelement. Das leere Element wird angezeigt. bei der <xref:System.Web.UI.WebControls.ListView> Steuerelement enthält keine Datensätze anzuzeigen, oder wenn eine Gruppe in der <xref:System.Web.UI.WebControls.ListView> Steuerelement enthält keine Datensätze mehr angezeigt.|  
+  
+ Zum Bestimmen des Typs, der eine <xref:System.Web.UI.WebControls.ListViewItem> -Objekts die <xref:System.Web.UI.WebControls.ListViewItem.ItemType%2A> Eigenschaft.  
+  
+ Wenn ein Element andere Steuerelemente enthält, können Sie ein Steuerelement abrufen, indem Sie mit der <xref:System.Web.UI.Control.Controls%2A> Auflistung des Elements. Wenn des Steuerelements <xref:System.Web.UI.Control.ID%2A> -Eigenschaft gesetzt ist, können Sie auch die <xref:System.Web.UI.Control.FindControl%2A> Methode, um das Steuerelement zu ermitteln.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.ListViewItem>, finden Sie unter der <xref:System.Web.UI.WebControls.ListViewItem.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewItem> Klasse die Eigenschaften des Elements, das in erstellt wird, den Zugriff auf die <xref:System.Web.UI.WebControls.ListView> Steuerelement.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListViewItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewItem/CS/ListViewItemCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListViewItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewItem/VB/ListViewItemVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewItem (System.Web.UI.WebControls.ListViewItemType itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.UI.WebControls.ListViewItemType itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewItem.#ctor(System.Web.UI.WebControls.ListViewItemType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.ListViewItemType" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Einer der <see cref="T:System.Web.UI.WebControls.ListViewItemType" />-Enumerationswerte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ListViewItem" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der ein <xref:System.Web.UI.WebControls.ListViewItem> Objekt.  
+  
+ In der folgenden Tabelle werden anfängliche Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.ListViewItem>-Klasse aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.ListViewItem.ItemType%2A>|Der Wert des `itemType`-Parameters.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItem">
+      <MemberSignature Language="C#" Value="public virtual object DataItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewItem.DataItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt dem zugrunde liegende Datenobjekt, das die <see cref="T:System.Web.UI.WebControls.ListViewItem" /> -Objekt gebunden ist.</summary>
+        <value>Das zugrunde liegende Datenobjekt, das die <see cref="T:System.Web.UI.WebControls.ListViewItem" /> -Objekt gebunden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItemIndex">
+      <MemberSignature Language="C#" Value="public virtual int DataItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DataItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewItem.DataItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des Datenelements die gebunden ist ab dem <see cref="T:System.Web.UI.WebControls.ListViewItem" /> Steuerelement.</summary>
+        <value>Der Index des Datenelements gebunden ist, die die <see cref="T:System.Web.UI.WebControls.ListViewItem" /> Steuerelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayIndex">
+      <MemberSignature Language="C#" Value="public virtual int DisplayIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DisplayIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewItem.DisplayIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position des Datenelements ab, wie er im angezeigt der <see cref="T:System.Web.UI.WebControls.ListView" /> Steuerelement.</summary>
+        <value>Die Position des Datenelements im angezeigten der <see cref="T:System.Web.UI.WebControls.ListView" /> Steuerelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ListViewItemType ItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ListViewItemType ItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewItem.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListViewItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Elementtyp der <see cref="T:System.Web.UI.WebControls.ListViewItem" /> Objekt.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.ListViewItemType" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ListViewItem.ItemType%2A> -Eigenschaft zum Bestimmen des Typs des Elements, das die <xref:System.Web.UI.WebControls.ListViewItem> Objekt darstellt, wie in der folgenden Tabelle aufgeführt.  
+  
+|Elementtyp|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.Web.UI.WebControls.ListViewItemType.DataItem>|Ein Datenelement in der <xref:System.Web.UI.WebControls.ListView> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.ListViewItemType.InsertItem>|Ein Insert-Element in der <xref:System.Web.UI.WebControls.ListView> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.ListViewItemType.EmptyItem>|Ein leeres Element in der <xref:System.Web.UI.WebControls.ListView> Steuerelement. Das leere Element wird angezeigt. bei der <xref:System.Web.UI.WebControls.ListView> Steuerelement enthält keine Datensätze anzuzeigen, oder wenn eine Gruppe in der <xref:System.Web.UI.WebControls.ListView> Steuerelement enthält keine Datensätze mehr angezeigt.|  
+  
+ Normalerweise verwenden Sie diese Eigenschaft den Typ eines Elements zu ermitteln, bevor Sie einen Vorgang ausführen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewItem.ItemType%2A> Eigenschaft, um zu bestimmen, ob das Element, das erstellt wird, ein Datenelement ist. Wenn das Element ein Datenelement ist, wird die e-Mail-Adresse kursiv angezeigt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.ListViewItem> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListViewItem#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewItem/CS/ListViewItemCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListViewItem#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewItem/VB/ListViewItemVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewItem.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Quelle des Ereignisses.</param>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Bestimmt, ob ein Ereignis Serversteuerelementhierarchie der Seite ASP.NET übergeben.</summary>
+        <returns>
+          <see langword="true" />, wenn das Ereignis abgebrochen wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

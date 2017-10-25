@@ -1,0 +1,1010 @@
+<Type Name="ECDsaCng" FullName="System.Security.Cryptography.ECDsaCng">
+  <TypeSignature Language="C#" Value="public sealed class ECDsaCng : System.Security.Cryptography.ECDsa" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ECDsaCng extends System.Security.Cryptography.ECDsa" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.ECDsaCng" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.ECDsa</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine CNG (Cryptography Next Generation)-Implementierung des ECDSA-Algorithmus (Elliptic Curve Digital Signature Algorithm) bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse leitet sich von der <xref:System.Security.Cryptography.ECDsa> abstrakte Basisklasse.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Security.Cryptography.ECDsaCng> Klasse zum Signieren einer Nachricht und wie Sie die Signatur zu verwenden, um sicherzustellen, dass die Nachricht nicht geändert wurde.  
+  
+ [!code-csharp[ECDsaCng#1](~/samples/snippets/csharp/VS_Snippets_CLR/ecdsacng/cs/program.cs#1)]
+ [!code-vb[ECDsaCng#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ecdsacng/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ECDsaCng ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.ECDsaCng" />-Klasse mit einem zufällig generierten Schlüsselpaar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zufällige Schlüsselpaar hat eine Länge des öffentliche Schlüssels von 521 Bits.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">CNG-Klassen (Cryptography Next Generation) werden auf diesem System nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ECDsaCng (int keySize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 keySize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keySize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="keySize">Die Größe des Schlüssels. Gültige Schlüsselgrößen sind 256, 384 und 521 Bits.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.ECDsaCng" />-Klasse mit einem zufällig erzeugten Schlüsselpaar mit der angegebenen Schlüsselgröße.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zufälligen Schlüsselpaar wird die Länge des öffentliche Schlüssels von definiert haben die `keySize` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">CNG-Klassen (Cryptography Next Generation) werden auf diesem System nicht unterstützt.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          Die <paramref name="keySize" /> gibt eine ungültige Länge an.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ECDsaCng (System.Security.Cryptography.CngKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.CngKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.#ctor(System.Security.Cryptography.CngKey)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.CngKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel, der als Eingabe für kryptografische Vorgänge verwendet wird, die vom aktuellen Objekt durchgeführt werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.ECDsaCng" />-Klasse unter Verwendung des angegebenen <see cref="T:System.Security.Cryptography.CngKey" />-Objekts.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" /> gibt keine ECDSA (Elliptic Curve Digital Signature Algorithm)-Gruppe an.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">CNG-Klassen (Cryptography Next Generation) werden auf diesem System nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ECDsaCng (System.Security.Cryptography.ECCurve curve);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.ECCurve curve) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.#ctor(System.Security.Cryptography.ECCurve)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="curve" Type="System.Security.Cryptography.ECCurve" />
+      </Parameters>
+      <Docs>
+        <param name="curve">Die Kurve, die für das Generieren des Paars aus privatem und öffentlichem Schlüssel verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.ECDsaCng" />-Klasse, deren Paar aus öffentlichem und privatem Schlüssel über die angegebene Kurve generiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `curve`Überprüfen müssen (d. h. es muss zurückgegeben werden `true`) bei der Übergabe an die <xref:System.Security.Cryptography.ECCurve.Validate%2A?displayProperty=nameWithType> Methode muss eine benannte oder explizite Prime.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="curve" /> führt keine Validierung durch.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportExplicitParameters">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ECParameters ExportExplicitParameters (bool includePrivateParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Security.Cryptography.ECParameters ExportExplicitParameters(bool includePrivateParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.ExportExplicitParameters(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECParameters</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includePrivateParameters">
+          <see langword="true" />, wenn private Parameter angegeben werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Exportiert die Schlüssel- und expliziten Kurvenparameter, die vom ECC-Objekt (Elliptic Curve Cryptography) verwendet werden, in ein <see cref="T:System.Security.Cryptography.ECParameters" />-Objekt.</summary>
+        <returns>Die Schlüssel- und expliziten Kurvenparameter, die vom ECC-Objekt verwendet werden.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Fehler beim Abrufen der Kurvenwerte.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Der explizite Export wird von dieser Plattform nicht unterstützt. Windows 10 oder höher ist erforderlich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportParameters">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ECParameters ExportParameters (bool includePrivateParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Security.Cryptography.ECParameters ExportParameters(bool includePrivateParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.ExportParameters(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECParameters</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includePrivateParameters">
+          <see langword="true" />, wenn private Parameter angegeben werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Exportiert den Schlüssel, der vom ECC-Objekt (Elliptic Curve Cryptography) verwendet wird, in ein <see cref="T:System.Security.Cryptography.ECParameters" />-Objekt. Wenn der Schlüssel als benannte Kurve erstellt wurde, enthält das Feld <see cref="F:System.Security.Cryptography.ECParameters.Curve" /> benannte Kurvenparameter, andernfalls enthält sie explizite Parameter.</summary>
+        <returns>Die Schlüssel- und die benannten Kurvenparameter, die vom ECC-Objekt verwendet werden.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Fehler beim Abrufen der Kurvenwerte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXmlString">
+      <MemberSignature Language="C#" Value="public override void FromXmlString (string xmlString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXmlString(string xmlString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.FromXmlString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlString">Die XML-basierte Schlüsselinformationen, die deserialisiert werden.</param>
+        <summary>Diese Methode ist nicht implementiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie einen XML-Schlüssel zu deserialisieren, der <xref:System.Security.Cryptography.ECDsaCng.FromXmlString%28System.String%2CSystem.Security.Cryptography.ECKeyXmlFormat%29> stattdessen überladen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Diese Methode wurde für diese Instanz nicht überschrieben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXmlString">
+      <MemberSignature Language="C#" Value="public void FromXmlString (string xml, System.Security.Cryptography.ECKeyXmlFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FromXmlString(string xml, valuetype System.Security.Cryptography.ECKeyXmlFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.FromXmlString(System.String,System.Security.Cryptography.ECKeyXmlFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xml" Type="System.String" />
+        <Parameter Name="format" Type="System.Security.Cryptography.ECKeyXmlFormat" />
+      </Parameters>
+      <Docs>
+        <param name="xml">Die XML-basierte Schlüsselinformationen, die deserialisiert werden.</param>
+        <param name="format">Einer der Enumerationswerte, der das Format der XML-Zeichenfolge angibt. Zurzeit der einzige akzeptierte Format ist <see cref="F:System.Security.Cryptography.ECKeyXmlFormat.Rfc4050" />.</param>
+        <summary>Deserialisiert die Schlüsselinformationen aus einer XML-Zeichenfolge mithilfe des angegebenen Formats.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xml" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="format" />Gibt ein ungültiges Format. Der einzige akzeptierte Wert ist <see cref="F:System.Security.Cryptography.ECKeyXmlFormat.Rfc4050" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateKey">
+      <MemberSignature Language="C#" Value="public override void GenerateKey (System.Security.Cryptography.ECCurve curve);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GenerateKey(valuetype System.Security.Cryptography.ECCurve curve) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.GenerateKey(System.Security.Cryptography.ECCurve)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="curve" Type="System.Security.Cryptography.ECCurve" />
+      </Parameters>
+      <Docs>
+        <param name="curve">Die Kurve zum Generieren des Schlüssels.</param>
+        <summary>Generiert einen Schlüssel, der für den ECDsaCng-Algorithmus verwendet werden soll.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="curve" /> führt keine Validierung durch.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HashAlgorithm">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngAlgorithm HashAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CngAlgorithm HashAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECDsaCng.HashAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Hashalgorithmus zu verwendende signieren und Überprüfen von Daten fest.</summary>
+        <value>Ein Objekt, das den Hashalgorithmus angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft akzeptiert die folgenden Algorithmen: <xref:System.Security.Cryptography.CngAlgorithm.MD5%2A>, <xref:System.Security.Cryptography.CngAlgorithm.Sha1%2A>, <xref:System.Security.Cryptography.CngAlgorithm.Sha256%2A>, <xref:System.Security.Cryptography.CngAlgorithm.Sha384%2A>, und <xref:System.Security.Cryptography.CngAlgorithm.Sha512%2A>.  
+  
+ Andere benutzerdefinierte Hashalgorithmen können auch verwendet werden.  
+  
+ Standardmäßig wird der Algorithmus <xref:System.Security.Cryptography.CngAlgorithm.Sha256%2A>.  
+  
+ Diese Eigenschaft wird nicht verwendet werden, wenn Sie signieren oder Überprüfen von Daten, die bereits einen Hashwert darstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HashData">
+      <MemberSignature Language="C#" Value="protected override byte[] HashData (System.IO.Stream data, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance unsigned int8[] HashData(class System.IO.Stream data, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.HashData(System.IO.Stream,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.IO.Stream" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">To be added.</param>
+        <param name="hashAlgorithm">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashData">
+      <MemberSignature Language="C#" Value="protected override byte[] HashData (byte[] data, int offset, int count, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance unsigned int8[] HashData(unsigned int8[] data, int32 offset, int32 count, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.HashData(System.Byte[],System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">To be added.</param>
+        <param name="offset">To be added.</param>
+        <param name="count">To be added.</param>
+        <param name="hashAlgorithm">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportParameters">
+      <MemberSignature Language="C#" Value="public override void ImportParameters (System.Security.Cryptography.ECParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ImportParameters(valuetype System.Security.Cryptography.ECParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.ImportParameters(System.Security.Cryptography.ECParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Security.Cryptography.ECParameters" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Die Kurvenparameter.</param>
+        <summary>Ersetzt den vorhandenen Schlüssel, mit dem die aktuelle Instanz arbeitet, indem ein neuer <see cref="T:System.Security.Cryptography.CngKey" /> für die Struktur "parameters" erstellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `parameters` enthält nur <xref:System.Security.Cryptography.ECParameters.Q>, nur ein öffentlicher Schlüssel importiert wird. Wenn `parameters` enthält auch <xref:System.Security.Cryptography.ECParameters.D>, ein vollständiges Schlüsselpaar wird importiert. Die <xref:System.Security.Cryptography.ECParameters.Curve> Feld gibt den Typ der Kurve zu importieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="parameters" /> enthält keine gültigen Werte.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="parameters" /> verweist auf eine Kurve, die nicht importiert werden kann.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <paramref name="parameters" /> verweist auf eine Kurve, die von dieser Plattform nicht unterstützt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngKey Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CngKey Key" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECDsaCng.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüssel ab oder legt diesen fest, der zum Signieren und Überprüfen von Daten verwendet wird.</summary>
+        <value>Ein Objekt, das den Schlüssel angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySize">
+      <MemberSignature Language="C#" Value="public override int KeySize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECDsaCng.KeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegalKeySizes">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.KeySizes[] LegalKeySizes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.KeySizes[] LegalKeySizes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECDsaCng.LegalKeySizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeySizes[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignData">
+      <MemberSignature Language="C#" Value="public byte[] SignData (byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] SignData(unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.SignData(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die zu signierenden Nachrichtendaten.</param>
+        <summary>Generiert eine Signatur für die angegebenen Daten.</summary>
+        <returns>Eine digitale Signatur für die angegebenen Daten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode generiert eine Signatur für die angegebenen Daten durch hashing der Eingabedaten unter Verwendung der <xref:System.Security.Cryptography.ECDsaCng.HashAlgorithm%2A> -Eigenschaft, und klicken Sie dann das Ergebnis signiert.  
+  
+ Die <xref:System.Security.Permissions.KeyContainerPermissionFlags?displayProperty=nameWithType> Flag ist erforderlich, wenn der Schlüssel für die Cryptography Next Generation (CNG) durch nicht zufällig generiert wird die <xref:System.Security.Cryptography.ECDsaCng> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Für die der Instanz zugeordneten Schlüsselinformationen ist kein privater Schlüssel vorhanden.</exception>
+        <permission cref="T:System.Security.Permissions.KeyContainerPermission">für die Berechtigung zum Signieren von Daten. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.KeyContainerPermissionFlags.Sign" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SignData">
+      <MemberSignature Language="C#" Value="public byte[] SignData (System.IO.Stream data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] SignData(class System.IO.Stream data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.SignData(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="data">Der Datenstrom signiert werden soll.</param>
+        <summary>Generiert eine Signatur für den angegebenen Datenstrom liest bis zum Ende des Streams.</summary>
+        <returns>Eine digitale Signatur für den angegebenen Datenstrom.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode generiert eine Signatur für den angegebenen Datenstrom durch hashing der Eingabedaten unter Verwendung der <xref:System.Security.Cryptography.ECDsaCng.HashAlgorithm%2A> -Eigenschaft, und klicken Sie dann das Ergebnis signiert.  
+  
+ Die <xref:System.Security.Permissions.KeyContainerPermissionFlags?displayProperty=nameWithType> Flag ist erforderlich, wenn der Schlüssel für die Cryptography Next Generation (CNG) durch nicht zufällig generiert wird die <xref:System.Security.Cryptography.ECDsaCng> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Für die der Instanz zugeordneten Schlüsselinformationen ist kein privater Schlüssel vorhanden.</exception>
+        <permission cref="T:System.Security.Permissions.KeyContainerPermission">für die Berechtigung zum Signieren von Daten. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.KeyContainerPermissionFlags.Sign" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SignData">
+      <MemberSignature Language="C#" Value="public byte[] SignData (byte[] data, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] SignData(unsigned int8[] data, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.SignData(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die zu signierenden Nachrichtendaten.</param>
+        <param name="offset">Die Position in der Zeichenfolge, bei dem das Signieren begonnen werden soll.</param>
+        <param name="count">Die Länge der Zeichenfolge, in der folgenden Zeichen <c>Offset</c> , signiert wird.</param>
+        <summary>Generiert eine digitale Signatur für die angegebene Länge der Daten, beginnend am angegebenen Offset.</summary>
+        <returns>Eine digitale Signatur für die angegebene Länge der Daten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode generiert eine Signatur für die angegebenen Daten durch hashing der Eingabedaten unter Verwendung der <xref:System.Security.Cryptography.ECDsaCng.HashAlgorithm%2A> -Eigenschaft, und klicken Sie dann das Ergebnis signiert  
+  
+ Die <xref:System.Security.Permissions.KeyContainerPermissionFlags?displayProperty=nameWithType> Flag ist erforderlich, wenn der Schlüssel für die Cryptography Next Generation (CNG) durch nicht zufällig generiert wird die <xref:System.Security.Cryptography.ECDsaCng> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="count" />oder <paramref name="offset" /> lesen außerhalb des gültigen Bereichs der Datenzeichenfolge verursacht.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Für die der Instanz zugeordneten Schlüsselinformationen ist kein privater Schlüssel vorhanden.</exception>
+        <permission cref="T:System.Security.Permissions.KeyContainerPermission">für die Berechtigung zum Signieren von Daten. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.KeyContainerPermissionFlags.Sign" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SignHash">
+      <MemberSignature Language="C#" Value="public override byte[] SignHash (byte[] hash);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] SignHash(unsigned int8[] hash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.SignHash(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="hash">Der Hashwert der zu signierenden Daten.</param>
+        <summary>Generiert eine Signatur für den angegebenen Hashwert.</summary>
+        <returns>Eine digitale Signatur für den angegebenen Hashwert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Permissions.KeyContainerPermissionFlags?displayProperty=nameWithType> Flag ist erforderlich, wenn der Schlüssel für die Cryptography Next Generation (CNG) durch nicht zufällig generiert wird die <xref:System.Security.Cryptography.ECDsaCng> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hash" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Für die der Instanz zugeordneten Schlüsselinformationen ist kein privater Schlüssel vorhanden.</exception>
+        <permission cref="T:System.Security.Permissions.KeyContainerPermission">für die Berechtigung zum Signieren von Daten. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.KeyContainerPermissionFlags.Sign" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlString">
+      <MemberSignature Language="C#" Value="public override string ToXmlString (bool includePrivateParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToXmlString(bool includePrivateParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.ToXmlString(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includePrivateParameters">
+          <see langword="true" />, wenn private Parameter angegeben werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Diese Methode ist nicht implementiert.</summary>
+        <returns>Nicht zutreffend.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um den aktuellen Schlüssel in eine XML-Darstellung zu konvertieren, verwenden die <xref:System.Security.Cryptography.ECDsaCng.ToXmlString%28System.Security.Cryptography.ECKeyXmlFormat%29> stattdessen überladen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Diese Methode ist nicht implementiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlString">
+      <MemberSignature Language="C#" Value="public string ToXmlString (System.Security.Cryptography.ECKeyXmlFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToXmlString(valuetype System.Security.Cryptography.ECKeyXmlFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.ToXmlString(System.Security.Cryptography.ECKeyXmlFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Security.Cryptography.ECKeyXmlFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Einer der Enumerationswerte, der das Format der XML-Zeichenfolge angibt. Zurzeit der einzige akzeptierte Format ist <see cref="F:System.Security.Cryptography.ECKeyXmlFormat.Rfc4050" />.</param>
+        <summary>Serialisiert die Schlüsselinformationen in einer XML-Zeichenfolge mithilfe des angegebenen Formats.</summary>
+        <returns>Ein String-Objekt, das die Schlüsselinformationen, die in eine XML-Zeichenfolge entsprechend der angeforderten Format serialisiert enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="format" />Gibt ein ungültiges Format. Der einzige akzeptierte Wert ist <see cref="F:System.Security.Cryptography.ECKeyXmlFormat.Rfc4050" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Alle anderen Fehler.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyData">
+      <MemberSignature Language="C#" Value="public bool VerifyData (byte[] data, byte[] signature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool VerifyData(unsigned int8[] data, unsigned int8[] signature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.VerifyData(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die Daten, die signiert wurden.</param>
+        <param name="signature">Die zu überprüfende Signatur.</param>
+        <summary>Überprüft die digitale Signatur der angegebenen Daten.</summary>
+        <returns>
+          <see langword="true" />, wenn die Signatur gültig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode generiert eine Signatur für die angegebenen Daten durch hashing der Eingabedaten unter Verwendung der <xref:System.Security.Cryptography.ECDsaCng.HashAlgorithm%2A> -Eigenschaft, und klicken Sie dann das Ergebnis signiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> oder <paramref name="signature" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyData">
+      <MemberSignature Language="C#" Value="public bool VerifyData (System.IO.Stream data, byte[] signature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool VerifyData(class System.IO.Stream data, unsigned int8[] signature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.VerifyData(System.IO.Stream,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.IO.Stream" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="data">Der Datenstrom, der signiert wurden.</param>
+        <param name="signature">Die zu überprüfende Signatur.</param>
+        <summary>Überprüft die digitale Signatur des angegebenen Datenstroms, liest bis zum Ende des Streams.</summary>
+        <returns>
+          <see langword="true" />, wenn die Signatur gültig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt einen Hashwert für die Eingabedaten mithilfe der <xref:System.Security.Cryptography.ECDsaCng.HashAlgorithm%2A> Eigenschaft vor der Überprüfung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> oder <paramref name="signature" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyData">
+      <MemberSignature Language="C#" Value="public bool VerifyData (byte[] data, int offset, int count, byte[] signature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool VerifyData(unsigned int8[] data, int32 offset, int32 count, unsigned int8[] signature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.VerifyData(System.Byte[],System.Int32,System.Int32,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die Daten, die signiert wurden.</param>
+        <param name="offset">Der Speicherort in den Daten, an denen die signierten Daten beginnt.</param>
+        <param name="count">Die Länge der Daten in der folgenden Zeichen <c>Offset</c> , signiert wird.</param>
+        <param name="signature">Die zu überprüfende Signatur.</param>
+        <summary>Überprüft eine Signatur für die angegebene Länge der Daten, beginnend am angegebenen Offset.</summary>
+        <returns>
+          <see langword="true" />, wenn die Signatur gültig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt einen Hashwert für die Eingabedaten mithilfe der <xref:System.Security.Cryptography.ECDsaCng.HashAlgorithm%2A> Eigenschaft vor der Überprüfung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" />oder <paramref name="count" /> ist kleiner als 0.  
+  
+ - oder -   
+  
+ <paramref name="offset" />oder <paramref name="count" /> ist größer als die Länge des Bytearrays übergeben der <paramref name="data" /> Parameter.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> oder <paramref name="signature" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyHash">
+      <MemberSignature Language="C#" Value="public override bool VerifyHash (byte[] hash, byte[] signature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool VerifyHash(unsigned int8[] hash, unsigned int8[] signature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsaCng.VerifyHash(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Byte[]" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="hash">Der Hashwert der zu überprüfenden Daten.</param>
+        <param name="signature">Die digitale Signatur der Daten, die mit dem Hashwert überprüft werden sollen.</param>
+        <summary>Überprüft die angegebene digitale Signatur mit einem angegebenen Hashwert.</summary>
+        <returns>
+          <see langword="true" />, wenn die Signatur gültig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hash" /> oder <paramref name="signature" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

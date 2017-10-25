@@ -1,0 +1,173 @@
+<Type Name="ParallelOptions" FullName="System.Threading.Tasks.ParallelOptions">
+  <TypeSignature Language="C#" Value="public class ParallelOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ParallelOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.ParallelOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Speichert Optionen, konfigurieren die Ausführung von Methoden für, die <see cref="T:System.Threading.Tasks.Parallel" /> Klasse.</summary>
+    <remarks>To be added.</remarks>
+    <threadsafe>Der Konstruktor ist threadsicher und kann verwendet werden durch mehrere Threads gleichzeitig mehrere Instanzen erstellen. Öffentliche Member sind nicht threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParallelOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.ParallelOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Threading.Tasks.ParallelOptions" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die Instanz mit Standardwerten. <xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism%2A>wird initialisiert,-1, gibt an, dass es ist kein Obergrenze festgelegt, wie viel Parallelismus verwendet werden soll. <xref:System.Threading.Tasks.ParallelOptions.CancellationToken%2A>wird mit einem Token nicht abbrechbare initialisiert und <xref:System.Threading.Tasks.ParallelOptions.TaskScheduler%2A> wird mit dem Standardplaner (TaskScheduler.Default initialisiert) initialisiert.  
+  
+ Alle diese Standardeinstellungen können mithilfe von Set-Accessoren der Eigenschaft für die Instanz überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancellationToken">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationToken CancellationToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken CancellationToken" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelOptions.CancellationToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Threading.CancellationToken" /> zugeordnete <see cref="T:System.Threading.Tasks.ParallelOptions" /> Instanz.</summary>
+        <value>Das Token, das dieser Instanz zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bereitstellen einer <xref:System.Threading.CancellationToken> auf eine <xref:System.Threading.Tasks.Parallel> Methode können Sie den Vorgang zu einem frühen Zeitpunkt beendet werden. Code außerhalb der Vorgang kann das Token Abbrechen, und wenn der Vorgang das Festlegen des Tokens verwendet wird, kann es vorzeitig beendet werden, durch das Auslösen einer <xref:System.OperationCanceledException>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxDegreeOfParallelism">
+      <MemberSignature Language="C#" Value="public int MaxDegreeOfParallelism { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxDegreeOfParallelism" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Anzahl der gleichzeitigen Aufgaben, die von diesem aktiviert <see cref="T:System.Threading.Tasks.ParallelOptions" /> Instanz.</summary>
+        <value>Eine ganze Zahl, die den maximalen Grad an Parallelität darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism%2A> Eigenschaft wirkt sich auf die Anzahl der gleichzeitigen Vorgänge ausführen, indem <xref:System.Threading.Tasks.Parallel> Methodenaufrufe, die dies übergeben werden <xref:System.Threading.Tasks.ParallelOptions> Instanz. Ein positive Eigenschaftswert schränkt die Anzahl der gleichzeitigen Vorgänge um den Wert festzulegen. Wenn Sie sie-1 ist, ist es gilt keine Beschränkung für die Anzahl der gleichzeitig ausgeführten Vorgänge.  
+  
+ Standardmäßig <xref:System.Threading.Tasks.Parallel.For%2A> und <xref:System.Threading.Tasks.Parallel.ForEach%2A> nutzt jedoch viele Threads der zugrunde liegenden Planer bereitstellt, so dass die Änderung, <xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism%2A> von der Standardeinstellung nur beschränkt, wie viele gleichzeitige Aufgaben verwendet werden soll.  
+  
+ Im Allgemeinen müssen Sie nicht diese Einstellung zu ändern. Sie können jedoch explizit in fortgeschrittenen Verwendungsszenarios solche festlegen:  
+  
+-   Wenn Sie wissen, dass Sie einen bestimmten Algorithmus verwenden wird nicht über eine bestimmte Anzahl von Kernen skaliert werden. Sie können die Eigenschaft, die Zyklen auf zusätzliche Kerne Arbeitsbereichsordner festlegen.  
+  
+-   Wenn Sie gleichzeitig mehrere Algorithmen ausführen und manuell definieren möchten wie viel des Systems, die jeder Algorithmus nutzen kann. Sie können festlegen, eine <xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism%2A> für jeden Wert.  
+  
+-   Wenn der Threadpool Heuristik ist nicht die richtige Anzahl von Threads zur Verwendung zu ermitteln und zu viele Threads Räumen annehmen konnte. Beispielsweise in Text Schleifeniterationen lang andauernde und der Threadpool kann nicht in der Lage, den Unterschied zwischen angemessenen Fortschritt oder Livelock oder Deadlocks erkannt werden, möglicherweise nicht zum Freigeben von Threads, die hinzugefügt wurden, um die Leistung zu verbessern. In diesem Fall können Sie durch Festlegen der Eigenschaft aus, um sicherzustellen, dass Sie nicht mehr als eine angemessene Anzahl von Threads verwenden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird auf 0 (null) oder auf einen Wert, der kleiner als-1 ist festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskScheduler">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.TaskScheduler TaskScheduler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.Tasks.TaskScheduler TaskScheduler" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelOptions.TaskScheduler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskScheduler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Threading.Tasks.TaskScheduler" /> zugeordnete <see cref="T:System.Threading.Tasks.ParallelOptions" /> Instanz. Festlegen dieser Eigenschaft auf null gibt an, dass die aktuelle Planer verwendet werden soll.</summary>
+        <value>Der Taskplaner, der dieser Instanz zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

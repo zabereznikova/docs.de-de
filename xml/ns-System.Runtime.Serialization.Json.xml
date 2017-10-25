@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.Serialization.Json">
+  <Docs>
+    <summary>Enthält Klassen, die im Zusammenhang mit der Json-Serialisierung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

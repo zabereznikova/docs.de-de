@@ -1,0 +1,127 @@
+<Type Name="ProcessWindowStyle" FullName="System.Diagnostics.ProcessWindowStyle">
+  <TypeSignature Language="C#" Value="public enum ProcessWindowStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProcessWindowStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.ProcessWindowStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Process</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Angegeben, wie ein neues Fenster angezeigt werden soll, wenn das System ein Prozess gestartet wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Hidden">
+      <MemberSignature Language="C#" Value="Hidden" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.ProcessWindowStyle Hidden = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.ProcessWindowStyle.Hidden" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessWindowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der ausgeblendete Fensterstil. Ein Fenster kann entweder sichtbar oder ausgeblendet werden. Das System zeigt ein ausgeblendetes Fenster durch nicht gezeichnet wird. Wenn ein Fenster ausgeblendet ist, ist es deaktiviert. Ein ausgeblendetes Fenster kann Nachrichten aus dem System oder aus anderen Fenstern verarbeitet, jedoch nicht verarbeitet die Eingaben des Benutzers oder Ausgabe anzuzeigen. In vielen Fällen einer Anwendung ein neues Fenster ausgeblendet, während sie die Darstellung des Fensters anpasst kann, und stellen Sie dann den Fensterstil <see langword="Normal" />. Mit <see cref="F:System.Diagnostics.ProcessWindowStyle.Hidden" />, <see cref="P:System.Diagnostics.ProcessStartInfo.UseShellExecute" /> Eigenschaft muss <see langword="false" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximized">
+      <MemberSignature Language="C#" Value="Maximized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.ProcessWindowStyle Maximized = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.ProcessWindowStyle.Maximized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessWindowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der maximierte Fensterstil. Standardmäßig wird das System, damit es auf den Bildschirm voll ist oder bei einem untergeordneten Fenster Clientbereich des übergeordneten Fensters ein maximiertes Fensters vergrößert. Wenn das Fenster eine Titelleiste verfügt, verschiebt das System automatisch es auf den oberen Rand des Bildschirms oder an den Anfang der Clientbereich des übergeordneten Fensters. Darüber hinaus wird das System, damit der Benutzer das Fenster verschieben kann, durch Ziehen der Titelleiste Größenanpassungsrahmens des Fensters und die Möglichkeit, Fenster Positionierung der Titelleiste deaktiviert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimized">
+      <MemberSignature Language="C#" Value="Minimized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.ProcessWindowStyle Minimized = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.ProcessWindowStyle.Minimized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessWindowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Stil minimierten Fensters. Standardmäßig wird das System ein minimiertes Fenster auf die Größe des zugehörige Taskleistenschaltfläche reduziert und verschiebt das minimierte Fenster auf der Taskleiste.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.ProcessWindowStyle Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.ProcessWindowStyle.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessWindowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der normale, sichtbare Fensterstil. Das System zeigt ein Fenster mit <see langword="Normal" /> Stil auf dem Bildschirm an einem Standardspeicherort. Wenn ein Fenster sichtbar ist, kann der Benutzer kann Eingaben in das Fenster bereitstellen und das Fenster Ausgabe anzeigen. In vielen Fällen kann eine Anwendung initialisiert ein neues Fenster auf die <see langword="Hidden" /> formatieren, während sie die Darstellung des Fensters anpasst, und stellen Sie dann den Fensterstil <see langword="Normal" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

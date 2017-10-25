@@ -1,0 +1,132 @@
+<Type Name="ThemeInfoAttribute" FullName="System.Windows.ThemeInfoAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ThemeInfoAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ThemeInfoAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.ThemeInfoAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Speicherort an, in welches, den Design Wörterbüchern für eine Assembly gespeichert sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut wird auf Assemblyebene verwendet, um anzugeben, welche Ressourcenwörterbücher von einer Assembly für ihre definierten Steuerelemente deklariert werden und, wo sich die Ressourcenwörterbücher befinden.  
+  
+ Angenommen, wenn Sie keine Design-spezifische Ressourcenverzeichnis, ergeben und Ihre `generic.xaml` , dass Ressourcendefinitionen für alle Ressourcensuchen kompiliert wird, in der gleichen Assembly, in denen der Assembly aneinander gehängt Steuerelementklassendefinitionen vorhanden sein, würden Sie Übernehmen Sie die folgenden Informationsblatt befindet, in der `AssemblyInfo.cs` für das Projekt der Assembly:  
+  
+ `[assembly:ThemeInfoAttribute(ResourceDictionaryLocation.None, ResourceDictionaryLocation.SourceAssembly)]`  
+  
+ Zusätzlich zu <xref:System.Windows.ThemeInfoAttribute> Anwendung, Ihrem Projekt und die Assembly müssen zusätzliche Merkmale aufweisen, in der Reihenfolge für die Ressourcenwörterbücher WPF-designsystem verwendbar sein soll.  
+  
+-   Wenn Sie deklarieren <xref:System.Windows.ResourceDictionaryLocation.SourceAssembly>, und klicken Sie dann in der referenzierten Ressourcenverzeichnis platziert werden soll eine `themes` Verzeichnis in der Assemblystruktur.  
+  
+-   Wenn Sie deklarieren <xref:System.Windows.ResourceDictionaryLocation.SourceAssembly> für <xref:System.Windows.ThemeInfoAttribute.ThemeDictionaryLocation%2A>, und klicken Sie dann die Namen der XAML-Dateien erwartet werden, entsprechen, das Benennungsschema für die Verwendung von XAML-Datei `themes\<Theme Name>.<Theme Color>.xaml`. Folgendes ist z. B. eine Liste der Designdateien, die eine Vielzahl von Szenarien für WPF-Designs auf Clients zu unterstützen:  
+  
+    -   `themes\luna.normalcolor.xaml`  
+  
+    -   `themes\luna.homestead.xaml`  
+  
+    -   `themes\luna.metallic.xaml`  
+  
+    -   `themes\royale.normalcolor.xaml`  
+  
+    -   `themes\aero.normalcolor.xaml`  
+  
+    -   `themes\classic.xaml`  
+  
+-   Wenn Sie deklarieren <xref:System.Windows.ResourceDictionaryLocation.ExternalAssembly>, dann werden die externen Assemblynamen erwartet, dass ein Benennungsschema entsprechen, und jede Assembly für jedes Design verwenden die gleiche Schlüsselinformationen erstellt werden soll.  
+  
+ Weitere Informationen zum Erstellen und Verwenden von Design Ressourcenverzeichnis finden Sie unter "Definieren von der Ressourcen auf der Design-Level" Abschnitt des Themas [Steuerelement Dokumenterstellung (Übersicht)](~/docs/framework/wpf/controls/control-authoring-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThemeInfoAttribute (System.Windows.ResourceDictionaryLocation themeDictionaryLocation, System.Windows.ResourceDictionaryLocation genericDictionaryLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.ResourceDictionaryLocation themeDictionaryLocation, valuetype System.Windows.ResourceDictionaryLocation genericDictionaryLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ThemeInfoAttribute.#ctor(System.Windows.ResourceDictionaryLocation,System.Windows.ResourceDictionaryLocation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="themeDictionaryLocation" Type="System.Windows.ResourceDictionaryLocation" />
+        <Parameter Name="genericDictionaryLocation" Type="System.Windows.ResourceDictionaryLocation" />
+      </Parameters>
+      <Docs>
+        <param name="themeDictionaryLocation">Der Speicherort der Design-spezifischen Ressourcen.</param>
+        <param name="genericDictionaryLocation">Der Speicherort des generischen, kein Design-spezifischen Ressourcen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.ThemeInfoAttribute" /> -Klasse und erstellt ein Attribut, das Design Wörterbuch Speicherorte für die Typen in einer Assembly definiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `themeDictionaryLocation` ist <xref:System.Windows.ResourceDictionaryLocation.SourceAssembly>, Sie können z. B. Luna.NormalColor.xaml Includedateien. Diese Namen werden durch die Systemdateien Design definiert, darunter die folgenden.  
+  
+ Classic – "Klassisch" Windows 9 X / 2000-Darstellung unter Windows XP.  
+  
+ Luna.NormalColor - blauer Standarddesign unter Windows XP.  
+  
+ Luna.Homestead – Olivgrünes Design unter Windows XP.  
+  
+ Luna.Metallic – Silber Design unter Windows XP.  
+  
+ Royale.NormalColor – Standarddesign unter Windows XP Media Center Edition.  
+  
+ Aero.NormalColor – Standarddesign unter Windows Vista  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericDictionaryLocation">
+      <MemberSignature Language="C#" Value="public System.Windows.ResourceDictionaryLocation GenericDictionaryLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.ResourceDictionaryLocation GenericDictionaryLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ThemeInfoAttribute.GenericDictionaryLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceDictionaryLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherort des generischen, nicht bestimmte Design, Ressourcen.</summary>
+        <value>Die <see cref="T:System.Windows.ResourceDictionaryLocation" /> der generischen <see cref="T:System.Windows.ResourceDictionary" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThemeDictionaryLocation">
+      <MemberSignature Language="C#" Value="public System.Windows.ResourceDictionaryLocation ThemeDictionaryLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.ResourceDictionaryLocation ThemeDictionaryLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ThemeInfoAttribute.ThemeDictionaryLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceDictionaryLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherort des Designs bestimmte Ressourcen.</summary>
+        <value>Die <see cref="T:System.Windows.ResourceDictionaryLocation" /> des Designs bestimmte <see cref="T:System.Windows.ResourceDictionary" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

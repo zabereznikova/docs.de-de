@@ -1,0 +1,128 @@
+<Type Name="DataControlRowState" FullName="System.Web.UI.WebControls.DataControlRowState">
+  <TypeSignature Language="C#" Value="public enum DataControlRowState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataControlRowState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataControlRowState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Zustand einer Zeile in einem Steuerelement, z. B. <see cref="T:System.Web.UI.WebControls.DetailsView" /> oder <see cref="T:System.Web.UI.WebControls.GridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlRowState> -Enumeration gibt den Zustand einer Zeile in einem Steuerelement, z. B. <xref:System.Web.UI.WebControls.DetailsView> oder <xref:System.Web.UI.WebControls.GridView>. Der Zustand einer Zeile kann eine oder eine Kombination der <xref:System.Web.UI.WebControls.DataControlRowState> Werte, also bitweise Operationen verwenden, um zu bestimmen, ob der Zustand der Zeile enthält eine <xref:System.Web.UI.WebControls.DataControlRowState> , anstatt eine äquivalenztest Wert. Die <xref:System.Web.UI.WebControls.DataControlRowState> Enumeration wird für jeden Typ der Zeile verwendet, nicht nur <xref:System.Web.UI.WebControls.DataControlRowType.DataRow> Zeilen (in der Regel der Status der Kopfzeile und Fußzeile auf Normal festgelegt ist).  
+  
+ Können Sie die <xref:System.Web.UI.WebControls.DataControlRowState.Normal> Enumeration zum Identifizieren des Status der eine <xref:System.Web.UI.WebControls.GridViewRow> oder <xref:System.Web.UI.WebControls.DetailsViewRow> -Objekts beim Durchlaufen einer <xref:System.Web.UI.WebControls.GridViewRowCollection> oder <xref:System.Web.UI.WebControls.DetailsViewRowCollection> Auflistung bzw.. Wenn Sie ein Steuerelement, das Zeilen verwendet schreiben, können Sie die <xref:System.Web.UI.WebControls.DataControlRowState> Enumeration zu identifizieren, wann verschiedene Farben für eine Zeile (einen alternativen Wert) oder Steuerelemente, die aktiviert oder deaktiviert werden, für die Bearbeitung einer Zeile (die Werte für bearbeiten und Einfügen) zu rendern.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataControlRowState> Enumeration zum Rendern einer Benutzeroberfläche (UI) basierend auf den Zustand einer Zeile in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement. Die `RadioButtonField` Klasse, die ein benutzerdefiniertes Feldsteuerelement abgeleitet der <xref:System.Web.UI.WebControls.CheckBoxField> steuern, rendert ein Optionsfeld für datengebundene für jede Zeile in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement. Wenn die Zeile Daten für einen Benutzer anzeigt und befindet sich nicht in den Bearbeitungsmodus wechseln, die <xref:System.Web.UI.WebControls.RadioButton> -Steuerelement ist deaktiviert. Wenn der Benutzer eine Zeile in aktualisiert <xref:System.Web.UI.WebControls.GridView> und die Zeile im Bearbeitungsmodus befindet, wird die <xref:System.Web.UI.WebControls.RadioButton> Steuerelement gerendert wird, wie aktiviert, sodass er auf den geklickt werden kann. Im Beispiel wird die bitweise AND-Operatoren verwendet, da dem Zeilenstatus eine Kombination aus einem oder mehreren möglicherweise <xref:System.Web.UI.WebControls.DataControlRowState> Werte. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.DataControlField> Klasse.  
+  
+ [!code-csharp[Samples.AspNet.RadioButtonField#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.RadioButtonField/CS/radiobuttonfield.cs#3)]
+ [!code-vb[Samples.AspNet.RadioButtonField#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.RadioButtonField/VB/radiobuttonfield.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Alternate">
+      <MemberSignature Language="C#" Value="Alternate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowState Alternate = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowState.Alternate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Datenzeile für das Steuerelement eine alternative Zeile ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der alternative Status kann zu einem beliebigen Zeitpunkt mit anderen Zuständen, z. B. Normal, bearbeiten oder einfügen, kombiniert werden. Diese Zeilen beeinträchtigt werden könnte, indem Sie die `AlternateRowStyle` Eigenschaft der Daten zu steuern, wenn festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Edit">
+      <MemberSignature Language="C#" Value="Edit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowState Edit = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowState.Edit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Zeile in einer Bearbeitungsstatus häufig das Ergebnis des Klickens auf eine Schaltfläche "Bearbeiten" für die Zeile befindet. In der Regel die <see cref="F:System.Web.UI.WebControls.DataControlRowState.Edit" /> und <see cref="F:System.Web.UI.WebControls.DataControlRowState.Insert" /> Zustände schließen sich gegenseitig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="Insert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowState Insert = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowState.Insert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Zeile eine neue Zeile, die häufig das Ergebnis des Klickens auf eine Einfügeschaltfläche, um eine neue Zeile hinzuzufügen. In der Regel die <see cref="F:System.Web.UI.WebControls.DataControlRowState.Insert" /> und <see cref="F:System.Web.UI.WebControls.DataControlRowState.Edit" /> Zustände schließen sich gegenseitig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowState Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowState.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Datenzeile für das Steuerelement in einem normalen Status befinden. Die <see cref="F:System.Web.UI.WebControls.DataControlRowState.Normal" /> Zustand ist gegenseitig mit anderen Staaten außer der <see cref="F:System.Web.UI.WebControls.DataControlRowState.Alternate" /> Zustand.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="Selected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowState Selected = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowState.Selected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Zeile vom Benutzer ausgewählt wurde.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

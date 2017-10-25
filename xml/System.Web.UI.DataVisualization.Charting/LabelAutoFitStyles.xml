@@ -1,0 +1,158 @@
+<Type Name="LabelAutoFitStyles" FullName="System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles">
+  <TypeSignature Language="C#" Value="public enum LabelAutoFitStyles" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LabelAutoFitStyles extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, Änderungen an Formatvorlagen, die automatisch für eine Bezeichnung erfolgen können bei der <see cref="P:System.Web.UI.DataVisualization.Charting.Axis.LabelAutoFitStyle" /> Eigenschaft wird verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles> Enumeration, um die Änderungen an der Schriftart oder die Ausrichtung der Bezeichnungen, die automatisch ausgeführt werden können, um Etiketten auf die Achse passen können darstellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DecreaseFont">
+      <MemberSignature Language="C#" Value="DecreaseFont" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles DecreaseFont = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>"Bezeichnungsschriftart" kann verringert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseFont">
+      <MemberSignature Language="C#" Value="IncreaseFont" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles IncreaseFont = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Label-Schriftart kann vergrößert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LabelsAngleStep30">
+      <MemberSignature Language="C#" Value="LabelsAngleStep30" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles LabelsAngleStep30 = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep30" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnungen können in Schritten von 30 Grad angeschrägt werden: 0, 30, 60 und 90.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LabelsAngleStep45">
+      <MemberSignature Language="C#" Value="LabelsAngleStep45" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles LabelsAngleStep45 = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnungen können in 45-Grad-Schritten winklig werden: 0, 45 und 90.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LabelsAngleStep90">
+      <MemberSignature Language="C#" Value="LabelsAngleStep90" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles LabelsAngleStep90 = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep90" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnungen können in 90-Grad-Schritten winklig werden: 0 und 90.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es dürfen keine Bezeichnung ändert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StaggeredLabels">
+      <MemberSignature Language="C#" Value="StaggeredLabels" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles StaggeredLabels = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.StaggeredLabels" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnungen können versetzt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WordWrap">
+      <MemberSignature Language="C#" Value="WordWrap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles WordWrap = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.WordWrap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnungen können umbrochen werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

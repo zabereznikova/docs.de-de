@@ -1,0 +1,96 @@
+<Type Name="HScrollBar" FullName="System.Windows.Forms.HScrollBar">
+  <TypeSignature Language="C#" Value="public class HScrollBar : System.Windows.Forms.ScrollBar" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HScrollBar extends System.Windows.Forms.ScrollBar" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HScrollBar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ScrollBar</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine standardmäßige Windows horizontale Bildlaufleiste angezeigt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten Steuerelemente, die bereits Bildlaufleisten müssen diese bereit und dieses Steuerelement ist nicht erforderlich. Dies gilt für ein mehrzeiliges <xref:System.Windows.Forms.TextBox> -Steuerelement, ein <xref:System.Windows.Forms.ListBox>, und ein <xref:System.Windows.Forms.ComboBox>, z. B..  
+  
+ Können Sie dieses Steuerelement implementieren, Durchführen eines Bildlaufs in Containern, die keine eigene Bildlaufleisten wie z. B. Bereitstellen einer <xref:System.Windows.Forms.PictureBox> oder für Benutzereingaben mit numerischen Daten. Die numerischen Daten können in einem Steuerelement angezeigt oder in Code verwendet werden. Die <xref:System.Windows.Forms.ScrollBar.Minimum%2A> und <xref:System.Windows.Forms.ScrollBar.Maximum%2A> Eigenschaften bestimmt den Bereich der Werte, die der Benutzer auswählen kann. Die <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> Eigenschaft bestimmt den Effekt des Klickens auf innerhalb der Bildlaufleiste angezeigt, aber außerhalb des Bildlauffelds. Die <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> Eigenschaft bestimmt den Effekt des Klickens auf die Pfeile an beiden Enden des Steuerelements.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt und initialisiert ein <xref:System.Windows.Forms.HScrollBar> und fügt es einer <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Classic HScrollBar Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic HScrollBar Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic HScrollBar Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic HScrollBar Example/CS/source.cs#1)]
+ [!code-vb[Classic HScrollBar Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic HScrollBar Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HScrollBar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HScrollBar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.HScrollBar" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HScrollBar.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die benötigten Erstellungsparameter ab, wenn das Steuerelementhandle erstellt wird.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.CreateParams" />-Eigenschaft, die die erforderlichen Erstellungsparameter enthält, wenn das Handle für das Steuerelement erstellt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HScrollBar.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardgröße des Steuerelements ab.</summary>
+        <value>Die Standard-<see cref="T:System.Drawing.Size" /> des Steuerelements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

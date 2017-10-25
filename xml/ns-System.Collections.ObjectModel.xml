@@ -1,0 +1,6 @@
+<Namespace Name="System.Collections.ObjectModel">
+  <Docs>
+    <summary>Die <see cref="N:System.Collections.ObjectModel" /> -Namespace enthält Klassen, die als Auflistungen im Objektmodell einer wiederverwendbaren Bibliothek verwendet werden können. Verwenden Sie diese Klassen, wenn Eigenschaften oder Methoden Auflistungen zurückgeben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

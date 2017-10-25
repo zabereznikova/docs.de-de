@@ -1,0 +1,694 @@
+<Type Name="ResourceSet" FullName="System.Resources.ResourceSet">
+  <TypeSignature Language="C#" Value="public class ResourceSet : IDisposable, System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ResourceSet extends System.Object implements class System.Collections.IEnumerable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Resources.ResourceSet" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Speichert alle Ressourcen, die für eine bestimmte Kultur lokalisiert wurden, wobei alle anderen Kulturen, einschließlich aller Fallbackregeln, ignoriert werden.  
+  
+ **Sicherheitshinweis**: Aufrufen von Methoden in dieser Klasse mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Rufen Sie die Methoden in der Klasse nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](https://docs.com/rick-anderson-1/8710/untrusted-data-security-risks).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Resources.ResourceSet> Klasse listet ein <xref:System.Resources.IResourceReader>, alle Namen und Wert laden und speichern Sie sie in einer <xref:System.Collections.Hashtable>. Eine benutzerdefinierte <xref:System.Resources.IResourceReader> kann verwendet werden.  
+  
+ Instanziieren Sie ein <xref:System.Resources.ResourceSet> Objekt, das durch Aufrufen der Ressourcen einer bestimmten Kultur darstellt die <xref:System.Resources.ResourceManager.GetResourceSet%2A?displayProperty=nameWithType> Methode.  
+  
+> [!IMPORTANT]
+>  Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Abgeleitete Klassen von <see cref="T:System.Resources.ResourceSet" /> , die ihre eigenen Ressourcenreaders verwenden und Writer sollten überschreiben <see cref="M:System.Resources.ResourceSet.GetDefaultReader" />, und <see cref="M:System.Resources.ResourceSet.GetDefaultWriter" />, um die entsprechende Funktionalität für das Interpretieren des Ressourcensatz bereitzustellen.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ResourceSet ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Resources.ResourceSet" />-Klasse mit Standardeigenschaften.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceSet (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der <see cref="T:System.IO.Stream" /> der zu lesenden Ressourcen. Der Datenstrom muss auf eine vorhandene Ressourcendatei verweisen.</param>
+        <summary>Erstellt mit dem standardmäßig festgelegten <see cref="T:System.Resources.ResourceReader" /> eine neue Instanz der <see cref="T:System.Resources.ResourceSet" />-Klasse, um Ressourcen aus dem angegebenen Datenstrom zu lesen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="stream" /> ist nicht lesbar.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="stream" />-Parameter ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für das Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceSet (System.Resources.IResourceReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Resources.IResourceReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.#ctor(System.Resources.IResourceReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Resources.IResourceReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der zu verwendende Reader.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Resources.ResourceSet" />-Klasse unter Verwendung des angegebenen Ressourcenreaders.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zur Unterstützung benutzerdefinierter Ressourcenformate mit einem vom Benutzer bereitgestellten <xref:System.Resources.IResourceReader>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="reader" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceSet (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Zu lesende Ressourcendatei.</param>
+        <summary>Erstellt mit dem standardmäßig festgelegten <see cref="T:System.Resources.ResourceReader" /> eine neue Instanz der <see cref="T:System.Resources.ResourceSet" />-Klasse, um Ressourcen aus dem angegebenen Datenstrom zu öffnen und zu lesen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel definiert eine neue Instanz der dem <xref:System.Resources.ResourceSet> Klasse für eine bestimmte Datei iteriert durch die von dieser Datei verwendeten Ressourcen und ihre Inhalte in der Konsole anzeigt.  
+  
+ [!code-cpp[System.Resources.ResourceSet.GetEnumerator#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Resources.ResourceSet.GetEnumerator/CPP/getenumerator.cpp#1)]
+ [!code-csharp[System.Resources.ResourceSet.GetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Resources.ResourceSet.GetEnumerator/CS/getenumerator.cs#1)]
+ [!code-vb[System.Resources.ResourceSet.GetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Resources.ResourceSet.GetEnumerator/VB/getenumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="fileName" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public virtual void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt alle von diesem <see cref="T:System.Resources.ResourceSet" /> verwendeten Ressourcen und gibt diese frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Aufrufe von Methoden für die <xref:System.Resources.ResourceSet> nach ein Aufruf dieser Methode treten.  
+  
+ <xref:System.Resources.ResourceSet.Close%2A>kann problemlos mehrmals aufgerufen werden.  
+  
+> [!NOTE]
+>  Die aktuelle Implementierung von <xref:System.Resources.ResourceSet.Close%2A> Aufrufe <xref:System.Resources.ResourceSet.Dispose%2A> (`true`).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Resources.ResourceSet.Close%2A> Methode, um alle von der aufrufenden verwendeten Ressourcen freizugeben <xref:System.Resources.ResourceSet> Instanz.  
+  
+ [!code-cpp[System.Resources.ResourceSet.GetEnumerator#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Resources.ResourceSet.GetEnumerator/CPP/getenumerator.cpp#1)]
+ [!code-csharp[System.Resources.ResourceSet.GetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Resources.ResourceSet.GetEnumerator/CS/getenumerator.cs#1)]
+ [!code-vb[System.Resources.ResourceSet.GetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Resources.ResourceSet.GetEnumerator/VB/getenumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die durch die aktuelle Instanz von <see cref="T:System.Resources.ResourceSet" /> verwendeten Ressourcen frei, mit Ausnahme des Speichers.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Resources.ResourceSet.Dispose%2A> auf, wenn Sie <xref:System.Resources.ResourceSet> nicht mehr benötigen. Die <xref:System.Resources.ResourceSet.Dispose%2A>-Methode bewirkt, dass <xref:System.Resources.ResourceSet> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Resources.ResourceSet.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.Resources.ResourceSet> , damit der belegte Arbeitsspeicher von der Garbagecollection wieder zugänglich gemacht werden kann.  
+  
+> [!NOTE]
+>  Die aktuelle Methode ist die Implementierung von <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>. Diese Implementierung ruft <xref:System.Resources.ResourceSet.Dispose%2A> (`true`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Gibt an, ob die in der aktuellen Instanz enthaltenen Objekte explizit geschlossen werden sollen.</param>
+        <summary>Gibt die der aktuellen Instanz zugeordneten Ressourcen (mit Ausnahme des Speichers) frei und schließt auf Anforderung die intern verwalteten Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `dispose` Parameter ist `true`, die aktuelle Methode gibt alle Ressourcen, die verknüpft sind, sowie alle zugeordneten Objekte frei. Wenn `dispose` ist `false`, die aktuelle Methode nur die ihm zugeordneten Ressourcen frei und ignoriert alle ihr zugeordneten Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultReader">
+      <MemberSignature Language="C#" Value="public virtual Type GetDefaultReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetDefaultReader() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.GetDefaultReader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die bevorzugte Klasse von Ressourcenreadern für diese Art von <see cref="T:System.Resources.ResourceSet" /> zurück.</summary>
+        <returns>Gibt den <see cref="T:System.Type" /> des bevorzugten Ressourcenreaders für diese Art von <see cref="T:System.Resources.ResourceSet" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen von <see cref="T:System.Resources.ResourceSet" /> mithilfe ihrer eigenen Ressourcenreaders überschreiben sollten <see cref="M:System.Resources.ResourceSet.GetDefaultReader" />, und <see cref="M:System.Resources.ResourceSet.GetDefaultWriter" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultWriter">
+      <MemberSignature Language="C#" Value="public virtual Type GetDefaultWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetDefaultWriter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.GetDefaultWriter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die bevorzugte Klasse von Ressourcenwritern für diese Art von <see cref="T:System.Resources.ResourceSet" /> zurück.</summary>
+        <returns>Gibt den <see cref="T:System.Type" /> des bevorzugten Ressourcenwriters für diese Art von <see cref="T:System.Resources.ResourceSet" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen von <see cref="T:System.Resources.ResourceSet" /> mithilfe ihrer eigenen Ressourcenreaders überschreiben sollten <see cref="M:System.Resources.ResourceSet.GetDefaultReader" />, und <see cref="M:System.Resources.ResourceSet.GetDefaultWriter" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IDictionaryEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionaryEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen <see cref="T:System.Collections.IDictionaryEnumerator" /> zurück, der die <see cref="T:System.Resources.ResourceSet" /> durchlaufen kann.</summary>
+        <returns>Ein <see cref="T:System.Collections.IDictionaryEnumerator" /> für dieses <see cref="T:System.Resources.ResourceSet" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Enumeratoren können nur das Lesen der Daten in der Auflistung. Mit Enumeratoren können nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ Zu Beginn wird der Enumerator vor das erste Element in der Auflistung positioniert. <xref:System.Collections.IEnumerator.Reset%2A> setzt den Enumerator ebenfalls auf diese Position zurück. An dieser position Aufrufen <xref:System.Collections.IEnumerator.Current%2A> löst eine Ausnahme aus. Daher muss der Enumerator durch einen Aufruf von <xref:System.Collections.IEnumerator.MoveNext%2A> auf das erste Element der Auflistung gesetzt werden, bevor der Wert von <xref:System.Collections.IEnumerator.Current%2A> gelesen werden kann.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> gibt solange dasselbe Objekt zurück, bis <xref:System.Collections.IEnumerator.MoveNext%2A> oder <xref:System.Collections.IEnumerator.Reset%2A> aufgerufen wird. <xref:System.Collections.IEnumerator.MoveNext%2A> legt <xref:System.Collections.IEnumerator.Current%2A> auf das nächste Element fest.  
+  
+ Nach Erreichen des Endes der Auflistung befindet sich der Enumerator hinter dem letzten Element der Auflistung, und ein Aufruf von <xref:System.Collections.IEnumerator.MoveNext%2A> gibt `false` zurück. Wenn der letzte Aufruf <xref:System.Collections.IEnumerator.MoveNext%2A> zurückgegebene `false`Aufrufen <xref:System.Collections.IEnumerator.Current%2A> löst eine Ausnahme aus. Um <xref:System.Collections.IEnumerator.Current%2A> wieder auf das erste Element der Auflistung festzulegen, können Sie <xref:System.Collections.IEnumerator.Reset%2A> gefolgt von <xref:System.Collections.IEnumerator.MoveNext%2A> aufrufen.  
+  
+ Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Wenn Änderungen an der Auflistung vorgenommen werden, z. B. das Hinzufügen, ändern oder Löschen von Elementen, der Enumerator unwiederbringlich seine Gültigkeit und der nächste Aufruf von <xref:System.Collections.IEnumerator.MoveNext%2A> oder <xref:System.Collections.IEnumerator.Reset%2A> löst eine <xref:System.InvalidOperationException>. Wenn die Auflistung zwischen <xref:System.Collections.IEnumerator.MoveNext%2A> und <xref:System.Collections.IEnumerator.Current%2A> geändert wird, gibt <xref:System.Collections.IEnumerator.Current%2A> das Element zurück, auf das der Enumerator gesetzt wurde, auch wenn er bereits ungültig ist.  
+  
+ Sie können die <xref:System.Collections.IDictionaryEnumerator.Entry%2A?displayProperty=nameWithType> Eigenschaft Zugriff auf den Wert in das aktuelle Element gespeichert. Verwenden der <xref:System.Collections.IDictionaryEnumerator.Key%2A?displayProperty=nameWithType> Eigenschaft, um Zugriff auf den Schlüssel des aktuellen Elements. Verwenden der <xref:System.Collections.IDictionaryEnumerator.Value%2A?displayProperty=nameWithType> Eigenschaft Zugriff auf den Wert des aktuellen Elements.  
+  
+ Der Enumerator hat keinen exklusiven Zugriff auf die Auflistung; daher ist die Enumeration einer Auflistung systembedingt kein threadsicheres Verfahren. Selbst wenn eine Auflistung synchronisiert wird, konnte andere Threads ändern die Auflistung. Dies führt dazu, dass den Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Resources.ResourceSet> `rs` für die Datei `items.resources`. Als Nächstes wird die <xref:System.Resources.ResourceSet.GetEnumerator%2A> Methode dient zum Erstellen einer <xref:System.Collections.IDictionaryEnumerator> für `rs`. Die <xref:System.Collections.IDictionaryEnumerator> durchläuft `rs` und den Inhalt in der Konsole anzeigt.  
+  
+ [!code-cpp[System.Resources.ResourceSet.GetEnumerator#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Resources.ResourceSet.GetEnumerator/CPP/getenumerator.cpp#1)]
+ [!code-csharp[System.Resources.ResourceSet.GetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Resources.ResourceSet.GetEnumerator/CS/getenumerator.cs#1)]
+ [!code-vb[System.Resources.ResourceSet.GetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Resources.ResourceSet.GetEnumerator/VB/getenumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Der Ressourcensatz wurde geschlossen oder verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public virtual object GetObject (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetObject(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.GetObject(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu suchenden Ressource unter Berücksichtigung der Groß- und Kleinschreibung.</param>
+        <summary>Sucht nach einem Ressourcenobjekt mit dem angegebenen Namen.</summary>
+        <returns>Die angeforderte Ressource.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name des Ressourcenobjekts ist Groß-/Kleinschreibung beachtet. Verwenden Sie für eine Suche Groß-und Kleinschreibung <xref:System.Resources.ResourceSet.GetObject%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="name" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public virtual object GetObject (string name, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetObject(string name, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.GetObject(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu suchenden Ressource.</param>
+        <param name="ignoreCase">Gibt an, ob die Groß- und Kleinschreibung beim angegebenen Namen ignoriert werden soll.</param>
+        <summary>Sucht auf Anforderung unter Berücksichtigung der Groß- und Kleinschreibung nach einem Ressourcenobjekt mit dem angegebenen Namen.</summary>
+        <returns>Die angeforderte Ressource.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert von der `ignoreCase` Parameter ist `true`, eine Ressource mit dem Namen "Ressource" auf die Ressource mit dem Namen "Resource" entspricht. Beachten Sie jedoch, dass diese Methode führt immer Groß-/Kleinschreibung Zeichenfolgenvergleiche mit <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Der Vorteil besteht darin, dass auf allen Computern unabhängig von der Kultur dieselben Ergebnisse von Groß-/Kleinschreibung Zeichenfolgenvergleichen, die von dieser Methode ausgeführt werden. Der Nachteil ist, dass die Ergebnisse nicht mit den Regeln der Groß-und Kleinschreibung aller Kulturen konsistent sind.  
+  
+ Das türkische Alphabet hat beispielsweise zwei Versionen des Zeichens I: mit einem Punkt und ohne Punkt. Im türkischen ist ich (Unicode 0049) das Zeichen Großbuchstaben in der ein anderes Zeichen ı (Unicode 0131) betrachtet. Das Zeichen i (Unicode 0069) gilt die klein geschriebene Version eines weiteren Zeichen (Unicode 0130). Entsprechend diesen Regeln der Groß-und Kleinschreibung, einen Zeichenfolgenvergleich mit den Zeichen i (Unicode 0069) und Exchange activesync (Unicode 0049) für die Kultur "tr-TR" (Türkisch (Türkei) fehlschlagen sollte. Mithilfe der `GetObject` Methode mit `ignoreCase` festgelegt `true`, diesen Vergleich erfolgreich ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="name" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public virtual string GetString (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetString(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.GetString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu suchenden Ressource.</param>
+        <summary>Sucht nach einer <see cref="T:System.String" />-Ressource mit dem angegebenen Namen.</summary>
+        <returns>Der Wert einer Ressource, wenn der Wert ein <see cref="T:System.String" /> ist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="name" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Durch die angegebene Ressource <paramref name="name" /> ist eine <see cref="T:System.String" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public virtual string GetString (string name, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetString(string name, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.GetString(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu suchenden Ressource.</param>
+        <param name="ignoreCase">Gibt an, ob die Groß- und Kleinschreibung beim angegebenen Namen ignoriert werden soll.</param>
+        <summary>Sucht auf Anforderung ohne Berücksichtigung der Groß- und Kleinschreibung nach einer <see cref="T:System.String" />-Ressource mit dem angegebenen Namen.</summary>
+        <returns>Der Wert einer Ressource, wenn der Wert ein <see cref="T:System.String" /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert von der `ignoreCase` Parameter ist `true`, eine Ressource mit dem Namen "Ressource" auf die Ressource mit dem Namen "Resource" entspricht. Beachten Sie jedoch, dass diese Methode führt immer Groß-/Kleinschreibung Zeichenfolgenvergleiche mit <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Der Vorteil besteht darin, dass auf allen Computern unabhängig von der Kultur dieselben Ergebnisse von Groß-/Kleinschreibung Zeichenfolgenvergleichen, die von dieser Methode ausgeführt werden. Der Nachteil ist, dass die Ergebnisse nicht mit den Regeln der Groß-und Kleinschreibung aller Kulturen konsistent sind.  
+  
+ Das türkische Alphabet hat beispielsweise zwei Versionen des Zeichens I: mit einem Punkt und ohne Punkt. Im türkischen ist ich (Unicode 0049) das Zeichen Großbuchstaben in der ein anderes Zeichen ı (Unicode 0131) betrachtet. Das Zeichen i (Unicode 0069) gilt die klein geschriebene Version eines weiteren Zeichen (Unicode 0130). Entsprechend diesen Regeln der Groß-und Kleinschreibung, einen Zeichenfolgenvergleich mit den Zeichen i (Unicode 0069) und Exchange activesync (Unicode 0049) für die Kultur "tr-TR" (Türkisch (Türkei) fehlschlagen sollte. Mithilfe der `GetString` Methode mit `ignoreCase` festgelegt `true`, diesen Vergleich erfolgreich ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="name" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Durch die angegebene Ressource <paramref name="name" /> ist eine <see cref="T:System.String" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reader">
+      <MemberSignature Language="C#" Value="protected System.Resources.IResourceReader Reader;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Resources.IResourceReader Reader" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.ResourceSet.Reader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.IResourceReader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den <see cref="T:System.Resources.IResourceReader" /> zum Lesen der Ressourcen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadResources">
+      <MemberSignature Language="C#" Value="protected virtual void ReadResources ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ReadResources() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.ReadResources" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liest alle Ressourcen und speichert diese in einer <see cref="T:System.Collections.Hashtable" />, die in der <see cref="F:System.Resources.ResourceSet.Table" />-Eigenschaft angegeben ist.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen von <see cref="T:System.Resources.ResourceSet" /> sollten explizit aufrufen, <see cref="M:System.Resources.ResourceSet.ReadResources" /> Laden aller Ressourcen aus der <see cref="T:System.Resources.IResourceReader" /> in <see cref="F:System.Resources.ResourceSet.Table" />, in der Regel entweder im Konstruktor oder verzögert auf dem ersten Aufrufen entweder <see cref="M:System.Resources.ResourceSet.GetString(System.String)" /> oder <see cref="M:System.Resources.ResourceSet.GetObject(System.String)" />. Wenn der Ressourcensatz und IResourceReader bereits Informationen zu jeder anderen und eine effizientere Methode zum Laden nur wenige Ressourcen auswählen, kann dieser Schritt übersprungen werden. Arbeitsseiten minimieren, Schreiben Sie die Ressource so, dass er Ihre IResourceReader für nur die Ressourcenwerte, die von der Anwendung angeforderte Abfragen festgelegt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceSet.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein <see cref="T:System.Collections.IEnumerator" />-Objekt zurück, um eine Racebedingung mit <see langword="Dispose" /> zu vermeiden. Dieser Member ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <returns>Ein Enumerator für das aktuelle <see cref="T:System.Resources.ResourceSet" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="protected System.Collections.Hashtable Table;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Hashtable Table" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.ResourceSet.Table" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Collections.Hashtable" />, in der die Ressourcen gespeichert sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

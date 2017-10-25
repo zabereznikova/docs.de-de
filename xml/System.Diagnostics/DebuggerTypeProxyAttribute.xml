@@ -1,0 +1,246 @@
+<Type Name="DebuggerTypeProxyAttribute" FullName="System.Diagnostics.DebuggerTypeProxyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DebuggerTypeProxyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DebuggerTypeProxyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DebuggerTypeProxyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct, AllowMultiple=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Anzeigeproxy für einen Typ an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Hinweis** dieses Attribut verwenden, wenn Sie das debugging Ansicht eines Typs grundlegend ändern, aber nicht den Typ selbst ändern müssen.  
+  
+ Das <xref:System.Diagnostics.DebuggerTypeProxyAttribute>-Attribut wird verwendet, um einen Anzeigeproxy für einen Typ anzugeben. Dadurch wird es einem Entwickler ermöglicht, die Ansicht des Typs anzupassen.  Dieses Attribut kann in diesem Fall auf Assemblyebene ebenfalls verwendet werden die <xref:System.Diagnostics.DebuggerTypeProxyAttribute.Target%2A> Eigenschaft gibt den Typ verwendet werden. Im Allgemeinen gibt dieses Attribut einen privaten geschachtelten Typ, der innerhalb des Typs auftritt, auf die das Attribut angewendet wird.  Eine Ausdrucksauswertung, die Überprüfungen für die Ansichten von Typen für dieses Attribut unterstützt, wenn ein Typ angezeigt wird. Wenn das Attribut gefunden wird, ersetzt die Ausdrucksauswertung den Anzeigeproxytyp für den Typ, auf den das Attribut angewendet wird.  
+  
+ Wenn <xref:System.Diagnostics.DebuggerBrowsableAttribute> vorhanden ist, werden im Debuggervariablenfenster nur die öffentlichen Member des Proxytyps angezeigt. Private Member werden nicht angezeigt. Das Verhalten des Datenfensters wird durch von Attributen erweiterte Ansichten nicht verändert.  
+  
+ Um unnötige Leistungseinbußen zu vermeiden, ausdruckauswertung sollten nicht untersuchen, die Attribute auf den Anzeigeproxy des Typs, wenn der Typ, erweitert wird entweder über den Benutzer, die Sie auf das Pluszeichen (+) neben den Typ in einem Datenfenster oder durch die Anwendung der <xref:System.Diagnostics.DebuggerBrowsableAttribute> Attribut. Aus diesem Grund wird empfohlen, keine Attribute auf den Anzeigetyp anzuwenden. Attribute können und sollen im Text des Anzeigetyps angewendet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Verwendung der <xref:System.Diagnostics.DebuggerTypeProxyAttribute> zum Angeben eines privaten geschachtelten Typs als ein Debuggeranzeigeproxy verwendet werden soll. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.DebuggerDisplayAttribute> Klasse.  
+  
+ [!code-cpp[System.Diagnostics.DebuggerBrowsableAttribute#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/cpp/program.cpp#5)]
+ [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#5)]
+ [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerTypeProxyAttribute (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerTypeProxyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der Typname des Proxytyps.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.DebuggerTypeProxyAttribute" /> -Klasse unter Verwendung der Typname des Proxys.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Debugger erstellt immer dann eine neue Instanz der Typproxyklasse, wenn eine Variable des Zieltyps angezeigt werden muss. Dies kann sich auf die Leistung auswirken. Daher sollten Sie nicht mehr als unbedingt erforderlich mit dem Konstruktor arbeiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerTypeProxyAttribute (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerTypeProxyAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Proxytyp.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.DebuggerTypeProxyAttribute" /> -Klasse unter Verwendung des Typs des Proxys.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Debugger erstellt immer dann eine neue Instanz der Typproxyklasse, wenn eine Variable des Zieltyps angezeigt werden muss. Dies kann sich auf die Leistung auswirken. Daher sollten Sie nicht mehr als unbedingt erforderlich mit dem Konstruktor arbeiten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.DebuggerTypeProxyAttribute.%23ctor%28System.Type%29> Konstruktor, um ein Debugger anzeigen Proxy anzugeben. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.DebuggerDisplayAttribute> Klasse.  
+  
+ [!code-cpp[System.Diagnostics.DebuggerBrowsableAttribute#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/cpp/program.cpp#5)]
+ [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#5)]
+ [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyTypeName">
+      <MemberSignature Language="C#" Value="public string ProxyTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProxyTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerTypeProxyAttribute.ProxyTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typnamen des Proxytyps ab.</summary>
+        <value>Der Typname des Proxytyps.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public Type Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Target" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerTypeProxyAttribute.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Zieltyp für das Attribut.</summary>
+        <value>Der Zieltyp für das Attribut.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft den Zieltyp an, wenn das Attribut auf Assemblyebene verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          Für <see cref="P:System.Diagnostics.DebuggerTypeProxyAttribute.Target" /> ist <see langword="null" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetTypeName">
+      <MemberSignature Language="C#" Value="public string TargetTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerTypeProxyAttribute.TargetTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Zieltyps fest.</summary>
+        <value>Der Name des Zieltyps.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft den Namen des Zieltyps angeben, wenn das Attribut auf Assemblyebene verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

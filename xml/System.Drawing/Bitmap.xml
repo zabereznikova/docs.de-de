@@ -1,0 +1,1072 @@
+<Type Name="Bitmap" FullName="System.Drawing.Bitmap">
+  <TypeSignature Language="C#" Value="public sealed class Bitmap : System.Drawing.Image" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit Bitmap extends System.Drawing.Image" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Bitmap" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Image</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Drawing.Design.BitmapEditor, System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Kapselt eine GDI +-Bitmap, die besteht aus den Pixeldaten für eine Grafik und ihre Attribute. Ein <see cref="T:System.Drawing.Bitmap" /> ist ein Objekt zum Arbeiten mit Bildern, die durch Pixeldaten definiert verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Bitmap besteht aus den Pixeldaten für eine Grafik und ihre Attribute. Es gibt zahlreiche Standardformate zum Speichern von Bitmaps in einer Datei. [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]unterstützt die folgenden Dateiformate: BMP, GIF, EXIF, JPG, PNG und TIFF. Weitere Informationen zu den unterstützten Bildformaten finden Sie unter [Typen von Bitmaps](~/docs/framework/winforms/advanced/types-of-bitmaps.md).  
+  
+ Sie können Bilder in den Dateien, Streams und anderen Quellen erstellen, mit einer der der <xref:System.Drawing.Bitmap.%23ctor%2A> Konstruktoren und speichern Sie diese in einen Stream oder im Dateisystem mit der <xref:System.Drawing.Image.Save%2A> Methode. Bilder werden auf dem Bildschirm oder in den Speicher mit gezeichnet der <xref:System.Drawing.Graphics.DrawImage%2A> Methode der <xref:System.Drawing.Graphics> Objekt. Eine Liste der Themen zum Arbeiten mit Bilddateien, finden Sie unter [arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](~/docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md).  
+  
+> [!NOTE]
+>  Die <xref:System.Drawing.Bitmap> Klasse kann nicht zugegriffen werden, über Anwendungsdomänen hinweg. Angenommen, Sie erstellen Sie ein dynamisches <xref:System.AppDomain> und erstellen Sie mehrere Pinsel, Stifte und Bitmaps in dieser Domäne, und klicken Sie auf diese Objekte zurück, in der Domäne der hauptanwendung übergeben, können Sie erfolgreich die Stifte und Pinsel. Jedoch beim Aufrufen der <xref:System.Drawing.Graphics.DrawImage%2A> Methode, um die gemarshallte zeichnen <xref:System.Drawing.Bitmap>, erhalten Sie die folgende Ausnahme.  
+>   
+>  Feld "systemeigene Images" kann nicht für Typ "System.Drawing.Image" gefunden werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine neue <xref:System.Drawing.Bitmap> aus einer Datei mit der <xref:System.Drawing.Bitmap.GetPixel%2A> und <xref:System.Drawing.Bitmap.SetPixel%2A> Methoden zum Neueinfärben des Bilds. Darüber hinaus verwendet der <xref:System.Drawing.Image.PixelFormat%2A>, <xref:System.Drawing.Image.Width%2A>, und <xref:System.Drawing.Image.Height%2A> Eigenschaften.  
+  
+ Dieses Beispiel wurde entworfen, um mit einer Windows Forms verwendet werden, enthalten eine <xref:System.Windows.Forms.Label>, <xref:System.Windows.Forms.PictureBox>, und <xref:System.Windows.Forms.Button> mit dem Namen `Label1`, `PictureBox1`, und `Button1`zugeordnet. Fügen Sie den Code in das Formular, und ordnen Sie die `Button1_Click` Methode mit der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignis.  
+  
+ [!code-cpp[System.Drawing.ImageExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ImageExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ImageExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImageExample/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ImageExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImageExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bitmap (System.Drawing.Image original);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Image original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.#ctor(System.Drawing.Image)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="original">Der <see cref="T:System.Drawing.Image" />, aus dem die neue <see cref="T:System.Drawing.Bitmap" /> erstellt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Bitmap" /> Klasse aus der angegebenen vorhandenen Bild.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bitmap (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Datenstrom, der beim Laden des Bilds verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.Bitmap" />-Klasse aus dem angegebenen Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen den Stream geöffnet lassen, für die Lebensdauer der <xref:System.Drawing.Bitmap>.  
+  
+ Aufgrund einer Einschränkung von der [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] Decoder ein <xref:System.ArgumentException?displayProperty=nameWithType> wird ausgelöst, wenn Sie eine Bitmap aus einer PNG-Bilddatei mit einer einzelnen Dimension größer als 65.535 Pixel erstellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Bitmap aus einem Stream geladen wird.  
+  
+ In diesem Beispiel dient, die mit Windows Forms verwendet werden. Erstellen Sie ein Formular, enthält ein <xref:System.Windows.Forms.PictureBox> mit dem Namen `PictureBox1`. Fügen Sie den Code in das Formular, und rufen die `InitializeStreamBitmap` Methode aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-cpp[System.Drawing.BitmapMembers#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.BitmapMembers#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.BitmapMembers#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.BitmapMembers/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stream" />enthält keine Bilddaten oder ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="stream" />enthält eine PNG-Bilddatei mit einer einzelnen Dimension größer als 65.535 Pixel.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bitmap (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Der Bitmap-Dateiname und Pfad.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.Bitmap" />-Klasse aus der angegebenen Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Dateiname und Pfad können relativ zu der Anwendung oder ein absoluter Pfad sein. Verwenden Sie diesen Konstruktor, um Bilder zu öffnen, mit der folgenden Dateiformate: BMP, GIF, EXIF, JPG, PNG und TIFF. Weitere Informationen zu den unterstützten Bildformaten finden Sie unter [Typen von Bitmaps](~/docs/framework/winforms/advanced/types-of-bitmaps.md). Die Datei bleibt gesperrt, bis die <xref:System.Drawing.Bitmap> verworfen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.FileNotFoundException">Die angegebene Datei wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bitmap (System.Drawing.Image original, System.Drawing.Size newSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Image original, valuetype System.Drawing.Size newSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.#ctor(System.Drawing.Image,System.Drawing.Size)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="System.Drawing.Image" />
+        <Parameter Name="newSize" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="original">Der <see cref="T:System.Drawing.Image" />, aus dem die neue <see cref="T:System.Drawing.Bitmap" /> erstellt werden soll.</param>
+        <param name="newSize">Die <see cref="T:System.Drawing.Size" /> -Struktur, die die Größe des neuen darzustellen <see cref="T:System.Drawing.Bitmap" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Bitmap" /> Klasse aus der angegebenen vorhandenen Bild, auf die angegebene Größe skaliert.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">Fehler bei diesem Vorgang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bitmap (int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="width">Die Breite in Pixel der neuen <see cref="T:System.Drawing.Bitmap" />.</param>
+        <param name="height">Die Höhe in Pixel der neuen <see cref="T:System.Drawing.Bitmap" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Bitmap" /> Klasse mit der angegebenen Größe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein <xref:System.Drawing.Bitmap> mit einem <xref:System.Drawing.Imaging.PixelFormat> Enumerationswert der <xref:System.Drawing.Imaging.PixelFormat.Format32bppArgb>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Fehler bei diesem Vorgang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bitmap (System.IO.Stream stream, bool useIcm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, bool useIcm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.#ctor(System.IO.Stream,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="useIcm" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Datenstrom, der beim Laden des Bilds verwendet wird.</param>
+        <param name="useIcm">
+          <see langword="true" />Farbkorrektur dafür verwendet <see cref="T:System.Drawing.Bitmap" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.Bitmap" />-Klasse aus dem angegebenen Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen den Stream geöffnet lassen, für die Lebensdauer der <xref:System.Drawing.Bitmap>.  
+  
+ Aufgrund einer Einschränkung von der [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] Decoder ein <xref:System.ArgumentException?displayProperty=nameWithType> wird ausgelöst, wenn Sie eine Bitmap aus einer PNG-Bilddatei mit einer einzelnen Dimension größer als 65.535 Pixel erstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stream" />enthält keine Bilddaten oder ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="stream" />enthält eine PNG-Bilddatei mit einer einzelnen Dimension größer als 65.535 Pixel.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bitmap (string filename, bool useIcm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filename, bool useIcm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="useIcm" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Der Name der Bitmapdatei.</param>
+        <param name="useIcm">
+          <see langword="true" />Farbkorrektur dafür verwendet <see cref="T:System.Drawing.Bitmap" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.Bitmap" />-Klasse aus der angegebenen Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, um Bilder zu öffnen, mit der folgenden Dateiformate: BMP, GIF, EXIF, JPG, PNG und TIFF. Weitere Informationen zu den unterstützten Bildformaten finden Sie unter [Typen von Bitmaps](~/docs/framework/winforms/advanced/types-of-bitmaps.md). Die Datei bleibt gesperrt, bis die <xref:System.Drawing.Bitmap> verworfen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine neue Bitmapdatei aus einer Datei zu erstellen. Im Beispiel wird die <xref:System.Drawing.Bitmap.GetPixel%2A> und <xref:System.Drawing.Bitmap.SetPixel%2A> Methoden zum Neueinfärben des Bilds. Darüber hinaus verwendet die <xref:System.Drawing.Image.PixelFormat%2A> Eigenschaft.  
+  
+ Dieses Beispiel wurde entworfen, um mit einem Windows Form verwendet werden, enthalten eine <xref:System.Windows.Forms.Label>, <xref:System.Windows.Forms.PictureBox> und <xref:System.Windows.Forms.Button> mit dem Namen `Label1`, `PictureBox1` und `Button1`zugeordnet. Fügen Sie den Code in das Formular, und ordnen Sie die `Button1_Click` Methode mit der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignis.  
+  
+ [!code-cpp[System.Drawing.ImageExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ImageExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ImageExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImageExample/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ImageExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImageExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Aufruf von nicht verwaltetem Code. Verwandte Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bitmap (Type type, string resource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, string resource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="resource" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die Klasse verwendet, um die Ressource zu extrahieren.</param>
+        <param name="resource">Der Name der Ressource.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Bitmap" /> Klasse aus einer angegebenen Ressource.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor kombiniert den Namespace des angegebenen Typs mit den Zeichenfolgennamen der Ressource und sucht nach einer Übereinstimmung im Assemblymanifest. Sie können z. B. übergeben, der <xref:System.Windows.Forms.Button> Typ und `Button.bmp` mit diesem Konstruktor, und es sieht für eine Ressource mit dem Namen `System.Windows.Forms.Button.bmp`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Bitmap aus einem Typ erstellt und zum Verwenden der <xref:System.Drawing.Image.Save%2A> Methode. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `ConstructFromResourceSaveAsGif` -Methode auf und übergibt `e` als<xref:System.Windows.Forms.PaintEventArgs>  
+  
+ [!code-cpp[System.Drawing.BmpCtorAndSave#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.BmpCtorAndSave/cpp/form1.cpp#1)]
+ [!code-csharp[System.Drawing.BmpCtorAndSave#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.BmpCtorAndSave/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.BmpCtorAndSave#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.BmpCtorAndSave/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bitmap (System.Drawing.Image original, int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Image original, int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.#ctor(System.Drawing.Image,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="System.Drawing.Image" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="original">Der <see cref="T:System.Drawing.Image" />, aus dem die neue <see cref="T:System.Drawing.Bitmap" /> erstellt werden soll.</param>
+        <param name="width">Die Breite in Pixel der neuen <see cref="T:System.Drawing.Bitmap" />.</param>
+        <param name="height">Die Höhe in Pixel der neuen <see cref="T:System.Drawing.Bitmap" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Bitmap" /> Klasse aus der angegebenen vorhandenen Bild, auf die angegebene Größe skaliert.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">Fehler bei diesem Vorgang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bitmap (int width, int height, System.Drawing.Graphics g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 width, int32 height, class System.Drawing.Graphics g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.#ctor(System.Int32,System.Int32,System.Drawing.Graphics)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="width">Die Breite in Pixel der neuen <see cref="T:System.Drawing.Bitmap" />.</param>
+        <param name="height">Die Höhe in Pixel der neuen <see cref="T:System.Drawing.Bitmap" />.</param>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> -Objekt, das die Auflösung gibt an, für die neue <see cref="T:System.Drawing.Bitmap" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Bitmap" /> -Klasse mit der angegebenen Größe und die Auflösung des angegebenen <see cref="T:System.Drawing.Graphics" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neue <xref:System.Drawing.Bitmap> , diese Methode erstellt nimmt die horizontale und vertikale Auflösung aus der <xref:System.Drawing.Graphics.DpiX%2A> und <xref:System.Drawing.Graphics.DpiY%2A> Eigenschaften `g`bzw..  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="g" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bitmap (int width, int height, System.Drawing.Imaging.PixelFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 width, int32 height, valuetype System.Drawing.Imaging.PixelFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.#ctor(System.Int32,System.Int32,System.Drawing.Imaging.PixelFormat)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="format" Type="System.Drawing.Imaging.PixelFormat" />
+      </Parameters>
+      <Docs>
+        <param name="width">Die Breite in Pixel der neuen <see cref="T:System.Drawing.Bitmap" />.</param>
+        <param name="height">Die Höhe in Pixel der neuen <see cref="T:System.Drawing.Bitmap" />.</param>
+        <param name="format">Das Pixelformat für die neue <see cref="T:System.Drawing.Bitmap" />. Dies muss einen Wert, der mit beginnt geben <c>Format</c>.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Bitmap" /> Klasse mit der angegebenen Größe und Format.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Ein <see cref="T:System.Drawing.Imaging.PixelFormat" /> Wert wird angegeben, deren Name nicht mit beginnt *Format*. Z. B. <see cref="F:System.Drawing.Imaging.PixelFormat.Gdi" /> führt dazu, dass ein <see cref="T:System.ArgumentException" />, aber <see cref="F:System.Drawing.Imaging.PixelFormat.Format48bppRgb" /> geschieht dies nicht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bitmap (int width, int height, int stride, System.Drawing.Imaging.PixelFormat format, IntPtr scan0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 width, int32 height, int32 stride, valuetype System.Drawing.Imaging.PixelFormat format, native int scan0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.#ctor(System.Int32,System.Int32,System.Int32,System.Drawing.Imaging.PixelFormat,System.IntPtr)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="stride" Type="System.Int32" />
+        <Parameter Name="format" Type="System.Drawing.Imaging.PixelFormat" />
+        <Parameter Name="scan0" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="width">Die Breite in Pixel der neuen <see cref="T:System.Drawing.Bitmap" />.</param>
+        <param name="height">Die Höhe in Pixel der neuen <see cref="T:System.Drawing.Bitmap" />.</param>
+        <param name="stride">Ganze Zahl, die angibt, das zwischen dem Anfang einer Scanzeile und das nächste Byte-Offset. Dies ist in der Regel (aber nicht notwendigerweise) die Anzahl der Bytes in das Pixelformat (z. B. 2 für 16 Bits pro Pixel) multipliziert mit der Breite der Bitmap. An diesen Parameter übergebene Wert muss ein Vielfaches von vier...</param>
+        <param name="format">Das Pixelformat für die neue <see cref="T:System.Drawing.Bitmap" />. Dies muss einen Wert, der mit beginnt geben <c>Format</c>.</param>
+        <param name="scan0">Ein Zeiger auf ein Array von Bytes, die Pixeldaten enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Bitmap" /> Klasse mit der angegebenen Größe, Pixelformat und Pixeldaten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer ist verantwortlich für das zuordnen und Freigeben der Speicherblock, der gemäß der `scan0` Parameter. Allerdings der Arbeitsspeicher sollte nicht freigegeben werden bis zu den zugehörigen <xref:System.Drawing.Bitmap> freigegeben wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.Bitmap.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Drawing.Imaging.PixelFormat%2CSystem.IntPtr%29> Konstruktor. In diesem Beispiel wird mit Windows Forms verwendet werden soll, und erfordert eine <xref:System.Windows.Forms.PaintEventArgs> -Parameter, der ein Parameter ist von der <xref:System.Windows.Forms.Control.Paint> Ereignis.  
+  
+ [!code-csharp[System.Drawing.MiscExamples#Constructor](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#constructor)]
+ [!code-vb[System.Drawing.MiscExamples#Constructor](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#constructor)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ein <see cref="T:System.Drawing.Imaging.PixelFormat" /> Wert wird angegeben, deren Name nicht mit beginnt *Format*. Z. B. <see cref="F:System.Drawing.Imaging.PixelFormat.Gdi" /> führt dazu, dass ein <see cref="T:System.ArgumentException" />, aber <see cref="F:System.Drawing.Imaging.PixelFormat.Format48bppRgb" /> geschieht dies nicht.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Aufruf von nicht verwaltetem Code. Verwandte Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Drawing.Bitmap Clone (System.Drawing.Rectangle rect, System.Drawing.Imaging.PixelFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Bitmap Clone(valuetype System.Drawing.Rectangle rect, valuetype System.Drawing.Imaging.PixelFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.Clone(System.Drawing.Rectangle,System.Drawing.Imaging.PixelFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Bitmap</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="format" Type="System.Drawing.Imaging.PixelFormat" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Definiert den Teil dieses <see cref="T:System.Drawing.Bitmap" /> zu kopieren. Koordinaten sind relativ zu dieser <see cref="T:System.Drawing.Bitmap" />.</param>
+        <param name="format">Das Pixelformat für die neue <see cref="T:System.Drawing.Bitmap" />. Dies muss einen Wert, der mit beginnt geben <c>Format</c>.</param>
+        <summary>Erstellt eine Kopie des Abschnitts dieser <see cref="T:System.Drawing.Bitmap" /> durch definierten <see cref="T:System.Drawing.Rectangle" /> Struktur mit einer angegebenen <see cref="T:System.Drawing.Imaging.PixelFormat" /> Enumeration.</summary>
+        <returns>Das neue <see cref="T:System.Drawing.Bitmap" />, das von dieser Methode erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt eine <xref:System.Drawing.Bitmap> aus einer Datei.  
+  
+-   Einen Teil, klont <xref:System.Drawing.Bitmap>.  
+  
+-   Zeichnet den geklonten Bereich auf dem Bildschirm an.  
+  
+ [!code-cpp[System.Drawing.ClassicBitmapExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ClassicBitmapExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ClassicBitmapExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OutOfMemoryException">
+          <paramref name="rect" />befindet sich außerhalb der Grenzen der Quelle mithilfe einer Bitmap.</exception>
+        <exception cref="T:System.ArgumentException">Die Höhe oder Breite der <paramref name="rect" /> ist 0.  
+  
+ - oder -   
+  
+ Ein <see cref="T:System.Drawing.Imaging.PixelFormat" /> Wert wird angegeben, deren Name nicht mit beginnt *Format*. Z. B. <see cref="F:System.Drawing.Imaging.PixelFormat.Gdi" /> führt dazu, dass ein <see cref="T:System.ArgumentException" />, aber <see cref="F:System.Drawing.Imaging.PixelFormat.Format48bppRgb" /> geschieht dies nicht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Drawing.Bitmap Clone (System.Drawing.RectangleF rect, System.Drawing.Imaging.PixelFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Bitmap Clone(valuetype System.Drawing.RectangleF rect, valuetype System.Drawing.Imaging.PixelFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.Clone(System.Drawing.RectangleF,System.Drawing.Imaging.PixelFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Bitmap</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="format" Type="System.Drawing.Imaging.PixelFormat" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Definiert den Teil dieses <see cref="T:System.Drawing.Bitmap" /> zu kopieren.</param>
+        <param name="format">Gibt an, die <see cref="T:System.Drawing.Imaging.PixelFormat" /> Enumeration für das Ziel <see cref="T:System.Drawing.Bitmap" />.</param>
+        <summary>Erstellt eine Kopie des Abschnitts dieser <see cref="T:System.Drawing.Bitmap" /> definiert, die mit einem angegebenen <see cref="T:System.Drawing.Imaging.PixelFormat" /> Enumeration.</summary>
+        <returns>Die <see cref="T:System.Drawing.Bitmap" />, die von dieser Methode erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt eine <xref:System.Drawing.Bitmap> aus einer Datei.  
+  
+-   Einen Teil, klont <xref:System.Drawing.Bitmap>.  
+  
+-   Zeichnet den geklonten Bereich auf dem Bildschirm an.  
+  
+ [!code-cpp[System.Drawing.ClassicBitmapExamples#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ClassicBitmapExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ClassicBitmapExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OutOfMemoryException">
+          <paramref name="rect" />befindet sich außerhalb der Grenzen der Quelle mithilfe einer Bitmap.</exception>
+        <exception cref="T:System.ArgumentException">Die Höhe oder Breite der <paramref name="rect" /> ist 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromHicon">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Bitmap FromHicon (IntPtr hicon);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Bitmap FromHicon(native int hicon) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.FromHicon(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Bitmap</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hicon" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hicon">Ein Handle für ein Symbol.</param>
+        <summary>Erstellt eine <see cref="T:System.Drawing.Bitmap" /> aus einem Windows-Handle für ein Symbol.</summary>
+        <returns>Die <see cref="T:System.Drawing.Bitmap" />, die von dieser Methode erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Ruft das Handle für ein vorhandenes Symbolbild ab.  
+  
+-   Erstellt eine <xref:System.Drawing.Bitmap> aus dem Handle.  
+  
+-   Zeichnet die <xref:System.Drawing.Bitmap> auf dem Bildschirm.  
+  
+ [!code-cpp[System.Drawing.ClassicBitmapExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.ClassicBitmapExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.ClassicBitmapExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Aufruf von nicht verwaltetem Code. Verwandte Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromResource">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Bitmap FromResource (IntPtr hinstance, string bitmapName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Bitmap FromResource(native int hinstance, string bitmapName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.FromResource(System.IntPtr,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Bitmap</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hinstance" Type="System.IntPtr" />
+        <Parameter Name="bitmapName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hinstance">Ein Handle für eine Instanz der ausführbaren Datei, die die Ressource enthält.</param>
+        <param name="bitmapName">Eine Zeichenfolge, die den Namen der Ressourcenbitmap für die enthält.</param>
+        <summary>Erstellt eine <see cref="T:System.Drawing.Bitmap" /> aus der angegebenen Windows-Ressource.</summary>
+        <returns>Die <see cref="T:System.Drawing.Bitmap" />, die von dieser Methode erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Bitmap.FromResource%2A>benötigt Sicherheitsberechtigungen zum Aufrufen von nicht verwalteten Codes. Eine verwaltete Alternative zum Erstellen einer Bitmap aus einer eingebetteten Ressource, finden Sie unter <xref:System.Drawing.Bitmap.%23ctor%28System.Type%2CSystem.String%29?displayProperty=nameWithType>. <xref:System.Drawing.Bitmap.FromResource%2A>funktioniert nur mit Bitmaps, die Ressourcen in einer DLL benannt sind.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Aufruf von nicht verwaltetem Code. Verwandte Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHbitmap">
+      <MemberSignature Language="C#" Value="public IntPtr GetHbitmap ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance native int GetHbitmap() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.GetHbitmap" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] Bitmap-Objekts aus dieser <see cref="T:System.Drawing.Bitmap" />.</summary>
+        <returns>Ein Handle für die [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] Bitmapobjekt, das diese Methode erstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sind verantwortlich für das Aufrufen der [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] `DeleteObject` Methode, um den belegten Arbeitsspeicher freizugeben der [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] Bitmap-Objekt. Weitere Informationen zu GDI Bitmaps, finden Sie unter [Bitmaps](http://go.microsoft.com/fwlink/?LinkId=205685) in der Windows-GDI-Dokumentation.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Drawing.Bitmap.GetHbitmap%2A>-Methode verwenden.  
+  
+ [!code-cpp[System.Drawing.ClassicBitmapExamples#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.ClassicBitmapExamples#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.ClassicBitmapExamples#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Höhe oder Breite der Bitmap ist größer als <see cref="F:System.Int16.MaxValue" />.</exception>
+        <exception cref="T:System.Exception">Fehler bei diesem Vorgang.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Aufruf von nicht verwaltetem Code. Verwandte Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHbitmap">
+      <MemberSignature Language="C#" Value="public IntPtr GetHbitmap (System.Drawing.Color background);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance native int GetHbitmap(valuetype System.Drawing.Color background) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.GetHbitmap(System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="background" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="background">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Hintergrundfarbe angibt. Dieser Parameter wird ignoriert, wenn die Bitmap nicht transparent ist.</param>
+        <summary>Erstellt eine [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] Bitmap-Objekts aus dieser <see cref="T:System.Drawing.Bitmap" />.</summary>
+        <returns>Ein Handle für die [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] Bitmapobjekt, das diese Methode erstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sind verantwortlich für das Aufrufen der [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] `DeleteObject` Methode, um den belegten Arbeitsspeicher freizugeben der [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] Bitmap-Objekt. Weitere Informationen zu GDI Bitmaps, finden Sie unter [Bitmaps](http://go.microsoft.com/fwlink/?LinkId=205685) in der Windows-GDI-Dokumentation.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.Bitmap.GetHbitmap%2A>-Methode veranschaulicht.  
+  
+ [!code-cpp[System.Drawing.ClassicBitmapExamples#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.ClassicBitmapExamples#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.ClassicBitmapExamples#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Höhe oder Breite der Bitmap ist größer als <see cref="F:System.Int16.MaxValue" />.</exception>
+        <exception cref="T:System.Exception">Fehler bei diesem Vorgang.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Aufruf von nicht verwaltetem Code. Verwandte Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHicon">
+      <MemberSignature Language="C#" Value="public IntPtr GetHicon ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance native int GetHicon() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.GetHicon" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das Handle für ein Symbol an.</summary>
+        <returns>Ein Windows-Handle für ein Symbol mit demselben Image wie die <see cref="T:System.Drawing.Bitmap" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zunächst müssen ein Symbol aus dem Handle erstellt die gleiche Größe wie die ursprüngliche Bitmap ab.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt eine <xref:System.Drawing.Bitmap>.  
+  
+-   Zeichnet das Objekt auf dem Bildschirm an.  
+  
+-   Ruft ein Symbolhandle für die <xref:System.Drawing.Bitmap>.  
+  
+-   Legt die <xref:System.Windows.Forms.Form.Icon%2A?displayProperty=nameWithType> Attribut des Formulars ein Symbol aus das Handle erstellt wurde.  
+  
+ [!code-cpp[System.Drawing.ClassicBitmapExamples#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.ClassicBitmapExamples#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.ClassicBitmapExamples#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Fehler bei diesem Vorgang.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Aufruf von nicht verwaltetem Code. Verwandte Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPixel">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color GetPixel (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Color GetPixel(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.GetPixel(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Koordinate des Pixels abgerufen.</param>
+        <param name="y">Die y-Koordinate des Pixels abgerufen.</param>
+        <summary>Ruft die Farbe des angegebenen Pixels in diesem <see cref="T:System.Drawing.Bitmap" />.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Color" /> -Struktur, die Farbe des Pixels angegebenen darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code Ruft die Farbe des Pixels in einer Bitmap ab und füllt dann ein Rechteck mit dieser Farbe.  
+  
+ [!code-cpp[System.Drawing.ClassicBitmapExamples#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.ClassicBitmapExamples#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.ClassicBitmapExamples#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="x" />ist kleiner als 0 oder größer als oder gleich <see cref="P:System.Drawing.Image.Width" />.  
+  
+ - oder -   
+  
+ <paramref name="y" />ist kleiner als 0 oder größer als oder gleich <see cref="P:System.Drawing.Image.Height" />.</exception>
+        <exception cref="T:System.Exception">Fehler bei diesem Vorgang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LockBits">
+      <MemberSignature Language="C#" Value="public System.Drawing.Imaging.BitmapData LockBits (System.Drawing.Rectangle rect, System.Drawing.Imaging.ImageLockMode flags, System.Drawing.Imaging.PixelFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Imaging.BitmapData LockBits(valuetype System.Drawing.Rectangle rect, valuetype System.Drawing.Imaging.ImageLockMode flags, valuetype System.Drawing.Imaging.PixelFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.LockBits(System.Drawing.Rectangle,System.Drawing.Imaging.ImageLockMode,System.Drawing.Imaging.PixelFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.BitmapData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="flags" Type="System.Drawing.Imaging.ImageLockMode" />
+        <Parameter Name="format" Type="System.Drawing.Imaging.PixelFormat" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Ein <see cref="T:System.Drawing.Rectangle" /> Struktur, der angibt, die Teil der <see cref="T:System.Drawing.Bitmap" /> zu sperren.</param>
+        <param name="flags">Ein <see cref="T:System.Drawing.Imaging.ImageLockMode" /> -Enumeration, der die Zugriffsebene (Lese-/Schreibzugriff) gibt an, für die <see cref="T:System.Drawing.Bitmap" />.</param>
+        <param name="format">Ein <see cref="T:System.Drawing.Imaging.PixelFormat" /> Enumeration, der angibt, das Datenformat dieses <see cref="T:System.Drawing.Bitmap" />.</param>
+        <summary>Sperrt ein <see cref="T:System.Drawing.Bitmap" /> in den Systemarbeitsspeicher.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Imaging.BitmapData" /> , Informationen über diese Sperrvorgang enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Drawing.Bitmap.LockBits%2A> Methode, um einer vorhandenen Bitmap im Systemspeicher zu sperren, sodass er programmgesteuert geändert werden kann. Sie können die Farbe eines Bildes mit Ändern der <xref:System.Drawing.Bitmap.SetPixel%2A> -Methode, obwohl die <xref:System.Drawing.Bitmap.LockBits%2A> Methode bietet eine bessere Leistung für umfangreiche Änderungen.  
+  
+ Die <xref:System.Drawing.Imaging.BitmapData> gibt die Attribute der <xref:System.Drawing.Bitmap>, z. B. Größe, Pixelformat, die Startadresse des Pixeldaten im Speicher und die Länge der jede Scanzeile (Stride).  
+  
+ Beim Aufrufen dieser Methode sollten Sie verwenden, ein Mitglied der <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType> -Enumeration, die einen bestimmten Bits pro Pixel (BPP) Wert enthält. Mit <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType> Werte wie z. B. <xref:System.Drawing.Imaging.PixelFormat.Indexed> und <xref:System.Drawing.Imaging.PixelFormat.Gdi> löst eine <xref:System.ArgumentException?displayProperty=nameWithType>. Übergeben das falsche Pixelformat für eine Bitmap löst außerdem eine <xref:System.ArgumentException?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.Image.PixelFormat%2A>, <xref:System.Drawing.Image.Height%2A>, <xref:System.Drawing.Image.Width%2A>, und <xref:System.Drawing.Imaging.BitmapData.Scan0%2A> Eigenschaften; das <xref:System.Drawing.Bitmap.LockBits%2A> und <xref:System.Drawing.Bitmap.UnlockBits%2A> -Methoden und die <xref:System.Drawing.Imaging.ImageLockMode> Enumeration. In diesem Beispiel dient, die mit Windows Forms verwendet werden. Dieses Beispiel ist nicht vorgesehen, mit allen Pixelformate ordnungsgemäß, sondern geben Sie ein Beispiel zum Verwenden der <xref:System.Drawing.Bitmap.LockBits%2A> Methode. Um dieses Beispiel auszuführen, fügen Sie ihn in ein Formular, und behandeln Sie des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis durch Aufrufen der `LockUnlockBitsExample` -Methode auf und übergibt `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.BitmapMembers#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.BitmapMembers#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.BitmapMembers#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.BitmapMembers/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Drawing.Imaging.PixelFormat" /> ist kein bestimmten Wert für Bits pro Pixel.  
+  
+ - oder -   
+  
+ Die falsche <see cref="T:System.Drawing.Imaging.PixelFormat" /> für eine Bitmap übergeben wird.</exception>
+        <exception cref="T:System.Exception">Fehler bei diesem Vorgang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LockBits">
+      <MemberSignature Language="C#" Value="public System.Drawing.Imaging.BitmapData LockBits (System.Drawing.Rectangle rect, System.Drawing.Imaging.ImageLockMode flags, System.Drawing.Imaging.PixelFormat format, System.Drawing.Imaging.BitmapData bitmapData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Imaging.BitmapData LockBits(valuetype System.Drawing.Rectangle rect, valuetype System.Drawing.Imaging.ImageLockMode flags, valuetype System.Drawing.Imaging.PixelFormat format, class System.Drawing.Imaging.BitmapData bitmapData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.LockBits(System.Drawing.Rectangle,System.Drawing.Imaging.ImageLockMode,System.Drawing.Imaging.PixelFormat,System.Drawing.Imaging.BitmapData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.BitmapData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="flags" Type="System.Drawing.Imaging.ImageLockMode" />
+        <Parameter Name="format" Type="System.Drawing.Imaging.PixelFormat" />
+        <Parameter Name="bitmapData" Type="System.Drawing.Imaging.BitmapData" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Ein Rechteckstruktur, der angibt, die Teil der <see cref="T:System.Drawing.Bitmap" /> zu sperren.</param>
+        <param name="flags">Eines der <see cref="T:System.Drawing.Imaging.ImageLockMode" /> Werte, die die Zugriffsebene (Lese-/Schreibzugriff) gibt an, für die <see cref="T:System.Drawing.Bitmap" />.</param>
+        <param name="format">Eines der <see cref="T:System.Drawing.Imaging.PixelFormat" /> Werte, der angibt, das Datenformat der <see cref="T:System.Drawing.Bitmap" />.</param>
+        <param name="bitmapData">Ein <see cref="T:System.Drawing.Imaging.BitmapData" /> , Informationen über den Sperrvorgang enthält.</param>
+        <summary>Sperrt ein <see cref="T:System.Drawing.Bitmap" /> in den Systemspeicher</summary>
+        <returns>Ein <see cref="T:System.Drawing.Imaging.BitmapData" /> , Informationen über den Sperrvorgang enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Drawing.Bitmap.LockBits%2A> Methode, um einer vorhandenen Bitmap im Systemspeicher zu sperren, sodass er programmgesteuert geändert werden kann. Sie können die Farbe eines Bildes mit Ändern der <xref:System.Drawing.Bitmap.SetPixel%2A> -Methode, obwohl die <xref:System.Drawing.Bitmap.LockBits%2A> Methode bietet eine bessere Leistung für umfangreiche Änderungen.  
+  
+ Beim Aufrufen dieser Methode sollten Sie verwenden, ein Mitglied der <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType> -Enumeration, die einen bestimmten Bits pro Pixel (BPP) Wert enthält. Mit <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType> Werte, z. B. <xref:System.Drawing.Imaging.PixelFormat.Indexed> und <xref:System.Drawing.Imaging.PixelFormat.Gdi>, löst eine <xref:System.ArgumentException?displayProperty=nameWithType>. Übergeben das falsche Pixelformat für eine Bitmap löst außerdem eine <xref:System.ArgumentException?displayProperty=nameWithType>.  
+  
+ Diese Version von den <xref:System.Drawing.Bitmap.LockBits%2A> Methode mit verwendet werden soll eine `flags` Wert <xref:System.Drawing.Imaging.ImageLockMode?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="T:System.Drawing.Imaging.PixelFormat" />Wert ist keinen bestimmten Wert für Bits pro Pixel.  
+  
+ - oder -   
+  
+ Die falsche <see cref="T:System.Drawing.Imaging.PixelFormat" /> für eine Bitmap übergeben wird.</exception>
+        <exception cref="T:System.Exception">Fehler bei diesem Vorgang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeTransparent">
+      <MemberSignature Language="C#" Value="public void MakeTransparent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MakeTransparent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.MakeTransparent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Macht die standardmäßige transparente Farbe für diese <see cref="T:System.Drawing.Bitmap" /> transparent.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Systempalette definiert eine Farbe als transparent oder alpha, die Standardfarbe. Bei dieser Methode ist die Standardeinstellung transparente Farbe für dieses transparent <xref:System.Drawing.Bitmap>. Wenn keine transparenter Farbe, wird das System angegeben wird <xref:System.Drawing.Color.LightGray%2A> wird die transparente Farbe.  
+  
+ Beim Aufruf <xref:System.Drawing.Bitmap.MakeTransparent%2A>, wird die Bitmap konvertiert werden die <xref:System.Drawing.Imaging.PixelFormat.Format32bppArgb> zu formatieren, wie Sie dieses Format einen alpha-Kanal unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die transparente Standardfarbe für transparente `myBitmap`, und klicken Sie dann zeichnet die <xref:System.Drawing.Bitmap> auf dem Bildschirm.  
+  
+ [!code-cpp[System.Drawing.ClassicBitmapExamples#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CPP/form1.cpp#8)]
+ [!code-csharp[System.Drawing.ClassicBitmapExamples#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CS/form1.cs#8)]
+ [!code-vb[System.Drawing.ClassicBitmapExamples#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/VB/form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Bildformat der <see cref="T:System.Drawing.Bitmap" /> ist ein Symbolformat.</exception>
+        <exception cref="T:System.Exception">Fehler bei diesem Vorgang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeTransparent">
+      <MemberSignature Language="C#" Value="public void MakeTransparent (System.Drawing.Color transparentColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MakeTransparent(valuetype System.Drawing.Color transparentColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.MakeTransparent(System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transparentColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="transparentColor">Die <see cref="T:System.Drawing.Color" /> -Struktur, die Farbe auf transparent zu gestalten darstellt.</param>
+        <summary>Macht die angegebene transparent für diesen Farbe <see cref="T:System.Drawing.Bitmap" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufruf <xref:System.Drawing.Bitmap.MakeTransparent%2A>, wird die Bitmap konvertiert werden die <xref:System.Drawing.Imaging.PixelFormat.Format32bppArgb> zu formatieren, wie Sie dieses Format einen alpha-Kanal unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Ruft die Farbe eines Pixels in einem <xref:System.Drawing.Bitmap>.  
+  
+-   Macht diese Farbe für die Bitmap transparent.  
+  
+-   Zeichnet die <xref:System.Drawing.Bitmap> auf dem Bildschirm.  
+  
+ [!code-cpp[System.Drawing.ClassicBitmapExamples#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CPP/form1.cpp#9)]
+ [!code-csharp[System.Drawing.ClassicBitmapExamples#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CS/form1.cs#9)]
+ [!code-vb[System.Drawing.ClassicBitmapExamples#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/VB/form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Bildformat der <see cref="T:System.Drawing.Bitmap" /> ist ein Symbolformat.</exception>
+        <exception cref="T:System.Exception">Fehler bei diesem Vorgang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPixel">
+      <MemberSignature Language="C#" Value="public void SetPixel (int x, int y, System.Drawing.Color color);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPixel(int32 x, int32 y, valuetype System.Drawing.Color color) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.SetPixel(System.Int32,System.Int32,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="color" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Koordinate des festzulegenden Pixels.</param>
+        <param name="y">Die Y-Koordinate des festzulegenden Pixels.</param>
+        <param name="color">Eine <see cref="T:System.Drawing.Color" />-Struktur, die die Farbe darstellt, die dem angegebenen Pixel zugewiesen werden soll.</param>
+        <summary>Legt die Farbe des angegebenen Pixels in dieser <see cref="T:System.Drawing.Bitmap" /> fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Drawing.Bitmap.SetPixel%2A> Methode, um die Farbe eines einzelnen Pixels programmgesteuert in einem Bild fest. Sie können ein Bild auch programmgesteuert ändern, mit der <xref:System.Drawing.Bitmap.LockBits%2A> Methode. In der Regel für umfangreiche Änderungen der <xref:System.Drawing.Bitmap.LockBits%2A> Methode bietet eine bessere Leistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt eine <xref:System.Drawing.Bitmap>.  
+  
+-   Legt die Farbe jedes Pixels in der Bitmap auf Schwarz fest.  
+  
+-   Die Bitmap gezeichnet.  
+  
+ [!code-cpp[System.Drawing.ClassicBitmapExamples#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CPP/form1.cpp#10)]
+ [!code-csharp[System.Drawing.ClassicBitmapExamples#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CS/form1.cs#10)]
+ [!code-vb[System.Drawing.ClassicBitmapExamples#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Fehler bei diesem Vorgang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetResolution">
+      <MemberSignature Language="C#" Value="public void SetResolution (float xDpi, float yDpi);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetResolution(float32 xDpi, float32 yDpi) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.SetResolution(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xDpi" Type="System.Single" />
+        <Parameter Name="yDpi" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="xDpi">Die horizontale Auflösung in dpi-Wert, der die <see cref="T:System.Drawing.Bitmap" />.</param>
+        <param name="yDpi">Die vertikale Auflösung in dpi-Wert, der die <see cref="T:System.Drawing.Bitmap" />.</param>
+        <summary>Legt die Auflösung für diesen <see cref="T:System.Drawing.Bitmap" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um die gewünschte Auflösung auf eine neu erstellte Bitmap festzulegen. Ändern der Auflösung des Bilds wird die physische Größe nicht geändert werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie mithilfe der <xref:System.Drawing.Bitmap.SetResolution%2A> Methode.  
+  
+ [!code-csharp[System.Drawing.Misc3#SetResolution](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#setresolution)]
+ [!code-vb[System.Drawing.Misc3#SetResolution](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#setresolution)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Fehler bei diesem Vorgang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UnlockBits">
+      <MemberSignature Language="C#" Value="public void UnlockBits (System.Drawing.Imaging.BitmapData bitmapdata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnlockBits(class System.Drawing.Imaging.BitmapData bitmapdata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Bitmap.UnlockBits(System.Drawing.Imaging.BitmapData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bitmapdata" Type="System.Drawing.Imaging.BitmapData" />
+      </Parameters>
+      <Docs>
+        <param name="bitmapdata">Ein <see cref="T:System.Drawing.Imaging.BitmapData" /> , Informationen über den Sperrvorgang angibt.</param>
+        <summary>Entsperrt dieses <see cref="T:System.Drawing.Bitmap" /> vom Systemspeicher.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Imaging.BitmapData> gibt die Attribute der <xref:System.Drawing.Bitmap>, z. B. Größe, Pixelformat, die Startadresse des Pixeldaten im Speicher und die Länge der jede Scanzeile (Stride).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.Image.PixelFormat%2A>, <xref:System.Drawing.Image.Height%2A>, <xref:System.Drawing.Image.Width%2A>, und <xref:System.Drawing.Imaging.BitmapData.Scan0%2A> Eigenschaften; das <xref:System.Drawing.Bitmap.LockBits%2A> und <xref:System.Drawing.Bitmap.UnlockBits%2A> -Methoden und die <xref:System.Drawing.Imaging.ImageLockMode> Enumeration. Dieses Beispiel ist nicht vorgesehen, mit allen Pixelformate ordnungsgemäß, sondern geben Sie ein Beispiel zum Verwenden der <xref:System.Drawing.Bitmap.LockBits%2A> Methode. In diesem Beispiel dient, die mit Windows Forms verwendet werden. Um dieses Beispiel auszuführen, fügen Sie ihn in ein Formular, und behandeln Sie des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis durch Aufrufen der `LockUnlockBitsExample` -Methode auf und übergibt `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.BitmapMembers#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.BitmapMembers#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.BitmapMembers#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.BitmapMembers/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Fehler bei diesem Vorgang.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,309 @@
+<Type Name="UnvalidatedRequestValues" FullName="System.Web.UnvalidatedRequestValues">
+  <TypeSignature Language="C#" Value="public sealed class UnvalidatedRequestValues" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UnvalidatedRequestValues extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UnvalidatedRequestValues" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Zugriff auf HTTP-Anforderungswerte, ohne die Anforderungsvalidierung für ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ASP.NET liest die Werte in HTTP-Anforderung Sammlungen (z. B. die <xref:System.Web.HttpRequest.Form%2A>, <xref:System.Web.HttpRequest.QueryString%2A>, und <xref:System.Web.HttpRequest.Cookies%2A> Sammlungen), er führt *Anforderungsvalidierung*. Während der anforderungsüberprüfung ASP.NET bereitgestellte Werte überprüft und bestimmt, ob sie Markup, Skript oder reservierte Zeichen enthalten. Wenn ASP.NET eine der folgenden Arten von Eingaben, erkennt es löst standardmäßig eine <xref:System.Web.HttpRequestValidationException> Ausnahme. Dies verhindert bösartiges Skript-Injection-Angriffe auf Ihrer Website.  
+  
+ Allerdings kann in einigen Fällen möchten ASP.NET-Anforderungsvalidierung umgehen und Zulassen von Werten, die Markup, Skript oder reservierte Zeichen enthalten.  Z. B. wenn die Anwendung einen Rich-Text-Editor, die Benutzern das Senden von HTML-Markup als formatierten Inhalt ermöglicht verwendet, können Sie die Mitglieder der <xref:System.Web.UnvalidatedRequestValues> Klasse, um die RTF-Anforderungswerte abzurufen, ohne dass die Standard-ASP.NET-Anforderung Überprüfung. In Ihrem Code Sie Member dieser Klasse zugreifen, mithilfe der <xref:System.Web.HttpRequest.Unvalidated%2A> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  Wenn Sie diese Klasse verwenden, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cookies">
+      <MemberSignature Language="C#" Value="public System.Web.HttpCookieCollection Cookies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpCookieCollection Cookies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValues.Cookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookieCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Cookies, die der Client gesendet, ohne die Anforderungsvalidierung für ASP.NET, ab.</summary>
+        <value>Die Cookies aus dem HTTP-Anforderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Wenn Sie diese Eigenschaft verwenden, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Files">
+      <MemberSignature Language="C#" Value="public System.Web.HttpFileCollection Files { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpFileCollection Files" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValues.Files" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpFileCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Dateien, die der Client, ohne die Anforderungsvalidierung für ASP.NET hochgeladen, ab.</summary>
+        <value>Die Dateien aus der HTTP-Anforderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Wenn Sie diese Eigenschaft verwenden, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Form">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection Form { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Form" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValues.Form" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Formularvariablen, die der Client übermittelt, ohne die Anforderungsvalidierung für ASP.NET, ab.</summary>
+        <value>Die Formularvariablen der HTTP-Anforderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Wenn Sie diese Eigenschaft verwenden, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValues.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von HTTP-Headern, die der Client gesendet, ohne die Anforderungsvalidierung, ab.</summary>
+        <value>Die Header der HTTP-Anforderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Wenn Sie diese Eigenschaft verwenden, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[string field] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValues.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="field" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="field">Der Schlüssel des abzurufenden Objekts.</param>
+        <summary>Ruft das angegebene Objekt aus der <see cref="P:System.Web.HttpRequest.Form" />, <see cref="P:System.Web.HttpRequest.Cookies" />, <see cref="P:System.Web.HttpRequest.QueryString" />, oder <see cref="P:System.Web.HttpRequest.ServerVariables" /> -Auflistung, ohne die Anforderungsvalidierung für ASP.NET.</summary>
+        <value>Das angeforderte Objekt oder <see langword="null" /> , wenn das Objekt nicht gefunden wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Wenn Sie diese Eigenschaft verwenden, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValues.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den virtuellen Pfad der angeforderten Ressource ohne die Anforderungsvalidierung für ASP.NET.</summary>
+        <value>Der virtuelle Pfad.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Wenn Sie diese Eigenschaft verwenden, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PathInfo">
+      <MemberSignature Language="C#" Value="public string PathInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PathInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValues.PathInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft zusätzliche Pfadinformationen für eine Ressource mit einer URL-Erweiterung, ohne die Anforderungsvalidierung für ASP.NET.</summary>
+        <value>Eine Zeichenfolge, die zusätzlichen Pfadinformationen für eine Ressource enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Wenn Sie diese Eigenschaft verwenden, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryString">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection QueryString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection QueryString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValues.QueryString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von HTTP-Abfrage Zeichenfolgenvariablen, die der Client übermittelt, ohne die Anforderungsvalidierung für ASP.NET, ab.</summary>
+        <value>Die Auflistung der vom Client gesendeten Abfragezeichenfolgenvariablen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Wenn Sie diese Eigenschaft verwenden, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawUrl">
+      <MemberSignature Language="C#" Value="public string RawUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RawUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValues.RawUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Teil der angeforderten URL an, die Namen den Website an, ohne die Anforderungsvalidierung für ASP.NET folgt.</summary>
+        <value>Der Teil der URL, der den Websitenamen an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Wenn Sie diese Eigenschaft verwenden, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.  
+  
+ Wenn die vollständige Anforderungs-URL ist `http://www.contoso.com/default.aspx?id=44`, den Wert der <xref:System.Web.UnvalidatedRequestValues.RawUrl%2A> ist `/default.aspx?id=44`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public Uri Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UnvalidatedRequestValues.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die URL-Daten für die Anforderung ab, ohne die Anforderungsvalidierung für ASP.NET.</summary>
+        <value>Ein Objekt, das die URL-Daten für die Anforderung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Wenn Sie diese Eigenschaft verwenden, müssen Sie die Daten für Cross-Site scripting Angriffe manuell überprüfen.  
+  
+ Sie können die URL-Daten, z. B. die Portnummer, Hostname, Pfadinformationen und Daten über den Benutzer aus Abrufen der <xref:System.Uri> dieser Eigenschaft zurückgegebene Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

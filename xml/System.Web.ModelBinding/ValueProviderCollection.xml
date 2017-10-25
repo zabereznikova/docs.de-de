@@ -1,0 +1,184 @@
+<Type Name="ValueProviderCollection" FullName="System.Web.ModelBinding.ValueProviderCollection">
+  <TypeSignature Language="C#" Value="public class ValueProviderCollection : System.Collections.ObjectModel.Collection&lt;System.Web.ModelBinding.IValueProvider&gt;, System.Web.ModelBinding.IUnvalidatedValueProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ValueProviderCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.Web.ModelBinding.IValueProvider&gt; implements class System.Web.ModelBinding.IUnvalidatedValueProvider, class System.Web.ModelBinding.IValueProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ModelBinding.ValueProviderCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.Web.ModelBinding.IValueProvider&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Web.ModelBinding.IValueProvider</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.ModelBinding.IUnvalidatedValueProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Auflistung von Wertanbieterobjekten für die Anwendung dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValueProviderCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ValueProviderCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.ModelBinding.ValueProviderCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValueProviderCollection (System.Collections.Generic.IList&lt;System.Web.ModelBinding.IValueProvider&gt; list);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IList`1&lt;class System.Web.ModelBinding.IValueProvider&gt; list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ValueProviderCollection.#ctor(System.Collections.Generic.IList{System.Web.ModelBinding.IValueProvider})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="list" Type="System.Collections.Generic.IList&lt;System.Web.ModelBinding.IValueProvider&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="list">Die Auflistung der Wertanbieter.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.ModelBinding.ValueProviderCollection" /> -Klasse unter Verwendung der angegebenen Auflistung der Wertanbieter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsPrefix">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsPrefix (string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsPrefix(string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ValueProviderCollection.ContainsPrefix(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Präfix.</param>
+        <summary>Gibt einen Wert, der angibt, ob alle Wertanbieter in der Auflistung das angegebene Präfix enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn alle Wertanbieter in der Auflistung das angegebene Präfix enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public virtual System.Web.ModelBinding.ValueProviderResult GetValue (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.ModelBinding.ValueProviderResult GetValue(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ValueProviderCollection.GetValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.ValueProviderResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des abzurufenden Objekts Wert.</param>
+        <summary>Gibt ein Wertobjekt mithilfe des angegebenen Schlüssels zurück.</summary>
+        <returns>Das Wertobjekt</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft <xref:System.Web.ModelBinding.ValueProviderCollection.GetValue%28System.String%2CSystem.Boolean%29>, und übergeben Sie `false` für die `skipValidation` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public virtual System.Web.ModelBinding.ValueProviderResult GetValue (string key, bool skipValidation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.ModelBinding.ValueProviderResult GetValue(string key, bool skipValidation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ValueProviderCollection.GetValue(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.ValueProviderResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="skipValidation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des abzurufenden Objekts Wert.</param>
+        <param name="skipValidation">
+          <see langword="true" />um die Überprüfung zu überspringen. andernfalls <see langword="false" />.</param>
+        <summary>Gibt ein Wertobjekt mit dem angegebenen Schlüssel zurück, und gibt optional an, ob die Validierung übersprungen werden soll.</summary>
+        <returns>Das Wertobjekt</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, System.Web.ModelBinding.IValueProvider item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, class System.Web.ModelBinding.IValueProvider item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ValueProviderCollection.InsertItem(System.Int32,System.Web.ModelBinding.IValueProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Web.ModelBinding.IValueProvider" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die nullbasierte Indexposition, an der den Wertanbieter in die Auflistung eingefügt werden soll.</param>
+        <param name="item">Das einzufügende Wert-Anbieterobjekt.</param>
+        <summary>Fügt das angegebene Wertobjekt für den Anbieter in der Auflistung an der angegebenen Indexposition ein.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="item" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, System.Web.ModelBinding.IValueProvider item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, class System.Web.ModelBinding.IValueProvider item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ValueProviderCollection.SetItem(System.Int32,System.Web.ModelBinding.IValueProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Web.ModelBinding.IValueProvider" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu ersetzenden Elements.</param>
+        <param name="item">Der neue Wert für das Element am angegebenen Index.</param>
+        <summary>Ersetzt den Wertanbieter an der angegebenen Indexposition mit einen neuen Wertanbieter.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="item" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,370 @@
+<Type Name="PagerStyle" FullName="System.Web.UI.MobileControls.PagerStyle">
+  <TypeSignature Language="C#" Value="public class PagerStyle : System.Web.UI.MobileControls.Style" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PagerStyle extends System.Web.UI.MobileControls.Style" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.PagerStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.Style</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Stilfunktion für die Paginierung der Benutzeroberfläche einer Seite bereit. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.PagerStyle> Objekt ist ein <xref:System.Web.UI.MobileControls.Style> Objekt mit zusätzlichen Formateigenschaften für die Paginierung-Benutzeroberfläche (UI) von einem Formular. Verwenden Sie die Eigenschaften und Methoden von der <xref:System.Web.UI.MobileControls.PagerStyle> Klasse überschreiben Standardtext für die <xref:System.Web.UI.MobileControls.PagerStyle.NextPageText%2A>, <xref:System.Web.UI.MobileControls.PagerStyle.PreviousPageText%2A>, und <xref:System.Web.UI.MobileControls.PagerStyle.PageLabel%2A> Eigenschaften. Wenn Sie mit den Links weiter und zurück zu den entsprechenden Seiten ein Formulars programmgesteuert erstellen, können Sie z. B. den Text für diese Links überschreiben, durch den Wert der zuvor erwähnten Eigenschaften festlegen. Sie verwenden die Methoden, z. B. <xref:System.Web.UI.MobileControls.PagerStyle.GetNextPageText%2A>, <xref:System.Web.UI.MobileControls.PagerStyle.GetPreviousPageText%2A>, oder <xref:System.Web.UI.MobileControls.PagerStyle.GetPageLabelText%2A> zum Abrufen des aktuellen Werts der Eigenschaften.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.MobileControls.PagerStyle.PageLabel%2A> Eigenschaft gilt nur für HTML-Markup und kann nicht in andere Markups z. B. WML dargestellt werden.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PagerStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagerStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Instanziiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.PagerStyle" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextPageText">
+      <MemberSignature Language="C#" Value="public string GetNextPageText (int currentPageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetNextPageText(int32 currentPageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagerStyle.GetNextPageText(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="currentPageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="currentPageIndex">Der Index der aktuellen Seite.</param>
+        <summary>Gibt eine formatierte Zeichenfolge für das Element der Benutzeroberfläche (UI) verwendet, um zur nächsten Seite navigieren. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Eine formatierte Zeichenfolge für das Element der Benutzeroberfläche (UI) verwendet, um zur nächsten Seite navigieren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet die <xref:System.Web.UI.MobileControls.PagerStyle.NextPageText%2A> -Eigenschaft und die einsbasierte aktuelle Seitenindex zur Formatierung der Zeichenfolge übergeben. Von Form-Adapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPageLabelText">
+      <MemberSignature Language="C#" Value="public string GetPageLabelText (int currentPageIndex, int pageCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetPageLabelText(int32 currentPageIndex, int32 pageCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagerStyle.GetPageLabelText(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="currentPageIndex" Type="System.Int32" />
+        <Parameter Name="pageCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="currentPageIndex">Der aktuelle Seitenindex.</param>
+        <param name="pageCount">Die Anzahl der Seiten.</param>
+        <summary>Gibt eine formatierte Zeichenfolge für die UI-Element verwendet, um zur nächsten Seite navigieren. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Eine formatierte Zeichenfolge für die UI-Element verwendet, um zur nächsten Seite navigieren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet die Eigenschaft und den Index mit einsbasierte der aktuellen Seite, die zur Formatierung der Zeichenfolge übergeben. Von Form-Adapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreviousPageText">
+      <MemberSignature Language="C#" Value="public string GetPreviousPageText (int currentPageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetPreviousPageText(int32 currentPageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagerStyle.GetPreviousPageText(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="currentPageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="currentPageIndex">Der Index der aktuellen Seite.</param>
+        <summary>Gibt eine formatierte Zeichenfolge für die UI-Element verwendet, um zur vorherigen Seite navigieren. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Eine formatierte Zeichenfolge für die UI-Element verwendet, um zur vorherigen Seite navigieren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet die <xref:System.Web.UI.MobileControls.PagerStyle.PreviousPageText%2A> -Eigenschaft und die einsbasierte aktuelle Seitenindex zur Formatierung der Zeichenfolge übergeben. Von Form-Adapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextPageText">
+      <MemberSignature Language="C#" Value="public string NextPageText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NextPageText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagerStyle.NextPageText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Bezeichnung für ein Element der Benutzeroberfläche, die verwendet wird, um zur nächsten Seite zu navigieren. Der Standardwert ist "Weiter". Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Bezeichnung für ein Element der Benutzeroberfläche, die verwendet wird, um zur nächsten Seite zu navigieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Bezeichnung kann den Formatbezeichner enthalten `{0}`, dem wird durch die Seitenzahl der nächsten Seite ersetzt, wenn die Bezeichnung gerendert wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Web.UI.MobileControls.PagerStyle.NextPageText%2A> Eigenschaft, um die nächste Seite Bezeichnung um mehr als die aktuelle Seite festzulegen.  
+  
+```vb  
+Private Sub Form1_PageIndexChanged(sender As Object, e As EventArgs)  
+     Form1.PagerStyle.NextPageText = (Form1.CurrentPage + 1)  
+End Sub  
+```  
+  
+```csharp  
+void Form1_PageIndexChanged(object sender, EventArgs e)  
+{  
+    Form1.PagerStyle.NextPageText =   
+        (Form1.CurrentPage + 1).ToString();  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextPageTextKey">
+      <MemberSignature Language="C#" Value="public static readonly object NextPageTextKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object NextPageTextKey" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.PagerStyle.NextPageTextKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Schlüssel zum Abrufen des Formats aus dem eingebetteten Stylesheet für <see cref="P:System.Web.UI.MobileControls.PagerStyle.NextPageText" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageLabel">
+      <MemberSignature Language="C#" Value="public string PageLabel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PageLabel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagerStyle.PageLabel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Bezeichnung für die aktuelle Seite verwendet. Der Standardwert ist eine leere Zeichenfolge („“). Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Bezeichnung für die aktuelle Seite verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft eine leere Zeichenfolge enthält, wird keine Bezeichnung angezeigt. Die Bezeichnung kann die Formatbezeichner enthalten `{0}` und `{1}`, die ersetzt die Seitenzahl der aktuellen Seite und die Gesamtanzahl der Seiten, bzw. beim Rendern der Bezeichnung. Beispielsweise der Formatbezeichner `Page {0} of {1}` würde die aktuelle Position innerhalb der Gesamtanzahl der Seiten anzeigen.  
+  
+> [!NOTE]
+>  WML-Geräten werden diese Eigenschaft nicht gerendert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.PagerStyle.PageLabel%2A> Eigenschaft, um die Seite "Bezeichnung"Wechseln Sie zur Seite"festzulegen.  
+  
+```vb  
+Private Sub Page_Load(ByVal sender As System.Object, _  
+    ByVal e As System.EventArgs) Handles MyBase.Load  
+    If Not IsPostBack  
+        Form1.PagerStyle.NextPageText = "2"  
+    End If  
+    Form1.PagerStyle.StyleReference = "title"  
+    Form1.PagerStyle.PageLabel = "Go to page"  
+End Sub  
+```  
+  
+```csharp  
+void Page_Load(object sender, EventArgs e)  
+{  
+    if(!IsPostBack)  
+    {  
+        Form1.PagerStyle.NextPageText = "2";  
+    }  
+    Form1.PagerStyle.StyleReference = "title";  
+    Form1.PagerStyle.PageLabel = "Go to page"  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageLabelKey">
+      <MemberSignature Language="C#" Value="public static readonly object PageLabelKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object PageLabelKey" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.PagerStyle.PageLabelKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Schlüssel zum Abrufen des Formats aus dem eingebetteten Stylesheet für <see cref="P:System.Web.UI.MobileControls.PagerStyle.PageLabel" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousPageText">
+      <MemberSignature Language="C#" Value="public string PreviousPageText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreviousPageText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagerStyle.PreviousPageText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Bezeichnung für das Element der Benutzeroberfläche verwendet, um zur vorherigen Seite navigieren. Der Standardwert ist <see langword="Previous" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Bezeichnung für das Element der Benutzeroberfläche verwendet, um zur vorherigen Seite navigieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Bezeichnung kann den Formatbezeichner enthalten `{0}`, dem wird durch die Seitenzahl der vorherigen Seite ersetzt, wenn die Bezeichnung gerendert wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.PagerStyle.PreviousPageText%2A> Eigenschaft, um die vorherige Seite Bezeichnung bis eins weniger als die aktuelle Seite festzulegen.  
+  
+```vb  
+Sub Form1_PageIndexChanged(ByVal sender As Object, _  
+    ByVal e As EventArgs)  
+    Form1.PagerStyle.PreviousPageText = _  
+       (Form1.CurrentPage - 1).ToString()  
+End Sub  
+```  
+  
+```csharp  
+void Form1_PageIndexChanged(object sender, EventArgs e)  
+{  
+    Form1.PagerStyle.PreviousPageText =   
+        (Form1.CurrentPage - 1).ToString();  
+    Form1.PagerStyle.NextPageText = (Form1.CurrentPage + 1).ToString();  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousPageTextKey">
+      <MemberSignature Language="C#" Value="public static readonly object PreviousPageTextKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object PreviousPageTextKey" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.PagerStyle.PreviousPageTextKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Schlüssel zum Abrufen des Formats aus dem eingebetteten Stylesheet für <see cref="P:System.Web.UI.MobileControls.PagerStyle.PreviousPageText" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,139 @@
+<Type Name="SerializationObjectManager" FullName="System.Runtime.Serialization.SerializationObjectManager">
+  <TypeSignature Language="C#" Value="public sealed class SerializationObjectManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SerializationObjectManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.SerializationObjectManager" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet Serialisierungsprozesse zur Laufzeit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse führt ähnliche Aufgaben wie das <xref:System.Runtime.Serialization.ObjectManager>. Der Hauptunterschied besteht darin, die die <xref:System.Runtime.Serialization.SerializationObjectManager> seine Tasks ausführt, während der Serialisierung während der <xref:System.Runtime.Serialization.ObjectManager> seine Tasks während der Deserialisierung ausführt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerializationObjectManager (System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationObjectManager.#ctor(System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine Instanz von der <see cref="T:System.Runtime.Serialization.StreamingContext" /> -Klasse, die Informationen zu den aktuellen Serialisierungsvorgang enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.SerializationObjectManager" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseOnSerializedEvent">
+      <MemberSignature Language="C#" Value="public void RaiseOnSerializedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseOnSerializedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationObjectManager.RaiseOnSerializedEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das OnSerializing Rückruf-Ereignis auf, wenn der Typ des Objekts vorhanden; und registriert das Objekt zum Auslösen des OnSerialized-Ereignisses, wenn der Typ des Objekts eine aufweist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das OnSerializing Rückruf-Ereignis wird erstellt, durch Anwenden der <xref:System.Runtime.Serialization.OnSerializingAttribute> -Attribut auf eine Methode für das registrierte Objekt. Ebenso wird das OnSerialized-Ereignis erstellt, durch Anwenden der <xref:System.Runtime.Serialization.OnSerializedAttribute> -Attribut auf eine Methode für das registrierte Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterObject">
+      <MemberSignature Language="C#" Value="public void RegisterObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationObjectManager.RegisterObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu registrierende Objekt.</param>
+        <summary>Registriert das Objekt, von dem Ereignisse ausgelöst werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Serialization.SerializationObjectManager.RaiseOnSerializedEvent%2A> Methode wird für das registrierte Objekt aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermissionAttribute">für das Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,274 @@
+<Type Name="Site" FullName="System.Security.Policy.Site">
+  <TypeSignature Language="C#" Value="public sealed class Site : System.Security.Policy.EvidenceBase, System.Security.Policy.IIdentityPermissionFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit Site extends System.Security.Policy.EvidenceBase implements class System.Security.Policy.IIdentityPermissionFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.Site" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Policy.EvidenceBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Policy.IIdentityPermissionFactory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Website aus dem Codeassembly als Beweis für die richtlinienauswertung stammt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Vorhandensein von <xref:System.Security.Policy.Site> erzeugt eine <xref:System.Security.Permissions.SiteIdentityPermission> in der Grant festgelegt. Liegt eine <xref:System.Security.CodeAccessPermission.Demand%2A> für <xref:System.Security.Permissions.SiteIdentityPermission>, die <xref:System.Security.Permissions.SiteIdentityPermission> , entspricht die <xref:System.Security.Policy.Site> Beweise mit der angeforderten Berechtigung verglichen wird.  
+  
+ Identität der Site wird für Code von URLs mit beliebigen Protokollen außer FILE definiert. Eine Website ist die Zeichenfolge zwischen der "/ /" nach dem Protokoll eine URL und dem folgenden "/", falls vorhanden. Beispielsweise ist www.fourthcoffee.com die Identität der Site in der URL http://www.fourthcoffee.com/process/grind.htm. Dies umfasst nicht die Portnummern. Wenn eine angegebene URL Http://www.fourthcoffee.com:8000 ist / der Standort www.fourthcoffee.com, nicht www.fourthcoffee.com: 8000 ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Site (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.Site.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Ursprung für die zugehörige Code-Assembly-Website.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Policy.Site" /> -Klasse mit der Website, von dem eine Codeassembly stammt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="name" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.EvidenceBase Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.EvidenceBase Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.Site.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.EvidenceBase</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt, das eine Kopie der aktuellen Instanz darstellt.</summary>
+        <returns>Ein neues Objekt, das eine Kopie dieser Instanz ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public object Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.Site.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine äquivalente Kopie der <see cref="T:System.Security.Policy.Site" /> Objekt.</summary>
+        <returns>Ein neues Objekt, das mit der aktuellen identisch ist <see cref="T:System.Security.Policy.Site" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromUrl">
+      <MemberSignature Language="C#" Value="public static System.Security.Policy.Site CreateFromUrl (string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Policy.Site CreateFromUrl(string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.Site.CreateFromUrl(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.Site</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die URL aus dem zur Erstellung des neuen <see cref="T:System.Security.Policy.Site" /> Objekt.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Security.Policy.Site" /> Objekt aus der angegebenen URL.</summary>
+        <returns>Ein neues Standortobjekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="url" /> Parameter ist keine gültige URL.  
+  
+ - oder -   
+  
+ Die <paramref name="url" /> Parameter ist ein Dateiname.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateIdentityPermission">
+      <MemberSignature Language="C#" Value="public System.Security.IPermission CreateIdentityPermission (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.IPermission CreateIdentityPermission(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.Site.CreateIdentityPermission(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">Der Beweis aus der die Identitätsberechtigung konstruiert.</param>
+        <summary>Erstellt eine Identitätsberechtigung, die mit dem aktuellen entspricht <see cref="T:System.Security.Policy.Site" /> Objekt.</summary>
+        <returns>Eine Website Identitätsberechtigung für die aktuelle <see cref="T:System.Security.Policy.Site" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.Site.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Das Objekt, das auf Äquivalenz mit dem aktuellen Objekt zu testen.</param>
+        <summary>Vergleicht den aktuellen <see cref="T:System.Security.Policy.Site" /> in das angegebene Objekt auf Äquivalenz.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Instanzen von der <see cref="T:System.Security.Policy.Site" /> -Klasse gleich sind; andernfalls, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Policy.Site>Objekte sind gleich, wenn sie festlegen, dass die Namen den gleichen Website an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.Site.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode, der Namen der aktuellen Website zurück.</summary>
+        <returns>Der Hashcode, der Namen der aktuellen Website an.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.Site.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Website aus der die Codeassembly stammt.</summary>
+        <value>Der Name der Website, von der die Codeassembly stammt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.Site.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung des aktuellen <see cref="T:System.Security.Policy.Site" />-Objekts zurück.</summary>
+        <returns>Eine Darstellung des aktuellen Standorts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

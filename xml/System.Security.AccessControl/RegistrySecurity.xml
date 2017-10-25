@@ -1,0 +1,879 @@
+<Type Name="RegistrySecurity" FullName="System.Security.AccessControl.RegistrySecurity">
+  <TypeSignature Language="C#" Value="public sealed class RegistrySecurity : System.Security.AccessControl.NativeObjectSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RegistrySecurity extends System.Security.AccessControl.NativeObjectSecurity" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.RegistrySecurity" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.NativeObjectSecurity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Windows-zugriffssteuerungssicherheit für einen Registrierungsschlüssel an. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Security.AccessControl.RegistrySecurity> Objekt gibt an, über Zugriffsrechte für einen Registrierungsschlüssel, und gibt außerdem an, wie Zugriffsversuche überwacht werden. Über die Zugriffsrechte für den Registrierungsschlüssel werden als Regeln ausgedrückt, mit jeder Zugriffsregel durch eine <xref:System.Security.AccessControl.RegistryAccessRule> Objekt. Jede Überwachungsregel wird dargestellt, indem ein <xref:System.Security.AccessControl.RegistryAuditRule> Objekt.  
+  
+ Dies spiegelt den zugrunde liegenden Windows-Sicherheitssystem, in dem jedes sicherungsfähige Objekt verfügt über höchstens einen besitzerverwaltete Zugriffssteuerungsliste (DACL), steuert den Zugriff auf gesicherte Objekt und darf höchstens eine Systemzugriffssteuerungsliste (SACL), der angibt, denen der Zugriff Versuche werden überwacht. Die DACL und SACL sind Listen von Zugriffssteuerungseinträgen (ACE) sortiert, die Zugriff und die Überwachung für Benutzer und Gruppen angeben. Ein <xref:System.Security.AccessControl.RegistryAccessRule> oder <xref:System.Security.AccessControl.RegistryAuditRule> Objekt möglicherweise mehr als ein ACE darstellen.  
+  
+> [!NOTE]
+>  Windows-zugriffssteuerungssicherheit kann nur auf Registrierungsschlüssel angewendet werden. Es kann nicht auf einzelne Schlüssel/Wert-Paaren, die in einem Schlüsselspeicher gespeicherte angewendet werden.  
+  
+ Die <xref:System.Security.AccessControl.RegistrySecurity>, <xref:System.Security.AccessControl.RegistryAccessRule>, und <xref:System.Security.AccessControl.RegistryAuditRule> Klassen blenden die Implementierungsdetails von ACLs und ACEs. Sie können damit siebzehn verschiedenen ACE-Typen und die Komplexität der ordnungsgemäßen Verwaltung der Vererbung und Weitergabe von Zugriffsrechten ignorieren. Diese Objekte sind aber auch zu verhindern, dass die folgenden häufigen Zugriffssteuerungsfehler konzipiert:  
+  
+-   Erstellen eine Sicherheitsbeschreibung mit einer null-DACL an. Ein null-Verweis auf eine DACL ermöglicht allen Benutzern auf ein Objekt, das potenziell erstellen einen Denial-of-Service-Angriff Zugriffsregeln hinzufügen. Ein neues <xref:System.Security.AccessControl.RegistrySecurity> -Objekt beginnt immer mit einer leeren DACL, die für alle Benutzer der Zugriff verweigert wird.  
+  
+-   Verletzung der die kanonische Reihenfolge der ACEs. Wenn die ACE-Liste in die DACL nicht kanonische Reihenfolge gehalten wird, möglicherweise versehentlich auf Benutzer Zugriff auf das gesicherte Objekt gewährt werden. Verweigerte Zugriffsrechte müssen z. B. immer vor zulässigen Zugriffsrechte aufgeführt werden. <xref:System.Security.AccessControl.RegistrySecurity>Objekte beibehalten die richtige Reihenfolge intern.  
+  
+-   Bearbeiten von Security Descriptor Flags, die nur Ressourcen-Manager-gesteuert werden soll.  
+  
+-   Das Erstellen ungültiger Kombinationen von ACE-Flags.  
+  
+-   Bearbeiten von geerbten ACEs aus. Vererbung und Weitergabe werden von den Ressourcen-Manager als Reaktion auf Änderungen behandelt, die Sie Zugriffs-und Überwachungsregeln vornehmen.  
+  
+-   Einfügen von bedeutungslosen ACEs in ACLs aus.  
+  
+ Die nur Funktionen, die nicht durch die Sicherheitsobjekte .NET unterstützt werden gefährliche Aktivitäten, die von der Mehrheit der Anwendungsentwickler, z. B. die folgenden vermieden werden sollte:  
+  
+-   Low-Level-Aufgaben, die normalerweise von den Ressourcen-Manager ausgeführt werden.  
+  
+-   Hinzufügen oder Entfernen von Zugriffssteuerungseinträgen Möglichkeiten, die die kanonische Reihenfolge nicht beibehalten.  
+  
+ Zum Ändern der Windows-zugriffssteuerungssicherheit für ein Registrierungsschlüssel verwendet die <xref:Microsoft.Win32.RegistryKey.GetAccessControl%2A?displayProperty=nameWithType> Methode zum Abrufen der <xref:System.Security.AccessControl.RegistrySecurity> Objekt. Ändern Sie das Sicherheitsobjekt durch Hinzufügen und Entfernen von Regeln, und verwenden Sie dann die <xref:Microsoft.Win32.RegistryKey.SetAccessControl%2A?displayProperty=nameWithType> -Methode erneut an.  
+  
+> [!IMPORTANT]
+>  Änderungen an einer <xref:System.Security.AccessControl.RegistrySecurity> Objekt haben keinen Einfluss auf die Zugriffsebenen des Registrierungsschlüssels erst nach dem Aufruf der <xref:Microsoft.Win32.RegistryKey.SetAccessControl%2A?displayProperty=nameWithType> Methode, um den Registrierungsschlüssel der geänderten Sicherheitsobjekt zuweisen.  
+  
+ Um zugriffssteuerungssicherheit aus einem Registrierungsschlüssel in einen anderen kopieren möchten, verwenden die <xref:Microsoft.Win32.RegistryKey.GetAccessControl%2A?displayProperty=nameWithType> Methode zum Abrufen einer <xref:System.Security.AccessControl.RegistrySecurity> Objekt, das die Zugriffs- und Überwachungsrichtlinien Regeln für den ersten Registrierungsschlüssel darstellt, und verwenden Sie dann die <xref:Microsoft.Win32.RegistryKey.SetAccessControl%2A?displayProperty=nameWithType> Methode zum Zuweisen von diesen Regeln die zweiten Registrierungsschlüssels. Sie können auch die Regeln zuweisen, um einen zweiten Registrierungsschlüssels mit einem <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A?displayProperty=nameWithType> oder <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A?displayProperty=nameWithType> Methode, eine <xref:System.Security.AccessControl.RegistrySecurity> -Objektparameters.  
+  
+ Benutzer mit einer Investition in Security Descriptor Definition Language (SDDL) können die <xref:System.Security.AccessControl.ObjectSecurity.SetSecurityDescriptorSddlForm%2A> Methode, um die Zugriffsregeln für einen Registrierungsschlüssel festlegen und die <xref:System.Security.AccessControl.ObjectSecurity.GetSecurityDescriptorSddlForm%2A> Methode, um eine Zeichenfolge abzurufen, die die Zugriffsregeln im SDDL-Format darstellt. Dies ist nicht für Neuentwicklungen empfohlen.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im erste Beispiel wird gezeigt, wie kompatible Regeln Merge Wenn hinzugefügt oder entfernt, und die zweite zeigt Auswirkungen der Vererbung und Weitergabe Flags auf das Hinzufügen und Löschen von Regeln.  
+  
+ Beispiel 1  
+  
+ Im folgenden Codebeispiel wird veranschaulicht wie die <xref:System.Security.AccessControl.RegistrySecurity.RemoveAccessRule%2A> -Methode Rechte aus einer kompatiblen Regel entfernt und wie die <xref:System.Security.AccessControl.RegistrySecurity.AddAccessRule%2A> Methode führt die Rechte mit kompatiblen Regeln zusammen.  
+  
+ Das Beispiel erstellt eine <xref:System.Security.AccessControl.RegistrySecurity> -Objekt und fügt eine Regel, die dem aktuellen Benutzer ermöglicht <xref:System.Security.AccessControl.RegistryRights?displayProperty=nameWithType> Rechte. Im Beispiel wird eine Regel, die der Benutzer erteilt erstellt <xref:System.Security.AccessControl.RegistryRights?displayProperty=nameWithType>, mit dem gleichen Vererbung und Weitergabe Rechte als erste Regel aus, und verwendet die <xref:System.Security.AccessControl.RegistrySecurity.RemoveAccessRule%2A> -Methode zum Entfernen dieser neuen Regel aus der <xref:System.Security.AccessControl.RegistrySecurity> Objekt. <xref:System.Security.AccessControl.RegistryRights.SetValue>ist Bestandteil des <xref:System.Security.AccessControl.RegistryRights.ReadKey>, sodass sie aus der kompatiblen Regel entfernt wird. Die Regeln in der <xref:System.Security.AccessControl.RegistrySecurity> Objekt werden angezeigt, die die übrigen Bestandteile von <xref:System.Security.AccessControl.RegistryRights.ReadKey>.  
+  
+ Der Beispielcode ruft dann die <xref:System.Security.AccessControl.RegistrySecurity.AddAccessRule%2A> Methode zum Zusammenführen der <xref:System.Security.AccessControl.RegistryRights.SetValue> mit der rechten Maustaste wieder in der Regel in der <xref:System.Security.AccessControl.RegistrySecurity> Objekt.  
+  
+> [!NOTE]
+>  In diesem Beispiel wird das Sicherheitsobjekt, nicht angefügt ein <xref:Microsoft.Win32.RegistryKey> Objekt. Im zweite Beispiel in diesem Abschnitt wird ein Sicherheitsobjekt angefügt und den Beispielen Zweck <xref:Microsoft.Win32.RegistryKey.GetAccessControl%2A?displayProperty=nameWithType> und <xref:Microsoft.Win32.RegistryKey.SetAccessControl%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Security.AccessControl.RegistrySecurity.RemoveAccessRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.RemoveAccessRule/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.RegistrySecurity.RemoveAccessRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.RemoveAccessRule/VB/source.vb#1)]  
+  
+ Beispiel 2  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, Zugriffsregeln mit Vererbung und Weitergabe. Das Beispiel erstellt eine <xref:System.Security.AccessControl.RegistrySecurity> -Objekt, erstellt, und fügt zwei Regeln mit den <xref:System.Security.AccessControl.InheritanceFlags.ContainerInherit> Flag. Die erste Regel verfügt über keine Weitergabeflags aus, während die zweite <xref:System.Security.AccessControl.PropagationFlags.NoPropagateInherit> und <xref:System.Security.AccessControl.PropagationFlags.InheritOnly>.  
+  
+ Das Programm zeigt die Regeln in der <xref:System.Security.AccessControl.RegistrySecurity> Objekt zugewiesen und dann verwendet der <xref:System.Security.AccessControl.RegistrySecurity> Objekt, das zum Erstellen einer ". Das Programm erstellt einen untergeordneten Unterschlüssel und einen untergeordneten Unterschlüssel, und zeigt dann die Sicherheit für jeden Unterschlüssel. Zum Schluss löscht das Programm die Testschlüssel.  
+  
+ [!code-csharp[System.Security.AccessControl.RegistryAccessRule.ctor2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.RegistryAccessRule.ctor2/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.RegistryAccessRule.ctor2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.RegistryAccessRule.ctor2/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegistrySecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistrySecurity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.AccessControl.RegistrySecurity" />-Klasse mit Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein neues <xref:System.Security.AccessControl.RegistrySecurity> Objekt beginnt immer mit einer leeren freigegebenen Zugriffssteuerungsliste (DACL), die für alle Benutzer der Zugriff verweigert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRightType">
+      <MemberSignature Language="C#" Value="public override Type AccessRightType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AccessRightType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.RegistrySecurity.AccessRightType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Enumerationstyp ab, die <see cref="T:System.Security.AccessControl.RegistrySecurity" /> -Klasse Zugriffsrechte darstellt.</summary>
+        <value>Ein <see cref="T:System.Type" /> Objekt darstellt der <see cref="T:System.Security.AccessControl.RegistryRights" /> Enumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen die <xref:System.Security.AccessControl.ObjectSecurity> -Klasse überschreiben die <xref:System.Security.AccessControl.ObjectSecurity.AccessRightType%2A> -Eigenschaft und der Rückgabewert den Typ, die sie verwenden, um die Darstellung von Zugriffsrechten. Beim Arbeiten mit Arrays oder Auflistungen, die mehrere Typen der Sicherheitsobjekte enthalten, verwenden Sie diese Eigenschaft, um zu bestimmen, den richtigen Enumerationstyp mit einzelnen Sicherheitsobjekts verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRuleFactory">
+      <MemberSignature Language="C#" Value="public override System.Security.AccessControl.AccessRule AccessRuleFactory (System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.AccessControl.AccessRule AccessRuleFactory(class System.Security.Principal.IdentityReference identityReference, int32 accessMask, bool isInherited, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistrySecurity.AccessRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AccessRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identityReference" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="isInherited" Type="System.Boolean" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identityReference">Ein <see cref="T:System.Security.Principal.IdentityReference" /> , identifiziert des Benutzers oder Gruppe die Regel gilt.</param>
+        <param name="accessMask">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.RegistryRights" /> Werte angibt, die Zugriffsrechte gewähren oder verweigern, eine ganze Zahl umgewandelt.</param>
+        <param name="isInherited">Ein boolescher Wert, der angibt, ob die Regel geerbt wird.</param>
+        <param name="inheritanceFlags">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.InheritanceFlags" /> Werte, die angibt, wie die Regel von Unterschlüsseln geerbt wird.</param>
+        <param name="propagationFlags">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.PropagationFlags" /> Werte, die die Art und Weise ändern, wird die Regel von Unterschlüsseln geerbt. Ohne Bedeutung, wenn der Wert der <c>InheritanceFlags</c> ist <see cref="F:System.Security.AccessControl.InheritanceFlags.None" />.</param>
+        <param name="type">Eines der <see cref="T:System.Security.AccessControl.AccessControlType" /> Werte, die angibt, ob die Rechte gewährt oder verweigert werden.</param>
+        <summary>Erstellt eine neue Zugriffsregel für den angegebenen Benutzer mit den angegebenen Zugriffsrechten, Zugriffssteuerung und Flags.</summary>
+        <returns>Ein <see cref="T:System.Security.AccessControl.RegistryAccessRule" /> Objekt, das die angegebenen Berechtigungen für den angegebenen Benutzer darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die empfohlene Methode zum Erstellen von Zugriffssteuerungsregeln ist die Verwendung von den Konstruktoren für die <xref:System.Security.AccessControl.RegistryAccessRule> Klasse.  
+  
+> [!NOTE]
+>  Sie können zwar Festlegen der <xref:System.Security.AccessControl.InheritanceFlags?displayProperty=nameWithType> kennzeichnen, keinen Sinn in diesem Fall. Für die Zwecke der Zugriffssteuerung sind die Name/Wert-Paare in einem Unterschlüssel keine separate Objekte. Die Zugriffsrechte auf Name/Wert-Paare werden durch die Rechte des Unterschlüssels gesteuert. Darüber hinaus, da alle Unterschlüssel Container sind (d. h., sie können andere Unterschlüssel enthalten), sie sind nicht betroffen von dem <xref:System.Security.AccessControl.InheritanceFlags.ObjectInherit> Flag. Schließlich angeben der <xref:System.Security.AccessControl.InheritanceFlags.ObjectInherit> Flag unnötig etwas komplizierter macht die Verwaltung der Regeln, da er mit der normalen Kombination kompatibler Regeln beeinträchtigt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="accessMask" />, <paramref name="inheritanceFlags" />, <paramref name="propagationFlags" />, oder <paramref name="type" /> gibt einen ungültigen Wert.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identityReference" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="accessMask" /> ist 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="identityReference" />ist nicht vom Typ <see cref="T:System.Security.Principal.SecurityIdentifier" />, noch von einem Typ, z. B. <see cref="T:System.Security.Principal.NTAccount" /> , die konvertiert werden kann, auf den Typ <see cref="T:System.Security.Principal.SecurityIdentifier" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRuleType">
+      <MemberSignature Language="C#" Value="public override Type AccessRuleType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AccessRuleType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.RegistrySecurity.AccessRuleType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ ab, die die <see cref="T:System.Security.AccessControl.RegistrySecurity" /> -Klasse Zugriffsregeln darstellt.</summary>
+        <value>Ein <see cref="T:System.Type" /> Objekt darstellt der <see cref="T:System.Security.AccessControl.RegistryAccessRule" /> Klasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen die <xref:System.Security.AccessControl.ObjectSecurity> -Klasse überschreiben die <xref:System.Security.AccessControl.ObjectSecurity.AccessRuleType%2A> Eigenschaft und die Rückgabewerte der Darstellung von Zugriffsregeln Typ. Bei der Arbeit mit Arrays oder Auflistungen, die mehrere Typen der Sicherheitsobjekte enthalten, verwenden Sie diese Eigenschaft, um zu bestimmen, den richtigen Zugriffsregeltyp mit einzelnen Sicherheitsobjekts verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAccessRule">
+      <MemberSignature Language="C#" Value="public void AddAccessRule (System.Security.AccessControl.RegistryAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAccessRule(class System.Security.AccessControl.RegistryAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistrySecurity.AddAccessRule(System.Security.AccessControl.RegistryAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.RegistryAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die Zugriffsregel hinzufügen.</param>
+        <summary>Sucht nach einem übereinstimmenden Zugriffssteuerung mit der die neue Regel zusammengeführt werden kann. Wenn keiner gefunden werden, fügt die neue Regel hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.AccessControl.RegistrySecurity.AddAccessRule%2A> Methode sucht Regeln mit dem gleichen Benutzer oder die Gruppe und die gleiche <xref:System.Security.AccessControl.AccessControlType> als `rule`. Wenn keiner gefunden werden, `rule` hinzugefügt wird. Wenn eine entsprechende Regel gefunden wird, wird die Rechte in `rule` mit einer vorhandenen Regel zusammengeführt werden.  
+  
+ Regeln können nicht zusammengeführt werden, wenn sie andere Flags aufweisen. Z. B. wenn ein Benutzer Lesezugriff ohne Flags Vererbung zugelassen wird und <xref:System.Security.AccessControl.RegistrySecurity.AddAccessRule%2A> wird verwendet, um eine Regel, die der Benutzer Schreibzugriff mit Vererbung für Unterschlüssel hinzufügen (<xref:System.Security.AccessControl.InheritanceFlags?displayProperty=nameWithType>), die zwei Regeln können nicht zusammengeführt werden.  
+  
+ Regeln mit unterschiedlichen <xref:System.Security.AccessControl.AccessControlType> Werte sind niemals zusammengeführt.  
+  
+ Regeln werden Rechte auf die am häufigsten ökonomische Weise auszudrücken. Beispielsweise verfügt ein Benutzer <xref:System.Security.AccessControl.RegistryRights.QueryValues>, <xref:System.Security.AccessControl.RegistryRights.Notify> und <xref:System.Security.AccessControl.RegistryRights.ReadPermissions> Rechte, und Sie fügen eine Regel zum gewähren <xref:System.Security.AccessControl.RegistryRights.EnumerateSubKeys> Rechte, die der Benutzer hat der Bestandteilen des <xref:System.Security.AccessControl.RegistryRights.ReadKey> Rechte. Wenn Sie die Rechte des Benutzers Abfragen ausführen, sehen Sie eine Regel mit <xref:System.Security.AccessControl.RegistryRights.ReadKey> Rechte. Auf ähnliche Weise, wenn Sie entfernen <xref:System.Security.AccessControl.RegistryRights.EnumerateSubKeys> Rechte, die anderen Bestandteile der <xref:System.Security.AccessControl.RegistryRights.ReadKey> Rechte werden erneut angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und hinzugefügt eine <xref:System.Security.AccessControl.RegistrySecurity> Objekte, wie Regeln, die zulassen und Verweigern von Berechtigungen getrennt ist, beim kompatible Regeln des gleichen bleiben Kind mit zusammengeführt werden.  
+  
+> [!NOTE]
+>  In diesem Beispiel wird das Sicherheitsobjekt, nicht angefügt ein <xref:Microsoft.Win32.RegistryKey> Objekt. Beispiele, die Sicherheitsobjekte angefügt werden, finden Sie <xref:Microsoft.Win32.RegistryKey.GetAccessControl%2A?displayProperty=nameWithType> und <xref:Microsoft.Win32.RegistryKey.SetAccessControl%2A?displayProperty=nameWithType>.  
+  
+ Ein Codebeispiel, Vererbung und Weitergabe Flags finden Sie in der <xref:System.Security.AccessControl.RegistryAccessRule> Klasse.  
+  
+ [!code-csharp[System.Security.AccessControl.RegistrySecurity.AddAccessRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.AddAccessRule/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.RegistrySecurity.AddAccessRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.AddAccessRule/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAuditRule">
+      <MemberSignature Language="C#" Value="public void AddAuditRule (System.Security.AccessControl.RegistryAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAuditRule(class System.Security.AccessControl.RegistryAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistrySecurity.AddAuditRule(System.Security.AccessControl.RegistryAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.RegistryAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die hinzuzufügende Überwachungsregel. Durch diese Regel angegebene Benutzer bestimmt die Suche.</param>
+        <summary>Sucht eine Überwachungsregel mit der die neue Regel zusammengeführt werden kann. Wenn keiner gefunden werden, fügt die neue Regel hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.AccessControl.RegistrySecurity.AddAuditRule%2A> Methode sucht nach Regeln mit dem gleichen Benutzer oder Gruppe als `rule`. Wenn keiner gefunden werden, `rule` hinzugefügt wird. Wenn eine entsprechende Regel gefunden wird, werden die Flags in `rule` in die vorhandene Regel zusammengeführt.  
+  
+ Regeln können nicht zusammengeführt werden, wenn sie andere Flags aufweisen. Beispielsweise, wenn fehlerhafte Versuche zum Schreiben in einen Schlüssel für einen bestimmten Benutzer, ohne Flags Vererbung überwacht und <xref:System.Security.AccessControl.RegistrySecurity.AddAuditRule%2A> wird verwendet, um eine Regel festgelegt, dass fehlerhafte Versuche zum Ändern von Berechtigungen für den Benutzer, jedoch mit Vererbung für überwachenden hinzufügen Unterschlüssel (<xref:System.Security.AccessControl.InheritanceFlags?displayProperty=nameWithType>), die zwei Regeln können nicht zusammengeführt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditRuleFactory">
+      <MemberSignature Language="C#" Value="public override System.Security.AccessControl.AuditRule AuditRuleFactory (System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AuditFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.AccessControl.AuditRule AuditRuleFactory(class System.Security.Principal.IdentityReference identityReference, int32 accessMask, bool isInherited, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AuditFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistrySecurity.AuditRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AuditRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identityReference" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="isInherited" Type="System.Boolean" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AuditFlags" />
+      </Parameters>
+      <Docs>
+        <param name="identityReference">Ein <see cref="T:System.Security.Principal.IdentityReference" /> , identifiziert des Benutzers oder Gruppe die Regel gilt.</param>
+        <param name="accessMask">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.RegistryRights" /> Werte angibt, die Zugriffsrechte zu überwachen, um eine ganze Zahl umgewandelt.</param>
+        <param name="isInherited">Ein boolescher Wert, der angibt, ob die Regel geerbt wird.</param>
+        <param name="inheritanceFlags">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.InheritanceFlags" /> Werte, die angibt, wie die Regel von Unterschlüsseln geerbt wird.</param>
+        <param name="propagationFlags">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.PropagationFlags" /> Werte, die die Art und Weise ändern, wird die Regel von Unterschlüsseln geerbt. Ohne Bedeutung, wenn der Wert der <c>InheritanceFlags</c> ist <see cref="F:System.Security.AccessControl.InheritanceFlags.None" />.</param>
+        <param name="flags">Eine bitweise Kombination von <see cref="T:System.Security.AccessControl.AuditFlags" /> Werte, die angeben, ob erfolgreiche oder fehlgeschlagene überwacht.</param>
+        <summary>Erstellt eine neue Überwachungsregel, Angeben der Benutzer, den die Regel, die Zugriffsrechte auf Überwachung, Vererbung und Weitergabe der Regel gilt und das Ergebnis, das die Regel wird ausgelöst.</summary>
+        <returns>Ein <see cref="T:System.Security.AccessControl.RegistryAuditRule" /> Objekt, das die angegebene Überwachungsregel für den angegebenen Benutzer, mit der angegebenen Flags darstellt. Der Rückgabetyp der Methode ist die Basisklasse <see cref="T:System.Security.AccessControl.AuditRule" />, aber der Rückgabewert der abgeleiteten Klasse sicher umgewandelt werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die empfohlene Methode zum Erstellen von Überwachungsregeln ist die Verwendung von den Konstruktoren für die <xref:System.Security.AccessControl.RegistryAuditRule> Klasse.  
+  
+> [!NOTE]
+>  Sie können zwar Festlegen der <xref:System.Security.AccessControl.InheritanceFlags?displayProperty=nameWithType> kennzeichnen, keinen Sinn in diesem Fall. Für die Zwecke des Audit-Steuerelements sind die Name/Wert-Paare in einem Unterschlüssel keine separate Objekte. Die Audit-Berechtigung, um die Name/Wert-Paare werden durch die Rechte des Unterschlüssels gesteuert. Darüber hinaus, da alle Unterschlüssel Container sind (d. h., sie können andere Unterschlüssel enthalten), sie sind nicht betroffen von dem <xref:System.Security.AccessControl.InheritanceFlags.ObjectInherit> Flag. Schließlich angeben der <xref:System.Security.AccessControl.InheritanceFlags.ObjectInherit> Flag unnötig etwas komplizierter macht die Verwaltung der Regeln, da er mit der normalen Kombination kompatibler Regeln beeinträchtigt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="accessMask" />, <paramref name="inheritanceFlags" />, <paramref name="propagationFlags" />, oder <paramref name="flags" /> gibt einen ungültigen Wert.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identityReference" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="accessMask" /> ist 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="identityReference" />ist nicht vom Typ <see cref="T:System.Security.Principal.SecurityIdentifier" />, noch von einem Typ, z. B. <see cref="T:System.Security.Principal.NTAccount" /> , die konvertiert werden kann, auf den Typ <see cref="T:System.Security.Principal.SecurityIdentifier" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditRuleType">
+      <MemberSignature Language="C#" Value="public override Type AuditRuleType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AuditRuleType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.RegistrySecurity.AuditRuleType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ ab, die die <see cref="T:System.Security.AccessControl.RegistrySecurity" /> -Klasse Überwachungsregeln darstellt.</summary>
+        <value>Ein <see cref="T:System.Type" /> Objekt darstellt der <see cref="T:System.Security.AccessControl.RegistryAuditRule" /> Klasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen die <xref:System.Security.AccessControl.ObjectSecurity> -Klasse überschreiben die <xref:System.Security.AccessControl.ObjectSecurity.AuditRuleType%2A> -Eigenschaft und der Rückgabewert den Typ, die sie verwenden, um die Überwachung für die Darstellung. Bei der Arbeit mit Arrays oder Auflistungen, die mehrere Typen der Sicherheitsobjekte enthalten, verwenden Sie diese Eigenschaft, um zu bestimmen, den richtigen Audit Regeltyp mit einzelnen Sicherheitsobjekts verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRule">
+      <MemberSignature Language="C#" Value="public bool RemoveAccessRule (System.Security.AccessControl.RegistryAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveAccessRule(class System.Security.AccessControl.RegistryAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistrySecurity.RemoveAccessRule(System.Security.AccessControl.RegistryAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.RegistryAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Ein <see cref="T:System.Security.AccessControl.RegistryAccessRule" /> , der angibt, dass des Benutzers und <see cref="T:System.Security.AccessControl.AccessControlType" /> zum Durchsuchen und einen Satz von Vererbung und Weitergabe Flags, die eine entsprechende Regel, wenn gefunden wird, muss mit kompatibel sein. Gibt an, dass die Rechte, die aus der kompatiblen Regel entfernt werden sollen, wenn gefunden.</param>
+        <summary>Sucht nach einer Zugriffssteuerungsregel mit demselben Benutzer und <see cref="T:System.Security.AccessControl.AccessControlType" /> (zulassen oder verweigern) als die angegebene Regel und kompatible Vererbung und Weitergabeflags; Wenn eine solche Regel gefunden wird, die in die angegebene Regel enthaltenen Rechte werden entfernt daraus .</summary>
+        <returns>
+          <see langword="true" />Wenn eine kompatible Regel gefunden wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle <xref:System.Security.AccessControl.RegistrySecurity> wird für eine Regel mit demselben Benutzer und die gleiche durchsucht <xref:System.Security.AccessControl.AccessControlType> als Wert `rule`. Wenn keine solche Regel gefunden wird, wird keine Aktion ausgeführt, und die Methode gibt `false`. Wenn Abgleichsregeln gefunden werden, werden ihre Kompatibilität und Vererbung-Flags für die Kompatibilität mit den Flags, die im angegebenen überprüft `rule`. Wenn keine kompatible Regel gefunden wird, wird keine Aktion ausgeführt, und die Methode gibt `false`. Wenn eine Regel mit kompatiblen Flags gefunden wird, wird die Rechte in angegebenen `rule` werden aus der kompatiblen Regel entfernt und die Methode gibt `true`. Wenn `rule` gibt die Rechte, die nicht in der kompatiblen Regel enthalten sind, in Bezug auf diese Rechte wird keine Aktion ausgeführt. Wenn alle Rechte aus der kompatiblen Regel entfernt werden, wird die gesamte Regel aus dem aktuellen entfernt <xref:System.Security.AccessControl.RegistrySecurity> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht wie die <xref:System.Security.AccessControl.RegistrySecurity.RemoveAccessRule%2A> -Methode Rechte aus einer kompatiblen Regel entfernt und wie die <xref:System.Security.AccessControl.RegistrySecurity.AddAccessRule%2A> Methode führt die Rechte mit kompatiblen Regeln zusammen.  
+  
+ Das Beispiel erstellt eine <xref:System.Security.AccessControl.RegistrySecurity> -Objekt und fügt eine Regel, die dem aktuellen Benutzer ermöglicht <xref:System.Security.AccessControl.RegistryRights?displayProperty=nameWithType> Rechte. Im Beispiel wird eine Regel, die der Benutzer erteilt erstellt <xref:System.Security.AccessControl.RegistryRights?displayProperty=nameWithType>, mit dem gleichen Vererbung und Weitergabe Rechte als erste Regel aus, und verwendet die <xref:System.Security.AccessControl.RegistrySecurity.RemoveAccessRule%2A> -Methode zum Entfernen dieser neuen Regel aus der <xref:System.Security.AccessControl.RegistrySecurity> Objekt. <xref:System.Security.AccessControl.RegistryRights.SetValue>ist Bestandteil des <xref:System.Security.AccessControl.RegistryRights.ReadKey>, sodass sie aus der kompatiblen Regel entfernt wird. Die Regeln in der <xref:System.Security.AccessControl.RegistrySecurity> Objekt werden angezeigt, die die übrigen Bestandteile von <xref:System.Security.AccessControl.RegistryRights.ReadKey>.  
+  
+ Der Beispielcode ruft dann die <xref:System.Security.AccessControl.RegistrySecurity.RemoveAccessRule%2A> Methode zum Zusammenführen der <xref:System.Security.AccessControl.RegistryRights.SetValue> mit der rechten Maustaste wieder in der Regel in der <xref:System.Security.AccessControl.RegistrySecurity> Objekt.  
+  
+> [!NOTE]
+>  In diesem Beispiel wird das Sicherheitsobjekt, nicht angefügt ein <xref:Microsoft.Win32.RegistryKey> Objekt. Im zweite Beispiel in diesem Abschnitt wird ein Sicherheitsobjekt angefügt und den Beispielen Zweck <xref:Microsoft.Win32.RegistryKey.GetAccessControl%2A?displayProperty=nameWithType> <xref:Microsoft.Win32.RegistryKey.SetAccessControl%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Security.AccessControl.RegistrySecurity.RemoveAccessRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.RemoveAccessRule/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.RegistrySecurity.RemoveAccessRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.RemoveAccessRule/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRuleAll">
+      <MemberSignature Language="C#" Value="public void RemoveAccessRuleAll (System.Security.AccessControl.RegistryAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAccessRuleAll(class System.Security.AccessControl.RegistryAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistrySecurity.RemoveAccessRuleAll(System.Security.AccessControl.RegistryAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.RegistryAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Ein <see cref="T:System.Security.AccessControl.RegistryAccessRule" /> , der angibt, dass des Benutzers und <see cref="T:System.Security.AccessControl.AccessControlType" /> gesucht. Alle Rechte, Vererbungsflags oder Weitergabeflags angegeben, die von dieser Regel werden ignoriert.</param>
+        <summary>Sucht nach allen Zugriffssteuerungsregeln mit demselben Benutzer und <see cref="T:System.Security.AccessControl.AccessControlType" /> (zulassen oder verweigern) wie die angegebene Regel und, wenn es gefunden wurde, entfernt sie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle <xref:System.Security.AccessControl.RegistrySecurity> wird für Regeln mit demselben Benutzer und die gleiche durchsucht <xref:System.Security.AccessControl.AccessControlType> als Wert `rule`. Alle Rechte, Vererbungsflags oder Weitergabeflags gemäß `rule` beim Ausführen dieser Suche werden ignoriert. Wenn keine übereinstimmenden Regeln gefunden werden, wird keine Aktion ausgeführt.  
+  
+ Entfernen, beispielsweise wenn ein Benutzer mehrere Regeln, die verschiedene Rechte mit verschiedenen Vererbung und Weitergabeflags ermöglichen verfügt, Sie können alle diese Regeln durch das Erstellen einer <xref:System.Security.AccessControl.RegistryAccessRule> -Objekt, das den Benutzer angibt und <xref:System.Security.AccessControl.AccessControlType?displayProperty=nameWithType>, mit jeder beliebigen Rechte und Flags und das Übergeben von dieser Regel werden die <xref:System.Security.AccessControl.RegistrySecurity.RemoveAccessRuleAll%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, dass die <xref:System.Security.AccessControl.RegistrySecurity.RemoveAccessRuleAll%2A> -Methode entfernt alle Regeln, die Benutzer zu entsprechen und <xref:System.Security.AccessControl.AccessControlType>, Rechte und Flags ignoriert.  
+  
+ Das Beispiel erstellt eine <xref:System.Security.AccessControl.RegistrySecurity> -Objekt und fügt die Regeln, die zulassen und verweigern verschiedene Rechte für den aktuellen Benutzer, mit anderen Flags für Vererbung und Weitergabe hinzu. Das Beispiel erstellt dann eine neue Regel, die ermöglicht es dem aktuellen Benutzer in Besitz zu nehmen, und übergibt diese Regel auf die <xref:System.Security.AccessControl.RegistrySecurity.RemoveAccessRuleAll%2A> Methode, um die beiden Regeln entfernen, die Zugriff zu ermöglichen.  
+  
+> [!NOTE]
+>  In diesem Beispiel wird das Sicherheitsobjekt, nicht angefügt ein <xref:Microsoft.Win32.RegistryKey> Objekt. Finden Sie unter der <xref:Microsoft.Win32.RegistryKey.GetAccessControl%2A?displayProperty=nameWithType> Methode und die <xref:Microsoft.Win32.RegistryKey.SetAccessControl%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-csharp[System.Security.AccessControl.RegistrySecurity.RemoveAccessRuleAll#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.RemoveAccessRuleAll/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.RegistrySecurity.RemoveAccessRuleAll#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.RemoveAccessRuleAll/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRuleSpecific">
+      <MemberSignature Language="C#" Value="public void RemoveAccessRuleSpecific (System.Security.AccessControl.RegistryAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAccessRuleSpecific(class System.Security.AccessControl.RegistryAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistrySecurity.RemoveAccessRuleSpecific(System.Security.AccessControl.RegistryAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.RegistryAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Das zu entfernende <see cref="T:System.Security.AccessControl.RegistryAccessRule" />-Element.</param>
+        <summary>Sucht nach einer Zugriffssteuerungsregel an, die mit dem angegebenen übereinstimmt Regel und, wenn es gefunden wurde, entfernt sie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Regel entfernt wird, nur dann, wenn sie genau `rule` in alle Details, einschließlich der Flags. Andere Regeln mit demselben Benutzer und <xref:System.Security.AccessControl.AccessControlType> sind nicht betroffen.  
+  
+> [!IMPORTANT]
+>  Eine Regel darstellt, eine oder mehrere zugrunde liegenden Zugriffssteuerungseinträge (ACE), und diese Einträge werden aufgeteilt oder nach Bedarf kombiniert werden, wenn Sie die Zugriffsregeln für die Sicherheit für einen Benutzer ändern. Daher eine Regel ist nicht mehr vorhanden, in der bestimmten Form er hatte, als er hinzugefügt wurde, und klicken Sie in diesem Fall die <xref:System.Security.AccessControl.RegistrySecurity.RemoveAccessRuleSpecific%2A> Methode nicht entfernen können.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, dass die <xref:System.Security.AccessControl.RegistrySecurity.RemoveAccessRuleSpecific%2A> -Methode entfernt eine Regel nur, wenn es genau übereinstimmt.  
+  
+ Das Beispiel erstellt zwei Regeln, die unterschiedliche Rechte zu ermöglichen. Die Regeln müssen kompatible Flags für Vererbung und Weitergabe, damit beim Hinzufügen der zweiten Regel mit dem ersten zusammengeführt. Im Beispiel wird die <xref:System.Security.AccessControl.RegistrySecurity.RemoveAccessRuleSpecific%2A> Methode, dabei werden die erste Regel, aber da die Regeln zusammengeführt werden, ist keine Regel mit übereinstimmt. Das Beispiel ruft dann die <xref:System.Security.AccessControl.RegistrySecurity.RemoveAccessRule%2A> Methode, um das Entfernen der zweiten Regel aus der zusammengeführten Regel, und schließlich Ruft die <xref:System.Security.AccessControl.RegistrySecurity.RemoveAccessRuleSpecific%2A> Methode, um die erste Regel zu entfernen.  
+  
+> [!NOTE]
+>  In diesem Beispiel wird das Sicherheitsobjekt, nicht angefügt ein <xref:Microsoft.Win32.RegistryKey> Objekt. Finden Sie unter der <xref:Microsoft.Win32.RegistryKey.GetAccessControl%2A?displayProperty=nameWithType> Methode und die <xref:Microsoft.Win32.RegistryKey.SetAccessControl%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-csharp[System.Security.AccessControl.RegistrySecurity.RemoveAccessRuleSpecific#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.RemoveAccessRuleSpecific/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.RegistrySecurity.RemoveAccessRuleSpecific#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.RemoveAccessRuleSpecific/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRule">
+      <MemberSignature Language="C#" Value="public bool RemoveAuditRule (System.Security.AccessControl.RegistryAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveAuditRule(class System.Security.AccessControl.RegistryAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistrySecurity.RemoveAuditRule(System.Security.AccessControl.RegistryAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.RegistryAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Ein <see cref="T:System.Security.AccessControl.RegistryAuditRule" /> , den Benutzer suchen und einen Satz von Vererbung und Weitergabe Flags, die einen übereinstimmenden auszuschließen, angibt, falls gefunden, die mit kompatibel sein müssen. Gibt an, dass die Rechte, die aus der kompatiblen Regel entfernt werden sollen, wenn gefunden.</param>
+        <summary>Sucht nach einem Steuerelement Überwachungsregel mit dem gleichen Benutzer als die angegebene Regel und kompatible Vererbung und Weitergabeflags; Wenn eine kompatible Regel gefunden wird, werden die in die angegebene Regel enthaltenen Rechte daraus entfernt.</summary>
+        <returns>
+          <see langword="true" />Wenn eine kompatible Regel gefunden wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle <xref:System.Security.AccessControl.RegistrySecurity> wird eine Überwachungsregel, die denselben Benutzer wie gesucht `rule`. Wenn keine solche Regel gefunden wird, wird keine Aktion ausgeführt, und die Methode gibt `false`. Wenn Abgleichsregeln gefunden werden, werden ihre Kompatibilität und Vererbung-Flags für die Kompatibilität mit den Flags, die im angegebenen überprüft `rule`. Wenn keine kompatible Regel gefunden wird, wird keine Aktion ausgeführt, und die Methode gibt `false`. Wenn eine Regel mit kompatiblen Flags gefunden wird, wird die Rechte in angegebenen `rule` werden aus der kompatiblen Regel entfernt und die Methode gibt `true`. Wenn `rule` gibt die Rechte, die nicht in der kompatiblen Regel enthalten sind, in Bezug auf diese Rechte wird keine Aktion ausgeführt. Wenn alle Rechte aus der kompatiblen Regel entfernt werden, wird die gesamte Regel aus dem aktuellen entfernt <xref:System.Security.AccessControl.RegistrySecurity> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRuleAll">
+      <MemberSignature Language="C#" Value="public void RemoveAuditRuleAll (System.Security.AccessControl.RegistryAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAuditRuleAll(class System.Security.AccessControl.RegistryAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistrySecurity.RemoveAuditRuleAll(System.Security.AccessControl.RegistryAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.RegistryAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Ein <see cref="T:System.Security.AccessControl.RegistryAuditRule" /> , die den zu suchenden Benutzers angibt. Alle Rechte, Vererbungsflags oder Weitergabeflags angegeben, die von dieser Regel werden ignoriert.</param>
+        <summary>Sucht für alle Regeln mit demselben Benutzer wie die angegebene Regel überwachen und, sofern gefunden, entfernt sie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle <xref:System.Security.AccessControl.RegistrySecurity> wird gesucht Überwachungsregeln, die denselben Benutzer wie `rule`. Alle Rechte, Vererbungsflags oder Weitergabeflags gemäß `rule` beim Ausführen dieser Suche werden ignoriert. Wenn keine übereinstimmenden Regeln gefunden werden, wird keine Aktion ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRuleSpecific">
+      <MemberSignature Language="C#" Value="public void RemoveAuditRuleSpecific (System.Security.AccessControl.RegistryAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAuditRuleSpecific(class System.Security.AccessControl.RegistryAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistrySecurity.RemoveAuditRuleSpecific(System.Security.AccessControl.RegistryAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.RegistryAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die zu entfernende <see cref="T:System.Security.AccessControl.RegistryAuditRule" />.</param>
+        <summary>Sucht nach einer Überwachungsregel, die genau mit dem angegebenen übereinstimmt Regel und, wenn es gefunden wurde, entfernt sie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Regel entfernt wird, nur dann, wenn sie genau `rule` in alle Details, einschließlich der Flags. Andere Überwachungsregeln für denselben Benutzer sind nicht betroffen.  
+  
+> [!IMPORTANT]
+>  Eine Regel darstellt, eine oder mehrere zugrunde liegenden Zugriffssteuerungseinträge (ACE), und diese Einträge werden aufgeteilt oder nach Bedarf kombiniert werden, wenn Sie die Überwachungssicherheitsregeln für einen Benutzer ändern. Daher eine Regel ist nicht mehr vorhanden, in der bestimmten Form er hatte, als er hinzugefügt wurde, und klicken Sie in diesem Fall die <xref:System.Security.AccessControl.RegistrySecurity.RemoveAuditRuleSpecific%2A> Methode nicht entfernen können.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetAccessRule">
+      <MemberSignature Language="C#" Value="public void ResetAccessRule (System.Security.AccessControl.RegistryAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetAccessRule(class System.Security.AccessControl.RegistryAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistrySecurity.ResetAccessRule(System.Security.AccessControl.RegistryAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.RegistryAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Das hinzuzufügende <see cref="T:System.Security.AccessControl.RegistryAccessRule" />. Durch diese Regel angegebene Benutzer bestimmt die Regeln zu entfernen, bevor diese Regel hinzugefügt wird.</param>
+        <summary>Entfernt alle Zugriffsregeln mit dem gleichen Benutzer als die angegebene Regel unabhängig von <see cref="T:System.Security.AccessControl.AccessControlType" />, und fügt dann die angegebene Regel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn es keine Access-Regeln sind, deren Benutzer, die angegebene Regel übereinstimmt `rule` hinzugefügt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht wie die <xref:System.Security.AccessControl.RegistrySecurity.ResetAccessRule%2A> Methode ersetzt alle Regeln für den übereinstimmenden Benutzer durch die Regel für die Übereinstimmung angegeben.  
+  
+ Das Beispiel erstellt eine <xref:System.Security.AccessControl.RegistrySecurity> -Objekt und fügt die Regeln, die zulassen und verweigern verschiedene Rechte für den aktuellen Benutzer, mit anderen Flags für Vererbung und Weitergabe hinzu. Das Beispiel erstellt dann eine neue Regel, die den aktuellen Benutzer nur auf den Schlüssel zu lesen, und mithilfe der <xref:System.Security.AccessControl.RegistrySecurity.ResetAccessRule%2A> Methode, die alle Regeln für den Benutzer entfernen und Ersetzen Sie sie mit der neuen Regel.  
+  
+> [!NOTE]
+>  In diesem Beispiel wird das Sicherheitsobjekt, nicht angefügt ein <xref:Microsoft.Win32.RegistryKey> Objekt. Finden Sie unter der <xref:Microsoft.Win32.RegistryKey.GetAccessControl%2A?displayProperty=nameWithType> Methode und die <xref:Microsoft.Win32.RegistryKey.SetAccessControl%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-csharp[System.Security.AccessControl.RegistrySecurity.ResetAccessRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.ResetAccessRule/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.RegistrySecurity.ResetAccessRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.ResetAccessRule/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccessRule">
+      <MemberSignature Language="C#" Value="public void SetAccessRule (System.Security.AccessControl.RegistryAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccessRule(class System.Security.AccessControl.RegistryAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistrySecurity.SetAccessRule(System.Security.AccessControl.RegistryAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.RegistryAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Das hinzuzufügende <see cref="T:System.Security.AccessControl.RegistryAccessRule" />. Der Benutzer und <see cref="T:System.Security.AccessControl.AccessControlType" /> gegen diese Regel bestimmen die Regeln zu entfernen, bevor diese Regel hinzugefügt wird.</param>
+        <summary>Entfernt alle Zugriffssteuerungsregeln mit demselben Benutzer und <see cref="T:System.Security.AccessControl.AccessControlType" /> (zulassen oder verweigern) als die angegebene Regel und fügt dann die angegebene Regel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die angegebene Regel hat <xref:System.Security.AccessControl.AccessControlType.Allow>, die Auswirkungen dieser Methode sind alle entfernen <xref:System.Security.AccessControl.AccessControlType.Allow> Regeln für den angegebenen Benutzer, die sie durch die angegebene Regel ersetzt werden. Wenn die angegebene Regel hat <xref:System.Security.AccessControl.AccessControlType.Deny>, dass alle <xref:System.Security.AccessControl.AccessControlType.Deny> Regeln für den angegebenen Benutzer durch die angegebene Regel ersetzt werden.  
+  
+ Wenn es keine Regeln, deren Benutzer sind und <xref:System.Security.AccessControl.AccessControlType> entsprechen die angegebene Regel `rule` hinzugefügt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, dass die <xref:System.Security.AccessControl.RegistrySecurity.SetAccessRule%2A> -Methode entfernt alle Regeln, die sowohl mit den Benutzer entsprechen und die <xref:System.Security.AccessControl.AccessControlType> von `rule`, Rechte und Flags ignoriert und ersetzt sie mit `rule`.  
+  
+ Das Beispiel erstellt eine <xref:System.Security.AccessControl.RegistrySecurity> -Objekt und fügt die Regeln, die zulassen und verweigern verschiedene Rechte für den aktuellen Benutzer, mit anderen Flags für Vererbung und Weitergabe hinzu. Das Beispiel erstellt dann eine neue Regel, die den aktuellen Benutzer nur auf den Schlüssel zu lesen, und mithilfe der <xref:System.Security.AccessControl.RegistrySecurity.SetAccessRule%2A> Methode, um die beiden Regeln entfernen, die Zugriff zu ermöglichen und um sie mit der neuen Regel zu ersetzen. Die Regel, die Zugriff ablehnt, wird nicht beeinflusst.  
+  
+> [!NOTE]
+>  In diesem Beispiel wird das Sicherheitsobjekt, nicht angefügt ein <xref:Microsoft.Win32.RegistryKey> Objekt. Finden Sie unter der <xref:Microsoft.Win32.RegistryKey.GetAccessControl%2A?displayProperty=nameWithType> Methode und die <xref:Microsoft.Win32.RegistryKey.SetAccessControl%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-csharp[System.Security.AccessControl.RegistrySecurity.SetAccessRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.SetAccessRule/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.RegistrySecurity.SetAccessRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.RegistrySecurity.SetAccessRule/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAuditRule">
+      <MemberSignature Language="C#" Value="public void SetAuditRule (System.Security.AccessControl.RegistryAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAuditRule(class System.Security.AccessControl.RegistryAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RegistrySecurity.SetAuditRule(System.Security.AccessControl.RegistryAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.RegistryAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Das hinzuzufügende <see cref="T:System.Security.AccessControl.RegistryAuditRule" />. Durch diese Regel angegebene Benutzer bestimmt die Regeln zu entfernen, bevor diese Regel hinzugefügt wird.</param>
+        <summary>Entfernt alle mit demselben Benutzer als die angegebene Regel unabhängig von Überwachungsregeln der <see cref="T:System.Security.AccessControl.AuditFlags" /> -Wert und fügt dann die angegebene Regel hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn es keine Überwachungsregeln sind, deren Benutzer, die angegebene Regel übereinstimmt `rule` hinzugefügt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

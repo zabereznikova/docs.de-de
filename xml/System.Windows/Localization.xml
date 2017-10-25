@@ -1,0 +1,247 @@
+<Type Name="Localization" FullName="System.Windows.Localization">
+  <TypeSignature Language="C#" Value="public static class Localization" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Localization extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Localization" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Windows.Localization" /> Klasse definiert angefügte Eigenschaften für die Lokalisierungsattribute und Kommentare.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Markup Autoren möglicherweise bestimmte Anforderungen für Elemente in [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Benutzeroberfläche, z. B. Einschränkungen für Textlänge, Schriftfamilie oder Schriftgrad. Lokalisierungsexperten müssen über sie wissen, um konsistente Lokalisierung bereitzustellen. Von Lokalisierungseigenschaften können angegeben werden, in [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], ermöglicht Autoren, die ihren Anforderungen hinsichtlich der Lokalisierung Lokalisierungsexperten mitzuteilen. Diese Eigenschaften bieten Regeln und Hinweise für die Lokalisierung, die verwendet werden kann, um die Anwendung zu ändern. Es gibt zwei Arten der von Lokalisierungseigenschaften:  
+  
+-   Lokalisierungsattribute. Die Attribute festlegen, welche Ressourcen wie z. B. <xref:System.Windows.Media.FontFamily>, lokalisiert werden sollen.  
+  
+-   Lokalisierungkommentare. Die Kommentare sind Freiform-Text, der der Markupautor enthält.  
+  
+ Weitere Informationen zum Verwenden dieser Lokalisierungseigenschaften finden Sie unter [Lokalisierungsattribute und Kommentare](~/docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, Lokalisierungsattribute und Kommentare für einen Textblock definiert.  
+  
+ [!code-xaml[AttributesSnippets#AttributesSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/AttributesSnippets/CSharp/Comments.xaml#attributessnippet4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AttributesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AttributesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AttributesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Localization.AttributesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Localization.Attributes" />-Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen und Festlegen der <xref:System.Windows.Localization.Attributes%2A> -Eigenschaft für eine Schaltfläche.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommentsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CommentsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CommentsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Localization.CommentsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Localization.Comments" />-Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen und Festlegen der <xref:System.Windows.Localization.Comments%2A> -Eigenschaft für einen Textblock.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttributes">
+      <MemberSignature Language="C#" Value="public static string GetAttributes (object element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetAttributes(object element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Localization.GetAttributes(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Object))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein <see cref="T:System.Object" /> , die das Element, dessen angefügten Eigenschaft, die Sie abrufen möchten darstellt.</param>
+        <summary>Ruft den Wert der <see cref="F:System.Windows.Localization.AttributesProperty" /> angefügten Eigenschaft für ein angegebenes Element.</summary>
+        <returns>Ein <see cref="T:System.String" /> Wert, der das Lokalisierungsattribut darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Lokalisierungsattribute angeben, welche Ressourcen sind lokalisiert werden soll.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Lokalisierungsattribute, die für eine Schaltfläche definiert abgerufen.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetComments">
+      <MemberSignature Language="C#" Value="public static string GetComments (object element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetComments(object element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Localization.GetComments(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Object))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein <see cref="T:System.Object" /> , die das Element, dessen angefügten Eigenschaft, die Sie abrufen möchten darstellt.</param>
+        <summary>Ruft den Wert der <see cref="F:System.Windows.Localization.CommentsProperty" /> angefügten Eigenschaft für ein angegebenes Element.</summary>
+        <returns>Ein <see cref="T:System.String" /> Wert, der die Lokalisierungskommentar darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Lokalisierungskommentaren sind Freiform-Text, der Entwickler der Anwendung enthält.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die lokalisierungkommentare für einen Textblock definierten abgerufen.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAttributes">
+      <MemberSignature Language="C#" Value="public static void SetAttributes (object element, string attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAttributes(object element, string attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Localization.SetAttributes(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Object" />
+        <Parameter Name="attributes" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein <see cref="T:System.Object" /> , die das Element, dessen angefügte Eigenschaft festlegen möchten darstellt.</param>
+        <param name="attributes">Ein <see cref="T:System.String" /> , die die Lokalisierungsattribute angibt.</param>
+        <summary>Legt die <see cref="F:System.Windows.Localization.AttributesProperty" /> -Eigenschaft für das angegebene Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Lokalisierungsattribute angeben, welche Ressourcen sind lokalisiert werden soll. Weitere Informationen zum definieren, finden Sie unter [Lokalisierungsattribute und Kommentare](~/docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Lokalisierungsattribute für eine Schaltfläche festzulegen.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetComments">
+      <MemberSignature Language="C#" Value="public static void SetComments (object element, string comments);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetComments(object element, string comments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Localization.SetComments(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Object" />
+        <Parameter Name="comments" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein <see cref="T:System.Object" /> , die das Element, dessen angefügte Eigenschaft festlegen möchten darstellt.</param>
+        <param name="comments">Ein <see cref="T:System.String" /> , die die lokalisierungkommentare angibt.</param>
+        <summary>Legt die <see cref="F:System.Windows.Localization.CommentsProperty" /> -Eigenschaft für das angegebene Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Lokalisierungskommentaren sind Freiform-Text, der Entwickler der Anwendung enthält. Weitere Informationen zum Definieren von Lokalisierungskommentaren finden Sie unter [Lokalisierungsattribute und Kommentare](~/docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie die lokalisierungkommentare für einen Textblock festgelegt wird.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

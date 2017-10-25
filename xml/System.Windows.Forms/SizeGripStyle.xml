@@ -1,0 +1,73 @@
+<Type Name="SizeGripStyle" FullName="System.Windows.Forms.SizeGripStyle">
+  <TypeSignature Language="C#" Value="public enum SizeGripStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SizeGripStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.SizeGripStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt das Format des dem Größenziehpunkt auf eine <see cref="T:System.Windows.Forms.Form" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Member dieser Enumeration zum Festlegen des Werts, der die <xref:System.Windows.Forms.Form.SizeGripStyle%2A> Eigenschaft von der <xref:System.Windows.Forms.Form>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.SizeGripStyle Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.SizeGripStyle.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SizeGripStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dem Größenziehpunkt wird automatisch angezeigt, wenn erforderlich.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Hide">
+      <MemberSignature Language="C#" Value="Hide" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.SizeGripStyle Hide = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.SizeGripStyle.Hide" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SizeGripStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dem Größenziehpunkt ist ausgeblendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="Show" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.SizeGripStyle Show = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.SizeGripStyle.Show" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SizeGripStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dem Größenziehpunkt ist immer auf dem Formular angezeigt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

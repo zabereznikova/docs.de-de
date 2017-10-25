@@ -1,0 +1,647 @@
+<Type Name="UriTemplate" FullName="System.UriTemplate">
+  <TypeSignature Language="C#" Value="public class UriTemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UriTemplate extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.UriTemplate" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Klasse, die eine URI-Vorlage (Uniform Resource Identifier) darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit einer URI-Vorlage können Sie einen Satz strukturell ähnlicher URIs definieren. Vorlagen bestehen aus zwei Teilen, einem Pfad und einer Abfrage. Ein Pfad besteht aus einer Reihe von Segmenten, die durch einen Schrägstrich (/) voneinander getrennt werden. Jedes Segment kann über einen Literalwert, einen Variablenwert (wird in geschweiften Klammern [{ }] angegeben und muss dem Inhalt genau eines Segments entsprechen) oder einen Platzhalter verfügen (wird als Sternchen [*] angegeben, das als "restlicher Pfad" interpretiert wird), der am Ende des Pfads stehen muss. Der Abfrageausdruck kann vollständig weggelassen werden. Sofern der Abfrageausdruck vorhanden ist, wird eine ungeordnete Reihe von Name-Wert-Paaren angegeben. Bei den Elementen des Abfrageausdrucks kann es sich entweder um literale Paare (? x=2) oder variable Paare (?x={val}) handeln. Alleinstehende Werte sind nicht zulässig. Die folgenden Beispiele veranschaulichen gültige Vorlagenzeichenfolgen:  
+  
+-   "Wetter/BW/Mannheim"  
+  
+-   "Wetter/{Bundesland}/{Stadt}"  
+  
+-   "Wetter/*"  
+  
+-   "Wetter/{Bundesland}/{Stadt}?forecast=heute  
+  
+-   "Wetter/{Bundesland}/{Stadt}?forecast={Tag}  
+  
+ Die vorangehenden URI-Vorlagen können zum Organisieren von Wetterberichten verwendet werden. In geschweifte Klammern eingeschlossene Segmente sind Variablen, alle anderen sind Literale. Sie können eine <xref:System.UriTemplate>-Instanz in einen <xref:System.Uri> konvertieren, indem Sie Variablen durch tatsächliche Werte ersetzen. Wenn Sie beispielsweise in die Vorlage "Wetter/{Bundesland}/{Stadt}" Werte für die Variablen "{Bundesland}" und "{Stadt}" eingeben, erhalten Sie "Wetter/BW/Mannheim". wenn ein möglicher URI gegeben ist, können Sie durch Aufrufen von <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> testen, ob er mit einer bestimmten URI-Vorlage übereinstimmt. Außerdem können Sie mithilfe von <xref:System.UriTemplate>-Instanzen einen <xref:System.Uri> aus einem Satz von Variablenwerten erstellen, indem Sie <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> oder <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> aufrufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.UriTemplate>-Instanz erstellt und an einen möglichen URI gebunden und damit abgeglichen wird.  
+  
+ [!code-csharp[UriTemplate#0](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplate/cs/snippets.cs#0)]
+ [!code-vb[UriTemplate#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplate/vb/snippets.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UriTemplate (string template);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string template) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplate.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="template" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="template">Die Vorlage.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.UriTemplate" />-Klasse mit der angegebenen Vorlagenzeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird der Aufruf des Konstruktors veranschaulicht.  
+  
+ [!code-csharp[UriTemplate#1](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplate/cs/snippets.cs#1)]
+ [!code-vb[UriTemplate#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplate/vb/snippets.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UriTemplate (string template, bool ignoreTrailingSlash);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string template, bool ignoreTrailingSlash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplate.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="template" Type="System.String" />
+        <Parameter Name="ignoreTrailingSlash" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="template">Die Vorlagenzeichenfolge.</param>
+        <param name="ignoreTrailingSlash">Ein Wert, der angibt, ob nachstehende Schrägstriche "/" ignoriert werden sollen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.UriTemplate" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `ignoreTrailingSlash` auf `true` festgelegt wurde, werden nachstehende Schrägstriche am Ende der Vorlage beim Vergleich mit einem möglichen URI ignoriert. Eine Vorlage wie z. B. "http://www.microsoft.com/customer/" würde z. B. den folgenden möglichen URIs entspricht:  
+  
+-   "http://www.microsoft.com/customer/"  
+  
+-   "http://www.microsoft.com/customer"  
+  
+-   "http://www.microsoft.com/customer/?wsdl"  
+  
+-   "http://www.microsoft.com/customer?wsdl"  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UriTemplate (string template, System.Collections.Generic.IDictionary&lt;string,string&gt; additionalDefaults);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string template, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; additionalDefaults) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplate.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="template" Type="System.String" />
+        <Parameter Name="additionalDefaults" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="template">Die Vorlagenzeichenfolge.</param>
+        <param name="additionalDefaults">Ein Wörterbuch, das eine Liste der Standardwerte für die Vorlagenparameter enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.UriTemplate" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UriTemplate (string template, bool ignoreTrailingSlash, System.Collections.Generic.IDictionary&lt;string,string&gt; additionalDefaults);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string template, bool ignoreTrailingSlash, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; additionalDefaults) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplate.#ctor(System.String,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="template" Type="System.String" />
+        <Parameter Name="ignoreTrailingSlash" Type="System.Boolean" />
+        <Parameter Name="additionalDefaults" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="template">Die Vorlagenzeichenfolge.</param>
+        <param name="ignoreTrailingSlash">
+          <see langword="true" />Wenn die nachgestellten Schrägstriche "/"-Zeichen werden ignoriert. andernfalls <see langword="false" />.</param>
+        <param name="additionalDefaults">Ein Wörterbuch, das eine Liste der Standardwerte für die Vorlagenparameter enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.UriTemplate" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindByName">
+      <MemberSignature Language="C#" Value="public Uri BindByName (Uri baseAddress, System.Collections.Generic.IDictionary&lt;string,string&gt; parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Uri BindByName(class System.Uri baseAddress, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplate.BindByName(System.Uri,System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseAddress" Type="System.Uri" />
+        <Parameter Name="parameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="baseAddress">Die Basisadresse.</param>
+        <param name="parameters">Ein Wörterbuch, das eine Parameterauflistung von Name-Wert-Paaren enthält.</param>
+        <summary>Erstellt einen neuen URI aus der Vorlage und der Parameterauflistung.</summary>
+        <returns>Ein URI.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Collections.Generic.IDictionary%7BSystem.String%2CSystem.String%7D>-Parameter enthält eine Parameterauflistung von Name-Wert-Paaren. Die Parameter werden durch einen Vergleich ohne Berücksichtigung der Groß- und Kleinschreibung mit den Variablen in der Vorlage abgeglichen.  
+  
+> [!NOTE]
+>  Die an diese Methode übergebene Name-Wert-Auflistung muss einen Schlüssel für jede Vorlagenvariable enthalten. Zusätzliche Name-Wert-Paare, die nicht mit Vorlagenvariablen übereinstimmen, werden an die Abfragezeichenfolge des endgültigen URI angefügt.  
+  
+> [!IMPORTANT]
+>  Es ist möglich, Text innerhalb der Name-Wert-Paare zu übergeben, durch den verhindert wird, dass der generierte URI mit der Vorlage übereinstimmt, mit der er generiert wird. Beispiele hierfür sind "/", "..", "*", "{"' und "}".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindByName">
+      <MemberSignature Language="C#" Value="public Uri BindByName (Uri baseAddress, System.Collections.Specialized.NameValueCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Uri BindByName(class System.Uri baseAddress, class System.Collections.Specialized.NameValueCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplate.BindByName(System.Uri,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseAddress" Type="System.Uri" />
+        <Parameter Name="parameters" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="baseAddress">Die Basisadresse.</param>
+        <param name="parameters">Die Parameterwerte.</param>
+        <summary>Erstellt einen neuen URI aus der Vorlage und der Parameterauflistung.</summary>
+        <returns>Eine neue -Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Collections.Specialized.NameValueCollection>-Parameter enthält eine Parameterauflistung von Name/Wert-Paaren. Die Parameter werden durch einen Vergleich ohne Berücksichtigung der Groß- und Kleinschreibung mit den Variablen in der Vorlage abgeglichen. In dieser Auflistung übergebene Werte werden mit Escapezeichen versehen.  
+  
+> [!NOTE]
+>  Die an <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> übergebene Name-Wert-Auflistung muss einen Schlüssel für jede Vorlagenvariable enthalten. Zusätzliche Name-Wert-Paare, die nicht mit Vorlagenvariablen übereinstimmen, werden an die Abfragezeichenfolge des endgültigen URI angefügt.  
+  
+> [!NOTE]
+>  Es ist möglich, Text innerhalb der Name-Wert-Paare zu übergeben, durch den verhindert wird, dass der generierte URI mit der Vorlage übereinstimmt, mit der er generiert wird. Beispiele hierfür sind "/", "..", "*", "{"' und "}".  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Aufruf der <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29>-Methode veranschaulicht.  
+  
+ [!code-csharp[UriTemplate#4](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplate/cs/snippets.cs#4)]
+ [!code-vb[UriTemplate#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplate/vb/snippets.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindByName">
+      <MemberSignature Language="C#" Value="public Uri BindByName (Uri baseAddress, System.Collections.Generic.IDictionary&lt;string,string&gt; parameters, bool omitDefaults);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Uri BindByName(class System.Uri baseAddress, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; parameters, bool omitDefaults) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplate.BindByName(System.Uri,System.Collections.Generic.IDictionary{System.String,System.String},System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseAddress" Type="System.Uri" />
+        <Parameter Name="parameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="omitDefaults" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="baseAddress">Ein URI, der die Basisadresse enthält.</param>
+        <param name="parameters">Ein Wörterbuch, das eine Parameterauflistung von Name-Wert-Paaren enthält.</param>
+        <param name="omitDefaults">
+          <see langword="true" />ist, dass die Standardwerte ignoriert werden. andernfalls <see langword="false" />.</param>
+        <summary>Erstellt einen neuen URI aus der Vorlage und der Parameterauflistung.</summary>
+        <returns>Ein URI.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindByName">
+      <MemberSignature Language="C#" Value="public Uri BindByName (Uri baseAddress, System.Collections.Specialized.NameValueCollection parameters, bool omitDefaults);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Uri BindByName(class System.Uri baseAddress, class System.Collections.Specialized.NameValueCollection parameters, bool omitDefaults) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplate.BindByName(System.Uri,System.Collections.Specialized.NameValueCollection,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseAddress" Type="System.Uri" />
+        <Parameter Name="parameters" Type="System.Collections.Specialized.NameValueCollection" />
+        <Parameter Name="omitDefaults" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="baseAddress">Die Basisadresse.</param>
+        <param name="parameters">Eine Paramterauflistung mit Name-Wert-Paaren.</param>
+        <param name="omitDefaults">
+          <see langword="true" />Wenn die Standardwerte ignoriert werden. andernfalls <see langword="false" />.</param>
+        <summary>Erstellt einen neuen URI aus der Vorlage und der Parameterauflistung.</summary>
+        <returns>Ein URI.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindByPosition">
+      <MemberSignature Language="C#" Value="public Uri BindByPosition (Uri baseAddress, params string[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Uri BindByPosition(class System.Uri baseAddress, string[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplate.BindByPosition(System.Uri,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseAddress" Type="System.Uri" />
+        <Parameter Name="values" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="baseAddress">Ein <see cref="T:System.Uri" />, der die Basisadresse enthält.</param>
+        <param name="values">Die Parameterwerte.</param>
+        <summary>Erstellt einen neuen URI aus der Vorlage und einem Array von Parameterwerten.</summary>
+        <returns>Eine neue <see cref="T:System.Uri" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameterwerte werden von links nach rechts gebunden. Der erste Parameterwert ersetzt die erste Variable in der Vorlage, der zweite Parameterwert ersetzt die zweite Variable usw. An diese Methode übergebene Variablen werden mit Escapezeichen versehen.  
+  
+> [!NOTE]
+>  Die Anzahl der im Werteparameter übergebenen Parameter muss mit der Anzahl der Variablen in der Vorlage übereinstimmen. Andernfalls wird eine <xref:System.FormatException> ausgelöst.  
+  
+> [!NOTE]
+>  Es ist möglich, Text innerhalb des Arrays von Parameterwerten zu übergeben, durch den verhindert wird, dass der generierte URI mit der Vorlage übereinstimmt, mit der er generiert wird. Beispiele hierfür sind "/", ".", "..", "*", "{"' und "}". Im folgenden Code wird dies veranschaulicht.  
+  
+ `UriTemplate template = new UriTemplate("far/{bat}/baz");`  
+  
+ `Uri uri = new Uri("http://localhost/Base");`  
+  
+ `Uri result = template.BindByPosition(uri, ".");   // returns Base/form/baz`  
+  
+ `Uri result = template.BindByPosition(uri, "..");  // returns Base/baz`  
+  
+ `Uri result = template.BindByPosition(uri, "x/y");  // returns Base/form/x/y/baz`  
+  
+ `Uri result = template.BindByPosition(uri, "{x}");  // returns Base/form/{x}/baz`  
+  
+ `Uri result = template.BindByPosition(uri, "*");  // returns Base/form/*/baz`  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> aufgerufen wird.  
+  
+ [!code-csharp[UriTemplate#5](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplate/cs/snippets.cs#5)]
+ [!code-vb[UriTemplate#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplate/vb/snippets.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Defaults">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; Defaults { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; Defaults" />
+      <MemberSignature Language="DocId" Value="P:System.UriTemplate.Defaults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Name/Wert-Paaren für sämtliche Standardparameterwerte ab.</summary>
+        <value>Ein generisches Wörterbuch.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreTrailingSlash">
+      <MemberSignature Language="C#" Value="public bool IgnoreTrailingSlash { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreTrailingSlash" />
+      <MemberSignature Language="DocId" Value="P:System.UriTemplate.IgnoreTrailingSlash" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob nachstehende Schrägstriche "/" in der Vorlage sollte beim Vergleich mit möglichen URIs ignoriert.</summary>
+        <value>
+          <see langword="true" />Wenn nachgestellte Schrägstriche "/" sollen, andernfalls ignoriert werden <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEquivalentTo">
+      <MemberSignature Language="C#" Value="public bool IsEquivalentTo (UriTemplate other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsEquivalentTo(class System.UriTemplate other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplate.IsEquivalentTo(System.UriTemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.UriTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="other">Der zu vergleichende <see cref="T:System.UriTemplate" />.</param>
+        <summary>Gibt an, ob eine <see cref="T:System.UriTemplate" /> strukturell äquivalent zu einer anderen ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.UriTemplate" /> strukturell äquivalent zu einer anderen andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei <xref:System.UriTemplate>-Instanzen sind äquivalent, wenn ihre Literalzeichenfolgen identisch sind und die Variablen in den gleichen Segmenten angezeigt werden. Beispielsweise sind "Wetter/{Bundesland}/{Stadt}" und "Wetter/{Land}/{Ort}" äquivalent.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> aufgerufen wird.  
+  
+ [!code-csharp[UriTemplate#6](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplate/cs/snippets.cs#6)]
+ [!code-vb[UriTemplate#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplate/vb/snippets.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public UriTemplateMatch Match (Uri baseAddress, Uri candidate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.UriTemplateMatch Match(class System.Uri baseAddress, class System.Uri candidate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplate.Match(System.Uri,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UriTemplateMatch</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseAddress" Type="System.Uri" />
+        <Parameter Name="candidate" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="baseAddress">Die Basisadresse.</param>
+        <param name="candidate">Der <see cref="T:System.Uri" />, der mit der Vorlage abgeglichen werden soll.</param>
+        <summary>Versucht, einen <see cref="T:System.URI" /> mit einer <see cref="T:System.UriTemplate" /> abzugleichen.</summary>
+        <returns>Eine Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Abgleich erfolgreich ist, wird <xref:System.UriTemplateMatch> mit den URI-Segmenten, Variablenwerten, Abfragezeichenfolgenwerten und Platzhaltersegmenten aus dem möglichen URI gefüllt. Wenn der Abgleich nicht erfolgreich ist, wird `null` zurückgegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Aufruf der <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29>-Methode veranschaulicht.  
+  
+ [!code-csharp[UriTemplate#7](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplate/cs/snippets.cs#7)]
+ [!code-vb[UriTemplate#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplate/vb/snippets.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PathSegmentVariableNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; PathSegmentVariableNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; PathSegmentVariableNames" />
+      <MemberSignature Language="DocId" Value="P:System.UriTemplate.PathSegmentVariableNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Variablennamen ab, die innerhalb der Pfadsegmente in der Vorlage verwendet werden.</summary>
+        <value>Eine Auflistung der Variablennamen, die innerhalb der Pfadsegmente in der Vorlage verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung schließt die Namen von Variablen aus, die im Abfrageteil der Vorlage angezeigt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die <xref:System.UriTemplate.PathSegmentVariableNames%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[UriTemplate#2](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplate/cs/snippets.cs#2)]
+ [!code-vb[UriTemplate#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplate/vb/snippets.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryValueVariableNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; QueryValueVariableNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; QueryValueVariableNames" />
+      <MemberSignature Language="DocId" Value="P:System.UriTemplate.QueryValueVariableNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Variablennamen ab, die innerhalb der Abfragezeichenfolge in der Vorlage verwendet werden.</summary>
+        <value>Eine Auflistung der Variablennamen, die im Abfrageteil der Vorlagenzeichenfolge angezeigt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Auflistung schließt Variablennamen aus, die im Pfadteil der Vorlagenzeichenfolge angezeigt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die <xref:System.UriTemplate.QueryValueVariableNames%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[UriTemplate#3](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplate/cs/snippets.cs#3)]
+ [!code-vb[UriTemplate#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplate/vb/snippets.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplate.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung der <see cref="T:System.UriTemplate" />-Instanz zurück.</summary>
+        <returns>Die Darstellung der <see cref="T:System.UriTemplate" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird der Aufruf der <xref:System.UriTemplate.ToString>-Methode veranschaulicht.  
+  
+ [!code-csharp[UriTemplate#8](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplate/cs/snippets.cs#8)]
+ [!code-vb[UriTemplate#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplate/vb/snippets.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

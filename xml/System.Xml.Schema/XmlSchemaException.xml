@@ -1,0 +1,371 @@
+<Type Name="XmlSchemaException" FullName="System.Xml.Schema.XmlSchemaException">
+  <TypeSignature Language="C#" Value="public class XmlSchemaException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit XmlSchemaException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt ausführliche Informationen über die Schemaausnahme.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Xml.Schema.XmlSchemaException> Klasse enthält möglicherweise vertrauliche Informationen, die in nicht vertrauenswürdigen Szenarien nicht verfügbar gemacht werden soll. Z. B. die <xref:System.Xml.Schema.XmlSchemaException.SourceUri%2A> Eigenschaft gibt den URI-Pfad der Schemadatei, die die Ausnahme verursacht hat. Die <xref:System.Xml.Schema.XmlSchemaException.SourceUri%2A> Eigenschaft sollte in nicht vertrauenswürdigen Szenarien nicht verfügbar gemacht werden. Ausnahmen sollten ordnungsgemäß behandelt werden, sodass diese vertraulichen Informationen in nicht vertrauenswürdigen Szenarien nicht verfügbar gemacht wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der `XmlSchemaException` Klasse.  
+  
+ [!code-cpp[Classic WebData XmlSchemaException Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlSchemaException Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchemaException Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlSchemaException Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlSchemaException Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlSchemaException Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Schema.XmlSchemaException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein <see langword="string" /> Beschreibung des Fehlerzustands.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Schema.XmlSchemaException" /> -Klasse mit der angegebenen Ausnahmemeldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlSchemaException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">SerializationInfo-Objekt.</param>
+        <param name="context">StreamingContext.</param>
+        <summary>Erstellt ein neues <see langword="XmlSchemaException" /> -Objekt mit den angegebenen <see langword="SerializationInfo" /> und <see langword="StreamingContext" /> Informationen, die die Eigenschaften der enthält die <see langword="XmlSchemaException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein <see langword="string" /> Beschreibung des Fehlerzustands.</param>
+        <param name="innerException">Die ursprüngliche t: System.Exception-Objekt, das diese Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Schema.XmlSchemaException" /> -Klasse mit der Ausnahmemeldung und die ursprünglichen <see cref="T:System.Exception" /> -Objekt, das diese Ausnahme verursacht hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaException (string message, Exception innerException, int lineNumber, int linePosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException, int32 lineNumber, int32 linePosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaException.#ctor(System.String,System.Exception,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="linePosition" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein <see langword="string" /> Beschreibung des Fehlerzustands.</param>
+        <param name="innerException">Die ursprüngliche t: System.Exception-Objekt, das diese Ausnahme verursacht hat.</param>
+        <param name="lineNumber">Die Zeilennummer der XML, die diese Ausnahme verursacht hat.</param>
+        <param name="linePosition">Die Zeilenposition der XML, die diese Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Schema.XmlSchemaException" /> Klasse mit der angegebenen Ausnahmemeldung und die ursprüngliche <see cref="T:System.Exception" /> Objekt, Zeilennummer und die Zeilenposition der XML, die dazu führen, dass diese Ausnahme angegeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see langword="SerializationInfo" />.</param>
+        <param name="context">Die <see langword="StreamingContext" /> Informationen.</param>
+        <summary>Überträgt alle den <see langword="XmlSchemaException" /> Eigenschaften in der <see langword="SerializationInfo" /> -Klasse für den angegebenen <see langword="StreamingContext" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaException.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Nummer der Zeile, der angibt, in dem der Fehler aufgetreten ist.</summary>
+        <value>Die Nummer der Zeile, der angibt, in dem der Fehler aufgetreten ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinePosition">
+      <MemberSignature Language="C#" Value="public int LinePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaException.LinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position der Zeile, der angibt, in dem der Fehler aufgetreten ist.</summary>
+        <value>Die Position der Zeile, der angibt, in dem der Fehler aufgetreten ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibung des Fehlerzustands für diese Ausnahme ab.</summary>
+        <value>Die Beschreibung des Fehlerzustands diese Ausnahme ausgelöst.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceSchemaObject">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObject SourceSchemaObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObject SourceSchemaObject" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaException.SourceSchemaObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see langword="XmlSchemaObject" /> , erzeugt der <see langword="XmlSchemaException" />.</summary>
+        <value>Eine gültige Objektinstanz stellt einen strukturelle Überprüfungsfehler in der XML-(Schemaobjektmodell) dar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies kann abgefragt werden, für die `LineNumber`, `LinePosition`, und `SourceUri` der Schemadatei von XML-Schema Definition Language (XSD). Ein Rückgabewert von `nil` wird eine syntaktische Überprüfungsfehler im SOM  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceUri">
+      <MemberSignature Language="C#" Value="public string SourceUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceUri" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaException.SourceUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Uniform Resource Identifier (URI)-Speicherort des Schemas, das die Ausnahme verursacht hat.</summary>
+        <value>Der URI-Speicherort des Schemas, das die Ausnahme verursacht hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Xml.Schema.XmlSchemaException.SourceUri%2A> Eigenschaft gibt den URI-Pfad der Schemadatei, die die Ausnahme verursacht hat. Die <xref:System.Xml.Schema.XmlSchemaException.SourceUri%2A> Eigenschaft sollte in nicht vertrauenswürdigen Szenarien nicht verfügbar gemacht werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

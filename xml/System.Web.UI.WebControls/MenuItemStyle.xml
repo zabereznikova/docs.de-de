@@ -1,0 +1,394 @@
+<Type Name="MenuItemStyle" FullName="System.Web.UI.WebControls.MenuItemStyle">
+  <TypeSignature Language="C#" Value="public sealed class MenuItemStyle : System.Web.UI.WebControls.Style" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MenuItemStyle extends System.Web.UI.WebControls.Style" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.MenuItemStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Style</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Stil eines Menüelements in einem <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItemStyle> Klasse darstellen, den Stil eines Menüelements in der <xref:System.Web.UI.WebControls.Menu> Steuerelement. Ein Menüelement wird in einem statischen Menü oder in einem dynamischen Menü angezeigt. Ein statisches Menü wird immer angezeigt, einem <xref:System.Web.UI.WebControls.Menu> zu steuern, während ein dynamisches Menü nur angezeigt wird, wenn der Benutzer den Mauszeiger über einen übergeordneten Menüelement positioniert, das ein dynamisches Untermenü enthält. Sie können verschiedene Formateigenschaften (z. B. Schriftart und Farbe) für die einzelnen Elementtypen anderes Menü angeben. Die folgende Tabelle enthält die im Kontextmenü verfügbaren Element Stile.  
+  
+|Menü-Element-Style-Eigenschaft|Beschreibung|  
+|------------------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.Menu.DynamicHoverStyle%2A>|Die Stileigenschaften für ein dynamisches Menüelement, wenn der Mauszeiger darauf positioniert ist.|  
+|<xref:System.Web.UI.WebControls.Menu.DynamicMenuItemStyle%2A>|Die Stileigenschaften für ein einzelnes dynamischen Menüelement.|  
+|<xref:System.Web.UI.WebControls.Menu.DynamicMenuStyle%2A>|Die Stileigenschaften für ein dynamisches Menü.|  
+|<xref:System.Web.UI.WebControls.Menu.DynamicSelectedStyle%2A>|Die Stileigenschaften für den aktuell ausgewählten dynamischen Menüelements.|  
+|<xref:System.Web.UI.WebControls.Menu.StaticHoverStyle%2A>|Die Stileigenschaften für ein statisches Menüelement, wenn der Mauszeiger darauf positioniert ist.|  
+|<xref:System.Web.UI.WebControls.Menu.StaticMenuItemStyle%2A>|Die Stileigenschaften für einen einzelnen statischen Menüelements.|  
+|<xref:System.Web.UI.WebControls.Menu.StaticMenuStyle%2A>|Die Stileigenschaften für ein statisches Menü.|  
+|<xref:System.Web.UI.WebControls.Menu.StaticSelectedStyle%2A>|Die Stileigenschaften für das aktuell ausgewählte statische Menüelement.|  
+  
+ Wenn mehrere Stileigenschaften für ein statisches Menüelement festgelegt sind, werden die Formateigenschaften in der folgenden Reihenfolge angewendet:  
+  
+1.  <xref:System.Web.UI.WebControls.Menu.StaticMenuStyle%2A>.  
+  
+2.  <xref:System.Web.UI.WebControls.Menu.StaticMenuItemStyle%2A>. Wenn die <xref:System.Web.UI.WebControls.Menu.LevelMenuItemStyles%2A> Auflistung oder <xref:System.Web.UI.WebControls.Menu.LevelSubMenuStyles%2A> Auflistung definiert ist, es ist zu diesem Zeitpunkt angewendet, überschreiben die anderen Formateigenschaften des Elements.  
+  
+3.  <xref:System.Web.UI.WebControls.Menu.StaticSelectedStyle%2A>. Wenn die <xref:System.Web.UI.WebControls.Menu.LevelSelectedStyles%2A> Auflistung definiert ist, es ist zu diesem Zeitpunkt angewendet, überschreiben die anderen Formateigenschaften des Elements.  
+  
+4.  <xref:System.Web.UI.WebControls.Menu.StaticHoverStyle%2A>.  
+  
+ Die Stileigenschaften für ein dynamisches Menüelement werden ebenso in der folgenden Reihenfolge angewendet:  
+  
+1.  <xref:System.Web.UI.WebControls.Menu.DynamicMenuStyle%2A>.  
+  
+2.  <xref:System.Web.UI.WebControls.Menu.DynamicMenuItemStyle%2A>. Wenn die <xref:System.Web.UI.WebControls.Menu.LevelMenuItemStyles%2A> Auflistung oder <xref:System.Web.UI.WebControls.Menu.LevelSubMenuStyles%2A> Auflistung definiert ist, es ist zu diesem Zeitpunkt angewendet, überschreiben die anderen Formateigenschaften des Elements.  
+  
+3.  <xref:System.Web.UI.WebControls.Menu.DynamicSelectedStyle%2A>. Wenn die <xref:System.Web.UI.WebControls.Menu.LevelSelectedStyles%2A> Auflistung definiert ist, es ist zu diesem Zeitpunkt angewendet, überschreiben die anderen Formateigenschaften des Elements.  
+  
+4.  <xref:System.Web.UI.WebControls.Menu.DynamicHoverStyle%2A>.  
+  
+ Die <xref:System.Web.UI.WebControls.MenuItemStyle> Klasse erbt die meisten ihrer Member aus der <xref:System.Web.UI.WebControls.Style> Klasse. Es erweitert die <xref:System.Web.UI.WebControls.Style> Klasse durch Bereitstellen von Eigenschaften, die den Umfang der Platz um den Text des Menüelements sowie den Abstand zwischen angrenzenden Menüelemente steuern. Verwenden der <xref:System.Web.UI.WebControls.MenuItemStyle.HorizontalPadding%2A> Eigenschaft, um die Menge des Speicherplatzes links und rechts vom Text des Menüelements zu steuern. Auf ähnliche Weise die <xref:System.Web.UI.WebControls.MenuItemStyle.VerticalPadding%2A> Eigenschaft steuert die Menge des Speicherplatzes, die oben und unten Text des Menüelements. Sie können steuern, der den Abstand zwischen dem Menüelement, die <xref:System.Web.UI.WebControls.MenuItemStyle> -Objekt angewendet wird, und den benachbarten Menüelementen durch Festlegen der <xref:System.Web.UI.WebControls.MenuItemStyle.ItemSpacing%2A> Eigenschaft.  
+  
+ Weitere Informationen zu den geerbten formateinstellungen, finden Sie unter <xref:System.Web.UI.WebControls.Style>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Darstellung der Menüelemente im Steuerelement ein <xref:System.Web.UI.WebControls.Menu> durch Festlegen die Stileigenschaften des Steuerelements die <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt, das von der <xref:System.Web.UI.WebControls.Menu.DynamicMenuItemStyle%2A>, <xref:System.Web.UI.WebControls.Menu.DynamicHoverStyle%2A>, <xref:System.Web.UI.WebControls.Menu.StaticMenuItemStyle%2A>, und <xref:System.Web.UI.WebControls.Menu.StaticHoverStyle%2A>Eigenschaften.  
+  
+ [!code-aspx-csharp[MenuItemStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemStyle/CS/menuitemstylecs.aspx#1)]
+ [!code-aspx-vb[MenuItemStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemStyle/VB/menuitemstylevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItemStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.MenuItemStyle" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.MenuItemStyle> Klasse.  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird normalerweise verwendet, beim Erweitern der <xref:System.Web.UI.WebControls.Menu> Klasse initialisieren Sie die Formateigenschaften des Menüelements, z. B. <xref:System.Web.UI.WebControls.Menu.DynamicMenuItemStyle%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItemStyle (System.Web.UI.StateBag bag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.StateBag bag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyle.#ctor(System.Web.UI.StateBag)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bag" Type="System.Web.UI.StateBag" />
+      </Parameters>
+      <Docs>
+        <param name="bag">Ein <see cref="T:System.Web.UI.StateBag" /> , darstellt Zustand Behälter in welchem Menü Formatinformationen Element gespeichert ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> -Klasse unter Verwendung der angegebenen Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.MenuItemStyle> -Klasse unter Verwendung der <xref:System.Web.UI.StateBag> Objekt durch den Behälter-Parameter angegeben.  
+  
+> [!NOTE]
+>  Dieses Element wird hauptsächlich von Steuerelemententwicklern verwendet beim Ableiten eines benutzerdefinierten Steuerelements aus der <xref:System.Web.UI.WebControls.Menu> Klasse. Es wird verwendet, um die Formateigenschaften des Menüelements, z. B. initialisieren <xref:System.Web.UI.WebControls.Menu.DynamicMenuItemStyle%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyle.CopyFrom(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Das <see cref="T:System.Web.UI.WebControls.Style" />, das kopiert werden soll.</param>
+        <summary>Kopiert die Stileigenschaften des angegebenen <see cref="T:System.Web.UI.WebControls.Style" /> Objekt in der aktuellen Instanz der dem <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItemStyle.CopyFrom%2A> Methode, um die Stileigenschaften des angegebenen doppelte <xref:System.Web.UI.WebControls.Style> -Objekt in der <xref:System.Web.UI.WebControls.MenuItemStyle> -Objekt, das diese Methode aufruft.  
+  
+> [!CAUTION]
+>  Alle Eigenschaften in der aktuellen Instanz der dem <xref:System.Web.UI.WebControls.MenuItemStyle> Klasse werden durch die entsprechenden Eigenschaften in der angegebenen ersetzt <xref:System.Web.UI.WebControls.Style> Objekt.  
+  
+ Verwenden Sie zum Kopieren von Stileigenschaften ohne festgelegte Werte ersetzt die <xref:System.Web.UI.WebControls.MenuItemStyle.MergeWith%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItemStyle.CopyFrom%2A> Methode, um die Stileigenschaften eines anderen kopieren <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt.  
+  
+ [!code-aspx-csharp[MenuItemStyleCopyFrom#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemStyleCopyFrom/CS/menuitemstylecopyfromcs.aspx#1)]
+ [!code-aspx-vb[MenuItemStyleCopyFrom#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemStyleCopyFrom/VB/menuitemstylecopyfromvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillStyleAttributes">
+      <MemberSignature Language="C#" Value="protected override void FillStyleAttributes (System.Web.UI.CssStyleCollection attributes, System.Web.UI.IUrlResolutionService urlResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void FillStyleAttributes(class System.Web.UI.CssStyleCollection attributes, class System.Web.UI.IUrlResolutionService urlResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyle.FillStyleAttributes(System.Web.UI.CssStyleCollection,System.Web.UI.IUrlResolutionService)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Web.UI.CssStyleCollection" />
+        <Parameter Name="urlResolver" Type="System.Web.UI.IUrlResolutionService" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">To be added.</param>
+        <param name="urlResolver">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalPadding">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Unit HorizontalPadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit HorizontalPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemStyle.HorizontalPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.Unit), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, wie der Abstand links und rechts vom Text des Menüelements.</summary>
+        <value>Die Menge des Speicherplatzes (in Pixel), links und rechts vom Text des Menüelements. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItemStyle.HorizontalPadding%2A> Eigenschaft, um den Umfang der horizontalen Abstand zwischen dem Text des Menüelements, steuern die <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt angewendet wird. Dieser Speicherplatz wird zwischen dem linken Rand des Texts und der Rahmen des Textbereichs sowie zwischen dem rechten Rand des Texts und der Text Rahmen eingefügt. Um den vertikalen Abstand zu steuern, verwenden Sie die <xref:System.Web.UI.WebControls.MenuItemStyle.VerticalPadding%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItemStyle.HorizontalPadding%2A> Eigenschaft, um den horizontalen Abstand zwischen dem Text eines Menüelements 10 Pixel aufzufüllen.  
+  
+ [!code-aspx-csharp[MenuItemStyleHorizontalPadding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemStyleHorizontalPadding/CS/menuitemstylehorizontalpaddingcs.aspx#1)]
+ [!code-aspx-vb[MenuItemStyleHorizontalPadding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemStyleHorizontalPadding/VB/menuitemstylehorizontalpaddingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist vom Typ <see cref="F:System.Web.UI.WebControls.UnitType.Percentage" />.  
+  
+ \- oder –  
+  
+ Der ausgewählte Wert ist kleiner als <see langword="0" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemSpacing">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Unit ItemSpacing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit ItemSpacing" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemStyle.ItemSpacing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.Unit), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, wie der vertikalen Abstand zwischen dem Menüelement, das auf die die <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> Objekt angewendet wird und die angrenzenden Menüelemente.</summary>
+        <value>Die Menge des vertikalen Abstand (in Pixel) zwischen dem Menüelement, das auf die die <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> Objekt angewendet wird und die angrenzenden Menüelemente. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItemStyle.ItemSpacing%2A> Eigenschaft, um den Umfang der vertikalen Abstand zwischen einem Menüelement, steuern die <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt angewendet wird und den benachbarten Menüelementen auf derselben Ebene. Dieser Speicherplatz wird zwischen dem oberen Rand des aktuellen Menüelements und dem unteren Rand des vorherigen Menüelements sowie zwischen dem unteren Rand des aktuellen Menüelements und dem oberen Rand des nächsten Menüelement eingefügt.  
+  
+> [!NOTE]
+>  Oberen Bereich nicht gerendert wird, für das erste Menüelement in der <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItemStyle.ItemSpacing%2A> Eigenschaft, um ein Menüelement aus den benachbarten Menüelementen durch 5 Pixel zu trennen.  
+  
+ [!code-aspx-csharp[MenuItemStyleItemSpacing#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemStyleItemSpacing/CS/menuitemstyleitemspacingcs.aspx#1)]
+ [!code-aspx-vb[MenuItemStyleItemSpacing#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemStyleItemSpacing/VB/menuitemstyleitemspacingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeWith">
+      <MemberSignature Language="C#" Value="public override void MergeWith (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void MergeWith(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyle.MergeWith(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die <see cref="T:System.Web.UI.WebControls.Style" /> mit Einstellungen kombiniert.</param>
+        <summary>Kombiniert die Stileigenschaften des angegebenen <see cref="T:System.Web.UI.WebControls.Style" /> Objekt, mit denen die aktuelle Instanz die <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItemStyle.MergeWith%2A> -Methode kombinieren Sie die Stileigenschaften des angegebenen <xref:System.Web.UI.WebControls.Style> Objekt mit der die Stileigenschaften der <xref:System.Web.UI.WebControls.MenuItemStyle> -Objekt, das diese Methode aufgerufen wird.  
+  
+> [!CAUTION]
+>  Diese Methode verbindet die Formateigenschaften zurück, indem Sie jede Eigenschaft, die nicht in der aktuellen festgelegt ist <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt mit den entsprechenden Wert im angegebenen <xref:System.Web.UI.WebControls.Style> Objekt. Nur Eigenschaften, die nicht festgelegt wurde, werden aktualisiert. Wenn eine Eigenschaft im angegebenen <xref:System.Web.UI.WebControls.Style> Objekt nicht festgelegt ist, wird die entsprechende Eigenschaft in der aktuellen <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt wird nicht geändert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItemStyle.MergeWith%2A> Methode, das die formateinstellungen von der aktuellen Instanz der Kombinieren der <xref:System.Web.UI.WebControls.MenuItemStyle> Klasse mit einem anderen <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt.  
+  
+ [!code-aspx-csharp[MenuItemStyleMergeWith#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemStyleMergeWith/CS/menuitemstylemergewithcs.aspx#1)]
+ [!code-aspx-vb[MenuItemStyleMergeWith#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemStyleMergeWith/VB/menuitemstylemergewithvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyle.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die aktuelle Instanz von der <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> Klasse, um den ursprünglichen Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItemStyle.Reset%2A> Methode, um alle entfernen Stilelemente aus Behälter Status definiert und Zurücksetzen der <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt in seinen ursprünglichen Zustand.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItemStyle.Reset%2A> Methode, um das aktuelle <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt in seinen ursprünglichen Zustand.  
+  
+ [!code-aspx-csharp[MenuItemStyleCopyFrom#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemStyleCopyFrom/CS/menuitemstylecopyfromcs.aspx#1)]
+ [!code-aspx-vb[MenuItemStyleCopyFrom#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemStyleCopyFrom/VB/menuitemstylecopyfromvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalPadding">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Unit VerticalPadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit VerticalPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemStyle.VerticalPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.Unit), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Leerraum oberhalb und unterhalb des Menüelements Text fest.</summary>
+        <value>Die Menge des Speicherplatzes (in Pixel) oben und unten Text des Menüelements. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItemStyle.VerticalPadding%2A> Eigenschaft, um den Umfang der vertikale Abstand zwischen dem Text des Menüelements, steuern die <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt angewendet wird. Dieser Speicherplatz wird zwischen dem oberen Rand des Texts und den Rand des Textbereichs sowie zwischen dem unteren Rand des Texts und der Text Rahmen eingefügt. Um den horizontalen Abstand zu steuern, verwenden Sie die <xref:System.Web.UI.WebControls.MenuItemStyle.HorizontalPadding%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItemStyle.VerticalPadding%2A> Eigenschaft, um den vertikalen Abstand zwischen dem Text eines Menüelements 10 Pixel aufzufüllen.  
+  
+ [!code-aspx-csharp[MenuItemStyleVerticalPadding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemStyleVerticalPadding/CS/menuitemstyleverticalpaddingcs.aspx#1)]
+ [!code-aspx-vb[MenuItemStyleVerticalPadding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemStyleVerticalPadding/VB/menuitemstyleverticalpaddingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist vom Typ <see cref="F:System.Web.UI.WebControls.UnitType.Percentage" />.  
+  
+ \- oder –  
+  
+ Der ausgewählte Wert ist kleiner als <see langword="0" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

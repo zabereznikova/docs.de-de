@@ -1,0 +1,257 @@
+<Type Name="EndpointAddressMessageFilter" FullName="System.ServiceModel.Dispatcher.EndpointAddressMessageFilter">
+  <TypeSignature Language="C#" Value="public class EndpointAddressMessageFilter : System.ServiceModel.Dispatcher.MessageFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EndpointAddressMessageFilter extends System.ServiceModel.Dispatcher.MessageFilter" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Dispatcher.MessageFilter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Abfrage dar, die testet, ob eine Nachricht den Anforderungen einer angegebenen Endpunktadresse entspricht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Filter testet, ob eine Nachricht einer bestimmten Endpunktadresse entspricht. Ein <xref:System.ServiceModel.EndpointAddress>-Objekt schließt eine URI und eine optionale Auflistung von Adressierungsheadern ein. Die Adressierung und die Nachrichtenheader werden in kanonische Form gebracht, um im Hinblick auf Übereinstimmung verglichen zu werden. Wenn ein Parameter mehrmals in einer <xref:System.ServiceModel.EndpointAddress> erscheint, muss der entsprechende Header mindestens genauso oft in der Nachricht erscheinen.  
+  
+ Bei IIS und dem zugrunde liegenden Dateisystem (NTFS oder FAT) sind Groß- und Kleinschreibung nicht von Bedeutung. Bei den durch diese Klasse durchgeführten URI-Abgleichen wird ebenfalls nicht zwischen Groß- und Kleinschreibung unterschieden. So wird beispielsweise "http://www.microsoft.com" daher als übereinstimmend mit "http://WWW.microsoft.com" bewertet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointAddressMessageFilter (System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.#ctor(System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="address">Die <see cref="T:System.ServiceModel.EndpointAddress" />, die zum Testen der Nachrichten verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter" />-Klasse mit einer bestimmten Adresse, anhand derer die Nachricht getestet wird.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointAddressMessageFilter (System.ServiceModel.EndpointAddress address, bool includeHostNameInComparison);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.EndpointAddress address, bool includeHostNameInComparison) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.#ctor(System.ServiceModel.EndpointAddress,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="includeHostNameInComparison" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="address">Die <see cref="T:System.ServiceModel.EndpointAddress" />, die zum Testen der Nachrichten verwendet wird.</param>
+        <param name="includeHostNameInComparison">
+          <see langword="true" />, wenn der Hostname beim Abgleich der Endpunktadressen berücksichtigt wird, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie auf Ihrem lokalen Computer einen Webdienst installiert haben, gibt es eine Reihe gleichwertiger Möglichkeiten, um darauf zu verweisen, z.&#160;B. in folgender Weise:  
+  
+-   http://localhost/foo.svc  
+  
+-   http://192.168.1.100/foo.svc  
+  
+-   http://[mein-Computername]/foo.svc  
+  
+-   http://[mein-Computername].[mein-Unternehmen].com/foo.svc.  
+  
+ Wenn der Wert des `includeHostNameInComparison`-Parameters `false` ist, werden alle oben genannten URIs in denselben Endpunkt aufgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress Address" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Adresse ab, mit der der <see cref="T:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter" /> Nachrichten testet.</summary>
+        <value>Die <see cref="T:System.ServiceModel.EndpointAddress" />, die der <see cref="T:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter" /> zum Testen von Nachrichten verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFilterTable&lt;FilterData&gt;">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Dispatcher.IMessageFilterTable&lt;FilterData&gt; CreateFilterTable&lt;FilterData&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.ServiceModel.Dispatcher.IMessageFilterTable`1&lt;!!FilterData&gt; CreateFilterTable&lt;FilterData&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.CreateFilterTable``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.IMessageFilterTable&lt;FilterData&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="FilterData" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="FilterData">Den Filtern in der Tabelle zugeordnete Daten.</typeparam>
+        <summary>Erstellt eine neue Filtertabelle, mit der eine Nachricht gleichzeitig in Bezug auf mehrere Endpunktadressen getestet wird.</summary>
+        <returns>Ein Objekt, das die <see cref="T:System.ServiceModel.Dispatcher.IMessageFilterTable`1" />-Schnittstelle implementiert, die <see cref="T:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter" /> mit zugeordneten <paramref name="FilterData" /> enthalten kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode gibt eine Instanz von <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601> zurück, die für den Test auf bestimmte Nachrichtenendpunkte optimiert ist.  
+  
+ Diese Methode ist für die Verwendung durch <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> vorgesehen. Verwenden Sie <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601>-Konstruktoren, um Filtertabelleninstanzen zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeHostNameInComparison">
+      <MemberSignature Language="C#" Value="public bool IncludeHostNameInComparison { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeHostNameInComparison" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Hostname beim Endpunktadressenabgleich berücksichtigt wird.</summary>
+        <value>
+          <see langword="true" />, wenn der Hostname beim Abgleich der Endpunktadressen berücksichtigt wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie auf Ihrem lokalen Computer einen Webdienst installiert haben, gibt es eine Reihe gleichwertiger Möglichkeiten, um darauf zu verweisen, z.&#160;B. in folgender Weise:  
+  
+-   http://localhost/foo.svc  
+  
+-   http://192.168.1.100/foo.svc  
+  
+-   http://[mein-Computername]/foo.svc  
+  
+-   http://[mein-Computername].[mein-Unternehmen].com/foo.svc.  
+  
+ Der Standardwert für diese Eigenschaft ist `false`, sodass alle oben genannten URIs in denselben Endpunkt aufgelöst werden, sofern Sie diese Eigenschaft nicht ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Match">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Testet, ob eine Nachricht oder gepufferte Nachricht die Kriterien des Endpunktfilters erfüllt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Unterschied zwischen den zwei Überladungen der <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.Match%2A>-Methode besteht darin, dass eine Überladung, die den <xref:System.ServiceModel.Channels.MessageBuffer>-Parameter entgegennimmt, beim Testen auf Übereinstimmungen den Textinhalt überprüfen darf, während die andere, die den <xref:System.ServiceModel.Channels.Message>-Parameter entgegennimmt, dies nicht darf.  
+  
+ <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.Match%2A> testet den Inhalt des Texts einer Nachricht nicht, weshalb diese zwei Methoden einander entsprechen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.Match(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">Das zu überprüfende <see cref="T:System.ServiceModel.Channels.Message" />-Objekt.</param>
+        <summary>Testet, ob eine Nachricht mit der angegebenen Endpunktadresse übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />, wenn das <see cref="T:System.ServiceModel.Channels.Message" />-Objekt mit der im Filter angegebenen Endpunktadresse übereinstimmt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zwei Überladungen dieser Methode stimmen überein, da beide nur Nachrichtenheader überprüfen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (System.ServiceModel.Channels.MessageBuffer messageBuffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(class System.ServiceModel.Channels.MessageBuffer messageBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.Match(System.ServiceModel.Channels.MessageBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBuffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+      </Parameters>
+      <Docs>
+        <param name="messageBuffer">Das zu überprüfende <see cref="T:System.ServiceModel.Channels.MessageBuffer" />-Objekt.</param>
+        <summary>Testet, ob eine gepufferte Nachricht mit der angegebenen Endpunktadresse übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />, wenn das <see cref="T:System.ServiceModel.Channels.MessageBuffer" />-Objekt mit der Endpunktadresse übereinstimmt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zwei Überladungen dieser Methode stimmen überein, da beide nur Nachrichtenheader überprüfen. Als einziger Grund für die Nutzung dieser Überladung gilt, dass Sie bereits `messageBuffer` zur Verfügung haben und keine Nachricht, denn durch diese Methode wird `messageBuffer` in eine Nachricht umgewandelt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="messageBuffer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

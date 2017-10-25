@@ -1,0 +1,392 @@
+<Type Name="XmlDictionaryReaderQuotas" FullName="System.Xml.XmlDictionaryReaderQuotas">
+  <TypeSignature Language="C#" Value="public sealed class XmlDictionaryReaderQuotas" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlDictionaryReaderQuotas extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlDictionaryReaderQuotas" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält konfigurierbare Kontingentwerte für XmlDictionaryReaders.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xml.XmlDictionary>-Instanzen werden von WCF beim Serialisieren und Deserialisieren von SOAP-Nachrichten verwendet. Die <xref:System.Xml.XmlDictionary> enthält String-Wert-Paare, die verwendet werden, um die Größe der SOAP-Nachricht zu verringern. Beim Serialisieren einer Nachricht wird der Wert anstelle der Zeichenfolge geschrieben. Beim Deserialisieren der Nachrichteninhalts wird der Wert gelesen, jedoch die Zeichenfolge in das Nachrichtenobjekt geschrieben.  <xref:System.Xml.XmlDictionaryReaderQuotas>ist eine Klasse, die eine Anzahl von verwendeten Kontingente enthält die <xref:System.Xml.XmlDictionaryReader> Klasse. Das wichtigste Sicherheitsfeature der Wörterbuchreader sind Kontingente. Kontingenteninstanzen sind für die Wörterbuchreaderfactory-Methoden erforderlich. Der Standardkonstruktor erstellt "sichere" Standards (codierte Standards), und die Klasse weist eine statische `Max`-Eigenschaft zur Erstellung eines Readers ohne Kontingente auf.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDictionaryReaderQuotas ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlDictionaryReaderQuotas.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz dieser Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die Eigenschaften mit "sicheren" Standards:  
+  
+ MaxDepth = 32;  
+  
+ MaxStringContentLength = 8192;  
+  
+ MaxArrayLength = 16384;  
+  
+ MaxBytesPerRead = 4096;  
+  
+ MaxNameTableCharCount = 16384.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Xml.XmlDictionaryReaderQuotas quotas);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Xml.XmlDictionaryReaderQuotas quotas) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlDictionaryReaderQuotas.CopyTo(System.Xml.XmlDictionaryReaderQuotas)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="quotas" Type="System.Xml.XmlDictionaryReaderQuotas" />
+      </Parameters>
+      <Docs>
+        <param name="quotas">Die <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />-Instanz, in die die Werte kopiert werden.</param>
+        <summary>Legt die Eigenschaften für eine übergebene Kontingenteninstanz auf Grundlage der Werte in dieser Instanz fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Mit <see langword="set" /> wird versucht, den Wert festzulegen, doch Kontingentwerte sind für diese übergebene Instanz schreibgeschützt.</exception>
+        <exception cref="T:System.ArgumentNullException">Übergebenen Ziel- <paramref name="quotas" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Max">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlDictionaryReaderQuotas Max { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xml.XmlDictionaryReaderQuotas Max" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDictionaryReaderQuotas.Max" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReaderQuotas</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Instanz dieser Klasse mit allen auf maximale Werte festgelegten Eigenschaften ab.</summary>
+        <value>Eine Instanz von <see cref="T:System.Xml.XmlDictionaryReaderQuotas" /> mit Eigenschaften, die auf <see cref="F:System.Int32.MaxValue" /> eingestellt sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Instanz ist schreibgeschützt. Verwenden Sie die Eigenschaft, um einen Reader ohne Kontingente zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxArrayLength">
+      <MemberSignature Language="C#" Value="public int MaxArrayLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxArrayLength" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(16384)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximal zulässige Arraylänge ab und legt sie fest.</summary>
+        <value>Die maximal zulässige Arraylänge. Der Standard ist 16384.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Kontingent bestimmt die maximale Arraylänge, die von verschiedenen API-Aufrufen erstellt und zurückgegeben wird. Es beeinflusst besondere Array-APIs sowie Bytearrays, die von ReadContentAsBase64() zurückgegeben werden. Diese Grenze hat keinen Einfluss auf die ReadContentAsBase64()-Überschreibung, durch die ein Array mit Daten gefüllt wird.  
+  
+ Dieser Eigenschaftenwert gilt für jeden Schritt der Nachrichtenverarbeitung. Dies schließt einige Schritte ein, durch die sich die Größe von Nachrichten oder Nachrichtenteilen erhöhen kann. Vor allem durch Verschlüsselung kann die Größe einer Nachricht deutlich erhöht werden. Berücksichtigen Sie dies, wenn Sie diesen Wert festlegen.  
+  
+ Mit dem öffentlichen Konstruktor erstellte Instanzen verfügen über Eigenschaften, die mit `set` festgelegt werden können.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Mit <see langword="set" /> wird versucht, den Wert festzulegen, aber Kontingentwerte sind für diese Instanz schreibgeschützt.</exception>
+        <exception cref="T:System.ArgumentException">Mit <see langword="set" /> wird versucht, den Wert auf einen kleineren Wert als 0 (null) festzulegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBytesPerRead">
+      <MemberSignature Language="C#" Value="public int MaxBytesPerRead { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxBytesPerRead" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(4096)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die bei jedem Lesevorgang zurückgegebenen maximal zulässigen Bytes ab und legt sie fest.</summary>
+        <value>Die maximal zulässigen Bytes, die bei jedem Lesevorgang zurückgegeben werden. Der Standard ist 4096.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Kontingent beschränkt die Anzahl der Bytes, die vom Reader während eines einzelnen `Read`()-Aufrufs in Anspruch genommen werden können.  
+  
+ Dieses Kontingent ist nur eine ungefähre Angabe, da vor der Anwendung dieses Kontingents Transformationen auf Codierungsebene durchgeführt werden. Dieses Kontingent ist eng mit der Anzahl der Bytes verbunden, die auf Transportebene empfangen werden, sein Zweck besteht jedoch darin, die Menge der bei jedem Lesevorgang empfangenen Daten zu steuern. In der Praxis wird es verwendet, um die Größe von Starttags einzuschränken. Da für die Verarbeitung das gesamte Starttag gepuffert werden muss (die Eindeutigkeit der Attribute muss überprüft werden), muss die Größe zur Abschwächung von DOS-Angriffen eingeschränkt werden.  
+  
+ Mit dem öffentlichen Konstruktor erstellte Instanzen verfügen über Eigenschaften, die mit `set` festgelegt werden können.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Mit <see langword="set" /> wird versucht, den Wert festzulegen, aber Kontingentwerte sind für diese Instanz schreibgeschützt.</exception>
+        <exception cref="T:System.ArgumentException">Mit <see langword="set" /> wird versucht, den Wert auf einen kleineren Wert als 0 (null) festzulegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxDepth">
+      <MemberSignature Language="C#" Value="public int MaxDepth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxDepth" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDictionaryReaderQuotas.MaxDepth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(32)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Tiefe geschachtelter Knoten ab und legt sie fest.</summary>
+        <value>Die maximale Tiefe geschachtelter Knoten. Der Standardwert ist 32.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Kontingent beschränkt die Tiefe der geschachtelten Knoten für XML.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Mit <see langword="set" /> wird versucht, den Wert festzulegen. Kontingentwerte sind für diese Instanz schreibgeschützt.</exception>
+        <exception cref="T:System.ArgumentException">Mit <see langword="set" /> wird versucht, den Wert auf kleiner als 0 (null) festzulegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxNameTableCharCount">
+      <MemberSignature Language="C#" Value="public int MaxNameTableCharCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxNameTableCharCount" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(16384)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximal in einem Tabellennamen zugelassenen Zeichen ab und legt sie fest.</summary>
+        <value>Die maximal zulässigen Zeichen in einem Tabellennamen. Der Standard ist 16384.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Kontingent begrenzt die Gesamtzahl der Zeichen in Zeichenfolgen, die in der NameTable des Readers atomisiert werden. Wenn Zeichenfolgen atomisiert werden, werden sie in eine NameTable eingefügt und verbleiben dort. Dies kann zu einer Häufung großer Mengen an Zeichendaten in einer NameTable führen. Dieses Kontingent legt eine Grenze dafür fest, wie viele Daten in der NameTable des Readers gepuffert werden können.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Mit <see langword="set" /> wird versucht, den Wert festzulegen, aber Kontingentwerte sind für diese Instanz schreibgeschützt.</exception>
+        <exception cref="T:System.ArgumentException">Mit <see langword="set" /> wird versucht, den Wert auf einen kleineren Wert als 0 (null) festzulegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxStringContentLength">
+      <MemberSignature Language="C#" Value="public int MaxStringContentLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxStringContentLength" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(8192)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale vom Reader zurückgegebene Zeichenfolgenlänge ab und legt sie fest.</summary>
+        <value>Die maximale Zeichenfolgenlänge, die vom Reader zurückgegeben wird. Der Standard ist 8192.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Kontingent begrenzt die Länge von Zeichenfolgen, die von verschiedenen APIs erstellt und zurückgegeben werden. Wenn der Reader `Read`() aufruft und die `Value`-Eigenschaft überprüft, werden Zeichenfolgenwerte im Streamingmodus in verwaltbare Teile aufgeteilt. Bei Aufruf von `ReadContentAsString`() werden all diese Teile verkettet und als eine große Zeichenfolge zurückgegeben. Wenn im Binärformat der Wert eines Elementknotens aus einer Reihe von Wörterbuchzeichenfolgen-IDs besteht, werden die Werte dieser Zeichenfolge verkettet. Dies kann zu äußerst langen Zeichenfolgen führen, was durch diese Begrenzung eingeschränkt werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Mit <see langword="set" /> wird versucht, den Wert festzulegen, aber Kontingentwerte sind für diese Instanz schreibgeschützt.</exception>
+        <exception cref="T:System.ArgumentException">Mit <see langword="set" /> wird versucht, den Wert auf einen kleineren Wert als 0 (null) festzulegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifiedQuotas">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryReaderQuotaTypes ModifiedQuotas { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlDictionaryReaderQuotaTypes ModifiedQuotas" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDictionaryReaderQuotas.ModifiedQuotas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReaderQuotaTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die geänderte Kontingente für die <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />.</summary>
+        <value>Die geänderte Kontingente für die <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,379 @@
+<Type Name="PhoneCall" FullName="System.Web.UI.MobileControls.PhoneCall">
+  <TypeSignature Language="C#" Value="public class PhoneCall : System.Web.UI.MobileControls.TextControl, System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PhoneCall extends System.Web.UI.MobileControls.TextControl implements class System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.PhoneCall" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.TextControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Web.UI.Design.MobileControls.PhoneCallDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Web.UI.Design.WebControlToolboxItem, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.DataBindingHandler("System.Web.UI.Design.TextDataBindingHandler, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.MobileControls.DesignerAdapter(typeof(System.Web.UI.Design.MobileControls.Adapters.DesignerLabelAdapter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:PhoneCall runat="server"&gt;PhoneCall&lt;/{0}:PhoneCall&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Steuerungsfunktionen für das Rendern eines Befehls bereit, den der Benutzer zum Wählen einer angegebenen Telefonnummer auswählen kann. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Geräte mit Telefoniefunktionen, z. B. ein Mobiltelefon die <xref:System.Web.UI.MobileControls.PhoneCall> Steuerelement rendert einen Befehl, dass der Benutzer auf den angegebenen Telefonnummer auswählen kann.  
+  
+ Auf Geräten ohne Telefoniefunktionen der <xref:System.Web.UI.MobileControls.PhoneCall> Steuerelement rendert alternativen Text, einschließlich möglicherweise die Telefonnummer oder eine Verknüpfung; es wird nicht behandelt, als ein Befehl, der Sprachwahl Fähigkeit verfügt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mehrere Telefonnummern Hinzufügen einer <xref:System.Web.UI.MobileControls.Panel> auf der Seite. Eine <xref:System.Web.UI.MobileControls.PhoneCall> Steuerelement verfügt über eine <xref:System.Web.UI.MobileControls.PhoneCall.AlternateUrl%2A> und die Telefonnummer als einen Link auf Geräten, die einen Telefonanruf angezeigt wird.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen finden Sie unter [ASP.NET Web Forms-Seite Syntaxübersicht](http://msdn.microsoft.com/library/09074b20-ece9-46fa-bc8f-ab2595ed2c02).  
+  
+ [!code-aspx-csharp[MobilePhoneCallSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobilePhoneCallSample/cs/Default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PhoneCall ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PhoneCall.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.PhoneCall" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLinkedForms">
+      <MemberSignature Language="C#" Value="public override void AddLinkedForms (System.Collections.IList linkedForms);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddLinkedForms(class System.Collections.IList linkedForms) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PhoneCall.AddLinkedForms(System.Collections.IList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="linkedForms" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="linkedForms">Der Satz von Formularen, die Links zu dem angegebenen Steuerelement enthalten.</param>
+        <summary>Fügt der angegebenen Liste einen Satz von Formularen hinzu, der Links zu dem angegebenen Steuerelement enthält. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternateFormat">
+      <MemberSignature Language="C#" Value="public string AlternateFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AlternateFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PhoneCall.AlternateFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("{0} {1}")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Formatierungszeichenfolge für den Textwert ab, der auf Geräten angezeigt wird, die keine Telefonanrufe einleiten können, oder legt diese fest. Der Standardwert ist <see langword="{0} {1}" />. Dies bedeutet, dass der Standardtext aus einer Verkettung der <see cref="P:System.Web.UI.MobileControls.TextControl.Text" />-Eigenschaft und der <see cref="P:System.Web.UI.MobileControls.PhoneCall.PhoneNumber" />-Eigenschaft, mit einem Leerzeichen zwischen den Eigenschaften, besteht. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Formatierungszeichenfolge für den Textwert, der auf Geräten angezeigt wird, die keine Telefonanrufe einleiten können.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ist ein Beispiel für die Standardzeichenfolge, die Aufruf `{0}` am `{1}` jetzt!! in dem das System ersetzt `{0}` mit der <xref:System.Web.UI.MobileControls.TextControl.Text%2A> Eigenschaft von der <xref:System.Web.UI.MobileControls.PhoneCall> Objekt (die `innerText` des Elements auf der Seite), und `{1}` mit dem Wert von der <xref:System.Web.UI.MobileControls.PhoneCall.PhoneNumber%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mehrere Telefonnummern Hinzufügen einer <xref:System.Web.UI.MobileControls.Panel> auf der Seite und zeigt zwei Formen von <xref:System.Web.UI.MobileControls.PhoneCall.AlternateFormat%2A>.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [ASP.NET Web Forms-Seite Syntaxübersicht](http://msdn.microsoft.com/library/09074b20-ece9-46fa-bc8f-ab2595ed2c02).  
+  
+<!-- TODO: review snippet reference  [!CODE [MobilePhoneCall#1](MobilePhoneCall#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternateUrl">
+      <MemberSignature Language="C#" Value="public string AlternateUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AlternateUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PhoneCall.AlternateUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.MobileControls.Converters.NavigateUrlConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die URL ab, zu der das Gerät bei nicht anrufenden Geräten wechselt, oder legt diesen fest. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die URL, zu der das Gerät bei nicht anrufenden Geräten wechselt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erkennt, was der Benutzer wird gesteuert, indem die <xref:System.Web.UI.MobileControls.TextControl.Text%2A> Eigenschaft von der <xref:System.Web.UI.MobileControls.PhoneCall> -Objekt, <xref:System.Web.UI.MobileControls.PhoneCall.PhoneNumber%2A>, <xref:System.Web.UI.MobileControls.PhoneCall.AlternateFormat%2A>, und <xref:System.Web.UI.MobileControls.PhoneCall.AlternateUrl%2A> Eigenschaften.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird nur auf Geräten verwendet werden, die nicht als einen anderen Speicherort für die Navigation Telefonanrufe einleiten können.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird gezeigt, wie mehrere Telefonnummern Hinzufügen einer <xref:System.Web.UI.MobileControls.Panel> auf der Seite. Eine <xref:System.Web.UI.MobileControls.PhoneCall> Steuerelement verfügt über eine <xref:System.Web.UI.MobileControls.PhoneCall.AlternateUrl%2A> für Geräte, die einen Telefonanruf.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen finden Sie unter [ASP.NET Web Forms-Seite Syntaxübersicht](http://msdn.microsoft.com/library/09074b20-ece9-46fa-bc8f-ab2595ed2c02).  
+  
+<!-- TODO: review snippet reference  [!CODE [MobilePhoneCall#1](MobilePhoneCall#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PhoneCall.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis aus. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode benachrichtigt das Serversteuerelement an alle erforderlichen Vorbereitungsschritte vor dem Speichern der Ansichtszustand und Rendern von Inhalt an.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Web.UI.MobileControls.PhoneCall.PhoneNumber" /> -Eigenschaft ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PhoneNumber">
+      <MemberSignature Language="C#" Value="public string PhoneNumber { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PhoneNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PhoneCall.PhoneNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die eine Telefonnummer darstellt, oder legt diese fest. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Eine Zeichenfolge, die eine Telefonnummer darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.PhoneCall.PhoneNumber%2A> Eigenschaft ist erforderlich, auf <xref:System.Web.UI.MobileControls.PhoneCall> Steuerelemente. Die <xref:System.Web.UI.MobileControls.PhoneCall.PhoneNumber%2A> Eigenschaft akzeptiert die Zeichenfolgen in einer Vielzahl von Formaten. Das Format für die folgenden Typen von Zahlen wird beschrieben, mit dem Backus-Naur-Format (BNF-Syntax ist eine Möglichkeit zur Beschreibung der Syntax von Dateiformaten):  
+  
+```  
+phone_number ::= international_number | national_number | short_number  
+  
+international_number ::= "+" country_code national_number  
+  
+short_number ::= "#" national_number  
+  
+country_code ::= (decoration_character | digit)* digit (decoration_character   
+       | digit)*  
+  
+national_number ::= (decoration_character | digit)+  
+  
+digit ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9  
+  
+decoration_character ::= "(" | ")" | "." | "-" | {space}  
+```  
+  
+ Eine zehnstellige Nummer kann eine optionale Land oder Region Code, mit dem Präfix bestehen einer + Zeichen, gefolgt von einer beliebigen Folge von Ziffern, die die Telefonnummer bildet. Die Zeichen, die als gekennzeichnete `decoration_character` können an beliebiger Stelle in der Telefonnummer und werden ignoriert.  
+  
+ Für `i-Mode` Telefone, derzeit gelten die folgenden Regeln, wenn Sie eine zehnstellige Nummer angeben:  
+  
+-   Die Zeichenfolge muss mit "0" oder "#" beginnen.  
+  
+-   Wenn die Zeichenfolge mit "0" beginnt, werden die Zahlen höchstens neun Ziffern.  
+  
+-   Wenn die Zeichenfolge beginnt mit "#", werden die Zahlen mehr als drei Ziffern.  
+  
+-   Zahlen können "(",")" und "-" in der Zeichenfolge.  
+  
+-   Die Zeichenfolge muss weniger als 24 Zeichen sein.  
+  
+ Die folgende Liste enthält einige Beispiele für gültige Telefonnummern:  
+  
+-   800.522.2920  
+  
+-   +1 (425) 885-8080  
+  
+-   +91335303197  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">das Format der Zahl ist ungültig.</exception>
+        <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected void RaisePostBackEvent (string argument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaisePostBackEvent(string argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PhoneCall.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="argument">Ein <see cref="T:System.String" />, der ein optionales Ereignisargument darstellt, das an den Ereignishandler übergeben wird.</param>
+        <summary>Benachrichtigt das <see cref="T:System.Web.UI.MobileControls.PhoneCall" />-Objekt über ein Postbackereignis. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SoftkeyLabel">
+      <MemberSignature Language="C#" Value="public string SoftkeyLabel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SoftkeyLabel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PhoneCall.SoftkeyLabel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die bei der Anzeige einer Bildschirmtaste verwendete Bezeichnung ab oder legt diese fest. Der Standardwert ist das Wort <see langword="Call" /> (oder eine lokalisierte Entsprechung). Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die bei der Anzeige einer Bildschirmtaste verwendete Bezeichnung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird nur für Geräte verwendet, die Bildschirmtasten unterstützen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PhoneCall.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Die optionalen Ereignisargumente, die an den Ereignishandler übergeben werden sollen.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(System.String)" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.MobileControls.PhoneCall>-Instanz in eine <xref:System.Web.UI.IPostBackEventHandler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,41 @@
+<Type Name="ToolTipEventHandler" FullName="System.Windows.Controls.ToolTipEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ToolTipEventHandler(object sender, ToolTipEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolTipEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ToolTipEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Controls.ToolTipEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Das Objekt, an das der Ereignishandler angefügt ist.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt die Methode dar, von der Routingereignisse behandelt werden, die auftreten, wenn eine QuickInfo geöffnet und geschlossen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine QuickInfo geöffnet und geschlossen wird, stellt dieser Delegat einen Ereignishandler an. Das Element, das die QuickInfo gibt an, erbt von <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>. Aus diesem Grund sind Eröffnungs- und Ereignisse auf beiden Klassen vorhanden. In der folgenden Tabelle listet die Ereignisse, die Ereignishandler zu verwenden.  
+  
+|Ereignisse, die auftreten, wenn eine QuickInfo geöffnet wird.|Ereignisse, die auftreten, wenn eine QuickInfo geschlossen wird.|  
+|--------------------------------------------|---------------------------------------------|  
+|<xref:System.Windows.FrameworkElement.ToolTipOpening?displayProperty=nameWithType>|<xref:System.Windows.FrameworkElement.ToolTipClosing?displayProperty=nameWithType>|  
+|<xref:System.Windows.FrameworkContentElement.ToolTipOpening?displayProperty=nameWithType>|<xref:System.Windows.FrameworkContentElement.ToolTipClosing?displayProperty=nameWithType>|  
+  
+ Diese Ereignisse registriert werden, indem die <xref:System.Windows.Controls.ToolTipService> -Klasse unter Verwendung der <xref:System.Windows.Controls.ToolTipService.ToolTipOpeningEvent> und <xref:System.Windows.Controls.ToolTipService.ToolTipClosingEvent> Felder, aber die <xref:System.Windows.Controls.ToolTipService> Klasse macht sich nicht auf diese Ereignisse selbst (angefügt oder anderweitig). Die <xref:System.Windows.FrameworkElement> und <xref:System.Windows.FrameworkContentElement> beide Klassen implementieren die <xref:System.Windows.Controls.ToolTipService> und machen Sie dieses Ereignis durch die Definition der Ereignisse in der vorherigen Tabelle kopieren der <xref:System.Windows.Controls.ToolTipService> zum Erstellen neuer Felder weitergeleitet, Ereignis-IDs, die auf die <xref:System.Windows.FrameworkElement> und <xref:System.Windows.FrameworkContentElement> Klassen.  
+  
+ Wenn die QuickInfo als definiert ist eine <xref:System.Windows.Controls.ToolTip> -Objekt, das <xref:System.Windows.Controls.ToolTip.Opened> und <xref:System.Windows.Controls.ToolTip.Closed> Ereignisse der <xref:System.Windows.Controls.ToolTip> Klasse werden auch ausgelöst, wenn eine QuickInfo geöffnet und geschlossen wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

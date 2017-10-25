@@ -1,0 +1,105 @@
+<Type Name="Localize" FullName="System.Web.UI.WebControls.Localize">
+  <TypeSignature Language="C#" Value="public class Localize : System.Web.UI.WebControls.Literal" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Localize extends System.Web.UI.WebControls.Literal" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Localize" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Literal</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.LocalizeDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Web.UI.WebControls.Localize))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Reserviert eine Position auf einer Webseite, an der lokalisierter statischer Text angezeigt werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [Deklarationssyntax](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Verwenden der <xref:System.Web.UI.WebControls.Localize> Steuerelement um einen Speicherort auf einer Webseite in der lokalisierten Text anzeigen zu reservieren.  
+  
+> [!NOTE]
+>  Steuerelemente, die sich außerhalb der `body` -Elements werden ignoriert.  
+  
+ Die <xref:System.Web.UI.WebControls.Localize> Steuerelement erbt von der <xref:System.Web.UI.WebControls.Literal> steuern und ist in jeder Hinsicht identisch. Die <xref:System.Web.UI.WebControls.Localize> Steuerelement zur Entwurfszeit unterscheiden Sie statischen Text, die lokalisiert werden kann, aus anderen statischen Text verwendet wird. Obwohl die <xref:System.Web.UI.WebControls.Label> Steuerelement ermöglicht es Ihnen, ein Format auf den angezeigten Text angewendet der <xref:System.Web.UI.WebControls.Localize> Steuerelement nicht. Den Text im Steuerelement angezeigt wird, indem Sie festlegen können programmgesteuert verwaltet die <xref:System.Web.UI.WebControls.Literal.Text%2A?displayProperty=nameWithType> Eigenschaft geerbt von der <xref:System.Web.UI.WebControls.Literal> Steuerelement.  
+  
+> [!CAUTION]
+>  Dieses Steuerelement kann verwendet werden, Benutzereingaben angezeigt werden, die möglicherweise böswillige Clientskripts umfassen. Überprüfen Sie alle Informationen, die für ausführbare Skripts, SQL-Anweisungen oder anderen Code von einem Client gesendet wird, vor der Anzeige in der Anwendung. ASP.NET bietet eine Funktion für den Überprüfung eingabeanforderung zum Blockieren von Skript und HTML in Benutzereingaben. Server-Validierungssteuerelemente werden ebenfalls bereitgestellt, um Benutzereingaben zu bewerten. Weitere Informationen finden Sie unter [Standardsteuerelemente schützen](http://msdn.microsoft.com/library/f3e7718f-63d0-44a3-bd5f-48cc2059c2a8), [wie: schützen gegen Script Exploits in einer Web-Anwendung durch Anwenden von HTML-Codierung in Zeichenfolgen](http://msdn.microsoft.com/library/6f67973f-dda0-45a1-ba9d-e88532d7dc5b), und [Validieren von Benutzereingaben in ASP.NET Web Pages](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:Localize  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    Mode="Transform|PassThrough|Encode"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Text="string"  
+    Visible="True|False"  
+/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Localize> -Steuerelement zum Anzeigen von statischen Texts.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß, wenn Sie direkt in einem Code-Behind-Datei kopiert. Dieses Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Localize#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Localize/CS/localizecs.aspx#1)]
+ [!code-aspx-vb[Localize#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Localize/VB/localizevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Localize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Localize.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Localize" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.Localize> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

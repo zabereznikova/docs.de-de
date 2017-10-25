@@ -1,0 +1,284 @@
+<Type Name="ContractOptionAttribute" FullName="System.Diagnostics.Contracts.ContractOptionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ContractOptionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContractOptionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Contracts.ContractOptionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht das Festlegen von Vertrag-und Tooloptionen Granularität der Assembly, Typ oder Methode.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die derzeit unterstützten Optionen.  
+  
+|Kategorie|Einstellung|Wert/Auswirkung|  
+|--------------|-------------|-------------------|  
+|Vertrag (Contract)|Vererbung|`true`Um eine vertragsvererbung aktivieren. `false` deaktivieren.  Die Standardeinstellung ist `true`.|  
+|Laufzeit|Überprüfen|`true`So aktivieren die laufzeitüberprüfung auf; `false` deaktivieren. Die Standardeinstellung ist `true`.|  
+  
+ Sie können dieses Attribut verwenden, wie in den folgenden Beispielen veranschaulicht.  
+  
+ So deaktivieren Sie zur Laufzeit für die gesamte Assembly überprüfen:  
+  
+```  
+[assembly:ContractOption("runtime", "checking", false)]  
+```  
+  
+ Überprüfung zur Laufzeit Vertrag für einen bestimmten Typ aktivieren:  
+  
+```  
+   [ContractOption("runtime", "checking", true)]  
+   class TypeWithRuntimeChecking {  
+  
+       ...  
+  
+```  
+  
+ Um die laufzeitüberprüfung für eine bestimmte Methode deaktivieren:  
+  
+```  
+// Turn off all contract inheritance from interface IList<T>  
+[ContractOption("contract", "inheritance", false)]  
+class MyConcurrentList<T> : IList<T> {  
+   ...  
+}  
+  
+[ContractOption("runtime", "checking", false)]  
+public override MyMethod(int x) {  
+   // no inherited contracts checked at runtime,  
+   // no invariants checked at runtime.  
+   ...  
+}  
+  
+       [ContractOption("runtime", "checking", false)]  
+       public void MethodWithoutRuntimeChecking(...) {  
+          ...  
+       }  
+   }  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContractOptionAttribute (string category, string setting, bool enabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string category, string setting, bool enabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.ContractOptionAttribute.#ctor(System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="setting" Type="System.String" />
+        <Parameter Name="enabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="category">Die Kategorie für die Option festgelegt werden.</param>
+        <param name="setting">Die Einstellung der Option.</param>
+        <param name="enabled">
+          <see langword="true" />So aktivieren Sie die Option; <see langword="false" /> , die Option zu deaktivieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.Contracts.ContractOptionAttribute" /> Klasse, indem die angegebene Kategorie, Einstellung und Wert aktivieren/deaktivieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContractOptionAttribute (string category, string setting, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string category, string setting, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.ContractOptionAttribute.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="setting" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="category">Die Kategorie der Option "" festgelegt werden.</param>
+        <param name="setting">Die Einstellung der Option.</param>
+        <param name="value">Der Wert für die Einstellung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.Contracts.ContractOptionAttribute" /> -Klasse unter Verwendung der angegebenen Kategorie festlegen, und der Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt nur zwei-kategorieneinstellung/Optionen und können mit einer der Konstruktorüberladungen festgelegt werden. Verwenden Sie diese Überladung mit den gleichen Einstellungen wie die <xref:System.Diagnostics.Contracts.ContractOptionAttribute.%23ctor%28System.String%2CSystem.String%2CSystem.Boolean%29> Überladung durch Angabe von "Wahr" oder "false", im Zeichenfolgenformat; zum Beispiel:  
+  
+```  
+[ContractOption("contract", "inheritance", "false")]  
+class MyConcurrentList<T> : IList<T> {  
+   ...  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public string Category { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Category" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Contracts.ContractOptionAttribute.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kategorie der Option ab.</summary>
+        <value>Die Kategorie der Option.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Contracts.ContractOptionAttribute.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob eine Option aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Option aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Setting">
+      <MemberSignature Language="C#" Value="public string Setting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Setting" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Contracts.ContractOptionAttribute.Setting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Einstellung für die Option ab.</summary>
+        <value>Die Einstellung für die Option.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Contracts.ContractOptionAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert für die Option an.</summary>
+        <value>Der Wert für die Option.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

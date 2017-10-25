@@ -1,0 +1,306 @@
+<Type Name="ExternalException" FullName="System.Runtime.InteropServices.ExternalException">
+  <TypeSignature Language="C#" Value="public class ExternalException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ExternalException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ExternalException" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Der Basisausnahmetyp für alle COM-Interop- und SEH-Ausnahmen (Structured Exception Handling, Strukturierte Ausnahmebehandlung).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Verbesserung der Interoperabilität zwischen Legacysystemen und die common Language Runtime die <xref:System.Runtime.InteropServices.ExternalException.ErrorCode%2A> Eigenschaft speichert einen ganzzahligen Wert (HRESULT), die den Fehler kennzeichnet. Benutzerdefinierte Ausnahmen sollten nie abgeleitet `ExternalException`, und ein `ExternalException` nie von Benutzercode ausgelöst werden soll. Verwenden Sie die spezifischen Ausnahmen, die abgeleitet `ExternalException` stattdessen.  
+  
+ `ExternalException`mit dem Wert 0 x 80004005 HRESULT E_FAIL wird verwendet.  
+  
+ `ExternalException`verwendet die standardmäßige <xref:System.Object.Equals%2A> -Implementierung, die Verweisgleichheit unterstützt.  
+  
+ Eine Liste der Anfangswerte für eine Instanz von `ExternalException`, finden Sie unter der `ExternalException` Konstruktoren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExternalException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ExternalException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see langword="ExternalException" />-Klasse mit Standardeigenschaften.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine `ExternalException`-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Eine lokalisierte Zeichenfolge der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExternalException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ExternalException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, die den Grund für die Ausnahme angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see langword="ExternalException" />-Klasse mit einer angegebenen Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine `ExternalException`-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ExternalException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ExternalException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die Daten des serialisierten Objekts enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see langword="ExternalException" /> Klasse von Serialisierungsdaten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung aufgerufen, um das über einen Stream übertragene Ausnahmeobjekt wiederherzustellen. Weitere Informationen finden Sie unter [XML- und SOAP-Serialisierung](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExternalException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ExternalException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="inner">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>innere</c> -Parameter ist kein <see langword="null" />, die aktuelle Ausnahme wird ausgelöst, eine <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.InteropServices.ExternalException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt den gleichen Wert zurück, der an den Konstruktor übergeben wird, oder `null`, wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft den Wert der inneren Ausnahme nicht an den Konstruktor übergibt.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Runtime.InteropServices.ExternalException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Der Verweis auf die interne Ausnahme.|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExternalException (string message, int errorCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, int32 errorCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ExternalException.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="errorCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, die den Grund für die Ausnahme angibt.</param>
+        <param name="errorCode">Das HRESULT des Fehlers.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see langword="ExternalException" /> Klasse mit einer angegebenen Fehlermeldung und das HRESULT des Fehlers.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine `ExternalException`-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Runtime.InteropServices.ExternalException.ErrorCode%2A>|Das HRESULT des Fehlers.|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorCode">
+      <MemberSignature Language="C#" Value="public virtual int ErrorCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ErrorCode" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ExternalException.ErrorCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see langword="HRESULT" /> des Fehlers ab.</summary>
+        <value>Das <see langword="HRESULT" /> des Fehlers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Finden Sie unter [Allgemeine HRESULT-Werte](https://msdn.microsoft.com/library/windows/desktop/aa378137.aspx) für eine Liste von je mehr häufig Fehlercodes aufgetreten. `HRESULT`Werte werden in der Headerdatei Winerror.h definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ExternalException.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, die das HRESULT des Fehlers enthält.</summary>
+        <returns>Eine Zeichenfolge, die das HRESULT darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

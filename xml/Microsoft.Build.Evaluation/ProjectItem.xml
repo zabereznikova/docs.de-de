@@ -1,0 +1,470 @@
+<Type Name="ProjectItem" FullName="Microsoft.Build.Evaluation.ProjectItem">
+  <TypeSignature Language="C#" Value="public class ProjectItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Evaluation.ProjectItem" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{ItemType}={EvaluatedInclude} [{UnevaluatedInclude}] #DirectMetadata={DirectMetadataCount}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Element ausgewertet Entwurfszeitprojekt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DirectMetadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Evaluation.ProjectMetadata&gt; DirectMetadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Evaluation.ProjectMetadata&gt; DirectMetadata" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectItem.DirectMetadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Evaluation.ProjectMetadata&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerator über alle Elementmetadaten ab.</summary>
+        <value>Gibt einen Enumerator über alle Elementmetadaten, die nie null sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Umfasst nicht die Metadaten aus Elementdefinitionen. Umfasst integrierte Metadaten, z. B. "FullPath" nicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectMetadataCount">
+      <MemberSignature Language="C#" Value="public int DirectMetadataCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DirectMetadataCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectItem.DirectMetadataCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Metadaten für dieses Element ab.</summary>
+        <value>Gibt die Anzahl der Metadaten für dieses Element zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Umfasst nicht die Metadaten aus Elementdefinitionen. Umfasst integrierte Metadaten, z. B. "FullPath" nicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluatedInclude">
+      <MemberSignature Language="C#" Value="public string EvaluatedInclude { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EvaluatedInclude" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectItem.EvaluatedInclude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den ausgewerteten Wert des Include-Attributs ab.</summary>
+        <value>Gibt den ausgewerteten Wert des Include-Attributs zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Escapezeichen sind nicht vorhanden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadata">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.ProjectMetadata GetMetadata (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Evaluation.ProjectMetadata GetMetadata(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectItem.GetMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Metadaten, deren Wert abgerufen wird.</param>
+        <summary>Ruft den ausgewerteten Wert des angegebenen Metadaten für dieses Element ab.</summary>
+        <returns>Ruft den ausgewerteten Wert des angegebenen Metadaten für dieses Element ab. Gibt null zurück, wenn keine Metadaten mit dem angegebenen Namen vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eventuell Metadaten aus einer Elementdefinition ab. Umfasst integrierte Metadaten, z. B. "FullPath" nicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadataValue">
+      <MemberSignature Language="C#" Value="public string GetMetadataValue (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetMetadataValue(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectItem.GetMetadataValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Metadaten, deren Wert abgerufen wird.</param>
+        <summary>Ruft den ausgewerteten Wert des angegebenen Metadaten für dieses Element, einschließlich Metadaten, die von einer Elementdefinition stammen ab.</summary>
+        <returns>Gibt den ausgewerteten Wert des angegebenen Metadaten für dieses Element, einschließlich Metadaten, die von einer Elementdefinition stammen. Gibt eine leere Zeichenfolge zurück, wenn keine Metadaten mit dem angegebenen Namen vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu bestimmen, ob Metadaten vorhanden sind, gibt an, ob einen Wert oder nicht, verwenden Sie <xref:Microsoft.Build.Evaluation.ProjectItem.HasMetadata%2A>.  
+  
+ Diese Methode kann verwendet werden, Zugriff auf den Wert des integrierten Metadaten, z. B. "FullPath".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasMetadata">
+      <MemberSignature Language="C#" Value="public bool HasMetadata (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasMetadata(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectItem.HasMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Metadaten, die nach dem gesucht werden.</param>
+        <summary>Bestimmt, ob Metadaten mit dem angegebenen Namen für dieses Element definiert ist.</summary>
+        <returns>Gibt "true" zurück, wenn Metadaten mit dem angegebenen Namen für dieses Element definiert ist; "false" andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enthält integrierte Metadaten und Metadaten von Elementdefinitionen stammen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsImported">
+      <MemberSignature Language="C#" Value="public bool IsImported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsImported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectItem.IsImported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob dieses Element aus einer importierten Datei stammt.</summary>
+        <value>Gibt true zurück, wenn dieses Element aus einer importierten Datei stammt; "false" andernfalls.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public string ItemType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectItem.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ dieses Elements fest.</summary>
+        <value>Gibt den Elementtyp zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectMetadata&gt; Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Evaluation.ProjectMetadata&gt; Metadata" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectItem.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectMetadata&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle Metadaten für dieses Element, einschließlich Metadaten, die aus Elementdefinitionen stammen.</summary>
+        <value>Gibt alle Metadaten für dieses Element, einschließlich Metadaten, die aus Elementdefinitionen stammen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Umfasst integrierte Metadaten, z. B. "FullPath" nicht.  
+  
+ Zum Hinzufügen, entfernen, oder die Werte der integrierten Metadaten ändern, verwenden Sie <xref:Microsoft.Build.Evaluation.ProjectItem.GetMetadataValue%2A> und <xref:Microsoft.Build.Evaluation.ProjectItem.SetMetadataValue%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataCount">
+      <MemberSignature Language="C#" Value="public int MetadataCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MetadataCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectItem.MetadataCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Metadaten für dieses Element, einschließlich Metadaten stammen aus Elementdefinitionen sowie integrierte Metadaten ab.</summary>
+        <value>Gibt die Anzahl der Metadaten für dieses Element, einschließlich Metadaten stammen aus Elementdefinitionen sowie integrierte Metadaten zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Project">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.Project Project { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Evaluation.Project Project" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectItem.Project" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.Project</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Projekt, das dieses Projektelement enthält.</summary>
+        <value>Gibt das Projekt, das dieses Projektelement enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Projektelemente sind immer in einem Projekt enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveMetadata">
+      <MemberSignature Language="C#" Value="public bool RemoveMetadata (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveMetadata(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectItem.RemoveMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu entfernenden Metadaten.</param>
+        <summary>Entfernt alle Metadaten mit dem angegebenen Namen.</summary>
+        <returns>Gibt "true" zurück, wenn Metadaten mit dem angegebenen Namen vor dem Entfernen vorhanden ist; "false" andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Löst InvalidArgumentException aus, wenn der Name der Metadaten auf integrierte Metadaten, z. B. "FullPath" verweist.  
+  
+ Löst InvalidOperationException aus, wenn der Name der Metadaten auf Metadaten verweist, die aus einer Elementdefinition stammen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rename">
+      <MemberSignature Language="C#" Value="public void Rename (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Rename(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectItem.Rename(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der neue Name des Elements.</param>
+        <summary>Benennt das Element in dem angegebenen Namen um.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entspricht einem Festlegen der <xref:Microsoft.Build.Evaluation.ProjectItem.UnevaluatedInclude%2A> Wert. Im Allgemeinen tritt keine Auswertung, da dies in verschiedene Elemente, die im Kontext führen kann des Umbenennungsvorgangs eines einzelnen Elements keine Bedeutung hat. Jedoch wenn das Element muss nicht geteilt werden, und der neue Wert genau ein Element ausgewertet wird, klicken Sie dann die ausgewerteten Include-Attribut mit dem ausgewerteten Wert aktualisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMetadataValue">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.ProjectMetadata SetMetadataValue (string name, string unevaluatedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Evaluation.ProjectMetadata SetMetadataValue(string name, string unevaluatedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectItem.SetMetadataValue(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="unevaluatedValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der hinzuzufügenden Metadaten.</param>
+        <param name="unevaluatedValue">Der nicht ausgewertete Wert der hinzuzufügenden Metadaten.</param>
+        <summary>Fügt Metadaten mit dem angegebenen Namen und den ausgewerteten Wert auf das Element an.</summary>
+        <returns>Gibt den neuen Metadaten zurück. Wenn Metadaten mit dem angegebenen Namen bereits vorhanden ist, gibt diese Metadaten zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aktualisiert den Wert des vorhandenen Metadaten wenn Metadaten mit dem angegebenen Namen für das Element bereits vorhanden ist, solange er nicht aus einer Elementdefinition stammen. Aktualisiert die ausgewertete Projekt allerdings wirkt sich etwas im Projekt nicht bis zum erneuten Auswertung.  
+  
+ Beispielsweise wird ein Teil der Metadaten, die mit dem Namen "m" in Element vom Typ "i" hinzugefügt, er wirkt sich nicht "j" der von ausgewertet wird "@(j ->"% (m)")" bis zum erneuten Auswertung. Auch wenn der nicht ausgewertete Wert des "m" auf einen anderen Wert festgelegt ist, die durch die Auswertung, z. B. "$(p)", geändert werden wird der ausgewertete Wert um buchstäblich "$(p)" bis zum erneuten bereitstellungsbewertung festgelegt werden.  
+  
+ Sonderzeichen in den nicht ausgewerteten Wert konvertiert werden sollen, um die Zeichen mit Escapezeichen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnevaluatedInclude">
+      <MemberSignature Language="C#" Value="public string UnevaluatedInclude { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UnevaluatedInclude" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectItem.UnevaluatedInclude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den nicht ausgewerteten Wert des Include-Attributs.</summary>
+        <value>Gibt den nicht ausgewerteten Wert des Include-Attributs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Xml">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectItemElement Xml { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ProjectItemElement Xml" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectItem.Xml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectItemElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element, das diesem Element zugeordnet ist.</summary>
+        <value>Gibt das Element, das dieses Element zugeordnet ist, die nie null sein kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

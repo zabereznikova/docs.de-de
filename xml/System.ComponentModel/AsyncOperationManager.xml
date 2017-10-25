@@ -1,0 +1,149 @@
+<Type Name="AsyncOperationManager" FullName="System.ComponentModel.AsyncOperationManager">
+  <TypeSignature Language="C#" Value="public static class AsyncOperationManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AsyncOperationManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.AsyncOperationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Nebenläufigkeitsverwaltung für Klassen bereit, die asynchrone Methodenaufrufe unterstützen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Ihre Klasse, um asynchrones Verhalten gemäß bereitzustellen muss der [Übersicht über ereignisbasierte asynchrone Muster](~/docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md), tritt eine Anzahl von Problemen mit der Parallelität. Dazu gehört die Anforderung, stellen Sie sicher, dass der Ereignishandler aufgerufen werden, auf einen Thread oder Kontext, der für das Anwendungsmodell geeignet ist (z. B. Windows Forms-Anwendungen [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Anwendungen, konsolenanwendungen und So weiter). Die <xref:System.ComponentModel.AsyncOperationManager> bietet eine einfache Möglichkeit, eine Klasse erstellen, die ordnungsgemäß unter allen unterstützten von Anwendungsmodellen führt die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ Die <xref:System.ComponentModel.AsyncOperationManager> -Klasse verfügt über eine Methode, <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, welche gibt eine <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> , die verwendet werden kann, um die Dauer einer bestimmten asynchronen Aufgabe nachzuverfolgen. Die <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> für eine Aufgabe an alert Clients verwendet werden kann, wenn eine Aufgabe abgeschlossen ist. Sie können auch verwendet werden, um statusaktualisierungen und inkrementelle Ergebnisse bereitstellen, ohne dass den Vorgang beendet.  
+  
+ Weitere Informationen zu asynchrone Klassen implementieren, finden Sie unter [das ereignisbasierte asynchrone Muster implementieren](~/docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.ComponentModel.AsyncOperationManager> Klasse, um eine Klasse erstellen, die asynchrone Vorgänge für jedes beliebige Anwendungsmodell unterstützt. Es wird gezeigt, wie eine Klasse implementieren, die eine Zahl ein, um zu bestimmen, ob Primzahl testet. In dieser Berechnung kann zeitaufwändig sein, sodass es in einem separaten Thread ausgeführt wird. Statusberichte, inkrementelle Ergebnisse und Abschluss Benachrichtigungen behandelt, durch die <xref:System.ComponentModel.AsyncOperation> -Klasse, die sicherstellt, dass die Ereignishandler des Clients auf den richtigen Thread oder Kontext aufgerufen werden.  
+  
+ Eine vollständige Codebeispiel finden Sie unter [wie: implementieren eine Komponente, die das ereignisbasierte asynchrone Muster unterstützt](http://msdn.microsoft.com/library/3c1aa4d4-da87-4a03-b812-3d167b8c57cf). Eine vollständige Codeliste eines Formulars Client finden Sie unter [Vorgehensweise: Implementieren eines Clients des ereignisbasierten asynchronen Musters](~/docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+  
+ [!code-csharp[System.ComponentModel.AsyncOperationManager#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#3)]
+ [!code-vb[System.ComponentModel.AsyncOperationManager#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateOperation">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.AsyncOperation CreateOperation (object userSuppliedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.AsyncOperation CreateOperation(object userSuppliedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.AsyncOperationManager.CreateOperation(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AsyncOperation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userSuppliedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userSuppliedState">Ein Objekt verwendet, um einen bestimmten asynchronen Vorgang ein Bestandteil des Clientzustands, z. B. einen Task-ID zuordnen.</param>
+        <summary>Gibt eine <see cref="T:System.ComponentModel.AsyncOperation" /> für die Überwachung der Dauer eines bestimmten asynchronen Vorgangs.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.AsyncOperation" /> , Sie verwenden können, um die Dauer eines asynchronen Methodenaufrufs verfolgen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> Methode gibt ein <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> , die Sie verwenden können, um die Dauer eines bestimmten asynchronen Vorgangs nachzuverfolgen und um das Anwendungsmodell zu warnen, wenn der Vorgang abgeschlossen ist. Sie können es auch verwenden, um statusaktualisierungen und inkrementelle Ergebnisse bereitstellen, ohne dass den Vorgang beendet. Die <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> marshallt diese Aufrufe an den entsprechenden Thread oder Kontext für das Anwendungsmodell ordnungsgemäß.  
+  
+ Wenn Sie eine Klasse, die das ereignisbasierte asynchrone Muster unterstützt implementieren, sollte Ihre Klasse nicht aufrufen <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> jedes Mal Ihre *MethodName* `Async` -Methode aufgerufen wird. Können Sie die Clientanwendung, die Aufrufe der Methode stellt der `userSuppliedState` Parameter zur eindeutigen Identifizierung jeder Aufruf, um Ereignisse, die ausgelöst wird, während der Ausführung des asynchronen Vorgangs zu unterscheiden.  
+  
+> [!CAUTION]
+>  Clientcode bereitstellen, muss einen eindeutigen Wert für die `userSuppliedState` Parameter. Nicht eindeutige Aufgaben-IDs kann dazu führen, dass Ihre Implementierung fälschlicherweise Berichte zu Fortschritt und andere Ereignisse erstellt. Der Code sollte für eine nicht eindeutige Aufgaben-ID überprüfen und lösen eine <xref:System.ArgumentException?displayProperty=nameWithType> eine erkannt wird.  
+  
+ Code nachverfolgen muss jede <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> zurückgegebenes <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> und verwenden Sie das Objekt in den entsprechenden zugrunde liegenden asynchronen Vorgang, um Updates nach dem und beenden den Vorgang. Dieses Nachverfolgen kann so einfach wie das Übergeben der <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> als Parameter für den Delegaten. In anspruchsvolleren Entwürfe kann die Klasse eine Auflistung von verwalten <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> Objekten, Hinzufügen von Objekten aus, wenn Tasks gestartet werden, und Sie sie entfernen, wenn Aufgaben abgeschlossen oder abgebrochen werden. Diese Vorgehensweise ermöglicht es Ihnen zu suchende eindeutige `userSuppliedState` Parameter Werte, und stellt die Methode, die Sie beim Arbeiten mit Klassen, die mehrere gleichzeitige Aufrufe unterstützt verwenden sollten.  
+  
+ Weitere Informationen zu asynchrone Klassen implementieren, finden Sie unter [das ereignisbasierte asynchrone Muster implementieren](~/docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> Methode zum Erstellen einer <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> für die Überwachung der Dauer von asynchronen Vorgängen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.ComponentModel.AsyncOperationManager> Klasse.  
+  
+ [!code-csharp[System.ComponentModel.AsyncOperationManager#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#3)]
+ [!code-vb[System.ComponentModel.AsyncOperationManager#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SynchronizationContext">
+      <MemberSignature Language="C#" Value="public static System.Threading.SynchronizationContext SynchronizationContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Threading.SynchronizationContext SynchronizationContext" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.AsyncOperationManager.SynchronizationContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.SynchronizationContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Synchronisierungskontext für den asynchronen Vorgang.</summary>
+        <value>Der Synchronisierungskontext für den asynchronen Vorgang.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung ist die Freethread-Implementierung.  
+  
+ Ein Thread festlegen, sollten die <xref:System.ComponentModel.AsyncOperationManager.SynchronizationContext%2A> Eigenschaft, um `null` freizugeben Freethread-Factory erfolgt, da andernfalls die Factory wird nie freigegeben werden.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">zum Festlegen des Synchronisierungskontexts. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

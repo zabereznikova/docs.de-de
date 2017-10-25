@@ -1,0 +1,50 @@
+<Type Name="SlipBehavior" FullName="System.Windows.Media.Animation.SlipBehavior">
+  <TypeSignature Language="C#" Value="public enum SlipBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SlipBehavior extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.SlipBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie eine <see cref="T:System.Windows.Media.Animation.ParallelTimeline" /> verhält, wenn eine oder mehrere der seine <see cref="T:System.Windows.Media.Animation.Timeline" /> -Element nicht synchron ist.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Grow">
+      <MemberSignature Language="C#" Value="Grow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.SlipBehavior Grow = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.SlipBehavior.Grow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.SlipBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine <see cref="T:System.Windows.Media.Animation.ParallelTimeline" /> wird nicht mit der untergeordneten Verteiler <see cref="T:System.Windows.Media.Animation.Timeline" />, jedoch erweitert wird, um alle synchronen passen <see cref="T:System.Windows.Media.Animation.Timeline" /> untergeordneten Elemente. **Hinweis**: Dies ist nur wirksam, wenn die <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> von der <see cref="T:System.Windows.Media.Animation.ParallelTimeline" /> nicht explizit angegeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Slip">
+      <MemberSignature Language="C#" Value="Slip" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.SlipBehavior Slip = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.SlipBehavior.Slip" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.SlipBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine <see cref="T:System.Windows.Media.Animation.ParallelTimeline" /> wird zusammen mit den ersten untergeordneten Slip <see cref="T:System.Windows.Media.Animation.Timeline" /> synchron sind, wenn dieses verzögert oder beschleunigt wird...</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Tasks">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.Build.Tasks" /> -Namespace enthält die Implementierung aller Aufgaben, die von MSBuild. Informationen finden Sie unter <see href="https://docs.microsoft.com/visualstudio/msbuild/">MSBuild</see>.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

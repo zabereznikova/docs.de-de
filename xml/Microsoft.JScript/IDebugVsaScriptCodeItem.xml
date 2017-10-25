@@ -1,0 +1,85 @@
+<Type Name="IDebugVsaScriptCodeItem" FullName="Microsoft.JScript.IDebugVsaScriptCodeItem">
+  <TypeSignature Language="C#" Value="public interface IDebugVsaScriptCodeItem" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDebugVsaScriptCodeItem" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.IDebugVsaScriptCodeItem" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("6DFE759A-CB8B-4ca0-A973-1D04E0BF0B53")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Methoden, die Ausdrücke werden ausgewertet und Analysieren von Zeichenfolgen an. Diese Schnittstelle wird von einem Objekt, das einen Codeblock darstellt, in der Regel implementiert, und er wird in der Regel von einem Debugger aufgerufen. Diese Schnittstelle bietet zusätzliche Funktionen, die von einem IActiveScript-Host benötigt wird.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Evaluate">
+      <MemberSignature Language="C#" Value="public object Evaluate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Evaluate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IDebugVsaScriptCodeItem.Evaluate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bei Implementierung in einer Klasse wertet den Block, Ausdruck oder Anweisung, die durch das Codeelement dargestellt wird, und gibt den Wert zurück. In der Regel heißt es von einem Debugger aus, die zum Auswerten eines Ausdrucks (in einem Überwachungsfenster, z. B.) benötigt. Für Ausdrücke ist der Wert das Ergebnis des Ausdrucks. Für Blöcke und Anweisungen wird der Ergebnisausdruck der letzte Ausdruck berechnet, indem der Block oder der Anweisung.</summary>
+        <returns>Gibt einen Wert, der die Auswertung der Anweisung, den Ausdruck oder den Block darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass die <xref:Microsoft.JScript.IDebugVsaScriptCodeItem.Evaluate%2A> Methode ist funktionell identisch zum die <xref:Microsoft.JScript.IVsaScriptCodeItem.Execute%2A> Methode. Nur die Marshalling Attribute unterscheiden sich. Diese Version der Schnittstelle ermöglicht es, einen nicht verwalteten Debugger zum Abrufen des Rückgabewert als ein `IUnknown` Zeiger anstelle eines `VARIANT`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ParseNamedBreakPoint">
+      <MemberSignature Language="C#" Value="public bool ParseNamedBreakPoint (string input, out string functionName, out int nargs, out string arguments, out string returnType, out ulong offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ParseNamedBreakPoint(string input, [out] string&amp; functionName, [out] int32&amp; nargs, [out] string&amp; arguments, [out] string&amp; returnType, [out] unsigned int64&amp; offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IDebugVsaScriptCodeItem.ParseNamedBreakPoint(System.String,System.String@,System.Int32@,System.String@,System.String@,System.UInt64@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="functionName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="nargs" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="arguments" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="returnType" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="offset" Type="System.UInt64&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="input">Eine wohlgeformte benannte Haltepunktzeichenfolge zuteilen einer Funktion, eine optionale Argumentliste und eine optionale IL-Offset.</param>
+        <param name="functionName">Out-Parameter analysiert Zurückgeben des Namens der Funktion aus der Eingabezeichenfolge, oder eine leere Zeichenfolge, wenn die Eingabezeichenfolge nicht wohlgeformt ist.</param>
+        <param name="nargs">Out-Parameter, die die Anzahl der Argumente in der Argumentliste optional zurückgeben. Gibt NULL zurück, wenn keine Argumentliste vorhanden ist oder wenn die Zeichenfolge nicht wohlgeformt ist.</param>
+        <param name="arguments">Out-Parameter zurückgibt eine Leerzeichen getrennte Liste mit den Namen der Typen der Argumente aller in der Argumentliste oder eine leere Zeichenfolge, wenn die Argumentliste, fehlt ist oder die Eingabezeichenfolge ist nicht wohlgeformt.</param>
+        <param name="returnType">Out-Parameter zurückgibt, eine Zeichenfolge mit dem Rückgabetyp der Funktion mit dem Namen in der Eingabe oder die leere Zeichenfolge, wenn der Rückgabetyp fehlten oder die Eingabezeichenfolge nicht wohlgeformt.</param>
+        <param name="offset">Unsigned long-Integer-Vergabe des IL-Offsets aus der Eingabezeichenfolge, oder 0 (null), wenn die Zeichenfolge nicht wohlgeformt ist oder es keine IL-Offset wurde.</param>
+        <summary>Bei Implementierung in einer Klasse analysiert Zeichenfolgen und gibt die analysierten Informationen zurück. Diese Methode wird in der Regel aufgerufen, von einem Debugger, die Informationen über einen Haltepunkt zu analysieren, das als dargestellt wird, muss ein <see langword="string" />. Der Debugger möglicherweise einen Haltepunkt im vom Benutzer eingegeben wird in der Form *Funktionsname-Argumente-IL-Offset*. Eine benannte Haltepunktzeichenfolge kann eine komplexen Format haben, z. B. <c>F.B (C.D [], Int, Arg: double): C.Abc + 123.</c> Die Parameterliste ist optional, da die IL-Offset ist.</summary>
+        <returns>Gibt <see langword="true" /> , wenn der benannte Haltepunkt erfolgreich analysiert wird, <see langword="false" /> andernfalls.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

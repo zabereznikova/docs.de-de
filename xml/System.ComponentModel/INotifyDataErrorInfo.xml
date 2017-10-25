@@ -1,0 +1,148 @@
+<Type Name="INotifyDataErrorInfo" FullName="System.ComponentModel.INotifyDataErrorInfo">
+  <TypeSignature Language="C#" Value="public interface INotifyDataErrorInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INotifyDataErrorInfo" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.INotifyDataErrorInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.ObjectModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Member, die Datenentitätsklassen implementieren können, um eine benutzerdefinierte Validierung (synchron und asynchron) zu unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ermöglicht datenentitätsklassen zum Implementieren von benutzerdefinierten Validierungsregeln und machen die Überprüfungsergebnisse asynchron. Diese Schnittstelle unterstützt auch benutzerdefinierte Fehlerobjekte, mehrere Fehler pro Eigenschaft, eigenschaftenübergreifende Fehler und Fehler auf Entitätsebene. Eigenschaftenübergreifende Fehler sind Fehler, die mehrere Eigenschaften wirken sich auf. Sie können diese Fehler mit einem oder allen betroffenen Eigenschaften zuordnen, oder als Fehler auf Entitätsebene behandelt werden. Auf Entitätsebene Fehler sind Fehler, die mehrere Eigenschaften beeinflussen oder Auswirkungen auf die ganze Entität ohne Auswirkungen auf eine bestimmte Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ErrorsChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.DataErrorsChangedEventArgs&gt; ErrorsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.DataErrorsChangedEventArgs&gt; ErrorsChanged" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.INotifyDataErrorInfo.ErrorsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.DataErrorsChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die Validierungsfehler für eine Eigenschaft oder für die ganze Entität geändert haben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die implementierende Klasse sollte lösen Sie dieses Ereignis auf der Benutzeroberfläche bei jedem thread die <xref:System.ComponentModel.INotifyDataErrorInfo.GetErrors%2A> geändert wird, zurückgeben, selbst wenn der Rückgabewert implementiert <xref:System.Collections.Specialized.INotifyCollectionChanged>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrors">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable GetErrors (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerable GetErrors(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.INotifyDataErrorInfo.GetErrors(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der Eigenschaft, die Validierungsfehler für abrufen; oder <see langword="null" /> oder <see cref="F:System.String.Empty" />, um Fehler auf Entitätsebene abzurufen.</param>
+        <summary>Ruft die Validierungsfehler für eine angegebene Eigenschaft oder für die ganze Entität ab.</summary>
+        <returns>Die Validierungsfehler für die Eigenschaft oder die Entität.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt ein <xref:System.Collections.IEnumerable> können, die Validierungsregeln für asynchrone Verarbeitung abgeschlossen ändern. Dadurch wird das Bindungsmodul Überprüfung der Benutzerfeedback-Schnittstelle automatisch zu aktualisieren, wenn Fehler hinzugefügt, entfernt oder geändert werden.  
+  
+ Der Rückgabewert kann wechselt zu einer anderen <xref:System.Collections.IEnumerable>, oder sie können eine zuvor zurückgegebene wiederverwenden <xref:System.Collections.IEnumerable> und seinen Inhalt zu ändern. Alle Änderungen an den Rückgabewert auslösen soll die <xref:System.ComponentModel.INotifyDataErrorInfo.ErrorsChanged> Ereignis, selbst wenn der Rückgabewert implementiert <xref:System.Collections.Specialized.INotifyCollectionChanged>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasErrors">
+      <MemberSignature Language="C#" Value="public bool HasErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasErrors" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.INotifyDataErrorInfo.HasErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Entität über Validierungsfehler verfügt.</summary>
+        <value>
+          <see langword="true" />Wenn die Entität derzeit Validierungsfehler aufweist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt `false` treten keine bekannten auf Entitätsebene oder Eigenschaftenebene Überprüfungsfehler für die Entität die zum Zeitpunkt der Zugriff darauf ist möglich. Allerdings einige Überprüfungsregeln möglicherweise weiterhin ausgeführt werden asynchron von der Beschreibung für die <xref:System.ComponentModel.INotifyDataErrorInfo.GetErrors%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

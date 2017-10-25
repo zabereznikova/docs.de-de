@@ -1,0 +1,583 @@
+<Type Name="DataGridViewImageCell" FullName="System.Windows.Forms.DataGridViewImageCell">
+  <TypeSignature Language="C#" Value="public class DataGridViewImageCell : System.Windows.Forms.DataGridViewCell" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewImageCell extends System.Windows.Forms.DataGridViewCell" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewImageCell" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridViewCell</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Zeigt eine Grafik in einem <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewImageCell> Klasse ist ein spezialisierter Typ von <xref:System.Windows.Forms.DataGridViewCell> verwendet, um anzuzeigen ein <xref:System.Drawing.Image> oder ein <xref:System.Drawing.Icon>, abhängig vom Wert von der <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A> Eigenschaft. In der Regel die <xref:System.Windows.Forms.DataGridViewCell.ReadOnly%2A> Eigenschaft eine <xref:System.Windows.Forms.DataGridViewImageCell> festgelegt ist, um `true` um anzugeben, dass der Zelleninhalt bearbeitet werden können.  
+  
+ Die <xref:System.Windows.Forms.DataGridViewImageColumn> der Spaltentyp spezialisiert ist verwenden, um Zellen dieses Typs enthalten. Wird standardmäßig die <xref:System.Windows.Forms.DataGridViewImageColumn.CellTemplate%2A?displayProperty=nameWithType> initialisiert wird, um ein neues <xref:System.Windows.Forms.DataGridViewImageCell>. Um die Zellen innerhalb einer Spalte nach einem vorhandenen Muster <xref:System.Windows.Forms.DataGridViewImageCell>, legen Sie die Spalte <xref:System.Windows.Forms.DataGridViewImageColumn.CellTemplate%2A> Eigenschaft auf die Zelle, die als ein Muster verwendet.  
+  
+ Die Zelle-bezogenen Eigenschaften der Spalte sind Wrapper für die ähnlich benannten Eigenschaften der Vorlagenzelle. Ändern die Eigenschaftswerte der Vorlagenzelle wirkt sich auf nur die Zellen, die basierend auf der Vorlage aus, die nach der Änderung hinzugefügt werden. Ändern die Zelle bezogene Eigenschaftenwerte der Spalte, allerdings wird aktualisieren Sie die Vorlagenzelle und alle anderen Zellen in der Spalte, und aktualisieren Sie die Spaltenanzeige bei Bedarf.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie so ändern Sie das Bild in die Zelle für ein Bild mit <xref:System.Windows.Forms.DataGridViewCell>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels unter dem Thema [Vorgehensweise: Arbeiten mit Bildspalten im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CPP/tictactoe.cpp#10)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CS/tictactoe.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/VB/tictactoe.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Ableiten von <see cref="T:System.Windows.Forms.DataGridViewImageCell" /> und der abgeleiteten Klasse neue Eigenschaften hinzugefügt haben, achten Sie darauf, dass Sie überschreiben die <see cref="M:System.Windows.Forms.DataGridViewImageCell.Clone" /> Methode, um die neuen Eigenschaften bei Klonvorgängen kopiert. Sie sollten auch der Basisklasse aufrufen, <see cref="M:System.Windows.Forms.DataGridViewImageCell.Clone" /> Methode, damit die Eigenschaften der Basisklasse in die neue Zelle kopiert werden.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewImageCell ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewImageCell.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.DataGridViewImageCell" /> -Klasse, außer für die Verwendung mit Zellenwerte konfigurieren <see cref="T:System.Drawing.Icon" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ruft <xref:System.Windows.Forms.DataGridViewImageCell.%23ctor%28System.Boolean%29> mit einem `valueIsIcon` -Parameterwert `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewImageCell (bool valueIsIcon);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool valueIsIcon) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewImageCell.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="valueIsIcon" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="valueIsIcon">Zeigt die Zelle ein <see cref="T:System.Drawing.Icon" /> Wert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.DataGridViewImageCell" /> -Klasse, konfiguriert sie optional für die Verwendung mit <see cref="T:System.Drawing.Icon" /> Zellwerte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diesen Konstruktor verwenden die <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A> auf den Wert der Eigenschaft festgelegt ist die `valueIsIcon` Parameter.  
+  
+ Um sicherzustellen, dass den Alphakanal <xref:System.Drawing.Icon> Werte ordnungsgemäß gezeichnet wird, verwenden Sie diesen Konstruktor mit einem `valueIsIcon` -Parameterwert `true`.  
+  
+ Wenn die `valueIsIcon` Parameter ist `true`, die <xref:System.Windows.Forms.DataGridViewImageCell.FormattedValueType%2A> und <xref:System.Windows.Forms.DataGridViewImageCell.ValueType%2A> Eigenschaften zurückgeben einer <xref:System.Type> Objekt darstellt der <xref:System.Drawing.Icon> Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewImageCell.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine genaue Kopie dieser Zelle.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das die geklonte <see cref="T:System.Windows.Forms.DataGridViewImageCell" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie die <xref:System.Windows.Forms.DataGridViewImageCell.Clone%2A> -Methode auf, wenn Sie von ableiten <xref:System.Windows.Forms.DataGridViewImageCell> und der abgeleiteten Klasse neue Eigenschaften hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.DataGridViewImageCell.Clone" /> rufen Sie in einer abgeleiteten Klasse die Basisklasse <see cref="M:System.Windows.Forms.DataGridViewImageCell.Clone" /> Methode, damit die Eigenschaften der Basisklasse in die neue Zelle kopiert werden, und achten Sie darauf, dass Sie auch die Werte der Eigenschaften kopieren, die der abgeleiteten Klasse hinzugefügt wurden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewImageCell.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues barrierefreies Objekt für die <see cref="T:System.Windows.Forms.DataGridViewImageCell" />.</summary>
+        <returns>Ein neues <see cref="T:System.Windows.Forms.DataGridViewImageCell.DataGridViewImageCellAccessibleObject" /> für die <see cref="T:System.Windows.Forms.DataGridViewImageCell" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die <xref:System.Windows.Forms.DataGridViewImageCell.CreateAccessibilityInstance%2A>-Methode nicht explizit aufrufen, wird sie beim Verweis auf die <xref:System.Windows.Forms.DataGridViewCell.AccessibilityObject%2A>-Eigenschaft aufgerufen.  
+  
+> [!NOTE]
+>  Zum Abrufen oder festlegen <xref:System.Windows.Forms.DataGridViewCell.AccessibilityObject%2A>, müssen Sie einen Verweis zum Hinzufügen der `Accessibility` Assembly, die mit .NET Framework installiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultNewRowValue">
+      <MemberSignature Language="C#" Value="public override object DefaultNewRowValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DefaultNewRowValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewImageCell.DefaultNewRowValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardwert, der verwendet wird, für die Erstellung eine neue Zeile ab.</summary>
+        <value>Ein Objekt mit einer Standard-Bildplatzhalter oder <see langword="null" /> eine leere Zelle angezeigt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft muss vom Typ <xref:System.Drawing.Image> oder Typ <xref:System.Drawing.Icon>, abhängig vom Wert von der <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A> Eigenschaft.  
+  
+ Wenn ein <xref:System.Windows.Forms.DataGridView> wird angezeigt, in die neuen Zeilen hinzugefügt werden können, die letzte Zeile ist eine leere neue Zeile von Zellen, die mit den Standardwerten geladen. Überschreiben Sie diese Eigenschaft, um ein anderes Standardbild für diese Zellen bereitzustellen oder zurückzugebenden `null` zu vermeiden, Anzeigen von Bildern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewImageCell.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den dem Bild zugeordneten Text fest.</summary>
+        <value>Der Text, der dem Bild angezeigt, in der Zelle zugeordnet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie werden in der Regel eine textbeschreibung für jede Zelle Image bereitstellen. Diese Beschreibung bietet eine Alternative zugegriffen werden kann, zu dem Bild. Darüber hinaus wird der Beschreibungstext verwendet, wenn der Wert der Zelle in die Zwischenablage kopiert werden.  
+  
+ Festlegen der <xref:System.Windows.Forms.DataGridViewImageColumn.Description%2A> -Eigenschaft der besitzenden Spalte setzt auch die <xref:System.Windows.Forms.DataGridViewImageCell.Description%2A> -Eigenschaft für jede Zelle in der Spalte. Um den angegebenen Wert für einzelne Zellen zu überschreiben, legen Sie die Zellenwerte, nach dem Festlegen der Wert der Spalte.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Windows.Forms.DataGridViewImageColumn.Description%2A?displayProperty=nameWithType> -Eigenschaft, die diese Eigenschaft ähnelt. In diesem Beispiel ist Teil eines umfangreicheren Beispiels in [Vorgehensweise: Arbeiten mit Bildspalten im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#20](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CPP/tictactoe.cpp#20)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CS/tictactoe.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/VB/tictactoe.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditType">
+      <MemberSignature Language="C#" Value="public override Type EditType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EditType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewImageCell.EditType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Bearbeitungssteuerelement der Zelle ab.</summary>
+        <value>Die <see cref="T:System.Type" /> des zugrunde liegenden Bearbeitungssteuerelements. Wie in dieser Klasse implementiert wird, ist diese Eigenschaft immer <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewImageCell.EditType%2A> Eigenschaft ist immer `null` da es kein zugeordnetes Windows Forms-Steuerelement zum Bearbeiten eines Bildes ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormattedValueType">
+      <MemberSignature Language="C#" Value="public override Type FormattedValueType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type FormattedValueType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewImageCell.FormattedValueType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des formatierten Werts ab, der der Zelle zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.Type" /> Objekt darstellt Werttyps in der Zelle angezeigt der <see cref="T:System.Drawing.Image" /> geben, wenn der <see cref="P:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon" /> -Eigenschaftensatz auf <see langword="false" /> oder die <see cref="T:System.Drawing.Icon" /> Geben Sie andernfalls.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft ist eine Eigenschaft ist ein <xref:System.Type> Objekt, das entweder darstellt der <xref:System.Drawing.Image> Typ oder die <xref:System.Drawing.Icon> eingeben, weil eine <xref:System.Windows.Forms.DataGridViewImageCell> Grafiken nur verarbeitet werden können.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DataGridViewCell.FormattedValueType%2A?displayProperty=nameWithType> Eigenschaft zum Bestimmen des Typs, der den Zelleninhalt. In diesem Beispiel wird die <xref:System.Windows.Forms.DataGridViewCell.FormattedValueType%2A?displayProperty=nameWithType> Eigenschaft wird verwendet, um zu bestimmen, ob die Zelle enthält eine <xref:System.String> vor dem Versuch, den Wert zu konvertieren. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in dem <xref:System.Windows.Forms.DataGridView.SelectionChanged?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewSelectionSum#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectionSum/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridViewSelectionSum#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectionSum/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentBounds">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Rectangle GetContentBounds (System.Drawing.Graphics graphics, System.Windows.Forms.DataGridViewCellStyle cellStyle, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Rectangle GetContentBounds(class System.Drawing.Graphics graphics, class System.Windows.Forms.DataGridViewCellStyle cellStyle, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewImageCell.GetContentBounds(System.Drawing.Graphics,System.Windows.Forms.DataGridViewCellStyle,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Der Grafikkontext für die Zelle.</param>
+        <param name="cellStyle">Die <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> auf die Zelle angewendet werden soll.</param>
+        <param name="rowIndex">Der Index der übergeordneten Zeile der Zelle.</param>
+        <summary>Gibt das umschließende Rechteck, das die Zelle Inhaltsbereichs Zellstils berechnet wird unter Verwendung des angegebenen <see cref="T:System.Drawing.Graphics" /> und Stil der Zelle.</summary>
+        <returns>Die <see cref="T:System.Drawing.Rectangle" /> , die den Inhalt der Zelle umschließt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrorIconBounds">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Rectangle GetErrorIconBounds (System.Drawing.Graphics graphics, System.Windows.Forms.DataGridViewCellStyle cellStyle, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Rectangle GetErrorIconBounds(class System.Drawing.Graphics graphics, class System.Windows.Forms.DataGridViewCellStyle cellStyle, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewImageCell.GetErrorIconBounds(System.Drawing.Graphics,System.Windows.Forms.DataGridViewCellStyle,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Der Grafikkontext für die Zelle.</param>
+        <param name="cellStyle">Die <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> auf die Zelle angewendet werden soll.</param>
+        <param name="rowIndex">Der Index der übergeordneten Zeile der Zelle.</param>
+        <summary>Gibt das das Fehlersymbol der Zelle, sofern angezeigt, umschließende Rechteck zurück.</summary>
+        <returns>Die <see cref="T:System.Drawing.Rectangle" /> , das das Fehlersymbol der Zelle, sofern angezeigt, andernfalls <see cref="F:System.Drawing.Rectangle.Empty" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormattedValue">
+      <MemberSignature Language="C#" Value="protected override object GetFormattedValue (object value, int rowIndex, ref System.Windows.Forms.DataGridViewCellStyle cellStyle, System.ComponentModel.TypeConverter valueTypeConverter, System.ComponentModel.TypeConverter formattedValueTypeConverter, System.Windows.Forms.DataGridViewDataErrorContexts context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetFormattedValue(object value, int32 rowIndex, class System.Windows.Forms.DataGridViewCellStyle&amp; cellStyle, class System.ComponentModel.TypeConverter valueTypeConverter, class System.ComponentModel.TypeConverter formattedValueTypeConverter, valuetype System.Windows.Forms.DataGridViewDataErrorContexts context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewImageCell.GetFormattedValue(System.Object,System.Int32,System.Windows.Forms.DataGridViewCellStyle@,System.ComponentModel.TypeConverter,System.ComponentModel.TypeConverter,System.Windows.Forms.DataGridViewDataErrorContexts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle&amp;" RefType="ref" />
+        <Parameter Name="valueTypeConverter" Type="System.ComponentModel.TypeConverter" />
+        <Parameter Name="formattedValueTypeConverter" Type="System.ComponentModel.TypeConverter" />
+        <Parameter Name="context" Type="System.Windows.Forms.DataGridViewDataErrorContexts" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der formatiert werden.</param>
+        <param name="rowIndex">Der Index der übergeordneten Zeile der Zelle.</param>
+        <param name="cellStyle">Die <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> für die Zelle.</param>
+        <param name="valueTypeConverter">Ein <see cref="T:System.ComponentModel.TypeConverter" /> Werttyps, der benutzerdefinierte Konvertierung in den Typ der formatierte Wert zugeordnet oder <see langword="null" /> wenn solch eine benutzerdefinierte Konvertierung erforderlich ist.</param>
+        <param name="formattedValueTypeConverter">Ein <see cref="T:System.ComponentModel.TypeConverter" /> formatierte Werttyps, der benutzerdefinierte Konvertierung aus dem Werttyp ermöglicht zugeordnet oder <see langword="null" /> wenn solch eine benutzerdefinierte Konvertierung erforderlich ist.</param>
+        <param name="context">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewDataErrorContexts" /> Werte beschreibt den Kontext, in dem der formatierte Wert benötigt wird.</param>
+        <summary>Gibt eine Grafik zurück, wie er in der Zelle angezeigt.</summary>
+        <returns>Ein Objekt, das formatierte Bild darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridView> Steuerelement ruft diese Methode, um einen Zellenwert in eine entsprechende Anzeigewert der vom angegebenen Typ konvertieren die <xref:System.Windows.Forms.DataGridViewImageCell.FormattedValueType%2A> Eigenschaft. Das Steuerelement übergibt der Wert der Zelle an diese Methode in der `value` Parameter.  
+  
+ Wenn die `context` Parameterwert umfasst die <xref:System.Windows.Forms.DataGridViewDataErrorContexts.ClipboardContent> Wert, der diese Methode gibt den Wert der die <xref:System.Windows.Forms.DataGridViewImageCell.Description%2A> Eigenschaft für das Kopieren in die Zwischenablage. Andernfalls die <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> Ereignis auftritt.  
+  
+ Ein <xref:System.Windows.Forms.DataGridView.CellFormatting> Ereignishandler kann beide ändern `value` und `cellStyle`. Wenn der Handler nicht festgelegt ist die <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied%2A?displayProperty=nameWithType> Eigenschaft `true`, diese Methode jedoch formatiert `value` mithilfe der Formatierungseigenschaften des der `cellStyle` Objekt.  
+  
+ Wenn die Formatierung nicht erfolgreich ist, ist die <xref:System.Windows.Forms.DataGridView.DataError> Ereignis auftritt. Wenn kein für dieses Ereignis oder der Handler legt Handler die <xref:System.Windows.Forms.DataGridViewDataErrorEventArgs.ThrowException%2A?displayProperty=nameWithType> Eigenschaft `true`, wird eine Ausnahme ausgelöst.  
+  
+ Wenn die Formatierung erfolgreich ist und der Typ des formatierten Werts entspricht dem Wert der <xref:System.Windows.Forms.DataGridViewImageCell.FormattedValueType%2A> -Eigenschaft, gibt diese Methode den formatierten Wert zurück. Diese Methode gibt, andernfalls eine Grafik Standardfehler zurück, in dem vom angegebenen Typ der <xref:System.Windows.Forms.DataGridViewImageCell.FormattedValueType%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size GetPreferredSize (System.Drawing.Graphics graphics, System.Windows.Forms.DataGridViewCellStyle cellStyle, int rowIndex, System.Drawing.Size constraintSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Size GetPreferredSize(class System.Drawing.Graphics graphics, class System.Windows.Forms.DataGridViewCellStyle cellStyle, int32 rowIndex, valuetype System.Drawing.Size constraintSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewImageCell.GetPreferredSize(System.Drawing.Graphics,System.Windows.Forms.DataGridViewCellStyle,System.Int32,System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="constraintSize" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> zum Zeichnen der Zelle verwendet.</param>
+        <param name="cellStyle">Ein <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> , der den Stil der Zelle darstellt.</param>
+        <param name="rowIndex">Der auf 0 (null) basierende Zeilenindex der Zelle.</param>
+        <param name="constraintSize">Die maximal zulässige Größe der Zelle.</param>
+        <summary>Berechnet die geeignete Größe der Zelle (in Pixel).</summary>
+        <returns>Ein <see cref="T:System.Drawing.Size" /> , das die bevorzugte Größe der Zelle in Pixel darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="protected override object GetValue (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetValue(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewImageCell.GetValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index der übergeordneten Zeile der Zelle.</param>
+        <summary>Ruft den Wert der Zelle ab.</summary>
+        <returns>Der Wert in der <see cref="T:System.Windows.Forms.DataGridViewCell" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageLayout">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewImageCellLayout ImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewImageCellLayout ImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewImageCell.ImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewImageCellLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert das Grafiklayout für die Zelle.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataGridViewImageCellLayout" /> für diese Zelle. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.DataGridViewImageCellLayout.NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ändern dieser Eigenschaft führt dazu, dass die Zelle selbst neu zeichnet.  
+  
+ Festlegen der <xref:System.Windows.Forms.DataGridViewImageColumn.ImageLayout%2A> -Eigenschaft der besitzenden Spalte setzt auch die <xref:System.Windows.Forms.DataGridViewImageCell.ImageLayout%2A> -Eigenschaft für jede Zelle in der Spalte und Aktualisierungen in der Spalte angezeigt. Um den angegebenen Wert für einzelne Zellen zu überschreiben, legen Sie die Zellenwerte, nach dem Festlegen der Wert der Spalte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Die angegebene <see cref="T:System.Windows.Forms.DataGridViewImageCellLayout" /> Wert ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="protected override void Paint (System.Drawing.Graphics graphics, System.Drawing.Rectangle clipBounds, System.Drawing.Rectangle cellBounds, int rowIndex, System.Windows.Forms.DataGridViewElementStates elementState, object value, object formattedValue, string errorText, System.Windows.Forms.DataGridViewCellStyle cellStyle, System.Windows.Forms.DataGridViewAdvancedBorderStyle advancedBorderStyle, System.Windows.Forms.DataGridViewPaintParts paintParts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Paint(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle clipBounds, valuetype System.Drawing.Rectangle cellBounds, int32 rowIndex, valuetype System.Windows.Forms.DataGridViewElementStates elementState, object value, object formattedValue, string errorText, class System.Windows.Forms.DataGridViewCellStyle cellStyle, class System.Windows.Forms.DataGridViewAdvancedBorderStyle advancedBorderStyle, valuetype System.Windows.Forms.DataGridViewPaintParts paintParts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewImageCell.Paint(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.DataGridViewElementStates,System.Object,System.Object,System.String,System.Windows.Forms.DataGridViewCellStyle,System.Windows.Forms.DataGridViewAdvancedBorderStyle,System.Windows.Forms.DataGridViewPaintParts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="clipBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="cellBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="elementState" Type="System.Windows.Forms.DataGridViewElementStates" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="formattedValue" Type="System.Object" />
+        <Parameter Name="errorText" Type="System.String" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="advancedBorderStyle" Type="System.Windows.Forms.DataGridViewAdvancedBorderStyle" />
+        <Parameter Name="paintParts" Type="System.Windows.Forms.DataGridViewPaintParts" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> zum Zeichnen der Zelle verwendet wird.</param>
+        <param name="clipBounds">Ein <see cref="T:System.Drawing.Rectangle" /> , das den Clientbereich darstellt der <see cref="T:System.Windows.Forms.DataGridView" /> , die neu gezeichnet werden muss.</param>
+        <param name="cellBounds">Ein <see cref="T:System.Drawing.Rectangle" /> , enthält die Grenzen der Zelle, die gezeichnet wird.</param>
+        <param name="rowIndex">Der Zeilenindex der gezeichneten Zelle.</param>
+        <param name="elementState">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.DataGridViewElementStates" /> Werte, die den Status der Zelle angibt.</param>
+        <param name="value">Die Daten der Zelle, die gezeichnet wird.</param>
+        <param name="formattedValue">Die formatierten Daten der Zelle, die gezeichnet wird.</param>
+        <param name="errorText">Eine Fehlermeldung, die der Zelle zugeordnet ist.</param>
+        <param name="cellStyle">Ein <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> , formatierungs- und Formatinformationen Informationen über die Zelle enthält.</param>
+        <param name="advancedBorderStyle">Ein <see cref="T:System.Windows.Forms.DataGridViewAdvancedBorderStyle" /> mit Rahmenarten für die Zelle, die gezeichnet wird.</param>
+        <param name="paintParts">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.DataGridViewPaintParts" /> Werte, der angibt, welche Teile der Zelle gezeichnet werden müssen.</param>
+        <summary>Zeichnet die aktuelle <see cref="T:System.Windows.Forms.DataGridViewImageCell" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewImageCell.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle Objekt beschreibt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueIsIcon">
+      <MemberSignature Language="C#" Value="public bool ValueIsIcon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValueIsIcon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob diese Zelle angezeigt wird, ein <see cref="T:System.Drawing.Icon" /> Wert.</summary>
+        <value>
+          <see langword="true" />Wenn diese Zelle zeigt ein <see cref="T:System.Drawing.Icon" /> Wert; anderenfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um sicherzustellen, dass den Alphakanal <xref:System.Drawing.Icon> Werte ordnungsgemäß gezeichnet wird, legen Sie diese Eigenschaft auf `true`. Wenn diese Eigenschaft den Wert `true`, <xref:System.Windows.Forms.DataGridViewImageCell.FormattedValueType%2A> und <xref:System.Windows.Forms.DataGridViewImageCell.ValueType%2A> Eigenschaften zurückgeben einer <xref:System.Type> Objekt darstellt der <xref:System.Drawing.Icon> Typ.  
+  
+ Festlegen der <xref:System.Windows.Forms.DataGridViewImageColumn.ValuesAreIcons%2A> -Eigenschaft der besitzenden Spalte setzt auch die <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A> -Eigenschaft für jede Zelle in der Spalte und Aktualisierungen in der Spalte angezeigt. Um den angegebenen Wert für einzelne Zellen zu überschreiben, legen Sie die Zellenwerte, nach dem Festlegen der Wert der Spalte.  
+  
+ Wenn der Wert dieser Eigenschaft für eine Zelle in der Zeile für neue Datensätze ändert, wird das Bild der Zelle angezeigten auf den aktuellen Wert des aktualisiert die <xref:System.Windows.Forms.DataGridViewImageCell.DefaultNewRowValue%2A> Eigenschaft.  
+  
+ Im Gegensatz zu den Spalten <xref:System.Windows.Forms.DataGridViewImageColumn.ValuesAreIcons%2A> -Eigenschaft, die die Zelle <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A> Eigenschaft wird nicht automatisch aktualisiert. die <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> Eigenschaft der zugeordneten Zellenstil, wenn Sie den Wert ändern. Wenn Sie die Zelle ändern <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A> Eigenschaftswert angibt, `true`, müssen Sie festlegen der <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> -Eigenschaft des Objekts zurückgegeben wird, indem Sie die <xref:System.Windows.Forms.DataGridViewCell.Style%2A> -Eigenschaft eine gültige <xref:System.Drawing.Icon>. Wenn Sie ändern die <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A> Eigenschaftswert angibt, der `false`, müssen Sie festlegen der <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> -Eigenschaft eine gültige <xref:System.Drawing.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueType">
+      <MemberSignature Language="C#" Value="public override Type ValueType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ValueType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewImageCell.ValueType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Datentyp der Werte in der Zelle ab oder legt ihn fest.</summary>
+        <value>Die <see cref="T:System.Type" /> der Wert der Zelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft abgerufen wird, wenn die <xref:System.Windows.Forms.DataGridViewImageCell.ValueType%2A> für die Zelle nicht festgelegt wurde, und klicken Sie dann die <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A?displayProperty=nameWithType> für die besitzende Spalte verwendet wird, falls vorhanden,. Wenn keine besitzende Spalte vorhanden ist, der Standardtyp der Wert wird verwendet, die <xref:System.Drawing.Image> geben, wenn die <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A> -Eigenschaftensatz auf `false` und die <xref:System.Drawing.Icon> andernfalls geben.  
+  
+ Die <xref:System.Windows.Forms.DataGridViewCell.Value%2A> das tatsächliche Datenobjekt in der Zelle enthalten ist, während die <xref:System.Windows.Forms.DataGridViewCell.FormattedValue%2A> Eigenschaft ist für die formatierte Darstellung dieses Objekts. Die <xref:System.Windows.Forms.DataGridViewImageCell.ValueType%2A> und <xref:System.Windows.Forms.DataGridViewImageCell.FormattedValueType%2A> Eigenschaften entsprechen den Datentypen der entsprechenden Werte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

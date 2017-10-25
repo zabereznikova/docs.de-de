@@ -1,0 +1,725 @@
+<Type Name="SecurityManager" FullName="System.Security.SecurityManager">
+  <TypeSignature Language="C#" Value="public static class SecurityManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed SecurityManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.SecurityManager" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt den wichtigsten Zugriffspunkt für Klassen, die Interaktion mit dem Sicherheitssystem bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sicherheit stellt Methoden zum Zugreifen auf und bearbeiten die Konfiguration der Sicherheit bereit. Sie können Instanzen erstellen <xref:System.Security.SecurityManager>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CheckExecutionRights">
+      <MemberSignature Language="C#" Value="public static bool CheckExecutionRights { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool CheckExecutionRights" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityManager.CheckExecutionRights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Code verfügen muss <see cref="F:System.Security.Permissions.SecurityPermissionFlag.Execution" /> um auszuführen.</summary>
+        <value>
+          <see langword="true" />Wenn Code muss <see cref="F:System.Security.Permissions.SecurityPermissionFlag.Execution" /> zum Ausführen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft ist `false`, dies gilt auch für Code ohne <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> ausführen können. Überprüfen der Ausführung ist teuer und kann die Vorteile der verzögerten richtlinienauflösung beseitigen. Diese Eigenschaft dient der Ausführung Überprüfen bei Bedarf deaktivieren.  
+  
+ Eine Änderung an dieser Eigenschaft wird nicht beibehalten, bis <xref:System.Security.SecurityManager.SavePolicy%2A> aufgerufen wird. Neue Prozesse werden nicht von der Änderung betroffen werden, bis sie in der Registrierung persistent ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Code, der diese Methode aufruft, hat keine <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Ändern der Richtlinie. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentThreadRequiresSecurityContextCapture">
+      <MemberSignature Language="C#" Value="public static bool CurrentThreadRequiresSecurityContextCapture ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool CurrentThreadRequiresSecurityContextCapture() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityManager.CurrentThreadRequiresSecurityContextCapture" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob der aktuelle Thread eine Erfassung des Sicherheitskontexts erfordert, wenn der Sicherheitszustand zeitlich zu einem späteren Zeitpunkt neu erstellt werden muss.</summary>
+        <returns>
+          <see langword="false" />enthält der Stapel keine teilweise vertrauenswürdigen Anwendungsdomänen, die keine teilweise vertrauenswürdigen Assemblys und keine aktiven <see cref="M:System.Security.CodeAccessPermission.PermitOnly" /> oder <see cref="M:System.Security.CodeAccessPermission.Deny" /> Modifizierer; <see langword="true" /> , wenn die common Language Runtime nicht garantieren kann, dass der Stapel keines dieser enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Security.SecurityManager.CurrentThreadRequiresSecurityContextCapture%2A> -Methode auf, bevor Sie vertrauliche Daten zwischenzuspeichern, die nach der erfolgreichen sicherheitsforderungen abgerufen werden.  
+  
+ Wenn die <xref:System.Security.CodeAccessPermission.Assert%2A> -Methode aufgerufen wurde höher auf dem Stapel, die Daten sollten nicht zwischengespeichert werden, ohne die entsprechenden Sicherheitskontext zu erfassen. Andernfalls, vertrauliche Daten, die unter abgerufen werden ein <xref:System.Security.CodeAccessPermission.Assert%2A> möglicherweise verfügbar, d. h. code nicht mehr ausgeführt werden, mit denen <xref:System.Security.CodeAccessPermission.Assert%2A> vorhanden.  
+  
+> [!IMPORTANT]
+>  Der Rückgabewert ist zuverlässig, nur bei `false`, was bedeutet, dass der Thread nicht auf eine Erfassung des Sicherheitskontexts erfordern garantiert ist. Die Methode kann "true" zurückgeben, wenn eine Erfassung des Sicherheitskontexts nicht erforderlich ist, Sicherheitsrisiken vermeiden.  
+  
+ <xref:System.Security.SecurityManager.CurrentThreadRequiresSecurityContextCapture%2A>ist als sicherheitskritisch, da der Hauptverwendungszweck ist, gibt an, dass der Code, sie sicherheitsrelevante und überwacht werden muss, vermeiden Sie unnötige Sicherheitskontext erfasst.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardSandbox">
+      <MemberSignature Language="C#" Value="public static System.Security.PermissionSet GetStandardSandbox (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.PermissionSet GetStandardSandbox(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityManager.GetStandardSandbox(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">Der Hostbeweis entsprechend auf einen Berechtigungssatz auf.</param>
+        <summary>Ruft einen Berechtigungssatz, der zu einer Anwendung zu gewähren, die dem angegebenen Beweis sicher ist.</summary>
+        <returns>Ein Berechtigungssatz, der als ein Berechtigungssatz für die Anwendung, die dem angegebenen Beweis verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  In der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], der Host im Beweis `evidence` darf <xref:System.Security.Policy.Zone?displayProperty=nameWithType> Beweis.  
+>   
+>  Die folgende Tabelle zeigt die Berechtigungssätze, die für jede Zone zurückgegeben werden.  
+  
+|Zone|Berechtigungssatz|  
+|----------|--------------------|  
+|<xref:System.Security.SecurityZone.MyComputer>|`FullTrust`|  
+|<xref:System.Security.SecurityZone.Intranet>|`LocalIntranet`|  
+|<xref:System.Security.SecurityZone.Trusted>|`Internet`|  
+|<xref:System.Security.SecurityZone.Internet>|`Internet`|  
+|<xref:System.Security.SecurityZone.Untrusted>|Keine|  
+|<xref:System.Security.SecurityZone.NoZone>|Keine|  
+  
+ Anderer Beweis, z. B. <xref:System.Security.Policy.Url> oder <xref:System.Security.Policy.Site>, angesehen werden kann.  
+  
+ Der zurückgegebene Berechtigungssatz kann in einer Sandbox verwendet werden, um die Anwendung auszuführen. Beachten Sie, dass diese Methode gibt keinen Richtlinie, sondern einen Host hilft zu bestimmen, ob der Berechtigungssatz, der von einer Anwendung angefordert angemessen ist. Diese Methode kann verwendet werden, eine Zone in einer Sandbox zuordnen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Security.SecurityManager.GetStandardSandbox%2A> Methode, um die Berechtigung zu erhalten, die für eine Sandbox-Anwendung festgelegt. Weitere Informationen zum Ausführen einer Anwendung in einem Sandkasten finden Sie unter [Vorgehensweise: Ausführen von teilweise vertrauenswürdigen Code in einem Sandkasten](~/docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+  
+ [!code-csharp[sandboxingApis#1](~/samples/snippets/csharp/VS_Snippets_CLR/SandboxingAPIs/CS/program.cs#1)]
+ [!code-vb[sandboxingApis#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/SandboxingAPIs/VB/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="evidence" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetZoneAndOrigin">
+      <MemberSignature Language="C#" Value="public static void GetZoneAndOrigin (out System.Collections.ArrayList zone, out System.Collections.ArrayList origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void GetZoneAndOrigin([out] class System.Collections.ArrayList&amp; zone, [out] class System.Collections.ArrayList&amp; origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityManager.GetZoneAndOrigin(System.Collections.ArrayList@,System.Collections.ArrayList@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="zone" Type="System.Collections.ArrayList&amp;" RefType="out" />
+        <Parameter Name="origin" Type="System.Collections.ArrayList&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="zone">Ein Output-Parameter, die enthält ein <see cref="T:System.Collections.ArrayList" /> des gewährten <see cref="P:System.Security.Permissions.ZoneIdentityPermissionAttribute.Zone" /> Objekte.</param>
+        <param name="origin">Ein Output-Parameter, die enthält ein <see cref="T:System.Collections.ArrayList" /> des gewährten <see cref="T:System.Security.Permissions.UrlIdentityPermission" /> Objekte.</param>
+        <summary>Ruft den gewährten Zonenidentität und die Berechtigungssätze für URL-Identität für die aktuelle Assembly ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die empfohlene Alternative für diese Methode ist die Verwendung den URL und die Zeitzone Beweis für die derzeit ausgeführte Assembly Aufrufen <xref:System.Security.SecurityManager.ResolvePolicy%2A> für jeden Beweis. Die zurückgegebenen Berechtigungssätze der <xref:System.Security.SecurityManager.ResolvePolicy%2A> Aufrufe zu identifizieren, die Berechtigungen für den ausgeführten Assembly basierend auf seinem Zone und die Ursprungs-URL.  
+  
+> [!NOTE]
+>  Dieser Member stellt einen Linkaufruf für den öffentlichen ECMA-Schlüssel, der keinem gültigen kryptografischen Schlüssel jedoch einen Pseudoschlüssel ist. In .NET Framework ist der Linkaufruf für den ECMA-Pseudo-Schlüssel automatisch in einen Linkaufruf für den öffentlichen Microsoft-Schlüssel konvertiert. Die Sicherheitsausnahme basiert auf den öffentlichen Schlüssel von Microsoft, nicht in den ECMA-Pseudo-Schlüssel.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Die Anforderung für <see cref="T:System.Security.Permissions.StrongNameIdentityPermission" /> ist fehlgeschlagen.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGranted">
+      <MemberSignature Language="C#" Value="public static bool IsGranted (System.Security.IPermission perm);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsGranted(class System.Security.IPermission perm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityManager.IsGranted(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="perm" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="perm">Die Berechtigung für die Erteilung der Aufrufer den Test.</param>
+        <summary>Bestimmt, ob an den Aufrufer keine Berechtigung erteilt wird.</summary>
+        <returns>
+          <see langword="true" />Wenn die Berechtigungen für den Aufrufer die Berechtigung eingeschlossen <paramref name="perm" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erteilen von Berechtigungen wird bestimmt, von der Richtlinie und unterscheidet sich von einer Anforderung unterliegen überschreibt, z. B. eine Assertion. Darüber hinaus <xref:System.Security.SecurityManager.IsGranted%2A> überprüft nur die Erteilung der aufrufende Codeassembly unabhängig von anderen Aufrufer für den Stapel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPolicyLevelFromFile">
+      <MemberSignature Language="C#" Value="public static System.Security.Policy.PolicyLevel LoadPolicyLevelFromFile (string path, System.Security.PolicyLevelType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Policy.PolicyLevel LoadPolicyLevelFromFile(string path, valuetype System.Security.PolicyLevelType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityManager.LoadPolicyLevelFromFile(System.String,System.Security.PolicyLevelType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.PolicyLevel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="type" Type="System.Security.PolicyLevelType" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der physische Dateipfad zu einer Datei mit Informationen zur Sicherheitsrichtlinie.</param>
+        <param name="type">Einer der Enumerationswerte, der den Typ der zu ladenden Richtlinienebene angibt.</param>
+        <summary>Lädt einen <see cref="T:System.Security.Policy.PolicyLevel" /> aus der angegebenen Datei.</summary>
+        <returns>Die geladene Richtlinienebene.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="path" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die durch den <paramref name="path" />-Parameter angezeigte Datei ist nicht vorhanden.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Code, der diese Methode aufruft, hat keine <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" />.  
+  
+ - oder -   
+  
+ Der Code, der diese Methode aufruft, hat keine <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />.  
+  
+ - oder -   
+  
+ Der Code, der diese Methode aufruft, hat keine <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" />.  
+  
+ - oder -   
+  
+ Der Code, der diese Methode aufruft, hat keine <see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" />.</exception>
+        <exception cref="T:System.NotSupportedException">Diese Methode verwendet eine Richtlinie für die Codezugriffssicherheit (Code Access Security, CAS), die im [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] veraltet ist. Verwenden Sie zum Aktivieren der CAS-Richtlinie für die Kompatibilität mit früheren Versionen von .NET Framework die [ &lt;LegacyCasPolicy&gt; Element](~/docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md).</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zum Lesen und Schreiben von Dateien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />, <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPolicyLevelFromString">
+      <MemberSignature Language="C#" Value="public static System.Security.Policy.PolicyLevel LoadPolicyLevelFromString (string str, System.Security.PolicyLevelType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Policy.PolicyLevel LoadPolicyLevelFromString(string str, valuetype System.Security.PolicyLevelType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityManager.LoadPolicyLevelFromString(System.String,System.Security.PolicyLevelType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.PolicyLevel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+        <Parameter Name="type" Type="System.Security.PolicyLevelType" />
+      </Parameters>
+      <Docs>
+        <param name="str">Die XML-Darstellung einer Sicherheitsrichtlinie auf Hostebene in der gleichen Form, in der er in einer Konfigurationsdatei enthalten.</param>
+        <param name="type">Einer der Enumerationswerte, der den Typ der zu ladenden Richtlinienebene angibt.</param>
+        <summary>Lädt eine <see cref="T:System.Security.Policy.PolicyLevel" /> aus der angegebenen Zeichenfolge.</summary>
+        <returns>Die geladene Richtlinienebene.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="str" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="str" /> -Parameter ist ungültig.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Code, der diese Methode aufruft, hat keine <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PolicyHierarchy">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEnumerator PolicyHierarchy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IEnumerator PolicyHierarchy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityManager.PolicyHierarchy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt einen Enumerator für den Zugriff auf die Hierarchie der Sicherheitsrichtlinien basierend auf Ebenen bereit, z.B. auf Ebene der Computerrichtlinien oder der Benutzerrichtlinien.</summary>
+        <returns>Ein Enumerator für <see cref="T:System.Security.Policy.PolicyLevel" />-Objekte, aus denen sich die Hierarchie der Sicherheitsrichtlinien zusammensetzt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene Enumerator stellt aufeinander folgenden <xref:System.Security.Policy.PolicyLevel> Objekte, die die Richtlinie für die jeweilige darstellen (Computer, Benutzer, Unternehmen, die Anwendungsdomäne) Ebene der Hierarchie. Diese Objekte sind die live Richtlinienobjekte; ändern diese Objekte kann unvorhersehbare Folgen haben.  
+  
+ Minimale Richtlinienhierarchie besteht aus einer Computerebene, ein Enterprise-Ebene und eine Benutzerebene. Allerdings kann die Hierarchie zusätzliche Ebenen enthalten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode verwendet eine Richtlinie für die Codezugriffssicherheit (Code Access Security, CAS), die im [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] veraltet ist. Verwenden Sie zum Aktivieren der CAS-Richtlinie für die Kompatibilität mit früheren Versionen von .NET Framework die [ &lt;LegacyCasPolicy&gt; Element](~/docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Code, der diese Methode aufruft, hat keine <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Anzeigen und Ändern von Richtlinien. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvePolicy">
+      <MemberSignature Language="C#" Value="public static System.Security.PermissionSet ResolvePolicy (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.PermissionSet ResolvePolicy(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityManager.ResolvePolicy(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">Der Beweissatz, der zum Auswerten der Richtlinie verwendet wird.</param>
+        <summary>Bestimmt, welche Berechtigungen Code auf Basis der angegebenen Beweise gewährt werden.</summary>
+        <returns>Der Satz von Berechtigungen, die vom Sicherheitssystem gewährt werden können.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft das Sicherheitsrichtlinienmodul zum Nachweis der Identität des aufrufenden Codes bereitstellen. Das Ergebnis wird durch die Sicherheitsrichtlinie bestimmt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode verwendet eine Richtlinie für die Codezugriffssicherheit (Code Access Security, CAS), die im [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] veraltet ist. Verwenden Sie zum Aktivieren der CAS-Richtlinie für die Kompatibilität mit früheren Versionen von .NET Framework die [ &lt;LegacyCasPolicy&gt; Element](~/docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvePolicy">
+      <MemberSignature Language="C#" Value="public static System.Security.PermissionSet ResolvePolicy (System.Security.Policy.Evidence[] evidences);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.PermissionSet ResolvePolicy(class System.Security.Policy.Evidence[] evidences) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityManager.ResolvePolicy(System.Security.Policy.Evidence[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidences" Type="System.Security.Policy.Evidence[]" />
+      </Parameters>
+      <Docs>
+        <param name="evidences">Ein Array von Beweisobjekten, die zum Auswerten der Richtlinie verwendet werden.</param>
+        <summary>Bestimmt, welche Berechtigungen Code auf Basis der angegebenen Beweise gewährt werden.</summary>
+        <returns>Der Satz von Berechtigungen, der für alle bereitgestellten Beweis geeignet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft das Sicherheitsrichtlinienmodul, bietet es ein Array von <xref:System.Security.Policy.Evidence> Objekte. Der zurückgegebene Berechtigungssatz stellt nur die Berechtigungen, die für jeden Beweis im Array gelten. Diese Berechtigungen sind entweder entspricht, oder eine Teilmenge der Berechtigungen, die Richtlinie auf jedem einzelnen Beweis erteilt haben, würden. Diese Methode verhält sich, als ob Sie eine Schnittmenge, auf dem die Ergebnisse ausgeführt haben der Richtlinie auf jedem der Auflösung der <xref:System.Security.Policy.Evidence> Objekte im Array.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode verwendet eine Richtlinie für die Codezugriffssicherheit (Code Access Security, CAS), die im [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] veraltet ist. Verwenden Sie zum Aktivieren der CAS-Richtlinie für die Kompatibilität mit früheren Versionen von .NET Framework die [ &lt;LegacyCasPolicy&gt; Element](~/docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvePolicy">
+      <MemberSignature Language="C#" Value="public static System.Security.PermissionSet ResolvePolicy (System.Security.Policy.Evidence evidence, System.Security.PermissionSet reqdPset, System.Security.PermissionSet optPset, System.Security.PermissionSet denyPset, out System.Security.PermissionSet denied);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.PermissionSet ResolvePolicy(class System.Security.Policy.Evidence evidence, class System.Security.PermissionSet reqdPset, class System.Security.PermissionSet optPset, class System.Security.PermissionSet denyPset, [out] class System.Security.PermissionSet&amp; denied) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityManager.ResolvePolicy(System.Security.Policy.Evidence,System.Security.PermissionSet,System.Security.PermissionSet,System.Security.PermissionSet,System.Security.PermissionSet@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+        <Parameter Name="reqdPset" Type="System.Security.PermissionSet" />
+        <Parameter Name="optPset" Type="System.Security.PermissionSet" />
+        <Parameter Name="denyPset" Type="System.Security.PermissionSet" />
+        <Parameter Name="denied" Type="System.Security.PermissionSet&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">Der Beweissatz, der zum Auswerten der Richtlinie verwendet wird.</param>
+        <param name="reqdPset">Die erforderlichen Berechtigungen, die der Code zur Ausführung benötigt.</param>
+        <param name="optPset">Die optionalen Berechtigungen, die bei Gewährung verwendet werden, jedoch nicht zur Ausführung des Codes erforderlich sind.</param>
+        <param name="denyPset">Die verweigerten Berechtigungen, die auch dann dem Code nie gewährt werden müssen, wenn die Richtlinie dies zulässt.</param>
+        <param name="denied">Ein Ausgabeparameter, der den Satz nicht gewährter Berechtigungen enthält.</param>
+        <summary>Bestimmt, welche Berechtigungen Code auf Basis der angegebenen Beweise und der Anforderungen gewährt werden.</summary>
+        <returns>Der Satz von Berechtigungen, die vom Sicherheitssystem gewährt werden würden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft das Sicherheitsrichtlinienmodul, bietet es Nachweis der Identität des aufrufenden Codes und den Berechtigungssatz des Codes Anforderungen. Das Ergebnis wird durch die Sicherheitsrichtlinie bestimmt. Diese Methode gibt den Satz von Berechtigungen, die vom Sicherheitssystem gewährt werden, und gibt den Satz von Berechtigungen, die als Ausgabeparameter verweigert werden würde. Die effektivsten gewährten Berechtigungen sind in gewährten Berechtigungssatzes, die nicht in der verweigerten Gruppe sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode verwendet eine Richtlinie für die Codezugriffssicherheit (Code Access Security, CAS), die im [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] veraltet ist. Verwenden Sie zum Aktivieren der CAS-Richtlinie für die Kompatibilität mit früheren Versionen von .NET Framework die [ &lt;LegacyCasPolicy&gt; Element](~/docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md).</exception>
+        <exception cref="T:System.Security.Policy.PolicyException">Die Richtlinie gewährt nicht die vom <paramref name="reqdPset" />-Parameter angegebenen minimal erforderlichen Berechtigungen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvePolicyGroups">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEnumerator ResolvePolicyGroups (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IEnumerator ResolvePolicyGroups(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityManager.ResolvePolicyGroups(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">Der Beweissatz, anhand dessen die Richtlinie ausgewertet wird.</param>
+        <summary>Ruft eine Sammlung von Codegruppen ab, die dem angegebenen Beweis entsprechen.</summary>
+        <returns>Eine Enumeration des Satzes von Codegruppen, die dem Beweis entsprechen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nützlich, bei der Analyse von Funktionsweise eine angegebene Richtlinienkonfiguration mit bestimmten Arten von Beweisen.  
+  
+ Von allen anwendbaren Ebenen der Hierarchie der übereinstimmenden Codegruppen zurückgegeben der `evidence` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode verwendet eine Richtlinie für die Codezugriffssicherheit (Code Access Security, CAS), die im [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] veraltet ist. Verwenden Sie zum Aktivieren der CAS-Richtlinie für die Kompatibilität mit früheren Versionen von .NET Framework die [ &lt;LegacyCasPolicy&gt; Element](~/docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveSystemPolicy">
+      <MemberSignature Language="C#" Value="public static System.Security.PermissionSet ResolveSystemPolicy (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.PermissionSet ResolveSystemPolicy(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityManager.ResolveSystemPolicy(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">Der Beweissatz, der zum Auswerten der Richtlinie verwendet wird.</param>
+        <summary>Legt fest, welche Berechtigungen Code aufgrund der angegebenen Beweise erteilt werden, und schließt dabei die Richtlinie für die <see cref="T:System.AppDomain" />-Ebene aus.</summary>
+        <returns>Der Satz von Berechtigungen, die vom Sicherheitssystem gewährt werden können.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft die Security Policy-Engine und Nachweis der Identität des aufrufenden Codes erhalten. Das Ergebnis wird bestimmt durch die Sicherheitsrichtlinie "System" und alle <xref:System.AppDomain> Richtlinie.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode verwendet eine Richtlinie für die Codezugriffssicherheit (Code Access Security, CAS), die im [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] veraltet ist. Verwenden Sie zum Aktivieren der CAS-Richtlinie für die Kompatibilität mit früheren Versionen von .NET Framework die [ &lt;LegacyCasPolicy&gt; Element](~/docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SavePolicy">
+      <MemberSignature Language="C#" Value="public static void SavePolicy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SavePolicy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityManager.SavePolicy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert den geänderten Zustand der Sicherheitsrichtlinie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode speichert die Richtlinie aus, wie vom <xref:System.Security.SecurityManager.PolicyHierarchy%2A>, <xref:System.Security.Policy.PolicyLevel>, und andere Klassen diese Konfiguration dar, der Sicherheitsrichtlinie. Wenn diese Methode aufgerufen wird, wird an die Richtlinienobjekte vorgenommenen Änderungen werden nicht gespeichert und wirken sich nicht auf nachfolgende Anwendung ausgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode verwendet eine Richtlinie für die Codezugriffssicherheit (Code Access Security, CAS), die im [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] veraltet ist. Verwenden Sie zum Aktivieren der CAS-Richtlinie für die Kompatibilität mit früheren Versionen von .NET Framework die [ &lt;LegacyCasPolicy&gt; Element](~/docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Code, der diese Methode aufruft, hat keine <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Ändern der Richtlinie. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SavePolicyLevel">
+      <MemberSignature Language="C#" Value="public static void SavePolicyLevel (System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SavePolicyLevel(class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityManager.SavePolicyLevel(System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="level">Das zu speichernde Richtlinienebenenobjekt.</param>
+        <summary>Speichert eine geänderte, mit <see cref="M:System.Security.SecurityManager.LoadPolicyLevelFromFile(System.String,System.Security.PolicyLevelType)" /> geladene Sicherheitsrichtlinienebene.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Policy.PolicyLevel> wird am gleichen Speicherort, an dem es geladen, gespeichert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Code, der diese Methode aufruft, hat keine <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" />.</exception>
+        <exception cref="T:System.NotSupportedException">Diese Methode verwendet eine Richtlinie für die Codezugriffssicherheit (Code Access Security, CAS), die im [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] veraltet ist. Verwenden Sie zum Aktivieren der CAS-Richtlinie für die Kompatibilität mit früheren Versionen von .NET Framework die [ &lt;LegacyCasPolicy&gt; Element](~/docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md).</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Ändern der Richtlinie. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityEnabled">
+      <MemberSignature Language="C#" Value="public static bool SecurityEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool SecurityEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityManager.SecurityEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The security manager cannot be turned off on MS runtime")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Sicherheit aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Sicherheit aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, durch die [Caspol.exe (Code Access Security Policy-Tool)](~/docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
+  
+ `-security`(`-s`) Option aus, um die codebasierte Sicherheit zu deaktivieren.  
+  
+ <xref:System.Security.SecurityManager.SecurityEnabled%2A>bietet eine Möglichkeit für Administratoren zur Codezugriffssicherheit zu deaktivieren. Wenn die Codezugriffssicherheit deaktiviert ist, werden alle Codezugriffsforderungen erfolgreich ausgeführt. Effektiv, dadurch wird der gesamte Code gewährt `FullTrust`. Deaktivieren der Codezugriffssicherheit das Sicherheitssystem umgangen, sodass Code ausführen, kann etwas bessere Leistung als das entsprechende Security Policy erteilen `FullTrust` für den gesamten Code. Diese Eigenschaft wird mit der rollenbasierten Sicherheit nicht deaktiviert; aus diesem Grund <xref:System.Security.Permissions.PrincipalPermission> Anforderungen sind davon nicht betroffen.  
+  
+> [!CAUTION]
+>  Das Deaktivieren der Codezugriffssicherheit macht das System anfällig gegenüber Angriffen von böswilligem Code wie Viren und Würmern. Deaktivieren der Codezugriffssicherheit blockiert nicht automatisch verwalteten Code in irgendeiner Weise ausgeführt werden. IT nur Ursachen von verwaltetem Code ohne Einschränkung durch die Code Access Security-System ausgeführt, und sollte nur mit größter Vorsicht vorgenommen werden. Das Deaktivieren der Sicherheit auf zusätzliche liegt der Leistungsgewinn sollte nur vorgenommen werden, wenn andere Sicherheitsmaßnahmen ergriffen wurden, um die Sicherheit des Systems zu schützen. Beispiele für solche Sicherheitsmaßnahmen sind u. a. das Trennen von Verbindungen mit öffentlichen Netzwerken und die physikalische Sicherung von Computern.  
+  
+ Eine Änderung an dieser Eigenschaft wird nicht beibehalten, in der Registrierung erst <xref:System.Security.SecurityManager.SavePolicy%2A> aufgerufen wird. Neue Prozesse werden nicht von der Änderung betroffen werden, bis sie in der Registrierung persistent ist. Ändern des Werts dieser Eigenschaft in einem laufenden Prozess ändert nicht notwendigerweise den Zustand wie erwartet. Um sicherzustellen, dass Änderungen übernommen wurden, rufen Sie <xref:System.Security.SecurityManager.SavePolicy%2A> und einen neuen Prozess zu starten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Code, der diese Methode aufruft, hat keine <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit zum Ändern der Richtlinie. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

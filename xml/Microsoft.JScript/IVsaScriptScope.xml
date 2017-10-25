@@ -1,0 +1,250 @@
+<Type Name="IVsaScriptScope" FullName="Microsoft.JScript.IVsaScriptScope">
+  <TypeSignature Language="C#" Value="public interface IVsaScriptScope : Microsoft.JScript.Vsa.IJSVsaItem" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IVsaScriptScope implements class Microsoft.JScript.Vsa.IJSVsaItem" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.IVsaScriptScope" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.JScript.Vsa.IJSVsaItem</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("ED4BAE22-2F3C-419a-B487-CF869E716B95")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Methoden zum Auflösen von Bereich. Das Objekt der globalen Gültigkeitsbereich des der <see cref="T:Microsoft.JScript.Vsa.VsaEngine" /> implementiert diese Schnittstelle.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="AddItem">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.IJSVsaItem AddItem (string itemName, Microsoft.JScript.Vsa.JSVsaItemType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.JScript.Vsa.IJSVsaItem AddItem(string itemName, valuetype Microsoft.JScript.Vsa.JSVsaItemType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IVsaScriptScope.AddItem(System.String,Microsoft.JScript.Vsa.JSVsaItemType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.IJSVsaItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+        <Parameter Name="type" Type="Microsoft.JScript.Vsa.JSVsaItemType" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">Name des Elements.</param>
+        <param name="type">Einer der Enumerationswerte. Gibt den Typ des hinzuzufügenden Elements.</param>
+        <summary>Bei Implementierung in einer Klasse fügt ein Element im Bereich.</summary>
+        <returns>Das neue Element, sofern er erfolgreich hinzugefügt wurde.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDynamicItem">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.IJSVsaItem CreateDynamicItem (string itemName, Microsoft.JScript.Vsa.JSVsaItemType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.JScript.Vsa.IJSVsaItem CreateDynamicItem(string itemName, valuetype Microsoft.JScript.Vsa.JSVsaItemType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IVsaScriptScope.CreateDynamicItem(System.String,Microsoft.JScript.Vsa.JSVsaItemType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.IJSVsaItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+        <Parameter Name="type" Type="Microsoft.JScript.Vsa.JSVsaItemType" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">Name des Elements.</param>
+        <param name="type">Einer der Enumerationswerte. Gibt den Typ des hinzuzufügenden Elements.</param>
+        <summary>Bei Implementierung in einer Klasse fügt ein Element im Bereich. Die <see cref="T:Microsoft.JScript.Vsa.VsaEngine" /> muss ausgeführt werden, damit diese Methode verwendet.</summary>
+        <returns>Das neue Element, sofern er erfolgreich hinzugefügt wurde.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.IJSVsaItem GetItem (string itemName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.JScript.Vsa.IJSVsaItem GetItem(string itemName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IVsaScriptScope.GetItem(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.IJSVsaItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">Der Name des abzurufenden Elements.</param>
+        <summary>Bei Implementierung in einer Klasse ruft das Element aus dem Bereich, der durch den angegebenen Namen festgelegt ist.</summary>
+        <returns>Das Element mit dem Namen <paramref name="itemName" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemAtIndex">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.IJSVsaItem GetItemAtIndex (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.JScript.Vsa.IJSVsaItem GetItemAtIndex(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IVsaScriptScope.GetItemAtIndex(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.IJSVsaItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des abzurufenden Elements.</param>
+        <summary>Bei Implementierung in einer Klasse ruft das Element aus dem Bereich, der durch den angegebenen Indexwert festgelegt ist.</summary>
+        <returns>Das Element am <paramref name="index" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemCount">
+      <MemberSignature Language="C#" Value="public int GetItemCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetItemCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IVsaScriptScope.GetItemCount" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bei Implementierung in einer Klasse ruft die Anzahl der Elemente im Bereich ab.</summary>
+        <returns>Die Anzahl der Elemente im Bereich.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public object GetObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IVsaScriptScope.GetObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bei Implementierung in einer Klasse ruft einen Verweis auf globaler Ebene ab.</summary>
+        <returns>Ein Verweis auf globaler Ebene.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.IVsaScriptScope Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.JScript.IVsaScriptScope Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.IVsaScriptScope.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.IVsaScriptScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei Implementierung in einer Klasse ruft einen Verweis auf das übergeordnete Objekt ab.</summary>
+        <value>Der übergeordnete Bereich.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="public void RemoveItem (Microsoft.JScript.Vsa.IJSVsaItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveItem(class Microsoft.JScript.Vsa.IJSVsaItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IVsaScriptScope.RemoveItem(Microsoft.JScript.Vsa.IJSVsaItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="Microsoft.JScript.Vsa.IJSVsaItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu entfernende Element.</param>
+        <summary>Entfernt bei Implementierung in einer Klasse das angegebene <see cref="T:Microsoft.JScript.Vsa.IJSVsaItem" /> Objekt aus dem Bereich.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="public void RemoveItem (string itemName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveItem(string itemName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IVsaScriptScope.RemoveItem(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">Der Name des zu entfernenden Elements.</param>
+        <summary>Bei Implementierung in einer Klasse entfernt das Element, das nach dem angegebenen Namen aus dem Bereich festgelegt ist.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItemAtIndex">
+      <MemberSignature Language="C#" Value="public void RemoveItemAtIndex (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveItemAtIndex(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IVsaScriptScope.RemoveItemAtIndex(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des zu entfernenden Elements.</param>
+        <summary>Bei Implementierung in einer Klasse entfernt das Element, das durch den angegebenen Indexwert aus dem Bereich festgelegt ist.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,212 @@
+<Type Name="IApplicationHost" FullName="System.Web.Hosting.IApplicationHost">
+  <TypeSignature Language="C#" Value="public interface IApplicationHost" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IApplicationHost" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.IApplicationHost" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Ruft Informationen zum Anwendungshost ab.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IApplicationHost>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetConfigMapPathFactory">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.IConfigMapPathFactory GetConfigMapPathFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.Configuration.IConfigMapPathFactory GetConfigMapPathFactory() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IApplicationHost.GetConfigMapPathFactory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.IConfigMapPathFactory</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ermöglicht das Erstellen einer <see cref="T:System.Web.Configuration.IConfigMapPath" /> Schnittstelle in der Zielanwendungsdomäne.</summary>
+        <returns>Ein Objekt, das zur Zuordnung von virtuellen und physischen Pfade der Konfigurationsdatei verwendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IApplicationHost.GetConfigMapPathFactory%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetConfigToken">
+      <MemberSignature Language="C#" Value="public IntPtr GetConfigToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance native int GetConfigToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IApplicationHost.GetConfigToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Token für die Anwendung Host-Konfigurationsdatei (config).</summary>
+        <returns>Ein Windows-Handle, das das Windows-Sicherheitstoken für das Stammverzeichnis der Anwendung enthält. Das Token kann zum Öffnen und Lesen der Konfigurationsdatei der Anwendung verwendet werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IApplicationHost.GetConfigToken%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetPhysicalPath">
+      <MemberSignature Language="C#" Value="public string GetPhysicalPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetPhysicalPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IApplicationHost.GetPhysicalPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den physischen Stammpfad der Anwendung ab.</summary>
+        <returns>Der physische Pfad des Anwendungsstamms.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IApplicationHost.GetPhysicalPath%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetSiteID">
+      <MemberSignature Language="C#" Value="public string GetSiteID ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetSiteID() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IApplicationHost.GetSiteID" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Site-ID ab.</summary>
+        <returns>Die Website-ID.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IApplicationHost.GetSiteID%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetSiteName">
+      <MemberSignature Language="C#" Value="public string GetSiteName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetSiteName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IApplicationHost.GetSiteName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Namen der Website ab.</summary>
+        <returns>Der Name der Website.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IApplicationHost.GetSiteName%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetVirtualPath">
+      <MemberSignature Language="C#" Value="public string GetVirtualPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetVirtualPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IApplicationHost.GetVirtualPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den virtuellen Stammpfad der Anwendung ab.</summary>
+        <returns>Die Anwendung virtuelle Stammpfad.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IApplicationHost.GetVirtualPath%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MessageReceived">
+      <MemberSignature Language="C#" Value="public void MessageReceived ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MessageReceived() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IApplicationHost.MessageReceived" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass eine Nachricht empfangen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.IApplicationHost.MessageReceived%2A>eingeführt der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

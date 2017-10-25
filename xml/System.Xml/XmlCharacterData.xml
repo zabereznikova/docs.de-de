@@ -1,0 +1,422 @@
+<Type Name="XmlCharacterData" FullName="System.Xml.XmlCharacterData">
+  <TypeSignature Language="C#" Value="public abstract class XmlCharacterData : System.Xml.XmlLinkedNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlCharacterData extends System.Xml.XmlLinkedNode" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlCharacterData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlLinkedNode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Textmanipulationsmethoden, die von mehreren Klassen verwendet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlCharacterData (string data, System.Xml.XmlDocument doc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string data, class System.Xml.XmlDocument doc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlCharacterData.#ctor(System.String,System.Xml.XmlDocument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="data" Type="System.String" />
+        <Parameter Name="doc" Type="System.Xml.XmlDocument" />
+      </Parameters>
+      <Docs>
+        <param name="data">Zeichenfolge, die Zeichendaten hinzuzufügende enthält Dokument.</param>
+        <param name="doc">
+          <see cref="T:System.Xml.XmlDocument" />Zeichendaten enthalten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlCharacterData" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendData">
+      <MemberSignature Language="C#" Value="public virtual void AppendData (string strData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AppendData(string strData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlCharacterData.AppendData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="strData" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="strData">Die Zeichenfolge, in die vorhandene Zeichenfolge eingefügt werden soll.</param>
+        <summary>Fügt die angegebene Zeichenfolge an das Ende der Zeichendaten des Knotens an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst das XmlNodeChangedAction.Change-Ereignis.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see langword="AppendData" /> in einer abgeleiteten Klasse, damit Ereignisse ordnungsgemäß ausgelöst werden müssen Sie das Ereignis selbst auslösen oder die Basisversion der diese Methode aufrufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public virtual string Data { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Data" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlCharacterData.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält die Daten des Knotens.</summary>
+        <value>Die Daten des Knotens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebenen Daten entspricht der <xref:System.Xml.XmlCharacterData.Value%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteData">
+      <MemberSignature Language="C#" Value="public virtual void DeleteData (int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DeleteData(int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlCharacterData.DeleteData(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Die Position innerhalb der Zeichenfolge zu löschen.</param>
+        <param name="count">Die Anzahl der zu löschenden Zeichen.</param>
+        <summary>Entfernt einen Bereich von Zeichen aus dem Knoten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst das XmlNodeChangedAction.Change-Ereignis.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see langword="DeleteData" /> in einer abgeleiteten Klasse, damit Ereignisse ordnungsgemäß ausgelöst werden müssen Sie das Ereignis selbst auslösen oder die Basisversion der diese Methode aufrufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerText">
+      <MemberSignature Language="C#" Value="public override string InnerText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerText" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlCharacterData.InnerText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, die verketteten Werte des Knotens und aller untergeordneten Elemente des Knotens.</summary>
+        <value>Die verketteten Werte des Knotens und aller untergeordneten Elemente des Knotens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist eine Microsoft-Erweiterung des Dokumentobjektmodells (DOM).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertData">
+      <MemberSignature Language="C#" Value="public virtual void InsertData (int offset, string strData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InsertData(int32 offset, string strData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlCharacterData.InsertData(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="strData" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Die Position innerhalb der Zeichenfolge zum Einfügen der Daten der angegebenen Zeichenfolge.</param>
+        <param name="strData">Die Zeichenfolgendaten, die in die vorhandene Zeichenfolge eingefügt werden soll.</param>
+        <summary>Fügt die angegebene Zeichenfolge an der angegebenen Zeichenoffset an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst das XmlNodeChangedAction.Change-Ereignis.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see langword="InsertData" /> in einer abgeleiteten Klasse, damit Ereignisse ordnungsgemäß ausgelöst werden müssen Sie das Ereignis selbst auslösen oder die Basisversion der diese Methode aufrufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public virtual int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlCharacterData.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge der Daten, in Zeichen ab.</summary>
+        <value>Die Länge in Zeichen der Zeichenfolge in der <see cref="P:System.Xml.XmlCharacterData.Data" /> Eigenschaft. Die Länge möglicherweise 0 (null); Knoten haben können, also leer sein.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaceData">
+      <MemberSignature Language="C#" Value="public virtual void ReplaceData (int offset, int count, string strData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReplaceData(int32 offset, int32 count, string strData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlCharacterData.ReplaceData(System.Int32,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="strData" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Die Position innerhalb der Zeichenfolge zu ersetzen.</param>
+        <param name="count">Die Anzahl der zu ersetzenden Zeichen.</param>
+        <param name="strData">Die neuen Daten, die die alten Zeichenfolgendaten ersetzt.</param>
+        <summary>Ersetzt die angegebene Anzahl von Zeichen beginnend am angegebenen Offset mit der angegebenen Zeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst das XmlNodeChangedAction.Change-Ereignis.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see langword="ReplaceData" /> in einer abgeleiteten Klasse, damit Ereignisse ordnungsgemäß ausgelöst werden müssen Sie das Ereignis selbst auslösen oder die Basisversion der diese Methode aufrufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Substring">
+      <MemberSignature Language="C#" Value="public virtual string Substring (int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Substring(int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlCharacterData.Substring(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Die Position innerhalb der Zeichenfolge, die abgerufen werden sollen. Ein Offset von 0 (null) gibt an, dass es sich bei der Anfangspunkt zu Beginn der Daten ist.</param>
+        <param name="count">Die Anzahl der abzurufenden Zeichen.</param>
+        <summary>Ruft eine Teilzeichenfolge der vollständigen Zeichenfolge aus dem angegebenen Bereich ab.</summary>
+        <returns>Die Teilzeichenfolge, die den angegebenen Bereich entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlCharacterData.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Knotens ab oder legt diesen fest.</summary>
+        <value>Der Wert des Knotens.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Knoten ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

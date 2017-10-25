@@ -1,0 +1,27 @@
+<Namespace Name="System.Xml.Linq">
+  <Docs>
+    <summary>Enthält die Klassen für LINQ to XML. LINQ to XML ist eine speicherinterne XML-Programmierschnittstelle, die Ihnen ermöglicht, XML-Dokumente effizient und einfach ändern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit LINQ to XML können Sie die folgenden Schritte ausführen:  
+  
+-   XML aus Dateien oder Streams laden  
+  
+-   XML in Dateien oder Streams serialisieren  
+  
+-   Erstellen Sie XML-Strukturen, von Grund auf neu, die funktionale Konstruktion verwenden.  
+  
+-   Abfragen von XML-Strukturen mit LINQ-Abfragen.  
+  
+-   Bearbeiten Sie die XML-Strukturen im Arbeitsspeicher.  
+  
+-   XML-Strukturen mit XSD validieren  
+  
+-   XML-Strukturen mit einer Kombination aus diesen Funktionen von einer Form in eine andere transformieren  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

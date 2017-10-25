@@ -1,0 +1,937 @@
+<Type Name="SqlBulkCopyColumnMappingCollection" FullName="System.Data.SqlClient.SqlBulkCopyColumnMappingCollection">
+  <TypeSignature Language="C#" Value="public sealed class SqlBulkCopyColumnMappingCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SqlBulkCopyColumnMappingCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+  </Interfaces>
+  <Docs>
+    <summary>Auflistung von <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> Objekte, die von erben <see cref="T:System.Collections.CollectionBase" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Spaltenzuordnungen definieren die Zuordnung zwischen Datenquelle und die Zieltabelle.  
+  
+ Wenn Zuordnungen nicht definiert sind – d. h. die <xref:System.Data.SqlClient.SqlBulkCopy.ColumnMappings%2A> Auflistung leer ist – die Spalten werden auf der Ordnungsposition implizit auf der Grundlage zugeordnet. Damit dies funktioniert müssen Quell-und Zielschema übereinstimmen. Wenn dies nicht der Fall ein <xref:System.InvalidOperationException> ausgelöst wird.  
+  
+ Wenn die <xref:System.Data.SqlClient.SqlBulkCopy.ColumnMappings%2A> Auflistung nicht leer ist, muss nicht jede Spalte in der Datenquelle angegeben werden. Durch die Auflistung nicht zugeordnete Spalten werden ignoriert.  
+  
+ Sie können nach Name oder Ordinalzahl auf Quell-und Zielspalten verweisen. Sie können Ihrem Namen und nach Ordnungszahl Spaltenverweise in der gleichen Auflistung der Zuordnungen kombinieren.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wird ein Massenimport kopiert Daten aus einer Quelltabelle in die **AdventureWorks** -Beispieldatenbank in eine Zieltabelle in derselben Datenbank. Obwohl die Anzahl der Spalten im Ziel die Anzahl der Spalten in der Quelle übereinstimmt, stimmen die Spaltennamen und die Ordnungspositionen nicht überein. <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping>werden hinzugefügt, um die <xref:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection> für die <xref:System.Data.SqlClient.SqlBulkCopy> Objekt zum Erstellen einer spaltenzuordnung für das Massenkopieren.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel wird nicht ausgeführt, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Die angegebene Code dient zum Veranschaulichen der Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in derselben SQL Server-Instanz befinden, ist es einfacher und schneller mit eine Transact-SQL- `INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingCollection#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingCollection/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMappingCollection#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingCollection/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlBulkCopyColumnMapping Add (System.Data.SqlClient.SqlBulkCopyColumnMapping bulkCopyColumnMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.SqlClient.SqlBulkCopyColumnMapping Add(class System.Data.SqlClient.SqlBulkCopyColumnMapping bulkCopyColumnMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Add(System.Data.SqlClient.SqlBulkCopyColumnMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlBulkCopyColumnMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bulkCopyColumnMapping" Type="System.Data.SqlClient.SqlBulkCopyColumnMapping" />
+      </Parameters>
+      <Docs>
+        <param name="bulkCopyColumnMapping">Die <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> -Objekt, das beschreibt, die Zuordnung der Auflistung hinzugefügt werden.</param>
+        <summary>Fügt die angegebene Zuordnung zu den <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection" />.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel wird ein Massenimport kopiert Daten aus einer Quelltabelle in die **AdventureWorks** -Beispieldatenbank in eine Zieltabelle in derselben Datenbank. Obwohl die Anzahl der Spalten im Ziel die Anzahl der Spalten in der Quelle übereinstimmt, stimmen die Spaltennamen und die Ordnungspositionen nicht überein. <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping>Objekte werden zum Erstellen einer spaltenzuordnung für das Massenkopieren verwendet.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel wird nicht ausgeführt, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Die angegebene Code dient zum Veranschaulichen der Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in derselben SQL Server-Instanz befinden, ist es einfacher und schneller mit eine Transact-SQL- `INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMapping#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMapping/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMapping#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMapping/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlBulkCopyColumnMapping Add (int sourceColumnIndex, int destinationColumnIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.SqlClient.SqlBulkCopyColumnMapping Add(int32 sourceColumnIndex, int32 destinationColumnIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Add(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlBulkCopyColumnMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceColumnIndex" Type="System.Int32" />
+        <Parameter Name="destinationColumnIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="sourceColumnIndex">Die Ordnungsposition der Quellspalte in der Datenquelle.</param>
+        <param name="destinationColumnIndex">Die Ordnungsposition der Zielspalte in der Zieltabelle.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> und fügt es der Auflistung mithilfe der Angabe von Quell-und Zielspalten Ordnungszahlen hinzu.</summary>
+        <returns>Eine spaltenzuordnung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zuordnungen in einer Sammlung müssen einheitlich sein: alle Integer-Ganzzahl-Paare, alle Zeichenfolge/Zeichenfolge-Paare, alle ganze Zahl/Zeichenfolge Paare oder alle Zeichenfolge-Ganzzahl-Paare. Wenn Sie versuchen, eine Zuordnung hinzufügen, das sich von anderen bereits in der Auflistung eine <xref:System.InvalidOperationException> ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wird ein Massenimport kopiert Daten aus einer Quelltabelle in die **AdventureWorks** -Beispieldatenbank in eine Zieltabelle in derselben Datenbank. Obwohl die Anzahl der Spalten im Ziel die Anzahl der Spalten in der Quelle übereinstimmt, stimmen die Spaltennamen und die Ordnungspositionen nicht überein. <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping>Objekte werden verwendet, um eine spaltenzuordnung für den Massenkopiervorgang mithilfe der Ordnungsposition der Quell- und Zielschemas Spalten zu erstellen.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel wird nicht ausgeführt, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Die angegebene Code dient zum Veranschaulichen der Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in derselben SQL Server-Instanz befinden, ist es einfacher und schneller mit eine Transact-SQL- `INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingCollectionOrdinal#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingCollectionOrdinal/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMappingCollectionOrdinal#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingCollectionOrdinal/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlBulkCopyColumnMapping Add (int sourceColumnIndex, string destinationColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.SqlClient.SqlBulkCopyColumnMapping Add(int32 sourceColumnIndex, string destinationColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Add(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlBulkCopyColumnMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceColumnIndex" Type="System.Int32" />
+        <Parameter Name="destinationColumn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceColumnIndex">Die Ordnungsposition der Quellspalte in der Datenquelle.</param>
+        <param name="destinationColumn">Der Name der Zielspalte in der Zieltabelle.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> und fügt es der Auflistung, verwenden eine Ordinalzahl für die Quellspalte und eine Zeichenfolge für die Spalte "Ziel" hinzu.</summary>
+        <returns>Eine spaltenzuordnung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zuordnungen in einer Sammlung müssen einheitlich sein: alle Integer-Ganzzahl-Paare, alle Zeichenfolge/Zeichenfolge-Paare, alle ganze Zahl/Zeichenfolge Paare oder alle Zeichenfolge-Ganzzahl-Paare. Wenn Sie versuchen, eine Zuordnung hinzufügen, das sich von anderen bereits in der Auflistung eine <xref:System.InvalidOperationException> ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wird ein Massenimport kopiert Daten aus einer Quelltabelle in die **AdventureWorks** -Beispieldatenbank in eine Zieltabelle in derselben Datenbank. Obwohl die Anzahl der Spalten im Ziel die Anzahl der Spalten in der Quelle übereinstimmt, stimmen die Spaltennamen und die Ordnungspositionen nicht überein. <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping>Objekte werden zum Erstellen einer spaltenzuordnung für das Massenkopieren verwendet.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel wird nicht ausgeführt, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Die angegebene Code dient zum Veranschaulichen der Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in derselben SQL Server-Instanz befinden, ist es einfacher und schneller mit eine Transact-SQL- `INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingIndexColName#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingIndexColName/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMappingIndexColName#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingIndexColName/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlBulkCopyColumnMapping Add (string sourceColumn, int destinationColumnIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.SqlClient.SqlBulkCopyColumnMapping Add(string sourceColumn, int32 destinationColumnIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Add(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlBulkCopyColumnMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceColumn" Type="System.String" />
+        <Parameter Name="destinationColumnIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="sourceColumn">Der Name der Quellspalte in der Datenquelle.</param>
+        <param name="destinationColumnIndex">Die Ordnungsposition der Zielspalte in der Zieltabelle.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> und fügt es der Auflistung hinzu, verwendet einen Spaltennamen zum Beschreiben der Quellspalte und eine Ordnungszahl zum Angeben der Zielspalte.</summary>
+        <returns>Eine spaltenzuordnung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zuordnungen in einer Sammlung müssen einheitlich sein: alle Integer-Ganzzahl-Paare, alle Zeichenfolge/Zeichenfolge-Paare, alle ganze Zahl/Zeichenfolge Paare oder alle Zeichenfolge-Ganzzahl-Paare. Wenn Sie versuchen, eine Zuordnung hinzufügen, das sich von anderen bereits in der Auflistung eine <xref:System.InvalidOperationException> ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wird ein Massenimport kopiert Daten aus einer Quelltabelle in die **AdventureWorks** -Beispieldatenbank in eine Zieltabelle in derselben Datenbank. Obwohl die Anzahl der Spalten im Ziel die Anzahl der Spalten in der Quelle übereinstimmt, stimmen die Spaltennamen und die Ordnungspositionen nicht überein. <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping>Objekte werden zum Erstellen einer spaltenzuordnung für das Massenkopieren verwendet.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel wird nicht ausgeführt, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Die angegebene Code dient zum Veranschaulichen der Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in derselben SQL Server-Instanz befinden, ist es einfacher und schneller mit eine Transact-SQL- `INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingColNameIndex#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingColNameIndex/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMappingColNameIndex#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingColNameIndex/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlBulkCopyColumnMapping Add (string sourceColumn, string destinationColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.SqlClient.SqlBulkCopyColumnMapping Add(string sourceColumn, string destinationColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlBulkCopyColumnMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceColumn" Type="System.String" />
+        <Parameter Name="destinationColumn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceColumn">Der Name der Quellspalte in der Datenquelle.</param>
+        <param name="destinationColumn">Der Name der Zielspalte in der Zieltabelle.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> und fügt es der Auflistung mithilfe der Angabe von Quell-und Zielspalten Spaltennamen hinzu.</summary>
+        <returns>Eine spaltenzuordnung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zuordnungen in einer Sammlung müssen einheitlich sein: alle Integer-Ganzzahl-Paare, alle Zeichenfolge/Zeichenfolge-Paare, alle ganze Zahl/Zeichenfolge Paare oder alle Zeichenfolge-Ganzzahl-Paare. Wenn Sie versuchen, eine Zuordnung hinzufügen, das sich von anderen bereits in der Auflistung eine <xref:System.InvalidOperationException> ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wird ein Massenimport kopiert Daten aus einer Quelltabelle in die **AdventureWorks** -Beispieldatenbank in eine Zieltabelle in derselben Datenbank. Obwohl die Anzahl der Spalten im Ziel die Anzahl der Spalten in der Quelle übereinstimmt, stimmen die Spaltennamen und die Ordnungspositionen nicht überein. Der Code erstellt ein <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping> Objekt, indem die Spaltennamen angeben.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel wird nicht ausgeführt, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Die angegebene Code dient zum Veranschaulichen der Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in derselben SQL Server-Instanz befinden, ist es einfacher und schneller mit eine Transact-SQL- `INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingCollection#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingCollection/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMappingCollection#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingCollection/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht den Inhalt der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Clear%2A> Methode wird am häufigsten verwendet, bei der Verwendung einer einzelnes <xref:System.Data.SqlClient.SqlBulkCopy> Instanz mehr als einen Massenkopiervorgang zu verarbeiten. Wenn Sie die spaltenzuordnungen für einen Massenkopiervorgang erstellen, müssen Sie löschen die <xref:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection> nach der <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServer%2A> Methode und vor der Verarbeitung der nächsten Massenkopieren.  
+  
+ Ausführen mehrerer Massenkopiervorgänge unter Verwendung des gleichen <xref:System.Data.SqlClient.SqlBulkCopy> Instanz werden in der Regel effizienter aus Sicht der Leistung als eine separate <xref:System.Data.SqlClient.SqlBulkCopy> für jeden Vorgang.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel führt zwei Massenkopiervorgänge. Der erste Vorgang kopiert auftragskopfzeileninformationen und die zweite kopiert Auftragsdetails. Obwohl nicht zwingend erforderlich in diesem Beispiel wird (weil die Ordnungsposition der Quell- und Zielschemas Spalten übereinstimmen), im Beispiel wird die spaltenzuordnungen für jede Massenkopiervorgang definiert. Die <xref:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Clear%2A> Methode muss verwendet werden, nachdem die erste Massenkopieren ausgeführt, und bevor die nächste masseneinfügung der Kopie spaltenzuordnungen definiert sind.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel wird nicht ausgeführt, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Die angegebene Code dient zum Veranschaulichen der Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in derselben SQL Server-Instanz befinden, ist es einfacher und schneller mit eine Transact-SQL- `INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingOrdersDetails#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingOrdersDetails/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMappingOrdersDetails#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingOrdersDetails/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Data.SqlClient.SqlBulkCopyColumnMapping value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Data.SqlClient.SqlBulkCopyColumnMapping value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Contains(System.Data.SqlClient.SqlBulkCopyColumnMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlClient.SqlBulkCopyColumnMapping" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein gültiger <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> Objekt.</param>
+        <summary>Ruft einen Wert, der angibt, ob ein angegebenes <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> Objekt in der Auflistung vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die angegebene Zuordnung in der Auflistung vorhanden ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Data.SqlClient.SqlBulkCopyColumnMapping[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Data.SqlClient.SqlBulkCopyColumnMapping[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.CopyTo(System.Data.SqlClient.SqlBulkCopyColumnMapping[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Data.SqlClient.SqlBulkCopyColumnMapping[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> array, das das Ziel der aus kopierten Elemente <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection" />. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection" /> auf ein Array von <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> Elementen, beginnend an einem bestimmten Index.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Data.SqlClient.SqlBulkCopyColumnMapping value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Data.SqlClient.SqlBulkCopyColumnMapping value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.IndexOf(System.Data.SqlClient.SqlBulkCopyColumnMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlClient.SqlBulkCopyColumnMapping" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> der zu suchende Objekt.</param>
+        <summary>Ruft den Index des angegebenen <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> Objekt.</summary>
+        <returns>Der nullbasierte Index, der die Zuordnung von Spalten oder-1 zurück, wenn die Zuordnung von Spalten in der Auflistung nicht gefunden wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Data.SqlClient.SqlBulkCopyColumnMapping value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Data.SqlClient.SqlBulkCopyColumnMapping value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Insert(System.Int32,System.Data.SqlClient.SqlBulkCopyColumnMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlClient.SqlBulkCopyColumnMapping" />
+      </Parameters>
+      <Docs>
+        <param name="index">Integer-Wert, der die Position innerhalb der <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection" /> an dem das neue einzufügende <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" />.</param>
+        <param name="value">
+          <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" />in der Auflistung einzufügende Objekt.</param>
+        <summary>Fügen Sie ein neues <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlBulkCopyColumnMapping this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.SqlClient.SqlBulkCopyColumnMapping Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlBulkCopyColumnMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des der <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> gefunden.</param>
+        <summary>Ruft die <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> Objekt am angegebenen Index.</summary>
+        <value>Ein <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Data.SqlClient.SqlBulkCopyColumnMapping value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Data.SqlClient.SqlBulkCopyColumnMapping value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Remove(System.Data.SqlClient.SqlBulkCopyColumnMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlClient.SqlBulkCopyColumnMapping" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+          <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" />ein Objekt aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> Element aus der <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Remove%2A> Methode wird am häufigsten verwendet, bei der Verwendung einer einzelnes <xref:System.Data.SqlClient.SqlBulkCopy> Instanz mehr als einen Massenkopiervorgang zu verarbeiten. Wenn Sie die spaltenzuordnungen für einen Massenkopiervorgang erstellen, müssen Sie die Zuordnungen, die nicht mehr nach gelten Entfernen der <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServer%2A> Methode wird aufgerufen, und vor dem Definieren der Zuordnung für das Massenkopieren weiter. Sie können die gesamte Auflistung löschen, indem die <xref:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Clear%2A> Methode oder Remove-Zuordnungen einzeln mit der <xref:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Remove%2A> Methode oder die <xref:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.RemoveAt%2A> Methode.  
+  
+ Ausführen mehrerer Massenkopiervorgänge unter Verwendung des gleichen <xref:System.Data.SqlClient.SqlBulkCopy> Instanz werden in der Regel effizienter aus Sicht der Leistung als eine separate <xref:System.Data.SqlClient.SqlBulkCopy> für jeden Vorgang.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel führt zwei Massenkopiervorgänge. Der erste Vorgang kopiert auftragskopfzeileninformationen und die zweite kopiert Auftragsdetails. Obwohl nicht zwingend erforderlich in diesem Beispiel wird (weil die Ordnungsposition der Quell- und Zielschemas Spalten übereinstimmen), im Beispiel wird die spaltenzuordnungen für jede Massenkopiervorgang definiert. Beide Massenkopiervorgänge enthalten eine Zuordnung für die **SalesOrderID**, sodass anstatt Löschen der gesamten Auflistung zwischen Massenkopiervorgängen, das Beispiel entfernt alle Zuordnungen mit Ausnahme der **SalesOrderID** zuordnen und fügt dann die entsprechenden Zuordnungen für den zweiten Massenkopiervorgang.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel wird nicht ausgeführt, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Die angegebene Code dient zum Veranschaulichen der Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in derselben SQL Server-Instanz befinden, ist es einfacher und schneller mit eine Transact-SQL- `INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingRemove#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingRemove/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMappingRemove#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingRemove/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des der <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> Objekt aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt die Zuordnung am angegebenen Index aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.RemoveAt%2A> Methode wird am häufigsten verwendet, bei der Verwendung einer einzelnes <xref:System.Data.SqlClient.SqlBulkCopy> Instanz mehr als einen Massenkopiervorgang zu verarbeiten. Wenn Sie die spaltenzuordnungen für einen Massenkopiervorgang erstellen, müssen Sie die Zuordnungen, die nicht mehr nach gelten Entfernen der <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServer%2A> Methode wird aufgerufen, und vor dem Definieren der Zuordnung für das Massenkopieren weiter. Sie können die gesamte Auflistung löschen, indem die <xref:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Clear%2A> Methode oder Remove-Zuordnungen einzeln mit der <xref:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Remove%2A> Methode oder die <xref:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.RemoveAt%2A> Methode.  
+  
+ Ausführen mehrerer Massenkopiervorgänge unter Verwendung des gleichen <xref:System.Data.SqlClient.SqlBulkCopy> Instanz werden in der Regel effizienter aus Sicht der Leistung als eine separate <xref:System.Data.SqlClient.SqlBulkCopy> für jeden Vorgang.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel führt zwei Massenkopiervorgänge. Der erste Vorgang kopiert auftragskopfzeileninformationen und die zweite kopiert Auftragsdetails. Obwohl nicht zwingend erforderlich in diesem Beispiel wird (weil die Ordnungsposition der Quell- und Zielschemas Spalten übereinstimmen), im Beispiel wird die spaltenzuordnungen für jede Massenkopiervorgang definiert. Beide Massenkopiervorgänge enthalten eine Zuordnung für die **SalesOrderID**, sodass anstatt Löschen der gesamten Auflistung zwischen Massenkopiervorgängen, das Beispiel entfernt alle Zuordnungen mit Ausnahme der **SalesOrderID** zuordnen und fügt dann die entsprechenden Zuordnungen für den zweiten Massenkopiervorgang.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel wird nicht ausgeführt, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Die angegebene Code dient zum Veranschaulichen der Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in derselben SQL Server-Instanz befinden, ist es einfacher und schneller mit eine Transact-SQL- `INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingRemoveAt#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingRemoveAt/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMappingRemoveAt#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingRemoveAt/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">To be added.</param>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.System#Collections#IList#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

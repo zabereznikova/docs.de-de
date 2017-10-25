@@ -1,0 +1,113 @@
+<Type Name="IDataBoundControl" FullName="System.Web.UI.WebControls.IDataBoundControl">
+  <TypeSignature Language="C#" Value="public interface IDataBoundControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataBoundControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.IDataBoundControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Eigenschaften, die von datengebundenen Steuerelementen gemeinsam verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle bietet Zugriff auf Eigenschaften, die gemeinsam von datengebundenen Steuerelementen, wie z. B. die <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.ListView>, <xref:System.Web.UI.WebControls.FormView> und <xref:System.Web.UI.WebControls.DetailsView> Steuerelemente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataKeyNames">
+      <MemberSignature Language="C#" Value="public string[] DataKeyNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] DataKeyNames" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundControl.DataKeyNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Array, das die Namen der primären Schlüsselfelder der Elemente enthält, die in einem datengebundenen Steuerelement angezeigt werden.</summary>
+        <value>Ein Array, das die Namen der primären Schlüsselfelder der Elemente enthält, die in einem datengebundenen Steuerelement angezeigt werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataMember">
+      <MemberSignature Language="C#" Value="public string DataMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataMember" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundControl.DataMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Liste der Daten, denen das datengebundene Steuerelement gebunden wird, wenn die Datenquelle mehr als eine Liste von Datenelementen enthält.</summary>
+        <value>Der Name der Liste der Daten, denen das datengebundene Steuerelement bindet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public object DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundControl.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Objekt aus dem das datengebundene Steuerelement eine Liste mit Datenelementen abruft.</summary>
+        <value>Das Objekt, das die Liste der Daten enthält, die das datengebundene Steuerelement abruft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceID">
+      <MemberSignature Language="C#" Value="public string DataSourceID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSourceID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundControl.DataSourceID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ID des Datenquellen-Steuerelements aus dem das datengebundene Steuerelement eine Liste mit Datenelementen abruft.</summary>
+        <value>Die ID des Datenquellen-Steuerelements, das die Liste der Datenelemente enthält, die das datengebundene Steuerelement abruft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceObject">
+      <MemberSignature Language="C#" Value="public System.Web.UI.IDataSource DataSourceObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.IDataSource DataSourceObject" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundControl.DataSourceObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IDataSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datenquellenobjekt, von dem das datengebundene Steuerelement eine Liste von Datenelementen abruft.</summary>
+        <value>Das Datenquellenobjekt, das die Liste der Datenelemente enthält, die das datengebundene Steuerelement abruft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

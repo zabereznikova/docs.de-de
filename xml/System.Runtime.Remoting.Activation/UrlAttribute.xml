@@ -1,0 +1,241 @@
+<Type Name="UrlAttribute" FullName="System.Runtime.Remoting.Activation.UrlAttribute">
+  <TypeSignature Language="C#" Value="public sealed class UrlAttribute : System.Runtime.Remoting.Contexts.ContextAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit UrlAttribute extends System.Runtime.Remoting.Contexts.ContextAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Activation.UrlAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Remoting.Contexts.ContextAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert ein Attribut, das an der Aufrufsite verwendet werden kann, geben Sie die URL, in dem die Aktivierung stattfindet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Activation.UrlAttribute> wird als Parameter an das Array von Aktivierungsattributen übergeben <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> wenn aktivierte Objekte mit der <xref:System.Activator.CreateInstance%2A> Methode.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Runtime.Remoting.Activation.UrlAttribute> Client aktivierten Remoting einrichten. Das Beispiel besteht aus drei Teilen: einem Client, einen Server und eine remote-Objekt, das vom Client und Server verwendet wird.  
+  
+ Im folgenden Codebeispiel wird ein Client veranschaulicht:  
+  
+ [!code-cpp[System.Runtime.Remoting.Activation.UrlAttribute#0](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Activation.UrlAttribute/CPP/client.cpp#0)]
+ [!code-csharp[System.Runtime.Remoting.Activation.UrlAttribute#0](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Activation.UrlAttribute/CS/client.cs#0)]  
+  
+ Das folgende Codebeispiel zeigt einen Server für diesen Client:  
+  
+ [!code-cpp[System.Runtime.Remoting.Activation.UrlAttribute#2](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Activation.UrlAttribute/CPP/server.cpp#2)]
+ [!code-csharp[System.Runtime.Remoting.Activation.UrlAttribute#2](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Activation.UrlAttribute/CS/server.cs#2)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, die remote-Objekt, das vom Client und dem Server verwendet wird:  
+  
+ [!code-cpp[System.Runtime.Remoting.Activation.UrlAttribute#3](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Activation.UrlAttribute/CPP/remoteobject.cpp#3)]
+ [!code-csharp[System.Runtime.Remoting.Activation.UrlAttribute#3](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Activation.UrlAttribute/CS/remoteobject.cs#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UrlAttribute (string callsiteURL);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string callsiteURL) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Activation.UrlAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="callsiteURL" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="callsiteURL">Der Aufruf Website-URL.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Runtime.Remoting.Activation.UrlAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Runtime.Remoting.Activation.UrlAttribute> Konstruktor.  
+  
+ [!code-cpp[System.Runtime.Remoting.Activation.UrlAttribute#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Activation.UrlAttribute/CPP/client.cpp#1)]
+ [!code-csharp[System.Runtime.Remoting.Activation.UrlAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Activation.UrlAttribute/CS/client.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="callsiteURL" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Activation.UrlAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Das zu vergleichende mit dem aktuellen Objekt <see cref="T:System.Runtime.Remoting.Activation.UrlAttribute" />.</param>
+        <summary>Überprüft, ob das angegebene Objekt auf dieselbe URL wie die aktuelle Instanz verweist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt eine <see cref="T:System.Runtime.Remoting.Activation.UrlAttribute" /> mit demselben Wert; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt den Standardnamen <xref:System.Object.Equals%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Activation.UrlAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashwert für den aktuellen <see cref="T:System.Runtime.Remoting.Activation.UrlAttribute" />.</summary>
+        <returns>Der Hashwert für den aktuellen <see cref="T:System.Runtime.Remoting.Activation.UrlAttribute" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertiesForNewContext">
+      <MemberSignature Language="C#" Value="public override void GetPropertiesForNewContext (System.Runtime.Remoting.Activation.IConstructionCallMessage ctorMsg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetPropertiesForNewContext(class System.Runtime.Remoting.Activation.IConstructionCallMessage ctorMsg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Activation.UrlAttribute.GetPropertiesForNewContext(System.Runtime.Remoting.Activation.IConstructionCallMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctorMsg" Type="System.Runtime.Remoting.Activation.IConstructionCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="ctorMsg">Die <see cref="T:System.Runtime.Remoting.Activation.IConstructionCallMessage" /> des Serverobjekts zu erstellen.</param>
+        <summary>Erzwingt die Erstellung des Kontexts und das Serverobjekt innerhalb des Kontexts an der angegebenen URL.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.Remoting.Activation.UrlAttribute.GetPropertiesForNewContext%2A>nicht trägt alle Eigenschaften auf den neuen Kontext, da es von der Infrastruktur für den Remotezugriff verwendet wird, um die Erstellung von Kontext und das Serverobjekt innerhalb des Kontexts an der angegebenen URL zu erzwingen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContextOK">
+      <MemberSignature Language="C#" Value="public override bool IsContextOK (System.Runtime.Remoting.Contexts.Context ctx, System.Runtime.Remoting.Activation.IConstructionCallMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsContextOK(class System.Runtime.Remoting.Contexts.Context ctx, class System.Runtime.Remoting.Activation.IConstructionCallMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Activation.UrlAttribute.IsContextOK(System.Runtime.Remoting.Contexts.Context,System.Runtime.Remoting.Activation.IConstructionCallMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.Runtime.Remoting.Contexts.Context" />
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Activation.IConstructionCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">Der Kontext, auf dem aktuellen Kontextattribut geprüft werden soll.</param>
+        <param name="msg">Der Konstruktionsaufruf, die die Parameter, von denen auf den aktuellen Kontext überprüft werden müssen.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob das angegebene <see cref="T:System.Runtime.Remoting.Contexts.Context" /> erfüllt <see cref="T:System.Runtime.Remoting.Activation.UrlAttribute" />Anforderungen.</summary>
+        <returns>
+          <see langword="true" />Wenn der übergebene Kontext zulässig ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlValue">
+      <MemberSignature Language="C#" Value="public string UrlValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UrlValue" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Activation.UrlAttribute.UrlValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den URL-Wert, der die <see cref="T:System.Runtime.Remoting.Activation.UrlAttribute" />.</summary>
+        <value>Die URL-Wert, der die <see cref="T:System.Runtime.Remoting.Activation.UrlAttribute" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Runtime.Remoting.Activation.UrlAttribute.UrlValue%2A> Eigenschaft von der <xref:System.Runtime.Remoting.Activation.UrlAttribute>.  
+  
+ [!code-cpp[System.Runtime.Remoting.Activation.UrlAttribute#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Activation.UrlAttribute/CPP/client.cpp#1)]
+ [!code-csharp[System.Runtime.Remoting.Activation.UrlAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Activation.UrlAttribute/CS/client.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

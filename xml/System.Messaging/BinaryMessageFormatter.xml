@@ -1,0 +1,279 @@
+<Type Name="BinaryMessageFormatter" FullName="System.Messaging.BinaryMessageFormatter">
+  <TypeSignature Language="C#" Value="public class BinaryMessageFormatter : ICloneable, System.Messaging.IMessageFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BinaryMessageFormatter extends System.Object implements class System.ICloneable, class System.Messaging.IMessageFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.BinaryMessageFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Messaging.IMessageFormatter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Serialisiert oder deserialisiert wird, ein Objekt oder ein gesamtes Diagramm der verbundenen Objekte in bzw. aus dem Text einer Message Queuing-Nachricht mit einem binary-Format.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.BinaryMessageFormatter> ist sehr effizient und kann verwendet werden, um die meisten Objekte zu serialisieren. Das Ergebnis ist sehr kompakt und kann schnell analysiert, aber nicht zulässig ist, für die lose gekoppeltes Messagingsystem als die <xref:System.Messaging.XmlMessageFormatter> verfügt. Lose verbundene bedeutet, dass der Client und Server unabhängig Version der Typ können, die gesendet und empfangen wird.  
+  
+ Wenn die Anwendung sendet eine Nachricht an die Warteschlange mit einer Instanz von der <xref:System.Messaging.MessageQueue> -Klasse, die Formatierer serialisiert das Objekt in einen Stream und fügt es in den Nachrichtentext. Beim Lesen aus einer Warteschlange mit einer <xref:System.Messaging.MessageQueue>, deserialisiert die Nachrichtendaten in das Formatierungsprogramm der <xref:System.Messaging.Message.Body%2A> Eigenschaft eine <xref:System.Messaging.Message>.  
+  
+ <xref:System.Messaging.BinaryMessageFormatter>bietet höheren Durchsatz als die <xref:System.Messaging.XmlMessageFormatter>. Verwenden der <xref:System.Messaging.BinaryMessageFormatter> bei reinen Geschwindigkeit statt lose gekoppelt messaging erwünscht.  
+  
+   
+  
+## Examples  
+ [!code-cpp[MessagingBinaryFormatter#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagingBinaryFormatter/CPP/message_binaryformatter.cpp#1)]
+ [!code-csharp[MessagingBinaryFormatter#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagingBinaryFormatter/CS/message_binaryformatter.cs#1)]
+ [!code-vb[MessagingBinaryFormatter#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessagingBinaryFormatter/VB/message_binaryformatter.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BinaryMessageFormatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.BinaryMessageFormatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.BinaryMessageFormatter" /> Klasse ohne Angabe eines Schriftstil oder das oberste Objekt Assembly Stil.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie Werte für die <xref:System.Messaging.BinaryMessageFormatter.TopObjectFormat%2A> -Eigenschaft (die definiert, wie das Stammobjekt in einem Diagramm verteilt werden) und die <xref:System.Messaging.BinaryMessageFormatter.TypeFormat%2A> -Eigenschaft (die definiert, wie Typ objektbeschreibungen angeordnet werden) vor dem Verwenden einer Instanz von der <xref:System.Messaging.BinaryMessageFormatter> Klasse Serialisieren und Senden einer Nachricht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BinaryMessageFormatter (System.Runtime.Serialization.Formatters.FormatterAssemblyStyle topObjectFormat, System.Runtime.Serialization.Formatters.FormatterTypeStyle typeFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.Serialization.Formatters.FormatterAssemblyStyle topObjectFormat, valuetype System.Runtime.Serialization.Formatters.FormatterTypeStyle typeFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.BinaryMessageFormatter.#ctor(System.Runtime.Serialization.Formatters.FormatterAssemblyStyle,System.Runtime.Serialization.Formatters.FormatterTypeStyle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="topObjectFormat" Type="System.Runtime.Serialization.Formatters.FormatterAssemblyStyle" />
+        <Parameter Name="typeFormat" Type="System.Runtime.Serialization.Formatters.FormatterTypeStyle" />
+      </Parameters>
+      <Docs>
+        <param name="topObjectFormat">Bestimmt, wie das Objekt der höchsten (Stamm) eines Diagramms in einem serialisierten Datenstrom verteilt werden.</param>
+        <param name="typeFormat">Bestimmt, wie den Beschreibungen in einem serialisierten Datenstrom angelegt werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.BinaryMessageFormatter" /> Klasse, die die Formate für das Stammobjekt und die Beschreibung des Typs angibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public bool CanRead (System.Messaging.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanRead(class System.Messaging.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.BinaryMessageFormatter.CanRead(System.Messaging.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Messaging.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die <see cref="T:System.Messaging.Message" /> , zu überprüfen.</param>
+        <summary>Bestimmt, ob der Formatierer den Inhalt der Nachricht deserialisieren kann.</summary>
+        <returns>
+          <see langword="true" />Wenn die Nachricht von der binären Formatierungsprogramm deserialisiert werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.BinaryMessageFormatter.CanRead%2A>Gibt `false` ist der Nachrichtentext kein binäres Objekt.  
+  
+ Auf dem empfangenden Computer <xref:System.Messaging.BinaryMessageFormatter.CanRead%2A> gibt `true` , wenn die Assembly für die Klasse zu deserialisierende lokal vorhanden ist. Die Assembly muss im globalen Assemblycache vorhanden sein oder mit der Anwendung verknüpft werden (beispielsweise, wenn das Objekt eine benutzerdefinierte Klasse darstellt).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="message" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.BinaryMessageFormatter.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Messaging.BinaryMessageFormatter" /> Klasse, deren Lese-/Schreibzugriff Eigenschaften (die Stamm-Objekts und vom Beschreibung Formate) sind identisch mit der aktuellen <see cref="T:System.Messaging.BinaryMessageFormatter" />.</summary>
+        <returns>Ein Objekt, dessen Eigenschaften identisch mit denen dieses sind <see cref="T:System.Messaging.BinaryMessageFormatter" />, dessen Metadaten ist jedoch nicht angegeben werden als Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine Kopie des Formatierungsprogramms und initialisiert alle seine Eigenschaften mit den Werten dieses <xref:System.Messaging.BinaryMessageFormatter>. Es dient für Skalierbarkeit, jedoch keine garantieren lesen oder Schreiben Threadsicherheit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public object Read (System.Messaging.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Read(class System.Messaging.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.BinaryMessageFormatter.Read(System.Messaging.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Messaging.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die <see cref="T:System.Messaging.Message" />, im Binärformat zu deserialisieren.</param>
+        <summary>Liest den Inhalt der angegebenen Nachricht und erstellt ein Objekt, das die deserialisierte Nachricht enthält.</summary>
+        <returns>Die deserialisierte Meldung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Beim Aufrufen dieser Methode mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Rufen Sie diese Methode nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Der Text der Nachricht muss im Binärformat sein und muss dasselbe Serialisierungsprogramm Deserialisieren die Nachricht, die anfänglich es serialisiert verwendet werden. Wenn der Text eine benutzerdefinierte Klasse darstellt, muss die Assembly für diese Klasse lokal vorhanden sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Nachricht <see cref="P:System.Messaging.Message.BodyType" /> -Eigenschaft kein binäres Objekt an.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="message" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TopObjectFormat">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.Formatters.FormatterAssemblyStyle TopObjectFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.Formatters.FormatterAssemblyStyle TopObjectFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.BinaryMessageFormatter.TopObjectFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTopObjectFormat")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Formatters.FormatterAssemblyStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der definiert, wie das Objekt der höchsten (Stamm) eines Diagramms deserialisiert wird, im Hinblick auf das Suchen und Laden der Assemblys fest.</summary>
+        <value>Eines der <see cref="T:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle" /> Werte, die die Deserialisierungsverhalten definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zurzeit sollten Sie den Standardwert übernehmen `AssemblyStyle`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeFormat">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.Formatters.FormatterTypeStyle TypeFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.Formatters.FormatterTypeStyle TypeFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.BinaryMessageFormatter.TypeFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTypeFormat")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Formatters.FormatterTypeStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der definiert, wie den Beschreibungen in einem serialisierten Datenstrom angelegt werden.</summary>
+        <value>Ein <see cref="T:System.Runtime.Serialization.Formatters.FormatterTypeStyle" /> , der die Beschreibung Typformat definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zurzeit sollten Sie den Standardwert übernehmen `TypesWhenNeeded`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (System.Messaging.Message message, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Messaging.Message message, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.BinaryMessageFormatter.Write(System.Messaging.Message,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Messaging.Message" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die <see cref="T:System.Messaging.Message" /> , deren <see cref="P:System.Messaging.Message.Body" /> Eigenschaft das serialisierte Objekt enthält.</param>
+        <param name="obj">Das Objekt, das in den Nachrichtentext serialisiert werden.</param>
+        <summary>Serialisiert ein Objekt in den Text der Nachricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das oberste Objekt-Format und das Typformat müssen nicht angegeben werden, zum Schreiben in die Warteschlange, wie es beim Lesen von sein muss. Die <xref:System.Messaging.BinaryMessageFormatter.TopObjectFormat%2A> und <xref:System.Messaging.BinaryMessageFormatter.TypeFormat%2A> Eigenschaften wird vom Formatierungsprogramm nur, wenn eine Nachricht zu deserialisieren.  
+  
+ Die <xref:System.Messaging.BinaryMessageFormatter> können die meisten Objekte serialisieren, das Ergebnis ist jedoch nicht lose verknüpft. Allerdings ist es compact, damit der Formatierer für große Objekte effizient ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="message" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

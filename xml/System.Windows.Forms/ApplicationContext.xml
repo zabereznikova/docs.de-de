@@ -1,0 +1,369 @@
+<Type Name="ApplicationContext" FullName="System.Windows.Forms.ApplicationContext">
+  <TypeSignature Language="C#" Value="public class ApplicationContext : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ApplicationContext extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ApplicationContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Gibt die Kontextinformationen für einen Thread der Anwendung an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Windows.Forms.ApplicationContext> Klasse, die Umstände neu zu definieren, die dazu führen, eine Nachrichtenschleife dass zu beenden. Standardmäßig die <xref:System.Windows.Forms.ApplicationContext> überwacht die <xref:System.Windows.Forms.Form.Closed> Ereignis für die Anwendung der wichtigsten <xref:System.Windows.Forms.Form>, dann Nachrichtenschleife der Thread beendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt zwei Formen und beendet die Anwendung aus, wenn beide Formulare geschlossen werden. Wenn die Anwendung gestartet und beendet wird, wird die Position der einzelnen Abfrageformen gespeichert haben. In diesem Beispiel wird veranschaulicht, wie ein <xref:System.Windows.Forms.ApplicationContext>, zusammen mit der `Application.Run(context)` Methode, um mehrere Formen angezeigt wird, wenn die Anwendung gestartet wird.  
+  
+ Die Klasse `MyApplicationContext` erbt von <xref:System.Windows.Forms.ApplicationContext> und nachverfolgt wird, wenn jedes Formular wird geschlossen, und den aktuellen Thread beendet wird, wenn beide sind. Die Klasse speichert die Positionen der einzelnen Abfrageformen für den Benutzer. Die Formulardaten Position befindet sich in einer Datei mit dem Titel `Appdata.txt` , erstellt wird, an dem Speicherort, der bestimmt, indem <xref:System.Windows.Forms.Application.UserAppDataPath%2A>.  
+  
+ Die `Main` Methodenaufrufe `Application.Run(context)` an die Anwendung zu starten, erhält die <xref:System.Windows.Forms.ApplicationContext>.  
+  
+ [!code-cpp[Application#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Application/CPP/source.cpp#1)]
+ [!code-csharp[Application#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Application/CS/source.cs#1)]
+ [!code-vb[Application#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Application/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ApplicationContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ApplicationContext" /> Klasse ohne Kontext.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationContext (System.Windows.Forms.Form mainForm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Form mainForm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ApplicationContext.#ctor(System.Windows.Forms.Form)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mainForm" Type="System.Windows.Forms.Form" />
+      </Parameters>
+      <Docs>
+        <param name="mainForm">Die Main <see cref="T:System.Windows.Forms.Form" /> der Anwendung, die für den Kontext verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ApplicationContext" />-Klasse mit der angegebenen <see cref="T:System.Windows.Forms.Form" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Forms.ApplicationContext.OnMainFormClosed%2A> wird nicht überschrieben, das die Meldungsschleife des Threads beendet, wenn <xref:System.Windows.Forms.ApplicationContext.MainForm%2A> geschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ApplicationContext.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Windows.Forms.ApplicationContext" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Windows.Forms.ApplicationContext.Dispose> auf, wenn Sie <xref:System.Windows.Forms.ApplicationContext> nicht mehr benötigen. Die <xref:System.Windows.Forms.ApplicationContext.Dispose>-Methode bewirkt, dass <xref:System.Windows.Forms.ApplicationContext> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Windows.Forms.ApplicationContext.Dispose>, müssen Sie alle Verweise auf Freigeben der <xref:System.Windows.Forms.ApplicationContext> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Windows.Forms.ApplicationContext> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Windows.Forms.ApplicationContext.Dispose> auf, bevor Sie den letzten Verweis auf das <xref:System.Windows.Forms.ApplicationContext> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Windows.Forms.ApplicationContext>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ApplicationContext.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Windows.Forms.ApplicationContext" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte <xref:System.Windows.Forms.ApplicationContext.Dispose%28System.Boolean%29> Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.Windows.Forms.ApplicationContext> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Beim Überschreiben von <see langword="Dispose(Boolean)" /> müssen Sie darauf achten, nicht auf Objekte zu verweisen, die durch einen früheren Aufruf von <see langword="Dispose" /> freigegeben wurden. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitThread">
+      <MemberSignature Language="C#" Value="public void ExitThread ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExitThread() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ApplicationContext.ExitThread" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Nachrichtenschleife des Threads.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft <xref:System.Windows.Forms.ApplicationContext.ExitThreadCore%2A> auf.  
+  
+> [!NOTE]
+>  <xref:System.Windows.Forms.ApplicationContext.ExitThread%2A>und <xref:System.Windows.Forms.ApplicationContext.ExitThreadCore%2A> werden nicht tatsächlich Ursache des Threads zu beenden. Diese Methoden lösen die <xref:System.Windows.Forms.Application.ThreadExit> Ereignis, auf das die <xref:System.Windows.Forms.Application> -Objekt überwacht. Die <xref:System.Windows.Forms.Application> Objekt wird dann der Thread beendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel ist ein Auszug aus dem Beispiel in der <xref:System.Windows.Forms.ApplicationContext> -Klassenübersicht. In diesem Beispiel verfolgt offenen Formulare und den aktuellen Thread beendet wird, wenn alle Formulare geschlossen werden. Die `OnFormClosed` Methode ist ein Ereignishandler für das <xref:System.Windows.Forms.Form.Closed> Ereignis. Wenn die Anzahl der offenen Formulare gleich 0 ist, klicken Sie dann aktuellen Thread beendet wird durch Aufrufen der <xref:System.Windows.Forms.ApplicationContext.ExitThread%2A> Methode. Durch erhöhen die Anzahl der Formulare nachverfolgt wird die `formCount` Variable, wenn ein Formular angezeigt wird, und dem Dekrementieren geht, wenn ein Formular geschlossen wird.  
+  
+ Code ist für die Übersichtlichkeit nicht dargestellt. Finden Sie unter <xref:System.Windows.Forms.ApplicationContext> für das gesamte Codelisting.  
+  
+ [!code-cpp[Application#3](~/samples/snippets/cpp/VS_Snippets_Winforms/Application/CPP/source.cpp#3)]
+ [!code-csharp[Application#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Application/CS/source.cs#3)]
+ [!code-vb[Application#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Application/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitThreadCore">
+      <MemberSignature Language="C#" Value="protected virtual void ExitThreadCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ExitThreadCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ApplicationContext.ExitThreadCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Nachrichtenschleife des Threads.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, von <xref:System.Windows.Forms.ApplicationContext.ExitThread%2A>.  
+  
+> [!NOTE]
+>  <xref:System.Windows.Forms.ApplicationContext.ExitThread%2A>und <xref:System.Windows.Forms.ApplicationContext.ExitThreadCore%2A> werden nicht tatsächlich Ursache des Threads zu beenden. Diese Methoden lösen die <xref:System.Windows.Forms.Application.ThreadExit> Ereignis, auf das die <xref:System.Windows.Forms.Application> -Objekt überwacht. Die <xref:System.Windows.Forms.Application> Objekt wird dann der Thread beendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ApplicationContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ApplicationContext.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versucht, Ressourcen freizugeben und andere Bereinigungen durchzuführen, bevor der Kontext der Anwendung durch die Garbagecollection wieder zugänglich gemacht wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Object.Finalize%2A?displayProperty=nameWithType> und bereinigt Ressourcen durch Aufrufen von `Dispose(false)`. Überschreiben Sie `Dispose(Boolean)`, um die Bereinigung anzupassen.  
+  
+ Diese Methode sollte nicht von Anwendungscode aufgerufen werden. ein Objekt `Finalize` Methode wird automatisch während der Garbagecollection aufgerufen, durch einen Aufruf von seiner Finalisierung verfolgt, durch den Garbage Collector deaktiviert wurde die <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> Methode.  
+  
+ Weitere Informationen finden Sie unter [Finalize-Methoden und Destruktoren](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70), [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md), und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MainForm">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Form MainForm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Form MainForm" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ApplicationContext.MainForm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Form</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Forms.Form" /> als Kontext verwendet.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.Form" /> als Kontext verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bestimmt den Hauptknoten <xref:System.Windows.Forms.Form> für diesen Kontext. Diese Eigenschaft kann jedoch jederzeit ändern. Wenn <xref:System.Windows.Forms.ApplicationContext.OnMainFormClosed%2A> wird nicht überschrieben, das die Meldungsschleife des Threads beendet, wenn die `mainForm` -Parameter geschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMainFormClosed">
+      <MemberSignature Language="C#" Value="protected virtual void OnMainFormClosed (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMainFormClosed(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ApplicationContext.OnMainFormClosed(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Das Objekt, das das Ereignis ausgelöst hat.</param>
+        <param name="e">Das <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Aufrufe <see cref="M:System.Windows.Forms.ApplicationContext.ExitThreadCore" />, löst die <see cref="E:System.Windows.Forms.ApplicationContext.ThreadExit" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft die standardmäßige Implementierung dieser Methode <xref:System.Windows.Forms.ApplicationContext.ExitThreadCore%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ApplicationContext.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Objekt, das Daten über das Steuerelement enthält.</summary>
+        <value>Ein <see cref="T:System.Object" />, das Daten über das Steuerelement enthält. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Typ abgeleitet wurde. die <xref:System.Object> Klasse kann diese Eigenschaft zugewiesen werden. Wenn die <xref:System.Windows.Forms.ApplicationContext.Tag%2A> Eigenschaft mit dem Windows Forms-Designer festgelegt wird, kann nur Text zugewiesen werden.  
+  
+ Eine übliche Verwendung für die <xref:System.Windows.Forms.ApplicationContext.Tag%2A> Eigenschaft besteht darin, Daten zu speichern, die eng mit dem Steuerelement zugeordnet ist. Z. B. Wenn Sie ein Steuerelement, das Informationen zu einem Kunden anzeigt, Sie können Speichern einer <xref:System.Data.DataSet> , enthält die kundenbestellungsverlauf in diesem Steuerelement <xref:System.Windows.Forms.ApplicationContext.Tag%2A> Eigenschaft, sodass die Daten schnell zugegriffen werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadExit">
+      <MemberSignature Language="C#" Value="public event EventHandler ThreadExit;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ThreadExit" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ApplicationContext.ThreadExit" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Nachrichtenschleife des Threads sollen, durch den Aufruf beendet werden <see cref="M:System.Windows.Forms.ApplicationContext.ExitThread" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ApplicationContext.ThreadExit> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ApplicationContext> mit dem Namen `ApplicationContext1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ApplicationContext.ThreadExit> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#75](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#75)]
+ [!code-vb[System.Windows.Forms.EventExamples#75](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#75)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

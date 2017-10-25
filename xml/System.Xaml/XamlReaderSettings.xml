@@ -1,0 +1,226 @@
+<Type Name="XamlReaderSettings" FullName="System.Xaml.XamlReaderSettings">
+  <TypeSignature Language="C#" Value="public class XamlReaderSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlReaderSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlReaderSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, Regeln für die Verarbeitung oder optionseinstellungen für eine <see cref="T:System.Xaml.XamlReader" /> Implementierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig eine initialisierte <xref:System.Xaml.XamlReaderSettings> Objekt verwendet die Werte für seine Eigenschaften entsprechen die Standardwerte, z. B. erwartet `false` für boolesche Eigenschaften oder null-Werte für Eigenschaften mit Verweistypen. Standardinitialisierung ergibt sich die folgenden Werte:  
+  
+-   Die <xref:System.Xaml.XamlReaderSettings.BaseUri%2A> und <xref:System.Xaml.XamlReaderSettings.LocalAssembly%2A> Eigenschaften sind `null`.  
+  
+-   Die <xref:System.Xaml.XamlReaderSettings.IgnoreUidsOnPropertyElements%2A>-Eigenschaft ist `false`.  
+  
+-   Die <xref:System.Xaml.XamlReaderSettings.ProvideLineInfo%2A> Eigenschaft `false` im Objektmodell; allerdings sie kann festgelegt werden `true` zur Laufzeit basierend auf der geladenen ausführbaren Dateien und ihrer Debugeinstellungen oder durch Verwendung von XAML-Schemakontext.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlReaderSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReaderSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xaml.XamlReaderSettings" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Initialisierung von einer <xref:System.Xaml.XamlReaderSettings> Standardinstanz, finden Sie unter <xref:System.Xaml.XamlReaderSettings>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlReaderSettings (System.Xaml.XamlReaderSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlReaderSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlReaderSettings.#ctor(System.Xaml.XamlReaderSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="System.Xaml.XamlReaderSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings">Ein vorhandenes <see cref="T:System.Xaml.XamlReaderSettings" />-Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlReaderSettings" /> -Klasse auf der Grundlage von Werten in einer anderen <see cref="T:System.Xaml.XamlReaderSettings" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor unterstützt das Zusammenführen von Einstellungen für XAML-Reader an, in dem zusätzliche Einstellungen auch aus anderen Teilnehmer der datenleserprozess stammen können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowProtectedMembersOnRoot">
+      <MemberSignature Language="C#" Value="public bool AllowProtectedMembersOnRoot { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowProtectedMembersOnRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReaderSettings.AllowProtectedMembersOnRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Stammobjekt Elemente, die einen geschützten Zugriff Codemodell aufweisen enthalten kann, wenn er meldet, dass die Verwendung von XAML-Typ-Darstellung.</summary>
+        <value>
+          <see langword="true" />Wenn das Stammobjekt Member, die über einen geschützten Zugriff Codemodell verfügen enthalten darf; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Einstellung ist für einige XAML-Implementierungen, z. B. WPF, wo das Stammobjekt häufig eine "Factory ist" für das Generieren einer Instanz von einem Mustertyp, wenn dieses Muster-Typs nicht immer eine praktische Objektinstanz ist, relevant. Z. B. einen Stammwert von `UserControl` verfügt über eine bestimmte Bedeutung für WPF und Silverlight-Anwendungsmodelle und `UserControl` könnte geschützte Eigenschaften (`UserControl.Content`), dass der Parser Zugriff benötigt. Tools und Entwurfsoberflächen benötigen auch Zugriff auf diese Eigenschaften. Diese Fälle sollten im allgemeinen XAML-Typsystem als beschreibbare Eigenschaften gemeldet werden, obwohl sie in der Unterstützungstypsystem Zugriff geschützt haben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseUri">
+      <MemberSignature Language="C#" Value="public Uri BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReaderSettings.BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert den Basis-URI, der zum Auflösen relativer Pfade verwendet wird.</summary>
+        <value>Die Basis-URI zu verwenden. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige URI-bezogenen Eigenschaften in der .NET Framework-XAML-Dienste-API behandelt URIs für die Verwendung von XAML-Namespaces als Zeichenfolgen. Diese Eigenschaft verwendet jedoch das "true" <xref:System.Uri> Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreUidsOnPropertyElements">
+      <MemberSignature Language="C#" Value="public bool IgnoreUidsOnPropertyElements { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreUidsOnPropertyElements" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReaderSettings.IgnoreUidsOnPropertyElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Reader für die Verwendung von XAML-Werte für ignorieren sollen <see langword="x:Uid" /> Attribute, die für Eigenschaftenelemente vorhanden sind.</summary>
+        <value>
+          <see langword="true" />Wenn der Reader für Werte ignorieren soll <see langword="x:Uid" /> Attribute für Eigenschaftenelemente. <see langword="false" />Wenn der Reader verarbeiten soll <see langword="x:Uid" /> Attribute für Eigenschaftenelemente. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der Lokalisierung der `x:Uid` Attribut wird verwendet, um Elemente im Markup zu ermitteln, sodass Tools für die Lokalisierung von XAML-Elementen als separate Entitäten für die Lokalisierung verarbeiten können. Attribute werden in der Regel nicht für Eigenschaftenelemente in XAML angezeigt. Allerdings `x:Uid` ist eine Ausnahme aus, da einige Verwendungen lokalisierten chinesischer Text in ein Eigenschaftenelement als Inhalt, anstelle von einfügen als separates Objekt, das empfangen kann einen eigenen `x:Uid`. Festlegen einer <xref:System.Xaml.XamlReaderSettings.IgnoreUidsOnPropertyElements%2A> Wert `true` ermöglicht einen strengeren Modus. Der Standardwert von `false` Property-Element die Verarbeitung fortsetzt `x:Uid` Attribute.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly LocalAssembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly LocalAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReaderSettings.LocalAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Objekt, das die aktuelle lokale Assembly für die Verarbeitung darstellt. Diese Assemblyinformationen werden für Aufrufe von Hilfs-APIs verwendet, z. B. <see cref="M:System.Xaml.XamlType.GetAllMembers" />.</summary>
+        <value>Eine CLR-Reflektion <see cref="T:System.Reflection.Assembly" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideLineInfo">
+      <MemberSignature Language="C#" Value="public bool ProvideLineInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProvideLineInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReaderSettings.ProvideLineInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Reader Zeilennummer und Position bereitstellen kann.</summary>
+        <value>
+          <see langword="true" />Wenn der Reader bereitstellen, kann die Zeilennummer und Positionsinformationen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.XamlReaderSettings.ProvideLineInfo%2A>ist `false` im Objektmodell; allerdings sie kann festgelegt werden `true` zur Laufzeit auf Grundlage der geladenen ausführbaren Dateien und deren Debugeinstellungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValuesMustBeString">
+      <MemberSignature Language="C#" Value="public bool ValuesMustBeString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValuesMustBeString" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlReaderSettings.ValuesMustBeString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Reader, dass erzwingt alle <see langword="Value" /> Knoten werden verarbeitet, als eine <see langword="String" /> Typ.</summary>
+        <value>
+          <see langword="true" />Wenn der Reader, dass nur erzwingt <see langword="String" /> befindet sich im <see langword="Value" /> Knoten ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zusätzlich zu <xref:System.String>, ein mögliches `Value` unter einigen Implementierungen von XAML-Inhalt ist <xref:System.Windows.Markup.XData>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,339 @@
+<Type Name="CreateParams" FullName="System.Windows.Forms.CreateParams">
+  <TypeSignature Language="C#" Value="public class CreateParams" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CreateParams extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.CreateParams" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Kapselt die Informationen erforderlich, wenn Sie ein Steuerelement zu erstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Informationen in einem <xref:System.Windows.Forms.CreateParams> können verwendet werden, um Informationen zu den ursprünglichen Zustand und die Darstellung eines Steuerelements zu übergeben. Die meisten <xref:System.Windows.Forms.Control> abgeleiteten Steuerelemente überschreiben die <xref:System.Windows.Forms.Control.CreateParams%2A> Eigenschaft, um die geeigneten Werte zu übergeben oder enthalten zusätzliche Informationen in den <xref:System.Windows.Forms.CreateParams>.  
+  
+ Weitere Informationen zum Erstellen von Steuerelementparameter, finden Sie unter der `CreateWindow` und `CreateWindowEx` Funktionen und die `CREATESTRUCT` Struktur-Dokumentation in der Referenz zu Windows-Plattform-SDK befindet sich in der MSDN Library.  
+  
+> [!NOTE]
+>  Die Konstanten, die zum Festlegen der <xref:System.Windows.Forms.CreateParams.Style%2A>, <xref:System.Windows.Forms.CreateParams.ExStyle%2A>, und <xref:System.Windows.Forms.CreateParams.ClassStyle%2A> Eigenschaften werden in der Headerdatei Winuser.h definiert. Diese Datei wird von der Plattform-SDK oder im Visual Studio installiert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.Button> abgeleitete Klasse, die mit dem Namen `MyIconButton` und stellt die Implementierung erforderlich sind, für die Schaltfläche ein Bild, statt ein Symbol angezeigt. Die <xref:System.Windows.Forms.Control.CreateParams%2A> Eigenschaft wird erweitert, und ein Wert hinzugefügt, die <xref:System.Windows.Forms.CreateParams.Style%2A> -Eigenschaft, die bewirkt, die Schaltfläche zum Anzeigen dass einer <xref:System.Drawing.Icon> anstelle einer <xref:System.Drawing.Image>.  
+  
+ [!code-cpp[CreateParams#1](~/samples/snippets/cpp/VS_Snippets_Winforms/CreateParams/CPP/createparams.cpp#1)]
+ [!code-csharp[CreateParams#1](~/samples/snippets/csharp/VS_Snippets_Winforms/CreateParams/CS/createparams.cs#1)]
+ [!code-vb[CreateParams#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/CreateParams/VB/createparams.vb#1)]  
+  
+ Das folgende Codebeispiel erstellt eine Instanz eines Standards <xref:System.Windows.Forms.Button> Steuerelement und einer Instanz des abgeleiteten Steuerelements `MyIconButton`erstelltes im obigen Beispiel. Dieses Beispiel benötigen Sie ergibt sich ein <xref:System.Drawing.Icon> -Datei Default.ico am gleichen Speicherort wie die Anwendung. Beim Starten der Anwendung, die `Default` -Symbol wird angezeigt, auf die `MyIconButton` Schaltfläche. Wenn die `Default` Symbol "ist nicht vorhanden, die Schaltflächenoberseite ist leer. Wenn der Standard <xref:System.Windows.Forms.Button> geklickt wird, ein <xref:System.Windows.Forms.OpenFileDialog> Dialogfeld wird angezeigt, sodass Sie ein neues Symbol anzuzeigende auswählen, können die `MyIconButton`.  
+  
+ [!code-cpp[CreateParams#2](~/samples/snippets/cpp/VS_Snippets_Winforms/CreateParams/CPP/createparams.cpp#2)]
+ [!code-csharp[CreateParams#2](~/samples/snippets/csharp/VS_Snippets_Winforms/CreateParams/CS/createparams.cs#2)]
+ [!code-vb[CreateParams#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/CreateParams/VB/createparams.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CreateParams ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CreateParams.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.CreateParams" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="public string Caption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest ursprünglichen Text des Steuerelements.</summary>
+        <value>Die anfängliche Steuerelementtext.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassName">
+      <MemberSignature Language="C#" Value="public string ClassName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClassName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.ClassName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Windows-Klasse, leiten Sie das Steuerelement aus.</summary>
+        <value>Der Name des Windows-Klasse, leiten Sie das Steuerelement aus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist `null`, gibt an, dass das Steuerelement nicht von einer vorhandenen Steuerelementklasse abgeleitet ist. Beim Ableiten von einer vorhandenen Steuerelementklasse, speichern Sie den Namen der Systemklasse in dieser Eigenschaft. Beispielsweise leiten Sie vom Standard <xref:System.Windows.Forms.Button> steuern, legen Sie diese Eigenschaft auf "BUTTON".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassStyle">
+      <MemberSignature Language="C#" Value="public int ClassStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ClassStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.ClassStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert eine bitweise Kombination von Klasse-Style-Werte.</summary>
+        <value>Eine bitweise Kombination der Klasse Style-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.CreateParams.ClassStyle%2A> Eigenschaft wird ignoriert, wenn die <xref:System.Windows.Forms.CreateParams.ClassName%2A> Eigenschaft ist nicht `null`.  
+  
+ Weitere Informationen zum Erstellen von Steuerelementparameter, finden Sie unter der `CreateWindow` und `CreateWindowEx` Funktionen und die `CREATESTRUCT` Struktur-Dokumentation in der Referenz zu Windows-Plattform-SDK befindet sich in der MSDN Library.  
+  
+> [!NOTE]
+>  Die Konstanten, die zum Festlegen der <xref:System.Windows.Forms.CreateParams.Style%2A>, <xref:System.Windows.Forms.CreateParams.ExStyle%2A>, und <xref:System.Windows.Forms.CreateParams.ClassStyle%2A> Eigenschaften werden in der Headerdatei Winuser.h definiert. Diese Datei wird von der Plattform-SDK oder im Visual Studio installiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExStyle">
+      <MemberSignature Language="C#" Value="public int ExStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ExStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.ExStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine bitweise Kombination der Werte erweiterten Fensterstil.</summary>
+        <value>Eine bitweise Kombination der Werte der erweiterten Fensterstil.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.CreateParams.ExStyle%2A> Eigenschaft unterstützt erweiterte Darstellung und Ausgangszustand-Werten, die an das Steuerelement angewendet.  
+  
+ Weitere Informationen zum Erstellen von Steuerelementparameter, finden Sie unter der `CreateWindow` und `CreateWindowEx` Funktionen und die `CREATESTRUCT` Struktur-Dokumentation in der Referenz zu Windows-Plattform-SDK befindet sich in der MSDN Library.  
+  
+> [!NOTE]
+>  Die Konstanten, die zum Festlegen der <xref:System.Windows.Forms.CreateParams.Style%2A>, <xref:System.Windows.Forms.CreateParams.ExStyle%2A>, und <xref:System.Windows.Forms.CreateParams.ClassStyle%2A> Eigenschaften werden in der Headerdatei Winuser.h definiert. Diese Datei wird von der Plattform-SDK oder im Visual Studio installiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die anfängliche Höhe des Steuerelements fest.</summary>
+        <value>Der numerische Wert, der die anfängliche Höhe des Steuerelements darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Param">
+      <MemberSignature Language="C#" Value="public object Param { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Param" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.Param" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert zusätzliche Parameterinformationen, die beim Erstellen des Steuerelements erforderlich sind.</summary>
+        <value>Die <see cref="T:System.Object" /> , die zusätzlichen Parameter erforderliche Informationen zum Erstellen des Steuerelements enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Fensters multiple Document Interface (MDI)-Client, erstellen die <xref:System.Windows.Forms.CreateParams.Param%2A> Eigenschaftenverweis, muss eine `CLIENTCREATESTRUCT` Struktur.  
+  
+ Weitere Informationen zum Erstellen von Steuerelementparameter, finden Sie unter der `CreateWindow` und `CreateWindowEx` Funktionen und die `CLIENTCREATESTRUCT` Struktur-Dokumentation in der Referenz zu Windows-Plattform-SDK befindet sich in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public IntPtr Parent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen des übergeordneten Elements des Steuerelements.</summary>
+        <value>Ein <see cref="T:System.IntPtr" /> , das das Fensterhandle des übergeordneten Elements des Steuerelements enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public int Style { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Style" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine bitweise Kombination der Fensterstilwerte.</summary>
+        <value>Eine bitweise Kombination der Werte der Fensterstil.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.CreateParams.Style%2A> Eigenschaft steuert die Darstellung des Steuerelements und seinen anfänglichen aktiven Status.  
+  
+ Weitere Informationen zum Erstellen von Steuerelementparameter, finden Sie unter der `CreateWindow` und `CreateWindowEx` Funktionen und die `CREATESTRUCT` Struktur-Dokumentation in der Referenz zu Windows-Plattform-SDK befindet sich in der MSDN Library.  
+  
+> [!NOTE]
+>  Die Konstanten, die zum Festlegen der <xref:System.Windows.Forms.CreateParams.Style%2A>, <xref:System.Windows.Forms.CreateParams.ExStyle%2A>, und <xref:System.Windows.Forms.CreateParams.ClassStyle%2A> Eigenschaften werden in der Headerdatei Winuser.h definiert. Diese Datei wird von der Plattform-SDK oder im Visual Studio installiert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.Button> abgeleitete Klasse, die mit dem Namen `MyIconButton` und stellt die Implementierung erforderlich sind, für die Schaltfläche ein Bild, statt ein Symbol angezeigt. Die <xref:System.Windows.Forms.Control.CreateParams%2A> Eigenschaft wird erweitert, und ein Wert hinzugefügt, die <xref:System.Windows.Forms.CreateParams.Style%2A> -Eigenschaft, die bewirkt, die Schaltfläche zum Anzeigen dass einer <xref:System.Drawing.Icon> anstelle einer <xref:System.Drawing.Image>.  
+  
+ [!code-cpp[CreateParams#1](~/samples/snippets/cpp/VS_Snippets_Winforms/CreateParams/CPP/createparams.cpp#1)]
+ [!code-csharp[CreateParams#1](~/samples/snippets/csharp/VS_Snippets_Winforms/CreateParams/CS/createparams.cs#1)]
+ [!code-vb[CreateParams#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/CreateParams/VB/createparams.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CreateParams.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle Objekt darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die anfängliche Breite des Steuerelements fest.</summary>
+        <value>Der numerische Wert, der die anfängliche Breite des Steuerelements darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public int X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die erste linke Position des Steuerelements.</summary>
+        <value>Der numerische Wert, der die erste linke Position des Steuerelements darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public int Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die obere Position der die ursprüngliche Position des Steuerelements.</summary>
+        <value>Der numerische Wert, der die obere Position der die ursprüngliche Position des Steuerelements darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,166 @@
+<Type Name="VisualStyleElement+Window+MdiCloseButton" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+Window+MdiCloseButton">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.Window.MdiCloseButton" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/Window/MdiCloseButton extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.MdiCloseButton" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> für jeden Status der Objekte die **schließen** Schaltfläche eines untergeordneten Fensters Multiple Document Interface (MDI). Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Eigenschaft des der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.MdiCloseButton> -Klasse zurückgegeben wird ein <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für einen anderen Zustand des der **schließen** Schaltfläche ein untergeordnetes MDI-Fenster.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.MdiCloseButton.Normal%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementWindowMdiCloseButton1` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#391](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#391)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#391](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#391)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Disabled">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Disabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Disabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.MdiCloseButton.Disabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuellen Stilelements darstellt, die die **schließen** Schaltfläche eines untergeordneten Fensters Multiple Document Interface (MDI) im deaktivierten Zustand.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> darstellt, die die **schließen** Schaltfläche des untergeordneten MDI-Fensters im deaktivierten Zustand.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.MdiCloseButton.Disabled%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.MdiCloseButton.Hot%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementWindowMdiCloseButton4` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#394](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#394)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#394](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#394)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hot">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Hot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Hot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.MdiCloseButton.Hot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuellen Stilelements darstellt, die die **schließen** Schaltfläche eines untergeordneten Fensters Multiple Document Interface (MDI) im aktiven Zustand.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> darstellt, die die **schließen** Schaltfläche des untergeordneten MDI-Fensters im aktiven Zustand.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.MdiCloseButton.Hot%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.MdiCloseButton.Hot%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementWindowMdiCloseButton2` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#392](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#392)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#392](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#392)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Normal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Normal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.MdiCloseButton.Normal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuellen Stilelements darstellt, die die **schließen** Schaltfläche eines untergeordneten Fensters Multiple Document Interface (MDI) in den Zustand "normal".</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> darstellt, die die **schließen** Schaltfläche des untergeordneten MDI-Fensters in den Zustand "normal".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.MdiCloseButton.Normal%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.MdiCloseButton.Normal%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementWindowMdiCloseButton1` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#391](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#391)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#391](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#391)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pressed">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Pressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Pressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.MdiCloseButton.Pressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuellen Stilelements darstellt, die die **schließen** Schaltfläche eines untergeordneten Fensters Multiple Document Interface (MDI) im gedrückten Zustand befindet.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> darstellt, die die **schließen** Schaltfläche des untergeordneten MDI-Fensters im gedrückten Zustand befindet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.MdiCloseButton.Pressed%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.MdiCloseButton.Hot%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementWindowMdiCloseButton3` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#393](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#393)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#393](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#393)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

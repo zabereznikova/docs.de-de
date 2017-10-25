@@ -1,0 +1,160 @@
+<Type Name="PolygonHotSpot" FullName="System.Web.UI.WebControls.PolygonHotSpot">
+  <TypeSignature Language="C#" Value="public sealed class PolygonHotSpot : System.Web.UI.WebControls.HotSpot" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PolygonHotSpot extends System.Web.UI.WebControls.HotSpot" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.PolygonHotSpot" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.HotSpot</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen polygonförmigen Hotspotbereich in einem <see cref="T:System.Web.UI.WebControls.ImageMap" /> Steuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse definiert einen polygonförmigen Hotspotbereich in einem <xref:System.Web.UI.WebControls.ImageMap> Steuerelement. Die <xref:System.Web.UI.WebControls.PolygonHotSpot> ist nützlich für unregelmäßig definieren Hotspot-Bereiche in Form einer <xref:System.Web.UI.WebControls.ImageMap> Steuerelement. Angenommen, können sie Sie einzelne Bereiche innerhalb einer geografischen Zuordnung definieren.  
+  
+ Definieren Sie den Bereich des eine <xref:System.Web.UI.WebControls.PolygonHotSpot>legen die <xref:System.Web.UI.WebControls.PolygonHotSpot.Coordinates%2A> -Eigenschaft in eine Zeichenfolge, die angibt, die Koordinaten der einzelnen Scheitelpunkt eines der <xref:System.Web.UI.WebControls.PolygonHotSpot> Objekt. Ein Polygon Vertex ist ein Punkt, an dem zwei Kanten des Polygons erfüllen.  
+  
+ Wenn ein <xref:System.Web.UI.WebControls.PolygonHotSpot> Objekt geklickt wird, wird die Seite zu einer URL navigiert, generiert ein Postback an den Server oder wird keine Aktion ausgeführt. Die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft gibt an, dieses Verhalten. Um zu einer URL zu navigieren, legen Sie die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft, um `HotSpotMode.Navigate`, und verwenden die <xref:System.Web.UI.WebControls.HotSpot.NavigateUrl%2A> Eigenschaft zum Angeben der URL zu navigieren. Um an den Server zu senden, legen Sie die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft `HotSpotMode.PostBack`, und Verwenden der <xref:System.Web.UI.WebControls.HotSpot.PostBackValue%2A> -Eigenschaft geben Sie einen Namen für die <xref:System.Web.UI.WebControls.PolygonHotSpot> Objekt. Dieser Name wird übergeben werden, der <xref:System.Web.UI.WebControls.ImageMapEventArgs> Ereignisdaten bei der <xref:System.Web.UI.WebControls.PolygonHotSpot> geklickt wird. Wenn Sie möchten die <xref:System.Web.UI.WebControls.PolygonHotSpot> Objekt weisen kein Verhalten, legen Sie die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft, um `HotSpotMode.Inactive`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Web.UI.WebControls.ImageMap> Steuerelement, das drei enthält <xref:System.Web.UI.WebControls.PolygonHotSpot> Objekte. Jede <xref:System.Web.UI.WebControls.PolygonHotSpot> -Objekt stellt eine geografische Region auf der Karte dar. Wenn der Benutzer klickt ein <xref:System.Web.UI.WebControls.PolygonHotSpot> -Objekts können es an den Server zurückgesendet und den Typ und den Namen des Hotspots werden in einer Bezeichnung angezeigt.  
+  
+ [!code-aspx-csharp[PolygonHotSpot.Class1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PolygonHotSpot.Class1/CS/polygonhotspot.class1cs.aspx#1)]
+ [!code-aspx-vb[PolygonHotSpot.Class1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PolygonHotSpot.Class1/VB/polygonhotspot.class1vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PolygonHotSpot ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PolygonHotSpot.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.PolygonHotSpot" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.PolygonHotSpot> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie programmgesteuert erstellen eine <xref:System.Web.UI.WebControls.PolygonHotSpot> -Objekt und fügen sie ein <xref:System.Web.UI.WebControls.ImageMap> Steuerelement. Die <xref:System.Web.UI.WebControls.ImageMap> -Steuerelement enthält zwei andere <xref:System.Web.UI.WebControls.PolygonHotSpot> Objekte, die deklarativ hinzugefügt wurden. Jede <xref:System.Web.UI.WebControls.PolygonHotSpot> -Objekt stellt eine geografische Region auf der Karte dar. Wenn der Benutzer klickt ein <xref:System.Web.UI.WebControls.PolygonHotSpot> -Objekts können es an den Server zurückgesendet und den Typ und den Namen des Hotspots werden in einer Bezeichnung angezeigt.  
+  
+ [!code-aspx-csharp[PolygonHotSpot.Cstr#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PolygonHotSpot.Cstr/CS/polygonhotspot.cstrcs.aspx#1)]
+ [!code-aspx-vb[PolygonHotSpot.Cstr#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PolygonHotSpot.Cstr/VB/polygonhotspot.cstrvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Coordinates">
+      <MemberSignature Language="C#" Value="public string Coordinates { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Coordinates" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PolygonHotSpot.Coordinates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge von Koordinaten, die Eckpunkte des stellt ein <see cref="T:System.Web.UI.WebControls.PolygonHotSpot" /> Objekt.</summary>
+        <value>Eine Zeichenfolge, die die Koordinaten der stellt eine <see cref="T:System.Web.UI.WebControls.PolygonHotSpot" /> Scheitelpunkte des Objekts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PolygonHotSpot.Coordinates%2A> Eigenschaft an, die Koordinaten der Eckpunkte ein <xref:System.Web.UI.WebControls.PolygonHotSpot> Objekt. Ein Polygon Vertex ist ein Punkt, an dem zwei Kanten des Polygons erfüllen. Die Zeichenfolge, die Sie angeben, muss Koordinaten, die jeweils durch ein Komma getrennt formatiert werden. Jede Vertex, die Sie angeben müssen eine X-Koordinate und y-Koordinate. Die Zeichenfolge "128,185,335,157,510,224,510,383,228,383" definiert z. B. einen PolygonHotSpot mit fünf Scheitelpunkte. Die X-Koordinate des ersten Vertex ist 128. Die y-Koordinate des ersten Vertex ist 185.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie programmgesteuert erstellen eine <xref:System.Web.UI.WebControls.PolygonHotSpot> -Objekt und fügen sie ein <xref:System.Web.UI.WebControls.ImageMap> Steuerelement. Die <xref:System.Web.UI.WebControls.PolygonHotSpot.Coordinates%2A> Eigenschaft wird verwendet, um die Koordinaten der Eckpunkte geben die <xref:System.Web.UI.WebControls.PolygonHotSpot> Objekt. Die <xref:System.Web.UI.WebControls.ImageMap> -Steuerelement enthält zwei andere <xref:System.Web.UI.WebControls.PolygonHotSpot> Objekte, die deklarativ hinzugefügt wurden. Jede <xref:System.Web.UI.WebControls.PolygonHotSpot> -Objekt stellt eine geografische Region auf der Karte dar. Wenn der Benutzer klickt ein <xref:System.Web.UI.WebControls.PolygonHotSpot> -Objekts können es an den Server zurückgesendet und den Typ und den Namen des Hotspots werden in einer Bezeichnung angezeigt.  
+  
+ [!code-aspx-csharp[PolygonHotSpot.Cstr#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PolygonHotSpot.Cstr/CS/polygonhotspot.cstrcs.aspx#1)]
+ [!code-aspx-vb[PolygonHotSpot.Cstr#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PolygonHotSpot.Cstr/VB/polygonhotspot.cstrvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCoordinates">
+      <MemberSignature Language="C#" Value="public override string GetCoordinates ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetCoordinates() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PolygonHotSpot.GetCoordinates" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, die die Koordinaten der Eckpunkte stellt ein <see cref="T:System.Web.UI.WebControls.PolygonHotSpot" /> Objekt.</summary>
+        <returns>Eine Zeichenfolge, die die Koordinaten der Eckpunkte stellt ein <see cref="T:System.Web.UI.WebControls.PolygonHotSpot" /> Objekt. Der Standardwert ist eine leere Zeichenfolge („“).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.PolygonHotSpot.GetCoordinates%2A> Methode gibt eine Zeichenfolge, die Koordinaten der Eckpunkte darstellt, ein <xref:System.Web.UI.WebControls.PolygonHotSpot> Objekt. Die Zeichenfolge, die Rückgabe dieser Methode wird der aktuelle Wert der die <xref:System.Web.UI.WebControls.PolygonHotSpot.Coordinates%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.PolygonHotSpot.GetCoordinates%2A> Methode wird von ASP.NET intern verwendet, um den Text für die Koordinaten der verwendet eine <xref:System.Web.UI.WebControls.PolygonHotSpot> beim Rendern. Die Zeichenfolge, die zurückgegeben wird, bezieht sich auf den Browser und Markup Language.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Web.UI.WebControls.ImageMap> Steuerelement, das drei enthält <xref:System.Web.UI.WebControls.PolygonHotSpot> Objekte. Jede <xref:System.Web.UI.WebControls.PolygonHotSpot> -Objekt stellt eine geografische Region auf der Karte dar. Wenn der Benutzer klickt ein <xref:System.Web.UI.WebControls.PolygonHotSpot> Objekt es an den Server zurückgesendet. Die <xref:System.Web.UI.WebControls.PolygonHotSpot.GetCoordinates%2A> Methode ruft die Koordinaten der Scheitelpunkte des Polygons ab, sodass sie in einer Beschriftung angezeigt werden können.  
+  
+ [!code-aspx-csharp[PolygonHotSpot.GetCoordinates#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PolygonHotSpot.GetCoordinates/CS/polygonhotspot.getcoordinatescs.aspx#1)]
+ [!code-aspx-vb[PolygonHotSpot.GetCoordinates#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PolygonHotSpot.GetCoordinates/VB/polygonhotspot.getcoordinatesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkupName">
+      <MemberSignature Language="C#" Value="protected override string MarkupName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MarkupName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PolygonHotSpot.MarkupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

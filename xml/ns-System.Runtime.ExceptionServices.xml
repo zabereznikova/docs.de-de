@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.ExceptionServices">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.ExceptionServices" /> -Namespace stellt Klassen für die erweiterte Ausnahmebehandlung bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

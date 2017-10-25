@@ -1,0 +1,734 @@
+<Type Name="FormatterConverter" FullName="System.Runtime.Serialization.FormatterConverter">
+  <TypeSignature Language="C#" Value="public class FormatterConverter : System.Runtime.Serialization.IFormatterConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormatterConverter extends System.Object implements class System.Runtime.Serialization.IFormatterConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.FormatterConverter" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.IFormatterConverter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine basisimplementierung der <see cref="T:System.Runtime.Serialization.IFormatterConverter" /> Schnittstelle, die verwendet die <see cref="T:System.Convert" /> Klasse und die <see cref="T:System.IConvertible" /> Schnittstelle.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormatterConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.FormatterConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Convert">
+      <MemberSignature Language="C#" Value="public object Convert (object value, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Convert(object value, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.Convert(System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <param name="type">Die <see cref="T:System.Type" /> in die <c>Wert</c> konvertiert wird.</param>
+        <summary>Konvertiert einen Wert in der angegebenen <see cref="T:System.Type" />.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Convert">
+      <MemberSignature Language="C#" Value="public object Convert (object value, TypeCode typeCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Convert(object value, valuetype System.TypeCode typeCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.Convert(System.Object,System.TypeCode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="typeCode" Type="System.TypeCode" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <param name="typeCode">Die <see cref="T:System.TypeCode" /> in die <c>Wert</c> konvertiert wird.</param>
+        <summary>Konvertiert einen Wert in der angegebenen <see cref="T:System.TypeCode" />.</summary>
+        <returns>Das konvertierte <paramref name="value" />, oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToBoolean">
+      <MemberSignature Language="C#" Value="public bool ToBoolean (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ToBoolean(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.ToBoolean(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert einen Wert in einen <see cref="T:System.Boolean" />-Wert.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die invariante Kultur (siehe <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>). Verwenden Sie die aktuelle Kultur verwenden oder eine Kultur angeben, die <xref:System.Convert.ToBoolean%2A?displayProperty=nameWithType> Methode stattdessen. Weitere Informationen finden Sie unter <xref:System.Boolean>, <xref:System.Convert>, und <xref:System.ValueType>.)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToByte">
+      <MemberSignature Language="C#" Value="public byte ToByte (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 ToByte(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.ToByte(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert einen Wert in eine 8-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die invariante Kultur (siehe <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>). Verwenden Sie die aktuelle Kultur verwenden oder eine Kultur angeben, die <xref:System.Convert.ToByte%2A?displayProperty=nameWithType> Methode stattdessen. Weitere Informationen finden Sie unter <xref:System.Byte>, <xref:System.Convert> und <xref:System.ValueType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToChar">
+      <MemberSignature Language="C#" Value="public char ToChar (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance char ToChar(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.ToChar(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert einen Wert in ein Unicode-Zeichen.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die invariante Kultur (siehe <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>). Verwenden Sie die aktuelle Kultur verwenden oder eine Kultur angeben, die <xref:System.Convert.ToChar%2A?displayProperty=nameWithType> Methode stattdessen. Weitere Informationen finden Sie unter <xref:System.Char>, <xref:System.Convert> und <xref:System.ValueType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDateTime">
+      <MemberSignature Language="C#" Value="public DateTime ToDateTime (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.DateTime ToDateTime(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.ToDateTime(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert einen Wert in einen <see cref="T:System.DateTime" />-Wert.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die invariante Kultur (siehe <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>). Verwenden Sie die aktuelle Kultur verwenden oder eine Kultur angeben, die <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType> Methode stattdessen. Weitere Informationen finden Sie unter <xref:System.DateTime>, <xref:System.Convert> und <xref:System.ValueType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDecimal">
+      <MemberSignature Language="C#" Value="public decimal ToDecimal (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Decimal ToDecimal(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.ToDecimal(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert einen Wert in einen <see cref="T:System.Decimal" />-Wert.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die invariante Kultur (siehe <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>). Verwenden Sie die aktuelle Kultur verwenden oder eine Kultur angeben, die <xref:System.Convert.ToDecimal%2A?displayProperty=nameWithType> Methode stattdessen. Weitere Informationen finden Sie unter <xref:System.Decimal>, <xref:System.Convert> und <xref:System.ValueType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDouble">
+      <MemberSignature Language="C#" Value="public double ToDouble (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 ToDouble(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.ToDouble(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert einen Wert in eine Gleitkommazahl mit doppelter Genauigkeit.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die invariante Kultur (siehe <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>). Verwenden Sie die aktuelle Kultur verwenden oder eine Kultur angeben, die <xref:System.Convert.ToDouble%2A?displayProperty=nameWithType> Methode stattdessen. Weitere Informationen finden Sie unter <xref:System.Double>, <xref:System.Convert> und <xref:System.ValueType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt16">
+      <MemberSignature Language="C#" Value="public short ToInt16 (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int16 ToInt16(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.ToInt16(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert einen Wert in eine 16-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die invariante Kultur (siehe <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>). Verwenden Sie die aktuelle Kultur verwenden oder eine Kultur angeben, die <xref:System.Convert.ToInt16%2A?displayProperty=nameWithType> Methode stattdessen. Weitere Informationen finden Sie unter <xref:System.Int16>, <xref:System.Convert> und <xref:System.ValueType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt32">
+      <MemberSignature Language="C#" Value="public int ToInt32 (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 ToInt32(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.ToInt32(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert einen Wert in eine 32-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die invariante Kultur (siehe <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>). Verwenden Sie die aktuelle Kultur verwenden oder eine Kultur angeben, die <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> Methode stattdessen. Weitere Informationen finden Sie unter <xref:System.Int32>, <xref:System.Convert> und <xref:System.ValueType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt64">
+      <MemberSignature Language="C#" Value="public long ToInt64 (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int64 ToInt64(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.ToInt64(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert einen Wert in eine 64-Bit-Ganzzahl mit Vorzeichen.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die invariante Kultur (siehe <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>). Verwenden Sie die aktuelle Kultur verwenden oder eine Kultur angeben, die <xref:System.Convert.ToInt64%2A?displayProperty=nameWithType> Methode stattdessen. Weitere Informationen finden Sie unter <xref:System.Int64>, <xref:System.Convert> und <xref:System.ValueType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSByte">
+      <MemberSignature Language="C#" Value="public sbyte ToSByte (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int8 ToSByte(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.ToSByte(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.SByte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert einen Wert in einen <see cref="T:System.SByte" />-Wert.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die invariante Kultur (siehe <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>). Verwenden Sie die aktuelle Kultur verwenden oder eine Kultur angeben, die <xref:System.Convert.ToSByte%2A?displayProperty=nameWithType> Methode stattdessen. Weitere Informationen finden Sie unter <xref:System.SByte>, <xref:System.Convert> und <xref:System.ValueType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSingle">
+      <MemberSignature Language="C#" Value="public float ToSingle (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float32 ToSingle(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.ToSingle(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert einen Wert in eine Gleitkommazahl mit einfacher Genauigkeit.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die invariante Kultur (siehe <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>). Verwenden Sie die aktuelle Kultur verwenden oder eine Kultur angeben, die <xref:System.Convert.ToSingle%2A?displayProperty=nameWithType> Methode stattdessen. Weitere Informationen finden Sie unter <xref:System.Single>, <xref:System.Convert> und <xref:System.ValueType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.ToString(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert das angegebene Objekt in eine <see cref="T:System.String" />.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die invariante Kultur (siehe <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>). Verwenden Sie die aktuelle Kultur verwenden oder eine Kultur angeben, die <xref:System.Convert.ToString%2A?displayProperty=nameWithType> Methode stattdessen. Weitere Informationen finden Sie unter <xref:System.String>, <xref:System.Convert> und <xref:System.ValueType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt16">
+      <MemberSignature Language="C#" Value="public ushort ToUInt16 (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int16 ToUInt16(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.ToUInt16(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert einen Wert in eine 16-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die invariante Kultur (siehe <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>). Verwenden Sie die aktuelle Kultur verwenden oder eine Kultur angeben, die <xref:System.Convert.ToUInt16%2A?displayProperty=nameWithType> Methode stattdessen. Weitere Informationen finden Sie unter <xref:System.UInt16>, <xref:System.Convert> und <xref:System.ValueType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt32">
+      <MemberSignature Language="C#" Value="public uint ToUInt32 (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int32 ToUInt32(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.ToUInt32(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert einen Wert in eine 32-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die invariante Kultur (siehe <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>). Verwenden Sie die aktuelle Kultur verwenden oder eine Kultur angeben, die <xref:System.Convert.ToUInt32%2A?displayProperty=nameWithType> Methode stattdessen. Weitere Informationen finden Sie unter <xref:System.UInt32>, <xref:System.Convert> und <xref:System.ValueType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt64">
+      <MemberSignature Language="C#" Value="public ulong ToUInt64 (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int64 ToUInt64(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterConverter.ToUInt64(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Konvertiert einen Wert in eine 64-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Das konvertierte <paramref name="value" /> oder <see langword="null" /> Wenn die <paramref name="type" /> Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die invariante Kultur (siehe <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>). Verwenden Sie die aktuelle Kultur verwenden oder eine Kultur angeben, die <xref:System.Convert.ToUInt64%2A?displayProperty=nameWithType> Methode stattdessen. Weitere Informationen finden Sie unter <xref:System.UInt64>, <xref:System.Convert> und <xref:System.ValueType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

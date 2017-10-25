@@ -1,0 +1,55 @@
+<Type Name="IVersioningPersonalizable" FullName="System.Web.UI.WebControls.WebParts.IVersioningPersonalizable">
+  <TypeSignature Language="C#" Value="public interface IVersioningPersonalizable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IVersioningPersonalizable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.IVersioningPersonalizable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle, die Personalisierungsdaten, gehören zu einer früheren Version eines Webparts-Steuerelements verwalten können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie ein Steuerelement-Webparts auf eine neuere Version aktualisieren, werden möglicherweise Änderungen an den personalisierbaren Eigenschaften in der aktualisierten-Klasse. Beispielsweise kann eine aktualisierte Version eines Webparts-Steuerelements Eigenschaften, die in Vorgängerversionen verfügbar waren, nicht mehr unterstützt. In solch einem Szenario kann der Webparts-Steuerelementsatz Personalisierungsdaten aus dem zugrunde liegenden Datenspeicher geladen, aber verfügen über keine Eigenschaften für die diese Daten angewendet werden sollen. Wenn ein Steuerelement implementiert die <xref:System.Web.UI.WebControls.WebParts.IVersioningPersonalizable> -Schnittstelle, wird dem Webparts-Steuerelementsatz die verwaisten Personalisierungsdaten übergeben. Die Anwendung kann dann mit diesen Daten können um Eigenschaften in der neueren Version zu aktualisieren oder verwenden Sie die Daten in eine andere Weise. Beachten Sie, dass, wenn verwaiste Eigenschaften, beim Importieren des Webparts-Steuerelemente erkannt werden, die <xref:System.Web.UI.WebControls.WebParts.IVersioningPersonalizable.Load%2A> Methode auch aufgerufen wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (System.Collections.IDictionary unknownProperties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Load(class System.Collections.IDictionary unknownProperties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.IVersioningPersonalizable.Load(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unknownProperties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="unknownProperties">Ein Wörterbuch mit Personalisierungsdaten, die nicht auf ein Steuerelement angewendet werden konnten.</param>
+        <summary>Lädt Personalisierungsdaten auf ein Webpartssteuerelement, das aufgrund einer Versionsänderung nicht über eine entsprechende personalisierte Eigenschaft für die Daten verfügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `unknownProperties` Parameter enthält eine zusammengeführte Darstellung der unbekannten Personalisierungsdaten, "User" und "Freigegeben" Bereichs, die nicht auf das Steuerelement angewendet werden konnten. Wenn eine Seite im Benutzerbereich ausgeführt wird, werden die unbekannte Benutzerbereich Werte (falls verfügbar) anstatt unbekannte freigegebene Bereich Werte angegeben. Diese Informationen werden als eine Reihe von Name/Wert-Paare gespeichert, wobei jeder Name wird den Zeichenfolgennamen einer Eigenschaft, die auf das Steuerelement nicht gefunden wurde und jeder Wert enthält den Wert der Eigenschaft. Es ist die Zuständigkeit für das Steuerelement umgewandelt oder den Wert in den entsprechenden Typ umwandeln, und führen Sie Weiterverarbeitung (z. B. das Zuordnen von Daten aus einer alten Eigenschaft in eine neue Eigenschaft).  
+  
+ Wenn sich der Zustand eines Steuerelements ändert, rufen sie <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty%2A> (entweder die geerbte Methode oder die öffentliche statische Methode im Falle eines Steuerelements, das nicht von abgeleitet ist <xref:System.Web.UI.WebControls.WebParts.WebPart>). Wenn ein Steuerelement selbst als "fehlerhaft" markiert, wird der Webparts-Steuerelementsatz Personalisierungsdaten aus dem Steuerelement, unabhängig von der Zustand des Steuerelements "unsaubere", extrahieren und speichern Sie sie später im Lebenszyklus Personalisierung zurück an den zugrunde liegenden Datenspeicher. Ein Steuerelement kennzeichnen selbst als "unsaubere" If, als Ergebnis der Verarbeitung der Werte in der `unknownProperties` -Parameter, den Zustand des Steuerelements wurde geändert.  
+  
+ Beachten Sie, dass beim Import Webparts-Steuerelementen verwaiste Eigenschaften gefunden werden, diese Methode automatisch aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

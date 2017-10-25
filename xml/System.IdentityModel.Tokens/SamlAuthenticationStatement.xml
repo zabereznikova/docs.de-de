@@ -1,0 +1,423 @@
+<Type Name="SamlAuthenticationStatement" FullName="System.IdentityModel.Tokens.SamlAuthenticationStatement">
+  <TypeSignature Language="C#" Value="public class SamlAuthenticationStatement : System.IdentityModel.Tokens.SamlSubjectStatement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SamlAuthenticationStatement extends System.IdentityModel.Tokens.SamlSubjectStatement" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SamlAuthenticationStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SamlSubjectStatement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Anspruch für ein <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />-Sicherheitstoken dar, das bestätigt, dass das Subjekt auf eine bestimmte Art und Weise zu einem bestimmten Zeitpunkt authentifiziert wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken geben ihre Ansprüche mit SAML-Assertionen an, anhand derer man erkennen kann, wann das Subjekt authentifiziert wurde. Die Ansprüche in einer SAML-Assertion werden durch SAML-Anweisungen dargestellt. Die SAML-Spezifikation definiert einen Satz von SAML-Anweisungstypen, und einer dieser Anweisungstypen ist eine <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement>. Ein <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement> bestätigt, dass das Subjekt der Anweisung auf eine bestimmte Art und Weise zu einem bestimmten Zeitpunkt authentifiziert wurde.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlAuthenticationStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAuthenticationStatement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SamlAuthenticationStatement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlAuthenticationStatement (System.IdentityModel.Tokens.SamlSubject samlSubject, string authenticationMethod, DateTime authenticationInstant, string dnsAddress, string ipAddress, System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.SamlAuthorityBinding&gt; authorityBindings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SamlSubject samlSubject, string authenticationMethod, valuetype System.DateTime authenticationInstant, string dnsAddress, string ipAddress, class System.Collections.Generic.IEnumerable`1&lt;class System.IdentityModel.Tokens.SamlAuthorityBinding&gt; authorityBindings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAuthenticationStatement.#ctor(System.IdentityModel.Tokens.SamlSubject,System.String,System.DateTime,System.String,System.String,System.Collections.Generic.IEnumerable{System.IdentityModel.Tokens.SamlAuthorityBinding})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="samlSubject" Type="System.IdentityModel.Tokens.SamlSubject" />
+        <Parameter Name="authenticationMethod" Type="System.String" />
+        <Parameter Name="authenticationInstant" Type="System.DateTime" />
+        <Parameter Name="dnsAddress" Type="System.String" />
+        <Parameter Name="ipAddress" Type="System.String" />
+        <Parameter Name="authorityBindings" Type="System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Tokens.SamlAuthorityBinding&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="samlSubject">Ein <see cref="T:System.IdentityModel.Tokens.SamlSubject" />, das das Anspruchssubjekt darstellt.</param>
+        <param name="authenticationMethod">Ein URI-Verweis, der angibt, wie das Subjekt authentifiziert wurde.</param>
+        <param name="authenticationInstant">Ein <see cref="T:System.DateTime" />, der den Zeitpunkt angibt, zu dem das Subjekt authentifiziert wurde.</param>
+        <param name="dnsAddress">Der DNS-Domänenname, in dem sich der Computer befindet, der das Subjekt authentifiziert hat.</param>
+        <param name="ipAddress">Die IP-Adresse des Computers, der das Subjekt authentifiziert hat.</param>
+        <param name="authorityBindings">Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> des Typs <see cref="T:System.IdentityModel.Tokens.SamlAuthorityBinding" />, der weitere Informationen über das Subjekt enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SamlAuthenticationStatement" />-Klasse unter Verwendung der angegebenen Authentifizierungsdetails.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Satz an Authentifizierungsmethoden ist zwar erweiterbar, die folgende Tabelle enthält jedoch den Satz an Authentifizierungsmethoden, die in der SAML-Spezifikation definiert wurden.  
+  
+|Authentifizierungsmethode|URI|  
+|---------------------------|---------|  
+|Kennwort|urn:oasis:names:tc:SAML:1.0:am:password|  
+|Kerberos|Urn: ietf:rfc:1510|  
+|Sichern von Remote-Kennwort (SRP)|Urn: ietf:rfc:2945|  
+|Hardwaretoken|URI:urn:oasis:names:tc:SAML:1 .0: am:HardwareToken|  
+|SSL/TLS-Zertifikat-basierte Clientauthentifizierung|Urn: ietf:rfc:2246|  
+|Öffentlicher PGP-Schlüssel|urn:oasis:names:tc:SAML:1.0:am:PGP|  
+|Öffentlicher SPKI-Schlüssel|urn:oasis:names:tc:SAML:1.0:am:SPKI|  
+|Öffentlicher XKMS-Schlüssel|urn:oasis:names:tc:SAML:1.0:am:XKMS|  
+|Digitale XML-Signatur|urn:ietf:rfc:3075|  
+|Nicht angegeben.|urn:oasis:names:tc:SAML:1.0:am:unspecified|  
+  
+ Wenn der `authenticationMethod`-Parameter `null` lautet, wird die Authentifizierungsmethode auf `urn:oasis:names:tc:SAML:1.0:am:unspecified` festgelegt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="authorityBindings" /> enthält einen Member, der <see langword="null" /> ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddClaimsToList">
+      <MemberSignature Language="C#" Value="protected override void AddClaimsToList (System.Collections.Generic.IList&lt;System.IdentityModel.Claims.Claim&gt; claims);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddClaimsToList(class System.Collections.Generic.IList`1&lt;class System.IdentityModel.Claims.Claim&gt; claims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAuthenticationStatement.AddClaimsToList(System.Collections.Generic.IList{System.IdentityModel.Claims.Claim})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claims" Type="System.Collections.Generic.IList&lt;System.IdentityModel.Claims.Claim&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="claims">Ein <see cref="T:System.Collections.Generic.IList`1" /> des Typs <see cref="T:System.IdentityModel.Claims.Claim" />, der den Satz an hinzuzufügenden Ansprüchen enthält.</param>
+        <summary>Fügt der angegebenen Auflistung an Ansprüchen einen Anspruch auf der Basis der Eigenschaften dieser Instanz hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.AddClaimsToList%28System.Collections.Generic.IList%7BSystem.IdentityModel.Claims.Claim%7D%29>-Methode fügt dem `claims`-Parameter auf der Basis der folgenden Eigenschaften einen Anspruch hinzu: <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthenticationInstant%2A>, <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthenticationMethod%2A>, <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthorityBindings%2A>, <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.ClaimType%2A>, <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.DnsAddress%2A>, <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.IPAddress%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="claims" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationInstant">
+      <MemberSignature Language="C#" Value="public DateTime AuthenticationInstant { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime AuthenticationInstant" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthenticationInstant" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeitpunkt ab oder legt diesen fest, zu dem das Subjekt authentifiziert wurde.</summary>
+        <value>Ein <see cref="T:System.DateTime" />, der den Zeitpunkt angibt, zu dem das Subjekt authentifiziert wurde.  
+  
+ <list type="table"><listheader><term>Ausnahmetyp  
+  
+ </term><description>Bedingung  
+  
+ </description></listheader><item><term><see cref="T:System.InvalidOperationException" /></term><description>Die <see cref="P:System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthenticationInstant" /> festgelegt wird und die <see cref="P:System.IdentityModel.Tokens.SamlAuthenticationStatement.IsReadOnly" /> Eigenschaft ist <see langword="true" />.  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Uhrzeit wird in der UTC-Zeit (Universal Coordinated Time) gespeichert.  
+  
+ Die <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthenticationInstant%2A>-Eigenschaft entspricht dem `AuthenticationInstant`-Attribut des `<AuthenticationStatement>`-Elements, das in den Assertionen und im Protokoll für die OASIS Security Assertion Markup Language (SAML)-Spezifikation definiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationMethod">
+      <MemberSignature Language="C#" Value="public string AuthenticationMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthenticationMethod" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthenticationMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Methode ab oder legt diese fest, die zum Authentifizieren des Subjekts verwendet wird.</summary>
+        <value>Die Methode, die zum Authentifizieren des Subjekts verwendet wird. Der Standardwert ist <see langword="urn:oasis:names:tc:SAML:1.0:am:unspecified" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Satz an Authentifizierungsmethoden ist zwar erweiterbar, die folgende Tabelle enthält jedoch den Satz an Authentifizierungsmethoden, die in der SAML-Spezifikation definiert wurden.  
+  
+|Authentifizierungsmethode|URI|  
+|---------------------------|---------|  
+|Kennwort|urn:oasis:names:tc:SAML:1.0:am:password|  
+|Kerberos|Urn: ietf:rfc:1510|  
+|Sichern von Remote-Kennwort (SRP)|Urn: ietf:rfc:2945|  
+|Hardwaretoken|URI:urn:oasis:names:tc:SAML:1 .0: am:HardwareToken|  
+|SSL/TLS-Zertifikat-basierte Clientauthentifizierung|Urn: ietf:rfc:2246|  
+|Öffentlicher PGP-Schlüssel|urn:oasis:names:tc:SAML:1.0:am:PGP|  
+|Öffentlicher SPKI-Schlüssel|urn:oasis:names:tc:SAML:1.0:am:SPKI|  
+|Öffentlicher XKMS-Schlüssel|urn:oasis:names:tc:SAML:1.0:am:XKMS|  
+|Digitale XML-Signatur|urn:ietf:rfc:3075|  
+|Nicht angegeben.|urn:oasis:names:tc:SAML:1.0:am:unspecified|  
+  
+ Wenn die <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthenticationMethod%2A>-Eigenschaft auf `null` festgelegt wird, wird die Authentifizierungsmethode auf `urn:oasis:names:tc:SAML:1.0:am:unspecified` festgelegt.  
+  
+ Die <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthenticationMethod%2A>-Eigenschaft entspricht dem `AuthenticationMethod`-Attribut des `<AuthenticationStatement>`-Elements, das in den Assertionen und im Protokoll für die OASIS Security Assertion Markup Language (SAML)-Spezifikation definiert ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthenticationMethod" /> festgelegt wird und die <see cref="P:System.IdentityModel.Tokens.SamlAuthenticationStatement.IsReadOnly" /> Eigenschaft ist <see langword="true" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorityBindings">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.IdentityModel.Tokens.SamlAuthorityBinding&gt; AuthorityBindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.IdentityModel.Tokens.SamlAuthorityBinding&gt; AuthorityBindings" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthorityBindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.IdentityModel.Tokens.SamlAuthorityBinding&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft zusätzliche Informationen über das Subjekt ab.</summary>
+        <value>Ein <see cref="T:System.Collections.Generic.IList`1" /> des Typs <see cref="T:System.IdentityModel.Tokens.SamlAuthorityBinding" />, der weitere Informationen über das Subjekt enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthorityBindings%2A>-Eigenschaft entspricht einem Satz untergeordneter `<AuthorityBinding>`-Elemente für ein `<AuthenticationStatement>`-Element, das in den Assertionen und im Protokoll für die OASIS Security Assertion Markup Language (SAML)-Spezifikation definiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimType">
+      <MemberSignature Language="C#" Value="public static string ClaimType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ClaimType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAuthenticationStatement.ClaimType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Sicherheitsanspruchs ab.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Claims.ClaimTypes" />, der den Typ des Sicherheitsanspruchs angibt. Immer <c>http://schemas.microsoft.com/mb/2005/09/ClaimType/SamlAuthentication</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsAddress">
+      <MemberSignature Language="C#" Value="public string DnsAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DnsAddress" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAuthenticationStatement.DnsAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den DNS-Domänenname ab oder legt diesen fest, in dem sich der Computer befindet, der das Subjekt authentifiziert hat.</summary>
+        <value>Der DNS-Domänenname, in dem sich der Computer befindet, der das Subjekt authentifiziert hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.DnsAddress%2A>-Eigenschaft entspricht dem `DNSAddress`-Attribut des `<SubjectLocality>`-Elements, das in den Assertionen und im Protokoll für die OASIS Security Assertion Markup Language (SAML)-Spezifikation definiert ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.IdentityModel.Tokens.SamlAuthenticationStatement.DnsAddress" /> festgelegt wird und die <see cref="P:System.IdentityModel.Tokens.SamlAuthenticationStatement.IsReadOnly" /> Eigenschaft ist <see langword="true" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IPAddress">
+      <MemberSignature Language="C#" Value="public string IPAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IPAddress" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAuthenticationStatement.IPAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die IP-Adresse des Computer ab oder legt diese fest, die das Subjekt authentifiziert hat.</summary>
+        <value>Die IP-Adresse des Computers, der das Subjekt authentifiziert hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.IPAddress%2A>-Eigenschaft entspricht dem `IPAddress`-Attribut des `<SubjectLocality>`-Elements, das in den Assertionen und im Protokoll für die OASIS Security Assertion Markup Language (SAML)-Spezifikation definiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAuthenticationStatement.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Eigenschaften dieser Instanz schreibgeschützt sind.</summary>
+        <value>
+          <see langword="true" />, wenn die Eigenschaften dieser Instanz schreibgeschützt sind, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Instanz der <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement>-Klasse schreibgeschützt machen möchten, rufen Sie die <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.MakeReadOnly%2A>-Methode auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeReadOnly">
+      <MemberSignature Language="C#" Value="public override void MakeReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void MakeReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAuthenticationStatement.MakeReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass diese Instanz schreibgeschützt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.MakeReadOnly%2A>-Methode abgerufen wird, wird die <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.IsReadOnly%2A>-Eigenschaft als `true` festgelegt, und die Eigenschaften dieser Instanz können nicht mehr festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadXml">
+      <MemberSignature Language="C#" Value="public override void ReadXml (System.Xml.XmlDictionaryReader reader, System.IdentityModel.Tokens.SamlSerializer samlSerializer, System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoTokenSerializer, System.IdentityModel.Selectors.SecurityTokenResolver outOfBandTokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ReadXml(class System.Xml.XmlDictionaryReader reader, class System.IdentityModel.Tokens.SamlSerializer samlSerializer, class System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoTokenSerializer, class System.IdentityModel.Selectors.SecurityTokenResolver outOfBandTokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAuthenticationStatement.ReadXml(System.Xml.XmlDictionaryReader,System.IdentityModel.Tokens.SamlSerializer,System.IdentityModel.Selectors.SecurityTokenSerializer,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+        <Parameter Name="samlSerializer" Type="System.IdentityModel.Tokens.SamlSerializer" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+        <Parameter Name="outOfBandTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein <see cref="T:System.Xml.XmlDictionaryReader" /> zum Lesen der SAML-Authentifizierungsanweisung.</param>
+        <param name="samlSerializer">Ein <see cref="T:System.IdentityModel.Tokens.SamlSerializer" />, der XML-Elemente in der SAML-Authentifizierungsanweisung lesen kann, die in der SAML-Spezifikation festgelegt wird.</param>
+        <param name="keyInfoTokenSerializer">To be added.</param>
+        <param name="outOfBandTokenResolver">Ein <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" />, der das Sicherheitstoken bestimmt, das die digitale Signatur erstellt hat.</param>
+        <summary>Liest die SAML-Authentifizierungsanweisung vom angegebenen XML-Reader.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.ReadXml%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Tokens.SamlSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>-Methode legt die folgenden Eigenschaften fest: <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthenticationInstant%2A>, <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthenticationMethod%2A>, <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthorityBindings%2A>, <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.DnsAddress%2A>, <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement.IPAddress%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist gleich <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="samlSerializer" /> ist gleich <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenException">
+          <paramref name="reader" /> verweist auf ein XML-Element, das das <see langword="AuthenticationInstant" />-Attribut und das <see langword="AuthenticationMethod" />-Attribut nicht enthält.  
+  
+ - oder -   
+  
+ <paramref name="reader" /> verweist auf ein XML-Element, das nicht über untergeordnete <see langword="&lt;saml:Subject&gt;" />-Elemente verfügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteXml">
+      <MemberSignature Language="C#" Value="public override void WriteXml (System.Xml.XmlDictionaryWriter writer, System.IdentityModel.Tokens.SamlSerializer samlSerializer, System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoTokenSerializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteXml(class System.Xml.XmlDictionaryWriter writer, class System.IdentityModel.Tokens.SamlSerializer samlSerializer, class System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoTokenSerializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAuthenticationStatement.WriteXml(System.Xml.XmlDictionaryWriter,System.IdentityModel.Tokens.SamlSerializer,System.IdentityModel.Selectors.SecurityTokenSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="samlSerializer" Type="System.IdentityModel.Tokens.SamlSerializer" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Xml.XmlDictionaryWriter" /> zum Schreiben der SAML-Authentifizierungsanweisung.</param>
+        <param name="samlSerializer">Ein <see cref="T:System.IdentityModel.Tokens.SamlSerializer" />, der XML-Elemente in eine SAML-Assertion schreiben kann.</param>
+        <param name="keyInfoTokenSerializer">To be added.</param>
+        <summary>Schreibt die SAML-Authentifizierungsanweisung in das angegebene XML-Serialisierungsprogramm.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist gleich <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="samlSerializer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

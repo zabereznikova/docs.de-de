@@ -1,0 +1,120 @@
+<Type Name="IDispatchImplAttribute" FullName="System.Runtime.InteropServices.IDispatchImplAttribute">
+  <TypeSignature Language="C#" Value="public sealed class IDispatchImplAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit IDispatchImplAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.IDispatchImplAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("This attribute is deprecated and will be removed in a future version.", false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, welche <see langword="IDispatch" /> Implementierung, die die common Language Runtime verwendet werden, wenn Sie duale Schnittstellen und Disp-Schnittstellen für COM verfügbar machen</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut auf Klassen oder Assemblys anwenden.  
+  
+ Dieses Attribut sollte nur festgelegt werden, wenn eine explizite Implementierung erforderlich ist. Wenn Sie das Attribut festlegen, um <xref:System.Runtime.InteropServices.IDispatchImplType.CompatibleImpl>, `IDispatch` Implementierung angegeben wird, durch die Typinformationen für das Objekt an COM übergeben `CreateStdDispatch` API. Wenn Sie das Attribut festlegen, um <xref:System.Runtime.InteropServices.IDispatchImplType.InternalImpl>die `IDispatch` Implementierung von der common Language Runtime bereitgestellt wird. Wenn das Attribut auf <xref:System.Runtime.InteropServices.IDispatchImplType.SystemDefinedImpl> ermöglicht es der Laufzeit auf die entsprechende Implementierung auswählen. Wenn Sie das Attribut auf eine Assembly zu verwenden, können Sie das Attribut auf alle Klassen, die in der Assembly definierten angewendet. Wenn Sie das Attribut auf eine einzelne Klasse verwenden, wird das Attribut gilt nur für die Schnittstellen, die von dieser Klasse verfügbar gemacht werden, und alle außer Kraft gesetzt auf Assemblyebene.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie anzuwendende <xref:System.Runtime.InteropServices.IDispatchImplAttribute> auswählen die `IDispatch` Implementierung, die von der common Language Runtime bereitgestellt.  
+  
+ [!code-cpp[ImprovedInteropSnippets#1](~/samples/snippets/cpp/VS_Snippets_CLR/ImprovedInteropSnippets/CPP/codefile1.cpp#1)]
+ [!code-csharp[ImprovedInteropSnippets#1](~/samples/snippets/csharp/VS_Snippets_CLR/ImprovedInteropSnippets/CS/codefile1.cs#1)]
+ [!code-vb[ImprovedInteropSnippets#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ImprovedInteropSnippets/VB/codefile1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IDispatchImplAttribute (short implType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int16 implType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.IDispatchImplAttribute.#ctor(System.Int16)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="implType" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="implType">Gibt an, welche <see cref="T:System.Runtime.InteropServices.IDispatchImplType" /> Enumeration verwendet werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see langword="IDispatchImplAttribute" /> -Klasse mit angegebenen <see cref="T:System.Runtime.InteropServices.IDispatchImplType" /> Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor nimmt eine zugrunde liegende 16-Bit-Ganzzahl mit Vorzeichen an, die jeweils darstellen <xref:System.Runtime.InteropServices.IDispatchImplType> Enumerationsmember. Type Library Importer-Tool (TlbImp.exe) verwendet diesen Konstruktor, um zu vermeiden, eine TypeRef auf die `IDispatchImplType` Wert `value` darstellt, und klicken Sie dann die Signatur mit diesem Token erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IDispatchImplAttribute (System.Runtime.InteropServices.IDispatchImplType implType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.InteropServices.IDispatchImplType implType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.IDispatchImplAttribute.#ctor(System.Runtime.InteropServices.IDispatchImplType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="implType" Type="System.Runtime.InteropServices.IDispatchImplType" />
+      </Parameters>
+      <Docs>
+        <param name="implType">Gibt an, welche <see cref="T:System.Runtime.InteropServices.IDispatchImplType" /> Enumeration verwendet werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see langword="IDispatchImplAttribute" /> -Klasse mit angegebenen <see cref="T:System.Runtime.InteropServices.IDispatchImplType" /> Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie für Code übersichtlicher gestalten, die weniger fehleranfällig ist immer diesen Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.IDispatchImplType Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.InteropServices.IDispatchImplType Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.IDispatchImplAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.IDispatchImplType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Runtime.InteropServices.IDispatchImplType" /> Wert, der von der Klasse verwendet.</summary>
+        <value>Die <see cref="T:System.Runtime.InteropServices.IDispatchImplType" /> Wert, der von der Klasse verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

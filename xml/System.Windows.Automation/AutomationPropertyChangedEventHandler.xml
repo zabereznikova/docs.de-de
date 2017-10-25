@@ -1,0 +1,42 @@
+<Type Name="AutomationPropertyChangedEventHandler" FullName="System.Windows.Automation.AutomationPropertyChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void AutomationPropertyChangedEventHandler(object sender, AutomationPropertyChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AutomationPropertyChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.AutomationPropertyChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Automation.AutomationPropertyChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Das Objekt, das das Ereignis ausgelöst hat.</param>
+    <param name="e">Informationen zum Ereignis.</param>
+    <summary>Stellt die Methode dar, die von der Benutzeroberflächenautomatisierungs-Clientanwendung implementiert wird, um das Ereignis zu behandeln, dass vom Benutzeroberflächenautomatisierungs-Anbieter ausgelöst wird, wenn sich eine Eigenschaft geändert hat.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Automation.AutomationElement> dargestellte `sender` möglicherweise nicht haben zwischengespeicherte Eigenschaften und Muster, abhängig davon, ob die Anwendung für dieses Ereignis beim abonniert eine <xref:System.Windows.Automation.CacheRequest> aktiv war.  
+  
+ Je nach der anbieterimplementierung ist ein-Eigenschaft ausgelöstes Ereignis nicht unbedingt bedeuten, dass der Eigenschaftswert unterscheidet; Er kann nur bedeuten, dass die Eigenschaft, müssen Sie auch auf den gleichen Wert festgelegt wurde. Wenn Ihre Anwendung nur auf der eigentlichen Änderungen reagieren muss, ist es Ihre Aufgabe zum Nachverfolgen der Zustand der Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ändert sich der <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsEnabled%2A> Eigenschaft der abonnierte Elemente behandelt werden.  
+  
+ [!code-csharp[UIAClient_snip#172](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/PropertySnips.cs#172)]
+ [!code-vb[UIAClient_snip#172](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/PropertySnips.vb#172)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

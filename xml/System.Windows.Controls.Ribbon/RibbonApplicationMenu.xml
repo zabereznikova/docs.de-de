@@ -1,0 +1,565 @@
+<Type Name="RibbonApplicationMenu" FullName="System.Windows.Controls.Ribbon.RibbonApplicationMenu">
+  <TypeSignature Language="C#" Value="public class RibbonApplicationMenu : System.Windows.Controls.Ribbon.RibbonMenuButton" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi RibbonApplicationMenu extends System.Windows.Controls.Ribbon.RibbonMenuButton" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Ribbon.RibbonApplicationMenu" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Ribbon.RibbonMenuButton</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.StyleTypedProperty(Property="ItemContainerStyle", StyleTargetType=typeof(System.Windows.Controls.Ribbon.RibbonApplicationMenuItem))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_PopupToggleButton", Type=typeof(System.Windows.Controls.Ribbon.RibbonToggleButton))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_Popup", Type=typeof(System.Windows.Controls.Primitives.Popup))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_SubmenuPlaceholder", Type=typeof(System.Windows.FrameworkElement))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_FooterPaneContentPresenter", Type=typeof(System.Windows.Controls.ContentPresenter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_AuxiliaryPaneContentPresenter", Type=typeof(System.Windows.Controls.ContentPresenter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Menü, das verwendet wird ein <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Menüband enthält ein Anwendungsmenü als erste Registerkarte im Menüband. Andere Registerkarten des Menübands enthalten Steuerelemente zum Arbeiten mit der Inhalt des Dokuments. Im Gegensatz dazu zeigt Anwendungsmenü ein Menü mit Befehlen zum Arbeiten mit der Datei. Beispiele hierfür sind Befehle, die normalerweise im Menü Datei zu erstellen, öffnen, speichern und Drucken von Dateien. Es wird auch verwendet, den Zugriff auf Optionen für das Programm "und" Exit-Befehl.  
+  
+ Die folgende Abbildung zeigt das Anwendungsmenü für ein Menübandsteuerelement.  
+  
+ ![Menüband Anwendungsmenü](~/add/media/wpfribbon-appmenu.png "Anwendungsmenü des Menübands")  
+  
+ Die <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu> kann als host für <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem> und <xref:System.Windows.Controls.Ribbon.RibbonApplicationSplitMenuItem> Objekte. Anwendungsmenü verfügt auch über eine *zusätzlichen Bereich* und ein *Fußzeilenbereich* können zusätzliche Inhalt hosten. Die <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContent%2A> Eigenschaft Hosts eine <xref:System.Windows.Controls.Ribbon.RibbonGallery> und wird in der Regel verwendet werden, um eine Liste der zuletzt verwendete Dokumente anzuzeigen. Die <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContent%2A> Eigenschaft in der Regel Schaltflächen, mit denen Zugriff auf die Optionen für das Programm "und" Exit-Befehl hostet.  
+  
+ Die folgende Liste zeigt die typischen Hierarchie von Elementen in ein Anwendungsmenü.  
+  
+-   <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu>  
+  
+    -   <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem>  
+  
+    -   <xref:System.Windows.Controls.Ribbon.RibbonApplicationSplitMenuItem>  
+  
+        -   <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem>  
+  
+    -   <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContent%2A>  
+  
+        -   <xref:System.Windows.Controls.Ribbon.RibbonButton>  
+  
+    -   <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContent%2A>  
+  
+        -   <xref:System.Windows.Controls.Ribbon.RibbonGallery>  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt das Menü, wie zuvor veranschaulicht.  
+  
+ [!code-xaml[Ribbon_Snippets#AppMenuFull](~/samples/snippets/csharp/VS_Snippets_Wpf/ribbon_snippets/cs/ribbonwindow1.xaml#appmenufull)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RibbonApplicationMenu ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenu.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationMenu" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuxiliaryPaneContent">
+      <MemberSignature Language="C#" Value="public object AuxiliaryPaneContent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object AuxiliaryPaneContent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Inhalt des Bereichs der Anwendungsmenü fest.</summary>
+        <value>Der Inhalt des Bereichs der Anwendungsmenü. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungsmenü verfügt über eine *zusätzlichen Bereich* können zusätzliche Inhalt hosten. Die <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContent%2A> Eigenschaft Hosts eine <xref:System.Windows.Controls.Ribbon.RibbonGallery> und wird in der Regel verwendet werden, um eine Liste der zuletzt verwendete Dokumente anzuzeigen.  
+  
+ Die folgende Abbildung zeigt das Anwendungsmenü für ein Menübandsteuerelement. Der zusätzliche Bereich enthält eine Liste der zuletzt verwendete Dokumente.  
+  
+ ![Menüband Anwendungsmenü](~/add/media/wpfribbon-appmenu.png "Anwendungsmenü des Menübands")  
+  
+<a name="dependencyPropertyInfo_AuxiliaryPaneContent"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContentProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Inhalt des weiter oben dargestellten Anwendungsmenü zusätzlichen Bereichs.  
+  
+ [!code-xaml[Ribbon_Snippets#AppMenuAuxPane](~/samples/snippets/csharp/VS_Snippets_Wpf/ribbon_snippets/cs/ribbonwindow1.xaml#appmenuauxpane)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuxiliaryPaneContentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AuxiliaryPaneContentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AuxiliaryPaneContentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContent" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuxiliaryPaneContentTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate AuxiliaryPaneContentTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate AuxiliaryPaneContentTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContentTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage, die verwendet wird, um den Inhalt des Bereichs der Anwendungsmenü anzuzeigen.</summary>
+        <value>Die Vorlage, die verwendet wird, um den Inhalt des Bereichs der Anwendungsmenü anzuzeigen. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_AuxiliaryPaneContentTemplate"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContentTemplateProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuxiliaryPaneContentTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AuxiliaryPaneContentTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AuxiliaryPaneContentTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContentTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContentTemplate" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuxiliaryPaneContentTemplateSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataTemplateSelector AuxiliaryPaneContentTemplateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataTemplateSelector AuxiliaryPaneContentTemplateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContentTemplateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataTemplateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die benutzerdefinierte Logik zum Auswählen einer <see cref="T:System.Windows.DataTemplate" /> dient außerdem zur Anzeige der Inhalte des Bereichs der Anwendungsmenü.</summary>
+        <value>Eine benutzerdefinierte <see cref="T:System.Windows.Controls.DataTemplateSelector" /> -Objekt, das Logik bereitstellt und gibt eine <see cref="T:System.Windows.DataTemplate" />. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContentTemplate%2A> Eigenschaft, um die Visualisierung des Inhalts anzugeben. Wenn Sie mehr als einer Vorlage definiert haben und Logik angeben, die eine zu verwendende Vorlage auswählt, und Sie diese Eigenschaft verwenden möchten. Diese Eigenschaft wird ignoriert, wenn die <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContentTemplate%2A> festgelegt wird.  
+  
+<a name="dependencyPropertyInfo_AuxiliaryPaneContentTemplateSelector"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContentTemplateSelectorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuxiliaryPaneContentTemplateSelectorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AuxiliaryPaneContentTemplateSelectorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AuxiliaryPaneContentTemplateSelectorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContentTemplateSelectorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContentTemplateSelector" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FooterPaneContent">
+      <MemberSignature Language="C#" Value="public object FooterPaneContent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object FooterPaneContent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Inhalt des Bereichs Fußzeile Anwendungsmenü fest.</summary>
+        <value>Der Inhalt des im Footer Anwendungsmenü. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungsmenü verfügt über eine *Fußzeilenbereich* können zusätzliche Inhalt hosten. Die <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContent%2A> Eigenschaft in der Regel Schaltflächen, mit denen Zugriff auf die Optionen für das Programm "und" Exit-Befehl hostet.  
+  
+ Die folgende Abbildung zeigt das Anwendungsmenü für ein Menübandsteuerelement. Die Fußzeile Bereich Hosts eine **beenden** Schaltfläche.  
+  
+ ![Menüband Anwendungsmenü](~/add/media/wpfribbon-appmenu.png "Anwendungsmenü des Menübands")  
+  
+<a name="dependencyPropertyInfo_FooterPaneContent"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContentProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Fußzeile im Bereich Inhalt des weiter oben dargestellten Anwendungsmenü.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FooterPaneContentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FooterPaneContentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FooterPaneContentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContent" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FooterPaneContentTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate FooterPaneContentTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate FooterPaneContentTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContentTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage, die verwendet wird, um den Inhalt des Bereichs Fußzeile Anwendungsmenü anzuzeigen.</summary>
+        <value>Die Vorlage, die verwendet wird, um den Inhalt des Bereichs Fußzeile Anwendungsmenü anzuzeigen. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_FooterPaneContentTemplate"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContentTemplateProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FooterPaneContentTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FooterPaneContentTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FooterPaneContentTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContentTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContentTemplate" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FooterPaneContentTemplateSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataTemplateSelector FooterPaneContentTemplateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataTemplateSelector FooterPaneContentTemplateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContentTemplateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataTemplateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die benutzerdefinierte Logik zum Auswählen einer <see cref="T:System.Windows.DataTemplate" /> dient außerdem zur Anzeige der Inhalte des im Footer Anwendungsmenü.</summary>
+        <value>Eine benutzerdefinierte <see cref="T:System.Windows.Controls.DataTemplateSelector" /> -Objekt, das Logik bereitstellt und gibt eine <see cref="T:System.Windows.DataTemplate" />. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContentTemplate%2A> Eigenschaft, um die Visualisierung des Inhalts anzugeben. Wenn Sie mehr als einer Vorlage definiert haben und Logik angeben, die eine zu verwendende Vorlage auswählt, und Sie diese Eigenschaft verwenden möchten. Diese Eigenschaft wird ignoriert, wenn die <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContentTemplate%2A> festgelegt wird.  
+  
+<a name="dependencyPropertyInfo_FooterPaneContentTemplateSelector"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContentTemplateSelectorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FooterPaneContentTemplateSelectorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FooterPaneContentTemplateSelectorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FooterPaneContentTemplateSelectorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContentTemplateSelectorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContentTemplateSelector" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.DependencyObject GetContainerForItemOverride ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.DependencyObject GetContainerForItemOverride() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenu.GetContainerForItemOverride" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein neues <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem" />-Objekt zurück.</summary>
+        <returns>Ein neues Menü Elementobjekt, das den Container für das Element ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemItsOwnContainerOverride">
+      <MemberSignature Language="C#" Value="protected override bool IsItemItsOwnContainerOverride (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsItemItsOwnContainerOverride(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenu.IsItemItsOwnContainerOverride(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu testende Element.</param>
+        <summary>Gibt einen Wert, der angibt, ob das angegebene Element sein eigener Container ist (oder sein kann).</summary>
+        <returns>
+          <see langword="true" />Wenn das Element ist ein <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem" />, <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationSplitMenuItem" />, oder ein <see cref="T:System.Windows.Controls.Ribbon.RibbonSeparator" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivatingKeyTip">
+      <MemberSignature Language="C#" Value="protected override void OnActivatingKeyTip (System.Windows.Controls.ActivatingKeyTipEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnActivatingKeyTip(class System.Windows.Controls.ActivatingKeyTipEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenu.OnActivatingKeyTip(System.Windows.Controls.ActivatingKeyTipEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.ActivatingKeyTipEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Enthält Daten über die Aktivierung.</param>
+        <summary>Wird aufgerufen, wenn die Zugriffstasteninfo oder Accelerator-Taste gedrückt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenu.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die visuelle Struktur für die <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationMenu" />, wenn eine neue Vorlage angewendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird immer dann aufgerufen, wenn Anwendungscode oder ein interner Prozess, z. B. eine Layout-Wiederaufbau-Übergabe, die <xref:System.Windows.FrameworkElement.ApplyTemplate%2A>-Methode aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenu.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:System.Windows.Automation.Peers.RibbonApplicationMenuAutomationPeer" />-Objekt für dieses Steuerelement.</summary>
+        <returns>Ein neues Automatisierungspeerobjekt für dieses Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenu.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.PreviewKeyDown" />-Ereignis bereit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldApplyItemContainerStyle">
+      <MemberSignature Language="C#" Value="protected override bool ShouldApplyItemContainerStyle (System.Windows.DependencyObject container, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ShouldApplyItemContainerStyle(class System.Windows.DependencyObject container, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenu.ShouldApplyItemContainerStyle(System.Windows.DependencyObject,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Windows.DependencyObject" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="container">Das Containerelement.</param>
+        <param name="item">Das Element, dem für der Container ist.</param>
+        <summary>Gibt einen Wert, der angibt, ob den Stil aus gelten die <see cref="P:System.Windows.Controls.ItemsControl.ItemContainerStyle" /> oder <see cref="P:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector" /> Eigenschaft auf das Containerelement des angegebenen Elements.</summary>
+        <returns>
+          <see langword="false" />Wenn <paramref name="container" /> ist ein <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationSplitMenuItem" />, <see cref="T:System.Windows.Controls.Ribbon.RibbonSeparator" />, oder <see cref="T:System.Windows.Controls.Ribbon.RibbonGallery" />ist, andernfalls die grundlegende Implementierung der vom zurückgegebene Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

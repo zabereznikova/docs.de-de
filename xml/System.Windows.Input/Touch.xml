@@ -1,0 +1,80 @@
+<Type Name="Touch" FullName="System.Windows.Input.Touch">
+  <TypeSignature Language="C#" Value="public static class Touch" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Touch extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.Touch" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen auf Anwendungsebene-Dienst, der vom Betriebssystem Mehrfingereingabe verarbeitet und löst die <see cref="E:System.Windows.Input.Touch.FrameReported" /> Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.Touch.FrameReported> im serverereignissatz enthalten ist [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] um die Kompatibilität mit Silverlight unterstützen. Wenn Sie nicht zur Sicherstellung der Kompatibilität mit Silverlight verfügen, verwenden Sie die Berührungsereignisse, z. B. <xref:System.Windows.UIElement.TouchDown> und <xref:System.Windows.UIElement.TouchMove>auf <xref:System.Windows.UIElement>, <xref:System.Windows.UIElement3D>, oder <xref:System.Windows.ContentElement>.  
+  
+ Die <xref:System.Windows.Input.Touch.FrameReported> Ereignis verwendet keinen das gleiche Ereignismodell wie andere WPF-Eingabeereignisse, z. B. <xref:System.Windows.UIElement.TouchDown> und <xref:System.Windows.UIElement.TouchMove>. Anstatt als ein Element-spezifische-Ereignis, das möglicherweise durch die Objektstruktur einer Benutzeroberfläche weitergeleitet verfügbar gemacht werden die <xref:System.Windows.Input.Touch.FrameReported> Ereignis ist ein einzelnes Ereignis, das auf der Anwendungsebene verarbeitet wird. Aus diesem Grund können keine der `sender` Parameter für den Ereignishandler, um zu bestimmen, welches Element verwendet wird.  
+  
+ Verwenden der <xref:System.Windows.Input.TouchFrameEventArgs> zum Abrufen der <xref:System.Windows.Input.TouchPoint> Werte, die für das Ereignis Touch relevant sind. Aus der <xref:System.Windows.Input.TouchPoint>, erhalten Sie die <xref:System.Windows.Input.TouchPoint.Position%2A> die Fingereingabe und bestimmen, ob der <xref:System.Windows.Input.TouchAction> wurde eine <xref:System.Windows.Input.TouchAction.Down>, <xref:System.Windows.Input.TouchAction.Move>, oder <xref:System.Windows.Input.TouchAction.Up> Aktion. Sie können auch die <xref:System.Windows.Input.TouchPoint> zum Abrufen der <xref:System.Windows.Input.TouchDevice>. Aus der <xref:System.Windows.Input.TouchDevice>, können Sie das Gerät ermitteln <xref:System.Windows.Input.TouchDevice.Id%2A> und Abrufen von Informationen über das Element, das verwendet wird.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel ermöglicht Ihnen die Erstellung von einfachen Muster auf eine <xref:System.Windows.Controls.Canvas> durch Ziehen von zwei Fingern auf einem Touchscreen dar. Jede Fingereingabe dargestellte eine <xref:System.Windows.Input.TouchDevice>. Das Muster wird erstellt, indem eine Linie zwischen den Berührungspunkte, die von den Fingereingaben bereitgestellt. Dieses Beispiel benötigen Sie einen Windows Touch-kompatiblen Bildschirm.  
+  
+ Das folgende Markup erstellt die Benutzeroberfläche besteht aus einem <xref:System.Windows.Controls.Canvas> in der Mitte einer <xref:System.Windows.Controls.Grid>.  
+  
+ [!code-xaml[TouchFrameSample#000](~/samples/snippets/csharp/VS_Snippets_Wpf/touchframesample/cs/mainwindow.xaml#000)]  
+  
+ Der folgende code behandelt das <xref:System.Windows.Input.Touch.FrameReported> Ereignis. Wenn drückt die Fingereingabe auf die <xref:System.Windows.Controls.Canvas>, <xref:System.Windows.Input.TouchDevice> aufgezeichnet wird, um die <xref:System.Windows.Controls.Canvas>. Wenn die Fingereingabe beendet wird, die <xref:System.Windows.Input.TouchDevice> freigegeben wird. Wenn eine Fingereingabe verschoben wird, über die <xref:System.Windows.Controls.Canvas>, die <xref:System.Windows.Input.TouchDevice.Id%2A> aktiviert ist. Wenn das Verschieben aus dem ersten Touch geliefert wurde, wird dessen Speicherort aufgezeichnet. Wenn das Verschieben von einem zweiten geliefert wurde, wird eine Linie von der Position der ersten Fingereingabe auf die Position des zweiten Fingereingabe gezeichnet.  
+  
+ [!code-csharp[TouchFrameSample#100](~/samples/snippets/csharp/VS_Snippets_Wpf/touchframesample/cs/mainwindow.xaml.cs#100)]
+ [!code-vb[TouchFrameSample#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/touchframesample/vb/mainwindow.xaml.vb#100)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FrameReported">
+      <MemberSignature Language="C#" Value="public static event System.Windows.Input.TouchFrameEventHandler FrameReported;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.TouchFrameEventHandler FrameReported" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.Touch.FrameReported" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TouchFrameEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Touch-Nachricht gesendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Frame ist eine in einer Reihe von multitouch Nachrichten oder Berührungspunkte. Sie können auf Fingereingaben reagieren, durch Behandeln der <xref:System.Windows.Input.Touch.FrameReported> Ereignis und den Zugriff auf die Details des der <xref:System.Windows.Input.TouchPoint> aus der <xref:System.Windows.Input.TouchFrameEventArgs> Ereignisdaten.  
+  
+ Die <xref:System.Windows.Input.Touch.FrameReported> Ereignis verwendet nicht das gleiche Ereignismodell wie andere [!INCLUDE[TLA#tla_titlewinclient](~/includes/tlasharptla-titlewinclient-md.md)] Eingabeereignisse, z. B. <xref:System.Windows.UIElement.TouchDown> und <xref:System.Windows.UIElement.TouchMove>. Anstatt als ein Element-spezifische-Ereignis, das möglicherweise durch die Objektstruktur einer Benutzeroberfläche weitergeleitet verfügbar gemacht werden die <xref:System.Windows.Input.Touch.FrameReported> Ereignis ist ein einzelnes Ereignis, das auf der Anwendungsebene verarbeitet wird. Aus diesem Grund können keine der `sender` Parameter für den Ereignishandler, um zu bestimmen, welches Element verwendet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel verarbeitet die <xref:System.Windows.Input.Touch.FrameReported> Ereignis. Wenn drückt die Fingereingabe auf die <xref:System.Windows.Controls.Canvas>, <xref:System.Windows.Input.TouchDevice> aufgezeichnet wird, um die <xref:System.Windows.Controls.Canvas>. Wenn die Fingereingabe beendet wird, die <xref:System.Windows.Input.TouchDevice> freigegeben wird. Wenn eine Fingereingabe verschoben wird, über die <xref:System.Windows.Controls.Canvas>, die <xref:System.Windows.Input.TouchDevice.Id%2A> aktiviert ist. Wenn das Verschieben aus dem ersten Touch geliefert wurde, wird dessen Speicherort aufgezeichnet. Wenn das Verschieben von einem zweiten geliefert wurde, wird eine Linie von der Position der ersten Fingereingabe auf die Position des zweiten Fingereingabe gezeichnet.  
+  
+ In diesem Beispiel ist Teil eines umfangreicheren Beispiels, das in verfügbar ist die <xref:System.Windows.Input.Touch> -Klassenübersicht.  
+  
+ [!code-csharp[TouchFrameSample#110](~/samples/snippets/csharp/VS_Snippets_Wpf/touchframesample/cs/mainwindow.xaml.cs#110)]
+ [!code-vb[TouchFrameSample#110](~/samples/snippets/visualbasic/VS_Snippets_Wpf/touchframesample/vb/mainwindow.xaml.vb#110)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

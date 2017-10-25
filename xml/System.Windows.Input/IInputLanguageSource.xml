@@ -1,0 +1,125 @@
+<Type Name="IInputLanguageSource" FullName="System.Windows.Input.IInputLanguageSource">
+  <TypeSignature Language="C#" Value="public interface IInputLanguageSource" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInputLanguageSource" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.IInputLanguageSource" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die erforderliche Funktionen für ein Objekt, das als Quelle für Eingabesprache Verhalten beabsichtigt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie diese Schnittstelle für eine Klasse, die als Quelle für Eingabesprache Verhalten beabsichtigt.  
+  
+ Verwenden der <xref:System.Windows.Input.InputLanguageManager.RegisterInputLanguageSource%2A> Methode zum Registrieren einer Eingabesprachenquelle mit einem <xref:System.Windows.Input.InputLanguageManager>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CurrentInputLanguage">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo CurrentInputLanguage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo CurrentInputLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.IInputLanguageSource.CurrentInputLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die aktuelle Eingabesprache für diese Eingabesprache-Quellobjekt.</summary>
+        <value>Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die aktuelle Eingabesprache für dieses Quellobjekt Sprache darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Implementierung durch eine Klasse muss diese Eigenschaft Funktionen zum Festlegen der neue aktuellen Eingabesprache für das Quellobjekt Eingabesprache und zum Abrufen der aktuell aktiven Eingabesprache aus dem Quellobjekt Eingabesprache enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.IInputLanguageSource.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Eingabesprache-Quellobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Implementierung durch eine Klasse sollte diese Methode keine Initialisierungsaktionen durchführen, die für das Objekt, das als Quelle für aktive Eingabesprache Verhalten erforderlich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputLanguageList">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable InputLanguageList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable InputLanguageList" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.IInputLanguageSource.InputLanguageList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der Eingabe von diesem Objekt Eingabesprache unterstützten Sprachen ab.</summary>
+        <value>Ein aufzählbares Objekt, das die Liste der Eingabe von diesem Objekt Eingabesprache unterstützten Sprachen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Implementierung durch eine Klasse sollte diese Eigenschaft ein Objekt, das implementiert Zurückgeben der <xref:System.Collections.IEnumerable> unterstützt, Schnittstelle, und Enumerieren einer Auflistung von <xref:System.Globalization.CultureInfo> Objekte, die jeweils eine unterstützte Eingabesprache darstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninitialize">
+      <MemberSignature Language="C#" Value="public void Uninitialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Uninitialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.IInputLanguageSource.Uninitialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert Aufheben eines Datenquellenobjekts Eingabesprache.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Implementierung durch eine Klasse sollte diese Methode vor der Klasse, die als Quelle für aktive Eingabesprache verworfen werden alle relevanten Bereinigungsaktionen durchführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

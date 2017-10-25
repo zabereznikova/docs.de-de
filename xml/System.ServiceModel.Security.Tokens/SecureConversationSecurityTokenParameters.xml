@@ -1,0 +1,565 @@
+<Type Name="SecureConversationSecurityTokenParameters" FullName="System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters">
+  <TypeSignature Language="C#" Value="public class SecureConversationSecurityTokenParameters : System.ServiceModel.Security.Tokens.SecurityTokenParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi SecureConversationSecurityTokenParameters extends System.ServiceModel.Security.Tokens.SecurityTokenParameters" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Security</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Security.Tokens.SecurityTokenParameters</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Parameter eines Sicherheitstokens für sichere Konversation dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ist eine Auflistung von Tokeneigenschaften und –methoden und wird für die Erstellung von Bindungselementen und Token verwendet.  
+  
+ Zu sicheren Konversationen gehört der Austausch mehrerer Nachrichten und die Verwendung eines entsprechenden Sicherheitskontextes. Der Sicherheitskontext wird für die Lebensdauer der Kommunikationssitzung von den kommunizierenden Parteien gemeinsam genutzt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecureConversationSecurityTokenParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neuen Instanzeigenschaftswerte werden auf ihre Standardwerte festgelegt:  
+  
+-   Für <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> ist <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToRecipient> festgelegt.  
+  
+-   Für <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle%2A> ist <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal> festgelegt.  
+  
+-   Für <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys%2A> ist `true` festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecureConversationSecurityTokenParameters (System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurityBindingElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurityBindingElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.#ctor(System.ServiceModel.Channels.SecurityBindingElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bootstrapSecurityBindingElement" Type="System.ServiceModel.Channels.SecurityBindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="bootstrapSecurityBindingElement">Das verteilbare Sicherheitsbindungselement.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters" />-Klasse aus den Eigenschaften eines angegebenen <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `bootstrapSecurityBindingElement` gibt das Sicherheitsbindungselement an, das beim Schützen der ausgetauschten Nachrichten als Teil der Tokenausgabe für die sichere Konversation verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecureConversationSecurityTokenParameters (System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.#ctor(System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters" />-Klasse aus einer anderen Instanz dieser Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine neue Instanz durch Klonen einer vorhandenen Instanz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecureConversationSecurityTokenParameters (System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurityBindingElement, bool requireCancellation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurityBindingElement, bool requireCancellation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.#ctor(System.ServiceModel.Channels.SecurityBindingElement,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bootstrapSecurityBindingElement" Type="System.ServiceModel.Channels.SecurityBindingElement" />
+        <Parameter Name="requireCancellation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="bootstrapSecurityBindingElement">Das verteilbare Sicherheitsbindungselement.</param>
+        <param name="requireCancellation">
+          <see langword="true" />Abbruch erforderlich ist; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters" />-Klasse aus den Eigenschaften eines angegebenen <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `bootstrapSecurityBindingElement` gibt das Sicherheitsbindungselement an, das beim Schützen der ausgetauschten Nachrichten als Teil der Tokenausgabe für die sichere Konversation verwendet wird. Wenn `requireCancellation` den Wert `true` aufweist, wird ein sitzungsbasiertes Sicherheitskontexttoken ausgegeben, andernfalls wird ein cookiebasiertes Sicherheitskontexttoken ausgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecureConversationSecurityTokenParameters (System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurityBindingElement, bool requireCancellation, bool canRenewSession);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurityBindingElement, bool requireCancellation, bool canRenewSession) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.#ctor(System.ServiceModel.Channels.SecurityBindingElement,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bootstrapSecurityBindingElement" Type="System.ServiceModel.Channels.SecurityBindingElement" />
+        <Parameter Name="requireCancellation" Type="System.Boolean" />
+        <Parameter Name="canRenewSession" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="bootstrapSecurityBindingElement">Ein Sicherheitsbindungselement-Objekt, das die ausgetauschte Nachricht als Teil der Tokenausgabe für die sichere Konversation schützt.</param>
+        <param name="requireCancellation">
+          <see langword="true" />Abbruch erforderlich ist; andernfalls <see langword="false" />.</param>
+        <param name="canRenewSession">
+          <see langword="true" />um anzugeben, dass die kommunikationssitzung erneuert werden kann; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters" />-Klasse aus den Eigenschaften eines angegebenen <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecureConversationSecurityTokenParameters (System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurityBindingElement, bool requireCancellation, System.ServiceModel.Security.ChannelProtectionRequirements bootstrapProtectionRequirements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurityBindingElement, bool requireCancellation, class System.ServiceModel.Security.ChannelProtectionRequirements bootstrapProtectionRequirements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.#ctor(System.ServiceModel.Channels.SecurityBindingElement,System.Boolean,System.ServiceModel.Security.ChannelProtectionRequirements)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bootstrapSecurityBindingElement" Type="System.ServiceModel.Channels.SecurityBindingElement" />
+        <Parameter Name="requireCancellation" Type="System.Boolean" />
+        <Parameter Name="bootstrapProtectionRequirements" Type="System.ServiceModel.Security.ChannelProtectionRequirements" />
+      </Parameters>
+      <Docs>
+        <param name="bootstrapSecurityBindingElement">Das verteilbare Sicherheitsbindungselement.</param>
+        <param name="requireCancellation">
+          <see langword="true" />Abbruch erforderlich ist; andernfalls <see langword="false" />.</param>
+        <param name="bootstrapProtectionRequirements">Der bootstrap-schutzanforderungen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters" />-Klasse aus den Eigenschaften eines angegebenen <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" /> mit angegebenen <see cref="T:System.ServiceModel.Security.ChannelProtectionRequirements" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `bootstrapSecurityBindingElement` gibt das Sicherheitsbindungselement an, das beim Schützen der ausgetauschten Nachrichten als Teil der Tokenausgabe für die sichere Konversation verwendet wird. Wenn `requireCancellation` den Wert `true` aufweist, wird ein sitzungsbasiertes Sicherheitskontexttoken ausgegeben, andernfalls wird ein cookiebasiertes Sicherheitskontexttoken ausgegeben.  
+  
+ `bootstrapProtectionRequirements` gibt die Schutzanforderungen für die ausgetauschten Nachrichten als Teil der Tokenausgabe für die sichere Konversation an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecureConversationSecurityTokenParameters (System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurityBindingElement, bool requireCancellation, bool canRenewSession, System.ServiceModel.Security.ChannelProtectionRequirements bootstrapProtectionRequirements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurityBindingElement, bool requireCancellation, bool canRenewSession, class System.ServiceModel.Security.ChannelProtectionRequirements bootstrapProtectionRequirements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.#ctor(System.ServiceModel.Channels.SecurityBindingElement,System.Boolean,System.Boolean,System.ServiceModel.Security.ChannelProtectionRequirements)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bootstrapSecurityBindingElement" Type="System.ServiceModel.Channels.SecurityBindingElement" />
+        <Parameter Name="requireCancellation" Type="System.Boolean" />
+        <Parameter Name="canRenewSession" Type="System.Boolean" />
+        <Parameter Name="bootstrapProtectionRequirements" Type="System.ServiceModel.Security.ChannelProtectionRequirements" />
+      </Parameters>
+      <Docs>
+        <param name="bootstrapSecurityBindingElement">Ein Sicherheitsbindungselement-Objekt, das die ausgetauschte Nachricht als Teil der Tokenausgabe für die sichere Konversation schützt.</param>
+        <param name="requireCancellation">
+          <see langword="true" />Abbruch erforderlich ist; andernfalls <see langword="false" />.</param>
+        <param name="canRenewSession">
+          <see langword="true" />um anzugeben, dass die kommunikationssitzung erneuert werden kann; andernfalls <see langword="false" />.</param>
+        <param name="bootstrapProtectionRequirements">Die Channelschutzanforderungen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters" />-Klasse aus den Eigenschaften eines angegebenen <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" /> mit angegebenen <see cref="T:System.ServiceModel.Security.ChannelProtectionRequirements" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BootstrapProtectionRequirements">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.ChannelProtectionRequirements BootstrapProtectionRequirements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.ChannelProtectionRequirements BootstrapProtectionRequirements" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapProtectionRequirements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.ChannelProtectionRequirements</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bootstrap-Schutzanforderungen ab.</summary>
+        <value>Der bootstrap-schutzanforderungen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BootstrapSecurityBindingElement">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.SecurityBindingElement BootstrapSecurityBindingElement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.SecurityBindingElement BootstrapSecurityBindingElement" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das verteilbare Sicherheitsbindungselement.</summary>
+        <value>Das verteilbare Sicherheitsbindungselement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRenewSession">
+      <MemberSignature Language="C#" Value="public bool CanRenewSession { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRenewSession" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.CanRenewSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob die Kommunikationssitzung erneuert werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die kommunikationssitzung erneuert werden kann; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Security.Tokens.SecurityTokenParameters CloneCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Security.Tokens.SecurityTokenParameters CloneCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.CloneCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SecurityTokenParameters</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Klont eine andere Instanz dieser Klasseninstanz.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters" /> -Instanz, die Kopie darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.Clone%2A>-Methode und die <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A>-Methode folgen dem Kernentwurfsmuster.  
+  
+ <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A> ist eine `abstract`-Klasse, die von <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.CloneCore%2A> überschrieben wird.  
+  
+ Die <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.CloneCore%2A>-Methode ruft den <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.%23ctor%2A>-Konstruktor auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="protected override System.IdentityModel.Tokens.SecurityKeyIdentifierClause CreateKeyIdentifierClause (System.IdentityModel.Tokens.SecurityToken token, System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle referenceStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause CreateKeyIdentifierClause(class System.IdentityModel.Tokens.SecurityToken token, valuetype System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle referenceStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.CreateKeyIdentifierClause(System.IdentityModel.Tokens.SecurityToken,System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="referenceStyle" Type="System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das Token.</param>
+        <param name="referenceStyle">Der Verweis-Stil des Sicherheitstokens.</param>
+        <summary>Erstellt eine Schlüsselbezeichnerklausel für ein Token.</summary>
+        <returns>Die schlüsselbezeichnerklausel für ein Token.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine Schlüsselbezeichnerklausel mit der <xref:System.IdentityModel.Tokens.SecurityToken.CreateKeyIdentifierClause%2A>-Methode unter Verwendung von `referenceStyle` als generischer Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="referenceStyle" /> ist nicht <see langword="External" /> oder <see langword="Internal" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasAsymmetricKey">
+      <MemberSignature Language="C#" Value="protected override bool HasAsymmetricKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasAsymmetricKey" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.HasAsymmetricKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Sicherheitstoken über einen asymmetrischen Schlüssel verfügt.</summary>
+        <value>Diese Eigenschaft gibt immer <see langword="false" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Asymmetrische Schlüssel werden bei Verschlüsselungen eingesetzt, die mit einem öffentlichen und einem privaten Schlüssel durchgeführt werden, zwischen denen eine mathematische Beziehung besteht. Der öffentliche Schlüssel wird überall verteilt, aber der private Schlüssel wird geheim gehalten. Bei der Verschlüsselung durch öffentliche Schlüssel ist kein Austausch eines gemeinsamen Schlüssels erforderlich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeSecurityTokenRequirement">
+      <MemberSignature Language="C#" Value="protected override void InitializeSecurityTokenRequirement (System.IdentityModel.Selectors.SecurityTokenRequirement requirement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeSecurityTokenRequirement(class System.IdentityModel.Selectors.SecurityTokenRequirement requirement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.InitializeSecurityTokenRequirement(System.IdentityModel.Selectors.SecurityTokenRequirement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requirement" Type="System.IdentityModel.Selectors.SecurityTokenRequirement" />
+      </Parameters>
+      <Docs>
+        <param name="requirement">Die Anforderung des Sicherheitstokens.</param>
+        <summary>Initialisiert eine Sicherheitstokenanforderung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Folgende Eigenschaften von <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> werden initialisiert:  
+  
+-   <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.TokenType%2A> = <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.SecureConversation%2A>.  
+  
+-   <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.RequireCryptographicToken%2A> = `true`.  
+  
+-   Die <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.SupportSecurityContextCancellationProperty%2A>-Eigenschaft in <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties%2A> ist auf <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> festgelegt.  
+  
+-   Die <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.SecureConversationSecurityBindingElement%2A>-Eigenschaft in <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties%2A> ist auf <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A> festgelegt.  
+  
+-   Die <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>-Eigenschaft in <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties%2A> ist auf einen Klon der aktuellen Instanz festgelegt.  
+  
+-   <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyType%2A> = <xref:System.IdentityModel.Tokens.SecurityKeyType.SymmetricKey>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireCancellation">
+      <MemberSignature Language="C#" Value="public bool RequireCancellation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequireCancellation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Abbruch erforderlich ist.</summary>
+        <value>
+          <see langword="true" />, wenn ein Abbruch erforderlich ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Windows-Authentifizierung zusammen mit einem Sicherheitskontexttoken verwendet wird, weist [!INCLUDE[indigo2](~/includes/indigo2-md.md)] der <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>-Eigenschaft nicht die tatsächliche Identität des Aufrufers zu, sondern legt die Eigenschaft auf den Wert "anonymous" fest. Da die [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Sicherheit den Inhalt des Dienstsicherheitskontextes für jede Anfrage vom eingehenden Sicherheitskontexttoken neu erstellen muss, verfolgt der Server nicht die Sicherheitssitzung im Speicher. Da die <xref:System.Security.Principal.WindowsIdentity>-Instanz nicht in das Sicherheitskontexttoken serialisiert werden kann, gibt die <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>-Eigenschaft eine anonyme Identität zurück.  
+  
+ Die folgende Konfiguration weist dieses Verhalten auf.  
+  
+```  
+<customBinding>  
+  <binding name="Cancellation">  
+       <textMessageEncoding />  
+        <security   
+            requireSecurityContextCancellation="false">  
+              <secureConversationBootstrap   
+                 requireSecurityContextCancellation="true" />  
+      </security>  
+    <httpTransport />  
+  </binding>  
+</customBinding>  
+```  
+  
+ Weitere Informationen zu Sicherheitskontexttoken finden Sie unter [Vorgehensweise: Erstellen Sie ein Sicherheitskontexttoken für eine Sicherheitssitzung](~/docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsClientAuthentication">
+      <MemberSignature Language="C#" Value="protected override bool SupportsClientAuthentication { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsClientAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.SupportsClientAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Clientauthentifizierung von dem Token unterstützt wird.</summary>
+        <value>
+          <see langword="true" />, wenn das Token die Clientauthentifizierung unterstützt, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsClientWindowsIdentity">
+      <MemberSignature Language="C#" Value="protected override bool SupportsClientWindowsIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsClientWindowsIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.SupportsClientWindowsIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Token eine Windows-Identität für die Authentifizierung unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn das Token eine Windows-Identität zur Authentifizierung unterstützt, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsServerAuthentication">
+      <MemberSignature Language="C#" Value="protected override bool SupportsServerAuthentication { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsServerAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.SupportsServerAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Token die Serverauthentifizierung unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn das Token die Serverauthentifizierung unterstützt, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeigt eine Textdarstellung dieser Instanz der Klasse an.</summary>
+        <returns>Eine Textdarstellung dieser Instanz der Klasse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode zeigt folgende Daten an: das Ergebnis der Anwendung dieser Methode auf die Basisklasse, <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A>, und, wenn nicht null, <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

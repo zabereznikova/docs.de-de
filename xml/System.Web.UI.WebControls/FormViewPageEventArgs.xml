@@ -1,0 +1,123 @@
+<Type Name="FormViewPageEventArgs" FullName="System.Web.UI.WebControls.FormViewPageEventArgs">
+  <TypeSignature Language="C#" Value="public class FormViewPageEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormViewPageEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewPageEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.FormView.PageIndexChanging" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FormView> -Steuerelement löst die <xref:System.Web.UI.WebControls.FormView.PageIndexChanging> Ereignis aus, wenn eine Pagerschaltfläche (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Seite" festgelegt) innerhalb des Steuerelements geklickt wird, jedoch bevor die <xref:System.Web.UI.WebControls.FormView> Steuerelement behandelt den Pagingvorgang. Sie können auch Festlegen der `CommandArgument` Eigenschaft eine Pagerschaltfläche, um den Typ des auszuführenden Pagingvorgangs anzugeben. Die folgende Tabelle enthält die unterstützten Vorgänge.  
+  
+|CommandArgument-Wert|Beschreibung|  
+|---------------------------|-----------------|  
+|"Weiter"|Wechselt zur nächsten Seite.|  
+|"Prev"|Wechselt zur vorherigen Seite.|  
+|"First"|Navigiert zur ersten Seite.|  
+|"Letzte"|Navigiert zur letzten Seite.|  
+|Ein ganzzahliger Wert|Navigiert zur angegebenen Seite.|  
+  
+ Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, z. B. den Pagingvorgang Abbrechen, wenn dieses Ereignis tritt auf.  
+  
+> [!NOTE]
+>  Pagerschaltflächen befinden sich in der Regel in der Pagerzeile eine <xref:System.Web.UI.WebControls.FormView> Steuerelement.  
+  
+ Ein <xref:System.Web.UI.WebControls.FormViewPageEventArgs> Objekt übergeben wird, an die Methode für die Ereignisbehandlung, wodurch Sie den Index, der vom Benutzer ausgewählten Seite ermitteln und um anzugeben, ob der Pagingvorgang abgebrochen werden soll. Um den Index des vom Benutzer ausgewählten Seite zu bestimmen, verwenden die <xref:System.Web.UI.WebControls.FormViewPageEventArgs.NewPageIndex%2A> Eigenschaft. Legen Sie zum Abbrechen des Pagingvorgangs der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Web.UI.WebControls.FormViewPageEventArgs> -Objekt `true`.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.FormViewPageEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.FormViewPageEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewPageEventArgs> -Objekt übergeben, um die Ereignisbehandlungsmethode für die <xref:System.Web.UI.WebControls.FormView.PageIndexChanging> Ereignis, um eine Pagingvorgang "Abbrechen", wenn der Benutzer versucht, navigieren Sie zu einer anderen Seite während der <xref:System.Web.UI.WebControls.FormView> -Steuerelement befindet sich im Bearbeitungsmodus .  
+  
+> [!IMPORTANT]
+>  Das Steuerelement in diesem Beispiel hat ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormViewPageEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewPageEventArgs/CS/formviewmodeeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewPageEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewPageEventArgs/VB/formviewmodeeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormViewPageEventArgs (int newPageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 newPageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FormViewPageEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newPageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="newPageIndex">Der Index der neuen Seite angezeigt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.FormViewPageEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.FormViewPageEventArgs> Klasse.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.WebControls.FormViewPageEventArgs>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.FormViewPageEventArgs.NewPageIndex%2A>|Der Wert des `newPageIndex`-Parameters.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewPageIndex">
+      <MemberSignature Language="C#" Value="public int NewPageIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewPageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewPageEventArgs.NewPageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Index für die neue Seite für die anzuzeigenden in die <see cref="T:System.Web.UI.WebControls.FormView" /> Steuerelement.</summary>
+        <value>Der Index für die neue Seite für die anzuzeigenden in die <see cref="T:System.Web.UI.WebControls.FormView" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.UI.WebControls.FormView.PageIndexChanging> Ereignis tritt auf, bevor die <xref:System.Web.UI.WebControls.FormView> Steuerelement führt den Pagingvorgang der <xref:System.Web.UI.WebControls.FormView.PageIndex%2A> -Eigenschaft des Steuerelements enthält den Index des zuvor angezeigten Seite und kann nicht verwendet werden, um zu bestimmen, den Index des ausgewählten Seite durch den Benutzer. Verwenden der <xref:System.Web.UI.WebControls.FormViewPageEventArgs.NewPageIndex%2A> -Eigenschaft zum Bestimmen des Seitenindex. Diese Eigenschaft können auch um programmgesteuert zu überschreiben, den Seitenindex vom Benutzer ausgewählt werden, indem Sie es in einen anderen Wert festlegen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewPageEventArgs.NewPageIndex%2A> -Eigenschaft können Sie den Index des vom Benutzer ausgewählten Seite zu bestimmen.  
+  
+ [!code-aspx-csharp[FormViewPageEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewPageEventArgs/CS/formviewmodeeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewPageEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewPageEventArgs/VB/formviewmodeeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

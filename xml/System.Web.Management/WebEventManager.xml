@@ -1,0 +1,81 @@
+<Type Name="WebEventManager" FullName="System.Web.Management.WebEventManager">
+  <TypeSignature Language="C#" Value="public static class WebEventManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit WebEventManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebEventManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Funktionalität für die Verwaltung von Web-Ereignisse in einer Anwendung bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.Management.WebEventManager> Klasse geleert werden derzeit gepufferten Ereignisse für Anbieter, die in enthaltenen der `healthMonitoring` Teil der Konfiguration.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public static void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebEventManager.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Leert den Ereignispuffer für alle Anbieter, die in der <see langword="healthMonitoring" /> Abschnitt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventManager.Flush%2A> Methode leert den Ereignispuffer für alle Anbieter, die in der `healthMonitoring` Teil der Konfiguration. Wenn keine Anbieter vorhanden sind, werden keine Ereignisse gepuffert. Jedoch wenn Anbieter vorhanden sind, wird der Ereignispuffer für jeden Anbieter in der `healthMonitoring` Abschnitt geleert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public static void Flush (string providerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Flush(string providerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebEventManager.Flush(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="providerName">Der Name des Anbieters.</param>
+        <summary>Leert den Ereignispuffer für den angegebenen Anbieter an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Management.WebEventManager.Flush%2A> Methode leert den Ereignispuffer für den angegebenen Anbieter. Die `healthMonitoring` der Konfigurationsabschnitt muss den angegebenen Anbieter enthalten, damit um die Ereignispuffer zu leeren. Wenn der Name des Anbieters des vorhandenen Anbieter entspricht keiner der `healthMonitoring` Abschnitt ein <xref:System.ArgumentException> Ausnahme wird ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="providerName" />nicht entspricht alle vorhandenen Anbieter.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,3050 @@
+<Type Name="DataView" FullName="System.Data.DataView">
+  <TypeSignature Language="C#" Value="public class DataView : System.ComponentModel.MarshalByValueComponent, System.Collections.IList, System.ComponentModel.IBindingListView, System.ComponentModel.ISupportInitializeNotification, System.ComponentModel.ITypedList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataView extends System.ComponentModel.MarshalByValueComponent implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList, class System.ComponentModel.IBindingList, class System.ComponentModel.IBindingListView, class System.ComponentModel.ISupportInitialize, class System.ComponentModel.ISupportInitializeNotification, class System.ComponentModel.ITypedList" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.MarshalByValueComponent</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IBindingListView</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitializeNotification</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ITypedList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("PositionChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Table")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("Microsoft.VSDesigner.Data.VS.DataViewDesigner, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DataSourceEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine an Daten bindbare, benutzerdefinierte Ansicht einer <see cref="T:System.Data.DataTable" /> zum Sortieren, Filtern, Durchsuchen, Bearbeiten und Navigieren dar. <see cref="T:System.Data.DataView" /> speichert keine Daten, sondern stellt stattdessen eine verbundene Ansicht der entsprechenden <see cref="T:System.Data.DataTable" /> dar. Änderungen an den Daten von <see cref="T:System.Data.DataView" /> wirken sich auf <see cref="T:System.Data.DataTable" /> aus. Änderungen an den Daten von <see cref="T:System.Data.DataTable" /> wirken sich auf alle <see cref="T:System.Data.DataView" />s aus, die ihr zugeordnet sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine wichtige Funktion von der <xref:System.Data.DataView> liegt darin, für die Datenbindung in Windows Forms und Web Forms ermöglichen.  
+  
+ Darüber hinaus eine <xref:System.Data.DataView> angepasst werden, um eine Teilmenge der Daten aus präsentieren die <xref:System.Data.DataTable>. Auf diese Weise können Sie zwei Steuerelemente, die auf den gleichen gebunden haben <xref:System.Data.DataTable>, aber verschiedene Versionen der Daten anzeigen. Z. B. kann ein Steuerelement gebunden werden, um eine <xref:System.Data.DataView> , alle Zeilen in der Tabelle anzeigt und eine zweite möglicherweise so konfiguriert werden, dass nur die Zeilen anzuzeigen, die aus gelöscht wurden die <xref:System.Data.DataTable>. Die <xref:System.Data.DataTable> verfügt auch über eine <xref:System.Data.DataTable.DefaultView%2A> Eigenschaft. Dies gibt die Standardeinstellung <xref:System.Data.DataView> für die Tabelle. Angenommen, wenn Sie eine benutzerdefinierte Ansicht für die Tabelle erstellen möchten, legen die <xref:System.Data.DataView.RowFilter%2A> auf die <xref:System.Data.DataView> zurückgegebenes der <xref:System.Data.DataTable.DefaultView%2A>.  
+  
+ Um eine gefilterte und sortierte Ansicht der Daten zu erstellen, legen die <xref:System.Data.DataView.RowFilter%2A> und <xref:System.Data.DataView.Sort%2A> Eigenschaften. Verwenden Sie dann die <xref:System.Data.DataView.Item%2A> -Eigenschaft zum Zurückgeben einer einzelnen <xref:System.Data.DataRowView>.  
+  
+ Sie können auch hinzufügen und löschen, die aus dem Satz von Zeilen, die mit der <xref:System.Data.DataView.AddNew%2A> und <xref:System.Data.DataView.Delete%2A> Methoden. Bei Verwendung dieser Methoden die <xref:System.Data.DataView.RowStateFilter%2A> Eigenschaft kann festlegen, um anzugeben, dass nur die gelöschten Zeilen oder neue Zeilen angezeigt werden, durch die <xref:System.Data.DataView>.  
+  
+> [!NOTE]
+>  Wenn Sie nicht explizit Sortierkriterien angeben `DataView`, die `DataRowView` Objekte im `DataView` werden basierend auf den Index des entsprechenden DataView sortiert `DataRow` in der `DataTable.Rows` `DataRowCollection`.  
+  
+ [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]ermöglicht Entwicklern das Erstellen von komplexer und leistungsstarke Abfragen über eine <xref:System.Data.DataSet> mit [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Ein [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] Abfrage gibt eine Enumeration von <xref:System.Data.DataRow> Objekte, jedoch die in einem Datenbindungsszenario nicht ohne Probleme eingesetzt wird. <xref:System.Data.DataView>können erstellt werden, eine [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] Abfragen und führt für die Filterung und Sortierung Merkmale dieser Abfrage. [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]Erweitert die Funktionalität von der <xref:System.Data.DataView> durch die Bereitstellung [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ausdrucksbasierten Filterung und Sortierung, sodass die wesentlich komplexere und leistungsfähigere filtern und Sortieroperationen als die zeichenfolgenbasierte Filterung und Sortierung. Finden Sie unter [Datenbindung und LINQ to DataSet](~/docs/framework/data/adonet/data-binding-and-linq-to-dataset.md) für Weitere Informationen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine einzelne <xref:System.Data.DataTable> mit einer Spalte und fünf Zeilen. Zwei <xref:System.Data.DataView> Objekte werden erstellt und die <xref:System.Data.DataView.RowStateFilter%2A> auf jedem festgelegt ist, um verschiedene Ansichten der Tabellendaten anzeigen. Anschließend werden die Werte ausgegeben.  
+  
+ [!code-csharp[Classic WebData DataView Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataView Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataView Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView Example/VB/source.vb#1)]  
+  
+ Das folgende Beispiel erstellt eine <xref:System.Data.DataView> von onlinebestellungen sortiert nach Gesamtbetrag aus einem [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] Abfrage:  
+  
+ [!code-csharp[DP DataView Samples#CreateLDVFromQuery1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquery1)]
+ [!code-vb[DP DataView Samples#CreateLDVFromQuery1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquery1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist für schreibgeschützte Vorgänge mit mehreren Threads sicher. Sie müssen alle Schreibvorgänge synchronisieren.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataView ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.DataView" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.DataView>.  
+  
+ [!code-csharp[Classic WebData DataView.DataView Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataView.DataView Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataView.DataView Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView.DataView Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataView (System.Data.DataTable table);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataTable table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.#ctor(System.Data.DataTable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="table" Type="System.Data.DataTable" />
+      </Parameters>
+      <Docs>
+        <param name="table">Ein <see cref="T:System.Data.DataTable" />, das zu <see cref="T:System.Data.DataView" /> hinzugefügt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.DataView" />-Klasse mit der angegebenen <see cref="T:System.Data.DataTable" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.DataView> mit dem angegebenen <xref:System.Data.DataTable>.  
+  
+ [!code-csharp[Classic WebData DataView.DataView1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataView.DataView1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataView.DataView1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView.DataView1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataView (System.Data.DataTable table, string RowFilter, string Sort, System.Data.DataViewRowState RowState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataTable table, string RowFilter, string Sort, valuetype System.Data.DataViewRowState RowState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.#ctor(System.Data.DataTable,System.String,System.String,System.Data.DataViewRowState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="table" Type="System.Data.DataTable" />
+        <Parameter Name="RowFilter" Type="System.String" />
+        <Parameter Name="Sort" Type="System.String" />
+        <Parameter Name="RowState" Type="System.Data.DataViewRowState" />
+      </Parameters>
+      <Docs>
+        <param name="table">Ein <see cref="T:System.Data.DataTable" />, das zu <see cref="T:System.Data.DataView" /> hinzugefügt werden soll.</param>
+        <param name="RowFilter">Ein <see cref="P:System.Data.DataView.RowFilter" />, das auf <see cref="T:System.Data.DataView" /> angewendet werden soll.</param>
+        <param name="Sort">Ein <see cref="P:System.Data.DataView.Sort" />, das auf <see cref="T:System.Data.DataView" /> angewendet werden soll.</param>
+        <param name="RowState">Ein <see cref="T:System.Data.DataViewRowState" />, das auf <see cref="T:System.Data.DataView" /> angewendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.DataView" />-Klasse mit den angegebenen <see cref="T:System.Data.DataTable" />, <see cref="P:System.Data.DataView.RowFilter" />, <see cref="P:System.Data.DataView.Sort" /> und <see cref="T:System.Data.DataViewRowState" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.DataView> mit dem angegebenen <xref:System.Data.DataTable>.  
+  
+ [!code-csharp[Classic WebData DataView.DataView2 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataView.DataView2 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataView.DataView2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView.DataView2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNew">
+      <MemberSignature Language="C#" Value="public virtual System.Data.DataRowView AddNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.DataRowView AddNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.AddNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowView</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt eine neue Zeile, die <see cref="T:System.Data.DataView" />.</summary>
+        <returns>Ein neues <see cref="T:System.Data.DataRowView" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataView.AddNew%2A> Methode, um ein neues zurückzugeben <xref:System.Data.DataRowView> , wurde hinzugefügt, um die <xref:System.Data.DataTable>.  
+  
+ [!code-csharp[Classic WebData DataView.AddNew Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataView.AddNew Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataView.AddNew Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView.AddNew Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowDelete">
+      <MemberSignature Language="C#" Value="public bool AllowDelete { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowDelete" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.AllowDelete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Löschungen zulässig sind, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn löschungen zulässig sind; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel überprüft die <xref:System.Data.DataView.AllowDelete%2A> Eigenschaft vor dem Löschen einer <xref:System.Data.DataRow> aus einem <xref:System.Data.DataView>.  
+  
+ [!code-csharp[Classic WebData DataView.AllowDelete Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataView.AllowDelete Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataView.AllowDelete Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView.AllowDelete Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowEdit">
+      <MemberSignature Language="C#" Value="public bool AllowEdit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowEdit" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.AllowEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Bearbeitungen zulässig sind, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn Bearbeitungen zulässig sind, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataView.AllowEdit%2A> Methode vor der Bearbeitung einer Zeile in einer <xref:System.Data.DataView>.  
+  
+ [!code-csharp[Classic WebData DataView.AllowEdit Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataView.AllowEdit Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataView.AllowEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView.AllowEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowNew">
+      <MemberSignature Language="C#" Value="public bool AllowNew { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowNew" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.AllowNew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die neuen Zeilen können, mithilfe hinzugefügt werden der <see cref="M:System.Data.DataView.AddNew" /> Methode.</summary>
+        <value>
+          <see langword="true" />, wenn neue Zeilen hinzugefügt werden können. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataView.AllowNew%2A> Eigenschaft auf "true", bevor Sie eine neue Zeile mit der <xref:System.Data.DataView.AddNew%2A> Methode.  
+  
+ [!code-csharp[Classic WebData DataView.AllowNew Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataView.AllowNew Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataView.AllowNew Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView.AllowNew Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyDefaultSort">
+      <MemberSignature Language="C#" Value="public bool ApplyDefaultSort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ApplyDefaultSort" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.ApplyDefaultSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Standardsortierung verwendet werden soll, oder legt diesen Wert fest. Die standardsortierung ist (aufsteigend) nach allen Primärschlüsseln entsprechend den Angaben von <see cref="P:System.Data.DataTable.PrimaryKey" />.</summary>
+        <value>
+          <see langword="true" />, wenn die standardsortierung verwendet wird. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet die Initialisierung einer <see cref="T:System.Data.DataView" /> , die in einem Formular oder von einer anderen Komponente verwendet wird. Die Initialisierung erfolgt zur Laufzeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die entwurfsumgebung für Visual Studio .NET verwendet diese Methode, um die Initialisierung einer Komponente zu starten, die in einem Formular oder von einer anderen Komponente verwendet wird. Die <xref:System.Data.DataView.EndInit%2A> -Methode beendet die Initialisierung. Mithilfe der `BeginInit` und `EndInit` Methoden wird verhindert, dass das Steuerelement verwendet werden, bevor er vollständig initialisiert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="protected void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt den <see cref="T:System.Data.DataView" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode ermöglicht das manuelle schließen die <xref:System.Data.DataView> in abgeleiteten Klassen. Verwenden Sie das entsprechende <xref:System.Data.DataView.Open%2A> Methode zum Öffnen der <xref:System.Data.DataView>.  
+  
+ Diese Eigenschaft dient nur zur internen Verwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnCollectionChanged">
+      <MemberSignature Language="C#" Value="protected virtual void ColumnCollectionChanged (object sender, System.ComponentModel.CollectionChangeEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ColumnCollectionChanged(object sender, class System.ComponentModel.CollectionChangeEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.ColumnCollectionChanged(System.Object,System.ComponentModel.CollectionChangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.ComponentModel.CollectionChangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.ComponentModel.ListChangedEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Tritt auf, nachdem eine <see cref="T:System.Data.DataColumnCollection" /> erfolgreich geändert wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Array, in das kopiert werden soll.</param>
+        <param name="index">Index, ab dem begonnen wird.</param>
+        <summary>Kopiert die Elemente in ein Array. Nur für Web Forms-Schnittstellen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Datensätze in <see cref="T:System.Data.DataView" /> ab, nachdem <see cref="P:System.Data.DataView.RowFilter" /> und <see cref="P:System.Data.DataView.RowStateFilter" /> angewendet wurden.</summary>
+        <value>Die Anzahl der Datensätze in der <see cref="T:System.Data.DataView" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataViewManager">
+      <MemberSignature Language="C#" Value="public System.Data.DataViewManager DataViewManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataViewManager DataViewManager" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.DataViewManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataViewManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Data.DataViewManager" /> ab, der dieser Ansicht zugeordnet ist.</summary>
+        <value>Der <see langword="DataViewManager" />, der diese Ansicht erstellt hat. Ist dies die standardmäßige <see cref="T:System.Data.DataView" /> für eine <see cref="T:System.Data.DataTable" />, gibt die <see langword="DataViewManager" />-Eigenschaft den standardmäßigen <see langword="DataViewManager" /> für den <see langword="DataSet" /> zurück. Wenn die <see langword="DataView" /> hingegen ohne <see langword="DataViewManager" /> erstellt wurde, ist diese Eigenschaft <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.Delete(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index der zu löschenden Zeile.</param>
+        <summary>Löscht eine Zeile am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Löschen einer <xref:System.Data.DataRow>, ändert sich der Status `DataViewRowState.Deleted`. Sie können zurücksetzen, den Löschvorgang durch Aufrufen von <xref:System.Data.DataTable.RejectChanges%2A> auf die <xref:System.Data.DataTable>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataView.Delete%2A> Methode, um eine Zeile zu löschen.  
+  
+ [!code-vb[Classic WebData DataView.Delete Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView.Delete Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Löscht (außer den Speicherressourcen) alle Ressourcen, die vom <see cref="T:System.Data.DataView" />-Objekt verwendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaft änderungsbenachrichtigungen zwischen der <xref:System.Data.DataView> und dem zugrunde liegenden <xref:System.Data.DataTable> zu beenden, nachdem diese Methode aufgerufen wird. <xref:System.Data.DataView.Dispose%2A>sollte aufgerufen werden, für alle <xref:System.Data.DataView> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Initialisierung einer <see cref="T:System.Data.DataView" />, die in einem Formular oder von einer anderen Komponente verwendet wird. Die Initialisierung erfolgt zur Laufzeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die entwurfsumgebung für Visual Studio .NET verwendet diese Methode, um die Initialisierung einer Komponente zu beenden, die in einem Formular oder von einer anderen Komponente verwendet wird. Die <xref:System.Data.DataView.BeginInit%2A> -Methode startet die Initialisierung. Mithilfe der `BeginInit` und `EndInit` Methoden wird verhindert, dass das Steuerelement verwendet werden, bevor er vollständig initialisiert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public virtual bool Equals (System.Data.DataView view);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Data.DataView view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.Equals(System.Data.DataView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="System.Data.DataView" />
+      </Parameters>
+      <Docs>
+        <param name="view">Die zu vergleichende <see cref="T:System.Data.DataView" />.</param>
+        <summary>Stellt fest, ob die angegebenen <see cref="T:System.Data.DataView" />-Instanzen als gleich betrachtet werden.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden <see cref="T:System.Data.DataView" />-Instanzen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public int Find (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Find(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.Find(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Das Objekt, nach dem gesucht werden soll.</param>
+        <summary>Sucht eine Zeile in der <see cref="T:System.Data.DataView" /> anhand der angegebenen Sortierschlüsselwerts.</summary>
+        <returns>Der Index der Zeile in der <see cref="T:System.Data.DataView" /> , die den angegebenen Sortierschlüsselwert enthält; andernfalls -1, wenn der Sortierschlüsselwert nicht vorhanden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Visual Basic-Beispiel wird die <xref:System.Data.DataView.Find%2A> Methode, um den Index der Zeile zurück, die den Wert in der Sortierreihenfolge Schlüsselspalte enthält.  
+  
+ [!code-vb[Classic WebData DataView.Find Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView.Find Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public int Find (object[] key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Find(object[] key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.Find(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein Array von Werten als <see cref="T:System.Object" />.</param>
+        <summary>Sucht eine Zeile in der <see cref="T:System.Data.DataView" /> durch die angegebenen Sortierschlüsselwerte.</summary>
+        <returns>Der Index der Position der ersten Zeile in der <see cref="T:System.Data.DataView" /> , die mit den angegebenen Sortierschlüsselwerten übereinstimmt, andernfalls -1, wenn es keine übereinstimmenden sind sorrtierschlüsselwerte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Visual Basic-Beispiel wird die <xref:System.Data.DataView.Find%2A> Methode, um den Index einer Zeile zurückzugeben, die angegebenen Werte in ihren Sortierschlüsselspalten enthält.  
+  
+ [!code-vb[Classic WebData DataView.Find1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView.Find1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRowView[] FindRows (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRowView[] FindRows(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.FindRows(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowView[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Spaltenwert als typisierte <see cref="T:System.Object" />, zu suchen.</param>
+        <summary>Gibt ein Array von <see cref="T:System.Data.DataRowView" /> Objekten, dessen Spalten dem angegebenen Sortierschlüsselwert entsprechen.</summary>
+        <returns>Ein Array von <see langword="DataRowView" /> Objekten, dessen Spalten dem angegebenen Sortierschlüsselwert entsprechen, oder wenn keine Zeilen die angegebenen Sortierschlüsselwerte, eine leere enthalten <see langword="DataRowView" /> Array.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRowView[] FindRows (object[] key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRowView[] FindRows(object[] key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.FindRows(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowView[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein Array von Spaltenwerten als <see cref="T:System.Object" />, zu suchen.</param>
+        <summary>Gibt ein Array von <see cref="T:System.Data.DataRowView" /> Objekten, dessen Spalten dem angegebenen Sortierschlüsselwert entsprechen.</summary>
+        <returns>Ein Array von <see langword="DataRowView" /> Objekten, dessen Spalten dem angegebenen Sortierschlüsselwert entsprechen, oder wenn keine Zeilen die angegebenen Sortierschlüsselwerte, eine leere enthalten <see langword="DataRowView" /> Array.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Enumerator für diese <see cref="T:System.Data.DataView" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> zum Navigieren in der Liste.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexListChanged">
+      <MemberSignature Language="C#" Value="protected virtual void IndexListChanged (object sender, System.ComponentModel.ListChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void IndexListChanged(object sender, class System.ComponentModel.ListChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.IndexListChanged(System.Object,System.ComponentModel.ListChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.ComponentModel.ListChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.ComponentModel.ListChangedEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Tritt auf, nachdem eine <see cref="T:System.Data.DataView" /> erfolgreich geändert wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialized">
+      <MemberSignature Language="C#" Value="public event EventHandler Initialized;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Initialized" />
+      <MemberSignature Language="DocId" Value="E:System.Data.DataView.Initialized" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bei der Initialisierung der <see cref="T:System.Data.DataView" /> abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitialized">
+      <MemberSignature Language="C#" Value="public bool IsInitialized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInitialized" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.IsInitialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Komponente initialisiert wurde.</summary>
+        <value>
+          <see langword="true" />um anzugeben, die Komponente die Initialisierung abgeschlossen; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOpen">
+      <MemberSignature Language="C#" Value="protected bool IsOpen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOpen" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.IsOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Datenquelle derzeit geöffnet und projiziert Ansichten von Daten auf den <see cref="T:System.Data.DataTable" />.</summary>
+        <value>
+          <see langword="true" />, wenn die Quelle geöffnet ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Data.DataView> ist eine "View" auf eine <xref:System.Data.DataTable> da benutzerdefinierte sortieren und Filtern der Daten bereitgestellt. Die <xref:System.Data.DataView.IsOpen%2A> Eigenschaft abgefragt werden kann, um zu ermitteln, ob eine <xref:System.Data.DataView> geöffnet wurde, mithilfe der <xref:System.Data.DataView.Open%2A> Methode.  
+  
+ Diese Eigenschaft dient nur zur internen Verwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.DataRowView this[int recordIndex] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataRowView Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="recordIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="recordIndex">Der Index eines Datensatzes in die <see cref="T:System.Data.DataTable" />.</param>
+        <summary>Ruft eine Datenzeile aus einer angegebenen Tabelle ab.</summary>
+        <value>Ein <see cref="T:System.Data.DataRowView" /> der Zeile, die Sie möchten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.ListChangedEventHandler ListChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.ListChangedEventHandler ListChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Data.DataView.ListChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Liste von verwaltet die <see cref="T:System.Data.DataView" /> ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel fügt einen Handler für das <xref:System.Data.DataView.ListChanged> -Ereignis für ein <xref:System.Data.DataView>.  
+  
+ [!code-csharp[Classic WebData DataView.ListChanged Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataView.ListChanged Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataView.ListChanged Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView.ListChanged Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnListChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnListChanged (System.ComponentModel.ListChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnListChanged(class System.ComponentModel.ListChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.OnListChanged(System.ComponentModel.ListChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.ListChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.ComponentModel.ListChangedEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Data.DataView.ListChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="protected void Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Öffnet eine <see cref="T:System.Data.DataView" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode können Sie die manuell öffnen der <xref:System.Data.DataView> in abgeleiteten Klassen. Verwenden Sie das entsprechende <xref:System.Data.DataView.Close%2A> Methode zum Schließen der <xref:System.Data.DataView>.  
+  
+ Diese Eigenschaft dient nur zur internen Verwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="protected void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Nur für die interne Verwendung vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowFilter">
+      <MemberSignature Language="C#" Value="public virtual string RowFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RowFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.RowFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ausdruck zum Filtern der anzuzeigenden Zeilen in der <see cref="T:System.Data.DataView" />.</summary>
+        <value>Eine Zeichenfolge, die angibt, wie Zeilen gefiltert werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Form einer <xref:System.Data.DataView.RowFilter%2A> value, geben Sie den Namen einer Spalte, gefolgt von einem Operator und einen Wert zu filtern. Der Wert muss in Anführungszeichen eingeschlossen sein. Zum Beispiel:  
+  
+ "LastName = 'Smith'"  
+  
+ Finden Sie unter der <xref:System.Data.DataColumn.Expression%2A> Eigenschaft von der <xref:System.Data.DataColumn> -Klasse.  
+  
+ Um nur die Spalten mit null-Werte zurückzugeben, verwenden Sie den folgenden Ausdruck ein:  
+  
+ "Isnull (Col1, 'Null-Spalten') ="Null-Spalten""  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.DataView> und legt dessen <xref:System.Data.DataView.RowFilter%2A> Eigenschaft.  
+  
+ [!code-csharp[Classic WebData DataView.RowFilter Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataView.RowFilter Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataView.RowFilter Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView.RowFilter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowStateFilter">
+      <MemberSignature Language="C#" Value="public System.Data.DataViewRowState RowStateFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DataViewRowState RowStateFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.RowStateFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataViewRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest des zeilenstatusfilters, der verwendet wird, der <see cref="T:System.Data.DataView" />.</summary>
+        <value>Einer der <see cref="T:System.Data.DataViewRowState" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur Zeilen, die mit gelöscht wurden die <xref:System.Data.DataView.Delete%2A> Methode müssen ihre <xref:System.Data.DataView.RowStateFilter%2A> Wert festgelegt wird, um `Deleted`. Diese Zeilen hinzugefügt, mit der <xref:System.Data.DataView.AddNew%2A> Methode hat die Eigenschaft auf festgelegt auf ähnliche Weise `Added`.  
+  
+> [!NOTE]
+>  Mithilfe der <xref:System.Data.DataRowCollection.Remove%2A> Methode der <xref:System.Data.DataRowCollection> Klasse bedeutet nicht, dass eine Zeile als gekennzeichnet wird `Deleted`. Verwenden der <xref:System.Data.DataView.Delete%2A> Methode stattdessen stellen Sie sicher, dass solche Zeilen können angezeigt werden der <xref:System.Data.DataView>.  
+  
+ Neue Zeilen werden auch angezeigt, wenn die <xref:System.Data.DataView.RowStateFilter%2A> festgelegt ist, um `ModifiedCurrent` oder `CurrentRows`.  
+  
+ Gelöschte Zeilen werden auch angezeigt, wenn die <xref:System.Data.DataView.RowStateFilter%2A> festgelegt ist, um `ModifiedOriginal` und `OriginalRows`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.DataTable> mit einer einzelnen Spalte und dann die Änderungen, die Daten und stellt die <xref:System.Data.DataView.RowStateFilter%2A> von der <xref:System.Data.DataView> zum Anzeigen von anderen Rowsets, abhängig von der <xref:System.Data.DataViewRowState>.  
+  
+ [!code-csharp[Classic WebData DataView.RowStateFilter Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataView.RowStateFilter Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataView.RowStateFilter Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView.RowStateFilter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public string Sort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Sort" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.Sort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Sortierreihenfolge oder Spalten und die Sortierreihenfolge für die <see cref="T:System.Data.DataView" />.</summary>
+        <value>Eine Zeichenfolge, die den Spaltennamen gefolgt von "ASC" (aufsteigend) oder "DESC" (absteigend) enthält. Spalten werden standardmäßig in aufsteigender Reihenfolge sortiert. Mehrere Spalten können durch Kommas getrennt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie nicht explizit Sortierkriterien angeben `DataView`, die `DataRowView` Objekte im `DataView` werden basierend auf den Index des entsprechenden sortiert `DataRow` in der `DataTable.Rows` `DataRowCollection`.  
+  
+ Weitere Informationen finden Sie unter ["DataViews"](~/docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel weist der <xref:System.Data.DataView> , die Tabelle nach zwei Spalten zu sortieren.  
+  
+ [!code-csharp[Classic WebData DataView.Sort Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataView.Sort Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataView.Sort Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView.Sort Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.IsSynchronized" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.IsSynchronized" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.SyncRoot" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.SyncRoot" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="System.Object" />-Wert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Add(System.Object)" />.</summary>
+        <returns>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Add(System.Object)" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Clear">
+      <MemberSignature Language="C#" Value="void IList.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#Collections#IList#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Clear" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Die Verwendung dieses Elements wird nicht unterstützt und führt dazu, dass eine <xref:System.ArgumentException>. Verwenden Sie stattdessen die Clear-Methode für die <xref:System.Data.DataRowCollection> zurückgegebenes Objekt <xref:System.Data.DataTable.Rows%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="System.Object" />-Wert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Contains(System.Object)" />.</summary>
+        <returns>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Contains(System.Object)" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="System.Object" />-Wert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.IndexOf(System.Object)" />.</summary>
+        <returns>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.IndexOf(System.Object)" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein <see cref="System.Int32" />-Wert.</param>
+        <param name="value">Ein <see cref="System.Object" /> Wert eingefügt werden.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Insert(System.Int32,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IList.IsFixedSize" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IList.IsFixedSize" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#Collections#IList#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IList.IsReadOnly" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IList.IsReadOnly" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int recordIndex] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="recordIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="recordIndex">Ein <see cref="System.Int32" />-Wert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IList.Item(System.Int32)" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IList.Item(System.Int32)" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="System.Object" />-Wert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Remove(System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#Collections#IList#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein <see cref="System.Int32" />-Wert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.RemoveAt(System.Int32)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.AddIndex">
+      <MemberSignature Language="C#" Value="void IBindingList.AddIndex (System.ComponentModel.PropertyDescriptor property);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IBindingList.AddIndex(class System.ComponentModel.PropertyDescriptor property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#ComponentModel#IBindingList#AddIndex(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="property">Ein <see cref="System.ComponentModel.PropertyDescriptor" />-Objekt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.IBindingList.AddIndex(System.ComponentModel.PropertyDescriptor)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.AddNew">
+      <MemberSignature Language="C#" Value="object IBindingList.AddNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.IBindingList.AddNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#ComponentModel#IBindingList#AddNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.IBindingList.AddNew" />.</summary>
+        <returns>Das der Liste hinzugefügte Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.AllowEdit">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingList.AllowEdit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingList.AllowEdit" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#ComponentModel#IBindingList#AllowEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.AllowEdit" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.AllowEdit" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.AllowNew">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingList.AllowNew { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingList.AllowNew" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#ComponentModel#IBindingList#AllowNew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.AllowNew" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.AllowNew" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.AllowRemove">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingList.AllowRemove { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingList.AllowRemove" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#ComponentModel#IBindingList#AllowRemove" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.AllowRemove" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.AllowRemove" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.ApplySort">
+      <MemberSignature Language="C#" Value="void IBindingList.ApplySort (System.ComponentModel.PropertyDescriptor property, System.ComponentModel.ListSortDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IBindingList.ApplySort(class System.ComponentModel.PropertyDescriptor property, valuetype System.ComponentModel.ListSortDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#ComponentModel#IBindingList#ApplySort(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.ComponentModel.PropertyDescriptor" />
+        <Parameter Name="direction" Type="System.ComponentModel.ListSortDirection" />
+      </Parameters>
+      <Docs>
+        <param name="property">Ein <see cref="System.ComponentModel.PropertyDescriptor" />-Objekt.</param>
+        <param name="direction">Ein <see cref="System.ComponentModel.ListSortDirection" />-Objekt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.IBindingList.ApplySort(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.Find">
+      <MemberSignature Language="C#" Value="int IBindingList.Find (System.ComponentModel.PropertyDescriptor property, object key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.ComponentModel.IBindingList.Find(class System.ComponentModel.PropertyDescriptor property, object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#ComponentModel#IBindingList#Find(System.ComponentModel.PropertyDescriptor,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.ComponentModel.PropertyDescriptor" />
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="property">Ein <see cref="System.ComponentModel.PropertyDescriptor" />-Objekt.</param>
+        <param name="key">Ein <see cref="System.Object" />-Wert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.IBindingList.Find(System.ComponentModel.PropertyDescriptor,System.Object)" />.</summary>
+        <returns>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.IBindingList.Find(System.ComponentModel.PropertyDescriptor,System.Object)" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.IsSorted">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingList.IsSorted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingList.IsSorted" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#ComponentModel#IBindingList#IsSorted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.IsSorted" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.IsSorted" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.RemoveIndex">
+      <MemberSignature Language="C#" Value="void IBindingList.RemoveIndex (System.ComponentModel.PropertyDescriptor property);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IBindingList.RemoveIndex(class System.ComponentModel.PropertyDescriptor property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#ComponentModel#IBindingList#RemoveIndex(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="property">Ein <see cref="System.ComponentModel.PropertyDescriptor" />-Objekt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.IBindingList.RemoveIndex(System.ComponentModel.PropertyDescriptor)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.RemoveSort">
+      <MemberSignature Language="C#" Value="void IBindingList.RemoveSort ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IBindingList.RemoveSort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#ComponentModel#IBindingList#RemoveSort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.IBindingList.RemoveSort" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.SortDirection">
+      <MemberSignature Language="C#" Value="System.ComponentModel.ListSortDirection System.ComponentModel.IBindingList.SortDirection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.ListSortDirection System.ComponentModel.IBindingList.SortDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#ComponentModel#IBindingList#SortDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListSortDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.SortDirection" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.SortDirection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.SortProperty">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptor System.ComponentModel.IBindingList.SortProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptor System.ComponentModel.IBindingList.SortProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#ComponentModel#IBindingList#SortProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.SortProperty" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.SortProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.SupportsChangeNotification">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingList.SupportsChangeNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingList.SupportsChangeNotification" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#ComponentModel#IBindingList#SupportsChangeNotification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.SupportsChangeNotification" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.SupportsChangeNotification" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.SupportsSearching">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingList.SupportsSearching { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingList.SupportsSearching" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#ComponentModel#IBindingList#SupportsSearching" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.SupportsSearching" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.SupportsSearching" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.SupportsSorting">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingList.SupportsSorting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingList.SupportsSorting" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#ComponentModel#IBindingList#SupportsSorting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.SupportsSorting" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingList.SupportsSorting" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingListView.ApplySort">
+      <MemberSignature Language="C#" Value="void IBindingListView.ApplySort (System.ComponentModel.ListSortDescriptionCollection sorts);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IBindingListView.ApplySort(class System.ComponentModel.ListSortDescriptionCollection sorts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#ComponentModel#IBindingListView#ApplySort(System.ComponentModel.ListSortDescriptionCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sorts" Type="System.ComponentModel.ListSortDescriptionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="sorts">Ein <see cref="System.ComponentModel.ListSortDescriptionCollection" />-Objekt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.IBindingListView.ApplySort(System.ComponentModel.ListSortDescriptionCollection)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingListView>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingListView.Filter">
+      <MemberSignature Language="C#" Value="string System.ComponentModel.IBindingListView.Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.ComponentModel.IBindingListView.Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#ComponentModel#IBindingListView#Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingListView.Filter" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingListView.Filter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingListView>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingListView.RemoveFilter">
+      <MemberSignature Language="C#" Value="void IBindingListView.RemoveFilter ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IBindingListView.RemoveFilter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#ComponentModel#IBindingListView#RemoveFilter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.IBindingListView.RemoveFilter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingListView>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingListView.SortDescriptions">
+      <MemberSignature Language="C#" Value="System.ComponentModel.ListSortDescriptionCollection System.ComponentModel.IBindingListView.SortDescriptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ListSortDescriptionCollection System.ComponentModel.IBindingListView.SortDescriptions" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#ComponentModel#IBindingListView#SortDescriptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListSortDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingListView.SortDescriptions" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingListView.SortDescriptions" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Die Verwendung dieses Elements wird nicht unterstützt und führt dazu, dass eine <xref:System.ArgumentException>. Verwenden Sie stattdessen die Clear-Methode für die <xref:System.Data.DataRowCollection> zurückgegebenes Objekt <xref:System.Data.DataTable.Rows%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingListView.SupportsAdvancedSorting">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingListView.SupportsAdvancedSorting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingListView.SupportsAdvancedSorting" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#ComponentModel#IBindingListView#SupportsAdvancedSorting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingListView.SupportsAdvancedSorting" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingListView.SupportsAdvancedSorting" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingListView>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingListView.SupportsFiltering">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingListView.SupportsFiltering { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingListView.SupportsFiltering" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.System#ComponentModel#IBindingListView#SupportsFiltering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingListView.SupportsFiltering" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.IBindingListView.SupportsFiltering" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.IBindingListView>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ITypedList.GetItemProperties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection ITypedList.GetItemProperties (System.ComponentModel.PropertyDescriptor[] listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.ITypedList.GetItemProperties(class System.ComponentModel.PropertyDescriptor[] listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#ComponentModel#ITypedList#GetItemProperties(System.ComponentModel.PropertyDescriptor[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listAccessors" Type="System.ComponentModel.PropertyDescriptor[]" />
+      </Parameters>
+      <Docs>
+        <param name="listAccessors">To be added.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.ITypedList.GetItemProperties(System.ComponentModel.PropertyDescriptor[])" />.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.ITypedList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ITypedList.GetListName">
+      <MemberSignature Language="C#" Value="string ITypedList.GetListName (System.ComponentModel.PropertyDescriptor[] listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.ITypedList.GetListName(class System.ComponentModel.PropertyDescriptor[] listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.System#ComponentModel#ITypedList#GetListName(System.ComponentModel.PropertyDescriptor[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listAccessors" Type="System.ComponentModel.PropertyDescriptor[]" />
+      </Parameters>
+      <Docs>
+        <param name="listAccessors">Ein Array von <see cref="System.ComponentModel.PropertyDescriptor" />-Objekten.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.ITypedList.GetListName(System.ComponentModel.PropertyDescriptor[])" />.</summary>
+        <returns>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.ITypedList.GetListName(System.ComponentModel.PropertyDescriptor[])" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataView>-Instanz in eine <xref:System.ComponentModel.ITypedList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable Table { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataTable Table" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataView.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.DataTableTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Quelle <see cref="T:System.Data.DataTable" />.</summary>
+        <value>Ein <see cref="T:System.Data.DataTable" /> , das die Daten für diese Ansicht bereitstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataTable> verfügt auch über eine <xref:System.Data.DataTable.DefaultView%2A> Eigenschaft, die standardmäßig zurückgegeben <xref:System.Data.DataView> für die Tabelle. Angenommen, wenn Sie eine benutzerdefinierte Ansicht für die Tabelle erstellen möchten, legen die <xref:System.Data.DataView.RowFilter%2A> auf die <xref:System.Data.DataView> zurückgegebenes der <xref:System.Data.DataTable.DefaultView%2A>.  
+  
+ Sie können nur Festlegen der <xref:System.Data.DataView.Table%2A> Eigenschaft, wenn der aktuelle Wert null ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataTable> des aktuellen <xref:System.Data.DataView>.  
+  
+ [!code-csharp[Classic WebData DataView.Table Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataView.Table Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataView.Table Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataView.Table Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="ToTable">
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Erstellt und gibt ein neues <see cref="T:System.Data.DataTable" /> basierend auf den Zeilen in einer vorhandenen <see cref="T:System.Data.DataView" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:System.Data.DataTable> verwaltet die Werte der folgenden Eigenschaften aus der Quelldatenbank <xref:System.Data.DataTable>: <xref:System.Data.DataTable.Namespace%2A>, <xref:System.Data.DataTable.Prefix%2A>, <xref:System.Data.DataTable.CultureInfo%2A>, und <xref:System.Data.DataTable.CaseSensitive%2A>. Jede Spalte in der resultierenden <xref:System.Data.DataTable> enthält eine identische Kopie der entsprechenden Eigenschaften in der zugrunde liegenden <xref:System.Data.DataTable>.  
+  
+ Die <xref:System.Data.DataRow> Instanzen in der zurückgegebenen `DataTable` enthält Werte, die mit CLR-Semantik konsistent sind. Für alle Datentypen außer benutzerdefinierten Typen, werden die entsprechenden Spaltenwerte, also nach Wert kopiert. Für benutzerdefinierte Datentypen werden die Spaltendaten nach Verweis kopiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="ToTable">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable ToTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataTable ToTable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.ToTable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt ein neues <see cref="T:System.Data.DataTable" /> basierend auf den Zeilen in einer vorhandenen <see cref="T:System.Data.DataView" />.</summary>
+        <returns>Ein neues <see cref="T:System.Data.DataTable" /> Instanz, die die angeforderten Zeilen und Spalten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da diese Methode nicht den Namen für die Ausgabe angeben kann <xref:System.Data.DataTable>, dessen Name ist der Name der Quelle identisch `DataTable`. Da diese Methode nicht Sie eine Teilmenge der verfügbaren Spalten angeben kann, enthält die Ausgabetabelle dieselben Spalten wie die Eingabetabelle.  
+  
+   
+  
+## Examples  
+ Im folgenden Konsolenanwendungsbeispiel erstellt eine <xref:System.Data.DataTable>, füllt der <xref:System.Data.DataTable> mit Daten, erstellt eine gefilterte Ansicht basierend auf den ursprünglichen Daten und schließlich eine <xref:System.Data.DataTable> , die die gefilterten Zeilen enthält.  
+  
+ [!code-csharp[DataWorks DataView.ToTableFiltered#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataView.ToTableFiltered/CS/source.cs#1)]
+ [!code-vb[DataWorks DataView.ToTableFiltered#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataView.ToTableFiltered/VB/source.vb#1)]  
+  
+ Im Beispiel wird der folgende Text im Konsolenfenster angezeigt:  
+  
+```  
+Original table name: NewTable  
+Current Values in Table  
+1, Fruit, Apple, 14  
+2, Fruit, Orange, 27  
+3, Bread, Muffin, 23  
+4, Fish, Salmon, 12  
+  
+Current Values in View  
+2, Fruit, Orange, 27  
+3, Bread, Muffin, 23  
+  
+Table created from filtered DataView  
+2, Fruit, Orange, 27  
+3, Bread, Muffin, 23  
+  
+New table name: NewTable  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToTable">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable ToTable (string tableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataTable ToTable(string tableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.ToTable(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tableName">Der Name der zurückgegebenen <see cref="T:System.Data.DataTable" />.</param>
+        <summary>Erstellt und gibt ein neues <see cref="T:System.Data.DataTable" /> basierend auf den Zeilen in einer vorhandenen <see cref="T:System.Data.DataView" />.</summary>
+        <returns>Ein neues <see cref="T:System.Data.DataTable" /> Instanz, die die angeforderten Zeilen und Spalten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da diese Methode nicht Sie eine Teilmenge der verfügbaren Spalten angeben kann, enthält die Ausgabetabelle dieselben Spalten wie die Eingabetabelle.  
+  
+   
+  
+## Examples  
+ Im folgenden Konsolenanwendungsbeispiel erstellt eine <xref:System.Data.DataTable>, füllt der `DataTable` mit Daten, erstellt eine gefilterte Ansicht basierend auf den ursprünglichen Daten und schließlich eine `DataTable` unter einem neuen Namen, die die gefilterten Zeilen enthält.  
+  
+ [!code-csharp[DataWorks DataView.ToTableNewName#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataView.ToTableNewName/CS/source.cs#1)]
+ [!code-vb[DataWorks DataView.ToTableNewName#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataView.ToTableNewName/VB/source.vb#1)]  
+  
+ Im Beispiel wird der folgende Text im Konsolenfenster angezeigt:  
+  
+```  
+Original table name: NewTable  
+Current Values in Table  
+1, Fruit, Apple, 14  
+2, Fruit, Orange, 27  
+3, Bread, Muffin, 23  
+4, Fish, Salmon, 12  
+  
+Current Values in View  
+2, Fruit, Orange, 27  
+3, Bread, Muffin, 23  
+  
+Table created from filtered DataView  
+2, Fruit, Orange, 27  
+3, Bread, Muffin, 23  
+  
+New table name: FilteredTable  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToTable">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable ToTable (bool distinct, params string[] columnNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataTable ToTable(bool distinct, string[] columnNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.ToTable(System.Boolean,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="distinct" Type="System.Boolean" />
+        <Parameter Name="columnNames" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="distinct">Wenn <see langword="true" />, das zurückgegebene <see cref="T:System.Data.DataTable" /> enthält Zeilen, die unterschiedliche Werte für alle Spalten haben. Der Standardwert ist <see langword="false" />.</param>
+        <param name="columnNames">Ein Zeichenfolgenarray, das eine Liste der Spalte enthält den Namen enthalten, in der zurückgegebenen <see cref="T:System.Data.DataTable" />. Die <see cref="T:System.Data.DataTable" /> enthält die angegebenen Spalten in der Reihenfolge, die sie in diesem Array angezeigt werden.</param>
+        <summary>Erstellt und gibt ein neues <see cref="T:System.Data.DataTable" /> basierend auf den Zeilen in einer vorhandenen <see cref="T:System.Data.DataView" />.</summary>
+        <returns>Ein neues <see cref="T:System.Data.DataTable" /> Instanz, die die angeforderten Zeilen und Spalten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da diese Methode nicht den Namen für die Ausgabe angeben kann <xref:System.Data.DataTable>, dessen Name ist der Name der Quelle identisch <xref:System.Data.DataTable>.  
+  
+   
+  
+## Examples  
+ Im folgenden Konsolenanwendungsbeispiel erstellt eine <xref:System.Data.DataTable>, füllt der <xref:System.Data.DataTable> mit Daten, sortiert die <xref:System.Data.DataView>, und schließlich erstellt eine <xref:System.Data.DataTable> mit nur zwei Spalten beschränkt, auf Zeilen in der alle Werte eindeutig sind.  
+  
+ [!code-csharp[DataWorks DataView.ToTableUniqueValues#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataView.ToTableUniqueValues/CS/source.cs#1)]
+ [!code-vb[DataWorks DataView.ToTableUniqueValues#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataView.ToTableUniqueValues/VB/source.vb#1)]  
+  
+ Im Beispiel wird die folgende Ausgabe im Konsolenfenster angezeigt:  
+  
+```  
+Original table name: NewTable  
+Current Values in Table  
+1, Fruit, Apple, 14  
+2, Fruit, Orange, 27  
+3, Bread, Muffin, 23  
+4, Fish, Salmon, 12  
+5, Fish, Salmon, 15  
+6, Bread, Croissant, 23  
+  
+Current Values in View  
+3, Bread, Muffin, 23  
+6, Bread, Croissant, 23  
+4, Fish, Salmon, 12  
+5, Fish, Salmon, 15  
+1, Fruit, Apple, 14  
+2, Fruit, Orange, 27  
+  
+Table created from sorted DataView  
+Bread, 23  
+Fish, 12  
+Fish, 15  
+Fruit, 14  
+Fruit, 27  
+  
+New table name: NewTable  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToTable">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable ToTable (string tableName, bool distinct, params string[] columnNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataTable ToTable(string tableName, bool distinct, string[] columnNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.ToTable(System.String,System.Boolean,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tableName" Type="System.String" />
+        <Parameter Name="distinct" Type="System.Boolean" />
+        <Parameter Name="columnNames" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="tableName">Der Name der zurückgegebenen <see cref="T:System.Data.DataTable" />.</param>
+        <param name="distinct">Wenn <see langword="true" />, das zurückgegebene <see cref="T:System.Data.DataTable" /> enthält Zeilen, die unterschiedliche Werte für alle Spalten haben. Der Standardwert ist <see langword="false" />.</param>
+        <param name="columnNames">Ein Zeichenfolgenarray, das eine Liste der Spalte enthält den Namen enthalten, in der zurückgegebenen <see cref="T:System.Data.DataTable" />. Die <see langword="DataTable" /> enthält die angegebenen Spalten in der Reihenfolge, die sie in diesem Array angezeigt werden.</param>
+        <summary>Erstellt und gibt ein neues <see cref="T:System.Data.DataTable" /> basierend auf den Zeilen in einer vorhandenen <see cref="T:System.Data.DataView" />.</summary>
+        <returns>Ein neues <see cref="T:System.Data.DataTable" /> Instanz, die die angeforderten Zeilen und Spalten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese überladene Version von den <xref:System.Data.DataView.ToTable%2A> Methode, wenn Sie unterschiedliche Werte in einer Teilmenge der verfügbaren Spalten abrufen einen neuen Namen für das zurückgegebene <xref:System.Data.DataTable>. Wenn Sie nicht über eindeutige Zeilen oder eine Teilmenge der Spalten benötigen, finden Sie unter <xref:System.Data.DataView.ToTable%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Konsolenanwendungsbeispiel erstellt eine <xref:System.Data.DataTable>, füllt der <xref:System.Data.DataTable> mit Daten, sortiert die <xref:System.Data.DataView>, und schließlich erstellt eine <xref:System.Data.DataTable> unter einem neuen Namen, die nur zwei Spalten enthält, beschränkt auf Zeilen in der alle Werte eindeutig sind.  
+  
+ [!code-csharp[DataWorks DataView.ToTableUniqueValuesName#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataView.ToTableUniqueValuesName/CS/source.cs#1)]
+ [!code-vb[DataWorks DataView.ToTableUniqueValuesName#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataView.ToTableUniqueValuesName/VB/source.vb#1)]  
+  
+ Im Beispiel wird die folgende Ausgabe im Konsolenfenster angezeigt:  
+  
+```  
+Original table name: NewTable  
+Current Values in Table  
+1, Fruit, Apple, 14  
+2, Fruit, Orange, 27  
+3, Bread, Muffin, 23  
+4, Fish, Salmon, 12  
+5, Fish, Salmon, 15  
+6, Bread, Croissant, 23  
+  
+Current Values in View  
+3, Bread, Muffin, 23  
+6, Bread, Croissant, 23  
+4, Fish, Salmon, 12  
+5, Fish, Salmon, 15  
+1, Fruit, Apple, 14  
+2, Fruit, Orange, 27  
+  
+Table created from sorted DataView  
+Bread, 23  
+Fish, 12  
+Fish, 15  
+Fruit, 14  
+Fruit, 27  
+  
+New table name: UniqueData  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateIndex">
+      <MemberSignature Language="C#" Value="protected void UpdateIndex ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UpdateIndex() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.UpdateIndex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Nur für die interne Verwendung vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateIndex">
+      <MemberSignature Language="C#" Value="protected virtual void UpdateIndex (bool force);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void UpdateIndex(bool force) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataView.UpdateIndex(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="force" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="force">Nur für die interne Verwendung vorgesehen.</param>
+        <summary>Nur für die interne Verwendung vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

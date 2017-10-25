@@ -1,0 +1,161 @@
+<Type Name="IConstructionCallMessage" FullName="System.Runtime.Remoting.Activation.IConstructionCallMessage">
+  <TypeSignature Language="C#" Value="public interface IConstructionCallMessage : System.Runtime.Remoting.Messaging.IMethodCallMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IConstructionCallMessage implements class System.Runtime.Remoting.Messaging.IMessage, class System.Runtime.Remoting.Messaging.IMethodCallMessage, class System.Runtime.Remoting.Messaging.IMethodMessage" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Activation.IConstructionCallMessage" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Messaging.IMethodCallMessage</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Anfrage zur Erstellung eines Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Benutzer erstellt eine Instanz eines neuen Objekts Client aktiviert, durch den Aufruf `new` oder <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> und bevor der Thread für den Benutzercode zurückgegeben wird ein <xref:System.Runtime.Remoting.Activation.IConstructionCallMessage> wird an die Anwendung gesendet. Bei der Konstruktion-Nachricht an die Remoteanwendung eintrifft, wird Sie von einem Remoting-Activator verarbeitet (entweder die standardmäßige ein oder ein, die es im angegebenen die <xref:System.Runtime.Remoting.Activation.IConstructionCallMessage.Activator%2A> Eigenschaft) und ein neues Objekt erstellt wird. Klicken Sie dann die Remoteanwendung gibt eine <xref:System.Runtime.Remoting.Activation.IConstructionReturnMessage> an die lokale Anwendung. Die <xref:System.Runtime.Remoting.Activation.IConstructionReturnMessage> enthält eine Instanz des <xref:System.Runtime.Remoting.ObjRef>, die Informationen über das Remoteobjekt Pakete. Infrastruktur für den Remotezugriff konvertiert die <xref:System.Runtime.Remoting.ObjRef> Instanz in einen Proxy für das remote-Objekt, die an den Benutzercode zurückgegeben wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActivationType">
+      <MemberSignature Language="C#" Value="public Type ActivationType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ActivationType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Activation.IConstructionCallMessage.ActivationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Remoteobjekts zu aktivieren.</summary>
+        <value>Der Typ des Remoteobjekts zu aktivieren.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivationTypeName">
+      <MemberSignature Language="C#" Value="public string ActivationTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ActivationTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Activation.IConstructionCallMessage.ActivationTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen Typnamen des remote-Typs zu aktivieren.</summary>
+        <value>Der vollständige Typname des remote-Typs zu aktivieren.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Activator">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Activation.IActivator Activator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Activation.IActivator Activator" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Activation.IConstructionCallMessage.Activator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Activation.IActivator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Aktivierer, der das Remoteobjekt aktiviert.</summary>
+        <value>Die Aktivierung, die das Remoteobjekt aktiviert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Kette von Aktivatoren, die in der Regel in einer Hierarchie angeordnet sind, schließt die verschiedenen Aufgaben, die an der Aktivierung beteiligt sind. Wenn Sie beabsichtigen, eine benutzerdefinierte Aktivierung einbinden, sollten Sie Hierarchie der Aktivierungen durchlaufen und schließen Sie die Aktivierung an die gewünschte Position. Verwenden der <xref:System.Runtime.Remoting.Activation.IActivator.NextActivator%2A?displayProperty=nameWithType> Eigenschaft für die Aktivierung, die von der aktuellen Eigenschaft durchlaufen die Kette der Aktivierer zurückgegeben wird.  
+  
+ Wenn Sie eine eigene Activator Activator-Kette für die Nachricht auf der Clientseite hinzufügen, möglicherweise der Aktivator serialisiert und an die Serverseite transportiert werden, wenn es sich bei Bedarf skalierungsunterbrechungen. Aus diesem Grund muss im Hinblick auf Serialisierungsanforderungen relativ einfache benutzerdefinierte Aktivatoren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CallSiteActivationAttributes">
+      <MemberSignature Language="C#" Value="public object[] CallSiteActivationAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] CallSiteActivationAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Activation.IConstructionCallMessage.CallSiteActivationAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Aufruf Aktivierungsattribute Website ab.</summary>
+        <value>Der Aufruf Standort Aktivierungsattribute.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Activation.IConstructionCallMessage.CallSiteActivationAttributes%2A> Indexer ermöglicht Ihnen die Angabe von zusätzlichen Attributen, während der objektaktivierung verwendet. Der Benutzer gibt die <xref:System.Runtime.Remoting.Activation.IConstructionCallMessage.CallSiteActivationAttributes%2A> in der `activationAttributes` Parameter <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.IList ContextProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList ContextProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Activation.IConstructionCallMessage.ContextProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste von Kontexteigenschaften, die den Kontext definieren, in dem das Objekt erstellt werden.</summary>
+        <value>Eine Liste von Eigenschaften für den Kontext, in dem das Objekt zu erstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein neues Objekt Kontext wird in der Regel anhand der Metadatenattribute der Klasse ausgewählt. Der Kontext Auswahl-Mechanismus ist erweiterbar, über benutzerdefinierte Attribute, auch bekannt als statische Kontexteigenschaften, die in den Metadaten der Klasse kompiliert werden. Wenn ein Objekt Remote aktivieren die <xref:System.Runtime.Remoting.Activation.IConstructionCallMessage.ContextProperties%2A> enthält die Liste der Eigenschaften, die von verschiedenen Attributen in der Meldung beigetragen wurden. Diese Eigenschaften werden verwendet, um den Kontext zu erstellen, in dem das Serverobjekt aktiviert wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

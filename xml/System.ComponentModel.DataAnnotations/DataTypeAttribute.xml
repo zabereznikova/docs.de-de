@@ -1,0 +1,295 @@
+<Type Name="DataTypeAttribute" FullName="System.ComponentModel.DataAnnotations.DataTypeAttribute">
+  <TypeSignature Language="C#" Value="public class DataTypeAttribute : System.ComponentModel.DataAnnotations.ValidationAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataTypeAttribute extends System.ComponentModel.DataAnnotations.ValidationAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.DataTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.DataAnnotations.ValidationAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method | System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Namen eines zusätzlichen Typs an, der einem Datenfeld zugeordnet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.DataAnnotations.DataTypeAttribute> -Attributs können Sie zum Markieren von Feldern mithilfe von ein Typ, der als Typ der systeminternen genauer bestimmt ist. Der Typname ausgewählt ist, aus der <xref:System.ComponentModel.DataAnnotations.DataType> Enumerationstyp. Beispielsweise kann ein Zeichenfolgenfeld für Daten, die e-Mail-Adressen enthält angegeben werden, als die <xref:System.ComponentModel.DataAnnotations.DataType.EmailAddress> Typ. Diese Informationen erfolgt dann durch das Feldvorlagen ändern, wie das Feld "Daten" verarbeitet wird.  
+  
+ Sie verwenden die <xref:System.ComponentModel.DataAnnotations.DataTypeAttribute> Attribut aus den folgenden Gründen:  
+  
+-   Zusätzliche Typinformationen für ein Datenfeld angeben. Hierzu Anwenden der <xref:System.ComponentModel.DataAnnotations.DataTypeAttribute> -Attribut auf ein Datenfeld im Datenmodell und durch Angeben des Namens der zusätzlichen Typen aus den <xref:System.ComponentModel.DataAnnotations.DataType> Enumeration. Die Feldvorlage, die dem Feld "Daten" verarbeitet, kann diese Typinformationen zusätzliche Metadaten, um zu bestimmen, wie das Feld verarbeitet zugreifen. Beispielsweise kann die Textfeldvorlage Links für e-Mail-Adressen, deren systeminterner Typ, generieren `String`.  
+  
+-   Eine Vorlage für benutzerdefiniertes Feld mit einem Datenfeld zuordnen. Die angegebene benutzerdefinierte Feldvorlage wird dann verwendet werden, verarbeiten Sie das Feld "Daten". Dies ist eine Alternative zur Verwendung der <xref:System.ComponentModel.DataAnnotations.UIHintAttribute> Attribut.  
+  
+ Beim Anwenden der <xref:System.ComponentModel.DataAnnotations.DataTypeAttribute> Attribut für ein Datenfeld müssen Sie Folgendes tun:  
+  
+-   Führen Sie das Attributverwendungsregeln aus.  
+  
+-   Implementieren Sie die Metadatenklasse, die die Datenfelder enthält das Attribut angewendet werden sollen.  
+  
+-   Geben Sie die Validierungsfehler nach Bedarf.  
+  
+ Weitere Informationen finden Sie unter [ASP.NET Dynamic Data Guidelines](http://msdn.microsoft.com/en-us/c563bbf3-feb9-484e-81d1-a585f1b0e192).  
+  
+ Finden Sie ein Beispiel-Laufzeitcode dieses Feature: [ausführen](http://go.microsoft.com/fwlink/?LinkId=120736&sref=System.ComponentModel.DataAnnotations.DataTypeAttribute).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.ComponentModel.DataAnnotations.DataTypeAttribute> Attribut, um die Anzeige des Datenfelds EmailAddress anpassen. Die e-Mail-Adressen werden als Links und nicht als einfacher Text angezeigt, was Dynamic Data vom systeminternen Datentyp ableiten, würden also. Der Beispielcode befindet sich in drei Teile und es führt die folgenden Schritte aus:  
+  
+-   Eine partielle Klasse für Metadaten und die zugehörigen Metadaten-Klasse implementiert.  
+  
+-   In der zugehörigen Metadaten-Klasse, es gilt die <xref:System.ComponentModel.DataAnnotations.DataTypeAttribute> -Attribut auf das Datenfeld EmailAddress durch Angabe der <xref:System.ComponentModel.DataAnnotations.DataType.EmailAddress> Enumerationswert. Dies zeigt die Feldvorlage Text.ascx, dass die Anzeige der e-Mail-Adressen angepasst werden sollen.  
+  
+-   Es ändert die Feldvorlage Text.ascx, um die Anzeige der Datenfelder EmailAddress anzupassen.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DataTypeAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DataTypeAttribute/CS/Customer.cs#1)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DataTypeAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DataTypeAttribute/VB/Customer.vb#1)]  
+  
+ [!code-aspx-csharp[System.ComponentModel.DataAnnotations.DataTypeAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DataTypeAttribute/CS/Text.ascx#2)]
+ [!code-aspx-vb[System.ComponentModel.DataAnnotations.DataTypeAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DataTypeAttribute/VB/Text.ascx#2)]
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DataTypeAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DataTypeAttribute/CS/Text.ascx.cs#3)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DataTypeAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DataTypeAttribute/VB/Text.ascx.vb#3)]  
+  
+ Zum Kompilieren und Ausführen des Beispiels den Codes, benötigen Sie Folgendes:  
+  
+-   Visual Studio 2008 Service Pack 1 oder Visual Developer 2008 Express Edition Service Pack 1.  
+  
+-   Die Beispieldatenbank "AdventureWorksLT". Informationen zum Herunterladen und Installieren der SQL Server-Beispieldatenbank finden Sie unter [Microsoft SQL Server Product Samples: Database](http://go.microsoft.com/fwlink/?LinkId=117483) auf der CodePlex-Website. Stellen Sie sicher, dass Sie die richtige Version der Beispieldatenbank für die Version von SQL Server installieren, dass Sie (SQL Server 2005 oder SQL Server 2008) ausgeführt werden.  
+  
+-   Eine datengesteuerte-Website. Dadurch können Sie einen Datenkontext für die Datenbank zu erstellen und die Klasse erstellen, die im Datenfeld anpassen. Weitere Informationen finden Sie unter `Walkthrough: Creating a New Dynamic Data Web Site using Scaffolding`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataTypeAttribute (System.ComponentModel.DataAnnotations.DataType dataType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ComponentModel.DataAnnotations.DataType dataType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DataTypeAttribute.#ctor(System.ComponentModel.DataAnnotations.DataType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataType" Type="System.ComponentModel.DataAnnotations.DataType" />
+      </Parameters>
+      <Docs>
+        <param name="dataType">Der Name des Typs, der mit dem Datenfeld verknüpft werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DataAnnotations.DataTypeAttribute" />-Klasse mit dem angegebenen Typnamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name ist einer der Werte, die von definiert sind die <xref:System.ComponentModel.DataAnnotations.DataType?displayProperty=nameWithType> Enumeration.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.ComponentModel.DataAnnotations.DataTypeAttribute.%23ctor%28System.ComponentModel.DataAnnotations.DataType%29> Konstruktor einen alternativen Typ für ein Datenfeld angeben.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DataTypeAttribute#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DataTypeAttribute/CS/Customer.cs#11)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DataTypeAttribute#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DataTypeAttribute/VB/Customer.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataTypeAttribute (string customDataType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string customDataType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DataTypeAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="customDataType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="customDataType">Der Name der benutzerdefinierten Feldvorlage, die dem Datenfeld zugeordnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DataAnnotations.DataTypeAttribute" />-Klasse unter Verwendung des angegebenen Feldvorlagennamens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Alternative zur Verwendung der <xref:System.ComponentModel.DataAnnotations.UIHintAttribute> Attribut.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="customDataType" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomDataType">
+      <MemberSignature Language="C#" Value="public string CustomDataType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomDataType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DataTypeAttribute.CustomDataType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der benutzerdefinierten Feldvorlage, die dem Feld "Daten" zugeordnet ist.</summary>
+        <value>Der Name der benutzerdefinierten Feldvorlage, die dem Feld "Daten" zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataType">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.DataAnnotations.DataType DataType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.DataAnnotations.DataType DataType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DataTypeAttribute.DataType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ, der mit dem Datenfeld zugeordnet ist.</summary>
+        <value>Einer der <see cref="T:System.ComponentModel.DataAnnotations.DataType" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayFormat">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.DataAnnotations.DisplayFormatAttribute DisplayFormat { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.DataAnnotations.DisplayFormatAttribute DisplayFormat" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DataTypeAttribute.DisplayFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.DisplayFormatAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Anzeigeformat Feld "Daten" ab.</summary>
+        <value>Das Anzeigeformat Feld "Daten".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataTypeName">
+      <MemberSignature Language="C#" Value="public virtual string GetDataTypeName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetDataTypeName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DataTypeAttribute.GetDataTypeName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Namen des Typs, der das Feld "Daten" zugeordnet ist.</summary>
+        <returns>Der Name des Typs, der das Feld "Daten".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name des Typs, der das Feld "Daten" zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public override bool IsValid (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsValid(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DataTypeAttribute.IsValid(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Datenfeld zu überprüfende Wert.</param>
+        <summary>Überprüft, dass der Wert des Datenfelds gültig ist.</summary>
+        <returns>
+          <see langword="true" />immer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert Validierungslogik, die spezifisch für die <xref:System.ComponentModel.DataAnnotations.DataTypeAttribute> Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

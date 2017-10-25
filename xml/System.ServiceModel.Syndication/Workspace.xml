@@ -1,0 +1,351 @@
+<Type Name="Workspace" FullName="System.ServiceModel.Syndication.Workspace">
+  <TypeSignature Language="C#" Value="public class Workspace" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Workspace extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Syndication.Workspace" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Arbeitsbereich in einem Dienstdokument dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Arbeitsbereich ist eine benannte Gruppe von Auflistungen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Workspace ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.Workspace.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.Workspace" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Workspace (System.ServiceModel.Syndication.TextSyndicationContent title, System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Syndication.ResourceCollectionInfo&gt; collections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Syndication.TextSyndicationContent title, class System.Collections.Generic.IEnumerable`1&lt;class System.ServiceModel.Syndication.ResourceCollectionInfo&gt; collections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.Workspace.#ctor(System.ServiceModel.Syndication.TextSyndicationContent,System.Collections.Generic.IEnumerable{System.ServiceModel.Syndication.ResourceCollectionInfo})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="title" Type="System.ServiceModel.Syndication.TextSyndicationContent" />
+        <Parameter Name="collections" Type="System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Syndication.ResourceCollectionInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="title">Der Titel des Arbeitsbereichs.</param>
+        <param name="collections">Die Auflistung, die der Arbeitsbereich enthält.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.Workspace" />-Klasse und initialisiert sie mit dem angegebenen Titel und der angegebenen Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Workspace (string title, System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Syndication.ResourceCollectionInfo&gt; collections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string title, class System.Collections.Generic.IEnumerable`1&lt;class System.ServiceModel.Syndication.ResourceCollectionInfo&gt; collections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.Workspace.#ctor(System.String,System.Collections.Generic.IEnumerable{System.ServiceModel.Syndication.ResourceCollectionInfo})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="collections" Type="System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Syndication.ResourceCollectionInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="title">Der Titel des Arbeitsbereichs.</param>
+        <param name="collections">Die Auflistung, die der Arbeitsbereich enthält.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.Workspace" />-Klasse und initialisiert sie mit dem angegebenen Titel und der angegebenen Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeExtensions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;System.Xml.XmlQualifiedName,string&gt; AttributeExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;class System.Xml.XmlQualifiedName, string&gt; AttributeExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.Workspace.AttributeExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Xml.XmlQualifiedName,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung mit Attributerweiterungen ab.</summary>
+        <value>Gibt <see cref="T:System.Collections.Generic.Dictionary`2" />zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elementerweiterungen sind gültige XML-Elemente, die nicht in der Spezifikation Atom&#160;1.0 oder RSS&#160;2.0 definiert werden. Bei der Serialisierung zu Atom 1.0 wird jedes benutzerdefiniertes Attribut in der Auflistung geschrieben, um die <`atom`> Element. Bei der Serialisierung zu RSS 2.0 wird jedes benutzerdefiniertes Attribut geschrieben, um die <`channel`> Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseUri">
+      <MemberSignature Language="C#" Value="public Uri BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.Workspace.BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die Basis-URI für die <see cref="T:System.ServiceModel.Syndication.Workspace" />-Instanz.</summary>
+        <value>Gibt <see cref="T:System.Uri" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Collections">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Syndication.ResourceCollectionInfo&gt; Collections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Syndication.ResourceCollectionInfo&gt; Collections" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.Workspace.Collections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Syndication.ResourceCollectionInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung ab, die dem Arbeitsbereich zugeordnet ist.</summary>
+        <value>Gibt <see cref="T:System.Collections.ObjectModel.Collection`1" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateResourceCollection">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Syndication.ResourceCollectionInfo CreateResourceCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.ServiceModel.Syndication.ResourceCollectionInfo CreateResourceCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.Workspace.CreateResourceCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.ResourceCollectionInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue <see cref="T:System.ServiceModel.Syndication.ResourceCollectionInfo" />-Instanz.</summary>
+        <returns>Gibt <see cref="T:System.ServiceModel.Syndication.ResourceCollectionInfo" />zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementExtensions">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Syndication.SyndicationElementExtensionCollection ElementExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Syndication.SyndicationElementExtensionCollection ElementExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.Workspace.ElementExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationElementExtensionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die in der <see cref="T:System.ServiceModel.Syndication.Workspace" />-Instanz enthaltenen Elementerweiterungen ab.</summary>
+        <value>Gibt <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtensionCollection" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Syndication.TextSyndicationContent Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Syndication.TextSyndicationContent Title" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.Workspace.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.TextSyndicationContent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Titel der <see cref="T:System.ServiceModel.Syndication.Workspace" />-Instanz.</summary>
+        <value>Gibt <see cref="T:System.ServiceModel.Syndication.TextSyndicationContent" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseAttribute">
+      <MemberSignature Language="C#" Value="protected virtual bool TryParseAttribute (string name, string ns, string value, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryParseAttribute(string name, string ns, string value, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.Workspace.TryParseAttribute(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Elements.</param>
+        <param name="ns">Der Namespace des Elements.</param>
+        <param name="value">Das zu analysierende Attribut.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, eine Attributerweiterung zu analysieren.</summary>
+        <returns>Gibt <see cref="T:System.Boolean" />zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseElement">
+      <MemberSignature Language="C#" Value="protected virtual bool TryParseElement (System.Xml.XmlReader reader, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryParseElement(class System.Xml.XmlReader reader, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.Workspace.TryParseElement(System.Xml.XmlReader,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, eine Elementerweiterung zu analysieren.</summary>
+        <returns>Gibt <see cref="T:System.Boolean" />zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAttributeExtensions">
+      <MemberSignature Language="C#" Value="protected virtual void WriteAttributeExtensions (System.Xml.XmlWriter writer, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void WriteAttributeExtensions(class System.Xml.XmlWriter writer, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.Workspace.WriteAttributeExtensions(System.Xml.XmlWriter,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den geschrieben werden soll.</param>
+        <param name="version">Die für das Schreiben zu verwendende Syndication-Version.</param>
+        <summary>Schreibt die Attributerweiterungen in den angegebenen <see cref="T:System.Xml.XmlWriter" /> und verwendet hierbei die angegebene Syndication-Version.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteElementExtensions">
+      <MemberSignature Language="C#" Value="protected virtual void WriteElementExtensions (System.Xml.XmlWriter writer, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void WriteElementExtensions(class System.Xml.XmlWriter writer, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.Workspace.WriteElementExtensions(System.Xml.XmlWriter,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den geschrieben werden soll.</param>
+        <param name="version">Die für das Schreiben zu verwendende Syndication-Version.</param>
+        <summary>Schreibt die Elementerweiterungen in den angegebenen <see cref="T:System.Xml.XmlWriter" /> und verwendet hierbei die angegebene Syndication-Version.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

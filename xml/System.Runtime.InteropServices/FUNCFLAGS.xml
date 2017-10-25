@@ -1,0 +1,255 @@
+<Type Name="FUNCFLAGS" FullName="System.Runtime.InteropServices.FUNCFLAGS">
+  <TypeSignature Language="C#" Value="public enum FUNCFLAGS" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed FUNCFLAGS extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.FUNCFLAGS" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verwenden Sie stattdessen <see cref="T:System.Runtime.InteropServices.ComTypes.FUNCFLAGS" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `FUNCFLAGS`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FUNCFLAG_FBINDABLE">
+      <MemberSignature Language="C#" Value="FUNCFLAG_FBINDABLE" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.FUNCFLAGS FUNCFLAG_FBINDABLE = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.FUNCFLAGS.FUNCFLAG_FBINDABLE" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FUNCFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Funktion, die die Datenbindung unterstützt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FUNCFLAG_FDEFAULTBIND">
+      <MemberSignature Language="C#" Value="FUNCFLAG_FDEFAULTBIND" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.FUNCFLAGS FUNCFLAG_FDEFAULTBIND = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.FUNCFLAGS.FUNCFLAG_FDEFAULTBIND" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FUNCFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Funktion, die das Objekt am besten darstellt. Nur eine Funktion in einer Typinformationen kann dieses Attribut haben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FUNCFLAG_FDEFAULTCOLLELEM">
+      <MemberSignature Language="C#" Value="FUNCFLAG_FDEFAULTCOLLELEM" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.FUNCFLAGS FUNCFLAG_FDEFAULTCOLLELEM = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.FUNCFLAGS.FUNCFLAG_FDEFAULTCOLLELEM" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FUNCFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermöglicht eine Optimierung, die in der sucht der Compiler für ein Element mit dem Namen "Xyz" für den Typ von "Abc". Wenn ein Element gefunden und wird als eine Accessorfunktion für ein Element der Auflistung standardmäßig gekennzeichnet, wird ein Aufruf der Member-Funktion generiert. Für Elemente in Dispatchschnittstellen und Schnittstellen zulässig. in Modulen zulässig nicht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FUNCFLAG_FDISPLAYBIND">
+      <MemberSignature Language="C#" Value="FUNCFLAG_FDISPLAYBIND" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.FUNCFLAGS FUNCFLAG_FDISPLAYBIND = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.FUNCFLAGS.FUNCFLAG_FDISPLAYBIND" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FUNCFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Funktion, die dem Benutzer als bindbar angezeigt wird. <see cref="F:System.Runtime.InteropServices.FUNCFLAGS.FUNCFLAG_FBINDABLE" />muss auch festgelegt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FUNCFLAG_FHIDDEN">
+      <MemberSignature Language="C#" Value="FUNCFLAG_FHIDDEN" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.FUNCFLAGS FUNCFLAG_FHIDDEN = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.FUNCFLAGS.FUNCFLAG_FHIDDEN" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FUNCFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Funktion sollte nicht für den Benutzer angezeigt werden, obwohl er vorhanden und gebunden werden kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FUNCFLAG_FIMMEDIATEBIND">
+      <MemberSignature Language="C#" Value="FUNCFLAG_FIMMEDIATEBIND" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.FUNCFLAGS FUNCFLAG_FIMMEDIATEBIND = int32(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.FUNCFLAGS.FUNCFLAG_FIMMEDIATEBIND" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FUNCFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Als einzelne bindbare Eigenschaften zugeordnet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FUNCFLAG_FNONBROWSABLE">
+      <MemberSignature Language="C#" Value="FUNCFLAG_FNONBROWSABLE" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.FUNCFLAGS FUNCFLAG_FNONBROWSABLE = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.FUNCFLAGS.FUNCFLAG_FNONBROWSABLE" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FUNCFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Eigenschaft wird in einem Objektbrowser, jedoch nicht in einem Eigenschaftenbrowser angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FUNCFLAG_FREPLACEABLE">
+      <MemberSignature Language="C#" Value="FUNCFLAG_FREPLACEABLE" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.FUNCFLAGS FUNCFLAG_FREPLACEABLE = int32(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.FUNCFLAGS.FUNCFLAG_FREPLACEABLE" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FUNCFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Schnittstelle mit Standardverhalten-Tags ein.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FUNCFLAG_FREQUESTEDIT">
+      <MemberSignature Language="C#" Value="FUNCFLAG_FREQUESTEDIT" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.FUNCFLAGS FUNCFLAG_FREQUESTEDIT = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.FUNCFLAGS.FUNCFLAG_FREQUESTEDIT" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FUNCFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn festgelegt ist, an eine Methode aufrufen, die zuerst die Eigenschaft in einem Aufruf von Resultsets <see langword="IPropertyNotifySink::OnRequestEdit" />. Die Implementierung der <see langword="OnRequestEdit" /> bestimmt, ob der Aufruf zum Festlegen der Eigenschaft zulässig ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FUNCFLAG_FRESTRICTED">
+      <MemberSignature Language="C#" Value="FUNCFLAG_FRESTRICTED" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.FUNCFLAGS FUNCFLAG_FRESTRICTED = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.FUNCFLAGS.FUNCFLAG_FRESTRICTED" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FUNCFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Funktion sollte nicht von Makrosprachen zugänglich sein. Dieses Flag ist dazu gedacht, für auf Systemebene Funktionen oder Funktionen, die Browser geben nicht angezeigt werden sollen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FUNCFLAG_FSOURCE">
+      <MemberSignature Language="C#" Value="FUNCFLAG_FSOURCE" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.FUNCFLAGS FUNCFLAG_FSOURCE = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.FUNCFLAGS.FUNCFLAG_FSOURCE" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FUNCFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Funktion gibt ein Objekt, das eine Quelle von Ereignissen ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FUNCFLAG_FUIDEFAULT">
+      <MemberSignature Language="C#" Value="FUNCFLAG_FUIDEFAULT" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.FUNCFLAGS FUNCFLAG_FUIDEFAULT = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.FUNCFLAGS.FUNCFLAG_FUIDEFAULT" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FUNCFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Typmember Informationen ist das Standardelement für die Anzeige in der Benutzeroberfläche.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FUNCFLAG_FUSESGETLASTERROR">
+      <MemberSignature Language="C#" Value="FUNCFLAG_FUSESGETLASTERROR" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.FUNCFLAGS FUNCFLAG_FUSESGETLASTERROR = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.FUNCFLAGS.FUNCFLAG_FUSESGETLASTERROR" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FUNCFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Funktion unterstützt <see langword="GetLastError" />. Bei einem während der Ausführung der Funktion Fehler kann der Aufrufer Aufrufen <see langword="GetLastError" /> auf den Fehlercode abzurufen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

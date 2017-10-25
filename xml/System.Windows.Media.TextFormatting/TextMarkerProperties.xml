@@ -1,0 +1,77 @@
+<Type Name="TextMarkerProperties" FullName="System.Windows.Media.TextFormatting.TextMarkerProperties">
+  <TypeSignature Language="C#" Value="public abstract class TextMarkerProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TextMarkerProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.TextMarkerProperties" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine abstrakte Klasse zum Definieren von Text Marker dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Marker Text ist ein Symbol, das häufig zum Erstellen von unterschiedliche visuelle Elemente, z. B. die Nummerierung und Auto-Nummerierung für eine Liste von Elementen verwendet wird. Die <xref:System.Windows.Media.TextFormatting.TextSimpleMarkerProperties> -Objekt stellt Funktionen bereit, erstellen einen Text-Marker, die für Nummerierung und Aufzählungszeichen mit dem Auto verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TextMarkerProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextMarkerProperties.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.TextFormatting.TextMarkerProperties" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public abstract double Offset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Offset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextMarkerProperties.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abstand zwischen dem Anfang der Zeile bis zum Ende des Text-Markersymbol.</summary>
+        <value>Ein <see cref="T:System.Double" /> , die den Offset des Symbols Marker vom Anfang der Zeile darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextSource">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.TextFormatting.TextSource TextSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.TextFormatting.TextSource TextSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextMarkerProperties.TextSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.TextSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Media.TextFormatting.TextSource" /> , stellt die Quelle des Texts für die Markersymbol ausgeführt wird.</summary>
+        <value>Die <see cref="T:System.Windows.Media.TextFormatting.TextSource" /> , die die Markierung Text darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

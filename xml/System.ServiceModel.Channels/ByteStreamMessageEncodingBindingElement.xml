@@ -1,0 +1,332 @@
+<Type Name="ByteStreamMessageEncodingBindingElement" FullName="System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement">
+  <TypeSignature Language="C#" Value="public sealed class ByteStreamMessageEncodingBindingElement : System.ServiceModel.Channels.MessageEncodingBindingElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ByteStreamMessageEncodingBindingElement extends System.ServiceModel.Channels.MessageEncodingBindingElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.MessageEncodingBindingElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Das Bindungselement, das die Nachrichtencodierung als Datenstrom von Bytes angibt und über die Option verfügt, die Zeichencodierung anzugeben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ByteStreamMessageEncodingBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ByteStreamMessageEncodingBindingElement (System.Xml.XmlDictionaryReaderQuotas quota);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlDictionaryReaderQuotas quota) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.#ctor(System.Xml.XmlDictionaryReaderQuotas)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="quota" Type="System.Xml.XmlDictionaryReaderQuotas" />
+      </Parameters>
+      <Docs>
+        <param name="quota">Die Beschränkungen der Komplexität von XML-Meldungen, die von Endpunkten verarbeitet werden können, die mit diesem Bindungselement konfiguriert werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement" />-Klasse mit dem angegebenen Kontingent.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, der von der Kanalfactory erzeugt wird.</typeparam>
+        <param name="context">Der Bindungskontext für den Kanal.</param>
+        <summary>Erstellt den Kanalfactorystapel auf dem Client, der einen angegebenen Kanaltyp für einen angegebenen Kontext erstellt.</summary>
+        <returns>Eine Kanalfactory vom Typ <paramref name="TChannel" /> für den angegebenen Kontext.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, den der Kanallistener akzeptiert.</typeparam>
+        <param name="context">Der Bindungskontext für den Listener.</param>
+        <summary>Erstellt den Kanallistener auf dem Dienst, der einen festgelegten Kanaltyp für einen bestimmten Kontext akzeptiert.</summary>
+        <returns>Ein Kanallistener vom Typ <paramref name="TChannel" /> für den angegebenen Kontext.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.CanBuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, der von der Kanalfactory erzeugt wird.</typeparam>
+        <param name="context">Der Bindungskontext für den Kanal.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob die aktuelle Bindung eine Factory für einen angegebenen Kanaltyp und Kontext erstellen kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Kanalfactorystapel auf dem Dienst erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, den der Kanallistener akzeptiert.</typeparam>
+        <param name="context">Der Bindungskontext für den Listener.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob die aktuelle Bindung einen Listener für einen angegebenen Typ von Kanal und Kontext erstellen kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Kanallistenerstapel auf dem Dienst erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues, aus dem aktuellen Objekt initialisiertes <see cref="T:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement" />-Objekt.</summary>
+        <returns>Ein Bindungselement mit Eigenschaftswerten, die denen des aktuellen Elements entsprechen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dadurch wird eine vollständige Kopie der aktuellen Bindungselementobjektstruktur erstellt, die auch als tiefer Klon bezeichnet wird. Mit einem tiefen Klon eines Objekts wird neben der Kopie des Objekts eine Kopie aller Elemente erstellt, auf die das betreffende Objekt direkt oder indirekt verweist. Dies kann auch als Kopieren des gesamten Objektdiagramms bezeichnet werden. Durch das Zurückgeben eines tiefen Klons kann zur Laufzeit der Fall unterstützt werden, in dem mehrere benutzerdefinierte Bindungen ein benutzerdefiniertes Bindungselement gemeinsam nutzen. Wenn ein tiefer Klon nicht zurückgegeben wird, ist das Laufzeitverhalten nicht definiert.  
+  
+ Ein flacher Klon eines Objekts stellt im Gegensatz dazu nur eine Kopie des Objekts dar. Wenn das Objekt Verweise auf andere Objekte enthält, werden von der flachen Kopie keine Kopien der Objekte erstellt, auf die verwiesen wird. Stattdessen werden nur die Verweise auf die ursprünglichen Objekte kopiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessageEncoderFactory">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.MessageEncoderFactory CreateMessageEncoderFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.MessageEncoderFactory CreateMessageEncoderFactory() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.CreateMessageEncoderFactory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageEncoderFactory</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Factory für Bytestream-Nachrichtenencoder, die die SOAP- und WS-Adressierungsversionen und die Zeichencodierung, die vom aktuellen Codierungsbindungselement festgelegt wurden, verwenden.</summary>
+        <returns>Die von diesem Bindungselement erstellte Nachrichtenencoderfactory.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageVersion">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.MessageVersion MessageVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageVersion MessageVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.MessageVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Versionen der SOAP-Nachricht und WS-Addressing ab, die verwendet oder erwartet werden, bzw. legt diese fest.</summary>
+        <value>Die verwendete oder erwartete Nachrichtenversion.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nur auf den Nachrichtenversionswert von <xref:System.ServiceModel.Channels.MessageVersion.None%2A> festgelegt werden und gibt daher immer <xref:System.ServiceModel.Channels.MessageVersion.None%2A> zurück. Der Bytedatenstromnachrichtenencoder unterstützt keine anderen Nachrichtenversionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReaderQuotas">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryReaderQuotas ReaderQuotas { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlDictionaryReaderQuotas ReaderQuotas" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.ReaderQuotas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReaderQuotas</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Beschränkungen der Komplexität von XML-Nachrichten ab, die von mit diesem Bindungselement konfigurierten Endpunkten verarbeitet werden können, oder legt Beschränkungen fest.</summary>
+        <value>Die Komplexitätseinschränkungen für ausgetauschte SOAP-Nachrichten. Die Standardwerte für diese Einschränkungen werden in den folgenden Hinweisabschnitten angegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Komplexitätseinschränkungen schützen vor einer Klasse von DOS-Angriffen (Denial Of Service), die versuchen, die Nachrichtenkomplexität zum Binden von Endpunkt-Verarbeitungsressourcen zu verwenden. Die Eigenschaften, die diese Einschränkungen ausdrücken, und ihre Standardwerte werden in der folgenden Liste aufgeführt:  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> = 32  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A> = 8192  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A> = 16384  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> = 4096  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A> = 16384  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeMessageVersion">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeMessageVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeMessageVersion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.ShouldSerializeMessageVersion" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die <see cref="P:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.MessageVersion" />-Eigenschaft ihren Standardwert geändert hat und serialisiert werden soll.</summary>
+        <returns>
+          <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt immer `false` zurück. Der <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.MessageVersion%2A>-Wert wird für den Bytestreamencoder immer auf <xref:System.ServiceModel.Channels.MessageVersion.None%2A> festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeReaderQuotas">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeReaderQuotas ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeReaderQuotas() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.ShouldSerializeReaderQuotas" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die <see cref="P:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.ReaderQuotas" />-Eigenschaft ihren Standardwert geändert hat und serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.ReaderQuotas" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

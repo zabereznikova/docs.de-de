@@ -1,0 +1,75 @@
+<Type Name="SrgsPhoneticAlphabet" FullName="System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet">
+  <TypeSignature Language="C#" Value="public enum SrgsPhoneticAlphabet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SrgsPhoneticAlphabet extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Listet die unterstützten Phonetic Alphabete.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Phonetic Alphabete bestehen Telefone, die aus Buchstaben, Zahlen oder Zeichen, manchmal in Kombination bestehen. Jede Phone beschreibt einen eindeutigen Sound der Sprache. Dies ist im Gegensatz zu des lateinischen Alphabets enthalten, für die beliebigen Buchstaben mehrere gesprochenen Sounds darstellen kann. Betrachten Sie die verschiedenen Aussprache des Buchstabens "c" in der Wörter "Zuckerstange" und "Beenden" oder der anderen Aussprache der Buchstabenkombination "th" in die Wörter "Aufgabe" und "die".  
+  
+ In System.Speech, können Sie eine der drei Phonetic Alphabete fest benutzerdefinierten Aussprache: internationale Telefonnummer Alphabet (IPA), universelle Phone festgelegt (USV) oder die SAPI phone festlegen. Angegebene Lautalphabet bestimmt, welcher Satz Phone verwendet wird, zum Definieren von Inline-Aussprache für <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken> Objekte. Die im angegebenen Telefone <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Pronunciation%2A> übereinstimmen Lautalphabet, die im angegebenen <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument.PhoneticAlphabet%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Ipa">
+      <MemberSignature Language="C#" Value="Ipa" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet Ipa = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet.Ipa" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Festlegen des internationalen Lautalphabet Phonem enthält.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sapi">
+      <MemberSignature Language="C#" Value="Sapi" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet Sapi = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet.Sapi" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sprach-API Phonem festlegen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ups">
+      <MemberSignature Language="C#" Value="Ups" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet Ups = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet.Ups" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsPhoneticAlphabet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Universelle Phone festgelegt Phonem festgelegt, die ASCII-Codierung von Phoneme für IPA.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

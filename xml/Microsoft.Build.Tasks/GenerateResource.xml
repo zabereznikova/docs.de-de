@@ -1,0 +1,728 @@
+<Type Name="GenerateResource" FullName="Microsoft.Build.Tasks.GenerateResource">
+  <TypeSignature Language="C#" Value="public sealed class GenerateResource : Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenerateResource extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.GenerateResource" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.Build.Framework.RequiredRuntime("v2.0")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert die <c>GenerateResource</c> Aufgabe. Verwenden der <c>GenerateResource</c> Element in der Projektdatei erstellen und Ausführen dieser Aufgabe. Weitere Informationen zu Verwendung und Parametern finden Sie unter [GenerateResource-Aufgabe](http://msdn.microsoft.com/library/c0aff32f-f2cc-46f6-9c3e-a5c9f8f912b1).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenerateResource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateResource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.GenerateResource" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalInputs">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] AdditionalInputs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] AdditionalInputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.AdditionalInputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die zusätzlichen Eingaben für die Abhängigkeit geprüft, ob die <c>GenerateResource</c> Aufgabe ausführt.</summary>
+        <value>Die zusätzlichen Eingaben für die Abhängigkeit geprüft, ob die <c>GenerateResource</c> Aufgabe ausführt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für das Beispiel, das Projekt und Targets-Dateien sollten werden Eingaben um sicherzustellen, dass wenn sie aktualisiert werden alle Ressourcen neu generiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EnvironmentVariables">
+      <MemberSignature Language="C#" Value="public string[] EnvironmentVariables { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] EnvironmentVariables" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.EnvironmentVariables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Array von Name-Wert-Paare der Umgebung Variablen, die an die erzeugten resgen.exe zusätzlich zu übergeben werden sollen (oder selektiv überschreiben) der regulären Umgebungsblock.</summary>
+        <value>Gibt ein Array von Name / Wert-Paaren von Umgebungsvariablen zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese werden derzeit nicht verwendet, wenn Resgen prozessintern ausgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExcludedInputPaths">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ExcludedInputPaths { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ExcludedInputPaths" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.ExcludedInputPaths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Array von Elementen, die Pfade angeben, aus denen nachverfolgte Eingaben während der Überprüfung auf dem neuesten Stand des werden ignoriert.</summary>
+        <value>Gibt ein Array von Elementen, die Pfade angeben, aus denen nachverfolgte Eingaben während der Überprüfung auf dem neuesten Stand des werden ignoriert.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateResource.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die <c>GenerateResource</c> Aufgabe.</summary>
+        <returns>
+          <see langword="true" />Wenn die <c>GenerateResource</c> -Aufgabe erfolgreich ausgeführt wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteAsTool">
+      <MemberSignature Language="C#" Value="public bool ExecuteAsTool { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExecuteAsTool" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.ExecuteAsTool" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>-Eigenschaft zur Festlegung von Zielversionen von ResolveComReferences: Wenn "true" tlbimp.exe "und" aximp.exe vom entsprechenden Zielframework Out-of-Proc zum Generieren der erforderlichen Wrapperassemblys ausgeführt werden.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractResWFiles">
+      <MemberSignature Language="C#" Value="public bool ExtractResWFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExtractResWFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.ExtractResWFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag angeben, ob diese Regel RESOURCES-Dateien generiert, oder extrahieren. ResW-Dateien von Assemblys.</summary>
+        <value>Gibt das Flag zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erfordert zusätzliche Eingabe filtern.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FilesWritten">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] FilesWritten { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] FilesWritten" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.FilesWritten" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Namen aller Dateien ab, die auf den Datenträger geschrieben werden (einschließlich der ggf. vorhandenen Cachedatei), oder legt diese Namen fest.</summary>
+        <value>Die Namen aller auf den Datenträger geschriebenen Dateien.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MinimalRebuildFromTracking">
+      <MemberSignature Language="C#" Value="public bool MinimalRebuildFromTracking { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MinimalRebuildFromTracking" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.MinimalRebuildFromTracking" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Schalter ab, der angibt, ob ein nachverfolgter inkrementeller Build verwendet wird, oder legt ihn fest. Bei "true", wird die inkrementeller Build eingeschaltet; Andernfalls wird eine Wiederherstellung erzwungen werden.</summary>
+        <value>Gibt einen Schalter an, der angibt, ob die nachverfolgter inkrementeller Build verwendet werden soll. Bei "true", wird die inkrementeller Build eingeschaltet; Andernfalls wird eine Wiederherstellung erzwungen werden.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NeverLockTypeAssemblies">
+      <MemberSignature Language="C#" Value="public bool NeverLockTypeAssemblies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NeverLockTypeAssemblies" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.NeverLockTypeAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob zum Erstellen eines neuen <see cref="T:System.AppDomain" /> zum Auswerten der Ressourcendateien (RESX) (<see langword="true" />) oder zum Erstellen eines neuen <see cref="T:System.AppDomain" /> nur, wenn die Ressourcendateien Assembly eines Benutzers verweisen (<see langword="false" />).</summary>
+        <value>
+          <see langword="true" />Wenn die <c>GenerateResource</c> sollten erstellen Sie eine neue Aufgabe <see cref="T:System.AppDomain" /> zum Auswerten der Ressourcendateien (RESX); <see langword="false" /> Wenn die <c>GenerateResource</c> sollten erstellen Sie eine neue Aufgabe <see cref="T:System.AppDomain" /> nur, wenn die Ressourcendateien (RESX) Assembly eines Benutzers verweisen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `false`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OutputDirectory">
+      <MemberSignature Language="C#" Value="public string OutputDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OutputDirectory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.OutputDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert angeben, wo extrahieren. ResW-Dateien.</summary>
+        <value>Gibt den Wert zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Zwischenverzeichnis konnte werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OutputResources">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] OutputResources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] OutputResources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.OutputResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen des Namens der generierten Dateien, z. B. der RESOURCES-Dateien.</summary>
+        <value>Der Name der generierten Dateien, z. B. der RESOURCES-Dateien.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie keinen Namen angeben, wird der Name der entsprechenden Eingabedatei verwendet, und die erstellte RESOURCES-Datei wird in dem Verzeichnis gespeichert, das die Eingabedatei enthält.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PublicClass">
+      <MemberSignature Language="C#" Value="public bool PublicClass { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PublicClass" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.PublicClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob die <c>GenerateResource</c> -Aufgabe eine stark typisierte Ressourcenklasse als öffentliche Klasse erstellen soll.</summary>
+        <value>
+          <see langword="true" />Wenn die <c>GenerateResource</c> -Aufgabe eine stark typisierte Ressourcenklasse als öffentliche Klasse erstellen soll, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="References">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] References { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] References" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.References" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen der Verweise, aus denen Typen in RESX-Dateien geladen werden.</summary>
+        <value>Die Verweise, aus denen Typen in RESX-Dateien geladen werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datenelemente der RESX-Datei können möglicherweise vom Typ .NET sein. Wenn die RESX-Datei gelesen wird, muss dies aufgelöst werden. In der Regel wird dies mit Typladungsregeln erfolgreich aufgelöst. Wenn Sie in <xref:Microsoft.Build.Tasks.GenerateResource.References%2A> Assemblys angeben, haben diese Vorrang.  
+  
+ Dieser Parameter ist für stark typisierte Ressourcen nicht erforderlich.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SdkToolsPath">
+      <MemberSignature Language="C#" Value="public string SdkToolsPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SdkToolsPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.SdkToolsPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Nachricht für die Protokollierung wird trotzdem generiert, obwohl die generieren Ressource-Aufgabe wird die Verarbeitung im Prozess auszuführen. Diese Protokollierung-Meldung enthält den Pfad zum Windows SDK. Da die Ziele jetzt im Windows SDK-Pfad weitergeleitet werden sollten wir dies für die Protokollierung verwenden.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Sources">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] Sources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] Sources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.Sources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zu konvertierenden Elemente ab oder legt sie fest.</summary>
+        <value>Die zu konvertierenden Elemente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ An diesen Parameter übergebene Elemente müssen eine der folgenden Erweiterungen aufweisen:  
+  
+-   `.txt`: Gibt die Erweiterung für eine Textdatei konvertieren. Textdateien dürfen nur Zeichenfolgenressourcen enthalten.  
+  
+-   `.resx`: Gibt die Erweiterung für eine XML-basierte Ressourcendatei konvertieren.  
+  
+-   `.restext`: Gibt an, das gleiche Format wie ".txt". Diese andere Erweiterung ist nützlich, wenn Sie Quelldateien klar unterscheiden möchten, die Ressourcen aus anderen Quelldateien in Ihrem Buildprozess enthalten.  
+  
+ `.resources`: Gibt die Erweiterung für eine Ressourcendatei konvertieren.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StateFile">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem StateFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem StateFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.StateFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad einer optionalen Cachedatei ab, die zum Beschleunigen der Abhängigkeitsprüfung von Verknüpfungen in RESX-Eingabedateien verwendet wird, oder legt ihn fest.</summary>
+        <value>Der Pfad einer optionalen Cachedatei, die zum Beschleunigen der Abhängigkeitsprüfung von Verknüpfungen in RESX-Eingabedateien verwendet wird.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StronglyTypedClassName">
+      <MemberSignature Language="C#" Value="public string StronglyTypedClassName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StronglyTypedClassName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.StronglyTypedClassName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen des Klassennamens für die stark typisierte Ressourcenklasse.</summary>
+        <value>Der Klassenname für die stark typisierte Ressourcenklasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft nicht angegeben ist, wird der Basisname der Ressourcendatei verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StronglyTypedFileName">
+      <MemberSignature Language="C#" Value="public string StronglyTypedFileName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StronglyTypedFileName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.StronglyTypedFileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Dateinamen der Quelldatei ab oder legt ihn fest.</summary>
+        <value>Der Dateiname der Quelldatei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft nicht angegeben ist, wird der Name der Klasse als Basisdateiname, mit der Erweiterung, die von der Sprache verwendet. Beispiel: `MyClass.cs`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StronglyTypedLanguage">
+      <MemberSignature Language="C#" Value="public string StronglyTypedLanguage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StronglyTypedLanguage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.StronglyTypedLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Sprache ab, die beim Generieren der Klassenquelle für die Ressource mit starker Typisierung verwendet werden soll, oder legt diese Sprache fest.</summary>
+        <value>Die Sprache, die beim Generieren der Klassenquelle für die Ressource mit starker Typisierung verwendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss genau einer der Sprachen, in die CodeDom-Anbieters ab übereinstimmen. Beispiel: `VB` oder `C#`.  
+  
+ Mit der Übergabe eines Werts an diesen Parameter weisen Sie die Aufgabe an, stark typisierte Ressourcen zu generieren.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StronglyTypedManifestPrefix">
+      <MemberSignature Language="C#" Value="public string StronglyTypedManifestPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StronglyTypedManifestPrefix" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.StronglyTypedManifestPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Ressourcen-Präfix für Namespace oder Manifest in die generierte Klassenquelle für die Ressource mit starker Typisierung verwendet.</summary>
+        <value>Die Ressource Namespace oder Manifest Präfix, das in die generierte Klassenquelle für die Ressource mit starker Typisierung verwenden.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StronglyTypedNamespace">
+      <MemberSignature Language="C#" Value="public string StronglyTypedNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StronglyTypedNamespace" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.StronglyTypedNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace ab, der für die generierte Klassenquelle für die Ressource mit starker Typisierung verwendet werden soll, oder legt diesen Namespace fest.</summary>
+        <value>Der Namespace, der für die generierte Klassenquelle für die Ressource mit starker Typisierung verwendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft nicht angegeben wird, werden alle stark typisierten Ressourcen im globalen Namespace.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TLogReadFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] TLogReadFiles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] TLogReadFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.TLogReadFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von Elementen ab, die die Lesenachverfolgungs-Protokolle darstellen.</summary>
+        <value>Gibt ein Array von Elementen, die das Nachverfolgen der Protokolle lesen darstellen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TLogWriteFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] TLogWriteFiles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] TLogWriteFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.TLogWriteFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von Elementen ab, die die Schreibnachverfolgungs-Protokolle darstellen.</summary>
+        <value>Gibt ein Array von Elementen, die die Write-Nachverfolgungsprotokolle darstellen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToolArchitecture">
+      <MemberSignature Language="C#" Value="public string ToolArchitecture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolArchitecture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.ToolArchitecture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Microsoft.Build.Utilities.ExecutableType von ResGen.exe analysiert. Wird verwendet, um zu bestimmen, ob „Tracker.exe“ zum Erzeugen von „ResGen.exe“ verwendet werden muss oder nicht. Falls leer, verwendet eine Heuristik um eine Standard-Architektur zu ermitteln.</summary>
+        <value>Gibt <see cref="T:System.String" />zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TrackerFrameworkPath">
+      <MemberSignature Language="C#" Value="public string TrackerFrameworkPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TrackerFrameworkPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.TrackerFrameworkPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Pfad zu dem entsprechenden .NET Framework-Speicherort, der FileTracker.dll enthält. Wenn festgelegt, übernimmt der Benutzer die Verantwortung dafür, sicherzustellen, dass die Bitanzahl von „FileTracker.dll“, die er übergibt, der Bitanzahl der „ResGen.exe“ entspricht, die er verwenden möchten. Wenn nicht festgelegt, wählt die Aufgabe den entsprechenden Speicherort basierend auf der aktuellen .NET Framework-Version.</summary>
+        <value>Gibt <see cref="T:System.String" />zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TrackerLogDirectory">
+      <MemberSignature Language="C#" Value="public string TrackerLogDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TrackerLogDirectory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.TrackerLogDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest Zwischenverzeichnis befinden, in dem die Nachverfolgungsprotokolle vom Ausführen dieser Aufgabe eingefügt werden.</summary>
+        <value>Gibt die Zwischenverzeichnis befinden, in dem die Nachverfolgungsprotokolle vom Ausführen dieser Aufgabe eingefügt werden.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TrackerSdkPath">
+      <MemberSignature Language="C#" Value="public string TrackerSdkPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TrackerSdkPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.TrackerSdkPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Pfad zu der entsprechenden Windows SDK-Speicherort, der Tracker.exe enthält. Wenn festgelegt, übernimmt der Benutzer die Verantwortung dafür, sicherzustellen, dass die Bitanzahl von „Tracker.exe“, die er übergibt, der Bitanzahl der „ResGen.exe“ entspricht, die er verwenden möchten. Wenn nicht festgelegt, wählt die Aufgabe den entsprechenden Speicherort basierend auf der aktuellen Windows SDK-Version.</summary>
+        <value>Gibt <see cref="T:System.String" />zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TrackFileAccess">
+      <MemberSignature Language="C#" Value="public bool TrackFileAccess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TrackFileAccess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.TrackFileAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen Schalter an, der angibt, ob die Dateizugriffsmuster nachverfolgt werden sollen.</summary>
+        <value>True, wenn die Dateizugriffsmuster nachverfolgt werden sollen. "false" andernfalls.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Unterstützung von inkrementellen Builds ist es erforderlich, die Zugriffsmuster für die Datei nachverfolgen.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UseSourcePath">
+      <MemberSignature Language="C#" Value="public bool UseSourcePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseSourcePath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateResource.UseSourcePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen eines booleschen Werts, der angibt, ob das Verzeichnis der Eingabedatei zum Auflösen relativer Dateipfade verwendet werden soll.</summary>
+        <value>
+          <see langword="true" />ist das Verzeichnis der Eingabedatei zum Auflösen relativer Dateipfade verwendet werden soll; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

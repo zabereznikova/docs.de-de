@@ -1,0 +1,217 @@
+<Type Name="CallSiteBinder" FullName="System.Runtime.CompilerServices.CallSiteBinder">
+  <TypeSignature Language="C#" Value="public abstract class CallSiteBinder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CallSiteBinder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.CallSiteBinder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Klasse ist verantwortlich für die laufzeitbindung der dynamischen Vorgänge für die dynamische Aufrufsite.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CallSiteBinder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.CallSiteBinder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.CompilerServices.CallSiteBinder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bind">
+      <MemberSignature Language="C#" Value="public abstract System.Linq.Expressions.Expression Bind (object[] args, System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Linq.Expressions.ParameterExpression&gt; parameters, System.Linq.Expressions.LabelTarget returnLabel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Linq.Expressions.Expression Bind(object[] args, class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Linq.Expressions.ParameterExpression&gt; parameters, class System.Linq.Expressions.LabelTarget returnLabel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.CallSiteBinder.Bind(System.Object[],System.Collections.ObjectModel.ReadOnlyCollection{System.Linq.Expressions.ParameterExpression},System.Linq.Expressions.LabelTarget)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="parameters" Type="System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Linq.Expressions.ParameterExpression&gt;" />
+        <Parameter Name="returnLabel" Type="System.Linq.Expressions.LabelTarget" />
+      </Parameters>
+      <Docs>
+        <param name="args">Ein Array von Argumenten des dynamischen Vorgangs.</param>
+        <param name="parameters">Das Array von <see cref="T:System.Linq.Expressions.ParameterExpression" /> Instanzen, die die Parameter der Aufrufsite des Bindungsvorgangs darstellen.</param>
+        <param name="returnLabel">Ein LabelTarget, mit das Ergebnis der dynamischen Bindung zurückgegeben.</param>
+        <summary>Führt die laufzeitbindung der auf einen Satz von Argumenten des dynamischen Vorgangs.</summary>
+        <returns>Ein Ausdruck, der Tests für die Argumente des dynamischen Vorgangs ausführt und den dynamischen Vorgang ausführt, wenn die Tests gültig sind. Wenn die Tests auf weiteren Vorkommen des dynamischen Vorgangs fehlschlagen, binden wird erneut aufgerufen, um ein neues zu erzeugen <see cref="T:System.Linq.Expressions.Expression" /> für den neuen Argumenttypen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindDelegate&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public virtual T BindDelegate&lt;T&gt; (System.Runtime.CompilerServices.CallSite&lt;T&gt; site, object[] args) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!T BindDelegate&lt;class T&gt;(class System.Runtime.CompilerServices.CallSite`1&lt;!!T&gt; site, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.CallSiteBinder.BindDelegate``1(System.Runtime.CompilerServices.CallSite{``0},System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="site" Type="System.Runtime.CompilerServices.CallSite&lt;T&gt;" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Zieltyp der CallSite.</typeparam>
+        <param name="site">Die Aufrufsite die Bindung ist für ausgeführt wird.</param>
+        <param name="args">Die Argumente für den Binder.</param>
+        <summary>Stellt Low-Level-Laufzeitunterstützung für die Bindung an. Klassen können dies außer Kraft setzen und einen direkten Delegaten für die Implementierung der Regel bereitstellen. Dadurch können Regeln auf dem Datenträger gespeichert, spezialisierte Regeln zur Laufzeit verfügbar oder eine andere Cacherichtlinie bereitstellen.</summary>
+        <returns>Ein neuer Delegat, der das Ziel CallSite ersetzt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheTarget&lt;T&gt;">
+      <MemberSignature Language="C#" Value="protected void CacheTarget&lt;T&gt; (T target) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CacheTarget&lt;class T&gt;(!!T target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.CallSiteBinder.CacheTarget``1(``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="target" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Ziels, die hinzugefügt wird.</typeparam>
+        <param name="target">Der Zieldelegat, der dem Cache hinzugefügt werden.</param>
+        <summary>Fügt ein Ziel in den Cache von bekannten Zielen. Vor dem Aufrufen von BindDelegate, um die neue Regel zu erstellen, werden die zwischengespeicherten Ziele gescannt werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateLabel">
+      <MemberSignature Language="C#" Value="public static System.Linq.Expressions.LabelTarget UpdateLabel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Linq.Expressions.LabelTarget UpdateLabel" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.CompilerServices.CallSiteBinder.UpdateLabel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.LabelTarget</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Bezeichnung, die verwendet werden kann, um dazu führen, dass die Bindung, die aktualisiert werden. Er gibt an, dass die Bindung des Ausdrucks nicht mehr gültig ist. Dies wird normalerweise verwendet, wenn die "Version" ein dynamisches Objekt geändert wurde.</summary>
+        <value>Die <see cref="T:System.Linq.Expressions.LabelTarget" /> Objekt, das eine Bezeichnung, die verwendet werden kann, um die Aktualisierung der Bindung ausgelöst darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

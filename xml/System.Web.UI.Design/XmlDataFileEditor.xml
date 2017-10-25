@@ -1,0 +1,115 @@
+<Type Name="XmlDataFileEditor" FullName="System.Web.UI.Design.XmlDataFileEditor">
+  <TypeSignature Language="C#" Value="public class XmlDataFileEditor : System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlDataFileEditor extends System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.XmlDataFileEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.UrlEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine während der Entwurfszeit-Benutzeroberfläche für die Auswahl einer XML-Datendatei bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.Design.XmlDataFileEditor> Objekt wird auswählen und bearbeiten eine URL für eine XML-Datendatei (XML), und weisen Sie dann die URL an eine Steuerelementeigenschaft zur Entwurfszeit verwendet. Z. B. die <xref:System.Web.UI.WebControls.XmlDataSource> steuern verwendet der <xref:System.Web.UI.Design.XmlDataFileEditor> Klasse zur Entwurfszeit zum Festlegen des Werts, der die <xref:System.Web.UI.WebControls.XmlDataSource.DataFile%2A> Eigenschaft.  
+  
+ Verwenden der <xref:System.ComponentModel.EditorAttribute> Attribut zum Zuordnen der <xref:System.Web.UI.Design.XmlDataFileEditor> mit der Eigenschaft. Wenn die zugeordnete Eigenschaft auf der Entwurfsoberfläche bearbeitet wird, ruft der Designerhost die <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> Methode. Die <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> -Methode verwendet die <xref:System.Web.UI.Design.UrlBuilder.BuildUrl%2A> Methode, die wiederum eine Benutzeroberfläche zum Auswählen der URL angezeigt, und klicken Sie dann die URL zurückgegeben, die vom Benutzer ausgewählt wird. Die <xref:System.Web.UI.Design.UrlEditor.GetEditStyle%2A> -Methode gibt den Anzeigestil der Benutzeroberfläche an.  
+  
+ Leiten Sie eine Klasse aus der <xref:System.Web.UI.Design.XmlDataFileEditor> um einen benutzerdefinierten Editor für die Eigenschaft ein XML-Daten zu definieren. Beispielsweise kann eine abgeleitete Klasse überschreiben die <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> -Methode, und rufen Sie dann die <xref:System.Web.UI.Design.UrlBuilder.BuildUrl%2A> Methode mit einem benutzerdefinierten <xref:System.Web.UI.Design.XmlDataFileEditor.Filter%2A> oder <xref:System.Web.UI.Design.XmlDataFileEditor.Caption%2A> Wert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie das Zuordnen eine Instanz von der <xref:System.Web.UI.Design.XmlDataFileEditor> -Klasse mit einer Eigenschaft, die in ein benutzerdefiniertes Steuerelement enthalten ist. Wenn die Steuerelementeigenschaft auf der Entwurfsoberfläche bearbeitet wird die <xref:System.Web.UI.Design.XmlDataFileEditor> -Klasse stellt die Benutzeroberfläche und bearbeiten Sie einen XML-Dateinamen für den Wert der Eigenschaft.  
+  
+ [!code-csharp[WebDesigner.XmlDataFileEditor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebDesigner.XmlDataFileEditor/cs/simplecontrolwithfilename.cs#1)]
+ [!code-vb[WebDesigner.XmlDataFileEditor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebDesigner.XmlDataFileEditor/vb/simplecontrolwithfilename.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDataFileEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.XmlDataFileEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.XmlDataFileEditor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="protected override string Caption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.XmlDataFileEditor.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschriftung ein, auf das Dialogfeld Auswahl angezeigt werden sollen.</summary>
+        <value>Der Beschriftungstext auf das Dialogfeld Auswahl angezeigt werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.XmlDataFileEditor.Caption%2A> Eigenschaft wird verwendet, durch die <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> Methode beim Aufrufen der <xref:System.Web.UI.Design.UrlBuilder.BuildUrl%2A> -Methode, die das URL-Auswahldialogfeld für den Benutzer zur Entwurfszeit anzeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="protected override string Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.XmlDataFileEditor.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die URL-Filteroptionen für den Editor, die verwendet wird, zum Filtern der Elemente, die in der URL-Auswahldialogfeld angezeigt werden.</summary>
+        <value>Eine Zeichenfolge, die eine oder mehrere URL-Filteroptionen für das Dialogfeld darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.XmlDataFileEditor.Filter%2A> Eigenschaft wird verwendet, durch die <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> Methode beim Aufrufen der <xref:System.Web.UI.Design.UrlBuilder.BuildUrl%2A> -Methode, die das URL-Auswahldialogfeld für den Benutzer zur Entwurfszeit anzeigt.  
+  
+ Der <xref:System.Web.UI.Design.XmlDataFileEditor.Filter%2A> Standardwert gibt zwei URL-Filter für das Dialogfeld an: einen für XML-Dateien (*.XML) und einen für alle Dateien (\*.\*).  
+  
+ Eine Filterzeichenfolge enthält eine oder mehrere Filteroptionen an. Jede Filteroption enthält eine Beschreibung des Filters, gefolgt von der senkrechte Strich (&#124;) und das Filtermuster. Die Zeichenfolgen für die verschiedenen Filteroptionen werden durch den senkrechten Strich getrennt.  
+  
+ Im folgenden finden ein Beispiel für eine Filterzeichenfolge an, die zwei Filteroptionen enthält:  
+  
+ "`XML Files (*.xml)|*.xml|All Files (*.*)|*.*`".  
+  
+ Sie können mehrere Filtermuster in einer Filteroption angeben, durch das Filtermuster durch Semikolons trennen. Im folgenden finden ein Beispiel für eine Filterzeichenfolge an, in der die erste Filteroption zwei Filtermuster angibt:  
+  
+ "`Custom XML Files (*.xd1; *.xd2)|*.xd1;*.xd2|All Files (*.*)|*.*`".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

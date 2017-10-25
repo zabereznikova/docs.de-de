@@ -1,0 +1,120 @@
+<Type Name="ActivityInstance" FullName="System.Activities.ActivityInstance">
+  <TypeSignature Language="C#" Value="public sealed class ActivityInstance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivityInstance extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.ActivityInstance" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract(Name="ActivityInstance", Namespace="http://schemas.datacontract.org/2010/02/System.Activities")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt den Instanzzustand einer Aktivität zur Laufzeit dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Activity">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity Activity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity Activity" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityInstance.Activity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Aktivität ab, die von der aktuellen <see cref="T:System.Activities.ActivityInstance" /> dargestellt wird.</summary>
+        <value>Die von dieser <see cref="T:System.Activities.ActivityInstance" /> dargestellte Aktivität.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityInstance.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Bezeichner ab, der die <see cref="T:System.Activities.ActivityInstance" /> eindeutig identifiziert.</summary>
+        <value>Ein Bezeichner, der die <see cref="T:System.Activities.ActivityInstance" /> eindeutig identifiziert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplementationVersion">
+      <MemberSignature Language="C#" Value="public Version ImplementationVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version ImplementationVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityInstance.ImplementationVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember(EmitDefaultValue=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die implementierungsversion, die für die Instanz.</summary>
+        <value>Die implementierungsversion für die Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCompleted">
+      <MemberSignature Language="C#" Value="public bool IsCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompleted" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityInstance.IsCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die von der aktuellen <see cref="T:System.Activities.ActivityInstance" /> dargestellte Aktivität abgeschlossen wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Aktivität abgeschlossen ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Activities.ActivityInstanceState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Activities.ActivityInstanceState State" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityInstance.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.ActivityInstanceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft <see cref="T:System.Activities.ActivityInstanceState" /> für die aktuelle <see cref="T:System.Activities.ActivityInstance" /> ab.</summary>
+        <value>Der Zustand der Aktivitätsinstanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

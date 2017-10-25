@@ -1,0 +1,260 @@
+<Type Name="MessageContractMemberAttribute" FullName="System.ServiceModel.MessageContractMemberAttribute">
+  <TypeSignature Language="C#" Value="public abstract class MessageContractMemberAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MessageContractMemberAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MessageContractMemberAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Deklariert die Basismember für <see cref="T:System.ServiceModel.MessageBodyMemberAttribute" /> und <see cref="T:System.ServiceModel.MessageHeaderAttribute" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse enthält Eigenschaften, die für alle Teile einer SOAP-Nachricht gleich sind. Beispielsweise verfügen alle Teile über einen Namen und einen Namespace sowie eine eventuelle Schutzebene.  
+  
+ Informationen zum Steuern der Serialisierung des Inhalts eines SOAP-Texts ohne den Standard-SOAP-Umschlag selbst zu ändern, finden Sie unter <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>, [angeben von Datenübertragung in Dienstverträgen](~/docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md), und [mithilfe von Daten Verträge](~/docs/framework/wcf/feature-details/using-data-contracts.md).  
+  
+ Weitere Informationen zum Erstellen von Nachrichtenverträgen finden Sie unter [Verwendung von Nachrichtenverträgen](~/docs/framework/wcf/feature-details/using-message-contracts.md).  
+  
+   
+  
+## Examples  
+ Die folgenden Codebeispiele zeigen einen benutzerdefinierten Nachrichtenvertrag, der die Attribute <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> und <xref:System.ServiceModel.MessageBodyMemberAttribute> verwendet (die alle von <xref:System.ServiceModel.MessageContractMemberAttribute> erben), um benutzerdefinierte, typisierte Nachrichten zur Verwendung in Vorgängen zu erstellen. In diesem Fall werden drei Member in das Textelement der SOAP-Nachricht serialisiert: `sourceAccount`, `targetAccount` und der `amount`-Wert, der in ein Element mit dem Namen `transactionAmount` serialisiert wird. Außerdem befindet sich das SOAP-Headerelement `IsAudited` im `http://schemas.contosobank.com/auditing/2005`-Namespace, und `sourceAccount` wird verschlüsselt und digital signiert.  
+  
+> [!NOTE]
+>  Die Typen `Operation` und `Account` müssen über einen Datenvertrag verfügen.  
+  
+```csharp  
+[MessageContract]  
+public class BankingTransaction  
+{  
+  [MessageHeader]   
+  public Operation operation;  
+  [MessageHeader(Namespace="http://schemas.contosobank.com/auditing/2005")]   
+  public bool IsAudited;  
+  [MessageBody(ProtectionLevel=ProtectionLevel.EncryptAndSign)]   
+  public Account sourceAccount;  
+  [MessageBody]   
+  public Account targetAccount;  
+  [MessageBody(Name="transactionAmount")]   
+  public int amount;  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MessageContractMemberAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageContractMemberAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MessageContractMemberAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasProtectionLevel">
+      <MemberSignature Language="C#" Value="public bool HasProtectionLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageContractMemberAttribute.HasProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse einen Wert ab, der angibt, ob dem Member eine Schutzebene zugewiesen ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Member über eine Schutzebene verfügt, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageContractMemberAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Namen des Elements an, das diesem Member entspricht.</summary>
+        <value>Der Name des Elements, das diesem Member entspricht. Diese Zeichenfolge muss einem gültigen XML-Elementnamen entsprechen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Die folgenden Codebeispiele zeigen einen benutzerdefinierten Nachrichtenvertrag, der die Attribute <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> und <xref:System.ServiceModel.MessageBodyMemberAttribute> verwendet, um benutzerdefinierte, stark typisierte Nachrichten zur Verwendung als Parameter zu erstellen. In diesem Fall werden drei Datenmember in das Textelement der SOAP-Nachricht serialisiert: `sourceAccount`, `targetAccount` und der `amount`-Wert, der in ein Element mit dem Namen `transactionAmount` serialisiert wird. Außerdem befindet sich das SOAP-Headerelement `IsAudited` im `http://schemas.contosobank.com/auditing/2005`-Namespace.  
+  
+> [!NOTE]
+>  Die Typen `Operation` und `Account` müssen ebenfalls über einen Datenvertrag verfügen.  
+  
+```csharp  
+[MessageContract]  
+public class BankingTransaction  
+{  
+  [MessageHeader] public Operation operation;  
+  [MessageHeader(Namespace="http://schemas.contosobank.com/auditing/2005")] public bool IsAudited;  
+  [MessageBody] public Account sourceAccount;  
+  [MessageBody] public Account targetAccount;  
+  [MessageBody(Name="transactionAmount")] public int amount;  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageContractMemberAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Namespace des Elements an, das diesem Member entspricht.</summary>
+        <value>Ein Namespace-URI des Elements, das diesem Member entspricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Die folgenden Codebeispiele zeigen einen benutzerdefinierten Nachrichtenvertrag, der die Attribute <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> und <xref:System.ServiceModel.MessageBodyMemberAttribute> verwendet (die alle von <xref:System.ServiceModel.MessageContractMemberAttribute> erben), um benutzerdefinierte, typisierte Nachrichten zur Verwendung in Vorgängen zu erstellen. In diesem Fall werden drei Member in das Textelement der SOAP-Nachricht serialisiert: `sourceAccount`, `targetAccount` und der `amount`-Wert, der in ein Element mit dem Namen `transactionAmount` serialisiert wird. Außerdem befindet sich das SOAP-Headerelement `IsAudited` im `http://schemas.contosobank.com/auditing/2005`-Namespace, und `sourceAccount` wird verschlüsselt und digital signiert.  
+  
+> [!NOTE]
+>  Die Typen `Operation` und `Account` müssen über einen Datenvertrag verfügen.  
+  
+```csharp  
+[MessageContract]  
+public class BankingTransaction  
+{  
+  [MessageHeader] public Operation operation;  
+  [MessageHeader(Namespace="http://schemas.contosobank.com/auditing/2005")] public bool IsAudited;  
+  [MessageBody] public Account sourceAccount;  
+  [MessageBody] public Account targetAccount;  
+  [MessageBody(Name="transactionAmount")] public int amount;  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Security.ProtectionLevel ProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.ProtectionLevel ProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob der Member unverändert, signiert oder signiert und verschlüsselt übertragen werden soll.</summary>
+        <value>Einer der <see cref="T:System.Net.Security.ProtectionLevel" />-Werte. Die Standardeinstellung ist <see cref="F:System.Net.Security.ProtectionLevel.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um die <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A>-Eigenschaft im <xref:System.ServiceModel.MessageHeaderAttribute>-Attribut oder <xref:System.ServiceModel.MessageBodyMemberAttribute>-Attribut zu verwenden, müssen Sie die Bindung und das Verhalten entsprechend konfigurieren. Wenn diese Sicherheitsfeatures ohne angemessene Konfiguration verwendet werden (z.&#160;B. bei Verwendung von <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> mit einem Nachrichtenteil ohne Angabe der Sicherheitseinstellungen), wird zur Laufzeit eine Ausnahme ausgelöst.  
+  
+ Zusätzlich wird die Schutzebene für jeden Header einzeln bestimmt. Der SOAP-Text verfügt jedoch unabhängig von der Anzahl der Textteile nur über eine Schutzebene. Die Schutzebene des Texts wird durch den höchsten <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A>-Eigenschaftswert aller Textteile bestimmt. Betrachten Sie beispielsweise die folgende Klasse:  
+  
+```csharp  
+[MessageContract]  
+public class PatientRecord  
+{  
+   [MessageHeader(ProtectionLevel=None)] public int recordID;  
+   [MessageHeader(ProtectionLevel=Sign)] public string patientName;  
+   [MessageHeader(ProtectionLevel=EncryptAndSign)] public string SSN;  
+   [MessageBody(ProtectionLevel=None)] public string comments;  
+   [MessageBody(ProtectionLevel=Sign)] public string diagnosis;  
+   [MessageBody(ProtectionLevel=EncryptAndSign)] public string medicalHistory;  
+}  
+```  
+  
+ In diesem Beispiel ist der `recordID`-Header nicht geschützt, `patientName` ist signiert und `SSN` ist verschlüsselt und signiert. Mindestens ein Textteil, nämlich `medicalHistory`, ist auf <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> festgelegt, sodass der gesamte Nachrichtentext verschlüsselt und signiert wird, obwohl für die Textteile `comments` und `diagnosis` niedrigere Schutzebenen angegeben sind.  
+  
+ Das Schutzverhalten zur Laufzeit entspricht der Kombination der Schutzebenenwerte für die folgenden Eigenschaften. Diese Eigenschaften verfügen über eine hierarchische Struktur. Mit der Festlegung des äußersten Werts wird die Standardeinstellung für alle engeren Bereiche festgelegt, es sei denn, es wird ausdrücklich ein anderer Wert für einen engeren Bereich definiert. In diesem Fall bleibt der äußere Wert der Standardwert für alle engeren Bereiche mit Ausnahme des ausdrücklich festgelegten Werts.  
+  
+ Wenn beispielsweise <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType> auf <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> festgelegt ist und für keine weiteren engeren Bereiche Schutzebeneneinstellungen definiert sind, werden alle Nachrichten in einem Vorgangsvertrag verschlüsselt und signiert. Wenn aber für einen dieser Vorgänge <xref:System.ServiceModel.OperationContractAttribute> auf <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> festgelegt ist, werden die Nachrichten für diesen Vorgang signiert, alle anderen Nachrichten im Vertrag werden jedoch verschlüsselt und signiert.  
+  
+ Einzelheiten zu Schutzebenen und ihren Annahmen und Bereichen finden Sie unter [Verständnis Schutzebene](~/docs/framework/wcf/understanding-protection-level.md).  
+  
+ Die Bereiche, für die diese Werte festgelegt wurden:  
+  
+ <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ <xref:System.ServiceModel.MessageContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ Die <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType>-Eigenschaft für <xref:System.ServiceModel.MessageHeaderAttribute?displayProperty=nameWithType>.  
+  
+ Die <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType>-Eigenschaft für <xref:System.ServiceModel.MessageBodyMemberAttribute?displayProperty=nameWithType>.  
+  
+ Wenn im Vertrag nicht ausdrücklich eine Schutzebene festgelegt ist und die zugrunde liegende Bindung Sicherheitsfunktionen (auf der Transport- oder Nachrichtenebene) unterstützt, ist die effektive Schutzebene für den gesamten Vertrag <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>. Wenn die Bindung keine Sicherheitsfunktionen (wie beispielsweise <xref:System.ServiceModel.BasicHttpBinding>) unterstützt, ist die effektive <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> für den gesamten Vertrag <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>. Im Ergebnis können Clients abhängig von der Endpunktbindung unterschiedlichen Nachrichten- oder Transportebenenschutz auch dann anfordern, wenn im Vertrag <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> angegeben ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

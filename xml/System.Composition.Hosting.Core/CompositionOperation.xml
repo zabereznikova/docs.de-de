@@ -1,0 +1,132 @@
+<Type Name="CompositionOperation" FullName="System.Composition.Hosting.Core.CompositionOperation">
+  <TypeSignature Language="C#" Value="public sealed class CompositionOperation : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CompositionOperation extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Composition.Hosting.Core.CompositionOperation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Composition.Hosting</AssemblyName>
+    <AssemblyVersion>1.0.31.0</AssemblyVersion>
+    <AssemblyVersion>1.0.32.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen einzelnen Kompositionsvorgang dar.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddNonPrerequisiteAction">
+      <MemberSignature Language="C#" Value="public void AddNonPrerequisiteAction (Action action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddNonPrerequisiteAction(class System.Action action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.CompositionOperation.AddNonPrerequisiteAction(System.Action)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die Aktion ausgeführt.</param>
+        <summary>Gibt eine Aktion, die ausgeführt werden kann, nachdem alle erforderlichen Teil Abhängigkeiten erfüllt wurden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird während des Aktivierungsprozesses aufgerufen.
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="action" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPostCompositionAction">
+      <MemberSignature Language="C#" Value="public void AddPostCompositionAction (Action action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPostCompositionAction(class System.Action action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.CompositionOperation.AddPostCompositionAction(System.Action)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="action">Die Aktion ausgeführt.</param>
+        <summary>Gibt eine Aktion ausgeführt, nachdem alle Komposition abgeschlossen wurde, durch die <see cref="T:System.Composition.OnImportsSatisfiedAttribute" />.
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird während des Aktivierungsprozesses aufgerufen.
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.CompositionOperation.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hebt alle Sperren aufrechterhalten, während die Kompositionsvorgangs auf.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public static object Run (System.Composition.Hosting.Core.LifetimeContext outermostLifetimeContext, System.Composition.Hosting.Core.CompositeActivator compositionRootActivator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Run(class System.Composition.Hosting.Core.LifetimeContext outermostLifetimeContext, class System.Composition.Hosting.Core.CompositeActivator compositionRootActivator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.CompositionOperation.Run(System.Composition.Hosting.Core.LifetimeContext,System.Composition.Hosting.Core.CompositeActivator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="outermostLifetimeContext" Type="System.Composition.Hosting.Core.LifetimeContext" />
+        <Parameter Name="compositionRootActivator" Type="System.Composition.Hosting.Core.CompositeActivator" />
+      </Parameters>
+      <Docs>
+        <param name="outermostLifetimeContext">Der Kontext, in dem der Vorgang zu starten (der Vorgang kann den übergeordneten Elementen des Kontexts fließen, falls erforderlich).</param>
+        <param name="compositionRootActivator">Die Aktivierung, die den Vorgang Laufwerke.</param>
+        <summary>Führt den Kompositionsvorgang innerhalb des angegebenen Lifetime-Kontexts, durch den angegebenen Aktivator verursachten ab.</summary>
+        <returns>Zusammengesetzter Objektdiagramm enthalten sind.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

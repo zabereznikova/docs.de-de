@@ -1,0 +1,401 @@
+<Type Name="XmlEntityReference" FullName="System.Xml.XmlEntityReference">
+  <TypeSignature Language="C#" Value="public class XmlEntityReference : System.Xml.XmlLinkedNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlEntityReference extends System.Xml.XmlLinkedNode" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlEntityReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlLinkedNode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Entitätsverweisknoten dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlEntityReference (string name, System.Xml.XmlDocument doc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string name, class System.Xml.XmlDocument doc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlEntityReference.#ctor(System.String,System.Xml.XmlDocument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="doc" Type="System.Xml.XmlDocument" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Entitätsverweises. finden Sie unter der <see cref="P:System.Xml.XmlEntityReference.Name" /> Eigenschaft.</param>
+        <param name="doc">Das übergeordnete XML-Dokument.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlEntityReference" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instanziieren Sie keine <xref:System.Xml.XmlEntityReference> direkt; stattdessen verwenden Sie Methoden wie <xref:System.Xml.XmlDocument.CreateEntityReference%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseURI">
+      <MemberSignature Language="C#" Value="public override string BaseURI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseURI" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntityReference.BaseURI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Basis-URI (Uniform Resource Identifier) des aktuellen Knotens ab.</summary>
+        <value>Der Speicherort, von dem aus der Knoten geladen wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Netzwerk-XML-Dokument besteht aus Segmenten der Daten unter Verwendung verschiedener World Wide Web Consortium (W3C) standard aggregiert und enthält daher Knoten, die aus verschiedenen Quellen stammen. Die `BaseURI` gibt Aufschluss darüber, woher diese Knoten stammen. Wenn es keinen Basis-URI für die Knoten zurückgegeben wird (z. B. diese aus einer Zeichenfolge im Arbeitsspeicher analysiert wurden), ist <xref:System.String.Empty> wird zurückgegeben.  
+  
+ `BaseURI`durchläuft die Knotenstruktur Verweis entitätsgrenzen gesucht, also wenn Entitäten erweitert wurden, diese Informationen nicht beibehalten werden und diese Eigenschaft gibt den Speicherort der das XML-Dokument in allen Fällen.  
+  
+ Weitere Informationen zu `BaseURI` und mit anderen Knotentypen Verhalten, finden Sie unter <xref:System.Xml.XmlNode.BaseURI%2A?displayProperty=nameWithType>.  
+  
+ Diese Eigenschaft ist eine Microsoft-Erweiterung des Dokumentobjektmodells (DOM).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt Informationen auf Entitätsverweisknoten, einschließlich des Basis-URI.  
+  
+ [!code-cpp[Classic WebData XmlEntityReference.BaseURI Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlEntityReference.BaseURI Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlEntityReference.BaseURI Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlEntityReference.BaseURI Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlEntityReference.BaseURI Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlEntityReference.BaseURI Example/VB/source.vb#1)]  
+  
+ Das Beispiel verwendet die Datei `uri.xml`als Eingabe.  
+  
+ [!code-xml[Classic WebData XmlEntityReference.BaseURI Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlEntityReference.BaseURI Example/XML/source.xml#2)]  
+  
+ Die `style.xml` -Datei enthält die XML-Zeichenfolge `<style>hardcover</style>`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneNode">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode CloneNode (bool deep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlNode CloneNode(bool deep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlEntityReference.CloneNode(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deep" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="deep">
+          <see langword="true" />, wenn die Teilstruktur unter dem angegebenen Knoten rekursiv geklont werden soll, <see langword="false" />, wenn nur der Knoten selbst geklont werden soll. Für <see langword="XmlEntityReference" /> Knoten, diese Methode gibt immer einen Entitätsverweisknoten ohne untergeordnete Elemente. Der Ersetzungstext wird festgelegt, wenn der Knoten in ein übergeordnetes Element eingefügt wird.</param>
+        <summary>Erstellt ein Duplikat dieses Knotens.</summary>
+        <returns>Der geklonte Knoten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient als einen Kopierkonstruktor für Knoten. Der geklonte Knoten weist kein übergeordnetes Element (<xref:System.Xml.XmlNode.ParentNode%2A> gibt `null`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntityReference.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Knoten schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Knoten schreibgeschützt ist, andernfalls <see langword="false" />.  
+  
+ Da <see langword="XmlEntityReference" /> Knoten sind schreibgeschützt, gibt diese Eigenschaft immer <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein nur-Lese Knoten ist, deren Eigenschaften, Attribute oder untergeordnete Elemente geändert werden. Sie können jedoch einen schreibgeschützten Knoten aus der Struktur entfernen und an anderer Stelle einfügen.  
+  
+ Diese Eigenschaft ist eine Microsoft-Erweiterung des Dokumentobjektmodells (DOM).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der `IsReadOnly`-Eigenschaft veranschaulicht.  
+  
+ [!code-cpp[Classic WebData XmlEntityReference.IsReadOnly Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlEntityReference.IsReadOnly Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlEntityReference.IsReadOnly Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlEntityReference.IsReadOnly Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlEntityReference.IsReadOnly Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlEntityReference.IsReadOnly Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalName">
+      <MemberSignature Language="C#" Value="public override string LocalName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntityReference.LocalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den lokalen Namen des Knotens ab.</summary>
+        <value>Für <see langword="XmlEntityReference" /> Knoten, diese Eigenschaft gibt den Namen der Entität, auf die verwiesen wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntityReference.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Knotens ab.</summary>
+        <value>Der Name der Entität, auf die verwiesen wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel werden Informationen auf dem Entitätsverweisknoten angezeigt.  
+  
+ [!code-cpp[Classic WebData XmlEntityReference.Name Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlEntityReference.Name Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlEntityReference.Name Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlEntityReference.Name Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlEntityReference.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlEntityReference.Name Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntityReference.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Knotens ab.</summary>
+        <value>Der Knotentyp. Für <see langword="XmlEntityReference" /> -Knoten ist der Wert ist XmlNodeType.EntityReference.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntityReference.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Knotens ab oder legt diesen fest.</summary>
+        <value>Der Wert des Knotens. Für <see langword="XmlEntityReference" />-Knoten gibt diese Eigenschaft <see langword="null" /> zurück.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Knoten ist schreibgeschützt.</exception>
+        <exception cref="T:System.InvalidOperationException">Festlegen der Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteContentTo">
+      <MemberSignature Language="C#" Value="public override void WriteContentTo (System.Xml.XmlWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteContentTo(class System.Xml.XmlWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlEntityReference.WriteContentTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">Der <see langword="XmlWriter" />, in dem gespeichert werden soll.</param>
+        <summary>Speichert alle untergeordneten Elemente des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine Microsoft-Erweiterung, die (DOKUMENTOBJEKTMODELL).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public override void WriteTo (System.Xml.XmlWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteTo(class System.Xml.XmlWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlEntityReference.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">Der <see langword="XmlWriter" />, in dem gespeichert werden soll.</param>
+        <summary>Speichert den Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine Microsoft-Erweiterung, die (DOKUMENTOBJEKTMODELL).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

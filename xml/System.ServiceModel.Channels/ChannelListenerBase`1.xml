@@ -1,0 +1,286 @@
+<Type Name="ChannelListenerBase&lt;TChannel&gt;" FullName="System.ServiceModel.Channels.ChannelListenerBase&lt;TChannel&gt;">
+  <TypeSignature Language="C#" Value="public abstract class ChannelListenerBase&lt;TChannel&gt; : System.ServiceModel.Channels.ChannelListenerBase, System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; where TChannel : class, IChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ChannelListenerBase`1&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt; extends System.ServiceModel.Channels.ChannelListenerBase implements class System.ServiceModel.Channels.IChannelListener, class System.ServiceModel.Channels.IChannelListener`1&lt;!TChannel&gt;, class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ChannelListenerBase`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TChannel">
+      <Constraints>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+        <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.ChannelListenerBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TChannel">Der Kanaltyp, den die Kanallistener akzeptieren.</typeparam>
+    <summary>Stellt eine gemeinsame Basisimplementierung für Kanallistener auf dem Dienst bereit, um von den Clientfactorys erstellte Kanäle zu akzeptieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kanallistener auf einem Dienst warten auf Kanäle, die von Factorys auf dem Client erstellt wurden, und akzeptieren diese. Sobald die Kanalverbindung zwischen Client und Dienst hergestellt wurde, kann eine Kommunikation stattfinden, und es können Nachrichten ausgetauscht werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ChannelListenerBase`1" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.ServiceModel.Channels.ChannelListenerBase%601.%23ctor>-Standardkonstruktor initialisiert die Timeouteigenschaften beim Austauschen von Nachrichten mit den Timeoutwerten für das Dienstmodul. Der Standardwert für das Öffnen, Senden und Schließen beträgt 1&#160;Minute; der Standardwert für das Empfangen beträgt 10&#160;Minuten. Mit <xref:System.ServiceModel.Channels.ChannelListenerBase%601.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29> können Sie abweichende Werte für den Timeoutwert dieser Vorgänge angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ChannelListenerBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ChannelListenerBase`1" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor initialisiert die Timeouteigenschaften beim Austauschen von Nachrichten mit den Timeoutwerten für das Dienstmodul. Der Standardwert für das Öffnen, Senden und Schließen beträgt 1&#160;Minute; der Standardwert für das Empfangen beträgt 10&#160;Minuten. Mit <xref:System.ServiceModel.Channels.ChannelListenerBase%601.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29> können Sie abweichende Werte für den Timeoutwert dieser Vorgänge angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ChannelListenerBase (System.ServiceModel.IDefaultCommunicationTimeouts timeouts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.IDefaultCommunicationTimeouts timeouts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase`1.#ctor(System.ServiceModel.IDefaultCommunicationTimeouts)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="timeouts" Type="System.ServiceModel.IDefaultCommunicationTimeouts" />
+      </Parameters>
+      <Docs>
+        <param name="timeouts">Die <see cref="T:System.ServiceModel.IDefaultCommunicationTimeouts" />, die die Standardtimeoutwerte für das Öffnen, Senden und Empfangen sowie für das Schließen beim Austauschen von Nachrichten festlegen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ChannelListenerBase`1" />-Klasse mit den angegebenen Standardtimeoutwerten für die Kommunikation.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Verwenden von <xref:System.ServiceModel.Channels.ChannelListenerBase%601.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29> anstelle des Standardkonstruktors können Sie benutzerdefinierte Timeoutwerte für das Öffnen, Senden, Empfangen und Schließen angeben, anstatt die Standardwerte des Dienstmodells zu verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptChannel">
+      <MemberSignature Language="C#" Value="public TChannel AcceptChannel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TChannel AcceptChannel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase`1.AcceptChannel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TChannel</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Akzeptiert einen Kanal vom Typ, der durch den aktuellen Kanallistener festgelegt wurde.</summary>
+        <returns>Der <see cref="T:System.ServiceModel.Channels.IChannel" />, der vom Listener akzeptiert wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptChannel">
+      <MemberSignature Language="C#" Value="public TChannel AcceptChannel (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TChannel AcceptChannel(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase`1.AcceptChannel(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />, der angibt, welcher Zeitraum für das Akzeptieren von Kanälen bleibt, bevor ein Timeout eintritt.</param>
+        <summary>Akzeptiert innerhalb eines festgelegten Zeitintervalls einen Kanal vom Typ, der durch den aktuellen Kanallistener festgelegt wurde.</summary>
+        <returns>Der <see cref="T:System.ServiceModel.Channels.IChannel" />, der vom Listener akzeptiert wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAcceptChannel">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAcceptChannel (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginAcceptChannel(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase`1.BeginAcceptChannel(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Der <see cref="T:System.TimeSpan" />, der angibt, welcher Zeitraum für das Akzeptieren von Kanälen bleibt, bevor ein Timeout eintritt.</param>
+        <param name="state">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den asynchronen Abschluss des Vorgangs des Akzeptierens des Kanals empfängt.</param>
+        <summary>Startet einen asynchronen Vorgang für das Akzeptieren eines Kanals von dem Typ, der vom aktuellen Kanallistener festgelegt wurde.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />, der auf den asynchronen Vorgang des Akzeptierens eines Kanals verweist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAcceptChannel">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAcceptChannel (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginAcceptChannel(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase`1.BeginAcceptChannel(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />, der angibt, welcher Zeitraum für das Akzeptieren von Kanälen bleibt, bevor ein Timeout eintritt.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den asynchronen Abschluss des Vorgangs des Akzeptierens des Kanals empfängt.</param>
+        <param name="state">Ein von der Anwendung spezifiziertes Objekt, das Zustandsinformationen enthält, die dem asynchronen Vorgang des Akzeptierens des Kanals zugeordnet sind.</param>
+        <summary>Startet bei Implementierung in einer abgeleiteten Klasse innerhalb eines festgelegten Zeitintervalls einen asynchronen Vorgang für das Akzeptieren eines Kanals von dem Typ, der vom aktuellen Kanallistener festgelegt wurde.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />, der auf den asynchronen Vorgang des Akzeptierens eines Kanals verweist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAcceptChannel">
+      <MemberSignature Language="C#" Value="public TChannel EndAcceptChannel (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TChannel EndAcceptChannel(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase`1.EndAcceptChannel(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das durch einen Aufruf der <see cref="Overload:System.ServiceModel.Channels.ChannelListenerBase`1.BeginAcceptChannel" />-Methode zurückgegeben wurde.</param>
+        <summary>Schließt bei Implementierung in einer abgeleiteten Klasse einen asynchronen Vorgang für das Akzeptieren eines Kanals ab.</summary>
+        <returns>Der <see cref="T:System.ServiceModel.Channels.IChannel" />, der vom Listener akzeptiert wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAcceptChannel">
+      <MemberSignature Language="C#" Value="protected abstract TChannel OnAcceptChannel (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance !TChannel OnAcceptChannel(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase`1.OnAcceptChannel(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />, der angibt, welcher Zeitraum für das Akzeptieren von Kanälen bleibt, bevor ein Timeout eintritt.</param>
+        <summary>Stellt bei Implementierung in einer abgeleiteten Klasse einen Erweiterungspunkt beim Akzeptieren eines Kanals bereit.</summary>
+        <returns>Der angenommene <see cref="T:System.ServiceModel.Channels.IChannel" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginAcceptChannel">
+      <MemberSignature Language="C#" Value="protected abstract IAsyncResult OnBeginAcceptChannel (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult OnBeginAcceptChannel(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase`1.OnBeginAcceptChannel(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />, der angibt, welcher Zeitraum für das Akzeptieren von Kanälen bleibt, bevor ein Timeout eintritt.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den asynchronen Abschluss des Vorgangs des Akzeptierens des Kanals empfängt.</param>
+        <param name="state">Ein von der Anwendung spezifiziertes Objekt, das Zustandsinformationen enthält, die dem asynchronen Vorgang des Akzeptierens des Kanals zugeordnet sind.</param>
+        <summary>Stellt bei Implementierung in einer abgeleiteten Klasse einen asynchronen Erweiterungspunkt beim Start des Akzeptierens eines Kanals bereit.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />, der auf den asynchronen Vorgang des Akzeptierens eines Kanals verweist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndAcceptChannel">
+      <MemberSignature Language="C#" Value="protected abstract TChannel OnEndAcceptChannel (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance !TChannel OnEndAcceptChannel(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase`1.OnEndAcceptChannel(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das durch einen Aufruf der <see cref="M:System.ServiceModel.Channels.ChannelListenerBase`1.OnBeginAcceptChannel(System.TimeSpan,System.AsyncCallback,System.Object)" />-Methode zurückgegeben wurde.</param>
+        <summary>Stellt bei Implementierung in einer abgeleiteten Klasse einen asynchronen Erweiterungspunkt beim Abschluss des Akzeptierens eines Kanals bereit.</summary>
+        <returns>Der <see cref="T:System.ServiceModel.Channels.IChannel" />, der vom Listener akzeptiert wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

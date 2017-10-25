@@ -1,0 +1,95 @@
+<Type Name="PageScalingFactorRange" FullName="System.Printing.PageScalingFactorRange">
+  <TypeSignature Language="C#" Value="public sealed class PageScalingFactorRange" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PageScalingFactorRange extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PageScalingFactorRange" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt einen Bereich von Prozentsätzen ein Drucker kann nach denen vergrößern oder verringern Sie das Drucken Bild auf einer Seite.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse in der Regel verwenden, um Skalierungsbereichs anzugeben, die von einem Drucker mit unterstützt wird die <xref:System.Printing.PrintCapabilities.PageScalingFactorRange%2A> Eigenschaft ein <xref:System.Printing.PrintCapabilities> Objekt.  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Printing> Namespace werden nicht für die Verwendung innerhalb einer Windows-Dienst oder der ASP.NET-Anwendung oder der Dienst unterstützt. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen.  
+  
+ Wenn Sie aus einer Windows Forms-Anwendung drucken möchten, finden Sie unter der <xref:System.Drawing.Printing> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MaximumScale">
+      <MemberSignature Language="C#" Value="public int MaximumScale { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumScale" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PageScalingFactorRange.MaximumScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den maximalen Prozentsatz des Bereichs ab.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der einen Prozentsatz darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumScale">
+      <MemberSignature Language="C#" Value="public int MinimumScale { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinimumScale" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PageScalingFactorRange.MinimumScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Mindestprozentsatz des Bereichs ab.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der einen Prozentsatz darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PageScalingFactorRange.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.String" /> Darstellung des Bereichs.</summary>
+        <returns>Ein <see cref="T:System.String" /> Darstellung des Skalierungsbereichs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es wird folgendes Format verwendet:  
+  
+ (<xref:System.Printing.PageScalingFactorRange.MinimumScale%2A>, <xref:System.Printing.PageScalingFactorRange.MaximumScale%2A>)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

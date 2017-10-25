@@ -1,0 +1,115 @@
+<Type Name="IStreamProvider" FullName="System.Xml.IStreamProvider">
+  <TypeSignature Language="C#" Value="public interface IStreamProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IStreamProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.IStreamProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle, die von Klassen, die Streams bereitstellen implementiert werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine ausgehende Nachricht, die einen in einem Stream befindlichen Hauptteil enthält, in einen XML-Writer geschrieben wird, verwendet <xref:System.ServiceModel.Channels.Message> eine Aufrufsequenz, die der folgenden Sequenz in ihrer <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29>-Implementierung ähnlich ist:  
+  
+-   Schreiben Sie alle notwendigen Informationen, die dem Stream vorausgehen (z.&#160;B. das öffnende XML-Tag).  
+  
+-   Schreiben Sie den Stream.  
+  
+-   Schreiben Sie alle Informationen, die nach dem Stream folgen (z.&#160;B. das schließende XML-Tag).  
+  
+ Dies funktioniert gut bei Codierungen, die der Text-XML-Codierung ähnlich sind. Es gibt jedoch einige Codierungen, bei denen XML-Infosetinformationen (z.&#160;B. Tags für startende und endende XML-Elemente) nicht zusammen mit den in den Elementen enthaltenen Daten platziert werden. Zum Beispiel wird bei der MTOM-Codierung die Nachricht in mehrere Teile aufgeteilt. Ein Teil enthält das XML-Infoset, das in Bezug auf tatsächlichen Elementinhalt Verweise auf andere Teile enthalten kann. Da das XML-Infoset für gewöhnlich kleiner ist als der im Stream befindliche Inhalt, bietet es sich an, das Infoset zu puffern, es auszuschreiben und dann den Inhalt gestreamt zu schreiben. Dies bedeutet, dass zu dem Zeitpunkt, zu dem das Tag für das schließende Element geschrieben wird, der Stream noch nicht ausgeschrieben sein sollte.  
+  
+ Zu diesem Zweck wird die <xref:System.Xml.IStreamProvider>-Schnittstelle verwendet. Die Schnittstelle verfügt über eine <xref:System.Xml.IStreamProvider.GetStream> -Methode, die den zu schreibenden Stream zurückgibt. Die richtige Vorgehensweise, um einen in einem Stream befindlichen Nachrichtentext in <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> auszuschreiben, lautet wie folgt:  
+  
+-   Schreiben Sie alle notwendigen Informationen, die dem Stream vorausgehen (z.&#160;B. das öffnende XML-Tag).  
+  
+-   Rufen Sie die `WriteValue`-Überladung in <xref:System.Xml.XmlDictionaryWriter> auf, die <xref:System.Xml.IStreamProvider> mit einer `IStreamProvider`-Implementierung verwendet, die den zu schreibenden Stream zurückgibt.  
+  
+-   Schreiben Sie alle Informationen, die nach dem Stream folgen (z.&#160;B. das schließende XML-Tag).  
+  
+ Auf diese Weise kann der XML-Writer bestimmen, wann <xref:System.Xml.IStreamProvider.GetStream> aufgerufen wird und die im Stream befindlichen Daten ausgeschrieben werden. So rufen die Text-XML-Writer und die binären XML-Writer die Daten zum Beispiel direkt auf und schreiben den im Stream befindlichen Inhalt zwischen die Start- und Endtags. Der MTOM-Writer ruft <xref:System.Xml.IStreamProvider.GetStream> möglicherweise erst dann auf, wenn er zum Schreiben des entsprechenden Nachrichtenteils bereit ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream GetStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IStreamProvider.GetStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Stream ab.</summary>
+        <returns>Ein <see cref="T:System.IO.Stream" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, um den zu schreibenden Stream zurückzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseStream">
+      <MemberSignature Language="C#" Value="public void ReleaseStream (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseStream(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IStreamProvider.ReleaseStream(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Stream, der freigegeben wird.</param>
+        <summary>Gibt einen Stream zur Ausgabe frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

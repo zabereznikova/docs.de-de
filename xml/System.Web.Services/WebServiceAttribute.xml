@@ -1,0 +1,191 @@
+<Type Name="WebServiceAttribute" FullName="System.Web.Services.WebServiceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class WebServiceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebServiceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.WebServiceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verwendet, um weitere Informationen zu einem XML-Webdienst, z. B. eine Zeichenfolge, die seine Funktionalität beschreibt hinzuzufügen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.WebServiceAttribute> ist nicht erforderlich für einen XML-Webdienst veröffentlicht und ausgeführt werden. Sie können die `WebServiceAttribute` einen Namen für den XML-Webdienst an, die nicht von den Regeln für einem common Runtime Sprachbezeichner beschränkt ist, die für den XML-Webdienst in der dienstbeschreibung und die Diensthilfeseite verwendet wird.  
+  
+ Ein XML-Webdienst sollten XML-Standardnamespace ändern, bevor er öffentlich gemacht wird. Jede XML-Webdienst benötigt einen eindeutigen XML-Namespace dienen, damit Clientanwendungen von anderen Diensten im Web unterschieden werden können. http://tempuri.org/ steht für XML-Webdienste, die in der Entwicklungsphase befinden, sondern veröffentlichten XML-Webdienste müssen einen permanenten Namespace verwenden.  
+  
+ Ein XML-Webdienst muss mit einem XML-Namespace identifiziert werden, die Sie steuern. Beispielsweise können Sie Internetdomänennamens Ihres Unternehmens als Teil des XML-Namespace verwenden. Obwohl viele XML-Namespaces für XML-Webdienste wie URLs aussehen, müssen sie nicht für eine aktuelle Ressource im Internet zeigen. (XML-Namespaces für XML-Webdienste sind URIs.) Mithilfe von ASP.NET erstellten XML-Webdienste, die XML-Standardnamespace kann über für geändert werden <xref:System.Web.Services.WebServiceAttribute.Namespace%2A> Eigenschaft.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.Services.WebServiceAttribute.Description%2A> Eigenschaft von der <xref:System.Web.Services.WebServiceAttribute> zu " `Common Server Variables` " und legt den XML-Namespace auf http://www.microsoft.com/ fest.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebServiceAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.WebServiceAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.WebServiceAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultNamespace">
+      <MemberSignature Language="C#" Value="public const string DefaultNamespace;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DefaultNamespace" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.WebServiceAttribute.DefaultNamespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Standardwert für die <see cref="P:System.Web.Services.WebServiceAttribute.Namespace" /> Eigenschaft. Dieses Feld ist konstant.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.WebServiceAttribute.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine beschreibende Meldung für den XML-Webdienst.</summary>
+        <value>Der Text, beschreibt die Funktionen des XML-Webdiensts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beschreibende Meldung angezeigt, potenziellen Consumern des XML-Webdiensts bei der Generierung von Dokumenten für die Beschreibung für den XML-Webdienst z. B. die Beschreibung des Diensts und der Dienst Seite helfen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.Services.WebServiceAttribute.Description%2A> -Eigenschaft auf " `Common Server Variables` ".  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.WebServiceAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des XML-Webdiensts.</summary>
+        <value>Der Name für den XML-Webdienst. Standardwert ist der Name der Klasse, die den XML-Webdienst implementiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Beschreibung des Diensts wird generiert, wenn ein Benutzer zur URL für den XML-Webdienst navigiert und eine Abfragezeichenfolge des stellt? WSDL. In der Dienstbeschreibung der <xref:System.Web.Services.WebServiceAttribute.Name%2A> Eigenschaft identifiziert den lokalen Anteil des qualifizierten XML-Namens für den XML-Webdienst. Die `Name` Eigenschaft wird auch verwendet, um den Namen des XML-Webdiensts auf die Diensthilfeseite anzuzeigen. Die Diensthilfeseite wird angezeigt, wenn ein potenzieller Consumer zur ASMX-Seite für den XML-Webdienst navigiert, ohne Angabe von Namen einer XML-Webdienst und seine Parameter.  
+  
+ Ein qualifizierter XML-Name wird verwendet, um Elemente mit demselben Namen und ein XML-Dokument zu unterscheiden. Ein XML-qualifizierter Name besteht aus den folgenden zwei Teilen, die durch einen Doppelpunkt getrennt: Namespace oder ein Präfix ein Namespace und den lokalen Teil zugeordnet. Der Namespace besteht aus einem URI-Verweis und im Rahmen der Dienstbeschreibung, ist der Wert der <xref:System.Web.Services.WebServiceAttribute.Namespace%2A> Eigenschaft. Im Allgemeinen ist ein Präfix, das wie ein Alias für einen URI fungiert, dem Namespace zugeordnet, damit alle nachfolgenden XML-gekennzeichneten Namen, die mit dem Namespace verkürzte Präfix verwenden können. Der lokale Teil ist eine Zeichenfolge beginnt mit einem Buchstaben oder Unterstrich, die keine Leerzeichen enthalten. Daher ist der qualifizierte XML-Name identifiziert einen XML-Webdienst in der Dienstbeschreibung in folgendem Format ein:  
+  
+ <xref:System.Web.Services.WebServiceAttribute.Namespace%2A> : <xref:System.Web.Services.WebServiceAttribute.Name%2A>  
+  
+ Weitere Informationen zu XML qualifizierte Namen finden Sie unter http://www.w3.org/TR/REC-xml-names/.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Web.Services.WebServiceAttribute.Name%2A> des XML-Webdiensts zu `MyName`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.WebServiceAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den XML-Standardnamespace für den XML-Webdienst verwendet.</summary>
+        <value>Der XML-Standardnamespace für den XML-Webdienst. Die Standardeinstellung ist angegeben, der <see cref="F:System.Web.Services.WebServiceAttribute.DefaultNamespace" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ XML-Namespaces bieten eine Möglichkeit zum Erstellen von Namen in einem XML-Dokument, die durch einen Uniform Resource Identifier (URI) identifiziert werden. Mithilfe von XML-Namespaces können Sie Elemente oder Attribute in einem XML-Dokument eindeutig identifizieren. Die dienstbeschreibung für einen XML-Webdienst wird im XML-Format, insbesondere in Web Services Description Language (WSDL) definiert.  
+  
+ In der Dienstbeschreibung für einen XML-Webdienst <xref:System.Web.Services.WebServiceAttribute.Namespace%2A> als Standardnamespace für XML-Elemente, die direkt für den XML-Webdienst verwendet wird. Der Name des der XML-Webdienst und die XML-Webdienstmethoden beziehen sich z. B. auf den im angegebenen Namespace die `Namespace` Eigenschaft. Elemente, die an WSDL spezifisch sind, beziehen sich auf den Namespace http://schemas.xmlsoap.org/wsdl/.  
+  
+ Für XML-Webdienstclients SOAP verwenden, um einen XML-Webdienst aufrufen, können Sie optional Hinzufügen der <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> oder <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute> eine XML-Webdienstmethode aufrufen. Wenn der Client einen XML-Webdienst erstellt unter Verwendung von ASP.NET aufgerufen wird die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.RequestNamespace%2A>, <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.ResponseNamespace%2A> und <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Action%2A> Eigenschaften sind alle abgeleiteten der <xref:System.Web.Services.WebServiceAttribute.Namespace%2A> Eigenschaft standardmäßig. Beispielsweise erhält eine XML-Methode Webdienstname von `Time` und ein `Namespace` Eigenschaft `http://www.contoso.com/`, die `Action` Eigenschaft ist `http://www.contoso.com/Time` standardmäßig. So ändern Sie die Standardeinstellungen für `RequestNamespace`, `ResponseNamespace`, und `Action` für eine XML-Webdienstmethode fügen Sie eine <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> an die XML-Webdienstmethode.  
+  
+> [!NOTE]
+>  Ein XML-Namespace unterscheidet sich von den Namespace die Klasse befindet sich im, im Hinblick auf die [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)]. Der Namespace für die Klasse angeben, finden Sie unter [Namespace Schlüsselwörter](~/docs/csharp/language-reference/keywords/namespace-keywords.md) Wenn Sie in c# schreiben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Web.Services.WebServiceAttribute.Namespace%2A> auf `http://www.contoso.com` und überschreibt diesen Namespace für die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Action%2A> Eigenschaft durch Hinzufügen einer <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> auf die `Time` XML-Webdienstmethode.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

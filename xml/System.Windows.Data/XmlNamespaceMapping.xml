@@ -1,0 +1,233 @@
+<Type Name="XmlNamespaceMapping" FullName="System.Windows.Data.XmlNamespaceMapping">
+  <TypeSignature Language="C#" Value="public class XmlNamespaceMapping : System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlNamespaceMapping extends System.Object implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.XmlNamespaceMapping" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Deklariert eine Zuordnung zwischen einen uniform Resource Identifier (URI) und ein Präfix an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Deklarieren einer Zuordnung zwischen einer [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] und einem Präfix, erstellen eine <xref:System.Windows.Data.XmlNamespaceMapping> Klasse und fügen Sie diese ein <xref:System.Windows.Data.XmlNamespaceMappingCollection> -Objekt, das verwendet wird, als der <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A> für eine Bindung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlNamespaceMapping ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMapping.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Data.XmlNamespaceMapping" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlNamespaceMapping (string prefix, Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string prefix, class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMapping.#ctor(System.String,System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Präfix für die Verwendung in [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)].</param>
+        <param name="uri">Die <see cref="T:System.Uri" /> des Namespaces, um die Zuordnung erstellen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> Klasse mit dem angegebenen Präfix und [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMapping.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die Instanz auf Gleichheit verglichen werden soll.</param>
+        <summary>Gibt einen Wert, der angibt, ob dies <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> ist gleichbedeutend mit der angegebenen Instanz.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Instanzen gleich sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMapping.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diesen <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> zurück.</summary>
+        <returns>Der Hashcode für diese <see cref="T:System.Windows.Data.XmlNamespaceMapping" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Data.XmlNamespaceMapping mappingA, System.Windows.Data.XmlNamespaceMapping mappingB);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Windows.Data.XmlNamespaceMapping mappingA, class System.Windows.Data.XmlNamespaceMapping mappingB) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMapping.op_Equality(System.Windows.Data.XmlNamespaceMapping,System.Windows.Data.XmlNamespaceMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mappingA" Type="System.Windows.Data.XmlNamespaceMapping" />
+        <Parameter Name="mappingB" Type="System.Windows.Data.XmlNamespaceMapping" />
+      </Parameters>
+      <Docs>
+        <param name="mappingA">Das erste zu vergleichende <see cref="T:System.Windows.Data.XmlNamespaceMapping" />-Objekt.</param>
+        <param name="mappingB">Das zweite zu vergleichende <see cref="T:System.Windows.Data.XmlNamespaceMapping" />-Objekt.</param>
+        <summary>Führt Vergleiche auf Gleichheit anhand des Werts an.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> -Objekte identisch sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Windows.Data.XmlNamespaceMapping.Equals*?displayProperty=nameWithType>. ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Data.XmlNamespaceMapping mappingA, System.Windows.Data.XmlNamespaceMapping mappingB);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Windows.Data.XmlNamespaceMapping mappingA, class System.Windows.Data.XmlNamespaceMapping mappingB) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMapping.op_Inequality(System.Windows.Data.XmlNamespaceMapping,System.Windows.Data.XmlNamespaceMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mappingA" Type="System.Windows.Data.XmlNamespaceMapping" />
+        <Parameter Name="mappingB" Type="System.Windows.Data.XmlNamespaceMapping" />
+      </Parameters>
+      <Docs>
+        <param name="mappingA">Das erste zu vergleichende <see cref="T:System.Windows.Data.XmlNamespaceMapping" />-Objekt.</param>
+        <param name="mappingB">Das zweite zu vergleichende <see cref="T:System.Windows.Data.XmlNamespaceMapping" />-Objekt.</param>
+        <summary>Führt einen Ungleichheitsvergleich nach Wert.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> Objekte sind nicht identisch ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist die Negation des <xref:System.Windows.Data.XmlNamespaceMapping.Equals%2A?displayProperty=nameWithType>. ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public string Prefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prefix" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.XmlNamespaceMapping.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Präfix für die Verwendung in [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)].</summary>
+        <value>Das Präfix, das Zuordnen der [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)]. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.BeginInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.ISupportInitialize.BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMapping.System#ComponentModel#ISupportInitialize#BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.EndInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.ISupportInitialize.EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMapping.System#ComponentModel#ISupportInitialize#EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public Uri Uri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.XmlNamespaceMapping.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Uri" /> des Namespaces für die eine Zuordnung erstellt.</summary>
+        <value>Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des Namespaces. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,418 @@
+<Type Name="DeviceSpecificChoice" FullName="System.Web.UI.MobileControls.DeviceSpecificChoice">
+  <TypeSignature Language="C#" Value="public class DeviceSpecificChoice : System.Web.UI.IAttributeAccessor, System.Web.UI.IParserAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DeviceSpecificChoice extends System.Object implements class System.Web.UI.IAttributeAccessor, class System.Web.UI.IParserAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.DeviceSpecificChoice" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IAttributeAccessor</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IParserAccessor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.MobileControls.DeviceSpecificChoiceControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.MobileControls.PersistName("Choice")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine einzelne Auswahl in einem DeviceSpecific/Choice-Konstrukt. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ist analog zu den [ \<Choice >](http://msdn.microsoft.com/en-us/c81bee77-bb45-4211-be0f-e13a040b3c2d) Element. Auswahlmöglichkeiten werden überprüft, in der Reihenfolge, die sie innerhalb einer [ \<DeviceSpecific >](http://msdn.microsoft.com/en-us/5984e67a-91cf-4f32-8815-7e7fab3d3b5b) Element. Bei Angabe der <xref:System.Web.UI.MobileControls.DeviceSpecificChoice.Filter%2A> Eigenschaft von der `<Choice>` -Element, dessen Wert der Name für ein Gerätefilter definiert sein der `<deviceFilters>` Abschnitt der Datei "Machine.config". Zur Laufzeit wertet ASP.NET die angegebenen Gerätefilter gegenüber den Möglichkeiten des aktuellen Geräts. Bei Erfolg wird die Auswahl. Wenn Sie keinen angeben der <xref:System.Web.UI.MobileControls.DeviceSpecificChoice.Filter%2A> -Eigenschaft, die Standardwerte für die `<Choice>` Element ausgewählt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine `<Choice>` Element innerhalb eines Bildes. Die `Source` -Attribut überschreibt die <xref:System.Web.UI.MobileControls.Image.ImageUrl%2A> Eigenschaft von der <xref:System.Web.UI.MobileControls.Image> Steuerelement.  
+  
+ Obwohl das Beispiel Funktionen verwendet, um zu bestimmen, ob der Browser WML erfordert (`isWML11`) oder Farben unterstützt (`supportsColor`), Sie können stattdessen eine Datei "Web.config" verwenden, um zu definieren eine `<DeviceSpecific>` Element, das .NET Framework automatisch verwendet vornehmen der Bestimmung für Sie.  
+  
+  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen finden Sie unter [ASP.NET Web Forms-Seite Syntaxübersicht](http://msdn.microsoft.com/library/09074b20-ece9-46fa-bc8f-ab2595ed2c02).  
+  
+ [!code-aspx-csharp[MobileDeviceSpecificChoiceSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileDeviceSpecificChoiceSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobileDeviceSpecificChoiceSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileDeviceSpecificChoiceSample/vb/Default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">Für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeviceSpecificChoice ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.DeviceSpecificChoice.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.DeviceSpecificChoice" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParsedSubObject">
+      <MemberSignature Language="C#" Value="protected void AddParsedSubObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddParsedSubObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.DeviceSpecificChoice.AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt hinzugefügt werden.</param>
+        <summary>Fügt der <see cref="T:System.Object" /> auf die <see cref="T:System.Web.UI.MobileControls.DeviceSpecificChoice" /> des Objekts <see cref="P:System.Web.UI.MobileControls.DeviceSpecificChoice.Templates" /> Objekt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet und ist nicht zur allgemeinen Verwendung vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Argument">
+      <MemberSignature Language="C#" Value="public string Argument { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Argument" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.DeviceSpecificChoice.Argument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie als Argument für eine <see cref="P:System.Web.UI.MobileControls.DeviceSpecificChoice.Filter" /> Eigenschaft. Der Standardwert ist <see langword="null" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das Argument für eine <see cref="P:System.Web.UI.MobileControls.DeviceSpecificChoice.Filter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Filter ist ein Vergleichsfilter den Wert der <xref:System.Web.UI.MobileControls.DeviceSpecificChoice.Argument%2A> wird verwendet, statt den Argumentwert in "Web.config" definiert. Wenn der Wert der <xref:System.Web.UI.MobileControls.DeviceSpecificChoice.Filter%2A> ist der Name einer Methode (auf der Seite oder off in einer Assembly, auf die Datei "Web.config"), den Wert des <xref:System.Web.UI.MobileControls.DeviceSpecificChoice.Argument%2A> als Argument an diese Methode angegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contents">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary Contents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Contents" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.DeviceSpecificChoice.Contents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die außer Kraft gesetzten Eigenschaften, die für eine Auswahl in einem DeviceSpecific/Choice-Konstrukt definiert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Erstellen die außer Kraft gesetzten Eigenschaften, die für eine Auswahl in einem DeviceSpecific/Choice definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Auflistung ändern, nachdem außer Kraft gesetzte Eigenschaften verarbeitet wurden (in der <xref:System.Web.UI.MobileControls.MobilePage.OnDeviceCustomize%2A> Methode) hat keine Auswirkungen. Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet und ist nicht zur allgemeinen Verwendung vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public string Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.DeviceSpecificChoice.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Filters. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Name eines Gerätefilters. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Filtername muss den Namen einer Methode auf der Seite in der zugeordneten `.ascx` Datei oder den Namen eines Filters gültiges Gerät definiert, der <`deviceFilters`> Abschnitt der Datei "Web.config". Wenn Namen einer Methode angegeben wird, mit der <xref:System.Web.UI.MobileControls.DeviceSpecificChoice.Filter%2A> -Eigenschaft, die Methode muss den folgenden Prototyp übereinstimmen.  
+  
+```  
+public bool methodName(System.Web.Mobile.MobileCapabilities   
+    capabilities, String optionalArgument)  
+```  
+  
+ Z. B. wenn die <xref:System.Web.UI.MobileControls.DeviceSpecificChoice.Filter%2A> -Eigenschaft wurde festgelegt, um `myChoiceMethod`, eine Methode mit der folgenden Signatur muss vorhanden sein.  
+  
+```  
+public bool myChoiceMethod(System.Web.Mobile.MobileCapabilities   
+    capabilities, String optionalArgument);  
+```  
+  
+ Beim Auswerten der [ \<Choice >](http://msdn.microsoft.com/en-us/c81bee77-bb45-4211-be0f-e13a040b3c2d) -Element, wird überprüft, um zu bestimmen, ob eine Methode mit der entsprechenden Signatur auf der Seite vorhanden ist. Wenn nicht der Fall, überprüft der ASP.NET die <`deviceFilters`> Abschnitt der Datei "Web.config".  
+  
+> [!NOTE]
+>  Gerätefilter Groß-/Kleinschreibung beachtet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttribute">
+      <MemberSignature Language="C#" Value="protected string GetAttribute (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetAttribute(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.DeviceSpecificChoice.GetAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des abzurufenden Attributs.</param>
+        <summary>Gibt das angegebene Attribut aus der <see cref="T:System.Web.UI.MobileControls.DeviceSpecificChoice" /> Objekt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Ein <see cref="T:System.String" /> , den Wert des angegebenen Attributs enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Kein Attribut vorhanden ist, in dem Objekt identifizierten <paramref name="key" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasTemplates">
+      <MemberSignature Language="C#" Value="public bool HasTemplates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasTemplates" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.DeviceSpecificChoice.HasTemplates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das derzeit ausgewählte Element in der [ &lt;DeviceSpecific&gt; ](http://msdn.microsoft.com/en-us/5984e67a-91cf-4f32-8815-7e7fab3d3b5b) Element verfügt über Vorlagen definiert sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn die aktuelle Auswahl Vorlagen definiert wurde; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAttribute">
+      <MemberSignature Language="C#" Value="protected void SetAttribute (string key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetAttribute(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.DeviceSpecificChoice.SetAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des festzulegenden Attributs.</param>
+        <param name="value">Der Wert, der dem Attribut zugewiesen wird.</param>
+        <summary>Weist den angegebenen Wert für das Attribut, das durch den Schlüssel angegeben. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IAttributeAccessor.GetAttribute">
+      <MemberSignature Language="C#" Value="string IAttributeAccessor.GetAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.Web.UI.IAttributeAccessor.GetAttribute(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.DeviceSpecificChoice.System#Web#UI#IAttributeAccessor#GetAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Attributs festgelegt werden.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IAttributeAccessor.GetAttribute(System.String)" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Ein <see cref="T:System.String" /> , den Wert des angegebenen Attributs enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert des Attributs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IAttributeAccessor.SetAttribute">
+      <MemberSignature Language="C#" Value="void IAttributeAccessor.SetAttribute (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IAttributeAccessor.SetAttribute(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.DeviceSpecificChoice.System#Web#UI#IAttributeAccessor#SetAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Attributs festgelegt werden.</param>
+        <param name="value">Der Wert, der dem Attribut zugewiesen ist.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IAttributeAccessor.SetAttribute(System.String,System.String)" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.MobileControls.DeviceSpecificChoice>-Instanz in eine <xref:System.Web.UI.IAttributeAccessor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IParserAccessor.AddParsedSubObject">
+      <MemberSignature Language="C#" Value="void IParserAccessor.AddParsedSubObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IParserAccessor.AddParsedSubObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.DeviceSpecificChoice.System#Web#UI#IParserAccessor#AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt hinzugefügt werden.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IParserAccessor.AddParsedSubObject(System.Object)" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.MobileControls.DeviceSpecificChoice>-Instanz in eine <xref:System.Web.UI.IParserAccessor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Templates">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary Templates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Templates" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.DeviceSpecificChoice.Templates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vorlagen, die im definiert wurden die [ &lt;Wahl&gt; ](http://msdn.microsoft.com/en-us/c81bee77-bb45-4211-be0f-e13a040b3c2d) Element. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein <see cref="T:System.Collections.IDictionary" /> Instanz mit der <see cref="T:System.Web.UI.ITemplate" /> Objekte definiert, die für die <see langword="&lt;Choice&gt;" /> Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Xmlns">
+      <MemberSignature Language="C#" Value="public string Xmlns { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Xmlns" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.DeviceSpecificChoice.Xmlns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des Markups in einem [ &lt;Wahl&gt; ](http://msdn.microsoft.com/en-us/c81bee77-bb45-4211-be0f-e13a040b3c2d) Element. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Typ des Markups in Vorlagen einer Auswahl.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird hauptsächlich von Steuerelemententwicklern verwendet und ist nicht für die Verwendung durch Entwickler vorgesehen. Die <xref:System.Web.UI.MobileControls.DeviceSpecificChoice.Xmlns%2A> Wert wird von der enthaltenden Steuerelement oder die Seite geerbt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

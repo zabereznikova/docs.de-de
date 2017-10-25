@@ -1,0 +1,275 @@
+<Type Name="ImportAttribute" FullName="System.ComponentModel.Composition.ImportAttribute">
+  <TypeSignature Language="C#" Value="public class ImportAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImportAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.ImportAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine Eigenschaft, ein Feld oder Parameter vom bereitgestellt werden sollte die <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />-Objekt gespeichertes</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Modell attributierten Programmierung der <xref:System.ComponentModel.Composition.ImportAttribute> wird verwendet, um die Importe oder Abhängigkeiten, eines bestimmten Teils zu deklarieren. Es kann eine Eigenschaft, ein Feld oder eine Methode ergänzen. Während der Komposition Importe eines Teils von ausgefüllt werden die <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> Objekt, zu dem dieses Element gehört, mit den Exporten, <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> Objekt.  
+  
+ Ob ein Import mit einem angegebenen Export übereinstimmt wird bestimmt, in erster Linie durch den Vergleich der Name des Vertrags und der Typ des Vertrags. Normalerweise Sie keine einer von beiden angeben, wenn der Importattribut im Code zu verwenden, und sie werden automatisch vom Typ des ergänzten Members abgeleitet. Der Import einen Export eines anderen Typs (z. B. eine Unterklasse des Typs des ergänzten Members oder eine Schnittstelle implementiert, die von diesem Element) übereinstimmen muss, muss der Vertragstyp explizit angegeben werden. Der Name des Vertrags kann auch explizit angegeben werden, z. B. zur Unterscheidung zwischen mehreren Verträgen mit dem gleichen Typ, aber es ist in der Regel besser, hierzu über Metadaten. Weitere Informationen zu Metadaten finden Sie unter <xref:System.ComponentModel.Composition.PartMetadataAttribute>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt drei Klassen mit Membern der <xref:System.ComponentModel.Composition.ImportAttribute>, und drei Exporte, die sie entsprechen.  
+  
+ [!code-csharp[ImportAndExport#1](~/samples/snippets/csharp/VS_Snippets_Misc/importandexport/cs/program.cs#1)]
+ [!code-vb[ImportAndExport#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/importandexport/vb/module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ImportAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.ImportAttribute" /> Klasse, wobei der Export mit dem Standardnamen für den Vertrag.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name des Vertrags ist das Ergebnis des Aufrufs der <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> Methode für die Eigenschaft, ein Feld oder Parameter-Typ, der mit diesem Attribut gekennzeichnet ist.  
+  
+ Der Name des Vertrags wird verglichen mit der <xref:System.StringComparer.Ordinal%2A> Eigenschaft, um einen Groß-/Kleinschreibung beachtet, nicht linguistischen Vergleich auszuführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportAttribute (string contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ImportAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contractName">Der Vertragsname des Exports für den import oder <see langword="null" /> oder eine leere Zeichenfolge ("") der Name des Vertrags zu verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.ImportAttribute" /> Klasse, wobei der Export mit dem angegebenen Vertragsnamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name des Vertrags ist das Ergebnis des Aufrufs der <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> Methode für die Eigenschaft, ein Feld oder Parameter-Typ, der mit diesem Attribut gekennzeichnet ist.  
+  
+ Der Name des Vertrags wird verglichen mit der <xref:System.StringComparer.Ordinal%2A> Eigenschaft, um einen Groß-/Kleinschreibung beachtet, nicht linguistischen Vergleich auszuführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportAttribute (Type contractType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type contractType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ImportAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contractType">Der Typ, den Vertragsnamen des Exports abgeleitet werden oder <see langword="null" /> der Name des Vertrags zu verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.ImportAttribute" /> abgeleitete Klasse, importieren den Export mit dem Vertragsnamen, aus dem angegebenen Typ.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name des Vertrags ist das Ergebnis des Aufrufs der <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> Methode `contractType`.  
+  
+ Der Name des Vertrags ist das Ergebnis des Aufrufs der <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> Methode für die Eigenschaft, ein Feld oder Parameter-Typ, der mit diesem Attribut gekennzeichnet ist.  
+  
+ Der Name des Vertrags wird verglichen mit der <xref:System.StringComparer.Ordinal%2A> Eigenschaft, um einen Groß-/Kleinschreibung beachtet, nicht linguistischen Vergleich auszuführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportAttribute (string contractName, Type contractType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string contractName, class System.Type contractType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ImportAttribute.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+        <Parameter Name="contractType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contractName">Der Vertragsname des Exports für den import oder <see langword="null" /> oder eine leere Zeichenfolge ("") der Name des Vertrags zu verwenden.</param>
+        <param name="contractType">Der Typ des Exports zu importieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.ImportAttribute" /> Klasse, wobei der Export mit dem angegebenen Vertragsnamen und Typ.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowDefault">
+      <MemberSignature Language="C#" Value="public bool AllowDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowDefault" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ImportAttribute.AllowDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Eigenschaft, ein Feld oder Parameter auf den Standardwert des entsprechenden Typs festgelegt werden, wenn ein Export mit dem Vertragsnamen nicht im Container vorhanden ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Eigenschaft, ein Feld oder Parameter auf den Standardwert des entsprechenden Typs festgelegt werden, wenn es ist kein Export mit dem <see cref="P:System.ComponentModel.Composition.ImportAttribute.ContractName" /> in der <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für den Typ, der eine Eigenschaft, ein Feld oder Parameter ist `null` für Referenztypen und 0 (null) für numerische Werttypen. Für andere Werttypen wird der Standardwert jedes Feld des Werttyps, die mit 0 (null) initialisiert werden, wenn das Feld ein Werttyp ist, ist sein oder `null` , wenn das Feld ein Verweistyp ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowRecomposition">
+      <MemberSignature Language="C#" Value="public bool AllowRecomposition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowRecomposition" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ImportAttribute.AllowRecomposition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Eigenschaft oder ein Feld neu erstellt wird, wenn Exporte mit einem entsprechenden Vertrag im Container geändert haben.</summary>
+        <value>
+          <see langword="true" />Wenn die Eigenschaft oder des Felds ermöglicht das Zurücksetzen bei mit einem übereinstimmenden Exporte <see cref="P:System.ComponentModel.Composition.ImportAttribute.ContractName" /> hinzugefügt oder daraus entfernt werden die <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractName">
+      <MemberSignature Language="C#" Value="public string ContractName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContractName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ImportAttribute.ContractName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Vertragsnamen der zu importierenden Exports ab.</summary>
+        <value>Der Vertragsname des Exports zu importieren. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractType">
+      <MemberSignature Language="C#" Value="public Type ContractType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ContractType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ImportAttribute.ContractType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Exports zu importieren.</summary>
+        <value>Der Typ des Exports zu importieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredCreationPolicy">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.CreationPolicy RequiredCreationPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.Composition.CreationPolicy RequiredCreationPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ImportAttribute.RequiredCreationPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.CreationPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, dass der Importer ein bestimmtes <see cref="T:System.ComponentModel.Composition.CreationPolicy" /> für die Exporte verwendet, um diesem Import zu erfüllen.</summary>
+        <value>Einer der folgenden Werte:  
+  
+ <see cref="F:System.ComponentModel.Composition.CreationPolicy.Any" />, wenn das Importprogramm nicht mit einen bestimmten erfordert <see cref="T:System.ComponentModel.Composition.CreationPolicy" />. Dies ist die Standardeinstellung.  
+  
+ <see cref="F:System.ComponentModel.Composition.CreationPolicy.Shared" />um festzulegen, dass alle verwendeten Exporte von allen Teilen im Container gemeinsam genutzt werden.  
+  
+ <see cref="F:System.ComponentModel.Composition.CreationPolicy.NonShared" />erforderlich ist, dass alle verwendeten Exporte nicht in einem Container freigegeben werden. In diesem Fall erhält jeder Teil eine eigene Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.ImportSource Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.Composition.ImportSource Source" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ImportAttribute.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.ImportSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die Bereiche angibt, von denen dieser Import erfüllt werden kann.</summary>
+        <value>Ein Wert, der die Bereiche angibt, von denen dieser Import erfüllt werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

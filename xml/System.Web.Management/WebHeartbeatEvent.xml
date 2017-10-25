@@ -1,0 +1,90 @@
+<Type Name="WebHeartbeatEvent" FullName="System.Web.Management.WebHeartbeatEvent">
+  <TypeSignature Language="C#" Value="public class WebHeartbeatEvent : System.Web.Management.WebManagementEvent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebHeartbeatEvent extends System.Web.Management.WebManagementEvent" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebHeartbeatEvent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Management.WebManagementEvent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Systemüberwachung Ereignisse, die in regelmäßigen Abständen ausgelöst.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET-Systemüberwachung kann Produktions- und Vorgänge Mitarbeiter bereitgestellte Webanwendungen verwalten. Die <xref:System.Web.Management> Namespace enthält die integritätsereignis Typen, die verantwortlich für das Verpacken Integritätsstatus Anwendungsdaten und die Anbietertypen, die für die Verarbeitung dieser Daten verantwortlich. Darüber hinaus wird die unterstützende Typen, mit denen bei der Verwaltung von integritätsereignisse enthält.  
+  
+ Die Systemüberwachung frequenzermittlungsereignisse dienen als Zeitgeber für das ASP.NET Systemüberwachung System. Sie werden ausgelöst, in einem Intervall von definiert die `heartBeatInterval` Attribut der `healthMonitoring` Konfigurationsabschnitt. Die <xref:System.Web.Management.WebHeartbeatEvent> verwendet die <xref:System.Web.Management.WebProcessStatistics> Klasse zum Abrufen von Prozessinformationen.  
+  
+> [!NOTE]
+>  In den meisten Fällen werden Sie die ASP.NET Systemüberwachung Typen verwenden, wie implementiert, und Sie werden das System Systemüberwachung steuern, durch Angeben von Werten in der `healthMonitoring` Konfigurationsabschnitt. Sie können auch aus den Typen Systemüberwachung, erstellen Sie eine eigene benutzerdefinierte Ereignisse und Anbieter ableiten.  
+  
+   
+  
+## Examples  
+ Der folgende Auszug aus der Konfigurationsdatei wird die Konfiguration für die <xref:System.Web.Management.EventLogWebEventProvider> damit Takt integritätsereignisse behandelt werden kann.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.Management.EventLogWebEventProvider> und der Takt Integrität Ereignistypen Überwachen standardmäßig konfiguriert werden. Das einzige müssen Sie nur ist die Regel zum Überwachen der Integrität frequenzermittlungsereignisse definieren. Denken Sie daran, dass standardmäßig nur die Fehler Überwachungen protokolliert werden.  
+  
+```  
+<healthMonitoring   
+  enabled="true" heartbeatInterval="100">  
+  <rules>  
+    <add name="Heart Beat Events"  
+      eventName="Heartbeats"  
+      provider="EventLogProvider"  
+      profile="Default"  
+      minInterval="00:01:00" />  
+  </rules>  
+</healthMonitoring>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebHeartbeatEvent (string message, int eventCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, int32 eventCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebHeartbeatEvent.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">die Beschreibung des Ereignisses.</param>
+        <param name="eventCode">Der Code, der dem Ereignis zugeordnet wird. Wenn Sie ein benutzerdefiniertes Ereignis implementieren, der Ereigniscode muss größer sein als <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Management.WebHeartbeatEvent" /> Klasse mit der angegebenen Meldung und Ereignisinformationen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessStatistics">
+      <MemberSignature Language="C#" Value="public System.Web.Management.WebProcessStatistics ProcessStatistics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Management.WebProcessStatistics ProcessStatistics" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebHeartbeatEvent.ProcessStatistics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Management.WebProcessStatistics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält wichtigsten Informationen zu den laufenden Prozess an.</summary>
+        <value>Die <see cref="T:System.Web.Management.WebProcessStatistics" /> für den laufenden Prozess.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

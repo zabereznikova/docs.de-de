@@ -1,0 +1,66 @@
+<Type Name="SeriesCollection" FullName="System.Web.UI.DataVisualization.Charting.SeriesCollection">
+  <TypeSignature Language="C#" Value="public class SeriesCollection : System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection&lt;System.Web.UI.DataVisualization.Charting.Series&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SeriesCollection extends System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection`1&lt;class System.Web.UI.DataVisualization.Charting.Series&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.SeriesCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection&lt;System.Web.UI.DataVisualization.Charting.Series&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Web.UI.DataVisualization.Charting.Series</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Web.UI.DataVisualization.Charting.Series" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.SeriesCollection> Klasse stellt eine Auflistung von <xref:System.Web.UI.DataVisualization.Charting.Series> Objekte, die wiederum eine Gruppierung von Datenpunkten und die Attribute für die Reihe darstellen. Diese Auflistungsklasse wird als implementiert die <xref:System.Web.UI.DataVisualization.Charting.Chart.Series%2A> Auflistungseigenschaft des Stamms <xref:System.Web.UI.DataVisualization.Charting.Chart> Objekt.  
+  
+ Series-Objekte können angefügt, eingefügt oder entfernt aus der Auflistung zur Entwurfszeit und zur Laufzeit.  
+  
+ Wenn die Auflistung eine Reihe hinzugefügt wird, wird es automatisch zugewiesen, die <xref:System.Web.UI.DataVisualization.Charting.ChartArea> Objekt mit dem Namen "Default" oder "Default" auf die erste verfügbare Diagrammfläche in der diagrammflächenauflistung nicht vorhanden ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.Series Add (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.Series Add(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.SeriesCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.Series</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.Web.UI.DataVisualization.Charting.Series" /> hinzugefügt werden.</param>
+        <summary>Fügt eine <see cref="T:System.Web.UI.DataVisualization.Charting.Series" /> Objekt mit dem angegebenen Namen am Ende der Auflistung.</summary>
+        <returns>Die neue <see cref="T:System.Web.UI.DataVisualization.Charting.Series" /> Objekt, das auf die Auflistung angefügt. .</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elemente werden immer als das letzte Element in der Auflistung hinzugefügt.  
+  
+ Die `name` -Argument bezieht sich auf die `Name` -Eigenschaft des Objekts hinzugefügt wird.  
+  
+ **Hinweis** bei Verwendung dieser Methode hinzufügen <xref:System.Web.UI.DataVisualization.Charting.Series> -Objekte und die <xref:System.Web.UI.DataVisualization.Charting.SeriesCollection> Klasse, die zugeordnete <xref:System.Web.UI.DataVisualization.Charting.DataPoint> Objekte der neu hinzugefügten <xref:System.Web.UI.DataVisualization.Charting.Series> Objekt kann nicht mehr als einen Y-Wert pro Datenpunkt verfügen. Um eine Reihe hinzuzufügen, die mehrere Y-Werte pro Datenpunkt verarbeiten kann, verwenden die <xref:System.Web.UI.DataVisualization.Charting.SeriesCollection.Add%2A> System.Int32)?qualifyHint=False & AutoUpgrade = "true" Definition dieser überladenen Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

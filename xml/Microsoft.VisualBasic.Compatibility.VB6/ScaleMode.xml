@@ -1,0 +1,129 @@
+<Type Name="ScaleMode" FullName="Microsoft.VisualBasic.Compatibility.VB6.ScaleMode">
+  <TypeSignature Language="C#" Value="public enum ScaleMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ScaleMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Konstanten für die Kompatibilität mit der <see langword="ScaleMode" /> Konstanten in Visual Basic 6.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Visual Basic 6.0 `ScaleMode` Konstanten wurden zur Darstellung von verschiedenen Maßeinheiten für die `ScaleMode` Eigenschaft. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]die `ScaleMode` Eigenschaft wird nicht mehr unterstützt, und diese Konstanten sind nicht mehr erforderlich. Diese Konstanten unterstützen Code, der von Visual Basic 6.0 auf weiterhin ausgeführt, ohne zusätzliche Änderung aktualisiert wurde.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind nur notwendig, wenn das Visual Basic 6.0-Codemodell sich maßgeblich von der .NET Framework-Implementierung unterscheidet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Centimeters">
+      <MemberSignature Language="C#" Value="Centimeters" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ScaleMode Centimeters = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode.Centimeters" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ScaleMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Visual Basic 6.0-Konstante entspricht <see langword="vbCentimeters" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Characters">
+      <MemberSignature Language="C#" Value="Characters" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ScaleMode Characters = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode.Characters" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ScaleMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Visual Basic 6.0-Konstante entspricht <see langword="vbCharacters" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Himetric">
+      <MemberSignature Language="C#" Value="Himetric" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ScaleMode Himetric = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode.Himetric" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ScaleMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Visual Basic 6.0-Konstante entspricht <see langword="vbHimetric" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inches">
+      <MemberSignature Language="C#" Value="Inches" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ScaleMode Inches = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode.Inches" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ScaleMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Visual Basic 6.0-Konstante entspricht <see langword="vbInches" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Millimeters">
+      <MemberSignature Language="C#" Value="Millimeters" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ScaleMode Millimeters = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode.Millimeters" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ScaleMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Visual Basic 6.0-Konstante entspricht <see langword="vbMillimeters" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Points">
+      <MemberSignature Language="C#" Value="Points" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ScaleMode Points = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode.Points" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ScaleMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Visual Basic 6.0-Konstante entspricht <see langword="vbPoints" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

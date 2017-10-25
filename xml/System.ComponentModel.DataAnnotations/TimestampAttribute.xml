@@ -1,0 +1,60 @@
+<Type Name="TimestampAttribute" FullName="System.ComponentModel.DataAnnotations.TimestampAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TimestampAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TimestampAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.TimestampAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Datentyp der Spalte als Zeilenversion an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Zeilentyp Version (auch bekannt als eine Sequenznummer) ist eine binäre Zahl, die garantiert in der Datenbank eindeutig sein. Es stellt keine tatsächliche Zeit dar. Zeilenversionsdaten hat keine visuellen Bedeutung. Aus diesem Grund, dass bei der <xref:System.ComponentModel.DataAnnotations.TimestampAttribute> Attribut mit einem Dynamic Data-Feld verwendet wird, die Spalte wird nicht angezeigt, es sei denn, die <xref:System.ComponentModel.DataAnnotations.ScaffoldColumnAttribute> -Attribut der Spalte explizit auf festgelegt `true`.  
+  
+ Weitere Informationen finden Sie unter [Rowversion](http://msdn.microsoft.com/en-us/65c9cf0e-3e8a-45f8-87b3-3460d96afb0b).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TimestampAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.TimestampAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DataAnnotations.TimestampAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,168 @@
+<Type Name="VisualStyleElement+ScrollBar+ThumbButtonHorizontal" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+ScrollBar+ThumbButtonHorizontal">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.ScrollBar.ThumbButtonHorizontal" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/ScrollBar/ThumbButtonHorizontal extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar.ThumbButtonHorizontal" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> Objekte für jeden Status der ein horizontales Bildlauffeld (Ziehpunkt). Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Eigenschaft von der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar.ThumbButtonHorizontal> -Klasse zurückgegeben wird ein <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für einen anderen Zustand eines Felds horizontalen Bildlaufleiste.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar.ThumbButtonHorizontal.Normal%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementScrollBarThumbButtonHorizontal1` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#81](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#81)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#81](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#81)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Disabled">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Disabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Disabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar.ThumbButtonHorizontal.Disabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuelles Stilelement aus, das eine horizontale Bildlaufleiste im deaktivierten Zustand darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> , ein horizontales Bildlauffeld im deaktivierten Zustand darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar.ThumbButtonHorizontal.Disabled%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar.ThumbButtonHorizontal.Disabled%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementScrollBarThumbButtonHorizontal4` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#84](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#84)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#84](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#84)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hot">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Hot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Hot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar.ThumbButtonHorizontal.Hot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuelles Stilelement aus, das eine horizontale Bildlaufleiste im aktiven Zustand darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> , ein horizontales Bildlauffeld im aktiven Zustand darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar.ThumbButtonHorizontal.Hot%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar.ThumbButtonHorizontal.Hot%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die  
+  
+ `DrawVisualStyleElementScrollBarThumbButtonHorizontal2`die Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#82](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#82)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#82](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#82)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Normal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Normal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar.ThumbButtonHorizontal.Normal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuelles Stilelement aus, das einen horizontalen Bildlauf in den Zustand "normal" darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> , ein horizontaler Bildlauf in den Zustand "normal" darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar.ThumbButtonHorizontal.Normal%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar.ThumbButtonHorizontal.Normal%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementScrollBarThumbButtonHorizontal1` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#81](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#81)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#81](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#81)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pressed">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Pressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Pressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar.ThumbButtonHorizontal.Pressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuelles Stilelement aus, das eine horizontale Bildlaufleiste im gedrückten Zustand darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> , ein horizontaler Bildlauf in den Zustand "gedrückt" darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar.ThumbButtonHorizontal.Pressed%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar.ThumbButtonHorizontal.Pressed%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementScrollBarThumbButtonHorizontal3` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#83](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#83)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#83](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#83)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

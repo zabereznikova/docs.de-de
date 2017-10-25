@@ -1,0 +1,600 @@
+<Type Name="PeerNameResolver" FullName="System.Net.PeerToPeer.PeerNameResolver">
+  <TypeSignature Language="C#" Value="public class PeerNameResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi PeerNameResolver extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.PeerNameResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt die Werte, die aufgelöst werden eine <see cref="T:System.Net.PeerToPeer.PeerName" /> auf eine <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> mit dem PNRP Namespace Provider-API-Protokoll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Net.PeerToPeer.PeerNameRecord> enthält alle Informationen für die <xref:System.Net.PeerToPeer.PeerName> , veröffentlicht wurde, der <xref:System.Net.PeerToPeer.Cloud> oder Wolken, die während des Prozesses Resolve abgefragt wurden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PeerNameResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameResolver.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Standardinstanz der <see cref="T:System.Net.PeerToPeer.PeerNameResolver" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachdem Sie erfolgreich behoben eine <xref:System.Net.PeerToPeer.PeerName>, die <xref:System.Net.PeerToPeer.PeerNameRecord> enthält alle Informationen für den angegebenen <xref:System.Net.PeerToPeer.PeerNameRecord.PeerName%2A> , die in den Wolken, die während der abgefragt wurden veröffentlicht wurde die <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnResolveCompleted">
+      <MemberSignature Language="C#" Value="protected void OnResolveCompleted (System.Net.PeerToPeer.ResolveCompletedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnResolveCompleted(class System.Net.PeerToPeer.ResolveCompletedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameResolver.OnResolveCompleted(System.Net.PeerToPeer.ResolveCompletedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Net.PeerToPeer.ResolveCompletedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Das <see cref="T:System.Net.PeerToPeer.ResolveCompletedEventArgs" />-Objekt, das die Ereignisdaten enthält, die vom <see cref="E:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted" />-Ereignis zurückgegeben werden.</param>
+        <summary>Gibt die Peerauflösungsdaten zurück, nachdem das <see cref="E:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted" />-Ereignis ausgelöst wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist ein asynchroner Rückruf, der zum Verarbeiten von Peer Name Resolution-Daten nach Abschluss der Peer-Auflösung verwendet.  
+  
+ Abgeleitete Typen können dies außer Kraft setzen Methode, um zusätzliche führen Vorgänge fest, wenn die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted> Ereignis wird durch die Peerresolverobjekt ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnResolveProgressChanged">
+      <MemberSignature Language="C#" Value="protected void OnResolveProgressChanged (System.Net.PeerToPeer.ResolveProgressChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnResolveProgressChanged(class System.Net.PeerToPeer.ResolveProgressChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameResolver.OnResolveProgressChanged(System.Net.PeerToPeer.ResolveProgressChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Net.PeerToPeer.ResolveProgressChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+          <see cref="T:System.Net.PeerToPeer.ResolveProgressChangedEventArgs" />-Objekt, das vom <see cref="E:System.Net.PeerToPeer.PeerNameResolver.ResolveProgressChanged" />-Ereignis zurückgegebene Statusinformationen der Peernamensauflösung enthält.</param>
+        <summary>Gibt die Statusdaten der Peerauflösung zurück, nachdem das <see cref="E:System.Net.PeerToPeer.PeerNameResolver.ResolveProgressChanged" />-Ereignis ausgelöst wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist ein asynchroner Rückruf, der zur Verarbeitung von Peer-Lösungsdaten, nachdem Fortschritte bei der Peer-Lösung angefordert wurde verwendet.  
+  
+ Abgeleitete Typen können überschreiben diese Methode, um zusätzliche führen Vorgänge fest, wenn die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveProgressChanged> Ereignis tritt auf.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben diese Methode in einem abgeleiteten Typ, achten Sie beim Aufrufen des Basistyps <see cref="M:System.Net.PeerToPeer.PeerNameResolver.OnResolveProgressChanged(System.Net.PeerToPeer.ResolveProgressChangedEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Resolve">
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Löst ein <see cref="T:System.Net.PeerToPeer.PeerName" /> -Objekt an eine <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> mit dem PNRP-Protokoll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ordnet Peernamen in Clouds. Aufrufen der <xref:System.Net.PeerToPeer.PeerNameResolver> Methode ist vergleichbar mit einem Aufruf der <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> Methode für jeden Peer Name Datensatz in die <xref:System.Net.PeerToPeer.PeerNameRecordCollection>. Beachten Sie, dass die Resolve-Methode auf einem einzelnen Peer Name Datensatz mit nicht auflösen von mehreren Peernamen ungültig wird.  
+  
+ Für jede <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> -Methode, ist es ein entsprechendes <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync%2A> Methode.  Sie sind in den Parametern, die sie übergeben werden, die identisch, außer dass die ResolveAsync-Methode ein System-Tokens in der Parameterliste für die asynchrone Ereignisbehandlung enthält.  
+  
+ Wenn die <xref:System.Net.PeerToPeer.Cloud> Parameter nicht angegeben wird, verwendet die Methode die <xref:System.Net.PeerToPeer.Cloud.Available> Verknüpfung Cloud Parameter ausfüllen.  Wenn die `maxRecords` Parameter fehlt, ist den Standardwert von NULL festgelegt, wird ein <xref:System.ArgumentOutOfRangeException> Ausnahme ausgelöst wird.  
+  
+ Dieses Ereignis wird auch ausgelöst werden, wenn der Auflösungsvorgang Fehler abgeschlossen oder abgebrochen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.PeerNameRecordCollection Resolve (System.Net.PeerToPeer.PeerName peerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.PeerNameRecordCollection Resolve(class System.Net.PeerToPeer.PeerName peerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameResolver.Resolve(System.Net.PeerToPeer.PeerName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.PeerNameRecordCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerName" Type="System.Net.PeerToPeer.PeerName" />
+      </Parameters>
+      <Docs>
+        <param name="peerName">Der aufzulösende <see cref="T:System.Net.PeerToPeer.PeerName" />.</param>
+        <summary>Löst den angegebenen <see cref="T:System.Net.PeerToPeer.PeerName" /> in alle Clouds, die an den aufrufenden Peer bezeichnet.</summary>
+        <returns>Ein <see cref="T:System.Net.PeerToPeer.PeerNameRecordCollection" /> , enthält alle Datensätze der Peer-Name (dargestellt als <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> Objekte) die angegebenen Peernamen zugeordnet. Für unsichere Peernamen identisch <see cref="T:System.Net.PeerToPeer.PeerName" /> registriert werden kann, von anderen Benutzern in der gleichen <see cref="T:System.Net.PeerToPeer.Cloud" />, und die zugehörigen mit verschiedenen Endpunkten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ordnet eine PeerName-zu Clouds. Alle Clouds werden abgefragt, für die <xref:System.Net.PeerToPeer.PeerName>. Wenn der Name des Peers kann nicht aufgelöst werden oder ist `null`, wird eine <xref:System.Net.PeerToPeer.PeerToPeerException> ausgelöst wird.  
+  
+ Für unsichere Peernamen, der gleiche Namen kann werden (mit registriert und verknüpft verschiedene Endpunkte) von anderen Peers innerhalb derselben Cloud.  
+  
+ Aufrufen der <xref:System.Net.PeerToPeer.PeerNameResolver> Methode ist vergleichbar mit einem Aufruf der <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> Methode für jeden Peer Name Datensatz in die <xref:System.Net.PeerToPeer.PeerNameRecordCollection>. Beachten Sie, dass die Resolve-Methode auf einem einzelnen Peer Name Datensatz mit nicht auflösen von mehreren Peernamen ungültig wird.  
+  
+ Für jede <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> -Methode, ist es ein entsprechendes <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync%2A> Methode.  Ihre Parameterlisten sind nahezu identisch, außer dass die ResolveAsync-Methode ein System-Tokens für die asynchrone Ereignisbehandlung enthält.  
+  
+ Wenn die <xref:System.Net.PeerToPeer.Cloud> Parameter nicht angegeben wird, verwendet die Methode die <xref:System.Net.PeerToPeer.Cloud.Available> Verknüpfung Cloud Parameter ausfüllen.  
+  
+ Die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted> Ereignis wird ausgelöst, wenn der Auflösungsvorgang Fehler abgeschlossen oder abgebrochen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Auflösen einer <xref:System.Net.PeerToPeer.PeerName> in einem veröffentlichten <xref:System.Net.PeerToPeer.Cloud>.  
+  
+ [!code-csharp[NCLPNRPPeerNameResolver#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPNRPPeerNameResolver/CS/PeerNameResolver.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="peerName" />-Parameter ist auf <see langword="null" /> festgelegt.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Der angegebene Peername kann nicht aufgelöst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.PeerNameRecordCollection Resolve (System.Net.PeerToPeer.PeerName peerName, int maxRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.PeerNameRecordCollection Resolve(class System.Net.PeerToPeer.PeerName peerName, int32 maxRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameResolver.Resolve(System.Net.PeerToPeer.PeerName,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.PeerNameRecordCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerName" Type="System.Net.PeerToPeer.PeerName" />
+        <Parameter Name="maxRecords" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="peerName">Der aufzulösende <see cref="T:System.Net.PeerToPeer.PeerName" />.</param>
+        <param name="maxRecords">Die maximale Anzahl von <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> Objekte zum Abrufen von allen <see cref="T:System.Net.PeerToPeer.Cloud" /> Objekte für die angegebene <c>PeerName</c>.</param>
+        <summary>Löst den angegebenen Peernamen in alle Clouds, die an den aufrufenden Peer, Zurückgeben von nicht mehr als die angegebene Anzahl von bekannten <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> Objekte.</summary>
+        <returns>Ein <see cref="T:System.Net.PeerToPeer.PeerNameRecordCollection" /> , dessen Größe ist kleiner als oder gleich <paramref name="maxRecords" /> Einträge. Diese Auflistung enthält die Datensätze des Peer Name zugeordnet der <see cref="T:System.Net.PeerToPeer.PeerName" /> aufgelöst wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ordnet eine PeerName-zu Clouds. Der Name des Peers werden alle Clouds abgefragt. Für unsichere Peernamen Peernamen registriert werden kann, von anderen Benutzern in der gleichen <xref:System.Net.PeerToPeer.Cloud>, und die zugehörigen mit verschiedenen Endpunkten. Wenn die <xref:System.Net.PeerToPeer.PeerName> kann nicht aufgelöst werden (z. B. der Name des Peers nicht veröffentlicht wurde) eine <xref:System.Net.PeerToPeer.PeerToPeerException> ausgelöst wird.  
+  
+ Für jede <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> -Methode, ist es ein entsprechendes <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync%2A> Methode.  Ihre Parameterlisten sind nahezu identisch, außer dass die ResolveAsync-Methode ein System-Tokens für die asynchrone Ereignisbehandlung enthält.  
+  
+ Die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted> Ereignis wird ausgelöst, wenn der Auflösungsvorgang Fehler abgeschlossen oder abgebrochen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="peerName" />-Parameter ist auf <see langword="null" /> festgelegt.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="maxRecords" />-Parameter ist kleiner oder gleich 0 (null).</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Der Name des angegebenen Peers kann nicht aufgelöst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.PeerNameRecordCollection Resolve (System.Net.PeerToPeer.PeerName peerName, System.Net.PeerToPeer.Cloud cloud);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.PeerNameRecordCollection Resolve(class System.Net.PeerToPeer.PeerName peerName, class System.Net.PeerToPeer.Cloud cloud) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameResolver.Resolve(System.Net.PeerToPeer.PeerName,System.Net.PeerToPeer.Cloud)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.PeerNameRecordCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerName" Type="System.Net.PeerToPeer.PeerName" />
+        <Parameter Name="cloud" Type="System.Net.PeerToPeer.Cloud" />
+      </Parameters>
+      <Docs>
+        <param name="peerName">Der aufzulösende <see cref="T:System.Net.PeerToPeer.PeerName" />.</param>
+        <param name="cloud">Die <see cref="T:System.Net.PeerToPeer.Cloud" /> in der aufzulösende Name des Peers.</param>
+        <summary>Löst den angegebenen <see cref="P:System.Net.PeerToPeer.PeerNameRecord.PeerName" /> im angegebenen <see cref="T:System.Net.PeerToPeer.Cloud" />.</summary>
+        <returns>
+          <see cref="T:System.Net.PeerToPeer.PeerNameRecordCollection" />enthält alle Datensätze der Peer-Name (dargestellt als <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> Objekte) die angegebenen Peernamen zugeordnet. Für unsichere Peernamen identisch <see cref="T:System.Net.PeerToPeer.PeerName" /> registriert werden kann, von anderen Benutzern in der gleichen <see cref="T:System.Net.PeerToPeer.Cloud" />, und die zugehörigen mit verschiedenen Endpunkten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Net.PeerToPeer.PeerName> kann nicht aufgelöst werden (d. h. der Name des Peers nicht veröffentlicht wurde) eine <xref:System.Net.PeerToPeer.PeerToPeerException> ausgelöst wird.  
+  
+ Für unsichere Peernamen, der gleiche Namen kann werden (mit registriert und verknüpft verschiedene Endpunkte) von anderen Peers innerhalb derselben Cloud.  
+  
+ Für jede <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> -Methode, ist es ein entsprechendes <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync%2A> Methode.  Ihre Parameterlisten sind nahezu identisch, außer dass die ResolveAsync-Methode ein System-Tokens für die asynchrone Ereignisbehandlung enthält.  
+  
+ Wenn die <xref:System.Net.PeerToPeer.Cloud> Parameter ist `null`, <xref:System.Net.PeerToPeer.PeerNameResolver> verwendet die <xref:System.Net.PeerToPeer.Cloud.Available> Verknüpfung zum Füllen der <xref:System.Net.PeerToPeer.Cloud.Name%2A>, <xref:System.Net.PeerToPeer.Cloud.Scope%2A>, und <xref:System.Net.PeerToPeer.Cloud.ScopeId%2A>.  
+  
+ Die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted> Ereignis wird ausgelöst, wenn der Auflösungsvorgang Fehler abgeschlossen oder abgebrochen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="peerName" />-Parameter ist auf <see langword="null" /> festgelegt.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Der Name des angegebenen Peers kann nicht aufgelöst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.PeerNameRecordCollection Resolve (System.Net.PeerToPeer.PeerName peerName, System.Net.PeerToPeer.Cloud cloud, int maxRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.PeerNameRecordCollection Resolve(class System.Net.PeerToPeer.PeerName peerName, class System.Net.PeerToPeer.Cloud cloud, int32 maxRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameResolver.Resolve(System.Net.PeerToPeer.PeerName,System.Net.PeerToPeer.Cloud,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.PeerNameRecordCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerName" Type="System.Net.PeerToPeer.PeerName" />
+        <Parameter Name="cloud" Type="System.Net.PeerToPeer.Cloud" />
+        <Parameter Name="maxRecords" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="peerName">Der aufzulösende <see cref="T:System.Net.PeerToPeer.PeerName" />.</param>
+        <param name="cloud">Die <see cref="T:System.Net.PeerToPeer.Cloud" /> in der zum Auflösen der <c>PeerName</c>.</param>
+        <param name="maxRecords">Die maximale Anzahl von Peer-Objekten, die aus der angegebenen Cloud für den angegebenen abrufen <c>PeerName</c>.</param>
+        <summary>Löst den angegebenen <see cref="P:System.Net.PeerToPeer.PeerNameRecord.PeerName" /> im angegebenen <see cref="T:System.Net.PeerToPeer.Cloud" />, Zurückgeben von nicht mehr als die angegebene Anzahl von <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> Objekte.</summary>
+        <returns>Ein <see cref="T:System.Net.PeerToPeer.PeerNameRecordCollection" /> , dessen Größe ist kleiner als oder gleich <paramref name="maxRecords" /> Einträge. Diese Auflistung enthält die Datensätze des Peer Name zugeordnet der <see cref="T:System.Net.PeerToPeer.PeerName" /> aufgelöst wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für unsichere Peernamen, der gleiche Namen kann werden (mit registriert und verknüpft verschiedene Endpunkte) von anderen Peers innerhalb derselben Cloud. Wenn der Name des Peers aufgelöst werden, kann kein <xref:System.Net.PeerToPeer.PeerToPeerException> ausgelöst wird.  
+  
+ Für jede <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> -Methode, ist es ein entsprechendes <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync%2A> Methode.  Ihre Parameterlisten sind nahezu identisch, außer dass die ResolveAsync-Methode ein System-Tokens für die asynchrone Ereignisbehandlung enthält.  
+  
+ Wenn die <xref:System.Net.PeerToPeer.Cloud> Parameter ist `null`, <xref:System.Net.PeerToPeer.PeerNameResolver> verwendet die <xref:System.Net.PeerToPeer.Cloud.Available> Verknüpfung zum Füllen der <xref:System.Net.PeerToPeer.Cloud.Name%2A>, <xref:System.Net.PeerToPeer.Cloud.Scope%2A>, und <xref:System.Net.PeerToPeer.Cloud.ScopeId%2A>.  
+  
+ Die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted> Ereignis wird ausgelöst, wenn der Auflösungsvorgang Fehler abgeschlossen oder abgebrochen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="peerName" />-Parameter ist auf <see langword="null" /> festgelegt.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="maxRecords" />-Parameter ist kleiner oder gleich 0 (null).</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Der Name des angegebenen Peers kann nicht aufgelöst werden.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="ResolveAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Diese Methoden starten einen asynchronen Auflösungsvorgang für den angegebenen <see cref="T:System.Net.PeerToPeer.PeerName" /> in alle Clouds, die an den aufrufenden Peer bezeichnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für jede <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> -Methode, ist es ein entsprechendes <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync%2A> -Methode, die verwendet wird, wenn die asynchrone Verarbeitung erforderlich ist.  Sie sind in den Parametern, die sie übergeben werden, die identisch, außer dass ResolveAsync ein Systemtoken in der Parameterliste für die Ereignisbehandlung enthält.  
+  
+ Wenn ein Parameter-Konflikt zwischen die Resolve-Methode und der ResolveAsync-Methode ausgeführt wird und die <xref:System.Net.PeerToPeer.Cloud> Parameter nicht angegeben wird, verwendet die Methode die <xref:System.Net.PeerToPeer.Cloud.Available> Verknüpfung Cloud Parameter ausfüllen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="ResolveAsync">
+      <MemberSignature Language="C#" Value="public void ResolveAsync (System.Net.PeerToPeer.PeerName peerName, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResolveAsync(class System.Net.PeerToPeer.PeerName peerName, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync(System.Net.PeerToPeer.PeerName,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerName" Type="System.Net.PeerToPeer.PeerName" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="peerName">Der aufzulösende <see cref="T:System.Net.PeerToPeer.PeerName" />.</param>
+        <param name="userState">Ein benutzerdefiniertes Objekt, das Statusinformationen über die Peernamenauflösung enthält.</param>
+        <summary>Beginnt eine asynchrone Peernamenauflösung für den angegebenen <see cref="P:System.Net.PeerToPeer.PeerNameRecord.PeerName" /> in allen Clouds, die dem aufrufenden Peer bekannt sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ordnet asynchron eine PeerName-zu Clouds. Alle Clouds werden abgefragt, für die <xref:System.Net.PeerToPeer.PeerName>. Es wird ausgelöst, die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted> -Ereignis, das Aufrufe zurück an die <xref:System.Net.PeerToPeer.PeerNameResolver.OnResolveCompleted%2A> Methode. Oder es wird ausgelöst, die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveProgressChanged> -Ereignis, das Aufrufe zurück an die <xref:System.Net.PeerToPeer.PeerNameResolver.OnResolveProgressChanged%2A> Methode.  
+  
+ Wenn der Name des Peers aufgelöst werden, kann kein <xref:System.Net.PeerToPeer.PeerToPeerException> ausgelöst wird.  
+  
+ Für unsichere Peernamen, der gleiche Namen kann werden (mit registriert und verknüpft verschiedene Endpunkte) von anderen Peers innerhalb derselben Cloud.  
+  
+ Aufrufen der <xref:System.Net.PeerToPeer.PeerNameResolver> Methode ist vergleichbar mit einem Aufruf der <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync%2A> Methode für jeden Peer Name Datensatz in die <xref:System.Net.PeerToPeer.PeerNameRecordCollection>. Beachten Sie, dass die Resolve-Methode auf einem einzelnen Peer Name Datensatz mit nicht auflösen von mehreren Peernamen ungültig wird.  
+  
+ Für jede <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync%2A> -Methode, ist es ein entsprechendes <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> Methode.  Ihre Parameterlisten sind nahezu identisch, außer dass die ResolveAsync-Methode ein Systemtoken für die asynchrone Ereignisbehandlung enthält und sich an die Resolve-Methode für die synchrone Verarbeitung richtet.  
+  
+ Alle asynchronen Verweise auf das Objekt Konfliktlöser werden mit einem eindeutigen Bezeichnertoken koordiniert. Dies `userState` Token oder Nachricht Bezeichner ermöglicht ein Betriebssystems auf eine Nachricht an einen einzelnen empfangenden Prozess zu übermitteln, nachdem die Nachricht in die Nachrichtenwarteschlange angeordnet wurde.  
+  
+ Die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted> Ereignis wird ausgelöst, wenn der Auflösungsvorgang Fehler abgeschlossen oder abgebrochen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein oder beide <paramref name="peerName" />- und <paramref name="userState" />-Parameter werden auf <see langword="null" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveAsync">
+      <MemberSignature Language="C#" Value="public void ResolveAsync (System.Net.PeerToPeer.PeerName peerName, int maxRecords, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResolveAsync(class System.Net.PeerToPeer.PeerName peerName, int32 maxRecords, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync(System.Net.PeerToPeer.PeerName,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerName" Type="System.Net.PeerToPeer.PeerName" />
+        <Parameter Name="maxRecords" Type="System.Int32" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="peerName">Der aufzulösende <see cref="T:System.Net.PeerToPeer.PeerName" />.</param>
+        <param name="maxRecords">Die maximale Anzahl von Datensätzen, die für den Peernamen abgerufen werden sollen.</param>
+        <param name="userState">Ein benutzerdefiniertes Objekt, das Informationen über den Auflösungsvorgang enthält.</param>
+        <summary>Beginnt eine asynchrone Peernamenauflösung für den angegebenen <see cref="T:System.Net.PeerToPeer.PeerName" /> in allen Clouds, die dem aufrufenden Peer bekannt sind, wobei nicht mehr als <paramref name="maxRecords" /> Einträge für den Peernamen zurückgegeben werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ordnet asynchron eine PeerName-zu Clouds. Alle Clouds werden abgefragt, für die <xref:System.Net.PeerToPeer.PeerName>. Für unsichere Peernamen, der gleiche Namen kann werden (mit registriert und verknüpft verschiedene Endpunkte) von anderen Peers innerhalb derselben Cloud. Wenn der Name des Peers kann nicht aufgelöst werden oder ist `null`, wird eine <xref:System.Net.PeerToPeer.PeerToPeerException> ausgelöst wird.  
+  
+ Diese Methode löst die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted> -Ereignis, das Aufrufe zurück an die <xref:System.Net.PeerToPeer.PeerNameResolver.OnResolveCompleted%2A> Methode. Oder es wird ausgelöst, die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveProgressChanged> -Ereignis, das Aufrufe zurück an die <xref:System.Net.PeerToPeer.PeerNameResolver.OnResolveProgressChanged%2A> Methode.  
+  
+ Für jede <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync%2A> -Methode, ist es ein entsprechendes <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> Methode.  Ihre Parameterlisten sind nahezu identisch, außer dass die ResolveAsync-Methode ein Systemtoken für die asynchrone Ereignisbehandlung enthält und sich an die Resolve-Methode für die synchrone Verarbeitung richtet.  
+  
+ Alle asynchronen Verweise auf das Objekt Konfliktlöser werden mit einem eindeutigen Bezeichnertoken koordiniert <xref:System.Object>. Dies `userState` Token oder Nachricht Bezeichner ermöglicht ein Betriebssystems auf eine Nachricht an einen einzelnen empfangenden Prozess zu übermitteln, nachdem die Nachricht in die Nachrichtenwarteschlange angeordnet wurde.  
+  
+ Die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted> Ereignis wird ausgelöst, wenn der Auflösungsvorgang Fehler abgeschlossen oder abgebrochen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein oder beide <paramref name="peerName" />- und <paramref name="userState" />-Parameter werden auf <see langword="null" /> festgelegt.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="maxRecords" />-Parameter ist kleiner oder gleich 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveAsync">
+      <MemberSignature Language="C#" Value="public void ResolveAsync (System.Net.PeerToPeer.PeerName peerName, System.Net.PeerToPeer.Cloud cloud, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResolveAsync(class System.Net.PeerToPeer.PeerName peerName, class System.Net.PeerToPeer.Cloud cloud, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync(System.Net.PeerToPeer.PeerName,System.Net.PeerToPeer.Cloud,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerName" Type="System.Net.PeerToPeer.PeerName" />
+        <Parameter Name="cloud" Type="System.Net.PeerToPeer.Cloud" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="peerName">Der aufzulösende <see cref="T:System.Net.PeerToPeer.PeerName" />.</param>
+        <param name="cloud">Die <see cref="T:System.Net.PeerToPeer.Cloud" /> in der zum Auflösen der <c>PeerName</c>.</param>
+        <param name="userState">Ein benutzerdefiniertes <see cref="T:System.Object" />, das Informationen über die Peernamenauflösung enthält.</param>
+        <summary>Beginnt eine asynchrone Peernamenauflösung für den angegebenen <see cref="T:System.Net.PeerToPeer.PeerName" /> in der angegebenen <see cref="T:System.Net.PeerToPeer.Cloud" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted> -Ereignis, das Aufrufe zurück an die <xref:System.Net.PeerToPeer.PeerNameResolver.OnResolveCompleted%2A> Methode. Oder es wird ausgelöst, die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveProgressChanged> -Ereignis, das Aufrufe zurück an die <xref:System.Net.PeerToPeer.PeerNameResolver.OnResolveProgressChanged%2A> Methode.  
+  
+ Für unsichere Peernamen, der gleiche Namen kann werden (mit registriert und verknüpft verschiedene Endpunkte) von anderen Peers innerhalb derselben Cloud.  
+  
+ Wenn die <xref:System.Net.PeerToPeer.Cloud> Parameter ist `null`, der Name aufgelöst wird, mithilfe der <xref:System.Net.PeerToPeer.Cloud.Available> Verknüpfung, die Standardwerte für initialisiert die <xref:System.Net.PeerToPeer.Cloud.Name%2A>, <xref:System.Net.PeerToPeer.Cloud.Scope%2A>, und <xref:System.Net.PeerToPeer.Cloud.ScopeId%2A> Eigenschaften.  
+  
+ Für jede <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync%2A> -Methode, ist es ein entsprechendes <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> Methode.  Ihre Parameterlisten sind nahezu identisch, außer dass die ResolveAsync-Methode ein Systemtoken für die asynchrone Ereignisbehandlung enthält und sich an die Resolve-Methode für die synchrone Verarbeitung richtet.  
+  
+ Alle asynchronen Verweise auf das Objekt Konfliktlöser werden mit einem eindeutigen Bezeichnertoken koordiniert. Dies `userState` Token oder Nachricht Bezeichner ermöglicht ein Betriebssystems auf eine Nachricht an einen einzelnen empfangenden Prozess zu übermitteln, nachdem die Nachricht in die Nachrichtenwarteschlange angeordnet wurde.  
+  
+ Die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted> Ereignis wird ausgelöst, wenn der Auflösungsvorgang Fehler abgeschlossen oder abgebrochen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein oder beide <paramref name="peerName" />- und <paramref name="userState" />-Parameter werden auf <see langword="null" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveAsync">
+      <MemberSignature Language="C#" Value="public void ResolveAsync (System.Net.PeerToPeer.PeerName peerName, System.Net.PeerToPeer.Cloud cloud, int maxRecords, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResolveAsync(class System.Net.PeerToPeer.PeerName peerName, class System.Net.PeerToPeer.Cloud cloud, int32 maxRecords, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync(System.Net.PeerToPeer.PeerName,System.Net.PeerToPeer.Cloud,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerName" Type="System.Net.PeerToPeer.PeerName" />
+        <Parameter Name="cloud" Type="System.Net.PeerToPeer.Cloud" />
+        <Parameter Name="maxRecords" Type="System.Int32" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="peerName">Die <c>PeerName</c> aufgelöst.</param>
+        <param name="cloud">Die <c>Cloud</c> in der aufzulösende <c>PeerName</c>.</param>
+        <param name="maxRecords">Die maximale Anzahl von Datensätzen, die aus abgerufen <c>Cloud</c> für <c>PeerName</c>.</param>
+        <param name="userState">Ein benutzerdefiniertes Objekt, das Informationen über die Peernamensauflösung enthält.</param>
+        <summary>Beginnt eine asynchrone Peernamenauflösung für den angegebenen <see cref="T:System.Net.PeerToPeer.PeerName" /> in der angegebenen <see cref="T:System.Net.PeerToPeer.Cloud" />.  Der Auflösungsvorgang löst höchstens so viele Einträge für den angegebenen Peernamen auf, wie in <paramref name="maxRecords" /> festgelegt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für unsichere Peernamen, der gleiche Namen kann werden (mit registriert und verknüpft verschiedene Endpunkte) von anderen Peers innerhalb derselben Cloud.  
+  
+ Diese Methode löst die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted> -Ereignis, das Aufrufe zurück an die <xref:System.Net.PeerToPeer.PeerNameResolver.OnResolveCompleted%2A> Methode. Oder es wird ausgelöst, die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveProgressChanged> -Ereignis, das Aufrufe zurück an die <xref:System.Net.PeerToPeer.PeerNameResolver.OnResolveProgressChanged%2A> Methode.  
+  
+ Wenn die <xref:System.Net.PeerToPeer.Cloud> Parameter ist `null`, der Name aufgelöst wird, mithilfe der <xref:System.Net.PeerToPeer.Cloud.Available> Verknüpfung, die Standardwerte für initialisiert die <xref:System.Net.PeerToPeer.Cloud.Name%2A>, <xref:System.Net.PeerToPeer.Cloud.Scope%2A>, und <xref:System.Net.PeerToPeer.Cloud.ScopeId%2A> Eigenschaften.  
+  
+ Für jede <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync%2A> -Methode, ist es ein entsprechendes <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> Methode.  Ihre Parameterlisten sind nahezu identisch, außer dass die ResolveAsync-Methode ein Systemtoken für die asynchrone Ereignisbehandlung enthält und sich an die Resolve-Methode für die synchrone Verarbeitung richtet.  
+  
+ Alle asynchronen Verweise auf das Peerresolverobjekt werden mit einem eindeutigen Bezeichnertoken koordiniert <xref:System.Object>. Dies `userState` Token oder Nachricht Bezeichner ermöglicht ein Betriebssystems auf eine Nachricht an einen einzelnen empfangenden Prozess zu übermitteln, nachdem die Nachricht in die Nachrichtenwarteschlange angeordnet wurde.  
+  
+ Die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted> Ereignis wird ausgelöst, wenn der Auflösungsvorgang Fehler abgeschlossen oder abgebrochen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein oder beide <paramref name="peerName" />- und <paramref name="userState" />-Parameter werden auf <see langword="null" /> festgelegt.</exception>
+        <exception cref="T:System.ArgumentException">Mindestens ein angegebener Parameter ist ungültig.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Für den erfolgreichen Abschluss dieses Vorgangs ist mindestens ein Ereignishandler erforderlich.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="maxRecords" />-Parameter ist kleiner oder gleich 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveAsyncCancel">
+      <MemberSignature Language="C#" Value="public void ResolveAsyncCancel (object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResolveAsyncCancel(object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameResolver.ResolveAsyncCancel(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userState">Das für die <see cref="Overload:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync" />-Methodeninstanz, die den Auflösungsvorgang gestartet hat, bereitgestellte Objekt.</param>
+        <summary>Bricht die angegebene Anforderung zur Auflösung des asynchronen Peernamens ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode wird sichergestellt, die das System versucht nicht, um zusätzliche Datensätze für den angegebenen erhalten <xref:System.Net.PeerToPeer.PeerName>.  Wenn diese Methode aufgerufen wird, wenn eine asynchrone Peer Name Auflösungsvorgang nicht ausstehende ist, fungiert Sie als "kein Vorgang" ("NO" OP).  
+  
+ Die `userState` Objekt muss angegeben werden, da es verwendet wird, um einen bestimmten asynchronen Aufruf nachzuverfolgen, wenn mehrere Aufrufe ausgeführt werden. Diese vom Aufrufer bereitgestellte Objekt ist für jede Peer Name Resolution-Anforderung eindeutig.  
+  
+ Diese Methode wird sofort zurückgegeben, aber des Vorgangs möglicherweise möglicherweise nicht sofort abgebrochen. Die Ereignisargumente, die zurückgegeben werden, indem die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted> Ereignis enthält ein Feld, das abgefragt werden kann, von Clients zu bestimmen, ob ein Abbruch aufgetreten ist.  
+  
+ Beim Aufrufen dieser Methode wird sichergestellt, dass das Ereignis ResolveCompleted so bald wie möglich mit der das Ereignisargument signalisiert wird <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> festgelegt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="userState" />-Parameter dürfen nicht <see langword="null" /> sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Net.PeerToPeer.ResolveCompletedEventArgs&gt; ResolveCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.ResolveCompletedEventArgs&gt; ResolveCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.ResolveCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das <see cref="E:System.Net.PeerToPeer.PeerNameResolver.ResolveCompleted" />-Ereignis wird signalisiert, wenn eine Anforderung zur Auflösung eines Peernamens für einen bestimmten <see cref="P:System.Net.PeerToPeer.PeerNameRegistration.PeerName" /> abgeschlossen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveProgressChanged> -Ereignis wird einmal für jeden gefundenen Endpunkt ausgelöst werden, und dieses Ereignis wird werden nur einmal ausgelöst, wenn alle Endpunkte gefunden wurden.  
+  
+ Dieses Ereignis wird auch ausgelöst, wenn die <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> Vorgang Fehler abgeschlossen oder abgebrochen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveProgressChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Net.PeerToPeer.ResolveProgressChangedEventArgs&gt; ResolveProgressChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.ResolveProgressChangedEventArgs&gt; ResolveProgressChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.PeerNameResolver.ResolveProgressChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.ResolveProgressChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis wird signalisiert, wenn ein <see cref="T:System.Net.PeerToPeer.PeerNameRecord" />-Objekt als Reaktion auf einen <see cref="Overload:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync" />-Vorgang für einen bestimmten <see cref="T:System.Net.PeerToPeer.PeerName" /> gefunden wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn mehrere <xref:System.Net.PeerToPeer.PeerName> Objekte, die in den abgefragten vorhanden sind, dieses Ereignis signalisiert wird einmal für jede <xref:System.Net.PeerToPeer.PeerNameRecord> gefunden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

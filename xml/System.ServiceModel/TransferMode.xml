@@ -1,0 +1,173 @@
+<Type Name="TransferMode" FullName="System.ServiceModel.TransferMode">
+  <TypeSignature Language="C#" Value="public enum TransferMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TransferMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.TransferMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob ein Kanal den Stream- oder Puffermodus für die Übertragung von Anforderungs- und Antwortnachrichten verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Transporte unterstützen zwei Modi zum Übertragen von Nachrichten in jeder Richtung:  
+  
+-   Bei gepufferten Übertragungen wird die gesamte Nachricht in einem Puffer zwischengespeichert, bis die Übertragung abgeschlossen ist.  
+  
+-   Bei Stream-Übertragungen werden lediglich die Nachrichtenheader gepuffert, und der Nachrichtentext wird als Stream verfügbar gemacht, aus dem jeweils kleinere Bestandteile gelesen werden können.  
+  
+ Festlegen des Übertragungsmodus auf Streamed ermöglicht kommunikationsstream in beide Richtungen. Festlegen des Übertragungsmodus StreamedRequest oder StreamedResponse werden kommunikationsstream nur in der angegebenen Richtung ermöglicht.  
+  
+ Stream-Übertragungen können die Skalierbarkeit eines Dienstes verbessern, indem sie große Speicherpuffer überflüssig machen. Ob die Änderung des Übertragungsmodus die Skalierbarkeit tatsächlich verbessert, hängt von der Größe der übertragenen Nachrichten ab. Verbesserungen der Skalierbarkeit sollten am deutlichsten zutage treten, wenn große Nachrichten Stream-Übertragungen anstelle gepufferter Übertragungen verwenden.  
+  
+ Standardmäßig verwenden HTTP, TCP/IP sowie Named Pipe-Transporte gepufferte Nachrichtenübertragungen. Sie können die Werte von <xref:System.ServiceModel.TransferMode.Streamed> in den vom System bereitgestellten <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.NetTcpBinding>, <xref:System.ServiceModel.NetNamedPipeBinding> Bindungen mit den verfügbaren Übertragungsmoduseigenschaften festlegen. Der Modus kann in der <xref:System.ServiceModel.NetTcpBinding> beispielsweise mit der <xref:System.ServiceModel.NetTcpBinding.TransferMode%2A>-Eigenschaft festgelegt werden. Er kann auch im Konfigurationsabschnitt für die Bindung festgelegt werden.  
+  
+ Für Bindungen, die die Übertragungsmoduseigenschaft nicht verfügbar machen, kann der Übertragungsmodus im Bindungselement des Transports festgelegt werden, und dieses Element kann anschließend einer benutzerdefinierten Bindung hinzugefügt werden. Erstellen Sie beispielsweise ein <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, und verwenden Sie die <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.TransferMode%2A>-Eigenschaft, um den Übertragungsmodus beim Erstellen einer benutzerdefinierten Bindung festzulegen. Der Übertragungsmodus kann auch im Konfigurationsabschnitt für die benutzerdefinierte Bindung festgelegt werden.  
+  
+ Die Entscheidung, ob Stream-Übertragungen oder gepufferte Übertragungen verwendet werden, ist eine lokale Entscheidung des Endpunkts für HTTP-Transporte. Bei HTTP-Übertragungen wird der Übertragungsmodus nicht über Verbindungen oder an Proxyserver oder andere Vermittler weitergegeben. Das Festlegen des Übertragungsmodus spiegelt sich nicht in der Beschreibung des Dienstvertrags wider. Nachdem Sie einen Proxy für einen Dienst erstellt haben, können Sie (dies ist zulässig, aber nicht erforderlich) die Konfigurationsdatei für Dienste bearbeiten, die mit Stream-Übertragungen verwendet werden sollen, um den Übertragungsmodus festzulegen. Bei TCP und Named Pipe-Transporten wird der Übertragungsmodus als Richtlinienassertion weitergegeben.  
+  
+ Verwenden den Übertragungsmodus Streamed bewirkt, dass die [!INCLUDE[indigo2](~/includes/indigo2-md.md)] zur Laufzeit einige Einschränkungen zu erzwingen.  
+  
+-   Vorgänge, die in einem Stream-Transport erfolgen, können einen Vertrag mit höchstens einem Eingabeparameter und/oder einem Ausgabeparameter auf der Ebene des Programmiermodells haben. Der Parameter entspricht dem gesamten Nachrichtentext, und es muss sich um <xref:System.ServiceModel.Channels.Message>, einen Untertyp von <xref:System.IO.Stream> oder um eine <xref:System.Xml.Serialization.IXmlSerializable>-Implementierung handeln. Ein Rückgabewert für einen Vorgang entspricht einem Ausgabeparameter.  
+  
+-   Einige Funktionen von [!INCLUDE[indigo2](~/includes/indigo2-md.md)], wie z.&#160;B. Reliable Messaging und die Sicherheit auf SOAP-Nachrichtenebene verwenden gepufferte Nachrichten für Übertragungen. Dadurch können mögliche Leistungsvorteile durch das Streaming reduziert oder zunichte gemacht werden. Um einen Stream-Transport zu sichern, verwenden Sie nur die Sicherheit auf Transportebene oder eine Mischmodussicherheit, die WS-Security-Ansprüche mit der Transportsicherheit verbindet.  
+  
+-   SOAP-Header werden immer gepuffert, auch wenn der Übertragungsmodus auf Streamed festgelegt ist. Die Header für eine Nachricht dürfen die Größe des MaxBufferSize-Transportkontingents nicht überschreiten, das in den verschiedenen Bindungen und Bindungselementen verfügbar gemacht wird.  
+  
+ Ändern den Übertragungsmodus von gepufferte in Streamed ändert sich auch auf die systemeigene kanalform von TCP- und named Pipe-Transporten. Die systemeigene Kanalform für gepufferte Übertragungen ist <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Die systemeigenen Kanäle für Streamingübertragungen sind <xref:System.ServiceModel.Channels.IRequestChannel> und <xref:System.ServiceModel.Channels.IReplyChannel>. Eine Folge davon ist, dass sitzungsbasierten Dienstverträge nicht mit Transportstreaming verwendet werden können.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, die Einstellung der <xref:System.ServiceModel.TransferMode> Eigenschaft Streamed über Code:  
+  
+ **c#-**  
+  
+```  
+TcpTransportBindingElement transport = new TcpTransportBindingElement();  
+transport.TransferMode = TransferMode.Streamed;  
+BinaryMessageEncodingBindingElement encoder = new BinaryMessageEncodingBindingElement();  
+CustomBinding binding = new CustomBinding(encoder, transport);  
+```  
+  
+ Das folgende Beispiel zeigt <xref:System.ServiceModel.TransferMode.Streamed> Eigenschaft Streamed durch Konfiguration:  
+  
+```  
+<customBinding>  
+    <binding name="streamingBinding">  
+        <binaryMessageEncoding />  
+            <tcpTransport transferMode="Streamed" />  
+     </binding>  
+</customBinding>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Buffered">
+      <MemberSignature Language="C#" Value="Buffered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.TransferMode Buffered = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.TransferMode.Buffered" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TransferMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anforderungs- und Antwortnachrichten werden gepuffert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Streamed">
+      <MemberSignature Language="C#" Value="Streamed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.TransferMode Streamed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.TransferMode.Streamed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TransferMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anforderungs- und Antwortnachrichten werden per Stream übertragen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamedRequest">
+      <MemberSignature Language="C#" Value="StreamedRequest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.TransferMode StreamedRequest = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.TransferMode.StreamedRequest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TransferMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anforderungsnachricht wird per Stream übertragen, und die Antwortnachricht wird gepuffert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamedResponse">
+      <MemberSignature Language="C#" Value="StreamedResponse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.TransferMode StreamedResponse = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.TransferMode.StreamedResponse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TransferMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anforderungsnachricht wird gepuffert, und die Antwortnachricht wird per Stream übertragen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

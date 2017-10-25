@@ -1,0 +1,279 @@
+<Type Name="DefaultWorkflowSchedulerService" FullName="System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService">
+  <TypeSignature Language="C#" Value="public class DefaultWorkflowSchedulerService : System.Workflow.Runtime.Hosting.WorkflowSchedulerService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DefaultWorkflowSchedulerService extends System.Workflow.Runtime.Hosting.WorkflowSchedulerService" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Hosting.WorkflowSchedulerService</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Erstellt und verwaltet die Threads, die Workflowinstanzen des Workflowlaufzeitmoduls ausführen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService> wird standardmäßig vom Workflow-Laufzeitmodul verwendet. Es schließt eine Standardunterstützung für die Aufnahme mehrerer Workflowinstanzen in die Warteschlange des Laufzeitthreadpools ein. Wenn Sie den Thread steuern möchten, der den Workflow ausführt, verwenden Sie <xref:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultWorkflowSchedulerService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultWorkflowSchedulerService (System.Collections.Specialized.NameValueCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.NameValueCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.#ctor(System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="parameters"><see cref="T:System.Collections.Specialized.NameValueCollection" />, die Initialisierungsinformationen enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird aufgerufen, wenn das Workflow-Laufzeitmodul Dienste aus einer Anwendungskonfigurationsdatei lädt. `maxSimultaneousWorkflows` ist der einzige gültige Parameter. Er gibt die Anzahl der Workflows an, die gleichzeitig ausgeführt werden können.  
+  
+ Durch Festlegen von `maxSimultaneousWorkflows` auf einen hohen Wert kann der .NET-Threadpool blockiert werden. Dadurch könnten Timeouts verursacht werden, wenn von einem Persistenzdienst versucht wird, eine Persistenztransaktion abzuschließen, da der .NET-Threadpool auch von <xref:System.Transactions.Transaction>-Objekten verwendet wird.  
+  
+ Falls der Standardwert für `maxSimultaneousWorkflows` nicht in einem Konstruktor oder einer Konfigurationsdatei angegeben ist, wird der Wert für einen Computer mit einem Prozessor auf 5 festgelegt und auf (int)(5 * Environment.ProcessorCount * .8) für einen Computer mit mehreren Prozessoren. Beachten Sie, dass (int)(5 * Environment.ProcessorCount * .8) aufgrund der Regeln der Ganzzahlarithmetik (int)(4 * Environment.ProcessorCount) nicht immer entspricht.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="parameters" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">Einer der Schlüsselwerte der <paramref name="parameters" />-Auflistung enthält einen NULL-Verweis (<see langword="Nothing" />).  
+  
+ – oder –  
+  
+ Einer der Schlüsselwerte der <paramref name="parameters" />-Auflistung passt nicht zum Standardschlüssel für <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService" />.</exception>
+        <exception cref="T:System.FormatException">Einer der Parameter kann nicht in eine Gleitkommazahl mit doppelter Genauigkeit konvertiert werden, die zu <see cref="P:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.MaxSimultaneousWorkflows" /> passt.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <see cref="P:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.MaxSimultaneousWorkflows" /> ist kleiner als 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultWorkflowSchedulerService (int maxSimultaneousWorkflows);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 maxSimultaneousWorkflows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="maxSimultaneousWorkflows" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maxSimultaneousWorkflows">Eine ganze Zahl, die die maximale Anzahl von Workflowinstanzen bestimmt, die in der Warteschlange des Threadpools gespeichert werden können.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService" />-Klasse mit der angegebenen maximalen Anzahl von Workflowinstanzen, die der Dienst gleichzeitig ausführen kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen von `maxSimultaneousWorkflows` auf einen hohen Wert kann der .NET-Threadpool blockiert werden. Dadurch könnten Timeouts verursacht werden, wenn von einem Persistenzdienst versucht wird, eine Persistenztransaktion abzuschließen, da der .NET-Threadpool auch von <xref:System.Transactions.Transaction>-Objekten verwendet wird.  
+  
+ Falls der Standardwert für `maxSimultaneousWorkflows` nicht in einem Konstruktor oder einer Konfigurationsdatei angegeben ist, wird der Wert für einen Computer mit einem Prozessor auf 5 festgelegt und auf (int)(5 * Environment.ProcessorCount * .8) für einen Computer mit mehreren Prozessoren. Beachten Sie, dass (int)(5 * Environment.ProcessorCount * .8) aufgrund der Regeln der Ganzzahlarithmetik (int)(4 * Environment.ProcessorCount) nicht immer entspricht.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="maxSimultaneousWorkflows" /> ist kleiner als 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="protected override void Cancel (Guid timerId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Cancel(valuetype System.Guid timerId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.Cancel(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timerId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="timerId"><see cref="T:System.Guid" />, die der vorhandenen geplanten Arbeitsaufgabe zugeordnet ist, die abgebrochen werden soll.</param>
+        <summary>Bricht das angegebene vorhandene Arbeitselement der Workflowinstanz ab.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="timerId" /> ist eine leere GUID.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSimultaneousWorkflows">
+      <MemberSignature Language="C#" Value="public int MaxSimultaneousWorkflows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxSimultaneousWorkflows" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.MaxSimultaneousWorkflows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Workflowinstanzen ab, die in der Warteschlange des Threadpool gespeichert werden können.</summary>
+        <value>Eine ganze Zahl, die die maximale Anzahl von Workflowinstanzen darstellt, die in der Warteschlange des Threadpools gespeichert werden können.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Methode ist für einen Computer mit einem Prozessor auf 5 festgelegt und auf (int)(5 * Environment.ProcessorCount * .8) für einen Computer mit mehreren Prozessoren. Beachten Sie, dass (int)(5 * Environment.ProcessorCount * .8) aufgrund der Regeln der Ganzzahlarithmetik (int)(4 * Environment.ProcessorCount) nicht immer entspricht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStarted">
+      <MemberSignature Language="C#" Value="protected override void OnStarted ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnStarted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.OnStarted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Benachrichtigt den <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService" />, dass eine Workflowinstanz gestartet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.OnStarted%2A> erstellt einen Thread für die erste Arbeitsaufgabe in der Liste der Aufgaben, die noch in den Threadpool der Workflowinstanzen aufgenommen werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schedule">
+      <MemberSignature Language="C#" Value="protected override void Schedule (System.Threading.WaitCallback callback, Guid workflowInstanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Schedule(class System.Threading.WaitCallback callback, valuetype System.Guid workflowInstanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.Schedule(System.Threading.WaitCallback,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Threading.WaitCallback" />
+        <Parameter Name="workflowInstanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Ein <see cref="T:System.Threading.WaitCallback" />-Multicastdelegat, der die auszuführende Methode darstellt.</param>
+        <param name="workflowInstanceId"><see cref="T:System.Guid" />, die die Workflowinstanz darstellt.</param>
+        <summary>Fügt der anstehenden Arbeitselementwarteschlange anhand der angegebenen Workflowinstanz unter Verwendung eines Multicastdelegaten eine Workflowinstanz hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie den <xref:System.Threading.WaitCallback>-Konstruktor zum Erstellen der Delegatmethode, die im neuen Thread ausgeführt werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callback" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Schedule">
+      <MemberSignature Language="C#" Value="protected override void Schedule (System.Threading.WaitCallback callback, Guid workflowInstanceId, DateTime whenUtc, Guid timerId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Schedule(class System.Threading.WaitCallback callback, valuetype System.Guid workflowInstanceId, valuetype System.DateTime whenUtc, valuetype System.Guid timerId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.Schedule(System.Threading.WaitCallback,System.Guid,System.DateTime,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Threading.WaitCallback" />
+        <Parameter Name="workflowInstanceId" Type="System.Guid" />
+        <Parameter Name="whenUtc" Type="System.DateTime" />
+        <Parameter Name="timerId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Ein <see cref="T:System.Threading.WaitCallback" />-Multicastdelegat, der die auszuführende Methode darstellt.</param>
+        <param name="workflowInstanceId"><see cref="T:System.Guid" />, die die Workflowinstanz darstellt.</param>
+        <param name="whenUtc"><see cref="T:System.DateTime" /> mit dem Zeitpunkt für den Beginn der Threadausführung.</param>
+        <param name="timerId"><see cref="T:System.Guid" />, die den geplanten Thread darstellt.</param>
+        <summary>Fügt der anstehenden Arbeitsaufgabenwarteschlange unter Verwendung des angegebenen Multicastdelegaten, von <see cref="T:System.DateTime" /> und von GUIDs die angegebene Workflowinstanz hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie den <xref:System.Threading.WaitCallback>-Konstruktor zum Erstellen der Delegatmethode, die im neuen Thread ausgeführt werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callback" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="workflowInstanceId" /> oder <paramref name="timerId" /> ist eine leere GUID.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="protected override void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet den gerade ausgeführten Thread für die Workflowinstanz und alle ausgeführten Timer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1149 @@
+<Type Name="StatusBar" FullName="System.Windows.Forms.StatusBar">
+  <TypeSignature Language="C#" Value="public class StatusBar : System.Windows.Forms.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StatusBar extends System.Windows.Forms.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.StatusBar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("PanelClick")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.StatusBarDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Statusleisten-Steuerelement von Windows dar. Obwohl <see cref="T:System.Windows.Forms.ToolStripStatusLabel" /> ersetzt und funktionell erweitert, um die <see cref="T:System.Windows.Forms.StatusBar" /> -Steuerelement früherer Versionen <see cref="T:System.Windows.Forms.StatusBar" /> wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel eine <xref:System.Windows.Forms.StatusBar> -Steuerelement besteht aus <xref:System.Windows.Forms.StatusBarPanel> -Objekten, von denen jedes Text und/oder ein Symbol anzeigt. Sie können auch angeben, dass Ownerdrawn-Bereiche bereitstellen, z. B. eine Statusanzeige oder eine Reihe von Bildern, die den Zustand der Anwendung angezeigt. Ein <xref:System.Windows.Forms.StatusBar> Steuerelement in der Regel zeigt Informationen zu einem Objekt angezeigt wird, auf ein <xref:System.Windows.Forms.Form>, des Objekts Komponenten oder Kontextinformationen, um die Operation dieses Objekts in Ihrer Anwendung beziehen.  
+  
+ Die <xref:System.Windows.Forms.StatusBar> Steuerelement enthält Eigenschaften, die Sie zum Anpassen der Darstellung des Steuerelements zu ermöglichen. Wenn die <xref:System.Windows.Forms.StatusBar> wird angezeigt, in einem Formular, dessen Größe angepasst werden kann, können Sie die <xref:System.Windows.Forms.StatusBar.SizingGrip%2A> -Eigenschaft einen Größenziehpunkt angezeigt, in der unteren rechten Ecke des Formulars, um Benutzern mitzuteilen, dass die Größe des Formulars geändert werden kann. Die <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> Eigenschaft können Sie Bereiche innerhalb Ihrer <xref:System.Windows.Forms.StatusBar> oder nur den Wert der anzuzeigenden der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft des Steuerelements.  
+  
+ Der standardmäßige <xref:System.Windows.Forms.StatusBar> weist keine Panels auf. Bereiche Hinzufügen einer <xref:System.Windows.Forms.StatusBar> können Sie die <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> Methode der <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> -Klasse, die über den möglich ist die <xref:System.Windows.Forms.StatusBar.Panels%2A> Eigenschaft des Steuerelements. Können Sie auch die <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> Objekt bereitgestellt wird, über die <xref:System.Windows.Forms.StatusBar.Panels%2A> Bereiche aus dem Steuerelement entfernen und Zugriff auf eine bestimmte Eigenschaft <xref:System.Windows.Forms.StatusBarPanel> zum Anpassen des Bereichs.  
+  
+ Wenn Sie ermitteln, wann möchten eine <xref:System.Windows.Forms.StatusBarPanel> -Objekts innerhalb eine <xref:System.Windows.Forms.StatusBar> Steuerelement geklickt wird, können Sie einen Ereignishandler für Erstellen der <xref:System.Windows.Forms.StatusBar.PanelClick> Ereignis. Zum Ausführen von Ownerdrawn-Vorgängen in einem Bereich können Sie erstellen einen Ereignishandler für das <xref:System.Windows.Forms.StatusBar.DrawItem> Ereignis. Die Ereignisdaten an den Ereignishandler übergeben Informationen zu den zu zeichnenden Bereich und ein <xref:System.Drawing.Graphics> Objekt, mit dem Zeichnen Aufgaben ausführen.  
+  
+ Beim Erstellen einer Instanz von <xref:System.Windows.Forms.StatusBar>, die Lese-/Schreibeigenschaften auf Anfangswerte festgelegt werden. Eine Liste der folgenden Werte sind, finden Sie unter der <xref:System.Windows.Forms.StatusBar.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.StatusBar> in einem Formular zu steuern und addiert zwei <xref:System.Windows.Forms.StatusBarPanel> Objekte. Eines der <xref:System.Windows.Forms.StatusBarPanel> Objekte, die mit dem Namen `panel1`, zeigt der Statustext für eine Anwendung an. Die zweite <xref:System.Windows.Forms.StatusBarPanel>mit dem Namen `panel2`, zeigt das aktuelle Datum und verwendet die <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A> Eigenschaft von der <xref:System.Windows.Forms.StatusBarPanel> Klasse, um die aktuelle Uhrzeit angezeigt. Im Beispiel wird die <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> Eigenschaft, um sicherzustellen, dass die Bereiche anstelle eines Standardbereichs angezeigt werden, und es verwendet und die <xref:System.Windows.Forms.StatusBar.Panels%2A> aufzurufende Eigenschaft der <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> Methode der <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> die Bereiche zum Hinzufügen der <xref:System.Windows.Forms.StatusBar>. Das Beispiel verwendet außerdem die <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A>, <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A>, und <xref:System.Windows.Forms.StatusBarPanel.Text%2A> Eigenschaften zum Initialisieren der <xref:System.Windows.Forms.StatusBarPanel> Objekte. Dieses Beispiel benötigen Sie, dass die Methode im Beispiel definiert und wird vom Konstruktor aufgerufen, wird eine <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CPP/form1.cpp#1)]
+ [!code-csharp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CS/form1.cs#1)]
+ [!code-vb[StatusBar and StatusBarPanel Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StatusBar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.StatusBar" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der standardmäßige <xref:System.Windows.Forms.StatusBar> weist keine Panels auf.  
+  
+ Beim Erstellen einer Instanz von <xref:System.Windows.Forms.StatusBar>, werden die folgenden Lese-/Schreibeigenschaften auf Ausgangswerte festgelegt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Windows.Forms.Control.Dock%2A>|<xref:System.Windows.Forms.DockStyle.Bottom>|  
+|<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>|`false`|  
+|<xref:System.Windows.Forms.StatusBar.SizingGrip%2A>|`true`|  
+  
+ Sie können den Wert für alle diese Eigenschaften über einen separaten Aufruf der Eigenschaft ändern.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen einer <xref:System.Windows.Forms.StatusBar> und Verwenden der <xref:System.Windows.Forms.StatusBar.SizingGrip%2A>, <xref:System.Windows.Forms.StatusBarPanel.Alignment%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.StatusBarPanel.Width%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A?displayProperty=nameWithType>, und <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A?displayProperty=nameWithType> Elemente und deren Behandlung die <xref:System.Windows.Forms.StatusBar.PanelClick> Ereignis.  
+  
+ Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular. Rufen Sie die `InitializeStatusBarPanels` -Methode im Konstruktor des Formulars oder `Load` Methode.  
+  
+ [!code-cpp[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Hintergrundfarbe für <see cref="T:System.Windows.Forms.StatusBar" /> ab oder legt diese fest.</summary>
+        <value>Die <see cref="T:System.Drawing.Color" /> ab, der die Hintergrundfarbe des Steuerelements</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine ambient-Eigenschaft und gibt stets einen Wert ungleich Null. Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.StatusBar.BackColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.StatusBar.BackColor" />-Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Hintergrundbild für das <see cref="T:System.Windows.Forms.StatusBar" /> ab oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Image" /> also das Hintergrundbild für die <see cref="T:System.Windows.Forms.StatusBar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen eines Hintergrundbilds für eine <xref:System.Windows.Forms.StatusBar> hat keine Auswirkung auf die Darstellung der <xref:System.Windows.Forms.StatusBar> -Steuerelement, wird daher im Designer oder von IntelliSense nicht angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.StatusBar.BackgroundImageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Wert von der <see cref="P:System.Windows.Forms.StatusBar.BackgroundImage" /> -Eigenschaft geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f). Dieses Ereignis ist für diese Klasse nicht relevant. Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Layout des Hintergrundbilds für die <see cref="T:System.Windows.Forms.StatusBar" />.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ImageLayout" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Forms.StatusBar.BackgroundImageLayout%2A> hat keine Auswirkung auf die Darstellung der <xref:System.Windows.Forms.StatusBar> -Steuerelement, wird daher im Designer oder von IntelliSense nicht angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.StatusBar.BackgroundImageLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.StatusBar.BackgroundImageLayout" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f). Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHandle">
+      <MemberSignature Language="C#" Value="protected override void CreateHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CreateHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.CreateHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreibt <see cref="M:System.Windows.Forms.Control.CreateHandle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.CreateParams" /> verwendet, um das Handle für dieses Steuerelement erstellen.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.CreateParams" /> verwendet, um das Handle für dieses Steuerelement erstellen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultImeMode">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ImeMode DefaultImeMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode DefaultImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.DefaultImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den von diesem Steuerelement unterstützten Standardmodus des IME (Eingabemethoden-Editor) ab.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ImeMode" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Implementierung in der <xref:System.Windows.Forms.StatusBar> Klasse, die diese Eigenschaft gibt immer die <xref:System.Windows.Forms.ImeMode?displayProperty=nameWithType> Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardgröße des Steuerelements ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" /> , die die Größe des Steuerelements darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von der <see cref="T:System.Windows.Forms.StatusBar" />-Klasse verwendeten Ressourcen (mit Ausnahme des Speichers) frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.Windows.Forms.StatusBar> verweist. Diese Methode ruft die `Dispose`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Beim Überschreiben von <see langword="Dispose(Boolean)" /> müssen Sie darauf achten, nicht auf Objekte zu verweisen, die durch einen früheren Aufruf von <see langword="Dispose" /> freigegeben wurden. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Dock">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DockStyle Dock { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DockStyle Dock" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.Dock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Andockverhalten des der <see cref="T:System.Windows.Forms.StatusBar" /> Steuerelement.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.DockStyle" />-Werte. Die Standardeinstellung ist <see langword="Bottom" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleBuffered">
+      <MemberSignature Language="C#" Value="protected override bool DoubleBuffered { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DoubleBuffered" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.DoubleBuffered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Steuerelement neu gezeichnet werden soll seine Oberfläche unter Verwendung eines sekundären Puffers zum Verringern oder zu verhindern, dass Flackern, hat jedoch diese Eigenschaft keine Auswirkungen auf die <see cref="T:System.Windows.Forms.StatusBar" /> Steuerelement</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement über einen sekundären Puffer verfügt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft hat keine Auswirkungen auf die <xref:System.Windows.Forms.StatusBar> -Steuerelement, wird daher im Designer oder von IntelliSense nicht angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawItem">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.StatusBarDrawItemEventHandler DrawItem;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.StatusBarDrawItemEventHandler DrawItem" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.StatusBar.DrawItem" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.StatusBarDrawItemEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich ein Darstellungsaspekt eines ownerdrawn Statusleisten-Steuerelements ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie dieses Ereignis zeichnen Operationen in ein vom Besitzer gezeichnetes <xref:System.Windows.Forms.StatusBar> Steuerelement. Angenommen, Sie Ownerdrawn-anzeigen <xref:System.Windows.Forms.StatusBarPanel> , die zeigt eine Statusanzeige, verwenden Sie dieses Ereignis, das Zeichnen der Statusanzeige im Bereich ausführen. Die Daten bereitgestellt, um das Ereignis mit der <xref:System.Windows.Forms.StatusBarDrawItemEventArgs> als Parameter an den Ereignishandler übergebene Objekt können Sie den Bereich zu ermitteln, die gezeichnet werden muss und die <xref:System.Drawing.Graphics> verwenden, wenn der Bereich gezeichnet werden soll. Dieses Ereignis wird nur wird ausgelöst, wenn die <xref:System.Windows.Forms.StatusBarPanel.Style%2A?displayProperty=nameWithType> Eigenschaft eine <xref:System.Windows.Forms.StatusBarPanel> in einer <xref:System.Windows.Forms.StatusBar> Steuerelement auf festgelegt ist <xref:System.Windows.Forms.StatusBarPanelStyle.OwnerDraw>.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein vom Besitzer gezeichnetes erstellen <xref:System.Windows.Forms.StatusBarPanel> , die einen benutzerdefinierten Hintergrund und das aktuelle Datum anzeigt. Dieses Beispiel benötigen Sie, dass Sie eine Verbindung hergestellt haben die <xref:System.Windows.Forms.StatusBar.DrawItem> -Ereignis für ein <xref:System.Windows.Forms.StatusBar> Steuerelement an den Ereignishandler, der im Beispiel definiert.  
+  
+ [!code-cpp[StatusBar.DrawItem#1](~/samples/snippets/cpp/VS_Snippets_Winforms/StatusBar.DrawItem/CPP/form1.cpp#1)]
+ [!code-csharp[StatusBar.DrawItem#1](~/samples/snippets/csharp/VS_Snippets_Winforms/StatusBar.DrawItem/CS/form1.cs#1)]
+ [!code-vb[StatusBar.DrawItem#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/StatusBar.DrawItem/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schriftart der <see cref="T:System.Windows.Forms.StatusBar" /> -Steuerelement zum Anzeigen von Informationen verwendet.</summary>
+        <value>Die <see cref="T:System.Drawing.Font" /> des Texts. Der Standardwert ist die Schriftart des Containers, sofern Sie diese nicht überschreiben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vordergrundfarbe für das Steuerelement ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , die die Vordergrundfarbe des Steuerelements darstellt. Die Standardeinstellung ist <see langword="Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ForeColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ForeColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.StatusBar.ForeColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.StatusBar.ForeColor" />-Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ImeMode ImeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode ImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.ImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den von diesem Steuerelement unterstützten IME-Modus ab oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ImeMode" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeModeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ImeModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ImeModeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.StatusBar.ImeModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.StatusBar.ImeMode" />-Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDrawItem">
+      <MemberSignature Language="C#" Value="protected virtual void OnDrawItem (System.Windows.Forms.StatusBarDrawItemEventArgs sbdievent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDrawItem(class System.Windows.Forms.StatusBarDrawItemEventArgs sbdievent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.OnDrawItem(System.Windows.Forms.StatusBarDrawItemEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sbdievent" Type="System.Windows.Forms.StatusBarDrawItemEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sbdievent">Ein <see cref="T:System.Windows.Forms.StatusBarDrawItemEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Windows.Forms.StatusBar.OnDrawItem(System.Windows.Forms.StatusBarDrawItemEventArgs)" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.StatusBar.OnDrawItem%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein vom Besitzer gezeichnetes erstellen <xref:System.Windows.Forms.StatusBarPanel> , die einen benutzerdefinierten Hintergrund und das aktuelle Datum anzeigt. Dieses Beispiel benötigen Sie, dass Sie eine Verbindung hergestellt haben die <xref:System.Windows.Forms.StatusBar.DrawItem> -Ereignis für ein <xref:System.Windows.Forms.StatusBar> Steuerelement an den Ereignishandler, der im Beispiel definiert.  
+  
+ [!code-cpp[StatusBar.DrawItem#1](~/samples/snippets/cpp/VS_Snippets_Winforms/StatusBar.DrawItem/CPP/form1.cpp#1)]
+ [!code-csharp[StatusBar.DrawItem#1](~/samples/snippets/csharp/VS_Snippets_Winforms/StatusBar.DrawItem/CS/form1.cs#1)]
+ [!code-vb[StatusBar.DrawItem#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/StatusBar.DrawItem/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.StatusBar.OnDrawItem(System.Windows.Forms.StatusBarDrawItemEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.StatusBar.OnDrawItem(System.Windows.Forms.StatusBarDrawItemEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleCreated">
+      <MemberSignature Language="C#" Value="protected override void OnHandleCreated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleCreated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.OnHandleCreated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.HandleCreated" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Zum Überschreiben <xref:System.Windows.Forms.StatusBar.OnHandleCreated%2A> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <xref:System.Windows.Forms.Control.OnHandleCreated%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleDestroyed">
+      <MemberSignature Language="C#" Value="protected override void OnHandleDestroyed (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleDestroyed(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.OnHandleDestroyed(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.HandleDestroyed" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.StatusBar.OnHandleDestroyed(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.Control.OnHandleDestroyed(System.EventArgs)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLayout">
+      <MemberSignature Language="C#" Value="protected override void OnLayout (System.Windows.Forms.LayoutEventArgs levent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLayout(class System.Windows.Forms.LayoutEventArgs levent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.OnLayout(System.Windows.Forms.LayoutEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="levent" Type="System.Windows.Forms.LayoutEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="levent">Ein <see langword="LayoutEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see langword="Layout" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.StatusBar.OnLayout(System.Windows.Forms.LayoutEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.Control.OnLayout(System.Windows.Forms.LayoutEventArgs)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Windows.Forms.StatusBar.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.StatusBar.OnMouseDown(System.Windows.Forms.MouseEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.Control.OnMouseDown(System.Windows.Forms.MouseEventArgs)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPanelClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnPanelClick (System.Windows.Forms.StatusBarPanelClickEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPanelClick(class System.Windows.Forms.StatusBarPanelClickEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.OnPanelClick(System.Windows.Forms.StatusBarPanelClickEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.StatusBarPanelClickEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.StatusBarPanelClickEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Windows.Forms.StatusBar.OnPanelClick(System.Windows.Forms.StatusBarPanelClickEventArgs)" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.StatusBar.OnPanelClick%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.StatusBar.OnPanelClick(System.Windows.Forms.StatusBarPanelClickEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.StatusBar.OnPanelClick(System.Windows.Forms.StatusBarPanelClickEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnResize">
+      <MemberSignature Language="C#" Value="protected override void OnResize (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnResize(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.OnResize(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Windows.Forms.StatusBar.OnResize(System.EventArgs)" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Eine Übersicht finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.StatusBar.OnResize(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.Control.OnResize(System.EventArgs)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.PaintEventHandler Paint;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.PaintEventHandler Paint" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.StatusBar.Paint" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PaintEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das <see cref="T:System.Windows.Forms.StatusBar" />-Steuerelement neu gezeichnet wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PanelClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.StatusBarPanelClickEventHandler PanelClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.StatusBarPanelClickEventHandler PanelClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.StatusBar.PanelClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.StatusBarPanelClickEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine <see cref="T:System.Windows.Forms.StatusBarPanel" /> -Objekt, auf eine <see cref="T:System.Windows.Forms.StatusBar" /> Steuerelement geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie dieses Ereignis zum Ausführen von Aufgaben, sofern Sie ein Panel in einem <xref:System.Windows.Forms.StatusBar> Steuerelement geklickt wird. Die Daten bereitgestellt, um das Ereignis mit der <xref:System.Windows.Forms.StatusBarPanelClickEventArgs> übergebene als Parameter an den Ereignishandler zu ermitteln, Sie können die <xref:System.Windows.Forms.StatusBarPanel> , die vom Benutzer zum Ausführen von Aufgaben für den ausgewählten Bereich geklickt wurde.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.StatusBar.SizingGrip%2A>, <xref:System.Windows.Forms.StatusBarPanel.Alignment%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.StatusBarPanel.Width%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A?displayProperty=nameWithType>, und <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A?displayProperty=nameWithType> Elemente und deren Behandlung die <xref:System.Windows.Forms.StatusBar.PanelClick> Ereignis.  
+  
+ Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular. Rufen Sie die `InitializeStatusBarPanels` -Methode im Konstruktor des Formulars oder `Load` Methode.  
+  
+ [!code-cpp[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Panels">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.StatusBar.StatusBarPanelCollection Panels { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.StatusBar/StatusBarPanelCollection Panels" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.Panels" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.StatusBar+StatusBarPanelCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der <see cref="T:System.Windows.Forms.StatusBar" /> im Steuerelement enthaltene Bereiche.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.StatusBar.StatusBarPanelCollection" /> , enthält die <see cref="T:System.Windows.Forms.StatusBarPanel" /> Objekte von der <see cref="T:System.Windows.Forms.StatusBar" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.StatusBar> -Steuerelement kann eine Reihe von Bereichen, die Anmeldeinformationen für den Benutzer der Anwendung anzeigen. Ein Bereich kann z. B. die aktuelle Uhrzeit oder den Fortschritt beim Herunterladen einer Datei anzeigen. Jeder Bereich angezeigt, indem die <xref:System.Windows.Forms.StatusBar> -Steuerelement ist eine Instanz von der <xref:System.Windows.Forms.StatusBarPanel> Klasse. Die <xref:System.Windows.Forms.StatusBar.Panels%2A> Eigenschaft ermöglicht Ihnen, einen Verweis auf die Auflistung der erhalten <xref:System.Windows.Forms.StatusBarPanel> Objekte, die derzeit in der gespeicherten der <xref:System.Windows.Forms.StatusBar> Steuerelement. Mit diesem Verweis Sie können Bereiche hinzufügen, Entfernen von Bereichen, Zugriff auf einen bestimmten Bereich in der Auflistung und Abrufen der Anzahl der Bereiche in der <xref:System.Windows.Forms.StatusBar> Steuerelement. Weitere Informationen zu den Tasks, die mit der Auflistung der Bereiche ausgeführt werden können, finden Sie unter der <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> -Klasse Referenzthemen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.StatusBar> in einem Formular zu steuern und addiert zwei <xref:System.Windows.Forms.StatusBarPanel> Objekte. Eines der <xref:System.Windows.Forms.StatusBarPanel> Objekte, die mit dem Namen `panel1`, zeigt der Statustext für eine Anwendung an. Die zweite <xref:System.Windows.Forms.StatusBarPanel> Objekt, mit dem Namen `panel2`, zeigt das aktuelle Datum und verwendet die <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A> Eigenschaft von der <xref:System.Windows.Forms.StatusBarPanel> Klasse, um die aktuelle Uhrzeit angezeigt. Im Beispiel wird die <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> Eigenschaft, um sicherzustellen, dass die Bereiche anstelle eines Standardbereichs angezeigt werden, und es verwendet und die <xref:System.Windows.Forms.StatusBar.Panels%2A> aufzurufende Eigenschaft der <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> Methode der <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> die Bereiche zum Hinzufügen der <xref:System.Windows.Forms.StatusBar>. Das Beispiel verwendet außerdem die <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A>, <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A>, und <xref:System.Windows.Forms.StatusBarPanel.Text%2A> Eigenschaften zum Initialisieren der <xref:System.Windows.Forms.StatusBarPanel> Objekte. Dieses Beispiel benötigen Sie, dass die Methode im Beispiel definiert und wird vom Konstruktor aufgerufen, wird eine <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CPP/form1.cpp#1)]
+ [!code-csharp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CS/form1.cs#1)]
+ [!code-vb[StatusBar and StatusBarPanel Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowPanels">
+      <MemberSignature Language="C#" Value="public bool ShowPanels { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowPanels" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.ShowPanels" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob zum Steuerelement hinzugefügte Bereiche angezeigt werden, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn die Bereiche angezeigt werden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Windows.Forms.StatusBar> Steuerelement zeigt den Wert des seine <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft ohne Bereiche. Wenn `ShowPanels` auf festgelegt ist `true`, <xref:System.Windows.Forms.StatusBarPanel> Objekte in angegebenen der <xref:System.Windows.Forms.StatusBar> -Steuerelement angezeigt werden. Zunächst werden keine Bereiche erstellt, bei der Erstellung einer Instanz von der <xref:System.Windows.Forms.StatusBar> Klasse. Sie können Bereiche hinzufügen eine <xref:System.Windows.Forms.StatusBar> Steuerung mithilfe des der <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> Methode der <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> Klasse. Diese Auflistungsklasse durch zugegriffen werden kann die <xref:System.Windows.Forms.StatusBar.Panels%2A> Eigenschaft <xref:System.Windows.Forms.StatusBar>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.StatusBar> in einem Formular zu steuern und addiert zwei <xref:System.Windows.Forms.StatusBarPanel> Objekte. Eines der <xref:System.Windows.Forms.StatusBarPanel> Objekte, die mit dem Namen `panel1`, zeigt der Statustext für eine Anwendung an. Die zweite <xref:System.Windows.Forms.StatusBarPanel>mit dem Namen `panel2`, zeigt das aktuelle Datum und verwendet die <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A> Eigenschaft von der <xref:System.Windows.Forms.StatusBarPanel> Klasse, um die aktuelle Uhrzeit angezeigt. Im Beispiel wird die <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> Eigenschaft, um sicherzustellen, dass die Bereiche anstelle eines Standardbereichs angezeigt werden, und es verwendet und die <xref:System.Windows.Forms.StatusBar.Panels%2A> aufzurufende Eigenschaft der <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> Methode der <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> die Bereiche zum Hinzufügen der <xref:System.Windows.Forms.StatusBar>. Das Beispiel verwendet außerdem die <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A>, <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A>, und <xref:System.Windows.Forms.StatusBarPanel.Text%2A> Eigenschaften zum Initialisieren der <xref:System.Windows.Forms.StatusBarPanel> Objekte. Dieses Beispiel benötigen Sie, dass die Methode im Beispiel definiert und wird vom Konstruktor aufgerufen, wird eine <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CPP/form1.cpp#1)]
+ [!code-csharp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CS/form1.cs#1)]
+ [!code-vb[StatusBar and StatusBarPanel Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizingGrip">
+      <MemberSignature Language="C#" Value="public bool SizingGrip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SizingGrip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.SizingGrip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob in der unteren rechten Ecke des Steuerelements ein Größenziehpunkt angezeigt wird, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn ein Größenziehpunkt angezeigt wird; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft können Sie einen Größenziehpunkt, um eine Angabe über das für dem Benutzer bereitstellen, wenn ein Formular in der Größe veränderbar ist anzuzeigen. Wenn die <xref:System.Windows.Forms.Form.FormBorderStyle%2A> Eigenschaft Ihrer <xref:System.Windows.Forms.Form> festgelegt ist, um eine Rahmenart, die nicht geändert werden kann, z. B. <xref:System.Windows.Forms.FormBorderStyle.Fixed3D> oder <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>, sollten Sie festlegen der <xref:System.Windows.Forms.StatusBar.SizingGrip%2A> Eigenschaft, um `false` zu verhindern, dass die Benutzer denken, die das Formular werden können die Größe geändert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.StatusBar.SizingGrip%2A>, <xref:System.Windows.Forms.StatusBarPanel.Alignment%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.StatusBarPanel.Width%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A?displayProperty=nameWithType>, und <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A?displayProperty=nameWithType> Elemente und deren Behandlung die <xref:System.Windows.Forms.StatusBar.PanelClick> Ereignis.  
+  
+ Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular. Rufen Sie die `InitializeStatusBarPanels` -Methode im Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> -Ereignishandler.  
+  
+ [!code-cpp[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStop">
+      <MemberSignature Language="C#" Value="public bool TabStop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TabStop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.TabStop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Benutzer zur Registerkarte "" werden die <see cref="T:System.Windows.Forms.StatusBar" />.</summary>
+        <value>
+          <see langword="true" />Wenn der Fokus mit der Tab-Taste die <see cref="T:System.Windows.Forms.StatusBar" />andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den zugeordneten Text der <see cref="T:System.Windows.Forms.StatusBar" /> Steuerelement.</summary>
+        <value>Der zugeordnete Text der <see cref="T:System.Windows.Forms.StatusBar" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt den Text im Steuerelement angezeigt wird.  
+  
+> [!CAUTION]
+>  Die <xref:System.Windows.Forms.StatusBar> -Steuerelement zeigt nur die ersten 127 Zeichen einer Zeichenfolge.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.StatusBar.Text%2A> Eigenschaft. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular. Rufen Sie die `InitializeSimpleStatusBar` -Methode im Konstruktor des Formulars oder `Load` Methode.  
+  
+ [!code-cpp[System.Windows.Forms.StatusBarDrawItemEventHandler#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarDrawItemEventHandler/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.StatusBarDrawItemEventHandler#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarDrawItemEventHandler/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.StatusBarDrawItemEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusBarDrawItemEventHandler/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung für dieses Steuerelement zurück.</summary>
+        <returns>Zeichenfolge</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Die zu verarbeitende Windows-<see cref="T:System.Windows.Forms.Message" />.</param>
+        <summary>Verarbeitet Windows-Meldungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

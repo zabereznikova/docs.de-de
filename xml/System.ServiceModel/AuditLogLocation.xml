@@ -1,0 +1,95 @@
+<Type Name="AuditLogLocation" FullName="System.ServiceModel.AuditLogLocation">
+  <TypeSignature Language="C#" Value="public enum AuditLogLocation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AuditLogLocation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.AuditLogLocation" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Speicherort an, in den sicherheitsbezogene Ereignisprotokolle geschrieben werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Anwendung erstellen, für die eine Authentifizierung und/oder Autorisierung der Aufrufer erforderlich ist, können Sie angeben, dass sicherheitsbezogene Ereignisse zu einem Erfolg oder Fehler aufgezeichnet werden. Der Speicherort des Protokolls wird durch diese Enumeration bestimmt.  
+  
+ Die Ebene des Überwachungsprotokolls wird angegeben, indem die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A>-Eigenschaft oder die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>-Eigenschaft der <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>-Klasse auf einen der <xref:System.ServiceModel.AuditLevel>-Werte festgelegt wird.  
+  
+ Sie können auch angeben, Audit Verhalten mithilfe der [ &lt;ServiceSecurityAudit&gt; ](~/docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) Bindung.  
+  
+> [!IMPORTANT]
+>  Wenn die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A> Eigenschaftensatz zu Sicherheit und `Audit Object Access` nicht festgelegt ist, der `Local Security Policy`, Überwachungsereignisse werden nicht in das Sicherheitsprotokoll geschrieben. Es wird zwar kein Fehler zurückgegeben, doch die Überwachungseinträge werden nicht in das Sicherheitsprotokoll geschrieben. Außerdem muss dem aufrufenden Thread `SeAuditPrivilege` zugewiesen sein, um in das Sicherheitsprotokoll schreiben zu können.  
+  
+## <a name="default-dependent-on-operating-system"></a>Standardwert hängt vom Betriebssystem ab  
+ Wenn die Eigenschaft auf den Standardwert festlegen, bestimmt das Betriebssystem an, welches Protokoll geschrieben wird. Weitere Informationen finden Sie unter [Überwachung](~/docs/framework/wcf/feature-details/auditing-security-events.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>-Eigenschaft auf einen der <xref:System.ServiceModel.AuditLogLocation.Default>-Werte festgelegt.  
+  
+ [!code-csharp[AuditingSecurityEvents#1](~/samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#1)]
+ [!code-vb[AuditingSecurityEvents#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="Application" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.AuditLogLocation Application = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.AuditLogLocation.Application" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AuditLogLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Anwendungsprotokoll im Ereignisprotokoll an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.AuditLogLocation Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.AuditLogLocation.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AuditLogLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Standardspeicherort an, der vom Betriebssystem bestimmt wird. Wenn das Schreiben in das Sicherheitsprotokoll unterstützt wird (z.&amp;#160;B. unter [!INCLUDE[wv](~/includes/wv-md.md)] oder [!INCLUDE[ws2003](~/includes/ws2003-md.md)] und späteren Plattformen), entspricht das Sicherheitsprotokoll dem Standardspeicherort. Andernfalls (z.&amp;#160;B. in [!INCLUDE[wxpsp2](~/includes/wxpsp2-md.md)]) entspricht das Anwendungsprotokoll dem Standardspeicherort.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Security">
+      <MemberSignature Language="C#" Value="Security" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.AuditLogLocation Security = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.AuditLogLocation.Security" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AuditLogLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Sicherheitsprotokoll im Ereignisprotokoll an. Dem aufrufenden Thread muss <see langword="SeAuditPrivilege" /> zugewiesen sein, um in das Sicherheitsprotokoll schreiben zu können.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

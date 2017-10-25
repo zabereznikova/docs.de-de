@@ -1,0 +1,44 @@
+<Type Name="HttpConfigurationContext" FullName="System.Web.Configuration.HttpConfigurationContext">
+  <TypeSignature Language="C#" Value="public class HttpConfigurationContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpConfigurationContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.HttpConfigurationContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt aktuelle Kontextinformationen zum Konfigurationsabschnitt Handler in ASP.NET-Anwendungen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kontextinformationen, die von dieser Klasse angegeben ist, für die aktuelle HTTP-Anforderung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="VirtualPath">
+      <MemberSignature Language="C#" Value="public string VirtualPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VirtualPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpConfigurationContext.VirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den virtuellen Pfad der Konfigurationsdatei "Web.config" ab.</summary>
+        <value>Der virtuelle Pfad zur Datei "Web.config". <see langword="Null" />Beim Auswerten von "Machine.config"; eine leere Zeichenfolge ("") beim Auswerten der Stammdatei "Web.config" für den Standort.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

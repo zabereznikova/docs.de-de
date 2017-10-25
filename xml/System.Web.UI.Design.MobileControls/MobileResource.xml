@@ -1,0 +1,61 @@
+<Type Name="MobileResource" FullName="System.Web.UI.Design.MobileControls.MobileResource">
+  <TypeSignature Language="C#" Value="public sealed class MobileResource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MobileResource extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.MobileControls.MobileResource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Unterstützt das Nachschlagen von kulturspezifischen Ressourcen für mobile-Steuerelementen zur Entwurfszeit. Diese Klasse kann nicht vererbt werden. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.MobileControls.MobileResource.GetString%2A> -Methode bietet Zugriff auf Ressourcen zur Entwurfszeit.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public static string GetString (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetString(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.MobileControls.MobileResource.GetString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu suchenden Ressource.</param>
+        <summary>Gibt eine Zeichenfolgenressource mit dem angegebenen Namen zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert einer Ressource.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.MobileControls.Adapters.SR.GetString%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

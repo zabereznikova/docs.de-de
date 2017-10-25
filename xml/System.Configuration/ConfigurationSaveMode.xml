@@ -1,0 +1,89 @@
+<Type Name="ConfigurationSaveMode" FullName="System.Configuration.ConfigurationSaveMode">
+  <TypeSignature Language="C#" Value="public enum ConfigurationSaveMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConfigurationSaveMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationSaveMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Bestimmt, welche Eigenschaften in einer Konfigurationsdatei geschrieben werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationSaveMode> Enumerationswerte zu identifizieren, welche Eigenschaften in einer Konfigurationsdatei geschrieben werden beim Aufrufen der <xref:System.Configuration.Configuration.Save%2A> und <xref:System.Configuration.Configuration.SaveAs%2A> Methoden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Full">
+      <MemberSignature Language="C#" Value="Full" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationSaveMode Full = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationSaveMode.Full" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationSaveMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bewirkt, dass alle Eigenschaften in die Konfigurationsdatei geschrieben werden sollen. Dies ist hilfreich, vor allem für die Erstellung Informationen Konfigurationsdateien oder Konfigurationswerte auf einem Computer in einen anderen verschieben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimal">
+      <MemberSignature Language="C#" Value="Minimal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationSaveMode Minimal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationSaveMode.Minimal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationSaveMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bewirkt, dass nur die Eigenschaften, die unterscheiden sich von geerbten Werten in die Konfigurationsdatei geschrieben werden sollen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Modified">
+      <MemberSignature Language="C#" Value="Modified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationSaveMode Modified = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationSaveMode.Modified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationSaveMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ursachen nur geänderte Eigenschaften in die Konfigurationsdatei geschrieben werden, selbst wenn der Wert identisch mit den geerbten Wert ist an.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,8 @@
+<Namespace Name="System.IdentityModel.Claims">
+  <Docs>
+    <summary>Die <see cref="N:System.IdentityModel.Claims" /> -Namespace enthält Klassen, die die Windows Communication Foundation (WCF) anspruchsbasierte Autorisierung Identitätsmodell implementieren. Dieses Modell umfasst die <see cref="T:System.IdentityModel.Claims.Claim" /> Klasse und die <see cref="T:System.IdentityModel.Claims.ClaimSet" /> Klasse.  
+  
+ Ab .NET Framework 4.5 und die Integration von Windows Identity Foundation (WIF) in .NET Framework, wurde das anspruchsbasierte Identitätsmodell WCF von WIF abgelöst. WIF bietet eine anspruchsbasierte Identität-Objektmodell, das verwendet werden kann, um die Authentifizierung und Autorisierung über verschiedene Microsoft-Produkt-Stacks, einschließlich der CLR, WCF und ASP.NET bereit. Anspruchstypen für die WIF-Klassen, die Ansprüche, darstellen, und Identitäten und Prinzipalen, die auf Ansprüche sind in enthalten die <see cref="N:System.Security.Claims" /> Namespace. Ab .NET 4.5 können diese Klassen zu verwendende statt in der <see cref="N:System.IdentityModel.Claims" /> Namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

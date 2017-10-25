@@ -1,0 +1,34 @@
+<Type Name="OrderedEnumerableRowCollection&lt;TRow&gt;" FullName="System.Data.OrderedEnumerableRowCollection&lt;TRow&gt;">
+  <TypeSignature Language="C#" Value="public sealed class OrderedEnumerableRowCollection&lt;TRow&gt; : System.Data.EnumerableRowCollection&lt;TRow&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OrderedEnumerableRowCollection`1&lt;TRow&gt; extends System.Data.EnumerableRowCollection`1&lt;!TRow&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OrderedEnumerableRowCollection`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TRow" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Data.EnumerableRowCollection&lt;TRow&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TRow">TRow</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TRow">Der Typ der Objekte in der Quellsequenz, meist <see cref="T:System.Data.DataRow" />.</typeparam>
+    <summary>Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen. Stellt eine Sammlung von sortierten <see cref="T:System.Data.DataRow" /> Objekten dar, die von einer Abfrage zurückgegeben werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OrderedEnumerableRowCollection%601>wird verwendet, um die Ergebnisse einer LINQ to DataSet-Abfrage enthalten, die eine geordnete Sequenz von Zeilen zurückgibt. Dies <xref:System.Data.EnumerableRowCollection%601> behält einen Status von Aufrufen von LINQ-Operatoren für die ursprüngliche Abfrage und dieser Status wird verwendet, so erstellen Sie das Prädikat und Sortierausdrücke für alle nachfolgenden <xref:System.Data.DataView>.  
+  
+ Ein <xref:System.Data.OrderedEnumerableRowCollection%601> kann nicht direkt instanziiert werden, da es keine öffentlichen Konstruktoren für diese Klasse sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

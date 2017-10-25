@@ -1,0 +1,6 @@
+<Namespace Name="System.Workflow.Activities.Rules.Design">
+  <Docs>
+    <summary>Enthält eine Reihe von Klassen, die den Regelsatz-Editor und den Regelbedingungs-Editor-Dialogfeldern zu verwalten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

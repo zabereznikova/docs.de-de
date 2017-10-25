@@ -1,0 +1,1244 @@
+<Type Name="TextRunTypographyProperties" FullName="System.Windows.Media.TextFormatting.TextRunTypographyProperties">
+  <TypeSignature Language="C#" Value="public abstract class TextRunTypographyProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TextRunTypographyProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.TextRunTypographyProperties" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine abstrakte Klasse für die Unterstützung von Typografieeigenschaften für <see cref="T:System.Windows.Media.TextFormatting.TextRun" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendet das Textlayout-Clients die <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties> Klasse, um einen Satz von Funktionen zu generieren, die von der OpenType-Layoutmodul verarbeitet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TextRunTypographyProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextRunTypographyProperties.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.TextFormatting.TextRunTypographyProperties" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationAlternates">
+      <MemberSignature Language="C#" Value="public abstract int AnnotationAlternates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AnnotationAlternates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.AnnotationAlternates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index eines alternativen Anmerkungsformulars ab.</summary>
+        <value>Der Index des Anmerkungsformulars alternativen. Der Standardwert ist 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anmerkungsformate enthalten Symbole in offenen oder geschlossenen Kreisen, Quadrate, Klammern, Rauten oder abgerundeten Feldern.  
+  
+ Wenn der Wert des <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties.AnnotationAlternates%2A> ist größer als 0 ist und die ausgewählte Schriftart unterstützt keine Anmerkung wechselt, wird das Standardformular des Buchstabens angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Capitals">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.FontCapitals Capitals { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontCapitals Capitals" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.Capitals" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontCapitals</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der die Form der Großbuchstaben der ausgewählten Schriftart angibt.</summary>
+        <value>Einer der <see cref="T:System.Windows.FontCapitals" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.FontCapitals.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Großbuchstaben sind ein Satz typografischer Formen, bei dem Text mit Symbolen gerendert wird, die als Großbuchstaben formatiert sind. Wenn Text ausschließlich in Großbuchstaben gerendert wird, kann der Abstand zwischen den Buchstaben als zu gering, die Breite der Buchstaben als zu groß und die Proportionen der Buchstaben als zu unausgewogen erscheinen. OpenType unterstützt eine Reihe von Formaten formatieren für Kapitälchen, einschließlich Kapitälchen, kleiner Kapitälchen anspruchsvolle und Kapitälchenabstand. Mit diesen Formatierungen kann die Darstellung von Großbuchstaben gesteuert werden.  
+  
+ Der folgende Text zeigt zuerst die Standardgroßbuchstaben, gefolgt von den Buchstaben in den Formaten „SmallCaps“ und „AllSmallCaps“ für die Schriftart Pescadero. Für alle drei Wörter wird der gleiche Schriftgrad verwendet.  
+  
+ ![Text mit OpenType-Kapitälchen](~/add/media/opentypefont11.gif "Text mit OpenType-Kapitälchen")  
+Beispiel für Kapitälchen  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CapitalSpacing">
+      <MemberSignature Language="C#" Value="public abstract bool CapitalSpacing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CapitalSpacing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.CapitalSpacing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Abstände zwischen Glyphen, für Text in Großbuchstaben global angepasst wird, um die Lesbarkeit zu verbessern.</summary>
+        <value>
+          <see langword="true" />Wenn der Abstand angepasst wird. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Großbuchstabenabstand ist ein Feature, mit dem Sie in einem Textabschnitt, der ausschließlich aus Großbuchstaben besteht, die Laufweite vergrößern können. Großbuchstaben werden i. d. R. so entworfen, dass sie mit Kleinbuchstaben harmonieren. Ein Abstand, der zwischen einem Großbuchstaben und einem Kleinbuchstaben ästhetisch wirkt, kann zwischen Großbuchstaben zu gering erscheinen. Im folgende Text werden normale Großbuchstaben und Großbuchstaben für Titel für die Schriftart Pescadero gezeigt.  
+  
+ ![Text mit OpenType-Kapitälchenabstand](~/add/media/opentypefont21.gif "Text mit OpenType-Kapitälchenabstand")  
+Beispiel für normale und Abstand  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CaseSensitiveForms">
+      <MemberSignature Language="C#" Value="public abstract bool CaseSensitiveForms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CaseSensitiveForms" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.CaseSensitiveForms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Symbole passen Sie die vertikale Position besser Symbolen in Großbuchstaben ausgerichtet.</summary>
+        <value>
+          <see langword="true" />Wenn die vertikale Position angepasst wird. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextualAlternates">
+      <MemberSignature Language="C#" Value="public abstract bool ContextualAlternates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContextualAlternates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.ContextualAlternates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob benutzerdefinierte Symbole verwendet werden können, basierend auf den Kontext, der der Text gerendert wird.</summary>
+        <value>
+          <see langword="true" />Wenn benutzerdefinierte Symbole verwendet werden können. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei zufälligen kontextbedingten Varianten werden mehrere Ersatzsymbole für ein einzelnes Zeichen bereitgestellt. Wenn dieses Feature für handschriftähnliche Schriftarten implementiert ist, kann Handschrift mit einem Satz zufällig ausgewählter Symbole simuliert werden, die leicht unterschiedlich dargestellt werden. Im folgenden Text werden zufällige kontextbedingte Varianten für die Schriftart Lindsey verwendet. Dabei wird der Buchstabe „a“ in der Darstellung leicht abgewandelt.  
+  
+ ![Text mit willkürlichen kontextbedingten OpenType](~/add/media/opentypefont23.gif "Text mit willkürlichen kontextbedingten OpenType")  
+Beispiel für willkürlichen kontextbedingten  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextualLigatures">
+      <MemberSignature Language="C#" Value="public abstract bool ContextualLigatures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContextualLigatures" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.ContextualLigatures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob kontextbedingte Ligaturen aktiviert sind.</summary>
+        <value>
+          <see langword="true" />Wenn kontextbedingte Ligaturen aktiviert sind; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kontextabhängige Ligaturen dienen zur Verbesserung der Lesbarkeit durch die Bereitstellung besser verknüpfen Verhalten zwischen den Zeichen, die die Ligatur bilden.  
+  
+ Wenn der Wert der <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties.ContextualLigatures%2A> ist `true` und die ausgewählte Schriftart kontextbedingte Ligaturen nicht unterstützt, wird das Standardformular des Buchstabens angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextualSwashes">
+      <MemberSignature Language="C#" Value="public abstract int ContextualSwashes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ContextualSwashes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.ContextualSwashes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der den Index eines Formulars Zierbuchstaben angibt.</summary>
+        <value>Der Index des Standards Schwungschrift. Der Standardwert ist 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bestimmte Kombinationen von Symbolen in Schwungschrift können unästhetisch wirken, z.B. sich überschneidende Unterlängen bei aufeinander folgenden Buchstaben. Mit kontextbedingter Schwungschrift können Sie Varianten eines Symbols in Schwungschrift verwenden, deren Darstellung dann ästhetischer wirkt. Im folgenden Text wird das gleiche Wort vor und nach dem Übernehmen einer kontextbedingten Variante für die Schwungschrift gezeigt.  
+  
+ ![Text mit OpenType-Zierbuchstaben](~/add/media/opentypefont19.gif "Text mit OpenType-Zierbuchstaben")  
+Beispiel für eine kontextbedingte Schwungschrift  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscretionaryLigatures">
+      <MemberSignature Language="C#" Value="public abstract bool DiscretionaryLigatures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DiscretionaryLigatures" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.DiscretionaryLigatures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Ligaturen aktiviert sind.</summary>
+        <value>
+          <see langword="true" />Wenn Ligaturen aktiviert sind; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ligaturen dienen als Waren und nicht speziell zur besseren Lesbarkeit entwickelt werden. Im folgenden Text werden Symbole für bedingte Ligaturen in der Schriftart Pericles gezeigt.  
+  
+ ![Text mit OpenType-Ligaturen](~/add/media/opentypefont05.gif "Text mit OpenType-Ligaturen")  
+Freigegebene Beispiel Ligaturen  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EastAsianExpertForms">
+      <MemberSignature Language="C#" Value="public abstract bool EastAsianExpertForms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EastAsianExpertForms" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.EastAsianExpertForms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Standardschriftart japanische-Formulare mit der entsprechenden bevorzugten typografischen Formen ersetzt wurden.</summary>
+        <value>
+          <see langword="true" />Wenn standard japanische Schriftarten mit den entsprechenden bevorzugten typografischen Formen ersetzt wurden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EastAsianLanguage">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.FontEastAsianLanguage EastAsianLanguage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontEastAsianLanguage EastAsianLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.EastAsianLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der die Version der Symbole für ein bestimmtes Schriftsystem oder eine Sprache angibt.</summary>
+        <value>Einer der <see cref="T:System.Windows.FontEastAsianLanguage" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.FontEastAsianLanguage.Normal" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EastAsianWidths">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.FontEastAsianWidths EastAsianWidths { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontEastAsianWidths EastAsianWidths" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.EastAsianWidths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianWidths</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der die proportionale Breite für lateinische Zeichen in einer ostasiatischen Schriftart verwendet werden soll.</summary>
+        <value>Einer der <see cref="T:System.Windows.FontEastAsianWidths" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.FontEastAsianWidths.Normal" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fraction">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.FontFraction Fraction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontFraction Fraction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.Fraction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontFraction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der den Bruchteil-Stil angibt.</summary>
+        <value>Einer der <see cref="T:System.Windows.FontFraction" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.FontFraction.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ OpenType-Schriftarten unterstützen Formatvorlagen, einschließlich durchgestrichenen und gestapelte.  
+  
+ Im folgenden Text werden Bruchformate für die Schriftart Palatino Linotype gezeigt.  
+  
+ ![Text mit OpenType-Ziffern mit und waagerechtem Bruchstrich](~/add/media/opentypefont12.gif "Text mit OpenType-Ziffern mit und waagerechtem Bruchstrich")  
+Beispiel für durchgestrichenen und gestapelte Bruch Stile  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HistoricalForms">
+      <MemberSignature Language="C#" Value="public abstract bool HistoricalForms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HistoricalForms" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.HistoricalForms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Mediävalen aktiviert sind.</summary>
+        <value>
+          <see langword="true" />Wenn Mediävalen aktiviert sind; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unter historischen Formen werden der Vergangenheit verbreitete typografische Konventionen verstanden. Der folgende Text zeigt den Ausdruck "Boston, Massachusetts" eine historische Form der Symbole für die Schriftart Palatino Linotype verwenden.  
+  
+ ![Text mit OpenType-Mediävalen](~/add/media/opentypefont10.gif "Text mit OpenType-Mediävalen")  
+Beispiel für Mediävalen  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HistoricalLigatures">
+      <MemberSignature Language="C#" Value="public abstract bool HistoricalLigatures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HistoricalLigatures" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.HistoricalLigatures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob historische Ligaturen aktiviert sind.</summary>
+        <value>
+          <see langword="true" />Wenn historische Ligaturen aktiviert sind; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Historische Ligaturen sind typografischen Formen verwendet in historischen Typografie, die Schriftart-Designer ihre Schriftarten hinzufügen können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kerning">
+      <MemberSignature Language="C#" Value="public abstract bool Kerning { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Kerning" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.Kerning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob kerning aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn kerning aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kerning ist eine typografische Funktion, die den Abstand zwischen Zeichen zur Verbesserung der Form "Word" passt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MathematicalGreek">
+      <MemberSignature Language="C#" Value="public abstract bool MathematicalGreek { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MathematicalGreek" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.MathematicalGreek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob typografischen Formen von griechischen Symbolen mit entsprechenden Schriftart Formularen häufig verwendet, in der mathematische Schreibweise ersetzt wurden.</summary>
+        <value>
+          <see langword="true" />mathematische griechischen Forms aktiviert sind; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert der <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties.MathematicalGreek%2A> ist `true` und die ausgewählte Schriftart mathematische griechischen Forms nicht unterstützt, wird das Standardformular des Buchstabens angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumeralAlignment">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.FontNumeralAlignment NumeralAlignment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontNumeralAlignment NumeralAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.NumeralAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontNumeralAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausrichtung der breiten ab, wenn Zahlen verwenden.</summary>
+        <value>Einer der <see cref="T:System.Windows.FontNumeralAlignment" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.FontNumeralAlignment.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ OpenType-Schriftarten unterstützen eine proportional und tabellarische Abbildung-Funktion, um die Ausrichtung der breiten zu steuern, wenn Zahlen verwenden. In der proportionalen Darstellung verfügt jede Ziffer über eine eigene Breite: die „1“ ist schmaler als die „5“. Tabellarische Zahlen werden als gleich Breite Zahlen behandelt, so, dass sie erhöhen die Lesbarkeit von numerischen Daten vertikal auszurichten.  
+  
+ Im folgenden Text werden in der ersten Spalte zwei proportionale Zahlen in der Schriftart Miramonte proportional dargestellt. Die Ziffern „5“ und „1“ unterscheiden sich in der Breite. In der zweiten Spalte wurde die Breite der gleichen Zahlen mit dem Feature für die Tabellendarstellung angepasst.  
+  
+ ![Text mit OpenType-proportional- und Tabellensatz](~/add/media/opentypefont22.gif "Text mit OpenType-proportional- und Tabellensatz")  
+Beispiel für Zahlen proportional und im Registerkartenformat  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumeralStyle">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.FontNumeralStyle NumeralStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontNumeralStyle NumeralStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.NumeralStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontNumeralStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der die Gruppe von Glyphen angibt, die zum Rendern der Schriftart verwendet werden.</summary>
+        <value>Einer der <see cref="T:System.Windows.FontNumeralStyle" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.FontNumeralStyle.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ OpenType-Schriftarten unterstützen eine Ziffer im alten Stil-Format. Dieses Format dient der Anzeige von Ziffern in nicht mehr üblichen Stilen. Der folgende Text zeigt ein Datums 18. Jahrhundert im Standard- und im alten Stil Ziffer für die Schriftart Palatino Linotype.  
+  
+ ![Text mit OpenType-Mediävalziffern](~/add/media/opentypefont24.gif "Text mit OpenType-Mediävalziffern")  
+Beispiel für Standard- und im alten Stil Zahlen  
+  
+ Der folgende Text werden in der Schriftart Palatino Linotype, gefolgt von Mediävalziffern.  
+  
+ ![Text mit OpenType-Mediävalziffernsätzen](~/add/media/opentypefont13.gif "Text mit OpenType-Mediävalziffernsätzen")  
+Beispiel für Standard- und im alten Stil Mediävalziffern  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertiesChanged">
+      <MemberSignature Language="C#" Value="protected void OnPropertiesChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnPropertiesChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextRunTypographyProperties.OnPropertiesChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Korrigiert den internen Zustand für eine <see cref="T:System.Windows.Media.TextFormatting.TextRunTypographyProperties" /> abgeleitete Klasse, wenn <see cref="T:System.Windows.Media.TextFormatting.TextRunTypographyProperties" /> Eigenschaft geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode aus Set-Accessoren einer <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties> Eigenschaft außer Kraft setzen, wenn der Wert im Rahmen der Setter-Methode geändert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SlashedZero">
+      <MemberSignature Language="C#" Value="public abstract bool SlashedZero { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SlashedZero" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.SlashedZero" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob eine nominale NULL Schriftart-Formular sein soll durch eine NULL mit Schrägstrich ersetzt.</summary>
+        <value>
+          <see langword="true" />Wenn die Ziffern mit 0 (null) sind aktiviert. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ OpenType-Schriftarten unterstützen Ziffernformat 0 (null) Ziffer Format, um den Unterschied zwischen den Buchstaben "O" und die Ziffer "0" hervorzuheben. Die Ziffer 0 (null) mit Schrägstrich wird häufig für Kennungen in Finanz- und Geschäftsinformationen verwendet.  
+  
+ Im folgenden Text wird ein Beispiel mit einer Bestellnummer in der Schriftart Miramonte gezeigt. In der ersten Zeile werden Standardziffern verwendet. In der zweiten wird die Ziffer 0 (null) mit Schrägstrich verwendet, um die Ziffer 0 (null) optisch besser vom Großbuchstaben „O“ zu unterscheiden.  
+  
+ ![Text mit OpenType-Ziffern mit NULL](~/add/media/opentypefont17.gif "Text mit OpenType-Ziffern mit null")  
+Beispiel für NULL mit Schrägstrich  
+  
+ Wenn der Wert der <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties.SlashedZero%2A> ist `true` verwendet und die ausgewählte Schriftart keine Unterstützung Ziffern mit 0 (null), wird das Standardformat von der Ziffer angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardLigatures">
+      <MemberSignature Language="C#" Value="public abstract bool StandardLigatures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StandardLigatures" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StandardLigatures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Standardligaturen aktiviert sind.</summary>
+        <value>
+          <see langword="true" />Wenn Standardligaturen aktiviert sind; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im folgenden Text werden Symbole für Standardligaturen in der Schriftart Pericles gezeigt.  
+  
+ ![Text mit OpenType-Standardligaturen](~/add/media/opentypefont04.gif "Text mit OpenType-Standardligaturen")  
+Beispiel für einen Standardsatz von Ligaturen  
+  
+ Standardmäßig OpenType-Schriftarten in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Standardligaturen. Wenn Sie beispielsweise die Schriftart Palatino Linotype verwenden, werden die Standardligaturen „fi“, „ff“ und „fl“ als kombiniertes Zeichensymbol angezeigt. Beachten Sie, dass die Zeichen der einzelnen Standardligaturen berühren.  
+  
+ ![Text mit OpenType-Standardligaturen](~/add/media/opentypefont06.gif "Text mit OpenType-Standardligaturen")  
+Beispiel-Standardligaturen standardmäßig aktiviert  
+  
+ Allerdings können Sie die Features für Standardligaturen auch deaktivieren, sodass z.B. die Standardligatur „ff“ nicht als kombiniertes Zeichensymbol, sondern als zwei einzelne Symbole angezeigt wird.  
+  
+ ![Text mit deaktivierten OpenType-Standardligaturen](~/add/media/opentypefont07.gif "Text mit deaktivierten OpenType-Standardligaturen")  
+Beispiel für deaktivierte Standardligaturen  
+  
+ Wenn der Wert der <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StandardLigatures%2A> ist `true` und die ausgewählte Schriftart-Standardligaturen nicht unterstützt, wird das Standardformular des Buchstabens angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardSwashes">
+      <MemberSignature Language="C#" Value="public abstract int StandardSwashes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StandardSwashes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StandardSwashes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index eines standard-Zierbuchstaben Formulars ab.</summary>
+        <value>Der Index des Standards Schwungschrift. Der Standardwert ist 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Schwungschrift besteht aus dekorativen Symbolen, deren reiche Verzierungen häufig mit Kalligraphie assoziiert werden. Im folgenden Text werden Standard- und Schwungsymbole für die Schriftart Pescadero gezeigt.  
+  
+ ![Text mit OpenType-Standard- und Ziersymbolen](~/add/media/opentypefont08.gif "Text mit OpenType-Standard- und Ziersymbolen")  
+Beispiel für die Standard-und Ziersymbolen  
+  
+ Schwungschrift wird häufig als dekoratives Element in kurzen Sätzen verwendet, z.B. in Veranstaltungsankündigungen. Im folgenden Text werden die Großbuchstaben eines Veranstaltungstitels mit Schwungschrift hervorgehoben.  
+  
+ ![Text mit OpenType-Zierbuchstaben](~/add/media/opentypefont09.gif "Text mit OpenType-Zierbuchstaben")  
+Beispiel für Schwungschrift bei Großbuchstaben  
+  
+ Wenn der Wert des <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StandardSwashes%2A> ist größer als 0 ist und die ausgewählte Schriftart standard Schwungschrift am angegebenen Indexwert nicht unterstützt, wird das Standardformular des Buchstabens angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticAlternates">
+      <MemberSignature Language="C#" Value="public abstract int StylisticAlternates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StylisticAlternates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticAlternates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index eines Formulars stilistischer Varianten.</summary>
+        <value>Der Index des Formulars stilistischer Varianten. Der Standardwert ist 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alternative Stilvarianten sind Symbole, die ein Standardsymbol ersetzen können. OpenType-Schriftarten verwendet werden, z. B. die Schriftart Pericles in den folgenden Beispielen enthalten Alternative Glyphen, die Sie zum Erstellen von verschiedenen Anschein nach Text verwenden können. Im folgenden Text werden die Standardsymbole der Schriftart Pericles dargestellt.  
+  
+ ![Text mit OpenType-Standardsymbolen](~/add/media/opentypefont01.gif "Text mit OpenType-Standardsymbolen")  
+Beispiel für einen Standardsatz von Symbolen  
+  
+ Die OpenType-Schriftart Pericles enthält zusätzliche Symbole, die Stilvariante für den Standardsatz von Symbolen bereitstellen. Im folgenden Text werden Symbole im alternativen Stil gezeigt.  
+  
+ ![Text mit alternativen OpenType-Stilsymbolen](~/add/media/opentypefont02.gif "Text mit alternativen OpenType-Stilsymbolen")  
+Beispiel für alternative-Stilsymbolen  
+  
+ Der folgende Text zeigt mehrere alternative Stilsymbolen der Schriftart Pericles.  
+  
+ ![Text mit alternativen OpenType-Stilsymbolen](~/add/media/opentypefont03.gif "Text mit alternativen OpenType-Stilsymbolen")  
+Beispiel für andere alternativen-Stilsymbolen  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet1">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet1 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet1" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet10">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet10 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet10" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet10" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet11">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet11 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet11" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet11" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet12">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet12 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet12" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet12" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet13">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet13 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet13" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet13" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet14">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet14 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet14" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet14" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet15">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet15 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet15" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet15" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet16">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet16 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet16" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet16" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet17">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet17 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet17" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet17" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet18">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet18 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet18" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet18" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet19">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet19 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet19" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet19" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet2">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet2" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet20">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet20 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet20" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet20" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet3">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet3 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet3" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet3" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet4">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet4 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet4" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet4" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet5">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet5 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet5" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet5" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet6">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet6 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet6" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet6" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet7">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet7 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet7" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet7" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet8">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet8 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet8" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet8" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet9">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet9 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet9" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet9" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Stil der Form einer Schriftart aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Stil der Schriftart-Format aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Schriftarten enthalten Variante-Stilsymbolen, die Teile eines Zeichensatzes entsprechen. Symbole im stilistischen können visuell harmonisiert, auf bestimmte Weise interagieren oder auf andere Weise zusammenarbeiten entworfen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Variants">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.FontVariants Variants { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontVariants Variants" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.Variants" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontVariants</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der eine Variation des zu verwendenden typografischen Standardform angibt.</summary>
+        <value>Einer der <see cref="T:System.Windows.FontVariants" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.FontVariants.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Varianten ähneln hoch- oder tiefgestellten Schriftarten. Es ist möglich, dass die Form einer Schriftart kann unterschiedliche Symbolsätze zwischen Hoch- und die Ordinalzahl Form oder zwischen tiefgestellte und normale Formen enthalten. Die <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties.Variants%2A> -Eigenschaft können Sie für eine OpenType-Schriftart hoch- und tiefgestellten Werte festgelegt.  
+  
+ Der folgende Text zeigt hochgestellte Zeichen für die Schriftart Palatino Linotype.  
+  
+ ![Text mit hochgestellten OpenType-Zeichen](~/add/media/opentypefont14.gif "Text mit hochgestellten OpenType-Zeichen")  
+Beispiel für hochgestellte Elemente  
+  
+ Der folgende Text zeigt tiefgestellte Zeichen für die Schriftart Palatino Linotype.  
+  
+ ![Text mit tiefgestellten OpenType-Zeichen](~/add/media/opentypefont15.gif "Text mit tiefgestellten OpenType-Zeichen")  
+Beispiel für Indizes  
+  
+ Schriftarten, die keine Varianten unterstützen möglicherweise algorithmische Näherung des Formulars Schriftart.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

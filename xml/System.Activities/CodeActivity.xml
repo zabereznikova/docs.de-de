@@ -1,0 +1,208 @@
+<Type Name="CodeActivity" FullName="System.Activities.CodeActivity">
+  <TypeSignature Language="C#" Value="public abstract class CodeActivity : System.Activities.Activity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CodeActivity extends System.Activities.Activity" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.CodeActivity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Activity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine abstrakte Klasse zum Erstellen einer benutzerdefinierten Aktivität mit imperativem Verhalten, das mit der <see cref="M:System.Activities.CodeActivity.Execute(System.Activities.CodeActivityContext)" />-Methode definiert wird, die Zugriff auf Auflösungen und Erweiterungen von Variablen und Argumenten gewährt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht, wie eine von <xref:System.Activities.CodeActivity> abgeleitete Aktivität implementiert wird.  
+  
+ [!code-csharp[ActivityAction#0](~/samples/snippets/csharp/VS_Snippets_CFX/activityaction/cs/messagebox.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CodeActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt bei Implementierung in einer abgeleiteten Klasse eine Instanz der abgeleiteten Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CacheMetadata">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Erstellt und überprüft eine Beschreibung der Argumente, Variablen, untergeordneten Aktivitäten und Aktivitätsdelegaten der Aktivität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Autoren benutzerdefinierter Aktivitäten können in der <xref:System.Activities.CodeActivity.CacheMetadata%2A>-Überschreibung einer Aktivität Validierungslogik bereitstellen. Von <xref:System.Activities.CodeActivity.CacheMetadata%2A> ausgelöste Ausnahmen werden nicht als Validierungsfehler behandelt. Diese Ausnahmen werden im Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> nicht verarbeitet und müssen vom Aufrufer behandelt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected override sealed void CacheMetadata (System.Activities.ActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CacheMetadata(valuetype System.Activities.ActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivity.CacheMetadata(System.Activities.ActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.ActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Nicht implementiert.</param>
+        <summary>Nicht implementiert. Verwenden Sie stattdessen <see cref="M:System.Activities.CodeActivity.CacheMetadata(System.Activities.CodeActivityMetadata)" /> .</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Autoren benutzerdefinierter Aktivitäten können in der <xref:System.Activities.CodeActivity.CacheMetadata%2A>-Überschreibung einer Aktivität Validierungslogik bereitstellen. Von <xref:System.Activities.CodeActivity.CacheMetadata%2A> ausgelöste Ausnahmen werden nicht als Validierungsfehler behandelt. Diese Ausnahmen werden im Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> nicht verarbeitet und müssen vom Aufrufer behandelt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected virtual void CacheMetadata (System.Activities.CodeActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CacheMetadata(valuetype System.Activities.CodeActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivity.CacheMetadata(System.Activities.CodeActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.CodeActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Die Metadaten der Aktivität, die die Argumente, Variablen, untergeordnete Aktivitäten und Aktivitätsdelegaten der Aktivität kapseln.</param>
+        <summary>Erstellt und überprüft eine Beschreibung der Argumente, Variablen, untergeordneten Aktivitäten und Aktivitätsdelegaten der Aktivität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Workflowlaufzeit verwendet die Standardimplementierung von <xref:System.Activities.CodeActivity.CacheMetadata%2A>, um die richtige Konstruktion eines Workflows sicherzustellen sowie Laufzeitbeziehungen und Lebensdauerregeln zu verwalten. Die Standardimplementierung von <xref:System.Activities.CodeActivity.CacheMetadata%2A> untersucht die öffentlichen Member des Aktivitätstyps mit dem <xref:System.ComponentModel.TypeDescriptor> des Typs. Diese öffentlichen Member des Typs werden <xref:System.Activities.Argument>, <xref:System.Activities.Variable>, < xref:T:System.Collections.Generic.IEnumerable\<T:System.Activities.Variable >>, <xref:System.Activities.Activity>, < xref:T:System.Collections.Generic.IEnumerable\< T:System.Activities.Activity >>, oder <xref:System.Activities.ActivityDelegate>. Sie können diese Methode überschreiben, um die Erstellung der Laufzeitbeschreibung der Aktivität anzupassen und benutzerdefinierte Validierungslogik bereitzustellen. Von <xref:System.Activities.CodeActivity.CacheMetadata%2A> ausgelöste Ausnahmen werden nicht als Validierungsfehler behandelt. Diese Ausnahmen werden im Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> nicht verarbeitet und müssen vom Aufrufer behandelt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected abstract void Execute (System.Activities.CodeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Execute(class System.Activities.CodeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivity.Execute(System.Activities.CodeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.CodeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Ausführungskontext, in dem die Aktivität ausgeführt wird.</param>
+        <summary>Führt bei Implementierung in einer abgeleiteten Klasse die Ausführung der Aktivität durch.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Implementation">
+      <MemberSignature Language="C#" Value="protected override sealed Func&lt;System.Activities.Activity&gt; Implementation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`1&lt;class System.Activities.Activity&gt; Implementation" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.CodeActivity.Implementation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.IgnoreDataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Activities.Activity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wird nicht unterstützt.</summary>
+        <value>Gibt immer <see langword="null" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Festlegen eines Werts für diese Eigenschaft wird eine <xref:System.NotSupportedException> zurückgegeben. <xref:System.Activities.CodeActivity> lässt die Definition der Ausführungslogik als Aktivität nicht zu. Stattdessen muss die Ausführungslogik in der <xref:System.Activities.CodeActivity.Execute%2A>-Methode definiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplementationVersion">
+      <MemberSignature Language="C#" Value="protected override sealed Version ImplementationVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version ImplementationVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.CodeActivity.ImplementationVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die implementierungsversion der Aktivität.</summary>
+        <value>Die implementierungsversion der Aktivität.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateDynamicUpdateMap">
+      <MemberSignature Language="C#" Value="protected override sealed void OnCreateDynamicUpdateMap (System.Activities.DynamicUpdate.UpdateMapMetadata metadata, System.Activities.Activity originalActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnCreateDynamicUpdateMap(class System.Activities.DynamicUpdate.UpdateMapMetadata metadata, class System.Activities.Activity originalActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivity.OnCreateDynamicUpdateMap(System.Activities.DynamicUpdate.UpdateMapMetadata,System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.DynamicUpdate.UpdateMapMetadata" />
+        <Parameter Name="originalActivity" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Die Metadaten.</param>
+        <param name="originalActivity">Die ursprünglichen Aktivität.</param>
+        <summary>Löst ein Ereignis für die Erstellung einer Zuordnung für das dynamische Update.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

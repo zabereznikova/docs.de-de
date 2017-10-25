@@ -1,0 +1,1157 @@
+<Type Name="ComboBox" FullName="System.Windows.Controls.ComboBox">
+  <TypeSignature Language="C#" Value="public class ComboBox : System.Windows.Controls.Primitives.Selector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ComboBox extends System.Windows.Controls.Primitives.Selector" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ComboBox" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Primitives.Selector</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.ComboBox)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.StyleTypedProperty(Property="ItemContainerStyle", StyleTargetType=typeof(System.Windows.Controls.ComboBoxItem))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_EditableTextBox", Type=typeof(System.Windows.Controls.TextBox))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_Popup", Type=typeof(System.Windows.Controls.Primitives.Popup))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Auswahlsteuerelement mit einer Dropdownliste dar, die durch Klicken auf den Pfeil auf dem Steuerelement angezeigt oder ausgeblendet werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.ComboBox> ermöglicht es den Benutzer, ein Element aus einer Dropdownliste auswählen oder optional in das Textfeld des Steuerelements neuen Text eingeben. <xref:System.Windows.Controls.ComboBox>ist ein <xref:System.Windows.Controls.ItemsControl>, was bedeutet, dass eine Auflistung von Objekten eines beliebigen Typs (z. B. die Zeichenfolge "," Image "oder" Bereich ") enthalten kann. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Controls.ItemsControl>-Klasse.  
+  
+ Die <xref:System.Windows.Controls.ComboBox.IsEditable%2A> und <xref:System.Windows.Controls.ComboBox.IsReadOnly%2A> Eigenschaften angeben, wie die <xref:System.Windows.Controls.ComboBox> verhält, wenn der Benutzer einen der folgenden besitzt:  
+  
+-   Gibt eine Zeichenfolge zum Auswählen eines Elements in der <xref:System.Windows.Controls.ComboBox>.  
+  
+-   Gibt eine Zeichenfolge, die nicht entsprechen, auf ein Element in der <xref:System.Windows.Controls.ComboBox>.  
+  
+-   Wählt die Teil der Zeichenfolge, die in das Textfeld ist.  
+  
+-   Kopiert oder einen Wert in das Textfeld eingefügt.  
+  
+ Die folgende Tabelle beschreibt die Aktionen, die der Benutzer kann und kann nicht in Anspruch nehmen, je nach den Werten der <xref:System.Windows.Controls.ComboBox.IsEditable%2A> und <xref:System.Windows.Controls.ComboBox.IsReadOnly%2A>.  
+  
+||<xref:System.Windows.Controls.ComboBox.IsReadOnly%2A> ist gleich `true`.|<xref:System.Windows.Controls.ComboBox.IsReadOnly%2A> ist gleich `false`.|  
+|-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> ist gleich `true`.|-Kann nicht wählen Sie ein Element in der <xref:System.Windows.Controls.ComboBox> durch Eingabe einer Zeichenfolge.<br />-Geben Sie eine Zeichenfolge, die keinem kann nicht auf ein Element in der <xref:System.Windows.Controls.ComboBox>.<br />-Auszuwählender Teil der Zeichenfolge in der <xref:System.Windows.Controls.ComboBox> Textfeld.<br />– Können kopieren Sie die Zeichenfolge in der <xref:System.Windows.Controls.ComboBox> Text Feld, jedoch kann nicht eingefügt werden eine Zeichenfolge in der <xref:System.Windows.Controls.ComboBox> Textfeld.|-Können wählen Sie ein Element in der <xref:System.Windows.Controls.ComboBox> durch Eingabe einer Zeichenfolge.<br />-Geben Sie eine Zeichenfolge, die keinem können zu einem Element in der <xref:System.Windows.Controls.ComboBox>.<br />-Auszuwählender Teil der Zeichenfolge in der <xref:System.Windows.Controls.ComboBox> Textfeld.<br />– Kopieren oder fügen Sie die Zeichenfolge in können der <xref:System.Windows.Controls.ComboBox> Textfeld.|  
+|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> ist gleich `false`.|-Können wählen Sie ein Element in der <xref:System.Windows.Controls.ComboBox> durch Eingabe einer Zeichenfolge.<br />-Geben Sie eine Zeichenfolge, die keinem kann nicht auf ein Element in der <xref:System.Windows.Controls.ComboBox>.<br />-Wählen Sie kann nicht Teil der Zeichenfolge in der <xref:System.Windows.Controls.ComboBox>.<br />-Nicht kopiert, oder fügen Sie die Zeichenfolge in der <xref:System.Windows.Controls.ComboBox>.|-Können wählen Sie ein Element in der <xref:System.Windows.Controls.ComboBox> durch Eingabe einer Zeichenfolge.<br />-Geben Sie eine Zeichenfolge, die keinem kann nicht auf ein Element in der <xref:System.Windows.Controls.ComboBox>.<br />-Wählen Sie kann nicht Teil der Zeichenfolge in der <xref:System.Windows.Controls.ComboBox>.<br />-Nicht kopiert, oder fügen Sie die Zeichenfolge in der <xref:System.Windows.Controls.ComboBox>.|  
+  
+ Die <xref:System.Windows.Controls.ComboBox.IsReadOnly%2A> Eigenschaft verfügt über ein nur wirksam, wenn <xref:System.Windows.Controls.ComboBox.IsEditable%2A> ist `true`.  
+  
+ Die <xref:System.Windows.Controls.ComboBox> ist ein <xref:System.Windows.Controls.ItemsControl>, sodass der Inhalt als einfache Zeichenfolgen angezeigt werden können.  Sie können z. B. Erstellen einer <xref:System.Windows.Controls.ComboBox> , enthält eine Liste der Images. Wenn unbedingt notwendig anderer Inhalt als Zeichenfolgen in die <xref:System.Windows.Controls.ComboBox>, String unsinnig möglicherweise angezeigt, der <xref:System.Windows.Controls.ComboBox> die Dropdown Liste wird ausgeblendet, wenn. Zum Anzeigen einer Zeichenfolge in der <xref:System.Windows.Controls.ComboBox> verwenden, wenn sie die keine Zeichenfolgenmethoden Elemente enthält, die <xref:System.Windows.Controls.TextSearch.Text%2A?displayProperty=nameWithType> oder <xref:System.Windows.Controls.TextSearch.TextPath%2A?displayProperty=nameWithType> -Eigenschaft.  
+  
+## <a name="customizing-the-combobox-control"></a>Anpassen der ComboBox-Steuerelement  
+ Zum Anwenden der gleichen eigenschafteneinstellungen mit mehreren <xref:System.Windows.Controls.ComboBox> -Steuerelemente verwenden die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen. Weitere Informationen zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, finden Sie unter [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Um anzuzeigen, die Teile und Zustände, die spezifisch für die <xref:System.Windows.Controls.ComboBox>, finden Sie unter [ComboBox-Stile und Vorlagen](~/docs/framework/wpf/controls/combobox-styles-and-templates.md).  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden.  Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird.  Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Festlegen einer visuellen Eigenschaft haben nur Auswirkungen, wenn diese Eigenschaft sowohl in vorhanden ist <xref:System.Windows.Controls.ComboBox> Steuerelement die Standardvorlage und festgelegt ist, mit ein. Sie finden eine Liste der Eigenschaften visueller Elemente im Abschnitt "Ändern der visuellen Struktur eines Steuerelements" [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.ComboBox>. Das Beispiel füllt die <xref:System.Windows.Controls.ComboBox> durch Binden der <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft, um ein Auflistungsobjekt vom Typ `VacationSpots`. Auch das Beispiel erstellt eine <xref:System.Windows.Controls.TextBlock> , anzeigt, dass das ausgewählte Element von der <xref:System.Windows.Controls.ComboBox>.  
+  
+ [!code-xaml[ComboBoxItems#ComboBoxClass](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxItems/CSharp/Window1.xaml#comboboxclass)]  
+  
+ Das folgende Beispiel definiert das Auflistungsobjekt, das <xref:System.Windows.Controls.ComboBox> im vorherigen Beispiel bindet an.  
+  
+ [!code-csharp[ComboBoxItems#Data](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxItems/CSharp/Window1.xaml.cs#data)]
+ [!code-vb[ComboBoxItems#Data](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ComboBoxItems/VIsualBasic/Window1.xaml.vb#data)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComboBox ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBox.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.ComboBox" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownClosed">
+      <MemberSignature Language="C#" Value="public event EventHandler DropDownClosed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DropDownClosed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.ComboBox.DropDownClosed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Dropdown Liste des Kombinationsfelds geschlossen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Ereignishandler zugewiesen und Behandeln von der <xref:System.Windows.Controls.ComboBox.DropDownOpened> und <xref:System.Windows.Controls.ComboBox.DropDownClosed> Ereignisse.  
+  
+ [!code-xaml[ComboBoxSimple#ComboBoxEvents1](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxSimple/CSharp/Pane1.xaml#comboboxevents1)]  
+  
+ [!code-csharp[ComboBoxSimple#ComboBoxEvents2](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxSimple/CSharp/Pane1.xaml.cs#comboboxevents2)]
+ [!code-vb[ComboBoxSimple#ComboBoxEvents2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ComboBoxSimple/VisualBasic/Pane1.xaml.vb#comboboxevents2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownOpened">
+      <MemberSignature Language="C#" Value="public event EventHandler DropDownOpened;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DropDownOpened" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.ComboBox.DropDownOpened" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Dropdown Liste des Kombinationsfelds geöffnet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Ereignishandler zugewiesen und behandelt die <xref:System.Windows.Controls.ComboBox.DropDownOpened> und <xref:System.Windows.Controls.ComboBox.DropDownClosed> Ereignisse.  
+  
+ [!code-xaml[ComboBoxSimple#ComboBoxEvents1](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxSimple/CSharp/Pane1.xaml#comboboxevents1)]  
+  
+ [!code-csharp[ComboBoxSimple#ComboBoxEvents2](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxSimple/CSharp/Pane1.xaml.cs#comboboxevents2)]
+ [!code-vb[ComboBoxSimple#ComboBoxEvents2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ComboBoxSimple/VisualBasic/Pane1.xaml.vb#comboboxevents2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.DependencyObject GetContainerForItemOverride ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.DependencyObject GetContainerForItemOverride() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBox.GetContainerForItemOverride" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt oder identifiziert das Element verwendet, um das angegebene Element anzuzeigen.</summary>
+        <returns>Das Element verwendet, um das angegebene Element anzuzeigen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlesScrolling">
+      <MemberSignature Language="C#" Value="protected override bool HandlesScrolling { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HandlesScrolling" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ComboBox.HandlesScrolling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Kombinationsfeld Durchführen eines Bildlaufs unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.ComboBox" /> Bildlauf; unterstützt, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Steuerelement besitzt eine <xref:System.Windows.Controls.ScrollViewer> in den Stil und verfügt über eine benutzerdefinierte verwenden Bildlauf-Verhalten, <xref:System.Windows.Controls.ListBox.HandlesScrolling%2A> zurückgeben sollte `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasEffectiveKeyboardFocus">
+      <MemberSignature Language="C#" Value="protected override bool HasEffectiveKeyboardFocus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasEffectiveKeyboardFocus" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ComboBox.HasEffectiveKeyboardFocus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Windows.Controls.ComboBox" /> den Fokus besitzt.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Windows.Controls.ComboBox" /> den Fokus besitzt, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDropDownOpen">
+      <MemberSignature Language="C#" Value="public bool IsDropDownOpen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDropDownOpen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ComboBox.IsDropDownOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Dropdownliste eines Kombinationsfelds derzeit geöffnet ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Dropdown-geöffnet ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsDropDownOpen"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ComboBox.IsDropDownOpenProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A> Eigenschaft zum Erstellen eines Kombinationsfelds mit der Dropdown-Steuerelement geöffnet wird, wenn das Kombinationsfeld initiiert wird.  
+  
+ [!code-xaml[ComboBoxStyles#4](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxStyles/CS/app.xaml#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDropDownOpenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsDropDownOpenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsDropDownOpenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ComboBox.IsDropDownOpenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ComboBox.IsDropDownOpen" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEditable">
+      <MemberSignature Language="C#" Value="public bool IsEditable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEditable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ComboBox.IsEditable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der aktiviert oder deaktiviert die Bearbeitung des Texts im Textfeld die <see cref="T:System.Windows.Controls.ComboBox" />.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.ComboBox" /> können bearbeitet werden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.ComboBox.IsEditable%2A> und <xref:System.Windows.Controls.ComboBox.IsReadOnly%2A> Eigenschaften angeben, wie die <xref:System.Windows.Controls.ComboBox> verhält, wenn der Benutzer einen der folgenden besitzt:  
+  
+-   Gibt eine Zeichenfolge zum Auswählen eines Elements in der <xref:System.Windows.Controls.ComboBox>.  
+  
+-   Gibt eine Zeichenfolge, die nicht entsprechen, auf ein Element in der <xref:System.Windows.Controls.ComboBox>.  
+  
+-   Wählt die Teil der Zeichenfolge, die in das Textfeld ist.  
+  
+-   Kopiert oder einen Wert in das Textfeld eingefügt.  
+  
+ Die folgende Tabelle beschreibt die Aktionen, die der Benutzer kann und kann nicht in Anspruch nehmen, je nach den Werten der <xref:System.Windows.Controls.ComboBox.IsEditable%2A> und <xref:System.Windows.Controls.ComboBox.IsReadOnly%2A>.  
+  
+||<xref:System.Windows.Controls.ComboBox.IsReadOnly%2A> ist gleich `true`.|<xref:System.Windows.Controls.ComboBox.IsReadOnly%2A> ist gleich `false`.|  
+|-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> ist gleich `true`.|-Kann nicht wählen Sie ein Element in der <xref:System.Windows.Controls.ComboBox> durch Eingabe einer Zeichenfolge.<br />-Geben Sie eine Zeichenfolge, die keinem kann nicht auf ein Element in der <xref:System.Windows.Controls.ComboBox>.<br />-Auszuwählender Teil der Zeichenfolge in der <xref:System.Windows.Controls.ComboBox> Textfeld.<br />– Können kopieren Sie die Zeichenfolge in der <xref:System.Windows.Controls.ComboBox> Text Feld, jedoch kann nicht eingefügt werden eine Zeichenfolge in der <xref:System.Windows.Controls.ComboBox> Textfeld.|-Können wählen Sie ein Element in der <xref:System.Windows.Controls.ComboBox> durch Eingabe einer Zeichenfolge.<br />-Geben Sie eine Zeichenfolge, die keinem können zu einem Element in der <xref:System.Windows.Controls.ComboBox>.<br />-Auszuwählender Teil der Zeichenfolge in der <xref:System.Windows.Controls.ComboBox> Textfeld.<br />– Kopieren oder fügen Sie die Zeichenfolge in können der <xref:System.Windows.Controls.ComboBox> Textfeld.|  
+|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> ist gleich `false`.|-Können wählen Sie ein Element in der <xref:System.Windows.Controls.ComboBox> durch Eingabe einer Zeichenfolge.<br />-Geben Sie eine Zeichenfolge, die keinem kann nicht auf ein Element in der <xref:System.Windows.Controls.ComboBox>.<br />-Wählen Sie kann nicht Teil der Zeichenfolge in der <xref:System.Windows.Controls.ComboBox>.<br />-Nicht kopiert, oder fügen Sie die Zeichenfolge in der <xref:System.Windows.Controls.ComboBox>.|-Können wählen Sie ein Element in der <xref:System.Windows.Controls.ComboBox> durch Eingabe einer Zeichenfolge.<br />-Geben Sie eine Zeichenfolge, die keinem kann nicht auf ein Element in der <xref:System.Windows.Controls.ComboBox>.<br />-Wählen Sie kann nicht Teil der Zeichenfolge in der <xref:System.Windows.Controls.ComboBox>.<br />-Nicht kopiert, oder fügen Sie die Zeichenfolge in der <xref:System.Windows.Controls.ComboBox>.|  
+  
+ Wenn <xref:System.Windows.Controls.ComboBox.IsEditable%2A> ist gleich `false`, die <xref:System.Windows.Controls.ComboBox> verwendet eine <xref:System.Windows.Controls.ContentPresenter> anzuzeigenden das derzeit ausgewählte Element; Wenn <xref:System.Windows.Controls.ComboBox.IsEditable%2A> ist gleich `true`, eine <xref:System.Windows.Controls.TextBox> wird für diesen Zweck verwendet. Beachten Sie, dass eine <xref:System.Windows.Controls.TextBox> zeigt nur nur-Text, und dass eine <xref:System.Windows.Controls.ComboBoxItem> kann nicht als nur-Text - Inhalt, z. B. Bilder enthalten.  
+  
+<a name="dependencyPropertyInfo_IsEditable"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ComboBox.IsEditableProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Erstellen Sie in den folgenden Beispielen <xref:System.Windows.Controls.ComboBox> Steuerelemente, die Bilder als Objekte anstelle von Text enthalten. Wenn die <xref:System.Windows.Controls.ComboBox.IsEditable%2A> -Eigenschaftensatz auf `true`, <xref:System.Windows.Controls.TextBox> zeigt den Wert des Bilds zurückgegebenes <xref:System.Object.ToString%2A> Methode. Zur Vermeidung einer <xref:System.Windows.Controls.TextBox> mit unerwarteten Text verwenden die <xref:System.Windows.Controls.TextSearch.Text%2A?displayProperty=nameWithType> und <xref:System.Windows.Controls.TextSearch.TextPath%2A?displayProperty=nameWithType> Eigenschaften zuweisen von Text, der angezeigt werden.  
+  
+ [!code-xaml[ComboBoxProps_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxProps_snip/CS/pane1.xaml#1)]  
+  
+ [!code-xaml[ComboBoxProps_snip#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxProps_snip/CS/pane1.xaml#2)]  
+  
+ Eine andere Lösung besteht darin, verwenden Sie die <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> Eigenschaft. Das Dropdown-Steuerelement von der <xref:System.Windows.Controls.ComboBox> die Bilder werden nicht angezeigt, sondern zeigt den Text, die Ihnen zugewiesen.  
+  
+ Das folgende Beispiel veranschaulicht die Verwendung von <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>.  
+  
+ [!code-xaml[ComboBoxProps_snip#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxProps_snip/CS/pane1.xaml#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEditableProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsEditableProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsEditableProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ComboBox.IsEditableProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ComboBox.IsEditable" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemItsOwnContainerOverride">
+      <MemberSignature Language="C#" Value="protected override bool IsItemItsOwnContainerOverride (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsItemItsOwnContainerOverride(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBox.IsItemItsOwnContainerOverride(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Der angegebene Eintrag.</param>
+        <summary>Bestimmt, ob das angegebene Element ist (oder sein kann) eine eigene <c>ItemContainer</c>.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element einen eigenen <c>ItemContainer</c>ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ComboBox.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der nur-Auswahl-Modus aktiviert, in dem der Inhalt des Kombinationsfelds auswählbare aber nicht bearbeitet werden.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Windows.Controls.ComboBox" /> schreibgeschützt ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.ComboBox.IsEditable%2A> und <xref:System.Windows.Controls.ComboBox.IsReadOnly%2A> Eigenschaften angeben, wie die <xref:System.Windows.Controls.ComboBox> verhält, wenn der Benutzer einen der folgenden besitzt:  
+  
+-   Gibt eine Zeichenfolge zum Auswählen eines Elements in der <xref:System.Windows.Controls.ComboBox>.  
+  
+-   Gibt eine Zeichenfolge, die nicht entsprechen, auf ein Element in der <xref:System.Windows.Controls.ComboBox>.  
+  
+-   Wählt die Teil der Zeichenfolge, die in das Textfeld ist.  
+  
+-   Kopiert oder einen Wert in das Textfeld eingefügt.  
+  
+ Die folgende Tabelle beschreibt die Aktionen, die der Benutzer kann und kann nicht in Anspruch nehmen, je nach den Werten der <xref:System.Windows.Controls.ComboBox.IsEditable%2A> und <xref:System.Windows.Controls.ComboBox.IsReadOnly%2A>.  
+  
+||<xref:System.Windows.Controls.ComboBox.IsReadOnly%2A> ist gleich `true`.|<xref:System.Windows.Controls.ComboBox.IsReadOnly%2A> ist gleich `false`.|  
+|-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> ist gleich `true`.|-Kann nicht wählen Sie ein Element in der <xref:System.Windows.Controls.ComboBox> durch Eingabe einer Zeichenfolge.<br />-Geben Sie eine Zeichenfolge, die keinem kann nicht auf ein Element in der <xref:System.Windows.Controls.ComboBox>.<br />-Auszuwählender Teil der Zeichenfolge in der <xref:System.Windows.Controls.ComboBox> Textfeld.<br />– Können kopieren Sie die Zeichenfolge in der <xref:System.Windows.Controls.ComboBox> Text Feld, jedoch kann nicht eingefügt werden eine Zeichenfolge in der <xref:System.Windows.Controls.ComboBox> Textfeld.|-Können wählen Sie ein Element in der <xref:System.Windows.Controls.ComboBox> durch Eingabe einer Zeichenfolge.<br />-Geben Sie eine Zeichenfolge, die keinem können zu einem Element in der <xref:System.Windows.Controls.ComboBox>.<br />-Auszuwählender Teil der Zeichenfolge in der <xref:System.Windows.Controls.ComboBox> Textfeld.<br />– Kopieren oder fügen Sie die Zeichenfolge in können der <xref:System.Windows.Controls.ComboBox> Textfeld.|  
+|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> ist gleich `false`.|-Können wählen Sie ein Element in der <xref:System.Windows.Controls.ComboBox> durch Eingabe einer Zeichenfolge.<br />-Geben Sie eine Zeichenfolge, die keinem kann nicht auf ein Element in der <xref:System.Windows.Controls.ComboBox>.<br />-Wählen Sie kann nicht Teil der Zeichenfolge in der <xref:System.Windows.Controls.ComboBox>.<br />-Nicht kopiert, oder fügen Sie die Zeichenfolge in der <xref:System.Windows.Controls.ComboBox>.|-Können wählen Sie ein Element in der <xref:System.Windows.Controls.ComboBox> durch Eingabe einer Zeichenfolge.<br />-Geben Sie eine Zeichenfolge, die keinem kann nicht auf ein Element in der <xref:System.Windows.Controls.ComboBox>.<br />-Wählen Sie kann nicht Teil der Zeichenfolge in der <xref:System.Windows.Controls.ComboBox>.<br />-Nicht kopiert, oder fügen Sie die Zeichenfolge in der <xref:System.Windows.Controls.ComboBox>.|  
+  
+ Wenn <xref:System.Windows.Controls.ComboBox.IsEditable%2A> ist gleich `false`, die <xref:System.Windows.Controls.ComboBox> verwendet eine <xref:System.Windows.Controls.ContentPresenter> anzuzeigenden das derzeit ausgewählte Element; Wenn <xref:System.Windows.Controls.ComboBox.IsEditable%2A> ist gleich `true`, eine <xref:System.Windows.Controls.TextBox> wird für diesen Zweck verwendet. Beachten Sie, dass eine <xref:System.Windows.Controls.TextBox> zeigt nur nur-Text, und dass eine <xref:System.Windows.Controls.ComboBoxItem> kann nicht als nur-Text - Inhalt, z. B. Bilder enthalten.  
+  
+<a name="dependencyPropertyInfo_IsReadOnly"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ComboBox.IsReadOnlyProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine <xref:System.Windows.Controls.ComboBox> mit einer bearbeitbaren <xref:System.Windows.Controls.TextBox>. Die <xref:System.Windows.Controls.ComboBox.IsReadOnly%2A> -Eigenschaftensatz auf `true`, sodass der Benutzer Text eingeben kann nicht der <xref:System.Windows.Controls.TextBox>.  
+  
+ [!code-xaml[ComboBoxItems#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxItems/CSharp/Window1.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnlyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsReadOnlyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsReadOnlyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ComboBox.IsReadOnlyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ComboBox.IsReadOnly" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionBoxHighlighted">
+      <MemberSignature Language="C#" Value="public bool IsSelectionBoxHighlighted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelectionBoxHighlighted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob die <see cref="P:System.Windows.Controls.ComboBox.SelectionBoxItem" /> wird hervorgehoben.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Windows.Controls.ComboBox.SelectionBoxItem" /> hervorgehoben ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft handelt es sich um eine Abhängigkeitseigenschaft. Allerdings Feld der Bezeichner der Abhängigkeitseigenschaft für <xref:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted%2A> ist nicht öffentlich. Aus diesem Grund können keine der dahinter liegende Abhängigkeitseigenschaft für Vorgänge, die Bezeichner für die Abhängigkeitseigenschaft, z. B. Aufrufe erfordern System <xref:System.Windows.DependencyObject.GetValue%2A>. Allerdings können Sie weiterhin verwenden <xref:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted%2A> als einen Eigenschaftsauslöser.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxDropDownHeight">
+      <MemberSignature Language="C#" Value="public double MaxDropDownHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MaxDropDownHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ComboBox.MaxDropDownHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Höhe für ein Feld Dropdown-Kombinationsfeld.</summary>
+        <value>Ein Double-Wert, der die Höhe darstellt, die abgerufen werden oder die Höhe festgelegt. Der Standardwert gemäß dem Eigenschaftensystem ist ein berechneter Wert, der Berücksichtigung der Bruchzahl ein Drittel der System-Parameter für die maximale Höhe, aber diese Standardeinstellung wird durch verschiedene Steuerelementvorlagen möglicherweise überschrieben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Automatische Anpassung ist nicht der Standard, und führt in der Dropdownliste Größe überschreiten möglicherweise die verfügbare Größe im übergeordneten Element. Dies ist nicht in der Regel wünschenswert.  
+  
+<a name="dependencyPropertyInfo_MaxDropDownHeight"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ComboBox.MaxDropDownHeightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+<a name="xamlAttributeUsage_MaxDropDownHeight"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object MaxDropDownHeight="double"/>  
+- or –  
+<object MaxDropDownHeight ="qualifiedDouble"/>  
+- or -  
+<object MaxDropDownHeight ="Auto"/>  
+```  
+  
+<a name="xamlValues_MaxDropDownHeight"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert. Dies wird als interpretiert eine [!INCLUDE[TLA#tla_dipixel](~/includes/tlasharptla-dipixel-md.md)] Messung. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten. Für die Instanz den Wert `1` akzeptabel ist.  
+  
+ Die gleiche <xref:System.Double> bereichseinschränkungen wie im Abschnitt Eigenschaftswert erwähnt anwenden.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert, wie oben beschrieben, gefolgt von einem der folgenden Deklaration Einheitenzeichenfolgen: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+ `Auto`  
+ Ermöglicht automatisches Anpassen der Größe Verhalten. Siehe Hinweise.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.ComboBox.MaxDropDownHeight%2A> Eigenschaft, um die Höhe der angeben der <xref:System.Windows.Controls.ComboBox> des Dropdown-Steuerelements.  
+  
+ [!code-xaml[ComboBoxStyles#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxStyles/CS/app.xaml#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxDropDownHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaxDropDownHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaxDropDownHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ComboBox.MaxDropDownHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ComboBox.MaxDropDownHeight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBox.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn <see cref="M:System.Windows.FrameworkElement.ApplyTemplate" /> aufgerufen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBox.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine geeignete <see cref="T:System.Windows.Automation.Peers.ComboBoxAutomationPeer" /> Implementierung für dieses Steuerelement als Teil der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Infrastruktur.</summary>
+        <returns>Die typspezifische <see cref="T:System.Windows.Automation.Peers.AutomationPeer" />-Implementierung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDropDownClosed">
+      <MemberSignature Language="C#" Value="protected virtual void OnDropDownClosed (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDropDownClosed(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBox.OnDropDownClosed(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten für die <see cref="E:System.Windows.Controls.ComboBox.DropDownClosed" /> Ereignis.</param>
+        <summary>Gibt an, wann ein Kombinationsfeld Popupfenster wird geschlossen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDropDownOpened">
+      <MemberSignature Language="C#" Value="protected virtual void OnDropDownOpened (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDropDownOpened(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBox.OnDropDownOpened(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten für die <see cref="E:System.Windows.Controls.ComboBox.DropDownOpened" /> Ereignis.</param>
+        <summary>Gibt an, wann ein Kombinationsfeld Popupfenster wird geöffnet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIsKeyboardFocusWithinChanged">
+      <MemberSignature Language="C#" Value="protected override void OnIsKeyboardFocusWithinChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnIsKeyboardFocusWithinChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBox.OnIsKeyboardFocusWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten für die <see cref="E:System.Windows.UIElement.IsKeyboardFocusWithinChanged" /> Ereignis.</param>
+        <summary>Meldet, das die <see cref="P:System.Windows.ContentElement.IsKeyboardFocusWithin" /> Eigenschaft geändert wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIsMouseCapturedChanged">
+      <MemberSignature Language="C#" Value="protected override void OnIsMouseCapturedChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnIsMouseCapturedChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBox.OnIsMouseCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten für die <see cref="E:System.Windows.UIElement.IsMouseCapturedChanged" /> Ereignis.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.UIElement.IsMouseCaptured" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBox.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ereignisdaten.</param>
+        <summary>Wird aufgerufen, wenn eine <see cref="E:System.Windows.Input.Keyboard.KeyDown" /> angefügten Routingereignis auftritt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeftButtonUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeftButtonUp (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeftButtonUp(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBox.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten für die <see cref="E:System.Windows.UIElement.MouseLeftButtonUp" /> Ereignis.</param>
+        <summary>Wird aufgerufen, um zu melden, dass die linke Maustaste losgelassen wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBox.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ereignisdaten.</param>
+        <summary>Wird aufgerufen, wenn eine <see cref="E:System.Windows.Input.Keyboard.PreviewKeyDown" /> angefügten Routingereignis auftritt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionChanged">
+      <MemberSignature Language="C#" Value="protected override void OnSelectionChanged (System.Windows.Controls.SelectionChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSelectionChanged(class System.Windows.Controls.SelectionChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBox.OnSelectionChanged(System.Windows.Controls.SelectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.SelectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten für <see cref="T:System.Windows.Controls.SelectionChangedEventArgs" />.</param>
+        <summary>Reagiert auf eine <see cref="T:System.Windows.Controls.ComboBox" /> Änderung der Auswahl durch Auslösen einer <see cref="E:System.Windows.Controls.Primitives.Selector.SelectionChanged" /> Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override void PrepareContainerForItemOverride (System.Windows.DependencyObject element, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PrepareContainerForItemOverride(class System.Windows.DependencyObject element, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBox.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das zum Anzeigen des angegebenen Eintrags verwendete Element.</param>
+        <param name="item">Der angegebene Eintrag.</param>
+        <summary>Bereitet das angegebene Element auf die Anzeige des angegebenen Eintrags vor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vorbereiten des Elements möglicherweise umfassen, Anwenden von Stilen, Bindungen, festlegen und so weiter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionBoxItem">
+      <MemberSignature Language="C#" Value="public object SelectionBoxItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SelectionBoxItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ComboBox.SelectionBoxItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element, das im Auswahlbereich angezeigt wird.</summary>
+        <value>Das ausgewählte Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.ControlTemplate> von der <xref:System.Windows.Controls.ComboBox> verwendet diese Eigenschaft zum Anzeigen des ausgewählten Elements in der <xref:System.Windows.Controls.ComboBox>.  Das ausgewählte Element der abzurufenden der <xref:System.Windows.Controls.ComboBox> außerhalb von der <xref:System.Windows.Controls.ControlTemplate>, verwenden die <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A?displayProperty=nameWithType> -Eigenschaft statt dieser Eigenschaft.  
+  
+<a name="xamlAttributeUsage_SelectionBoxItem"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="{TemplateBinding SelectionBoxItem}"/>  
+```  
+  
+<a name="dependencyPropertyInfo_SelectionBoxItem"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ComboBox.SelectionBoxItemProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel bindet der <xref:System.Windows.Controls.ContentPresenter.Content%2A> Eigenschaft eine <xref:System.Windows.Controls.ContentPresenter> auf die <xref:System.Windows.Controls.ComboBox.SelectionBoxItem%2A> Eigenschaft. Die <xref:System.Windows.Controls.ContentPresenter> ist Teil der <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.ComboBox>. Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
+  
+ [!code-xaml[ControlTemplateExamples#ComboBoxSelectionBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#comboboxselectionbox)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionBoxItemProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionBoxItemProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionBoxItemProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ComboBox.SelectionBoxItemProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ComboBox.SelectionBoxItem" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionBoxItemStringFormat">
+      <MemberSignature Language="C#" Value="public string SelectionBoxItemStringFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectionBoxItemStringFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ComboBox.SelectionBoxItemStringFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine zusammengesetzte Zeichenfolge, die angibt, wie das ausgewählte Element im Auswahlbereich zu formatieren, wenn er als Zeichenfolge angezeigt wird.</summary>
+        <value>Eine zusammengesetzte Zeichenfolge, die angibt, wie das ausgewählte Element im Auswahlbereich zu formatieren, wenn er als Zeichenfolge angezeigt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionBoxItemStringFormatProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionBoxItemStringFormatProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionBoxItemStringFormatProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ComboBox.SelectionBoxItemStringFormatProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ComboBox.SelectionBoxItemStringFormat" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionBoxItemTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate SelectionBoxItemTemplate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate SelectionBoxItemTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ComboBox.SelectionBoxItemTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Elementvorlage Inhalte der Auswahl ab.</summary>
+        <value>Eine Elementvorlage.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_SelectionBoxItemTemplate"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="{TemplateBinding SelectionBoxItemTemplate}"/>  
+```  
+  
+<a name="dependencyPropertyInfo_SelectionBoxItemTemplate"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ComboBox.SelectionBoxItemTemplateProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel bindet der <xref:System.Windows.Controls.ContentPresenter.Content%2A> Eigenschaft eine <xref:System.Windows.Controls.ContentPresenter> auf die <xref:System.Windows.Controls.ComboBox.SelectionBoxItemTemplate%2A> Eigenschaft. Die <xref:System.Windows.Controls.ContentPresenter> ist Teil der <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.ComboBox>. Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
+  
+ [!code-xaml[ControlTemplateExamples#ComboBoxSelectionBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#comboboxselectionbox)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionBoxItemTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionBoxItemTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionBoxItemTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ComboBox.SelectionBoxItemTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ComboBox.SelectionBoxItemTemplate" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldPreserveUserEnteredPrefix">
+      <MemberSignature Language="C#" Value="public bool ShouldPreserveUserEnteredPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShouldPreserveUserEnteredPrefix" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ComboBox.ShouldPreserveUserEnteredPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.ComboBox" /> behält der Benutzer den eingabeendpunkt oder die Eingabe mit einem übereinstimmenden Element ersetzt.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.ComboBox" /> behält die Eingabe des Benutzers; <see langword="false" /> Wenn die <see cref="T:System.Windows.Controls.ComboBox" /> ersetzt die Eingabe mit einem übereinstimmenden Element der registrierte Standardwert <see langword="false" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird bei der Eingabe der Benutzer eine Zeichenfolge in der <xref:System.Windows.Controls.ComboBox> , die mit einem der Elemente übereinstimmt, wird das Element ausgewählt und der Text, der vom Benutzer eingegebene ersetzt.  Dadurch kann den Text, den der Benutzer eingegeben wird, um die Groß-/Kleinschreibung ändern. Wenn die <xref:System.Windows.Controls.ComboBox.ShouldPreserveUserEnteredPrefix%2A> -Eigenschaftensatz auf `true`die <xref:System.Windows.Controls.ComboBox> das entsprechende Element ausgewählt, aber den Text, der vom Benutzer eingegebenen behält.   Nehmen wir beispielsweise an, die eine <xref:System.Windows.Controls.ComboBox> enthält die Zeichenfolge "Hello" (mit Großbuchstaben H) und der Benutzer gibt "hello" (mit einem Kleinbuchstaben h).  Wenn <xref:System.Windows.Controls.ComboBox.ShouldPreserveUserEnteredPrefix%2A> ist `false`die <xref:System.Windows.Controls.ComboBox> wählt das entsprechende Element, "Hello", in der Auflistung und ein Textfeld mit dieser Zeichenfolge füllt.    Wenn <xref:System.Windows.Controls.ComboBox.ShouldPreserveUserEnteredPrefix%2A> ist `true`, aus der Auflistung "Hello" ausgewählt ist, aber im Textfeld sagt "hello" an.  
+  
+<a name="dependencyPropertyInfo_ShouldPreserveUserEnteredPrefix"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ComboBox.ShouldPreserveUserEnteredPrefixProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldPreserveUserEnteredPrefixProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ShouldPreserveUserEnteredPrefixProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ShouldPreserveUserEnteredPrefixProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ComboBox.ShouldPreserveUserEnteredPrefixProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ComboBox.ShouldPreserveUserEnteredPrefix" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaysOpenOnEdit">
+      <MemberSignature Language="C#" Value="public bool StaysOpenOnEdit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StaysOpenOnEdit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ComboBox.StaysOpenOnEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob eine <see cref="T:System.Windows.Controls.ComboBox" /> also geöffnet und zeigt ein Dropdown-Steuerelement bleibt geöffnet werden, wenn ein Benutzer klickt auf die <see cref="T:System.Windows.Controls.TextBox" />.</summary>
+        <value>
+          <see langword="true" />Damit das Dropdown-Steuerelement geöffnet klickt der Benutzer auf den Textbereich Bearbeitung zu starten; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_StaysOpenOnEdit"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ComboBox.StaysOpenOnEditProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.Windows.Controls.ComboBox.StaysOpenOnEdit%2A> Eigenschaft so erstellen Sie ein Kombinationsfeld, dessen Dropdown-Steuerelement geöffnet bleibt, während der Benutzer Informationen in das Textfeld eingibt.  
+  
+ [!code-xaml[ComboBoxItems#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxItems/CSharp/Window1.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaysOpenOnEditProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StaysOpenOnEditProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StaysOpenOnEditProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ComboBox.StaysOpenOnEditProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ComboBox.StaysOpenOnEdit" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ComboBox.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text des derzeit ausgewählten Elements fest.</summary>
+        <value>Die Zeichenfolge des derzeit ausgewählten Elements. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Controls.ComboBox.IsEditable%2A> Eigenschaft `true`, anfängliche in das Textfeld eingegebene Text wird durch Festlegen dieser Eigenschaft. Wenn <xref:System.Windows.Controls.ComboBox.IsEditable%2A> ist `false`, wenn dieser Wert hat keine Auswirkung.  
+  
+<a name="dependencyPropertyInfo_Text"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ComboBox.TextProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.Windows.Controls.ComboBox.Text%2A> Eigenschaft kann verwendet werden, um Text in der <xref:System.Windows.Controls.TextBox> bevor der Benutzer eine Auswahl trifft.  
+  
+ [!code-xaml[ComboBoxItems#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxItems/CSharp/Window1.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ComboBox.TextProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ComboBox.Text" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

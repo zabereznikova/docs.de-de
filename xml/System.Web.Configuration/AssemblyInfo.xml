@@ -1,0 +1,112 @@
+<Type Name="AssemblyInfo" FullName="System.Web.Configuration.AssemblyInfo">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyInfo : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AssemblyInfo extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.AssemblyInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verweist auf eine Assembly, die während der Kompilierung einer dynamischen Ressource verknüpft werden soll. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET verknüpft Assemblys automatisch auf eine Ressource, beim jedes Codemodul zu kompilieren. Ein <xref:System.Web.Configuration.AssemblyInfo> Objekt verweist auf eine Assembly. Eine Assembly ist eine Auflistung von Typen und Ressourcen, die so erstellt wurden, dass sie zusammenarbeiten und eine logische funktionelle Einheit bilden. Eine Assembly stellt die common Language Runtime die Informationen zum Identifizieren der typimplementierungen benötigten. Für die Common Language Runtime sind Typen nur im Kontext einer Assembly vorhanden.  
+  
+ Häufig verknüpfte Assemblys sind aufgeführt, der `assemblies` Knoten der `compilation` Teil der Konfiguration. Darüber hinaus können Assemblys manuell auf eine Coderessource hinzugefügt werden, wenn zusätzliche Funktionen für eine Anwendung benötigt wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyInfo (string assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AssemblyInfo.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assemblyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyName">Gibt eine durch Trennzeichen getrennte Assembly Dateinamenkombination Version, Kultur und Token für öffentliche Schlüssel besteht.</param>
+        <summary>Erstellt eine Instanz einer <see cref="T:System.Web.Configuration.AssemblyInfo" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.Configuration.AssemblyInfo> Instanz ist nicht mit Assemblyinformationen initialisiert, wird eine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Web.Configuration.AssemblyInfo> Objekt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.AssemblyCollection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.AssemblyCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AssemblyCollection/CS/AssemblyCollection.cs#2)]
+ [!code-vb[System.Web.Configuration.AssemblyCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AssemblyCollection/VB/AssemblyCollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="public string Assembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Assembly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AssemblyInfo.Assembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("assembly", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen Assemblyverweis auf die während der Kompilierung einer dynamischen Ressource verwenden.</summary>
+        <value>Eine durch Kommas getrennte Zeichenfolge-Wert, der Version, Kultur und Public-Key-Token einer Assembly angeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET sucht zuerst nach der Assembly-DLL im privaten "bin" im Verzeichnis der Anwendung und anschließend im Assemblycache Systems.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AssemblyInfo.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

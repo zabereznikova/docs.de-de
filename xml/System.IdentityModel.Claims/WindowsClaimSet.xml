@@ -1,0 +1,344 @@
+<Type Name="WindowsClaimSet" FullName="System.IdentityModel.Claims.WindowsClaimSet">
+  <TypeSignature Language="C#" Value="public class WindowsClaimSet : System.IdentityModel.Claims.ClaimSet, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WindowsClaimSet extends System.IdentityModel.Claims.ClaimSet implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Claims.WindowsClaimSet" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Claims.ClaimSet</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von Windows-Ansprüchen dar, die einer Entität zugeordnet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowsClaimSet (System.Security.Principal.WindowsIdentity identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.WindowsIdentity identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.WindowsClaimSet.#ctor(System.Security.Principal.WindowsIdentity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="windowsIdentity" Type="System.Security.Principal.WindowsIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="identity">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Claims.WindowsClaimSet" />-Klasse mithilfe der durch das <see cref="T:System.Security.Principal.WindowsIdentity" />-Objekt angegebenen Windows-Benutzeridentität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dem Satz von Ansprüchen werden die Ansprüche hinzugefügt, die die Windows-Gruppen darstellen, zu denen dieser Benutzer gehört.  
+  
+ Die Ablaufzeit wird auf 10 Stunden festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowsClaimSet (System.Security.Principal.WindowsIdentity identity, bool includeWindowsGroups);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.WindowsIdentity identity, bool includeWindowsGroups) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.WindowsClaimSet.#ctor(System.Security.Principal.WindowsIdentity,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="windowsIdentity" Type="System.Security.Principal.WindowsIdentity" />
+        <Parameter Name="includeWindowsGroups" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="identity">To be added.</param>
+        <param name="includeWindowsGroups">
+          <see langword="true" />, um die Ansprüche einzuschließen, die die Windows-Gruppen darstellen, zu denen dieser Benutzer gehört, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Claims.WindowsClaimSet" />-Klasse mithilfe der durch das <see cref="T:System.Security.Principal.WindowsIdentity" />-Objekt angegebenen Windows-Benutzeridentität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ablaufzeit wird auf 10 Stunden festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowsClaimSet (System.Security.Principal.WindowsIdentity identity, DateTime expirationTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.WindowsIdentity identity, valuetype System.DateTime expirationTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.WindowsClaimSet.#ctor(System.Security.Principal.WindowsIdentity,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="windowsIdentity" Type="System.Security.Principal.WindowsIdentity" />
+        <Parameter Name="expirationTime" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="identity">To be added.</param>
+        <param name="expirationTime">Ein <see cref="T:System.DateTime" />, der die Ablaufzeit für den Satz von Ansprüchen angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Claims.WindowsClaimSet" />-Klasse mithilfe der durch das <see cref="T:System.Security.Principal.WindowsIdentity" />-Objekt angegebenen Windows-Benutzeridentität.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowsClaimSet (System.Security.Principal.WindowsIdentity identity, bool includeWindowsGroups, DateTime expirationTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.WindowsIdentity identity, bool includeWindowsGroups, valuetype System.DateTime expirationTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.WindowsClaimSet.#ctor(System.Security.Principal.WindowsIdentity,System.Boolean,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="windowsIdentity" Type="System.Security.Principal.WindowsIdentity" />
+        <Parameter Name="includeWindowsGroups" Type="System.Boolean" />
+        <Parameter Name="expirationTime" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="identity">To be added.</param>
+        <param name="includeWindowsGroups">
+          <see langword="true" />, um die Windows-Gruppen einzuschließen, zu denen dieser Benutzer gehört, andernfalls <see langword="false" />.</param>
+        <param name="expirationTime">Ein <see cref="T:System.DateTime" />, der die Ablaufzeit für den Satz von Ansprüchen angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Claims.WindowsClaimSet" />-Klasse mithilfe der durch das <see cref="T:System.Security.Principal.WindowsIdentity" />-Objekt angegebenen Windows-Benutzeridentität.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowsClaimSet (System.Security.Principal.WindowsIdentity windowsIdentity, string authenticationType, bool includeWindowsGroups, DateTime expirationTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.WindowsIdentity windowsIdentity, string authenticationType, bool includeWindowsGroups, valuetype System.DateTime expirationTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.WindowsClaimSet.#ctor(System.Security.Principal.WindowsIdentity,System.String,System.Boolean,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="windowsIdentity" Type="System.Security.Principal.WindowsIdentity" />
+        <Parameter Name="authenticationType" Type="System.String" />
+        <Parameter Name="includeWindowsGroups" Type="System.Boolean" />
+        <Parameter Name="expirationTime" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="windowsIdentity">Ein <see cref="T:System.Security.Principal.WindowsIdentity" /> , die die Windows-Identität angibt.</param>
+        <param name="authenticationType">Der Authentifizierungstyp für die Windows-Identität.</param>
+        <param name="includeWindowsGroups">
+          <see langword="true" />, um die Windows-Gruppen einzuschließen, zu denen dieser Benutzer gehört, andernfalls <see langword="false" />.</param>
+        <param name="expirationTime">Ein <see cref="T:System.DateTime" />, der die Ablaufzeit für den Satz von Ansprüchen angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Claims.WindowsClaimSet" />-Klasse mithilfe der durch das <see cref="T:System.Security.Principal.WindowsIdentity" />-Objekt angegebenen Windows-Benutzeridentität.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public override int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.WindowsClaimSet.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Ansprüche in dieser Auflistung ab.</summary>
+        <value>Die Anzahl der Ansprüche in dieser Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.WindowsClaimSet.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.IdentityModel.Claims.WindowsClaimSet" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.IdentityModel.Claims.WindowsClaimSet.Dispose%2A>-Methode auf, wenn <xref:System.IdentityModel.Claims.WindowsClaimSet> nicht mehr benötigt wird. Die <xref:System.IdentityModel.Claims.WindowsClaimSet.Dispose%2A>-Methode bewirkt, dass <xref:System.IdentityModel.Claims.WindowsClaimSet> nicht mehr verwendet werden kann. Nach dem Aufruf der <xref:System.IdentityModel.Claims.WindowsClaimSet.Dispose%2A>-Methode müssen Sie alle Verweise auf <xref:System.IdentityModel.Claims.WindowsClaimSet> freigeben, sodass der vom <xref:System.IdentityModel.Claims.WindowsClaimSet> belegte Speicher bei der Garbage Collection wieder zugänglich gemacht werden kann. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer die <xref:System.IdentityModel.Claims.WindowsClaimSet.Dispose%2A>-Methode auf, bevor Sie den letzten Verweis auf <xref:System.IdentityModel.Claims.WindowsClaimSet> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.IdentityModel.Claims.WindowsClaimSet>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpirationTime">
+      <MemberSignature Language="C#" Value="public DateTime ExpirationTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ExpirationTime" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.WindowsClaimSet.ExpirationTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ablaufzeit für diesen <see cref="T:System.IdentityModel.Claims.WindowsClaimSet" /> ab.</summary>
+        <value>Der <see cref="T:System.DateTime" />, in dem dieser <see cref="T:System.IdentityModel.Claims.WindowsClaimSet" /> abläuft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindClaims">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Claims.Claim&gt; FindClaims (string claimType, string right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.IdentityModel.Claims.Claim&gt; FindClaims(string claimType, string right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.WindowsClaimSet.FindClaims(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claimType" Type="System.String" />
+        <Parameter Name="right" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claimType">Der Uniform Resource Identifier (URI) eines Anspruchtyps.</param>
+        <param name="right">Der URI des Rechts, das dem neuen Anspruch zugeordnet ist.</param>
+        <summary>Sucht nach dem Anspruch, der dem angegebenen Anspruchtyp und den Rechten im <see cref="T:System.IdentityModel.Claims.WindowsClaimSet" /> entspricht.</summary>
+        <returns>Ein <see langword="System.Collections.Generic.IEnumerable&lt;Claim&gt;" /> Objekt, mit dem Sie die Auflistung der Ansprüche, die die angegebenen Kriterien entsprechen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Eigenschaften der <xref:System.IdentityModel.Claims.ClaimTypes>-Klasse, um den `claimType`-Parameter anzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerator&lt;System.IdentityModel.Claims.Claim&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.IdentityModel.Claims.Claim&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.WindowsClaimSet.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.IdentityModel.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Collections.Generic.IEnumerator`1" /> ab, der verwendet werden kann, um die Windows-Ansprüche im <see cref="T:System.IdentityModel.Claims.WindowsClaimSet" /> aufzulisten.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerator`1" />, der verwendet werden kann, um die Windows-Ansprüche im <see cref="T:System.IdentityModel.Claims.WindowsClaimSet" /> aufzulisten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Issuer">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Claims.ClaimSet Issuer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Claims.ClaimSet Issuer" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.WindowsClaimSet.Issuer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.ClaimSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Aussteller für diesen <see cref="T:System.IdentityModel.Claims.WindowsClaimSet" /> ab.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Claims.ClaimSet" />, der den Aussteller dieses Satzes von Ansprüchen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aussteller für einen <xref:System.IdentityModel.Claims.WindowsClaimSet> ist <xref:System.IdentityModel.Claims.ClaimSet.Windows%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Claims.Claim this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Claims.Claim Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.WindowsClaimSet.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Windows-Anspruchs, der abgerufen werden soll.</param>
+        <summary>Ruft den Anspruch für den angegebenen Index ab.</summary>
+        <value>Der Anspruch für den angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.WindowsClaimSet.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt dieses <see cref="T:System.IdentityModel.Claims.WindowsClaimSet" />-Objekt zurück.</summary>
+        <returns>Dieses <see cref="T:System.IdentityModel.Claims.WindowsClaimSet" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowsIdentity">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.WindowsIdentity WindowsIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.WindowsIdentity WindowsIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.WindowsClaimSet.WindowsIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Windows-Identität für diesen Satz von Ansprüchen ab.</summary>
+        <value>Der <see cref="T:System.Security.Principal.WindowsIdentity" /> für diesen Satz von Ansprüchen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,337 @@
+<Type Name="KerberosReceiverSecurityToken" FullName="System.IdentityModel.Tokens.KerberosReceiverSecurityToken">
+  <TypeSignature Language="C#" Value="public class KerberosReceiverSecurityToken : System.IdentityModel.Tokens.WindowsSecurityToken" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KerberosReceiverSecurityToken extends System.IdentityModel.Tokens.WindowsSecurityToken" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.KerberosReceiverSecurityToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.WindowsSecurityToken</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Sicherheitstoken dar, das auf einem Kerberos-Ticket basiert, das in Form einer SOAP-Nachricht empfangen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel müssen Anwendungsentwickler die <xref:System.IdentityModel.Tokens.KerberosReceiverSecurityToken>-Klasse nicht verwenden.  
+  
+ Es gibt zwei Klassen, die die Sicherheitstoken darstellen, die auf einem Kerberos-Ticket basieren: <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken> und <xref:System.IdentityModel.Tokens.KerberosReceiverSecurityToken>. Das <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken>-Sicherheitstoken wird von Clients verwendet, die das <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken>-Sicherheitstoken in ausgehenden SOAP-Nachrichten verwenden, das <xref:System.IdentityModel.Tokens.KerberosReceiverSecurityToken>-Sicherheitstoken wird hingegen von einem Webdienst verwendet, bei dem SOAP-Nachrichten eingehen, die das Sicherheitstoken enthalten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KerberosReceiverSecurityToken (byte[] request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="request" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="request">Ein <see cref="T:System.Byte" /> Array, das ein Kerberos-Ticket enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.KerberosReceiverSecurityToken" />-Klasse mit dem angegebenen Kerberos-Ticket.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Übergeben Sie für den `request`-Parameter das Kerberos-Ticket, das durch die <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.GetRequest%2A>-Methode zurückgegeben wird.  
+  
+ Dieser Konstruktor generiert einen eindeutigen Bezeichner des Sicherheitstokens und legt den Wert auf die <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.Id%2A>-Eigenschaft fest.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KerberosReceiverSecurityToken (byte[] request, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] request, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.#ctor(System.Byte[],System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="request" Type="System.Byte[]" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="request">Ein <see cref="T:System.Byte" /> Array, das das Kerberos-Ticket enthält.</param>
+        <param name="id">Ein eindeutiger Bezeichner des Sicherheitstokens. Legt den Wert der <see cref="P:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.Id" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.KerberosReceiverSecurityToken" />-Klasse unter Verwendung des angegebenen Kerberos-Tickets und des eindeutigen Bezeichners.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KerberosReceiverSecurityToken (byte[] request, string id, string valueTypeUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] request, string id, string valueTypeUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.#ctor(System.Byte[],System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="request" Type="System.Byte[]" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="valueTypeUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="request">Ein Bytearray, das das Kerberos-Ticket enthält.</param>
+        <param name="id">Ein eindeutiger Bezeichner für das Sicherheitstoken.</param>
+        <param name="valueTypeUri">Der URI, der den Werttyp beschreibt.</param>
+        <summary>Erstellt eine neue Instanz von <see cref="T:System.IdentityModel.Tokens.KerberosReceiverSecurityToken" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCreateKeyIdentifierClause&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanCreateKeyIdentifierClause&lt;T&gt; () where T : System.IdentityModel.Tokens.SecurityKeyIdentifierClause;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanCreateKeyIdentifierClause&lt;(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.CanCreateKeyIdentifierClause``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Ein <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />, der den zu erstellenden Schlüsselbezeichnertyp angibt.</typeparam>
+        <summary>Ruft einen Wert ab, der angibt, ob dieses Sicherheitstoken den angegebenen Schlüsselbezeichner erstellen kann.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="T" /> vom Typ <see cref="T:System.IdentityModel.Tokens.KerberosTicketHashKeyIdentifierClause" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.CreateKeyIdentifierClause%2A>-Methode zum Erstellen der Schlüsselbezeichnerklausel auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKeyIdentifierClause&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T CreateKeyIdentifierClause&lt;T&gt; () where T : System.IdentityModel.Tokens.SecurityKeyIdentifierClause;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T CreateKeyIdentifierClause&lt;(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.CreateKeyIdentifierClause``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Ein <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />, der den zu erstellenden Schlüsselbezeichnertyp angibt.</typeparam>
+        <summary>Erstellt die angegebene Schlüsselbezeichnerklausel.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />, der eine Schlüsselbezeichnerklausel für das Sicherheitstoken ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie zum Bestimmen, ob die <xref:System.IdentityModel.Tokens.KerberosReceiverSecurityToken>-Klasse die angegebene Schlüsselbezeichnerklausel erstellen kann, die <xref:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.CanCreateKeyIdentifierClause%2A>-Methode auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequest">
+      <MemberSignature Language="C#" Value="public byte[] GetRequest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetRequest() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.GetRequest" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Kerberos-Ticket ab.</summary>
+        <returns>Ein <see cref="T:System.Byte" /> Array, das das Kerberos-Ticket enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Kerberos-Ticket wird im Konstruktor angegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchesKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override bool MatchesKeyIdentifierClause (System.IdentityModel.Tokens.SecurityKeyIdentifierClause skiClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MatchesKeyIdentifierClause(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause skiClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.MatchesKeyIdentifierClause(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="skiClause">To be added.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob der Schlüsselbezeichner für diese Instanz mit dem angegebenen Schlüsselbezeichner übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />, wenn die <paramref name="skiClause" /> vom Typ <see cref="T:System.IdentityModel.Tokens.KerberosTicketHashKeyIdentifierClause" /> ist und das Kerberos-Ticket übereinstimmt, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityKey">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SymmetricSecurityKey SecurityKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SymmetricSecurityKey SecurityKey" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.SecurityKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SymmetricSecurityKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den symmetrischen Sitzungsschlüssel für das Kerberos-Ticket ab, das diesem Sicherheitstoken zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Tokens.SymmetricSecurityKey" />, das den symmetrischen Sitzungsschlüssel für das Kerberos-Ticket enthält, das diesem Sicherheitstoken zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.SecurityKey%2A>-Eigenschaft wird festgelegt, wenn das Kerberos-Ticket authentifiziert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityKeys">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityKey&gt; SecurityKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Tokens.SecurityKey&gt; SecurityKeys" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.SecurityKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityKey&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dem Sicherheitstoken zugeordneten kryptografischen Schlüssel ab.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />-Objekt des <see cref="T:System.IdentityModel.Tokens.SecurityKey" />-Typs, das den Schlüsselsatz enthält, der dem Sicherheitstoken zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.SecurityKeys%2A>-Eigenschaft enthält den symmetrischen Sitzungsschlüssel in der <xref:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.SecurityKey%2A>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidFrom">
+      <MemberSignature Language="C#" Value="public override DateTime ValidFrom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidFrom" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.ValidFrom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den ersten Zeitpunkt ab, zu dem dieses Sicherheitstoken gültig ist.</summary>
+        <value>Ein <see cref="T:System.DateTime" />-Objekt, das den Zeitpunkt darstellt, zu dem dieses Sicherheitstoken frühestens gültig ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidTo">
+      <MemberSignature Language="C#" Value="public override DateTime ValidTo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidTo" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.ValidTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den spätest möglichen Zeitpunkt ab, zu dem dieses Sicherheitstoken gültig ist.</summary>
+        <value>Ein <see cref="T:System.DateTime" />, der den Zeitpunkt darstellt, zu dem dieses Sicherheitstoken letztmalig gültig ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueTypeUri">
+      <MemberSignature Language="C#" Value="public string ValueTypeUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValueTypeUri" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.ValueTypeUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den  URI ab, der den Werttyp beschreibt.</summary>
+        <value>Gibt <see cref="T:System.String" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowsIdentity">
+      <MemberSignature Language="C#" Value="public override System.Security.Principal.WindowsIdentity WindowsIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.WindowsIdentity WindowsIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.WindowsIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Windows-Benutzer ab, der diesem Sicherheitstoken zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.Security.Principal.WindowsIdentity" />-Objekt, das einen Windows-Benutzer darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

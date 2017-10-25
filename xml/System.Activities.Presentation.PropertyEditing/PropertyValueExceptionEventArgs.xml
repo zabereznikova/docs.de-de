@@ -1,0 +1,115 @@
+<Type Name="PropertyValueExceptionEventArgs" FullName="System.Activities.Presentation.PropertyEditing.PropertyValueExceptionEventArgs">
+  <TypeSignature Language="C#" Value="public class PropertyValueExceptionEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertyValueExceptionEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.PropertyEditing.PropertyValueExceptionEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Objekt dar, das Ereignisargumente für das Auftreten einer <see cref="E:System.Activities.Presentation.PropertyEditing.PropertyValue.PropertyValueException" /> enthält.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyValueExceptionEventArgs (string message, System.Activities.Presentation.PropertyEditing.PropertyValue value, System.Activities.Presentation.PropertyEditing.PropertyValueExceptionSource source, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Activities.Presentation.PropertyEditing.PropertyValue value, valuetype System.Activities.Presentation.PropertyEditing.PropertyValueExceptionSource source, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.PropertyValueExceptionEventArgs.#ctor(System.String,System.Activities.Presentation.PropertyEditing.PropertyValue,System.Activities.Presentation.PropertyEditing.PropertyValueExceptionSource,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="value" Type="System.Activities.Presentation.PropertyEditing.PropertyValue" />
+        <Parameter Name="source" Type="System.Activities.Presentation.PropertyEditing.PropertyValueExceptionSource" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die angibt, was während der Eigenschaftswertänderung fehlgeschlagen ist.</param>
+        <param name="value">Die <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValue" />-Instanz, in der die Ausnahme auftritt.</param>
+        <param name="source">Die Quelle, die diese Ausnahme generiert hat, ein GET- oder SET-Vorgang für den <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValue" />.</param>
+        <param name="exception">Der Fehler, der während der Eigenschaftswertänderung aufgetreten ist.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValueExceptionEventArgs" />-Klasse, die Informationen zu einem Fehler enthält, der während der Aktualisierung eines Eigenschaftswerts aufgetreten ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyValueExceptionEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Fehler ab, der während der Eigenschaftswertänderung aufgetreten ist, die dieser Instanz von Ereignisargumenten zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.Exception" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyValueExceptionEventArgs.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Meldung ab, die angibt, was während der Eigenschaftswertänderung fehlgeschlagen ist, die dieser Instanz von Ereignisargumenten zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.String" /> Beschreibung des Fehlers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyValue">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.PropertyEditing.PropertyValue PropertyValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.PropertyEditing.PropertyValue PropertyValue" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyValueExceptionEventArgs.PropertyValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.PropertyEditing.PropertyValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValue" /> ab, die dieser Instanz von Ereignisargumenten zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValue" /> dieser Instanz von Ereignisargumenten zugeordnet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.PropertyEditing.PropertyValueExceptionSource Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Activities.Presentation.PropertyEditing.PropertyValueExceptionSource Source" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyValueExceptionEventArgs.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.PropertyEditing.PropertyValueExceptionSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValueExceptionSource" /> ab, die dieser Instanz von Ereignisargumenten zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValueExceptionSource" /> dieser Instanz von Ereignisargumenten zugeordnet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

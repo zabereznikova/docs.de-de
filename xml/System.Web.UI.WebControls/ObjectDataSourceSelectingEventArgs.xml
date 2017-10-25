@@ -1,0 +1,125 @@
+<Type Name="ObjectDataSourceSelectingEventArgs" FullName="System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs">
+  <TypeSignature Language="C#" Value="public class ObjectDataSourceSelectingEventArgs : System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectDataSourceSelectingEventArgs extends System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Web.UI.WebControls.ObjectDataSource.Selecting" /> -Ereignis für die <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs> Klasse wird verwendet, der <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnSelecting%2A> Methode. Weil sie abgeleitet aus der <xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs> -Klasse, die <xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs> Klasse bietet Zugriff, um die Eingabeparameter für die Validierung und Manipulation durch die <xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs.InputParameters%2A> Eigenschaft. Die <xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs> Klasse bietet auch die <xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs.ExecutingSelectCount%2A> -Eigenschaft, die verwendet wird, um zu überprüfen, ob der aktuell ausgeführten Vorgang zum Abrufen von Daten eine Zeilenanzahl, zusätzlich zu den Daten abruft. Dies ist wichtig, da beim Paging von Datenquellen aktiviert ist, die <xref:System.Web.UI.WebControls.ObjectDataSource.Selecting> Ereignis wird zweimal ausgelöst. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs.ExecutingSelectCount%2A>.  
+  
+ Die <xref:System.Web.UI.WebControls.ObjectDataSource> Steuerelement viele Ereignisse, die Sie behandeln können, um die Arbeit mit den zugrunde liegenden Geschäftsobjekten zu verschiedenen Zeiten im Lebenszyklus verfügbar gemacht werden. In der folgenden Tabelle werden die Ereignisse aufgelistet und die zugehörigen <xref:System.EventArgs> Klassen und Ereignishandlerdelegaten.  
+  
+|Ereignis|`EventArgs`|`EventHandler`|  
+|-----------|-----------------|--------------------|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating>.<br /><br /> Tritt auf, unmittelbar bevor das Geschäftsobjekt instanziiert wird.|<xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreated>.<br /><br /> Tritt auf, sobald das Geschäftsobjekt instanziiert wird.|<xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Selecting>.<br /><br /> Tritt auf, bevor die Daten abgerufen werden.|<xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Inserting>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updating> und <xref:System.Web.UI.WebControls.ObjectDataSource.Deleting>.<br /><br /> Erfolgen Sie, bevor eine INSERT-, Update- oder Delete-Vorgang ausgeführt wird.|<xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Selected>.<br /><br /> Tritt auf, nachdem die Daten abgerufen werden.|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Inserted>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updated> und <xref:System.Web.UI.WebControls.ObjectDataSource.Deleted>.<br /><br /> Erfolgen Sie, wenn die INSERT-, Update- oder Delete-Vorgang abgeschlossen ist.|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing>.<br /><br /> Tritt auf, bevor ein Geschäftsobjekt zerstört wird.|<xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventHandler>|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectDataSourceSelectingEventArgs (System.Collections.Specialized.IOrderedDictionary inputParameters, System.Web.UI.DataSourceSelectArguments arguments, bool executingSelectCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.IOrderedDictionary inputParameters, class System.Web.UI.DataSourceSelectArguments arguments, bool executingSelectCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs.#ctor(System.Collections.Specialized.IOrderedDictionary,System.Web.UI.DataSourceSelectArguments,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="inputParameters" Type="System.Collections.Specialized.IOrderedDictionary" />
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+        <Parameter Name="executingSelectCount" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inputParameters">Eine <see cref="T:System.Collections.IDictionary" /> von <see cref="T:System.Web.UI.WebControls.Parameter" />-Objekten.</param>
+        <param name="arguments">Ein <see cref="T:System.Web.UI.DataSourceSelectArguments" /> , welche zusätzlichen datenbezogener Vorgänge angibt der <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> sollte für ein Resultset, z. B. Sortieren der Daten oder bei der Rückgabe einer bestimmten Teilmenge der Daten ausführen.</param>
+        <param name="executingSelectCount">
+          <see langword="true" />um anzugeben, die <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> die Anzahl von Zeilen mit Daten, zusätzlich zu den Daten selbst abruft, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `inputParameters` Parameter ist ein <xref:System.Collections.IDictionary> Auflistung von Name/Wert-Paare, die in der Methodensignatur übereinstimmen und als Verweis übergeben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataSourceSelectArguments Arguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataSourceSelectArguments Arguments" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs.Arguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceSelectArguments</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen Mechanismus bereit, die die <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> Objekt können datenbezogener Vorgänge anfordern, wenn Daten abgerufen werden.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataSourceSelectArguments" /> , welche zusätzlichen datenbezogener Vorgänge angibt der <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> sollte für ein Resultset ausführen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datengebundene Steuerelemente verwenden die <xref:System.Web.UI.DataSourceSelectArguments> Klasse, die beim Anfordern der <xref:System.Web.UI.WebControls.ObjectDataSource> Objekt ausgeführt werden Zusätzliche datenbezogener Vorgänge für ein Resultset, z. B. Sortieren der Daten oder eine bestimmte Teilmenge von Daten zurückgeben. Diese datenbezogener Vorgänge aufgelistet werden die <xref:System.Web.UI.DataSourceCapabilities> Enumeration. Die <xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs.Arguments%2A> Eigenschaft ist schreibgeschützt, damit Sie untersuchen können, jedoch nicht ändern, die Argumente, die durch das datengebundene Steuerelement übergeben werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.DataSourceSelectArguments>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutingSelectCount">
+      <MemberSignature Language="C#" Value="public bool ExecutingSelectCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExecutingSelectCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs.ExecutingSelectCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> Zeilenanzahl bei einem Vorgang zum Abrufen von Daten abruft.</summary>
+        <value>
+          <see langword="true" />, wenn die Datenquellen-Paging aktiviert ist und die <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> Zeilenanzahl abrufen wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.ObjectDataSource> Objekt ausführt Datenabruf und Datenquellen-Paging aktiviert ist, die Methode für den Abruf wird zweimal aufgerufen:  
+  
+-   Einmal, um den Satz von Daten abzurufen.  
+  
+-   Einmal zum Gesamtzeilenanzahl abrufen.  
+  
+ Dies löst die <xref:System.Web.UI.WebControls.ObjectDataSource.Selecting> Ereignis zweimal. Für Code, behandelt der <xref:System.Web.UI.WebControls.ObjectDataSource.Selecting> Ereignis, es kann wichtig sein, die Art des Ereignisses (Abrufen von Daten oder beim Abrufen der Zeilenanzahl) zu ermitteln, sodass jede zusätzliche Arbeit, die vom Handler ausgeführt wird für jede Datenabruf nicht unnötigerweise dupliziert wird Vorgang, der ausgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

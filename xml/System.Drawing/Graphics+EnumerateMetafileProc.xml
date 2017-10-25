@@ -1,0 +1,46 @@
+<Type Name="Graphics+EnumerateMetafileProc" FullName="System.Drawing.Graphics+EnumerateMetafileProc">
+  <TypeSignature Language="C#" Value="public delegate bool Graphics.EnumerateMetafileProc(EmfPlusRecordType recordType, int flags, int dataSize, IntPtr data, PlayRecordCallback callbackData);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed Graphics/EnumerateMetafileProc extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Graphics.EnumerateMetafileProc" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="recordType" Type="System.Drawing.Imaging.EmfPlusRecordType" />
+    <Parameter Name="flags" Type="System.Int32" />
+    <Parameter Name="dataSize" Type="System.Int32" />
+    <Parameter Name="data" Type="System.IntPtr" />
+    <Parameter Name="callbackData" Type="System.Drawing.Imaging.PlayRecordCallback" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="recordType">Mitglied der <see cref="T:System.Drawing.Imaging.EmfPlusRecordType" /> -Enumeration, der den Typ des Metadateidatensatzes angibt.</param>
+    <param name="flags">Gruppe von Flags, die Attribute des Datensatzes angeben.</param>
+    <param name="dataSize">Anzahl der Bytes in den Daten.</param>
+    <param name="data">Ein Zeiger auf einen Puffer, der die Datensatzdaten enthält.</param>
+    <param name="callbackData">Nicht verwendet.</param>
+    <summary>Stellt eine Rückrufmethode für die <see cref="Overload:System.Drawing.Graphics.EnumerateMetafile" /> Methode.</summary>
+    <returns>Zurückgeben <see langword="true" /> , wenn Sie den Vorgang fortsetzen, Auflisten von Datensätzen; anderenfalls <see langword="false" />.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, in Verbindung mit der <xref:System.Drawing.Graphics.EnumerateMetafile%2A> Methode der <xref:System.Drawing.Graphics> Klasse. Bestimmte Überladungen der <xref:System.Drawing.Graphics.EnumerateMetafile%2A> -Methodenaufruf eine anwendungsdefinierte Rückrufmethode dieses Typs für jeden Datensatz in einer angegebenen Metadatei. Die Rückruffunktion kann anzeigen, jeder Datensatz (oder die ausgewählten Datensätze) durch Aufrufen der <xref:System.Drawing.Imaging.Metafile.PlayRecord%2A> Methode der <xref:System.Drawing.Imaging.Metafile> ist, aufgezählt werden.  
+  
+ Eine Benutzerdeklaration der Rückrufmethode benötigen die gleichen Parameter wie die <xref:System.Drawing.Graphics.EnumerateMetafileProc> Deklaration zu delegieren.  
+  
+   
+  
+## Examples  
+ Ein Beispiel finden Sie unter <xref:System.Drawing.Graphics.EnumerateMetafile%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

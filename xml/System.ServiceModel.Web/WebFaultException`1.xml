@@ -1,0 +1,143 @@
+<Type Name="WebFaultException&lt;T&gt;" FullName="System.ServiceModel.Web.WebFaultException&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class WebFaultException&lt;T&gt; : System.ServiceModel.FaultException&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit WebFaultException`1&lt;T&gt; extends System.ServiceModel.FaultException`1&lt;!T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Web.WebFaultException`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ServiceModel.FaultException&lt;T&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">T</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">Der serialisierbare Fehlerdetailtyp.</typeparam>
+    <summary>Stellt einen Fehler dar, der einen zugeordneten HTTP-Statuscode aufweisen kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung eines WCF REST-Endpunkts (<xref:System.ServiceModel.WebHttpBinding> und <xref:System.ServiceModel.Description.WebHttpBehavior> oder <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>) wird der HTTP-Statuscode für die Antwort entsprechend festgelegt. <xref:System.ServiceModel.Web.WebFaultException> kann jedoch mit Nicht-REST-Endpunkten verwendet werden und verhält sich wie ein reguläres <xref:System.ServiceModel.FaultException>-Element.  
+  
+ Verwenden Sie diese Klasse, um Fehlerdetails zurückzugeben, wobei das Format dem des Vorgangs entspricht.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebFaultException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Web.WebFaultException`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Serialisierungsinformationen.</param>
+        <param name="context">Der Streamingkontext.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Web.WebFaultException`1" />-Klasse mit dem angegebenen <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt und <see cref="T:System.Runtime.Serialization.StreamingContext" />-Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebFaultException (T detail, System.Net.HttpStatusCode statusCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T detail, valuetype System.Net.HttpStatusCode statusCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Web.WebFaultException`1.#ctor(`0,System.Net.HttpStatusCode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="detail" Type="T" />
+        <Parameter Name="statusCode" Type="System.Net.HttpStatusCode" />
+      </Parameters>
+      <Docs>
+        <param name="detail">Der Fehler.</param>
+        <param name="statusCode">Der für die Antwortnachricht festzulegende HTTP-Statuscode.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Web.WebFaultException`1" />-Klasse mit dem angegebenen Ausnahmedetail und dem <see cref="M:System.ServiceModel.Web.WebFaultException.#ctor(System.Net.HttpStatusCode)" />-Element, das dem Aufrufer zurückgegeben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebFaultException (T detail, System.Net.HttpStatusCode statusCode, System.Collections.Generic.IEnumerable&lt;Type&gt; knownTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T detail, valuetype System.Net.HttpStatusCode statusCode, class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; knownTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Web.WebFaultException`1.#ctor(`0,System.Net.HttpStatusCode,System.Collections.Generic.IEnumerable{System.Type})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="detail" Type="T" />
+        <Parameter Name="statusCode" Type="System.Net.HttpStatusCode" />
+        <Parameter Name="knownTypes" Type="System.Collections.Generic.IEnumerable&lt;System.Type&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="detail">Der Fehler.</param>
+        <param name="statusCode">Der für die Antwortnachricht festzulegende HTTP-Statuscode.</param>
+        <param name="knownTypes">Der Satz bekannter Typen, die für die Serialisierung und Deserialisierung verwendet werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Web.WebFaultException`1" />-Klasse mit dem angegebenen Ausnahmedetail und dem <see cref="P:System.ServiceModel.Web.WebFaultException`1.StatusCode" />-Element, das dem Aufrufer zurückgegeben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Web.WebFaultException`1.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Serialisierungsinformationen, denen die Objektdaten bei Serialisierung hinzugefügt werden.</param>
+        <param name="context">Das Ziel für das serialisierte Objekt.</param>
+        <summary>Eine Implementierung der <see cref="M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />-Methode, die aufgerufen wird, wenn ein Objekt in einen Stream serialisiert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusCode">
+      <MemberSignature Language="C#" Value="public System.Net.HttpStatusCode StatusCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.HttpStatusCode StatusCode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Web.WebFaultException`1.StatusCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das dem Fehler zugeordnete <see cref="T:System.Net.HttpStatusCode" />-Element ab.</summary>
+        <value>Der dem Fehler zugeordnete HTTP-Statuscode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1081 @@
+<Type Name="ToolStripContainer" FullName="System.Windows.Forms.ToolStripContainer">
+  <TypeSignature Language="C#" Value="public class ToolStripContainer : System.Windows.Forms.ContainerControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolStripContainer extends System.Windows.Forms.ContainerControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ContainerControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.ToolStripContainerDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Bereiche auf jeder Seite des Formulars und einen zentralen Bereich bereit, der ein oder mehrere Steuerelemente enthalten kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolStripContainer>ähnelt dem <xref:System.Windows.Forms.SplitContainer>. Es verwendet vier angedockten Seitenbereichen (Instanzen von <xref:System.Windows.Forms.ToolStripPanel>) und einen zentralen Bereich (eine Instanz von <xref:System.Windows.Forms.ToolStripContentPanel>) zum Erstellen einer typischen Anordnung. Die Seite Elemente können nicht entfernt werden, jedoch können Sie sie durch Festlegen der jeweiligen ausblenden <xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanelVisible%2A>, <xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanelVisible%2A>, <xref:System.Windows.Forms.ToolStripContainer.LeftToolStripPanelVisible%2A>, und <xref:System.Windows.Forms.ToolStripContainer.RightToolStripPanelVisible%2A> Eigenschaften `false`. Standardmäßig wird jede dieser Eigenschaften `true` zur Entwurfszeit. Auch zur Entwurfszeit die <xref:System.Windows.Forms.ToolStripContainer> mit bereits erweitertem oberen Bereich angezeigt. Sie können weder entfernen noch Ausblenden der <xref:System.Windows.Forms.ToolStripContentPanel>. Sie können eine oder mehrere anordnen <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, oder <xref:System.Windows.Forms.StatusStrip> Steuerelemente in den Seitenbereichen, und Sie können den mittleren Bereich für andere Steuerelemente verwenden. Die <xref:System.Windows.Forms.ToolStripContentPanel> bietet auch eine Möglichkeit, renderunterstützung in den Text des Formulars für ein konsistentes Erscheinungsbild zu erhalten.  
+  
+ <xref:System.Windows.Forms.ToolStripContainer>(MDI, Multiple Document Interface)-Anwendungen unterstützt nicht. Verwendung <xref:System.Windows.Forms.ToolStripPanel> für MDI-Anwendungen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Hinzufügen von eine <xref:System.Windows.Forms.ToolStripContainer> und eine <xref:System.Windows.Forms.ToolStrip> zu einer Windows Forms Hinzufügen von Elementen zu der <xref:System.Windows.Forms.ToolStrip>, und das Hinzufügen von der <xref:System.Windows.Forms.ToolStrip> auf der <xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanel%2A> von der <xref:System.Windows.Forms.ToolStripContainer>.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripContainer2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/system.windows.forms.toolstripcontainer2/cs/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripContainer2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/system.windows.forms.toolstripcontainer2/vb/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripContainer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripContainer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolStripContainer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScroll">
+      <MemberSignature Language="C#" Value="public override bool AutoScroll { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoScroll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.AutoScroll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>
+          <see langword="true" />zum Aktivieren des automatischen Bildlaufs; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScrollMargin">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size AutoScrollMargin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size AutoScrollMargin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.AutoScrollMargin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScrollMinSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size AutoScrollMinSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size AutoScrollMinSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.AutoScrollMinSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripContainer.BackColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Das im Steuerelement angezeigte Hintergrundbild.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripContainer.BackgroundImageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Das Layout des Hintergrundbilds wie in der ImageLayout-Enumeration definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripContainer.BackgroundImageLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomToolStripPanel">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripPanel BottomToolStripPanel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolStripPanel BottomToolStripPanel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.BottomToolStripPanel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripPanel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den unteren Bereich der <see cref="T:System.Windows.Forms.ToolStripContainer" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ToolStripPanel" /> , die im unteren Bereich des darstellt der <see cref="T:System.Windows.Forms.ToolStripContainer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanel%2A> hinzuzufügenden Eigenschaft <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, oder <xref:System.Windows.Forms.StatusStrip> steuert, oder verschieben Sie sie aus einer anderen <xref:System.Windows.Forms.ToolStripPanel>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomToolStripPanelVisible">
+      <MemberSignature Language="C#" Value="public bool BottomToolStripPanelVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BottomToolStripPanelVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.BottomToolStripPanelVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob im unteren Bereich, der die <see cref="T:System.Windows.Forms.ToolStripContainer" /> sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn im unteren Bereich, der die <see cref="T:System.Windows.Forms.ToolStripContainer" /> sichtbar ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanelVisible%2A> Eigenschaft `false` verwenden eine <xref:System.Windows.Forms.ToolStripContainer> ohne einen unteren Bereich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement validiert; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CausesValidationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CausesValidationChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripContainer.CausesValidationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.ToolStripContainer.CausesValidation" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentPanel">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripContentPanel ContentPanel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolStripContentPanel ContentPanel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.ContentPanel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripContentPanel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den zentralen Bereich der <see cref="T:System.Windows.Forms.ToolStripContainer" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ToolStripContentPanel" /> , die den zentralen Bereich darstellt. die <see cref="T:System.Windows.Forms.ToolStripContainer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die oben, unten, links und rechts Informationsbereiche der <xref:System.Windows.Forms.ToolStripContainer> zum Speichern <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, oder <xref:System.Windows.Forms.StatusStrip> Steuerelemente. Andere Steuerelemente als <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, oder <xref:System.Windows.Forms.StatusStrip> werden automatisch hinzugefügt, um die <xref:System.Windows.Forms.ToolStripContentPanel>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuStrip">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ContextMenuStrip ContextMenuStrip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ContextMenuStrip ContextMenuStrip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.ContextMenuStrip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenuStrip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Das ContextMenuStrip, das diesem Steuerelement zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuStripChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ContextMenuStripChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ContextMenuStripChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripContainer.ContextMenuStripChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.ToolStripContainer.ContextMenuStrip" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control.ControlCollection Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control/ControlCollection Controls" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control+ControlCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Die im Steuerelement enthaltene Auflistung von Steuerelementen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlsInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.Control.ControlCollection CreateControlsInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.Control/ControlCollection CreateControlsInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripContainer.CreateControlsInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control+ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine <see cref="T:System.Windows.Forms.ToolStripContainer" /> Auflistung.</summary>
+        <returns>Ein schreibgeschützter <see cref="T:System.Windows.Forms.ToolStripContainer" /> Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cursor">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.Cursor Cursor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Cursor Cursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.Cursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Der Cursor, der angezeigt wird, wenn sich der Mauszeiger über dem Steuerelement befindet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CursorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CursorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CursorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripContainer.CursorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardgröße des der <see cref="T:System.Windows.Forms.ToolStripContainer" />, in Pixel.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" /> , die horizontalen und vertikalen Dimensionen darstellt der <see cref="T:System.Windows.Forms.ToolStripContainer" />, in Pixel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Die Vordergrundfarbe des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ForeColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ForeColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripContainer.ForeColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftToolStripPanel">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripPanel LeftToolStripPanel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolStripPanel LeftToolStripPanel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.LeftToolStripPanel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripPanel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den linken Bereich der <see cref="T:System.Windows.Forms.ToolStripContainer" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ToolStripPanel" /> , das den linken Bereich des darstellt der <see cref="T:System.Windows.Forms.ToolStripContainer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.ToolStripContainer.LeftToolStripPanel%2A> hinzuzufügenden Eigenschaft <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, oder <xref:System.Windows.Forms.StatusStrip> steuert, oder verschieben Sie sie aus einer anderen <xref:System.Windows.Forms.ToolStripPanel>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftToolStripPanelVisible">
+      <MemberSignature Language="C#" Value="public bool LeftToolStripPanelVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LeftToolStripPanelVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.LeftToolStripPanelVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der linke Bereich des der <see cref="T:System.Windows.Forms.ToolStripContainer" /> sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn der linke Bereich des der <see cref="T:System.Windows.Forms.ToolStripContainer" /> sichtbar ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Forms.ToolStripContainer.LeftToolStripPanelVisible%2A> Eigenschaft `false` verwenden eine <xref:System.Windows.Forms.ToolStripContainer> ohne einen linken Bereich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRightToLeftChanged">
+      <MemberSignature Language="C#" Value="protected override void OnRightToLeftChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRightToLeftChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripContainer.OnRightToLeftChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.RightToLeftChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSizeChanged">
+      <MemberSignature Language="C#" Value="protected override void OnSizeChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSizeChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripContainer.OnSizeChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.SizeChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolStripContainer.OnSizeChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolStripContainer.OnSizeChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolStripContainer.OnSizeChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToolStripPanel">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripPanel RightToolStripPanel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolStripPanel RightToolStripPanel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.RightToolStripPanel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripPanel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den rechten Bereich der <see cref="T:System.Windows.Forms.ToolStripContainer" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ToolStripPanel" /> darstellt im rechten Bereich von der <see cref="T:System.Windows.Forms.ToolStripContainer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.ToolStripContainer.RightToolStripPanel%2A> hinzuzufügenden Eigenschaft <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, oder <xref:System.Windows.Forms.StatusStrip> steuert, oder verschieben Sie sie aus einer anderen <xref:System.Windows.Forms.ToolStripPanel>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToolStripPanelVisible">
+      <MemberSignature Language="C#" Value="public bool RightToolStripPanelVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RightToolStripPanelVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.RightToolStripPanelVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob im rechten Bereich, der die <see cref="T:System.Windows.Forms.ToolStripContainer" /> sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn im rechten Bereich, der die <see cref="T:System.Windows.Forms.ToolStripContainer" /> sichtbar ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Forms.ToolStripContainer.RightToolStripPanelVisible%2A> Eigenschaft `false` verwenden eine <xref:System.Windows.Forms.ToolStripContainer> ohne einen rechten Bereich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopToolStripPanel">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripPanel TopToolStripPanel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolStripPanel TopToolStripPanel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.TopToolStripPanel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripPanel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den oberen Bereich der <see cref="T:System.Windows.Forms.ToolStripContainer" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ToolStripPanel" /> , das den oberen Bereich des darstellt der <see cref="T:System.Windows.Forms.ToolStripContainer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanel%2A> hinzuzufügenden Eigenschaft <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, oder <xref:System.Windows.Forms.StatusStrip> steuert, oder verschieben Sie sie aus einer anderen <xref:System.Windows.Forms.ToolStripPanel>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopToolStripPanelVisible">
+      <MemberSignature Language="C#" Value="public bool TopToolStripPanelVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TopToolStripPanelVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripContainer.TopToolStripPanelVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der obere Bereich von der <see cref="T:System.Windows.Forms.ToolStripContainer" /> sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn der obere Bereich von der <see cref="T:System.Windows.Forms.ToolStripContainer" /> sichtbar ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanelVisible%2A> Eigenschaft `false` verwenden eine <xref:System.Windows.Forms.ToolStripContainer> ohne einen oberen Bereich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

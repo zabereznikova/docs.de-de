@@ -1,0 +1,202 @@
+<Type Name="ObjectChangeConflict" FullName="System.Data.Linq.ObjectChangeConflict">
+  <TypeSignature Language="C#" Value="public sealed class ObjectChangeConflict" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObjectChangeConflict extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.ObjectChangeConflict" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Update-Versuch mit Konflikten für einen oder mehrere vollständige Parallelität dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Szenario ist in der ein versuchten Updates schlägt fehl, da Datenbankwerte aktualisiert wurden, da der Client Sie zuletzt gelesen.  
+  
+ Das folgende Beispiel zeigt, wie zum Abrufen von Informationen zu Objekten in Konflikt stehen.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.ObjectChangeConflict#1](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.objectchangeconflict/cs/program.cs#1)]
+ [!code-vb[System.Data.Linq.ObjectChangeConflict#1](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.objectchangeconflict/vb/module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsDeleted">
+      <MemberSignature Language="C#" Value="public bool IsDeleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDeleted" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.ObjectChangeConflict.IsDeleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Objekt in Konflikt stehende aus der Datenbank gelöscht wurde.</summary>
+        <value>
+          <see langword="True" />Wenn das Objekt gelöscht wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsResolved">
+      <MemberSignature Language="C#" Value="public bool IsResolved { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsResolved" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.ObjectChangeConflict.IsResolved" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Konflikte für dieses Objekt bereits gelöst wurden.</summary>
+        <value>
+          <see langword="True" />Wenn die Konflikte behoben wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist schreibgeschützt und wird automatisch aktualisiert werden, wie Konflikte gelöst werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberConflicts">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Linq.MemberChangeConflict&gt; MemberConflicts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Linq.MemberChangeConflict&gt; MemberConflicts" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.ObjectChangeConflict.MemberConflicts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Linq.MemberChangeConflict&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung aller Memberkonflikte, die das Update Fehler verursacht hat.</summary>
+        <value>Eine Auflistung von Typmembers steht in Konflikt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Object">
+      <MemberSignature Language="C#" Value="public object Object { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Object" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.ObjectChangeConflict.Object" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt in Konflikt stehen.</summary>
+        <value>Das Objekt in Konflikt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public void Resolve ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Resolve() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.ObjectChangeConflict.Resolve" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst Memberkonflikte durch Beibehalten von aktuellen Werten und die ursprünglichen Werte der Baseline entsprechend die neueren Datenbankwerte zurückgesetzt werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public void Resolve (System.Data.Linq.RefreshMode refreshMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Resolve(valuetype System.Data.Linq.RefreshMode refreshMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.ObjectChangeConflict.Resolve(System.Data.Linq.RefreshMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="refreshMode" Type="System.Data.Linq.RefreshMode" />
+      </Parameters>
+      <Docs>
+        <param name="refreshMode">Die entsprechende Option aus <see cref="T:System.Data.Linq.RefreshMode" />.</param>
+        <summary>Löst Typmembers steht in Konflikt mit dem angegebenen <see cref="T:System.Data.Linq.RefreshMode" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Beispiele zeigen, welche Ergebnisse erzeugt werden, mithilfe der verschiedenen Werte für <xref:System.Data.Linq.RefreshMode>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die aktuellen Werte mit Werten aus der Datenbank überschrieben.  
+  
+ [!code-csharp[System.Data.Linq.RefreshMode#1](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.refreshmode/cs/program.cs#1)]
+ [!code-vb[System.Data.Linq.RefreshMode#1](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#1)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Tauschen Sie des ursprünglichen Werts mit den Werten aus der Datenbank ausgetauscht werden abgerufen wird. Kein aktueller Wert geändert wird.  
+  
+ [!code-csharp[System.Data.Linq.RefreshMode#2](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.refreshmode/cs/program.cs#2)]
+ [!code-vb[System.Data.Linq.RefreshMode#2](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#2)]  
+  
+ Im folgende Beispiel werden die aktuellen Werte, die geändert wurden, aber die anderen Werte mit Datenbankwerten aktualisiert.  
+  
+ [!code-csharp[System.Data.Linq.RefreshMode#3](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.refreshmode/cs/program.cs#3)]
+ [!code-vb[System.Data.Linq.RefreshMode#3](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public void Resolve (System.Data.Linq.RefreshMode refreshMode, bool autoResolveDeletes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Resolve(valuetype System.Data.Linq.RefreshMode refreshMode, bool autoResolveDeletes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.ObjectChangeConflict.Resolve(System.Data.Linq.RefreshMode,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="refreshMode" Type="System.Data.Linq.RefreshMode" />
+        <Parameter Name="autoResolveDeletes" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="refreshMode">Die entsprechende Option aus <see cref="T:System.Data.Linq.RefreshMode" />.</param>
+        <param name="autoResolveDeletes">Wenn <see langword="true" />, automatisch löst Konflikte aufgrund von geänderten Objekten, die nicht mehr in der Datenbank befindet.</param>
+        <summary>Memberkonflikte beibehalten von aktuellen Werten und Zurücksetzen der ursprünglichen Werte der Baseline zu beheben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,254 @@
+<Type Name="ReflectionPermissionAttribute" FullName="System.Security.Permissions.ReflectionPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ReflectionPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ReflectionPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.ReflectionPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht, dass Sicherheitsaktionen für <see cref="T:System.Security.Permissions.ReflectionPermission" /> unter Verwendung deklarativer Sicherheit auf Code angewendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Gültigkeitsbereich der Deklaration, die zulässig ist, hängt die <xref:System.Security.Permissions.SecurityAction> , der verwendet wird.  
+  
+ Die Sicherheitsinformationen, die von einem Sicherheitsattribut deklariert wird in den Metadaten des Attributziels gespeichert und vom System zur Laufzeit erfolgt. Sicherheitsattribute werden nur für die deklarative Sicherheit verwendet. Verwenden Sie für imperative Sicherheit die entsprechende Berechtigungsklasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReflectionPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.ReflectionPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Einer der <see cref="T:System.Security.Permissions.SecurityAction" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Permissions.ReflectionPermissionAttribute" />-Klasse mit der angegebenen <see cref="T:System.Security.Permissions.SecurityAction" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.ReflectionPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue <see cref="T:System.Security.Permissions.ReflectionPermission" /> und gibt diese zurück.</summary>
+        <returns>Eine <see cref="T:System.Security.Permissions.ReflectionPermission" />, die diesem Attribut entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sollte nur durch das Sicherheitssystem nie von Anwendungscode aufgerufen werden.  
+  
+ Zum Zeitpunkt der Kompilierung konvertieren Attribute Sicherheitsdeklarationen in serialisierter Form in Metadaten an. Deklarative Sicherheit von Daten in den Metadaten werden über die Berechtigung, die Rückgabe dieser Methode erstellt, die dieses Attribut entspricht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.ReflectionPermissionFlag Flags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.ReflectionPermissionFlag Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.ReflectionPermissionAttribute.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.ReflectionPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die aktuelle Verwendungen von Reflektionen zulässig.</summary>
+        <value>Ein oder mehrere der <see cref="T:System.Security.Permissions.ReflectionPermissionFlag" /> Werte, die mithilfe einer bitweisen OR kombiniert.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Es wird versucht, diese Eigenschaft auf einen ungültigen Wert festzulegen. Finden Sie unter <see cref="T:System.Security.Permissions.ReflectionPermissionFlag" /> die gültigen Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberAccess">
+      <MemberSignature Language="C#" Value="public bool MemberAccess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MemberAccess" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.ReflectionPermissionAttribute.MemberAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Aufruf von Vorgängen auf nicht öffentliche Member zulässig ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Aufruf von Vorgängen auf nicht öffentliche Member zulässig ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectionEmit">
+      <MemberSignature Language="C#" Value="public bool ReflectionEmit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReflectionEmit" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.ReflectionPermissionAttribute.ReflectionEmit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob bestimmte Features in verwenden <see cref="N:System.Reflection.Emit" />, z. B. das Ausgeben von Debugsymbolen, zulässig ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Verwendung von den betroffenen Features zulässig ist andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], Ausgabe von Code nicht mehr erfordert <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. Einige Funktionen von Reflektion ausgeben, wie z. B. das Ausgeben von Debugsymbolen, erfordern immer noch die <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. (Siehe [Sicherheitsaspekte bei der Reflektionsausgabe](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).)  
+>   
+>  Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RestrictedMemberAccess">
+      <MemberSignature Language="C#" Value="public bool RestrictedMemberAccess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RestrictedMemberAccess" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.ReflectionPermissionAttribute.RestrictedMemberAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die eingeschränkte Aufrufen von nicht öffentlichen Membern zulässig ist. Eingeschränkte Aufruf bedeutet, dass der Berechtigungssatz der Assembly, die nicht öffentlichen Member enthält, der aufgerufen wird, übereinstimmt oder einen Teil des Berechtigungssatzes der Assembly aufrufen muss.</summary>
+        <value>
+          <see langword="true" />Aufrufen von nicht öffentlichen Membern eingeschränkt ist zulässig. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird eingeführt der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)]. Um diese Eigenschaft zu verwenden, sollte die Anwendung erforderliche der [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeInformation">
+      <MemberSignature Language="C#" Value="public bool TypeInformation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TypeInformation" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.ReflectionPermissionAttribute.TypeInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("not enforced in 2.0+")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Reflektion für Elemente, die nicht sichtbar sind, zulässig ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Reflektion für Elemente, die nicht sichtbar sind, zulässig ist andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist jetzt veraltet. Reflektieren die Metadaten der Elemente, die nicht sichtbar sind nicht mehr erfordert <xref:System.Security.Permissions.ReflectionPermission>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

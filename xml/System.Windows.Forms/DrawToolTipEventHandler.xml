@@ -1,0 +1,43 @@
+<Type Name="DrawToolTipEventHandler" FullName="System.Windows.Forms.DrawToolTipEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DrawToolTipEventHandler(object sender, DrawToolTipEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DrawToolTipEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DrawToolTipEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.DrawToolTipEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.DrawToolTipEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Windows.Forms.ToolTip.Draw" />-Ereignisses eines <see cref="T:System.Windows.Forms.ToolTip" />-Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType> Ereignis wird ausgelöst, durch die <xref:System.Windows.Forms.ToolTip> Klasse an, wenn die <xref:System.Windows.Forms.ToolTip> gezeichnet und die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType> Eigenschaftswert ist `true`. Die <xref:System.Windows.Forms.DrawToolTipEventArgs> Klasse enthält alle Informationen, die zum Zeichnen der <xref:System.Windows.Forms.ToolTip>, einschließlich des QuickInfo-Texts der <xref:System.Drawing.Rectangle>, und die <xref:System.Drawing.Graphics> -Objekt, auf dem gezeichnet werden soll. Verwenden Sie zum Anpassen der Darstellung der QuickInfo der <xref:System.Drawing.Rectangle> um die Grenzen der QuickInfo zu bestimmen und die <xref:System.Drawing.Graphics> Objekt, das Ihre benutzerdefinierte Zeichnung zu erstellen. Sie können die Grenzen des der <xref:System.Windows.Forms.ToolTip> vor dem durch Behandeln der <xref:System.Windows.Forms.ToolTip.Popup> Ereignis.  
+  
+ Beim Erstellen eines <xref:System.Windows.Forms.DrawToolTipEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum benutzerdefinierten Zeichnen die <xref:System.Windows.Forms.ToolTip>. Das Beispiel erstellt eine <xref:System.Windows.Forms.ToolTip> und ordnet es drei <xref:System.Windows.Forms.Button> Steuerelemente befindet sich auf die <xref:System.Windows.Forms.Form>. Im Beispiel wird die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> -Eigenschaft auf "true" und behandelt die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis. In der <xref:System.Windows.Forms.ToolTip.Draw> Ereignishandler, d. h. die <xref:System.Windows.Forms.ToolTip> benutzerdefinierte gezeichnet, je nachdem welche Schaltfläche ist die <xref:System.Windows.Forms.ToolTip> wie angegeben angezeigt wird die <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ [!code-cpp[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

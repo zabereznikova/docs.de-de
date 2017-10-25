@@ -1,0 +1,477 @@
+<Type Name="ButtonColumn" FullName="System.Web.UI.WebControls.ButtonColumn">
+  <TypeSignature Language="C#" Value="public class ButtonColumn : System.Web.UI.WebControls.DataGridColumn" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ButtonColumn extends System.Web.UI.WebControls.DataGridColumn" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ButtonColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.DataGridColumn</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Spaltentyp für das <see cref="T:System.Web.UI.WebControls.DataGrid" />-Steuerelement, das eine benutzerdefinierte Schaltfläche enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ButtonColumn> -Klasse in einem <xref:System.Web.UI.WebControls.DataGrid> Steuerelement zum Erstellen einer Schaltfläche, entspricht jede Zeile in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. Geben Sie die Beschriftung, die den Schaltflächen, indem angezeigt wird die <xref:System.Web.UI.WebControls.ButtonColumn.Text%2A> Eigenschaft. Wenn Sie festlegen, die <xref:System.Web.UI.WebControls.ButtonColumn.Text%2A> -Eigenschaft, die alle Schaltflächen der <xref:System.Web.UI.WebControls.ButtonColumn> Objekt freigeben, die gleiche Beschriftung. Alternativ können Sie binden die <xref:System.Web.UI.WebControls.ButtonColumn> Schaltflächen auf ein Feld in einer Datenquelle. Dadurch können Sie verschiedene Beschriftungen für jede Schaltfläche angezeigt. Die Werte im angegebenen Feld werden für die textbeschriftung verwendet. Legen Sie die <xref:System.Web.UI.WebControls.ButtonColumn.DataTextField%2A> zu bindende Eigenschaft der <xref:System.Web.UI.WebControls.ButtonColumn> auf ein Feld in einer Datenquelle.  
+  
+ Sie können die Beschriftungen, die den Schaltflächen, indem angezeigt werden Formatieren der <xref:System.Web.UI.WebControls.ButtonColumn.DataTextField%2A> Eigenschaft mit einer Formatzeichenfolge.  
+  
+ Auf die betreffenden Schaltflächen in der <xref:System.Web.UI.WebControls.ButtonColumn> löst die <xref:System.Web.UI.WebControls.DataGrid.ItemCommand> Ereignis. Sie können programmgesteuert Einfluss auf die Aktion, die ausgeführt wird, wenn die Schaltfläche geklickt wird, indem Sie einen Ereignishandler für das <xref:System.Web.UI.WebControls.DataGrid.ItemCommand> Ereignis.  
+  
+ Wird standardmäßig die seitenüberprüfung wird nicht ausgeführt, wenn eine Schaltfläche in der <xref:System.Web.UI.WebControls.ButtonColumn> geklickt wird. Seitenüberprüfung bestimmt, ob die Eingabesteuerelemente, die mit einer Überprüfung verknüpft sind auf der Seite steuern, die alle die Validierungsregeln übergeben, die durch das Validierungssteuerelement angegeben werden. Um Validierung auszuführen, wenn auf eine Schaltfläche geklickt wird, legen die <xref:System.Web.UI.WebControls.ButtonColumn.CausesValidation%2A> Eigenschaft `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.Web.UI.WebControls.ButtonColumn> -Klasse in einem <xref:System.Web.UI.WebControls.DataGrid> zu erstellende Steuerelement **hinzufügen** Schaltflächen.  
+  
+ [!code-csharp[ButtonColumnButtonType#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonColumnButtonType/CS/source.cs#1)]
+ [!code-vb[ButtonColumnButtonType#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonColumnButtonType/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ButtonColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ButtonColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ButtonColumn" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ButtonColumn.%23ctor%2A> Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.ButtonColumn> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen und initialisieren eine neue Instanz der dem <xref:System.Web.UI.WebControls.ButtonColumn> Klasse und fügen Sie diese der <xref:System.Web.UI.WebControls.DataGrid.Columns%2A> Auflistung.  
+  
+ [!code-csharp[ButtonColumnButtonType#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonColumnButtonType/CS/source.cs#1)]
+ [!code-vb[ButtonColumnButtonType#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonColumnButtonType/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ButtonColumnType ButtonType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ButtonColumnType ButtonType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ButtonColumn.ButtonType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ButtonColumnType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Schaltfläche zum Anzeigen in der <see cref="T:System.Web.UI.WebControls.ButtonColumn" /> Objekt.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.ButtonColumnType" />-Werte. Die Standardeinstellung ist <see langword="LinkButton" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ButtonColumn.ButtonType%2A> Eigenschaft, um anzugeben, ob die Schaltflächen in der <xref:System.Web.UI.WebControls.ButtonColumn> Objekt werden als Link Schaltflächen angezeigt. Die folgende Tabelle enthält die möglichen Einstellungen.  
+  
+|Schaltflächentyp|Anzeige|  
+|-----------------|-------------|  
+|<xref:System.Web.UI.WebControls.ButtonColumnType.LinkButton>|Ein Link.|  
+|<xref:System.Web.UI.WebControls.ButtonColumnType.PushButton>|Ein Schaltflächen-Steuerelement.|  
+  
+ Auf die betreffenden Schaltflächen in der <xref:System.Web.UI.WebControls.ButtonColumn> löst die <xref:System.Web.UI.WebControls.DataGrid.ItemCommand> Ereignis. Sie können programmgesteuert Einfluss auf die Aktion, die ausgeführt wird, wenn die Schaltfläche geklickt wird, indem Sie einen Ereignishandler für das <xref:System.Web.UI.WebControls.DataGrid.ItemCommand> Ereignis.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht wie die <xref:System.Web.UI.WebControls.ButtonColumn.ButtonType%2A> Eigenschaft angeben, dass die Schaltflächen in der <xref:System.Web.UI.WebControls.ButtonColumn> Objekt werden als Schaltflächen angezeigt.  
+  
+ [!code-csharp[ButtonColumnButtonType#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonColumnButtonType/CS/source.cs#1)]
+ [!code-vb[ButtonColumnButtonType#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonColumnButtonType/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Spaltentyp ist nicht die <see cref="T:System.Web.UI.WebControls.ButtonColumnType" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public virtual bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ButtonColumn.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Validierung ausgeführt wird, wenn eine Schaltfläche in der <see cref="T:System.Web.UI.WebControls.ButtonColumn" /> Objekt geklickt wird.</summary>
+        <value>
+          <see langword="true" />Validierung durchgeführt wird, wenn auf eine Schaltfläche in der <see cref="T:System.Web.UI.WebControls.ButtonColumn" /> geklickt wurde, andernfalls wird <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die seitenüberprüfung wird nicht ausgeführt, wenn eine Schaltfläche in der <xref:System.Web.UI.WebControls.ButtonColumn> Objekt geklickt wird. Seitenüberprüfung bestimmt, ob die Eingabesteuerelemente, die mit einer Überprüfung verknüpft sind auf der Seite steuern, die alle die Validierungsregeln übergeben, die durch das Validierungssteuerelement angegeben werden. Zum Ausführen der Validierung beim Klicken auf eine Schaltfläche in der <xref:System.Web.UI.WebControls.ButtonColumn> geklickt wird, legen Sie die <xref:System.Web.UI.WebControls.ButtonColumn.CausesValidation%2A> Eigenschaft, um `true`.  
+  
+ Bei den Wert des der <xref:System.Web.UI.WebControls.ButtonColumn.CausesValidation%2A> Eigenschaft ist `true`, können Sie auch die <xref:System.Web.UI.WebControls.ButtonColumn.ValidationGroup%2A> Eigenschaft, um den Namen der Validierungsgruppe für das Angeben der <xref:System.Web.UI.WebControls.ButtonColumn> bewirkt die Validierung.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandName">
+      <MemberSignature Language="C#" Value="public virtual string CommandName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ButtonColumn.CommandName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Zeichenfolge, die für den Befehl zum Ausführen einer Schaltfläche in der <see cref="T:System.Web.UI.WebControls.ButtonColumn" /> Objekt geklickt wird.</summary>
+        <value>Eine Zeichenfolge, die für den Befehl zum Ausführen einer Schaltfläche in der <see cref="T:System.Web.UI.WebControls.ButtonColumn" /> geklickt wird. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ButtonColumn.CommandName%2A> Eigenschaft, um einen Befehlsnamen zuordnen, z. B. `Add` oder `Remove`, mit einer Schaltfläche. Sie können festlegen, der <xref:System.Web.UI.WebControls.ButtonColumn.CommandName%2A> -Eigenschaft auf eine beliebige Zeichenfolge, die die Aktion zum Ausführen einer Schaltfläche in aus der <xref:System.Web.UI.WebControls.ButtonColumn?displayProperty=nameWithType> Objekt geklickt wird. Klicken Sie dann, Sie können programmgesteuert bestimmen den Befehlsnamen im Ereignishandler für das <xref:System.Web.UI.WebControls.DataGrid.ItemCommand> Ereignis und die entsprechenden Aktionen ausführen.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ButtonColumn.CommandName%2A> Eigenschaft, eine Schaltfläche einen Befehlsnamen zugeordnet werden soll. Klicken Sie dann der Befehlsnamen der Schaltfläche richtet sich programmgesteuert im Ereignishandler für das <xref:System.Web.UI.WebControls.DataGrid.ItemCommand> Ereignis und die entsprechende Aktion ausgeführt wird.  
+  
+ [!code-aspx-csharp[ButtonColumnCommandName#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonColumnCommandName/CS/ButtonColumnCommandNameCS.aspx#1)]
+ [!code-aspx-vb[ButtonColumnCommandName#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonColumnCommandName/VB/ButtonColumnCommandNameVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTextField">
+      <MemberSignature Language="C#" Value="public virtual string DataTextField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataTextField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ButtonColumn.DataTextField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie den Feldnamen aus einer Datenquelle zum Binden an die <see cref="T:System.Web.UI.WebControls.ButtonColumn" /> Objekt.</summary>
+        <value>Der Feldname zum Binden an die <see cref="T:System.Web.UI.WebControls.ButtonColumn" />. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ButtonColumn.DataTextField%2A> -Eigenschaft an den Feldnamen aus der Datenquelle zum Binden an die <xref:System.Web.UI.WebControls.ButtonColumn.Text%2A> Eigenschaft der Schaltflächen auf der <xref:System.Web.UI.WebControls.ButtonColumn> Objekt.  
+  
+ Die Spalte an ein Feld statt direkt festzulegen Binden der <xref:System.Web.UI.WebControls.ButtonColumn.Text%2A> -Eigenschaft können Sie zum Anzeigen von anderer Beschriftungen für die Schaltflächen in der <xref:System.Web.UI.WebControls.ButtonColumn> mithilfe der Werte im angegebenen Feld.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ButtonColumn.DataTextField%2A> zu bindende Eigenschaft der <xref:System.Web.UI.WebControls.ButtonColumn> Objekt in ein Feld in einer Datenquelle.  
+  
+ [!code-aspx-csharp[ButtonColumnDataTextField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonColumnDataTextField/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[ButtonColumnDataTextField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonColumnDataTextField/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTextFormatString">
+      <MemberSignature Language="C#" Value="public virtual string DataTextFormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataTextFormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ButtonColumn.DataTextFormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolge, die das Anzeigeformat für die Beschriftung in jede Schaltfläche angibt.</summary>
+        <value>Die Zeichenfolge, die das Anzeigeformat für die Beschriftung für jede Schaltfläche angibt. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ButtonColumn.DataTextFormatString%2A> -Eigenschaft ein benutzerdefiniertes Format für die Beschriftung der Schaltflächen auf der <xref:System.Web.UI.WebControls.ButtonColumn> Objekt.  
+  
+ Die Daten-Formatzeichenfolge besteht aus zwei Teilen, getrennt durch einen Doppelpunkt, in der Form `{A:Bxx}`. Z. B. die Formatierungszeichenfolge `{0:F2}` formatiert die Zelle, um eine Festkommazahl mit zwei Dezimalstellen angezeigt.  
+  
+> [!NOTE]
+>  In der geschweiften Klammern, um anzugeben, dass es auf einer Formatzeichenfolge und keine Literale Zeichenfolge ist, muss die gesamte Zeichenfolge eingeschlossen werden. Beliebiger Text außerhalb der Klammern wird als Literaltext angezeigt.  
+  
+ Der Wert vor dem Doppelpunkt (`A` im allgemeinen Beispiel) gibt an, die Parameter-Index in einer nullbasierten Liste von Parametern.  
+  
+> [!NOTE]
+>  Dieser Wert kann nur auf 0 festgelegt werden, da nur ein Wert in jeder Zelle vorhanden ist.  
+  
+ Die Zeichen nach dem Doppelpunkt (`B` im allgemeinen Beispiel) gibt das Format, um den Wert in anzuzeigen. Die folgende Tabelle enthält die gängigen Formaten.  
+  
+|Formatzeichen|Zeigt die numerischen Werte in|  
+|----------------------|--------------------------------|  
+|`C`|Währungsformat.|  
+|`D`|Dezimalformat.|  
+|`E`|Wissenschaftlicher (exponentieller)-Format.|  
+|`F`|Festes Format.|  
+|`G`|Allgemeine Format.|  
+|`N`|Zahlenformat.|  
+|`X`|Hexadezimalformat.|  
+  
+> [!NOTE]
+>  Das Formatzeichen ist keine Groß-/Kleinschreibung beachtet, mit Ausnahme von `X`, woraufhin die hexadezimalen Zeichen im angegebenen Fall.  
+  
+ Der Wert nach der Formatzeichen (`xx` im allgemeinen Beispiel) gibt die Anzahl der signifikanten Ziffern oder Dezimalstellen an.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Weitere Informationen zum Formatieren von Zeichenfolgen finden Sie unter [Formatierungstypen](~/docs/standard/base-types/formatting-types.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ButtonColumn.DataTextFormatString%2A> -Eigenschaft angezeigt, die Beschriftung der einzelnen Schaltflächen in der <xref:System.Web.UI.WebControls.ButtonColumn> Objekt im Währungsformat.  
+  
+ [!code-aspx-csharp[ButtonColumnDataTextField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonColumnDataTextField/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[ButtonColumnDataTextField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonColumnDataTextField/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatDataTextValue">
+      <MemberSignature Language="C#" Value="protected virtual string FormatDataTextValue (object dataTextValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string FormatDataTextValue(object dataTextValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ButtonColumn.FormatDataTextValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataTextValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataTextValue">Der zu formatierende Wert.</param>
+        <summary>Konvertiert den angegebenen Wert in das Format, das vom angegebenen die <see cref="P:System.Web.UI.WebControls.ButtonColumn.DataTextFormatString" /> Eigenschaft.</summary>
+        <returns>Die <paramref name="dataTextValue" /> vom Format konvertiert die <see cref="P:System.Web.UI.WebControls.ButtonColumn.DataTextFormatString" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ButtonColumn.FormatDataTextValue%2A> Methode, um den angegebenen Wert in das Format zu konvertieren, das durch bezeichnet wird die <xref:System.Web.UI.WebControls.ButtonColumn.DataTextFormatString%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.ButtonColumn.FormatDataTextValue%2A> Methode gibt die Zeichenfolge uhrzeitentsprechung des Werts, wenn die <xref:System.Web.UI.WebControls.ButtonColumn.DataTextFormatString%2A> Eigenschaft nicht festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ButtonColumn.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die <see cref="T:System.Web.UI.WebControls.ButtonColumn" /> Objekt auf ihren ursprünglichen Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ButtonColumn.Initialize%2A> -Methode zum Zurücksetzen der <xref:System.Web.UI.WebControls.ButtonColumn> Objekt auf ihren ursprünglichen Zustand.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeCell">
+      <MemberSignature Language="C#" Value="public override void InitializeCell (System.Web.UI.WebControls.TableCell cell, int columnIndex, System.Web.UI.WebControls.ListItemType itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InitializeCell(class System.Web.UI.WebControls.TableCell cell, int32 columnIndex, valuetype System.Web.UI.WebControls.ListItemType itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ButtonColumn.InitializeCell(System.Web.UI.WebControls.TableCell,System.Int32,System.Web.UI.WebControls.ListItemType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.TableCell" />
+        <Parameter Name="columnIndex" Type="System.Int32" />
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.ListItemType" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Ein <see cref="T:System.Web.UI.WebControls.TableCell" /> , Zurücksetzen die Zelle darstellt.</param>
+        <param name="columnIndex">Die Nummer der Spalte, in denen die Zelle befindet.</param>
+        <param name="itemType">Einer der <see cref="T:System.Web.UI.WebControls.ListItemType" />-Werte.</param>
+        <summary>Setzt eine Zelle in der <see cref="T:System.Web.UI.WebControls.ButtonColumn" /> Objekt auf ihren ursprünglichen Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ButtonColumn.InitializeCell%2A> Methode setzt die angegebene Zelle in der <xref:System.Web.UI.WebControls.ButtonColumn> Objekt auf ihren ursprünglichen Zustand.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ButtonColumn.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschriftung, die in der Schaltflächen angezeigt wird der <see cref="T:System.Web.UI.WebControls.ButtonColumn" /> Objekt.</summary>
+        <value>Die Schaltflächen des angezeigte Beschriftung der <see cref="T:System.Web.UI.WebControls.ButtonColumn" />. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ButtonColumn.Text%2A> Eigenschaft angeben, oder ermitteln, die Beschriftung, die in der Schaltflächen angezeigt wird der <xref:System.Web.UI.WebControls.ButtonColumn> Objekt.  
+  
+> [!NOTE]
+>  Wenn Sie festlegen, die <xref:System.Web.UI.WebControls.ButtonColumn.Text%2A> -Eigenschaft, die alle Schaltflächen der <xref:System.Web.UI.WebControls.ButtonColumn> die gleiche Beschriftung.  
+  
+ Alternativ können Sie binden die <xref:System.Web.UI.WebControls.ButtonColumn> auf ein Feld in einer Datenquelle. Dadurch können Sie verschiedene Beschriftungen für die Schaltflächen in der Spalte, die mithilfe der Werte im angegebenen Feld anzuzeigen. Legen Sie die <xref:System.Web.UI.WebControls.ButtonColumn.DataTextField%2A> zu bindende Eigenschaft der <xref:System.Web.UI.WebControls.ButtonColumn> auf ein Feld in einer Datenquelle.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ButtonColumn.Text%2A> Eigenschaft an, dass die Beschriftung für die Schaltflächen in der <xref:System.Web.UI.WebControls.ButtonColumn> Objekt.  
+  
+ [!code-aspx-csharp[Classic ButtonColumn.ButtonType Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic ButtonColumn.ButtonType Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic ButtonColumn.ButtonType Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic ButtonColumn.ButtonType Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public virtual string ValidationGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ButtonColumn.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie die Gruppe der Validierungssteuerelemente für das die <see cref="T:System.Web.UI.WebControls.ButtonColumn" /> Objekt eine Validierung auslöst, wenn es an den Server zurückgesendet.</summary>
+        <value>Die Gruppe der Überprüfung gesteuert wird, für die die <see cref="T:System.Web.UI.WebControls.ButtonColumn" /> Objekt eine Validierung auslöst, wenn es an den Server zurückgesendet. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überprüfung Gruppen erlauben Ihnen Validierungssteuerelemente auf einer Seite einer bestimmten Kategorie zuweisen. Jede Validierungsgruppe kann unabhängig von anderen Gruppen Überprüfung auf der Seite überprüft werden. Verwenden der <xref:System.Web.UI.WebControls.ButtonColumn.ValidationGroup%2A> Eigenschaft, um den Namen der Validierungsgruppe für das Angeben der <xref:System.Web.UI.WebControls.ButtonColumn> Objekt eine Validierung auslöst, wenn es an den Server zurückgesendet.  
+  
+ Die <xref:System.Web.UI.WebControls.ButtonColumn.ValidationGroup%2A> Eigenschaft wirkt sich nur, wenn der Wert der <xref:System.Web.UI.WebControls.ButtonColumn.CausesValidation%2A> -Eigenschaftensatz auf `true`. Wenn geben Sie einen Wert für die <xref:System.Web.UI.WebControls.ButtonColumn.ValidationGroup%2A> -Eigenschaft, um nur die Validierungssteuerelemente, die Teil der angegebenen Gruppe sind sind validiert, wenn die <xref:System.Web.UI.WebControls.ButtonColumn> Postback an den Server ausführt. Wenn Sie einen Wert für nicht angeben der <xref:System.Web.UI.WebControls.ButtonColumn.ValidationGroup%2A> Eigenschaft und die <xref:System.Web.UI.WebControls.ButtonColumn.CausesValidation%2A> -Eigenschaftensatz auf `true`, alle Validierungssteuerelemente auf der Seite, die nicht zu einer Überprüfung Gruppe zugewiesen sind, werden überprüft bei der <xref:System.Web.UI.WebControls.ButtonColumn> Postback an den Server ausführt.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

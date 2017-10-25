@@ -1,0 +1,250 @@
+<Type Name="ModelEditingScope" FullName="System.Activities.Presentation.Model.ModelEditingScope">
+  <TypeSignature Language="C#" Value="public abstract class ModelEditingScope : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ModelEditingScope extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Model.ModelEditingScope" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Gruppe der Änderungen am Bearbeitungsspeicher dar. Änderungsgruppen sind transaktional. Für in einem Bearbeitungsbereich vorgenommene Änderungen kann ein Commit oder ein Abbruch als Einheit ausgeführt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn für einen Bearbeitungsbereich ein Commit ausgeführt wurde, übernimmt der Bearbeitungsspeicher alle darin vorgenommenen Änderungen und wendet diese auf das Modell an. Wenn die <xref:System.Activities.Presentation.Model.ModelEditingScope.Revert%2A>-Methode des Bearbeitungsbereichs aufgerufen wird oder der Bearbeitungsbereich vor dem Aufrufen von <xref:System.Activities.Presentation.Model.ModelEditingScope.Complete%2A> gelöscht wird, setzt der Bearbeitungsbereich stattdessen die Änderungen an den zugrunde liegenden Objekten zurück und wendet erneut den Zustand aus dem Bearbeitungsspeicher an. Auf diese Weise erhält der Mechanismus zum Rückgängigmachen eine solide Grundlage.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ModelEditingScope ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelEditingScope.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen neuen <see cref="T:System.Activities.Presentation.Model.ModelEditingScope" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanComplete">
+      <MemberSignature Language="C#" Value="protected abstract bool CanComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelEditingScope.CanComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob <see cref="M:System.Activities.Presentation.Model.ModelEditingScope.OnComplete" /> aufgerufen werden soll oder ob die Änderung stattdessen rückgängig gemacht werden soll. Ein Grund für das Rückgängigmachen von Änderungen ist kann z.B. darin liegen, dass eine Datei nicht von einem Quellcodeverwaltungssystem aus auf Änderungen überprüft werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn der Vorgang abgeschlossen werden kann; <see langword="false" /> , wenn die Änderung stattdessen zurückgesetzt werden soll.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="public void Complete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Complete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelEditingScope.Complete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt den Bearbeitungsbereich ab, indem die <see cref="M:System.Activities.Presentation.Model.ModelEditingScope.OnComplete" />-Methode aufgerufen wird.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der Bearbeitungsbereich wurde bereits wiederhergestellt oder abgeschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.ModelEditingScope.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beschreibt die Gruppe von Änderungen. Sie kann jederzeit geändert werden, bevor ein Commit für die Änderungen ausgeführt wird.</summary>
+        <value>Gibt einen <see cref="T:System.String" /> zurück, der die Änderungen beschreibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelEditingScope.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verwirft dieses Objekt durch das Abbrechen von Änderungen, außer wenn der Bearbeitungsbereich bereits abgeschlossen oder wiederhergestellt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Bearbeitungsbereich entweder abgeschlossen oder zuvor wiederhergestellt wurde, geschieht beim Aufrufen dieser Methode nichts. Diese Methode ruft <xref:System.Activities.Presentation.Model.ModelEditingScope.Dispose%2A> mit dem Eingabeparameter festgelegt `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelEditingScope.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Bestimmt, ob die Änderungen als Teil eines Rückgängig-Vorgangs rückgängig gemacht werden sollen oder weil das Objekt abgeschlossen wird.</param>
+        <summary>Verwirft dieses Objekt durch das Abbrechen von Änderungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufe <xref:System.Activities.Presentation.Model.ModelEditingScope.Revert%2A> Wenn `disposing` festgelegt ist, um `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComplete">
+      <MemberSignature Language="C#" Value="protected abstract void OnComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelEditingScope.OnComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die tatsächlichen Schritte zum Abschließen des Bearbeitungsbereichs durch.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnException">
+      <MemberSignature Language="C#" Value="protected abstract bool OnException (Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnException(class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelEditingScope.OnException(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die zu verarbeitende Ausnahme.</param>
+        <summary>Verarbeitet eine Ausnahme.</summary>
+        <returns>
+          <see langword="true" />Wenn die Ausnahme verarbeitet wird; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Activities.Presentation.Model.ModelEditingScope.Complete%2A>-Methode und die <xref:System.Activities.Presentation.Model.ModelEditingScope.Revert%2A>-Methode rufen diese Methode auf, um Ausnahmen zu verarbeiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRevert">
+      <MemberSignature Language="C#" Value="protected abstract void OnRevert (bool finalizing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRevert(bool finalizing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelEditingScope.OnRevert(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finalizing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="finalizing">Bestimmt, ob der Vorgang abgebrochen wird, weil das Objekt abgeschlossen wird. Einige Systeme zum Rückgängigmachen versuchen in diesem Fall möglicherweise, den Vorgang abzubrechen, während andere möglicherweise die Änderungen abbrechen und als reaktiven Rückgängig-Vorgang aufzeichnen.</param>
+        <summary>Führt die tatsächlichen Schritte zum Wiederherstellen des Bearbeitungsbereichs durch.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Revert">
+      <MemberSignature Language="C#" Value="public void Revert ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Revert() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelEditingScope.Revert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht die Änderungen ab, die im Bearbeitungsbereich vorgenommen wurden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft <xref:System.Activities.Presentation.Model.ModelEditingScope.OnRevert%2A> mit dem Eingabeparameter festgelegt `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Für die Gruppe von Änderungen wurde bereits ein Commit ausgeführt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

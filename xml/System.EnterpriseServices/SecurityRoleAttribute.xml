@@ -1,0 +1,170 @@
+<Type Name="SecurityRoleAttribute" FullName="System.EnterpriseServices.SecurityRoleAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SecurityRoleAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SecurityRoleAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.SecurityRoleAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Method | System.AttributeTargets.Interface, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Konfiguriert eine Rolle für eine Anwendung oder Komponente an. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.EnterpriseServices.SecurityRoleAttribute> zum Hinzufügen von Rollen zu einer Anwendung und deren Komponenten zuzuordnen. Wenn <xref:System.EnterpriseServices.SecurityRoleAttribute> gilt eine Assembly als Ganzes und es wird sichergestellt, dass die Rolle in der Anwendungskonfiguration (COM+-Katalog) vorhanden ist. Sie können die Mitglieder der Rolle mithilfe des COM+-Explorers hinzufügen.  
+  
+ Bei Anwendung auf eine Komponente, die <xref:System.EnterpriseServices.SecurityRoleAttribute> wird sichergestellt, dass die Rolle vorhanden, in der Anwendungskonfiguration ist und die Rolle der Zielkomponente ordnet.  
+  
+ Standardmäßig werden keine Member erstellte Rollen enthalten. Wenn die <xref:System.EnterpriseServices.SecurityRoleAttribute.SetEveryoneAccess%2A> -Eigenschaftensatz auf `true`, die jeder Benutzergruppe wird automatisch der Rolle hinzugefügt. Dies ist für All-Access-Typ-Rollen, die sich nur minimale Kontrolle über das System am besten geeignet.  
+  
+ Sicherheitsrollen können auf der Komponentenebene, pro Schnittstelle und Methode angegeben werden. Wie bei anderen Methodenattributen, wird die Sicherheitskonfiguration nicht derzeit zwischen Schnittstellendefinition und Implementierung der Methode freigegeben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Attributs auf eine Rolle mit einer Assembly verknüpft wird, enthält <xref:System.EnterpriseServices.ServicedComponent> Klassen.  
+  
+ [!code-cpp[EnterpriseServices_Security#3](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Security/CPP/employeeinformation.cpp#3)]
+ [!code-csharp[EnterpriseServices_Security#3](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Security/CS/employeeinformation.cs#3)]
+ [!code-vb[EnterpriseServices_Security#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Security/VB/employeeinformation.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.EnterpriseServices.SecurityRoleAttribute" /> -Klasse und legt die <see cref="P:System.EnterpriseServices.SecurityRoleAttribute.Role" /> Eigenschaft.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityRoleAttribute (string role);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string role) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.SecurityRoleAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="role" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="role">Eine Sicherheitsrolle für die Anwendung, Komponente, Schnittstelle oder Methode.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.EnterpriseServices.SecurityRoleAttribute" /> -Klasse und legt die <see cref="P:System.EnterpriseServices.SecurityRoleAttribute.Role" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Attributs auf eine Rolle mit einer Assembly verknüpft wird, enthält <xref:System.EnterpriseServices.ServicedComponent> Klassen.  
+  
+ [!code-cpp[EnterpriseServices_Security#3](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Security/CPP/employeeinformation.cpp#3)]
+ [!code-csharp[EnterpriseServices_Security#3](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Security/CS/employeeinformation.cs#3)]
+ [!code-vb[EnterpriseServices_Security#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Security/VB/employeeinformation.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityRoleAttribute (string role, bool everyone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string role, bool everyone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.SecurityRoleAttribute.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="role" Type="System.String" />
+        <Parameter Name="everyone" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="role">Eine Sicherheitsrolle für die Anwendung, Komponente, Schnittstelle oder Methode.</param>
+        <param name="everyone">
+          <see langword="true" />voraus, dass die neu erstellte Rolle verfügen, die jeder Benutzergruppe als Benutzer hinzugefügt. andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.EnterpriseServices.SecurityRoleAttribute" /> -Klasse und legt die <see cref="P:System.EnterpriseServices.SecurityRoleAttribute.Role" /> und <see cref="P:System.EnterpriseServices.SecurityRoleAttribute.SetEveryoneAccess" /> Eigenschaften.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.SecurityRoleAttribute.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschreibung der Rolle.</summary>
+        <value>Die Beschreibung für die Rolle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public string Role { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Role" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.SecurityRoleAttribute.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Sicherheitsrolle ".</summary>
+        <value>Die Sicherheitsrolle, die für eine Anwendung, die Komponente, die Schnittstelle oder die Methode angewendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEveryoneAccess">
+      <MemberSignature Language="C#" Value="public bool SetEveryoneAccess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SetEveryoneAccess" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.SecurityRoleAttribute.SetEveryoneAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt einen Wert, der angibt, ob die "Jeder" hinzugefügt Benutzergruppe als Benutzer fest.</summary>
+        <value>
+          <see langword="true" />voraus, dass eine neu erstellte Rolle verfügen, die jeder Benutzergruppe als ein Benutzer (Rollen, die in der Anwendung bereits vorhandene werden nicht geändert) hinzugefügt. andernfalls <see langword="false" /> unterdrückt hinzufügen, die jeder Benutzer eine Gruppe als Benutzer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie diese Eigenschaft auf `false` unterdrückt hinzufügen, die jeder Benutzer eine Gruppe als Benutzer in die neu erstellte Rollen. Legen Sie die Eigenschaft auf `true` anfordern, dass eine neu erstellte Rolle "Jeder" als Benutzer hinzugefügt haben. Rollen, die auf die Anwendung bereits vorhanden sind, werden nicht geändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

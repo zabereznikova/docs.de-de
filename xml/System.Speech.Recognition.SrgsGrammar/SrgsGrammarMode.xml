@@ -1,0 +1,84 @@
+<Type Name="SrgsGrammarMode" FullName="System.Speech.Recognition.SrgsGrammar.SrgsGrammarMode">
+  <TypeSignature Language="C#" Value="public enum SrgsGrammarMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SrgsGrammarMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SrgsGrammar.SrgsGrammarMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Typ der Eingabe, die die Grammatik definiert die <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" />, entspricht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Eingabemodus für eine <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> richtet sich nach seiner <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument.Mode%2A> Eigenschaft. Die Eingabe Standardmodus ist der Stimme, der angibt, dass die Grammatik von definiert die <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> Spracheingabe entspricht.  
+  
+ Die Dtmf-Modus gibt an, dass eine Grammatik Dual-Ton mit mehreren Frequenz (MFV) Töne statt Sprache übereinstimmt. Es sind 16 MFV-Töne, die 12, von denen häufig auf die meisten Telefone gefunden werden.  
+  
+ Beim Erstellen einer <xref:System.Speech.Recognition.Grammar> -Objekt aus einer <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument>, die <xref:System.Speech.Recognition.Grammar> Objekt entspricht den Typ der Eingabe, die gemäß der <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument.Mode%2A> -Eigenschaft, die Ruft eine Instanz von <xref:System.Speech.Recognition.SrgsGrammar.SrgsGrammarMode>.  
+  
+   
+  
+## Examples  
+  
+```csharp  
+string srgsDocumentFile = Path.Combine(Path.GetTempPath(), "srgsDocumentFile.xml");  
+SrgsDocument document = null;  
+GrammarBuilder builder = null;  
+Grammar grammar = null;  
+  
+Choices firstThree = new Choices(new string[] {"1", "2", "3"});  
+Choices nextThree = new Choices(new string[] {"4", "5", "6"});  
+Choices lastThree = new Choices(new string[] {"7", "8", "9"});  
+  
+Choices keyPadChoices = new Choices(new GrammarBuilder[] {firstThree, nextThree, lastThree, new Choices("0")});  
+  
+builder = new GrammarBuilder(keyPadChoices);  
+document = new SrgsDocument(builder);  
+  
+document.Mode = SrgsGrammarMode.Dtmf;  
+grammar = new Grammar(document);   
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dtmf">
+      <MemberSignature Language="C#" Value="Dtmf" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SrgsGrammar.SrgsGrammarMode Dtmf = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SrgsGrammar.SrgsGrammarMode.Dtmf" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsGrammarMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" /> Objekt MFV-Töne ähnliche Benutzeroberflächenfeatures auf einem Telefon, anstelle von Sprache entspricht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Voice">
+      <MemberSignature Language="C#" Value="Voice" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SrgsGrammar.SrgsGrammarMode Voice = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SrgsGrammar.SrgsGrammarMode.Voice" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsGrammarMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" /> Spracheingabe Objekt entspricht.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

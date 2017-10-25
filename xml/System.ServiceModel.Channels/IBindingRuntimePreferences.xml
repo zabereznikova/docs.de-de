@@ -1,0 +1,67 @@
+<Type Name="IBindingRuntimePreferences" FullName="System.ServiceModel.Channels.IBindingRuntimePreferences">
+  <TypeSignature Language="C#" Value="public interface IBindingRuntimePreferences" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBindingRuntimePreferences" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IBindingRuntimePreferences" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert den optionalen Vertrag, der von einer Bindung implementiert werden kann, um anzugeben, ob eingehende Anforderungen vom Dienst synchron oder asynchron behandelt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einigen Fällen können Nachrichten durch eine Bindung effizienter mit der synchronen <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A>-Methode oder mit der synchronen <xref:System.ServiceModel.Channels.IRequestChannel.Request%2A>-Methode verarbeitet werden. <xref:System.ServiceModel.Channels.Binding> kann optional von einer <xref:System.ServiceModel.Channels.IBindingRuntimePreferences>-Klasse implementiert werden, um die bevorzugte Verarbeitung gegenüber dem Aufrufer anzugeben.  
+  
+ Wenn <xref:System.ServiceModel.Channels.IBindingRuntimePreferences> von einer Bindung nicht implementiert wird, verwendet die Laufzeitebene des [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Dienstmodells standardmäßig die asynchrone Version der `Receive`-Methode und die asynchrone Version der `Request`-Methode. Wenn <xref:System.ServiceModel.Channels.IBindingRuntimePreferences> von einer Bindung nicht implementiert wird, wird der Wert von [!INCLUDE[indigo2](~/includes/indigo2-md.md)] von der Laufzeitebene des <xref:System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously%2A>-Dienstmodells überprüft. Dieser wird dann verwendet, um zu ermitteln, ob die synchronen Versionen der Methoden (<xref:System.ServiceModel.Channels.IInputChannel.Receive%2A> oder <xref:System.ServiceModel.Channels.IRequestChannel.Request%2A>) oder die asynchronen Versionen (<xref:System.ServiceModel.Channels.IInputChannel.BeginReceive%2A> und <xref:System.ServiceModel.Channels.IInputChannel.EndReceive%28System.IAsyncResult%29> oder <xref:System.ServiceModel.Channels.IRequestChannel.BeginRequest%2A> und <xref:System.ServiceModel.Channels.IRequestChannel.EndRequest%28System.IAsyncResult%29> aufgerufen werden. Wenn <xref:System.ServiceModel.Channels.IBindingRuntimePreferences> von der Bindung implementiert wird und `true` von der <xref:System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously%2A>-Eigenschaft zurückgibt, wird empfohlen, die synchrone <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A>-Methode und die synchrone <xref:System.ServiceModel.Channels.IRequestChannel.Request%2A>-Methode zum Empfangen von Nachrichten vom Kanal zu verwenden. Wenn <xref:System.ServiceModel.Channels.IBindingRuntimePreferences> von der Bindung nicht implementiert wird oder `false` von der <xref:System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously%2A>-Eigenschaft zurückgibt, wird empfohlen, die asynchrone <xref:System.ServiceModel.Channels.IInputChannel.BeginReceive%2A>-Methode und die asynchrone <xref:System.ServiceModel.Channels.IInputChannel.EndReceive%28System.IAsyncResult%29>-Methode oder die asynchrone <xref:System.ServiceModel.Channels.IRequestChannel.BeginRequest%2A>-Methode und die asynchrone <xref:System.ServiceModel.Channels.IRequestChannel.EndRequest%28System.IAsyncResult%29>-Methode zu verwenden.  
+  
+ Unabhängig vom Wert, der von der <xref:System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously%2A>-Eigenschaft zurückgegeben wird, müssen alle Bindungen weiterhin gültige Implementierungen der synchronen und der asynchronen Versionen der `Receive`-Methode für die implementierten Kanaltypen bereitstellen. Weitere Informationen zum Implementieren von benutzerdefinierten Kanälen finden Sie unter [Entwickeln von Kanälen](~/docs/framework/wcf/extending/developing-channels.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Implementierung einer Bindung veranschaulicht, die die <xref:System.ServiceModel.Channels.IBindingRuntimePreferences>-Schnittstelle implementiert. Mit diesem Code stammt aus dem [Chunking Kanal](~/docs/framework/wcf/samples/chunking-channel.md) Beispiel:  
+  
+ [!code-csharp[S_UE_ChunkingChannel#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_chunkingchannel/cs/tcpchunkingbinding.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ReceiveSynchronously">
+      <MemberSignature Language="C#" Value="public bool ReceiveSynchronously { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReceiveSynchronously" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob eingehende Anforderungen effizienter synchron oder asynchron behandelt werden können.</summary>
+        <value>
+          <see langword="true" />Wenn Anforderungen effizienter synchron behandelt werden können; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />, Anforderungen werden in diesem Fall asynchron gehandhabt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle wird von Standardsystembindungen implementiert, die von [!INCLUDE[indigo1](~/includes/indigo1-md.md)] bereitgestellt werden, und in einigen Fällen wird der Standardwert überschrieben, um eingehende Nachrichten synchron zu verarbeiten.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChunkingChannel#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_chunkingchannel/cs/tcpchunkingbinding.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

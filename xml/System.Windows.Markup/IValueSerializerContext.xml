@@ -1,0 +1,83 @@
+<Type Name="IValueSerializerContext" FullName="System.Windows.Markup.IValueSerializerContext">
+  <TypeSignature Language="C#" Value="public interface IValueSerializerContext : IServiceProvider, System.ComponentModel.ITypeDescriptorContext" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IValueSerializerContext implements class System.ComponentModel.ITypeDescriptorContext, class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.IValueSerializerContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ITypeDescriptorContext</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert einen Kontext, die bereitgestellt wird, eine <see cref="T:System.Windows.Markup.ValueSerializer" />. Mit dem Kontext können Sonderfälle der Serialisierung oder verschiedene Serialisierungsmodi aktiviert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Markup.IValueSerializerContext> Schnittstelle ist eine spezielle Form von der <xref:System.ComponentModel.ITypeDescriptorContext> Kontext und dient als eines der Eingabeparameter für `Convert*String`  /  `CanConvert*String` Methoden auf die gleiche Weise wie ein Wertserialisierungsprogramm <xref:System.ComponentModel.ITypeDescriptorContext> Kontext verwendet wird `Convert*`  /  `CanConvert*` für eine <xref:System.ComponentModel.TypeConverter>.  
+  
+ Öffentliche Typen in WPF, implementieren ein <xref:System.Windows.Markup.ValueSerializer> und verwenden daher <xref:System.Windows.Markup.IValueSerializerContext> für Kontext befinden sich in der <xref:System.Windows.Converters> und <xref:System.Windows.Media.Converters> Namespaces.  
+  
+ In früheren Versionen von .NET Framework war diese Schnittstelle in der WPF-spezifischen Assembly WindowsBase. In [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.IValueSerializerContext> befindet sich in der System.Xaml-Assembly. Weitere Informationen finden Sie unter [aus WPF zu System.Xaml migrierte Typen](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetValueSerializerFor">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.ValueSerializer GetValueSerializerFor (System.ComponentModel.PropertyDescriptor descriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Markup.ValueSerializer GetValueSerializerFor(class System.ComponentModel.PropertyDescriptor descriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.IValueSerializerContext.GetValueSerializerFor(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.ValueSerializer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="descriptor" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="descriptor">Der Deskriptor der konvertierten Eigenschaft.</param>
+        <summary>Ruft eine <see cref="T:System.Windows.Markup.ValueSerializer" /> für den angegebenen Eigenschaftendeskriptor.</summary>
+        <returns>Ein <see cref="T:System.Windows.Markup.ValueSerializer" /> , der die angegebene Eigenschaft serialisieren kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueSerializerFor">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.ValueSerializer GetValueSerializerFor (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Markup.ValueSerializer GetValueSerializerFor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.IValueSerializerContext.GetValueSerializerFor(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.ValueSerializer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ des Werts, der konvertiert wird.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Markup.ValueSerializer" /> dem angegebenen Typ zugeordnet.</summary>
+        <returns>Ein <see cref="T:System.Windows.Markup.ValueSerializer" /> , der den angegebenen Typ serialisieren kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

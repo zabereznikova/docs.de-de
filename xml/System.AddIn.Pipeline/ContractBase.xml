@@ -1,0 +1,250 @@
+<Type Name="ContractBase" FullName="System.AddIn.Pipeline.ContractBase">
+  <TypeSignature Language="C#" Value="public class ContractBase : MarshalByRefObject, System.AddIn.Contract.IContract, System.Runtime.Remoting.Lifetime.ISponsor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContractBase extends System.MarshalByRefObject implements class System.AddIn.Contract.IContract, class System.Runtime.Remoting.Lifetime.ISponsor" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Pipeline.ContractBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Lifetime.ISponsor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Standardimplementierung von <see cref="T:System.AddIn.Contract.IContract" /> Elemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verträge definieren die Typen und Methoden, die vom Host und das Add-in verwendet. Alle Verträge müssen von abgeleitet <xref:System.AddIn.Contract.IContract>. Diese Klasse stellt die Standardimplementierung von <xref:System.AddIn.Contract.IContract> Elemente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContractBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.AddIn.Pipeline.ContractBase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireLifetimeToken">
+      <MemberSignature Language="C#" Value="public int AcquireLifetimeToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 AcquireLifetimeToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractBase.AcquireLifetimeToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Lebensdauertoken eine.</summary>
+        <returns>Eine zufällige Zahl, die ein Token identifiziert.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Alle zuvor abgerufene Token wurden gesperrt.  Es sind keine weiteren Token verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRemoteHashCode">
+      <MemberSignature Language="C#" Value="public virtual int GetRemoteHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetRemoteHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractBase.GetRemoteHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für die aktuelle <see cref="T:System.AddIn.Pipeline.ContractBase" /> Objekt.</summary>
+        <returns>Ein Hashcode für das aktuelle <see cref="T:System.AddIn.Pipeline.ContractBase" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFinalRevoke">
+      <MemberSignature Language="C#" Value="protected virtual void OnFinalRevoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFinalRevoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractBase.OnFinalRevoke" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einem Add-In-seitiger Adapter werden die systemeigene vom Adapter beanspruchten Ressourcen freigegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird vom System aufgerufen, wenn die während die Lebensdauer, die Token wurden abgerufen wurde, aus dem aktuellen <xref:System.AddIn.Pipeline.ContractBase> Instanz gesperrt wurden. Verwenden Sie diese Methode, um die systemeigenen Ressourcen frei, die für den Adapter zu bereinigen und für den angepassten Ansichten angeben, dass sie dieselbe ausführen soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryContract">
+      <MemberSignature Language="C#" Value="public virtual System.AddIn.Contract.IContract QueryContract (string contractIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.AddIn.Contract.IContract QueryContract(string contractIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractBase.QueryContract(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.IContract</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractIdentifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contractIdentifier">Der vollständige Name des Vertrags, einschließlich des Assemblynamens.</param>
+        <summary>Reflektiert über die Instanz eines Vertrags und gibt die <see langword="this" /> Zeiger, wenn das aktuelle Objekt diesen Vertrag implementiert.</summary>
+        <returns>Die <see langword="this" /> Zeiger auf ein <see cref="T:System.AddIn.Contract.IContract" /> -Schnittstelle oder <see langword="null" /> , wenn der Vertrag nicht implementiert ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contractIdentifier" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteEquals">
+      <MemberSignature Language="C#" Value="public virtual bool RemoteEquals (System.AddIn.Contract.IContract contract);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool RemoteEquals(class System.AddIn.Contract.IContract contract) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractBase.RemoteEquals(System.AddIn.Contract.IContract)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contract" Type="System.AddIn.Contract.IContract" />
+      </Parameters>
+      <Docs>
+        <param name="contract">Das Objekt auf Gleichheit mit dem remote-Objekt.</param>
+        <summary>Vergleicht ein Objekt mit einem remote-Objekt auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt gleich dem remote-Objekt ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteToString">
+      <MemberSignature Language="C#" Value="public virtual string RemoteToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string RemoteToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractBase.RemoteToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die einem Remoteobjekt identifiziert.</summary>
+        <returns>Eine Zeichenfolge, die das entfernte Objekt identifiziert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Renewal">
+      <MemberSignature Language="C#" Value="public TimeSpan Renewal (System.Runtime.Remoting.Lifetime.ILease lease);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.TimeSpan Renewal(class System.Runtime.Remoting.Lifetime.ILease lease) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractBase.Renewal(System.Runtime.Remoting.Lifetime.ILease)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lease" Type="System.Runtime.Remoting.Lifetime.ILease" />
+      </Parameters>
+      <Docs>
+        <param name="lease">Das Lebensdauerlease-Objekt, das vom Dienst Lebensdauer Remoting verwendet wird.</param>
+        <summary>Fordert einen Sponsoren Client die Lease für das angegebene Objekt zu.</summary>
+        <returns>Die erneuerte Leasedauer.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="lease" /> ist <see langword="null" />.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RevokeLifetimeToken">
+      <MemberSignature Language="C#" Value="public void RevokeLifetimeToken (int token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RevokeLifetimeToken(int32 token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractBase.RevokeLifetimeToken(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="token">Die Tokennummer.</param>
+        <summary>Entfernt das angegebene Token aus der Liste der ausstehenden Lifetime-Token.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Token nicht in der Liste der ausstehenden Lifetime-Token ist, löst diese Methode eine <xref:System.InvalidOperationException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="token" />in der Liste der ausstehenden Lifetime-Token wurde nicht gefunden werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

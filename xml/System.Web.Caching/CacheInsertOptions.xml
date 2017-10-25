@@ -1,0 +1,124 @@
+<Type Name="CacheInsertOptions" FullName="System.Web.Caching.CacheInsertOptions">
+  <TypeSignature Language="C#" Value="public class CacheInsertOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CacheInsertOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.CacheInsertOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Typ dar, der die Cacheeinfügeoptionen enthält.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheInsertOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheInsertOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz dieser Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AbsoluteExpiration">
+      <MemberSignature Language="C#" Value="public DateTime AbsoluteExpiration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime AbsoluteExpiration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.CacheInsertOptions.AbsoluteExpiration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Cacheeintrag nach einer bestimmten Zeit entfernt werden soll, oder legt ihn fest.</summary>
+        <value>Die Dauer bis zur Entfernung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dependencies">
+      <MemberSignature Language="C#" Value="public System.Web.Caching.CacheDependency Dependencies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Caching.CacheDependency Dependencies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.CacheInsertOptions.Dependencies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.CacheDependency</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Cacheabhängigkeit ab oder legt diese fest.</summary>
+        <value>Die Cacheabhängigkeit.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemovedCallback">
+      <MemberSignature Language="C#" Value="public System.Web.Caching.CacheItemRemovedCallback OnRemovedCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Caching.CacheItemRemovedCallback OnRemovedCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.CacheInsertOptions.OnRemovedCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.CacheItemRemovedCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Web.Caching.CacheItemRemovedCallback" />-Rückruf ab oder legt ihn fest.</summary>
+        <value>Der <see cref="T:System.Web.Caching.CacheItemRemovedCallback" />-Rückruf.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public System.Web.Caching.CacheItemPriority Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Caching.CacheItemPriority Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.CacheInsertOptions.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.CacheItemPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Priorität ab oder legt diese fest.</summary>
+        <value>Die Priorität.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SlidingExpiration">
+      <MemberSignature Language="C#" Value="public TimeSpan SlidingExpiration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan SlidingExpiration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.CacheInsertOptions.SlidingExpiration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeitraum zwischen dem Zeitpunkt des letzten Zugriffs auf das eingefügte Objekt und dem Zeitpunkt des Ablaufs dieses Objekt ab, oder legt ihn fest. Wenn dieser Wert 20 Minuten entspricht, läuft das Objekt 20 Minuten nach dem letzten Zugriff ab und wird aus dem Cache entfernt.</summary>
+        <value>Der Zeitraum zwischen dem Zeitpunkt des letzten Zugriffs auf das eingefügte Objekt und dem Zeitpunkt des Ablaufs dieses Objekts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,86 @@
+<Type Name="SuppressUnmanagedCodeSecurityAttribute" FullName="System.Security.SuppressUnmanagedCodeSecurityAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SuppressUnmanagedCodeSecurityAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SuppressUnmanagedCodeSecurityAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.SuppressUnmanagedCodeSecurityAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method | System.AttributeTargets.Interface | System.AttributeTargets.Delegate, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht es verwaltetem Code, nicht verwalteten Code ohne Stackwalk aufzurufen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Verwenden Sie dieses Attribut mit äußerster Vorsicht vor. Falsche Verwendung kann Sicherheit Schwächen.  
+  
+ Dieses Attribut kann auf Methoden angewendet werden, die in systemeigenen Code durchführen, ohne dass der Leistungsverlust auftritt, der eine sicherheitsüberprüfung zur Laufzeit, dabei werden soll. Der Stackwalk, der beim Aufrufen von nicht verwalteten Codes zur Laufzeit weggelassen wird ausgeführt, was zu erheblichen Leistungssteigerung. Verwenden dieses Attribut in einer Klasse gilt für alle darin enthaltenen Methoden.  
+  
+ Im Allgemeinen Wenn verwalteter Code nicht verwalteten Code aufruft (durch PInvoke oder COM-Interop in systemeigenem Code), wird eine Anforderung für die `UnmanagedCode` Berechtigung, um sicherzustellen, dass alle Aufrufer haben die erforderliche Berechtigung, um dies zu ermöglichen. Durch dieses explizite Attribut angewendet wird, können Entwickler die Anforderung zur Laufzeit unterdrücken. Der Entwickler muss sicherstellen, dass der Übergang in nicht verwaltetem Code auf andere Weise ausreichend geschützt ist, dauern. Die Nachfrage nach dem `UnmanagedCode` Berechtigung wird zum Zeitpunkt der Verknüpfung nach wie vor erfolgen. Wenn Aufrufe der Funktion A B Funktion und Funktion B ist z. B. mit gekennzeichnet <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>, Codeberechtigung während der Just-in-Time-Kompilierung, aber anschließend nicht während der Laufzeit für nicht verwalteten Funktion ein überprüft werden wird.  
+  
+ Dieses Attribut ist nur wirksam, wenn PInvoke-Methoden (oder Klassen, die PInvoke-Methoden) angewendet oder die Definition einer Schnittstelle, über die Interop-Aufrufe erfolgen. In allen anderen Kontexten wird es ignoriert werden.  
+  
+ Dieses Attribut ist hilfreich bei der Implementierung einer Klasse, die Zugriff auf Systemressourcen über nicht verwaltetem Code ermöglicht. Code, der nicht über die Berechtigung zum Zugriff auf nicht verwalteten Code kann es sich um eine Klasse mit diesem Attribut den Zugriff auf nicht verwalteten Code aufrufen. Dies ist nur sicher sind, wenn der Writer, der die Klasse mit diesem Attribut die Klasse sicher programmiert wurde. Wenn dies nicht der Fall, dieses Attribut ist riskant und den Code, der er verwendet, um die missbraucht werden können.  
+  
+ Dies ist kein Attribut für die deklarative Sicherheit, sondern ein reguläres Attribut (sie leitet sich von <xref:System.Attribute>, nicht <xref:System.Security.Permissions.SecurityAttribute>).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SuppressUnmanagedCodeSecurityAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SuppressUnmanagedCodeSecurityAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.SuppressUnmanagedCodeSecurityAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor initialisiert alle Felder mit ihren Standardwerten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

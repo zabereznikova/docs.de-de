@@ -1,0 +1,121 @@
+<Type Name="TrusteeType" FullName="System.Messaging.TrusteeType">
+  <TypeSignature Language="C#" Value="public enum TrusteeType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed TrusteeType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.TrusteeType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Typ eines Vertrauensnehmers.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Vertrauensnehmer ist häufig ein Benutzer oder Gruppe, aber möglicherweise auch einen Computer im Netzwerk oder einer Domäne erkannt. Beim gewähren oder Zugriffsrechte festgelegt werden sollen, geben Sie den Vertrauensnehmer in der <xref:System.Messaging.Trustee.TrusteeType%2A> Mitglied einer <xref:System.Messaging.Trustee>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Alias">
+      <MemberSignature Language="C#" Value="Alias" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.TrusteeType Alias = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.TrusteeType.Alias" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.TrusteeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Vertrauensnehmer ist ein Alias.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Computer">
+      <MemberSignature Language="C#" Value="Computer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.TrusteeType Computer = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.TrusteeType.Computer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.TrusteeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Vertrauensnehmer ist ein Computer.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Domain">
+      <MemberSignature Language="C#" Value="Domain" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.TrusteeType Domain = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.TrusteeType.Domain" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.TrusteeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Vertrauensnehmer ist eine Domäne an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Group">
+      <MemberSignature Language="C#" Value="Group" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.TrusteeType Group = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.TrusteeType.Group" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.TrusteeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Vertrauensnehmer ist eine Gruppe.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.TrusteeType Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.TrusteeType.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.TrusteeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Vertrauensnehmertyp ist unbekannt, jedoch nicht notwendigerweise ungültig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="User" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.TrusteeType User = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.TrusteeType.User" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.TrusteeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Vertrauensnehmer ist ein Benutzer an.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

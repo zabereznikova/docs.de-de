@@ -1,0 +1,41 @@
+<Type Name="HelpEventHandler" FullName="System.Windows.Forms.HelpEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void HelpEventHandler(object sender, HelpEventArgs hlpevent);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HelpEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HelpEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="hlpevent" Type="System.Windows.Forms.HelpEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="hlpevent">Ein <see cref="T:System.Windows.Forms.HelpEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Windows.Forms.Control.HelpRequested" />-Ereignisses eines <see cref="T:System.Windows.Forms.Control" />-Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Windows.Forms.HelpEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zur Behandlung von Ereignissen mit Delegaten finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Behandlung der <xref:System.Windows.Forms.Control.HelpRequested> Ereignis, um benutzerdefinierte Hilfeinhalt für ein Formular mit vier Adressfeldern angezeigt. Die <xref:System.Windows.Forms.Control.HelpRequested> Ereignis wird ausgelöst, entweder durch Drücken der F1-Taste mit dem Fokus im Adressenfeld, oder die mithilfe der Schaltfläche "kontextbezogene Hilfe" und dann auf der Hilfecursor auf Adressenfeld. Die <xref:System.Windows.Forms.HelpEventArgs.Handled%2A> Eigenschaftensatz wird auf "true", um anzugeben, dass die `HelpRequested` Ereignis behandelt wird. Das Beispiel zeigt auch das Speichern des Hilfetext in der <xref:System.Windows.Forms.Control.Tag%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ [!code-cpp[System.Windows.Forms.HelpEventHandler#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.HelpEventHandler/CPP/helpevent.cpp#1)]
+ [!code-csharp[System.Windows.Forms.HelpEventHandler#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HelpEventHandler/CS/helpevent.cs#1)]
+ [!code-vb[System.Windows.Forms.HelpEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HelpEventHandler/VB/helpevent.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

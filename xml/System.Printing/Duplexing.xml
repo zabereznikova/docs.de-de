@@ -1,0 +1,108 @@
+<Type Name="Duplexing" FullName="System.Printing.Duplexing">
+  <TypeSignature Language="C#" Value="public enum Duplexing" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Duplexing extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.Duplexing" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob ein Drucker einseitigen drucken oder irgendeine Form von zweiseitigen (Duplexdruck) verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Werte dieses Typs hauptsächlich für folgende Zwecke:  
+  
+-   Als Mitglied der <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> -Auflistung, die eine Eigenschaft des <xref:System.Printing.PrintCapabilities>, diese Werte geben die Arten von einseitigen und zweiseitige drucken, die der Drucker unterstützt.  
+  
+-   Als Wert für die <xref:System.Printing.PrintTicket.Duplexing%2A> Eigenschaft eine <xref:System.Printing.PrintTicket>, den Drucker mithilfe von einseitigen oder bestimmte Art von zweiseitigen gedruckt.  
+  
+ Die **unbekannte** Wert wird in den Eigenschaften der nie verwendet <xref:System.Printing.PrintCapabilities> Objekte.  
+  
+ Sollten Sie niemals Festlegen einer <xref:System.Printing.PrintTicket> Eigenschaft, um **unbekannte**. Wenn eine andere <xref:System.Printing.PrintTicket> erstellt wurde, erzeugt die Anwendung eine *PrintTicket-Dokument* , die das Duplex-Funktion auf eine unbekannte Duplex-Option festgelegt (also eine Option, die nicht in definiert ist die [Druckschema ](http://go.microsoft.com/fwlink/?LinkId=186397)), wird eine <xref:System.Printing.PrintTicket> -Objekt in der Anwendung, die mit diesem Dokument erstellt wird **unbekannte** als Wert für die <xref:System.Printing.PrintTicket.Duplexing%2A> Eigenschaft.  
+  
+ Obwohl die <xref:System.Printing.PrintTicket> und <xref:System.Printing.PrintCapabilities> Klassen können nicht vererbt werden, können Sie erweitern die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) Druckgerät Funktionen zu erkennen, die nicht in berücksichtigt werden die <xref:System.Printing.PrintTicket> oder <xref:System.Printing.PrintCapabilities> Klassen. Weitere Informationen finden Sie unter [nicht im Build: Vorgehensweise: Erweitern der Druckschema und Erstellen von neuen Druckserver Systemklassen](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie einen Drucker Funktionen testen und konfigurieren den Druckauftrag aus, um diese nutzen. .  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OneSided">
+      <MemberSignature Language="C#" Value="OneSided" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Duplexing OneSided = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Duplexing.OneSided" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Duplexing</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ausgabe wird nur eine Seite jedes Blatts gedruckt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoSidedLongEdge">
+      <MemberSignature Language="C#" Value="TwoSidedLongEdge" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Duplexing TwoSidedLongEdge = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Duplexing.TwoSidedLongEdge" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Duplexing</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ausgabe auf beiden Seiten jedes Blatts an, die entlang der Kante parallel zur spiegelt druckt die <see cref="P:System.Printing.PrintDocumentImageableArea.MediaSizeHeight" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoSidedShortEdge">
+      <MemberSignature Language="C#" Value="TwoSidedShortEdge" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Duplexing TwoSidedShortEdge = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Duplexing.TwoSidedShortEdge" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Duplexing</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ausgabe auf beiden Seiten jedes Blatts an, die entlang der Kante parallel zur spiegelt druckt <see cref="P:System.Printing.PrintDocumentImageableArea.MediaSizeWidth" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Duplexing Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Duplexing.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Duplexing</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Funktion (deren Optionen durch diese Enumeration dargestellt werden) ist eine Option festgelegt, nicht definiert, der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

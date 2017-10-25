@@ -1,0 +1,312 @@
+<Type Name="RepeaterItemCollection" FullName="System.Web.UI.WebControls.RepeaterItemCollection">
+  <TypeSignature Language="C#" Value="public sealed class RepeaterItemCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RepeaterItemCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.RepeaterItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> Objekte in der <see cref="T:System.Web.UI.WebControls.Repeater" /> Steuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.RepeaterItemCollection> Klasse stellt eine Auflistung von <xref:System.Web.UI.WebControls.RepeaterItem> Objekte, die wiederum die Datenelemente in darstellen einer <xref:System.Web.UI.WebControls.Repeater> Steuerelement. Um programmgesteuert abrufen <xref:System.Web.UI.WebControls.RepeaterItem> Objekte aus einer <xref:System.Web.UI.WebControls.Repeater> steuern, verwenden Sie eine der folgenden Methoden:  
+  
+-   Verwenden Sie einen Indexer zum Abrufen einer einzelnes <xref:System.Web.UI.WebControls.RepeaterItem> Objekt mithilfe der Arraynotation aus der Auflistung.  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.RepeaterItemCollection.CopyTo%2A> Methode zum Kopieren der Inhalte der Auflistung in ein <xref:System.Array?displayProperty=nameWithType> -Objekt, das abzurufenden Elemente aus der Auflistung verwendet werden kann.  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.RepeaterItemCollection.GetEnumerator%2A> Methode zum Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType> Schnittstelle, die abzurufenden Elemente aus der Auflistung verwendet werden kann.  
+  
+-   Verwendung `foreach` (c#) oder `For Each` (Visual Basic) zum Durchlaufen der Auflistung.  
+  
+ Die <xref:System.Web.UI.WebControls.RepeaterItemCollection.Count%2A> Eigenschaft gibt die Gesamtanzahl der Elemente in der Auflistung und wird häufig verwendet werden, um die Obergrenze der Auflistung zu bestimmen.  
+  
+   
+  
+## Examples  
+ [!code-csharp[RepeaterItemCollection_Members#1](~/samples/snippets/csharp/VS_Snippets_WebNet/RepeaterItemCollection_Members/CS/repeateritemcollection_members.cs.aspx#1)]
+ [!code-vb[RepeaterItemCollection_Members#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RepeaterItemCollection_Members/VB/repeateritemcollection_members.vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RepeaterItemCollection (System.Collections.ArrayList items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ArrayList items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RepeaterItemCollection.#ctor(System.Collections.ArrayList)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="items">Ein <see cref="T:System.Collections.ArrayList" /> , enthält die Elemente, mit denen die Auflistung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.RepeaterItemCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.RepeaterItemCollection> Klasse.  
+  
+   
+  
+## Examples  
+ [!code-csharp[RepeaterItemCollection_Members#1](~/samples/snippets/csharp/VS_Snippets_WebNet/RepeaterItemCollection_Members/CS/repeateritemcollection_members.cs.aspx#1)]
+ [!code-vb[RepeaterItemCollection_Members#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RepeaterItemCollection_Members/VB/repeateritemcollection_members.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RepeaterItemCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein nullbasiertes <see cref="T:System.Array" />, das die kopierten Elemente aus der <see cref="T:System.Web.UI.WebControls.RepeaterItemCollection" /> empfängt.</param>
+        <param name="index">Die erste Position in der angegebenen <see cref="T:System.Array" /> den kopierten Inhalt empfängt.</param>
+        <summary>Kopiert alle Elemente aus dieser <see cref="T:System.Web.UI.WebControls.RepeaterItemCollection" /> in den angegebenen <see cref="T:System.Array" /> -Objekt, beginnend am angegebenen Index in die <see cref="T:System.Array" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Kopieren der Inhalte der <xref:System.Web.UI.WebControls.RepeaterItemCollection> in die angegebene <xref:System.Array?displayProperty=nameWithType> -Objekt, beginnend am angegebenen Index.  
+  
+> [!NOTE]
+>  Die `array` Parameter muss eine nullbasierte <xref:System.Array?displayProperty=nameWithType> Objekt.  
+  
+   
+  
+## Examples  
+ Dieser Code im Kontext des ein vollständiges Beispiel finden Sie unter der <xref:System.Web.UI.WebControls.RepeaterItemCollection> klassenthema.  
+  
+ [!code-csharp[RepeaterItemCollection_Members#4](~/samples/snippets/csharp/VS_Snippets_WebNet/RepeaterItemCollection_Members/CS/repeateritemcollection_members.cs.aspx#4)]
+ [!code-vb[RepeaterItemCollection_Members#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RepeaterItemCollection_Members/VB/repeateritemcollection_members.vb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeaterItemCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> Objekte in der Auflistung.</summary>
+        <value>Die Anzahl von <see cref="T:System.Web.UI.WebControls.DataListItem" />-Objekten in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.RepeaterItemCollection.Count%2A> -Eigenschaft können Sie bestimmen die Anzahl der <xref:System.Web.UI.WebControls.RepeaterItem> Objekte in der <xref:System.Web.UI.WebControls.RepeaterItemCollection> Auflistung. Die <xref:System.Web.UI.WebControls.RepeaterItemCollection.Count%2A> Eigenschaft wird üblicherweise beim Durchlaufen der Auflistung zum Bestimmen der oberen Grenze der Auflistung verwendet.  
+  
+   
+  
+## Examples  
+ Dieser Code im Kontext des ein vollständiges Beispiel finden Sie unter der <xref:System.Web.UI.WebControls.RepeaterItemCollection> klassenthema.  
+  
+ [!code-csharp[RepeaterItemCollection_Members#3](~/samples/snippets/csharp/VS_Snippets_WebNet/RepeaterItemCollection_Members/CS/repeateritemcollection_members.cs.aspx#3)]
+ [!code-vb[RepeaterItemCollection_Members#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RepeaterItemCollection_Members/VB/repeateritemcollection_members.vb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RepeaterItemCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Collections.IEnumerator" /> -Schnittstelle, die alle durchlaufen, kann die <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> Objekte in der <see cref="T:System.Web.UI.WebControls.RepeaterItemCollection" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> Schnittstelle, die alle enthält <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> Objekte in der <see cref="T:System.Web.UI.WebControls.RepeaterItemCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType> , die verwendet werden kann, durchlaufen Jedes Element in der <xref:System.Web.UI.WebControls.RepeaterItemCollection>.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft, um das Element derzeit in der Auflistung verweist.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> -Methode zum nächsten Element in der Auflistung zu verschieben.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf die ursprüngliche Position zurück.  
+  
+> [!NOTE]
+>  Nach der Erstellung eine <xref:System.Collections.IEnumerator?displayProperty=nameWithType> Objekts, oder verwenden die <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf das erste Element in der Auflistung, rufen Sie die <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> Methode. Andernfalls das Element dargestellt, durch die <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft ist nicht definiert.  
+  
+   
+  
+## Examples  
+ Dieser Code im Kontext des ein vollständiges Beispiel finden Sie unter der <xref:System.Web.UI.WebControls.RepeaterItemCollection> klassenthema.  
+  
+ [!code-csharp[RepeaterItemCollection_Members#5](~/samples/snippets/csharp/VS_Snippets_WebNet/RepeaterItemCollection_Members/CS/repeateritemcollection_members.cs.aspx#5)]
+ [!code-vb[RepeaterItemCollection_Members#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RepeaterItemCollection_Members/VB/repeateritemcollection_members.vb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeaterItemCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> Objekte in der <see cref="T:System.Web.UI.WebControls.RepeaterItemCollection" /> kann geändert werden.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt diese Eigenschaft immer `false` gibt an, dass die <xref:System.Web.UI.WebControls.RepeaterItemCollection> in geschrieben werden können, um in allen Fällen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeaterItemCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die <see cref="T:System.Web.UI.WebControls.RepeaterItemCollection" /> synchronisiert (threadsicher) ist.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stammt aus dem <xref:System.Collections.ICollection?displayProperty=nameWithType> -Klasse und wird überschrieben, um stets `false`.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.DataGridColumnCollection.IsSynchronized%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.IsSynchronized%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.RepeaterItem this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.RepeaterItem Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeaterItemCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeaterItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, der die <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> in der Auflistung abgerufen.</param>
+        <summary>Ruft die <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> Objekt am angegebenen Index in der Auflistung.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> Objekt am angegebenen Index in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Indexer zum Abrufen einer <xref:System.Web.UI.WebControls.RepeaterItem> -Objekt aus der <xref:System.Web.UI.WebControls.RepeaterItemCollection> am angegebenen Index mithilfe der Arraynotation.  
+  
+   
+  
+## Examples  
+ Dieser Code im Kontext des ein vollständiges Beispiel finden Sie unter der <xref:System.Web.UI.WebControls.RepeaterItemCollection> klassenthema.  
+  
+ [!code-csharp[RepeaterItemCollection_Members#3](~/samples/snippets/csharp/VS_Snippets_WebNet/RepeaterItemCollection_Members/CS/repeateritemcollection_members.cs.aspx#3)]
+ [!code-vb[RepeaterItemCollection_Members#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RepeaterItemCollection_Members/VB/repeateritemcollection_members.vb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeaterItemCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das verwendet werden kann, zum Synchronisieren des Zugriffs auf die <see cref="T:System.Web.UI.WebControls.RepeaterItemCollection" /> Auflistung.</summary>
+        <value>Ein <see cref="T:System.Object" /> , die zum Synchronisieren des Zugriffs auf die Auflistung verwendet werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das in dieser Implementierung zurückgegebene Objekt stellt der <xref:System.Web.UI.WebControls.RepeaterItemCollection> Objekt selbst.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.DataGridColumnCollection.SyncRoot%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.SyncRoot%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

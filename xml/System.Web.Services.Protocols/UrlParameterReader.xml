@@ -1,0 +1,74 @@
+<Type Name="UrlParameterReader" FullName="System.Web.Services.Protocols.UrlParameterReader">
+  <TypeSignature Language="C#" Value="public class UrlParameterReader : System.Web.Services.Protocols.ValueCollectionParameterReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UrlParameterReader extends System.Web.Services.Protocols.ValueCollectionParameterReader" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.UrlParameterReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.ValueCollectionParameterReader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Liest die eingehenden Anforderungsparameter für Webdienste, die mithilfe von HTTP mit Name-Wert-Paaren, die in der URL-Abfragezeichenfolge anstatt als SOAP-Nachricht codiert implementiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Services.Protocols.UrlParameterReader>und andere Klassen in der <xref:System.Web.Services.Protocols> Namespace unterstützt die .NET Framework-Implementierungen von Webdiensten über HTTP-GET und HTTP-POST-Vorgänge. Web Service Autoren und Leser serialisieren und deserialisieren, bzw. die Parameter oder Rückgabeobjekt Webmethoden und den HTTP-Anforderung oder Antwort Streams. Web Service Autoren und Leser HTTP für den Transport verwenden, jedoch nicht mit den standardmäßigen SOAP-Nachrichten austauschen.  
+  
+ Die <xref:System.Web.Services.Protocols.UrlParameterReader> -Klasse stellt eine Methode aufseiten des Dienstes <xref:System.Web.Services.Protocols.UrlParameterReader.Read%2A>, lesen Sie die Parameter-Wert-Paare, die in einer HTTP codiert werden anfordern des URL-Abfragezeichenfolge. Beispielsweise ist in der URL `http://contoso.com?a=1&b=2`, `a` und `b` Parameternamen und `1` und `2` werden ihre Werte.  
+  
+ Sie in der Regel nicht benötigen, verwenden Sie <xref:System.Web.Services.Protocols.UrlParameterReader> direkt. HTTP-GET-Webdienste sind aktiviert, wenn einer ASP.NET-Konfigurationsdatei (Web.config) `protocols` Element enthält eine `add` Element, dessen Namensattribut-Wert ist "`HttpGet`". Die <xref:System.Web.Services.Protocols.UrlParameterReader> Klasse wird automatisch verwendet, wenn ein HTTP-GET-Webdienst aktiviert ist und eine anwendbare HTTP-Anforderung empfangen wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UrlParameterReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.UrlParameterReader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.UrlParameterReader" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override object[] Read (System.Web.HttpRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] Read(class System.Web.HttpRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.UrlParameterReader.Read(System.Web.HttpRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Web.HttpRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">Ein <see cref="T:System.Net.WebResponse" /> Objekt HTML-URL-codierte Name/Wert-Paare enthält.</param>
+        <summary>Liest die Name/Wert-Paare in der Abfragezeichenfolge einer HTTP-Anforderung in Web Methodenparameterwerte codiert.</summary>
+        <returns>Ein Array von Name/Wert-Paaren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.UrlParameterReader.Read%2A> Methode verwendet den Inhalt der <xref:System.Web.HttpRequest> des Objekts <xref:System.Web.HttpRequest.QueryString%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

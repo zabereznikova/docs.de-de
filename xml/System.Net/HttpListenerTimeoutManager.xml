@@ -1,0 +1,311 @@
+<Type Name="HttpListenerTimeoutManager" FullName="System.Net.HttpListenerTimeoutManager">
+  <TypeSignature Language="C#" Value="public class HttpListenerTimeoutManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpListenerTimeoutManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.HttpListenerTimeoutManager" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.HttpListener</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Der Timeout-Manager für die Verwendung einer <see cref="T:System.Net.HttpListener" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Timeout-Manager definiert den Timeout Verbindungslimits für eine <xref:System.Net.HttpListener> Instanz.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpListenerTimeoutManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerTimeoutManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrainEntityBody">
+      <MemberSignature Language="C#" Value="public TimeSpan DrainEntityBody { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DrainEntityBody" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerTimeoutManager.DrainEntityBody" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeit in Sekunden, die zulässig sind, für die <see cref="T:System.Net.HttpListener" /> Ausgleich Entitätstext für eine Keep-Alive-Verbindung.</summary>
+        <value>Gibt <see cref="T:System.TimeSpan" />zurück.  
+  
+ Die Zeit in Sekunden an, zulässig, für die <see cref="T:System.Net.HttpListener" /> Ausgleich Entitätstext für eine Keep-Alive-Verbindung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist 2 Minuten.  
+  
+ Für eine Keep-Alive-Verbindung, nachdem die app eine Antwort für eine Anforderung gesendet hat und bevor die Anforderung Entitätstext vollständig eingegangen die <xref:System.Net.HttpListener> beginnt, leeren den Rest des einheitstextkörpers potenziell von einem anderen erreichen weiterleitet, der Anforderung vom Client. Die Zeit zum Ausgleichen des verbleibenden einheitstextkörpers überschreitet den zulässigen Zeitraum wird die Verbindung ein Timeout.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityBody">
+      <MemberSignature Language="C#" Value="public TimeSpan EntityBody { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan EntityBody" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerTimeoutManager.EntityBody" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeit in Sekunden, für die Anforderungs-einheitstextkörper eintreffen zulässig.</summary>
+        <value>Gibt <see cref="T:System.TimeSpan" />zurück.  
+  
+ Die Zeit in Sekunden, für die Anforderungs-einheitstextkörper eintreffen zulässig sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist 2 Minuten.  
+  
+ Die <xref:System.Net.HttpListener> dieser Zeitgeber aktiviert, wenn die Anforderung einen Entitätstext. Ablaufen des Zeitgebers wird anfänglich auf den konfigurierten Wert festgelegt. Wenn die <xref:System.Net.HttpListener> empfängt zusätzliche Daten Anzeichen für die Anforderung den Zeitgeber, um der Verbindung zu einem anderen Intervall gewähren zurückgesetzt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderWait">
+      <MemberSignature Language="C#" Value="public TimeSpan HeaderWait { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan HeaderWait" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerTimeoutManager.HeaderWait" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeit in Sekunden, die zulässig sind, für die <see cref="T:System.Net.HttpListener" /> , den Anforderungsheader zu analysieren.</summary>
+        <value>Gibt <see cref="T:System.TimeSpan" />zurück.  
+  
+ Die Zeit in Sekunden an, zulässig, für die <see cref="T:System.Net.HttpListener" /> , den Anforderungsheader zu analysieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist 2 Minuten.  
+  
+ Dieses Timeout wird nur erzwungen, nachdem die erste Anforderung für die Verbindung weitergeleitet wird die <xref:System.Net.HttpListener>.  
+  
+ Vom System nicht bestimmt werden, der Anforderungswarteschlange oder die URL-Gruppe, die die Anforderung zugeordnet ist, bis die Header analysiert wurden. Aus diesem Grund die <xref:System.Net.HttpListener> erzwingt die Standardeinstellung <xref:System.Net.HttpListenerTimeoutManager.HeaderWait%2A> Timer für die erste Anforderung für eine Verbindung. Nachfolgende Anforderungen über eine Keep-Alive-Verbindung werden für diese Eigenschaft festgelegte Wert verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdleConnection">
+      <MemberSignature Language="C#" Value="public TimeSpan IdleConnection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan IdleConnection" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerTimeoutManager.IdleConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeit in Sekunden, für die eine Verbindung im Leerlauf zulässig.</summary>
+        <value>Gibt <see cref="T:System.TimeSpan" />zurück.  
+  
+ Die Zeit in Sekunden, für die eine Verbindung im Leerlauf zulässig.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist 2 Minuten.  
+  
+ Dieses Timeout wird nur erzwungen, nachdem die erste Anforderung für die Verbindung weitergeleitet wird die <xref:System.Net.HttpListener>.  
+  
+ Vom System nicht bestimmt werden, der Anforderungswarteschlange oder die URL-Gruppe, die die Anforderung zugeordnet ist, bis die Header analysiert wurden. Aus diesem Grund die <xref:System.Net.HttpListener> erzwingt die Standardeinstellung <xref:System.Net.HttpListenerTimeoutManager.IdleConnection%2A> Timer für die erste Anforderung für eine Verbindung. Nachfolgende Anforderungen über eine Keep-Alive-Verbindung werden für diese Eigenschaft festgelegte Wert verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinSendBytesPerSecond">
+      <MemberSignature Language="C#" Value="public long MinSendBytesPerSecond { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MinSendBytesPerSecond" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerTimeoutManager.MinSendBytesPerSecond" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die minimale Senderate in Bytes pro Sekunde, für die Antwort fest.</summary>
+        <value>Gibt <see cref="T:System.Int64" />zurück.  
+  
+ Die minimale Senderate in Bytes pro Sekunde, für die Antwort.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standard-Antwort-Senderate ist 150 Bytes pro Sekunde.  
+  
+ Legen Sie zum Deaktivieren dieser Zeitgeber <xref:System.Net.HttpListenerTimeoutManager.MinSendBytesPerSecond%2A> auf MAXULONG.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestQueue">
+      <MemberSignature Language="C#" Value="public TimeSpan RequestQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan RequestQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerTimeoutManager.RequestQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeit in Sekunden, die zulässig sind, für die Anforderung bleibt in der Warteschlange, bevor Sie die <see cref="T:System.Net.HttpListener" /> übernimmt.</summary>
+        <value>Gibt <see cref="T:System.TimeSpan" />zurück.  
+  
+ Die Zeit in Sekunden an, zulässig, für die Anforderung bleibt in der Warteschlange, bevor die <see cref="T:System.Net.HttpListener" /> übernimmt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist 2 Minuten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

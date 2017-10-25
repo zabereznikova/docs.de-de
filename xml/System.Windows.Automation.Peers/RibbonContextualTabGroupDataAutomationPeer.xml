@@ -1,0 +1,148 @@
+<Type Name="RibbonContextualTabGroupDataAutomationPeer" FullName="System.Windows.Automation.Peers.RibbonContextualTabGroupDataAutomationPeer">
+  <TypeSignature Language="C#" Value="public class RibbonContextualTabGroupDataAutomationPeer : System.Windows.Automation.Peers.ItemAutomationPeer, System.Windows.Automation.Provider.IInvokeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RibbonContextualTabGroupDataAutomationPeer extends System.Windows.Automation.Peers.ItemAutomationPeer implements class System.Windows.Automation.Provider.IInvokeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.RibbonContextualTabGroupDataAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.ItemAutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.IInvokeProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Macht <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" /> Typen für die Benutzeroberflächenautomatisierung bei einem <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" /> reduziert wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RibbonContextualTabGroupDataAutomationPeer (object item, System.Windows.Automation.Peers.RibbonContextualTabGroupItemsControlAutomationPeer owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object item, class System.Windows.Automation.Peers.RibbonContextualTabGroupItemsControlAutomationPeer owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonContextualTabGroupDataAutomationPeer.#ctor(System.Object,System.Windows.Automation.Peers.RibbonContextualTabGroupItemsControlAutomationPeer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="owner" Type="System.Windows.Automation.Peers.RibbonContextualTabGroupItemsControlAutomationPeer" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das diesem Automatisierungspeer zugeordnete Element.</param>
+        <param name="owner">Der Automatisierungspeer zugeordnet ist, die die <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroupItemsControl" /> , enthält die <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Automation.Peers.RibbonContextualTabGroupDataAutomationPeer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationControlTypeCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonContextualTabGroupDataAutomationPeer.GetAutomationControlTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationControlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Steuerelementtyp für die <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonContextualTabGroupAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" /> aufgerufen.</summary>
+        <returns>Der <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Header" />-Enumerationswert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetClassNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetClassNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonContextualTabGroupDataAutomationPeer.GetClassNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Klassennamen der <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonContextualTabGroupDataAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" /> aufgerufen.</summary>
+        <returns>Der Klassenname des der <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonContextualTabGroupDataAutomationPeer" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPattern">
+      <MemberSignature Language="C#" Value="public override object GetPattern (System.Windows.Automation.Peers.PatternInterface patternInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetPattern(valuetype System.Windows.Automation.Peers.PatternInterface patternInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonContextualTabGroupDataAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="patternInterface" Type="System.Windows.Automation.Peers.PatternInterface" />
+      </Parameters>
+      <Docs>
+        <param name="patternInterface">Ein Enumerationswert, der den Befehlstyp angibt.</param>
+        <summary>Ruft das Steuerelementmuster für das <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" /> ab, das diesem <see cref="T:System.Windows.Automation.Peers.RibbonContextualTabGroupDataAutomationPeer" /> zugeordnet ist.</summary>
+        <returns>Ein Objekt, das das Steuerelementmuster unterstützt, wenn <paramref name="patternInterface" /> der <see cref="F:System.Windows.Automation.Peers.PatternInterface.Invoke" />-Wert ist; andernfalls <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContentElementCore">
+      <MemberSignature Language="C#" Value="protected override bool IsContentElementCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsContentElementCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonContextualTabGroupDataAutomationPeer.IsContentElementCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das diesem Automatisierungspeer zugeordnete Element Daten enthält, die dem Benutzer angezeigt werden. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsContentElement" /> aufgerufen.</summary>
+        <returns>
+          <see langword="false" /> in allen Fällen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.IInvokeProvider.Invoke">
+      <MemberSignature Language="C#" Value="void IInvokeProvider.Invoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Automation.Provider.IInvokeProvider.Invoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonContextualTabGroupDataAutomationPeer.System#Windows#Automation#Provider#IInvokeProvider#Invoke" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sendet eine Anforderung zum Aktivieren eines Steuerelements und Initiieren seiner einzelnen eindeutigen Aktion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Automation.Peers.RibbonContextualTabGroupDataAutomationPeer>-Instanz in eine <xref:System.Windows.Automation.Provider.IInvokeProvider>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

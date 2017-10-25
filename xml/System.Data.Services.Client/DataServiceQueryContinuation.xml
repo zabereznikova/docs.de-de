@@ -1,0 +1,64 @@
+<Type Name="DataServiceQueryContinuation" FullName="System.Data.Services.Client.DataServiceQueryContinuation">
+  <TypeSignature Language="C#" Value="public abstract class DataServiceQueryContinuation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataServiceQueryContinuation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.DataServiceQueryContinuation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{NextLinkUri}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Kapselt einen URI, der die nächste Seite von einem ausgelagerten Abfrageergebnis von WCF Data Services zurückgibt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NextLinkUri">
+      <MemberSignature Language="C#" Value="public Uri NextLinkUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri NextLinkUri" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceQueryContinuation.NextLinkUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den URI ab, der zum Zurückgeben der nächsten Datenseite aus einem ausgelagerten Abfrageergebnis verwendet wird.</summary>
+        <value>Ein URI, der die nächste Datenseite zurückgibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceQueryContinuation.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den nächsten Link-URI als Zeichenfolge zurück.</summary>
+        <returns>Eine Zeichenfolgendarstellung des nächsten Link-URI.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

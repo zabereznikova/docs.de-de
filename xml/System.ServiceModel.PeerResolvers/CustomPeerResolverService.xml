@@ -1,0 +1,402 @@
+<Type Name="CustomPeerResolverService" FullName="System.ServiceModel.PeerResolvers.CustomPeerResolverService">
+  <TypeSignature Language="C#" Value="public class CustomPeerResolverService : System.ServiceModel.PeerResolvers.IPeerResolverContract" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CustomPeerResolverService extends System.Object implements class System.ServiceModel.PeerResolvers.IPeerResolverContract" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerResolvers.CustomPeerResolverService" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.PeerResolvers.IPeerResolverContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("PeerChannel feature is obsolete and will be removed in the future.", false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ServiceModel.ServiceBehavior(ConcurrencyMode=System.ServiceModel.ConcurrencyMode.Multiple, InstanceContextMode=System.ServiceModel.InstanceContextMode.Single, UseSynchronizationContext=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine grundlegende Implementierung eines benutzerdefinierten Peerresolverdiensts bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>-Klasse wird die Basisimplementierung eines Kunden-Peerresolverdiensts definiert und die Suche nach der Auflösung von Registrierungs-IDs für Peerendpunktadressen in dem von diesem Resolver verwalteten Netz bereitgestellt.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Bei der Implementierung von Kundenpeerresolvern sollte eine Ableitung von dieser Klasse erfolgen und die spezifischen Funktionen überschrieben werden, für die sie benutzerdefinierte Implementierungen bereitstellen. Jeder benutzerdefinierte Peerresolver muss die <see cref="T:System.ServiceModel.PeerResolvers.IPeerResolverContract" />-Schnittstelle minimal implementieren.  
+  
+ Außerdem benötigt ein Kundenresolver eine obere Begrenzung für die Client-Server-Wartezeit, um die Registrierung erfolgreich mit dem Peerresolverdienst aktualisieren zu können.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomPeerResolverService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Standardinstanz der <see cref="T:System.ServiceModel.PeerResolvers.CustomPeerResolverService" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CleanupInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan CleanupInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CleanupInterval" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.CustomPeerResolverService.CleanupInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die wiederkehrende Dauer ab beziehungsweise legt sie fest, nach der veraltete Einträge aus der Registrierungssuchtabelle des Peerresolverdiensts gelöscht werden.</summary>
+        <value>
+          <see cref="T:System.TimeSpan" />, der das Zeitintervall angibt, nach dem veraltete Einträge aus der Registrierungssuchtabelle des Peerresolverdiensts gelöscht werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss festgelegt werden, bevor der Peerresolverdienst ausgeführt wurde und darf nicht NULL sein. Das Standardintervall ist 1 Minute.  
+  
+ Dieser Wert muss kleiner sein als der Wert von <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService.RefreshInterval%2A>, um das Auftreten veralteter Einträge in der Registrierungssuchtabelle des Peerresolverdiensts zu vermeiden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Das Intervall ist entweder NULL oder größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, die Eigenschaft nach einem Aufruf von <see cref="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Open" /> festzulegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public virtual void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt den Peerresolverdienst.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der Dienst wurde von einem vorherigen Aufruf dieser Methode geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlShape">
+      <MemberSignature Language="C#" Value="public bool ControlShape { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ControlShape" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.CustomPeerResolverService.ControlShape" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob Verweise vom Peerresolverdienst freigegeben werden.</summary>
+        <value>True, wenn Verweise vom Peerresolverdienst freigegeben werden; False, wenn dies nicht der Fall ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetServiceSettings">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo GetServiceSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo GetServiceSettings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.GetServiceSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erhält die bestimmten Antworteinstellungen für den Peerresolverdienst.</summary>
+        <returns>
+          <see cref="T:System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo" />, der die bestimmten Antworteinstellungen für den benutzerdefinierten Peerresolverdienst, einschließlich Intervalleinstellungen für Bereinigung und Aktualisierung, enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public virtual void Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Öffnet den Peerresolverdienst.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufruf dieser Methode wird die erste Bereinigung der Registrierungssuchtabelle basierend auf dem für die <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService.CleanupInterval%2A>-Eigenschaft festgelegten Wert geplant.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          Für <see cref="P:System.ServiceModel.PeerResolvers.CustomPeerResolverService.CleanupInterval" /> oder <see cref="P:System.ServiceModel.PeerResolvers.CustomPeerResolverService.RefreshInterval" /> wird ein Zeitintervall von 0 festgelegt.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Dienst wurde von einem vorherigen Aufruf dieser Methode gestartet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.PeerResolvers.RefreshResponseInfo Refresh (System.ServiceModel.PeerResolvers.RefreshInfo refreshInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.PeerResolvers.RefreshResponseInfo Refresh(class System.ServiceModel.PeerResolvers.RefreshInfo refreshInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Refresh(System.ServiceModel.PeerResolvers.RefreshInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.RefreshResponseInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="refreshInfo" Type="System.ServiceModel.PeerResolvers.RefreshInfo" />
+      </Parameters>
+      <Docs>
+        <param name="refreshInfo">
+          <see cref="T:System.ServiceModel.PeerResolvers.RefreshInfo" />-Objekt, das die Netz-ID und die Registrierungs-ID des in der Registrierungssuchtabelle des Peerresolverdiensts zu aktualisierenden Eintrags enthält.</param>
+        <summary>Aktualisiert die Ablaufzeit für einen Eintrag in der Registrierungssuchtabelle des Peerresolverdiensts.</summary>
+        <returns>
+          <see cref="T:System.ServiceModel.PeerResolvers.RefreshResponseInfo" />, der den neu aktualisierten Registrierungseintrag enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit einer Aktualisierung eines Eintrags wird seine Gültigkeit verlängert. Alle zur eindeutigen Identifizierung des Eintrags verwendeten Informationen müssen in dem für diese Methode angegebenen <xref:System.ServiceModel.PeerResolvers.RefreshInfo>-Objekt bereitgestellt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="refreshInfo" /> ist auf NULL festgelegt.</exception>
+        <exception cref="T:System.InvalidOperationException">Der benutzerdefinierte Peerresolverdienst wurde nicht mit einem vorherigen Aufruf von <see cref="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Open" /> gestartet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan RefreshInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan RefreshInterval" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.CustomPeerResolverService.RefreshInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Dauer ab beziehungsweise legt sie fest, für die Einträge in einer Registrierungssuchtabelle des Peerresolverdiensts gültig bleiben.</summary>
+        <value>
+          <see cref="T:System.TimeSpan" />, der die Dauer festlegt, für die Einträge in einer Registrierungssuchtabelle des Peerresolverdiensts gültig bleiben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss festgelegt werden, bevor der Peerresolverdienst ausgeführt wurde und darf nicht NULL sein. Das Standardintervall ist 2&#160;Minuten.  
+  
+ Wenn die für diese Eigenschaft angegebene Zeit für einen bestimmten Eintrag in der Suchtabelle eines Peerresolverdiensts abgelaufen ist, wird dieser Eintrag zur Löschung markiert. Die Löschung wird nach Ablauf des in der <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService.CleanupInterval%2A>-Eigenschaft angegebenen Intervalls vorgenommen.  Ist für diese Eigenschaft beispielsweise eine Zeitspanne von 10 Minuten angegeben, sind die Einträge in der Registrierungssuchtabelle nach Ablauf des Intervalls veraltet und werden zur Löschung markiert. Folglich muss der Peerresolverclient in Abständen von zehn Minuten aktualisiert werden, um zu vermeiden, dass ihr Eintrag gelöscht wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Das Intervall ist entweder NULL oder größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, die Eigenschaft nach einem Aufruf von <see cref="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Open" /> festzulegen.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Register">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Registriert einen Peer mit dem benutzerdefinierten Peerresolverdienst.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Registrierung eines Peerknotens in einem bestimmten Netz muss ein richtig formatiertes <xref:System.ServiceModel.PeerResolvers.RegisterInfo>-Objekt für eine Überladung für diese Methode angegeben werden. Dieses Objekt beinhaltet die bestimmten Details, die zur Registrierung der Registrierungseintragsanforderungs-Registrierung erforderlich sind, einschließlich einer GUID, mit der der Registrierungseintrag, die Netz-ID und eine Endpunktadresse eindeutig identifiziert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.PeerResolvers.RegisterResponseInfo Register (System.ServiceModel.PeerResolvers.RegisterInfo registerInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.PeerResolvers.RegisterResponseInfo Register(class System.ServiceModel.PeerResolvers.RegisterInfo registerInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Register(System.ServiceModel.PeerResolvers.RegisterInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.RegisterResponseInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="registerInfo" Type="System.ServiceModel.PeerResolvers.RegisterInfo" />
+      </Parameters>
+      <Docs>
+        <param name="registerInfo">
+          <see cref="T:System.ServiceModel.PeerResolvers.RegisterInfo" />enthält Informationen über den Registrierungseintrag mit dem peerresolverdienst zu registrieren.</param>
+        <summary>Fügt der Registrierungssuchtabelle des Peerresolverdiensts einen neuen Eintrag hinzu.</summary>
+        <returns>
+          <see cref="T:System.ServiceModel.PeerResolvers.RegisterResponseInfo" />, der eine Kopie des zur Registrierungssuchtabelle des Peerresolverdiensts hinzugefügten Eintrags enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode wird der Registrierungssuchtabelle des Peerresolverdiensts ein neuer Eintrag hinzugefügt. Beachten Sie, dass nach dem Schließen des Diensts vorgenommene Registrierungen wirkungslos bleiben. Diese Einträge werden mit Auflösungsanforderungen nicht zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">In der Suchtabelle ist bereits ein Registrierungseintrag mit derselben GUID vorhanden, oder der benutzerdefinierte Peerresolverdienst wurde nicht mit einem vorherigen Aufruf von <see cref="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Open" /> gestartet.</exception>
+        <exception cref="T:System.ArgumentException">Das für diese Methode angegebene <see cref="T:System.ServiceModel.PeerResolvers.RegisterInfo" />-Objekt war entweder NULL oder war nicht richtig formatiert.</exception>
+        <exception cref="T:System.NullReferenceException">Die für den <paramref name="registerInfo" />-Parameter angegebene AddressInfo-Eigenschaft des Objekt war NULL.</exception>
+        <exception cref="T:System.ArgumentNullException">Für den für diese Methode angegebenen <paramref name="meshId" />-Wert ist NULL festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.PeerResolvers.RegisterResponseInfo Register (Guid clientId, string meshId, System.ServiceModel.PeerNodeAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.PeerResolvers.RegisterResponseInfo Register(valuetype System.Guid clientId, string meshId, class System.ServiceModel.PeerNodeAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Register(System.Guid,System.String,System.ServiceModel.PeerNodeAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.RegisterResponseInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientId" Type="System.Guid" />
+        <Parameter Name="meshId" Type="System.String" />
+        <Parameter Name="address" Type="System.ServiceModel.PeerNodeAddress" />
+      </Parameters>
+      <Docs>
+        <param name="clientId">Eine <see cref="T:System.Guid" />, die einen eindeutigen Bezeichner für den mit dem Auflösungsdienst zu registrierenden Registrierungseintrag angibt.</param>
+        <param name="meshId">Eine <see cref="T:System.String" />, die die Netz-ID des Peernetzes angibt, an dem der Registrierungseintrag teilnimmt.</param>
+        <param name="address">Eine <see cref="T:System.ServiceModel.PeerNodeAddress" />, die die Endpunktadresse des Registrierungseintrags enthält.</param>
+        <summary>Fügt der Registrierungssuchtabelle des Peerresolverdiensts einen neuen Eintrag hinzu.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.PeerResolvers.RegisterResponseInfo" />, die eine Kopie des Eintrags enthält, der zur Registrierungssuchtabelle des Peerresolverdiensts hinzugefügt wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">In der Suchtabelle ist bereits ein Registrierungseintrag mit derselben GUID vorhanden, oder der benutzerdefinierte Peerresolverdienst wurde nicht mit einem vorherigen Aufruf von <see cref="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Open" /> gestartet.</exception>
+        <exception cref="T:System.ArgumentException">Das für diese Methode angegebene <see cref="T:System.ServiceModel.PeerResolvers.RegisterInfo" />-Objekt war entweder NULL oder war nicht richtig formatiert.</exception>
+        <exception cref="T:System.ArgumentNullException">Für die für den <paramref name="refreshInfo" />-Parameter angegebene MeshId-Eigenschaft und/oder RegistrationId-Eigenschaft des Objekts war NULL festgelegt.</exception>
+        <exception cref="T:System.NullReferenceException">Die für den <paramref name="refreshInfo" />-Parameter angegebene MeshId-Eigenschaft des Objekt ist unbekannt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.PeerResolvers.ResolveResponseInfo Resolve (System.ServiceModel.PeerResolvers.ResolveInfo resolveInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.PeerResolvers.ResolveResponseInfo Resolve(class System.ServiceModel.PeerResolvers.ResolveInfo resolveInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Resolve(System.ServiceModel.PeerResolvers.ResolveInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.ResolveResponseInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resolveInfo" Type="System.ServiceModel.PeerResolvers.ResolveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="resolveInfo">
+          <see cref="T:System.ServiceModel.PeerResolvers.ResolveInfo" />, der Informationen über den Registrierungseintrag enthält, für den, sofern bekannt, Endpunkte vom Peerresolverdienst gesucht werden sollen.</param>
+        <summary>Gibt für einen Registrierungseintrag eine Liste bekannter Endpunkte zurück.</summary>
+        <returns>
+          <see cref="T:System.ServiceModel.PeerResolvers.ResolveResponseInfo" />, die die Endpunkte für den Registrierungseintrag in der Suchtabelle enthält, die mit den im <paramref name="resolveInfo" />-Parameter gelieferten Informationen übereinstimmen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode wird ein Registrierungseintrag basierend auf den in einem <xref:System.ServiceModel.PeerResolvers.ResolveInfo>-Objekt angegebenen Daten gesucht und werden alle entsprechenden Endpunktadressen zurückgegeben, die in der Registrierungssuchtabelle des Peerresolverdiensts gefunden wurden. Die Anzahl der zurückgegebenen Endpunktadressen ist gleich dem oder kleiner als der Wert der im <xref:System.ServiceModel.PeerResolvers.ResolveInfo.MaxAddresses%2A>-Objekt festgelegten <xref:System.ServiceModel.PeerResolvers.ResolveInfo>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das <see cref="T:System.ServiceModel.PeerResolvers.ResolveInfo" />-Objekt ist NULL oder nicht richtig formatiert.</exception>
+        <exception cref="T:System.InvalidOperationException">In der Suchtabelle ist bereits ein Registrierungseintrag mit derselben GUID vorhanden, oder der benutzerdefinierte Peerresolverdienst wurde nicht mit einem vorherigen Aufruf von <see cref="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Open" /> gestartet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Unregister">
+      <MemberSignature Language="C#" Value="public virtual void Unregister (System.ServiceModel.PeerResolvers.UnregisterInfo unregisterInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Unregister(class System.ServiceModel.PeerResolvers.UnregisterInfo unregisterInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Unregister(System.ServiceModel.PeerResolvers.UnregisterInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unregisterInfo" Type="System.ServiceModel.PeerResolvers.UnregisterInfo" />
+      </Parameters>
+      <Docs>
+        <param name="unregisterInfo">
+          <see cref="T:System.ServiceModel.PeerResolvers.UnregisterInfo" />, der die Informationen enthält, die zur eindeutigen Identifizierung des aus der Registrierungssuchtabelle zu entfernenden Registrierungseintrags verwendet werden.</param>
+        <summary>Entfernt einen bestimmten Eintrag aus der Registrierungssuchtabelle des Peerresolverdiensts.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Es konnte kein Eintrag für den angegebenen Registrierungseintrag gefunden werden, oder das angegebene <see cref="T:System.ServiceModel.PeerResolvers.UnregisterInfo" />-Objekt ist NULL oder nicht richtig formatiert.</exception>
+        <exception cref="T:System.InvalidOperationException">In der Suchtabelle ist bereits ein Registrierungseintrag mit derselben GUID vorhanden, oder der benutzerdefinierte Peerresolverdienst wurde nicht mit einem vorherigen Aufruf von <see cref="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Open" /> gestartet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.PeerResolvers.RegisterResponseInfo Update (System.ServiceModel.PeerResolvers.UpdateInfo updateInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.PeerResolvers.RegisterResponseInfo Update(class System.ServiceModel.PeerResolvers.UpdateInfo updateInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Update(System.ServiceModel.PeerResolvers.UpdateInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.RegisterResponseInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="updateInfo" Type="System.ServiceModel.PeerResolvers.UpdateInfo" />
+      </Parameters>
+      <Docs>
+        <param name="updateInfo">
+          <see cref="T:System.ServiceModel.PeerResolvers.UpdateInfo" />, der eindeutig einen bestimmten Registrierungseintrag identifiziert und aktualisierte Informationen dafür bereitstellt.</param>
+        <summary>Aktualisiert einen vorhandenen Registrierungseintrag in der Registrierungssuchtabelle des Peerresolverdiensts.</summary>
+        <returns>
+          <see cref="T:System.ServiceModel.PeerResolvers.UpdateInfo" />, der eine Kopie des aktualisierten Registrierungseintragseintrags enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Es konnte kein Eintrag für den angegebenen Registrierungseintrag gefunden werden, oder das angegebene <see cref="T:System.ServiceModel.PeerResolvers.UpdateInfo" />-Objekt ist nicht richtig formatiert.</exception>
+        <exception cref="T:System.InvalidOperationException">In der Suchtabelle ist bereits ein Registrierungseintrag mit derselben GUID vorhanden, oder der benutzerdefinierte Peerresolverdienst wurde nicht mit einem vorherigen Aufruf von <see cref="M:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Open" /> gestartet.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

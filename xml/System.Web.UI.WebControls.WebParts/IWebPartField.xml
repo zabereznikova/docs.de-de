@@ -1,0 +1,121 @@
+<Type Name="IWebPartField" FullName="System.Web.UI.WebControls.WebParts.IWebPartField">
+  <TypeSignature Language="C#" Value="public interface IWebPartField" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWebPartField" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.IWebPartField" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Anbieterschnittstelle zum Herstellen einer Verbindung zwei Serversteuerelemente, die mit einem einzelnen Datenfeld.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle wurde entwickelt, mit der Webparts-Verbindungen verwendet werden soll. In einer Webparts-Verbindung, zwei Serversteuerelemente, die sich in einem <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone Herstellen einer Verbindung und die Freigabe Daten mit einem Steuerelement, als Consumer fungiert und die Steuerelemente als Anbieter fungiert. Der Mechanismus zur Freigabe von Daten in einer Webparts-Verbindung ist eine Schnittstelleninstanz, die der Anbieter an den Consumer mithilfe einer Rückrufmethode dient. Um eine Verbindung herzustellen, müssen der Consumer- und sowohl mit dem gleichen Schnittstellentyp arbeiten für die Freigabe von Daten. Wenn der Consumer den Schnittstellentyp, der vom Anbieter gesendeten nicht erkannt wird, ist weiterhin möglich, die Steuerelemente mittels einer Transformer zu verbinden (eine <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> Objekt), die in einen Typ vom Anbieter gesendeten Schnittstelleninstanz übersetzt, die der Consumer erkennt. Ausführliche Informationen zu Verbindungen, finden Sie unter <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> und [Web Parts Verbindungen Overview](http://msdn.microsoft.com/library/d98cfd0f-ebd6-4871-89d5-abbd2cdef67b).  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.IWebPartField> -Schnittstelle ist eine enthaltene Webparts-Steuerelementsatz als standard-Schnittstelle zum Erstellen von Verbindungen, die basierend auf einem Datenfeld Provider-Schnittstelle. Sie können auch benutzerdefinierte Schnittstellen für die Verwendung mit den Webparts-Verbindungen erstellen, aber in vielen Webanwendungen von datengesteuerten ist es sinnvoll sein, Verbindungen, die auf der Grundlage einer gemeinsamen Zeile erstellen (Einzelheiten finden Sie in der <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Schnittstelle), Tabelle (Einzelheiten finden Sie in der <xref:System.Web.UI.WebControls.WebParts.IWebPartTable> -Schnittstelle), oder Feldknoten aus der Datenquelle mithilfe der <xref:System.Web.UI.WebControls.WebParts.IWebPartField> Schnittstelle. Eine typische Verbindung eine <xref:System.Web.UI.WebControls.WebParts.WebPart> steuern und fungiert als ein Anbieter implementiert würde die <xref:System.Web.UI.WebControls.WebParts.IWebPartField> Schnittstelle, und geben Sie eine Instanz der Schnittstelle für Consumer in eine spezielle Rückrufmethode. Beispielsweise kann der Anbieter implementieren eine <xref:System.Web.UI.WebControls.WebParts.IWebPartField> Schnittstelle für ein Feld in der Tabelle mit den Benutzer, die einem Webbenutzer Postleitzahlendaten enthält. Eine andere <xref:System.Web.UI.WebControls.WebParts.WebPart> fungiert steuern, wie ein Consumer eine besondere Methode definieren, um die Schnittstelleninstanz empfangen konnte die Postleitzahlendaten extrahiert, und suchen und Wetterinformationen basierend auf der Postleitzahl anzuzeigen.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.IWebPartField> Schnittstelle verfügt über zwei verfügbar gemachte Member. Die <xref:System.Web.UI.WebControls.WebParts.IWebPartField.Schema%2A> Eigenschaft gibt die Schemainformationen über das Feld "Daten" in den gekapselt ist ein <xref:System.ComponentModel.PropertyDescriptor> Objekt. Die <xref:System.Web.UI.WebControls.WebParts.IWebPartField.GetFieldValue%2A> Methode deklariert eine Methode, die Implementierung (z. B. ein Anbietersteuerelement) verwendet wird, um die Schnittstelleninstanz Felddaten abzurufen, wenn die Rückrufmethode aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer statischen Verbindungs zwischen zwei Steuerelementen mithilfe der <xref:System.Web.UI.WebControls.WebParts.IWebPartField> Schnittstelle. Das Codebeispiel besteht aus drei Teilen:  
+  
+-   Quellcode für zwei benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, die eine Verbindung unter Verwendung bilden können die <xref:System.Web.UI.WebControls.WebParts.IWebPartField> Schnittstelle, mit der ein Steuerelement als Anbieter, die andere fungiert als Consumer fungiert.  
+  
+-   Eine Webseite, die die Steuerelemente hostet und die statische Verbindung im Format die Persistenz von deklariert.  
+  
+-   Eine Beschreibung dessen, was geschieht, wenn der Beispielcode ausgeführt wird.  
+  
+ Der erste Teil des Codebeispiels wird der Quellcode für die beiden benutzerdefinierten Steuerelemente. Zunächst wird der Code für den Anbieter implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPartField> Schnittstelle. Im Beispiel wird der Einfachheit halber erstellt der Anbieter eine Tabelle mit Daten, statt eine Verbindung mit einer Datenbank. Die `GetConnectionInterface` Methode dient als den Anbieterverbindungspunkt an, die Rückrufmethode, die die Schnittstelleninstanz an den Consumer zurückgibt. Der Consumer ruft es die Schnittstelleninstanz vom Anbieter in der Methode mit dem Namen `SetConnectionInterface`, die mit markiert ist ein `ConnectionConsumer` Attribut. Nach dem Abrufen der Instanz von der Schnittstelle, die der Consumer in seiner `OnPreRender` Methodenaufrufe, die Implementierung der <xref:System.Web.UI.WebControls.WebParts.IWebPartField.GetFieldValue%2A> Methode im Anbieter, um die eigentlichen Daten abzurufen.  
+  
+ Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_IWebPartField_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPartField_Overview/CS/IFieldSample.cs#2)]
+ [!code-vb[WebParts_IWebPartField_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPartField_Overview/VB/IFieldSample.vb#2)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite, die die statische Verbindung und die Hosts die Steuerelemente deklariert. Am oberen Rand der Seite ist eine `Register` -Direktive, die den Namespace des Quellcodes enthalten, die im Verzeichnis App_Code deklariert. Die Verbindung wird mit deklariert ein `<asp:webpartconnection>` Element. In der benutzerdefinierten Steuerelemente auf Consumer- und deklariert eine `<zonetemplate>` Element innerhalb einer `<asp:webpartzone>` -Element, das erforderlich sind, um eine Verbindung herstellen können (müssen sie in einer Zone, die von erben befinden der <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Klasse).  
+  
+ [!code-aspx-csharp[WebParts_IWebPartField_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPartField_Overview/CS/defaultcs.aspx#1)]
+ [!code-aspx-vb[WebParts_IWebPartField_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPartField_Overview/VB/Defaultvb.aspx#1)]  
+  
+ Laden Sie die Seite in einem Browser. Der Consumersteuerelement zeigt die Daten aus dem angegebenen Feld der Anbieter über eine Instanz zur Verfügung stellt die <xref:System.Web.UI.WebControls.WebParts.IWebPartField> Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetFieldValue">
+      <MemberSignature Language="C#" Value="public void GetFieldValue (System.Web.UI.WebControls.WebParts.FieldCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetFieldValue(class System.Web.UI.WebControls.WebParts.FieldCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.IWebPartField.GetFieldValue(System.Web.UI.WebControls.WebParts.FieldCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Web.UI.WebControls.WebParts.FieldCallback" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Ein <see cref="T:System.Web.UI.WebControls.WebParts.FieldCallback" /> Delegat, der die Adresse einer Methode enthält, die die Daten empfängt.</param>
+        <summary>Gibt den Wert des Felds, das verwendet wird, wird von der Schnittstelle als Grundlage für eine Verbindung zwischen zwei <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um die von der Schnittstelle übergebenen Datenfeldwerte abzurufen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Implementierung und Verwendung der <xref:System.Web.UI.WebControls.WebParts.IWebPartField.GetFieldValue%2A> Methode. Das vollständige Beispiel wird gezeigt, in der Übersicht zur Klasse der <xref:System.Web.UI.WebControls.WebParts.IWebPartField> Schnittstelle. Der Anbieter implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPartField.GetFieldValue%2A> Methode, die den Wert eines bestimmten Felds in der Datentabelle zurückgeben. Ruft der Consumer-Steuerelement die <xref:System.Web.UI.WebControls.WebParts.IWebPartField.GetFieldValue%2A> Methode in seiner `OnPreRender` -Methode, damit der Wert der Daten auf der Seite geschrieben werden kann.  
+  
+ [!code-csharp[WebParts_IWebPartField_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPartField_Overview/CS/IFieldSample.cs#2)]
+ [!code-vb[WebParts_IWebPartField_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPartField_Overview/VB/IFieldSample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptor Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptor Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.IWebPartField.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schemainformationen für ein Datenfeld ab, das Freigeben von Daten zwischen zwei <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> , beschreibt die Schemainformationen für das Feld "Daten".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bietet Informationen für die Daten, die durch die Schnittstelle übergeben. Transformer und Consumer-Steuerelemente können diese Eigenschaft zum Abrufen von Informationen zu Typ, Inhalt, Abfragen und andere Details des Felds in die <xref:System.Web.UI.WebControls.WebParts.IWebPartField> Schnittstelleninstanz von einem Anbieter gesendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Implementierung und Verwendung der <xref:System.Web.UI.WebControls.WebParts.IWebPartField.Schema%2A> Eigenschaft. Das vollständige Beispiel wird gezeigt, in der Übersicht zur Klasse der <xref:System.Web.UI.WebControls.WebParts.IWebPartField> Schnittstelle. Der Anbieter implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPartField.Schema%2A> Eigenschaft. Klicken Sie auf die `GetFieldValue` -Methode, verwendet es die Eigenschaft, um den Feldwert abzurufen.  
+  
+ [!code-csharp[WebParts_IWebPartField_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPartField_Overview/CS/IFieldSample.cs#2)]
+ [!code-vb[WebParts_IWebPartField_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPartField_Overview/VB/IFieldSample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

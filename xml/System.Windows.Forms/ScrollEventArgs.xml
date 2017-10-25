@@ -1,0 +1,254 @@
+<Type Name="ScrollEventArgs" FullName="System.Windows.Forms.ScrollEventArgs">
+  <TypeSignature Language="C#" Value="public class ScrollEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScrollEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ScrollEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für das <see langword="Scroll" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Scroll` Ereignis tritt auf, wenn der Benutzer den Wert der Bildlaufleiste ändert. Dieses Ereignis kann aus einer Vielzahl von Aktionen, z. B. durch Klicken auf einen Pfeil einer Bildlaufleiste, durch Drücken der nach-oben oder nach-unten oder ziehen das Bildlauffeld führen. Die <xref:System.Windows.Forms.ScrollEventArgs> gibt den Typ des Scroll-Ereignis aufgetreten ist und der neue Wert der Bildlaufleiste. Verwenden der <xref:System.Windows.Forms.ScrollEventArgs.ScrollOrientation%2A> Eigenschaft bestimmt die Ausrichtung der Schiebeleiste für die `Scroll` Ereignis.  
+  
+ Die `Scroll` Ereignis tritt auf, für die <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.ScrollableControl>, <xref:System.Windows.Forms.ScrollBar>, und <xref:System.Windows.Forms.DataGrid> Steuerelemente.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements.  
+  
+ [!code-cpp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollEventArgs (System.Windows.Forms.ScrollEventType type, int newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.ScrollEventType type, int32 newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollEventArgs.#ctor(System.Windows.Forms.ScrollEventType,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.ScrollEventType" />
+        <Parameter Name="newValue" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="type">Einer der <see cref="T:System.Windows.Forms.ScrollEventType" />-Werte.</param>
+        <param name="newValue">Der neue Wert für die Bildlaufleiste.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ScrollEventArgs" /> -Klasse unter Verwendung der angegebenen Werte für die <see cref="P:System.Windows.Forms.ScrollEventArgs.Type" /> und <see cref="P:System.Windows.Forms.ScrollEventArgs.NewValue" /> Eigenschaften.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollEventArgs (System.Windows.Forms.ScrollEventType type, int oldValue, int newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.ScrollEventType type, int32 oldValue, int32 newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollEventArgs.#ctor(System.Windows.Forms.ScrollEventType,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.ScrollEventType" />
+        <Parameter Name="oldValue" Type="System.Int32" />
+        <Parameter Name="newValue" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="type">Einer der <see cref="T:System.Windows.Forms.ScrollEventType" />-Werte.</param>
+        <param name="oldValue">Der alte Wert für die Bildlaufleiste.</param>
+        <param name="newValue">Der neue Wert für die Bildlaufleiste.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ScrollEventArgs" /> -Klasse unter Verwendung der angegebenen Werte für die <see cref="P:System.Windows.Forms.ScrollEventArgs.Type" />, <see cref="P:System.Windows.Forms.ScrollEventArgs.OldValue" />, und <see cref="P:System.Windows.Forms.ScrollEventArgs.NewValue" /> Eigenschaften.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollEventArgs (System.Windows.Forms.ScrollEventType type, int newValue, System.Windows.Forms.ScrollOrientation scroll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.ScrollEventType type, int32 newValue, valuetype System.Windows.Forms.ScrollOrientation scroll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollEventArgs.#ctor(System.Windows.Forms.ScrollEventType,System.Int32,System.Windows.Forms.ScrollOrientation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.ScrollEventType" />
+        <Parameter Name="newValue" Type="System.Int32" />
+        <Parameter Name="scroll" Type="System.Windows.Forms.ScrollOrientation" />
+      </Parameters>
+      <Docs>
+        <param name="type">Einer der <see cref="T:System.Windows.Forms.ScrollEventType" />-Werte.</param>
+        <param name="newValue">Der neue Wert für die Bildlaufleiste.</param>
+        <param name="scroll">Einer der <see cref="T:System.Windows.Forms.ScrollOrientation" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ScrollEventArgs" /> -Klasse unter Verwendung der angegebenen Werte für die <see cref="P:System.Windows.Forms.ScrollEventArgs.Type" />, <see cref="P:System.Windows.Forms.ScrollEventArgs.NewValue" />, und <see cref="P:System.Windows.Forms.ScrollEventArgs.ScrollOrientation" /> Eigenschaften.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollEventArgs (System.Windows.Forms.ScrollEventType type, int oldValue, int newValue, System.Windows.Forms.ScrollOrientation scroll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.ScrollEventType type, int32 oldValue, int32 newValue, valuetype System.Windows.Forms.ScrollOrientation scroll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollEventArgs.#ctor(System.Windows.Forms.ScrollEventType,System.Int32,System.Int32,System.Windows.Forms.ScrollOrientation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.ScrollEventType" />
+        <Parameter Name="oldValue" Type="System.Int32" />
+        <Parameter Name="newValue" Type="System.Int32" />
+        <Parameter Name="scroll" Type="System.Windows.Forms.ScrollOrientation" />
+      </Parameters>
+      <Docs>
+        <param name="type">Einer der <see cref="T:System.Windows.Forms.ScrollEventType" />-Werte.</param>
+        <param name="oldValue">Der alte Wert für die Bildlaufleiste.</param>
+        <param name="newValue">Der neue Wert für die Bildlaufleiste.</param>
+        <param name="scroll">Einer der <see cref="T:System.Windows.Forms.ScrollOrientation" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ScrollEventArgs" /> -Klasse unter Verwendung der angegebenen Werte für die <see cref="P:System.Windows.Forms.ScrollEventArgs.Type" />, <see cref="P:System.Windows.Forms.ScrollEventArgs.OldValue" />, <see cref="P:System.Windows.Forms.ScrollEventArgs.NewValue" />, und <see cref="P:System.Windows.Forms.ScrollEventArgs.ScrollOrientation" /> Eigenschaften.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValue">
+      <MemberSignature Language="C#" Value="public int NewValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollEventArgs.NewValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die neue <see cref="P:System.Windows.Forms.ScrollBar.Value" /> der Bildlaufleiste.</summary>
+        <value>Der numerische Wert, der die <see cref="P:System.Windows.Forms.ScrollBar.Value" /> Eigenschaft wird in geändert werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements.  
+  
+ [!code-cpp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldValue">
+      <MemberSignature Language="C#" Value="public int OldValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OldValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollEventArgs.OldValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die alten <see cref="P:System.Windows.Forms.ScrollBar.Value" /> der Bildlaufleiste.</summary>
+        <value>Der numerische Wert, der die <see cref="P:System.Windows.Forms.ScrollBar.Value" /> Eigenschaft enthalten, bevor es geändert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.ScrollableControl>, z. B. eine <xref:System.Windows.Forms.Panel> oder <xref:System.Windows.Forms.ContainerControl>. Geben Sie den Namen der Instanz `ScrollableControl1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#74](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#74)]
+ [!code-vb[System.Windows.Forms.EventExamples#74](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#74)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollOrientation">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ScrollOrientation ScrollOrientation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ScrollOrientation ScrollOrientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollEventArgs.ScrollOrientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausrichtung der Schiebeleiste, die ausgelöst der <see langword="Scroll" /> Ereignis.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ScrollOrientation" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalerweise verwenden Sie die <xref:System.Windows.Forms.ScrollEventArgs.ScrollOrientation%2A> Methode, um die Ausrichtung der Schiebeleiste festzulegen, die ausgelöst der `Scroll` Ereignis, wie z. B. mit der <xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=nameWithType> Ereignis.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.ScrollableControl>, z. B. eine <xref:System.Windows.Forms.Panel> oder <xref:System.Windows.Forms.ContainerControl>. Geben Sie den Namen der Instanz `ScrollableControl1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#74](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#74)]
+ [!code-vb[System.Windows.Forms.EventExamples#74](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#74)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ScrollEventType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ScrollEventType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollEventArgs.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Scroll-Ereignis aufgetreten ist.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ScrollEventType" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.ScrollableControl>, z. B. eine <xref:System.Windows.Forms.Panel> oder <xref:System.Windows.Forms.ContainerControl>. Geben Sie den Namen der Instanz `ScrollableControl1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#74](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#74)]
+ [!code-vb[System.Windows.Forms.EventExamples#74](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#74)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

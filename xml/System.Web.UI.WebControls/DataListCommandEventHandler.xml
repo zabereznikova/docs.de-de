@@ -1,0 +1,55 @@
+<Type Name="DataListCommandEventHandler" FullName="System.Web.UI.WebControls.DataListCommandEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DataListCommandEventHandler(object source, DataListCommandEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataListCommandEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataListCommandEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="source" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.DataListCommandEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="source">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.DataListCommandEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Web.UI.WebControls.DataList.CancelCommand" />, <see cref="E:System.Web.UI.WebControls.DataList.DeleteCommand" />, <see cref="E:System.Web.UI.WebControls.DataList.EditCommand" />, <see cref="E:System.Web.UI.WebControls.DataList.ItemCommand" />, und <see cref="E:System.Web.UI.WebControls.DataList.UpdateCommand" /> Ereignisse von einem <see cref="T:System.Web.UI.WebControls.DataList" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataList.CancelCommand> Ereignis wird ausgelöst, wenn die `Cancel` Schaltfläche für ein Element in der <xref:System.Web.UI.WebControls.DataList> Steuerelement geklickt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.DataList.DeleteCommand> Ereignis wird ausgelöst, wenn die `Delete` Schaltfläche für ein Element in der <xref:System.Web.UI.WebControls.DataList> Steuerelement geklickt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.DataList.EditCommand> Ereignis wird ausgelöst, wenn die `Edit` Schaltfläche für ein Element in der <xref:System.Web.UI.WebControls.DataList> Steuerelement geklickt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.DataList.ItemCommand> Ereignis wird ausgelöst, wenn für ein Element in eine beliebige Taste, die <xref:System.Web.UI.WebControls.DataList> Steuerelement geklickt wird. Dadurch können Sie programmgesteuert testen, ob ein bestimmter Befehl geklickt wird, und ergreifen Sie entsprechende Maßnahmen. Dieses Ereignis wird häufig verwendet, um benutzerdefinierte Befehlsschaltflächen zum Behandeln der <xref:System.Web.UI.WebControls.DataList> Steuerelement.  
+  
+ Die <xref:System.Web.UI.WebControls.DataList.UpdateCommand> Ereignis wird ausgelöst, wenn die `Update` Schaltfläche für ein Element in der <xref:System.Web.UI.WebControls.DataList> Steuerelement geklickt wird.  
+  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.DataListCommandEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Definieren von Ereignishandlern für die <xref:System.Web.UI.WebControls.DataList.EditCommand>, <xref:System.Web.UI.WebControls.DataList.UpdateCommand>, <xref:System.Web.UI.WebControls.DataList.CancelCommand> und <xref:System.Web.UI.WebControls.DataList.DeleteCommand> Ereignisse von einem <xref:System.Web.UI.WebControls.DataList> Steuerelement. Dieses Beispiel gibt die Ereignishandler deklarativ, Festlegen des ereignishandlers für jede Befehlseigenschaft für die <xref:System.Web.UI.WebControls.DataList> Steuerelement.  
+  
+ [!code-aspx-csharp[DataListEdit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataListEdit/CS/datalisteditcs.aspx#1)]
+ [!code-aspx-vb[DataListEdit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListEdit/VB/datalisteditvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Ereignishandler und programmgesteuert hinzugefügt werden, um die Ereignisse in der `Page_Load` Methode.  
+  
+ [!code-aspx-csharp[DataListEdit2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataListEdit2/CS/datalistedit2cs.aspx#1)]
+ [!code-aspx-vb[DataListEdit2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListEdit2/VB/datalistedit2vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

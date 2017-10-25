@@ -1,0 +1,176 @@
+<Type Name="HttpCompileException" FullName="System.Web.HttpCompileException">
+  <TypeSignature Language="C#" Value="public sealed class HttpCompileException : System.Web.HttpException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit HttpCompileException extends System.Web.HttpException" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpCompileException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.HttpException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Diese Ausnahme wird ausgelöst, wenn ein Compilerfehler auftritt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCompileException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCompileException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.HttpCompileException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCompileException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCompileException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung, um anzugeben, wann der Fehler auftritt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.HttpCompileException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCompileException (System.CodeDom.Compiler.CompilerResults results, string sourceCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.Compiler.CompilerResults results, string sourceCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCompileException.#ctor(System.CodeDom.Compiler.CompilerResults,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="results" Type="System.CodeDom.Compiler.CompilerResults" />
+        <Parameter Name="sourceCode" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="results">Ein <see cref="T:System.CodeDom.Compiler.CompilerResults" /> mit Informationen von Compiler-Ausgabe und Fehler.</param>
+        <param name="sourceCode">Der Pfad zur Datei, die den Quellcode kompiliert wird, tritt der Fehler enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.HttpCompileException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die `sourceCode` Parameter, können Sie alle Zeichenfolgeninformationen, die auf den Fehler beschreibenden übergeben; es werden keine Überprüfungen für die Datei oder Pfad. Die <xref:System.Web.HttpCompileException.SourceCode%2A> Eigenschaft gibt die Zeichenfolge, die als Parameterwert übergeben wurde. Wenn Sie einen Konstruktor verwenden, die keinen erfordert die `sourceCode` Parameter, die <xref:System.Web.HttpCompileException.SourceCode%2A> Eigenschaft ist `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCompileException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCompileException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="innerException">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn <c>"InnerException"</c> nicht <see langword="null" />, die aktuelle Ausnahme wird ausgelöst, einem <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.HttpCompileException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCompileException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Der <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen über die Quelle oder das Ziel enthält.</param>
+        <summary>Legt das <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit Informationen zur Ausnahme fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCompileException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Meldung, die den Grund für die aktuelle Ausnahme beschreibt.</summary>
+        <value>Eine Zeichenfolge, die der ersten Kompilierungsfehler beschrieben wird, die in den Compilerergebnissen aufgeführt werden. Wenn keine Compilerergebnisse bereitgestellt wurden, gibt die Eigenschaft die Fehlermeldung für diese Ausnahme oder eine leere Zeichenfolge (""), wenn keine Fehlermeldung bereitgestellt wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Results">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CompilerResults Results { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.Compiler.CompilerResults Results" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCompileException.Results" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Compilerfehler Ausgabe und Fehler für die Ausnahme abgerufen.</summary>
+        <value>Ein <see cref="T:System.CodeDom.Compiler.CompilerResults" /> mit Informationen von Compiler-Ausgabe und Fehler.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceCode">
+      <MemberSignature Language="C#" Value="public string SourceCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCompileException.SourceCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge mit dem Pfad zur Datei, die den Quellcode kompiliert wird, tritt der Fehler enthält.</summary>
+        <value>Der Pfad der Quelldatei kompiliert wird, wenn der Fehler auftritt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

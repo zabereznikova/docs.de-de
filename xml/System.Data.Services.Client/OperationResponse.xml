@@ -1,0 +1,92 @@
+<Type Name="OperationResponse" FullName="System.Data.Services.Client.OperationResponse">
+  <TypeSignature Language="C#" Value="public abstract class OperationResponse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit OperationResponse extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.OperationResponse" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Abstrakte Klasse, die die Antwort von einer einzelnen Abfrage oder von einem einzelnen Erstellungs-, Update- oder Löschvorgang darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `OperationResponse` Klasse wird verwendet, um die Informationen aufnimmt, die die beiden Antworttypen gemeinsam verwendet werden, aber diese Klasse kann nicht direkt von einem Entwickler verwendet werden. Stattdessen sollte dieses Antwortobjekt in einen bestimmten <xref:System.Data.Services.Client.QueryOperationResponse>-Typ oder <xref:System.Data.Services.Client.ChangeOperationResponse>-Typ umgewandelt werden, der zusätzliche vorgangsspezifische Daten enthält.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public Exception Error { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Error" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.OperationResponse.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vom Vorgang ausgelösten Fehler ab.</summary>
+        <value>Ein <see cref="T:System.Exception" />-Objekt, das den Fehler enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist NULL, wenn keine Fehler gefunden werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.OperationResponse.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält beim Überschreiben in einer abgeleiteten Klasse die einem einzelnen Vorgang zugeordneten HTTP-Antwortheader.</summary>
+        <value>
+          <see cref="T:System.Collections.IDictionary" />-Objekt, das Name-Wert-Paare von Headern und Werten enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusCode">
+      <MemberSignature Language="C#" Value="public int StatusCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StatusCode" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.OperationResponse.StatusCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse den einem einzelnen Vorgang zugeordneten HTTP-Antwortcode ab oder legt ihn fest.</summary>
+        <value>Ganzzahliger Wert, der den Antwortcode enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

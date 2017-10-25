@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Conversion">
+  <Docs>
+    <summary>Enthält Typen, die Visual Studio verwendet, um Projektdateien aus einer älteren Version von Visual Studio zu konvertieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

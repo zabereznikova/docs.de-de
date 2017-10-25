@@ -1,0 +1,152 @@
+<Type Name="ActivatedServiceTypeEntry" FullName="System.Runtime.Remoting.ActivatedServiceTypeEntry">
+  <TypeSignature Language="C#" Value="public class ActivatedServiceTypeEntry : System.Runtime.Remoting.TypeEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivatedServiceTypeEntry extends System.Runtime.Remoting.TypeEntry" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.ActivatedServiceTypeEntry" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Remoting.TypeEntry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Werte für einen Objekttyp, der registriert wird, auf der Dienstseite als eine, die auf Anforderung von einem Client aktiviert werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Klasse wird verwendet, durch die <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedServiceType%2A?displayProperty=nameWithType> Methode, die den serverseitigen-Entsprechung ist von der <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType%2A?displayProperty=nameWithType> Methode. Die <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedServiceType%2A> Methode wird Remoteaktivierung von Clients der angegebenen Objekte des Typs auf dem Server verwendet.  
+  
+ Um ein Client aktivierten-Objekt auf dem Server zu erstellen, benötigen Sie seine <xref:System.Type>, und es muss auf dem Server mit registriert werden die <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedServiceType%2A> Methode. Um einen Proxy für ein neues, vom Client aktivierten Objekt zu erhalten, Registrieren des Clients muss zunächst einen Kanal mit <xref:System.Runtime.Remoting.Channels.ChannelServices> , und aktivieren Sie das Objekt durch den Aufruf `new` oder <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>.  
+  
+ So aktivieren Sie einen Client aktivierten Objekttyp mit dem `new` -Schlüsselwort verwenden, müssen Sie zuerst auf dem Client mithilfe den Objekttyp Registrieren der <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType%2A> Methode. Durch Aufrufen von <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType%2A> weisen Sie der Remotinginfrastruktur den Speicherort der remote-Anwendung, in denen `new` versucht, ihn zu erstellen. Wenn Sie andererseits, verwenden Sie die <xref:System.Activator.CreateInstance%2A> Methode, um eine neue Instanz des Objekts clientaktivierte erstellen, müssen die Remoteanwendung URL als Parameter angeben, sodass keine vorherige Registrierung auf dem Client erforderlich ist. Angeben der <xref:System.Activator.CreateInstance%2A> Methode durch die URL des Servers, auf dem Sie das Objekt erstellen möchten, müssen Sie die URL in einer Instanz von kapseln die <xref:System.Runtime.Remoting.Activation.UrlAttribute> Klasse.  
+  
+ Eine ausführliche Beschreibung der Client aktivierten Objekten und Remoteobjekten, finden Sie unter [&#91;\< Topic://cpconActivation > &#93; ](http://msdn.microsoft.com/en-us/e90d0c64-00da-4080-ae78-a6c558825c25).  
+  
+   
+  
+## Examples  
+ [!code-cpp[ActivatedServiceTypeEntry_ObjectType_Client#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ActivatedServiceTypeEntry_ObjectType_Client/CPP/activatedservicetypeentry_objecttype_server.cpp#1)]
+ [!code-csharp[ActivatedServiceTypeEntry_ObjectType_Client#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ActivatedServiceTypeEntry_ObjectType_Client/CS/activatedservicetypeentry_objecttype_server.cs#1)]
+ [!code-vb[ActivatedServiceTypeEntry_ObjectType_Client#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ActivatedServiceTypeEntry_ObjectType_Client/VB/activatedservicetypeentry_objecttype_server.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivatedServiceTypeEntry (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.ActivatedServiceTypeEntry.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> des vom Client aktivierten Diensttyps.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.ActivatedServiceTypeEntry" /> -Klasse mit der angegebenen <see cref="T:System.Type" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivatedServiceTypeEntry (string typeName, string assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName, string assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.ActivatedServiceTypeEntry.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="assemblyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der Typname des vom Client aktivierten Diensttyps.</param>
+        <param name="assemblyName">Der Assemblyname des vom Client aktivierten Diensttyps.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.ActivatedServiceTypeEntry" /> -Klasse mit den angegebenen Typ- und Assemblynamen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextAttributes">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Contexts.IContextAttribute[] ContextAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Contexts.IContextAttribute[] ContextAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.ActivatedServiceTypeEntry.ContextAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Contexts.IContextAttribute[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Kontextattribute für den vom Client aktivierten Diensttyp.</summary>
+        <value>Die Kontextattribute für den vom Client aktivierten Diensttyp.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aktuell dieser Indexer ist nicht implementiert, und Operationen darauf gibt keine Ergebnisse zurück.  
+  
+ Kontextattribute stellen Kontexteigenschaften das bei hinzugefügt, um ein Kontext Richtlinien erzwingen kann, wie Synchronisierung und Transaktionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectType">
+      <MemberSignature Language="C#" Value="public Type ObjectType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ObjectType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.ActivatedServiceTypeEntry.ObjectType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> des vom Client aktivierten Diensttyps.</summary>
+        <value>Die <see cref="T:System.Type" /> des vom Client aktivierten Diensttyps.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.ActivatedServiceTypeEntry.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Namen Typ- und Assemblynamen des vom Client aktivierten Diensttyps als eine <see cref="T:System.String" />.</summary>
+        <returns>Der Name Typ- und Assemblynamen des vom Client aktivierten Diensttyps als eine <see cref="T:System.String" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

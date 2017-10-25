@@ -1,0 +1,80 @@
+<Type Name="ConfiguredTaskAwaitable" FullName="System.Runtime.CompilerServices.ConfiguredTaskAwaitable">
+  <TypeSignature Language="C#" Value="public struct ConfiguredTaskAwaitable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ConfiguredTaskAwaitable extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.ConfiguredTaskAwaitable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein awaitable-Objekt, das ermöglicht konfiguriert auf eine Aufgabe wartet auf.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Typ dient zur Verwendung durch den Compiler; Verwenden Sie es nicht direkt im Code.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAwaiter">
+      <MemberSignature Language="C#" Value="public System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter GetAwaiter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Runtime.CompilerServices.ConfiguredTaskAwaitable/ConfiguredTaskAwaiter GetAwaiter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.ConfiguredTaskAwaitable.GetAwaiter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.ConfiguredTaskAwaitable+ConfiguredTaskAwaiter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Awaiter, der für dieses awaitable-Objekt zurück.</summary>
+        <returns>Die awaiter-Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für die Verwendung durch den Compiler vorgesehen; Verwenden Sie es nicht direkt im Code.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,87 @@
+<Type Name="ICommandService" FullName="System.Activities.Presentation.Hosting.ICommandService">
+  <TypeSignature Language="C#" Value="public interface ICommandService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICommandService" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Hosting.ICommandService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Befehlsschnittstelle für die Integration von Windows Workflow-Designer-Aktionen (z. B. Kontextmenü) verwendeten mit benutzerdefinierte Implementierungen, z. B. eigenschaftenbrowserdienst, debuggingdienst usw. dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanExecuteCommand">
+      <MemberSignature Language="C#" Value="public bool CanExecuteCommand (int commandId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanExecuteCommand(int32 commandId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Hosting.ICommandService.CanExecuteCommand(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="commandId">Der Befehlsbezeichner, der überprüft werden soll.</param>
+        <summary>Überprüft, ob der angegebene Befehl ausgeführt werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Befehl ausgeführt werden kann. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Der Befehl wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteCommand">
+      <MemberSignature Language="C#" Value="public void ExecuteCommand (int commandId, System.Collections.Generic.Dictionary&lt;string,object&gt; parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExecuteCommand(int32 commandId, class System.Collections.Generic.Dictionary`2&lt;string, object&gt; parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Hosting.ICommandService.ExecuteCommand(System.Int32,System.Collections.Generic.Dictionary{System.String,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandId" Type="System.Int32" />
+        <Parameter Name="parameters" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="commandId">Der Befehlsbezeichner, der überprüft werden soll.</param>
+        <param name="parameters">Die Parameter des Befehls.</param>
+        <summary>Führt den Befehl mit dem angegebenen Befehlsbezeichner und den Parametern aus.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Der Befehl wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCommandSupported">
+      <MemberSignature Language="C#" Value="public bool IsCommandSupported (int commandId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsCommandSupported(int32 commandId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Hosting.ICommandService.IsCommandSupported(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="commandId">Der Befehlsbezeichner, der überprüft werden soll.</param>
+        <summary>Gibt einen booleschen Wert zurück, der angibt, ob der angegebene Befehlsbezeichner unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />Wenn die angegebene Befehls-ID unterstützt wird. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

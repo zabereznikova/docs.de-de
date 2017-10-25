@@ -1,0 +1,114 @@
+<Type Name="RibbonTwoLineTextAutomationPeer" FullName="System.Windows.Automation.Peers.RibbonTwoLineTextAutomationPeer">
+  <TypeSignature Language="C#" Value="public class RibbonTwoLineTextAutomationPeer : System.Windows.Automation.Peers.FrameworkElementAutomationPeer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RibbonTwoLineTextAutomationPeer extends System.Windows.Automation.Peers.FrameworkElementAutomationPeer" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.RibbonTwoLineTextAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.FrameworkElementAutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Macht <see cref="T:System.Windows.Controls.Ribbon.RibbonTwoLineText" /> Typen für die UI-Automatisierung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RibbonTwoLineTextAutomationPeer (System.Windows.Controls.Ribbon.RibbonTwoLineText owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Controls.Ribbon.RibbonTwoLineText owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonTwoLineTextAutomationPeer.#ctor(System.Windows.Controls.Ribbon.RibbonTwoLineText)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Controls.Ribbon.RibbonTwoLineText" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Das diesem Automatisierungspeer zugeordnete Element.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Automation.Peers.RibbonTwoLineTextAutomationPeer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationControlTypeCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonTwoLineTextAutomationPeer.GetAutomationControlTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationControlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Steuerelementtyp für das Element, das mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonTwoLineTextAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" /> aufgerufen.</summary>
+        <returns>Der <see cref="F:System.Windows.Automation.Peers.AutomationControlType.TabItem" />-Enumerationswert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetClassNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetClassNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonTwoLineTextAutomationPeer.GetClassNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Klassennamen der <see cref="T:System.Windows.Controls.Ribbon.RibbonTwoLineText" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonTwoLineTextAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" /> aufgerufen.</summary>
+        <returns>Der Klassenname des der <see cref="T:System.Windows.Controls.Ribbon.RibbonTwoLineText" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonTwoLineTextAutomationPeer" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonTwoLineTextAutomationPeer.GetNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Namen ab, der das Element beschreibt, das mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonTwoLineTextAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetName" /> aufgerufen.</summary>
+        <returns>Der Name, der das Element beschreibt, das mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.RibbonTwoLineTextAutomationPeer" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsControlElementCore">
+      <MemberSignature Language="C#" Value="protected override bool IsControlElementCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsControlElementCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.RibbonTwoLineTextAutomationPeer.IsControlElementCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.Ribbon.RibbonTwoLineText" /> , verknüpft ist mit diesem Automation Peer enthält Daten, die dem Benutzer angezeigt werden. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsControlElement" /> aufgerufen.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.Ribbon.RibbonTwoLineText" /> , verknüpft ist mit diesem Automation Peer enthält Daten, die der Benutzer präsentiert ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

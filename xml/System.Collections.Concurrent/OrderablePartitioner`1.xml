@@ -1,0 +1,379 @@
+<Type Name="OrderablePartitioner&lt;TSource&gt;" FullName="System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt;">
+  <TypeSignature Language="C#" Value="public abstract class OrderablePartitioner&lt;TSource&gt; : System.Collections.Concurrent.Partitioner&lt;TSource&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit OrderablePartitioner`1&lt;TSource&gt; extends System.Collections.Concurrent.Partitioner`1&lt;!TSource&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Concurrent.OrderablePartitioner`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Concurrent</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.14.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TSource" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Collections.Concurrent.Partitioner&lt;TSource&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TSource">TSource</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TSource">Der Typ der Elemente in der Auflistung.</typeparam>
+    <summary>Stellt eine bestimmte Methode dar, mit der eine sortierbare Datenquelle in mehrere Partitionen aufgeteilt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung der abgeleiteten Klasse ist verantwortlich für die Sortierung der Elemente in Schlüssel-Wert-Paare in Verfolgungsinformationen geeignet ist. Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie einen Partitionierer implementieren, der jeweils ein Element zurückgibt:  
+  
+ [!code-csharp[System.Collections.Concurrent.OrderablePartitioner#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.concurrent.orderablepartitioner/cs/orderablepartitioner.cs#1)]
+ [!code-vb[System.Collections.Concurrent.OrderablePartitioner#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.concurrent.orderablepartitioner/vb/orderablepartitioner.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Alle öffentlichen Member des <see cref="T:System.Collections.Concurrent.OrderablePartitioner`1" /> sind threadsicher und können von mehreren Threads gleichzeitig aufgerufen werden.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected OrderablePartitioner (bool keysOrderedInEachPartition, bool keysOrderedAcrossPartitions, bool keysNormalized);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool keysOrderedInEachPartition, bool keysOrderedAcrossPartitions, bool keysNormalized) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.OrderablePartitioner`1.#ctor(System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keysOrderedInEachPartition" Type="System.Boolean" />
+        <Parameter Name="keysOrderedAcrossPartitions" Type="System.Boolean" />
+        <Parameter Name="keysNormalized" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="keysOrderedInEachPartition">Gibt an, ob die Elemente in jeder Partition in der Reihenfolge zunehmender Schlüssel zurückgegeben werden.</param>
+        <param name="keysOrderedAcrossPartitions">Gibt an, ob die Elemente in einer früheren Partition immer vor Elementen in einer späteren Partition stammen. Bei "true", jedes Element in der Partition 0 einen kleineren Sortierschlüssel als ein Element in Partition 1 hat, verfügt jedes Element in Partition 1 einen kleineren Sortierschlüssel als ein Element in Partition 2 und So weiter.</param>
+        <param name="keysNormalized">Gibt an, ob Schlüssel normalisiert werden. Bei "true", sind alle Sortierschlüssel eindeutige ganze Zahlen im Bereich [0.. NumberOfElements-1]. Wenn "false", Sortieren der Schlüssel noch müssen unterschiedlich sein, aber nur deren relative Reihenfolge betrachtet wird, nicht deren absoluten Werten.</param>
+        <summary>Aufgerufen von Konstruktoren in abgeleiteten Klassen zum Initialisieren der <see cref="T:System.Collections.Concurrent.OrderablePartitioner`1" /> Klasse mit der angegebenen Einschränkungen für den Indexschlüssel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDynamicPartitions">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;TSource&gt; GetDynamicPartitions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;!TSource&gt; GetDynamicPartitions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.OrderablePartitioner`1.GetDynamicPartitions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TSource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein Objekt, das die zugrunde liegende Auflistung in eine Variable Anzahl von Partitionen partitioniert werden kann.</summary>
+        <returns>Ein Objekt, das Partitionen über der zugrunde liegenden Datenquelle erstellen kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Objekt implementiert die <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> Schnittstelle. Aufrufen von <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> für das Objekt eine andere Partition über die Sequenz erstellt.  
+  
+ Die standardmäßige Implementierung bietet das gleiche Verhalten wie <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> mit dem Unterschied, dass der zurückgegebene Satz von Partitionen nicht die Schlüssel für die Elemente bereitstellt.  
+  
+ Die <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A> Methode wird nur unterstützt, wenn die <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> Eigenschaft gibt "true" zurück.  
+  
+ Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Dynamische Partitionierung wird von der Basisklasse nicht unterstützt. Es muss in abgeleiteten Klassen implementiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrderableDynamicPartitions">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;long,TSource&gt;&gt; GetOrderableDynamicPartitions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;int64, !TSource&gt;&gt; GetOrderableDynamicPartitions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.OrderablePartitioner`1.GetOrderableDynamicPartitions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.Int64,TSource&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein Objekt, das die zugrunde liegende Auflistung in eine Variable Anzahl von Partitionen partitioniert werden kann.</summary>
+        <returns>Ein Objekt, das Partitionen über der zugrunde liegenden Datenquelle erstellen kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Objekt implementiert die <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> Schnittstelle. Aufrufen von <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> für das Objekt eine andere Partition über die Sequenz erstellt.  
+  
+ Jede Partition wird als Enumerator über Schlüssel-Wert-Paare dargestellt. Der Wert im Paar ist das Element selbst, und der Schlüssel ist eine ganze Zahl, die die relative Reihenfolge dieses Elements gegenüber anderen Elementen bestimmt.  
+  
+ Die <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> Methode wird nur unterstützt, wenn die <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> Eigenschaft gibt "true" zurück.  
+  
+ Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Dynamische Partitionierung wird von diesem Partitionierer nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrderablePartitions">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IList&lt;System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;long,TSource&gt;&gt;&gt; GetOrderablePartitions (int partitionCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;class System.Collections.Generic.IEnumerator`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;int64, !TSource&gt;&gt;&gt; GetOrderablePartitions(int32 partitionCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.OrderablePartitioner`1.GetOrderablePartitions(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;System.Int64,TSource&gt;&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partitionCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="partitionCount">Die Anzahl von Partitionen zu erstellen.</param>
+        <summary>Partitioniert die zugrunde liegende Auflistung in die angegebene Anzahl von sortierbare Partitionen.</summary>
+        <returns>Eine Liste mit <paramref name="partitionCount" /> Enumeratoren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Partition wird als Enumerator über Schlüssel-Wert-Paare dargestellt.  
+  
+ Der Wert des Paars ist das Element selbst, und der Schlüssel ist eine ganze Zahl, die die relative Reihenfolge dieses Elements gegenüber anderen Elementen in der Datenquelle bestimmt.  
+  
+ Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPartitions">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IList&lt;System.Collections.Generic.IEnumerator&lt;TSource&gt;&gt; GetPartitions (int partitionCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IList`1&lt;class System.Collections.Generic.IEnumerator`1&lt;!TSource&gt;&gt; GetPartitions(int32 partitionCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.OrderablePartitioner`1.GetPartitions(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Collections.Generic.IEnumerator&lt;TSource&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partitionCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="partitionCount">Die Anzahl von Partitionen zu erstellen.</param>
+        <summary>Partitioniert die zugrunde liegende Auflistung in die angegebene Anzahl von sortierte Partitionen.</summary>
+        <returns>Eine Liste mit <paramref name="partitionCount" /> Enumeratoren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung bietet das gleiche Verhalten wie <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> mit dem Unterschied, dass der zurückgegebene Satz von Partitionen nicht die Schlüssel für die Elemente bereitstellt.  
+  
+ Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeysNormalized">
+      <MemberSignature Language="C#" Value="public bool KeysNormalized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeysNormalized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.OrderablePartitioner`1.KeysNormalized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob Sortierschlüssel normalisiert werden.</summary>
+        <value>"true", wenn die Schlüssel normalisiert werden; andernfalls "false".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysNormalized%2A> gibt "true", alle Sortierschlüssel sind eindeutige ganze Zahlen im Bereich [0.. NumberOfElements-1]. Wenn die Eigenschaft "false" müssen Sortierschlüssel immer noch werden unterschiedliche zurückgibt, aber nur deren relative Reihenfolge betrachtet wird, nicht deren absoluten Werten.  
+  
+ Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeysOrderedAcrossPartitions">
+      <MemberSignature Language="C#" Value="public bool KeysOrderedAcrossPartitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeysOrderedAcrossPartitions" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.OrderablePartitioner`1.KeysOrderedAcrossPartitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob die Elemente in einer früheren Partition immer vor Elementen in einer späteren Partition stammen.</summary>
+        <value>"true", wenn die Elemente in einer früheren Partition immer vor Elementen in einer späteren Partition stammen; andernfalls "false".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedAcrossPartitions%2A> gibt "true", jedes Element in der Partition 0 hat einen kleineren Sortierschlüssel als ein Element in Partition 1, jedes Element in Partition 1 mit einen kleineren Sortierschlüssel als ein Element in Partition 2 usw. hat.  
+  
+ Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeysOrderedInEachPartition">
+      <MemberSignature Language="C#" Value="public bool KeysOrderedInEachPartition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeysOrderedInEachPartition" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.OrderablePartitioner`1.KeysOrderedInEachPartition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob Elemente in jeder Partition in der Reihenfolge zunehmender Schlüssel zurückgegeben werden.</summary>
+        <value>"true", wenn die Elemente in jeder Partition zurückgegeben werden, in der Reihenfolge zunehmender Schlüssel; andernfalls "false".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

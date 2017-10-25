@@ -1,0 +1,260 @@
+<Type Name="RangeItemHeaderValue" FullName="System.Net.Http.Headers.RangeItemHeaderValue">
+  <TypeSignature Language="C#" Value="public class RangeItemHeaderValue : ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RangeItemHeaderValue extends System.Object implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Http.Headers.RangeItemHeaderValue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Http</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Bytebereich in eine Range-Headerwert dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Http.Headers.RangeHeaderValue> Klasse bietet Unterstützung für einen Bytebereich in eine Range-Header, gemäß [RFC 2616](http://go.microsoft.com/fwlink/?LinkID=241642) durch die IETF.  
+  
+ Range-Header kann mehrere bytebereichen angeben.  
+  
+ Ein Beispiel für einen Bytebereich in eine Range-Header in einer HTTP-Protokoll-Anforderung, die Anforderungen die ersten 100 Bytes wäre, wäre Folgendes:  
+  
+ `Range: bytes=0-99\r\n\r\n`  
+  
+ Ein HTTP-Server gibt die Unterstützung für Range-Header mit dem Accept-Ranges-Header an. Ein Beispiel für den Accept-Ranges-Header von einem Server, der Bytebereiche unterstützt würde folgendermaßen aussehen:  
+  
+ `Accept-Ranges: bytes\r\n\r\n`  
+  
+ Wenn Sie ein Accept-Ranges-Header nicht im Header der Antwort vom Server empfangen wird, wird vom Server Range-Header nicht unterstützt. Ein Beispiel für den Accept-Ranges-Header von einem Server, der Bereiche nicht unterstützt, aber den Accept-Ranges-Header, erkennt würde folgendermaßen aussehen:  
+  
+ `Accept-Ranges: none\r\n\r\n`  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RangeItemHeaderValue (Nullable&lt;long&gt; from, Nullable&lt;long&gt; to);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;int64&gt; from, valuetype System.Nullable`1&lt;int64&gt; to) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.RangeItemHeaderValue.#ctor(System.Nullable{System.Int64},System.Nullable{System.Int64})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="from" Type="System.Nullable&lt;System.Int64&gt;" />
+        <Parameter Name="to" Type="System.Nullable&lt;System.Int64&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="from">Die Position, an der mit dem Senden von Daten begonnen werden soll.</param>
+        <param name="to">Die Position, an der das Senden von Daten beendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.Headers.RangeItemHeaderValue" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel für einen Bytebereich in eine Range-Header in einer HTTP-Protokoll-Anforderung, die Anforderungen die ersten 100 Bytes wäre, wäre Folgendes:  
+  
+ `Range: bytes=0-99\r\n\r\n`  
+  
+ In diesem Beispiel die `from` Parameter würde als 0 angegeben werden und die `to` Parameter würde als 99 angegeben werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="from" /> ist größer als <paramref name="to" />  
+  
+ - oder -   
+  
+ <paramref name="from" /> oder <paramref name="to" /> ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.RangeItemHeaderValue.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit dem aktuellen Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Object" /> und das aktuelle <see cref="T:System.Net.Http.Headers.RangeItemHeaderValue" />-Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene <see cref="T:System.Object" /> gleich dem aktuellen Objekt ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="From">
+      <MemberSignature Language="C#" Value="public Nullable&lt;long&gt; From { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; From" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.RangeItemHeaderValue.From" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position ab, an der mit dem Senden von Daten begonnen werden soll.</summary>
+        <value>Die Position, an der mit dem Senden von Daten begonnen werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.RangeItemHeaderValue.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für ein <see cref="T:System.Net.Http.Headers.RangeItemHeaderValue" />-Objekt.</summary>
+        <returns>Ein Hashcode für das aktuelle Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Hashcode ist ein numerischer Wert, der zum Identifizieren eines Objekts während der Gleichheitstests der auf verwendet wird. Es kann auch als Index für ein Objekt in einer Auflistung dienen.  
+  
+ Die <xref:System.Net.Http.Headers.RangeItemHeaderValue.GetHashCode%2A> Methode eignet sich für die Verwendung in Hashalgorithmen und Datenstrukturen wie Hashtabellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.RangeItemHeaderValue.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt, das eine Kopie der aktuellen <see cref="T:System.Net.Http.Headers.RangeItemHeaderValue" />-Instanz ist.</summary>
+        <returns>Eine Kopie der aktuellen Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="To">
+      <MemberSignature Language="C#" Value="public Nullable&lt;long&gt; To { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; To" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.RangeItemHeaderValue.To" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position ab, an der das Senden von Daten beendet werden soll.</summary>
+        <value>Die Position, an der das Senden von Daten beendet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.RangeItemHeaderValue.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle <see cref="T:System.Net.Http.Headers.RangeItemHeaderValue" />-Objekt darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

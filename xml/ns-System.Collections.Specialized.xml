@@ -1,0 +1,19 @@
+<Namespace Name="System.Collections.Specialized">
+  <Docs>
+    <summary>Die <see cref="N:System.Collections.Specialized" /> -Namespace enthält spezialisierte und stark typisierte Auflistungen, z. B. ein Wörterbuch für die verknüpfte Liste, einen Bitvektor und Auflistungen, enthalten nur Zeichenfolgen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Spezialisierte Auflistungen sind Sammlungen mit hoch bestimmte Zwecke. <xref:System.Collections.Specialized.NameValueCollection>basiert auf <xref:System.Collections.Specialized.NameObjectCollectionBase>jedoch <xref:System.Collections.Specialized.NameValueCollection> akzeptiert mehrere Werte pro Schlüssel, wohingegen <xref:System.Collections.Specialized.NameObjectCollectionBase> akzeptiert nur einen Wert pro Schlüssel.  
+  
+ Einige stark typisierte Auflistungen in der <xref:System.Collections.Specialized> Namespace dienen der <xref:System.Collections.Specialized.StringCollection> und <xref:System.Collections.Specialized.StringDictionary>, beide Werte enthalten, die ausschließlich Zeichenfolgen sind.  
+  
+ Die <xref:System.Collections.Specialized.CollectionsUtil> Klasse erstellt Instanzen von Groß-/Kleinschreibung Auflistungen.  
+  
+ Einige Auflistungen transformieren.  Z. B. die <xref:System.Collections.Specialized.HybridDictionary> Klasse startet eine <xref:System.Collections.Specialized.ListDictionary> und wird eine <xref:System.Collections.Hashtable> wird bei großen.  Die <xref:System.Collections.ObjectModel.KeyedCollection%602> ist eine Liste, aber es auch ein Suchwörterbuch erstellt, wenn die Anzahl der Elemente einen bestimmten Schwellenwert erreicht.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

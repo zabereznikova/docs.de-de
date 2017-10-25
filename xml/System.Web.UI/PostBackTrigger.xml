@@ -1,0 +1,150 @@
+<Type Name="PostBackTrigger" FullName="System.Web.UI.PostBackTrigger">
+  <TypeSignature Language="C#" Value="public class PostBackTrigger : System.Web.UI.UpdatePanelControlTrigger" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PostBackTrigger extends System.Web.UI.UpdatePanelControlTrigger" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PostBackTrigger" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.UpdatePanelControlTrigger</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert ein Steuerelement in einem <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement ein postback-Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.PostBackTrigger> Steuerelement so aktivieren Sie die Steuerelemente in einem <xref:System.Web.UI.UpdatePanel> um ein Postback anstelle eines asynchronen Postbacks.  
+  
+ Verwenden der <xref:System.Web.UI.ScriptManager.RegisterPostBackControl%2A> Methode der <xref:System.Web.UI.ScriptManager> Steuerelement ein postback-Steuerelement programmgesteuert zu registrieren. Rufen Sie dann die <xref:System.Web.UI.UpdatePanel.Update%2A> Methode der <xref:System.Web.UI.UpdatePanel> steuern, wann der Trigger-Steuerelement ein Postback ausführt.  
+  
+> [!NOTE]
+>  Programmgesteuertes Hinzufügen von <xref:System.Web.UI.PostBackTrigger> Steuerelemente wird nicht unterstützt.  
+  
+ Wenn ein Steuerelement als festgelegt ist ein <xref:System.Web.UI.PostBackTrigger> und <xref:System.Web.UI.AsyncPostBackTrigger> -Steuerelement, eine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie deklarativ zu definieren eine <xref:System.Web.UI.PostBackTrigger> steuern, die für eine <xref:System.Web.UI.UpdatePanel> Steuerelement. Im Bereich einer <xref:System.Web.UI.WebControls.FileUpload> -Steuerelement ermöglicht Benutzern das Hochladen einer Datei. Benutzer müssen zuerst überprüfen Sie, ob die hochzuladende Datei vorhanden ist. Die <xref:System.Web.UI.WebControls.Button> -Steuerelement, das den Ereignishandler, um den Dateinamen zu überprüfen Ruft ein asynchrones Postback verursacht. Allerdings die <xref:System.Web.UI.WebControls.Button> Steuerelement, das Hochladen der Datei wird als registriert eine <xref:System.Web.UI.PostBackTrigger>, da Dateien nicht asynchron hochgeladen werden können.  
+  
+ [!code-aspx-csharp[System.Web.UI.PostBackTrigger#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.WEb.UI.PostBackTrigger/CS/PostBackTriggerCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.PostBackTrigger#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.WEb.UI.PostBackTrigger/VB/PostBackTriggerVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PostBackTrigger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PostBackTrigger.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.PostBackTrigger" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Erstellen eines neuen <xref:System.Web.UI.PostBackTrigger> -Objekts die **UpdatePanelTrigger-Auflistungs-Editor** Dialogfeld Feld im Designer, oder erstellen Sie eine `<Triggers>` Element deklarativ in der <xref:System.Web.UI.UpdatePanel> Steuerelement. Programmgesteuertes Hinzufügen von <xref:System.Web.UI.PostBackTrigger> Steuerelemente wird nicht unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlID">
+      <MemberSignature Language="C#" Value="public string ControlID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ControlID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PostBackTrigger.ControlID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.PostBackTriggerControlIDConverter, System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Steuerelements, das eine <see cref="T:System.Web.UI.PostBackTrigger" /> steuern, die für eine <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die eine Server-Steuerelement-ID darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasTriggered">
+      <MemberSignature Language="C#" Value="protected override bool HasTriggered ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool HasTriggered() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PostBackTrigger.HasTriggered" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob der Trigger aktiviert wurde.</summary>
+        <returns>
+          <see langword="true" />Wenn der Trigger aktiviert wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entwickler von Steuerelementen können außer Kraft setzen die <xref:System.Web.UI.PostBackTrigger.HasTriggered%2A> Eigenschaft benutzerdefinierten Logik bereitstellen, um zu bestimmen, ob der Trigger aktiviert wurde. Der benutzerdefinierte Trigger zur Entwurfszeit in angezeigt werden die `<Triggers>` Element von der <xref:System.Web.UI.UpdatePanel> -Steuerelement, können Sie eine Richtlinie auf der Seite oder im Abschnitt der Datei "Web.config" hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected override void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PostBackTrigger.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die <see cref="T:System.Web.UI.PostBackTrigger" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PostBackTrigger.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle <see cref="T:System.Web.UI.PostBackTrigger" />-Objekt darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle <see cref="T:System.Web.UI.PostBackTrigger" />-Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

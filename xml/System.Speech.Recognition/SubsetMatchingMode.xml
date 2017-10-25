@@ -1,0 +1,191 @@
+<Type Name="SubsetMatchingMode" FullName="System.Speech.Recognition.SubsetMatchingMode">
+  <TypeSignature Language="C#" Value="public enum SubsetMatchingMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SubsetMatchingMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SubsetMatchingMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Listet Werte auf einer Teilmenge der übereinstimmenden Modus.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der System.Speech können Sie eine Grammatik erstellen, die einen Ausdruck erfolgreich erkennt, obwohl nur eine Teilmenge des Inhalts in der Audioeingabe gefunden wird.  
+  
+ Standardmäßig erfordert ein Erkennungsmodul eine genaue Übereinstimmung für einen gesamten Ausdruck. Das Erkennungsmodul kann auch teilweise Ausdrücke gemäß durch definierten Parameter entsprechen einer <xref:System.Speech.Recognition.SubsetMatchingMode> verwendete Standardmember als Argument an die <xref:System.Speech.Recognition.GrammarBuilder.%23ctor%2A> oder <xref:System.Speech.Recognition.SrgsGrammar.SrgsSubset.%23ctor%2A> Konstruktoren, oder die <xref:System.Speech.Recognition.GrammarBuilder.Append%2A> Methode.  
+  
+ Im folgenden wird veranschaulicht, wie die einzelnen von der <xref:System.Speech.Recognition.SubsetMatchingMode> Member wirkt sich auf die Erkennung bei Verwendung von Grammatik mit dem Hinweis "Car-der Lastwagen a Boot, die plane".  
+  
+ **OrderedSubset**  
+  
+ In diesem Modus gibt an, dass ein Teil des Ausdrucks verwendet wird, den gesamten Ausdruck erfolgreich zu erkennen, wenn folgende Aussagen zutreffen:  
+  
+-   Eine oder mehrere Wörter im Ausdruck werden in der Audioeingabe erkannt.  
+  
+-   Die relative Reihenfolge dieser erkannten Wörter ist dasselbe wie bei den Ausdruck.  
+  
+-   Übereinstimmende Wörter möglicherweise nur Präpositionen und Artikel bestehen.  
+  
+ Hinzufügen des Ausdrucks "Car-der Lastwagen a Boot, die plane" Grammatik mit OrderedSubset führt Modus zu folgendem Ergebnis auf die Erkennung:  
+  
+|**Input-Ausdruck**|**Ergebnis**|  
+|----------------------|----------------|  
+|"Car-der Lastwagen a Boot, die plane"|Der gesamte Ausdruck "Car-der Lastwagen a Boot, die plane" wird erkannt.|  
+|"Car-der Lastwagen a Boot"|Der gesamte Ausdruck "Car-der Lastwagen a Boot, die plane" wird erkannt.|  
+|"Car das plane"|Der gesamte Ausdruck "Car-der Lastwagen a Boot, die plane" wird erkannt. Eine Teilmenge der erkannte ist nicht erforderlich, um eine Sequenz der ursprünglichen Zeichenfolge handelt.|  
+|"Car-die Boot eine LKW, die plane"|Erkennung ist nicht erfolgreich. Die Wörter sind nicht in der richtigen Reihenfolge.|  
+|"eine der"|Der gesamte Ausdruck "Car-der Lastwagen a Boot, die plane" wird erkannt. Präpositionen und Artikel sind für die Erkennung verwendet.|  
+  
+ **OrderedSubsetContentRequired**  
+  
+ In diesem Modus gibt an, dass ein Teil des Ausdrucks verwendet wird, den gesamten Ausdruck erfolgreich zu erkennen, wenn folgende Aussagen zutreffen:  
+  
+-   Eine oder mehrere Wörter im Ausdruck werden in der Audioeingabe erkannt und  
+  
+-   Die relative Reihenfolge dieser erkannten Wörter ist dasselbe wie bei den Ausdruck.  
+  
+-   Nur Präpositionen und Artikel darf nicht übereinstimmenden Wörtern bestehen.  
+  
+ Hinzufügen des Ausdrucks "Car-der Lastwagen a Boot, die plane" Grammatik mit OrderedSubsetContentRequired führt Modus zu folgendem Ergebnis auf die Erkennung:  
+  
+|**Input-Ausdruck**|**Ergebnis**|  
+|----------------------|----------------|  
+|"Car-der Lastwagen a Boot, die plane"|Der gesamte Ausdruck "Car-der Lastwagen a Boot, die plane" wird erkannt.|  
+|"Car-der Lastwagen a Boot"|Der gesamte Ausdruck "Car-der Lastwagen a Boot, die plane" wird erkannt.|  
+|"Car das plane"|Der gesamte Ausdruck "Car-der Lastwagen a Boot, die plane" wird erkannt. Eine Teilmenge der erkannte ist nicht erforderlich, um eine Sequenz der ursprünglichen Zeichenfolge handelt.|  
+|"Car-die Boot eine LKW, die plane"|Erkennung ist nicht erfolgreich. Die Wörter sind nicht in der richtigen Reihenfolge.|  
+|"eine der"|Erkennung ist nicht erfolgreich.  Spracheingabe muss als Artikel und Präpositionen Wörter enthalten.|  
+  
+ **Untersequenz:**  
+  
+ In diesem Modus gibt an, dass ein Teil des Ausdrucks verwendet wird, den gesamten Ausdruck erfolgreich zu erkennen, wenn folgende Aussagen zutreffen:  
+  
+-   Eine oder mehrere Wörter im Ausdruck werden als Sequenz von sei der Ausdruck in der Audioeingabe erkannt und  
+  
+-   Die relative Reihenfolge dieser erkannten Wörter ist dasselbe wie bei den Ausdruck.  
+  
+-   Übereinstimmende Wörter möglicherweise nur Präpositionen und Artikel bestehen.  
+  
+ Hinzufügen des Ausdrucks "Car-der Lastwagen a Boot, die plane" Grammatik Untersequenz Modus führt zu folgendem Ergebnis auf die Erkennung:  
+  
+|**Input-Ausdruck**|**Ergebnis**|  
+|----------------------|----------------|  
+|"Car-der Lastwagen a Boot, die plane"|Der gesamte Ausdruck "Car-der Lastwagen a Boot, die plane" wird erkannt.|  
+|"Car-der Lastwagen a Boot"|Der gesamte Ausdruck "Car-der Lastwagen a Boot, die plane" wird erkannt.|  
+|"Car das plane"|Erkennung ist nicht erfolgreich. Eine Teilmenge der erkannte ist erforderlich, um eine Sequenz aus der ursprünglichen Zeichenfolge.|  
+|"Car-die Boot eine LKW, die plane"|Erkennung ist nicht erfolgreich. Die Wörter sind nicht in der richtigen Reihenfolge.|  
+|"eine der"|Der gesamte Ausdruck "Car-der Lastwagen a Boot, die plane" wird erkannt. Präpositionen und Artikel sind für die Erkennung verwendet.|  
+  
+ **SubsequenceContentRequired**  
+  
+ In diesem Modus gibt an, dass ein Teil des Ausdrucks verwendet wird, den gesamten Ausdruck erfolgreich zu erkennen, wenn folgende Aussagen zutreffen:  
+  
+-   Eine oder mehrere Wörter in die übereinstimmende Zeichenfolgen werden als Sequenz von den Ausdruck in der Audioeingabe erkannt.  
+  
+-   Nur Präpositionen und Artikel darf nicht übereinstimmenden Wörtern bestehen.  
+  
+ Hinzufügen des Ausdrucks "Car-der Lastwagen a Boot, die plane" Grammatik mit SubsequenceContentRequired führt Modus zu folgendem Ergebnis auf die Erkennung:  
+  
+|**Input-Ausdruck**|**Ergebnis**|  
+|----------------------|----------------|  
+|"Car-der Lastwagen a Boot, die plane"|Der gesamte Ausdruck "Car-der Lastwagen a Boot, die plane" wird erkannt.|  
+|"Car-der Lastwagen a Boot"|Der gesamte Ausdruck "Car-der Lastwagen a Boot, die plane" wird erkannt.|  
+|"Car das plane"|Erkennung ist nicht erfolgreich. Eine Teilmenge der erkannte ist erforderlich, um eine Sequenz aus der ursprünglichen Zeichenfolge.|  
+|"Car-die Boot eine LKW, die plane"|Erkennung ist nicht erfolgreich. Die Wörter sind nicht in der richtigen Reihenfolge.|  
+|"eine der"|Erkennung ist nicht erfolgreich. Spracheingabe muss als Artikel und Präpositionen Wörter enthalten.|  
+  
+   
+  
+## Examples  
+ Im folgenden finden Sie eine Test-Routine, die vier generiert <xref:System.Speech.Recognition.Grammar> Objekte mit den gleichen Ausdruck für die `SubsetMatchingModes`. Diese <xref:System.Speech.Recognition.Grammar> Objekte können dann getestet werden.  
+  
+```  
+private void CreateSubsetMatchTest()   
+{  
+  foreach ( System.Speech.Recognition.SubsetMatchingMode mode   
+              in Enum.GetValues(typeof(System.Speech.Recognition.SubsetMatchingMode)))  
+  {  
+    GrammarBuilder gb = new GrammarBuilder("a car the truck a boat that plane",mode);  
+    Grammar grammar = new Grammar(gb);  
+    grammar.Name = mode.ToString();  
+    grammar.Enabled=true;  
+    _recognizer.LoadGrammar(grammar);  
+  }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OrderedSubset">
+      <MemberSignature Language="C#" Value="OrderedSubset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SubsetMatchingMode OrderedSubset = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SubsetMatchingMode.OrderedSubset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SubsetMatchingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass diese Teilmenge Abgleich Modus **OrderedSubset**.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderedSubsetContentRequired">
+      <MemberSignature Language="C#" Value="OrderedSubsetContentRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SubsetMatchingMode OrderedSubsetContentRequired = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SubsetMatchingMode.OrderedSubsetContentRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SubsetMatchingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass diese Teilmenge Abgleich Modus **OrderedSubsetContentRequired**.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Subsequence">
+      <MemberSignature Language="C#" Value="Subsequence" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SubsetMatchingMode Subsequence = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SubsetMatchingMode.Subsequence" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SubsetMatchingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass diese Teilmenge Abgleich Modus **Untersequenz**.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SubsequenceContentRequired">
+      <MemberSignature Language="C#" Value="SubsequenceContentRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SubsetMatchingMode SubsequenceContentRequired = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SubsetMatchingMode.SubsequenceContentRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SubsetMatchingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass diese Teilmenge Abgleich Modus **SubsequenceContentRequired**.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,291 @@
+<Type Name="MessageQueueCriteria" FullName="System.Messaging.MessageQueueCriteria">
+  <TypeSignature Language="C#" Value="public class MessageQueueCriteria" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageQueueCriteria extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueueCriteria" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Filtert Meldungswarteschlangen beim Durchführen einer Abfrage mit der <see cref="T:System.Messaging.MessageQueue" /> Klasse <see cref="M:System.Messaging.MessageQueue.GetPublicQueues" /> Methode.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.MessageQueue> Klasse bietet eine Reihe von Methoden, die Sie zum Filtern der Suche für Öffentliche Warteschlangen im Netzwerk ermöglichen. Spezifische Methoden zum Filtern nach warteschlangenspeicherort Bezeichnung, Kategorie oder Server sind die <xref:System.Messaging.MessageQueue.GetPublicQueuesByLabel%2A>, <xref:System.Messaging.MessageQueue.GetPublicQueuesByCategory%2A>, und <xref:System.Messaging.MessageQueue.GetPublicQueuesByMachine%2A>.  
+  
+ Die <xref:System.Messaging.MessageQueueCriteria> Klasse, bei der Verwendung mit der <xref:System.Messaging.MessageQueue.GetPublicQueues%2A> Methode, können Sie den Filter zu optimieren. Sie Suchkriterien nicht durch eine der festlegbaren der `GetPublicQueuesBy`* Methoden, oder nach mehreren Kriterien. Sie können übergeben, eine <xref:System.Messaging.MessageQueueCriteria> -Instanz in der <xref:System.Messaging.MessageQueue.GetPublicQueues%2A> Methode zum Suchen, z. B. durch Wartezeiten erstellungs- oder Änderungsdatum, dem Computer, die die Warteschlange befindet sich auf, die Bezeichnung der Warteschlange Kategorie oder eine beliebige Kombination dieser Eigenschaften.  
+  
+ Wenn von mehreren Eigenschaften zu filtern, bestehen die Kriterien durch Anwenden der `AND` Operator, um den Satz von Eigenschaften. Wenn Sie daher einen Wert für angeben der <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A> Eigenschaft zusammen mit der <xref:System.Messaging.MessageQueueCriteria.MachineName%2A> -Eigenschaft, rufen Sie für alle Warteschlangen, die nach einem bestimmten Zeitpunkt erstellt wurden und befinden, die, auf einem bestimmten Computer.  
+  
+ Wenn Sie eine Eigenschaft festlegen, setzt die Methode, die die Eigenschaft festlegt auch ein Flag, um anzugeben, dass er im Filter eingeschlossen werden soll, die Sie erstellen. Sie können keine einzelne Eigenschaften aus Suchfilter entfernen. Stattdessen entfernen alle Eigenschaften aus dem Filter durch den Aufruf <xref:System.Messaging.MessageQueueCriteria.ClearAll%2A>, und legen Sie die Eigenschaften, die Sie in der Suchfilter erstellen möchten. <xref:System.Messaging.MessageQueueCriteria.ClearAll%2A>Setzt alle Eigenschaften in "nicht konfiguriert" Standardstatus zurück.  
+  
+ Sie müssen eine Eigenschaft festlegen, bevor Sie versuchen, die gelesen werden; Andernfalls wird eine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel durchläuft Nachrichtenwarteschlangen und zeigt den Pfad für jede Warteschlange, die in den letzten Tag erstellt wurde und vorhanden ist, auf dem Computer "MyComputer".  
+  
+ [!code-cpp[MessageQueue.GetMessageQueueEnumerator_criteria#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueue.GetMessageQueueEnumerator_criteria/CPP/mqgetmessagequeueenumerator_criteria.cpp#1)]
+ [!code-csharp[MessageQueue.GetMessageQueueEnumerator_criteria#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueue.GetMessageQueueEnumerator_criteria/CS/mqgetmessagequeueenumerator_criteria.cs#1)]
+ [!code-vb[MessageQueue.GetMessageQueueEnumerator_criteria#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageQueue.GetMessageQueueEnumerator_criteria/VB/mqgetmessagequeueenumerator_criteria.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueueCriteria ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueCriteria.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Messaging.MessageQueueCriteria" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public Guid Category { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Category" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueCriteria.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Kategorie mit dem Filter Warteschlangen im Netzwerk.</summary>
+        <value>Die Kategorie der Warteschlangen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kategorie der Warteschlange kann eine Anwendung ihre Warteschlangen kategorisieren. Beispielsweise können Sie alle Abrechnung Warteschlangen in einer Kategorie und alle Reihenfolge Warteschlangen in einem anderen platzieren. Die <xref:System.Messaging.MessageQueue.Category%2A> -Eigenschaft wird von der Anwendung definiert und hat keine systeminterne Bedeutung für Message Queuing.  
+  
+ Wenn Sie bei der Suche der Warteschlangen im Netzwerk nur nach Kategorie filtern, können Sie die Methode <xref:System.Messaging.MessageQueue.GetPublicQueuesByCategory%2A>, die speziell. Wenn Sie nach mehreren Kriterien, die die Kategorie enthalten suchen, legen Sie diese <xref:System.Messaging.MessageQueueCriteria.Category%2A> Eigenschaft, und übergeben Sie den Parameter in <xref:System.Messaging.MessageQueue.GetPublicQueues%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Anwendung nicht festgelegt. die <see cref="P:System.Messaging.MessageQueueCriteria.Category" /> Eigenschaft vor dem Lesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearAll">
+      <MemberSignature Language="C#" Value="public void ClearAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueCriteria.ClearAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle Eigenschaften aus, die in einem Filter erstellt wird, und setzt alle Eigenschaftswerte in den Status "nicht konfiguriert".</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufruf <xref:System.Messaging.MessageQueueCriteria.ClearAll%2A>, von der-Methode wird von Flags, die hinsichtlich der <xref:System.Messaging.MessageQueueCriteria> Eigenschaften, die darauf hinweisen, dass keine Eigenschaften enthalten, wenn die Anwendung den Filter erstellt werden. <xref:System.Messaging.MessageQueueCriteria.ClearAll%2A>Setzt alle Eigenschaften, die Werte in einem Standardstatus "nicht konfiguriert" besitzen. Alle Eigenschaften, die Sie später ändern werden mit dem logischen kombiniert `AND` Operator, um einen neuen Filter für definieren die <xref:System.Messaging.MessageQueue.GetPublicQueues%2A> Methode. Wenn Sie die Eigenschaft ändern, setzt die Methode, die die Eigenschaft festlegt auch ein Flag, um anzugeben, dass er im Filter eingeschlossen werden soll, die Sie erstellen.  
+  
+ Sie können keine einzelne Eigenschaften aus Suchfilter entfernen. Stattdessen entfernen alle Eigenschaften aus dem Filter durch den Aufruf <xref:System.Messaging.MessageQueueCriteria.ClearAll%2A>, und legen Sie die Eigenschaften, die Sie in der Suchfilter erstellen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatedAfter">
+      <MemberSignature Language="C#" Value="public DateTime CreatedAfter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime CreatedAfter" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueCriteria.CreatedAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die untere Grenze der Warteschlange für Datum und Uhrzeit mit dem Filter Warteschlangen im Netzwerk.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> , die die untere Grenze für Erstellungsdatum und-Zeitpunkt von einer Warteschlange angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.MessageQueueCriteria> Eigenschaften werden mithilfe einer logischen kombiniert `AND`, sodass beide festlegen <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A> und <xref:System.Messaging.MessageQueueCriteria.CreatedBefore%2A> umschließt ein Zeitintervall für die Erstellung der Warteschlangen. Wenn Sie nur festlegen, <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A>, besteht keine obere Grenze für das Datum.  
+  
+ Wenn Sie versuchen, legen Sie <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A> zu einem späteren <xref:System.DateTime> als Wert <xref:System.Messaging.MessageQueueCriteria.CreatedBefore%2A>, <xref:System.Messaging.MessageQueueCriteria.CreatedBefore%2A> wird zurückgesetzt, um den gleichen (neuen) Wert als <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Anwendung nicht festgelegt. die <see cref="P:System.Messaging.MessageQueueCriteria.CreatedAfter" /> Eigenschaft vor dem Lesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatedBefore">
+      <MemberSignature Language="C#" Value="public DateTime CreatedBefore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime CreatedBefore" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueCriteria.CreatedBefore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die obere Grenze für das Erstellungsdatum und die Uhrzeit mit dem Filter Warteschlangen im Netzwerk.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> , der die Obergrenze für Erstellungsdatum und-Zeitpunkt von einer Warteschlange angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.MessageQueueCriteria> Eigenschaften werden mithilfe einer logischen kombiniert `AND`, sodass beide festlegen <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A> und <xref:System.Messaging.MessageQueueCriteria.CreatedBefore%2A> umschließt ein Zeitintervall für die Erstellung der Warteschlangen. Wenn Sie nur festlegen, <xref:System.Messaging.MessageQueueCriteria.CreatedBefore%2A>, es ist keine untere Grenze für das Datum.  
+  
+ Wenn Sie versuchen, legen Sie <xref:System.Messaging.MessageQueueCriteria.CreatedBefore%2A> zu einem früheren Zeitpunkt <xref:System.DateTime> als Wert <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A>, <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A> wird zurückgesetzt, um den gleichen (neuen) Wert als <xref:System.Messaging.MessageQueueCriteria.CreatedBefore%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Anwendung nicht festgelegt. die <see cref="P:System.Messaging.MessageQueueCriteria.CreatedBefore" /> Eigenschaft vor dem Lesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueCriteria.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Bezeichnung mit dem Filter Warteschlangen im Netzwerk.</summary>
+        <value>Die Bezeichnung der Warteschlangen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bezeichnung für eine Warteschlange ist eine anwendungsdefinierte Beschreibung der Warteschlange. Es ist systeminterne Bedeutung für Message Queuing kein.  
+  
+ Wenn Sie bei der Suche der Warteschlangen im Netzwerk nur nach der Bezeichnung filtern, können Sie die Methode <xref:System.Messaging.MessageQueue.GetPublicQueuesByLabel%2A>, die speziell. Wenn Sie nach mehreren Kriterien, die die Bezeichnung enthalten suchen, legen Sie diese <xref:System.Messaging.MessageQueueCriteria.Label%2A> Eigenschaft, und übergeben Sie den Parameter in <xref:System.Messaging.MessageQueue.GetPublicQueues%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Anwendung nicht festgelegt. die <see cref="P:System.Messaging.MessageQueueCriteria.Label" /> Eigenschaft vor dem Lesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineName">
+      <MemberSignature Language="C#" Value="public string MachineName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MachineName" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueCriteria.MachineName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Computer mit dem Filter Warteschlangen im Netzwerk.</summary>
+        <value>Der Servername des Computers, auf denen die Warteschlangen befinden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einer Nachrichtenwarteschlange <xref:System.Messaging.MessageQueue.MachineName%2A> Auskunft über den Server, auf dem die Warteschlange befindet, ohne führende umgekehrte Schrägstriche (\\\\).  
+  
+ Wenn Sie bei der Suche der Warteschlangen im Netzwerk nur nach Computernamen gefiltert werden, können Sie die Methode <xref:System.Messaging.MessageQueue.GetPublicQueuesByMachine%2A>, die speziell. Wenn Sie nach mehreren Kriterien, die den Computernamen enthalten suchen, legen Sie diese <xref:System.Messaging.MessageQueueCriteria.MachineName%2A> Eigenschaft, und übergeben Sie den Parameter in <xref:System.Messaging.MessageQueue.GetPublicQueues%2A>.  
+  
+ Sie können auch für private Warteschlangen im Netzwerk suchen, durch Angeben eines Computernamens in der <xref:System.Messaging.MessageQueue.GetPrivateQueuesByMachine%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Anwendung nicht festgelegt. die <see cref="P:System.Messaging.MessageQueueCriteria.MachineName" /> Eigenschaft vor dem Lesen.  
+  
+ - oder -   
+  
+ Syntax für den Computernamen ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifiedAfter">
+      <MemberSignature Language="C#" Value="public DateTime ModifiedAfter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ModifiedAfter" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueCriteria.ModifiedAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die untere Grenze der Warteschlange Änderungsdatum und die Uhrzeit mit dem Filter Warteschlangen im Netzwerk.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> , die die untere Grenze für einer Warteschlange letzte Änderungsdatum und die Uhrzeit angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Warteschlange Änderungen Flag wird festgelegt, wenn Sie die Eigenschaften einer Warteschlange ändern, aber nicht, wenn eine Nachricht gelesen bzw. in die Warteschlange geschrieben wurde.  
+  
+ Die <xref:System.Messaging.MessageQueueCriteria> Eigenschaften werden mithilfe einer logischen kombiniert `AND`, sodass beide festlegen <xref:System.Messaging.MessageQueueCriteria.ModifiedAfter%2A> und <xref:System.Messaging.MessageQueueCriteria.ModifiedBefore%2A> umschließt ein Zeitintervall für die letzte Änderung der Warteschlangen. Wenn Sie nur festlegen, <xref:System.Messaging.MessageQueueCriteria.ModifiedAfter%2A>, besteht keine obere Grenze für das Datum.  
+  
+ Wenn Sie versuchen, legen Sie <xref:System.Messaging.MessageQueueCriteria.ModifiedAfter%2A> zu einem späteren <xref:System.DateTime> als Wert <xref:System.Messaging.MessageQueueCriteria.ModifiedBefore%2A>, <xref:System.Messaging.MessageQueueCriteria.ModifiedBefore%2A> wird zurückgesetzt, um den gleichen (neuen) Wert als <xref:System.Messaging.MessageQueueCriteria.ModifiedAfter%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Anwendung nicht festgelegt. die <see cref="P:System.Messaging.MessageQueueCriteria.ModifiedAfter" /> Eigenschaft vor dem Lesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifiedBefore">
+      <MemberSignature Language="C#" Value="public DateTime ModifiedBefore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ModifiedBefore" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueCriteria.ModifiedBefore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die obere Grenze der Warteschlange Änderungsdatum und Uhrzeit mit dem Filter Warteschlangen im Netzwerk.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> , der die Obergrenze für einer Warteschlange letzte Änderungsdatum und die Uhrzeit angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Warteschlange Änderungen Flag wird festgelegt, wenn Sie die Eigenschaften einer Warteschlange ändern, aber nicht, wenn eine Nachricht gelesen bzw. in die Warteschlange geschrieben wurde.  
+  
+ Die <xref:System.Messaging.MessageQueueCriteria> Eigenschaften werden mithilfe einer logischen kombiniert `AND`, sodass beide festlegen <xref:System.Messaging.MessageQueueCriteria.ModifiedBefore%2A> und <xref:System.Messaging.MessageQueueCriteria.ModifiedAfter%2A> umschließt ein Zeitintervall für die letzte Änderung der Warteschlangen. Wenn Sie nur festlegen, <xref:System.Messaging.MessageQueueCriteria.ModifiedBefore%2A>, es ist keine untere Grenze für das Datum.  
+  
+ Wenn Sie versuchen, legen Sie <xref:System.Messaging.MessageQueueCriteria.ModifiedBefore%2A> zu einem früheren Zeitpunkt <xref:System.DateTime> als Wert <xref:System.Messaging.MessageQueueCriteria.ModifiedAfter%2A>, <xref:System.Messaging.MessageQueueCriteria.ModifiedAfter%2A> wird zurückgesetzt, um den gleichen (neuen) Wert als <xref:System.Messaging.MessageQueueCriteria.ModifiedBefore%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Anwendung nicht festgelegt. die <see cref="P:System.Messaging.MessageQueueCriteria.ModifiedBefore" /> Eigenschaft vor dem Lesen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

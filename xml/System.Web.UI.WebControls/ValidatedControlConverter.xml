@@ -1,0 +1,100 @@
+<Type Name="ValidatedControlConverter" FullName="System.Web.UI.WebControls.ValidatedControlConverter">
+  <TypeSignature Language="C#" Value="public class ValidatedControlConverter : System.Web.UI.WebControls.ControlIDConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ValidatedControlConverter extends System.Web.UI.WebControls.ControlIDConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ValidatedControlConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.ControlIDConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert ein Steuerelement auf der Web Forms-Seite, die überprüft werden kann, mit einem Validierungssteuerelement in eine Zeichenfolge mit der ID des Steuerelements</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nicht alle Steuerelemente können mit einem Validierungssteuerelement überprüft werden. Diese Klasse erstellt eine Auflistung von Steuerelement-IDs für die Web Forms-Seite, die ein Validierungssteuerelement zugeordnet werden kann. Diese Auflistung wird häufig in einem Designer verwendet, um eine Liste der Steuerelemente auf der Web Forms-Seite anzuzeigen, die ein Validierungssteuerelement zugeordnet werden können.  
+  
+ Wenn Sie eine eigene Validierungssteuerelement zu erstellen, können Sie den Designer, um eine Liste der Steuerelemente anzuzeigen, die Validierungssteuerelemente unterstützen aktivieren. Fügen Sie einfach ein Attribut der Zeichenfolgeneigenschaft, die für das Steuerelement zu überprüfen, wie folgt:  
+  
+```vb  
+<TypeConverter(GetType(ValidatedControlConverter))> _  
+ Public Property ControlToValidate() As String  
+    Get      
+       // Add code to get the ID of the control to validate.  
+    End Get  
+    Set  
+       // Add code to set the ID of the control to validate.  
+    End Set  
+ End Property  
+```  
+  
+```csharp  
+[TypeConverter(typeof(ValidatedControlConverter))]  
+ public string ControlToValidate  
+ {  
+    get   
+    {  
+       // Add code to get the ID of the control to validate.  
+    }  
+    set  
+    {  
+       // Add code to set the ID of the control to validate.  
+    }  
+ }  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidatedControlConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ValidatedControlConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ValidatedControlConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterControl">
+      <MemberSignature Language="C#" Value="protected override bool FilterControl (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool FilterControl(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ValidatedControlConverter.FilterControl(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das zu überprüfende Steuerelement.</param>
+        <summary>Gibt einen Wert, der angibt, ob das angegebene Steuerelement zur Liste der Steuerelemente hinzugefügt werden soll, die überprüft werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn das Steuerelement die Liste der Steuerelemente hinzugefügt werden soll, die überprüft werden können; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.ValidatedControlConverter.FilterControl%2A> -Methode zurückkehrt `true`, die <xref:System.Web.UI.WebControls.ValidatedControlConverter> Instanz wird die ID des Steuerelements in Steuerelementparameter angegebene Hinzufügen der <xref:System.ComponentModel.TypeConverter.StandardValuesCollection> zurückgegebenes die <xref:System.Web.UI.WebControls.ControlIDConverter.GetStandardValues%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

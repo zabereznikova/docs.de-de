@@ -1,0 +1,278 @@
+<Type Name="XmlElementEventArgs" FullName="System.Xml.Serialization.XmlElementEventArgs">
+  <TypeSignature Language="C#" Value="public class XmlElementEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlElementEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlElementEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Xml.Serialization.XmlSerializer.UnknownElement" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115) und [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Die <xref:System.Xml.Serialization.XmlSerializer.UnknownElement> Ereignis tritt auf, wenn Sie nur Aufrufen der <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse deserialisiert `Group` aus einer Datei namens UnknownElements.xml. Wenn ein Element in der Datei gefunden wird, die kein entsprechenden Member in der Klasse hat die <xref:System.Xml.Serialization.XmlSerializer.UnknownElement> Ereignis auftritt. Zum Testen dieses Beispiels, fügen Sie den folgenden XML-Code in eine Datei UnknownElements.XML ein.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+  <GroupName>MyGroup</GroupName>  
+  <GroupSize>Large</GroupSize>  
+  <GroupNumber>444</GroupNumber>  
+  <GroupBase>West</GroupBase>  
+</Group>  
+```  
+  
+ [!code-cpp[XmlSerializer.UnknownElement Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/CPP/unknownelement.cpp#1)]
+ [!code-csharp[XmlSerializer.UnknownElement Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/CS/unknownelement.cs#1)]
+ [!code-vb[XmlSerializer.UnknownElement Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/VB/unknownelement.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Element">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement Element { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement Element" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlElementEventArgs.Element" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das unbekannte XML-Element darstellt.</summary>
+        <value>Das Objekt, das unbekannte XML-Element darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse deserialisiert `Group` aus einer Datei namens UnknownElements.xml. Wenn ein Element in der Datei gefunden wird, die kein entsprechenden Member in der Klasse hat die <xref:System.Xml.Serialization.XmlSerializer.UnknownElement> Ereignis auftritt. Zum Testen dieses Beispiels, fügen Sie den folgenden XML-Code in eine Datei UnknownElements.XML ein.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+  <GroupName>MyGroup</GroupName>  
+  <GroupSize>Large</GroupSize>  
+  <GroupNumber>444</GroupNumber>  
+  <GroupBase>West</GroupBase>  
+</Group>  
+```  
+  
+ [!code-cpp[XmlSerializer.UnknownElement Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/CPP/unknownelement.cpp#1)]
+ [!code-csharp[XmlSerializer.UnknownElement Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/CS/unknownelement.cs#1)]
+ [!code-vb[XmlSerializer.UnknownElement Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/VB/unknownelement.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpectedElements">
+      <MemberSignature Language="C#" Value="public string ExpectedElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExpectedElements" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlElementEventArgs.ExpectedElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine durch Trennzeichen getrennte Liste von XML-Element, von denen erwartet wird, werden in einer XML-Dokumentinstanz ab.</summary>
+        <value>Eine durch Trennzeichen getrennte Liste von XML-Elementnamen. Jeder Name wird im folgenden Format: <paramref name="namespace" />:<paramref name="name" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlElementEventArgs.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeilennummer ab, in denen wurde das unbekannte Element gefunden, wenn der XML-Reader ein <see cref="T:System.Xml.XmlTextReader" />.</summary>
+        <value>Die Nummer der Zeile, in dem das unbekannte Element gefunden wurde, wenn der XML-Reader, ein <see cref="T:System.Xml.XmlTextReader" />ist, andernfalls -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlElementEventArgs.LineNumber%2A> Eigenschaft gibt einen Wert zurück, nur dann, wenn der zugrunde liegenden XML-Reader ein <xref:System.Xml.XmlTextReader>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse deserialisiert `Group` aus einer Datei namens UnknownElements.xml. Wenn ein Element in der Datei gefunden wird, die kein entsprechenden Member in der Klasse hat die <xref:System.Xml.Serialization.XmlSerializer.UnknownElement> Ereignis auftritt. Zum Testen dieses Beispiels, fügen Sie den folgenden XML-Code in eine Datei UnknownElements.XML ein.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+  <GroupName>MyGroup</GroupName>  
+  <GroupSize>Large</GroupSize>  
+  <GroupNumber>444</GroupNumber>  
+  <GroupBase>West</GroupBase>  
+</Group>  
+```  
+  
+ [!code-cpp[XmlSerializer.UnknownElement Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/CPP/unknownelement.cpp#1)]
+ [!code-csharp[XmlSerializer.UnknownElement Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/CS/unknownelement.cs#1)]
+ [!code-vb[XmlSerializer.UnknownElement Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/VB/unknownelement.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinePosition">
+      <MemberSignature Language="C#" Value="public int LinePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlElementEventArgs.LinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stelle in der Zeile, in das unbekannte Element auftritt, wenn der XML-Reader, ein <see cref="T:System.Xml.XmlTextReader" />.</summary>
+        <value>Die Anzahl in der Zeile, in das unbekannte Element auftritt, wenn der XML-Reader, ein <see cref="T:System.Xml.XmlTextReader" />ist, andernfalls -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse deserialisiert `Group` aus einer Datei namens UnknownElements.xml. Wenn ein Element in der Datei gefunden wird, die kein entsprechenden Member in der Klasse hat die <xref:System.Xml.Serialization.XmlSerializer.UnknownElement> Ereignis auftritt. Zum Testen dieses Beispiels, fügen Sie den folgenden XML-Code in eine Datei UnknownElements.XML ein.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+  <GroupName>MyGroup</GroupName>  
+  <GroupSize>Large</GroupSize>  
+  <GroupNumber>444</GroupNumber>  
+  <GroupBase>West</GroupBase>  
+</Group>  
+```  
+  
+ [!code-cpp[XmlSerializer.UnknownElement Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/CPP/unknownelement.cpp#1)]
+ [!code-csharp[XmlSerializer.UnknownElement Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/CS/unknownelement.cs#1)]
+ [!code-vb[XmlSerializer.UnknownElement Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/VB/unknownelement.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectBeingDeserialized">
+      <MemberSignature Language="C#" Value="public object ObjectBeingDeserialized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ObjectBeingDeserialized" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlElementEventArgs.ObjectBeingDeserialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt die <see cref="T:System.Xml.Serialization.XmlSerializer" /> deserialisiert wird.</summary>
+        <value>Das Objekt, das vom deserialisiert wird, wird die <see cref="T:System.Xml.Serialization.XmlSerializer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse deserialisiert `Group` aus einer Datei namens UnknownElements.xml. Wenn ein Element in der Datei gefunden wird, die kein entsprechenden Member in der Klasse hat die <xref:System.Xml.Serialization.XmlSerializer.UnknownElement> Ereignis auftritt. Zum Testen dieses Beispiels, fügen Sie den folgenden XML-Code in eine Datei UnknownElements.XML ein.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+  <GroupName>MyGroup</GroupName>  
+  <GroupSize>Large</GroupSize>  
+  <GroupNumber>444</GroupNumber>  
+  <GroupBase>West</GroupBase>  
+</Group>  
+```  
+  
+ XmlSerializer.UnknownElement-Beispiel 1  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,309 @@
+<Type Name="STATSTG" FullName="System.Runtime.InteropServices.STATSTG">
+  <TypeSignature Language="C#" Value="public struct STATSTG" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential sealed beforefieldinit STATSTG extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.STATSTG" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verwenden Sie stattdessen <see cref="T:System.Runtime.InteropServices.ComTypes.STATSTG" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `STATSTG` im Unterordner "com" der MSDN Library.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="atime">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.FILETIME atime;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Runtime.InteropServices.FILETIME atime" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.STATSTG.atime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FILETIME</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Uhrzeit des Letztes Zugriffs für dieses Speichers, Datenstroms oder Bytearrays Array an</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `STATSTG` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="cbSize">
+      <MemberSignature Language="C#" Value="public long cbSize;" />
+      <MemberSignature Language="ILAsm" Value=".field public int64 cbSize" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.STATSTG.cbSize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Größe des Datenstroms oder Bytearrays in Bytes an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `STATSTG` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="clsid">
+      <MemberSignature Language="C#" Value="public Guid clsid;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Guid clsid" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.STATSTG.clsid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Klassenbezeichner für das Speicherobjekt an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Initialisiert auf `CLSID_NULL` bei neuen Speicherobjekten.  
+  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `STATSTG` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ctime">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.FILETIME ctime;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Runtime.InteropServices.FILETIME ctime" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.STATSTG.ctime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FILETIME</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Erstellungszeit dieses Speichers, Datenstroms oder Bytearrays Array an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `STATSTG` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="grfLocksSupported">
+      <MemberSignature Language="C#" Value="public int grfLocksSupported;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 grfLocksSupported" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.STATSTG.grfLocksSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Typen der Region Sperren vom den Datenstrom oder Bytearray unterstützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `STATSTG` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="grfMode">
+      <MemberSignature Language="C#" Value="public int grfMode;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 grfMode" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.STATSTG.grfMode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die Werten für Zugriffsmodus, der beim Öffnen des Objekts angegeben wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `STATSTG` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="grfStateBits">
+      <MemberSignature Language="C#" Value="public int grfStateBits;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 grfStateBits" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.STATSTG.grfStateBits" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die aktuellen Statusbits des Speicherobjekts an (die zuletzt vom festgelegte Wert die <see langword="IStorage::SetStateBits" /> Methode).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `STATSTG` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="mtime">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.FILETIME mtime;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Runtime.InteropServices.FILETIME mtime" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.STATSTG.mtime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.FILETIME</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Zeitpunkt der letzten Änderung dieses Speichers, Datenstroms oder Bytearrays an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `STATSTG` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="pwcsName">
+      <MemberSignature Language="C#" Value="public string pwcsName;" />
+      <MemberSignature Language="ILAsm" Value=".field public string pwcsName" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.STATSTG.pwcsName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Zeiger auf eine Null-terminierte Zeichenfolge, die mit dem Namen des Objekts, das von dieser Struktur beschrieben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `STATSTG` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="reserved">
+      <MemberSignature Language="C#" Value="public int reserved;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 reserved" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.STATSTG.reserved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für zukünftige Verwendung reserviert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `STATSTG` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="type">
+      <MemberSignature Language="C#" Value="public int type;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 type" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.STATSTG.type" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Typ des Speicherobjekts also einen der Werte aus den <see langword="STGTY" /> Enumeration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `STATSTG` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,133 @@
+<Type Name="VisualStyleElement+StartPanel+MoreProgramsArrow" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+StartPanel+MoreProgramsArrow">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.StartPanel.MoreProgramsArrow" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/StartPanel/MoreProgramsArrow extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.MoreProgramsArrow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> für jeden Status der Objekte die **Programme** Pfeil in der **starten** Menü. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Eigenschaft des der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.MoreProgramsArrow> -Klasse zurückgegeben wird ein <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für einen anderen Zustand des der **Programme** Pfeil.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.MoreProgramsArrow.Normal%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementStartPanelMoreProgramsArrow1` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#216](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#216)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#216](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#216)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Hot">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Hot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Hot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.MoreProgramsArrow.Hot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuellen Stilelements darstellt, die die **Programme** Pfeil im aktiven Zustand.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> darstellt, die die **Programme** Pfeil im aktiven Zustand.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.MoreProgramsArrow.Hot%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.MoreProgramsArrow.Hot%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementStartPanelMoreProgramsArrow2` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#217](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#217)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#217](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#217)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Normal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Normal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.MoreProgramsArrow.Normal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuellen Stilelements darstellt, die die **Programme** Pfeil in den Zustand "normal".</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> darstellt, die die **Programme** Pfeil in den Zustand "normal".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.MoreProgramsArrow.Normal%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.MoreProgramsArrow.Normal%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementStartPanelMoreProgramsArrow1` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#216](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#216)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#216](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#216)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pressed">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Pressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Pressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.MoreProgramsArrow.Pressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuellen Stilelements darstellt, die die **Programme** Pfeil im gedrückten Zustand befindet.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> darstellt, die die **Programme** Pfeil im gedrückten Zustand befindet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.MoreProgramsArrow.Pressed%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel.MoreProgramsArrow.Pressed%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementStartPanelMoreProgramsArrow3` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#218](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#218)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#218](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#218)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

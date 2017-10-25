@@ -1,0 +1,63 @@
+<Type Name="IContributeEnvoySink" FullName="System.Runtime.Remoting.Contexts.IContributeEnvoySink">
+  <TypeSignature Language="C#" Value="public interface IContributeEnvoySink" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContributeEnvoySink" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Contexts.IContributeEnvoySink" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Trägt dazu bei einer Envoy Nachricht Senke auf der Clientseite.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Contexts.IContributeEnvoySink> -Schnittstelle wird von Kontexteigenschaften auf dem Server implementiert <xref:System.Runtime.Remoting.Contexts.Context> -Klasse, die eine Botenmeldungssenke auf der Clientseite werden soll. Die Server Envoy-Kette besteht aus den Kontexteigenschaften, die implementieren <xref:System.Runtime.Remoting.Contexts.IContributeEnvoySink>. Die Kette Envoy befindet sich auf der Clientseite und fungiert als ein Repräsentanten für die entsprechende Nachricht aus der Server-Kontexteigenschaften senken.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetEnvoySink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageSink GetEnvoySink (MarshalByRefObject obj, System.Runtime.Remoting.Messaging.IMessageSink nextSink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageSink GetEnvoySink(class System.MarshalByRefObject obj, class System.Runtime.Remoting.Messaging.IMessageSink nextSink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContributeEnvoySink.GetEnvoySink(System.MarshalByRefObject,System.Runtime.Remoting.Messaging.IMessageSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.MarshalByRefObject" />
+        <Parameter Name="nextSink" Type="System.Runtime.Remoting.Messaging.IMessageSink" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Serverobjekt für das die Kette erstellt wird.</param>
+        <param name="nextSink">Die Kette der senken bisher zusammengesetzt.</param>
+        <summary>Akzeptiert die erste Senke in der Kette der senken, die bisher zusammengesetzt, und klicken Sie dann die Senke Nachricht vor der Senkenkette verkettet.</summary>
+        <returns>Die zusammengesetzte Senkenkette.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Contexts.IContributeEnvoySink.GetEnvoySink%2A> Methode eine Senke für Envoy zu erstellen, wenn das Ziel ein anderer Kontext in derselben Anwendungsdomäne ist und wird von der Wrap-Vorgang verwendet die Optimierung verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

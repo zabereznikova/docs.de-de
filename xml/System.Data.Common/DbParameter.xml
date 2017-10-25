@@ -1,0 +1,652 @@
+<Type Name="DbParameter" FullName="System.Data.Common.DbParameter">
+  <TypeSignature Language="C#" Value="public abstract class DbParameter : MarshalByRefObject, System.Data.IDbDataParameter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DbParameter extends System.MarshalByRefObject implements class System.Data.IDataParameter, class System.Data.IDbDataParameter" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.DbParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.IDbDataParameter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Parameter für eine <see cref="T:System.Data.Common.DbCommand" /> und optional für seine Zuordnung zu einer <see cref="T:System.Data.DataSet" /> Spalte. Weitere Informationen zu Parametern finden Sie unter [Konfigurieren von Parametern und Parameterdatentypen](~/docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DbParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbParameter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Common.DbParameter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbType">
+      <MemberSignature Language="C#" Value="public abstract System.Data.DbType DbType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DbType DbType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbParameter.DbType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Data.DbType" /> des Parameters ab oder legt ihn fest.</summary>
+        <value>Einer der <see cref="T:System.Data.DbType" />-Werte. Die Standardeinstellung ist <see cref="F:System.Data.DbType.String" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft nicht festgelegt ist, auf eine gültige <see cref="T:System.Data.DbType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public abstract System.Data.ParameterDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.ParameterDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbParameter.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.ParameterDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob der Parameter nur zur Eingabe, nur zur Ausgabe oder bidirektional verwendet wird oder ob es sich um einen Parameter für den Rückgabewert einer gespeicherten Prozedur handelt.</summary>
+        <value>Einer der <see cref="T:System.Data.ParameterDirection" />-Werte. Die Standardeinstellung ist <see langword="Input" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Data.ParameterDirection> ausgegeben wird und Ausführung der zugeordneten <xref:System.Data.Common.DbCommand> keinen Rückgabewert angeben, der <xref:System.Data.Common.DbParameter> enthält einen null-Wert.  
+  
+ `Output`, `InputOut`, und `ReturnValue` Parameter zurückgegeben, indem <xref:System.Data.Common.DbCommand.ExecuteReader%2A> kann nicht zugegriffen werden, bis Sie rufen <xref:System.Data.Common.DbDataReader.Close%2A> oder <xref:System.Data.Common.DbDataReader.Dispose%2A> auf die <xref:System.Data.Common.DbDataReader>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft nicht festgelegt ist, auf einen der gültigen <see cref="T:System.Data.ParameterDirection" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNullable">
+      <MemberSignature Language="C#" Value="public abstract bool IsNullable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNullable" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbParameter.IsNullable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Parameter NULL-Werte akzeptiert, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn NULL-Werte akzeptiert werden, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ NULL-Werte behandelt werden, mithilfe der <xref:System.DBNull> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterName">
+      <MemberSignature Language="C#" Value="public abstract string ParameterName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbParameter.ParameterName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der <see cref="T:System.Data.Common.DbParameter" /> ab oder legt diesen fest.</summary>
+        <value>Der Name des <see cref="T:System.Data.Common.DbParameter" />. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Precision">
+      <MemberSignature Language="C#" Value="public virtual byte Precision { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Precision" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbParameter.Precision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>[Wird nur in .NET Framework 4.5.1 und neueren Versionen unterstützt]  
+  
+ Ruft die maximale Anzahl von Ziffern ab, die zur Darstellung der <see cref="P:System.Data.Common.DbParameter.Value" />-Eigenschaft verwendet werden kann, oder legt diese fest.</summary>
+        <value>Die maximale Anzahl von Ziffern für die Darstellung der <see cref="P:System.Data.Common.DbParameter.Value" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetDbType">
+      <MemberSignature Language="C#" Value="public abstract void ResetDbType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResetDbType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbParameter.ResetDbType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die **DbType** Eigenschaft auf die ursprünglichen Einstellungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scale">
+      <MemberSignature Language="C#" Value="public virtual byte Scale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Scale" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbParameter.Scale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Dezimalstellen ab, in die <see cref="P:System.Data.Common.DbParameter.Value" /> aufgelöst wird, oder legt diese fest.</summary>
+        <value>Die Anzahl der Dezimalstellen, in die <see cref="P:System.Data.Common.DbParameter.Value" /> aufgelöst wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public abstract int Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Size" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbParameter.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen der maximalen Größe (in Bytes) der Daten in der Spalte.</summary>
+        <value>Die maximale Größe (in Bytes) der Daten in der Spalte. Der Standardwert wird aus dem Parameterwert hergeleitet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.DbParameter.Size%2A> Eigenschaft wird für Binär- und Zeichenfolgentypen verwendet.  
+  
+ Für Datentypen Objektressourcen und ANSI-Daten String, die <xref:System.Data.Common.DbParameter.Size%2A> Eigenschaft bezieht sich auf die Anzahl der Bytes. Bei Unicode-Zeichenfolgendaten <xref:System.Data.Common.DbParameter.Size%2A> bezieht sich auf die Anzahl der Zeichen. Die Anzahl die für Zeichenfolgen umfasst nicht das abschließende Zeichen.  
+  
+ Für Datentypen mit variabler Länge <xref:System.Data.Common.DbParameter.Size%2A> beschreibt die Höchstmenge an Daten, die an den Server übermittelt. Beispielsweise für einen Unicode-Zeichenfolgenwert <xref:System.Data.Common.DbParameter.Size%2A> missbraucht werden zur Begrenzung des Umfangs der Daten, die an den Server, auf die ersten 100 Zeichen gesendet.  
+  
+ Für bidirektionale und Ausgabeparameter und Rückgabewerte, müssen Sie festlegen, den Wert des <xref:System.Data.Common.DbParameter.Size%2A>. Dies ist nicht erforderlich für Eingabeparameter, und wenn nicht explizit ist, legen Sie den Wert aus der tatsächlichen Größe des angegebenen Parameters abgeleitet, wenn eine parametrisierte Anweisung ausgeführt wird.  
+  
+ Die <xref:System.Data.Common.DbParameter.DbType%2A> und <xref:System.Data.Common.DbParameter.Size%2A> Eigenschaften eines Parameters abgeleitet werden können, durch Festlegen von <xref:System.Data.Common.DbParameter.Value%2A>. Aus diesem Grund müssen Sie nicht angeben. Sie werden jedoch nicht bereitgestellt <xref:System.Data.Common.DbParameter> eigenschafteneinstellungen. Wenn die Größe des Parameters abgeleitet wurde, z. B. <xref:System.Data.Common.DbParameter.Size%2A> abgeleitete Wert nach der anweisungsausführung nicht enthält.  
+  
+ Für die feste Länge für Datentypen, die den Wert des <xref:System.Data.Common.DbParameter.Size%2A> wird ignoriert. Sie können für Informationszwecke abgerufen werden und gibt die Höchstmenge an Bytes, die der Anbieter verwendet, wenn den Wert des Parameters an den Server übertragen.  
+  
+ Wenn die Größe des Werts für die angegebene eine <xref:System.Data.Common.DbParameter> überschreitet das angegebene <xref:System.Data.Common.DbParameter.Size%2A>, die <xref:System.Data.Common.DbParameter.Value%2A> von der <xref:System.Data.Common.DbParameter> enthält den angegebenen Wert abgeschnitten, um die Größe des der <xref:System.Data.Common.DbParameter>.  
+  
+ Für Parameter des Typs `DbType`.`String`, den Wert des <xref:System.Data.Common.DbParameter.Size%2A> Länge in Unicode-Zeichen ist. Für Parameter des Typs `DbType`.`Xml`, <xref:System.Data.Common.DbParameter.Size%2A> wird ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceColumn">
+      <MemberSignature Language="C#" Value="public abstract string SourceColumn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbParameter.SourceColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Quellspalte zugeordnet werden, um die <see cref="T:System.Data.DataSet" /> und zum Laden oder Zurückgeben der <see cref="P:System.Data.Common.DbParameter.Value" />.</summary>
+        <value>Der Name der Quellspalte, die dem <see cref="T:System.Data.DataSet" /> zugeordnet ist. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Data.Common.DbParameter.SourceColumn%2A> festgelegt ist, auf einen anderen als eine leere Zeichenfolge, die den Wert des Parameters wird abgerufen, aus der Spalte mit der <xref:System.Data.Common.DbParameter.SourceColumn%2A> Name. Wenn <xref:System.Data.Common.DbParameter.Direction%2A> festgelegt ist, um `Input`, der Wert stammt aus dem <xref:System.Data.DataSet>. Wenn <xref:System.Data.Common.DbParameter.Direction%2A> festgelegt ist, um `Output`, der Wert aus der Datenquelle stammt. Ein <xref:System.Data.Common.DbParameter.Direction%2A> von `InputOutput` ist eine Kombination aus beidem.  
+  
+ Weitere Informationen zur Verwendung der <xref:System.Data.Common.DbParameter.SourceColumn%2A> Eigenschaft finden Sie unter [DataAdapter-Parameter](~/docs/framework/data/adonet/dataadapter-parameters.md) und [Aktualisieren von Datenquellen mit "DataAdapters"](~/docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceColumnNullMapping">
+      <MemberSignature Language="C#" Value="public abstract bool SourceColumnNullMapping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SourceColumnNullMapping" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbParameter.SourceColumnNullMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt einen Wert fest, der angibt, ob die Quellspalte NULL-Werte zulässt, oder ruft ihn ab. Dadurch kann <see cref="T:System.Data.Common.DbCommandBuilder" /> ordnungsgemäß Update-Anweisungen für Spalten generieren, die NULL-Werte zulassen.</summary>
+        <value>
+          <see langword="true" />, wenn die Quellspalte NULL-Werte zulässt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Common.DbParameter.SourceColumnNullMapping%2A>wird verwendet, durch die <xref:System.Data.Common.DbCommandBuilder> ordnungsgemäß Update-Befehle generieren, beim Umgang mit Spalten NULL-Werte zulässt. Im Allgemeinen die Verwendung von <xref:System.Data.Common.DbParameter.SourceColumnNullMapping%2A> ist für Entwickler, die von erben beschränkt <xref:System.Data.Common.DbCommandBuilder>.  
+  
+ <xref:System.Data.Common.DbCommandBuilder>Diese Eigenschaft verwendet, um zu bestimmen, ob die Quellspalte NULL-Werte zulässt, und wird diese Eigenschaft auf `true` wird jedoch auf NULL festlegbar und `false` wird jedoch nicht. Wenn <xref:System.Data.Common.DbCommandBuilder> ist generieren die Update-Anweisung, untersucht der <xref:System.Data.Common.DbParameter.SourceColumnNullMapping%2A> für jeden Parameter. Wenn die Eigenschaft `true`, <xref:System.Data.Common.DbCommandBuilder> generiert eine WHERE-Klausel wie folgt (in diesem Abfrageausdruck, stellt "FieldName" den Namen des Felds dar):  
+  
+```  
+((@IsNull_FieldName = 1 AND FieldName IS NULL) OR   
+  (FieldName = @Original_FieldName))  
+```  
+  
+ Wenn <xref:System.Data.Common.DbParameter.SourceColumnNullMapping%2A> das Feld `false`, <xref:System.Data.Common.DbCommandBuilder> generiert die folgende WHERE-Klausel:  
+  
+```  
+FieldName = @OriginalFieldName  
+```  
+  
+ Darüber hinaus @IsNull_FieldName 1 enthält, wenn das Quellfeld enthält Null, und 0, wenn dies nicht der Fall. Dieser Mechanismus ermöglicht die Optimierung der Leistung in SQL Server sowie für gemeinsamen Code, der über mehrere Anbieter funktioniert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceVersion">
+      <MemberSignature Language="C#" Value="public virtual System.Data.DataRowVersion SourceVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DataRowVersion SourceVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbParameter.SourceVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Data.DataRowVersion" /> verwenden, wenn Sie zum Laden <see cref="P:System.Data.Common.DbParameter.Value" />.</summary>
+        <value>Einer der <see cref="T:System.Data.DataRowVersion" />-Werte. Die Standardeinstellung ist <see langword="Current" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Von verwendete <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> während einer <xref:System.Data.Common.DbDataAdapter.Update%2A> Vorgang, um zu bestimmen, ob der Wert des Parameters, um festgelegt ist `Current` oder `Original`. Auf diese Weise können Primärschlüssel aktualisiert werden. Diese Eigenschaft wird festgelegt, auf die Version von der <xref:System.Data.DataRow> verwendet werden, indem Sie die `DataRow.Item` -Eigenschaft, oder die <xref:System.Data.DataRow.GetChildRows%2A> Methode der <xref:System.Data.DataRow> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft nicht festgelegt ist, in eines der <see cref="T:System.Data.DataRowVersion" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDataParameter.SourceVersion">
+      <MemberSignature Language="C#" Value="System.Data.DataRowVersion System.Data.IDataParameter.SourceVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DataRowVersion System.Data.IDataParameter.SourceVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbParameter.System#Data#IDataParameter#SourceVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbDataParameter.Precision">
+      <MemberSignature Language="C#" Value="byte System.Data.IDbDataParameter.Precision { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 System.Data.IDbDataParameter.Precision" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbParameter.System#Data#IDbDataParameter#Precision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Genauigkeit numerischer Parameter an.</summary>
+        <value>Die maximale Anzahl von Ziffern für die Darstellung der <see langword="Value" />-Eigenschaft eines Datenanbieter-<see langword="Parameter" />-Objekts. Der Standardwert ist 0 (null) und gibt an, dass ein Datenanbieter die Genauigkeit für <see langword="Value" /> festlegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbParameter>-Instanz in eine <xref:System.Data.IDbDataParameter>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Data.IDbDataParameter.Precision%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbDataParameter.Scale">
+      <MemberSignature Language="C#" Value="byte System.Data.IDbDataParameter.Scale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 System.Data.IDbDataParameter.Scale" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbParameter.System#Data#IDbDataParameter#Scale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Data.IDbDataParameter.Scale" />.</summary>
+        <value>Die Anzahl der Dezimalstellen, in die <see cref="T:System.Data.OleDb.OleDbParameter.Value" /> aufgelöst wird. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbParameter>-Instanz in eine <xref:System.Data.IDbDataParameter>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Data.IDbDataParameter.Scale%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public abstract object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbParameter.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Parameters ab oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Object" />, das den Wert des Parameters darstellt. Der Standardwert ist NULL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Eingabeparameter, der Wert gebunden ist, um die <xref:System.Data.Common.DbCommand> , die an den Server gesendet wird. Für die Ausgabe- und Rückgabewertparameter-der Wert wird festgelegt, nach Abschluss des der <xref:System.Data.Common.DbCommand> und nach der <xref:System.Data.Common.DbDataReader> geschlossen wird.  
+  
+ Wenn Sie einen null-Parameterwert an den Server senden, müssen Sie angeben <xref:System.DBNull>, nicht null. Der NULL-Wert im System ist ein leeres Objekt, das über keinen Wert verfügt. <xref:System.DBNull> wird zur Darstellung von NULL-Werten verwendet.  
+  
+ Wenn die Anwendung den Datenbanktyp angibt, wird der gebundene Wert in diesen Typ konvertiert, wenn der Anbieter die Daten an den Server sendet. Der Anbieter versucht, sämtliche Typen von Werten zu konvertieren, wenn es unterstützt die <xref:System.IConvertible> Schnittstelle. Fehler bei der Konvertierung möglicherweise auf, wenn der angegebene Typ nicht kompatibel mit dem Wert ist.  
+  
+ Die <xref:System.Data.Common.DbParameter.DbType%2A> Eigenschaft durch Festlegen des Werts abgeleitet werden kann.  
+  
+ Die <xref:System.Data.Common.DbParameter.Value%2A> Eigenschaft wird überschrieben, indem `DbDataAdapter.Update`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

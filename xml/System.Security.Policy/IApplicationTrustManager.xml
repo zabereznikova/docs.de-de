@@ -1,0 +1,83 @@
+<Type Name="IApplicationTrustManager" FullName="System.Security.Policy.IApplicationTrustManager">
+  <TypeSignature Language="C#" Value="public interface IApplicationTrustManager : System.Security.ISecurityEncodable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IApplicationTrustManager implements class System.Security.ISecurityEncodable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.IApplicationTrustManager" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.ISecurityEncodable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bestimmt, ob eine Anwendung ausgeführt werden soll und welcher Satz von Berechtigungen gewährt werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Trust-Manager implementieren müssen die <xref:System.Security.Policy.IApplicationTrustManager> Schnittstelle. Der Host Ruft die <xref:System.Security.Policy.IApplicationTrustManager.DetermineApplicationTrust%2A?displayProperty=nameWithType> Methode, um zu bestimmen, ob eine Anwendung ausgeführt werden soll und welche Berechtigungen für die Anwendung gewährt werden sollen.  
+  
+ In der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] und später ist es nur eine Trust-Manager, der eine benutzerdefinierte Implementierung sein kann von der <xref:System.Security.Policy.IApplicationTrustManager> Schnittstelle. Bei der Standardimplementierung der Trust-Manager fordert vom Benutzer Berechtigungen zum Installieren der Anwendung und die Berechtigungen für die Anwendung zu erhöhen. Andere Implementierungen der Trust-Manager möglicherweise unterschiedliche Benutzeroberflächen bereit. Beispielsweise kann eine Implementierung überprüfen, ob eine Enterprise-Liste für vertrauenswürdige Anwendungen anstelle der Benutzer diese Informationen aufgefordert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine einfache Implementierung der <xref:System.Security.Policy.IApplicationTrustManager>.  
+  
+ [!code-csharp[System.Security.Policy.IApplicationTrustManager#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.IApplicationTrustManager/CS/customTrustManager.cs#1)]
+ [!code-vb[System.Security.Policy.IApplicationTrustManager#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.IApplicationTrustManager/VB/customtrustmanager.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DetermineApplicationTrust">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.ApplicationTrust DetermineApplicationTrust (ActivationContext activationContext, System.Security.Policy.TrustManagerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Policy.ApplicationTrust DetermineApplicationTrust(class System.ActivationContext activationContext, class System.Security.Policy.TrustManagerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.IApplicationTrustManager.DetermineApplicationTrust(System.ActivationContext,System.Security.Policy.TrustManagerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.ApplicationTrust</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activationContext" Type="System.ActivationContext" />
+        <Parameter Name="context" Type="System.Security.Policy.TrustManagerContext" />
+      </Parameters>
+      <Docs>
+        <param name="activationContext">Den Aktivierungskontext für die Anwendung.</param>
+        <param name="context">Der Trust-Manager-Kontext für die Anwendung.</param>
+        <summary>Bestimmt, ob eine Anwendung ausgeführt werden soll und welcher Satz von Berechtigungen gewährt werden soll.</summary>
+        <returns>Ein Objekt, das sicherheitsrelevanten Aspekten der Anwendung enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Policy.IApplicationTrustManager.DetermineApplicationTrust%2A> Methode wird aufgerufen, indem der Host kann bestimmen, ob eine Anwendung ausgeführt werden soll und welcher Satz von Berechtigungen gewährt werden sollten. <xref:System.Security.Policy.IApplicationTrustManager.DetermineApplicationTrust%2A>Gibt eine <xref:System.Security.Policy.ApplicationTrust> -Objekt mit einem <xref:System.Security.Policy.ApplicationTrust.DefaultGrantSet%2A> -Eigenschaft, die eine Berechtigung enthält festgelegt, die die Berechtigungen für jede Assembly, die Ausführung im Kontext der Anwendung gewährt werden darstellt. Die gewährten Berechtigungen gelten nicht für Assemblys im globalen Assemblycache. Die <xref:System.Security.Policy.ApplicationTrust> -Objekt verfügt außerdem über eine <xref:System.Security.Policy.ApplicationTrust.IsApplicationTrustedToRun%2A> -Eigenschaft, die der Trust-Manager legt fest, um anzugeben, ob die Anwendung vertraut werden soll. Wenn der Trust-Manager gibt an, dass die Anwendung vertrauenswürdig sind, wird dem Host aktiviert die Anwendung und gewährt der Assemblys den Berechtigungen, die gemäß der <xref:System.Security.Policy.ApplicationTrust> Auflistung.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung der <xref:System.Security.Policy.IApplicationTrustManager.DetermineApplicationTrust%2A> Methode für einen benutzerdefinierten Trust-Manager. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Policy.IApplicationTrustManager> Schnittstelle.  
+  
+ [!code-csharp[System.Security.Policy.IApplicationTrustManager#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.IApplicationTrustManager/CS/customTrustManager.cs#2)]
+ [!code-vb[System.Security.Policy.IApplicationTrustManager#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.IApplicationTrustManager/VB/customtrustmanager.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

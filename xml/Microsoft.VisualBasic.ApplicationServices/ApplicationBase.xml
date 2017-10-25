@@ -1,0 +1,387 @@
+<Type Name="ApplicationBase" FullName="Microsoft.VisualBasic.ApplicationServices.ApplicationBase">
+  <TypeSignature Language="C#" Value="public class ApplicationBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ApplicationBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.ApplicationServices.ApplicationBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Eigenschaften, Methoden und Ereignisse im Zusammenhang mit der aktuellen Anwendung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften verfügbar gemacht werden, indem die `My.Application` Objekt Daten zurück, die nur mit der aktuellen Anwendung oder DLL verknüpft ist. Mit `My.Application` können keine Informationen auf Systemebene bearbeitet werden.  
+  
+ Das `My.Application`-Objekt besteht aus den folgenden Klassen:  
+  
+-   <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> stellt Member bereit, die in allen Projekten verfügbar sind.  
+  
+-   <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>enthält Elemente, die in Windows Forms-Anwendungen verfügbar sind.  
+  
+-   <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>enthält Elemente, die in konsolenanwendungen verfügbar sind.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Application.GetEnvironmentVariable` Methode abgerufen und den Wert der PATH-Umgebungsvariable angezeigt, wenn dieser Wert verfügbar ist. Andernfalls wird eine Meldung angezeigt, dass die PATH-Umgebungsvariable nicht vorhanden ist.  
+  
+ [!code-vb[VbVbalrMyApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplication/VB/Form1.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.ApplicationServices.ApplicationBase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeCulture">
+      <MemberSignature Language="C#" Value="public void ChangeCulture (string cultureName);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void ChangeCulture(string cultureName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeCulture(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cultureName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cultureName">
+          <see langword="String" />. Der Name der Kultur als Zeichenfolge. Eine Liste der möglichen Namen, finden Sie unter <see cref="T:System.Globalization.CultureInfo" />.</param>
+        <summary>Ändert die Kultur, die vom aktuellen Thread verwendet wird, für die Bearbeitung und Formatierung von Zeichenfolgen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Application.ChangeCulture` Methode ändert des aktuellen Threads <xref:System.Threading.Thread.CurrentCulture%2A> Eigenschaft. <xref:System.Threading.Thread.CurrentCulture%2A>Bestimmt die Standardformate für Datum, Uhrzeit, Währung, Zahlen, die Sortierreihenfolge von Text, Zeichenfolgenvergleiche und Groß-/Kleinschreibung für alle Berechnungen in diesem Thread an.  
+  
+ Um die aktuelle Kultur abzurufen, können Sie die <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Culture%2A> Eigenschaft oder die <xref:System.Threading.Thread.CurrentCulture%2A> Eigenschaft.  
+  
+ Die <xref:System.Threading.Thread.CurrentCulture%2A> Einstellung unterscheidet sich von der Language-Einstellung. Sie enthält nur Daten, die im Zusammenhang mit Standardeinstellungen für eine geografische Region. Aus diesem Grund die <xref:System.Threading.Thread.CurrentCulture%2A> Eigenschaft kann nur festgelegt werden, auf eine bestimmte Kultur oder die <xref:System.Globalization.CultureInfo.InvariantCulture%2A>.  
+  
+ Verwenden der `My.Application.ChangeUICulture` Methode, um die Kultur zu ändern, die der aktuelle Thread zum Abrufen von kulturspezifischen Ressourcen verwendet.  
+  
+> [!IMPORTANT]
+>  Die `My.Application.ChangeCulture` Methode erfordert eine <xref:System.Security.Permissions.SecurityPermission> mit der <xref:System.Security.Permissions.SecurityPermissionFlag.ControlThread> festgelegt. Bearbeiten von Threads ist aufgrund der mit Threads verbundenen Sicherheitszustands riskant. Daher sollte diese Berechtigung nur nach Bedarf für vertrauenswürdigen Code erteilt werden. Sie können die Kultur eines Threads in teilweise vertrauenswürdigem Code nicht ändern.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie das Ändern der Kultur ändert der Zeichenfolgendarstellung von Datumsangaben.  
+  
+ [!code-vb[VbVbalrMyApplication#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplication/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="cultureName" /> ist <see langword="Nothing" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="cultureName" /> ist kein gültiger Kulturname.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeUICulture">
+      <MemberSignature Language="C#" Value="public void ChangeUICulture (string cultureName);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void ChangeUICulture(string cultureName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cultureName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cultureName">
+          <see langword="String" />. Der Name der Kultur als Zeichenfolge. Eine Liste der möglichen Namen, finden Sie unter <see cref="T:System.Globalization.CultureInfo" />.</param>
+        <summary>Ändert die Kultur, die der aktuelle Thread zum Abrufen von kulturspezifischen Ressourcen verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Application.ChangeUICulture` Methode ändert des aktuellen Threads <xref:System.Threading.Thread.CurrentUICulture%2A> Eigenschaft. Die <xref:System.Threading.Thread.CurrentUICulture%2A> Eigenschaft bestimmt, die vom Ressourcen-Manager verwendete Kultur und die `My.Resources` Objekt; er diese Informationen verwendet, um zur Laufzeit kulturabhängige Ressourcen sucht.  
+  
+ Um die aktuelle Benutzeroberflächenkultur abzurufen, können Sie die <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> Eigenschaft oder die <xref:System.Threading.Thread.CurrentUICulture%2A> Eigenschaft.  
+  
+ Verwenden der `My.Application.ChangeCulture` Methode, um die Kultur zu ändern, die der aktuelle Thread für die Bearbeitung und Formatierung von Zeichenfolgen verwendet.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Application.ChangeUICulture` aufzurufende Methode legen Sie die Kultur, die die `My.Resources` Objekt zum Abrufen von Ressourcen verwendet.  
+  
+ [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
+  
+ Für dieses Beispiel funktioniert, muss Ihre Anwendung eine Zeichenfolge mit dem Namen verfügen `Message` in die Anwendung Ressourcen-Datei, und die Anwendung müssen die Kultur Französisch-Version der Ressourcendatei `Resources.fr-FR.resx`. Weitere Informationen finden Sie unter [wie: Hinzufügen oder Entfernen von Ressourcen](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).  
+  
+ Wenn die Anwendung keine der Kultur Französisch-Version der Ressourcendatei, die `My.Resources` Objekt ruft die Ressource aus der Ressourcendatei für die Standardkultur ab.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="cultureName" /> ist <see langword="Nothing" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="cultureName" /> ist kein gültiger Kulturname.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo Culture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo Culture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kultur, die der aktuelle Thread für die Bearbeitung und Formatierung von Zeichenfolgen verwendet.</summary>
+        <value>Ein <see cref="T:System.Globalization.CultureInfo" /> -Objekt, das die Kultur des aktuellen Threads darstellt, für die Bearbeitung und Formatierung von Zeichenfolgen verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Application.CurrentCulture` -Eigenschaft ruft die <xref:System.Globalization.CultureInfo> -Objekt, das der aktuelle Thread für die Bearbeitung und Formatierung von Zeichenfolgen verwendet. Dieses Objekt ist identisch mit dem zurückgegebenes Kennwort die <xref:System.Threading.Thread.CurrentCulture%2A> -Eigenschaft, die Großteil der Berechnungen Zeichenfolgen beziehen, in diesem Thread steuert. Die <xref:System.Threading.Thread.CurrentCulture%2A> Eigenschaft bestimmt die Standardformate für Datumsangaben, Uhrzeiten, Währung und Zahlen. Es wird bestimmt, wie Sortieren und vergleichen Zeichenfolgen profitieren.  
+  
+ Um die Kultur zu ändern, können Sie die <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeCulture%2A> Methode oder weisen Sie ein anderes <xref:System.Globalization.CultureInfo> -Objekt an die <xref:System.Threading.Thread.CurrentCulture%2A> Eigenschaft.  
+  
+ Die <xref:System.Threading.Thread.CurrentCulture%2A> Einstellung unterscheidet sich von der Language-Einstellung. Sie enthält nur Daten, die im Zusammenhang mit Standardeinstellungen für eine geografische Region.  
+  
+ Verwenden der `My.Application.CurrentUICulture` Eigenschaft, um die Kultur abzurufen, die der aktuelle Thread zum Abrufen von kulturspezifischen Ressourcen verwendet.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie die Kultur für die Zeichenfolgendarstellung von Datumsangaben beeinflusst.  
+  
+ [!code-vb[VbVbalrMyApplication#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplication/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnvironmentVariable">
+      <MemberSignature Language="C#" Value="public string GetEnvironmentVariable (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance string GetEnvironmentVariable(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.GetEnvironmentVariable(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein <see langword="String" /> mit dem Namen der Umgebungsvariablen.</param>
+        <summary>Gibt den Wert der angegebenen Umgebungsvariablen zurück.</summary>
+        <returns>Ein <see langword="String" /> mit dem Wert der Umgebungsvariablen mit dem Namen <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Application.GetEnvironmentVariable` Methodenrückgabe die Umgebungsvariable mit dem Namen `name`. Diese Methode ist vergleichbar mit <xref:System.Environment.GetEnvironmentVariable%28System.String%29?displayProperty=nameWithType>, mit dem Unterschied, dass diese Methode löst eine Ausnahme aus, wenn durch die Umgebungsvariable angegeben `name` ist nicht vorhanden.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Application.GetEnvironmentVariable` Methode zum Abrufen und anzeigen den Wert der PATH-Umgebungsvariable, falls verfügbar. Andernfalls wird eine Meldung, dass die PATH-Umgebungsvariable nicht vorhanden ist.  
+  
+ [!code-vb[VbVbalrMyApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplication/VB/Form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="Nothing" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Umgebungsvariable gemäß <paramref name="name" /> ist nicht vorhanden.</exception>
+        <exception cref="T:System.Security.SecurityException">Der aufrufende Code verfügt nicht über <see cref="T:System.Security.Permissions.EnvironmentPermission" /> mit <see langword="Read" /> Zugriff.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Info">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.ApplicationServices.AssemblyInfo Info { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.ApplicationServices.AssemblyInfo Info" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Info" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.ApplicationServices.AssemblyInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das Eigenschaften, die zum Abrufen von Informationen über die Assembly der Anwendung, z. B. die Versionsnummer, Beschreibung usw. bereitstellt.</summary>
+        <value>Die <see cref="T:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo" /> Objekt für die aktuelle Anwendung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Application.Info.Version` Eigenschaft, um die Version der Anwendung anzuzeigen.  
+  
+ [!code-vb[VbVbalrMyApplication#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplication/VB/Form1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Logging.Log Log { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.Logging.Log Log" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Logging.Log</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das Eigenschaften und Methoden zum Schreiben von Ereignis-und Ausnahmeinformationen in die Anwendung Protokolllistener bereitstellt.</summary>
+        <value>Die <see cref="T:Microsoft.VisualBasic.Logging.Log" /> Objekt für die aktuelle Anwendung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieses Beispiel zeigt die Verwendung der `My.Application.Log.WriteEntry` -Methode zum Protokollieren von Ablaufprotokollinformationen. Weitere Informationen finden Sie unter [wie: Schreiben von Protokollmeldungen](~/docs/visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md).  
+  
+ [!code-vb[VbVbalrMyApplicationLog#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UICulture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo UICulture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo UICulture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kultur, die der aktuelle Thread zum Abrufen von kulturspezifischen Ressourcen verwendet.</summary>
+        <value>Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die Kultur darstellt, die der aktuelle Thread zum Abrufen von kulturspezifischen Ressourcen verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Application.CurrentUICulture` -Eigenschaft ruft die <xref:System.Globalization.CultureInfo> Objekt, das der aktuelle Thread zum Abrufen von kulturspezifischen Ressourcen verwendet. Dieses Objekt ist identisch mit dem zurückgegebenes Kennwort die <xref:System.Threading.Thread.CurrentUICulture%2A> Eigenschaft. Die <xref:System.Threading.Thread.CurrentUICulture%2A> Eigenschaft bestimmt, die vom Ressourcen-Manager verwendete Kultur und die `My.Resources` -Objekt, die benötigt werden, um zur Laufzeit kulturabhängige Ressourcen sucht.  
+  
+ Um die Kultur zu ändern, können Sie die <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A> Methode oder weisen Sie ein anderes <xref:System.Globalization.CultureInfo> -Objekt an die <xref:System.Threading.Thread.CurrentUICulture%2A> Eigenschaft.  
+  
+ Die <xref:System.Threading.Thread.CurrentCulture%2A> Einstellung unterscheidet sich von der Language-Einstellung. Sie enthält nur Daten, die im Zusammenhang mit Standardeinstellungen für eine geografische Region.  
+  
+ Verwenden der `My.Application.CurrentCulture` Eigenschaft, um die Kultur abzurufen, die der aktuelle Thread für die Bearbeitung und Formatierung von Zeichenfolgen verwendet.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|-|-|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Application.CurrentCulture` Eigenschaft, um die aktuelle Kultur zwischenzuspeichern, bevor er mit <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>. Die `My.Application.ChangeUICulture` Methode legt der Kultur, die die `My.Resources` Objekt zum Abrufen von Ressourcen verwendet.  
+  
+ [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
+  
+ Für dieses Beispiel funktioniert, muss Ihre Anwendung eine Zeichenfolge mit dem Namen verfügen `Message` in die Anwendung Ressourcen-Datei, und die Anwendung müssen die Kultur Französisch-Version der Ressourcendatei `Resources.fr-FR.resx`. Weitere Informationen finden Sie unter [wie: Hinzufügen oder Entfernen von Ressourcen](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).  
+  
+ Wenn die Anwendung keine der Kultur Französisch-Version der Ressourcendatei, die `My.Resources` Objekt ruft die Ressource aus der Ressourcendatei für die Standardkultur ab.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

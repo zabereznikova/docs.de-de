@@ -1,0 +1,150 @@
+<Type Name="ILookup&lt;TKey,TElement&gt;" FullName="System.Linq.ILookup&lt;TKey,TElement&gt;">
+  <TypeSignature Language="C#" Value="public interface ILookup&lt;TKey,TElement&gt; : System.Collections.Generic.IEnumerable&lt;System.Linq.IGrouping&lt;TKey,TElement&gt;&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ILookup`2&lt;TKey, TElement&gt; implements class System.Collections.Generic.IEnumerable`1&lt;class System.Linq.IGrouping`2&lt;!TKey, !TElement&gt;&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.ILookup`2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TKey" />
+    <TypeParameter Name="TElement" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Linq.IGrouping&lt;TKey,TElement&gt;&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TKey">Der Typ der Schlüssel in der <see cref="T:System.Linq.ILookup`2" />.</typeparam>
+    <typeparam name="TElement">Der Typ der Elemente in der <see cref="T:System.Collections.Generic.IEnumerable`1" /> Sequenzen, aus denen die Werte in der <see cref="T:System.Linq.ILookup`2" />.</typeparam>
+    <summary>Definiert eine Indexer, eine Größeneigenschaft und eine boolesche Suchmethode für Datenstrukturen, Zuordnen von Schlüsseln <see cref="T:System.Collections.Generic.IEnumerable`1" /> -Sequenzen von Werten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typ <xref:System.Linq.Lookup%602> implementiert die <xref:System.Linq.ILookup%602> Schnittstelle.  
+  
+ Die Erweiterungsmethode <xref:System.Linq.Enumerable.ToLookup%2A>, die an das Ende einer LINQ-Abfrage angefügt werden können gibt ein Objekt vom Typ <xref:System.Linq.ILookup%602>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Linq.ILookup%602> -Objekt und dessen Inhalt durchläuft.  
+  
+ [!code-csharp[System.Linq.ILookup#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.ILookup/cs/ILookup.cs#1)]
+ [!code-vb[System.Linq.ILookup#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.ILookup/vb/ILookup.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (TKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(!TKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.ILookup`2.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel zum Suchen der <see cref="T:System.Linq.ILookup`2" />.</param>
+        <summary>Bestimmt, ob ein angegebener Schlüssel vorhanden ist die <see cref="T:System.Linq.ILookup`2" />.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="key" /> befindet sich in der <see cref="T:System.Linq.ILookup`2" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.ILookup`2.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Schlüssel/Wert-auflistungspaare der <see cref="T:System.Linq.ILookup`2" />.</summary>
+        <value>Die Anzahl von Schlüssel/Wert-auflistungspaare in der <see cref="T:System.Linq.ILookup`2" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;TElement&gt; this[TKey key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;!TElement&gt; Item(!TKey)" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.ILookup`2.Item(`0)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TElement&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des gewünschten Sequenz von Werten.</param>
+        <summary>Ruft die <see cref="T:System.Collections.Generic.IEnumerable`1" /> Sequenz von Werten nach einem angegebenen Schlüssel indiziert.</summary>
+        <value>Die <see cref="T:System.Collections.Generic.IEnumerable`1" /> Sequenz von Werten durch den angegebenen Schlüssel indiziert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

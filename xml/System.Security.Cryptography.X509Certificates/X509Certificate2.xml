@@ -1,0 +1,2067 @@
+<Type Name="X509Certificate2" FullName="System.Security.Cryptography.X509Certificates.X509Certificate2">
+  <TypeSignature Language="C#" Value="public class X509Certificate2 : System.Security.Cryptography.X509Certificates.X509Certificate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit X509Certificate2 extends System.Security.Cryptography.X509Certificates.X509Certificate" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.X509Certificates.X509Certificate</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein X.509-Zertifikat dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die x. 509-Struktur, die in der internationalen Organisation für Normung (ISO) Arbeitsgruppen stammt. Diese Struktur kann verwendet werden, um verschiedene Typen von Informationen, einschließlich der Identität, Ansprüche und Inhaber Attribute (Berechtigungen, Alter, Geschlecht, Speicherort, Zugehörigkeit usw.) darstellen. Obwohl die ISO-Spezifikationen für die Struktur selbst umfangreichste sind die <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Klasse dient zum Modellieren der Szenarien für die Verwendung der Internet Engineering Task Force (IETF) Public Key-Infrastruktur, x. 509-(PKIX definierten ) Arbeitsgruppe. Die umfangreichste gemäß diesen Spezifikationen RFC 3280 verwenden, ist "[Zertifikat und Certificate Revocation List (CRL) Profile](http://go.microsoft.com/fwlink/?LinkId=45286)."  
+  
+> [!IMPORTANT]
+>  Beginnend mit der [!INCLUDE[net_v46](~/includes/net-v46-md.md)], diesen Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+>   
+>  Für apps, die als Ziel der [!INCLUDE[net_v452](~/includes/net-v452-md.md)] und früheren Versionen der <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> -Klasse implementiert nicht die <xref:System.IDisposable> Schnittstelle, und daher keine `Dispose` Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Objekt zum Verschlüsseln und Entschlüsseln einer Datei.  
+  
+ [!code-csharp[X509Certificate2#1](~/samples/snippets/csharp/VS_Snippets_CLR/x509certificate2/cs/program.cs#1)]
+ [!code-vb[X509Certificate2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/x509certificate2/vb/program.vb#1)]  
+  
+ Das folgende Beispiel erstellt eine ausführbare Befehlszeilendatei, die eine Zertifikatsdatei als Argument verwendet und verschiedene Zertifikatseigenschaften an die Konsole ausgibt.  
+  
+ [!code-cpp[CertInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertInfo/CPP/certinfo.cpp#1)]
+ [!code-csharp[CertInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertInfo/CS/certinfo.cs#1)]
+ [!code-vb[CertInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertInfo/VB/certinfo.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein leeres <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> -Objekt, im Gegensatz zu den anderen Konstruktoren für diese Klasse, die Informationen zum Zertifikat aus einem Bytearray, ein Zeiger oder eine Zertifikatdatei verwenden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zertifikatspeicher des aktuellen Benutzers öffnet Sie wählt nur die aktiven Zertifikate, und ermöglicht es dem Benutzer eine oder mehrere Zertifikate auswählen. Im Beispiel werden dann Zertifikatsinformationen in die Konsole.  
+  
+ [!code-cpp[CertSelect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[CertSelect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[CertSelect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2 (byte[] rawData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] rawData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rawData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rawData">Ein Bytearray mit Daten aus einem X.509-Zertifikat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> -Klasse unter Verwendung von Informationen aus einem Bytearray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein neues <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> -Objekt mit Informationen zum Zertifikat aus einem Bytearray. Das Bytearray möglich binär (DER) codiert oder Base64-codierten x. 509-Daten. Das Bytearray kann sich auch auf einer mit PKCS7 (Authenticode) signierten Datei; Zertifikat des Signaturgebers wird verwendet, um das Objekt zu erstellen.  
+  
+ Bei Erstellung einer <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Zertifikat durch Angabe eines mit PKCS7 signierten Dateispeicher für `rawData`, die <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> wird das Zertifikat, das den signierten und nicht für keines der Zertifikate im Speicher erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein Fehler mit dem Zertifikat auftritt. Zum Beispiel:  
+  
+-   Die Zertifikatdatei ist nicht vorhanden.  
+  
+-   Das Zertifikat ist ungültig.  
+  
+-   Das Zertifikatskennwort ist falsch.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2 (IntPtr handle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.IntPtr)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="handle" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Ein Zeiger auf einen Kontext für das Zertifikat in nicht verwaltetem Code. Die C-Struktur wird als <see langword="PCCERT_CONTEXT" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> -Klasse unter Verwendung eines nicht verwalteten Handles.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein neues <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> -Objekt mithilfe eines Handles für den Microsoft Cryptographic API-Zertifikatskontext `PCCERT_CONTEXT`. Beachten Sie, dass der unmittelbare Aufrufer dieses Konstruktors nicht verwalteten Code eine Berechtigung erfordert.  
+  
+> [!IMPORTANT]
+>  Der Konstruktor erstellt eine Kopie der Zertifikatkontext. Gehen Sie nicht, dass die Kontextstruktur, die Sie an den Konstruktor übergeben gültig ist; Möglicherweise wurde er freigegeben. Erhalten Sie eine Kopie des aktuellen `PCCERT_CONTEXT` -Struktur aus den <xref:System.Security.Cryptography.X509Certificates.X509Certificate.Handle%2A> Eigenschaft allerdings wird hierüber gilt nur während der Lebensdauer der <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein Fehler mit dem Zertifikat auftritt. Zum Beispiel:  
+  
+-   Die Zertifikatdatei ist nicht vorhanden.  
+  
+-   Das Zertifikat ist ungültig.  
+  
+-   Das Zertifikatskennwort ist falsch.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2 (System.Security.Cryptography.X509Certificates.X509Certificate certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate" />-Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> -Klasse unter Verwendung einer <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine neue Instanz der dem <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> -Klasse unter Verwendung einer <xref:System.Security.Cryptography.X509Certificates.X509Certificate> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein Fehler mit dem Zertifikat auftritt. Zum Beispiel:  
+  
+-   Die Zertifikatdatei ist nicht vorhanden.  
+  
+-   Das Zertifikat ist ungültig.  
+  
+-   Das Zertifikatskennwort ist falsch.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2 (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name einer Zertifikatsdatei.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> -Klasse mithilfe eines Zertifikatsdateinamens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein neues <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> -Objekt mithilfe eines Zertifikatsdateinamens. Binäre Codierung (DER) oder Base64-Codierung unterstützt.  
+  
+ Bei Erstellung einer <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Zertifikat durch Angabe eines mit PKCS7 signierten Dateispeicher für `fileName`, die <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> wird das Zertifikat, das den signierten und nicht für keines der Zertifikate im Speicher erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein Fehler mit dem Zertifikat auftritt. Zum Beispiel:  
+  
+-   Die Zertifikatdatei ist nicht vorhanden.  
+  
+-   Das Zertifikat ist ungültig.  
+  
+-   Das Zertifikatskennwort ist falsch.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2 (byte[] rawData, System.Security.SecureString password);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] rawData, class System.Security.SecureString password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.Byte[],System.Security.SecureString)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rawData" Type="System.Byte[]" />
+        <Parameter Name="password" Type="System.Security.SecureString" />
+      </Parameters>
+      <Docs>
+        <param name="rawData">Ein Bytearray, das Daten aus einem X.509-Zertifikat enthält.</param>
+        <param name="password">Das für den Zugriff auf die X.509-Zertifikatsdaten erforderliche Kennwort.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />-Klasse mit einem Bytearray und einem Kennwort.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird mit PKCS12 (PFX)-Dateien verwendet, die private Schlüssel des Zertifikats enthalten. Aufrufen dieses Konstruktors mit dem richtigen Kennwort des privaten Schlüssels entschlüsselt und in einem Schlüsselcontainer gespeichert.  
+  
+> [!IMPORTANT]
+>  Nie Hartcodieren Sie ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden die [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), einem hex-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+ Bei Erstellung einer <xref:System.Security.Cryptography.X509Certificates.X509Certificate> Zertifikat durch Angabe eines mit PKCS7 signierten Dateispeicher für `rawData`, die <xref:System.Security.Cryptography.X509Certificates.X509Certificate> wird das Zertifikat, das den signierten und nicht für keines der Zertifikate im Speicher erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein Fehler mit dem Zertifikat auftritt. Zum Beispiel:  
+  
+-   Die Zertifikatdatei ist nicht vorhanden.  
+  
+-   Das Zertifikat ist ungültig.  
+  
+-   Das Zertifikatskennwort ist falsch.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2 (byte[] rawData, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] rawData, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.Byte[],System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rawData" Type="System.Byte[]" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="rawData">Ein Bytearray mit Daten aus einem X.509-Zertifikat.</param>
+        <param name="password">Das für den Zugriff auf die X.509-Zertifikatsdaten erforderliche Kennwort.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />-Klasse mit einem Bytearray und einem Kennwort.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein neues <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> -Objekt mit einem Bytearray und ein Kennwort, das Zugriff auf die Zertifikatsdaten benötigt wird. Es wird mit PKCS12 (PFX)-Dateien verwendet, die private Schlüssel des Zertifikats enthalten. Aufrufen dieses Konstruktors mit dem richtigen Kennwort des privaten Schlüssels entschlüsselt und in einem Schlüsselcontainer gespeichert.  
+  
+> [!IMPORTANT]
+>  Nie Hartcodieren Sie ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden die [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), einem hex-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+ Bei Erstellung einer <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Zertifikat durch Angabe eines mit PKCS7 signierten Dateispeicher für `rawData`, die <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> wird das Zertifikat, das den signierten und nicht für keines der Zertifikate im Speicher erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein Fehler mit dem Zertifikat auftritt. Zum Beispiel:  
+  
+-   Die Zertifikatdatei ist nicht vorhanden.  
+  
+-   Das Zertifikat ist ungültig.  
+  
+-   Das Zertifikatskennwort ist falsch.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected X509Certificate2 (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Serialisierungsinformationen, die erforderlich sind, zum Deserialisieren des neuen <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />.</param>
+        <param name="context">Die Kontextinformationen zur Quelle des Datenstroms zu deserialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> -Klasse mit den angegebenen Serialisierungs- und Stream-Kontextinformationen.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2 (string fileName, System.Security.SecureString password);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, class System.Security.SecureString password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.String,System.Security.SecureString)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="password" Type="System.Security.SecureString" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name einer Zertifikatsdatei.</param>
+        <param name="password">Das für den Zugriff auf die X.509-Zertifikatsdaten erforderliche Kennwort.</param>
+        <summary>Initialisiert mithilfe eines Zertifikatsdateinamens und eines Kennworts eine neue Instanz der <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird mit PKCS12 (PFX)-Dateien verwendet, die private Schlüssel des Zertifikats enthalten. Aufrufen dieses Konstruktors mit dem richtigen Kennwort des privaten Schlüssels entschlüsselt und in einem Schlüsselcontainer gespeichert.  
+  
+> [!IMPORTANT]
+>  Nie Hartcodieren Sie ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden die [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), einem hex-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+ Bei Erstellung einer <xref:System.Security.Cryptography.X509Certificates.X509Certificate> Zertifikat durch Angabe eines mit PKCS7 signierten Dateispeicher für `fileName`, die <xref:System.Security.Cryptography.X509Certificates.X509Certificate> wird das Zertifikat, das den signierten und nicht für keines der Zertifikate im Speicher erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein Fehler mit dem Zertifikat auftritt. Zum Beispiel:  
+  
+-   Die Zertifikatdatei ist nicht vorhanden.  
+  
+-   Das Zertifikat ist ungültig.  
+  
+-   Das Zertifikatskennwort ist falsch.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2 (string fileName, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name einer Zertifikatsdatei.</param>
+        <param name="password">Das für den Zugriff auf die X.509-Zertifikatsdaten erforderliche Kennwort.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> -Klasse mithilfe eines Zertifikatsdateinamens und ein Kennwort verwendet, um das Zertifikat zugreifen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein neues <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> -Objekt mithilfe eines Zertifikatsdateinamens und eines Kennworts für den Zugriff auf das Zertifikat erforderlich. Es wird mit PKCS12 (PFX)-Dateien verwendet, die private Schlüssel des Zertifikats enthalten. Aufrufen dieses Konstruktors mit dem richtigen Kennwort des privaten Schlüssels entschlüsselt und in einem Schlüsselcontainer gespeichert.  
+  
+> [!IMPORTANT]
+>  Nie Hartcodieren Sie ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden die [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), einem hex-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+ Bei Erstellung einer <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Zertifikat durch Angabe eines mit PKCS7 signierten Dateispeicher für `fileName`, die <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> wird das Zertifikat, das den signierten und nicht für keines der Zertifikate im Speicher erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein Fehler mit dem Zertifikat auftritt. Zum Beispiel:  
+  
+-   Die Zertifikatdatei ist nicht vorhanden.  
+  
+-   Das Zertifikat ist ungültig.  
+  
+-   Das Zertifikatskennwort ist falsch.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2 (byte[] rawData, System.Security.SecureString password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] rawData, class System.Security.SecureString password, valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.Byte[],System.Security.SecureString,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rawData" Type="System.Byte[]" />
+        <Parameter Name="password" Type="System.Security.SecureString" />
+        <Parameter Name="keyStorageFlags" Type="System.Security.Cryptography.X509Certificates.X509KeyStorageFlags" />
+      </Parameters>
+      <Docs>
+        <param name="rawData">Ein Bytearray, das Daten aus einem X.509-Zertifikat enthält.</param>
+        <param name="password">Das für den Zugriff auf die X.509-Zertifikatsdaten erforderliche Kennwort.</param>
+        <param name="keyStorageFlags">Eine bitweise Kombination der Enumerationswerte, die steuern wo und wie das Zertifikat importiert wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />-Klasse mit einem Bytearray, einem Kennwort und einem Schlüsselspeicherflag.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird mit PKCS12 (PFX)-Dateien verwendet, die private Schlüssel des Zertifikats enthalten. Aufrufen dieses Konstruktors mit dem richtigen Kennwort des privaten Schlüssels entschlüsselt und speichert ihn an ein Microsoft Cryptographic API Kryptografiedienstanbieter (CSP).  
+  
+> [!IMPORTANT]
+>  Nie Hartcodieren Sie ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden die [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), einem hex-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+ Bei Erstellung einer <xref:System.Security.Cryptography.X509Certificates.X509Certificate> Zertifikat durch Angabe eines mit PKCS7 signierten Dateispeicher für `rawData`, die <xref:System.Security.Cryptography.X509Certificates.X509Certificate> wird das Zertifikat, das den signierten und nicht für keines der Zertifikate im Speicher erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein Fehler mit dem Zertifikat auftritt. Zum Beispiel:  
+  
+-   Die Zertifikatdatei ist nicht vorhanden.  
+  
+-   Das Zertifikat ist ungültig.  
+  
+-   Das Zertifikatskennwort ist falsch.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2 (byte[] rawData, string password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] rawData, string password, valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.Byte[],System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rawData" Type="System.Byte[]" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="keyStorageFlags" Type="System.Security.Cryptography.X509Certificates.X509KeyStorageFlags" />
+      </Parameters>
+      <Docs>
+        <param name="rawData">Ein Bytearray mit Daten aus einem X.509-Zertifikat.</param>
+        <param name="password">Das für den Zugriff auf die X.509-Zertifikatsdaten erforderliche Kennwort.</param>
+        <param name="keyStorageFlags">Eine bitweise Kombination der Enumerationswerte, die steuern wo und wie das Zertifikat importiert wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />-Klasse mit einem Bytearray, einem Kennwort und einem Schlüsselspeicherflag.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein neues <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Objekts, wobei einen Byte-array, ein Kennwort, das Zugriff auf die Zertifikatdaten und einem Schlüsselspeicherflag benötigt wird. Es wird mit PKCS12 (PFX)-Dateien verwendet, die private Schlüssel des Zertifikats enthalten. Aufrufen dieses Konstruktors mit dem richtigen Kennwort des privaten Schlüssels entschlüsselt und speichert ihn an ein Microsoft Cryptographic API Kryptografiedienstanbieter (CSP).  
+  
+> [!IMPORTANT]
+>  Nie Hartcodieren Sie ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden die [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), einem hex-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+ Bei Erstellung einer <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Zertifikat durch Angabe eines mit PKCS7 signierten Dateispeicher für `rawData`, die <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> wird das Zertifikat, das den signierten und nicht für keines der Zertifikate im Speicher erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein Fehler mit dem Zertifikat auftritt. Zum Beispiel:  
+  
+-   Die Zertifikatdatei ist nicht vorhanden.  
+  
+-   Das Zertifikat ist ungültig.  
+  
+-   Das Zertifikatskennwort ist falsch.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2 (string fileName, System.Security.SecureString password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, class System.Security.SecureString password, valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.String,System.Security.SecureString,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="password" Type="System.Security.SecureString" />
+        <Parameter Name="keyStorageFlags" Type="System.Security.Cryptography.X509Certificates.X509KeyStorageFlags" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name einer Zertifikatsdatei.</param>
+        <param name="password">Das für den Zugriff auf die X.509-Zertifikatsdaten erforderliche Kennwort.</param>
+        <param name="keyStorageFlags">Eine bitweise Kombination der Enumerationswerte, die steuern wo und wie das Zertifikat importiert wird.</param>
+        <summary>Initialisiert mithilfe eines Zertifikatsdateinamens, eines Kennworts und eines Schlüsselspeicherflags eine neue Instanz der <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Erstellung einer <xref:System.Security.Cryptography.X509Certificates.X509Certificate> Zertifikat durch Angabe eines mit PKCS7 signierten Dateispeicher für `fileName`, die <xref:System.Security.Cryptography.X509Certificates.X509Certificate> wird das Zertifikat, das den signierten und nicht für keines der Zertifikate im Speicher erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein Fehler mit dem Zertifikat auftritt. Zum Beispiel:  
+  
+-   Die Zertifikatdatei ist nicht vorhanden.  
+  
+-   Das Zertifikat ist ungültig.  
+  
+-   Das Zertifikatskennwort ist falsch.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2 (string fileName, string password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string password, valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.String,System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="keyStorageFlags" Type="System.Security.Cryptography.X509Certificates.X509KeyStorageFlags" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name einer Zertifikatsdatei.</param>
+        <param name="password">Das für den Zugriff auf die X.509-Zertifikatsdaten erforderliche Kennwort.</param>
+        <param name="keyStorageFlags">Eine bitweise Kombination der Enumerationswerte, die steuern wo und wie das Zertifikat importiert wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> mithilfe eines Zertifikatsdateinamens Klassennamen, ein Kennwort ein, den Zugriff auf das Zertifikat und einem Schlüsselspeicherflag.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein neues <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> ein Objekt mithilfe eines Zertifikatsdateinamens benennen, ein Kennwort erforderlich, um das Zertifikat und einem Schlüsselspeicherflag zugreifen.  
+  
+> [!IMPORTANT]
+>  Nie Hartcodieren Sie ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden die [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), einem hex-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+ Bei Erstellung einer <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Zertifikat durch Angabe eines mit PKCS7 signierten Dateispeicher für `fileName`, die <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> wird das Zertifikat, das den signierten und nicht für keines der Zertifikate im Speicher erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein Fehler mit dem Zertifikat auftritt. Zum Beispiel:  
+  
+-   Die Zertifikatdatei ist nicht vorhanden.  
+  
+-   Das Zertifikat ist ungültig.  
+  
+-   Das Zertifikatskennwort ist falsch.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Archived">
+      <MemberSignature Language="C#" Value="public bool Archived { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Archived" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2.Archived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, dass ein x. 509-Zertifikat archiviert wird.</summary>
+        <value>
+          <see langword="true" />Wenn das Zertifikat archiviert wird, <see langword="false" /> , wenn das Zertifikat nicht archiviert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird nur für ein Zertifikat festgelegt, die einen Speicher zugeordnet ist. Wenn die Eigenschaft wird festgelegt, und das Zertifikat in einen Zertifikatspeicher hinzugefügt wird, wird der Wert beibehalten. Wenn die Eigenschaft für ein Zertifikat aus einem Store abgerufen festgelegt ist, wird der Wert sofort beibehalten.  
+  
+ In einem x. 509-Speicher archivierte Zertifikate sind nicht enthalten in der zurückgegebenen <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> -Objekt, es sei denn, die <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Archived%2A> -Eigenschaftensatz auf `true`. Physische Archivierung Aktivitäten ausgeführt werden, wenn die <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Archived%2A> Wert ist nicht festgelegt oder nicht festgelegt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zertifikatspeicher des aktuellen Benutzers öffnet Sie wählt nur die aktiven Zertifikate, und ermöglicht es dem Benutzer eine oder mehrere Zertifikate auswählen. Im Beispiel werden dann Zertifikatsinformationen in die Konsole.  
+  
+ [!code-cpp[CertSelect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[CertSelect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[CertSelect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Das Zertifikat ist nicht lesbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Export">
+      <MemberSignature Language="C#" Value="public override byte[] Export (System.Security.Cryptography.X509Certificates.X509ContentType contentType, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] Export(valuetype System.Security.Cryptography.X509Certificates.X509ContentType contentType, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.Export(System.Security.Cryptography.X509Certificates.X509ContentType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("X509ContentType.SerializedCert is not supported")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentType" Type="System.Security.Cryptography.X509Certificates.X509ContentType" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contentType">To be added.</param>
+        <param name="password">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509ExtensionCollection Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509ExtensionCollection Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ExtensionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Security.Cryptography.X509Certificates.X509Extension" />-Objekten ab.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509ExtensionCollection" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Erweiterungen in das x. 509-v3-Zertifikatformat definiert können zusätzliche Daten im Zertifikat enthalten sein. Eine Anzahl von Erweiterungen werden in ISO definiert, in der x. 509-v3-Definition sowie von PKIX in RFC 3280 verwenden "[Zertifikat und Certificate Revocation List (CRL) Profile](http://go.microsoft.com/fwlink/?LinkId=45286)." Häufig verwendete Erweiterungen enthalten Informationen zur Schlüsselverwendung (<xref:System.Security.Cryptography.X509Certificates.X509KeyUsageExtension>), key Bezeichner (<xref:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension>), Richtlinien, Sperrinformationen (CRL Distribution Point-Erweiterung) und andere Verwendungen des Zertifikats.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zertifikatspeicher des aktuellen Benutzers öffnet Sie wählt nur die aktiven Zertifikate, und ermöglicht es dem Benutzer eine oder mehrere Zertifikate auswählen. Im Beispiel werden dann Zertifikatsinformationen in die Konsole.  
+  
+ [!code-cpp[CertSelect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[CertSelect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[CertSelect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Das Zertifikat ist nicht lesbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FriendlyName">
+      <MemberSignature Language="C#" Value="public string FriendlyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FriendlyName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2.FriendlyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den zugeordneten Alias für ein Zertifikat.</summary>
+        <value>Anzeigename für das Zertifikat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anzeigenamen sind Eigenschaften im x. 509-Zertifikatspeicher, der festgelegt werden können. Sie werden verwendet, damit einen Benutzer Zertifikate Aliase zuordnen, sodass diese leicht identifiziert werden können.  
+  
+ Ggf. keinen Anzeigenamen für das Zertifikat, eine leere Zeichenfolge ("") zurückgegeben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine ausführbare Befehlszeilendatei, die eine Zertifikatsdatei als Argument verwendet und verschiedene Zertifikatseigenschaften an die Konsole ausgibt.  
+  
+ [!code-cpp[CertInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertInfo/CPP/certinfo.cpp#1)]
+ [!code-csharp[CertInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertInfo/CS/certinfo.cs#1)]
+ [!code-vb[CertInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertInfo/VB/certinfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Das Zertifikat ist nicht lesbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCertContentType">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.X509Certificates.X509ContentType GetCertContentType (byte[] rawData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Security.Cryptography.X509Certificates.X509ContentType GetCertContentType(unsigned int8[] rawData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.GetCertContentType(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Detection limited to Cert, Pfx, Pkcs12, Pkcs7 and Unknown")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ContentType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rawData">Ein Bytearray mit Daten aus einem X.509-Zertifikat.</param>
+        <summary>Gibt den Typ des Zertifikats in ein Byte-Array enthalten sind.</summary>
+        <returns>Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509ContentType" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht, den Typ des Zertifikats in einer Datei zu ermitteln.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zertifikatspeicher des aktuellen Benutzers öffnet Sie wählt nur die aktiven Zertifikate, und ermöglicht es dem Benutzer eine oder mehrere Zertifikate auswählen. Im Beispiel werden dann Zertifikatsinformationen in die Konsole.  
+  
+ [!code-cpp[CertSelect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[CertSelect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[CertSelect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="rawData" />hat eine Länge von 0 (null) oder <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCertContentType">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.X509Certificates.X509ContentType GetCertContentType (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Security.Cryptography.X509Certificates.X509ContentType GetCertContentType(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.GetCertContentType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Detection limited to Cert, Pfx, Pkcs12 and Unknown")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ContentType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name einer Zertifikatsdatei.</param>
+        <summary>Gibt den Typ des Zertifikats in einer Datei enthalten.</summary>
+        <returns>Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509ContentType" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht, den Typ des Zertifikats in einer Datei zu ermitteln.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für das Lesen des Zertifikats an. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.IO.FileAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNameInfo">
+      <MemberSignature Language="C#" Value="public string GetNameInfo (System.Security.Cryptography.X509Certificates.X509NameType nameType, bool forIssuer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetNameInfo(valuetype System.Security.Cryptography.X509Certificates.X509NameType nameType, bool forIssuer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.GetNameInfo(System.Security.Cryptography.X509Certificates.X509NameType,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("always return String.Empty for UpnName, DnsFromAlternativeName and UrlName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nameType" Type="System.Security.Cryptography.X509Certificates.X509NameType" />
+        <Parameter Name="forIssuer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="nameType">Die <see cref="T:System.Security.Cryptography.X509Certificates.X509NameType" /> Wert für den Betreff.</param>
+        <param name="forIssuer">
+          <see langword="true" />der Ausstellername enthalten; andernfalls <see langword="false" />.</param>
+        <summary>Ruft den Betreff und Aussteller Namen aus einem Zertifikat.</summary>
+        <returns>Der Name des Zertifikats.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sollte immer verwendet werden, anstatt das Zertifikat analysieren, da der Großteil der Namenswerte an mehreren Orten befinden können. Mit dieser Methode wird sichergestellt, dass der richtige Name zurückgegeben wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zertifikatspeicher des aktuellen Benutzers öffnet Sie wählt nur die aktiven Zertifikate, und ermöglicht es dem Benutzer eine oder mehrere Zertifikate auswählen. Im Beispiel werden dann Zertifikatsinformationen in die Konsole.  
+  
+ [!code-cpp[CertSelect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[CertSelect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[CertSelect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasPrivateKey">
+      <MemberSignature Language="C#" Value="public bool HasPrivateKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasPrivateKey" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2.HasPrivateKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> Objekt einen privaten Schlüssel enthält.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> Objekt enthält einen privaten Schlüssel ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Kontext für das Zertifikat ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public override void Import (byte[] rawData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Import(unsigned int8[] rawData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.Import(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rawData">Ein Bytearray mit Daten aus einem X.509-Zertifikat.</param>
+        <summary>Füllt ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> Objekt mit Daten aus einem Bytearray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, ein raw Byte-Array eines x. 509-Zertifikats und Auffüllen der <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> -Objekt mit den zugehörigen Werten.  
+  
+ Da diese Methode nur ein Bytearray annimmt, können sie nur für Zertifikatstypen verwendet werden, die nicht über ein Kennwort ein, z. B. ein Base64-codierte oder DER-codiertes x. 509-Zertifikat oder ein Zertifikat PFX/PKCS12 erfordern. Beachten Sie, dass PFX/PKCS12-Zertifikate über mehrere Zertifikate enthalten kann. In diesem Fall wird das erste Zertifikat zugeordneten privaten Schlüssel verwendet, oder, wenn kein privater Schlüssel gefunden wird, wird das erste Zertifikat verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public override void Import (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Import(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.Import(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name eines Zertifikats.</param>
+        <summary>Füllt ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> -Objekt mit Informationen aus einer Zertifikatsdatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet eine Zertifikatsdatei, z. B. eine Datei mit einer CER-Erweiterung, die ein x. 509-Zertifikat darstellt, und füllt die <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Objekt mit dem Zertifikat, das die Datei enthält.  
+  
+ Diese Methode kann mit mehreren Zertifikatstypen, einschließlich Base64-codierte oder DER-codiertes x. 509-Zertifikate, PFX/PKCS12-Zertifikate und Signaturgeberzertifikate, z. B. Authenticode verwendet werden. Beachten Sie, dass PFX/PKCS12-Zertifikate über mehrere Zertifikate enthalten kann. In diesem Fall wird das erste Zertifikat zugeordneten privaten Schlüssel verwendet, oder, wenn kein privater Schlüssel gefunden wird, wird das erste Zertifikat verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public override void Import (byte[] rawData, System.Security.SecureString password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Import(unsigned int8[] rawData, class System.Security.SecureString password, valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.Import(System.Byte[],System.Security.SecureString,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("SecureString is incomplete")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawData" Type="System.Byte[]" />
+        <Parameter Name="password" Type="System.Security.SecureString" />
+        <Parameter Name="keyStorageFlags" Type="System.Security.Cryptography.X509Certificates.X509KeyStorageFlags" />
+      </Parameters>
+      <Docs>
+        <param name="rawData">Ein Bytearray, das Daten aus einem X.509-Zertifikat enthält.</param>
+        <param name="password">Das für den Zugriff auf die X.509-Zertifikatsdaten erforderliche Kennwort.</param>
+        <param name="keyStorageFlags">Eine bitweise Kombination der Enumerationswerte, die steuern wo und wie das Zertifikat importiert wird.</param>
+        <summary>Füllt ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />-Objekt mithilfe der Daten aus einem Bytearray, eines Kennworts und eines Schlüsselspeicherflags auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode Zertifikatstypen wie Base64-codierte oder DER-codiertes x. 509-Zertifikate oder PFX/PKCS12-Zertifikate verwenden. Beachten Sie, dass PFX/PKCS12-Zertifikate über mehrere Zertifikate enthalten kann. In diesem Fall wird das erste Zertifikat zugeordneten privaten Schlüssel verwendet, oder, wenn kein privater Schlüssel gefunden wird, wird das erste Zertifikat verwendet.  
+  
+> [!IMPORTANT]
+>  Nie Hartcodieren Sie ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden die [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), einem hex-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public override void Import (byte[] rawData, string password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Import(unsigned int8[] rawData, string password, valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.Import(System.Byte[],System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("missing KeyStorageFlags support")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawData" Type="System.Byte[]" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="keyStorageFlags" Type="System.Security.Cryptography.X509Certificates.X509KeyStorageFlags" />
+      </Parameters>
+      <Docs>
+        <param name="rawData">Ein Bytearray mit Daten aus einem X.509-Zertifikat.</param>
+        <param name="password">Das für den Zugriff auf die X.509-Zertifikatsdaten erforderliche Kennwort.</param>
+        <param name="keyStorageFlags">Eine bitweise Kombination der Enumerationswerte, die steuern wo und wie das Zertifikat importiert wird.</param>
+        <summary>Füllt ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> -Objekt mithilfe der Daten aus einem Bytearray, ein Kennwort und Flags für die Bestimmung des privaten Schlüssels zu importieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, zum Auffüllen einer <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> mit einem Kennwort für das Zertifikat, das Bytearray dargestellte Objekt. Die <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags> Wert kann verwendet werden, um zu steuern, wo und wie zum Importieren des privaten Schlüssels.  
+  
+ Diese Methode ein Bytearray annimmt und Zertifikatstypen wie Base64-codierte oder DER-codiertes x. 509-Zertifikate oder PFX/PKCS12-Zertifikate verwendet werden kann. Beachten Sie, dass PFX/PKCS12-Zertifikate über mehrere Zertifikate enthalten kann. In diesem Fall wird das erste Zertifikat zugeordneten privaten Schlüssel verwendet, oder, wenn kein privater Schlüssel gefunden wird, wird das erste Zertifikat verwendet.  
+  
+> [!IMPORTANT]
+>  Nie Hartcodieren Sie ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden die [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), einem hex-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine ausführbare Befehlszeilendatei, die eine Zertifikatsdatei als Argument verwendet und verschiedene Zertifikatseigenschaften an die Konsole ausgibt.  
+  
+ [!code-cpp[CertInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertInfo/CPP/certinfo.cpp#1)]
+ [!code-csharp[CertInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertInfo/CS/certinfo.cs#1)]
+ [!code-vb[CertInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertInfo/VB/certinfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public override void Import (string fileName, System.Security.SecureString password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Import(string fileName, class System.Security.SecureString password, valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.Import(System.String,System.Security.SecureString,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("SecureString is incomplete")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="password" Type="System.Security.SecureString" />
+        <Parameter Name="keyStorageFlags" Type="System.Security.Cryptography.X509Certificates.X509KeyStorageFlags" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name einer Zertifikatsdatei.</param>
+        <param name="password">Das für den Zugriff auf die X.509-Zertifikatsdaten erforderliche Kennwort.</param>
+        <param name="keyStorageFlags">Eine bitweise Kombination der Enumerationswerte, die steuern wo und wie das Zertifikat importiert wird.</param>
+        <summary>Füllt ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />-Objekt mit Informationen aus einer Zertifikatsdatei, einem Kennwort und einem Schlüsselspeicherflag auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Sicherheitshinweis** nie hartcodieren ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden die [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), einem hex-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public override void Import (string fileName, string password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Import(string fileName, string password, valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.Import(System.String,System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("missing KeyStorageFlags support")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="keyStorageFlags" Type="System.Security.Cryptography.X509Certificates.X509KeyStorageFlags" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name einer Zertifikatsdatei.</param>
+        <param name="password">Das für den Zugriff auf die X.509-Zertifikatsdaten erforderliche Kennwort.</param>
+        <param name="keyStorageFlags">Eine bitweise Kombination der Enumerationswerte, die steuern wo und wie das Zertifikat importiert wird.</param>
+        <summary>Füllt ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> -Objekt mit Informationen aus einer Zertifikatsdatei, einem Kennwort und einem <see cref="T:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags" /> Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden Auffüllen einer <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> -Objekt mit Informationen aus einer Zertifikatsdatei, einem Kennwort und ein <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags> Wert.  
+  
+> [!IMPORTANT]
+>  Nie Hartcodieren Sie ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden die [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), einem hex-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerName">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X500DistinguishedName IssuerName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X500DistinguishedName IssuerName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2.IssuerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X500DistinguishedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den distinguished Name des Zertifikatausstellers.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.X509Certificates.X500DistinguishedName" /> -Objekt, das den Namen des Zertifikatausstellers enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält den Namen der Zertifizierungsstelle (CA), die das Zertifikat ausgestellt hat. Verwenden Sie zum Abrufen der Name eines Zertifikats die <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.GetNameInfo%2A> Methode.  
+  
+ Der Distinguished Name für das Zertifikat ist eine Textdarstellung des Zertifikatsantragstellers oder des Zertifikatausstellers. Diese Darstellung besteht aus Namensattributen (z. B. "CN = MyName, OU = MyOrgUnit, C = US").  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine ausführbare Befehlszeilendatei, die eine Zertifikatsdatei als Argument verwendet und verschiedene Zertifikatseigenschaften an die Konsole ausgibt.  
+  
+ [!code-cpp[CertInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertInfo/CPP/certinfo.cpp#1)]
+ [!code-csharp[CertInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertInfo/CS/certinfo.cs#1)]
+ [!code-vb[CertInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertInfo/VB/certinfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Kontext für das Zertifikat ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NotAfter">
+      <MemberSignature Language="C#" Value="public DateTime NotAfter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime NotAfter" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2.NotAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datum in Ortszeit, die nach dem Zertifikat nicht mehr gültig ist.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> Objekt, das das Ablaufdatum des Zertifikats darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt ein Ablaufdatum auf dem das Zertifikat ungültig wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine ausführbare Befehlszeilendatei, die eine Zertifikatsdatei als Argument verwendet und verschiedene Zertifikatseigenschaften an die Konsole ausgibt.  
+  
+ [!code-cpp[CertInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertInfo/CPP/certinfo.cpp#1)]
+ [!code-csharp[CertInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertInfo/CS/certinfo.cs#1)]
+ [!code-vb[CertInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertInfo/VB/certinfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Das Zertifikat ist nicht lesbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NotBefore">
+      <MemberSignature Language="C#" Value="public DateTime NotBefore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime NotBefore" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2.NotBefore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datum in der lokalen Uhrzeit auf dem ein Zertifikat gültig ist.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> -Objekt, das Gültigkeitsdatum des Zertifikats darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt das Datum, an dem das Zertifikat gültig wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine ausführbare Befehlszeilendatei, die eine Zertifikatsdatei als Argument verwendet und verschiedene Zertifikatseigenschaften an die Konsole ausgibt.  
+  
+ [!code-cpp[CertInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertInfo/CPP/certinfo.cpp#1)]
+ [!code-csharp[CertInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertInfo/CS/certinfo.cs#1)]
+ [!code-vb[CertInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertInfo/VB/certinfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Das Zertifikat ist nicht lesbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateKey">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.AsymmetricAlgorithm PrivateKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.AsymmetricAlgorithm PrivateKey" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2.PrivateKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsymmetricAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm" /> -Objekt, das mit einem Zertifikat zugeordneten privaten Schlüssel darstellt.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm" /> Objekt, das ein RSA "oder" DSA-Kryptografiedienstanbieters ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft unterstützt derzeit nur RSA "oder" DSA-Schlüssel, sodass Rückgabe entweder ein <xref:System.Security.Cryptography.RSACryptoServiceProvider> oder ein <xref:System.Security.Cryptography.DSACryptoServiceProvider> Objekt. Wenn kein privater Schlüssel mit dem Zertifikat verknüpft ist, gibt es `null`.  
+  
+> [!WARNING]
+>  Wenn Sie diese Eigenschaft, um festlegen `null` oder auf einen anderen Schlüssel ohne ihn löschen, wird eine Datei für den private Schlüssel auf dem Datenträger zurückgelassen.  
+  
+ Um den zugeordneten privaten Schlüssel für diese Eigenschaft ordnungsgemäß zu löschen, legen Sie `PersistKeyInCsp` auf `false`, und rufen Sie anschließend die <xref:System.Security.Cryptography.AsymmetricAlgorithm.Clear%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zertifikatspeicher des aktuellen Benutzers öffnet Sie wählt nur die aktiven Zertifikate, und ermöglicht es dem Benutzer eine oder mehrere Zertifikate auswählen. Im Beispiel werden dann Zertifikatsinformationen in die Konsole.  
+  
+ [!code-cpp[CertSelect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[CertSelect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[CertSelect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Schlüsselwert ist kein RSA "oder" DSA-Schlüssel, oder der Schlüssel ist nicht lesbar.</exception>
+        <exception cref="T:System.ArgumentNullException">Der für diese Eigenschaft festgelegte Wert <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Der Algorithmus Schlüssel für diesen Schlüssel wird nicht unterstützt.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException">Die x. 509-Schlüssel stimmen nicht überein.</exception>
+        <exception cref="T:System.ArgumentException">Der Schlüssel des Kryptografiedienstanbieters ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicKey">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.PublicKey PublicKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.PublicKey PublicKey" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2.PublicKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.PublicKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="P:System.Security.Cryptography.X509Certificates.X509Certificate2.PublicKey" /> Objekt, das mit einem Zertifikat zugeordnet.</summary>
+        <value>Ein <see cref="P:System.Security.Cryptography.X509Certificates.X509Certificate2.PublicKey" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt eine <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PublicKey%2A> Objekt, das die Objekt-ID enthält (<xref:System.Security.Cryptography.Oid>), die der Algorithmus für öffentliche Schlüssel, die ASN. 1-codierten Parameter und den ASN. 1-codierten Schlüsselwert darstellt.  
+  
+ Sie erhalten den Schlüssel als auch ein <xref:System.Security.Cryptography.AsymmetricAlgorithm> Objekt durch Verweisen auf die <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PublicKey%2A> Eigenschaft. Diese Eigenschaft unterstützt nur RSA "oder" DSA-Schlüssel, sodass entweder zurückgegeben ein <xref:System.Security.Cryptography.RSACryptoServiceProvider> oder ein <xref:System.Security.Cryptography.DSACryptoServiceProvider> Objekt, das den öffentlichen Schlüssel darstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine ausführbare Befehlszeilendatei, die eine Zertifikatsdatei als Argument verwendet und verschiedene Zertifikatseigenschaften an die Konsole ausgibt.  
+  
+ [!code-cpp[CertSelect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[CertSelect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[CertSelect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Schlüsselwert ist kein RSA "oder" DSA-Schlüssel, oder der Schlüssel ist nicht lesbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RawData">
+      <MemberSignature Language="C#" Value="public byte[] RawData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] RawData" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2.RawData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die unformatierten Daten eines Zertifikats ab.</summary>
+        <value>Die Rohdaten des Zertifikats als Bytearray.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine ausführbare Befehlszeilendatei, die eine Zertifikatsdatei als Argument verwendet und verschiedene Zertifikatseigenschaften an die Konsole ausgibt.  
+  
+ [!code-cpp[CertSelect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[CertSelect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[CertSelect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Zustand des ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, um den Status des Zertifikats zurückzusetzen. Es gibt auch alle dem Zertifikat zugeordneten Ressourcen frei.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SerialNumber">
+      <MemberSignature Language="C#" Value="public string SerialNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SerialNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2.SerialNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Seriennummer eines Zertifikats ab.</summary>
+        <value>Die Seriennummer des Zertifikats.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Seriennummer des Zertifikats ist Teil des ursprünglichen x. 509-Protokolls. Die Seriennummer ist eine eindeutige Nummer, die ausgegeben wird, durch den Aussteller des Zertifikats, der auch die Zertifizierungsstelle (Certificate Authority, CA) bezeichnet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine ausführbare Befehlszeilendatei, die eine Zertifikatsdatei als Argument verwendet und verschiedene Zertifikatseigenschaften an die Konsole ausgibt.  
+  
+ [!code-cpp[CertInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertInfo/CPP/certinfo.cpp#1)]
+ [!code-csharp[CertInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertInfo/CS/certinfo.cs#1)]
+ [!code-vb[CertInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertInfo/VB/certinfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureAlgorithm">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Oid SignatureAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Oid SignatureAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2.SignatureAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Oid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Algorithmus, der zum Erstellen der Signatur eines Zertifikats ab.</summary>
+        <value>Gibt den Objektbezeichner (<see cref="T:System.Security.Cryptography.Oid" />) des Signaturalgorithmus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Objekt-ID (<xref:System.Security.Cryptography.Oid>) identifiziert den Typ des Signaturalgorithmus, die durch das Zertifikat verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zertifikatspeicher des aktuellen Benutzers öffnet Sie wählt nur die aktiven Zertifikate, und ermöglicht es dem Benutzer eine oder mehrere Zertifikate auswählen. Im Beispiel werden dann Zertifikatsinformationen in die Konsole.  
+  
+ [!code-cpp[CertSelect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[CertSelect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[CertSelect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Das Zertifikat ist nicht lesbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SubjectName">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X500DistinguishedName SubjectName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X500DistinguishedName SubjectName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2.SubjectName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X500DistinguishedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die definierter Antragstellername aus einem Zertifikat ab.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.X509Certificates.X500DistinguishedName" /> -Objekt, das den Namen des Zertifikatantragstellers darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definierter Antragstellername ist der Name des Benutzers des Zertifikats. Der distinguished Name für das Zertifikat ist eine Textdarstellung des Antragstellers oder des Ausstellers des Zertifikats. Diese Darstellung besteht aus Namensattributen, z. B. "CN = MyName, OU = MyOrgUnit, C = US".  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine ausführbare Befehlszeilendatei, die eine Zertifikatsdatei als Argument verwendet und verschiedene Zertifikatseigenschaften an die Konsole ausgibt.  
+  
+ [!code-cpp[CertInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertInfo/CPP/certinfo.cpp#1)]
+ [!code-csharp[CertInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertInfo/CS/certinfo.cs#1)]
+ [!code-vb[CertInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertInfo/VB/certinfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Kontext für das Zertifikat ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Thumbprint">
+      <MemberSignature Language="C#" Value="public string Thumbprint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Thumbprint" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2.Thumbprint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Fingerabdruck eines Zertifikats ab.</summary>
+        <value>Der Fingerabdruck des Zertifikats.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Fingerabdruck wird dynamisch generiert mithilfe des SHA1-Algorithmus und nicht physisch im Zertifikat vorhanden sein. Da der Fingerabdruck einen eindeutigen Wert für das Zertifikat ist, wird es häufig verwendet ein bestimmtes Zertifikat in keinem Zertifikatspeicher gefunden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine ausführbare Befehlszeilendatei, die eine Zertifikatsdatei als Argument verwendet und verschiedene Zertifikatseigenschaften an die Konsole ausgibt.  
+  
+ [!code-cpp[CertInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertInfo/CPP/certinfo.cpp#1)]
+ [!code-csharp[CertInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertInfo/CS/certinfo.cs#1)]
+ [!code-vb[CertInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertInfo/VB/certinfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeigt ein x. 509-Zertifikat im Textformat.</summary>
+        <returns>Die Zertifikatinformationen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wie bei allen `ToString` Methoden, die Ausgabe möglicherweise nicht verschiedenen Versionen von .NET Framework, damit die Methodenergebnisse für den Inhalt nicht analysiert werden soll. Verwenden Sie die Eigenschaften auf der <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Objekt, das genaue Informationen über den Inhalt zu erhalten, oder verwenden Sie die <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString%2A> Methode, um Informationen über das Zertifikat abzurufen.  
+  
+ Diese Methode zeigt das Zertifikat im Textformat.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine ausführbare Befehlszeilendatei, die eine Zertifikatsdatei als Argument verwendet und verschiedene Zertifikatseigenschaften an die Konsole ausgibt.  
+  
+ [!code-cpp[CertInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertInfo/CPP/certinfo.cpp#1)]
+ [!code-csharp[CertInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertInfo/CS/certinfo.cs#1)]
+ [!code-vb[CertInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertInfo/VB/certinfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString (bool verbose);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString(bool verbose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verbose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="verbose">
+          <see langword="true" />um den öffentlichen Schlüssel, privaten Schlüssel, Erweiterungen und usw. anzeigen. <see langword="false" /> zum Anzeigen von Informationen, die ähnelt der <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> Klassentyp sein, einschließlich der Fingerabdruck, Seriennummer, Betreff und Aussteller Namen und So weiter.</param>
+        <summary>Zeigt ein x. 509-Zertifikat im Textformat.</summary>
+        <returns>Die Zertifikatinformationen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wie bei allen `ToString` Methoden, die Ausgabe möglicherweise nicht verschiedenen Versionen von .NET Framework, damit die Methodenergebnisse für den Inhalt nicht analysiert werden soll. Verwenden Sie die Eigenschaften auf der <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Objekt um genaue Informationen zu erhalten.  
+  
+ Diese Methode zeigt das Zertifikat im Textformat. Wenn die `verbose` Parametersatz auf `true`, die Textanzeige enthält, der öffentliche Schlüssel, den privaten Schlüssel und die Erweiterungen. Wenn `verbose` festgelegt ist, um `false`, Text angezeigt werden, die aus dem x. 509-Zertifikat, einschließlich der Fingerabdruck, Seriennummer, Betreff und Aussteller Namen und Informationen zum Gültigkeitsdatum verfügbaren Felder.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine ausführbare Befehlszeilendatei, die eine Zertifikatsdatei als Argument verwendet und verschiedene Zertifikatseigenschaften an die Konsole ausgibt.  
+  
+ [!code-cpp[CertInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertInfo/CPP/certinfo.cpp#1)]
+ [!code-csharp[CertInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertInfo/CS/certinfo.cs#1)]
+ [!code-vb[CertInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertInfo/VB/certinfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verify">
+      <MemberSignature Language="C#" Value="public bool Verify ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Verify() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2.Verify" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("by default this depends on the incomplete X509Chain")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft ein x. 509-Kette mit der Richtlinie für die grundlegende Validierung.</summary>
+        <returns>
+          <see langword="true" />Wenn die Überprüfung erfolgreich ist. <see langword="false" /> , wenn die Validierung fehlschlägt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine einfache Kette für das Zertifikat und, verkettet den Basis-Richtlinie gilt. Wenn Sie weitere Informationen zu einem Fehler benötigen, überprüfen Sie das Zertifikat direkt mit der <xref:System.Security.Cryptography.X509Certificates.X509Chain> Objekt.  
+  
+ Beachten Sie, dass chaining Engine standardmäßig überschrieben werden kann, mithilfe der <xref:System.Security.Cryptography.CryptoConfig> Klasse. Unter Microsoft Windows Server 2003 das Standardmodul entspricht der Spezifikation, die in RFC3280, beschriebenen "[Zertifikat und Certificate Revocation List (CRL) Profile](http://go.microsoft.com/fwlink/?LinkId=45286)."  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zertifikatspeicher des aktuellen Benutzers öffnet Sie wählt nur die aktiven Zertifikate, und ermöglicht es dem Benutzer eine oder mehrere Zertifikate auswählen. Im Beispiel werden dann Zertifikatsinformationen in die Konsole.  
+  
+ [!code-cpp[CertSelect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[CertSelect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[CertSelect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Das Zertifikat ist nicht lesbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public int Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Version" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die x. 509-Formatversion eines Zertifikats ab.</summary>
+        <value>Das Format des Zertifikats.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt mehrere Versionen von x. 509-Zertifikaten. Diese Eigenschaft gibt an, welches format Sie das Zertifikat verwendet. Beispielsweise wird "3" für eine Version 3-Zertifikat zurückgegeben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine ausführbare Befehlszeilendatei, die eine Zertifikatsdatei als Argument verwendet und verschiedene Zertifikatseigenschaften an die Konsole ausgibt.  
+  
+ [!code-cpp[CertInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertInfo/CPP/certinfo.cpp#1)]
+ [!code-csharp[CertInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertInfo/CS/certinfo.cs#1)]
+ [!code-vb[CertInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertInfo/VB/certinfo.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Das Zertifikat ist nicht lesbar.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

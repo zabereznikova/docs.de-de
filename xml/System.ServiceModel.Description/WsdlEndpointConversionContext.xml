@@ -1,0 +1,310 @@
+<Type Name="WsdlEndpointConversionContext" FullName="System.ServiceModel.Description.WsdlEndpointConversionContext">
+  <TypeSignature Language="C#" Value="public class WsdlEndpointConversionContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WsdlEndpointConversionContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.WsdlEndpointConversionContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dies wird an benutzerdefinierte WSDL-Export- und Importprogramme übergeben, um die Anpassung der Metadatenexport- und Importprozesse für einen WSDL-Endpunkt zu ermöglichen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>-Klasse gibt den Kontext wieder, in dem das benutzerdefinierte WSDL für einen Endpunkt entweder mit <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> exportiert oder mit <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> importiert wird. Die folgenden Eigenschaften ermöglichen es Ihnen, das WSDL-Dokumentobjektmodell für das aktuelle WSDL abzurufen:  
+  
+-   Die <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.ContractConversionContext%2A>-Eigenschaft ruft den <xref:System.ServiceModel.Description.WsdlContractConversionContext?displayProperty=nameWithType> für den Endpunktvertrag ab.  
+  
+-   Die <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.Endpoint%2A>-Eigenschaft ruft den <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> für den aktuellen Endpunkt ab.  
+  
+-   Die <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.WsdlBinding%2A>-Eigenschaft ruft die Bindung für den aktuellen Endpunkt ab.  
+  
+-   Die <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.WsdlPort%2A>-Eigenschaft ruft den Port Bindung für den aktuellen Endpunkt ab.  
+  
+-  
+  
+-   Folgende Methoden ermöglichen Ihnen das Hinzufügen oder Entfernen von benutzerdefinierten WSDL-Elementen in den entsprechenden Bereichen des exportierten oder importierten WSDL:  
+  
+-   Die <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.GetFaultBinding%2A>-Methode gibt die Fehlerbindung für den angegebenen Fehler zurück.  
+  
+-   Die <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.GetFaultDescription%2A>-Methode gibt den Fehler für die angegebene Fehlerbindung zurück.  
+  
+-   Die <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.GetMessageBinding%2A>-Methode gibt die Nachrichtenbindung für die angegebene Nachricht zurück.  
+  
+-   Die <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.GetMessageDescription%2A>-Methode gibt die Nachricht für die angegebene Nachrichtenbindung zurück.  
+  
+-   Die <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.GetOperationBinding%2A>-Methode gibt die Vorgangsbindung für den angegebenen Vorgang zurück.  
+  
+-   Die <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.GetOperationDescription%2A>-Methode gibt den Vorgang für die angegebene Vorgangsbindung zurück.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContractConversionContext">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.WsdlContractConversionContext ContractConversionContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.WsdlContractConversionContext ContractConversionContext" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WsdlEndpointConversionContext.ContractConversionContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.WsdlContractConversionContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ServiceModel.Description.WsdlContractConversionContext" /> ab, der exportiert oder importiert wird.</summary>
+        <value>Der <see cref="T:System.ServiceModel.Description.WsdlContractConversionContext" />, der exportiert oder importiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie den <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.ContractConversionContext%2A>, um den Konvertierungskontext des Vertrags für den Endpunkt zu erhalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Endpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint Endpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ServiceEndpoint Endpoint" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WsdlEndpointConversionContext.Endpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> ab, der exportiert oder importiert wird.</summary>
+        <value>Der <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />, der exportiert oder importiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.Endpoint%2A>-Eigenschaft, um die Dienstendpunktbeschreibung beim Export oder Import zu erhalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFaultBinding">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.FaultBinding GetFaultBinding (System.ServiceModel.Description.FaultDescription fault);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Description.FaultBinding GetFaultBinding(class System.ServiceModel.Description.FaultDescription fault) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WsdlEndpointConversionContext.GetFaultBinding(System.ServiceModel.Description.FaultDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.FaultBinding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fault" Type="System.ServiceModel.Description.FaultDescription" />
+      </Parameters>
+      <Docs>
+        <param name="fault">Die <see cref="T:System.ServiceModel.Description.FaultDescription" /> für den der WSDL-Bindung zugeordneten Fehler.</param>
+        <summary>Ruft die dem Fehler zugeordnete WSDL-Bindung ab.</summary>
+        <returns>Die WSDL-<see cref="T:System.Web.Services.Description.FaultBinding" />, die dem Fehler zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist das Gegenteil der <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.GetFaultDescription%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFaultDescription">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.FaultDescription GetFaultDescription (System.Web.Services.Description.FaultBinding faultBinding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.FaultDescription GetFaultDescription(class System.Web.Services.Description.FaultBinding faultBinding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WsdlEndpointConversionContext.GetFaultDescription(System.Web.Services.Description.FaultBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.FaultDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="faultBinding" Type="System.Web.Services.Description.FaultBinding" />
+      </Parameters>
+      <Docs>
+        <param name="faultBinding">Die <see cref="T:System.Web.Services.Description.FaultBinding" />, die der WSDL-Fehlerbindung zugeordnet ist.</param>
+        <summary>Ruft die Beschreibung für den der WSDL-Fehlerbindung zugeordneten Fehler ab.</summary>
+        <returns>Die <see cref="T:System.ServiceModel.Description.FaultDescription" /> für den der WSDL-Bindung zugeordneten Fehler.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist das Gegenteil der <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.GetFaultBinding%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMessageBinding">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.MessageBinding GetMessageBinding (System.ServiceModel.Description.MessageDescription message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Description.MessageBinding GetMessageBinding(class System.ServiceModel.Description.MessageDescription message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WsdlEndpointConversionContext.GetMessageBinding(System.ServiceModel.Description.MessageDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.MessageBinding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Description.MessageDescription" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die dieser Beschreibung zugeordnete <see cref="T:System.ServiceModel.Description.MessageDescription" />.</param>
+        <summary>Ruft die WSDL-Bindung für die von der Beschreibung angegebene Nachricht ab.</summary>
+        <returns>Die <see cref="T:System.Web.Services.Description.MessageBinding" /> für die von der Beschreibung angegebene Nachricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist das Gegenteil der <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.GetMessageDescription%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMessageDescription">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.MessageDescription GetMessageDescription (System.Web.Services.Description.MessageBinding messageBinding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.MessageDescription GetMessageDescription(class System.Web.Services.Description.MessageBinding messageBinding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WsdlEndpointConversionContext.GetMessageDescription(System.Web.Services.Description.MessageBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.MessageDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBinding" Type="System.Web.Services.Description.MessageBinding" />
+      </Parameters>
+      <Docs>
+        <param name="messageBinding">Die der Nachricht zugeordnete <see cref="T:System.Web.Services.Description.MessageBinding" />.</param>
+        <summary>Ruft die Nachrichtenbeschreibung für die von der WSDL-Bindung angegebene Nachricht ab.</summary>
+        <returns>Die <see cref="T:System.ServiceModel.Description.MessageDescription" /> für die von der Bindung angegebene Nachricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist das Gegenteil der <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.GetMessageBinding%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOperationBinding">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.OperationBinding GetOperationBinding (System.ServiceModel.Description.OperationDescription operation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Description.OperationBinding GetOperationBinding(class System.ServiceModel.Description.OperationDescription operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WsdlEndpointConversionContext.GetOperationBinding(System.ServiceModel.Description.OperationDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.OperationBinding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operation" Type="System.ServiceModel.Description.OperationDescription" />
+      </Parameters>
+      <Docs>
+        <param name="operation">Die <see cref="T:System.ServiceModel.Description.OperationDescription" /> des der Bindung zugeordneten Vorgangs.</param>
+        <summary>Ruft die WSDL-Bindung für den von der Beschreibung angegebenen Vorgang ab.</summary>
+        <returns>Die <see cref="T:System.Web.Services.Description.OperationBinding" /> für den von der Beschreibung angegebenen Vorgang.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist das Gegenteil der <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.GetOperationDescription%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOperationDescription">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.OperationDescription GetOperationDescription (System.Web.Services.Description.OperationBinding operationBinding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.OperationDescription GetOperationDescription(class System.Web.Services.Description.OperationBinding operationBinding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WsdlEndpointConversionContext.GetOperationDescription(System.Web.Services.Description.OperationBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.OperationDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationBinding" Type="System.Web.Services.Description.OperationBinding" />
+      </Parameters>
+      <Docs>
+        <param name="operationBinding">Die dieser Beschreibung zugeordnete <see cref="T:System.Web.Services.Description.OperationBinding" />.</param>
+        <summary>Gibt die Vorgangsbeschreibung des der WSDL-Bindung zugeordneten Vorgangs zurück.</summary>
+        <returns>Die <see cref="T:System.ServiceModel.Description.OperationDescription" /> des der Bindung zugeordneten Vorgangs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist das Gegenteil der <xref:System.ServiceModel.Description.WsdlEndpointConversionContext.GetOperationBinding%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WsdlBinding">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Binding WsdlBinding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Binding WsdlBinding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WsdlEndpointConversionContext.WsdlBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Binding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Web.Services.Description.Binding" /> für den WSDL-Endpunkt ab.</summary>
+        <value>Der <see cref="T:System.Web.Services.Description.Binding" /> für den WSDL-Endpunkt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WsdlPort">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Port WsdlPort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Port WsdlPort" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WsdlEndpointConversionContext.WsdlPort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Port</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Web.Services.Description.Port" /> für den WSDL-Endpunkt ab.</summary>
+        <value>Der <see cref="T:System.Web.Services.Description.Port" /> für den WSDL-Endpunkt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

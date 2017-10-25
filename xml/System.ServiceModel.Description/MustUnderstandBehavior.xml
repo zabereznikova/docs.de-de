@@ -1,0 +1,201 @@
+<Type Name="MustUnderstandBehavior" FullName="System.ServiceModel.Description.MustUnderstandBehavior">
+  <TypeSignature Language="C#" Value="public class MustUnderstandBehavior : System.ServiceModel.Description.IEndpointBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MustUnderstandBehavior extends System.Object implements class System.ServiceModel.Description.IEndpointBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.MustUnderstandBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IEndpointBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Weist Windows Communication Foundation (WCF), deaktivieren Sie die obligatorische Verarbeitung von Headern, die nicht in der <see cref="P:System.ServiceModel.Channels.MessageHeaders.UnderstoodHeaders" /> -Auflistung, die gemäß der SOAP 1.1 und 1.2-Spezifikation verstanden werden muss.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird von der [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Client- oder -Dienstlaufzeit eine Ausnahme ausgelöst, wenn ein <xref:System.ServiceModel.Channels.MessageHeader?displayProperty=nameWithType> in einer Nachricht auftritt und die <xref:System.ServiceModel.Channels.MessageHeader.MustUnderstand%2A?displayProperty=nameWithType>-Eigenschaft für diese Nachricht `true` ist, der Header sich jedoch nicht in der <xref:System.ServiceModel.Channels.MessageHeaders.UnderstoodHeaders%2A?displayProperty=nameWithType>-Eigenschaft für die Nachricht befindet.  
+  
+ Verwenden Sie das <xref:System.ServiceModel.Description.MustUnderstandBehavior> und legen Sie die <xref:System.ServiceModel.Description.MustUnderstandBehavior.ValidateMustUnderstand%2A>-Eigenschaft auf `false` fest, um dieses Verhalten zu verhindern. In der Regel wird dies in Szenarien verwendet, in denen der Nachrichteninhalt nicht verarbeitet sondern weitergeleitet werden soll, z.&#160;B. bei einem Routerdienst.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MustUnderstandBehavior (bool validate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool validate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MustUnderstandBehavior.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="validate">Ein Wert, der angibt, ob die Validierung von <see langword="mustUnderstand" />-Headern erzwungen werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.MustUnderstandBehavior" />-Klasse unter Verwendung des angegebenen Werts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Übergeben Sie `false` als `validate`-Parameter an diesen Konstruktor, um das Auslösen einer Ausnahme zu verhindern, wenn ein <xref:System.ServiceModel.Channels.MessageHeader?displayProperty=nameWithType> in einer Nachricht auftritt, deren <xref:System.ServiceModel.Channels.MessageHeader.MustUnderstand%2A?displayProperty=nameWithType>-Eigenschaft `true` ist, der Header sich jedoch nicht in der <xref:System.ServiceModel.Channels.MessageHeaders.UnderstoodHeaders%2A?displayProperty=nameWithType>-Eigenschaft für die Nachricht befindet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.AddBindingParameters (System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Channels.BindingParameterCollection bindingParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters(class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, class System.ServiceModel.Channels.BindingParameterCollection bindingParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MustUnderstandBehavior.System#ServiceModel#Description#IEndpointBehavior#AddBindingParameters(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="bindingParameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint">Der Endpunkt, für den das Verhalten gilt.</param>
+        <param name="bindingParameters">Die Bindungsparameter für das Verhalten.</param>
+        <summary>Unterstützt die Verhaltensfunktionalität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert <xref:System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters%2A> zur Unterstützung der Verhaltensfunktionalität.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.ApplyClientBehavior (System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Dispatcher.ClientRuntime behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior(class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, class System.ServiceModel.Dispatcher.ClientRuntime behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MustUnderstandBehavior.System#ServiceModel#Description#IEndpointBehavior#ApplyClientBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="behavior" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint">Der Endpunkt, für den das Verhalten gilt.</param>
+        <param name="behavior">Die festzulegende Clientlaufzeit.</param>
+        <summary>Weist den Wert von <see cref="P:System.ServiceModel.Description.MustUnderstandBehavior.ValidateMustUnderstand" /> der <see cref="P:System.ServiceModel.Dispatcher.ClientRuntime.ValidateMustUnderstand" />-Eigenschaft zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert die <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A>-Methode zur Unterstützung der Verhaltensfunktionalität.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.ApplyDispatchBehavior (System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, class System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MustUnderstandBehavior.System#ServiceModel#Description#IEndpointBehavior#ApplyDispatchBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="endpointDispatcher" Type="System.ServiceModel.Dispatcher.EndpointDispatcher" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint">Der Endpunkt, für den das Verhalten gilt.</param>
+        <param name="endpointDispatcher">Der festzulegende Verteiler.</param>
+        <summary>Weist den Wert von <see cref="P:System.ServiceModel.Description.MustUnderstandBehavior.ValidateMustUnderstand" /> der <see cref="P:System.ServiceModel.Dispatcher.DispatchRuntime.ValidateMustUnderstand" />-Eigenschaft zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert das <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> zur Unterstützung der Verhaltensfunktionalität.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.Validate">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.Validate (System.ServiceModel.Description.ServiceEndpoint serviceEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.Validate(class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MustUnderstandBehavior.System#ServiceModel#Description#IEndpointBehavior#Validate(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint">Der zu überprüfende Endpunkt.</param>
+        <summary>Unterstützt die Verhaltensfunktionalität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert die <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A>-Methode zur Unterstützung der Verhaltensfunktionalität.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateMustUnderstand">
+      <MemberSignature Language="C#" Value="public bool ValidateMustUnderstand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidateMustUnderstand" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MustUnderstandBehavior.ValidateMustUnderstand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Hiermit wird ein Wert abgerufen oder festgelegt, der angibt, ob sichergestellt werden soll, dass ein Header der SOAP 1.1-/1.2-Spezifikation entspricht.</summary>
+        <value>
+          <see langword="true" />, wenn der Header ordnungsgemäß verarbeitet werden muss, da sonst ein Fehler ausgelöst wird, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie die <xref:System.ServiceModel.Description.MustUnderstandBehavior.ValidateMustUnderstand%2A>-Eigenschaft auf `false` fest, um zu verhindern, dass eine Ausnahme ausgelöst wird, wenn ein <xref:System.ServiceModel.Channels.MessageHeader?displayProperty=nameWithType> in einer Nachricht auftritt, deren <xref:System.ServiceModel.Channels.MessageHeader.MustUnderstand%2A?displayProperty=nameWithType>-Eigenschaft `true` ist, der sich jedoch nicht in der <xref:System.ServiceModel.Channels.MessageHeaders.UnderstoodHeaders%2A?displayProperty=nameWithType>-Eigenschaft der Nachricht befindet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,92 @@
+<Type Name="StylusShape" FullName="System.Windows.Ink.StylusShape">
+  <TypeSignature Language="C#" Value="public abstract class StylusShape" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit StylusShape extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Ink.StylusShape" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Spitze des Tablettstifts an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Ink.StylusShape> gibt die Form, Breite und Höhe der Spitze des Tablettstifts an.  Methoden, z. B. <xref:System.Windows.Ink.StrokeCollection.Erase%2A> und <xref:System.Windows.Ink.StrokeCollection.HitTest%2A> verwenden eine <xref:System.Windows.Ink.StylusShape> um zu bestimmen, die Spitze des Strichs anzunehmen. Die <xref:System.Windows.Ink.EllipseStylusShape>-Klasse und die <xref:System.Windows.Ink.RectangleStylusShape>-Klasse erben von <xref:System.Windows.Ink.StylusShape>.  
+  
+<a name="xamlTextUsage_StylusShape"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Diese Klasse wird in der Regel nicht in XAML verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Ink.StylusShape> und übergeben sie an der <xref:System.Windows.Ink.StrokeCollection.GetIncrementalStrokeHitTester%2A> Methode, um einen Teil eines Löschen einer <xref:System.Windows.Ink.Stroke>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Ink.IncrementalStrokeHitTester> aufgerufen `eraseTester` und dass seine <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> Ereignis an den Ereignishandler, die in diesem Beispiel definierte verbunden wurde. Um ein Steuerelement zu erstellen, die einem Benutzer ermöglicht, Radieren, finden Sie unter [Vorgehensweise: Löschen Freihand-auf ein benutzerdefiniertes Steuerelement](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#4](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#4)]
+ [!code-vb[InkEraser#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public double Height { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Ink.StylusShape.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe des Tablettstifts ab.</summary>
+        <value>Die Höhe des Tablettstifts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rotation">
+      <MemberSignature Language="C#" Value="public double Rotation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Rotation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Ink.StylusShape.Rotation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Winkel des Tablettstifts ab.</summary>
+        <value>Der Winkel des Tablettstifts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public double Width { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Ink.StylusShape.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Breite des Tablettstifts ab.</summary>
+        <value>Die Breite des Tablettstifts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

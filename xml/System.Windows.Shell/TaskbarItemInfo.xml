@@ -1,0 +1,435 @@
+<Type Name="TaskbarItemInfo" FullName="System.Windows.Shell.TaskbarItemInfo">
+  <TypeSignature Language="C#" Value="public sealed class TaskbarItemInfo : System.Windows.Freezable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TaskbarItemInfo extends System.Windows.Freezable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Shell.TaskbarItemInfo" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Freezable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Informationen darüber, wie die Taskleistenminiaturansicht angezeigt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Shell.TaskbarItemInfo> Klasse stellt einen verwalteten Wrapper für [!INCLUDE[win7](~/includes/win7-md.md)] Taskleistenfunktionalität. Weitere Informationen über die Windows-Shell und den nativen Taskleisten-APIs finden Sie unter [Taskleistenerweiterungen](http://go.microsoft.com/fwlink/?LinkId=178479). <xref:System.Windows.Shell.TaskbarItemInfo>wird verfügbar gemacht, als die <xref:System.Windows.Window.TaskbarItemInfo%2A?displayProperty=nameWithType> Abhängigkeitseigenschaft für eine <xref:System.Windows.Window>.  
+  
+ Die [!INCLUDE[win7](~/includes/win7-md.md)] Taskleiste bietet erweiterte Funktionen, mit dem Sie das Taskleistenelement verwenden, um Status für einen Benutzer zu kommunizieren und allgemeine Aufgaben verfügbar zu machen, wenn das Fenster minimiert oder ausgeblendet wird. Die Funktionalität, die von verfügbar gemacht wird die <xref:System.Windows.Shell.TaskbarItemInfo> Klasse steht in früheren Versionen von Windows als [!INCLUDE[win7](~/includes/win7-md.md)]. Anwendungen, die die <xref:System.Windows.Shell.TaskbarItemInfo> Klasse kann weiterhin in früheren Versionen von Windows ausgeführt; diese Taskleiste Verbesserungen sind jedoch in den früheren Versionen nicht verfügbar.  
+  
+ In [!INCLUDE[win7](~/includes/win7-md.md)], einige Taskleistenfunktionen möglicherweise nicht verfügbar ist, je nach den Einstellungen des Benutzers. Beispielsweise Taskleistenfunktionalität steht wenn [!INCLUDE[TLA#tla_aero](~/includes/tlasharptla-aero-md.md)] deaktiviert ist oder wenn die Anwendung mit erweiterten Berechtigungen gestartet wird. Ihre Anwendung sollte bieten Möglichkeiten für die Interaktion mit dem Benutzer, die nicht auf der verbesserte Taskleistenfunktionalität in abhängen [!INCLUDE[win7](~/includes/win7-md.md)].  
+  
+ Symbole im Benachrichtigungsbereich angezeigt, die ganz rechts in der Taskleiste ist, werden normalerweise verwendet, für die Kommunkation Anwendungsstatus für einen Benutzer. Wird standardmäßig die [!INCLUDE[win7](~/includes/win7-md.md)] Taskleiste blendet Symbole im Benachrichtigungsbereich angezeigt. Sie können jedoch festlegen, die <xref:System.Windows.Shell.TaskbarItemInfo.Overlay%2A> Eigenschaft zum Hinzufügen eines Bilds in der Taskleistenschaltfläche Status, z. B. Onlinestatus in einer messaging-Anwendung zu kommunizieren. Das Overlaybild ermöglicht Benutzern, die den Status der Anwendung finden Sie auch, wenn sie nicht das Programmsymbol im Infobereich angezeigt. Sie können auch anzeigen, den Status der ausgeführten Tasks in der Taskleistenschaltfläche durch Festlegen der <xref:System.Windows.Shell.TaskbarItemInfo.ProgressState%2A> und <xref:System.Windows.Shell.TaskbarItemInfo.ProgressValue%2A> Eigenschaften.  
+  
+ Die [!INCLUDE[win7](~/includes/win7-md.md)] Taskleiste wird eine Miniaturansicht der Anwendung angezeigt, wenn Sie den Mauszeiger über der Schaltfläche auf der Taskleiste bewegen. Standardmäßig wird das gesamte Anwendungsfenster angezeigt. Sie können einen bestimmten Teil des Fensters, in der Miniaturansicht angezeigt angeben der <xref:System.Windows.Shell.TaskbarItemInfo.ThumbnailClipMargin%2A> Eigenschaft. Sie können auch angeben, ein <xref:System.Windows.Shell.TaskbarItemInfo.Description%2A> , der in einer QuickInfo über die Taskleistenminiaturansicht angezeigt wird. Die QuickInfo wird angezeigt, selbst wenn die Miniaturansicht aufgrund von benutzereinstellungen für nicht sichtbar ist.  
+  
+ Sie können die Schaltflächen auf der Taskleistenminiaturansicht für den Zugriff auf allgemeine Aufgaben ohne den zum Anwendungsfenster hinzufügen. Windows Media Player stellt z. B. Wiedergabe, Pause "," weiterleiten, und die Back-Schaltflächen, mit denen Sie steuern Medienwiedergabe aus der Taskleistenminiaturansicht aus, wenn die Anwendung minimiert wird. Schaltflächen in der Taskleistenminiaturansicht dargestellte <xref:System.Windows.Shell.ThumbButtonInfo> Objekte und sind in enthalten die <xref:System.Windows.Shell.TaskbarItemInfo.ThumbButtonInfos%2A> Auflistung.  
+  
+ Die folgende Abbildung zeigt die erweiterten Funktionen von der [!INCLUDE[win7](~/includes/win7-md.md)] Taskleiste.  
+  
+ ![Infobeispiel für Taskleistenelement](~/add/media/wpfshell-taskbariteminfo.png "Infobeispiel für Taskleistenelement")  
+Windows-Taskleiste erweiterte Funktionen  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Shell.TaskbarItemInfo> im Markup. Die <xref:System.Windows.Shell.TaskbarItemInfo> enthält eine Auflistung von <xref:System.Windows.Shell.ThumbButtonInfo> -Objekten, die Zugriff auf die Befehle Wiedergabe und Beenden der Taskleistenelement ermöglichen.  
+  
+ [!code-xaml[Shell_TaskbarItemSample#010](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_taskbaritemsample/cs/mainwindow.xaml#010)]  
+  
+ Das folgende Markup und Code im vorherigen Beispiel gezeigt im vollständigen Kontext. Die Anwendung verwendet ein <xref:System.ComponentModel.BackgroundWorker> zählen von 0 bis 100 und ihren Status in der Benutzeroberfläche angezeigt. Der Task kann gestartet und aus der Taskleistenvorschau beendet werden. Der Status wird in der Taskleistenschaltfläche angezeigt.  
+  
+ [!code-xaml[Shell_TaskbarItemSample#001](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_taskbaritemsample/cs/mainwindow.xaml#001)]  
+  
+ [!code-csharp[Shell_TaskbarItemSample#100](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_taskbaritemsample/cs/mainwindow.xaml.cs#100)]
+ [!code-vb[Shell_TaskbarItemSample#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/shell_taskbaritemsample/vb/mainwindow.xaml.vb#100)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskbarItemInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.TaskbarItemInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Shell.TaskbarItemInfo" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.TaskbarItemInfo.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.TaskbarItemInfo.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text für die QuickInfo Taskleiste fest.</summary>
+        <value>Der Text für die Taskleistenelement-QuickInfo. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die QuickInfo wird über die Taskleistenminiaturansicht angezeigt, wenn der Mauszeiger über der Schaltfläche auf der Taskleiste befindet. Wenn die Taskleistenminiaturansicht nicht aufgrund von benutzereinstellungen angezeigt wird, wird die QuickInfo weiterhin angezeigt.  
+  
+ Die folgende Abbildung zeigt die Taskleiste <xref:System.Windows.Shell.TaskbarItemInfo.Description%2A> QuickInfo.  
+  
+ ![Infobeispiel für Taskleistenelement](~/add/media/wpfshell-taskbariteminfo.png "Infobeispiel für Taskleistenelement")  
+Beschreibung von Windows-Taskleiste  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Shell.TaskbarItemInfo> in Markup und das Festlegen der <xref:System.Windows.Shell.TaskbarItemInfo.Description%2A> Eigenschaft. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Shell.TaskbarItemInfo> Klasse.  
+  
+ [!code-xaml[Shell_TaskbarItemSample#010](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_taskbaritemsample/cs/mainwindow.xaml#010)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DescriptionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DescriptionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DescriptionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.TaskbarItemInfo.DescriptionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.TaskbarItemInfo.Description" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Overlay">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ImageSource Overlay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.ImageSource Overlay" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.TaskbarItemInfo.Overlay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ImageSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Bild, das über das Programmsymbol in der Schaltfläche auf der Taskleiste angezeigt wird.</summary>
+        <value>Das Bild, das über das Programmsymbol in der Schaltfläche auf der Taskleiste angezeigt wird. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können ein Bild hinzufügen, auf das Programmsymbol in der Taskleistenschaltfläche Status für den Benutzer der Anwendung zu kommunizieren. Das Overlay verwendet eine statische oder animierte <xref:System.Windows.Media.ImageSource> , die auf der unteren rechten Ecke des Symbols in der Taskleistenschaltfläche positioniert ist. Die Überlagerung wird nicht angezeigt, wenn die Benutzer die Taskleiste kleine Symbole angezeigt wird.  
+  
+ Symbole im Benachrichtigungsbereich angezeigt, die ganz rechts in der Taskleiste ist, werden normalerweise verwendet, für die Kommunkation Anwendungsstatus für einen Benutzer. In [!INCLUDE[win7](~/includes/win7-md.md)], Programmsymbole im Infobereich sind standardmäßig ausgeblendet und sind daher weniger nützlich für die Kommunikation von Status. Sie können die Taskleiste Schaltfläche Overlay in [!INCLUDE[win7](~/includes/win7-md.md)] Status kommunizieren, wenn das Symbol im Infobereich ausgeblendet ist. Die Anwendung kann erkennt die Version von Windows und Bereitstellen von Benachrichtigungen in einer Weise, die für das Betriebssystem geeignet ist.  
+  
+ Overlaybilder werden in der entsprechenden Größe gerendert. Wenn die <xref:System.Windows.Media.ImageSource> stellt eine <xref:System.Drawing.Icon>, die entsprechende Bittiefe wird auch verwendet.  
+  
+ Die folgende Abbildung zeigt die Taskleiste <xref:System.Windows.Shell.TaskbarItemInfo.Overlay%2A>.  
+  
+ ![Infobeispiel für Taskleistenelement](~/add/media/wpfshell-taskbariteminfo.png "Infobeispiel für Taskleistenelement")  
+Windows-Taskleiste-Overlay  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Shell.TaskbarItemInfo> in Markup und das Festlegen der <xref:System.Windows.Shell.TaskbarItemInfo.Overlay%2A> Eigenschaft. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Shell.TaskbarItemInfo> Klasse.  
+  
+ [!code-xaml[Shell_TaskbarItemSample#010](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_taskbaritemsample/cs/mainwindow.xaml#010)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie die <xref:System.Windows.Shell.TaskbarItemInfo.Overlay%2A>-Eigenschaft im Code festlegen.  
+  
+ [!code-csharp[Shell_TaskbarItemSample#121](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_taskbaritemsample/cs/mainwindow.xaml.cs#121)]
+ [!code-vb[Shell_TaskbarItemSample#121](~/samples/snippets/visualbasic/VS_Snippets_Wpf/shell_taskbaritemsample/vb/mainwindow.xaml.vb#121)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverlayProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OverlayProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OverlayProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.TaskbarItemInfo.OverlayProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.TaskbarItemInfo.Overlay" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProgressState">
+      <MemberSignature Language="C#" Value="public System.Windows.Shell.TaskbarItemProgressState ProgressState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Shell.TaskbarItemProgressState ProgressState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.TaskbarItemInfo.ProgressState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Shell.TaskbarItemProgressState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, wie die Statusanzeige in der Schaltfläche auf der Taskleiste angezeigt wird.</summary>
+        <value>Ein Enumerationswert, der angibt, wie die Statusanzeige in der Schaltfläche auf der Taskleiste angezeigt wird. Die Standardeinstellung ist <see cref="F:System.Windows.Shell.TaskbarItemProgressState.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können den Fortschritt der lang andauernden Aufgaben kommunizieren, durch Anzeigen einer Statusanzeige in einem [!INCLUDE[win7](~/includes/win7-md.md)] Taskleistenschaltfläche. Die Farbe des Indikators richtet sich nach der <xref:System.Windows.Shell.TaskbarItemInfo.ProgressState%2A> -Eigenschaft, die eine enthält die <xref:System.Windows.Shell.TaskbarItemProgressState> Enumerationswerte. Wenn die <xref:System.Windows.Shell.TaskbarItemInfo.ProgressState%2A> ist <xref:System.Windows.Shell.TaskbarItemProgressState.Normal>, der Indikator ist grün. Wenn <xref:System.Windows.Shell.TaskbarItemProgressState.Paused>, der Indikator ist gelb. Wenn <xref:System.Windows.Shell.TaskbarItemProgressState.Error>, der Indikator ist rot. Für diese Zustände der <xref:System.Windows.Shell.TaskbarItemInfo.ProgressValue%2A> Eigenschaft bestimmt, welcher Anteil der Schaltfläche auf der Taskleiste von der Statusanzeige ausgefüllt wird. <xref:System.Windows.Shell.TaskbarItemInfo.ProgressValue%2A>wird ignoriert, für andere Werte von <xref:System.Windows.Shell.TaskbarItemInfo.ProgressState%2A>. <xref:System.Windows.Shell.TaskbarItemProgressState.Indeterminate>Zeigt einen pulsierenden grünen Indikator in der gesamten Taskleistenschaltfläche. Kein Indikator wird nur zur <xref:System.Windows.Shell.TaskbarItemProgressState.None>.  
+  
+ Die folgende Abbildung zeigt die Statusanzeige der Taskleiste in der <xref:System.Windows.Shell.TaskbarItemProgressState.Normal> Zustand.  
+  
+ ![Infobeispiel für Taskleistenelement](~/add/media/wpfshell-taskbariteminfo.png "Infobeispiel für Taskleistenelement")  
+Windows-Taskleiste-Statusanzeige  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie die <xref:System.Windows.Shell.TaskbarItemInfo.ProgressState%2A>-Eigenschaft im Code festlegen. Der Zustand wird im Handler des festgelegt eine <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted?displayProperty=nameWithType> Ereignis, das angibt, ob der Hintergrundtask vom Benutzer beendet wurde mit einem Fehler beendet oder normal abgeschlossen. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Shell.TaskbarItemInfo> Klasse.  
+  
+ [!code-csharp[Shell_TaskbarItemSample#120](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_taskbaritemsample/cs/mainwindow.xaml.cs#120)]
+ [!code-vb[Shell_TaskbarItemSample#120](~/samples/snippets/visualbasic/VS_Snippets_Wpf/shell_taskbaritemsample/vb/mainwindow.xaml.vb#120)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProgressStateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ProgressStateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ProgressStateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.TaskbarItemInfo.ProgressStateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.TaskbarItemInfo.ProgressState" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProgressValue">
+      <MemberSignature Language="C#" Value="public double ProgressValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ProgressValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.TaskbarItemInfo.ProgressValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der den Füllungsgrad der Statusanzeige in der Taskleistenschaltfläche angibt.</summary>
+        <value>Ein Wert, der den Füllungsgrad der Statusanzeige in der Taskleistenschaltfläche angibt. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Shell.TaskbarItemInfo.ProgressValue%2A> Eigenschaft als Wert zwischen 0,0 und 1,0 dargestellt wird. Um diese Begrenzungen werden Zahlen kleinere und größere umgewandelt. <xref:System.Double.NaN>wird in 0 konvertiert.  
+  
+ Sie können den Fortschritt der lang andauernden Aufgaben kommunizieren, durch Anzeigen einer Statusanzeige in einem [!INCLUDE[win7](~/includes/win7-md.md)] Taskleistenschaltfläche. Die Farbe des Indikators richtet sich nach der <xref:System.Windows.Shell.TaskbarItemInfo.ProgressState%2A> -Eigenschaft, die eine enthält die <xref:System.Windows.Shell.TaskbarItemProgressState> Enumerationswerte. Wenn die <xref:System.Windows.Shell.TaskbarItemInfo.ProgressState%2A> Eigenschaft <xref:System.Windows.Shell.TaskbarItemProgressState.Normal>, <xref:System.Windows.Shell.TaskbarItemProgressState.Paused>, oder <xref:System.Windows.Shell.TaskbarItemProgressState.Error>, die <xref:System.Windows.Shell.TaskbarItemInfo.ProgressValue%2A> Eigenschaft bestimmt den Füllungsgrad der Statusanzeige. <xref:System.Windows.Shell.TaskbarItemInfo.ProgressValue%2A>wird für einige Werte ignoriert <xref:System.Windows.Shell.TaskbarItemInfo.ProgressState%2A>. <xref:System.Windows.Shell.TaskbarItemProgressState.Indeterminate>Zeigt einen pulsierenden grünen Indikator in der gesamten Taskleistenschaltfläche. Kein Indikator wird nur zur <xref:System.Windows.Shell.TaskbarItemProgressState.None>.  
+  
+ Die folgende Abbildung zeigt die Taskleiste Statusanzeige mit einem <xref:System.Windows.Shell.TaskbarItemInfo.ProgressValue%2A> von 82 Prozent.  
+  
+ ![Infobeispiel für Taskleistenelement](~/add/media/wpfshell-taskbariteminfo.png "Infobeispiel für Taskleistenelement")  
+Windows-Taskleiste-Statusanzeige  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie die <xref:System.Windows.Shell.TaskbarItemInfo.ProgressValue%2A>-Eigenschaft im Code festlegen. Der Wert wird festgelegt, in dem Ereignishandler von einem <xref:System.ComponentModel.BackgroundWorker.ProgressChanged?displayProperty=nameWithType> Ereignis, das den aktuellen Status des Hintergrundtasks angibt. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Shell.TaskbarItemInfo> Klasse.  
+  
+ [!code-csharp[Shell_TaskbarItemSample#130](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_taskbaritemsample/cs/mainwindow.xaml.cs#130)]
+ [!code-vb[Shell_TaskbarItemSample#130](~/samples/snippets/visualbasic/VS_Snippets_Wpf/shell_taskbaritemsample/vb/mainwindow.xaml.vb#130)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProgressValueProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ProgressValueProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ProgressValueProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.TaskbarItemInfo.ProgressValueProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.TaskbarItemInfo.ProgressValue" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThumbButtonInfos">
+      <MemberSignature Language="C#" Value="public System.Windows.Shell.ThumbButtonInfoCollection ThumbButtonInfos { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Shell.ThumbButtonInfoCollection ThumbButtonInfos" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.TaskbarItemInfo.ThumbButtonInfos" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Shell.ThumbButtonInfoCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auflistung der <see cref="T:System.Windows.Shell.ThumbButtonInfo" /> Objekte zugeordnet sind, die die <see cref="T:System.Windows.Window" />.</summary>
+        <value>Die Auflistung der <see cref="T:System.Windows.Shell.ThumbButtonInfo" /> Objekte zugeordnet sind, die die <see cref="T:System.Windows.Window" />. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die Schaltflächen auf der Taskleistenminiaturansicht, um Benutzerzugriff auf allgemeine Aufgaben zu erhalten, ohne sie in das Anwendungsfenster wechseln hinzufügen. Windows Media Player stellt z. B. Wiedergabe, Pause "," weiterleiten, und Back-Schaltflächen, mit die Benutzer Steuerelement Medienwiedergabe aus der Taskleistenminiaturansicht können, wenn die Anwendung minimiert wird. Schaltflächen in der Taskleistenminiaturansicht dargestellte <xref:System.Windows.Shell.ThumbButtonInfo> Objekte und sind in enthalten die <xref:System.Windows.Shell.TaskbarItemInfo.ThumbButtonInfos%2A> Auflistung.  
+  
+ Die [!INCLUDE[win7](~/includes/win7-md.md)] Befehlsshell können maximal sieben Schaltflächen in der Taskleistenminiaturansicht. Wenn mehr als sieben <xref:System.Windows.Shell.ThumbButtonInfo> Objekte werden hinzugefügt, um die <xref:System.Windows.Shell.ThumbButtonInfoCollection>, werden die zusätzlichen Objekte als Überlauf behandelt. Wenn eine Schaltfläche ist <xref:System.Windows.Visibility.Collapsed>, er verfügt nicht über alle sichtbaren Elemente und kein Speicherplatz reserviert ist. In diesem Groß-/Kleinschreibung, zusätzlichen Schaltflächen aus dem <xref:System.Windows.Shell.ThumbButtonInfoCollection> Überlauf werden angezeigt.  
+  
+ Die folgende Abbildung zeigt die Taskleistenvorschau mit der eine Auflistung von zwei Thumb-Schaltflächen.  
+  
+ ![Infobeispiel für Taskleistenelement](~/add/media/wpfshell-taskbariteminfo.png "Infobeispiel für Taskleistenelement")  
+Windows-Taskleiste Thumb-Schaltflächen  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Shell.TaskbarItemInfo> im Markup. Die <xref:System.Windows.Shell.TaskbarItemInfo> enthält eine Auflistung von <xref:System.Windows.Shell.ThumbButtonInfo> -Objekten, die Zugriff auf die Befehle Wiedergabe und Beenden der Taskleistenelement ermöglichen. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Shell.TaskbarItemInfo> Klasse.  
+  
+ [!code-xaml[Shell_TaskbarItemSample#010](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_taskbaritemsample/cs/mainwindow.xaml#010)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThumbButtonInfosProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ThumbButtonInfosProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ThumbButtonInfosProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.TaskbarItemInfo.ThumbButtonInfosProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.TaskbarItemInfo.ThumbButtonInfos" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThumbnailClipMargin">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness ThumbnailClipMargin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness ThumbnailClipMargin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.TaskbarItemInfo.ThumbnailClipMargin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der den Teil des Clientbereichs des Anwendungsfensters angibt, die in der Taskleistenminiaturansicht angezeigt wird.</summary>
+        <value>Ein Wert, der den Teil des Clientbereichs des Anwendungsfensters angibt, die in der Taskleistenminiaturansicht angezeigt wird. Standard ist eine leere <see cref="T:System.Windows.Thickness" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die [!INCLUDE[win7](~/includes/win7-md.md)] Taskleiste wird eine skalierte Miniaturansicht des Clientbereichs des Anwendungsfensters angezeigt. Sie können festlegen, die <xref:System.Windows.Shell.TaskbarItemInfo.ThumbnailClipMargin%2A> Eigenschaft, um einen zugeschnittenen Bereich des Clientfensters anzugeben, die in der Miniaturansicht angezeigt wird. Diese Eigenschaft ist beispielsweise hilfreich, wenn Sie den Fensterinhalt die Miniaturansicht konzentrieren, während Sie die Anwendungssymbolleisten ausschließen möchten. Diese Eigenschaft kann nicht verwendet werden, um Inhalt in der Miniaturansicht anzuzeigen, die nicht bereits sichtbar im Anwendungsfenster angezeigt wird.  
+  
+ Geben Sie den Bereich, der in der Miniaturansicht, indem angezeigt wird die <xref:System.Windows.Thickness> des Rahmens um den Bereich. Der Rahmen am Rand des Clientfensters startet und nach innen erweitert, um den angegebenen Betrag. Inhalt im Rahmen wird in der Miniaturansicht angezeigt.  
+  
+ Die folgende Abbildung zeigt die Rahmen, die definieren, die <xref:System.Windows.Shell.TaskbarItemInfo.ThumbnailClipMargin%2A>.  
+  
+ ![Miniaturansicht Clipping-Rand](~/add/media/wpfshell-clipmargin.png "Clipping-Rand für Miniaturansicht")  
+Miniaturansicht Clip Rand Rahmen  
+  
+ Die folgende Abbildung zeigt die Vorschau der Miniaturansicht.  
+  
+ ![Infobeispiel für Taskleistenelement](~/add/media/wpfshell-taskbariteminfo.png "Infobeispiel für Taskleistenelement")  
+Windows-Taskleiste Miniaturansicht-Vorschau  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Shell.TaskbarItemInfo> in Markup und das Festlegen der <xref:System.Windows.Shell.TaskbarItemInfo.ThumbnailClipMargin%2A> Eigenschaft. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Shell.TaskbarItemInfo> Klasse.  
+  
+ [!code-xaml[Shell_TaskbarItemSample#010](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_taskbaritemsample/cs/mainwindow.xaml#010)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThumbnailClipMarginProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ThumbnailClipMarginProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ThumbnailClipMarginProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.TaskbarItemInfo.ThumbnailClipMarginProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Shell.TaskbarItemInfo.ThumbnailClipMargin" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

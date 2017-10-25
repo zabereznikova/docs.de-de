@@ -1,0 +1,292 @@
+<Type Name="PerformanceCounterInstaller" FullName="System.Diagnostics.PerformanceCounterInstaller">
+  <TypeSignature Language="C#" Value="public class PerformanceCounterInstaller : System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PerformanceCounterInstaller extends System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.PerformanceCounterInstaller" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.Install</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Install.ComponentInstaller</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, in einem Installationsprogramm für die <see cref="T:System.Diagnostics.PerformanceCounter" /> Komponente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Informationen möglicherweise helfen verbessert die Leistung bei der Installation von Leistungsindikatoren beim Anwendungsstart. Leistungsindikatorkategorien, die mit .NET Framework, Version 2.0 installiert verwenden separater freigegebener Speicher, mit jeder Leistungsindikatorkategorie mit ihren eigenen Arbeitsspeicher. Sie können die Größe des separater freigegebener Arbeitsspeicher angeben, indem Sie einen DWORD-Wert mit dem Namen FileMappingSize im Registrierungsschlüssel HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<Kategorienamen >*\ Die Leistung. Der FileMappingSize-Wert wird auf die freigegebene Speichergröße der Kategorie festgelegt. Die Standardgröße beträgt, Dezimal 131072. Wenn der FileMappingSize-Wert nicht vorhanden ist, ist die `fileMappingSize` -Attributwert für das `performanceCounters` in der Datei "Machine.config" angegebene Element verwendet wird, was zu zusätzlichem Aufwand für die Verarbeitung der Konfigurationsdatei. Sie können für den Start der Anwendung verbessert die Leistung durch Festlegen der Größe der Zuordnung in der Registrierung mit sich bringen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Diagnostics.PerformanceCounterInstaller> -Objekt und fügen sie eine <xref:System.Configuration.Install.InstallerCollection>.  
+  
+ [!code-cpp[PerformanceCounterInstaller#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterInstaller/CPP/performancecounterinstaller.cpp#1)]
+ [!code-csharp[PerformanceCounterInstaller#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterInstaller/CS/performancecounterinstaller.cs#1)]
+ [!code-vb[PerformanceCounterInstaller#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterInstaller/VB/performancecounterinstaller.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerformanceCounterInstaller ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterInstaller.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.PerformanceCounterInstaller" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryHelp">
+      <MemberSignature Language="C#" Value="public string CategoryHelp { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CategoryHelp" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterInstaller.CategoryHelp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die beschreibende Meldung für den Leistungsindikator.</summary>
+        <value>Der beschreibende Meldung für den Leistungsindikator.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert wird auf <see langword="null" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryName">
+      <MemberSignature Language="C#" Value="public string CategoryName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CategoryName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterInstaller.CategoryName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Kategorie für den Leistungsindikator.</summary>
+        <value>Den Namen der Leistungskategorie für den Leistungsindikator.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert wird auf <see langword="null" /> festgelegt.</exception>
+        <exception cref="T:System.ArgumentException">Der Wert ist nicht über einen gültigen Kategorienamen ein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryType">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.PerformanceCounterCategoryType CategoryType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.PerformanceCounterCategoryType CategoryType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterInstaller.CategoryType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategoryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Leistungsindikatorkategorie.</summary>
+        <value>Einer der <see cref="T:System.Diagnostics.PerformanceCounterCategoryType" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.PerformanceCounterInstaller.CategoryType%2A> Eigenschaft gibt an, ob die Leistungsindikatorkategorie mehrere Instanzen verfügen kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Wert ist eine <see cref="T:System.Diagnostics.PerformanceCounterCategoryType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFromComponent">
+      <MemberSignature Language="C#" Value="public override void CopyFromComponent (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFromComponent(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterInstaller.CopyFromComponent(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, aus dem kopiert werden soll.</param>
+        <summary>Kopiert alle Eigenschaften aus der angegebenen Komponente, die erforderlich sind, auf der Installationszeit für einen Leistungsindikator.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.PerformanceCounterInstaller>mehrere Leistungsindikatoren können nur in der gleichen Kategorie zu installieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die angegebene Komponente ist eine <see cref="T:System.Diagnostics.PerformanceCounter" />.  
+  
+ - oder -   
+  
+ Das angegebene <see cref="T:System.Diagnostics.PerformanceCounter" /> ist unvollständig.  
+  
+ - oder -   
+  
+ Mehrere Leistungsindikatoren in verschiedenen Kategorien versuchen, installiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Counters">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.CounterCreationDataCollection Counters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.CounterCreationDataCollection Counters" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterInstaller.Counters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.CounterCreationDataCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Daten für die Leistungsindikatoren für die Installation ab.</summary>
+        <value>Ein <see cref="T:System.Diagnostics.CounterCreationDataCollection" /> , enthält die Namen, Hilfe Nachrichten und Typen der Leistungsindikatoren installieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Install">
+      <MemberSignature Language="C#" Value="public override void Install (System.Collections.IDictionary stateSaver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Install(class System.Collections.IDictionary stateSaver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterInstaller.Install(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stateSaver" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="stateSaver">Ein <see cref="T:System.Collections.IDictionary" /> wird, speichern Sie die benötigten Informationen zum Ausführen eines Commit-, Rollback- oder Deinstallationsvorgangs.</param>
+        <summary>Führt die Installation aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Wenn Sie einen Dienst und einen Leistungsindikator mit dem gleichen Namen zu installieren, installieren Sie den Dienst vor der Installation des Leistungsindikators.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public override void Rollback (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Rollback(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterInstaller.Rollback(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Collections.IDictionary" />-Objekt, das Informationen über den Zustand enthält, in dem sich der Computer vor der Installation befand.</param>
+        <summary>Stellt den Zustand, in vor der Installation des Computers wieder her.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninstall">
+      <MemberSignature Language="C#" Value="public override void Uninstall (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Uninstall(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterInstaller.Uninstall(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Eine <see cref="T:System.Collections.IDictionary" /> , die den Status nach der Installation des Computers enthält.</param>
+        <summary>Entfernt eine Installation.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UninstallAction">
+      <MemberSignature Language="C#" Value="public System.Configuration.Install.UninstallAction UninstallAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.Install.UninstallAction UninstallAction" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterInstaller.UninstallAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Install.UninstallAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Leistungsindikator entfernt werden sollen, bei der Deinstallation.</summary>
+        <value>Einer der <see cref="T:System.Configuration.Install.UninstallAction" />-Werte. Die Standardeinstellung ist <see langword="Remove" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Wert ist ein <see cref="T:System.Configuration.Install.UninstallAction" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

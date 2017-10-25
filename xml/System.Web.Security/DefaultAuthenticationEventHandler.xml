@@ -1,0 +1,47 @@
+<Type Name="DefaultAuthenticationEventHandler" FullName="System.Web.Security.DefaultAuthenticationEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DefaultAuthenticationEventHandler(object sender, DefaultAuthenticationEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DefaultAuthenticationEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.DefaultAuthenticationEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.Security.DefaultAuthenticationEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.Security.DefaultAuthenticationEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode, verarbeitet die **DefaultAuthentication_OnAuthenticate** -Ereignis für ein <see cref="T:System.Web.Security.DefaultAuthenticationModule" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.DefaultAuthenticationEventHandler> Delegat wird definiert, für die <xref:System.Web.Security.DefaultAuthenticationModule.Authenticate> -Ereignis für die <xref:System.Web.Security.DefaultAuthenticationModule> Klasse. Sie erreichen die <xref:System.Web.Security.DefaultAuthenticationModule.Authenticate> -Ereignis für die <xref:System.Web.Security.DefaultAuthenticationModule> -Klasse durch Angabe einer Unterroutine namens **DefaultAuthentication_OnAuthenticate** in der Datei "Global.asax", damit Ihre ASP.NET-Anwendung. Die <xref:System.Web.Security.DefaultAuthenticationModule.Authenticate> Ereignis wird ausgelöst, nachdem die <xref:System.Web.HttpApplication.AuthenticateRequest> Ereignis und wird verwendet, um sicherzustellen, dass die <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> wird aufgefüllt, mit einer <xref:System.Security.Principal.IPrincipal> Objekt.  
+  
+ Können Sie die <xref:System.Web.Security.DefaultAuthenticationEventArgs.Context%2A> Eigenschaft von der <xref:System.Web.Security.DefaultAuthenticationEventArgs> -Objekt bereitgestellt werden, um die **DefaultAuthentication_OnAuthenticate** Ereignis als festzulegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> für eine benutzerdefinierte <xref:System.Security.Principal.IPrincipal>Objekt. Wenn Sie einen Wert für nicht angeben der <xref:System.Web.HttpContext.User%2A> Eigenschaft der <xref:System.Web.HttpContext> bei der bereitgestellte der **DefaultAuthentication_OnAuthenticate** Ereignis, die <xref:System.Web.Security.DefaultAuthenticationModule> legt der <xref:System.Web.HttpContext.User%2A> Eigenschaft von der <xref:System.Web.HttpContext>zu einem <xref:System.Security.Principal.GenericPrincipal> -Objekt, das keine Benutzerinformationen enthält.  
+  
+ Die **DefaultAuthentication_OnAuthenticate** Ereignis wird ausgelöst, nachdem die <xref:System.Web.HttpApplication.AuthenticateRequest> Ereignis und vor dem <xref:System.Web.HttpApplication.AuthorizeRequest> Ereignis. Wenn Sie einen Abschnitt verfügen, der den Benutzernamen ein, gestattet oder verweigert den Zugriff auf die Anwendung abhängt, Ändern der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> können beeinflussen das Verhalten der Anwendung. Stellen Sie sicher, dass der Benutzername, die Sie, während festlegen die **DefaultAuthentication_OnAuthenticate** Ereignis gilt, wenn Sie den Abschnitt in der Konfiguration angeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der **DefaultAuthentication_OnAuthenticate** Ereignis, um zu testen, ob die <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> ist `null`. Wenn die Eigenschaft `null`, das Beispiel setzt die <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> auf eine <xref:System.Security.Principal.GenericPrincipal> -Objekt, in dem der <xref:System.Security.Principal.GenericPrincipal.Identity%2A> von der <xref:System.Security.Principal.GenericPrincipal> Objekt ist eine <xref:System.Security.Principal.GenericIdentity> mit eine <xref:System.Security.Principal.GenericIdentity.Name%2A> Wert "Default ".  
+  
+> [!NOTE]
+>  Die **DefaultAuthentication_OnAuthenticate** Ereignis wird ausgelöst, bevor die <xref:System.Web.HttpApplication.AuthorizeRequest> Ereignis. Als Ergebnis, wenn Sie festlegen, die <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> auf eine benutzerdefinierte Identität das Verhalten der Anwendung beeinflusst werden kann. Angenommen, Sie verwenden die <xref:System.Web.Security.FormsAuthentication> Klasse und sicherstellen, dass nur authentifizierte Benutzer Zugriff auf Ihre Website haben, indem Sie mithilfe des Abschnitts und angeben `<deny users="?" />`, in diesem Beispiel wird das-Element ignoriert werden, verursachen, wie der Benutzer einen Namen hat das ist "Default". Stattdessen geben Sie `<deny users="default" />` um sicherzustellen, dass nur authentifizierte Benutzer Ihre Website zugreifen können.  
+  
+ [!code-csharp[System.Web.Security.DefaultAuthenticationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.DefaultAuthenticationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.DefaultAuthenticationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.DefaultAuthenticationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

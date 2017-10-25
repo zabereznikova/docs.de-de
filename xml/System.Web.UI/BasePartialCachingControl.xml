@@ -1,0 +1,185 @@
+<Type Name="BasePartialCachingControl" FullName="System.Web.UI.BasePartialCachingControl">
+  <TypeSignature Language="C#" Value="public abstract class BasePartialCachingControl : System.Web.UI.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BasePartialCachingControl extends System.Web.UI.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.BasePartialCachingControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisfunktionalität für die <see cref="T:System.Web.UI.StaticPartialCachingControl" /> und <see cref="T:System.Web.UI.PartialCachingControl" /> Klassen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.BasePartialCachingControl> Klasse stellt ein Benutzersteuerelement, das eine caching in programmgesteuerten Szenarien zu aktivieren Ausgabe hat. ASP.NET bietet verschiedene Möglichkeiten zum Zwischenspeichern der Ausgabe für ein Steuerelement zu aktivieren. Die folgende Liste beschreibt die Methoden beschrieben, die Sie verwenden können, um Ausgabe-caching zu aktivieren:  
+  
+-   Verwenden der `@ OutputCache` Richtlinie aktivieren Ausgabecaching in deklarativen Szenarios.  
+  
+-   Verwenden der <xref:System.Web.UI.PartialCachingAttribute> Klasse, um das Zwischenspeichern für ein benutzerdefiniertes Steuerelement in einer Code-Behind-Datei aktivieren.  
+  
+-   Verwenden der <xref:System.Web.UI.ControlCachePolicy> Klasse, um die cacheeinstellungen in programmgesteuerten Szenarien angeben, in dem Sie arbeiten mit <xref:System.Web.UI.BasePartialCachingControl> Instanzen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie So erstellen Sie einen Verweis auf die <xref:System.Web.UI.BasePartialCachingControl> -Klasse und legt es auf den Wert von der <xref:System.Web.UI.Control.Parent%2A> Eigenschaft. Der Code legt dann die <xref:System.Web.UI.BasePartialCachingControl.Dependency%2A> Eigenschaft, um eine <xref:System.Web.Caching.CacheDependency> -Objekt, das das Steuerelement eine Textdatei abhängig ist.  
+  
+ [!code-csharp[BasePartialCachingControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BasePartialCachingControl/CS/dep1cs.ascx#1)]
+ [!code-vb[BasePartialCachingControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BasePartialCachingControl/VB/dep1vb.ascx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BasePartialCachingControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.BasePartialCachingControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.BasePartialCachingControl" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CachePolicy">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ControlCachePolicy CachePolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlCachePolicy CachePolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.BasePartialCachingControl.CachePolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCachePolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.ControlCachePolicy" /> -Objekt, das das umschlossene Steuerelement zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ControlCachePolicy" /> zur Speicherung der caching-bezogene Ausgabeeigenschaften des umschlossenen Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.BasePartialCachingControl.CachePolicy%2A> Eigenschaft ermöglicht den programmgesteuerten Zugriff auf die <xref:System.Web.UI.ControlCachePolicy> Objekt zugewiesen ist, mit dem Benutzersteuerelement enthalten die <xref:System.Web.UI.BasePartialCachingControl> Instanz. Die <xref:System.Web.UI.ControlCachePolicy> Objekt kann programmgesteuert bearbeitet werden, um ein Benutzersteuerelement Zwischenspeichern Verhalten und die Einstellungen zu beeinflussen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein benutzerdefiniertes Steuerelement dynamisch geladen und zur Laufzeit programmgesteuert bearbeitet werden kann. In diesem Beispiel besteht aus drei Teilen:  
+  
+-   Eine partielle Klasse `LogOnControl`, erbt von der <xref:System.Web.UI.UserControl> Basisklasse und zu dem die <xref:System.Web.UI.PartialCachingAttribute> Attribut angewendet wird.  
+  
+-   Ein Benutzersteuerelement, das mit der `LogOnControl` partiellen Klasse.  
+  
+-   Eine Web Forms-Seite, die das Benutzersteuerelement hostet.  
+  
+ In diesem Beispiel wird erfolgreich ausgeführt, sicherzustellen Sie, dass der Benutzersteuerelementdatei (.ascx), die Code-Behind-Datei (cs- oder VB) und Web Forms-Seite, die als Host für das Benutzersteuerelement (ASPX) im selben Verzeichnis.  
+  
+ Der erste Teil des Beispiels wird veranschaulicht, wie die <xref:System.Web.UI.PartialCachingAttribute> wird angewendet, um ein Benutzersteuerelement mit dem Namen `LogOnControl`, was bedeutet, dass das Benutzersteuerelement umschlossen ist ein <xref:System.Web.UI.PartialCachingControl> Steuerelement zur Laufzeit. Die `LogOnControl` Zwischenspeichern objekteinstellungen kann programmgesteuert über die zugehörigen bearbeitet <xref:System.Web.UI.ControlCachePolicy> Objekt, das über einen Verweis auf die <xref:System.Web.UI.PartialCachingControl> , umschließt er. In diesem Beispiel werden Einstellungen für das Zwischenspeichern während der seiteninitialisierung untersucht und geändert werden, wenn bestimmte Bedingungen erfüllt sind.  
+  
+ [!code-csharp[System.Web.UI.ControlCachePolicy#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy/CS/LogonControl.cs#2)]
+ [!code-vb[System.Web.UI.ControlCachePolicy#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy/VB/logoncontrol.vb#2)]  
+  
+ Der zweite Teil des Beispiels zeigt ein benutzerdefiniertes Steuerelement, das im vorherigen Beispiel zum Zwischenspeichern von Benutzersteuerelementen veranschaulichen dient.  
+  
+ [!code-aspx-csharp[System.Web.UI.ControlCachePolicy#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy/CS/Logonformcs.ascx#3)]
+ [!code-aspx-vb[System.Web.UI.ControlCachePolicy#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy/VB/Logonformvb.ascx#3)]  
+  
+ Der dritte Teil des Beispiels veranschaulicht die Verwendung der `LogOnControl` Benutzersteuerelement aus einer Web Forms-Seite.  
+  
+ [!code-aspx-csharp[System.Web.UI.ControlCachePolicy#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy/CS/controlcachepolicy_loadcontrolcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.ControlCachePolicy#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy/VB/controlcachepolicy_loadcontrolvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dependency">
+      <MemberSignature Language="C#" Value="public System.Web.Caching.CacheDependency Dependency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Caching.CacheDependency Dependency" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.BasePartialCachingControl.Dependency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.CacheDependency</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Instanz der <see cref="T:System.Web.Caching.CacheDependency" /> Klasse, die zwischengespeicherte Ausgabe eines Benutzersteuerelements zugeordnet.</summary>
+        <value>Die <see cref="T:System.Web.Caching.CacheDependency" /> das Serversteuerelement zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft können Sie Ausgabe eines Benutzersteuerelements aus dem Ausgabecache entfernen, wenn der zugeordnete Cacheabhängigkeit ändert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Web.UI.BasePartialCachingControl.Dependency%2A> Eigenschaft, um eine <xref:System.Web.Caching.CacheDependency> -Objekt, das das Steuerelement eine Textdatei abhängig ist. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.BasePartialCachingControl> Klasse.  
+  
+ [!code-csharp[BasePartialCachingControl#2](~/samples/snippets/csharp/VS_Snippets_WebNet/BasePartialCachingControl/CS/dep1cs.ascx#2)]
+ [!code-vb[BasePartialCachingControl#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BasePartialCachingControl/VB/dep1vb.ascx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.BasePartialCachingControl.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der <see cref="T:System.Web.UI.BasePartialCachingControl" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.BasePartialCachingControl.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="output">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , schreibt das zwischengespeicherte Steuerelement auf der Seite.</param>
+        <summary>Gibt das Benutzersteuerelement Inhalt in den angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Ausgabestream.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

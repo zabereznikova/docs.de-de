@@ -1,0 +1,122 @@
+<Type Name="GeometryCollection+Enumerator" FullName="System.Windows.Media.GeometryCollection+Enumerator">
+  <TypeSignature Language="C#" Value="public struct GeometryCollection.Enumerator : System.Collections.Generic.IEnumerator&lt;System.Windows.Media.Geometry&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi sealed beforefieldinit GeometryCollection/Enumerator extends System.ValueType implements class System.Collections.Generic.IEnumerator`1&lt;class System.Windows.Media.Geometry&gt;, class System.Collections.IEnumerator, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.GeometryCollection.Enumerator" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerator&lt;System.Windows.Media.Geometry&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Zählt die <see cref="T:System.Windows.Media.Geometry" />-Elemente in einer <see cref="T:System.Windows.Media.GeometryCollection" /> auf.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Geometry Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GeometryCollection.Enumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle Element in der Auflistung ab.</summary>
+        <value>Das aktuelle Element in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeometryCollection.Enumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf das nächste Element in der Auflistung.</summary>
+        <returns>
+          <see langword="true" />Wenn der Enumerator erfolgreich auf das nächste Element gesetzt andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt auch zurück `false` , wenn der Enumerator das letzte Element in der Auflistung überschritten hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeometryCollection.Enumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf seine anfängliche Position vor dem ersten Element in der Auflistung zurück.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerator.Current">
+      <MemberSignature Language="C#" Value="object System.Collections.IEnumerator.Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IEnumerator.Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GeometryCollection.Enumerator.System#Collections#IEnumerator#Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeometryCollection.Enumerator.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

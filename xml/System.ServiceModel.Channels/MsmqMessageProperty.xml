@@ -1,0 +1,170 @@
+<Type Name="MsmqMessageProperty" FullName="System.ServiceModel.Channels.MsmqMessageProperty">
+  <TypeSignature Language="C#" Value="public sealed class MsmqMessageProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MsmqMessageProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.MsmqMessageProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.ServiceModel.Channels.MsmqMessageProperty" />-Klasse kapselt die Eigenschaften einer Nachricht ein, die aus einer Warteschlange gelesen wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Channels.MsmqMessageProperty>-Klasse wird aus dem Kanalkontext abgerufen und hauptsächlich für die Fehlerverarbeitung verwendet. Liest eine Anwendung beispielsweise eine Nachricht aus der Warteschlange für unzustellbare Nachrichten, sollte die Anwendung Eigenschaften wie <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> und <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A> prüfen. Wenn eine Anwendung eigenständig nicht verarbeitbare Nachrichten handhabt, sollte sie Eigenschaften wie <xref:System.ServiceModel.Channels.MsmqMessageProperty.AbortCount%2A> prüfen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AbortCount">
+      <MemberSignature Language="C#" Value="public int AbortCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AbortCount" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MsmqMessageProperty.AbortCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Int32" />-Wert ab, der die Anzahl der Male darstellt, die die Nachricht an der abgebrochenen Transaktion teilgenommen hat, d. h. Kanalversuche - 1.</summary>
+        <value>Ein <see cref="T:System.Int32" />-Wert, der die Anzahl der Male angibt, die der Kanal versucht hat, diese Nachricht zu lesen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird in der Behandlung nicht verarbeitbarer Nachrichten verwendet. Weitere Informationen zur Handhabung beschädigter Nachrichten finden Sie unter [für potenziell schädliche Nachrichten Nachrichtenbehandlung](~/docs/framework/wcf/feature-details/poison-message-handling.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeliveryFailure">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.ServiceModel.Channels.DeliveryFailure&gt; DeliveryFailure { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.ServiceModel.Channels.DeliveryFailure&gt; DeliveryFailure" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.ServiceModel.Channels.DeliveryFailure&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert aus der <see cref="T:System.ServiceModel.Channels.DeliveryFailure" />-Enumeration ab, der angibt, warum die Nachricht nicht zugestellt wurde.</summary>
+        <value>Ein Wert aus der <see cref="T:System.ServiceModel.Channels.DeliveryFailure" />-Enumeration, der angibt, warum die Nachricht nicht zugestellt wurde. Kann <see langword="null" /> sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft zusammen mit <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>, wenn Sie eine Nachricht aus der Warteschlange für nicht zustellbare Nachrichten lesen, um festzustellen, warum die Nachricht nicht zugestellt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeliveryStatus">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.ServiceModel.Channels.DeliveryStatus&gt; DeliveryStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.ServiceModel.Channels.DeliveryStatus&gt; DeliveryStatus" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.ServiceModel.Channels.DeliveryStatus&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert aus der <see cref="T:System.ServiceModel.Channels.DeliveryStatus" />-Enumeration ab, der den Zustellungsstatus der Nachricht angibt.</summary>
+        <value>Ein Wert aus der <see cref="T:System.ServiceModel.Channels.DeliveryStatus" />-Enumeration, der den Zustellungsstatus der Nachricht angibt. Kann <see langword="null" /> sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Nachricht hat möglicherweise einen Zustellungsstatus von <xref:System.ServiceModel.Channels.DeliveryStatus.InDoubt> oder <xref:System.ServiceModel.Channels.DeliveryStatus.NotDelivered>. Eine Nachricht hat einen Zustellungsstatus von <xref:System.ServiceModel.Channels.DeliveryStatus.InDoubt>, es sei denn Message Queuing (MSMQ) stellt fest, dass die Nachricht nicht zugestellt wurde. In diesem Fall wird der Zustellungsstatus zu <xref:System.ServiceModel.Channels.DeliveryStatus.NotDelivered>.  
+  
+ Ein Beispiel für eine zweifelhafte Nachricht ist eine Nachricht, die abgelaufen ist. Message Queuing kann nicht bestimmen, ob die Nachricht nach ihrem Ablauf an die Anwendung zugestellt wurde.  
+  
+ Verwenden Sie diese Eigenschaft zusammen mit <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A>, wenn Sie eine Nachricht aus der Warteschlange für nicht zustellbare Nachrichten lesen, um festzustellen, warum die Nachricht nicht zugestellt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MsmqMessageProperty Get (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MsmqMessageProperty Get(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MsmqMessageProperty.Get(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MsmqMessageProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message"><see cref="T:System.ServiceModel.Channels.Message" />, dessen Eigenschaften abgerufen werden sollen.</param>
+        <summary>Ruft <see cref="T:System.ServiceModel.Channels.MsmqMessageProperty" /> für den angegebenen <see cref="T:System.ServiceModel.Channels.Message" /> ab.</summary>
+        <returns>Der <see cref="T:System.ServiceModel.Channels.MsmqMessageProperty" /> für das angegebene <see cref="T:System.ServiceModel.Channels.Message" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert ist NULL, oder die Eigenschaftenauflistung der Nachricht ist NULL.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveCount">
+      <MemberSignature Language="C#" Value="public int MoveCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MoveCount" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MsmqMessageProperty.MoveCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Int32" />-Wert ab, der die Anzahl der Male angibt, die die Nachricht von der Hauptwarteschlange zur untergeordneten Warteschlange verschoben wurde oder umgekehrt.</summary>
+        <value>Ein <see cref="T:System.Int32" />-Wert, der die Anzahl der Male angibt, die diese Nachricht verschoben wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public const string Name;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Name" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.MsmqMessageProperty.Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.String" />-Wert ab, der die Zeichenfolge 'MsmqMessageProperty' enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.String>-Wert, der die Zeichenfolge 'MsmqMessageProperty' enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

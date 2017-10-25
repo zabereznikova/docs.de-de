@@ -1,0 +1,17 @@
+<Namespace Name="System.AddIn.Contract.Automation">
+  <Docs>
+    <summary>Die <see cref="N:System.AddIn.Contract.Automation" /> -Namespace enthält Schnittstellen, die Komponenten verwenden, um Typinformationen Zugriffsversuchs und Typmember.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Schnittstellen in den <xref:System.AddIn.Contract.Automation?displayProperty=nameWithType> -Namespace Komponenten den Zugriff auf Typinformationen für ein Remoteobjekt ermöglichen, ohne direkten Zugriff auf die <xref:System.Type> des Remoteobjekts. Die <xref:System.AddIn.Contract.Automation?displayProperty=nameWithType> -Namespace definiert Reflektionsfunktionen für Komponenten, die die Schnittstellen und Strukturen im Verwenden der <xref:System.AddIn.Contract?displayProperty=nameWithType>, <xref:System.AddIn.Contract.Automation?displayProperty=nameWithType>, und <xref:System.AddIn.Contract.Collections?displayProperty=nameWithType> Namespaces zu kommunizieren. Die Schnittstellen in diesen Namespaces werden auch Verträge bezeichnet. Alle Verträge Ableiten der <xref:System.AddIn.Contract.IContract> Schnittstelle.  
+  
+ Wenn Verträge verwenden, um die Kommunikation zwischen Komponenten zu verwalten, müssen Sie implementieren die <xref:System.AddIn.Contract.Automation.IRemoteObjectContract> -Schnittstelle in einem Typ, um die Typinformationen für andere Komponenten verfügbar zu machen. Komponenten können dann auf die Member des Typs zugreifen, durch Aufrufen der <xref:System.AddIn.Contract.Automation.IRemoteObjectContract.GetRemoteType%2A> -Methode der Schnittstelle zum Abrufen einer <xref:System.AddIn.Contract.Automation.IRemoteTypeContract>. Die anderen Schnittstellen und Strukturen in den <xref:System.AddIn.Contract.Automation?displayProperty=nameWithType> Namespace ermöglichen den Zugriff auf die Typinformationen für Delegaten, Eigenschaften, Methoden, Ereignissen und Feldern.  
+  
+ Komponenten können die Verträge in der <xref:System.AddIn.Contract.Automation?displayProperty=nameWithType> Namespace, den Zugriff auf Typinformationen für ein Objekt, das in einem anderen Prozess oder die Anwendungsdomäne oder in derselben Prozess- oder Anwendungsdomäne ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

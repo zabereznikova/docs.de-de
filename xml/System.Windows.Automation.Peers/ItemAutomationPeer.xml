@@ -1,0 +1,703 @@
+<Type Name="ItemAutomationPeer" FullName="System.Windows.Automation.Peers.ItemAutomationPeer">
+  <TypeSignature Language="C#" Value="public abstract class ItemAutomationPeer : System.Windows.Automation.Peers.AutomationPeer, System.Windows.Automation.Provider.IVirtualizedItemProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ItemAutomationPeer extends System.Windows.Automation.Peers.AutomationPeer implements class System.Windows.Automation.Provider.IVirtualizedItemProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.ItemAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.AutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.IVirtualizedItemProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Macht ein Datenelement in einem <see cref="P:System.Windows.Controls.ItemsControl.Items" /> Auflistung für die UI-Automatisierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datenelemente, die nicht auch sind <xref:System.Windows.UIElement> Typen nicht über untergeordnete Elemente verfügen, müssen sie jedoch eine <xref:System.Windows.UIElement> Struktur und ein entsprechendes [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Struktur.  
+  
+ Z. B. eine <xref:System.Windows.Controls.ListBox> können eine Auflistung von Zeichenfolgen, die Datenelemente enthalten. Wenn diese Elemente werden von verarbeitet ein <xref:System.Windows.Controls.ItemsControl> Visualisierung, eine <xref:System.Windows.UIElement> Struktur wird für sie erstellt. Diese Struktur kann eine entsprechende verfügen [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Struktur. Nach der Erstellung der Struktur [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] führt die <xref:System.Windows.UIElement> Struktur in eine [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Struktur. <xref:System.Windows.Automation.Peers.ItemAutomationPeer>funktioniert mit seiner <xref:System.Windows.UIElement> Entsprechung, wenn es vorhanden ist, um weitere Informationen zu erhalten, die <xref:System.Windows.UIElement> Struktur.  
+  
+ Nur sichtbare Datenelemente oder genauer gesagt, über die entsprechenden <xref:System.Windows.UIElement> Strukturen, dieser Dualismus. Nicht sichtbare Datenelemente, die keine entsprechenden <xref:System.Windows.UIElement> Strukturen, haben nur eine <xref:System.Windows.Automation.Peers.ItemAutomationPeer>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ItemAutomationPeer (object item, System.Windows.Automation.Peers.ItemsControlAutomationPeer itemsControlAutomationPeer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(object item, class System.Windows.Automation.Peers.ItemsControlAutomationPeer itemsControlAutomationPeer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.#ctor(System.Object,System.Windows.Automation.Peers.ItemsControlAutomationPeer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="itemsControlAutomationPeer" Type="System.Windows.Automation.Peers.ItemsControlAutomationPeer" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Datenelement der <see cref="P:System.Windows.Controls.ItemsControl.Items" /> -Auflistung, die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" />.</param>
+        <param name="itemsControlAutomationPeer">Die <see cref="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer" /> zugeordneten der <see cref="T:System.Windows.Controls.ItemsControl" /> , enthält die <see cref="P:System.Windows.Controls.ItemsControl.Items" /> Auflistung.</param>
+        <summary>Stellt die Initialisierung für Basisklassenwerte beim Aufruf durch den Konstruktor einer abgeleiteten Klasse bereit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAcceleratorKeyCore">
+      <MemberSignature Language="C#" Value="protected override string GetAcceleratorKeyCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetAcceleratorKeyCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.GetAcceleratorKeyCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Zugriffstaste für das <see cref="T:System.Windows.UIElement" /> , entspricht dem Datenelement in der <see cref="P:System.Windows.Controls.ItemsControl.Items" /> -Auflistung, die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" />.</summary>
+        <returns>Die Zugriffstaste.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.GetAcceleratorKey%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessKeyCore">
+      <MemberSignature Language="C#" Value="protected override string GetAccessKeyCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetAccessKeyCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.GetAccessKeyCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Zugriffsschlüssel für das <see cref="T:System.Windows.UIElement" /> , entspricht dem Datenelement in der <see cref="P:System.Windows.Controls.ItemsControl.Items" /> -Auflistung, die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" />.</summary>
+        <returns>Die Tastenkombination.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.GetAccessKey%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationIdCore">
+      <MemberSignature Language="C#" Value="protected override string GetAutomationIdCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetAutomationIdCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.GetAutomationIdCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Zeichenfolge ab, die eindeutig den <see cref="T:System.Windows.UIElement" /> , entspricht dem Datenelement in der <see cref="P:System.Windows.Controls.ItemsControl.Items" /> -Auflistung, die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" />.</summary>
+        <returns>Eine Zeichenfolge, enthält die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Bezeichner.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Bezeichner ist die <xref:System.Windows.Automation.AutomationProperties.AutomationId%2A> Eigenschaft. Wenn die <xref:System.Windows.Automation.AutomationProperties.AutomationId%2A> Eigenschaft nicht festgelegt ist, wird des Werts der <xref:System.Windows.FrameworkElement.Name%2A> Eigenschaft.  
+  
+ Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.GetAutomationId%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoundingRectangleCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Rect GetBoundingRectangleCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Rect GetBoundingRectangleCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.GetBoundingRectangleCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Rect" /> , die das umschließende Rechteck des angegebenen darstellt <see cref="T:System.Windows.UIElement" />.</summary>
+        <returns>Das umschließende Rechteck.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.UIElement> entspricht dem Datenelement in der <xref:System.Windows.Controls.ItemsControl.Items%2A> -Auflistung, die mit dieser verknüpft ist <xref:System.Windows.Automation.Peers.ItemAutomationPeer>. Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.GetBoundingRectangle%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildrenCore">
+      <MemberSignature Language="C#" Value="protected override System.Collections.Generic.List&lt;System.Windows.Automation.Peers.AutomationPeer&gt; GetChildrenCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.Generic.List`1&lt;class System.Windows.Automation.Peers.AutomationPeer&gt; GetChildrenCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.GetChildrenCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Windows.Automation.Peers.AutomationPeer&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Auflistung der untergeordneten Elemente des der <see cref="T:System.Windows.UIElement" /> , entspricht dem Datenelement in der <see cref="P:System.Windows.Controls.ItemsControl.Items" /> -Auflistung, die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" />.</summary>
+        <returns>Die Auflistung von untergeordneten Elementen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.GetChildren%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClickablePointCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Point GetClickablePointCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Point GetClickablePointCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.GetClickablePointCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Point" /> , der den klickbaren Bereich, der auf dem angegebenen darstellt <see cref="T:System.Windows.UIElement" />.</summary>
+        <returns>Der Punkt, der den klickbaren Bereich darstellt, die im angegebenen <see cref="T:System.Windows.UIElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.UIElement> entspricht dem Datenelement in der <xref:System.Windows.Controls.ItemsControl.Items%2A> -Auflistung, die mit dieser verknüpft ist <xref:System.Windows.Automation.Peers.ItemAutomationPeer>. Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.GetClickablePoint%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHelpTextCore">
+      <MemberSignature Language="C#" Value="protected override string GetHelpTextCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetHelpTextCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.GetHelpTextCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Zeichenfolge ab, die die Funktionalität des beschreibt die <see cref="T:System.Windows.UIElement" /> , entspricht dem Datenelement in der <see cref="P:System.Windows.Controls.ItemsControl.Items" /> -Auflistung, die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" />.</summary>
+        <returns>Der Hilfetext.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.GetHelpText%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemStatusCore">
+      <MemberSignature Language="C#" Value="protected override string GetItemStatusCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetItemStatusCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.GetItemStatusCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die den visuellen Status des angegebenen übermittelt <see cref="T:System.Windows.UIElement" />.</summary>
+        <returns>Der Status. Beispiele sind "Busy" oder "Online".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.UIElement> entspricht dem Datenelement in der <xref:System.Windows.Controls.ItemsControl.Items%2A> -Auflistung, die mit dieser verknüpft ist <xref:System.Windows.Automation.Peers.ItemAutomationPeer>. Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.GetItemStatus%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemTypeCore">
+      <MemberSignature Language="C#" Value="protected override string GetItemTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetItemTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.GetItemTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine lesbare Zeichenfolge, die den Typ des enthält Artikel, die dem angegebenen <see cref="T:System.Windows.UIElement" /> darstellt.</summary>
+        <returns>Der Elementtyp. Ein Beispiel für umfasst "E-Mail" oder "Contact".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.UIElement> entspricht dem Datenelement in der <xref:System.Windows.Controls.ItemsControl.Items%2A> -Auflistung, die mit dieser verknüpft ist <xref:System.Windows.Automation.Peers.ItemAutomationPeer>. Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.GetItemType%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLabeledByCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer GetLabeledByCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer GetLabeledByCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.GetLabeledByCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für die <see cref="T:System.Windows.Controls.Label" /> also mit dem angegebenen Ziel <see cref="T:System.Windows.UIElement" />.</summary>
+        <returns>Der <see cref="T:System.Windows.Automation.Peers.LabelAutomationPeer" /> für das Element, das das Ziel der <see cref="T:System.Windows.Controls.Label" /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.UIElement> entspricht dem Datenelement in der <xref:System.Windows.Controls.ItemsControl.Items%2A> -Auflistung, die mit dieser verknüpft ist <xref:System.Windows.Automation.Peers.ItemAutomationPeer>. Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.GetLabeledBy%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.GetNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Beschriftung für die <see cref="T:System.Windows.UIElement" /> , entspricht dem Datenelement in der <see cref="P:System.Windows.Controls.ItemsControl.Items" /> -Auflistung, die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" />.</summary>
+        <returns>Die Beschriftung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können der Name-Eigenschaft vorstellen, als wäre er eine Textzeichenfolge, die Benutzer verwenden, welches Steuerelement erklären sie zu verweisen. Stellen Sie sicher, dass Sie eine Textdarstellung für alle Steuerelemente in verfügen die [!INCLUDE[TLA#tla_gui](~/includes/tlasharptla-gui-md.md)] , damit Sie programmgesteuert auf das Steuerelement in lokalisierten Versionen verweisen können.  
+  
+ Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.GetName%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrientationCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationOrientation GetOrientationCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Automation.Peers.AutomationOrientation GetOrientationCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.GetOrientationCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationOrientation</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene <see cref="T:System.Windows.UIElement" /> in eine bestimmte Richtung angeordnet ist.</summary>
+        <returns>Die Richtung des angegebenen <see cref="T:System.Windows.UIElement" />. Optional, der Methodenrückgabe <see cref="F:System.Windows.Automation.Peers.AutomationOrientation.None" /> Wenn die <see cref="T:System.Windows.UIElement" /> nicht in eine bestimmte Richtung angeordnet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.UIElement> entspricht dem Datenelement in der <xref:System.Windows.Controls.ItemsControl.Items%2A> -Auflistung, die mit dieser verknüpft ist <xref:System.Windows.Automation.Peers.ItemAutomationPeer>. Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.GetOrientation%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPattern">
+      <MemberSignature Language="C#" Value="public override object GetPattern (System.Windows.Automation.Peers.PatternInterface patternInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetPattern(valuetype System.Windows.Automation.Peers.PatternInterface patternInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="patternInterface" Type="System.Windows.Automation.Peers.PatternInterface" />
+      </Parameters>
+      <Docs>
+        <param name="patternInterface">Ein Enumerationswert, der angibt, das das Steuerelementmuster.</param>
+        <summary>Gibt das Objekt, das das angegebene Steuerelementmuster des Elements unterstützt, das diesem Automatisierungspeer zugeordnet ist.</summary>
+        <returns>Ein Objekt, das das Steuerelementmuster unterstützt, wenn <paramref name="patternInterface" /> ein unterstützter Wert ist, andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `patternInterface` ist <xref:System.Windows.Automation.Peers.PatternInterface?displayProperty=nameWithType> und Rückgabe dieser Methode das Element ist nicht in der visuellen Struktur, eine `this` Zeiger. Wenn `patternInterface` gleich <xref:System.Windows.Automation.Peers.PatternInterface?displayProperty=nameWithType>, diese Methode gibt ein Objekt, implementiert die <xref:System.Windows.Automation.Provider.ISynchronizedInputProvider> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasKeyboardFocusCore">
+      <MemberSignature Language="C#" Value="protected override bool HasKeyboardFocusCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool HasKeyboardFocusCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.HasKeyboardFocusCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene <see cref="T:System.Windows.UIElement" /> derzeit Tastatureingabefokus hat.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.Windows.UIElement" /> Tastatureingabefokus hat, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.UIElement> entspricht dem Datenelement in der <xref:System.Windows.Controls.ItemsControl.Items%2A> -Auflistung, die mit dieser verknüpft ist <xref:System.Windows.Automation.Peers.ItemAutomationPeer>. Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.HasKeyboardFocus%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContentElementCore">
+      <MemberSignature Language="C#" Value="protected override bool IsContentElementCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsContentElementCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.IsContentElementCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene <see cref="T:System.Windows.UIElement" /> enthält Daten, die dem Benutzer angezeigt werden.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element ein Inhaltselement; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.UIElement> entspricht dem Datenelement in der <xref:System.Windows.Controls.ItemsControl.Items%2A> -Auflistung, die mit dieser verknüpft ist <xref:System.Windows.Automation.Peers.ItemAutomationPeer>. Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.IsContentElement%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsControlElementCore">
+      <MemberSignature Language="C#" Value="protected override bool IsControlElementCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsControlElementCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.IsControlElementCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.UIElement" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" /> vom Endbenutzer als interaktiv angesehen wird.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element ein Steuerelement ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.UIElement> entspricht dem Datenelement in der <xref:System.Windows.Controls.ItemsControl.Items%2A> Auflistung. Der Benutzer ggf. Verstehen der <xref:System.Windows.UIElement> als Teil der logischen Struktur des Steuerelements in der [!INCLUDE[TLA2#tla_gui](~/includes/tla2sharptla-gui-md.md)]. Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.IsControlElement%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabledCore">
+      <MemberSignature Language="C#" Value="protected override bool IsEnabledCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsEnabledCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.IsEnabledCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene <see cref="T:System.Windows.UIElement" /> Ereignisse senden und empfangen können.</summary>
+        <returns>
+          <see langword="true" />Wenn die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Peer kann Ereignisse empfangen und senden, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.UIElement> entspricht dem Datenelement in der <xref:System.Windows.Controls.ItemsControl.Items%2A> -Auflistung, die mit dieser verknüpft ist <xref:System.Windows.Automation.Peers.ItemAutomationPeer>. Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.IsEnabled%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyboardFocusableCore">
+      <MemberSignature Language="C#" Value="protected override bool IsKeyboardFocusableCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsKeyboardFocusableCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.IsKeyboardFocusableCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene <see cref="T:System.Windows.UIElement" /> über den Tastaturfokus übernehmen können.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element den Tastaturfokus übernehmen kann; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.UIElement> entspricht dem Datenelement in der <xref:System.Windows.Controls.ItemsControl.Items%2A> -Auflistung, die mit dieser verknüpft ist <xref:System.Windows.Automation.Peers.ItemAutomationPeer>. Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.IsKeyboardFocusable%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOffscreenCore">
+      <MemberSignature Language="C#" Value="protected override bool IsOffscreenCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsOffscreenCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.IsOffscreenCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene <see cref="T:System.Windows.UIElement" /> ist außerhalb des Bildschirms.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.Windows.UIElement" /> befindet sich nicht auf dem Bildschirm; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.UIElement> entspricht dem Datenelement in der <xref:System.Windows.Controls.ItemsControl.Items%2A> -Auflistung, die mit dieser verknüpft ist <xref:System.Windows.Automation.Peers.ItemAutomationPeer>. Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.IsOffscreen%2A> aufgerufen.  
+  
+ Diese Methode gibt nicht an, ob das Element sichtbar ist. In einigen Fällen ein Element wird auf dem Bildschirm jedoch immer noch nicht sichtbar ist. Angenommen, wenn das Element von anderen Elementen verdeckt ist, kann er nicht sichtbar. In diesem Fall gibt die Methode zurück `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPasswordCore">
+      <MemberSignature Language="C#" Value="protected override bool IsPasswordCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsPasswordCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.IsPasswordCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene <see cref="T:System.Windows.UIElement" /> geschützte Inhalte enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.Windows.UIElement" /> geschützte Inhalte enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.UIElement> entspricht dem Datenelement in der <xref:System.Windows.Controls.ItemsControl.Items%2A> -Auflistung, die mit dieser verknüpft ist <xref:System.Windows.Automation.Peers.ItemAutomationPeer>. Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.IsPassword%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRequiredForFormCore">
+      <MemberSignature Language="C#" Value="protected override bool IsRequiredForFormCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsRequiredForFormCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.IsRequiredForFormCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene <see cref="T:System.Windows.UIElement" /> ist erforderlich, um in einem Formular ausgefüllt werden.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.Windows.UIElement" /> ist erforderlich, dass abgeschlossen ist, anderfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.UIElement> entspricht dem Datenelement in der <xref:System.Windows.Controls.ItemsControl.Items%2A> -Auflistung, die mit dieser verknüpft ist <xref:System.Windows.Automation.Peers.ItemAutomationPeer>. Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.IsRequiredForForm%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.ItemAutomationPeer.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datenelement der <see cref="P:System.Windows.Controls.ItemsControl.Items" /> -Auflistung, die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" />.</summary>
+        <value>Das Datenelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsControlAutomationPeer">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Peers.ItemsControlAutomationPeer ItemsControlAutomationPeer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.Peers.ItemsControlAutomationPeer ItemsControlAutomationPeer" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.ItemAutomationPeer.ItemsControlAutomationPeer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.ItemsControlAutomationPeer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer" /> zugeordneten der <see cref="T:System.Windows.Controls.ItemsControl" /> , enthält die <see cref="P:System.Windows.Controls.ItemsControl.Items" /> Auflistung.</summary>
+        <value>Die <see cref="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer" /> zugeordneten der <see cref="T:System.Windows.Controls.ItemsControl" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFocusCore">
+      <MemberSignature Language="C#" Value="protected override void SetFocusCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetFocusCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.SetFocusCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt den Tastatureingabefokus auf dem angegebenen <see cref="T:System.Windows.UIElement" />. Die <see cref="T:System.Windows.UIElement" /> entspricht dem Datenelement in der <see cref="P:System.Windows.Controls.ItemsControl.Items" /> -Auflistung, die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von <xref:System.Windows.Automation.Peers.AutomationPeer.SetFocus%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.IVirtualizedItemProvider.Realize">
+      <MemberSignature Language="C#" Value="void IVirtualizedItemProvider.Realize ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Automation.Provider.IVirtualizedItemProvider.Realize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemAutomationPeer.System#Windows#Automation#Provider#IVirtualizedItemProvider#Realize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass die virtuelle Element vollständig zugegriffen werden kann, wie ein Benutzeroberflächenautomatisierungs-Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Automation.Peers.ItemAutomationPeer>-Instanz in eine <xref:System.Windows.Automation.Provider.IVirtualizedItemProvider>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

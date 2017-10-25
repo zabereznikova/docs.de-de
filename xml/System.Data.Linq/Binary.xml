@@ -1,0 +1,260 @@
+<Type Name="Binary" FullName="System.Data.Linq.Binary">
+  <TypeSignature Language="C#" Value="public sealed class Binary : IEquatable&lt;System.Data.Linq.Binary&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit Binary extends System.Object implements class System.IEquatable`1&lt;class System.Data.Linq.Binary&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.Binary" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Data.Linq.Binary&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen unveränderlichen Block binärer Daten dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binary (byte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Binary.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die Bytes, die die binären Daten darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Linq.Binary" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn`null` übergeben wird, das an diesen Konstruktor, anstatt das erforderliche Array von Bytes, eine <xref:System.ArgumentNullException?displayProperty=nameWithType> Ausnahme wird ausgelöst. Verlassen Sie sich nicht auf dieses Verhalten, da es in der Zukunft ändern kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Data.Linq.Binary other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Data.Linq.Binary other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Binary.Equals(System.Data.Linq.Binary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Data.Linq.Binary" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die <see cref="T:System.Object" /> auf dem aktuelle Objekt verglichen wird.</param>
+        <summary>Bestimmt, ob zwei binäre Objekte gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden binäre Objekte gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Binary.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das <see cref="T:System.Object" />, das mit dem aktuellen <see cref="T:System.Object" /> verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Object" /> und das aktuelle <see cref="T:System.Object" /> gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden binäre Objekte gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Binary.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fungiert als Hashfunktion für einen besonderen Typ.</summary>
+        <returns>Ein Hashcode für das aktuelle binäres Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Binary.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge des binären Objekts ab.</summary>
+        <value>Eine ganze Zahl, die die Länge darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Data.Linq.Binary binary1, System.Data.Linq.Binary binary2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Data.Linq.Binary binary1, class System.Data.Linq.Binary binary2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Binary.op_Equality(System.Data.Linq.Binary,System.Data.Linq.Binary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binary1" Type="System.Data.Linq.Binary" />
+        <Parameter Name="binary2" Type="System.Data.Linq.Binary" />
+      </Parameters>
+      <Docs>
+        <param name="binary1">Erste binäres Objekt.</param>
+        <param name="binary2">Zweite binäres Objekt.</param>
+        <summary>Beschreibt die Beziehung auf Gleichheit zwischen zwei binäre Objekte.</summary>
+        <returns>
+          <see langword="true" />Wenn die binäre Objekte gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt `true` beide `null` gibt jedoch `false` nur einer ist `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Data.Linq.Binary (byte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Data.Linq.Binary op_Implicit(unsigned int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Binary.op_Implicit(System.Byte[])~System.Data.Linq.Binary" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Binary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Data.Linq.Binary binary1, System.Data.Linq.Binary binary2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Data.Linq.Binary binary1, class System.Data.Linq.Binary binary2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Binary.op_Inequality(System.Data.Linq.Binary,System.Data.Linq.Binary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binary1" Type="System.Data.Linq.Binary" />
+        <Parameter Name="binary2" Type="System.Data.Linq.Binary" />
+      </Parameters>
+      <Docs>
+        <param name="binary1">Das erste binäres Objekt.</param>
+        <param name="binary2">Das zweite binäres Objekt.</param>
+        <summary>Beschreibt die Beziehung Ungleichheit zwischen zwei binäre Objekte.</summary>
+        <returns>
+          <see langword="true" />Wenn die binäre Objekte nicht gleich sind; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt `false` beide `null`, gibt jedoch `true` ist entweder `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToArray">
+      <MemberSignature Language="C#" Value="public byte[] ToArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] ToArray() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Binary.ToArray" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Array von Bytes, die das aktuelle binäre Objekt darstellt.</summary>
+        <returns>Ein Bytearray, das den Wert des aktuellen binären Objekts enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Binary.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.String" /> , die das aktuelle binäre Objekt darstellt.</summary>
+        <returns>Ein <see cref="T:System.String" /> , die das aktuelle binäre Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

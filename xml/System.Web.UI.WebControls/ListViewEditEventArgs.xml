@@ -1,0 +1,108 @@
+<Type Name="ListViewEditEventArgs" FullName="System.Web.UI.WebControls.ListViewEditEventArgs">
+  <TypeSignature Language="C#" Value="public class ListViewEditEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewEditEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewEditEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.ListView.ItemEditing" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListView> -Steuerelement löst die <xref:System.Web.UI.WebControls.ListView.ItemEditing> Ereignis aus, wenn eine Schaltfläche "Bearbeiten", jedoch bevor geklickt wird die <xref:System.Web.UI.WebControls.ListView> Element in den Bearbeitungsmodus wechselt. (Eine Schaltfläche "Bearbeiten" ist eine Schaltfläche, deren `CommandName` -Eigenschaft auf "Bearbeiten" festgelegt.) Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, wenn dieses Ereignis tritt auf, z. B. die Bearbeitung abbrechen.  
+  
+ Ein <xref:System.Web.UI.WebControls.ListViewEditEventArgs> Objekt wird an die Ereignisbehandlungsmethode übergeben. Dieses Objekt können Sie den Index des Elements zu ermitteln, die gerade bearbeitet wird, und um anzugeben, dass die Bearbeitung abgebrochen werden soll. Legen Sie zum Abbrechen des Bearbeitungsvorgangs die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.ListViewEditEventArgs> -Objekt `true`.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.ListViewEditEventArgs>, finden Sie unter der <xref:System.Web.UI.WebControls.ListViewEditEventArgs.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewEditEventArgs> Objekt, das die Bearbeitungsoperation "Abbrechen", wenn der Benutzer versucht, ein nicht mehr unterstützte Element zu aktualisieren.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListView.ItemEditing#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemEditing/CS/ListViewItemEditingCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListView.ItemEditing#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemEditing/VB/ListViewItemEditingVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewEditEventArgs (int newEditIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 newEditIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewEditEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newEditIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="newEditIndex">Der Index des Elements zu bearbeiten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ListViewEditEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.ListViewEditEventArgs> Klasse.  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.WebControls.ListViewEditEventArgs>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.ListViewEditEventArgs.NewEditIndex%2A>|Der Wert des `newEditIndex`-Parameters.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewEditIndex">
+      <MemberSignature Language="C#" Value="public int NewEditIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewEditIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewEditEventArgs.NewEditIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des Elements, das gerade bearbeitet wird.</summary>
+        <value>Der Index des Elements, das gerade bearbeitet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ListViewEditEventArgs.NewEditIndex%2A> -Eigenschaft können Sie den Index des Elements bestimmen, die gerade bearbeitet wird. Der Elementindex wird häufig verwendet, um dieses Element abgerufen werden soll die <xref:System.Web.UI.WebControls.ListView.Items%2A> Auflistung von der <xref:System.Web.UI.WebControls.ListView> -Steuerelement, das Sie auf die Eigenschaften des Elements zugreifen kann.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewEditEventArgs.NewEditIndex%2A> Eigenschaft zum Abrufen der <xref:System.Web.UI.WebControls.ListViewItem> -Objekt, das gerade bearbeitet wird. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.ListViewEditEventArgs> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.ItemEditing#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemEditing/CS/ListViewItemEditingCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.ItemEditing#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemEditing/VB/ListViewItemEditingVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,112 @@
+<Type Name="SpeechRecognizedEventArgs" FullName="System.Speech.Recognition.SpeechRecognizedEventArgs">
+  <TypeSignature Language="C#" Value="public class SpeechRecognizedEventArgs : System.Speech.Recognition.RecognitionEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SpeechRecognizedEventArgs extends System.Speech.Recognition.RecognitionEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SpeechRecognizedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Speech.Recognition.RecognitionEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen für die <see cref="E:System.Speech.Recognition.Grammar.SpeechRecognized" />, <see cref="E:System.Speech.Recognition.SpeechRecognitionEngine.SpeechRecognized" />, und <see cref="E:System.Speech.Recognition.SpeechRecognizer.SpeechRecognized" /> Ereignisse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `SpeechRecognized` Ereignis wird ausgelöst, durch die <xref:System.Speech.Recognition.Grammar>, <xref:System.Speech.Recognition.SpeechRecognizer> und <xref:System.Speech.Recognition.SpeechRecognitionEngine> Klassen.  
+  
+ `SpeechRecognized`Ereignisse werden generiert, wenn eine oder mehrere an, die aus einem Erkennungsvorgang haben ein hoch genug vertrauensergebnis akzeptiert werden. Um ausführliche Informationen zu eines erkannten Ausdrucks zu erhalten, Zugriff auf die <xref:System.Speech.Recognition.RecognitionEventArgs.Result%2A> Eigenschaft im Handler für das Ereignis.  
+  
+ `SpeechRecognizedEventArgs`leitet sich von der <xref:System.Speech.Recognition.RecognitionEventArgs> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel ist Teil einer Konsolenanwendung, die lädt eine Spracherkennung Recognition Grammatik und Spracheingabe für das freigegebene Erkennungsmodul, die zugehörigen Erkennungsergebnisse und die zugehörigen Ereignisse ausgelöst, die für die von der Spracherkennung veranschaulicht. Wenn Windows-Spracherkennung nicht ausgeführt wird, wird Windows-Spracherkennung starten Sie dann auf diese Anwendung auch gestartet.  
+  
+ Eingabe gesprochen, z. B. "Ich möchte von Chicago nach Miami fliegen" ausgelöst werden ein <xref:System.Speech.Recognition.SpeechRecognizer.SpeechRecognized> Ereignis. Sprechen den Ausdruck "Fliegen me aus Houston nach Chicago" wird nicht ausgelöst, eine <xref:System.Speech.Recognition.SpeechRecognizer.SpeechRecognized> Ereignis.  
+  
+ Im Beispiel wird einen Handler für das <xref:System.Speech.Recognition.SpeechRecognizer.SpeechRecognized> Ereignis anzuzeigenden erfolgreich erkannt wird, Ausdrücke und die Semantik, die sie in der Konsole enthalten.  
+  
+```csharp  
+using System;  
+using System.Speech.Recognition;  
+  
+namespace SampleRecognition  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+  
+    // Initialize a shared speech recognition engine.  
+    {  
+      using (SpeechRecognizer recognizer = new SpeechRecognizer())  
+      {  
+  
+        // Create SemanticResultValue objects that contain cities and airport codes.  
+        SemanticResultValue chicago = new SemanticResultValue("Chicago", "ORD");  
+        SemanticResultValue boston = new SemanticResultValue("Boston", "BOS");  
+        SemanticResultValue miami = new SemanticResultValue("Miami", "MIA");  
+        SemanticResultValue dallas = new SemanticResultValue("Dallas", "DFW");  
+  
+        // Create a Choices object and add the SemanticResultValue objects, using  
+        // implicit conversion from SemanticResultValue to GrammarBuilder  
+        Choices cities = new Choices();  
+        cities.Add(new Choices(new GrammarBuilder[] { chicago, boston, miami, dallas }));  
+  
+        // Build the phrase and add SemanticResultKeys.  
+        GrammarBuilder chooseCities = new GrammarBuilder();  
+        chooseCities.Append("I want to fly from");  
+        chooseCities.Append(new SemanticResultKey("origin", cities));  
+        chooseCities.Append("to");  
+        chooseCities.Append(new SemanticResultKey("destination", cities));  
+  
+        // Build a Grammar object from the GrammarBuilder.  
+        Grammar bookFlight = new Grammar(chooseCities);  
+        bookFlight.Name = "Book Flight";  
+  
+        // Add a handler for the LoadGrammarCompleted event.  
+        recognizer.LoadGrammarCompleted +=  
+          new EventHandler<LoadGrammarCompletedEventArgs>(recognizer_LoadGrammarCompleted);  
+  
+        // Add a handler for the SpeechRecognized event.  
+        recognizer.SpeechRecognized +=   
+          new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);  
+  
+        // Load the grammar object to the recognizer.  
+        recognizer.LoadGrammarAsync(bookFlight);  
+  
+        // Keep the console window open.  
+        Console.ReadLine();  
+      }  
+    }  
+  
+    // Handle the LoadGrammarCompleted event.  
+    static void recognizer_LoadGrammarCompleted(object sender, LoadGrammarCompletedEventArgs e)  
+    {  
+      Console.WriteLine("Grammar loaded: " + e.Grammar.Name);  
+      Console.WriteLine();  
+    }  
+  
+    // Handle the SpeechRecognized event.  
+    static void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)  
+    {  
+      Console.WriteLine("Speech recognized:  " + e.Result.Text);  
+      Console.WriteLine();  
+      Console.WriteLine("Semantic results:");  
+      Console.WriteLine("  The flight origin is " + e.Result.Semantics["origin"].Value);  
+      Console.WriteLine("  The flight destination is " + e.Result.Semantics["destination"].Value);  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

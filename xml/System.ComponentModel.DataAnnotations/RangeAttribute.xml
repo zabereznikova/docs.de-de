@@ -1,0 +1,319 @@
+<Type Name="RangeAttribute" FullName="System.ComponentModel.DataAnnotations.RangeAttribute">
+  <TypeSignature Language="C#" Value="public class RangeAttribute : System.ComponentModel.DataAnnotations.ValidationAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RangeAttribute extends System.ComponentModel.DataAnnotations.ValidationAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.RangeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.DataAnnotations.ValidationAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Einschränkungen des numerischen Bereichs für den Wert eines Datenfelds an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie dieses Attribut auf ein Datenfeld anwenden, müssen Sie die Richtlinien für die Verwendung von Validierungsattributen anfügen. Weitere Informationen finden Sie unter [ASP.NET Dynamic Data Guidelines](http://msdn.microsoft.com/en-us/c563bbf3-feb9-484e-81d1-a585f1b0e192).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.ComponentModel.DataAnnotations.RangeAttribute> Formatierung für ein Datenfeld anpassen. Das Beispiel führt die folgenden Schritte aus:  
+  
+-   Implementiert eine partielle Klasse für Metadaten und die zugehörigen Metadaten-Klasse.  
+  
+-   In der zugehörigen Metadaten-Klasse, es gilt die <xref:System.ComponentModel.DataAnnotations.RangeAttribute> Attribut, um die folgenden Ergebnisse zu erhalten:  
+  
+    -   Wenden Sie das Attribut für ein Datenfeld vom Typ Integer.  
+  
+    -   Wenden Sie das Attribut auf eine ganze Zahl-Feld "Daten", und definieren Sie eine benutzerdefinierte Validierungsfehlermeldung angezeigt.  
+  
+    -   Wenden Sie das Attribut auf eine `DateTime` Daten ein, und definieren Sie eine benutzerdefinierte Validierungsfehlermeldung angezeigt.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.RangeAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.RangeAttribute/CS/Product.cs#1)]
+ [!code-vb[System.ComponentModel.DataAnnotations.RangeAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.RangeAttribute/VB/Product.vb#1)]  
+  
+ Zum Kompilieren des Beispiels benötigen Sie Folgendes:  
+  
+-   [!INCLUDE[vs_orcas_ext](~/includes/vs-orcas-ext-md.md)]Service Pack 1 oder [!INCLUDE[vwd_exp_orcas_long](~/includes/vwd-exp-orcas-long-md.md)] SP1.  
+  
+-   Eine datengesteuerte-Website. Dadurch können Sie erstellen einen Datenkontext für die Datenbank und die Klasse enthält das Feld "Daten" anpassen. Weitere Informationen finden Sie unter `Walkthrough: Creating a New Dynamic Data Web Site using Scaffolding`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RangeAttribute (double minimum, double maximum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 minimum, float64 maximum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="minimum" Type="System.Double" />
+        <Parameter Name="maximum" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="minimum">Gibt die minimal zulässige Wert für der Wert des Felds an.</param>
+        <param name="maximum">Gibt die maximale zulässige Wert für den der Wert des Felds an.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.RangeAttribute" /> Klasse unter Verwendung der angegebenen minimalen und maximalen Werte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RangeAttribute (int minimum, int maximum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 minimum, int32 maximum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="minimum" Type="System.Int32" />
+        <Parameter Name="maximum" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="minimum">Gibt die minimal zulässige Wert für der Wert des Felds an.</param>
+        <param name="maximum">Gibt die maximale zulässige Wert für den der Wert des Felds an.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.RangeAttribute" /> Klasse unter Verwendung der angegebenen minimalen und maximalen Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.ComponentModel.DataAnnotations.RangeAttribute.%23ctor%2A> den Bereich für Feld "Daten" eine ganze Zahl an.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.RangeAttribute#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.RangeAttribute/CS/Product.cs#11)]
+ [!code-vb[System.ComponentModel.DataAnnotations.RangeAttribute#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.RangeAttribute/VB/Product.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RangeAttribute (Type type, string minimum, string maximum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, string minimum, string maximum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Type,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="minimum" Type="System.String" />
+        <Parameter Name="maximum" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Gibt den Typ, der das zu überprüfende Objekt.</param>
+        <param name="minimum">Gibt die minimal zulässige Wert für der Wert des Felds an.</param>
+        <param name="maximum">Gibt die maximale zulässige Wert für den der Wert des Felds an.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.RangeAttribute" /> -Klasse unter Verwendung der angegebenen minimalen und maximalen Werten und den spezifischen Typ.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zu überprüfende Objekt implementieren muss die <xref:System.IComparable> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.ComponentModel.DataAnnotations.RangeAttribute.%23ctor%2A> aufzurufende Methode geben Sie den Bereich für eine `DateTime` Feld. Es enthält auch eine benutzerdefinierte Fehlermeldung, die zeigt, wie Sie die Formatierungsfunktionen von der <xref:System.ComponentModel.DataAnnotations.RangeAttribute.FormatErrorMessage%2A> Methode.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.RangeAttribute#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.RangeAttribute/CS/Product.cs#12)]
+ [!code-vb[System.ComponentModel.DataAnnotations.RangeAttribute#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.RangeAttribute/VB/Product.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatErrorMessage">
+      <MemberSignature Language="C#" Value="public override string FormatErrorMessage (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string FormatErrorMessage(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.RangeAttribute.FormatErrorMessage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Felds, das den Validierungsfehler verursacht hat.</param>
+        <summary>Formatiert die Fehlermeldung, die angezeigt wird, wenn der Bereich Überprüfung ein Fehler auftritt.</summary>
+        <returns>Die formatierte Fehlermeldung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.DataAnnotations.RangeAttribute.FormatErrorMessage%2A> erstellt eine Fehlermeldung mit dem Namen des Datenfelds, die den Validierungsfehler verursacht hat. Sie können angeben, überschreiben diese Methode in einem benutzerdefinierten Validierungsattribut anpassen, wie Fehler erstellt werden, oder um eine komplexere Nachricht bereitzustellen, die Parameter enthält, die Sie zur Laufzeit ausgewertet. Ein Beispiel dafür finden Sie unter <xref:System.ComponentModel.DataAnnotations.RangeAttribute.%23ctor%2A?displayProperty=nameWithType> -Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public override bool IsValid (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsValid(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.RangeAttribute.IsValid(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Datenfeld zu überprüfende Wert.</param>
+        <summary>Überprüft, ob der Wert des Datenfelds im angegebenen Bereich.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Wert im Bereich ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">Der Wert des Felds lag außerhalb des zulässigen Bereichs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public object Maximum { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Maximum" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.RangeAttribute.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale zulässige Feldwert ab.</summary>
+        <value>Der maximale Wert, der für das Feld "Daten" zulässig ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public object Minimum { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Minimum" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.RangeAttribute.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die minimale zulässige Feldwert ab.</summary>
+        <value>Der Mindestwert, die für das Feld "Daten" zulässig ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der kleinste Wert, der für das Feld "Daten" zulässig ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperandType">
+      <MemberSignature Language="C#" Value="public Type OperandType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type OperandType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.RangeAttribute.OperandType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Datenfelds, dessen Wert überprüft werden muss.</summary>
+        <value>Der Typ des Datenfelds, dessen Wert überprüft werden muss.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Objekt zu testende muss implementieren die <xref:System.IComparable> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

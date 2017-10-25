@@ -1,0 +1,67 @@
+<Type Name="TimerDesigner" FullName="System.Web.UI.Design.TimerDesigner">
+  <TypeSignature Language="C#" Value="public class TimerDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TimerDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.TimerDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet zur Entwurfszeit Unterstützung für die <see cref="T:System.Web.UI.Timer" /> Steuerelement in einem visuellen Designer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu dieser Klasse finden Sie unter der <xref:System.Web.UI.Design.ControlDesigner> -Klasse Dokumentation.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TimerDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TimerDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.TimerDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.Design.TimerDesigner> Klasse bei der Erstellung der zugeordneten <xref:System.Web.UI.Timer> Steuerelement oder eine Kopie des Steuerelements auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TimerDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das HTML-Markup ab, das Rendering des zugeordneten <see cref="T:System.Web.UI.Timer" /> -Steuerelements zur Entwurfszeit.</summary>
+        <returns>Eine Zeichenfolge, enthält das Markup zum Rendern verwendet, die <see cref="T:System.Web.UI.Timer" /> -Steuerelements zur Entwurfszeit.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,205 @@
+<Type Name="XmlTypeMapping" FullName="System.Xml.Serialization.XmlTypeMapping">
+  <TypeSignature Language="C#" Value="public class XmlTypeMapping : System.Xml.Serialization.XmlMapping" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlTypeMapping extends System.Xml.Serialization.XmlMapping" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlTypeMapping" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Serialization.XmlMapping</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält eine Zuordnung von einem Datentyp in einen anderen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlTypeMapping> Klasse dient zum Serialisieren eines Objekts als codiertes SOAP-XML. Das resultierende XML entspricht Abschnitt 5 des World Wide Web Consortium (www.w3.org) Dokuments "Simple Object Access Protocol (SOAP) 1.1". Erstellen einer <xref:System.Xml.Serialization.XmlTypeMapping> durch Aufrufen der <xref:System.Xml.Serialization.SoapReflectionImporter.ImportTypeMapping%2A> Methode der <xref:System.Xml.Serialization.SoapReflectionImporter> Klasse. Verwenden der <xref:System.Xml.Serialization.XmlTypeMapping> zum Erstellen einer Instanz der <xref:System.Xml.Serialization.XmlSerializer> Klasse. Verwenden Sie zum Steuern der Serialisierung eines der Attribute aufgeführt, die [Attribute, Steuerelement codierte SOAP-Serialisierung](~/docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Instanz einer Klasse mit dem Namen serialisiert `Transportation` , enthält ein Feld mit dem Namen `Vehicle`. Ein <xref:System.Xml.Serialization.SoapElementAttribute> auf das Feld angewendet wird. Wenn das Feld serialisiert wird, ist der Name der XML-Elements "Wheels" anstelle von "Vehicle". Die `SerializeOverride` Methode erstellt eine <xref:System.Xml.Serialization.SoapElementAttribute> und legt sie fest der <xref:System.Xml.Serialization.SoapAttributes.SoapElement%2A> Eigenschaft eine <xref:System.Xml.Serialization.SoapAttributes> auf die <xref:System.Xml.Serialization.SoapElementAttribute>. Die <xref:System.Xml.Serialization.SoapAttributes> hinzugefügt wird eine <xref:System.Xml.Serialization.SoapAttributeOverrides> , dient zum Erstellen einer <xref:System.Xml.Serialization.XmlTypeMapping>. Ein <xref:System.Xml.Serialization.XmlSerializer> wird erstellt, mit der <xref:System.Xml.Serialization.XmlTypeMapping>, und einer Instanz von der `Transportation` -Klasse erneut serialisiert wird. Da die <xref:System.Xml.Serialization.SoapElementAttribute> wird verwendet, um die Serialisierung zu überschreiben, der Name des generierten XML-Elements ist jetzt "Truck" anstelle von "Wheels".  
+  
+ [!code-cpp[SoapElementOverrides#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapElementOverrides/CPP/soapelementoverrides.cpp#1)]
+ [!code-csharp[SoapElementOverrides#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapElementOverrides/CS/soapelementoverrides.cs#1)]
+ [!code-vb[SoapElementOverrides#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapElementOverrides/VB/soapelementoverrides.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="TypeFullName">
+      <MemberSignature Language="C#" Value="public string TypeFullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeFullName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlTypeMapping.TypeFullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der vollqualifizierte Typname, die den Namespace (oder Namespaces) enthält, und geben.</summary>
+        <value>Der vollqualifizierte Typname.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[XmlTypeMapping Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlTypeMapping Example/CPP/mapping.cpp#1)]
+ [!code-csharp[XmlTypeMapping Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlTypeMapping Example/CS/mapping.cs#1)]
+ [!code-vb[XmlTypeMapping Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlTypeMapping Example/VB/mapping.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlTypeMapping.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typnamen des zugeordneten Objekts ab.</summary>
+        <value>Der Typname des zugeordneten Objekts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typname ist der Klassenname des zugeordneten Objekts.  
+  
+ Sie können den vollqualifizierten Namen auch anzeigen, indem Sie untersuchen die <xref:System.Xml.Serialization.XmlTypeMapping.TypeFullName%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ [!code-cpp[XmlTypeMapping Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlTypeMapping Example/CPP/mapping.cpp#1)]
+ [!code-csharp[XmlTypeMapping Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlTypeMapping Example/CS/mapping.cs#1)]
+ [!code-vb[XmlTypeMapping Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlTypeMapping Example/VB/mapping.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XsdTypeName">
+      <MemberSignature Language="C#" Value="public string XsdTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XsdTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlTypeMapping.XsdTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der XML-Elements des zugeordneten Objekts ab.</summary>
+        <value>Der Name der XML-Elements des zugeordneten Objekts. Die Standardeinstellung ist der Klassenname des Objekts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um den Namen eines anderen Elements eines Objekts festgelegt werden, gelten eine <xref:System.Xml.Serialization.SoapTypeAttribute> auf die Klasse, und legen die <xref:System.Xml.Serialization.SoapTypeAttribute.TypeName%2A> Eigenschaft, um einen neuen Wert.  
+  
+   
+  
+## Examples  
+ [!code-cpp[XmlTypeMapping Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlTypeMapping Example/CPP/mapping.cpp#1)]
+ [!code-csharp[XmlTypeMapping Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlTypeMapping Example/CS/mapping.cs#1)]
+ [!code-vb[XmlTypeMapping Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlTypeMapping Example/VB/mapping.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XsdTypeNamespace">
+      <MemberSignature Language="C#" Value="public string XsdTypeNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XsdTypeNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlTypeMapping.XsdTypeNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den XML-Namespace des zugeordneten Objekts ab.</summary>
+        <value>Der XML-Namespace des zugeordneten Objekts. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um einen Namespacenamen eines Objekts festlegen, gelten eine <xref:System.Xml.Serialization.SoapTypeAttribute> auf die Klasse, und legen die <xref:System.Xml.Serialization.SoapTypeAttribute.Namespace%2A> Eigenschaft, um einen neuen Wert.  
+  
+   
+  
+## Examples  
+ [!code-cpp[XmlTypeMapping Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlTypeMapping Example/CPP/mapping.cpp#1)]
+ [!code-csharp[XmlTypeMapping Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlTypeMapping Example/CS/mapping.cs#1)]
+ [!code-vb[XmlTypeMapping Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlTypeMapping Example/VB/mapping.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1021 @@
+<Type Name="SecurityAlgorithmSuite" FullName="System.ServiceModel.Security.SecurityAlgorithmSuite">
+  <TypeSignature Language="C#" Value="public abstract class SecurityAlgorithmSuite" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract SecurityAlgorithmSuite extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.SecurityAlgorithmSuite" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt Eigenschaften der Algorithmen an. Dies ist eine <see langword="abstract" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mithilfe von Instanzen dieser Klasse werden die kryptografischen Merkmale der Algorithmen angegeben, die beim Sichern von Nachrichten verwendet werden.  
+  
+ Diese Klasse wird von abgeleiteten Klassen dazu verwendet, Sicherheitsalgorithmussuites zu instanziieren und enthält Eigenschaften, die die Sicherheitsalgorithmen beschreiben. Die `wsBasicHttp`-Bindung verwendet beispielsweise eine interne abgeleitete Klasse zum Festlegen der Eigenschaften ihrer Sicherheitsalgorithmen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityAlgorithmSuite ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Instanzen dieser Klasse bestehen aus statischen und schreibgeschützten Eigenschaften, sodass der Konstruktor keine Eigenschaften initialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Basic128">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite Basic128 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite Basic128" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic128" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Basic128-Algorithmussuite ab.</summary>
+        <value>Die 128-bit Basic-<see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird AES-128 als Verschlüsselungsalgorithmus verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Basic128Rsa15">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite Basic128Rsa15 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite Basic128Rsa15" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic128Rsa15" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine algorithmussuite ab, die RSA15 als Key Wrap-Algorithmus und 128-Bit Basic als nachrichtenverschlüsselungsalgorithmus verwendet.</summary>
+        <value>Eine algorithmussuite ab, die RSA15 als Key Wrap-Algorithmus und 128-Bit Basic als nachrichtenverschlüsselungsalgorithmus verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eigentlich eine interne Unterklasse, die einige der Eigenschaften überschreibt, die Standardwerte angeben, sowie einige der Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Basic128Sha256">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite Basic128Sha256 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite Basic128Sha256" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic128Sha256" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine algorithmussuite ab, die SHA256 für den signaturdigest und 128-Bit Basic als nachrichtenverschlüsselungsalgorithmus verwendet.</summary>
+        <value>Eine algorithmussuite ab, die SHA256 für den signaturdigest und 128-Bit Basic als nachrichtenverschlüsselungsalgorithmus verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eigentlich eine interne Unterklasse, die einige der Eigenschaften überschreibt, die Standardwerte angeben, sowie einige der Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Basic128Sha256Rsa15">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite Basic128Sha256Rsa15 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite Basic128Sha256Rsa15" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic128Sha256Rsa15" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine algorithmussuite ab, die RSA15 als Key Wrap-Algorithmus, SHA256 für den signaturdigest und 128-Bit Basic als nachrichtenverschlüsselungsalgorithmus verwendet.</summary>
+        <value>Eine algorithmussuite ab, die RSA15 als Key Wrap-Algorithmus, SHA256 für den signaturdigest und 128-Bit Basic als nachrichtenverschlüsselungsalgorithmus verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eigentlich eine interne Unterklasse, die einige der Eigenschaften überschreibt, die Standardwerte angeben, sowie einige der Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Basic192">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite Basic192 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite Basic192" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic192" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine algorithmussuite ab, die 192-Bit Basic als nachrichtenverschlüsselungsalgorithmus verwendet.</summary>
+        <value>Eine algorithmussuite ab, die 192-Bit Basic als nachrichtenverschlüsselungsalgorithmus verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird AES-192 als Verschlüsselungsalgorithmus verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Basic192Rsa15">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite Basic192Rsa15 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite Basic192Rsa15" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic192Rsa15" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine algorithmussuite ab, die RSA15 als Key Wrap-Algorithmus und 192-Bit Basic als nachrichtenverschlüsselungsalgorithmus verwendet.</summary>
+        <value>Eine algorithmussuite ab, die RSA15 als Key Wrap-Algorithmus und 192-Bit Basic als nachrichtenverschlüsselungsalgorithmus verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eigentlich eine interne Unterklasse, die einige der Eigenschaften überschreibt, die Standardwerte angeben, sowie einige der Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Basic192Sha256">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite Basic192Sha256 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite Basic192Sha256" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic192Sha256" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Algorithmussuite ab, die SHA256 für den Signaturdigest und 192-bit Basic als Algorithmus für die Nachrichtenverschlüsselung verwendet.</summary>
+        <value>Eine algorithmussuite, die SHA256 für den signaturdigest und 192-Bit Basic als nachrichtenverschlüsselungsalgorithmus verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eigentlich eine interne Unterklasse, die einige der Eigenschaften überschreibt, die Standardwerte angeben, sowie einige der Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Basic192Sha256Rsa15">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite Basic192Sha256Rsa15 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite Basic192Sha256Rsa15" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic192Sha256Rsa15" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Algorithmussuite ab, die RSA15 als Key Wrap-Algorithmus, SHA256 für den Signaturdigest und 192-bit Basic als Algorithmus für die Nachrichtenverschlüsselung verwendet.</summary>
+        <value>Eine algorithmussuite ab, die RSA15 als Key Wrap-Algorithmus, SHA256 für den signaturdigest und 192-Bit Basic als nachrichtenverschlüsselungsalgorithmus verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eigentlich eine interne Unterklasse, die einige der Eigenschaften überschreibt, die Standardwerte angeben, sowie einige der Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Basic256">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite Basic256 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite Basic256" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Algorithmussuite ab, die 256-bit Basic als Nachrichtenverschlüsselungsalgorithmus verwendet.</summary>
+        <value>Eine algorithmussuite ab, die 256-Bit Basic als nachrichtenverschlüsselungsalgorithmus verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird AES-256 für den Verschlüsselungsalgorithmus verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie <xref:System.ServiceModel.MessageSecurityOverHttp.AlgorithmSuite%2A> auf diese Eigenschaft festgelegt wird.  
+  
+ [!code-csharp[c_ProgrammingSecurity#8](~/samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#8)]
+ [!code-vb[c_ProgrammingSecurity#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Basic256Rsa15">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite Basic256Rsa15 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite Basic256Rsa15" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256Rsa15" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Algorithmussammlung ab, die RSA15 als Key Wrap-Algorithmus und 256-bit Basic als Algorithmus für die Nachrichtenverschlüsselung verwendet.</summary>
+        <value>Eine algorithmussuite ab, die RSA15 als Key Wrap-Algorithmus und 256-Bit Basic als nachrichtenverschlüsselungsalgorithmus verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eigentlich eine interne Unterklasse, die einige der Eigenschaften überschreibt, die Standardwerte angeben, sowie einige der Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Basic256Sha256">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite Basic256Sha256 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite Basic256Sha256" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256Sha256" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Algorithmussuite ab, die SHA256 für den Signaturdigest und 256-bit Basic als Algorithmus für die Nachrichtenverschlüsselung verwendet.</summary>
+        <value>Eine algorithmussuite ab, die SHA256 für den signaturdigest und 256-Bit Basic als nachrichtenverschlüsselungsalgorithmus verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eigentlich eine interne Unterklasse, die einige der Eigenschaften überschreibt, die Standardwerte angeben, sowie einige der Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Basic256Sha256Rsa15">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite Basic256Sha256Rsa15 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite Basic256Sha256Rsa15" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256Sha256Rsa15" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Algorithmussuite ab, die RSA15 als Key Wrap-Algorithmus, SHA256 für den Signaturhashwert und 256-Bit Basic als Algorithmus für die Nachrichtenverschlüsselung verwendet.</summary>
+        <value>Eine Algorithmussuite, die RSA15 als Key Wrap-Algorithmus, SHA256 für den Signaturhashwert und 256-Bit Basic als Algorithmus für die Nachrichtenverschlüsselung verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eigentlich eine interne Unterklasse, die einige der Eigenschaften überschreibt, die Standardwerte angeben, sowie einige der Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite Default" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardalgorithmussuite ab.</summary>
+        <value>Die Standard-<see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" /> ist <see cref="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256" />, die 256-Bit-AES als symmetrischen Verschlüsselungsalgorithmus angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eigentlich eine interne Unterklasse, die die Eigenschaften überschreibt, die Standardwerte angeben, sowie die Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultAsymmetricKeyWrapAlgorithm">
+      <MemberSignature Language="C#" Value="public abstract string DefaultAsymmetricKeyWrapAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultAsymmetricKeyWrapAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultAsymmetricKeyWrapAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den standardmäßigen asymmetrischen Key Wrap-Algorithmus als Zeichenfolge ab.</summary>
+        <value>Der standardmäßige asymmetrische Key Wrap-Algorithmus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Überschreibung wird ein Zeichenfolgenwert bereitgestellt, der für den Vergleich in der <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricKeyWrapAlgorithmSupported%2A>-Methode verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultAsymmetricSignatureAlgorithm">
+      <MemberSignature Language="C#" Value="public abstract string DefaultAsymmetricSignatureAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultAsymmetricSignatureAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultAsymmetricSignatureAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den standardmäßigen asymmetrischen Signaturalgorithmus als Zeichenfolge ab.</summary>
+        <value>Den standardmäßigen asymmetrischen Signaturalgorithmus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Überschreibung wird ein Zeichenfolgenwert bereitgestellt, der für den Vergleich in der <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricSignatureAlgorithmSupported%2A>-Methode verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCanonicalizationAlgorithm">
+      <MemberSignature Language="C#" Value="public abstract string DefaultCanonicalizationAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultCanonicalizationAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultCanonicalizationAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den standardmäßigen Kanonisierungsalgorithmus als Zeichenfolge ab.</summary>
+        <value>Den standardmäßigen Kanonisierungsalgorithmus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Überschreibung wird ein Zeichenfolgenwert bereitgestellt, der für den Vergleich in der <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.IsCanonicalizationAlgorithmSupported%2A>-Methode verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultDigestAlgorithm">
+      <MemberSignature Language="C#" Value="public abstract string DefaultDigestAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultDigestAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultDigestAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standarddigestalgorithmus als Zeichenfolge ab.</summary>
+        <value>Der standardmäßige Digestalgorithmus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Überschreibung wird ein Zeichenfolgenwert bereitgestellt, der für den Vergleich in der <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.IsDigestAlgorithmSupported%2A>-Methode verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultEncryptionAlgorithm">
+      <MemberSignature Language="C#" Value="public abstract string DefaultEncryptionAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultEncryptionAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultEncryptionAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardverschlüsselungsalgorithmus als Zeichenfolge ab.</summary>
+        <value>Der standardmäßige Verschlüsselungsalgorithmus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Überschreibung wird ein Zeichenfolgenwert bereitgestellt, der für den Vergleich in der <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.IsEncryptionAlgorithmSupported%2A>-Methode verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultEncryptionKeyDerivationLength">
+      <MemberSignature Language="C#" Value="public abstract int DefaultEncryptionKeyDerivationLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DefaultEncryptionKeyDerivationLength" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultEncryptionKeyDerivationLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die standardmäßige Länge der Verschlüsselungsschlüsselableitung als <see cref="T:System.Int32" />-Wert ab.</summary>
+        <value>Die standardmäßige Länge der verschlüsselungsschlüsselableitung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene Wert ändert sich abhängig von der Unterklasse, die ihn implementiert. Bei `Basic256`-Verschlüsselung wird 256 zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSignatureKeyDerivationLength">
+      <MemberSignature Language="C#" Value="public abstract int DefaultSignatureKeyDerivationLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DefaultSignatureKeyDerivationLength" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultSignatureKeyDerivationLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die standardmäßige Länge der Signaturschlüsselableitung als <see cref="T:System.Int32" />-Wert ab.</summary>
+        <value>Die standardmäßige Länge der signaturschlüsselableitung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene Wert ändert sich abhängig von der Unterklasse, die ihn implementiert. Für `Basic256` -Verschlüsselung wird 192 zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSymmetricKeyLength">
+      <MemberSignature Language="C#" Value="public abstract int DefaultSymmetricKeyLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DefaultSymmetricKeyLength" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultSymmetricKeyLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die standardmäßige Länge des symmetrischen Schlüssels als <see cref="T:System.Int32" />-Wert ab.</summary>
+        <value>Standardmäßige Länge des symmetrischen Schlüssels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene Wert ändert sich abhängig von der Unterklasse, die ihn implementiert. Bei `Basic256`-Verschlüsselung wird 256 zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSymmetricKeyWrapAlgorithm">
+      <MemberSignature Language="C#" Value="public abstract string DefaultSymmetricKeyWrapAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultSymmetricKeyWrapAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultSymmetricKeyWrapAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den standardmäßigen symmetrischen Key Wrap-Algorithmus als Zeichenfolge ab.</summary>
+        <value>Der standardmäßige symmetrische Key Wrap-Algorithmus.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSymmetricSignatureAlgorithm">
+      <MemberSignature Language="C#" Value="public abstract string DefaultSymmetricSignatureAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultSymmetricSignatureAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultSymmetricSignatureAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den standardmäßigen symmetrischen Signaturalgorithmus als Zeichenfolge ab.</summary>
+        <value>Der standardmäßige symmetrische Signaturalgorithmus.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAsymmetricKeyLengthSupported">
+      <MemberSignature Language="C#" Value="public abstract bool IsAsymmetricKeyLengthSupported (int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsAsymmetricKeyLengthSupported(int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricKeyLengthSupported(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="length">Die zu überprüfende Schlüssellänge.</param>
+        <summary>Gibt an, ob eine besondere Schlüssellänge vom asymmetrischen Algorithmus unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die Schlüssellänge vom asymmetrischen Algorithmus unterstützt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Typische Schlüssellängen sind 128, 192 und 256 Bits.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAsymmetricKeyWrapAlgorithmSupported">
+      <MemberSignature Language="C#" Value="public virtual bool IsAsymmetricKeyWrapAlgorithmSupported (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsAsymmetricKeyWrapAlgorithmSupported(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricKeyWrapAlgorithmSupported(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der zu prüfende Algorithmusname.</param>
+        <summary>Gibt an, ob ein asymmetrischer Key Wrap-Algorithmus unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der asymmetrische Key Wrap-Algorithmus unterstützt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `algorithm` wird mit der von <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultAsymmetricKeyWrapAlgorithm%2A> zurückgegebenen Zeichenfolge verglichen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAsymmetricSignatureAlgorithmSupported">
+      <MemberSignature Language="C#" Value="public virtual bool IsAsymmetricSignatureAlgorithmSupported (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsAsymmetricSignatureAlgorithmSupported(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricSignatureAlgorithmSupported(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der zu prüfende Algorithmusname.</param>
+        <summary>Gibt an, ob ein asymmetrischer Signaturalgorithmus unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der asymmetrische Signaturalgorithmus unterstützt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `algorithm` wird mit der von <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultAsymmetricSignatureAlgorithm%2A> zurückgegebenen Zeichenfolge verglichen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCanonicalizationAlgorithmSupported">
+      <MemberSignature Language="C#" Value="public virtual bool IsCanonicalizationAlgorithmSupported (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsCanonicalizationAlgorithmSupported(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsCanonicalizationAlgorithmSupported(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der zu prüfende Algorithmusname.</param>
+        <summary>Gibt an, ob ein Kanonisierungsalgorithmus unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der Kanonisierungsalgorithmus unterstützt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `algorithm` wird mit der von <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultCanonicalizationAlgorithm%2A> zurückgegebenen Zeichenfolge verglichen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDigestAlgorithmSupported">
+      <MemberSignature Language="C#" Value="public virtual bool IsDigestAlgorithmSupported (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDigestAlgorithmSupported(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsDigestAlgorithmSupported(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der zu prüfende Algorithmusname.</param>
+        <summary>Gibt an, ob ein Hashwertalgorithmus unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der Digestalgorithmus unterstützt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `algorithm` wird mit der von <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultDigestAlgorithm%2A> zurückgegebenen Zeichenfolge verglichen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEncryptionAlgorithmSupported">
+      <MemberSignature Language="C#" Value="public virtual bool IsEncryptionAlgorithmSupported (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsEncryptionAlgorithmSupported(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsEncryptionAlgorithmSupported(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der zu prüfende Algorithmusname.</param>
+        <summary>Gibt an, ob ein Verschlüsselungsalgorithmus unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der Verschlüsselungsalgorithmus unterstützt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `algorithm` wird mit der von <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultEncryptionAlgorithm%2A> zurückgegebenen Zeichenfolge verglichen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEncryptionKeyDerivationAlgorithmSupported">
+      <MemberSignature Language="C#" Value="public virtual bool IsEncryptionKeyDerivationAlgorithmSupported (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsEncryptionKeyDerivationAlgorithmSupported(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsEncryptionKeyDerivationAlgorithmSupported(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der zu prüfende Algorithmusname.</param>
+        <summary>Gibt an, ob ein Algorithmus für die Verschlüsselungsschlüsselableitung unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der Algorithmus für die Verschlüsselungsschlüsselableitung unterstützt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSignatureKeyDerivationAlgorithmSupported">
+      <MemberSignature Language="C#" Value="public virtual bool IsSignatureKeyDerivationAlgorithmSupported (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSignatureKeyDerivationAlgorithmSupported(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsSignatureKeyDerivationAlgorithmSupported(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der zu prüfende Algorithmusname.</param>
+        <summary>Gibt an, ob ein Algorithmus für die Signaturschlüsselableitung unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der Algorithmus für die Signaturschlüsselableitung unterstützt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSymmetricKeyLengthSupported">
+      <MemberSignature Language="C#" Value="public abstract bool IsSymmetricKeyLengthSupported (int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSymmetricKeyLengthSupported(int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsSymmetricKeyLengthSupported(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="length">Die zu überprüfende Schlüssellänge.</param>
+        <summary>Bei Überschreibung in einer abgeleiteten Klasse gibt dies an, ob eine bestimmte symmetrische Schlüssellänge unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die symmetrische Schlüssellänge unterstützt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `length` wird abhängig von der Unterklasse mit einem Wertebereich verglichen. In der `TripleDES`-Unterklasse wird mit diese Methode beispielsweise überprüft, ob `length` zwischen 192 und einschließlich 256 liegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSymmetricKeyWrapAlgorithmSupported">
+      <MemberSignature Language="C#" Value="public virtual bool IsSymmetricKeyWrapAlgorithmSupported (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSymmetricKeyWrapAlgorithmSupported(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsSymmetricKeyWrapAlgorithmSupported(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der zu prüfende Algorithmusname.</param>
+        <summary>Gibt an, ob ein symmetrischer Key Wrap-Algorithmus  unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der symmetrische Key Wrap-Algorithmus unterstützt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSymmetricSignatureAlgorithmSupported">
+      <MemberSignature Language="C#" Value="public virtual bool IsSymmetricSignatureAlgorithmSupported (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSymmetricSignatureAlgorithmSupported(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsSymmetricSignatureAlgorithmSupported(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der zu prüfende Algorithmusname.</param>
+        <summary>Gibt an, ob ein symmetrischer Signaturalgorithmus unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der symmetrische Signaturalgorithmus unterstützt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TripleDes">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite TripleDes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite TripleDes" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.TripleDes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Triple-DES-Algorithmussammlung ab.</summary>
+        <value>Die Triple-DES-<see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eigentlich eine interne Unterklasse, die einige der Eigenschaften überschreibt, die Standardwerte angeben, sowie einige der Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TripleDesRsa15">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite TripleDesRsa15 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite TripleDesRsa15" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.TripleDesRsa15" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Algorithmussuite ab, die RSA15 als Key Wrap-Algorithmus und 192-Bit-Triple-DES als Algorithmus für die Nachrichtenverschlüsselung verwendet.</summary>
+        <value>Eine algorithmussuite ab, die RSA15 als Key Wrap-Algorithmus und 192-Bit-Triple Data Encryption Standard (DES) als nachrichtenverschlüsselungsalgorithmus verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eigentlich eine interne Unterklasse, die einige der Eigenschaften überschreibt, die Standardwerte angeben, sowie einige der Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TripleDesSha256">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite TripleDesSha256 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite TripleDesSha256" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.TripleDesSha256" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Algorithmussuite ab, die SHA256 für den Signaturdigest und 192-Bit-Triple-DES als Algorithmus für die Nachrichtenverschlüsselung verwendet.</summary>
+        <value>Eine algorithmussuite ab, die SHA256 für den signaturdigest und 192-Bit-Triple Data Encryption Standard (DES) als nachrichtenverschlüsselungsalgorithmus verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eigentlich eine interne Unterklasse, die einige der Eigenschaften überschreibt, die Standardwerte angeben, sowie einige der Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TripleDesSha256Rsa15">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityAlgorithmSuite TripleDesSha256Rsa15 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Security.SecurityAlgorithmSuite TripleDesSha256Rsa15" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityAlgorithmSuite.TripleDesSha256Rsa15" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Algorithmussuite ab, die RSA15 als Key Wrap-Algorithmus, SHA256 für den Signaturdigest und 192-Bit-Triple-DES als Algorithmus für die Nachrichtenverschlüsselung verwendet.</summary>
+        <value>Eine algorithmussuite ab, die RSA15 als Key Wrap-Algorithmus, SHA256 für den signaturdigest und 192-Bit-Triple Data Encryption Standard (DES) als nachrichtenverschlüsselungsalgorithmus verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eigentlich eine interne Unterklasse, die einige der Eigenschaften überschreibt, die Standardwerte angeben, sowie einige der Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,77 @@
+<Type Name="IWin32Window" FullName="System.Windows.Forms.IWin32Window">
+  <TypeSignature Language="C#" Value="public interface IWin32Window" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWin32Window" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.IWin32Window" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("458AB8A2-A1EA-4d7b-8EBE-DEE5D3D9442C")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Schnittstelle zum Verfügbarmachen von Win32-HWND-Handles.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle wird für Objekte implementiert, die Win32-HWND-Handles verfügbar zu machen. Das resultierende Handle kann mit Win32-API-Aufrufe verwendet werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft `label1` mit dem aktuellen <xref:System.Windows.Forms.IWin32Window.Handle%2A> von `Form1`. In diesem Beispiel wird davon ausgegangen, dass Sie haben eine <xref:System.Windows.Forms.Form> aufgerufen `Form1` mit einem <xref:System.Windows.Forms.Label> aufgerufen `label1` darauf.  
+  
+ [!code-cpp[Classic IWin32Window Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic IWin32Window Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic IWin32Window Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic IWin32Window Example/CS/source.cs#1)]
+ [!code-vb[Classic IWin32Window Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic IWin32Window Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public IntPtr Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Handle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.IWin32Window.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Handle für das Fenster, die von der Implementierung dargestellt.</summary>
+        <value>Ein Handle für das Fenster, die von der Implementierung dargestellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Je nach Implementierung kann sich der Wert von der <xref:System.Windows.Forms.IWin32Window.Handle%2A> Eigenschaft konnte während der Lebensdauer des Fensters ändern.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft `label1` mit dem aktuellen <xref:System.Windows.Forms.IWin32Window.Handle%2A> von `Form1`. In diesem Beispiel wird davon ausgegangen, dass Sie haben eine <xref:System.Windows.Forms.Form> aufgerufen `Form1` mit einem <xref:System.Windows.Forms.Label> aufgerufen `label1` darauf.  
+  
+ [!code-cpp[Classic IWin32Window Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic IWin32Window Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic IWin32Window Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic IWin32Window Example/CS/source.cs#1)]
+ [!code-vb[Classic IWin32Window Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic IWin32Window Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

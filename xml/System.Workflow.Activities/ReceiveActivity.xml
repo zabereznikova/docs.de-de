@@ -1,0 +1,991 @@
+<Type Name="ReceiveActivity" FullName="System.Workflow.Activities.ReceiveActivity">
+  <TypeSignature Language="C#" Value="public sealed class ReceiveActivity : System.Workflow.Activities.SequenceActivity, System.Workflow.Activities.IEventActivity, System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ReceiveActivity extends System.Workflow.Activities.SequenceActivity implements class System.Workflow.Activities.IEventActivity, class System.Workflow.ComponentModel.IActivityEventListener`1&lt;class System.Workflow.ComponentModel.QueueEventArgs&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.ReceiveActivity" />
+  <AssemblyInfo>
+    <AssemblyName>System.WorkflowServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Activities.SequenceActivity</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Workflow.Activities.IEventActivity</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Workflow.Activities.ReceiveActivityDesigner), typeof(System.ComponentModel.Design.IDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Workflow.Activities.ReceiveActivity), "Design.Resources.ReceiveActivity.png")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Workflow.ComponentModel.Compiler.ActivityValidator(typeof(System.Workflow.Activities.ReceiveActivityValidator))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dienstaktivität, die einen durch einen Windows Communication Foundation (WCF)-Dienstvertrag definierten Vorgang implementiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Die <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität wird verwendet, wenn ein Workflow einen in einem [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Dienstvertrag definierten Vorgang implementiert. Die <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität kann einen Vorgang aus einem bereits definierten Dienstvertrag implementieren oder den Dienstvertrag und den Vorgang im Workflow selbst definieren. Letzteres wird als Workflow-zuerst-Vertrag bezeichnet.  
+  
+ Die <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität unterstützt einen Satz vordefinierter Nachrichtenaustauschmuster. Zu diesen Mustern gehören:  
+  
+-   Unidirektional empfangen  
+  
+     Der Client, der die Nachricht sendet, erwartet nicht, dass der Dienst eine Antwort sendet. Der Vertragsvorgang sollte über einen void-Rückgabetyp verfügen.  
+  
+-   Anforderung empfangen - Antwort senden  
+  
+     Nach dem Empfang und der Verarbeitung einer Nachricht durch die <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität wird eine Antwort zurück an den Client gesendet. Verfügt der Vertragsvorgang über einen void-Rückgabetyp, wird eine Bestätigung zurück an die Sendeaktivität gesendet.  
+  
+-   Anforderung empfangen - Fehler senden  
+  
+     Nach dem Empfang und der Verarbeitung einer Nachricht durch die <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität wird eine Antwort oder ein Fehler zurück an den Client gesendet.  
+  
+> [!NOTE]
+>  Um sicherzustellen, dass die Persistenz ordnungsgemäß ausgeführt wird und keine flüchtige Meldungen beibehalten werden, ist ein selbstständiges Beibehalten untergeordneter Aktitäten von <xref:System.Workflow.Activities.ReceiveActivity> nicht zulässig. Dies kann der Fall sein, falls die untergeordneten Aktivitäten in den Ruhezustand versetzt werden, wenn beispielsweise ein Persistenz-Provider mit dem Wert `UnloadOnIdle` für `true` erstellt wurde.  
+  
+> [!NOTE]
+>  Diese Aktivität ist Bestandteil des [!INCLUDE[net_v35_short](~/includes/net-v35-short-md.md)]. Für die entsprechende Aktivität in [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], finden Sie unter <xref:System.ServiceModel.Activities.Receive>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.ReceiveActivity" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Workflow.Activities.ReceiveActivity>-Konstruktor wird normalerweise in der vom Workflow-Designer erstellten Code-Beside-Datei aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReceiveActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.ReceiveActivity" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Workflow.Activities.ReceiveActivity>-Konstruktor wird normalerweise in der vom Workflow-Designer erstellten Code-Beside-Datei aufgerufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie eine neue Instanz der <xref:System.Workflow.Activities.ReceiveActivity>-Klasse erstellt wird.  Dieser Code basiert auf dem SDK-Beispiel `Conversations` aus der Datei `ShipperWorkflow.designer.cs`.  
+  
+ [!code-csharp[ReceiveActivity#11](~/samples/snippets/csharp/VS_Snippets_CFX/receiveactivity/cs/snippets.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReceiveActivity (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name, der der Aktivitätsinstanz zugewiesen werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.ReceiveActivity" />-Klasse, die ihre <see cref="P:System.Workflow.ComponentModel.Activity.Name" />-Eigenschaft initialisiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Workflow.Activities.ReceiveActivity>-Konstruktor wird normalerweise in der vom Workflow-Designer erstellten Code-Beside-Datei aufgerufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie eine neue Instanz der <xref:System.Workflow.Activities.ReceiveActivity>-Klasse erstellt wird.  
+  
+ [!code-csharp[ReceiveActivity#12](~/samples/snippets/csharp/VS_Snippets_CFX/receiveactivity/cs/snippets.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.ActivityExecutionStatus Cancel (System.Workflow.ComponentModel.ActivityExecutionContext executionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Cancel(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.Cancel(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCreateInstance">
+      <MemberSignature Language="C#" Value="public bool CanCreateInstance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanCreateInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReceiveActivity.CanCreateInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Visible)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob der Vorgang das Erstellen einer neuen Workflow-Dienstinstanz auslöst.</summary>
+        <value>
+          <see langword="true" />, wenn eine neue Workflowinstanz erstellt wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität, für die <xref:System.Workflow.Activities.ReceiveActivity.CanCreateInstance%2A> auf `true` festgelegt ist, stellt einen Dienstvorgang dar, der beim Aufrufen durch einen Dienstclient, ohne Teil einer Konversation zu sein, das Erstellen einer neuen Instanz des Dienstworkflows auslöst.  
+  
+ Dienstworkflows ohne <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität, für die <xref:System.Workflow.Activities.ReceiveActivity.CanCreateInstance%2A> auf `true` festgelegt ist, können nicht durch einen Client mit einem Dienstvorgangsaufruf instanziiert werden. Solche Workflows können mit der <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A>-Methode des zugeordneten <xref:System.Workflow.Runtime.WorkflowRuntime>-Objekts erstellt werden.  
+  
+ Der Standardwert für diese Eigenschaft ist `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird das Festlegen der `CanCreateInstance`-Eigenschaft veranschaulicht. Dieser Code basiert auf dem SDK-Beispiel `Conversations` aus der Datei `ShipperWorkflow.designer.cs`.  
+  
+ [!code-csharp[ReceiveActivity#0](~/samples/snippets/csharp/VS_Snippets_CFX/receiveactivity/cs/snippets.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; Context" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReceiveActivity.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kontextinformationen für diese Aktivität ab.</summary>
+        <value>Ein <see cref="T:System.Collections.Generic.IDictionary`2" />-Objekt, das Kontextinformationen für diese Aktivität enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kontextinformationen werden für die Kommunikation zwischen dem Client und dem jeweiligen Dienst verwendet und enthalten u.&#160;A. die Identifizierung zur Korrelation.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die `Context`-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[ReceiveActivity#17](~/samples/snippets/csharp/VS_Snippets_CFX/receiveactivity/cs/snippets.cs#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextToken">
+      <MemberSignature Language="C#" Value="public System.Workflow.Activities.ContextToken ContextToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Activities.ContextToken ContextToken" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReceiveActivity.ContextToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.Activities.ContextTokenTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.ContextToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt ein Token dar, mit dem der Kontext angegeben werden kann, der zum Korrelieren des Austauschs zwischen einer <see cref="T:System.Workflow.Activities.ReceiveActivity" />-Aktivität und dem Client verwendet werden kann, mit dem die Aktivität kommuniziert.</summary>
+        <value>Ein <see cref="T:System.Workflow.Activities.ContextToken" />, das für Korrelation verwendet werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes <xref:System.Workflow.Activities.ReceiveActivity.ContextToken%2A> wird innerhalb des Bereichs einer Besitzeraktivität definiert. Benutzer können Modelle zweier unterschiedlicher Kontexttoken mit dem gleichen Namen, jedoch unterschiedlichen Besitzerbereichen erstellen. Der Wert der diesen Kontexttoken zugeordneten Kontexte unterscheidet sich zur Laufzeit.  
+  
+ Standardmäßig verfügt jeder Workflow über ein auf Stammaktivitätsebene festgelegtes implizites Stammkontexttoken. Der Name des Stammkontexttokens ist '(RootContext)' und der <xref:System.Workflow.Activities.ContextToken.OwnerActivityName%2A> ist `null`. Wenn eine <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität nicht über ein zugeordnetes <xref:System.Workflow.Activities.ReceiveActivity.ContextToken%2A> verfügt, wird das Stammkontexttoken verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die `ContextToken`-Eigenschaft veranschaulicht. Dieses Codebeispiel basiert auf dem SDK-Beispiel `Conversations` aus der Datei `SupplierWorkflow.Designer.cs`.  
+  
+ [!code-csharp[ReceiveActivity#1](~/samples/snippets/csharp/VS_Snippets_CFX/receiveactivity/cs/snippets.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.ActivityExecutionStatus Execute (System.Workflow.ComponentModel.ActivityExecutionContext executionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Execute(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.Execute(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FaultMessage">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.FaultException FaultMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.FaultException FaultMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReceiveActivity.FaultMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Visible)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.FaultException</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ausnahme, die zurückgegeben wird, wenn die Ausführung einer Empfangsaktivität abgeschlossen ist.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.FaultException" />-Objekt, das Text und Details der Fehlermeldung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Workflow.Activities.ReceiveActivity.FaultMessage%2A>-Eigenschaft auf eine Instanz vom Typ <xref:System.ServiceModel.FaultException> festgelegt wird, wird der Fehler beim Abschluss an den Client zurückgegeben.  
+  
+ Wird eine Ausnahme während der Aktivitätsausführung ausgelöst und die <xref:System.Workflow.Activities.ReceiveActivity.FaultMessage%2A>-Eigenschaft festgelegt, wird der angegebene Fehler an den Client zurückgegeben. Wird während der Aktivitätsausführung eine Ausnahme ausgelöst und die <xref:System.Workflow.Activities.ReceiveActivity.FaultMessage%2A>-Eigenschaft festgelegt, und verfügt der zugeordnete Vorgang über ein <xref:System.ServiceModel.FaultContractAttribute>-Attribut, mit dem ein Fehlertyp angegeben wird, der dem Fehlertyp der <xref:System.Workflow.Activities.ReceiveActivity.FaultMessage%2A>-Eigenschaft entspricht, liegt kein Kanalfehler vor und der Client kann nach wie vor mit dem Server kommunizieren. Wenn die <xref:System.Workflow.Activities.ReceiveActivity.FaultMessage%2A>-Eigenschaft nicht festgelegt ist, wird die ausgelöste Ausnahme als Fehler an den Client zurückgegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die `FaultMessage`-Eigenschaft gezeigt.  
+  
+ [!code-csharp[ReceiveActivity#2](~/samples/snippets/csharp/VS_Snippets_CFX/receiveactivity/cs/snippets.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FaultMessageProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty FaultMessageProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty FaultMessageProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReceiveActivity.FaultMessageProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> dar, die sich auf die <see cref="P:System.Workflow.Activities.ReceiveActivity.FaultMessage" />-Eigenschaft bezieht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Abhängigkeitseigenschaft kann zum Einrichten einer Bindung zwischen der <xref:System.Workflow.Activities.ReceiveActivity.FaultMessage%2A>-Eigenschaft der Empfangsaktivität und einer öffentlichen Workfloweigenschaft/Feld vom Typ <xref:System.ServiceModel.FaultException> oder der öffentlichen Eigenschaft/Feld des gleichen Typs einer anderen Aktivität verwendet werden.  
+  
+ Diese Abhängigkeitseigenschaft kann auch zum Festlegen des der <xref:System.Workflow.Activities.ReceiveActivity.FaultMessage%2A>-Eigenschaft einer <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität zugeordneten Werts verwendet werden.  
+  
+ Diese Abhängigkeitseigenschaft kann auch zum Abrufen der Bindung oder des Werts, die bzw. der der <xref:System.Workflow.Activities.ReceiveActivity.FaultMessage%2A>-Eigenschaft der <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität zugeordnet ist, verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetContext">
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt ein Wörterbuch zurück, das die für die Kommunikation zwischen einem Client und dem Workflowdienst verwendeten Kontextinformationen enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kontextinformationen werden für die Kommunikation zwischen dem Client und dem jeweiligen Dienst verwendet und enthalten u.&#160;A. die Identifizierung zur Korrelation.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetContext">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;string,string&gt; GetContext (System.Workflow.ComponentModel.Activity activity, System.Workflow.Activities.ContextToken contextToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GetContext(class System.Workflow.ComponentModel.Activity activity, class System.Workflow.Activities.ContextToken contextToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.GetContext(System.Workflow.ComponentModel.Activity,System.Workflow.Activities.ContextToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+        <Parameter Name="contextToken" Type="System.Workflow.Activities.ContextToken" />
+      </Parameters>
+      <Docs>
+        <param name="activity">Aktivitätsinstanz, für die Kontextinformationen angefordert werden.</param>
+        <param name="contextToken">Das von der Aktivität verwendete Kontexttoken.</param>
+        <summary>Statische Methode, die Kontextinformationen zurückgibt, wenn eine Aktivitätsinstanz und ein Kontexttoken vorliegen.</summary>
+        <returns>Eine wörterbuchbasierte Auflistung, die <see cref="T:System.Xml.XmlQualifiedName" />-Schlüssel und ihre zugeordneten <see cref="T:System.String" />-Werte enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kontextinformationen werden für die Kommunikation zwischen dem Client und dem jeweiligen Dienst verwendet und enthalten u.&#160;A. die Identifizierung zur Korrelation.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der `GetContext`-Methode gezeigt.  
+  
+ [!code-csharp[ReceiveActivity#13](~/samples/snippets/csharp/VS_Snippets_CFX/receiveactivity/cs/snippets.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContext">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;string,string&gt; GetContext (System.Workflow.ComponentModel.Activity activity, string contextName, string ownerActivityName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GetContext(class System.Workflow.ComponentModel.Activity activity, string contextName, string ownerActivityName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.GetContext(System.Workflow.ComponentModel.Activity,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+        <Parameter Name="contextName" Type="System.String" />
+        <Parameter Name="ownerActivityName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="activity">Aktivitätsinstanz, für die Kontextinformationen angefordert werden.</param>
+        <param name="contextName">Der Name des von der Aktivität verwendeten Kontexttokens.</param>
+        <param name="ownerActivityName">Der Name der besitzenden Aktivität.</param>
+        <summary>Statische Methode, die Kontextinformationen zurückgibt, wenn eine Aktivitätsinstanz und ein Kontexttoken vorliegen.</summary>
+        <returns>Eine wörterbuchbasierte Auflistung, die <see cref="T:System.Xml.XmlQualifiedName" />-Schlüssel und ihre zugeordneten <see cref="T:System.String" />-Werte enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kontextinformationen werden für die Kommunikation zwischen dem Client und dem jeweiligen Dienst verwendet und enthalten u.&#160;A. die Identifizierung zur Korrelation.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der `GetContext`-Methode gezeigt.  
+  
+ [!code-csharp[ReceiveActivity#15](~/samples/snippets/csharp/VS_Snippets_CFX/receiveactivity/cs/snippets.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRootContext">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;string,string&gt; GetRootContext (System.Workflow.ComponentModel.Activity activity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GetRootContext(class System.Workflow.ComponentModel.Activity activity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.GetRootContext(System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="activity">Die untergeordnete Aktivitätsinstanz.</param>
+        <summary>Statische Methode, die Kontextinformationen für den einer angegebenen Aktivitätsinstanz zugeordneten Stammkontext zurückgibt. Kontextinformationen werden für Kommunikation zwischen einer Hostanwendung und dem Workflowdienst verwendet.</summary>
+        <returns>Eine wörterbuchbasierte Auflistung, die <see cref="T:System.Xml.XmlQualifiedName" />-Schlüssel und ihre zugeordneten <see cref="T:System.String" />-Werte enthält, die Kontextinformationen für einen Stammkontext darstellen. Beim Ausschließen benutzerdefinierter Instanzerstellungslogik wird die Nachricht, die die Erstellung einer neuen Instanz auslöst, im Stammkontext empfangen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kontextinformationen werden für die Kommunikation zwischen dem Client und dem jeweiligen Dienst verwendet und enthalten u.&#160;A. die Identifizierung zur Korrelation.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der `GetRootContext`-Methode gezeigt.  
+  
+ [!code-csharp[ReceiveActivity#16](~/samples/snippets/csharp/VS_Snippets_CFX/receiveactivity/cs/snippets.cs#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWorkflowServiceAttributes">
+      <MemberSignature Language="C#" Value="public static object GetWorkflowServiceAttributes (object dependencyObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetWorkflowServiceAttributes(object dependencyObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.GetWorkflowServiceAttributes(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyObject">Das Objekt, aus dem die Dienstattribute abgerufen werden sollen.</param>
+        <summary>Gibt die <see cref="T:System.Workflow.Activities.WorkflowServiceAttributes" />-Attribute für den von der <see cref="T:System.Workflow.Activities.ReceiveActivity" />-Aktivität implementierten Dienst zurück. Diese Attribute umfassen Elemente wie den <see cref="P:System.Workflow.Activities.WorkflowServiceAttributes.AddressFilterMode" />, den <see cref="P:System.Workflow.Activities.WorkflowServiceAttributes.ConfigurationName" />, die <see cref="P:System.Workflow.Activities.WorkflowServiceAttributes.IncludeExceptionDetailInFaults" /> und ob Ausnahmedetails in von der <see cref="T:System.Workflow.Activities.ReceiveActivity" />-Aktivität zurückgegebene Fehler aufgenommen werden.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das ein <see cref="T:System.Workflow.Activities.WorkflowServiceAttributes" />-Objekt darstellt, das Dienstattributdaten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Workflow.Activities.ReceiveActivity.WorkflowServiceAttributesProperty>-Eigenschaft ist eine durch die <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität definierte angehängte Abhängigkeitseigenschaft. Diese Abhängigkeitseigenschaft wird an den Stammworkflow angehängt, der die <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität enthält, indem zur Entwurfszeit die <xref:System.Workflow.Activities.ReceiveActivity.SetWorkflowServiceAttributes%2A>-Methode aufgerufen wird.  
+  
+ Die <xref:System.Workflow.Activities.ReceiveActivity.WorkflowServiceAttributesProperty>-Eigenschaft wird zum Definieren von Verhaltensattributen auf Dienstebene verwendet, die beim Start auf den Workflowdienst angewendet werden. Diese Attribute können zur Laufzeit nicht geändert werden.  
+  
+> [!NOTE]
+>  Wenn der aktuelle Workflow einen weiteren Workflow unter Verwendung der <xref:System.Workflow.Activities.InvokeWorkflowActivity>-Aktivität startet, erbt der aufgerufene Workflow nicht die Dienstattribute des aufrufenden Workflows.  
+  
+> [!NOTE]
+>  Wenn Dienstattribute für eine benutzerdefinierte Aktivität festgelegt werden und diese Aktivität in einen Workflow eingeschlossen wird, werden diese Dienstattribute verwendet. Dienstattribute werden nur dann für benutzerdefinierte Aktivitäten verwendet, wenn die benutzerdefinierte Aktivität selbst als Workflow ausgeführt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der `GetWorkflowServiceAttributes`-Methode gezeigt.  
+  
+ [!code-csharp[ReceiveActivity#5](~/samples/snippets/csharp/VS_Snippets_CFX/receiveactivity/cs/snippets.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleFault">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.ActivityExecutionStatus HandleFault (System.Workflow.ComponentModel.ActivityExecutionContext executionContext, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus HandleFault(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.HandleFault(System.Workflow.ComponentModel.ActivityExecutionContext,System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">To be added.</param>
+        <param name="exception">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected override void Initialize (IServiceProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Initialize(class System.IServiceProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.Initialize(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeProperties">
+      <MemberSignature Language="C#" Value="protected override void InitializeProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InitializeProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.InitializeProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSequenceComplete">
+      <MemberSignature Language="C#" Value="protected override void OnSequenceComplete (System.Workflow.ComponentModel.ActivityExecutionContext executionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSequenceComplete(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.OnSequenceComplete(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationValidation">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Activities.OperationValidationEventArgs&gt; OperationValidation;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Activities.OperationValidationEventArgs&gt; OperationValidation" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Activities.ReceiveActivity.OperationValidation" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceModel.SRCategory("Handlers")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Activities.OperationValidationEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Nachricht für einen Vorgang empfangen wird und Validierung erforderlich ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein optionaler Ereignishandler, der ausgelöst wird, wenn die <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität eine Nachricht empfangen soll. Der zugehörige Handler kann zum Ausführen ClaimSet-basierter Sicherheitsüberprüfungen verwendet werden, um den Clientaufruf des von der <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität implementierten Dienstvorgangs zu autorisieren.  
+  
+ Wenn <xref:System.Workflow.Activities.OperationValidationEventArgs.IsValid%2A?displayProperty=nameWithType> im Ereignishandler auf `false` festgelegt wird, wird der Aufruf des Dienstvorgangs abgelehnt, und der Client empfängt eine <xref:System.ServiceModel.FaultException>. Wenn <xref:System.Workflow.Activities.OperationValidationEventArgs.IsValid%2A?displayProperty=nameWithType> auf `true` festgelegt wird, ist der Aufruf des Dienstvorgangs erfolgreich, und die <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität empfängt und verarbeitet die Nachricht.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung des `OperationValidation`-Ereignisses veranschaulicht.  
+  
+ [!code-csharp[ReceiveActivity#7](~/samples/snippets/csharp/VS_Snippets_CFX/receiveactivity/cs/snippets.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationValidationEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty OperationValidationEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty OperationValidationEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReceiveActivity.OperationValidationEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> dar, die sich auf das <see cref="E:System.Workflow.Activities.ReceiveActivity.OperationValidation" />-Ereignis bezieht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Abhängigkeitsereigniseigenschaft kann zum Binden des <xref:System.Workflow.Activities.ReceiveActivity.OperationValidation>-Ereignisses der Empfangsaktivität an einen öffentlichen Ereignishandler für die Workflowklasse verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterBindings">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.WorkflowParameterBindingCollection ParameterBindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.WorkflowParameterBindingCollection ParameterBindings" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReceiveActivity.ParameterBindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.WorkflowParameterBindingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung bindungsfähiger Parameter ab, die in der Liste für formale Parameter des Dienstes aufgeführt sind.</summary>
+        <value>Die <see cref="T:System.Workflow.ComponentModel.WorkflowParameterBindingCollection" /> der Parameter, zu denen eine Bindung hergestellt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.ReceiveActivity.ParameterBindings%2A> können verwendet werden, um eine Bindung zwischen den Dienstvorgangsparametern und dem öffentlichen Feld/Eigenschaften des Workflows anzugeben, der die <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität enthält. Wenn ein Client den Vorgang aufruft, werden die entsprechenden Parameterwerte bei der Ausführung der Empfangsaktivität in gebundene Workfloweigenschaften geschrieben.  
+  
+ <xref:System.Workflow.Activities.ReceiveActivity.ParameterBindings%2A> können auch von den untergeordneten Aktivitäten der Empfangsaktivität zum Lesen der durch Clientaufruf übergebenen Parameterwerte verwendet werden. Untergeordnete Aktivitäten können die <xref:System.Workflow.Activities.ReceiveActivity.ParameterBindings%2A>-Auflistung verwenden, um den Rückgabewert der übergeordneten <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität festzulegen.  
+  
+ Alle Parameter des Dienstvertrags sollten in der `ParameterBindings`-Eigenschaft enthalten sein. Durch ungebundene Parameter werden bei der Kompilierung Compilerwarnungen ausgelöst, und eine Ausnahme kann auftreten, wenn die Meldung von <xref:System.Workflow.Activities.ReceiveActivity> an den Client zurückgesendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die `ParameterBindings`-Eigenschaft veranschaulicht. Dieser Code basiert auf dem SDK-Beispiel `Conversations` aus der Datei `ShipperWorkflow.designer.cs`.  
+  
+ [!code-csharp[ReceiveActivity#3](~/samples/snippets/csharp/VS_Snippets_CFX/receiveactivity/cs/snippets.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceOperationInfo">
+      <MemberSignature Language="C#" Value="public System.Workflow.Activities.OperationInfoBase ServiceOperationInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Activities.OperationInfoBase ServiceOperationInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReceiveActivity.ServiceOperationInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Visible)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.OperationInfoBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Definiert den Vertrag und den Dienstvorgang, den die <see cref="T:System.Workflow.Activities.ReceiveActivity" />-Aktivität implementiert.</summary>
+        <value>Ein <see cref="T:System.Workflow.Activities.OperationInfoBase" />-Objekt, das den Vertragsnamen, Vertragstyp, Vorgangsnamen (der vom Methodennamen abweichen kann), Informationen, ob der Vorgang ein unidirektionaler Vorgang ist, und Methodeninformationen einschließlich Parameter zu dem Vorgang enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Workflow.Activities.ReceiveActivity.ServiceOperationInfo%2A>-Eigenschaft kann auf eine Instanz vom Typ <xref:System.Workflow.Activities.TypedOperationInfo> oder <xref:System.Workflow.Activities.OperationInfo> festgelegt werden. <xref:System.Workflow.Activities.TypedOperationInfo> kann zum Konfigurieren einer Empfangsaktivität mithilfe eines vorhandenen [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Dienstvertrags verwendet werden.  
+  
+ Eine Instanz von <xref:System.Workflow.Activities.OperationInfo> kann zum Konfigurieren einer Empfangsaktivität für das Workflow-zuerst-Vertragsszenario verwendet werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die `ServiceOperationInfo`-Eigenschaft veranschaulicht. Dieser Code basiert auf dem SDK-Beispiel `Conversations` aus der Datei `ShipperWorkflow.designer.cs`.  
+  
+ [!code-csharp[ReceiveActivity#4](~/samples/snippets/csharp/VS_Snippets_CFX/receiveactivity/cs/snippets.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWorkflowServiceAttributes">
+      <MemberSignature Language="C#" Value="public static void SetWorkflowServiceAttributes (object dependencyObject, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetWorkflowServiceAttributes(object dependencyObject, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.SetWorkflowServiceAttributes(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyObject" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyObject">Das Objekt, auf das die Dienstattribute abgewendet werden sollen.</param>
+        <param name="value">Das <see cref="T:System.Workflow.Activities.WorkflowServiceAttributes" />-Objekt, das die anzuwendenden Dienstattributdaten enthält.</param>
+        <summary>Legt die Attribute für den von der <see cref="T:System.Workflow.Activities.ReceiveActivity" />-Aktivität implementierten Dienst fest. Diese Attribute umfassen Elemente wie den <see cref="P:System.Workflow.Activities.WorkflowServiceAttributes.AddressFilterMode" />, den <see cref="P:System.Workflow.Activities.WorkflowServiceAttributes.ConfigurationName" /> und Angaben dazu, ob Ausnahmedetails in von der <see cref="T:System.Workflow.Activities.ReceiveActivity" />-Aktivität zurückgegebene Fehler aufgenommen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Workflow.Activities.ReceiveActivity.WorkflowServiceAttributesProperty>-Eigenschaft ist eine durch die <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität definierte angehängte Abhängigkeitseigenschaft. Diese Abhängigkeitseigenschaft wird an den Stammworkflow angehängt, der die <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität enthält, indem zur Entwurfszeit die <xref:System.Workflow.Activities.ReceiveActivity.SetWorkflowServiceAttributes%2A>-Methode aufgerufen wird.  
+  
+ Die <xref:System.Workflow.Activities.ReceiveActivity.WorkflowServiceAttributesProperty>-Eigenschaft wird zum Definieren von Verhaltensattributen auf Dienstebene verwendet, die beim Start auf den Workflowdienst angewendet werden. Diese Attribute können zur Laufzeit nicht geändert werden.  
+  
+> [!NOTE]
+>  Wenn der aktuelle Workflow einen weiteren Workflow unter Verwendung der <xref:System.Workflow.Activities.InvokeWorkflowActivity>-Aktivität startet, erbt der aufgerufene Workflow nicht die Dienstattribute des aufrufenden Workflows.  
+  
+> [!NOTE]
+>  Wenn Dienstattribute für eine benutzerdefinierte Aktivität festgelegt werden und diese Aktivität in einen Workflow eingeschlossen wird, werden diese Dienstattribute nicht verwendet. Dienstattribute werden nur dann in benutzerdefinierten Aktivitäten verwendet, wenn die benutzerdefinierte Aktivität selbst als Workflow ausgeführt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der `SetWorkflowServiceAttributes`-Methode gezeigt.  
+  
+ [!code-csharp[ReceiveActivity#6](~/samples/snippets/csharp/VS_Snippets_CFX/receiveactivity/cs/snippets.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.Activities.IEventActivity.QueueName">
+      <MemberSignature Language="C#" Value="IComparable System.Workflow.Activities.IEventActivity.QueueName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IComparable System.Workflow.Activities.IEventActivity.QueueName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReceiveActivity.System#Workflow#Activities#IEventActivity#QueueName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IComparable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der <see cref="T:System.Workflow.Runtime.WorkflowQueue" /> ab, in der die Aktivität auf das Eintreffen der Daten wartet.</summary>
+        <value>Der Name der <see cref="T:System.Workflow.Runtime.WorkflowQueue" />, in der die Aktivität auf das Eintreffen der Daten wartet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.Activities.IEventActivity.Subscribe">
+      <MemberSignature Language="C#" Value="void IEventActivity.Subscribe (System.Workflow.ComponentModel.ActivityExecutionContext parentContext, System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt; parentEventHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Workflow.Activities.IEventActivity.Subscribe(class System.Workflow.ComponentModel.ActivityExecutionContext parentContext, class System.Workflow.ComponentModel.IActivityEventListener`1&lt;class System.Workflow.ComponentModel.QueueEventArgs&gt; parentEventHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.System#Workflow#Activities#IEventActivity#Subscribe(System.Workflow.ComponentModel.ActivityExecutionContext,System.Workflow.ComponentModel.IActivityEventListener{System.Workflow.ComponentModel.QueueEventArgs})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+        <Parameter Name="parentEventHandler" Type="System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="parentContext">Der <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" />, der die Ausführungsumgebung der <see cref="T:System.Workflow.Activities.ReceiveActivity" />-Aktivität darstellt.</param>
+        <param name="parentEventHandler">Das Ereignis, das von <see cref="T:System.EventHandler" /> behandelt wird. Die übergeordnete Aktivität ist Besitzer dieses Ereignishandlers.</param>
+        <summary>Erstellt das Abonnement für die <see cref="T:System.Workflow.Activities.ReceiveActivity" />-Aktivität für ein Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.Activities.IEventActivity.Unsubscribe">
+      <MemberSignature Language="C#" Value="void IEventActivity.Unsubscribe (System.Workflow.ComponentModel.ActivityExecutionContext parentContext, System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt; parentEventHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Workflow.Activities.IEventActivity.Unsubscribe(class System.Workflow.ComponentModel.ActivityExecutionContext parentContext, class System.Workflow.ComponentModel.IActivityEventListener`1&lt;class System.Workflow.ComponentModel.QueueEventArgs&gt; parentEventHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.System#Workflow#Activities#IEventActivity#Unsubscribe(System.Workflow.ComponentModel.ActivityExecutionContext,System.Workflow.ComponentModel.IActivityEventListener{System.Workflow.ComponentModel.QueueEventArgs})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+        <Parameter Name="parentEventHandler" Type="System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="parentContext">Der <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" />, der die Ausführungsumgebung der <see cref="T:System.Workflow.Activities.WebServiceInputActivity" />-Aktivität darstellt.</param>
+        <param name="parentEventHandler">Das Ereignis, das von <see cref="T:System.EventHandler" /> behandelt wird. Die übergeordnete Aktivität ist Besitzer dieses Ereignishandlers.</param>
+        <summary>Bricht das Abonnement einer <see cref="T:System.Workflow.ComponentModel.Activity" /> für ein Ereignis ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt;.OnEvent">
+      <MemberSignature Language="C#" Value="void IActivityEventListener&lt;QueueEventArgs&gt;.OnEvent (object sender, System.Workflow.ComponentModel.QueueEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt;.OnEvent(object sender, class System.Workflow.ComponentModel.QueueEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReceiveActivity.System#Workflow#ComponentModel#IActivityEventListener&lt;System#Workflow#ComponentModel#QueueEventArgs&gt;#OnEvent(System.Object,System.Workflow.ComponentModel.QueueEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.QueueEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Das Objekt, das das Ereignis ausgelöst hat.</param>
+        <param name="e">Die vorher eingegebenen Ereignisargumente.</param>
+        <summary>Definiert die Verarbeitungsprozedur, wenn das Abonnementereignis auftritt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowServiceAttributesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty WorkflowServiceAttributesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty WorkflowServiceAttributesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReceiveActivity.WorkflowServiceAttributesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> dar, die sich auf die <see cref="P:System.Workflow.Activities.ReceiveActivity.ServiceOperationInfo" />-Eigenschaft bezieht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Workflow.Activities.ReceiveActivity.WorkflowServiceAttributesProperty>-Eigenschaft ist eine durch die <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität definierte angehängte Abhängigkeitseigenschaft. Diese Abhängigkeitseigenschaft wird an den Stammworkflow angehängt, der die <xref:System.Workflow.Activities.ReceiveActivity>-Aktivität enthält, indem zur Entwurfszeit die <xref:System.Workflow.Activities.ReceiveActivity.SetWorkflowServiceAttributes%2A>-Methode aufgerufen wird.  
+  
+ Die <xref:System.Workflow.Activities.ReceiveActivity.WorkflowServiceAttributesProperty>-Eigenschaft wird zum Definieren von Verhaltensattributen auf Dienstebene verwendet, die beim Start auf den Workflowdienst angewendet werden. Diese Attribute können zur Laufzeit nicht geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

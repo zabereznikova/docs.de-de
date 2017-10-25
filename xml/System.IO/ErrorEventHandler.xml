@@ -1,0 +1,50 @@
+<Type Name="ErrorEventHandler" FullName="System.IO.ErrorEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ErrorEventHandler(object sender, ErrorEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ErrorEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.IO.ErrorEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.IO.ErrorEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.IO.ErrorEventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.IO.FileSystemWatcher.Error" /> -Ereignis für ein <see cref="T:System.IO.FileSystemWatcher" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.IO.ErrorEventHandler>-Delegaten geben Sie die Methode für die Ereignisbehandlung an. Um Ihre Ereignisbehandlungsmethode das Ereignis zuzuordnen, fügen Sie eine Instanz des Delegaten das Ereignis ein. Die Ereignisbehandlungsmethode wird bei Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer `FileSystemWatcher` Objekt zum Überwachen von Änderungen der Datenbankdatei (erstellt, löscht, benennt, Änderungen), die auf einem Laufwerk auftreten. Im Beispiel wird auch die ordnungsgemäß empfangen der fehlerbenachrichtigungen veranschaulicht.  
+  
+ [!code-csharp[FileSystemWatcher#1](~/samples/snippets/csharp/VS_Snippets_CLR/FileSystemWatcher/cs/filesystemwatcher.cs#1)]
+ [!code-vb[FileSystemWatcher#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FileSystemWatcher/VB/FileSystemWatcher.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

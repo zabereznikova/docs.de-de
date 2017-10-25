@@ -1,0 +1,53 @@
+<Type Name="IDataBindingsAccessor" FullName="System.Web.UI.IDataBindingsAccessor">
+  <TypeSignature Language="C#" Value="public interface IDataBindingsAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataBindingsAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IDataBindingsAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht den Zugriff auf die Auflistung der Datenbindungsausdrücke eines Steuerelements zur Entwurfszeit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataBindings">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataBindingCollection DataBindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataBindingCollection DataBindings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IDataBindingsAccessor.DataBindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataBindingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von datenbindungen für alle auf das Steuerelement ab. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Die Auflistung von datenbindungen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDataBindings">
+      <MemberSignature Language="C#" Value="public bool HasDataBindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasDataBindings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IDataBindingsAccessor.HasDataBindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Steuerelement eine Datenbindung Logik enthält.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement Daten Bindungslogik enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

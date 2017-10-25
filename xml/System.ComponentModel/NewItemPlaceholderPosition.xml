@@ -1,0 +1,66 @@
+<Type Name="NewItemPlaceholderPosition" FullName="System.ComponentModel.NewItemPlaceholderPosition">
+  <TypeSignature Language="C#" Value="public enum NewItemPlaceholderPosition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NewItemPlaceholderPosition extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.NewItemPlaceholderPosition" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, an welcher Position in der Auflistung sich der Platzhalter für ein neues Element befindet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AtBeginning">
+      <MemberSignature Language="C#" Value="AtBeginning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.NewItemPlaceholderPosition AtBeginning = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.NewItemPlaceholderPosition.AtBeginning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.NewItemPlaceholderPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Platzhalter für ein neues Element befindet sich am Anfang der Auflistung.  Neue Elemente befinden sich am Anfang der Auflistung nach dem Platzhalter für neue Elemente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AtEnd">
+      <MemberSignature Language="C#" Value="AtEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.NewItemPlaceholderPosition AtEnd = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.NewItemPlaceholderPosition.AtEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.NewItemPlaceholderPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Platzhalter für ein neues Element befindet sich am Ende der Auflistung. Neue Elemente werden am Ende der Auflistung vor dem Platzhalter für neue Elemente hinzugefügt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.NewItemPlaceholderPosition None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.NewItemPlaceholderPosition.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.NewItemPlaceholderPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>In der Auflistung wird kein Platzhalter für neue Elemente verwendet. Die Position von hinzugefügten Elementen hängt von der zugrunde liegenden Auflistung ab.  Normalerweise werden sie am Ende der Auflistung hinzugefügt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

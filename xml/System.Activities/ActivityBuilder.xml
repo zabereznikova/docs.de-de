@@ -1,0 +1,326 @@
+<Type Name="ActivityBuilder" FullName="System.Activities.ActivityBuilder">
+  <TypeSignature Language="C#" Value="public sealed class ActivityBuilder : System.Activities.Debugger.IDebuggableWorkflowTree" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivityBuilder extends System.Object implements class System.Activities.Debugger.IDebuggableWorkflowTree" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.ActivityBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Activities.Debugger.IDebuggableWorkflowTree</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Implementation")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Eigenschaftendaten für eine Workflowaktivität bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.ActivityBuilder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Attribute&gt; Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Attribute&gt; Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityBuilder.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Name")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Attribute&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Attributen ab, die bei der Konstruktion einer Aktivitätsstruktur verwendet werden sollen.</summary>
+        <value>Eine Auflistung eines angegebenen Typs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Constraints">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Activities.Validation.Constraint&gt; Constraints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Activities.Validation.Constraint&gt; Constraints" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityBuilder.Constraints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Properties")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Activities.Validation.Constraint&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Einschränkungen ab, die die Konstruktion einer Aktivitätsstruktur steuern.</summary>
+        <value>Eine Auflistung eines angegebenen Typs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyReference">
+      <MemberSignature Language="C#" Value="public static System.Activities.ActivityPropertyReference GetPropertyReference (object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.ActivityPropertyReference GetPropertyReference(object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityBuilder.GetPropertyReference(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.ActivityPropertyReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein Objekt, das eine Eigenschaft enthält.</param>
+        <summary>Gibt einen <see cref="T:System.Activities.ActivityPropertyReference" /> für eine Eigenschaft zurück, die vom angegebenen Objekt abgerufen wurde.</summary>
+        <returns>Ein Verweis auf eine Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyReferences">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;System.Activities.ActivityPropertyReference&gt; GetPropertyReferences (object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class System.Activities.ActivityPropertyReference&gt; GetPropertyReferences(object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityBuilder.GetPropertyReferences(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Activities.ActivityPropertyReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein Objekt, das eine Eigenschaft enthält.</param>
+        <summary>Gibt eine Liste von <see cref="T:System.Activities.ActivityPropertyReference" /> für eine Eigenschaft aus dem angegebenen Objekt abgerufen.</summary>
+        <returns>Ein Verweis auf eine Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Implementation">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity Implementation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity Implementation" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityBuilder.Implementation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Constraints")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Aktivitätsstruktur ab, die von der aktuellen Instanz von <see cref="T:System.Activities.ActivityBuilder" /> dargestellt wird, oder legt sie fest.</summary>
+        <value>Die Aktivität.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplementationVersion">
+      <MemberSignature Language="C#" Value="public Version ImplementationVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version ImplementationVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityBuilder.ImplementationVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Activities.XamlIntegration.ImplementationVersionConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Name")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die implementierungsversion, die für die Aktivität-Generator.</summary>
+        <value>Die implementierungsversion für die Aktivität-Generator.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityBuilder.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Aktivitätsstruktur ab, die von der aktuellen Instanz von <see cref="T:System.Activities.ActivityBuilder" /> dargestellt wird, oder legt ihn fest.</summary>
+        <value>Der Name der Aktivitätsstruktur.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.KeyedCollection&lt;string,System.Activities.DynamicActivityProperty&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.KeyedCollection`2&lt;string, class System.Activities.DynamicActivityProperty&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityBuilder.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Attributes")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.KeyedCollection&lt;System.String,System.Activities.DynamicActivityProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Eigenschaftenwerten für die aktuelle <see cref="T:System.Activities.ActivityBuilder" />-Instanz ab.</summary>
+        <value>Eine Auflistung von Eigenschaftenwerten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPropertyReference">
+      <MemberSignature Language="C#" Value="public static void SetPropertyReference (object target, System.Activities.ActivityPropertyReference value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetPropertyReference(object target, class System.Activities.ActivityPropertyReference value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityBuilder.SetPropertyReference(System.Object,System.Activities.ActivityPropertyReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="value" Type="System.Activities.ActivityPropertyReference" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein Eigenschaftenspeicher.</param>
+        <param name="value">Der festzulegende Wert.</param>
+        <summary>Legt einen Wert für die angegebene anfügbare Eigenschaft im angegebenen Speicher fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializePropertyReference">
+      <MemberSignature Language="C#" Value="public static bool ShouldSerializePropertyReference (object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ShouldSerializePropertyReference(object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityBuilder.ShouldSerializePropertyReference(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein Eigenschaftenspeicher.</param>
+        <summary>Gibt an, ob die Aktivität-Generator den Eigenschaftsverweis serialisieren sollen.</summary>
+        <returns>
+          <see langword="True" />Wenn die Aktivität-Generator den Eigenschaftsverweis serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializePropertyReferences">
+      <MemberSignature Language="C#" Value="public static bool ShouldSerializePropertyReferences (object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ShouldSerializePropertyReferences(object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityBuilder.ShouldSerializePropertyReferences(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein Eigenschaftenspeicher.</param>
+        <summary>Gibt an, ob die Aktivität-Generator den Eigenschaftsverweis serialisieren sollen.</summary>
+        <returns>
+          <see langword="True" />Wenn die Aktivität-Generator den Eigenschaftsverweis serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Activities.Debugger.IDebuggableWorkflowTree.GetWorkflowRoot">
+      <MemberSignature Language="C#" Value="System.Activities.Activity IDebuggableWorkflowTree.GetWorkflowRoot ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Activities.Activity System.Activities.Debugger.IDebuggableWorkflowTree.GetWorkflowRoot() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityBuilder.System#Activities#Debugger#IDebuggableWorkflowTree#GetWorkflowRoot" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt bei Implementierung in der Basisklasse den Stamm einer Workflowaktivitätsstruktur zurück.</summary>
+        <returns>Die Aktivität.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

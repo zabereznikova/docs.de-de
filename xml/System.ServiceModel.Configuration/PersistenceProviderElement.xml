@@ -1,0 +1,277 @@
+<Type Name="PersistenceProviderElement" FullName="System.ServiceModel.Configuration.PersistenceProviderElement">
+  <TypeSignature Language="C#" Value="public class PersistenceProviderElement : System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PersistenceProviderElement extends System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.PersistenceProviderElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.WorkflowServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.BehaviorExtensionElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The WF3 types are deprecated.  Instead, please use the new WF4 types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Persistenzdienstkonfigurationselement dar, das den Typ der zu verwendenden Persistenz-Providerimplementierung sowie den Timeout für Persistenzvorgänge angibt. Zusätzliche Attribute, die in diesem Element angezeigt werden, werden in den Konstruktor für den angegebenen Persistenz-Provider übergeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Persistenz-Providerkonfigurationselemente werden normalerweise in der Anwendungskonfigurationsdatei unter dem `system.serviceModel`-Knoten im `serviceBehaviors`-Unterabschnitt des `behaviors`-Abschnitts definiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersistenceProviderElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.PersistenceProviderElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.PersistenceProviderElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BehaviorType">
+      <MemberSignature Language="C#" Value="public override Type BehaviorType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BehaviorType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PersistenceProviderElement.BehaviorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Verhaltenstyp ab.</summary>
+        <value>Der Typ des Verhaltens.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBehavior">
+      <MemberSignature Language="C#" Value="protected override object CreateBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object CreateBehavior() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.PersistenceProviderElement.CreateBehavior" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt auf Grundlage der Einstellungen dieses Konfigurationselements ein benutzerdefiniertes Verhalten.</summary>
+        <returns>Ein auf den Einstellungen dieses Konfigurationselements basierendes benutzerdefiniertes Verhalten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsModified">
+      <MemberSignature Language="C#" Value="protected override bool IsModified ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsModified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.PersistenceProviderElement.IsModified" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob dieses Konfigurationselement geändert wurde, seit es zuletzt gespeichert oder geladen wurde.</summary>
+        <returns>
+          <see langword="true" />, wenn das Element geändert wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserializeUnrecognizedAttribute">
+      <MemberSignature Language="C#" Value="protected override bool OnDeserializeUnrecognizedAttribute (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnDeserializeUnrecognizedAttribute(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.PersistenceProviderElement.OnDeserializeUnrecognizedAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des nicht erkannten Attributs.</param>
+        <param name="value">Der Wert des nicht erkannten Attributs.</param>
+        <summary>Gibt an, ob während der Deserialisierung ein unbekanntes Attribut aufgetreten ist.</summary>
+        <returns>
+          <see langword="true" />Wenn bei der Deserialisierung ein unbekanntes Attribut aufgetreten ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistenceOperationTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan PersistenceOperationTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan PersistenceOperationTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PersistenceProviderElement.PersistenceOperationTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TimeSpanOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("persistenceOperationTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.PositiveTimeSpanValidator</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den für Persistenzvorgänge verwendeten Timeout ab oder legt ihn fest.</summary>
+        <value>Eine <see cref="T:System.TimeSpan" />, die den für Persistenzvorgänge verwendeten Timeout angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist 30 Sekunden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistenceProviderArguments">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection PersistenceProviderArguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection PersistenceProviderArguments" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PersistenceProviderElement.PersistenceProviderArguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft zusätzliche Attribute für dieses <see cref="T:System.ServiceModel.Configuration.PersistenceProviderElement" />.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.NameValueCollection" />-Objekt, das zusätzliche Attribute für dieses <see cref="T:System.ServiceModel.Configuration.PersistenceProviderElement" /> enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostDeserialize">
+      <MemberSignature Language="C#" Value="protected override void PostDeserialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PostDeserialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.PersistenceProviderElement.PostDeserialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird nach der Deserialisierung aufgerufen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeElement">
+      <MemberSignature Language="C#" Value="protected override bool SerializeElement (System.Xml.XmlWriter writer, bool serializeCollectionKey);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool SerializeElement(class System.Xml.XmlWriter writer, bool serializeCollectionKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.PersistenceProviderElement.SerializeElement(System.Xml.XmlWriter,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="serializeCollectionKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, der für das Schreiben in die Konfigurationsdatei verwendet wird.</param>
+        <param name="serializeCollectionKey">
+          <see langword="true" />, um nur die Auflistungsschlüsseleigenschaften zu serialisieren, andernfalls <see langword="false" />.</param>
+        <summary>Schreibt den Inhalt dieses Konfigurationselements in die Konfigurationsdatei.</summary>
+        <returns>
+          <see langword="true" />, wenn tatsächlich Daten serialisiert wurden, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PersistenceProviderElement.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("type", IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des vom Dienst zu verwendenden Persistenz-Providers ab oder legt ihn fest.</summary>
+        <value>Der Typ der Persistenz-Providers vom Dienst verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unmerge">
+      <MemberSignature Language="C#" Value="protected override void Unmerge (System.Configuration.ConfigurationElement sourceElement, System.Configuration.ConfigurationElement parentElement, System.Configuration.ConfigurationSaveMode saveMode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Unmerge(class System.Configuration.ConfigurationElement sourceElement, class System.Configuration.ConfigurationElement parentElement, valuetype System.Configuration.ConfigurationSaveMode saveMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.PersistenceProviderElement.Unmerge(System.Configuration.ConfigurationElement,System.Configuration.ConfigurationElement,System.Configuration.ConfigurationSaveMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceElement" Type="System.Configuration.ConfigurationElement" />
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+        <Parameter Name="saveMode" Type="System.Configuration.ConfigurationSaveMode" />
+      </Parameters>
+      <Docs>
+        <param name="sourceElement">Ein <see cref="T:System.Configuration.ConfigurationElement" /> auf der aktuellen Ebene, das eine Ansicht der zusammengeführten Eigenschaften enthält.</param>
+        <param name="parentElement">Das übergeordnete <see cref="T:System.Configuration.ConfigurationElement" /> oder <see langword="null" />, wenn dies die oberste Ebene ist.</param>
+        <param name="saveMode">Ein <see cref="T:System.Configuration.ConfigurationSaveMode" />, der bestimmt, welche Eigenschaftswerte eingeschlossen werden sollen.</param>
+        <summary>Ändert dieses Konfigurationselementobjekt, um alle Werte zu entfernen, die nicht gespeichert werden sollen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

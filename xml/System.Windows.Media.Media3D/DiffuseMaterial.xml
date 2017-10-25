@@ -1,0 +1,275 @@
+<Type Name="DiffuseMaterial" FullName="System.Windows.Media.Media3D.DiffuseMaterial">
+  <TypeSignature Language="C#" Value="public sealed class DiffuseMaterial : System.Windows.Media.Media3D.Material" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DiffuseMaterial extends System.Windows.Media.Media3D.Material" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.DiffuseMaterial" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.Material</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht die Anwendung einen Pinsel 2D-wie eine <see cref="T:System.Windows.Media.SolidColorBrush" /> oder <see cref="T:System.Windows.Media.TileBrush" />, auf ein Diffus beleuchtetes 3D-Modell.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiffuseMaterial ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.DiffuseMaterial.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein DiffuseMaterial.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiffuseMaterial (System.Windows.Media.Brush brush);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Brush brush) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.DiffuseMaterial.#ctor(System.Windows.Media.Brush)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="brush" Type="System.Windows.Media.Brush" />
+      </Parameters>
+      <Docs>
+        <param name="brush">Der Pinsel des neuen Materials.</param>
+        <summary>Erstellt mit der angegebenen „Brush“-Eigenschaft ein „DiffuseMaterial“.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AmbientColor">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Color AmbientColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Color AmbientColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.DiffuseMaterial.AmbientColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Farbe, die darstellt, wie das Material reflektiert <see cref="T:System.Windows.Media.Media3D.AmbientLight" />.</summary>
+        <value>Die Farbe der ambient Lichtquelle vom 3D-Objekt wiedergegeben werden soll. Der Standardwert ist <c>#FFFFFF</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Ambiente Licht ist nicht auf den direkten Strahlen eine bestimmte Lichtquelle zurückzuführen Beleuchtung ausgeführt. Die Reflektion Licht von Flächen in der Umgebung stammt ambient Licht, in der realen Welt. Ohne ambient Light wäre Objekte in der Schatten vollständig schwarz.  
+  
+ Alle anderen Leuchten hängen von der <xref:System.Windows.Media.Media3D.DiffuseMaterial.Color%2A> Eigenschaft.  
+  
+<a name="dependencyPropertyInfo_AmbientColor"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.DiffuseMaterial.AmbientColorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AmbientColorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AmbientColorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AmbientColorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.DiffuseMaterial.AmbientColorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.DiffuseMaterial.AmbientColor" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Brush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Brush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Brush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.DiffuseMaterial.Brush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          Der <see cref="T:System.Windows.Media.Brush" />, der als <see cref="T:System.Windows.Media.Media3D.Material" /> auf ein [!INCLUDE[TLA#tla_3d](~/includes/tlasharptla-3d-md.md)]-Modell angewendet werden soll.</summary>
+        <value>
+          Die anzuwendenden <see cref="T:System.Windows.Media.Brush" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Texturkoordinaten, für angegeben werden eine <xref:System.Windows.Media.Media3D.MeshGeometry3D>, seine Material möglicherweise nicht wie erwartet gerendert.  Die einzige Ausnahme ist, wenn in der Eigenschaft des Materials Pinsel SolidColorBrush angegeben; In diesem Fall wird einen Standardsatz von Texturkoordinaten mithilfe des Materials gerendert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.DiffuseMaterial.BrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.DiffuseMaterial.Brush" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.DiffuseMaterial Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.DiffuseMaterial Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.DiffuseMaterial.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.DiffuseMaterial</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Media3D.DiffuseMaterial" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.DiffuseMaterial CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.DiffuseMaterial CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.DiffuseMaterial.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.DiffuseMaterial</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Media3D.DiffuseMaterial" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Color">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Color Color { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Color Color" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.DiffuseMaterial.Color" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Farbfilter für die Textur des Materials ab oder legt ihn fest.</summary>
+        <value>Der Farbfilter für das <see cref="T:System.Windows.Media.Media3D.Material" />. Der Standardwert ist <c>#FFFFFF</c>. Da alle Farben Weiß bilden, werden alle Farben standardmäßig sichtbar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.Media3D.DiffuseMaterial.Color%2A> Eigenschaft ist ein Filter für die Textur.  
+  
+ Legen Sie die <xref:System.Windows.Media.Media3D.DiffuseMaterial.AmbientColor%2A> Eigenschaft, um steuern, wie das Material ambient Light wiedergibt.  
+  
+<a name="dependencyPropertyInfo_Color"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.DiffuseMaterial.ColorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ColorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ColorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.DiffuseMaterial.ColorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.DiffuseMaterial.Color" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.DiffuseMaterial.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

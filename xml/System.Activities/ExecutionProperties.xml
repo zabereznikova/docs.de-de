@@ -1,0 +1,198 @@
+<Type Name="ExecutionProperties" FullName="System.Activities.ExecutionProperties">
+  <TypeSignature Language="C#" Value="public sealed class ExecutionProperties : System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,object&gt;&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExecutionProperties extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, object&gt;&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.ExecutionProperties" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Object&gt;&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Auflistung von Eigenschaften in einem bestimmten Bereich dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch TLS (Thread Local Storage, lokaler Threadspeicher) behält die CLR einen Ausführungskontext für jeden Thread bei. Dieser Ausführungskontext bestimmt bekannte Threadeigenschaften wie die Threadidentität, die Ambient-Transaktion und den aktuellen Berechtigungssatz sowie benutzerdefinierte Threadeigenschaften, z. B. benannte Slots.  
+  
+ Im Gegensatz zu Programmen, die direkt mit der CLR verwendet werden, sind Workflowprogramme hierarchisch bewertete Strukturen, die in einer threadagnostischen Umgebung ausgeführt werden. Dies bedeutet, dass mit den Standard-TLS-Mechanismen nicht direkt bestimmt werden kann, welcher Kontext im Bereich einer bestimmten Arbeitsaufgabe liegt. Zwei parallele Verzweigungen der Ausführung können z. B. unterschiedliche Identitäten verwenden, der Planer kann sie jedoch zeitgleich für denselben CLR-Thread ausführen.  
+  
+ Mit Ausführungseigenschaften kann von einer Aktivität deklariert werden, welche Eigenschaften im Bereich ihrer Unterstruktur liegen, und es können Hooks für das Einrichten und Beenden für den TLS bereitgestellt werden, damit eine ordnungsgemäße Zusammenarbeit mit CLR-Objekten möglich ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string name, object property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string name, object property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExecutionProperties.Add(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="property" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Den Namen der Eigenschaft.</param>
+        <param name="property">Das Objekt, das die Eigenschaft darstellt.</param>
+        <summary>Registriert eine neue Eigenschaft mit dem angegebenen Namen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string name, object property, bool onlyVisibleToPublicChildren);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string name, object property, bool onlyVisibleToPublicChildren) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExecutionProperties.Add(System.String,System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="property" Type="System.Object" />
+        <Parameter Name="onlyVisibleToPublicChildren" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Eigenschaft.</param>
+        <param name="property">Das Objekt, das die Eigenschaft darstellt.</param>
+        <param name="onlyVisibleToPublicChildren">Ein Wert, der bestimmt, ob diese Eigenschaft für die untergeordneten Elemente der besitzenden Aktivität sichtbar ist.</param>
+        <summary>Registriert eine Eigenschaft mit dem angegebenen Namen und der Sichtbarkeit untergeordneter Elemente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public object Find (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Find(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExecutionProperties.Find(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Den Namen der Eigenschaft.</param>
+        <summary>Gibt die nächste Eigenschaft mit dem angegebenen Namen zurück.</summary>
+        <returns>Die nächste Eigenschaft mit dem angegebenen Namen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.ExecutionProperties.Find%2A> sucht die nächste sichtbare Eigenschaft mithilfe von hierarchischen Bereichen. Wenn zwei Eigenschaften den gleichen Namen aufweisen, wird die nächste Eigenschaft im übergeordneten Bereich zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;string,object&gt;&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, object&gt;&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExecutionProperties.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Object&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die Auflistung von Eigenschaften durchläuft.</summary>
+        <returns>Ein Enumerator, der die Auflistung von Eigenschaften durchläuft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ExecutionProperties.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Eigenschaften im aktuellen Bereich registriert sind.</summary>
+        <value>
+          <see langword="true" />Wenn Eigenschaften, die registrierten; vorhanden sind andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExecutionProperties.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Eigenschaft, deren Registrierung aufgehoben werden soll.</param>
+        <summary>Hebt die Registrierung der Eigenschaft mit dem angegebenen Namen auf.</summary>
+        <returns>
+          <see langword="true" />Wenn die Eigenschaft, deren Registrierung aufgehoben wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Registrierung von Eigenschaften wird automatisch aufgehoben, wenn die Aktivität abgeschlossen wird. Diese Methode kann verwendet werden, um die Registrierung einer Eigenschaft aufzuheben, bevor die Aktivität abgeschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExecutionProperties.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die Auflistung von Eigenschaften durchläuft.</summary>
+        <returns>Ein Enumerator, der die Auflistung von Eigenschaften durchläuft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

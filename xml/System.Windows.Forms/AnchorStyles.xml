@@ -1,0 +1,122 @@
+<Type Name="AnchorStyles" FullName="System.Windows.Forms.AnchorStyles">
+  <TypeSignature Language="C#" Value="public enum AnchorStyles" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AnchorStyles extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.AnchorStyles" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.AnchorEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, wie ein Steuerelement an den Rändern des Containers verankert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Steuerelement an eine Kante seines Containers verankert ist, bleibt der Abstand zwischen dem Steuerelement und dem angegebenen Rand konstant, wenn die Größe des Containers ändert. Z. B. wenn ein Steuerelement an den rechten Rand des Containers verankert ist, bleibt der Abstand zwischen dem rechten Rand des Steuerelements und dem rechten Rand des Containers konstant, wenn die Größe des Containers ändert. Ein Steuerelement kann auf beliebige Kombinationen von Rändern verankert werden. Wenn das Steuerelement gegenüberliegende Ränder des Containers (z. B. um die oben und unten) verbunden ist, ändert sich, wenn die Größe des Containers ändert. Wenn ein Steuerelement verfügt über seine <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft auf None festgelegt wurde, wird das Steuerelement verschoben Hälfte des Containers des Steuerelements geändert wird. Z. B. wenn ein <xref:System.Windows.Forms.Button> hat seine <xref:System.Windows.Forms.Control.Anchor%2A> -Eigenschaft auf None festgelegt und der <xref:System.Windows.Forms.Form> , dass das Steuerelement befindet sich auf wird skaliert, um 20 Pixel in beide Richtungen wird die Schaltfläche mit der verschobenen 10 Pixel in beide Richtungen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Forms.Button> zu einem Formular und legt einige gemeinsamen Eigenschaften. Im Beispiel verankert die Schaltfläche, um der unteren rechten Ecke des Formulars, daher die relative Position behält der Größe des Formulars. Als Nächstes wird die <xref:System.Windows.Forms.Control.BackgroundImage%2A> und ändert die Größe der Schaltfläche, um die gleiche Größe wie die <xref:System.Drawing.Image>. Klicken Sie dann im Beispiel wird die <xref:System.Windows.Forms.Control.TabStop%2A> auf `true` und legt die <xref:System.Windows.Forms.Control.TabIndex%2A> Eigenschaft. Schließlich Fügt einen Ereignishandler behandeln die <xref:System.Windows.Forms.Control.Click> -Ereignis der Schaltfläche. In diesem Beispiel wird davon ausgegangen, dass ein <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1`.  
+  
+ [!code-cpp[Windows.Forms.Control Properties#3](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.Control Properties/CPP/controlproperties.cpp#3)]
+ [!code-csharp[Windows.Forms.Control Properties#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.Control Properties/CS/controlproperties.cs#3)]
+ [!code-vb[Windows.Forms.Control Properties#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.Control Properties/VB/controlproperties.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="Bottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AnchorStyles Bottom = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AnchorStyles.Bottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AnchorStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement wird an den unteren Rand des Containers verankert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AnchorStyles Left = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AnchorStyles.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AnchorStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement wird an den linken Rand des Containers verankert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AnchorStyles None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AnchorStyles.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AnchorStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement wird an alle Ränder des Containers nicht verankert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AnchorStyles Right = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AnchorStyles.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AnchorStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement wird an den rechten Rand des Containers verankert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="Top" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AnchorStyles Top = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AnchorStyles.Top" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AnchorStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement wird am oberen Rand des Containers verankert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

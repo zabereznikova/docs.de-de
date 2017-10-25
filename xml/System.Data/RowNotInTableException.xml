@@ -1,0 +1,164 @@
+<Type Name="RowNotInTableException" FullName="System.Data.RowNotInTableException">
+  <TypeSignature Language="C#" Value="public class RowNotInTableException : System.Data.DataException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit RowNotInTableException extends System.Data.DataException" />
+  <TypeSignature Language="DocId" Value="T:System.Data.RowNotInTableException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.DataException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Ausnahme dar, die ausgelöst wird, wenn Sie versuchen, einen Vorgang auszuführen, auf eine <see cref="T:System.Data.DataRow" /> , die sich nicht in einem <see cref="T:System.Data.DataTable" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.RowNotInTableException> wird ausgelöst, wenn die folgenden Methoden für eine Zeile aufrufen, die entweder mit gelöscht wurde der <xref:System.Data.DataRow.Delete%2A> oder <xref:System.Data.DataRowCollection.Remove%2A?displayProperty=nameWithType> Methode.  
+  
+-   <xref:System.Data.DataRow.AcceptChanges%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Data.DataRow.GetChildRows%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Data.DataRow.GetParentRow%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Data.DataRow.GetParentRows%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Data.DataRow.RejectChanges%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Data.DataRow.SetParentRow%2A?displayProperty=nameWithType>  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.DataTable> mit einem <xref:System.Data.DataColumn> und 10 <xref:System.Data.DataRow> Objekte. Nach dem Löschen einer Zeile der <xref:System.Data.DataRow.AcceptChanges%2A> Methode wird aufgerufen, wodurch die <xref:System.Data.RowNotInTableException> ausgelöst wird.  
+  
+ [!code-csharp[Classic WebData RowNotInTableException Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData RowNotInTableException Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData RowNotInTableException Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData RowNotInTableException Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RowNotInTableException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.RowNotInTableException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.RowNotInTableException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RowNotInTableException (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.RowNotInTableException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die Zeichenfolge, die angezeigt wird, wenn die Ausnahme ausgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.RowNotInTableException" /> Klasse mit der angegebenen Zeichenfolge.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RowNotInTableException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.RowNotInTableException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Daten, die zum Serialisieren oder Deserialisieren eines Objekts erforderlich ist.</param>
+        <param name="context">Beschreibung der Quelle und Ziel eines angegebenen serialisierten Streams.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.RowNotInTableException" /> Klasse mit Serialisierungsinformationen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RowNotInTableException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.RowNotInTableException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat, oder ein Nullverweis (<see langword="Nothing" /> in Visual Basic), wenn keine innere Ausnahme angegeben ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.RowNotInTableException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

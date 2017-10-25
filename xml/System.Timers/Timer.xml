@@ -1,0 +1,785 @@
+<Type Name="Timer" FullName="System.Timers.Timer">
+  <TypeSignature Language="C#" Value="public class Timer : System.ComponentModel.Component, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Timer extends System.ComponentModel.Component implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.Timers.Timer" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Elapsed")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Interval")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Generiert ein Ereignis nach einem festgelegten Intervall, mit der Option zum Generieren wiederkehrender Ereignisse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die .NET Framework-Quellcodes für diesen Typ finden Sie unter der [Verweisquelle](http://referencesource.microsoft.com/#System/services/timers/system/timers/Timer.cs#897683f27faba082). Sie können den Quellcode online Durchsuchen, Referenz für die Offlineanzeige herunterladen und schrittweise durchlaufen (inklusive Patches und Updates) während des Debuggens; finden Sie unter [Anweisungen](http://referencesource.microsoft.com/).  
+  
+ Die <xref:System.Timers.Timer> Komponente ist eine serverbasierte Zeitgeber, der auslöst ein <xref:System.Timers.Timer.Elapsed> Ereignis in der Anwendung nach der Anzahl der Millisekunden in die <xref:System.Timers.Timer.Interval%2A> Eigenschaft wurde überschritten. Sie können konfigurieren, die <xref:System.Timers.Timer> Objekt zum Auslösen des Ereignisses, das nur einmal oder wiederholt über die <xref:System.Timers.Timer.AutoReset%2A> Eigenschaft. In der Regel eine <xref:System.Timers.Timer> Objekt ist auf Klassenebene deklariert, sodass es im Gültigkeitsbereich bleibt, solange er benötigt wird. Behandeln Sie Sie anschließend die <xref:System.Timers.Timer.Elapsed> Ereignis, um die reguläre Verarbeitung zu ermöglichen. Nehmen wir beispielsweise an, Sie haben einen wichtigen Server, die aufbewahrt werden muss, 24 Stunden pro Tag, 7 Tage die Woche ausgeführt. Sie erstellen einen Dienst, verwendet eine <xref:System.Timers.Timer> Objekt, das in regelmäßigen Abständen überprüfen Sie den Server, und stellen Sie sicher, dass das System ausgeführt wird. Wenn das System nicht reagiert wird, versucht der Dienst konnte den Server neu starten oder einen Administrator zu benachrichtigen.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Timers.Timer> Klasse steht in .NET Framework nur. Es ist nicht in den standardmäßigen .NET enthalten und ist in anderen Implementierungen, z. B. .NET Core oder universellen Windows-Plattform nicht verfügbar. Auf diese Implementierungen sowie für Portabilität über alle Implementierungen von .NET verwenden Sie die <xref:System.Threading.Timer?displayProperty=nameWithType> stattdessen.  
+  
+ Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+ Der Server-basierten <xref:System.Timers.Timer?displayProperty=nameWithType> Klasse für die Verwendung mit Arbeitsthreads in einer Multithreadumgebung konzipiert ist. Serverzeitgeber können zwischen Threads verschieben, erhöhten behandeln <xref:System.Timers.Timer.Elapsed> Ereignis, wodurch eine größere Genauigkeit als Windows-Zeitgeber in Auslösen des Ereignisses auf der Zeit.  
+  
+ Die <xref:System.Timers.Timer?displayProperty=nameWithType> Komponente löst die <xref:System.Timers.Timer.Elapsed> Ereignis basierend auf dem Wert (in Millisekunden), der die <xref:System.Timers.Timer.Interval%2A> Eigenschaft. Sie können dieses Ereignis, um die Verarbeitung auszuführen, die Sie müssen, behandeln. Nehmen wir beispielsweise an einer online Sale Anwendung auftreten, die fortlaufend Aufträge in einer Datenbank sendet. Der Dienst, der die Anweisungen für die Auslieferung kompiliert wird, arbeitet für einen Batch von Bestellungen, anstatt jede Bestellung einzeln zu verarbeiten. Sie können eine <xref:System.Timers.Timer> der Batchverarbeitung alle 30 Minuten gestartet.  
+  
+> [!IMPORTANT]
+>  Die System.Timers.Timer-Klasse hat derselben Auflösung wie der Systemuhr. Dies bedeutet, dass die <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, in einem Intervall von der Auflösung der Systemuhr definiert werden, wenn die <xref:System.Timers.Timer.Interval%2A> -Eigenschaft muss kleiner als die Auflösung der Systemuhr. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Timers.Timer.Interval%2A>-Eigenschaft.  
+  
+ Wenn <xref:System.Timers.Timer.AutoReset%2A> auf festgelegt ist `false`, <xref:System.Timers.Timer?displayProperty=nameWithType> -Objekt löst die <xref:System.Timers.Timer.Elapsed> Ereignis nur einmal nach dem ersten <xref:System.Timers.Timer.Interval%2A> ist abgelaufen. Zum Auslösen von beibehalten der <xref:System.Timers.Timer.Elapsed> Ereignis regelmäßig in der das Intervall von der <xref:System.Timers.Timer.Interval%2A>legen <xref:System.Timers.Timer.AutoReset%2A> zu `true`, dies ist der Standardwert.  
+  
+ Die <xref:System.Timers.Timer> Komponente abfängt und unterdrückt alle Ausnahmen, die vom Ereignishandler für das <xref:System.Timers.Timer.Elapsed> Ereignis. Dieses Verhalten ist unterliegt in zukünftigen Versionen von .NET Framework. Beachten Sie jedoch, ist dies nicht der Ereignishandler "true", die asynchron ausgeführt und enthalten die `await` -Operator (in c#) oder die `Await` -Operator (in Visual Basic). In diesen Ereignishandlern ausgelöste Ausnahmen werden an den aufrufenden Thread weitergegeben, wie im folgenden Beispiel veranschaulicht. Weitere Informationen zu Ausnahmen in asynchronen Methoden, finden Sie unter [Exception Handling](~/docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
+  
+ [!code-csharp[System.Timers.Timer#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.timers.timer/cs/AsyncHandlerEx1.cs#3)]
+ [!code-vb[System.Timers.Timer#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.timers.timer/vb/AsyncHandlerEx1.vb#3)]  
+  
+ Wenn die <xref:System.Timers.Timer.SynchronizingObject%2A> Eigenschaft ist `null`, <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, auf eine <xref:System.Threading.ThreadPool> Thread. Wenn die Verarbeitung der <xref:System.Timers.Timer.Elapsed> Ereignis dauert länger als <xref:System.Timers.Timer.Interval%2A>, das Ereignis möglicherweise erneut ausgegeben werden, auf einem anderen <xref:System.Threading.ThreadPool> Thread. In diesem Fall sollte der Ereignishandler wiedereintrittsfähig sein.  
+  
+> [!NOTE]
+>  Die Ereignisbehandlungsmethode möglicherweise in einem Thread ausgeführt, zur gleichen Zeit, die ein anderer Thread Ruft die <xref:System.Timers.Timer.Stop%2A> -Methode, oder legt ihn fest der <xref:System.Timers.Timer.Enabled%2A> Eigenschaft `false`. Dadurch kann die <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, nachdem der Zeitgeber angehalten wurde. Beispielcode für die <xref:System.Timers.Timer.Stop%2A> Methode zeigt eine Möglichkeit, diese Racebedingung zu vermeiden.  
+  
+ Auch wenn <xref:System.Timers.Timer.SynchronizingObject%2A> ist nicht `null`, <xref:System.Timers.Timer.Elapsed> Ereignisse können nach dem Auftreten der <xref:System.Timers.Timer.Dispose%2A> oder <xref:System.Timers.Timer.Stop%2A> -Methode aufgerufen wurde oder nach der <xref:System.Timers.Timer.Enabled%2A> Eigenschaft vorsieht `false`, da das Signal zum Auslösen der <xref:System.Timers.Timer.Elapsed> Ereignis wird immer in die Warteschlange für die Ausführung auf ein Thread des Threadpools. Eine Möglichkeit zum Auflösen dieser Racebedingung ist ein Kennzeichen festgelegt, der angibt, den Ereignishandler für das <xref:System.Timers.Timer.Elapsed> Ereignis auf nachfolgende Ereignisse zu ignorieren.  
+  
+ Bei Verwendung der <xref:System.Timers.Timer?displayProperty=nameWithType> Klasse mit einem Element der Benutzeroberfläche, z. B. eines Formulars oder Steuerelements, ohne den Zeitgeber auf diesem Element der Debuggerbenutzeroberfläche, weisen Sie das Formular oder Steuerelement, enthält die <xref:System.Timers.Timer> auf die <xref:System.Timers.Timer.SynchronizingObject%2A> -Eigenschaft, so, dass das Ereignis ist zu den Benutzeroberflächenthread gemarshallt.  
+  
+ Eine Liste der Standard-Eigenschaftswerte für eine Instanz von <xref:System.Timers.Timer>, finden Sie unter der <xref:System.Timers.Timer.%23ctor%2A> Konstruktor.  
+  
+> [!TIP]
+>  Beachten Sie, dass der .NET Framework-Klassenbibliothek vier Klassen, die mit dem Namen einschließlich `Timer`, die jeweils von der anderen Funktionen bietet:  
+>   
+>  -   <xref:System.Timers.Timer?displayProperty=nameWithType>(dieses Thema): löst ein Ereignis in regelmäßigen Abständen. Die Klasse dient zur Verwendung als ein serverbasiertes oder Dienstkomponente in einer Multithreadumgebung; Er verfügt über keine Benutzeroberfläche und nicht zur Laufzeit sichtbar ist.  
+> -   <xref:System.Threading.Timer?displayProperty=nameWithType>: führt eine Rückrufmethode für die einzelnen auf ein Thread des Threadpools in regelmäßigen Abständen. Die Rückrufmethode wird definiert, wenn der Zeitgeber instanziiert wird und kann nicht geändert werden. Wie die <xref:System.Timers.Timer?displayProperty=nameWithType> -Klasse, diese Klasse dient zur Verwendung als eine serverbasierte oder-Dienst-Komponente in einer Multithreadumgebung; er hat keine Benutzeroberfläche und nicht zur Laufzeit sichtbar ist.  
+> -   <xref:System.Windows.Forms.Timer?displayProperty=nameWithType>: eine Windows Forms-Komponente, die in regelmäßigen Abständen ein Ereignis ausgelöst wird. Die Komponente weist keine Benutzeroberfläche und dient zur Verwendung in einem Singlethread-Umgebung.  
+> -   <xref:System.Web.UI.Timer?displayProperty=nameWithType>: ein ASP.NET-Komponente, die Webseite für asynchrone oder synchrone Postbacks in regelmäßigen Intervallen ausführt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen `System.Timers.Timer` -Objekt, das ausgelöst wird seine <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> Ereignis alle zwei Sekunden (2.000 Millisekunden), richtet einen Ereignishandler für das Ereignis und startet den Timer. Der Ereignishandler zeigt den Wert des der <xref:System.Timers.ElapsedEventArgs.SignalTime%2A?displayProperty=nameWithType> Eigenschaft jedes Mal, es wird ausgelöst.  
+  
+ [!code-csharp[System.Timers.Timer#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.timers.timer/cs/timer2a.cs#2)]
+ [!code-vb[System.Timers.Timer#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.timers.timer/vb/timer2a.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Alle öffentlichen <see langword="static" /> Member dieses Typs sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Timer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Timers.Timer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Timers.Timer" />-Klasse und legt alle Eigenschaften auf die Anfangswerte fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Timers.Timer>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Timers.Timer.AutoReset%2A>|`true`|  
+|<xref:System.Timers.Timer.Enabled%2A>|`false`|  
+|<xref:System.Timers.Timer.Interval%2A>|100 Millisekunden|  
+|<xref:System.Timers.Timer.SynchronizingObject%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen <xref:System.Timers.Timer> -Objekt, das ausgelöst wird seine <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> Ereignis alle zwei Sekunden (2000 Millisekunden), richtet einen Ereignishandler für das Ereignis und startet den Timer. Der Ereignishandler zeigt den Wert des der <xref:System.Timers.ElapsedEventArgs.SignalTime%2A?displayProperty=nameWithType> Eigenschaft jedes Mal, es wird ausgelöst.  
+  
+ [!code-cpp[System.Timers.Timer#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.timers.timer/cpp/timer1.cpp#1)]
+ [!code-csharp[System.Timers.Timer#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.timers.timer/cs/timer1.cs#1)]
+ [!code-vb[System.Timers.Timer#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.timers.timer/vb/timer1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Timer (double interval);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 interval) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Timers.Timer.#ctor(System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="interval" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="interval">Die Zeit zwischen den Ereignissen in Millisekunden. Der Wert muss größer als 0 (null) und kleiner als oder gleich <see cref="F:System.Int32.MaxValue" /> sein.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Timers.Timer" />-Klasse, wobei die <see cref="P:System.Timers.Timer.Interval" />-Eigenschaft auf den angegebenen Wert festgelegt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.Timers.Timer.Interval%2A> Eigenschaft der neuen Timer-Instanz, aber den Zeitgeber aktiviert ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen <xref:System.Timers.Timer> -Objekt, das ausgelöst wird seine <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> Ereignis alle zwei Sekunden (2000 Millisekunden), richtet einen Ereignishandler für das Ereignis und startet den Timer. Der Ereignishandler zeigt den Wert des der <xref:System.Timers.ElapsedEventArgs.SignalTime%2A?displayProperty=nameWithType> Eigenschaft jedes Mal, es wird ausgelöst.  
+  
+ [!code-csharp[System.Timers.Timer#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.timers.timer/cs/AsyncHandlerEx1.cs#3)]
+ [!code-vb[System.Timers.Timer#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.timers.timer/vb/AsyncHandlerEx1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Wert des <paramref name="interval" />-Parameters muss größer oder gleich 0 (null) oder größer als <see cref="F:System.Int32.MaxValue" /> sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoReset">
+      <MemberSignature Language="C#" Value="public bool AutoReset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoReset" />
+      <MemberSignature Language="DocId" Value="P:System.Timers.Timer.AutoReset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Timers.TimersDescription("Indicates whether the timer will be restarted when it is enabled.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob der <see cref="T:System.Timers.Timer" /> das <see cref="E:System.Timers.Timer.Elapsed" />-Ereignis nur einmal (<see langword="false" />) oder wiederholt (<see langword="true" />) auslösen soll, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn der <see cref="T:System.Timers.Timer" /> das <see cref="E:System.Timers.Timer.Elapsed" />-Ereignis immer auslösen soll, wenn das Intervall abläuft, <see langword="false" />, wenn das <see cref="E:System.Timers.Timer.Elapsed" />-Ereignis nur einmal nach dem ersten Ablaufen des Intervalls ausgelöst werden soll. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Timers.Timer> ist bereits aktiviert, wenn die <xref:System.Timers.Timer.Start%2A> -Methode aufgerufen wird, wird das Intervall zurückgesetzt. Wenn <xref:System.Timers.Timer.AutoReset%2A> ist `false`die <xref:System.Timers.Timer.Start%2A> -Methode muss aufgerufen werden, um die Anzahl der erneut zu starten.  
+  
+ Das Zurücksetzen des Intervalls beeinflusst, wenn die <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst. Beispielsweise, wenn Sie das Intervall auf 5 Sekunden festgelegt, und legen Sie dann die <xref:System.Timers.Timer.Enabled%2A> Eigenschaft `true`, die Anzahl die beginnt zu dem Zeitpunkt <xref:System.Timers.Timer.Enabled%2A> festgelegt ist. Wenn Sie das Intervall auf 10 Sekunden zurücksetzen, wenn die Anzahl 3 Sekunden ist, die <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, zum ersten Mal 13 Sekunden nach der <xref:System.Timers.Timer.Enabled%2A> -Eigenschaft wurde festgelegt, um `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Timers.Timer> , deren <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, nachdem 1,5 Sekunden. Der Ereignishandler zeigt dann "Hello World!" in der Konsole.  
+  
+ [!code-cpp[Classic Timer.Timer1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Timer.Timer1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Timer.Timer1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Timer.Timer1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Timer.Timer1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Timer.Timer1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Timers.Timer.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beginnt die Laufzeitinitialisierung eines <see cref="T:System.Timers.Timer" />, der in einem Formular oder von einer anderen Komponente verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] Entwurf Umgebung verwendet diese Methode, um die Initialisierung einer Komponente zu starten, die in einem Formular oder von einer anderen Komponente verwendet wird. Die <xref:System.Timers.Timer.EndInit%2A> -Methode beendet die Initialisierung. Mithilfe der <xref:System.Timers.Timer.BeginInit%2A> und <xref:System.Timers.Timer.EndInit%2A> Methoden wird verhindert, dass das Steuerelement verwendet werden, bevor er vollständig initialisiert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Timers.Timer.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die von der <see cref="T:System.Timers.Timer" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Timers.Timer.Close%2A> -Methode ruft ihrerseits die `Dispose` Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Timers.Timer.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt alle von der aktuellen <see cref="T:System.Timers.Timer" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Elapsed">
+      <MemberSignature Language="C#" Value="public event System.Timers.ElapsedEventHandler Elapsed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Timers.ElapsedEventHandler Elapsed" />
+      <MemberSignature Language="DocId" Value="E:System.Timers.Timer.Elapsed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Timers.TimersDescription("Occurs when the Interval has elapsed.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Timers.ElapsedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das Intervall abläuft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, wenn die <xref:System.Timers.Timer.Enabled%2A> Eigenschaft ist `true` und das Zeitintervall (in Millisekunden) definiert, indem Sie die <xref:System.Timers.Timer.Interval%2A> Eigenschaft verstrichen ist. Wenn die <xref:System.Timers.Timer.AutoReset%2A> Eigenschaft ist `true`, das Ereignis wird wiederholt in einem Intervall von definiert die <xref:System.Timers.Timer.Interval%2A> Eigenschafts-, andernfalls wird das Ereignis ausgelöst nur einmal erstmalig der <xref:System.Timers.Timer.Interval%2A> Wert verstrichen ist.  
+  
+ Wenn <xref:System.Timers.Timer.Interval%2A> wird festgelegt, nachdem die <xref:System.Timers.Timer> wurde gestartet, wird die Anzahl der zurückgesetzt. Angenommen, wenn Sie das Intervall auf 5 Sekunden festgelegt, und legen Sie dann <xref:System.Timers.Timer.Enabled%2A> auf `true`, die Anzahl die beginnt zu dem Zeitpunkt <xref:System.Timers.Timer.Enabled%2A> festgelegt ist. Wenn Sie das Intervall auf 10 Sekunden zurücksetzen, wenn die Anzahl 3 Sekunden ist, die <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, zum ersten Mal 13 Sekunden nach <xref:System.Timers.Timer.Enabled%2A> wurde `true`.  
+  
+ Wenn die <xref:System.Timers.Timer.SynchronizingObject%2A> Eigenschaft ist `null`, <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, auf eine <xref:System.Threading.ThreadPool> Thread. Wenn die Verarbeitung der <xref:System.Timers.Timer.Elapsed> Ereignis dauert länger als <xref:System.Timers.Timer.Interval%2A>, das Ereignis möglicherweise erneut ausgegeben werden, auf einem anderen <xref:System.Threading.ThreadPool> Thread. In diesem Fall sollte der Ereignishandler wiedereintrittsfähig sein.  
+  
+> [!NOTE]
+>  Die Ereignisbehandlungsmethode möglicherweise in einem Thread ausgeführt, zur gleichen Zeit, die ein anderer Thread Ruft die <xref:System.Timers.Timer.Stop%2A> -Methode, oder legt ihn fest der <xref:System.Timers.Timer.Enabled%2A> Eigenschaft `false`. Dadurch kann die <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, nachdem der Zeitgeber angehalten wurde. Beispielcode für die <xref:System.Timers.Timer.Stop%2A> Methode zeigt eine Möglichkeit, diese Racebedingung zu vermeiden.  
+  
+ Auch wenn <xref:System.Timers.Timer.SynchronizingObject%2A> ist nicht `null`, <xref:System.Timers.Timer.Elapsed> Ereignisse können nach dem Auftreten der <xref:System.Timers.Timer.Dispose%2A> oder <xref:System.Timers.Timer.Stop%2A> -Methode aufgerufen wurde oder nach der <xref:System.Timers.Timer.Enabled%2A> Eigenschaft vorsieht `false`, da das Signal zum Auslösen der <xref:System.Timers.Timer.Elapsed> Ereignis wird immer in die Warteschlange für die Ausführung auf ein Thread des Threadpools. Eine Möglichkeit zum Auflösen dieser Racebedingung ist ein Kennzeichen festgelegt, der angibt, den Ereignishandler für das <xref:System.Timers.Timer.Elapsed> Ereignis auf nachfolgende Ereignisse zu ignorieren.  
+  
+ Die <xref:System.Timers.Timer> Komponente abfängt und unterdrückt alle Ausnahmen, die vom Ereignishandler für das <xref:System.Timers.Timer.Elapsed> Ereignis. Dieses Verhalten ist unterliegt in zukünftigen Versionen von .NET Framework.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen <xref:System.Timers.Timer> -Objekt, das ausgelöst wird seine <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> Ereignis alle zwei Sekunden (2000 Millisekunden), richtet einen Ereignishandler für das Ereignis und startet den Timer. Der Ereignishandler zeigt den Wert des der <xref:System.Timers.ElapsedEventArgs.SignalTime%2A?displayProperty=nameWithType> Eigenschaft jedes Mal, es wird ausgelöst.  
+  
+ [!code-cpp[System.Timers.Timer#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.timers.timer/cpp/timer1.cpp#1)]
+ [!code-csharp[System.Timers.Timer#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.timers.timer/cs/timer1.cs#1)]
+ [!code-vb[System.Timers.Timer#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.timers.timer/vb/timer1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Timers.Timer.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Timers.TimersDescription("Indicates whether the timer is enabled to fire events at a defined interval.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der <see cref="T:System.Timers.Timer" /> das <see cref="E:System.Timers.Timer.Elapsed" />-Ereignis auslösen soll, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn der <see cref="T:System.Timers.Timer" /> das <see cref="E:System.Timers.Timer.Elapsed" />-Ereignis auslösen soll, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen <xref:System.Timers.Timer.Enabled%2A> auf `true` entspricht dem Aufruf von <xref:System.Timers.Timer.Start%2A>, während das Festlegen <xref:System.Timers.Timer.Enabled%2A> auf `false` entspricht dem Aufruf von <xref:System.Timers.Timer.Stop%2A>.  
+  
+> [!NOTE]
+>  Das Signal zum Auslösen der <xref:System.Timers.Timer.Elapsed> Ereignis wird immer in die Warteschlange für die Ausführung auf einem <xref:System.Threading.ThreadPool> Thread. Dadurch kann die <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, nachdem die <xref:System.Timers.Timer.Enabled%2A> -Eigenschaftensatz auf `false`. Das Codebeispiel für die <xref:System.Timers.Timer.Stop%2A> Methode zeigt eine Möglichkeit, diese Racebedingung zu umgehen.  
+  
+ Wenn <xref:System.Timers.Timer.Enabled%2A> festgelegt ist, um `true` und <xref:System.Timers.Timer.AutoReset%2A> auf festgelegt ist `false`, die <xref:System.Timers.Timer> löst die <xref:System.Timers.Timer.Elapsed> Ereignis erst, nachdem das erste Mal das Intervall abläuft.  
+  
+ Wenn das Intervall festgelegt sind, nach der <xref:System.Timers.Timer> wurde gestartet, wird die Anzahl der zurückgesetzt. Beispielsweise, wenn Sie das Intervall auf 5 Sekunden festgelegt, und legen Sie dann die <xref:System.Timers.Timer.Enabled%2A> Eigenschaft `true`, die Anzahl die beginnt zu dem Zeitpunkt <xref:System.Timers.Timer.Enabled%2A> festgelegt ist. Wenn Sie das Intervall auf 10 Sekunden zurücksetzen, wenn die Anzahl 3 Sekunden ist, die <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, zum ersten Mal 13 Sekunden nach <xref:System.Timers.Timer.Enabled%2A> wurde `true`.  
+  
+> [!NOTE]
+>  Legen Sie einige visuelle Designer, z. B. die in Microsoft Visual Studio die <xref:System.Timers.Timer.Enabled%2A> Eigenschaft `true` beim Einfügen einer neuen <xref:System.Timers.Timer>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen <xref:System.Timers.Timer> -Objekt, das ausgelöst wird seine <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> Ereignis alle zwei Sekunden (2000 Millisekunden), richtet einen Ereignishandler für das Ereignis und startet den Timer. Der Ereignishandler zeigt den Wert des der <xref:System.Timers.ElapsedEventArgs.SignalTime%2A?displayProperty=nameWithType> Eigenschaft jedes Mal, es wird ausgelöst.  
+  
+ [!code-cpp[System.Timers.Timer#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.timers.timer/cpp/timer1.cpp#1)]
+ [!code-csharp[System.Timers.Timer#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.timers.timer/cs/timer1.cs#1)]
+ [!code-vb[System.Timers.Timer#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.timers.timer/vb/timer1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Diese Eigenschaft kann nicht festgelegt werden, da der Timer verworfen wurde.</exception>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Timers.Timer.Interval" /> -Eigenschaft wurde auf einen Wert größer als festgelegt <see cref="F:System.Int32.MaxValue" /> , bevor der Timer aktiviert wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Timers.Timer.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Laufzeitinitialisierung eines <see cref="T:System.Timers.Timer" />, der in einem Formular oder von einer anderen Komponente verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] Entwurf Umgebung verwendet diese Methode, um die Initialisierung einer Komponente zu beenden, die in einem Formular oder von einer anderen Komponente verwendet wird. Die <xref:System.Timers.Timer.BeginInit%2A> -Methode startet die Initialisierung. Mithilfe der <xref:System.Timers.Timer.BeginInit%2A> und <xref:System.Timers.Timer.EndInit%2A> Methoden wird verhindert, dass das Steuerelement verwendet werden, bevor er vollständig initialisiert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interval">
+      <MemberSignature Language="C#" Value="public double Interval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Interval" />
+      <MemberSignature Language="DocId" Value="P:System.Timers.Timer.Interval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(100)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.SettingsBindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Timers.TimersDescription("The number of milliseconds between timer events.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Intervall in Millisekunden ab, in dem das <see cref="E:System.Timers.Timer.Elapsed" />-Ereignis ausgelöst wird, oder legt dieses fest.</summary>
+        <value>Die Zeit zwischen den <see cref="E:System.Timers.Timer.Elapsed" />-Ereignissen in Millisekunden. Der Wert muss größer als 0 (null) und kleiner als oder gleich <see cref="F:System.Int32.MaxValue" /> sein. Der Standardwert ist 100 Millisekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Timers.Timer.Interval%2A> Eigenschaft, um zu bestimmen, die Häufigkeit, mit der <xref:System.Timers.Timer.Elapsed> Ereignis ausgelöst wird. Da die <xref:System.Timers.Timer> Klasse, die auf der Systemzeit abhängig ist, ist ihr derselben Auflösung wie der Systemuhr. Dies bedeutet, dass die <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, in einem Intervall von der Auflösung der Systemuhr definiert werden, wenn die <xref:System.Timers.Timer.Interval%2A> -Eigenschaft muss kleiner als die Auflösung der Systemuhr. Im folgenden Beispiel wird die <xref:System.Timers.Timer.Interval%2A> Eigenschaft 5 Millisekunden. Bei der Ausführung unter einem [!INCLUDE[win7](~/includes/win7-md.md)] System, dessen Systemuhr einer Auflösung von ca. 15 Millisekunden, die das Ereignis ausgelöst, etwa 15 Millisekunden statt alle 5 Millisekunden hat.  
+  
+ [!code-csharp[System.Timers.Timer.Interval#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.timers.timer.interval/cs/interval2.cs#1)]
+ [!code-vb[System.Timers.Timer.Interval#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.timers.timer.interval/vb/interval2.vb#1)]  
+  
+ Den folgenden Code können Sie um die Auflösung der Systemuhr des aktuellen Systems zu ermitteln:  
+  
+ [!code-csharp[System.Timers.Timer.Interval#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.timers.timer.interval/cs/resolution1.cs#2)]
+ [!code-vb[System.Timers.Timer.Interval#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.timers.timer.interval/vb/resolution1.vb#2)]  
+  
+ Falls Ihre app mit höherer Auflösung als die angebotenen benötigt die <xref:System.Timers.Timer> Klasse oder die Systemuhr, verwenden die hochauflösende multimedia-Zeitgeber, finden Sie unter [Vorgehensweise: Verwenden Sie den Zeitgeber hochauflösende](http://msdn.microsoft.com/library/aa964692.aspx).  
+  
+ Wenn das Intervall festgelegt sind, nach der <xref:System.Timers.Timer> wurde gestartet, wird die Anzahl der zurückgesetzt. Beispielsweise, wenn Sie das Intervall auf 5 Sekunden festgelegt, und legen Sie dann die <xref:System.Timers.Timer.Enabled%2A> Eigenschaft `true`, die Anzahl die beginnt zu dem Zeitpunkt <xref:System.Timers.Timer.Enabled%2A> festgelegt ist. Wenn Sie das Intervall auf 10 Sekunden zurücksetzen, wenn die Anzahl 3 Sekunden ist, die <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, zum ersten Mal 13 Sekunden nach <xref:System.Timers.Timer.Enabled%2A> wurde `true`.  
+  
+ Wenn <xref:System.Timers.Timer.Enabled%2A> festgelegt ist, um `true` und <xref:System.Timers.Timer.AutoReset%2A> auf festgelegt ist `false`, die <xref:System.Timers.Timer> löst die <xref:System.Timers.Timer.Elapsed> Ereignis erst, nachdem das erste Mal das Intervall abläuft. <xref:System.Timers.Timer.Enabled%2A>Legen Sie dann auf `false`.  
+  
+> [!NOTE]
+>  Wenn <xref:System.Timers.Timer.Enabled%2A> und <xref:System.Timers.Timer.AutoReset%2A> festgelegt `false`, und der Zeitgeber bereits aktiviert wurde, Festlegen der <xref:System.Timers.Timer.Interval%2A> bewirkt, dass die <xref:System.Timers.Timer.Elapsed> Ereignis einmal ausgelöst werden als wäre die <xref:System.Timers.Timer.Enabled%2A> Eigenschaft war auf festgelegtwurde`true`. Um das Intervall festlegen, ohne durch das Auslösen des Ereignisses, legen Sie vorübergehend die <xref:System.Timers.Timer.Enabled%2A> Eigenschaft `true`legen die <xref:System.Timers.Timer.Interval%2A> Eigenschaft, um das gewünschte Intervall und legen Sie dann sofort die <xref:System.Timers.Timer.Enabled%2A> -Eigenschaft zurück auf `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen <xref:System.Timers.Timer> -Objekt, das ausgelöst wird seine <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> Ereignis alle zwei Sekunden (2000 Millisekunden), richtet einen Ereignishandler für das Ereignis und startet den Timer. Der Ereignishandler zeigt den Wert des der <xref:System.Timers.ElapsedEventArgs.SignalTime%2A?displayProperty=nameWithType> Eigenschaft jedes Mal, es wird ausgelöst.  
+  
+ [!code-cpp[System.Timers.Timer#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.timers.timer/cpp/timer1.cpp#1)]
+ [!code-csharp[System.Timers.Timer#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.timers.timer/cs/timer1.cs#1)]
+ [!code-vb[System.Timers.Timer#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.timers.timer/vb/timer1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Intervall ist kleiner als oder gleich 0 (null).  
+  
+ - oder -   
+  
+ Das Intervall ist größer als <see cref="F:System.Int32.MaxValue" />, und der Zeitgeber aktiviert ist. (Wenn der Zeitgeber nicht aktiviert ist, wird keine Ausnahme ausgelöst, bis er wieder aktiviert wird.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Site">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.ISite Site { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ISite Site" />
+      <MemberSignature Language="DocId" Value="P:System.Timers.Timer.Site" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ISite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Site ab, die die <see cref="T:System.Timers.Timer" />-Klasse im Entwurfsmodus an ihren Container bindet, oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.ComponentModel.ISite" />-Schnittstelle, die die Site darstellt, die das <see cref="T:System.Timers.Timer" />-Objekt an ihren Container bindet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sites Binden einer <xref:System.ComponentModel.Component> auf eine <xref:System.ComponentModel.Container> und Aktivieren der Kommunikation zwischen den Komponenten, sowie für den Container zum Verwalten der zugehörigen Komponenten zu ermöglichen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Timers.Timer.Start" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beginnt mit dem Auslösen des <see cref="E:System.Timers.Timer.Elapsed" />-Ereignisses durch Festlegen von <see cref="P:System.Timers.Timer.Enabled" /> auf <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Timers.Timer.Start%2A> aufgerufen wird und <xref:System.Timers.Timer.AutoReset%2A> auf festgelegt ist `false`, <xref:System.Timers.Timer> löst die <xref:System.Timers.Timer.Elapsed> Ereignis erst, nachdem das erste Mal das Intervall abläuft. Wenn <xref:System.Timers.Timer.Start%2A> aufgerufen wird und <xref:System.Timers.Timer.AutoReset%2A> ist `true`, <xref:System.Timers.Timer> löst die <xref:System.Timers.Timer.Elapsed> Ereignis das erste Mal das Intervall abläuft und zum Auslösen des Ereignisses im angegebenen Intervall wird fortgesetzt.  
+  
+ Sie können auch ein Timeout starten, indem <xref:System.Timers.Timer.Enabled%2A> auf `true`.  
+  
+> [!NOTE]
+>  Wenn <xref:System.Timers.Timer.AutoReset%2A> ist `false`die <xref:System.Timers.Timer.Start%2A> -Methode muss aufgerufen werden, um die Anzahl der erneut zu starten.  
+  
+ Ein Aufruf der <xref:System.Timers.Timer.Start%2A> Methode, wenn der Zeitgeber aktiviert ist, hat keine Auswirkungen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="T:System.Timers.Timer" /> mit einem Intervall erstellt wird, gleich oder größer als <see cref="F:System.Int32.MaxValue" /> + 1, oder auf ein Intervall kleiner als 0 (null) festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Timers.Timer.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Unterbricht das Auslösen des <see cref="E:System.Timers.Timer.Elapsed" />-Ereignisses durch Festlegen von <see cref="P:System.Timers.Timer.Enabled" /> auf <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch ein Timeout beenden, durch Festlegen von <xref:System.Timers.Timer.Enabled%2A> auf `false`.  
+  
+> [!NOTE]
+>  Das Signal zum Auslösen der <xref:System.Timers.Timer.Elapsed> Ereignis wird immer in die Warteschlange für die Ausführung auf eine <xref:System.Threading.ThreadPool> thread, damit die Methode für die Ereignisbehandlung in einem Thread gleichzeitig ausführen kann Zeit, die einen Aufruf von der <xref:System.Timers.Timer.Stop%2A> Methode, die in einem anderen Thread ausgeführt wird. Dadurch kann die <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, nachdem die <xref:System.Timers.Timer.Stop%2A> Methode wird aufgerufen. Das Codebeispiel im nächsten Abschnitt zeigt eine Möglichkeit zum Umgehen dieser Racebedingung.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen `System.Timers.Timer` -Objekt, das ausgelöst wird seine <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> Ereignis alle zwei Sekunden (2.000 Millisekunden), richtet einen Ereignishandler für das Ereignis und startet den Timer. Der Ereignishandler zeigt den Wert des der <xref:System.Timers.ElapsedEventArgs.SignalTime%2A?displayProperty=nameWithType> Eigenschaft jedes Mal, es wird ausgelöst. Wenn der Benutzer die EINGABETASTE drückt, ruft die Anwendung die <xref:System.Timers.Timer.Stop%2A> -Methode vor dem Beenden der Anwendung.  
+  
+ [!code-csharp[System.Timers.Timer#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.timers.timer/cs/timer2a.cs#2)]
+ [!code-vb[System.Timers.Timer#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.timers.timer/vb/timer2a.vb#2)]  
+  
+ Das folgende Codebeispiel zeigt eine Möglichkeit, den Thread zu vermeiden, die Aufrufe der <xref:System.Timers.Timer.Stop%2A> Methode fortgesetzt, bis ein aktuell ausgeführtes <xref:System.Timers.Timer.Elapsed> Ereignis endet, und um zu verhindern, dass zwei <xref:System.Timers.Timer.Elapsed> Ereignisse aus den Ereignishandler gleichzeitig ausführen Zeit (häufig als Reentranz bezeichnet).  
+  
+ Im Beispiel werden 100 Testläufe ausgeführt. Jedes Mal der Test ausgeführt wird, wird der Zeitgeber mit einem Intervall von 150 Millisekunden gestartet. Der Ereignishandler verwendet die <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> Methode, um eine Aufgabe zu simulieren, die nach dem Zufallsprinzip Länge von 50 und 200 Millisekunden variiert. Die Testmethode wird auch einen Steuerelement-Thread, der ein zweites wartet, und klicken Sie dann hält den Zeitgeber gestartet. Wenn ein Ereignis behandelt wird, wenn der Steuerelement-Thread der Zeitgeber wird angehalten, muss der Steuerelement-Thread warten, bis das Ereignis, bevor Sie den Vorgang fortsetzen abgeschlossen ist.  
+  
+ Die <xref:System.Threading.Interlocked.CompareExchange%28System.Int32%40%2CSystem.Int32%2CSystem.Int32%29?displayProperty=nameWithType> methodenüberladung wird verwendet, um Reentranz zu vermeiden und um zu verhindern, dass den Steuerelement-Thread fortsetzen, bis ein ausgeführte Ereignis endet. Der Ereignishandler verwendet die <xref:System.Threading.Interlocked.CompareExchange%28System.Int32%40%2CSystem.Int32%2CSystem.Int32%29> Methode, um ein Steuerelement festzulegen, auf 1 Variablen, jedoch nur, wenn der Wert 0 (null) aktuell ist. Dies ist einer atomaren Operation. Wenn der Rückgabewert 0 (null) ist, wird die Steuerelementvariable auf 1 festgelegt wurde, und der Ereignishandler wird fortgesetzt. Wenn der Rückgabewert ungleich NULL ist, wird das Ereignis einfach zur Vermeidung von Reentranz verworfen. (Wenn es notwendig, jedes Ereignis ausgeführt wurden die <xref:System.Threading.Monitor> Klasse wäre eine bessere Möglichkeit zur Synchronisierung der Ereignisse.) Wenn der Ereignishandler beendet wird, legt er die Steuerelementvariable wieder auf 0 (null) fest. Im Beispiel zeichnet die Gesamtanzahl der Ereignisse, die ausgeführt wurden, die aufgrund von Reentranz verworfen wurden, und, die aufgetreten ist, nach, der <xref:System.Timers.Timer.Stop%2A> Methode wurde aufgerufen.  
+  
+ Der Thread Steuerelement verwendet die <xref:System.Threading.Interlocked.CompareExchange%28System.Int32%40%2CSystem.Int32%2CSystem.Int32%29> Methode, um das Steuerelement festzulegen, Variablen auf-1 (minus eins), jedoch nur, wenn der Wert 0 (null) aktuell ist. Wenn atomaren Operation ungleich NULL zurückgibt, wird ein Ereignis derzeit ausgeführt. Die Steuerelement-Thread wartet und erneut versucht. Im Beispiel zeichnet die Anzahl der Häufigkeit, mit die der Control-Thread auf ein Ereignis, um den Vorgang abzuschließen warten mussten.  
+  
+ [!code-csharp[Timer.Stop#1](~/samples/snippets/csharp/VS_Snippets_CLR/Timer.Stop/CS/source.cs#1)]
+ [!code-vb[Timer.Stop#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Timer.Stop/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SynchronizingObject">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ISynchronizeInvoke SynchronizingObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ISynchronizeInvoke SynchronizingObject" />
+      <MemberSignature Language="DocId" Value="P:System.Timers.Timer.SynchronizingObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Timers.TimersDescription("The object used to marshal the event handler calls issued when an interval has elapsed.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ISynchronizeInvoke</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt ab, das zum Marshallen von Ereignishandleraufrufen verwendet wird, die nach Ablauf eines Intervalls ausgegeben werden, oder legt dieses fest.</summary>
+        <value>Die <see cref="T:System.ComponentModel.ISynchronizeInvoke" />-Schnittstelle, die das Objekt zum Marshallen von Ereignishandleraufrufen darstellt, die nach Ablauf eines Intervalls ausgegeben werden. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Timers.Timer.SynchronizingObject%2A> ist `null`, die Methode, verarbeitet die <xref:System.Timers.Timer.Elapsed> Ereignis in einem Thread aus dem System-Threadpool aufgerufen wird. Weitere Informationen zu System-Threadpools, finden Sie unter <xref:System.Threading.ThreadPool>.  
+  
+ Wenn die <xref:System.Timers.Timer.Elapsed> Ereignis von visuellen Windows Forms-Komponente, z. B. eine Schaltfläche, die Zugriff auf die Komponente über den System-Threadpool Ergebnis eine Ausnahme oder lediglich möglicherweise funktionieren möglicherweise nicht behandelt wird. Dieser Effekt zu vermeiden, indem <xref:System.Timers.Timer.SynchronizingObject%2A> an eine Windows Forms-Komponente, womit die Methode, verarbeitet die <xref:System.Timers.Timer.Elapsed> Ereignis im selben Thread aufgerufen werden, die der Komponente erstellt wurde.  
+  
+> [!NOTE]
+>  Auch wenn die <xref:System.Timers.Timer.SynchronizingObject%2A> Eigenschaft ist nicht `null`, <xref:System.Timers.Timer.Elapsed> Ereignisse können nach dem Auftreten der <xref:System.Timers.Timer.Dispose%2A> oder <xref:System.Timers.Timer.Stop%2A> -Methode aufgerufen wurde oder nach der <xref:System.Timers.Timer.Enabled%2A> Eigenschaft vorsieht `false`, da das Signal zum Auslösen von die <xref:System.Timers.Timer.Elapsed> Ereignis wird immer in die Warteschlange für die Ausführung auf ein Thread des Threadpools. Eine Möglichkeit zum Auflösen dieser Racebedingung ist ein Kennzeichen festgelegt, der angibt, den Ereignishandler für das <xref:System.Timers.Timer.Elapsed> Ereignis auf nachfolgende Ereignisse zu ignorieren.  
+  
+ Wenn die <xref:System.Timers.Timer> innerhalb von Visual Studio in einem Windows Forms-Designer dient <xref:System.Timers.Timer.SynchronizingObject%2A> wird automatisch festgelegt, um das Steuerelement, enthält die <xref:System.Timers.Timer>. Angenommen, Sie Platzieren einer <xref:System.Timers.Timer> in einem Designer für `Form1` (geerbt von <xref:System.Windows.Forms.Form>), wird die <xref:System.Timers.Timer.SynchronizingObject%2A> Eigenschaft <xref:System.Timers.Timer> festgelegt ist, mit der Instanz von `Form1`.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Windows Forms-app, die als eine sehr einfachen Text-Editor-Datei dient. Wenn der Text in das Textfeld nicht gespeichert wurde, fordert die app den Benutzer in Intervallen von 1 Minute, ob er den Inhalt des Textfelds speichern möchte.  Dazu die <xref:System.Timers.Timer.Interval%2A> Eigenschaft auf 1 Minute (60000 Millisekunden) festgelegt ist und die <xref:System.Timers.Timer.SynchronizingObject%2A> -Eigenschaftensatz auf die <xref:System.Windows.Forms.Form> Objekt.  
+  
+ [!code-csharp[System.Timers.Timer.SynchronizingObject#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.Timers.Timer.SynchronizingObject/cs/Form1.cs#1)]
+ [!code-vb[System.Timers.Timer.SynchronizingObject#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Timers.Timer.SynchronizingObject/vb/Form1.vb#1)]  
+  
+ Im Beispiel erfordert, dass Sie die folgenden Steuerelemente zum Formular hinzufügen:  
+  
+-   Ein <xref:System.Windows.Forms.TextBox> Steuerelement namens `TextBox1` (dem Standardnamen).  
+  
+-   Ein <xref:System.Windows.Forms.Button> Steuerelement namens `Button1` (dem Standardnamen).  
+  
+-   Ein <xref:System.Windows.Forms.SaveFileDialog> Steuerelement namens `SaveSaveFileDialog1` (dem Standardnamen).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

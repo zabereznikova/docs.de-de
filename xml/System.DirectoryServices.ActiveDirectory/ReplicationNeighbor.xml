@@ -1,0 +1,248 @@
+<Type Name="ReplicationNeighbor" FullName="System.DirectoryServices.ActiveDirectory.ReplicationNeighbor">
+  <TypeSignature Language="C#" Value="public class ReplicationNeighbor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ReplicationNeighbor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor" /> Klasse enthält Informationen zur von Replikationsnachbarn ein <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> oder <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> Objekt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ConsecutiveFailureCount">
+      <MemberSignature Language="C#" Value="public int ConsecutiveFailureCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConsecutiveFailureCount" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.ConsecutiveFailureCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Replikationsfehler, seit die letzte erfolgreiche Replikation Zyklus.</summary>
+        <value>Die Anzahl der fehlerhaften Replikations, die seit der letzten erfolgreichen Replikationsversuch aus dieser Quelle versucht werden. Wenn keine vorherigen Versuch erfolgreich war, ist der Rückgabewert die Anzahl der fehlerhaften Replikations-Versuche, da die Quelle als Nachbar hinzugefügt wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastAttemptedSync">
+      <MemberSignature Language="C#" Value="public DateTime LastAttemptedSync { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LastAttemptedSync" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.LastAttemptedSync" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Uhrzeit der letzten Replikationsversuch aus dieser Quelle ab.</summary>
+        <value>Der Zeitpunkt des letzten Replikationsversuchs. Wenn keine Replikationsversuch aufgetreten ist, ist der Wert 0 (null).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastSuccessfulSync">
+      <MemberSignature Language="C#" Value="public DateTime LastSuccessfulSync { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LastSuccessfulSync" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.LastSuccessfulSync" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Uhrzeit der letzten erfolgreichen Replikationszyklus aus dieser Quelle ab.</summary>
+        <value>Der Zeitpunkt der letzten erfolgreichen Synchronisierung. Wenn keine Replikation erfolgreich war, ist der Wert 0 (null).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastSyncMessage">
+      <MemberSignature Language="C#" Value="public string LastSyncMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LastSyncMessage" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.LastSyncMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Meldung ab, die die letzte Replikationsversuch aus dieser Quelle zugeordnet ist.</summary>
+        <value>Die Meldung, die bis zum letzten Replikationsversuch entspricht. Wenn der letzte Versuch erfolgreich war, ist der Wert eine leere Zeichenfolge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastSyncResult">
+      <MemberSignature Language="C#" Value="public int LastSyncResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LastSyncResult" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.LastSyncResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Fehlercode ab, der dem letzten Replikationsversuch aus dieser Quelle zugeordnet ist.</summary>
+        <value>Der Fehlercode für den letzten Replikationsversuch. Wenn der letzte Versuch erfolgreich war, ist der Wert ERROR_SUCCESS.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartitionName">
+      <MemberSignature Language="C#" Value="public string PartitionName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PartitionName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.PartitionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Partitionsnamen für diesen <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor" /> Objekt.</summary>
+        <value>Der Name der Partition für diese <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplicationNeighborOption">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.ReplicationNeighborOptions ReplicationNeighborOption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ActiveDirectory.ReplicationNeighbor/ReplicationNeighborOptions ReplicationNeighborOption" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.ReplicationNeighborOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationNeighbor+ReplicationNeighborOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Attribut- und Einstellungen für diesen <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.ReplicationNeighborOptions" /> -Wert enthält das Attribut und der angegebenen Option Einstellungen für diesen <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceInvocationId">
+      <MemberSignature Language="C#" Value="public Guid SourceInvocationId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid SourceInvocationId" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.SourceInvocationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Aufruf-ID, die der Quellserver für die Replikation in der letzten Replikationsversuch verwendet wurde.</summary>
+        <value>Die Aufruf-ID, die der Quellserver für die Replikation in der letzten Replikationsversuch verwendet wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceServer">
+      <MemberSignature Language="C#" Value="public string SourceServer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceServer" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.SourceServer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Replikationsquellservers ab.</summary>
+        <value>Der Name des Replikationsquellservers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportType">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType TransportType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType TransportType" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.TransportType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Transport ab, der für die Replikation verwendet wurde.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType" /> -Enumerationswert, der den Transporttyp angibt, die für die replikationsverbindung verwendet wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsnAttributeFilter">
+      <MemberSignature Language="C#" Value="public long UsnAttributeFilter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 UsnAttributeFilter" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.UsnAttributeFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Sequenzwert Aktualisierungssequenznummern Update für die letzte erfolgreiche Replikationszyklus ab.</summary>
+        <value>Das USN-Wert für die letzte erfolgreiche Replikationszyklus. Wenn keine Replikation erfolgreich war, ist der Wert 0 (null).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsnLastObjectChangeSynced">
+      <MemberSignature Language="C#" Value="public long UsnLastObjectChangeSynced { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 UsnLastObjectChangeSynced" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.UsnLastObjectChangeSynced" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, der Updatesequenznummer (USN) für die Aktualisierung des letzten, die empfangen wurde.</summary>
+        <value>Die USN der letzten Aktualisierung, die empfangen wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

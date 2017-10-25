@@ -1,0 +1,142 @@
+<Type Name="CurrencyWrapper" FullName="System.Runtime.InteropServices.CurrencyWrapper">
+  <TypeSignature Language="C#" Value="public sealed class CurrencyWrapper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit CurrencyWrapper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.CurrencyWrapper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Umschließt Objekte, die der Marshaller als Marshallen sollte eine <see langword="VT_CY" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuert, wie das umschlossene Objekt gemarshallt wird, wenn als Variant übergeben. Umschließen einer `Decimal` in eine `CurrencyWrapper` als gemarshallt ist eine `VT_CY`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CurrencyWrapper (decimal obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Decimal obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CurrencyWrapper.#ctor(System.Decimal)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see langword="Decimal" /> eingeschlossen und als gemarshallt werden <see langword="VT_CY" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.CurrencyWrapper" /> -Klasse mit der <see langword="Decimal" /> eingeschlossen und als Typ gemarshallt werden <see langword="VT_CY" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CurrencyWrapper (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CurrencyWrapper.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt mit dem <see langword="Decimal" /> eingeschlossen und als gemarshallt werden <see langword="VT_CY" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.CurrencyWrapper" /> Klasse das Objekt enthält die <see langword="Decimal" /> eingeschlossen und als Typ gemarshallt werden <see langword="VT_CY" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="obj" /> -Parameter ist ein <see cref="T:System.Decimal" /> Typ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WrappedObject">
+      <MemberSignature Language="C#" Value="public decimal WrappedObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Decimal WrappedObject" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.CurrencyWrapper.WrappedObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das umschlossene Objekt als Typ gemarshallt werden <see langword="VT_CY" />.</summary>
+        <value>Das umschlossene Objekt als Typ gemarshallt werden <see langword="VT_CY" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

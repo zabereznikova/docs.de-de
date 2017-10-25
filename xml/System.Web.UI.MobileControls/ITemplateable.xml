@@ -1,0 +1,28 @@
+<Type Name="ITemplateable" FullName="System.Web.UI.MobileControls.ITemplateable">
+  <TypeSignature Language="C#" Value="public interface ITemplateable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITemplateable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.ITemplateable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fungiert als eine markerschnittstelle, und hat keine Mitglieder jeglicher Art. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert, indem alle ASP.NET mobile-Steuerelemente, die Vorlage legt unterstützen.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members />
+</Type>

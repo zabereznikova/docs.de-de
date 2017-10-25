@@ -1,0 +1,1120 @@
+<Type Name="DbConnection" FullName="System.Data.Common.DbConnection">
+  <TypeSignature Language="C#" Value="public abstract class DbConnection : System.ComponentModel.Component, IDisposable, System.Data.IDbConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DbConnection extends System.ComponentModel.Component implements class System.Data.IDbConnection, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.DbConnection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.IDbConnection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Verbindung mit einer Datenbank dar.</summary>
+    <remarks>To be added.</remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von <see cref="T:System.Data.Common.DbConnection" />, müssen Sie die folgenden Member überschreiben: <see cref="M:System.Data.Common.DbConnection.Close" />, <see cref="M:System.Data.Common.DbConnection.BeginDbTransaction(System.Data.IsolationLevel)" />, <see cref="M:System.Data.Common.DbConnection.ChangeDatabase(System.String)" />, <see cref="M:System.Data.Common.DbConnection.CreateDbCommand" />, <see cref="M:System.Data.Common.DbConnection.Open" />, und <see cref="E:System.Data.Common.DbConnection.StateChange" />. Sie müssen auch die folgenden Eigenschaften angeben: <see cref="P:System.Data.Common.DbConnection.ConnectionString" />, <see cref="P:System.Data.Common.DbConnection.Database" />, <see cref="P:System.Data.Common.DbConnection.DataSource" />, <see cref="P:System.Data.Common.DbConnection.ServerVersion" />, und <see cref="P:System.Data.Common.DbConnection.State" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DbConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Common.DbConnection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDbTransaction">
+      <MemberSignature Language="C#" Value="protected abstract System.Data.Common.DbTransaction BeginDbTransaction (System.Data.IsolationLevel isolationLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Data.Common.DbTransaction BeginDbTransaction(valuetype System.Data.IsolationLevel isolationLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.BeginDbTransaction(System.Data.IsolationLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isolationLevel" Type="System.Data.IsolationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="isolationLevel">Gibt die Isolationsstufe für die Transaktion an.</param>
+        <summary>Startet eine Datenbanktransaktion.</summary>
+        <returns>Ein Objekt, das die neue Transaktion darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie Ihren eigenen Verbindungstyp erstellen, überschreiben Sie diese Methode, um den Code zum Starten einer Transaktions zu implementieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="BeginTransaction">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Startet eine Datenbanktransaktion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Isolationsstufe nicht angeben, wird die Standardisolationsstufe für den spezifischen Typ der Verbindung verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="BeginTransaction">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbTransaction BeginTransaction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Common.DbTransaction BeginTransaction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.BeginTransaction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet eine Datenbanktransaktion.</summary>
+        <returns>Ein Objekt, das die neue Transaktion darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Isolationsstufe nicht angeben, wird die Standardisolationsstufe für den spezifischen Typ der Verbindung verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTransaction">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbTransaction BeginTransaction (System.Data.IsolationLevel isolationLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Common.DbTransaction BeginTransaction(valuetype System.Data.IsolationLevel isolationLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.BeginTransaction(System.Data.IsolationLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isolationLevel" Type="System.Data.IsolationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="isolationLevel">Gibt die Isolationsstufe für die Transaktion an.</param>
+        <summary>Startet eine Datenbanktransaktion mit dem angegebenen Isolationsgrad.</summary>
+        <returns>Ein Objekt, das die neue Transaktion darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeDatabase">
+      <MemberSignature Language="C#" Value="public abstract void ChangeDatabase (string databaseName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ChangeDatabase(string databaseName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.ChangeDatabase(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="databaseName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="databaseName">Gibt den Namen der Datenbank, für die zu verwendende Verbindung.</param>
+        <summary>Ändert die aktuelle Datenbank für eine geöffnete Verbindung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert im angegebenen der `databaseName` -Parameter muss einen gültigen Datenbanknamen für die aktuelle Instanz sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public abstract void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt die Verbindung mit der Datenbank. Dies ist die bevorzugte Methode zum Schließen offener Verbindungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.DbConnection.Close%2A> -Methode einen Rollback aller anstehenden Transaktionen. Klicken Sie dann die Verbindung zum Verbindungspool frei oder schließt die Verbindung, wenn Verbindungspooling deaktiviert ist.  
+  
+ Eine Anwendung kann Aufrufen <xref:System.Data.Common.DbConnection.Close%2A> mehr als einmal. Es wird keine Ausnahme ausgelöst.  
+  
+ Wenn die <xref:System.Data.Common.DbConnection> Gültigkeitsbereich verlässt, sie ist nicht geschlossen. Aus diesem Grund müssen Sie die Verbindung explizit schließen, durch den Aufruf `Close` oder `Dispose`, dem sind funktional äquivalent. Wenn der Wert des Verbindungspoolings `Pooling` festgelegt ist, um `true` oder `yes`, dies auch die physische Verbindung frei.  
+  
+> [!CAUTION]
+>  Rufen Sie nicht `Close` oder `Dispose` auf eine **Verbindung**, **DataReader**, oder ein anderes verwaltetes Objekt in der `Finalize` -Methode der Klasse. In einer Finalize-Methode sollten Sie nur nicht verwaltete Ressourcen freizugeben, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](http://msdn.microsoft.com/library/22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.Common.DbException">Der Fehler auf Verbindungsebene, der beim Öffnen der Verbindung aufgetreten ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionString">
+      <MemberSignature Language="C#" Value="public abstract string ConnectionString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectionString" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnection.ConnectionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RecommendedAsConfigurable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.SettingsBindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolge, die zum Öffnen der Verbindung verwendet.</summary>
+        <value>Die Verbindungszeichenfolge zum Herstellen der anfangsverbindung verwendet. Der genaue Inhalt der Verbindungszeichenfolge hängt von der bestimmten Datenquelle für diese Verbindung. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der genaue Inhalt der Verbindungszeichenfolge hängt von der bestimmten Datenquelle für diese Verbindung. Um zu bestimmen, welche Einstellungen gültig sind, finden Sie in der Dokumentation für den spezifischen Typ der Verbindung, die Sie verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionTimeout">
+      <MemberSignature Language="C#" Value="public virtual int ConnectionTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConnectionTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnection.ConnectionTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Verzögerung bis beim Herstellen einer Verbindung, bevor der Versuch beendet und ein Fehler generiert.</summary>
+        <value>Der Zeitraum in Sekunden, in dem auf das Öffnen einer Verbindung gewartet werden soll. Der Standardwert richtet sich nach den spezifischen Typ der Verbindung, die Sie verwenden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCommand">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbCommand CreateCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Common.DbCommand CreateCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.CreateCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt ein <see cref="T:System.Data.Common.DbCommand" /> Objekt, das mit der aktuellen Verbindung zugeordnet.</summary>
+        <returns>Ein <see cref="T:System.Data.Common.DbCommand" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDbCommand">
+      <MemberSignature Language="C#" Value="protected abstract System.Data.Common.DbCommand CreateDbCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Data.Common.DbCommand CreateDbCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.CreateDbCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt ein <see cref="T:System.Data.Common.DbCommand" /> Objekt, das mit der aktuellen Verbindung zugeordnet.</summary>
+        <returns>Ein <see cref="T:System.Data.Common.DbCommand" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine eigene Verbindung implementieren, überschreiben Sie diese Methode zum Implementieren des Codes zum Erstellen und Zurückgeben einer <xref:System.Data.Common.DbCommand> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Database">
+      <MemberSignature Language="C#" Value="public abstract string Database { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Database" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnection.Database" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der aktuellen Datenbank nach dem Öffnen einer Verbindungs oder den Datenbanknamen in der Verbindungszeichenfolge angegeben werden, bevor die Verbindung geöffnet wird.</summary>
+        <value>Der Name der aktuellen Datenbank oder der nach dem Öffnen einer Verbindung zu verwendenden Datenbank. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird in der Regel dynamisch von eine Verbindung aktualisiert, wenn die aktuelle Datenbank ändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public abstract string DataSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnection.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Datenbankservers für die Verbindung ab.</summary>
+        <value>Der Name des Datenbankservers, der eine Verbindung hergestellt werden soll. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Verbindung mit der Datenbank geschlossen ist, die <xref:System.Data.Common.DbConnection.DataSource%2A> gibt den Inhalt der <xref:System.Data.Common.DbConnection.ConnectionString%2A> für die `DataSource` Schlüsselwort. Wenn die Verbindung geöffnet ist und die <xref:System.Data.Common.DbConnection.ConnectionString%2A> Data Source-Schlüsselwort-Wert beginnt mit "&#124;`datadirectory` &#124; ", die Eigenschaft gibt den Inhalt der <xref:System.Data.Common.DbConnection.ConnectionString%2A> für die `DataSource` nur Schlüsselwort. Wenn die Verbindung mit der Datenbank geöffnet ist, wird die Eigenschaft zurückgibt, was der systemeigene Anbieter für zurückgibt der `DBPROP_INIT_DATASOURCE`, und wenn Sie leer ist, ist des systemeigenen Anbieters `DBPROP_DATASOURCENAME` wird zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbProviderFactory">
+      <MemberSignature Language="C#" Value="protected virtual System.Data.Common.DbProviderFactory DbProviderFactory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbProviderFactory DbProviderFactory" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnection.DbProviderFactory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbProviderFactory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Data.Common.DbProviderFactory" /> für diesen <see cref="T:System.Data.Common.DbConnection" /> ab.</summary>
+        <value>Eine Reihe von Methoden zum Erstellen von Instanzen der Implementierung eines Anbieters der Datenquellenklassen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnlistTransaction">
+      <MemberSignature Language="C#" Value="public virtual void EnlistTransaction (System.Transactions.Transaction transaction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnlistTransaction(class System.Transactions.Transaction transaction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.EnlistTransaction(System.Transactions.Transaction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.Transactions.Transaction" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">Ein Verweis auf eine vorhandene <see cref="T:System.Transactions.Transaction" />, in der die Eintragung vorgenommen werden soll.</param>
+        <summary>In der angegebenen Transaktion eingetragen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neues in ADO.NET 2.0 ist eine Unterstützung für die Verwendung der `EnlistTransaction` Methode in einer verteilten Transaktion eintragen. Aufgrund der Eintragung einer Verbindungs in einer <xref:System.Transactions.Transaction> Instanz `EnlistTransaction` nutzt Funktionsumfang der <xref:System.Transactions> Namespace für die Verwaltung verteilter Transaktionen. Sobald eine Verbindung ausdrücklich in einer Transaktion eingetragen wurde, kann nicht ausgetragen oder in eine andere Transaktion eingetragen werden, bis die erste Transaktion abgeschlossen ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetSchema">
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt Schemainformationen für die Datenquelle dieser <see cref="T:System.Data.Common.DbConnection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Verbindung eine Transaktion zugeordnet ist, ausführen `GetSchema` Aufrufe können dazu führen, dass einige Anbieter eine Ausnahme auslöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetSchema">
+      <MemberSignature Language="C#" Value="public virtual System.Data.DataTable GetSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.DataTable GetSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.GetSchema" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt Schemainformationen für die Datenquelle dieser <see cref="T:System.Data.Common.DbConnection" />.</summary>
+        <returns>Ein <see cref="T:System.Data.DataTable" /> , die die Schemainformationen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Verbindung eine Transaktion zugeordnet ist, ausführen `GetSchema` Aufrufe können dazu führen, dass einige Anbieter eine Ausnahme auslöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchema">
+      <MemberSignature Language="C#" Value="public virtual System.Data.DataTable GetSchema (string collectionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.DataTable GetSchema(string collectionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.GetSchema(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="collectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="collectionName">Gibt den zurückzugebenden Namen des Schemas an.</param>
+        <summary>Gibt Schemainformationen für die Datenquelle dieser <see cref="T:System.Data.Common.DbConnection" /> unter Verwendung der angegebenen Zeichenfolge des Schemanamens.</summary>
+        <returns>Ein <see cref="T:System.Data.DataTable" /> , die die Schemainformationen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Verbindung eine Transaktion zugeordnet ist, ausführen `GetSchema` Aufrufe können dazu führen, dass einige Anbieter eine Ausnahme auslöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="collectionName" />ist als null angegeben werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchema">
+      <MemberSignature Language="C#" Value="public virtual System.Data.DataTable GetSchema (string collectionName, string[] restrictionValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.DataTable GetSchema(string collectionName, string[] restrictionValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.GetSchema(System.String,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="collectionName" Type="System.String" />
+        <Parameter Name="restrictionValues" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="collectionName">Gibt den zurückzugebenden Namen des Schemas an.</param>
+        <param name="restrictionValues">Gibt eine Gruppe von Einschränkungswerten für das angeforderte Schema.</param>
+        <summary>Gibt Schemainformationen für die Datenquelle dieser <see cref="T:System.Data.Common.DbConnection" /> mithilfe der angegebenen Zeichenfolge des Schemanamens und des angegebenen Zeichenfolgenarrays der Einschränkungswerte.</summary>
+        <returns>Ein <see cref="T:System.Data.DataTable" /> , die die Schemainformationen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `restrictionValues` kann Parameter angeben, * n * Tiefe von Werten, die durch die Auflistung der Einschränkungen für eine bestimmte Sammlung angegeben werden. Um Werte für eine angegebene Einschränkung festgelegt, und die Werte der anderen Einschränkungen festgelegt werden, müssen Sie die vorangehenden Einschränkungen mit null initialisiert und veröffentlichen Sie den entsprechenden Wert in die Einschränkung, der Sie, geben Sie einen Wert für möchten festlegen.  
+  
+ Ein Beispiel hierfür ist die Auflistung "Tabellen". Wenn die Auflistung "Tabellen" verfügt über drei Einschränkungen (Datenbank, Besitzer und Tabellennamen), und nur die Tabellen, die dem Besitzer "Carl" zugeordnete wieder abgerufen werden soll, müssen Sie übergeben die folgenden Werte mindestens: null, "Carl". Wenn ein Einschränkungswert nicht übergeben wird, werden die Standardwerte für diese Einschränkung verwendet. Dies ist die Zuordnung beim Übergeben von Null aufweist, unterscheidet sich vom eine leere Zeichenfolge für den Parameterwert übergeben. In diesem Fall wird die leere Zeichenfolge ("") gilt der Wert für den angegebenen Parameter.  
+  
+ Wenn die Verbindung eine Transaktion zugeordnet ist, ausführen `GetSchema` Aufrufe können dazu führen, dass einige Anbieter eine Ausnahme auslöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="collectionName" />ist als null angegeben werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStateChange">
+      <MemberSignature Language="C#" Value="protected virtual void OnStateChange (System.Data.StateChangeEventArgs stateChange);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStateChange(class System.Data.StateChangeEventArgs stateChange) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.OnStateChange(System.Data.StateChangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stateChange" Type="System.Data.StateChangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="stateChange">Ein <see cref="T:System.Data.StateChangeEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Data.Common.DbConnection.StateChange" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Eine Übersicht finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Data.Common.DbConnection.OnStateChange(System.Data.StateChangeEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Data.Common.DbConnection.OnStateChange(System.Data.StateChangeEventArgs)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public abstract void Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Öffnet eine datenbankverbindung mit den Einstellungen, die gemäß der <see cref="P:System.Data.Common.DbConnection.ConnectionString" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode muss mit einem benutzerdefinierten Verhalten überschrieben werden. <xref:System.Data.SqlClient.SqlConnection.Open%2A?displayProperty=nameWithType>löst eine Ausnahme aus, wenn erneut ohne aufgerufen zuerst geschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="OpenAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <exception cref="T:System.Data.Common.DbException">Fehler beim Öffnen der Verbindung.</exception>
+        <summary>Diese Methode implementiert eine asynchrone Version der <see cref="M:System.Data.Common.DbConnection.Open" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur asynchronen Programmierung in der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] -Datenanbieter für [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)], finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="OpenAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task OpenAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task OpenAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.OpenAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine asynchrone Version der <see cref="M:System.Data.Common.DbConnection.Open" />, dem öffnet eine datenbankverbindung mit den Einstellungen, die gemäß der <see cref="P:System.Data.Common.DbConnection.ConnectionString" />. Diese Methode ruft die virtuelle Methode <see cref="M:System.Data.Common.DbConnection.OpenAsync(System.Threading.CancellationToken)" /> mit CancellationToken.None.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Aufruf <xref:System.Data.Common.DbConnection.OpenAsync%2A>, <xref:System.Data.Common.DbConnection.State%2A> muss zurückgeben <xref:System.Data.ConnectionState.Connecting> bis zurückgegebenen <xref:System.Threading.Tasks.Task> abgeschlossen ist. Wenn die Verbindung erfolgreich war, <xref:System.Data.Common.DbConnection.State%2A> muss zurückgeben <xref:System.Data.ConnectionState.Open>. Wenn die Verbindung fehlschlägt, <xref:System.Data.Common.DbConnection.State%2A> muss zurückgeben <xref:System.Data.ConnectionState.Closed>.  
+  
+ Ein Aufruf von <xref:System.Data.Common.DbConnection.Close%2A> wird versucht, "Abbrechen", oder schließen Sie das entsprechende <xref:System.Data.Common.DbConnection.OpenAsync%2A> aufrufen.  
+  
+ Weitere Informationen zur asynchronen Programmierung in der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] -Datenanbieter für [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)], finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task OpenAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task OpenAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.OpenAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Die Abbruchanweisung.</param>
+        <summary>Dies ist die asynchrone Version von <see cref="M:System.Data.Common.DbConnection.Open" />. Anbieter sollten mit einer entsprechenden Implementierung überschreiben. Das Abbruchtoken kann optional berücksichtigt werden.  
+  
+ Die Standardimplementierung Ruft die synchrone <see cref="M:System.Data.Common.DbConnection.Open" /> aufrufen und eine abgeschlossene Aufgabe zurück. Die standardmäßige Implementierung gibt eine abgebrochene Aufgabe zurück, wenn ein bereits abgebrochen CancellationToken übergeben. Aufgrund geöffneter ausgelöste Ausnahmen werden über die zurückgegebene Aufgabe Exception-Eigenschaft übermittelt werden.  
+  
+ Führen Sie nicht aufgerufen werden, andere Methoden und Eigenschaften des der <see langword="DbConnection" /> Objekt, bis die zurückgegebene Aufgabe abgeschlossen ist.</summary>
+        <returns>Eine Aufgabe, die den asynchronen Vorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Aufruf <xref:System.Data.Common.DbConnection.OpenAsync%2A>, <xref:System.Data.Common.DbConnection.State%2A> muss zurückgeben <xref:System.Data.ConnectionState.Connecting> bis zurückgegebenen <xref:System.Threading.Tasks.Task> abgeschlossen ist. Wenn die Verbindung erfolgreich war, <xref:System.Data.Common.DbConnection.State%2A> muss zurückgeben <xref:System.Data.ConnectionState.Open>. Wenn die Verbindung fehlschlägt, <xref:System.Data.Common.DbConnection.State%2A> muss zurückgeben <xref:System.Data.ConnectionState.Closed>.  
+  
+ Ein Aufruf von <xref:System.Data.Common.DbConnection.Close%2A> wird versucht, "Abbrechen", oder schließen Sie das entsprechende <xref:System.Data.Common.DbConnection.OpenAsync%2A> aufrufen.  
+  
+ Weitere Informationen zur asynchronen Programmierung in der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] -Datenanbieter für [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)], finden Sie unter [asynchrone Programmierung](~/docs/framework/data/adonet/asynchronous-programming.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerVersion">
+      <MemberSignature Language="C#" Value="public abstract string ServerVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServerVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnection.ServerVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die Version des Servers darstellt, mit dem das Objekt verbunden ist.</summary>
+        <value>Die Version der Datenbank. Das Format der zurückgegebenen Zeichenfolge richtet sich nach den spezifischen Typ der Verbindung, die Sie verwenden.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Data.Common.DbConnection.ServerVersion" /> wurde aufgerufen, während die zurückgegebene Aufgabe nicht abgeschlossen wurde, und die Verbindung wurde nach einem Aufruf von <see cref="Overload:System.Data.Common.DbConnection.OpenAsync" /> nicht geöffnet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public abstract System.Data.ConnectionState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.ConnectionState State" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbConnection.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.ConnectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die den Zustand der Verbindung beschreibt.</summary>
+        <value>Der Status der Verbindung. Das Format der zurückgegebenen Zeichenfolge richtet sich nach den spezifischen Typ der Verbindung, die Sie verwenden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChange">
+      <MemberSignature Language="C#" Value="public virtual event System.Data.StateChangeEventHandler StateChange;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Data.StateChangeEventHandler StateChange" />
+      <MemberSignature Language="DocId" Value="E:System.Data.Common.DbConnection.StateChange" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.StateChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Zustand des Ereignisses geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.DbConnection.StateChange> Ereignis tritt auf, wenn der Status des Ereignis ändert von "geschlossen", geöffnet, oder zu geschlossenen geöffnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbConnection.BeginTransaction">
+      <MemberSignature Language="C#" Value="System.Data.IDbTransaction IDbConnection.BeginTransaction ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Data.IDbTransaction System.Data.IDbConnection.BeginTransaction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.System#Data#IDbConnection#BeginTransaction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beginnt eine Datenbanktransaktion.</summary>
+        <returns>Ein Objekt, das die neue Transaktion darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.Common.DbConnection>-Instanz in eine <xref:System.Data.IDbConnection>-Schnittstelle umgewandelt wird.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Data.IDbConnection.BeginTransaction%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbConnection.BeginTransaction">
+      <MemberSignature Language="C#" Value="System.Data.IDbTransaction IDbConnection.BeginTransaction (System.Data.IsolationLevel isolationLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Data.IDbTransaction System.Data.IDbConnection.BeginTransaction(valuetype System.Data.IsolationLevel isolationLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.System#Data#IDbConnection#BeginTransaction(System.Data.IsolationLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isolationLevel" Type="System.Data.IsolationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="isolationLevel">Einer der <see cref="T:System.Data.IsolationLevel" />-Werte.</param>
+        <summary>Beginnt eine Datenbanktransaktion mit dem angegebenen <see cref="T:System.Data.IsolationLevel" />-Wert.</summary>
+        <returns>Ein Objekt, das die neue Transaktion darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.Data.IDbConnection.BeginTransaction%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbConnection.CreateCommand">
+      <MemberSignature Language="C#" Value="System.Data.IDbCommand IDbConnection.CreateCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Data.IDbCommand System.Data.IDbConnection.CreateCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbConnection.System#Data#IDbConnection#CreateCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein <see cref="T:System.Data.Common.DbCommand" />-Objekt, das der aktuellen Verbindung zugeordnet ist, und gibt dieses zurück.</summary>
+        <returns>Ein <see cref="T:System.Data.Common.DbCommand" />-Objekt, das der Verbindung zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Befehle und Parameter](~/docs/framework/data/adonet/commands-and-parameters.md) und <xref:System.Data.IDbConnection.CreateCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

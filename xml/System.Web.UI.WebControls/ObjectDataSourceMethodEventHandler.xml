@@ -1,0 +1,59 @@
+<Type Name="ObjectDataSourceMethodEventHandler" FullName="System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ObjectDataSourceMethodEventHandler(object sender, ObjectDataSourceMethodEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ObjectDataSourceMethodEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses, das <see cref="T:System.Web.UI.WebControls.ObjectDataSource" />.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Web.UI.WebControls.ObjectDataSource.Selecting" />, <see cref="E:System.Web.UI.WebControls.ObjectDataSource.Updating" />, <see cref="E:System.Web.UI.WebControls.ObjectDataSource.Inserting" />, oder <see cref="E:System.Web.UI.WebControls.ObjectDataSource.Deleting" /> -Ereignis für die <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ObjectDataSource.Selecting>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updating>, <xref:System.Web.UI.WebControls.ObjectDataSource.Inserting>, oder <xref:System.Web.UI.WebControls.ObjectDataSource.Deleting> -Ereignis für die <xref:System.Web.UI.WebControls.ObjectDataSource> Steuerelement ermöglicht es Ihnen, die Parameter zu bearbeiten, die verwendet werden, um die Methode zu ermitteln, die aufgerufen wird, indem Sie die <xref:System.Web.UI.WebControls.ObjectDataSource> Steuerelement. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs>.  
+  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler>-Delegaten geben Sie die Methode für die Ereignisbehandlung an. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.ObjectDataSource> -Steuerelement mit einem Geschäftsobjekt und einem <xref:System.Web.UI.WebControls.DetailsView> Steuerelement zum Einfügen von Daten. Das zweite Codebeispiel enthält ein Beispiel-Geschäftsobjekt mittlerer Ebene, die von der ersten Codebeispiel verwendet wird.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.ObjectDataSource> -Steuerelement mit einem Geschäftsobjekt und einem <xref:System.Web.UI.WebControls.DetailsView> Steuerelement zum Einfügen von Daten. Zu Beginn der <xref:System.Web.UI.WebControls.DetailsView> zeigt ein neues `NorthwindEmployee` aufzuzeichnen, zusammen mit einer automatisch generierten **einfügen** Schaltfläche. Nach dem Eingeben von Daten in die Felder der der <xref:System.Web.UI.WebControls.DetailsView> steuern, und klicken Sie auf die **einfügen** Schaltfläche, und die <xref:System.Web.UI.WebControls.ObjectDataSource.InsertMethod%2A> Eigenschaft identifiziert wird, welche Methode führt die <xref:System.Web.UI.WebControls.ObjectDataSource.Insert%2A> Aktion.  
+  
+ In diesem Beispiel wird die `UpdateEmployeeInfo` Methode wird verwendet, um eine Einfügung ausführen; es benötigt jedoch ein `NorthwindEmployee` Parameter zum Einfügen der Daten. Aus diesem Grund die Auflistung von Zeichenfolgen, die die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement übergibt automatisch reicht nicht aus. Die `NorthwindEmployeeInserting` Delegat ist ein <xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler> -Objekt, das verarbeitet die <xref:System.Web.UI.WebControls.ObjectDataSource.Inserting> Ereignis und ermöglicht es Ihnen, die Eingabeparameter vor dem Bearbeiten der <xref:System.Web.UI.WebControls.ObjectDataSource.Insert%2A> Vorgang wird fortgesetzt. Da die `UpdateEmployeeInfo` Methode erfordert eine `NorthwindEmployee` -Objekt als Parameter verwendet, eine wird unter Verwendung der Auflistung von Zeichenfolgen erstellt und hinzugefügt wird die <xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs.InputParameters%2A> Auflistung.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_4/CS/objds4cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_4/VB/objds4vb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der mittleren Ebene Beispielgeschäftsobjekt bereitgestellt, das im vorherigen Codebeispiel verwendet. Das Codebeispiel besteht aus den folgenden zwei grundlegenden Klassen und eine zusätzliche Klasse:  
+  
+-   Die `EmployeeLogic` -Klasse, die eine zustandslose Klasse ist, die Geschäftslogik kapselt.  
+  
+-   Die `NorthwindEmployee` Klasse, die eine Modellklasse, die nur die grundlegende Funktionen enthält, die zum Laden und Beibehalten von Daten aus der Datenebene erforderlich ist.  
+  
+-   Ein zusätzliches `NorthwindDataException` -Klasse, die zur Vereinfachung bereitgestellt wird.  
+  
+ Dieser Satz von Beispielklassen arbeitet mit der Datenbank Northwind Traders, also eine Beispieldatenbank, die mit Microsoft SQL Server und Microsoft Access verfügbar ist. Ein vollständiges Beispiel arbeiten verwenden Sie diese Klassen, indem sie in das Verzeichnis App_Code unter dem Stammverzeichnis der Anwendung platziert werden oder in einer Bibliothek zu kompilieren und platzieren die resultierende DLL im Verzeichnis "bin". Die `UpdateEmployeeInfo` Methode ist nicht vollständig implementiert, sodass keine Daten in der Datenbank Northwind Traders eingefügt werden, wenn Sie mit diesem Beispiel experimentieren.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ObjectDataSource_4#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_4/CS/northwindemployee4.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.ObjectDataSource_4#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_4/VB/northwindemployee4.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

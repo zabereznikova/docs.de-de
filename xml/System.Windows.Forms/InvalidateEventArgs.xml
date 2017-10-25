@@ -1,0 +1,86 @@
+<Type Name="InvalidateEventArgs" FullName="System.Windows.Forms.InvalidateEventArgs">
+  <TypeSignature Language="C#" Value="public class InvalidateEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InvalidateEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.InvalidateEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.Control.Invalidated" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Control.Invalidated> Ereignis tritt auf, wenn die Anzeige eines Steuerelements aktualisiert wird. Ein <xref:System.Windows.Forms.InvalidateEventArgs> gibt das Rechteck, das als ungültig ausgewiesene Fensterbereich enthält.  
+  
+ Informationen über das Ereignismodell finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Control.Invalidated> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.Control>, z. B. eine <xref:System.Windows.Forms.Button> oder <xref:System.Windows.Forms.ComboBox>. Geben Sie den Namen der Instanz `Control1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Control.Invalidated> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#40)]
+ [!code-vb[System.Windows.Forms.EventExamples#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#40)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidateEventArgs (System.Drawing.Rectangle invalidRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Rectangle invalidRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.InvalidateEventArgs.#ctor(System.Drawing.Rectangle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="invalidRect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="invalidRect">Die <see cref="T:System.Drawing.Rectangle" /> , die als ungültig ausgewiesene Fensterbereich enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.InvalidateEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidRect">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle InvalidRect { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle InvalidRect" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.InvalidateEventArgs.InvalidRect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Drawing.Rectangle" /> , die als ungültig ausgewiesene Fensterbereich enthält.</summary>
+        <value>Der als ungültig ausgewiesene Fensterbereich.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Control.Invalidated?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.Control>, z. B. eine <xref:System.Windows.Forms.Button> oder <xref:System.Windows.Forms.ComboBox>. Geben Sie den Namen der Instanz `Control1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Control.Invalidated?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#40)]
+ [!code-vb[System.Windows.Forms.EventExamples#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,95 @@
+<Type Name="GCLargeObjectHeapCompactionMode" FullName="System.Runtime.GCLargeObjectHeapCompactionMode">
+  <TypeSignature Language="C#" Value="public enum GCLargeObjectHeapCompactionMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GCLargeObjectHeapCompactionMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.GCLargeObjectHeapCompactionMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>[Wird nur in .NET Framework 4.5.1 und neueren Versionen unterstützt]  
+  
+ Gibt an, ob die nächste blockierende Garbagecollection den großen Objektheap (LOH) komprimiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert von der <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> Eigenschaft ist ein Mitglied der <xref:System.Runtime.GCLargeObjectHeapCompactionMode> -Enumeration, der angibt, ob die nächste vollständige blockierende Garbagecollection den großen Objektheap (LOH) auch komprimiert. Standardmäßig wird der große Objektheap nicht komprimiert. Der Wert CompactOnce gibt an, dass die blockierende Garbagecollection den großen Objektheap komprimiert wird. Nach der Garbagecollection, den Wert der <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> Eigenschaft Standardwert wird wiederhergestellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CompactOnce">
+      <MemberSignature Language="C#" Value="CompactOnce" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.GCLargeObjectHeapCompactionMode CompactOnce = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLargeObjectHeapCompactionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Während der nächsten Garbagecollection für blockierende Generation 2 wird der große Objektheap (LOH) komprimiert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.GCLargeObjectHeapCompactionMode Default = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.GCLargeObjectHeapCompactionMode.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLargeObjectHeapCompactionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der große Objektheap (LOH) wird nicht komprimiert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

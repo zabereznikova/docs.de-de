@@ -1,0 +1,249 @@
+<Type Name="ResolveNativeReference" FullName="Microsoft.Build.Tasks.ResolveNativeReference">
+  <TypeSignature Language="C#" Value="public class ResolveNativeReference : Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResolveNativeReference extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.ResolveNativeReference" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert die <c>ResolveNativeReference</c> Aufgabe. Verwenden der <c>ResolveNativeReference</c> Element in der Projektdatei erstellen und Ausführen dieser Aufgabe. Weitere Informationen zu Verwendung und Parametern finden Sie unter [ResolveNativeReference-Aufgabe](http://msdn.microsoft.com/library/56acd101-de77-4eec-92c6-f5c6d2187579).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveNativeReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ResolveNativeReference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.ResolveNativeReference" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalSearchPaths">
+      <MemberSignature Language="C#" Value="public string[] AdditionalSearchPaths { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AdditionalSearchPaths" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveNativeReference.AdditionalSearchPaths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Suchpfade zum Auflösen von Assemblyidentitäten systemeigener Verweise ab oder legt sie fest.</summary>
+        <value>Die Suchpfade zum Auflösen von Assemblyidentitäten systemeigener Verweise.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ContainedComComponents">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ContainedComComponents { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ContainedComComponents" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedComComponents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die COM-Komponenten der systemeigenen Assembly ab oder legt sie fest.</summary>
+        <value>Die COM-Komponenten der systemeigenen Assembly.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ContainedLooseEtcFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ContainedLooseEtcFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ContainedLooseEtcFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedLooseEtcFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die im systemeigenen Manifest aufgelisteten losen ETC-Dateien ab oder legt sie fest.</summary>
+        <value>Die im systemeigenen Manifest aufgelisteten losen ETC-Dateien.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ContainedLooseTlbFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ContainedLooseTlbFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ContainedLooseTlbFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedLooseTlbFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ungebundenen TLB-Dateien der systemeigenen Assembly ab oder legt sie fest.</summary>
+        <value>Die ungebundenen TLB-Dateien der systemeigenen Assembly.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ContainedPrerequisiteAssemblies">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ContainedPrerequisiteAssemblies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ContainedPrerequisiteAssemblies" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedPrerequisiteAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Assemblys ab oder legt diese fest, die vorliegen müssen, bevor das Manifest verwendet werden kann.</summary>
+        <value>Die Assemblys, die vorliegen müssen, bevor das Manifest verwendet werden kann.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ContainedTypeLibraries">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ContainedTypeLibraries { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ContainedTypeLibraries" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedTypeLibraries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Typbibliotheken der systemeigenen Assembly ab oder legt sie fest.</summary>
+        <value>Die Typbibliotheken der systemeigenen Assembly.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ContainingReferenceFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ContainingReferenceFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ContainingReferenceFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainingReferenceFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Verweisdateien ab oder legt sie fest.</summary>
+        <value>Die Verweisdateien.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ResolveNativeReference.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die <c>ResolveNativeReference</c> Aufgabe.</summary>
+        <returns>
+          <see langword="true" />, wenn die Aufgabe erfolgreich ausgeführt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NativeReferences">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] NativeReferences { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] NativeReferences" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveNativeReference.NativeReferences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die systemeigenen Win32-Assemblyverweise ab oder legt diese fest.</summary>
+        <value>Die systemeigenen Win32-Assemblyverweise.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

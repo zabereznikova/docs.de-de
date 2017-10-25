@@ -1,0 +1,285 @@
+<Type Name="IItemContainerGenerator" FullName="System.Windows.Controls.Primitives.IItemContainerGenerator">
+  <TypeSignature Language="C#" Value="public interface IItemContainerGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IItemContainerGenerator" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.IItemContainerGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Schnittstelle, die von Klassen implementiert wird, die zum Generieren der Inhalte der Benutzeroberfläche (UI) für einen Host verantwortlich sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.ItemsControl>ist die Basisklasse zum Anzeigen von ein oder mehrere Datenelemente. <xref:System.Windows.Controls.ItemContainerGenerator>verwaltet eine Zuordnung zwischen <xref:System.Windows.Controls.ItemsControl> und die Liste der Elemente, die angezeigt werden <xref:System.Windows.Controls.ItemsControl>. <xref:System.Windows.Controls.ItemContainerGenerator>dient auch zum Generieren der [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] für diese Elemente im Auftrag von <xref:System.Windows.Controls.ItemsControl>. <xref:System.Windows.Controls.Panel>, <xref:System.Windows.Controls.VirtualizingPanel>, und <xref:System.Windows.Controls.VirtualizingStackPanel> auch <xref:System.Windows.Controls.ItemContainerGenerator> aus demselben Grund.  
+  
+ <xref:System.Windows.Controls.ItemContainerGenerator>implementiert <xref:System.Windows.Controls.Primitives.IItemContainerGenerator> und ist die Schnittstelle, über die einzelnen erwähnten Layoutelemente kommunizieren mit <xref:System.Windows.Controls.ItemContainerGenerator>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GenerateNext">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObject GenerateNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.DependencyObject GenerateNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das Containerelement, das zum Anzeigen des nächsten Elements verwendet.</summary>
+        <returns>Ein <see cref="T:System.Windows.DependencyObject" /> also das Containerelement, das die zum Anzeigen des nächsten Elements verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext%2A>muss aufgerufen werden, im Rahmen der <xref:System.IDisposable> -Verweis, der von einem vorherigen Aufruf zurückgegeben wird die <xref:System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateNext">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObject GenerateNext (out bool isNewlyRealized);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.DependencyObject GenerateNext([out] bool&amp; isNewlyRealized) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext(System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isNewlyRealized" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="isNewlyRealized">Ist <see langword="true" /> Wenn das zurückgegebene <see cref="T:System.Windows.DependencyObject" /> wird neu generiert (realisiert); andernfalls <see langword="false" />.</param>
+        <summary>Gibt das Containerelement, das zum Anzeigen des nächsten Elements verwendet und gibt an, ob das Containerelement neu generiert wurde (realisiert).</summary>
+        <returns>Ein <see cref="T:System.Windows.DependencyObject" /> also das Containerelement, das die zum Anzeigen des nächsten Elements verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das nächste Element angezeigt werden noch nicht generiert wurde (realisiert), <xref:System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext%2A> gibt eine neue <xref:System.Windows.DependencyObject>, und andernfalls die vorhandene <xref:System.Windows.DependencyObject> wird zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratorPositionFromIndex">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.GeneratorPosition GeneratorPositionFromIndex (int itemIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Controls.Primitives.GeneratorPosition GeneratorPositionFromIndex(int32 itemIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IItemContainerGenerator.GeneratorPositionFromIndex(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.GeneratorPosition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">Der Index des gewünschten Elements.</param>
+        <summary>Gibt die <see cref="T:System.Windows.Controls.Primitives.GeneratorPosition" /> -Objekt, das das Element am angegebenen Index zugeordnet ist.</summary>
+        <returns>Ein <see cref="T:System.Windows.Controls.Primitives.GeneratorPosition" /> -Objekt, das das Element am angegebenen Index zugeordnet ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemContainerGeneratorForPanel">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ItemContainerGenerator GetItemContainerGeneratorForPanel (System.Windows.Controls.Panel panel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Controls.ItemContainerGenerator GetItemContainerGeneratorForPanel(class System.Windows.Controls.Panel panel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IItemContainerGenerator.GetItemContainerGeneratorForPanel(System.Windows.Controls.Panel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ItemContainerGenerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="panel" Type="System.Windows.Controls.Panel" />
+      </Parameters>
+      <Docs>
+        <param name="panel">Der Bereich für die eine entsprechende zurückgegeben <see cref="T:System.Windows.Controls.ItemContainerGenerator" />.</param>
+        <summary>Gibt die <see cref="T:System.Windows.Controls.ItemContainerGenerator" /> geeignet für die Verwendung mit dem angegebenen Bereich.</summary>
+        <returns>Ein <see cref="T:System.Windows.Controls.ItemContainerGenerator" /> geeignet für die Verwendung mit dem angegebenen Bereich.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexFromGeneratorPosition">
+      <MemberSignature Language="C#" Value="public int IndexFromGeneratorPosition (System.Windows.Controls.Primitives.GeneratorPosition position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexFromGeneratorPosition(valuetype System.Windows.Controls.Primitives.GeneratorPosition position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IItemContainerGenerator.IndexFromGeneratorPosition(System.Windows.Controls.Primitives.GeneratorPosition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Windows.Controls.Primitives.GeneratorPosition" />
+      </Parameters>
+      <Docs>
+        <param name="position">Der Index des gewünschten Elements.  
+  
+ Die <see cref="T:System.Windows.Controls.Primitives.GeneratorPosition" /> für den gewünschten Index.</param>
+        <summary>Gibt den Index, der dem angegebenen zugeordnet <see cref="T:System.Windows.Controls.Primitives.GeneratorPosition" />.</summary>
+        <returns>Ein <see cref="T:System.Int32" /> also den Index, der dem angegebenen zuordnet <see cref="T:System.Windows.Controls.Primitives.GeneratorPosition" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareItemContainer">
+      <MemberSignature Language="C#" Value="public void PrepareItemContainer (System.Windows.DependencyObject container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PrepareItemContainer(class System.Windows.DependencyObject container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IItemContainerGenerator.PrepareItemContainer(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="container">Der Container vorbereiten. In der Regel <c>Container</c> ist das Ergebnis des vorherigen Aufrufs von <see cref="Overload:System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext" />.</param>
+        <summary>Bereitet das angegebene Element als Container für das entsprechende Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vorbereiten der das angegebene Element enthält die Formatvorlage Container, z. B. Weiterleiten von Informationen über das Hoststeuerelement der <xref:System.Windows.DataTemplate> Wert der <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> -Eigenschaft, und andere kleineren Korrekturen.  
+  
+ <xref:System.Windows.Controls.Primitives.IItemContainerGenerator.PrepareItemContainer%2A>muss aufgerufen werden, nachdem das Element der visuellen Struktur hinzugefügt wurde, damit Ressourcenverweise und geerbte Eigenschaften ordnungsgemäß funktionieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Windows.Controls.Primitives.GeneratorPosition position, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(valuetype System.Windows.Controls.Primitives.GeneratorPosition position, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IItemContainerGenerator.Remove(System.Windows.Controls.Primitives.GeneratorPosition,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Windows.Controls.Primitives.GeneratorPosition" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="position">Die <see cref="T:System.Int32" /> Index des zu entfernenden Elements. <c>Position</c> muss mit einem zuvor generierten (realisierte) Item, d. h., sein Offset muss 0 (null) verweisen.</param>
+        <param name="count">Die <see cref="T:System.Int32" /> Anzahl von Elementen zu entfernen, beginnend am <c>Position</c>.</param>
+        <summary>Entfernt eine oder mehrere generiert (realisierte) Elemente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAll">
+      <MemberSignature Language="C#" Value="public void RemoveAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IItemContainerGenerator.RemoveAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle generierten (realisierte) Elemente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartAt">
+      <MemberSignature Language="C#" Value="public IDisposable StartAt (System.Windows.Controls.Primitives.GeneratorPosition position, System.Windows.Controls.Primitives.GeneratorDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IDisposable StartAt(valuetype System.Windows.Controls.Primitives.GeneratorPosition position, valuetype System.Windows.Controls.Primitives.GeneratorDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt(System.Windows.Controls.Primitives.GeneratorPosition,System.Windows.Controls.Primitives.GeneratorDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IDisposable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Windows.Controls.Primitives.GeneratorPosition" />
+        <Parameter Name="direction" Type="System.Windows.Controls.Primitives.GeneratorDirection" />
+      </Parameters>
+      <Docs>
+        <param name="position">Ein <see cref="T:System.Windows.Controls.Primitives.GeneratorPosition" />, der die Position des Elements, das Elemente generiert angibt.</param>
+        <param name="direction">Ein <see cref="T:System.Windows.Controls.Primitives.GeneratorDirection" /> gibt die Richtung an, die die Elemente generiert.</param>
+        <summary>Bereitet den Generator zum Generieren von Elementen, beginnend am angegebenen <see cref="T:System.Windows.Controls.Primitives.GeneratorPosition" />, und klicken Sie in der angegebenen <see cref="T:System.Windows.Controls.Primitives.GeneratorDirection" />.</summary>
+        <returns>Ein <see cref="T:System.IDisposable" /> -Objekt, das die Lebensdauer des Generierungsprozesses verfolgt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt%2A>muss aufgerufen werden, bevor <xref:System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext%2A> aufgerufen wird.  
+  
+ <xref:System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt%2A>Legt <xref:System.Windows.Controls.ItemContainerGenerator.Status%2A> zu <xref:System.Windows.Controls.Primitives.GeneratorStatus.GeneratingContainers>; Wenn der <xref:System.IDisposable> wird verworfen, ändert sich der Status <xref:System.Windows.Controls.Primitives.GeneratorStatus.ContainersGenerated> oder <xref:System.Windows.Controls.Primitives.GeneratorStatus.Error>je nach Bedarf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartAt">
+      <MemberSignature Language="C#" Value="public IDisposable StartAt (System.Windows.Controls.Primitives.GeneratorPosition position, System.Windows.Controls.Primitives.GeneratorDirection direction, bool allowStartAtRealizedItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IDisposable StartAt(valuetype System.Windows.Controls.Primitives.GeneratorPosition position, valuetype System.Windows.Controls.Primitives.GeneratorDirection direction, bool allowStartAtRealizedItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt(System.Windows.Controls.Primitives.GeneratorPosition,System.Windows.Controls.Primitives.GeneratorDirection,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IDisposable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Windows.Controls.Primitives.GeneratorPosition" />
+        <Parameter Name="direction" Type="System.Windows.Controls.Primitives.GeneratorDirection" />
+        <Parameter Name="allowStartAtRealizedItem" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="position">Ein <see cref="T:System.Windows.Controls.Primitives.GeneratorPosition" />, der die Position des Elements, das Elemente generiert angibt.</param>
+        <param name="direction">Gibt die Position des Elements, das Elemente generiert.</param>
+        <param name="allowStartAtRealizedItem">Ein <see cref="T:System.Boolean" /> , der angibt, ob bei einem generierten (realisierte) Element gestartet.</param>
+        <summary>Bereitet den Generator zum Generieren von Elementen, beginnend am angegebenen <see cref="T:System.Windows.Controls.Primitives.GeneratorPosition" />, und klicken Sie in der angegebenen <see cref="T:System.Windows.Controls.Primitives.GeneratorDirection" />, und steuern, ob bei einem generierten (realisierte) Element starten.</summary>
+        <returns>Ein <see cref="T:System.IDisposable" /> -Objekt, das die Lebensdauer des Generierungsprozesses verfolgt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siehe <xref:System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

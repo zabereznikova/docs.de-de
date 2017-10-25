@@ -1,0 +1,85 @@
+<Type Name="WSFederationHttpSecurityMode" FullName="System.ServiceModel.WSFederationHttpSecurityMode">
+  <TypeSignature Language="C#" Value="public enum WSFederationHttpSecurityMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WSFederationHttpSecurityMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.WSFederationHttpSecurityMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die verschiedenen Sicherheitsmodi für <see cref="T:System.ServiceModel.WSFederationHttpBinding" /> an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration definiert die Sicherheitsmodi, die <xref:System.ServiceModel.WSFederationHttpBinding> unterstützt.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie <xref:System.ServiceModel.WSFederationHttpSecurity.Mode%2A> auf einen Member dieser Enumeration festgelegt wird.  
+  
+ [!code-csharp[WSFederationHttpSecurity#3](~/samples/snippets/csharp/VS_Snippets_CFX/wsfederationhttpsecurity/cs/source.cs#3)]
+ [!code-vb[WSFederationHttpSecurity#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/wsfederationhttpsecurity/vb/source.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="Message" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.WSFederationHttpSecurityMode Message = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.WSFederationHttpSecurityMode.Message" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.WSFederationHttpSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Integrität, Vertraulichkeit, Serverauthentifizierung und Clientauthentifizierung werden mittels SOAP-Nachrichtensicherheit bereitgestellt. Standardmäßig wird der Text verschlüsselt und signiert. Der Dienst muss mit einem Zertifikat konfiguriert werden. Die Clientauthentifizierung basiert auf dem Token, das von einem Sicherheitstokendienst für den Client ausgestellt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.WSFederationHttpSecurityMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.WSFederationHttpSecurityMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.WSFederationHttpSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die SOAP-Nachricht ist während der Übertragung nicht sicher. Es wird keine Verbindung mit einem Sicherheitstokendienst hergestellt. Dieser Modus entspricht der Verwendung der <see langword="wsHttpBinding" />-Bindung mit <see langword="SecurityMode.None" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportWithMessageCredential">
+      <MemberSignature Language="C#" Value="TransportWithMessageCredential" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.WSFederationHttpSecurityMode TransportWithMessageCredential = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.WSFederationHttpSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Integrität, Vertraulichkeit und Serverauthentifizierung werden über HTTPS bereitgestellt. Der Dienst muss mit einem Zertifikat konfiguriert werden. Die Clientauthentifizierung wird mittels SOAP-Nachrichtensicherheit bereitgestellt und basiert auf dem Token, das von einem Sicherheitstokendienst für den Client ausgestellt wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

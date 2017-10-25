@@ -1,0 +1,265 @@
+<Type Name="PromptStyle" FullName="System.Speech.Synthesis.PromptStyle">
+  <TypeSignature Language="C#" Value="public class PromptStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PromptStyle extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.PromptStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Stil für eingabeaufforderungen sprechen, der Einstellungen für die Hervorhebung und Lautstärke, besteht.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Speech.Synthesis.PromptStyle" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptStyle (System.Speech.Synthesis.PromptEmphasis emphasis);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Speech.Synthesis.PromptEmphasis emphasis) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptStyle.#ctor(System.Speech.Synthesis.PromptEmphasis)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="emphasis" Type="System.Speech.Synthesis.PromptEmphasis" />
+      </Parameters>
+      <Docs>
+        <param name="emphasis">Die Einstellung für die Betonung des Formats.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Speech.Synthesis.PromptStyle" /> -Klasse und gibt die Einstellung für die Betonung des Formats.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Spracherkennung Sprachsynthesemodule in Windows unterstützen keine Variationen in die Betonung des Sprechpause zu diesem Zeitpunkt. Festlegen von Werten zur Hervorhebung, die mithilfe eines Members der <xref:System.Speech.Synthesis.PromptEmphasis> Enumeration akustische unverändert in die Sprachsynthese Ausgabe erzeugt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptStyle (System.Speech.Synthesis.PromptRate rate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Speech.Synthesis.PromptRate rate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptStyle.#ctor(System.Speech.Synthesis.PromptRate)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rate" Type="System.Speech.Synthesis.PromptRate" />
+      </Parameters>
+      <Docs>
+        <param name="rate">Die Einstellung für die sprechgeschwindigkeit des Formats.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Speech.Synthesis.PromptStyle" /> -Klasse und gibt die Einstellung für die sprechgeschwindigkeit des Formats.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Speech.Synthesis.PromptBuilder> -Objekt und fügt Sie Textzeichenfolgen. Im Beispiel wird die <xref:System.Speech.Synthesis.PromptStyle.%23ctor%2A> Konstruktor als Argument an die <xref:System.Speech.Synthesis.PromptBuilder.StartStyle%2A> Methode, um eine langsame sprechen anzugeben rate für die Zeichenfolge, die hinzugefügt wird, der den Inhalt einer Bestellung aufgeführt.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Create a PromptBuilder object and add content.  
+        PromptBuilder style = new PromptBuilder();  
+        style.AppendText("Your order for");  
+        style.StartStyle(new PromptStyle(PromptRate.Slow));  
+        style.AppendText("one kitchen sink and one faucet");  
+        style.EndStyle();  
+        style.AppendText("has been confirmed.");  
+  
+        // Speak the contents of the SSML prompt.  
+        synth.Speak(style);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptStyle (System.Speech.Synthesis.PromptVolume volume);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Speech.Synthesis.PromptVolume volume) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptStyle.#ctor(System.Speech.Synthesis.PromptVolume)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="volume" Type="System.Speech.Synthesis.PromptVolume" />
+      </Parameters>
+      <Docs>
+        <param name="volume">Die Einstellung für das Volume (Lautstärke) des Formats.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Speech.Synthesis.PromptStyle" /> -Klasse und gibt die Einstellung für das Sprecherstimme Volume des Formats.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Speech.Synthesis.PromptVolume.Default> festlegen für <xref:System.Speech.Synthesis.PromptVolume> ist ganzer Volumes, die die gleiche ist als <xref:System.Speech.Synthesis.PromptVolume.ExtraLoud>. Die anderen Einstellungen Verringern der Lautstärke der Sprachausgabe relativ zum vollständige Volumeverschlüsselung.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Speech.Synthesis.PromptStyle.%23ctor%2A> Konstruktor Volumeeinstellungen angeben, die die <xref:System.Speech.Synthesis.SpeechSynthesizer> sollten auf Sprechpause anwenden.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Build a prompt that applies different volume settings.  
+        PromptBuilder builder = new PromptBuilder();  
+        builder.StartStyle(new PromptStyle(PromptVolume.Default));  
+        builder.AppendText("This is the default speaking volume.");  
+        builder.EndStyle();  
+        builder.AppendBreak();  
+        builder.StartStyle(new PromptStyle(PromptVolume.ExtraLoud));  
+        builder.AppendText("This is the extra-loud speaking volume.");  
+        builder.EndStyle();  
+        builder.AppendBreak();  
+        builder.StartStyle(new PromptStyle(PromptVolume.Medium));  
+        builder.AppendText("This is the medium speaking volume.");  
+        builder.EndStyle();  
+  
+        // Speak the prompt.  
+        synth.Speak(builder);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Emphasis">
+      <MemberSignature Language="C#" Value="public System.Speech.Synthesis.PromptEmphasis Emphasis { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Speech.Synthesis.PromptEmphasis Emphasis" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.PromptStyle.Emphasis" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptEmphasis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Einstellung für die Betonung des Formats.</summary>
+        <value>Gibt die Einstellung für die Betonung des Formats zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Spracherkennung Sprachsynthesemodule in Windows unterstützen keine Variationen in die Betonung des Sprechpause zu diesem Zeitpunkt. Festlegen von Werten zur Hervorhebung, die mithilfe eines Members der <xref:System.Speech.Synthesis.PromptEmphasis> Enumeration akustische unverändert in die Sprachsynthese Ausgabe erzeugt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rate">
+      <MemberSignature Language="C#" Value="public System.Speech.Synthesis.PromptRate Rate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Speech.Synthesis.PromptRate Rate" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.PromptStyle.Rate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptRate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Einstellung für die sprechgeschwindigkeit des Formats.</summary>
+        <value>Gibt die Einstellung für die sprechgeschwindigkeit des Formats zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Volume">
+      <MemberSignature Language="C#" Value="public System.Speech.Synthesis.PromptVolume Volume { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Speech.Synthesis.PromptVolume Volume" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.PromptStyle.Volume" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Einstellung für das Volume (Lautstärke) des Formats.</summary>
+        <value>Gibt die Einstellung für das Volume (Lautstärke) des Formats zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Speech.Synthesis.PromptVolume.Default> festlegen für <xref:System.Speech.Synthesis.PromptVolume> ist ganzer Volumes, die die gleiche ist als <xref:System.Speech.Synthesis.PromptVolume.ExtraLoud>. Die anderen Einstellungen Verringern der Lautstärke der Sprachausgabe relativ zum vollständige Volumeverschlüsselung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

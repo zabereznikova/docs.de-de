@@ -1,0 +1,398 @@
+<Type Name="WSHttpBindingBaseElement" FullName="System.ServiceModel.Configuration.WSHttpBindingBaseElement">
+  <TypeSignature Language="C#" Value="public abstract class WSHttpBindingBaseElement : System.ServiceModel.Configuration.StandardBindingElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WSHttpBindingBaseElement extends System.ServiceModel.Configuration.StandardBindingElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.WSHttpBindingBaseElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.StandardBindingElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt der Basisklasse Member bereit, die das <see cref="T:System.ServiceModel.Configuration.WSHttpBindingElement" /> und das <see cref="T:System.ServiceModel.Configuration.WSFederationHttpBindingElement" /> gemein haben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WSHttpBindingBaseElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.WSHttpBindingBaseElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.WSHttpBindingBaseElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WSHttpBindingBaseElement (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.WSHttpBindingBaseElement.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Konfigurationsname der Bindung. Dieser Wert sollte eindeutig sein, da er zur Identifizierung der Bindung dient.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.WSHttpBindingBaseElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BypassProxyOnLocal">
+      <MemberSignature Language="C#" Value="public bool BypassProxyOnLocal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BypassProxyOnLocal" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingBaseElement.BypassProxyOnLocal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("bypassProxyOnLocal", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab oder legt einen booleschen Wert fest, der angibt, ob der Proxyserver bei lokalen Adressen umgangen werden soll.</summary>
+        <value>
+          <see langword="true" />, um den Proxyserver bei lokalen Adressen zu umgehen, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostNameComparisonMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.HostNameComparisonMode HostNameComparisonMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.HostNameComparisonMode HostNameComparisonMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingBaseElement.HostNameComparisonMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("hostNameComparisonMode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.HostNameComparisonMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den HTTP-Hostnamen-Vergleichsmodus, der verwendet wird, um URIs zu analysieren, ab oder legt ihn fest.</summary>
+        <value>Ein <see cref="P:System.ServiceModel.Configuration.WSDualHttpBindingElement.HostNameComparisonMode" />-Wert, der den HTTP-Hostnamen-Vergleichsmodus angibt, der verwendet wird, um URIs zu analysieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeFrom">
+      <MemberSignature Language="C#" Value="protected override void InitializeFrom (System.ServiceModel.Channels.Binding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeFrom(class System.ServiceModel.Channels.Binding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.WSHttpBindingBaseElement.InitializeFrom(System.ServiceModel.Channels.Binding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Eine Auflistung von Bindungselementen.</param>
+        <summary>Initialisiert diesen Bindungskonfigurationsabschnitt mit dem Inhalt der angegebenen Bindungselemente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBufferPoolSize">
+      <MemberSignature Language="C#" Value="public long MaxBufferPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxBufferPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingBaseElement.MaxBufferPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxBufferPoolSize", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.LongValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Größe in Bytes für einen Pufferpool, der speichert Sie TCP-Nachrichten, die von der Bindung verarbeitet werden.</summary>
+        <value>Die maximale Größe (in Byte) für einen Pufferpool, der von der Bindung verarbeitet wird. Der Standardwert ist 65.536 Bytes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxReceivedMessageSize">
+      <MemberSignature Language="C#" Value="public long MaxReceivedMessageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxReceivedMessageSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingBaseElement.MaxReceivedMessageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxReceivedMessageSize", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.LongValidator(MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Größe in Byte für eine Nachricht, die von der Bindung verarbeitet werden können.</summary>
+        <value>Die maximale Größe (in Byte) für eine Meldung, die von der Bindung verarbeitet wird. Der Standardwert ist 65.536 Bytes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageEncoding">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.WSMessageEncoding MessageEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.WSMessageEncoding MessageEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingBaseElement.MessageEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("messageEncoding", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.WSMessageEncoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ecoder ab, der zum Codieren der Nachricht verwendet wird, oder legt ihn fest.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.WSMessageEncoding" />-Wert, der den Encoder angibt, der verwendet wird, um die Meldung zu codieren. Der Standardwert ist <see cref="F:System.ServiceModel.WSMessageEncoding.Text" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyConfiguration">
+      <MemberSignature Language="C#" Value="protected override void OnApplyConfiguration (System.ServiceModel.Channels.Binding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnApplyConfiguration(class System.ServiceModel.Channels.Binding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.WSHttpBindingBaseElement.OnApplyConfiguration(System.ServiceModel.Channels.Binding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die anzuwendende Bindung.</param>
+        <summary>Wendet die angegebene Bindung auf diese <see cref="T:System.ServiceModel.Configuration.WSDualHttpBindingElement" />-Instanz an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingBaseElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz ab, die eine Auflistung von <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</summary>
+        <value>Eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz, die eine Sammlung mit <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die entweder Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyAddress">
+      <MemberSignature Language="C#" Value="public Uri ProxyAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ProxyAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingBaseElement.ProxyAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("proxyAddress", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen URI ab oder legt einen URI fest, der die Adresse des HTTP-Proxys angibt.</summary>
+        <value>Ein URI, der die Adresse des HTTP-Proxys angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.ServiceModel.Configuration.WSHttpBindingBaseElement.UseDefaultWebProxy%2A>-Eigenschaft auf `true` festgelegt ist, wird der Wert dieser Eigenschaft ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReaderQuotas">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement ReaderQuotas { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement ReaderQuotas" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingBaseElement.ReaderQuotas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("readerQuotas")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Beschränkungen der Komplexität von SOAP-Meldungen ab oder legt Beschränkungen fest, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert werden.</summary>
+        <value>Der <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />, der die Komplexitätseinschränkungen angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zu den Komplexitätseinschränkungen gehören Elemente, wie z. B. die maximale Elementtiefe und die maximale Länge für den Zeichenfolgeninhalt innerhalb der Meldung. Die Beschränkungen schützen vor einem Typ von DOS-Angriffen (Denial Of Service), die versuchen, die Meldungskomplexität zum Binden von Endpunkt-Verarbeitungsressourcen zu verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReliableSession">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.StandardBindingOptionalReliableSessionElement ReliableSession { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.StandardBindingOptionalReliableSessionElement ReliableSession" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingBaseElement.ReliableSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("reliableSession")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.StandardBindingOptionalReliableSessionElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Konfigurationselement ab, das angibt, ob zuverlässige Sitzungen für den Endpunkt, der mit dieser Bindung konfiguriert wurde, aktiviert werden.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Configuration.StandardBindingOptionalReliableSessionElement" />, das angibt, ob zuverlässige Sitzungen für den Endpunkt, der mit dieser Bindung konfiguriert wurde, aktiviert werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding TextEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding TextEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingBaseElement.TextEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.EncodingConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("textEncoding", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeichensatzcodierung ab, die zum Ausgeben von Meldungen über die Bindung verwendet werden soll, oder legt sie fest.</summary>
+        <value>Ein <see cref="T:System.Text.Encoding" />-Wert, der die Zeichensatzcodierung angibt, die zum Ausgeben von Meldungen über die Bindung verwendet werden soll. Die Standardeinstellung ist <see cref="T:System.Text.UTF8Encoding" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionFlow">
+      <MemberSignature Language="C#" Value="public bool TransactionFlow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransactionFlow" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingBaseElement.TransactionFlow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("transactionFlow", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert fest, der angibt, ob die Bindung WS-Transaktionen unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn die Bindung fließende WS-Transaktionen unterstützt, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert gibt an, dass Clients keine Transaktionen weitergeben und Dienste Nachrichten mit übertragenem Transaktionsnachrichtenkopf zurückweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDefaultWebProxy">
+      <MemberSignature Language="C#" Value="public bool UseDefaultWebProxy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDefaultWebProxy" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingBaseElement.UseDefaultWebProxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("useDefaultWebProxy", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab oder legt einen booleschen Wert fest, der angibt, ob der automatisch konfigurierte HTTP-Proxy des Systems verwendet wird.</summary>
+        <value>
+          <see langword="true" />, wenn der automatisch konfigurierte HTTP-Proxy des Systems verwendet wird, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

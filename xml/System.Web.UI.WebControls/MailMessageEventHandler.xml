@@ -1,0 +1,44 @@
+<Type Name="MailMessageEventHandler" FullName="System.Web.UI.WebControls.MailMessageEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void MailMessageEventHandler(object sender, MailMessageEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MailMessageEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.MailMessageEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.MailMessageEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.MailMessageEventArgs" /> , die Daten der e-Mail-Nachricht für das Ereignis enthält.</param>
+    <summary>Stellt die Methode, die e-Mail-Ereignisse behandelt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.MailMessageEventHandler> Delegaten ändert den Inhalt einer Internet-e-Mail-Nachricht, bevor die Nachricht an die Empfänger gesendet wird. Beispielsweise können Sie zusätzliche Empfänger oder eine benutzerdefinierte Meldung Fußzeile Identifizieren Ihrer Website alle Nachrichten, die mit diesem Handler hinzufügen.  
+  
+ Die `e` Parameter ist ein <xref:System.Web.UI.WebControls.MailMessageEventArgs> Instanz, die im angegebenen e-Mail-Nachricht enthält die <xref:System.Web.UI.WebControls.MailMessageEventArgs.Message%2A> Eigenschaft.  
+  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.MailMessageEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Web.UI.WebControls.MailMessageEventHandler> Instanz eine e-Mail-Nachricht zu ändern, bevor sie an den Empfänger gesendet.  
+  
+ [!code-aspx-csharp[PasswordRecoveryOnBeforeSendMail#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PasswordRecoveryOnBeforeSendMail/CS/passwordrecoveryonbeforesendmailcs.aspx#1)]
+ [!code-aspx-vb[PasswordRecoveryOnBeforeSendMail#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PasswordRecoveryOnBeforeSendMail/VB/passwordrecoveryonbeforesendmailvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

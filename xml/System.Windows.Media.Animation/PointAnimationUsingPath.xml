@@ -1,0 +1,274 @@
+<Type Name="PointAnimationUsingPath" FullName="System.Windows.Media.Animation.PointAnimationUsingPath">
+  <TypeSignature Language="C#" Value="public class PointAnimationUsingPath : System.Windows.Media.Animation.PointAnimationBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PointAnimationUsingPath extends System.Windows.Media.Animation.PointAnimationBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.PointAnimationUsingPath" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.PointAnimationBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt eine Animation des Werts einer <see cref="T:System.Windows.Point" />-Eigenschaft zwischen mindestens zwei Zielwerten unter Verwendung einer <see cref="T:System.Windows.Media.PathGeometry" /> zum Angeben dieser Werte. Diese Animation kann verwendet werden, um ein visuelles Objekt entlang eines Pfads zu bewegen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Animation.PointAnimationUsingPath>Mithilfe der linearen Interpolation für eine angegebene <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
+  
+ <xref:System.Windows.Media.Animation.PointAnimationUsingPath>eignet sich besonders gut für die Animation der Position eines Objekts auf dem Bildschirm aus, wenn das Objekt verwendet einen <xref:System.Windows.Point> Eigenschaft Position angeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PointAnimationUsingPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.PointAnimationUsingPath.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Windows.Media.Animation.PointAnimationUsingPath" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist kein Standardwert <xref:System.Windows.Media.PathGeometry> , damit der Benutzer einen angeben muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.PointAnimationUsingPath Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.PointAnimationUsingPath Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.PointAnimationUsingPath.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.PointAnimationUsingPath</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Animation.PointAnimationUsingPath" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.PointAnimationUsingPath.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Windows.Media.Animation.PointAnimationUsingPath" />.</summary>
+        <returns>Die neue Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Point GetCurrentValueCore (System.Windows.Point defaultOriginValue, System.Windows.Point defaultDestinationValue, System.Windows.Media.Animation.AnimationClock animationClock);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Point GetCurrentValueCore(valuetype System.Windows.Point defaultOriginValue, valuetype System.Windows.Point defaultDestinationValue, class System.Windows.Media.Animation.AnimationClock animationClock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.PointAnimationUsingPath.GetCurrentValueCore(System.Windows.Point,System.Windows.Point,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultOriginValue" Type="System.Windows.Point" />
+        <Parameter Name="defaultDestinationValue" Type="System.Windows.Point" />
+        <Parameter Name="animationClock" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="defaultOriginValue">Der vorgeschlagene Ursprungswert, der verwendet wird, wenn die Animation nicht über einen eigenen explizit festgelegten Startwert verfügt.</param>
+        <param name="defaultDestinationValue">Der vorgeschlagene Zielwert, der verwendet wird, wenn die Animation nicht über einen eigenen explizit festgelegten Endwert verfügt.</param>
+        <param name="animationClock">Ein <see cref="T:System.Windows.Media.Animation.AnimationClock" /> , generiert der <see cref="P:System.Windows.Media.Animation.Clock.CurrentTime" /> oder <see cref="P:System.Windows.Media.Animation.Clock.CurrentProgress" /> von der Animation verwendet.</param>
+        <summary>Berechnet einen Wert, der den aktuellen Wert der zu animierenden Eigenschaft darstellt, durch die <see cref="T:System.Windows.Media.Animation.PointAnimationUsingPath" />.</summary>
+        <returns>Der berechnete Wert der Eigenschaft, die durch die aktuelle Animation bestimmt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `defaultOriginValue` ist die erste dieser Wert wird in der Kompositionskette sein, den Momentaufnahmenwert (sofern verfügbar) oder der Wert der Basiseigenschaft; andernfalls wird dieser Wert den Rückgabewert von der vorherigen Animation in der Kette mit einer <xref:System.Windows.Media.Animation.AnimationClock> , die sich nicht < C4 > <xref:System.Windows.Media.Animation.Clock.Stopped%2A> .  
+  
+ Die `defaultDestinationValue` ist der Basiswert, wenn die Animation wird in der ersten Kompositionsebene von Animationen in einer Eigenschaft; andernfalls ist der Wert aus der vorherigen Kompositionsebene von Animationen für die Eigenschaft der Ausgabewert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAdditive">
+      <MemberSignature Language="C#" Value="public bool IsAdditive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAdditive" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.PointAnimationUsingPath.IsAdditive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob dem Basiswert der animierten Eigenschaft der Ausgabewert der Animation hinzugefügt wird.</summary>
+        <value>**"true"** die Animation dem Basiswert der animierten, anstatt ihn zu ersetzen, andernfalls Eigenschaft Ausgabewert fügt **"false"**. Der Standardwert ist **"false"**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Additive"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.AnimationTimeline.IsAdditiveProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|Keine|  
+  
+> [!NOTE]
+>  Diese Abhängigkeitseigenschaft ist ungewöhnlich, dass die Bezeichnerfeld stammen <xref:System.Windows.Media.Animation.AnimationTimeline>, und verschiedene abgeleitete Klassen freigegeben ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCumulative">
+      <MemberSignature Language="C#" Value="public bool IsCumulative { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCumulative" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.PointAnimationUsingPath.IsCumulative" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Wert der Animation bei Wiederholung akkumuliert wird, oder legt diesen Wert fest.</summary>
+        <value>**"true"** , wenn die Werte der Animation akkumuliert bei seiner <see cref="P:System.Windows.Media.Animation.Timeline.RepeatBehavior" /> -Eigenschaft bewirkt, dass ihre einfache Dauer wiederholt. andernfalls **"false"**. Der Standardwert ist **"false"**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft festgelegt wird, um **"true"**, Ausgabewert die Animation zum Werte nur gesammelt, wenn der Animation <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> -Eigenschaft bewirkt, dass ihre einfache Dauer wiederholt. Die Werte werden nicht gesammelt, wenn er neu gestartet wird, da das übergeordnete Element wiederholt oder weil die Uhr aus neu gestartet wurde eine <xref:System.Windows.Media.Animation.ClockController.Begin%2A> aufrufen.  
+  
+<a name="dependencyPropertyInfo_Cumulative"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.AnimationTimeline.IsCumulativeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+> [!NOTE]
+>  Diese Abhängigkeitseigenschaft ist ungewöhnlich, dass die Bezeichnerfeld stammen <xref:System.Windows.Media.Animation.AnimationTimeline>, und verschiedene abgeleitete Klassen freigegeben ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChanged">
+      <MemberSignature Language="C#" Value="protected override void OnChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.PointAnimationUsingPath.OnChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn dies <see cref="T:System.Windows.Media.Animation.PointAnimationUsingPath" /> geändert wird.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Finden Sie unter <see cref="M:System.Windows.Freezable.OnChanged" /> Informationen zum Überschreiben dieser Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PathGeometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PathGeometry PathGeometry { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.PathGeometry PathGeometry" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.PointAnimationUsingPath.PathGeometry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Geometrie an, die zum Generieren der Ausgabewerte dieser Animation verwendet wird.</summary>
+        <value>Der Pfad, der zum Generieren der Ausgabewerte dieser Animation verwendet wird. Der Standardwert ist **null**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beispiele für das Erstellen eines Pfads mithilfe von Markup oder-Code, finden Sie unter <xref:System.Windows.Media.PathGeometry>.  
+  
+<a name="dependencyPropertyInfo_PathGeometry"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.PointAnimationUsingPath.PathGeometryProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PathGeometryProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PathGeometryProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PathGeometryProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.PointAnimationUsingPath.PathGeometryProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.PointAnimationUsingPath.PathGeometry" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

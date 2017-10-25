@@ -1,0 +1,282 @@
+<Type Name="ConditionalExpression" FullName="System.Linq.Expressions.ConditionalExpression">
+  <TypeSignature Language="C#" Value="public class ConditionalExpression : System.Linq.Expressions.Expression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConditionalExpression extends System.Linq.Expressions.Expression" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.Expressions.ConditionalExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Linq.Expressions.Expression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Linq.Expressions.Expression/ConditionalExpressionProxy))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Ausdruck mit einem bedingten Operator dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Linq.Expressions.Expression.Condition%2A> Factorymethode zum Erstellen einer <xref:System.Linq.Expressions.ConditionalExpression>.  
+  
+ Die <xref:System.Linq.Expressions.Expression.NodeType%2A> von einem <xref:System.Linq.Expressions.ConditionalExpression> ist <xref:System.Linq.Expressions.ExpressionType.Conditional>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einen Ausdruck erstellt, der eine bedingte Anweisung darstellt. Wenn das erste Argument ergibt `true`das zweite Argument ausgeführt wird; andernfalls, wird das dritte Argument ausgeführt wird.  
+  
+ [!code-csharp[System.Linq.Expressions.ExpressionDev10#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.linq.expressions.expressiondev10/cs/program.cs#3)]
+ [!code-vb[System.Linq.Expressions.ExpressionDev10#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.linq.expressions.expressiondev10/vb/module1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="protected override System.Linq.Expressions.Expression Accept (System.Linq.Expressions.ExpressionVisitor visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Linq.Expressions.Expression Accept(class System.Linq.Expressions.ExpressionVisitor visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.ConditionalExpression.Accept(System.Linq.Expressions.ExpressionVisitor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Linq.Expressions.ExpressionVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="visitor">Der Besucher, mit dem dieser Knoten besucht werden soll.</param>
+        <summary>Sendet an die spezifische Visit-Methode für diesen Knotentyp. Beispielsweise ruft <see cref="T:System.Linq.Expressions.MethodCallExpression" /> die Methode <see cref="M:System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(System.Linq.Expressions.MethodCallExpression)" /> auf.</summary>
+        <returns>Das Ergebnis eines Besuchs dieses Knotens.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Standardimplementierung für <xref:System.Linq.Expressions.ExpressionType.Extension> Knoten Aufrufe <xref:System.Linq.Expressions.ExpressionVisitor.VisitExtension%2A>. Überschreiben Sie diese Methode in eine genauere Methode für eine Besucherklasse abgeleiteten von Aufrufen der <xref:System.Linq.Expressions.ExpressionVisitor> Klasse. Sie sollten dennoch unbekannte Besucher unterstützen, durch den Aufruf <xref:System.Linq.Expressions.ExpressionVisitor.VisitExtension%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IfFalse">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.Expression IfFalse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.Expression IfFalse" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.ConditionalExpression.IfFalse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ausdruck ab, die ausgeführt werden, wenn der Test ergibt <see langword="false" />.</summary>
+        <value>Ein <see cref="T:System.Linq.Expressions.Expression" /> , die den Ausdruck, der ausgeführt werden, wenn der Test wird darstellt <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IfTrue">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.Expression IfTrue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.Expression IfTrue" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.ConditionalExpression.IfTrue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ausdruck ab, die ausgeführt werden, wenn der Test ergibt <see langword="true" />.</summary>
+        <value>Ein <see cref="T:System.Linq.Expressions.Expression" /> , die den Ausdruck, der ausgeführt werden, wenn der Test wird darstellt <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override sealed System.Linq.Expressions.ExpressionType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Linq.Expressions.ExpressionType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.ConditionalExpression.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.ExpressionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Knotentyp dieses Ausdrucks zurück. Erweiterungsknoten sollten zurückgeben <see cref="F:System.Linq.Expressions.ExpressionType.Extension" /> beim Überschreiben dieser Methode.</summary>
+        <value>Der <see cref="T:System.Linq.Expressions.ExpressionType" /> des Ausdrucks.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Test">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.Expression Test { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.Expression Test" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.ConditionalExpression.Test" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Test der bedingten Operation ab.</summary>
+        <value>Eine <see cref="T:System.Linq.Expressions.Expression" /> , die den Test der bedingten Operation darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public override Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.ConditionalExpression.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den statischen Typ des Ausdrucks ab, den dieser <see cref="T:System.Linq.Expressions.Expression" /> darstellt.</summary>
+        <value>Der <see cref="P:System.Linq.Expressions.ConditionalExpression.Type" />, der den statischen Typ des Ausdrucks darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.ConditionalExpression Update (System.Linq.Expressions.Expression test, System.Linq.Expressions.Expression ifTrue, System.Linq.Expressions.Expression ifFalse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Linq.Expressions.ConditionalExpression Update(class System.Linq.Expressions.Expression test, class System.Linq.Expressions.Expression ifTrue, class System.Linq.Expressions.Expression ifFalse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.ConditionalExpression.Update(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.ConditionalExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="test" Type="System.Linq.Expressions.Expression" />
+        <Parameter Name="ifTrue" Type="System.Linq.Expressions.Expression" />
+        <Parameter Name="ifFalse" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <param name="test">Die <see cref="P:System.Linq.Expressions.ConditionalExpression.Test" /> -Eigenschaft des Ergebnisses.</param>
+        <param name="ifTrue">Die <see cref="P:System.Linq.Expressions.ConditionalExpression.IfTrue" /> -Eigenschaft des Ergebnisses.</param>
+        <param name="ifFalse">Die <see cref="P:System.Linq.Expressions.ConditionalExpression.IfFalse" /> -Eigenschaft des Ergebnisses.</param>
+        <summary>Erstellt einen neuen Ausdruck, der diesem ähnelt, verwendet jedoch die angegebenen untergeordneten Elemente. Wenn alle untergeordneten Elemente identisch sind, wird dieser Ausdruck zurückgegeben.</summary>
+        <returns>Dieser Ausdruck, wenn keine untergeordneten Elemente geändert, oder ein Ausdruck mit den aktualisierten untergeordneten Elementen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

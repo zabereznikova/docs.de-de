@@ -1,0 +1,944 @@
+<Type Name="DbExpressionVisitor" FullName="System.Data.Common.CommandTrees.DbExpressionVisitor">
+  <TypeSignature Language="C#" Value="public abstract class DbExpressionVisitor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DbExpressionVisitor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.CommandTrees.DbExpressionVisitor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die grundlegende Funktionalität, die von Besuchern implementiert werden soll, die keinen Ergebniswert zurückgeben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DbExpressionVisitor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbAndExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbAndExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbAndExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbAndExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbAndExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbAndExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbApplyExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbApplyExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbApplyExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbApplyExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbApplyExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbApplyExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbArithmeticExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbArithmeticExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbArithmeticExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbArithmeticExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbArithmeticExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbArithmeticExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbCaseExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbCaseExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbCaseExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbCaseExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbCaseExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbCaseExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbCastExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbCastExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbCastExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbCastExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbCastExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbCastExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbComparisonExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbComparisonExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbComparisonExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbComparisonExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbComparisonExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbComparisonExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbConstantExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbConstantExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbConstantExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbConstantExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbConstantExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbConstantExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbCrossJoinExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbCrossJoinExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbCrossJoinExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbCrossJoinExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbCrossJoinExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbCrossJoinExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbDerefExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbDerefExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbDerefExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbDerefExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbDerefExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbDerefExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbDistinctExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbDistinctExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbDistinctExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbDistinctExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbDistinctExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbDistinctExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbElementExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbElementExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbElementExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbElementExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbElementExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbElementExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbEntityRefExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbEntityRefExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbEntityRefExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbEntityRefExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbEntityRefExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbEntityRefExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbExceptExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbExceptExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbExceptExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbExceptExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbExceptExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbExceptExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der zu verarbeitende Ausdruck.</param>
+        <summary>Behandelt alle Ausdrücke nicht erkannten Typs, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn ein Ausdruck eines andernfalls nicht erkannten Typs gefunden wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbFilterExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbFilterExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbFilterExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbFilterExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbFilterExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbFilterExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbFunctionExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbFunctionExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbFunctionExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbFunctionExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbFunctionExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbFunctionExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbGroupByExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbGroupByExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbGroupByExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbGroupByExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbGroupByExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbGroupByExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbIntersectExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbIntersectExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbIntersectExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbIntersectExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbIntersectExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbIntersectExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbIsEmptyExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbIsEmptyExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbIsEmptyExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbIsEmptyExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbIsEmptyExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbIsEmptyExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbIsNullExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbIsNullExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbIsNullExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbIsNullExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbIsNullExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbIsNullExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbIsOfExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbIsOfExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbIsOfExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbIsOfExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbIsOfExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbIsOfExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbJoinExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbJoinExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbJoinExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbJoinExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbJoinExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbJoinExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public virtual void Visit (System.Data.Common.CommandTrees.DbLambdaExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbLambdaExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbLambdaExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbLambdaExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbLambdaExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbLambdaExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbLikeExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbLikeExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbLikeExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbLikeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbLikeExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbLikeExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbLimitExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbLimitExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbLimitExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbLimitExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbLimitExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbLimitExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbNewInstanceExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbNewInstanceExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbNewInstanceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbNewInstanceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbNewInstanceExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbNewInstanceExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbNotExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbNotExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbNotExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbNotExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbNotExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbNotExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbNullExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbNullExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbNullExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbNullExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbNullExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbNullExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbOfTypeExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbOfTypeExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbOfTypeExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbOfTypeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbOfTypeExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbOfTypeExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbOrExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbOrExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbOrExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbOrExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbOrExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbOrExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbParameterReferenceExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbParameterReferenceExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbParameterReferenceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbParameterReferenceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbParameterReferenceExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbParameterReferenceExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbProjectExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbProjectExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbProjectExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbProjectExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbProjectExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbProjectExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbPropertyExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbPropertyExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbPropertyExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbPropertyExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbPropertyExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbPropertyExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbQuantifierExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbQuantifierExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbQuantifierExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbQuantifierExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbQuantifierExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbQuantifierExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbRefExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbRefExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbRefExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbRefExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbRefExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbRefExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbRefKeyExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbRefKeyExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbRefKeyExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbRefKeyExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbRefKeyExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbRefKeyExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbRelationshipNavigationExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbRelationshipNavigationExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbRelationshipNavigationExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbRelationshipNavigationExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbRelationshipNavigationExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbRelationshipNavigationExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbScanExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbScanExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbScanExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbScanExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbScanExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbScanExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbSkipExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbSkipExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbSkipExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbSkipExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbSkipExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbSkipExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbSortExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbSortExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbSortExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbSortExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbSortExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbSortExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbTreatExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbTreatExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbTreatExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbTreatExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbTreatExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbTreatExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbUnionAllExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbUnionAllExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbUnionAllExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbUnionAllExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbUnionAllExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbUnionAllExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract void Visit (System.Data.Common.CommandTrees.DbVariableReferenceExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class System.Data.Common.CommandTrees.DbVariableReferenceExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor.Visit(System.Data.Common.CommandTrees.DbVariableReferenceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbVariableReferenceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der <see cref="T:System.Data.Common.CommandTrees.DbVariableReferenceExpression" />, der abgerufen wird.</param>
+        <summary>Implementiert das Besuchermuster für <see cref="T:System.Data.Common.CommandTrees.DbVariableReferenceExpression" />, wenn sie in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

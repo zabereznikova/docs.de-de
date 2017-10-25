@@ -1,0 +1,67 @@
+<Type Name="DataSourceControlBuilder" FullName="System.Web.UI.DataSourceControlBuilder">
+  <TypeSignature Language="C#" Value="public sealed class DataSourceControlBuilder : System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataSourceControlBuilder extends System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataSourceControlBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ControlBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Den Parser unterstützt die beim Erstellen von Steuerelementen, die für einen Datenanbieter verbunden sind. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceControlBuilder> -Klasse erweitert <xref:System.Web.UI.ControlBuilder> durch Überschreiben der <xref:System.Web.UI.DataSourceControlBuilder.AllowWhitespaceLiterals%2A> Methode zurückzugebenden `false`. <xref:System.Web.UI.DataSourceControlBuilder>wird sichergestellt, dass Leerstellenliterale aus dem Inhalt abgeschnitten werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSourceControlBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceControlBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.DataSourceControlBuilder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowWhitespaceLiterals">
+      <MemberSignature Language="C#" Value="public override bool AllowWhitespaceLiterals ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool AllowWhitespaceLiterals() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceControlBuilder.AllowWhitespaceLiterals" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob im Inhalt zwischen Start- und Endtag eines Steuerelements Leerstellenliterale zulässig sind.</summary>
+        <returns>Immer <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataSourceControlBuilder.AllowWhitespaceLiterals%2A> Methode wird verwendet, um zu bestimmen, ob im Inhalt zwischen die Start- und Endtag eines Steuerelements Leerstellenliterale zulässig sind. <xref:System.Web.UI.DataSourceControlBuilder>Gibt immer `false` bei dieser Methode, d. h. die leerzeichenliterale werden aus dem Inhalt abgeschnitten, bevor der Inhalt vom Seitenparser verarbeitet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

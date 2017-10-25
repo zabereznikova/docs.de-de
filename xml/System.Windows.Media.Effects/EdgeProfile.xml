@@ -1,0 +1,91 @@
+<Type Name="EdgeProfile" FullName="System.Windows.Media.Effects.EdgeProfile">
+  <TypeSignature Language="C#" Value="public enum EdgeProfile" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EdgeProfile extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Effects.EdgeProfile" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Kurventyp an, der auf den Rand einer Bitmap anzuwenden ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung veranschaulicht die unterschiedlichen Werte dieser Enumeration.  
+  
+ ![Bildschirmabbildung: Vergleichen von EdgeProfile-Werten](~/add/media/effects-beveledgeprofile.png "Bildschirmabbildung: Vergleichen von EdgeProfile-Werten")  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BulgedUp">
+      <MemberSignature Language="C#" Value="BulgedUp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Effects.EdgeProfile BulgedUp = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.EdgeProfile.BulgedUp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.EdgeProfile</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Rand mit anfänglicher Krümmung nach oben und dann nach unten, wie ein Grat.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CurvedIn">
+      <MemberSignature Language="C#" Value="CurvedIn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Effects.EdgeProfile CurvedIn = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.EdgeProfile.CurvedIn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.EdgeProfile</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein konkaver Rand mit Krümmung nach innen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CurvedOut">
+      <MemberSignature Language="C#" Value="CurvedOut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Effects.EdgeProfile CurvedOut = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.EdgeProfile.CurvedOut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.EdgeProfile</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein konkaver Rand mit Krümmung nach außen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Linear">
+      <MemberSignature Language="C#" Value="Linear" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Effects.EdgeProfile Linear = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.EdgeProfile.Linear" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.EdgeProfile</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Rand, der eine gerade Linie ist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,17 @@
+<Namespace Name="System.Xml.Serialization">
+  <Docs>
+    <summary>Die <see cref="N:System.Xml.Serialization" /> -Namespace enthält Klassen, die zur Serialisierung von Objekten in XML-Format Dokumente oder Streams im verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zentrale Klasse im Namespace ist die <xref:System.Xml.Serialization.XmlSerializer> Klasse. Um diese Klasse verwenden zu können, verwenden die <xref:System.Xml.Serialization.XmlSerializer.%23ctor%2A> Konstruktor zum Erstellen einer Instanz der Klasse mit dem Typ des Objekts um zu serialisieren. Einmal eine <xref:System.Xml.Serialization.XmlSerializer> wird erstellt, erstellen Sie eine Instanz des Objekts zu serialisieren. Außerdem müssen Sie ein Objekt, um die Datei in ein Dokument oder den Stream schreiben, z. B. Erstellen einer <xref:System.IO.Stream>, <xref:System.IO.TextWriter>, oder <xref:System.Xml.XmlWriter>. Rufen Sie dann die <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> Methode, um das Objekt in ein XML-Dokument zu konvertieren.  
+  
+ Ein Objekt aus einem XML-Dokument zu deserialisieren, erstellen Sie ein geeignetes Objekt, um das Dokument oder den Stream lesen (erneut, eine <xref:System.IO.Stream>, <xref:System.IO.TextWriter>, oder <xref:System.Xml.XmlWriter>). Aufrufen der <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> Methode beim Umwandeln des resultierenden Objekts in den Typ des ursprünglichen Objekts (das serialisiert wurde).  
+  
+ Steuern die Serialisierung die <xref:System.Xml.Serialization> -Namespace enthält mehrere <xref:System.Attribute> Klassen, die auf Member einer Klasse angewendet werden können. Z. B. wenn eine Klasse ein Element, die als XML-Element serialisiert wird enthält, können Sie anwenden der <xref:System.Xml.Serialization.XmlElementAttribute> -Attribut auf den Member. Wenn das Attribut angewendet wird, können Sie angeben, dass Details wie z. B. den tatsächlichen XML-Element mit dem <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> Eigenschaft. Eine vollständige Liste aller Attribute, finden Sie unter der <xref:System.Xml.Serialization.XmlSerializer> -Klassenübersicht.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

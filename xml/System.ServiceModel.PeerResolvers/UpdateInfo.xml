@@ -1,0 +1,176 @@
+<Type Name="UpdateInfo" FullName="System.ServiceModel.PeerResolvers.UpdateInfo">
+  <TypeSignature Language="C#" Value="public class UpdateInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UpdateInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerResolvers.UpdateInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.MessageContract(IsWrapped=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält die Informationen, die zur Aktualisierung der Endpunktadresse eines bestimmten Registrierungseintrags in der Suchtabelle eines Peerresolverdiensts verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instanzen dieser Klasse werden vorwiegend zur Übergabe von Registrierungs-Aktualisierungsanforderungsinformationen an den Resolverdienst von einem Netzwerkclient dieses Diensts verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpdateInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.UpdateInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Standardinstanz der <see cref="T:System.ServiceModel.PeerResolvers.UpdateInfo" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpdateInfo (Guid registrationId, Guid client, string meshId, System.ServiceModel.PeerNodeAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid registrationId, valuetype System.Guid client, string meshId, class System.ServiceModel.PeerNodeAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.UpdateInfo.#ctor(System.Guid,System.Guid,System.String,System.ServiceModel.PeerNodeAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="registrationId" Type="System.Guid" />
+        <Parameter Name="client" Type="System.Guid" />
+        <Parameter Name="meshId" Type="System.String" />
+        <Parameter Name="address" Type="System.ServiceModel.PeerNodeAddress" />
+      </Parameters>
+      <Docs>
+        <param name="registrationId">
+          <see cref="T:System.Guid" />, die die eindeutige ID des Registrierungseintrag für die Aktualisierung angibt.</param>
+        <param name="client">
+          <see cref="T:System.Guid" />, die die eindeutige ID des Peerclient angibt, der die aktualisierten Registrierungseintragsinformationen übermittelt hat.</param>
+        <param name="meshId">
+          <see cref="T:System.String" />, die die Netz-ID des Eintrags enthält.</param>
+        <param name="address">
+          <see cref="T:System.ServiceModel.PeerNodeAddress" />, die die zu aktualisierende Endpunktadresse für den Registrierungseintrag enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.PeerResolvers.UpdateInfo" />-Klasse mit der angegebenen Peerclient-ID, der Registrierungs-ID, der Peernetz-ID und der Peerendpunktadresse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Peer kann über mehrere Einträge für jede Netz-ID verfügen, und zwar einen Eintrag für jeden bestimmten Peerendpunkt. Alle Endpunkteinträge werden getrennt aktualisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientId">
+      <MemberSignature Language="C#" Value="public Guid ClientId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ClientId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.UpdateInfo.ClientId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die eindeutige ID des Peerclient ab, der die aktualisierten Registrierungseintragsinformationen übermittelt hat.</summary>
+        <value>
+          <see cref="T:System.Guid" />, die die eindeutige ID des Peerclient angibt, der die aktualisierten Registrierungseintragsinformationen übermittelt hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBody">
+      <MemberSignature Language="C#" Value="public bool HasBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.UpdateInfo.HasBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob der Text der Nachricht, die eine serialisierte Instanz dieses Typs enthält, richtig formatiert ist.</summary>
+        <returns>True, wenn der Registrierungs-Aktualisierungsinformationstext vom Absender richtig formatiert wurde, False, wenn dies nicht der Fall ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeshId">
+      <MemberSignature Language="C#" Value="public string MeshId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MeshId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.UpdateInfo.MeshId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Netz-ID des Registrierungseintrags ab.</summary>
+        <value>
+          <see cref="T:System.String" />, die die Netz-ID des aktualisierten Registrierungseintrags enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeAddress">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.PeerNodeAddress NodeAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.PeerNodeAddress NodeAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.UpdateInfo.NodeAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerNodeAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zu aktualisierende Endpunktadresse für den Registrierungseintrag ab.</summary>
+        <value>
+          <see cref="T:System.ServiceModel.PeerNodeAddress" />, die die zu aktualisierende Endpunktadresse für den Registrierungseintrag enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegistrationId">
+      <MemberSignature Language="C#" Value="public Guid RegistrationId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid RegistrationId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.UpdateInfo.RegistrationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die eindeutige ID des zu aktualisierenden Registrierungseintrags ab.</summary>
+        <value>
+          <see cref="T:System.Guid" />, die die eindeutige ID des Registrierungseintrag für die Aktualisierung angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,343 @@
+<Type Name="ProjectionCamera" FullName="System.Windows.Media.Media3D.ProjectionCamera">
+  <TypeSignature Language="C#" Value="public abstract class ProjectionCamera : System.Windows.Media.Media3D.Camera" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract ProjectionCamera extends System.Windows.Media.Media3D.Camera" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.ProjectionCamera" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.Camera</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine abstrakte Basisklasse für perspektivische und orthographische Projektionskameras.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.ProjectionCamera Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.ProjectionCamera Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.ProjectionCamera.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.ProjectionCamera</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Media3D.ProjectionCamera" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.ProjectionCamera CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.ProjectionCamera CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.ProjectionCamera.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.ProjectionCamera</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Media3D.ProjectionCamera" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FarPlaneDistance">
+      <MemberSignature Language="C#" Value="public double FarPlaneDistance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 FarPlaneDistance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt diesen fest, der den Abstand zwischen der Kamera und ihrer hinteren Clippingebene angibt.</summary>
+        <value>Double-Wert, der den Abstand zwischen der Kamera und ihrer hinteren Clippingebene angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Benutzer einen Wert für diese Eigenschaft nicht angegeben ist, lautet sein Standardwert plus unendlich.  
+  
+<a name="dependencyPropertyInfo_FarPlaneDistance"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistanceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FarPlaneDistanceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FarPlaneDistanceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FarPlaneDistanceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistanceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Vector3D LookDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Media3D.Vector3D LookDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.ProjectionCamera.LookDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Vector3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Media.Media3D.Vector3D" /> , definiert, der die Richtung, in dem die Kamera in globalen Koordinaten sucht.</summary>
+        <value>Vector3D, der die Richtung der Sicht der Kamera Feld darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_LookDirection"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirectionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Der folgende Auszug wird diese Eigenschaft für eine PerspectiveCamera festgelegt.  
+  
+ [!code-xaml[animate3drotation#Animate3DRotation3DN2](~/samples/snippets/csharp/VS_Snippets_Wpf/Animate3DRotation/CS/Window1.xaml#animate3drotation3dn2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookDirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LookDirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LookDirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.ProjectionCamera.LookDirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="P:System.Windows.Media.Media3D.ProjectionCamera.LookDirection" /> Abhängigkeitseigenschaft...</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NearPlaneDistance">
+      <MemberSignature Language="C#" Value="public double NearPlaneDistance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 NearPlaneDistance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt diesen fest, der den Abstand zwischen der Kamera und ihrer vorderen Clippingebene angibt.</summary>
+        <value>Double-Wert, der den Abstand zwischen der Kamera und ihrer vorderen Clippingebene angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es wird empfohlen, dass diese Eigenschaft auf einen positiven Wert festgelegt werden. Wenn der Benutzer einen Wert für diese Eigenschaft nicht festgelegt ist, Standardwert 0.125 zurück.  
+  
+<a name="dependencyPropertyInfo_NearPlaneDistance"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistanceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NearPlaneDistanceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty NearPlaneDistanceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty NearPlaneDistanceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistanceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="P:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance" /> Abhängigkeitseigenschaft...</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Point3D Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Media3D.Point3D Position" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.ProjectionCamera.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Position der Kamera in globalen Koordinaten.</summary>
+        <value>
+          <see cref="T:System.Windows.Media.Media3D.Point3D" />die Position der Kamera angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass diese Eigenschaft nicht den Speicherort der Kamera, gibt die <xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A> auf dem die Kamera Projektion zentriert ist.  
+  
+<a name="dependencyPropertyInfo_Position"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.ProjectionCamera.PositionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ [!code-xaml[animate3drotation#Animate3DRotation3DN2](~/samples/snippets/csharp/VS_Snippets_Wpf/Animate3DRotation/CS/Window1.xaml#animate3drotation3dn2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PositionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PositionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.ProjectionCamera.PositionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="P:System.Windows.Media.Media3D.ProjectionCamera.Position" /> Abhängigkeitseigenschaft...</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Vector3D UpDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Media3D.Vector3D UpDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.ProjectionCamera.UpDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Vector3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Media.Media3D.Vector3D" /> , definiert die aufwärtsrichtung der Kamera.</summary>
+        <value>Vector3D, das die aufwärtsrichtung in der Szene Projektion darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_UpDirection"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.ProjectionCamera.UpDirectionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Der folgende Auszug wird diese Eigenschaft für eine PerspectiveCamera festgelegt.  
+  
+ [!code-xaml[animate3drotation#Animate3DRotation3DN2](~/samples/snippets/csharp/VS_Snippets_Wpf/Animate3DRotation/CS/Window1.xaml#animate3drotation3dn2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpDirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty UpDirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty UpDirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.ProjectionCamera.UpDirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="P:System.Windows.Media.Media3D.ProjectionCamera.UpDirection" /> Abhängigkeitseigenschaft...</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

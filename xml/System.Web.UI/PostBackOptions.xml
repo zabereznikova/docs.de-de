@@ -1,0 +1,438 @@
+<Type Name="PostBackOptions" FullName="System.Web.UI.PostBackOptions">
+  <TypeSignature Language="C#" Value="public sealed class PostBackOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PostBackOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PostBackOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, wie clientseitiges JavaScript generiert, um ein Postbackereignis zu initiieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PostBackOptions> -Klasse ermöglicht es, Steuerelemente, clientseitiges Skript auszugeben, ein Postbackereignis zu initiieren. Die <xref:System.Web.UI.PostBackOptions> -Klasse stellt außerdem einen Verweis auf das Steuerelement, das das Postbackereignis über initiiert die <xref:System.Web.UI.PostBackOptions.TargetControl%2A> Eigenschaft. Das Postbackereignis erstellt auf Basis der Optionen angegeben, der <xref:System.Web.UI.PostBackOptions> Objekt übergeben die <xref:System.Web.UI.ClientScriptManager.GetPostBackEventReference%2A?displayProperty=nameWithType> Methode.  
+  
+ Normalerweise wird ein Postback zum Server durch Elemente wie z. B. eine Schaltfläche "Absenden" oder eine Schaltfläche "Bild" initiiert. Allerdings können verschiedene Steuerelemente durch Ausgeben von clientseitiges JavaScript ein Postbackereignis initiieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.WebControls.Button.OnClick%2A> -Ereignis für ein <xref:System.Web.UI.WebControls.Button> Steuerelement zum Generieren von clientseitigem Skript für eine <xref:System.Web.UI.WebControls.HyperLink> Steuerelement, mit dem können die <xref:System.Web.UI.WebControls.HyperLink> -Steuerelement dazu führen, dass ein Postbackereignis. Da die <xref:System.Web.UI.PostBackOptions.ActionUrl%2A> Eigenschaft von der `myPostBackOptions` Objekt auf "Page2.aspx" festgelegt ist, das Postback Web Forms-Seite zu einer anderen Seite mit dem Namen "Page2.aspx", die hier nicht bereitgestellt wird. Um dieses Codebeispiel verwenden zu können, müssen Sie eine andere Webseite mit dem Namen "Page2.aspx", um das Projekt oder das Verzeichnis hinzufügen.  
+  
+ [!code-csharp[System.Web.UI.PostBackOptions#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PostBackOptions/CS/postbackoptions.aspx.cs#2)]
+ [!code-vb[System.Web.UI.PostBackOptions#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PostBackOptions/VB/postbackoptions.aspx.vb#2)]  
+  
+ Im folgenden Codebeispiel wird eine Webseite, mit denen die oben angegebene Code-Behind-Datei ausgeführt werden können.  
+  
+ [!code-aspx-csharp[System.Web.UI.PostBackOptions#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PostBackOptions/CS/postbackoptions.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.PostBackOptions#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PostBackOptions/VB/postbackoptions.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PostBackOptions (System.Web.UI.Control targetControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Control targetControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PostBackOptions.#ctor(System.Web.UI.Control)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetControl" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="targetControl">Die <see cref="T:System.Web.UI.Control" /> , empfängt das Postbackereignis.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.PostBackOptions" /> -Klasse mit den angegebenen Ziel Steuerelementdaten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PostBackOptions (System.Web.UI.Control targetControl, string argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Control targetControl, string argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PostBackOptions.#ctor(System.Web.UI.Control,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetControl" Type="System.Web.UI.Control" />
+        <Parameter Name="argument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetControl">Die <see cref="T:System.Web.UI.Control" /> , empfängt das Postbackereignis.</param>
+        <param name="argument">Der optionale Parameter, die während des Postbacks übergeben werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.PostBackOptions" /> Klasse mit dem angegebenen Steuerelement und das Argument Zieldaten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PostBackOptions (System.Web.UI.Control targetControl, string argument, string actionUrl, bool autoPostBack, bool requiresJavaScriptProtocol, bool trackFocus, bool clientSubmit, bool performValidation, string validationGroup);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Control targetControl, string argument, string actionUrl, bool autoPostBack, bool requiresJavaScriptProtocol, bool trackFocus, bool clientSubmit, bool performValidation, string validationGroup) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PostBackOptions.#ctor(System.Web.UI.Control,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetControl" Type="System.Web.UI.Control" />
+        <Parameter Name="argument" Type="System.String" />
+        <Parameter Name="actionUrl" Type="System.String" />
+        <Parameter Name="autoPostBack" Type="System.Boolean" />
+        <Parameter Name="requiresJavaScriptProtocol" Type="System.Boolean" />
+        <Parameter Name="trackFocus" Type="System.Boolean" />
+        <Parameter Name="clientSubmit" Type="System.Boolean" />
+        <Parameter Name="performValidation" Type="System.Boolean" />
+        <Parameter Name="validationGroup" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetControl">Die <see cref="T:System.Web.UI.Control" /> , empfängt das Postbackereignis.</param>
+        <param name="argument">Der optionale Parameter, die während des Postbacks übergeben werden.</param>
+        <param name="actionUrl">Das Ziel des Postbacks.</param>
+        <param name="autoPostBack">
+          <see langword="true" />um das Formular an den Server automatisch als Antwort auf eine Benutzeraktion zu senden; andernfalls <see langword="false" />.</param>
+        <param name="requiresJavaScriptProtocol">
+          <see langword="true" />Wenn die <see langword="javascript:" /> Präfix ist erforderlich ist, andernfalls <see langword="false" />.</param>
+        <param name="trackFocus">
+          <see langword="true" />Wenn das Postbackereignis zurückgeben soll der Seite auf die aktuelle Bildlaufposition, und setzen des Fokus auf das Zielsteuerelement; andernfalls <see langword="false" />.</param>
+        <param name="clientSubmit">
+          <see langword="true" />Wenn das Postbackereignis von Clientskripts ausgelöst werden kann; andernfalls <see langword="false" />.</param>
+        <param name="performValidation">
+          <see langword="true" />Wenn die clientseitige Validierung erforderlich ist, bevor das Postbackereignis eintritt; andernfalls <see langword="false" />.</param>
+        <param name="validationGroup">Die Gruppe von Steuerelementen für die <see cref="T:System.Web.UI.PostBackOptions" /> eine Validierung auslöst, wenn es an den Server zurückgesendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.PostBackOptions" /> Klasse mit den angegebenen Werten für die Eigenschaften der Instanz.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetControl" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionUrl">
+      <MemberSignature Language="C#" Value="public string ActionUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ActionUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PostBackOptions.ActionUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ziel-URL für das Postback einer Web Forms-Seite.</summary>
+        <value>Die URL für das Postback einer Web Forms-Seite. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PostBackOptions.ActionUrl%2A> Eigenschaft von der <xref:System.Web.UI.PostBackOptions> Klasse gibt die URL für die `action` Attribut einer Web Forms-Seite. Die <xref:System.Web.UI.PostBackOptions.ActionUrl%2A> Eigenschaft kann verwendet werden, um anzugeben, welche die Web Forms-Seite Daten zurückgesendet werden, wodurch eine seitenübergreifend bereitstellen. Weitere Informationen zu senden, finden Sie unter [Cross-Page Posting in ASP.NET Web Forms](http://msdn.microsoft.com/library/fedf234e-b7c4-4644-a9e8-c1c0870b043b).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.PostBackOptions.ActionUrl%2A> Eigenschaft eine <xref:System.Web.UI.PostBackOptions> Objekt, das einer postback Cross-Seite, wenn einen Benutzer dazu führen, dass positioniert den Mauszeiger auf ein <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.PostBackOptions.ActionUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PostBackOptions.ActionUrl/CS/postbackoptions.actionurlcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.PostBackOptions.ActionUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PostBackOptions.ActionUrl/VB/postbackoptions.actionurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Argument">
+      <MemberSignature Language="C#" Value="public string Argument { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Argument" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PostBackOptions.Argument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt Sie ein optionales Argument, das übertragen werden in das Postbackereignis fest.</summary>
+        <value>Das optionale Argument, das das Postbackereignis übertragen wird. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PostBackOptions.Argument%2A> Eigenschaft gibt ein optionales Argument, die übertragen werden, in ein Postbackereignis. Diese Eigenschaft dient zur Darstellung der `EVENTARGUMENT` Parameter im _`doPostBack` Methode des clientseitigen JavaScript.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoPostBack">
+      <MemberSignature Language="C#" Value="public bool AutoPostBack { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoPostBack" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PostBackOptions.AutoPostBack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Senden des Formulars an den Server als Reaktion auf eine Benutzeraktion wird automatisch fest.</summary>
+        <value>
+          <see langword="true" />Wenn das Senden des Formulars automatisch wieder als Reaktion auf eine Benutzeraktion wird; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Web.UI.PostBackOptions.AutoPostBack%2A> Eigenschaft, um anzugeben, dass Web Forms-Seite automatisch an den Server als Reaktion auf eine Benutzeraktion wie z. B. das Auswählen eines Elements aus einer Dropdownliste bereitstellen soll. Der JavaScript-Code `setTimeout` Methode wird verwendet, mit der _`doPostBack` Methode, um sicherzustellen, dass die Aktion abgeschlossen ist, bevor das Postback auftritt.  
+  
+   
+  
+## Examples  
+ Im folgenden Code wird dargestellt, die die clientseitige Skript generiert wird, wenn die <xref:System.Web.UI.PostBackOptions.AutoPostBack%2A> Eigenschaft und die <xref:System.Web.UI.PostBackOptions.RequiresJavaScriptProtocol%2A> sind beide-Eigenschaftensatz auf `true`.  
+  
+```vb  
+javascript:setTimeout('__doPostBack('__Page','')', 0)  
+```  
+  
+```csharp  
+javascript:setTimeout('__doPostBack('__Page','')', 0)  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientSubmit">
+      <MemberSignature Language="C#" Value="public bool ClientSubmit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ClientSubmit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PostBackOptions.ClientSubmit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Postbackereignis von clientseitigem Skript erfolgen soll.</summary>
+        <value>
+          <see langword="true" />Wenn das Postbackereignis von clientseitigem Skript erfolgen soll; andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PostBackOptions.ClientSubmit%2A> Eigenschaft gibt an, ob das Postbackereignis von clientseitigem Skript erfolgen soll. Wenn Sie festlegen, die <xref:System.Web.UI.PostBackOptions.ClientSubmit%2A> Eigenschaft `false`, wird kein JavaScript generiert wird. Könnten Sie zuweisen `false` auf die <xref:System.Web.UI.PostBackOptions.ClientSubmit%2A> Eigenschaft, wenn Sie aufrufen möchten die `__doPostBack` Methode selbst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformValidation">
+      <MemberSignature Language="C#" Value="public bool PerformValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PerformValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PostBackOptions.PerformValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die clientseitige Validierung erforderlich ist, bevor das Postbackereignis eintritt.</summary>
+        <value>
+          <see langword="true" />Wenn die clientseitige Validierung erforderlich ist, bevor das Postbackereignis eintritt; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PostBackOptions.PerformValidation%2A> Eigenschaft wird verwendet, um anzugeben, ob die clientseitige Validierung erforderlich ist, bevor das Postbackereignis auftreten kann. Wenn der Wert des der <xref:System.Web.UI.PostBackOptions.PerformValidation%2A> -Eigenschaftensatz auf `true`, können Sie auch die <xref:System.Web.UI.PostBackOptions.ValidationGroup%2A> Eigenschaft, um den Namen der Validierungsgruppe anzugeben, für die Validierung erforderlich, ist bevor das Postbackereignis eintritt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.PostBackOptions.ValidationGroup%2A> und <xref:System.Web.UI.PostBackOptions.PerformValidation%2A> Eigenschaften, um sicherzustellen, dass zwei <xref:System.Web.UI.WebControls.TextBox> Steuerelemente verfügen über Informationen, die in ihnen eingegeben werden, bevor das Postbackereignis generiert wird. Die `NameTextBox` und `AgeTextBox` Steuerelemente sind Teil der `PersonalInfoGroup` Validierungsgruppe, aber die `StateTextBox` -Steuerelement ist nicht. Aus diesem Grund die Benutzer keine eingeben von Daten in die `StateTextBox` zu steuern, bevor das Postbackereignis generiert wird.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.PostBackOptions.Validation#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PostBackOptions.Validation/CS/postbackoptions.validationcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.PostBackOptions.Validation#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PostBackOptions.Validation/VB/postbackoptions.validationvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresJavaScriptProtocol">
+      <MemberSignature Language="C#" Value="public bool RequiresJavaScriptProtocol { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresJavaScriptProtocol" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PostBackOptions.RequiresJavaScriptProtocol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see langword="javascript:" /> Präfix für die clientseitige Skript generiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see langword="javascript:" /> Präfix ist für die Skriptdatei auf Clientseite generiert, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `javascript:` Präfix wird für einige HTML-Attribute benötigt, z. B. die `href` Attribut von der `<a>` -Tag, um eine JavaScript-Eigenschaft von einer URL zu unterscheiden. Ein Attribut wie `onclick` muss nicht die `javascript:` Präfix, da es JavaScript automatisch zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetControl">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control TargetControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control TargetControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PostBackOptions.TargetControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Steuerelementziel, das das Postbackereignis empfängt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Control" /> , die das Steuerelement, das das Postbackereignis empfängt darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PostBackOptions.TargetControl%2A> -Eigenschaft gibt ein <xref:System.Web.UI.Control> -Objekt, das das Steuerelement darstellt, die das Postbackereignis empfängt. Diese Eigenschaft wird als übergeben der `EVENTTARGET` Parameter an die `__doPostBack` -Methode des clientseitigen JavaScript.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackFocus">
+      <MemberSignature Language="C#" Value="public bool TrackFocus { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TrackFocus" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PostBackOptions.TrackFocus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Postbackereignis sollte die Seite auf die aktuelle Bildlaufposition zurück und setzen des Fokus auf das aktuelle Steuerelement fest.</summary>
+        <value>
+          <see langword="true" />Wenn das Postbackereignis zurückgeben soll der Seite auf die aktuelle Bildlaufposition, und setzen des Fokus auf das Zielsteuerelement; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PostBackOptions.TrackFocus%2A> Eigenschaft gibt an, ob die Postbackereignis sollte die Seite auf die aktuelle Bildlaufposition und den Fokus auf die <xref:System.Web.UI.PostBackOptions.TargetControl%2A> steuern, nachdem das Postbackereignis aufgetreten ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public string ValidationGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PostBackOptions.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie die Gruppe von Steuerelementen für die die <see cref="T:System.Web.UI.PostBackOptions" /> Objekt eine Validierung auslöst, wenn es an den Server zurückgesendet.</summary>
+        <value>Die Gruppe von Steuerelementen, für die die <see cref="T:System.Web.UI.PostBackOptions" /> Objekt eine Validierung auslöst, wenn es an den Server zurückgesendet. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.PostBackOptions.ValidationGroup%2A> -Eigenschaft geben Sie die Gruppe "Überprüfung" überprüft, wenn ein Postbackereignis, das generiert wird. Es werden nur die Validierungssteuerelemente in der angegebenen Validierungsgruppe überprüft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.PostBackOptions.ValidationGroup%2A> und <xref:System.Web.UI.PostBackOptions.PerformValidation%2A> Eigenschaften, um sicherzustellen, dass zwei <xref:System.Web.UI.WebControls.TextBox> Steuerelemente verfügen über Informationen, die in ihnen eingegeben werden, bevor das Postbackereignis generiert wird. Die `NameTextBox` und `AgeTextBox` Steuerelemente sind Teil der `PersonalInfoGroup` Validierungsgruppe, aber die `StateTextBox` -Steuerelement ist nicht. Aus diesem Grund die Benutzer keine eingeben von Daten in die `StateTextBox` zu steuern, bevor das Postbackereignis generiert wird.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.PostBackOptions.Validation#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PostBackOptions.Validation/CS/postbackoptions.validationcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.PostBackOptions.Validation#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PostBackOptions.Validation/VB/postbackoptions.validationvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

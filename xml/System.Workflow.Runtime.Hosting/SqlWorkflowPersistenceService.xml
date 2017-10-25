@@ -1,0 +1,585 @@
+<Type Name="SqlWorkflowPersistenceService" FullName="System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService">
+  <TypeSignature Language="C#" Value="public class SqlWorkflowPersistenceService : System.Workflow.Runtime.Hosting.WorkflowPersistenceService, System.Workflow.Runtime.IPendingWork" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlWorkflowPersistenceService extends System.Workflow.Runtime.Hosting.WorkflowPersistenceService implements class System.Workflow.Runtime.IPendingWork" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Hosting.WorkflowPersistenceService</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Workflow.Runtime.IPendingWork</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Persistenzdienst dar, der eine SQL-Datenbank zum Speichern von Workflowzustandsinformationen verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Die <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>-Klasse stellt einen voll funktionsfähigen Persistenzdienst dar. Sie können diesen Dienst vordefiniert verwenden, um Workflowzustandsinformationen über eine Workflowinstanz beizubehalten und abzurufen, wenn die vom Workflow-Laufzeitmodul angefordert wird.  
+  
+ <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> nimmt an der vom <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService> bereitgestellten Funktion zur Workflowtransaktionsbatchverarbeitung teil. Dies bedeutet, er fügt Objekte, die ausstehende Schreibvorgänge in die SQL-Datenbank darstellen, zum <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkBatch%2A> hinzu und implementiert die <xref:System.Workflow.Runtime.IPendingWork>-Schnittstelle.  
+  
+ <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> unterstützt das Sperren von Workflowinstanzen. Dieses Feature wird verwendet, wenn mehrere Workflowlaufzeiten die gleiche Datenbank nutzen. Eine Spalte in der SQL-Datenbanktabelle wird verwendet, um eine Workflowinstanz bei jeder Verwendung durch eine Workflowlaufzeit als gesperrt zu markieren. <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> lädt keine Workflowinstanz, die als von einer anderen Laufzeit "verwendet" markiert ist. Normalerweise werden diese Sperren aufgehoben, wenn die Workflowinstanz beibehalten wird, z.&#160;B. im Leerlauf, beim Abschluss oder beim Beenden. Die Sperren können auch nach einem Zeitraum der Inaktivität automatisch aufgehoben werden. Dieser Zeitraum der Inaktivität kann mithilfe des Konstruktors der <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>-Klasse festgelegt werden.  Er kann auch durch die Konfigurationsdatei festgelegt werden.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)] zu Persistenzdiensten im Allgemeinen finden Sie in der <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService>-Klasse.  
+  
+ Workflowinstanzen können Zeitgeber enthalten, z.&#160;B. wenn sie über eine <xref:System.Workflow.Activities.DelayActivity> verfügen. Für Workflows, die Zeitgeber enthalten, zeichnet der <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> die Zeit auf, wenn der nächste Zeitgeber des Workflows abläuft. Der <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> ruft regelmäßig die Datenbank ab und sucht nach Workflows, deren Zeitgeber abgelaufen sind. Die Frequenz des Abrufintervalls kann mithilfe des <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>-Konstruktors oder über eine Konfigurationsdatei festgelegt werden.  
+  
+> [!NOTE]
+>  Wenn Sie den <xref:System.Workflow.Runtime.Tracking.SqlTrackingService> und den <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> in einer Workflowanwendung verwenden, wird die Verwendung einer einzelnen Datenbank zur Persistenz und Überwachung empfohlen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlWorkflowPersistenceService (System.Collections.Specialized.NameValueCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.NameValueCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.#ctor(System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Eine <see cref="T:System.Collections.Specialized.NameValueCollection" />, die Startparameter enthält.</param>
+        <summary>Initialisiert mit den angegebenen Parametern eine neue Instanz der <see cref="T:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird aufgerufen, wenn das Workflow-Laufzeitmodul Dienste aus einer Anwendungskonfigurationsdatei lädt. Es kann auch programmgesteuert mit dem `NameValueCollection`-Parameter aufgerufen werden. Die gültigen Parameter sind `ConnectionString`, `OwnershipTimeoutSeconds`, `UnloadOnIdle` und `EnableRetries`. Eine <xref:System.ArgumentException> wird ausgelöst, wenn Parameter andere Schlüssel enthalten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="parameters" /> enthält eine ungültige Datenbankverbindungszeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="parameters" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlWorkflowPersistenceService (string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Eine gültige Datenbankverbindungszeichenfolge.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService" />-Klasse unter Verwendung der Datenbankverbindungszeichenfolge.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="connectionString" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlWorkflowPersistenceService (string connectionString, bool unloadOnIdle, TimeSpan instanceOwnershipDuration, TimeSpan loadingInterval);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string connectionString, bool unloadOnIdle, valuetype System.TimeSpan instanceOwnershipDuration, valuetype System.TimeSpan loadingInterval) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.#ctor(System.String,System.Boolean,System.TimeSpan,System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="unloadOnIdle" Type="System.Boolean" />
+        <Parameter Name="instanceOwnershipDuration" Type="System.TimeSpan" />
+        <Parameter Name="loadingInterval" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Eine gültige Datenbankverbindungszeichenfolge.</param>
+        <param name="unloadOnIdle">
+          <see langword="true" />, um den Workflow zu entladen, wenn er im Leerlauf ist.</param>
+        <param name="instanceOwnershipDuration">Die Länge der Zeit, die Sperren für Workflows im Leerlauf beibehalten werden.</param>
+        <param name="loadingInterval">Die Frequenz, mit der der Persistenzdienst die Datenbank nach Workflows mit abgelaufenen Timern abfragt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService" />-Klasse unter Verwendung einer Datenbankverbindungszeichenfolge und anderer Parameter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass beim Verwenden dieses Konstruktors (der einen Wert für `instanceOwnershipDuration` bereitstellt) das Sperren aktiviert wird. Verwenden Sie zum Erstellen eines Persistenzdienstes, der das Sperren nicht aktiviert, einen anderen Konstruktor, der `instanceOwnershipDuration` nicht angibt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="connectionString" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableRetries">
+      <MemberSignature Language="C#" Value="public bool EnableRetries { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableRetries" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.EnableRetries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob <see cref="T:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService" /> den Commit für einen Arbeitsbatch erneut versucht, oder legt den Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn der Dienst den Commitvorgang für den Arbeitsbatch wiederholen soll, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Arbeitsaufgaben können nicht im Batch verarbeitet werden, und alle Transaktionswiederholungen müssen über die `EnableRetries`-Eigenschaft erfolgen:  
+  
+-   Abrufen von abgelaufenen Datenbankzeitgebern  
+  
+-   Laden von Workflowinstanzzuständen  
+  
+-   Erneutes Laden von Workflowinstanzen beim Start des Workflow-Laufzeitmoduls  
+  
+-   Aufrufen von <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.GetAllWorkflows%2A>.  
+  
+ Diese Funktionalität wird nicht nur programmgesteuert festgelegt, sondern kann auch über eine Konfigurationsdatei aktiviert werden. [!INCLUDE[crabout](~/includes/crabout-md.md)]zum Festlegen dieser Eigenschaft durch eine Konfigurationsdatei finden Sie unter [Workflow Konfigurationsdateien](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
+  
+ Allgemeine Informationen zum Wiederholen von arbeitsbatchtransaktionen finden Sie unter [Batchverarbeitung Zustandsinformationen in Workflows](http://msdn.microsoft.com/en-us/ecda18ba-9140-4bd7-b13d-6787fdf5959d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllWorkflows">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Workflow.Runtime.Hosting.SqlPersistenceWorkflowInstanceDescription&gt; GetAllWorkflows ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Workflow.Runtime.Hosting.SqlPersistenceWorkflowInstanceDescription&gt; GetAllWorkflows() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.GetAllWorkflows" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Workflow.Runtime.Hosting.SqlPersistenceWorkflowInstanceDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft Instanzbeschreibungen aller beibehaltener Workflows ab.</summary>
+        <returns>Eine Liste aller beibehaltener Workflows.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCompletedContextActivity">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.Activity LoadCompletedContextActivity (Guid id, System.Workflow.ComponentModel.Activity outerActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Workflow.ComponentModel.Activity LoadCompletedContextActivity(valuetype System.Guid id, class System.Workflow.ComponentModel.Activity outerActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.LoadCompletedContextActivity(System.Guid,System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.Guid" />
+        <Parameter Name="outerActivity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="id">Die <see cref="T:System.Guid" /> der Bereichsaktivität.</param>
+        <param name="outerActivity">Die <see cref="T:System.Workflow.ComponentModel.Activity" />, die die Bereichsaktivität einschließt.</param>
+        <summary>Ruft den angegebenen abgeschlossenen Bereich aus der Datenbank ab.</summary>
+        <returns><see cref="T:System.Workflow.ComponentModel.Activity" />, die den abgeschlossenen Bereich darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Workflowlaufzeitmodul verwendet <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.LoadCompletedContextActivity%2A> während der Kompensierung. <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.LoadCompletedContextActivity%2A> sollte nur vom Workflowlaufzeitmodul aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">In der Datenbank wurde kein Bereich gefunden, der <paramref name="id" /> entspricht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadExpiredTimerWorkflowIds">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Guid&gt; LoadExpiredTimerWorkflowIds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;valuetype System.Guid&gt; LoadExpiredTimerWorkflowIds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.LoadExpiredTimerWorkflowIds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Guid&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Liste von IDs für Workflows mit abgelaufenen Timern ab.</summary>
+        <returns>Eine Liste von IDs für Workflows mit abgelaufenen Timern.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadingInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan LoadingInterval { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan LoadingInterval" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.LoadingInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge des Ladeintervalls ab.</summary>
+        <value>Die Frequenz, mit der der Persistenzdienst die Datenbank auf Workflows mit abgelaufenen Zeitgebern abfragt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist 2 Minuten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadWorkflowInstanceState">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.Activity LoadWorkflowInstanceState (Guid id);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Workflow.ComponentModel.Activity LoadWorkflowInstanceState(valuetype System.Guid id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.LoadWorkflowInstanceState(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="id">Die <see cref="T:System.Guid" /> des Workflowinstanzzustands.</param>
+        <summary>Ruft den angegebenen Workflowinstanzzustand aus der Datenbank ab.</summary>
+        <returns>Eine <see cref="T:System.Workflow.ComponentModel.Activity" />, die die Stammaktivität der Workflowinstanz darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.LoadWorkflowInstanceState%2A> sollte nur vom Workflowlaufzeitmodul aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">In der Datenbank wurde kein Workflowinstanzzustand gefunden, der <paramref name="id" /> entspricht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStarted">
+      <MemberSignature Language="C#" Value="protected override void OnStarted ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnStarted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.OnStarted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet einen neuen Timer und stellt ausgeführte Workflowinstanzen wieder her.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveCompletedContextActivity">
+      <MemberSignature Language="C#" Value="protected override void SaveCompletedContextActivity (System.Workflow.ComponentModel.Activity completedScopeActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void SaveCompletedContextActivity(class System.Workflow.ComponentModel.Activity completedScopeActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.SaveCompletedContextActivity(System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="completedScopeActivity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="completedScopeActivity"><see cref="T:System.Workflow.ComponentModel.Activity" />, die den abgeschlossenen Bereich darstellt.</param>
+        <summary>Speichert den Zustand des angegebenen abgeschlossenen Bereichs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `completedScopeActivity` wird serialisiert und dem <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkBatch%2A> hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveWorkflowInstanceState">
+      <MemberSignature Language="C#" Value="protected override void SaveWorkflowInstanceState (System.Workflow.ComponentModel.Activity rootActivity, bool unlock);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void SaveWorkflowInstanceState(class System.Workflow.ComponentModel.Activity rootActivity, bool unlock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.SaveWorkflowInstanceState(System.Workflow.ComponentModel.Activity,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rootActivity" Type="System.Workflow.ComponentModel.Activity" />
+        <Parameter Name="unlock" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="rootActivity">Die Stammaktivität der Workflowinstanz.</param>
+        <param name="unlock">
+          <see langword="true" />, wenn die Workflowinstanz nicht gesperrt werden soll; <see langword="false" />, wenn die Workflowinstanz gesperrt werden soll.</param>
+        <summary>Speichert den angegebenen Workflowinstanzzustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `rootActivity` wird serialisiert und in den <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkBatch%2A> geschrieben. Der vordefinierte <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> implementiert das Sperren des Workflowinstanzzustands. Der Benutzer muss den `instanceOwnershipDuration`-Parameter im Konstruktor konfigurieren. Dieser Wert legt das Zeitintervall fest, in dem die Instanz von einem Host gesperrt werden kann. Wenn mehrere Hosts den gleichen Persistenzdienst und die gleiche Datenbank nutzen und ein anderer Host versucht, die Instanz während dieses Intervalls zu laden, tritt eine <xref:System.Workflow.Runtime.WorkflowOwnershipException> auf. [!INCLUDE[crdefault](~/includes/crdefault-md.md)] der <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceInstanceId">
+      <MemberSignature Language="C#" Value="public Guid ServiceInstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ServiceInstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.ServiceInstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner der Dienstinstanz ab.</summary>
+        <value>Der Bezeichner der Dienstinstanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `Guid.Empty`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="protected override void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.Start" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet den <see cref="T:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.Start%2A> darf nur vom Workflow-Laufzeitmodul aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="protected override void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet den Dienst und den Timer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.Runtime.IPendingWork.Commit">
+      <MemberSignature Language="C#" Value="void IPendingWork.Commit (System.Transactions.Transaction transaction, System.Collections.ICollection items);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Workflow.Runtime.IPendingWork.Commit(class System.Transactions.Transaction transaction, class System.Collections.ICollection items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.System#Workflow#Runtime#IPendingWork#Commit(System.Transactions.Transaction,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.Transactions.Transaction" />
+        <Parameter Name="items" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">Ein <see cref="T:System.Transactions.Transaction" />.</param>
+        <param name="items">Die <see cref="T:System.Collections.ICollection" /> von Arbeitsaufgaben, die in die Datenbank geschrieben werden soll.</param>
+        <summary>Schreibt eine <see cref="T:System.Collections.ICollection" /> von serialisierten Zustandsobjekten in die Datenbank.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die serialisierten Zustandsobjekte, die in `items` enthalten sind, werden in die Datenbank geschrieben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Workflow.Runtime.Hosting.PersistenceException">Fehler beim Schreiben in die Datenbank.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.Runtime.IPendingWork.Complete">
+      <MemberSignature Language="C#" Value="void IPendingWork.Complete (bool succeeded, System.Collections.ICollection items);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Workflow.Runtime.IPendingWork.Complete(bool succeeded, class System.Collections.ICollection items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.System#Workflow#Runtime#IPendingWork#Complete(System.Boolean,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="succeeded" Type="System.Boolean" />
+        <Parameter Name="items" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="succeeded">
+          <see langword="true" />, wenn der Commitvorgang erfolgreich ausgeführt wurde, andernfalls <see langword="false" />.</param>
+        <param name="items">Eine <see cref="T:System.Collections.ICollection" /> serialisierter Zustandsobjekte.</param>
+        <summary>Schließt den Arbeitsbatch ab und gibt alle Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der vordefinierten Implementierung von <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>   
+ wird <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.System%23Workflow%23Runtime%23IPendingWork%23Complete%2A> nicht ausgeführt. Wenn Sie von der <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>-Klasse erben und die Klasse erweitern, können Sie <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.System%23Workflow%23Runtime%23IPendingWork%23Complete%2A> zum Ausführen aller von der Implementierung vorgegebenen erforderlichen Aktionen für `items` verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.Runtime.IPendingWork.MustCommit">
+      <MemberSignature Language="C#" Value="bool IPendingWork.MustCommit (System.Collections.ICollection items);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Workflow.Runtime.IPendingWork.MustCommit(class System.Collections.ICollection items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.System#Workflow#Runtime#IPendingWork#MustCommit(System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="items">Eine <see cref="T:System.Collections.ICollection" /> von serialisierten Zustandsobjekten, die in die Datenbank geschrieben werden soll.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob die Auflistung serialisierter Zustandsobjekte in die Datenbank geschrieben werden soll.</summary>
+        <returns>
+          <see langword="true" /> gibt an, dass ein Commitvorgang für den Batch ausgeführt werden soll, <see cref="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.System.Workflow.Runtime.IPendingWork.MustCommit(System.Collections.ICollection)" /> gibt immer <see langword="true" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ < xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.System%23Workflow%23Runtime%23IPendingWork%23MustCommit(System.Collections.ICollection) gibt immer `true`, wodurch das Workflow-Laufzeitmodul angewiesen aufzurufenden <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.System%23Workflow%23Runtime%23IPendingWork%23MustCommit(System.Collections.ICollection)> für den Batch.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnloadOnIdle">
+      <MemberSignature Language="C#" Value="protected override bool UnloadOnIdle (System.Workflow.ComponentModel.Activity activity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool UnloadOnIdle(class System.Workflow.ComponentModel.Activity activity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.UnloadOnIdle(System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="activity">Eine <see cref="T:System.Workflow.ComponentModel.Activity" />, die die Stammaktivität der Workflowinstanz darstellt.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob der Workflow entladen wird, wenn er im Leerlauf ist.</summary>
+        <returns>
+          <see langword="true" />, wenn der Workflow entladen wird, wenn er im Leerlauf ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnlockWorkflowInstanceState">
+      <MemberSignature Language="C#" Value="protected override void UnlockWorkflowInstanceState (System.Workflow.ComponentModel.Activity rootActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void UnlockWorkflowInstanceState(class System.Workflow.ComponentModel.Activity rootActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.UnlockWorkflowInstanceState(System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rootActivity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="rootActivity">Eine <see cref="T:System.Workflow.ComponentModel.Activity" />, die die Stammaktivität der Workflowinstanz darstellt.</param>
+        <summary>Hebt die Sperre für den Zugriff auf den angegebenen Workflowinstanzzustand auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode wird von der Workflowlaufzeit die Sperre eines Workflowinstanzzustands im Datenspeicher ohne Persistenz aufgehoben, sie wird von der Workflowlaufzeit aufgerufen, wenn die Laufzeit die Sperre des Zustands ohne Beibehalten aufhebt, z.&#160;B. im Falle eines <xref:System.Workflow.Runtime.WorkflowInstance.Abort%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

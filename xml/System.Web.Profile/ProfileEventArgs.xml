@@ -1,0 +1,120 @@
+<Type Name="ProfileEventArgs" FullName="System.Web.Profile.ProfileEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ProfileEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProfileEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.ProfileEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Web.Profile.ProfileModule.Personalize" /> -Ereignis für die <see cref="T:System.Web.Profile.ProfileModule" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Web.Profile.ProfileEventArgs> -Klasse während der <xref:System.Web.Profile.ProfileModule.Personalize> Ereignis, um ein benutzerdefiniertes Profil angegeben. If-beim der <xref:System.Web.Profile.ProfileModule.Personalize> abgeschlossen wird, der <xref:System.Web.Profile.ProfileEventArgs> Parameter von der <xref:System.Web.Profile.ProfileEventHandler> hat seine <xref:System.Web.Profile.ProfileEventArgs.Profile%2A> -Eigenschaft auf einen Wert, der nicht `null`, und dann die <xref:System.Web.Profile.ProfileModule> verwendet den Wert der der <xref:System.Web.Profile.ProfileEventArgs.Profile%2A> Eigenschaft in der aktuellen <xref:System.Web.HttpContext>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die <xref:System.Web.Profile.ProfileModule.Personalize> Ereignis deklariert wird, in der Datei "Global.asax" einer Anwendung. Der Ereigniscode lädt ein Benutzerprofil basierend auf der Rollenmitgliedschaft.  
+  
+ [!code-csharp[System.Web.Profile.ProfileManager.Personalize#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager.Personalize/CS/global.asax#12)]
+ [!code-vb[System.Web.Profile.ProfileManager.Personalize#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager.Personalize/VB/global.asax#12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileEventArgs (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileEventArgs.#ctor(System.Web.HttpContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die <see cref="T:System.Web.HttpContext" /> der aktuellen Anforderung.</param>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Web.Profile.ProfileEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.ProfileEventArgs.%23ctor%2A> erstellt eine Instanz der <xref:System.Web.Profile.ProfileEventArgs> -Klasse und legt die <xref:System.Web.Profile.ProfileEventArgs.Context%2A> -Eigenschaft auf den angegebenen <xref:System.Web.HttpContext>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Web.HttpContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileEventArgs.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.HttpContext" /> für die aktuelle Anforderung.</summary>
+        <value>Die <see cref="T:System.Web.HttpContext" /> für die aktuelle Anforderung</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Profile.ProfileEventArgs> Objekt enthält Ereignisinformationen in die <xref:System.Web.Profile.ProfileModule.Personalize> -Ereignis für die <xref:System.Web.Profile.ProfileModule> Klasse. Die <xref:System.Web.Profile.ProfileEventArgs.Context%2A> Eigenschaft ermöglicht den Zugriff auf die <xref:System.Web.HttpContext> der aktuellen Anforderung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Profile">
+      <MemberSignature Language="C#" Value="public System.Web.Profile.ProfileBase Profile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Profile.ProfileBase Profile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileEventArgs.Profile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Benutzerprofil für die aktuelle Anforderung.</summary>
+        <value>Das Benutzerprofil für die aktuelle Anforderung verwendet werden soll. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Web.Profile.ProfileEventArgs.Profile%2A> Eigenschaft während der <xref:System.Web.Profile.ProfileModule.Personalize> Ereignis, um ein benutzerdefiniertes Profil angegeben. If-beim der <xref:System.Web.Profile.ProfileModule.Personalize> abgeschlossen wird, der <xref:System.Web.Profile.ProfileEventArgs> Parameter von der <xref:System.Web.Profile.ProfileEventHandler> hat seine <xref:System.Web.Profile.ProfileEventArgs.Profile%2A> -Eigenschaft auf einen Wert, der nicht `null`, und dann die <xref:System.Web.Profile.ProfileModule> verwendet den Wert der der <xref:System.Web.Profile.ProfileEventArgs.Profile%2A> Eigenschaft in der aktuellen <xref:System.Web.HttpContext>.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.Profile.ProfileModule> nicht festlegt der <xref:System.Web.Profile.ProfileEventArgs.Profile%2A> -Eigenschaft für die <xref:System.Web.Profile.ProfileModule.Personalize> Ereignis. Die <xref:System.Web.Profile.ProfileModule> nur Ruft den Wert der <xref:System.Web.Profile.ProfileEventArgs.Profile%2A> Eigenschaft beim den Code in der <xref:System.Web.Profile.ProfileModule.Personalize> abgeschlossen wird. Wenn der <xref:System.Web.Profile.ProfileEventArgs.Profile%2A?displayProperty=nameWithType> Eigenschaft nicht explizit durch Code während der Anwendung festgelegt die <xref:System.Web.Profile.ProfileModule.Personalize> Ereignis, das <xref:System.Web.Profile.ProfileEventArgs.Profile%2A> Eigenschaftswert `null`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die <xref:System.Web.Profile.ProfileModule.Personalize> Ereignis deklariert wird, in der Datei "Global.asax" einer Anwendung. Der Ereigniscode lädt ein Benutzerprofil basierend auf der Rollenmitgliedschaft.  
+  
+ [!code-csharp[System.Web.Profile.ProfileManager.Personalize#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager.Personalize/CS/global.asax#12)]
+ [!code-vb[System.Web.Profile.ProfileManager.Personalize#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager.Personalize/VB/global.asax#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

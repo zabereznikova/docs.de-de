@@ -1,0 +1,34 @@
+<Type Name="ExtractTemplateValuesMethod" FullName="System.Web.UI.ExtractTemplateValuesMethod">
+  <TypeSignature Language="C#" Value="public delegate System.Collections.Specialized.IOrderedDictionary ExtractTemplateValuesMethod(Control control);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ExtractTemplateValuesMethod extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ExtractTemplateValuesMethod" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="control" Type="System.Web.UI.Control" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="control">Die <see cref="T:System.Web.UI.Control" /> aus dem Name/Wert-Paare extrahiert werden soll, übergeben werden durch das datengebundene Steuerelement zu einem zugeordneten Datenquellen-Steuerelements in bidirektionalen Datenbindungsszenarien. Dieser Parameter entspricht der <c>Steuerelement</c> Parameter zu übergeben, indem Sie die <see cref="M:System.Web.UI.IBindableTemplate.ExtractValues(System.Web.UI.Control)" /> Methode.</param>
+    <summary>Stellt einen Delegaten, mit denen ASP.NET extrahiert einen Satz von Name/Wert-Paare aus, einer <see cref="T:System.Web.UI.IBindableTemplate" /> Objekt zur Laufzeit. Diese Klasse kann nicht vererbt werden.</summary>
+    <returns>Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> von Name/Wert-Paaren, die in bidirektionalen, aus einer Vorlage gebildete Datenbindungsszenarien zwischen ASP.NET von datengebundenen Steuerelementen und Datenquellen-Steuerelementen verwendet.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ExtractTemplateValuesMethod> Delegat wird von ASP.NET verwendet und ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden.  
+  
+ Dieser Delegat wird verwendet, durch die <xref:System.Web.UI.CompiledBindableTemplateBuilder> -Klasse, die bei der Standardimplementierung wird von der <xref:System.Web.UI.IBindableTemplate> Schnittstelle, die von ASP.NET generiert wird, wenn der Parser ASP.NET bidirektionale Datenbindung innerhalb Vorlageninhalt auftritt.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+</Type>

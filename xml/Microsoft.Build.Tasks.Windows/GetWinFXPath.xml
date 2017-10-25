@@ -1,0 +1,129 @@
+<Type Name="GetWinFXPath" FullName="Microsoft.Build.Tasks.Windows.GetWinFXPath">
+  <TypeSignature Language="C#" Value="public sealed class GetWinFXPath : Microsoft.Build.Utilities.Task" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GetWinFXPath extends Microsoft.Build.Utilities.Task" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Windows.GetWinFXPath" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationBuildTasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Utilities.Task</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert die <c>GetWinFXPath</c> Aufgabe. Verwenden der <c>GetWinFXPath</c> Element in der Projektdatei erstellen und Ausführen dieser Aufgabe. Weitere Informationen zu Verwendung und Parametern finden Sie unter [GetWinFXPath](http://msdn.microsoft.com/library/b1dfb467-f3d3-47f3-83ef-af7b0e33a772).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetWinFXPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Windows.GetWinFXPath.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.Windows.GetWinFXPath" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Windows.GetWinFXPath.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Aufgabe ausgeführt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Aufgabe erfolgreich ausgeführt wurde andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WinFXNativePath">
+      <MemberSignature Language="C#" Value="public string WinFXNativePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WinFXNativePath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.GetWinFXPath.WinFXNativePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad für systemeigene WinFX Runtime fest.</summary>
+        <value>Der Pfad für systemeigene WinFX Runtime.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WinFXPath">
+      <MemberSignature Language="C#" Value="public string WinFXPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WinFXPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.GetWinFXPath.WinFXPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad für die WinFX Runtime fest.</summary>
+        <value>Der Pfad für die WinFX Runtime.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WinFXWowPath">
+      <MemberSignature Language="C#" Value="public string WinFXWowPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WinFXWowPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.GetWinFXPath.WinFXWowPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad für den WoW-WinFX Laufzeit fest.</summary>
+        <value>Der Pfad für den WoW-WinFX zur Laufzeit.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,133 @@
+<Type Name="PropertyCollection" FullName="System.Data.PropertyCollection">
+  <TypeSignature Language="C#" Value="public class PropertyCollection : System.Collections.Hashtable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PropertyCollection extends System.Collections.Hashtable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.PropertyCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Hashtable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von Eigenschaften, die hinzugefügt werden können <see cref="T:System.Data.DataColumn" />, <see cref="T:System.Data.DataSet" />, oder <see cref="T:System.Data.DataTable" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.PropertyCollection> durch zugegriffen werden kann die `ExtendedProperties` Eigenschaft von der <xref:System.Data.DataColumn>, <xref:System.Data.DataSet>, oder <xref:System.Data.DataTable> Klasse.  
+  
+ Hinzufügen benutzerdefinierter Eigenschaften zu den <xref:System.Data.DataColumn>, <xref:System.Data.DataSet>, oder <xref:System.Data.DataTable> Objekte über die <xref:System.Data.PropertyCollection>. Beispielsweise empfiehlt es sich zum Zeitpunkt der Erstellung des Objekts für den späteren Vergleich in ein anderes Objekt zu speichern.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt einen Timestampwert für eine <xref:System.Data.DataTable> und fügt es der <xref:System.Data.PropertyCollection>.  
+  
+ [!code-csharp[Classic WebData PropertyCollection Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData PropertyCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData PropertyCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData PropertyCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.PropertyCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.PropertyCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Initialisiert alle Felder mit ihren Standardwerten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PropertyCollection (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.PropertyCollection.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Zum Serialisieren oder Deserialisieren eines Objekts benötigten Daten.</param>
+        <param name="context">Die Quelle und das Ziel eines angegebenen serialisierten Streams.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.PropertyCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.PropertyCollection.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine flache Kopie des <see cref="T:System.Data.PropertyCollection" />-Objekts.</summary>
+        <returns>Gibt <see cref="T:System.Object" />, eine flache Kopie der <see cref="T:System.Data.PropertyCollection" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

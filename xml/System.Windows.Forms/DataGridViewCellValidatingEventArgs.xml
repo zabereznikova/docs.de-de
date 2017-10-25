@@ -1,0 +1,127 @@
+<Type Name="DataGridViewCellValidatingEventArgs" FullName="System.Windows.Forms.DataGridViewCellValidatingEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridViewCellValidatingEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewCellValidatingEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewCellValidatingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Windows.Forms.DataGridView.CellValidating" /> -Ereignis für ein <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridView.CellValidating?displayProperty=nameWithType> Ereignis können Sie die Änderungen an der aktuellen Zelle "Abbrechen", wenn der neue Wert ungültig ist. Verwenden der <xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs.FormattedValue%2A> -Eigenschaft können Sie den aktuellen Wert zu bestimmen. Verwenden Sie zum Bestimmen des Status der aktuellen Zelle der <xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs.RowIndex%2A> und <xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs.ColumnIndex%2A> Eigenschaften Zugriff auf die Zelle durch die <xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=nameWithType> Auflistung. Um die Änderung abzubrechen, legen Sie die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`.  
+  
+ Wenn dieses Ereignis im datengebundenen Modus abgebrochen wird, wird der neue Wert nicht auf die zugrunde liegende Datenquelle übertragen. Wenn dieses Ereignis im virtuellen Modus abgebrochen wird die <xref:System.Windows.Forms.DataGridView.CellValuePushed?displayProperty=nameWithType> -Ereignis wird nicht ausgelöst werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel behandelt die <xref:System.Windows.Forms.DataGridView.CellValidating> Ereignis, um sicherzustellen, dass nur positive ganze Zahlen vom Benutzer eingegeben werden. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Referenzthema.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView._Virtual#40](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/CPP/virtual.cpp#40)]
+ [!code-csharp[System.Windows.Forms.DataGridView._Virtual#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/CS/virtual.cs#40)]
+ [!code-vb[System.Windows.Forms.DataGridView._Virtual#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/VB/virtual.vb#40)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ColumnIndex">
+      <MemberSignature Language="C#" Value="public int ColumnIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellValidatingEventArgs.ColumnIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Spaltenindex der Zelle, die überprüft werden muss.</summary>
+        <value>Eine nullbasierte ganze Zahl, die den Spaltenindex der Zelle angibt, die überprüft werden muss.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft. In diesem Beispiel ist Teil eines umfangreicheren Beispiels in [Vorgehensweise: Validieren von Daten im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridViewDataValidation#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormattedValue">
+      <MemberSignature Language="C#" Value="public object FormattedValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object FormattedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellValidatingEventArgs.FormattedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den formatierten Inhalt der Zelle, die überprüft werden muss.</summary>
+        <value>Ein Verweis auf den formatierten Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der vom Benutzer über die Benutzeroberfläche (UI) eingegebene Text wird die <xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs.FormattedValue%2A> Eigenschaftswert. Dies ist der Wert, den Sie überprüfen können, bevor es in die Zelle analysiert wird <xref:System.Windows.Forms.DataGridViewCell.Value%2A> Eigenschaftswert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel behandelt die <xref:System.Windows.Forms.DataGridView.CellValidating> Ereignis, um sicherzustellen, dass nur positive ganze Zahlen vom Benutzer eingegeben werden. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Referenzthema.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView._Virtual#40](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/CPP/virtual.cpp#40)]
+ [!code-csharp[System.Windows.Forms.DataGridView._Virtual#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/CS/virtual.cs#40)]
+ [!code-vb[System.Windows.Forms.DataGridView._Virtual#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/VB/virtual.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellValidatingEventArgs.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeilenindex der Zelle, die überprüft werden muss.</summary>
+        <value>Eine nullbasierte ganze Zahl, die den Zeilenindex der Zelle angibt, die überprüft werden muss.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft. In diesem Beispiel ist Teil eines umfangreicheren Beispiels in [Vorgehensweise: Validieren von Daten im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridViewDataValidation#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

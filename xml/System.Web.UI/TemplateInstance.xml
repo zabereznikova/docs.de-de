@@ -1,0 +1,72 @@
+<Type Name="TemplateInstance" FullName="System.Web.UI.TemplateInstance">
+  <TypeSignature Language="C#" Value="public enum TemplateInstance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TemplateInstance extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.TemplateInstance" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie oft eine Instanz einer Vorlage erstellt werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.TemplateInstance> Enumeration gibt Werte an, der angibt, wie oft eine Instanz einer Vorlage erstellt werden kann. Die Ttribute-Klasse verwendet die Werte aus den <xref:System.Web.UI.TemplateInstanceAttribute> Enumeration. Insbesondere die Ttribute. Einzelne und Ttribute. Mehrere Felder Geben bzw. einzelne und mehrere Instanzen einer Vorlage. Eine einzelne Instanz einer Vorlage können Sie Steuerelemente verweisen, die in der Vorlage enthalten sind.  
+  
+ Beispiele für Steuerelemente, die den einzelnen Wert in den Metadaten zu verwenden sind die <xref:System.Web.UI.WebControls.WebParts.CatalogZone.ZoneTemplate%2A> Eigenschaft der <xref:System.Web.UI.WebControls.WebParts.CatalogZone> -Steuerelement, die <xref:System.Web.UI.WebControls.WebParts.EditorZone.ZoneTemplate%2A> Eigenschaft der <xref:System.Web.UI.WebControls.WebParts.EditorZone> -Steuerelement, und die <xref:System.Web.UI.WebControls.WebParts.WebPartZone.ZoneTemplate%2A> Eigenschaft der <xref:System.Web.UI.WebControls.WebParts.WebPartZone>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.TemplateInstance> Enumeration und die Ttribute-Klasse. Eine benutzerdefinierte <xref:System.Web.UI.WebControls.LoginView> Steuerelement, mit dem Namen `MyLoginView`, überschreibt die <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> -Eigenschaft und die Ttribute an, dass nur eine Instanz der Klasse verwendet die <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> Eigenschaft erstellt wird.  
+  
+ [!code-csharp[System.Web.UI.TemplateInstance#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.TemplateInstance/cs/templateinstance.cs#1)]
+ [!code-vb[System.Web.UI.TemplateInstance#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.TemplateInstance/vb/templateinstance.vb#1)]  
+  
+ Im folgenden Codebeispiel wird eine ASPX-Datei, die verwendet die `MyLoginView` steuern und zeigt den Zugriff auf eine <xref:System.Web.UI.WebControls.Label> Steuerelement, das innerhalb der <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[System.Web.UI.TemplateInstance#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.TemplateInstance/cs/templateinstance.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.TemplateInstance#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.TemplateInstance/vb/templateinstance.aspx#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Multiple">
+      <MemberSignature Language="C#" Value="Multiple" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.TemplateInstance Multiple = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.TemplateInstance.Multiple" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.TemplateInstance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Vorlage, die mehrere Male instanziiert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Single">
+      <MemberSignature Language="C#" Value="Single" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.TemplateInstance Single = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.TemplateInstance.Single" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.TemplateInstance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Vorlage, die nur einmal instanziiert wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

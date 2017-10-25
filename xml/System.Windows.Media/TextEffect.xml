@@ -1,0 +1,449 @@
+<Type Name="TextEffect" FullName="System.Windows.Media.TextEffect">
+  <TypeSignature Language="C#" Value="public sealed class TextEffect : System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TextEffect extends System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextEffect" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Animatable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Texteffekt, der auf Objekte angewendet werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.TextEffect> Objekts können Sie Textobjekten, Effekte, z. B. Animationen, z. B. hinzufügen <xref:System.Windows.Controls.TextBlock>, <xref:System.Windows.Documents.TextElement>, und <xref:System.Windows.Documents.FlowDocument> Objekte.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt ein einzelnes Zeichen, das gedreht wurde. Jedes Zeichen wird unabhängig in Intervallen von 1 Sekunde gedreht. Im Beispiel wird ein definiert eine <xref:System.Windows.Media.TextEffect> , enthält eine <xref:System.Windows.Media.RotateTransform> betrifft, die jedes Zeichen in der <xref:System.Windows.Controls.TextBlock.Text%2A?displayProperty=nameWithType> Eigenschaft. Im Beispiel definiert die Animationen an, für die <xref:System.Windows.Media.RotateTransform.Angle%2A> und <xref:System.Windows.Media.RotateTransform.CenterX%2A> Eigenschaften der <xref:System.Windows.Media.RotateTransform> Objekt. Eine dritte Animation Typs <xref:System.Windows.Media.Animation.Int32AnimationUsingKeyFrames> Änderungen der <xref:System.Windows.Media.TextEffect.PositionStart%2A> Eigenschaft von 0 bis 12, während der Animationssequenz, die Textzeichenfolge mit 13 Zeichen entspricht.  
+  
+ ![Bildschirmabbildung des Texteffekts zum Drehen von Text](~/add/media/texteffect01.jpg "Bildschirmabbildung des Texteffekts zum Drehen von Text")  
+  
+                  Example of a rotating text effect animation  
+  
+ [!code-xaml[TextEffectSample#TextEffectEntireSample](~/samples/snippets/csharp/VS_Snippets_Wpf/TextEffectSample/CS/Window1.xaml#texteffectentiresample)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextEffect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextEffect.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.TextEffect" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen einer <xref:System.Windows.Media.TextEffect>, legen Sie die Eigenschaften, und fügen sie die <xref:System.Windows.Media.TextEffectCollection> des Objekts angegebenen Text.  
+  
+ [!code-csharp[TextOverview#TextEffectSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextOverview/CSharp/TextEffect.xaml.cs#texteffectsnippet1)]
+ [!code-vb[TextOverview#TextEffectSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextOverview/visualbasic/texteffect.xaml.vb#texteffectsnippet1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextEffect (System.Windows.Media.Transform transform, System.Windows.Media.Brush foreground, System.Windows.Media.Geometry clip, int positionStart, int positionCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Transform transform, class System.Windows.Media.Brush foreground, class System.Windows.Media.Geometry clip, int32 positionStart, int32 positionCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextEffect.#ctor(System.Windows.Media.Transform,System.Windows.Media.Brush,System.Windows.Media.Geometry,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="transform" Type="System.Windows.Media.Transform" />
+        <Parameter Name="foreground" Type="System.Windows.Media.Brush" />
+        <Parameter Name="clip" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="positionStart" Type="System.Int32" />
+        <Parameter Name="positionCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="transform">Die <see cref="T:System.Windows.Media.Transform" /> , wird angewendet, um die <see cref="T:System.Windows.Media.TextEffect" />.</param>
+        <param name="foreground">Die <see cref="T:System.Windows.Media.Brush" /> anzuwendende an den Inhalt der <see cref="T:System.Windows.Media.TextEffect" />.</param>
+        <param name="clip">Der Ausschneidebereich der <see cref="T:System.Windows.Media.TextEffect" />.</param>
+        <param name="positionStart">Die Startposition im Text, der die <see cref="T:System.Windows.Media.TextEffect" /> betrifft.</param>
+        <param name="positionCount">Die Anzahl von Positionen im Text, der die <see cref="T:System.Windows.Media.TextEffect" /> betrifft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.TextEffect" /> -Klasse durch Angabe von Klasse-Eigenschaftswerte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Aufrufen der <xref:System.Windows.Media.TextEffect.%23ctor%2A> Konstruktor. Beachten Sie, dass in diesem Fall die `transform` und `clip` Parameter festgelegt `null`, da die Parameterwerte nicht benötigt werden.  
+  
+ [!code-csharp[TextOverview#TextEffectSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextOverview/CSharp/TextEffect.xaml.cs#texteffectsnippet3)]
+ [!code-vb[TextOverview#TextEffectSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextOverview/visualbasic/texteffect.xaml.vb#texteffectsnippet3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clip">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry Clip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Geometry Clip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextEffect.Clip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ausschneidebereich der <see cref="T:System.Windows.Media.TextEffect" />.</summary>
+        <value>Die <see cref="T:System.Windows.Media.Geometry" /> , die den Ausschneidebereich definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Clip"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.TextEffect.ClipProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClipProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ClipProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ClipProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TextEffect.ClipProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.TextEffect.Clip" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.TextEffect Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.TextEffect Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextEffect.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextEffect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.TextEffect" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.TextEffect CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.TextEffect CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextEffect.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextEffect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.TextEffect" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextEffect.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Foreground">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Foreground { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Foreground" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextEffect.Foreground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Media.Brush" /> anzuwendende an den Inhalt der <see cref="T:System.Windows.Media.TextEffect" />.</summary>
+        <value>Der Pinsel, der zum Anwenden der <see cref="T:System.Windows.Media.TextEffect" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Foreground"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.TextEffect.ForegroundProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein animierbaren erstellen <xref:System.Windows.Media.Brush> und legen Sie ihn als das <xref:System.Windows.Media.TextEffect.Foreground%2A> Eigenschaftswert.  
+  
+ [!code-csharp[TextOverview#TextEffectSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextOverview/CSharp/TextEffect.xaml.cs#texteffectsnippet1)]
+ [!code-vb[TextOverview#TextEffectSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextOverview/visualbasic/texteffect.xaml.vb#texteffectsnippet1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForegroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ForegroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ForegroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TextEffect.ForegroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.TextEffect.Foreground" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionCount">
+      <MemberSignature Language="C#" Value="public int PositionCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PositionCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextEffect.PositionCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Position im Text fest, die die <see cref="T:System.Windows.Media.TextEffect" /> betrifft.</summary>
+        <value>Die <see cref="T:System.Int32" /> Wert, der die Position im Text darstellt, die die <see cref="T:System.Windows.Media.TextEffect" /> betrifft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Media.TextEffect.PositionCount%2A> Wert in eine Zahl, die größer ist als die maximale Position im betreffenden Text ungültig ist.  
+  
+<a name="dependencyPropertyInfo_PositionCount"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.TextEffect.PositionCountProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie festlegen können <xref:System.Windows.Media.TextEffect.PositionCount%2A> Wert auf das Maximum <xref:System.Int32> Wert, um sicherzustellen, dass alle Zeichen im Text betroffen sind.  
+  
+ [!code-csharp[TextOverview#TextEffectSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextOverview/CSharp/TextEffect.xaml.cs#texteffectsnippet2)]
+ [!code-vb[TextOverview#TextEffectSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextOverview/visualbasic/texteffect.xaml.vb#texteffectsnippet2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionCountProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PositionCountProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PositionCountProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TextEffect.PositionCountProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.TextEffect.PositionCount" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionStart">
+      <MemberSignature Language="C#" Value="public int PositionStart { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PositionStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextEffect.PositionStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, der Startposition im Text der <see cref="T:System.Windows.Media.TextEffect" /> betrifft.</summary>
+        <value>Die <see cref="T:System.Int32" /> Wert, der die Startposition im Text darstellt, die die <see cref="T:System.Windows.Media.TextEffect" /> betrifft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_PositionStart"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.TextEffect.PositionStartProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionStartProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PositionStartProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PositionStartProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TextEffect.PositionStartProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.TextEffect.PositionStart" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Transform Transform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Transform Transform" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextEffect.Transform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Transform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Media.Transform" /> , wird angewendet, um die <see cref="T:System.Windows.Media.TextEffect" />.</summary>
+        <value>Die <see cref="T:System.Windows.Media.Transform" /> Wert, der die <see cref="T:System.Windows.Media.TextEffect" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Transform"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.TextEffect.TransformProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Markupbeispiel eine <xref:System.Windows.Media.TextEffect> wird erstellt für eine <xref:System.Windows.Controls.TextBlock> Objekt. In diesem Fall ist die Auswirkung einer Rotation der Animation.  
+  
+ [!code-xaml[TextEffectSample#TextEffectSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextEffectSample/CS/Window1.xaml#texteffectsample1)]  
+  
+ Das vollständige Beispiel finden Sie unter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TransformProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TransformProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.TextEffect.TransformProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.TextEffect.Transform" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

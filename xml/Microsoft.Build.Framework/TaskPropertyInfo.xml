@@ -1,0 +1,115 @@
+<Type Name="TaskPropertyInfo" FullName="Microsoft.Build.Framework.TaskPropertyInfo">
+  <TypeSignature Language="C#" Value="public class TaskPropertyInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TaskPropertyInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.TaskPropertyInfo" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Parameterinformationen aus dem mithilfe von Tasks als stark typisierte Klasse.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskPropertyInfo (string name, Type typeOfParameter, bool output, bool required);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type typeOfParameter, bool output, bool required) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskPropertyInfo.#ctor(System.String,System.Type,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="typeOfParameter" Type="System.Type" />
+        <Parameter Name="output" Type="System.Boolean" />
+        <Parameter Name="required" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Parameters</param>
+        <param name="typeOfParameter">Der Typ des Parameters</param>
+        <param name="output">"True", wenn der Parameter eine Ausgabe und ein Eingabeparameter ist. "False", wenn der Parameter nur ein Eingabeparameter ist.</param>
+        <param name="required">"True", wenn der Parameter muss, um jeden Aufruf des Vorgangs angegeben werden.</param>
+        <summary>Kapselt eine Liste von Parametern, die in der Aufgabe deklariert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskPropertyInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name der Eigenschaft.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Output">
+      <MemberSignature Language="C#" Value="public bool Output { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Output" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskPropertyInfo.Output" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>"True", der Ausgabeeigenschaften</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyType">
+      <MemberSignature Language="C#" Value="public Type PropertyType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type PropertyType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskPropertyInfo.PropertyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Typ der Eigenschaft</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="public bool Required { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Required" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskPropertyInfo.Required" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>"True", wenn die Eigenschaft erforderlich ist.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

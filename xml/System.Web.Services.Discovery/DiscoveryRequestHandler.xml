@@ -1,0 +1,95 @@
+<Type Name="DiscoveryRequestHandler" FullName="System.Web.Services.Discovery.DiscoveryRequestHandler">
+  <TypeSignature Language="C#" Value="public sealed class DiscoveryRequestHandler : System.Web.IHttpHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DiscoveryRequestHandler extends System.Object implements class System.Web.IHttpHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Discovery.DiscoveryRequestHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>ASP.NET HTTP-Handler, der eine Anforderung verarbeitet wird, eine Webdienste-Discovery-Dokument.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Discovery.DiscoveryRequestHandler> -Klasse, über die <xref:System.Web.Services.Discovery.DiscoveryRequestHandler.ProcessRequest%2A> -Methode verarbeitet eine HTTP-Anforderung für ein Discovery-Dokument. Ein Discovery-Dokument dargestellte der <xref:System.Web.Services.Discovery.DiscoveryDocument> -Klasse und in der Regel als Datei mit der Erweiterung .disco serialisiert wird. -Webdienstsuche bietet einen Mechanismus zur Bestimmung der Webdienste, die an einem angegebenen Speicherort verfügbar sind.  
+  
+ Die <xref:System.Web.Services.Discovery.DiscoveryRequestHandler> Klasse normalerweise muss nicht direkt von einem Entwickler verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscoveryRequestHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryRequestHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Discovery.DiscoveryRequestHandler" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReusable">
+      <MemberSignature Language="C#" Value="public bool IsReusable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReusable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Discovery.DiscoveryRequestHandler.IsReusable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert für <see langword="true" />, gibt an, ob die Instanz von <see cref="T:System.Web.Services.Discovery.DiscoveryRequestHandler" /> (oder eine abgeleitete Klasse) wiederverwendet werden kann.</summary>
+        <value>Diese Eigenschaft gibt immer <see langword="true" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRequest">
+      <MemberSignature Language="C#" Value="public void ProcessRequest (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessRequest(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryRequestHandler.ProcessRequest(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die <see cref="P:System.Web.HttpContext.Request" /> und <see cref="P:System.Web.HttpContext.Response" /> Eigenschaften der <see cref="T:System.Web.HttpContext" /> Klasse werden bzw. für die Eingabe und Ausgabe verwendet.</param>
+        <summary>Verarbeitet eine HTTP-Anforderung für ein Discovery-Dokument in der HTTP-Antwort serialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Discovery.DiscoveryRequestHandler.ProcessRequest%2A> Methode sucht nach der entsprechenden Dateien in den Dateisystempfad an die HTTP-Anforderung Uniform Resource Locator (URL). Die Suche kann in Unterverzeichnissen erweitern und Ziel Datei switcherweiterungen je nachdem, was sie in das Stammverzeichnis für die Suche findet.  
+  
+ Füllt der Suchvorgang der <xref:System.Web.Services.Discovery.DiscoveryDocument> des Objekts <xref:System.Web.Services.Discovery.DiscoveryDocument.References%2A> Eigenschaft mit Dateien, die gefunden werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

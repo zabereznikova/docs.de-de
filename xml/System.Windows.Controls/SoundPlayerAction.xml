@@ -1,0 +1,142 @@
+<Type Name="SoundPlayerAction" FullName="System.Windows.Controls.SoundPlayerAction">
+  <TypeSignature Language="C#" Value="public class SoundPlayerAction : System.Windows.TriggerAction, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoundPlayerAction extends System.Windows.TriggerAction implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.SoundPlayerAction" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.TriggerAction</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine einfache Audiowiedergabe <see cref="T:System.Windows.TriggerAction" /> zum Wiedergeben von WAV-Dateien verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht, wie mit der <xref:System.Windows.Controls.SoundPlayerAction> Audiowiedergabe ausgelöst, eine WAV-Datei mit einer <xref:System.Windows.EventTrigger> auf die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> und <xref:System.Windows.UIElement.MouseEnter> Ereignisse.  
+  
+ [!code-xaml[MediaGallery_snip#SoundPlayerActionFullPage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snip/CSharp/SoundPlayerActionTriggers.xaml#soundplayeractionfullpage)]
+ [!code-xaml[MediaGallery_snip#SoundPlayerActionFullPage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/SoundPlayerActionTriggers.xaml#soundplayeractionfullpage)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoundPlayerAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.SoundPlayerAction.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.SoundPlayerAction" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.SoundPlayerAction.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die von der <see cref="T:System.Windows.Controls.SoundPlayerAction" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem <xref:System.Windows.Controls.SoundPlayerAction.Dispose%2A> aufgerufen wird, die <xref:System.Windows.Controls.SoundPlayerAction> Objekt ist nicht mehr gültig.  
+  
+ <xref:System.Windows.Controls.SoundPlayerAction.Dispose%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public Uri Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.SoundPlayerAction.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest audio Quellspeicherort.</summary>
+        <value>Der audio Quellspeicherort.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Relative und absolute Pack [!INCLUDE[TLA#tla_uri#plural](~/includes/tlasharptla-urisharpplural-md.md)] können verwendet werden, um Audiodateien aufzeigen, die der folgenden Typen sind:  
+  
+-   **Ressourcendateien**: Dateien mit dem Buildvorgang `Resource`.  
+  
+-   **Inhaltsdateien**: Dateien mit dem Buildvorgang `Content`.  
+  
+-   **Dateien der Ursprungssite**: Dateien mit dem Buildvorgang `None`.  
+  
+ Weitere Informationen zum Pack [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)], finden Sie unter [Paket-URIs in WPF](~/docs/framework/wpf/app-development/pack-uris-in-wpf.md). Weitere Informationen zu Ressourcen, Inhalte und Dateien der Ursprungssite finden Sie unter [Anwendungsressource WPF-Inhalt und Datendateien](~/docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
+  
+ <xref:System.Windows.Controls.SoundPlayerAction.Source%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+<a name="dependencyPropertyInfo_SoundPlayerActionSource"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.SoundPlayerAction.Source%2A>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.SoundPlayerAction.SourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.SoundPlayerAction.Source" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.SoundPlayerAction.SourceProperty>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

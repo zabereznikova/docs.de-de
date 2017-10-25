@@ -1,0 +1,519 @@
+<Type Name="ServiceInstaller" FullName="System.ServiceProcess.ServiceInstaller">
+  <TypeSignature Language="C#" Value="public class ServiceInstaller : System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceInstaller extends System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceProcess.ServiceInstaller" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceProcess</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Install.ComponentInstaller</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Installiert eine Klasse, die erweitert <see cref="T:System.ServiceProcess.ServiceBase" /> zum Implementieren eines Diensts. Diese Klasse wird vom Installationsprogramm aufgerufen, wenn eine dienstanwendung zu installieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceProcess.ServiceInstaller> funktioniert spezifisch für den Dienst, der er zugeordnet ist. Es wird vom Installationsprogramm zum Schreiben von Registrierungswerten, die dem Dienst in einen Unterschlüssel des Registrierungsschlüssels HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services zugeordneten verwendet. Der Dienst wird durch seine ServiceName innerhalb dieser Unterschlüssel identifiziert. Der Unterschlüssel enthält auch den Namen der ausführbaren Datei oder DLL-Datei, die der Dienst angehört.  
+  
+ Um einen Dienst zu installieren, erstellen Sie eine Projekt Installerklasse, die von erben die <xref:System.Configuration.Install.Installer> Klasse, und legen die <xref:System.ComponentModel.RunInstallerAttribute> Attribut für die Klasse, um `true`. Erstellen Sie innerhalb des Projekts eine <xref:System.ServiceProcess.ServiceProcessInstaller> Instanz pro-dienstanwendung, und eine <xref:System.ServiceProcess.ServiceInstaller> Instanz für jeden Dienst in der Anwendung. Klassenkonstruktor des Installer legen Sie die Installationseigenschaften für den Dienst mithilfe der <xref:System.ServiceProcess.ServiceProcessInstaller> und <xref:System.ServiceProcess.ServiceInstaller> Instanzen, und fügen Sie die Instanzen der <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung.  
+  
+> [!NOTE]
+>  Es wird empfohlen, dass Sie den Konstruktor für das Hinzufügen von Instanzen des Installationsprogramms verwenden; Allerdings hinzugefügt werden sollen die <xref:System.Configuration.Install.Installer.Installers%2A> Sammlung in der <xref:System.ServiceProcess.ServiceInstaller.Install%2A> -Methode, achten Sie darauf, dass Sie zum Ausführen von derselben Virtual Machine Additions auf die Auflistung in die <xref:System.ServiceProcess.ServiceInstaller.Uninstall%2A> Methode.  
+  
+ Für alle Klassen abgeleitet der <xref:System.Configuration.Install.Installer> Klasse, die den Status des der <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung muss in der <xref:System.ServiceProcess.ServiceInstaller.Install%2A> und <xref:System.ServiceProcess.ServiceInstaller.Uninstall%2A> Methoden. Allerdings können Sie vermeiden, die Wartung der Auflistung über die <xref:System.ServiceProcess.ServiceInstaller.Install%2A> und <xref:System.ServiceProcess.ServiceInstaller.Uninstall%2A> Methoden, wenn Sie Instanzen des Installationsprogramms hinzufügen der <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung im Konstruktor benutzerdefinierten Installers-Klasse. Wenn das Installationsprogramm aufgerufen wird, sucht es nach der <xref:System.ComponentModel.RunInstallerAttribute> Attribut. Wenn das Attribut `true`, das Hilfsprogramm installiert alle Dienste, die hinzugefügt wurden, die <xref:System.Configuration.Install.Installer.Installers%2A> -Auflistung, die Ihr Projektinstallationsprogramm zugeordnet waren. Wenn <xref:System.ComponentModel.RunInstallerAttribute> ist `false` oder ist nicht vorhanden ist, wird das Installationsprogramm ignoriert die Projekt-Installer.  
+  
+ Die <xref:System.ServiceProcess.ServiceProcessInstaller> Ihrem Projekt installiert Informationen, die alle zugeordneten <xref:System.ServiceProcess.ServiceInstaller> Instanzen im Projekt. Wenn dieser Dienst nichts, die sie von anderen Dienste im Projekt Installation trennt verfügt, wird diese dienstspezifischen Informationen von dieser Methode installiert.  
+  
+> [!NOTE]
+>  Ist es entscheidend, die die <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> übereinstimmen, auf die <xref:System.ServiceProcess.ServiceBase.ServiceName%2A?displayProperty=nameWithType> die Sie von abgeleiteten Klasse <xref:System.ServiceProcess.ServiceBase>. In der Regel wird der Wert, der die <xref:System.ServiceProcess.ServiceBase.ServiceName%2A?displayProperty=nameWithType> Eigenschaft für den Dienst in die Main()-Funktion), der die dienstanwendung ausführbaren Datei festgelegt ist. Der Dienstkontroll-Manager verwendet die <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A?displayProperty=nameWithType> Eigenschaft, um den Dienst innerhalb dieser ausführbaren Datei zu suchen.  
+  
+ Andere Eigenschaften können geändert werden, auf die <xref:System.ServiceProcess.ServiceInstaller> entweder vor oder nach dem Hinzufügen zu der <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung von Ihrem Projekt-Installer. Z. B. eines Diensts <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> kann festgelegt werden, starten Sie den Dienst automatisch beim Neustart des Computers oder erfordern, dass einen Benutzer den Dienst manuell starten.  
+  
+ Normalerweise werden Sie nicht die Methoden aufrufen, auf <xref:System.ServiceProcess.ServiceInstaller> innerhalb des Codes; sind sie in der Regel nur vom Installationsprogramm aufgerufen. Ruft das Installationsprogramm automatisch die <xref:System.ServiceProcess.ServiceProcessInstaller.Install%2A?displayProperty=nameWithType> und <xref:System.ServiceProcess.ServiceInstaller.Install%2A?displayProperty=nameWithType> Methoden, die während des Installationsvorgangs. Fehler werden behoben, bei Bedarf durch den Aufruf <xref:System.ServiceProcess.ServiceProcessInstaller.Rollback%2A> (oder <xref:System.ServiceProcess.ServiceInstaller.Rollback%2A?displayProperty=nameWithType>) für alle zuvor installierten Komponenten.  
+  
+ Ruft das Installationsprogramm <xref:System.ServiceProcess.ServiceInstaller.Uninstall%2A> zum Entfernen des Objekts.  
+  
+ Eine Anwendung-Installationsroutine verwaltet automatisch Informationen über die Komponenten bereits installiert, mit dem Projekt Installer <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType>. Diese Statusinformationen wird ständig aktualisiert, als die <xref:System.ServiceProcess.ServiceProcessInstaller> -Instanz, und jedes <xref:System.ServiceProcess.ServiceInstaller> Instanz mit dem Hilfsprogramm installiert ist. Es ist normalerweise nicht erforderlich, für den Code, um Zustandsinformationen explizit zu ändern.  
+  
+ Wenn die Installation ausgeführt wird, erstellt er automatisch ein <xref:System.Diagnostics.EventLogInstaller> So installieren Sie das Ereignisprotokoll-Quelle zugeordnet der <xref:System.ServiceProcess.ServiceBase> abgeleitete Klasse. Die <xref:System.Diagnostics.EventLog.Log%2A> Eigenschaft für diese Quelle wird festgelegt, indem die <xref:System.ServiceProcess.ServiceInstaller.%23ctor%2A> Konstruktor in Anwendungsprotokoll des Computers. Beim Festlegen der <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> von der <xref:System.ServiceProcess.ServiceInstaller> (sollte identisch mit dem der <xref:System.ServiceProcess.ServiceBase.ServiceName%2A?displayProperty=nameWithType> des Diensts), die <xref:System.Diagnostics.EventLog.Source%2A> automatisch auf den gleichen Wert festgelegt ist. In ein Installationsfehler ist die Installation der Quelle Rollback zusammen mit der zuvor installierten Dienste an.  
+  
+ Die <xref:System.ServiceProcess.ServiceInstaller.Uninstall%2A> Methode versucht, den Dienst zu beenden, falls er ausgeführt wird. Gibt an, ob dies oder nicht erfolgreich <xref:System.ServiceProcess.ServiceInstaller.Uninstall%2A> macht die von vorgenommenen <xref:System.ServiceProcess.ServiceInstaller.Install%2A>. Wenn eine neue Datenquelle für die Protokollierung von Komponentenereignissen erstellt wurde, wird die Quelle gelöscht.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt einen Projekt Installer aufgerufen `MyProjectInstaller`, erbt die <xref:System.Configuration.Install.Installer>. Es wird vorausgesetzt, es ist eine ausführbare Datei, die zwei Dienste, die "Hello World-Dienst 1" und "Hello World-Dienst 2". Innerhalb des Konstruktors für `MyProjectInstaller` (das würde aufgerufen werden vom Installationsprogramm), <xref:System.ServiceProcess.ServiceInstaller> Objekte werden erstellt, für beide Dienste und ein <xref:System.ServiceProcess.ServiceProcessInstaller> wird für die ausführbare Datei erstellt. Damit das Installationsprogramm erkennt `MyProjectInstaller` als einen gültigen Installer die <xref:System.ComponentModel.RunInstallerAttribute> -Attributsatz zur `true`.  
+  
+ Optionale Eigenschaften werden für die Prozess- und Dienstinstallationsprogramm festgelegt, bevor die Installationsprogramme hinzugefügt werden die <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung. Wenn das Installationsprogramm zugreift `MyProjectInstaller`, die Objekte hinzugefügt der <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung durch einen Aufruf von <xref:System.Configuration.Install.InstallerCollection.Add%2A?displayProperty=nameWithType> wird wiederum installiert werden. Während des Prozesses verwaltet das Installationsprogramm Zustandsinformationen, die angibt, welche Objekte installiert wurden, sodass jede wiederum gesichert werden kann Wenn ein Installationsfehler auftritt.  
+  
+ Normalerweise würde eine Instanz der Klasse Installer Projekt nicht explizit erstellen. Sie erstellen und Hinzufügen der <xref:System.ComponentModel.RunInstallerAttribute> -Attribut auf die Syntax, aber es ist das Install-Hilfsprogramm, das tatsächlich aufruft, und deshalb instanziiert die Klasse.  
+  
+ [!code-cpp[Classic ServiceInstaller Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ServiceInstaller Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ServiceInstaller Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ServiceInstaller Example/CS/source.cs#1)]
+ [!code-vb[Classic ServiceInstaller Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ServiceInstaller Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceInstaller ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceInstaller.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceProcess.ServiceInstaller" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um einen Dienst zu installieren, erstellen Sie eine Projekt Installerklasse, die von erben die <xref:System.Configuration.Install.Installer> Klasse, und legen die <xref:System.ComponentModel.RunInstallerAttribute> Attribut für die Klasse, um `true`. Erstellen Sie innerhalb des Projekts eine <xref:System.ServiceProcess.ServiceProcessInstaller> Instanz pro-dienstanwendung, und eine <xref:System.ServiceProcess.ServiceInstaller> Instanz für jeden Dienst in der Anwendung. Klassenkonstruktor des Installer legen Sie die Installationseigenschaften für den Dienst mithilfe der <xref:System.ServiceProcess.ServiceProcessInstaller> und <xref:System.ServiceProcess.ServiceInstaller> Instanzen, und fügen Sie die Instanzen der <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung.  
+  
+ Die <xref:System.ServiceProcess.ServiceInstaller.%23ctor%2A> Konstruktor generiert automatisch ein Ereignisprotokoll, deren Quelle <xref:System.Diagnostics.EventLog.Log%2A> Eigenschaftensatz in Anwendungsprotokoll des Computers, und ein <xref:System.Diagnostics.EventLogInstaller>. Beim Festlegen der <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> von der <xref:System.ServiceProcess.ServiceInstaller>, muss identisch mit dem der <xref:System.ServiceProcess.ServiceBase.ServiceName%2A?displayProperty=nameWithType> des Diensts, der <xref:System.Diagnostics.EventLog.Source%2A> Eigenschaft des Ereignisprotokolls automatisch auf den gleichen Wert festgelegt ist. Die Quelle wird im Fall eines Fehlers bei Installation automatisch gelöscht.  
+  
+ Die <xref:System.ServiceProcess.ServiceInstaller.%23ctor%2A> Konstruktor legt die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> Eigenschaft `ServiceStartMode.Manual` um anzugeben, dass ein Benutzer den Dienst zu starten. Sie können die Eigenschaft zum Zurücksetzen `ServiceStartMode.Automatic` um anzugeben, dass der Dienst gestartet, wenn der Computer neu gestartet wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFromComponent">
+      <MemberSignature Language="C#" Value="public override void CopyFromComponent (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFromComponent(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceInstaller.CopyFromComponent(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die <see cref="T:System.ComponentModel.IComponent" /> aus dem kopiert.</param>
+        <summary>Kopiert Eigenschaften aus einer Instanz von <see cref="T:System.ServiceProcess.ServiceBase" /> in dieser Installer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird selten im Code aufgerufen werden. <xref:System.ServiceProcess.ServiceInstaller.CopyFromComponent%2A>wird in der Regel nur von Designern aufgerufen werden.  
+  
+ <xref:System.ServiceProcess.ServiceInstaller.CopyFromComponent%2A>Speichert den Dienstnamen des der `component` Parameter an die <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> von der <xref:System.ServiceProcess.ServiceInstaller> Instanz. (Da der Parameter eine Instanz einer Klasse sein muss, die abgeleitet <xref:System.ServiceProcess.ServiceBase>, `component` wird möglicherweise eine <xref:System.ServiceProcess.ServiceBase.ServiceName%2A?displayProperty=nameWithType> Eigenschaft.)  
+  
+> [!NOTE]
+>  Wenn Sie Visual Studio-Designer verwenden, wird diese Methode aufgerufen, zur Entwurfszeit, wenn der Benutzer klickt `Add Installer` für eine Komponente, die diese Klasse als Installationsprogramm angegeben. Das Installationsprogramm nimmt alle Informationen, die er von der live-Komponente kann, und speichert sie für die Verwendung während der Installation.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Komponente, die mit diesem Installationsprogramm Sie ordnen erbt nicht von <see cref="T:System.ServiceProcess.ServiceBase" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DelayedAutoStart">
+      <MemberSignature Language="C#" Value="public bool DelayedAutoStart { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DelayedAutoStart" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceInstaller.DelayedAutoStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceProcess.ServiceProcessDescription("ServiceInstallerDelayedAutoStart")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Dienst gestartet werden, bis andere automatisch gestarteten Dienste ausgeführt werden, verzögert werden soll.</summary>
+        <value>
+          <see langword="true" />Verzögerung Automatisches Starten des Diensts; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceProcess.ServiceInstaller.DelayedAutoStart%2A> Eigenschaft kann auf jeden beliebigen Dienst angewendet werden, aber sie wird ignoriert, es sei denn, der Startmodus des Dienstes ist <xref:System.ServiceProcess.ServiceStartMode.Automatic>. Die Einstellung wird wirksam, das nächste Mal das System neu gestartet wird. Der Dienstkontroll-Manager ist eine bestimmten Startzeit für den Dienst nicht sichergestellt.  
+  
+ Ein Dienst mit einem verzögerten automatischen Start kann ein Mitglied einer Gruppe sortieren Last nicht, aber es kann eine andere automatische Starten des Diensts abhängen. Wenn eine Anwendung einen Dienst mit einem verzögerten automatischen Start aufruft, bevor sie geladen wird, schlägt der Aufruf fehl.  
+  
+ Unter Betriebssystemen, die nicht mit einem verzögerten automatischen Start unterstützen, wirkt sich das Festlegen dieser Eigenschaft nicht aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceInstaller.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceProcess.ServiceProcessDescription("ServiceInstallerDescription")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschreibung für den Dienst fest.</summary>
+        <value>Die Beschreibung des Dienstes. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.ServiceProcess.ServiceInstaller.Description%2A> Eigenschaft, um den Zweck des installierten Dienstes für den Benutzer zu beschreiben. Der Benutzer kann in Anwendungen, die Details für die installierten Dienste anzeigen, die Beschreibung des Diensts anzeigen.  
+  
+ Z. B. Windows XP verwenden, oder sehen Sie die Beschreibung des Diensts mit der Service Control-Befehlszeilen-Hilfsprogramm (Sc.exe) sehen Sie die Beschreibung des Diensts in der **Services** Knoten die **Computerverwaltung ** Konsole.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt die Installationseigenschaften für eine neue Windows-dienstanwendung fest. Im Beispiel wird der Dienstname, zusammen mit den Anzeigenamen und Beschreibung. Nach dem Zuweisen der Installationseigenschaften für den Dienst an, die im Beispiel fügt die <xref:System.ServiceProcess.ServiceInstaller> -Objekt an die <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung.  
+  
+ [!code-csharp[ServiceProcess_ServiceInstaller#3](~/samples/snippets/csharp/VS_Snippets_CLR/ServiceProcess_serviceinstaller/CS/simpleserviceinstaller.cs#3)]
+ [!code-vb[ServiceProcess_ServiceInstaller#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/ServiceProcess_serviceinstaller/VB/service1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceInstaller.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceProcess.ServiceProcessDescription("ServiceInstallerDisplayName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Anzeigenamen, der der Dienst für den Benutzer kennzeichnet.</summary>
+        <value>Der Name der Dienst für interaktive Tools häufig verwendete zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> verwendet wird, z. B. den Service Control Manager, um einen Benutzer lesbaren beschreibenden Namen für den Dienst bereitzustellen. Die <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> ist ein Registrierungswert jedoch niemals als ein Registrierungsschlüssel verwendet. Aus diesem Grund Einschränkungen für die <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> Eigenschaftswert gelten nicht. <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A>wird als der Registrierungsschlüssel HKEY_LOCAL_MACHINES\System\CurrentControlSet\Services verwendet werden, damit er beschränkt ist.  
+  
+ Der Anzeigename wird nie vom Installationsprogramm verwendet, um den Dienst zu identifizieren, daher gibt es keine Einschränkungen für die Wahl des Namens, wie bei der <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Install">
+      <MemberSignature Language="C#" Value="public override void Install (System.Collections.IDictionary stateSaver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Install(class System.Collections.IDictionary stateSaver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceInstaller.Install(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stateSaver" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="stateSaver">Ein <see cref="T:System.Collections.IDictionary" /> , das die Kontextinformationen, die verknüpft sind, mit der Installation enthält.</param>
+        <summary>Den Dienst installiert durch Schreiben der Anwendung Dienstinformationen in die Registrierung. Diese Methode soll vom Installations-Tools verwendet werden, der die entsprechenden Methoden automatisch zu verarbeiten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalerweise werden Sie nicht die Methoden aufrufen, auf <xref:System.ServiceProcess.ServiceInstaller> innerhalb des Codes; sind sie in der Regel nur vom Installationsprogramm aufgerufen. Ruft das Installationsprogramm automatisch die <xref:System.ServiceProcess.ServiceInstaller.Install%2A> Methode während der Installation. Fehler werden behoben, bei Bedarf durch den Aufruf <xref:System.ServiceProcess.ServiceInstaller.Rollback%2A> auf das Objekt, das die Ausnahme generiert hat.  
+  
+ Eine Anwendung-Installationsroutine verwaltet Informationen automatisch zu den Komponenten, die bereits installiert wurden, mit dem Projekt Installer <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType>. Diese Statusinformationen übergebenen <xref:System.ServiceProcess.ServiceInstaller.Install%2A> als die `stateSaver` -Parameter wird ständig aktualisiert, als die <xref:System.ServiceProcess.ServiceProcessInstaller> Instanz und alle <xref:System.ServiceProcess.ServiceInstaller> Instanz mit dem Hilfsprogramm installiert ist. Es ist in der Regel nicht erforderlich, für den Code so ändern Sie diese Statusinformationen explizit.  
+  
+ Die <xref:System.ServiceProcess.ServiceProcessInstaller> Ihrem Projekt installiert Informationen, die alle zugeordneten <xref:System.ServiceProcess.ServiceInstaller> Instanzen im Projekt. Wenn dieser Dienst nichts, die sie von anderen Dienste im Projekt Installation trennt verfügt, wird diese dienstspezifischen Informationen von dieser Methode installiert.  
+  
+ Um einen Dienst zu installieren, erstellen Sie eine Projekt Installerklasse, die von erben die <xref:System.Configuration.Install.Installer> Klasse, und legen die <xref:System.ComponentModel.RunInstallerAttribute> Attribut für die Klasse, um `true`. Erstellen Sie innerhalb des Projekts eine <xref:System.ServiceProcess.ServiceProcessInstaller> Instanz pro-dienstanwendung, und eine <xref:System.ServiceProcess.ServiceInstaller> Instanz für jeden Dienst in der Anwendung. Klassenkonstruktor des Installer legen Sie die Installationseigenschaften für den Dienst mithilfe der <xref:System.ServiceProcess.ServiceProcessInstaller> und <xref:System.ServiceProcess.ServiceInstaller> Instanzen, und fügen Sie die Instanzen der <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung.  
+  
+> [!NOTE]
+>  Es wird empfohlen, dass Sie den Konstruktor für das Hinzufügen von Instanzen des Installationsprogramms verwenden; Allerdings hinzugefügt werden sollen die <xref:System.Configuration.Install.Installer.Installers%2A> Sammlung in der <xref:System.ServiceProcess.ServiceInstaller.Install%2A> -Methode, achten Sie darauf, dass Sie zum Ausführen von derselben Virtual Machine Additions auf die Auflistung in die <xref:System.ServiceProcess.ServiceInstaller.Uninstall%2A> Methode.  
+  
+ Für alle Klassen abgeleitet der <xref:System.Configuration.Install.Installer> Klasse, die den Status des der <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung muss in der <xref:System.ServiceProcess.ServiceInstaller.Install%2A> und <xref:System.ServiceProcess.ServiceInstaller.Uninstall%2A> Methoden. Allerdings können Sie vermeiden, die Wartung der Auflistung über die <xref:System.ServiceProcess.ServiceInstaller.Install%2A> und <xref:System.ServiceProcess.ServiceInstaller.Uninstall%2A> Methoden, wenn Sie Instanzen des Installationsprogramms hinzufügen der <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung im Konstruktor benutzerdefinierten Installers-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Installation enthält keine <see cref="T:System.ServiceProcess.ServiceProcessInstaller" /> für die ausführbare Datei.  
+  
+ - oder -   
+  
+ Der Dateiname für die Assembly ist <see langword="null" /> oder eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ Der Dienstname ist ungültig.  
+  
+ - oder -   
+  
+ Der Dienstkontroll-Manager konnte nicht geöffnet werden.</exception>
+        <exception cref="T:System.ArgumentException">Der Anzeigename für den Dienst ist mehr als 255 Zeichen lang sein.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Das System konnte ein Handle für den Dienst nicht generiert werden.  
+  
+ - oder -   
+  
+ Ein Dienst mit diesem Namen ist bereits installiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEquivalentInstaller">
+      <MemberSignature Language="C#" Value="public override bool IsEquivalentInstaller (System.Configuration.Install.ComponentInstaller otherInstaller);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsEquivalentInstaller(class System.Configuration.Install.ComponentInstaller otherInstaller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceInstaller.IsEquivalentInstaller(System.Configuration.Install.ComponentInstaller)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherInstaller" Type="System.Configuration.Install.ComponentInstaller" />
+      </Parameters>
+      <Docs>
+        <param name="otherInstaller">Ein <see cref="T:System.Configuration.Install.ComponentInstaller" /> mit dem aktuellen Installationsprogramm verglichen werden.</param>
+        <summary>Gibt an, ob zwei Installationsprogramme denselben Dienst installieren.</summary>
+        <returns>
+          <see langword="true" />Beim Aufrufen <see cref="M:System.ServiceProcess.ServiceInstaller.Install(System.Collections.IDictionary)" /> auf beide Installationsprogramme würde bei der Installation von dem Dienst ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceProcess.ServiceInstaller.IsEquivalentInstaller%2A>Gibt an, z. B., ob zwei Installationsprogramme denselben Dienst unter demselben Benutzerkonto installieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public override void Rollback (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Rollback(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceInstaller.Rollback(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Collections.IDictionary" /> , das die Kontextinformationen, die verknüpft sind, mit der Installation enthält.</param>
+        <summary>Führt einen Rollback für Anwendung Dienstinformationen in die Registrierung geschrieben werden, indem Sie die Installationsprozedur aus. Diese Methode soll vom Installations-Tools verwendet werden, der die entsprechenden Methoden automatisch zu verarbeiten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalerweise werden Sie nicht die Methoden aufrufen, auf <xref:System.ServiceProcess.ServiceInstaller> innerhalb des Codes; sind sie in der Regel nur vom Installationsprogramm aufgerufen. Ruft das Installationsprogramm automatisch die <xref:System.ServiceProcess.ServiceInstaller.Install%2A> Methode während der Installation. Fehler werden behoben, bei Bedarf durch den Aufruf <xref:System.ServiceProcess.ServiceInstaller.Rollback%2A> auf das Objekt, das die Ausnahme generiert hat.  
+  
+ Eine Anwendung-Installationsroutine verwaltet automatisch Informationen über die Komponenten bereits installiert, mit dem Projekt Installer <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType>. Diese Statusinformationen übergebenen <xref:System.ServiceProcess.ServiceInstaller.Rollback%2A> als die `savedState` -Parameter wird ständig aktualisiert, als die <xref:System.ServiceProcess.ServiceProcessInstaller> Instanz und alle <xref:System.ServiceProcess.ServiceInstaller> Instanz mit dem Hilfsprogramm installiert ist. Es ist in der Regel nicht erforderlich, für den Code so ändern Sie diese Statusinformationen explizit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceName">
+      <MemberSignature Language="C#" Value="public string ServiceName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServiceName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceInstaller.ServiceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceProcess.ServiceProcessDescription("ServiceInstallerServiceName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Namen, die vom System verwendet wird, um diesen Dienst zu identifizieren. Diese Eigenschaft muss identisch mit der <see cref="P:System.ServiceProcess.ServiceBase.ServiceName" /> des Diensts, die Sie installieren möchten.</summary>
+        <value>Der Name des Diensts, der installiert werden. Dieser Wert muss vor dem Installationsprogramm zum Installieren des Diensts festgelegt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ist es entscheidend, die die <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> übereinstimmen, auf die <xref:System.ServiceProcess.ServiceBase.ServiceName%2A?displayProperty=nameWithType> die Sie von abgeleiteten Klasse <xref:System.ServiceProcess.ServiceBase>. In der Regel wird der Wert, der die <xref:System.ServiceProcess.ServiceBase.ServiceName%2A?displayProperty=nameWithType> Eigenschaft für den Dienst in die Main()-Funktion), der die dienstanwendung ausführbaren Datei festgelegt ist. Der Dienstkontroll-Manager verwendet die <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A?displayProperty=nameWithType> Eigenschaft, um den Dienst innerhalb dieser ausführbaren Datei zu suchen.  
+  
+ Beim Festlegen der <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> des Service-Installers der <xref:System.Diagnostics.EventLog.Source%2A> des zugeordneten Ereignisprotokolls auf denselben Wert festgelegt ist. Dies ermöglicht es dem Dienst für die automatische Anmeldung der Befehle (z. B. Start und Stopp) Dienstaufrufe in das Anwendungsprotokoll auf dem Computer.  
+  
+> [!NOTE]
+>  Wenn eine Quelle mit dem gleichen Namen bereits auf dem Computer, aber in einem Protokoll als Windows-Anwendungsprotokoll vorhanden ist, wird eine Ausnahme ausgelöst. Wenn die Quelle vorhanden ist und das Anwendungsprotokoll zugeordnet ist, diese Quelle wird verwendet, um den Befehl Aufrufe an den Dienst zu melden und keine Ausnahme ausgelöst wird.  
+  
+ Die <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> nicht `null` oder der Länge Null haben. Die maximale Größe beträgt 256 Zeichen. Schrägstriche vorwärts oder rückwärts ausgeführt, auch darf keine '/' oder '\\', oder Zeichen aus dem ASCII-Zeichensatz mit geringeren Wert als Dezimalwert 32.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.ServiceProcess.ServiceInstaller.ServiceName" /> -Eigenschaft ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ServicesDependedOn">
+      <MemberSignature Language="C#" Value="public string[] ServicesDependedOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ServicesDependedOn" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceInstaller.ServicesDependedOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceProcess.ServiceProcessDescription("ServiceInstallerServicesDependedOn")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die Dienste, die für diesen Dienst zur Ausführung ausgeführt werden müssen.</summary>
+        <value>Ein Array von Diensten, die ausgeführt werden muss, bevor Sie dieses Installationsprogramm zugeordnete Dienst ausgeführt werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Dienst kann erforderlich, dass andere Dienste ausgeführt werden, bevor er gestartet werden kann. Die Informationen über diese Eigenschaft wird auf einen Schlüssel in der Registrierung geschrieben. Wenn der Benutzer (oder das System im Fall von automatischen Start) versucht, den Dienst auszuführen, überprüft Service Control Manager (SCM) an, dass die Dienste im Array bereits gestartet wurde.  
+  
+ Wenn ein Dienst im Array nicht dann ausgeführt wird, versucht der SCM ab, sie starten. Dazu gehören Dienste mit `Manual` <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>.  
+  
+ Wenn jeder Dienst, von dem dieser Dienst abhängt, nicht gestartet, wird dieser Dienst nicht gestartet. Eine Ausnahme wird nicht ausgelöst, wenn das System nicht gestartet wird, da es ist keine Ausnahmebehandlung auf Systemebene aus, um dies zu ermitteln. Entscheiden Sie, wie Sie Fehler beim Starten des Diensts behandeln und implementieren dies im Code. In der Regel wird ein Dialogfeld für den Benutzer beim Start angezeigt, wenn ein Dienst nicht gestartet.  
+  
+ Wenn der Dienst nicht gestartet wird, wird ein Eintrag in das Anwendungsereignisprotokoll geschrieben.  
+  
+ Die Dienste, von denen dieser Dienst abhängt, müssen nicht in die ausführbare Datei sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartType">
+      <MemberSignature Language="C#" Value="public System.ServiceProcess.ServiceStartMode StartType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceProcess.ServiceStartMode StartType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceInstaller.StartType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceProcess.ServiceProcessDescription("ServiceInstallerStartType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.ServiceStartMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, wie und wann dieser Dienst gestartet wurde.</summary>
+        <value>Ein <see cref="T:System.ServiceProcess.ServiceStartMode" /> die darstellt, wie der Dienst wird gestartet. Die Standardeinstellung ist <see langword="Manual" />, der angibt, dass der Dienst nach dem Neustart nicht automatisch gestartet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> angeben, dass der Dienst nach dem Neustart automatisch gestartet werden oder dass ein Benutzer den Dienst manuell starten muss. Ein Dienst kann auch deaktiviert werden gibt an, dass es entweder manuell oder programmgesteuert gestartet werden, kann nicht bis er wieder aktiviert wird.  
+  
+ Sie können nicht geändert werden <xref:System.ServiceProcess.ServiceInstaller> Eigenschaftswerte nach der Installation. So ändern Sie die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>, müssen Sie entweder auf Deinstallieren und installieren Sie den Dienst neu, manuell ändern oder die Einstellung mithilfe der Dienstkontroll-Manager.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Startmodus ist kein Wert für die <see cref="T:System.ServiceProcess.ServiceStartMode" /> Enumeration.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninstall">
+      <MemberSignature Language="C#" Value="public override void Uninstall (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Uninstall(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceInstaller.Uninstall(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Collections.IDictionary" /> , das die Kontextinformationen, die verknüpft sind, mit der Installation enthält.</param>
+        <summary>Deinstalliert den Dienst durch das Entfernen von Informationen aus der Registrierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Deinstallieren Sie zuerst versucht, den Dienst zu beenden, bevor Sie es deinstallieren. Wenn der Dienst nicht beendet werden kann, wird keine Ausnahme erfasst, und die Methode fortgesetzt wird, mit dem Entfernen des Diensts.  
+  
+ Normalerweise werden Sie nicht die Methoden aufrufen, auf <xref:System.ServiceProcess.ServiceInstaller> innerhalb des Codes; sind sie in der Regel nur vom Installationsprogramm aufgerufen. InstallUtil verwendet wird, deinstallieren Sie Dienste als auch installiert werden. Deinstallieren von nimmt einen Switch in der Befehlszeile-Aufruf.  
+  
+ Eine Anwendung zu deinstallieren Routine enthält Informationen über die Komponenten automatisch deinstalliert wird, mit dem Projekt Installer <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType>. Diese Statusinformationen übergebenen <xref:System.ServiceProcess.ServiceInstaller.Uninstall%2A> als die `savedState` -Parameter wird ständig aktualisiert, als die <xref:System.ServiceProcess.ServiceProcessInstaller> Instanz und alle <xref:System.ServiceProcess.ServiceInstaller> Instanz mit dem Hilfsprogramm installiert ist. Es ist in der Regel nicht erforderlich, für den Code so ändern Sie diese Statusinformationen explizit.  
+  
+ Für alle Klassen abgeleitet der <xref:System.Configuration.Install.Installer> Klasse, die den Status des der <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung muss in der <xref:System.ServiceProcess.ServiceInstaller.Install%2A> und <xref:System.ServiceProcess.ServiceInstaller.Uninstall%2A> Methoden. Allerdings können Sie vermeiden, die Wartung der Auflistung über die <xref:System.ServiceProcess.ServiceInstaller.Install%2A> und <xref:System.ServiceProcess.ServiceInstaller.Uninstall%2A> Methoden, wenn Sie Instanzen des Installationsprogramms hinzufügen der <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung im Konstruktor benutzerdefinierten Installers-Klasse.  
+  
+ Es ist kein Rollback für die Deinstallation, wenn ein Dienst nicht deinstalliert werden, dies nicht die anderen Dienste (in der Regel innerhalb des gleichen Installationsprojekts) zu deinstallierenden auswirkt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Der Dienstkontroll-Manager konnte nicht geöffnet werden.  
+  
+ - oder -   
+  
+ Das System konnte ein Handle für den Dienst nicht abgerufen werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

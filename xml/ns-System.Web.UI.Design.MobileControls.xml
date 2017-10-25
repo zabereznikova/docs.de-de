@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.UI.Design.MobileControls">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.UI.Design.MobileControls" /> -Namespace enthält Klassen, die zur Entwurfszeit Unterstützung für die Klassen in bieten die <see cref="N:System.Web.UI.MobileControls" /> Namespace.  Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der <see href="http://go.microsoft.com/fwlink/?LinkID=182900">www.asp.net/mobile</see> Website.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

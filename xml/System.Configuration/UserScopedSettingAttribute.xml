@@ -1,0 +1,74 @@
+<Type Name="UserScopedSettingAttribute" FullName="System.Configuration.UserScopedSettingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class UserScopedSettingAttribute : System.Configuration.SettingAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UserScopedSettingAttribute extends System.Configuration.SettingAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.UserScopedSettingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.SettingAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass ein Einstellungsgruppe für die Anwendung oder eine Eigenschaft unterschiedliche Werte für jeden Benutzer einer Anwendung enthält. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaften der Anwendung haben einen Bereich, der entweder auf die Anwendung oder der Benutzerebene basiert. Wie die Kategorien vermuten lassen, präsentieren anwendungsspezifischen Eigenschaften einheitliche Werte für alle Benutzer der Anwendung, wohingegen benutzerspezifische Eigenschaften verfügen über eine Werte für jeden Benutzer der Anwendung dedizierte.  
+  
+ Die <xref:System.Configuration.UserScopedSettingAttribute> gibt an, dass eine Eigenschaft für eine Benutzer-Einstellung auf Websiteebene berücksichtigt werden sollten und geeigneten Speicher Entscheidungen entsprechend vorgenommen werden sollten vom Einstellungsanbieter.  
+  
+ Ein Bereichsattribut ist für jede Anwendungseinstellungseigenschaft erforderlich. Wenn eine Eigenschaft nicht mit einer angewendet wird eine <xref:System.Configuration.ApplicationScopedSettingAttribute> oder <xref:System.Configuration.UserScopedSettingAttribute>, die Eigenschaft wird von der Einstellungsanbieter ignoriert – nicht serialisiert. Es ist jedoch ungültig, beide Attribute auf die gleichen Einstellungseigenschaft anwenden. Ein solcher Versuch führt dazu, dass eine <xref:System.Configuration.ConfigurationErrorsException> ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Configuration.UserScopedSettingAttribute> angewendet, um alle vier Eigenschaften der der `FormSettings` Wrapperklasse, das von abgeleitet ist die <xref:System.Configuration.ApplicationSettingsBase> Klasse. Diese Klasse wird verwendet, um den Speicherort, Größe, Hintergrundfarbe und Text der Form beizubehalten. Das vollständige Codebeispiel, finden Sie unter der <xref:System.Configuration.ApplicationSettingsBase> -Klassenübersicht.  
+  
+ [!code-cpp[AppSettingsSample#9](~/samples/snippets/cpp/VS_Snippets_Winforms/AppSettingsSample/cpp/AppSettingsSample.cpp#9)]
+ [!code-csharp[AppSettingsSample#9](~/samples/snippets/csharp/VS_Snippets_Winforms/AppSettingsSample/CS/AppSettingsSample.cs#9)]
+ [!code-vb[AppSettingsSample#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/AppSettingsSample/VB/Form1.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserScopedSettingAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.UserScopedSettingAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.UserScopedSettingAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit einem einzelnen Bereich-Attribut in der Reihenfolge, damit es erkannt und durch den Einstellungsanbieter serialisiert werden, muss jede Anwendungseinstellungseigenschaft angewendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

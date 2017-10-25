@@ -1,0 +1,153 @@
+<Type Name="AttributeInfo" FullName="System.Workflow.ComponentModel.Compiler.AttributeInfo">
+  <TypeSignature Language="C#" Value="public sealed class AttributeInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AttributeInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Compiler.AttributeInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Wrapperklasse, die zur Entwurfszeit Attribute für einen Typ darstellt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Diese Klasse wird verwendet, um Attribute für Entwurfszeittypen (Typen, die noch kompiliert werden müssen) darzustellen. Dies tritt nur auf, wenn die Validierung durch den Designer ausgelöst wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ArgumentValues">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;object&gt; ArgumentValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;object&gt; ArgumentValues" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.AttributeInfo.ArgumentValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung ab, die Werte für die einzelnen Argumente enthält, die dieser Instanz zugeordnet sind.</summary>
+        <value>Eine Auflistung, die Werte für die einzelnen Argumente enthält, die dieser Instanz zugeordnet sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung ist schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeType">
+      <MemberSignature Language="C#" Value="public Type AttributeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AttributeType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.AttributeInfo.AttributeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Type" /> dieser Instanz ab.</summary>
+        <value>Der <see cref="T:System.Type" /> dieser Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creatable">
+      <MemberSignature Language="C#" Value="public bool Creatable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Creatable" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.AttributeInfo.Creatable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob diese Instanz erstellt werden kann.</summary>
+        <value>Gibt einen Wert zurück, der <see langword="false" /> ist, wenn eine der folgenden Bedingungen 'true' ist:  
+  
+-   Der <see cref="T:System.Type" />, der dieses Attribut definiert, verfügt über eine <see cref="P:System.Type.Assembly" />, die ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic) ist.  
+  
+-   Für eines der Objekte im Array <see cref="P:System.Workflow.ComponentModel.Compiler.AttributeInfo.ArgumentValues" /> gilt <see cref="T:System.Type" /><see cref="T:System.Exception" />.  
+  
+ Andernfalls ist der zurückgegebene Wert <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAttribute">
+      <MemberSignature Language="C#" Value="public Attribute CreateAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Attribute CreateAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.AttributeInfo.CreateAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein Attribut vom Typ <see cref="T:System.Workflow.ComponentModel.Compiler.AttributeInfo" />.</summary>
+        <returns>Ein Attribut vom Typ <see cref="T:System.Workflow.ComponentModel.Compiler.AttributeInfo" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Workflow.ComponentModel.Compiler.AttributeInfo.Creatable" /> ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArgumentValueAs">
+      <MemberSignature Language="C#" Value="public object GetArgumentValueAs (IServiceProvider serviceProvider, int argumentIndex, Type requestedType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetArgumentValueAs(class System.IServiceProvider serviceProvider, int32 argumentIndex, class System.Type requestedType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.AttributeInfo.GetArgumentValueAs(System.IServiceProvider,System.Int32,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="argumentIndex" Type="System.Int32" />
+        <Parameter Name="requestedType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Der <see cref="T:System.IServiceProvider" />, der diesen Vorgang unterstützt.</param>
+        <param name="argumentIndex">Der <see langword="integer" />-Index des angeforderten Arguments in der Auflistung der Argumente.</param>
+        <param name="requestedType">Der <see cref="T:System.Type" /> des Arguments.</param>
+        <summary>Ruft das Argument für diese Instanz basierend auf Typ und Index ab.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das in den angeforderten Typ umgewandelt wird.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="argumentIndex" /> befindet sich außerhalb des Bereichs der Argumentauflistung.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="requestedType" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

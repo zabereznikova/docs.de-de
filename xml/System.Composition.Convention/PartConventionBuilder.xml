@@ -1,0 +1,577 @@
+<Type Name="PartConventionBuilder" FullName="System.Composition.Convention.PartConventionBuilder">
+  <TypeSignature Language="C#" Value="public class PartConventionBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PartConventionBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Composition.Convention.PartConventionBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Composition.Convention</AssemblyName>
+    <AssemblyVersion>1.0.31.0</AssemblyVersion>
+    <AssemblyVersion>1.0.32.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konfiguriert einen Typ als Teil Managed Extensibility Framework (MEF).</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddPartMetadata">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder AddPartMetadata (string name, Func&lt;Type,object&gt; getValueFromPartType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder AddPartMetadata(string name, class System.Func`2&lt;class System.Type, object&gt; getValueFromPartType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.AddPartMetadata(System.String,System.Func{System.Type,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="getValueFromPartType" Type="System.Func&lt;System.Type,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der hinzuzufügenden Metadaten.</param>
+        <param name="getValueFromPartType">Eine Funktion, die den Metadatenwert des Teiltyps zurückgibt.</param>
+        <summary>Fügt Metadaten hinzu, die den angegebenen Namen und Wert des Teils haben. Der Wert wird von einer Funktion zurückgegeben, die den Teiltyp zum Metadatenwert zuordnet.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPartMetadata">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder AddPartMetadata (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder AddPartMetadata(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.AddPartMetadata(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Metadaten.</param>
+        <param name="value">Der Wert der Metadaten.</param>
+        <summary>Fügt Metadaten hinzu, die den angegebenen Namen und Wert des Teils haben.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Export">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder Export ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder Export() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.Export" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exportiert den Teil mit dem konkreten Typ als Vertragstyp.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Export">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder Export (Action&lt;System.Composition.Convention.ExportConventionBuilder&gt; exportConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder Export(class System.Action`1&lt;class System.Composition.Convention.ExportConventionBuilder&gt; exportConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.Export(System.Action{System.Composition.Convention.ExportConventionBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exportConfiguration" Type="System.Action&lt;System.Composition.Convention.ExportConventionBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="exportConfiguration">Eine Aktion, die den Teil konfiguriert.</param>
+        <summary>Exportiert den Teil, der die angegebene Konfiguration enthält.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Export&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder Export&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder Export&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.Export``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Der Typ des Vertrags.</typeparam>
+        <summary>Exportiert den Teil, der über den angegebenen Vertragstyp verfügt.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Export&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder Export&lt;T&gt; (Action&lt;System.Composition.Convention.ExportConventionBuilder&gt; exportConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder Export&lt;T&gt;(class System.Action`1&lt;class System.Composition.Convention.ExportConventionBuilder&gt; exportConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.Export``1(System.Action{System.Composition.Convention.ExportConventionBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="exportConfiguration" Type="System.Action&lt;System.Composition.Convention.ExportConventionBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Vertrags.</typeparam>
+        <param name="exportConfiguration">Eine Aktion, die den Teil konfiguriert.</param>
+        <summary>Exportiert den Teil, der über den angegebenen Vertragstyp verfügt, indem die angegebene Konfiguration verwendet wird.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportInterfaces">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder ExportInterfaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder ExportInterfaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.ExportInterfaces" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wählt alle Schnittstellen im zu exportierenden Teiltyp aus.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportInterfaces">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder ExportInterfaces (Predicate&lt;Type&gt; interfaceFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder ExportInterfaces(class System.Predicate`1&lt;class System.Type&gt; interfaceFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.ExportInterfaces(System.Predicate{System.Type})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="interfaceFilter" Type="System.Predicate&lt;System.Type&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="interfaceFilter">Ein Prädikat, das die Schnittstellen angibt, die ausgewählt werden.</param>
+        <summary>Wählt Schnittstellen auf dem zu exportierenden Teilstyp entsprechend dem angegebenen Filter aus.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportInterfaces">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder ExportInterfaces (Predicate&lt;Type&gt; interfaceFilter, Action&lt;Type,System.Composition.Convention.ExportConventionBuilder&gt; exportConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder ExportInterfaces(class System.Predicate`1&lt;class System.Type&gt; interfaceFilter, class System.Action`2&lt;class System.Type, class System.Composition.Convention.ExportConventionBuilder&gt; exportConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.ExportInterfaces(System.Predicate{System.Type},System.Action{System.Type,System.Composition.Convention.ExportConventionBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="interfaceFilter" Type="System.Predicate&lt;System.Type&gt;" />
+        <Parameter Name="exportConfiguration" Type="System.Action&lt;System.Type,System.Composition.Convention.ExportConventionBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="interfaceFilter">Ein Prädikat, das die Schnittstellen angibt, die ausgewählt werden.</param>
+        <param name="exportConfiguration">Eine Aktion, die die Exporte konfiguriert.</param>
+        <summary>Wählt mithilfe der angegebenen Exportkonfiguration Schnittstellen im zu exportierenden Teilstyp entsprechend des angegebenen Filters aus.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportProperties">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder ExportProperties (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder ExportProperties(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.ExportProperties(System.Predicate{System.Reflection.PropertyInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="propertyFilter">Ein Prädikat, das ASP.NET exportieren angibt.</param>
+        <summary>Wählt die Eigenschaften auf dem Teil entsprechend des angegebenen Prädikats zu exportieren.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportProperties">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder ExportProperties (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter, Action&lt;System.Reflection.PropertyInfo,System.Composition.Convention.ExportConventionBuilder&gt; exportConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder ExportProperties(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter, class System.Action`2&lt;class System.Reflection.PropertyInfo, class System.Composition.Convention.ExportConventionBuilder&gt; exportConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.ExportProperties(System.Predicate{System.Reflection.PropertyInfo},System.Action{System.Reflection.PropertyInfo,System.Composition.Convention.ExportConventionBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+        <Parameter Name="exportConfiguration" Type="System.Action&lt;System.Reflection.PropertyInfo,System.Composition.Convention.ExportConventionBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="propertyFilter">Ein Prädikat, das ASP.NET exportieren angibt.</param>
+        <param name="exportConfiguration">Eine Aktion, die die Exporte konfiguriert.</param>
+        <summary>Wählt die Eigenschaften für das Webpart So exportieren Sie entsprechend des angegebenen Prädikats mithilfe der angegebenen Exportkonfiguration aus.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportProperties&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder ExportProperties&lt;T&gt; (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder ExportProperties&lt;T&gt;(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.ExportProperties``1(System.Predicate{System.Reflection.PropertyInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Vertrags.</typeparam>
+        <param name="propertyFilter">Ein Prädikat, das ASP.NET exportieren angibt.</param>
+        <summary>Wählt die Eigenschaften auf dem Teil entsprechend des angegebenen Prädikats mithilfe des angegebenen Vertragstyps exportieren.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportProperties&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder ExportProperties&lt;T&gt; (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter, Action&lt;System.Reflection.PropertyInfo,System.Composition.Convention.ExportConventionBuilder&gt; exportConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder ExportProperties&lt;T&gt;(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter, class System.Action`2&lt;class System.Reflection.PropertyInfo, class System.Composition.Convention.ExportConventionBuilder&gt; exportConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.ExportProperties``1(System.Predicate{System.Reflection.PropertyInfo},System.Action{System.Reflection.PropertyInfo,System.Composition.Convention.ExportConventionBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+        <Parameter Name="exportConfiguration" Type="System.Action&lt;System.Reflection.PropertyInfo,System.Composition.Convention.ExportConventionBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Vertrags.</typeparam>
+        <param name="propertyFilter">Ein Prädikat, das ASP.NET exportieren angibt.</param>
+        <param name="exportConfiguration">Eine Aktion, die die Exporte konfiguriert.</param>
+        <summary>Wählt die Eigenschaften auf dem Teil entsprechend des angegebenen Prädikats exportieren, mit dem angegebenen Vertragstyp und der Exportkonfiguration aus. </summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportProperties">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder ImportProperties (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder ImportProperties(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.ImportProperties(System.Predicate{System.Reflection.PropertyInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="propertyFilter">Ein Prädikat, das ASP.NET importieren angibt.</param>
+        <summary>Wählt die Eigenschaften auf dem zu importierenden Teil entsprechend des angegebenen Prädikats aus.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportProperties">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder ImportProperties (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter, Action&lt;System.Reflection.PropertyInfo,System.Composition.Convention.ImportConventionBuilder&gt; importConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder ImportProperties(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter, class System.Action`2&lt;class System.Reflection.PropertyInfo, class System.Composition.Convention.ImportConventionBuilder&gt; importConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.ImportProperties(System.Predicate{System.Reflection.PropertyInfo},System.Action{System.Reflection.PropertyInfo,System.Composition.Convention.ImportConventionBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+        <Parameter Name="importConfiguration" Type="System.Action&lt;System.Reflection.PropertyInfo,System.Composition.Convention.ImportConventionBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="propertyFilter">Ein Prädikat, das ASP.NET importieren angibt.</param>
+        <param name="importConfiguration">Eine Aktion, die die Importe konfiguriert.</param>
+        <summary>Wählt die Eigenschaften der zu importierenden Teil entsprechend des angegebenen Prädikats mithilfe der angegebenen Importkonfiguration aus.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportProperties&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder ImportProperties&lt;T&gt; (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder ImportProperties&lt;T&gt;(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.ImportProperties``1(System.Predicate{System.Reflection.PropertyInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Vertrags.</typeparam>
+        <param name="propertyFilter">Ein Prädikat, das die zu importierenden Eigenschaften angibt.</param>
+        <summary>Wählt die Eigenschaften der zu importierenden Teil entsprechend des angegebenen Prädikats mithilfe des angegebenen Vertragstyps aus.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportProperties&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder ImportProperties&lt;T&gt; (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter, Action&lt;System.Reflection.PropertyInfo,System.Composition.Convention.ImportConventionBuilder&gt; importConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder ImportProperties&lt;T&gt;(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter, class System.Action`2&lt;class System.Reflection.PropertyInfo, class System.Composition.Convention.ImportConventionBuilder&gt; importConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.ImportProperties``1(System.Predicate{System.Reflection.PropertyInfo},System.Action{System.Reflection.PropertyInfo,System.Composition.Convention.ImportConventionBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+        <Parameter Name="importConfiguration" Type="System.Action&lt;System.Reflection.PropertyInfo,System.Composition.Convention.ImportConventionBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Vertrags.</typeparam>
+        <param name="propertyFilter">Ein Prädikat, das die zu importierenden Eigenschaften angibt.</param>
+        <param name="importConfiguration">Eine Aktion, die die Importe konfiguriert.</param>
+        <summary>Wählt die Eigenschaften auf dem Teil entsprechend des angegebenen Prädikats importieren, mit dem angegebenen Vertragstyp und der Importkonfiguration aus.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyImportsSatisfied">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder NotifyImportsSatisfied (Predicate&lt;System.Reflection.MethodInfo&gt; methodFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder NotifyImportsSatisfied(class System.Predicate`1&lt;class System.Reflection.MethodInfo&gt; methodFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.NotifyImportsSatisfied(System.Predicate{System.Reflection.MethodInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodFilter" Type="System.Predicate&lt;System.Reflection.MethodInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="methodFilter">Ein Prädikat, das Methoden auswählt.</param>
+        <summary>Wählen Sie die Benachrichtigungsmethode aus, die verwendet werden soll, wenn die Komposition abgeschlossen ist.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectConstructor">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder SelectConstructor (Func&lt;System.Collections.Generic.IEnumerable&lt;System.Reflection.ConstructorInfo&gt;,System.Reflection.ConstructorInfo&gt; constructorSelector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder SelectConstructor(class System.Func`2&lt;class System.Collections.Generic.IEnumerable`1&lt;class System.Reflection.ConstructorInfo&gt;, class System.Reflection.ConstructorInfo&gt; constructorSelector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.SelectConstructor(System.Func{System.Collections.Generic.IEnumerable{System.Reflection.ConstructorInfo},System.Reflection.ConstructorInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constructorSelector" Type="System.Func&lt;System.Collections.Generic.IEnumerable&lt;System.Reflection.ConstructorInfo&gt;,System.Reflection.ConstructorInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="constructorSelector">Eine Funktion, die einen einzelnen Konstruktor zurückgibt.</param>
+        <summary>Wählt den Konstruktor aus, der verwendet wird, um mithilfe der angegebenen Funktion das Teil zu initialisieren.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectConstructor">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder SelectConstructor (Func&lt;System.Collections.Generic.IEnumerable&lt;System.Reflection.ConstructorInfo&gt;,System.Reflection.ConstructorInfo&gt; constructorSelector, Action&lt;System.Reflection.ParameterInfo,System.Composition.Convention.ImportConventionBuilder&gt; importConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder SelectConstructor(class System.Func`2&lt;class System.Collections.Generic.IEnumerable`1&lt;class System.Reflection.ConstructorInfo&gt;, class System.Reflection.ConstructorInfo&gt; constructorSelector, class System.Action`2&lt;class System.Reflection.ParameterInfo, class System.Composition.Convention.ImportConventionBuilder&gt; importConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.SelectConstructor(System.Func{System.Collections.Generic.IEnumerable{System.Reflection.ConstructorInfo},System.Reflection.ConstructorInfo},System.Action{System.Reflection.ParameterInfo,System.Composition.Convention.ImportConventionBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constructorSelector" Type="System.Func&lt;System.Collections.Generic.IEnumerable&lt;System.Reflection.ConstructorInfo&gt;,System.Reflection.ConstructorInfo&gt;" />
+        <Parameter Name="importConfiguration" Type="System.Action&lt;System.Reflection.ParameterInfo,System.Composition.Convention.ImportConventionBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="constructorSelector">Eine Funktion, die einen einzelnen Konstruktor zurückgibt.</param>
+        <param name="importConfiguration">Eine Methode, die die Importe des Konstruktors konfiguriert.</param>
+        <summary>Wählt den Konstruktor aus, mit dem das Teil initialisiert werden soll, indem die angegebene Funktion und Importkonfiguration verwendet wird.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shared">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder Shared ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder Shared() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.Shared" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Markiert den Teil als während der gesamten Komposition freigegeben.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shared">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.PartConventionBuilder Shared (string sharingBoundary);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.PartConventionBuilder Shared(string sharingBoundary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.PartConventionBuilder.Shared(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.PartConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sharingBoundary" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sharingBoundary">Die Grenze.</param>
+        <summary>Markiert den Teil als innerhalb der angegebenen Grenze freigegeben.</summary>
+        <returns>Ein teilsgenerator, der verwendet werden kann, um die Teile zu konfigurieren.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

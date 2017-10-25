@@ -1,0 +1,97 @@
+<Type Name="IActivityTemplateFactory" FullName="System.Activities.Presentation.IActivityTemplateFactory">
+  <TypeSignature Language="C#" Value="public interface IActivityTemplateFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IActivityTemplateFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.IActivityTemplateFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Factorymethode, die eine Klasse implementiert, um eine Vorlage zu erstellen, die <see cref="T:System.Activities.Activity" />-Platzhalterobjekte kapselt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzerdefinierte Aktivitätsvorlagen müssen <xref:System.Activities.Presentation.IActivityTemplateFactory> implementieren. Benutzerdefinierte Aktivitätsvorlagen werden verwendet, um die Konfiguration von Aktivitäten, einschließlich benutzerdefinierter zusammengesetzter Aktivitäten, anzupassen. Dadurch müssen Benutzer die Aktivitäten nicht einzeln erstellen und alle zugehörigen Eigenschaften und anderen Einstellungen manuell konfigurieren.  
+  
+   
+  
+## Examples  
+  
+```  
+  
+public sealed class MyDelayActivity : IActivityTemplateFactory  
+  
+{  
+     public Activity Create(DependencyObject target)  
+     {  
+         return new System.Activities.Statements.Delay  
+         {  
+             DisplayName = "DelayActivityTemplate",  
+             Duration = new TimeSpan(0,0,10)  
+  
+         };  
+     }  
+ }  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity Create (System.Windows.DependencyObject target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Activities.Activity Create(class System.Windows.DependencyObject target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.IActivityTemplateFactory.Create(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Abhängigkeitsobjekt, das von dieser Instanz eines <see cref="T:System.Activities.Presentation.IActivityTemplateFactory" />-Elements verwendet wird.</param>
+        <summary>Erstellt für das angegebene Zielobjekt eine Instanz der <see cref="T:System.Activities.Activity" />-Klasse, die ein vordefiniertes Entwurfsmuster darstellt.</summary>
+        <returns>Eine <see cref="T:System.Activities.Activity" /> des Workflows.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese, um die in einer benutzerdefinierten Aktivitätsvorlage verwendeten Aktivitätsinstanzen zu erstellen und zu konfigurieren.  
+  
+   
+  
+## Examples  
+ Erstellen Sie eine Vorlage, die eine Delay-Aktivität mit einer Dauer von zehn Sekunden konfiguriert.  
+  
+```  
+  
+public sealed class MyDelayActivity : IActivityTemplateFactory  
+  
+{  
+     public Activity Create(DependencyObject target)  
+     {  
+         return new System.Activities.Statements.Delay  
+         {  
+             DisplayName = "DelayActivityTemplate",  
+             Duration = new TimeSpan(0,0,10)  
+  
+         };  
+     }  
+ }  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

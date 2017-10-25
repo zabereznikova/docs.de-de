@@ -1,0 +1,746 @@
+<Type Name="ICommunicationObject" FullName="System.ServiceModel.ICommunicationObject">
+  <TypeSignature Language="C#" Value="public interface ICommunicationObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ICommunicationObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert den Vertrag für den Computer im Grundzustand für alle kommunikationsorientierten Objekte im System, darunter Kanäle, Kanal-Manager, Factorys, Listener und Verteiler sowie Diensthosts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.ICommunicationObject>-Schnittstelle definiert Folgendes:  
+  
+-   Einen Satz geöffneter, geschlossener und abgebrochener Methoden zur Initialisierung von Zustandsübergängen:  
+  
+    -   <xref:System.ServiceModel.ICommunicationObject.Open%2A>  
+  
+    -   <xref:System.ServiceModel.ICommunicationObject.Close%2A>  
+  
+    -   <xref:System.ServiceModel.ICommunicationObject.Abort%2A>  
+  
+-   Asynchrone Versionen der Öffnen- und Schließen-Methoden:  
+  
+    -   <xref:System.ServiceModel.ICommunicationObject.BeginOpen%2A>  
+  
+    -   <xref:System.ServiceModel.ICommunicationObject.EndOpen%28System.IAsyncResult%29>  
+  
+    -   <xref:System.ServiceModel.ICommunicationObject.BeginClose%2A>  
+  
+    -   <xref:System.ServiceModel.ICommunicationObject.EndClose%2A>  
+  
+-   Einen Ereignissatz, der Benachrichtigungen über Zustandsübergänge bereitstellt:  
+  
+    -   <xref:System.ServiceModel.ICommunicationObject.Opening>  
+  
+    -   <xref:System.ServiceModel.ICommunicationObject.Opened>  
+  
+    -   <xref:System.ServiceModel.ICommunicationObject.Closing>  
+  
+    -   <xref:System.ServiceModel.ICommunicationObject.Closed>  
+  
+    -   <xref:System.ServiceModel.ICommunicationObject.Faulted>  
+  
+-   Eine allgemeine <xref:System.ServiceModel.ICommunicationObject.State%2A>-Eigenschaft zur Überprüfung des Objektzustands  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="public void Abort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Abort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ICommunicationObject.Abort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass ein Kommunikationsobjekt unmittelbar vom aktuellen Zustand in den geschlossenen Zustand übergeht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt an, dass unerledigte Aufgaben ignoriert oder vor dem Zurückgeben nicht ordnungsgemäß beendet werden sollen. Die <xref:System.ServiceModel.ICommunicationObject.Abort%2A>-Methode kann zum Abbrechen von ausstehenden Vorgängen verwendet werden, einschließlich ausstehender Aufrufe von <xref:System.ServiceModel.ICommunicationObject.Close%2A>.  
+  
+ Für einen ordnungsgemäßen Übergang eines <xref:System.ServiceModel.ICommunicationObject> vom <xref:System.ServiceModel.CommunicationState.Opened>-Zustand zum <xref:System.ServiceModel.CommunicationState.Closed>-Zustand müssen Sie <xref:System.ServiceModel.ICommunicationObject.Close%2A> aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="BeginClose">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Startet einen asynchronen Vorgang, um ein Kommunikationsobjekt zu schließen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode kann ein <xref:System.ServiceModel.ICommunicationObject> ordnungsgemäß vom <xref:System.ServiceModel.CommunicationState.Opened>-Zustand in den <xref:System.ServiceModel.CommunicationState.Closed>-Zustand übergehen.  
+  
+ Versionen mit und ohne explizites Timeout werden bereitgestellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="BeginClose">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginClose (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginClose(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ICommunicationObject.BeginClose(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den Abschluss des asynchronen Schließvorgangs empfängt.</param>
+        <param name="state">Ein von der Anwendung angegebenes Objekt, das dem asynchronen Schließvorgang zugeordnete Statusinformationen enthält.</param>
+        <summary>Startet einen asynchronen Vorgang, um ein Kommunikationsobjekt zu schließen.</summary>
+        <returns>Die <see cref="T:System.IAsyncResult" />-Einstellung, die auf den asynchronen Schließvorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode kann ein <xref:System.ServiceModel.ICommunicationObject> ordnungsgemäß von einem beliebigen Zustand, mit Ausnahme des <xref:System.ServiceModel.CommunicationState.Opened>-Zustands, in den <xref:System.ServiceModel.CommunicationState.Closed>-Zustand übergehen. Mit der <xref:System.ServiceModel.ICommunicationObject.BeginClose%2A>-Methode können unerledigte Aufgaben vor der Rückgabe abgeschlossen werden. Schließen Sie z.&#160;B. den Versand von gepufferten Nachrichten ab.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">
+          <see cref="M:System.ServiceModel.ICommunicationObject.BeginClose" /> wurde für ein Objekt im <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand aufgerufen.</exception>
+        <exception cref="T:System.TimeoutException">Das standardmäßige Timeout ist verstrichen, bevor <see cref="T:System.ServiceModel.ICommunicationObject" /> ordnungsgemäß geschlossen werden konnte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginClose">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginClose (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginClose(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ICommunicationObject.BeginClose(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für den Sendevorgang bleibt, bevor ein Timeout eintritt.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den Abschluss des asynchronen Schließvorgangs empfängt.</param>
+        <param name="state">Ein von der Anwendung angegebenes Objekt, das dem asynchronen Schließvorgang zugeordnete Statusinformationen enthält.</param>
+        <summary>Startet einen asynchronen Vorgang, um ein Kommunikationsobjekt mit einem festgelegten Timeout zu schließen.</summary>
+        <returns>Die <see cref="T:System.IAsyncResult" />-Einstellung, die auf den asynchronen Schließvorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode kann ein <xref:System.ServiceModel.ICommunicationObject> ordnungsgemäß und in einem angegebenen Zeitraum von einem beliebigen Zustand, mit Ausnahme des <xref:System.ServiceModel.CommunicationState.Opened>-Zustands, in den <xref:System.ServiceModel.CommunicationState.Closed>-Zustand übergehen. Mit der <xref:System.ServiceModel.ICommunicationObject.BeginClose%2A>-Methode können unerledigte Aufgaben vor der Rückgabe abgeschlossen werden. Schließen Sie z.&#160;B. den Versand von gepufferten Nachrichten ab.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">
+          <see cref="M:System.ServiceModel.ICommunicationObject.BeginClose" /> wurde für ein Objekt im <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand aufgerufen.</exception>
+        <exception cref="T:System.TimeoutException">Das festgelegte Timeout ist verstrichen, bevor <see cref="T:System.ServiceModel.ICommunicationObject" /> ordnungsgemäß geschlossen werden konnte.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="BeginOpen">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Startet einen asynchronen Vorgang, um ein Kommunikationsobjekt zu schließen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufgrund der <xref:System.ServiceModel.ICommunicationObject.BeginOpen%2A>-Methode nimmt <xref:System.ServiceModel.ICommunicationObject> den <xref:System.ServiceModel.CommunicationState.Opening>-Zustand an, den es beibehält, bis der Übergang in den <xref:System.ServiceModel.CommunicationState.Opened>-Zustand abgeschlossen oder fehlgeschlagen ist.  
+  
+ Versionen mit und ohne explizites Timeout werden bereitgestellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="BeginOpen">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginOpen (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginOpen(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ICommunicationObject.BeginOpen(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung erhält, dass der asynchrone Öffnungsvorgang abgeschlossen wurde.</param>
+        <param name="state">Ein durch die Anwendung festgelegtes Objekt, das dem asynchronen Öffnungsvorgang zugeordnete Zustandsinformationen enthält.</param>
+        <summary>Startet einen asynchronen Vorgang, um ein Kommunikationsobjekt zu öffnen.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />-Wert, der auf den asynchronen Öffnungsvorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein <xref:System.ServiceModel.ICommunicationObject> instanziiert wird, hat es zuerst den <xref:System.ServiceModel.CommunicationState.Created>-Zustand. Im <xref:System.ServiceModel.CommunicationState.Created>-Zustand kann das Objekt konfiguriert werden (so können beispielsweise Eigenschaften eingerichtet oder Ereignisse registriert werden), es kann jedoch noch nicht zum Versenden und Empfangen von Nachrichten verwendet werden. Aufgrund der <xref:System.ServiceModel.ICommunicationObject.BeginOpen%2A>-Methode nimmt <xref:System.ServiceModel.ICommunicationObject> den <xref:System.ServiceModel.CommunicationState.Opening>-Zustand an, in dem es verbleibt, bis der Öffnungsvorgang erfolgreich war, die Zeit für den Öffnungsvorgang überschritten wird oder der Vorgang ganz fehlschlägt und das Objekt einen Fehler aufweist oder <xref:System.ServiceModel.ICommunicationObject> abgebrochen wird.  
+  
+ Im <xref:System.ServiceModel.CommunicationState.Opened>-Zustand kann <xref:System.ServiceModel.ICommunicationObject> verwendet werden (beispielsweise können Nachrichten empfangen werden), es ist jedoch nicht mehr konfigurierbar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceModel.CommunicationException"><see cref="T:System.ServiceModel.ICommunicationObject" /> kann nicht geöffnet werden und hat den <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand angenommen.</exception>
+        <exception cref="T:System.TimeoutException">Das standardmäßige Öffnungstimeout ist verstrichen, bevor <see cref="T:System.ServiceModel.ICommunicationObject" /> den <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand annehmen konnte. Es hat jetzt den <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginOpen">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginOpen (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginOpen(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ICommunicationObject.BeginOpen(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für den Sendevorgang bleibt, bevor ein Timeout eintritt.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung erhält, dass der asynchrone Öffnungsvorgang abgeschlossen wurde.</param>
+        <param name="state">Ein durch die Anwendung festgelegtes Objekt, das dem asynchronen Öffnungsvorgang zugeordnete Zustandsinformationen enthält.</param>
+        <summary>Startet einen asynchronen Vorgang, um ein Kommunikationsobjekt innerhalb eines festgelegten Zeitraums zu öffnen.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />-Wert, der auf den asynchronen Öffnungsvorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein <xref:System.ServiceModel.ICommunicationObject> instanziiert wird, hat es zuerst den <xref:System.ServiceModel.CommunicationState.Created>-Zustand. Im <xref:System.ServiceModel.CommunicationState.Created>-Zustand kann das Objekt konfiguriert werden (so können beispielsweise Eigenschaften eingerichtet oder Ereignisse registriert werden), es kann jedoch noch nicht zum Versenden und Empfangen von Nachrichten verwendet werden. Aufgrund der <xref:System.ServiceModel.ICommunicationObject.Open%2A>-Methode nimmt <xref:System.ServiceModel.ICommunicationObject> den <xref:System.ServiceModel.CommunicationState.Opening>-Zustand an, in dem es verbleibt, bis der Öffnungsvorgang erfolgreich war, die Zeit für den Öffnungsvorgang überschritten wird oder der Vorgang ganz fehlschlägt und das Objekt einen Fehler aufweist oder <xref:System.ServiceModel.ICommunicationObject> abgebrochen wird.  
+  
+ Im <xref:System.ServiceModel.CommunicationState.Opened>-Zustand kann <xref:System.ServiceModel.ICommunicationObject> verwendet werden (beispielsweise können Nachrichten empfangen werden), es ist jedoch nicht mehr konfigurierbar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceModel.CommunicationException"><see cref="T:System.ServiceModel.ICommunicationObject" /> kann nicht geöffnet werden und hat den <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand angenommen.</exception>
+        <exception cref="T:System.TimeoutException">Das festgelegte Timeout ist verstrichen, bevor <see cref="T:System.ServiceModel.ICommunicationObject" /> den <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand annehmen konnte. Es weist jetzt den <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand auf.</exception>
+        <block subset="none" type="overrides">
+          <para>Der Vorgang muss eine <see cref="T:System.TimeoutException" /> auslösen, wenn das angegebene <paramref name="timeout" /> überschritten wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ICommunicationObject.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass ein Kommunikationsobjekt vom aktuellen Zustand in den geschlossenen Zustand übergeht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode kann ein <xref:System.ServiceModel.ICommunicationObject> ordnungsgemäß vom <xref:System.ServiceModel.CommunicationState.Opened>-Zustand in den <xref:System.ServiceModel.CommunicationState.Closed>-Zustand übergehen. Mit der <xref:System.ServiceModel.ICommunicationObject.Close%2A>-Methode können unerledigte Aufgaben vor der Rückgabe abgeschlossen werden. Schließen Sie z.&#160;B. den Versand von gepufferten Nachrichten ab.  
+  
+ Das <xref:System.ServiceModel.ICommunicationObject> nimmt den <xref:System.ServiceModel.CommunicationState.Closing>-Zustand an und behält ihn bei, bis der Übergang in den <xref:System.ServiceModel.CommunicationState.Closed>-Zustand abgeschlossen ist.  
+  
+ <xref:System.ServiceModel.ICommunicationObject.Close%2A> wird zurückgegeben, sobald der <xref:System.ServiceModel.CommunicationState.Closed>-Zustand erreicht wird.  
+  
+ Wenn das standardmäßige Schließen-Timeout verstreicht, bevor <xref:System.ServiceModel.ICommunicationObject> ordnungsgemäß geschlossen wurde, wird <xref:System.ServiceModel.ICommunicationObject> abgebrochen.  
+  
+ Wenn <xref:System.ServiceModel.ICommunicationObject.Close%2A> für ein <xref:System.ServiceModel.ICommunicationObject> im <xref:System.ServiceModel.CommunicationState.Created>-Zustand, <xref:System.ServiceModel.CommunicationState.Opening>-Zustand oder <xref:System.ServiceModel.CommunicationState.Faulted>-Zustand aufgerufen wird, wird <xref:System.ServiceModel.ICommunicationObject> abgebrochen. Wenn <xref:System.ServiceModel.ICommunicationObject.Close%2A> für ein <xref:System.ServiceModel.ICommunicationObject> im <xref:System.ServiceModel.CommunicationState.Closing>-Zustand oder <xref:System.ServiceModel.CommunicationState.Closed>-Zustand aufgerufen wird, wird der Aufruf sofort zurückgegeben.  
+  
+ Es gibt auch eine asynchrone Version der Schließmethode, die durch den Aufruf von <xref:System.ServiceModel.ICommunicationObject.BeginClose%2A> initiiert wird und durch den Aufruf von <xref:System.ServiceModel.ICommunicationObject.Close%2A> abgeschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">
+          <see cref="M:System.ServiceModel.ICommunicationObject.Close" /> wurde für ein Objekt im <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand aufgerufen.</exception>
+        <exception cref="T:System.TimeoutException">Das standardmäßige Schließen-Timeout ist verstrichen, bevor <see cref="T:System.ServiceModel.ICommunicationObject" /> ordnungsgemäß geschlossen werden konnte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ICommunicationObject.Close(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für den Sendevorgang bleibt, bevor ein Timeout eintritt.</param>
+        <summary>Bewirkt, dass ein Kommunikationsobjekt vom aktuellen Zustand in den geschlossenen Zustand übergeht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode kann ein <xref:System.ServiceModel.ICommunicationObject> ordnungsgemäß und in einem angegebenen Zeitraum vom <xref:System.ServiceModel.CommunicationState.Opened>-Zustand in den <xref:System.ServiceModel.CommunicationState.Closed>-Zustand übergehen. Mit der <xref:System.ServiceModel.ICommunicationObject.Close%2A>-Methode können unerledigte Aufgaben vor der Rückgabe abgeschlossen werden. Schließen Sie z.&#160;B. den Versand von gepufferten Nachrichten ab.  
+  
+ Das <xref:System.ServiceModel.ICommunicationObject> nimmt den <xref:System.ServiceModel.CommunicationState.Closing>-Zustand an und behält ihn bei, bis der Übergang in den <xref:System.ServiceModel.CommunicationState.Closed>-Zustand abgeschlossen ist.  
+  
+ <xref:System.ServiceModel.ICommunicationObject.Close%2A> wird zurückgegeben, sobald der <xref:System.ServiceModel.CommunicationState.Closed>-Zustand erreicht wird.  
+  
+ Wenn das Timeout verstreicht, bevor <xref:System.ServiceModel.ICommunicationObject> ordnungsgemäß geschlossen werden kann, wird <xref:System.ServiceModel.ICommunicationObject> abgebrochen.  
+  
+ Wenn <xref:System.ServiceModel.ICommunicationObject.Close%2A> für ein <xref:System.ServiceModel.ICommunicationObject> im <xref:System.ServiceModel.CommunicationState.Created>-Zustand, <xref:System.ServiceModel.CommunicationState.Opening>-Zustand oder <xref:System.ServiceModel.CommunicationState.Faulted>-Zustand aufgerufen wird, wird <xref:System.ServiceModel.ICommunicationObject> abgebrochen.  Wenn <xref:System.ServiceModel.ICommunicationObject.Close%2A> für ein <xref:System.ServiceModel.ICommunicationObject> im <xref:System.ServiceModel.CommunicationState.Closing>-Zustand oder <xref:System.ServiceModel.CommunicationState.Closed>-Zustand aufgerufen wird, wird der Aufruf sofort zurückgegeben.  
+  
+ Es gibt auch eine asynchrone Version der Schließmethode, die durch den Aufruf von <xref:System.ServiceModel.ICommunicationObject.BeginClose%2A> initiiert wird und durch den Aufruf von <xref:System.ServiceModel.ICommunicationObject.Close%2A> abgeschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">
+          <see cref="M:System.ServiceModel.ICommunicationObject.Close" /> wurde für ein Objekt im <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand aufgerufen.</exception>
+        <exception cref="T:System.TimeoutException">Das Timeout ist verstrichen, bevor <see cref="T:System.ServiceModel.ICommunicationObject" /> ordnungsgemäß geschlossen werden konnte.</exception>
+        <block subset="none" type="overrides">
+          <para>Der Vorgang muss eine <see cref="T:System.TimeoutException" /> auslösen, wenn das angegebene <paramref name="timeout" /> überschritten wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Closed">
+      <MemberSignature Language="C#" Value="public event EventHandler Closed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Closed" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.ICommunicationObject.Closed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, sobald der Übergang des Kommunikationsobjekts vom Schließen-Zustand in den Geschlossen-Zustand abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Closing">
+      <MemberSignature Language="C#" Value="public event EventHandler Closing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Closing" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.ICommunicationObject.Closing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, sobald das Kommunikationsobjekt den Schließzustand annimmt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt ein, sobald der Übergang des Kommunikationsobjekts vom <xref:System.ServiceModel.CommunicationState.Opened>-Zustand in den <xref:System.ServiceModel.CommunicationState.Closed>-Zustand startet oder unmittelbar nachdem die <xref:System.ServiceModel.ICommunicationObject.Close%2A>-Methode bzw. die <xref:System.ServiceModel.ICommunicationObject.BeginClose%2A>-Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndClose">
+      <MemberSignature Language="C#" Value="public void EndClose (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndClose(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ICommunicationObject.EndClose(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das von einem Aufruf der <see cref="Overload:System.ServiceModel.ICommunicationObject.BeginClose" />-Methode zurückgegeben wird.</param>
+        <summary>Beendet einen asynchronen Vorgang, um ein Kommunikationsobjekt zu schließen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">
+          <see cref="Overload:System.ServiceModel.ICommunicationObject.BeginClose" /> wurde für ein Objekt im <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand aufgerufen.</exception>
+        <exception cref="T:System.TimeoutException">Das Timeout ist verstrichen, bevor <see cref="T:System.ServiceModel.ICommunicationObject" /> ordnungsgemäß geschlossen werden konnte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndOpen">
+      <MemberSignature Language="C#" Value="public void EndOpen (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndOpen(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ICommunicationObject.EndOpen(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das von einem Aufruf der <see cref="Overload:System.ServiceModel.ICommunicationObject.BeginOpen" />-Methode zurückgegeben wird.</param>
+        <summary>Beendet einen asynchronen Vorgang, um ein Kommunikationsobjekt zu öffnen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ServiceModel.CommunicationException"><see cref="T:System.ServiceModel.ICommunicationObject" /> kann nicht geöffnet werden und hat den <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand angenommen.</exception>
+        <exception cref="T:System.TimeoutException">Das Timeout ist verstrichen, bevor <see cref="T:System.ServiceModel.ICommunicationObject" /> den <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand annehmen konnte. Es hat jetzt den <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Faulted">
+      <MemberSignature Language="C#" Value="public event EventHandler Faulted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Faulted" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.ICommunicationObject.Faulted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, sobald das Kommunikationsobjekt den Fehlerzustand annimmt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Open">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Bewirkt den Übergang eines Kommunikationsobjekts aus dem Erstellt-Zustand in den Geöffnet-Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Versionen mit und ohne explizites Timeout werden bereitgestellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public void Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ICommunicationObject.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt den Übergang eines Kommunikationsobjekts aus dem Erstellt-Zustand in den Geöffnet-Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein <xref:System.ServiceModel.ICommunicationObject> instanziiert wird, hat es zuerst den <xref:System.ServiceModel.CommunicationState.Created>-Zustand. Im <xref:System.ServiceModel.CommunicationState.Created>-Zustand kann das Objekt konfiguriert werden (so können beispielsweise Eigenschaften eingerichtet oder Ereignisse registriert werden), es kann jedoch noch nicht zum Versenden und Empfangen von Nachrichten verwendet werden. Aufgrund der <xref:System.ServiceModel.ICommunicationObject.Open%2A>-Methode nimmt <xref:System.ServiceModel.ICommunicationObject> den <xref:System.ServiceModel.CommunicationState.Opening>-Zustand an, in dem es verbleibt, bis der Öffnungsvorgang erfolgreich war, die Zeit für den Öffnungsvorgang überschritten wird oder der Vorgang ganz fehlschlägt und das Objekt einen Fehler aufweist oder <xref:System.ServiceModel.ICommunicationObject> abgebrochen wird.  
+  
+ Im <xref:System.ServiceModel.CommunicationState.Opened>-Zustand kann <xref:System.ServiceModel.ICommunicationObject> verwendet werden (beispielsweise können Nachrichten empfangen werden), es ist jedoch nicht mehr konfigurierbar.  
+  
+ Es gibt auch eine asynchrone Version der Öffnungsmethode, die durch den Aufruf von <xref:System.ServiceModel.ICommunicationObject.BeginOpen%2A> initiiert wird und durch den Aufruf von <xref:System.ServiceModel.ICommunicationObject.EndOpen%28System.IAsyncResult%29> abgeschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceModel.CommunicationException"><see cref="T:System.ServiceModel.ICommunicationObject" /> kann nicht geöffnet werden und hat den <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand angenommen.</exception>
+        <exception cref="T:System.TimeoutException">Das standardmäßige Öffnungstimeout ist verstrichen, bevor <see cref="T:System.ServiceModel.ICommunicationObject" /> den <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand annehmen konnte. Es hat jetzt den <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public void Open (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Open(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ICommunicationObject.Open(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für den Sendevorgang bleibt, bevor ein Timeout eintritt.</param>
+        <summary>Bewirkt den Übergang eines Kommunikationsobjekts innerhalb eines angegebenen Zeitraums vom Erstellt-Zustand in den Geöffnet-Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein <xref:System.ServiceModel.ICommunicationObject> instanziiert wird, hat es zuerst den <xref:System.ServiceModel.CommunicationState.Created>-Zustand. Im <xref:System.ServiceModel.CommunicationState.Created>-Zustand kann das Objekt konfiguriert werden (so können beispielsweise Eigenschaften eingerichtet oder Ereignisse registriert werden), es kann jedoch noch nicht zum Versenden und Empfangen von Nachrichten verwendet werden. Aufgrund der <xref:System.ServiceModel.ICommunicationObject.Open%2A>-Methode nimmt <xref:System.ServiceModel.ICommunicationObject> den <xref:System.ServiceModel.CommunicationState.Opening>-Zustand an, in dem es verbleibt, bis der Öffnungsvorgang erfolgreich war, die Zeit für den Öffnungsvorgang überschritten wird oder der Vorgang ganz fehlschlägt und das Objekt einen Fehler aufweist oder <xref:System.ServiceModel.ICommunicationObject> abgebrochen wird.  
+  
+ Im <xref:System.ServiceModel.CommunicationState.Opened>-Zustand kann <xref:System.ServiceModel.ICommunicationObject> verwendet werden (beispielsweise können Nachrichten empfangen werden), es ist jedoch nicht mehr konfigurierbar.  
+  
+ Es gibt auch eine asynchrone Version der Öffnungsmethode, die durch den Aufruf von <xref:System.ServiceModel.ICommunicationObject.BeginOpen%2A> initiiert wird und durch den Aufruf von <xref:System.ServiceModel.ICommunicationObject.EndOpen%28System.IAsyncResult%29> abgeschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceModel.CommunicationException"><see cref="T:System.ServiceModel.ICommunicationObject" /> kann nicht geöffnet werden und hat den <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand angenommen.</exception>
+        <exception cref="T:System.TimeoutException">Das festgelegte Timeout ist verstrichen, bevor <see cref="T:System.ServiceModel.ICommunicationObject" /> den <see cref="F:System.ServiceModel.CommunicationState.Opened" />-Zustand annehmen konnte. Es weist jetzt den <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand auf.</exception>
+        <block subset="none" type="overrides">
+          <para>Der Vorgang muss eine <see cref="T:System.TimeoutException" /> auslösen, wenn das angegebene <paramref name="timeout" /> überschritten wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Opened">
+      <MemberSignature Language="C#" Value="public event EventHandler Opened;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Opened" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.ICommunicationObject.Opened" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, sobald der Übergang des Kommunikationsobjekts vom Öffnungszustand in den Geöffnet-Zustand abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opening">
+      <MemberSignature Language="C#" Value="public event EventHandler Opening;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Opening" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.ICommunicationObject.Opening" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, sobald das Kommunikationsobjekt den Öffnungszustand annimmt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt ein, sobald der Übergang des Kommunikationsobjekts vom <xref:System.ServiceModel.CommunicationState.Created>-Zustand in den <xref:System.ServiceModel.CommunicationState.Opened>-Zustand startet oder unmittelbar nachdem die <xref:System.ServiceModel.ICommunicationObject.Open%2A>-Methode bzw. die <xref:System.ServiceModel.ICommunicationObject.BeginOpen%2A>-Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.CommunicationState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.CommunicationState State" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ICommunicationObject.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.CommunicationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Zustand des kommunikationsorientierten Objekts ab.</summary>
+        <value>Der Wert für <see cref="T:System.ServiceModel.CommunicationState" /> des Objekts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Hauptkommunikationszustände für <xref:System.ServiceModel.ICommunicationObject> sind verfügbar:  
+  
+-   <xref:System.ServiceModel.CommunicationState.Created> <xref:System.ServiceModel.CommunicationState.Opened>  
+  
+-   <xref:System.ServiceModel.CommunicationState.Closed>  
+  
+-   <xref:System.ServiceModel.CommunicationState.Faulted>  
+  
+ Es gibt auch Übergangszustände, die ein solches Objekt beim Übergang zwischen den ersten drei Hauptzuständen aufweisen kann:  
+  
+-   <xref:System.ServiceModel.CommunicationState.Opening>  
+  
+-   <xref:System.ServiceModel.CommunicationState.Closing>  
+  
+ <xref:System.ServiceModel.CommunicationState> definiert die Zustände, die für kommunikationsorientierte Objekte im System zulässig sind, darunter Kanäle, Listener, die Kanal- und Listenerfactorys und die <xref:System.ServiceModel.ServiceHost>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

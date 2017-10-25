@@ -1,0 +1,339 @@
+<Type Name="XmlSerializerOperationBehavior" FullName="System.ServiceModel.Description.XmlSerializerOperationBehavior">
+  <TypeSignature Language="C#" Value="public class XmlSerializerOperationBehavior : System.ServiceModel.Description.IOperationBehavior, System.ServiceModel.Description.IWsdlExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSerializerOperationBehavior extends System.Object implements class System.ServiceModel.Description.IOperationBehavior, class System.ServiceModel.Description.IWsdlExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.XmlSerializerOperationBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IOperationBehavior</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IWsdlExportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Steuert das Laufzeitverhalten des <see cref="T:System.Xml.Serialization.XmlSerializer" />, der mit einem Vorgang verknüpft ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> aktiviert die Steuerung von <xref:System.Xml.Serialization.XmlSerializer>-Optionen, wie zum Beispiel die <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A>-Eigenschaft des <xref:System.ServiceModel.XmlSerializerFormatAttribute>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird das <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> für einen bestimmten Vorgang ermittelt und die <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A>-Eigenschaft des <xref:System.ServiceModel.XmlSerializerFormatAttribute> für das Serialisierungsprogramm festgelegt.  
+  
+ [!code-csharp[XmlSerializerOperationBehavior#1](~/samples/snippets/csharp/VS_Snippets_CFX/xmlserializeroperationbehavior/cs/source.cs#1)]
+ [!code-vb[XmlSerializerOperationBehavior#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/xmlserializeroperationbehavior/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSerializerOperationBehavior (System.ServiceModel.Description.OperationDescription operation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.OperationDescription operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.XmlSerializerOperationBehavior.#ctor(System.ServiceModel.Description.OperationDescription)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="operation" Type="System.ServiceModel.Description.OperationDescription" />
+      </Parameters>
+      <Docs>
+        <param name="operation">Die <see cref="T:System.ServiceModel.Description.OperationDescription" /> zum Exportieren oder Serialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.XmlSerializerOperationBehavior" />-Klasse mit einem angegebenen Vorgang.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSerializerOperationBehavior (System.ServiceModel.Description.OperationDescription operation, System.ServiceModel.XmlSerializerFormatAttribute format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.OperationDescription operation, class System.ServiceModel.XmlSerializerFormatAttribute format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.XmlSerializerOperationBehavior.#ctor(System.ServiceModel.Description.OperationDescription,System.ServiceModel.XmlSerializerFormatAttribute)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="operation" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="attribute" Type="System.ServiceModel.XmlSerializerFormatAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="operation">Die <see cref="T:System.ServiceModel.Description.OperationDescription" /> zum Exportieren oder Serialisieren.</param>
+        <param name="format">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.XmlSerializerOperationBehavior" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXmlMappings">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Xml.Serialization.XmlMapping&gt; GetXmlMappings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Xml.Serialization.XmlMapping&gt; GetXmlMappings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.XmlSerializerOperationBehavior.GetXmlMappings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Xml.Serialization.XmlMapping&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Auflistung der Zuordnungen zwischen XML-Schemaelementen und CLR-Datentypen ab.</summary>
+        <returns>Ein <see cref="T:System.Collections.ObjectModel.Collection`1" /> von <see cref="T:System.Xml.Serialization.XmlMapping" />s, der die Zuordnungen enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.AddBindingParameters">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.AddBindingParameters (System.ServiceModel.Description.OperationDescription description, System.ServiceModel.Channels.BindingParameterCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.AddBindingParameters(class System.ServiceModel.Description.OperationDescription description, class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.XmlSerializerOperationBehavior.System#ServiceModel#Description#IOperationBehavior#AddBindingParameters(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="description">Der Ziel-<see cref="T:System.ServiceModel.Description.OperationDescription" />.</param>
+        <param name="parameters">Eine <see cref="T:System.ServiceModel.Channels.BindingParameterCollection" />, die die Parameter enthält.</param>
+        <summary>Fügt einer Vorgangsbeschreibung einen Parametersatz hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fügt einer Vorgangsbeschreibung einen Parametersatz hinzu.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.ApplyClientBehavior (System.ServiceModel.Description.OperationDescription description, System.ServiceModel.Dispatcher.ClientOperation proxy);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior(class System.ServiceModel.Description.OperationDescription description, class System.ServiceModel.Dispatcher.ClientOperation proxy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.XmlSerializerOperationBehavior.System#ServiceModel#Description#IOperationBehavior#ApplyClientBehavior(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Dispatcher.ClientOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="proxy" Type="System.ServiceModel.Dispatcher.ClientOperation" />
+      </Parameters>
+      <Docs>
+        <param name="description">Eine <see cref="T:System.ServiceModel.Description.OperationDescription" />, die den Vorgang darstellt.</param>
+        <param name="proxy">Ein <see cref="T:System.ServiceModel.Dispatcher.ClientOperation" />, der einen Clientvorgang darstellt.</param>
+        <summary>Wendet das Verhalten eines Clients auf den Vorgang an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wendet das Verhalten eines Clients auf den Vorgang an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.ApplyDispatchBehavior (System.ServiceModel.Description.OperationDescription description, System.ServiceModel.Dispatcher.DispatchOperation dispatch);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior(class System.ServiceModel.Description.OperationDescription description, class System.ServiceModel.Dispatcher.DispatchOperation dispatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.XmlSerializerOperationBehavior.System#ServiceModel#Description#IOperationBehavior#ApplyDispatchBehavior(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Dispatcher.DispatchOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="dispatch" Type="System.ServiceModel.Dispatcher.DispatchOperation" />
+      </Parameters>
+      <Docs>
+        <param name="description">Der Ziel-<see cref="T:System.ServiceModel.Description.OperationDescription" />.</param>
+        <param name="dispatch">Das anzuwendende <see cref="T:System.ServiceModel.Dispatcher.DispatchOperation" />.</param>
+        <summary>Wendet ein Verteilungsverhalten auf den Vorgang an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wendet ein Verteilungsverhalten auf den Vorgang an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.Validate">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.Validate (System.ServiceModel.Description.OperationDescription description);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.Validate(class System.ServiceModel.Description.OperationDescription description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.XmlSerializerOperationBehavior.System#ServiceModel#Description#IOperationBehavior#Validate(System.ServiceModel.Description.OperationDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+      </Parameters>
+      <Docs>
+        <param name="description">Die zu überprüfende Ziel-<see cref="T:System.ServiceModel.Description.OperationDescription" />.</param>
+        <summary>Überprüft den Vorgang.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überprüft den Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IWsdlExportExtension.ExportContract">
+      <MemberSignature Language="C#" Value="void IWsdlExportExtension.ExportContract (System.ServiceModel.Description.WsdlExporter exporter, System.ServiceModel.Description.WsdlContractConversionContext contractContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IWsdlExportExtension.ExportContract(class System.ServiceModel.Description.WsdlExporter exporter, class System.ServiceModel.Description.WsdlContractConversionContext contractContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.XmlSerializerOperationBehavior.System#ServiceModel#Description#IWsdlExportExtension#ExportContract(System.ServiceModel.Description.WsdlExporter,System.ServiceModel.Description.WsdlContractConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.WsdlExporter" />
+        <Parameter Name="contractContext" Type="System.ServiceModel.Description.WsdlContractConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Das zum Exportieren zu verwendende <see cref="T:System.ServiceModel.Description.WsdlExporter" />.</param>
+        <param name="contractContext">Der zu exportierende <see cref="T:System.ServiceModel.Description.WsdlContractConversionContext" />.</param>
+        <summary>Exportiert die Vorgangsdaten als WSDL-Dokument.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Exportiert die Vorgangsdaten als WSDL-Dokument.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint">
+      <MemberSignature Language="C#" Value="void IWsdlExportExtension.ExportEndpoint (System.ServiceModel.Description.WsdlExporter exporter, System.ServiceModel.Description.WsdlEndpointConversionContext endpointContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint(class System.ServiceModel.Description.WsdlExporter exporter, class System.ServiceModel.Description.WsdlEndpointConversionContext endpointContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.XmlSerializerOperationBehavior.System#ServiceModel#Description#IWsdlExportExtension#ExportEndpoint(System.ServiceModel.Description.WsdlExporter,System.ServiceModel.Description.WsdlEndpointConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.WsdlExporter" />
+        <Parameter Name="endpointContext" Type="System.ServiceModel.Description.WsdlEndpointConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Das zum Exportieren zu verwendende <see cref="T:System.ServiceModel.Description.WsdlExporter" />.</param>
+        <param name="endpointContext">Der zu exportierende <see cref="T:System.ServiceModel.Description.WsdlEndpointConversionContext" />.</param>
+        <summary>Exportiert die Endpunktdaten als WSDL-Dokument.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Exportiert die Endpunktdaten als WSDL-Dokument.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSerializerFormatAttribute">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.XmlSerializerFormatAttribute XmlSerializerFormatAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.XmlSerializerFormatAttribute XmlSerializerFormatAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.XmlSerializerOperationBehavior.XmlSerializerFormatAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.XmlSerializerFormatAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt ab, das die SOAP-Verwendungs- und -Formatierungsoptionen enthält.</summary>
+        <value><see cref="T:System.ServiceModel.XmlSerializerFormatAttribute" />, das SOAP-Verwendungs- und -Formatierungsoptionen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

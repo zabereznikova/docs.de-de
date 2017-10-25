@@ -1,0 +1,67 @@
+<Type Name="AutoSizeMode" FullName="System.Windows.Forms.AutoSizeMode">
+  <TypeSignature Language="C#" Value="public enum AutoSizeMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AutoSizeMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.AutoSizeMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie sich ein Steuerelement verhält, wenn seine <see cref="P:System.Windows.Forms.Control.AutoSize" /> -Eigenschaft aktiviert ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen des Werts GrowAndShrink führt zum gleichen Verhalten, die Sie für Steuerelemente mit erhalten die <xref:System.Windows.Forms.Control.AutoSize%2A> -Eigenschaft aktiviert, aber die verfügen über keine  
+  
+ `AutoSizeMode`-Eigenschaft. Die <xref:System.Windows.Forms.Control.MinimumSize%2A> und <xref:System.Windows.Forms.Control.MaximumSize%2A> Eigenschaften werden berücksichtigt, aber der aktuelle Wert der die <xref:System.Windows.Forms.Control.Size%2A> Eigenschaft wird ignoriert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt ein Formular erstellt, mit Code, die Größe wird automatisch an seinen Inhalt angepasst. Wenn ausgeführt wurde, wird das Formular anzuzeigen. eine <xref:System.Windows.Forms.Label>, eine <xref:System.Windows.Forms.TextBox> zum Eingeben einer URL und ein <xref:System.Windows.Forms.Button> für diese URL innerhalb des Benutzers Standard-Webbrowser anzuzeigen. Das Codebeispiel verwendet eine <xref:System.Windows.Forms.FlowLayoutPanel> , das Layout der enthaltenen steuert nacheinander und legt die <xref:System.Windows.Forms.Control.AutoSize%2A> und <xref:System.Windows.Forms.AutoSizeMode> vergrößert und verkleinert werden, um den Inhalt des Formulars anzupassen.  
+  
+ [!code-csharp[Form.AutoSize#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Form.AutoSize/CS/Form1.cs#1)]
+ [!code-vb[Form.AutoSize#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Form.AutoSize/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GrowAndShrink">
+      <MemberSignature Language="C#" Value="GrowAndShrink" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AutoSizeMode GrowAndShrink = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AutoSizeMode.GrowAndShrink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement vergrößert oder verkleinert wird, um seinen Inhalt angepasst. Das Steuerelement kann nicht manuell geändert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GrowOnly">
+      <MemberSignature Language="C#" Value="GrowOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AutoSizeMode GrowOnly = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AutoSizeMode.GrowOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement so weit an seinen Inhalt angepasst wird eine Verkleinerung erfolgt jedoch kleiner als der Wert von dessen <see cref="P:System.Windows.Forms.Control.Size" /> Eigenschaft. Das Formular kann geändert werden kann, aber vorgenommen werden so klein ist, dass alle darin enthaltenen Steuerelemente ausgeblendet sind.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

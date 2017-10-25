@@ -1,0 +1,114 @@
+<Type Name="PrintSystemObjects" FullName="System.Printing.PrintSystemObjects">
+  <TypeSignature Language="C#" Value="public abstract class PrintSystemObjects : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PrintSystemObjects extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintSystemObjects" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von Drucksystemobjekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie beim Ableiten einer Klasse von <xref:System.Printing.PrintSystemObject>, empfiehlt es sich um eine Auflistung von Objekten aus dieser Klasse ableiten <xref:System.Printing.PrintSystemObjects>.  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Printing> Namespace werden nicht für die Verwendung innerhalb einer Windows-Dienst oder der ASP.NET-Anwendung oder der Dienst unterstützt. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen.  
+  
+ Wenn Sie aus einer Windows Forms-Anwendung drucken möchten, finden Sie unter der <xref:System.Drawing.Printing> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PrintSystemObjects ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObjects.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Printing.PrintSystemObjects" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override sealed void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObjects.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Printing.PrintSystemObjects" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Printing.PrintSystemObjects.Dispose> auf, wenn Sie <xref:System.Printing.PrintSystemObjects> nicht mehr benötigen. Die <xref:System.Printing.PrintSystemObjects.Dispose>-Methode bewirkt, dass <xref:System.Printing.PrintSystemObjects> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Printing.PrintSystemObjects.Dispose>, müssen Sie alle Verweise auf Freigeben der <xref:System.Printing.PrintSystemObjects> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Printing.PrintSystemObjects> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Printing.PrintSystemObjects.Dispose> auf, bevor Sie den letzten Verweis auf das <xref:System.Printing.PrintSystemObjects> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Printing.PrintSystemObjects>-Methode des <xref:System.Object.Finalize%2A>-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObjects.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">To be added.</param>
+        <summary>Gibt die von <see cref="T:System.Printing.PrintSystemObjects" /> verwendeten nicht verwalteten Ressourcen und optional auch die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich <xref:System.Printing.PrintSystemObjects.Dispose> Methode und die <xref:System.Object.Finalize%2A> Methode. <xref:System.Printing.PrintSystemObjects.Dispose>Ruft die geschützte <xref:System.Printing.PrintSystemObjects.Dispose%28System.Boolean%29> Methode mit den unbenannten booleschen Parametersatz hinzu `true`. <xref:System.Object.Finalize%2A>Ruft <xref:System.Printing.PrintSystemObjects.Dispose%28System.Boolean%29> mit den Parametersatz hinzu `false`.  
+  
+ Wenn der boolesche Parameter ist `true`, diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte frei, die von diesem <xref:System.Printing.PrintSystemObjects> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Beim Überschreiben von <see langword="Dispose(Boolean)" /> müssen Sie darauf achten, nicht auf Objekte zu verweisen, die durch einen früheren Aufruf von <see langword="Dispose" /> freigegeben wurden. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

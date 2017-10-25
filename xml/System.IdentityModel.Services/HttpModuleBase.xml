@@ -1,0 +1,165 @@
+<Type Name="HttpModuleBase" FullName="System.IdentityModel.Services.HttpModuleBase">
+  <TypeSignature Language="C#" Value="public abstract class HttpModuleBase : System.Web.IHttpModule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HttpModuleBase extends System.Object implements class System.Web.IHttpModule" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.HttpModuleBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpModule</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Die Basisklasse, die aus der HTTP-Modulen, die mit konfigurierbar sind die [ &lt;system.identityModel.services&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) Element (<see cref="T:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection" />) abgeleitet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HttpModuleBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.HttpModuleBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Services.HttpModuleBase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.HttpModuleBase.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die von der aktuellen Instanz der verwendeten Ressourcen (mit Ausnahme von Speicher) die <see cref="T:System.IdentityModel.Services.HttpModuleBase" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie diese Methode in die abgeleitete Klasse, um Ressourcen freizugeben. Die Standardimplementierung ist leer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FederationConfiguration">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Services.Configuration.FederationConfiguration FederationConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Services.Configuration.FederationConfiguration FederationConfiguration" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.Configuration.FederationConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.IdentityModel.Services.Configuration.FederationConfiguration" /> -Objekt, das für das aktuelle Modul gültig ist.</summary>
+        <value>Die <see cref="T:System.IdentityModel.Services.Configuration.FederationConfiguration" /> -Objekt, das für das aktuelle Modul gültig ist.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Versuch, die Eigenschaft auf festgelegt <see langword="null" /> auftritt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public void Init (System.Web.HttpApplication context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Init(class System.Web.HttpApplication context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.HttpModuleBase.Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="context">Das Anwendungsobjekt, das dieses Modul enthält.</param>
+        <summary>Initialisiert das HTTP-Modul.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert die <xref:System.Web.IHttpModule.Init%2A?displayProperty=nameWithType> Methode durch die Initialisierung der <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A> auf den Wert der Eigenschaft der <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> -Eigenschaft, Aufrufen der <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A> -Methode, und klicken Sie dann das Ergebnis der <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A> Methode.  
+  
+ Abgeleitete Klassen überschreiben die <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A> und <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeModule">
+      <MemberSignature Language="C#" Value="protected abstract void InitializeModule (System.Web.HttpApplication context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitializeModule(class System.Web.HttpApplication context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.HttpModuleBase.InitializeModule(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="context">Das Anwendungsobjekt, das dieses Modul enthält.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse initialisiert das aktuelle Modul und bereitet es zum Behandeln von Ereignissen aus seiner ASP.NET Application-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A> -Methode zum Laden von sowie alle zusätzlichen Konfigurationsstatus hinsichtlich Ereignisbehandlung Methoden mit bestimmten Ereignissen, die ausgelöst wird, indem Sie registriert den <xref:System.Web.HttpApplication> Objekt. Wenn diese Methode aufgerufen wird, aus der <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> -Methode, die <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A> -Eigenschaft wurde bereits initialisiert. Sie können das Konfigurationsobjekt abrufen, das für dieses Modul, der von dieser Eigenschaft gültig ist. Die <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A> Eigenschaft für alle tokenverarbeitung in diesem Modul verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializePropertiesFromConfiguration">
+      <MemberSignature Language="C#" Value="protected abstract void InitializePropertiesFromConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitializePropertiesFromConfiguration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse initialisiert Moduleigenschaften basierend auf Werten in der <see cref="T:System.IdentityModel.Services.Configuration.FederationConfiguration" /> -Objekt, das für die es gültig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Methode aufgerufen wird, aus der <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> -Methode, die <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A> -Eigenschaft wurde bereits initialisiert. Sie können das Konfigurationsobjekt abrufen, das für dieses Modul, der von dieser Eigenschaft gültig ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

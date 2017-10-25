@@ -1,0 +1,1057 @@
+<Type Name="RSA" FullName="System.Security.Cryptography.RSA">
+  <TypeSignature Language="C#" Value="public abstract class RSA : System.Security.Cryptography.AsymmetricAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RSA extends System.Security.Cryptography.AsymmetricAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.RSA" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.AsymmetricAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisklasse dar, von der alle Implementierungen des <see cref="T:System.Security.Cryptography.RSA" />-Algorithmus erben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erweitern diese Klasse zeigt, dass Sie implementieren eine `RSA` Schlüssel. Dies ist erforderlich, wenn ein Entwickler eine neue Bereitstellung `RSA` Key-Implementierung.  
+  
+ Der einzige Zweck dieser Klasse wird als Mitglied einer Hierarchie für die Identifikation von der `RSA` Algorithmus.  
+  
+ Der <xref:System.Security.Cryptography.RSACryptoServiceProvider> unterstützt Schlüssellängen zwischen 384 Bits und 16.384 Bits in Schritten von 8 Bits, wenn der Microsoft Enhanced Cryptographic Provider installiert ist.  Wenn der Microsoft Base Cryptographic Provider installiert ist, werden Schlüssellängen zwischen 384 Bits und 512 Bits in Schritten von 8 Bits unterstützt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RSA ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.RSA" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine geschützte Methode, die nur von einer abgeleiteten Klasse aufgerufen werden kann <xref:System.Security.Cryptography.RSA>. Eine Instanz einer abstrakten Klasse kann nicht erstellt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.RSA Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.RSA Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RSA</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der Standardimplementierung des <see cref="T:System.Security.Cryptography.RSA" />-Algorithmus.</summary>
+        <returns>Eine neue Instanz der Standardimplementierung von <see cref="T:System.Security.Cryptography.RSA" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.RSA Create (int keySizeInBits);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.RSA Create(int32 keySizeInBits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.Create(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RSA</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keySizeInBits" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="keySizeInBits">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.RSA Create (System.Security.Cryptography.RSAParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.RSA Create(valuetype System.Security.Cryptography.RSAParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.Create(System.Security.Cryptography.RSAParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RSA</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Security.Cryptography.RSAParameters" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.RSA Create (string algName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.RSA Create(string algName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RSA</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algName">Der Name der Implementierung von <see cref="T:System.Security.Cryptography.RSA" />, die verwendet werden soll.</param>
+        <summary>Erstellt eine Instanz der angegebenen Implementierung von <see cref="T:System.Security.Cryptography.RSA" />.</summary>
+        <returns>Eine neue Instanz der angegebenen Implementierung von <see cref="T:System.Security.Cryptography.RSA" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Decrypt">
+      <MemberSignature Language="C#" Value="public virtual byte[] Decrypt (byte[] data, System.Security.Cryptography.RSAEncryptionPadding padding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] Decrypt(unsigned int8[] data, class System.Security.Cryptography.RSAEncryptionPadding padding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.Decrypt(System.Byte[],System.Security.Cryptography.RSAEncryptionPadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="padding" Type="System.Security.Cryptography.RSAEncryptionPadding" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die zu entschlüsselnden Daten.</param>
+        <param name="padding">Der Paddingmodus.</param>
+        <summary>Entschlüsselt, falls in einer abgeleiteten Klasse überschrieben, die Eingabedaten mithilfe des angegebenen Paddingmodus.</summary>
+        <returns>Die entschlüsselten Daten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptValue">
+      <MemberSignature Language="C#" Value="public virtual byte[] DecryptValue (byte[] rgb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] DecryptValue(unsigned int8[] rgb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.DecryptValue(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgb" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgb">Der verschlüsselte Text, der entschlüsselt werden soll.</param>
+        <summary>Entschlüsselt beim Überschreiben in einer abgeleiteten Klasse die Eingabedaten mithilfe des privaten Schlüssels.</summary>
+        <returns>Die resultierende Entschlüsselung des <paramref name="rgb" />-Parameters in Klartext.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der [!INCLUDE[net_v452](~/includes/net-v452-md.md)] und früheren Versionen von .NET Framework über diese Methode wurde `abstract`. Jedoch die einzige Implementierung durch eine abgeleitete Klasse <xref:System.Security.Cryptography.RSACryptoServiceProvider.DecryptValue%2A?displayProperty=nameWithType>, auch hat eine <xref:System.NotSupportedException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Dieser Methodenaufruf wird nicht unterstützt. Diese Ausnahme wird ab [!INCLUDE[net_v46](~/includes/net-v46-md.md)] ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Encrypt">
+      <MemberSignature Language="C#" Value="public virtual byte[] Encrypt (byte[] data, System.Security.Cryptography.RSAEncryptionPadding padding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] Encrypt(unsigned int8[] data, class System.Security.Cryptography.RSAEncryptionPadding padding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.Encrypt(System.Byte[],System.Security.Cryptography.RSAEncryptionPadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="padding" Type="System.Security.Cryptography.RSAEncryptionPadding" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die zu verschlüsselnden Daten.</param>
+        <param name="padding">Der Paddingmodus.</param>
+        <summary>Verschlüsselt beim Überschreiben in einer abgeleiteten Klasse die Eingabedaten mithilfe des angegebenen Paddingmodus.</summary>
+        <returns>Die verschlüsselten Daten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptValue">
+      <MemberSignature Language="C#" Value="public virtual byte[] EncryptValue (byte[] rgb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] EncryptValue(unsigned int8[] rgb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.EncryptValue(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgb" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgb">Der zu verschlüsselnde Klartext.</param>
+        <summary>Verschlüsselt beim Überschreiben in einer abgeleiteten Klasse die Eingabedaten mithilfe des öffentlichen Schlüssels.</summary>
+        <returns>Die resultierende Verschlüsselung des <paramref name="rgb" />-Parameters als verschlüsselter Text.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der [!INCLUDE[net_v452](~/includes/net-v452-md.md)] und früheren Versionen von .NET Framework über diese Methode wurde `abstract`. Jedoch die einzige Implementierung durch eine abgeleitete Klasse <xref:System.Security.Cryptography.RSACryptoServiceProvider.DecryptValue%2A?displayProperty=nameWithType>, auch hat eine <xref:System.NotSupportedException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Dieser Methodenaufruf wird nicht unterstützt. Diese Ausnahme wird ab [!INCLUDE[net_v46](~/includes/net-v46-md.md)] ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportParameters">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.RSAParameters ExportParameters (bool includePrivateParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Security.Cryptography.RSAParameters ExportParameters(bool includePrivateParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.ExportParameters(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RSAParameters</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includePrivateParameters">
+          <see langword="true" />, wenn private Parameter angegeben werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Exportiert beim Überschreiben in einer abgeleiteten Klasse die <see cref="T:System.Security.Cryptography.RSAParameters" />.</summary>
+        <returns>Die Parameter für <see cref="T:System.Security.Cryptography.DSA" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXmlString">
+      <MemberSignature Language="C#" Value="public override void FromXmlString (string xmlString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXmlString(string xmlString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.FromXmlString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlString">Die XML-Zeichenfolge mit den <see cref="T:System.Security.Cryptography.RSA" />-Schlüsselinformationen.</param>
+        <summary>Initialisiert ein <see cref="T:System.Security.Cryptography.RSA" />-Objekt mit den Schlüsselinformationen aus einer XML-Zeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.RSA.FromXmlString%2A> Initialisiert ein RSA-Objekt verwenden Schlüsselinformationen in einer XML-Zeichenfolge, die mit generiert wurde die <xref:System.Security.Cryptography.RSA.ToXmlString%2A> Methode.  Die <xref:System.Security.Cryptography.RSA.FromXmlString%2A> Methode akzeptiert eine XML-Zeichenfolge mit einem öffentlichen Schlüssel oder eine XML-Zeichenfolge, die mit einem öffentlichen und privaten Schlüssel.  
+  
+ Verwenden der <xref:System.Security.Cryptography.RSA.FromXmlString%2A> Methode zur einfachen Initialisierung <xref:System.Security.Cryptography.RSA> Schlüsselinformationen.  
+  
+> [!CAUTION]
+>  Beibehalten einer XML-Zeichenfolge mit einem privaten Schlüssel an einem unsicheren Speicherort ist ein Sicherheitsrisiko darstellen.  Die Sicherheit Ihrer Anwendung kann beeinträchtigt werden, wenn eine böswillige Dritte Ihren privaten Schlüssel zugreifen können.  Um einen privaten Schlüssel sicher beizubehalten, verwenden Sie einen sicheren Schlüsselcontainer.  Weitere Informationen zum Beibehalten von privaten Schlüsseln in einem Schlüsselcontainer finden Sie unter [wie: Speichern von asymmetrischen Schlüsseln in einem Schlüsselcontainer](~/docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="xmlString" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Das Format der <paramref name="xmlString" /> -Parameter ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HashData">
+      <MemberSignature Language="C#" Value="protected virtual byte[] HashData (System.IO.Stream data, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] HashData(class System.IO.Stream data, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.HashData(System.IO.Stream,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.IO.Stream" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Der binäre Datenstrom, für den der Hashwert berechnet werden soll.</param>
+        <param name="hashAlgorithm">Der Hashalgorithmus.</param>
+        <summary>Berechnet, falls in einer abgeleiteten Klasse überschrieben, den Hashwert eines angegebenen Binärdatenstroms mithilfe eines angegebenen Hashalgorithmus.</summary>
+        <returns>Die Daten, für die der Hashwert berechnet wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HashData">
+      <MemberSignature Language="C#" Value="protected virtual byte[] HashData (byte[] data, int offset, int count, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] HashData(unsigned int8[] data, int32 offset, int32 count, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.HashData(System.Byte[],System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die Daten, für die der Hashwert berechnet werden soll.</param>
+        <param name="offset">Der Index des ersten Bytes im <c>Daten</c> das heißt, der Hashwert berechnet werden soll.</param>
+        <param name="count">Die Anzahl der Bytes, für die der Hashwert berechnet werden soll.</param>
+        <param name="hashAlgorithm">Der Algorithmus, der zum Bestimmen des Hashwerts der Daten verwendet werden soll.</param>
+        <summary>Berechnet, falls in einer abgeleiteten Klasse überschrieben, den Hashwert eines angegebenen Teils eines Bytearrays mithilfe eines angegebenen Hashalgorithmus.</summary>
+        <returns>Die Daten, für die der Hashwert berechnet wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportParameters">
+      <MemberSignature Language="C#" Value="public abstract void ImportParameters (System.Security.Cryptography.RSAParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ImportParameters(valuetype System.Security.Cryptography.RSAParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.ImportParameters(System.Security.Cryptography.RSAParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Security.Cryptography.RSAParameters" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Die Parameter für <see cref="T:System.Security.Cryptography.RSA" />.</param>
+        <summary>Importiert beim Überschreiben in einer abgeleiteten Klasse die angegebenen <see cref="T:System.Security.Cryptography.RSAParameters" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyExchangeAlgorithm">
+      <MemberSignature Language="C#" Value="public override string KeyExchangeAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyExchangeAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RSA.KeyExchangeAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der verfügbaren Algorithmus für den Schlüsselaustausch in dieser Implementierung von <see cref="T:System.Security.Cryptography.RSA" />.</summary>
+        <value>Gibt „RSA“ zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureAlgorithm">
+      <MemberSignature Language="C#" Value="public override string SignatureAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SignatureAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RSA.SignatureAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der verfügbaren Signaturalgorithmus in dieser Implementierung von <see cref="T:System.Security.Cryptography.RSA" />.</summary>
+        <value>Gibt „RSA“ zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignData">
+      <MemberSignature Language="C#" Value="public byte[] SignData (byte[] data, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] SignData(unsigned int8[] data, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, class System.Security.Cryptography.RSASignaturePadding padding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.SignData(System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+        <Parameter Name="padding" Type="System.Security.Cryptography.RSASignaturePadding" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die Eingabedaten, für die der Hashwert berechnet werden soll.</param>
+        <param name="hashAlgorithm">Der zum Erstellen des Hashwerts zu verwendende Hashalgorithmus.</param>
+        <param name="padding">Der Paddingmodus.</param>
+        <summary>Berechnet den Hashwert des angegebenen Bytearrays mithilfe des angegebenen Hashalgorithmus und Paddingmodus (Auffüllmodus) und signiert den resultierenden Hashwert.</summary>
+        <returns>Die RSA-Signatur für die angegebenen Daten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="padding" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignData">
+      <MemberSignature Language="C#" Value="public virtual byte[] SignData (System.IO.Stream data, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] SignData(class System.IO.Stream data, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, class System.Security.Cryptography.RSASignaturePadding padding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.SignData(System.IO.Stream,System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.IO.Stream" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+        <Parameter Name="padding" Type="System.Security.Cryptography.RSASignaturePadding" />
+      </Parameters>
+      <Docs>
+        <param name="data">Der Eingabedatenstrom, für den der Hashwert berechnet werden soll.</param>
+        <param name="hashAlgorithm">Der zum Erstellen des Hashwerts zu verwendende Hashalgorithmus.</param>
+        <param name="padding">Der Paddingmodus.</param>
+        <summary>Berechnet den Hashwert des angegebenen Datenstroms mithilfe des angegebenen Hashalgorithmus und Paddingsmodus und signiert den resultierenden Hashwert.</summary>
+        <returns>Die RSA-Signatur für die angegebenen Daten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="padding" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignData">
+      <MemberSignature Language="C#" Value="public virtual byte[] SignData (byte[] data, int offset, int count, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] SignData(unsigned int8[] data, int32 offset, int32 count, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, class System.Security.Cryptography.RSASignaturePadding padding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.SignData(System.Byte[],System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+        <Parameter Name="padding" Type="System.Security.Cryptography.RSASignaturePadding" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die Eingabedaten, für die der Hashwert berechnet werden soll.</param>
+        <param name="offset">Der Offset im Array, ab dem Daten verwendet werden sollen.</param>
+        <param name="count">Die Anzahl der Bytes im Array, die als Daten verwendet werden sollen.</param>
+        <param name="hashAlgorithm">Der zum Erstellen des Hashwerts zu verwendende Hashalgorithmus.</param>
+        <param name="padding">Der Paddingmodus.</param>
+        <summary>Berechnet den Hashwert eines Teils des angegebenen Bytearrays mithilfe des angegebenen Hashalgorithmus und Paddingmodus und signiert den resultierenden Hashwert.</summary>
+        <returns>Die RSA-Signatur für die angegebenen Daten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="padding" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="count" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="offset" /> + <paramref name="count" />– 1 Ergebnisse in einem Index, der größer als die Obergrenze von <paramref name="data" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignHash">
+      <MemberSignature Language="C#" Value="public virtual byte[] SignHash (byte[] hash, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] SignHash(unsigned int8[] hash, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, class System.Security.Cryptography.RSASignaturePadding padding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.SignHash(System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+        <Parameter Name="padding" Type="System.Security.Cryptography.RSASignaturePadding" />
+      </Parameters>
+      <Docs>
+        <param name="hash">Der Hashwert der zu signierenden Daten.</param>
+        <param name="hashAlgorithm">Der Hashalgorithmus, der zum Erstellen des Hashwerts der Daten verwendet wird.</param>
+        <param name="padding">Die Auffüllung.</param>
+        <summary>Berechnet beim Überschreiben in einer abgeleiteten Klasse die Signatur für den angegebenen Hashwert durch Verschlüsselung mit dem privaten Schlüssel unter Verwendung der angegebenen Auffüllung.</summary>
+        <returns>Die RSA-Signatur für den angegebenen Hashwert.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlString">
+      <MemberSignature Language="C#" Value="public override string ToXmlString (bool includePrivateParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToXmlString(bool includePrivateParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.ToXmlString(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includePrivateParameters">
+          <see langword="true" />, um einen öffentlichen und einen privaten RSA-Schlüssel einzuschließen. <see langword="false" />, um nur den öffentlichen Schlüssel einzuschließen.</param>
+        <summary>Erstellt eine XML-Zeichenfolge mit dem Schlüssel des aktuellen <see cref="T:System.Security.Cryptography.RSA" />-Objekts und gibt diese zurück.</summary>
+        <returns>Eine XML-Zeichenfolge mit dem Schlüssel des aktuellen <see cref="T:System.Security.Cryptography.RSA" />-Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.RSA.ToXmlString%2A> Methode erstellt eine XML-Zeichenfolge, die entweder den öffentlichen und privaten Schlüssel des aktuellen <xref:System.Security.Cryptography.RSA> oder enthält nur den öffentlichen Schlüssel des aktuellen <xref:System.Security.Cryptography.RSA> Objekt.  
+  
+ Verwenden der <xref:System.Security.Cryptography.RSA.ToXmlString%2A> -Methode auf, wenn Sie bequem RSA-Schlüsselinformationen persistent zu speichernde.  Initialisiert ein <xref:System.Security.Cryptography.RSA> Objekt mit dem Schlüssel in eine XML-Zeichenfolge ist, verwenden die <xref:System.Security.Cryptography.RSA.FromXmlString%2A> Methode.  
+  
+> [!CAUTION]
+>  Beibehalten einer XML-Zeichenfolge mit einem privaten Schlüssel an einem unsicheren Speicherort ist ein Sicherheitsrisiko darstellen.  Die Sicherheit Ihrer Anwendung kann beeinträchtigt werden, wenn eine böswillige Dritte Ihren privaten Schlüssel zugreifen können.  Um einen privaten Schlüssel sicher beizubehalten, verwenden Sie einen sicheren Schlüsselcontainer.  Weitere Informationen zum Beibehalten von privaten Schlüsseln in einem Schlüsselcontainer finden Sie unter [wie: Speichern von asymmetrischen Schlüsseln in einem Schlüsselcontainer](~/docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
+  
+ Wenn Sie übergeben `true` auf die <xref:System.Security.Cryptography.RSA.ToXmlString%2A> -Methode, die sich ergebende XML-Zeichenfolge weist folgende Form auf:  
+  
+```  
+<RSAKeyValue>  
+   <Modulus>…</Modulus>  
+   <Exponent>…</Exponent>  
+   <P>…</P>  
+   <Q>…</Q>  
+   <DP>…</DP>  
+   <DQ>…</DQ>  
+   <InverseQ>…</InverseQ>  
+   <D>…</D>  
+</RSAKeyValue>  
+```  
+  
+ Wenn Sie übergeben `false` auf die <xref:System.Security.Cryptography.RSA.ToXmlString%2A> -Methode, die sich ergebende XML-Zeichenfolge weist folgende Form auf:  
+  
+```  
+<RSAKeyValue>  
+   <Modulus>…</Modulus>  
+   <Exponent>…</Exponent>  
+</RSAKeyValue>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyData">
+      <MemberSignature Language="C#" Value="public bool VerifyData (byte[] data, byte[] signature, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool VerifyData(unsigned int8[] data, unsigned int8[] signature, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, class System.Security.Cryptography.RSASignaturePadding padding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.VerifyData(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+        <Parameter Name="padding" Type="System.Security.Cryptography.RSASignaturePadding" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die signierten Daten.</param>
+        <param name="signature">Die zu überprüfenden Signaturdaten.</param>
+        <param name="hashAlgorithm">Der Hashalgorithmus, der zum Erstellen des Hashwerts der Daten verwendet wird.</param>
+        <param name="padding">Der Paddingmodus.</param>
+        <summary>Überprüft, ob eine digitale Signatur gültig ist, indem der Hashwert der angegebenen Daten unter Verwendung des angegebenen Hashalgorithmus und Paddingmodus berechnet und mit der angegebenen Signatur verglichen wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die Signatur gültig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="signature" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="padding" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyData">
+      <MemberSignature Language="C#" Value="public bool VerifyData (System.IO.Stream data, byte[] signature, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool VerifyData(class System.IO.Stream data, unsigned int8[] signature, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, class System.Security.Cryptography.RSASignaturePadding padding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.VerifyData(System.IO.Stream,System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.IO.Stream" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+        <Parameter Name="padding" Type="System.Security.Cryptography.RSASignaturePadding" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die signierten Daten.</param>
+        <param name="signature">Die zu überprüfenden Signaturdaten.</param>
+        <param name="hashAlgorithm">Der Hashalgorithmus, der zum Erstellen des Hashwerts der Daten verwendet wird.</param>
+        <param name="padding">Der Paddingmodus.</param>
+        <summary>Überprüft, ob eine digitale Signatur gültig ist, indem der Hashwert des angegebenen Datenstroms unter Verwendung des angegebenen Hashalgorithmus und Paddings und durch Vergleichen mit der angegebenen Signatur berechnet wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die Signatur gültig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="signature" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="padding" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyData">
+      <MemberSignature Language="C#" Value="public virtual bool VerifyData (byte[] data, int offset, int count, byte[] signature, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool VerifyData(unsigned int8[] data, int32 offset, int32 count, unsigned int8[] signature, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, class System.Security.Cryptography.RSASignaturePadding padding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.VerifyData(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+        <Parameter Name="padding" Type="System.Security.Cryptography.RSASignaturePadding" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die signierten Daten.</param>
+        <param name="offset">Der Startindex, an dem der Hashwert berechnet werden soll.</param>
+        <param name="count">Die Anzahl der Bytes, für die der Hashwert berechnet werden soll.</param>
+        <param name="signature">Die zu überprüfenden Signaturdaten.</param>
+        <param name="hashAlgorithm">Der Hashalgorithmus, der zum Erstellen des Hashwerts der Daten verwendet wird.</param>
+        <param name="padding">Der Paddingmodus.</param>
+        <summary>Überprüft, ob eine digitale Signatur gültig ist, indem der Hashwert der Daten in einem Teil eines Bytearrays unter Verwendung des angegebenen Hashalgorithmus und Paddings und durch Vergleichen mit der angegebenen Signatur berechnet wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die Signatur gültig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="signature" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="padding" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="count" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="offset" /> + <paramref name="count" />– 1 Ergebnisse in einem Index, der größer als die Obergrenze von <paramref name="data" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyHash">
+      <MemberSignature Language="C#" Value="public virtual bool VerifyHash (byte[] hash, byte[] signature, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool VerifyHash(unsigned int8[] hash, unsigned int8[] signature, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, class System.Security.Cryptography.RSASignaturePadding padding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSA.VerifyHash(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Byte[]" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+        <Parameter Name="padding" Type="System.Security.Cryptography.RSASignaturePadding" />
+      </Parameters>
+      <Docs>
+        <param name="hash">Der Hashwert der signierten Daten.</param>
+        <param name="signature">Die zu überprüfenden Signaturdaten.</param>
+        <param name="hashAlgorithm">Der zum Erstellen des Hashwerts verwendete Hashalgorithmus.</param>
+        <param name="padding">Der Paddingmodus.</param>
+        <summary>Überprüft, ob eine digitale Signatur gültig ist, indem der Hashwert in der Signatur unter Verwendung des angegebenen Hashalgorithmus und Paddings ermittelt und mit dem angegebenen Hashwert verglichen wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die Signatur gültig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

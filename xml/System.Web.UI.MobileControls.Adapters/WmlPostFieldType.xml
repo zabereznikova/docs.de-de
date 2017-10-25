@@ -1,0 +1,87 @@
+<Type Name="WmlPostFieldType" FullName="System.Web.UI.MobileControls.Adapters.WmlPostFieldType">
+  <TypeSignature Language="C#" Value="public enum WmlPostFieldType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WmlPostFieldType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.WmlPostFieldType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, wie ein Post-Feld gerendert wird. Diese Klasse kann nicht vererbt werden. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.Adapters.WmlPostFieldType Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.WmlPostFieldType.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Adapters.WmlPostFieldType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Wert wird als Literal mit Codierung geschrieben. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Raw">
+      <MemberSignature Language="C#" Value="Raw" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.Adapters.WmlPostFieldType Raw = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.WmlPostFieldType.Raw" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Adapters.WmlPostFieldType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Wert wird als Literal ohne Codierung geschrieben. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Submit">
+      <MemberSignature Language="C#" Value="Submit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.Adapters.WmlPostFieldType Submit = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.WmlPostFieldType.Submit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Adapters.WmlPostFieldType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Wert wird als geschrieben <see cref="F:System.Web.UI.MobileControls.Adapters.WmlPostFieldType.Normal" /> senden Sie mit einem zugeordneten Aktion. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Variable">
+      <MemberSignature Language="C#" Value="Variable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.Adapters.WmlPostFieldType Variable = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.WmlPostFieldType.Variable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Adapters.WmlPostFieldType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Wert wird als ein Variablenname geschrieben. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

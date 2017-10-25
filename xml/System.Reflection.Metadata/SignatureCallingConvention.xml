@@ -1,0 +1,129 @@
+<Type Name="SignatureCallingConvention" FullName="System.Reflection.Metadata.SignatureCallingConvention">
+  <TypeSignature Language="C#" Value="public enum SignatureCallingConvention" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SignatureCallingConvention extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Metadata.SignatureCallingConvention" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Metadata</AssemblyName>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <AssemblyVersion>1.4.1.0</AssemblyVersion>
+    <AssemblyVersion>1.4.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie Argumente in einer bestimmten Signatur vom Aufrufer an den aufgerufenen übergeben werden. Die zugrunde liegenden Werte der Felder in diesem Typ entsprechen, die Darstellung in der führenden Signatur Byte dargestellt durch eine <see cref="T:System.Reflection.Metadata.SignatureHeader" /> Struktur.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CDecl">
+      <MemberSignature Language="C#" Value="CDecl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Metadata.SignatureCallingConvention CDecl = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Metadata.SignatureCallingConvention.CDecl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Metadata.SignatureCallingConvention</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein nicht verwalteten C/C++-Stil, die Aufrufkonvention, in die Aufrufliste vom Aufrufer bereinigt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Metadata.SignatureCallingConvention Default = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Metadata.SignatureCallingConvention.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Metadata.SignatureCallingConvention</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine verwaltete Aufrufkonvention mit fester Länge Argumentliste.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FastCall">
+      <MemberSignature Language="C#" Value="FastCall" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Metadata.SignatureCallingConvention FastCall = unsigned int8(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Metadata.SignatureCallingConvention.FastCall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Metadata.SignatureCallingConvention</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein nicht verwalteten Aufrufkonvention, in denen Argumente möglichst in Registern übergeben werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StdCall">
+      <MemberSignature Language="C#" Value="StdCall" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Metadata.SignatureCallingConvention StdCall = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Metadata.SignatureCallingConvention.StdCall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Metadata.SignatureCallingConvention</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein nicht verwalteten Aufrufkonvention, in die Aufrufliste vom aufgerufenen bereinigt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ThisCall">
+      <MemberSignature Language="C#" Value="ThisCall" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Metadata.SignatureCallingConvention ThisCall = unsigned int8(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Metadata.SignatureCallingConvention.ThisCall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Metadata.SignatureCallingConvention</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein nicht verwalteter C++-Stil Aufrufkonvention für die aufrufende Instanz Memberfunktionen mit festen Argumentliste.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VarArgs">
+      <MemberSignature Language="C#" Value="VarArgs" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Metadata.SignatureCallingConvention VarArgs = unsigned int8(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Metadata.SignatureCallingConvention.VarArgs" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Metadata.SignatureCallingConvention</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine verwaltete Aufrufkonvention für die zusätzlichen Argumente übergeben.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

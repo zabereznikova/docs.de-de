@@ -1,0 +1,1280 @@
+<Type Name="IndentedTextWriter" FullName="System.CodeDom.Compiler.IndentedTextWriter">
+  <TypeSignature Language="C#" Value="public class IndentedTextWriter : System.IO.TextWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IndentedTextWriter extends System.IO.TextWriter" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.Compiler.IndentedTextWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.TextWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen TextWriter, der Einzug neuer Zeilen ein Token für eine Zeichenfolge bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.Compiler.IndentedTextWriter>Erweitert eine <xref:System.IO.TextWriter> durch Methoden, die eine Zeichenfolge für die Registerkarte einfügen und die aktuelle Einzugsebene verfolgen. Mit mehreren Einzugsebenen formatierter Text eignet sich für generierten Code, damit diese Klasse von CodeDom-Code-Generator-Implementierungen verwendet wird.  
+  
+ Die Registerkarte "-Zeichenfolge ist die Zeichenfolge, der jeden Einzug besteht. In der Regel enthält die Registerkarte Zeichenfolge Leerzeichen.  
+  
+> [!NOTE]
+>  Diese Klasse enthält einen Linkaufruf und einer vererbungsanforderung auf Klassenebene, die für alle Member gilt. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn nicht für den unmittelbaren Aufrufer oder die abgeleitete Klasse volle Vertrauenswürdigkeit verfügt. Weitere Informationen zu sicherheitsforderungen, finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md) und [Vererbungsanforderungen](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung einer <xref:System.CodeDom.Compiler.IndentedTextWriter> zum Schreiben von Text auf verschiedenen Ebenen der Einzug.  
+  
+ [!code-cpp[IndentedTextWriterExample#1](~/samples/snippets/cpp/VS_Snippets_CLR/IndentedTextWriterExample/CPP/form1.cpp#1)]
+ [!code-csharp[IndentedTextWriterExample#1](~/samples/snippets/csharp/VS_Snippets_CLR/IndentedTextWriterExample/CS/form1.cs#1)]
+ [!code-vb[IndentedTextWriterExample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IndentedTextWriterExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IndentedTextWriter (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.#ctor(System.IO.TextWriter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.IO.TextWriter" /> für die Ausgabe verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.Compiler.IndentedTextWriter" /> -Klasse unter Verwendung der angegebenen Writer und standardmäßige Registerkarte Textzeichenfolge.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IndentedTextWriter (System.IO.TextWriter writer, string tabString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer, string tabString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.#ctor(System.IO.TextWriter,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="tabString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.IO.TextWriter" /> für die Ausgabe verwendet.</param>
+        <param name="tabString">Die Registerkarte Zeichenfolge, die für den Einzug verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.Compiler.IndentedTextWriter" /> -Klasse unter Verwendung der angegebenen Textzeichenfolge Writer und die Registerkarte ".</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen einer <xref:System.CodeDom.Compiler.IndentedTextWriter> mit einer angegebenen Zeichenfolge.  
+  
+ [!code-cpp[IndentedTextWriterExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/IndentedTextWriterExample/CPP/form1.cpp#3)]
+ [!code-csharp[IndentedTextWriterExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/IndentedTextWriterExample/CS/form1.cs#3)]
+ [!code-vb[IndentedTextWriterExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/IndentedTextWriterExample/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt das Dokument geschrieben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTabString">
+      <MemberSignature Language="C#" Value="public const string DefaultTabString;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DefaultTabString" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.Compiler.IndentedTextWriter.DefaultTabString" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Standardzeichenfolge für die Registerkarte "an. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Registerkarte Standardzeichenfolge besteht ein einzelnes Leerzeichen. (" ")  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public override System.Text.Encoding Encoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding Encoding" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.IndentedTextWriter.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Codierung für den zu verwendenden Textwriter ab.</summary>
+        <value>Ein <see cref="T:System.Text.Encoding" /> , der angibt, die Codierung für den TextWriter verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entleert den Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dadurch werden den Stream für alle Daten gelöscht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Indent">
+      <MemberSignature Language="C#" Value="public int Indent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Indent" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.IndentedTextWriter.Indent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Leerzeichen für den Einzug.</summary>
+        <value>Die Anzahl der Leerzeichen für den Einzug.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen des Einzugs von einer <xref:System.CodeDom.Compiler.IndentedTextWriter>. Die Einzugsebene ist die Anzahl der Registerkarte "-Zeichenfolgen in jeder Zeile mit Präfix an.  
+  
+ [!code-cpp[IndentedTextWriterExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/IndentedTextWriterExample/CPP/form1.cpp#3)]
+ [!code-csharp[IndentedTextWriterExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/IndentedTextWriterExample/CS/form1.cs#3)]
+ [!code-vb[IndentedTextWriterExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/IndentedTextWriterExample/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerWriter">
+      <MemberSignature Language="C#" Value="public System.IO.TextWriter InnerWriter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.TextWriter InnerWriter" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.IndentedTextWriter.InnerWriter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.TextWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.IO.TextWriter" /> verwenden.</summary>
+        <value>Der zu verwendende <see cref="T:System.IO.TextWriter" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewLine">
+      <MemberSignature Language="C#" Value="public override string NewLine { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NewLine" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.IndentedTextWriter.NewLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert das neue-Zeile-Zeichen zu verwenden.</summary>
+        <value>Das neue-Zeile-Zeichen zu verwenden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputTabs">
+      <MemberSignature Language="C#" Value="protected virtual void OutputTabs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OutputTabs() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.OutputTabs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolge Registerkarte einmal für jede Einzugsebene gemäß der <see cref="P:System.CodeDom.Compiler.IndentedTextWriter.Indent" /> Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.Write(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der boolesche Wert geschrieben werden soll.</param>
+        <summary>Schreibt die Textdarstellung eines booleschen Werts in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.Write(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu schreibende Zeichen.</param>
+        <summary>Schreibt ein Zeichen in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (char[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(char[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.Write(System.Char[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das zu schreibende Zeichenarray.</param>
+        <summary>Schreibt ein Zeichenarray in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.Write(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu schreibende <see langword="double" />.</param>
+        <summary>Schreibt die Textdarstellung des ein Double-Wert in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.Write(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die ganze Zahl, die geschrieben werden soll.</param>
+        <summary>Schreibt die Textdarstellung einer ganzen Zahl in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.Write(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu schreibende 8-Byte-Ganzzahl.</param>
+        <summary>Schreibt die Textdarstellung einer 8-Byte-Ganzzahl in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.Write(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu schreibende Objekt.</param>
+        <summary>Schreibt die Textdarstellung eines Objekts in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.Write(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu schreibende <see langword="single" />.</param>
+        <summary>Schreibt die Textdarstellung eines einzelnen in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu schreibende Zeichenfolge.</param>
+        <summary>Schreibt die angegebene Zeichenfolge in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string format, object arg0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string format, object arg0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.Write(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg0" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Die Formatierungszeichenfolge.</param>
+        <param name="arg0">Das Objekt, das in die formatierte Zeichenfolge zu schreiben.</param>
+        <summary>Schreibt eine formatierte Zeichenfolge, die Verwendung der gleichen Semantik wie angegeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string format, params object[] arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string format, object[] arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.Write(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="format">Die Formatierung zu verwendende Zeichenfolge.</param>
+        <param name="arg">Das Argumentarray ausgegeben.</param>
+        <summary>Schreibt eine formatierte Zeichenfolge, die Verwendung der gleichen Semantik wie angegeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.Write(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das Zeichenarray, aus dem Daten geschrieben werden sollen.</param>
+        <param name="index">Der Anfangsindex im Puffer.</param>
+        <param name="count">Die Anzahl der zu schreibenden Zeichen.</param>
+        <summary>Schreibt ein Teilarray von Zeichen in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string format, object arg0, object arg1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string format, object arg0, object arg1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.Write(System.String,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg0" Type="System.Object" />
+        <Parameter Name="arg1" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Die Formatierung zu verwendende Zeichenfolge.</param>
+        <param name="arg0">Das erste Objekt, in die formatierte Zeichenfolge zu schreiben.</param>
+        <param name="arg1">Das zweite Objekt, in die formatierte Zeichenfolge zu schreiben.</param>
+        <summary>Schreibt eine formatierte Zeichenfolge, die Verwendung der gleichen Semantik wie angegeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLine" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schreibt ein Zeilenabschlusszeichen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLine(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der boolesche Wert geschrieben werden soll.</param>
+        <summary>Schreibt die Textdarstellung des ein boolescher Wert, gefolgt von einem Zeichen für den Zeilenabschluss, in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLine(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu schreibende Zeichen.</param>
+        <summary>Schreibt ein Zeichen, gefolgt von einem Zeichen für den Zeilenabschluss, in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (char[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(char[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLine(System.Char[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das zu schreibende Zeichenarray.</param>
+        <summary>Schreibt ein Array von Zeichen, gefolgt von einem Zeichen für den Zeilenabschluss, in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLine(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu schreibende <see langword="double" />.</param>
+        <summary>Schreibt die Textdarstellung des einen Double-Wert, gefolgt von einem Zeichen für den Zeilenabschluss, in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLine(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die ganze Zahl, die geschrieben werden soll.</param>
+        <summary>Schreibt die Textdarstellung einer ganzen Zahl, gefolgt von einem Zeichen für den Zeilenabschluss, in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLine(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu schreibende 8-Byte-Ganzzahl.</param>
+        <summary>Schreibt die Textdarstellung einer 8-Byte-Ganzzahl, gefolgt von einem Zeichen für den Zeilenabschluss, in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLine(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu schreibende Objekt.</param>
+        <summary>Schreibt die Textdarstellung eines Objekts, gefolgt von einem Zeichen für den Zeilenabschluss, in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLine(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu schreibende <see langword="single" />.</param>
+        <summary>Schreibt die Textdarstellung eines einzelnen, gefolgt von einem Zeichen für den Zeilenabschluss, in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu schreibende Zeichenfolge.</param>
+        <summary>Schreibt die angegebene Zeichenfolge, gefolgt von einem Zeichen für den Zeilenabschluss, in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLine(System.UInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein UInt32 ausgegeben.</param>
+        <summary>Schreibt die Textdarstellung eines UInt32, gefolgt von einem Zeichen für den Zeilenabschluss, in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string format, object arg0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string format, object arg0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLine(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg0" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Die Formatierungszeichenfolge.</param>
+        <param name="arg0">Das Objekt, das in die formatierte Zeichenfolge zu schreiben.</param>
+        <summary>Schreibt eine formatierte Zeichenfolge, gefolgt von einem Zeilenabschluss verwendet die gleiche Semantik wie angegeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string format, params object[] arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string format, object[] arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLine(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="format">Die Formatierung zu verwendende Zeichenfolge.</param>
+        <param name="arg">Das Argumentarray ausgegeben.</param>
+        <summary>Schreibt eine formatierte Zeichenfolge, gefolgt von einem Zeilenabschluss verwendet die gleiche Semantik wie angegeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLine(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das Zeichenarray, aus dem Daten geschrieben werden sollen.</param>
+        <param name="index">Der Anfangsindex im Puffer.</param>
+        <param name="count">Die Anzahl der zu schreibenden Zeichen.</param>
+        <summary>Schreibt ein Teilarray von Zeichen, gefolgt von einem Zeichen für den Zeilenabschluss, in den Textstream zu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string format, object arg0, object arg1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string format, object arg0, object arg1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLine(System.String,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg0" Type="System.Object" />
+        <Parameter Name="arg1" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Die Formatierung zu verwendende Zeichenfolge.</param>
+        <param name="arg0">Das erste Objekt, in die formatierte Zeichenfolge zu schreiben.</param>
+        <param name="arg1">Das zweite Objekt, in die formatierte Zeichenfolge zu schreiben.</param>
+        <summary>Schreibt eine formatierte Zeichenfolge, gefolgt von einem Zeilenabschluss verwendet die gleiche Semantik wie angegeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineNoTabs">
+      <MemberSignature Language="C#" Value="public void WriteLineNoTabs (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteLineNoTabs(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.IndentedTextWriter.WriteLineNoTabs(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die zu schreibende Zeichenfolge.</param>
+        <summary>Schreibt die angegebene Zeichenfolge in eine Zeile ohne Registerkarten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine Zeile ohne Registerkarte Zeichenfolge Einzüge schreiben.  
+  
+ [!code-cpp[IndentedTextWriterExample#6](~/samples/snippets/cpp/VS_Snippets_CLR/IndentedTextWriterExample/CPP/form1.cpp#6)]
+ [!code-csharp[IndentedTextWriterExample#6](~/samples/snippets/csharp/VS_Snippets_CLR/IndentedTextWriterExample/CS/form1.cs#6)]
+ [!code-vb[IndentedTextWriterExample#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/IndentedTextWriterExample/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

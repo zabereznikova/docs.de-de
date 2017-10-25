@@ -1,0 +1,285 @@
+<Type Name="RepeatInfo" FullName="System.Web.UI.WebControls.RepeatInfo">
+  <TypeSignature Language="C#" Value="public sealed class RepeatInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RepeatInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.RepeatInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Kapselt die Informationen verwendet, um ein Listenfeld-Steuerelement gerendert werden, die eine Liste von Elementen wiederholt wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.RepeatInfo> -Klasse kapselt die Informationen verwendet, um ein Listenfeld-Steuerelement gerendert werden, die eine Liste von Elementen, z. B. wiederholt <xref:System.Web.UI.WebControls.CheckBoxList>, <xref:System.Web.UI.WebControls.DataList>, und <xref:System.Web.UI.WebControls.RadioButtonList>. Es wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.RepeatInfo>, finden Sie unter der <xref:System.Web.UI.WebControls.RepeatInfo.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RepeatInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RepeatInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.RepeatInfo" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.RepeatInfo> -Klasse mit Standardwerten.  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.RepeatInfo>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|OuterTableImplied|`false`|  
+|RepeatColumns|`0`|  
+|RepeatDirection|<xref:System.Web.UI.WebControls.RepeatDirection.Vertical>|  
+|Unterstützt|<xref:System.Web.UI.WebControls.RepeatLayout.Table>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="public string Caption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeatInfo.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="P:System.Web.UI.WebControls.Table.Caption" /> Eigenschaft, wenn das Steuerelement, als gerendert wird ein <see cref="T:System.Web.UI.WebControls.Table" />.</summary>
+        <value>Eine Zeichenfolge, die angibt, die <see cref="T:System.Web.UI.WebControls.Table" /> Beschriftung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CaptionAlign">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableCaptionAlign CaptionAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.TableCaptionAlign CaptionAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeatInfo.CaptionAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableCaptionAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung der Beschriftung, wenn die <see cref="T:System.Web.UI.WebControls.RepeatInfo" /> gerendert wird, als ein <see cref="T:System.Web.UI.WebControls.Table" />.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableCaptionAlign" /> Wert für die gerenderte Tabelle. Der Standardwert ist <see cref="F:System.Web.UI.WebControls.TableCaptionAlign.NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft legt die <xref:System.Web.UI.WebControls.Table.CaptionAlign%2A> Eigenschaft des gerenderten <xref:System.Web.UI.WebControls.Table>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist nicht der <see cref="T:System.Web.UI.WebControls.TableCaptionAlign" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OuterTableImplied">
+      <MemberSignature Language="C#" Value="public bool OuterTableImplied { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OuterTableImplied" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeatInfo.OuterTableImplied" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Elemente gerendert werden soll, als ob sie in einer Tabelle enthalten sind.</summary>
+        <value>
+          <see langword="true" />Wenn die Elemente gerendert werden soll, als ob sie in einer Tabelle enthalten sind; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.RepeatInfo.OuterTableImplied%2A> Eigenschaft, um anzugeben, ob Elemente gerendert werden soll, als ob sie in einer Tabelle enthalten sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderRepeater">
+      <MemberSignature Language="C#" Value="public void RenderRepeater (System.Web.UI.HtmlTextWriter writer, System.Web.UI.WebControls.IRepeatInfoUser user, System.Web.UI.WebControls.Style controlStyle, System.Web.UI.WebControls.WebControl baseControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RenderRepeater(class System.Web.UI.HtmlTextWriter writer, class System.Web.UI.WebControls.IRepeatInfoUser user, class System.Web.UI.WebControls.Style controlStyle, class System.Web.UI.WebControls.WebControl baseControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RepeatInfo.RenderRepeater(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.IRepeatInfoUser,System.Web.UI.WebControls.Style,System.Web.UI.WebControls.WebControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="user" Type="System.Web.UI.WebControls.IRepeatInfoUser" />
+        <Parameter Name="controlStyle" Type="System.Web.UI.WebControls.Style" />
+        <Parameter Name="baseControl" Type="System.Web.UI.WebControls.WebControl" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , der den Ausgabestream zum Rendern des HTML-Inhalten auf dem Client darstellt.</param>
+        <param name="user">Ein <see cref="T:System.Web.UI.WebControls.IRepeatInfoUser" /> implementiert-Objekt, das das Steuerelement zum Rendern darstellt.</param>
+        <param name="controlStyle">Ein <see cref="T:System.Web.UI.WebControls.Style" /> , der den Stil der zum Anzeigen von Elementen darstellt.</param>
+        <param name="baseControl">Das Steuerelement aus dem grundlegenden Attribute kopiert werden soll.</param>
+        <summary>Rendert ein Listenfeld-Steuerelement, das eine Liste von Elementen, die unter Verwendung des angegebenen wiederholt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.RepeatInfo.RenderRepeater%2A> Methode, um ein Listenfeld-Steuerelement gerendert werden, die eine Liste von Elementen, die unter Verwendung des angegebenen wiederholt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RepeatColumns">
+      <MemberSignature Language="C#" Value="public int RepeatColumns { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RepeatColumns" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeatInfo.RepeatColumns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Spalten zu rendern.</summary>
+        <value>Die Anzahl der Spalten zu rendern.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.RepeatInfo.RepeatColumns%2A> Eigenschaft, um die Anzahl der Spalten im Steuerelement rendern anzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RepeatDirection">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.RepeatDirection RepeatDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.RepeatDirection RepeatDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeatInfo.RepeatDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeatDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Elemente vertikal oder horizontal angezeigt werden.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.RepeatDirection" />-Enumerationswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.RepeatInfo.RepeatDirection%2A> Eigenschaft, um die Richtung anzugeben, die die Elemente gerendert werden.  
+  
+> [!NOTE]
+>  Die Anzahl der angezeigten Spalten immer gemäß der <xref:System.Web.UI.WebControls.RepeatInfo.RepeatColumns%2A> Eigenschaft.  
+  
+ Wenn diese Eigenschaft, um festgelegt wird `RepeatDirection.Vertical`, die Elemente in der Liste werden in Spalten geladen von oben nach unten angezeigt und dann von links nach rechts, bis alle Elemente gerendert werden. Beispielsweise, wenn die <xref:System.Web.UI.WebControls.RepeatInfo.RepeatColumns%2A> -Eigenschaftensatz auf `3`, die Elemente werden in drei Spalten, wie in der folgenden Tabelle angezeigt.  
+  
+||||  
+|-|-|-|  
+|1|4|7|  
+|2|5|8|  
+|3|6|9|  
+  
+ Wenn diese Eigenschaft, um festgelegt wird `RepeatDirection.Horizontal`, werden die Elemente in der Liste in Zeilen, die geladen links nach rechts angezeigt, klicken Sie dann von oben nach unten, bis alle Elemente gerendert werden. Beispielsweise, wenn die <xref:System.Web.UI.WebControls.RepeatInfo.RepeatColumns%2A> -Eigenschaftensatz auf `3`, die Elemente werden in den Zeilen der drei Elemente angezeigt, wie in der folgenden Tabelle.  
+  
+||||  
+|-|-|-|  
+|1|2|3|  
+|4|5|6|  
+|7|8|9|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die angegebene Richtung ist keines der <see cref="T:System.Web.UI.WebControls.RepeatDirection" /> Enumerationswerte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RepeatLayout">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.RepeatLayout RepeatLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.RepeatLayout RepeatLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeatInfo.RepeatLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeatLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Elemente in einer Tabelle angezeigt werden.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.RepeatLayout" />-Enumerationswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.RepeatInfo.RepeatLayout%2A> Eigenschaft, um anzugeben, ob die Elemente in einer Tabelle angezeigt werden. Wenn diese Eigenschaft, um festgelegt wird <xref:System.Web.UI.WebControls.RepeatLayout.Table>, die Elemente in der Liste in einer Tabelle angezeigt werden. Wenn diese Eigenschaft, um festgelegt wird <xref:System.Web.UI.WebControls.RepeatLayout.Flow>, ohne die Struktur einer Tabelle werden die Elemente in der Liste angezeigt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Das angegebene Layout ist nicht die <see cref="T:System.Web.UI.WebControls.RepeatLayout" /> Enumerationswerte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAccessibleHeader">
+      <MemberSignature Language="C#" Value="public bool UseAccessibleHeader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseAccessibleHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeatInfo.UseAccessibleHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert angeben, ob zum Hinzufügen einer <see cref="P:System.Web.UI.WebControls.TableHeaderCell.Scope" /> Attribut, wenn das Steuerelement, als gerendert wird ein <see cref="T:System.Web.UI.WebControls.Table" />.</summary>
+        <value>
+          <see langword="true" />Wenn ein Bereichsattribut "" hinzugefügt werden soll, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `true` und das Steuerelement gerendert wird, als ein <xref:System.Web.UI.WebControls.Table>, ein Attribut "Scope" mit Wert "Col" wird hinzugefügt und eine Tabelle Kopfzeilenzelle (\<th >) anstelle einer Tabellenzelle gerendert wird (\<td >) für den Header Zellen, wenn die <xref:System.Web.UI.WebControls.Table> wird gerendert. Dieses Attribut kann Sprachausgaben verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

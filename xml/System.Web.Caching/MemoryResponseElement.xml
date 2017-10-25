@@ -1,0 +1,107 @@
+<Type Name="MemoryResponseElement" FullName="System.Web.Caching.MemoryResponseElement">
+  <TypeSignature Language="C#" Value="public class MemoryResponseElement : System.Web.Caching.ResponseElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit MemoryResponseElement extends System.Web.Caching.ResponseElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.MemoryResponseElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Caching.ResponseElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Ausgabecache-Eintrag, der im Arbeitsspeicher gespeichert ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Ausgabecache-Antwort in einem <xref:System.Web.Caching.MemoryResponseElement> Objekt wird als ein Array von Bytes im Speicher gespeichert. Das Array kann ganz oder teilweise eine Ausgabecache-Antwort enthalten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MemoryResponseElement (byte[] buffer, long length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] buffer, int64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.MemoryResponseElement.#ctor(System.Byte[],System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="length" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Ein Array von Bytes, die Teil einer Ausgabecache-Antwort enthält.</param>
+        <param name="length">Die Größe des Arrays in <c>Puffer</c>.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Caching.MemoryResponseElement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert der `buffer` muss `null`, obwohl es ein Array der Länge 0 (null) sein kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="length" />ist kleiner als 0 (null) oder größer als die Größe des <paramref name="buffer" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Buffer">
+      <MemberSignature Language="C#" Value="public byte[] Buffer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Buffer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.MemoryResponseElement.Buffer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array, das gesamte oder einen Teil einer Ausgabecache-Antwort enthält.</summary>
+        <value>Ein Array von Byteobjekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert der <xref:System.Web.Caching.MemoryResponseElement.Buffer%2A> Eigenschaft darf nicht sein `null`, obwohl es ein Array der Länge 0 (null) sein kann. Wenn <xref:System.Web.Caching.MemoryResponseElement.Buffer%2A> Eigenschaft `null`, <xref:System.Web.Caching.MemoryResponseElement> löst der Konstruktor ein <xref:System.ArgumentNullException>. Wenn die <xref:System.Web.Caching.MemoryResponseElement.Length%2A> -Eigenschaft muss kleiner als 0 (null) oder größer als die Größe des Werts der <xref:System.Web.Caching.MemoryResponseElement.Buffer%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.MemoryResponseElement.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des Arrays verwiesen wird, das die <see cref="P:System.Web.Caching.MemoryResponseElement.Buffer" /> Eigenschaft.</summary>
+        <value>Die Größe des Arrays.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.Caching.MemoryResponseElement> -Objekt, das von ASP.NET erstellt wird, ist einem Arbeitsspeicherpuffer mit fester Größe, die aus einem Pool von Speicherpuffern erstellt wird. Als Ergebnis den Inhalt einer <xref:System.Web.Caching.MemoryResponseElement> Objekt häufig nicht vollständig ausfüllen der <xref:System.Web.Caching.MemoryResponseElement.Buffer%2A> Array. In der Regel nur einen Teil der <xref:System.Web.Caching.MemoryResponseElement.Buffer%2A> Array Antwortdaten enthält. Deshalb Anbieter Serialisieren der <xref:System.Web.Caching.MemoryResponseElement.Buffer%2A> Array (anstatt direkt serialisieren die vollständige Typs, die im Ausgabecache gespeichert werden) verwenden, muss die <xref:System.Web.Caching.MemoryResponseElement.Length%2A> -Eigenschaft können Sie bestimmen, welcher Anteil der <xref:System.Web.Caching.MemoryResponseElement.Buffer%2A> Array gespeichert werden muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

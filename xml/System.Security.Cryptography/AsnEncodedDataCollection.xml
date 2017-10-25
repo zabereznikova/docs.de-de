@@ -1,0 +1,592 @@
+<Type Name="AsnEncodedDataCollection" FullName="System.Security.Cryptography.AsnEncodedDataCollection">
+  <TypeSignature Language="C#" Value="public sealed class AsnEncodedDataCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AsnEncodedDataCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.AsnEncodedDataCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Security.Cryptography.AsnEncodedData" />-Objekten dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse implementiert die <xref:System.Collections.ICollection>-Schnittstelle.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Security.Cryptography.AsnEncodedDataCollection>-Klasse veranschaulicht.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsnEncodedDataCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedDataCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Security.Cryptography.AsnEncodedDataCollection>-Klasse veranschaulicht.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsnEncodedDataCollection (System.Security.Cryptography.AsnEncodedData asnEncodedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.AsnEncodedData asnEncodedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedDataCollection.#ctor(System.Security.Cryptography.AsnEncodedData)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="asnEncodedData" Type="System.Security.Cryptography.AsnEncodedData" />
+      </Parameters>
+      <Docs>
+        <param name="asnEncodedData">Das <see cref="T:System.Security.Cryptography.AsnEncodedData" />-Objekt, das zur Auflistung hinzugefügt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> -Klasse und fügt ein <see cref="T:System.Security.Cryptography.AsnEncodedData" /> Objekt der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Security.Cryptography.AsnEncodedData asnEncodedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Security.Cryptography.AsnEncodedData asnEncodedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedDataCollection.Add(System.Security.Cryptography.AsnEncodedData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asnEncodedData" Type="System.Security.Cryptography.AsnEncodedData" />
+      </Parameters>
+      <Docs>
+        <param name="asnEncodedData">Das <see cref="T:System.Security.Cryptography.AsnEncodedData" />-Objekt, das zur Auflistung hinzugefügt werden soll.</param>
+        <summary>Fügt dem <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" />-Objekt ein <see cref="T:System.Security.Cryptography.AsnEncodedData" />-Objekt hinzu.</summary>
+        <returns>Der Index des hinzugefügten <see cref="T:System.Security.Cryptography.AsnEncodedData" />-Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Security.Cryptography.AsnEncodedDataCollection>-Klasse veranschaulicht.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asnEncodedData" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Eine der OIDs ist <see langword="null" /> und des OIDs stimmen nicht überein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Security.Cryptography.AsnEncodedData[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Security.Cryptography.AsnEncodedData[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedDataCollection.CopyTo(System.Security.Cryptography.AsnEncodedData[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Security.Cryptography.AsnEncodedData[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array, das <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> Objekt ist, kopiert werden soll.</param>
+        <param name="index">Die Stelle, an der der Kopiervorgang beginnt.</param>
+        <summary>Kopiert das <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" />-Objekt in ein Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kopiert den Inhalt einer <xref:System.Security.Cryptography.OidCollection> -Objekt in ein Array. Der Kopiervorgang beginnt an der angegebenen Indexposition.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Security.Cryptography.AsnEncodedDataCollection>-Klasse veranschaulicht.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AsnEncodedDataCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der <see cref="T:System.Security.Cryptography.AsnEncodedData" />-Objekte in einer Auflistung ab.</summary>
+        <value>Die Anzahl der <see cref="T:System.Security.Cryptography.AsnEncodedData" /> Objekte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um zu bestimmen, wie viele <xref:System.Security.Cryptography.AsnEncodedData> -Objekte die Auflistung enthält.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Security.Cryptography.AsnEncodedDataCollection>-Klasse veranschaulicht.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.AsnEncodedDataEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Cryptography.AsnEncodedDataEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedDataCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsnEncodedDataEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein <see cref="T:System.Security.Cryptography.AsnEncodedDataEnumerator" />-Objekt zurück, das dazu verwendet werden kann, im <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" />-Objekt zu navigieren.</summary>
+        <returns>Ein <see cref="T:System.Security.Cryptography.AsnEncodedDataEnumerator" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.AsnEncodedDataEnumerator> -Klasse implementiert die <xref:System.Collections.IEnumerator> -Schnittstelle, die Sie zum Navigieren innerhalb einer Auflistung ermöglicht.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Security.Cryptography.AsnEncodedDataCollection>-Klasse veranschaulicht.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AsnEncodedDataCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Zugriff auf die <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> Objekt ist threadsicher.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Sammlung ist nicht threadsicher.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Security.Cryptography.AsnEncodedDataCollection>-Klasse veranschaulicht.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.AsnEncodedData this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.AsnEncodedData Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AsnEncodedDataCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsnEncodedData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position in der Auflistung.</param>
+        <summary>Ruft ein <see cref="T:System.Security.Cryptography.AsnEncodedData" />-Objekt aus dem <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" />-Objekt ab.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.AsnEncodedData" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Abrufen einer <xref:System.Security.Cryptography.AsnEncodedData> -Objekt aus einem <xref:System.Security.Cryptography.AsnEncodedDataCollection> Objekt, wenn Sie wissen, dass am Speicherort.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Security.Cryptography.AsnEncodedDataCollection>-Klasse veranschaulicht.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Security.Cryptography.AsnEncodedData asnEncodedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Security.Cryptography.AsnEncodedData asnEncodedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedDataCollection.Remove(System.Security.Cryptography.AsnEncodedData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asnEncodedData" Type="System.Security.Cryptography.AsnEncodedData" />
+      </Parameters>
+      <Docs>
+        <param name="asnEncodedData">Das zu entfernende <see cref="T:System.Security.Cryptography.AsnEncodedData" />-Objekt.</param>
+        <summary>Entfernt ein <see cref="T:System.Security.Cryptography.AsnEncodedData" /> -Objekt aus der <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Security.Cryptography.AsnEncodedDataCollection>-Klasse veranschaulicht.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asnEncodedData" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AsnEncodedDataCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf das <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" />-Objekt synchronisiert werden kann.</summary>
+        <value>Ein Objekt zum Synchronisieren des Zugriffs auf die <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.AsnEncodedDataCollection>ist nicht threadsicher. Abgeleitete Klassen bieten eine eigene synchronisierte Version der der <xref:System.Security.Cryptography.AsnEncodedDataCollection> Verwenden dieser Eigenschaft. Die Synchronisierungscode dürfen Vorgänge auf die <xref:System.Security.Cryptography.AsnEncodedDataCollection.SyncRoot%2A> Eigenschaft von der <xref:System.Security.Cryptography.AsnEncodedDataCollection> -Klasse, nicht direkt für die Klasse selbst. Dies gewährleistet die einwandfreie Funktion von Auflistungen, die von anderen Objekten abgeleitet sind. Es Auflistungsinstanz ordnungsgemäße Synchronisierung mit anderen Threads, die gleichzeitig eventuell die <xref:System.Security.Cryptography.AsnEncodedDataCollection> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Security.Cryptography.AsnEncodedDataCollection>-Klasse veranschaulicht.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedDataCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array, das <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> Objekt ist, kopiert werden soll.</param>
+        <param name="index">Die Stelle, an der der Kopiervorgang beginnt.</param>
+        <summary>Kopiert das <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" />-Objekt in ein Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kopiert den Inhalt einer <xref:System.Security.Cryptography.AsnEncodedDataCollection> -Objekt in ein Array. Der Kopiervorgang beginnt an der angegebenen Indexposition.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Länge für <paramref name="index" /> ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Länge für <paramref name="index" /> liegt außerhalb des gültigen Bereichs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AsnEncodedDataCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AsnEncodedDataCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedDataCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein <see cref="T:System.Security.Cryptography.AsnEncodedDataEnumerator" />-Objekt zurück, das dazu verwendet werden kann, im <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" />-Objekt zu navigieren.</summary>
+        <returns>Ein <see cref="T:System.Security.Cryptography.AsnEncodedDataEnumerator" />-Objekt, das dazu verwendet werden kann, in der Auflistung zu navigieren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.AsnEncodedDataEnumerator> -Klasse implementiert die <xref:System.Collections.IEnumerator> -Schnittstelle, die Sie zum Navigieren innerhalb einer Auflistung ermöglicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

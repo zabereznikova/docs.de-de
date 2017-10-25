@@ -1,0 +1,42 @@
+<Type Name="RoleManagerEventHandler" FullName="System.Web.Security.RoleManagerEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void RoleManagerEventHandler(object sender, RoleManagerEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RoleManagerEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.RoleManagerEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.Security.RoleManagerEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die <see cref="T:System.Web.Security.RoleManagerModule" /> ausgelösten der <see cref="E:System.Web.Security.RoleManagerModule.GetRoles" /> Ereignis.</param>
+    <param name="e">Ein <see cref="T:System.Web.Security.RoleManagerEventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+    <summary>Definiert den Delegaten für die <see cref="E:System.Web.Security.RoleManagerModule.GetRoles" /> -Ereignis für die <see cref="T:System.Web.Security.RoleManagerModule" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.RoleManagerEventHandler> Delegat wird definiert, für die <xref:System.Web.Security.RoleManagerModule.GetRoles> -Ereignis für die <xref:System.Web.Security.RoleManagerModule> Klasse. Sie erreichen die <xref:System.Web.Security.RoleManagerModule.GetRoles> -Ereignis für die <xref:System.Web.Security.RoleManagerModule> -Klasse in der Datei "Global.asax", damit Ihre ASP.NET-Anwendung wie im Beispiel in diesem Thema gezeigt.  
+  
+ Können Sie die <xref:System.Web.Security.RoleManagerEventHandler> , ersetzen Sie die Erstellung der <xref:System.Web.Security.RolePrincipal> -Objekts, indem die <xref:System.Web.Security.RoleManagerModule> mit Ihren eigenen benutzerdefinierten Objekts. Zu diesem Zweck definieren Sie einen Delegaten, mit der <xref:System.Web.Security.RoleManagerEventHandler> und weisen Sie ihn der <xref:System.Web.Security.RoleManagerModule.GetRoles> -Ereignis für die <xref:System.Web.Security.RoleManagerModule>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die <xref:System.Web.Security.RoleManagerModule.GetRoles> Ereignis in der Datei "Global.asax" für eine ASP.NET-Anwendung enthalten. Die <xref:System.Web.Security.RoleManagerModule.GetRoles> Ereignis fügt eine Ablaufverfolgung-Benachrichtigung für eine Anwendung, die Ablaufverfolgung in der Datei "Web.config" aktiviert ist.  
+  
+ [!code-csharp[System.Web.Security.RoleManagerModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.RoleManagerModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.RoleManagerModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.RoleManagerModule/VB/global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,121 @@
+<Type Name="ObjectTagBuilder" FullName="System.Web.UI.ObjectTagBuilder">
+  <TypeSignature Language="C#" Value="public sealed class ObjectTagBuilder : System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObjectTagBuilder extends System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ObjectTagBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ControlBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Von ASP.NET verwendet <see cref="T:System.Web.UI.TemplateParser" /> Klasse serverseitige analysiert <see langword="&lt;object&gt;" /> Tags. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectTagBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ObjectTagBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.ObjectTagBuilder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AppendLiteralString">
+      <MemberSignature Language="C#" Value="public override void AppendLiteralString (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AppendLiteralString(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ObjectTagBuilder.AppendLiteralString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Der dem Steuerelement hinzuzufügende Inhalt.</param>
+        <summary>Fügt Inhalt, z. B. Text oder HTML-Code an ein Steuerelement hinzu.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSubBuilder">
+      <MemberSignature Language="C#" Value="public override void AppendSubBuilder (System.Web.UI.ControlBuilder subBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AppendSubBuilder(class System.Web.UI.ControlBuilder subBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ObjectTagBuilder.AppendSubBuilder(System.Web.UI.ControlBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subBuilder" Type="System.Web.UI.ControlBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="subBuilder">Die <see cref="T:System.Web.UI.ControlBuilder" /> zugewiesen werden, um das untergeordnete Steuerelement.</param>
+        <summary>Fügt dem <see cref="T:System.Web.UI.ObjectTagBuilder" />-Objekt Generatoren für alle untergeordneten Steuerelemente hinzu, die zu dem Containersteuerelement gehören.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public override void Init (System.Web.UI.TemplateParser parser, System.Web.UI.ControlBuilder parentBuilder, Type type, string tagName, string id, System.Collections.IDictionary attribs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Init(class System.Web.UI.TemplateParser parser, class System.Web.UI.ControlBuilder parentBuilder, class System.Type type, string tagName, string id, class System.Collections.IDictionary attribs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ObjectTagBuilder.Init(System.Web.UI.TemplateParser,System.Web.UI.ControlBuilder,System.Type,System.String,System.String,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parser" Type="System.Web.UI.TemplateParser" />
+        <Parameter Name="parentBuilder" Type="System.Web.UI.ControlBuilder" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="attribs" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="parser">Die <see cref="T:System.Web.UI.TemplateParser" /> verantwortlich für die Analyse des Steuerelements.</param>
+        <param name="parentBuilder">Die <see cref="T:System.Web.UI.ControlBuilder" /> verantwortlich für das Steuerelement zu erstellen.</param>
+        <param name="type">Die <see cref="T:System.Type" /> zugewiesen werden, um das Steuerelement, das vom Generator erstellt wird.</param>
+        <param name="tagName">Der Name des zu erstellenden Tags. Dadurch wird den Generator, der mehrere Transpondertypen unterstützen.</param>
+        <param name="id">Das dem Steuerelement zugewiesene <see cref="P:System.Web.UI.Control.ID" />.</param>
+        <param name="attribs">Die <see cref="T:System.Collections.IDictionary" /> , die alle angegebenen-Tagattribute enthält.</param>
+        <summary>Initialisiert das Objekttag-Generator an, bei der Analyse der Seite.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">Der <paramref name="id" />-Parameter ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ Der Tag-Objektbereich ist ungültig.  
+  
+ \- oder –  
+  
+ Die <see langword="classid" /> oder <see langword="progid" /> Attribute sind nicht enthalten oder sind ungültig.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

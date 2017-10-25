@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Debugging">
+  <Docs>
+    <summary>Enthält den Typ zum Verwalten des Debuggers.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

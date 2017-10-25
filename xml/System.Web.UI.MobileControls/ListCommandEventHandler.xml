@@ -1,0 +1,46 @@
+<Type Name="ListCommandEventHandler" FullName="System.Web.UI.MobileControls.ListCommandEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ListCommandEventHandler(object sender, ListCommandEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ListCommandEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.ListCommandEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.MobileControls.ListCommandEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses ein <see cref="T:System.Web.UI.MobileControls.List" /> Steuerelement.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.MobileControls.ListCommandEventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Web.UI.MobileControls.List.ItemCommand" />-Ereignisses eines <see cref="T:System.Web.UI.MobileControls.List" />-Objekts dar. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer <xref:System.Web.UI.MobileControls.ListCommandEventHandler> delegate für eine <xref:System.Web.UI.MobileControls.List> -Steuerelement, bestimmen Sie die Methode für die Ereignisbehandlung. Die <xref:System.Web.UI.WebControls.ListControl> benachrichtigt, wenn ein Elementereignis generiert wird. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, es sei denn, Sie entfernen den Delegaten.  
+  
+ Für Standardrendering zurückgreifen bietet das Steuerelement eine Benutzeroberfläche, die den Benutzer auf die einzelnen Listenelementen ermöglicht. Beim Postback Ruft das Steuerelement die <xref:System.Web.UI.MobileControls.List.OnItemCommand%2A> Ereignishandler mit einem Argument, das auf das Quellelement verweist. Der Wert der <xref:System.Web.UI.MobileControls.Command.CommandName%2A>-Eigenschaft ist `null`.  
+  
+ Beim rendering mit einer Vorlage, ruft der Ereignismechanismus bubbling von ASP.NET die <xref:System.Web.UI.MobileControls.List.OnItemCommand%2A> Methode. Der Ereignishandler wird als Parameter übergeben, zeigen auf das Quellelement, und in der <xref:System.Web.UI.MobileControls.Command.CommandName%2A> Eigenschaft des Steuerelements, das das Ereignis generiert hat. Dadurch können Sie ein einzelnes Listenelement mit mehreren zugeordneten Interaktionen zu rendern.  
+  
+ Um ein Element als Link zu rendern, legen Sie die <xref:System.Web.UI.MobileControls.List.ItemsAsLinks%2A> Eigenschaft `true`. Der Wert des der <xref:System.Web.UI.MobileControls.MobileListItem.Text%2A> Eigenschaft wird verwendet, für das Anzeigen und den Inhalt des der <xref:System.Web.UI.MobileControls.MobileListItem.Value%2A> Eigenschaft dienen als die Verknüpfung Zieladresse, wenn ausgewählt.  
+  
+> [!NOTE]
+>  Befehlsereignisse werden nicht generiert werden, damit diese Links.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

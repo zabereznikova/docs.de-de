@@ -1,0 +1,44 @@
+<Type Name="XmlSerializationWriteCallback" FullName="System.Xml.Serialization.XmlSerializationWriteCallback">
+  <TypeSignature Language="C#" Value="public delegate void XmlSerializationWriteCallback(object o);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlSerializationWriteCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlSerializationWriteCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="o" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="o">Das Objekt, das serialisiert wird.</param>
+    <summary>Delegat, der von verwendet wird, die <see cref="T:System.Xml.Serialization.XmlSerializer" /> Klasse für die Serialisierung von Typen aus den SOAP-codierten, nicht-Stamm-XML-Daten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der Initialisierung die .NET Framework-XML-Serialisierungsinfrastruktur dynamisch generiert und kompiliert eine temporäre Klasse für die Serialisierung von abgeleitet der <xref:System.Xml.Serialization.XmlSerializationWriter> Klasse. Während dieses Vorgangs generiert .NET Framework Write-Methoden implementieren die <xref:System.Xml.Serialization.XmlSerializationWriteCallback> -Klasse delegieren. Es ist daher für bestimmte Zuordnungen zwischen .NET Framework-Typen und XML-Datentypen, die über SOAP-codierte XML serialisiert werden und sind nicht-Stammelemente. Write-Methode wird dann bei Bedarf während der Serialisierung aufgerufen.  
+  
+ Sie sollte nicht direkt instanziiert <xref:System.Xml.Serialization.XmlSerializationWriteCallback>.  
+  
+ SOAP-Codierung wird in Abschnitt 5 der SOAP 1.1-Spezifikation beschrieben.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+</Type>

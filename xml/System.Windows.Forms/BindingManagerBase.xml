@@ -1,0 +1,976 @@
+<Type Name="BindingManagerBase" FullName="System.Windows.Forms.BindingManagerBase">
+  <TypeSignature Language="C#" Value="public abstract class BindingManagerBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BindingManagerBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.BindingManagerBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet alle <see cref="T:System.Windows.Forms.Binding" /> Objekte, die dieselbe Datenquelle und Datenmember gebunden sind. Diese Klasse ist abstrakt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingManagerBase> ermöglicht die Synchronisierung von datengebundenen Steuerelementen in einem Windows Form, die an die gleiche Datenquelle gebunden sind. (Weitere Informationen zu einfach, die ein Steuerelement an eine Datenquelle gebunden, finden Sie unter der <xref:System.Windows.Forms.Binding> Klasse.) Nehmen wir beispielsweise an, dass ein Formular zwei enthält <xref:System.Windows.Forms.TextBox> Steuerelemente, die an die gleiche Datenquelle jedoch auf verschiedene Spalten gebunden sind. Die Datenquelle ist möglicherweise eine <xref:System.Data.DataTable> , Kundennamen enthält, während die Spalten die vor- und Nachnamen enthalten können. Die beiden Steuerelemente müssen synchronisiert werden, um die richtigen vor- und Nachnamen Namen zusammen für denselben Kunden anzuzeigen. Die <xref:System.Windows.Forms.CurrencyManager>, erbt von der <xref:System.Windows.Forms.BindingManagerBase> Klasse, führt diese Synchronisierung mithilfe eines Zeigers auf das aktuelle Element in der Datenquelle. Die <xref:System.Windows.Forms.TextBox> Steuerelemente mit dem aktuellen Element gebunden werden, sodass sie die Informationen für dieselbe Zeile anzeigen. Wenn das aktuelle Element geändert wird, die <xref:System.Windows.Forms.CurrencyManager> benachrichtigt alle verbundenen Steuerelemente, damit sie ihre Daten aktualisieren können. Darüber hinaus können Sie festlegen der <xref:System.Windows.Forms.BindingManagerBase.Position%2A> Eigenschaft zum Angeben der Zeile in der <xref:System.Data.DataTable> , die die Steuerelemente zeigen. Um zu bestimmen, wie viele Zeilen in der Datenquelle vorhanden sind, verwenden die <xref:System.Windows.Forms.BindingManagerBase.Count%2A> Eigenschaft.  
+  
+ Die <xref:System.Windows.Forms.CurrencyManager> ist notwendig, da die Datenquellen nicht notwendigerweise einen Zeiger auf das aktuelle Element verfügen. Z. B. arrays und <xref:System.Collections.ArrayList> Objekte können Datenquellen sein, aber sie verfügen nicht über eine Eigenschaft, die das aktuelle Element zurückgibt. Verwenden Sie zum Abrufen des aktuellen Elements der <xref:System.Windows.Forms.BindingManagerBase.Current%2A> Eigenschaft.  
+  
+ Die <xref:System.Windows.Forms.PropertyManager> erbt auch von der <xref:System.Windows.Forms.BindingManagerBase>, und es wird verwendet, um die aktuelle Eigenschaft eines Objekts, anstatt die Eigenschaft des aktuellen Objekts in einer Datenquelle zu verwalten. Aus diesem Grund versucht, Festlegen der <xref:System.Windows.Forms.BindingManagerBase.Position%2A> oder <xref:System.Windows.Forms.BindingManagerBase.Count%2A> -Eigenschaft für eine <xref:System.Windows.Forms.PropertyManager> hat keine Auswirkungen.  
+  
+ Zum Erstellen einer <xref:System.Windows.Forms.BindingManagerBase>, verwenden die <xref:System.Windows.Forms.BindingContext> -Klasse, die einen zurückgibt eine <xref:System.Windows.Forms.CurrencyManager> oder ein <xref:System.Windows.Forms.PropertyManager>, abhängig von der Datenquelle verwaltet wird.  
+  
+ Programmierer Lösungen werden empfohlen, die direkt an Steuerelemente binden einer <xref:System.Windows.Forms.BindingSource> Komponente, die als eine Datenquelle und die Data Connector mit der Datenquelle für die eigentliche Ziel fungiert. <xref:System.Windows.Forms.BindingSource>erheblich vereinfacht sowohl einfache und komplexe Datenbindung, einschließlich der Verwaltung von Währung zwischen Steuerelement und dem Ziel.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.BindingContext> zurückzugebenden eine <xref:System.Windows.Forms.BindingManagerBase> für eine bestimmte Datenquelle. (Im Beispiel wird vorausgesetzt, Sie haben deklariert `myBindingManagerBase` im Deklarationsabschnitt des Moduls.) Im Beispiel fügt dann Ereignisdelegaten, der <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> und <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> Ereignisse. Abschließend wird das Beispiel enthält vier Methoden (`MoveNext`, `MovePrevious`, `MoveFirst`, und `MoveLast`), die inkrementiert oder dekrementiert den <xref:System.Windows.Forms.BindingManagerBase.Position%2A> Eigenschaft, und legen die <xref:System.Windows.Forms.BindingManagerBase.Position%2A> auf die erste oder letzte Zeile in der Liste. Die letzte Zeile in der Liste wird bestimmt, mit der <xref:System.Windows.Forms.BindingManagerBase.Count%2A> Eigenschaft.  
+  
+ [!code-cpp[Classic BindingManagerBase Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingManagerBase Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingManagerBase Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingManagerBase Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingManagerBase Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingManagerBase Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von <see cref="T:System.Windows.Forms.BindingManagerBase" />, müssen Sie die folgenden abstrakten Member überschreiben: <see cref="M:System.Windows.Forms.BindingManagerBase.AddNew" />, <see cref="P:System.Windows.Forms.BindingManagerBase.Count" />, <see cref="M:System.Windows.Forms.BindingManagerBase.CancelCurrentEdit" />, <see cref="P:System.Windows.Forms.BindingManagerBase.Current" />, <see cref="M:System.Windows.Forms.BindingManagerBase.EndCurrentEdit" />, <see cref="M:System.Windows.Forms.BindingManagerBase.GetItemProperties" />, <see cref="M:System.Windows.Forms.BindingManagerBase.OnCurrentChanged(System.EventArgs)" />, <see cref="P:System.Windows.Forms.BindingManagerBase.Position" />, <see cref="M:System.Windows.Forms.BindingManagerBase.RemoveAt(System.Int32)" /> , <see cref="M:System.Windows.Forms.BindingManagerBase.ResumeBinding" />, <see cref="M:System.Windows.Forms.BindingManagerBase.SuspendBinding" />, und <see cref="M:System.Windows.Forms.BindingManagerBase.UpdateIsBinding" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingManagerBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.BindingManagerBase" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor legt die <xref:System.Windows.Forms.BindingManagerBase.Bindings%2A> Eigenschaft `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNew">
+      <MemberSignature Language="C#" Value="public abstract void AddNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.AddNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt beim Überschreiben in einer abgeleiteten Klasse der zugrunde liegenden Liste ein neues Element hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingManagerBase.AddNew%2A> Methode fügt ein neues Element auf die zugrunde liegende Liste mithilfe des Standardkonstruktors für den Typ dieses Elements. <xref:System.Windows.Forms.BindingManagerBase.AddNew%2A>Dient in erster Linie durch das Hinzufügen von Unterstützung für komplexe Datenbindung zu ihrer benutzerdefinierten Komponente-Programmierer verwendet werden.  
+  
+ <xref:System.Windows.Forms.BindingManagerBase.AddNew%2A>Mithilfe des folgenden Musters, das Anwendungsprogrammierer zum Einfügen von ihren eigenen Code zum Erstellen von benutzerdefinierter Elementen ermöglicht wird häufig implementiert werden:  
+  
+1.  Durch <xref:System.Windows.Forms.BindingManagerBase.AddNew%2A> wird das <xref:System.Windows.Forms.BindingSource.AddingNew>-Ereignis ausgelöst.  
+  
+2.  Programmierer können ein benutzerdefiniertes Element bereitstellen, durch Behandeln der <xref:System.Windows.Forms.BindingSource.AddingNew> Ereignis und die Einstellung der <xref:System.ComponentModel.AddingNewEventArgs.NewObject%2A> Eigenschaft von der <xref:System.ComponentModel.AddingNewEventArgs> Parameter für das neue Element. Andernfalls sollte die Komponente ein Element mit dem Standardkonstruktor erstellen.  
+  
+3.  Wenn die Datenquelle keine implementiert die <xref:System.ComponentModel.IEditableObject> -Schnittstelle, das Element wird sofort auf die Datenquelle und der zugrunde liegenden Liste hinzugefügt. Wenn diese Schnittstelle unterstützt wird, wird das Hinzufügen von der <xref:System.Windows.Forms.BindingManagerBase.CancelCurrentEdit%2A> und <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingComplete">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.BindingCompleteEventHandler BindingComplete;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.BindingCompleteEventHandler BindingComplete" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.BindingManagerBase.BindingComplete" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingCompleteEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt nach Abschluss eines Datenbindungsvorgangs ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> Ereignis tritt nach Abschluss eines Vorgangs für die Datenbindung, u. u. die folgenden:  
+  
+-   Betätigen Informationen aus der Datenquelle in die Eigenschaft des gebundenen Steuerelements.  
+  
+-   Abrufen von Informationen aus einer gebundenen Steuerelements in dessen zugeordnete Datenquelle.  
+  
+ Beachten Sie, dass dieses Ereignis, unabhängig von den Abschlussstatus des Bindungsvorgangs ausgelöst wird ein, auch wenn dieser Status bestimmt werden kann, mithilfe der <xref:System.Windows.Forms.BindingCompleteEventArgs.BindingCompleteState%2A> Eigenschaft von der <xref:System.Windows.Forms.BindingCompleteEventArgs> Parameter, die dem Ereignis zugeordnet. <xref:System.Windows.Forms.BindingCompleteEventArgs>enthält auch Informationen zu Fehler und Ausnahmen. Z. B. eine Bindungsvorgang, der versucht, einen null-Wert aus einer Datenquelle in push eine <xref:System.Windows.Forms.DateTimePicker> Steuerelement generiert eine Ausnahme, da ein <xref:System.DateTime> nicht `null`. In diesem Fall, obwohl der Bindungsvorgang nicht erfolgreich abgeschlossen wird, die <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> Ereignis wird ausgelöst, und das Ereignis enthält Informationen zu den fehlgeschlagenen Bindungsversuch.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie behandelt die <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> Ereignis und vergewissern Sie sich mehrere an die gleiche Datenquelle gebundenen Steuerelemente synchronisiert bleiben, wenn einer der Steuerelementwerte geändert wird. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen die `InitializeControlsAndData` Methode aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#11)]
+ [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bindings">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BindingsCollection Bindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.BindingsCollection Bindings" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingManagerBase.Bindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung verwalteter Bindungen ab.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.BindingsCollection" /> , enthält die <see cref="T:System.Windows.Forms.Binding" /> Objekte, die von diesem verwaltet <see cref="T:System.Windows.Forms.BindingManagerBase" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.BindingManagerBase> für eine bestimmte Datenquelle. Anschließend wird die <xref:System.Windows.Forms.BindingManagerBase.Bindings%2A> Eigenschaft zum Drucken von Informationen über jedes Steuerelement an die gleiche Datenquelle gebunden.  
+  
+ [!code-cpp[Classic BindingManagerBase.Bindings Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingManagerBase.Bindings Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingManagerBase.Bindings Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingManagerBase.Bindings Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingManagerBase.Bindings Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingManagerBase.Bindings Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelCurrentEdit">
+      <MemberSignature Language="C#" Value="public abstract void CancelCurrentEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CancelCurrentEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.CancelCurrentEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht beim Überschreiben in einer abgeleiteten Klasse den aktuellen Bearbeitungsvorgang ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nur unterstützt, wenn die Datenquelle implementiert die <xref:System.ComponentModel.IEditableObject> Schnittstelle. Wenn das Objekt keine implementiert die <xref:System.ComponentModel.IEditableObject> -Schnittstelle, an den Daten vorgenommenen Änderungen nicht verworfen werden.  
+  
+ Aufrufen der <xref:System.Windows.Forms.BindingManagerBase.CancelCurrentEdit%2A> -Methode nimmt die <xref:System.Windows.Forms.Binding.Format> Ereignis auftritt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Forms.BindingManagerBase.CancelCurrentEdit%2A> und <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> Methoden. Beim Aufrufen der <xref:System.Windows.Forms.BindingManagerBase.CancelCurrentEdit%2A> Methoden, die an den Daten vorgenommenen Änderungen werden verworfen. Beim Aufrufen der <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> -Methode, die Änderungen beibehalten werden.  
+  
+ [!code-cpp[BindingManagerBase.CancelCurrentEdit Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/BindingManagerBase.CancelCurrentEdit Example/CPP/canceledit.cpp#1)]
+ [!code-csharp[BindingManagerBase.CancelCurrentEdit Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/BindingManagerBase.CancelCurrentEdit Example/CS/canceledit.cs#1)]
+ [!code-vb[BindingManagerBase.CancelCurrentEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BindingManagerBase.CancelCurrentEdit Example/VB/canceledit.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public abstract int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingManagerBase.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die Anzahl der Zeilen ab, die von der <see cref="T:System.Windows.Forms.BindingManagerBase" /> verwaltet werden.</summary>
+        <value>Die Anzahl der Zeilen, die von der <see cref="T:System.Windows.Forms.BindingManagerBase" /> verwaltet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.BindingManagerBase.Count%2A> -Eigenschaft können Sie das letzte Element in der Liste der Zeilen, die von verwalteten bestimmen die <xref:System.Windows.Forms.BindingManagerBase>. Um bis zum letzten Element wechseln möchten, legen Sie die <xref:System.Windows.Forms.BindingManagerBase.Position%2A> Eigenschaft, um die <xref:System.Windows.Forms.BindingManagerBase.Count%2A> Eigenschaftswert minus 1.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel werden vier Methoden veranschaulicht, das Festlegen der <xref:System.Windows.Forms.BindingManagerBase.Position%2A> Eigenschaft. Die `MoveNext` Methode die Eigenschaft um 1 erhöht. Die `MovePrevious` Methode dekrementiert den Wert der Eigenschaft um 1. Die `MoveFirst` Methode legt die Eigenschaft auf 0 fest. Die `MoveLast` Methode legt die Eigenschaft auf den Wert der <xref:System.Windows.Forms.BindingManagerBase.Count%2A> Eigenschaft minus 1.  
+  
+ [!code-cpp[Classic BindingManagerBase.Count Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingManagerBase.Count Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingManagerBase.Count Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingManagerBase.Count Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingManagerBase.Count Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingManagerBase.Count Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public abstract object Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingManagerBase.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse das aktuelle Objekt ab.</summary>
+        <value>Eine <see cref="T:System.Object" /> , die das aktuelle Objekt darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingManagerBase.Current%2A> -Objekt enthält den Wert des aktuellen Elements in der Datenquelle. Um den Wert des aktuellen Elements verwenden zu können, müssen Sie das Element, das Umwandeln der <xref:System.Type> des enthaltenen Objekts die <xref:System.Windows.Forms.Binding.DataSource%2A>. Z. B. eine <xref:System.Data.DataTable> enthält <xref:System.Data.DataRowView> Objekte. Um den Typ des aktuellen Objekts zu ermitteln, verwenden die <xref:System.Object.GetType%2A> und <xref:System.Type.ToString%2A> Methoden.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Windows.Forms.Binding.DataSource%2A> ist ein <xref:System.Data.DataSet>, <xref:System.Data.DataViewManager>, oder <xref:System.Data.DataTable>, sind die tatsächliche Bindung an eine <xref:System.Data.DataView>. Daher ist jedes <xref:System.Windows.Forms.BindingManagerBase.Current%2A> Objekt ist ein <xref:System.Data.DataRowView> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Wert der ausgibt, die <xref:System.Windows.Forms.BindingManagerBase.Current%2A> -Objekt in ein <xref:System.Windows.Forms.BindingManagerBase> in die <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> Ereignis. Im Beispiel wird vorausgesetzt, die die Datenquelle ist eine <xref:System.Data.DataTable> mit einem <xref:System.Data.DataColumn> mit dem Namen `CustName`.  
+  
+ [!code-cpp[Classic BindingManagerBase.Current Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingManagerBase.Current Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingManagerBase.Current Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingManagerBase.Current Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingManagerBase.Current Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingManagerBase.Current Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CurrentChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CurrentChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.BindingManagerBase.CurrentChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das derzeit gebundene Element geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.BindingManagerBase.Current%2A> eigenschaftenänderungen oder <xref:System.Windows.Forms.BindingManagerBase.CurrentItemChanged> Ereignis tritt auf.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Wert der ausgibt, die <xref:System.Windows.Forms.BindingManagerBase.Current%2A> -Objekt in ein <xref:System.Windows.Forms.BindingManagerBase> in die <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> Ereignis. Im Beispiel wird vorausgesetzt, die die Datenquelle ist eine <xref:System.Data.DataTable> mit einem <xref:System.Data.DataColumn> mit dem Namen `CustName`.  
+  
+ [!code-cpp[Classic BindingManagerBase.Current Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingManagerBase.Current Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingManagerBase.Current Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingManagerBase.Current Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingManagerBase.Current Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingManagerBase.Current Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentItemChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CurrentItemChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CurrentItemChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.BindingManagerBase.CurrentItemChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der Zustand des momentan gebundenen Elements ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingManagerBase.CurrentItemChanged> Ereignis tritt auf, wenn eine Änderung in den Status, in das derzeit gebundene Element vorhanden ist. Dies kann auftreten, wenn eine der Eigenschaften dieses Elements geändert wird oder wenn das Element selbst ersetzt oder verschoben wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.BindingManagerBase.CurrentItemChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.BindingManagerBase>, z. B. eine <xref:System.Windows.Forms.PropertyManager> oder <xref:System.Windows.Forms.CurrencyManager>. Geben Sie den Namen der Instanz `BindingManagerBase1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.BindingManagerBase.CurrentItemChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#82](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#82)]
+ [!code-vb[System.Windows.Forms.EventExamples#82](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#82)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataError">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.BindingManagerDataErrorEventHandler DataError;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.BindingManagerDataErrorEventHandler DataError" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.BindingManagerBase.DataError" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingManagerDataErrorEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein <see cref="T:System.Exception" /> erfolgt im Hintergrund durch die <see cref="T:System.Windows.Forms.BindingManagerBase" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis dient zu Informationszwecken und meldet die Common Language Specification (CLS)-nur Ausnahmen kompatibel. Um zu bestimmen, welche Art von Ausnahme ist aufgetreten, behandeln Sie dieses Ereignis, und überprüfen Sie die <xref:System.Windows.Forms.BindingManagerDataErrorEventArgs.Exception%2A> Eigenschaft von der <xref:System.Windows.Forms.BindingManagerDataErrorEventArgs>.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.BindingManagerBase.DataError> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.BindingManagerBase>, z. B. eine <xref:System.Windows.Forms.PropertyManager> oder <xref:System.Windows.Forms.CurrencyManager>. Geben Sie den Namen der Instanz `BindingManagerBase1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.BindingManagerBase.DataError> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#83](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#83)]
+ [!code-vb[System.Windows.Forms.EventExamples#83](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#83)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndCurrentEdit">
+      <MemberSignature Language="C#" Value="public abstract void EndCurrentEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndCurrentEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.EndCurrentEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet beim Überschreiben in einer abgeleiteten Klasse den aktuellen Bearbeitungsvorgang.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nur unterstützt, wenn die Datenquelle implementiert die <xref:System.ComponentModel.IEditableObject> Schnittstelle. In diesem Fall werden die Änderungen gespeichert werden. Wenn das Objekt keine implementiert die <xref:System.ComponentModel.IEditableObject> -Schnittstelle, an den Daten vorgenommene Änderungen werden nicht gespeichert werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Windows.Forms.BindingManagerBase.CancelCurrentEdit%2A> und <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> Methoden. Beim Aufrufen der <xref:System.Windows.Forms.BindingManagerBase.CancelCurrentEdit%2A> Methoden, die an den Daten vorgenommenen Änderungen werden verworfen. Beim Aufrufen der <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> -Methode, die Änderungen beibehalten werden.  
+  
+ [!code-cpp[BindingManagerBase.CancelCurrentEdit Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/BindingManagerBase.CancelCurrentEdit Example/CPP/canceledit.cpp#1)]
+ [!code-csharp[BindingManagerBase.CancelCurrentEdit Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/BindingManagerBase.CancelCurrentEdit Example/CS/canceledit.cs#1)]
+ [!code-vb[BindingManagerBase.CancelCurrentEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BindingManagerBase.CancelCurrentEdit Example/VB/canceledit.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemProperties">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.PropertyDescriptorCollection GetItemProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetItemProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.GetItemProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die Auflistung von Eigenschaftsbeschreibungen für die Bindung ab.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , die die eigenschaftsbeschreibungen für die Bindung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.BindingManagerBase.GetItemProperties%2A> -Methode zur Rückgabe einer <xref:System.ComponentModel.PropertyDescriptorCollection>. Im Beispiel druckt die <xref:System.ComponentModel.MemberDescriptor.Name%2A> und Wert des aktuellen <xref:System.Data.DataColumn> mithilfe der <xref:System.ComponentModel.PropertyDescriptor.GetValue%2A> Methode der <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ [!code-cpp[Classic BindingManagerBase.GetItemProperties Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingManagerBase.GetItemProperties Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingManagerBase.GetItemProperties Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingManagerBase.GetItemProperties Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingManagerBase.GetItemProperties Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingManagerBase.GetItemProperties Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemProperties">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.PropertyDescriptorCollection GetItemProperties (System.Collections.ArrayList dataSources, System.Collections.ArrayList listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetItemProperties(class System.Collections.ArrayList dataSources, class System.Collections.ArrayList listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.GetItemProperties(System.Collections.ArrayList,System.Collections.ArrayList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSources" Type="System.Collections.ArrayList" />
+        <Parameter Name="listAccessors" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="dataSources">Eine <see cref="T:System.Collections.ArrayList" /> , die die Datenquellen enthält.</param>
+        <param name="listAccessors">Eine <see cref="T:System.Collections.ArrayList" /> , die gebundenen Eigenschaften der Tabelle enthält.</param>
+        <summary>Ruft die Auflistung von eigenschaftsbeschreibungen für die Bindung mit dem angegebenen <see cref="T:System.Collections.ArrayList" />.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , die die eigenschaftsbeschreibungen für die Bindung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von Entwicklern beim Erstellen von datengebundenen Steuerelementen verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemProperties">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.PropertyDescriptorCollection GetItemProperties (Type listType, int offset, System.Collections.ArrayList dataSources, System.Collections.ArrayList listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetItemProperties(class System.Type listType, int32 offset, class System.Collections.ArrayList dataSources, class System.Collections.ArrayList listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.GetItemProperties(System.Type,System.Int32,System.Collections.ArrayList,System.Collections.ArrayList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listType" Type="System.Type" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="dataSources" Type="System.Collections.ArrayList" />
+        <Parameter Name="listAccessors" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="listType">Die <see cref="T:System.Type" /> der gebundenen Liste.</param>
+        <param name="offset">Ein Leistungsindikator verwendet, um rekursiv Aufrufen der Methode.</param>
+        <param name="dataSources">Eine <see cref="T:System.Collections.ArrayList" /> , die die Datenquellen enthält.</param>
+        <param name="listAccessors">Eine <see cref="T:System.Collections.ArrayList" /> , die gebundenen Eigenschaften der Tabelle enthält.</param>
+        <summary>Ruft die Liste der Eigenschaften der Elemente, die von diesem verwaltet <see cref="T:System.Windows.Forms.BindingManagerBase" />.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , die die eigenschaftsbeschreibungen für die Bindung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung wird von Entwicklern verwendet, um datengebundene Steuerelemente zu erstellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.BindingManagerBase.GetItemProperties%2A> -Methode zur Rückgabe einer <xref:System.ComponentModel.PropertyDescriptorCollection> für eine <xref:System.Windows.Forms.BindingManagerBase>. Klicken Sie dann den im Beispiel druckt die <xref:System.ComponentModel.MemberDescriptor.Name%2A> und <xref:System.ComponentModel.PropertyDescriptor.PropertyType%2A> jedes <xref:System.ComponentModel.PropertyDescriptor> in der Auflistung.  
+  
+ [!code-cpp[Classic BindingManagerBase.GetItemProperties2 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingManagerBase.GetItemProperties2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingManagerBase.GetItemProperties2 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingManagerBase.GetItemProperties2 Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingManagerBase.GetItemProperties2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingManagerBase.GetItemProperties2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListName">
+      <MemberSignature Language="C#" Value="protected abstract string GetListName (System.Collections.ArrayList listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string GetListName(class System.Collections.ArrayList listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.GetListName(System.Collections.ArrayList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listAccessors" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="listAccessors">Eine <see cref="T:System.Collections.ArrayList" /> , die gebundenen Eigenschaften der Tabelle enthält.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse den Namen der Liste ab, die die Daten für die Bindung liefert.</summary>
+        <returns>Der Name der Liste, die die Daten für die Bindung liefert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBindingSuspended">
+      <MemberSignature Language="C#" Value="public bool IsBindingSuspended { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBindingSuspended" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingManagerBase.IsBindingSuspended" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Bindung aufgehoben ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Bindung aufgehoben ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBindingComplete">
+      <MemberSignature Language="C#" Value="protected void OnBindingComplete (System.Windows.Forms.BindingCompleteEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnBindingComplete(class System.Windows.Forms.BindingCompleteEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.OnBindingComplete(System.Windows.Forms.BindingCompleteEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Windows.Forms.BindingCompleteEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">Ein <see cref="T:System.Windows.Forms.BindingCompleteEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.BindingManagerBase.BindingComplete" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.BindingManagerBase.OnBindingComplete%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.BindingManagerBase.OnBindingComplete(System.Windows.Forms.BindingCompleteEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.BindingManagerBase.OnBindingComplete(System.Windows.Forms.BindingCompleteEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCurrentChanged">
+      <MemberSignature Language="C#" Value="protected abstract void OnCurrentChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnCurrentChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.OnCurrentChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Das <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.BindingManagerBase.CurrentChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.BindingManagerBase.OnCurrentChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.BindingManagerBase.OnCurrentChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.BindingManagerBase.OnCurrentChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="onCurrentChangedHandler">
+      <MemberSignature Language="C#" Value="protected EventHandler onCurrentChangedHandler;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.EventHandler onCurrentChangedHandler" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.BindingManagerBase.onCurrentChangedHandler" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Ereignishandler für das <see cref="E:System.Windows.Forms.BindingManagerBase.CurrentChanged" /> Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCurrentItemChanged">
+      <MemberSignature Language="C#" Value="protected abstract void OnCurrentItemChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnCurrentItemChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.OnCurrentItemChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Das <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.BindingManagerBase.CurrentItemChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.BindingManagerBase.OnCurrentItemChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.BindingManagerBase.OnCurrentItemChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.BindingManagerBase.OnCurrentItemChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataError">
+      <MemberSignature Language="C#" Value="protected void OnDataError (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnDataError(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.OnDataError(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Exception" /> , verursacht die <see cref="E:System.Windows.Forms.BindingManagerBase.DataError" /> Ereignis auftritt.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.BindingManagerBase.DataError" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.BindingManagerBase.OnDataError%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.BindingManagerBase.OnDataError(System.Exception)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.BindingManagerBase.OnDataError(System.Exception)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="onPositionChangedHandler">
+      <MemberSignature Language="C#" Value="protected EventHandler onPositionChangedHandler;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.EventHandler onPositionChangedHandler" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.BindingManagerBase.onPositionChangedHandler" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Ereignishandler für das <see cref="E:System.Windows.Forms.BindingManagerBase.PositionChanged" /> Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public abstract int Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Position" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingManagerBase.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die Position in der zugrunde liegenden Liste ab, auf die an diese Datenquelle gebundene Steuerelemente verweisen, oder legt diese fest.</summary>
+        <value>Ein nullbasierter Index, der eine Position in der zugrunde liegenden Liste angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.BindingManagerBase.Position%2A> Eigenschaft zum iterieren durch die zugrunde liegende Liste von verwaltet die <xref:System.Windows.Forms.BindingManagerBase>. Um auf das erste Element zu wechseln, legen Sie die <xref:System.Windows.Forms.BindingManagerBase.Position%2A> auf 0. Um bis zum Ende der Liste zu wechseln, legen Sie die <xref:System.Windows.Forms.BindingManagerBase.Position%2A> auf den Wert von der <xref:System.Windows.Forms.BindingManagerBase.Count%2A> Eigenschaft minus 1.  
+  
+ Die <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> Ereignis tritt auf, wenn die <xref:System.Windows.Forms.BindingManagerBase.Position%2A> Eigenschaftswert ändert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel werden vier Methoden veranschaulicht, das Festlegen der <xref:System.Windows.Forms.BindingManagerBase.Position%2A> Eigenschaft. Die `MoveNext` Methode die Eigenschaft um 1 erhöht. Die `MovePrevious` Methode dekrementiert den Wert der Eigenschaft um 1. Die `MoveFirst` Methode legt die Eigenschaft auf 0 (null) und die `MoveLast` Methode legt die Eigenschaft auf den Wert von der <xref:System.Windows.Forms.BindingManagerBase.Count%2A> Eigenschaft minus 1.  
+  
+ [!code-cpp[Classic BindingManagerBase.Count Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingManagerBase.Count Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingManagerBase.Count Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingManagerBase.Count Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingManagerBase.Count Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingManagerBase.Count Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PositionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PositionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.BindingManagerBase.PositionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem der Wert, der die <see cref="P:System.Windows.Forms.BindingManagerBase.Position" /> -Eigenschaft geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.Binding>, und fügt es dann an eine Auflistung von <xref:System.Windows.Forms.Binding> von Objekten für die ein <xref:System.Windows.Forms.TextBox> Steuerelement. Klicken Sie dann im Beispiel ruft die <xref:System.Windows.Forms.BindingManagerBase> für die Datenquelle und ein Delegat, der fügt die <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> Ereignis.  
+  
+ [!code-cpp[Classic BindingManagerBase.PositionChanged Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingManagerBase.PositionChanged Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingManagerBase.PositionChanged Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingManagerBase.PositionChanged Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingManagerBase.PositionChanged Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingManagerBase.PositionChanged Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PullData">
+      <MemberSignature Language="C#" Value="protected void PullData ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void PullData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.PullData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zieht Daten aus dem datengebundenen Steuerelement in die Datenquelle und gibt dabei keine Informationen zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingManagerBase.PullData%2A> Methode ist eine programmgesteuerte Methode zum Abrufen von Informationen aus dem datengebundenen Steuerelement in der Datenquelle zurück. Es ist nicht erforderlich, damit der Standardfunktionsweise eines Steuerelements, da normalerweise ein Steuerelement automatisch die gebundene Datenquelle aktualisiert, wenn Fokus bleibt.  
+  
+ <xref:System.Windows.Forms.BindingManagerBase.PullData%2A>Löst das <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> Ereignis und Change-Ereignissen für die Daten nach Bedarf Datenquelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PushData">
+      <MemberSignature Language="C#" Value="protected void PushData ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void PushData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.PushData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt Daten aus der Datenquelle im datengebundenen Steuerelement ab und gibt dabei keine Informationen zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingManagerBase.PushData%2A> Methode ist eine programmgesteuerte Methode zum Übertragen von Informationen aus der Datenquelle in das datengebundene Steuerelement. Diese Methode ist nicht erforderlich, wenn die Datenquelle implementiert die <xref:System.ComponentModel.IBindingList?displayProperty=nameWithType> Schnittstelle, da die <xref:System.ComponentModel.IBindingList.ListChanged?displayProperty=nameWithType> Ereignis sollte automatisch bewirken, dass das Steuerelement über seine Currency Manager aktualisiert werden.  
+  
+ Wenn diese Methode, wenn ausgegeben wird eine <xref:System.Windows.Forms.BindingManagerBase.PullData%2A> Vorgang durchgeführt werden, die <xref:System.Windows.Forms.BindingManagerBase.PushData%2A> Methode kehrt sofort zurück, mit dem Wert `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public abstract void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index der zu löschenden Zeile.</param>
+        <summary>Löscht beim Überschreiben in einer abgeleiteten Klasse die Zeile am angegebenen Index aus der zugrunde liegenden Liste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingManagerBase.RemoveAt%2A> Methode abhängig von der zugrunde liegenden Datenquelle, um zu bestimmen, wie die Methode verhält. (Siehe die <xref:System.Windows.Forms.Binding> Klasse eine Liste der unterstützten Datenquellen.) Für Klassen, in denen <xref:System.Collections.IList>, <xref:System.ComponentModel.IBindingList>, oder <xref:System.ComponentModel.ITypedList>, auch als stark typisierte Klassen implementiert, <xref:System.Collections.IList>, die <xref:System.Windows.Forms.BindingManagerBase.RemoveAt%2A> -Methode löscht die Zeile in der zugrunde liegenden Liste anstatt zu seinen Inhalt zu entfernen.  
+  
+ Wenn die zugrunde liegende Liste implementiert die <xref:System.ComponentModel.IBindingList> -Schnittstelle, die <xref:System.ComponentModel.IBindingList.AllowRemove%2A> Eigenschaft zurückgeben muss `true`. Wenn die zugrunde liegende Liste implementiert die <xref:System.Collections.IList> -Schnittstelle, die <xref:System.Collections.IList.IsFixedSize%2A> Eigenschaft zurückgeben muss `false`.  
+  
+   
+  
+## Examples  
+ [!code-cpp[BindingManagerBase_RemoveAt#1](~/samples/snippets/cpp/VS_Snippets_Winforms/BindingManagerBase_RemoveAt/CPP/bindingmanagerbase_removeat.cpp#1)]
+ [!code-csharp[BindingManagerBase_RemoveAt#1](~/samples/snippets/csharp/VS_Snippets_Winforms/BindingManagerBase_RemoveAt/CS/bindingmanagerbase_removeat.cs#1)]
+ [!code-vb[BindingManagerBase_RemoveAt#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BindingManagerBase_RemoveAt/VB/bindingmanagerbase_removeat.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Es gibt keine Zeile am angegebenen <paramref name="index" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeBinding">
+      <MemberSignature Language="C#" Value="public abstract void ResumeBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResumeBinding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.ResumeBinding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt beim Überschreiben in einer abgeleiteten Klasse die Datenbindung fort.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A>und <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> sind zwei Methoden, die die temporären Unterbrechung und Wiederaufnahme der Datenbindung zu ermöglichen. Sie würden Datenbindung in der Regel anhalten, wenn der Benutzer zugelassen werden muss, um Datenfelder zu bearbeiten, bevor die Überprüfung erfolgt. Der Benutzer möglicherweise z. B. ein Feld werden in Übereinstimmung mit einem zweiten Feld ändern; Andernfalls würde überprüft das erste Feld das zweite Feld fehlerhaft sein.  
+  
+   
+  
+## Examples  
+ [!code-cpp[BindingManagerBase_Suspend_Resume_Binding#2](~/samples/snippets/cpp/VS_Snippets_Winforms/BindingManagerBase_Suspend_Resume_Binding/CPP/bindingmanagerbase_suspend_resume_binding.cpp#2)]
+ [!code-csharp[BindingManagerBase_Suspend_Resume_Binding#2](~/samples/snippets/csharp/VS_Snippets_Winforms/BindingManagerBase_Suspend_Resume_Binding/CS/bindingmanagerbase_suspend_resume_binding.cs#2)]
+ [!code-vb[BindingManagerBase_Suspend_Resume_Binding#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BindingManagerBase_Suspend_Resume_Binding/VB/bindingmanagerbase_suspend_resume_binding.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendBinding">
+      <MemberSignature Language="C#" Value="public abstract void SuspendBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SuspendBinding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.SuspendBinding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Unterbricht die Datenbindung beim Überschreiben in einer abgeleiteten Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A>und <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> sind zwei Methoden, die die temporären Unterbrechung und Wiederaufnahme der Datenbindung zu ermöglichen. Sie würden Datenbindung in der Regel anhalten, wenn der Benutzer zugelassen werden muss, um Datenfelder zu bearbeiten, bevor die Überprüfung erfolgt. Der Benutzer möglicherweise z. B. ein Feld werden in Übereinstimmung mit einem zweiten Feld ändern; Andernfalls würde überprüft das erste Feld das zweite Feld fehlerhaft sein.  
+  
+   
+  
+## Examples  
+ [!code-cpp[BindingManagerBase_Suspend_Resume_Binding#2](~/samples/snippets/cpp/VS_Snippets_Winforms/BindingManagerBase_Suspend_Resume_Binding/CPP/bindingmanagerbase_suspend_resume_binding.cpp#2)]
+ [!code-csharp[BindingManagerBase_Suspend_Resume_Binding#2](~/samples/snippets/csharp/VS_Snippets_Winforms/BindingManagerBase_Suspend_Resume_Binding/CS/bindingmanagerbase_suspend_resume_binding.cs#2)]
+ [!code-vb[BindingManagerBase_Suspend_Resume_Binding#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BindingManagerBase_Suspend_Resume_Binding/VB/bindingmanagerbase_suspend_resume_binding.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateIsBinding">
+      <MemberSignature Language="C#" Value="protected abstract void UpdateIsBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void UpdateIsBinding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingManagerBase.UpdateIsBinding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert die Bindung beim Überschreiben in einer abgeleiteten Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingManagerBase.UpdateIsBinding%2A> Methode aktualisiert die Datenbindung zwischen das gebundene Steuerelement und dessen Datenquelle. Für komplexe Datenbindungsszenarien zurückgesetzt und es auch die aktuelle Position am Anfang der zugrunde liegenden Liste.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,82 @@
+<Type Name="ToolboxItemCreator" FullName="System.Drawing.Design.ToolboxItemCreator">
+  <TypeSignature Language="C#" Value="public sealed class ToolboxItemCreator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ToolboxItemCreator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.ToolboxItemCreator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Kapselt eine <see cref="T:System.Drawing.Design.ToolboxItemCreatorCallback" />. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Design.ToolboxItemCreator> -Klasse kapselt die Toolbox Elementfunktionen Ersteller Rückruf. Diese Rückruffunktionen werden mit dem Entwickler verwendet, um Möglichkeiten zum Erstellen von Toolboxelemente für benutzerdefinierte Datenobjekte bereitzustellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItem Create (System.Windows.Forms.IDataObject data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Design.ToolboxItem Create(class System.Windows.Forms.IDataObject data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItemCreator.Create(System.Windows.Forms.IDataObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Windows.Forms.IDataObject" />
+      </Parameters>
+      <Docs>
+        <param name="data">Ein Objekt, das stellt einen <see cref="T:System.Drawing.Design.ToolboxItem" />.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Drawing.Design.ToolboxItem" /> aus einem <see cref="T:System.Windows.Forms.IDataObject" />.</summary>
+        <returns>Eine neue Instanz der <see cref="T:System.Drawing.Design.ToolboxItem" />-Klasse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `data` Parameter möglicherweise von bereitgestellte Daten enthalten die <xref:System.Drawing.Design.ToolboxItemContainer> Klasse. Er enthält möglicherweise Daten, die von einer der gelesen werden können die <xref:System.Drawing.Design.ToolboxItemCreator> Klassen, die vom Benutzer angegeben wurden. Möglicherweise auch Daten mit einem Zwischenablageformat, die verfügt über eine <xref:System.Drawing.Design.ToolboxItemCreator> zugewiesen. In diesem Fall die <xref:System.Drawing.Design.ToolboxItem> wird bei Bedarf erstellt.  
+  
+ Die <xref:System.Drawing.Design.ToolboxItemCreator.Create%2A> Methode möglicherweise eine Ausnahme ausgelöst, wenn das Datenobjekt keine Daten für das unterstützte Format enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public string Format { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Format" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItemCreator.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Format der Zwischenablage, das die Daten zur Deserialisierung benötigt eine <see cref="T:System.Drawing.Design.ToolboxItem" />.</summary>
+        <value>Eine Zeichenfolge, die das Format der Zwischenablage darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drag & Drop-Vorgang auftritt, wird die entwurfsumgebung fragt alle <xref:System.Drawing.Design.ToolboxItemCreator> Instanzen. Wenn eine <xref:System.Drawing.Design.ToolboxItemCreator> unterstützt die gezogene Zwischenablageformate eine <xref:System.Drawing.Design.ToolboxItem> wird erstellt, aus der <xref:System.Drawing.Design.ToolboxItemCreator>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

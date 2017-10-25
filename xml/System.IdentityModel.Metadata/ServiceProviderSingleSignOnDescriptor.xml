@@ -1,0 +1,129 @@
+<Type Name="ServiceProviderSingleSignOnDescriptor" FullName="System.IdentityModel.Metadata.ServiceProviderSingleSignOnDescriptor">
+  <TypeSignature Language="C#" Value="public class ServiceProviderSingleSignOnDescriptor : System.IdentityModel.Metadata.SingleSignOnDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceProviderSingleSignOnDescriptor extends System.IdentityModel.Metadata.SingleSignOnDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Metadata.ServiceProviderSingleSignOnDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Metadata.SingleSignOnDescriptor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Deskriptor für eine Service Provider SSO (SPSSO).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceProviderSingleSignOnDescriptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Metadata.ServiceProviderSingleSignOnDescriptor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Metadata.ServiceProviderSingleSignOnDescriptor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceProviderSingleSignOnDescriptor (System.IdentityModel.Metadata.IndexedProtocolEndpointDictionary collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Metadata.IndexedProtocolEndpointDictionary collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Metadata.ServiceProviderSingleSignOnDescriptor.#ctor(System.IdentityModel.Metadata.IndexedProtocolEndpointDictionary)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="collection" Type="System.IdentityModel.Metadata.IndexedProtocolEndpointDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="collection">Ein <see cref="T:System.IdentityModel.Metadata.IndexedProtocolEndpointDictionary" /> Objekt für diese Instanz. Initialisiert die <see cref="P:System.IdentityModel.Metadata.ServiceProviderSingleSignOnDescriptor.AssertionConsumerServices" /> Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Metadata.ServiceProviderSingleSignOnDescriptor" /> Klasse, die das angegebene Wörterbuch an indizierten Endpunkte verfügt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssertionConsumerServices">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Metadata.IndexedProtocolEndpointDictionary AssertionConsumerServices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Metadata.IndexedProtocolEndpointDictionary AssertionConsumerServices" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Metadata.ServiceProviderSingleSignOnDescriptor.AssertionConsumerServices" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Metadata.IndexedProtocolEndpointDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.IdentityModel.Metadata.IndexedProtocolEndpointDictionary" /> , enthält die indizierte Endpunkte, die das Protokoll die Authentifizierung anfordern. die Profile zu unterstützen, die in [SAMLProf] definiert ist.</summary>
+        <value>Der <see cref="T:System.IdentityModel.Metadata.IndexedProtocolEndpointDictionary" /> für diese Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Wörterbuch sollte in der Regel eine oder mehrere Elemente enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationRequestsSigned">
+      <MemberSignature Language="C#" Value="public bool AuthenticationRequestsSigned { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AuthenticationRequestsSigned" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Metadata.ServiceProviderSingleSignOnDescriptor.AuthenticationRequestsSigned" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob vom Dienstanbieter gesendete Anforderungen signiert werden.</summary>
+        <value>
+          <see langword="true" />Wenn authentifizierungsanforderungen, die der Dienstanbieter per signiert werden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt die `AuthnRequestsSigned` Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WantAssertionsSigned">
+      <MemberSignature Language="C#" Value="public bool WantAssertionsSigned { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WantAssertionsSigned" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Metadata.ServiceProviderSingleSignOnDescriptor.WantAssertionsSigned" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Assertionen, die vom Dienstanbieter empfangen signiert werden soll.</summary>
+        <value>
+          <see langword="true" />der Dienstanbieter muss signiert sein, wenn von Assertionen empfangen; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft ab oder legt die `WantAssertionsSigned` Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

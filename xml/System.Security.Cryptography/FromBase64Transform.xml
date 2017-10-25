@@ -1,0 +1,517 @@
+<Type Name="FromBase64Transform" FullName="System.Security.Cryptography.FromBase64Transform">
+  <TypeSignature Language="C#" Value="public class FromBase64Transform : System.Security.Cryptography.ICryptoTransform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FromBase64Transform extends System.Object implements class System.IDisposable, class System.Security.Cryptography.ICryptoTransform" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.FromBase64Transform" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Cryptography.ICryptoTransform</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Konvertiert einen <see cref="T:System.Security.Cryptography.CryptoStream" /> aus Base-64.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Base 64 Content-Transfer-Encoding stellt beliebige Bit Sequenzen in einer Form, die nicht interaktive Workflowdienste ist lesbar.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel decodiert eine base 64-codierte Datei in eine Ausgabedatei für den Text an.  
+  
+ [!code-cpp[System.Security.Cryptography.FromBase64Transform Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.FromBase64Transform Example/CPP/class1.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.FromBase64Transform Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.FromBase64Transform Example/CS/class1.cs#1)]
+ [!code-vb[System.Security.Cryptography.FromBase64Transform Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.FromBase64Transform Example/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FromBase64Transform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.FromBase64Transform.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.FromBase64Transform" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Standardkonfiguration werden Leerräume ignoriert. Ausführliche Informationen finden Sie unter <xref:System.Security.Cryptography.FromBase64TransformMode>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FromBase64Transform (System.Security.Cryptography.FromBase64TransformMode whitespaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.FromBase64TransformMode whitespaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.FromBase64Transform.#ctor(System.Security.Cryptography.FromBase64TransformMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="whitespaces" Type="System.Security.Cryptography.FromBase64TransformMode" />
+      </Parameters>
+      <Docs>
+        <param name="whitespaces">Einer der <see cref="T:System.Security.Cryptography.FromBase64Transform" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.FromBase64Transform" />-Klasse mit dem angegebenen Transformationsmodus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel decodiert eine base 64-codierte Datei in eine Ausgabedatei für den Text an.  
+  
+ [!code-cpp[System.Security.Cryptography.FromBase64Transform Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.FromBase64Transform Example/CPP/class1.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.FromBase64Transform Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.FromBase64Transform Example/CS/class1.cs#1)]
+ [!code-vb[System.Security.Cryptography.FromBase64Transform Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.FromBase64Transform Example/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReuseTransform">
+      <MemberSignature Language="C#" Value="public virtual bool CanReuseTransform { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanReuseTransform" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.FromBase64Transform.CanReuseTransform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die aktuelle Transformation wiederverwendet werden kann.</summary>
+        <value>Immer <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanTransformMultipleBlocks">
+      <MemberSignature Language="C#" Value="public bool CanTransformMultipleBlocks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanTransformMultipleBlocks" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.FromBase64Transform.CanTransformMultipleBlocks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob mehrere Blöcke transformiert werden können.</summary>
+        <value>Immer <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der aktuellen Implementierung kann nur ein Block zu einem Zeitpunkt transformiert werden, daher ist diese Eigenschaft stets `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.FromBase64Transform.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Security.Cryptography.FromBase64Transform" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist ein einfacher Aufruf <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>.  
+  
+ Aufrufen von `Dispose` können Ressourcen von der <xref:System.Security.Cryptography.FromBase64Transform> neu für andere Zwecke reserviert werden. Weitere Informationen zu `Dispose`, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.FromBase64Transform.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.Security.Cryptography.FromBase64Transform" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie `Dispose` auf, wenn Sie <xref:System.Security.Cryptography.FromBase64Transform> nicht mehr benötigen. Die `Dispose`-Methode bewirkt, dass <xref:System.Security.Cryptography.FromBase64Transform> nicht mehr verwendet werden kann. Nach dem Aufruf `Dispose`, müssen Sie alle Verweise auf Freigeben der <xref:System.Security.Cryptography.FromBase64Transform> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Security.Cryptography.FromBase64Transform> belegt wurde.  
+  
+ Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer `Dispose` auf, bevor Sie den letzten Verweis auf das <xref:System.Security.Cryptography.FromBase64Transform> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Security.Cryptography.FromBase64Transform>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.FromBase64Transform.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Security.Cryptography.FromBase64Transform" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die `Finalize` Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit der disposing-Parameter auf festgelegt `true`. `Finalize`Ruft `Dispose` mit disposing auf `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.Security.Cryptography.FromBase64Transform> verweist. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" />müssen Sie darauf achten, nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see langword="Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~FromBase64Transform ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.FromBase64Transform.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die von <see cref="T:System.Security.Cryptography.FromBase64Transform" /> verwendeten, nicht verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputBlockSize">
+      <MemberSignature Language="C#" Value="public int InputBlockSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InputBlockSize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.FromBase64Transform.InputBlockSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des Eingabeblocks ab.</summary>
+        <value>Die Größe des Eingabedatenblocks in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Größe des Eingabeblocks für diese Transformation ist ein Byte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputBlockSize">
+      <MemberSignature Language="C#" Value="public int OutputBlockSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OutputBlockSize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.FromBase64Transform.OutputBlockSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des Ausgabeblocks ab.</summary>
+        <value>Die Größe des Ausgabedatenblocks in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Größe des Ausgabeblocks für diese Transformation beträgt 3 Bytes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformBlock">
+      <MemberSignature Language="C#" Value="public int TransformBlock (byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 TransformBlock(unsigned int8[] inputBuffer, int32 inputOffset, int32 inputCount, unsigned int8[] outputBuffer, int32 outputOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.FromBase64Transform.TransformBlock(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputBuffer" Type="System.Byte[]" />
+        <Parameter Name="inputOffset" Type="System.Int32" />
+        <Parameter Name="inputCount" Type="System.Int32" />
+        <Parameter Name="outputBuffer" Type="System.Byte[]" />
+        <Parameter Name="outputOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="inputBuffer">Die aus Base-64 zu berechnende Eingabe.</param>
+        <param name="inputOffset">Der Offset im Eingabebytearray, ab dem Daten verwendet werden sollen.</param>
+        <param name="inputCount">Die Anzahl der Bytes im Eingabebytearray, die als Daten verwendet werden sollen.</param>
+        <param name="outputBuffer">Die Ausgabe, in die das Ergebnis geschrieben werden soll.</param>
+        <param name="outputOffset">Der Offset im Ausgabebytearray, ab dem Daten geschrieben werden sollen.</param>
+        <summary>Wandelt den angegebenen Bereich des Eingabebytearrays aus Base-64 um und kopiert das Ergebnis in den angegebenen Bereich des Ausgabebytearrays.</summary>
+        <returns>Die Anzahl der geschriebenen Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird eine base 64-codierte Datei in eine Ausgabedatei für den Text entschlüsselt.  
+  
+ [!code-cpp[System.Security.Cryptography.FromBase64Transform Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.FromBase64Transform Example/CPP/class1.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.FromBase64Transform Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.FromBase64Transform Example/CS/class1.cs#1)]
+ [!code-vb[System.Security.Cryptography.FromBase64Transform Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.FromBase64Transform Example/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle <see cref="T:System.Security.Cryptography.FromBase64Transform" /> Objekt wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="inputCount" />verwendet einen ungültigen Wert.  
+  
+ - oder -   
+  
+ <paramref name="inputBuffer" />hat eine ungültige Offsetlänge.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="inputOffset" /> liegt außerhalb des Bereichs. Dieser Parameter muss eine nicht Negative Zahl.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="inputBuffer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformFinalBlock">
+      <MemberSignature Language="C#" Value="public byte[] TransformFinalBlock (byte[] inputBuffer, int inputOffset, int inputCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] TransformFinalBlock(unsigned int8[] inputBuffer, int32 inputOffset, int32 inputCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.FromBase64Transform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputBuffer" Type="System.Byte[]" />
+        <Parameter Name="inputOffset" Type="System.Int32" />
+        <Parameter Name="inputCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="inputBuffer">Die aus Base-64 zu konvertierende Eingabe.</param>
+        <param name="inputOffset">Der Offset im Bytearray, ab dem Daten verwendet werden sollen.</param>
+        <param name="inputCount">Die Anzahl der Bytes im Bytearray, die als Daten verwendet werden sollen.</param>
+        <summary>Wandelt den angegebenen Bereich des angegebenen Bytearrays aus Base-64 um.</summary>
+        <returns>Die berechnete Konvertierung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird eine base 64-codierte Datei in eine Ausgabedatei für den Text entschlüsselt.  
+  
+ [!code-cpp[System.Security.Cryptography.FromBase64Transform Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.FromBase64Transform Example/CPP/class1.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.FromBase64Transform Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.FromBase64Transform Example/CS/class1.cs#1)]
+ [!code-vb[System.Security.Cryptography.FromBase64Transform Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.FromBase64Transform Example/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle <see cref="T:System.Security.Cryptography.FromBase64Transform" /> Objekt wurde bereits verworfen.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="inputBuffer" />hat eine ungültige Offsetlänge.  
+  
+ - oder -   
+  
+ <paramref name="inputCount" />weist einen ungültigen Wert.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="inputOffset" /> liegt außerhalb des Bereichs. Dieser Parameter muss eine nicht Negative Zahl.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="inputBuffer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,15 @@
+<Namespace Name="System.Runtime.Caching.Hosting">
+  <Docs>
+    <summary>Die Typen in den <see cref="N:System.Runtime.Caching.Hosting" /> Namespaceunterstützung Hostingumgebungen, mit denen das Zwischenspeichern von .NET Framework-in ASP.NET Funktionen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Basis <xref:System.Runtime.Caching.ObjectCache> Klasse macht ein statisches <xref:System.Runtime.Caching.ObjectCache.Host%2A> Eigenschaft. Beim Starten einer .NET Framework-Hostingumgebung einzelne Anwendungsdomänen legen sie einen Verweis auf die <xref:System.Runtime.Caching.ObjectCache.Host%2A> Eigenschaft. Dies ermöglicht die hostumgebung aus, um eine bessere Integration in den Cache bereitzustellen.  
+  
+ In [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], <xref:System.Runtime.Caching.Hosting> Namespace enthält Schnittstellen, die zum Festlegen eine Hostingumgebung verwenden kann eine <xref:System.IServiceProvider> verweisen auf die <xref:System.Runtime.Caching.ObjectCache.Host%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

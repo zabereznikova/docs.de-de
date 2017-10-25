@@ -1,0 +1,42 @@
+<Type Name="SqlDataSourceFilteringEventHandler" FullName="System.Web.UI.WebControls.SqlDataSourceFilteringEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void SqlDataSourceFilteringEventHandler(object sender, SqlDataSourceFilteringEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SqlDataSourceFilteringEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SqlDataSourceFilteringEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.SqlDataSourceFilteringEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses eine <see cref="T:System.Web.UI.WebControls.SqlDataSource" />.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.SqlDataSourceFilteringEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Web.UI.WebControls.SqlDataSource.Filtering" /> -Ereignis für die <see cref="T:System.Web.UI.WebControls.SqlDataSource" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird das Filtern unterstützt bei der <xref:System.Web.UI.WebControls.SqlDataSource.DataSourceMode%2A> -Eigenschaftensatz auf die <xref:System.Web.UI.WebControls.SqlDataSourceMode.DataSet> Wert.  
+  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.SqlDataSourceFilteringEventHandler>-Delegaten geben Sie die Methode für die Ereignisbehandlung an. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Daten aus der Northwind-Datenbank abgerufen und Filtern mithilfe einer <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> und <xref:System.Web.UI.WebControls.SqlDataSource.FilterParameters%2A>. Die <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> von der <xref:System.Web.UI.WebControls.SqlDataSource> angewendet wird, können Sie jederzeit die <xref:System.Web.UI.WebControls.SqlDataSource.Select%2A> Methode wird ausgeführt, um Daten abzurufen. In diesem Beispiel wird die <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> enthält einen Platzhalter für einen Filterparameter, der in enthalten ist das <xref:System.Web.UI.WebControls.SqlDataSource.FilterParameters%2A> Auflistung. In der <xref:System.Web.UI.WebControls.SqlDataSource.Filtering> Ereignis, das Filter-Parameter wird angezeigt, einem <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSourceFiltering#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSourceFiltering/CS/SDCFilteringCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSourceFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSourceFiltering/VB/SDCFilteringVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

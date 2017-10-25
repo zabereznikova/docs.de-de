@@ -1,0 +1,64 @@
+<Type Name="UNAME" FullName="Microsoft.VisualBasic.Compatibility.VB6.UNAME">
+  <TypeSignature Language="C#" Value="public struct UNAME" />
+  <TypeSignature Language="ILAsm" Value=".class public ansi sealed UNAME extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.UNAME" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine <see langword="Structure" /> , die einen Zeiger auf eine Name-Eigenschaft in einer Anwendung, die von Visual Basic 6.0 aktualisiert wurde dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="name">
+      <MemberSignature Language="C#" Value="public IntPtr name;" />
+      <MemberSignature Language="ILAsm" Value=".field public native int name" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.UNAME.name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält eine <see cref="T:System.IntPtr" /> für die interne <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.UNAME" /> <see langword="Structure" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

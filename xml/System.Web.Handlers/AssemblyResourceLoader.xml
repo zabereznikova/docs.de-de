@@ -1,0 +1,120 @@
+<Type Name="AssemblyResourceLoader" FullName="System.Web.Handlers.AssemblyResourceLoader">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyResourceLoader : System.Web.IHttpHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblyResourceLoader extends System.Object implements class System.Web.IHttpHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Handlers.AssemblyResourceLoader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen HTTP-Handler bereit, mit dem eingebettete Ressourcen aus Assemblys geladen werden. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Handlers.AssemblyResourceLoader> -Klasse ist eine HTTP-Handler, der einer ASP.NET-Seite bzw. eines Steuerelements eingebettete Ressourcen, z. B. Clientdateien Skript, Bilder und Daten, aus einer kompilierten .NET Assembly laden kann. Weitere Informationen zum Einbetten von Ressourcen in einer .NET Framework-Assembly finden Sie in der Dokumentation für den Compiler an, dem Sie verwenden.  
+  
+ Die <xref:System.Web.Handlers.AssemblyResourceLoader> Handler reagiert auf Anforderungen mit URLs generiert, indem Sie die <xref:System.Web.UI.ClientScriptManager.GetWebResourceUrl%2A> Methode. Bevor Sie auf die Anforderung reagiert die <xref:System.Web.Handlers.AssemblyResourceLoader> Handler wird sichergestellt, dass die Ressource direkt über das Internet verfügbar sein sollen.  
+  
+ Der Handler reagiert auf Anforderungen des Formulars  
+  
+```  
+WebResource.axd?d=<encrypted identifier>&t=<time stamp value>  
+```  
+  
+ auf dem `<encryped identifier>` die angeforderte Webressource eindeutig identifiziert und `<time stamp value>` ist der Zeitstempel für die angeforderte Assembly, damit die Änderungen auf die Assembly erkannt werden können und die zwischengespeicherte Ressource für ungültig erklärt.  
+  
+ Diese Klasse unterstützt die Infrastruktur von ASP.NET und sollte nicht direkt aus Ihrem Code verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyResourceLoader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.AssemblyResourceLoader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Handlers.AssemblyResourceLoader" />-Klasse. Dieser Konstruktor unterstützt die Infrastruktur von ASP.NET und sollte nicht direkt aus Ihrem Code verwendet werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpHandler.IsReusable">
+      <MemberSignature Language="C#" Value="bool System.Web.IHttpHandler.IsReusable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.IHttpHandler.IsReusable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Handlers.AssemblyResourceLoader.System#Web#IHttpHandler#IsReusable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob eine andere Anforderung erneut verwenden, kann die <see cref="T:System.Web.IHttpHandler" /> Instanz.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.Handlers.AssemblyResourceLoader>-Instanz in eine <xref:System.Web.IHttpHandler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpHandler.ProcessRequest">
+      <MemberSignature Language="C#" Value="void IHttpHandler.ProcessRequest (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.IHttpHandler.ProcessRequest(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.AssemblyResourceLoader.System#Web#IHttpHandler#ProcessRequest(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Kontext der Anforderung.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.IHttpHandler.ProcessRequest(System.Web.HttpContext)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.Handlers.AssemblyResourceLoader>-Instanz in eine <xref:System.Web.IHttpHandler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die webanforderung für die Ressource ist ungültig.  
+  
+ \- oder –  
+  
+ Der Name der Assembly konnte nicht gefunden werden.  
+  
+ \- oder –  
+  
+ Der Ressourcenname konnte in der Assembly nicht gefunden werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

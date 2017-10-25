@@ -1,0 +1,93 @@
+<Type Name="SamlAccessDecision" FullName="System.IdentityModel.Tokens.SamlAccessDecision">
+  <TypeSignature Language="C#" Value="public enum SamlAccessDecision" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SamlAccessDecision extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SamlAccessDecision" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, ob dem Subjekt eines <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />-Sicherheitstokens Zugriff auf eine vorhandene Ressource gewährt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.IdentityModel.Tokens.SamlAccessDecision>, um Zugriffsberechtigungen für eine Ressource in einer <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement> innerhalb eines <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstokens zu gewähren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Deny">
+      <MemberSignature Language="C#" Value="Deny" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Tokens.SamlAccessDecision Deny = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SamlAccessDecision.Deny" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.EnumMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlAccessDecision</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Zugriff auf eine Ressource verweigert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Indeterminate">
+      <MemberSignature Language="C#" Value="Indeterminate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Tokens.SamlAccessDecision Indeterminate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SamlAccessDecision.Indeterminate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.EnumMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlAccessDecision</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Sicherheitstokendienst, der das <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />-Sicherheitstoken ausgegeben hat, nicht über ausreichende Informationen zum Bestimmen der Zugriffsberechtigungen für eine bestimmte Ressource verfügt. Ein Empfänger des <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />-Sicherheitstokens muss andere Mittel zum Bestimmen der dem Benutzer gewährten Zugriffsberechtigungen verwenden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Permit">
+      <MemberSignature Language="C#" Value="Permit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Tokens.SamlAccessDecision Permit = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SamlAccessDecision.Permit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.EnumMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlAccessDecision</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Zugriff auf eine Ressource gewährt wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

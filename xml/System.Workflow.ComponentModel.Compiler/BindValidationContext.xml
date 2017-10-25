@@ -1,0 +1,108 @@
+<Type Name="BindValidationContext" FullName="System.Workflow.ComponentModel.Compiler.BindValidationContext">
+  <TypeSignature Language="C#" Value="public sealed class BindValidationContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BindValidationContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Compiler.BindValidationContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt den Kontext zur Validierung eines <see cref="T:System.Workflow.ComponentModel.ActivityBind" />-Elements dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindValidationContext (Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.BindValidationContext.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="targetType">Der <see cref="T:System.Type" /> des Ziels von <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.BindValidationContext" />-Klasse, während der <see cref="T:System.Type" /> des Ziels von <see cref="T:System.Workflow.ComponentModel.ActivityBind" /> initialisiert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindValidationContext (Type targetType, System.Workflow.ComponentModel.Compiler.AccessTypes access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type targetType, valuetype System.Workflow.ComponentModel.Compiler.AccessTypes access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.BindValidationContext.#ctor(System.Type,System.Workflow.ComponentModel.Compiler.AccessTypes)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="access" Type="System.Workflow.ComponentModel.Compiler.AccessTypes" />
+      </Parameters>
+      <Docs>
+        <param name="targetType">Die <see cref="T:System.Type" /> des <see cref="T:System.Workflow.ComponentModel.ActivityBind" />-Ziels, das diese Instanz darstellt.</param>
+        <param name="access">Die <see cref="T:System.Workflow.ComponentModel.Compiler.AccessTypes" /> des <see cref="T:System.Workflow.ComponentModel.ActivityBind" />-Ziels, das diese Instanz darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.BindValidationContext" />-Klasse. Dabei wird der <see cref="T:System.Type" /> und das <see cref="T:System.Workflow.ComponentModel.Compiler.AccessTypes" />-Element des Ziels der Bindung initialisiert, die diese Instanz darstellt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Access">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Compiler.AccessTypes Access { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.ComponentModel.Compiler.AccessTypes Access" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.BindValidationContext.Access" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.AccessTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Workflow.ComponentModel.Compiler.AccessTypes" /> des <see cref="T:System.Workflow.ComponentModel.ActivityBind" />-Ziels ab, das diese Instanz darstellt.</summary>
+        <value>Die <see cref="T:System.Workflow.ComponentModel.Compiler.AccessTypes" /> des <see cref="T:System.Workflow.ComponentModel.ActivityBind" />-Ziels, das diese Instanz darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetType">
+      <MemberSignature Language="C#" Value="public Type TargetType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TargetType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.BindValidationContext.TargetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> des <see cref="T:System.Workflow.ComponentModel.ActivityBind" />-Ziels ab, das diese Instanz darstellt.</summary>
+        <value>Die <see cref="T:System.Type" /> des <see cref="T:System.Workflow.ComponentModel.ActivityBind" />-Ziels, das diese Instanz darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

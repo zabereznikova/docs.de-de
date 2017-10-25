@@ -1,0 +1,269 @@
+<Type Name="InstancePersistenceCommandException" FullName="System.Runtime.DurableInstancing.InstancePersistenceCommandException">
+  <TypeSignature Language="C#" Value="public class InstancePersistenceCommandException : System.Runtime.DurableInstancing.InstancePersistenceException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit InstancePersistenceCommandException extends System.Runtime.DurableInstancing.InstancePersistenceException" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.DurableInstancing.InstancePersistenceCommandException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.DurableInstancing.InstancePersistenceException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Dauerhaftigkeitsanbieter löst diese Ausnahme aus, wenn beim Verarbeiten eines Dauerhaftigkeitsbefehls ein Fehler auftritt. Der Dauerhaftigkeitsanbieter kann den Instanzhandle, für den der Befehl ausgeführt wurde, auch freigeben, wenn der Fehler auch bei der künftigen Verwendung des Instanzhandles auftreten würde.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstancePersistenceCommandException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceCommandException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceCommand" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstancePersistenceCommandException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceCommandException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der Grund für die Ausnahme.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceCommand" />-Klasse mithilfe der Fehlermeldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstancePersistenceCommandException (System.Xml.Linq.XName commandName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceCommandException.#ctor(System.Xml.Linq.XName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceCommand" />-Klasse unter Verwendung des XName (Kombination aus Namespace und Name) des Befehls.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InstancePersistenceCommandException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceCommandException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Informationen zur aktuellen Ausnahme.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceCommand" />-Klasse unter Verwendung der serialisierten Daten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstancePersistenceCommandException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceCommandException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der Grund für die Ausnahme.</param>
+        <param name="innerException">Die interne Ausnahme, durch die die aktuelle Ausnahme verursacht wurde.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceCommand" />-Klasse mithilfe der Fehlermeldung und der Informationen zur inneren Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstancePersistenceCommandException (System.Xml.Linq.XName commandName, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceCommandException.#ctor(System.Xml.Linq.XName,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceCommand" />-Klasse unter Verwendung des XName (Kombination aus Namespace und Name) des Befehls und der Informationen zur inneren Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstancePersistenceCommandException (System.Xml.Linq.XName commandName, Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceCommandException.#ctor(System.Xml.Linq.XName,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="instanceId">Die ID der Zielinstanz, für die der Befehl ausgeführt wurde.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceCommand" />-Klasse mithilfe des XName (Kombination aus Namespace und Name) des Befehls und der ID der Zielinstanz, für die der Befehl ausgeführt wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstancePersistenceCommandException (System.Xml.Linq.XName commandName, Guid instanceId, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, valuetype System.Guid instanceId, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceCommandException.#ctor(System.Xml.Linq.XName,System.Guid,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="instanceId">Die ID der Zielinstanz, für die der Befehl ausgeführt wurde.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceCommand" />-Klasse mithilfe des XName (Kombination aus Namespace und Name) des Befehls, der ID der Zielinstanz, für die der Befehl ausgeführt wurde, sowie der Informationen zu inneren Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstancePersistenceCommandException (System.Xml.Linq.XName commandName, string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceCommandException.#ctor(System.Xml.Linq.XName,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="message">Der Grund für die Ausnahme.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceCommandException" />-Klasse unter Verwendung des XName (Kombination aus Namespace und Name) des Befehls, der Fehlermeldung, aus der der Grund für die Ausnahme hervorgeht, und der Ausnahme, die die aktuelle Ausnahme verursacht hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstancePersistenceCommandException (System.Xml.Linq.XName commandName, Guid instanceId, string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, valuetype System.Guid instanceId, string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceCommandException.#ctor(System.Xml.Linq.XName,System.Guid,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="instanceId">Die ID der Zielinstanz, für die der Befehl ausgeführt wurde.</param>
+        <param name="message">Der Grund für die Ausnahme.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceCommandException" />-Klasse unter Verwendung des XName (Kombination aus Namespace und Name) des Befehls, der ID der Zielinstanz, für die der Befehl ausgeführt wurde, der Fehlermeldung, aus der der Grund für die Ausnahme hervorgeht, und der Ausnahme, die die aktuelle Ausnahme verursacht hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceCommandException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die serialisierten Objektdaten über die ausgelöste Ausnahme.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Legt das angegebene <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit Informationen zur <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceCommandException" /> fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstancePersistenceCommandException.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID der Instanz ab, für die der Befehl ausgeführt wurde.</summary>
+        <value>Die ID der Instanz. Gibt "Guid.Empty" zurück, wenn die Instanz nicht bekannt ist bzw. sich der Befehl nicht auf eine spezifische Instanz bezieht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,115 @@
+<Type Name="TextTabProperties" FullName="System.Windows.Media.TextFormatting.TextTabProperties">
+  <TypeSignature Language="C#" Value="public class TextTabProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextTabProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.TextTabProperties" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt die Eigenschaften von benutzerdefinierten Registerkarten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextTabProperties (System.Windows.Media.TextFormatting.TextTabAlignment alignment, double location, int tabLeader, int aligningChar);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.TextFormatting.TextTabAlignment alignment, float64 location, int32 tabLeader, int32 aligningChar) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextTabProperties.#ctor(System.Windows.Media.TextFormatting.TextTabAlignment,System.Double,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="alignment" Type="System.Windows.Media.TextFormatting.TextTabAlignment" />
+        <Parameter Name="location" Type="System.Double" />
+        <Parameter Name="tabLeader" Type="System.Int32" />
+        <Parameter Name="aligningChar" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="alignment">Ein Enumerationswert von <see cref="T:System.Windows.Media.TextFormatting.TextTabAlignment" /> , der die Ausrichtung des Texts an der die Position darstellt.</param>
+        <param name="location">Ein <see cref="T:System.Double" /> -Wert, die die Position darstellt.</param>
+        <param name="tabLeader">Ein <see cref="T:System.Int32" /> Wert, der die Füllzeichen darstellt.</param>
+        <param name="aligningChar">Ein <see cref="T:System.Int32" /> -Wert, der bestimmte Zeichen im Text darstellt, die am Speicherort der Registerkarte "ausgerichtet ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.TextFormatting.TextTabProperties" /> -Klasse durch Angabe der Registerkarte Eigenschaften.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AligningCharacter">
+      <MemberSignature Language="C#" Value="public int AligningCharacter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AligningCharacter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextTabProperties.AligningCharacter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index eines bestimmten Zeichens in den Text, der an der angegebenen Registerkarte Position ausgerichtet ist.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der den Index darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Alignment">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.TextFormatting.TextTabAlignment Alignment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.TextFormatting.TextTabAlignment Alignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextTabProperties.Alignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.TextTabAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ausrichtungsstil des Texts an der die Position ab.</summary>
+        <value>Ein Enumerationswert von <see cref="T:System.Windows.Media.TextFormatting.TextTabAlignment" /> , der die Ausrichtung des Texts an der die Position darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public double Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Location" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextTabProperties.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Indexwert des Speicherorts der Registerkarte ab.</summary>
+        <value>Ein <see cref="T:System.Double" /> -Wert, die die Position darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabLeader">
+      <MemberSignature Language="C#" Value="public int TabLeader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TabLeader" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextTabProperties.TabLeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des Zeichens, das zur Anzeige der Füllzeichen verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Int32" /> -Wert, die die Position der Füllzeichen darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,209 @@
+<Type Name="ProtectedConfiguration" FullName="System.Configuration.ProtectedConfiguration">
+  <TypeSignature Language="C#" Value="public static class ProtectedConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ProtectedConfiguration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ProtectedConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht den Zugriff auf die geschützte Konfiguration-Anbieter für die Konfigurationsdatei an der aktuellen Anwendung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ProtectedConfiguration> -Klasse ermöglicht Ihnen das Abrufen von Informationen zu den Anbietern zur Verfügung, um sensible Konfigurationsdaten zu schützen. In der Regel verwenden Sie die standard-Anbieter, aber Sie können auch benutzerdefinierte Anbieter erstellen, durch Ableiten von der <xref:System.Configuration.ProtectedConfigurationProvider> Klasse.  
+  
+ Weitere Informationen über die geschützte Konfiguration finden Sie unter [Verschlüsseln von Informationen mithilfe von geschützten Konfiguration](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Configuration.ProtectedConfiguration> -Klasse zum Abrufen einer Auflistung von geschützte Konfigurationsanbieter und deren Anbieternamen, RSA-Anbieternamen und Abschnittsnamen ermittelt werden.  
+  
+ [!code-csharp[System.Configuration.ProtectedConfiguration#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ProtectedConfiguration/CS/ProtectedConfiguration.cs#1)]
+ [!code-vb[System.Configuration.ProtectedConfiguration#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ProtectedConfiguration/VB/ProtectedConfiguration.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataProtectionProviderName">
+      <MemberSignature Language="C#" Value="public const string DataProtectionProviderName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DataProtectionProviderName" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ProtectedConfiguration.DataProtectionProviderName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name des der Datenschutzanbieter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hierbei handelt es sich um eine Konstante Zeichenfolge-Variable, die den Namen des Anbieters Schutz von Daten enthält, das System einen Konfigurationsabschnitt zu schützen zur Verfügung stellt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Configuration.ProtectedConfiguration.DataProtectionProviderName> Eigenschaft zum Abrufen des Namens des aktuellen Datenschutz Anbieters.  
+  
+ [!code-csharp[System.Configuration.ProtectedConfiguration#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ProtectedConfiguration/CS/ProtectedConfiguration.cs#4)]
+ [!code-vb[System.Configuration.ProtectedConfiguration#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ProtectedConfiguration/VB/ProtectedConfiguration.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultProvider">
+      <MemberSignature Language="C#" Value="public static string DefaultProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string DefaultProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ProtectedConfiguration.DefaultProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des standardmäßigen Anbieters an geschützte Konfiguration ab.</summary>
+        <value>Der Name des standardmäßigen Anbieters an geschützte Konfiguration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardanbieter wird durch identifiziert die `defaultProvider` Attribut des der `<configProtectedData>` Configuration File-Element. Der Wert muss entsprechen, den Namen einer der Anbieter hinzugefügt, der `<providers>` -Unterabschnitt des der `<configProtectedData>` Abschnitt. Die `<configProtectedData>` Abschnitt kann auch über eine Instanz zugegriffen werden die <xref:System.Configuration.ProtectedConfigurationSection> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectedDataSectionName">
+      <MemberSignature Language="C#" Value="public const string ProtectedDataSectionName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ProtectedDataSectionName" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ProtectedConfiguration.ProtectedDataSectionName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name des geschützten Abschnitts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine Konstante Zeichenfolge-Variable, die den Namen des Abschnitts geschützte Daten enthält.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Configuration.ProtectedConfiguration.ProtectedDataSectionName> Eigenschaft zum Abrufen des Namens eines geschützten Abschnitts.  
+  
+ [!code-csharp[System.Configuration.ProtectedConfiguration#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ProtectedConfiguration/CS/ProtectedConfiguration.cs#6)]
+ [!code-vb[System.Configuration.ProtectedConfiguration#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ProtectedConfiguration/VB/ProtectedConfiguration.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public static System.Configuration.ProtectedConfigurationProviderCollection Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Configuration.ProtectedConfigurationProviderCollection Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ProtectedConfiguration.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ProtectedConfigurationProviderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von den installierten Anbietern für die geschützte Konfiguration ab.</summary>
+        <value>Ein <see cref="T:System.Configuration.ProtectedConfigurationProviderCollection" /> Auflistung von installiert <see cref="T:System.Configuration.ProtectedConfigurationProvider" /> Objekte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Configuration.ProtectedConfiguration.Providers%2A> installiert die Auflistung der abzurufenden Eigenschaft <xref:System.Configuration.ProtectedConfigurationProvider> Objekte.  
+  
+ [!code-csharp[System.Configuration.ProtectedConfiguration#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ProtectedConfiguration/CS/ProtectedConfiguration.cs#3)]
+ [!code-vb[System.Configuration.ProtectedConfiguration#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ProtectedConfiguration/VB/ProtectedConfiguration.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RsaProviderName">
+      <MemberSignature Language="C#" Value="public const string RsaProviderName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string RsaProviderName" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ProtectedConfiguration.RsaProviderName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name des RSA-Anbieters.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hierbei handelt es sich um eine Konstante Zeichenfolge-Variable, die den Namen des RSA-Anbieters enthält das System einen Konfigurationsabschnitt schützen zur Verfügung stellt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Configuration.ProtectedConfiguration.RsaProviderName> Eigenschaft, um den Namen des aktuellen RSA-Anbieters abrufen.  
+  
+ [!code-csharp[System.Configuration.ProtectedConfiguration#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ProtectedConfiguration/CS/ProtectedConfiguration.cs#5)]
+ [!code-vb[System.Configuration.ProtectedConfiguration#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ProtectedConfiguration/VB/ProtectedConfiguration.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

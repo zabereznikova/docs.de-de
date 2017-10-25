@@ -1,0 +1,148 @@
+<Type Name="CompositionTarget" FullName="System.Windows.Media.CompositionTarget">
+  <TypeSignature Language="C#" Value="public abstract class CompositionTarget : System.Windows.Threading.DispatcherObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CompositionTarget extends System.Windows.Threading.DispatcherObject implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.CompositionTarget" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Anzeigeoberfläche der Anwendung dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.CompositionTarget>ist eine Klasse, die die Anzeigeoberfläche darstellt, auf der Ihre Anwendung gezeichnet wird. Das [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]-Animationsmodul stellt zahlreiche Funktionen zum Erstellen framebasierter Animationen bereit. Es gibt jedoch Anwendungsszenarien, die in denen Sie die Kontrolle über Rendering auf pro-Frame-Basis benötigen. Die <xref:System.Windows.Media.CompositionTarget> -Objekt stellt die Fähigkeit zum Erstellen von benutzerdefinierter Animationen basierend auf einer pro-Frame-Rückruf bereit.  
+  
+> [!NOTE]
+>  Für einen vollständigen Code Beispiel mit <xref:System.Windows.Media.CompositionTarget>, finden Sie unter [anhand des Beispiels CompositionTarget](http://go.microsoft.com/fwlink/?LinkID=160045).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.CompositionTarget.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verwirft <see cref="T:System.Windows.Media.CompositionTarget" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rendering">
+      <MemberSignature Language="C#" Value="public static event EventHandler Rendering;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Rendering" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.CompositionTarget.Rendering" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt unmittelbar vor dem Rendern der Objekte in der Kompositionsstruktur auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.CompositionTarget.Rendering> Ereignis wird an den angegebenen Ereignishandler weitergeleitet, nachdem Animation und Layout auf die Kompositionsstruktur angewendet wurden.  
+  
+   
+  
+## Examples  
+ Die <xref:System.Windows.Media.CompositionTarget.Rendering> Ereignis wird ausgelöst, während die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] rendern. Das folgende Beispiel zeigt, wie Sie registrieren einen <xref:System.EventHandler> Delegieren der statischen <xref:System.Windows.Media.CompositionTarget.Rendering> Methode <xref:System.Windows.Media.CompositionTarget>.  
+  
+ [!code-csharp[CompositionTargetSample#CompositionTarget1](~/samples/snippets/csharp/VS_Snippets_Wpf/CompositionTargetSample/CSharp/Window1.xaml.cs#compositiontarget1)]
+ [!code-vb[CompositionTargetSample#CompositionTarget1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CompositionTargetSample/visualbasic/window1.xaml.vb#compositiontarget1)]  
+  
+ Sie können Ereignishandler für das Rendering zum Erstellen von benutzerdefinierten Zeichnungsinhalt verwenden. Dieser Ereignishandler ruft einmal pro Frame aufgerufen. Jedes Mal, die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] marshallt der beibehaltenen Darstellung von Daten in visuellen Struktur über der Kompositionsstruktur Ereignishandler werden aufgerufen. Wenn Änderungen an der visuellen Struktur Updates auf der Kompositionsstruktur erzwingen, wird darüber hinaus auch Ihre Ereignishandler aufgerufen. Beachten Sie, dass der Ereignishandler aufgerufen wird, nachdem das Layout berechnet wurde. Allerdings können Sie im Ereignishandler, dies bedeutet, dass das Layout einmal vor dem Rendern berechnet werden soll, Layout ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootVisual">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.Visual RootVisual { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Visual RootVisual" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.CompositionTarget.RootVisual" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Stamm visuelle Darstellung der <see cref="T:System.Windows.Media.CompositionTarget" />.</summary>
+        <value>Das visuelle Stammelement des der <see cref="T:System.Windows.Media.CompositionTarget" />.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Festlegen des Stamms visuelle Darstellung der <see cref="T:System.Windows.Media.CompositionTarget" />. Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformFromDevice">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.Matrix TransformFromDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Matrix TransformFromDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.CompositionTarget.TransformFromDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Matrix, die zum Transformieren Koordinaten Zielgerät, das Rendering an dieses Ziel verwendet werden kann.</summary>
+        <value>Die Transformationsmatrix.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformToDevice">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.Matrix TransformToDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Matrix TransformToDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.CompositionTarget.TransformToDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Matrix, die zum Transformieren von Koordinaten, die von diesem Ziel zum Zielgerät, das Rendering verwendet werden kann.</summary>
+        <value>Die Transformationsmatrix.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

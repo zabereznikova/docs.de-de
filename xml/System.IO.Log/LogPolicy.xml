@@ -1,0 +1,365 @@
+<Type Name="LogPolicy" FullName="System.IO.Log.LogPolicy">
+  <TypeSignature Language="C#" Value="public sealed class LogPolicy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LogPolicy extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.LogPolicy" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die einem <see cref="T:System.IO.Log.LogStore" /> zugeordnete Richtlinie dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Richtlinie ist ein Satz von Regeln, die von einer <xref:System.IO.Log.LogStore>-Instanz und ihren Clients eingehalten werden müssen. Eine <xref:System.IO.Log.LogPolicy>-Instanz wird verwendet, um die einem bestimmten <xref:System.IO.Log.LogStore> zugeordnete Richtlinie zu untersuchen und zu ändern. Eine Richtlinie kann die zulässige Mindest- und Maximalgröße von Protokollen bestimmen oder festlegen, wie die <xref:System.IO.Log.LogStore>-Instanz wachsen darf. Außerdem können Sie kontrollieren, ob eine <xref:System.IO.Log.LogStore>-Instanz archiviert werden kann.  
+  
+ Nach dem Ändern von Eigenschaften sollten Sie mithilfe der <xref:System.IO.Log.LogPolicy.Commit%2A>-Methode sicherstellen, dass die Änderungen auf den <xref:System.IO.Log.LogStore> angewendet wurden. Sie können die <xref:System.IO.Log.LogPolicy.Refresh%2A>-Methode aufrufen, um Änderungen zu verwerfen oder die aktuellste Richtlinie abzurufen.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.IO.Log.LogPolicy>-Klasse verwendet wird, um eine Richtlinie für eine Protokolldatensatzsequenz festzulegen.  
+  
+ [!code-csharp[S_UELogRecordSequence#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#2)]
+ [!code-vb[S_UELogRecordSequence#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutoGrow">
+      <MemberSignature Language="C#" Value="public bool AutoGrow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoGrow" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogPolicy.AutoGrow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der <see cref="T:System.IO.Log.LogStore" /> automatisch wachsen kann, oder legt ihn fest.</summary>
+        <value>
+          <see langword="true" />, wenn der <see cref="T:System.IO.Log.LogStore" /> seine Größe automatisch erweitern kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.IO.Log.LogPolicy>-Klasse verwendet wird, um eine Richtlinie für eine Protokolldatensatzsequenz festzulegen.  
+  
+ [!code-csharp[S_UELogRecordSequence#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#2)]
+ [!code-vb[S_UELogRecordSequence#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoShrinkPercentage">
+      <MemberSignature Language="C#" Value="public int AutoShrinkPercentage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AutoShrinkPercentage" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogPolicy.AutoShrinkPercentage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Prozentwert des freien Speicherplatzes ab, den der <see cref="T:System.IO.Log.LogStore" /> verkleinern kann, oder legt ihn fest.</summary>
+        <value>Der Prozentwert des freien Speicherplatzes, den der <see cref="T:System.IO.Log.LogStore" /> verkleinern kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der freie Speicherplatz im <xref:System.IO.Log.LogStore> den von dieser Eigenschaft angegebenen Wert übersteigt, reduziert der <xref:System.IO.Log.LogStore> automatisch die Größe, bis die von der <xref:System.IO.Log.LogPolicy.MinimumExtentCount%2A> festgelegte Größe erreicht ist.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.IO.Log.LogPolicy>-Klasse verwendet wird, um eine Richtlinie für eine Protokolldatensatzsequenz festzulegen.  
+  
+ [!code-csharp[S_UELogRecordSequence#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#2)]
+ [!code-vb[S_UELogRecordSequence#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogPolicy.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt diese Richtlinie als aktuelle Richtlinie für den <see cref="T:System.IO.Log.LogStore" /> fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen <xref:System.IO.Log.LogPolicy.Commit%2A> aufrufen, nachdem Sie Änderungen vorgenommen haben, um sicherzustellen, dass die Änderungen aufgezeichnet werden.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.IO.Log.LogPolicy>-Klasse verwendet wird, um eine Richtlinie für eine Protokolldatensatzsequenz festzulegen.  
+  
+ [!code-csharp[S_UELogRecordSequence#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#2)]
+ [!code-vb[S_UELogRecordSequence#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Satz von Richtlinien, der auf dem Protokoll installiert wird, ist ungültig.  
+  
+ - oder -   
+  
+ Eine Richtlinie für das Protokoll hat verhindert, dass diese Operation abgeschlossen wird.</exception>
+        <exception cref="T:System.IO.IOException">Die Anforderung konnte aufgrund einer unerwarteten E/A-Ausnahme nicht ausgeführt werden.</exception>
+        <exception cref="T:System.NotSupportedException">Das Festlegen dieser Richtlinie wird von der aktuellen Plattform nicht unterstützt.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung des Programms fortzusetzen.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Das neue Wertebereichspräfix ist ungültig oder zu lang. Ein gültiges Präfix muss bereitgestellt werden.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">Die Datensatzsequenz ist voll.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GrowthRate">
+      <MemberSignature Language="C#" Value="public System.IO.Log.PolicyUnit GrowthRate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Log.PolicyUnit GrowthRate" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogPolicy.GrowthRate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.PolicyUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rate der automatischen Zunahme des <see cref="T:System.IO.Log.LogStore" /> ab oder legt diese fest.</summary>
+        <value>Die Rate der automatischen Zunahme des <see cref="T:System.IO.Log.LogStore" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.IO.Log.LogStore> voll ist, stellt dieser Richtlinienwert fest, wie viel Speicherplatz noch hinzugefügt werden kann. Es wird kein Speicherplatz hinzugefügt, wenn dadurch die Anzahl der Wertebereiche im <xref:System.IO.Log.LogStore> die <xref:System.IO.Log.LogPolicy.MaximumExtentCount%2A> übersteigt.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.IO.Log.LogPolicy>-Klasse verwendet wird, um eine Richtlinie für eine Protokolldatensatzsequenz festzulegen.  
+  
+ [!code-csharp[S_UELogRecordSequence#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#2)]
+ [!code-vb[S_UELogRecordSequence#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumExtentCount">
+      <MemberSignature Language="C#" Value="public int MaximumExtentCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumExtentCount" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogPolicy.MaximumExtentCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl der <see cref="T:System.IO.Log.LogExtent" />-Instanzen ab, die der <see cref="T:System.IO.Log.LogStore" /> enthalten kann.</summary>
+        <value>Die maximale Anzahl der <see cref="T:System.IO.Log.LogExtent" />-Instanzen, die der <see cref="T:System.IO.Log.LogStore" /> enthalten kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.IO.Log.LogPolicy>-Klasse verwendet wird, um eine Richtlinie für eine Protokolldatensatzsequenz festzulegen.  
+  
+ [!code-csharp[S_UELogRecordSequence#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#2)]
+ [!code-vb[S_UELogRecordSequence#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumExtentCount">
+      <MemberSignature Language="C#" Value="public int MinimumExtentCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinimumExtentCount" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogPolicy.MinimumExtentCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Mindestanzahl der <see cref="T:System.IO.Log.LogExtent" />-Instanzen ab, die der <see cref="T:System.IO.Log.LogStore" /> enthalten kann, oder legt sie fest.</summary>
+        <value>Eine ganze Zahl, die die Mindestanzahl von <see cref="T:System.IO.Log.LogExtent" />-Instanzen angibt, die der <see cref="T:System.IO.Log.LogStore" /> enthalten kann. Da das CLFS festlegt, dass die Mindestanzahl der Wertebereiche 2 betragen muss, muss dieser Wert mindestens 2 lauten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.IO.Log.LogPolicy>-Klasse verwendet wird, um eine Richtlinie für eine Protokolldatensatzsequenz festzulegen.  
+  
+ [!code-csharp[S_UELogRecordSequence#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#2)]
+ [!code-vb[S_UELogRecordSequence#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewExtentPrefix">
+      <MemberSignature Language="C#" Value="public string NewExtentPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NewExtentPrefix" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogPolicy.NewExtentPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Präfixzeichenfolge für automatisch erstellte Wertebereiche ab oder legt sie fest.</summary>
+        <value>Die Präfixzeichenfolge für automatisch erstellte Wertebereiche.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Zeichenfolge kann einen vollständigen Pfad zum Verzeichnis enthalten, wo der neue Wertebereich erstellt wird. Der Standardpfad zum Wertebereich ist das Verzeichnis, das die Basis-<xref:System.IO.Log.LogStore>-Datei enthält.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.IO.Log.LogPolicy>-Klasse verwendet wird, um eine Richtlinie für eine Protokolldatensatzsequenz festzulegen.  
+  
+ [!code-csharp[S_UELogRecordSequence#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#2)]
+ [!code-vb[S_UELogRecordSequence#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextExtentSuffix">
+      <MemberSignature Language="C#" Value="public long NextExtentSuffix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 NextExtentSuffix" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogPolicy.NextExtentSuffix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Suffixnummer für neue Wertebereiche ab oder legt sie fest.</summary>
+        <value>Die Suffixnummer für neue Wertebereiche.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.IO.Log.LogPolicy>-Klasse verwendet wird, um eine Richtlinie für eine Protokolldatensatzsequenz festzulegen.  
+  
+ [!code-csharp[S_UELogRecordSequence#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#2)]
+ [!code-vb[S_UELogRecordSequence#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PinnedTailThreshold">
+      <MemberSignature Language="C#" Value="public System.IO.Log.PolicyUnit PinnedTailThreshold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Log.PolicyUnit PinnedTailThreshold" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogPolicy.PinnedTailThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.PolicyUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Speicherplatz ab, der für das <see cref="E:System.IO.Log.LogRecordSequence.TailPinned" />-Ereignis zum Voranbringen der Basis des Protokolls erforderlich ist, oder legt ihn fest.</summary>
+        <value>Der Speicherplatz, der für das <see cref="E:System.IO.Log.LogRecordSequence.TailPinned" />-Ereignis zum Voranbringen der Basis des Protokolls erforderlich ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Speicherplatz kann in Prozent oder in Byte angegeben werden und wird im CLFS auf die nächsten Container gerundet. Der Standard ist 35 Prozent.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.IO.Log.LogPolicy>-Klasse verwendet wird, um eine Richtlinie für eine Protokolldatensatzsequenz festzulegen.  
+  
+ [!code-csharp[S_UELogRecordSequence#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#2)]
+ [!code-vb[S_UELogRecordSequence#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogPolicy.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liest die aktuelle Richtlinie für den <see cref="T:System.IO.Log.LogStore" /> und verwirft alle Änderungen, die möglicherweise vorgenommen wurden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.IO.Log.LogPolicy>-Klasse verwendet wird, um eine Richtlinie für eine Protokolldatensatzsequenz festzulegen.  
+  
+ [!code-csharp[S_UELogRecordSequence#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#2)]
+ [!code-vb[S_UELogRecordSequence#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Satz von Richtlinien, der auf dem Protokoll installiert wird, ist ungültig.  
+  
+ - oder -   
+  
+ Eine Richtlinie für das Protokoll hat verhindert, dass diese Operation abgeschlossen wird.</exception>
+        <exception cref="T:System.IO.IOException">Die Anforderung konnte aufgrund einer unerwarteten E/A-Ausnahme nicht ausgeführt werden.</exception>
+        <exception cref="T:System.NotSupportedException">Das Festlegen dieser Richtlinie wird von der aktuellen Plattform nicht unterstützt.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Methode wurde aufgerufen, nachdem die Sequenz verworfen wurde.</exception>
+        <exception cref="T:System.OutOfMemoryException">Der Arbeitsspeicher reicht nicht aus, um die Ausführung des Programms fortzusetzen.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">Die Datensatzsequenz ist voll.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den angegebenen Protokollspeicher wird vom Betriebssystem verweigert.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

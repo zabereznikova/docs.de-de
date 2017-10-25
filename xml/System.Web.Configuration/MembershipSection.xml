@@ -1,0 +1,269 @@
+<Type Name="MembershipSection" FullName="System.Web.Configuration.MembershipSection">
+  <TypeSignature Language="C#" Value="public sealed class MembershipSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MembershipSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.MembershipSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Konfigurationseinstellungen zur Unterstützung der Infrastruktur zum Konfigurieren und Verwalten von Mitgliedschaftsdetails. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.MembershipSection> -Klasse bietet eine Möglichkeit zum programmgesteuerten Zugriff auf und Ändern der `membership` Abschnitt in einer Konfigurationsdatei.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie Werte für verschiedene Attribute der deklarativ angeben, die `membership` Abschnitt, die auch als Member zugegriffen werden kann die <xref:System.Web.Configuration.MembershipSection> Klasse.  
+  
+ Im folgenden Konfigurationsbeispiel-Datei zeigt, wie Sie Werte für deklarativ angeben, die `membership` Abschnitt.  
+  
+```  
+<system.web>  
+  <membership   
+    defaultProvider="AspNetSqlMembershipProvider"  
+    userIsOnlineTimeWindow="15">  
+    <providers>  
+      <add   
+        name=" AspNetSqlMembershipProvider"  
+        type="System.Web.Security.SqlMembershipProvider, System.Web,   
+          Version=2.0.3600.0, Culture=neutral,   
+          PublicKeyToken=b03f5f7f11d50a3a"  
+        connectionStringName="LocalSqlServer"  
+        passwordAttemptThreshold="5"  
+        passwordAttemptWindow="10"  
+        enablePasswordRetrieval="false"  
+        enablePasswordReset="true"  
+        requiresQuestionAndAnswer="true"  
+        applicationName="/"  
+        requiresUniqueEmail="false"  
+        passwordFormat="Hashed"  
+        description="Stores and retrieves membership data from   
+          the local Microsoft SQL Server database."  
+      />  
+    </providers>  
+  </membership>  
+</system.web>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.MembershipSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.MembershipSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.MembershipSection/CS/MembershipSection.cs#1)]
+ [!code-vb[System.Web.Configuration.MembershipSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.MembershipSection/VB/MembershipSection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MembershipSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.MembershipSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.MembershipSection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.MembershipSection.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Sie wird vom Konfigurationssystem von ASP.NET aufgerufen. Sie rufen Sie eine Instanz von der <xref:System.Web.Configuration.MembershipSection> Klasse, indem die <xref:System.Configuration.Configuration.GetSection%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultProvider">
+      <MemberSignature Language="C#" Value="public string DefaultProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.MembershipSection.DefaultProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("defaultProvider", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des standardmäßigen Anbieters an, der verwendet wird, um Rollen zu verwalten.</summary>
+        <value>Der Name des Anbieters in <see cref="P:System.Web.Configuration.MembershipSection.Providers" />. Die Standardeinstellung ist <see langword="AspNetSqlRoleProvider" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.MembershipSection.DefaultProvider%2A> in einen benannten Wert entsprechen muss die `providers` -Unterabschnitt des der `membership` Abschnitt der Konfigurationsdatei. Eine leere Zeichenfolge (`""`) ist kein gültiger Wert für die <xref:System.Web.Configuration.MembershipSection.DefaultProvider%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.MembershipSection.DefaultProvider%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.MembershipSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.MembershipSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.MembershipSection/CS/MembershipSection.cs#2)]
+ [!code-vb[System.Web.Configuration.MembershipSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.MembershipSection/VB/MembershipSection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashAlgorithmType">
+      <MemberSignature Language="C#" Value="public string HashAlgorithmType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HashAlgorithmType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.MembershipSection.HashAlgorithmType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("hashAlgorithmType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Verschlüsselung, die für vertrauliche Mitgliedschaftsinformationen verwendet wird.</summary>
+        <value>Der Typ der Verschlüsselung verwendet, um vertrauliche Mitgliedschaftsinformationen zu verschlüsseln.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Laufzeit das Mitgliedschaftssystem bindet an die entsprechenden Hashalgorithmustyps, und klicken Sie dann mithilfe dieses Typs wird beim Verschlüsseln von Informationen zur Mitgliedschaft. Wenn die <xref:System.Web.Configuration.MembershipSection.HashAlgorithmType%2A> Eigenschaft nicht festgelegt ist, das Mitgliedschaftssystem standardmäßig auf die <xref:System.Web.Configuration.MachineKeySection.Validation%2A> Eigenschaft innerhalb der <xref:System.Web.Configuration.MachineKeySection> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.MembershipSection.HashAlgorithmType%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.MembershipSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.MembershipSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.MembershipSection/CS/MembershipSection.cs#3)]
+ [!code-vb[System.Web.Configuration.MembershipSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.MembershipSection/VB/MembershipSection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.MembershipSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public System.Configuration.ProviderSettingsCollection Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ProviderSettingsCollection Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.MembershipSection.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("providers")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ProviderSettingsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Configuration.ProviderSettingsCollection" /> Objekt des <see cref="T:System.Configuration.ProviderSettings" /> Objekte.</summary>
+        <value>Ein <see cref="T:System.Configuration.ProviderSettingsCollection" /> , enthält der Anbieter-Einstellungen, die definiert, die innerhalb der <see langword="providers" /> -Unterabschnitt des der <see langword="membership" /> Abschnitt der Konfigurationsdatei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mitgliedschaftsanbieter sind Komponenten, die Zugriff auf die Mitgliedschaft für einen Standort bereitstellen. Sie können angeben, dass Mitgliedschaftsanbieter in der `providers` -Unterabschnitt des der `membership` Abschnitt der Konfigurationsdatei.  
+  
+ Die <xref:System.Web.Configuration.MembershipSection.DefaultProvider%2A> -Eigenschaft enthält den Namen des Anbieters, der standardmäßig verwendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.MembershipSection.Providers%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.MembershipSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.MembershipSection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.MembershipSection/CS/MembershipSection.cs#5)]
+ [!code-vb[System.Web.Configuration.MembershipSection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.MembershipSection/VB/MembershipSection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserIsOnlineTimeWindow">
+      <MemberSignature Language="C#" Value="public TimeSpan UserIsOnlineTimeWindow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan UserIsOnlineTimeWindow" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.MembershipSection.UserIsOnlineTimeWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.TimeSpanMinutesConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("userIsOnlineTimeWindow", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.TimeSpanValidator(MaxValueString="10675199.02:48:05.4775807", MinValueString="00:01:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeitspanne in Minuten, bevor ein Benutzer nicht mehr Online betrachtet wird.</summary>
+        <value>Eine Zeitspanne in Minuten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert für die <xref:System.Web.Configuration.MembershipSection.UserIsOnlineTimeWindow%2A> Eigenschaft wird berechnet, indem die aktuelle Uhrzeit abzüglich der <xref:System.Web.Configuration.MembershipSection.UserIsOnlineTimeWindow%2A> Eigenschaft mit der <xref:System.Web.Security.MembershipUser.LastActivityDate%2A> Wert für den Benutzer.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.MembershipSection.UserIsOnlineTimeWindow%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.MembershipSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.MembershipSection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.MembershipSection/CS/MembershipSection.cs#4)]
+ [!code-vb[System.Web.Configuration.MembershipSection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.MembershipSection/VB/MembershipSection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

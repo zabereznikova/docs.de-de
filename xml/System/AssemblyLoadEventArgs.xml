@@ -1,0 +1,95 @@
+<Type Name="AssemblyLoadEventArgs" FullName="System.AssemblyLoadEventArgs">
+  <TypeSignature Language="C#" Value="public class AssemblyLoadEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AssemblyLoadEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.AssemblyLoadEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.AppDomain.AssemblyLoad" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyLoadEventArgs (System.Reflection.Assembly loadedAssembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.Assembly loadedAssembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AssemblyLoadEventArgs.#ctor(System.Reflection.Assembly)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="loadedAssembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="loadedAssembly">Eine Instanz, die derzeit geladene Assembly darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.AssemblyLoadEventArgs" />-Klasse mit dem angegebenen <see cref="T:System.Reflection.Assembly" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadedAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly LoadedAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly LoadedAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.AssemblyLoadEventArgs.LoadedAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Reflection.Assembly" /> , die derzeit geladene Assembly darstellt.</summary>
+        <value>Eine Instanz von <see cref="T:System.Reflection.Assembly" /> , die derzeit geladene Assembly darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft wird festgelegt, durch die common Language Runtime bei der <xref:System.AppDomain.AssemblyLoad?displayProperty=nameWithType> Ereignis auftritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

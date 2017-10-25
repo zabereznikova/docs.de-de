@@ -1,0 +1,145 @@
+<Type Name="PrimaryInteropAssemblyAttribute" FullName="System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PrimaryInteropAssemblyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PrimaryInteropAssemblyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass die mit Attributen versehenen Assembly eine primäre Interop-Assembly ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut auf Assemblys anwenden, obwohl die [Tlbimp.exe (Type Library Importer-Tool)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) in der Regel für Sie gilt, wenn es sich um eine Typbibliothek importiert.  
+  
+ Eine Interop-Assembly enthält Metadaten, die vorhandene COM-Typen beschreiben, die häufig bereits in einer COM-Typbibliothek beschrieben werden. Tlbimp.exe erstellt Interop-Assemblys aus COM-Typbibliotheken. Interop-Assemblys enthalten i. d. r. nur Metadaten (kein Code). Primäre Interop-Assemblys werden von demselben Herausgeber der Typbibliothek bereitgestellt, die Sie beschreiben, die und geben Sie die offiziellen Definitionen der Typen definiert, mit die Typbibliothek. Primäre Interop-Assemblys werden immer vom Herausgeber signiert, um Eindeutigkeit sicherzustellen.  
+  
+ Sie können eine primäre Interop-Assembly aus einer Typbibliothek auf folgenden Arten generieren:  
+  
+-   Führen Sie TlbImp.exe mit der `/primary` Option von der Befehlszeile aus.  
+  
+-   Anwenden der <xref:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute> zur Entwurfszeit.  
+  
+ Um eine primäre Interop-Assembly in verwaltetem Quellcode angeben, müssen Sie anwenden der <xref:System.Runtime.InteropServices.GuidAttribute?displayProperty=nameWithType> und <xref:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute> auf die Assembly zur Entwurfszeit. Die <xref:System.Runtime.InteropServices.GuidAttribute> für die primäre Interop-Assembly identifiziert die LIBID der Typbibliothek und der <xref:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute> identifiziert die Version der bestimmten Typbibliothek für die diese Assembly die primäre Interop-Assembly ist. Die <xref:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute> mehrfach vorkommen können, wenn die Assembly die primäre Interop-Assembly für mehrere Versionen derselben Typbibliothek ist.  
+  
+ Wenn Sie die in einer Typbibliothek definierten Typen verwenden, immer verweisen Sie die primäre Interop-Assembly für diese Typbibliothek, anstatt erneuten Importieren oder Neudefinieren der Typen sich selbst. Richtlinien und Verfahren zum Erstellen und Verwenden von primären Interopassemblys finden Sie unter [primäre Interop-Assemblys](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080). Eine ausführliche Beschreibung der Typbibliothek Prozess importieren, finden Sie unter [Typbibliothek Zusammenfassung: konvertieren](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrimaryInteropAssemblyAttribute (int major, int minor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 major, int32 minor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="major" Type="System.Int32" />
+        <Parameter Name="minor" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="major">Die Hauptversion der Typbibliothek für die diese Assembly die primäre Interop-Assembly ist.</param>
+        <param name="minor">Die Nebenversion der Typbibliothek für die diese Assembly die primäre Interop-Assembly ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute" /> -Klasse mit der Haupt-und Nebenversionsnummern der Typbibliothek für die diese Assembly die primäre Interop-Assembly ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute> mehrfach vorkommen können, wenn die Assembly die primäre Interop-Assembly für mehrere Versionen derselben Typbibliothek ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MajorVersion">
+      <MemberSignature Language="C#" Value="public int MajorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MajorVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute.MajorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Hauptversionsnummer der Typbibliothek für die diese Assembly die primäre Interop-Assembly ist.</summary>
+        <value>Die Hauptversionsnummer der Typbibliothek für die diese Assembly die primäre Interop-Assembly ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinorVersion">
+      <MemberSignature Language="C#" Value="public int MinorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinorVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute.MinorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Nebenversionsnummer der Typbibliothek für die diese Assembly die primäre Interop-Assembly ist.</summary>
+        <value>Die Nebenversionsnummer der Typbibliothek für die diese Assembly die primäre Interop-Assembly ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

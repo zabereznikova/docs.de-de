@@ -1,0 +1,128 @@
+<Type Name="IInteractiveChannelInitializer" FullName="System.ServiceModel.Dispatcher.IInteractiveChannelInitializer">
+  <TypeSignature Language="C#" Value="public interface IInteractiveChannelInitializer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInteractiveChannelInitializer" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Methoden, die es einer Clientanwendung ermöglichen, eine Benutzeroberfläche anzuzeigen, um Identitätsinformationen vor dem Erstellen des Kanals zu erfassen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer>-Schnittstelle, mit der eine Clientanwendung eine Benutzeroberfläche anzeigen kann, die es dem Benutzer der Anwendung gestattet, vor dem Öffnen eines Kanals Anmeldeinformationen zu erstellen oder auszuwählen.  
+  
+ Zur Implementierung von <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> führen Sie die folgenden Schritte in <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer.BeginDisplayInitializationUI%2A?displayProperty=nameWithType> aus:  
+  
+1.  Fordern Sie den Benutzer zur Eingabe auf, um geeignete <xref:System.Net.NetworkCredential?displayProperty=nameWithType> zu erhalten.  
+  
+2.  Fügen Sie ein Parameterobjekt für einen benutzerdefinierten Kanal zur Auflistung hinzu, die durch die <xref:System.ServiceModel.Channels.IChannel.GetProperty%2A?displayProperty=nameWithType>-Methode vom <xref:System.ServiceModel.IClientChannel>-Objekt mit einem Typparameter aus <xref:System.ServiceModel.Channels.ChannelParameterCollection?displayProperty=nameWithType>zurückgegeben wird. Dieses Kanalparameterobjekt wird vom benutzerdefinierten <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager?displayProperty=nameWithType> zur Einrichtung der Sicherheitstoken für den Kanal verwendet.  
+  
+3.  Kehren Sie zurück.  
+  
+ So fügen Sie den <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> ein:  
+  
+1.  Überschreiben Sie die <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A?displayProperty=nameWithType>-Methode für die <xref:System.ServiceModel.Description.ClientCredentials?displayProperty=nameWithType>-Klasse.  
+  
+2.  Ermitteln Sie in dieser Methode, ob für den Endpunkt ein <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> erforderlich ist. Wenn dies der Fall ist, fügen Sie den <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> der <xref:System.ServiceModel.Dispatcher.ClientRuntime.InteractiveChannelInitializers%2A?displayProperty=nameWithType>-Auflistung hinzu.  
+  
+ Es gibt zwei Methoden, wie Anwendungsentwickler einen eingefügten <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> nutzen können. Die Clientanwendung kann entweder Aufrufen <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (oder eine asynchrone Version) vor dem Öffnen des Kanals (die *explizite* Ansatz) oder einfach den ersten Vorgang aufrufen (die *implizite* Ansatz).  
+  
+ Bei Verwendung des impliziten Ansatzes muss die Anwendung den ersten Vorgang für eine <xref:System.ServiceModel.ClientBase%601>-Erweiterung oder eine <xref:System.ServiceModel.IClientChannel>-Erweiterung aufrufen. Wenn ein anderes Element als der erste Vorgang aufgerufen wird, wird eine Ausnahme ausgelöst.  
+  
+ Bei Verwendung des expliziten Ansatzes müssen durch die Anwendung die folgenden Schritte in dieser Reihenfolge ausgeführt werden:  
+  
+1.  Rufen Sie <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (oder eine asynchrone Version) auf.  
+  
+2.  Wenn die Initialisierer zurückgegeben wurden, rufen Sie entweder die <xref:System.ServiceModel.ICommunicationObject.Open%2A>-Methode für das <xref:System.ServiceModel.IClientChannel>-Objekt oder für das <xref:System.ServiceModel.IClientChannel>-Objekt auf, das durch die <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird.  
+  
+3.  Aufrufen von Vorgängen.  
+  
+ Es wird empfohlen, dass Anwendungen mit Produktionsqualität den Prozess der Benutzeroberfläche mithilfe des expliziten Ansatzes steuern.  
+  
+ Anwendungen, die den impliziten Ansatz verwenden, rufen die Initialisierer der Benutzeroberfläche auf, aber wenn der Benutzer nicht innerhalb des Sendetimeouts der Bindung antwortet, wird bei Zurückgeben der Benutzeroberfläche eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginDisplayInitializationUI">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDisplayInitializationUI (System.ServiceModel.IClientChannel channel, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginDisplayInitializationUI(class System.ServiceModel.IClientChannel channel, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer.BeginDisplayInitializationUI(System.ServiceModel.IClientChannel,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="System.ServiceModel.IClientChannel" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="channel">Der Clientkanal.</param>
+        <param name="callback">Das Rückrufobjekt.</param>
+        <param name="state">Beliebige Zustandsdaten.</param>
+        <summary>Ein asynchroner Aufruf, um mit der Verwendung einer Benutzeroberfläche zur Abfrage der Anmeldeinformationen zu beginnen.</summary>
+        <returns>Das <see cref="T:System.IAsyncResult" />, das für den Rückruf nach Abschluss der Verarbeitung verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Implementierung von <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> führen Sie die folgenden Schritte in <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer.BeginDisplayInitializationUI%2A?displayProperty=nameWithType> aus:  
+  
+1.  Fordern Sie den Benutzer in einer geeigneten Weise zur Eingabe der erforderlichen <xref:System.Net.NetworkCredential?displayProperty=nameWithType> auf.  
+  
+2.  Fügen Sie ein Parameterobjekt für einen benutzerdefinierten Kanal zur Auflistung hinzu, die durch die <xref:System.ServiceModel.Channels.IChannel.GetProperty%2A?displayProperty=nameWithType>-Methode vom <xref:System.ServiceModel.IClientChannel>-Objekt mit einem Typparameter aus <xref:System.ServiceModel.Channels.ChannelParameterCollection?displayProperty=nameWithType>zurückgegeben wird. Dieses Kanalparameterobjekt wird vom benutzerdefinierten <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager?displayProperty=nameWithType> zur Einrichtung der Sicherheitstoken für den Kanal verwendet.  
+  
+3.  Kehren Sie zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDisplayInitializationUI">
+      <MemberSignature Language="C#" Value="public void EndDisplayInitializationUI (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndDisplayInitializationUI(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer.EndDisplayInitializationUI(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Die <see cref="T:System.IAsyncResult" />.</param>
+        <summary>Wird aufgerufen, wenn <see cref="M:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer.BeginDisplayInitializationUI(System.ServiceModel.IClientChannel,System.AsyncCallback,System.Object)" /> beendet wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

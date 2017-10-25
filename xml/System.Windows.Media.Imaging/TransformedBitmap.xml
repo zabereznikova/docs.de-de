@@ -1,0 +1,445 @@
+<Type Name="TransformedBitmap" FullName="System.Windows.Media.Imaging.TransformedBitmap">
+  <TypeSignature Language="C#" Value="public sealed class TransformedBitmap : System.Windows.Media.Imaging.BitmapSource, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TransformedBitmap extends System.Windows.Media.Imaging.BitmapSource implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.TransformedBitmap" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Imaging.BitmapSource</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Skaliert und dreht eine <see cref="T:System.Windows.Media.Imaging.BitmapSource" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.TransformedBitmap>unterstützt nur orthogonale Transformationen, z. B. Drehungstransformationen der 90-Grad-Schritte und Skalierungstransformationen. Transformationen, die das Bild verzerrt werden nicht unterstützt.  
+  
+ <xref:System.Windows.Media.Imaging.TransformedBitmap>implementiert die <xref:System.ComponentModel.ISupportInitialize> Schnittstelle, um die Initialisierung für mehrere Eigenschaften zu optimieren. Eigenschaftenänderungen können nur während der Objektinitialisierung erfolgen. Rufen Sie <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit%2A> zu signalisieren, dass die Initialisierung wurde gestartet und <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit%2A> um zu signalisieren, dass die Initialisierung abgeschlossen hat. Nach der Initialisierung werden die eigenschaftenänderungen ignoriert.  
+  
+ <xref:System.Windows.Media.Imaging.TransformedBitmap>Objekte, die erstellt, mit der <xref:System.Windows.Media.Imaging.TransformedBitmap.%23ctor%28System.Windows.Media.Imaging.BitmapSource%2CSystem.Windows.Media.Transform%29> Konstruktor automatisch initialisiert wird und eigenschaftenänderungen werden ignoriert.  
+  
+ Metadata-Tags, die im Zusammenhang mit der Image-Daten müssen aktualisiert werden, wenn ein Bild in einer Datei gespeichert wird, nachdem eine Transformation angewendet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransformedBitmap ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.TransformedBitmap.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Imaging.TransformedBitmap" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.TransformedBitmap>implementiert die <xref:System.ComponentModel.ISupportInitialize> Schnittstelle, um die Initialisierung für mehrere Eigenschaften zu optimieren. Zum Initialisieren einer <xref:System.Windows.Media.Imaging.TransformedBitmap> erstellt haben, verwenden diesen Konstruktor, führen Sie eigenschaftsinitialisierung zwischen <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit%2A> und <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit%2A> Aufrufe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransformedBitmap (System.Windows.Media.Imaging.BitmapSource source, System.Windows.Media.Transform newTransform);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Imaging.BitmapSource source, class System.Windows.Media.Transform newTransform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.TransformedBitmap.#ctor(System.Windows.Media.Imaging.BitmapSource,System.Windows.Media.Transform)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Media.Imaging.BitmapSource" />
+        <Parameter Name="newTransform" Type="System.Windows.Media.Transform" />
+      </Parameters>
+      <Docs>
+        <param name="source">Der <see cref="P:System.Windows.Media.Imaging.TransformedBitmap.Source" /> der neuen <see cref="T:System.Windows.Media.Imaging.TransformedBitmap" />-Instanz.</param>
+        <param name="newTransform">Der <see cref="P:System.Windows.Media.Imaging.TransformedBitmap.Transform" /> der neuen <see cref="T:System.Windows.Media.Imaging.TransformedBitmap" />-Instanz.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Imaging.TransformedBitmap" /> Klasse mit dem angegebenen <see cref="P:System.Windows.Media.Imaging.TransformedBitmap.Source" /> und <see cref="P:System.Windows.Media.Imaging.TransformedBitmap.Transform" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.TransformedBitmap>mit diesem Konstruktor erstellten Objekte werden automatisch initialisiert. Nach der Initialisierung werden die eigenschaftenänderungen ignoriert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="source" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der <paramref name="newTransform" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Die Transformation ist keine orthogonale Transformation.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.TransformedBitmap.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Signalisiert den Anfang der <see cref="T:System.Windows.Media.Imaging.TransformedBitmap" /> Initialisierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaftsinitialisierung muss erfolgen, zwischen <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit%2A> und <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit%2A> aufrufen. Sobald die <xref:System.Windows.Media.Imaging.TransformedBitmap> wurde initialisiert, eigenschaftenänderungen werden ignoriert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Initialisieren einer <xref:System.Windows.Media.Imaging.TransformedBitmap> mit einem Satz von Eigenschaften mit den <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit%2A> und <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit%2A> Methoden.  
+  
+ [!code-csharp[ImagingSnippetGallery_procedural_snip#TransformedBitmapPropInit](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/TransformedBitmapExample.cs#transformedbitmappropinit)]
+ [!code-vb[ImagingSnippetGallery_procedural_snip#TransformedBitmapPropInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/TransformedBitmapExample.vb#transformedbitmappropinit)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Windows.Media.Imaging.TransformedBitmap" /> gerade initialisiert wird. <see cref="M:System.Windows.Media.Imaging.TransformedBitmap.BeginInit" />wurde bereits aufgerufen.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Windows.Media.Imaging.TransformedBitmap" /> wurde bereits initialisiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.TransformedBitmap Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Imaging.TransformedBitmap Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.TransformedBitmap.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.TransformedBitmap</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Imaging.TransformedBitmap" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.TransformedBitmap.CloneCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.TransformedBitmap CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Imaging.TransformedBitmap CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.TransformedBitmap.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.TransformedBitmap</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Imaging.TransformedBitmap" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCurrentValueCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCurrentValueCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.TransformedBitmap.CloneCurrentValueCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.TransformedBitmap.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.TransformedBitmap.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Signalisiert das Ende der <see cref="T:System.Windows.Media.Imaging.BitmapImage" /> Initialisierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaftsinitialisierung muss erfolgen, zwischen <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit%2A> und <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit%2A> aufrufen. Sobald die <xref:System.Windows.Media.Imaging.TransformedBitmap> wurde initialisiert, eigenschaftenänderungen werden ignoriert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Initialisieren einer <xref:System.Windows.Media.Imaging.TransformedBitmap> mit einem Satz von Eigenschaften mit den <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit%2A> und <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit%2A> Methoden.  
+  
+ [!code-csharp[ImagingSnippetGallery_procedural_snip#TransformedBitmapPropInit](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/TransformedBitmapExample.cs#transformedbitmappropinit)]
+ [!code-vb[ImagingSnippetGallery_procedural_snip#TransformedBitmapPropInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/TransformedBitmapExample.vb#transformedbitmappropinit)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Windows.Media.Imaging.TransformedBitmap.Source" /> oder <see cref="P:System.Windows.Media.Imaging.TransformedBitmap.Transform" /> Eigenschaften sind <see langword="null" />.  
+  
+ - oder -   
+  
+ Die Transformation ist keine orthogonale Transformation.  
+  
+ - oder -   
+  
+ Die <see cref="M:System.Windows.Media.Imaging.TransformedBitmap.EndInit" /> Methode wird aufgerufen, ohne dass zuvor <see cref="M:System.Windows.Media.Imaging.TransformedBitmap.BeginInit" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetAsFrozenCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetAsFrozenCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.TransformedBitmap.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetCurrentValueAsFrozenCore (System.Windows.Freezable source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetCurrentValueAsFrozenCore(class System.Windows.Freezable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.TransformedBitmap.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.BitmapSource Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapSource Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.TransformedBitmap.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Quelle für die Bitmap ab oder legt diese fest.</summary>
+        <value>Die Quelle für die Bitmap. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie verketten eine <xref:System.Windows.Media.Imaging.TransformedBitmap> in eine andere <xref:System.Windows.Media.Imaging.BitmapSource> durch Festlegen der <xref:System.Windows.Media.Imaging.TransformedBitmap.Source%2A> Eigenschaft von der <xref:System.Windows.Media.Imaging.TransformedBitmap> auf die <xref:System.Windows.Media.Imaging.BitmapSource> die gewünschten. Finden Sie unter [Vorgehensweise: Chain BitmapSource Objects Together](~/docs/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together.md) für ein Beispiel für das verketten.  
+  
+<a name="dependencyPropertyInfo_Source"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Imaging.TransformedBitmap.SourceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.TransformedBitmap.SourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Imaging.TransformedBitmap.Source" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Transform Transform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Transform Transform" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.TransformedBitmap.Transform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Transform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.Transform" />, die die Skalierung oder Drehung des Bitmaps angibt.</summary>
+        <value>Die <see cref="T:System.Windows.Media.Transform" />, die die Skalierung oder Drehung des Bitmaps angibt. Der Standardwert ist <see cref="P:System.Windows.Media.Transform.Identity" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.TransformedBitmap>unterstützt nur orthogonale Transformationen, z. B. Drehungstransformationen der 90 inkrementiert und Skalierungstransformationen. Transformationen, die das Bild verzerrt werden nicht unterstützt.  
+  
+<a name="dependencyPropertyInfo_Transform"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Imaging.TransformedBitmap.TransformProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Anwenden einer <xref:System.Windows.Media.Imaging.TransformedBitmap.Transform%2A> in eine Bitmap.  
+  
+ [!code-xaml[imageelementexample#TransformedXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml#transformedxaml2)]  
+  
+ [!code-csharp[imageelementexample#TransformedCSharp1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml.cs#transformedcsharp1)]
+ [!code-vb[imageelementexample#TransformedCSharp1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/TransformedImageExample.xaml.vb#transformedcsharp1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TransformProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TransformProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.TransformedBitmap.TransformProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Imaging.TransformedBitmap.Transform" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

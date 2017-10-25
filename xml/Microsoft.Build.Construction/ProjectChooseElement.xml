@@ -1,0 +1,103 @@
+<Type Name="ProjectChooseElement" FullName="Microsoft.Build.Construction.ProjectChooseElement">
+  <TypeSignature Language="C#" Value="public class ProjectChooseElement : Microsoft.Build.Construction.ProjectElementContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectChooseElement extends Microsoft.Build.Construction.ProjectElementContainer" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Construction.ProjectChooseElement" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Construction.ProjectElementContainer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("ProjectChooseElement (#Children={Count} HasOtherwise={OtherwiseElement != null})")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die [Choose-Element (MSBuild)](http://msdn.microsoft.com/library/7b8b025a-d944-4f5c-9018-c89fc2ef146d) in einem MSBuild-Projekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Condition-Attribut ist nicht zulässig.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public override string Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Condition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectChooseElement.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine nicht vorhandene Bedingung, die implizit "true" ist.</summary>
+        <value>Gibt Null zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionLocation">
+      <MemberSignature Language="C#" Value="public override Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ConditionLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectChooseElement.ConditionLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dies lässt keine Bedingungen, damit er nicht aufgerufen werden soll.</summary>
+        <value>Gibt <see cref="T:Microsoft.Build.Construction.ElementLocation" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OtherwiseElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectOtherwiseElement OtherwiseElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ProjectOtherwiseElement OtherwiseElement" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectChooseElement.OtherwiseElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectOtherwiseElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle [andernfalls Element (MSBuild)](http://msdn.microsoft.com/library/de3997e9-1595-4263-a886-95530b56a319) untergeordneten.</summary>
+        <value>Gibt alle untergeordneten andernfalls zurück. Gibt null zurück, wenn keine untergeordnete andernfalls Objekt vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WhenElements">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectWhenElement&gt; WhenElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Construction.ProjectWhenElement&gt; WhenElements" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectChooseElement.WhenElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectWhenElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle der [When-Element (MSBuild)](http://msdn.microsoft.com/library/eb27de6f-4e71-4e87-87e2-d93f7bf5899c) untergeordneten Elemente.</summary>
+        <value>Gibt alle dem Erstellungszeitpunkt untergeordneten Elemente. Es ist immer mindestens ein, wenn untergeordnete.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

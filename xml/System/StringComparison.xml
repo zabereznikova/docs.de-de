@@ -1,0 +1,226 @@
+<Type Name="StringComparison" FullName="System.StringComparison">
+  <TypeSignature Language="C#" Value="public enum StringComparison" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed StringComparison extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.StringComparison" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Kultur-, Groß-/Kleinschreibungs- und Sortierregeln an, die von bestimmten Überladungen der <see cref="M:System.String.Compare(System.String,System.String)" />- und <see cref="M:System.String.Equals(System.Object)" />-Methode verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.StringComparison> Enumeration wird verwendet, um anzugeben, ob ein Zeichenfolgenvergleich der aktuellen Kultur oder der invarianten Kultur, Word oder Ordinalsortierung verwenden und Groß- und Kleinschreibung beachtet werden sollten.  
+  
+> [!IMPORTANT]
+>  Beim Aufruf einer Methode zum Zeichenfolgenvergleich wie z. B. <xref:System.String.Compare%2A?displayProperty=nameWithType>, <xref:System.String.Equals%2A?displayProperty=nameWithType>, oder <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, Sie sollten immer aufrufen, eine Überladung, die einen Parameter vom Typ enthält <xref:System.StringComparison> , damit Sie den Typ des Vergleichs angeben können, die die Methode ausführt. Weitere Informationen finden Sie unter [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET Framework](~/docs/standard/base-types/best-practices-strings.md).  
+  
+ Ein Vorgang, der Word-Sortierregeln verwendet, führt einen kulturabhängigen Vergleich, bei dem bestimmten nicht alphanumerischen Unicode-Zeichen möglicherweise bestimmte Gewichtungen, die ihnen zugewiesen haben. Mithilfe von Word-Sortierregeln und den Konventionen einer bestimmten Kultur, dem Bindestrich ("-") ggf. eine sehr geringe Gewichtung zugeordnet, sodass "Coop" und "Co-op" in einer sortierten Liste nebeneinander angezeigt werden.  
+  
+ Ein Vorgang, der ordinalen Sortierregeln verwendet, führt einen Vergleich aus, basierend auf dem numerischen Wert (Unicode-Codepunkt) der einzelnen <xref:System.Char> in der Zeichenfolge. Ein ordinalen Vergleich ist schneller, aber kulturunabhängige. Bei Ordinalsortierung zum Sortieren von Zeichenfolgen, die mit Unicode-Zeichen (U +) beginnen Verwendung, werden die Zeichenfolge U + Xxxx vor der Zeichenfolge U + Yyyy kommt, wenn der Wert von Xxxx numerisch kleiner ist als Yyyy ist.  
+  
+ Weitere Informationen zu vergleichen finden Sie unter der <xref:System.String?displayProperty=nameWithType> -Klasse "Hinweise". Weitere Informationen zu Kultur, finden Sie unter der <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> -Klasse "Hinweise". Richtlinien dazu, wann ordinal oder kulturabhängigen Vergleichs oder der Regeln der invarianten Kultur verwenden, finden Sie unter [bewährte Methoden für die Verwendung von Zeichenfolgen](~/docs/standard/base-types/best-practices-strings.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden vier Sätze von Wörtern mit jedes Mitglied der <xref:System.StringComparison> Enumeration.  Die Qualität der Vergleiche verwenden die Konventionen der englischen (USA) und Nord-Sami (Schweden)-Nothern Kulturen. Beachten Sie, dass die Zeichenfolgen "Encyclopædia" und "Enzyklopädie" entspricht in der Kultur En-US, aber nicht in den SAMI-Nördliche (Schweden) Kultur berücksichtigt werden.  
+  
+ [!code-csharp[System.String.Equals#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.string.equals/cs/equals_ex3.cs#3)]
+ [!code-vb[System.String.Equals#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.string.equals/vb/equals_ex3.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CurrentCulture">
+      <MemberSignature Language="C#" Value="CurrentCulture" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.StringComparison CurrentCulture = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.StringComparison.CurrentCulture" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.StringComparison</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vergleichen Sie Zeichenfolgen mithilfe kulturabhängiger Sortierregeln und der aktuellen Kultur.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentCultureIgnoreCase">
+      <MemberSignature Language="C#" Value="CurrentCultureIgnoreCase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.StringComparison CurrentCultureIgnoreCase = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.StringComparison.CurrentCultureIgnoreCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.StringComparison</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vergleichen Sie Zeichenfolgen mithilfe von kulturabhängigen Sortierregeln, der aktuellen Kultur und durch Ignorieren der Groß-/Kleinschreibung für die verglichenen Zeichenfolgen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvariantCulture">
+      <MemberSignature Language="C#" Value="InvariantCulture" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.StringComparison InvariantCulture = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.StringComparison.InvariantCulture" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.StringComparison</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vergleichen Sie Zeichenfolgen mithilfe kulturabhängiger Sortierregeln und der invarianten Kultur.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvariantCultureIgnoreCase">
+      <MemberSignature Language="C#" Value="InvariantCultureIgnoreCase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.StringComparison InvariantCultureIgnoreCase = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.StringComparison.InvariantCultureIgnoreCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.StringComparison</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vergleichen Sie Zeichenfolgen mithilfe von kulturabhängigen Sortierregeln, der invarianten Kultur und durch Ignorieren der Groß-/Kleinschreibung für die verglichenen Zeichenfolgen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ordinal">
+      <MemberSignature Language="C#" Value="Ordinal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.StringComparison Ordinal = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.StringComparison.Ordinal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.StringComparison</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vergleichen Sie Zeichenfolgen mithilfe von ordinalen (binären) Sortierregeln.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OrdinalIgnoreCase">
+      <MemberSignature Language="C#" Value="OrdinalIgnoreCase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.StringComparison OrdinalIgnoreCase = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.StringComparison.OrdinalIgnoreCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.StringComparison</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vergleichen Sie Zeichenfolgen mithilfe von ordinalen (binären) Sortierregeln und durch Ignorieren der Groß-/Kleinschreibung für die verglichenen Zeichenfolgen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

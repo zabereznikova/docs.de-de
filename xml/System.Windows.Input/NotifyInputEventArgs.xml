@@ -1,0 +1,96 @@
+<Type Name="NotifyInputEventArgs" FullName="System.Windows.Input.NotifyInputEventArgs">
+  <TypeSignature Language="C#" Value="public class NotifyInputEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NotifyInputEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.NotifyInputEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für unformatierte Eingabe von verarbeiteten der <see cref="P:System.Windows.Input.NotifyInputEventArgs.InputManager" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eingabe im Stagingbereich verarbeitet Eingaben in [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Ereignisse.  
+  
+ <xref:System.Windows.Input.NotifyInputEventArgs> wird mit den <xref:System.Windows.Input.InputManager.PreNotifyInput>- und <xref:System.Windows.Input.InputManager.PostNotifyInput>-Ereignissen verwendet.  
+  
+ Verarbeitung von Eingaben in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] in den folgenden Phasen:  
+  
+1.  Phase vor der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreProcessInput> Ereignis.  
+  
+2.  Phase vor der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PreNotifyInput> Ereignis.  
+  
+3.  Die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eingabeereignis oder Ereignisse ausgelöst werden.  
+  
+4.  Phase nach der Benachrichtigung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostNotifyInput> Ereignis.  
+  
+5.  Phase nach der Verarbeitung.  Die Eingabe-Manager löst die <xref:System.Windows.Input.InputManager.PostProcessInput> Ereignis.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InputManager">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.InputManager InputManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.InputManager InputManager" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NotifyInputEventArgs.InputManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.InputManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den input-Manager das Eingabeereignis verarbeitet.</summary>
+        <value>Die Eingabe-Manager.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist eine <xref:System.Windows.Input.InputManager> pro Thread.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Abrufen des Eingabe-Managers.  Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="StagingItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StagingAreaInputItem StagingItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.StagingAreaInputItem StagingItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NotifyInputEventArgs.StagingItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StagingAreaInputItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das von der Eingabe-Manager verarbeiteten Stagingbereich input-Element.</summary>
+        <value>Der Stagingbereich.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eingabe im Stagingbereich verarbeitet die Rohdaten in [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Ereignisse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

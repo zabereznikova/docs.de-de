@@ -1,0 +1,83 @@
+<Type Name="SubjectIdentifier" FullName="System.Security.Cryptography.Pkcs.SubjectIdentifier">
+  <TypeSignature Language="C#" Value="public sealed class SubjectIdentifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SubjectIdentifier extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.SubjectIdentifier" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifier" /> Klasse definiert den Typ des Bezeichners einer Person, wie z. B. eine <see cref="T:System.Security.Cryptography.Pkcs.CmsSigner" /> oder ein <see cref="T:System.Security.Cryptography.Pkcs.CmsRecipient" />.  Der Antragsteller kann durch den Aussteller des Zertifikats und Seriennummer oder der Schlüssel des Antragstellers identifiziert werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Pkcs.SubjectIdentifierType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.Pkcs.SubjectIdentifierType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.SubjectIdentifierType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Type" /> Eigenschaft ruft den Typ des Antragstellerbezeichner ab. Der Antragsteller kann durch den Aussteller des Zertifikats und Seriennummer oder der Schlüssel des Antragstellers identifiziert werden.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifierType" /> -Enumeration, der den Typ des Antragstellers bezeichnet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Value" /> Eigenschaft ruft den Wert des Bezeichners Betreff ab. Verwenden Sie die <see cref="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Type" /> Eigenschaft zum Ermitteln des Typs der Antragstellerbezeichner und verwenden die <see cref="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Value" /> Eigenschaft zum Abrufen des entsprechenden Werts.</summary>
+        <value>Ein <see cref="T:System.Object" /> -Objekt, das den Wert des Bezeichners Betreff darstellt. Dies <see cref="T:System.Object" /> kann eine der folgenden Objekte gemäß der <see cref="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Type" /> Eigenschaft.  
+  
+ <list type="table"><listheader><term><see cref="P:System.Security.Cryptography.Pkcs.SubjectIdentifier.Type" />Eigenschaft  
+  
+ </term><description>Objekt  
+  
+ </description></listheader><item><term>IssuerAndSerialNumber  
+  
+ </term><description><see cref="T:System.Security.Cryptography.Xml.X509IssuerSerial" /></description></item><item><term>SubjectKeyIdentifier  
+  
+ </term><description><see cref="T:System.String" /></description></item></list></value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

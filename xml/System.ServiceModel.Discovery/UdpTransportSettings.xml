@@ -1,0 +1,237 @@
+<Type Name="UdpTransportSettings" FullName="System.ServiceModel.Discovery.UdpTransportSettings">
+  <TypeSignature Language="C#" Value="public class UdpTransportSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UdpTransportSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.UdpTransportSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht das Festlegen der UDP-Transporteinstellungen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DuplicateMessageHistoryLength">
+      <MemberSignature Language="C#" Value="public int DuplicateMessageHistoryLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DuplicateMessageHistoryLength" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.DuplicateMessageHistoryLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt ihn fest, der die maximale Anzahl an Meldungshashes angibt, die vom Transport zum Identifizieren von doppelten Meldungen verwendet werden.</summary>
+        <value>Die maximale Anzahl an zu verwendenden Meldungshashes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht es Systemadministratoren und Entwicklern, Algorithmen zur Erkennung doppelter Meldungen zu deaktivieren. Mit dem Wert 0 wird die Erkennung doppelter Meldungen deaktiviert. Der Standardwert ist 4112.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBufferPoolSize">
+      <MemberSignature Language="C#" Value="public long MaxBufferPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxBufferPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.MaxBufferPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Größe des Pufferpools, die vom Transport in Bytes.</summary>
+        <value>Die maximale Größe des Pufferpools.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxMulticastRetransmitCount">
+      <MemberSignature Language="C#" Value="public int MaxMulticastRetransmitCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxMulticastRetransmitCount" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.MaxMulticastRetransmitCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt ihn fest, der die maximale Anzahl angibt, die eine Multicastmeldung (zusätzlich zum ersten Senden) neu gesendet werden soll.</summary>
+        <value>Die maximale Anzahl, die eine Multicastmeldung neu gesendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist 2.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPendingMessageCount">
+      <MemberSignature Language="C#" Value="public int MaxPendingMessageCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPendingMessageCount" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.MaxPendingMessageCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt ihn fest, der die maximale Anzahl von Meldungen angibt, die empfangen, jedoch noch nicht aus der Eingabewarteschlange für eine einzelne Channelinstanz entfernt wurden.</summary>
+        <value>Die Anzahl der Meldungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Eingabewarteschlange das Limit für die Anzahl ausstehender Meldungen erreicht hat, wird die Meldung verworfen. Der Standardwert ist 32.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxReceivedMessageSize">
+      <MemberSignature Language="C#" Value="public long MaxReceivedMessageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxReceivedMessageSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.MaxReceivedMessageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Größe in Bytes, der eine Nachricht, die von der Bindung verarbeitet werden können.</summary>
+        <value>Die maximale Größe einer Meldung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist 65507.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxUnicastRetransmitCount">
+      <MemberSignature Language="C#" Value="public int MaxUnicastRetransmitCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxUnicastRetransmitCount" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.MaxUnicastRetransmitCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt ihn fest, der die maximale Anzahl angibt, die eine Unicastmeldung (zusätzlich zum ersten Senden) neu gesendet werden soll.</summary>
+        <value>Die maximale Anzahl, die eine Unicastmeldung neu gesendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MulticastInterfaceId">
+      <MemberSignature Language="C#" Value="public string MulticastInterfaceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MulticastInterfaceId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.MulticastInterfaceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt ihn fest, der den Netzwerkadapter eindeutig identifiziert, der beim Senden und Empfangen von Multicastmeldungen verwendet wird.</summary>
+        <value>Der Netzwerkadapterbezeichner.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Laufzeit verwendet der Transport diesen Wert, um den Schnittstellenindex nachzuschlagen, der dann zum Festlegen der `IP_MULTICAST_IF`- und `IPV6_MULTICAST_IF`-Socketoptionen verwendet wird. Beim Beitreten zu einer Multicastgruppe wird der gleiche Schnittstellenindex verwendet. Der Standardwert ist `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SocketReceiveBufferSize">
+      <MemberSignature Language="C#" Value="public int SocketReceiveBufferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SocketReceiveBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.SocketReceiveBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Empfangspuffergröße auf dem zugrunde liegenden WinSock-Socket ab oder legt sie fest.</summary>
+        <value>Die Empfangspuffergröße.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Benutzer eines empfangenden Channels kann diesen Wert bei der Bindung verwenden, um zu steuern, wie sich das System verhält, wenn es Daten empfängt. Wenn z. B. eine Anwendung vorliegt, die mit dem maximalen Schwellenwert auf eingehende [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Meldungen zugreift, werden Meldungen durch Verwendung eines höheren Werts im WinSock-Puffer gestapelt, während sie darauf warten, von der Anwendung verarbeitet zu werden. Bei der Verwendung eines niedrigeren Werts in derselben Situation werden Meldungen verworfen. Diese Eigenschaft macht die zugrunde liegende WinSock-`SO_RCVBUF`-Socketeinstellung verfügbar. Dieser Eigenschaftswert muss mindestens die Größe der <xref:System.ServiceModel.Discovery.UdpTransportSettings.MaxReceivedMessageSize%2A> aufweisen. Das Festlegen auf einen Wert, der kleiner ist als die <xref:System.ServiceModel.Discovery.UdpTransportSettings.MaxReceivedMessageSize%2A>, führt zu einer Laufzeitausnahme. Der Standardwert ist 65536.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToLive">
+      <MemberSignature Language="C#" Value="public int TimeToLive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TimeToLive" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.TimeToLive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt ihn fest, der die Anzahl an Netzwerksegmenthops angibt, die ein Multicastpaket durchlaufen kann.</summary>
+        <value>Die Anzahl der Netzwerksegmenthops.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft macht die den `IP_MULTICAST_TTL`- und `IP_TTL`-Socketoptionen zugeordnete Funktionalität verfügbar. Der Standardwert ist 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

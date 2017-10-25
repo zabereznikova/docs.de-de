@@ -1,0 +1,905 @@
+<Type Name="NotifyIcon" FullName="System.Windows.Forms.NotifyIcon">
+  <TypeSignature Language="C#" Value="public sealed class NotifyIcon : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NotifyIcon extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.NotifyIcon" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("MouseDoubleClick")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.NotifyIconDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItemFilter("System.Windows.Forms")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt eine Komponente an, die ein Symbol im Infobereich erstellt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Symbole im Infobereich sind Verknüpfungen für Prozesse, die im Hintergrund eines Computers, z. B. ein Virenschutzprogramm oder ein Volume-Steuerelement ausgeführt werden können. Diese Prozesse stammen nicht mit ihren eigenen Benutzeroberflächen. Die <xref:System.Windows.Forms.NotifyIcon> -Klasse bietet eine Möglichkeit zum Programm in diese Funktionalität. Die <xref:System.Windows.Forms.NotifyIcon.Icon%2A> Eigenschaft definiert, das Symbol, das im Infobereich angezeigt wird. Popupmenüs für ein Symbol mit adressiert sind die <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> Eigenschaft. Die <xref:System.Windows.Forms.NotifyIcon.Text%2A> -Eigenschaft weist einen QuickInfo-Text. In der Reihenfolge für das Symbol im Infobereich angezeigt, die <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Eigenschaft muss festgelegt werden, um `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.NotifyIcon> Klasse für eine Anwendung ein Symbol im Infobereich angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.NotifyIcon.Icon%2A>, <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>, <xref:System.Windows.Forms.NotifyIcon.Text%2A>, und <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Eigenschaften und Behandlung der <xref:System.Windows.Forms.NotifyIcon.DoubleClick> Ereignis. Ein <xref:System.Windows.Forms.ContextMenu> mit eine **beenden** Arbeitsaufgabe darauf zugewiesen wird, um die <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A?displayProperty=nameWithType> -Eigenschaft, die dem Benutzer ermöglicht, die Anwendung zu schließen. Wenn die <xref:System.Windows.Forms.NotifyIcon.DoubleClick> Ereignis auftritt, wird das Anwendungsformular durch Aufrufen der <xref:System.Windows.Forms.Form.Activate%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-cpp[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/CPP/source.cpp#1)]
+ [!code-csharp[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/CS/source.cs#1)]
+ [!code-vb[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.UIPermission">zum Erstellen der <see cref="T:System.Windows.Forms.NotifyIcon" /> Komponente. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotifyIcon ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NotifyIcon.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.NotifyIcon" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein neuer <xref:System.Windows.Forms.NotifyIcon> wird erstellt, die <xref:System.Windows.Forms.NotifyIcon.Visible%2A> -Eigenschaftensatz auf `false`. Müssen Sie festlegen der <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Eigenschaft `true` um verwenden die <xref:System.Windows.Forms.NotifyIcon> Sie erstellt haben. Diese Instanz ist vorhanden, bis dessen Container in die Garbagecollection frei.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotifyIcon (System.ComponentModel.IContainer container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IContainer container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NotifyIcon.#ctor(System.ComponentModel.IContainer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="container" Type="System.ComponentModel.IContainer" />
+      </Parameters>
+      <Docs>
+        <param name="container">Ein <see cref="T:System.ComponentModel.IContainer" /> , das den Container darstellt. die <see cref="T:System.Windows.Forms.NotifyIcon" /> Steuerelement.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.NotifyIcon" /> Klasse mit dem angegebenen Container.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein neuer <xref:System.Windows.Forms.NotifyIcon> wird erstellt, die <xref:System.Windows.Forms.NotifyIcon.Visible%2A> -Eigenschaftensatz auf `false`. Müssen Sie festlegen der <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Eigenschaft `true` um verwenden die <xref:System.Windows.Forms.NotifyIcon> Sie erstellt haben. Diese Instanz ist vorhanden, bis dessen Container in die Garbagecollection frei.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.NotifyIcon> Klasse für eine Anwendung ein Symbol im Infobereich angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.NotifyIcon.Icon%2A>, <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>, <xref:System.Windows.Forms.NotifyIcon.Text%2A>, und <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Eigenschaften und Behandlung der <xref:System.Windows.Forms.NotifyIcon.DoubleClick> Ereignis. Ein <xref:System.Windows.Forms.ContextMenu> mit eine **beenden** Arbeitsaufgabe darauf zugewiesen wird, um die <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A?displayProperty=nameWithType> -Eigenschaft, die dem Benutzer ermöglicht, die Anwendung zu schließen. Wenn die <xref:System.Windows.Forms.NotifyIcon.DoubleClick> Ereignis auftritt, wird das Anwendungsformular durch Aufrufen der <xref:System.Windows.Forms.Form.Activate%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-cpp[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/CPP/source.cpp#1)]
+ [!code-csharp[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/CS/source.cs#1)]
+ [!code-vb[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BalloonTipClicked">
+      <MemberSignature Language="C#" Value="public event EventHandler BalloonTipClicked;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BalloonTipClicked" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.NotifyIcon.BalloonTipClicked" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn auf die SprechblasenInfo geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.NotifyIcon.BalloonTipClicked> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.NotifyIcon> mit dem Namen `NotifyIcon1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.NotifyIcon.BalloonTipClicked> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#505](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#505)]
+ [!code-vb[System.Windows.Forms.EventExamples#505](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#505)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BalloonTipClosed">
+      <MemberSignature Language="C#" Value="public event EventHandler BalloonTipClosed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BalloonTipClosed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.NotifyIcon.BalloonTipClosed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die SprechblasenInfo vom Benutzer geschlossen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie behandelt die <xref:System.Windows.Forms.NotifyIcon.BalloonTipClosed> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.NotifyIconBalloonTip#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIconBalloonTip/CS/Form1.cs#4)]
+ [!code-vb[System.Windows.Forms.NotifyIconBalloonTip#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NotifyIconBalloonTip/VB/Form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BalloonTipIcon">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolTipIcon BalloonTipIcon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ToolTipIcon BalloonTipIcon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NotifyIcon.BalloonTipIcon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolTipIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab bzw. legt das Symbol auf die zugeordneten SprechblasenInfo angezeigt werden sollen die <see cref="T:System.Windows.Forms.NotifyIcon" />.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.ToolTipIcon" /> auf die zugeordneten SprechblasenInfo angezeigt werden sollen die <see cref="T:System.Windows.Forms.NotifyIcon" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, und <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> Eigenschaften. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Windows-Formular, enthält ein <xref:System.Windows.Forms.NotifyIcon> mit dem Namen `notifyIcon1`. Rufen Sie `SetBalloonTip` aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-csharp[System.Windows.Forms.NotifyIconBalloonTip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIconBalloonTip/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.NotifyIconBalloonTip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NotifyIconBalloonTip/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der angegebene Wert ist eine <see cref="T:System.Windows.Forms.ToolTipIcon" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BalloonTipShown">
+      <MemberSignature Language="C#" Value="public event EventHandler BalloonTipShown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BalloonTipShown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.NotifyIcon.BalloonTipShown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die SprechblasenInfo auf dem Bildschirm angezeigt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.NotifyIcon.BalloonTipShown> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.NotifyIcon> mit dem Namen `NotifyIcon1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.NotifyIcon.BalloonTipShown> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#507](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#507)]
+ [!code-vb[System.Windows.Forms.EventExamples#507](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#507)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BalloonTipText">
+      <MemberSignature Language="C#" Value="public string BalloonTipText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BalloonTipText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NotifyIcon.BalloonTipText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.ComponentModel.Design.MultilineStringEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Text ab, der in der SprechblasenInfo angezeigt werden soll, die dem <see cref="T:System.Windows.Forms.NotifyIcon" /> zugeordnet ist, oder legt diesen Text fest.</summary>
+        <value>Der Text, der in der SprechblasenInfo angezeigt werden soll, die dem <see cref="T:System.Windows.Forms.NotifyIcon" /> zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, und <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> Eigenschaften. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Windows-Formular, enthält ein <xref:System.Windows.Forms.NotifyIcon> mit dem Namen `notifyIcon1`. Rufen Sie `SetBalloonTip` aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-csharp[System.Windows.Forms.NotifyIconBalloonTip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIconBalloonTip/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.NotifyIconBalloonTip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NotifyIconBalloonTip/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BalloonTipTitle">
+      <MemberSignature Language="C#" Value="public string BalloonTipTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BalloonTipTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NotifyIcon.BalloonTipTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Titel der SprechblasenInfo angezeigt wird, auf die <see cref="T:System.Windows.Forms.NotifyIcon" />.</summary>
+        <value>Der Text, der als Titel der SprechblasenInfo angezeigt werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Titeltext wird in fett formatierter Schrift im oberen Bereich der Sprechblase angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, und <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> Eigenschaften. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Windows-Formular, enthält ein <xref:System.Windows.Forms.NotifyIcon> mit dem Namen `notifyIcon1`. Rufen Sie `SetBalloonTip` aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-csharp[System.Windows.Forms.NotifyIconBalloonTip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIconBalloonTip/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.NotifyIconBalloonTip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NotifyIconBalloonTip/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.NotifyIcon.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer auf das Symbol im Infobereich klickt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Behandlung der <xref:System.Windows.Forms.NotifyIcon.Click> Ereignis. In diesem Beispiel wird davon ausgegangen, dass Sie den Code hinzugefügt haben, um ein Formular mit einem <xref:System.Windows.Forms.NotifyIcon> Objekt mit dem Namen `NotifyIcon1`.  
+  
+ [!code-cpp[System.Windows.Forms.NotifyIconExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIconExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.NotifyIconExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIconExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.NotifyIconExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NotifyIconExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenu">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ContextMenu ContextMenu { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ContextMenu ContextMenu" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NotifyIcon.ContextMenu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenu</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Kontextmenü für das Symbol ab oder legt dieses fest.</summary>
+        <value>Das <see cref="T:System.Windows.Forms.ContextMenu" /> für das Symbol. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klicken Sie im Menü wird angezeigt, wenn der Benutzer ein Symbol im Infobereich der Taskleiste mit der rechten Maustaste. Kontextmenüs sind auch als Popupmenüs bezeichnet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.NotifyIcon> Klasse für eine Anwendung ein Symbol im Infobereich angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.NotifyIcon.Icon%2A>, <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>, <xref:System.Windows.Forms.NotifyIcon.Text%2A>, und <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Eigenschaften und Behandlung der <xref:System.Windows.Forms.NotifyIcon.DoubleClick> Ereignis. Ein <xref:System.Windows.Forms.ContextMenu> mit eine **beenden** Arbeitsaufgabe darauf zugewiesen wird, um die <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A?displayProperty=nameWithType> -Eigenschaft, die dem Benutzer ermöglicht, die Anwendung zu schließen. Wenn die <xref:System.Windows.Forms.NotifyIcon.DoubleClick> Ereignis auftritt, wird das Anwendungsformular durch Aufrufen der <xref:System.Windows.Forms.Form.Activate%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-cpp[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/CPP/source.cpp#1)]
+ [!code-csharp[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/CS/source.cs#1)]
+ [!code-vb[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuStrip">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ContextMenuStrip ContextMenuStrip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ContextMenuStrip ContextMenuStrip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NotifyIcon.ContextMenuStrip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenuStrip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das dem <see cref="T:System.Windows.Forms.NotifyIcon" /> zugeordnete Kontextmenü ab oder legt dieses fest.</summary>
+        <value>Der mit dem <see cref="T:System.Windows.Forms.ContextMenuStrip" /> verknüpfte <see cref="T:System.Windows.Forms.NotifyIcon" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NotifyIcon.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleClick">
+      <MemberSignature Language="C#" Value="public event EventHandler DoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.NotifyIcon.DoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer auf das Symbol im Infobereich der Taskleiste doppelklickt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.NotifyIcon> Klasse für eine Anwendung ein Symbol im Infobereich angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.NotifyIcon.Icon%2A>, <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>, <xref:System.Windows.Forms.NotifyIcon.Text%2A>, und <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Eigenschaften und Behandlung der <xref:System.Windows.Forms.NotifyIcon.DoubleClick> Ereignis. Ein <xref:System.Windows.Forms.ContextMenu> mit eine **beenden** Arbeitsaufgabe darauf zugewiesen wird, um die <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A?displayProperty=nameWithType> -Eigenschaft, die dem Benutzer ermöglicht, die Anwendung zu schließen. Wenn die <xref:System.Windows.Forms.NotifyIcon.DoubleClick> Ereignis auftritt, wird das Anwendungsformular durch Aufrufen der <xref:System.Windows.Forms.Form.Activate%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-cpp[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/CPP/source.cpp#1)]
+ [!code-csharp[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/CS/source.cs#1)]
+ [!code-vb[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Icon">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Icon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Icon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NotifyIcon.Icon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle Symbol ab oder legt es fest.</summary>
+        <value>Die <see cref="T:System.Drawing.Icon" /> angezeigt, indem die <see cref="T:System.Windows.Forms.NotifyIcon" /> Komponente. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.NotifyIcon> Klasse für eine Anwendung ein Symbol im Infobereich angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.NotifyIcon.Icon%2A>, <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>, <xref:System.Windows.Forms.NotifyIcon.Text%2A>, und <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Eigenschaften und Behandlung der <xref:System.Windows.Forms.NotifyIcon.DoubleClick> Ereignis. Ein <xref:System.Windows.Forms.ContextMenu> mit eine **beenden** Arbeitsaufgabe darauf zugewiesen wird, um die <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A?displayProperty=nameWithType> -Eigenschaft, die dem Benutzer ermöglicht, die Anwendung zu schließen. Wenn die <xref:System.Windows.Forms.NotifyIcon.DoubleClick> Ereignis auftritt, wird das Anwendungsformular durch Aufrufen der <xref:System.Windows.Forms.Form.Activate%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-cpp[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/CPP/source.cpp#1)]
+ [!code-csharp[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/CS/source.cs#1)]
+ [!code-vb[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.NotifyIcon.MouseClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer klickt auf eine <see cref="T:System.Windows.Forms.NotifyIcon" /> mit der Maus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.NotifyIcon.MouseClick> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.NotifyIcon> mit dem Namen `NotifyIcon1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.NotifyIcon.MouseClick> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#510](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#510)]
+ [!code-vb[System.Windows.Forms.EventExamples#510](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#510)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDoubleClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.NotifyIcon.MouseDoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer doppelklickt der <see cref="T:System.Windows.Forms.NotifyIcon" /> mit der Maus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.NotifyIcon.MouseDoubleClick> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.NotifyIcon> mit dem Namen `NotifyIcon1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.NotifyIcon.MouseDoubleClick> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#511](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#511)]
+ [!code-vb[System.Windows.Forms.EventExamples#511](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#511)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.NotifyIcon.MouseDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer die Maustaste klickt, während der Mauszeiger sich über dem Symbol im Infobereich der Taskleiste befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.NotifyIcon.MouseDown> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.NotifyIcon> mit dem Namen `NotifyIcon1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.NotifyIcon.MouseDown> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#512](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#512)]
+ [!code-vb[System.Windows.Forms.EventExamples#512](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#512)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseMove">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseMove;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseMove" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.NotifyIcon.MouseMove" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer die Maus bewegt, während der Mauszeiger sich über dem Symbol im Infobereich der Taskleiste befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.NotifyIcon.MouseMove> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.NotifyIcon> mit dem Namen `NotifyIcon1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.NotifyIcon.MouseMove> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#513](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#513)]
+ [!code-vb[System.Windows.Forms.EventExamples#513](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#513)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.NotifyIcon.MouseUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer die Maustaste loslässt, während sich der Mauszeiger über dem Symbol im Infobereich der Taskleiste befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.NotifyIcon.MouseUp> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.NotifyIcon> mit dem Namen `NotifyIcon1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.NotifyIcon.MouseUp> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#514](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#514)]
+ [!code-vb[System.Windows.Forms.EventExamples#514](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#514)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowBalloonTip">
+      <MemberSignature Language="C#" Value="public void ShowBalloonTip (int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ShowBalloonTip(int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NotifyIcon.ShowBalloonTip(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Gibt an, wie viele Millisekunden die SprechblasenInfo angezeigt wird.  
+  
+ <block subset="none" type="note"><para>  
+ Dieser Parameter wird ab Windows Vista als veraltet markiert. Benachrichtigung zeigt die Uhrzeit basieren jetzt auf Einstellungen für die Barrierefreiheit.  
+  
+</para></block></param>
+        <summary>Zeigt für den angegebene Zeitraum eine SprechblasenInfo in der Taskleiste an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Minimale und maximale Timeout-Wert werden vom Betriebssystem erzwungen, und sind in der Regel 10 und 30 Sekunden, aber dies je nach Betriebssystem variieren kann. Timeoutwerte, die zu groß oder klein sind, werden auf den entsprechenden minimale oder maximale Wert angepasst. Darüber hinaus, wenn der Benutzer nicht angezeigt wird, auf dem Computer verwendet werden (keine Tastatur- oder Maustastenzustand Ereignisse auftreten) klicken Sie dann das System nicht diesmal für das Timeout gezählt.  
+  
+ Nur eine SprechblasenInfo kann zu einem Zeitpunkt auf der Taskleiste angezeigt. Bei dem Versuch, eine SprechblasenInfo angezeigt wird, wenn eine auf der Taskleiste wird derzeit angezeigt wird der `timeout` Wert ignoriert werden soll. Das Verhalten unterscheidet sich geringfügig je nach Betriebssystem und gibt an, ob die SprechblasenInfo aus einer anderen ist oder die gleiche, Anwendung. Wenn die SprechblasenInfo aus einer anderen Anwendung, wird die erste SprechblasenInfo für den minimalen Timeoutwert angezeigt, bis die zweite angezeigt, unabhängig vom Wert der wird `timeout`. In den meisten Fällen, wenn die SprechblasenInfos wie aus der gleichen Anwendung, die erste SprechblasenInfo sofort geschlossen wird, wenn ein weiterer Aufruf der <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A> Methode erfolgt. In einigen Fällen wird die zweite Sprechblase zusätzlich zu den ersten Sprechblase geöffnet.  
+  
+ Der Titeltext wird in fett formatierter Schrift im oberen Bereich der Sprechblase angezeigt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Windows-Formular, enthält ein <xref:System.Windows.Forms.NotifyIcon> mit dem Namen `notifyIcon1`. Rufen Sie `SetBalloonTip` aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-csharp[System.Windows.Forms.NotifyIconBalloonTip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIconBalloonTip/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.NotifyIconBalloonTip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NotifyIconBalloonTip/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowBalloonTip">
+      <MemberSignature Language="C#" Value="public void ShowBalloonTip (int timeout, string tipTitle, string tipText, System.Windows.Forms.ToolTipIcon tipIcon);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ShowBalloonTip(int32 timeout, string tipTitle, string tipText, valuetype System.Windows.Forms.ToolTipIcon tipIcon) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.NotifyIcon.ShowBalloonTip(System.Int32,System.String,System.String,System.Windows.Forms.ToolTipIcon)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="tipTitle" Type="System.String" />
+        <Parameter Name="tipText" Type="System.String" />
+        <Parameter Name="tipIcon" Type="System.Windows.Forms.ToolTipIcon" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Gibt an, wie viele Millisekunden die SprechblasenInfo angezeigt wird.  
+  
+ <block subset="none" type="note"><para>  
+ Dieser Parameter wird ab Windows Vista als veraltet markiert. Benachrichtigung zeigt die Uhrzeit basieren jetzt auf Einstellungen für die Barrierefreiheit.  
+  
+</para></block></param>
+        <param name="tipTitle">Der Titel, der in der SprechblasenInfo angezeigt werden soll.</param>
+        <param name="tipText">Der Text, der in der SprechblasenInfo angezeigt werden soll.</param>
+        <param name="tipIcon">Einer der <see cref="T:System.Windows.Forms.ToolTipIcon" />-Werte.</param>
+        <summary>Zeigt eine SprechblasenInfo mit dem angegebenen Titel, Text und Symbol für den angegebenen Zeitraum in der Taskleiste an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Minimale und maximale Timeout-Wert werden vom Betriebssystem erzwungen, und sind in der Regel 10 und 30 Sekunden, aber dies je nach Betriebssystem variieren kann. Timeoutwerte, die zu groß oder klein sind, werden auf den entsprechenden minimale oder maximale Wert angepasst. Darüber hinaus, wenn der Benutzer nicht angezeigt wird, auf dem Computer verwendet werden (keine Tastatur- oder Maustastenzustand Ereignisse auftreten) klicken Sie dann das System nicht diesmal für das Timeout gezählt.  
+  
+ Nur eine SprechblasenInfo kann zu einem Zeitpunkt auf der Taskleiste angezeigt. Bei dem Versuch, eine SprechblasenInfo angezeigt wird, wenn eine auf der Taskleiste wird derzeit angezeigt wird der `timeout` Wert ignoriert werden soll. Das Verhalten unterscheidet sich geringfügig je nach Betriebssystem und gibt an, ob die SprechblasenInfo aus einer anderen ist oder die gleiche, Anwendung. Wenn die SprechblasenInfo aus einer anderen Anwendung, wird die erste SprechblasenInfo für den minimalen Timeoutwert angezeigt, bis die zweite angezeigt, unabhängig vom Wert der wird `timeout`. In den meisten Fällen, wenn die SprechblasenInfos wie aus der gleichen Anwendung, die erste SprechblasenInfo sofort geschlossen wird, wenn ein weiterer Aufruf der <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A> Methode erfolgt. In einigen Fällen wird die zweite Sprechblase zusätzlich zu den ersten Sprechblase geöffnet.  
+  
+ Der Titeltext wird in fett formatierter Schrift im oberen Bereich der Sprechblase angezeigt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Windows-Formular, enthält ein <xref:System.Windows.Forms.NotifyIcon> mit dem Namen `notifyIcon1`. Ordnen Sie die `Form1_DoubleClick` Methode in diesem Beispiel wird mit des Formulars <xref:System.Windows.Forms.Control.DoubleClick> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.NotifyIconBalloonTip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIconBalloonTip/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.NotifyIconBalloonTip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NotifyIconBalloonTip/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> ist kleiner als 0.</exception>
+        <exception cref="T:System.ArgumentException">
+          Der <paramref name="tipText" /> ist <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="tipIcon" />ist kein Mitglied der <see cref="T:System.Windows.Forms.ToolTipIcon" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für den Zugriff auf Anwendungsfenster. Verwandte Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NotifyIcon.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Objekt, das Daten enthält, zu der <see cref="T:System.Windows.Forms.NotifyIcon" />.</summary>
+        <value>Die <see cref="T:System.Object" /> , das Daten enthält, zu der <see cref="T:System.Windows.Forms.NotifyIcon" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NotifyIcon.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.ComponentModel.Design.MultilineStringEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den QuickInfo-Text ab, der angezeigt wird, wenn sich der Mauszeiger auf einem Symbol im Infobereich befindet, oder legt ihn fest.</summary>
+        <value>Der QuickInfo-Text, der angezeigt wird, wenn sich der Mauszeiger auf einem Symbol im Infobereich befindet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Text `null`, keine QuickInfo angezeigt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.NotifyIcon> Klasse für eine Anwendung ein Symbol im Infobereich angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.NotifyIcon.Icon%2A>, <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>, <xref:System.Windows.Forms.NotifyIcon.Text%2A>, und <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Eigenschaften und Behandlung der <xref:System.Windows.Forms.NotifyIcon.DoubleClick> Ereignis. Ein <xref:System.Windows.Forms.ContextMenu> mit eine **beenden** Arbeitsaufgabe darauf zugewiesen wird, um die <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A?displayProperty=nameWithType> -Eigenschaft, die dem Benutzer ermöglicht, die Anwendung zu schließen. Wenn die <xref:System.Windows.Forms.NotifyIcon.DoubleClick> Ereignis auftritt, wird das Anwendungsformular durch Aufrufen der <xref:System.Windows.Forms.Form.Activate%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-cpp[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/CPP/source.cpp#1)]
+ [!code-csharp[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/CS/source.cs#1)]
+ [!code-vb[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der QuickInfo-Text ist mehr als 63 Zeichen lang.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.NotifyIcon.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Symbol im Infobereich der Taskleiste sichtbar ist, oder legt ihn fest.</summary>
+        <value>
+          <see langword="true" />Wenn das Symbol im Infobereich sichtbar ist; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da der Standardwert ist `false`, in der Reihenfolge für das Symbol im Infobereich angezeigt, müssen Sie festlegen der <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Eigenschaft `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.NotifyIcon> Klasse für eine Anwendung ein Symbol im Infobereich angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.NotifyIcon.Icon%2A>, <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>, <xref:System.Windows.Forms.NotifyIcon.Text%2A>, und <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Eigenschaften und Behandlung der <xref:System.Windows.Forms.NotifyIcon.DoubleClick> Ereignis. Ein <xref:System.Windows.Forms.ContextMenu> mit eine **beenden** Arbeitsaufgabe darauf zugewiesen wird, um die <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A?displayProperty=nameWithType> -Eigenschaft, die dem Benutzer ermöglicht, die Anwendung zu schließen. Wenn die <xref:System.Windows.Forms.NotifyIcon.DoubleClick> Ereignis auftritt, wird das Anwendungsformular durch Aufrufen der <xref:System.Windows.Forms.Form.Activate%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-cpp[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/CPP/source.cpp#1)]
+ [!code-csharp[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/CS/source.cs#1)]
+ [!code-vb[System.Windows.Forms.NotifyIcon#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NotifyIcon/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

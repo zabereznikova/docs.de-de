@@ -1,0 +1,127 @@
+<Type Name="BindingCollectionEnumerator" FullName="Microsoft.VisualBasic.Compatibility.VB6.BindingCollectionEnumerator">
+  <TypeSignature Language="C#" Value="public class BindingCollectionEnumerator : System.Collections.IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi BindingCollectionEnumerator extends System.Object implements class System.Collections.IEnumerator" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.BindingCollectionEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Unterstützt eine einfache Iteration durch eine bindungsauflistung in einer Anwendung von Visual Basic 6.0 aktualisiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], eine `BindingCollectionEnumerator` erstellt wird, um zu ermöglichen die `ADO`-Code beziehen.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public object Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Current" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.BindingCollectionEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle Element in der Bindungssammlung ab.</summary>
+        <value>Das aktuelle Element in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], eine `BindingCollectionEnumerator` erstellt wird, um zu ermöglichen die `ADO`-Code beziehen.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BindingCollectionEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf das nächste Element der Auflistung.</summary>
+        <returns>
+          <see langword="true" />, wenn der Enumerator erfolgreich auf das nächste Element gesetzt wurde, <see langword="false" />, wenn der Enumerator das Ende der Auflistung überschritten hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], eine `BindingCollectionEnumerator` erstellt wird, um zu ermöglichen die `ADO`-Code beziehen.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BindingCollectionEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf seine anfängliche Position vor dem ersten Element in der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung aktualisiert wird, um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], eine `BindingCollectionEnumerator` erstellt wird, um zu ermöglichen die `ADO`-Code beziehen.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

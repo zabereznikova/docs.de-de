@@ -1,0 +1,6 @@
+<Namespace Name="System.IO.Compression">
+  <Docs>
+    <summary>Die <see cref="N:System.IO.Compression" /> -Namespace enthält Klassen, die grundlegende Komprimierung und dekomprimierung für Streams Dienstleistungen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

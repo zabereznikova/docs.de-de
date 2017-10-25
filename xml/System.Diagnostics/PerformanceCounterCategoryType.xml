@@ -1,0 +1,73 @@
+<Type Name="PerformanceCounterCategoryType" FullName="System.Diagnostics.PerformanceCounterCategoryType">
+  <TypeSignature Language="C#" Value="public enum PerformanceCounterCategoryType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PerformanceCounterCategoryType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.PerformanceCounterCategoryType" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob die Leistungsindikatorkategorie mehrere Instanzen verfügen kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt zwei Arten von Leistungsindikatorkategorien: Einzelinstanz- und mit mehreren Instanzen. Standardmäßig ist eine Kategorie Einzelinstanz-auf, wenn es erstellt wird und mit mehreren Instanzen wird, wenn eine andere Instanz hinzugefügt wird. Kategorien werden erstellt, wenn eine Anwendung wird eingerichtet, und Instanzen zur Laufzeit hinzugefügt werden. In .NET Framework, Versionen 1.0 und 1.1, es ist nicht bekannt sein, ob eine Leistungsindikatorkategorie mit mehreren Instanzen ist oder eine Instanz. In .NET Framework, Version 2.0 die <xref:System.Diagnostics.PerformanceCounterCategoryType> Enumeration wird verwendet, um anzugeben, ob ein Leistungsindikator mehrere Instanzen haben kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MultiInstance">
+      <MemberSignature Language="C#" Value="MultiInstance" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterCategoryType MultiInstance = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterCategoryType.MultiInstance" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategoryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Leistungsindikatorkategorie kann mehrere Instanzen verfügen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleInstance">
+      <MemberSignature Language="C#" Value="SingleInstance" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterCategoryType SingleInstance = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterCategoryType.SingleInstance" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategoryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Leistungsindikatorkategorie kann nur eine einzige Instanz haben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterCategoryType Unknown = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterCategoryType.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategoryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Instanzfunktionalität für die Leistungsindikatorkategorie ist unbekannt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

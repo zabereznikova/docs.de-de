@@ -1,0 +1,190 @@
+<Type Name="UserNameSecurityTokenHandler" FullName="System.IdentityModel.Tokens.UserNameSecurityTokenHandler">
+  <TypeSignature Language="C#" Value="public abstract class UserNameSecurityTokenHandler : System.IdentityModel.Tokens.SecurityTokenHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit UserNameSecurityTokenHandler extends System.IdentityModel.Tokens.SecurityTokenHandler" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.UserNameSecurityTokenHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityTokenHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine abstrakte Basisklasse für eine <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandler" /> , Sicherheitstoken des Typs verarbeitet <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UserNameSecurityTokenHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.UserNameSecurityTokenHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Aufgerufen von Konstruktoren in abgeleiteten Klassen zum Initialisieren der <see cref="T:System.IdentityModel.Tokens.UserNameSecurityTokenHandler" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadToken">
+      <MemberSignature Language="C#" Value="public override bool CanReadToken (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanReadToken(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.UserNameSecurityTokenHandler.CanReadToken(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader ein Startelement positioniert. Der Leser sollte nicht erweitert werden.</param>
+        <summary>Gibt an, ob das aktuelle XML-Element als gelesen werden kann eine <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" />.</summary>
+        <returns>
+          <see langword="true" />Wenn der Reader verweist eine <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteToken">
+      <MemberSignature Language="C#" Value="public override bool CanWriteToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanWriteToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.UserNameSecurityTokenHandler.CanWriteToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dieser Handler, Token vom Typ schreiben kann <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" />.</summary>
+        <value>
+          <see langword="true" />Wenn der Handler, Token vom Typ schreiben kann <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" />ist, andernfalls <see langword="false" />. Immer <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenTypeIdentifiers">
+      <MemberSignature Language="C#" Value="public override string[] GetTokenTypeIdentifiers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetTokenTypeIdentifiers() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.UserNameSecurityTokenHandler.GetTokenTypeIdentifiers" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die URIs werden in Anforderungen verwendet, um ein Token vom Typ zu identifizieren, die von diesem Handler verarbeitet werden können.</summary>
+        <returns>Der Satz von URIs, die den Typ des Sicherheitstoken zu identifizieren, den von diesem Handler unterstützt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadToken">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Tokens.SecurityToken ReadToken (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IdentityModel.Tokens.SecurityToken ReadToken(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.UserNameSecurityTokenHandler.ReadToken(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader am Startelement des Tokens positioniert.</param>
+        <summary>Liest eine <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" /> aus dem angegebenen Reader.</summary>
+        <returns>Das Benutzernamen-Sicherheitstoken, das aus XML deserialisiert wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Xml.XmlException">Das Token kann nicht gelesen werden.</exception>
+        <exception cref="T:System.NotSupportedException">Das Kennwort wurde nicht im nur-Text-Format.</exception>
+        <exception cref="T:System.InvalidOperationException">Ein unbekanntes Element in dem Sicherheitstoken gefunden wurde oder der Benutzername wurde nicht angegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RetainPassword">
+      <MemberSignature Language="C#" Value="public virtual bool RetainPassword { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RetainPassword" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.UserNameSecurityTokenHandler.RetainPassword" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Kennwort in das bootstrap-Token beibehalten werden, die angefügt wird die <see cref="T:System.Security.Claims.ClaimsIdentity" /> der zurückgegeben wird, indem die <see cref="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ValidateToken(System.IdentityModel.Tokens.SecurityToken)" /> Methode.</summary>
+        <value>
+          <see langword="true" />Wenn das Kennwort in das bootstrap-Token beibehalten werden sollen; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenType">
+      <MemberSignature Language="C#" Value="public override Type TokenType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TokenType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.UserNameSecurityTokenHandler.TokenType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> der Token, der diesen Handler verarbeitet.</summary>
+        <value>Der <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" />-Typ.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteToken">
+      <MemberSignature Language="C#" Value="public override void WriteToken (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteToken(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.UserNameSecurityTokenHandler.WriteToken(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der XML-Writer verwenden, um das Token serialisieren.</param>
+        <param name="token">Das zu serialisierende Token.</param>
+        <summary>Serialisiert das angegebene <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" /> in XML.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="token" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="token" />ist nicht von <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

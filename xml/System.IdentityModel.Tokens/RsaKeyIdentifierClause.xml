@@ -1,0 +1,265 @@
+<Type Name="RsaKeyIdentifierClause" FullName="System.IdentityModel.Tokens.RsaKeyIdentifierClause">
+  <TypeSignature Language="C#" Value="public class RsaKeyIdentifierClause : System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RsaKeyIdentifierClause extends System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.RsaKeyIdentifierClause" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schlüsselbezeichnerklausel dar, die ein <see cref="T:System.IdentityModel.Tokens.RsaSecurityToken" />-Sicherheitstoken identifiziert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel ist es nicht erforderlich, die <xref:System.IdentityModel.Tokens.RsaKeyIdentifierClause> zu verwenden, es sei denn, es wird ein benutzerdefinierter Sicherheitstokendienst erstellt. Wenn ein Sicherheitstokendienst ein Sicherheitstoken zurückgibt, enthält das ausgegebene Sicherheitstoken Verweise auf angefügte und nicht angefügte Sicherheitstoken. Angefügte Verweise beziehen sich auf Sicherheitstoken, die im Sicherheitsheader einer SOAP-Nachricht enthalten sind, während sich nicht angefügte Verweise auf Sicherheitstoken beziehen, die nicht im Sicherheitsheader der SOAP-Nachricht enthalten sind. Diese Verweise bestätigen in der Regel die Echtheit des ausgegebenen Sicherheitstokens. Verwenden Sie die <xref:System.IdentityModel.Tokens.RsaKeyIdentifierClause>-Klasse, um auf ein <xref:System.IdentityModel.Tokens.RsaSecurityToken>-Sicherheitstoken zu verweisen und um auf den RSA-Algorithmus zuzugreifen. Rufen Sie zum Zugreifen auf den RSA-Algorithmus den Wert der <xref:System.IdentityModel.Tokens.RsaKeyIdentifierClause.Rsa%2A>-Eigenschaft ab.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RsaKeyIdentifierClause (System.Security.Cryptography.RSA rsa);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.RSA rsa) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaKeyIdentifierClause.#ctor(System.Security.Cryptography.RSA)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rsa" Type="System.Security.Cryptography.RSA" />
+      </Parameters>
+      <Docs>
+        <param name="rsa">Ein <see cref="T:System.Security.Cryptography.RSA" />, der einen RSA-Algorithmus darstellt. Legt den Wert der <see cref="P:System.IdentityModel.Tokens.RsaKeyIdentifierClause.Rsa" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.RsaKeyIdentifierClause" />-Klasse unter Verwendung des angegebenen RSA-Algorithmus.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rsa" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCreateKey">
+      <MemberSignature Language="C#" Value="public override bool CanCreateKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanCreateKey" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.RsaKeyIdentifierClause.CanCreateKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Schlüssel aus der Schlüsselbezeichnerklausel erstellt werden kann.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie zum Erstellen des Schlüssels die <xref:System.IdentityModel.Tokens.RsaKeyIdentifierClause.CreateKey%2A>-Methode auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKey">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Tokens.SecurityKey CreateKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IdentityModel.Tokens.SecurityKey CreateKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaKeyIdentifierClause.CreateKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKey</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt mit dem RSA-Algorithmus einen Schlüssel.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Tokens.RsaSecurityKey" />, der ein Schlüssel ist, der mit dem im Konstruktor angegebenen RSA-Algorithmus erstellt wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExponent">
+      <MemberSignature Language="C#" Value="public byte[] GetExponent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetExponent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaKeyIdentifierClause.GetExponent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den <see langword="Exponent" />-Parameter für den RSA-Algorithmus ab.</summary>
+        <returns>Ein <see cref="T:System.Byte" />-Array, das den <see langword="Exponent" />-Parameter für den RSA-Algorithmus enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetModulus">
+      <MemberSignature Language="C#" Value="public byte[] GetModulus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetModulus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaKeyIdentifierClause.GetModulus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den <see langword="Modulus" />-Parameter für den RSA-Algorithmus ab.</summary>
+        <returns>Ein <see cref="T:System.Byte" />-Array, das den <see langword="Modulus" />-Parameter für den RSA-Algorithmus enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public override bool Matches (System.IdentityModel.Tokens.SecurityKeyIdentifierClause clause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Matches(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause clause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaKeyIdentifierClause.Matches(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="clause">To be added.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob der Schlüsselbezeichner für diese Instanz mit der angegebenen Schlüsselbezeichnerklausel übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />, falls die <paramref name="clause" /> vom Typ <see cref="T:System.IdentityModel.Tokens.RsaKeyIdentifierClause" /> ist und die Arrays, die durch die <see cref="M:System.IdentityModel.Tokens.RsaKeyIdentifierClause.GetModulus" />-Methode und die <see cref="M:System.IdentityModel.Tokens.RsaKeyIdentifierClause.GetExponent" />-Methode für den <paramref name="clause" />-Parameter ausgegeben werden, mit der aktuellen Instanz übereinstimmen, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public bool Matches (System.Security.Cryptography.RSA rsa);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Matches(class System.Security.Cryptography.RSA rsa) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaKeyIdentifierClause.Matches(System.Security.Cryptography.RSA)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rsa" Type="System.Security.Cryptography.RSA" />
+      </Parameters>
+      <Docs>
+        <param name="rsa">Ein <see cref="T:System.Security.Cryptography.RSA" />, der einen RSA-Algorithmus darstellt.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob der Schlüsselbezeichner für diese Instanz mit dem angegebenen RSA-Algorithmus übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />, wenn die Felder <see cref="F:System.Security.Cryptography.RSAParameters.Exponent" /> und <see cref="F:System.Security.Cryptography.RSAParameters.Modulus" /> des <paramref name="rsa" />-Parameters mit den Werten übereinstimmen, die von der <see cref="M:System.IdentityModel.Tokens.RsaKeyIdentifierClause.GetModulus" />-Methode und der <see cref="M:System.IdentityModel.Tokens.RsaKeyIdentifierClause.GetExponent" />-Methode für die aktuelle Instanz ausgegeben werden, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rsa">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.RSA Rsa { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.RSA Rsa" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.RsaKeyIdentifierClause.Rsa" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RSA</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den RSA-Algorithmus ab, der der Schlüsselbezeichnerklausel zugeordnet wird.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.RSA" />, der einen RSA-Algorithmus darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaKeyIdentifierClause.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle Objekt darstellt.</summary>
+        <returns>Ein <see cref="T:System.String" />, der das aktuelle Objekt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.RsaKeyIdentifierClause.ToString%2A>-Methode gibt eine Zeichenfolge zurück, die den `Modulus`-Wert und den `Exponent`-Wert für den RSA-Algorithmus enthält. Der `Modulus`-Wert und der `Exponent`-Wert stellen die Werte dar, die durch die <xref:System.IdentityModel.Tokens.RsaKeyIdentifierClause.GetModulus%2A>-Methode und die <xref:System.IdentityModel.Tokens.RsaKeyIdentifierClause.GetExponent%2A>-Methode zurückgegeben werden, die Base64-codiert sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteExponentAsBase64">
+      <MemberSignature Language="C#" Value="public void WriteExponentAsBase64 (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteExponentAsBase64(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaKeyIdentifierClause.WriteExponentAsBase64(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Xml.XmlWriter" />, um den Base64-codierten <see langword="Exponent" />-Parameter des RSA-Algorithmus zu schreiben.</param>
+        <summary>Schreibt den Base64-codierten <see langword="Exponent" />-Parameter des RSA-Algorithmus in das angegebene XML-Serialisierungsprogramm.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteModulusAsBase64">
+      <MemberSignature Language="C#" Value="public void WriteModulusAsBase64 (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteModulusAsBase64(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.RsaKeyIdentifierClause.WriteModulusAsBase64(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Xml.XmlWriter" />, um den Base64-codierten <see langword="Modulus" />-Parameter des RSA-Algorithmus zu schreiben.</param>
+        <summary>Schreibt den Base64-codierten <see langword="Modulus" />-Parameter des RSA-Algorithmus in das angegebene XML-Serialisierungsprogramm.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

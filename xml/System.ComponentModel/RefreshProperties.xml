@@ -1,0 +1,132 @@
+<Type Name="RefreshProperties" FullName="System.ComponentModel.RefreshProperties">
+  <TypeSignature Language="C#" Value="public enum RefreshProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RefreshProperties extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.RefreshProperties" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert die Bezeichner, die der den Typ der Aktualisierungsvorgang des Fensters Eigenschaften angeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.RefreshProperties>definiert die Bezeichner für die Typen der Aktualisierungsmethoden, die beim Aktualisieren der Ansicht des Fensters Eigenschaften verwendet werden können.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der Ttribute-Klasse an der Aktualisierungsmodus für eine `DataSource` Eigenschaft. Eine vollständige Codebeispiel finden Sie unter [wie: Anwenden von Attributen auf Windows Forms-Steuerelementen](~/docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+  
+ [!code-csharp[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#25)]
+ [!code-vb[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#25)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.RefreshProperties All = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.RefreshProperties.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.RefreshProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Eigenschaften erneut abgefragt werden soll, und die Ansicht aktualisiert werden sollen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.RefreshProperties None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.RefreshProperties.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.RefreshProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es ist keine Aktualisierung erforderlich.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Repaint">
+      <MemberSignature Language="C#" Value="Repaint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.RefreshProperties Repaint = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.RefreshProperties.Repaint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.RefreshProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ansicht sollte aktualisiert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der Ttribute-Klasse an der Aktualisierungsmodus für eine `DataSource` Eigenschaft. Eine vollständige Codebeispiel finden Sie unter [wie: Anwenden von Attributen auf Windows Forms-Steuerelementen](~/docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+  
+ [!code-csharp[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#25)]
+ [!code-vb[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

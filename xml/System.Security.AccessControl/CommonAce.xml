@@ -1,0 +1,167 @@
+<Type Name="CommonAce" FullName="System.Security.AccessControl.CommonAce">
+  <TypeSignature Language="C#" Value="public sealed class CommonAce : System.Security.AccessControl.QualifiedAce" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CommonAce extends System.Security.AccessControl.QualifiedAce" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.CommonAce" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.QualifiedAce</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Zugriffssteuerungseintrag (ACE) dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.AccessControl.CommonAce> Klasse darstellt, die am häufigsten verwendeten acht ACE-Typen:  
+  
+-   <xref:System.Security.AccessControl.AceType.AccessAllowed>  
+  
+-   <xref:System.Security.AccessControl.AceType.AccessAllowedCallback>  
+  
+-   <xref:System.Security.AccessControl.AceType.AccessDenied>  
+  
+-   <xref:System.Security.AccessControl.AceType.AccessDeniedCallback>  
+  
+-   <xref:System.Security.AccessControl.AceType.SystemAudit>  
+  
+-   <xref:System.Security.AccessControl.AceType.SystemAuditCallback>  
+  
+-   <xref:System.Security.AccessControl.AceType.SystemAlarm>  
+  
+-   <xref:System.Security.AccessControl.AceType.SystemAlarmCallback>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommonAce (System.Security.AccessControl.AceFlags flags, System.Security.AccessControl.AceQualifier qualifier, int accessMask, System.Security.Principal.SecurityIdentifier sid, bool isCallback, byte[] opaque);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.AccessControl.AceFlags flags, valuetype System.Security.AccessControl.AceQualifier qualifier, int32 accessMask, class System.Security.Principal.SecurityIdentifier sid, bool isCallback, unsigned int8[] opaque) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonAce.#ctor(System.Security.AccessControl.AceFlags,System.Security.AccessControl.AceQualifier,System.Int32,System.Security.Principal.SecurityIdentifier,System.Boolean,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Security.AccessControl.AceFlags" />
+        <Parameter Name="qualifier" Type="System.Security.AccessControl.AceQualifier" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="isCallback" Type="System.Boolean" />
+        <Parameter Name="opaque" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Flags, die Informationen zu Vererbung, Vererbungsweitergabe und Überwachungsbedingungen für den neuen Zugriffssteuerungseintrag (ACE) angeben.</param>
+        <param name="qualifier">Die Verwendung des neuen ACE.</param>
+        <param name="accessMask">Die Zugriffsmaske für den ACE.</param>
+        <param name="sid">Der dem neuen ACE zugeordnete <see cref="T:System.Security.Principal.SecurityIdentifier" />.</param>
+        <param name="isCallback">
+          <see langword="true" />um anzugeben, dass der neue ACE ein Rückruftyp-ACE ist.</param>
+        <param name="opaque">Dem neuen ACE zugeordnete opake Daten. Opake Daten sind nur für Rückruf-ACE-Typen zugelassen. Die Länge dieses Arrays darf nicht größer sein als der Rückgabewert der <see cref="M:System.Security.AccessControl.CommonAce.MaxOpaqueLength(System.Boolean)" />-Methode.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.AccessControl.CommonAce" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BinaryLength">
+      <MemberSignature Language="C#" Value="public override int BinaryLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BinaryLength" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CommonAce.BinaryLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge der binären Darstellung des aktuellen <see cref="T:System.Security.AccessControl.CommonAce" />-Objekts (in Bytes) ab. Verwenden Sie diese Länge in Verbindung mit der <see cref="M:System.Security.AccessControl.CommonAce.GetBinaryForm(System.Byte[],System.Int32)" />-Methode vor dem Marshallen der ACL in ein binäres Array.</summary>
+        <value>Die Länge der binären Darstellung des aktuellen <see cref="T:System.Security.AccessControl.CommonAce" />-Objekts (in Bytes).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBinaryForm">
+      <MemberSignature Language="C#" Value="public override void GetBinaryForm (byte[] binaryForm, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetBinaryForm(unsigned int8[] binaryForm, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonAce.GetBinaryForm(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binaryForm" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="binaryForm">Das Bytearray, in das der Inhalt des <see cref="T:System.Security.AccessControl.CommonAce" />-Objekts gemarshallt wird.</param>
+        <param name="offset">Der Offset, bei dem das Marshallen begonnen werden soll.</param>
+        <summary>Marshallt den Inhalt des <see cref="T:System.Security.AccessControl.CommonAce" />-Objekts in das angegebene Bytearray, wobei beim angegebenen Offset begonnen wird.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" />ist negativ oder zu hoch, um den gesamten <see cref="T:System.Security.AccessControl.CommonAce" /> kopiert werden soll die <paramref name="binaryForm" /> Array.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxOpaqueLength">
+      <MemberSignature Language="C#" Value="public static int MaxOpaqueLength (bool isCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 MaxOpaqueLength(bool isCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonAce.MaxOpaqueLength(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isCallback" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isCallback">
+          <see langword="true" />, um anzugeben, dass das <see cref="T:System.Security.AccessControl.CommonAce" />-Objekt ein Rückruf-ACE-Typ ist.</param>
+        <summary>Gibt die maximal zulässige Länge eines opaken Daten-BLOBs für Rückruf-ACEs (Access Control Entry – Zugriffssteuerungseintrag) zurück.</summary>
+        <returns>Die zulässige Länge eines opaken Daten-BLOBs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,90 @@
+<Type Name="ReadEntityBodyMode" FullName="System.Web.ReadEntityBodyMode">
+  <TypeSignature Language="C#" Value="public enum ReadEntityBodyMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ReadEntityBodyMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ReadEntityBodyMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt Konstanten an, die angeben, wie den Entitätstext einer HTTP-Anforderung gelesen wurde.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Buffered">
+      <MemberSignature Language="C#" Value="Buffered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.ReadEntityBodyMode Buffered = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.ReadEntityBodyMode.Buffered" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ReadEntityBodyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>In der Entitätstext gelesen wurden eine <see cref="T:System.IO.Stream" /> Objekt mithilfe der <see cref="M:System.Web.HttpRequest.GetBufferedInputStream" /> Methode.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bufferless">
+      <MemberSignature Language="C#" Value="Bufferless" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.ReadEntityBodyMode Bufferless = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.ReadEntityBodyMode.Bufferless" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ReadEntityBodyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>In der Entitätstext gelesen wurden eine <see cref="T:System.IO.Stream" /> Objekt mithilfe der <see cref="M:System.Web.HttpRequest.GetBufferlessInputStream" /> Methode.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Classic">
+      <MemberSignature Language="C#" Value="Classic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.ReadEntityBodyMode Classic = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.ReadEntityBodyMode.Classic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ReadEntityBodyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Entitätstext bereits gelesen wurden, und dessen Inhalt wurde abgelegt der HTTP-Anforderung Auflistungen wie <see cref="P:System.Web.HttpRequest.Form" />, <see cref="P:System.Web.HttpRequest.Files" />, <see cref="P:System.Web.HttpRequest.InputStream" />, und <see cref="M:System.Web.HttpRequest.BinaryRead(System.Int32)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im klassischer Modus gilt, wenn ASP.NET pipelineverarbeitung bereits durchgeführt wurde.  Z. B. Ausführen einer ASP.NET-Seite oder den Zugriff auf eine Eigenschaft in einer HTTP-Anforderung Sammlungen bewirkt, dass Entitätstext gelesen werden und den Textinhalt Entität werden dann in der entsprechenden Auflistung eingefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.ReadEntityBodyMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.ReadEntityBodyMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ReadEntityBodyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Entitätstext wurde nicht gelesen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

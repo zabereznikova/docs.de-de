@@ -1,0 +1,193 @@
+<Type Name="TrackingDataItemValue" FullName="System.Workflow.Runtime.Tracking.TrackingDataItemValue">
+  <TypeSignature Language="C#" Value="public class TrackingDataItemValue" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TrackingDataItemValue extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.TrackingDataItemValue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Filterkriterien für Daten, die aus einer Workflowinstanz in <see cref="T:System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions" /> extrahiert wurden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Runtime.Tracking.TrackingDataItemValue> gibt den Wert eines Datenelements an, das aus einem Workflow extrahiert wurde. Damit wird die Reihe von <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance>-Objekten eingeschränkt, die von <xref:System.Workflow.Runtime.Tracking.SqlTrackingQuery.GetWorkflows%2A?displayProperty=nameWithType> in einer von <xref:System.Workflow.Runtime.Tracking.SqlTrackingService> verwendeten Abfrage der Verfolgungsdatenbank zurückgegeben werden. Sie können <xref:System.Workflow.Runtime.Tracking.TrackingDataItemValue>-Objekte zu <xref:System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions.TrackingDataItems%2A?displayProperty=nameWithType> hinzufügen, um anzugeben, dass die Reihe von <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance>-Objekten, die von <xref:System.Workflow.Runtime.Tracking.SqlTrackingQuery.GetWorkflows%2A?displayProperty=nameWithType> zurückgegeben werden, auf diejenigen beschränkt werden soll, die die angegebene extrahierte Datenreihe besitzt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrackingDataItemValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingDataItemValue.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.TrackingDataItemValue" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor initialisiert <xref:System.Workflow.Runtime.Tracking.TrackingDataItemValue.DataValue%2A>, <xref:System.Workflow.Runtime.Tracking.TrackingDataItemValue.FieldName%2A>, und <xref:System.Workflow.Runtime.Tracking.TrackingDataItemValue.QualifiedName%2A> als NULL-Verweis (`Nothing` in Visual Basic). Sie müssen zum Konfigurieren von <xref:System.Workflow.Runtime.Tracking.TrackingDataItemValue> alle diese Eigenschaft festlegen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrackingDataItemValue (string qualifiedName, string fieldName, string dataValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string qualifiedName, string fieldName, string dataValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingDataItemValue.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="qualifiedName" Type="System.String" />
+        <Parameter Name="fieldName" Type="System.String" />
+        <Parameter Name="dataValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="qualifiedName">Der qualifizierte Name der Aktivität, aus der die Daten extrahiert wurden.</param>
+        <param name="fieldName">Der Name des Members, aus dem die Daten extrahiert wurden.</param>
+        <param name="dataValue">Eine <see langword="string" />-Darstellung des Datenwerts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.TrackingDataItemValue" />-Klasse mit dem angegebenen qualifizierten Namen einer Aktivität, dem Datenfeldnamen und einer <see langword="string" />-Darstellung eines Datenwerts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften <xref:System.Workflow.Runtime.Tracking.TrackingDataItemValue.QualifiedName%2A>, <xref:System.Workflow.Runtime.Tracking.TrackingDataItemValue.FieldName%2A> und <xref:System.Workflow.Runtime.Tracking.TrackingDataItemValue.DataValue%2A> werden in Übereinstimmung mit den Werten festgelegt, die von den entsprechenden Parametern für den Konstruktor angegeben werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Erstellen einer neuen Instanz eines <xref:System.Workflow.Runtime.Tracking.TrackingDataItemValue>-Objekts.  Dieses Beispiel stammt aus dem Workflow Monitor SDK-Beispiel.  Weitere Informationen finden Sie unter [Workflow-Monitor-Beispiels](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[WF_Samples#139](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#139)]
+ [!code-vb[WF_Samples#139](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#139)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataValue">
+      <MemberSignature Language="C#" Value="public string DataValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataValue" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingDataItemValue.DataValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see langword="string" />-Darstellung des Werts der extrahierten Daten ab oder legt sie fest.</summary>
+        <value>Eine <see langword="string" />-Darstellung des Werts der extrahierten Daten. Der Standardwert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.TrackingDataItemValue.DataValue%2A> kann ein NULL-Verweis sein (`Nothing`).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Festlegen der DataValue-Eigenschaft.  Dieses Beispiel stammt aus dem Workflow Monitor SDK-Beispiel.  Weitere Informationen finden Sie unter [Workflow-Monitor-Beispiels](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[WF_Samples#139](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#139)]
+ [!code-vb[WF_Samples#139](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#139)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldName">
+      <MemberSignature Language="C#" Value="public string FieldName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FieldName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingDataItemValue.FieldName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Aktivitätsmembers ab, aus dem die Daten extrahiert wurden, oder legt den Namen fest.</summary>
+        <value>Der Name des Aktivitätsmembers, aus der die Daten extrahiert wurden. Der Standardwert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.TrackingDataItemValue.FieldName%2A> entspricht dem in <xref:System.Workflow.Runtime.Tracking.TrackingDataItem.FieldName%2A?displayProperty=nameWithType> festgelegten Namen. <xref:System.Workflow.Runtime.Tracking.TrackingDataItemValue.FieldName%2A>  kann deshalb festgelegt werden, um Folgendes anzugeben: ein Aktivitätsfeld oder eine Aktivitätseigenschaft; einen Member eines Aktivitätsfelds oder einer Aktivitätseigenschaft; oder ein einzelnes Element eines Aktivitätsfelds oder einer Aktivitätseigenschaft (oder einen Member von beidem), mit der die <xref:System.Collections.IEnumerable>-Schnittstelle implementiert wird. Weitere Informationen finden Sie unter <xref:System.Workflow.Runtime.Tracking.TrackingDataItem.FieldName%2A?displayProperty=nameWithType>, <xref:System.Workflow.Runtime.Tracking.TrackingExtract.Member%2A?displayProperty=nameWithType>, <xref:System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract.Member%2A?displayProperty=nameWithType> oder <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract.Member%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Festlegen der FieldName-Eigenschaft.  Dieses Beispiel stammt aus dem Workflow Monitor SDK-Beispiel.  Weitere Informationen finden Sie unter [Workflow-Monitor-Beispiels](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[WF_Samples#139](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#139)]
+ [!code-vb[WF_Samples#139](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#139)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QualifiedName">
+      <MemberSignature Language="C#" Value="public string QualifiedName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string QualifiedName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingDataItemValue.QualifiedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den qualifizierten Namen des Aktivitätsmembers ab, aus dem die Daten extrahiert wurden, oder legt den Namen fest.</summary>
+        <value>Der qualifizierte Name der Aktivität, aus der die Daten extrahiert wurden. Der Standardwert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.TrackingDataItemValue.QualifiedName%2A> entspricht der <xref:System.Workflow.ComponentModel.Activity.QualifiedName%2A>-Eigenschaft der Aktivität, aus der die Daten extrahiert wurden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Festlegen der QualifiedName-Eigenschaft.  Dieses Beispiel stammt aus dem Workflow Monitor SDK-Beispiel.  Weitere Informationen finden Sie unter [Workflow-Monitor-Beispiels](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[WF_Samples#139](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#139)]
+ [!code-vb[WF_Samples#139](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#139)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

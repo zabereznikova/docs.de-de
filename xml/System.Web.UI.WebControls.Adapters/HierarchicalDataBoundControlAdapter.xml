@@ -1,0 +1,153 @@
+<Type Name="HierarchicalDataBoundControlAdapter" FullName="System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter">
+  <TypeSignature Language="C#" Value="public class HierarchicalDataBoundControlAdapter : System.Web.UI.WebControls.Adapters.WebControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HierarchicalDataBoundControlAdapter extends System.Web.UI.WebControls.Adapters.WebControlAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Adapters.WebControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Passt das Verhalten von einem <see cref="T:System.Web.UI.WebControls.HierarchicalDataBoundControl" /> -Objekt mit dem dieser Steuerelementadapter für bestimmte Browseranforderungen zugeordnet ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> Klasse passt das zugeordnete <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Steuerelement so ändern Sie die Standard-Markup oder das Verhalten für einen bestimmten Browser. Sie erweitern die <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> Klasse weiter anpassen, die Darstellung von der <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Steuerelement.  
+  
+ Ein <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Steuerelement an eine Datenquelle gebunden ist, und generiert seine Benutzeroberfläche (oder untergeordneten Hierarchie, in der Regel steuern) durch Auflisten der Elemente in der Datenquelle, an die es gebunden ist. Weitere Informationen über hierarchische datengebundene Steuerelemente finden Sie unter <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl>.  
+  
+ Steuerelementadapter sind Komponenten, die eine oder mehrere Phasen des Lebenszyklus eines Steuerelements für einen bestimmten Browser verwalten. Erweitern der <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> Klasse ermöglicht den Zugriff auf die Phasen des Lebenszyklus – von der <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Steuerelement. Weitere Informationen finden Sie unter [architektonische Overview of Adaptive Control Behavior](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff).  
+  
+ Die ursprüngliche Anforderung für einen Adapter bewirkt, dass .NET Framework, um nach einem zugeordneten Adapter für das Steuerelement suchen den Eigenschaften des anfordernden Browser. Browser-Definitionsdateien werden verwendet, durch die <xref:System.Web.HttpBrowserCapabilities> -Klasse zum Identifizieren der Merkmale des Clientbrowsers und zum Zuordnen des Adapters zum Browsertyp.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erweitern der <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> Klasse, um eine hierarchische Rendern <xref:System.Web.UI.WebControls.TreeView> Steuerelement, das gebunden ist ein <xref:System.Web.UI.WebControls.XmlDataSource> Objekt.  
+  
+ Dieses Codebeispiel enthält vier Objekte:  
+  
+-   Ein Adapter abgeleitet aus dem <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> Klasse.  
+  
+-   Die ASPX-Datei, integriert der <xref:System.Web.UI.WebControls.TreeView> -Steuerelement und den gerätespezifischen Inhalt.  
+  
+-   Eine Browserdatei, die den Adapter mit einem Gerätetyp verknüpft werden soll.  
+  
+-   Eine XML-Datei, die eine hierarchische Liste der Mitarbeiter enthält.  
+  
+ Dieses Codebeispiel besteht aus vier Codesegmente. Das erste Codesegment veranschaulicht das Erweitern der <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/CS/hierarchicaltreeviewadapter.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/VB/hierarchicaltreeviewadapter.vb#1)]  
+  
+ Das zweite Codesegment veranschaulicht das Deklarieren einer <xref:System.Web.UI.WebControls.TreeView> zum Binden an eine XML-Datenquelle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/CS/implcs.aspx#4)]
+ [!code-aspx-vb[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/VB/implvb.aspx#4)]  
+  
+ Das dritte Codesegment zeigt, wie zum Verknüpfen der <xref:System.Web.UI.WebControls.TreeView> Steuerelement mit dem benutzerdefinierten Adapter für Browser, die auf Windows CE ausgeführt wird.  
+  
+  
+  
+ Die letzte Codesegment enthält den XML-Daten, die die <xref:System.Web.UI.WebControls.TreeView> Steuerelement bindet an.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HierarchicalDataBoundControlAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt eine Instanz von der <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> Klasse. Die ursprüngliche Anforderung für einen Adapter bewirkt, dass .NET Framework, um nach einem zugeordneten Adapter für das Steuerelement den Eigenschaften des anfordernden Browsers zu suchen. Nachdem der Adapter gefunden wird, wird das Steuerelement enthält einen Verweis auf die zugeordnete Adapterinstanz in seiner <xref:System.Web.UI.Control.Adapter%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.HierarchicalDataBoundControl Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.HierarchicalDataBoundControl Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.HierarchicalDataBoundControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen stark typisierten Verweis auf die <see cref="T:System.Web.UI.WebControls.HierarchicalDataBoundControl" /> Steuerelement zugeordnete <see cref="T:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter" /> Objekt.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.HierarchicalDataBoundControl" /> der aktuellen Instanz der zugeordneten <see cref="T:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.Control%2A> Eigenschaft ermöglicht den Zugriff auf das entsprechende Steuerelement, einschließlich der zugehörigen Eigenschaften und Methoden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.Control%2A> ein stark typisiertes abzurufende <xref:System.Web.UI.WebControls.TreeView> Steuerelement. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/CS/hierarchicaltreeviewadapter.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/VB/hierarchicaltreeviewadapter.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformDataBinding">
+      <MemberSignature Language="C#" Value="protected virtual void PerformDataBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void PerformDataBinding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.PerformDataBinding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bindet die Daten in der Datenquelle des zugeordneten hierarchische datengebundenen Steuerelements an den Adapter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.PerformDataBinding%2A> Methode bindet die Daten in der angegebenen Datenquelle des zugeordneten <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> die Steuerung an die <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> Objekt. Sie überschreiben können <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.PerformDataBinding%2A> zum Ersetzen der standardmäßigen Datenbindungsfunktion des zugeordneten <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Steuerelement oder um zusätzliche Datenbindungsfunktion bereitzustellen, wenn die zugeordnete <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Steuerelement erweitert wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.PerformDataBinding%2A> Methode, um zu überprüfen der <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.DataSourceID%2A> vor dem Aufruf der übergeordneten Eigenschaft festgelegt wurde <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.PerformDataBinding%2A> Methode. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/CS/hierarchicaltreeviewadapter.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/VB/hierarchicaltreeviewadapter.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

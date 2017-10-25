@@ -1,0 +1,140 @@
+<Type Name="DirectorySecurity" FullName="System.Security.AccessControl.DirectorySecurity">
+  <TypeSignature Language="C#" Value="public sealed class DirectorySecurity : System.Security.AccessControl.FileSystemSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DirectorySecurity extends System.Security.AccessControl.FileSystemSecurity" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.DirectorySecurity" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.FileSystemSecurity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Zugriffssteuerung und die überwachungssicherheit für ein Verzeichnis. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.AccessControl.DirectorySecurity> Klasse gibt die Zugriffsrechte für ein Verzeichnis "System" und wie Zugriffsversuche überwacht werden. Diese Klasse stellt Zugriffs- und Überwachungsrichtlinien Rechte als ein Satz von Regeln dar. Jede Zugriffsregel dargestellte eine <xref:System.Security.AccessControl.FileSystemAccessRule> -Objekt, während jede Überwachungsregel entspricht ein <xref:System.Security.AccessControl.FileSystemAuditRule> Objekt.  
+  
+ Die <xref:System.Security.AccessControl.DirectorySecurity> Klasse ist eine Abstraktion der zugrunde liegenden Windows-Sicherheit-Dateisystem. In diesem System verfügt jedes Verzeichnis eine besitzerverwaltete Zugriffssteuerungsliste (DACL), die steuert, den Zugriff auf das Verzeichnis, und eine System-Zugriffssteuerungsliste (SACL), versucht der Access-Steuerelement gibt an, die überwacht werden. Die <xref:System.Security.AccessControl.FileSystemAccessRule> und <xref:System.Security.AccessControl.FileSystemAuditRule> Klassen stellen Abstraktionen von die Zugriffssteuerungseinträge (ACEs), die DACLs und SACLs bilden.  
+  
+ Die <xref:System.Security.AccessControl.DirectorySecurity> -Klasse blendet viele Details der DACLs und SACLs; Sie müssen keine ACE Sortier- oder null-DACLS kümmern.  
+  
+ Verwenden der <xref:System.Security.AccessControl.FileSecurity> -Klasse abrufen, hinzufügen oder ändern die Zugriffsregeln, die die DACL und SACL einer Datei darstellen.  
+  
+ In den folgenden Tabellen sind die Methoden, die Sie verwenden können, zugreifen und Verwalten von verzeichnissicherheit aufgeführt.  
+  
+|Aufgabe|Methoden|  
+|----------|-------------|  
+|Hinzufügen von Regeln|<xref:System.Security.AccessControl.FileSystemSecurity.AddAccessRule%2A?displayProperty=nameWithType><br /><br /> <xref:System.Security.AccessControl.FileSystemSecurity.AddAuditRule%2A?displayProperty=nameWithType>|  
+|Entfernen von Regeln|<xref:System.Security.AccessControl.FileSystemSecurity.RemoveAccessRule%2A?displayProperty=nameWithType><br /><br /> <xref:System.Security.AccessControl.FileSystemSecurity.RemoveAuditRule%2A?displayProperty=nameWithType>|  
+|Die Steuerung des Zugriffs auf ein Verzeichnis abrufen|<xref:System.IO.Directory.GetAccessControl%2A?displayProperty=nameWithType><br /><br /> <xref:System.IO.DirectoryInfo.GetAccessControl%2A?displayProperty=nameWithType>|  
+|Beibehalten der Steuerung des Zugriffs auf ein Verzeichnis|<xref:System.IO.Directory.SetAccessControl%2A?displayProperty=nameWithType><br /><br /> <xref:System.IO.DirectoryInfo.SetAccessControl%2A?displayProperty=nameWithType>|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.AccessControl.DirectorySecurity> Klasse hinzufügen und entfernen Sie dann einen Zugriffssteuerungseintrag für die Zugriffssteuerungsliste (ACL) aus einem Verzeichnis.  Sie müssen ein gültiges Benutzer- oder Gruppenkonto angeben, um dieses Beispiel auszuführen.  
+  
+ [!code-cpp[IO.DiretoryInfo.GetAccessControl-SetAccessControl#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.DiretoryInfo.GetAccessControl-SetAccessControl/cpp/sample.cpp#1)]
+ [!code-csharp[IO.DiretoryInfo.GetAccessControl-SetAccessControl#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.DiretoryInfo.GetAccessControl-SetAccessControl/CS/sample.cs#1)]
+ [!code-vb[IO.DiretoryInfo.GetAccessControl-SetAccessControl#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.DiretoryInfo.GetAccessControl-SetAccessControl/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectorySecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DirectorySecurity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.AccessControl.DirectorySecurity" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn Sie eine leere möchten <xref:System.Security.AccessControl.DirectorySecurity> -Objekt, das nicht auf ein vorhandenes Verzeichnis basiert. Sie können das-Objekt mit Informationen aufgefüllt und wenden Sie es in ein Verzeichnis.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">Das aktuelle Betriebssystem ist nicht Microsoft Windows 2000 oder höher.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectorySecurity (string name, System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.DirectorySecurity.#ctor(System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Speicherort eines Verzeichnisses zum Erstellen einer <see cref="T:System.Security.AccessControl.DirectorySecurity" /> -Objekt aus.</param>
+        <param name="includeSections">Eines der <see cref="T:System.Security.AccessControl.AccessControlSections" /> steuern Zugriffssteuerungsliste abzurufenden Informationen Werte, der den Typ des Zugriffs angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.AccessControl.DirectorySecurity" /> Klasse aus einem angegebenen Verzeichnis mithilfe des angegebenen Werts, der die <see cref="T:System.Security.AccessControl.AccessControlSections" /> Enumeration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ruft die Informationen für das angegebene Verzeichnis ab und erstellt dann ein <xref:System.Security.AccessControl.DirectorySecurity> Objekt, das die Informationen kapselt. Sie können dann überprüfen, hinzufügen oder löschen die Informationen für das angegebene Verzeichnis.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="name" />-Parameter ist eine leere Zeichenfolge, enthält nur Leerzeichen oder enthält mindestens ein ungültiges Zeichen gemäß der Definition von <see cref="F:System.IO.Path.InvalidPathChars" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="name" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig (er befindet sich z. B. auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die angegebene Datei der <paramref name="name" /> Parameter wurde nicht gefunden.</exception>
+        <exception cref="T:System.IO.IOException">E/A-Fehler beim Öffnen des Verzeichnisses.</exception>
+        <exception cref="T:System.NotSupportedException">Die <paramref name="name" /> Parameter weist ein ungültiges Format.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Das aktuelle Betriebssystem ist nicht Microsoft Windows 2000 oder höher.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Der angegebene Pfad und/oder Dateiname überschreiten die vom System definierte maximale Länge. Beispielsweise müssen auf Windows-basierten Plattformen Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen enthalten.</exception>
+        <exception cref="T:System.Security.AccessControl.PrivilegeNotHeldException">Das aktuelle Systemkonto verfügt nicht über Administratorrechte.</exception>
+        <exception cref="T:System.SystemException">Das Verzeichnis wurde nicht gefunden.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Die <paramref name="name" /> Parameter angegeben, ein Verzeichnis, die schreibgeschützt ist.  
+  
+ - oder -   
+  
+ Dieser Vorgang wird von der aktuellen Plattform nicht unterstützt.  
+  
+ - oder -  
+  
+ Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für eine Zugriffsberechtigung für das Verzeichnis, das gemäß der <paramref name="name" /> Parameter. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.NoAccess" /> ,<see cref="F:System.Security.AccessControl.AccessControlActions.View" />  
+  
+ Sicherheitsaktion: Anforderung</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

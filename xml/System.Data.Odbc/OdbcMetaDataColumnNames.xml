@@ -1,0 +1,86 @@
+<Type Name="OdbcMetaDataColumnNames" FullName="System.Data.Odbc.OdbcMetaDataColumnNames">
+  <TypeSignature Language="C#" Value="public static class OdbcMetaDataColumnNames" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit OdbcMetaDataColumnNames extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Odbc.OdbcMetaDataColumnNames" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Odbc</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt statische Werte, die für die Spaltennamen in verwendet werden die <see cref="T:System.Data.Odbc.OdbcMetaDataCollectionNames" /> enthaltenen Objekte der <see cref="T:System.Data.DataTable" />. Die <see cref="T:System.Data.DataTable" /> wird erstellt, indem die **GetSchema** Methode.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BooleanFalseLiteral">
+      <MemberSignature Language="C#" Value="public static readonly string BooleanFalseLiteral;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string BooleanFalseLiteral" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcMetaDataColumnNames.BooleanFalseLiteral" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Anhand der **GetSchema** Methode zum Erstellen der **BooleanFalseLiteral** Spalte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BooleanTrueLiteral">
+      <MemberSignature Language="C#" Value="public static readonly string BooleanTrueLiteral;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string BooleanTrueLiteral" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcMetaDataColumnNames.BooleanTrueLiteral" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Anhand der **GetSchema** Methode zum Erstellen der **BooleanTrueLiteral** Spalte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SQLType">
+      <MemberSignature Language="C#" Value="public static readonly string SQLType;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string SQLType" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Odbc.OdbcMetaDataColumnNames.SQLType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Anhand der **GetSchema** Methode zum Erstellen der **SQLType** Spalte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

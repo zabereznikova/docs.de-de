@@ -1,0 +1,331 @@
+<Type Name="GridViewUpdatedEventArgs" FullName="System.Web.UI.WebControls.GridViewUpdatedEventArgs">
+  <TypeSignature Language="C#" Value="public class GridViewUpdatedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewUpdatedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewUpdatedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.GridView.RowUpdated" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.GridView> -Steuerelement löst die <xref:System.Web.UI.WebControls.GridView.RowUpdated> Ereignis aus, wenn eine Schaltfläche "Aktualisieren" in das Steuerelement geklickt wird, aber nachdem die <xref:System.Web.UI.WebControls.GridView> Steuerelement aktualisiert den Datensatz. (Eine Schaltfläche "Aktualisieren" ist ein Schaltflächensteuerelement, dessen `CommandName` Eigenschaft auf "Update" festgelegt ist.) Sie können eine benutzerdefinierte Routine ausführen, wenn dieses Ereignis tritt auf, z. B. Überprüfen der Ergebnisse eines Updatevorgangs.  
+  
+ Ein <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs> Objekt an den Ereignishandler, können Sie bestimmen die Anzahl der betroffenen Datensätze und alle Ausnahmen, die möglicherweise aufgetreten sind, die übergeben wird. Verwenden Sie zum Bestimmen der Anzahl der Datensätze, die von der Update-Vorgang betroffen sind, die <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.AffectedRows%2A> Eigenschaft. Um zu bestimmen, ob Ausnahmen aufgetreten sind, verwenden die <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.Exception%2A> Eigenschaft. Sie können auch angeben, ob die Ausnahme im Ereignis Handler behandelt, indem wurde die <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.ExceptionHandled%2A> Eigenschaft.  
+  
+ Verwenden Sie die Feldwerte für den aktualisierten Datensatz für den Zugriff auf die <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.Keys%2A> Eigenschaft. Sie können die ursprünglichen Werte der Schlüsselfelder zugreifen, indem Sie mit der <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.OldValues%2A> Eigenschaft. Sie erreichen die aktualisierte nichtschlüssel-Feldwerte mithilfe der <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.NewValues%2A> Eigenschaften.  
+  
+ Wird standardmäßig die <xref:System.Web.UI.WebControls.GridView> steuerelementrückgabe nach einem Updatevorgang in den schreibgeschützten Modus. Wenn Sie eine Ausnahme, die während des Aktualisierungsvorgangs aufgetreten sind behandeln, können Sie behalten die <xref:System.Web.UI.WebControls.GridView> -Steuerelement in den Bearbeitungsmodus wechseln, indem Sie festlegen der <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.KeepInEditMode%2A> Eigenschaft, um `true`.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie zu bestimmen, ob eine Ausnahme während eines Updatevorgangs aufgetreten sind.  
+  
+ [!code-aspx-csharp[GridViewUpdatedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewUpdatedEventArgs/CS/gridviewupdatedeventargscs.aspx#1)]
+ [!code-aspx-vb[GridViewUpdatedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewUpdatedEventArgs/VB/gridviewupdatedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewUpdatedEventArgs (int affectedRows, Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 affectedRows, class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewUpdatedEventArgs.#ctor(System.Int32,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="affectedRows" Type="System.Int32" />
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="affectedRows">Die Anzahl der Zeilen, die von der Update-Vorgang betroffen sind.</param>
+        <param name="e">Die Ausnahme, die ausgelöst wurde, wenn der Updatevorgang ausgeführt wurde. Wenn keine Ausnahme ausgelöst wurde, verwenden Sie <see langword="null" /> für diesen Parameter.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.GridViewUpdatedEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle werden anfängliche Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs>-Klasse aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.AffectedRows%2A>|Der Wert des `affectedRows`-Parameters.|  
+|<xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.Exception%2A>|Die <xref:System.Exception?displayProperty=nameWithType> in enthaltene Objekt die `e` Parameter.|  
+|<xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.ExceptionHandled%2A>|Initialisiert auf `false`.|  
+|<xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.KeepInEditMode%2A>|Initialisiert auf `false`.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectedRows">
+      <MemberSignature Language="C#" Value="public int AffectedRows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AffectedRows" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewUpdatedEventArgs.AffectedRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Zeilen, die von der Update-Vorgang betroffen sind.</summary>
+        <value>Die Anzahl der Zeilen, die von der Update-Vorgang betroffen sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da nur ein Datensatz in der Regel aktualisiert wird, enthält diese Eigenschaft in der Regel den Wert 0 oder 1.  
+  
+ Ein Fehler kann während des Updatevorgangs auftreten, die keine Ausnahme auslöst. Sie können die <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.AffectedRows%2A> Eigenschaft, um sicherzustellen, dass ein Datensatz aktualisiert wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.AffectedRows%2A> Eigenschaft, um sicherzustellen, dass ein Datensatz aktualisiert wurde.  
+  
+ [!code-aspx-csharp[GridViewUpdatedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewUpdatedEventArgs/CS/gridviewupdatedeventargscs.aspx#1)]
+ [!code-aspx-vb[GridViewUpdatedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewUpdatedEventArgs/VB/gridviewupdatedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewUpdatedEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausnahme (falls vorhanden), die während des Aktualisierungsvorgangs ausgelöst wurde.</summary>
+        <value>Die Ausnahme, die während des Aktualisierungsvorgangs ausgelöst wurde. Wenn keine Ausnahmen ausgelöst wurden, gibt diese Eigenschaft <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Ausnahme ausgelöst wurde und Sie zur Behandlung von Ausnahmen im Ereignisprotokoll Handler festlegen, die <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.ExceptionHandled%2A> Eigenschaft `true`. Andernfalls wird die Ausnahme erneut durch die <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie zu bestimmen, ob eine Ausnahme während eines Updatevorgangs aufgetreten sind.  
+  
+ [!code-aspx-csharp[GridViewUpdatedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewUpdatedEventArgs/CS/gridviewupdatedeventargscs.aspx#1)]
+ [!code-aspx-vb[GridViewUpdatedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewUpdatedEventArgs/VB/gridviewupdatedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionHandled">
+      <MemberSignature Language="C#" Value="public bool ExceptionHandled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExceptionHandled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewUpdatedEventArgs.ExceptionHandled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Ausnahme, die während des Aktualisierungsvorgangs ausgelöst wurde im Ereignishandler behandelt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Ausnahme im Ereignishandler behandelt wurde; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn während des Aktualisierungsvorgangs eine Ausnahme ausgelöst wird, verwenden Sie die <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.ExceptionHandled%2A> Eigenschaft, um anzugeben, ob Sie die Ausnahme im Ereignishandler behandelt. Wenn diese Eigenschaft festgelegt wird, um `true`, gilt die Ausnahme behandelt und nicht erneut vom ausgelöst der <xref:System.Web.UI.WebControls.GridView> Steuerelement. Wenn diese Eigenschaft, um festgelegt wird `false`, die Ausnahme erneut ausgelöst. Um zu bestimmen, welche Ausnahme ausgelöst wurde, verwenden die <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.Exception%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, um anzugeben, dass die Ausnahme im Ereignishandler behandelt wurde.  
+  
+ [!code-aspx-csharp[GridViewUpdatedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewUpdatedEventArgs/CS/gridviewupdatedeventargscs.aspx#1)]
+ [!code-aspx-vb[GridViewUpdatedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewUpdatedEventArgs/VB/gridviewupdatedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepInEditMode">
+      <MemberSignature Language="C#" Value="public bool KeepInEditMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeepInEditMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewUpdatedEventArgs.KeepInEditMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.GridView" /> -Steuerelement nach einem Updatevorgang im Bearbeitungsmodus bleiben soll.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement im Bearbeitungsmodus nach einem Updatevorgang bleibt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Web.UI.WebControls.GridView> steuerelementrückgabe nach einem Updatevorgang in den schreibgeschützten Modus. Beibehalten der <xref:System.Web.UI.WebControls.GridView> in den Bearbeitungsmodus zu steuern, legen Sie die <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.KeepInEditMode%2A> Eigenschaft `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Web.UI.WebControls.GridView> -Steuerelement in den Bearbeitungsmodus wechseln, wenn eine Ausnahme auftritt.  
+  
+ [!code-aspx-csharp[GridViewUpdatedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewUpdatedEventArgs/CS/gridviewupdatedeventargscs.aspx#1)]
+ [!code-aspx-vb[GridViewUpdatedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewUpdatedEventArgs/VB/gridviewupdatedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewUpdatedEventArgs.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch, das Schlüsselfeld-Wert-Paare für den aktualisierten Datensatz enthält.</summary>
+        <value>Ein Wörterbuch mit Schlüsselfeld Name/Wert-Paare für den aktualisierten Datensatz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.Keys%2A> Eigenschaft, um den Zugriff auf die Werte des Schlüsselfelds für einen aktualisierten Datensatz. Diese Werte können Sie z. B. die aktualisierten Datensätze protokollieren.  
+  
+ Die <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.Keys%2A> Eigenschaft gibt ein Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary?displayProperty=nameWithType> Schnittstelle. Das Objekt enthält <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> Objekte, die die Felder der aktualisierte Datensatz darstellen.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie auch den Indexer, der die <xref:System.Collections.Specialized.IOrderedDictionary> Objekt Zugriff auf das Feld Werte direkt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie auf die Werte des Schlüsselfelds für einen aktualisierten Datensatz zugreifen.  
+  
+ [!code-aspx-csharp[GridViewUpdatedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewUpdatedEventArgs/CS/gridviewupdatedeventargscs.aspx#1)]
+ [!code-aspx-vb[GridViewUpdatedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewUpdatedEventArgs/VB/gridviewupdatedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary NewValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary NewValues" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewUpdatedEventArgs.NewValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch, das neue Feld Name/Wert-Paare für den aktualisierten Datensatz enthält.</summary>
+        <value>Ein Wörterbuch der neue Feld Name/Wert-Paare für den aktualisierten Datensatz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.NewValues%2A> Eigenschaft, um die neuen Feldwerte für den aktualisierten Datensatz zuzugreifen. Diese Werte können Sie z. B. die aktualisierten Datensätze protokollieren.  
+  
+ Die <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.NewValues%2A> Eigenschaft gibt ein Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary?displayProperty=nameWithType> Schnittstelle. Das Objekt enthält <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> Objekte, die die Felder der aktualisierte Datensatz darstellen.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie auch den Indexer, der die <xref:System.Collections.Specialized.IOrderedDictionary> Objekt Zugriff auf das Feld Werte direkt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Zugriff auf die neuen Werte für nicht-Schlüsselfelder der aktualisierte Datensatz vom Benutzer eingegeben werden.  
+  
+ [!code-aspx-csharp[GridViewUpdatedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewUpdatedEventArgs/CS/gridviewupdatedeventargscs.aspx#1)]
+ [!code-aspx-vb[GridViewUpdatedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewUpdatedEventArgs/VB/gridviewupdatedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary OldValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary OldValues" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewUpdatedEventArgs.OldValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch, das ursprüngliche Feld-Wert-Paare für den aktualisierten Datensatz enthält.</summary>
+        <value>Ein Wörterbuch der ursprünglichen Feld Name/Wert-Paare für den aktualisierten Datensatz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.OldValues%2A> Eigenschaft, um die ursprünglichen Feldwerte für den aktualisierten Datensatz zuzugreifen. Diese Werte können Sie z. B. die aktualisierten Datensätze protokollieren.  
+  
+ Die <xref:System.Web.UI.WebControls.GridViewUpdatedEventArgs.OldValues%2A> Eigenschaft gibt ein Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary?displayProperty=nameWithType> Schnittstelle. Das Objekt enthält <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> Objekte, die die Felder der der aktualisierte Datensatz mit den ursprünglichen Werten darstellen.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie auch den Indexer, der die <xref:System.Collections.Specialized.IOrderedDictionary> Objekt Zugriff auf das Feld Werte direkt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie auf die ursprünglichen Werte der Felder nicht-Schlüssel für den aktualisierten Datensatz zugreifen.  
+  
+ [!code-aspx-csharp[GridViewUpdatedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewUpdatedEventArgs/CS/gridviewupdatedeventargscs.aspx#1)]
+ [!code-aspx-vb[GridViewUpdatedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewUpdatedEventArgs/VB/gridviewupdatedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

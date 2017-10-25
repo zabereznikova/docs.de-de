@@ -1,0 +1,179 @@
+<Type Name="XmlSerializerFormatAttribute" FullName="System.ServiceModel.XmlSerializerFormatAttribute">
+  <TypeSignature Language="C#" Value="public sealed class XmlSerializerFormatAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlSerializerFormatAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.XmlSerializerFormatAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method | System.AttributeTargets.Interface, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Weist die Infrastruktur der Windows Communication Foundation (WCF) verwenden die <see cref="T:System.Xml.Serialization.XmlSerializer" /> statt der <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut weist Ähnlichkeiten mit dem <xref:System.ServiceModel.DataContractFormatAttribute>-Attribut auf. Beide Attribute können auf eine Methode, Klasse oder Schnittstelle angewendet werden.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]die <xref:System.Xml.Serialization.XmlSerializer>, finden Sie unter [verwenden der XmlSerializer-Klasse](~/docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+  
+ Eine Methode kann das eine oder das andere der zwei Attribute zugewiesen werden, es können jedoch nicht beide zugewiesen werden. Jeder Vorgang, dem keines der Attribute zugewiesen ist, verwendet das auf die enthaltende Klasse angewendete Attribut. Wenn auf die enthaltende Klasse kein Attribut angewendet ist, wird der <xref:System.Runtime.Serialization.DataContractSerializer> verwendet.  
+  
+ Mit der Anwendung des Attributs wird zur Laufzeit ein <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> erstellt. Das Verhalten ermöglicht die Anpassung des Serialisierungsprogrammverhaltens während der Laufzeit.  
+  
+   
+  
+## Examples  
+ Im folgendem Beispiel wird der <xref:System.ServiceModel.XmlSerializerFormatAttribute> auf eine Schnittstelle angewendet.  
+  
+ [!code-csharp[XmlSerializerFormatAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/xmlserializerformatattribute/cs/xmlserializerformat_example.cs#1)]
+ [!code-vb[XmlSerializerFormatAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/xmlserializerformatattribute/vb/xmlserializerformat_example.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSerializerFormatAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.XmlSerializerFormatAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.XmlSerializerFormatAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.OperationFormatStyle Style { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.OperationFormatStyle Style" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.XmlSerializerFormatAttribute.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.OperationFormatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das SOAP-Format von <see cref="T:System.Xml.Serialization.XmlSerializer" /> ab oder legt es fest.</summary>
+        <value>Einer der <see cref="T:System.ServiceModel.OperationFormatStyle" />-Werte. Die Standardeinstellung ist <see cref="F:System.ServiceModel.OperationFormatStyle.Document" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A>-Eigenschaft und die <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A>-Eigenschaft beeinflussen die Formatierung von Nachrichten.  
+  
+   
+  
+## Examples  
+ Ein vollständiges Beispiel finden Sie unter [festlegen, die Verwendung und die Stileigenschaften](~/docs/framework/wcf/samples/setting-the-use-and-style-properties.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportFaults">
+      <MemberSignature Language="C#" Value="public bool SupportFaults { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportFaults" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.XmlSerializerFormatAttribute.SupportFaults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, dass <see cref="T:System.Xml.Serialization.XmlSerializer" /> zum Lesen und Schreiben von Fehlern verwendet werden soll.</summary>
+        <value>
+          <see langword="true" />, falls <see cref="T:System.Xml.Serialization.XmlSerializer" /> zum Lesen und Schreiben von Fehlern verwendet werden soll; <see langword="false" />, falls <see cref="T:System.Runtime.Serialization.DataContractSerializer" /> verwendet werden soll. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardformatierungsprogramm für die Fehlerserialisierung ist der <xref:System.Runtime.Serialization.DataContractSerializer>. Zur Verwendung von <xref:System.Xml.Serialization.XmlSerializer> legen Sie diese Eigenschaft auf `true` fest. Beim Starten in .NET 4 wird das von der <xref:System.ServiceModel.XmlSerializerFormatAttribute.SupportFaults%2A>-Eigenschaft festgelegte Serialisierungsprogramm auch dann verwendet, wenn ein benutzerdefiniertes Verhalten im Vertrag festgelegt ist, auf den das <xref:System.ServiceModel.XmlSerializerFormatAttribute> angewendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Use">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.OperationFormatUse Use { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.OperationFormatUse Use" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.XmlSerializerFormatAttribute.Use" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.OperationFormatUse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der das zu verwendende Format angibt, oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.ServiceModel.OperationFormatUse" />-Werte. Die Standardeinstellung ist <see cref="F:System.ServiceModel.OperationFormatUse.Literal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A>-Eigenschaft und die <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A>-Eigenschaft beeinflussen die Formatierung von Nachrichten.  
+  
+   
+  
+## Examples  
+ Ein vollständiges Beispiel finden Sie unter [festlegen, die Verwendung und die Stileigenschaften](~/docs/framework/wcf/samples/setting-the-use-and-style-properties.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

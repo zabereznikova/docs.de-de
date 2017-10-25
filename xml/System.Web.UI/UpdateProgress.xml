@@ -1,0 +1,645 @@
+<Type Name="UpdateProgress" FullName="System.Web.UI.UpdateProgress">
+  <TypeSignature Language="C#" Value="public class UpdateProgress : System.Web.UI.Control, System.Web.UI.IAttributeAccessor, System.Web.UI.IScriptControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UpdateProgress extends System.Web.UI.Control implements class System.Web.UI.IAttributeAccessor, class System.Web.UI.IScriptControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.UpdateProgress" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IAttributeAccessor</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IScriptControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("AssociatedUpdatePanelID")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.UpdateProgressDesigner, System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(EmbeddedResourceFinder), "System.Web.Resources.UpdateProgress.bmp")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt visuelles Feedback im Browser bei den Inhalt von einem oder mehreren <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelemente aktualisiert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [Zuordnen eines UpdateProgress zu einem UpdatePanel-Steuerelement](#associating_an_updateprogress_with_an_updatepanel_control)  
+  
+-   [Angeben des Inhalts des UpdateProgress-Steuerelements](#specifying_the_content_of_the_updateprogress_control)  
+  
+-   [UpdateProgress-Steuerelemente auf der Seite einfügen](#putting_updateprogress_controls_on_the_page)  
+  
+-   [Anpassen, wenn UpdateProgress-Steuerelementen angezeigt werden](#customizing_when_updateprogress_controls_are_displayed)  
+  
+-   [Anwenden von CSS-Stilen](#applying_styles)  
+  
+-   [Deklarationssyntax](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Die <xref:System.Web.UI.UpdateProgress> Steuerelement können Sie zum Bereitstellen von Feedback über den Status des Teilrenderings von Seiten. Für Postbacks oder beim ersten Seitenrendering <xref:System.Web.UI.UpdateProgress> Steuerelementinhalt wird nicht angezeigt.  
+  
+ Die Seite kann mehrere enthalten <xref:System.Web.UI.UpdateProgress> Steuerelemente. Jeweils durch ein anderes zugeordnet werden <xref:System.Web.UI.UpdatePanel> Steuerelement. Alternativ können Sie eine <xref:System.Web.UI.UpdateProgress> steuern und alle Zuordnen der <xref:System.Web.UI.UpdatePanel> Steuerelemente auf der Seite.  
+  
+ Die <xref:System.Web.UI.UpdateProgress> -Steuerelement rendert eine `div` Element, das angezeigt oder ausgeblendet wird je nach dem Ursprung des Postbacks und, ob die <xref:System.Web.UI.UpdateProgress.AssociatedUpdatePanelID%2A> Eigenschaft von der <xref:System.Web.UI.UpdateProgress> Steuerelement festgelegt ist.  
+  
+<a name="associating_an_updateprogress_with_an_updatepanel_control"></a>   
+## <a name="associating-an-updateprogress-with-an-updatepanel-control"></a>Zuordnen eines UpdateProgress zu einem UpdatePanel-Steuerelement  
+ Ordnen Sie <xref:System.Web.UI.UpdateProgress> mit steuert ein <xref:System.Web.UI.UpdatePanel> Steuerelement durch Festlegen der <xref:System.Web.UI.UpdateProgress.AssociatedUpdatePanelID%2A> Eigenschaft von der <xref:System.Web.UI.UpdateProgress> Steuerelement. Wenn ein Postbackereignis stammt innerhalb einer <xref:System.Web.UI.UpdatePanel> steuern, die alle zugeordneten <xref:System.Web.UI.UpdateProgress> Steuerelemente angezeigt werden. Wenn Sie nicht festlegen, die <xref:System.Web.UI.UpdateProgress.AssociatedUpdatePanelID%2A> -Eigenschaft, die <xref:System.Web.UI.UpdateProgress> Steuerelement zeigt den Status eines asynchronen Postbacks an, die von innerhalb einer stammt <xref:System.Web.UI.UpdatePanel> Steuerelement. Es ist auch für alle Steuerelemente angezeigt, die Trigger für Bereiche sind.  
+  
+ Die <xref:System.Web.UI.UpdateProgress.AssociatedUpdatePanelID%2A> Eigenschaft hat folgenden Effekt auf <xref:System.Web.UI.UpdateProgress> Verhalten steuern:  
+  
+-   Wenn die <xref:System.Web.UI.UpdateProgress.AssociatedUpdatePanelID%2A> Eigenschaft nicht festgelegt ist, die <xref:System.Web.UI.UpdateProgress> Steuerelement wird für die folgenden Postbacks angezeigt:  
+  
+    -   Postbacks, aus einem beliebigen stammen <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+    -   Postbacks, die aus Steuerelementen stammen, die asynchrone Trigger für eine beliebige <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+-   Wenn die <xref:System.Web.UI.UpdateProgress.AssociatedUpdatePanelID%2A> Eigenschaft auf festgelegt ist ein <xref:System.Web.UI.UpdatePanel> Steuerelement-ID, die <xref:System.Web.UI.UpdateProgress> Steuerelement wird angezeigt, für Postbacks, aus dem zugeordneten stammen <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+ Wenn die <xref:System.Web.UI.UpdateProgress.AssociatedUpdatePanelID%2A> Eigenschaftensatz ein Steuerelement, das nicht vorhanden ist, wird die <xref:System.Web.UI.UpdateProgress> Steuerelement wird nie angezeigt.  
+  
+ Wenn die <xref:System.Web.UI.UpdatePanel.ChildrenAsTriggers%2A> Eigenschaft von der <xref:System.Web.UI.UpdatePanel> Steuerelemente auf festgelegt ist `false` und ein Postback stammt aus innerhalb einer <xref:System.Web.UI.UpdatePanel> steuern, die alle zugeordneten <xref:System.Web.UI.UpdateProgress> Steuerelemente weiterhin angezeigt.  
+  
+<a name="specifying_the_content_of_the_updateprogress_control"></a>   
+## <a name="specifying-the-content-of-the-updateprogress-control"></a>Angeben des Inhalts des UpdateProgress-Steuerelements  
+ Verwenden der <xref:System.Web.UI.UpdateProgress.ProgressTemplate%2A> Eigenschaft, um die Nachricht anzugeben, die vom angezeigt wird ein <xref:System.Web.UI.UpdateProgress> Steuerelement. Wenn die <xref:System.Web.UI.UpdateProgress.ProgressTemplate%2A> -Eigenschaft leer ist, wird nichts angezeigt, wenn die <xref:System.Web.UI.UpdateProgress> Steuerelement angezeigt wird.  
+  
+ Die Vorlage kann HTML und Markup enthalten. Sie können z. B. eine animierte Grafik anzeigen, die den Benutzer benachrichtigt werden, den das Postback verarbeitet wird. Sie können auch eine Schaltfläche angezeigt, die der Benutzer klicken kann, um das Teilrendering von Seiten Update zu beenden. Darüber hinaus möchten Sie alle anderen Postbacks zu verhindern, dass während einer ausgeführt wird. Das folgende Beispiel zeigt die Clientskript, das Sie für diese Aufgaben verwenden können.  
+  
+ [!code-aspx-csharp[System.Web.UI.UpdateProgress4#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.UpdateProgress4/CS/default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.UpdateProgress4#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.UpdateProgress4/VB/default.aspx#1)]  
+  
+ Können Sie den Beispielcode durch Festlegen der `onClick` Attribut des ein `HtmlButton` Steuerelement "AbortPostBack ()". Weitere Informationen finden Sie unter der Methode und die Eigenschaft der Klasse.  
+  
+<a name="putting_updateprogress_controls_on_the_page"></a>   
+## <a name="putting-updateprogress-controls-on-the-page"></a>UpdateProgress-Steuerelemente auf der Seite einfügen  
+ <xref:System.Web.UI.UpdateProgress>Steuerelemente kann innerhalb oder außerhalb von anderen <xref:System.Web.UI.UpdatePanel> Steuerelemente. Die Anzeige von der <xref:System.Web.UI.UpdateProgress> Vorlage des Steuerelements ist nicht abhängig, wo die <xref:System.Web.UI.UpdateProgress> Steuerelement befindet. In einem geschachtelten <xref:System.Web.UI.UpdatePanel> -Steuerelement, ein untergeordneten Bereich befindet sich in einem übergeordneten Bereich. In diesem Fall ein Postback, die von dem untergeordneten Bereich stammt bewirkt, dass alle <xref:System.Web.UI.UpdateProgress> Kontrollen hinsichtlich der untergeordneten Bereich und der übergeordnete Bereich angezeigt werden. Wenn ein Postback aus einem direkten untergeordneten Steuerelement des übergeordneten Bereichs, nur stammt die <xref:System.Web.UI.UpdateProgress> Steuerelemente, die dem übergeordneten Bereich zugeordnet sind, werden angezeigt.  
+  
+<a name="customizing_when_updateprogress_controls_are_displayed"></a>   
+## <a name="customizing-when-updateprogress-controls-are-displayed"></a>Anpassen, wenn UpdateProgress-Steuerelementen angezeigt werden  
+ Wird standardmäßig die <xref:System.Web.UI.UpdateProgress> Steuerelement wartet auf 0,5 Sekunden (500 Millisekunden), bevor sie dessen Inhalt angezeigt wird. Dadurch wird verhindert, dass das Steuerelement blinkt, wenn ein asynchrones Postbacks sehr schnell ist. Geben Sie die Verzögerung durch Festlegen der <xref:System.Web.UI.UpdateProgress.DisplayAfter%2A> Eigenschaft.  
+  
+ Ggf. eine genauere Kontrolle darüber, wann ein <xref:System.Web.UI.UpdateProgress> Steuerelement angezeigt wird, können Sie Clientskripts für Bereitstellen der und Ereignisse der-Klasse. In der `beginRequest` Ereignishandler, d. h. Sie können das DOM-Element, dargestellt Anzeigen der <xref:System.Web.UI.UpdateProgress> Steuerelement. In der `endRequest` Ereignishandler, d. h. Sie können es ausblenden.  
+  
+ Geben Sie Clientskripts zum Anzeigen einer <xref:System.Web.UI.UpdateProgress> gesteuert werden, wenn ein Ziel <xref:System.Web.UI.UpdatePanel> Steuerelement wird in den folgenden Umständen aktualisiert:  
+  
+-   Wenn ein Postback aus einem Steuerelement wird als asynchroner Postbacks Trigger für den Bereich registriert, und ein <xref:System.Web.UI.UpdateProgress> Steuerelement auf der Seite. Allerdings die <xref:System.Web.UI.UpdateProgress.AssociatedUpdatePanelID%2A> Eigenschaft nicht auf die ID des Bereichs festgelegt ist  
+  
+-   Wenn Postbacks von Steuerelementen als asynchrone postback-Steuerelemente mit registriert sind die <xref:System.Web.UI.ScriptManager.RegisterAsyncPostBackControl%2A> Methode der <xref:System.Web.UI.ScriptManager> Steuerelement.  
+  
+<a name="applying_styles"></a>   
+## <a name="applying-css-styles"></a>Anwenden von CSS-Stilen  
+ Die <xref:System.Web.UI.UpdateProgress> Steuerelement akzeptiert Expando-Attributen. Dadurch möglich, eine CSS-Klasse für die HTMLelements festzulegen, die den Steuerelementen so gerendert werden. Beispielsweise können Sie das Markup, das im folgenden Beispiel gezeigt erstellen:  
+  
+```  
+<asp:UpdateProgress runat="server" class="myStyle">  
+</asp: UpdateProgress>   
+```  
+  
+ Das Markup im vorherigen Beispiel wird HTML ähnlich der folgenden gerendert, wenn die Seite ausgeführt wird:  
+  
+```  
+<div id="ctl00_MainContent_UpdateProgress1" class="myStyle">  
+</div>  
+```  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:UpdateProgress  
+    AssociatedUpdatePanelID="string"  
+    DisplayAfter="integer"  
+    DynamicLayout="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Visible="True|False"  
+>  
+        <ProgressTemplate>  
+            <!-- child controls -->  
+        </ProgressTemplate>  
+</asp:UpdateProgress>  
+```  
+  
+   
+  
+## Examples  
+ Die folgenden Beispiele zeigen verschiedene Möglichkeiten zum Verwenden der <xref:System.Web.UI.UpdateProgress> Steuerelement zum Anzeigen des Status bei asynchronen Postbacks.  
+  
+ Das folgende Beispiel zeigt einen <xref:System.Web.UI.UpdateProgress> Steuerelement, das Statusanzeigen "Status" für zwei <xref:System.Web.UI.UpdatePanel> Steuerelemente.  
+  
+ [!code-aspx-csharp[System.Web.UI.UpdateProgress1#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.UpdateProgress1/CS/default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.UpdateProgress1#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.UpdateProgress1/VB/default.aspx#1)]  
+  
+ Dieses Beispiel zeigt zwei <xref:System.Web.UI.UpdateProgress> Steuerelemente. Jedes Steuerelement zeigt die Fortschrittsanzeige für eine verknüpfte <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.UpdateProgress2#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.UpdateProgress2/CS/default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.UpdateProgress2#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.UpdateProgress2/VB/default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpdateProgress ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdateProgress.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.UpdateProgress" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer <xref:System.Web.UI.UpdateProgress> dynamisch steuern, erstellen Sie eine benutzerdefinierte Vorlage, die von erben die <xref:System.Web.UI.ITemplate> Steuerelement. Sie geben Markup in der <xref:System.Web.UI.ITemplate.InstantiateIn%2A> -Methode, und legen Sie anschließend die <xref:System.Web.UI.UpdateProgress.ProgressTemplate%2A> -Eigenschaft des dynamisch erstellten <xref:System.Web.UI.UpdateProgress> Steuerelement an eine neue Instanz der benutzerdefinierten Vorlage. Beim Erstellen von <xref:System.Web.UI.UpdateProgress> -Steuerelemente dynamisch, müssen Sie dies tun, bevor oder während der <xref:System.Web.UI.Control.PreRender> -Ereignis für die Seite. Bei Erstellung der <xref:System.Web.UI.UpdateProgress> Steuerelement später im Lebenszyklus Seite ", Status wird nicht angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedUpdatePanelID">
+      <MemberSignature Language="C#" Value="public string AssociatedUpdatePanelID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssociatedUpdatePanelID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdateProgress.AssociatedUpdatePanelID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.UpdateProgressAssociatedUpdatePanelIDConverter")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.IDReferenceProperty(typeof(System.Web.UI.UpdatePanel))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ID des dem <see cref="T:System.Web.UI.UpdatePanel" /> zu steuern, die die <see cref="T:System.Web.UI.UpdateProgress" /> Steuerelement zeigt den Status.</summary>
+        <value>Die ID des zugeordneten <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist eine leere Zeichenfolge ist, dies bedeutet, dass die <xref:System.Web.UI.UpdateProgress> Steuerelement ist nicht verknüpft mit einem bestimmten <xref:System.Web.UI.UpdatePanel> Steuerelement. Deshalb asynchrone Postbacks durchlässt, die von innerhalb einer <xref:System.Web.UI.UpdatePanel> Steuerelement oder Postbacks von Steuerelementen, die Trigger für die Ursache Bereich sind die <xref:System.Web.UI.UpdateProgress> -Steuerelement zum Anzeigen seiner <xref:System.Web.UI.UpdateProgress.ProgressTemplate%2A> Inhalt.  
+  
+ Sie können festlegen, die <xref:System.Web.UI.UpdateProgress.AssociatedUpdatePanelID%2A> -Eigenschaft für Steuerelemente, die in den gleichen Benennungscontainer, in einem übergeordneten Benennungscontainer oder auf der Seite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Web.UI.AttributeCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.AttributeCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdateProgress.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.WebSysDescription("WebControl_Attributes")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie cascading Style Sheet (CSS) Attribute des der <see cref="T:System.Web.UI.UpdateProgress" /> Steuerelement.</summary>
+        <value>Die Namen der CSS-Attributs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.ControlCollection Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlCollection Controls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdateProgress.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.ControlCollection" /> steuert-Objekt, das untergeordnete Element darstellt, der die <see cref="T:System.Web.UI.UpdateProgress" /> Steuerelement.</summary>
+        <value>Die Auflistung der untergeordneten Steuerelemente für die <see cref="T:System.Web.UI.UpdateProgress" /> Steuerelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdateProgress.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, so erstellen Sie eine beliebige untergeordnete Steuerelemente, die <see cref="T:System.Web.UI.UpdateProgress" /> Steuerelement enthält, als Vorbereitung für das Postback oder Rendering.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="public override void DataBind ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DataBind() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdateProgress.DataBind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bindet eine Datenquelle an das <see cref="T:System.Web.UI.UpdateProgress" /> -Steuerelement und alle untergeordneten Steuerelemente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayAfter">
+      <MemberSignature Language="C#" Value="public int DisplayAfter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DisplayAfter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdateProgress.DisplayAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(500)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert in Millisekunden, bevor die <see cref="T:System.Web.UI.UpdateProgress" /> Steuerelement angezeigt wird.</summary>
+        <value>Eine ganze Zahl, die für die Anzahl der Millisekunden, bevor die <see cref="T:System.Web.UI.UpdateProgress" /> Fortschritt-Vorlage des Steuerelements wird angezeigt. Der Standardwert ist 500 Millisekunden (0,5 Sekunden).</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.Web.UI.UpdateProgress.DisplayAfter" /> -Eigenschaft ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DynamicLayout">
+      <MemberSignature Language="C#" Value="public bool DynamicLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DynamicLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdateProgress.DynamicLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob die Vorlage für die Bearbeitung dynamisch gerendert wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Vorlage für die Bearbeitung dynamisch gerendert wird; andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdateProgress.DynamicLayout%2A> Eigenschaft bestimmt, ob Speicherplatz für die Bearbeitung der Vorlage-Inhalt auf der Seite zugeordnet ist, nur, wenn er benötigt wird.  
+  
+ Wenn die <xref:System.Web.UI.UpdateProgress.DynamicLayout%2A> Eigenschaft ist `true`, wird kein Speicherplatz für die Bearbeitung der Vorlage-Inhalt zugewiesen, wenn die Seite gerendert wird. Stattdessen wird die Seite dynamisch geändert, um den Inhalt anzuzeigen, wenn er benötigt wird. In der `style` Eigenschaft von der `div` Element, das die Statusvorlage in der gerenderten Markups enthält die `display` -Attributsatz zur `none`.  
+  
+ Wenn die <xref:System.Web.UI.UpdateProgress.DynamicLayout%2A> Eigenschaft ist `false`, Speicherplatz für die Bearbeitung der Vorlage-Inhalt erhält, wenn zuerst die Seite gerendert wird, und die <xref:System.Web.UI.UpdateProgress> Steuerelementinhalt wird physisch als Teil des Seitenlayouts. In der `style` Eigenschaft von der `div` Element, das die Statusvorlage in der gerenderten Markups enthält die `display` -Attributsatz zur `block`, und die `visibility` Attribut ist anfänglich auf festgelegt `hidden`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScriptDescriptors">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt; GetScriptDescriptors ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptDescriptor&gt; GetScriptDescriptors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdateProgress.GetScriptDescriptors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Web.UI.UpdateProgress/&lt;GetScriptDescriptors&gt;d__29))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Liste der Komponenten, Verhalten und Client Steuerelemente erforderlich, damit die <see cref="T:System.Web.UI.UpdateProgress" /> Clientfunktionen des Steuerelements.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerable" /> Sammlung mit <see cref="T:System.Web.UI.ScriptDescriptor" /> Objekte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdateProgress> Steuerelement erfordert die [!INCLUDE[atlaslib_current_ext](~/includes/atlaslib-current-ext-md.md)] -Clientbibliothek. Diese Clientklasse wird registriert, der <xref:System.Web.UI.UpdateProgress.GetScriptDescriptors%2A> Methode und die <xref:System.Web.UI.UpdateProgress.AssociatedUpdatePanelID%2A>, <xref:System.Web.UI.UpdateProgress.DisplayAfter%2A>, und <xref:System.Web.UI.UpdateProgress.DynamicLayout%2A> Eigenschaftswerte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScriptReferences">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt; GetScriptReferences ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptReference&gt; GetScriptReferences() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdateProgress.GetScriptReferences" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Web.UI.UpdateProgress/&lt;GetScriptReferences&gt;d__28))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Liste von Clientskripts für bibliotheksabhängigkeiten der <see cref="T:System.Web.UI.UpdateProgress" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerable" /> Sammlung mit <see cref="T:System.Web.UI.ScriptReference" /> Objekte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdateProgress> Steuerelement verfügt nicht über alle Server Scriptdependencies.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdateProgress.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProgressTemplate">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ITemplate ProgressTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate ProgressTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdateProgress.ProgressTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage, die den Inhalt des definiert die <see cref="T:System.Web.UI.UpdateProgress" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ITemplate" /> -Instanz, die den Inhalt des definiert die <see cref="T:System.Web.UI.UpdateProgress" /> Steuerelement. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Vorlage muss definiert sein. Andernfalls wird eine Ausnahme ausgelöst, während die <xref:System.Web.UI.UpdateProgress> des Steuerelements `Init` Ereignis. Sie können angeben, die <xref:System.Web.UI.UpdateProgress.ProgressTemplate%2A> Eigenschaft deklarativ durch Markup Hinzufügen der `ProgressTemplate` Element. Es ist kein Markup in der `ProgressTemplate` Element, wird nichts für angezeigt der <xref:System.Web.UI.UpdateProgress> Steuerelement.  
+  
+ Wenn für die Erstellung <xref:System.Web.UI.UpdateProgress> dynamisch Steuerelemente können, erstellen Sie eine benutzerdefinierte Vorlage, die von erben die <xref:System.Web.UI.ITemplate> Steuerelement. Sie geben Markup in der <xref:System.Web.UI.ITemplate.InstantiateIn%2A> -Methode, und legen Sie anschließend die <xref:System.Web.UI.UpdateProgress.ProgressTemplate%2A> -Eigenschaft des dynamisch erstellten <xref:System.Web.UI.UpdateProgress> Steuerelement an eine neue Instanz der benutzerdefinierten Vorlage. Bei Erstellung <xref:System.Web.UI.UpdateProgress> Steuerelemente dynamisch tun während oder vor dem <xref:System.Web.UI.Control.PreRender> -Ereignis für die Seite. Bei Erstellung der <xref:System.Web.UI.UpdateProgress> Steuerelement später im Lebenszyklus Seite ", Status wird nicht angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdateProgress.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein Objekt, das den Ausgabestream zum Rendern von HTML-Inhalte darstellt.</param>
+        <summary>Schreibt den gerenderten Inhalt der <see cref="T:System.Web.UI.UpdateProgress" /> Steuerelement an den Browser mit dem bereitgestellten <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdateProgress.Render%2A> Methode wird von Steuerelemententwicklern verwendet, zum Erweitern der Funktionalität von der <xref:System.Web.UI.UpdateProgress> Steuerelement.  
+  
+ Die <xref:System.Web.UI.UpdateProgress.Render%2A> Methode schreibt den gerenderten Inhalt der <xref:System.Web.UI.UpdateProgress> Steuerelement an den Browser mit dem bereitgestellten <xref:System.Web.UI.HtmlTextWriter> Objekt. Beim Überschreiben der <xref:System.Web.UI.UpdateProgress.Render%2A> Methodenaufruf in einer abgeleiteten Klasse der Basisklasse <xref:System.Web.UI.UpdateProgress.Render%2A> Methode, damit die untergeordneten Steuerelemente den <xref:System.Web.UI.UpdateProgress> Steuerelement gerendert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IAttributeAccessor.GetAttribute">
+      <MemberSignature Language="C#" Value="string IAttributeAccessor.GetAttribute (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.Web.UI.IAttributeAccessor.GetAttribute(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdateProgress.System#Web#UI#IAttributeAccessor#GetAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des Attributs, das zurückgegeben werden soll.</param>
+        <summary>Gibt ein Attribut des ein Websteuerelement mit dem angegebenen Namen zurück.</summary>
+        <returns>Der Wert des Attributs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.UpdateProgress>-Instanz in eine <xref:System.Web.UI.IAttributeAccessor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IAttributeAccessor.SetAttribute">
+      <MemberSignature Language="C#" Value="void IAttributeAccessor.SetAttribute (string key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IAttributeAccessor.SetAttribute(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdateProgress.System#Web#UI#IAttributeAccessor#SetAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des festzulegenden Attributs.</param>
+        <param name="value">Der Wert des festzulegenden Attributs.</param>
+        <summary>Legt den Wert des angegebenen Benutzersteuerelement-Attributs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.UpdateProgress>-Instanz in eine <xref:System.Web.UI.IAttributeAccessor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IScriptControl.GetScriptDescriptors">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt; IScriptControl.GetScriptDescriptors ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptDescriptor&gt; System.Web.UI.IScriptControl.GetScriptDescriptors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdateProgress.System#Web#UI#IScriptControl#GetScriptDescriptors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IScriptControl.GetScriptDescriptors" />.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.Web.UI.ScriptDescriptor" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.UpdateProgress>-Instanz in eine <xref:System.Web.UI.IScriptControl>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IScriptControl.GetScriptReferences">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt; IScriptControl.GetScriptReferences ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptReference&gt; System.Web.UI.IScriptControl.GetScriptReferences() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdateProgress.System#Web#UI#IScriptControl#GetScriptReferences" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IScriptControl.GetScriptReferences" />.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.Web.UI.ScriptReference" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.UpdateProgress>-Instanz in eine <xref:System.Web.UI.IScriptControl>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

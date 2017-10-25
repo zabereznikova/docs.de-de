@@ -1,0 +1,399 @@
+<Type Name="WeakReference" FullName="System.WeakReference">
+  <TypeSignature Language="C#" Value="public class WeakReference : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit WeakReference extends System.Object implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.WeakReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen schwachen Verweis dar. Dieser verweist auf ein Objekt, ohne jedoch dessen Freigabe durch die Garbage Collection zu verhindern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein schwacher Verweis ermöglicht den Garbage Collector auf ein Objekt zu sammeln, während noch eine Anwendung Zugriff auf das Objekt. Wenn Sie das Objekt benötigen, können Sie einen starken Verweis darauf zu erhalten und verhindern, dass Sie gesammelt werden. Weitere Informationen zur Verwendung und lange schwache Verweise finden Sie unter [schwache Verweise](~/docs/standard/garbage-collection/weak-references.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie Sie schwache Verweise können auf um einen Cache von Objekten als Ressource für eine Anwendung zu verwalten. Der Cache wird unter Verwendung erstellt ein <xref:System.Collections.Generic.IDictionary%602> der <xref:System.WeakReference> Objekte, die einen Indexwert geordnet. Die <xref:System.WeakReference.Target%2A> -Eigenschaft für die <xref:System.WeakReference> Objekte ist ein Objekt in ein Bytearray, das Daten darstellt.  
+  
+ Im Beispiel greift nach dem Zufallsprinzip auf Objekte im Cache. Wenn ein Objekt für die Garbagecollection wieder zugänglich gemacht wird, wird ein neues Datenobjekt regeneriert; Andernfalls ist das Objekt aufgrund der schwache Verweis Zugriff zur Verfügung.  
+  
+ [!code-csharp[WeakReference#1](~/samples/snippets/csharp/VS_Snippets_CLR/WeakReference/cs/program.cs#1)]
+ [!code-vb[WeakReference#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/WeakReference/vb/Module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit, nicht verwalteten Code aufrufen. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WeakReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.WeakReference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WeakReference (object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.WeakReference.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das zu verfolgende Objekt oder <see langword="null" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.WeakReference" />-Klasse, die auf das angegebene Objekt verweist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt einen kurzen schwachen Verweis auf `target`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WeakReference (object target, bool trackResurrection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object target, bool trackResurrection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.WeakReference.#ctor(System.Object,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="trackResurrection" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein zu verfolgendes Objekt.</param>
+        <param name="trackResurrection">Gibt an, wann das Verfolgen des Objekts beendet werden soll. Bei <see langword="true" /> wird das Objekt auch nach seiner Finalisierung verfolgt, bei <see langword="false" /> wird das Objekt nur bis zur Finalisierung verfolgt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.WeakReference" />-Klasse, die auf das angegebene Objekt verweist und auf die angegebene Art verfolgt, wie es wieder zugänglich gemacht wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `trackResurrection` ist `false`, ein kurzer schwacher Verweis wird erstellt. Wenn `trackResurrection` ist `true`, ein schwacher Verweis wird erstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt einen Cache von Datenobjekten mit kurzen schwache Verweise. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.WeakReference> Klasse.  
+  
+ [!code-csharp[WeakReference#2](~/samples/snippets/csharp/VS_Snippets_CLR/WeakReference/cs/program.cs#2)]
+ [!code-vb[WeakReference#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/WeakReference/vb/Module1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WeakReference (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.WeakReference.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Ein Objekt, das alle für das Serialisieren bzw. Deserialisieren des aktuellen <see cref="T:System.WeakReference" />-Objekts erforderlichen Daten enthält.</param>
+        <param name="context">(Reserviert) Beschreibt die Quelle und Ziel des serialisierten Streams gemäß <c>Info</c>.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.WeakReference" />-Klasse mit deserialisierten Daten aus den angegebenen Serialisierungs- und Stream-Objekten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `context` Parameter ist reserviert und derzeit nicht bei diesem Vorgang beteiligt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~WeakReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.WeakReference.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verwirft den Verweis auf das Ziel, das durch das aktuelle <see cref="T:System.WeakReference" />-Objekt dargestellt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.WeakReference.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Ein Objekt, das alle für das Serialisieren bzw. Deserialisieren des aktuellen <see cref="T:System.WeakReference" />-Objekts erforderlichen Daten enthält.</param>
+        <param name="context">(Reserviert) Der Ort, an dem serialisierte Daten gespeichert und von dem sie abgerufen werden.</param>
+        <summary>Füllt ein <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit allen für das Serialisieren des aktuellen <see cref="T:System.WeakReference" />-Objekts erforderlichen Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode speichert die Informationen in `info` zum Serialisieren des aktuellen <xref:System.WeakReference> Objekt.  
+  
+ Die `context` Parameter ist reserviert und wird derzeit bei der Ausführung dieser Methode nicht verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAlive">
+      <MemberSignature Language="C#" Value="public virtual bool IsAlive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAlive" />
+      <MemberSignature Language="DocId" Value="P:System.WeakReference.IsAlive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Objekt, auf das das aktuelle <see cref="T:System.WeakReference" />-Objekt verweist, an den Garbage Collector übergeben wurde.</summary>
+        <value>
+          <see langword="true" />, wenn das Objekt, auf das dieses aktuelle <see cref="T:System.WeakReference" />-Objekt verweist, nicht an den Garbage Collector übergeben wurde und weiterhin verfügbar ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da ein Objekt potenziell für die Garbagecollection wieder zugänglich gemacht werden konnte unmittelbar nach der <xref:System.WeakReference.IsAlive%2A> -Eigenschaft gibt `true`, mit dieser Eigenschaft wird nicht empfohlen, es sei denn, Sie nur für testen eine `false` Rückgabewert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public virtual object Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Target" />
+      <MemberSignature Language="DocId" Value="P:System.WeakReference.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt (das Ziel) ab, auf das das aktuelle <see cref="T:System.WeakReference" />-Objekt verweist, oder legt dieses fest.</summary>
+        <value>
+          <see langword="null" />, wenn das Objekt, auf das das aktuelle <see cref="T:System.WeakReference" />-Objekt verweist, an den Garbage Collector übergeben wurde, andernfalls ein Verweis auf das Objekt, auf das das aktuelle <see cref="T:System.WeakReference" />-Objekt verweist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Festlegen dieser Eigenschaft auf das Zielobjekt, stellen Sie sicher, dass keine anderen starken Verweise auf das Objekt; Andernfalls wird er nicht erfasst werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird versucht, ein Objekt aus einem Cache von Objekten mit schwacher Verweise zu erhalten. Wenn das Objekt für die Garbagecollection wieder zugänglich gemacht wurde, wird ein neues Objekt generiert. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.WeakReference> Klasse.  
+  
+ [!code-csharp[WeakReference#3](~/samples/snippets/csharp/VS_Snippets_CLR/WeakReference/cs/program.cs#3)]
+ [!code-vb[WeakReference#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/WeakReference/vb/Module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Verweis auf das Zielobjekt ist ungültig. Diese Ausnahme kann beim Festlegen dieser Eigenschaft ausgelöst werden, wenn der Wert ein Nullverweis ist oder wenn das Objekt während des Set-Vorgangs abgeschlossen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackResurrection">
+      <MemberSignature Language="C#" Value="public virtual bool TrackResurrection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TrackResurrection" />
+      <MemberSignature Language="DocId" Value="P:System.WeakReference.TrackResurrection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Angabe darüber ab, ob das Objekt, auf das das aktuelle <see cref="T:System.WeakReference" />-Objekt verweist, nach der Finalisierung verfolgt wird.</summary>
+        <value>
+          <see langword="true" />, wenn das Objekt, auf das das aktuelle <see cref="T:System.WeakReference" />-Objekt verweist, nach seiner Finalisierung verfolgt wird, oder <see langword="false" />, wenn das Objekt nur bis zur Finalisierung verfolgt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `true`, der schwache Verweis ist ein schwacher Verweis und `true` wurde angegeben, für die `trackResurrection` Parameter in der <xref:System.WeakReference> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

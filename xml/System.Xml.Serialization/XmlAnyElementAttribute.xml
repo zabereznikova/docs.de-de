@@ -1,0 +1,323 @@
+<Type Name="XmlAnyElementAttribute" FullName="System.Xml.Serialization.XmlAnyElementAttribute">
+  <TypeSignature Language="C#" Value="public class XmlAnyElementAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlAnyElementAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlAnyElementAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter | System.AttributeTargets.ReturnValue, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass der Member (ein Feld, das ein Array mit zurückgibt <see cref="T:System.Xml.XmlElement" /> oder <see cref="T:System.Xml.XmlNode" /> Objekte) enthält Objekte, die beliebige XML-Elemente, die kein entsprechenden Member im Objekt verfügt darstellen, serialisiert oder deserialisiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!TIP]
+>  Bei der Arbeit in einer portablen Klassenbibliothek z. B. in Silverlight, Windows Phone oder Windows Store-App-Projekt, und Sie werden mithilfe von .NET Framework 4.0.3 und höher, verwenden Sie <xref:System.Xml.Linq.XElement> oder <xref:System.Xml.Linq.XNode> anstelle von <xref:System.Xml.XmlElement> und <xref:System.Xml.XmlNode>.  
+  
+ Verwenden der <xref:System.Xml.Serialization.XmlAnyElementAttribute> beliebige Daten (als XML-Elemente) enthält, die als Teil eines XML-Dokuments, z. B. Metadaten, die als Teil des Dokuments gesendet gesendet werden können.  
+  
+ Anwenden der <xref:System.Xml.Serialization.XmlAnyElementAttribute> auf ein Feld, das ein Array mit zurückgibt <xref:System.Xml.XmlElement> oder <xref:System.Xml.XmlNode> Objekte. Solches Feld kann verwendet werden, in zwei Möglichkeiten, je nachdem, ob ein Objekt wird serialisiert oder deserialisiert. Bei der Serialisierung wird das Objekt als XML-Elemente oder-Knoten generiert, obwohl sie keine entsprechenden Member (oder Elemente) in das Objekt serialisiert wird haben. Bei Angabe einer <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> Eigenschaftswert beim Anwenden des Attributs alle <xref:System.Xml.XmlElement> oder <xref:System.Xml.XmlNode> Objekte, die in das Array eingefügten müssen dem gleichen Namen und Standardwerten Elementnamespace, oder eine Ausnahme ausgelöst. Wenn Sie festlegen, die <xref:System.Xml.Serialization.XmlAnyElementAttribute.Namespace%2A> Eigenschaftswert, müssen Sie festlegen der <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> -Eigenschaft ebenfalls, und die <xref:System.Xml.XmlElement> oder <xref:System.Xml.XmlNode> Objekte müssen auch die gleichen Werte für Name und Namespace aufweisen. Wenn kein <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> -Wert angegeben wird, die <xref:System.Xml.XmlElement> oder <xref:System.Xml.XmlNode> Elementnamen aufweisen.  
+  
+ Beim Aufrufen der <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> Methode der <xref:System.Xml.Serialization.XmlSerializer> -Klasse, alle Elemente, die nicht über einen entsprechenden Member in der deserialisierte Objekt verfügen, werden im Array gesammelt. Nach der Deserialisierung, durchlaufen Sie die Auflistung der <xref:System.Xml.XmlElement> Elemente zum Verarbeiten der Daten. Bei Angabe einer <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> Wert, der das Array enthält nur XML-Elemente mit diesem Namen. Wenn Sie keinen angeben einer <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> Wert, der das Array enthält alle Elemente, die kein entsprechenden Member in der Klasse haben. Wenn eine Klasse mehrere Felder enthält, auf die das Attribut angewendet wird, verwenden Sie die <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A>, oder <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> und <xref:System.Xml.Serialization.XmlAnyElementAttribute.Namespace%2A> Eigenschaften zu den Inhalt des Arrays unterscheiden. Wenn eine solche Klasse (mit mehreren Feldern) auch ein Feld enthält, die keine unterscheidende Eigenschaftswerte festgelegt wurde (also <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> und <xref:System.Xml.Serialization.XmlAnyElementAttribute.Namespace%2A>) während der Deserialisierung, enthält dieses Array alle unbekannten XML-Elemente, die nicht bereits vorhanden sind in den anderen Arrays. Wenn eine Klasse mehrere Felder enthält, die keine Unterscheidung <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A>, oder <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> und <xref:System.Xml.Serialization.XmlAnyElementAttribute.Namespace%2A> festgelegte Wert, der das Verhalten während der Deserialisierung ist nicht angegeben.  
+  
+ Sie können auch anwenden, die <xref:System.Xml.Serialization.XmlAnyElementAttribute> auf ein Feld, eine einzelne zurückgibt <xref:System.Xml.XmlElement> Objekt. Wenn Sie dies tun, müssen Sie verwenden die Eigenschaften und Methoden von der <xref:System.Xml.XmlElement> Klasse rekursiv durchlaufen die unbekannte Elemente.  
+  
+ Sie können mehrere Instanzen von Anwenden der <xref:System.Xml.Serialization.XmlAnyElementAttribute> auf eine Klasse Member, aber jede Instanz benötigen einen unterschiedlichen <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> Eigenschaftswert. Oder, wenn die gleiche <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> Eigenschaftensatz für jede Instanz einen unterschiedlichen <xref:System.Xml.Serialization.XmlAnyElementAttribute.Namespace%2A> Eigenschaftswert muss für jede Instanz festgelegt werden.  
+  
+ Die <xref:System.Xml.Serialization.XmlSerializer.UnknownNode> und <xref:System.Xml.Serialization.XmlSerializer.UnknownAttribute> Ereignisse der <xref:System.Xml.Serialization.XmlSerializer> nicht auftreten, wenden Sie die <xref:System.Xml.Serialization.XmlAnyElementAttribute> auf einen Member einer Klasse.  
+  
+> [!NOTE]
+>  Sie können das Wort `XmlAnyElement` im Code anstelle des längeren <xref:System.Xml.Serialization.XmlAnyElementAttribute>.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet die <xref:System.Xml.Serialization.XmlAnyElementAttribute> auf ein Feld mit dem Namen `AllElements` , die gibt ein Array von <xref:System.Xml.XmlElement> Objekte.  
+  
+ [!code-cpp[Classic XmlAnyElementAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAnyElementAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAnyElementAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAnyElementAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAnyElementAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAnyElementAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlAnyElementAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlAnyElementAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.XmlAnyElementAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Xml.Serialization.XmlAnyElementAttribute> Konstruktor, wenn Sie die Serialisierung eines Felds außer Kraft gesetzt werden. Weitere Informationen zum Außerkraftsetzen von Serialisierung finden Sie unter der <xref:System.Xml.Serialization.XmlAttributeOverrides> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlAnyElementAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlAnyElementAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des XML-Elements, das die <see cref="T:System.Xml.Serialization.XmlSerializer" /> generiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Serialization.XmlAnyElementAttribute" /> -Klasse und gibt den Namen der XML-Elements im XML-Dokument generiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Xml.Serialization.XmlAnyElementAttribute> Konstruktor, wenn Sie die Serialisierung eines Felds außer Kraft gesetzt werden. Weitere Informationen zum Außerkraftsetzen von Serialisierung finden Sie unter der <xref:System.Xml.Serialization.XmlAttributeOverrides> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlAnyElementAttribute (string name, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlAnyElementAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des XML-Elements, das die <see cref="T:System.Xml.Serialization.XmlSerializer" /> generiert.</param>
+        <param name="ns">Der XML-Namespace des XML-Elements.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Serialization.XmlAnyElementAttribute" /> -Klasse und gibt den Namen der XML-Elements in das XML-Dokument und dessen XML-Namespace generiert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Xml.Serialization.XmlAnyElementAttribute> Konstruktor, wenn Sie die Serialisierung eines Felds außer Kraft gesetzt werden. Weitere Informationen zum Außerkraftsetzen von Serialisierung finden Sie unter der <xref:System.Xml.Serialization.XmlAttributeOverrides> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAnyElementAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des XML-Elements.</summary>
+        <value>Der Name des XML-Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Angabe einer <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> Eigenschaftswert beim Anwenden des Attributs alle <xref:System.Xml.XmlElement> oder <xref:System.Xml.XmlNode> Objekte, die in das Array eingefügten müssen dem gleichen Namen und Standardwerten Elementnamespace, oder eine Ausnahme ausgelöst. Wenn Sie festlegen, die <xref:System.Xml.Serialization.XmlAnyElementAttribute.Namespace%2A> Eigenschaftswert, müssen Sie festlegen der <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> -Eigenschaft ebenfalls, und die <xref:System.Xml.XmlElement> oder <xref:System.Xml.XmlNode> Objekte müssen auch die gleichen Werte für Name und Namespace aufweisen. Wenn kein <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> -Wert angegeben wird, die <xref:System.Xml.XmlElement> oder <xref:System.Xml.XmlNode> Elementnamen aufweisen.  
+  
+ Beim Aufrufen der <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> Methode der <xref:System.Xml.Serialization.XmlSerializer> Klasse, die alle Attribute, die nicht über einen entsprechenden Member in der deserialisierte Objekt verfügen, werden im Array gesammelt. Bei Angabe einer <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> Wert, der das Array enthält nur XML-Elemente mit diesem Namen. Wenn Sie keinen angeben einer <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> Wert, der das Array enthält alle Elemente, die kein entsprechenden Member in der Klasse haben. Wenn eine Klasse mehrere Felder enthält, auf die das Attribut angewendet wird, verwenden Sie die <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> und <xref:System.Xml.Serialization.XmlAnyElementAttribute.Namespace%2A> Eigenschaften zu den Inhalt des Arrays unterscheiden. Wenn eine solche Klasse (mit mehreren Feldern) auch ein Feld enthält, die keine unterscheidende Eigenschaftswerte festgelegt wurde (d. h. <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> und <xref:System.Xml.Serialization.XmlAnyElementAttribute.Namespace%2A>) während der Deserialisierung wird das Array enthält alle XML-Elemente, die nicht bereits in der anderen enthalten sind Arrays. Wenn Sie mehr als ein Feld hinzufügen, die keine Unterscheidung <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> oder <xref:System.Xml.Serialization.XmlAnyElementAttribute.Namespace%2A> Wert festgelegt ist, das letzte Feld in der Klasse enthält alle unbekannten Elemente, die nicht bereits in den anderen Arrays enthalten sind, und alle anderen Felder werden festgelegt, um `null`.  
+  
+ Sie können mehrere Instanzen von Anwenden der <xref:System.Xml.Serialization.XmlAnyElementAttribute> auf eine Klasse Member, aber jede Instanz benötigen einen unterschiedlichen <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> Eigenschaftswert. Oder, wenn die gleiche <xref:System.Xml.Serialization.XmlAnyElementAttribute.Name%2A> Eigenschaftensatz für jede Instanz einen unterschiedlichen <xref:System.Xml.Serialization.XmlAnyElementAttribute.Namespace%2A> Eigenschaftswert muss für jede Instanz festgelegt werden.  
+  
+   
+  
+## Examples  
+ [!code-cpp[XmlAnyElementAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlAnyElementAttribute Example/CPP/anyelement.cpp#1)]
+ [!code-csharp[XmlAnyElementAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlAnyElementAttribute Example/CS/anyelement.cs#1)]
+ [!code-vb[XmlAnyElementAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlAnyElementAttribute Example/VB/anyelement.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Elementname, der einen Arraymember entspricht nicht der Elementname, die gemäß der <see cref="P:System.Xml.Serialization.XmlAnyElementAttribute.Name" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAnyElementAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den XML-Namespace des XML-Dokuments generiert.</summary>
+        <value>Ein XML-Namespace.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlAnyElementAttribute.Namespace%2A> -Eigenschaft können Sie einen eindeutigen Namen für das XML-Attribut festgelegt. Die <xref:System.Xml.Serialization.XmlAnyElementAttribute.Namespace%2A> Eigenschaft entspricht den Regeln für das Erstellen einer XML-Namespaces, die im World Wide Web Consortium (www.w3.org) Dokument "Namespaces in XML".  
+  
+ Festlegen der <xref:System.Xml.Serialization.XmlAnyElementAttribute.Namespace%2A> Eigenschaft, um einen Namen mit Präfix erstellen eine <xref:System.Xml.Serialization.XmlSerializerNamespaces> , enthält die Namespaces und Präfixen, die in das XML-Dokument verwendet. Legen Sie die <xref:System.Xml.Serialization.XmlAnyElementAttribute.Namespace%2A> -Eigenschaft auf einen der Namespaces in der <xref:System.Xml.Serialization.XmlSerializerNamespaces>. Wenn der XML-Code generiert wird, wird der Attributname ordnungsgemäß mit dem Präfix, das dem angegebenen Namespace zugeordnet vorangestellt.  
+  
+   
+  
+## Examples  
+ [!code-cpp[XmlAnyElementAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlAnyElementAttribute Example/CPP/anyelement.cpp#1)]
+ [!code-csharp[XmlAnyElementAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlAnyElementAttribute Example/CS/anyelement.cs#1)]
+ [!code-vb[XmlAnyElementAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlAnyElementAttribute Example/VB/anyelement.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Order">
+      <MemberSignature Language="C#" Value="public int Order { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Order" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAnyElementAttribute.Order" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den explizite Reihenfolge, in der die Elemente serialisiert oder deserialisiert werden.</summary>
+        <value>Die Reihenfolge der codegenerierung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Xml.Serialization.CodeGenerationOptions.GenerateOrder> -Enumeration angewiesen der <xref:System.Web.Services.Description.ServiceDescriptionImporter> zum Generieren von Code, der festlegt der <xref:System.Xml.Serialization.XmlElementAttribute.Order%2A> Eigenschaft.  
+  
+> [!IMPORTANT]
+>  Sobald die <xref:System.Xml.Serialization.XmlElementAttribute.Order%2A> Eigenschaft wurde auf eine öffentliche Eigenschaft oder ein Feld in einem Typ verwendet, muss für alle öffentlichen Eigenschaften und Felder für diesen Typ und alle geerbten Typen angewendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

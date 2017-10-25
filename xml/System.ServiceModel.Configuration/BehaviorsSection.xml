@@ -1,0 +1,105 @@
+<Type Name="BehaviorsSection" FullName="System.ServiceModel.Configuration.BehaviorsSection">
+  <TypeSignature Language="C#" Value="public class BehaviorsSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BehaviorsSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.BehaviorsSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Konfigurationsabschnitt dar, der untergeordnete Einträge enthält, die <see langword="behavior" />-Elementen entsprechen, die durch ihren eindeutigen <see langword="name" /> identifiziert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `behavior`-Element enthält eine Sammlung der Einstellungen für das Verhalten eines Diensts. Jedes Verhalten wird durch seinen `name` indiziert. Dienste verwenden Verhaltensweisen, indem sie mit diesem Namen Verknüpfungen zu ihnen herstellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BehaviorsSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.BehaviorsSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.BehaviorsSection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointBehaviors">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.EndpointBehaviorElementCollection EndpointBehaviors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.EndpointBehaviorElementCollection EndpointBehaviors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.BehaviorsSection.EndpointBehaviors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("endpointBehaviors", Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.EndpointBehaviorElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Einträge ab, die als Endpunktverhaltenselemente durch ihren eindeutigen <see langword="name" /> identifiziert werden.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Configuration.EndpointBehaviorElementCollection" />, der Endpunktverhaltenselemente enthält, die durch ihren eindeutigen <see langword="name" /> identifiziert werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.BehaviorsSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz ab, die eine Auflistung von <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</summary>
+        <value>Eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz, die eine Sammlung mit <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die entweder Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceBehaviors">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.ServiceBehaviorElementCollection ServiceBehaviors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.ServiceBehaviorElementCollection ServiceBehaviors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.BehaviorsSection.ServiceBehaviors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("serviceBehaviors", Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.ServiceBehaviorElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle untergeordneten Einträge ab, die als Dienstverhaltenselemente durch ihren eindeutigen <see langword="name" /> identifiziert werden.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Configuration.ServiceBehaviorElementCollection" />, der Dienstverhaltenselemente enthält, die durch ihren eindeutigen <see langword="name" /> identifiziert werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

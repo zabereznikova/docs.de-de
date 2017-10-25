@@ -1,0 +1,71 @@
+<Type Name="IWeakEventListener" FullName="System.Windows.IWeakEventListener">
+  <TypeSignature Language="C#" Value="public interface IWeakEventListener" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWeakEventListener" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.IWeakEventListener" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Unterstützt das Ereignis überwacht Klassen, die zum Empfangen von Ereignissen über das WeakEvent-Muster erwarten und ein <see cref="T:System.Windows.WeakEventManager" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.WeakEventManager> (ein Verteiler) leitet ein Ereignis durch Aufrufen der <xref:System.Windows.IWeakEventListener.ReceiveWeakEvent%2A> Methode für Klassen, die diese Schnittstelle implementieren, und als Listener durch Aufrufen von hinzugefügt wurden <xref:System.Windows.WeakEventManager> Methoden im voraus.  
+  
+ Der Hauptgrund für die folgenden WeakEvent-Muster ist, wenn die Ereignisquelle eine Lebensdauer eines Objekts enthält, die potenziell unabhängig von der Ereignislistener ist. Mit dem zentralen ereignisverteilung von einer <xref:System.Windows.WeakEventManager> ermöglicht es die Handler für den Listener in die Garbage collection (oder manuell gelöscht), auch wenn der Listener die Objektlebensdauer Quelle hinausgeht. Im Gegensatz dazu, eine normale Ereignis ereigniseinbindung mit `+=` oder entsprechende sprachspezifische Ereignis-Syntax bewirkt, dass die möglicherweise noch verbundenen Quelle um einen starken Verweis auf die Handler zu speichern. Dadurch wird verhindert, die Listener-Verweise von der Garbage collection rechtzeitig verarbeitet.  
+  
+ Eine allgemeine Situation, in denen die Beziehungen zwischen Datenquellen und die Listener schlägt die Verwendung dieses Muster, ist die Behandlung von Update-Ereignisse, die Quellen für datenbindungen stammt.  
+  
+ Das WeakEvent-Muster können zum Überwachen von Ereignissen, die sich außerhalb der Anwendung befinden. Müssen Sie nur definieren eine <xref:System.Windows.WeakEventManager> , stellen Sie Überwachungsverhalten in <xref:System.Windows.IWeakEventListener.ReceiveWeakEvent%2A>, und verwenden Sie die <xref:System.Windows.WeakEventManager> verweist, zu den Handler angefügt statt `+=`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ReceiveWeakEvent">
+      <MemberSignature Language="C#" Value="public bool ReceiveWeakEvent (Type managerType, object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ReceiveWeakEvent(class System.Type managerType, object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IWeakEventListener.ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="managerType" Type="System.Type" />
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="managerType">Der Typ des der <see cref="T:System.Windows.WeakEventManager" /> beim Aufrufen dieser Methode.</param>
+        <param name="sender">Objekt, das das Ereignis ausgelöst wurde.</param>
+        <param name="e">Ereignisdaten.</param>
+        <summary>Empfängt Ereignisse von den zentralen Ereignis-Manager.</summary>
+        <returns>
+          <see langword="true" />Wenn der Listener das Ereignis behandelt. Es gilt einen Fehler durch die <see cref="T:System.Windows.WeakEventManager" /> behandeln in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] , einen Listener für ein Ereignis zu registrieren, die der Listener nicht behandelt wird. Unabhängig davon, sollte die Methode zurückgeben <see langword="false" /> Wenn es sich um ein Ereignis empfängt, die nicht erkannt oder behandelt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel implementiert <xref:System.Windows.IWeakEventListener.ReceiveWeakEvent%2A> hypothetisches Unterstützung von Steuerelementmustern WeakEvent bereit `ClockwiseSpin` und `CounterclockwiseSpin` , eine dedizierte aufweisen <xref:System.Windows.WeakEventManager> (nicht dargestellt). Diese Implementierung ruft Klasse Handlerstubs für jede unterstützte Ereignis Umwandlung der Ereignisdaten (in diesem Fall die beiden Ereignisse einen Ereignistyp für Daten freigeben `SpinEventArgs`). Die Implementierung gibt `false` , wenn das empfangene Ereignis nicht um einen handelt, der erwartet wird.  
+  
+ [!code-csharp[CorePseudocode#IWeakEventListener](~/samples/snippets/csharp/VS_Snippets_Wpf/CorePseudocode/CSharp/corepseudocode.cs#iweakeventlistener)]
+ [!code-vb[CorePseudocode#IWeakEventListener](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CorePseudocode/visualbasic/corepseudocode.vb#iweakeventlistener)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Methode dient zum Empfang aller möglichen Ereignisse, in denen der Empfänger in einer Listenerliste ist. Insbesondere, wenn für eine Klasse implementieren, die mehr als ein Ereignis empfangen wird, müssen Sie überprüfen, dass den Typ des eingehenden <paramref name="managerType" /> Parameter, damit Sie wissen, welches Ereignis den Aufruf entspricht. Daher verändert sich jedes Ereignis, das als Teil des Musters benötigen, eine dedizierte <see cref="T:System.Windows.WeakEventManager" />. Darüber hinaus die <paramref name="e" /> Parameter typisiert ist, als die allgemeinen <see cref="T:System.EventArgs" />. Aus diesem Grund in Reihenfolge erhalten bestimmten Eigenschaften nicht genügend Daten für das Ereignis, Ihrer Implementierung muss in der ereignisspezifischen-Datentyp umgewandelt.  
+  
+ In der Regel nach der Überprüfung der Identität des Ereignisses auf der Grundlage der <see cref="T:System.Windows.WeakEventManager" /> Typ, die Implementierung sollten einen privaten Klassenhandler aufrufen. Die Klasse Klassenhandler sein die selbe Klassenhandler ab, das das Ereignis für Listener zu behandeln, die über die herkömmliche Ereignismuster über hinzugefügt werden <see langword="+=" /> auf das Ereignis für den Absender. Die im folgenden Abschnitt bietet eine grobe Implementierungsvorlage.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

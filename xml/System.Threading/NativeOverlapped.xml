@@ -1,0 +1,190 @@
+<Type Name="NativeOverlapped" FullName="System.Threading.NativeOverlapped">
+  <TypeSignature Language="C#" Value="public struct NativeOverlapped" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit NativeOverlapped extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.NativeOverlapped" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Overlapped</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein explizites Layout bereit, das im nicht verwalteten Code sichtbar ist und über dasselbe Layout verfügt, wie die Win32-OVERLAPPED-Struktur mit zusätzlichen reservierten Felder am Ende.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.NativeOverlapped>.NET Framework-Werttyp stellt eine nicht verwaltete Version der Win32-OVERLAPPED-Struktur dar. Das Layout dieser Struktur muss mit OVERLAPPED identisch sein. Vier zusätzliche DWORDs sind am Ende reserviert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EventHandle">
+      <MemberSignature Language="C#" Value="public IntPtr EventHandle;" />
+      <MemberSignature Language="ILAsm" Value=".field public native int EventHandle" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.NativeOverlapped.EventHandle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Handle für ein Ereignis, das auf den signalisierten Zustand festgelegt werden, wenn der Vorgang abgeschlossen ist. Der aufrufende Prozess muss bei diesem Member festgelegt, entweder 0 (null) oder auf eine gültige Ereignis zu verarbeiten, bevor die überlappende Funktionen aufrufen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalHigh">
+      <MemberSignature Language="C#" Value="public IntPtr InternalHigh;" />
+      <MemberSignature Language="ILAsm" Value=".field public native int InternalHigh" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.NativeOverlapped.InternalHigh" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Länge der Daten übertragen. Für Betriebssystem-Verwendung reserviert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalLow">
+      <MemberSignature Language="C#" Value="public IntPtr InternalLow;" />
+      <MemberSignature Language="ILAsm" Value=".field public native int InternalLow" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.NativeOverlapped.InternalLow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Status systemabhängig. Für Betriebssystem-Verwendung reserviert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetHigh">
+      <MemberSignature Language="C#" Value="public int OffsetHigh;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 OffsetHigh" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.NativeOverlapped.OffsetHigh" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, das hohe Word von Byte-Offset, an dem die Übertragung gestartet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member wird ignoriert, wenn lesen oder Schreiben in named Pipes und Kommunikation und in diesen Fällen seinen Wert als NULL sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetLow">
+      <MemberSignature Language="C#" Value="public int OffsetLow;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 OffsetLow" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.NativeOverlapped.OffsetLow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Dateiposition, an dem die Übertragung gestartet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Dateiposition ist ein Byteoffset vom Beginn der Datei. Der aufrufende Prozess legt vor dem Aufrufen der Funktion oder dieses Elements fest. Bei diesem Member wird ignoriert, wenn lesen oder Schreiben in named Pipes und Kommunikation, und klicken Sie in diesen Fällen seinen Wert als NULL sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

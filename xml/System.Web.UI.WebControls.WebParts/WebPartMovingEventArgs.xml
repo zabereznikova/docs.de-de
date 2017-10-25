@@ -1,0 +1,98 @@
+<Type Name="WebPartMovingEventArgs" FullName="System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs">
+  <TypeSignature Language="C#" Value="public class WebPartMovingEventArgs : System.Web.UI.WebControls.WebParts.WebPartCancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartMovingEventArgs extends System.Web.UI.WebControls.WebParts.WebPartCancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.WebPartCancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartMoving" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartMoving> Ereignis wird ausgelöst, wenn eine <xref:System.Web.UI.WebControls.WebParts.WebPart> oder andere Webserversteuerelement innerhalb der eigenen Zone oder in eine andere Zone verschoben wird. Dies kann auftreten, wenn ein Benutzer ein Steuerelement zieht und es wird eine programmgesteuerte verschieben.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartMoving> Ereignis wird ausgelöst, durch die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.OnWebPartMoving%2A> -Methode, und es bietet die Möglichkeit zum Prozess des Verschiebens abzubrechen, bevor er abgeschlossen ist oder zum Nachverfolgen von der Benutzeraktion. Wenn der Verschiebevorgang abgeschlossen ist und das Steuerelement in eine neue Position eingefügt, dieses Ereignis von gefolgt wird der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartMoved> Ereignis.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs> Klasse enthält Informationen zu den <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartMoving> Ereignis. Es bietet Zugriff auf das Webparts-Steuerelement, das verschoben wird und die Zone, der dieser verschoben wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartMovingEventArgs (System.Web.UI.WebControls.WebParts.WebPart webPart, System.Web.UI.WebControls.WebParts.WebPartZoneBase zone, int zoneIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.WebPart webPart, class System.Web.UI.WebControls.WebParts.WebPartZoneBase zone, int32 zoneIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs.#ctor(System.Web.UI.WebControls.WebParts.WebPart,System.Web.UI.WebControls.WebParts.WebPartZoneBase,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="zone" Type="System.Web.UI.WebControls.WebParts.WebPartZoneBase" />
+        <Parameter Name="zoneIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder einem anderen Serversteuerelement verschoben wird.</param>
+        <param name="zone">Das Ziel <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> , <c>WebPart</c> verschoben wird.</param>
+        <param name="zoneIndex">Eine ganze Zahl, die den Index des <c>WebPart</c> relativ zu anderen Steuerelementen in <c>Zone</c>.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zone">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartZoneBase Zone { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartZoneBase Zone" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs.Zone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartZoneBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Webparts-Zone auf dem Webparts-Steuerelement verschoben wird.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> auf dem Webparts-Steuerelement verschoben wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoneIndex">
+      <MemberSignature Language="C#" Value="public int ZoneIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ZoneIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs.ZoneIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Indexposition eines Webparts-Steuerelements innerhalb der Zone.</summary>
+        <value>Die numerische Reihenfolge eines Steuerelements in der Zone. Das erste Steuerelement in einer Zone verfügt über einen Indexwert von 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs.ZoneIndex%2A> -Eigenschaft gibt die numerische Reihenfolge (bzw. die Ordnungsposition) in der Zone für das verschobene Webparts-Steuerelement an die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartMoving> Ereignis. Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement verwendet diese Eigenschaft zum Nachverfolgen und Verwalten ihrer Auflistung von Webparts-Steuerelemente auf einer Webseite.  
+  
+> [!IMPORTANT]
+>  Der Wert von der <xref:System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs.ZoneIndex%2A> Eigenschaft für ein Steuerelement möglicherweise nicht gleich den Indexwert für dasselbe Steuerelement in der <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.WebParts%2A> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

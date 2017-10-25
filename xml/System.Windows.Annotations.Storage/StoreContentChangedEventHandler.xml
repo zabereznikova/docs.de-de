@@ -1,0 +1,25 @@
+<Type Name="StoreContentChangedEventHandler" FullName="System.Windows.Annotations.Storage.StoreContentChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void StoreContentChangedEventHandler(object sender, StoreContentChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StoreContentChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Annotations.Storage.StoreContentChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Annotations.Storage.StoreContentChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle <see cref="T:System.Windows.Annotations.Storage.AnnotationStore" /> des Ereignisses.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt die Methode dar, die das von der <see cref="T:System.Windows.Annotations.Storage.AnnotationStore" />-Klasse ausgelöste <see cref="E:System.Windows.Annotations.Storage.AnnotationStore.StoreContentChanged" />-Ereignis behandelt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,192 @@
+<Type Name="DependencyPropertyConverter" FullName="System.Windows.Markup.DependencyPropertyConverter">
+  <TypeSignature Language="C#" Value="public sealed class DependencyPropertyConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DependencyPropertyConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.DependencyPropertyConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Wandelt eine Zeichenfolge in eine <see cref="T:System.Windows.DependencyProperty" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Markup.DependencyPropertyConverter> Klasse konvertiert nur von einer <xref:System.String> in eine Instanz von <xref:System.Windows.DependencyProperty>. Andere Versuche zur Konvertierung löst eine Ausnahme.  
+  
+ Die <xref:System.Windows.Markup.DependencyPropertyConverter> konvertiert von einem <xref:System.String> mithilfe des folgenden Formats für die Eingabe: *TypeName*`.`*PropertyName*. Format *NamespacePrefix*:*TypeName*`.`*PropertyName* wird auch aus Legacygründen noch akzeptiert, aber die *NamespacePrefix*: Komponente wird ignoriert. Format *PropertyName* wird in bestimmten Fällen auch akzeptiert dieses Format basiert auf der Fähigkeit zum Auswerten von Umgebungseigenschaften und Ableiten der *TypeName*, durch die dienstimplementierung des <xref:System.Xaml.IAmbientProvider> in der Kontext.  
+  
+ Legacyversionen diese Klasse unterstützt auch die Konvertierung von BAML-Datensätze, aber dies ist ein Implementierungsdetail und sollte nicht zuverlässig.  
+  
+ Das Verhalten der dieser Konverter wird speziell für eine einzelnes WPF-Szenario für die Verwendung von XAML-Verarbeitung dienstorientierten: Lesen den Wert des Attributs <xref:System.Windows.Setter.Property%2A> und generiert eine <xref:System.Windows.DependencyProperty> Wert.  
+  
+<a name="xamlTextUsage_DependencyPropertyConverter"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DependencyPropertyConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.DependencyPropertyConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.DependencyPropertyConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.DependencyPropertyConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Formatierungskontext, der Informationen über die Umgebung bereitstellt, der dieser Konverter aufgerufen wird.</param>
+        <param name="sourceType">Der Typ für die Konvertierung ausgewertet wird.</param>
+        <summary>Bestimmt, ob ein Objekt des angegebenen Typs kann, mit einer Instanz von konvertiert werden <see cref="T:System.Windows.DependencyProperty" />.</summary>
+        <returns>
+          <see langword="true" />Wenn dieser Konverter den Vorgang ausführen kann. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Markup.DependencyPropertyConverter> Klasse konvertiert nur eine Zeichenfolge mit einer Instanz von <xref:System.Windows.DependencyProperty>. Daher werden nur eine `sourceType` von <xref:System.String> gibt `true`.  
+  
+ `context`wird von dieser Implementierung nicht verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.DependencyPropertyConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Formatierungskontext, der Informationen über die Umgebung bereitstellt, der dieser Konverter aufgerufen wird.</param>
+        <param name="destinationType">Der Typ für die Konvertierung ausgewertet wird.</param>
+        <summary>Bestimmt, ob eine Instanz von <see cref="T:System.Windows.DependencyProperty" /> in den angegebenen Typ konvertiert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn dieser Konverter den Vorgang ausführen kann. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung gibt immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.DependencyPropertyConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="source" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Formatierungskontext, der Informationen über die Umgebung bereitstellt, der dieser Konverter aufgerufen wird.</param>
+        <param name="culture">Kulturabhängige Informationen.</param>
+        <param name="source">Das zu konvertierende Objekt.</param>
+        <summary>Versucht, konvertiert das angegebene Objekt in eine <see cref="T:System.Windows.DependencyProperty" />, mit dem angegebenen Kontext.</summary>
+        <returns>Das konvertierte Objekt. Wenn die Konvertierung erfolgreich ist, ist dies ein <see cref="T:System.Windows.DependencyProperty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Markup.DependencyPropertyConverter> Klasse konvertiert nur eine Zeichenfolge mit einer Instanz von <xref:System.Windows.DependencyProperty>.  
+  
+ `culture`wird von dieser Implementierung nicht verwendet.  
+  
+ Die `context` bereitgestellt wird erwartet, um Dienste bereitzustellen, die für eine ordnungsgemäße Auswertung erforderlich sind. Dazu gehören <xref:System.Xaml.IAmbientProvider>, <xref:System.Windows.Markup.IXamlTypeResolver>, und <xref:System.Xaml.IXamlSchemaContextProvider>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="source" /> kann nicht konvertiert werden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> oder <paramref name="source" /> sind <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.DependencyPropertyConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Formatierungskontext, der Informationen über die Umgebung bereitstellt, der dieser Konverter aufgerufen wird.</param>
+        <param name="culture">Kulturabhängige Informationen.</param>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <param name="destinationType">Der Typ, in den das Objekt konvertiert werden soll.</param>
+        <summary>Versucht, konvertieren Sie eine <see cref="T:System.Windows.DependencyProperty" /> unter Verwendung des angegebenen Kontexts, in den angegebenen Typ. Löst immer eine Ausnahme aus.</summary>
+        <returns>Löst immer eine Ausnahme aus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung löst immer eine Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

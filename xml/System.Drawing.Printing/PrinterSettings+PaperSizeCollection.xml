@@ -1,0 +1,334 @@
+<Type Name="PrinterSettings+PaperSizeCollection" FullName="System.Drawing.Printing.PrinterSettings+PaperSizeCollection">
+  <TypeSignature Language="C#" Value="public class PrinterSettings.PaperSizeCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit PrinterSettings/PaperSizeCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Printing.PrinterSettings.PaperSizeCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Enthält eine Auflistung von <see cref="T:System.Drawing.Printing.PaperSize" />-Objekten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Printing.PrinterSettings.PaperSizeCollection> enthält <xref:System.Drawing.Printing.PaperSize> Instanzen, die für die Papiergröße mithilfe der <xref:System.Drawing.Printing.PaperSize.Kind%2A?displayProperty=nameWithType> -Eigenschaft, die eine enthält die <xref:System.Drawing.Printing.PaperKind> Werte.  
+  
+ In der Regel legen Sie eine Seite Papiergröße über die <xref:System.Drawing.Printing.PageSettings.PaperSize%2A?displayProperty=nameWithType> -Eigenschaft eine gültige <xref:System.Drawing.Printing.PaperSize> Instanz über die <xref:System.Drawing.Printing.PrinterSettings.PaperSizes%2A> Auflistung.  
+  
+ Finden Sie unter der <xref:System.Drawing.Printing.PaperSize.%23ctor%2A> Konstruktor, um herauszufinden, wie Sie eine benutzerdefinierte Papiergröße angeben können.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die `comboPaperSize` Kombinationsfeld mit dem Drucker Papierformate unterstützt. Darüber hinaus wird eine benutzerdefinierte Papiergröße erstellt und dem Kombinationsfeld hinzugefügt. Die <xref:System.Drawing.Printing.PaperSize.PaperName%2A> wird als Eigenschaft, die die Anzeigezeichenfolge für das Element hinzugefügt wird, über bereitstellt identifiziert die <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Eigenschaft des Kombinationsfelds. Im Beispiel erfordert, dass eine <xref:System.Drawing.Printing.PrintDocument> Variable mit dem Namen `printDoc` vorhanden ist und ob das bestimmte Kombinationsfeld vorhanden ist.  
+  
+ [!code-cpp[PaperSource and PaperSize Example with Resolution#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#1)]
+ [!code-csharp[PaperSource and PaperSize Example with Resolution#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#1)]
+ [!code-vb[PaperSource and PaperSize Example with Resolution#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PaperSizeCollection (System.Drawing.Printing.PaperSize[] array);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Printing.PaperSize[] array) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrinterSettings.PaperSizeCollection.#ctor(System.Drawing.Printing.PaperSize[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="array" Type="System.Drawing.Printing.PaperSize[]" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Array vom Typ <see cref="T:System.Drawing.Printing.PaperSize" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.Printing.PrinterSettings.PaperSizeCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Drawing.Printing.PaperSize paperSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Drawing.Printing.PaperSize paperSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrinterSettings.PaperSizeCollection.Add(System.Drawing.Printing.PaperSize)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="paperSize" Type="System.Drawing.Printing.PaperSize" />
+      </Parameters>
+      <Docs>
+        <param name="paperSize">Der der Auflistung hinzuzufügende <see cref="T:System.Drawing.Printing.PaperSize" />.</param>
+        <summary>Fügt am Ende der Auflistung einen <see cref="T:System.Drawing.Printing.PrinterResolution" /> hinzu.</summary>
+        <returns>Der nullbasierte Index des neu hinzugefügten Elements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Drawing.Printing.PaperSize[] paperSizes, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Drawing.Printing.PaperSize[] paperSizes, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrinterSettings.PaperSizeCollection.CopyTo(System.Drawing.Printing.PaperSize[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="paperSizes" Type="System.Drawing.Printing.PaperSize[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="paperSizes">Eine nullbasierte Array, der aus kopierten Elemente empfängt, die <see cref="T:System.Drawing.Printing.PrinterSettings.PaperSizeCollection" />.</param>
+        <param name="index">Der Index, an dem mit dem Kopieren der Elemente werden soll.</param>
+        <summary>Kopiert den Inhalt des aktuellen <see cref="T:System.Drawing.Printing.PrinterSettings.PaperSizeCollection" /> in das angegebene Array, beginnend am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PrinterSettings.PaperSizeCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der verschiedenen Papierformate in der Auflistung ab.</summary>
+        <value>Die Anzahl der verschiedenen Papierformate in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die `comboPaperSize` Kombinationsfeld mit dem Drucker Papierformate unterstützt. Darüber hinaus wird eine benutzerdefinierte Papiergröße erstellt und dem Kombinationsfeld hinzugefügt. Die <xref:System.Drawing.Printing.PaperSize.PaperName%2A> wird als Eigenschaft, die die Anzeigezeichenfolge für das Element hinzugefügt wird, über bereitstellt identifiziert die <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Eigenschaft des Kombinationsfelds. Im Beispiel erfordert, dass eine <xref:System.Drawing.Printing.PrintDocument> Variable mit dem Namen `printDoc` vorhanden ist und ob das bestimmte Kombinationsfeld vorhanden ist.  
+  
+ [!code-cpp[PaperSource and PaperSize Example with Resolution#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#1)]
+ [!code-csharp[PaperSource and PaperSize Example with Resolution#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#1)]
+ [!code-vb[PaperSource and PaperSize Example with Resolution#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrinterSettings.PaperSizeCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die Auflistung durchlaufen kann.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> für das <see cref="T:System.Drawing.Printing.PrinterSettings.PaperSizeCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode instanziiert einen Enumerator, der eine Momentaufnahme des aktuellen Zustands der Auflistung darstellt. Der Enumerator hat keinen exklusiven Zugriff auf die Auflistung, damit mehrere Enumeratoren auf der gleichen Auflistung gleichzeitig zugreifen können. Aus diesem Grund alle Änderungen an der Auflistung weder direkt noch über einen anderen Enumerator können dazu führen, dass <xref:System.Collections.IEnumerator.Current%2A> oder <xref:System.Collections.IEnumerator.MoveNext%2A> eine Ausnahme auslöst.  
+  
+ Zwei Enumeratoren, die aus der gleichen Auflistung gleichzeitig instanziiert können verschiedene Momentaufnahmen der Auflistung enthalten.  
+  
+ Entfernen von Objekten aus dem Enumerator werden auch diese aus der Auflistung entfernt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Printing.PaperSize this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.PaperSize Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PrinterSettings.PaperSizeCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PaperSize</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des der <see cref="T:System.Drawing.Printing.PaperSize" /> abgerufen.</param>
+        <summary>Ruft die <see cref="T:System.Drawing.Printing.PaperSize" /> an einem angegebenen Index.</summary>
+        <value>Der <see cref="T:System.Drawing.Printing.PaperSize" /> am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die `comboPaperSize` Kombinationsfeld mit dem Drucker Papierformate unterstützt. Darüber hinaus wird eine benutzerdefinierte Papiergröße erstellt und dem Kombinationsfeld hinzugefügt. Die <xref:System.Drawing.Printing.PaperSize.PaperName%2A> wird als Eigenschaft, die die Anzeigezeichenfolge für das Element hinzugefügt wird, über bereitstellt identifiziert die <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Eigenschaft des Kombinationsfelds. Im Beispiel erfordert, dass eine <xref:System.Drawing.Printing.PrintDocument> Variable mit dem Namen `printDoc` vorhanden ist und ob das bestimmte Kombinationsfeld vorhanden ist.  
+  
+ [!code-cpp[PaperSource and PaperSize Example with Resolution#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#1)]
+ [!code-csharp[PaperSource and PaperSize Example with Resolution#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#1)]
+ [!code-vb[PaperSource and PaperSize Example with Resolution#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrinterSettings.PaperSizeCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein nullbasiertes Array, das aus der Auflistung kopierten Elemente empfängt.</param>
+        <param name="index">Der Index, an dem mit dem Kopieren der Elemente werden soll.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Drawing.Printing.PrinterSettings.PaperSizeCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.Count">
+      <MemberSignature Language="C#" Value="int System.Collections.ICollection.Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.ICollection.Count" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PrinterSettings.PaperSizeCollection.System#Collections#ICollection#Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.Count" />.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Drawing.Printing.PrinterSettings.PaperSizeCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PrinterSettings.PaperSizeCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.IsSynchronized" />.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Drawing.Printing.PrinterSettings.PaperSizeCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PrinterSettings.PaperSizeCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.SyncRoot" />.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Drawing.Printing.PrinterSettings.PaperSizeCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrinterSettings.PaperSizeCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IEnumerable.GetEnumerator" />.</summary>
+        <returns>Ein Enumerator, der der Auflistung zugeordnet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Drawing.Printing.PrinterSettings.PaperSizeCollection>-Instanz in eine <xref:System.Collections.IEnumerable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

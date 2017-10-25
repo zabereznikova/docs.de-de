@@ -1,0 +1,401 @@
+<Type Name="MessageHeaderException" FullName="System.ServiceModel.MessageHeaderException">
+  <TypeSignature Language="C#" Value="public class MessageHeaderException : System.ServiceModel.ProtocolException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit MessageHeaderException extends System.ServiceModel.ProtocolException" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MessageHeaderException" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.ProtocolException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn die Erwartungen hinsichtlich der Header einer SOAP-Nachricht beim Verarbeiten der Nachricht nicht erfüllt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Ausnahme wird normalerweise ausgegeben, wenn es zu viele Header gibt oder Header in der Nachricht fehlen. Dazu gehören auch Infrastrukturheader z.&#160;B. der Action-Header und der Reliable-Message-Header. Diese Ausnahme leitet sich von <xref:System.ServiceModel.ProtocolException> ab, die sich wiederum von <xref:System.ServiceModel.CommunicationException> ableiten lässt. Die <xref:System.ServiceModel.CommunicationException>-Klasse stellt ein Klasse behebbarer Fehler dar, die während der Kommunikation zwischen Endpunkten ausgelöst werden können und für deren Behandlung die robusten [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Client- und -Dienstanwendungen vorgesehen sind. Um zu verhindern, dass der stärker generische <xref:System.ServiceModel.CommunicationException>-Handler die spezifischere <xref:System.ServiceModel.ProtocolException> abfängt, fangen Sie diese Ausnahme vor der Behandlung der <xref:System.ServiceModel.CommunicationException> ab.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MessageHeaderException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Fehlermeldung an den Benutzer übergeben möchten, verwenden Sie den <xref:System.ServiceModel.MessageHeaderException.%23ctor%28System.String%29>-Konstruktor.  
+  
+ Wenn Sie eine Fehlermeldung und einen Verweis auf die interne Ausnahme, die die Ausnahme ausgelöst hat, an den Benutzer übergeben möchten, verwenden Sie den <xref:System.ServiceModel.MessageHeaderException.%23ctor%28System.String%2CSystem.Exception%29>-Konstruktor.  
+  
+ Wenn Sie Serialisierungsinformationen und Streamingkontext übergeben möchten, verwenden Sie den <xref:System.ServiceModel.MessageHeaderException.%23ctor%28System.Runtime.Serialization.SerializationInfo%2CSystem.Runtime.Serialization.StreamingContext%29>-Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageHeaderException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageHeaderException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MessageHeaderException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageHeaderException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageHeaderException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die von der Ausnahme ausgegebene Nachricht.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MessageHeaderException" />-Klasse mit der angegebenen Meldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn Sie eine Fehlermeldung an den Benutzer übergeben möchten. Der Inhalt der Nachrichtenparameter sollte für die vorgesehenen Benutzer verständlich sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MessageHeaderException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageHeaderException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Der <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen über die Quelle oder das Ziel enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MessageHeaderException" />-Klasse, mit der Daten in ein <see cref="T:System.ServiceModel.MessageHeaderException" />-Objekt deserialisiert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung aufgerufen, um das über einen Stream übertragene Ausnahmeobjekt wiederherzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageHeaderException (string message, bool isDuplicate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, bool isDuplicate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageHeaderException.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="isDuplicate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <param name="isDuplicate">
+          <see langword="true" />, wenn der Header für mehrere Nachrichten ein Duplikat ist; <see langword="false" />, wenn es keine Nachrichten-Header gibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MessageHeaderException" />-Klasse unter Verwendung der angegebenen Nachricht und eines Werts, der angibt, ob es sich beim Nachrichten-Header um ein Duplikat handelt oder ob er fehlt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageHeaderException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageHeaderException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <param name="innerException">Die <see cref="T:System.Exception" />, die die innere Ausnahme enthält, die die Ausnahme ausgelöst hat.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MessageHeaderException" />-Klasse unter Verwendung der angegebenen Nachricht und der angegebenen internen Ausnahme, die die Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn Sie eine Fehlermeldung und Informationen über eine interne Ausnahme an den Benutzer übergeben möchten. Der Inhalt der Nachrichtenparameter sollte für die vorgesehenen Benutzer verständlich sein.  
+  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, kann in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt den gleichen Wert, der an den Konstruktor übergeben wird, oder einen `null`-Verweis (`Nothing` in Visual Basic) zurück, wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft den Wert der internen Ausnahme nicht an den Konstruktor übergibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageHeaderException (string message, string headerName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string headerName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageHeaderException.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="headerName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <param name="headerName">Der Name des Nachrichten-Headers.</param>
+        <param name="ns">Der Namespace des Nachrichten-Headers.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MessageHeaderException" />-Klasse unter Verwendung der angegebenen Nachricht, des Header-Namens und des Namespace.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageHeaderException (string message, string headerName, string ns, bool isDuplicate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string headerName, string ns, bool isDuplicate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageHeaderException.#ctor(System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="headerName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="isDuplicate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <param name="headerName">Der Name des Nachrichten-Headers.</param>
+        <param name="ns">Der Namespace des Nachrichten-Headers.</param>
+        <param name="isDuplicate">
+          <see langword="true" />, wenn der Header für mehrere Nachrichten ein Duplikat ist; <see langword="false" />, wenn es keine Nachrichten-Header gibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MessageHeaderException" />-Klasse unter Verwendung der angegebenen Nachricht, des Header-Namens und des Namespace und eines Werts, der angibt, ob es sich beim Nachrichten-Header um ein Duplikat handelt oder ob er fehlt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageHeaderException (string message, string headerName, string ns, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string headerName, string ns, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageHeaderException.#ctor(System.String,System.String,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="headerName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <param name="headerName">Der Name des Nachrichten-Headers.</param>
+        <param name="ns">Der Namespace des Nachrichten-Headers.</param>
+        <param name="innerException">Die <see cref="T:System.Exception" />, die die innere Ausnahme enthält, die die Ausnahme ausgelöst hat.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MessageHeaderException" />-Klasse unter Verwendung der angegebenen Nachricht, des Header-Namens und des Namespace und der internen Ausnahme, die die Ausnahme ausgelöst hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageHeaderException (string message, string headerName, string ns, bool isDuplicate, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string headerName, string ns, bool isDuplicate, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageHeaderException.#ctor(System.String,System.String,System.String,System.Boolean,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="headerName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="isDuplicate" Type="System.Boolean" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <param name="headerName">Der Name des Nachrichten-Headers.</param>
+        <param name="ns">Der Namespace des Nachrichten-Headers.</param>
+        <param name="isDuplicate">
+          <see langword="true" />, wenn der Header für mehrere Nachrichten ein Duplikat ist; <see langword="false" />, wenn es keine Nachrichten-Header gibt.</param>
+        <param name="innerException">Die <see cref="T:System.Exception" />, die die innere Ausnahme enthält, die die Ausnahme ausgelöst hat.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MessageHeaderException" />-Klasse unter Verwendung der angegebenen Nachricht, des Header-Namens und des Namespace, eines Werts, der angibt, ob es sich beim Nachrichten-Header um ein Duplikat handelt oder ob er fehlt, und der inneren Ausnahme, die die Ausnahme ausgelöst hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderName">
+      <MemberSignature Language="C#" Value="public string HeaderName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageHeaderException.HeaderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des SOAP-Headers ab, durch den die Ausnahme ausgelöst wurde.</summary>
+        <value>Der Name des SOAP-Headers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderNamespace">
+      <MemberSignature Language="C#" Value="public string HeaderNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageHeaderException.HeaderNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace des SOAP-Headers ab, durch den die Ausnahme ausgelöst wurde.</summary>
+        <value>Der Namespace des SOAP-Headers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDuplicate">
+      <MemberSignature Language="C#" Value="public bool IsDuplicate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDuplicate" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageHeaderException.IsDuplicate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob es mehrere Nachrichten-Header oder keine Nachrichten-Header gibt.</summary>
+        <value>
+          <see langword="true" />, wenn der Header für mehrere Nachrichten ein Duplikat ist; <see langword="false" />, wenn es keine Nachrichten-Header gibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

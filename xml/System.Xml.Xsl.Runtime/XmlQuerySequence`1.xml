@@ -1,0 +1,975 @@
+<Type Name="XmlQuerySequence&lt;T&gt;" FullName="System.Xml.Xsl.Runtime.XmlQuerySequence&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class XmlQuerySequence&lt;T&gt; : System.Collections.Generic.ICollection&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;, System.Collections.Generic.IList&lt;T&gt;, System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlQuerySequence`1&lt;T&gt; extends System.Object implements class System.Collections.Generic.ICollection`1&lt;!T&gt;, class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.Generic.IList`1&lt;!T&gt;, class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlXml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IList&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">Der Typ dieses <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" />.</typeparam>
+    <summary>Eine Sequenz von XML-Werten, die den wahlfreien Zugriff auf Elemente dynamisch erweitert und zulässt.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlQuerySequence ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlQuerySequence (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">Die Größe dieser Auflistung.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlQuerySequence (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.#ctor(`0)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der einzige Wert in dieser <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" />.</param>
+        <summary>Erstellt einen Singleton <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> mit dem <paramref name="value" /> dessen einziges Element.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlQuerySequence (T[] array, int size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T[] array, int32 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.#ctor(`0[],System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="size" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Array von <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> Instanzen.</param>
+        <param name="size">Die Größe des Arrays.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein der Auflistung hinzuzufügendes Objekt.</param>
+        <summary>Löst das <see cref="T:System.NotSupportedException" /> Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst das <see cref="T:System.NotSupportedException" /> Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der finden in der <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+        <summary>Gibt <see langword="true" /> , wenn der angegebene Wert in der Sequenz ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Wert in der Sequenz ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (T[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(!T[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.CopyTo(`0[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array, kopieren Sie den Inhalt der <see cref="T:System.Collections.Generic.ICollection`1" /> an.</param>
+        <param name="index">Ein Wert vom Typ <see langword="int" />.</param>
+        <summary>Kopiert den Inhalt dieser Sequenz ab dem angegebenen Index im Array in das angegebene Array.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Anzahl der Elemente in der Sequenz zurück.</summary>
+        <value>Ein Wert vom Typ <see langword="int" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOrReuse">
+      <MemberSignature Language="C#" Value="public static System.Xml.Xsl.Runtime.XmlQuerySequence&lt;T&gt; CreateOrReuse (System.Xml.Xsl.Runtime.XmlQuerySequence&lt;T&gt; seq);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Xsl.Runtime.XmlQuerySequence`1&lt;!T&gt; CreateOrReuse(class System.Xml.Xsl.Runtime.XmlQuerySequence`1&lt;!T&gt; seq) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.CreateOrReuse(System.Xml.Xsl.Runtime.XmlQuerySequence{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.Runtime.XmlQuerySequence&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="seq" Type="System.Xml.Xsl.Runtime.XmlQuerySequence&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="seq">Ein <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> Instanz wiederverwendet wird.</param>
+        <summary>Löscht, und verwendet den angegebenen <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> sofern dieser verfügbar ist. Wenn die <paramref name="seq" /> Parameter ist <see langword="null" />, erstellt ein neues <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" />.</summary>
+        <returns>Eine Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" />-Klasse.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOrReuse">
+      <MemberSignature Language="C#" Value="public static System.Xml.Xsl.Runtime.XmlQuerySequence&lt;T&gt; CreateOrReuse (System.Xml.Xsl.Runtime.XmlQuerySequence&lt;T&gt; seq, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Xsl.Runtime.XmlQuerySequence`1&lt;!T&gt; CreateOrReuse(class System.Xml.Xsl.Runtime.XmlQuerySequence`1&lt;!T&gt; seq, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.CreateOrReuse(System.Xml.Xsl.Runtime.XmlQuerySequence{`0},`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.Runtime.XmlQuerySequence&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="seq" Type="System.Xml.Xsl.Runtime.XmlQuerySequence&lt;T&gt;" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="seq">Ein <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> Instanz wiederverwendet wird.</param>
+        <param name="item">Ein Element, das hinzugefügt werden soll.</param>
+        <summary>Löscht, und verwendet den angegebenen <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> ist verfügbar. Wenn die <paramref name="seq" /> Parameter ist <see langword="null" />, erstellt ein neues <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> und fügt <paramref name="item" /> auf die Auflistung.</summary>
+        <returns>Eine Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" />-Klasse.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.Xsl.Runtime.XmlQuerySequence&lt;T&gt; Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.Xsl.Runtime.XmlQuerySequence`1&lt;!T&gt; Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Xsl.Runtime.XmlQuerySequence`1.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.Runtime.XmlQuerySequence&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erstellt eine neue Instanz von <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;T&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!T&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt <see cref="T:System.Collections.Generic.IEnumerator`1" />zurück.</summary>
+        <returns>Eine Instanz der <see cref="T:System.Collections.Generic.IEnumerator`1" />-Klasse.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.IndexOf(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, für den der Index abgerufen werden soll.</param>
+        <summary>Gibt den Index des angegebenen Werts in der Sequenz zurück.</summary>
+        <returns>Der Index.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public T this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein Wert vom Typ <see langword="int" />.</param>
+        <summary>Gibt das Element am angegebenen Index zurück.</summary>
+        <value>Das Element am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemsChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemsChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemsChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.OnItemsChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn ein oder mehrere Elemente im Cache hinzugefügt oder entfernt wurden. Diese Methode kann auch aufgerufen werden, aus der <see cref="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.SortByKeys(System.Array)" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SortByKeys">
+      <MemberSignature Language="C#" Value="public void SortByKeys (Array keys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SortByKeys(class System.Array keys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.SortByKeys(System.Array)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Array" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Ein Wert vom Typ <see langword="array" />.</param>
+        <summary>Sortiert die Elemente im Cache mit den Schlüsseln im angegebenen Array.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.Add">
+      <MemberSignature Language="C#" Value="void ICollection&lt;T&gt;.Add (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;T&gt;.Add(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#Generic#ICollection&lt;T&gt;#Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Sequenzwert.</param>
+        <summary>Löst das <see cref="T:System.NotSupportedException" /> Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.Clear">
+      <MemberSignature Language="C#" Value="void ICollection&lt;T&gt;.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;T&gt;.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#Generic#ICollection&lt;T&gt;#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst das <see cref="T:System.NotSupportedException" /> Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#Generic#ICollection&lt;T&gt;#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn die <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> ist schreibgeschützt, gibt diese Eigenschaft <see langword="true" />.</summary>
+        <value>Gibt <see langword="true" /> Wenn die <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.Remove">
+      <MemberSignature Language="C#" Value="bool ICollection&lt;T&gt;.Remove (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;T&gt;.Remove(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#Generic#ICollection&lt;T&gt;#Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu entfernende Element.</param>
+        <summary>Entfernt das angegebene Element aus der Auflistung.</summary>
+        <returns>Gibt <see langword="true" /> , wenn das Element entfernt; andernfalls wurde, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IList&lt;T&gt;.Insert">
+      <MemberSignature Language="C#" Value="void IList&lt;T&gt;.Insert (int index, T value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.IList&lt;T&gt;.Insert(int32 index, !T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#Generic#IList&lt;T&gt;#Insert(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Sequenzindex.</param>
+        <param name="value">Der Sequenzwert.</param>
+        <summary>Löst das <see cref="T:System.NotSupportedException" /> Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IList&lt;T&gt;.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList&lt;T&gt;.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.IList&lt;T&gt;.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#Generic#IList&lt;T&gt;#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Sequenzindex.</param>
+        <summary>Löst das <see cref="T:System.NotSupportedException" /> Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das angegebene Array.</param>
+        <param name="index">Der angegebene Index.</param>
+        <summary>Kopiert den Inhalt dieser Sequenz ab dem angegebenen Index im Zielarray in das angegebene Array.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt <see langword="false" />zurück. Die <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> ist nicht threadsicher.</summary>
+        <value>
+          <see langword="false" />
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt diese Instanz der <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" />-Klasse zurück. Diese Instanz kann zum Synchronisieren des Zugriffs verwendet werden.</summary>
+        <value>Diese Instanz von <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt <see cref="T:System.Collections.IEnumerator" /> zurück.</summary>
+        <returns>Gibt die <see cref="T:System.Collections.IEnumerator" /> von der Abfrage sequenzauflistung.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Sequenzwert.</param>
+        <summary>Löst das <see cref="T:System.NotSupportedException" /> Ausnahme.</summary>
+        <returns>Der Index des hinzugefügten Elements.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Clear">
+      <MemberSignature Language="C#" Value="void IList.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst das <see cref="T:System.NotSupportedException" /> Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der angegebene Wert.</param>
+        <summary>Gibt <see langword="true" /> , wenn der angegebene Wert in der Sequenz ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Wert in der Sequenz ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der angegebene Wert.</param>
+        <summary>Gibt den Index des angegebenen Werts in der Sequenz zurück.</summary>
+        <returns>Der Index des angegebenen Werts in der Sequenz.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der angegebene Index.</param>
+        <param name="value">Der angegebene Wert.</param>
+        <summary>Löst das <see cref="T:System.NotSupportedException" /> Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Wert True zurück. Die Elemente können nicht hinzugefügt, entfernt oder geändert werden.</summary>
+        <value>Gibt <see langword="true" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn die <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> ist schreibgeschützt, gibt diese Eigenschaft <see langword="true" />.</summary>
+        <value>Gibt <see langword="true" /> Wenn die <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der angegebene Index.</param>
+        <summary>Gibt das Element am angegebenen Index zurück.</summary>
+        <value>Ein Element am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der angegebene Wert.</param>
+        <summary>Nicht implementiert. Löst das <see cref="T:System.NotSupportedException" /> Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.System#Collections#IList#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der angegebene Index.</param>
+        <summary>Löst das <see cref="T:System.NotSupportedException" /> Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

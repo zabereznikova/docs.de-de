@@ -1,0 +1,99 @@
+<Type Name="WorkflowMarkupSourceAttribute" FullName="System.Workflow.ComponentModel.Compiler.WorkflowMarkupSourceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowMarkupSourceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WorkflowMarkupSourceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Compiler.WorkflowMarkupSourceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Attribut, das Informationen zu einer Workflowmarkupdatei enthält. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowMarkupSourceAttribute (string fileName, string md5Digest);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string md5Digest) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.WorkflowMarkupSourceAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="md5Digest" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Eine Zeichenfolge, die den Dateinamen der Markupdatei enthält.</param>
+        <param name="md5Digest">Eine Zeichenfolge, die <see cref="P:System.Workflow.ComponentModel.Compiler.WorkflowMarkupSourceAttribute.MD5Digest" /> für die Datei.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.WorkflowMarkupSourceAttribute" />-Klasse. Dabei werden die Werte von <see cref="P:System.Workflow.ComponentModel.Compiler.WorkflowMarkupSourceAttribute.FileName" /> und <see cref="P:System.Workflow.ComponentModel.Compiler.WorkflowMarkupSourceAttribute.MD5Digest" /> initialisiert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="public string FileName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.WorkflowMarkupSourceAttribute.FileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Datei ab, die von dieser Instanz verwendet wird.</summary>
+        <value>Der Name der Datei, die von dieser Instanz verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MD5Digest">
+      <MemberSignature Language="C#" Value="public string MD5Digest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MD5Digest" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.WorkflowMarkupSourceAttribute.MD5Digest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die per MD5-Hashalgorithmus berechnete Prüfsumme ab, die der Workflowmarkup-Quelldatei zugeordnet ist.</summary>
+        <value>Eine <see cref="T:System.String" />, die die Prüfsumme enthält, die der Workflowmarkup-Quelldatei zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird verwendet, um zu vergleichen, ob sich die Workflowmarkupdatei geändert hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

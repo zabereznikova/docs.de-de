@@ -1,0 +1,522 @@
+<Type Name="SignedInfo" FullName="System.Security.Cryptography.Xml.SignedInfo">
+  <TypeSignature Language="C#" Value="public class SignedInfo : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SignedInfo extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.SignedInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Enthält Informationen zu den Kanonisierungsalgorithmus und den Signaturalgorithmus für die XML-Signatur verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.SignedInfo> -Klasse stellt die <`SignedInfo`>-Element ein XML-Signatur, die durch die XML-Signatur-Spezifikation definiert. Die <`SignedInfo`>-Element, das ein Unterelement ist von der <`Signature`>-Element enthält die Kanonisierungsmethode, die für die Signatur, des Algorithmus zum Signieren und Überprüfung und Verweise, die eine digitale Signatur zu beschreiben.  
+  
+ In den meisten Szenarien sollten Sie verwenden die <xref:System.Security.Cryptography.Xml.SignedInfo> Klasse, die von der <xref:System.Security.Cryptography.Xml.SignedXml.SignedInfo%2A> zum Signieren und Überprüfen von digitalen Signaturen von XML-Eigenschaft.  
+  
+ Weitere Informationen zu den <`SignedInfo`>-Element finden Sie unter der World Wide Web Consortium (W3C)-Spezifikation unter www.w3.org/TR/xmldsig-core/.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignedInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.SignedInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.SignedInfo" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddReference">
+      <MemberSignature Language="C#" Value="public void AddReference (System.Security.Cryptography.Xml.Reference reference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddReference(class System.Security.Cryptography.Xml.Reference reference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.SignedInfo.AddReference(System.Security.Cryptography.Xml.Reference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reference" Type="System.Security.Cryptography.Xml.Reference" />
+      </Parameters>
+      <Docs>
+        <param name="reference">Der Verweis auf die Liste der Verweise hinzuzufügen.</param>
+        <summary>Fügt eine <see cref="T:System.Security.Cryptography.Xml.Reference" /> Objekt, das die Liste der Verweise auf Digest und melden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.SignedInfo.AddReference%2A> Methode fügt eine <xref:System.Security.Cryptography.Xml.Reference> Objekt, das eine Auflistung mit den <xref:System.Security.Cryptography.Xml.SignedInfo.References%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Verweisparameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanonicalizationMethod">
+      <MemberSignature Language="C#" Value="public string CanonicalizationMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CanonicalizationMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Kanonisierungsalgorithmus ab, der vor dem Signieren für das aktuelle <see cref="T:System.Security.Cryptography.Xml.SignedInfo" />-Objekt verwendet wird, oder legt ihn fest.</summary>
+        <value>Der Kanonisierungsalgorithmus, der vor dem Signieren für das aktuelle <see cref="T:System.Security.Cryptography.Xml.SignedInfo" />-Objekt verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethod%2A> Eigenschaft verwendet eine Zeichenfolge Uniform Resource Identifier (URI) zur Darstellung der <`Canonicalization`> einer digitalen Signatur von XML-Element.  
+  
+ Verwenden der <xref:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethod%2A> -Eigenschaft an den Kanonisierungsalgorithmus angewendet, um die XML-Ausgabe von der <xref:System.Security.Cryptography.Xml.SignedInfo> Klasse vor Signatur Berechnungen durchgeführt werden.  
+  
+ Verwenden Sie eine der URIs in der folgenden Tabelle mit dieser Eigenschaft aufgeführt.  
+  
+|Kanonisierungsmethode|Wert|  
+|-----------------------------|-----------|  
+|XML kanonischen|http://www.w3.org/TR/2001/REC-xml-c14n-20010315<br /><br /> Dies ist die Standardmethode. Auch definiert in den folgenden statischen Felds:<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigCanonicalizationUrl>|  
+|Kanonischen XML mit Kommentaren.|http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments<br /><br /> Auch definiert in den folgenden statischen Felds:<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigCanonicalizationWithCommentsUrl>|  
+|Exklusive kanonischen XML|http://www.w3.org/2001/10/xml-exc-c14n#<br /><br /> Auch definiert in den folgenden statischen Felds:<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigExcC14NTransformUrl>|  
+|Exklusive kanonischen XML mit Kommentaren.|http://www.w3.org/2001/10/xml-exc-c14n#WithComments<br /><br /> Auch definiert in den folgenden statischen Felds:<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigExcC14NWithCommentsTransformUrl>|  
+  
+ Weitere Informationen zu digitalen Signaturen von XML-finden Sie unter der World Wide Web Consortium (W3C)-Spezifikation unter www.w3.org/TR/xmldsig-core/.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanonicalizationMethodObject">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.Transform CanonicalizationMethodObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.Transform CanonicalizationMethodObject" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethodObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.Transform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Security.Cryptography.Xml.Transform" /> für die Kanonikalisierung verwendete Objekt.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.Xml.Transform" /> für die Kanonikalisierung verwendete Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethodObject%2A> Eigenschaft enthält die <xref:System.Security.Cryptography.Xml.Transform> Objekt, das verwendet wird, indem die <xref:System.Security.Cryptography.Xml.SignedXml> Klasse, die ein XML-Dokument vor dem Signieren oder überprüfen sollen.  
+  
+ Die <xref:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethodObject%2A> Eigenschaft ist schreibgeschützt. Sie können ändern, die <xref:System.Security.Cryptography.Xml.Transform> Objekt innerhalb dieser Eigenschaft übergeben, die den gewünschten Uniform Resource Identifier (URI) zum Transformieren der <xref:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethod%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <see cref="T:System.Security.Cryptography.Xml.Transform" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.SignedInfo.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein <see cref="T:System.Array" /> Objekt, das die Elemente der Auflistung enthält.</param>
+        <param name="index">Der Anfangsindex im Array, in dem die Elemente kopiert werden.</param>
+        <summary>Kopiert die Elemente dieser Instanz in ein <see cref="T:System.Array" /> -Objekt, beginnend am angegebenen Index im Array.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird nicht unterstützt.</exception>
+        <block subset="none" type="usage">
+          <para>Diese Methode wird nicht unterstützt und kann nicht verwendet werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.SignedInfo.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Verweise in der aktuellen <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> Objekt.</summary>
+        <value>Die Anzahl der Verweise in der aktuellen <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Eigenschaft wird nicht unterstützt.</exception>
+        <block subset="none" type="usage">
+          <para>Diese Eigenschaft wird nicht unterstützt und kann nicht verwendet werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.SignedInfo.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator, der die Auflistung der Verweise durchläuft.</summary>
+        <returns>Ein Enumerator, der die Auflistung der Verweise durchläuft.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird nicht unterstützt.</exception>
+        <block subset="none" type="usage">
+          <para>Diese Methode wird nicht unterstützt und kann nicht verwendet werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.SignedInfo.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die XML-Darstellung der <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> Objekt.</summary>
+        <returns>Die XML-Darstellung der <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> Instanz.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die <see cref="P:System.Security.Cryptography.Xml.SignedInfo.SignatureMethod" />-Eigenschaft ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Security.Cryptography.Xml.SignedInfo.References" /> -Eigenschaft ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.SignedInfo.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID des aktuellen <see cref="T:System.Security.Cryptography.Xml.SignedInfo" />-Objekts ab oder legt diese fest.</summary>
+        <value>Die ID des aktuellen <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Security.Cryptography.Xml.SignedInfo.Id%2A> eine Zeichenfolgen-ID der XML-Darstellung des aktuellen hinzuzufügenden Eigenschaft <xref:System.Security.Cryptography.Xml.SignedInfo> Element. Die ID wird verwendet, um Verweis der <xref:System.Security.Cryptography.Xml.SignedInfo> von einem anderen Speicherort.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.SignedInfo.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Auflistung schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Eigenschaft wird nicht unterstützt.</exception>
+        <block subset="none" type="usage">
+          <para>Diese Eigenschaft wird nicht unterstützt und kann nicht verwendet werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.SignedInfo.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Auflistung synchronisiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Auflistung synchronisiert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Eigenschaft wird nicht unterstützt.</exception>
+        <block subset="none" type="usage">
+          <para>Diese Eigenschaft wird nicht unterstützt und kann nicht verwendet werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.SignedInfo.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die XML-Element, aus dem Laden der <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> Zustand.</param>
+        <summary>Lädt eine <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> Zustand aus einer XML-Element.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die <paramref name="value" /> Parameter ist kein gültiger <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> Element.  
+  
+ - oder -   
+  
+ Die <paramref name="value" /> Parameter enthält keine gültige <see cref="P:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethod" /> Eigenschaft.  
+  
+ - oder -   
+  
+ Die <paramref name="value" /> Parameter enthält keine gültige <see cref="P:System.Security.Cryptography.Xml.SignedInfo.SignatureMethod" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="References">
+      <MemberSignature Language="C#" Value="public System.Collections.ArrayList References { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList References" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.SignedInfo.References" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der <see cref="T:System.Security.Cryptography.Xml.Reference" /> Objekte des aktuellen <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> Objekt.</summary>
+        <value>Eine Liste mit den <see cref="T:System.Security.Cryptography.Xml.Reference" /> Elemente der aktuellen <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.SignedInfo.References%2A> Eigenschaft verwendet, eine Liste der <xref:System.Security.Cryptography.Xml.Reference> -Objekten zur Darstellung der `<Reference>` einer digitalen Signatur von XML-Elemente.  
+  
+ Verwenden der <xref:System.Security.Cryptography.Xml.SignedInfo.References%2A> Eigenschaft beschreiben Sie die Transformationen, digest-Algorithmen und digest-Werte eine digitale Signatur.  
+  
+ Weitere Informationen zu digitalen Signaturen von XML-finden Sie unter der World Wide Web Consortium (W3C)-Spezifikation unter www.w3.org/TR/xmldsig-core/.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureLength">
+      <MemberSignature Language="C#" Value="public string SignatureLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SignatureLength" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.SignedInfo.SignatureLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Länge der Signatur für den aktuellen <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> Objekt.</summary>
+        <value>Die Länge der Signatur für den aktuellen <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureMethod">
+      <MemberSignature Language="C#" Value="public string SignatureMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SignatureMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.SignedInfo.SignatureMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Algorithmus ab, der für Signaturerzeugung und Überprüfung für das aktuelle <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> Objekt verwendet wird, und legt ihn fest.</summary>
+        <value>Der Name des Algorithmus, der für Signaturerzeugung und Überprüfung für das aktuelle <see cref="T:System.Security.Cryptography.Xml.SignedInfo" /> Objekt verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.SignedInfo.SignatureMethod%2A> Eigenschaft verwendet eine Zeichenfolge Uniform Resource Identifier (URI), stellt die `<SignatureMethod>` einer digitalen Signatur von XML-Element.  
+  
+ Verwenden Sie die <xref:System.Security.Cryptography.Xml.SignedInfo.SignatureMethod%2A> Eigenschaft zum Angeben des Algorithmus für zum Generieren von Signaturen und Überprüfung verwendet. Diese Eigenschaft kennzeichnet alle Kryptografiefunktionen spielen beim Erstellen einer digitalen Signatur, einschließlich hashing, Algorithmen für öffentliche Schlüssel, Nachrichtenauthentifizierungscodes (MACs) und Auffüllung.  
+  
+ Verwenden Sie eine der URIs an, in der folgenden Tabelle mit dieser Eigenschaft.  
+  
+|Signaturmethode|Wert|  
+|----------------------|-----------|  
+|HMAC-SHA1|http://www.w3.org/2000/09/xmldsig#HMAC-SHA1<br /><br /> Auch definiert in den folgenden statischen Felds:<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigHMACSHA1Url>|  
+|DSA mit SHA1|http://www.w3.org/2000/09/xmldsig#dsa-sha1<br /><br /> Auch definiert in den folgenden statischen Felds:<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigDSAUrl>|  
+|RSA mit SHA1|http://www.w3.org/2000/09/xmldsig#rsa-sha1<br /><br /> Auch definiert in den folgenden statischen Felds:<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA1Url>|  
+  
+ Weitere Informationen zu digitalen Signaturen von XML-finden Sie unter der World Wide Web Consortium (W3C) [XML Signature Syntax and Processing-Spezifikation](http://www.w3.org/TR/xmldsig-core/).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.SignedInfo.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das für die Synchronisierung verwendet.</summary>
+        <value>Ein Objekt, das für die Synchronisierung verwenden.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Eigenschaft wird nicht unterstützt.</exception>
+        <block subset="none" type="usage">
+          <para>Diese Eigenschaft wird nicht unterstützt und kann nicht verwendet werden.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

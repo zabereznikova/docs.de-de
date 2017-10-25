@@ -1,0 +1,141 @@
+<Type Name="SynchronizationAttribute" FullName="System.EnterpriseServices.SynchronizationAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SynchronizationAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SynchronizationAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.SynchronizationAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Legt den Synchronisierungswert der Komponente. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aktivieren die Synchronisierung automatisch, Transaktion und Just-in-Time (JIT)-Aktivierung.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+ Anwenden von <xref:System.EnterpriseServices.SynchronizationAttribute> auf eine kontextgebundene Objekt führt zur Erstellung von einem Wartevorgang Handle "und" Automatische Ereignis zurücksetzen, sind nicht deterministisch Garbage collection. Aus diesem Grund sollten Sie keine große Anzahl von kontextgebundene-Objekte, die mit markierten erstellen die `SynchronizationAttribute` innerhalb eines kurzen Zeitraums.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.EnterpriseServices.SynchronizationAttribute> Typ.  
+  
+ [!code-csharp[EnterpriseServicesSynchronizationAttribute#0](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesSynchronizationAttribute/CS/class1.cs#0)]
+ [!code-vb[EnterpriseServicesSynchronizationAttribute#0](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesSynchronizationAttribute/VB/class1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.EnterpriseServices.SynchronizationAttribute" />-Klasse.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SynchronizationAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.SynchronizationAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.EnterpriseServices.SynchronizationAttribute" /> Klasse mit dem Standardnamen <see cref="T:System.EnterpriseServices.SynchronizationOption" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.EnterpriseServices.SynchronizationAttribute.Value%2A> Eigenschaftensatz wird auf den Standardwert <xref:System.EnterpriseServices.SynchronizationOption.Required>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein neues <xref:System.EnterpriseServices.SynchronizationAttribute>.  
+  
+ [!code-csharp[EnterpriseServicesSynchronizationAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesSynchronizationAttribute/CS/class1.cs#1)]
+ [!code-vb[EnterpriseServicesSynchronizationAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesSynchronizationAttribute/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SynchronizationAttribute (System.EnterpriseServices.SynchronizationOption val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.EnterpriseServices.SynchronizationOption val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.SynchronizationAttribute.#ctor(System.EnterpriseServices.SynchronizationOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="val" Type="System.EnterpriseServices.SynchronizationOption" />
+      </Parameters>
+      <Docs>
+        <param name="val">Einer der <see cref="T:System.EnterpriseServices.SynchronizationOption" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.EnterpriseServices.SynchronizationAttribute" />-Klasse mit der angegebenen <see cref="T:System.EnterpriseServices.SynchronizationOption" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein neues <xref:System.EnterpriseServices.SynchronizationAttribute>.  
+  
+ [!code-csharp[EnterpriseServicesSynchronizationAttribute#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesSynchronizationAttribute/CS/class1.cs#2)]
+ [!code-vb[EnterpriseServicesSynchronizationAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesSynchronizationAttribute/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.SynchronizationOption Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.SynchronizationOption Value" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.SynchronizationAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.SynchronizationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Einstellung der <see cref="P:System.EnterpriseServices.SynchronizationAttribute.Value" /> Eigenschaft.</summary>
+        <value>Einer der <see cref="T:System.EnterpriseServices.SynchronizationOption" />-Werte. Die Standardeinstellung ist <see langword="Required" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel ruft den Wert des einem `Synchronization` des Attributs <xref:System.EnterpriseServices.SynchronizationAttribute.Value%2A> Eigenschaft.  
+  
+ [!code-csharp[EnterpriseServicesSynchronizationAttribute#3](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesSynchronizationAttribute/CS/class1.cs#3)]
+ [!code-vb[EnterpriseServicesSynchronizationAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesSynchronizationAttribute/VB/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

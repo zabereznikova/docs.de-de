@@ -1,0 +1,159 @@
+<Type Name="MultipleFilterMatchesException" FullName="System.ServiceModel.Dispatcher.MultipleFilterMatchesException">
+  <TypeSignature Language="C#" Value="public class MultipleFilterMatchesException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit MultipleFilterMatchesException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn mehrere Filter übereinstimmen, aber nur einer erwartet wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Filterliste schließt die Filter ein, die bewirkt haben, dass die Ausnahme ausgelöst wurde.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MultipleFilterMatchesException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MultipleFilterMatchesException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MultipleFilterMatchesException (string msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MultipleFilterMatchesException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="msg">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException" />-Klasse mit einer angegebenen Fehlermeldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MultipleFilterMatchesException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MultipleFilterMatchesException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Instanz, die alle erforderlichen Daten zum Serialisieren der Ausnahme enthält.</param>
+        <param name="context">Das <see cref="T:System.Runtime.Serialization.StreamingContext" />-Objekt, das die Quelle und das Ziel des Streams angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException" />-Klasse unter Angabe der Serialisierungsinformationen und des Streamingkontexts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MultipleFilterMatchesException (string msg, System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; filters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string msg, class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; filters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MultipleFilterMatchesException.#ctor(System.String,System.Collections.ObjectModel.Collection{System.ServiceModel.Dispatcher.MessageFilter})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="filters" Type="System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="msg">To be added.</param>
+        <param name="filters">Eine Auflistung der Nachrichtenfilter.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException" />-Klasse mit der angegebenen Fehlermeldung und einer Auflistung der Filter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MultipleFilterMatchesException (string msg, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string msg, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MultipleFilterMatchesException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="msg">To be added.</param>
+        <param name="inner">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MultipleFilterMatchesException (string msg, Exception inner, System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; filters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string msg, class System.Exception inner, class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; filters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.MultipleFilterMatchesException.#ctor(System.String,System.Exception,System.Collections.ObjectModel.Collection{System.ServiceModel.Dispatcher.MessageFilter})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+        <Parameter Name="filters" Type="System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="msg">To be added.</param>
+        <param name="inner">To be added.</param>
+        <param name="filters">Eine Auflistung der Nachrichtenfilter.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException" />-Klasse mit der angegebenen Fehlermeldung, einer Ausnahme und einer Auflistung der Filter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filters">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; Filters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; Filters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.MultipleFilterMatchesException.Filters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Filter ab, die bewirkt haben, dass die Ausnahme ausgelöst wurde.</summary>
+        <value><see cref="T:System.Collections.ObjectModel.Collection`1" /> des Typs <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" />, die die Filter enthält, die zur Auslösung der Ausnahme geführt haben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,281 @@
+<Type Name="NeutralResourcesLanguageAttribute" FullName="System.Resources.NeutralResourcesLanguageAttribute">
+  <TypeSignature Language="C#" Value="public sealed class NeutralResourcesLanguageAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NeutralResourcesLanguageAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Resources.NeutralResourcesLanguageAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Informiert den Ressourcen-Manager der Standardkultur für eine app an. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="desktop-apps"></a>Desktop-Apps  
+ Bei desktop-apps die <xref:System.Resources.NeutralResourcesLanguageAttribute> -Attribut wird der Ressourcen-Manager der Standardkultur einer Anwendung und den Speicherort der dessen Ressourcen. Standardmäßig sind Ressourcen in der Haupt-app-Assembly eingebettet, und können Sie das Attribut wie folgt. Diese Anweisung gibt an, dass die Englisch (Vereinigte Staaten) Standardkultur der app.  
+  
+ [!code-csharp[System.Resources.NeutralResourcesLanguageAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.neutralresourceslanguageattribute/cs/example1.cs#1)]
+ [!code-vb[System.Resources.NeutralResourcesLanguageAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.neutralresourceslanguageattribute/vb/example1.vb#1)]  
+  
+ Können Sie auch die <xref:System.Resources.NeutralResourcesLanguageAttribute> Attribut, um anzugeben, wo <xref:System.Resources.ResourceManager> können, suchen Sie die Ressourcen der Standardkultur durch Bereitstellen einer <xref:System.Resources.UltimateResourceFallbackLocation> Enumerationswert in der attributanweisung. Dies erfolgt meist um anzugeben, dass die Ressourcen in eine Satellitenassembly befinden. Die folgende Anweisung gibt z. B. Englisch (Vereinigte Staaten) Standardkultur bzw. neutrale Kultur der app ist, sodass ihre Ressourcen in eine Satellitenassembly befinden. Die <xref:System.Resources.ResourceManager> Objekt sieht für sie in einem Unterverzeichnis, das mit der Bezeichnung de-de.  
+  
+ [!code-csharp[System.Resources.NeutralResourcesLanguageAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.neutralresourceslanguageattribute/cs/example2.cs#2)]
+ [!code-vb[System.Resources.NeutralResourcesLanguageAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.neutralresourceslanguageattribute/vb/example2.vb#2)]  
+  
+> [!TIP]
+>  Es wird empfohlen, dass Sie immer verwenden die <xref:System.Resources.NeutralResourcesLanguageAttribute> -Attribut zum Definieren der Standardkultur der app.  
+  
+ Das Attribut führt zwei Rollen:  
+  
+-   Wenn die Standardkultur Ressourcen in die Hauptassembly der Anwendung eingebettet werden und <xref:System.Resources.ResourceManager> hat beim Abrufen von Ressourcen, die das dieselbe Kultur aufweist wie die Standardkultur gehören die <xref:System.Resources.ResourceManager> verwendet automatisch die Ressourcen in die Hauptassembly stattdessen eine Satellitenassembly zu suchen. Dies umgeht den üblichen Assembly Prüfpunkt, verbessert die Leistung der Suche für die erste Ressource geladen und Ihr Workingset reduzieren können. Finden Sie unter [Verpacken und Bereitstellen von Ressourcen](~/docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) für den Prozess <xref:System.Resources.ResourceManager> verwendet, um für die Suche nach Ressourcendateien.  
+  
+-   Wenn die Standardkultur Ressourcen befinden in eine Satellitenassembly und nicht in die Haupt-app-Assembly, die <xref:System.Resources.NeutralResourcesLanguageAttribute> Attribut gibt an, die Kultur und das Verzeichnis, aus dem die Common Language Runtime die Ressourcen laden kann.  
+  
+## <a name="includewin8appnamelongincludeswin8-appname-long-mdmd-apps"></a>[!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]-Apps  
+ In [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] apps, deren Ressourcen werden geladen und abgerufen, indem, die <xref:System.Resources.ResourceManager> -Klasse, die <xref:System.Resources.NeutralResourcesLanguageAttribute> Attribut definiert die neutrale Kultur, deren Ressourcen bei einem fehlgeschlagenen Test verwendet werden. Es gibt nicht den Speicherort der Ressourcen an. Standardmäßig <xref:System.Resources.ResourceManager> des app Paket (paketressourcenindex) Ressourcendatei verwendet, um die Ressourcen der Standardkultur zu suchen. Die neutrale Kultur, die von definiert ist die <xref:System.Resources.NeutralResourcesLanguageAttribute> Attribut wird hinzugefügt, bis zum Ende der Liste der UI-Sprache um diesen Effekt zu simulieren.  
+  
+ Wenn Sie geladen und Abrufen von Ressourcen mithilfe der [!INCLUDE[wrt](~/includes/wrt-md.md)] [Windows.ApplicationModel.Resources.ResourceLoader](http://go.microsoft.com/fwlink/p/?LinkId=238182) Klasse oder die Typen in der [Windows.ApplicationModel.Resources.Core](http://go.microsoft.com/fwlink/p/?LinkId=238194) Der Namespace, der <xref:System.Resources.NeutralResourcesLanguageAttribute> Attribut wird ignoriert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine einfache "Hello World"-app veranschaulicht die Verwendung von der <xref:System.Resources.NeutralResourcesLanguageAttribute> -Attribut zum Definieren einer Standard- oder Fallback-Kultur. Er erfordert die Erstellung von separate Ressourcendateien für Englisch (En), Englisch (Vereinigte Staaten) (En-US) und Französisch (Frankreich) (fr-FR) Kulturen. Das folgende Beispiel zeigt den Inhalt einer Textdatei mit dem Namen ExampleResources.txt für die Kultur Englisch.  
+  
+```  
+# Resources for the default (en) culture.  
+Greeting=Hello  
+```  
+  
+ Um die Ressourcendatei in eine app zu verwenden, verwenden Sie die auf die Datei aus dem Format der Textdatei (.txt) in einer Binärdatei (.resources)-Format wie folgt konvertieren:  
+  
+```  
+resgen ExampleResources.txt  
+```  
+  
+ Wenn die Anwendung kompiliert wird, wird die binäre Ressourcendatei in die Haupt-app-Assembly eingebettet werden.  
+  
+ Das folgende Beispiel zeigt den Inhalt einer Textdatei mit dem Namen ExampleResources.en US.txt, die Ressourcen für die Kultur Englisch (Vereinigte Staaten) bereitstellt.  
+  
+```  
+# Resources for the en-US culture.  
+Greeting=Hi  
+```  
+  
+ Die Textdatei um eine binäre Resources-Datei konvertiert werden kann, mithilfe der mit dem Befehl Zeile wie folgt:  
+  
+```  
+resgen ExampleResources.en-US.txt ExampleResources.en-US.resources  
+```  
+  
+ Die binäre Ressourcendatei sollte dann mithilfe von in eine Assembly kompiliert und im Unterverzeichnis "En-US" für das app-Verzeichnis platziert werden, indem Sie den folgenden Befehl ausgeben:  
+  
+```  
+al /t:lib /embed:ExampleResources.en-US.resources /culture:en-US /out:en-us\Example.resources.dll  
+```  
+  
+ Das folgende Beispiel zeigt den Inhalt einer Textdatei mit dem Namen ExampleResources.fr FR.txt, die Ressourcen für die Kultur Französisch (Frankreich) bereitstellt.  
+  
+```  
+# Resources for the fr-FR culture.  
+Greeting=Bonjour  
+```  
+  
+ Die Textdatei kann auf eine binäre Ressourcendatei mit ResGen.exe über die Befehlszeile wie folgt konvertiert werden:  
+  
+```  
+resgen ExampleResources.fr-FR.txt ExampleResources.fr-FR.resources  
+```  
+  
+ Die binäre Resources-Datei sollte dann mithilfe der Assemblylinker in eine Assembly kompiliert und im Unterverzeichnis "fr-FR" des Verzeichnisses app platziert werden, indem Sie den folgenden Befehl ausgeben:  
+  
+```  
+al /t:lib /embed:ExampleResources.fr-FR.resources /culture:fr-FR /out:fr-FR\Example.resources.dll  
+```  
+  
+ Das folgende Beispiel enthält den ausführbaren Code, der die aktuelle Kultur festlegt, aufgefordert, den Namen des Benutzers und zeigt dann eine lokalisierte Zeichenfolge.  
+  
+ [!code-csharp[System.Globalization.NeutralResourcesLanguageAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.neutralresourceslanguageattribute/cs/example.cs#1)]
+ [!code-vb[System.Globalization.NeutralResourcesLanguageAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.neutralresourceslanguageattribute/vb/example.vb#1)]  
+  
+ Sie können mit dem folgenden Befehl in Visual Basic kompiliert werden:  
+  
+```  
+vbc Example.vb /resource:ExampleResources.resources  
+```  
+  
+ oder mit den folgenden Befehl in c#:  
+  
+```  
+csc Example.cs /resource:ExampleResources.resources  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NeutralResourcesLanguageAttribute (string cultureName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string cultureName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.NeutralResourcesLanguageAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cultureName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cultureName">Der Name der Kultur, die in der aktuellen Assembly neutrale Ressourcen geschrieben wurden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Resources.NeutralResourcesLanguageAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine detaillierte Liste der Kulturnamen, finden Sie unter [National Language Support (NLS) API Reference](http://go.microsoft.com/fwlink/?LinkId=200048) am Go Global Developer Center.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="cultureName" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NeutralResourcesLanguageAttribute (string cultureName, System.Resources.UltimateResourceFallbackLocation location);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string cultureName, valuetype System.Resources.UltimateResourceFallbackLocation location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.NeutralResourcesLanguageAttribute.#ctor(System.String,System.Resources.UltimateResourceFallbackLocation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cultureName" Type="System.String" />
+        <Parameter Name="location" Type="System.Resources.UltimateResourceFallbackLocation" />
+      </Parameters>
+      <Docs>
+        <param name="cultureName">Der Name der Kultur, die in der aktuellen Assembly neutrale Ressourcen geschrieben wurden.</param>
+        <param name="location">Einer der Enumerationswerte, der den Speicherort der abzurufenden neutrale Fallbackressourcen angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Resources.NeutralResourcesLanguageAttribute" /> Klasse mit der endgültigen Ausweichpfad.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Resources.NeutralResourcesLanguageAttribute> Konstruktor mit der <xref:System.Resources.UltimateResourceFallbackLocation> Enumeration, um festzulegen, ob die <xref:System.Resources.ResourceManager> Klasse ist neutrale Fallbackressourcen aus der Haupt-app-Assembly (Standardeinstellung) oder aus einer Satellitenassembly, angegeben durch Abrufen der <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> und die <xref:System.Resources.ResourceManager.FallbackLocation%2A> Eigenschaften.  
+  
+ Eine detaillierte Liste der Kulturnamen, finden Sie unter [National Language Support (NLS) API Reference](http://go.microsoft.com/fwlink/?LinkId=200048) am Go Global Developer Center.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="cultureName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="location" />ist kein Mitglied der <see cref="T:System.Resources.UltimateResourceFallbackLocation" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureName">
+      <MemberSignature Language="C#" Value="public string CultureName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CultureName" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.NeutralResourcesLanguageAttribute.CultureName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Kulturnamen ab.</summary>
+        <value>Der Name der Standardkultur für die Hauptassembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine detaillierte Liste der Kulturnamen, finden Sie unter [National Language Support (NLS) API Reference](http://go.microsoft.com/fwlink/?LinkId=200048) am Go Global Developer Center.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public System.Resources.UltimateResourceFallbackLocation Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Resources.UltimateResourceFallbackLocation Location" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.NeutralResourcesLanguageAttribute.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.UltimateResourceFallbackLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Speicherort für die <see cref="T:System.Resources.ResourceManager" /> Klasse zum Abrufen von neutrale Ressourcen mithilfe der [Ressourcenfallback-Prozess](~/docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).</summary>
+        <value>Einer der Enumerationswerte, der den Speicherort angibt (Hauptassembly oder Satellitenassembly), aus dem neutrale Ressourcen abgerufen werden sollen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

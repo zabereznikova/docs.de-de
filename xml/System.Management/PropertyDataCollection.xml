@@ -1,0 +1,439 @@
+<Type Name="PropertyDataCollection" FullName="System.Management.PropertyDataCollection">
+  <TypeSignature Language="C#" Value="public class PropertyDataCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertyDataCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.PropertyDataCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt den Satz von Eigenschaften eines WMI-Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel listet Informationen über die **Win32_OperatingSystem** -Klasse unter Verwendung der <xref:System.Management.PropertyData> Klasse. Weitere Informationen zu **Win32_OperatingSystem**, finden Sie in der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ [!code-csharp[wminet_PropertyDataCollection#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_PropertyDataCollection/cs/PropertyDataCollection.cs#1)]
+ [!code-vb[wminet_PropertyDataCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_PropertyDataCollection/vb/PropertyDataCollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual void Add (string propertyName, object propertyValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(string propertyName, object propertyValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.PropertyDataCollection.Add(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der neuen Eigenschaft.</param>
+        <param name="propertyValue">Der Wert der Eigenschaft (darf nicht null sein).</param>
+        <summary>Fügt ein neues <see cref="T:System.Management.PropertyData" /> mit dem angegebenen Wert. Der Wert darf nicht null sein und muss in einen Common Information Model (CIM)-Typ konvertierbar sein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassendefinitionen, nicht auf Instanzen können nur Eigenschaften hinzugefügt werden. Diese Methode ist nur gültig, beim Aufrufen einer <xref:System.Management.PropertyDataCollection> in einem <xref:System.Management.ManagementClass>.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string propertyName, System.Management.CimType propertyType, bool isArray);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string propertyName, valuetype System.Management.CimType propertyType, bool isArray) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.PropertyDataCollection.Add(System.String,System.Management.CimType,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Management.CimType" />
+        <Parameter Name="isArray" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Den Namen der Eigenschaft.</param>
+        <param name="propertyType">Das Common Information Model (CIM)-Typ der Eigenschaft.</param>
+        <param name="isArray">
+          <see langword="true" />um anzugeben, dass die Eigenschaft ein Arraytyp ist; andernfalls <see langword="false" />.</param>
+        <summary>Fügt ein neues <see cref="T:System.Management.PropertyData" /> ohne zugewiesenen Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassendefinitionen, nicht auf Instanzen können nur Eigenschaften hinzugefügt werden. Diese Methode ist nur gültig, beim Aufrufen einer <xref:System.Management.PropertyDataCollection> in einem <xref:System.Management.ManagementClass>.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string propertyName, object propertyValue, System.Management.CimType propertyType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string propertyName, object propertyValue, valuetype System.Management.CimType propertyType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.PropertyDataCollection.Add(System.String,System.Object,System.Management.CimType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.Object" />
+        <Parameter Name="propertyType" Type="System.Management.CimType" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Den Namen der Eigenschaft.</param>
+        <param name="propertyValue">Der Wert der Eigenschaft (Dies kann null sein).</param>
+        <param name="propertyType">Der CIM-Typ der Eigenschaft.</param>
+        <summary>Fügt ein neues <see cref="T:System.Management.PropertyData" /> mit dem angegebenen Wert und Common Information Model (CIM) eingeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassendefinitionen, nicht auf Instanzen können nur Eigenschaften hinzugefügt werden. Diese Methode ist nur gültig, beim Aufrufen einer <xref:System.Management.PropertyDataCollection> in einem <xref:System.Management.ManagementClass>.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.PropertyDataCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array, das kopiert die <see cref="T:System.Management.PropertyDataCollection" />.</param>
+        <param name="index">Der Index von dem mit dem Kopieren begonnen werden soll.</param>
+        <summary>Kopiert die <see cref="T:System.Management.PropertyDataCollection" /> in ein Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Management.PropertyData[] propertyArray, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Management.PropertyData[] propertyArray, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.PropertyDataCollection.CopyTo(System.Management.PropertyData[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyArray" Type="System.Management.PropertyData[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="propertyArray">Das Zielarray, um den kopierten enthalten <see cref="T:System.Management.PropertyDataCollection" />.</param>
+        <param name="index">Der Index im Zielarray, ab dem kopiert werden soll.</param>
+        <summary>Kopiert die <see cref="T:System.Management.PropertyDataCollection" /> in ein spezielles <see cref="T:System.Management.PropertyData" /> Objektarray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Management.PropertyDataCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Objekte in der <see cref="T:System.Management.PropertyDataCollection" />.</summary>
+        <value>Gibt ein <see cref="T:System.Int32" /> Wert, der die Anzahl der Objekte in der Auflistung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Die Anzahl der Objekte in der Auflistung.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Management.PropertyDataCollection.PropertyDataEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.PropertyDataCollection/PropertyDataEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.PropertyDataCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.PropertyDataCollection+PropertyDataEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Enumerator für diese <see cref="T:System.Management.PropertyDataCollection" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können nur durchlaufen (wie in einer Visual Basic .NET `For Each` -Anweisung oder ein C#- `For` Anweisung) einen Vorwärtscursor einmal durchlaufen. So, dass der Enumerator nicht zurückgesetzt werden kann, wird der Speicher mit den Instanzen von WMI freigegeben. Aus diesem Grund die <xref:System.Management.PropertyDataCollection.Count%2A> Methode kann nicht verwendet werden, da sie das Zurücksetzen des Enumerators erfordert.  
+  
+ Vorwärtscursor Enumeratoren werden in der Regel viel schneller ausgeführt und belegen weniger Speicher als konventionelle Enumeratoren, aber es nicht möglich, dass Aufrufe von <xref:System.Management.PropertyDataCollection.PropertyDataEnumerator.Reset%2A>.  
+  
+ Wenn ein Enumerator zurückspulbar ist, werden die Objekte in der Auflistung für mehrere Enumerationen verfügbar gehalten werden.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Management.PropertyDataCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Objekt synchronisiert wird.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob das Objekt synchronisiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn das Objekt synchronisiert wird; andernfalls `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Management.PropertyData this[string propertyName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.PropertyData Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Management.PropertyDataCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.PropertyData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der abzurufenden Eigenschaft.</param>
+        <summary>Ruft die angegebene Eigenschaft aus der <see cref="T:System.Management.PropertyDataCollection" />, []-Syntax verwenden. Diese Eigenschaft ist der Indexer für die <see cref="T:System.Management.PropertyDataCollection" /> Klasse.</summary>
+        <value>Gibt eine <see cref="T:System.Management.PropertyData" /> mit den Daten für eine angegebene Eigenschaft in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Ein <xref:System.Management.PropertyData>basierend auf dem angegebenen Namen.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die **"FreeSpace"** Eigenschaft aus einem <xref:System.Management.ManagementClass>.  
+  
+ [!code-csharp[wminet_PropertyDataCollection_Item#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_PropertyDataCollection_Item/cs/PropertyDataCollection_Item.cs#1)]
+ [!code-vb[wminet_PropertyDataCollection_Item#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_PropertyDataCollection_Item/vb/PropertyDataCollection_Item.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public virtual void Remove (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.PropertyDataCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der zu entfernenden Eigenschaft.</param>
+        <summary>Entfernt <see cref="T:System.Management.PropertyData" /> aus <see cref="T:System.Management.PropertyDataCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eigenschaften können nur aus Klassendefinitionen nicht von Instanzen entfernt werden. Diese Methode ist nur gültig, wenn Sie aufgerufen, die eine Auflistung von Eigenschaften in einem <xref:System.Management.ManagementClass>.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Management.PropertyDataCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das für die Synchronisierung verwendet werden.</summary>
+        <value>Gibt eine <see cref="T:System.Object" /> Wert mit dem Objekt für die Synchronisierung verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Das Objekt, für die Synchronisierung verwendet werden.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.PropertyDataCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen <see cref="T:System.Collections.IEnumerator" /> zurück, der <see cref="T:System.Management.PropertyDataCollection" /> durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> für das <see cref="T:System.Management.PropertyDataCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [Visual Basic, c#]  
+  
+ Die `foreach`-Anweisung der Programmiersprache C# (`for each` in Visual Basic) verbirgt die Komplexität der Enumeratoren.  Daher empfiehlt es sich, `foreach` zu verwenden und den Enumerator nicht direkt zu ändern.  
+  
+ Mit Enumeratoren können die Daten in der Auflistung zwar gelesen, jedoch nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ Zu Beginn wird der Enumerator vor das erste Element in der Auflistung positioniert. <xref:System.Collections.IEnumerator.Reset%2A> setzt den Enumerator ebenfalls auf diese Position zurück. An dieser position Aufrufen <xref:System.Collections.IEnumerator.Current%2A> löst eine Ausnahme aus. Daher muss der Enumerator durch einen Aufruf von <xref:System.Collections.IEnumerator.MoveNext%2A> auf das erste Element der Auflistung gesetzt werden, bevor der Wert von <xref:System.Collections.IEnumerator.Current%2A> gelesen werden kann.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> gibt solange dasselbe Objekt zurück, bis <xref:System.Collections.IEnumerator.MoveNext%2A> oder <xref:System.Collections.IEnumerator.Reset%2A> aufgerufen wird. <xref:System.Collections.IEnumerator.MoveNext%2A> legt <xref:System.Collections.IEnumerator.Current%2A> auf das nächste Element fest.  
+  
+ Wenn <xref:System.Collections.IEnumerator.MoveNext%2A> übergibt am Ende der Auflistung der Enumerator hinter dem letzten Element in der Auflistung positioniert ist und <xref:System.Collections.IEnumerator.MoveNext%2A> gibt `false`. Wenn der Enumerator ist an dieser Position ist nachfolgende Aufrufe <xref:System.Collections.IEnumerator.MoveNext%2A> auch zurückgeben `false`. Wenn der letzte Aufruf <xref:System.Collections.IEnumerator.MoveNext%2A> zurückgegebene `false`Aufrufen <xref:System.Collections.IEnumerator.Current%2A> löst eine Ausnahme aus. Um <xref:System.Collections.IEnumerator.Current%2A> wieder auf das erste Element der Auflistung festzulegen, können Sie <xref:System.Collections.IEnumerator.Reset%2A> gefolgt von <xref:System.Collections.IEnumerator.MoveNext%2A> aufrufen.  
+  
+ Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Wenn die Änderungen werden auf die Auflistung, z. B. das Hinzufügen, ändern oder Löschen von Elementen aus, das der Enumerator unwiederbringlich seine ist ungültig, und der nächste Aufruf von <xref:System.Collections.IEnumerator.MoveNext%2A> oder <xref:System.Collections.IEnumerator.Reset%2A> löst eine <xref:System.InvalidOperationException>. Wenn die Auflistung, zwischen geändert wird <xref:System.Collections.IEnumerator.MoveNext%2A> und <xref:System.Collections.IEnumerator.Current%2A>, <xref:System.Collections.IEnumerator.Current%2A> gibt das Element, das auf festgelegt, wird, auch wenn der Enumerator bereits ungültig ist.  
+  
+ Der Enumerator hat keinen exklusiven Zugriff auf die Auflistung. Daher ist die Enumeration einer Auflistung systemintern keine threadsichere Prozedur. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.  
+  
+ Diese Methode ist ein o(1)-Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

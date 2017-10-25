@@ -1,0 +1,70 @@
+<Type Name="IInternalConfigWebHost" FullName="System.Web.Configuration.Internal.IInternalConfigWebHost">
+  <TypeSignature Language="C#" Value="public interface IInternalConfigWebHost" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInternalConfigWebHost" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.Internal.IInternalConfigWebHost" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Schnittstellen, die von internen .NET Framework-Infrastruktur für den Zugriff auf und Bearbeiten von Konfigurationsdateien Host.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetConfigPathFromSiteIDAndVPath">
+      <MemberSignature Language="C#" Value="public string GetConfigPathFromSiteIDAndVPath (string siteID, string vpath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetConfigPathFromSiteIDAndVPath(string siteID, string vpath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.Internal.IInternalConfigWebHost.GetConfigPathFromSiteIDAndVPath(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteID" Type="System.String" />
+        <Parameter Name="vpath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="siteID">Site-ID für die Anwendung. Weitere Informationen finden Sie unter Übersicht über die Konfiguration von ASP.NET.</param>
+        <param name="vpath">Die Anwendung virtuelle Pfad als Zeichenfolge. Weitere Informationen finden Sie unter ASP.NET Web Site Pfade.</param>
+        <summary>Gibt einen Wert, der Pfad zu einer Konfigurationsdatei, die die angegebene Site-ID und der virtuelle Pfad der Anwendung zugeordneten darstellt.</summary>
+        <returns>Eine Zeichenfolge, die den Pfad zu einer Konfigurationsdatei darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSiteIDAndVPathFromConfigPath">
+      <MemberSignature Language="C#" Value="public void GetSiteIDAndVPathFromConfigPath (string configPath, out string siteID, out string vpath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetSiteIDAndVPathFromConfigPath(string configPath, [out] string&amp; siteID, [out] string&amp; vpath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.Internal.IInternalConfigWebHost.GetSiteIDAndVPathFromConfigPath(System.String,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+        <Parameter Name="siteID" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="vpath" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Eine Zeichenfolge, die den Pfad zur Konfigurationsdatei der Anwendung darstellt.</param>
+        <param name="siteID">Die Anwendung Site Bezeichner. Weitere Informationen finden Sie unter Übersicht über die Konfiguration von ASP.NET.</param>
+        <param name="vpath">Die Anwendung virtuelle Pfad als Zeichenfolge. Weitere Informationen finden Sie unter ASP.NET Web Site Pfade.</param>
+        <summary>Legt die aktuelle Site-ID eines Konfigurationsobjekts, basierend auf den virtuellen Pfad der Anwendung und der Pfad der Anwendung fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,397 @@
+<Type Name="PixelFormat" FullName="System.Drawing.Imaging.PixelFormat">
+  <TypeSignature Language="C#" Value="public enum PixelFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PixelFormat extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.PixelFormat" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt das Format der Farbdaten für jedes Pixels in der Abbildung an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Pixelformat definiert die Anzahl der Bits im Arbeitsspeicher ein Pixel von Daten zugeordnet. Das Format definiert auch die Reihenfolge der Farbkomponenten innerhalb eines einzelnen Pixels von Daten.  
+  
+ PixelFormat48bppRGB, PixelFormat64bppARGB und PixelFormat64bppPARGB verwenden, 16 Bits pro Farbanteil (Kanal). GDI +, Version 1.0 und 1.1 kann Bilder 16 Bits pro Kanal gelesen, aber solche Images werden in einem Format 8 Bits pro Kanal zum Verarbeiten, anzeigen und speichern konvertiert. Jeder Kanal 16-Bit-Farbe Aufnahme eines Werts im Bereich von 0 bis 2 ^ 13.  
+  
+ Einige der Pixelformate enthalten Farbwerte integriert. Integriertes bedeutet, dass die Farbwerte bereits mit einem Alphawert multipliziert wurden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Alpha">
+      <MemberSignature Language="C#" Value="Alpha" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Alpha = int32(262144)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Alpha" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Pixeldaten enthält Alphawerte, die nicht integriert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Canonical">
+      <MemberSignature Language="C#" Value="Canonical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Canonical = int32(2097152)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Canonical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Standard-Pixelformat 32 Bits pro Pixel. Das Format Gibt 24-Bit-Farbtiefe und einen 8-Bit-alpha-Kanal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DontCare">
+      <MemberSignature Language="C#" Value="DontCare" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat DontCare = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.DontCare" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es wird keine Pixelformat angegeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Extended">
+      <MemberSignature Language="C#" Value="Extended" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Extended = int32(1048576)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Extended" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Reserviert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Format16bppArgb1555">
+      <MemberSignature Language="C#" Value="Format16bppArgb1555" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Format16bppArgb1555 = int32(397319)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Format16bppArgb1555" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Pixelformat beträgt 16 Bits pro Pixel. Die Farbinformationen gibt 32.768 Farbtöne, von denen 5 Bits Rot, 5 Bits sind leuchten grün, 5 Bits sind blau und 1 Bit hat Alpha.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Format16bppGrayScale">
+      <MemberSignature Language="C#" Value="Format16bppGrayScale" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Format16bppGrayScale = int32(1052676)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Format16bppGrayScale" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Pixelformat beträgt 16 Bits pro Pixel. Die Farbinformationen gibt 65536 Graustufen an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Format16bppRgb555">
+      <MemberSignature Language="C#" Value="Format16bppRgb555" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Format16bppRgb555 = int32(135173)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Format16bppRgb555" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Format 16 Bits pro Pixel beträgt. 5 Bits werden für die Rot-, Grün- und blauen-Komponenten verwendet. Das verbleibende Bit wird nicht verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Format16bppRgb565">
+      <MemberSignature Language="C#" Value="Format16bppRgb565" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Format16bppRgb565 = int32(135174)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Format16bppRgb565" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Format 16 Bits pro Pixel beträgt. 5 Bits dienen zur Rotanteils, 6 Bits werden für die grünen Komponente verwendet und 5 Bits werden für die blaue Komponente verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Format1bppIndexed">
+      <MemberSignature Language="C#" Value="Format1bppIndexed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Format1bppIndexed = int32(196865)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Format1bppIndexed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Pixelformat 1 Bit pro Pixel beträgt und indizierte Farben verwendet. Die Farbtabelle enthält daher zwei Farben aus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Format24bppRgb">
+      <MemberSignature Language="C#" Value="Format24bppRgb" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Format24bppRgb = int32(137224)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Format24bppRgb" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Format 24 Bits pro Pixel beträgt. 8 Bits werden für die Rot-, Grün- und blauen-Komponenten verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Format32bppArgb">
+      <MemberSignature Language="C#" Value="Format32bppArgb" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Format32bppArgb = int32(2498570)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Format32bppArgb" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Format 32 Bits pro Pixel beträgt. 8 Bits werden für die alpha, Rot-, Grün- und blauen-Komponenten verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Format32bppPArgb">
+      <MemberSignature Language="C#" Value="Format32bppPArgb" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Format32bppPArgb = int32(925707)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Format32bppPArgb" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Format 32 Bits pro Pixel beträgt. 8 Bits werden für die alpha, Rot-, Grün- und blauen-Komponenten verwendet. Die Rot-, Grün- und blauen-Komponenten sind entsprechend den Alphaanteil integriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Format32bppRgb">
+      <MemberSignature Language="C#" Value="Format32bppRgb" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Format32bppRgb = int32(139273)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Format32bppRgb" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Format 32 Bits pro Pixel beträgt. 8 Bits werden für die Rot-, Grün- und blauen-Komponenten verwendet. Die restlichen 8 Bits werden nicht verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Format48bppRgb">
+      <MemberSignature Language="C#" Value="Format48bppRgb" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Format48bppRgb = int32(1060876)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Format48bppRgb" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Format 48 Bits pro Pixel beträgt. 16 Bits werden für die Rot-, Grün- und blauen-Komponenten verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Format4bppIndexed">
+      <MemberSignature Language="C#" Value="Format4bppIndexed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Format4bppIndexed = int32(197634)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Format4bppIndexed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Format 4 Bits pro Pixel, indiziert ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Format64bppArgb">
+      <MemberSignature Language="C#" Value="Format64bppArgb" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Format64bppArgb = int32(3424269)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Format64bppArgb" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Format 64 Bits pro Pixel beträgt. 16 Bits werden für die alpha, Rot-, Grün- und blauen-Komponenten verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Format64bppPArgb">
+      <MemberSignature Language="C#" Value="Format64bppPArgb" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Format64bppPArgb = int32(1851406)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Format64bppPArgb" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Format 64 Bits pro Pixel beträgt. 16 Bits werden für die alpha, Rot-, Grün- und blauen-Komponenten verwendet. Die Rot-, Grün- und blauen-Komponenten sind entsprechend den Alphaanteil integriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Format8bppIndexed">
+      <MemberSignature Language="C#" Value="Format8bppIndexed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Format8bppIndexed = int32(198659)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Format8bppIndexed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Format 8 Bits pro Pixel, indiziert ist. Die Farbtabelle enthält daher 256 Farben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Gdi">
+      <MemberSignature Language="C#" Value="Gdi" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Gdi = int32(131072)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Gdi" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Pixeldaten enthält GDI Farben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Indexed">
+      <MemberSignature Language="C#" Value="Indexed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Indexed = int32(65536)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Indexed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Pixeldaten enthält Farbe indizierte Werte, was bedeutet, dass die Werte ein Index für die Farben in der Farbe-Systemtabelle, im Gegensatz zu einzelnen Farbwerte sind.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Max">
+      <MemberSignature Language="C#" Value="Max" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Max = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Max" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der maximale Wert für diese Enumeration.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PAlpha">
+      <MemberSignature Language="C#" Value="PAlpha" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat PAlpha = int32(524288)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.PAlpha" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Pixelformat enthält Alphawerte integriert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Undefined">
+      <MemberSignature Language="C#" Value="Undefined" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.PixelFormat Undefined = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.PixelFormat.Undefined" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Pixelformat ist nicht definiert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

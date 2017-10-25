@@ -1,0 +1,849 @@
+<Type Name="List" FullName="System.Web.UI.MobileControls.List">
+  <TypeSignature Language="C#" Value="public class List : System.Web.UI.MobileControls.PagedControl, System.Web.UI.INamingContainer, System.Web.UI.IPostBackEventHandler, System.Web.UI.MobileControls.ITemplateable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit List extends System.Web.UI.MobileControls.PagedControl implements class System.Web.UI.INamingContainer, class System.Web.UI.IPostBackEventHandler, class System.Web.UI.MobileControls.ITemplateable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.List" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.PagedControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.INamingContainer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.MobileControls.ITemplateable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ItemCommand")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("DataSource")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Web.UI.Design.MobileControls.ListDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.MobileControls.ListComponentEditor), typeof(System.ComponentModel.ComponentEditor))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Web.UI.Design.WebControlToolboxItem, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.MobileControls.ListControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.MobileControls.DesignerAdapter(typeof(System.Web.UI.Design.MobileControls.Adapters.DesignerListAdapter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:List runat="server"&gt;&lt;/{0}:List&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Rendert eine Liste von Elementen als statische Anzeige oder interaktive Liste. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Steuerelement unterstützt Rendering mit Vorlagen mithilfe der Vorlage Gerätegruppen und interne Paginierung. Weitere Informationen finden Sie unter [Device Filtern Overview](http://msdn.microsoft.com/library/bdfeaa58-dedd-4c0d-8610-988aac0eff19) und [Paginierung](http://msdn.microsoft.com/en-us/b4f4c4bc-226b-46ec-ae46-00497a32f4f2).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Array gebunden wird, und füllt eine <xref:System.Web.UI.MobileControls.List>. Beachten Sie, die Sie programmgesteuert festlegen können die <xref:System.Web.UI.MobileControls.List.DataTextField%2A> und <xref:System.Web.UI.MobileControls.List.DataValueField%2A> Eigenschaften der <xref:System.Web.UI.MobileControls.List> Objekt.  
+  
+ [!code-aspx-csharp[MobileListSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileListSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobileListSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileListSample/vb/Default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public List ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.List" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParsedSubObject">
+      <MemberSignature Language="C#" Value="protected override void AddParsedSubObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddParsedSubObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein <see cref="T:System.Object" />, das das analysierte Element darstellt.</param>
+        <summary>Benachrichtigt das Serversteuerelement, dass ein Element analysiert wurde, und fügt das Element dem <see cref="T:System.Web.UI.ControlCollection" />-Objekt des Serversteuerelements hinzu. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein untergeordnetes Steuerelement mit den Ansichtszustand. Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultTemplatedUI">
+      <MemberSignature Language="C#" Value="public override void CreateDefaultTemplatedUI (bool doDataBind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CreateDefaultTemplatedUI(bool doDataBind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.CreateDefaultTemplatedUI(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doDataBind" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="doDataBind">Auf <see langword="true" /> festgelegt, wenn die instanziierten Vorlagen an verfügbare Daten gebunden werden müssen (dies geschieht in der Regel bei der ersten Anforderung). Auf <see langword="false" /> festgelegt, wenn die Vorlagen nicht an Daten gebunden werden dürfen, sondern stattdessen den Ansichtszustand zum Ausfüllen verwenden (dies geschieht in der Regel bei nachfolgenden Postbacks).</param>
+        <summary>Wird von Geräteadaptern aufgerufen, um die vorlagenbasierte Standardbenutzeroberfläche für das Steuerelement zu erstellen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateItems">
+      <MemberSignature Language="C#" Value="protected virtual void CreateItems (System.Collections.IEnumerable dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CreateItems(class System.Collections.IEnumerable dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.CreateItems(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Die Quelle, aus der Elemente in der Auflistung erstellt werden.</param>
+        <summary>Erstellt von Elementen in einer Elementauflistung aus dem angegebenen <paramref name="dataSource" /> Parameter. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erbende Klassen kann diese Methode für die benutzerdefinierte Datenbindungsverhalten überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataMember">
+      <MemberSignature Language="C#" Value="public virtual string DataMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataMember" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.List.DataMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.MobileControls.Converters.DataMemberConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Datenmembers, beim Extrahieren von Daten mit einer Liste-Datenquelle binden. Der Standardwert ist eine leere Zeichenfolge („“). Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Name des Datenmembers, beim Extrahieren von Daten mit einer Liste-Datenquelle binden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird nur verwendet, wenn der Wert von der <xref:System.Web.UI.MobileControls.List.DataSource%2A> -Eigenschaft ist vom Typ <xref:System.ComponentModel.IListSource>, statt des Typs <xref:System.Collections.IEnumerable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public virtual object DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.List.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die Quelle der Liste, die gebunden wird. Der Standardwert ist <see langword="null" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Datenquelle der Liste, die gebunden wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu einer Liste eine Datenquelle zu binden, müssen Sie zunächst mithilfe des Steuerelements <xref:System.Web.UI.Control.DataBind%2A> Methode, um die Datenbindung sicherzustellen. Die Datenquelle kann entweder vom Typ <xref:System.Collections.IEnumerable>, oder es kann vom Typ <xref:System.ComponentModel.IListSource>. Wenn die Datenquelle vom Typ <xref:System.ComponentModel.IListSource>, können Sie die <xref:System.Web.UI.MobileControls.List.DataMember%2A> Feld an, welches Element extrahiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTextField">
+      <MemberSignature Language="C#" Value="public string DataTextField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataTextField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.List.DataTextField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.MobileControls.Converters.DataFieldConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, welche Eigenschaft eines datengebundenen Elements beim Binden eines Elements verwendet <see cref="P:System.Web.UI.MobileControls.MobileListItem.Text" /> Eigenschaft. Die Standardeinstellung ist <see langword="null" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Eigenschaft eines datengebundenen Elements beim Binden eines Elements verwendet <see cref="P:System.Web.UI.MobileControls.MobileListItem.Text" /> Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataValueField">
+      <MemberSignature Language="C#" Value="public string DataValueField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataValueField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.List.DataValueField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.MobileControls.Converters.DataFieldConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, welche Eigenschaft eines datengebundenen Elements beim Binden eines Elements verwendet <see cref="P:System.Web.UI.MobileControls.MobileListItem.Value" /> Eigenschaft. Die Standardeinstellung ist <see langword="null" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Eigenschaft eines datengebundenen Elements beim Binden eines Elements verwendet <see cref="P:System.Web.UI.MobileControls.MobileListItem.Value" /> Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Decoration">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.ListDecoration Decoration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.MobileControls.ListDecoration Decoration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.List.Decoration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ListDecoration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Dekoration für Elemente verwendet. Der Standardwert ist <see langword="None" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein Enumerationswert, der den Typ der für Elemente verwendeten Dekoration darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf dem Zielgerät erlaubt, können Listenelemente undekorierten oder mit Aufzählungszeichen oder Zahlen ergänzt. Die <xref:System.Web.UI.MobileControls.ListDecoration> Enumeration hat die folgenden Werte:  
+  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|<xref:System.Web.UI.MobileControls.ListDecoration.None>|Ohne Dekoration.|  
+|<xref:System.Web.UI.MobileControls.ListDecoration.Bulleted>|Listenelemente werden mit Aufzählungszeichen ergänzt.|  
+|<xref:System.Web.UI.MobileControls.ListDecoration.Numbered>|Listenelemente werden mit einer Zahl ergänzt.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.List.Decoration%2A> Eigenschaft, um die Liste in einer nummerierten Liste zu ändern. Die Eigenschaft wird festgelegt, in der letzten Zeile der `Page_Load` Methode. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.MobileControls.List> (Übersicht).  
+  
+ [!code-csharp[MobileListSample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileListSample/cs/Default.aspx#3)]
+ [!code-vb[MobileListSample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileListSample/vb/Default.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureChildControls">
+      <MemberSignature Language="C#" Value="protected override void EnsureChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EnsureChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.EnsureChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob das Serversteuerelement untergeordnete Steuerelemente enthält. Wenn dies nicht der Fall ist, erstellt es auf die untergeordneten Steuerelemente. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureTemplatedUI">
+      <MemberSignature Language="C#" Value="public override void EnsureTemplatedUI ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EnsureTemplatedUI() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.EnsureTemplatedUI" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verwenden Sie diese Methode, um sicherzustellen, dass die Vorlagen instanziiert werden, um den programmgesteuerten Zugriff auf die instanziierten Inhalt von Vorlagen zu ermöglichen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasItemCommandHandler">
+      <MemberSignature Language="C#" Value="public bool HasItemCommandHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasItemCommandHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.List.HasItemCommandHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.MobileControls.List" /> Steuerelement hat einen registrierten Ereignishandler für das entsprechende <see cref="E:System.Web.UI.MobileControls.List.ItemCommand" /> Ereignis. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement einen Ereignishandler für die entsprechende registriert hat <see cref="E:System.Web.UI.MobileControls.List.ItemCommand" /> Ereignis ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalItemCount">
+      <MemberSignature Language="C#" Value="protected override int InternalItemCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InternalItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.List.InternalItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Elementen im Steuerelement ab. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Anzahl der Elemente im Steuerelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemCommand">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.MobileControls.ListCommandEventHandler ItemCommand;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.MobileControls.ListCommandEventHandler ItemCommand" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.List.ItemCommand" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ListCommandEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer einen Befehl, die auswählt mit zugeordnetem ein <see cref="T:System.Web.UI.MobileControls.List" /> Steuerelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Liste mit Vorlagen, Rendern die <xref:System.Web.UI.MobileControls.List.ItemCommand> Ereignishandler wird aufgerufen, die vom Ereignis bubbling-Mechanismus von ASP.NET. Der Ereignishandler wird ein Argument des Typs übergeben <xref:System.Web.UI.MobileControls.ListCommandEventArgs>, das Informationen über das Quellelement enthält und die <xref:System.Web.UI.MobileControls.Command.CommandName%2A> Eigenschaft des Steuerelements, das das Ereignis generiert hat. Dadurch können Sie ein einzelnes Listenelement mit mehreren zugeordneten Interaktionen zu rendern.  
+  
+ Auf das Standardrendering zurückgreifen stellt das Steuerelement eine grundlegende Benutzeroberfläche (UI), die dem Benutzer ermöglicht, die Listenelemente klicken. Beim Postback der <xref:System.Web.UI.MobileControls.List.ItemCommand> Ereignishandler wird aufgerufen, durch ein Argument des Typs <xref:System.Web.UI.MobileControls.ListCommandEventArgs>, das Informationen über das Quellelement enthält. Die <xref:System.Web.UI.MobileControls.Command.CommandName%2A> Eigenschaft dieses Objekts ist `null`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.List.ItemCommand> Ereignis, um eine Methode aufgerufen wird, ändert er den Status eines Elements in der Liste aus, und die Statusergebnisse. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.MobileControls.List> (Übersicht).  
+  
+  
+[!code-csharp[MobileListSample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileListSample/cs/Default.aspx#2)]
+[!code-vb[MobileListSample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileListSample/vb/Default.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemDataBind">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.MobileControls.ListDataBindEventHandler ItemDataBind;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.MobileControls.ListDataBindEventHandler ItemDataBind" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.List.ItemDataBind" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ListDataBindEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Element in einem <see cref="T:System.Web.UI.MobileControls.List" /> an Daten gebunden ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Element in einem <xref:System.Web.UI.MobileControls.List> wird erstellt und von datengebundenen Ereignishandler legt die Eigenschaften des Listenelements aus willkürlicher Ausdrücke. Ein Element in einem <xref:System.Web.UI.MobileControls.List> ist vom Typ <xref:System.Web.UI.MobileControls.MobileListItem>. Dieses Ereignis wird ausgelöst, wenn jedes Element der Datenquelle gebunden ist. Dies ist der beste Zeitpunkt zum Filter oder eine Gruppe von Elementen in der <xref:System.Web.UI.MobileControls.MobileListItemCollection> -Auflistung mithilfe der <xref:System.Web.UI.MobileControls.MobileListItem.Text%2A> oder <xref:System.Web.UI.MobileControls.MobileListItem.Value%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.List.ItemDataBind> Ereignis, um die Summen beginnen von statuseinstellungen für die Liste zu erhalten. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.MobileControls.List> (Übersicht).  
+  
+ [!code-csharp[MobileListSample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileListSample/cs/Default.aspx#4)]
+ [!code-vb[MobileListSample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileListSample/vb/Default.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.MobileListItemCollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.MobileListItemCollection Items" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.List.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.MobileControls.ItemCollectionEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobileListItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Auflistung von Elementen in einem <see cref="T:System.Web.UI.MobileControls.MobileListItemCollection" /> Liste. Der Standardwert ist eine leere Auflistung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Auflistung der Elemente in der Liste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie hinzufügen oder Entfernen von Elementen aus einer <xref:System.Web.UI.MobileControls.List> -Auflistung unter Verwendung der <xref:System.Web.UI.MobileControls.MobileListItemCollection.Add%2A>, <xref:System.Web.UI.MobileControls.MobileListItemCollection.Remove%2A>, und <xref:System.Web.UI.MobileControls.MobileListItemCollection.RemoveAt%2A> Methoden die <xref:System.Web.UI.MobileControls.MobileListItemCollection> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsAsLinks">
+      <MemberSignature Language="C#" Value="public bool ItemsAsLinks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ItemsAsLinks" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.List.ItemsAsLinks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Elemente in der Liste als Hyperlinks behandelt werden soll. Der Standardwert ist <see langword="false" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn Elemente in der Liste als Links behandelt werden werden. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert dieser Eigenschaft ist `true`, den Wert von der <xref:System.Web.UI.MobileControls.List.DataTextField%2A> Eigenschaft wird verwendet, um den Text des Links, anzuzeigen und die <xref:System.Web.UI.MobileControls.List.DataValueField%2A> Eigenschaft wird verwendet, um die Ziel-URL angeben. Befehlsereignisse werden nicht generiert werden, damit diese Links. Daher, wenn die <xref:System.Web.UI.MobileControls.List.ItemsAsLinks%2A> -Eigenschaftensatz auf `true`, wird eine <xref:System.Web.UI.MobileControls.List.OnItemCommand%2A> Methode wird nicht aufgerufen werden, da eine neue Seite geladen werden, über einen HTTP-Aufruf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Object" />, das den wiederherzustellenden Steuerelementzustand darstellt.</param>
+        <summary>Stellt Ansichtszustandsinformationen aus einer früheren Seitenanforderung wieder, die gespeichert wurde, durch die <see cref="M:System.Web.UI.MobileControls.List.SaveViewState" /> Methode. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Bestimmt, ob das Ereignis für das Serversteuerelement in der UI-Serversteuerelementhierarchie der Seite nach oben übergeben wird. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />, wenn das Ereignis abgebrochen wurde, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataBinding">
+      <MemberSignature Language="C#" Value="protected override void OnDataBinding (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDataBinding(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.OnDataBinding(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.DataBinding" />-Ereignis aus. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemCommand (System.Web.UI.MobileControls.ListCommandEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemCommand(class System.Web.UI.MobileControls.ListCommandEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.OnItemCommand(System.Web.UI.MobileControls.ListCommandEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.MobileControls.ListCommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein Objekt (definiert durch <see cref="T:System.Web.UI.MobileControls.ListCommandEventArgs" />), das Ereignisdaten enthält.</param>
+        <summary>Wird aufgerufen, wenn ein Listenelement ein Ereignis aufgrund einer Benutzerinteraktion generiert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung löst die <xref:System.Web.UI.MobileControls.List.ItemCommand> Ereignis. Erbende Klassen kann diese Methode, um andere Aufgaben überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemDataBind">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemDataBind (System.Web.UI.MobileControls.ListDataBindEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemDataBind(class System.Web.UI.MobileControls.ListDataBindEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.OnItemDataBind(System.Web.UI.MobileControls.ListDataBindEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.MobileControls.ListDataBindEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein Objekt (definiert durch <see cref="T:System.Web.UI.MobileControls.ListDataBindEventArgs" />), das Ereignisdaten enthält.</param>
+        <summary>Wird aufgerufen, wenn ein Listenelement gebundene Daten darstellt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung löst die <xref:System.Web.UI.MobileControls.List.ItemDataBind> Ereignis. Erbende Klassen kann diese Methode, um andere Aufgaben überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoadItems">
+      <MemberSignature Language="C#" Value="protected override void OnLoadItems (System.Web.UI.MobileControls.LoadItemsEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLoadItems(class System.Web.UI.MobileControls.LoadItemsEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.OnLoadItems(System.Web.UI.MobileControls.LoadItemsEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.MobileControls.LoadItemsEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein Objekt, das definiert, indem ein <see cref="T:System.EventArgs" /> -Objekt, das Ereignisdaten enthält.</param>
+        <summary>Wird aufgerufen, wenn das Steuerelement eine benutzerdefinierte Paginierung hat und mehr Daten benötigt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPageChange">
+      <MemberSignature Language="C#" Value="protected override void OnPageChange (int oldPageIndex, int newPageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPageChange(int32 oldPageIndex, int32 newPageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.OnPageChange(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldPageIndex" Type="System.Int32" />
+        <Parameter Name="newPageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="oldPageIndex">Enthält die Indexnummer der aktuellen Seite vor der Paginierung.</param>
+        <param name="newPageIndex">Enthält die Indexnummer der aktuellen Seite nach der Paginierung.</param>
+        <summary>Paginiert ein Steuerelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis aus. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Ein <see cref="T:System.String" /> Objekt, das an den Ereignishandler übergeben werden ein optionales Ereignisargument darstellt.</param>
+        <summary>Benachrichtigt das <see cref="T:System.Web.UI.MobileControls.List" />-Objekt über ein Postbackereignis. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert alle Ansichtszustandsänderungen des Serversteuerelements, die seit dem Zeitpunkt aufgetreten sind, zu dem die Seite an den Server zurückgesendet wurde. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Gibt den aktuellen Ansichtszustand des Serversteuerelements zurück. Wenn dem Steuerelement kein Ansichtszustand zugeordnet ist, gibt diese Methode <see langword="null" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Ein optionales Ereignisargument an den Ereignishandler übergeben werden.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(System.String)" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.MobileControls.List>-Instanz in eine <xref:System.Web.UI.IPostBackEventHandler>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.List.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Nachverfolgung von Änderungen am Ansichtszustand des Serversteuerelements verursacht, damit sie in des Webserversteuerelement gespeichert werden können <see cref="T:System.Web.UI.StateBag" /> Objekt. Auf dieses Objekt kann über die <see cref="P:System.Web.UI.Control.ViewState" />-Eigenschaft zugegriffen werden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

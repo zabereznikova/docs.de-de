@@ -1,0 +1,1234 @@
+<Type Name="BindingListCollectionView" FullName="System.Windows.Data.BindingListCollectionView">
+  <TypeSignature Language="C#" Value="public sealed class BindingListCollectionView : System.Windows.Data.CollectionView, System.Collections.IComparer, System.ComponentModel.ICollectionViewLiveShaping, System.ComponentModel.IEditableCollectionView, System.ComponentModel.IItemProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BindingListCollectionView extends System.Windows.Data.CollectionView implements class System.Collections.IComparer, class System.ComponentModel.ICollectionViewLiveShaping, class System.ComponentModel.IEditableCollectionView, class System.ComponentModel.IItemProperties" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.BindingListCollectionView" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Data.CollectionView</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IComparer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ICollectionViewLiveShaping</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IEditableCollectionView</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IItemProperties</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die <see cref="T:System.Windows.Data.CollectionView" /> für Auflistungen bereit, implementieren <see cref="T:System.ComponentModel.IBindingList" />, z. B. Microsoft ActiveX Data (ADO)-Datenansichten Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Sammlungen haben einen Standardwert <xref:System.Windows.Data.CollectionView>. Für Auflistungen bereit, implementieren <xref:System.ComponentModel.IBindingListView> oder <xref:System.ComponentModel.IBindingList>, ist die Standardansicht für die Auflistung <xref:System.Windows.Data.BindingListCollectionView>. Insbesondere <xref:System.ComponentModel.IBindingList> ist erforderlich, damit <xref:System.Windows.Data.BindingListCollectionView>, und <xref:System.ComponentModel.IBindingListView> ist eine optionale Schnittstelle, die zusätzliche sortieren und Filtern von Unterstützung bietet.  
+  
+ Wenn mehrere <xref:System.Windows.Data.BindingListCollectionView> Objekte und der zugrunde liegenden Datenquelle ist eine `DataTable` oder ein `DataView`, das Anzeigen von Objekten nicht sortieren oder Filtern unabhängig. Angenommen, Sie haben zwei <xref:System.Windows.Data.BindingListCollectionView> Objekte zugeordnet sind, mit dem gleichen `DataTable` und führen Sie Sie nach einer der Ansichten sortieren, die Reihenfolge der Elemente in die andere Ansicht betroffen sein kann. Grund hierfür ist, <xref:System.Windows.Data.BindingListCollectionView> Objekte zu verwenden, die zugrunde liegende <xref:System.ComponentModel.IBindingList> für Sortier- und Filterfunktionen.  
+  
+ Weitere Informationen zu Auflistungsansichten, finden Sie unter [Übersicht über Datenbindung](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingListCollectionView (System.ComponentModel.IBindingList list);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IBindingList list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.#ctor(System.ComponentModel.IBindingList)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="list" Type="System.ComponentModel.IBindingList" />
+      </Parameters>
+      <Docs>
+        <param name="list">Der zugrundeliegende <see cref="T:System.ComponentModel.IBindingList" />.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Windows.Data.BindingListCollectionView" /> über die angegebene Liste.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNew">
+      <MemberSignature Language="C#" Value="public object AddNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object AddNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.AddNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet eine Transaktion zum Hinzufügen und gibt das ausstehende neue Element.</summary>
+        <returns>Das ausstehende neue Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Windows.Data.BindingListCollectionView.AddNew%2A> beginnt eine Transaktion zum Hinzufügen.  Rufen Sie <xref:System.Windows.Data.BindingListCollectionView.CommitNew%2A> oder <xref:System.Windows.Data.BindingListCollectionView.CancelNew%2A> beendet die Transaktion zum Hinzufügen.  Es wird immer ein neues Element in der Auflistungsansicht angezeigt. Ist keine Filterung, Sortierung oder Gruppierung wird angewendet auf die Ansicht wird angewendet, auf das neue Element <xref:System.Windows.Data.BindingListCollectionView.CommitNew%2A> aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanAddNew">
+      <MemberSignature Language="C#" Value="public bool CanAddNew { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanAddNew" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.CanAddNew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Auflistung ein neues Element hinzugefügt werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn der Auflistung ein neues Element hinzugefügt werden kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Data.BindingListCollectionView> können für die Auflistung ein neues Element erstellen, wenn keine vorhanden ist eine Transaktion zum Bearbeiten ausgeführt wird, wenn die Auflistung eine feste Größe nicht ist, und wenn die Auflistung nicht schreibgeschützt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCancelEdit">
+      <MemberSignature Language="C#" Value="public bool CanCancelEdit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanCancelEdit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.CanCancelEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistungsansicht ausstehende Änderungen verwerfen und die ursprünglichen Werte eines bearbeiteten Objekts wiederherstellen kann.</summary>
+        <value>
+          <see langword="true" />, wenn die Auflistungsansicht ausstehende Änderungen verwerfen und die ursprünglichen Werte eines bearbeiteten Objekts wiederherstellen kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Data.BindingListCollectionView.CanCancelEdit%2A>ist `true` , wenn das bearbeitete Element implementiert das <xref:System.ComponentModel.IEditableObject?displayProperty=nameWithType> Schnittstelle. Wenn <xref:System.Windows.Data.BindingListCollectionView.CanCancelEdit%2A> ist `false`, rufen Sie <xref:System.Windows.Data.BindingListCollectionView.CancelEdit%2A> , dazu führen, dass die Ansicht, um den Bearbeitungsstatus zu beenden, und geben Sie die Logik, um die Änderungen für das Objekt, das geändert wurde, rückgängig zu machen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelEdit">
+      <MemberSignature Language="C#" Value="public void CancelEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CancelEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.CancelEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Transaktion zum Bearbeiten und stellt, wenn möglich, den ursprünglichen Wert des Elements wieder her.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Data.BindingListCollectionView.CancelEdit%2A>Legt <xref:System.Windows.Data.BindingListCollectionView.CurrentEditItem%2A> auf `null` und bewirkt, dass die Auflistungsansicht, um den Bearbeitungsstatus zu beenden.  Wenn <xref:System.Windows.Data.BindingListCollectionView.CanCancelEdit%2A> ist `true`, <xref:System.Windows.Data.BindingListCollectionView.CancelEdit%2A> stellt auch die ursprünglichen Werte eines bearbeiteten Objekts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelNew">
+      <MemberSignature Language="C#" Value="public void CancelNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CancelNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.CancelNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Transaktion zum Hinzufügen und verwirft das ausstehende neue Element.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanChangeLiveFiltering">
+      <MemberSignature Language="C#" Value="public bool CanChangeLiveFiltering { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanChangeLiveFiltering" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.CanChangeLiveFiltering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob diese Ansicht das Filtern von Daten in Echtzeit zu aktivieren, bzw. deaktivieren unterstützt.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanChangeLiveGrouping">
+      <MemberSignature Language="C#" Value="public bool CanChangeLiveGrouping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanChangeLiveGrouping" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.CanChangeLiveGrouping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob diese Ansicht ein- oder ausschalten Umwandlung Gruppierung von Daten in Echtzeit unterstützt.</summary>
+        <value>
+          <see langword="True" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanChangeLiveSorting">
+      <MemberSignature Language="C#" Value="public bool CanChangeLiveSorting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanChangeLiveSorting" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.CanChangeLiveSorting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob diese Ansicht das Sortieren von Daten in Echtzeit zu aktivieren, bzw. deaktivieren unterstützt.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCustomFilter">
+      <MemberSignature Language="C#" Value="public bool CanCustomFilter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanCustomFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.CanCustomFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Sicht benutzerdefinierte Filterung unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn die Ansicht benutzerdefinierte Filterung unterstützt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie überprüfen, ob die Ansicht benutzerdefinierte Filtern unterstützt, bevor Sie eine Filterzeichenfolge zuweisen <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanFilter">
+      <MemberSignature Language="C#" Value="public override bool CanFilter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.CanFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Sicht Rückruf basierenden Filterung unterstützt.</summary>
+        <value>Diese Eigenschaft gibt immer <see langword="false" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Data.BindingListCollectionView>unterstützt keine Filterung auf Basis von Rückruf Sie verwenden <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A> stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGroup">
+      <MemberSignature Language="C#" Value="public override bool CanGroup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.CanGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Ansicht das Gruppieren unterstützt.</summary>
+        <value>Für eine Standardinstanz von <see cref="T:System.Windows.Data.BindingListCollectionView" /> gibt diese Eigenschaft immer <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRemove">
+      <MemberSignature Language="C#" Value="public bool CanRemove { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRemove" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.CanRemove" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Element aus der Auflistung entfernt werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn ein Element aus der Auflistung entfernt werden kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Data.BindingListCollectionView> kann ein Element entfernen, besteht kein hinzufügen oder bearbeiten die Transaktion ausgeführt, und wenn die Auflistung keine feste Größe oder schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSort">
+      <MemberSignature Language="C#" Value="public override bool CanSort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSort" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.CanSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Auflistung das Sortieren unterstützt.</summary>
+        <value>Für eine Standardinstanz von <see cref="T:System.Windows.Data.BindingListCollectionView" /> gibt diese Eigenschaft immer <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommitEdit">
+      <MemberSignature Language="C#" Value="public void CommitEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CommitEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.CommitEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Transaktion zum Bearbeiten und speichert die ausstehenden Änderungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommitNew">
+      <MemberSignature Language="C#" Value="public void CommitNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CommitNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.CommitNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Transaktion zum Hinzufügen und speichert das ausstehende neue Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ist keine Filterung, Sortierung oder Gruppierung wird angewendet die <xref:System.Windows.Data.BindingListCollectionView> angewendet wird, auf das neue Element <xref:System.Windows.Data.BindingListCollectionView.CommitNew%2A> aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public override bool Contains (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Contains(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu überprüfende Objekt.</param>
+        <summary>Gibt einen Wert, der angibt, ob ein bestimmtes Element die Auflistungsansicht gehört.</summary>
+        <returns>
+          <see langword="true" />Wenn die Auflistungsansicht das Element gehört; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist keine Annahmen über die zugrunde liegende Auflistung gibt an, ob das Element gehört. Wenn Sie wissen, dass das Element an der zugrunde liegenden Auflistung gehört, ist es effizienter, Aufrufen <xref:System.Windows.Data.BindingListCollectionView.PassesFilter%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public override int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die geschätzte Anzahl von Datensätzen in der Auflistung ab.</summary>
+        <value>Eine der folgenden:  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Bedeutung  
+  
+ </description></listheader><item><term> -1  
+  
+ </term><description>Die Anzahl der Auflistung konnte nicht ermittelt werden. Dies kann zurückgegeben werden mithilfe einer "virtualisierenden" Sicht, in dem die Sicht absichtlich für alle Elemente in der zugrunde liegenden Auflistung berücksichtigt keine weil die Sicht zum Steigern der Effizienz und Minimieren der Abhängigkeit von der ständigen Verfügbarkeit die gesamte Auflistung versucht wird.  
+  
+ </description></item><item><term>jede andere ganze Zahl  
+  
+ </term><description>Die Anzahl der Auflistung.  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass diese Anzahl die Anzahl die gefilterte darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentAddItem">
+      <MemberSignature Language="C#" Value="public object CurrentAddItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CurrentAddItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.CurrentAddItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element ab, das während der aktuellen Hinzufügetransaktion hinzugefügt wird.</summary>
+        <value>Das Element, das hinzugefügt wird, wenn <see cref="P:System.Windows.Data.BindingListCollectionView.IsAddingNew" /> <see langword="true" /> ist, andernfalls <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentEditItem">
+      <MemberSignature Language="C#" Value="public object CurrentEditItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CurrentEditItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.CurrentEditItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element in der Auflistung ab, das gerade bearbeitet wird.</summary>
+        <value>Das Element in der Auflistung, die gerade bearbeitet wird, wenn <see cref="P:System.Windows.Data.ListCollectionView.IsEditingItem" /> gleich <see langword="true" /> ist, andernfalls <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomFilter">
+      <MemberSignature Language="C#" Value="public string CustomFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.CustomFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen benutzerdefinierten Filter fest.</summary>
+        <value>Eine Zeichenfolge, die angibt, wie die Elemente gefiltert werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Data.BindingListCollectionView.CanCustomFilter%2A> Eigenschaft zu prüfen, ob die Ansicht benutzerdefinierte Filtern unterstützt, bevor Sie diese Eigenschaft eine Zeichenfolge zuweisen.  
+  
+ Hängt die Syntax der <xref:System.ComponentModel.IBindingListView> Implementierung. Ein Beispiel für die unterstützte Filter Ausdruckssyntax, finden Sie unter <xref:System.Data.DataView.RowFilter%2A>.  
+  
+ Beachten Sie, dass mehrere <xref:System.Windows.Data.BindingListCollectionView> Objekte und der zugrunde liegenden Datenquelle ist eine `DataTable` oder ein `DataView`, das Anzeigen von Objekten nicht sortiert oder unabhängig voneinander zu filtern. Angenommen, Sie haben zwei <xref:System.Windows.Data.BindingListCollectionView> Objekte zugeordnet sind, mit dem gleichen `DataTable` und führen Sie Sie nach einer der Ansichten sortieren, die Reihenfolge der Elemente in die andere Ansicht betroffen sein kann. Grund hierfür ist, <xref:System.Windows.Data.BindingListCollectionView> Objekte zu verwenden, die zugrunde liegende <xref:System.ComponentModel.IBindingList> für Sortier- und Filterfunktionen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetachFromSourceCollection">
+      <MemberSignature Language="C#" Value="public override void DetachFromSourceCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DetachFromSourceCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.DetachFromSourceCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Trennt die zugrunde liegende Auflistung aus dieser Auflistungsansicht So aktivieren Sie die Auflistungsansicht Garbage Collections durchgeführt werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditItem">
+      <MemberSignature Language="C#" Value="public void EditItem (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EditItem(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.EditItem(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu bearbeitende Element.</param>
+        <summary>Startet eine Transaktion zum Bearbeiten des angegebenen Elements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemAt">
+      <MemberSignature Language="C#" Value="public override object GetItemAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetItemAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.GetItemAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem sich das Element befindet.</param>
+        <summary>Ruft das Element an der angegebenen Position in der Ansicht ab.</summary>
+        <returns>Das Element an der angegebenen Position in der Ansicht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird der Index mit allen <xref:System.Windows.Data.CollectionView.SortDescriptions%2A> oder <xref:System.Windows.Data.CollectionView.Filter%2A> Eigenschaften, die für die Sicht festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Wenn <paramref name="index" /> liegt außerhalb des gültigen Bereichs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupBySelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.GroupDescriptionSelectorCallback GroupBySelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.GroupDescriptionSelectorCallback GroupBySelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.GroupBySelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.GroupDescriptionSelectorCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Delegaten zum Auswählen der <see cref="T:System.ComponentModel.GroupDescription" /> als Funktion der übergeordneten Gruppe und die Ebene.</summary>
+        <value>Eine Methode, die die Logik für die Auswahl der bietet die <see cref="T:System.ComponentModel.GroupDescription" /> als Funktion der übergeordneten Gruppe und die Ebene. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupDescriptions">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ObservableCollection&lt;System.ComponentModel.GroupDescription&gt; GroupDescriptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;class System.ComponentModel.GroupDescription&gt; GroupDescriptions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.GroupDescriptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.ComponentModel.GroupDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der <see cref="T:System.ComponentModel.GroupDescription" />-Objekte ab, die das Gruppieren der Elemente in der Auflistung beschreibt.</summary>
+        <value>Eine Auflistung von <see cref="T:System.ComponentModel.GroupDescription" /> Objekten, die beschreiben, wie die Elemente in der Auflistung in der Ansicht gruppiert sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Diese Eigenschaft kann nur festgelegt werden, durch den Zugriff auf das Objekt und dessen verschiedene Methoden wie z. B. hinzufügen. Die Eigenschaft auf das Auflistungsobjekt selbst ist schreibgeschützt; die Auflistung an sich ist Lese-/Schreibzugriff.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft verwendet wird:  
+  
+ [!code-csharp[DataBindingLab#6](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#6)]
+ [!code-vb[DataBindingLab#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#6)]  
+  
+ Das vollständige Beispiel finden Sie unter [Data Binding Demo](http://go.microsoft.com/fwlink/?LinkID=163703).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Groups">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyObservableCollection&lt;object&gt; Groups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyObservableCollection`1&lt;object&gt; Groups" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.Groups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyObservableCollection&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gruppen der obersten Ebene ab.</summary>
+        <value>Eine schreibgeschützte Auflistung der Gruppen der obersten Ebene oder <see langword="null" /> Wenn keine Gruppen vorhanden sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Elemente in der Auflistung sind vom Typ <xref:System.Windows.Data.CollectionViewGroup>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public override int IndexOf (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 IndexOf(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Objekt, in der Auflistung gesucht werden soll.</param>
+        <summary>Gibt den Index, an dem das angegebene Element gehört, in der Auflistungsansicht zurück.</summary>
+        <returns>Der Index des Elements in der Auflistung oder <c>-1</c> , wenn das Element in der Auflistungsansicht nicht vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird der Index mit allen <xref:System.Windows.Data.CollectionView.SortDescriptions%2A> oder <xref:System.Windows.Data.CollectionView.Filter%2A> Eigenschaften, die für die Sicht festgelegt werden.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Data.CollectionView.IndexOf%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAddingNew">
+      <MemberSignature Language="C#" Value="public bool IsAddingNew { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAddingNew" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.IsAddingNew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob gerade eine Transaktion zum Hinzufügen ausgeführt wird.</summary>
+        <value>
+          <see langword="true" />Wenn eine Transaktion zum Hinzufügen ausgeführt wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Starten Sie eine Transaktion zum Hinzufügen, durch einen Aufruf der <xref:System.Windows.Data.ListCollectionView.AddNew%2A> Methode, und Sie beenden die Transaktion durch Aufrufen von <xref:System.Windows.Data.ListCollectionView.CommitNew%2A> oder <xref:System.Windows.Data.ListCollectionView.CancelNew%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDataInGroupOrder">
+      <MemberSignature Language="C#" Value="public bool IsDataInGroupOrder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDataInGroupOrder" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.IsDataInGroupOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Liste der Elemente (nach dem Anwenden von der Sortierung und Filter, sofern vorhanden) bereits in der richtigen Reihenfolge für die Gruppierung ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Liste der Elemente bereits in der richtigen Reihenfolge für die Gruppierung wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft auf `true` informiert Sie die Ansicht, dass die Liste der Elemente bereits in der richtigen Reihenfolge für die Gruppierung ist und die Ansicht, die einen effizienteren Algorithmus verwenden, um die Gruppen zu erstellen. Die Daten sind in der richtigen Reihenfolge wenn:  
+  
+1.  Alle Elemente, die zu einer bestimmten Gruppe gehören werden nacheinander angezeigt, und  
+  
+2.  Wenn die <xref:System.ComponentModel.GroupDescription.GroupNames%2A> Auflistung ist nicht leer ist, die Gruppen in <xref:System.ComponentModel.GroupDescription.GroupNames%2A> werden vor allen anderen Gruppen und in der gleichen Reihenfolge wie in <xref:System.ComponentModel.GroupDescription.GroupNames%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEditingItem">
+      <MemberSignature Language="C#" Value="public bool IsEditingItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEditingItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.IsEditingItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob gerade eine Transaktion zum Bearbeiten ausgeführt wird.</summary>
+        <value>
+          <see langword="true" />Wenn eine Transaktion zum Bearbeiten ausgeführt wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Starten Sie eine Transaktion zum Bearbeiten, durch einen Aufruf der <xref:System.Windows.Data.ListCollectionView.EditItem%2A> Methode, und Sie beenden die Transaktion durch Aufrufen von <xref:System.Windows.Data.ListCollectionView.CommitEdit%2A> oder <xref:System.Windows.Data.ListCollectionView.CancelEdit%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public override bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die (gefilterte) Ansicht leer ist.</summary>
+        <value>
+          <see langword="true" />Wenn die resultierende Ansicht leer ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiveFiltering">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsLiveFiltering { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsLiveFiltering" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.IsLiveFiltering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Daten in Echtzeit-Filterung aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn Daten in Echtzeit-Filterung aktiviert ist; <see langword="false" /> Wenn live Filtern nicht aktiviert ist. <see langword="null" /> Wenn nicht ermittelt werden kann, ob die Auflistungsansicht live Filterung implementiert.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Data.BindingListCollectionView.IsLiveFiltering" />kann nicht festgelegt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiveGrouping">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsLiveGrouping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsLiveGrouping" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.IsLiveGrouping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Gruppierung von Daten in Echtzeit aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Gruppieren von Daten in Echtzeit aktiviert ist; <see langword="false" /> live Gruppierung nicht aktiviert ist; <see langword="null" /> Wenn nicht ermittelt werden kann, ob die Auflistungsansicht live Gruppierung implementiert.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="P:System.Windows.Data.BindingListCollectionView.IsLiveGrouping" />kann nicht festgelegt werden, um <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiveSorting">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsLiveSorting { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsLiveSorting" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.IsLiveSorting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Sortierung der Daten in Echtzeit aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Sortieren von Daten in Echtzeit aktiviert ist; <see langword="false" /> live Sortierung nicht aktiviert ist; <see langword="null" /> Wenn nicht ermittelt werden kann, ob die Auflistungsansicht live Sortierung implementiert.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Data.BindingListCollectionView.IsLiveSorting" />kann nicht festgelegt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ComponentModel.ItemPropertyInfo&gt; ItemProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.ComponentModel.ItemPropertyInfo&gt; ItemProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.ItemProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ComponentModel.ItemPropertyInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Objekten, die die Eigenschaften der Elemente in der Auflistung beschreibt.</summary>
+        <value>Eine Auflistung von Objekten, die die Eigenschaften der Elemente in der Auflistung beschreibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiveFilteringProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ObservableCollection&lt;string&gt; LiveFilteringProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;string&gt; LiveFilteringProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.LiveFilteringProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Zeichenfolgen, die die Eigenschaften, die einbezogen im Filtern von Daten in Echtzeit angeben.</summary>
+        <value>Eine Auflistung von Zeichenfolgen, die die Eigenschaften, die einbezogen beim Filtern von Daten in Echtzeit angeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiveGroupingProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ObservableCollection&lt;string&gt; LiveGroupingProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;string&gt; LiveGroupingProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.LiveGroupingProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Zeichenfolgen, die die Eigenschaften, die einbezogen in Gruppieren von Daten in Echtzeit angeben.</summary>
+        <value>Eine Auflistung von Zeichenfolgen, die die Eigenschaften, die einbezogen in Gruppieren von Daten in Echtzeit angeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiveSortingProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ObservableCollection&lt;string&gt; LiveSortingProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;string&gt; LiveSortingProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.LiveSortingProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Zeichenfolgen, die die Eigenschaften, die einbezogen in Sortieren von Daten in Echtzeit angeben.</summary>
+        <value>Eine Auflistung von Zeichenfolgen, die die Eigenschaften, die einbezogen in Sortieren von Daten in Echtzeit angeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveCurrentToPosition">
+      <MemberSignature Language="C#" Value="public override bool MoveCurrentToPosition (int position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveCurrentToPosition(int32 position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.MoveCurrentToPosition(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="position">Der Index, auf den das <see cref="P:System.Windows.Data.CollectionView.CurrentItem" /> festgelegt werden soll.</param>
+        <summary>Legt das Element am angegebenen Index als das <see cref="P:System.Windows.Data.CollectionView.CurrentItem" /> in der Ansicht fest.</summary>
+        <returns>
+          <see langword="true" />Wenn das resultierende <see cref="P:System.Windows.Data.CollectionView.CurrentItem" /> ist ein Element innerhalb der Ansicht befindet, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Wird ausgelöst, wenn der Index außerhalb des gültigen Bereichs liegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NewItemPlaceholderPosition">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.NewItemPlaceholderPosition NewItemPlaceholderPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.NewItemPlaceholderPosition NewItemPlaceholderPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.NewItemPlaceholderPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.NewItemPlaceholderPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Position des neuen Elementplatzhalters in der <see cref="T:System.Windows.Data.BindingListCollectionView" />.</summary>
+        <value>Einer der Enumerationswerte, der angibt, der die Position des neuen Elementplatzhalters in der <see cref="T:System.Windows.Data.BindingListCollectionView" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAllowsCrossThreadChangesChanged">
+      <MemberSignature Language="C#" Value="protected override void OnAllowsCrossThreadChangesChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAllowsCrossThreadChangesChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.OnAllowsCrossThreadChangesChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginChangeLogging">
+      <MemberSignature Language="C#" Value="protected override void OnBeginChangeLogging (System.Collections.Specialized.NotifyCollectionChangedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBeginChangeLogging(class System.Collections.Specialized.NotifyCollectionChangedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.OnBeginChangeLogging(System.Collections.Specialized.NotifyCollectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Replaced by OnAllowsCrossThreadChangesChanged")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Collections.Specialized.NotifyCollectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PassesFilter">
+      <MemberSignature Language="C#" Value="public override bool PassesFilter (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool PassesFilter(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.PassesFilter(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu überprüfende Element.</param>
+        <summary>Gibt einen Wert, der angibt, ob das angegebene Element in der zugrunde liegenden Auflistung an die Sicht gehört.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Element auf die Sicht gehört oder auf die Auflistungsansicht kein Filter; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Windows.Data.BindingListCollectionView.Contains%2A> Methode, diese Methode wird davon ausgegangen, dass die zugrunde liegende Auflistung das angegebene Element gehört. Diese Methode Abhängigkeitslinks berücksichtigen Filter zu. In der Regel verwenden Sie diese Methode während der Benachrichtigungen Auflistung geändert, um zu bestimmen, ob das Element hinzugefügte oder entfernte. die Verarbeitung erforderlich ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCollectionChanged">
+      <MemberSignature Language="C#" Value="protected override void ProcessCollectionChanged (System.Collections.Specialized.NotifyCollectionChangedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessCollectionChanged(class System.Collections.Specialized.NotifyCollectionChangedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.ProcessCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Collections.Specialized.NotifyCollectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshOverride">
+      <MemberSignature Language="C#" Value="protected override void RefreshOverride ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RefreshOverride() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.RefreshOverride" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu entfernende Element.</param>
+        <summary>Entfernt das angegebene Element aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `item` befindet sich nicht in der Auflistung <xref:System.Windows.Data.BindingListCollectionView.Remove%2A> wird keine Aktion ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element an der angegebenen Position aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `index`ist relativ zu der Auflistungsansicht nicht in der Auflistung.  Angenommen, wenn die Auflistung 10 Elemente und die Sicht hat hat eine <xref:System.ComponentModel.ICollectionView.Filter%2A> , damit 7 Elemente angezeigt werden, die gültigen Werte der `index` sind 0 bis 6.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />ist kleiner als 0 oder größer als die Anzahl der Elemente in der Auflistungsansicht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SortDescriptions">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.SortDescriptionCollection SortDescriptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.SortDescriptionCollection SortDescriptions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingListCollectionView.SortDescriptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.SortDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.ComponentModel.SortDescription" /> Objekten, das beschreibt, wie die Elemente in der Auflistung in der Ansicht sortiert werden.</summary>
+        <value>Eine Auflistung von <see cref="T:System.ComponentModel.SortDescription" /> Objekten, die beschreiben, wie die Elemente in der Auflistung in der Ansicht sortiert werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass mehrere <xref:System.Windows.Data.BindingListCollectionView> Objekte und der zugrunde liegenden Datenquelle ist eine `DataTable` oder ein `DataView`, das Anzeigen von Objekten nicht sortiert oder unabhängig voneinander zu filtern. Angenommen, Sie haben zwei <xref:System.Windows.Data.BindingListCollectionView> Objekte zugeordnet sind, mit dem gleichen `DataTable` und führen Sie Sie nach einer der Ansichten sortieren, die Reihenfolge der Elemente in die andere Ansicht betroffen sein kann. Grund hierfür ist, <xref:System.Windows.Data.BindingListCollectionView> Objekte zu verwenden, die zugrunde liegende <xref:System.ComponentModel.IBindingList> für Sortier- und Filterfunktionen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft kann nur festgelegt werden, indem Sie den Zugriff auf das Sammlungsobjekt und mithilfe der verschiedenen Methoden, wie z. B. `Add`. Die Eigenschaft auf das Auflistungsobjekt selbst ist schreibgeschützt; die Auflistung an sich ist Lese-/Schreibzugriff.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IComparer.Compare">
+      <MemberSignature Language="C#" Value="int IComparer.Compare (object o1, object o2);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IComparer.Compare(object o1, object o2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingListCollectionView.System#Collections#IComparer#Compare(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o1" Type="System.Object" />
+        <Parameter Name="o2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o1">Erste zu vergleichende Objekt.</param>
+        <param name="o2">Zweite zu vergleichende Objekt.</param>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <returns>Kleiner als 0 (null) bedeutet, dass <paramref name="o1" /> ist kleiner als <paramref name="o2" />, ein Wert von 0 (null) bedeutet, sie sind gleich, und über 0 (null) bedeutet, dass <paramref name="o1" /> ist größer als <paramref name="o2" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

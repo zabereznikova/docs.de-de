@@ -1,0 +1,99 @@
+<Type Name="AutoValidate" FullName="System.Windows.Forms.AutoValidate">
+  <TypeSignature Language="C#" Value="public enum AutoValidate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AutoValidate extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.AutoValidate" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Bestimmt, wie ein Steuerelement seine Daten überprüft, wenn es den Benutzereingabefokus verliert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Benutzer ein Windows Forms-Steuerelement den Fokus wechselt, mithilfe des Steuerelements <xref:System.Windows.Forms.AutoValidate> bestimmen, wie ihre Daten validieren. Diese Art der Validierung wird implizite Validierung bezeichnet, da es sich bei Ausführung der Anwendungsentwickler müssen stellen einen expliziten Aufruf von <xref:System.Windows.Forms.ContainerControl.Validate%2A> oder <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A>.  
+  
+ Die Eigenschaft mit diesem Wert entspricht, müssen unterschiedliche Standardwerte, die basierend auf dem Typ des Steuerelements. Weitere Informationen finden Sie unter [User Input Validation in Windows Forms](~/docs/framework/winforms/user-input-validation-in-windows-forms.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird implizite Validierung für ein Formular und alle darin enthaltenen Steuerelemente deaktiviert und stattdessen Validierung aller untergeordneten des Formulars manuell ausführt, wenn eine Maus geklickt wird.  
+  
+ [!code-csharp[ValidateChildren#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ValidateChildren/CS/Form1.cs#1)]
+ [!code-vb[ValidateChildren#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ValidateChildren/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Disable">
+      <MemberSignature Language="C#" Value="Disable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AutoValidate Disable = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AutoValidate.Disable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoValidate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Implizite Validierung erfolgt nicht. Das Festlegen dieses Werts wirkt sich nicht durch explizite Aufrufe <see cref="M:System.Windows.Forms.ContainerControl.Validate" /> oder <see cref="M:System.Windows.Forms.ContainerControl.ValidateChildren" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableAllowFocusChange">
+      <MemberSignature Language="C#" Value="EnableAllowFocusChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AutoValidate EnableAllowFocusChange = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AutoValidate.EnableAllowFocusChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoValidate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Implizite Überprüfung erfolgt, aber bei einem Überprüfungsfehler wird Fokus weiterhin an das neue Steuerelement ändern. Bei einem Überprüfungsfehler, die <see cref="E:System.Windows.Forms.Control.Validated" /> Ereignis wird nicht ausgelöst.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnablePreventFocusChange">
+      <MemberSignature Language="C#" Value="EnablePreventFocusChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AutoValidate EnablePreventFocusChange = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AutoValidate.EnablePreventFocusChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoValidate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Implizite Überprüfung tritt auf, wenn das Steuerelement den Fokus verliert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inherit">
+      <MemberSignature Language="C#" Value="Inherit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AutoValidate Inherit = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AutoValidate.Inherit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoValidate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement erbt seine <see cref="T:System.Windows.Forms.AutoValidate" /> Verhalten aus dem zugehörigen Container (z. B. ein Formular oder ein anderes Steuerelement). Wenn kein Containersteuerelement vorhanden ist, wird standardmäßig <see cref="F:System.Windows.Forms.AutoValidate.EnablePreventFocusChange" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

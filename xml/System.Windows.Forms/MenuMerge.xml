@@ -1,0 +1,98 @@
+<Type Name="MenuMerge" FullName="System.Windows.Forms.MenuMerge">
+  <TypeSignature Language="C#" Value="public enum MenuMerge" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MenuMerge extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MenuMerge" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt das Verhalten einer <see cref="T:System.Windows.Forms.MenuItem" /> wann es mit Elementen in einem anderen Menü zusammengeführt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Member dieser Enumeration zum Festlegen des Werts, der die <xref:System.Windows.Forms.MenuItem.MergeType%2A> Eigenschaft von der <xref:System.Windows.Forms.MenuItem>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird diese Version von der <xref:System.Windows.Forms.MenuItem.MergeMenu%2A> Methode zum Erstellen einer Kopie einer <xref:System.Windows.Forms.MenuItem> und führen sie mit einem anderen. Die zusammengeführte <xref:System.Windows.Forms.MenuItem> wird dann hinzugefügt, um eine <xref:System.Windows.Forms.ContextMenu> Steuerelement. In diesem Beispiel wird davon ausgegangen, dass es zwei Menüelemente aufgerufen sind `menuItem1` und `menuItem2` , enthalten diese Untermenüelemente und ein <xref:System.Windows.Forms.ContextMenu> mit dem Namen `contextMenu1` auf die Menüelemente angezeigt werden. `menuItem1`und `menuItem2` verschiedene Menüelemente, die in ihnen enthaltenen haben. Nach dem Aufruf von <xref:System.Windows.Forms.MenuItem.MergeMenu%2A> erfolgt, eine konsolidierte Menü wird erstellt.  
+  
+ [!code-cpp[Classic MenuItem.MergeMenu1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.MergeMenu1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.MergeMenu1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.MergeMenu1 Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.MergeMenu1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.MergeMenu1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="Add" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MenuMerge Add = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MenuMerge.Add" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuMerge</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Forms.MenuItem" /> hinzugefügt wird, auf die Auflistung von vorhandenen <see cref="T:System.Windows.Forms.MenuItem" /> Objekte in einem zusammengeführten Menü.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeItems">
+      <MemberSignature Language="C#" Value="MergeItems" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MenuMerge MergeItems = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MenuMerge.MergeItems" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuMerge</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle Untermenüelemente dieses <see cref="T:System.Windows.Forms.MenuItem" /> werden zusammengeführt, mit denen des vorhandenen <see cref="T:System.Windows.Forms.MenuItem" /> Objekte an der gleichen Position in einem zusammengeführten Menü.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="Remove" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MenuMerge Remove = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MenuMerge.Remove" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuMerge</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Forms.MenuItem" /> ist nicht in einem zusammengeführten Menü enthalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Replace">
+      <MemberSignature Language="C#" Value="Replace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MenuMerge Replace = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MenuMerge.Replace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuMerge</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Forms.MenuItem" /> ersetzt eine vorhandene <see cref="T:System.Windows.Forms.MenuItem" /> an der gleichen Position in einem zusammengeführten Menü.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

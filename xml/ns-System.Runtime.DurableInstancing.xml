@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.DurableInstancing">
+  <Docs>
+    <summary>Dieser Namespace enthält Klassen, die von der Windows Communication Foundation-(WCF-)Infrastruktur verwendet werden, um einen Dauerhaftigkeitsanbieter zu implementieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

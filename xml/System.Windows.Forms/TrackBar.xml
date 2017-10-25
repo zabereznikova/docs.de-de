@@ -1,0 +1,1676 @@
+<Type Name="TrackBar" FullName="System.Windows.Forms.TrackBar">
+  <TypeSignature Language="C#" Value="public class TrackBar : System.Windows.Forms.Control, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TrackBar extends System.Windows.Forms.Control implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TrackBar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultBindingProperty("Value")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Scroll")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Value")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.TrackBarDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Standardtrackleiste von Windows dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TrackBar> wird ein bildlauffähiges Steuerelement ähnelt dem <xref:System.Windows.Forms.ScrollBar> Steuerelement. Sie können Bereiche über das konfigurieren den Wert des der <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaft einer Trackleiste einen Bildlauf durch Festlegen der <xref:System.Windows.Forms.TrackBar.Minimum%2A> -Eigenschaft am unteren Ende des Bereichs an und die <xref:System.Windows.Forms.TrackBar.Maximum%2A> Eigenschaft, um das obere Ende des Bereichs anzugeben.  
+  
+ Die <xref:System.Windows.Forms.TrackBar.LargeChange%2A> Eigenschaft definiert den inkrementellen Wert hinzufügen oder davon subtrahiert die <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaft Klicks auf beiden Seiten des Bildlauffelds auftreten. Die Trackleiste kann horizontal oder vertikal angezeigt werden.  
+  
+ Können Sie dieses Steuerelement für die Eingabe von numerischen Daten abgerufen, die über die <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaft. Sie können diese numerischen Daten in einem Steuerelement anzuzeigen, oder sie im Code verwenden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt ein Formular mit einem <xref:System.Windows.Forms.TrackBar> Steuerelement und ein <xref:System.Windows.Forms.TextBox> Steuerelement. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.TrackBar.Maximum%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.LargeChange%2A>, und <xref:System.Windows.Forms.TrackBar.SmallChange%2A> Eigenschaften und Behandlung der <xref:System.Windows.Forms.TrackBar.Scroll> Ereignis. Die <xref:System.Windows.Forms.TextBox> Inhalt wird aktualisiert, um die <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaftswert, wenn die <xref:System.Windows.Forms.TrackBar.Scroll> Ereignis tritt auf.  
+  
+ [!code-cpp[System.Windows.Forms.TrackBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/CPP/source.cpp#1)]
+ [!code-csharp[System.Windows.Forms.TrackBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/CS/source.cs#1)]
+ [!code-vb[System.Windows.Forms.TrackBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrackBar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.TrackBar" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TrackBar> mit eines Teilstrichs für jeden Wert angezeigt, die mit einem horizontalen standardausrichtung und einen Bereich von 0 bis 10 erstellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="public override bool AutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.AutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Visible)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Höhe bzw. Breite der Trackleiste automatisch festgelegt wird, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn die Trackleiste automatisch festgelegt wird; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können festlegen, die <xref:System.Windows.Forms.TrackBar.AutoSize%2A> Eigenschaft `true` der Trackleiste seine Höhe anpassen (falls horizontal ausgerichtet) oder Breite verursachen, (wenn es sich um eine vertikal ausgerichtet). Die Höhe oder Breite wird angepasst, um eine Standardgröße basierend auf der Bildschirmauflösung, die auf der Trackleiste angezeigt wird. Legen Sie die <xref:System.Windows.Forms.TrackBar.AutoSize%2A> Eigenschaft `false` Wenn Sie die Größe selbst anpassen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AutoSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.AutoSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.TrackBar.AutoSize" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.TrackBar.AutoSizeChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.TrackBar> mit dem Namen `TrackBar1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.TrackBar.AutoSizeChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#620](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#620)]
+ [!code-vb[System.Windows.Forms.EventExamples#620](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#620)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Hintergrundbild für die <see cref="T:System.Windows.Forms.TrackBar" /> Steuerelement.</summary>
+        <value>Die <see cref="T:System.Drawing.Image" /> also das Hintergrundbild für die <see cref="T:System.Windows.Forms.TrackBar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TrackBar.BackgroundImage%2A> Eigenschaft hat keine Auswirkungen auf das Aussehen von der <xref:System.Windows.Forms.TrackBar> steuern; daher es im Designer und von IntelliSense ausgeblendet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.BackgroundImageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.TrackBar.BackgroundImage" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TrackBar.BackgroundImage%2A> Eigenschaft hat keine Auswirkungen auf das Aussehen von der <xref:System.Windows.Forms.TrackBar> steuern; daher es im Designer und von IntelliSense ausgeblendet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest ein <see cref="T:System.Windows.Forms.ImageLayout" /> Wert; jedoch durch Festlegen dieser Eigenschaft hat keine Auswirkungen auf die <see cref="T:System.Windows.Forms.TrackBar" /> Steuerelement.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ImageLayout" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Forms.TrackBar.BackgroundImageLayout%2A> Eigenschaft hat keine Auswirkung auf die <xref:System.Windows.Forms.TrackBar> steuern; daher, diese Eigenschaft ist nicht im Designer oder von IntelliSense angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.BackgroundImageLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.TrackBar.BackgroundImageLayout" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Forms.TrackBar.BackgroundImageLayout%2A> Eigenschaft hat keine Auswirkung auf die <xref:System.Windows.Forms.TrackBar> Control; daher, diese Eigenschaft im Designer oder von Intellisense wird nicht angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beginnt die Initialisierung einer <see cref="T:System.Windows.Forms.TrackBar" />, die in einem Formular oder von einer anderen Komponente verwendet wird. Die Initialisierung erfolgt zur Laufzeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Entwurf Umgebung verwendet diese Methode, um die Initialisierung einer Komponente zu starten, die in einem Formular oder von einer anderen Komponente verwendet wird. Die <xref:System.Windows.Forms.TrackBar.EndInit%2A> -Methode beendet die Initialisierung. Mit <xref:System.Windows.Forms.TrackBar.BeginInit%2A> und <xref:System.Windows.Forms.TrackBar.EndInit%2A> Methoden wird verhindert, dass das Steuerelement verwendet werden, bevor er vollständig initialisiert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Benutzer auf das <see cref="T:System.Windows.Forms.TrackBar" />-Steuerelement klickt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHandle">
+      <MemberSignature Language="C#" Value="protected override void CreateHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CreateHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.CreateHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die <see cref="M:System.Windows.Forms.Control.CreateHandle" />-Methode außer Kraft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überschreibt die <see cref="P:System.Windows.Forms.Control.CreateParams" /> Eigenschaft.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.CreateParams" />-Eigenschaft, die die erforderlichen Erstellungsparameter enthält, wenn das Handle für das Steuerelement erstellt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultImeMode">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ImeMode DefaultImeMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode DefaultImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.DefaultImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der den Modus für die Eingabe-Editor (IME) für die <see cref="T:System.Windows.Forms.TrackBar" />.</summary>
+        <value>Immer <see cref="F:System.Windows.Forms.ImeMode.Disable" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardgröße des <see cref="T:System.Windows.Forms.TrackBar" />-Objekts ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" /> , die die Standardgröße des Steuerelements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardbreite beträgt 104 Pixel; die Höhe variiert. Sie können diese Eigenschaft in einer abgeleiteten Klasse eine andere Standardgröße bereitstellen überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleBuffered">
+      <MemberSignature Language="C#" Value="protected override bool DoubleBuffered { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DoubleBuffered" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.DoubleBuffered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Steuerelement neu gezeichnet werden soll seine Oberfläche unter Verwendung eines sekundären Puffers zum Verringern oder zu verhindern, dass Flackern; Diese Eigenschaft hat jedoch keine Auswirkungen auf die <see cref="T:System.Windows.Forms.TrackBar" /> Steuerelement</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement über einen sekundären Puffer verfügt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft hat keine Auswirkungen auf die <xref:System.Windows.Forms.TrackBar> steuern; wird daher im Designer oder von IntelliSense nicht angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleClick">
+      <MemberSignature Language="C#" Value="public event EventHandler DoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.DoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Benutzer auf das <see cref="T:System.Windows.Forms.TrackBar" />-Steuerelement doppelklickt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Initialisierung einer <see cref="T:System.Windows.Forms.TrackBar" />, die in einem Formular oder von einer anderen Komponente verwendet wird. Die Initialisierung erfolgt zur Laufzeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Entwurf Umgebung verwendet diese Methode, um die Initialisierung einer Komponente zu beenden, die in einem Formular oder von einer anderen Komponente verwendet wird. Die <xref:System.Windows.Forms.TrackBar.BeginInit%2A> -Methode startet die Initialisierung. Mithilfe der <xref:System.Windows.Forms.TrackBar.BeginInit%2A> und <xref:System.Windows.Forms.TrackBar.EndInit%2A> Methoden wird verhindert, dass das Steuerelement verwendet werden, bevor er vollständig initialisiert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überschreibt<see cref="P:System.Windows.Forms.Control.Font" /></summary>
+        <value>Der <see cref="T:System.Drawing.Font" />, der auf den Text angewendet werden soll, der im Steuerelement angezeigt wird. Der Standardwert ist der Wert der <see cref="P:System.Windows.Forms.Control.DefaultFont" />-Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler FontChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler FontChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.FontChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.TrackBar.Font" />-Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vordergrundfarbe der Trackleiste ab.</summary>
+        <value>Immer <see cref="P:System.Drawing.SystemColors.WindowText" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ForeColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ForeColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.ForeColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.TrackBar.ForeColor" />-Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ImeMode ImeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode ImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.ImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den von diesem Steuerelement unterstützten IME-Modus ab oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ImeMode" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeModeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ImeModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ImeModeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.ImeModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.TrackBar.ImeMode" />-Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInputKey">
+      <MemberSignature Language="C#" Value="protected override bool IsInputKey (System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsInputKey(valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.IsInputKey(System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Einer der <see cref="T:System.Windows.Forms.Keys" />-Werte.</param>
+        <summary>Bestimmt, ob es sich bei der angegebenen Taste um eine normale Eingabetaste handelt oder um eine Sondertaste, für die eine Vorverarbeitung erforderlich ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die angegebene Taste eine normale Taste ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeChange">
+      <MemberSignature Language="C#" Value="public int LargeChange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LargeChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.LargeChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(5)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert addiert oder von diesem subtrahiert werden die <see cref="P:System.Windows.Forms.TrackBar.Value" /> Eigenschaft, wenn das Bildlauffeld ist eine große Strecke verschoben.</summary>
+        <value>Ein numerischer Wert. Der Standard ist 5.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Benutzer die Bild-auf oder Bild-ab-Taste drückt oder auf der Trackleiste auf beiden Seiten des Bildlauffelds, klickt der <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaft ändert sich entsprechend der im festgelegte Wert die <xref:System.Windows.Forms.TrackBar.LargeChange%2A> Eigenschaft. Sie ggf. die Einstellung der <xref:System.Windows.Forms.TrackBar.LargeChange%2A> Wert auf einen Prozentsatz von der <xref:System.Windows.Forms.Control.Height%2A> (für eine vertikal ausgerichtet Trackleiste) oder <xref:System.Windows.Forms.Control.Width%2A> (bei einem horizontal ausgerichteten Trackleiste) Wert. Dadurch wird den Abstand, den die Trackleiste geht, proportional zu ihrer Größe.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt ein Formular mit einem <xref:System.Windows.Forms.TrackBar> Steuerelement und ein <xref:System.Windows.Forms.TextBox> Steuerelement. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.TrackBar.Maximum%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.LargeChange%2A>, und <xref:System.Windows.Forms.TrackBar.SmallChange%2A> Eigenschaften und Behandlung der <xref:System.Windows.Forms.TrackBar.Scroll> Ereignis. Die <xref:System.Windows.Forms.TextBox> Inhalt wird aktualisiert, um die <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaftswert, wenn die <xref:System.Windows.Forms.TrackBar.Scroll> Ereignis tritt auf.  
+  
+ [!code-cpp[System.Windows.Forms.TrackBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/CPP/source.cpp#1)]
+ [!code-csharp[System.Windows.Forms.TrackBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/CS/source.cs#1)]
+ [!code-vb[System.Windows.Forms.TrackBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der zugewiesene Wert ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public int Maximum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Maximum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(10)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt der Obergrenze des Bereichs dieser <see cref="T:System.Windows.Forms.TrackBar" /> arbeitet.</summary>
+        <value>Der maximale Wert für die <see cref="T:System.Windows.Forms.TrackBar" />. Der Standard ist 10.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.TrackBar.SetRange%2A> Methode zum Festlegen der <xref:System.Windows.Forms.TrackBar.Maximum%2A> und <xref:System.Windows.Forms.TrackBar.Minimum%2A> Eigenschaften zur gleichen Zeit.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt ein Formular mit einem <xref:System.Windows.Forms.TrackBar> Steuerelement und ein <xref:System.Windows.Forms.TextBox> Steuerelement. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.TrackBar.Maximum%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.LargeChange%2A>, und <xref:System.Windows.Forms.TrackBar.SmallChange%2A> Eigenschaften und Behandlung der <xref:System.Windows.Forms.TrackBar.Scroll> Ereignis. Die <xref:System.Windows.Forms.TextBox> Inhalt wird aktualisiert, um die <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaftswert, wenn die <xref:System.Windows.Forms.TrackBar.Scroll> Ereignis tritt auf.  
+  
+ [!code-cpp[System.Windows.Forms.TrackBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/CPP/source.cpp#1)]
+ [!code-csharp[System.Windows.Forms.TrackBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/CS/source.cs#1)]
+ [!code-vb[System.Windows.Forms.TrackBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public int Minimum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Minimum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt der Untergrenze des Bereichs dieser <see cref="T:System.Windows.Forms.TrackBar" /> arbeitet.</summary>
+        <value>Der Mindestwert für die <see cref="T:System.Windows.Forms.TrackBar" />. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.TrackBar.SetRange%2A> Methode zum Festlegen der <xref:System.Windows.Forms.TrackBar.Maximum%2A> und <xref:System.Windows.Forms.TrackBar.Minimum%2A> Eigenschaften zur gleichen Zeit.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.Minimum%2A>, und <xref:System.Windows.Forms.TrackBar.Maximum%2A> Elemente und deren Behandlung die <xref:System.Windows.Forms.TrackBar.ValueChanged> Ereignis. Fügen Sie zum Ausführen des Beispiels den folgenden Code in ein Formular, enthält eine <xref:System.Windows.Forms.TrackBar> Steuerelement namens `TrackBar1` und ein <xref:System.Windows.Forms.TextBox> Steuerelement namens `TextBox1`. Rufen Sie die `InitializeTrackBar` Methode aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-cpp[System.Windows.Forms.TrackBarExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.TrackBarExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.TrackBarExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TrackBarExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.MouseClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Benutzer auf das <see cref="T:System.Windows.Forms.TrackBar" />-Steuerelement klickt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDoubleClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.MouseDoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Benutzer auf das <see cref="T:System.Windows.Forms.TrackBar" />-Steuerelement doppelklickt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBackColorChanged">
+      <MemberSignature Language="C#" Value="protected override void OnBackColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBackColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.OnBackColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.BackColorChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleCreated">
+      <MemberSignature Language="C#" Value="protected override void OnHandleCreated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleCreated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.OnHandleCreated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Verwenden Sie die <see cref="M:System.Windows.Forms.Control.OnHandleCreated(System.EventArgs)" />-Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseWheel">
+      <MemberSignature Language="C#" Value="protected override void OnMouseWheel (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseWheel(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.OnMouseWheel(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.MouseWheel" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRightToLeftLayoutChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnRightToLeftLayoutChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRightToLeftLayoutChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.OnRightToLeftLayoutChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.TrackBar.RightToLeftLayoutChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.TrackBar.OnRightToLeftLayoutChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.TrackBar.OnRightToLeftLayoutChanged(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.TrackBar.OnRightToLeftLayoutChanged(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnScroll">
+      <MemberSignature Language="C#" Value="protected virtual void OnScroll (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnScroll(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.OnScroll(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.TrackBar.Scroll" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Windows.Forms.TrackBar.OnScroll%2A> Ereignis, um andere Steuerelemente zu aktualisieren, als die Position des Bildlauffelds geändert wird.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.TrackBar.OnScroll%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.TrackBar.OnScroll(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.TrackBar.OnScroll(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSystemColorsChanged">
+      <MemberSignature Language="C#" Value="protected override void OnSystemColorsChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSystemColorsChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.OnSystemColorsChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.SystemColorsChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Steuerelement wird neu gezeichnet werden, wenn sich die Systemfarben ändern.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.TrackBar.OnSystemColorsChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.TrackBar.OnSystemColorsChanged(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.TrackBar.OnSystemColorsChanged(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValueChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnValueChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnValueChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.OnValueChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Das <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.TrackBar.ValueChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Orientation">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Orientation Orientation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Orientation Orientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.Orientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Orientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die horizontale oder vertikale Ausrichtung der Positionsleiste angibt, oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.Orientation" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.TrackBar.Orientation%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.Orientation?displayProperty=nameWithType>, bewegt sich das Bildlauffeld von links nach rechts, als die <xref:System.Windows.Forms.TrackBar.Value%2A> erhöht. Wenn die <xref:System.Windows.Forms.TrackBar.Orientation%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.Orientation?displayProperty=nameWithType>, bewegt sich das Bildlauffeld von unten nach oben als die <xref:System.Windows.Forms.TrackBar.Value%2A> erhöht.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie einige der Festlegen der <xref:System.Windows.Forms.TrackBar> Eigenschaften.  
+  
+ [!code-cpp[TrackBar#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Trackbar/CPP/form1.cpp#2)]
+ [!code-csharp[TrackBar#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Trackbar/CS/form1.cs#2)]
+ [!code-vb[TrackBar#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Trackbar/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der zugewiesene Wert ist nicht der <see cref="T:System.Windows.Forms.Orientation" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Padding Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abstand zwischen den Rändern eines <see cref="T:System.Windows.Forms.TrackBar" />-Steuerelements und dessen Inhalt ab oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Padding" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TrackBar.Padding%2A> Eigenschaft hat keine Auswirkungen auf das Aussehen von der <xref:System.Windows.Forms.TrackBar> steuern; daher es im Designer und von IntelliSense ausgeblendet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PaddingChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaddingChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.PaddingChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.TrackBar.Padding" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.PaintEventHandler Paint;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.PaintEventHandler Paint" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.Paint" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PaintEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="T:System.Windows.Forms.TrackBar" /> Steuerelement gezeichnet wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftLayout">
+      <MemberSignature Language="C#" Value="public virtual bool RightToLeftLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RightToLeftLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.RightToLeftLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Inhalt des der <see cref="T:System.Windows.Forms.TrackBar" /> von rechts nach links angeordnet werden.</summary>
+        <value>
+          <see langword="true" />Wenn der Inhalt der <see cref="T:System.Windows.Forms.TrackBar" /> angeordnet von rechts nach links ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TrackBar.RightToLeftLayout%2A> Eigenschaft wird verwendet, mit der <xref:System.Windows.Forms.Control.RightToLeft%2A> -Eigenschaft für internationale Anwendungen, in die Sprache von rechts nach links, z. B. Hebräisch oder Arabisch geschrieben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RightToLeftLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RightToLeftLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.RightToLeftLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.TrackBar.RightToLeftLayout" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Beispiel  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.TrackBar.RightToLeftLayoutChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.TrackBar> mit dem Namen `TrackBar1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.TrackBar.RightToLeftLayoutChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#621](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#621)]
+ [!code-vb[System.Windows.Forms.EventExamples#621](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#621)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scroll">
+      <MemberSignature Language="C#" Value="public event EventHandler Scroll;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Scroll" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.Scroll" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das Bildlauffeld durch eine Maus- oder Tastaturaktion bewegt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Implementieren der <xref:System.Windows.Forms.TrackBar.Scroll> ereignisbasierter Informationen Bezeichnungen in einem Formular ändern, auf den Bildlauf des scrollfelds auf einer Trackleiste. Das Beispiel erfordert ein <xref:System.Windows.Forms.Form> mit drei Balken und drei Bezeichnungen, die darauf platziert nachverfolgen.  
+  
+ [!code-cpp[TrackBar#3](~/samples/snippets/cpp/VS_Snippets_Winforms/Trackbar/CPP/form1.cpp#3)]
+ [!code-csharp[TrackBar#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Trackbar/CS/form1.cs#3)]
+ [!code-vb[TrackBar#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Trackbar/VB/form1.vb#3)]  
+  
+ Das folgende Codebeispiel zeigt ein Formular, enthält ein <xref:System.Windows.Forms.TrackBar> Steuerelement und ein <xref:System.Windows.Forms.TextBox> Steuerelement. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.TrackBar.Maximum%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.LargeChange%2A>, und <xref:System.Windows.Forms.TrackBar.SmallChange%2A> Eigenschaften und Behandlung der <xref:System.Windows.Forms.TrackBar.Scroll> Ereignis. Die <xref:System.Windows.Forms.TextBox> Inhalt wird aktualisiert, um die <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaftswert, wenn die <xref:System.Windows.Forms.TrackBar.Scroll> Ereignis tritt auf.  
+  
+ [!code-cpp[System.Windows.Forms.TrackBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/CPP/source.cpp#1)]
+ [!code-csharp[System.Windows.Forms.TrackBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/CS/source.cs#1)]
+ [!code-vb[System.Windows.Forms.TrackBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBoundsCore">
+      <MemberSignature Language="C#" Value="protected override void SetBoundsCore (int x, int y, int width, int height, System.Windows.Forms.BoundsSpecified specified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetBoundsCore(int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.BoundsSpecified specified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="specified" Type="System.Windows.Forms.BoundsSpecified" />
+      </Parameters>
+      <Docs>
+        <param name="x">Der neue <see cref="P:System.Windows.Forms.Control.Left" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="y">Der neue <see cref="P:System.Windows.Forms.Control.Top" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="width">Der neue <see cref="P:System.Windows.Forms.Control.Width" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="height">Der neue <see cref="P:System.Windows.Forms.Control.Height" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="specified">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.BoundsSpecified" />-Werte.</param>
+        <summary>Legt die angegebenen Begrenzungen dieses Steuerelements fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRange">
+      <MemberSignature Language="C#" Value="public void SetRange (int minValue, int maxValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetRange(int32 minValue, int32 maxValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.SetRange(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="minValue" Type="System.Int32" />
+        <Parameter Name="maxValue" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="minValue">Die untere Grenze des Bereichs der Trackleiste.</param>
+        <param name="maxValue">Die Obergrenze des Bereichs der Trackleiste.</param>
+        <summary>Legt die minimalen und maximalen Werte für eine <see cref="T:System.Windows.Forms.TrackBar" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Festlegen des Bereichs der gesamte für die <xref:System.Windows.Forms.TrackBar> zur gleichen Zeit. Um die Werte für minimum oder maximum einzeln festzulegen, verwenden die <xref:System.Windows.Forms.TrackBar.Minimum%2A> und <xref:System.Windows.Forms.TrackBar.Maximum%2A> Eigenschaften. Wenn die `minValue` -Parameters ist größer als die `maxValue` Parameter `maxValue` gleich festgelegt ist `minValue`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallChange">
+      <MemberSignature Language="C#" Value="public int SmallChange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SmallChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.SmallChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert hinzugefügt, oder subtrahiert die <see cref="P:System.Windows.Forms.TrackBar.Value" /> Eigenschaft, wenn das Bildlauffeld ist eine kleine Strecke verschoben.</summary>
+        <value>Ein numerischer Wert. Der Standardwert ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Benutzer eine der Pfeiltasten drückt die <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaft ändert sich entsprechend der im festgelegte Wert die <xref:System.Windows.Forms.TrackBar.SmallChange%2A> Eigenschaft.  
+  
+ Sie sollten erwägen, den Wert des <xref:System.Windows.Forms.TrackBar.SmallChange%2A> auf einen Prozentsatz des Werts der <xref:System.Windows.Forms.Control.Height%2A> (für eine vertikal ausgerichtet Trackleiste) oder <xref:System.Windows.Forms.Control.Width%2A> (bei einem horizontal ausgerichteten Trackleiste) Eigenschaft. Dies legt den Abstand, den die Trackleiste geht, proportional zu ihrer Größe.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt ein Formular, enthält ein <xref:System.Windows.Forms.TrackBar> Steuerelement und ein <xref:System.Windows.Forms.TextBox> Steuerelement. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.TrackBar.Maximum%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.LargeChange%2A>, und <xref:System.Windows.Forms.TrackBar.SmallChange%2A> Eigenschaften und Behandlung der <xref:System.Windows.Forms.TrackBar.Scroll> Ereignis. Die <xref:System.Windows.Forms.TextBox> Inhalt wird aktualisiert, um die <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaftswert, wenn die <xref:System.Windows.Forms.TrackBar.Scroll> Ereignis tritt auf.  
+  
+ [!code-cpp[System.Windows.Forms.TrackBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/CPP/source.cpp#1)]
+ [!code-csharp[System.Windows.Forms.TrackBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/CS/source.cs#1)]
+ [!code-vb[System.Windows.Forms.TrackBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der zugewiesene Wert ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text von der <see cref="T:System.Windows.Forms.TrackBar" />.</summary>
+        <value>Der diesem Steuerelement zugeordnete Text.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Forms.TrackBar.Text" />-Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TickFrequency">
+      <MemberSignature Language="C#" Value="public int TickFrequency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TickFrequency" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.TickFrequency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der das Delta zwischen den im Steuerelement gezeichneten Teilstrichen angibt, oder legt diesen fest.</summary>
+        <value>Der numerische Wert, der das Delta zwischen Teilstrichen angibt. Der Standard ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine <xref:System.Windows.Forms.TrackBar> mit einem großen Wertebereich zwischen der <xref:System.Windows.Forms.TrackBar.Minimum%2A> und <xref:System.Windows.Forms.TrackBar.Maximum%2A> Eigenschaften, ist es möglicherweise sinnvoll, alle Teilstriche für Werte auf das Steuerelement gezeichnet werden soll. Z. B. Wenn Sie ein Steuerelement mit einem Bereich von 100, werden übergeben in einem Abstand von 5 hier das Steuerelement 20 Teilstriche gezeichnet werden soll. In diesem Fall stellt jeder Teilstrich fünf Einheiten im Bereich von Werten dar.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt ein Formular, enthält ein <xref:System.Windows.Forms.TrackBar> Steuerelement und ein <xref:System.Windows.Forms.TextBox> Steuerelement. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.TrackBar.Maximum%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.LargeChange%2A>, und <xref:System.Windows.Forms.TrackBar.SmallChange%2A> Eigenschaften und Behandlung der <xref:System.Windows.Forms.TrackBar.Scroll> Ereignis. Die <xref:System.Windows.Forms.TextBox> Inhalt wird aktualisiert, um die <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaftswert, wenn die <xref:System.Windows.Forms.TrackBar.Scroll> Ereignis tritt auf.  
+  
+ [!code-cpp[System.Windows.Forms.TrackBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/CPP/source.cpp#1)]
+ [!code-csharp[System.Windows.Forms.TrackBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/CS/source.cs#1)]
+ [!code-vb[System.Windows.Forms.TrackBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TickStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TickStyle TickStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.TickStyle TickStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.TickStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TickStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, wie die Teilstriche auf der Trackleiste angezeigt werden, oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.TickStyle" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.TickStyle.BottomRight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Windows.Forms.TrackBar.TickStyle%2A> Eigenschaft, um die Art und Weise ändern, in der die Teilstriche auf der Trackleiste angezeigt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.TrackBar.TickStyle%2A>, <xref:System.Windows.Forms.TrackBar.Minimum%2A>, und <xref:System.Windows.Forms.TrackBar.Maximum%2A> Eigenschaften und deren Behandlung die <xref:System.Windows.Forms.TrackBar.ValueChanged> Ereignis. Fügen Sie zum Ausführen des Beispiels den folgenden Code in ein Formular, enthält eine <xref:System.Windows.Forms.TrackBar> Steuerelement namens `TrackBar1` und ein <xref:System.Windows.Forms.TextBox> Steuerelement namens `TextBox1`. Rufen Sie die `InitializeTrackBar` Methode aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-cpp[System.Windows.Forms.TrackBarExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.TrackBarExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.TrackBarExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TrackBarExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der zugewiesene Wert ist kein gültiger <see cref="T:System.Windows.Forms.TickStyle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das <see cref="T:System.Windows.Forms.TrackBar" />-Steuerelement darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle <see cref="T:System.Windows.Forms.TrackBar" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TrackBar.ToString%2A> Methode gibt eine Zeichenfolge, die den Typ und die Werte für umfasst die <xref:System.Windows.Forms.TrackBar.Minimum%2A>, <xref:System.Windows.Forms.TrackBar.Maximum%2A>, und <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public int Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TrackBar.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen numerischen Wert ab, der die aktuelle Position des Bildlauffelds auf der Trackleiste darstellt, oder legt diesen fest.</summary>
+        <value>Ein numerischer Wert, der innerhalb der <see cref="P:System.Windows.Forms.TrackBar.Minimum" /> und <see cref="P:System.Windows.Forms.TrackBar.Maximum" /> Bereich. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaft enthält die Zahl, die die aktuelle Position des Bildlauffelds auf der Trackleiste darstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt ein Formular, enthält ein <xref:System.Windows.Forms.TrackBar> Steuerelement und ein <xref:System.Windows.Forms.TextBox> Steuerelement. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.TrackBar.Maximum%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.LargeChange%2A>, und <xref:System.Windows.Forms.TrackBar.SmallChange%2A> Eigenschaften und Behandlung der <xref:System.Windows.Forms.TrackBar.Scroll> Ereignis. Die <xref:System.Windows.Forms.TextBox> Inhalt wird aktualisiert, um die <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaftswert, wenn die <xref:System.Windows.Forms.TrackBar.Scroll> Ereignis tritt auf.  
+  
+ [!code-cpp[System.Windows.Forms.TrackBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/CPP/source.cpp#1)]
+ [!code-csharp[System.Windows.Forms.TrackBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/CS/source.cs#1)]
+ [!code-vb[System.Windows.Forms.TrackBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TrackBar/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der zugewiesene Wert ist kleiner als der Wert des <see cref="P:System.Windows.Forms.TrackBar.Minimum" />.  
+  
+ - oder -   
+  
+ Der zugewiesene Wert ist größer als der Wert des <see cref="P:System.Windows.Forms.TrackBar.Maximum" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ValueChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ValueChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TrackBar.ValueChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="P:System.Windows.Forms.TrackBar.Value" /> -Eigenschaft einer Trackleiste ändert, durch die Bewegung des Bildlauffelds oder durch Bearbeitung im Code.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis können Sie um andere Steuerelemente zu aktualisieren, wenn der Wert in der Trackleiste ändert dargestellt.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.TrackBar.TickStyle%2A>, <xref:System.Windows.Forms.TrackBar.Minimum%2A>, und <xref:System.Windows.Forms.TrackBar.Maximum%2A> Elemente und deren Behandlung die <xref:System.Windows.Forms.TrackBar.ValueChanged> Ereignis. Fügen Sie zum Ausführen des Beispiels den folgenden Code in ein Formular, enthält ein <xref:System.Windows.Forms.TrackBar> Steuerelementname `TrackBar1` und ein <xref:System.Windows.Forms.TextBox> Steuerelement namens `TextBox1`. Rufen Sie die `InitializeTrackBar` Methode aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-cpp[System.Windows.Forms.TrackBarExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.TrackBarExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TrackBarExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.TrackBarExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TrackBarExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TrackBar.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Ein Windows-Message-Objekt.</param>
+        <summary>Setzt die <see cref="M:System.Windows.Forms.Control.WndProc(System.Windows.Forms.Message@)" />-Methode außer Kraft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

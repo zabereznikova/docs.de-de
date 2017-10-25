@@ -1,0 +1,141 @@
+<Type Name="ServiceOperationParameter" FullName="System.Data.Services.Providers.ServiceOperationParameter">
+  <TypeSignature Language="C#" Value="public class ServiceOperationParameter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceOperationParameter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Providers.ServiceOperationParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerVisualizer("ServiceOperationParameter={Name}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Parameterinformationen für Dienstvorgänge dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceOperationParameter (string name, System.Data.Services.Providers.ResourceType parameterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Data.Services.Providers.ResourceType parameterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.ServiceOperationParameter.#ctor(System.String,System.Data.Services.Providers.ResourceType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="parameterType" Type="System.Data.Services.Providers.ResourceType" />
+      </Parameters>
+      <Docs>
+        <param name="name">Name des Parameters.</param>
+        <param name="parameterType">Der Datentyp des Parameters.</param>
+        <summary>Erstellt eine neue Instanz von <see cref="T:System.Data.Services.Providers.ServiceOperationParameter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomState">
+      <MemberSignature Language="C#" Value="public object CustomState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CustomState" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ServiceOperationParameter.CustomState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vom Entwickler über einen Dienstvorgangsparameter definierten benutzerdefinierten Zustandsinformationen.</summary>
+        <value>Vom Entwickler definierte benutzerdefinierte Zustandsinformationen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ServiceOperationParameter.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert, der definiert, ob der Parameter schreibgeschützt ist.</summary>
+        <value>Boolescher Wert, der definiert, ob der Parameter schreibgeschützt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ServiceOperationParameter.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Dienstvorgangsparameters.</summary>
+        <value>Eine Zeichenfolge, die den Namen des Dienstvorgangsparameters angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterType">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Providers.ResourceType ParameterType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Services.Providers.ResourceType ParameterType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ServiceOperationParameter.ParameterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Providers.ResourceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Datentyp des Dienstvorgangsparameters ab.</summary>
+        <value>Der Datentyp des Dienstvorgangsparameters als <see cref="T:System.Data.Services.Providers.ResourceType" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReadOnly">
+      <MemberSignature Language="C#" Value="public void SetReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.ServiceOperationParameter.SetReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die Dienstvorgangsparameters in den schreibgeschützten Modus fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legt einen booleschen Wert, der den Parameter als schreibgeschützt definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

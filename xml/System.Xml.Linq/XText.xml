@@ -1,0 +1,384 @@
+<Type Name="XText" FullName="System.Xml.Linq.XText">
+  <TypeSignature Language="C#" Value="public class XText : System.Xml.Linq.XNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XText extends System.Xml.Linq.XNode" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Linq.XText" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XDocument</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.Linq</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Linq.XNode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Textknoten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ XML-Elemente können Textinhalt nicht enthalten. Der Inhalt ist manchmal einfach (das Element enthält nur-Text-Inhalt), und in einigen Fällen wird der Inhalt gemischt (der Inhalt des Elements enthält Text und andere Elemente). In beiden Fällen wird jeder Ausschnitt von Text als dargestellt ein <xref:System.Xml.Linq.XText> Knoten.  
+  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Entwickler müssen häufig zum Schreiben von Code zum Arbeiten mit beliebigen [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Strukturen, die sie nicht erstellt haben. Wenn Sie Code schreiben, der mit funktionieren [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Strukturen, die Sie keine Kontrolle über erstellt haben, sollten Sie Bedenken der Steuerung des Verhaltens von <xref:System.Xml.Linq.XText> Knoten.  
+  
+ Wenn der Inhalt der XML-Strukturen auf Knotenebene verarbeitet werden, sollten Sie für mehrere vorbereitet <xref:System.Xml.Linq.XText> Knoten miteinander benachbart sind. Darüber hinaus sollten Sie für vorbereitet werden <xref:System.Xml.Linq.XText> Knoten, die keinen Text enthalten. Es ist möglich durch [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Methoden, um den Inhalt eines Textknotens zu löschen. Allerdings [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] den Knoten nicht automatisch gelöscht. Der Knoten Identität besitzt und haben Anmerkungen, sodass [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] leere Knoten in der Struktur ermöglicht.  
+  
+ Weitere Informationen finden Sie unter [Programmieren mit Knoten](http://msdn.microsoft.com/library/18680d1c-6e7c-4645-8d53-27b5a96f2d3f).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XText (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XText.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.String" /> , den Wert der enthält die <see cref="T:System.Xml.Linq.XText" /> Knoten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Linq.XText" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel nicht erstellt Textknoten mithilfe der <xref:System.Xml.Linq.XText> Konstruktoren. Wenn Sie Text-Inhalt übergeben, beim Erstellen einer <xref:System.Xml.Linq.XElement>, Textknoten werden automatisch erstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein Element, das einen Textknoten enthält.  
+  
+```csharp  
+  
+                XElement root = new XElement("Root", "Some text");  
+Console.WriteLine(root);  
+```  
+  
+```vb  
+  
+                Dim root As XElement = <Root>Some text</Root>  
+Console.WriteLine(root)  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```xml  
+  
+<Root>Some text</Root>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XText (System.Xml.Linq.XText other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XText other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XText.#ctor(System.Xml.Linq.XText)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="System.Xml.Linq.XText" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die <see cref="T:System.Xml.Linq.XText" /> Knoten zum Kopieren aus.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Linq.XText" />-Klasse mit einem anderen <see cref="T:System.Xml.Linq.XText" /> -Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird hauptsächlich intern verwendet, um eine tiefe Kopie einer XML-Struktur erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XText.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Knotentyp für diesen Knoten ab.</summary>
+        <value>Der Knotentyp. Für <see cref="T:System.Xml.Linq.XText" />-Objekte ist dieser Wert <see cref="F:System.Xml.XmlNodeType.Text" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da alle, die von Klassen abgeleitet werden <xref:System.Xml.Linq.XObject> enthalten eine <xref:System.Xml.Linq.XObject.NodeType%2A> -Eigenschaft, können Sie Code schreiben, der ausgeführt wird auf Sammlungen von konkrete Unterklasse von <xref:System.Xml.Linq.XObject>. Code kann dann für jeden Knoten in der Auflistung den Knotentyp testen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine XML-Struktur, die eine Anzahl von Typen von Knoten enthält. Es durchläuft dann der Struktur der Ausgabe der einzelnen Knoten des Knotentyp.  
+  
+ Beachten Sie, dass `Child2` enthält ein <xref:System.Xml.Linq.XText> Knoten, von dem Zeichenfolgeninhalt implizit konvertiert.  
+  
+```csharp  
+  
+                // Note that XNode uses XmlNodeType, which is in the System.Xml namespace.  
+XDocument xmlTree = new XDocument(  
+    new XComment("a comment"),  
+    new XProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"hello.xsl\""),  
+    new XElement("Root",  
+        new XAttribute("Att", "attContent"),  
+        new XElement("Child1",  
+            new XCData("CDATA content")  
+        ),  
+        new XElement("Child2", "Text content")  
+    )  
+);  
+  
+foreach (XNode node in xmlTree.DescendantNodes())  
+{  
+    Console.WriteLine(node.NodeType);  
+    if (node.NodeType == XmlNodeType.Element)  
+    {  
+        foreach (XAttribute att in ((XElement)node).Attributes())  
+            Console.WriteLine(att.NodeType);  
+    }  
+}  
+```  
+  
+```vb  
+  
+                ' Note that XNode uses XmlNodeType, which is in the System.Xml namespace.  
+Dim xmlTree As XDocument = _  
+    <?xml version='1.0'?>  
+    <!-- a comment -->  
+    <?xml-stylesheet type='text/xsl' href='hello.xsl'?>  
+    <Root Att="attContent">  
+        <Child1>  
+            <![CDATA[CDATA content]]]><![CDATA[]>  
+        </Child1>  
+        <Child2>Text content</Child2>  
+    </Root>  
+  
+For Each node As XNode In xmlTree.DescendantNodes  
+    Console.WriteLine(node.NodeType.ToString())  
+    If node.NodeType = XmlNodeType.Element Then  
+        For Each att In DirectCast(node, XElement).Attributes  
+            Console.WriteLine(att.NodeType.ToString())  
+        Next  
+    End If  
+Next  
+  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+Comment  
+ProcessingInstruction  
+Element  
+Attribute  
+Element  
+CDATA  
+Element  
+Text  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XText.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert dieses Knotens.</summary>
+        <value>Ein <see cref="T:System.String" /> , den Wert dieses Knotens enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft löst Einstellung der <xref:System.Xml.Linq.XObject.Changed> und die <xref:System.Xml.Linq.XObject.Changing> Ereignisse.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt das Abrufen und Festlegen dieser Eigenschaft.  
+  
+```csharp  
+  
+                XElement root = new XElement("Root", "Some text");  
+XText txtNode = root.Nodes().OfType<XText>().First();  
+Console.WriteLine(txtNode.Value);  
+txtNode.Value = "New text";  
+Console.WriteLine(txtNode.Value);  
+  
+root.Value = "Newer text";  
+txtNode = root.Nodes().OfType<XText>().First();  
+Console.WriteLine(txtNode.Value);  
+```  
+  
+```vb  
+  
+                Dim root As XElement = <Root>Some text</Root>  
+Dim txtNode As XText = root.Nodes().OfType(Of XText).First()  
+Console.WriteLine(txtNode.Value)  
+txtNode.Value = "New text"  
+Console.WriteLine(txtNode.Value)  
+  
+root.Value = "Newer text"  
+txtNode = root.Nodes().OfType(Of XText).First()  
+Console.WriteLine(txtNode.Value)  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+Some text  
+New text  
+Newer text  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public override void WriteTo (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteTo(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XText.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Xml.XmlWriter" />, in den diese Methode schreibt.</param>
+        <summary>Schreibt diesen Knoten, um eine <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich intern verwendet, durch die Methoden, die eine XML-Struktur zum Schreiben einer <xref:System.Xml.XmlWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteToAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteToAsync (System.Xml.XmlWriter writer, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteToAsync(class System.Xml.XmlWriter writer, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XText.WriteToAsync(System.Xml.XmlWriter,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

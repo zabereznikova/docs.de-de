@@ -1,0 +1,192 @@
+<Type Name="IDesigner" FullName="System.ComponentModel.Design.IDesigner">
+  <TypeSignature Language="C#" Value="public interface IDesigner : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesigner implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt das grundlegende Framework für einen benutzerdefinierten Designer erstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.IDesigner> Schnittstelle bietet eine Schnittstelle, über die Sie grundlegende Dienste für einen Designer implementieren können. Ein Designer kann das Verhalten einer Komponente zur Entwurfszeit ändern und gegebenenfalls über einen eigenen Dienste und des Verhaltens. Ein Designer ist nur zur Entwurfszeit aktiv und muss einen Typ der Komponente zugeordnet werden eine <xref:System.ComponentModel.DesignerAttribute> um geladen werden, wenn eine Komponente von den zugeordneten Typ zur Entwurfszeit erstellt wird.  
+  
+ Die <xref:System.ComponentModel.Design.IDesigner> -Schnittstelle bietet Methoden und Eigenschaften, die Sie implementieren können, um benutzerdefiniertes Verhalten zur Entwurfszeit bereitzustellen.  
+  
+ Implementieren der <xref:System.ComponentModel.Design.IDesigner.Initialize%2A> Methode eines Designers, um Aktionen durchzuführen, wenn eine Komponente erstellt wird. Dies kann nützlich sein, wenn eine Komponente eine spezielle Konfiguration zur Entwurfszeit aufweisen soll, oder wenn ihre Konfiguration basierend auf Bedingungen geändert werden sollte, die der Designer bestimmen kann.  
+  
+ Ein Designer kann Menübefehle im Kontextmenü bereitstellen, die angezeigt wird, wenn ein Benutzer eine Komponente oder ein Steuerelement in der entwurfszeitumgebung klickt. Sie implementieren können die <xref:System.ComponentModel.Design.IDesigner.Verbs%2A> Eigenschaft, um eine "Get"-Zugriffsmethode definieren, die zurückgibt eine <xref:System.ComponentModel.Design.DesignerVerbCollection> , enthält die <xref:System.ComponentModel.Design.DesignerVerb> Objekte beim Generieren von Menübefehlen im.  
+  
+ Ein Designer für eine Komponente, die in der Komponentenleiste angezeigt kann eine Standardaktion auszuführen, wenn die Komponente doppelgeklickt wird. Implementieren der <xref:System.ComponentModel.Design.IDesigner.DoDefaultAction%2A> Methode, um das Verhalten festzulegen, auszuführen, wenn die Komponente doppelgeklickt wird.  
+  
+ Ein Designer können auch die verfügbaren Dienste für die Entwurfszeit zum Ausführen von einer Vielzahl von Aufgaben, einschließlich der aktuellen entwurfszeitumgebung für Komponenten und deren Eigenschaften befragt, das Lesen und Festlegen der Werte der Eigenschaften von Komponenten, Verwalten von der Toolbox, Verwalten von ausgewählten Komponenten oder Anzeigen einer Benutzeroberfläche, die Werte zu konfigurieren oder Anwenden der weiteren Verarbeitung verwendet werden kann.  
+  
+ Um einen Designer für ein Steuerelement, das positioniert werden soll, kann in einem Formular zu implementieren, können Sie von erben die <xref:System.Windows.Forms.Design.ControlDesigner> Klasse. Steuerelemente, deren zugeordneten Designer ist nicht von abgeleitet <xref:System.Windows.Forms.Design.ControlDesigner> werden auf der Komponentenleiste angezeigt. Die <xref:System.ComponentModel.Design.ComponentDesigner> und <xref:System.Windows.Forms.Design.ControlDesigner> Klassen implementieren die <xref:System.ComponentModel.Design.IDesigner> -Schnittstelle und bieten zusätzliche zur Entwurfszeit Unterstützung, die Verwendung von Designer-Autoren sein können. Weitere Informationen finden Sie in der Referenzdokumentation für diese Klassen.  
+  
+ Einen Überblick über das Erstellen von Entwurfskomponenten finden Sie unter [Erweitern der Entwurfszeitunterstützung](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt eine <xref:System.ComponentModel.Design.IDesigner> Implementierung, die einen lokalen Verweis auf die Komponente speichert führt eine Standardaktion, wenn die Komponente doppelgeklickt wird, und bietet ein Designerverb Menübefehl aus.  
+  
+ [!code-cpp[IDesignerExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IDesignerExample/CPP/testcontrol.cpp#1)]
+ [!code-csharp[IDesignerExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IDesignerExample/CS/testcontrol.cs#1)]
+ [!code-vb[IDesignerExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IDesignerExample/VB/testcontrol.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Component">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent Component { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent Component" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.IDesigner.Component" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Basiskomponente, die diesem Designer entworfen wird.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.IComponent" /> , der angibt, der Basis-Komponente, die diesem Designer entworfen wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoDefaultAction">
+      <MemberSignature Language="C#" Value="public void DoDefaultAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DoDefaultAction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IDesigner.DoDefaultAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Standardaktion für diesen Designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn ein Benutzer die Darstellung einer Komponente auf der Komponentenleiste doppelklickt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, die diesem Designer zugeordnet.</param>
+        <summary>Initialisiert den Designer mit der angegebenen Komponente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbs">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.DesignerVerbCollection Verbs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerVerbCollection Verbs" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.IDesigner.Verbs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerVerbCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der zur Entwurfszeit-Verben, die vom Designer unterstützt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.Design.DesignerVerbCollection" /> , enthält die Verben, die vom Designer unterstützt oder <see langword="null" /> , wenn die Komponente keine Verben besitzt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt den Entwurf unterstützte, die von der Komponente, die dem Designer zugeordneten Entwurfszeitverben zurück. Die Verben, die von dieser Methode zurückgegebene werden in der Regel von der Umgebung zur Entwurfszeit in einem Kontextmenü angezeigt. Wenn ein Benutzer wählt einen der Verben, die Ereignishandler des entsprechenden <xref:System.ComponentModel.Design.DesignerVerb> aufgerufen wird.  
+  
+> [!NOTE]
+>  Eine Entwurfszeit Umgebung in der Regel stellt eine **Eigenschaften... ** Eintrag auf der rechten Maustaste auf eine Komponente. Zur Vermeidung von doppelten Titel für Menüeinträge kein Verb mit dem Titel "Eigenschaften..." im enthalten sein muss eine <xref:System.ComponentModel.Design.DesignerVerbCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

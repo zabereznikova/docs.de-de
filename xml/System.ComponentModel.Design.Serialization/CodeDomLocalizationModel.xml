@@ -1,0 +1,66 @@
+<Type Name="CodeDomLocalizationModel" FullName="System.ComponentModel.Design.Serialization.CodeDomLocalizationModel">
+  <TypeSignature Language="C#" Value="public enum CodeDomLocalizationModel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CodeDomLocalizationModel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.CodeDomLocalizationModel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Bestimmt das Lokalisierungsmodell von CodeDom-Ressourcenadapter verwendet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.Serialization.CodeDomLocalizationModel None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.Serialization.CodeDomLocalizationModel.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.CodeDomLocalizationModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Lokalisierungsanbieter sollte lokalisierte Eigenschaften ignoriert werden. Es wird weiterhin Ressourcen für Objekte schreiben, unterstützen keine codegenerierung und sind serialisierbar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyAssignment">
+      <MemberSignature Language="C#" Value="PropertyAssignment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.Serialization.CodeDomLocalizationModel PropertyAssignment = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.Serialization.CodeDomLocalizationModel.PropertyAssignment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.CodeDomLocalizationModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Lokalisierungsanbieter wird lokalisierte Eigenschaften schreiben, indem Sie jede Eigenschaft eine Ressource zuweisen. Dieses Modell ist schnell, wenn die Anzahl der Eigenschaften klein ist, aber schlecht skaliert mit steigender Anzahl von Eigenschaften, die Standardwerte enthält.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyReflection">
+      <MemberSignature Language="C#" Value="PropertyReflection" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.Serialization.CodeDomLocalizationModel PropertyReflection = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.Serialization.CodeDomLocalizationModel.PropertyReflection" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.CodeDomLocalizationModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Lokalisierungsanbieter lokalisierte Eigenschaftswerte in eine Ressourcendatei geschrieben und verwenden die <see cref="T:System.ComponentModel.ComponentResourceManager" /> Klasse, um die Eigenschaften nach Namen, um zur Laufzeit ausfüllen reflektieren. Dabei wird Reflektion zur Laufzeit verwendet, damit können langsam sein, aber die Skalierung ist besser für eine große Anzahl von Eigenschaften mit Standardwerten hier.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

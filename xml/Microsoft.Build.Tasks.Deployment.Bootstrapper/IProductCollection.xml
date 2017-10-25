@@ -1,0 +1,115 @@
+<Type Name="IProductCollection" FullName="Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductCollection">
+  <TypeSignature Language="C#" Value="public interface IProductCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IProductCollection" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductCollection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("63F63663-8503-4875-814C-09168E595367")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle stellt eine Auflistung von <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product> Objekte. Die Auflistung ist ein geschlossener Satz, der vom generierten der <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder> basierend auf den <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path%2A> Eigenschaft. Der Client kann dieser Auflistung weder Elemente hinzufügen noch Elemente aus ihr entfernen.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der Produktauflistung ab.</summary>
+        <value>Die Anzahl der Elemente in der Produktauflistung.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.Bootstrapper.Product Item (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Build.Tasks.Deployment.Bootstrapper.Product Item(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductCollection.Item(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.Bootstrapper.Product</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des abzurufenden Elements.</param>
+        <summary>Ruft das Produkt am angegebenen Index ab.</summary>
+        <returns>Das <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product" />-Objekt am angegebenen Index.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Product">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.Bootstrapper.Product Product (string productCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Build.Tasks.Deployment.Bootstrapper.Product Product(string productCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductCollection.Product(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(3)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.Bootstrapper.Product</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="productCode" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="productCode">Der eindeutige Bezeichner des abzurufenden Produkts.</param>
+        <summary>Ruft das Produkt mit dem angegebenen Produktcode ab.</summary>
+        <returns>Die <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product" /> Objekt mit dem angegebenen Produktcode null, wenn der angegebene Produktcode nicht gefunden wird.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

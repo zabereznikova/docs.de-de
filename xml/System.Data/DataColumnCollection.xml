@@ -1,0 +1,898 @@
+<Type Name="DataColumnCollection" FullName="System.Data.DataColumnCollection">
+  <TypeSignature Language="C#" Value="public sealed class DataColumnCollection : System.Data.InternalDataCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataColumnCollection extends System.Data.InternalDataCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataColumnCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.InternalDataCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("CollectionChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.ColumnsCollectionEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Data.DataColumn" /> von Objekten für einen <see cref="T:System.Data.DataTable" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataColumnCollection> definiert das Schema einer <xref:System.Data.DataTable>, und bestimmt, welche Art von Daten jede <xref:System.Data.DataColumn> enthalten können. Sie erreichen die <xref:System.Data.DataColumnCollection> über die <xref:System.Data.DataTable.Columns%2A> Eigenschaft von der <xref:System.Data.DataTable> Objekt.  
+  
+ Die <xref:System.Data.DataColumnCollection> verwendet die <xref:System.Data.DataColumnCollection.Add%2A> und <xref:System.Data.DataColumnCollection.Remove%2A> Methoden zum Einfügen und löschen <xref:System.Data.DataColumn> Objekte. Verwenden der <xref:System.Data.InternalDataCollectionBase.Count%2A> Eigenschaft, um zu bestimmen, wie viele <xref:System.Data.DataColumn> Objekte sind in der Auflistung. Verwenden der <xref:System.Data.DataColumnCollection.Contains%2A> Methode, um zu überprüfen, ob ein angegebener Name der Index oder eine Spalte in der Auflistung vorhanden ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel durchläuft eine Auflistung von <xref:System.Data.DataColumn> -Objekte und gibt die verschiedenen Eigenschaften für jede Spalte in der Auflistung.  
+  
+ [!code-csharp[Classic WebData DataColumnCollection Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumnCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist für schreibgeschützte Vorgänge mit mehreren Threads sicher. Sie müssen alle Schreibvorgänge synchronisieren.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.DataColumn Add ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataColumn Add() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumnCollection.Add" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataColumn</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und fügt eine <see cref="T:System.Data.DataColumn" /> -Objekt an die <see cref="T:System.Data.DataColumnCollection" />.</summary>
+        <returns>Der neu erstellte <see cref="T:System.Data.DataColumn" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Spalte erhält ein Standardnamen ("Column1", "Column2" usw.).  
+  
+ Wenn die Auflistung erfolgreich geändert wurde, durch Hinzufügen oder Entfernen von Spalten, die <xref:System.Data.DataColumnCollection.CollectionChanged> Ereignis auftritt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt und fügt eine neue <xref:System.Data.DataColumn> auf die <xref:System.Data.DataColumnCollection> von einer <xref:System.Data.DataTable>.  
+  
+ [!code-vb[Classic WebData DataColumnCollection.Add5 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.Add5 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Data.DataColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Data.DataColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumnCollection.Add(System.Data.DataColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Das hinzuzufügende <see cref="T:System.Data.DataColumn" />.</param>
+        <summary>Erstellt und fügt das angegebene <see cref="T:System.Data.DataColumn" /> -Objekt an die <see cref="T:System.Data.DataColumnCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Auflistung erfolgreich geändert wurde, durch Hinzufügen oder Entfernen von Spalten, die <xref:System.Data.DataColumnCollection.CollectionChanged> Ereignis auftritt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Data.DataColumn> zu einem <xref:System.Data.DataColumnCollection>.  
+  
+ [!code-vb[Classic WebData DataColumnCollection.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.Add Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="column" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Spalte gehört bereits zu dieser Auflistung oder zu einer anderen Auflistung.</exception>
+        <exception cref="T:System.Data.DuplicateNameException">Die Auflistung enthält bereits eine Spalte mit dem angegebenen Namen. (Beim Vergleich wird die Groß-/Kleinschreibung nicht berücksichtigt.)</exception>
+        <exception cref="T:System.Data.InvalidExpressionException">Der Ausdruck ist ungültig. Finden Sie unter der <see cref="P:System.Data.DataColumn.Expression" /> -Eigenschaft für Weitere Informationen zum Erstellen von Ausdrücken.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.DataColumn Add (string columnName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataColumn Add(string columnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumnCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataColumn</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">Der Name der Spalte.</param>
+        <summary>Erstellt und fügt eine <see cref="T:System.Data.DataColumn" /> -Objekt, das den angegebenen Namen aufweist, kann die <see cref="T:System.Data.DataColumnCollection" />.</summary>
+        <returns>Der neu erstellte <see cref="T:System.Data.DataColumn" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Data.DataColumn.DataType%2A> für die neue Spalte `string`.  
+  
+ Wenn `null` oder eine leere Zeichenfolge ("") übergeben wird in Namen erhält einen Standardnamen ("Column1", "Column2" usw.) wird auf die Spalte.  
+  
+ Verwenden der <xref:System.Data.DataColumnCollection.Contains%2A> Methode, um zu bestimmen, ob eine Spalte mit dem vorgeschlagenen Namen bereits in der Auflistung vorhanden ist.  
+  
+ Wenn die Auflistung erfolgreich geändert wurde, durch Hinzufügen oder Entfernen von Spalten, die <xref:System.Data.DataColumnCollection.CollectionChanged> Ereignis auftritt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt und fügt eine neue <xref:System.Data.DataColumn> auf eine <xref:System.Data.DataColumnCollection> von einer <xref:System.Data.DataTable>.  
+  
+ [!code-vb[Classic WebData DataColumnCollection.Add4 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.Add4 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.DuplicateNameException">Die Auflistung enthält bereits eine Spalte mit dem angegebenen Namen. (Beim Vergleich wird die Groß-/Kleinschreibung nicht berücksichtigt.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.DataColumn Add (string columnName, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataColumn Add(string columnName, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumnCollection.Add(System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataColumn</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">Die <see cref="P:System.Data.DataColumn.ColumnName" /> zu verwenden, wenn Sie die Spalte erstellen.</param>
+        <param name="type">Die <see cref="P:System.Data.DataColumn.DataType" /> der neuen Spalte.</param>
+        <summary>Erstellt und fügt eine <see cref="T:System.Data.DataColumn" /> -Objekt, das dem angegebenen Namen und Typ der <see cref="T:System.Data.DataColumnCollection" />.</summary>
+        <returns>Der neu erstellte <see cref="T:System.Data.DataColumn" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `null` oder eine leere Zeichenfolge ("") übergeben wird in Namen erhält einen Standardnamen ("Column1", "Column2" usw.) wird auf die Spalte.  
+  
+ Verwenden der <xref:System.Data.DataColumnCollection.Contains%2A> Methode, um zu bestimmen, ob eine Spalte mit dem vorgeschlagenen Namen bereits in der Auflistung vorhanden ist.  
+  
+ Wenn die Auflistung erfolgreich geändert wurde, durch Hinzufügen oder Entfernen von Spalten, die <xref:System.Data.DataColumnCollection.CollectionChanged> Ereignis auftritt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt und fügt eine neue <xref:System.Data.DataColumn> auf eine <xref:System.Data.DataColumnCollection> von einer <xref:System.Data.DataTable>.  
+  
+ [!code-vb[Classic WebData DataColumnCollection.Add2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.Add2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.DuplicateNameException">Die Auflistung enthält bereits eine Spalte mit dem angegebenen Namen. (Beim Vergleich wird die Groß-/Kleinschreibung nicht berücksichtigt.)</exception>
+        <exception cref="T:System.Data.InvalidExpressionException">Der Ausdruck ist ungültig. Finden Sie unter der <see cref="P:System.Data.DataColumn.Expression" /> -Eigenschaft für Weitere Informationen zum Erstellen von Ausdrücken.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.DataColumn Add (string columnName, Type type, string expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataColumn Add(string columnName, class System.Type type, string expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumnCollection.Add(System.String,System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataColumn</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="expression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">Der Name, der beim Erstellen der Spalte verwenden.</param>
+        <param name="type">Die <see cref="P:System.Data.DataColumn.DataType" /> der neuen Spalte.</param>
+        <param name="expression">Der Ausdruck, der zum Zuweisen der <see cref="P:System.Data.DataColumn.Expression" /> Eigenschaft.</param>
+        <summary>Erstellt und fügt eine <see cref="T:System.Data.DataColumn" /> -Objekt, das dem angegebenen Namen, Typ und Ausdruck hat der <see cref="T:System.Data.DataColumnCollection" />.</summary>
+        <returns>Der neu erstellte <see cref="T:System.Data.DataColumn" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `null` oder eine leere Zeichenfolge ("") übergeben wird in Namen erhält einen Standardnamen ("Column1", "Column2" usw.) wird auf die Spalte.  
+  
+ Verwenden der <xref:System.Data.DataColumnCollection.Contains%2A> Methode, um zu bestimmen, ob eine Spalte mit dem vorgeschlagenen Namen bereits in der Auflistung vorhanden ist.  
+  
+ Wenn die Auflistung erfolgreich geändert wurde, durch Hinzufügen oder Entfernen von Spalten, die <xref:System.Data.DataColumnCollection.CollectionChanged> Ereignis auftritt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt und fügt eine neue <xref:System.Data.DataColumn> auf eine <xref:System.Data.DataColumnCollection> von einer <xref:System.Data.DataTable>.  
+  
+ [!code-vb[Classic WebData DataColumnCollection.Add1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.Add1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.DuplicateNameException">Die Auflistung enthält bereits eine Spalte mit dem angegebenen Namen. (Beim Vergleich wird die Groß-/Kleinschreibung nicht berücksichtigt.)</exception>
+        <exception cref="T:System.Data.InvalidExpressionException">Der Ausdruck ist ungültig. Finden Sie unter der <see cref="P:System.Data.DataColumn.Expression" /> -Eigenschaft für Weitere Informationen zum Erstellen von Ausdrücken.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Data.DataColumn[] columns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Data.DataColumn[] columns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumnCollection.AddRange(System.Data.DataColumn[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columns" Type="System.Data.DataColumn[]" />
+      </Parameters>
+      <Docs>
+        <param name="columns">Das Array von <see cref="T:System.Data.DataColumn" /> Objekten, die der Auflistung hinzugefügt.</param>
+        <summary>Kopiert die Elemente des angegebenen <see cref="T:System.Data.DataColumn" /> Array an das Ende der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRemove">
+      <MemberSignature Language="C#" Value="public bool CanRemove (System.Data.DataColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanRemove(class System.Data.DataColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumnCollection.CanRemove(System.Data.DataColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Ein <see cref="T:System.Data.DataColumn" /> in der Auflistung.</param>
+        <summary>Überprüft, ob eine bestimmte Spalte aus der Auflistung entfernt werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn die Spalte entfernt werden kann. <see langword="false" />if-  
+  
+-   Der <paramref name="column" />-Parameter ist <see langword="null" />.  
+  
+-   Die Spalte gehört nicht zu dieser Auflistung.  
+  
+-   Die Spalte ist Teil einer Beziehung.  
+  
+-   Ausdruck für eine andere Spalte hängt von dieser Spalte ab.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataColumnCollection.CanRemove%2A> Methode führt verschiedene Überprüfungen vor der Rückgabe eine `true` oder `false` Ergebnis. Dazu gehören folgende: Gibt an, ob die Spalte vorhanden ist, auf die Tabelle gehört, oder eine Einschränkung oder der Beziehung beteiligt ist.  
+  
+ Verwenden der <xref:System.Data.DataColumnCollection.CanRemove%2A> -Methode auf, bevor Sie versuchen, eine Spalte aus einer Auflistung zu entfernen. Sie können auch die <xref:System.Data.DataColumnCollection.Contains%2A> Methode, um zu bestimmen, ob eine bestimmte Spalte vorhanden ist, bevor Sie versuchen, ihn zu entfernen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird zuerst verwendet die <xref:System.Data.DataColumnCollection.Contains%2A> Methode, um zu bestimmen, ob eine bestimmte Spalte in der Auflistung gefunden wird. Wenn gefunden, die <xref:System.Data.DataColumnCollection.CanRemove%2A> Methode überprüft, ob die Spalte entfernt werden kann. Wenn also die Spalte entfernt wird, mit der <xref:System.Data.DataColumnCollection.Remove%2A> Methode.  
+  
+ [!code-csharp[Classic WebData DataColumnCollection.CanRemove Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.CanRemove Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumnCollection.CanRemove Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.CanRemove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumnCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Auflistung von Spalten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Auflistung erfolgreich geändert wurde, durch Hinzufügen oder Entfernen von Spalten, die <xref:System.Data.DataColumnCollection.CollectionChanged> Ereignis auftritt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel löscht die Auflistung der Spalten.  
+  
+ [!code-csharp[Classic WebData DataColumnCollection.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.Clear Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumnCollection.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.Clear Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CollectionChangeEventHandler CollectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CollectionChangeEventHandler CollectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Data.DataColumnCollection.CollectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CollectionChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Auflistung der Spalten durch Hinzufügen oder Entfernen einer Spalte ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Data.DataColumnCollection.Contains%2A> und <xref:System.Data.DataColumnCollection.CanRemove%2A> Methoden, um zu bestimmen, ob eine Spalte vorhanden ist und entfernt werden kann.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel fügt einen Ereignishandler für das CollectionChanged-Ereignis hinzu.  
+  
+ [!code-csharp[Classic WebData DataColumnCollection.CollectionChanged Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.CollectionChanged Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumnCollection.CollectionChanged Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.CollectionChanged Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumnCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Die <see cref="P:System.Data.DataColumn.ColumnName" /> der zu suchenden Spalte.</param>
+        <summary>Überprüft, ob die Auflistung eine Spalte mit dem angegebenen Namen enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Spalte mit diesem Namen vorhanden ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Data.DataColumnCollection.Contains%2A> Methode, um das Vorhandensein einer Spalte zu bestätigen, bevor Sie zusätzliche Vorgänge für die Spalte ausführen. Die Methode gibt `false` Wenn zwei oder mehr Spalten denselben Namen, aber unterschiedliche Namespaces. Wenn keine Mehrdeutigkeiten vorhanden, beim Ermitteln von Übereinstimmungen auf genau eine Spalte einen Spaltennamen ist der Aufruf nicht erfolgreich ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataColumnCollection.Contains%2A> Methode und die <xref:System.Data.DataColumnCollection.CanRemove%2A> Methode, um zu bestimmen, ob die Spalte entfernt werden kann. Wenn dies der Fall ist, wird die Spalte entfernt.  
+  
+ [!code-csharp[Classic WebData DataColumnCollection.Contains Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.Contains Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumnCollection.Contains Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.Contains Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Data.DataColumn[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Data.DataColumn[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumnCollection.CopyTo(System.Data.DataColumn[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Data.DataColumn[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Array von <see cref="T:System.Data.DataColumn" /> -Objekten, die die Auflistung kopiert.</param>
+        <param name="index">Der Index, ab dem begonnen wird.</param>
+        <summary>Kopiert die gesamte Auflistung in ein vorhandenes Array, beginnend am angegebenen Index innerhalb des Arrays.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Data.DataColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Data.DataColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumnCollection.IndexOf(System.Data.DataColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Der Name der Spalte, die zurückgegeben werden soll.</param>
+        <summary>Ruft den Index einer durch den Namen angegebenen Spalte ab.</summary>
+        <returns>Der Index der Spalte gemäß <paramref name="column" /> ist er gefunden, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataColumnCollection.IndexOf%2A> Methode ist nicht in der Groß-/Kleinschreibung beachtet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataColumnCollection.Contains%2A> Methode, um zu bestimmen, ob eine angegebene Spalte ein <xref:System.Data.DataColumnCollection>. Wenn dies der Fall ist, die <xref:System.Data.DataColumnCollection.IndexOf%2A> -Methode gibt den Index der Spalte zurück.  
+  
+ [!code-csharp[Classic WebData DataColumnCollection.IndexOf Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.IndexOf Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumnCollection.IndexOf Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.IndexOf Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string columnName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(string columnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumnCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">Der Name der zu suchenden Spalte.</param>
+        <summary>Ruft den Index der Spalte mit dem angegebenen Namen (der Name ist nicht Groß-/Kleinschreibung unterschieden).</summary>
+        <returns>Der nullbasierte Index der Spalte mit dem angegebenen Namen oder-1 zurück, wenn die Spalte nicht in der Auflistung vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.DataColumn this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataColumn Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumnCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataColumn</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index der Spalte, die zurückgegeben werden soll.</param>
+        <summary>Ruft die <see cref="T:System.Data.DataColumn" /> aus der Auflistung am angegebenen Index.</summary>
+        <value>Der <see cref="T:System.Data.DataColumn" /> am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataColumnCollection.Contains%2A> Methode kann verwendet werden, um das Vorhandensein einer Spalte zu testen. Dies ist hilfreich, bevor Sie versuchen, <xref:System.Data.DataColumnCollection.Item%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataColumnCollection.Item%2A> Eigenschaft zum Drucken der <xref:System.Data.DataColumn.ColumnName%2A> Wert, der eine <xref:System.Data.DataColumn> per Index angegebene Objekt. Im Beispiel wird die <xref:System.Data.DataTable> , die von einem System.Windows.Forms.DataGrid-Steuerelement enthalten ist.  
+  
+ [!code-csharp[Classic WebData DataColumnCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.this Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumnCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der Indexwert ist größer als die Anzahl der Elemente in der Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.DataColumn this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataColumn Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumnCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataColumn</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Die <see cref="P:System.Data.DataColumn.ColumnName" /> der Spalte zurückgegeben.</param>
+        <summary>Ruft die <see cref="T:System.Data.DataColumn" /> mit dem angegebenen Namen aus der Auflistung.</summary>
+        <value>Die <see cref="T:System.Data.DataColumn" /> in der Auflistung mit dem angegebenen <see cref="P:System.Data.DataColumn.ColumnName" />; andernfalls eine Null-Wert, wenn die <see cref="T:System.Data.DataColumn" /> ist nicht vorhanden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.DataColumnCollection.Item%2A>bedingt Groß-/Kleinschreibung beachtet wird, bei der Suche nach Spaltennamen. Angenommen, ein <xref:System.Data.DataColumn> ist mit dem Namen "Mydatacolumn" und eine weitere "Mydatacolumn" benannt ist, wird in eine Zeichenfolge, die zur Suche nach einer der Spalten die wie die Groß-/Kleinschreibung beachtet. Allerdings wird Wenn "Mydatacolumn" vorhanden ist, und "Mydatacolumn" nicht der Fall, die zu suchende Zeichenfolge wie Groß-/Kleinschreibung betrachtet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataColumnCollection.Item%2A> Eigenschaft zum Drucken der <xref:System.Data.DataColumn.DataType%2A> Wert, der eine <xref:System.Data.DataColumn> per Index angegebene Objekt.  
+  
+ [!code-csharp[Classic WebData DataColumnCollection.this1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.this1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumnCollection.this1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.this1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ArrayList List { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList List" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumnCollection.List" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Data.DataColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Data.DataColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumnCollection.Remove(System.Data.DataColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Das zu entfernende <see cref="T:System.Data.DataColumn" />-Element.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Data.DataColumn" />-Objekt aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Auflistung erfolgreich geändert wurde, durch Hinzufügen oder Entfernen von Spalten, die <xref:System.Data.DataColumnCollection.CollectionChanged> Ereignis auftritt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataColumnCollection.Contains%2A> Methode, um zu bestimmen, ob eine benannte Spalte vorhanden ist. Wenn dies der Fall ist, die <xref:System.Data.DataColumnCollection.Item%2A> Eigenschaft gibt die Spalte zurück. Die <xref:System.Data.DataColumnCollection.CanRemove%2A> -Methode überprüft anschließend, ob die Spalte entfernt werden kann; Wenn dies der Fall ist, die <xref:System.Data.DataColumnCollection.Remove%2A> -Methode entfernt.  
+  
+ [!code-csharp[Classic WebData DataColumnCollection.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.Remove Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumnCollection.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.Remove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="column" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Spalte gehört nicht zu dieser Auflistung.  
+  
+ – oder –  
+  
+ Die Spalte ist Teil einer Beziehung.  
+  
+ – oder –  
+  
+ Ausdruck für eine andere Spalte hängt von dieser Spalte ab.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumnCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu entfernenden Spalte.</param>
+        <summary>Entfernt die <see cref="T:System.Data.DataColumn" /> Objekt mit dem angegebenen Namen aus der Auflistung ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Auflistung erfolgreich geändert wurde, durch Hinzufügen oder Entfernen von Spalten, die <xref:System.Data.DataColumnCollection.CollectionChanged> Ereignis auftritt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird zuerst verwendet die <xref:System.Data.DataColumnCollection.Contains%2A> Methode, um zu bestimmen, ob eine bestimmte Spalte in der Auflistung gefunden wird. Wenn es gefunden wird, die <xref:System.Data.DataColumnCollection.CanRemove%2A> Methode überprüft, ob die Spalte entfernt werden kann. Wenn also die Spalte entfernt wird, mit der <xref:System.Data.DataColumnCollection.Remove%2A> Methode.  
+  
+ [!code-csharp[Classic WebData DataColumnCollection.Remove1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.Remove1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumnCollection.Remove1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.Remove1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Auflistung verfügt nicht über für eine Spalte mit dem angegebenen Namen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumnCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des zu entfernenden Spalte.</param>
+        <summary>Entfernt die Spalte am angegebenen Index aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Auflistung erfolgreich geändert wurde, durch Hinzufügen oder Entfernen von Spalten, die <xref:System.Data.DataColumnCollection.CollectionChanged> Ereignis auftritt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird zuerst verwendet die <xref:System.Data.DataColumnCollection.Contains%2A> Methode, um zu bestimmen, ob eine bestimmte Spalte in der Auflistung gefunden wird. Wenn es gefunden wird, die <xref:System.Data.DataColumnCollection.CanRemove%2A> Methode überprüft, ob die Spalte entfernt werden kann. Wenn also die Spalte entfernt wird, mit der <xref:System.Data.DataColumnCollection.RemoveAt%2A> Methode.  
+  
+ [!code-vb[Classic WebData DataColumnCollection.RemoveAt Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnCollection.RemoveAt Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Auflistung muss eine Spalte nicht am angegebenen Index.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

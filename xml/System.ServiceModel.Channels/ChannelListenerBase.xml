@@ -1,0 +1,391 @@
+<Type Name="ChannelListenerBase" FullName="System.ServiceModel.Channels.ChannelListenerBase">
+  <TypeSignature Language="C#" Value="public abstract class ChannelListenerBase : System.ServiceModel.Channels.ChannelManagerBase, System.ServiceModel.Channels.IChannelListener" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ChannelListenerBase extends System.ServiceModel.Channels.ChannelManagerBase implements class System.ServiceModel.Channels.IChannelListener, class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ChannelListenerBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.ChannelManagerBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IChannelListener</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine allgemeine Basisimplementierung für Kanallistener auf dem Dienst bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kanallistener auf dem Dienst warten auf Kanäle, die von Factorys auf dem Client erstellt wurden, und akzeptieren diese. Sobald die Kanalverbindung zwischen Client und Dienst hergestellt wurde, können Nachrichten ausgetauscht werden und verteilte Anwendungen kommunizieren. Die vom Listener bereitgestellte Verarbeitungsfunktion ist in einem Stapelsatz an Kanallistenern geschichtet, um Modularität bei der Auswahl der einzubindenden [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Funktionen bereitzustellen. Jeder Kanallistener im Dienststapel entspricht einer Kanalfactory im Clientstapel. Der von der Factory erstellte Kanal ist eigentlich ein Stapel an Kanälen, die akzeptiert und vom Stapel der Listener auf dem Dienst verarbeitet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ChannelListenerBase" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.ServiceModel.Channels.ChannelListenerBase.%23ctor>-Standardkonstruktor initialisiert die Timeouteigenschaften beim Austauschen von Nachrichten mit den Timeoutwerten für das Dienstmodul. Der Standardwert für das Öffnen, Senden und Schließen beträgt 1&#160;Minute; der Standardwert für das Empfangen beträgt 10&#160;Minuten. Mit <xref:System.ServiceModel.Channels.ChannelListenerBase.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29> können Sie abweichende Werte für den Timeoutwert dieser Vorgänge angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ChannelListenerBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ChannelListenerBase" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor initialisiert die Timeouteigenschaften beim Austauschen von Nachrichten mit den Timeoutwerten für das Dienstmodul. Der Standardwert für das Öffnen, Senden und Schließen beträgt 1&#160;Minute; der Standardwert für das Empfangen beträgt 10&#160;Minuten. Mit <xref:System.ServiceModel.Channels.ChannelListenerBase.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29> können Sie abweichende Werte für den Timeoutwert dieser Vorgänge angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ChannelListenerBase (System.ServiceModel.IDefaultCommunicationTimeouts timeouts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.IDefaultCommunicationTimeouts timeouts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase.#ctor(System.ServiceModel.IDefaultCommunicationTimeouts)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="timeouts" Type="System.ServiceModel.IDefaultCommunicationTimeouts" />
+      </Parameters>
+      <Docs>
+        <param name="timeouts">Die <see cref="T:System.ServiceModel.IDefaultCommunicationTimeouts" />, die die Standardtimeoutwerte für das Öffnen, Senden und Empfangen sowie für das Schließen beim Austauschen von Nachrichten festlegen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ChannelListenerBase" />-Klasse mit den angegebenen Standardtimeoutwerten für die Kommunikation.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Verwenden von <xref:System.ServiceModel.Channels.ChannelListenerBase.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29> anstelle des Standardkonstruktors können Sie benutzerdefinierte Timeoutwerte für das Öffnen, Senden, Empfangen und Schließen angeben, anstatt die Standardwerte des Dienstmodells zu verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWaitForChannel">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginWaitForChannel (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginWaitForChannel(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase.BeginWaitForChannel(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />, der angibt, wie lange auf den Kanalvorgang gewartet werden muss, bevor ein Timeout durchgeführt wird.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den asynchronen Abschluss des Wartens auf den Kanalvorgang empfängt.</param>
+        <param name="state">Ein von der Anwendung spezifiziertes Objekt, das Zustandsinformationen enthält, die dem asynchronen Vorgang des Wartens auf den Kanal zugeordnet sind.</param>
+        <summary>Startet bei Implementierung in einer abgeleiteten Klasse einen asynchronen Vorgang für das Warten auf das Eingehen eines Kanals.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />, der auf den asynchronen Vorgang des Wartens auf den Kanal verweist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der Kanallistener wurde nicht geöffnet und kann so nicht verwendet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCloseTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultCloseTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultCloseTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ChannelListenerBase.DefaultCloseTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Standardzeitintervall ab, das für den Abschluss eines Schließvorgangs bereitgestellt wird.</summary>
+        <value>Die Standard-<see cref="T:System.TimeSpan" />, die angibt, wie viel Zeit für das Schließen bleibt, bevor ein Timeout eintritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird festgelegt, wenn ein neues <xref:System.ServiceModel.Channels.ChannelListenerBase>-Objekt erstellt wird. Der Standard-<xref:System.ServiceModel.Channels.ChannelListenerBase.%23ctor>-Konstruktor legt die <xref:System.ServiceModel.Channels.ChannelListenerBase.DefaultCloseTimeout%2A>-Eigenschaft auf einen Wert von 1 Minute fest. Verwenden Sie <xref:System.ServiceModel.Channels.ChannelListenerBase.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29>, wenn Sie einen anderen Wert für dieses Timeout festlegen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultOpenTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultOpenTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultOpenTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ChannelListenerBase.DefaultOpenTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitintervall ab, das für den Abschluss eines Öffnungsvorgangs bereitgestellt wird.</summary>
+        <value>Die Standard-<see cref="T:System.TimeSpan" />, die angibt, wie viel Zeit für das Öffnen bleibt, bevor ein Timeout eintritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird festgelegt, wenn ein neues <xref:System.ServiceModel.Channels.ChannelListenerBase>-Objekt erstellt wird. Der Standard-<xref:System.ServiceModel.Channels.ChannelListenerBase.%23ctor>-Konstruktor legt die <xref:System.ServiceModel.Channels.ChannelListenerBase.DefaultOpenTimeout%2A>-Eigenschaft auf einen Wert von 1 Minute fest. Verwenden Sie <xref:System.ServiceModel.Channels.ChannelListenerBase.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29>, wenn Sie einen anderen Wert für dieses Timeout festlegen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultReceiveTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultReceiveTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultReceiveTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ChannelListenerBase.DefaultReceiveTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Standardzeitintervall ab, das für den Abschluss eines Empfangsvorgangs bereitgestellt wird, oder legt dieses fest.</summary>
+        <value>Die Standard-<see cref="T:System.TimeSpan" />, die angibt, welcher Zeitraum für den Empfang bleibt, bevor ein Timeout eintritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird festgelegt, wenn ein neues <xref:System.ServiceModel.Channels.ChannelListenerBase>-Objekt erstellt wird. Der Standard-<xref:System.ServiceModel.Channels.ChannelListenerBase.%23ctor>-Konstruktor legt die <xref:System.ServiceModel.Channels.ChannelListenerBase.DefaultReceiveTimeout%2A>-Eigenschaft auf einen Wert von 10 Minuten fest. Verwenden Sie <xref:System.ServiceModel.Channels.ChannelListenerBase.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29>, wenn Sie einen anderen Wert für dieses Timeout festlegen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSendTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultSendTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultSendTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ChannelListenerBase.DefaultSendTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Standardzeitintervall ab, das für den Abschluss eines Sendevorgangs bereitgestellt wird, oder legt dieses fest.</summary>
+        <value>Die Standard-<see cref="T:System.TimeSpan" />, die angibt, welcher Zeitraum für das Senden bleibt, bevor ein Timeout eintritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird festgelegt, wenn ein neues <xref:System.ServiceModel.Channels.ChannelListenerBase>-Objekt erstellt wird. Der Standard-<xref:System.ServiceModel.Channels.ChannelListenerBase.%23ctor>-Konstruktor legt die <xref:System.ServiceModel.Channels.ChannelListenerBase.DefaultSendTimeout%2A>-Eigenschaft auf einen Wert von 1 Minute fest. Verwenden Sie <xref:System.ServiceModel.Channels.ChannelListenerBase.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29>, wenn Sie einen anderen Wert für dieses Timeout festlegen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWaitForChannel">
+      <MemberSignature Language="C#" Value="public bool EndWaitForChannel (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EndWaitForChannel(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase.EndWaitForChannel(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das durch einen Aufruf der <see cref="M:System.ServiceModel.Channels.ChannelListenerBase.EndWaitForChannel(System.IAsyncResult)" />-Methode zurückgegeben wurde.</param>
+        <summary>Schließt bei Implementierung in einer abgeleiteten Klasse einen asynchronen Vorgang für das Warten auf das Eingehen von Kanälen ab.</summary>
+        <returns>
+          <see langword="true" />, wenn eine Nachricht angekommen ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public virtual T GetProperty&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!T GetProperty&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase.GetProperty``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Das typisierte Objekt, das von der Methode abgefragt wird.</typeparam>
+        <summary>Gibt ggf. ein angefordertes typisiertes Objekt von der entsprechenden Ebene im Kanalstapel zurück.</summary>
+        <returns>Das angeforderte typisierte Objekt T, falls vorhanden, oder <see langword="null" />, falls das Objekt nicht vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um ein typisiertes Objekt, wie z. B. eine Schnittstelle für Einstellungseigenschaften oder eine Statusabfrage, aus der entsprechenden Ebene im Kanallistenerstapel abzufragen. Wenn eine Ebene das Zurückgeben des angeforderten Objekts unterstützt, wird der Vorgang ausgeführt. Andernfalls wird der Aufruf lediglich an die nächst tiefere Ebene im Stapel delegiert. Wenn die letzte Ebene erreicht ist und das angeforderte Objekt von keiner Ebene unterstützt wird, gibt die Methode `null` zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginWaitForChannel">
+      <MemberSignature Language="C#" Value="protected abstract IAsyncResult OnBeginWaitForChannel (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult OnBeginWaitForChannel(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase.OnBeginWaitForChannel(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />, der angibt, welcher Zeitraum für das anfängliche Warten bleibt, bevor ein Timeout eintritt.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den asynchronen Abschluss des anfänglichen Wartens empfängt.</param>
+        <param name="state">Ein von der Anwendung angegebenes Zustandsobjekt, das dem asynchronen anfänglichen Wartevorgang zugeordnete Statusinformationen enthält.</param>
+        <summary>Stellt bei Implementierung in einer abgeleiteten Klasse einen Erweiterungspunkt beim Start des Wartens auf das Eingehen eines Kanals bereit.</summary>
+        <returns>Das <see cref="T:System.IAsyncResult" />, das auf den asynchronen Vorgang des anfänglichen Wartens verweist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndWaitForChannel">
+      <MemberSignature Language="C#" Value="protected abstract bool OnEndWaitForChannel (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnEndWaitForChannel(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase.OnEndWaitForChannel(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das durch einen Aufruf der <see cref="M:System.ServiceModel.Channels.ChannelListenerBase.OnBeginWaitForChannel(System.TimeSpan,System.AsyncCallback,System.Object)" />-Methode zurückgegeben wurde.</param>
+        <summary>Stellt bei Implementierung in einer abgeleiteten Klasse einen Erweiterungspunkt beim Ende des Wartens auf das Eingehen eines Kanals bereit.</summary>
+        <returns>
+          <see langword="true" />, wenn die Methode vor dem Ablauf des vom <paramref name="timeout" /> angegebenen Zeitintervalls abgeschlossen ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWaitForChannel">
+      <MemberSignature Language="C#" Value="protected abstract bool OnWaitForChannel (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnWaitForChannel(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase.OnWaitForChannel(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Die <see cref="T:System.TimeSpan" />, die angibt, welcher Zeitraum für das anfängliche Warten auf einen Kanalvorgang bleibt, bevor ein Timeout durchgeführt wird.</param>
+        <summary>Stellt bei Überschreiben in einer abgeleiteten Klasse einen Erweiterungspunkt beim Warten auf das Eingehen eines Kanals bereit.</summary>
+        <returns>
+          <see langword="true" />, wenn die Methode vor dem Ablauf des vom <paramref name="timeout" /> angegebenen Zeitintervalls abgeschlossen ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public abstract Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ChannelListenerBase.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft bei Implementierung in einer abgeleiteten Klasse einen URI ab, auf dem der Kanallistener einen eingehenden Kanal überwacht.</summary>
+        <value>Der <see cref="T:System.Uri" />, auf dem der Kanallistener eingehende Kanäle überwacht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForChannel">
+      <MemberSignature Language="C#" Value="public bool WaitForChannel (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool WaitForChannel(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelListenerBase.WaitForChannel(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />, der angibt, wie lange auf den Kanalvorgang gewartet werden muss, bevor ein Timeout durchgeführt wird.</param>
+        <summary>Wartet bei Implementierung in einer abgeleiteten Klasse auf das Eingehen eines Kanals.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Kanal vor dem Ablauf des vom <paramref name="timeout" /> angegebenen Zeitintervalls angekommen ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

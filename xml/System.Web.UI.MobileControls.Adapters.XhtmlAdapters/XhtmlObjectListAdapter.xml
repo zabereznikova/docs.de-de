@@ -1,0 +1,388 @@
+<Type Name="XhtmlObjectListAdapter" FullName="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter">
+  <TypeSignature Language="C#" Value="public class XhtmlObjectListAdapter : System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XhtmlObjectListAdapter extends System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Objektadapter für die Liste für die mobile XHTML-Adaptergruppe bereit. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter> kann Klasse zur Anzeige von mobilen Steuerelemententwicklern verwendet ein <xref:System.Web.UI.MobileControls.ObjectList> Steuerelement auf neuen Geräten oder für neue Markupstandards. Weitere Informationen finden Sie unter [Steuerelement und Adapterinteraktion](http://msdn.microsoft.com/en-us/c330dabc-7e28-40bc-b777-101a5c6fa982).  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XhtmlObjectListAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackToList">
+      <MemberSignature Language="C#" Value="protected static readonly string BackToList;" />
+      <MemberSignature Language="ILAsm" Value=".field familyorassembly static initonly string BackToList" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.BackToList" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolgenkonstante in Postbackereignis Argumente verwendet, um anzugeben, ob der Benutzer zur Listenansicht zurückgegeben werden sollen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.BackToList> Feld, das der Wert "__back" ist, wird von mobilen Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.MobileControls.ObjectList Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.ObjectList Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen stark typisierten Verweis auf das zugeordnete Steuerelement zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Eine <see cref="T:System.Web.UI.MobileControls.ObjectList" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTemplatedUI">
+      <MemberSignature Language="C#" Value="public override void CreateTemplatedUI (bool doDataBind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CreateTemplatedUI(bool doDataBind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.CreateTemplatedUI(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doDataBind" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="doDataBind">
+          <see langword="true" />binden die vorlagenbasierte Benutzeroberfläche auf den zugrunde liegenden <see cref="T:System.Web.UI.MobileControls.ObjectList" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Wird aufgerufen, von einem Steuerelement zu eine vorlagenbasierten Benutzeroberfläche (UI) zu erstellen, wenn Gerätevorlagen definiert sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung des der <xref:System.Web.UI.MobileControls.MobileControl.CreateTemplatedUI%2A> Methodenaufrufe der <xref:System.Web.UI.MobileControls.IControlAdapter.CreateTemplatedUI%2A?displayProperty=nameWithType> Methode von der entsprechenden Steuerelementadapter, entweder Rückruf wiederum kann die <xref:System.Web.UI.MobileControls.ObjectList.CreateTemplatedItemsList%2A> Methode oder die <xref:System.Web.UI.MobileControls.ObjectList.CreateTemplatedItemDetails%2A> Methode für das Steuerelement aus, oder erstellen Sie eine eigene gerätespezifische auf Vorlagen basierende Benutzeroberfläche.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlePostBackEvent">
+      <MemberSignature Language="C#" Value="public override bool HandlePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool HandlePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.HandlePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Der Name des Ereignisses.</param>
+        <summary>Gibt <see langword="true" /> zurück, wenn das Ereignis behandelt wurde. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn das Ereignis behandelt wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von einem Steuerelement aufgerufen, wenn er eine Benachrichtigung Postbackereignis erhält zu überprüfen, ob das Ereignis adapterspezifische ist. Wenn das Steuerelement implementiert die <xref:System.Web.UI.IPostBackEventHandler> Methode und ein Postbackereignis empfängt die <xref:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent%2A> der Steuerelementadapter-Methode aufgerufen wird. Wenn Ereignisse, die an das Steuerelement gesendet, die je nach Zielgerät variieren können, muss die Steuerelement-Implementierung dieser Methode aufrufen der <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.HandlePostBackEvent%2A> -Methode des Steuerelementadapters.  
+  
+ Diese Methode gibt `true` oder `false`gibt an, ob dem Geräteadapter das Ereignis behandelt. Es gibt `false` standardmäßig.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Die Postbackdaten ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasCommands">
+      <MemberSignature Language="C#" Value="protected bool HasCommands ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool HasCommands() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.HasCommands" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen booleschen Wert, der angibt, ob die <see cref="T:System.Web.UI.MobileControls.ObjectList" /> Steuerelement enthält keine Befehle. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn die zugeordnete <see cref="T:System.Web.UI.MobileControls.ObjectList" /> enthält eine oder mehrere Befehle ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDefaultCommand">
+      <MemberSignature Language="C#" Value="protected bool HasDefaultCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool HasDefaultCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.HasDefaultCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen booleschen Wert, der angibt, ob ein <see cref="T:System.Web.UI.MobileControls.ObjectList" /> Steuerelement enthält einen Standardbefehl. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn ein <see cref="T:System.Web.UI.MobileControls.ObjectList" /> enthält eine standardmäßige Befehl ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasItemDetails">
+      <MemberSignature Language="C#" Value="protected virtual bool HasItemDetails ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool HasItemDetails() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.HasItemDetails" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen booleschen Wert, der angibt, ob ein Listenelement alle Felder eines Elements anzeigen kann. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn alle Felder des ein Listenelement angezeigt werden können; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert des der <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.HasItemDetails%2A> Methode gibt an, dass das Element einen Details benötigt Ansicht in der Reihenfolge für die Benutzer, alle Daten anzuzeigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnlyHasDefaultCommand">
+      <MemberSignature Language="C#" Value="protected bool OnlyHasDefaultCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool OnlyHasDefaultCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.OnlyHasDefaultCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen booleschen Wert, der angibt, ob ein <see cref="T:System.Web.UI.MobileControls.ObjectList" /> Steuerelement enthält, einen Standardbefehl und keine weiteren Befehle. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn ein <see cref="T:System.Web.UI.MobileControls.ObjectList" /> verfügt über einen Standardbefehl und keine weiteren Befehle; anderenfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="public override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein Objekt (definiert durch <see cref="T:System.EventArgs" />), das Ereignisdaten enthält.</param>
+        <summary>Vor dem Rendern des Steuerelements aufgerufen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="public override void Render (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Render(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.Render(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" /> verwendet, um den Inhalt des Serversteuerelements im Browser des Clients zu rendern.</param>
+        <summary>Rendert das Steuerelement auf der Seite unter Verwendung der angegebenen <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderItemDetails">
+      <MemberSignature Language="C#" Value="protected virtual void RenderItemDetails (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, System.Web.UI.MobileControls.ObjectListItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderItemDetails(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, class System.Web.UI.MobileControls.ObjectListItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.RenderItemDetails(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.Web.UI.MobileControls.ObjectListItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="item" Type="System.Web.UI.MobileControls.ObjectListItem" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Eine <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />.</param>
+        <param name="item">Eine <see cref="T:System.Web.UI.MobileControls.ObjectListItem" />.</param>
+        <summary>Rendert die Details des angegebenen Elements. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.RenderItemDetails%2A> Methode wird aufgerufen, während des Renderings für die Detailansicht des bestimmten Elements in der <xref:System.Web.UI.MobileControls.ObjectList> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderItemsList">
+      <MemberSignature Language="C#" Value="protected virtual void RenderItemsList (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderItemsList(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.RenderItemsList(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Eine <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />.</param>
+        <summary>Rendert die Liste der Elemente in der <see cref="T:System.Web.UI.MobileControls.ObjectList" /> Steuerelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.RenderItemsList%2A> Methode wird aufgerufen, während des Renderings auf jedes Element in der Liste zu rendern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowMore">
+      <MemberSignature Language="C#" Value="protected static readonly string ShowMore;" />
+      <MemberSignature Language="ILAsm" Value=".field familyorassembly static initonly string ShowMore" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.ShowMore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolgenkonstante in Postbackereignis Argumente verwendet, um anzugeben, ob die Liste auf das erste Element unterhalb der aktuell sichtbaren Elemente springen soll. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.ShowMore> Feld, das der Wert "__more" ist, wird von mobilen Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowMoreFormat">
+      <MemberSignature Language="C#" Value="protected static readonly string ShowMoreFormat;" />
+      <MemberSignature Language="ILAsm" Value=".field familyorassembly static initonly string ShowMoreFormat" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.ShowMoreFormat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolgenkonstante in Postbackereignis Argumente verwendet, um anzugeben, dass der Browser für ein bestimmtes Element in der Liste springen soll. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.ShowMoreFormat> Feld ist ein internes Feld, und hat den Wert "__more*n*", wobei `n` ist eine Zahl, die während des Renderings erstellt wird. Dieses Feld wird verwendet, wie die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.ShowMore> Feld, mit dem Unterschied, dass er gibt an, den Index des Elements in der Detailansicht angezeigt.  
+  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter.ShowMoreFormat> Feld wird von mobilen Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

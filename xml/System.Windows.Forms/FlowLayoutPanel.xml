@@ -1,0 +1,281 @@
+<Type Name="FlowLayoutPanel" FullName="System.Windows.Forms.FlowLayoutPanel">
+  <TypeSignature Language="C#" Value="public class FlowLayoutPanel : System.Windows.Forms.Panel, System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FlowLayoutPanel extends System.Windows.Forms.Panel implements class System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FlowLayoutPanel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Panel</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IExtenderProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("FlowDirection")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.FlowLayoutPanelDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ProvideProperty("FlowBreak", typeof(System.Windows.Forms.Control))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Forms.Docking(System.Windows.Forms.DockingBehavior.Ask)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Bereich dar, dessen Inhalt auf dynamische Weise horizontal oder vertikal angeordnet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt des <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelements wird in horizontaler oder vertikaler Flussrichtung angeordnet. Dieser Inhalt kann von einer Zeile zur nächsten oder von einer Spalte zur nächsten umbrochen werden. Alternativ können seinen Inhalt abgeschnitten werden, anstelle von umschlossen.  
+  
+ Sie können die Flussrichtung angeben, indem Sie den Wert der <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>-Eigenschaft festlegen. Die <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement kehrt seine flussrichtung in Layouts von rechts nach links (RTL). Sie können auch angeben, ob der Inhalt des der <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelements umgebrochen oder abgeschnitten wird durch Festlegen des Werts von der <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> Eigenschaft.  
+  
+ Jedes Windows Forms-Steuerelement, einschließlich anderer Instanzen von <xref:System.Windows.Forms.FlowLayoutPanel>, kann ein untergeordnetes Element von der <xref:System.Windows.Forms.FlowLayoutPanel> Steuerelement. Dadurch sind Sie in der Lage, anspruchsvolle Layouts zu erstellen, die sich zur Laufzeit an die Maße des Formulars anpassen.  
+  
+ Das Andock- und Verankerungsverhalten von untergeordneten Steuerelementen unterscheidet sich vom Verhalten in anderen Containersteuerelementen. Sowohl das Andocken als auch das Verankern erfolgt relativ zum größten Steuerelement in der Flussrichtung. Weitere Informationen finden Sie unter [Vorgehensweise: Ankerelemente und Andocken von untergeordneten Steuerelementen in einem FlowLayoutPanel-Steuerelement](~/docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> und <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> Eigenschaften auf eine <xref:System.Windows.Forms.FlowLayoutPanel> Steuerelement. Fügen Sie den Code in die Quelldatei Form1 aus. Wenn Ihr Projekt eine Datei namens Form1.Designer.cs oder Form1.Designer.vb enthält, entfernen Sie die Datei aus dem Projekt ein. Sie müssen möglicherweise klicken Sie auf die **alle Dateien anzeigen** Schaltfläche im Projektmappen-Explorer auf die Designer-Datei finden Sie unter.  
+  
+ [!code-cpp[System.Windows.Forms.FlowLayoutPanel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel/cpp/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FlowLayoutPanel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FlowLayoutPanel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlowLayoutPanel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FlowLayoutPanel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.FlowLayoutPanel" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> und <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> Eigenschaften mit ihren Standardwerten: <xref:System.Windows.Forms.FlowDirection.LeftToRight> und `true`zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.FlowDirection FlowDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.FlowDirection FlowDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FlowLayoutPanel.FlowDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der flussrichtung von der <see cref="T:System.Windows.Forms.FlowLayoutPanel" /> Steuerelement.</summary>
+        <value>Eines der <see cref="T:System.Windows.Forms.FlowDirection" /> Werte, der angibt, der die Richtung der aufeinander folgenden Platzierung von Steuerelementen in der Systemsteuerung. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.FlowDirection.LeftToRight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> Eigenschaft ist die Standardeigenschaft für die <xref:System.Windows.Forms.FlowLayoutPanel> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt den Wert der <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> je nach den ausgewählten <xref:System.Windows.Forms.RadioButton>.  
+  
+ [!code-cpp[System.Windows.Forms.FlowLayoutPanel#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel/cpp/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.FlowLayoutPanel#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.FlowLayoutPanel#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFlowBreak">
+      <MemberSignature Language="C#" Value="public bool GetFlowBreak (System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetFlowBreak(class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FlowLayoutPanel.GetFlowBreak(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("FlowBreak")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das untergeordnete Steuerelement.</param>
+        <summary>Einen Wert, der die Datenfluss + UNTBR Einstellung gibt die <see cref="T:System.Windows.Forms.FlowLayoutPanel" /> Steuerelement.</summary>
+        <returns>
+          <see langword="true" />Wenn die Unterbrechung Ablauf festgelegt ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LayoutEngine">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.Layout.LayoutEngine LayoutEngine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Layout.LayoutEngine LayoutEngine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FlowLayoutPanel.LayoutEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Layout.LayoutEngine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine zwischengespeicherte Instanz des Layoutmoduls des Bereichs ab.</summary>
+        <value>Das <see cref="T:System.Windows.Forms.Layout.LayoutEngine" /> für den Inhalt des Bereichs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFlowBreak">
+      <MemberSignature Language="C#" Value="public void SetFlowBreak (System.Windows.Forms.Control control, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFlowBreak(class System.Windows.Forms.Control control, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FlowLayoutPanel.SetFlowBreak(System.Windows.Forms.Control,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("FlowBreak")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das untergeordnete Steuerelement.</param>
+        <param name="value">Der Datenfluss + UNTBR festzulegende Wert.</param>
+        <summary>Legt den Wert, der die Datenfluss + UNTBR Einstellung darstellt der <see cref="T:System.Windows.Forms.FlowLayoutPanel" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IExtenderProvider.CanExtend">
+      <MemberSignature Language="C#" Value="bool IExtenderProvider.CanExtend (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.ComponentModel.IExtenderProvider.CanExtend(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FlowLayoutPanel.System#ComponentModel#IExtenderProvider#CanExtend(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das <see cref="T:System.Object" />, das Extendereigenschaften empfangen soll.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.IExtenderProvider.CanExtend(System.Object)" />.</summary>
+        <returns>
+          <see langword="true" />, wenn dieses Objekt seine Extendereigenschaften für das angegebene Objekt bereitstellen kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.FlowLayoutPanel>-Instanz in eine <xref:System.ComponentModel.IExtenderProvider>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapContents">
+      <MemberSignature Language="C#" Value="public bool WrapContents { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WrapContents" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FlowLayoutPanel.WrapContents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.FlowLayoutPanel" /> Steuerelement seinen Inhalt zu umschließen oder abgeschnitten werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn der Inhalt umbrochen werden soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Bereich des Bereichs zu klein, um alle untergeordneten Steuerelemente enthalten ist, wird mindestens ein untergeordnetes Steuerelement unabhängig von den Umbruchmodus abgeschnitten.  
+  
+ Nachfolgende Ändern der Größe des Bereichs wird das Layout erneut auf die enthaltenen Steuerelemente angewendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt den Wert des der <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> Eigenschaft je nach der <xref:System.Windows.Forms.CheckBox.Checked%2A> Wert eine <xref:System.Windows.Forms.CheckBox> Steuerelement.  
+  
+ [!code-cpp[System.Windows.Forms.FlowLayoutPanel#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel/cpp/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.FlowLayoutPanel#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.FlowLayoutPanel#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

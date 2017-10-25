@@ -1,0 +1,1941 @@
+<Type Name="Application" FullName="System.Windows.Application">
+  <TypeSignature Language="C#" Value="public class Application : System.Windows.Threading.DispatcherObject, System.Windows.Markup.IQueryAmbient" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Application extends System.Windows.Threading.DispatcherObject implements class System.Windows.Markup.IQueryAmbient" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Application" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IQueryAmbient</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Kapselt eine Windows Presentation Foundation (WPF)-Anwendung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Application>ist eine Klasse, kapselt [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] anwendungsspezifische-Funktionen, darunter folgende:  
+  
+-   **Lebensdauer der Anwendung**: <xref:System.Windows.Application.Activated>, <xref:System.Windows.Application.Current%2A>, <xref:System.Windows.Application.Deactivated>, <xref:System.Windows.Application.DispatcherUnhandledException>, <xref:System.Windows.Application.Exit>, <xref:System.Windows.Application.Run%2A>, <xref:System.Windows.Application.SessionEnding>, <xref:System.Windows.Application.Shutdown%2A>, <xref:System.Windows.Application.ShutdownMode%2A>, <xref:System.Windows.Application.Startup>.  
+  
+-   **Anwendungsbereich Fenster, Eigenschaft und Ressourcenverwaltung**: <xref:System.Windows.Application.FindResource%2A>, <xref:System.Windows.Application.GetContentStream%2A>, <xref:System.Windows.Application.GetResourceStream%2A>, <xref:System.Windows.Application.LoadComponent%2A>, <xref:System.Windows.Application.MainWindow%2A>, <xref:System.Windows.Application.Properties%2A>, <xref:System.Windows.Application.Resources%2A>, <xref:System.Windows.Application.StartupUri%2A>, <xref:System.Windows.Application.Windows%2A>.  
+  
+-   **Befehlszeilenparameter "und" Exit-Codes Verarbeitung**: <xref:System.Windows.Application.Startup?displayProperty=nameWithType>, <xref:System.Windows.Application.Exit?displayProperty=nameWithType>, <xref:System.Windows.Application.Shutdown%2A?displayProperty=nameWithType>.  
+  
+-   **Navigation**: <xref:System.Windows.Application.FragmentNavigation>, <xref:System.Windows.Application.LoadCompleted>, <xref:System.Windows.Application.Navigated>, <xref:System.Windows.Application.Navigating>, <xref:System.Windows.Application.NavigationProgress>, <xref:System.Windows.Application.NavigationStopped>, <xref:System.Windows.Application.NavigationFailed>, <xref:System.Windows.Application.SetCookie%2A>, <xref:System.Windows.Application.GetCookie%2A>.  
+  
+ <xref:System.Windows.Application>implementiert das Singletonmuster, um gemeinsamen Zugriff auf die Fenster bzw. Bereich ressourcendienste bereitzustellen. Folglich nur eine Instanz der <xref:System.Windows.Application> Klasse erstellt werden kann, pro <xref:System.AppDomain>.  
+  
+ Sie können implementieren eine <xref:System.Windows.Application> mit Markup, Markup und CodeBehind oder Code. Wenn <xref:System.Windows.Application> mit Markup, implementiert ist, ob die Markupdatei Markup oder Markup und CodeBehind, als konfiguriert werden muss ein [!INCLUDE[TLA#tla_msbuild](~/includes/tlasharptla-msbuild-md.md)] `ApplicationDefinition` Element.  
+  
+> [!NOTE]
+>  Eine eigenständige Anwendung erfordert kein <xref:System.Windows.Application> Objekt; es ist möglich, die Implementierung einer benutzerdefinierten `static` Einstiegspunktmethode (`Main`), die ein Fenster geöffnet, ohne das Erstellen einer Instanz von <xref:System.Windows.Application>. Allerdings [!INCLUDE[TLA#tla_xbap#plural](~/includes/tlasharptla-xbapsharpplural-md.md)] erfordern eine <xref:System.Windows.Application> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine standard-Anwendung ist nur mit Markup definiert:  
+  
+ [!code-xaml[ApplicationSnippets#ApplicationMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/AppMarkup.xaml#applicationmarkup)]  
+  
+ Das folgende Beispiel zeigt, wie mithilfe eine standard-Anwendung definiert wird nur code:  
+  
+ [!code-csharp[ApplicationSnippets#ApplicationCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/AppCode.cs#applicationcode)]
+ [!code-vb[ApplicationSnippets#ApplicationCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSnippets/visualbasic/appcode.vb#applicationcode)]  
+  
+ Das folgende Beispiel zeigt, wie eine standard-Anwendung ist mit einer Kombination von Markup und CodeBehind definiert.  
+  
+ [!code-xaml[ApplicationSnippets#ApplicationXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml#applicationxaml)]  
+  
+ [!code-csharp[ApplicationSnippets#ApplicationCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml.cs#applicationcodebehind)]
+ [!code-vb[ApplicationSnippets#ApplicationCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSnippets/visualbasic/application.xaml.vb#applicationcodebehind)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Die öffentliche <see langword="static" /> (<see langword="Shared" /> in Visual Basic) Member dieses Typs sind threadsicher. Darüber hinaus die <see cref="M:System.Windows.Application.FindResource(System.Object)" /> und <see cref="M:System.Windows.Application.TryFindResource(System.Object)" /> Methoden und die <see cref="P:System.Windows.Application.Properties" /> und <see cref="P:System.Windows.Application.Resources" /> Eigenschaften sind threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Application ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Application" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur eine Instanz der <xref:System.Windows.Application> Klasse erstellt werden kann, pro <xref:System.AppDomain>, um sicherzustellen, dass gemeinsamen Zugriff auf eine einzelne Datenmenge Anwendungsbereich Fenster, die Eigenschaft und die Ressource. Daher der Standardkonstruktor des der <xref:System.Windows.Application> Klasse erkennt, ob die Instanz initialisiert wird die erste Instanz in eine <xref:System.AppDomain>; Wenn es nicht der Fall ist ein <xref:System.InvalidOperationException> ausgelöst wird.  
+  
+ Die <xref:System.Windows.Application> -Objekt für die aktuelle <xref:System.AppDomain> wird verfügbar gemacht, aus der statischen <xref:System.Windows.Application.Current%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Mehr als eine Instanz von der <see cref="T:System.Windows.Application" /> Klasse erstellt pro <see cref="T:System.AppDomain" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Activated">
+      <MemberSignature Language="C#" Value="public event EventHandler Activated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Activated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Application.Activated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Anwendung die Anwendung im Vordergrund steht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] Anwendung, die eine oder mehrere geöffneten Fenstern aktiviert ist (wird für die Anwendung im Vordergrund) Wenn eines der Fenster zum ersten Mal aktiviert wird, da die Anwendung gestartet wurde, oder wenn eines der Fenster aktiviert ist, während die Anwendung ist inaktiv: Aktivierung insbesondere tritt auf, wenn:  
+  
+-   Eine Anwendung wird das erste Fenster geöffnet.  
+  
+-   Ein Benutzer wechselt auf die Anwendung, mithilfe der Tastenkombination ALT + TAB oder mithilfe von Task-Manager.  
+  
+-   Ein Benutzer klickt auf die Taskleistenschaltfläche für eines der Fenster in einer Anwendung.  
+  
+ Anwendungen, die erkennen, wenn sie aktivieren müssen, können behandeln die <xref:System.Windows.Application.Activated> Ereignis.  
+  
+ Nachdem eine Anwendung zunächst aktiviert wurde, kann es deaktiviert und erneut mehrere Male während seiner Lebensdauer aktiviert. Wenn das Verhalten einer Anwendungsverzeichnis oder der Zustand von Aktivierungszustand abhängig ist, kann er sowohl verarbeiten <xref:System.Windows.Application.Activated> und <xref:System.Windows.Application.Deactivated> Ereignisse, um zu bestimmen, welche aktuellen Aktivierungszustand des.  
+  
+ Sobald eine Anwendung aktiv ist, wird <xref:System.Windows.Application.Activated> wird erneut ausgelöst, bis die Anwendung deaktiviert wird, unabhängig davon, wie viele Fenster innerhalb einer Anwendung aktiviert werden, während die Anwendung aktiv ist,.  
+  
+ <xref:System.Windows.Application.Activated>wird nicht ausgelöst, für [!INCLUDE[TLA#tla_xbap#plural](~/includes/tlasharptla-xbapsharpplural-md.md)].  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie erkennen, wenn eine eigenständige Anwendung aktiviert und deaktiviert werden.  
+  
+ [!code-xaml[ApplicationActivationSnippets#DetectActivationStateXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml#detectactivationstatexaml)]  
+  
+ [!code-csharp[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml.cs#detectactivationstatecodebehind)]
+ [!code-vb[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationActivationSnippets/visualbasic/application.xaml.vb#detectactivationstatecodebehind)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public static System.Windows.Application Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Application Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Application.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Application</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Application" /> -Objekt für die aktuelle <see cref="T:System.AppDomain" />.</summary>
+        <value>Die <see cref="T:System.Windows.Application" /> -Objekt für die aktuelle <see cref="T:System.AppDomain" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Application>ist eine pro-<xref:System.AppDomain> Singletontyp, der die statische implementiert <xref:System.Windows.Application.Current%2A> -Eigenschaft geben Sie den gemeinsamen Zugriff auf die <xref:System.Windows.Application> für die aktuelle Instanz <xref:System.AppDomain>. Dieser Entwurf garantiert, Status von verwalteten <xref:System.Windows.Application>, einschließlich freigegebenen Ressourcen und Zustände, von einem einzelnen, freigegebenen Speicherort verfügbar ist.  
+  
+ Diese Eigenschaft ist threadsicher und von jedem Thread verfügbar ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deactivated">
+      <MemberSignature Language="C#" Value="public event EventHandler Deactivated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Deactivated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Application.Deactivated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Anwendung beendet wird, wird die Anwendung im Vordergrund.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] Anwendung, die eine oder mehrere geöffneten Fenstern deaktiviert (wird beendet, wird die Anwendung im Vordergrund), wenn ein Benutzer führt Folgendes:  
+  
+-   Wechselt zu einer anderen Anwendung mithilfe der Tastenkombination ALT + TAB oder mithilfe von Task-Manager.  
+  
+-   Klickt auf die Taskleistenschaltfläche für ein Fenster in einer anderen Anwendung.  
+  
+ Anwendungen, die erkennen, Deaktivierung kann behandeln, müssen die <xref:System.Windows.Application.Deactivated> Ereignis.  
+  
+ Nachdem eine Anwendung zunächst aktiviert wurde, kann es deaktiviert und erneut mehrere Male während seiner Lebensdauer aktiviert. Wenn das Verhalten einer Anwendungsverzeichnis oder der Zustand von Aktivierungszustand abhängig ist, kann er sowohl verarbeiten <xref:System.Windows.Application.Deactivated> und <xref:System.Windows.Application.Activated> um zu ermitteln, die mit dem Status des im.  
+  
+ <xref:System.Windows.Application.Deactivated>wird nicht ausgelöst, für [!INCLUDE[TLA#tla_xbap#plural](~/includes/tlasharptla-xbapsharpplural-md.md)].  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie erkennen, wenn eine eigenständige Anwendung deaktiviert und aktiviert wird.  
+  
+ [!code-xaml[ApplicationActivationSnippets#DetectActivationStateXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml#detectactivationstatexaml)]  
+  
+ [!code-csharp[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml.cs#detectactivationstatecodebehind)]
+ [!code-vb[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationActivationSnippets/visualbasic/application.xaml.vb#detectactivationstatecodebehind)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DispatcherUnhandledException">
+      <MemberSignature Language="C#" Value="public event System.Windows.Threading.DispatcherUnhandledExceptionEventHandler DispatcherUnhandledException;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Threading.DispatcherUnhandledExceptionEventHandler DispatcherUnhandledException" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Application.DispatcherUnhandledException" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherUnhandledExceptionEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Ausnahme ausgelöst, die von einer Anwendung jedoch nicht behandelt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] nicht behandelte Ausnahmen abgefangen, der Ausnahme in einem Dialogfeld (aus dem sie die Ausnahme melden) Benutzer werden benachrichtigt, und eine Anwendung wird automatisch heruntergefahren.  
+  
+ Jedoch, wenn eine Anwendung erfordert für die Ausführung von benutzerdefinierten Ausnahmefehler Verarbeitungsschritte an einem zentralen Ort, Sie sollten behandeln <xref:System.Windows.Application.DispatcherUnhandledException>.  
+  
+ <xref:System.Windows.Application.DispatcherUnhandledException>wird ausgelöst, indem ein <xref:System.Windows.Application> für jede Ausnahme, die nicht mit Code ausgeführt wird, auf dem Hauptbenutzeroberflächen-Thread behandelt wird.  
+  
+ Wenn eine Ausnahme nicht auf einen Hintergrund behandelt wird [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Thread (eines Threads durch einen eigenen <xref:System.Windows.Threading.Dispatcher>) oder ein Hintergrundarbeitsthread (einen Thread ohne eine <xref:System.Windows.Threading.Dispatcher>), die Ausnahme ist, wird das Hauptdialogfeld nicht weitergeleitet [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Thread. Folglich <xref:System.Windows.Application.DispatcherUnhandledException> wird nicht ausgelöst. In diesem Fall müssen Sie Code schreiben, um folgende Aktionen ausführen:  
+  
+1.  Behandeln von Ausnahmen im Hintergrundthread.  
+  
+2.  Verteilen Sie diese Ausnahmen an den Hauptknoten [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Thread.  
+  
+3.  Diese auf der Hauptseite rethrow [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Thread ohne Behandlung dieser zulassen <xref:System.Windows.Application.DispatcherUnhandledException> ausgelöst werden soll.  
+  
+ Weitere Informationen finden Sie unter der [Threadmodell](~/docs/framework/wpf/advanced/threading-model.md) (Übersicht).  
+  
+ Die <xref:System.Windows.Application.DispatcherUnhandledException> übergebene Ereignishandler eine <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs> Argument, das Kontextinformationen hinsichtlich der Ausnahme enthält einschließlich:  
+  
+-   Die Ausnahme (<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception%2A>).  
+  
+-   Die <xref:System.Windows.Threading.Dispatcher> aus dem sie stammen (<xref:System.Windows.Threading.DispatcherEventArgs.Dispatcher%2A>).  
+  
+ Diese Informationen können Sie bestimmen, ob eine Ausnahme oder nicht wiederherstellbar ist. Eine behebbare Ausnahme ist möglicherweise eine <xref:System.IO.FileNotFoundException>, z. B. während eine nicht behebbare Ausnahme ist ein <xref:System.StackOverflowException>, z. B..  
+  
+ Eine nicht behandelte Ausnahme beim Verarbeiten <xref:System.Windows.Application.DispatcherUnhandledException>, und Sie möchten schließlich nicht [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] weiter verarbeitet, müssen Sie festlegen der <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A> Eigenschaft `true`.  
+  
+ Im Gegensatz zu den anderen Ereignissen, die <xref:System.Windows.Application> auslöst, <xref:System.Windows.Application.DispatcherUnhandledException> ist nicht haben einen übereinstimmenden geschützte, virtuelle Implementierung (OnDispatcherUnhandledException). Folglich abgeleiteten Klassen aus <xref:System.Windows.Application> muss immer registrieren einen Ereignishandler mit <xref:System.Windows.Application.DispatcherUnhandledException> nicht behandelte Ausnahmen zu verarbeiten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die Verarbeitung nicht behandelter Ausnahmen durch Behandeln der <xref:System.Windows.Application.DispatcherUnhandledException> Ereignis.  
+  
+ [!code-csharp[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs#handledispatcherunhandledexceptioncodebehind1)]
+ [!code-vb[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb#handledispatcherunhandledexceptioncodebehind1)]  
+[!code-csharp[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs#handledispatcherunhandledexceptioncodebehind2)]
+[!code-vb[ApplicationDispatcherUnhandledExceptionSnippets#HandleDispatcherUnhandledExceptionCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb#handledispatcherunhandledexceptioncodebehind2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exit">
+      <MemberSignature Language="C#" Value="public event System.Windows.ExitEventHandler Exit;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.ExitEventHandler Exit" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Application.Exit" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ExitEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, unmittelbar bevor eine Anwendung heruntergefahren und kann nicht abgebrochen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Anwendung kann eine der folgenden Gründe heruntergefahren:  
+  
+-   Die <xref:System.Windows.Application.Shutdown%2A> Methode der <xref:System.Windows.Application> -Objekts aufgerufen wird, entweder explizit oder bestimmt die <xref:System.Windows.Application.ShutdownMode%2A> Eigenschaft.  
+  
+-   Der Benutzer beendet die Sitzung durch abmelden oder heruntergefahren.  
+  
+ Sie können erkennen, tritt zum Herunterfahren der Anwendung durch Behandeln der <xref:System.Windows.Application.Exit> Ereignis, und führen Sie eine weitere Verarbeitung nach Bedarf.  
+  
+ Sie können auch behandeln <xref:System.Windows.Application.Exit> zu überprüfen oder Exitcode der Anwendung zu ändern, wenn Sie nicht benötigt, rufen Sie <xref:System.Windows.Application.Shutdown%2A> explizit. Der Exitcode verfügbar gemacht wird, aus der <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> Eigenschaft von der <xref:System.Windows.ExitEventArgs> Argument zu übergeben der <xref:System.Windows.Application.Exit> -Ereignishandler. Wenn die Anwendung wird beendet, wird der Exitcode an das Betriebssystem zur weiteren Verarbeitung übergeben.  
+  
+ Wenn eine Anwendung behandelt den <xref:System.Windows.Application.SessionEnding> Ereignis und anschließend abbricht, <xref:System.Windows.Application.Exit> wird nicht ausgelöst, und die Anwendung weiterhin in Übereinstimmung mit dem Herunterfahren-Modus ausgeführt wird.  
+  
+ Der Exitcode kann festgelegt werden, von einem [!INCLUDE[TLA#tla_xbap](~/includes/tlasharptla-xbap-md.md)], obwohl der Wert ignoriert wird.  
+  
+ Für [!INCLUDE[TLA2#tla_xbap#plural](~/includes/tla2sharptla-xbapsharpplural-md.md)], <xref:System.Windows.Application.Exit> in den folgenden Umständen ausgelöst:  
+  
+-   Ein [!INCLUDE[TLA2#tla_xbap](~/includes/tla2sharptla-xbap-md.md)] Weg von navigiert wird.  
+  
+-   In [!INCLUDE[TLA2#tla_ie7](~/includes/tla2sharptla-ie7-md.md)], wenn die Registerkarte, die hostet die [!INCLUDE[TLA2#tla_xbap](~/includes/tla2sharptla-xbap-md.md)] geschlossen wird.  
+  
+-   Wenn der Browser geschlossen wird.  
+  
+ In allen Fällen den Wert der <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> Eigenschaft wird ignoriert.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie Sie:  
+  
+-   Behandeln der <xref:System.Windows.Application.Exit> Ereignis.  
+  
+-   Überprüfen und Aktualisieren der <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> Eigenschaft von der <xref:System.Windows.ExitEventArgs>.  
+  
+-   Schreiben Sie einen Eintrag in ein Anwendungsprotokoll im isolierten Speicher.  
+  
+-   Beibehalten des Anwendungsstatus auf isolierte Speicherplätze.  
+  
+ [!code-xaml[ApplicationExitSnippets#HandleExitXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/App.xaml#handleexitxaml)]  
+  
+ [!code-csharp[ApplicationExitSnippets#HandleExitCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/App.xaml.cs#handleexitcodebehind)]
+ [!code-vb[ApplicationExitSnippets#HandleExitCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/application.xaml.vb#handleexitcodebehind)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindResource">
+      <MemberSignature Language="C#" Value="public object FindResource (object resourceKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object FindResource(object resourceKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.FindResource(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">Der Name des zu suchenden Ressource.</param>
+        <summary>Sucht nach einem [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Ressource, z. B. eine <see cref="T:System.Windows.Style" /> oder <see cref="T:System.Windows.Media.Brush" />, mit dem angegebenen Schlüssel und löst eine Ausnahme aus, wenn die angeforderte Ressource nicht gefunden wird (finden Sie unter [XAML-Ressourcen](~/docs/framework/wpf/advanced/xaml-resources.md)).</summary>
+        <returns>Das angeforderte Ressourcenobjekt auf. Wenn die angeforderte Ressource nicht gefunden wird, eine <see cref="T:System.Windows.ResourceReferenceKeyNotFoundException" /> ausgelöst wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Application.FindResource%2A>sucht zuerst im Anwendungsbereich Ressourcen für die angegebene Ressource. Anwendungsbereich Ressourcen werden vom verwaltet <xref:System.Windows.Application>, und stehen zur Verfügung, aus der <xref:System.Windows.Application.Resources%2A> Eigenschaft. Wenn die angegebene Ressource nicht, in der Menge der Anwendungsbereich Ressourcen gefunden wird, <xref:System.Windows.Application.FindResource%2A> anschließend sucht die Systemressourcen. Systemressourcen sind Shellressourcen, die vom Benutzer definierte und Farben, Schriftarten und Shellkonfigurationen enthalten. Diese Felder werden zur Verfügung, aus der <xref:System.Windows.SystemColors>, <xref:System.Windows.SystemFonts>, und <xref:System.Windows.SystemParameters> Argumenttypen, das als statische Eigenschaften. Mit <xref:System.Windows.Application.FindResource%2A> zum Abrufen, diese Typen auch verfügbar machen Key Ressourceneigenschaften, die entwickelt wurden, übergeben werden <xref:System.Windows.Application.FindResource%2A>, z. B. <xref:System.Windows.SystemParameters.IconWidthKey%2A>.  
+  
+ Da <xref:System.Windows.Application.FindResource%2A> gibt ein Objekt, das Sie müssen den zurückgegebenen Wert in den entsprechenden Typ umwandeln, wenn die Ressource gefunden wurde.  
+  
+> [!IMPORTANT]
+>  Wenn Sie diese Methode für einen Schlüssel, die nicht gefunden werden kann aufrufen, wird eine Ausnahme ausgelöst. Wenn Sie nicht möchten, um Ausnahmen zu behandeln, die durch Aufruf von <xref:System.Windows.Application.FindResource%2A>, rufen Sie <xref:System.Windows.Application.TryFindResource%2A> stattdessen; <xref:System.Windows.Application.TryFindResource%2A> gibt eine `null` verwiesen werden, wenn eine angeforderte Ressource wurde nicht gefunden, und es wird keine Ausnahme ausgelöst.  
+  
+ Diese Methode ist threadsicher und kann von jedem Thread aufgerufen werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Windows.Application.FindResource%2A> auf eine Ressource zu finden und behandeln <xref:System.Windows.ResourceReferenceKeyNotFoundException> , wenn die Ressource nicht gefunden wurde.  
+  
+ [!code-csharp[ApplicationFindResourceSnippets#ApplicationCallFindResourceCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationFindResourceSnippets/CSharp/MainWindow.xaml.cs#applicationcallfindresourcecodebehind)]
+ [!code-vb[ApplicationFindResourceSnippets#ApplicationCallFindResourceCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationFindResourceSnippets/visualbasic/mainwindow.xaml.vb#applicationcallfindresourcecodebehind)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Windows.ResourceReferenceKeyNotFoundException">Die Ressource wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FragmentNavigation">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.FragmentNavigationEventHandler FragmentNavigation;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.FragmentNavigationEventHandler FragmentNavigation" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Application.FragmentNavigation" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.FragmentNavigationEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Navigator in der Anwendung, Navigation zu einem Inhaltsfragment beginnt navigiert wird sofort auf, wenn das gewünschte Fragment in den aktuellen Inhalt oder nach der Quelle ist [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)] Inhalt wurde geladen, wenn das gewünschte Fragment in verschiedenen ist Inhalt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Navigator handelt es sich um eine <xref:System.Windows.Navigation.NavigationWindow> oder ein <xref:System.Windows.Controls.Frame>.  
+  
+ Siehe <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentStream">
+      <MemberSignature Language="C#" Value="public static System.Windows.Resources.StreamResourceInfo GetContentStream (Uri uriContent);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Resources.StreamResourceInfo GetContentStream(class System.Uri uriContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.GetContentStream(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Resources.StreamResourceInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uriContent" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uriContent">Der Relative <see cref="T:System.Uri" /> , der auf eine Ressource lose zugeordnet.</param>
+        <summary>Gibt einen Ressourcenstream für eine Inhaltsdaten-Datei, die auf den angegebenen befindet <see cref="T:System.Uri" /> (finden Sie unter [Anwendungsressource WPF-Inhalt und Datendateien](~/docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)).</summary>
+        <returns>Ein <see cref="T:System.Windows.Resources.StreamResourceInfo" /> , enthält eine Inhaltsdaten-Datei, die auf den angegebenen befindet <see cref="T:System.Uri" />. Wenn eine Ressource lose nicht gefunden wird, wird Null zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Uri" /> übergebene <see cref="M:System.Windows.Application.GetContentStream(System.Uri)" /> ist null.</exception>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Uri" /> übergebene <see cref="M:System.Windows.Application.GetContentStream(System.Uri)" /> ist ein absoluter <see cref="T:System.Uri" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCookie">
+      <MemberSignature Language="C#" Value="public static string GetCookie (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetCookie(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.GetCookie(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Die <see cref="T:System.Uri" /> , angibt, dass den Speicherort für die ein Cookie erstellt wurde.</param>
+        <summary>Ruft ein Cookie für den vom angegebenen Speicherort eine <see cref="T:System.Uri" />.</summary>
+        <returns>Ein <see cref="T:System.String" /> Wert, wenn das Cookie vorhanden ist, andernfalls ein <see cref="T:System.ComponentModel.Win32Exception" /> ausgelöst wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Application.GetCookie%2A>Ruft ein Cookie für den angegebenen <xref:System.Uri>. Wenn das Cookie kann nicht abgerufen werden, eine <xref:System.ComponentModel.Win32Exception> ausgelöst wird. Sie müssen den Code, um die Cookiezeichenfolge in eine Liste von Name/Wert-Paaren analysiert schreiben.  
+  
+ Eine Übersicht über Cookies in [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)], finden Sie unter [Navigation Overview](~/docs/framework/wpf/app-development/navigation-overview.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Ein [!INCLUDE[TLA#tla_win32](~/includes/tlasharptla-win32-md.md)] Fehler wird ausgelöst, durch die <see langword="InternetGetCookie" /> Funktion (von aufgerufen <see cref="M:System.Windows.Application.GetCookie(System.Uri)" />) Falle ein Problems beim Abrufen des angegebenen Cookies.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Abrufen der Cookies für eine dateibasierte <see cref="T:System.Uri" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Net.WebPermission">zum Abrufen des Cookies für eine nicht-dateibasierte <see cref="T:System.Uri" />. Zugeordnete Enumeration:<see cref="P:System.Net.WebPermission.ConnectList" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRemoteStream">
+      <MemberSignature Language="C#" Value="public static System.Windows.Resources.StreamResourceInfo GetRemoteStream (Uri uriRemote);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Resources.StreamResourceInfo GetRemoteStream(class System.Uri uriRemote) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.GetRemoteStream(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Resources.StreamResourceInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uriRemote" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uriRemote">Die <see cref="T:System.Uri" /> , der auf eine Ressource lose, auf die Ursprungssite zugeordnet.</param>
+        <summary>Gibt einen Ressourcenstream für eine Ursprungssite Datendatei, die auf den angegebenen befindet <see cref="T:System.Uri" /> (finden Sie unter [Anwendungsressource WPF-Inhalt und Datendateien](~/docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)).</summary>
+        <returns>Ein <see cref="T:System.Windows.Resources.StreamResourceInfo" /> , enthält einen Ressourcenstream für eine Ursprungssite Datendatei, die auf den angegebenen befindet <see cref="T:System.Uri" />. Wenn die Ressource lose nicht gefunden wird, <see langword="null" /> wird zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Uri" /> übergebene <see cref="M:System.Windows.Application.GetRemoteStream(System.Uri)" /> ist null.</exception>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Uri" /> übergebene <see cref="M:System.Windows.Application.GetRemoteStream(System.Uri)" /> ist entweder nicht relativ ist, oder ist absolut, aber nicht in der <c>Pack://siteoforigin :,,,/</c> Formular.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResourceStream">
+      <MemberSignature Language="C#" Value="public static System.Windows.Resources.StreamResourceInfo GetResourceStream (Uri uriResource);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Resources.StreamResourceInfo GetResourceStream(class System.Uri uriResource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.GetResourceStream(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Resources.StreamResourceInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uriResource" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uriResource">Die <see cref="T:System.Uri" /> , der eine eingebettete Ressource zugeordnet.</param>
+        <summary>Gibt einen Ressourcenstream für eine Ressourcendatei für die Daten, die auf den angegebenen befindet <see cref="T:System.Uri" /> (finden Sie unter [Anwendungsressource WPF-Inhalt und Datendateien](~/docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)).</summary>
+        <returns>Ein <see cref="T:System.Windows.Resources.StreamResourceInfo" /> , enthält einen Ressourcenstream für Data-Ressourcendatei, die auf den angegebenen befindet <see cref="T:System.Uri" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Uri" /> übergebene <see cref="M:System.Windows.Application.GetResourceStream(System.Uri)" /> ist null.</exception>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Uri" /> übergebene <see cref="M:System.Windows.Application.GetResourceStream(System.Uri)" /> ist entweder nicht relativ ist, oder ist absolut, aber nicht in der <c>Pack://application :,,,/</c> Formular.</exception>
+        <exception cref="T:System.IO.IOException">Die <see cref="T:System.Uri" /> übergebene <see cref="M:System.Windows.Application.GetResourceStream(System.Uri)" /> wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCompleted">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.LoadCompletedEventHandler LoadCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.LoadCompletedEventHandler LoadCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Application.LoadCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.LoadCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Inhalt, zu der navigiert wurde, indem ein Navigator in der Anwendung, geladen wurde, analysiert, und mit dem Rendering begonnen hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Navigator handelt es sich um eine <xref:System.Windows.Navigation.NavigationWindow> oder ein <xref:System.Windows.Controls.Frame>.  
+  
+ Siehe <xref:System.Windows.Navigation.NavigationService.LoadCompleted?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Lauschen Ereignissen auf der Navigation Inhalt, z. B. die <xref:System.Windows.FrameworkElement.Loaded> Ereignis auf <xref:System.Windows.Controls.Page> , bevor Sie Eigenschaften der Navigation Inhalt zugreifen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="LoadComponent">
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Lädt eine [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)] Startabbilddatei an der angegebenen [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)] Datei kann es sich um eine Anwendung Code-Datei (als konfiguriert eine [!INCLUDE[TLA#tla_msbuild](~/includes/tlasharptla-msbuild-md.md)] Seite-Element) oder einer Anwendung-Datendatei (eine Ressourcendatei, Inhaltsdatei oder Ursprungssite Ausgabekonfigurationsdatei finden Sie unter [Anwendungsressource WPF-Inhalt und Datendateien](~/docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)).  
+  
+> [!NOTE]
+>  Diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="LoadComponent">
+      <MemberSignature Language="C#" Value="public static object LoadComponent (Uri resourceLocator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object LoadComponent(class System.Uri resourceLocator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.LoadComponent(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceLocator" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="resourceLocator">Ein <see cref="T:System.Uri" />, der einer relativen [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]-Datei zugeordnet ist.</param>
+        <summary>Lädt eine [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)] Startabbilddatei an der angegebenen [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)], und konvertiert ihn in eine Instanz des Objekts, das durch das Stammelement der angegeben wird die [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)] Datei.</summary>
+        <returns>Eine Instanz des Stammelements, angegeben durch die Verwendung von XAML-Datei geladen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Den Rückgabewert müssen explizit konvertiert werden, auf den gleichen Typ wie das Stammelement der [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)] Datei.  
+  
+ Die [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)] Datei kann es sich um eine Anwendung Code-Datei (als konfiguriert eine [!INCLUDE[TLA#tla_msbuild](~/includes/tlasharptla-msbuild-md.md)] Seite-Element) oder einer Anwendung-Datendatei (eine Ressourcendatei, Inhaltsdatei oder Ursprungssite Ausgabekonfigurationsdatei finden Sie unter [Anwendungsressource WPF-Inhalt und Datendateien](~/docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)).  
+  
+> [!NOTE]
+>  Diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceLocator" /> ist NULL.</exception>
+        <exception cref="T:System.ArgumentException">Der <paramref name="resourceLocator" /> ist ein absoluter [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</exception>
+        <exception cref="T:System.Exception">Die Datei ist keine [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)] Datei.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadComponent">
+      <MemberSignature Language="C#" Value="public static void LoadComponent (object component, Uri resourceLocator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void LoadComponent(object component, class System.Uri resourceLocator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.LoadComponent(System.Object,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="resourceLocator" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="component">Ein Objekt des gleichen Typs wie das Stammelement der [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]-Datei.</param>
+        <param name="resourceLocator">Ein <see cref="T:System.Uri" />, der einer relativen [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]-Datei zugeordnet ist.</param>
+        <summary>Lädt eine [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)]-Datei, die sich unter dem angegebenen [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] befindet, und konvertiert sie in eine Instanz des Objekts, das durch das Stammelement der [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)]-Datei angegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)] Datei kann es sich um eine Anwendung Code-Datei (als konfiguriert eine [!INCLUDE[TLA#tla_msbuild](~/includes/tlasharptla-msbuild-md.md)] Seite-Element) oder einer Anwendung-Datendatei (eine Ressourcendatei, Inhaltsdatei oder Ursprungssite Ausgabekonfigurationsdatei finden Sie unter [Anwendungsressource WPF-Inhalt und Datendateien](~/docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)).  
+  
+> [!NOTE]
+>  Diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceLocator" /> ist NULL.</exception>
+        <exception cref="T:System.ArgumentException">Der <paramref name="resourceLocator" /> ist ein absoluter [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</exception>
+        <exception cref="T:System.Exception">
+          <paramref name="component" /> ist ein Typ, der nicht dem Stammelement der [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]-Datei entspricht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MainWindow">
+      <MemberSignature Language="C#" Value="public System.Windows.Window MainWindow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Window MainWindow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Application.MainWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Window</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Hauptfenster der Anwendung.</summary>
+        <value>Ein <see cref="T:System.Windows.Window" /> , der als das Hauptanwendungsfenster festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Application.MainWindow%2A>wird automatisch mit einem Verweis auf das erste festgelegt <xref:System.Windows.Window> Objekt, das in der instanziiert werden die <xref:System.AppDomain>.  
+  
+ Geben Sie ein anderes Hauptfenster durch Festlegen <xref:System.Windows.Application.MainWindow%2A> Zuweisen von einem anderen <xref:System.Windows.Application.Windows%2A> -Objekt an die <xref:System.Windows.Application.MainWindow%2A> Eigenschaft.  
+  
+ Wenn die <xref:System.Windows.Application.ShutdownMode%2A> Eigenschaft von der <xref:System.Windows.Application> -Objekts festgelegt wird, um <xref:System.Windows.ShutdownMode.OnMainWindowClose>, das Hauptfenster schließen, wird die Anwendung heruntergefahren.  
+  
+ Es ist möglich, legen Sie die <xref:System.Windows.Application.MainWindow%2A> Eigenschaft von [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)], wenn das Hauptfenster der Anwendung nicht auf das Fenster, das durch Festlegen von erzeugt wird, ist die <xref:System.Windows.Application.StartupUri%2A> Eigenschaft im [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)]. Die zwei Einschränkungen von der [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)] Ansatz werden:  
+  
+-   Geben Sie entweder eine [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)]-nur <xref:System.Windows.Window> oder ein [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)]-nur <xref:System.Windows.Navigation.NavigationWindow> als das Hauptfenster.  
+  
+-   Sie müssen festlegen, die <xref:System.Windows.UIElement.Visibility%2A> -Eigenschaft des Fensters, die Sie angeben, andernfalls wird nicht angezeigt werden.  
+  
+ Der Verweis auf das erste <xref:System.Windows.Window> Objekt instanziiert wird auch als das erste Element hinzugefügt wird die <xref:System.Windows.Application.Windows%2A> Auflistung. Wenn <xref:System.Windows.Application.MainWindow%2A> wird anschließend mit einem Verweis auf ein anderes festgelegt <xref:System.Windows.Window>, die Position des Elements mit dem Verweis auf das Hauptfenster geändert, während die Reihenfolge der Elemente im <xref:System.Windows.Application.Windows%2A> bleibt unverändert. Verwenden Sie daher immer <xref:System.Windows.Application.MainWindow%2A> zum Verweisen auf das Hauptfenster statt des ersten Elements im <xref:System.Windows.Application.Windows%2A>.  
+  
+> [!NOTE]
+>  Wenn das Hauptfenster ist eine <xref:System.Windows.Navigation.NavigationWindow>, und Sie benötigen bestimmte Zugriff auf <xref:System.Windows.Navigation.NavigationWindow> Mitglieder, müssen Sie den Wert des umgewandelt <xref:System.Windows.Application.MainWindow%2A> zu <xref:System.Windows.Navigation.NavigationWindow>.  
+>   
+>  Diese Eigenschaft steht nur aus dem erstellten Thread, der <xref:System.Windows.Application> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie das Hauptanwendungsfenster gefunden wird.  
+  
+ [!code-csharp[ApplicationMainWindowSnippets#GetApplicationMainWindowCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationMainWindowSnippets/CSharp/App.xaml.cs#getapplicationmainwindowcode)]
+ [!code-vb[ApplicationMainWindowSnippets#GetApplicationMainWindowCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationMainWindowSnippets/visualbasic/application.xaml.vb#getapplicationmainwindowcode)]  
+  
+ Im folgende Beispiel wird gezeigt, wie festzulegende <xref:System.Windows.Application.MainWindow%2A> mit [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)].  
+  
+ [!code-xaml[ApplicationMainWindowSnippets#SetApplicationMainWindowXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/ApplicationMainWindowSnippets/XAML/App.xaml#setapplicationmainwindowxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie beim Instanziieren der <xref:System.Windows.Application.MainWindow%2A> im Code während des Anwendungsstarts.  
+  
+ [!code-csharp[HOWTOWindowManagementSnippets#FirstWindowUsingCodeCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/App.xaml.cs#firstwindowusingcodecodebehind)]
+ [!code-vb[HOWTOWindowManagementSnippets#FirstWindowUsingCodeCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/application.xaml.vb#firstwindowusingcodecodebehind)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Application.MainWindow" />wird von einer Anwendung, die in einem Browser, wie z. B. gehostet wird Festlegen einer [!INCLUDE[TLA#tla_xbap#plural](~/includes/tlasharptla-xbapsharpplural-md.md)].</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigated">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigatedEventHandler Navigated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigatedEventHandler Navigated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Application.Navigated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigatedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Inhalt, der von einem Navigator in der Anwendung zu navigiert wird, gefunden wurde, obwohl es nicht laden abgeschlossen haben, kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Navigator handelt es sich um eine <xref:System.Windows.Navigation.NavigationWindow> oder ein <xref:System.Windows.Controls.Frame>.  
+  
+ Siehe <xref:System.Windows.Navigation.NavigationService.NavigationFailed?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigating">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigatingCancelEventHandler Navigating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigatingCancelEventHandler Navigating" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Application.Navigating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigatingCancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine neue Navigation von einem Navigator in der Anwendung angefordert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Navigator handelt es sich um eine <xref:System.Windows.Navigation.NavigationWindow> oder ein <xref:System.Windows.Controls.Frame>.  
+  
+ Siehe <xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationFailed">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigationFailedEventHandler NavigationFailed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigationFailedEventHandler NavigationFailed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Application.NavigationFailed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigationFailedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Fehler auftritt, während ein Navigator in der Anwendung auf den angeforderten Inhalt navigiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Navigator handelt es sich um eine <xref:System.Windows.Navigation.NavigationWindow> oder ein <xref:System.Windows.Controls.Frame>.  
+  
+ Siehe <xref:System.Windows.Navigation.NavigationService.NavigationFailed?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationProgress">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigationProgressEventHandler NavigationProgress;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigationProgressEventHandler NavigationProgress" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Application.NavigationProgress" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigationProgressEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt in regelmäßigen Abständen während ein Download, der von einem Navigator in der Anwendung Statusinformationen Navigation bereitstellen verwaltet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Navigator handelt es sich um eine <xref:System.Windows.Navigation.NavigationWindow> oder ein <xref:System.Windows.Controls.Frame>.  
+  
+ Siehe <xref:System.Windows.Navigation.NavigationService.NavigationProgress?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationStopped">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigationStoppedEventHandler NavigationStopped;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigationStoppedEventHandler NavigationStopped" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Application.NavigationStopped" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigationStoppedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see langword="StopLoading" /> -Methode eines Navigators in der Anwendung aufgerufen wird, oder wenn eine neue Navigation angefordert wird durch ein Navigator während eine aktuelle Navigation ausgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Navigator handelt es sich um eine <xref:System.Windows.Navigation.NavigationWindow> oder ein <xref:System.Windows.Controls.Frame>.  
+  
+ Siehe <xref:System.Windows.Navigation.NavigationService.NavigationStopped?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivated">
+      <MemberSignature Language="C#" Value="protected virtual void OnActivated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnActivated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.OnActivated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Application.Activated" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch <xref:System.Windows.Application.OnActivated%2A> wird das <xref:System.Windows.Application.Activated>-Ereignis ausgelöst.  
+  
+ Ein Typ, der von ableitet <xref:System.Windows.Application> Überschreiben dieses möglicherweise <xref:System.Windows.Application.OnActivated%2A>. Die überschriebene Methode aufrufen, muss <xref:System.Windows.Application.OnActivated%2A> in der Basisklasse Wenn <xref:System.Windows.Application.Activated> ausgelöst werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeactivated">
+      <MemberSignature Language="C#" Value="protected virtual void OnDeactivated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDeactivated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.OnDeactivated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Application.Deactivated" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch <xref:System.Windows.Application.OnDeactivated%2A> wird das <xref:System.Windows.Application.Deactivated>-Ereignis ausgelöst.  
+  
+ Ein Typ, der von ableitet <xref:System.Windows.Application> Überschreiben dieses möglicherweise <xref:System.Windows.Application.OnDeactivated%2A>. Die überschriebene Methode aufrufen, muss <xref:System.Windows.Application.OnDeactivated%2A> in der Basisklasse Wenn <xref:System.Windows.Application.Deactivated> ausgelöst werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnExit">
+      <MemberSignature Language="C#" Value="protected virtual void OnExit (System.Windows.ExitEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnExit(class System.Windows.ExitEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.OnExit(System.Windows.ExitEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.ExitEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.ExitEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Application.Exit" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch <xref:System.Windows.Application.OnExit%2A> wird das <xref:System.Windows.Application.Exit>-Ereignis ausgelöst.  
+  
+ Ein Typ, der von ableitet <xref:System.Windows.Application> kann zum Überschreiben der <xref:System.Windows.Application.OnExit%2A> Methode. Die überschriebene Methode aufrufen, muss <xref:System.Windows.Application.OnExit%2A> in der Basisklasse Wenn <xref:System.Windows.Application.Exit> ausgelöst werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFragmentNavigation">
+      <MemberSignature Language="C#" Value="protected virtual void OnFragmentNavigation (System.Windows.Navigation.FragmentNavigationEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFragmentNavigation(class System.Windows.Navigation.FragmentNavigationEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.OnFragmentNavigation(System.Windows.Navigation.FragmentNavigationEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Navigation.FragmentNavigationEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Navigation.FragmentNavigationEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Application.FragmentNavigation" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch <xref:System.Windows.Application.OnFragmentNavigation%2A> wird das <xref:System.Windows.Application.FragmentNavigation>-Ereignis ausgelöst.  
+  
+ Ein Typ, der von ableitet <xref:System.Windows.Application> Überschreiben dieses möglicherweise <xref:System.Windows.Application.OnFragmentNavigation%2A>. Die überschriebene Methode aufrufen, muss <xref:System.Windows.Application.OnFragmentNavigation%2A> in der Basisklasse Wenn <xref:System.Windows.Application.FragmentNavigation> ausgelöst werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoadCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnLoadCompleted (System.Windows.Navigation.NavigationEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLoadCompleted(class System.Windows.Navigation.NavigationEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.OnLoadCompleted(System.Windows.Navigation.NavigationEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Navigation.NavigationEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Navigation.NavigationEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Application.LoadCompleted" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch <xref:System.Windows.Application.OnLoadCompleted%2A> wird das <xref:System.Windows.Application.LoadCompleted>-Ereignis ausgelöst.  
+  
+ Ein Typ, der von ableitet <xref:System.Windows.Application> Überschreiben dieses möglicherweise <xref:System.Windows.Application.OnLoadCompleted%2A>. Die überschriebene Methode aufrufen, muss <xref:System.Windows.Application.OnLoadCompleted%2A> in der Basisklasse Wenn <xref:System.Windows.Application.LoadCompleted> ausgelöst werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNavigated">
+      <MemberSignature Language="C#" Value="protected virtual void OnNavigated (System.Windows.Navigation.NavigationEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnNavigated(class System.Windows.Navigation.NavigationEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.OnNavigated(System.Windows.Navigation.NavigationEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Navigation.NavigationEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Navigation.NavigationEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Application.Navigated" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch <xref:System.Windows.Application.OnNavigated%2A> wird das <xref:System.Windows.Application.Navigated>-Ereignis ausgelöst.  
+  
+ Ein Typ, der von ableitet <xref:System.Windows.Application> Überschreiben dieses möglicherweise <xref:System.Windows.Application.OnNavigated%2A>. Die überschriebene Methode aufrufen, muss <xref:System.Windows.Application.OnNavigated%2A> in der Basisklasse Wenn <xref:System.Windows.Application.Navigated> ausgelöst werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNavigating">
+      <MemberSignature Language="C#" Value="protected virtual void OnNavigating (System.Windows.Navigation.NavigatingCancelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnNavigating(class System.Windows.Navigation.NavigatingCancelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.OnNavigating(System.Windows.Navigation.NavigatingCancelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Navigation.NavigatingCancelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Navigation.NavigatingCancelEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Application.Navigating" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch <xref:System.Windows.Application.OnNavigating%2A> wird das <xref:System.Windows.Application.Navigating>-Ereignis ausgelöst.  
+  
+ Ein Typ, der von ableitet <xref:System.Windows.Application> Überschreiben dieses möglicherweise <xref:System.Windows.Application.OnNavigating%2A>. Die überschriebene Methode aufrufen, muss <xref:System.Windows.Application.OnNavigating%2A> in der Basisklasse Wenn <xref:System.Windows.Application.Navigating> ausgelöst werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNavigationFailed">
+      <MemberSignature Language="C#" Value="protected virtual void OnNavigationFailed (System.Windows.Navigation.NavigationFailedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnNavigationFailed(class System.Windows.Navigation.NavigationFailedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.OnNavigationFailed(System.Windows.Navigation.NavigationFailedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Navigation.NavigationFailedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Navigation.NavigationFailedEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Application.NavigationFailed" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch <xref:System.Windows.Application.OnNavigationFailed%2A> wird das <xref:System.Windows.Application.NavigationFailed>-Ereignis ausgelöst.  
+  
+ Ein Typ, der von ableitet <xref:System.Windows.Application> Überschreiben dieses möglicherweise <xref:System.Windows.Application.OnNavigationFailed%2A>. Die überschriebene Methode aufrufen, muss <xref:System.Windows.Application.OnNavigationFailed%2A> in der Basisklasse Wenn <xref:System.Windows.Application.NavigationFailed> ausgelöst werden soll.  
+  
+   
+  
+## Examples  
+ <xref:System.Windows.Application.OnFragmentNavigation%2A>  
+  
+ <xref:System.Windows.Application.OnLoadCompleted%2A>  
+  
+ <xref:System.Windows.Application.OnNavigating%2A>  
+  
+ <xref:System.Windows.Application.OnNavigated%2A>  
+  
+ <xref:System.Windows.Application.OnNavigationProgress%2A>  
+  
+ <xref:System.Windows.Application.OnNavigationStopped%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNavigationProgress">
+      <MemberSignature Language="C#" Value="protected virtual void OnNavigationProgress (System.Windows.Navigation.NavigationProgressEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnNavigationProgress(class System.Windows.Navigation.NavigationProgressEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.OnNavigationProgress(System.Windows.Navigation.NavigationProgressEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Navigation.NavigationProgressEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Navigation.NavigationProgressEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Application.NavigationProgress" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch <xref:System.Windows.Application.OnNavigationProgress%2A> wird das <xref:System.Windows.Application.NavigationProgress>-Ereignis ausgelöst.  
+  
+ Ein Typ, der von ableitet <xref:System.Windows.Application> Überschreiben dieses möglicherweise <xref:System.Windows.Application.OnNavigationProgress%2A>. Die überschriebene Methode muss explizit aufrufen <xref:System.Windows.Application.OnNavigationProgress%2A> in der Basisklasse Wenn <xref:System.Windows.Application.NavigationProgress> ausgelöst werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNavigationStopped">
+      <MemberSignature Language="C#" Value="protected virtual void OnNavigationStopped (System.Windows.Navigation.NavigationEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnNavigationStopped(class System.Windows.Navigation.NavigationEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.OnNavigationStopped(System.Windows.Navigation.NavigationEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Navigation.NavigationEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Navigation.NavigationEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Application.NavigationStopped" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch <xref:System.Windows.Application.OnNavigationStopped%2A> wird das <xref:System.Windows.Application.NavigationStopped>-Ereignis ausgelöst.  
+  
+ Ein Typ, der von ableitet <xref:System.Windows.Application> Überschreiben dieses möglicherweise <xref:System.Windows.Application.OnNavigationStopped%2A>. Die überschriebene Methode aufrufen, muss <xref:System.Windows.Application.OnNavigationStopped%2A> in der Basisklasse Wenn <xref:System.Windows.Application.NavigationStopped> ausgelöst werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSessionEnding">
+      <MemberSignature Language="C#" Value="protected virtual void OnSessionEnding (System.Windows.SessionEndingCancelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSessionEnding(class System.Windows.SessionEndingCancelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.OnSessionEnding(System.Windows.SessionEndingCancelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.SessionEndingCancelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.SessionEndingCancelEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Application.SessionEnding" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch <xref:System.Windows.Application.OnSessionEnding%2A> wird das <xref:System.Windows.Application.SessionEnding>-Ereignis ausgelöst.  
+  
+ Ein Typ, der von ableitet <xref:System.Windows.Application> Überschreiben dieses möglicherweise <xref:System.Windows.Application.OnSessionEnding%2A>. Die überschriebene Methode aufrufen, muss <xref:System.Windows.Application.OnSessionEnding%2A> in der Basisklasse Wenn <xref:System.Windows.Application.SessionEnding> ausgelöst werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStartup">
+      <MemberSignature Language="C#" Value="protected virtual void OnStartup (System.Windows.StartupEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStartup(class System.Windows.StartupEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.OnStartup(System.Windows.StartupEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.StartupEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.StartupEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Application.Startup" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch <xref:System.Windows.Application.OnStartup%2A> wird das <xref:System.Windows.Application.Startup>-Ereignis ausgelöst.  
+  
+ Ein Typ, der von ableitet <xref:System.Windows.Application> Überschreiben dieses möglicherweise <xref:System.Windows.Application.OnStartup%2A>. Die überschriebene Methode aufrufen, muss <xref:System.Windows.Application.OnStartup%2A> in der Basisklasse Wenn die <xref:System.Windows.Application.Startup> Ereignis ausgelöst werden muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Application.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von anwendungsspezifische Eigenschaften ab.</summary>
+        <value>Eine <see cref="T:System.Collections.IDictionary" /> , die anwendungsspezifische Eigenschaften enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Application>Stellt ein Wörterbuch über <xref:System.Windows.Application.Properties%2A> die Sie verwenden können, um anwendungsspezifische Eigenschaften zu speichern. Dadurch können Sie den Freigabezustand für den gesamten Code in eine <xref:System.AppDomain> auf threadsichere Weise, ohne Ihren eigenen Statuscode schreiben zu müssen.  
+  
+ Eigenschaften, die in gespeicherten <xref:System.Windows.Application.Properties%2A> muss in den entsprechenden zurückgegebenen Typ konvertiert werden.  
+  
+ Die <xref:System.Windows.Application.Properties%2A> Eigenschaft threadsicher ist, und von jedem Thread verfügbar ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt wie erstellen und verwenden Sie eine Anwendung Scope-Eigenschaft mit <xref:System.Windows.Application.Properties%2A>.  
+  
+ [!code-xaml[ApplicationPropertiesSnippets#HandleStartupXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationPropertiesSnippets/CSharp/App.xaml#handlestartupxaml)]  
+  
+ [!code-csharp[ApplicationPropertiesSnippets#HandleStartupCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationPropertiesSnippets/CSharp/App.xaml.cs#handlestartupcodebehind)]
+ [!code-vb[ApplicationPropertiesSnippets#HandleStartupCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationPropertiesSnippets/visualbasic/application.xaml.vb#handlestartupcodebehind)]  
+  
+ [!code-xaml[ApplicationPropertiesSnippets#MainWindowGetPropertyXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationPropertiesSnippets/CSharp/MainWindow.xaml#mainwindowgetpropertyxaml1)]  
+[!code-xaml[ApplicationPropertiesSnippets#MainWindowGetPropertyXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationPropertiesSnippets/CSharp/MainWindow.xaml#mainwindowgetpropertyxaml2)]  
+  
+ [!code-csharp[ApplicationPropertiesSnippets#MainWindowGetPropertyCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationPropertiesSnippets/CSharp/MainWindow.xaml.cs#mainwindowgetpropertycodebehind)]
+ [!code-vb[ApplicationPropertiesSnippets#MainWindowGetPropertyCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationPropertiesSnippets/visualbasic/mainwindow.xaml.vb#mainwindowgetpropertycodebehind)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceAssembly">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Assembly ResourceAssembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Reflection.Assembly ResourceAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Application.ResourceAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Reflection.Assembly" /> , die das Pack bietet [!INCLUDE[TLA#tla_uri#plural](~/includes/tlasharptla-urisharpplural-md.md)] für Ressourcen in einer [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Anwendung.</summary>
+        <value>Ein Verweis auf die <see cref="T:System.Reflection.Assembly" /> , die das Pack bietet [!INCLUDE[TLA#tla_uri#plural](~/includes/tlasharptla-urisharpplural-md.md)] für Ressourcen in einer [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Anwendung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Ressourcen behoben sind, zur Laufzeit in Bezug auf die Eintragsassembly, der durch den Rückgabewert aus identifiziert wird die <xref:System.Reflection.Assembly.GetEntryAssembly%2A> Methode.  
+  
+ Die Eintragsassembly wird die Assembly, die von zurückgegeben wird <xref:System.Reflection.Assembly.GetEntryAssembly%2A> und kann Folgendes sein:  
+  
+-   Die ausführbare Assembly in der Standardanwendungsdomäne.  
+  
+-   Die erste Assembly durch Aufrufen von auszuführenden <xref:System.AppDomain.ExecuteAssembly%2A>.  
+  
+ In den folgenden Fällen eine [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Assembly einen Verweis auf die Eintragsassembly kann nicht abgerufen werden:  
+  
+-   Eine nicht verwaltete (systemeigene) Anwendung hostet die [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Assembly.  
+  
+-   Eine verwaltete Anwendung hostet die [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Assembly durch Laden in eine neue Anwendungsdomäne mit einer Methode, außer <xref:System.AppDomain.ExecuteAssembly%2A>.  
+  
+ In beiden Fällen <xref:System.Reflection.Assembly.GetEntryAssembly%2A> gibt `null`, und die [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] des Assemblyressourcen können nicht aufgelöst werden. In diesen Fällen <xref:System.Windows.Application.ResourceAssembly%2A> kann festgelegt werden, sobald nur mit einem Verweis auf die Assembly, die zum Auflösen von Ressourcen verwendet werden soll.  
+  
+ <xref:System.Windows.Application.ResourceAssembly%2A>kann nur einmal festgelegt werden, da es unwahrscheinlich ist, dass die Ressourcenassembly nach dem Ändern der [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Assembly wird geladen.  
+  
+> [!NOTE]
+>  <xref:System.Windows.Application.ResourceAssembly%2A>kann nicht festgelegt werden, wenn eine [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Assembly kann die Eintragsassembly ermitteln – d. h., wenn <xref:System.Reflection.Assembly.GetEntryAssembly%2A> gibt einen Verweis auf eine Assembly anstatt `null`.  
+  
+ Diese Eigenschaft ist threadsicher und von jedem Thread verfügbar ist.  
+  
+ <xref:System.Windows.Application.ResourceAssembly%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ein [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Anwendung hat eine Eintragsassembly oder <see cref="P:System.Windows.Application.ResourceAssembly" /> wurde bereits festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resources">
+      <MemberSignature Language="C#" Value="public System.Windows.ResourceDictionary Resources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.ResourceDictionary Resources" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Application.Resources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.Ambient</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Auflistung von Anwendungsbereich Ressourcen, z. B. Formate und Pinsel.</summary>
+        <value>Ein <see cref="T:System.Windows.ResourceDictionary" /> Objekt, das NULL oder mehr Anwendungsbereich Ressourcen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Application.Resources%2A> Eigenschaft kann verwendet werden, um Ressourcen auf dem Windows- und die Elemente einer Anwendung gemeinsam verwendet werden. Darüber hinaus die <xref:System.Windows.Application.Resources%2A> Eigenschaft befindet sich auf den Ressourcenpfad für die Suche, der in der folgenden Reihenfolge durchlaufen wird:  
+  
+1.  Elements  
+  
+2.  Windows  
+  
+3.  <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>  
+  
+4.  System  
+  
+ Folglich [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente können auf Anwendungsbereich Ressourcen zu binden. Darüber hinaus Wenn Ressourcen ändern, das Ressourcensystem wird sichergestellt, dass dieses Element Eigenschaften, die an Ressourcen gebunden sind, werden automatisch aktualisiert, um die Änderung zu übernehmen.  
+  
+ Anwendungsbereich-Ressourcen bieten eine einfache Möglichkeit, ein einheitliches Design auf die Anwendung zu unterstützen. Sie können problemlos erstellen Sie ein Design in [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)] mithilfe der `Application.Resources` Tag. Jedoch, wenn Ihre Anwendung mehrere Designs, die eine große Anzahl von Designelemente enthalten kann unterstützt, kann es einfacher sein, verwalten sie mit einer <xref:System.Windows.ResourceDictionary> Instanz für jede Design. Auf diese Weise kann ein neues Design angewendet werden durch Festlegen der Ressourcen-Eigenschaft auf die entsprechenden <xref:System.Windows.ResourceDictionary>.  
+  
+ Es gibt zwei Aspekte, die bei der Verwendung <xref:System.Windows.Application.Resources%2A>. Zuerst wird das Wörterbuch *Schlüssel* ist ein Objekt, damit Sie genau die gleiche Objektinstanz beim Festlegen und Abrufen eines Eigenschaftswerts (Beachten Sie, dass der Schlüssel Groß-/Kleinschreibung ist, wenn eine Zeichenfolge) verwenden müssen. Sekunde, die dem Wörterbuch *Wert* ist ein Objekt, daher Sie den Wert in den gewünschten Typ zu konvertieren, wenn Sie einen Eigenschaftswert abrufen müssen.  
+  
+ <xref:System.Windows.Application.Resources%2A>ist threadsicher, und von jedem Thread verfügbar ist.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)] zusammen mit Anwendungsbereich Ressourcen, um ein einheitliches Erscheinungsbild zu erstellen.  
+  
+ [!code-xaml[ApplicationResourcesSnippets#ResourcesPropertyXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationResourcesSnippets/CS/App.xaml#resourcespropertyxaml)]  
+  
+ [!code-xaml[ApplicationResourcesSnippets#WindowBackgroundPropertyXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationResourcesSnippets/CS/MainWindow.xaml#windowbackgroundpropertyxaml1)]  
+[!code-xaml[ApplicationResourcesSnippets#WindowBackgroundPropertyXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationResourcesSnippets/CS/MainWindow.xaml#windowbackgroundpropertyxaml2)]  
+  
+ Im folgende Beispiel wird gezeigt, wie eine Anwendungsressource im Code und in XAML festgelegt wird.  
+  
+ [!code-csharp[HOWTOApplicationModelSnippets#SetApplicationScopeResourceCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/ApplicationPropertiesSnippet.xaml.cs#setapplicationscoperesourcecode)]
+ [!code-vb[HOWTOApplicationModelSnippets#SetApplicationScopeResourceCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/applicationpropertiessnippet.xaml.vb#setapplicationscoperesourcecode)]  
+  
+ [!code-xaml[HOWTOApplicationModelSnippets#SetApplicationScopeResourceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#setapplicationscoperesourcexaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie eine Anwendungsressource im Code abgerufen werden.  
+  
+ [!code-csharp[HOWTOApplicationModelSnippets#GetApplicationScopeResourceCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/ApplicationPropertiesSnippet.xaml.cs#getapplicationscoperesourcecode)]
+ [!code-vb[HOWTOApplicationModelSnippets#GetApplicationScopeResourceCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/applicationpropertiessnippet.xaml.vb#getapplicationscoperesourcecode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public int Run ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Run() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.Run" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet eine [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] Anwendung.</summary>
+        <returns>Die <see cref="T:System.Int32" /> Exit-Anwendungscode, der beim Herunterfahren der Anwendung an das Betriebssystem zurückgegeben wird. Standardmäßig ist der Wert für den Exitcode 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Application.Run%2A>wird aufgerufen, um das Starten einer [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Anwendung. Wenn Sie definieren die <xref:System.Windows.Application> mit Markup oder Markup und CodeBehind- <xref:System.Windows.Application.Run%2A> wird implizit aufgerufen werden. Jedoch, wenn Sie definieren die <xref:System.Windows.Application> mithilfe von Code, müssen explizit aufrufen <xref:System.Windows.Application.Run%2A>.  
+  
+ Wenn <xref:System.Windows.Application.Run%2A> aufgerufen wird, <xref:System.Windows.Application> Fügt ein neues <xref:System.Windows.Threading.Dispatcher> -Instanz, auf die [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Thread. Als Nächstes wird die <xref:System.Windows.Threading.Dispatcher> des Objekts <xref:System.Windows.Threading.Dispatcher.Run%2A> -Methode aufgerufen wird, dem ein Nachrichtensystem zum Verarbeiten von Windows-Nachrichten beginnt. Schließlich die <xref:System.Windows.Threading.Dispatcher> -Objekt ruft die <xref:System.Windows.Application> des Objekts die <xref:System.Windows.Application.OnStartup%2A> Methode zum Auslösen der <xref:System.Windows.Application.Startup> Ereignis. Daher wurde das Anwendungsmodell für die Ausführung nach der Zeit, die Sie behandeln eingerichtet <xref:System.Windows.Application.Startup>, an welchem Punkt die Anwendung betrachtet wird, ausgeführt werden.  
+  
+ Eine Anwendung nicht mehr ausgeführt werden, wenn <xref:System.Windows.Application.Shutdown%2A> aufgerufen wird; der Wert von der <xref:System.Windows.Application.ShutdownMode%2A> Eigenschaft bestimmt, wann <xref:System.Windows.Application.Shutdown%2A> wird aufgerufen, und, ob dies automatisch erfolgt, oder Sie explizit müssen aufrufen.  
+  
+ <xref:System.Windows.Application.Run%2A>kann aufgerufen werden, nur aus dem Thread, der erstellt die <xref:System.Windows.Application> Objekt. Darüber hinaus <xref:System.Windows.Application.Run%2A> kann nicht aufgerufen werden, aus einer [!INCLUDE[TLA2#tla_xbap](~/includes/tla2sharptla-xbap-md.md)].  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Anwendung, ein benutzerdefiniertes verwendet <xref:System.Windows.Application> und muss daher explizit aufrufen, <xref:System.Windows.Application.Run%2A>.  
+  
+ [!code-csharp[ApplicationRunSnippets#CustomEntryPointAndRunCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationRunSnippets/CSharp/App.cs#customentrypointandruncode)]
+ [!code-vb[ApplicationRunSnippets#CustomEntryPointAndRunCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationRunSnippets/visualbasic/app.vb#customentrypointandruncode)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Windows.Application.Run" />eine im Browser gehostete Anwendung aufgerufen wird (z. B. ein [!INCLUDE[TLA#tla_xbap](~/includes/tlasharptla-xbap-md.md)]).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public int Run (System.Windows.Window window);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Run(class System.Windows.Window window) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.Run(System.Windows.Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="window" Type="System.Windows.Window" />
+      </Parameters>
+      <Docs>
+        <param name="window">Ein <see cref="T:System.Windows.Window" /> , die automatisch beim Start einer Anwendung geöffnet.</param>
+        <summary>Startet eine [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] Anwendung und das angegebene Fenster geöffnet.</summary>
+        <returns>Die <see cref="T:System.Int32" /> Exit-Anwendungscode, der beim Herunterfahren der Anwendung an das Betriebssystem zurückgegeben wird. Standardmäßig ist der Wert für den Exitcode 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung erweitert die <xref:System.Windows.Application.Run%2A> Methode, um das angegebene Fenster zu öffnen, nach dem Starten einer Anwendung ausgeführt wird.  
+  
+ Wenn Sie einen Code definieren <xref:System.Windows.Application> , die ein Fenster geöffnet, wenn er ausgeführt wird, rufen Sie Sie explizit <xref:System.Windows.Application.Run%2A>.  
+  
+ Wenn Sie erstellen Ihre <xref:System.Windows.Application> mit Markup oder Markup und CodeBehind, können Sie ein Fenster mit einem der folgenden Methoden automatisch öffnen:  
+  
+-   Deklarativ durch Festlegen von <xref:System.Windows.Application.StartupUri%2A>.  
+  
+-   Programmgesteuert, durch die Behandlung <xref:System.Windows.Application.Startup>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Anwendung mit einer manuell erstellten statischen Einstiegspunktmethode, die instanziiert <xref:System.Windows.Application>, vor dem Aufruf <xref:System.Windows.Application.Run%2A>.  
+  
+ [!code-csharp[ApplicationRunOL1Snippets#CustomEntryPointAndRunOL1CODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationRunOL1Snippets/CSharp/App.cs#customentrypointandrunol1code)]
+ [!code-vb[ApplicationRunOL1Snippets#CustomEntryPointAndRunOL1CODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationRunOL1Snippets/visualbasic/app.vb#customentrypointandrunol1code)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Windows.Application.Run" />eine im Browser gehostete Anwendung aufgerufen wird (z. B. ein [!INCLUDE[TLA#tla_xbap](~/includes/tlasharptla-xbap-md.md)]).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionEnding">
+      <MemberSignature Language="C#" Value="public event System.Windows.SessionEndingCancelEventHandler SessionEnding;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.SessionEndingCancelEventHandler SessionEnding" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Application.SessionEnding" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.SessionEndingCancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer beendet die [!INCLUDE[TLA#tla_mswin](~/includes/tlasharptla-mswin-md.md)] Sitzung durch abmelden oder das Betriebssystem heruntergefahren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird eine Anwendung heruntergefahren, wenn die [!INCLUDE[TLA#tla_mswin](~/includes/tlasharptla-mswin-md.md)] Sitzung endet, das auftritt, wenn ein Benutzer abmeldet oder heruntergefahren. In diesem Fall [!INCLUDE[TLA2#tla_mswin](~/includes/tla2sharptla-mswin-md.md)] fordert jede Anwendung, die zum Herunterfahren öffnen. Es ist jedoch möglich, dass eine Anwendung möglicherweise nicht zum Herunterfahren in diesem Fall bereit. Z. B. möglicherweise eine Anwendung Daten, die in einem inkonsistenten Status oder in der Mitte einer länger dauernde Vorgang darstellt. In diesen Situationen es möglicherweise wünschenswert, zu verhindern, dass die Sitzung beendet und kann mehr wünschenswert sein, Benutzern die Möglichkeit, entscheiden Sie, ob die Sitzung beendet wird oder nicht.  
+  
+ Sie können erkennen, wenn eine Sitzung beendet wird, durch Behandeln der <xref:System.Windows.Application.SessionEnding> Ereignis. Wenn eine Anwendung zu verhindern, dass die Sitzung beenden, muss der <xref:System.Windows.SessionEndingCancelEventArgs> macht Argument, das an den Ereignishandler übergeben wird die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> , mit denen sich `true` (der Standardwert ist `false`).  
+  
+ Wenn <xref:System.Windows.Application.SessionEnding> nicht behandelt wird oder ohne abgebrochen wird, erfolgt <xref:System.Windows.Application.Shutdown%2A> aufgerufen wird und die <xref:System.Windows.Application.Exit> Ereignis wird ausgelöst.  
+  
+ Erhalten Sie weitere Informationen, warum die Sitzung beendet wird, kann eine Anwendung überprüfen <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A>, also eine der der <xref:System.Windows.ReasonSessionEnding> Werte (<xref:System.Windows.ReasonSessionEnding.Logoff> und <xref:System.Windows.ReasonSessionEnding.Shutdown>).  
+  
+ <xref:System.Windows.Application.SessionEnding>wird nicht durch konsolenanwendungen ausgelöst werden.  
+  
+ <xref:System.Windows.Application.SessionEnding>wird ausgelöst, nur in dem Thread, der erstellt die <xref:System.Windows.Application> Objekt.  
+  
+ <xref:System.Windows.Application.SessionEnding>wird nicht ausgelöst, für [!INCLUDE[TLA#tla_xbap#plural](~/includes/tlasharptla-xbapsharpplural-md.md)].  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Behandeln der <xref:System.Windows.Application.SessionEnding> Ereignisses und ermöglicht dem Benutzer, es abzubrechen.  
+  
+ [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
+  
+ [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
+ [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCookie">
+      <MemberSignature Language="C#" Value="public static void SetCookie (Uri uri, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetCookie(class System.Uri uri, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.SetCookie(System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Die <see cref="T:System.Uri" /> , angibt, dass den Speicherort für den das Cookie erstellt werden soll.</param>
+        <param name="value">Die <see cref="T:System.String" /> die Cookiedaten enthält.</param>
+        <summary>Erstellt einen Cookie des für den vom angegebenen Speicherort eine <see cref="T:System.Uri" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Cookie ist eine beliebige Datenmenge, die von einer Anwendung auf dem Clientcomputer während anwendungssitzungen (Sitzungscookies) oder über anwendungssitzungen (permanente Cookies) gespeichert werden können. Sie können beide Typen von Cookies durch den Aufruf erstellen <xref:System.Windows.Application.SetCookie%2A>.  
+  
+ Cookiedaten dauert normalerweise die Form eines Name/Wert-Paars im folgenden Format an:  
+  
+ `Name=Value`  
+  
+ Sie übergeben eine Zeichenfolge dieses Format, um <xref:System.Windows.Application.SetCookie%2A>, zusammen mit den <xref:System.Uri> des Speicherorts für den das Cookie festgelegt werden soll (in der Regel die Anwendungsdomäne).  
+  
+ Ob ein Cookie ein Sitzungscookie ist oder ein permanentes Cookie, hängt davon ab, ob das Cookie-Zeichenfolge, übergeben Sie an <xref:System.Windows.Application.SetCookie%2A> ein Ablaufdatum enthält. Die Zeichenfolge für ein Sitzungscookie schließt kein Ablaufdatum ein. Die Zeichenfolge für ein permanentes Cookie ist, muss im folgenden Format:  
+  
+ `NAME=VALUE; expires=DAY, DD-MMM-YYYY HH:MM:SS GMT`  
+  
+ Permanente Cookies werden gespeichert, in der aktuellen [!INCLUDE[TLA#tla_mswin](~/includes/tlasharptla-mswin-md.md)] Ordner Temporäre Internetdateien Installation bis zu ihrem Ablauf in diesem Fall werden gelöscht,. Sie können ein permanentes Cookie aus Ihrer Anwendung löschen, indem das Ablaufdatum auf ein Datum/Uhrzeit-Wert, der in der Vergangenheit liegt.  
+  
+ Eine Übersicht über Cookies in [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)], finden Sie unter [Navigation Overview](~/docs/framework/wpf/app-development/navigation-overview.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Ein [!INCLUDE[TLA#tla_win32](~/includes/tlasharptla-win32-md.md)] Fehler wird ausgelöst, durch die <see langword="InternetSetCookie" /> Funktion (von aufgerufen <see cref="M:System.Windows.Application.SetCookie(System.Uri,System.String)" />), wenn ein Problem auftritt, beim Erstellen des angegebenen Cookies.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Abrufen der Cookies für eine dateibasierte <see cref="T:System.Uri" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Net.WebPermission">zum Abrufen des Cookies für eine nicht-dateibasierte <see cref="T:System.Uri" />. Zugeordnete Enumeration:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Anwendung wird heruntergefahren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Application.Shutdown%2A> aufgerufen wird, wird eine Anwendung beendet wird. Sie können behandeln die <xref:System.Windows.Application.Exit> Ereignis zu erkennen, wenn eine Anwendung zu unterbrechen, um die entsprechende Verarbeitung auszuführen.  
+  
+ <xref:System.Windows.Application.Shutdown%2A>wird implizit aufgerufen, indem [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] in den folgenden Situationen:  
+  
+-   Wenn <xref:System.Windows.Application.ShutdownMode%2A> festgelegt ist, um <xref:System.Windows.ShutdownMode.OnLastWindowClose>.  
+  
+-   Wenn die <xref:System.Windows.Application.ShutdownMode%2A> festgelegt ist, um <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
+  
+-   Wenn ein Benutzer eine Sitzung beendet und die <xref:System.Windows.Application.SessionEnding> Ereignis ist entweder nicht behandelt oder ohne Abbruch behandelt.  
+  
+ Aufrufen von <xref:System.Windows.Application.Shutdown%2A> explizit durch die Anwendung herunterzufahren, unabhängig von der <xref:System.Windows.Application.ShutdownMode%2A> Einstellung. Jedoch wenn <xref:System.Windows.Application.ShutdownMode%2A> festgelegt ist, um <xref:System.Windows.ShutdownMode.OnExplicitShutdown>, rufen Sie <xref:System.Windows.Application.Shutdown%2A> um eine Anwendung zu schließen.  
+  
+> [!IMPORTANT]
+>  Wenn <xref:System.Windows.Application.Shutdown%2A> wird aufgerufen, die Anwendung wird heruntergefahren unabhängig davon, ob die <xref:System.Windows.Window.Closing> Ereignis von allen geöffneten Fenstern wird abgebrochen.  
+  
+ Diese Methode kann nur von dem erstellten Thread aufgerufen werden der <xref:System.Windows.Application> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">nach der Installationsberechtigung für alle Fenster und Benutzereingabeereignisse uneingeschränkt verwenden. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public void Shutdown (int exitCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Shutdown(int32 exitCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.Shutdown(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exitCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="exitCode">Eine ganze Zahl Exitcode für eine Anwendung. Der Exitcode der Standard ist 0.</param>
+        <summary>Fährt eine Anwendung, die den angegebenen Exitcode an das Betriebssystem zurückgibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können behandeln die <xref:System.Windows.Application.Exit> Ereignis, um einen Exitcode festgelegt. Jedoch, wenn Sie explizit aufrufen <xref:System.Windows.Application.Shutdown%2A>, und behandeln Sie <xref:System.Windows.Application.Exit> nur um einen Exitcode festzulegen, die Sie aufrufen können <xref:System.Windows.Application.Shutdown%2A> stattdessen.  
+  
+ Diese Methode kann nur von dem erstellten Thread aufgerufen werden der <xref:System.Windows.Application> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">nach der Installationsberechtigung für alle Fenster und Benutzereingabeereignisse uneingeschränkt verwenden. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShutdownMode">
+      <MemberSignature Language="C#" Value="public System.Windows.ShutdownMode ShutdownMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.ShutdownMode ShutdownMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Application.ShutdownMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ShutdownMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Bedingung, die bewirkt, dass die <see cref="M:System.Windows.Application.Shutdown" /> Methode, die aufgerufen werden.</summary>
+        <value>Ein <see cref="T:System.Windows.ShutdownMode" />-Enumerationswert. Der Standardwert ist <see cref="F:System.Windows.ShutdownMode.OnLastWindowClose" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungen nicht mehr ausführen nur, wenn die <xref:System.Windows.Application.Shutdown%2A> -Methode der Anwendung aufgerufen wird. Herunterfahren ist möglich, implizit oder explizit als durch den Wert des angegebenen die <xref:System.Windows.Application.ShutdownMode%2A> Eigenschaft.  
+  
+ Wenn Sie festlegen, <xref:System.Windows.Application.ShutdownMode%2A> auf <xref:System.Windows.ShutdownMode.OnLastWindowClose>, [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] ruft implizit <xref:System.Windows.Application.Shutdown%2A> Wenn das letzte Fenster in einer Anwendung geschlossen wurde, selbst wenn derzeit instanziierte Fenster als Hauptfenster festgelegt sind (finden Sie unter <xref:System.Windows.Application.MainWindow%2A>).  
+  
+ Ein <xref:System.Windows.Application.ShutdownMode%2A> von <xref:System.Windows.ShutdownMode.OnMainWindowClose> bewirkt, dass [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]implizit Aufrufen <xref:System.Windows.Application.Shutdown%2A> bei der <xref:System.Windows.Application.MainWindow%2A> geschlossen wurde, auch wenn andere Fenster geöffnet sind.  
+  
+ Die Lebensdauer des einige Anwendungen möglicherweise nicht abhängig, wenn das Hauptfenster letzte Fenster geschlossen wird oder möglicherweise überhaupt nicht werden abhängig von Windows. Für die folgenden Szenarien müssen Sie festlegen der <xref:System.Windows.Application.ShutdownMode%2A> Eigenschaft <xref:System.Windows.ShutdownMode.OnExplicitShutdown>, wofür eine explizite <xref:System.Windows.Application.Shutdown%2A> -Methodenaufruf, um die Anwendung beenden. Andernfalls stellt die Anwendung weiterhin im Hintergrund ausgeführt.  
+  
+ <xref:System.Windows.Application.ShutdownMode%2A>kann konfiguriert werden deklarativ [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)] oder programmgesteuert von Code.  
+  
+ Diese Eigenschaft steht nur aus dem erstellten Thread, der <xref:System.Windows.Application> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie so konfigurieren Sie <xref:System.Windows.Application.ShutdownMode%2A> um anzugeben, dass eine Anwendung explizit geschlossen werden muss.  
+  
+ [!code-xaml[ApplicationShutdownModeSnippets#SetShutdownModeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/App.xaml#setshutdownmodexaml)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Startup">
+      <MemberSignature Language="C#" Value="public event System.Windows.StartupEventHandler Startup;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.StartupEventHandler Startup" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Application.Startup" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.StartupEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="M:System.Windows.Application.Run" /> Methode der <see cref="T:System.Windows.Application" /> -Objekts aufgerufen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine typische [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] Anwendung kann eine Vielzahl von Initialisierungsaufgaben ausführen beim Start gestartet wurde, einschließlich:  
+  
+-   Verarbeiten Befehlszeilenparameter ein.  
+  
+-   Öffnen im Hauptfenster.  
+  
+-   Initialisieren von Anwendungsbereich Ressourcen.  
+  
+-   Initialisieren anwendungsspezifische Eigenschaften.  
+  
+ Sie können deklarativ angeben, das Hauptfenster und Anwendungsbereich Ressourcen mithilfe von [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)] (<xref:System.Windows.Application.StartupUri%2A> und <xref:System.Windows.Application.Resources%2A>bzw.). In manchen Fällen kann jedoch die Ressourcen oder im Hauptfenster der Anwendung nur programmgesteuert zur Laufzeit ermittelt werden. Darüber hinaus können anwendungsspezifische Eigenschaften und Befehlszeilenparameter nur programmgesteuert verwendet werden. Programmgesteuerte Initialisierung ausgeführt werden kann, durch Behandeln der <xref:System.Windows.Application.Startup> Ereignis, einschließlich der folgenden:  
+  
+-   Abrufen und Verarbeiten von Befehlszeilenparametern, die verfügbar sind die <xref:System.Windows.StartupEventArgs.Args%2A> Eigenschaft der <xref:System.Windows.StartupEventArgs> -Klasse, die an die <xref:System.Windows.Application.Startup> -Ereignishandler.  
+  
+-   Initialisieren von anwendungsweiten Ressourcen mithilfe der <xref:System.Windows.Application.Resources%2A> Eigenschaft.  
+  
+-   Initialisieren Sie anwendungsspezifische Eigenschaften mithilfe der <xref:System.Windows.Application.Properties%2A> Eigenschaft.  
+  
+-   Instanziieren und (mindestens) Fenster anzeigen.  
+  
+> [!NOTE]
+>  Befehlszeilenparameter können auch abgerufen werden, durch Aufrufen der statischen <xref:System.Environment.GetCommandLineArgs%2A> Methode der <xref:System.Environment> Objekt. Allerdings <xref:System.Environment.GetCommandLineArgs%2A> erfordert volle Vertrauenswürdigkeit ausgeführt.  
+  
+ Wenn Sie festlegen <xref:System.Windows.Application.StartupUri%2A> mit [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)], das Hauptfenster, die erstellt wird ist nicht verfügbar, entweder die <xref:System.Windows.Application.MainWindow%2A> Eigenschaft oder die <xref:System.Windows.Application.Windows%2A> Eigenschaft der <xref:System.Windows.Application> Objekt erst nach der <xref:System.Windows.Application.Startup> -Ereignis verarbeitet wird. Wenn Sie Zugriff auf das Hauptfenster während des Starts benötigen, müssen Sie manuell erstellen Sie ein neues Fensterobjekt aus der <xref:System.Windows.Application.Startup> -Ereignishandler.  
+  
+> [!NOTE]
+>  Wenn Ihre Anwendung verwendet <xref:System.Net.AuthenticationManager.CredentialPolicy%2A> um eine Anmeldeinformationsrichtlinie anzugeben, müssen Sie festlegen <xref:System.Net.AuthenticationManager.CredentialPolicy%2A> nach <xref:System.Windows.Application.Startup> ausgelöst wurde, andernfalls [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] wird auf eine interne Standardrichtlinie direkt nach der <xref:System.Windows.Application.Startup> Ereignis ausgelöst wurde.  
+  
+ Die Befehlszeilenargumente, die übergeben werden, die <xref:System.Windows.Application.Startup> Ereignishandler sind nicht identisch mit der [!INCLUDE[TLA#tla_url](~/includes/tlasharptla-url-md.md)] Abfragezeichenfolgenparameter, die übergeben werden, ein [!INCLUDE[TLA#tla_xbap](~/includes/tlasharptla-xbap-md.md)].  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie zum Abrufen und Verarbeiten von einer eigenständigen Anwendung Befehlszeilenoptionen. Wenn die **/StartMinimized** Befehlszeilenparameter angegeben wurde, die Anwendung öffnet das Hauptfenster im minimierten Zustand.  
+  
+ [!code-xaml[ApplicationStartupSnippets#HandleStartupXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
+  
+ [!code-csharp[ApplicationStartupSnippets#HandleStartupCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#handlestartupcodebehind)]
+ [!code-vb[ApplicationStartupSnippets#HandleStartupCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#handlestartupcodebehind)]  
+  
+ [!INCLUDE[TLA#tla_xbap#plural](~/includes/tlasharptla-xbapsharpplural-md.md)]kann nicht abgerufen werden und Befehlszeilenargumente verarbeitet werden, da sie mit gestartet worden sind [!INCLUDE[TLA#tla_clickonce](~/includes/tlasharptla-clickonce-md.md)] Bereitstellung (finden Sie unter [Bereitstellung einer WPF-Anwendung (WPF)](~/docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)). Von den zum Starten verwendeten URLs können jedoch Abfragezeichenfolgenparameter abgerufen und verarbeitet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartupUri">
+      <MemberSignature Language="C#" Value="public Uri StartupUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri StartupUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Application.StartupUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] , wird automatisch angezeigt, wenn eine Anwendung gestartet wird.</summary>
+        <value>Ein <see cref="T:System.Uri" /> bezieht, die sich auf die [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] , die automatisch geöffnet wird, wenn eine Anwendung gestartet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie <xref:System.Windows.Application.StartupUri%2A> automatisch Laden einer [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Ressource beim Starten einer Anwendung.  
+  
+ Die folgende Tabelle zeigt die Typen von [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Ressourcen, die geladen werden können, den Typ des Fensters, in geöffnet werden und den Typ der Anwendung, die diese Ressourcen als festgelegt werden, können die <xref:System.Windows.Application.StartupUri%2A>.  
+  
+|Typ|Fenster|Anwendungstyp|  
+|----------|------------|----------------------|  
+|<xref:System.Windows.Window>|<xref:System.Windows.Window>|Nur eigenständige|  
+|<xref:System.Windows.Navigation.NavigationWindow>|<xref:System.Windows.Navigation.NavigationWindow>|Nur eigenständige|  
+|<xref:System.Windows.Controls.Page>|<xref:System.Windows.Navigation.NavigationWindow>|Eigenständige/im Browser gehostete|  
+|<xref:System.Windows.Controls.UserControl>|<xref:System.Windows.Navigation.NavigationWindow>|Eigenständige/im Browser gehostete|  
+|<xref:System.Windows.Documents.FlowDocument>|<xref:System.Windows.Navigation.NavigationWindow>|Eigenständige/im Browser gehostete|  
+|<xref:System.Windows.Navigation.PageFunction%601>|<xref:System.Windows.Navigation.NavigationWindow>|Eigenständige/im Browser gehostete|  
+  
+ Legen Sie in der Regel die <xref:System.Windows.Application.StartupUri%2A> -Eigenschaft deklarativ in [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)]. Sie können jedoch festlegen, <xref:System.Windows.Application.StartupUri%2A> programmgesteuert, z. B. eine <xref:System.Windows.Application.Startup> -Ereignishandler, wenn bei Anwendungen nützlich, die nur die erforderlichen laden können [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Ressourcen zur Laufzeit. Beispielsweise kann eine Anwendung warten, bis zur Laufzeit zum Laden der Ressourcen, wenn der Name des der [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Ressource in einer Konfigurationsdatei gespeichert ist.  
+  
+ Gibt an, ob Sie festlegen, <xref:System.Windows.Application.StartupUri%2A> programmgesteuert oder deklarativ der entsprechenden [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Ressource wurde nicht geladen, bis nach der <xref:System.Windows.Application.Startup> Ereignis behandelt wird. Daher haben Sie keinen Zugriff auf das resultierende Fenster entweder aus der <xref:System.Windows.Application.Windows%2A> Eigenschaft oder die <xref:System.Windows.Application.MainWindow%2A> Eigenschaft bei der Verarbeitung von <xref:System.Windows.Application.Startup>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="P:System.Windows.Application.StartupUri" />mit dem Wert Null festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IQueryAmbient.IsAmbientPropertyAvailable">
+      <MemberSignature Language="C#" Value="bool IQueryAmbient.IsAmbientPropertyAvailable (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Windows.Markup.IQueryAmbient.IsAmbientPropertyAvailable(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.System#Windows#Markup#IQueryAmbient#IsAmbientPropertyAvailable(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der angeforderten ambient-Eigenschaft.</param>
+        <summary>Fragt ab, ob eine angegebene Ambiente-Eigenschaft im aktuellen Bereich verfügbar ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die angeforderte Ambiente-Eigenschaft verfügbar ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Application>-Instanz in eine <xref:System.Windows.Markup.IQueryAmbient>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryFindResource">
+      <MemberSignature Language="C#" Value="public object TryFindResource (object resourceKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object TryFindResource(object resourceKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Application.TryFindResource(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">Der Name des zu suchenden Ressource.</param>
+        <summary>Sucht die angegebene Ressource.</summary>
+        <returns>Das angeforderte Ressourcenobjekt auf. Wenn die angeforderte Ressource nicht gefunden wird, wird ein null-Verweis zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Application.TryFindResource%2A>sucht zuerst im Anwendungsbereich Ressourcen für die angegebene Ressource. Anwendungsbereich Ressourcen werden vom verwaltet <xref:System.Windows.Application>, und stehen zur Verfügung, aus der <xref:System.Windows.Application.Resources%2A> Eigenschaft. Wenn die angegebene Ressource nicht, in der Menge der Anwendungsbereich Ressourcen gefunden wird, <xref:System.Windows.Application.TryFindResource%2A> anschließend sucht die Systemressourcen. Systemressourcen sind Shellressourcen, die vom Benutzer definierte und Farben, Schriftarten und Shellkonfigurationen enthalten. Diese Felder werden zur Verfügung, aus der <xref:System.Windows.SystemColors>, <xref:System.Windows.SystemFonts>, und <xref:System.Windows.SystemParameters> Argumenttypen, das als statische Eigenschaften. Mit <xref:System.Windows.Application.TryFindResource%2A> zum Abrufen, diese Typen auch verfügbar machen Key Ressourceneigenschaften, die entwickelt wurden, übergeben werden <xref:System.Windows.Application.TryFindResource%2A>, z. B. <xref:System.Windows.SystemParameters.IconWidthKey%2A>.  
+  
+ Da <xref:System.Windows.Application.TryFindResource%2A> gibt ein Objekt, das Sie müssen den zurückgegebenen Wert in den entsprechenden Typ umwandeln, wenn die Ressource gefunden wurde.  
+  
+ Diese Methode ist threadsicher und kann von jedem Thread aufgerufen werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Windows.Application.TryFindResource%2A> zum Abrufen einer Ressource.  
+  
+ [!code-xaml[ApplicationTryFindResourceSnippets#ApplicationCallTryFindResourceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationTryFindResourceSnippets/CSharp/App.xaml#applicationcalltryfindresourcexaml)]  
+  
+ [!code-csharp[ApplicationTryFindResourceSnippets#ApplicationCallTryFindResourceCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationTryFindResourceSnippets/CSharp/MainWindow.xaml.cs#applicationcalltryfindresourcecodebehind1)]
+ [!code-vb[ApplicationTryFindResourceSnippets#ApplicationCallTryFindResourceCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationTryFindResourceSnippets/visualbasic/mainwindow.xaml.vb#applicationcalltryfindresourcecodebehind1)]  
+[!code-csharp[ApplicationTryFindResourceSnippets#ApplicationCallTryFindResourceCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationTryFindResourceSnippets/CSharp/MainWindow.xaml.cs#applicationcalltryfindresourcecodebehind2)]
+[!code-vb[ApplicationTryFindResourceSnippets#ApplicationCallTryFindResourceCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationTryFindResourceSnippets/visualbasic/mainwindow.xaml.vb#applicationcalltryfindresourcecodebehind2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Windows">
+      <MemberSignature Language="C#" Value="public System.Windows.WindowCollection Windows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.WindowCollection Windows" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Application.Windows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.WindowCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die instanziierten Fenster in einer Anwendung ab.</summary>
+        <value>Ein <see cref="T:System.Windows.WindowCollection" /> enthält Verweise auf alle Windows-Objekte in der aktuellen <see cref="T:System.AppDomain" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Window> Verweis wird automatisch hinzugefügt, <xref:System.Windows.Application.Windows%2A> als ein Fenster instanziiert ist die [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Thread; Windows durch die erstellte Worker Threads nicht hinzugefügt werden. Ein <xref:System.Windows.Window> Verweis wird automatisch entfernt, nachdem seine <xref:System.Windows.Window.Closing> Ereignis behandelt wurde und bevor seine <xref:System.Windows.Window.Closed> Ereignis wird ausgelöst.  
+  
+ Standardmäßig das erste Element hinzugefügt, um die <xref:System.Windows.Application.Windows%2A> Eigenschaft der <xref:System.Windows.Application.MainWindow%2A>.  
+  
+ Diese Eigenschaft steht nur aus dem erstellten Thread, der <xref:System.Windows.Application> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Aufzählen der <xref:System.Windows.Application.Windows%2A> Eigenschaft, um eine Windows-Menü der obersten Ebene, zu erstellen, die gemeinsam ist [!INCLUDE[TLA#tla_mdi](~/includes/tlasharptla-mdi-md.md)] Anwendungen wie [!INCLUDE[TLA#tla_xl](~/includes/tlasharptla-xl-md.md)], oder multiinstanzbericht einzelne Document Interface (SDI)-Anwendungen wie [!INCLUDE[TLA#tla_word](~/includes/tlasharptla-word-md.md)].  
+  
+ [!code-csharp[ApplicationWindowsSnippets#WindowMenuItemCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationWindowsSnippets/CSharp/WindowMenuItem.cs#windowmenuitemcode)]
+ [!code-vb[ApplicationWindowsSnippets#WindowMenuItemCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationWindowsSnippets/visualbasic/windowmenuitem.vb#windowmenuitemcode)]  
+  
+ [!code-xaml[ApplicationWindowsSnippets#MainWindowSetWindowsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationWindowsSnippets/CSharp/MainWindow.xaml#mainwindowsetwindowsxaml)]  
+  
+ [!code-csharp[ApplicationWindowsSnippets#MainWindowSetWindowsCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationWindowsSnippets/CSharp/MainWindow.xaml.cs#mainwindowsetwindowscodebehind1)]
+ [!code-vb[ApplicationWindowsSnippets#MainWindowSetWindowsCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationWindowsSnippets/visualbasic/mainwindow.xaml.vb#mainwindowsetwindowscodebehind1)]  
+[!code-csharp[ApplicationWindowsSnippets#MainWindowSetWindowsCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationWindowsSnippets/CSharp/MainWindow.xaml.cs#mainwindowsetwindowscodebehind2)]
+[!code-vb[ApplicationWindowsSnippets#MainWindowSetWindowsCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationWindowsSnippets/visualbasic/mainwindow.xaml.vb#mainwindowsetwindowscodebehind2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1085 @@
+<Type Name="ImmutableArray&lt;T&gt;+Builder" FullName="System.Collections.Immutable.ImmutableArray&lt;T&gt;+Builder">
+  <TypeSignature Language="C#" Value="public sealed class ImmutableArray&lt;T&gt;.Builder : System.Collections.Generic.ICollection&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;, System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyCollection&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed beforefieldinit ImmutableArray`1/Builder&lt;T&gt; extends System.Object implements class System.Collections.Generic.ICollection`1&lt;!T&gt;, class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.Generic.IList`1&lt;!T&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;!T&gt;, class System.Collections.Generic.IReadOnlyList`1&lt;!T&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Immutable.ImmutableArray`1.Builder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Immutable</AssemblyName>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>1.2.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IList&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyList&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>  
+  
+ Ein beschreibbarer Arrayaccessor, der in eine <see cref="T:System.Collections.Immutable.ImmutableArray`1" />-Instanz konvertiert werden kann, ohne zusätzlichen Speicher zu belegen.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Objekt, das dem Array hinzugefügt werden soll.</param>
+        <summary>  
+  
+ Fügt dem Array das angegebene Element hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Collections.Generic.IEnumerable&lt;T&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.AddRange(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="items">Das Element, das der Liste hinzugefügt werden soll.</param>
+        <summary>  
+  
+ Fügt das angegebene Element am Ende des Arrays hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Collections.Immutable.ImmutableArray&lt;T&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(valuetype System.Collections.Immutable.ImmutableArray`1&lt;!T&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.AddRange(System.Collections.Immutable.ImmutableArray{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Immutable.ImmutableArray&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="items">Das Element, das der Liste hinzugefügt werden soll.</param>
+        <summary>  
+  
+ Fügt das angegebene Element am Ende des Arrays hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Collections.Immutable.ImmutableArray&lt;T&gt;.Builder items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Collections.Immutable.ImmutableArray`1/Builder&lt;!T&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.AddRange(System.Collections.Immutable.ImmutableArray`1.Builder{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Immutable.ImmutableArray&lt;T&gt;+Builder" />
+      </Parameters>
+      <Docs>
+        <param name="items">Das Element, das der Liste hinzugefügt werden soll.</param>
+        <summary>  
+  
+ Fügt das angegebene Element am Ende des Arrays hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (params T[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(!T[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.AddRange(`0[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="T[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="items">Das Element, das der Liste hinzugefügt werden soll.</param>
+        <summary>  
+  
+ Fügt das angegebene Element am Ende des Arrays hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Collections.Immutable.ImmutableArray&lt;T&gt; items, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(valuetype System.Collections.Immutable.ImmutableArray`1&lt;!T&gt; items, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.AddRange(System.Collections.Immutable.ImmutableArray{`0},System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Immutable.ImmutableArray&lt;T&gt;" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="items">Das Element, das der Liste hinzugefügt werden soll.</param>
+        <param name="length">Die Anzahl der aus dem Quellarray hinzuzufügenden Elemente.</param>
+        <summary>  
+  
+ Fügt das angegebene Element am Ende des Arrays hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (T[] items, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(!T[] items, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.AddRange(`0[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="T[]" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="items">Das Element, das der Liste hinzugefügt werden soll.</param>
+        <param name="length">Die Anzahl der aus dem Quellarray hinzuzufügenden Elemente.</param>
+        <summary>  
+  
+ Fügt das angegebene Element am Ende des Arrays hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange&lt;TDerived&gt;">
+      <MemberSignature Language="C#" Value="public void AddRange&lt;TDerived&gt; (System.Collections.Immutable.ImmutableArray&lt;TDerived&gt; items) where TDerived : T;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange&lt;(!T) TDerived&gt;(valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!TDerived&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.AddRange``1(System.Collections.Immutable.ImmutableArray{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TDerived">
+          <Constraints>
+            <BaseTypeName>T</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Immutable.ImmutableArray&lt;TDerived&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TDerived">Der Typ, der von dem bereits im Array vorhandenen Elementtyp abgeleitet wird.</typeparam>
+        <param name="items">Die Elemente, die dem Ende des Arrays hinzugefügt werden sollen.</param>
+        <summary>  
+  
+ Fügt die angegebenen Elemente, die vom derzeit im Array angegebenen Typ abgeleitet werden, am Ende des Arrays hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange&lt;TDerived&gt;">
+      <MemberSignature Language="C#" Value="public void AddRange&lt;TDerived&gt; (System.Collections.Immutable.ImmutableArray&lt;TDerived&gt;.Builder items) where TDerived : T;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange&lt;(!T) TDerived&gt;(class System.Collections.Immutable.ImmutableArray`1/Builder&lt;!!TDerived&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.AddRange``1(System.Collections.Immutable.ImmutableArray`1.Builder{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TDerived">
+          <Constraints>
+            <BaseTypeName>T</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Immutable.ImmutableArray&lt;TDerived&gt;+Builder" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TDerived">Der Typ, der von dem bereits im Array vorhandenen Elementtyp abgeleitet wird.</typeparam>
+        <param name="items">Die Elemente, die dem Ende des Arrays hinzugefügt werden sollen.</param>
+        <summary>  
+  
+ Fügt die angegebenen Elemente, die vom derzeit im Array angegebenen Typ abgeleitet werden, am Ende des Arrays hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange&lt;TDerived&gt;">
+      <MemberSignature Language="C#" Value="public void AddRange&lt;TDerived&gt; (TDerived[] items) where TDerived : T;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange&lt;(!T) TDerived&gt;(!!TDerived[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.AddRange``1(``0[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TDerived">
+          <Constraints>
+            <BaseTypeName>T</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="TDerived[]" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TDerived">Der Typ, der von dem bereits im Array vorhandenen Elementtyp abgeleitet wird.</typeparam>
+        <param name="items">Die Elemente, die dem Ende des Arrays hinzugefügt werden sollen.</param>
+        <summary>  
+  
+ Fügt die angegebenen Elemente, die vom derzeit im Array angegebenen Typ abgeleitet werden, am Ende des Arrays hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Capacity">
+      <MemberSignature Language="C#" Value="public int Capacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Capacity" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableArray`1.Builder.Capacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen und definiert die Länge des internen Arrays.  Bei der Einstellung wird das interne Array mit der angegebenen Kapazität neu zugewiesen, wenn er nicht bereits die angegebene Länge ist.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>  
+  
+ Entfernt alle Elemente aus dem Array.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Objekt, das im Array gesucht werden soll.</param>
+        <summary>  
+  
+ Bestimmt, ob das Array einen bestimmten Wert enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn das Objekt gefunden wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (T[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(!T[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.CopyTo(`0[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array, in das kopiert werden soll.</param>
+        <param name="index">Der Index, an dem der Kopiervorgang gestartet werden soll.</param>
+        <summary>  
+  
+ Kopiert den aktuellen Inhalt in das angegebene Array.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableArray`1.Builder.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>  
+  
+ Ruft die Anzahl der Elemente im Array ab oder legt sie fest.</summary>
+        <value>Die Anzahl der Elemente im Array.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert verringert wird, werden die Arrayinhalte abgeschnitten.  
+  
+ Wenn der Wert erhöht wird, werden die hinzugefügten Elemente auf ihren Standardwert initialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;T&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerator`1&lt;!T&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>  
+  
+ Ruft ein Objekt ab, das zum Durchlaufen der Auflistung verwendet werden kann.</summary>
+        <returns>Ein Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.IndexOf(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, das im Array gesucht werden soll.</param>
+        <summary>  
+  
+ Bestimmt den Index eines bestimmten Elements im Array.</summary>
+        <returns>Der Index von <paramref name="item" />, wenn das Element in der Liste gefunden wird, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (T item, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(!T item, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.IndexOf(`0,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, das im Array gesucht werden soll.</param>
+        <param name="startIndex">Die Anfangsposition der Suche.</param>
+        <summary>  
+  
+ Bestimmt den Index des angegebenen Elements.</summary>
+        <returns>Der Index von <paramref name="item" />, wenn das Element in der Liste gefunden wird, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (T item, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(!T item, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.IndexOf(`0,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, das im Array gesucht werden soll.</param>
+        <param name="startIndex">Die Anfangsposition der Suche.</param>
+        <param name="count">Die Anzahl der zu suchenden Elemente.</param>
+        <summary>  
+  
+ Bestimmt den Index des angegebenen Elements.</summary>
+        <returns>Der Index von <paramref name="item" />, wenn das Element in der Liste gefunden wird, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (T item, int startIndex, int count, System.Collections.Generic.IEqualityComparer&lt;T&gt; equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(!T item, int32 startIndex, int32 count, class System.Collections.Generic.IEqualityComparer`1&lt;!T&gt; equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.IndexOf(`0,System.Int32,System.Int32,System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, das im Array gesucht werden soll.</param>
+        <param name="startIndex">Der Index, bei dem mit der Suche begonnen werden soll.</param>
+        <param name="count">Die Anfangsposition der Suche.</param>
+        <param name="equalityComparer">Der Gleichheitsvergleich für die Suche.</param>
+        <summary>  
+  
+ Bestimmt den Index des angegebenen Elements.</summary>
+        <returns>Der Index von <paramref name="item" />, wenn das Element in der Liste gefunden wird, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.Insert(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem das Element eingefügt werden soll.</param>
+        <param name="item">Das Objekt, das in das Array eingefügt werden soll.</param>
+        <summary>  
+  
+ Fügt ein Element am angegebenen Index in das Array ein.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public T this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableArray`1.Builder.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des abzurufenden oder festzulegenden Elements.</param>
+        <summary>  
+  
+ Ruft das Element am angegebenen Index ab oder legt dieses fest.</summary>
+        <value>Das Element am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der angegebene Index ist nicht im Array.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LastIndexOf">
+      <MemberSignature Language="C#" Value="public int LastIndexOf (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 LastIndexOf(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.LastIndexOf(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, nach dem gesucht werden soll.</param>
+        <summary>  
+  
+ Bestimmt den nullbasierten Index des letzten Vorkommens des angegebenen Elements in diesem Array.</summary>
+        <returns>Der nullbasierte Index, in dem das Element gefunden wurde; oder -1, wenn es nicht gefunden werden konnte.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastIndexOf">
+      <MemberSignature Language="C#" Value="public int LastIndexOf (T item, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 LastIndexOf(!T item, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.LastIndexOf(`0,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, nach dem gesucht werden soll.</param>
+        <param name="startIndex">Die Anfangsposition der Suche.</param>
+        <summary>  
+  
+ Bestimmt den nullbasierten Index des letzten Vorkommens des angegebenen Elements in diesem Array.</summary>
+        <returns>Der nullbasierte Index im Array, in dem das Element gefunden wurde; oder -1, wenn es nicht gefunden werden konnte.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastIndexOf">
+      <MemberSignature Language="C#" Value="public int LastIndexOf (T item, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 LastIndexOf(!T item, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.LastIndexOf(`0,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, nach dem gesucht werden soll.</param>
+        <param name="startIndex">Die Anfangsposition der Suche.</param>
+        <param name="count">Die Anzahl der zu suchenden Elemente.</param>
+        <summary>  
+  
+ Bestimmt den nullbasierten Index des letzten Vorkommens des angegebenen Elements in diesem Array.</summary>
+        <returns>Der nullbasierte Index im Array, in dem das Element gefunden wurde; oder -1, wenn es nicht gefunden werden konnte.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastIndexOf">
+      <MemberSignature Language="C#" Value="public int LastIndexOf (T item, int startIndex, int count, System.Collections.Generic.IEqualityComparer&lt;T&gt; equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 LastIndexOf(!T item, int32 startIndex, int32 count, class System.Collections.Generic.IEqualityComparer`1&lt;!T&gt; equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.LastIndexOf(`0,System.Int32,System.Int32,System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, nach dem gesucht werden soll.</param>
+        <param name="startIndex">Die Anfangsposition der Suche.</param>
+        <param name="count">Die Anzahl der zu suchenden Elemente.</param>
+        <param name="equalityComparer">Der Gleichheitsvergleich für die Suche.</param>
+        <summary>  
+  
+ Bestimmt den nullbasierten Index des letzten Vorkommens des angegebenen Elements in diesem Array.</summary>
+        <returns>Der nullbasierte Index im Array, in dem das Element gefunden wurde; oder -1, wenn es nicht gefunden werden konnte.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToImmutable">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;T&gt; MoveToImmutable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;!T&gt; MoveToImmutable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.MoveToImmutable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Extrahiert die internen Array als eine <see cref="T:System.Collections.Immutable.ImmutableArray`1" /> und ersetzt diese durch ein Array der Länge 0 (null).</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn <see cref="P:System.Collections.Immutable.ImmutableArray`1.Builder.Count" /> entspricht nicht <see cref="P:System.Collections.Immutable.ImmutableArray`1.Builder.Capacity" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (T element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(!T element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das zu entfernende Element.</param>
+        <summary>  
+  
+ Entfernt das angegebene Element.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="element" /> gefunden und entfernt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+        <summary>  
+  
+ Entfernt das Element am angegebenen Index aus dem Array.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reverse">
+      <MemberSignature Language="C#" Value="public void Reverse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reverse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.Reverse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Kehrt die Reihenfolge der Elemente in der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public void Sort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Sort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.Sort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>  
+  
+ Sortiert den Inhalt des Arrays.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public void Sort (System.Collections.Generic.IComparer&lt;T&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Sort(class System.Collections.Generic.IComparer`1&lt;!T&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.Sort(System.Collections.Generic.IComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">Der Vergleich, der für die Sortierung verwendet wird. Wenn der Vergleich <see langword="null" /> ist, wird der Standardvergleich für den Elementtyp im Array verwendet.</param>
+        <summary>  
+  
+ Sortiert den Inhalt des Arrays.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public void Sort (Comparison&lt;T&gt; comparison);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Sort(class System.Comparison`1&lt;!T&gt; comparison) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.Sort(System.Comparison{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparison" Type="System.Comparison&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="comparison">Die <see cref="T:System.Comparison`1" />, die beim Vergleich von Elementen verwendet werden soll.</param>
+        <summary>Sortiert die Elemente in das gesamte Array unter Verwendung des angegebenen <see cref="T:System.Comparison`1" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="comparison" /> ist NULL.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public void Sort (int index, int count, System.Collections.Generic.IComparer&lt;T&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Sort(int32 index, int32 count, class System.Collections.Generic.IComparer`1&lt;!T&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.Sort(System.Int32,System.Int32,System.Collections.Generic.IComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Startindex für die Sortierung.</param>
+        <param name="count">Die Anzahl von Elementen, die in die Sortierung eingeschlossen werden sollen.</param>
+        <param name="comparer">Der Vergleich, der für die Sortierung verwendet wird. Wenn der Vergleich <see langword="null" /> ist, wird der Standardvergleich für den Elementtyp im Array verwendet.</param>
+        <summary>  
+  
+ Sortiert den Inhalt des Arrays.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableArray`1.Builder.System#Collections#Generic#ICollection&lt;T&gt;#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Collections.Generic.ICollection`1" /> schreibgeschützt ist.</summary>
+        <value>True, wenn die <see cref="T:System.Collections.Generic.ICollection`1" /> schreibgeschützt ist, andernfalls "false" ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;T&gt; IEnumerable&lt;T&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!T&gt; System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.System#Collections#Generic#IEnumerable&lt;T&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>  
+  
+ Gibt einen Enumerator zurück, der das Array durchläuft.</summary>
+        <returns>Ein Enumerator, der das Array durchläuft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableArray%601.Builder>-Instanz in eine <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>  
+  
+ Gibt einen Enumerator zurück, der das Array durchläuft.</summary>
+        <returns>Ein Enumerator, der das Array durchläuft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableArray%601.Builder>-Instanz in eine <xref:System.Collections.IEnumerable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToArray">
+      <MemberSignature Language="C#" Value="public T[] ToArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T[] ToArray() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.ToArray" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>  
+  
+ Erstellt ein neues Array mit dem aktuellen Inhalt dieses <see cref="T:System.Collections.Immutable.ImmutableArray`1.Builder" />.</summary>
+        <returns>Ein neues Array mit dem Inhalt dieses <see cref="T:System.Collections.Immutable.ImmutableArray`1.Builder" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToImmutable">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;T&gt; ToImmutable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;!T&gt; ToImmutable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray`1.Builder.ToImmutable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>  
+  
+ Gibt ein unveränderliches Array mit dem aktuellen Inhalt dieses <see cref="T:System.Collections.Immutable.ImmutableArray`1.Builder" /> zurück.</summary>
+        <returns>Ein unveränderliches Array mit dem aktuellen Inhalt dieses <see cref="T:System.Collections.Immutable.ImmutableArray`1.Builder" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

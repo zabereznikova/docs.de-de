@@ -1,0 +1,62 @@
+<Type Name="ISettingsProviderService" FullName="System.Configuration.ISettingsProviderService">
+  <TypeSignature Language="C#" Value="public interface ISettingsProviderService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISettingsProviderService" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ISettingsProviderService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle zum Definieren eines anderen Anwendung-Einstellungsanbieter bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.IPersistComponentSettings> Schnittstelle ermöglicht es, Steuerelemente und-Komponenten in einer Anwendung, damit ihre Anwendungseinstellungen in einer Weise, die hauptsächlich für die Anwendung transparent beibehalten gehostet. Allerdings kann in einigen Fällen die Anwendung oder Umgebung müssen die systemintern von einer Komponente mit einem eigenen auswählen verwendete Einstellungsanbieter überschreiben. Die <xref:System.Configuration.ISettingsProviderService> Schnittstelle ermöglicht die Erstellung eines einfachen Diensts, der solche einen alternativen Einstellungsanbieter in der Regel durch die besitzende angeboten kommuniziert <xref:System.ComponentModel.Container>.  
+  
+ <xref:System.Configuration.ISettingsProviderService>wird häufig verwendet, von Entwurfszeittools und Debugger, die spezielle Unterstützung für Anwendungseinstellungen bereitstellen. Um solche eine Anordnung Funktion nahtlos verlaufen, stellen die <xref:System.Configuration.ApplicationSettingsBase> Klasse enthält die Konstruktoren, die einen Verweis auf die besitzende Komponente enthalten. Diese Konstruktoren Abfragen automatisch Einstellungsanbieter kompatibel.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetSettingsProvider">
+      <MemberSignature Language="C#" Value="public System.Configuration.SettingsProvider GetSettingsProvider (System.Configuration.SettingsProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Configuration.SettingsProvider GetSettingsProvider(class System.Configuration.SettingsProperty property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ISettingsProviderService.GetSettingsProvider(System.Configuration.SettingsProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.Configuration.SettingsProperty" />
+      </Parameters>
+      <Docs>
+        <param name="property">Die <see cref="T:System.Configuration.SettingsProperty" /> erfordert, dass Serialisierung.</param>
+        <summary>Gibt den Einstellungsanbieter kompatibel mit der angegebenen Eigenschaft zurück.</summary>
+        <returns>Wenn gefunden, die <see cref="T:System.Configuration.SettingsProvider" /> , die die angegebenen Eigenschaft beibehalten werden kann, andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ISettingsProviderService.GetSettingsProvider%2A> -Methode ermöglicht eine <xref:System.Configuration.ISettingsProviderService> Serialisierungsdienste, um allen positionierten Komponenten anbieten. Diese Methode bestimmt, ob die zugeordneten Einstellungsanbieter den angegebenen Anwendungstyp Einstellungen Eigenschaft beibehalten werden kann. Wenn dies möglich ist, gibt diese Methode einen Verweis auf diesen Einstellungsanbieter zurück; Andernfalls wird zurückgegeben `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

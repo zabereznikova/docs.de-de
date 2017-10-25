@@ -1,0 +1,256 @@
+<Type Name="HitTestInfo" FullName="System.Workflow.ComponentModel.Design.HitTestInfo">
+  <TypeSignature Language="C#" Value="public class HitTestInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HitTestInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.HitTestInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Informationen zu einem Teil von <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> an einer angegebenen Koordinate.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Mithilfe der <xref:System.Workflow.ComponentModel.Design.HitTestInfo>-Klasse und der <xref:System.Workflow.ComponentModel.Design.ActivityDesigner.HitTest%2A>-Methode von <xref:System.Workflow.ComponentModel.Design.ActivityDesigner> können Sie bestimmen, auf welchen Teil von <xref:System.Workflow.ComponentModel.Design.ActivityDesigner> geklickt wurde. Die <xref:System.Workflow.ComponentModel.Design.HitTestInfo>-Klasse enthält den Ort und den zugeordneten Designer, auf den geklickt wurde.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HitTestInfo (System.Workflow.ComponentModel.Design.ActivityDesigner designer, System.Workflow.ComponentModel.Design.HitTestLocations location);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.ComponentModel.Design.ActivityDesigner designer, valuetype System.Workflow.ComponentModel.Design.HitTestLocations location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.HitTestInfo.#ctor(System.Workflow.ComponentModel.Design.ActivityDesigner,System.Workflow.ComponentModel.Design.HitTestLocations)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+        <Parameter Name="location" Type="System.Workflow.ComponentModel.Design.HitTestLocations" />
+      </Parameters>
+      <Docs>
+        <param name="designer">Die zugeordnete <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />.</param>
+        <param name="location">Der Ort auf dem zugeordneten <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />, auf den geklickt wurde.</param>
+        <summary>Initialisiert eine Instanz eines <see cref="T:System.Workflow.ComponentModel.Design.HitTestInfo" />-Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedDesigner">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Design.ActivityDesigner AssociatedDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.ActivityDesigner AssociatedDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.HitTestInfo.AssociatedDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.ActivityDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> ab, der dieser <see cref="T:System.Workflow.ComponentModel.Design.HitTestInfo" />-Klasse zugeordnet ist.</summary>
+        <value>Der dieser <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />-Klasse zugeordnete <see cref="T:System.Workflow.ComponentModel.Design.HitTestInfo" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Workflow.ComponentModel.Design.HitTestInfo.AssociatedDesigner%2A>-Eigenschaft stellt einen Verweis auf den dem <xref:System.Workflow.ComponentModel.Design.ActivityDesigner>-Objekt zugeordneten <xref:System.Workflow.ComponentModel.Design.HitTestInfo> zur Verfügung. Verwenden Sie <xref:System.Workflow.ComponentModel.Design.ActivityDesigner>, um auf erweiterte Informationen zum Designer zu verweisen, die <xref:System.Workflow.ComponentModel.Design.HitTestInfo> zugeordnet sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.HitTestInfo.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Grenzen des getroffenen Bereichs zurück.</summary>
+        <value>Ein Rechteck, das den <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> umfasst, der dem <see cref="T:System.Workflow.ComponentModel.Design.HitTestInfo" />-Objekt zugeordnet ist, oder ein leeres Rechteck, falls das <see cref="T:System.Workflow.ComponentModel.Design.HitTestInfo" />-Objekt keinem Designer zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Grenzen beschreiben den getroffenen Bildschirmbereich, normalerweise den Bereich, der den zugeordneten <xref:System.Workflow.ComponentModel.Design.ActivityDesigner> umfasst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitLocation">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Design.HitTestLocations HitLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.ComponentModel.Design.HitTestLocations HitLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.HitTestInfo.HitLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.HitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält Informationen darüber, wo der Treffer aufgetreten ist.</summary>
+        <value>Ein <see cref="T:System.Workflow.ComponentModel.Design.HitTestLocations" />, der den getroffenen Bereich beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie den <xref:System.Workflow.ComponentModel.Design.HitTestInfo.HitLocation%2A>, um zu bestimmen, auf welchem Bereich des Designers der Treffer aufgetreten ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapToIndex">
+      <MemberSignature Language="C#" Value="public virtual int MapToIndex ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 MapToIndex() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.HitTestInfo.MapToIndex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Index des getroffenen Designers zurück.</summary>
+        <returns>Der Index des Designers, der von <see cref="T:System.Workflow.ComponentModel.Design.HitTestInfo" /> getroffen wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie den von <xref:System.Workflow.ComponentModel.Design.HitTestInfo.MapToIndex%2A> zurückgegebenen Wert, um den getroffenen Designer zu bestimmen. Dies ist für Einfüge- oder Löschvorgänge nützlich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Nowhere">
+      <MemberSignature Language="C#" Value="public static System.Workflow.ComponentModel.Design.HitTestInfo Nowhere { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Workflow.ComponentModel.Design.HitTestInfo Nowhere" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.HitTestInfo.Nowhere" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.HitTestInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine leere <see cref="T:System.Workflow.ComponentModel.Design.HitTestInfo" /> ab.</summary>
+        <value>Ein leerer <see cref="T:System.Workflow.ComponentModel.Design.HitTestInfo" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie `Nowhere` zum Abrufen einer leeren <xref:System.Workflow.ComponentModel.Design.HitTestInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectableObject">
+      <MemberSignature Language="C#" Value="public virtual object SelectableObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SelectableObject" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.HitTestInfo.SelectableObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein auswählbares Objekt ab, das dem Trefferbereich zugeordnet ist.</summary>
+        <value>Ein auswählbares Objekt, das dem Trefferbereich oder einem NULL-Verweis (<see langword="Nothing" /> in Visual Basic) zugeordnet ist, falls <see cref="T:System.Workflow.ComponentModel.Design.HitTestInfo" /> kein Designer zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie `SelectableObject`, um das dem Trefferbereich zugeordnete auswählbare Objekt abzurufen. Ist <xref:System.Workflow.ComponentModel.Design.HitTestInfo> ein Designer zugeordnet, wird von <xref:System.Workflow.ComponentModel.Design.HitTestInfo.SelectableObject%2A> die dem Designer zugeordnete Aktivität zurückgegeben. Falls `Nothing` kein Designer zugeordnet ist, wird ein NULL-Verweis (<xref:System.Workflow.ComponentModel.Design.HitTestInfo>) zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserData">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary UserData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary UserData" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.HitTestInfo.UserData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Benutzerdaten ab, die <see cref="T:System.Workflow.ComponentModel.Design.HitTestInfo" /> zugeordnet sind.</summary>
+        <value>Ein neues Wörterbuch für Benutzerdaten oder ein Verweis auf die vorhandenen Benutzerdaten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.Workflow.ComponentModel.Design.HitTestInfo.UserData%2A>, um Benutzerinformationen über <xref:System.Workflow.ComponentModel.Design.HitTestInfo> zu speichern. Wurden keine Benutzerdaten gespeichert, wird durch Aufrufen von <xref:System.Workflow.ComponentModel.Design.HitTestInfo.UserData%2A> ein neues, leeres Wörterbuch zur Verwendung erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

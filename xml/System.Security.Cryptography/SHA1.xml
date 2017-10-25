@@ -1,0 +1,158 @@
+<Type Name="SHA1" FullName="System.Security.Cryptography.SHA1">
+  <TypeSignature Language="C#" Value="public abstract class SHA1 : System.Security.Cryptography.HashAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SHA1 extends System.Security.Cryptography.HashAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.SHA1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.HashAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Berechnet die <see cref="T:System.Security.Cryptography.SHA1" /> Hash für die Eingabedaten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Hashwert dient als eindeutiger Wert mit fester Größe, die eine große Datenmenge darstellt. Hashes von zwei Sätzen von Daten übereinstimmen, wenn auch die entsprechenden Daten übereinstimmen. Kleine Änderungen an den Daten führen zu groß ist, zu unvorhersehbaren Änderungen im HashSet.  
+  
+ Die Hashgröße für die <xref:System.Security.Cryptography.SHA1> Algorithmus beträgt 160 Bits.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel berechnet den <xref:System.Security.Cryptography.SHA1> -hash für `data` und speichert ihn in `result`. In diesem Beispiel wird davon ausgegangen, dass es eine vordefinierte Konstante ist `DATA_SIZE`.  
+  
+ [!code-cpp[Classic SHA1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic SHA1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SHA1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic SHA1 Example/CS/source.cs#1)]
+ [!code-vb[Classic SHA1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic SHA1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SHA1 ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SHA1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.Security.Cryptography.SHA1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz einer abstrakten Klasse kann nicht erstellt werden. Anwendungscode erstellt eine neue Instanz einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Richtlinie für dieses Objekt ist nicht kompatibel mit dem FIPS-Algorithmus.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.SHA1 Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.SHA1 Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SHA1.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.SHA1</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der Standardimplementierung von <see cref="T:System.Security.Cryptography.SHA1" />.</summary>
+        <returns>Eine neue Instanz von <see cref="T:System.Security.Cryptography.SHA1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung des <xref:System.Security.Cryptography.SHA1> ist <xref:System.Security.Cryptography.SHA1CryptoServiceProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.SHA1 Create (string hashName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.SHA1 Create(string hashName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SHA1.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.SHA1</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hashName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hashName">Der Name der spezifischen Implementierung des <see cref="T:System.Security.Cryptography.SHA1" /> verwendet werden.</param>
+        <summary>Erstellt eine Instanz der angegebenen Implementierung von <see cref="T:System.Security.Cryptography.SHA1" />.</summary>
+        <returns>Eine neue Instanz der <see cref="T:System.Security.Cryptography.SHA1" /> unter Verwendung der angegebenen Implementierung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

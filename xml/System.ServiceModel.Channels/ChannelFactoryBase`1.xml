@@ -1,0 +1,403 @@
+<Type Name="ChannelFactoryBase&lt;TChannel&gt;" FullName="System.ServiceModel.Channels.ChannelFactoryBase&lt;TChannel&gt;">
+  <TypeSignature Language="C#" Value="public abstract class ChannelFactoryBase&lt;TChannel&gt; : System.ServiceModel.Channels.ChannelFactoryBase, System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ChannelFactoryBase`1&lt;TChannel&gt; extends System.ServiceModel.Channels.ChannelFactoryBase implements class System.ServiceModel.Channels.IChannelFactory, class System.ServiceModel.Channels.IChannelFactory`1&lt;!TChannel&gt;, class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ChannelFactoryBase`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TChannel" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.ChannelFactoryBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TChannel">Der Typ des Kanals, der von der Factory erzeugt wird.</typeparam>
+    <summary>Stellt eine allgemeine Basisimplementierung für Kanalfactorys auf dem Client bereit, um Kanäle eines angegebenen Typs zu erstellen, die mit einer spezifischen Adresse verbunden sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kanäle, die von Kanalfactorys auf dem Client erstellt werden, werden vom Server als Kanallistener akzeptiert. Sobald die Kanalverbindung zwischen Client und Dienst hergestellt wurde, kann eine Kommunikation stattfinden und es können Nachrichten ausgetauscht werden.  
+  
+ <xref:System.ServiceModel.Channels.ChannelFactoryBase%601.CreateChannel%2A> verwendet die angegebene Adresse als Ziel für ausgehende Nachrichten. Die ServiceAddress.Uri-Eigenschaft wird als To-Header in der Nachricht verwendet. Die ServiceReference.Via-Eigenschaft wird als physisches Ziel verwendet, an das Nachrichten gesendet werden. Diese stimmt i.&#160;d.&#160;R. mit dem ServiceAddress.Uri-Wert überein.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ChannelFactoryBase`1" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.ServiceModel.Channels.ChannelFactoryBase%601.%23ctor>-Standardkonstruktor initialisiert die Timeouteigenschaften beim Austauschen von Nachrichten mit den Timeoutwerten für das Dienstmodul. Der Standardwert für das Öffnen, Senden und Schließen beträgt 1&#160;Minute; der Standardwert für das Empfangen beträgt 10&#160;Minuten. Mit <xref:System.ServiceModel.Channels.ChannelFactoryBase%601.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29> können Sie abweichende Werte für den Timeoutwert dieser Vorgänge angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ChannelFactoryBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ChannelFactoryBase`1" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor initialisiert die Timeouteigenschaften beim Austauschen von Nachrichten mit den Timeoutwerten für das Dienstmodul. Der Standardwert für das Öffnen, Senden und Schließen beträgt 1&#160;Minute; der Standardwert für das Empfangen beträgt 10&#160;Minuten. Mit <xref:System.ServiceModel.Channels.ChannelFactoryBase%601.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29> können Sie abweichende Werte für den Timeoutwert dieser Vorgänge angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ChannelFactoryBase (System.ServiceModel.IDefaultCommunicationTimeouts timeouts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.IDefaultCommunicationTimeouts timeouts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase`1.#ctor(System.ServiceModel.IDefaultCommunicationTimeouts)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="timeouts" Type="System.ServiceModel.IDefaultCommunicationTimeouts" />
+      </Parameters>
+      <Docs>
+        <param name="timeouts">Die <see cref="T:System.ServiceModel.IDefaultCommunicationTimeouts" />-Schnittstelle mit den Standardtimeoutwerten für das Öffnen, Senden und Empfangen sowie für das Schließen beim Austauschen von Nachrichten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ChannelFactoryBase`1" />-Klasse mit den angegebenen Standardtimeoutwerten für die Kommunikation.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Verwenden von <xref:System.ServiceModel.Channels.ChannelFactoryBase%601.%23ctor%28System.ServiceModel.IDefaultCommunicationTimeouts%29> anstelle des Standardkonstruktors können Sie benutzerdefinierte Timeoutwerte für das Öffnen, Senden, Empfangen und Schließen angeben, anstatt die Standardwerte des Dienstmodells zu verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChannel">
+      <MemberSignature Language="C#" Value="public TChannel CreateChannel (System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TChannel CreateChannel(class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase`1.CreateChannel(System.ServiceModel.EndpointAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="address">Die <see cref="T:System.ServiceModel.EndpointAddress" /> des Remoteendpunkts, an den Nachrichten vom Kanal gesendet werden.</param>
+        <summary>Erstellt einen bestimmten Kanaltyp mit einer angegebenen Endpunktadresse.</summary>
+        <returns>Ein Kanal vom Typ <paramref name="TChannel" /> mit der angegebenen <paramref name="address" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft beim Aufrufen <xref:System.ServiceModel.Channels.ChannelFactoryBase%601.OnCreateChannel%28System.ServiceModel.EndpointAddress%2CSystem.Uri%29> auf. Diese Methode kann nicht von einer abgeleiteten Klasse überschrieben werden.  
+  
+ Hierbei wird <xref:System.ServiceModel.EndpointAddress.Uri%2A> als Transportadresse verwendet, an die Nachrichten im Ausgabekanal gesendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChannel">
+      <MemberSignature Language="C#" Value="public TChannel CreateChannel (System.ServiceModel.EndpointAddress address, Uri via);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TChannel CreateChannel(class System.ServiceModel.EndpointAddress address, class System.Uri via) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase`1.CreateChannel(System.ServiceModel.EndpointAddress,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="via" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="address">Die <see cref="T:System.ServiceModel.EndpointAddress" /> des Remoteendpunkts, an den Nachrichten vom Kanal gesendet werden.</param>
+        <param name="via">Der <see cref="T:System.Uri" />, der die Transportadresse enthält, an die Nachrichten auf dem Ausgabekanal gesendet werden.</param>
+        <summary>Erstellt einen bestimmten Kanaltyp mit der angegebenen Transportadresse und der angegebenen Endpunktadresse.</summary>
+        <returns>Ein Kanal vom Typ <paramref name="TChannel" /> mit der angegebenen Remoteadresse und der angegebenen Transportadresse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft beim Aufrufen <xref:System.ServiceModel.Channels.ChannelFactoryBase%601.OnCreateChannel%28System.ServiceModel.EndpointAddress%2CSystem.Uri%29> auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAbort">
+      <MemberSignature Language="C#" Value="protected override void OnAbort ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAbort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase`1.OnAbort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht jeden Kanal ab, der von der Kanalfactory verwaltet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von <xref:System.ServiceModel.Channels.CommunicationObject.Abort%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginClose">
+      <MemberSignature Language="C#" Value="protected override IAsyncResult OnBeginClose (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IAsyncResult OnBeginClose(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase`1.OnBeginClose(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />, der angibt, welcher Zeitraum für das Schließen bleibt, bevor ein Timeout eintritt.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den asynchronen Abschluss des Schließvorgangs empfängt.</param>
+        <param name="state">Ein von der Anwendung angegebenes Zustandsobjekt, das dem asynchronen Schließvorgang zugeordnete Statusinformationen enthält.</param>
+        <summary>Startet einen asynchronen Vorgang zum Schließen aller Kanäle innerhalb eines bestimmten Zeitraums, die mit der Kanalfactory verknüpft sind.</summary>
+        <returns>Die <see cref="T:System.IAsyncResult" />-Einstellung, die auf den asynchronen Schließvorgang verweist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClose">
+      <MemberSignature Language="C#" Value="protected override void OnClose (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClose(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase`1.OnClose(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />, der angibt, welcher Zeitraum für das Schließen bleibt, bevor ein Timeout eintritt.</param>
+        <summary>Schließt alle Kanäle innerhalb eines angegebenen Zeitraums, die mit der Kanalfactory verknüpft sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode wird versucht, nach und nach alle aktiven Kanäle zu schließen, die mit der Kanalfactory verknüpft sind. Der Timeoutparameter ist die kumulierte Zeitdauer, die zum Schließen aller Kanäle verfügbar ist. Wenn nicht alle Kanäle reibungslos geschlossen werden können, z.&#160;B. wenn ein Kanal fehlerhaft ist und eine Ausnahme auslöst, wird dieser Vorgang abgebrochen und die verbleibenden Kanäle werden nicht geschlossen. Durch eine fehlerhafte Ausführung dieser Methode werden die Factory sowie alle verbleibenden Kanäle abgebrochen und nicht geschlossen.  
+  
+ Diese Methode wird von <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateChannel">
+      <MemberSignature Language="C#" Value="protected abstract TChannel OnCreateChannel (System.ServiceModel.EndpointAddress address, Uri via);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance !TChannel OnCreateChannel(class System.ServiceModel.EndpointAddress address, class System.Uri via) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase`1.OnCreateChannel(System.ServiceModel.EndpointAddress,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="via" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="address">Die <see cref="T:System.ServiceModel.EndpointAddress" /> des Remoteendpunkts, an den Nachrichten vom Kanal gesendet werden.</param>
+        <param name="via">Der <see cref="T:System.Uri" />, der die Transportadresse enthält, an die Nachrichten auf dem Ausgabekanal gesendet werden.</param>
+        <summary>Stellt im Rahmen der Implementierung in einer abgeleiteten Klasse einen Erweiterungspunkt beim Erstellen von Kanälen bereit.</summary>
+        <returns>Ein Kanal vom Typ <paramref name="TChannel" /> mit den angegebenen Adressen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird beim Aufrufen von <xref:System.ServiceModel.Channels.ChannelFactoryBase%601.CreateChannel%2A> aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndClose">
+      <MemberSignature Language="C#" Value="protected override void OnEndClose (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEndClose(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase`1.OnEndClose(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das durch einen Aufruf der <see cref="M:System.ServiceModel.Channels.ChannelFactoryBase`1.OnBeginClose(System.TimeSpan,System.AsyncCallback,System.Object)" />-Methode zurückgegeben wurde.</param>
+        <summary>Schließt einen asynchronen Vorgang zum Schließen aller Kanäle innerhalb eines bestimmten Zeitraums ab, die mit der Kanalfactory verknüpft sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateCreateChannel">
+      <MemberSignature Language="C#" Value="protected void ValidateCreateChannel ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ValidateCreateChannel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelFactoryBase`1.ValidateCreateChannel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestätigt, dass die Kanalfactory geöffnet ist und Kanäle erstellen kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst eine der aufgeführten Ausnahmen aus und überprüft die Bedingungen in der Reihenfolge, in der sie in der Tabelle aufgeführt sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Closing" />-Zustand oder einem <see cref="F:System.ServiceModel.CommunicationState.Closed" />-Zustand.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">Das Kommunikationsobjekt befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Faulted" />-Zustand.</exception>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle Kanalfactory weist einen anderen Zustand als <see cref="F:System.ServiceModel.CommunicationState.Opened" /> auf.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,736 @@
+<Type Name="ProtocolImporter" FullName="System.Web.Services.Description.ProtocolImporter">
+  <TypeSignature Language="C#" Value="public abstract class ProtocolImporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ProtocolImporter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.ProtocolImporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt allgemeine Funktionen Kommunikationsprotokolle zum Generieren von Klassen für Webdienste bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die abstrakte <xref:System.Web.Services.Description.ProtocolImporter> Clientproxycode oder abstrakten Servercode gemäß einem angegebenen Kommunikationsprotokoll Klasse und konkrete abgeleitete Klassen zu generieren. <xref:System.Web.Services.Description.ProtocolImporter>Stellt allgemeine Funktionen unabhängig von dem Protokoll bereit. Innerhalb eines bestimmten Protokolls generiert eine konkrete abgeleitete Klasse eine Klasse für jede unterstützte Bindung, die in einem Dokument Web Services Description Language (WSDL) definiert. In der Regel, anstatt direkt aufrufen von abgeleitete Klassen <xref:System.Web.Services.Description.ProtocolImporter>, ein Entwickler verwendet diese Klassen, die indirekt über die <xref:System.Web.Services.Description.ServiceDescriptionImporter> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProtocolImporter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolImporter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Description.ProtocolImporter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AbstractSchemas">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlSchemas AbstractSchemas { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlSchemas AbstractSchemas" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.AbstractSchemas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSchemas</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die abstrakte XML-Schemas verwendet werden, durch den zugehörigen <see cref="T:System.Web.Services.Description.ServiceDescriptionImporter" /> Instanz.</summary>
+        <value>Die abstrakte XML-Schemas verwendet werden, durch den zugehörigen <see cref="T:System.Web.Services.Description.ServiceDescriptionImporter" /> Instanz</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddExtensionWarningComments">
+      <MemberSignature Language="C#" Value="public void AddExtensionWarningComments (System.CodeDom.CodeCommentStatementCollection comments, System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection extensions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddExtensionWarningComments(class System.CodeDom.CodeCommentStatementCollection comments, class System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection extensions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolImporter.AddExtensionWarningComments(System.CodeDom.CodeCommentStatementCollection,System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comments" Type="System.CodeDom.CodeCommentStatementCollection" />
+        <Parameter Name="extensions" Type="System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="comments">Ein <see cref="T:System.CodeDom.CodeCommentStatementCollection" /> , angibt, dass die Auflistung von Kommentaren im Code für den einzelnen Warnmeldung hinzugefügt wird.</param>
+        <param name="extensions">Ein <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> Erweiterungen oder XML-Elemente, die für die Warnungen generiert sollten, wenn sie nicht behandelt werden angibt.</param>
+        <summary>Aktiviert die für jede nicht behandelte Erweiterung oder ein XML-Element in der Auflistung der Eingabe, eine <see cref="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.RequiredExtensionsIgnored" /> oder <see cref="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.OptionalExtensionsIgnored" /> Warnung für jede nicht behandelte Erweiterung oder XML-Elements in der Auflistung der Eingabe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt auch die Warnmeldungen an, auf eine Auflistung von Kommentaren im Code.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginClass">
+      <MemberSignature Language="C#" Value="protected abstract System.CodeDom.CodeTypeDeclaration BeginClass ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.CodeDom.CodeTypeDeclaration BeginClass() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolImporter.BeginClass" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeDeclaration</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse initialisiert die Generierung einer Bindung-Klasse.</summary>
+        <returns>Die generierte Klasse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Generieren einer Klasse für eine bestimmte Bindung die <xref:System.Web.Services.Description.ProtocolImporter> -Klasse ruft die <xref:System.Web.Services.Description.ProtocolImporter.BeginClass%2A> -Methode vor dem Generieren von Methoden, die Operationen entsprechen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginNamespace">
+      <MemberSignature Language="C#" Value="protected virtual void BeginNamespace ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void BeginNamespace() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolImporter.BeginNamespace" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse führt eine Namespace-Wide-Initialisierung bei der codegenerierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Generieren von Code, der <xref:System.Web.Services.Description.ProtocolImporter> -Klasse ruft die <xref:System.Web.Services.Description.ProtocolImporter.BeginNamespace%2A> -Methode vor dem Generieren von Klassen, die Bindungen darstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Binding">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Binding Binding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Binding Binding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.Binding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Binding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Web Services Description Language (WSDL) Bindung ab, die das Importprogramm Protokoll gerade verarbeitet wird, um eine Klasse zu generieren.</summary>
+        <value>Die WSDL Web Services Description Language () Bindung dar, wird das Protokoll-Importprogramm gerade verarbeitet um eine Klasse zu generieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassName">
+      <MemberSignature Language="C#" Value="public string ClassName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClassName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.ClassName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Bindungsklasse, die gerade generiert wird.</summary>
+        <value>Der Name der Bindungsklasse, die gerade generiert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassNames">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.CodeIdentifiers ClassNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.CodeIdentifiers ClassNames" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.ClassNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.CodeIdentifiers</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> -Objekt, das einen eindeutigen Namen für die Bindungsklasse generiert, die gerade generiert wird.</summary>
+        <value>Die <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> -Objekt, das einen eindeutigen Namen für die Bindungsklasse generiert, die gerade generiert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeNamespace">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeNamespace CodeNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeNamespace CodeNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.CodeNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeNamespace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Darstellung des .NET Framework-Namespace der Bindungsklassen, die generiert werden.</summary>
+        <value>Eine Darstellung des .NET Framework-Namespace der Bindungsklassen, die generiert werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeTypeDeclaration">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeDeclaration CodeTypeDeclaration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeDeclaration CodeTypeDeclaration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.CodeTypeDeclaration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeDeclaration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Darstellung der Bindungsklasse, die gerade generiert wird.</summary>
+        <value>Eine Darstellung der Bindungsklasse, die gerade generiert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConcreteSchemas">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlSchemas ConcreteSchemas { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlSchemas ConcreteSchemas" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.ConcreteSchemas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSchemas</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die konkrete XML-Schemas verwendet werden, durch den zugehörigen <see cref="T:System.Web.Services.Description.ServiceDescriptionImporter" /> Instanz.</summary>
+        <value>Der konkrete XML-Schemas verwendet werden, durch den zugehörigen <see cref="T:System.Web.Services.Description.ServiceDescriptionImporter" /> Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndClass">
+      <MemberSignature Language="C#" Value="protected virtual void EndClass ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EndClass() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolImporter.EndClass" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse verarbeitet eine Bindungsklasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Generieren einer Klasse für eine bestimmte Bindung die <xref:System.Web.Services.Description.ProtocolImporter> -Klasse ruft die <xref:System.Web.Services.Description.ProtocolImporter.EndClass%2A> Methode nach dem Generieren von Methoden, die Operationen entsprechen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndNamespace">
+      <MemberSignature Language="C#" Value="protected virtual void EndNamespace ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EndNamespace() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolImporter.EndNamespace" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt beim Überschreiben in einer abgeleiteten Klasse die Verarbeitung für einen gesamten Namespace.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Generieren von Code, der <xref:System.Web.Services.Description.ProtocolImporter> -Klasse ruft die <xref:System.Web.Services.Description.ProtocolImporter.EndNamespace%2A> Methode nach dem Generieren von Klassen, die Bindungen darstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateMethod">
+      <MemberSignature Language="C#" Value="protected abstract System.CodeDom.CodeMemberMethod GenerateMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.CodeDom.CodeMemberMethod GenerateMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolImporter.GenerateMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeMemberMethod</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse generiert den Code zum Binden von Klassen.</summary>
+        <returns>Die generierte Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Generieren von Code, der <xref:System.Web.Services.Description.ProtocolImporter> -Klasse ruft die <xref:System.Web.Services.Description.ProtocolImporter.GenerateMethod%2A> Methode für jede Methode der Bindungsklasse, die einen Vorgang darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputMessage">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Message InputMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Message InputMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.InputMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Message</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Eingabenachricht Web Services Description Language (WSDL) für den abstrakten Vorgang, den das Protokoll-Importprogramm gerade verarbeitet wird, um eine Methode in einer Bindungsklasse zu generieren.</summary>
+        <value>Die Eingabenachricht Web Services Description Language (WSDL), für die abstrakten Vorgang, den der Protokollimporter gerade verarbeitet wird, um eine Methode in einer Bindungsklasse zu generieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBindingSupported">
+      <MemberSignature Language="C#" Value="protected abstract bool IsBindingSupported ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsBindingSupported() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolImporter.IsBindingSupported" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse bestimmt, ob eine Klasse für die aktuelle Bindung generiert werden kann.</summary>
+        <returns>True, wenn die Bindung unterstützt wird. andernfalls "false".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Generieren von Code, der <xref:System.Web.Services.Description.ProtocolImporter> -Klasse ruft die <xref:System.Web.Services.Description.ProtocolImporter.IsBindingSupported%2A> Methode, um festzustellen, ob für die aktuelle Bindung eine Klasse generiert, dargestellt durch die <xref:System.Web.Services.Description.ProtocolImporter.Binding%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOperationFlowSupported">
+      <MemberSignature Language="C#" Value="protected abstract bool IsOperationFlowSupported (System.Web.Services.Description.OperationFlow flow);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsOperationFlowSupported(valuetype System.Web.Services.Description.OperationFlow flow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolImporter.IsOperationFlowSupported(System.Web.Services.Description.OperationFlow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flow" Type="System.Web.Services.Description.OperationFlow" />
+      </Parameters>
+      <Docs>
+        <param name="flow">Ein <see cref="T:System.Web.Services.Description.OperationFlow" /> -Enumerationswert ab, der ein Übertragungsmuster darstellt.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse bestimmt, ob der aktuelle Vorgang Vorgangsfluss unterstützt wird.</summary>
+        <returns>"True", wenn der aktuelle Vorgang Vorgangsfluss unterstützt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Generieren von Code, der <xref:System.Web.Services.Description.ProtocolImporter> -Klasse ruft die <xref:System.Web.Services.Description.ProtocolImporter.IsOperationFlowSupported%2A> Methode bestimmt, ob eine Methode für den aktuellen Vorgang generiert, dargestellt durch die <xref:System.Web.Services.Description.ProtocolImporter.Operation%2A> Eigenschaft. Diese Auswertung findet für jeden Vorgang in einer Bindung, die für die eine Klasse generiert wird. Wenn eine `false` Wert zurückgegeben, die <xref:System.Web.Services.Description.ProtocolImporter> -Klasse ruft seine <xref:System.Web.Services.Description.ProtocolImporter.UnsupportedOperationWarning%2A> Methode.  
+  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Web.Services.Description.OperationMessageCollection.Flow%2A>-Eigenschaft. Die <xref:System.Web.Services.Description.Operation.Messages%2A>-Eigenschaft ist vom Typ <xref:System.Web.Services.Description.OperationMessageCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public string MethodName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Bindung Klassenmethode ab, die Protokoll-Importer-Tool derzeit generiert wird.</summary>
+        <value>Der Name der Bindung class-Methode, die Protokoll-Importer-Tool derzeit generiert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operation">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Operation Operation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Operation Operation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.Operation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Operation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ab abstrakte Web Services Description Language (WSDL), die das Importprogramm Protokoll gerade verarbeitet wird, um eine Methode in einer Bindungsklasse zu generieren.</summary>
+        <value>Der abstrakte Web Services Description Language (WSDL)-Vorgang, den das Protokoll-Importprogramm gerade verarbeitet wird, um eine Methode in einer Bindungsklasse zu generieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Vorgang wird als ein untergeordnetes Element eines der <xref:System.Web.Services.Description.ProtocolImporter.PortType%2A> Element in einem WSDL-Dokument. Die Methode wird generiert, mit einem <xref:System.Web.Services.WebMethodAttribute> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationBinding">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.OperationBinding OperationBinding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.OperationBinding OperationBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.OperationBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.OperationBinding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Web Services Description Language (WSDL)-Vorgang Bindung ab, die das Importprogramm Protokoll gerade verarbeitet wird, um eine Methode in einer Bindungsklasse zu generieren.</summary>
+        <value>Der Web Services Description Language (WSDL)-Vorgang, der Bindung dar, das Protokoll-Importprogramm gerade verarbeitet wird zum Generieren einer Methode in einer Bindungsklasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode wird generiert, mit einem <xref:System.Web.Services.WebMethodAttribute> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationBindingSyntaxException">
+      <MemberSignature Language="C#" Value="public Exception OperationBindingSyntaxException (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Exception OperationBindingSyntaxException(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolImporter.OperationBindingSyntaxException(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Anmerkung hinzugefügt, um die Ausnahmemeldung, die bereits angibt, dass die Vorgang Bindung-Syntax ist ungültig.</param>
+        <summary>Erzeugt eine **Ausnahme** zeigt an, dass die aktuelle <see cref="P:System.Web.Services.Description.ProtocolImporter.OperationBinding" /> Instanz für die eine Bindungsklasse generiert wird ist innerhalb des Zielnamespaces ungültig.</summary>
+        <returns>Ein **Ausnahme** zeigt an, dass die aktuelle <see cref="P:System.Web.Services.Description.ProtocolImporter.OperationBinding" /> Instanz für die eine Bindungsklasse generiert wird ist innerhalb des Zielnamespaces ungültig.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationSyntaxException">
+      <MemberSignature Language="C#" Value="public Exception OperationSyntaxException (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Exception OperationSyntaxException(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolImporter.OperationSyntaxException(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Anmerkung hinzugefügt, um die Ausnahmemeldung, die bereits angibt, dass die Syntax der Vorgang ist ungültig.</param>
+        <summary>Erzeugt eine **Ausnahme** zeigt an, dass die aktuelle <see cref="P:System.Web.Services.Description.ProtocolImporter.Operation" /> Instanz für die eine Bindungsklasse generiert wird ist innerhalb des Zielnamespaces ungültig.</summary>
+        <returns>Ein **Ausnahme** zeigt an, dass die aktuelle <see cref="P:System.Web.Services.Description.ProtocolImporter.Operation" /> Instanz für die eine Bindungsklasse generiert wird ist innerhalb des Zielnamespaces ungültig.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputMessage">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Message OutputMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Message OutputMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.OutputMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Message</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausgabenachricht Web Services Description Language (WSDL) für den abstrakten Vorgang, den das Protokoll-Importprogramm gerade verarbeitet wird, um eine Methode in einer Bindungsklasse zu generieren.</summary>
+        <value>Die Web Services Description Language (WSDL) Ausgabenachricht für den abstrakten Vorgang, den das Protokoll-Importprogramm gerade verarbeitet wird, um eine Methode in einer Bindungsklasse zu generieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Port Port { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Port Port" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Port</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Web Services Description Language (WSDL)-Port, der einen Verweis auf die Bindung, die das Importprogramm Protokoll gerade verarbeitet wird enthält, um eine Bindungsklasse zu generieren. Wenn mehrere Ports auf der aktuellen Bindung verweist, wird der aktuelle Port in dem die Bindung zuletzt gefunden wurde.</summary>
+        <value>Der Web Services Description Language (WSDL)-Port, der einen Verweis auf die Bindung, die das Importprogramm Protokoll gerade verarbeitet wird enthält, um eine Bindungsklasse zu generieren. Wenn mehrere Ports auf der aktuellen Bindung verweist, wird der aktuelle Port in dem die Bindung zuletzt gefunden wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PortType">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.PortType PortType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.PortType PortType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.PortType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.PortType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Web Services Description Language (WSDL) <see cref="P:System.Web.Services.Description.ProtocolImporter.PortType" /> , implementiert ist, von der Bindung, die das Importprogramm Protokoll gerade verarbeitet wird, um eine Bindungsklasse zu generieren.</summary>
+        <value>Die Web Services Description Language (WSDL) <see cref="P:System.Web.Services.Description.ProtocolImporter.PortType" /> , implementiert ist, von der Bindung, die das Importprogramm Protokoll gerade verarbeitet wird, um eine Bindungsklasse zu generieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtocolName">
+      <MemberSignature Language="C#" Value="public abstract string ProtocolName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProtocolName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.ProtocolName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abstrakte Eigenschaft, die konkrete abgeleitete Klassen implementieren muss, um den Namen des verwendeten Protokolls abzurufen.</summary>
+        <value>Der Name des Protokolls verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schemas">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlSchemas Schemas { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlSchemas Schemas" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.Schemas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSchemas</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle XML-Schemas, abstrakte und konkrete verwendet, durch den zugehörigen <see cref="T:System.Web.Services.Description.ServiceDescriptionImporter" /> Instanz.</summary>
+        <value>Die XML-Schemas, abstrakte und konkrete verwendet wird, durch den zugehörigen <see cref="T:System.Web.Services.Description.ServiceDescriptionImporter" /> Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Service">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Service Service { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Service Service" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.Service" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Service</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Web Services Description Language (WSDL)-Dienst, der einen Verweis auf die Bindung, die das Importprogramm Protokoll gerade verarbeitet wird enthält, um eine Bindungsklasse zu generieren.</summary>
+        <value>Die Web Services Description Language (WSDL)-Dienst, der einen Verweis auf die Bindung, die das Importprogramm Protokoll gerade verarbeitet wird enthält, um eine Bindungsklasse zu generieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceDescriptions">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescriptionCollection ServiceDescriptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescriptionCollection ServiceDescriptions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.ServiceDescriptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" /> Objekte, die an die zugeordnete gehören <see cref="T:System.Web.Services.Description.ServiceDescriptionImporter" /> Instanz, die für die Bindungen aus der Bindungsklassen generiert durchsucht werden.</summary>
+        <value>Die <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" /> Objekte, die an die zugeordnete gehören <see cref="T:System.Web.Services.Description.ServiceDescriptionImporter" /> Instanz, die für die Bindungen aus der Bindungsklassen generiert durchsucht werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescriptionImportStyle Style { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Description.ServiceDescriptionImportStyle Style" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescriptionImportStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerationswert, der angibt, ob eine Client-Proxyklasse oder abstrakten Klasse generiert wird. Die Werte sind **Client** und **Server**. Der Wert entspricht, mit der zugeordneten <see cref="T:System.Web.Services.Description.ServiceDescriptionImporter" /> Instanz <see cref="P:System.Web.Services.Description.ServiceDescriptionImporter.Style" /> Eigenschaft.</summary>
+        <value>Ein Enumerationswert, der angibt, ob eine Client-Proxyklasse oder abstrakten Klasse generiert wird. Die Werte sind **Client** und **Server**. Der Wert entspricht, mit der zugeordneten <see cref="T:System.Web.Services.Description.ServiceDescriptionImporter" /> Instanz <see cref="P:System.Web.Services.Description.ServiceDescriptionImporter.Style" /> Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsupportedBindingWarning">
+      <MemberSignature Language="C#" Value="public void UnsupportedBindingWarning (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnsupportedBindingWarning(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolImporter.UnsupportedBindingWarning(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Anmerkung hinzugefügt, um die Warnmeldung, die bereits angibt, dass die Bindung wurde ignoriert.</param>
+        <summary>Aktiviert eine <see cref="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.UnsupportedBindingsIgnored" /> Warnung in der <see cref="T:System.Web.Services.Description.ServiceDescriptionImportWarnings" /> Enumeration abgerufen wird, über die <see cref="P:System.Web.Services.Description.ProtocolImporter.Warnings" /> Eigenschaft. Diese Methode fügt außerdem eine Warnmeldung angezeigt, der die Kommentare für die Klasse, die generiert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsupportedOperationBindingWarning">
+      <MemberSignature Language="C#" Value="public void UnsupportedOperationBindingWarning (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnsupportedOperationBindingWarning(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolImporter.UnsupportedOperationBindingWarning(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Anmerkung hinzugefügt, um die Warnmeldung, die bereits angibt, dass die vorgangsbindung wurde ignoriert.</param>
+        <summary>Aktiviert eine <see cref="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.UnsupportedOperationsIgnored" /> Warnung in der <see cref="T:System.Web.Services.Description.ServiceDescriptionImportWarnings" /> Enumeration abgerufen wird, über die <see cref="P:System.Web.Services.Description.ProtocolImporter.Warnings" /> Eigenschaft. Diese Methode fügt außerdem eine Warnmeldung angezeigt, der die Kommentare für die Klasse, die generiert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsupportedOperationWarning">
+      <MemberSignature Language="C#" Value="public void UnsupportedOperationWarning (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnsupportedOperationWarning(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ProtocolImporter.UnsupportedOperationWarning(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Anmerkung hinzugefügt, um die Warnmeldung, die bereits angibt, dass die vorgangsbindung wurde ignoriert.</param>
+        <summary>Aktiviert eine <see cref="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.UnsupportedOperationsIgnored" /> Warnung in der <see cref="T:System.Web.Services.Description.ServiceDescriptionImportWarnings" /> Enumeration abgerufen wird, über die <see cref="P:System.Web.Services.Description.ProtocolImporter.Warnings" /> Eigenschaft. Diese Methode fügt außerdem eine Warnmeldung angezeigt, der die Kommentare für die Klasse, die generiert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Warnings">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescriptionImportWarnings Warnings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Description.ServiceDescriptionImportWarnings Warnings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ProtocolImporter.Warnings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescriptionImportWarnings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine <see cref="T:System.Web.Services.Description.ServiceDescriptionImportWarnings" /> -Enumerationswert ab, der die Typen von Warnungen, der angibt, ob vorhanden, von der Protokoll-Importer-Tool beim Generieren von Bindungsklassen ausgegeben.</summary>
+        <value>Ein <see cref="T:System.Web.Services.Description.ServiceDescriptionImportWarnings" /> -Enumerationswert ab, der die Typen von Warnungen, der angibt, ob vorhanden, von der Protokoll-Importer-Tool beim Generieren von Bindungsklassen ausgegeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

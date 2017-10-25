@@ -1,0 +1,80 @@
+<Type Name="TextCollapsedRange" FullName="System.Windows.Media.TextFormatting.TextCollapsedRange">
+  <TypeSignature Language="C#" Value="public sealed class TextCollapsedRange" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TextCollapsedRange extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.TextCollapsedRange" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Bereich von Zeichen und seine Breite für das Reduzieren von Text in einer Zeile an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Reduzieren von Zeilen wird die Fähigkeit zum Anzeigen von Speicherplatz für eine Zeile zu reduzieren, indem Sie nicht Teil des Texts in der Zeile angezeigt. Je nach reduzierenden Stil unter Umständen ein reduzierendes Symbol an der Position angezeigt, in der das Reduzieren von Text aufgetreten ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextCollapsedRange.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Zeichen für den reduzierten Text ab.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der die Anzahl der reduziert Textzeichen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextSourceCharacterIndex">
+      <MemberSignature Language="C#" Value="public int TextSourceCharacterIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TextSourceCharacterIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextCollapsedRange.TextSourceCharacterIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index auf das erste Zeichen in der <see cref="T:System.Windows.Media.TextFormatting.TextSource" /> , dass die reduzierte Textzeichen darstellt.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der den Index des ersten Textzeichens der reduzierten darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public double Width { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextCollapsedRange.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Gesamtbreite der reduzierten Textzeichen.</summary>
+        <value>Ein <see cref="T:System.Double" /> Wert, der die Breite der reduzierten Textzeichen darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

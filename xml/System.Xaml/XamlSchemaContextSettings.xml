@@ -1,0 +1,104 @@
+<Type Name="XamlSchemaContextSettings" FullName="System.Xaml.XamlSchemaContextSettings">
+  <TypeSignature Language="C#" Value="public class XamlSchemaContextSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlSchemaContextSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlSchemaContextSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet optionale Einstellungen für eine <see cref="T:System.Xaml.XamlSchemaContext" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlSchemaContextSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContextSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xaml.XamlSchemaContextSettings" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlSchemaContextSettings (System.Xaml.XamlSchemaContextSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlSchemaContextSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContextSettings.#ctor(System.Xaml.XamlSchemaContextSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="System.Xaml.XamlSchemaContextSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings">Ein vorhandener <see cref="T:System.Xaml.XamlSchemaContextSettings" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlSchemaContextSettings" /> -Klasse durch Kopieren der Werte eines vorhandenen <see cref="T:System.Xaml.XamlSchemaContextSettings" /> Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullyQualifyAssemblyNamesInClrNamespaces">
+      <MemberSignature Language="C#" Value="public bool FullyQualifyAssemblyNamesInClrNamespaces { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FullyQualifyAssemblyNamesInClrNamespaces" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlSchemaContextSettings.FullyQualifyAssemblyNamesInClrNamespaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein XAML-Schema und den entsprechenden Kontext vollqualifizierten Assemblynamen in den Werten verwenden, die von der Such-API zurückgegeben werden.</summary>
+        <value>
+          <see langword="true" />Wenn ein XAML-Schema und den entsprechenden Kontext vollqualifizierten Assemblynamen in den Werten, die von der Such-APIs zurückgegeben werden verwenden. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft wirkt sich auf die Zeichenfolgen, die von zurückgegeben werden <xref:System.Xaml.XamlSchemaContext.GetAllXamlNamespaces%2A> im erstellten Schemakontext. Wenn <xref:System.Xaml.XamlSchemaContext.FullyQualifyAssemblyNamesInClrNamespaces%2A> ist `true`, Assembly-Abschnitt der Zeichenfolge gibt die Entsprechung der <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportMarkupExtensionsWithDuplicateArity">
+      <MemberSignature Language="C#" Value="public bool SupportMarkupExtensionsWithDuplicateArity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportMarkupExtensionsWithDuplicateArity" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlSchemaContextSettings.SupportMarkupExtensionsWithDuplicateArity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein XAML-Schemakontext für Markuperweiterungen zulässt, die zwei Konstruktoren mit der gleichen Stelligkeit (Anzahl von Eingabeparametern) besitzen.</summary>
+        <value>
+          <see langword="true" />Wenn der Schemakontext Markuperweiterungen, die doppelten Stelligkeit verfügen zulässt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aus einem <xref:System.Xaml.XamlSchemaContext>, Sie können die Einstellungen nicht direkt lesen. Stattdessen erhalten Sie Werte aus bestimmten schreibgeschützte Eigenschaften, z. B. <xref:System.Xaml.XamlSchemaContext.SupportMarkupExtensionsWithDuplicateArity%2A>, welcher Bericht den Einstellungen beruhende Werte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

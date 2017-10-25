@@ -1,0 +1,105 @@
+<Type Name="DesignTimeResourceProviderFactory" FullName="System.Web.UI.Design.DesignTimeResourceProviderFactory">
+  <TypeSignature Language="C#" Value="public abstract class DesignTimeResourceProviderFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DesignTimeResourceProviderFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.DesignTimeResourceProviderFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Vom Steuerelement Lokalisierung verwendet zum Lesen und Schreiben von Ressourcen zur Entwurfszeit.</summary>
+    <remarks>To be added.</remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von der <see cref="T:System.Web.UI.Design.DesignTimeResourceProviderFactory" /> -Klasse, müssen Sie die folgenden Member überschreiben: die <see cref="M:System.Web.UI.Design.DesignTimeResourceProviderFactory.CreateDesignTimeLocalResourceProvider(System.IServiceProvider)" />, <see cref="M:System.Web.UI.Design.DesignTimeResourceProviderFactory.CreateDesignTimeLocalResourceProvider(System.IServiceProvider)" />, und <see cref="M:System.Web.UI.Design.DesignTimeResourceProviderFactory.CreateDesignTimeLocalResourceWriter(System.IServiceProvider)" /> Methoden.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DesignTimeResourceProviderFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignTimeResourceProviderFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Web.UI.Design.DesignTimeResourceProviderFactory" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDesignTimeGlobalResourceProvider">
+      <MemberSignature Language="C#" Value="public abstract System.Web.Compilation.IResourceProvider CreateDesignTimeGlobalResourceProvider (IServiceProvider serviceProvider, string classKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.Compilation.IResourceProvider CreateDesignTimeGlobalResourceProvider(class System.IServiceProvider serviceProvider, string classKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignTimeResourceProviderFactory.CreateDesignTimeGlobalResourceProvider(System.IServiceProvider,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.IResourceProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="classKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Ein Verweis auf den Entwurfshost.</param>
+        <param name="classKey">Der Name der Ressourcenklasse.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse erstellt einen globale Ressource-Anbieter mithilfe der bereitgestellten <see cref="T:System.IServiceProvider" /> -Schnittstelle und Klassennamen.</summary>
+        <returns>Entweder ein <see cref="T:System.Web.Compilation.IResourceProvider" /> oder ein <see cref="T:System.Web.UI.Design.IDesignTimeResourceWriter" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDesignTimeLocalResourceProvider">
+      <MemberSignature Language="C#" Value="public abstract System.Web.Compilation.IResourceProvider CreateDesignTimeLocalResourceProvider (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.Compilation.IResourceProvider CreateDesignTimeLocalResourceProvider(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignTimeResourceProviderFactory.CreateDesignTimeLocalResourceProvider(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.IResourceProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Ein Verweis auf den Entwurfshost.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse wird ein lokaler Ressourcenanbieter, die mithilfe des bereitgestellten Verweises auf den Entwurfshost erstellt.</summary>
+        <returns>Ein <see cref="T:System.Web.Compilation.IResourceProvider" /> oder eine abgeleitete Klasse <see cref="T:System.Web.Compilation.IResourceProvider" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDesignTimeLocalResourceWriter">
+      <MemberSignature Language="C#" Value="public abstract System.Web.UI.Design.IDesignTimeResourceWriter CreateDesignTimeLocalResourceWriter (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.IDesignTimeResourceWriter CreateDesignTimeLocalResourceWriter(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignTimeResourceProviderFactory.CreateDesignTimeLocalResourceWriter(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDesignTimeResourceWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Ein Verweis auf den Entwurfshost.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse wird einen lokale Ressource-Writer für die Verwendung des angegebenen Verweis auf den Entwurfshost erstellt.</summary>
+        <returns>Eine lokale Ressourcenwriter für die Verwendung des angegebenen Verweis auf den Entwurfshost.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

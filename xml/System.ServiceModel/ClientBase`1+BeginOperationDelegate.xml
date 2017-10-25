@@ -1,0 +1,42 @@
+<Type Name="ClientBase&lt;TChannel&gt;+BeginOperationDelegate" FullName="System.ServiceModel.ClientBase&lt;TChannel&gt;+BeginOperationDelegate">
+  <TypeSignature Language="C#" Value="protected delegate IAsyncResult ClientBase&lt;TChannel&gt;.BeginOperationDelegate(object[] inValues, AsyncCallback asyncCallback, object state) where TChannel : class;" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi sealed ClientBase`1/BeginOperationDelegate&lt;class TChannel&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ClientBase`1.BeginOperationDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TChannel">
+      <Constraints>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="inValues" Type="System.Object[]" />
+    <Parameter Name="asyncCallback" Type="System.AsyncCallback" />
+    <Parameter Name="state" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.IAsyncResult</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="inValues">Die Eingabewerte für den asynchronen Aufruf.</param>
+    <param name="asyncCallback">Verweis auf die Methode, die aufgerufen wird, sobald ein entsprechender asynchroner Vorgang abgeschlossen wird.</param>
+    <param name="state">Ein <see cref="T:System.Object" />, das den Client zwischen anderen asynchronen Aufrufen unterscheiden lässt. Es wird im Argumentparameter des Ereignisabschlussrückrufs für den Client verfügbar gemacht.</param>
+    <summary>Ein Delegat, der von <see cref="M:System.ServiceModel.ClientBase`1.InvokeAsync(System.ServiceModel.ClientBase{`0}.BeginOperationDelegate,System.Object[],System.ServiceModel.ClientBase{`0}.EndOperationDelegate,System.Threading.SendOrPostCallback,System.Object)" /> zum Aufrufen asynchroner Vorgänge auf dem Client verwendet wird.</summary>
+    <returns>To be added.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,122 @@
+<Type Name="GeometryHitTestResult" FullName="System.Windows.Media.GeometryHitTestResult">
+  <TypeSignature Language="C#" Value="public class GeometryHitTestResult : System.Windows.Media.HitTestResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GeometryHitTestResult extends System.Windows.Media.HitTestResult" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.GeometryHitTestResult" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.HitTestResult</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt die Ergebnisse eines Treffertests verwendet eine <see cref="T:System.Windows.Media.Geometry" /> Parameter als Treffer zu testen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch einen Treffertest für ein visuelles Objekt ausführen, mit einem <xref:System.Windows.Point> als Treffertestparameter Parameter testen und das Ergebnis als Zurückgeben einer <xref:System.Windows.Media.PointHitTestResult>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeometryHitTestResult (System.Windows.Media.Visual visualHit, System.Windows.Media.IntersectionDetail intersectionDetail);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Visual visualHit, valuetype System.Windows.Media.IntersectionDetail intersectionDetail) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeometryHitTestResult.#ctor(System.Windows.Media.Visual,System.Windows.Media.IntersectionDetail)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visualHit" Type="System.Windows.Media.Visual" />
+        <Parameter Name="intersectionDetail" Type="System.Windows.Media.IntersectionDetail" />
+      </Parameters>
+      <Docs>
+        <param name="visualHit">Das visuelle Objekt, das während eines Treffertests erreicht wird.</param>
+        <param name="intersectionDetail">Beschreibt die Schnittmenge einer <see cref="T:System.Windows.Media.Geometry" /> und <c>eines VisualHit</c>.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.GeometryHitTestResult" /> Klasse unter Verwendung eines angegebenen visuellen Objekts und <see cref="T:System.Windows.Media.IntersectionDetail" /> Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Media.GeometryHitTestResult> Objekt, und verwenden es als Rückgabewert für eine überschriebene Implementierung von <xref:System.Windows.Media.Visual.HitTestCore%2A>.  
+  
+ [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet13](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet13)]
+ [!code-vb[HitTestingOverview#HitTestingOverviewSnippet13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntersectionDetail">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.IntersectionDetail IntersectionDetail { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.IntersectionDetail IntersectionDetail" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GeometryHitTestResult.IntersectionDetail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.IntersectionDetail</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Media.IntersectionDetail" /> -Wert des Treffertests.</summary>
+        <value>Die <see cref="T:System.Windows.Media.IntersectionDetail" /> -Wert des Treffertests.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> Eigenschaft beschreibt die Schnittmenge einer <xref:System.Windows.Media.Geometry> und das Ziel-visual-Objekt.  
+  
+ Die folgende Abbildung zeigt die Beziehung zwischen der Treffertestgeometrie (der blaue Kreis) und dem Zielobjekt (das rote Quadrat).  
+  
+ ![Diagramm von IntersectionDetail bei Treffertests](~/add/media/intersectiondetail01.png "Diagramm von IntersectionDetail bei Treffertests")  
+Die Schnittmenge einer Treffertestgeometrie und einem Zielobjekt  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> Eigenschaft <xref:System.Windows.Media.GeometryHitTestResult>.  
+  
+ [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet11](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet11)]
+ [!code-vb[HitTestingOverview#HitTestingOverviewSnippet11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualHit">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Visual VisualHit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Visual VisualHit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GeometryHitTestResult.VisualHit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das visuelle Objekt ab, das aus einem Treffertestergebnis zurückgegeben wird.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.Visual" /> Objekt, das das Treffertestergebnis darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie auf den Wert der verweisen die <xref:System.Windows.Media.GeometryHitTestResult.VisualHit%2A> Eigenschaft in einer Treffertest-Rückrufprozedur.  
+  
+ [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet11](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet11)]
+ [!code-vb[HitTestingOverview#HitTestingOverviewSnippet11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,147 @@
+<Type Name="RoleManagerModule" FullName="System.Web.Security.RoleManagerModule">
+  <TypeSignature Language="C#" Value="public sealed class RoleManagerModule : System.Web.IHttpModule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RoleManagerModule extends System.Object implements class System.Web.IHttpModule" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.RoleManagerModule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpModule</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Verwaltet eine <see cref="T:System.Web.Security.RolePrincipal" /> Instanz für den aktuellen Benutzer. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.RoleManagerModule> Klasse dient zum Zuweisen einer <xref:System.Web.Security.RolePrincipal> auf die <xref:System.Web.HttpContext.User%2A> Eigenschaft der <xref:System.Web.HttpContext.Current%2A> <xref:System.Web.HttpContext>.  
+  
+ Wenn eine Anforderung abgeschlossen wird, die <xref:System.Web.Security.RoleManagerModule> aktualisiert des Rollencookies, die zwischengespeicherten Rollennamen Informationen enthält. Wenn die <xref:System.Web.HttpContext.User%2A> -Eigenschaft ist vom Typ <xref:System.Web.Security.RolePrincipal>, und dass <xref:System.Web.Security.RolePrincipal> gibt an, dass durch Festlegen die Liste der zwischengespeicherten Rollennamen geändert wurde die <xref:System.Web.Security.RolePrincipal.CachedListChanged%2A> Eigenschaft `true`, die <xref:System.Web.Security.RoleManagerModule> aktualisiert des Rollencookies, die enthält die zwischengespeicherten Rolleninformationen.  
+  
+ Diese Klasse kann nicht direkt aus Ihrem Code verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RoleManagerModule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RoleManagerModule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Web.Security.RoleManagerModule" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.RoleManagerModule> Klasse dient zum Platzieren einer <xref:System.Web.Security.RolePrincipal> in der <xref:System.Web.HttpContext.User%2A> Eigenschaft von der <xref:System.Web.HttpContext.Current%2A> <xref:System.Web.HttpContext> und sollte nicht direkt aus Ihrem Code verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RoleManagerModule.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, von der HTTP-Laufzeit zum Verwerfen des Rollen-Manager Moduls.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Web.Security.RoleManagerModule.Dispose%2A> auf, wenn Sie <xref:System.Web.Security.RoleManagerModule> nicht mehr benötigen. Die <xref:System.Web.Security.RoleManagerModule.Dispose%2A>-Methode bewirkt, dass <xref:System.Web.Security.RoleManagerModule> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Web.Security.RoleManagerModule.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.Web.Security.RoleManagerModule> , damit der belegte Speicher von der Garbagecollection wieder zugänglich gemacht werden kann.  
+  
+ Diese Methode ist nicht für die direkte Verwendung im Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRoles">
+      <MemberSignature Language="C#" Value="public event System.Web.Security.RoleManagerEventHandler GetRoles;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.Security.RoleManagerEventHandler GetRoles" />
+      <MemberSignature Language="DocId" Value="E:System.Web.Security.RoleManagerModule.GetRoles" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.RoleManagerEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine globale-Ereignis, das ist wird ausgelöst, wenn die <see cref="T:System.Web.Security.RoleManagerModule" /> ist bereit für die Erstellung einer <see cref="T:System.Web.Security.RolePrincipal" /> , die den aktuellen Benutzer darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.RoleManagerModule.GetRoles> Ereignis wird ausgelöst, bevor die <xref:System.Web.Security.RoleManagerModule> erstellt eine <xref:System.Web.Security.RolePrincipal> Objekts und weist sie der <xref:System.Web.HttpContext.User%2A> Eigenschaft von der <xref:System.Web.HttpContext.Current%2A> <xref:System.Web.HttpContext>. Überwachen, die Rolleninformationen angewendet wird oder die Erstellung von ersetzt, verwenden Sie dieses Ereignis kann eine <xref:System.Web.Security.RolePrincipal> durch die <xref:System.Web.Security.RoleManagerModule> mit eigenem Code.  
+  
+ Können Sie die Anwendung von Rolleninformationen durch Abbrechen der <xref:System.Web.Security.RoleManagerModule> durch Festlegen der <xref:System.Web.Security.RoleManagerEventArgs.RolesPopulated%2A> Eigenschaft von der <xref:System.Web.Security.RoleManagerEventArgs> auf `true` in die <xref:System.Web.Security.RoleManagerModule.GetRoles> Ereignis.  
+  
+ Wenn Sie festlegen, <xref:System.Web.Security.RoleManagerEventArgs.RolesPopulated%2A> zu `true` in Ihrer <xref:System.Web.Security.RoleManagerModule.GetRoles> Ereignishandler, d. h. die <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> nicht auf festgelegt ist eine <xref:System.Web.Security.RolePrincipal> -Objekts, indem die <xref:System.Web.Security.RoleManagerModule>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die <xref:System.Web.Security.RoleManagerModule.GetRoles> Ereignis in der Datei "Global.asax" für eine ASP.NET-Anwendung enthalten. Die <xref:System.Web.Security.RoleManagerModule.GetRoles> Ereignis fügt eine Ablaufverfolgung-Benachrichtigung für eine Anwendung, die Ablaufverfolgung in der Datei "Web.config" aktiviert ist.  
+  
+ [!code-csharp[System.Web.Security.RoleManagerModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.RoleManagerModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.RoleManagerModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.RoleManagerModule/VB/global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public void Init (System.Web.HttpApplication app);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Init(class System.Web.HttpApplication app) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RoleManagerModule.Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="app" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="app">Die <see cref="T:System.Web.HttpApplication" /> zum Zuordnen der <see cref="T:System.Web.Security.RoleManagerModule" /> mit.</param>
+        <summary>Ordnet die angegebene Anwendung Rollen-Manager hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode abonniert das <xref:System.Web.HttpApplication.PostAuthorizeRequest> und <xref:System.Web.HttpApplication.EndRequest> Methoden des angegebenen <xref:System.Web.HttpApplication> zum Verwalten von Rolleninformationen und sollte nicht direkt aus Ihrem Code verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

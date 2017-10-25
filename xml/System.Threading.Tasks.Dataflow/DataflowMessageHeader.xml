@@ -1,0 +1,220 @@
+<Type Name="DataflowMessageHeader" FullName="System.Threading.Tasks.Dataflow.DataflowMessageHeader">
+  <TypeSignature Language="C#" Value="public struct DataflowMessageHeader : IEquatable&lt;System.Threading.Tasks.Dataflow.DataflowMessageHeader&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit DataflowMessageHeader extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Threading.Tasks.Dataflow.DataflowMessageHeader&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.1.0</AssemblyVersion>
+    <AssemblyVersion>4.6.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Threading.Tasks.Dataflow.DataflowMessageHeader&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Container mit Datenattributen für die Übergabe zwischen Datenflussblöcken bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die TPL-Datenflussbibliothek (<xref:System.Threading.Tasks.Dataflow>-Namespace) ist nicht in [!INCLUDE[net_v45](~/includes/net-v45-md.md)] enthalten. So installieren Sie die <xref:System.Threading.Tasks.Dataflow> -Namespace öffnen Sie das Projekt in [!INCLUDE[vs_dev11_long](~/includes/vs-dev11-long-md.md)], wählen Sie **NuGet-Pakete verwalten** aus der Menüs "Projekt", und suchen Sie online nach der `Microsoft.Tpl.Dataflow` Paket.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataflowMessageHeader (long id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowMessageHeader.#ctor(System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="id">Die ID der Nachricht. Muss innerhalb der ursprünglichen Quellblock eindeutig sein. Es muss nicht global eindeutig sein.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> mit den angegebenen Attributen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowMessageHeader.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein geschachtelter <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> Instanz.</param>
+        <summary>Überprüft, die mittels Boxing konvertiert <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> -Instanzen auf Gleichheit anhand der ID.</summary>
+        <returns>
+          <see langword="true" />, wenn die Instanzen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Threading.Tasks.Dataflow.DataflowMessageHeader other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Threading.Tasks.Dataflow.DataflowMessageHeader other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowMessageHeader.Equals(System.Threading.Tasks.Dataflow.DataflowMessageHeader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Threading.Tasks.Dataflow.DataflowMessageHeader" />
+      </Parameters>
+      <Docs>
+        <param name="other">Eine andere <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> Instanz.</param>
+        <summary>Überprüft zwei <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> -Instanzen auf Gleichheit nach ID ohne Boxing.</summary>
+        <returns>
+          <see langword="true" />, wenn die Instanzen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowMessageHeader.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert einen Hash für die <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> Instanz.</summary>
+        <returns>Der Hashcode.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public long Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.DataflowMessageHeader.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID der Nachricht innerhalb der Datenquelle ab.</summary>
+        <value>Die ID enthalten, der <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.DataflowMessageHeader.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gültigkeit der Nachricht ab.</summary>
+        <value>
+          <see langword="true" />Wenn die ID der Nachricht ungleich 0 ist. <see langword="false" />Wenn die ID der Nachricht 0 ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Threading.Tasks.Dataflow.DataflowMessageHeader left, System.Threading.Tasks.Dataflow.DataflowMessageHeader right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Threading.Tasks.Dataflow.DataflowMessageHeader left, valuetype System.Threading.Tasks.Dataflow.DataflowMessageHeader right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowMessageHeader.op_Equality(System.Threading.Tasks.Dataflow.DataflowMessageHeader,System.Threading.Tasks.Dataflow.DataflowMessageHeader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Threading.Tasks.Dataflow.DataflowMessageHeader" />
+        <Parameter Name="right" Type="System.Threading.Tasks.Dataflow.DataflowMessageHeader" />
+      </Parameters>
+      <Docs>
+        <param name="left">Ein <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> Instanz.</param>
+        <param name="right">Ein <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> Instanz.</param>
+        <summary>Überprüft zwei <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> -Instanzen auf Gleichheit anhand der ID.</summary>
+        <returns>
+          <see langword="true" />, wenn die Instanzen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Threading.Tasks.Dataflow.DataflowMessageHeader left, System.Threading.Tasks.Dataflow.DataflowMessageHeader right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Threading.Tasks.Dataflow.DataflowMessageHeader left, valuetype System.Threading.Tasks.Dataflow.DataflowMessageHeader right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowMessageHeader.op_Inequality(System.Threading.Tasks.Dataflow.DataflowMessageHeader,System.Threading.Tasks.Dataflow.DataflowMessageHeader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Threading.Tasks.Dataflow.DataflowMessageHeader" />
+        <Parameter Name="right" Type="System.Threading.Tasks.Dataflow.DataflowMessageHeader" />
+      </Parameters>
+      <Docs>
+        <param name="left">Ein <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> Instanz.</param>
+        <param name="right">Ein <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> Instanz.</param>
+        <summary>Überprüft zwei <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> -Instanzen auf Gleichheit anhand der ID.</summary>
+        <returns>
+          <see langword="true" />Wenn die Instanzen ungleich sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

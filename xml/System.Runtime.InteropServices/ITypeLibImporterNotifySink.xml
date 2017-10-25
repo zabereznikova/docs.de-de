@@ -1,0 +1,98 @@
+<Type Name="ITypeLibImporterNotifySink" FullName="System.Runtime.InteropServices.ITypeLibImporterNotifySink">
+  <TypeSignature Language="C#" Value="public interface ITypeLibImporterNotifySink" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITypeLibImporterNotifySink" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ITypeLibImporterNotifySink" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("f1c3bf76-c3e4-11d3-88e7-00902754c43a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Rückrufmechanismus zur der Typkonverter für die Bibliothek der Aufrufer über den Status der Konvertierung zu informieren, und den Aufrufer im Konvertierungsprozess selbst umfassen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle wird beim Konvertieren von einer COM-Typbibliothek in eine verwaltete Assembly verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ReportEvent">
+      <MemberSignature Language="C#" Value="public void ReportEvent (System.Runtime.InteropServices.ImporterEventKind eventKind, int eventCode, string eventMsg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportEvent(valuetype System.Runtime.InteropServices.ImporterEventKind eventKind, int32 eventCode, string eventMsg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ITypeLibImporterNotifySink.ReportEvent(System.Runtime.InteropServices.ImporterEventKind,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventKind" Type="System.Runtime.InteropServices.ImporterEventKind" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+        <Parameter Name="eventMsg" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventKind">Ein <see cref="T:System.Runtime.InteropServices.ImporterEventKind" /> Wert, der angibt, der des Typs des Ereignisses.</param>
+        <param name="eventCode">Gibt zusätzliche Informationen zum Ereignis an.</param>
+        <param name="eventMsg">Eine Meldung, die vom Ereignis generiert.</param>
+        <summary>Benachrichtigt den Aufrufer, dass bei der Konvertierung einer Typbibliothek ein Ereignis aufgetreten ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das gemeldete Ereignis eine Warnung oder ein Fehler ist `eventCode` das HRESULT des Fehlers enthält. Für alle anderen Ereignisse werden 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveRef">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly ResolveRef (object typeLib);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.Assembly ResolveRef(object typeLib) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ITypeLibImporterNotifySink.ResolveRef(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeLib" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="typeLib">Das Objekt, durch die <see langword="ITypeLib" /> -Schnittstelle, die aufgelöst werden muss.</param>
+        <summary>Fordert den Benutzer, einen Verweis auf eine andere Typbibliothek aufzulösen.</summary>
+        <returns>Die Assembly für <paramref name="typeLib" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn bei der Konvertierung einer Typbibliothek ein Verweis auf eine andere Typbibliothek gefunden wird, wird der Aufrufer aufgefordert, um die richtige Assembly für diese Typbibliothek zurückzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

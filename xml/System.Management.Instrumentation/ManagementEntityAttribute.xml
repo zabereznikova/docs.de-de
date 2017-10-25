@@ -1,0 +1,171 @@
+<Type Name="ManagementEntityAttribute" FullName="System.Management.Instrumentation.ManagementEntityAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ManagementEntityAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagementEntityAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.ManagementEntityAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Das ManagementEntity-Attribut zeigt an, dass eine Klasse Verwaltungsinformationen bereitstellt, die über einen WMI-Anbieter verfügbar gemacht werden.  
+  
+ Hinweis: Die WMI .NET-Bibliotheken werden jetzt als abgeschlossen betrachtet, und keine weiteren Entwicklungen, Verbesserungen oder Updates werden für nicht sicherheitsrelevante Aspekte verfügbar sein, die diese Bibliotheken betreffen. Die [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) für alle neuen Entwicklungen verwendet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klasse, die von diesem Attribut gekennzeichnet muss öffentlich sein.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das ManagementEntity-Attribut verwenden, um eine Klasse zu markieren.  
+  
+```  
+// Use the ManagementEntity attribute on the class to specify that this // class contains management information that is available from  
+// provider.  
+  
+    [ManagementEntity(Name = "MortgageCalc")]  
+    public class MortgageCalcWMIProvider  
+    {  
+    }  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementEntityAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.ManagementEntityAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Management.ManagementEntityAttribute" />-Klasse. Dies ist der Standardkonstruktor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird einen Name-Parameter nicht verwendet. Wenn Sie einen Namen nicht mit angeben der <xref:System.Management.Instrumentation.ManagementEntityAttribute.Name> Parameter, der Namen der zugeordnete WMI-Klasse wird standardmäßig auf den Namen der die attributierte Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="External">
+      <MemberSignature Language="C#" Value="public bool External { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool External" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.ManagementEntityAttribute.External" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest einen Wert, der angibt, ob die Klasse in einem Anbieter implementiert eine WMI-Klasse stellt externe auf die aktuelle Assembly.</summary>
+        <value>Ein boolescher Wert, der true, wenn die Klasse eine externe WMI-Klasse und "false" darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird verwendet, wenn der Anbieter implementieren, die Klassen implementieren, die vorhandene abstrakte WMI-Klassen erweitern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.ManagementEntityAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der WMI-Klasse.</summary>
+        <value>Eine Zeichenfolge, die den Namen der WMI-Klasse enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie den Namen der WMI-Klasse durch Festlegen dieser Eigenschaft nicht angeben, wird die WMI-Klasse auf den Namen der die attributierte Klasse standardmäßig.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Name-Parameter verwendet, den Namen der WMI-Klasse, die von der MortgageCalcWMIProvider-Klasse dargestellt festlegen. Der Name festgelegt auf MortgageCalculator festgelegt. Wenn der Name der Parameter nicht den entsprechenden c#-Klassennamen verwendet, wird MortgageCalcWMIProvider in diesem Fall als WMI-Klassennamen verwendet.  
+  
+```  
+[ManagementEntity(Name = "MortgageCalculator")]  
+public class MortgageCalcWMIProvider  
+{  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Singleton">
+      <MemberSignature Language="C#" Value="public bool Singleton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Singleton" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.ManagementEntityAttribute.Singleton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die zugeordnete Klasse einen Singleton-WMI-Klasse darstellt.</summary>
+        <value>Ein boolescher Wert, der true, wenn die Klasse ein Singleton-WMI-Klasse und "false" darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Singleton-WMI-Klasse ist für die es immer nur eine einzelne Instanz kann. Obwohl Sie code, konnte die Logik, um sicherzustellen, dass immer nur eine einzelne Instanz einer WMI-Klasse erstellt wird, wird dieses Parameterattribut bereitgestellt, um die Aufgabe und konsistent zu vereinfachen.  
+  
+ Bei der Arbeit mit Singleton-WMI-Klassen müssen Clientanwendungen eine speziellen Syntax verwenden. Weitere Informationen finden Sie unter der Describing eine Instanz Objektpfad Thema in der MSDN-Onlinebibliothek auf [http://www.msdn.com](http://www.msdn.com/).  
+  
+   
+  
+## Examples  
+ Der folgende Codeausschnitt veranschaulicht, wie die Singleton-Parameter verwenden, um anzugeben, dass eine C#-Klasse in ein Singleton-WMI-Klasse entspricht.  
+  
+```  
+[ManagementEntity(Singleton=true)]  
+public class SingletonSample  
+```  
+  
+ Ein vollständiges, funktionsfähiges Beispiel ein Anbieter, eine Singleton-Klasse implementiert, finden Sie unter [Vorgehensweise: Erstellen eines grundlegenden entkoppelt Anbieters](http://msdn.microsoft.com/en-us/1dabd442-c1ff-40a1-bb0e-d7b3566c2300).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

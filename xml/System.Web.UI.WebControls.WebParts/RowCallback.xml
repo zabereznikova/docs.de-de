@@ -1,0 +1,32 @@
+<Type Name="RowCallback" FullName="System.Web.UI.WebControls.WebParts.RowCallback">
+  <TypeSignature Language="C#" Value="public delegate void RowCallback(object rowData);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RowCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.RowCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="rowData" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="rowData">Die Daten, die vom Anbieter abzurufen.</param>
+    <summary>Verweist auf die Methode, der beim Abrufen von Zeilendaten aus einem Anbieter aufgerufen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Webparts-Steuerelement implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> -Schnittstelle und fungiert als ein Anbieter in einer Webparts-Verbindung, bei der Verbindung oder Transformer Zeilendaten vom Anbieter abgerufen werden muss. Die <xref:System.Web.UI.WebControls.WebParts.RowCallback> Delegat stellt die Methode zum Abrufen der Anbieterdaten aufrufen.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> Methode enthält einen <xref:System.Web.UI.WebControls.WebParts.RowCallback> Parameter zu delegieren. Die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> Methode wird verwendet, der <xref:System.Web.UI.WebControls.WebParts.RowToFieldTransformer> Klasse und die <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer> -Klasse zum Abrufen von Zeilendaten für die Transformation.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

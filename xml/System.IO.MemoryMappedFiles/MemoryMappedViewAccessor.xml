@@ -1,0 +1,192 @@
+<Type Name="MemoryMappedViewAccessor" FullName="System.IO.MemoryMappedFiles.MemoryMappedViewAccessor">
+  <TypeSignature Language="C#" Value="public sealed class MemoryMappedViewAccessor : System.IO.UnmanagedMemoryAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MemoryMappedViewAccessor extends System.IO.UnmanagedMemoryAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.UnmanagedMemoryAccessor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine nach dem Zufallsprinzip zugegriffen Ansicht eine Speicherabbilddatei dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A> Methode von einem <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> Objekt, um diese Ansicht.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor> aus einer großen Speicher abgebildete Datei zur Bearbeitung.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> Klasse.  
+  
+ [!code-csharp[memorymappedfiles.memorymappedfile.createfromfile#2](~/samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/cs/program.cs#2)]
+ [!code-vb[memorymappedfiles.memorymappedfile.createfromfile#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/vb/program.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht sämtliche Puffer für diese Ansicht, und veranlasst die Ausgabe aller gepufferten Daten in die zugrunde liegende Datei geschrieben werden sollen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie Sichten, die nebeneinander sind verwenden, wird diese Methode auch die folgenden Daten gelöscht, bereitgestellten seine Größe ein Vielfaches der Größe der Seite gleich ist:  
+  
+-   Alle Daten, die die Sicht bis zum letzten Dateioffset vorausgeht.  
+  
+-   Alle Daten, die die Sicht momentanen den frühesten Dateioffset folgt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Es wurden Methoden aufgerufen, nachdem der Accessor geschlossen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PointerOffset">
+      <MemberSignature Language="C#" Value="public long PointerOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 PointerOffset" />
+      <MemberSignature Language="DocId" Value="P:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.PointerOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>[Wird nur in .NET Framework 4.5.1 und neueren Versionen unterstützt]  
+  
+ Ruft die Anzahl der Bytes, die durch die die Position des in dieser Ansicht vom Anfang der Speicherabbilddatei versetzt ist.</summary>
+        <value>Die Anzahl von Bytes zwischen die Anfangsposition des in dieser Ansicht und den Anfang der Speicherabbilddatei.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Das Objekt aus der dieser Instanz erstellt wurde <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeMemoryMappedViewHandle">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle SafeMemoryMappedViewHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle SafeMemoryMappedViewHandle" />
+      <MemberSignature Language="DocId" Value="P:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Handle für die Ansicht einer Speicherabbilddatei ab.</summary>
+        <value>Ein Wrapper für das Betriebssystem-Handle für die Ansicht der Datei.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

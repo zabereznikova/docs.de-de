@@ -1,0 +1,232 @@
+<Type Name="WebPartDescriptionCollection" FullName="System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection">
+  <TypeSignature Language="C#" Value="public sealed class WebPartDescriptionCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebPartDescriptionCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Besteht aus einer Auflistung von <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> -Objekten, die mit Katalogen von zu verwendenden <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> Klasse wird erstellt, die von verschiedenen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente in ihre Implementierungen von der <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions%2A> Methode. Für jede <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das in enthalten ist ein <xref:System.Web.UI.WebControls.WebParts.CatalogPart> -Steuerelement, ein <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekt erstellt wird. Dieses Objekt verwaltet grundlegende Informationen zu einem <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelements sein, einschließlich, seine ID, den Titel, dessen Beschreibung und einen Pfad zu einem Symbol verknüpft. Die verschiedenen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente können ein <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> anzuzeigenden Objekttyp eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerungsinformationen im Katalog, ohne dass zum Erstellen einer Instanz von der <xref:System.Web.UI.WebControls.WebParts.WebPart> selbst steuern.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> Klasse wird intern von Webparts-Steuerelementsatz darin eine Auflistung aller verwendet die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> in einem Katalog verwendeten Objekte. Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> Auflistung wird verwendet, nur, wenn eine Seite im Kataloganzeigemodus befindet. Wenn eine <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelement gerendert wird, durchläuft es die <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> -Auflistung, die Informationen aus jeder hinzuzufügen <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekt im Katalog angezeigt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartDescriptionCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue leere Instanz mit der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung von der <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.%23ctor%2A> Konstruktor kann verwendet werden, um eine leere Auflistung zu erstellen. Z. B. die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement erstellt ein leeres <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> Objekt, wenn der Inhalt einer Datei importierten Beschreibung ist `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartDescriptionCollection (System.Collections.ICollection webPartDescriptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection webPartDescriptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="webPartDescriptions" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="webPartDescriptions">Eine Auflistung von <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> Objekte, entsprechen die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente in einem Katalog.</param>
+        <summary>Initialisiert eine neue Instanz der eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection" /> Objekt durch die Übergabe einer <see cref="T:System.Collections.ICollection" /> Auflistung von <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.%23ctor%28System.Collections.ICollection%29> Konstruktor wird verwendet, durch die <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions%2A> Implementierungen der Dienstmethode innerhalb der verschiedenen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente zum Erstellen einer Sammlung von <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="webPartDescriptions" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Ein Mitglied <paramref name="webPartDescriptions" /> ist<see langword="null" />  
+  
+ - oder -   
+  
+ Ein Mitglied <paramref name="webPartDescriptions" /> ist kein Objekt des Typs<see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" />  
+  
+ - oder -   
+  
+ Ein Mitglied <paramref name="webPartDescriptions" /> hat ein Duplikat <see cref="P:System.Web.UI.WebControls.WebParts.WebPartDescription.ID" /> Eigenschaft</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.WebParts.WebPartDescription value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.WebParts.WebPartDescription value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.Contains(System.Web.UI.WebControls.WebParts.WebPartDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartDescription" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein bestimmter <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" />.</param>
+        <summary>Gibt einen Wert, der angibt, ob ein bestimmtes Steuerelement in der Auflistung vorhanden ist.</summary>
+        <returns>Ein boolescher Wert, der angibt, ob ein bestimmtes <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> vorhanden ist, einem <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.Contains%2A> Methode können Sie bestimmen, ob ein bestimmtes <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekt ist Teil einer <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.WebParts.WebPartDescription[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.WebParts.WebPartDescription[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.CopyTo(System.Web.UI.WebControls.WebParts.WebPartDescription[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.WebParts.WebPartDescription[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Array von <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> -Objekten, die kopierte Auflistung enthalten.</param>
+        <param name="index">Der Startpunkt im Array, an das der Inhalt der Auflistung eingefügt werden soll.</param>
+        <summary>Kopiert die Auflistung in ein Array von <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.CopyTo%2A> Methode ist nützlich, wenn Sie möchten ein benutzerdefiniertes Array erstellen, die enthalten, können die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekte in der <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.WebParts.WebPartDescription value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.WebParts.WebPartDescription value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.IndexOf(System.Web.UI.WebControls.WebParts.WebPartDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartDescription" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> , das ein Mitglied der Sammlung.</param>
+        <summary>Gibt die Position eines bestimmten Elements der Auflistung zurück.</summary>
+        <returns>Eine ganze Zahl, die die Position eines bestimmten Objekts in der Auflistung angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.IndexOf%2A> Methode ist nützlich, wenn mehrere <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekte, und Sie müssen die Ordnungsposition eines Objekts relativ zu den anderen kennen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartDescription this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartDescription Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index eines bestimmten <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> in einer Auflistung.</param>
+        <summary>Ruft ein Element der Auflistung basierend auf ihren Index innerhalb der Auflistung ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> am angegebenen Index in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.Item%2A> Indexer können Sie die zu Grunde liegenden <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekte in einem <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> Auflistung nach Index.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartDescription this[string id] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartDescription Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Die Zeichenfolge, die als eindeutiger Bezeichner für einen bestimmten dient <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> in einer Auflistung.</param>
+        <summary>Ruft ein Element der Auflistung basierend auf ein eindeutiger Zeichenfolgenbezeichner.</summary>
+        <value>Die erste <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> in der Auflistung, deren ID entspricht dem Wert von <paramref name="id" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.Item%2A> Indexer ermöglicht den Zugriff auf eine <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> -Objekt in ein <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> Sammlung entsprechend einem eindeutigen Bezeichner.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

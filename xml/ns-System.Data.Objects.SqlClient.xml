@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Objects.SqlClient">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.Objects.SqlClient" /> -Namespace stellt die <see cref="T:System.Data.Objects.SqlClient.SqlFunctions" /> -Klasse, die common Language Runtime (CLR)-Methoden enthält, die in Datenbankfunktionen übersetzt. Methoden in der <see cref="T:System.Data.Objects.SqlClient.SqlFunctions" /> Klasse kann nur in LINQ to Entities-Abfragen verwendet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

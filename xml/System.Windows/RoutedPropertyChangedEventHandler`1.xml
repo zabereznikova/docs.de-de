@@ -1,0 +1,51 @@
+<Type Name="RoutedPropertyChangedEventHandler&lt;T&gt;" FullName="System.Windows.RoutedPropertyChangedEventHandler&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public delegate void RoutedPropertyChangedEventHandler&lt;T&gt;(object sender, RoutedPropertyChangedEventArgs&lt;T&gt; e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RoutedPropertyChangedEventHandler`1&lt;T&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.RoutedPropertyChangedEventHandler`1" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.RoutedPropertyChangedEventArgs&lt;T&gt;" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="T">Der Typ des Eigenschaftswerts, für den geänderte Werte gemeldet werden.</typeparam>
+    <param name="sender">Das Objekt, dem der Ereignishandler angefügt ist.</param>
+    <param name="e">Die Ereignisdaten. Bestimmte Ereignisdefinitionen schränken <see cref="T:System.Windows.RoutedPropertyChangedEventArgs`1" /> auf einen Typ mit dem Typparameter der Einschränkung Abgleich der typparametereinschränkung einer delegatimplementierung übereinstimmen.</param>
+    <summary>Stellt Methoden dar, die verschiedene weitergeleitete Ereignisse behandeln, die geänderte Eigenschaftswerte verfolgen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beispiele für Ereignisse, die eingeschränkte Delegaten verwenden, basierend auf <xref:System.Windows.RoutedPropertyChangedEventHandler%601> enthalten <xref:System.Windows.Controls.TreeView.SelectedItemChanged?displayProperty=nameWithType> und <xref:System.Windows.Controls.Primitives.RangeBase.ValueChanged?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel definiert und fügt eine Handlermethode für den <xref:System.Windows.Controls.Primitives.RangeBase.ValueChanged> Ereignis.  
+  
+ Der Handler basiert auf <xref:System.Windows.RoutedPropertyChangedEventHandler%601>, und wird im zweiten Segment des Codebeispiels, wobei der Typparameter der generischen beschränkt auf mit definiert <xref:System.Double>.  
+  
+ [!code-csharp[AutoGrid#2](~/samples/snippets/csharp/VS_Snippets_Wpf/AutoGrid/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[AutoGrid#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AutoGrid/visualbasic/window1.xaml.vb#2)]  
+  
+ [!code-csharp[AutoGrid#RoutedPropertyChangedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/AutoGrid/CSharp/Window1.xaml.cs#routedpropertychangedevent)]
+ [!code-vb[AutoGrid#RoutedPropertyChangedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AutoGrid/visualbasic/window1.xaml.vb#routedpropertychangedevent)]  
+  
+ In diesem Beispiel wird der Routingeigenschaft des Ereignisses nicht verwendet. das Ereignis ist für dasselbe Element behandelt, das es ausgelöst wurde. Dies ist jedoch nicht immer die Groß-/Kleinschreibung. Für ein Routingereignis ist es möglich, dass die Quelle des Ereignisses ein anderes Objekt als das Objekt ist, in dem der Handler angefügt ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

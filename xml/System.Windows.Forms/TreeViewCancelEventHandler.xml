@@ -1,0 +1,43 @@
+<Type Name="TreeViewCancelEventHandler" FullName="System.Windows.Forms.TreeViewCancelEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void TreeViewCancelEventHandler(object sender, TreeViewCancelEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TreeViewCancelEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TreeViewCancelEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.TreeViewCancelEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.TreeViewCancelEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Windows.Forms.TreeView.BeforeCheck" />, <see cref="E:System.Windows.Forms.TreeView.BeforeCollapse" />, <see cref="E:System.Windows.Forms.TreeView.BeforeExpand" />, oder <see cref="E:System.Windows.Forms.TreeView.BeforeSelect" /> -Ereignis für ein <see cref="T:System.Windows.Forms.TreeView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Windows.Forms.TreeViewCancelEventArgs>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Ändern des Zustands von einem <xref:System.Windows.Forms.TreeView> , damit alle aktivierten Knoten sichtbar sind. Zunächst sind alle Knoten reduziert, und ein Handler hinzugefügt, mit der <xref:System.Windows.Forms.TreeView.BeforeExpand?displayProperty=nameWithType> Ereignis. Anschließend werden alle Knoten erweitert werden. Die <xref:System.Windows.Forms.TreeView.BeforeExpand?displayProperty=nameWithType> Ereignishandler bestimmt, ob ein angegebener Knoten über untergeordnete Knoten verfügt, die überprüft werden. Wenn ein Knoten nicht überprüften untergeordnete Elemente verfügt, wird die Erweiterung für diesen Knoten abgebrochen. Damit normale Node-Erweiterung kann beim Klicken auf das Pluszeichen neben einem Knoten der <xref:System.Windows.Forms.TreeView.BeforeExpand?displayProperty=nameWithType> -Ereignishandler wird entfernt.  
+  
+ Dieses Verhalten kann auch durch Behandeln implementiert werden die <xref:System.Windows.Forms.TreeView.BeforeCollapse?displayProperty=nameWithType> Ereignis, wie im Beispiel für das betreffende Thema veranschaulicht.  
+  
+ [!code-cpp[TreeViewShowCheckedNodes1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewShowCheckedNodes1/CPP/treeviewshowcheckednodes1.cpp#1)]
+ [!code-csharp[TreeViewShowCheckedNodes1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewShowCheckedNodes1/CS/treeviewshowcheckednodes1.cs#1)]
+ [!code-vb[TreeViewShowCheckedNodes1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewShowCheckedNodes1/VB/treeviewshowcheckednodes1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,315 @@
+<Type Name="EncodingProvider" FullName="System.Text.EncodingProvider">
+  <TypeSignature Language="C#" Value="public abstract class EncodingProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EncodingProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Text.EncodingProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.Encoding</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisklasse für einen Codierungsanbieter bereit, der Codierungen liefert, die auf einer bestimmten Plattform nicht verfügbar sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein codierungsanbieter liefert Codierungen, die andernfalls nicht auf eine bestimmte Zielplattform verfügbar sind.  
+  
+ .NET Framework auf dem Windows-Desktop unterstützt eine große Anzahl von Zeichen Codierung und Codepages. Sie können eine vollständige Liste der in .NET Framework verfügbaren Codierungen auf dem Windows-Desktop abrufen, durch Aufrufen der <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> Methode. .NET Core, unterstützt andererseits, standardmäßig nur die folgenden Codierungen:  
+  
+-   ASCII (Codepage 20127) zurückgegeben, durch die <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+-   ISO-8859-1 (Codepage 28591).  
+  
+-   UTF-7 (Codepage 65000) zurückgegeben, durch die <xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+-   UTF-8 (Codepage 65001) zurückgegeben, durch die <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+-   UTF-16 und UTF-16LE (Codepage 1200) zurückgegeben, durch die <xref:System.Text.Encoding.Unicode%2A> Eigenschaft.  
+  
+-   UTF-16BE (Codepage 1201), die durch den Aufruf instanziiert wird die <xref:System.Text.UnicodeEncoding.%23ctor%28System.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType> oder <xref:System.Text.UnicodeEncoding.%23ctor%28System.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType> Konstruktor mit einem `bigEndian` Wert `true`.  
+  
+-   UTF-32 und UTF-32LE (Codepage 12000) zurückgegeben, durch die <xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+-   UTF-32BE (Codepage 12001), die durch den Aufruf instanziiert ist ein <xref:System.Text.UTF32Encoding> Konstruktor nutzen, einen `bigEndian` Parameter und einen Wert von `true` im Aufruf Methode.  
+  
+ Beginnend mit .NET Framework 4.6 <xref:System.Text.EncodingProvider> ist die Basisklasse, die andernfalls nicht verfügbar macht, .NET Framework verfügbaren Codierungen. Dies umfasst die folgenden Schritte aus:  
+  
+1.  Definieren Sie eine Unterklasse von <xref:System.Text.EncodingProvider> , überschreibt der zwei abstrakten <xref:System.Text.EncodingProvider.GetEncoding%2A> Überladungen, <xref:System.Text.EncodingProvider.GetEncoding%28System.Int32%29> und <xref:System.Text.EncodingProvider.GetEncoding%28System.String%29>. Diese Überladungen zurück, die andernfalls nicht unterstützte Codierung nach Codepagebezeichner und Name. Beachten Sie, die Sie nach Wunsch können den Rückgabetyp Codierung, wenn die <xref:System.Text.EncodingProvider.GetEncoding%28System.Int32%29> Methode mit einem Argument von 0 aufgerufen wird.  
+  
+2.  Optional können Sie die virtuellen überschreiben <xref:System.Text.EncodingProvider.GetEncoding%28System.Int32%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29> und <xref:System.Text.EncodingProvider.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29> Methoden. In den meisten Fällen ist dies nicht erforderlich, da die Basisklasse eine Standardimplementierung bereitstellt.  
+  
+3.  Übergeben der <xref:System.Text.EncodingProvider> -Instanz, auf die <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> Methode zum Erstellen von Codierungen, angegeben durch die <xref:System.Text.EncodingProvider> Objekt für die common Language Runtime verfügbar.  
+  
+4.  Rufen Sie eine <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> Überladung zum Abrufen der Codierung. Die <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> Methodenaufruf wird das entsprechende <xref:System.Text.EncodingProvider.GetEncoding%2A?displayProperty=nameWithType> zu bestimmen, ob der angeforderten Codierung bereitgestellt werden können.  
+  
+ Der .NET Framework-Klassenbibliothek stellt eine statische Eigenschaft, <xref:System.Text.CodePagesEncodingProvider.Instance%2A?displayProperty=nameWithType>, zurückgegeben, die eine <xref:System.Text.EncodingProvider> -Objekt, das den vollständigen Satz von Codierungen verfügbar auf dem desktop .NET Framework-Klassenbibliothek, zur Verfügung [!INCLUDE[net_core](~/includes/net-core-md.md)] Anwendungen. Darüber hinaus können Sie abgeleitet werden, aus der <xref:System.Text.EncodingProvider> Klasse, um eine eigene Codierungen verfügbar zu machen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncodingProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncodingProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Text.EncodingProvider" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEncoding">
+      <MemberSignature Language="C#" Value="public abstract System.Text.Encoding GetEncoding (int codepage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Text.Encoding GetEncoding(int32 codepage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncodingProvider.GetEncoding(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="codepage" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="codepage">Der Codepagebezeichner der angeforderten Codierung.</param>
+        <summary>Gibt die dem angegebenen Codepagebezeichner zugeordnete Codierung zurück.</summary>
+        <returns>Die zur angegebenen Codepage zugeordnete Codierung, oder <see langword="null" />, wenn dieser <see cref="T:System.Text.EncodingProvider" /> keine gültige Codierung liefern kann, die <paramref name="codepage" /> entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[ 
+
+## Remarks
+
+### <a name="notes-to-inheritors"></a>Hinweise zur Vererbung
+
+Sie überschreiben die [GetEncoding(Int32)](<xref:System.Text.EncodingProvider.GetEncoding(System.Int32)>) Methode, um die Codierung zurückzugeben oder von unterstützten Codierungen Ihrer <xref:System.Text.EncodingProvider> Unterklasse. Wenn Benutzercode versucht, zum Abrufen einer Codierung durch Aufrufen der [GetEncoding(Int32)](<xref:System.Text.EncodingProvider.GetEncoding(System.Int32)>) -Methode, die-Methode übergibt die `codepage` Bezeichner auf jedem registrierten codierungsanbieter, bis eine gültige Codierung zurückgibt. Wenn keine gültige Codierung gibt die [GetEncoding(Int32)](<xref:System.Text.EncodingProvider.GetEncoding(System.Int32)>) Methode versucht, eine zwischengespeicherte Codierung abgerufen, deren Codepage-Bezeichner ist `codepage`. Aus diesem Grund Wenn `codepage` ist nicht der Codepagebezeichner der Codierung, die Sie unterstützen, sollte die Methode zurückgeben, `null`; es sollten nie eine Ausnahme auslösen.
+        
+Beachten Sie, die Sie nach Wunsch können eine Standardcodepage wird zurückgegeben, wenn der Wert von der `codepage` Argument ist 0.
+
+## <a name="notes-to-callers"></a>Hinweise zu Aufrufern
+        
+Diese Methode wird aufgerufen, indem Sie die [Encoding.GetEncoding(Int32)](<xref:System.Text.Encoding.GetEncoding(System.Int32)>) Methode. Sie sollten nicht direkt vom Benutzercode aufrufen.
+
+        ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEncoding">
+      <MemberSignature Language="C#" Value="public abstract System.Text.Encoding GetEncoding (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Text.Encoding GetEncoding(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncodingProvider.GetEncoding(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der angeforderten Codierung.</param>
+        <summary>Gibt die Codierung mit dem angegebenen Namen zurück.</summary>
+        <returns>Die zum angegebenen Namen zugeordnete Codierung, oder <see langword="null" />, wenn dieser <see cref="T:System.Text.EncodingProvider" /> keine gültige Codierung liefern kann, die <paramref name="name" /> entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[ 
+      
+## <a name="notes-to-inheritors"></a>Hinweise zur Vererbung 
+                  
+Sie überschreiben die [GetEncoding(String)](<xref:System.Text.EncodingProvider.GetEncoding(System.String)>) Methode, um die Codierung zurückzugeben oder von unterstützten Codierungen Ihrer <xref:System.Text.EncodingProvider> Unterklasse. Wenn Benutzercode versucht, zum Abrufen einer Codierung durch Aufrufen der [GetEncoding(String)](<xref:System.Text.EncodingProvider.GetEncoding(System.String)>) -Methode, die-Methode übergibt die `name` Argument an alle registrierten codierungsanbieter, bis eine gültige Codierung zurückgibt. Wenn keine gültige Codierung gibt die [GetEncoding(String)](<xref:System.Text.EncodingProvider.GetEncoding(System.String)>) Methode versucht, eine zwischengespeicherte Codierung abgerufen, deren Name ist `name`. Aus diesem Grund Wenn `name` ist nicht der Name des eine Codierung, die Sie unterstützen, sollte die Methode zurückgeben, `null`. Ist der einzige Fall, in dem die Methode sollte eine Ausnahme, wenn `name` ist `null`.
+
+## <a name="notes-to-callers"></a>Hinweise zu Aufrufern
+
+Diese Methode wird aufgerufen, indem Sie die [Encoding.GetEncoding(String)](<xref:System.Text.Encoding.GetEncoding(System.String)>) Methode. Sie sollten nicht direkt vom Benutzercode aufrufen.
+        ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEncoding">
+      <MemberSignature Language="C#" Value="public virtual System.Text.Encoding GetEncoding (int codepage, System.Text.EncoderFallback encoderFallback, System.Text.DecoderFallback decoderFallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Text.Encoding GetEncoding(int32 codepage, class System.Text.EncoderFallback encoderFallback, class System.Text.DecoderFallback decoderFallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncodingProvider.GetEncoding(System.Int32,System.Text.EncoderFallback,System.Text.DecoderFallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="codepage" Type="System.Int32" />
+        <Parameter Name="encoderFallback" Type="System.Text.EncoderFallback" />
+        <Parameter Name="decoderFallback" Type="System.Text.DecoderFallback" />
+      </Parameters>
+      <Docs>
+        <param name="codepage">Der Codepagebezeichner der angeforderten Codierung.</param>
+        <param name="encoderFallback">Ein Objekt, das ein Fehlerbehandlungsverfahren bereitstellt, wenn ein Zeichen nicht mit dieser Codierung codiert werden kann.</param>
+        <param name="decoderFallback">Ein Objekt, das ein Fehlerbehandlungsverfahren bereitstellt, wenn eine Bytefolge nicht mit dieser Codierung decodiert werden kann.</param>
+        <summary>Gibt die dem angegebenen Codepagebezeichner zugeordnete Codierung zurück. Parameter geben einen Fehlerhandler für Zeichen an, die nicht codiert werden können, und für Bytefolgen, die nicht decodiert werden können.</summary>
+        <returns>Die zur angegebenen Codepage zugeordnete Codierung, oder <see langword="null" />, wenn dieser <see cref="T:System.Text.EncodingProvider" /> keine gültige Codierung liefern kann, die <paramref name="codepage" /> entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `encoderFallback` und `decoderFallback` Parameter sind Objekte, definieren die Fallbackstrategie verwendet, wenn ein Encoder kann kein Zeichen in eine Folge von Bytes konvertiert oder ein Decoder eine Folge von Bytes in ein Zeichen kann nicht konvertiert werden. .NET Framework bietet die folgenden alternativen Mechanismen:  
+  
+-   Ausnahmefallback. Wenn die `encoderFallback` Argument ist eine Instanz der <xref:System.Text.EncoderExceptionFallback>, oder die `decoderExceptionFallback` Argument ist eine Instanz der <xref:System.Text.DecoderExceptionFallback>, Codierungsmethode löst eine Ausnahme aus, wenn Zeichen nicht codiert werden kann, und die Decodierung Methode löst eine Ausnahme aus, wenn ein Byte Sequenz kann nicht entschlüsselt werden.  
+  
+-   Ersatzfallback. Wenn die `encoderFallback` Argument ist eine Instanz der <xref:System.Text.EncoderReplacementFallback>, oder die `decoderExceptionFallback` Argument ist eine Instanz der <xref:System.Text.DecoderReplacementFallback>, ersetzen Sie die Codierungs- und Decodierungsmethoden eine Ersatzzeichenfolge für Zeichen, die nicht codiert werden können und Bytefolgen nicht möglich decodiert. Wenn Sie das Ersatz-fallback-Objekt instanziiert, indem Sie den Standardkonstruktor aufrufen, wird das Ersatzzeichen ein "?". Beim Aufrufen der <xref:System.Text.EncoderReplacementFallback.%23ctor%28System.String%29?displayProperty=nameWithType> oder <xref:System.Text.DecoderReplacementFallback.%23ctor%28System.String%29?displayProperty=nameWithType> Konstruktor können Sie die Ersatzzeichenfolge angeben.  
+  
+-   Fallback mit ähnlichen Zeichen. Sie können aus Ableiten der <xref:System.Text.EncoderFallback> oder <xref:System.Text.DecoderFallback> Klasse, um einen ähnlichen Austausch Mechanismus implementieren.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Da Aufrufe dieser Methode die Implementierung der verwenden die <see cref="M:System.Text.EncodingProvider.GetEncoding(System.Int32)" /> -Methode, Sie keine zu überschreiben. Wenn Benutzercode versucht, zum Abrufen einer Codierung durch Aufrufen der <see cref="M:System.Text.Encoding.GetEncoding(System.Int32,System.Text.EncoderFallback,System.Text.DecoderFallback)" /> -Methode, die-Methode übergibt die <paramref name="codepage" /> Bezeichner auf jedem registrierten codierungsanbieter, bis eine gültige Codierung zurückgibt. Wenn keine gültige Codierung gibt die <see cref="M:System.Text.Encoding.GetEncoding(System.Int32)" /> Methode versucht, eine zwischengespeicherte Codierung abgerufen, deren Codepage-Bezeichner ist <paramref name="codepage" />. Aus diesem Grund, wenn Sie sich entschließen, überschreiben die <see cref="M:System.Text.EncodingProvider.GetEncoding(System.Int32,System.Text.EncoderFallback,System.Text.DecoderFallback)" /> -Methode, überschreiben sollten zurückgegeben <see langword="null" /> Wenn <paramref name="codepage" /> ist nicht der Codepagebezeichner der Codierung, die Sie unterstützen, sollten sie nie eine Ausnahme auslösen.</para>
+        </block>
+        <block subset="none" type="usage">
+          <para>Diese Methode wird aufgerufen, indem Sie die <see cref="M:System.Text.Encoding.GetEncoding(System.Int32,System.Text.EncoderFallback,System.Text.DecoderFallback)" /> Methode. Sie sollten nicht direkt vom Benutzercode aufrufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEncoding">
+      <MemberSignature Language="C#" Value="public virtual System.Text.Encoding GetEncoding (string name, System.Text.EncoderFallback encoderFallback, System.Text.DecoderFallback decoderFallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Text.Encoding GetEncoding(string name, class System.Text.EncoderFallback encoderFallback, class System.Text.DecoderFallback decoderFallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.EncodingProvider.GetEncoding(System.String,System.Text.EncoderFallback,System.Text.DecoderFallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="encoderFallback" Type="System.Text.EncoderFallback" />
+        <Parameter Name="decoderFallback" Type="System.Text.DecoderFallback" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der bevorzugten Codierung.</param>
+        <param name="encoderFallback">Ein Objekt, das ein Fehlerbehandlungsverfahren bereitstellt, wenn ein Zeichen nicht mit dieser Codierung codiert werden kann.</param>
+        <param name="decoderFallback">Ein Objekt, das ein Fehlerbehandlungsverfahren bereitstellt, wenn eine Bytefolge nicht mit der aktuellen Codierung decodiert werden kann.</param>
+        <summary>Gibt die Codierung mit dem angegebenen Namen zurück. Parameter geben einen Fehlerhandler für Zeichen an, die nicht codiert werden können, und für Bytefolgen, die nicht decodiert werden können.</summary>
+        <returns>Die zum angegebenen Namen zugeordnete Codierung, oder <see langword="null" />, wenn dieser <see cref="T:System.Text.EncodingProvider" /> keine gültige Codierung liefern kann, die <paramref name="name" /> entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `encoderFallback` und `decoderFallback` Parameter sind Objekte, definieren die Fallbackstrategie verwendet, wenn ein Encoder kann kein Zeichen in eine Folge von Bytes konvertiert oder ein Decoder eine Folge von Bytes in ein Zeichen kann nicht konvertiert werden. .NET Framework bietet die folgenden alternativen Mechanismen:  
+  
+-   Ausnahmefallback. Wenn die `encoderFallback` Argument ist eine Instanz der <xref:System.Text.EncoderExceptionFallback>, oder die `decoderExceptionFallback` Argument ist eine Instanz der <xref:System.Text.DecoderExceptionFallback>, Codierungsmethode löst eine Ausnahme aus, wenn Zeichen nicht codiert werden kann, und die Decodierung Methode löst eine Ausnahme aus, wenn ein Byte Sequenz kann nicht entschlüsselt werden.  
+  
+-   Ersatzfallback. Wenn die `encoderFallback` Argument ist eine Instanz der <xref:System.Text.EncoderReplacementFallback>, oder die `decoderExceptionFallback` Argument ist eine Instanz der <xref:System.Text.DecoderReplacementFallback>, ersetzen Sie die Codierungs- und Decodierungsmethoden eine Ersatzzeichenfolge für Zeichen, die nicht codiert werden können und Bytefolgen nicht möglich decodiert. Wenn Sie das Ersatz-fallback-Objekt instanziiert, indem Sie den Standardkonstruktor aufrufen, wird das Ersatzzeichen ein "?". Beim Aufrufen der <xref:System.Text.EncoderReplacementFallback.%23ctor%28System.String%29?displayProperty=nameWithType> oder <xref:System.Text.DecoderReplacementFallback.%23ctor%28System.String%29?displayProperty=nameWithType> Konstruktor können Sie die Ersatzzeichenfolge angeben.  
+  
+-   Fallback mit ähnlichen Zeichen. Sie können aus Ableiten der <xref:System.Text.EncoderFallback> oder <xref:System.Text.DecoderFallback> Klasse, um einen ähnlichen Austausch Mechanismus implementieren.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Da Aufrufe dieser Methode die Implementierung der verwenden die <see cref="M:System.Text.EncodingProvider.GetEncoding(System.String)" /> -Methode, Sie keine zu überschreiben. Wenn Benutzercode versucht, zum Abrufen einer Codierung durch Aufrufen der <see cref="M:System.Text.EncodingProvider.GetEncoding(System.String,System.Text.EncoderFallback,System.Text.DecoderFallback)" /> -Methode, die-Methode übergibt die <paramref name="codepage" /> Bezeichner auf jedem registrierten codierungsanbieter, bis eine gültige Codierung zurückgibt. Wenn keine gültige Codierung gibt die <see cref="M:System.Text.Encoding.GetEncoding(System.Int32)" /> Methode versucht, eine zwischengespeicherte Codierung abgerufen, deren Codepage-Bezeichner ist <paramref name="codepage" />. Aus diesem Grund, wenn Sie sich entschließen, überschreiben die <see cref="M:System.Text.EncodingProvider.GetEncoding(System.Int32,System.Text.EncoderFallback,System.Text.DecoderFallback)" /> -Methode, überschreiben sollten zurückgegeben <see langword="null" /> Wenn <paramref name="codepage" /> ist nicht der Codepagebezeichner der Codierung, die Sie unterstützen, sollten sie nie eine Ausnahme auslösen.</para>
+        </block>
+        <block subset="none" type="usage">
+          <para>Diese Methode wird aufgerufen, indem Sie die <see cref="M:System.Text.Encoding.GetEncoding(System.String,System.Text.EncoderFallback,System.Text.DecoderFallback)" /> Methode. Sie sollten nicht direkt vom Benutzercode aufrufen.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

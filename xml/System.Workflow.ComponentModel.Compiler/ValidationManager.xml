@@ -1,0 +1,204 @@
+<Type Name="ValidationManager" FullName="System.Workflow.ComponentModel.Compiler.ValidationManager">
+  <TypeSignature Language="C#" Value="public sealed class ValidationManager : IServiceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ValidationManager extends System.Object implements class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Compiler.ValidationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht während der Kompilierung das gemeinsame Nutzen von Kontextinformationen, wie die Eigenschaftenvalidierung, die übergeordnete Aktivität usw., über Validierungssteuerelemente hinweg.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Eine Liste der anfänglichen Eigenschaftswerte für eine Instanz der <xref:System.Workflow.ComponentModel.Compiler.ValidationManager>-Klasse finden Sie im <xref:System.Workflow.ComponentModel.Compiler.ValidationManager.%23ctor%2A>-Konstruktor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationManager" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle sind anfängliche Eigenschaftswerte für eine Instanz der ValidationManager-Klasse aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Workflow.ComponentModel.Compiler.ValidationManager.Context%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Workflow.ComponentModel.Compiler.ValidationManager.ValidateChildActivities%2A>|`true`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationManager (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ValidationManager.#ctor(System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Ein <see cref="T:System.IServiceProvider" />, der einen per GUID identifizierten Dienst angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationManager" />-Klasse unter Verwendung des angegebenen Dienstanbieters.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der anfänglichen Eigenschaftswerte für eine Instanz der <xref:System.Workflow.ComponentModel.Compiler.ValidationManager>-Klasse finden Sie im <xref:System.Workflow.ComponentModel.Compiler.ValidationManager.%23ctor%2A>-Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationManager (IServiceProvider serviceProvider, bool validateChildActivities);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider serviceProvider, bool validateChildActivities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ValidationManager.#ctor(System.IServiceProvider,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="validateChildActivities" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Ein <see cref="T:System.IServiceProvider" />, der einen per GUID identifizierten Dienst angibt.</param>
+        <param name="validateChildActivities">
+          <see langword="true" />, um die untergeordneten <see cref="T:System.Workflow.ComponentModel.Activity" />-Klassen der aktuellen <see cref="T:System.Workflow.ComponentModel.Activity" /> zu überprüfen, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationManager" />-Klasse. Dabei wird der identifizierte Dienstanbieter verwendet und angegeben, ob untergeordnete <see cref="T:System.Workflow.ComponentModel.Activity" />-Klassen überprüft werden sollen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der anfänglichen Eigenschaftswerte für eine Instanz der <xref:System.Workflow.ComponentModel.Compiler.ValidationManager>-Klasse finden Sie im <xref:System.Workflow.ComponentModel.Compiler.ValidationManager.%23ctor%2A>-Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.Serialization.ContextStack Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.Serialization.ContextStack Context" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.ValidationManager.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.ContextStack</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der ein Stapelobjekt angibt, das ein Validierungssteuerelement verwenden kann, um geschachtelten Validierungssteuerelementen Informationen zur Verfügung zu stellen.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.Design.Serialization.ContextStack" />, den ein Validierungssteuerelement verwenden kann, um geschachtelten Validierungssteuerelementen Informationen zur Verfügung zu stellen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ValidationManager.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Ein Objekt, das für das abzurufende Dienstobjekt den <see cref="T:System.Type" /> angibt.</param>
+        <summary>Ruft das Dienstobjekt für den angegebenen <see cref="T:System.Type" /> ab.</summary>
+        <returns>Ein Dienstobjekt vom Typ <paramref name="serviceType" /> oder ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), falls kein Dienstobjekt vom Typ <paramref name="serviceType" /> vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValidators">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Compiler.Validator[] GetValidators (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.ComponentModel.Compiler.Validator[] GetValidators(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ValidationManager.GetValidators(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.Validator[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die zu suchende <see cref="T:System.Type" /><see cref="T:System.Workflow.ComponentModel.Compiler.Validator" />-Klasse.</param>
+        <summary>Gibt ein Array mit Validierungssteuerelementen zurück, denen ein Typ zugeordnet ist, indem nach dem Validierungssteuerelement-Attribut gesucht wird, das auf den Typ angewendet wird.</summary>
+        <returns>Ein Array mit <see cref="T:System.Workflow.ComponentModel.Compiler.Validator" />-Klassen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Hashtabelle mit <xref:System.Workflow.ComponentModel.Compiler.Validator>-Klassen den <xref:System.Type> enthält, der mithilfe von `type` angegeben wird, wird ein Array mit <xref:System.Workflow.ComponentModel.Compiler.Validator>-Klassen zurückgegeben.  
+  
+ Wenn die Hashtabelle den <xref:System.Type> nicht enthält, der mithilfe von `type` angegeben wird, wird eine neue Hashtabelle mit <xref:System.Workflow.ComponentModel.Compiler.Validator>-Klassen erstellt, und anschließend wird ein Array mit den <xref:System.Workflow.ComponentModel.Compiler.Validator>-Klassen zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateChildActivities">
+      <MemberSignature Language="C#" Value="public bool ValidateChildActivities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidateChildActivities" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.ValidationManager.ValidateChildActivities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob untergeordnete <see cref="T:System.Workflow.ComponentModel.Activity" />-Klassen überprüft werden sollen.</summary>
+        <value>
+          <see langword="true" />, wenn untergeordnete <see cref="T:System.Workflow.ComponentModel.Activity" />-Klassen überprüft werden sollen, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

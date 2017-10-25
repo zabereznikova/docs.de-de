@@ -1,0 +1,57 @@
+<Type Name="ClearTypeHint" FullName="System.Windows.Media.ClearTypeHint">
+  <TypeSignature Language="C#" Value="public enum ClearTypeHint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ClearTypeHint extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.ClearTypeHint" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Eine Enumeration, die einen Hinweis für das Renderingmodul, das Text gerendert werden, kann mit ClearType angibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Media.RenderOptions.ClearTypeHint%2A?displayProperty=nameWithType> -Eigenschaft, um zu steuern, wie Text auf einem durchsichtigen Hintergrund gerendert wird. Weitere Informationen finden Sie unter <xref:System.Windows.Media.RenderOptions.ClearTypeHint%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.ClearTypeHint Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.ClearTypeHint.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ClearTypeHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Renderingmodul verwendet ClearType, wenn es möglich ist. Wenn die Durchlässigkeit eingeführt wird, ist die ClearType für Teilstruktur deaktiviert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="Enabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.ClearTypeHint Enabled = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.ClearTypeHint.Enabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ClearTypeHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Renderingmodul aktiviert ClearType für die aktuelle Teilstruktur erneut. Wo Durchlässigkeit in dieser Unterstruktur eingeführt wird, wird ClearType deaktiviert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

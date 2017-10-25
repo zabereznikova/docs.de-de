@@ -1,0 +1,215 @@
+<Type Name="CompositeControl" FullName="System.Web.UI.WebControls.CompositeControl">
+  <TypeSignature Language="C#" Value="public abstract class CompositeControl : System.Web.UI.WebControls.WebControl, System.Web.UI.INamingContainer, System.Web.UI.WebControls.ICompositeControlDesignerAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CompositeControl extends System.Web.UI.WebControls.WebControl implements class System.Web.UI.INamingContainer, class System.Web.UI.WebControls.ICompositeControlDesignerAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CompositeControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.INamingContainer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.ICompositeControlDesignerAccessor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.CompositeControlDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert die Grundfunktionen, die für Websteuerelemente mit untergeordneten Steuerelementen erforderlich sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CompositeControl> Klasse ist eine abstrakte Klasse, die Benennungskonvention Container und Steuerelement Designerfunktionen für benutzerdefinierte Steuerelemente bereitstellt, die untergeordneten Steuerelemente in ihrer Gesamtheit umfassen, oder verwenden die Funktionalität anderer Steuerelemente. Diese Klasse wird von allen Steuerelementen geerbt, z. B. <xref:System.Web.UI.WebControls.Login>, und <xref:System.Web.UI.WebControls.Wizard>. Diese Klasse kann nicht direkt verwendet werden.  
+  
+ Die <xref:System.Web.UI.WebControls.CompositeControl>-Klasse implementiert die <xref:System.Web.UI.INamingContainer>-Schnittstelle. Dies ist erforderlich, um sicherzustellen, dass alle untergeordneten Steuerelement-ID-Attribute eindeutig sind und auf Post für die Datenbindung können nicht gefunden.  
+  
+ Um ein benutzerdefiniertes zusammengesetztes Steuerelement zu erstellen, leiten Sie von der <xref:System.Web.UI.WebControls.CompositeControl> Klasse. Die Funktionalität, die diese Klasse bietet, ist eine integrierte Bestätigung dieser untergeordnete Steuerelemente erstellt wurden, bevor auf den zugegriffen wird und sie können zur Entwurfszeit-Umgebung, um die Auflistung der untergeordneten Steuerelemente neu zu erstellen. Die <xref:System.Web.UI.WebControls.CompositeControl.Controls%2A> Eigenschaft wird sichergestellt, dass alle untergeordneten Steuerelemente vor dem Zugriff auf erstellt wurden die <xref:System.Web.UI.ControlCollection>. Die <xref:System.Web.UI.WebControls.CompositeControl.DataBind%2A> Methode stellt sicher, dass alle untergeordneten Steuerelemente vor dem Binden an eine Datenquelle erstellt wurden.  
+  
+ Entwickler von Steuerelementen können die <xref:System.Web.UI.Design.WebControls.CompositeControlDesigner> Klasse, um einen benutzerdefinierten Designer erstellen, für ein zusammengesetztes Steuerelement abgeleitet <xref:System.Web.UI.WebControls.CompositeControl>. Ein Steuerelementdesigner ist eine Klasse, die definiert, wie ein Steuerelement angezeigt und in der Entwurfsansicht bearbeitet. Weitere Informationen finden Sie unter <xref:System.Web.UI.Design.WebControls.CompositeControlDesigner>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CompositeControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.CompositeControl" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CompositeControl> Konstruktor wird aufgerufen, von ASP.NET zum Erstellen einer Instanz von der <xref:System.Web.UI.WebControls.CompositeControl>. Dieser Konstruktor ist nicht für die Verwendung aus dem Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.ControlCollection Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlCollection Controls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompositeControl.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.ControlCollection" /> steuert das Objekt, das untergeordnete Element darstellt, in eine <see cref="T:System.Web.UI.WebControls.CompositeControl" />.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ControlCollection" /> , die die untergeordneten Steuerelemente in stellt das <see cref="T:System.Web.UI.WebControls.CompositeControl" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CompositeControl.Controls%2A> Eigenschaft überschreibt die basisimplementierung, um sicherzustellen, dass alle untergeordneten Steuerelemente, vor der Rückgabe erstellt wurden der <xref:System.Web.UI.ControlCollection> Objekt.  
+  
+ Die <xref:System.Web.UI.WebControls.CompositeControl.Controls%2A> -Eigenschaft ermöglicht den programmgesteuerten Zugriff auf die <xref:System.Web.UI.ControlCollection> für die <xref:System.Web.UI.WebControls.CompositeControl>. Sie können Steuerelemente, um, oder entfernen Sie Steuerelemente aus der Auflistung, und durchlaufen die Steuerelemente in der Auflistung hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="public override void DataBind ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DataBind() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeControl.DataBind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bindet eine Datenquelle an das <see cref="T:System.Web.UI.WebControls.CompositeControl" /> und alle untergeordneten Steuerelemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CompositeControl.DataBind%2A> Methode bindet eine Datenquelle an das <xref:System.Web.UI.WebControls.CompositeControl> -Steuerelement und alle untergeordneten Steuerelemente. Dies <xref:System.Web.UI.WebControls.CompositeControl.DataBind%2A> Methode überschreibt die basisimplementierung, um sicherzustellen, dass alle untergeordneten Steuerelemente vor dem Binden an eine Datenquelle erstellt wurden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecreateChildControls">
+      <MemberSignature Language="C#" Value="protected virtual void RecreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RecreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeControl.RecreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die untergeordneten Steuerelemente in einem Steuerelement abgeleitet <see cref="T:System.Web.UI.WebControls.CompositeControl" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CompositeControl.RecreateChildControls%2A> Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeControl.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />, der den Ausgabestream für das Rendering von HTML-Inhalten auf dem Client darstellt.</param>
+        <summary>Schreibt die <see cref="T:System.Web.UI.WebControls.CompositeControl" /> in den angegebenen Inhalt <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt, für die Anzeige auf dem Client.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CompositeControl.Render%2A> Methode schreibt den gerenderten Inhalt des Steuerelements und seiner untergeordneten Steuerelemente an den Client unter Verwendung des angegebenen <xref:System.Web.UI.HtmlTextWriter>. Diese Methode überschreibt die basisimplementierung, um sicherzustellen, dass alle untergeordneten Steuerelemente in der <xref:System.Web.UI.WebControls.CompositeControl.Controls%2A> Auflistung werden erstellt, und klicken Sie dann rendert das Steuerelement und seine untergeordneten Steuerelemente mithilfe der Basis <xref:System.Web.UI.Control.Render%2A?displayProperty=nameWithType> und <xref:System.Web.UI.Control.RenderChildren%2A?displayProperty=nameWithType> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDisabledAttribute">
+      <MemberSignature Language="C#" Value="public override bool SupportsDisabledAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDisabledAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompositeControl.SupportsDisabledAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob vom Steuerelement das <see langword="disabled" />-Attribut des gerenderten HTML-Elements auf "disabled" festgelegt werden soll, wenn die <see cref="P:System.Web.UI.WebControls.WebControl.IsEnabled" />-Eigenschaft des Steuerelements <see langword="false" /> ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> Eigenschaft gibt an, eine frühere ASP.NET-Version als <c>4.0</c>ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, wie ASP.NET HTML für ein Steuerelement rendern soll, wenn das Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `true`, rendert ASP.NET ein `disabled` Attribut, wenn ein Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `false`, rendert ASP.NET ein `class` Attribut, wenn ein Steuerelement deaktiviert ist. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.ICompositeControlDesignerAccessor.RecreateChildControls">
+      <MemberSignature Language="C#" Value="void ICompositeControlDesignerAccessor.RecreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.ICompositeControlDesignerAccessor.RecreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeControl.System#Web#UI#WebControls#ICompositeControlDesignerAccessor#RecreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ermöglicht es dem Designer des zusammengesetzten Steuerelements Auflistung von untergeordneten Steuerelementen in der entwurfszeitumgebung neu zu erstellen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,387 @@
+<Type Name="ExpressionBindingCollection" FullName="System.Web.UI.ExpressionBindingCollection">
+  <TypeSignature Language="C#" Value="public sealed class ExpressionBindingCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExpressionBindingCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ExpressionBindingCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Web.UI.ExpressionBinding" />-Objekten dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpressionBindingCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ExpressionBindingCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.ExpressionBindingCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.ExpressionBinding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.UI.ExpressionBinding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ExpressionBindingCollection.Add(System.Web.UI.ExpressionBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Web.UI.ExpressionBinding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die <see cref="T:System.Web.UI.ExpressionBinding" /> zum Anfügen an die <see cref="T:System.Web.UI.ExpressionBindingCollection" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.ExpressionBinding" /> Objekt an das Ende der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Changed">
+      <MemberSignature Language="C#" Value="public event EventHandler Changed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Changed" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.ExpressionBindingCollection.Changed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Auflistung der <see cref="T:System.Web.UI.ExpressionBinding" /> Objekte geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Web.UI.ExpressionBindingCollection.Changed> Ereignis tritt auf, wenn der <xref:System.Web.UI.ExpressionBindingCollection.Add%2A> -Methode, die <xref:System.Web.UI.ExpressionBindingCollection.Remove%2A> -Methode, oder die <xref:System.Web.UI.ExpressionBindingCollection.Clear%2A> Methode wird aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ExpressionBindingCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle der <see cref="T:System.Web.UI.ExpressionBinding" /> Objekte aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string propName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string propName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ExpressionBindingCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propName">Die <see cref="P:System.Web.UI.ExpressionBinding.PropertyName" /> von der <see cref="T:System.Web.UI.ExpressionBinding" /> in der Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt, ob die <see cref="T:System.Web.UI.ExpressionBindingCollection" /> Auflistung enthält einen bestimmten <see cref="T:System.Web.UI.ExpressionBinding" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />, wenn <see cref="T:System.Web.UI.ExpressionBinding" /> in der <see cref="T:System.Web.UI.ExpressionBindingCollection" /> gefunden wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ExpressionBindingCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Die nullbasierte Array, empfängt die <see cref="T:System.Web.UI.ExpressionBinding" /> Kopieren von Objekten aus der Auflistung.</param>
+        <param name="index">Die Position im Zielarray, an dem das Array startet den Empfang von kopierten Elemente.</param>
+        <summary>Kopiert alle der <see cref="T:System.Web.UI.ExpressionBinding" /> Objekte aus der <see cref="T:System.Web.UI.ExpressionBindingCollection" /> Auflistung in ein eindimensionales Array, beginnend am angegebenen Index im Zielarray.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.ExpressionBinding[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.ExpressionBinding[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ExpressionBindingCollection.CopyTo(System.Web.UI.ExpressionBinding[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.ExpressionBinding[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Die nullbasierte Array von <see cref="T:System.Web.UI.ExpressionBinding" /> Objekten, empfängt die <see cref="T:System.Web.UI.ExpressionBinding" /> Kopieren von Objekten aus der Auflistung.</param>
+        <param name="index">Die Position im Zielarray, an dem das Array startet den Empfang von kopierten Elemente.</param>
+        <summary>Kopiert alle der <see cref="T:System.Web.UI.ExpressionBinding" /> Objekte aus der <see cref="T:System.Web.UI.ExpressionBindingCollection" /> Auflistung in ein eindimensionales Array von <see cref="T:System.Web.UI.ExpressionBinding" /> -Objekten, beginnend am angegebenen Index im Zielarray.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ExpressionBindingCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der <see cref="T:System.Web.UI.ExpressionBinding" />-Objekte in der <see cref="T:System.Web.UI.ExpressionBindingCollection" />-Auflistung ab.</summary>
+        <value>Die Anzahl der <see cref="T:System.Web.UI.ExpressionBinding" /> Objekte in der <see cref="T:System.Web.UI.ExpressionBindingCollection" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ExpressionBindingCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Collections.IEnumerator" />-implementiert-Objekt, das zum Durchlaufen verwendet werden kann die <see cref="T:System.Web.UI.ExpressionBinding" /> Objekte in der Auflistung.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, das alle enthält implementiert die <see cref="T:System.Web.UI.ExpressionBinding" /> Objekte in der <see cref="T:System.Web.UI.ExpressionBindingCollection" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ExpressionBindingCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.ExpressionBinding" /> Objekte in der Auflistung können geändert werden.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ExpressionBindingCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die Auflistung synchronisiert ist (threadsicher).</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ExpressionBinding this[string propertyName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ExpressionBinding Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ExpressionBindingCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ExpressionBinding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Die <see cref="P:System.Web.UI.ExpressionBinding.PropertyName" /> von der <see cref="T:System.Web.UI.ExpressionBinding" /> abgerufen.</param>
+        <summary>Ruft eine <see cref="T:System.Web.UI.ExpressionBinding" /> Objekt aus der Auflistung mit dem angegebenen <see cref="P:System.Web.UI.ExpressionBinding.PropertyName" /> Wert.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ExpressionBinding" /> in der <see cref="T:System.Web.UI.ExpressionBindingCollection" /> mit dem angegebenen <see cref="P:System.Web.UI.ExpressionBinding.PropertyName" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ExpressionBindingCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Die <see cref="P:System.Web.UI.ExpressionBinding.PropertyName" /> von der <see cref="T:System.Web.UI.ExpressionBinding" /> aus der Auflistung zu entfernen.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Web.UI.ExpressionBinding" />-Objekt aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.ExpressionBinding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.ExpressionBinding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ExpressionBindingCollection.Remove(System.Web.UI.ExpressionBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Web.UI.ExpressionBinding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die aus der Auflistung zu entfernende <see cref="T:System.Web.UI.ExpressionBinding" />.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Web.UI.ExpressionBinding" />-Objekt aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string propertyName, bool addToRemovedList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string propertyName, bool addToRemovedList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ExpressionBindingCollection.Remove(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="addToRemovedList" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Die <see cref="P:System.Web.UI.ExpressionBinding.PropertyName" /> von der <see cref="T:System.Web.UI.ExpressionBinding" /> aus der Auflistung zu entfernen.</param>
+        <param name="addToRemovedList">
+          <see langword="true" />Hinzufügen der <see cref="T:System.Web.UI.ExpressionBinding" /> auf die <see cref="P:System.Web.UI.ExpressionBindingCollection.RemovedBindings" /> Auflistung ist, andernfalls <see langword="false" />.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Web.UI.ExpressionBinding" />-Objekt aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RemovedBindings">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection RemovedBindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection RemovedBindings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ExpressionBindingCollection.RemovedBindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Zeichenfolgen, die die Namen der Bindungen, die entfernt wurden.</summary>
+        <value>Ein <see cref="T:System.Collections.ICollection" /> mit den Namen der Bindungen, die entfernt wurden.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ExpressionBindingCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</summary>
+        <value>Ein <see cref="T:System.Object" />, mit dem der Zugriff auf die <see cref="T:System.Web.UI.ExpressionBindingCollection" />-Auflistung synchronisiert werden kann.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

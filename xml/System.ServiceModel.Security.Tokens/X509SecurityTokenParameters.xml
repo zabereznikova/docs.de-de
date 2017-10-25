@@ -1,0 +1,356 @@
+<Type Name="X509SecurityTokenParameters" FullName="System.ServiceModel.Security.Tokens.X509SecurityTokenParameters">
+  <TypeSignature Language="C#" Value="public class X509SecurityTokenParameters : System.ServiceModel.Security.Tokens.SecurityTokenParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509SecurityTokenParameters extends System.ServiceModel.Security.Tokens.SecurityTokenParameters" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Security.Tokens.SecurityTokenParameters</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Parameter für ein X.509-Sicherheitstoken dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ist eine Auflistung von Tokeneigenschaften und –methoden und wird für die Erstellung von Bindungselementen und Token verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenParameters (System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType x509ReferenceStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType x509ReferenceStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.#ctor(System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x509ReferenceStyle" Type="System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType" />
+      </Parameters>
+      <Docs>
+        <param name="x509ReferenceStyle">Eine <see cref="T:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ X509ReferenceStyle beschreibt die Arten von Sicherheitsschlüsselbezeichner, die zum Verweisen auf das X509-Sicherheitstoken verwendet werden können. Standardmäßig werden Verweise von `Thumbprint`, `IssuerSerial`, `SubjectKeyIdentifier` und `RawDataKeyIdentifier` akzeptiert.  
+  
+ Die folgenden neuen Instanzeigenschaftswerte werden auf ihre Standardwerte festgelegt:  
+  
+-   Für <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> ist <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.Any> festgelegt.  
+  
+-   Für <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle%2A> ist <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal> festgelegt.  
+  
+-   Für <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys%2A> ist `true` festgelegt.  
+  
+ Die entsprechenden Eigenschaften werden auf die Werte in den Eingabeparametern festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected X509SecurityTokenParameters (System.ServiceModel.Security.Tokens.X509SecurityTokenParameters other);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.Tokens.X509SecurityTokenParameters other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.#ctor(System.ServiceModel.Security.Tokens.X509SecurityTokenParameters)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="System.ServiceModel.Security.Tokens.X509SecurityTokenParameters" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die andere Instanz dieser Klasse.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neuen Instanzeigenschaftswerte werden auf die entsprechenden Werte in `other` festgelegt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenParameters (System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType x509ReferenceStyle, System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode inclusionMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType x509ReferenceStyle, valuetype System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode inclusionMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.#ctor(System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType,System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x509ReferenceStyle" Type="System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType" />
+        <Parameter Name="inclusionMode" Type="System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode" />
+      </Parameters>
+      <Docs>
+        <param name="x509ReferenceStyle">Eine <see cref="T:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType" />.</param>
+        <param name="inclusionMode">Ein <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden neuen Instanzeigenschaftswerte werden auf ihre Standardwerte festgelegt:  
+  
+-   Für <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> ist `inclusionMode` festgelegt.  
+  
+-   Für <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle%2A> ist `x509ReferenceStyle` festgelegt.  
+  
+-   Für <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys%2A> ist `true` festgelegt.  
+  
+ Die entsprechenden Eigenschaften werden auf die Werte in den Eingabeparametern festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Security.Tokens.SecurityTokenParameters CloneCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Security.Tokens.SecurityTokenParameters CloneCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.CloneCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SecurityTokenParameters</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Klont eine andere Instanz dieser Klasseninstanz.</summary>
+        <returns>Eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenParameters" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.Clone%2A>-Methode und die <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A>-Methode folgen dem Kernentwurfsmuster.  
+  
+ <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A> ist eine `abstract`-Klasse, die von <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.CloneCore%2A> überschrieben wird.  
+  
+ Die <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.CloneCore%2A>-Methode ruft den <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.%23ctor%2A>-Konstruktor auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="protected override System.IdentityModel.Tokens.SecurityKeyIdentifierClause CreateKeyIdentifierClause (System.IdentityModel.Tokens.SecurityToken token, System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle referenceStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause CreateKeyIdentifierClause(class System.IdentityModel.Tokens.SecurityToken token, valuetype System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle referenceStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.CreateKeyIdentifierClause(System.IdentityModel.Tokens.SecurityToken,System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="referenceStyle" Type="System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das Token.</param>
+        <param name="referenceStyle">Die <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle" />.</param>
+        <summary>Erstellt eine Schlüsselbezeichnerklausel für ein Token.</summary>
+        <returns>Die Sicherheitsschlüsselbezeichnerklausel.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasAsymmetricKey">
+      <MemberSignature Language="C#" Value="protected override bool HasAsymmetricKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasAsymmetricKey" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.HasAsymmetricKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Token über einen asymmetrischen Schlüssel verfügt.</summary>
+        <value>
+          <see langword="True" />, wenn das Token über einen asymmetrischen Schlüssel verfügt, andernfalls <see langword="false" />. Gibt immer <see langword="false" /> zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Asymmetrische Schlüssel werden bei Verschlüsselungen eingesetzt, die mit einem öffentlichen und einem privaten Schlüssel durchgeführt werden, zwischen denen eine mathematische Beziehung besteht. Der öffentliche Schlüssel wird überall verteilt, aber der private Schlüssel wird geheim gehalten. Bei der Verschlüsselung durch öffentliche Schlüssel ist kein Austausch eines gemeinsamen Schlüssels erforderlich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeSecurityTokenRequirement">
+      <MemberSignature Language="C#" Value="protected override void InitializeSecurityTokenRequirement (System.IdentityModel.Selectors.SecurityTokenRequirement requirement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeSecurityTokenRequirement(class System.IdentityModel.Selectors.SecurityTokenRequirement requirement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.InitializeSecurityTokenRequirement(System.IdentityModel.Selectors.SecurityTokenRequirement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requirement" Type="System.IdentityModel.Selectors.SecurityTokenRequirement" />
+      </Parameters>
+      <Docs>
+        <param name="requirement">Die <see cref="T:System.IdentityModel.Selectors.SecurityTokenRequirement" />.</param>
+        <summary>Initialisiert eine Sicherheitstokenanforderung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Folgende Eigenschaften von <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> werden initialisiert:  
+  
+-   <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.TokenType%2A> = <xref:System.IdentityModel.Tokens.SecurityTokenTypes.X509Certificate%2A>.  
+  
+-   <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.RequireCryptographicToken%2A> = `true`.  
+  
+ <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyType%2A> = <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsClientAuthentication">
+      <MemberSignature Language="C#" Value="protected override bool SupportsClientAuthentication { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsClientAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.SupportsClientAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Clientauthentifizierung von dem Token unterstützt wird.</summary>
+        <value>
+          <see langword="True" />, wenn das Token die Clientauthentifizierung unterstützt, andernfalls <see langword="false" />. Gibt immer <see langword="true" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsClientWindowsIdentity">
+      <MemberSignature Language="C#" Value="protected override bool SupportsClientWindowsIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsClientWindowsIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.SupportsClientWindowsIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Token eine Windows-Identität für die Authentifizierung unterstützt.</summary>
+        <value>
+          <see langword="True" />, wenn das Token eine Windows-Identität zur Authentifizierung unterstützt, andernfalls <see langword="false" />. Gibt immer <see langword="true" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsServerAuthentication">
+      <MemberSignature Language="C#" Value="protected override bool SupportsServerAuthentication { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsServerAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.SupportsServerAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Token die Serverauthentifizierung unterstützt.</summary>
+        <value>
+          <see langword="True" />, wenn das Token die Serverauthentifizierung unterstützt, andernfalls <see langword="false" />. Gibt immer <see langword="true" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeigt eine Textdarstellung dieser Instanz der Klasse an.</summary>
+        <returns>Eine Textdarstellung dieser Instanz der Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X509ReferenceStyle">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType X509ReferenceStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType X509ReferenceStyle" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters.X509ReferenceStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert das Format des x. 509-Verweis.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Code zeigt, wie diese Eigenschaft festgelegt wird.  
+  
+ [!code-csharp[S_UEAssymetricSecurityBindingElement#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueassymetricsecuritybindingelement/cs/source.cs#4)]
+ [!code-vb[S_UEAssymetricSecurityBindingElement#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueassymetricsecuritybindingelement/vb/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

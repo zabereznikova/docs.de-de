@@ -1,0 +1,1041 @@
+<Type Name="Transaction" FullName="System.Transactions.Transaction">
+  <TypeSignature Language="C#" Value="public class Transaction : IDisposable, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Transaction extends System.Object implements class System.IDisposable, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.Transaction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Transaktion.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Transactions>-Namespace bietet sowohl ein explizites Programmiermodell, das auf der <xref:System.Transactions.Transaction>-Klasse basiert, als auch ein implizites Programmiermodell, das die <xref:System.Transactions.TransactionScope>-Klasse verwendet, in der Transaktionen automatisch von der Infrastruktur verwaltet werden. Es wird dringend empfohlen, dass Sie das einfachere implizite Modell für die Entwicklung verwenden. Um zu beginnen, finden Sie unter der [implementieren eine implizite Transaktion mithilfe von Transaktionsbereich](~/docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) Thema. Weitere Informationen über das Erstellen einer transaktionsanwendung, finden Sie unter [Transaktionsanwendung schreiben](~/docs/framework/data/transactions/writing-a-transactional-application.md).  
+  
+ Die <xref:System.Transactions.Transaction> -Klasse enthält Methoden, die von Entwicklern zum Implementieren von Ressourcen-Managern für die Eintragung verwendet. Darüber hinaus Funktionen für das Klonen einer Transaktions und Steuern des aktuellen Transaktionskontexts. Sie können die aktuelle Transaktion abrufen, wenn diese festgelegt ist, mit der statischen, <xref:System.Transactions.Transaction.Current%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginCommitInternal">
+      <MemberSignature Language="C#" Value="protected IAsyncResult BeginCommitInternal (AsyncCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IAsyncResult BeginCommitInternal(class System.AsyncCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.BeginCommitInternal(System.AsyncCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+      </Parameters>
+      <Docs>
+        <param name="callback">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Transactions.Transaction Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Transactions.Transaction Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Transaction</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen Klon der Transaktion.</summary>
+        <returns>Ein <see cref="T:System.Transactions.Transaction" /> , eine Kopie der aktuellen Transaktionsobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klone werden erstellt, um Transaktionen zu übergeben.  Angenommen, Sie können nicht übergeben möchten eine <xref:System.Transactions.CommittableTransaction> für andere Anwendungen, da Sie nicht, dass andere Benutzer die Transaktion ein Commit ausgeführt möchten.  Wenn Sie versuchen, marshallen oder eine Transaktion zu serialisieren, wird ein Klon automatisch für Sie erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public static System.Transactions.Transaction Current { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Transactions.Transaction Current" />
+      <MemberSignature Language="DocId" Value="P:System.Transactions.Transaction.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Transaction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ambient-Transaktion ab oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Transactions.Transaction" />, die die aktuelle Transaktion beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu ambient-Transaktionen finden Sie unter "Verwalten des Transaktionsflusses mithilfe von TransactionScopeOption" im Abschnitt der [implementieren eine implizite Transaktion mithilfe der Transaktionsbereich](~/docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) Thema.  
+  
+ Obwohl Sie die Ambiente-Transaktion verwenden diese Eigenschaft festlegen können, sollten Sie verwenden die <xref:System.Transactions.TransactionScope> Objekt, um die ambient-Transaktion möglichst zu bearbeiten.  
+  
+ Diese Eigenschaft ist statisch. Wenn Sie ändern, dass die Ambiente-Transaktion verwenden dieser Eigenschaft innerhalb einer <xref:System.Transactions.TransactionScope> ein <xref:System.InvalidOperationException> wird ausgelöst, wenn <xref:System.Transactions.TransactionScope.Dispose%2A> aufgerufen wird, und der vorherige Wert der ambient-Transaktion wiederhergestellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependentClone">
+      <MemberSignature Language="C#" Value="public System.Transactions.DependentTransaction DependentClone (System.Transactions.DependentCloneOption option);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Transactions.DependentTransaction DependentClone(valuetype System.Transactions.DependentCloneOption option) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.DependentClone(System.Transactions.DependentCloneOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.DependentTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cloneOption" Type="System.Transactions.DependentCloneOption" />
+      </Parameters>
+      <Docs>
+        <param name="option">To be added.</param>
+        <summary>Erstellt einen abhängigen Klon der Transaktion.</summary>
+        <returns>Ein <see cref="T:System.Transactions.DependentTransaction" /> , die den abhängigen Klon darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine abhängige Transaktion ist eine Transaktion, deren Ergebnis ist abhängig von dem er geklont wurde, auf das Ergebnis der Transaktion.  
+  
+ Die `cloneoption` Parameter steuert, welche Art von abhängige Transaktion erstellt. Wenn eine abhängige Transaktion erstellt wird, mit <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>, blockiert den Commitvorgang der Transaktion bis zum Timeout der Transaktions oder <xref:System.Transactions.DependentTransaction.Complete%2A> aufgerufen wird, auf die <xref:System.Transactions.DependentTransaction>. Wenn er mit erstellt wird <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>, automatisch wird die Transaktion abgebrochen, wenn <xref:System.Transactions.CommittableTransaction.Commit%2A> wird aufgerufen, bevor <xref:System.Transactions.DependentTransaction.Complete%2A> aufgerufen wird, auf die <xref:System.Transactions.DependentTransaction>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine abhängige Transaktion erstellt.  
+  
+ [!code-csharp[Tx_DependentTx#1](~/samples/snippets/csharp/VS_Snippets_CFX/tx_dependenttx/cs/dependenttx.cs#1)]
+ [!code-vb[Tx_DependentTx#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/tx_dependenttx/vb/dependenttx.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom Objekt reservierten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie durch Festlegen die Ambiente-Transaktion ändern <xref:System.Transactions.Transaction.Current%2A> innerhalb einer <xref:System.Transactions.TransactionScope> ein <xref:System.InvalidOperationException> wird ausgelöst, wenn <xref:System.Transactions.TransactionScope.Dispose%2A> aufgerufen wird, und der vorherige Wert der ambient-Transaktion wiederhergestellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndCommitInternal">
+      <MemberSignature Language="C#" Value="protected void EndCommitInternal (IAsyncResult ar);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void EndCommitInternal(class System.IAsyncResult ar) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.EndCommitInternal(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ar" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="ar">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="EnlistDurable">
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Trägt einen permanenten Ressourcen-Manager für die Teilnahme an einer Transaktions.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Hinweis** diese Methode verwendet <xref:System.Security.Permissions.SecurityAction.LinkDemand> aufgerufen aus nicht vertrauenswürdigen Code wird verhindert jedoch nur der unmittelbaren Aufrufer zum; besitzen die `FullTrust` Berechtigungssatz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="EnlistDurable">
+      <MemberSignature Language="C#" Value="public System.Transactions.Enlistment EnlistDurable (Guid manager, System.Transactions.IEnlistmentNotification notification, System.Transactions.EnlistmentOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Transactions.Enlistment EnlistDurable(valuetype System.Guid manager, class System.Transactions.IEnlistmentNotification notification, valuetype System.Transactions.EnlistmentOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.EnlistDurable(System.Guid,System.Transactions.IEnlistmentNotification,System.Transactions.EnlistmentOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Enlistment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceManagerIdentifier" Type="System.Guid" />
+        <Parameter Name="enlistmentNotification" Type="System.Transactions.IEnlistmentNotification" />
+        <Parameter Name="enlistmentOptions" Type="System.Transactions.EnlistmentOptions" />
+      </Parameters>
+      <Docs>
+        <param name="manager">To be added.</param>
+        <param name="notification">To be added.</param>
+        <param name="options">To be added.</param>
+        <summary>Trägt einen permanenten Ressourcenmanager, der zwei-Phasen-Commit für die Einbeziehung in einer Transaktion unterstützt.</summary>
+        <returns>Ein <see cref="T:System.Transactions.Enlistment" />-Objekt, das die Eintragung beschreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ressourcen-Managern mit einer dauerhaften Eintragung muss Wiederherstellung ausführen, wenn sie einen Fehler auftreten. Weitere Informationen zur Wiederherstellung finden Sie unter [Wiederherstellung ausführen](http://msdn.microsoft.com/en-us/d342c5c7-da64-4a4c-8e63-b52f4fbf2691). Weitere Informationen zu sowohl flüchtige als auch permanente Ressourcen als auch eine Ressource eintragen, finden Sie unter [ein Ressourcen-Manager implementieren](http://msdn.microsoft.com/en-us/81509719-d579-4530-831e-42e1acdef63e).  Weitere Informationen, wie ein Ressourcen-Manager reagiert, um einen commit der Benachrichtigung und Vorbereiten des Commits im Zweiphasen-Commit, finden Sie unter [Ausführen eines Commits für eine Transaktion In Single-Phase und mehreren Phasen bestehender](http://msdn.microsoft.com/en-us/74b3cfe1-d33a-45b8-91f4-dfd6f6598c4d).  
+  
+ Ressourcen-Manager für die Teilnahme in einer Transaktion eingetragen, durch diese Methode erhalten Sie zwei Zweiphasen-Commit-Benachrichtigung, die auf definierten Methoden entsprechen den <xref:System.Transactions.IEnlistmentNotification> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnlistDurable">
+      <MemberSignature Language="C#" Value="public System.Transactions.Enlistment EnlistDurable (Guid manager, System.Transactions.ISinglePhaseNotification notification, System.Transactions.EnlistmentOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Transactions.Enlistment EnlistDurable(valuetype System.Guid manager, class System.Transactions.ISinglePhaseNotification notification, valuetype System.Transactions.EnlistmentOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.EnlistDurable(System.Guid,System.Transactions.ISinglePhaseNotification,System.Transactions.EnlistmentOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Enlistment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceManagerIdentifier" Type="System.Guid" />
+        <Parameter Name="singlePhaseNotification" Type="System.Transactions.ISinglePhaseNotification" />
+        <Parameter Name="enlistmentOptions" Type="System.Transactions.EnlistmentOptions" />
+      </Parameters>
+      <Docs>
+        <param name="manager">To be added.</param>
+        <param name="notification">To be added.</param>
+        <param name="options">To be added.</param>
+        <summary>Trägt einen permanenten Ressourcen-Manager, der einphasige Commits für die Einbeziehung in einer Transaktion unterstützt.</summary>
+        <returns>Ein <see cref="T:System.Transactions.Enlistment" />-Objekt, das die Eintragung beschreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ressourcen-Managern mit einer dauerhaften Eintragung muss Wiederherstellung ausführen, wenn sie einen Fehler auftreten. Weitere Informationen zur Wiederherstellung finden Sie unter [Wiederherstellung ausführen](http://msdn.microsoft.com/en-us/d342c5c7-da64-4a4c-8e63-b52f4fbf2691). Weitere Informationen zu sowohl flüchtige als auch permanente Ressourcen als auch eine Ressource eintragen, finden Sie unter [ein Ressourcen-Manager implementieren](http://msdn.microsoft.com/en-us/81509719-d579-4530-831e-42e1acdef63e).  
+  
+ Beachten Sie, dass selbst wenn die Ressourcen-Manager-Implementierung mit dieser Methode eingetragen wird, nicht garantiert ist, dass er einen einzelnen Phasen-Commit erhält. Der Transaktions-Manager kann weiterhin stattdessen Zweiphasen-Commit-Benachrichtigung senden. Weitere Informationen zu den einphasige Commits, finden Sie unter [Optimierung für die mithilfe der einzelnen Phasen-Commit und heraufstufbare Single Phase Notification](http://msdn.microsoft.com/en-us/653d51d1-b4bf-4e34-9a6f-aec073f0f5bb).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnlistPromotableSinglePhase">
+      <MemberSignature Language="C#" Value="public bool EnlistPromotableSinglePhase (System.Transactions.IPromotableSinglePhaseNotification notification);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool EnlistPromotableSinglePhase(class System.Transactions.IPromotableSinglePhaseNotification notification) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.EnlistPromotableSinglePhase(System.Transactions.IPromotableSinglePhaseNotification)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="promotableSinglePhaseNotification" Type="System.Transactions.IPromotableSinglePhaseNotification" />
+      </Parameters>
+      <Docs>
+        <param name="notification">To be added.</param>
+        <summary>Trägt einen Ressourcen-Manager mit einer internen Transaktion mithilfe einer heraufstufbaren Einphaseneintragung (PSPE) ein.</summary>
+        <returns>Eine <see cref="T:System.Transactions.SinglePhaseEnlistment" />-Schnittstellenimplementierung, die die Eintragung beschreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eintragungen in einer Transaktion sind flüchtig; Sie bleiben also nicht der Ausfall des Teilnehmers. Darüber hinaus diese Methode schlägt nur des Transaktions-Managers, um die Steuerung zu erweitern, die Ausweitung selbst wird jedoch nicht garantiert. Wenn sperrenausweitung ein Fehler auftritt, der Benutzer nicht benachrichtigt, und die Transaktion ein Rollback.  
+  
+ Der Parameter `promotableSinglePhaseNotification` wird verwendet, um das Ergebnis des Versuchs, die beim commit einer internen Transaktion der Ressourcen-Manager mit der Transaktions-Manager zu kommunizieren.  Wenn inkonsistente Daten gemeldet werden, löst der Transaktions-Manager eine Ausnahme aus. Wenn ein <xref:System.Transactions.TransactionStatus.InDoubt> Ergebnis gemeldet wird, der Transaktions-Manager sucht nach der Benachrichtigung über das Ergebnis in seiner eigenen internen Eintragung und ignoriert die gemeldete Antwort.  
+  
+ Weitere Informationen zu Eintragungen und Ausweitung einer Transaktion, finden Sie unter [Management Transaktionseskalation](http://msdn.microsoft.com/en-us/5b87ae58-8ccf-4b9b-9715-41e4aade89b7). Weitere Informationen über PSPE finden Sie unter [Optimierung mithilfe von einzelnen Phase Commit und heraufstufbare Single Phase Notification](http://msdn.microsoft.com/en-us/653d51d1-b4bf-4e34-9a6f-aec073f0f5bb).  
+  
+ **Hinweis** diese Methode verwendet <xref:System.Security.Permissions.SecurityAction.LinkDemand> aufgerufen aus nicht vertrauenswürdigen Code wird verhindert jedoch nur der unmittelbaren Aufrufer zum; besitzen die `FullTrust` Berechtigungssatz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnlistPromotableSinglePhase">
+      <MemberSignature Language="C#" Value="public bool EnlistPromotableSinglePhase (System.Transactions.IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Guid promoterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool EnlistPromotableSinglePhase(class System.Transactions.IPromotableSinglePhaseNotification promotableSinglePhaseNotification, valuetype System.Guid promoterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.EnlistPromotableSinglePhase(System.Transactions.IPromotableSinglePhaseNotification,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="promotableSinglePhaseNotification" Type="System.Transactions.IPromotableSinglePhaseNotification" />
+        <Parameter Name="promoterType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="promotableSinglePhaseNotification">Eine vom Teilnehmer implementierte <see cref="T:System.Transactions.IPromotableSinglePhaseNotification" />-Schnittstelle.</param>
+        <param name="promoterType">Der Typ des Prozessors der verteilten Transaktion.</param>
+        <summary>Trägt einen Ressourcen-Manager mit einer internen Transaktion mithilfe einer heraufstufbaren Einphaseneintragung (PSPE) ein.</summary>
+        <returns>Eine <see cref="T:System.Transactions.SinglePhaseEnlistment" />-Schnittstellenimplementierung, die die Eintragung beschreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der angegebene Wert für die `promoterType` Parameter ist `TransactionInterop.PromoterTypeDtc`, die Transaktion **muss** von MS DTC höher gestuft werden und die `byte[]` Merry der `IPromotableSinglePhaseNotification.Promote` Methode **müssen** werden Sie ein Propagierungstoken der MSDTC-Transaktion.  
+  
+ Wenn der angegebene Wert für die `promoterType` Parameter ist **nicht**`TransactionInterop.PromoterTypeDTC`, die Transaktion wird nicht höher gestuft von MS DTC, sondern durch Implementierung eines Aufrufers `IPromotableSinglePhaseNotification`. Wenn dieser Aufruf erfolgreich ist, wird es ein Satz von nachfolgende Vorgänge in der Transaktion, die zurückgegeben werden eine `TransactionPromotionException`. Diese Vorgänge sind möglich:  
+  
+-   `Transaction.EnlistDurable`  
+  
+-   `TransactionInterop.GetDtcTransaction`  
+  
+-   `TransactionInterop.GetExportCookie`  
+  
+-   `TransctionInterop.GetTransmitterPropagationToken`  
+  
+-   Die Serialisierung eines Transaktionsobjekts  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="EnlistVolatile">
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Trägt einen veränderliche Ressourcen-Manager für die Teilnahme an einer Transaktions.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Volatile-Ressourcen-Manager nicht möglich, Wiederherstellen nach einem Fehler eine Transaktion abgeschlossen, in der sie beteiligt waren. Weitere Informationen zu sowohl flüchtige als auch permanente Ressourcen als auch eine Ressource eintragen, finden Sie unter [ein Ressourcen-Manager implementieren](http://msdn.microsoft.com/en-us/81509719-d579-4530-831e-42e1acdef63e). Weitere Informationen, wie ein Ressourcen-Manager reagiert, um einen commit der Benachrichtigung und Vorbereiten des Commits, finden Sie unter [Ausführen eines Commits für eine Transaktion In Single-Phase und mehreren Phasen bestehender](http://msdn.microsoft.com/en-us/74b3cfe1-d33a-45b8-91f4-dfd6f6598c4d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="EnlistVolatile">
+      <MemberSignature Language="C#" Value="public System.Transactions.Enlistment EnlistVolatile (System.Transactions.IEnlistmentNotification notification, System.Transactions.EnlistmentOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Transactions.Enlistment EnlistVolatile(class System.Transactions.IEnlistmentNotification notification, valuetype System.Transactions.EnlistmentOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.EnlistVolatile(System.Transactions.IEnlistmentNotification,System.Transactions.EnlistmentOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Enlistment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enlistmentNotification" Type="System.Transactions.IEnlistmentNotification" />
+        <Parameter Name="enlistmentOptions" Type="System.Transactions.EnlistmentOptions" />
+      </Parameters>
+      <Docs>
+        <param name="notification">To be added.</param>
+        <param name="options">To be added.</param>
+        <summary>Trägt einen flüchtigen Ressourcen-Manager, der den Zweiphasencommit zur Teilnahme an einer Transaktion unterstützt, in die Liste ein.</summary>
+        <returns>Ein <see cref="T:System.Transactions.Enlistment" />-Objekt, das die Eintragung beschreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Volatile-Ressourcen-Manager nicht möglich, Wiederherstellen nach einem Fehler eine Transaktion abgeschlossen, in der sie beteiligt waren. Verwenden Sie zum Abrufen einer dauerhaften Eintragung in einer Transaktion die <xref:System.Transactions.Transaction.EnlistDurable%2A> Methode.  
+  
+ Ressourcen-Manager für die Teilnahme in einer Transaktion eingetragen, durch diese Methode erhalten Sie zwei Zweiphasen-Commit-Benachrichtigung, die auf definierten Methoden entsprechen den <xref:System.Transactions.IEnlistmentNotification> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung von <xref:System.Transactions.IEnlistmentNotification> Schnittstelle als auch das Objekt als Teilnehmer in einer Transaktion mit eintragen der <xref:System.Transactions.Transaction.EnlistVolatile%2A> Methode.  
+  
+ [!code-csharp[Tx_Enlist#1](~/samples/snippets/csharp/VS_Snippets_CFX/tx_enlist/cs/enlist.cs#1)]
+ [!code-vb[Tx_Enlist#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/tx_enlist/vb/enlist.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnlistVolatile">
+      <MemberSignature Language="C#" Value="public System.Transactions.Enlistment EnlistVolatile (System.Transactions.ISinglePhaseNotification notification, System.Transactions.EnlistmentOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Transactions.Enlistment EnlistVolatile(class System.Transactions.ISinglePhaseNotification notification, valuetype System.Transactions.EnlistmentOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.EnlistVolatile(System.Transactions.ISinglePhaseNotification,System.Transactions.EnlistmentOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Enlistment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="singlePhaseNotification" Type="System.Transactions.ISinglePhaseNotification" />
+        <Parameter Name="enlistmentOptions" Type="System.Transactions.EnlistmentOptions" />
+      </Parameters>
+      <Docs>
+        <param name="notification">To be added.</param>
+        <param name="options">To be added.</param>
+        <summary>Trägt einen flüchtigen Ressourcen-Manager, der einphasige Commits für die Einbeziehung in einer Transaktion unterstützt.</summary>
+        <returns>Ein <see cref="T:System.Transactions.Enlistment" />-Objekt, das die Eintragung beschreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Volatile-Ressourcen-Manager nicht möglich, Wiederherstellen nach einem Fehler eine Transaktion abgeschlossen, in der sie beteiligt waren. Verwenden Sie zum Abrufen einer dauerhaften Eintragung in einer Transaktion die <xref:System.Transactions.Transaction.EnlistDurable%2A> Methode. Weitere Informationen zu sowohl flüchtige als auch permanente Ressourcen als auch eine Ressource eintragen, finden Sie unter [ein Ressourcen-Manager implementieren](http://msdn.microsoft.com/en-us/81509719-d579-4530-831e-42e1acdef63e). Weitere Informationen, wie ein Ressourcen-Manager reagiert, um einen commit der Benachrichtigung und Vorbereiten des Commits, finden Sie unter [Ausführen eines Commits für eine Transaktion In Single-Phase und mehreren Phasen bestehender](http://msdn.microsoft.com/en-us/74b3cfe1-d33a-45b8-91f4-dfd6f6598c4d).  
+  
+ Beachten Sie, dass selbst wenn die Ressourcen-Manager-Implementierung mit dieser Methode eingetragen wird, nicht garantiert ist, dass er einen einzelnen Phasen-Commit erhält. Der Transaktions-Manager kann weiterhin stattdessen Zweiphasen-Commit-Benachrichtigung senden. Weitere Informationen zu den einphasige Commits, finden Sie unter [Optimierung für die mithilfe der einzelnen Phasen-Commit und heraufstufbare Single Phase Notification](http://msdn.microsoft.com/en-us/653d51d1-b4bf-4e34-9a6f-aec073f0f5bb).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit dieser Instanz verglichen werden soll.</param>
+        <summary>Bestimmt, ob diese Transaktion und das angegebene Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="obj" /> und diese Transaktion sind, identisch sind, andernfalls, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPromotedToken">
+      <MemberSignature Language="C#" Value="public byte[] GetPromotedToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetPromotedToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.GetPromotedToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <c>Byte []</c> zurückgegebenes der <c>heraufstufen</c> Methode, wenn die Transaktion heraufgestuft wird.</summary>
+        <returns>Die <c>Byte []</c> zurückgegebenes der <c>heraufstufen</c> Methode, wenn die Transaktion heraufgestuft wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode hat den Nebeneffekt Höherstufung der Transaktion verursacht, wenn nicht bereits höher gestuft wird.  
+  
+ Das Format des zurückgegebenen `byte[]` wird definiert durch den Wert der `Transation.PromoterType` Eigenschaft. Wenn der Wert des der `Transaction.PromoterType` Eigenschaft ist `TransactionInterop.PromoterTypeDtc` oder `Guid.Empty`, und dann die `byte[]` einer MSDTC-Senderpropagierungstoken von dieser Methode zurückgegeben wird. Jeder andere Wert für die `Transaction.PromoterType` Eigenschaft gibt ein Format, das vom Aufrufer definierten ist `Transaction.EnlistPromotableSinglePhase` , das den Eigenschaftswert für den Typ angegeben. Zum Interpretieren der höher gestufte token in diesem Fall müssen Sie den Code in der Dokumentation, die vorgenommen der `EnlistPromotableSinglePhase` aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsolationLevel">
+      <MemberSignature Language="C#" Value="public System.Transactions.IsolationLevel IsolationLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Transactions.IsolationLevel IsolationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Transactions.Transaction.IsolationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.IsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Isolationsstufe der Transaktion ab.</summary>
+        <value>Eines der <see cref="T:System.Transactions.IsolationLevel" /> Werte, der die Isolationsstufe der Transaktion angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Isolationsstufe der Transaktion bestimmt, welche Zugriffsebene andere Transaktionen um flüchtige Daten, bevor eine Transaktion haben abgeschlossen ist. Weitere Informationen zu Isolationsstufen finden Sie in der Dokumentation für die <xref:System.Transactions.IsolationLevel> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Transactions.Transaction x, System.Transactions.Transaction y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Transactions.Transaction x, class System.Transactions.Transaction y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.op_Equality(System.Transactions.Transaction,System.Transactions.Transaction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Transactions.Transaction" />
+        <Parameter Name="y" Type="System.Transactions.Transaction" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die <see cref="T:System.Transactions.Transaction" /> -Instanz, die auf der linken Seite des Gleichheitsoperators.</param>
+        <param name="y">Die <see cref="T:System.Transactions.Transaction" /> -Instanz, die auf der rechten Seite des Gleichheitsoperators.</param>
+        <summary>Testet, ob zwei angegebene <see cref="T:System.Transactions.Transaction" /> -Instanzen äquivalent sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="x" /> und <paramref name="y" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Transactions.Transaction.Equals%2A?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Transactions.Transaction x, System.Transactions.Transaction y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Transactions.Transaction x, class System.Transactions.Transaction y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.op_Inequality(System.Transactions.Transaction,System.Transactions.Transaction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Transactions.Transaction" />
+        <Parameter Name="y" Type="System.Transactions.Transaction" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die <see cref="T:System.Transactions.Transaction" /> -Instanz, die auf der linken Seite des Ungleichheitsoperators.</param>
+        <param name="y">Die <see cref="T:System.Transactions.Transaction" /> -Instanz, die auf der rechten Seite des Ungleichheitsoperators.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob zwei <see cref="T:System.Transactions.Transaction" />-Instanzen ungleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="x" /> und <paramref name="y" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Transactions.Transaction.Equals%2A?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PromoteAndEnlistDurable">
+      <MemberSignature Language="C#" Value="public System.Transactions.Enlistment PromoteAndEnlistDurable (Guid manager, System.Transactions.IPromotableSinglePhaseNotification promotableNotification, System.Transactions.ISinglePhaseNotification notification, System.Transactions.EnlistmentOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Transactions.Enlistment PromoteAndEnlistDurable(valuetype System.Guid manager, class System.Transactions.IPromotableSinglePhaseNotification promotableNotification, class System.Transactions.ISinglePhaseNotification notification, valuetype System.Transactions.EnlistmentOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.PromoteAndEnlistDurable(System.Guid,System.Transactions.IPromotableSinglePhaseNotification,System.Transactions.ISinglePhaseNotification,System.Transactions.EnlistmentOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Enlistment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceManagerIdentifier" Type="System.Guid" />
+        <Parameter Name="promotableNotification" Type="System.Transactions.IPromotableSinglePhaseNotification" />
+        <Parameter Name="enlistmentNotification" Type="System.Transactions.ISinglePhaseNotification" />
+        <Parameter Name="enlistmentOptions" Type="System.Transactions.EnlistmentOptions" />
+      </Parameters>
+      <Docs>
+        <param name="manager">To be added.</param>
+        <param name="promotableNotification">Ein Objekt, das als Commit-Delegat für eine nicht verteilte Transaktion in einem Ressourcen-Manager fungiert.</param>
+        <param name="notification">To be added.</param>
+        <param name="options">To be added.</param>
+        <summary>[Wird nur in .NET Framework 4.5.2 und neueren Versionen unterstützt]  
+  
+ Stuft und trägt einen permanenten Ressourcen-Manager, der zwei-Phasen-Commit für die Einbeziehung in einer Transaktion unterstützt.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PromoterType">
+      <MemberSignature Language="C#" Value="public Guid PromoterType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid PromoterType" />
+      <MemberSignature Language="DocId" Value="P:System.Transactions.Transaction.PromoterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert eindeutig das Format der <c>Byte []</c> von der "Promote"-Methode zurückgegeben wird, wenn die Transaktion heraufgestuft wird.</summary>
+        <value>Eine Guid, die eindeutig das Format der <c>Byte []</c> von der "Promote"-Methode zurückgegeben wird, wenn die Transaktion heraufgestuft wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Transaktion noch nicht heraufgestuft wurde und noch keine heraufstufbaren einphaseneintragung, wird der Wert dieser Eigenschaft werden `Guid.Empty`. Wenn die Transaktion wurde oder wird von MSDTC höher gestuft werden, dann ist des Werts dieser Eigenschaft `TransactionInterop.PromoterTypeDtc`. Wenn die Transaktion wurde oder von einer nicht-MSDTC-Promoter höher gestuft werden wird, wird der Wert dieser Eigenschaft angegebenen Werts in einen früheren Aufruf `Transaction.EnlistPromotableSinglePhase`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public void Rollback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Rollback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.Rollback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rollback (abgebrochen) der Transaktion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Kopien des Transaktionsobjekts kann das Rollback der Transaktion durch Aufruf dieser Methode initiieren. Nur das ursprüngliche Transaktionsobjekt, also ein <xref:System.Transactions.CommittableTransaction> Objekt, das zum Initiieren der Versuch eines Commits die Transaktion verwendet werden können. Eine Ausnahme wird ausgelöst, wenn diese Methode aufgerufen wird, nachdem das Ergebnis der Transaktion bereits festgelegt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public void Rollback (Exception ex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Rollback(class System.Exception ex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.Rollback(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="ex">To be added.</param>
+        <summary>Rollback (abgebrochen) der Transaktion.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDistributedTransactionIdentifier">
+      <MemberSignature Language="C#" Value="public void SetDistributedTransactionIdentifier (System.Transactions.IPromotableSinglePhaseNotification promotableNotification, Guid distributedTransactionIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDistributedTransactionIdentifier(class System.Transactions.IPromotableSinglePhaseNotification promotableNotification, valuetype System.Guid distributedTransactionIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.SetDistributedTransactionIdentifier(System.Transactions.IPromotableSinglePhaseNotification,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="promotableNotification" Type="System.Transactions.IPromotableSinglePhaseNotification" />
+        <Parameter Name="distributedTransactionIdentifier" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="promotableNotification">Eine vom Teilnehmer implementierte <see cref="T:System.Transactions.IPromotableSinglePhaseNotification" />-Schnittstelle.</param>
+        <param name="distributedTransactionIdentifier">Der Bezeichner für die Transaktion, der vom Manager für verteilte Transaktionen verwendet werden.</param>
+        <summary>Legt den Bezeichner der verteilten Transaktion fest, der vom Nicht-MSDTC-Promoter generiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann nur erfolgreich aufgerufen werden dagegen die `IPromotableSinglePhaseNotification.Promote` Methode verarbeitet wird. Wenn diese Methode, zu einem anderen Zeitpunkt aufgerufen wird eine `TransactionException` ausgelöst wird.  
+  
+ Der angegebene Wert der `promotableNotification` Parameter muss das gleiche Objekt, das ursprünglich für angegeben wurde die `Transaction.EnlistPromotableSinglePhase` aufrufen. Wenn dies nicht der Fall ist ein `InvalidOperationException` ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Transaction.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">To be added.</param>
+        <param name="context">Das Ziel (siehe <see cref="T:System.Runtime.Serialization.StreamingContext" /> ) dieser Serialisierung.</param>
+        <summary>Ruft eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den Daten, die zum Serialisieren dieser Transaktion erforderlich sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionCompleted">
+      <MemberSignature Language="C#" Value="public event System.Transactions.TransactionCompletedEventHandler TransactionCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Transactions.TransactionCompletedEventHandler TransactionCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Transactions.Transaction.TransactionCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.TransactionCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Transaktion abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können für dieses Ereignis anstelle einer flüchtigen Eintragung abzurufenden Ergebnisinformationen für Transaktionen registrieren. Der Parameter zu übergeben, um die <xref:System.Transactions.TransactionCompletedEventHandler> Delegat ist ein <xref:System.Transactions.Transaction> Instanz. Dann können Sie Abfragen der <xref:System.Transactions.Transaction.TransactionInformation%2A> Eigenschaft der jeweiligen Instanz zum Abrufen einer Instanz von <xref:System.Transactions.TransactionInformation>, deren <xref:System.Transactions.TransactionInformation.Status%2A> Eigenschaft enthält den Status einer Transaktion mit der <xref:System.Transactions.TransactionStatus.Committed> oder <xref:System.Transactions.TransactionStatus.Aborted> Wert.  
+  
+ **Vorsicht** negativ für dieses Ereignis registrieren wirkt sich auf die Leistung der Transaktion, die es zugeordnet ist.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Anwendung im Rahmen einer Transaktion abrufen kann, indem Sie abonnieren das <xref:System.Transactions.Transaction.TransactionCompleted> Ereignis.  
+  
+ [!code-csharp[Tx_Outcome#1](~/samples/snippets/csharp/VS_Snippets_CFX/tx_outcome/cs/txoutcome.cs#1)]
+ [!code-vb[Tx_Outcome#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/tx_outcome/vb/txoutcome.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Es wurde versucht, dieses Ereignis für eine Transaktion zu abonnieren, das verworfen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionInformation">
+      <MemberSignature Language="C#" Value="public System.Transactions.TransactionInformation TransactionInformation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Transactions.TransactionInformation TransactionInformation" />
+      <MemberSignature Language="DocId" Value="P:System.Transactions.Transaction.TransactionInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.TransactionInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft zusätzliche Informationen zu einer Transaktion ab.</summary>
+        <value>Ein <see cref="T:System.Transactions.TransactionInformation" /> , zusätzliche Informationen über die Transaktion enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

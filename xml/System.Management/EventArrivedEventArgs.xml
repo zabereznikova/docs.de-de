@@ -1,0 +1,59 @@
+<Type Name="EventArrivedEventArgs" FullName="System.Management.EventArrivedEventArgs">
+  <TypeSignature Language="C#" Value="public class EventArrivedEventArgs : System.Management.ManagementEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventArrivedEventArgs extends System.Management.ManagementEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Management.EventArrivedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.ManagementEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Ereignisdaten für die <see cref="E:System.Management.ManagementEventWatcher.EventArrived" /> Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im folgende Beispiel für asynchrone richtet einen Zeitgeber WMI Auslösen eines Ereignisses pro Sekunde und entfernt es nicht mehr benötigen. Die <xref:System.Management.ManagementEventWatcher> definiert mehrere [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Ereignisse, die ausgelöst werden, wenn WMI-Ereignisse übermittelt werden. Diesen Ereignissen werden Delegaten angefügt, um eingehende Daten zu behandeln.  
+  
+ [!code-csharp[wminet_EventArrivedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EventArrivedEventArgs/cs/EventArrivedEventArgs.cs#1)]
+ [!code-vb[wminet_EventArrivedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EventArrivedEventArgs/vb/EventArrivedEventArgs.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NewEvent">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementBaseObject NewEvent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.ManagementBaseObject NewEvent" />
+      <MemberSignature Language="DocId" Value="P:System.Management.EventArrivedEventArgs.NewEvent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementBaseObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das WMI-Ereignis, das bereitgestellt wurde.</summary>
+        <value>Gibt eine <see cref="T:System.Management.ManagementBaseObject" /> , die das übermittelte WMI-Ereignis enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Das Objekt, das die WMI-Ereignis darstellt.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

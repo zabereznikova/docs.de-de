@@ -1,0 +1,1519 @@
+<Type Name="SqlParameter" FullName="System.Data.SqlClient.SqlParameter">
+  <TypeSignature Language="C#" Value="public sealed class SqlParameter : System.Data.Common.DbParameter, ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SqlParameter extends System.Data.Common.DbParameter implements class System.Data.IDataParameter, class System.Data.IDbDataParameter, class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbParameter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter("System.Data.SqlClient.SqlParameter+SqlParameterConverter, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Parameter für eine <see cref="T:System.Data.SqlClient.SqlCommand" /> und optional für seine Zuordnung zu <see cref="T:System.Data.DataSet" /> Spalten. Diese Klasse kann nicht vererbt werden. Weitere Informationen zu Parametern finden Sie unter [Konfigurieren von Parametern und Parameterdatentypen](~/docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Parameternamen wird die Groß- und Kleinschreibung nicht berücksichtigt.  
+  
+> [!NOTE]
+>  Namenlose, so genannte ordinal, Parameter, werden vom .NET Framework-Datenanbieter für SQL Server nicht unterstützt.  
+  
+ Weitere Informationen zusammen mit zusätzlichen Beispielcode, der veranschaulicht, wie Sie Parameter verwenden können, finden Sie unter [Befehle und Parameter](~/docs/framework/data/adonet/commands-and-parameters.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt mehrere Instanzen von <xref:System.Data.SqlClient.SqlParameter> über die <xref:System.Data.SqlClient.SqlParameterCollection> Auflistung innerhalb der <xref:System.Data.SqlClient.SqlDataAdapter>. Diese Parameter werden verwendet, um Daten aus der Datenquelle ausgewählt, und fügen Sie die Daten der <xref:System.Data.DataSet>. In diesem Beispiel wird vorausgesetzt, dass ein <xref:System.Data.DataSet> und ein <xref:System.Data.SqlClient.SqlDataAdapter> mithilfe des entsprechenden Schemas, die Befehle und die Verbindung bereits erstellt wurden. Weitere Informationen und weitere Beispiele zur Verwendung von Parametern finden Sie unter [abrufen und Ändern von Daten in ADO.NET](~/docs/framework/data/adonet/retrieving-and-modifying-data.md) und [Konfigurieren von Parametern und Parameterdatentypen](~/docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md).  
+  
+ [!code-csharp[Classic WebData SqlParameter Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameter Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameter Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.SqlClient.SqlParameter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData SqlParameter.SqlParameter Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameter.SqlParameter Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameter.SqlParameter Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameter.SqlParameter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlParameter (string parameterName, System.Data.SqlDbType dbType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string parameterName, valuetype System.Data.SqlDbType dbType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameter.#ctor(System.String,System.Data.SqlDbType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des zuzuordnenden Parameters.</param>
+        <param name="dbType">Einer der <see cref="T:System.Data.SqlDbType" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.SqlClient.SqlParameter" />-Klasse, die den Parameternamen und den Datentyp verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Datentyp und, falls zutreffend, **Größe** und <xref:System.Data.SqlClient.SqlParameter.Precision%2A> werden aus dem Wert hergeleitet der `dbType` Parameter.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData SqlParameter.SqlParameter2 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameter.SqlParameter2 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameter.SqlParameter2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameter.SqlParameter2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der im <paramref name="dbType" />-Parameter angegebene Wert ist ein ungültiger Back-End-Datentyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlParameter (string parameterName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string parameterName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameter.#ctor(System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des zuzuordnenden Parameters.</param>
+        <param name="value">Ein <see cref="T:System.Object" />, das den Wert des <see cref="T:System.Data.SqlClient.SqlParameter" /> darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.SqlClient.SqlParameter" />-Klasse, die den Parameternamen und einen Wert des neuen <see cref="T:System.Data.SqlClient.SqlParameter" /> verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Angeben von einer <xref:System.Object> in der `value` Parameter, die <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> wird abgeleitet aus dem Microsoft .NET Framework-Typ, der die <xref:System.Object>.  
+  
+ Gehen Sie vorsichtig vor, wenn Sie diese Überladung verwenden die <xref:System.Data.SqlClient.SqlParameter> Konstruktor, um Parameterwerte für die ganze Zahl anzugeben. Da diese Überladung lässt eine `value` des Typs <xref:System.Object>, müssen Sie den ganzzahligen Wert zu konvertieren einer <xref:System.Object> eingeben, wenn der Wert 0 (null), ist, wie im folgenden C#-Beispiel veranschaulicht.  
+  
+```  
+Parameter = new SqlParameter("@pname", (object)0);  
+```  
+  
+ Wenn Sie diese Konvertierung nicht ausführen, nimmt der Compiler an, dass Sie aufrufen möchten die `SqlParameter` (`string`, `SqlDbType`) Überladung des Konstruktors.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData SqlParameter.SqlParameter6 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameter.SqlParameter6 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameter.SqlParameter6 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameter.SqlParameter6 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlParameter (string parameterName, System.Data.SqlDbType dbType, int size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string parameterName, valuetype System.Data.SqlDbType dbType, int32 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameter.#ctor(System.String,System.Data.SqlDbType,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="size" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des zuzuordnenden Parameters.</param>
+        <param name="dbType">Einer der <see cref="T:System.Data.SqlDbType" />-Werte.</param>
+        <param name="size">Die Länge des Parameters.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.SqlClient.SqlParameter" />-Klasse, die den Parameternamen, den <see cref="T:System.Data.SqlDbType" /> und die Größe verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die **Größe** wird abgeleitet aus dem Wert der `dbType` Parameter an, wenn sie nicht explizit festgelegt ist die `size` Parameter.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData SqlParameter.SqlParameter4 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameter.SqlParameter4 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameter.SqlParameter4 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameter.SqlParameter4 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der im <paramref name="dbType" />-Parameter angegebene Wert ist ein ungültiger Back-End-Datentyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlParameter (string parameterName, System.Data.SqlDbType dbType, int size, string sourceColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string parameterName, valuetype System.Data.SqlDbType dbType, int32 size, string sourceColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameter.#ctor(System.String,System.Data.SqlDbType,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="sourceColumn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des zuzuordnenden Parameters.</param>
+        <param name="dbType">Einer der <see cref="T:System.Data.SqlDbType" />-Werte.</param>
+        <param name="size">Die Länge des Parameters.</param>
+        <param name="sourceColumn">Der Name der Quellspalte (<see cref="P:System.Data.SqlClient.SqlParameter.SourceColumn" />), wenn dieser <see cref="T:System.Data.SqlClient.SqlParameter" /> in einem Aufruf von <see cref="Overload:System.Data.Common.DbDataAdapter.Update" /> verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.SqlClient.SqlParameter" />-Klasse, die den Parameternamen, den <see cref="T:System.Data.SqlDbType" />, die Größe und den Quellspaltennamen verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die **Größe** wird abgeleitet aus dem Wert der `dbType` Parameter an, wenn sie nicht explizit festgelegt ist die `size` Parameter.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData SqlParameter.SqlParameter5 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameter.SqlParameter5 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameter.SqlParameter5 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameter.SqlParameter5 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der im <paramref name="dbType" />-Parameter angegebene Wert ist ein ungültiger Back-End-Datentyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlParameter (string parameterName, System.Data.SqlDbType dbType, int size, System.Data.ParameterDirection direction, bool isNullable, byte precision, byte scale, string sourceColumn, System.Data.DataRowVersion sourceVersion, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string parameterName, valuetype System.Data.SqlDbType dbType, int32 size, valuetype System.Data.ParameterDirection direction, bool isNullable, unsigned int8 precision, unsigned int8 scale, string sourceColumn, valuetype System.Data.DataRowVersion sourceVersion, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameter.#ctor(System.String,System.Data.SqlDbType,System.Int32,System.Data.ParameterDirection,System.Boolean,System.Byte,System.Byte,System.String,System.Data.DataRowVersion,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="direction" Type="System.Data.ParameterDirection" />
+        <Parameter Name="isNullable" Type="System.Boolean" />
+        <Parameter Name="precision" Type="System.Byte" />
+        <Parameter Name="scale" Type="System.Byte" />
+        <Parameter Name="sourceColumn" Type="System.String" />
+        <Parameter Name="sourceVersion" Type="System.Data.DataRowVersion" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des zuzuordnenden Parameters.</param>
+        <param name="dbType">Einer der <see cref="T:System.Data.SqlDbType" />-Werte.</param>
+        <param name="size">Die Länge des Parameters.</param>
+        <param name="direction">Einer der <see cref="T:System.Data.ParameterDirection" />-Werte.</param>
+        <param name="isNullable">
+          <see langword="true" />, wenn der Wert des Felds NULL sein kann, andernfalls <see langword="false" />.</param>
+        <param name="precision">Die Gesamtanzahl der Ziffern links und rechts vom Dezimaltrennzeichen, in die <see cref="P:System.Data.SqlClient.SqlParameter.Value" /> aufgelöst wird.</param>
+        <param name="scale">Die Gesamtanzahl der Dezimalstellen, in die <see cref="P:System.Data.SqlClient.SqlParameter.Value" /> aufgelöst wird.</param>
+        <param name="sourceColumn">Der Name der Quellspalte (<see cref="P:System.Data.SqlClient.SqlParameter.SourceColumn" />), wenn dieser <see cref="T:System.Data.SqlClient.SqlParameter" /> in einem Aufruf von <see cref="Overload:System.Data.Common.DbDataAdapter.Update" /> verwendet wird.</param>
+        <param name="sourceVersion">Einer der <see cref="T:System.Data.DataRowVersion" />-Werte.</param>
+        <param name="value">Ein <see cref="T:System.Object" />, das den Wert des <see cref="T:System.Data.SqlClient.SqlParameter" /> darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Data.SqlClient.SqlParameter" /> Klasse, die den Parameternamen, den Typ des Parameters, der Größe des Parameters, verwendet eine <see cref="T:System.Data.ParameterDirection" />, die Genauigkeit des Parameters, den Dezimalstellen des Parameters, der Quellspalte ein <see cref="T:System.Data.DataRowVersion" /> zu verwenden, und die der Wert des Parameters.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die **Größe** und <xref:System.Data.SqlClient.SqlParameter.Precision%2A> werden aus dem Wert hergeleitet der `dbType` Parameter an, wenn sie nicht explizit festgelegt sind die `size` und `precision` Parameter.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData SqlParameter.SqlParameter1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameter.SqlParameter1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameter.SqlParameter1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameter.SqlParameter1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der im <paramref name="dbType" />-Parameter angegebene Wert ist ein ungültiger Back-End-Datentyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlParameter (string parameterName, System.Data.SqlDbType dbType, int size, System.Data.ParameterDirection direction, byte precision, byte scale, string sourceColumn, System.Data.DataRowVersion sourceVersion, bool sourceColumnNullMapping, object value, string xmlSchemaCollectionDatabase, string xmlSchemaCollectionOwningSchema, string xmlSchemaCollectionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string parameterName, valuetype System.Data.SqlDbType dbType, int32 size, valuetype System.Data.ParameterDirection direction, unsigned int8 precision, unsigned int8 scale, string sourceColumn, valuetype System.Data.DataRowVersion sourceVersion, bool sourceColumnNullMapping, object value, string xmlSchemaCollectionDatabase, string xmlSchemaCollectionOwningSchema, string xmlSchemaCollectionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameter.#ctor(System.String,System.Data.SqlDbType,System.Int32,System.Data.ParameterDirection,System.Byte,System.Byte,System.String,System.Data.DataRowVersion,System.Boolean,System.Object,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="direction" Type="System.Data.ParameterDirection" />
+        <Parameter Name="precision" Type="System.Byte" />
+        <Parameter Name="scale" Type="System.Byte" />
+        <Parameter Name="sourceColumn" Type="System.String" />
+        <Parameter Name="sourceVersion" Type="System.Data.DataRowVersion" />
+        <Parameter Name="sourceColumnNullMapping" Type="System.Boolean" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="xmlSchemaCollectionDatabase" Type="System.String" />
+        <Parameter Name="xmlSchemaCollectionOwningSchema" Type="System.String" />
+        <Parameter Name="xmlSchemaCollectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des zuzuordnenden Parameters.</param>
+        <param name="dbType">Einer der <see cref="T:System.Data.SqlDbType" />-Werte.</param>
+        <param name="size">Die Länge des Parameters.</param>
+        <param name="direction">Einer der <see cref="T:System.Data.ParameterDirection" />-Werte.</param>
+        <param name="precision">Die Gesamtanzahl der Ziffern links und rechts vom Dezimaltrennzeichen, in die <see cref="P:System.Data.SqlClient.SqlParameter.Value" /> aufgelöst wird.</param>
+        <param name="scale">Die Gesamtanzahl der Dezimalstellen, in die <see cref="P:System.Data.SqlClient.SqlParameter.Value" /> aufgelöst wird.</param>
+        <param name="sourceColumn">Der Name der Quellspalte (<see cref="P:System.Data.SqlClient.SqlParameter.SourceColumn" />), wenn dieser <see cref="T:System.Data.SqlClient.SqlParameter" /> in einem Aufruf von <see cref="Overload:System.Data.Common.DbDataAdapter.Update" /> verwendet wird.</param>
+        <param name="sourceVersion">Einer der <see cref="T:System.Data.DataRowVersion" />-Werte.</param>
+        <param name="sourceColumnNullMapping">
+          <see langword="true" />, wenn die Quellspalte NULL-Werte zulässt, andernfalls <see langword="false" />.</param>
+        <param name="value">Ein <see cref="T:System.Object" />, das den Wert des <see cref="T:System.Data.SqlClient.SqlParameter" /> darstellt.</param>
+        <param name="xmlSchemaCollectionDatabase">Der Name der Datenbank, in der sich die Schemaauflistung für diese XML-Instanz befindet.</param>
+        <param name="xmlSchemaCollectionOwningSchema">Das besitzende relationale Schema, in dem sich die Schemaauflistung für diese XML-Instanz befindet.</param>
+        <param name="xmlSchemaCollectionName">Der Name der Schemaauflistung für diesen Parameter.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Data.SqlClient.SqlParameter" /> Klasse, die den Parameternamen, den Typ des Parameters, der Länge des Parameters der Richtung verwendet die Genauigkeit, Skala, den Namen der Quellspalte, eines der <see cref="T:System.Data.DataRowVersion" /> Werte einen booleschen Wert für die Quelle zuordnen, den Wert der Spalte die <see langword="SqlParameter" />, die von der Datenbank, in dem die schemaauflistung für diese XML-Instanz befindet, das besitzende relationale Schema, in dem die schemaauflistung für diese XML-Instanz befindet, und der Name der schemaauflistung für Namen Dieser Parameter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.SqlClient.SqlParameter.Size%2A> und <xref:System.Data.SqlClient.SqlParameter.Precision%2A> werden aus dem Wert hergeleitet der `dbType` Parameter an, wenn sie nicht explizit festgelegt sind die `size` und `precision` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareInfo">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlCompareOptions CompareInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.SqlTypes.SqlCompareOptions CompareInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.CompareInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlCompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Globalization.CompareInfo" />-Objekt ab, das definiert, wie für diesen Parameter Zeichenfolgenvergleiche durchgeführt werden sollen, oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:System.Globalization.CompareInfo" />-Objekt, das den Zeichenfolgenvergleich für diesen Parameter definiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbType">
+      <MemberSignature Language="C#" Value="public override System.Data.DbType DbType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DbType DbType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.DbType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Data.SqlDbType" /> des Parameters ab oder legt ihn fest.</summary>
+        <value>Einer der <see cref="T:System.Data.SqlDbType" />-Werte. Die Standardeinstellung ist <see langword="NVarChar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> und <xref:System.Data.SqlClient.SqlParameter.DbType%2A> verknüpft sind. Daher ist das Festlegen der <xref:System.Data.SqlClient.SqlParameter.DbType%2A> Änderungen der <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> zu unterstützenden <xref:System.Data.SqlDbType>.  
+  
+ Eine Liste der unterstützten Datentypen, finden Sie unter dem entsprechenden <xref:System.Data.SqlDbType> Member. Weitere Informationen finden Sie unter [DataAdapter-Parameter](~/docs/framework/data/adonet/dataadapter-parameters.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData SqlParameter.IsNullable Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameter.IsNullable Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameter.IsNullable Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameter.IsNullable Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public override System.Data.ParameterDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.ParameterDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.ParameterDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob der Parameter nur zur Eingabe, nur zur Ausgabe oder bidirektional verwendet wird oder ob es sich um einen Parameter für den Rückgabewert einer gespeicherten Prozedur handelt.</summary>
+        <value>Einer der <see cref="T:System.Data.ParameterDirection" />-Werte. Die Standardeinstellung ist <see langword="Input" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Data.ParameterDirection> ausgegeben wird und Ausführung der zugeordneten <xref:System.Data.SqlClient.SqlCommand> keinen Rückgabewert angeben, der <xref:System.Data.SqlClient.SqlParameter> enthält einen null-Wert.  
+  
+ `Output`, `InputOut`, und `ReturnValue` Parameter zurückgegeben, indem <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> kann nicht zugegriffen werden, bis Sie schließen die <xref:System.Data.SqlClient.SqlDataReader>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [Befehle und Parameter](~/docs/framework/data/adonet/commands-and-parameters.md)  
+  
+ [DataAdapter-Parameter](~/docs/framework/data/adonet/dataadapter-parameters.md)  
+  
+ [SQL Server und ADO.NET](http://msdn.microsoft.com/library/c18b1fb1-2af1-4de7-80a4-95e56fd976cb)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft wurde nicht auf einen der gültigen <see cref="T:System.Data.ParameterDirection" />-Werte festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceColumnEncryption">
+      <MemberSignature Language="C#" Value="public bool ForceColumnEncryption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ForceColumnEncryption" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.ForceColumnEncryption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erzwingt die Verschlüsselung eines Parameters bei Verwendung [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx). Wenn SQL Server den Treiber darauf hinweist, dass der Parameter nicht verschlüsselt werden muss, misslingt die Abfrage bei Verwendung des Parameters. Diese Eigenschaft bietet zusätzlichen Schutz vor Angriffen, bei denen ein gefährdeter SQL Server dem Client falsche Verschlüsselungsmetadaten bereitstellt, was zur Offenlegung von Daten führen kann.</summary>
+        <value>
+          <see langword="true" />Wenn der Parameter eine spaltenverschlüsselung verfügt; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNullable">
+      <MemberSignature Language="C#" Value="public override bool IsNullable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNullable" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.IsNullable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Parameter NULL-Werte akzeptiert, oder legt diesen fest. <see cref="P:System.Data.SqlClient.SqlParameter.IsNullable" /> wird nicht verwendet, um den Parameterwert zu überprüfen, und verhindert nicht, dass beim Ausführen eines Befehls ein NULL-Wert gesendet oder empfangen wird.</summary>
+        <value>
+          <see langword="true" />, wenn NULL-Werte akzeptiert werden, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ NULL-Werte behandelt werden, mithilfe der <xref:System.DBNull> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[DataWorks SqlParam.Properties#2](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlParam.Properties/CS/source.cs#2)]
+ [!code-vb[DataWorks SqlParam.Properties#2](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlParam.Properties/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocaleId">
+      <MemberSignature Language="C#" Value="public int LocaleId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LocaleId" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.LocaleId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Gebietsschemabezeichner ab, der Konventionen und die Sprache für eine bestimmte Region bestimmt, oder legt diesen fest.</summary>
+        <value>Gibt den Gebietsschemabezeichner zurück, der dem Parameter zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Gebietsschema legt die Konventionen und die Sprache für eine bestimmte geografische Region. Die Codepage zum Codieren einer bestimmten Zeichenfolge (Zeichensatz) basiert auf dem Gebietsschema verwendet wird, durch die Zeichenfolge oder die Umgebung, die sie erstellt. Diese Eigenschaft legt (für Eingabeparameter) fest oder ruft (für Output-Parameter) des Gebietsschemas in eine Zeichenfolge angefügt wird, beim Austausch von Daten mit dem Server. Diese Eigenschaft dient in der Regel zusammen mit der <xref:System.Data.SqlClient.SqlParameter.CompareInfo%2A> Eigenschaft.  
+  
+```  
+static void CreateSqlParameterLocaleId(){  
+   SqlParameter parameter = new SqlParameter("pName", SqlDbType.VarChar);  
+   parameter.LocaleId = 1033;   // English - United States  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public int Offset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Offset" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Offset zur <see cref="P:System.Data.SqlClient.SqlParameter.Value" />-Eigenschaft ab oder legt diesen fest.</summary>
+        <value>Der Offset zu <see cref="P:System.Data.SqlClient.SqlParameter.Value" />. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Offset` Eigenschaft wird für die clientseitige Segmentierung von Binär- und Daten verwendet. Z. B. um 10 MB des Texts in einer Spalte auf einem Server einfügen, ein Benutzer u. u. ausgeführt 10 parametrisierte Einfügevorgänge von 1 MB-Blöcke, den Wert der Verschiebung `Offset` bei jeder Iteration von 1 MB.  
+  
+ `Offset`Gibt die Anzahl der Bytes für binary-Typen und die Anzahl der Zeichen für Zeichenfolgen. Die Anzahl die für Zeichenfolgen umfasst nicht das abschließende Zeichen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[DataWorks SqlParam.Properties#3](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlParam.Properties/CS/source.cs#3)]
+ [!code-vb[DataWorks SqlParam.Properties#3](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlParam.Properties/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterName">
+      <MemberSignature Language="C#" Value="public override string ParameterName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.ParameterName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der <see cref="T:System.Data.SqlClient.SqlParameter" /> ab oder legt diesen fest.</summary>
+        <value>Der Name des <see cref="T:System.Data.SqlClient.SqlParameter" />. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.SqlClient.SqlParameter.ParameterName%2A> wird angegeben, in der Form @paramname. Sie müssen festlegen, <xref:System.Data.SqlClient.SqlParameter.ParameterName%2A> vor der Ausführung einer <xref:System.Data.SqlClient.SqlCommand> abhängig, die Parameter.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData SqlParameter.ParameterName Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameter.ParameterName Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameter.ParameterName Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameter.ParameterName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Precision">
+      <MemberSignature Language="C#" Value="public byte Precision { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Precision" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.Precision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Ziffern ab, die zur Darstellung der <see cref="P:System.Data.SqlClient.SqlParameter.Value" />-Eigenschaft verwendet werden kann, oder legt diese fest.</summary>
+        <value>Die maximale Anzahl von Ziffern für die Darstellung der <see cref="P:System.Data.SqlClient.SqlParameter.Value" />-Eigenschaft. Der Standardwert ist 0. Dadurch wird angegeben, dass der Datenanbieter die Genauigkeit für <see cref="P:System.Data.SqlClient.SqlParameter.Value" /> festlegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.SqlClient.SqlParameter.Precision%2A> Eigenschaft wird verwendet, indem Parameter hat eine <xref:System.Data.SqlDbType> von `Decimal`.  
+  
+ Sie müssen nicht angeben von Werten für die <xref:System.Data.SqlClient.SqlParameter.Precision%2A> und <xref:System.Data.SqlClient.SqlParameter.Scale%2A> Eigenschaften für Eingabeparameter, wie sie aus dem Parameterwert hergeleitet werden können. `Precision`und `Scale` für Ausgabeparameter und für Szenarien, in denen Sie vollständige Metadaten für einen Parameter angeben, ohne dass einen Wert, z. B. einen null-Wert angeben, mit einer bestimmten Genauigkeit und festen Dezimalstellen erforderlich sind.  
+  
+> [!NOTE]
+>  Mithilfe dieser Eigenschaft auf coerce-Daten, die an die Datenbank übergeben, wird nicht unterstützt. Verwenden Sie zum runden, Abschneiden oder Umwandeln der Daten vor der Übergabe an die Datenbank, die <xref:System.Math> Klasse, die Teil der `System` Namespace vor dem Zuweisen eines Werts für des Parameters `Value` Eigenschaft.  
+  
+> [!NOTE]
+>  Microsoft .NET Framework-Datenanbieter, die im Lieferumfang von .NET Framework, Version 1.0 sind nicht überprüfen der <xref:System.Data.SqlClient.SqlParameter.Precision%2A> oder <xref:System.Data.SqlClient.SqlParameter.Scale%2A> von <xref:System.Decimal> Parameterwerte. Dies kann dazu führen, dass abgeschnittene Daten an die Datenquelle eingefügt wird. Überprüfen Sie bei Verwendung von .NET Framework, Version 1.0 der <xref:System.Data.SqlClient.SqlParameter.Precision%2A> und <xref:System.Data.SqlClient.SqlParameter.Scale%2A> von <xref:System.Decimal> Werte vor dem Festlegen des Parameterwerts. Wenn Sie .NET Framework, Version 1.1 oder höher verwenden, wird eine Ausnahme ausgelöst, wenn eine <xref:System.Decimal> Parameterwert wird festgelegt, mit einem ungültigen <xref:System.Data.SqlClient.SqlParameter.Precision%2A>. <xref:System.Data.SqlClient.SqlParameter.Scale%2A>Werte, die länger als die <xref:System.Decimal> Parameterskala werden weiterhin abgeschnitten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData SqlParameter.Precision Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameter.Precision Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameter.Precision Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameter.Precision Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetDbType">
+      <MemberSignature Language="C#" Value="public override void ResetDbType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ResetDbType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameter.ResetDbType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den diesem <see cref="T:System.Data.SqlClient.SqlParameter" /> zugeordneten Typ zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Ausführen eines Befehls, die Parameterwerte umfasst, Code kann entweder der Typ eines Parameters explizit festgelegt oder der Parameter kann den Typ von seinem Wert ableiten. Beim Aufrufen dieser Methode setzt den Parameter zurück, sodass sie erneut den Typ aus dem Wert im Parameter übergebenen ableiten kann. Beim Aufrufen dieser Methode wirkt sich sowohl der <xref:System.Data.SqlClient.SqlParameter.DbType%2A> und <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> Eigenschaften der <xref:System.Data.SqlClient.SqlParameter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetSqlDbType">
+      <MemberSignature Language="C#" Value="public void ResetSqlDbType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetSqlDbType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameter.ResetSqlDbType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den diesem <see cref="T:System.Data.SqlClient.SqlParameter" /> zugeordneten Typ zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Ausführen eines Befehls, die Parameterwerte umfasst, Code kann entweder der Typ eines Parameters explizit festgelegt oder der Parameter kann den Typ von seinem Wert ableiten. Beim Aufrufen dieser Methode setzt den Parameter zurück, sodass sie erneut den Typ aus dem Wert im Parameter übergebenen ableiten kann. Beim Aufrufen dieser Methode wirkt sich sowohl der <xref:System.Data.SqlClient.SqlParameter.DbType%2A> und <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> Eigenschaften der <xref:System.Data.SqlClient.SqlParameter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scale">
+      <MemberSignature Language="C#" Value="public byte Scale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Scale" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.Scale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Dezimalstellen ab, in die <see cref="P:System.Data.SqlClient.SqlParameter.Value" /> aufgelöst wird, oder legt diese fest.</summary>
+        <value>Die Anzahl der Dezimalstellen, in die <see cref="P:System.Data.SqlClient.SqlParameter.Value" /> aufgelöst wird. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.SqlClient.SqlParameter.Scale%2A> Eigenschaft wird verwendet, indem Parameter hat eine <xref:System.Data.SqlDbType> von `Decimal`.  
+  
+> [!WARNING]
+>  Daten möglicherweise abgeschnitten, wenn die <xref:System.Data.SqlClient.SqlParameter.Scale%2A> Eigenschaft nicht explizit angegeben wird und die Daten auf dem Server passt nicht in Skala 0 (Standard).  
+  
+ Sie müssen nicht angeben von Werten für die <xref:System.Data.SqlClient.SqlParameter.Precision%2A> und <xref:System.Data.SqlClient.SqlParameter.Scale%2A> Eigenschaften für Eingabeparameter, wie sie aus dem Parameterwert hergeleitet werden können. `Precision`und `Scale` für Ausgabeparameter und für Szenarien, in denen Sie vollständige Metadaten für einen Parameter angeben, ohne dass einen Wert, z. B. einen null-Wert angeben, mit einer bestimmten Genauigkeit und festen Dezimalstellen erforderlich sind.  
+  
+> [!NOTE]
+>  Mithilfe dieser Eigenschaft auf coerce-Daten, die an die Datenbank übergeben, wird nicht unterstützt. Verwenden Sie zum runden, Abschneiden oder Umwandeln der Daten vor der Übergabe an die Datenbank, die <xref:System.Math> Klasse, die Teil der `System` Namespace vor dem Zuweisen eines Werts für des Parameters `Value` Eigenschaft.  
+  
+> [!NOTE]
+>  .NET Framework-Datenanbieter, die in .NET Framework, Version 1.0 enthalten sind nicht überprüfen der <xref:System.Data.SqlClient.SqlParameter.Precision%2A> oder <xref:System.Data.SqlClient.SqlParameter.Scale%2A> von <xref:System.Decimal> Parameterwerte. Dies kann dazu führen, dass abgeschnittene Daten an die Datenquelle eingefügt werden. Überprüfen Sie bei Verwendung von .NET Framework, Version 1.0 der <xref:System.Data.SqlClient.SqlParameter.Precision%2A> und <xref:System.Data.SqlClient.SqlParameter> von <xref:System.Decimal> Werte vor dem Festlegen des Parameterwerts. <xref:System.Data.SqlClient.SqlParameter.Scale%2A>Werte, die länger als die <xref:System.Decimal> Parameterskala werden weiterhin abgeschnitten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[DataWorks SqlParam.Properties#4](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlParam.Properties/CS/source.cs#4)]
+ [!code-vb[DataWorks SqlParam.Properties#4](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlParam.Properties/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public override int Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Size" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen der maximalen Größe (in Bytes) der Daten in der Spalte.</summary>
+        <value>Die maximale Größe (in Bytes) der Daten in der Spalte. Der Standardwert wird aus dem Parameterwert hergeleitet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rückgabewerte sind nicht von dieser Eigenschaft betroffen; Rückgabeparameter von gespeicherten Prozeduren sind immer Ganzzahlen mit fester Größe.  
+  
+ Für Output-Parameter mit einem Datentyp variabler Länge (z. B. Nvarchar) definiert die Größe des Parameters die Größe des Puffers, halten die Output-Parameter. Die Output-Parameter kann auf eine Größe angegeben mit abgeschnitten werden <xref:System.Data.SqlClient.SqlParameter.Size%2A>. Für Zeichentypen entspricht, wird die Größe mit angegebenen <xref:System.Data.SqlClient.SqlParameter.Size%2A> in Zeichen ist.  
+  
+ Die <xref:System.Data.SqlClient.SqlParameter.Size%2A> Eigenschaft wird für Binär- und Zeichenfolgentypen verwendet. Für Parameter des Typs `SqlType.String`, `Size` bedeutet, dass die Länge in Unicode-Zeichen. Für Parameter des Typs `SqlType.Xml`, `Size` wird ignoriert.  
+  
+ Für Datentypen Objektressourcen und ANSI-Daten String, die <xref:System.Data.SqlClient.SqlParameter.Size%2A> Eigenschaft bezieht sich auf die Anzahl der Bytes. Bei Unicode-Zeichenfolgendaten <xref:System.Data.SqlClient.SqlParameter.Size%2A> bezieht sich auf die Anzahl der Zeichen. Die Anzahl die für Zeichenfolgen umfasst nicht das abschließende Zeichen.  
+  
+ Für Datentypen mit variabler Länge <xref:System.Data.SqlClient.SqlParameter.Size%2A> beschreibt die Höchstmenge an Daten, die an den Server übermittelt. Beispielsweise für einen Unicode-Zeichenfolgenwert <xref:System.Data.SqlClient.SqlParameter.Size%2A> missbraucht werden zur Begrenzung des Umfangs der Daten, die an den Server, auf die ersten 100 Zeichen gesendet.  
+  
+ Wenn nicht explizit festgelegt wurde, die Größe von der tatsächlichen Größe der Wert des angegebenen Parameters hergeleitet.  
+  
+ Wenn der Bruchteil des Parameterwerts größer als die Größe ist, wird der Wert abgeschnitten werden, um die Größe zu entsprechen.  
+  
+ Für die feste Länge für Datentypen, die den Wert des <xref:System.Data.SqlClient.SqlParameter.Size%2A> wird ignoriert. Sie können für Informationszwecke abgerufen werden und gibt die Höchstmenge an Bytes, die der Anbieter verwendet, wenn den Wert des Parameters an den Server übertragen.  
+  
+ Informationen zum streaming finden Sie unter [SqlClient-Streamingunterstützung](~/docs/framework/data/adonet/sqlclient-streaming-support.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[DataWorks SqlParam.Properties#5](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlParam.Properties/CS/source.cs#5)]
+ [!code-vb[DataWorks SqlParam.Properties#5](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlParam.Properties/VB/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceColumn">
+      <MemberSignature Language="C#" Value="public override string SourceColumn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.SourceColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Quellspalte ab, die dem <see cref="T:System.Data.DataSet" /> zugeordnet ist und zum Laden oder Zurückgeben des <see cref="P:System.Data.SqlClient.SqlParameter.Value" /> verwendet wird, oder legt diesen Namen fest.</summary>
+        <value>Der Name der Quellspalte, die dem <see cref="T:System.Data.DataSet" /> zugeordnet ist. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> festgelegt ist, auf einen anderen als eine leere Zeichenfolge, die den Wert des Parameters wird abgerufen, aus der Spalte mit der <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> Name. Wenn <xref:System.Data.SqlClient.SqlParameter.Direction%2A> festgelegt ist, um `Input`, der Wert stammt aus dem <xref:System.Data.DataSet>. Wenn <xref:System.Data.SqlClient.SqlParameter.Direction%2A> festgelegt ist, um `Output`, der Wert aus der Datenquelle stammt. Ein <xref:System.Data.SqlClient.SqlParameter.Direction%2A> von `InputOutput` ist eine Kombination aus beidem.  
+  
+ Weitere Informationen zur Verwendung der <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> Eigenschaft finden Sie unter [DataAdapter-Parameter](~/docs/framework/data/adonet/dataadapter-parameters.md) und [Aktualisieren von Datenquellen mit "DataAdapters"](~/docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[DataWorks SqlParam.Properties#6](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlParam.Properties/CS/source.cs#6)]
+ [!code-vb[DataWorks SqlParam.Properties#6](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlParam.Properties/VB/source.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceColumnNullMapping">
+      <MemberSignature Language="C#" Value="public override bool SourceColumnNullMapping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SourceColumnNullMapping" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.SourceColumnNullMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt einen Wert fest, der angibt, ob die Quellspalte NULL-Werte zulässt, oder ruft ihn ab. Dadurch kann <see cref="T:System.Data.SqlClient.SqlCommandBuilder" /> ordnungsgemäß Update-Anweisungen für Spalten generieren, die NULL-Werte zulassen.</summary>
+        <value>
+          <see langword="true" />, wenn die Quellspalte NULL-Werte zulässt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.SqlClient.SqlParameter.SourceColumnNullMapping%2A>wird verwendet, durch die <xref:System.Data.SqlClient.SqlCommandBuilder> ordnungsgemäß Update-Befehle generieren, beim Umgang mit Spalten NULL-Werte zulässt. Im Allgemeinen die Verwendung von <xref:System.Data.SqlClient.SqlParameter.SourceColumnNullMapping%2A> ist für Entwickler, die von erben beschränkt <xref:System.Data.SqlClient.SqlCommandBuilder>.  
+  
+ <xref:System.Data.Common.DbCommandBuilder>Diese Eigenschaft verwendet, um zu bestimmen, ob die Quellspalte NULL-Werte zulässt, und wird diese Eigenschaft auf `true` wird jedoch auf NULL festlegbar und `false` wird jedoch nicht. Wenn <xref:System.Data.SqlClient.SqlCommandBuilder> ist generieren die Update-Anweisung, untersucht der <xref:System.Data.SqlClient.SqlParameter.SourceColumnNullMapping%2A> für jeden Parameter. Wenn die Eigenschaft `true`, <xref:System.Data.SqlClient.SqlCommandBuilder> generiert eine WHERE-Klausel wie folgt (in diesem Abfrageausdruck, stellt "FieldName" den Namen des Felds dar):  
+  
+```  
+((@IsNull_FieldName = 1 AND FieldName IS NULL) OR   
+  (FieldName = @Original_FieldName))  
+```  
+  
+ Wenn <xref:System.Data.SqlClient.SqlParameter.SourceColumnNullMapping%2A> für das Feld "false" ist <xref:System.Data.SqlClient.SqlCommandBuilder> generiert die folgende WHERE-Klausel:  
+  
+```  
+FieldName = @OriginalFieldName  
+```  
+  
+ Darüber hinaus @IsNull_FieldName 1 enthält, wenn das Quellfeld enthält Null, und 0, wenn dies nicht der Fall. Dieser Mechanismus ermöglicht die Optimierung der Leistung in SQL Server sowie für gemeinsamen Code, der über mehrere Anbieter funktioniert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceVersion">
+      <MemberSignature Language="C#" Value="public override System.Data.DataRowVersion SourceVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DataRowVersion SourceVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.SourceVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.DataRowVersion" /> ab, die beim Laden von <see cref="P:System.Data.SqlClient.SqlParameter.Value" /> verwendet werden soll, oder legt diese fest.</summary>
+        <value>Einer der <see cref="T:System.Data.DataRowVersion" />-Werte. Die Standardeinstellung ist <see langword="Current" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, durch die `SqlDataAdapter.UpdateCommand` während eines Updates zu bestimmen, ob der ursprüngliche oder der aktuelle Wert für den Parameterwert verwendet wird. Auf diese Weise können Primärschlüssel aktualisiert werden. Diese Eigenschaft wird festgelegt, auf die Version von der <xref:System.Data.DataRow> von verwendet die `DataRow.Item` Eigenschaft oder eines der `DataRow.GetChildRows` Methoden die <xref:System.Data.DataRow> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[DataWorks SqlParam.Properties#7](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlParam.Properties/CS/source.cs#7)]
+ [!code-vb[DataWorks SqlParam.Properties#7](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlParam.Properties/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlDbType">
+      <MemberSignature Language="C#" Value="public System.Data.SqlDbType SqlDbType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.SqlDbType SqlDbType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.SqlDbType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Data.Common.DbProviderSpecificTypeProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Data.SqlDbType" /> des Parameters ab oder legt ihn fest.</summary>
+        <value>Einer der <see cref="T:System.Data.SqlDbType" />-Werte. Die Standardeinstellung ist <see langword="NVarChar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> und <xref:System.Data.SqlClient.SqlParameter.DbType%2A> verknüpft sind. Daher ist das Festlegen der <xref:System.Data.SqlClient.SqlParameter.DbType%2A> Änderungen der <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> zu unterstützenden <xref:System.Data.SqlDbType>.  
+  
+ Eine Liste der unterstützten Datentypen, finden Sie unter dem entsprechenden <xref:System.Data.SqlDbType> Member. Weitere Informationen finden Sie unter [DataAdapter-Parameter](~/docs/framework/data/adonet/dataadapter-parameters.md).  
+  
+ Informationen zum streaming finden Sie unter [SqlClient-Streamingunterstützung](~/docs/framework/data/adonet/sqlclient-streaming-support.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlValue">
+      <MemberSignature Language="C#" Value="public object SqlValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SqlValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.SqlValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen des Werts des Parameters als SQL-Typ.</summary>
+        <value>Ein <see cref="T:System.Object" />, das der Wert des Parameters unter Verwendung von SQL-Typen ist. Der Standardwert ist NULL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Eingabeparameter, der Wert gebunden ist, um die <xref:System.Data.SqlClient.SqlCommand> , die an den Server gesendet wird. Für die Ausgabe- und Rückgabewertparameter-der Wert wird festgelegt, nach Abschluss des der <xref:System.Data.SqlClient.SqlCommand> und nach der <xref:System.Data.SqlClient.SqlDataReader> geschlossen wird.  
+  
+ Diese Eigenschaft kann festgelegt werden auf Null oder <xref:System.DBNull.Value>. Verwendung <xref:System.DBNull.Value> als Wert des Parameters einen NULL-Wert zu senden. Verwenden Sie Null oder nicht festlegen <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> auf den Standardwert für den Parameter zu verwenden.  
+  
+ Wenn die Anwendung den Datenbanktyp angibt, wird der gebundene Wert in diesen Typ konvertiert, wenn der Anbieter die Daten an den Server sendet. Der Anbieter versucht, sämtliche Typen von Werten zu konvertieren, wenn es unterstützt die <xref:System.IConvertible> Schnittstelle. Fehler bei der Konvertierung möglicherweise auf, wenn der angegebene Typ nicht kompatibel mit dem Wert ist.  
+  
+ Sowohl die <xref:System.Data.SqlClient.SqlParameter.DbType%2A> und <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> Eigenschaften abgeleitet werden können, durch Festlegen der <xref:System.Data.SqlClient.SqlParameter.Value%2A>.  
+  
+ Die <xref:System.Data.SqlClient.SqlParameter.Value%2A> Eigenschaft wird überschrieben, indem `SqlDataAdapter.UpdateCommand`.  
+  
+ Verwenden der <xref:System.Data.SqlClient.SqlParameter.Value%2A> -Eigenschaft zum Zurückgeben von Parameterwerte als common Language Runtime (CLR)-Typen.  
+  
+ Informationen zum streaming finden Sie unter [SqlClient-Streamingunterstützung](~/docs/framework/data/adonet/sqlclient-streaming-support.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameter.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ICloneable.Clone" />.</summary>
+        <returns>Ein neues <see cref="T:System.Object" /> , eine Kopie dieser Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.SqlClient.SqlParameter>-Instanz in eine <xref:System.ICloneable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameter.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die den <see cref="P:System.Data.SqlClient.SqlParameter.ParameterName" /> enthält.</summary>
+        <returns>Eine Zeichenfolge, die den <see cref="P:System.Data.SqlClient.SqlParameter.ParameterName" /> enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen des Typnamens für einen Tabellenwertparameter.</summary>
+        <value>Der Typname des angegebenen Tabellenwertparameters.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UdtTypeName">
+      <MemberSignature Language="C#" Value="public string UdtTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UdtTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.UdtTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see langword="string" /> , die einen benutzerdefinierten Typ als Parameter darstellt.</summary>
+        <value>Ein <see langword="string" /> , die den vollqualifizierten Namen eines benutzerdefinierten Typs in der Datenbank darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel veranschaulicht, <xref:System.Data.SqlClient.SqlParameter.UdtTypeName%2A>, finden Sie unter [Abrufen von UDT-Daten](http://msdn.microsoft.com/library/ms131080.aspx).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Parameters ab oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Object" />, das den Wert des Parameters darstellt. Der Standardwert ist NULL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Eingabeparameter, der Wert gebunden ist, um die <xref:System.Data.SqlClient.SqlCommand> , die an den Server gesendet wird. Für die Ausgabe- und Rückgabewertparameter-der Wert wird festgelegt, nach Abschluss des der <xref:System.Data.SqlClient.SqlCommand> und nach der <xref:System.Data.SqlClient.SqlDataReader> geschlossen wird.  
+  
+ Diese Eigenschaft kann festgelegt werden auf Null oder <xref:System.DBNull.Value>. Verwendung <xref:System.DBNull.Value> als Wert des Parameters einen NULL-Wert zu senden. Verwenden Sie Null oder nicht festlegen <xref:System.Data.SqlClient.SqlParameter.Value%2A> auf den Standardwert für den Parameter zu verwenden.  
+  
+ Eine Ausnahme wird ausgelöst, wenn nicht - Unicode-XML-Daten als Zeichenfolge übergeben werden.  
+  
+ Wenn die Anwendung den Datenbanktyp angibt, wird der gebundene Wert in diesen Typ konvertiert, wenn der Anbieter die Daten an den Server sendet. Der Anbieter versucht, sämtliche Typen von Werten zu konvertieren, wenn es unterstützt die <xref:System.IConvertible> Schnittstelle. Fehler bei der Konvertierung möglicherweise auf, wenn der angegebene Typ nicht kompatibel mit dem Wert ist.  
+  
+ Sowohl die <xref:System.Data.SqlClient.SqlParameter.DbType%2A> und <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> Eigenschaften durch Festlegen des Werts abgeleitet werden können.  
+  
+ Die <xref:System.Data.SqlClient.SqlParameter.Value%2A> Eigenschaft wird überschrieben, indem `SqlDataAdapter.UpdateCommand`.  
+  
+ Informationen zum streaming finden Sie unter [SqlClient-Streamingunterstützung](~/docs/framework/data/adonet/sqlclient-streaming-support.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.SqlClient.SqlParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[DataWorks SqlParam.Properties#8](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlParam.Properties/CS/source.cs#8)]
+ [!code-vb[DataWorks SqlParam.Properties#8](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlParam.Properties/VB/source.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSchemaCollectionDatabase">
+      <MemberSignature Language="C#" Value="public string XmlSchemaCollectionDatabase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlSchemaCollectionDatabase" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.XmlSchemaCollectionDatabase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Datenbank ab, in der sich die Schemaauflistung für diese XML-Instanz befindet.</summary>
+        <value>Der Name der Datenbank, in der sich die Schemaauflistung für diese XML-Instanz befindet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert ist null (`Nothing` in Microsoft Visual Basic), wenn die Auflistung innerhalb der aktuellen Datenbank definiert ist. Es ist ebenfalls null, wenn es in diesem Fall keine schemaauflistung wird <xref:System.Data.SqlClient.SqlParameter.XmlSchemaCollectionName%2A> und <xref:System.Data.SqlClient.SqlParameter.XmlSchemaCollectionOwningSchema%2A> sind ebenfalls null.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSchemaCollectionName">
+      <MemberSignature Language="C#" Value="public string XmlSchemaCollectionName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlSchemaCollectionName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.XmlSchemaCollectionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Schemaauflistung für diese XML-Instanz ab.</summary>
+        <value>Der Name der Schemaauflistung für diese XML-Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert ist null (`Nothing` in Microsoft Visual Basic), wenn es keine zugeordnete schemaauflistung ist. Wenn der Wert null, dann ist <xref:System.Data.SqlClient.SqlParameter.XmlSchemaCollectionDatabase%2A> und <xref:System.Data.SqlClient.SqlParameter.XmlSchemaCollectionOwningSchema%2A> sind ebenfalls null.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSchemaCollectionOwningSchema">
+      <MemberSignature Language="C#" Value="public string XmlSchemaCollectionOwningSchema { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlSchemaCollectionOwningSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameter.XmlSchemaCollectionOwningSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das besitzende relationale Schema, in dem sich die Schemaauflistung für diese XML-Instanz befindet.</summary>
+        <value>Das besitzende relationale Schema für diese XML-Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert ist null (`Nothing` in Microsoft Visual Basic), wenn die Auflistung innerhalb der aktuellen Datenbank definiert ist. Es ist ebenfalls null, wenn es in diesem Fall keine schemaauflistung wird <xref:System.Data.SqlClient.SqlParameter.XmlSchemaCollectionDatabase%2A> und <xref:System.Data.SqlClient.SqlParameter.XmlSchemaCollectionName%2A> sind ebenfalls null.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

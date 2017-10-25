@@ -1,0 +1,152 @@
+<Type Name="TrueTypeFontMode" FullName="System.Printing.TrueTypeFontMode">
+  <TypeSignature Language="C#" Value="public enum TrueTypeFontMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TrueTypeFontMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.TrueTypeFontMode" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie ein Drucker Text behandelt, die mit der eine TrueType-Schriftart formatiert ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ TrueType-Schriftarten sind *Vektor* Schriftarten, die Drucker und Treiber Bildschirm anzuweisen, wie die Formen der Buchstaben zu zeichnen, und füllen Sie diese aus. Vektorschriftarten mit *Raster* Schriftarten, die einfach aufgelistet sind. Raster-Schriftart enthält eine Liste für jedes Buchstabens der einzelnen verfügbaren Schriftgrad und Listen bestimmen, für jedes einzelnen Pixels im den Buchstaben, ob es gedruckt wird.  
+  
+ Sie können vergrößern oder Vektorschriftarten mit nahezu jedem beliebigen Schriftgrad; jedoch können Vektorschriftarten drucken beeinträchtigt, da sie eine große Menge an Drucker Arbeitsspeicher belegen. Darüber hinaus unterstützen einige Drucker keine TrueType-Schriftarten.  
+  
+ Neuere Drucker vermeiden diese Probleme häufig wie folgt.  
+  
+-   Konvertieren eine TrueType-Schriftart in einer Gliederung Schriftart, die keine generische Vektor ist. Viele Drucker, die TrueType-Schriftarten nicht unterstützen, unterstützen Gliederung Schriftarten.  
+  
+-   Erstellen einer temporären Rasterschriftart, sieht wie eine TrueType-Schriftart. Der Drucker muss eine separaten temporären Raster-Schriftart für jeden Schriftgrad erstellen, die das Dokument verwendet. Aus diesem Grund ein Druckauftrags viele Schriftgrade Ihren Bedürfnissen verwendet der gesamte Arbeitsspeicher, den der Drucker verwendet möglicherweise größer, was eine TrueType-Schriftart verwenden würden.  
+  
+-   Behandeln jede Textbereich im Dokument als Grafik an. Wenn ein Gerät muss ein Dokument gedruckt, die sehr wenig Text enthält, kann durch Herunterladen von Text als eine Grafik weniger Arbeitsspeicher Drucker als Herunterladen einer Schriftart verwenden.  
+  
+ Die Werte dieses Typs für diese Zwecke verwendet:  
+  
+-   Als Mitglied der <xref:System.Printing.PrintCapabilities.TrueTypeFontModeCapability%2A> -Auflistung, die eine Eigenschaft des <xref:System.Printing.PrintCapabilities>, diese Werte geben an, die der vorhergehenden Verfahren für einen bestimmten Drucker verfügbar ist. Viele Drucker unterstützen mehrere dieser Techniken.  
+  
+-   Als Wert für die <xref:System.Printing.PrintTicket.TrueTypeFontMode%2A> Eigenschaft ein <xref:System.Printing.PrintTicket>, der Wert weist den Drucker TrueType-Schriftarten auf eine bestimmte Weise zu behandeln.  
+  
+ Die **unbekannte** Wert wird in den Eigenschaften der nie verwendet <xref:System.Printing.PrintCapabilities> Objekte.  
+  
+ Sollten Sie niemals Festlegen einer <xref:System.Printing.PrintTicket> Eigenschaft, um **unbekannte**. Wenn eine andere <xref:System.Printing.PrintTicket> erstellt wurde, erzeugt die Anwendung eine *PrintTicket-Dokument* TrueType-Schriftart Funktion für die auf eine nicht erkannte Option festlegt (also eine Option, die nicht in definiert ist die [Druckschema ](http://go.microsoft.com/fwlink/?LinkId=186397), ein <xref:System.Printing.PrintTicket> -Objekt in der Anwendung, die mit diesem Dokument erstellt wird **unbekannte** als Wert für die <xref:System.Printing.PrintTicket.TrueTypeFontMode%2A> Eigenschaft.  
+  
+ Obwohl die <xref:System.Printing.PrintTicket> und <xref:System.Printing.PrintCapabilities> Klassen können nicht vererbt werden, können Sie erweitern die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) Druckgerät Funktionen zu erkennen, die nicht in berücksichtigt werden die <xref:System.Printing.PrintTicket> oder <xref:System.Printing.PrintCapabilities> Klassen. Weitere Informationen finden Sie unter [nicht im Build: Vorgehensweise: Erweitern der Druckschema und Erstellen von neuen Druckserver Systemklassen](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie einen Drucker Funktionen testen und konfigurieren den Druckauftrag aus, um diese nutzen.  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Automatic">
+      <MemberSignature Language="C#" Value="Automatic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.TrueTypeFontMode Automatic = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.TrueTypeFontMode.Automatic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.TrueTypeFontMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Druckertreiber entscheidet die beste Methode für die Behandlung von TrueType-Schriftarten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DownloadAsNativeTrueTypeFont">
+      <MemberSignature Language="C#" Value="DownloadAsNativeTrueTypeFont" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.TrueTypeFontMode DownloadAsNativeTrueTypeFont = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.TrueTypeFontMode.DownloadAsNativeTrueTypeFont" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.TrueTypeFontMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Druckertreiber lädt die TrueType-Schriftart.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DownloadAsOutlineFont">
+      <MemberSignature Language="C#" Value="DownloadAsOutlineFont" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.TrueTypeFontMode DownloadAsOutlineFont = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.TrueTypeFontMode.DownloadAsOutlineFont" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.TrueTypeFontMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Druckertreiber lädt die TrueType-Schriftart als eine Gliederung Schriftart herunter.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DownloadAsRasterFont">
+      <MemberSignature Language="C#" Value="DownloadAsRasterFont" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.TrueTypeFontMode DownloadAsRasterFont = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.TrueTypeFontMode.DownloadAsRasterFont" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.TrueTypeFontMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Treiber erstellt eine Raster für jede Größe der TrueType-Schriftart, dass es benötigt, und alle downloads.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAsBitmap">
+      <MemberSignature Language="C#" Value="RenderAsBitmap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.TrueTypeFontMode RenderAsBitmap = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.TrueTypeFontMode.RenderAsBitmap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.TrueTypeFontMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Druckertreiber lädt jeden Bereich der Text als eine Grafik herunter.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.TrueTypeFontMode Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.TrueTypeFontMode.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.TrueTypeFontMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Funktion (deren Optionen durch diese Enumeration dargestellt werden) wird auf eine nicht definierte Option festgelegt. in der [Schema Drucken](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

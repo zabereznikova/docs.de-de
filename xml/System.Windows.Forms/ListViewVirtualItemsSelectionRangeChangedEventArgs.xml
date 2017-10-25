@@ -1,0 +1,164 @@
+<Type Name="ListViewVirtualItemsSelectionRangeChangedEventArgs" FullName="System.Windows.Forms.ListViewVirtualItemsSelectionRangeChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class ListViewVirtualItemsSelectionRangeChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewVirtualItemsSelectionRangeChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListViewVirtualItemsSelectionRangeChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.ListView.VirtualItemsSelectionRangeChanged" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListView.VirtualItemsSelectionRangeChanged> Ereignis tritt auf, wenn die <xref:System.Windows.Forms.ListView> befindet sich im virtuellen Modus und der Auswahlzustand eines Bereichs von Elementen geändert wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListView.VirtualItemsSelectionRangeChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListView> mit dem Namen `ListView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListView.VirtualItemsSelectionRangeChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#482](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#482)]
+ [!code-vb[System.Windows.Forms.EventExamples#482](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#482)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewVirtualItemsSelectionRangeChangedEventArgs (int startIndex, int endIndex, bool isSelected);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 startIndex, int32 endIndex, bool isSelected) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewVirtualItemsSelectionRangeChangedEventArgs.#ctor(System.Int32,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="endIndex" Type="System.Int32" />
+        <Parameter Name="isSelected" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="startIndex">Der Index des ersten Elements im Bereich, der geändert wurden.</param>
+        <param name="endIndex">Der Index des letzten Elements im Bereich, der geändert wurden.</param>
+        <param name="isSelected">
+          <see langword="true" />um anzugeben, dass die Elemente ausgewählt sind. <see langword="false" /> an, dass die Elemente werden deaktiviert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ListViewVirtualItemsSelectionRangeChangedEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListViewVirtualItemsSelectionRangeChangedEventArgs> tritt auf, wenn Elemente aus geändert werden, aktiviert in deaktiviert, und umgekehrt. Die `isSelected` Parameter gibt den aktuellen Status des Bereichs von Elementen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" />ist größer als<paramref name="endIndex." /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndIndex">
+      <MemberSignature Language="C#" Value="public int EndIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewVirtualItemsSelectionRangeChangedEventArgs.EndIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index für das letzte Element im Bereich von Elementen, deren Auswahlstatus geändert wurde</summary>
+        <value>Der Index des letzten Elements im Bereich von Elementen, deren Auswahlstatus geändert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListView.VirtualItemsSelectionRangeChanged?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListView> mit dem Namen `ListView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListView.VirtualItemsSelectionRangeChanged?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#482](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#482)]
+ [!code-vb[System.Windows.Forms.EventExamples#482](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#482)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelected">
+      <MemberSignature Language="C#" Value="public bool IsSelected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelected" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewVirtualItemsSelectionRangeChangedEventArgs.IsSelected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Bereich von Elementen ausgewählt ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Bereich von Elementen ausgewählt ist. <see langword="false" /> , wenn der Bereich von Elementen aufgehoben wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListViewVirtualItemsSelectionRangeChangedEventArgs> tritt auf, wenn Elemente aus geändert werden, aktiviert in deaktiviert, und umgekehrt. Die `isSelected` Parameter gibt den aktuellen Status des Bereichs von Elementen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListView.VirtualItemsSelectionRangeChanged?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListView> mit dem Namen `ListView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListView.VirtualItemsSelectionRangeChanged?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#482](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#482)]
+ [!code-vb[System.Windows.Forms.EventExamples#482](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#482)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartIndex">
+      <MemberSignature Language="C#" Value="public int StartIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewVirtualItemsSelectionRangeChangedEventArgs.StartIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index für das erste Element im Bereich von Elementen, deren Auswahlstatus geändert wurde.</summary>
+        <value>Der Index des ersten Elements im Bereich von Elementen, deren Auswahlstatus geändert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListView.VirtualItemsSelectionRangeChanged?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListView> mit dem Namen `ListView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListView.VirtualItemsSelectionRangeChanged?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#482](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#482)]
+ [!code-vb[System.Windows.Forms.EventExamples#482](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#482)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,340 @@
+<Type Name="DataGridViewButtonColumn" FullName="System.Windows.Forms.DataGridViewButtonColumn">
+  <TypeSignature Language="C#" Value="public class DataGridViewButtonColumn : System.Windows.Forms.DataGridViewColumn" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewButtonColumn extends System.Windows.Forms.DataGridViewColumn" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewButtonColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridViewColumn</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Windows.Forms.DataGridViewButtonColumn), "DataGridViewButtonColumn.bmp")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält eine Auflistung von <see cref="T:System.Windows.Forms.DataGridViewButtonCell" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewButtonColumn> Klasse ist ein spezialisierter Typ von der <xref:System.Windows.Forms.DataGridViewColumn> -Klasse logisch hosten Zellen verwendet, die auf einfachen Benutzereingaben reagieren. Ein <xref:System.Windows.Forms.DataGridViewButtonColumn> verfügt über eine zugeordnete <xref:System.Windows.Forms.DataGridViewButtonCell> in jeder <xref:System.Windows.Forms.DataGridViewRow> , die Sie überschneidet. Jede Zelle stellt eine Benutzeroberfläche (UI) ähnelt einer <xref:System.Windows.Forms.Button> Steuerelement.  
+  
+ Um den gleichen Text der Schaltfläche für jede Zelle anzuzeigen, legen die <xref:System.Windows.Forms.DataGridViewButtonColumn.UseColumnTextForButtonValue%2A> Eigenschaft, um `true` und legen Sie die <xref:System.Windows.Forms.DataGridViewButtonColumn.Text%2A> Eigenschaft, um die gewünschten Schaltflächentext.  
+  
+ Der Standardmodus für die Sortierung für diesen Typ der Spalte ist <xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>.  
+  
+ Um Benutzer auf eine Schaltfläche zu behandeln, behandeln die <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> oder <xref:System.Windows.Forms.DataGridView.CellContentClick?displayProperty=nameWithType> Ereignis. Der Handler, können Sie die <xref:System.Windows.Forms.DataGridViewCellEventArgs.ColumnIndex%2A?displayProperty=nameWithType> Eigenschaft, um zu bestimmen, ob in der Schaltflächenspalte der Klick aufgetreten ist. Sie können die <xref:System.Windows.Forms.DataGridViewCellEventArgs.RowIndex%2A?displayProperty=nameWithType> Eigenschaft, um zu bestimmen, ob der Klick aufgetreten, in einer Schaltflächenzelle und nicht auf die Spaltenüberschrift ist.  
+  
+> [!NOTE]
+>  Wenn visuelle Stile aktiviert sind, die Schaltflächen in einer Schaltflächenspalte sind mit gezeichnetes eine <xref:System.Windows.Forms.ButtonRenderer>, und Zellen, Stile, die über Eigenschaften wie z. B. <xref:System.Windows.Forms.DataGridViewButtonColumn.DefaultCellStyle%2A> haben keine Auswirkungen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.Windows.Forms.DataGridViewButtonColumn> für Aktionen für bestimmte Zeilen. In diesem Beispiel wird eine <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> Ereignishandler zunächst ermittelt, ob mit einem Klick auf eine Schaltflächenzelle ist, und ruft dann ein Geschäftsobjekt der Zeile zugeordnet. In diesem Beispiel ist Teil eines umfangreicheren Beispiels in [Vorgehensweise: Zugreifen auf Objekte in einer Windows Forms DataGridViewComboBoxCell-Dropdownliste](~/docs/framework/winforms/controls/access-objects-in-a-wf-datagridviewcomboboxcell-drop-down-list.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#100)]
+ [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#100)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Ableiten von <see cref="T:System.Windows.Forms.DataGridViewButtonColumn" /> und der abgeleiteten Klasse neue Eigenschaften hinzugefügt haben, achten Sie darauf, dass Sie überschreiben die <see cref="M:System.Windows.Forms.DataGridViewButtonColumn.Clone" /> Methode, um die neuen Eigenschaften bei Klonvorgängen kopiert. Sie sollten auch der Basisklasse aufrufen, <see cref="M:System.Windows.Forms.DataGridViewButtonColumn.Clone" /> Methode, damit die Eigenschaften der Basisklasse in die neue Zelle kopiert werden.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewButtonColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewButtonColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataGridViewButtonColumn" />-Klasse im Standardzustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die Spalte, indem Sie die folgenden Eigenschaften festlegen.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Windows.Forms.DataGridViewButtonColumn.CellTemplate%2A>|Ein neuer <xref:System.Windows.Forms.DataGridViewButtonCell>.|  
+|Die <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridViewCellStyle> zurückgegebenes Objekt die <xref:System.Windows.Forms.DataGridViewButtonColumn.DefaultCellStyle%2A> Eigenschaft.|<xref:System.Windows.Forms.DataGridViewContentAlignment?displayProperty=nameWithType>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellTemplate">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataGridViewCell CellTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCell CellTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewButtonColumn.CellTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCell</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zum Erstellen neuer Zellen verwendete Vorlage ab oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.DataGridViewCell" />, nach der alle anderen Zellen in der Spalte erstellt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Konstruktor für die <xref:System.Windows.Forms.DataGridViewButtonColumn> Klasse initialisiert diese Eigenschaft zu einer neu erstellten <xref:System.Windows.Forms.DataGridViewButtonCell>.  
+  
+> [!CAUTION]
+>  Ändern der Eigenschaften der Zellvorlage wirkt sofort die Benutzeroberfläche (UI) von vorhandenen Zellen der Spalte sich nicht. Diese Änderungen sind nur offensichtlich, nachdem die Spalte erneut generiert wird (z. B. durch die Sortierung der Spalte oder durch einen Aufruf der <xref:System.Windows.Forms.DataGridView.InvalidateColumn%2A?displayProperty=nameWithType> Methode).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.Windows.Forms.DataGridViewButtonColumn> die Verkäufe Anzeigen des Mitarbeiters machte. Eine Zellenvorlage für die wird verwendet, um die gleiche Farbe für alle Schaltflächen anzuwenden. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Forms.DataGridViewComboBoxColumn> Übersichtsthema.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#10)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Der angegebene Wert beim Festlegen dieser Eigenschaft in nicht umgewandelt werden konnte eine <see cref="T:System.Windows.Forms.DataGridViewButtonCell" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewButtonColumn.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine genaue Kopie dieser Spalte.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das die geklonte <see cref="T:System.Windows.Forms.DataGridViewButtonColumn" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um eine Spalte von Schaltflächenzellen duplizieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Wert der <see cref="P:System.Windows.Forms.DataGridViewButtonColumn.CellTemplate" />-Eigenschaft ist <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.DataGridViewButtonColumn.Clone" /> rufen Sie in einer abgeleiteten Klasse die Basisklasse <see cref="M:System.Windows.Forms.DataGridViewButtonColumn.Clone" /> Methode, damit die Eigenschaften der Basisklasse in die neue Zelle kopiert werden, und achten Sie darauf, dass Sie auch die Werte der Eigenschaften kopieren, die der abgeleiteten Klasse hinzugefügt wurden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCellStyle">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataGridViewCellStyle DefaultCellStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCellStyle DefaultCellStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewButtonColumn.DefaultCellStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Standardzellenformat der Spalte ab oder legt dieses fest.</summary>
+        <value>Das <see cref="T:System.Windows.Forms.DataGridViewCellStyle" />, das als Standardformat übernommen werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung <xref:System.Windows.Forms.DataGridViewCellStyle> zurückgegeben, die von dieser Eigenschaft hat einen anfänglichen <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A> Eigenschaftswert <xref:System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter>. Dieser Wert überschreibt den Wert im angegebenen der <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridView> steuern, jedoch möglicherweise von anderen Eigenschaften für den Zellstil überschrieben werden. Weitere Informationen finden Sie unter [Zellstile im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+  
+> [!NOTE]
+>  Wenn visuelle Stile aktiviert sind, die Schaltflächen in einer Schaltflächenspalte sind mit gezeichnetes eine <xref:System.Windows.Forms.ButtonRenderer> und Zellen, Stile, die über Eigenschaften wie z. B. <xref:System.Windows.Forms.DataGridViewButtonColumn.DefaultCellStyle%2A> haben keine Auswirkungen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-csharp[System.Windows.Forms.GridViewContentAlignment#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GridViewContentAlignment/CS/changecolumnalignment.cs#1)]
+ [!code-vb[System.Windows.Forms.GridViewContentAlignment#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GridViewContentAlignment/VB/changecolumnalignment.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlatStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.FlatStyle FlatStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.FlatStyle FlatStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewButtonColumn.FlatStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die flache Darstellung der Schaltflächenzellen in der Spalte.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.FlatStyle" /> Wert, der angibt, der Darstellung der Schaltflächen in der Spalte. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.FlatStyle.Standard" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewButtonColumn.FlatStyle%2A> Eigenschaft gibt die Darstellung der Zellen in der Spalte. Weitere Informationen finden Sie unter der <xref:System.Windows.Forms.FlatStyle>-Enumeration.  
+  
+ Beim Abrufen oder Festlegen dieser Eigenschaft ruft ab oder legt ihn fest der <xref:System.Windows.Forms.DataGridViewButtonCell.FlatStyle%2A> -Eigenschaft des Objekts zurückgegeben wird, indem Sie die <xref:System.Windows.Forms.DataGridViewButtonColumn.CellTemplate%2A> Eigenschaft. Durch Festlegen dieser Eigenschaft wird auch die <xref:System.Windows.Forms.DataGridViewButtonCell.FlatStyle%2A> -Eigenschaft für jede Zelle in der Spalte und Aktualisierungen in der Spalte angezeigt. Um den angegebenen Wert für einzelne Zellen zu überschreiben, legen Sie die Zellenwerte, nach dem Festlegen der Wert der Spalte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.Windows.Forms.DataGridViewButtonColumn> die Verkäufe Anzeigen des Mitarbeiters machte. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Forms.DataGridViewComboBoxColumn> Übersichtsthema.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#10)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Wert der <see cref="P:System.Windows.Forms.DataGridViewButtonColumn.CellTemplate" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewButtonColumn.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest den Standardtext, der auf die Schaltflächenzelle angezeigt.</summary>
+        <value>Ein <see cref="T:System.String" /> , die Text enthält. Die Standardeinstellung ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede <xref:System.Windows.Forms.DataGridViewButtonCell> enthalten sind, in der Spalte, die als eine <xref:System.Windows.Forms.DataGridViewButtonCell.UseColumnTextForButtonValue%2A> Eigenschaftswert, der `true` zeigt die <xref:System.Windows.Forms.DataGridViewButtonColumn.Text%2A> Eigenschaftswert auf die Zelle Schaltfläche.  
+  
+ Wenn es eine verknüpft ist <xref:System.Windows.Forms.DataGridView> -Steuerelement, das Ändern dieser Eigenschaft die Spaltenanzeige.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.Windows.Forms.DataGridViewButtonColumn> die Verkäufe Anzeigen des Mitarbeiters machte. Die <xref:System.Windows.Forms.DataGridViewButtonColumn.Text%2A> Eigenschaft wird verwendet, um den Spaltenüberschrift festgelegt. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Forms.DataGridViewComboBoxColumn> Übersichtsthema.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#10)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Beim Festlegen dieser Eigenschaft, die den Wert der <see cref="P:System.Windows.Forms.DataGridViewButtonColumn.CellTemplate" /> Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewButtonColumn.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die die Spalte beschreibt.</summary>
+        <returns>Ein <see cref="T:System.String" />, der die Spalte beschreibt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseColumnTextForButtonValue">
+      <MemberSignature Language="C#" Value="public bool UseColumnTextForButtonValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseColumnTextForButtonValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewButtonColumn.UseColumnTextForButtonValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="P:System.Windows.Forms.DataGridViewButtonColumn.Text" /> Eigenschaftswert als Schaltflächentext für Zellen in dieser Spalte angezeigt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Windows.Forms.DataGridViewButtonColumn.Text" /> Eigenschaftswert wird auf die Schaltflächen in der Spalte angezeigt. <see langword="false" /> Wenn die <see cref="P:System.Windows.Forms.DataGridViewCell.FormattedValue" /> Eigenschaftswert jeder Zelle auf der Schaltfläche angezeigt wird. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Windows.Forms.DataGridViewCell.FormattedValue%2A?displayProperty=nameWithType> einer Schaltfläche wird die Zelle als Text auf der Schaltfläche angezeigt. Die <xref:System.Windows.Forms.DataGridViewButtonColumn.UseColumnTextForButtonValue%2A> -Eigenschaft ermöglicht es Ihnen, legen Sie entweder den Text der Schaltfläche für jede Zelle oder verwenden Sie die <xref:System.Windows.Forms.DataGridViewButtonColumn.Text%2A> Eigenschaftswert für alle Schaltflächenzellen.  
+  
+ Beim Abrufen oder Festlegen dieser Eigenschaft ruft ab oder legt ihn fest der <xref:System.Windows.Forms.DataGridViewButtonCell.UseColumnTextForButtonValue%2A> -Eigenschaft des Objekts zurückgegeben wird, indem Sie die <xref:System.Windows.Forms.DataGridViewButtonColumn.CellTemplate%2A> Eigenschaft. Durch Festlegen dieser Eigenschaft wird auch die <xref:System.Windows.Forms.DataGridViewButtonCell.UseColumnTextForButtonValue%2A> -Eigenschaft für jede Zelle in der Spalte und Aktualisierungen in der Spalte angezeigt. Um den angegebenen Wert für einzelne Zellen zu überschreiben, legen Sie die Zellenwerte, nach dem Festlegen der Wert der Spalte.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc#010](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#010)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc#010](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#010)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Wert der <see cref="P:System.Windows.Forms.DataGridViewButtonColumn.CellTemplate" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

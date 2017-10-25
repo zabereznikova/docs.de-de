@@ -1,0 +1,130 @@
+<Type Name="BlockUIContainer" FullName="System.Windows.Documents.BlockUIContainer">
+  <TypeSignature Language="C#" Value="public class BlockUIContainer : System.Windows.Documents.Block" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BlockUIContainer extends System.Windows.Documents.Block" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.BlockUIContainer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.Block</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Child")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein Inhaltselement auf Blockebene Fluss dadurch <see cref="T:System.Windows.UIElement" /> Elemente (d. h. eine <see cref="T:System.Windows.Controls.Button" />) eingebettet werden soll (gehostet) in fortlaufendem Inhalt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.UIElement> Element (d. h. eine <xref:System.Windows.Controls.Button>) kann direkt in fortlaufendem Inhalt eingebettet werden, schließen Sie ihn in ein <xref:System.Windows.Documents.BlockUIContainer> (siehe folgendes Beispiel).  
+  
+ Ein <xref:System.Windows.Documents.BlockUIContainer> hosten kann direkt von mehr als eine <xref:System.Windows.UIElement> untergeordneten.  Allerdings wird das untergeordnete Element von gehosteten ein <xref:System.Windows.Documents.BlockUIContainer> kann eigene untergeordnete Elemente hosten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Documents.BlockUIContainer> Elemente Host <xref:System.Windows.UIElement> Elemente innerhalb des fortlaufenden Inhalts.  
+  
+ [!code-xaml[SpanSnippets#_BlockUIXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml#_blockuixaml)]  
+  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: UIElement eingebettet in fortlaufenden Inhalt](~/add/media/blockuicontainer.png "Bildschirmabbildung: UIElement eingebettet in fortlaufenden Inhalt")  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BlockUIContainer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.BlockUIContainer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue, leere Instanz der dem <see cref="T:System.Windows.Documents.BlockUIContainer" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BlockUIContainer (System.Windows.UIElement uiElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.UIElement uiElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.BlockUIContainer.#ctor(System.Windows.UIElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uiElement" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="uiElement">Ein <see cref="T:System.Windows.UIElement" /> angeben die anfänglichen Inhalte des neuen Objekts <see cref="T:System.Windows.Documents.BlockUIContainer" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Documents.BlockUIContainer" /> -Klasse, wobei eine angegebene <see cref="T:System.Windows.UIElement" /> Objekt als die anfänglichen Inhalte des neuen <see cref="T:System.Windows.Documents.BlockUIContainer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung dieses Konstruktors.  
+  
+ [!code-csharp[SpanSnippets#_BlockUI_Const1](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_blockui_const1)]
+ [!code-vb[SpanSnippets#_BlockUI_Const1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_blockui_const1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Child">
+      <MemberSignature Language="C#" Value="public System.Windows.UIElement Child { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement Child" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.BlockUIContainer.Child" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.UIElement" /> gehostet werden, indem Sie die <see cref="T:System.Windows.Documents.BlockUIContainer" />.</summary>
+        <value>Die <see cref="T:System.Windows.UIElement" /> gehostet werden, indem Sie die <see cref="T:System.Windows.Documents.BlockUIContainer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Documents.BlockUIContainer> hosten kann direkt von mehr als eine <xref:System.Windows.UIElement> untergeordneten.  Allerdings wird das untergeordnete Element von gehosteten ein <xref:System.Windows.Documents.BlockUIContainer> kann eigene untergeordnete Elemente hosten.  
+  
+ In [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)], umschließen einer <xref:System.Windows.UIElement> in ein <xref:System.Windows.Documents.BlockUIContainer> entspricht dem festlegen, die <xref:System.Windows.UIElement> als Wert für die <xref:System.Windows.Documents.BlockUIContainer.Child%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Documents.BlockUIContainer> Elemente Host <xref:System.Windows.UIElement> Elemente innerhalb des fortlaufenden Inhalts.  
+  
+ [!code-xaml[SpanSnippets#_BlockUIXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml#_blockuixaml)]  
+  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: UIElement eingebettet in fortlaufenden Inhalt](~/add/media/blockuicontainer.png "Bildschirmabbildung: UIElement eingebettet in fortlaufenden Inhalt")  
+  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Documents.BlockUIContainer.Child%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[spansnippets#_BlockUI_Child](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_blockui_child)]
+ [!code-vb[spansnippets#_BlockUI_Child](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_blockui_child)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

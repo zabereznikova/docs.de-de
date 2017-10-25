@@ -1,0 +1,130 @@
+<Type Name="IISVirtualRoot" FullName="System.EnterpriseServices.Internal.IISVirtualRoot">
+  <TypeSignature Language="C#" Value="public class IISVirtualRoot : System.EnterpriseServices.Internal.IComSoapIISVRoot" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IISVirtualRoot extends System.Object implements class System.EnterpriseServices.Internal.IComSoapIISVRoot" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.Internal.IISVirtualRoot" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.EnterpriseServices.Internal.IComSoapIISVRoot</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("d8013ef1-730b-45e2-ba24-874b7242c425")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Erstellt und löscht virtuelle Stammverzeichnisse für Internetinformationsdienste (Internet Information Services, IIS) 6.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.EnterpriseServices.Internal.IComSoapIISVRoot> Schnittstelle definiert Methoden zum Erstellen und Löschen von virtuellen Stammverzeichnissen in IIS 6.0.  
+  
+ Diese Schnittstelle wird nur von implementiert die <xref:System.EnterpriseServices.Internal.IISVirtualRoot> -Klasse und wird beim Erstellen ein virtuellen Stammverzeichnis einer SOAP-aktivierten COM+-Anwendung nur innerhalb der .NET Framework-Infrastruktur verwendet.  
+  
+ <xref:System.EnterpriseServices.Internal.IComSoapIISVRoot>muss nicht direkt im Code implementiert werden. Verwenden Sie stattdessen die <xref:System.EnterpriseServices.Internal.Publish> Klasse implementiert die <xref:System.EnterpriseServices.Internal.IComSoapPublisher> -Schnittstelle mit der <xref:System.EnterpriseServices.Internal.IComSoapPublisher.CreateVirtualRoot%2A> und <xref:System.EnterpriseServices.Internal.IComSoapPublisher.DeleteVirtualRoot%2A> Methoden. Allerdings <xref:System.EnterpriseServices.Internal.IComSoapPublisher.DeleteVirtualRoot%2A> ist nicht vollständig implementiert von <xref:System.EnterpriseServices.Internal.Publish>.  
+  
+ <xref:System.EnterpriseServices.Internal.IISVirtualRoot>wird intern von .NET Framework verwendet werden. Sie müssen nicht direkt im Code verwenden.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IISVirtualRoot ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.IISVirtualRoot.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.EnterpriseServices.Internal.IISVirtualRoot" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public void Create (string RootWeb, string inPhysicalDirectory, string VirtualDirectory, out string Error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Create(string RootWeb, string inPhysicalDirectory, string VirtualDirectory, [out] string&amp; Error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.IISVirtualRoot.Create(System.String,System.String,System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="RootWeb" Type="System.String" />
+        <Parameter Name="inPhysicalDirectory" Type="System.String" />
+        <Parameter Name="VirtualDirectory" Type="System.String" />
+        <Parameter Name="Error" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="RootWeb">Eine Zeichenfolge mit dem Wert <c>"IIS://localhost/W3SVC/1/ROOT"</c> , die den Stammwebserver darstellt.</param>
+        <param name="inPhysicalDirectory">Der physische Pfad des virtuellen Stammverzeichnisses entspricht <c>PhysicalPath</c> aus der <see cref="M:System.EnterpriseServices.Internal.Publish.CreateVirtualRoot(System.String,System.String,System.String@,System.String@,System.String@,System.String@)" /> Methode.</param>
+        <param name="VirtualDirectory">Der Name des virtuellen Stammverzeichnisses, der entspricht <c>VirtualRoot</c> aus <see cref="M:System.EnterpriseServices.Internal.Publish.CreateVirtualRoot(System.String,System.String,System.String@,System.String@,System.String@,System.String@)" />.</param>
+        <param name="Error">Eine Zeichenfolge, in die eine Fehlermeldung geschrieben werden kann.</param>
+        <summary>Erstellt ein virtuelles Stammverzeichnis für Internetinformationsdienste (Internet Information Services, IIS).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen nicht zum Aufrufen der <xref:System.EnterpriseServices.Internal.IISVirtualRoot.Create%2A> -Methode aus dem Code. Verwenden Sie stattdessen die <xref:System.EnterpriseServices.Internal.Publish.CreateVirtualRoot%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete (string RootWeb, string PhysicalDirectory, string VirtualDirectory, out string Error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Delete(string RootWeb, string PhysicalDirectory, string VirtualDirectory, [out] string&amp; Error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.IISVirtualRoot.Delete(System.String,System.String,System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="RootWeb" Type="System.String" />
+        <Parameter Name="PhysicalDirectory" Type="System.String" />
+        <Parameter Name="VirtualDirectory" Type="System.String" />
+        <Parameter Name="Error" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="RootWeb">Der Stamm-Webserver, entsprechend den Angaben von <c>RootWebServer</c> aus der <see cref="M:System.EnterpriseServices.Internal.IComSoapPublisher.DeleteVirtualRoot(System.String,System.String,System.String@)" /> Methode.</param>
+        <param name="PhysicalDirectory">Der physische Pfad des virtuellen Stamms.</param>
+        <param name="VirtualDirectory">Der Name des virtuellen Stamms.</param>
+        <param name="Error">Eine Zeichenfolge, in die eine Fehlermeldung geschrieben werden kann.</param>
+        <summary>Löscht ein virtuelles Stammverzeichnis für Internetinformationsdienste (Internet Information Services, IIS).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auch wenn dieser öffentlich ist, ist die <xref:System.EnterpriseServices.Internal.IISVirtualRoot.Delete%2A> Methode sollte nicht direkt aufgerufen werden.  
+  
+ Alternativ ist die <xref:System.EnterpriseServices.Internal.Publish.DeleteVirtualRoot%2A> Methode. Diese Methode ist jedoch nicht vollständig implementiert.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

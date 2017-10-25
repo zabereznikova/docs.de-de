@@ -1,0 +1,123 @@
+<Type Name="DataflowMessageStatus" FullName="System.Threading.Tasks.Dataflow.DataflowMessageStatus">
+  <TypeSignature Language="C#" Value="public enum DataflowMessageStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataflowMessageStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.Dataflow.DataflowMessageStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.1.0</AssemblyVersion>
+    <AssemblyVersion>4.6.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Darstellung des Status eines eine <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> Wenn zwischen Datenflussblöcken zu übergeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die TPL-Datenflussbibliothek (<xref:System.Threading.Tasks.Dataflow>-Namespace) ist nicht in [!INCLUDE[net_v45](~/includes/net-v45-md.md)] enthalten. So installieren Sie die <xref:System.Threading.Tasks.Dataflow> -Namespace öffnen Sie das Projekt in [!INCLUDE[vs_dev11_long](~/includes/vs-dev11-long-md.md)], wählen Sie **NuGet-Pakete verwalten** aus der Menüs "Projekt", und suchen Sie online nach der `Microsoft.Tpl.Dataflow` Paket.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accepted">
+      <MemberSignature Language="C#" Value="Accepted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.Dataflow.DataflowMessageStatus Accepted = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Accepted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Dataflow.DataflowMessageStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> die Nachricht akzeptiert. Sobald ein Ziel eine Nachricht akzeptiert hat, gehört es vollständig vom Ziel.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Declined">
+      <MemberSignature Language="C#" Value="Declined" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.Dataflow.DataflowMessageStatus Declined = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Declined" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Dataflow.DataflowMessageStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> die Nachricht abgelehnt. Die <see cref="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" /> noch immer im Besitz der Nachrichteninhalts.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DecliningPermanently">
+      <MemberSignature Language="C#" Value="DecliningPermanently" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.Dataflow.DataflowMessageStatus DecliningPermanently = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.DecliningPermanently" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Dataflow.DataflowMessageStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> die Nachricht abgelehnt. Die <see cref="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" /> noch immer im Besitz der Nachrichteninhalts.  
+  
+ Darüber hinaus die <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> ablehnen, werden alle zukünftige Nachrichten, die von der Quelle gesendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotAvailable">
+      <MemberSignature Language="C#" Value="NotAvailable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.Dataflow.DataflowMessageStatus NotAvailable = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.NotAvailable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Dataflow.DataflowMessageStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> hat versucht, akzeptieren Sie die Nachricht aus der <see cref="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" />, aber die Nachricht nicht mehr verfügbar war.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Postponed">
+      <MemberSignature Language="C#" Value="Postponed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.Dataflow.DataflowMessageStatus Postponed = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Postponed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Dataflow.DataflowMessageStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> die Nachricht für die mögliche Nutzung zu einem späteren Zeitpunkt verschoben.  
+  
+ Die <see cref="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" /> noch immer im Besitz der Nachrichteninhalts.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

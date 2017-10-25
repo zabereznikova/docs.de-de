@@ -1,0 +1,96 @@
+<Type Name="CustomUserNameSecurityTokenAuthenticator" FullName="System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator">
+  <TypeSignature Language="C#" Value="public class CustomUserNameSecurityTokenAuthenticator : System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CustomUserNameSecurityTokenAuthenticator extends System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Authentifiziert ein <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" />-Sicherheitstoken mit einem benutzerdefinierten Authentifizierungsschema.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie die <xref:System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator>-Klasse, wenn die von der <xref:System.IdentityModel.Selectors.WindowsUserNameSecurityTokenAuthenticator>-Klasse bereitgestellte Windows-Authentifizierung nicht ausreichend ist. Die <xref:System.IdentityModel.Selectors.WindowsUserNameSecurityTokenAuthenticator>-Klasse authentifiziert den Benutzernamen und das Kennwort in einem <xref:System.IdentityModel.Tokens.UserNameSecurityToken>-Sicherheitstoken als Windows-Konto.  
+  
+ Um ein benutzerdefiniertes Authentifizierungsschema bereitzustellen, leiten Sie eine Klasse von der <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>-Klasse ab, implementieren Sie das Authentifizierungsschema und übergeben Sie die Klasse anschließend an den Konstruktor für die <xref:System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator>-Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomUserNameSecurityTokenAuthenticator (System.IdentityModel.Selectors.UserNamePasswordValidator validator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Selectors.UserNamePasswordValidator validator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator.#ctor(System.IdentityModel.Selectors.UserNamePasswordValidator)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validator" Type="System.IdentityModel.Selectors.UserNamePasswordValidator" />
+      </Parameters>
+      <Docs>
+        <param name="validator">Ein <see cref="T:System.IdentityModel.Selectors.UserNamePasswordValidator" /> Objekt, das den Benutzernamen und das Kennwort mit einem benutzerdefinierten Authentifizierungsschema authentifiziert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator" />-Klasse unter Verwendung des angegebenen Validierungssteuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das im <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>-Parameter angegebene `validator` wird von der <xref:System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%2A>-Methode verwendet, um den Benutzer zu authentifizieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="validator" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateUserNamePasswordCore">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateUserNamePasswordCore (string userName, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateUserNamePasswordCore(string userName, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userName" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="userName">Der dem Sicherheitstoken zugeordnete Benutzername.</param>
+        <param name="password">Das dem Sicherheitstoken zugeordnete Kennwort.</param>
+        <summary>Authentifiziert den angegebenen Benutzernamen und das Kennwort und gibt den Satz von Autorisierungsrichtlinien für <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" />-Sicherheitstoken zurück.</summary>
+        <returns>Eine <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> des Typs <see cref="T:System.IdentityModel.Policy.IAuthorizationPolicy" />, der den Satz von Autorisierungsrichtlinien für diese Anwendung praktisch enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%2A>-Methode verwendet das <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>, das dem <xref:System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator.%23ctor%2A>-Konstruktor zur Authentifizierung des Benutzers übergeben wurde.  
+  
+ Wenn der Benutzername und das Kennwort nicht überprüft werden können, lösen Sie die <xref:System.IdentityModel.Tokens.SecurityTokenValidationException> aus.  
+  
+ Wenn für diese Anwendung praktisch keine Autorisierungsrichtlinien vorhanden sind, wird eine leere <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> des Typs <xref:System.IdentityModel.Policy.IAuthorizationPolicy> zurückgegeben.  
+  
+ Wenn `null` wird zurückgegeben, die <xref:System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%2A> -Methode, [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] löst die <xref:System.IdentityModel.Tokens.SecurityTokenValidationException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="userName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenValidationException">
+          <paramref name="userName" /> und <paramref name="password" />-Kombination sind nicht gültig.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

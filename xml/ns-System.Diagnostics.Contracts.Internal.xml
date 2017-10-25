@@ -1,0 +1,6 @@
+<Namespace Name="System.Diagnostics.Contracts.Internal">
+  <Docs>
+    <summary>Die <see cref="N:System.Diagnostics.Contracts.Internal" /> Namespace enthält Klassen, mit denen der binary Rewriter Vertragsfehler behandeln.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

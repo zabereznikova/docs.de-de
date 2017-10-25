@@ -1,0 +1,592 @@
+<Type Name="TimeZoneInfo+AdjustmentRule" FullName="System.TimeZoneInfo+AdjustmentRule">
+  <TypeSignature Language="C#" Value="public sealed class TimeZoneInfo.AdjustmentRule : IEquatable&lt;TimeZoneInfo.AdjustmentRule&gt;, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi serializable sealed beforefieldinit TimeZoneInfo/AdjustmentRule extends System.Object implements class System.IEquatable`1&lt;class System.TimeZoneInfo/AdjustmentRule&gt;, class System.Runtime.Serialization.IDeserializationCallback, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.TimeZoneInfo.AdjustmentRule" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.TimeZoneInfo+AdjustmentRule&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.IDeserializationCallback</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet Informationen zur Anpassung der Zeitzone, z. B. die Umstellung auf die Sommerzeit und wieder zurück.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.TimeZoneInfo.AdjustmentRule> Klasse definiert die effektive Start- und Enddatum Änderung an einer bestimmten Zeit verschiedene andere und aus der Sommerzeit bzw. sowie das Delta (die genaue Größe, die Anpassung Normalzeit verursacht so ändern Sie die Zeitzone). Außerdem zwei Eigenschaften zurück <xref:System.TimeZoneInfo.TransitionTime> Objekten, die definieren, wenn jeder Übergang zur und von der Normalzeit auftritt.  
+  
+> [!NOTE]
+>  Eine Instanz von der <xref:System.TimeZoneInfo.AdjustmentRule> -Klasse unveränderlich ist. Nachdem ein Objekt erstellt wurde, können seine Werte geändert werden.  
+  
+ Zum Erstellen einer <xref:System.TimeZoneInfo.AdjustmentRule> -Objekt, rufen Sie die `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A?displayProperty=nameWithType> Methode. Sie können dann angeben, ein Array von <xref:System.TimeZoneInfo.AdjustmentRule> zu zwei Überladungen der Objekte die <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A?displayProperty=nameWithType> Methode. Rufen Sie zum Abrufen der Anpassungsregeln einer bestimmten Zeitzone seine <xref:System.TimeZoneInfo.GetAdjustmentRules%2A?displayProperty=nameWithType> Methode, die ein Array von zurückgibt <xref:System.TimeZoneInfo.AdjustmentRule> Objekte.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel ruft alle auf dem lokalen System definierten Zeitzonen und vollständige Informationen zu den Anpassungsregeln angezeigt.  
+  
+ [!code-csharp[System.TimeZone2.AdjustmentRule.Class#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.AdjustmentRule.Class/cs/System.TimeZone2.AdjustmentRule.Class.cs#3)]
+ [!code-vb[System.TimeZone2.AdjustmentRule.Class#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.AdjustmentRule.Class/vb/System.TimeZone2.AdjustmentRule.Class.vb#3)]  
+  
+ Im folgenden ist ein kleiner Teil der Ausgabe, die im Beispiel generiert wird. Die genaue Ausgabe variiert je nach Betriebssystem und das Datum, an dem das Beispiel ausgeführt wird.  
+  
+```  
+Morocco Standard Time Adjustment rules  
+   Adjustment rule #1  
+      Start Date: Tuesday, January 01, 2008  
+      End Date: Wednesday, December 31, 2008  
+      Time Change: 1:00 hours  
+      Annual Start: The Last Saturday of May at 11:59 PM  
+      Annual End: The Last Sunday of August at 11:59 PM  
+   Adjustment rule #2  
+      Start Date: Thursday, January 01, 2009  
+      End Date: Thursday, December 31, 2009  
+      Time Change: 1:00 hours  
+      Annual Start: The Last Sunday of May at 11:59 PM  
+      Annual End: The Third Thursday of August at 11:59 PM  
+  
+Coordinated Universal Time has no adjustment rules  
+  
+GMT Standard Time Adjustment rules  
+   Start Date: Monday, January 01, 0001  
+   End Date: Friday, December 31, 9999  
+   Time Change: 1:00 hours  
+   Annual Start: The Last Sunday of March at 1:00 AM  
+   Annual End: The Last Sunday of October at 2:00 AM  
+  
+Greenwich Standard Time has no adjustment rules  
+  
+W. Europe Standard Time Adjustment rules  
+   Start Date: Monday, January 01, 0001  
+   End Date: Friday, December 31, 9999  
+   Time Change: 1:00 hours  
+   Annual Start: The Last Sunday of March at 2:00 AM  
+   Annual End: The Last Sunday of October at 3:00 AM  
+  
+Central Europe Standard Time Adjustment rules  
+   Start Date: Monday, January 01, 0001  
+   End Date: Friday, December 31, 9999  
+   Time Change: 1:00 hours  
+   Annual Start: The Last Sunday of March at 2:00 AM  
+   Annual End: The Last Sunday of October at 3:00 AM  
+  
+Romance Standard Time Adjustment rules  
+   Start Date: Monday, January 01, 0001  
+   End Date: Friday, December 31, 9999  
+   Time Change: 1:00 hours  
+   Annual Start: The Last Sunday of March at 2:00 AM  
+   Annual End: The Last Sunday of October at 3:00 AM  
+  
+Central European Standard Time Adjustment rules  
+   Start Date: Monday, January 01, 0001  
+   End Date: Friday, December 31, 9999  
+   Time Change: 1:00 hours  
+   Annual Start: The Last Sunday of March at 2:00 AM  
+   Annual End: The Last Sunday of October at 3:00 AM  
+  
+W. Central Africa Standard Time has no adjustment rules  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateAdjustmentRule">
+      <MemberSignature Language="C#" Value="public static TimeZoneInfo.AdjustmentRule CreateAdjustmentRule (DateTime dateStart, DateTime dateEnd, TimeSpan daylightDelta, TimeZoneInfo.TransitionTime daylightTransitionStart, TimeZoneInfo.TransitionTime daylightTransitionEnd);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.TimeZoneInfo/AdjustmentRule CreateAdjustmentRule(valuetype System.DateTime dateStart, valuetype System.DateTime dateEnd, valuetype System.TimeSpan daylightDelta, valuetype System.TimeZoneInfo/TransitionTime daylightTransitionStart, valuetype System.TimeZoneInfo/TransitionTime daylightTransitionEnd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule(System.DateTime,System.DateTime,System.TimeSpan,System.TimeZoneInfo.TransitionTime,System.TimeZoneInfo.TransitionTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeZoneInfo+AdjustmentRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dateStart" Type="System.DateTime" />
+        <Parameter Name="dateEnd" Type="System.DateTime" />
+        <Parameter Name="daylightDelta" Type="System.TimeSpan" />
+        <Parameter Name="daylightTransitionStart" Type="System.TimeZoneInfo+TransitionTime" />
+        <Parameter Name="daylightTransitionEnd" Type="System.TimeZoneInfo+TransitionTime" />
+      </Parameters>
+      <Docs>
+        <param name="dateStart">Das Gültigkeitsdatum der Anpassungsregel. Wenn der Wert von der <c>DateStart</c> Parameter ist <see langword="DateTime.MinValue.Date" />, dies ist die erste Anpassungsregel für eine Zeitzone wirksam.</param>
+        <param name="dateEnd">Das letzte Datum, an dem die Anpassungsregel aktiv ist. Wenn der Wert der <c>DateEnd</c> Parameter ist <see langword="DateTime.MaxValue.Date" />, besitzt die Anpassungsregel kein Enddatum.</param>
+        <param name="daylightDelta">Die Zeitänderung, die sich durch die Anpassung ergibt. Dieser Wert wird zur <see cref="P:System.TimeZoneInfo.BaseUtcOffset" />-Eigenschaft der Zeitzone addiert, um die richtige Sommerzeitabweichung von der koordinierten Weltzeit (UTC) zu erhalten. Dieser Wert kann zwischen -14 und 14 liegen.</param>
+        <param name="daylightTransitionStart">Ein Objekt, das den Beginn der Sommerzeit definiert.</param>
+        <param name="daylightTransitionEnd">Ein Objekt, das das Ende der Sommerzeit definiert.</param>
+        <summary>Erstellt eine neue Anpassungsregel für eine bestimmte Zeitzone.</summary>
+        <returns>Ein Objekt, das die neue Anpassungsregel darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, erstellen Sie eine oder mehrere Anpassungsregeln für eine benutzerdefinierte Zeitzone. Ein Array von der <xref:System.TimeZoneInfo.AdjustmentRule> Aufrufe dieser Methode zurückgegebenen Objekte können dann als übergeben werden die `adjustmentRules` Parameter, um zwei Überladungen der <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Methode. Das Beispiel veranschaulicht dieses Verfahren.  
+  
+> [!NOTE]
+>  Die <xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A> Methode kann nur zum Definieren einer Anpassungsregel für eine neue Zeitzone verwendet werden; es kann nicht verwendet werden, um eine Anpassungsregel für eine vorhandene Zeitzone zu ändern.  
+  
+ Die `dateStart` und `dateEnd` Parameter Datumswerte ohne Zeitkomponente sein oder ein <xref:System.ArgumentException> ausgelöst wird. Die Zeitkomponente kann entfernt werden, durch das Abrufen von einem <xref:System.DateTime> Wert von Datum und Uhrzeit des <xref:System.DateTime.Date%2A> Eigenschaft wie in der folgenden Anweisung dargestellt:  
+  
+```  
+DateTime.MinValue.Date  
+DateTime.MaxValue.Date  
+DateTime.Now.Date   
+dateVariable.Date  
+```  
+  
+ Die <xref:System.DateTime.Kind%2A> Eigenschaft von der `dateStart` und `dateEnd` Parameter muss auch <xref:System.DateTimeKind?displayProperty=nameWithType>.  
+  
+ Der Wert, der die `daylightDelta` Parameter kann zwischen-14 und 14 liegen. Die Summe der der `daylightDelta` Parameter und die `baseUtcOffset` Parameter im Aufruf verwendet die <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A?displayProperty=nameWithType> Methode muss auch zwischen-14 und 14 liegen oder ein <xref:System.InvalidTimeZoneException> ausgelöst wird.  
+  
+> [!NOTE]
+>  Die `daylightDelta` Parameter definiert die Differenz zwischen der Standardzeit und der Sommerzeit einer Zeitzone. Es ist nicht vorgesehen, um die Zeitzone Normalzeit Offset von Coordinated Universal Time (UTC) zu definieren. Die <xref:System.TimeZoneInfo> Klasse setzt voraus, dass dieser Offset von UTC während der gesamten Lebensdauer der Zeitzone konstant ist. Um eine Änderung in einer Zeitzone Offset von UTC entsprechen, die nicht von der Anwendung einer Anpassungsregel verursacht wird, verwenden Sie die <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Methode, um eine benutzerdefinierte Zeitzone erstellen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine alternative Central Normalzeit Zeitzone und drei Anpassungsregeln definiert, für die Zeiträume 1976-1986, 1987-2006 und 2007 und darüber hinaus. Diese Regeln werden hinzugefügt, um eine generische <xref:System.Collections.Generic.List%601> Objekt zurück, dessen Elemente, um kopiert werden eine <xref:System.TimeZoneInfo.AdjustmentRule> Array. Dieses Array wird dann verwendet, im Aufruf der <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> Methode.  
+  
+ [!code-csharp[System.TimeZone2.AdjustmentRule.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.AdjustmentRule.Class/cs/System.TimeZone2.AdjustmentRule.Class.cs#1)]
+ [!code-vb[System.TimeZone2.AdjustmentRule.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.AdjustmentRule.Class/vb/System.TimeZone2.AdjustmentRule.Class.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.DateTime.Kind" />-Eigenschaft des <paramref name="dateStart" />- oder <paramref name="dateEnd" />-Parameters ist nicht gleich <see cref="F:System.DateTimeKind.Unspecified" />.  
+  
+ - oder -   
+  
+ Der <paramref name="daylightTransitionStart" />-Parameter ist identisch mit dem <paramref name="daylightTransitionEnd" />-Parameter.  
+  
+ - oder -   
+  
+ Der <paramref name="dateStart" />- oder <paramref name="dateEnd" />-Parameter enthält einen Tageszeitwert.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="dateEnd" /> liegt vor <paramref name="dateStart" />.  
+  
+ - oder -   
+  
+ <paramref name="daylightDelta" /> ist kleiner als -14 oder größer als 14.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.TimeSpan.Milliseconds" />-Eigenschaft des <paramref name="daylightDelta" />-Parameters ist nicht gleich 0.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.TimeSpan.Ticks" />-Eigenschaft des <paramref name="daylightDelta" />-Parameters entspricht keiner ganzen Zahl von Sekunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DateEnd">
+      <MemberSignature Language="C#" Value="public DateTime DateEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime DateEnd" />
+      <MemberSignature Language="DocId" Value="P:System.TimeZoneInfo.AdjustmentRule.DateEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datum ab, zu dem die Gültigkeit der Anpassungsregel aufgehoben wird.</summary>
+        <value>Ein <see cref="T:System.DateTime" />-Wert, der das Enddatum der Anpassungsregel angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.TimeZoneInfo.AdjustmentRule.DateEnd%2A> Eigenschaft ist ein Datumswert ohne eine Zeitkomponente.  
+  
+ Da das Enddatum der aktuellen Anpassungsregel normalerweise nicht bekannt ist, können Sie zuweisen `DateTime.MaxValue.Date` auf die <xref:System.TimeZoneInfo.AdjustmentRule.DateEnd%2A> Eigenschaft, wenn Sie eine benutzerdefinierte Anpassungsregel erstellen.  
+  
+> [!IMPORTANT]
+>  Wenn ein zwingender Grund nicht vorhanden ist, sollten Sie definieren die Anpassungsregel Enddatum innerhalb des angegebenen Zeitintervalls, während der die Zeitzone Normalzeit gilt. Sofern es keinen triftigen Grund dafür, sollten Sie nicht die Anpassungsregel Enddatum innerhalb des angegebenen Zeitintervalls, während dessen die Zeitzone Sommerzeit, definieren. Z. B. wenn eine Zeitzone Übergang von Sommerzeit tritt auf, auf die dritte Sonntag im März und der Wechsel zur Sommerzeit am ersten Sonntag im Oktober tritt auf, muss das gültige Enddatum der Anpassungsregel nicht dem 31. Dezember eines bestimmten Jahr, da dieses Datum innerhalb des Zeitraums der Sommerzeit liegt.  
+  
+ Standardmäßig definiert die Registrierung in Windows XP eine Anpassungsregel, deren Enddatum Freitag, 31. Dezember 9999 (der Wert des `DateTime.MaxValue.Date`), für jede Zeitzone. Für Zeitzonen in den Vereinigten Staaten definiert die Registrierung in Windows Vista zwei Anpassungsregeln:  
+  
+-   Montag, Januar 01, 0001 bis Sonntag, 31. Dezember 2006.  
+  
+-   Montag, Januar 01 2007, Freitag, 31. Dezember 9999.  
+  
+ Dies bedeutet, dass, obwohl Regeln zur Anpassung der Zeitzone in der Registrierung gespeichert nützlich zum Ausführen von Vorgängen für den aktuellen Zeitzone verknüpft sind, nicht zuverlässig, zum Abrufen von historische Zeitzoneninformationen verwendet werden. Informationen zum Definieren von in einer Verlaufs-zeitzonenfähigen Anwendung einer benutzerdefinierten Zeitzone mit mehrere Anpassungsregeln, die verwendet werden kann, finden Sie unter [Vorgehensweise: Erstellen von Zeitzonen mit Anpassungsregeln](~/docs/standard/datetime/create-time-zones-with-adjustment-rules.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt Informationen zu allen in der systemregistrierung des lokalen Computers, einschließlich der Start- und Enddatum des ihre Anpassungsregeln definierten Zeitzonen.  
+  
+ [!code-csharp[System.TimeZoneInfo.AdjustmentRule.DateStart#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.TimeZoneInfo.AdjustmentRule.DateStart/cs/DateStart1.cs#1)]
+ [!code-vb[System.TimeZoneInfo.AdjustmentRule.DateStart#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.TimeZoneInfo.AdjustmentRule.DateStart/vb/DateStart1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DateStart">
+      <MemberSignature Language="C#" Value="public DateTime DateStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime DateStart" />
+      <MemberSignature Language="DocId" Value="P:System.TimeZoneInfo.AdjustmentRule.DateStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datum ab, zu dem die Anpassungsregel wirksam wird.</summary>
+        <value>Ein <see cref="T:System.DateTime" />-Wert, der angibt, wann die Anpassungsregel wirksam wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.TimeZoneInfo.AdjustmentRule.DateStart%2A> Eigenschaft ist ein Datumswert ohne eine Zeitkomponente. Definiert das Datum, an dem eine bestimmte Anpassungsregel wirksam wird.  Dies ist das Datum an, in dem eine Reihe von Übergängen (die in der Regel durch einen Übergang zu Sommerzeit und einen Übergang zurück zur Normalzeit definiert sind) wirksam werden. Eine Anpassungsregel an dem 1. Januar 2017 in Kraft treten möglicherweise enthält beispielsweise, die für einen Übergang zu Sommerzeit am zweiten Sonntag im März und einen Übergang zurück zum Normalzeit am ersten Sonntag im November. Beachten Sie, dass das Startdatum der Anpassungsregel nicht auf das Datum des ersten Übergangs gebunden ist.  
+  
+ Sie können zuweisen `DateTime.MinValue.Date` auf der <xref:System.TimeZoneInfo.AdjustmentRule.DateEnd%2A> Eigenschaft, wenn Sie eine benutzerdefinierte Anpassungsregel für die Verwendung in einer Anwendung zeitzonenfähigen erstellen keine portzuweisung für historische Zeitzoneninformationen.  
+  
+> [!IMPORTANT]
+>  Wenn ein zwingender Grund nicht vorhanden ist, sollten Sie definieren die Anpassungsregel Startdatum innerhalb des angegebenen Zeitintervalls, während der die Zeitzone Normalzeit gilt. Sofern es keinen triftigen Grund dafür, sollten Sie nicht die Anpassungsregel Startdatum innerhalb des angegebenen Zeitintervalls, während dessen die Zeitzone Sommerzeit, definieren. Z. B. wenn eine Zeitzone Übergang von Sommerzeit tritt auf, auf die dritte Sonntag im März und der Wechsel zur Sommerzeit am ersten Sonntag im Oktober tritt auf, muss das gültige Startdatum der Anpassungsregel nicht am 1. Januar eines bestimmten Jahr, da dieses Datum innerhalb des Zeitraums der Sommerzeit liegt.  
+  
+ Standardmäßig definiert die Registrierung in Windows XP eine einzelne Anpassungsregel, deren "Startdatum" Montag, 01 Januar 0001 ist (der Wert des `DateTime.MinValue.Date`), für jede Zeitzone. Für Zeitzonen in den Vereinigten Staaten definiert die Registrierung in Windows Vista zwei Anpassungsregeln:  
+  
+-   Montag, Januar 01, 0001 bis Sonntag, 31. Dezember 2006.  
+  
+-   Montag, Januar 01 2007, Freitag, 31. Dezember 9999.  
+  
+ Dies bedeutet, dass, obwohl Regeln zur Anpassung der Zeitzone in der Registrierung gespeichert nützlich zum Ausführen von Vorgängen für den aktuellen Zeitzone verknüpft sind, nicht zuverlässig, zum Abrufen von historische Zeitzoneninformationen verwendet werden. Informationen zum Definieren von in einer Verlaufs-zeitzonenfähigen Anwendung einer benutzerdefinierten Zeitzone mit mehrere Anpassungsregeln, die verwendet werden kann, finden Sie unter [Vorgehensweise: Erstellen von Zeitzonen mit Anpassungsregeln](~/docs/standard/datetime/create-time-zones-with-adjustment-rules.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt Informationen zu allen in der systemregistrierung des lokalen Computers, einschließlich der Start- und Enddatum des ihre Anpassungsregeln definierten Zeitzonen.  
+  
+ [!code-csharp[System.TimeZoneInfo.AdjustmentRule.DateStart#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.TimeZoneInfo.AdjustmentRule.DateStart/cs/DateStart1.cs#1)]
+ [!code-vb[System.TimeZoneInfo.AdjustmentRule.DateStart#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.TimeZoneInfo.AdjustmentRule.DateStart/vb/DateStart1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DaylightDelta">
+      <MemberSignature Language="C#" Value="public TimeSpan DaylightDelta { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DaylightDelta" />
+      <MemberSignature Language="DocId" Value="P:System.TimeZoneInfo.AdjustmentRule.DaylightDelta" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge des Zeitraums ab, aus dem die Sommerzeit der Zeitzone gebildet wird. Dieser Zeitraum wird zum Offset der Zeitzone von der koordinierten Weltzeit (Coordinated Universal Time, UTC) addiert.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" />-Objekt, das angibt, wie viel Zeit den Standardzeitänderungen als Ergebnis der Anpassungsregel hinzugefügt werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Formel definiert die Sommerzeit einer Zeitzone:  
+  
+```  
+TimeZoneTime = BaseUtcOffset + DaylightDelta + UtcTime  
+```  
+  
+ Der Wert, der die <xref:System.TimeZoneInfo.AdjustmentRule.DaylightDelta%2A> Eigenschaft reichen von 14 Stunden-14 Stunden.  
+  
+> [!NOTE]
+>  Die <xref:System.TimeZoneInfo.AdjustmentRule.DaylightDelta%2A> -Eigenschaft misst die Differenz zwischen der Standardzeit der Zeitzone und die Sommerzeit. Es gilt nicht für Änderungen in einer Zeitzone standard Offset von Coordinated Universal Time (UTC). Um eine Zeitzone darzustellen, die von der Normalzeit Offset von UTC geändert wurde, rufen Sie die <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Methode zum Erstellen einer neuen Zeitzone.  
+  
+ Der am häufigsten verwendeten Wert, der die <xref:System.TimeZoneInfo.AdjustmentRule.DaylightDelta%2A> Eigenschaft ist 1,0 Stunden. Die Anwendung der Anpassungsregel Sommerzeit erhöht der Zeitzone Offset von Coordinated Universal Time (UTC) eine Stunde an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DaylightTransitionEnd">
+      <MemberSignature Language="C#" Value="public TimeZoneInfo.TransitionTime DaylightTransitionEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeZoneInfo/TransitionTime DaylightTransitionEnd" />
+      <MemberSignature Language="DocId" Value="P:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeZoneInfo+TransitionTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Informationen über den jährlichen Übergang von der Sommerzeit zurück zur Normalzeit ab.</summary>
+        <value>Ein <see cref="T:System.TimeZoneInfo.TransitionTime" />-Objekt, das den jährlichen Übergang von der Sommerzeit zurück zur Normalzeit der Zeitzone definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.TimeZoneInfo.TransitionTime> zurückgegebenes Objekt die <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionEnd%2A> Eigenschaft definiert wird, eine Regel für feste Datumsangaben oder einer Regel für gleitende Datumsangaben für die Rückkehr zur Normalzeit. Eine Regel für feste Datumsangaben enthält, den Monat, Tag und Uhrzeit auf dem der Übergang auftritt. Eine Regel für gleitende Datumsangaben enthält, Monat, Woche, Tag der Woche und die Uhrzeit auf dem der Übergang auftritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DaylightTransitionStart">
+      <MemberSignature Language="C#" Value="public TimeZoneInfo.TransitionTime DaylightTransitionStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeZoneInfo/TransitionTime DaylightTransitionStart" />
+      <MemberSignature Language="DocId" Value="P:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeZoneInfo+TransitionTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Informationen über den jährlichen Übergang von der Normalzeit zur Sommerzeit ab.</summary>
+        <value>Ein <see cref="T:System.TimeZoneInfo.TransitionTime" />-Objekt, das den jährlichen Übergang von der Normalzeit zur Sommerzeit einer Zeitzone definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.TimeZoneInfo.TransitionTime> zurückgegebenes Objekt die <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionStart%2A> Eigenschaft definiert eine Regel für feste Datumsangaben oder einer Regel für gleitende Datumsangaben für den Übergang zur Sommerzeit. Eine Regel für feste Datumsangaben enthält, den Monat, Tag und Uhrzeit auf dem der Übergang auftritt. Eine Regel für gleitende Datumsangaben enthält, den Monat, Woche, den Tag der Woche und die Uhrzeit auf dem der Übergang auftritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (TimeZoneInfo.AdjustmentRule other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.TimeZoneInfo/AdjustmentRule other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneInfo.AdjustmentRule.Equals(System.TimeZoneInfo.AdjustmentRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.TimeZoneInfo+AdjustmentRule" />
+      </Parameters>
+      <Docs>
+        <param name="other">Das Objekt, das mit dem aktuellen Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob das aktuelle <see cref="T:System.TimeZoneInfo.AdjustmentRule" />-Objekt und das zweite <see cref="T:System.TimeZoneInfo.AdjustmentRule" />-Objekt identisch sind.</summary>
+        <returns>
+          <see langword="true" />, wenn beide <see cref="T:System.TimeZoneInfo.AdjustmentRule" />-Objekte gleiche Werte aufweisen, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um festzustellen, ob zwei <xref:System.TimeZoneInfo.AdjustmentRule> Objekte gleich sind, die <xref:System.TimeZoneInfo.AdjustmentRule.Equals%28System.TimeZoneInfo.AdjustmentRule%29> Methode vergleicht die Werte der Elemente des jeweiligen Objekts. Zwei Anpassungsregeln sind gleich, wenn sie die gleichen Gültigkeitsdaten, die gleiche Delta und identische Werte für die <xref:System.TimeZoneInfo.TransitionTime> zurückgegebenen Objekte ihre <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionStart%2A> und <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionEnd%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.TimeZoneInfo.AdjustmentRule.Equals%28System.TimeZoneInfo.AdjustmentRule%29?displayProperty=nameWithType> Methode, mit denen für den Central Normalzeit Kanada und Mexiko Normalzeit Anpassungsregeln für Central Normalzeit verglichen werden soll.  
+  
+ [!code-csharp[System.TimeZone2.AdjustmentRule.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.AdjustmentRule.Class/cs/System.TimeZone2.AdjustmentRule.Class.cs#2)]
+ [!code-vb[System.TimeZone2.AdjustmentRule.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.AdjustmentRule.Class/vb/System.TimeZone2.AdjustmentRule.Class.vb#2)]  
+  
+ Dieser Code zeigt die folgende Ausgabe in der Konsole an:  
+  
+```  
+Comparing Central Standard Time rule for 1/1/0001 to 12/31/9999 with:  
+   Canada Central Standard Time has no adjustment rules.  
+   Mexican CST for 1/1/0001 to 12/31/9999: Equal  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneInfo.AdjustmentRule.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird als Hashfunktion für Hashalgorithmen und Datenstrukturen wie Hashtabellen verwendet.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen, die als Hash für die aktuelle dient <see cref="T:System.TimeZoneInfo.AdjustmentRule" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.IDeserializationCallback.OnDeserialization">
+      <MemberSignature Language="C#" Value="void IDeserializationCallback.OnDeserialization (object sender);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneInfo.AdjustmentRule.System#Runtime#Serialization#IDeserializationCallback#OnDeserialization(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Das Objekt, das den Rückruf initiiert hat. Die Funktionen für diesen Parameter sind derzeit nicht implementiert.</param>
+        <summary>Wird ausgeführt, wenn die Deserialisierung von einem <see cref="T:System.TimeZoneInfo.AdjustmentRule" /> -Objekt abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneInfo.AdjustmentRule.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das mit Daten zu füllende Objekt.</param>
+        <param name="context">Das Ziel dieser Serialisierung (siehe <see cref="T:System.Runtime.Serialization.StreamingContext" />).</param>
+        <summary>Füllt ein <see cref="T:System.Runtime.Serialization.SerializationInfo" /> -Objekt mit den Daten, die zum Serialisieren dieses Objekts erforderlich sind.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,522 @@
+<Type Name="Paragraph" FullName="System.Windows.Documents.Paragraph">
+  <TypeSignature Language="C#" Value="public class Paragraph : System.Windows.Documents.Block" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Paragraph extends System.Windows.Documents.Block" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Paragraph" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.Block</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Inlines")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein fortlaufendes Inhaltselement auf Blockebene, das zum Gruppieren von Inhalten in einem Absatz verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.Paragraph>Erzwingt ein starkes Inhaltsmodell für den untergeordneten Inhalt an. Finden Sie unter [Übersicht über das TextElement](~/docs/framework/wpf/advanced/textelement-content-model-overview.md) Weitere Informationen zu den <xref:System.Windows.Documents.Paragraph> Inhaltsmodell.  
+  
+ Zusätzlich zu den nur-Text eine <xref:System.Windows.Documents.Paragraph> Element kann als host für andere <xref:System.Windows.Documents.Inline> Elemente.  Gültige untergeordnete Elemente enthalten:  
+  
+-   <xref:System.Windows.Documents.Bold>  
+  
+-   <xref:System.Windows.Documents.Figure>  
+  
+-   <xref:System.Windows.Documents.Floater>  
+  
+-   <xref:System.Windows.Documents.Hyperlink>  
+  
+-   <xref:System.Windows.Documents.InlineUIContainer>  
+  
+-   <xref:System.Windows.Documents.Italic>  
+  
+-   <xref:System.Windows.Documents.LineBreak>  
+  
+-   <xref:System.Windows.Documents.Run>  
+  
+-   <xref:System.Windows.Documents.Span>  
+  
+-   <xref:System.Windows.Documents.Underline>  
+  
+ Finden Sie unter [Flow Document Overview](~/docs/framework/wpf/advanced/flow-document-overview.md) für Weitere Informationen zu was dieses Objekt enthalten kann, und er darf.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Paragraph ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Paragraph.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue, leere Instanz der dem <see cref="T:System.Windows.Documents.Paragraph" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Paragraph (System.Windows.Documents.Inline inline);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Inline inline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Paragraph.#ctor(System.Windows.Documents.Inline)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="inline" Type="System.Windows.Documents.Inline" />
+      </Parameters>
+      <Docs>
+        <param name="inline">Ein <see cref="T:System.Windows.Documents.Inline" /> angeben die anfänglichen Inhalte des neuen Objekts <see cref="T:System.Windows.Documents.Paragraph" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Documents.Paragraph" /> -Klasse, wobei eine angegebene <see cref="T:System.Windows.Documents.Inline" /> Objekt als ursprünglichen Inhalt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung dieses Konstruktors.  
+  
+ [!code-csharp[SpanSnippets#_Paragraph_Const1](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_paragraph_const1)]
+ [!code-vb[SpanSnippets#_Paragraph_Const1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_paragraph_const1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inlines">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.InlineCollection Inlines { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.InlineCollection Inlines" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Paragraph.Inlines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.InlineCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Documents.InlineCollection" /> , enthält der obersten Ebene <see cref="T:System.Windows.Documents.Inline" /> Elemente, die den Inhalt des umfassen die <see cref="T:System.Windows.Documents.Paragraph" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.InlineCollection" /> , enthält die <see cref="T:System.Windows.Documents.Inline" /> Elemente, die den Inhalt des umfassen die <see cref="T:System.Windows.Documents.Paragraph" />.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Documents.InlineCollection> zurückgegeben, die von dieser Eigenschaft aufzuzählen oder zu bearbeiten des Inhalts des ein <xref:System.Windows.Documents.Paragraph> Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepTogether">
+      <MemberSignature Language="C#" Value="public bool KeepTogether { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeepTogether" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Paragraph.KeepTogether" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Text des Absatzes durch einen Seitenumbruch oder Spaltenumbruch unterteilt werden kann.</summary>
+        <value>
+          <see langword="true" />um zu verhindern, dass den Text des Absatzes umbrochen werden; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_KeepTogether"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.Paragraph.KeepTogetherProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepTogetherProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty KeepTogetherProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty KeepTogetherProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Paragraph.KeepTogetherProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.Paragraph.KeepTogether" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepWithNext">
+      <MemberSignature Language="C#" Value="public bool KeepWithNext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeepWithNext" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Paragraph.KeepWithNext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Unterbrechung zwischen diesem und dem nächsten Absatz auftreten kann.</summary>
+        <value>
+          <see langword="true" />um zu verhindern, dass eine Unterbrechung zwischen diesem und dem nächsten Absatz auftritt; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_KeepWithNext"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.Paragraph.KeepWithNextProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepWithNextProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty KeepWithNextProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty KeepWithNextProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Paragraph.KeepWithNextProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.Paragraph.KeepWithNext" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinOrphanLines">
+      <MemberSignature Language="C#" Value="public int MinOrphanLines { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinOrphanLines" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Paragraph.MinOrphanLines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die minimale Anzahl von Zeilen angibt, die vor der Unterbrechung beibehalten werden kann bei einer <see cref="T:System.Windows.Documents.Paragraph" /> wird durch einen Seitenumbruch oder Spaltenumbruch aufgeteilt.</summary>
+        <value>Eine ganze Zahl, die minimale Anzahl von Zeilen, die vor der Unterbrechung beibehalten werden sollen, können bei einer <see cref="T:System.Windows.Documents.Paragraph" /> wird durch einen Seitenumbruch oder Spaltenumbruch aufgeteilt. Der Wert 0 gibt an, keine Mindestlänge.  
+  
+ Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_MinOrphanLines"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.Paragraph.MinOrphanLinesProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinOrphanLinesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MinOrphanLinesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MinOrphanLinesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Paragraph.MinOrphanLinesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.Paragraph.MinOrphanLines" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinWidowLines">
+      <MemberSignature Language="C#" Value="public int MinWidowLines { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinWidowLines" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Paragraph.MinWidowLines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die minimale Anzahl von Zeilen angibt, die nach der Unterbrechung platziert werden kann bei einer <see cref="T:System.Windows.Documents.Paragraph" /> wird durch einen Seitenumbruch oder Spaltenumbruch aufgeteilt.</summary>
+        <value>Eine ganze Zahl, die minimale Anzahl von Zeilen, die nach der Unterbrechung platziert werden kann bei einer <see cref="T:System.Windows.Documents.Paragraph" /> wird durch einen Seitenumbruch oder Spaltenumbruch aufgeteilt.  Der Wert 0 gibt an, keine Mindestlänge.  
+  
+ Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_MinWidowLines"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.Paragraph.MinWidowLinesProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinWidowLinesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MinWidowLinesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MinWidowLinesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Paragraph.MinWidowLinesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.Paragraph.MinWidowLines" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeInlines">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeInlines (System.Windows.Markup.XamlDesignerSerializationManager manager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeInlines(class System.Windows.Markup.XamlDesignerSerializationManager manager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Paragraph.ShouldSerializeInlines(System.Windows.Markup.XamlDesignerSerializationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.Windows.Markup.XamlDesignerSerializationManager" />
+      </Parameters>
+      <Docs>
+        <param name="manager">Eine Serialisierung Service Manager-Objekt für dieses Objekt.</param>
+        <summary>Gibt an, ob die <see cref="P:System.Windows.Documents.Paragraph.Inlines" />-Eigenschaft beibehalten werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der Eigenschaftswert geändert wurde und nicht mehr dem Standardwert entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies `ShouldSerialize` Methode wird bereitgestellt, da die <xref:System.Windows.Documents.Paragraph.Inlines%2A> Eigenschaft verfügt nicht über einen einfachen Standardwert. Diese Methode gibt an, ob die-Eigenschaft ihren Standardwert geändert hat. Diese Methode wird in der Regel aufgerufen, wenn Sie entweder einen Designer für das Entwickeln der <xref:System.Windows.Documents.Paragraph> oder entwickeln eine eigene Steuerelement einbinden der <xref:System.Windows.Documents.Paragraph>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">
+          <paramref name="manager" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TextDecorations">
+      <MemberSignature Language="C#" Value="public System.Windows.TextDecorationCollection TextDecorations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.TextDecorationCollection TextDecorations" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Paragraph.TextDecorations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.TextDecorationCollection" /> Textdekorationen anzuwendende für dieses Element enthält.</summary>
+        <value>Ein <see cref="T:System.Windows.TextDecorationCollection" /> -Auflistung, die auf dieses Element angewendet Textdekorationen enthält. Der Wert <see langword="null" /> bedeutet, dass keine Textdekorationen angewendet werden. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.TextDecoration> Objekt ist eine visuelle Verzierung können Sie Text hinzufügen. Es gibt vier Arten von Textdekorationen: "Unterstreichen", die Baseline, durchgestrichen und Überstrichen.  Weitere Informationen zu Textdekorationen finden Sie unter [Vorgehensweise: Erstellen Sie einen Text-Decoration](~/docs/framework/wpf/advanced/how-to-create-a-text-decoration.md).  
+  
+<a name="dependencyPropertyInfo_TextDecorations"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.Paragraph.TextDecorationsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Documents.Paragraph.TextDecorations%2A>-Eigenschaft einer <xref:System.Windows.Documents.Paragraph>.  
+  
+ [!code-xaml[InlineSnippets#_Paragraph_TextDecXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml#_paragraph_textdecxaml)]  
+  
+ [!code-csharp[InlineSnippets#_Paragraph_TextDec](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml.cs#_paragraph_textdec)]
+ [!code-vb[InlineSnippets#_Paragraph_TextDec](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InlineSnippets/visualbasic/window1.xaml.vb#_paragraph_textdec)]  
+  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: Text mit standardmäßigem Durchstreicheffekt](~/add/media/inline-textdec-strike.png "Bildschirmabbildung: Text mit Durchstreicheffekt")  
+  
+ Der folgenden Abbildung wird wie die **überlagernde Linie**, **Baseline**, und **Unterstreichen** Ergänzungen zu rendern, bzw..  
+  
+ ![Bildschirmabbildung: Overline TextDecorator](~/add/media/inline-textdec-over.png "Screenshot: Overline TextDecorator")  
+  
+ ![Bildschirmabbildung: Default Baseline-Effekt auf Text](~/add/media/inline-textdec-base.png "Screenshot: Standard-Baseline-Effekt auf Text")  
+  
+ ![Bildschirmabbildung: Text mit standardmäßigem unterstreichungseffekt](~/add/media/inline-textdec-under.png "Bildschirmabbildung: Text mit unterstreichungseffekt")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextDecorationsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextDecorationsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextDecorationsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Paragraph.TextDecorationsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.Paragraph.TextDecorations" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextIndent">
+      <MemberSignature Language="C#" Value="public double TextIndent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 TextIndent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Paragraph.TextIndent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der gibt an, wie weit Einzug der ersten Zeile des eine <see cref="T:System.Windows.Documents.Paragraph" />.</summary>
+        <value>Ein double-Wert, der den Einzug die ersten Zeile des Absatzes in geräteunabhängigen Pixeln angibt. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_TextIndent"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object TextIndent="double"/>  
+- or -  
+<object TextIndent="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_TextIndent"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Eine Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als 0,0 jedoch kleiner als oder gleich <xref:System.Double.PositiveInfinity>. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein `double` Wert wie oben beschrieben (mit Ausnahme von `Auto`) gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+<a name="dependencyPropertyInfo_TextIndent"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.Paragraph.TextIndentProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextIndentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextIndentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextIndentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Paragraph.TextIndentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.Paragraph.TextIndent" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

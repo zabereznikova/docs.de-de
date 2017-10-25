@@ -1,0 +1,362 @@
+<Type Name="XNodeEqualityComparer" FullName="System.Xml.Linq.XNodeEqualityComparer">
+  <TypeSignature Language="C#" Value="public sealed class XNodeEqualityComparer : System.Collections.Generic.IEqualityComparer&lt;System.Xml.Linq.XNode&gt;, System.Collections.IEqualityComparer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XNodeEqualityComparer extends System.Object implements class System.Collections.Generic.IEqualityComparer`1&lt;class System.Xml.Linq.XNode&gt;, class System.Collections.IEqualityComparer" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Linq.XNodeEqualityComparer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XDocument</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.Linq</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEqualityComparer&lt;System.Xml.Linq.XNode&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEqualityComparer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Vergleicht Knoten auf Gleichheit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Zweck dieser Klasse wird zum Implementieren <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType> und <xref:System.Collections.Generic.IEqualityComparer%601?displayProperty=nameWithType>. Klassen, die Identität erfordern (z. B. <xref:System.Collections.Generic.Dictionary%602> ) erfordern eine Instanz einer Klasse, die eine dieser Schnittstellen implementiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XNodeEqualityComparer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XNodeEqualityComparer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Linq.XNodeEqualityComparer" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird diese Klasse, um zu bestimmen, ob zwei Knoten gleich sind.  
+  
+```csharp  
+  
+                XElement xmlTree1 = new XElement("Root",  
+    new XAttribute("Att1", 1),  
+    new XAttribute("Att2", 2),  
+    new XElement("Child1", 1),  
+    new XElement("Child2", "some content")  
+);  
+XElement xmlTree2 = new XElement("Root",  
+    new XAttribute("Att1", 1),  
+    new XAttribute("Att2", 2),  
+    new XElement("Child1", 1),  
+    new XElement("Child2", "some content")  
+);  
+XNodeEqualityComparer equalityComparer = new XNodeEqualityComparer();  
+Console.WriteLine(equalityComparer.Equals(xmlTree1, xmlTree2));  
+xmlTree2.Add(new XElement("NewChild", "new content"));  
+Console.WriteLine(equalityComparer.Equals(xmlTree1, xmlTree2));  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+                True  
+False  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Xml.Linq.XNode x, System.Xml.Linq.XNode y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Xml.Linq.XNode x, class System.Xml.Linq.XNode y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XNodeEqualityComparer.Equals(System.Xml.Linq.XNode,System.Xml.Linq.XNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Xml.Linq.XNode" />
+        <Parameter Name="y" Type="System.Xml.Linq.XNode" />
+      </Parameters>
+      <Docs>
+        <param name="x">Der erste zu vergleichende <see cref="T:System.Xml.Linq.XNode" />.</param>
+        <param name="y">Der zweite zu vergleichende <see cref="T:System.Xml.Linq.XNode" />.</param>
+        <summary>Vergleicht die Werte zweier Knoten.</summary>
+        <returns>Ein <see cref="T:System.Boolean" /> , der angibt, ob die Knoten gleich sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Kriterien bestimmen, ob zwei Knoten gleich sind:  
+  
+-   Ein `null` Knoten ist gleich einem anderen `null` Knoten jedoch nicht ungleich`null` Knoten.  
+  
+-   Zwei <xref:System.Xml.Linq.XNode> Objekte anderer Typen niemals gleich sind.  
+  
+-   Zwei <xref:System.Xml.Linq.XText> Knoten sind gleich, wenn sie den gleichen Text enthalten.  
+  
+-   Zwei <xref:System.Xml.Linq.XElement> Knoten gleich sind, haben die gleichen Tagnamen, den gleichen Satz von Attributen mit den gleichen Werten und (wird ignoriert, Kommentare und verarbeitungsanweisungen) enthalten zwei Sequenzen von gleicher Länge paarweisen Gleichheitsoperator content-Knoten.  
+  
+-   Zwei <xref:System.Xml.Linq.XDocument> Objekte sind gleich, wenn ihre Stammknoten gleich sind.  
+  
+-   Zwei <xref:System.Xml.Linq.XComment> Knoten sind gleich, wenn sie denselben Kommentartext enthalten.  
+  
+-   Zwei <xref:System.Xml.Linq.XProcessingInstruction> Knoten sind gleich, wenn sie dasselbe Ziel und Daten haben.  
+  
+-   Zwei <xref:System.Xml.Linq.XDocumentType> -Knoten sind gleich, wenn die haben denselben Namen, öffentlichen-ID, System-ID und die interne Teilmenge.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird diese Klasse zum Vergleichen von zwei Knoten.  
+  
+```csharp  
+  
+                XElement xmlTree1 = new XElement("Root",  
+    new XAttribute("Att1", 1),  
+    new XAttribute("Att2", 2),  
+    new XElement("Child1", 1),  
+    new XElement("Child2", "some content")  
+);  
+XElement xmlTree2 = new XElement("Root",  
+    new XAttribute("Att1", 1),  
+    new XAttribute("Att2", 2),  
+    new XElement("Child1", 1),  
+    new XElement("Child2", "some content")  
+);  
+XNodeEqualityComparer equalityComparer = new XNodeEqualityComparer();  
+Console.WriteLine(equalityComparer.Equals(xmlTree1, xmlTree2));  
+xmlTree2.Add(new XElement("NewChild", "new content"));  
+Console.WriteLine(equalityComparer.Equals(xmlTree1, xmlTree2));  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+                True  
+False  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public int GetHashCode (System.Xml.Linq.XNode obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetHashCode(class System.Xml.Linq.XNode obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XNodeEqualityComparer.GetHashCode(System.Xml.Linq.XNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Xml.Linq.XNode" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Xml.Linq.XNode" /> für den Hash.</param>
+        <summary>Gibt einen Hashcode basierend auf einer <see cref="T:System.Xml.Linq.XNode" />.</summary>
+        <returns>Ein <see cref="T:System.Int32" /> , einen wertbasierten Hashcode für den Knoten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Linq.XNode> Implementierung von <xref:System.Object.GetHashCode%2A> basiert die referenzielle Identität des Knotens. Diese Methode berechnet einen tiefen Hashcode basierend auf dem Wert des Knotens und aller nachfolgenden Elemente. Der Hashcode gibt alle Attribute und alle untergeordneten Knoten.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird diese Methode, um einen tiefen Hashcode für eine XML-Struktur abrufen.  
+  
+```csharp  
+  
+                XElement xmlTree = new XElement("Root",  
+    new XAttribute("Att1", 1),  
+    new XAttribute("Att2", 2),  
+    new XElement("Child1", 1),  
+    new XElement("Child2", "some content")  
+);  
+XNodeEqualityComparer equalityComparer = new XNodeEqualityComparer();  
+Console.WriteLine("HashCode: {0}", equalityComparer.GetHashCode(xmlTree).ToString("X"));  
+xmlTree.Add(new XElement("NewChild", "new content"));  
+Console.WriteLine("HashCode: {0}", equalityComparer.GetHashCode(xmlTree).ToString("X"));  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+                HashCode: 958CCD0  
+HashCode: AD26516B  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEqualityComparer.Equals">
+      <MemberSignature Language="C#" Value="bool IEqualityComparer.Equals (object x, object y);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IEqualityComparer.Equals(object x, object y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XNodeEqualityComparer.System#Collections#IEqualityComparer#Equals(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Object" />
+        <Parameter Name="y" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="x">Der erste zu vergleichende <see cref="T:System.Xml.Linq.XNode" />.</param>
+        <param name="y">Der zweite zu vergleichende <see cref="T:System.Xml.Linq.XNode" />.</param>
+        <summary>Vergleicht die Werte zweier Knoten.</summary>
+        <returns>
+          <see langword="true" />Wenn die Knoten gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Kriterien bestimmen, ob zwei Knoten gleich sind:  
+  
+-   Ein `null` Knoten ist gleich einem anderen `null` Knoten jedoch nicht ungleich`null` Knoten.  
+  
+-   Zwei <xref:System.Xml.Linq.XNode> Objekte anderer Typen niemals gleich sind.  
+  
+-   Zwei <xref:System.Xml.Linq.XText> Knoten sind gleich, wenn sie den gleichen Text enthalten.  
+  
+-   Zwei <xref:System.Xml.Linq.XElement> Knoten gleich sind, haben die gleichen Tagnamen, den gleichen Satz von Attributen mit den gleichen Werten und (wird ignoriert, Kommentare und verarbeitungsanweisungen) enthalten zwei Equa Länge Sequenzen paarweisen Gleichheitsoperator content-Knoten.  
+  
+-   Zwei <xref:System.Xml.Linq.XDocument> Objekte sind gleich, wenn ihre Stammknoten gleich sind.  
+  
+-   Zwei <xref:System.Xml.Linq.XComment> Knoten sind gleich, wenn sie denselben Kommentartext enthalten.  
+  
+-   Zwei <xref:System.Xml.Linq.XProcessingInstruction> Knoten sind gleich, wenn sie dasselbe Ziel und Daten haben.  
+  
+-   Zwei <xref:System.Xml.Linq.XDocumentType> -Knoten sind gleich, wenn die haben denselben Namen, öffentlichen-ID, System-ID und die interne Teilmenge.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEqualityComparer.GetHashCode">
+      <MemberSignature Language="C#" Value="int IEqualityComparer.GetHashCode (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IEqualityComparer.GetHashCode(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XNodeEqualityComparer.System#Collections#IEqualityComparer#GetHashCode(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Der zu hashende Knoten.</param>
+        <summary>Gibt einen Hashcode auf der Grundlage des Werts eines Knotens zurück.</summary>
+        <returns>Ein <see cref="T:System.Int32" /> , einen wertbasierten Hashcode für den Knoten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Linq.XNode> Implementierung von <xref:System.Object.GetHashCode%2A> basiert die referenzielle Identität des Knotens. Diese Methode berechnet einen tiefen Hashcode basierend auf dem Wert des Knotens, dessen Attribute und seine Nachfolger.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

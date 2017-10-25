@@ -1,0 +1,121 @@
+<Type Name="ScrollBarButtonType" FullName="System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType">
+  <TypeSignature Language="C#" Value="public enum ScrollBarButtonType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ScrollBarButtonType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Schaltfläche im <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked" />-Ereignis an, auf die ein Benutzer klickt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType> Enumeration wird zusammen mit der <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.ButtonType%2A> -Eigenschaft, und ermöglicht es dem Entwickler, um zu bestimmen, welche Art von Bildlaufleisten-Schaltfläche den Endbenutzer auf geklickt haben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LargeDecrement">
+      <MemberSignature Language="C#" Value="LargeDecrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType LargeDecrement = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType.LargeDecrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Scrollansicht wurde um einen großen Schritt verkleinert, indem bei einer vertikalen Scrollleiste auf den Bereich unterhalb des Ziehpunkts bzw. bei einer horizontalen Scrollleiste links neben den Ziehpunkt geklickt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeIncrement">
+      <MemberSignature Language="C#" Value="LargeIncrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType LargeIncrement = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType.LargeIncrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Scrollansicht wurde um einen großen Schritt vergrößert, indem bei einer vertikalen Scrollleiste auf den Bereich oberhalb des Ziehpunkts bzw. bei einer horizontalen Scrollleiste rechts neben den Ziehpunkt geklickt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallDecrement">
+      <MemberSignature Language="C#" Value="SmallDecrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType SmallDecrement = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType.SmallDecrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es wurde auf eine Schaltfläche mit einem Pfeil nach unten oder nach links geklickt, um die Scrollansicht um einen kleinen Schritt zu verkleinern.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallIncrement">
+      <MemberSignature Language="C#" Value="SmallIncrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType SmallIncrement = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType.SmallIncrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es wurde auf eine Schaltfläche mit einem Pfeil nach oben oder nach rechts geklickt, um die Scrollansicht um einen kleinen Schritt zu vergrößern.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ThumbTracker">
+      <MemberSignature Language="C#" Value="ThumbTracker" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType ThumbTracker = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType.ThumbTracker" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es wurde auf den Ziehpunkt für die Scrollleiste geklickt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomReset">
+      <MemberSignature Language="C#" Value="ZoomReset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType ZoomReset = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType.ZoomReset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es wurde auf die Schaltfläche zum Zoomen oder Zurücksetzen geklickt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

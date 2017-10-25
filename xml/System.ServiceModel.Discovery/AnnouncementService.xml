@@ -1,0 +1,210 @@
+<Type Name="AnnouncementService" FullName="System.ServiceModel.Discovery.AnnouncementService">
+  <TypeSignature Language="C#" Value="public class AnnouncementService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AnnouncementService extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.AnnouncementService" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.ServiceBehavior(ConcurrencyMode=System.ServiceModel.ConcurrencyMode.Multiple, InstanceContextMode=System.ServiceModel.InstanceContextMode.Single)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine selbst gehostete Implementierung des Ankündigungsdiensts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse überwacht eingehende Meldungen auf einem Standardankündigungsendpunkt  (<xref:System.ServiceModel.Discovery.AnnouncementEndpoint>) und gibt Ereignisbenachrichtigungen aus, wenn Hello- oder Bye-Ankündigungsmeldungen eingehen. Sie können eine benutzerdefinierte Ankündigungsdienstimplementierung bereitstellen, indem Sie von dieser Klasse ableiten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnouncementService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.AnnouncementService" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnouncementService (int duplicateMessageHistoryLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 duplicateMessageHistoryLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementService.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="duplicateMessageHistoryLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="duplicateMessageHistoryLength">Die maximale Anzahl Meldungshashes, die vom Transport zum Identifizieren doppelter Meldungen verwendet werden. Der Standardwert ist 0.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.AnnouncementService" />-Klasse mit der angegebenen Länge des doppelten Meldungsverlaufs.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OfflineAnnouncementReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ServiceModel.Discovery.AnnouncementEventArgs&gt; OfflineAnnouncementReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ServiceModel.Discovery.AnnouncementEventArgs&gt; OfflineAnnouncementReceived" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ServiceModel.Discovery.AnnouncementEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Offlineankündigungsmeldung (Bye) empfangen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginOfflineAnnouncement">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult OnBeginOfflineAnnouncement (System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence, System.ServiceModel.Discovery.EndpointDiscoveryMetadata endpointDiscoveryMetadata, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult OnBeginOfflineAnnouncement(class System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence, class System.ServiceModel.Discovery.EndpointDiscoveryMetadata endpointDiscoveryMetadata, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementService.OnBeginOfflineAnnouncement(System.ServiceModel.Discovery.DiscoveryMessageSequence,System.ServiceModel.Discovery.EndpointDiscoveryMetadata,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageSequence" Type="System.ServiceModel.Discovery.DiscoveryMessageSequence" />
+        <Parameter Name="endpointDiscoveryMetadata" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="messageSequence">Die Position dieser Nachricht in der Reihenfolge für die aktuelle Benachrichtigung.</param>
+        <param name="endpointDiscoveryMetadata">Ein Objekt, das Endpunktmetadaten bereitstellt, z. B. Bereiche, Überwachungs-URI, Vertragsnamen und Endpunktadresse.</param>
+        <param name="callback">Die Methode, die beim Abschluss des asynchronen Vorgangs aufgerufen wird.</param>
+        <param name="state">Infrastrukturdefinierte Statusdaten.</param>
+        <summary>Startet die Verarbeitung eingehender Offlineankündigungsmeldungen (Bye).</summary>
+        <returns>Der Status der ausstehenden asynchronen Anforderung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, die vom <xref:System.ServiceModel.Discovery.AnnouncementService> erben, um einen benutzerdefinierten Ankündigungslistenerdienst zu implementieren, müssen diese Methode überschreiben und beginnen, eingehende Bye-Meldungen an dieser Stelle zu verarbeiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginOnlineAnnouncement">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult OnBeginOnlineAnnouncement (System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence, System.ServiceModel.Discovery.EndpointDiscoveryMetadata endpointDiscoveryMetadata, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult OnBeginOnlineAnnouncement(class System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence, class System.ServiceModel.Discovery.EndpointDiscoveryMetadata endpointDiscoveryMetadata, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementService.OnBeginOnlineAnnouncement(System.ServiceModel.Discovery.DiscoveryMessageSequence,System.ServiceModel.Discovery.EndpointDiscoveryMetadata,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageSequence" Type="System.ServiceModel.Discovery.DiscoveryMessageSequence" />
+        <Parameter Name="endpointDiscoveryMetadata" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="messageSequence">Die Position dieser Nachricht in der Reihenfolge für die aktuelle Benachrichtigung.</param>
+        <param name="endpointDiscoveryMetadata">Ein Objekt, das Endpunktmetadaten bereitstellt, z. B. Bereiche, Überwachungs-URI, Vertragsnamen und Endpunktadresse.</param>
+        <param name="callback">Die Methode, die beim Abschluss des asynchronen Vorgangs aufgerufen wird.</param>
+        <param name="state">Infrastrukturdefinierte Statusdaten.</param>
+        <summary>Startet die Verarbeitung eingehender Onlineankündigungsmeldungen (Hello).</summary>
+        <returns>Der Status der ausstehenden asynchronen Anforderung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, die vom <xref:System.ServiceModel.Discovery.AnnouncementService> erben, um ein benutzerdefiniertes Ankündigungslistenerdienst zu implementieren, müssen diese Methode überschreiben und beginnen, eingehende Hello-Meldungen zu verarbeiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndOfflineAnnouncement">
+      <MemberSignature Language="C#" Value="protected virtual void OnEndOfflineAnnouncement (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnEndOfflineAnnouncement(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementService.OnEndOfflineAnnouncement(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Ein asynchrones Ergebnis wurde vom entsprechenden <see cref="M:System.ServiceModel.Discovery.DiscoveryProxyBase.OnBeginOnlineAnnouncement(System.ServiceModel.Discovery.AnnouncementMessage,System.AsyncCallback,System.Object)" /> zurückgegeben.</param>
+        <summary>Benutzer, die vom <see cref="T:System.ServiceModel.Discovery.AnnouncementService" /> erben, um einen benutzerdefinierten Ankündigungslistenerdienst zu implementieren, müssen diese Methode überschreiben und beginnen, eingehende Offlineankündigungsmeldungen (Bye) an dieser Stelle zu verarbeiten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndOnlineAnnouncement">
+      <MemberSignature Language="C#" Value="protected virtual void OnEndOnlineAnnouncement (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnEndOnlineAnnouncement(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementService.OnEndOnlineAnnouncement(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Ein asynchrones Ergebnis wurde vom entsprechenden <see cref="M:System.ServiceModel.Discovery.DiscoveryProxyBase.OnBeginOnlineAnnouncement(System.ServiceModel.Discovery.AnnouncementMessage,System.AsyncCallback,System.Object)" /> zurückgegeben.</param>
+        <summary>Benutzer, die vom <see cref="T:System.ServiceModel.Discovery.AnnouncementService" /> erben, um einen benutzerdefinierten Ankündigungslistenerdienst zu implementieren, müssen diese Methode überschreiben und beginnen, eingehende Offlineankündigungsmeldungen (Bye) an dieser Stelle zu verarbeiten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnlineAnnouncementReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ServiceModel.Discovery.AnnouncementEventArgs&gt; OnlineAnnouncementReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ServiceModel.Discovery.AnnouncementEventArgs&gt; OnlineAnnouncementReceived" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ServiceModel.Discovery.AnnouncementEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Onlineankündigung (Hello) empfangen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

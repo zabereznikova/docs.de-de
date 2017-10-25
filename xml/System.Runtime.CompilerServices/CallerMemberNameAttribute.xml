@@ -1,0 +1,100 @@
+<Type Name="CallerMemberNameAttribute" FullName="System.Runtime.CompilerServices.CallerMemberNameAttribute">
+  <TypeSignature Language="C#" Value="public sealed class CallerMemberNameAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CallerMemberNameAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.CallerMemberNameAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht das Abrufen des Methoden- oder Eigenschaftsnamens des Methodenaufrufers.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie wenden die `CallerMemberName` -Attribut auf ein optionaler Parameter, der einen Standardwert besitzt. Sie müssen einen expliziten Standardwert für den optionalen Parameter angeben. Dieses Attribut kann nicht auf Parameter angewendet werden, die nicht als optional festgelegt.  
+  
+ Weitere Informationen finden Sie unter [Aufruferinformationen](http://msdn.microsoft.com/library/9cb2b8c0-c4f6-44b8-9c90-38948455b373).  
+  
+ Sie können das `CallerMemberName`-Attribut verwenden, um den Membernamen nicht als `String`-Argument für die aufgerufene Methode angeben zu müssen. Auf diese Weise umgehen Sie das Problem, dass durch die **Umgestaltung mit Umbenennung** die `String`-Werte nicht geändert werden. Dies ist besonders nützlich für die folgenden Aufgaben:  
+  
+-   Verwenden der Ablaufverfolgung und der Diagnoseprogramme  
+  
+-   Implementieren der <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle beim Binden von Daten Diese Schnittstelle ermöglicht es der Eigenschaft eines Objekts, ein gebundenes Steuerelement über die Änderung der Eigenschaft zu benachrichtigen, damit das Steuerelement die aktualisierten Informationen anzeigen kann. Ohne das `CallerMemberName`-Attribut müssen Sie den Eigenschaftennamen als Literal angeben.  
+  
+ Im folgenden Diagramm sind die Membernamen aufgeführt, die beim Verwenden des `CallerMemberName`-Attributs zurückgegeben werden.  
+  
+|Aufruf erfolgt innerhalb von|Ergebnis des Membernamens|  
+|-|-|  
+|Methode, Eigenschaft oder Ereignis|Der Name der Methode, der Eigenschaft oder des Ereignisses, aus dem bzw. aus der der Aufruf stammt.|  
+|Konstruktor|Die Zeichenfolge ".ctor"|  
+|Statischer Konstruktor|Die Zeichenfolge ".cctor"|  
+|Destruktor|Die Zeichenfolge "Finalize"|  
+|Benutzerdefinierte Operatoren oder Konvertierungen|Der generierte Name für den Member, beispielsweise "op_Addition".|  
+|Attributkonstruktor|Der Name des Members, auf den das Attribut angewendet wird. Wenn das Attribut ein beliebiges Element in einem Member ist (z. B. ein Parameter, ein Rückgabewert oder ein generischer Typparameter), wird als Ergebnis der Name des Members ausgegeben, der diesem Element zugeordnet ist.|  
+|Kein enthaltender Member (z. B. auf Assemblyebene oder Attribute, die auf Typen angewendet)|Der Standardwert des optionalen Parameters.|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung des `CallerMemberName`-Attributs veranschaulicht. Bei jedem Aufruf der `TraceMessage` -Methode werden die Aufruferinformationen als Argument für den optionalen Parameter ersetzt.  
+  
+ [!code-csharp[csProgGuideAttributes#51](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideAttributes/CS/callerinfo.cs#51)]
+ [!code-vb[csProgGuideAttributes#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csProgGuideAttributes/vb/callerinfo.vb#51)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallerMemberNameAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.CallerMemberNameAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.CompilerServices.CallerMemberNameAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,740 @@
+<Type Name="EntityParameterCollection" FullName="System.Data.EntityClient.EntityParameterCollection">
+  <TypeSignature Language="C#" Value="public sealed class EntityParameterCollection : System.Data.Common.DbParameterCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EntityParameterCollection extends System.Data.Common.DbParameterCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Data.EntityClient.EntityParameterCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbParameterCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von Parametern dar, die einem <see cref="T:System.Data.EntityClient.EntityCommand" /> zugeordnet sind.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.EntityClient.EntityParameter Add (System.Data.EntityClient.EntityParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.EntityClient.EntityParameter Add(class System.Data.EntityClient.EntityParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.Add(System.Data.EntityClient.EntityParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityClient.EntityParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.EntityClient.EntityParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der der Auflistung hinzuzufügende <see cref="T:System.Data.EntityClient.EntityParameter" />.</param>
+        <summary>Fügt der <see cref="T:System.Data.EntityClient.EntityParameter" /> das angegebene <see cref="T:System.Data.EntityClient.EntityParameterCollection" />-Objekt hinzu.</summary>
+        <returns>Ein neues <see cref="T:System.Data.EntityClient.EntityParameter" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Data.EntityClient.EntityParameter" /> angegebenen in der <paramref name="value" /> Parameter wurde bereits hinzugefügt, um diesem oder einem anderen <see cref="T:System.Data.EntityClient.EntityParameterCollection" />.</exception>
+        <exception cref="T:System.InvalidCastException">Der übergebene Parameter war kein <see cref="T:System.Data.EntityClient.EntityParameter" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="value" /> -Parameter ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override int Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine <see cref="T:System.Object" />.</param>
+        <summary>Fügt der <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> das angegebene Objekt hinzu.</summary>
+        <returns>Der Index des neuen <see cref="T:System.Data.EntityClient.EntityParameter" />-Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.EntityClient.EntityParameter Add (string parameterName, System.Data.DbType dbType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.EntityClient.EntityParameter Add(string parameterName, valuetype System.Data.DbType dbType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.Add(System.String,System.Data.DbType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityClient.EntityParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.DbType" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters.</param>
+        <param name="dbType">Einer der <see cref="T:System.Data.DbType" />-Werte.</param>
+        <summary>Fügt der <see cref="T:System.Data.EntityClient.EntityParameter" /> einen <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> mit dem angegebenen Parameternamen und dem Datentyp hinzu.</summary>
+        <returns>Ein neues <see cref="T:System.Data.EntityClient.EntityParameter" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.EntityClient.EntityParameter Add (string parameterName, System.Data.DbType dbType, int size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.EntityClient.EntityParameter Add(string parameterName, valuetype System.Data.DbType dbType, int32 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.Add(System.String,System.Data.DbType,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityClient.EntityParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.DbType" />
+        <Parameter Name="size" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters.</param>
+        <param name="dbType">Einer der <see cref="T:System.Data.DbType" />-Werte.</param>
+        <param name="size">Die Spaltenlänge.</param>
+        <summary>Fügt der <see cref="T:System.Data.EntityClient.EntityParameter" /> einen <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> mit dem Parameternamen, dem Datentyp und der Spaltenlänge hinzu.</summary>
+        <returns>Ein neues <see cref="T:System.Data.EntityClient.EntityParameter" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public override void AddRange (Array values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddRange(class System.Array values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.AddRange(System.Array)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Array" />
+      </Parameters>
+      <Docs>
+        <param name="values">Die hinzuzufügenden <see cref="T:System.Array" />-Werte.</param>
+        <summary>Fügt ein Array von Werten am Ende der <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Data.EntityClient.EntityParameter[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Data.EntityClient.EntityParameter[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.AddRange(System.Data.EntityClient.EntityParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Data.EntityClient.EntityParameter[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Die hinzuzufügenden <see cref="T:System.Data.EntityClient.EntityParameter" />-Werte.</param>
+        <summary>Fügt ein Array von <see cref="T:System.Data.EntityClient.EntityParameter" />-Werten am Ende der <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddWithValue">
+      <MemberSignature Language="C#" Value="public System.Data.EntityClient.EntityParameter AddWithValue (string parameterName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.EntityClient.EntityParameter AddWithValue(string parameterName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.AddWithValue(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityClient.EntityParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters.</param>
+        <param name="value">Der hinzuzufügende Wert.</param>
+        <summary>Fügt am Ende der <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> einen Wert hinzu.</summary>
+        <returns>Ein <see cref="T:System.Data.EntityClient.EntityParameter" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public override void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.Data.EntityClient.EntityParameter" />-Objekte aus der <see cref="T:System.Data.EntityClient.EntityParameterCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public override bool Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der <see cref="T:System.Object" />-Wert.</param>
+        <summary>Bestimmt, ob der angegebene <see cref="T:System.Object" /> in dieser <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> enthält den Wert andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public override bool Contains (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Contains(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der <see cref="T:System.Data.EntityClient.EntityParameter" />-Wert.</param>
+        <summary>Bestimmt, ob der angegebene <see cref="T:System.Data.EntityClient.EntityParameter" /> in dieser <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> enthält den Wert andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public override void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der aktuellen <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> kopierten Elemente ist.</param>
+        <param name="index">Eine 32-Bit-Ganzzahl, die den Index in der <see cref="T:System.Array" /> darstellt, ab dem kopiert werden soll.</param>
+        <summary>Kopiert alle Elemente der aktuellen <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> in das angegebene eindimensionale <see cref="T:System.Array" />, beginnend am angegebenen Index des Ziel-<see cref="T:System.Array" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Data.EntityClient.EntityParameter[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Data.EntityClient.EntityParameter[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.CopyTo(System.Data.EntityClient.EntityParameter[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Data.EntityClient.EntityParameter[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Die <see cref="T:System.Data.EntityClient.EntityParameterCollection" />, die das Ziel der aus der aktuellen <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> kopierten Elemente ist.</param>
+        <param name="index">Eine 32-Bit-Ganzzahl, die den Index in der <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> darstellt, ab dem kopiert werden soll.</param>
+        <summary>Kopiert alle Elemente der aktuellen <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> in die angegebene <see cref="T:System.Data.EntityClient.EntityParameterCollection" />, beginnend am angegebenen Zielindex.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public override int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityParameterCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine ganze Zahl ab, die die Anzahl der Elemente in der <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> enthält.</summary>
+        <value>Die Anzahl der Elemente in der <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> als ganze Zahl.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> für das <see cref="T:System.Data.EntityClient.EntityParameterCollection" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameter">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbParameter GetParameter (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbParameter GetParameter(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.GetParameter(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameter">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbParameter GetParameter (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbParameter GetParameter(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.GetParameter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Data.EntityClient.EntityParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Data.EntityClient.EntityParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.IndexOf(System.Data.EntityClient.EntityParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.EntityClient.EntityParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu suchende <see cref="T:System.Data.EntityClient.EntityParameter" />.</param>
+        <summary>Ruft die Position des angegebenen <see cref="T:System.Data.EntityClient.EntityParameter" /> in der Auflistung ab.</summary>
+        <returns>Die nullbasierte Position des angegebenen <see cref="T:System.Data.EntityClient.EntityParameter" />, das ein <see cref="T:System.Data.EntityClient.EntityParameter" /> in der Auflistung ist. Gibt -1 zurück, wenn das Objekt in der <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> nicht vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public override int IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu suchende <see cref="T:System.Object" />.</param>
+        <summary>Ruft die Position des angegebenen <see cref="T:System.Object" /> in der Auflistung ab.</summary>
+        <returns>Die nullbasierte Position des angegebenen <see cref="T:System.Object" />, das ein <see cref="T:System.Data.EntityClient.EntityParameter" /> in der Auflistung ist. Gibt -1 zurück, wenn das Objekt in der <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> nicht vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public override int IndexOf (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 IndexOf(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des zu suchenden <see cref="T:System.Data.EntityClient.EntityParameter" /> unter Berücksichtigung von Groß- und Kleinschreibung.</param>
+        <summary>Ruft die Position des angegebenen <see cref="T:System.Data.EntityClient.EntityParameter" /> mit dem angegebenen Namen ab.</summary>
+        <returns>Die nullbasierte Position des angegebenen <see cref="T:System.Data.EntityClient.EntityParameter" /> mit dem angegebenen Namen unter Berücksichtigung von Groß- und Kleinschreibung. Gibt -1 zurück, wenn das Objekt in der <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> nicht vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Data.EntityClient.EntityParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Data.EntityClient.EntityParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.Insert(System.Int32,System.Data.EntityClient.EntityParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.EntityClient.EntityParameter" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem der Wert eingefügt werden soll.</param>
+        <param name="value">Ein <see cref="T:System.Data.EntityClient.EntityParameter" />-Objekt, das in die <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> eingefügt werden soll.</param>
+        <summary>Fügt ein <see cref="T:System.Data.EntityClient.EntityParameter" />-Objekt am angegebenen Index in die <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> ein.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public override void Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem der Wert eingefügt werden soll.</param>
+        <param name="value">Ein <see cref="T:System.Object" />, das in die <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> eingefügt werden soll.</param>
+        <summary>Fügt ein <see cref="T:System.Object" /> am angegebenen Index in die <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> ein.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public override bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityParameterCollection.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> eine feste Größe hat.</summary>
+        <value>Gibt <see langword="true" /> Wenn die <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> hat eine feste Größe, und andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityParameterCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> schreibgeschützt ist.</summary>
+        <value>Gibt <see langword="true" /> Wenn die <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public override bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityParameterCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> synchronisiert ist.</summary>
+        <value>Gibt <see langword="true" /> Wenn die <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> synchronisiert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.EntityClient.EntityParameter this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.EntityClient.EntityParameter Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityParameterCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityClient.EntityParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des abzurufenden Parameters.</param>
+        <summary>Ruft den <see cref="T:System.Data.EntityClient.EntityParameter" /> am angegebenen Index ab.</summary>
+        <value>Der <see cref="T:System.Data.EntityClient.EntityParameter" /> am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der angegebene Index ist nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.EntityClient.EntityParameter this[string parameterName] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.EntityClient.EntityParameter Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityParameterCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityClient.EntityParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des abzurufenden Parameters.</param>
+        <summary>Ruft den <see cref="T:System.Data.EntityClient.EntityParameter" /> mit dem angegebenen Namen ab.</summary>
+        <value>Der <see cref="T:System.Data.EntityClient.EntityParameter" /> mit dem angegebenen Namen.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der angegebene Name ist nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Data.EntityClient.EntityParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Data.EntityClient.EntityParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.Remove(System.Data.EntityClient.EntityParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.EntityClient.EntityParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Data.EntityClient.EntityParameter" />-Objekt, das aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt den angegebenen <see cref="T:System.Data.EntityClient.EntityParameter" /> aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Der Parameter ist kein <see cref="T:System.Data.EntityClient.EntityParameter" />.</exception>
+        <exception cref="T:System.SystemException">Der Parameter ist in der Auflistung nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public override void Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Object" />-Objekt, das aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt den angegebenen Parameter aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public override void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden <see cref="T:System.Data.EntityClient.EntityParameter" />-Objekts.</param>
+        <summary>Entfernt den <see cref="T:System.Data.EntityClient.EntityParameter" /> am angegebenen Index aus der <see cref="T:System.Data.EntityClient.EntityParameterCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public override void RemoveAt (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveAt(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.RemoveAt(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des zu entfernenden <see cref="T:System.Data.EntityClient.EntityParameter" />.</param>
+        <summary>Entfernt den <see cref="T:System.Data.EntityClient.EntityParameter" /> am angegebenen Parameternamen aus der <see cref="T:System.Data.EntityClient.EntityParameterCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameter">
+      <MemberSignature Language="C#" Value="protected override void SetParameter (int index, System.Data.Common.DbParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetParameter(int32 index, class System.Data.Common.DbParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.SetParameter(System.Int32,System.Data.Common.DbParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.Common.DbParameter" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameter">
+      <MemberSignature Language="C#" Value="protected override void SetParameter (string parameterName, System.Data.Common.DbParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetParameter(string parameterName, class System.Data.Common.DbParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityParameterCollection.SetParameter(System.String,System.Data.Common.DbParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="value" Type="System.Data.Common.DbParameter" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public override object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityParameterCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Data.EntityClient.EntityParameterCollection" /> synchronisiert werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

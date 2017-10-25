@@ -1,0 +1,86 @@
+<Type Name="Enlistment" FullName="System.Transactions.Enlistment">
+  <TypeSignature Language="C#" Value="public class Enlistment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Enlistment extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.Enlistment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht die Kommunikation zwischen einem eingetragenen Transaktionsteilnehmer und dem Transaktions-Manager während der letzten Phase der Transaktion.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Transactions.Transaction.EnlistVolatile%2A> und <xref:System.Transactions.Transaction.EnlistDurable%2A> Methoden die <xref:System.Transactions.Transaction> -Objekts aufgerufen werden, um ein Teilnehmer in einer Transaktion einzutragen, dieses Objekt, das die Eintragung beschreibt zurückgegeben.  
+  
+ In der letzten Phase der Commit der Transaktion, übergibt der Transaktions-Manager dieses Objekt an einem Ressourcen-Manager implementieren die <xref:System.Transactions.IEnlistmentNotification> Schnittstelle, die in einer Transaktion eingetragen wurde. Insbesondere der Transaktions-Manager Ruft entweder die <xref:System.Transactions.IEnlistmentNotification.Commit%2A> oder <xref:System.Transactions.IEnlistmentNotification.Rollback%2A> des Teilnehmers, je nachdem, ob der zweite Wert entschieden hat, einen commit oder Rollback der Transaktion. Der Teilnehmer muss Aufrufen der <xref:System.Transactions.Enlistment.Done%2A> Methode dieses Objekts, mit der Transaktions-Manager wissen, dass er seine Arbeit abgeschlossen wurde.  
+  
+ Eine Eintragung kann Aufrufen der <xref:System.Transactions.Enlistment.Done%2A> Methode am jederzeit vor, die sie aufgerufen hat <xref:System.Transactions.PreparingEnlistment.Prepared%2A> in der Vorbereitungsphase.  Auf diese Weise wird die Eintragung einer schreibgeschützten Zustimmung, was bedeutet, dass es, stimmen der Commit für die Transaktion aber nicht auf das endgültige Ergebnis zu erhalten. Beachten Sie, dass nach der <xref:System.Transactions.Enlistment.Done%2A> -Methode aufgerufen wird, der eingetragene Teilnehmer empfängt keine weiteren Benachrichtigungen von der Transaktions-Manager.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung der <xref:System.Transactions.IEnlistmentNotification> -Schnittstelle, und wann die <xref:System.Transactions.Enlistment.Done%2A> Methode sollte aufgerufen werden.  
+  
+ [!code-csharp[Tx_Enlist#2](~/samples/snippets/csharp/VS_Snippets_CFX/tx_enlist/cs/enlist.cs#2)]
+ [!code-vb[Tx_Enlist#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/tx_enlist/vb/enlist.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Done">
+      <MemberSignature Language="C#" Value="public void Done ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Done() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.Enlistment.Done" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass der Transaktionsteilnehmer seine Arbeit abgeschlossen hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der letzten Phase der Commit der Transaktion, ruft der Transaktions-Manager entweder die <xref:System.Transactions.IEnlistmentNotification.Commit%2A>, <xref:System.Transactions.IEnlistmentNotification.Rollback%2A> oder <xref:System.Transactions.IEnlistmentNotification.InDoubt%2A> des Teilnehmers, je nachdem, ob die Transaktion ein Commit oder Rollback. Der Ressourcen-Manager führt alle erforderlich, die Transaktion abgeschlossen ist, und teilen Sie anschließend dem Transaktions-Manager, dass durch den Aufruf abgeschlossen wurde die <xref:System.Transactions.Enlistment.Done%2A> Methode für die `enlistment` Parameter.  
+  
+ Wenn der Ressourcen-Manager dauerhaft eingetragen hat, jedoch nicht durch den Aufruf reagiert <xref:System.Transactions.Enlistment.Done%2A> -Methode, die vom Transaktions-Manager ist nicht sicher, dass der Ressourcen-Manager der jeweiligen Benachrichtigung erhalten hat. Daher vom Transaktions-Manager wartet weiterhin auf eine Antwort, und verwaltet die Informationen für diese Transaktion relevant.  Wenn <xref:System.Transactions.Enlistment.Done%2A> wird nie aufgerufen, diese Information ist um unbegrenzt beibehalten im Arbeitsspeicher oder in einer systemweiten Ressource. Dies führt dazu, dass Ressourcen nicht freigegeben werden. Bei einer verteilten Transaktion konnte dies schließlich die MSDTC-Protokoll auffüllen, das MSDTC-Prozess angehalten wird. Im Fall einer Transaktion, die von verwalteten <xref:System.Transactions>, dies führt zu einer schrittweisen und kontinuierlicher Anstieg der Arbeitsspeicherverbrauch der Ressourcen-Manager-Prozess. Aus diesem Grund ist es entscheidend, dass Sie Aufrufen der <xref:System.Transactions.Enlistment.Done%2A> -Methode nach Abschluss der Ressourcen-Manager mit der Arbeit vorbereiten.  
+  
+ Eine Eintragung kann Aufrufen der <xref:System.Transactions.Enlistment.Done%2A> Methode am jederzeit vor, die sie aufgerufen hat <xref:System.Transactions.PreparingEnlistment.Prepared%2A> in der Vorbereitungsphase. Auf diese Weise wird die Eintragung einer schreibgeschützten Zustimmung, was bedeutet, dass es, stimmen der Commit für die Transaktion aber nicht auf das endgültige Ergebnis zu erhalten. Beachten Sie, dass nach dem Aufruf dieser Methode wird der eingetragene Teilnehmer keine weiteren Benachrichtigungen aus der Transaktions-Manager empfängt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,274 @@
+<Type Name="InputLanguageChangedEventArgs" FullName="System.Windows.Forms.InputLanguageChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class InputLanguageChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InputLanguageChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.InputLanguageChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.Form.InputLanguageChanged" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die Daten aus der <xref:System.Windows.Forms.InputLanguageChangedEventArgs> Entscheidungen darüber, ob die Eingabemethoden-Editoren (IMEs) ändern oder swap-rechts-nach-links-Werte. Sie können auch ändern, die <xref:System.Threading.Thread.CurrentCulture%2A> eines Threads und die <xref:System.Threading.Thread.CurrentUICulture%2A> Eigenschaften, damit andere Ressourcen ausgewählt werden.  
+  
+ Ein <xref:System.Windows.Forms.InputLanguageChangedEventArgs> identifiziert das Gebietsschema und den Zeichensatz, der die neue Eingabesprache.  
+  
+ Die <xref:System.Windows.Forms.Form.InputLanguageChanging> Ereignis steht vor der <xref:System.Windows.Forms.Form.InputLanguageChanged> Ereignis.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Windows.Forms.Form> und fügt einen Ereignishandler an das <xref:System.Windows.Forms.Form.InputLanguageChanged> Ereignis. Dieses Ereignis ändert die `IMEmode` Wenn sich die Eingabesprache für Japanisch ändert.  
+  
+ [!code-cpp[InputLanguageChanged#1](~/samples/snippets/cpp/VS_Snippets_Winforms/InputLanguageChanged/CPP/form1.cpp#1)]
+ [!code-csharp[InputLanguageChanged#1](~/samples/snippets/csharp/VS_Snippets_Winforms/InputLanguageChanged/CS/form1.cs#1)]
+ [!code-vb[InputLanguageChanged#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/InputLanguageChanged/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InputLanguageChangedEventArgs (System.Globalization.CultureInfo culture, byte charSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Globalization.CultureInfo culture, unsigned int8 charSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.InputLanguageChangedEventArgs.#ctor(System.Globalization.CultureInfo,System.Byte)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="charSet" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Das Gebietsschema der Eingabesprache.</param>
+        <param name="charSet">Der Zeichensatz, der die neue Eingabesprache zugeordnet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.InputLanguageChangedEventArgs" /> Klasse mit dem angegebenen Gebietsschema und Zeichensatz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InputLanguageChangedEventArgs (System.Windows.Forms.InputLanguage inputLanguage, byte charSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.InputLanguage inputLanguage, unsigned int8 charSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.InputLanguageChangedEventArgs.#ctor(System.Windows.Forms.InputLanguage,System.Byte)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="inputLanguage" Type="System.Windows.Forms.InputLanguage" />
+        <Parameter Name="charSet" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="inputLanguage">Die Eingabesprache.</param>
+        <param name="charSet">Der Zeichensatz, der die neue Eingabesprache zugeordnet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.InputLanguageChangedEventArgs" /> Klasse mit dem angegebenen Eingabesprache und Zeichensatz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eingabesprache gibt eine Kultur/Tastatur-Layout-Paar.  
+  
+ Finden Sie unter der <xref:System.Windows.Forms.InputLanguageChangedEventArgs.CharSet%2A> -Eigenschaft für eine Liste von gültigen Zeichensätzen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CharSet">
+      <MemberSignature Language="C#" Value="public byte CharSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 CharSet" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.InputLanguageChangedEventArgs.CharSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeichensatz, der die neue Eingabesprache zugeordnet.</summary>
+        <value>Eine 8-Bit-Ganzzahl ohne Vorzeichen, die das Zeichen entspricht festgelegt, wie in der folgenden Tabelle gezeigt.  
+  
+ <list type="table"><listheader><term>Zeichensatz  
+  
+ </term><description>Wert  
+  
+ </description></listheader><item><term>ANSI_CHARSET  
+  
+ </term><description> 0  
+  
+ </description></item><item><term>DEFAULT_CHARSET  
+  
+ </term><description> 1  
+  
+ </description></item><item><term>SYMBOL_CHARSET  
+  
+ </term><description> 2  
+  
+ </description></item><item><term>MAC_CHARSET  
+  
+ </term><description> 77  
+  
+ </description></item><item><term>SHIFTJI_CHARSET  
+  
+ </term><description> 128  
+  
+ </description></item><item><term>HANGEUL_CHARSET  
+  
+ </term><description> 129  
+  
+ </description></item><item><term>HANGUL_CHARSET  
+  
+ </term><description> 129  
+  
+ </description></item><item><term>JOHAB_CHARSET  
+  
+ </term><description> 130  
+  
+ </description></item><item><term>GB2312_CHARSET  
+  
+ </term><description> 134  
+  
+ </description></item><item><term>CHINESEBIG5_CHARSET  
+  
+ </term><description> 136  
+  
+ </description></item><item><term>GREEK_CHARSET  
+  
+ </term><description> 161  
+  
+ </description></item><item><term>TURKISH_CHARSET  
+  
+ </term><description> 162  
+  
+ </description></item><item><term>VIETNAMESE_CHARSET  
+  
+ </term><description> 163  
+  
+ </description></item><item><term>HEBREW_CHARSET  
+  
+ </term><description> 177  
+  
+ </description></item><item><term>ARABIC_CHARSET  
+  
+ </term><description> 178  
+  
+ </description></item><item><term>BALTIC_CHARSET  
+  
+ </term><description> 186  
+  
+ </description></item><item><term>RUSSIAN_CHARSET  
+  
+ </term><description> 204  
+  
+ </description></item><item><term>THAI_CHARSET  
+  
+ </term><description> 222  
+  
+ </description></item><item><term>EASTEUROPE_CHARSET  
+  
+ </term><description> 238  
+  
+ </description></item><item><term>OEM_CHARSET  
+  
+ </term><description> 255  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist der Win32-Zeichensatz, dem der Benutzer gewechselt. Bei ANSI-Systemen kann diese Eigenschaft verwendet werden, um Schriftarten zu erstellen, die den richtige Zeichensatz angezeigt werden können. Für Unicode-Systeme in der Regel müssen nicht Sie diese Eigenschaft verwendet. Verwenden Sie stattdessen die <xref:System.Globalization.CultureInfo> Klasse für diese Funktionen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Form.InputLanguageChanged?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.Form> mit dem Namen `Form1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Form.InputLanguageChanged?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#400](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#400)]
+ [!code-vb[System.Windows.Forms.EventExamples#400](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#400)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo Culture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo Culture" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.InputLanguageChangedEventArgs.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Gebietsschema der Eingabesprache ab.</summary>
+        <value>Ein <see cref="T:System.Globalization.CultureInfo" /> , die das Gebietsschema der Eingabesprache angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.InputLanguageChangedEventArgs.Culture%2A> Eigenschaft gibt eine <xref:System.Globalization.CultureInfo> und definiert einen Satz von Informationen über Benutzervoreinstellungen abhängig von der Sprache, untersprachen, Land/Region und kulturellen Konventionen des Benutzers.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Form.InputLanguageChanged?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.Form> mit dem Namen `Form1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Form.InputLanguageChanged?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#400](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#400)]
+ [!code-vb[System.Windows.Forms.EventExamples#400](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#400)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputLanguage">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.InputLanguage InputLanguage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.InputLanguage InputLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.InputLanguageChangedEventArgs.InputLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.InputLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die Eingabesprache angibt.</summary>
+        <value>Die Eingabesprache, die dem Objekt zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Form.InputLanguageChanged?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.Form> mit dem Namen `Form1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Form.InputLanguageChanged?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#400](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#400)]
+ [!code-vb[System.Windows.Forms.EventExamples#400](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#400)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

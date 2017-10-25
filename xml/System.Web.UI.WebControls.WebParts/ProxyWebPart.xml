@@ -1,0 +1,323 @@
+<Type Name="ProxyWebPart" FullName="System.Web.UI.WebControls.WebParts.ProxyWebPart">
+  <TypeSignature Language="C#" Value="public abstract class ProxyWebPart : System.Web.UI.WebControls.WebParts.WebPart" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ProxyWebPart extends System.Web.UI.WebControls.WebParts.WebPart" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ProxyWebPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.WebPart</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisklasse für Webparts-Steuerelemente dar, die unter bestimmten Umständen andere Webparts-Steuerelemente auf einer Seite ersetzen müssen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart>ist die Basisklasse für einen Satz von Webparts-Steuerelemente, wie <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart> und <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart>, als Platzhalter für andere Webparts-Steuerelemente auf einer Seite verwendet werden können. In der Regel eine <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> Steuerelement Ersetzen einer anderen Webparts-Steuerelement aus, wenn einige Typen von Fehlern oder Fehler aufgetreten ist. Z. B. wenn ein Benutzer nicht autorisiert ist, ein Steuerelement-Webparts auf einer Seite anzeigen, die gewünschte Webparts-Steuerelement wird durch ersetzt die <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart> Steuerelement. Wenn ein Webparts-Steuerelement kann nicht geladen werden, oder eine neue Instanz des Zertifikats kann nicht erstellt werden, wird das ursprüngliche Webparts-Steuerelement mit ersetzt die <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> Steuerelement. Falls die gewünschte Webparts-später Steuerelement für den Benutzer verfügbar ist, wird Sie zur Seite wiederhergestellt werden und das Objekt abgeleitet aus dem <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> Klasse entfernt werden.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> Klasse speichert keine Sicht Zustand oder Steuerelement. Wenn ein Steuerelement Webparts durch ersetzt wird ein <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> Objekt, und klicken Sie dann später wird verfügbar ist, dessen Ansichtszustand und Steuerelementzustand werden leer sein.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> Objekt behält Personalisierungsdaten aus, für die Webparts ersetzte steuern. Wenn das ursprüngliche Webparts-Steuerelement verfügbar wird, werden seine Personalisierungsdaten wiederhergestellt werden.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement speichert Personalisierungsdaten, speichert nur die Eigenschaften des ein <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> Objekt. Stattdessen speichert den Eigenschaften des Steuerelements, das die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> Objekt ersetzt. Wenn das ursprüngliche Webparts-Steuerelement verfügbar ist, wird die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement wird automatisch geladen.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartCollection> Objekt enthält die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> Objekt. Die ID der gewünschten Webparts-Steuerelement abgerufen werden kann, aus der <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart.OriginalID%2A> Eigenschaft oder die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart.GenericWebPartID%2A> Eigenschaft.  
+  
+ Wenn ein <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> Objekt ersetzt ein Webparts-Steuerelement, das der Anbieter oder Consumer einer Webparts-Verbindung ist, die Verbindung nicht aktiviert, jedoch nicht gelöscht werden. Wenn das ursprüngliche Webparts-Steuerelement verfügbar wird, wird die Verbindung erneut aktiviert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProxyWebPart (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPart.#ctor(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Das zu ersetzende Webparts-Steuerelement.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.ProxyWebPart" /> -Klasse, wenn ein statisches Webparts-Steuerelement (oder der Server oder das Benutzersteuerelement) ersetzt werden muss.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird verwendet, erstellen Sie ein Proxy-Webparts-Steuerelement, um ein statisches Webparts-Steuerelement ersetzen. Um ein dynamisch erstelltes Webparts-Steuerelement zu ersetzen, verwenden Sie die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart.%23ctor%28System.String%2CSystem.String%2CSystem.String%2CSystem.String%29> Konstruktor beim Erstellen des Proxy-Webparts-Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="webPart" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="webPart" />hat einen leeren <see cref="P:System.Web.UI.Control.ID" /> Eigenschaft  
+  
+ \- oder –  
+  
+ <paramref name="webPart" />ist eine leere<see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" />  
+  
+ \- oder –  
+  
+ <paramref name="webPart" />ist vom Typ <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> und das untergeordnete Steuerelement verfügt über eine leere <see cref="P:System.Web.UI.Control.ID" /> Eigenschaft</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProxyWebPart (string originalID, string originalTypeName, string originalPath, string genericWebPartID);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string originalID, string originalTypeName, string originalPath, string genericWebPartID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPart.#ctor(System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="originalID" Type="System.String" />
+        <Parameter Name="originalTypeName" Type="System.String" />
+        <Parameter Name="originalPath" Type="System.String" />
+        <Parameter Name="genericWebPartID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="originalID">Eine Zeichenfolge, die die Steuerelement-ID (nicht die eindeutige ID) des Steuerelements ersetzt wird. Wenn eine <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> -Steuerelement ersetzt wird, die ID ist die ID des untergeordneten Steuerelements Server.</param>
+        <param name="originalTypeName">Eine Zeichenfolge, die den Namen der <see cref="T:System.Type" /> des Steuerelements zu ersetzen. Wenn eine <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> -Steuerelement ersetzt wird, der Typname ist der Typ des untergeordneten Steuerelements Server.</param>
+        <param name="originalPath">Eine Zeichenfolge, die mit dem Pfad auf das Benutzersteuerelement ersetzen soll.</param>
+        <param name="genericWebPartID">Eine Zeichenfolge, die die ID des gibt eine <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> zu steuern, wenn diese Art von Steuerelement ersetzt wird. Dies ist erforderlich für Steuerelemente, die nicht von erben die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Basisklasse.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.ProxyWebPart" /> -Klasse, wenn ein dynamisches Webparts-Steuerelement ersetzt werden muss.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird verwendet, erstellen Sie ein Proxy-Webparts-Steuerelement, um ein dynamisches Webparts-Steuerelement zu ersetzen. Um ein statisches Webparts-Steuerelement ersetzen möchten, verwenden die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart.%23ctor%28System.Web.UI.WebControls.WebParts.WebPart%29> Konstruktor, um ein Proxy-Webparts-Steuerelement zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="originalPath" />wird angegeben, aber <paramref name="genericWebPartID" /> ist <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericWebPartID">
+      <MemberSignature Language="C#" Value="public string GenericWebPartID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GenericWebPartID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ProxyWebPart.GenericWebPartID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see cref="P:System.Web.UI.WebControls.WebParts.GenericWebPart.ID" /> -Eigenschaft aus dem generischen Webparts-Steuerelement, das von einem Proxy ersetzt Webparts gesteuert.</summary>
+        <value>Eine Zeichenfolge mit der <see cref="P:System.Web.UI.WebControls.WebParts.GenericWebPart.ID" /> Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> Objekt ersetzt eine <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> -Steuerelement, diese Eigenschaft enthält den Wert aus der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ID%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public override sealed string ID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ProxyWebPart.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den programmgesteuerten Bezeichner, der dem Webparts-Steuerelement zugewiesen.</summary>
+        <value>Ein <see cref="T:System.String" /> , die den Bezeichner enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> Objekt enthält den gleichen Wert in seine <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart.ID%2A> -Eigenschaft, wie das ersetzte Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadControlState">
+      <MemberSignature Language="C#" Value="protected override void LoadControlState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void LoadControlState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPart.LoadControlState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Die zuvor gespeicherten Zustand-Daten.</param>
+        <summary>Überschreibt <see cref="M:System.Web.UI.Control.LoadControlState(System.Object)" /> zu laden, die zuvor gespeicherten Zustand zu verhindern, dass ein <see cref="T:System.Web.UI.WebControls.WebParts.ProxyWebPart" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart.LoadControlState%2A> methodenüberschreibungen <xref:System.Web.UI.Control.LoadControlState%2A?displayProperty=nameWithType> um zu verhindern, laden den Zustand des Steuerelements. Die Methode nicht Zustand des Steuerelements laden oder eine andere Aktion ausführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPart.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Die zuvor gespeicherten Zustand-Daten.</param>
+        <summary>Überschreibt <see cref="M:System.Web.UI.Control.LoadViewState(System.Object)" /> um zu verhindern, laden die zuvor gespeicherten Ansichtszustand für ein <see cref="T:System.Web.UI.WebControls.WebParts.ProxyWebPart" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart.LoadViewState%2A> methodenüberschreibungen <xref:System.Web.UI.Control.LoadViewState%2A?displayProperty=nameWithType> um zu verhindern, dass der Ansichtszustand geladen. Die Methode lädt den Ansichtszustand oder keine andere Aktion ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalID">
+      <MemberSignature Language="C#" Value="public string OriginalID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OriginalID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ProxyWebPart.OriginalID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="P:System.Web.UI.Control.ID" /> des Webparts-Steuerelements, das durch den Proxy ersetzt Webparts steuern.</summary>
+        <value>Eine Zeichenfolge mit dem <see cref="P:System.Web.UI.Control.ID" /> Wert des Webparts-Steuerelements durch den Proxy-Webparts-Steuerelement ersetzt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> Objekt ersetzt eine Webparts-Steuerelement die <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart.OriginalID%2A> Eigenschaft enthält die <xref:System.Web.UI.Control.ID%2A> des ersetzten Steuerelements. Wenn das ersetzte Steuerelement ist ein <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> -Objekt, diese Eigenschaft enthält die ID der <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalPath">
+      <MemberSignature Language="C#" Value="public string OriginalPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OriginalPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ProxyWebPart.OriginalPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad auf das Benutzersteuerelement ersetzt wird.</summary>
+        <value>Eine Zeichenfolge, die enthält den Pfad zu einem Benutzersteuerelement ersetzt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalTypeName">
+      <MemberSignature Language="C#" Value="public string OriginalTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OriginalTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ProxyWebPart.OriginalTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> des Webparts-Steuerelements, das durch den Proxy ersetzt Webparts steuern.</summary>
+        <value>Eine Zeichenfolge mit der <see cref="T:System.Type" /> des Steuerelements durch den Proxy ersetzt Webparts steuern.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> Objekt ein Steuerelement ersetzt, enthält diese Eigenschaft die <xref:System.Type> des Steuerelements, das dem Proxy Webparts-Steuerelementsatz ersetzt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveControlState">
+      <MemberSignature Language="C#" Value="protected override object SaveControlState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object SaveControlState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPart.SaveControlState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert alle Zustandsänderungen des Serversteuerelements, die seit dem Zeitpunkt aufgetreten sind, zu dem die Seite an den Server zurückgesendet wurde.</summary>
+        <returns>Gibt den aktuellen Zustand des Serversteuerelements zurück. Wenn dem Steuerelement kein Zustand zugeordnet ist, gibt diese Methode <see langword="null" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProxyWebPart.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert jeden Zustand, der nach dem Aufrufen der <see cref="M:System.Web.UI.WebControls.Style.TrackViewState" />-Methode geändert wurde.</summary>
+        <returns>Ein Objekt, das den aktuellen Ansichtszustand des Steuerelements enthält, andernfalls <see langword="null" />, wenn dem Steuerelement kein Ansichtszustand zugeordnet ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

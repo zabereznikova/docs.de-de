@@ -1,0 +1,140 @@
+<Type Name="DataSetDateTime" FullName="System.Data.DataSetDateTime">
+  <TypeSignature Language="C#" Value="public enum DataSetDateTime" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataSetDateTime extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataSetDateTime" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt das Serialisierungsformat für <see cref="T:System.DateTime" /> Spalten in einer <see cref="T:System.Data.DataSet" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.DataSetDateTime>kann nicht festgelegt werden auf nicht -<xref:System.DateTime> Spalten. Festlegen der <xref:System.Data.DataColumn.DateTimeMode%2A> Eigenschaft mit dem Standardwert UnspecifiedLocall auf nicht-<xref:System.DateTime> Spalten ist zulässig. Ändern den Datentyp der Spalte von <xref:System.DateTime> in einen anderen Typ setzt die <xref:System.Data.DataColumn.DateTimeMode%2A> auf den Standardwert-Wert UnspecifiedLocal.  
+  
+ Zur Überprüfung der Schemas für das Zusammenführen von Beziehungen und ForeignKeyConstraints erfolgen kann zwischen <xref:System.DateTime> Spalten mit übereinstimmenden <xref:System.Data.DataColumn.DateTimeMode%2A> Eigenschaften. Andernfalls sollte die Spalten als im Schema nicht übereinstimmende berücksichtigt werden. Die einzige Ausnahme liegt zwischen nicht angegeben und UnspecifiedLocal. Es ist zulässig, eine Beziehung aufweisen oder ein `ForeignKeyConstraint` zwischen zwei `DateTime` Spalten mit einem in `Unspecified` und andere in `UnspecifiedLocal` <xref:System.Data.DataColumn.DateTimeMode%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Local">
+      <MemberSignature Language="C#" Value="Local" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataSetDateTime Local = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataSetDateTime.Local" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataSetDateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="DateTime" />wird immer in lokalen gespeichert werden. Wenn <see cref="F:System.Data.DataSetDateTime.Utc" /> oder <see cref="F:System.Data.DataSetDateTime.Unspecified" /> hat zu einer Spalte in diesem Modus wird es zunächst in lokalen konvertiert. Serialisierung in diesem Modus wird immer in lokalen ausgeführt. Es ist ein Offset während der Serialisierung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unspecified">
+      <MemberSignature Language="C#" Value="Unspecified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataSetDateTime Unspecified = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataSetDateTime.Unspecified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataSetDateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="DateTime" />wird immer in Unspecified gespeichert. Wenn <see cref="F:System.Data.DataSetDateTime.Local" /> oder <see cref="F:System.Data.DataSetDateTime.Utc" /> hat zu einer Spalte in diesem Modus wird es zunächst in konvertiert <see cref="F:System.Data.DataSetDateTime.Unspecified" />. Serialisierung in diesem Modus bewirkt nicht, einen Offset.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnspecifiedLocal">
+      <MemberSignature Language="C#" Value="UnspecifiedLocal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataSetDateTime UnspecifiedLocal = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataSetDateTime.UnspecifiedLocal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataSetDateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="DateTime" />wird in Unspecified gespeichert. Wenn <see cref="F:System.Data.DataSetDateTime.Local" /> oder <see cref="F:System.Data.DataSetDateTime.Utc" /> hat zu einer Spalte in diesem Modus wird es zunächst in konvertiert <see cref="F:System.Data.DataSetDateTime.Unspecified" />. Serialisierung in diesem Modus verursacht einen Offset. Dies ist das Standardverhalten und ist abwärtskompatibel. Diese Option sollte als wird nicht angegeben, im Speicher jedoch anwenden einen Offset von ähnlich betrachtet werden <see cref="F:System.Data.DataSetDateTime.Local" /> während der Serialisierung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Utc">
+      <MemberSignature Language="C#" Value="Utc" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.DataSetDateTime Utc = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.DataSetDateTime.Utc" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataSetDateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see langword="DateTime" />wird in die koordinierte Weltzeit (UTC) gespeichert. Wenn <see cref="F:System.Data.DataSetDateTime.Local" /> oder <see cref="F:System.Data.DataSetDateTime.Unspecified" /> hat zu einer Spalte in diesem Modus wird es zunächst in konvertiert <see langword="Utc" /> Format. Serialisierung in diesem Modus wird immer ausgeführt, im <see langword="Utc" />. Es ist kein Versatz während der Serialisierung.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

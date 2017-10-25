@@ -1,0 +1,276 @@
+<Type Name="ControlValuePropertyAttribute" FullName="System.Web.UI.ControlValuePropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ControlValuePropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ControlValuePropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ControlValuePropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Standardeigenschaft eines Steuerelements an, die eine <see cref="T:System.Web.UI.WebControls.ControlParameter" /> -Objekt zur Laufzeit gebunden wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Definieren einer <xref:System.Web.UI.WebControls.ControlParameter> -Objekts können Sie in der Regel ein Steuerelement Eigenschaft binden an einen Parameter durch Festlegen von sowohl die <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> und <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> Eigenschaften. Wenn die <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> Eigenschaft nicht festgelegt ist, wird eine Standardeigenschaft verwendet. Die <xref:System.Web.UI.ControlValuePropertyAttribute> -Attribut angewendet wird, um ein Steuerelement als Default-Eigenschaft angeben, die eine <xref:System.Web.UI.WebControls.ControlParameter> -Objekt zur Laufzeit gebunden wird.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.ControlValuePropertyAttribute>-Klasse finden Sie im <xref:System.Web.UI.ControlValuePropertyAttribute.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Anwenden einer <xref:System.Web.UI.ControlValuePropertyAttribute> Attribut, das eine Standardeigenschaft und den Wert auf ein benutzerdefiniertes Steuerelement angibt.  
+  
+ [!code-csharp[ControlValuePropertyAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlValuePropertyAttribute/CS/simplecustomcontrol.cs#1)]
+ [!code-vb[ControlValuePropertyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlValuePropertyAttribute/VB/simplecustomcontrol.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlValuePropertyAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlValuePropertyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Die Standardeigenschaft für das Steuerelement.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.ControlValuePropertyAttribute" /> -Klasse mit dem angegebenen Eigenschaftsnamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.ControlValuePropertyAttribute> -Klasse mit dem angegebenen Eigenschaftsnamen. Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von der <xref:System.Web.UI.ControlValuePropertyAttribute> Klasse.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.ControlValuePropertyAttribute.Name%2A>|Der Wert des `name`-Parameters.|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Anwenden einer <xref:System.Web.UI.ControlValuePropertyAttribute> Attribut, das eine Standardeigenschaft für ein benutzerdefiniertes Steuerelement angibt. Dieser Konstruktor ist intern aufgerufen, von ASP.NET zum Erstellen einer <xref:System.Web.UI.ControlValuePropertyAttribute> Objekt, das das Attribut darstellt.  
+  
+ [!code-csharp[ControlValuePropertyAttributeCtor1Param#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlValuePropertyAttributeCtor1Param/CS/simplecustomcontrol.cs#1)]
+ [!code-vb[ControlValuePropertyAttributeCtor1Param#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlValuePropertyAttributeCtor1Param/VB/simplecustomcontrol.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlValuePropertyAttribute (string name, object defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, object defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlValuePropertyAttribute.#ctor(System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="defaultValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Die Standardeigenschaft für das Steuerelement.</param>
+        <param name="defaultValue">Der Standardwert für die Standardeigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.ControlValuePropertyAttribute" /> -Klasse mit den angegebenen Namen und Standardwerten Eigenschaftswert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.ControlValuePropertyAttribute> -Klasse mit den angegebenen Namen und Standardwerten Eigenschaftswert. In der folgenden Tabelle werden anfängliche Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.ControlValuePropertyAttribute>-Klasse aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.ControlValuePropertyAttribute.Name%2A>|Der Wert des `name`-Parameters.|  
+|<xref:System.Web.UI.ControlValuePropertyAttribute.DefaultValue%2A>|Der Wert des `defaultValue`-Parameters.|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Anwenden einer <xref:System.Web.UI.ControlValuePropertyAttribute> Attribut, das eine Standardeigenschaft und den Wert auf ein benutzerdefiniertes Steuerelement angibt. Dieser Konstruktor ist intern aufgerufen, von ASP.NET zum Erstellen einer <xref:System.Web.UI.ControlValuePropertyAttribute> Objekt, das das Attribut darstellt.  
+  
+ [!code-csharp[ControlValuePropertyAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlValuePropertyAttribute/CS/simplecustomcontrol.cs#1)]
+ [!code-vb[ControlValuePropertyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlValuePropertyAttribute/VB/simplecustomcontrol.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlValuePropertyAttribute (string name, Type type, string defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type type, string defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlValuePropertyAttribute.#ctor(System.String,System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="defaultValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Die Standardeigenschaft für das Steuerelement.</param>
+        <param name="type">Die <see cref="T:System.Type" /> , in dem der Standardwert konvertiert wird.</param>
+        <param name="defaultValue">Der Standardwert für die Standardeigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.ControlValuePropertyAttribute" /> -Klasse mit den angegebenen Namen und Standardwerten Eigenschaftswert. Der Standardwert ist auch in den angegebenen Datentyp konvertiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.ControlValuePropertyAttribute> -Klasse mit den angegebenen Namen und Standardwerten Eigenschaftswert. Diese Version des Konstruktors versucht auch, den Standardwert in der angegebenen Datentyp zu konvertieren die `type` Parameter. Wenn der Standardwert nicht konvertiert werden kann, die <xref:System.Web.UI.ControlValuePropertyAttribute.DefaultValue%2A> Eigenschaft nicht festgelegt ist. In der folgenden Tabelle werden anfängliche Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.ControlValuePropertyAttribute>-Klasse aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.ControlValuePropertyAttribute.Name%2A>|Der Wert des `name`-Parameters.|  
+|<xref:System.Web.UI.ControlValuePropertyAttribute.DefaultValue%2A>|Der Wert von der `defaultValue` -Parameters, wenn der Wert in der angegebenen Datentyp konvertiert werden kann die `type` Parameter.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public object DefaultValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlValuePropertyAttribute.DefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardwert für die Standardeigenschaft eines Steuerelements ab.</summary>
+        <value>Der Standardwert für die Standardeigenschaft eines Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Eigenschaft angegeben, indem die <xref:System.Web.UI.ControlValuePropertyAttribute.Name%2A> Eigenschaft nicht festgelegt ist, verwenden Sie die <xref:System.Web.UI.ControlValuePropertyAttribute.DefaultValue%2A> Methode, um den Standardwert für die Eigenschaft festzulegen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Web.UI.ControlValuePropertyAttribute.DefaultValue%2A> Eigenschaft durch Anwenden einer <xref:System.Web.UI.ControlValuePropertyAttribute> -Attribut auf ein benutzerdefiniertes Steuerelement.  
+  
+ [!code-csharp[ControlValuePropertyAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlValuePropertyAttribute/CS/simplecustomcontrol.cs#1)]
+ [!code-vb[ControlValuePropertyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlValuePropertyAttribute/VB/simplecustomcontrol.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlValuePropertyAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Der <see cref="T:System.Object" />, der mit dieser Instanz verglichen werden soll.</param>
+        <summary>Bestimmt, ob die aktuelle Instanz von der <see cref="T:System.Web.UI.ControlValuePropertyAttribute" /> Objekt mit dem angegebenen Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt enthalten die <paramref name="obj" /> Parameter gleich der aktuellen Instanz der <see cref="T:System.Web.UI.ControlValuePropertyAttribute" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.ControlValuePropertyAttribute.Equals%2A> Methode, um zu bestimmen, ob die aktuelle Instanz von der <xref:System.Web.UI.ControlValuePropertyAttribute> Objekt mit dem angegebenen Objekt identisch ist. Für die Objekte gleich sind müssen sie die folgenden Kriterien erfüllen:  
+  
+1.  Das Objekt in der `obj` Parameter muss ein <xref:System.Web.UI.ControlValuePropertyAttribute> Objekt.  
+  
+2.  Die <xref:System.Web.UI.ControlValuePropertyAttribute.Name%2A> und <xref:System.Web.UI.ControlValuePropertyAttribute.DefaultValue%2A> Eigenschaften beider Objekte müssen identisch sein.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlValuePropertyAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlValuePropertyAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardeigenschaft für ein Steuerelement ab.</summary>
+        <value>Die Standardeigenschaft für ein Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Web.UI.WebControls.ControlParameter> Objekt definiert wird, ohne seine <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> -Eigenschaft festgelegt ist, verwenden die <xref:System.Web.UI.ControlValuePropertyAttribute.Name%2A> -Eigenschaft können Sie die Standardeigenschaft bestimmen, die an gebunden ist die <xref:System.Web.UI.WebControls.ControlParameter> Objekt zur Laufzeit.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Web.UI.ControlValuePropertyAttribute.Name%2A> Eigenschaft durch Anwenden einer <xref:System.Web.UI.ControlValuePropertyAttribute> -Attribut auf ein benutzerdefiniertes Steuerelement.  
+  
+ [!code-csharp[ControlValuePropertyAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlValuePropertyAttribute/CS/simplecustomcontrol.cs#1)]
+ [!code-vb[ControlValuePropertyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlValuePropertyAttribute/VB/simplecustomcontrol.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

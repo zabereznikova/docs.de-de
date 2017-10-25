@@ -1,0 +1,88 @@
+<Type Name="FontNumeralAlignment" FullName="System.Windows.FontNumeralAlignment">
+  <TypeSignature Language="C#" Value="public enum FontNumeralAlignment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FontNumeralAlignment extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FontNumeralAlignment" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt die Ausrichtung der Ziffer für einen <see cref="T:System.Windows.Documents.Typography" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ OpenType-Schriftarten unterstützen eine proportional und tabellarische Abbildung-Funktion, um die Ausrichtung der breiten zu steuern, wenn Zahlen verwenden. In der proportionalen Darstellung verfügt jede Ziffer über eine eigene Breite: die „1“ ist schmaler als die „5“. In der Tabellendarstellung werden alle Ziffern mit der gleichen Breite dargestellt und vertikal ausgerichtet. Dies verbessert die Lesbarkeit z.B. bei Finanzinformationen.  
+  
+ Im folgenden Text werden in der ersten Spalte zwei proportionale Zahlen in der Schriftart Miramonte proportional dargestellt. Die Ziffern „5“ und „1“ unterscheiden sich in der Breite. In der zweiten Spalte wurde die Breite der gleichen Zahlen mit dem Feature für die Tabellendarstellung angepasst.  
+  
+ ![Text mit OpenType-proportional- und Tabellensatz](~/add/media/opentypefont22.gif "Text mit OpenType-proportional- und Tabellensatz")  
+Beispiel für Zahlen proportional und im Registerkartenformat  
+  
+> [!NOTE]
+>  Die meisten OpenType-Schriftarten verfügbar machen nur eine Teilmenge der insgesamt verfügbaren OpenType-Funktionen. Wenn eine angegebene Schriftart eine bestimmte Funktion nicht unterstützt, werden die Standardglyphen stattdessen verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie proportionale und tabellarische Zahlen für die Schriftart Miramonte definiert wird, die mit den Eigenschaften des definieren die <xref:System.Windows.Documents.Typography> Objekt.  
+  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontNumeralAlignment Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontNumeralAlignment.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontNumeralAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ziffer standardausrichtung wird verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Proportional">
+      <MemberSignature Language="C#" Value="Proportional" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontNumeralAlignment Proportional = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontNumeralAlignment.Proportional" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontNumeralAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Proportionale Breite Ausrichtung wird verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tabular">
+      <MemberSignature Language="C#" Value="Tabular" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontNumeralAlignment Tabular = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontNumeralAlignment.Tabular" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontNumeralAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tabellarische Ausrichtung wird verwendet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

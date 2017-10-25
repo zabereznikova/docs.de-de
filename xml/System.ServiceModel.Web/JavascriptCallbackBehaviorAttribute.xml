@@ -1,0 +1,199 @@
+<Type Name="JavascriptCallbackBehaviorAttribute" FullName="System.ServiceModel.Web.JavascriptCallbackBehaviorAttribute">
+  <TypeSignature Language="C#" Value="public sealed class JavascriptCallbackBehaviorAttribute : Attribute, System.ServiceModel.Description.IContractBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit JavascriptCallbackBehaviorAttribute extends System.Attribute implements class System.ServiceModel.Description.IContractBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Web.JavascriptCallbackBehaviorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IContractBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein Vertragsverhalten, das Ihnen ermöglicht, den Parameternamen der URL-Abfragezeichenfolge auf einen anderen Wert als den Standardwert "Callback" festzulegen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ JSONP ist ein Mechanismus zur Aktivierung siteübergreifender Skriptunterstützung für Webbrowser. Er umfasst das Senden einer Anforderung mit einem Rückruffunktionsnamen, der als Parameterwert einer URL-Abfragezeichenfolge bereitgestellt wird. Der Dienst gibt eine Antwort mit der üblichen JSON-Nutzlast zurück, die sich im Aufruf der bereitgestellten Rückruffunktion befindet, als handele es sich um eine Zeile ausführbaren Codes.  
+  
+ Ein Beispiel einer URL zum Aufrufen eines Diensts: `http://baseAddress/Service/RESTService?callback=functionName`. Bei Aufruf antwortet der Dienst mit der folgenden JSON-Syntax.  
+  
+```  
+functionName({ "root":"Something});  
+```  
+  
+ Das <xref:System.ServiceModel.Web.JavascriptCallbackBehaviorAttribute>-Element ermöglicht Entwicklern, den Parameternamen der URL-Abfragezeichenfolge anzugeben, der als Rückrufparameter interpretiert wird. Der Standardwert ist "Callback" (ohne Beachtung von Groß-/Kleinschreibung).  
+  
+ Das folgende Beispiel zeigt, wie dieses Attribut auf einen Dienstvertrag angewendet wird.  
+  
+```  
+[ServiceContract]  
+[JavascriptCallbackBehavior]  
+public class Service1  
+{  
+    [OperationContract]  
+    [WebGet(ResponseFormat=WebMessageFormat.Json)]  
+    public string GetData()  
+    {              
+         // ...  
+    }  
+}  
+```  
+  
+ Dieses Attribut gilt nur, wenn es sich um einen dienstvertragstyp kennzeichnet, die mit der <xref:System.ServiceModel.WebHttpBinding> und <xref:System.ServiceModel.WebHttpBinding.CrossDomainScriptAccessEnabled%2A> -Eigenschaft der Bindung festgelegt ist, um `true`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JavascriptCallbackBehaviorAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Web.JavascriptCallbackBehaviorAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Web.JavascriptCallbackBehaviorAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddBindingParameters">
+      <MemberSignature Language="C#" Value="public void AddBindingParameters (System.ServiceModel.Description.ContractDescription contractDescription, System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Channels.BindingParameterCollection bindingParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddBindingParameters(class System.ServiceModel.Description.ContractDescription contractDescription, class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Channels.BindingParameterCollection bindingParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Web.JavascriptCallbackBehaviorAttribute.AddBindingParameters(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractDescription" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="bindingParameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="contractDescription">Die Beschreibung des Vertrags.</param>
+        <param name="endpoint">Der Dienstendpunkt.</param>
+        <param name="bindingParameters">Die Bindungsparameter, die erforderlich sind, um das Verhalten zu implementieren.</param>
+        <summary>Eine Implementierung der <see cref="M:System.ServiceModel.Description.IContractBehavior.AddBindingParameters(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)" />-Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="public void ApplyClientBehavior (System.ServiceModel.Description.ContractDescription contractDescription, System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime clientRuntime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyClientBehavior(class System.ServiceModel.Description.ContractDescription contractDescription, class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.ClientRuntime clientRuntime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Web.JavascriptCallbackBehaviorAttribute.ApplyClientBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractDescription" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="clientRuntime" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="contractDescription">Die Beschreibung des Vertrags.</param>
+        <param name="endpoint">Der Dienstendpunkt.</param>
+        <param name="clientRuntime">Die Clientlaufzeit.</param>
+        <summary>Eine Implementierung der <see cref="M:System.ServiceModel.Description.IContractBehavior.ApplyClientBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />-Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="public void ApplyDispatchBehavior (System.ServiceModel.Description.ContractDescription contractDescription, System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyDispatchBehavior(class System.ServiceModel.Description.ContractDescription contractDescription, class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Web.JavascriptCallbackBehaviorAttribute.ApplyDispatchBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.DispatchRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractDescription" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="dispatchRuntime" Type="System.ServiceModel.Dispatcher.DispatchRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="contractDescription">Die Beschreibung des Vertrags.</param>
+        <param name="endpoint">Der Dienstendpunkt.</param>
+        <param name="dispatchRuntime">Die Dispatchlaufzeit.</param>
+        <summary>Eine Implementierung der <see cref="M:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.DispatchRuntime)" />-Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlParameterName">
+      <MemberSignature Language="C#" Value="public string UrlParameterName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UrlParameterName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Web.JavascriptCallbackBehaviorAttribute.UrlParameterName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Parameternamen der URL-Abfragezeichenfolge ab, der für den domänenübergreifenden Skriptzugriff verwendet werden soll, bzw. legt ihn fest.</summary>
+        <value>Der Parametername der URL-Abfragezeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie den Parameternamen der URL-Abfragezeichenfolge angeben, der zur Identifizierung des JSONP-Rückruffunktionsnamens verwendet wird. Der Standardwert ist "Callback".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate (System.ServiceModel.Description.ContractDescription contractDescription, System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate(class System.ServiceModel.Description.ContractDescription contractDescription, class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Web.JavascriptCallbackBehaviorAttribute.Validate(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractDescription" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="contractDescription">Die Beschreibung des Vertrags.</param>
+        <param name="endpoint">Der Dienstendpunkt.</param>
+        <summary>Eine Implementierung der <see cref="M:System.ServiceModel.Description.IContractBehavior.Validate(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint)" />-Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

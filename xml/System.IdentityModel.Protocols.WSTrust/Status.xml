@@ -1,0 +1,100 @@
+<Type Name="Status" FullName="System.IdentityModel.Protocols.WSTrust.Status">
+  <TypeSignature Language="C#" Value="public class Status" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Status extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Protocols.WSTrust.Status" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das Ergebnis einer WS-Trust-validierungsanforderung dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt den Inhalt des Elements Wst:Status dar. Diese erforderliche Element enthält das Ergebnis einer Anforderung für die WS-Trust-Überprüfung.  
+  
+ Weitere Informationen über das Element, das diese Klasse darstellt, finden Sie in der Version der WS-Trust-Spezifikation, die für Ihr Szenario zutrifft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Status (string code, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string code, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.Status.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="code" Type="System.String" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="code">Eine Zeichenfolge, die den Statuscode URI enthält.</param>
+        <param name="reason">Eine Zeichenfolge, die einen lesbare Grund enthält. Der Grund ist optional. kann <see langword="null" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Protocols.WSTrust.Status" /> Klasse mit dem angegebenen Statuscode und die Ursache.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="code" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Code">
+      <MemberSignature Language="C#" Value="public string Code { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Code" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.Status.Code" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Statuscode für die Bindung WS-Trust-Validierung in das RSTR fest.</summary>
+        <value>Eine Zeichenfolge, die einen Statuscode URI enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt den Inhalt des Elements Wst:Code dar. Diese erforderliche Element enthält einen URI, der den Status der Überprüfung Anforderung angibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public string Reason { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Reason" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.Status.Reason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt Sie die optionale Statusgrund für die Bindung WS-Trust-Überprüfung in das RSTR fest.</summary>
+        <value>Gibt eine Zeichenfolge mit dem Grund.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt den Inhalt eines Elements Wst:Reason dar. Dieses optionale Element enthält einen lesbare Grund, der mit dem Statuscode "" verknüpft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

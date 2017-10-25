@@ -1,0 +1,36 @@
+<Type Name="OleDbRowUpdatingEventHandler" FullName="System.Data.OleDb.OleDbRowUpdatingEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void OleDbRowUpdatingEventHandler(object sender, OleDbRowUpdatingEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OleDbRowUpdatingEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OleDb.OleDbRowUpdatingEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Data.OleDb.OleDbRowUpdatingEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Das <see cref="T:System.Data.OleDb.OleDbRowUpdatingEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode dar, die das <see cref="E:System.Data.OleDb.OleDbDataAdapter.RowUpdating" />-Ereignis eines <see cref="T:System.Data.OleDb.OleDbDataAdapter" /> behandelt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Handler ist nicht erforderlich, um beliebige Aktionen ausgeführt werden, und Code sollte keine Ausnahmen zu generieren oder zulassen der Ausnahmen an die aufrufende Methode weitergegeben werden. Alle Ausnahmen, die den Aufrufer erreichen, werden ignoriert.  
+  
+ Der Handler möglicherweise verwenden Sie die <xref:System.Data.OleDb.OleDbRowUpdatingEventArgs> , die die Verarbeitung der Updates zu beeinflussen. Beispielsweise kann der Handler wahlweise überspringen Sie das Update der aktuellen Zeile oder überspringen Sie das Update für alle übrigen Zeilen. Beachten Sie, dass die Zeilen in der Reihenfolge aktualisiert werden, dass sie aus der Datenquelle empfangen wurden.  
+  
+ Beim Erstellen eines <xref:System.Data.OleDb.OleDbRowUpdatingEventArgs>-Delegaten geben Sie die Methode für die Ereignisbehandlung an. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,13 @@
+<Namespace Name="System.Buffers">
+  <Docs>
+    <summary>Die <see cref="N:System.Buffers" /> -Namespace enthält die <see cref="ArrayPool{T}"/> Klasse, die einen freigegebener Ressourcenpool von Resusable Instanzen des Typs darstellt <see cref="T:T[]"/>.</summary>
+    <remarks>
+       <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+Die <see cref="ArrayPool{T}"/> -Klasse, indem Sie einen gemeinsamen Puffer für die Arraywerte, zuordnen kann bieten bedeutende Verbesserungen der Leistung für apps, die eine umfangreiche Stellen des Arrays verwenden.
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace> 

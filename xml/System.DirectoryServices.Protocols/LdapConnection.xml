@@ -1,0 +1,575 @@
+<Type Name="LdapConnection" FullName="System.DirectoryServices.Protocols.LdapConnection">
+  <TypeSignature Language="C#" Value="public class LdapConnection : System.DirectoryServices.Protocols.DirectoryConnection, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi LdapConnection extends System.DirectoryServices.Protocols.DirectoryConnection implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.LdapConnection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryConnection</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.LdapConnection" /> -Klasse erstellt eine TCP/IP- oder UDP-LDAP-Verbindung mit Microsoft Active Directory-Domänendienste oder einem LDAP-Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates%2A> Eigenschaft auf die <xref:System.DirectoryServices.Protocols.LdapConnection> Objekt und <xref:System.DirectoryServices.Protocols.LdapSessionOptions.QueryClientCertificate%2A> Eigenschaft auf die <xref:System.DirectoryServices.Protocols.LdapSessionOptions> sind beide Optionen festlegen, das Zertifikat im angegebenen Objekt der <xref:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates%2A> Eigenschaft wird ignoriert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LdapConnection (System.DirectoryServices.Protocols.LdapDirectoryIdentifier identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.Protocols.LdapDirectoryIdentifier identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.#ctor(System.DirectoryServices.Protocols.LdapDirectoryIdentifier)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.DirectoryServices.Protocols.LdapDirectoryIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Ein <see cref="T:System.DirectoryServices.Protocols.LdapDirectoryIdentifier" /> -Objekt, das den Server angibt.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.#ctor(System.DirectoryServices.Protocols.LdapDirectoryIdentifier)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.LdapConnection" /> -Klasse mit der ID des angegebenen Verzeichnisses. Die Anmeldeinformationen und die Negotiate-Authentifizierung werden für die Verbindung mit dem LDAP-Server verwendet.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.Protocols.LdapException">Wird ausgelöst, wenn es keinen Block für die Verbindung zu erstellen oder ein Fehler auftritt, um eine Verbindung mit Server herstellen.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LdapConnection (string server);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string server) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="server" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="server">Eine Zeichenfolge, die die Server, die einen Domänennamen, LDAP-Servernamen oder gepunktet Zeichenfolgen die IP-Adresse des LDAP-Servers sein kann. Dieser Parameter kann optional auch eine Portnummer, die getrennt vom rechten Ende der Zeichenfolge durch einen Doppelpunkt (:)) einschließen.</param>
+        <summary>Der <see cref="M:System.DirectoryServices.Protocols.LdapConnection.#ctor(System.String)" />-Konstruktor erstellt mithilfe des angegebenen Servers eine Instanz der <see cref="T:System.DirectoryServices.Protocols.LdapConnection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.Protocols.LdapException">Wird ausgelöst, wenn es keinen Block für die Verbindung zu erstellen oder ein Fehler auftritt, um eine Verbindung mit Server herstellen.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LdapConnection (System.DirectoryServices.Protocols.LdapDirectoryIdentifier identifier, System.Net.NetworkCredential credential);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.Protocols.LdapDirectoryIdentifier identifier, class System.Net.NetworkCredential credential) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.#ctor(System.DirectoryServices.Protocols.LdapDirectoryIdentifier,System.Net.NetworkCredential)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.DirectoryServices.Protocols.LdapDirectoryIdentifier" />
+        <Parameter Name="credential" Type="System.Net.NetworkCredential" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Ein <see cref="T:System.DirectoryServices.Protocols.LdapDirectoryIdentifier" /> -Objekt, das den Server angibt.</param>
+        <param name="credential">Ein <see cref="T:System.Net.NetworkCredential" /> Objekt, das die zu verwendenden Anmeldeinformationen angibt.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.#ctor(System.DirectoryServices.Protocols.LdapDirectoryIdentifier,System.Net.NetworkCredential)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.LdapConnection" /> -Klasse unter Verwendung der angegebenen Verzeichnis-ID und Netzwerk-Anmeldeinformationen. Negotiate-Authentifizierung verwendet wird.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.Protocols.LdapException">Wird ausgelöst, wenn es keinen Block für die Verbindung zu erstellen oder ein Fehler auftritt, um eine Verbindung mit Server herstellen.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LdapConnection (System.DirectoryServices.Protocols.LdapDirectoryIdentifier identifier, System.Net.NetworkCredential credential, System.DirectoryServices.Protocols.AuthType authType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.Protocols.LdapDirectoryIdentifier identifier, class System.Net.NetworkCredential credential, valuetype System.DirectoryServices.Protocols.AuthType authType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.#ctor(System.DirectoryServices.Protocols.LdapDirectoryIdentifier,System.Net.NetworkCredential,System.DirectoryServices.Protocols.AuthType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.DirectoryServices.Protocols.LdapDirectoryIdentifier" />
+        <Parameter Name="credential" Type="System.Net.NetworkCredential" />
+        <Parameter Name="authType" Type="System.DirectoryServices.Protocols.AuthType" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Ein <see cref="T:System.DirectoryServices.Protocols.LdapDirectoryIdentifier" /> -Objekt, das den Server angibt.</param>
+        <param name="credential">Ein <see cref="T:System.Net.NetworkCredential" /> Objekt, das die zu verwendenden Anmeldeinformationen angibt.</param>
+        <param name="authType">Ein <see cref="T:System.DirectoryServices.Protocols.AuthType" /> Werte, die den Typ des zu verwendenden Authentifizierungstyp angibt.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.#ctor(System.DirectoryServices.Protocols.LdapDirectoryIdentifier,System.Net.NetworkCredential,System.DirectoryServices.Protocols.AuthType)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.LdapConnection" /> -Klasse mit der ID des angegebenen Verzeichnisses Netzwerkanmeldeinformationen und Authentifizierungstyp.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.Protocols.LdapException">Wird ausgelöst, wenn es keinen Block für die Verbindung zu erstellen oder ein Fehler auftritt, um eine Verbindung mit Server herstellen.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Wird ausgelöst, wenn <paramref name="authType" /> liegt außerhalb des gültigen Bereichs.</exception>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn <paramref name="authType" /> als anonym angegeben ist, aber <paramref name="credential" /> Anmeldeinformationen angegeben.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="public void Abort (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Abort(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.Abort(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Ein <see cref="T:System.IAsyncResult" /> Objekt, das die asynchrone Anforderung verweist.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.Abort(System.IAsyncResult)" /> -Methode bricht die asynchrone Anforderung ab.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Handle des Objekts ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asyncResult" /> ist NULL (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn <paramref name="asyncResult" /> nicht durch den entsprechenden Aufruf zurückgegeben wurde<see cref="M:System.DirectoryServices.Protocols.LdapConnection.BeginSendRequest" /></exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthType">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.AuthType AuthType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.Protocols.AuthType AuthType" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.LdapConnection.AuthType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.AuthType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.LdapConnection.AuthType" /> Eigenschaft enthält die unterstützten Authentifizierungstypen.</summary>
+        <value>Eines unterstützten Authentifizierungstyps.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Wird ausgelöst, wenn <paramref name="authType" /> liegt außerhalb des gültigen Bereichs.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoBind">
+      <MemberSignature Language="C#" Value="public bool AutoBind { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoBind" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.LdapConnection.AutoBind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.LdapConnection.AutoBind" /> Eigenschaft gibt an, ob eine automatische Bindung zulässig ist.</summary>
+        <value>
+          <see langword="true" />Wenn die automatische Bindung zulässig ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendRequest">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendRequest (System.DirectoryServices.Protocols.DirectoryRequest request, System.DirectoryServices.Protocols.PartialResultProcessing partialMode, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendRequest(class System.DirectoryServices.Protocols.DirectoryRequest request, valuetype System.DirectoryServices.Protocols.PartialResultProcessing partialMode, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.BeginSendRequest(System.DirectoryServices.Protocols.DirectoryRequest,System.DirectoryServices.Protocols.PartialResultProcessing,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.DirectoryServices.Protocols.DirectoryRequest" />
+        <Parameter Name="partialMode" Type="System.DirectoryServices.Protocols.PartialResultProcessing" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="request">Ein <see cref="T:System.DirectoryServices.Protocols.DirectoryRequest" />-Objekt.</param>
+        <param name="partialMode">Ein Wert aus <see cref="T:System.DirectoryServices.Protocols.PartialResultProcessing" /> -Enumeration, der das Teilergebnis zurückzugebenden angibt.</param>
+        <param name="callback">Die <see cref="T:System.AsyncCallback" /> Funktion.</param>
+        <param name="state">Ein <see cref="T:System.Object" /> , das die Zustandsdaten für diese Anforderung enthält.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.BeginSendRequest(System.DirectoryServices.Protocols.DirectoryRequest,System.DirectoryServices.Protocols.PartialResultProcessing,System.AsyncCallback,System.Object)" /> -Methode sendet Daten asynchron an den Server.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" /> -Objekt, das den asynchronen Sendevorgang verweist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Handle des Objekts ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="request" />ist <see langword="null" /> (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.NotSupportedException">Teilergebnisse werden nicht unterstützt.</exception>
+        <exception cref="T:System.ArgumentException">Eine Rückruffunktion muss angegeben werden, wenn <paramref name="partialMode" /> gleich <see cref="F:System.DirectoryServices.Protocols.PartialResultProcessing.ReturnPartialResultsAndNotifyCallback" />.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendRequest">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendRequest (System.DirectoryServices.Protocols.DirectoryRequest request, TimeSpan requestTimeout, System.DirectoryServices.Protocols.PartialResultProcessing partialMode, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendRequest(class System.DirectoryServices.Protocols.DirectoryRequest request, valuetype System.TimeSpan requestTimeout, valuetype System.DirectoryServices.Protocols.PartialResultProcessing partialMode, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.BeginSendRequest(System.DirectoryServices.Protocols.DirectoryRequest,System.TimeSpan,System.DirectoryServices.Protocols.PartialResultProcessing,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.DirectoryServices.Protocols.DirectoryRequest" />
+        <Parameter Name="requestTimeout" Type="System.TimeSpan" />
+        <Parameter Name="partialMode" Type="System.DirectoryServices.Protocols.PartialResultProcessing" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="request">Ein <see cref="T:System.DirectoryServices.Protocols.DirectoryRequest" />-Objekt.</param>
+        <param name="requestTimeout">Die Zeit in Sekunden, bis es zum Timeout der Anforderungs.</param>
+        <param name="partialMode">Ein Wert aus <see cref="T:System.DirectoryServices.Protocols.PartialResultProcessing" /> -Enumeration, der das Teilergebnis zurückzugebenden angibt.</param>
+        <param name="callback">Die <see cref="T:System.AsyncCallback" /> Funktion.</param>
+        <param name="state">Ein <see cref="T:System.Object" /> , das die Zustandsdaten für diese Anforderung enthält.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.BeginSendRequest(System.DirectoryServices.Protocols.DirectoryRequest,System.TimeSpan,System.DirectoryServices.Protocols.PartialResultProcessing,System.AsyncCallback,System.Object)" /> -Methode sendet Daten asynchron an den Server.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" /> -Objekt, das den asynchronen Sendevorgang verweist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Handle des Objekts ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="request" /> ist NULL (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.NotSupportedException">Teilergebnisse werden nicht unterstützt.</exception>
+        <exception cref="T:System.ArgumentException">Eine Rückruffunktion muss angegeben werden, wenn <paramref name="partialMode" /> gleich <see cref="F:System.DirectoryServices.Protocols.PartialResultProcessing.ReturnPartialResultsAndNotifyCallback" />.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Bind">
+      <MemberSignature Language="C#" Value="public void Bind ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Bind() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.Bind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.Bind" /> Methode sendet eine LDAP-Bindung mit den aktuellen Anmeldeinformationen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Handle des Objekts ist ungültig.</exception>
+        <exception cref="T:System.DirectoryServices.Protocols.LdapException">Der von LDAP zurückgegebene Fehlercode entspricht keinem eines der <see cref="T:System.DirectoryServices.Protocols.ResultCode" /> Fehlercodes-Enumeration.</exception>
+        <exception cref="T:System.InvalidOperationException">Entweder die <see cref="P:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates" /> Eigenschaft gibt an, mehr als ein Clientzertifikat zur Authentifizierung gesendet oder die <see cref="P:System.DirectoryServices.Protocols.LdapConnection.AuthType" /> Eigenschaft ist anonym, und eine oder mehrere Anmeldeinformationen angegeben werden.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Bind">
+      <MemberSignature Language="C#" Value="public void Bind (System.Net.NetworkCredential newCredential);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Bind(class System.Net.NetworkCredential newCredential) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.Bind(System.Net.NetworkCredential)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newCredential" Type="System.Net.NetworkCredential" />
+      </Parameters>
+      <Docs>
+        <param name="newCredential">Ein <see cref="T:System.Net.NetworkCredential" /> Objekt, das die zu verwendenden Anmeldeinformationen angibt.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.Bind(System.Net.NetworkCredential)" /> Methode sendet eine LDAP-Bindung mit dem angegebenen <see cref="T:System.Net.NetworkCredential" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Handle des Objekts ist ungültig.</exception>
+        <exception cref="T:System.DirectoryServices.Protocols.LdapException">Der von LDAP zurückgegebene Fehlercode entspricht keine <see cref="T:System.DirectoryServices.Protocols.ResultCode" /> Fehlercode-Enumeration.</exception>
+        <exception cref="T:System.InvalidOperationException">Entweder die <see cref="P:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates" /> Eigenschaft gibt an, mehr als ein Clientzertifikat zur Authentifizierung gesendet oder die <see cref="P:System.DirectoryServices.Protocols.LdapConnection.AuthType" /> Eigenschaft ist anonym, und eine oder mehrere Anmeldeinformationen angegeben werden.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public override System.Net.NetworkCredential Credential { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.NetworkCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.LdapConnection.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.LdapConnection.Credential" /> Eigenschaft enthält die Anmeldeinformationen für das Netzwerk für das Objekt.</summary>
+        <value>Die Netzwerkanmeldeinformationen für das Objekt.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.Dispose" /> Methode wird geschlossen, und das LDAP-Handle freigegeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />Wenn das Handle freigegeben wird, wenn die Verbindung geschlossen wird oder <see langword="false" /> , wenn die Verbindung geschlossen wird, ohne dass das Handle freigegeben.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.Dispose(System.Boolean)" /> Methode schließt die Verbindung und das LDAP-Handle optional frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendRequest">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.DirectoryResponse EndSendRequest (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.Protocols.DirectoryResponse EndSendRequest(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.EndSendRequest(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectoryResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Ein <see cref="T:System.IAsyncResult" /> Objekt, das Zustandsdaten für diese Anforderung enthält.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.EndSendRequest(System.IAsyncResult)" /> Methode schließt eine asynchrone Anforderung.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> Objekt, das die Ergebnisse der Anforderung enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Wird ausgelöst, wenn das Objekt bereits freigegeben wurde.  Das Handle des Objekts ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asyncResult" /> ist NULL (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="asyncResult" />entspricht nicht der <paramref name="asyncResult" /> zurückgegeben, die der <see cref="M:System.DirectoryServices.Protocols.LdapConnection.BeginSendRequest" /> aufrufen.</exception>
+        <exception cref="T:System.DirectoryServices.Protocols.LdapException">Der von LDAP zurückgegebene Fehlercode entspricht keine <see cref="T:System.DirectoryServices.Protocols.ResultCode" /> Fehlercode-Enumeration.</exception>
+        <exception cref="T:System.DirectoryServices.Protocols.DirectoryOperationException">Wird ausgelöst, wenn der Server gab eine <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> -Objekt mit einem Fehler.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~LdapConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.Finalize" /> -Methode ermöglicht es einer <see cref="T:System.DirectoryServices.Protocols.LdapConnection" /> -Objekt den Versuch, Ressourcen freizugeben und andere Bereinigungsvorgänge durch vor dem Ausführen der <see cref="T:System.DirectoryServices.Protocols.LdapConnection" /> Objekt von der Garbagecollection wieder zugänglich gemacht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPartialResults">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.PartialResultsCollection GetPartialResults (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.Protocols.PartialResultsCollection GetPartialResults(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.GetPartialResults(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.PartialResultsCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Ein <see cref="T:System.IAsyncResult" /> Objekt, das Zustandsdaten für diese Anforderung enthält.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.GetPartialResults(System.IAsyncResult)" /> Methode ruft partielle Ergebnisse eines asynchronen Vorgangs ab.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.Protocols.PartialResultsCollection" /> Objekt, das die Teilergebnisse enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen. Das Handle des Objekts ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asyncResult" /> ist NULL (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="asyncResult" />entspricht nicht der <paramref name="asyncResult" /> zurückgegeben, die der <see cref="M:System.DirectoryServices.Protocols.LdapConnection.BeginSendRequest" /> aufrufen.</exception>
+        <exception cref="T:System.DirectoryServices.Protocols.LdapException">Der von LDAP zurückgegebene Fehlercode entspricht keine <see cref="T:System.DirectoryServices.Protocols.ResultCode" /> Fehlercode-Enumeration.</exception>
+        <exception cref="T:System.DirectoryServices.Protocols.DirectoryOperationException">Wird ausgelöst, wenn der Server gab eine <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> -Objekt mit einem Fehler.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendRequest">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.Protocols.DirectoryResponse SendRequest (System.DirectoryServices.Protocols.DirectoryRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.DirectoryServices.Protocols.DirectoryResponse SendRequest(class System.DirectoryServices.Protocols.DirectoryRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.SendRequest(System.DirectoryServices.Protocols.DirectoryRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectoryResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.DirectoryServices.Protocols.DirectoryRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">Ein <see cref="T:System.DirectoryServices.Protocols.DirectoryRequest" /> -Objekt, das die Anforderung enthält.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.SendRequest(System.DirectoryServices.Protocols.DirectoryRequest)" /> Methode sendet eine einzelne <see cref="T:System.DirectoryServices.Protocols.DirectoryRequest" /> als LDAP v3-Vorgang.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> -Objekt, das die Antwort vom Server enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen. Das Handle des Objekts ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asyncResult" /> ist NULL (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.NotSupportedException">Anforderung wird vom Typ DsmlAuthRequest.</exception>
+        <exception cref="T:System.DirectoryServices.Protocols.LdapException">Der von LDAP zurückgegebene Fehlercode entspricht keine <see cref="T:System.DirectoryServices.Protocols.ResultCode" /> Fehlercode-Enumeration.</exception>
+        <exception cref="T:System.DirectoryServices.Protocols.DirectoryOperationException">Wird ausgelöst, wenn der Server gab eine <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> -Objekt mit einem Fehler.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SendRequest">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.DirectoryResponse SendRequest (System.DirectoryServices.Protocols.DirectoryRequest request, TimeSpan requestTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.Protocols.DirectoryResponse SendRequest(class System.DirectoryServices.Protocols.DirectoryRequest request, valuetype System.TimeSpan requestTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.LdapConnection.SendRequest(System.DirectoryServices.Protocols.DirectoryRequest,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectoryResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.DirectoryServices.Protocols.DirectoryRequest" />
+        <Parameter Name="requestTimeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="request">Ein <see cref="T:System.DirectoryServices.Protocols.DirectoryRequest" /> -Objekt, das die Anforderung enthält.</param>
+        <param name="requestTimeout">Die Zeitdauer in Sekunden, bis es zum Timeout der Anforderungs.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.LdapConnection.SendRequest(System.DirectoryServices.Protocols.DirectoryRequest,System.TimeSpan)" /> Methode sendet eine einzelne <see cref="T:System.DirectoryServices.Protocols.DirectoryRequest" /> als LDAP v3-Vorgang.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> -Objekt, das die Antwort vom Server enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen. Das Handle des Objekts ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asyncResult" /> ist NULL (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.NotSupportedException">Anforderung wird vom Typ DsmlAuthRequest.</exception>
+        <exception cref="T:System.DirectoryServices.Protocols.LdapException">Der von LDAP zurückgegebene Fehlercode entspricht keine der <see cref="T:System.DirectoryServices.Protocols.ResultCode" /> Fehlercode-Enumeration.</exception>
+        <exception cref="T:System.DirectoryServices.Protocols.DirectoryOperationException">Wird ausgelöst, wenn der Server gab eine <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> -Objekt mit einem Fehler.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionOptions">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.LdapSessionOptions SessionOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.Protocols.LdapSessionOptions SessionOptions" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.LdapConnection.SessionOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LdapSessionOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.LdapConnection.SessionOptions" /> Eigenschaft enthält eine <see cref="T:System.DirectoryServices.Protocols.LdapSessionOptions" /> Objekt, das die Sitzungsoptionen angibt.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.Protocols.LdapSessionOptions" /> Objekt, das die Sitzungsoptionen angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates%2A> Eigenschaft auf die <xref:System.DirectoryServices.Protocols.LdapConnection> Objekt und <xref:System.DirectoryServices.Protocols.LdapSessionOptions.QueryClientCertificate%2A> Eigenschaft auf die <xref:System.DirectoryServices.Protocols.LdapSessionOptions> sind beide Optionen festlegen, das Zertifikat im angegebenen Objekt der <xref:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates%2A> Eigenschaft wird ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public override TimeSpan Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.LdapConnection.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.LdapConnection.Timeout" /> Eigenschaft enthält die Zeitdauer in Sekunden, bevor die <see cref="T:System.DirectoryServices.Protocols.LdapConnection" /> ein Timeout eintritt.</summary>
+        <value>Die Zeitdauer in Sekunden, bevor Sie die <see cref="T:System.DirectoryServices.Protocols.LdapConnection" /> ein Timeout eintritt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

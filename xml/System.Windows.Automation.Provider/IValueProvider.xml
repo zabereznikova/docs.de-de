@@ -1,0 +1,151 @@
+<Type Name="IValueProvider" FullName="System.Windows.Automation.Provider.IValueProvider">
+  <TypeSignature Language="C#" Value="public interface IValueProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IValueProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IValueProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("c7935180-6fb3-4201-b174-7df73adbf64a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht Methoden und Eigenschaften verfügbar, um für Benutzeroberflächenautomatisierungs-Clients Zugriff auf Steuerelemente zu unterstützen, die einen systeminternen Wert haben, der nicht abschnittsübergreifend ist und als Zeichenfolge dargestellt werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert des Steuerelements, vielleicht aber möglicherweise nicht mehr abhängig von dem Steuerelement und dessen Einstellungen bearbeitet werden.  
+  
+ Implementiert ein Benutzeroberflächenautomatisierungs-Anbieter, die unterstützen, muss die <xref:System.Windows.Automation.ValuePattern> -Steuerelementmuster.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IValueProvider.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Wert eines Steuerelements schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Wert schreibgeschützt ist. <see langword="false" /> wenn er geändert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für ein Steuerelement sollte dessen <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> auf `true` und dessen <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> auf `false` festgelegt sein, bevor ein Aufruf von <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>zugelassen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung dieser Methode für ein Steuerelement, dessen Wert geändert werden kann.  
+  
+ [!code-csharp[UIAIValueProvider_snip#IsReadOnly](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIValueProvider_snip/CSharp/ValueFragment.cs#isreadonly)]
+ [!code-vb[UIAIValueProvider_snip#IsReadOnly](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIValueProvider_snip/visualbasic/valuefragment.vb#isreadonly)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IValueProvider.SetValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der festzulegende Wert. Der Anbieter ist für das Konvertieren des Werts in den entsprechenden Datentyp verantwortlich.</param>
+        <summary>Legt den Wert eines Steuerelements fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einzeilige Bearbeitungssteuerelemente unterstützen programmgesteuerten Zugriff auf ihren Inhalt, indem <xref:System.Windows.Automation.Provider.IValueProvider>für sie implementiert wird. Für mehrzeilige Bearbeitungssteuerelemente wird <xref:System.Windows.Automation.Provider.IValueProvider>jedoch nicht implementiert. Stattdessen wird Zugriff auf ihre Inhalte geboten, indem <xref:System.Windows.Automation.Provider.ITextProvider>für sie implementiert wird.  
+  
+ Steuert, wie z. B. <xref:System.Windows.Automation.ControlType.ListItem> und <xref:System.Windows.Automation.ControlType.TreeItem> implementieren müssen <xref:System.Windows.Automation.Provider.IValueProvider> , wenn der Wert der Elemente bearbeitet werden kann, unabhängig vom aktuellen Bearbeitungsmodus des Steuerelements. Das übergeordnete Steuerelement muss auch implementieren <xref:System.Windows.Automation.Provider.IValueProvider> , wenn die untergeordneten Elemente bearbeitbar sind.  
+  
+ ![Bearbeitbares Listenelement ] (~/add/media/uia-valuepattern-editable-listitem.PNG "Bearbeitbares Listenelement.")  
+Beispiel eines bearbeitbaren Listenelements  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, ein benutzerdefiniertes Steuerelement, das dessen Wert in eine Zeichenfolge der Länge beschränkt festgelegt werden kann.  
+  
+ [!code-csharp[UIAIValueProvider_snip#SetValue](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIValueProvider_snip/CSharp/ValueFragment.cs#setvalue)]
+ [!code-vb[UIAIValueProvider_snip#SetValue](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIValueProvider_snip/visualbasic/valuefragment.vb#setvalue)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn gebietsschemaspezifische Informationen in einem falschen Format, etwa als falsch formatiertes Datum, an ein Steuerelement übergeben werden.</exception>
+        <exception cref="T:System.ArgumentException">Wenn ein neuer Wert nicht aus einer Zeichenfolge in ein Format konvertiert werden kann, das vom Steuerelement erkannt wird.</exception>
+        <exception cref="T:System.Windows.Automation.ElementNotEnabledException">Wenn versucht wird, ein nicht aktiviertes Steuerelement zu bearbeiten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IValueProvider.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Steuerelements ab.</summary>
+        <value>Der Wert des Steuerelements als Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einzeilige Bearbeitungssteuerelemente unterstützen programmgesteuerten Zugriff auf ihre Inhalte durch die Implementierung <xref:System.Windows.Automation.Provider.IValueProvider> (zusätzlich zum <xref:System.Windows.Automation.Provider.ITextProvider>). Mehrzeilige Bearbeitungssteuerelemente nicht implementieren jedoch <xref:System.Windows.Automation.Provider.IValueProvider>.  
+  
+ Um den Textinhalt des mehrzeilige Bearbeitungssteuerelemente abzurufen, müssen die Steuerelemente implementieren <xref:System.Windows.Automation.Provider.ITextProvider>. <xref:System.Windows.Automation.Provider.ITextProvider> bietet aber nicht die Möglichkeit, den Wert eines Steuerelements festzulegen.  
+  
+ Mit<xref:System.Windows.Automation.Provider.IValueProvider> ist es nicht möglich, Formatierungsinformationen oder Teilzeichenfolgen abzurufen. Implementieren Sie <xref:System.Windows.Automation.Provider.ITextProvider> in diesen Fällen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung dieser Methode für ein Steuerelement, dessen Wert abgerufen werden können.  
+  
+ [!code-csharp[UIAIValueProvider_snip#Value](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIValueProvider_snip/CSharp/ValueFragment.cs#value)]
+ [!code-vb[UIAIValueProvider_snip#Value](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIValueProvider_snip/visualbasic/valuefragment.vb#value)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

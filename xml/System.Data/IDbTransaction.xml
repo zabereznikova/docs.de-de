@@ -1,0 +1,218 @@
+<Type Name="IDbTransaction" FullName="System.Data.IDbTransaction">
+  <TypeSignature Language="C#" Value="public interface IDbTransaction : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDbTransaction implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.IDbTransaction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Transaktion dar, die in einer Datenquelle ausgeführt werden soll, und wird von den .NET Framework-Datenanbietern implementiert, die auf relationale Datenbanken zugreifen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.IDbTransaction> Schnittstelle ermöglicht einer erbende Klasse implementieren einer Transaktionsklasse, womit die Transaktion mit einer Datenquelle ausgeführt werden. Weitere Informationen zu Transaktionsklassen, finden Sie unter [Transaktionen und Parallelität](~/docs/framework/data/adonet/transactions-and-concurrency.md).  
+  
+ Eine Anwendung erstellt eine Instanz der nicht der <xref:System.Data.IDbTransaction> -Schnittstelle direkt, sondern erstellt eine Instanz einer Klasse, die erbt <xref:System.Data.IDbTransaction>.  
+  
+ Klassen, erben <xref:System.Data.IDbTransaction> müssen Sie die geerbten Member implementieren und definieren Sie in der Regel zusätzliche Elemente, um die anbieterspezifische Funktionalität hinzufügen. Z. B. die <xref:System.Data.IDbTransaction> Schnittstelle definiert die <xref:System.Data.IDbTransaction.Commit%2A> Methode. Wiederum die <xref:System.Data.OleDb.OleDbTransaction> Klasse erbt Sie diese Eigenschaft, und definiert auch die <xref:System.Data.OleDb.OleDbTransaction.Begin%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt Instanzen der abgeleiteten Klassen <xref:System.Data.SqlClient.SqlConnection> und <xref:System.Data.SqlClient.SqlTransaction>. Außerdem wird veranschaulicht, wie die <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>, <xref:System.Data.SqlClient.SqlTransaction.Commit%2A>, und <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> Methoden.  
+  
+ [!code-csharp[Classic WebData SqlConnection.BeginTransaction Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlConnection.BeginTransaction Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlConnection.BeginTransaction Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlConnection.BeginTransaction Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Zur Förderung der Konsistenz zwischen .NET Framework-Datenanbieter, benennen Sie die erbende Klasse in der Form <paramref name="Prv" /> Transaktion, in denen <paramref name="Prv" /> ist die einheitliche Präfix für alle Klassen in einem bestimmten .NET Framework Data Provider-Namespace. Beispielsweise <paramref name="Sql" /> ist das Präfix des der <see cref="T:System.Data.SqlClient.SqlTransaction" /> -Klasse in der <see langword="System.Data.SqlClient" /> Namespace.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDbTransaction.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Commit der Datenbanktransaktion aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt Instanzen der abgeleiteten Klassen <xref:System.Data.SqlClient.SqlConnection> und ein <xref:System.Data.SqlClient.SqlTransaction>. Außerdem wird veranschaulicht, wie die <xref:System.Data.SqlClient.SqlTransaction.Commit%2A>, <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>, und <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> Methoden.  
+  
+ [!code-csharp[Classic WebData SqlConnection.BeginTransaction Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlConnection.BeginTransaction Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlConnection.BeginTransaction Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlConnection.BeginTransaction Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Fehler beim Ausführen eines Commits der Transaktion.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde bereits ein Commit bzw. ein Rollback für die Transaktion ausgeführt.  
+  
+ - oder -   
+  
+ Die Verbindung ist unterbrochen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public System.Data.IDbConnection Connection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDbConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDbTransaction.Connection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das mit der Transaktion zu verknüpfende Connection-Objekt an.</summary>
+        <value>Das mit der Transaktion zu verknüpfende Connection-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine einzelne Anwendung kann mehrere Datenbankverbindungen mit NULL oder mehr Transaktionen jeweils haben. Diese Eigenschaft können Sie das Verbindungsobjekt, das einer bestimmten Transaktion zugewiesenen zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsolationLevel">
+      <MemberSignature Language="C#" Value="public System.Data.IsolationLevel IsolationLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.IsolationLevel IsolationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDbTransaction.IsolationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den <see cref="T:System.Data.IsolationLevel" /> für diese Transaktion an.</summary>
+        <value>Der <see cref="T:System.Data.IsolationLevel" /> für diese Transaktion. Die Standardeinstellung ist <see langword="ReadCommitted" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parallele Transaktionen werden nicht unterstützt. Aus diesem Grund die <xref:System.Data.IsolationLevel> gilt für die gesamte Transaktion.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public void Rollback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Rollback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDbTransaction.Rollback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Rollback für eine Transaktion aus einem ausstehenden Zustand durch.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Transaktion kann nur ein Rollback von Status "Ausstehend" (nach <xref:System.Data.IDbConnection.BeginTransaction%2A> aufgerufen wurde, jedoch bevor <xref:System.Data.IDbTransaction.Commit%2A> aufgerufen wird).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt Instanzen der abgeleiteten Klassen <xref:System.Data.SqlClient.SqlConnection> und ein <xref:System.Data.SqlClient.SqlTransaction>. Außerdem wird veranschaulicht, wie die <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>, <xref:System.Data.SqlClient.SqlTransaction.Commit%2A>, und <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> Methoden.  
+  
+ [!code-csharp[Classic WebData SqlConnection.BeginTransaction Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlConnection.BeginTransaction Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlConnection.BeginTransaction Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlConnection.BeginTransaction Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Fehler beim Ausführen eines Commits der Transaktion.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde bereits ein Commit bzw. ein Rollback für die Transaktion ausgeführt.  
+  
+ - oder -   
+  
+ Die Verbindung ist unterbrochen.</exception>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Data.IDbTransaction.Rollback" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see langword="Rollback" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

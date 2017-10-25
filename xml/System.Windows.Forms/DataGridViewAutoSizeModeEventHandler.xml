@@ -1,0 +1,43 @@
+<Type Name="DataGridViewAutoSizeModeEventHandler" FullName="System.Windows.Forms.DataGridViewAutoSizeModeEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DataGridViewAutoSizeModeEventHandler(object sender, DataGridViewAutoSizeModeEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewAutoSizeModeEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewAutoSizeModeEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.DataGridViewAutoSizeModeEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.DataGridViewAutoSizeModeEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Windows.Forms.DataGridView.AutoSizeRowsModeChanged" /> oder <see cref="E:System.Windows.Forms.DataGridView.RowHeadersWidthSizeModeChanged" /> Ereignisse von einem <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Windows.Forms.DataGridView.AutoSizeRowsModeChanged> Ereignis wird ausgelöst, wenn den Wert des der <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridView> Änderungen steuern. Der <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeModeChanged> Ereignis wird ausgelöst, wenn der Wert des der <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A> -Eigenschaft ändert.  
+  
+ Beim Erstellen eines <xref:System.Windows.Forms.DataGridViewAutoSizeModeEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter Informationen über Delegaten für Ereignishandler, [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Der folgende Code veranschaulicht das Behandeln der <xref:System.Windows.Forms.DataGridView.AutoSizeRowsModeChanged> Ereignis.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.AutoSizing#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/CPP/autosizing.cpp#10)]
+ [!code-csharp[System.Windows.Forms.DataGridView.AutoSizing#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/CS/autosizing.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView.AutoSizing#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/VB/autosizing.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

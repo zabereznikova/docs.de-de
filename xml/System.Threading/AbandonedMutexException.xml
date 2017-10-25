@@ -1,0 +1,464 @@
+<Type Name="AbandonedMutexException" FullName="System.Threading.AbandonedMutexException">
+  <TypeSignature Language="C#" Value="public class AbandonedMutexException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit AbandonedMutexException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.AbandonedMutexException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn ein Thread erhält eine <see cref="T:System.Threading.Mutex" /> Objekt, das einem anderen Thread abgebrochen, aber beim Verlassen nicht freigegeben wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Thread einen Mutex abbricht, wird die Ausnahme im nächsten Thread ausgelöst, der den Mutex verwendet. Der Thread kann den Mutex abrufen, da es bereits auf den Mutex gewartet hat oder weil er zu einem späteren Zeitpunkt in der Mutex aufgehoben wird.  
+  
+ Ein abgebrochenes Mutex weist einen schwerwiegenden Programmierfehler. Wenn ein Thread beendet, ohne das Mutex, möglicherweise nicht die vom Mutex geschützte Datenstruktur in einem konsistenten Zustand. Vor Version 2.0 von .NET Framework wurden solche Probleme schwer zu ermitteln, da keine Ausnahme ausgelöst wurde, wenn eine Wartezeit, die als Ergebnis ein abgebrochenes Mutex wurde abgeschlossen. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.Mutex>-Klasse.  
+  
+ Der nächste Thread, der Besitz des Mutex anfordert, kann diese Ausnahme behandeln und fortgesetzt werden, vorausgesetzt, dass die Integrität der Datenstruktur überprüft werden kann.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel führt einen Thread, der fünf Mutexe bezeichnet, deren Auswirkungen auf demonstrieren abbricht der <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, und <xref:System.Threading.WaitHandle.WaitAll%2A> Methoden. Der Wert von der <xref:System.Threading.AbandonedMutexException.MutexIndex%2A> Eigenschaft wird angezeigt, für die <xref:System.Threading.WaitHandle.WaitAny%2A> aufrufen.  
+  
+> [!NOTE]
+>  Der Aufruf der <xref:System.Threading.WaitHandle.WaitAny%2A> Methode wird von einem der abgebrochenen Mutexe unterbrochen. Die anderen abgebrochene Mutex verursachen können immer noch eine <xref:System.Threading.AbandonedMutexException> durch nachfolgende Wait-Methoden ausgelöst wird.  
+  
+ [!code-cpp[System.Threading.AbandonedMutexException#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.AbandonedMutexException/CPP/koax.cpp#1)]
+ [!code-csharp[System.Threading.AbandonedMutexException#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.AbandonedMutexException/CS/koax.cs#1)]
+ [!code-vb[System.Threading.AbandonedMutexException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.AbandonedMutexException/VB/koax.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AbandonedMutexException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AbandonedMutexException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Threading.AbandonedMutexException" />-Klasse mit Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Exception.Message%2A> -Eigenschaft der neuen Instanz mit einer vom System gelieferten Meldung, die den Fehler beschreibt, wie z. B. "Der Wartezustand durch ein abgebrochenes Mutex abgeschlossene." Diese Meldung berücksichtigt die aktuelle Systemkultur.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Threading.AbandonedMutexException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|Das System bereitgestellte Fehlermeldungszeichenfolge.|  
+|<xref:System.Threading.AbandonedMutexException.Mutex%2A>|`null`.|  
+|<xref:System.Threading.AbandonedMutexException.MutexIndex%2A>|-1 (minus eins).|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AbandonedMutexException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AbandonedMutexException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Threading.AbandonedMutexException" />-Klasse mit einer angegebenen Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt der `message` soll in verständlicher Sprache gehalten sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.  
+  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Threading.AbandonedMutexException> mit diesem Konstruktor initialisiert.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|`message`.|  
+|<xref:System.Threading.AbandonedMutexException.Mutex%2A>|`null`.|  
+|<xref:System.Threading.AbandonedMutexException.MutexIndex%2A>|-1 (minus eins).|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AbandonedMutexException (int location, System.Threading.WaitHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 location, class System.Threading.WaitHandle handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AbandonedMutexException.#ctor(System.Int32,System.Threading.WaitHandle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int32" />
+        <Parameter Name="handle" Type="System.Threading.WaitHandle" />
+      </Parameters>
+      <Docs>
+        <param name="location">Der Index des abgebrochenen Mutex im Array des Wartevorgangs behandelt werden soll, wenn die Ausnahme, für ausgelöst wird die <see cref="Overload:System.Threading.WaitHandle.WaitAny" /> Methode oder – 1, wenn die Ausnahme ausgelöst wird, für die <see cref="Overload:System.Threading.WaitHandle.WaitOne" /> oder <see cref="Overload:System.Threading.WaitHandle.WaitAll" /> Methoden.</param>
+        <param name="handle">Ein <see cref="T:System.Threading.Mutex" /> Objekt, das die abgebrochene Mutex darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.AbandonedMutexException" /> -Klasse mit einem angegebenen Index für den abgebrochenen Mutex, falls zutreffend, und einem <see cref="T:System.Threading.Mutex" /> -Objekt, das den Mutex darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Exception.Message%2A> -Eigenschaft der neuen Instanz mit einer vom System gelieferten Meldung, die den Fehler beschreibt, wie z. B. "Der Wartezustand durch ein abgebrochenes Mutex abgeschlossene." Diese Meldung berücksichtigt die aktuelle Systemkultur.  
+  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Threading.AbandonedMutexException> mit diesem Konstruktor initialisiert.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|Ein System bereitgestellte Fehlermeldungszeichenfolge.|  
+|<xref:System.Threading.AbandonedMutexException.Mutex%2A>|`handle`.|  
+|<xref:System.Threading.AbandonedMutexException.MutexIndex%2A>|`location`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AbandonedMutexException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AbandonedMutexException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt, das die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Das <see cref="T:System.Runtime.Serialization.StreamingContext" />-Objekt, das die Kontextinformationen für die Quelle oder das Ziel enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Threading.AbandonedMutexException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung aufgerufen, um das über einen Stream übertragene Ausnahmeobjekt wiederherzustellen. Weitere Informationen finden Sie unter [XML- und SOAP-Serialisierung](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AbandonedMutexException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AbandonedMutexException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="inner">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>innere</c> -Parameter ist kein <see langword="null" />, die aktuelle Ausnahme wird ausgelöst, eine <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.AbandonedMutexException" /> Klasse mit einer angegebenen Fehlermeldung und der internen Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt der `message` soll in verständlicher Sprache gehalten sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.  
+  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt den gleichen Wert zurück, der an den Konstruktor übergeben wird, oder `null`, wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft den Wert der inneren Ausnahme nicht an den Konstruktor übergibt.  
+  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Threading.AbandonedMutexException> mit diesem Konstruktor initialisiert.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`inner`.|  
+|<xref:System.Exception.Message%2A>|`message`.|  
+|<xref:System.Threading.AbandonedMutexException.Mutex%2A>|`null`.|  
+|<xref:System.Threading.AbandonedMutexException.MutexIndex%2A>|-1 (minus eins).|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AbandonedMutexException (string message, int location, System.Threading.WaitHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, int32 location, class System.Threading.WaitHandle handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AbandonedMutexException.#ctor(System.String,System.Int32,System.Threading.WaitHandle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="location" Type="System.Int32" />
+        <Parameter Name="handle" Type="System.Threading.WaitHandle" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="location">Der Index des abgebrochenen Mutex im Array des Wartevorgangs behandelt werden soll, wenn die Ausnahme, für ausgelöst wird die <see cref="Overload:System.Threading.WaitHandle.WaitAny" /> Methode oder – 1, wenn die Ausnahme ausgelöst wird, für die <see cref="Overload:System.Threading.WaitHandle.WaitOne" /> oder <see cref="Overload:System.Threading.WaitHandle.WaitAll" /> Methoden.</param>
+        <param name="handle">Ein <see cref="T:System.Threading.Mutex" /> Objekt, das die abgebrochene Mutex darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.AbandonedMutexException" /> Nachricht Klasse mit einer angegebenen Fehlermeldung, der den Index des abgebrochenen Mutex, sofern zutreffend und abgebrochenes Mutex.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt der `message` soll in verständlicher Sprache gehalten sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.  
+  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Threading.AbandonedMutexException> mit diesem Konstruktor initialisiert.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|`message`.|  
+|<xref:System.Threading.AbandonedMutexException.Mutex%2A>|`handle`.|  
+|<xref:System.Threading.AbandonedMutexException.MutexIndex%2A>|`location`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AbandonedMutexException (string message, Exception inner, int location, System.Threading.WaitHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner, int32 location, class System.Threading.WaitHandle handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AbandonedMutexException.#ctor(System.String,System.Exception,System.Int32,System.Threading.WaitHandle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+        <Parameter Name="location" Type="System.Int32" />
+        <Parameter Name="handle" Type="System.Threading.WaitHandle" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="inner">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>innere</c> -Parameter ist kein <see langword="null" />, die aktuelle Ausnahme wird ausgelöst, eine <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <param name="location">Der Index des abgebrochenen Mutex im Array des Wartevorgangs behandelt werden soll, wenn die Ausnahme, für ausgelöst wird die <see cref="Overload:System.Threading.WaitHandle.WaitAny" /> Methode oder – 1, wenn die Ausnahme ausgelöst wird, für die <see cref="Overload:System.Threading.WaitHandle.WaitOne" /> oder <see cref="Overload:System.Threading.WaitHandle.WaitAll" /> Methoden.</param>
+        <param name="handle">Ein <see cref="T:System.Threading.Mutex" /> Objekt, das die abgebrochene Mutex darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.AbandonedMutexException" /> -Klasse mit einer angegebenen Fehlermeldung, der die innere Ausnahme, den Index für den abgebrochenen Mutex, falls zutreffend, und einem <see cref="T:System.Threading.Mutex" /> -Objekt, das den Mutex darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt des `message` eine Textzeichenfolge richtet sich an den Benutzer über die Ausnahme zu informieren. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.  
+  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt den gleichen Wert zurück, der an den Konstruktor übergeben wird, oder `null`, wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft den Wert der inneren Ausnahme nicht an den Konstruktor übergibt.  
+  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Threading.AbandonedMutexException> mit diesem Konstruktor initialisiert.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`inner`.|  
+|<xref:System.Exception.Message%2A>|`message`.|  
+|<xref:System.Threading.AbandonedMutexException.Mutex%2A>|`handle`.|  
+|<xref:System.Threading.AbandonedMutexException.MutexIndex%2A>|`location`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mutex">
+      <MemberSignature Language="C#" Value="public System.Threading.Mutex Mutex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.Mutex Mutex" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.AbandonedMutexException.Mutex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Mutex</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die abgebrochene Mutex, das die Ausnahme verursacht hat, sofern bekannt.</summary>
+        <value>Ein <see cref="T:System.Threading.Mutex" /> Objekt, das die abgebrochene Mutex darstellt oder <see langword="null" /> abgebrochene Mutex konnte nicht identifiziert werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Ausnahme, bei einem Aufruf von ausgelöst wird der <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> -Methode, die <xref:System.Threading.Mutex> der abgebrochene Mutex mit dem niedrigsten Index im Array der zurückgegeben wird <xref:System.Threading.WaitHandle> Objekte, die zum übergeben wurde <xref:System.Threading.WaitHandle.WaitAny%2A>, oder `null` Wenn abgebrochene Mutex nicht überprüft werden identifiziert. Wenn die Ausnahme, bei einem Aufruf von ausgelöst wird <xref:System.Threading.WaitHandle.WaitOne%2A> oder <xref:System.Threading.WaitHandle.WaitAll%2A>, gibt diese Eigenschaft immer `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MutexIndex">
+      <MemberSignature Language="C#" Value="public int MutexIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MutexIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.AbandonedMutexException.MutexIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des abgebrochenen Mutex, der die Ausnahme verursacht hat, sofern bekannt.</summary>
+        <value>Der Index im Array der Wait-Handles zu übergeben, um die <see cref="Overload:System.Threading.WaitHandle.WaitAny" /> -Methode, der die <see cref="T:System.Threading.Mutex" /> Objekt, das abgebrochenes Mutex oder – 1 darstellt, wenn der Index des abgebrochenen Mutex nicht bestimmt werden konnte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Ausnahme, bei einem Aufruf von ausgelöst wird der <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> -Methode, diese Eigenschaft gibt den Index des abgebrochenen Mutex mit dem niedrigsten Index im Array der <xref:System.Threading.WaitHandle> Objekte, die zum übergeben wurde <xref:System.Threading.WaitHandle.WaitAny%2A>, oder – 1, wenn ein abgebrochene Mutex konnte nicht identifiziert werden . Wenn die Ausnahme, bei einem Aufruf von ausgelöst wird <xref:System.Threading.WaitHandle.WaitOne%2A> oder <xref:System.Threading.WaitHandle.WaitAll%2A>, diese Eigenschaft gibt immer-1 zurück.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel führt einen Thread, der fünf Mutexe abbricht. Abgebrochenen Mutexe werden zum Veranschaulichen der Auswirkungen auf die <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAny%2A>, und <xref:System.Threading.WaitHandle.WaitAll%2A> Methodenaufrufe. Der Wert von der <xref:System.Threading.AbandonedMutexException.MutexIndex%2A> Eigenschaft wird angezeigt, für die <xref:System.Threading.WaitHandle.WaitAny%2A> aufrufen.  
+  
+> [!NOTE]
+>  Der Aufruf von <xref:System.Threading.WaitHandle.WaitAny%2A> durch eines der abgebrochenen Mutexe unterbrochen wird. Die anderen abgebrochene Mutex verursachen können immer noch eine <xref:System.Threading.AbandonedMutexException> durch nachfolgende Wait-Methoden ausgelöst wird.  
+  
+ [!code-cpp[System.Threading.AbandonedMutexException#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.AbandonedMutexException/CPP/koax.cpp#1)]
+ [!code-csharp[System.Threading.AbandonedMutexException#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.AbandonedMutexException/CS/koax.cs#1)]
+ [!code-vb[System.Threading.AbandonedMutexException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.AbandonedMutexException/VB/koax.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

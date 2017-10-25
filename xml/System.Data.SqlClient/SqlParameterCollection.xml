@@ -1,0 +1,1291 @@
+<Type Name="SqlParameterCollection" FullName="System.Data.SqlClient.SqlParameterCollection">
+  <TypeSignature Language="C#" Value="public sealed class SqlParameterCollection : System.Data.Common.DbParameterCollection, System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SqlParameterCollection extends System.Data.Common.DbParameterCollection implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList, class System.Data.IDataParameterCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlParameterCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbParameterCollection</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DBParametersEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Entspricht einer Auflistung von Parametern, die einem <see cref="T:System.Data.SqlClient.SqlCommand" /> zugeordnet sind, sowie deren jeweiligen Zuordnungen zu Spalten in einem <see cref="T:System.Data.DataSet" />. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Befehl eine ad-hoc-SQL-Anweisung enthält, im Gegensatz zu den Namen einer gespeicherten Prozedur muss die Anzahl der Parameter in der Auflistung gleich der Anzahl der Parameterplatzhalter in der Befehlstext oder SQL Server löst einen Fehler aus. Mit einer gespeicherten Prozedur müssen alle in der gespeicherten Prozedur ohne einen Standardwert deklarierten Parameter bereitgestellt werden. Hat den Standardwert deklarierten Parameter sind optional. Dadurch können Sie einen anderen Wert als den Standardwert angeben.  
+  
+ Weitere Informationen mit zusätzlichen Beispielcode zur Veranschaulichung der Verwendung von Parametern finden Sie unter [Befehle und Parameter](~/docs/framework/data/adonet/commands-and-parameters.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt mehrere Instanzen von <xref:System.Data.SqlClient.SqlParameter> über die <xref:System.Data.SqlClient.SqlParameterCollection> Auflistung. Die Parameter werden verwendet, um Daten innerhalb der Datenquelle auswählen und zum Auffüllen der <xref:System.Data.DataSet>. Dieser Code setzt voraus, dass eine <xref:System.Data.DataSet> und ein <xref:System.Data.SqlClient.SqlDataAdapter> mit dem entsprechenden Schema, die Befehle und die Verbindung bereits erstellt wurden.  
+  
+ [!code-csharp[Classic WebData SqlParameter Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameter Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameter Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlParameter Add (System.Data.SqlClient.SqlParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.SqlClient.SqlParameter Add(class System.Data.SqlClient.SqlParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.Add(System.Data.SqlClient.SqlParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlClient.SqlParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der der Auflistung hinzuzufügende <see cref="T:System.Data.SqlClient.SqlParameter" />.</param>
+        <summary>Fügt der <see cref="T:System.Data.SqlClient.SqlParameter" /> das angegebene <see cref="T:System.Data.SqlClient.SqlParameterCollection" />-Objekt hinzu.</summary>
+        <returns>Ein neues <see cref="T:System.Data.SqlClient.SqlParameter" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[Classic WebData SqlParameterCollection.Add Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameterCollection.Add Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameterCollection.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameterCollection.Add Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Data.SqlClient.SqlParameter" /> angegebenen in der <paramref name="value" /> Parameter wurde bereits hinzugefügt, um diesem oder einem anderen <see cref="T:System.Data.SqlClient.SqlParameterCollection" />.</exception>
+        <exception cref="T:System.InvalidCastException">Der übergebene Parameter war kein <see cref="T:System.Data.SqlClient.SqlParameter" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="value" /> -Parameter ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override int Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine <see cref="T:System.Object" />.</param>
+        <summary>Fügt der <see cref="T:System.Data.SqlClient.SqlParameter" /> das angegebene <see cref="T:System.Data.SqlClient.SqlParameterCollection" />-Objekt hinzu.</summary>
+        <returns>Der Index des neuen <see cref="T:System.Data.SqlClient.SqlParameter" />-Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlParameter Add (string parameterName, System.Data.SqlDbType sqlDbType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.SqlClient.SqlParameter Add(string parameterName, valuetype System.Data.SqlDbType sqlDbType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.Add(System.String,System.Data.SqlDbType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="sqlDbType" Type="System.Data.SqlDbType" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters.</param>
+        <param name="sqlDbType">Einer der <see cref="T:System.Data.SqlDbType" />-Werte.</param>
+        <summary>Fügt der <see cref="T:System.Data.SqlClient.SqlParameter" /> einen <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> mit dem angegebenen Parameternamen und dem Datentyp hinzu.</summary>
+        <returns>Ein neues <see cref="T:System.Data.SqlClient.SqlParameter" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[Classic WebData SqlParameterCollection.Add3 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameterCollection.Add3 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameterCollection.Add3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameterCollection.Add3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlParameter Add (string parameterName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.SqlClient.SqlParameter Add(string parameterName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.Add(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("Do not call this method.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des der <see cref="T:System.Data.SqlClient.SqlParameter" /> in der Auflistung hinzu.</param>
+        <param name="value">Ein <see cref="T:System.Object" />.</param>
+        <summary>Fügt der <see cref="T:System.Data.SqlClient.SqlParameter" /> das angegebene <see cref="T:System.Data.SqlClient.SqlParameterCollection" />-Objekt hinzu.</summary>
+        <returns>Ein neues <see cref="T:System.Data.SqlClient.SqlParameter" />-Objekt.  
+  
+ Gehen Sie vorsichtig vor, bei der Verwendung dieser Überladung von der <see langword="SqlParameterCollection.Add" /> Methode, um Ganzzahlwerte für Parameter anzugeben. Da diese Überladung lässt eine <paramref name="value" /> des Typs <see cref="T:System.Object" />, müssen Sie den ganzzahligen Wert zu konvertieren einer <see cref="T:System.Object" /> eingeben, wenn der Wert 0 (null), ist, wie im folgenden C#-Beispiel veranschaulicht.  
+  
+```  
+parameters.Add("@pname", Convert.ToInt32(0));  
+```  
+  
+ Wenn Sie diese Konvertierung nicht ausführen, nimmt der Compiler an, dass Sie aufrufen möchten die <see langword="SqlParameterCollection.Add" /> (<see langword="string" />, <see langword="SqlDbType" />) überladen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[Classic WebData SqlParameterCollection.Add1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameterCollection.Add1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameterCollection.Add1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameterCollection.Add1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Data.SqlClient.SqlParameter" /> angegebenen in der <paramref name="value" /> Parameter wurde bereits hinzugefügt, um diesem oder einem anderen <see cref="T:System.Data.SqlClient.SqlParameterCollection" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="value" /> -Parameter ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlParameter Add (string parameterName, System.Data.SqlDbType sqlDbType, int size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.SqlClient.SqlParameter Add(string parameterName, valuetype System.Data.SqlDbType sqlDbType, int32 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.Add(System.String,System.Data.SqlDbType,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="sqlDbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="size" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters.</param>
+        <param name="sqlDbType">Die <see cref="T:System.Data.SqlDbType" /> von der <see cref="T:System.Data.SqlClient.SqlParameter" /> in der Auflistung hinzu.</param>
+        <param name="size">Die Größe als ein <see cref="T:System.Int32" />.</param>
+        <summary>Fügt eine <see cref="T:System.Data.SqlClient.SqlParameter" /> auf die <see cref="T:System.Data.SqlClient.SqlParameterCollection" />, Berücksichtigung des angegebenen Parameternamens <see cref="T:System.Data.SqlDbType" /> und Größe.</summary>
+        <returns>Ein neues <see cref="T:System.Data.SqlClient.SqlParameter" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung ist nützlich, wenn Sie z. B. einen Parameter mit einem Datentyp mit variabler Länge hinzufügen `varchar` oder `binary`.  
+  
+   
+  
+## Examples  
+ [!code-csharp[Classic WebData SqlParameterCollection.Add1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameterCollection.Add1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameterCollection.Add1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameterCollection.Add1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlParameter Add (string parameterName, System.Data.SqlDbType sqlDbType, int size, string sourceColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.SqlClient.SqlParameter Add(string parameterName, valuetype System.Data.SqlDbType sqlDbType, int32 size, string sourceColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.Add(System.String,System.Data.SqlDbType,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="sqlDbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="sourceColumn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters.</param>
+        <param name="sqlDbType">Einer der <see cref="T:System.Data.SqlDbType" />-Werte.</param>
+        <param name="size">Die Spaltenlänge.</param>
+        <param name="sourceColumn">Der Name der Quellspalte (<see cref="P:System.Data.SqlClient.SqlParameter.SourceColumn" />), wenn dieser <see cref="T:System.Data.SqlClient.SqlParameter" /> in einem Aufruf von <see cref="Overload:System.Data.Common.DbDataAdapter.Update" /> verwendet wird.</param>
+        <summary>Fügt der <see cref="T:System.Data.SqlClient.SqlParameter" /> einen <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> mit dem Parameternamen, dem Datentyp und der Spaltenlänge hinzu.</summary>
+        <returns>Ein neues <see cref="T:System.Data.SqlClient.SqlParameter" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[Classic WebData SqlParameterCollection.Add5 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameterCollection.Add5 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameterCollection.Add5 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameterCollection.Add5 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public override void AddRange (Array values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddRange(class System.Array values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.AddRange(System.Array)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Array" />
+      </Parameters>
+      <Docs>
+        <param name="values">Die hinzuzufügenden <see cref="T:System.Array" />-Werte.</param>
+        <summary>Fügt ein Array von Werten am Ende der <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Data.SqlClient.SqlParameter[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Data.SqlClient.SqlParameter[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.AddRange(System.Data.SqlClient.SqlParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Data.SqlClient.SqlParameter[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Die hinzuzufügenden <see cref="T:System.Data.SqlClient.SqlParameter" />-Werte.</param>
+        <summary>Fügt ein Array von <see cref="T:System.Data.SqlClient.SqlParameter" />-Werten am Ende der <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddWithValue">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlParameter AddWithValue (string parameterName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.SqlClient.SqlParameter AddWithValue(string parameterName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.AddWithValue(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters.</param>
+        <param name="value">Der hinzuzufügende Wert. Verwendung <see cref="F:System.DBNull.Value" /> anstelle von Null, um einen null-Wert anzugeben.</param>
+        <summary>Fügt am Ende der <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> einen Wert hinzu.</summary>
+        <returns>Ein <see cref="T:System.Data.SqlClient.SqlParameter" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>ersetzt die `SqlParameterCollection.Add` Methode, eine <xref:System.String> und ein <xref:System.Object>. Die Überladung der `Add` , die eine Zeichenfolge akzeptiert und ein Objekt wurde aufgrund von Mehrdeutigkeiten mit veraltet die `SqlParameterCollection.Add` Überladung mit einem <xref:System.String> und eine <xref:System.Data.SqlDbType> Enumerationswert, auf dem eine ganze Zahl mit der Zeichenfolge übergeben werden konnte, als Wert des Parameters oder der entsprechenden interpretiert <xref:System.Data.SqlDbType> Wert. Verwendung <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> immer, wenn Sie einen Parameter hinzufügen, indem Sie ihren Namen und Wert angeben möchten.  
+  
+ Für <xref:System.Data.SqlDbType> `Xml` Enumerationswerte, können Sie eine Zeichenfolge, die ein XML-Wert, ein <xref:System.Xml.XmlReader> abgeleitete Typinstanz oder eine <xref:System.Data.SqlTypes.SqlXml> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der `AddWithValue`-Methode veranschaulicht.  
+  
+ [!code-csharp[DataWorks SqlParameterCollection.AddWithValue#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlParameterCollection.AddWithValue/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlParameterCollection.AddWithValue#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlParameterCollection.AddWithValue/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public override void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.Data.SqlClient.SqlParameter" />-Objekte aus der <see cref="T:System.Data.SqlClient.SqlParameterCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Data.SqlClient.SqlParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Data.SqlClient.SqlParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.Contains(System.Data.SqlClient.SqlParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlClient.SqlParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der <see cref="T:System.Data.SqlClient.SqlParameter" />-Wert.</param>
+        <summary>Bestimmt, ob der angegebene <see cref="T:System.Data.SqlClient.SqlParameter" /> in dieser <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> enthält den Wert andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public override bool Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der <see cref="T:System.Object" />-Wert.</param>
+        <summary>Bestimmt, ob der angegebene <see cref="T:System.Object" /> in dieser <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> enthält den Wert andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public override bool Contains (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Contains(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der <see cref="T:System.String" />-Wert.</param>
+        <summary>Bestimmt, ob der Name des angegebenen Parameters in diesem <see cref="T:System.Data.SqlClient.SqlParameterCollection" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> enthält den Wert andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public override void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der aktuellen <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> kopierten Elemente ist.</param>
+        <param name="index">Eine 32-Bit-Ganzzahl, die den Index in der <see cref="T:System.Array" /> darstellt, ab dem kopiert werden soll.</param>
+        <summary>Kopiert alle Elemente der aktuellen <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> in das angegebene eindimensionale <see cref="T:System.Array" />, beginnend am angegebenen Index des Ziel-<see cref="T:System.Array" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Data.SqlClient.SqlParameter[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Data.SqlClient.SqlParameter[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.CopyTo(System.Data.SqlClient.SqlParameter[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Data.SqlClient.SqlParameter[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Die <see cref="T:System.Data.SqlClient.SqlParameterCollection" />, die das Ziel der aus der aktuellen <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> kopierten Elemente ist.</param>
+        <param name="index">Eine 32-Bit-Ganzzahl, die den Index in der <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> darstellt, ab dem kopiert werden soll.</param>
+        <summary>Kopiert alle Elemente der aktuellen <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> in die angegebene <see cref="T:System.Data.SqlClient.SqlParameterCollection" />, beginnend am angegebenen Zielindex.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public override int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameterCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine ganze Zahl, der die Anzahl von Elementen in der <see cref="T:System.Data.SqlClient.SqlParameterCollection" />. Schreibgeschützt.</summary>
+        <value>Die Anzahl der Elemente in der <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> als ganze Zahl.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> für das <see cref="T:System.Data.SqlClient.SqlParameterCollection" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameter">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbParameter GetParameter (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbParameter GetParameter(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.GetParameter(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameter">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbParameter GetParameter (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbParameter GetParameter(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.GetParameter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Data.SqlClient.SqlParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Data.SqlClient.SqlParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.IndexOf(System.Data.SqlClient.SqlParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlClient.SqlParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu suchende <see cref="T:System.Data.SqlClient.SqlParameter" />.</param>
+        <summary>Ruft die Position des angegebenen <see cref="T:System.Data.SqlClient.SqlParameter" /> innerhalb der Auflistung.</summary>
+        <returns>Die nullbasierte Position des angegebenen <see cref="T:System.Data.SqlClient.SqlParameter" /> also eine <see cref="T:System.Data.SqlClient.SqlParameter" /> innerhalb der Auflistung. Gibt -1 zurück, wenn das Objekt in der <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> nicht vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public override int IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu suchende <see cref="T:System.Object" />.</param>
+        <summary>Ruft die Position des angegebenen <see cref="T:System.Object" /> innerhalb der Auflistung.</summary>
+        <returns>Die nullbasierte Position des angegebenen <see cref="T:System.Object" /> also eine <see cref="T:System.Data.SqlClient.SqlParameter" /> innerhalb der Auflistung. Gibt -1 zurück, wenn das Objekt in der <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> nicht vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public override int IndexOf (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 IndexOf(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des zu suchenden <see cref="T:System.Data.SqlClient.SqlParameter" /> unter Berücksichtigung von Groß- und Kleinschreibung.</param>
+        <summary>Ruft die Position des angegebenen <see cref="T:System.Data.SqlClient.SqlParameter" /> mit dem angegebenen Namen ab.</summary>
+        <returns>Die nullbasierte Position des angegebenen <see cref="T:System.Data.SqlClient.SqlParameter" /> mit dem angegebenen Namen unter Berücksichtigung von Groß- und Kleinschreibung. Gibt -1 zurück, wenn das Objekt in der <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> nicht vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Data.SqlClient.SqlParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Data.SqlClient.SqlParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.Insert(System.Int32,System.Data.SqlClient.SqlParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.SqlClient.SqlParameter" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem der Wert eingefügt werden soll.</param>
+        <param name="value">Ein <see cref="T:System.Data.SqlClient.SqlParameter" />-Objekt, das in die <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> eingefügt werden soll.</param>
+        <summary>Fügt ein <see cref="T:System.Data.SqlClient.SqlParameter" />-Objekt am angegebenen Index in die <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> ein.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public override void Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem der Wert eingefügt werden soll.</param>
+        <param name="value">Ein <see cref="T:System.Object" />, das in die <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> eingefügt werden soll.</param>
+        <summary>Fügt ein <see cref="T:System.Object" /> am angegebenen Index in die <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> ein.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public override bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameterCollection.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> eine feste Größe hat.</summary>
+        <value>Gibt <see langword="true" /> Wenn die <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> hat eine feste Größe, und andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameterCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> schreibgeschützt ist.</summary>
+        <value>Gibt <see langword="true" /> Wenn die <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public override bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameterCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> synchronisiert ist.</summary>
+        <value>Gibt <see langword="true" /> Wenn die <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> synchronisiert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlParameter this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.SqlClient.SqlParameter Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameterCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des abzurufenden Parameters.</param>
+        <summary>Ruft den <see cref="T:System.Data.SqlClient.SqlParameter" /> am angegebenen Index ab.</summary>
+        <value>Der <see cref="T:System.Data.SqlClient.SqlParameter" /> am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Erstellen <xref:System.Data.SqlClient.SqlParameter> Objekte Eingabeparameter einer gespeicherten Prozedur angeben, die Ergebnisse in einer Output-Parameter zurückgibt. Der Code durchläuft die Elemente in der <xref:System.Data.SqlClient.SqlParameterCollection> und zeigt einige Parametereigenschaften im Konsolenfenster angezeigt. In diesem Beispiel wird angenommen, eine gültige Verbindungszeichenfolge für die **AdventureWorks** Beispieldatenbank auf einer Instanz von [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)].  
+  
+ [!code-csharp[Classic WebData SqlParameterCollection.Parent Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameterCollection.Parent Example/CS/source.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der angegebene Index ist nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlParameter this[string parameterName] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.SqlClient.SqlParameter Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameterCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des abzurufenden Parameters.</param>
+        <summary>Ruft den <see cref="T:System.Data.SqlClient.SqlParameter" /> mit dem angegebenen Namen ab.</summary>
+        <value>Der <see cref="T:System.Data.SqlClient.SqlParameter" /> mit dem angegebenen Namen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `parameterName` dient zum Nachschlagen des Werts der Index in der zugrunde liegenden <xref:System.Data.SqlClient.SqlParameterCollection>. Wenn die `parameterName` ist ungültig, ein <xref:System.IndexOutOfRangeException> ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Das angegebene <paramref name="parameterName" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Data.SqlClient.SqlParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Data.SqlClient.SqlParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.Remove(System.Data.SqlClient.SqlParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlClient.SqlParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Data.SqlClient.SqlParameter" />-Objekt, das aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt den angegebenen <see cref="T:System.Data.SqlClient.SqlParameter" /> aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel sucht nach einem <xref:System.Data.SqlClient.SqlParameter> -Objekt in ein <xref:System.Data.SqlClient.SqlParameterCollection> Auflistung. Wenn der Parameter vorhanden ist, wird im Beispiel wird sie entfernt. In diesem Beispiel wird vorausgesetzt, dass ein <xref:System.Data.SqlClient.SqlParameterCollection> Auflistung wurde bereits durch eine <xref:System.Data.SqlClient.SqlCommand>.  
+  
+ [!code-csharp[Classic WebData SqlParameterCollection.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlParameterCollection.Remove Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlParameterCollection.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlParameterCollection.Remove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Der Parameter ist kein <see cref="T:System.Data.SqlClient.SqlParameter" />.</exception>
+        <exception cref="T:System.SystemException">Der Parameter ist in der Auflistung nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public override void Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das aus der Auflistung zu entfernende Objekt.</param>
+        <summary>Entfernt den angegebenen <see cref="T:System.Data.SqlClient.SqlParameter" /> aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public override void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden <see cref="T:System.Data.SqlClient.SqlParameter" />-Objekts.</param>
+        <summary>Entfernt den <see cref="T:System.Data.SqlClient.SqlParameter" /> am angegebenen Index aus der <see cref="T:System.Data.SqlClient.SqlParameterCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public override void RemoveAt (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveAt(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.RemoveAt(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des zu entfernenden <see cref="T:System.Data.SqlClient.SqlParameter" />.</param>
+        <summary>Entfernt den <see cref="T:System.Data.SqlClient.SqlParameter" /> am angegebenen Parameternamen aus der <see cref="T:System.Data.SqlClient.SqlParameterCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameter">
+      <MemberSignature Language="C#" Value="protected override void SetParameter (int index, System.Data.Common.DbParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetParameter(int32 index, class System.Data.Common.DbParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.SetParameter(System.Int32,System.Data.Common.DbParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.Common.DbParameter" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameter">
+      <MemberSignature Language="C#" Value="protected override void SetParameter (string parameterName, System.Data.Common.DbParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetParameter(string parameterName, class System.Data.Common.DbParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlParameterCollection.SetParameter(System.String,System.Data.Common.DbParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="value" Type="System.Data.Common.DbParameter" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public override object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlParameterCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Data.SqlClient.SqlParameterCollection" /> synchronisiert werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

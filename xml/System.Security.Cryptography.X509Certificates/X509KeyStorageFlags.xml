@@ -1,0 +1,215 @@
+<Type Name="X509KeyStorageFlags" FullName="System.Security.Cryptography.X509Certificates.X509KeyStorageFlags">
+  <TypeSignature Language="C#" Value="public enum X509KeyStorageFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed X509KeyStorageFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert, wohin und wie der private Schlüssel eines X.509-Zertifikats importiert werden soll.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DefaultKeySet">
+      <MemberSignature Language="C#" Value="DefaultKeySet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags DefaultKeySet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.DefaultKeySet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509KeyStorageFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Welche Standardeinstellung wird verwendet.  Welche Benutzer ist in der Regel die Standardeinstellung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EphemeralKeySet">
+      <MemberSignature Language="C#" Value="EphemeralKeySet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags EphemeralKeySet = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509KeyStorageFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Exportable">
+      <MemberSignature Language="C#" Value="Exportable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags Exportable = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.Exportable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509KeyStorageFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Importierte Schlüssel werden als exportierbar markiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineKeySet">
+      <MemberSignature Language="C#" Value="MachineKeySet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags MachineKeySet = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.MachineKeySet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509KeyStorageFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Private Schlüssel werden im lokalen Computerspeicher anstelle der Speicher des aktuellen Benutzers gespeichert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistKeySet">
+      <MemberSignature Language="C#" Value="PersistKeySet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags PersistKeySet = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.PersistKeySet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509KeyStorageFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine PFX-Datei zugeordnete Schlüssel wird beibehalten, wenn Sie ein Zertifikat zu importieren.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserKeySet">
+      <MemberSignature Language="C#" Value="UserKeySet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags UserKeySet = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.UserKeySet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509KeyStorageFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Private Schlüssel werden im Speicher des aktuellen Benutzers anstelle der Informationsspeicher des lokalen Computers gespeichert. Dies tritt auf, auch wenn das Zertifikat angibt, dass die Schlüssel im lokalen Computerspeicher eingefügt werden sollen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserProtected">
+      <MemberSignature Language="C#" Value="UserProtected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags UserProtected = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.UserProtected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509KeyStorageFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Benachrichtigen Sie Benutzer über ein Dialogfeld oder eine andere Methode, wenn die Schlüssel zugegriffen wird.  Der Kryptografiedienstanbieter (CSP) verwendet, wird das genaue Verhalten definiert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

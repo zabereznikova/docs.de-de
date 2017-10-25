@@ -1,0 +1,365 @@
+<Type Name="LocalFileSettingsProvider" FullName="System.Configuration.LocalFileSettingsProvider">
+  <TypeSignature Language="C#" Value="public class LocalFileSettingsProvider : System.Configuration.SettingsProvider, System.Configuration.IApplicationSettingsProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LocalFileSettingsProvider extends System.Configuration.SettingsProvider implements class System.Configuration.IApplicationSettingsProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.LocalFileSettingsProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.SettingsProvider</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Configuration.IApplicationSettingsProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt Persistenz für Anwendungseinstellungsklassen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einstellungsanbieter definieren einen Mechanismus zum Speichern von Konfigurationsdaten in die Architektur der Anwendungseinstellungen verwendet. Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] enthält einen einzelnen Standardeinstellungsanbieter <xref:System.Configuration.LocalFileSettingsProvider>, der Konfigurationsdaten im lokalen Dateisystem gespeichert. Ein Anwendungseinstellungseigenschaft oder eine Gruppe von Eigenschaften werden zu einem Anbieter-spezifischen Einstellungen, durch die Verwendung der zugehörigen der <xref:System.Configuration.SettingsProviderAttribute>.  
+  
+ Die Client-Anwendung in der Regel nicht explizit auf diese Klasse zugreifen; Stattdessen ruft die Architektur der Anwendungseinstellungen automatisch die entsprechenden Einstellungsanbieter aus, wenn seine Dienste erforderlich sind. Z. B. viele der Elemente der <xref:System.Configuration.ApplicationSettingsBase> ihre Arbeit an den entsprechenden Einstellungsanbieter delegieren.  
+  
+ <xref:System.Configuration.LocalFileSettingsProvider>Beibehalten von Einstellungen auf Konfigurationsdateien mit der Erweiterung `.config`. Der Inhalt der Konfigurationsdateien werden als XML-Dokumente strukturiert. Je nachdem, ob die Einstellung des auf der Anwendungsebene oder Benutzerebene festgelegt ist, befindet sich die Konfigurationsdaten werden als Elemente innerhalb einer `<applicationSettings>` oder ein `<userSettings>` Abschnittsgruppe bzw.. Jede dieser Abschnittsgruppen wird dargestellt, von einer entsprechenden <xref:System.Configuration.AppSettingsSection> oder <xref:System.Configuration.ClientSettingsSection>zugeordnet. Jedes Abschnittsobjekt gehört und durch einen Konfigurationsabschnittshandler, also ein Objekt des Typs verwaltet <xref:System.Configuration.IConfigurationSectionHandler>.  
+  
+ Anwendungsspezifische Einstellungen und die Standardeinstellungen im Gültigkeitsbereich des Benutzers werden in einer Datei namens gespeichert `application.exe.config`, die im selben Verzeichnis wie die ausführbare Datei erstellt wird. Anwendungskonfigurationseinstellungen sind schreibgeschützt. Bestimmte Benutzerdaten befindet sich in einer Datei namens `user.config`, gespeichert, die im Basisverzeichnis des Benutzers. Wenn servergespeicherte Profile aktiviert sind, könnte zwei Versionen der Benutzerkonfigurationsdatei vorhanden sein. In diesem Fall haben die Einträge in der servergespeicherten Version Vorrang vor doppelte Einträge in der Konfigurationsdatei des lokalen Benutzers.  
+  
+ Weitere Informationen zu Anwendungseinstellungen finden Sie unter [Anwendung Einstellungen für Windows Forms](~/docs/framework/winforms/advanced/application-settings-for-windows-forms.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LocalFileSettingsProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.LocalFileSettingsProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.LocalFileSettingsProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor legt die <xref:System.Configuration.LocalFileSettingsProvider.ApplicationName%2A> Eigenschaft <xref:System.String.Empty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public override string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.LocalFileSettingsProvider.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der aktuell ausgeführten Anwendung fest.</summary>
+        <value>Eine Zeichenfolge, die Anzeigenamen der Anwendung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.LocalFileSettingsProvider.ApplicationName%2A> und <xref:System.Configuration.Provider.ProviderBase.Name%2A> Eigenschaften – Hilfe zur auf um entsprechend benannten Festlegen von Eigenschaften in verschiedenen Anwendungen zu unterscheiden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreviousVersion">
+      <MemberSignature Language="C#" Value="public System.Configuration.SettingsPropertyValue GetPreviousVersion (System.Configuration.SettingsContext context, System.Configuration.SettingsProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Configuration.SettingsPropertyValue GetPreviousVersion(class System.Configuration.SettingsContext context, class System.Configuration.SettingsProperty property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.LocalFileSettingsProvider.GetPreviousVersion(System.Configuration.SettingsContext,System.Configuration.SettingsProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsPropertyValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="property" Type="System.Configuration.SettingsProperty" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.Configuration.SettingsContext" /> , der beschreibt, wo die Anwendungseinstellungseigenschaft verwendet wird.</param>
+        <param name="property">Die <see cref="T:System.Configuration.SettingsProperty" /> , deren Wert zurückgegeben werden.</param>
+        <summary>Gibt den Wert der benannten Eigenschaft für die vorherige Version derselben Anwendung zurück.</summary>
+        <returns>Ein <see cref="T:System.Configuration.SettingsPropertyValue" /> , das die anwendungseinstellung darstellt, sofern gefunden, andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.LocalFileSettingsProvider.GetPreviousVersion%2A> -Methode werden häufig in Verbindung mit der <xref:System.Configuration.LocalFileSettingsProvider.Upgrade%2A> Methode, wenn die Anwendungseinstellungen für die während der Installations einer neuen Version einer Anwendung zu migrieren. Weitere Informationen finden Sie unter der Methode <xref:System.Configuration.LocalFileSettingsProvider.Upgrade%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValues">
+      <MemberSignature Language="C#" Value="public override System.Configuration.SettingsPropertyValueCollection GetPropertyValues (System.Configuration.SettingsContext context, System.Configuration.SettingsPropertyCollection properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Configuration.SettingsPropertyValueCollection GetPropertyValues(class System.Configuration.SettingsContext context, class System.Configuration.SettingsPropertyCollection properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.LocalFileSettingsProvider.GetPropertyValues(System.Configuration.SettingsContext,System.Configuration.SettingsPropertyCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsPropertyValueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="properties" Type="System.Configuration.SettingsPropertyCollection" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.Configuration.SettingsContext" /> , beschreibt die Anwendungsverwendung der aktuellen.</param>
+        <param name="properties">Ein <see cref="T:System.Configuration.SettingsPropertyCollection" /> , enthält die Einstellungsgruppe für die Eigenschaft, deren Werte abgerufen werden sollen.</param>
+        <summary>Gibt die Auflistung festlegen von Eigenschaftswerten für die angegebene Instanz und-Einstellungen Eigenschaft Anwendungsgruppe zurück.</summary>
+        <returns>Ein <see cref="T:System.Configuration.SettingsPropertyValueCollection" /> mit den Werten für die angegebene Eigenschaft Einstellungsgruppe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.LocalFileSettingsProvider.GetPropertyValues%2A> -Methode verwaltet auch den besonderen Anwendungseinstellungstyp <xref:System.Configuration.SpecialSetting.ConnectionString>. Verbindungszeichenfolgen werden in einem speziellen Abschnitt der Konfigurationsdatei, die vom Element getrennt gespeichert `<connectionstrings>`.  
+  
+> [!CAUTION]
+>  <xref:System.Configuration.LocalFileSettingsProvider>ist keine Verschlüsselung verwenden, um alle Einstellungen beizubehalten. Speichern Sie deshalb nicht als nur-Text-Kennwörter oder andere vertrauliche Informationen, die diesen Anbieter verwenden, ohne zusätzliche Vorsichtsmaßnahmen, z. B. separate Verschlüsselung der Informationen innerhalb der Konfigurationsdatei. Weitere Informationen finden Sie unter [Verschlüsseln von Informationen mithilfe von geschützten Konfiguration](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Eine Einstellung im Gültigkeitsbereich des Benutzers wurde gefunden, aber die aktuelle Konfiguration unterstützt nur Einstellungen im Gültigkeitsbereich der Anwendung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (string name, System.Collections.Specialized.NameValueCollection values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.LocalFileSettingsProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="values" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Anzeigename des Anbieters.</param>
+        <param name="values">Eine Auflistung der Name-Wert-Paare, die in der Konfiguration für diesen Anbieter die anbieterspezifischen Attribute darstellen.</param>
+        <summary>Initialisiert den Anbieter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset (System.Configuration.SettingsContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset(class System.Configuration.SettingsContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.LocalFileSettingsProvider.Reset(System.Configuration.SettingsContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.Configuration.SettingsContext" /> , beschreibt die Anwendungsverwendung der aktuellen.</param>
+        <summary>Setzt die angegebene Anwendung mit ihren Standardwerten alle Anwendungseigenschaften Einstellungen zugeordnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.LocalFileSettingsProvider.Reset%2A> Methode werden die gespeicherten Werte der Einstellungen der Anwendungsgruppe wiederhergestellt. Die Aktion der <xref:System.Configuration.LocalFileSettingsProvider.Reset%2A> hängt vom Umfang der Anwendungseinstellungseigenschaft:  
+  
+-   Anwendungsspezifische Einstellungen sind nicht betroffen.  
+  
+-   Benutzerspezifische Einstellungen werden auf die Standardwerte, die als nur-Lese Einträge in der Anwendungskonfigurationsdatei gespeichert werden zurückgesetzt `application.exe.config`. Jede Anwendung Einstellungswerte als servergespeichertes Profil hat Vorrang vor allen in das lokale Profil gefundene doppelte Werte, wenn servergespeicherte Profile verwendet werden, ist.  
+  
+ Beachten Sie, dass wenn servergespeicherte Profile verwendet werden, treten möglicherweise zwei `user.config` Dateien, eine für die lokalen Einstellungen und eine für das servergespeicherte Profil.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Eine Einstellung im Gültigkeitsbereich des Benutzers wurde gefunden, aber die aktuelle Konfiguration unterstützt nur Einstellungen im Gültigkeitsbereich der Anwendung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPropertyValues">
+      <MemberSignature Language="C#" Value="public override void SetPropertyValues (System.Configuration.SettingsContext context, System.Configuration.SettingsPropertyValueCollection values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetPropertyValues(class System.Configuration.SettingsContext context, class System.Configuration.SettingsPropertyValueCollection values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.LocalFileSettingsProvider.SetPropertyValues(System.Configuration.SettingsContext,System.Configuration.SettingsPropertyValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="values" Type="System.Configuration.SettingsPropertyValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.Configuration.SettingsContext" /> , beschreibt die Anwendungsverwendung der aktuellen.</param>
+        <param name="values">Ein <see cref="T:System.Configuration.SettingsPropertyValueCollection" /> , das die Gruppe der eigenschafteneinstellungen festzulegende darstellt.</param>
+        <summary>Legt die Werte der angegebenen Gruppe von Einstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Einstellungswrapperklasse abgeleitet <xref:System.Configuration.ApplicationSettingsBase>, enthält die <xref:System.Configuration.ApplicationSettingsBase.Save%2A> -Methode, die aufgerufen wird, um die Werte aller Einstellungseigenschaften beizubehalten. Diese Methode durchläuft alle Einstellungen Anbieter zugeordnete seine Eigenschaften und Aufrufe der <xref:System.Configuration.SettingsProvider.SetPropertyValues%2A> Methode für die einzelnen <xref:System.Configuration.SettingsProvider> zum Ausführen des Vorgangs für die Serialisierung.  
+  
+ <xref:System.Configuration.LocalFileSettingsProvider.SetPropertyValues%2A>einzeln serialisiert jeden benutzerspezifische Anwendungseinstellungseigenschaft an die entsprechende Anwendung, die in der entsprechenden Einstellung `user.config` Konfigurationsdatei.  
+  
+ Wird standardmäßig die <xref:System.Configuration.LocalFileSettingsProvider.SetPropertyValues%2A> Methode verwendet die folgenden logische Reihenfolge der Serialisierungsschema je nach Typ der Einstellungseigenschaft bestimmen:  
+  
+1.  Wenn der Typ eines zugeordneten <xref:System.ComponentModel.TypeConverter> mit einem <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> methodenimplementierung, diese Konvertierung wird verwendet.  
+  
+2.  XML-Serialisierung verwendet wird.  
+  
+ Sie können jedoch einen bevorzugten Serialisierungsmechanismus angeben, mit der <xref:System.Configuration.SettingsSerializeAsAttribute>. <xref:System.Configuration.LocalFileSettingsProvider>unterstützt keine binäre Serialisierung in [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)].  
+  
+ Wenn eine Eigenschaft benutzerspezifische Einstellungen wieder explizit auf den Standardwert festgelegt ist, wird die lokale Datei Einstellungsanbieter den Eintrag für die zugeordnete Einstellung aus der Konfigurationsdatei für den Benutzer entfernt. Der nächste Lesezugriff für diese Eigenschaft wird einfach den Standardwert verwendet.  
+  
+> [!CAUTION]
+>  <xref:System.Configuration.LocalFileSettingsProvider>ist keine Verschlüsselung verwenden, um alle Einstellungen beizubehalten. Speichern Sie deshalb nicht als nur-Text-Kennwörter oder andere vertrauliche Informationen, die diesen Anbieter verwenden, ohne zusätzliche Vorsichtsmaßnahmen, z. B. separate Verschlüsselung der Informationen innerhalb der Konfigurationsdatei. Weitere Informationen finden Sie unter [Verschlüsseln von Informationen mithilfe von geschützten Konfiguration](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Eine Einstellung im Gültigkeitsbereich des Benutzers wurde gefunden, aber die aktuelle Konfiguration unterstützt nur Einstellungen im Gültigkeitsbereich der Anwendung.  
+  
+ - oder -   
+  
+ Es wurde ein allgemeiner Fehler beim Speichern der Einstellungen der Konfigurationsdatei.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Upgrade">
+      <MemberSignature Language="C#" Value="public void Upgrade (System.Configuration.SettingsContext context, System.Configuration.SettingsPropertyCollection properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Upgrade(class System.Configuration.SettingsContext context, class System.Configuration.SettingsPropertyCollection properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.LocalFileSettingsProvider.Upgrade(System.Configuration.SettingsContext,System.Configuration.SettingsPropertyCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="properties" Type="System.Configuration.SettingsPropertyCollection" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.Configuration.SettingsContext" /> , beschreibt die Anwendungsverwendung der aktuellen.</param>
+        <param name="properties">Ein <see cref="T:System.Configuration.SettingsPropertyCollection" /> , enthält die Einstellungsgruppe für die Eigenschaft, deren Werte abgerufen werden sollen.</param>
+        <summary>Versucht, den vorherigen benutzerspezifische Einstellungen von einer früheren Version derselben Anwendung zu migrieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Configuration.LocalFileSettingsProvider>migriert die lokale und Roamingprofile in separaten Vorgängen.  
+  
+ Die <xref:System.Configuration.LocalFileSettingsProvider.Upgrade%2A> Methode unterdrückt wird, für jede Einstellung, die Anwendung verfügt über die <xref:System.Configuration.NoSettingsVersionUpgradeAttribute> angewendet werden, oder die gesamte Einstellungswrapperklasse, abgeleitet <xref:System.Configuration.ApplicationSettingsBase>.  
+  
+ Auf diese Weise dieser Methode aufrufen hängt vom Typ der Anwendung, die aktualisiert werden:  
+  
+-   Jede Version von einem [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] Anwendung in einem eigenen isolierten Installationsverzeichnis gespeichert ist. Nachdem eine neue Version des eine [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] Anwendung installiert ist, und wenn die neue Version zuerst ausgeführt wird, wird automatisch interner Logik Aufrufen <xref:System.Configuration.LocalFileSettingsProvider.Upgrade%2A> alle allgemeine Anwendungseigenschaften auf die neue Version zu migrieren. Weitere Informationen finden Sie unter [ClickOnce und Anwendungseinstellungen](http://msdn.microsoft.com/library/891caba6-faef-4a3c-8f71-60e6fadb60eb).  
+  
+-   Standard-Windows Forms und konsolenanwendungen müssen manuell aufrufen <xref:System.Configuration.LocalFileSettingsProvider.Upgrade%2A>, weil nicht Allgemein, automatische dabei zu bestimmen, wann eine solche Anwendung zuerst ausgeführt wird. Die zwei allgemeinen Verfahren sind entweder über das Installationsprogramm oder aus der Anwendung selbst, mit einer beibehaltenen Eigenschaft mit Namen häufig wie etwa `IsFirstRun`.  
+  
+ Beachten Sie, dass die neuere Version Migrieren von Anwendungseinstellungen, es muss auch laden, und lesen die ältere Version von den Anwendungseinstellungen. Daher muss sie mit der neuen und früheren Versionen der Anwendung kompatibel Wrapperklassen enthalten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Eine Einstellung im Gültigkeitsbereich des Benutzers wurde gefunden, aber die aktuelle Konfiguration unterstützt nur Einstellungen im Gültigkeitsbereich der Anwendung.  
+  
+ - oder -   
+  
+ Die vorherige Version der Konfigurationsdatei konnte nicht zugegriffen werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

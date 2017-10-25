@@ -1,0 +1,654 @@
+<Type Name="MtomMessageEncodingBindingElement" FullName="System.ServiceModel.Channels.MtomMessageEncodingBindingElement">
+  <TypeSignature Language="C#" Value="public sealed class MtomMessageEncodingBindingElement : System.ServiceModel.Channels.MessageEncodingBindingElement, System.ServiceModel.Description.IPolicyExportExtension, System.ServiceModel.Description.IWsdlExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MtomMessageEncodingBindingElement extends System.ServiceModel.Channels.MessageEncodingBindingElement implements class System.ServiceModel.Description.IPolicyExportExtension, class System.ServiceModel.Description.IWsdlExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.MtomMessageEncodingBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.MessageEncodingBindingElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IPolicyExportExtension</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IWsdlExportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Das Bindungselement, das die für MTOM (Message Transmission Optimization Mechanism)-Nachrichten verwendete Codierung und Version angibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Codieren wird eine Nachricht in eine Bytefolge transformiert. Beim Decodieren wird dieser Prozess umgekehrt. [!INCLUDE[indigo1](~/includes/indigo1-md.md)] enthält drei Typen für die Codierung von SOAP-Nachrichten: Text, binär und Message Transmission Optimization Mechanism (MTOM).  
+  
+ Das <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> stellt das Bindungselement dar, das die Zeichencodierung und die für Nachrichten mit MTOM-Verschlüsselung (Message Transmission Optimization Mechanism) verwendete Nachrichtenversion und andere Einstellungen angibt. MTOM ist eine effiziente Technologie zum Senden von Binärdaten in [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Meldungen. Der MTOM-Encoder versucht, einen Ausgleich zwischen Effizienz und Interoperabilität zu schaffen. Die MTOM-Verschlüsselung überträgt die meisten XML-Daten in Textform, optimiert aber große Binärdatenblöcke durch Übertragung ohne Konvertierung in ihr base64-verschlüsseltes Format.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)] zum Bindungselement, das angibt, dass Nachrichten mit einer Textdarstellung des XML-Inhalts verschlüsselt werden, finden Sie unter <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)] zum Bindungselement, das angibt, dass Nachrichten mit dem .NET Binary-Format für XML verschlüsselt wurden, finden Sie unter <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>.  
+  
+ Verwenden Sie die <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>-Klasse, um einen benutzerdefinierten Nachrichtenencoder zu implementieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MtomMessageEncodingBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.MtomMessageEncodingBindingElement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die verwendete Standard-<xref:System.ServiceModel.Channels.MessageVersion> umfasst WS-Addressing 1.0 und SOAP1.2. Die Standardzeichencodierung ist UTF-8.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MtomMessageEncodingBindingElement (System.ServiceModel.Channels.MessageVersion messageVersion, System.Text.Encoding writeEncoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.MessageVersion messageVersion, class System.Text.Encoding writeEncoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.#ctor(System.ServiceModel.Channels.MessageVersion,System.Text.Encoding)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="messageVersion" Type="System.ServiceModel.Channels.MessageVersion" />
+        <Parameter Name="writeEncoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="messageVersion">Die <see cref="T:System.ServiceModel.Channels.MessageVersion" />, die für die SOAP-Nachricht verwendet wird.</param>
+        <param name="writeEncoding">Die <see cref="T:System.Text.Encoding" />, die zur Formatierung der Nachrichtenzeichen verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.MtomMessageEncodingBindingElement" />-Klasse mit einer angegebenen Nachrichtenversion und Zeichencodierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die verwendete Standard-<xref:System.ServiceModel.Channels.MessageVersion> umfasst WS-Addressing 1.0 und SOAP1.2. Die Standardzeichencodierung ist UTF-8. Die standardmäßig unterstützten Zeichencodierungen sind UTF-8, Unicode und Big-Endian Unicode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="messageVersion" /> oder <paramref name="encoding" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          Für <paramref name="messageVersion" /> ist <see cref="P:System.ServiceModel.Channels.MessageVersion.None" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, der von der Kanalfactory erzeugt wird.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für den Kanal.</param>
+        <summary>Erstellt den Kanalfactorystapel auf dem Client, der einen angegebenen Kanaltyp für einen angegebenen Kontext erstellt.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.IChannelFactory`1" /> vom Typ <paramref name="TChannel" /> für den angegebenen Kontext.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, den der Kanallistener akzeptiert.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für den Listener.</param>
+        <summary>Erstellt den Kanallistenerstapel auf dem Client, der einen angegebenen Kanaltyp für einen angegebenen Kontext akzeptiert.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> vom Typ <paramref name="TChannel" /> für den angegebenen Kontext.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.CanBuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, der von der Kanalfactory erzeugt wird.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für den Kanal.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob die aktuelle Bindung eine Factory für einen angegebenen Kanaltyp und Kontext erstellen kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Kanalfactorystapel auf dem Dienst erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, den der Kanallistener akzeptiert.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für den Listener.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob die aktuelle Bindung einen Listener für einen angegebenen Typ von Kanal und Kontext erstellen kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene Kanallistenerstapel auf dem Dienst erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues, aus dem aktuellen Objekt initialisiertes <see cref="T:System.ServiceModel.Channels.MtomMessageEncodingBindingElement" />-Objekt.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.MtomMessageEncodingBindingElement" />-Objekt mit Eigenschaftswerten, die denen des aktuellen Elements entsprechen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dadurch wird eine vollständige Kopie der aktuellen Bindungselementobjektstruktur erstellt, die auch als tiefer Klon bezeichnet wird. Mit einem tiefen Klon eines Objekts wird neben der Kopie des Objekts eine Kopie aller Elemente erstellt, auf die das betreffende Objekt direkt oder indirekt verweist. (Dieser Vorgang wird als Kopieren des gesamten Objektdiagramms bezeichnet.) Durch das Zurückgeben eines tiefen Klons kann zur Laufzeit der Fall unterstützt werden, in dem mehrere benutzerdefinierte Bindungen ein benutzerdefiniertes Bindungselement gemeinsam nutzen. Wenn ein tiefer Klon nicht zurückgegeben wird, ist das Laufzeitverhalten nicht definiert. Ein flacher Klon eines Objekts stellt im Gegensatz dazu nur eine Kopie des Objekts dar. Wenn das Objekt Verweise auf andere Objekte enthält, werden von der flachen Kopie keine Kopien der Objekte erstellt, auf die verwiesen wird. Stattdessen werden nur die Verweise auf die ursprünglichen Objekte kopiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessageEncoderFactory">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.MessageEncoderFactory CreateMessageEncoderFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.MessageEncoderFactory CreateMessageEncoderFactory() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.CreateMessageEncoderFactory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageEncoderFactory</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Nachrichtenencoderfactory, die MTOM-Nachrichten verschlüsselt.</summary>
+        <returns>Die <see cref="T:System.ServiceModel.Channels.MessageEncoderFactory" />, die MTOM-Nachrichten verschlüsselt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Das typisierte Objekt, das von der Methode abgefragt wird.</typeparam>
+        <param name="context">Der <see cref="T:System.ServiceModel.Channels.BindingContext" /> für das Bindungselement.</param>
+        <summary>Gibt ggf. ein angefordertes typisiertes Objekt aus der entsprechenden Ebene im Bindungselementstapel zurück.</summary>
+        <returns>Das von <paramref name="T" /> angeforderte typisierte Objekt, oder <see langword="null" />, falls das Objekt nicht vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Anforderung können Sie typisierte Objekte für das Festlegen von Eigenschaften oder für das Abrufen des Status aus der entsprechenden Ebene im Bindungselementstapel abfragen. Wenn eine Ebene das Zurückgeben des angeforderten Objekts unterstützt, wird der Vorgang ausgeführt. Andernfalls wird der Aufruf lediglich an die nächst tiefere Ebene im Stapel delegiert. Wenn die letzte Ebene erreicht ist und das angeforderte Objekt von keiner Bindungselementebene unterstützt wird, gibt die Methode `null` zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBufferSize">
+      <MemberSignature Language="C#" Value="public int MaxBufferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(65536)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Puffergröße ab, oder legt diese fest.</summary>
+        <value>Die maximale Größe des Puffers. Der Standardwert ist 65536 (0x10000) Byte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Message Transmission Optimization Mechanism (MTOM)-Nachrichten in [!INCLUDE[indigo1](~/includes/indigo1-md.md)] können aus mehreren MIME-Teilen bestehen. Die Nachricht umfasst immer einen MIME-Teil (Multipurpose Internet Mail Extensions), der den infoset-Bereich der Nachricht enthält. Darüber hinaus enthält die Nachricht möglicherweise zusätzliche MIME-Teile mit binären Daten, wenn die Nachricht optimierte binäre Daten enthält. Es gibt keine Anforderungen, in welcher Reihenfolge diese MIME-Teile in der Nachricht angezeigt werden müssen. Der Lesevorgang der Nachricht muss gelegentlich MIME-Teile puffern, wenn sie nicht zu funktionieren scheinen. Der Nachrichtenlektürevorgang muss u.&#160;U. auch relevante MIME-Headerinformationen in jedem Teil puffern. Dieses <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A>-Kontingent sollte den Speicherplatz, der zum Lesen von MTOM-Nachrichten zugewiesen werden kann, übersteigen und somit die aufgrund von Pufferanforderungen übermäßige Speicherauslastung einschränken.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der festgelegte Wert ist kleiner oder gleich 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxReadPoolSize">
+      <MemberSignature Language="C#" Value="public int MaxReadPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxReadPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxReadPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(64)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl an XML-Readern ab, die einem Pool zugeordnet sind und zum Verarbeiten eingehender Nachrichten bereit sind, oder legt diese Anzahl fest.</summary>
+        <value>Die maximale Anzahl an Readern, die in diesem Pool gespeichert sind. Der Standardwert ist 64 Reader.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Erhöhen dieser Zahl wird der Speicherverbrauch gesteigert, jedoch wird der Encoder auf einen plötzlichen Anstieg eingehender Nachrichten vorbereitet, da er Reader aus dem Pool verwenden kann, die bereits erstellt wurden, sodass keine neuen Reader erstellt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als oder gleich 0&amp;#160;(null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxWritePoolSize">
+      <MemberSignature Language="C#" Value="public int MaxWritePoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxWritePoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxWritePoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(16)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl an XML-Writern ab, die einem Pool zugeordnet sind und zum Verarbeiten ausgehender Nachrichten verfügbar sind, oder legt diese Anzahl fest.</summary>
+        <value>Die maximale Anzahl an Writern, die in diesem Pool gespeichert sind. Der Standardwert ist 16 Writer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Erhöhen dieser Zahl wird der Speicherverbrauch gesteigert, jedoch wird der Encoder auf einen plötzlichen Anstieg ausgehender Nachrichten vorbereitet, da er Writer aus dem Pool verwenden kann, die bereits erstellt wurden, sodass keine neuen Writer erstellt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als oder gleich 0&amp;#160;(null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageVersion">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.MessageVersion MessageVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageVersion MessageVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MessageVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Versionen der SOAP-Nachricht und WS-Addressing ab, die verwendet oder erwartet werden, bzw. legt diese fest.</summary>
+        <value>Die <see cref="T:System.ServiceModel.Channels.MessageVersion" />, die für die SOAP-Nachricht verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die verwendete Standard-<xref:System.ServiceModel.Channels.MessageVersion> umfasst WS-Addressing 1.0 und SOAP1.2.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Wert <see cref="P:System.ServiceModel.Channels.MessageVersion.None" /> ist nicht zulässig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReaderQuotas">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryReaderQuotas ReaderQuotas { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlDictionaryReaderQuotas ReaderQuotas" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.ReaderQuotas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReaderQuotas</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Beschränkungen der Komplexität von XML-Nachrichten ab, die von mit diesem Bindungselement konfigurierten Endpunkten verarbeitet werden können, oder legt Beschränkungen fest.</summary>
+        <value>Das <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />, das die Komplexitätseinschränkungen für ausgetauschte SOAP-Nachrichten angibt. Die Standardwerte für diese Einschränkungen werden im folgenden Hinweisabschnitt angegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Komplexitätseinschränkungen schützen vor einer Klasse von DOS-Angriffen (Denial Of Service), die versuchen, die Nachrichtenkomplexität zum Binden von Endpunkt-Verarbeitungsressourcen zu verwenden. Die Eigenschaften, die diese Einschränkungen ausdrücken, und ihre Standardwerte (in Bytes) lauten wie folgt:  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> = 32  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A> = 8192  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A> = 16384  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> = 4096  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A> = 16384  
+  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)]<xref:System.Xml.XmlDictionaryReaderQuotas>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeMessageVersion">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeMessageVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeMessageVersion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.ShouldSerializeMessageVersion" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob die SOAP-Meldungsstrukturversion serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn die SOAP-Version serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeReaderQuotas">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeReaderQuotas ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeReaderQuotas() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.ShouldSerializeReaderQuotas" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob die für die Komplexität der SOAP-Meldungsstruktur geltenden Einschränkungswerte serialisiert werden sollen.</summary>
+        <returns>
+          <see langword="true" />Wenn der Aufrufattribute die SOAP-Nachricht serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeWriteEncoding">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeWriteEncoding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeWriteEncoding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.ShouldSerializeWriteEncoding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob das <see cref="T:System.Text.Encoding" />-Objekt, das zum Formatieren der Meldungszeichen verwendet wird, serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn der Typ der Formatierung der Zeichen serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy">
+      <MemberSignature Language="C#" Value="void IPolicyExportExtension.ExportPolicy (System.ServiceModel.Description.MetadataExporter exporter, System.ServiceModel.Description.PolicyConversionContext policyContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy(class System.ServiceModel.Description.MetadataExporter exporter, class System.ServiceModel.Description.PolicyConversionContext policyContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.System#ServiceModel#Description#IPolicyExportExtension#ExportPolicy(System.ServiceModel.Description.MetadataExporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.MetadataExporter" />
+        <Parameter Name="policyContext" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Der <see cref="T:System.ServiceModel.Description.WsdlExporter" />, der die Vertragsinformationen exportiert.</param>
+        <param name="policyContext">Ein <see cref="T:System.ServiceModel.Description.WsdlContractConversionContext" />-Objekt, das Zuordnungen aus exportierten WSDL-Elementen zur Vertragsbeschreibung bereitstellt.</param>
+        <summary>Fügt eine Richtlinienassertion in die WSDL ein, wenn sie erstellt wird, wodurch angegeben wird, dass eine MTOM-Codierung verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Richtlinienassertion gibt an, dass die MTOM-Optimierung an diesem Endpunkt verwendet werden kann. Dies bedeutet, dass Nachrichten im Text- oder MTOM-Format akzeptiert werden müssen. Am Client wird diese Richtlinienassertion analysiert und die Funktion zum Akzeptieren MTOM-codierter Nachrichten aktiviert. Die Richtlinienassertion lautet wie folgt.  
+  
+```  
+<wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="policyContext" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IWsdlExportExtension.ExportContract">
+      <MemberSignature Language="C#" Value="void IWsdlExportExtension.ExportContract (System.ServiceModel.Description.WsdlExporter exporter, System.ServiceModel.Description.WsdlContractConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IWsdlExportExtension.ExportContract(class System.ServiceModel.Description.WsdlExporter exporter, class System.ServiceModel.Description.WsdlContractConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.System#ServiceModel#Description#IWsdlExportExtension#ExportContract(System.ServiceModel.Description.WsdlExporter,System.ServiceModel.Description.WsdlContractConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.WsdlExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.WsdlContractConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Der <see cref="T:System.ServiceModel.Description.WsdlExporter" />, der die Vertragsinformationen exportiert.</param>
+        <param name="context">Ein <see cref="T:System.ServiceModel.Description.WsdlContractConversionContext" />-Objekt, das Zuordnungen aus exportierten WSDL-Elementen zur Vertragsbeschreibung bereitstellt.</param>
+        <summary>Ändert den WSDL-Vertrag für MTOM-spezifische Informationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.System%23ServiceModel%23Description%23IWsdlExportExtension%23ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29>-Methode, mit der die SOAP-Nachrichtenversion in die WSDL gesetzt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint">
+      <MemberSignature Language="C#" Value="void IWsdlExportExtension.ExportEndpoint (System.ServiceModel.Description.WsdlExporter exporter, System.ServiceModel.Description.WsdlEndpointConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint(class System.ServiceModel.Description.WsdlExporter exporter, class System.ServiceModel.Description.WsdlEndpointConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.System#ServiceModel#Description#IWsdlExportExtension#ExportEndpoint(System.ServiceModel.Description.WsdlExporter,System.ServiceModel.Description.WsdlEndpointConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.WsdlExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.WsdlEndpointConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Der <see cref="T:System.ServiceModel.Description.WsdlExporter" />, der die Vertragsinformationen exportiert.</param>
+        <param name="context">Ein <see cref="T:System.ServiceModel.Description.WsdlContractConversionContext" />-Objekt, das Zuordnungen aus exportierten WSDL-Elementen zur Endpunktbeschreibung bereitstellt.</param>
+        <summary>Setzt die SOAP-Nachrichtenversion in die WSDL.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein beliebiges benutzerdefiniertes Nachrichtencodierungs-Bindungselement, das SOAP unterstützt, ist für das Hinzufügen der SOAP-Nachrichtenversion in die WSDL verantwortlich.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding WriteEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding WriteEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.WriteEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.EncodingConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Codierung ab, oder legt sie fest, die zur Formatierung der Zeichen in der Textnachricht verwendet wird.</summary>
+        <value>Die <see cref="T:System.Text.Encoding" />, die zur Formatierung der Zeichen in der Textnachricht verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardtextcodierung ist das UTF-8-Format. Andere mögliche Codierungen sind beispielsweise Unicode und BigEndian Unicode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Wert ist kein gültiger Textcodierungswert.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

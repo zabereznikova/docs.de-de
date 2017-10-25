@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.CSharp">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.CSharp" /> -Namespace enthält Klassen, die die Kompilierung und codegenerierung mit der C#-Sprache unterstützen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

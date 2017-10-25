@@ -1,0 +1,308 @@
+<Type Name="CompareValidator" FullName="System.Web.UI.MobileControls.CompareValidator">
+  <TypeSignature Language="C#" Value="public class CompareValidator : System.Web.UI.MobileControls.BaseValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CompareValidator extends System.Web.UI.MobileControls.BaseValidator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.CompareValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.BaseValidator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Web.UI.Design.WebControlToolboxItem, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:CompareValidator runat="server" ErrorMessage="CompareValidator"&gt;&lt;/{0}:CompareValidator&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bestimmt die Gültigkeit, indem ein bestimmtes Feld in einem Steuerelement mit einem bestimmten Feld in einem anderen Steuerelement verglichen wird, wobei ein festlegbarer Vergleichsoperator verwendet wird. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung vergleichen Validierungssteuerelemente, stellen Sie sicher, dass die Werte von zwei Textfelder die gleichen Werte, z. B. ein neues Kennwort bestätigen bereitgestellt werden.  
+  
+ Diese Klasse verhält sich genauso wie ASP.NET <xref:System.Web.UI.MobileControls.CompareValidator> Steuerelement.  
+  
+ Standardmäßig <xref:System.Web.UI.MobileControls.Command> Steuerelemente in einem Formular löst alle Validierungssteuerelemente für das Formular validiert, wenn das Formular an den Server gesendet wird. Um automatische Validierung zu deaktivieren, legen die <xref:System.Web.UI.MobileControls.Command.CausesValidation%2A> Eigenschaft auf die <xref:System.Web.UI.MobileControls.Command> -Steuerelementen an `false`.  
+  
+ Überprüfung erfolgreich ist, wenn das Eingabesteuerelement leer ist. Verwenden einer <xref:System.Web.UI.MobileControls.RequiredFieldValidator> Steuerelement der Benutzer zur Eingabe von Daten in das Eingabesteuerelement erforderlich.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode verwendet eine <xref:System.Web.UI.MobileControls.CompareValidator> Steuerelement (`CompareValidator1`) zu überprüfen, ob die beiden Textfelder den gleichen Wert und Warnungen den Benutzer haben, wenn sie sich unterscheiden.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[MobileCompareValidatorSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileCompareValidatorSample/CS/default.aspx#1)]
+ [!code-aspx-vb[MobileCompareValidatorSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileCompareValidatorSample/VB/default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompareValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.CompareValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der CompareValidator für mobile-Steuerelemente. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlPropertiesValid">
+      <MemberSignature Language="C#" Value="protected override bool ControlPropertiesValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ControlPropertiesValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.CompareValidator.ControlPropertiesValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die zu überprüfenden Eigenschaften gültig sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />, wenn die zu überprüfenden Eigenschaften gültig sind, anderenfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Web.UI.MobileControls.BaseValidator.ControlToValidate" /> -Eigenschaft ist leer.  
+  
+ - oder -   
+  
+ das zu vergleichende Steuerelement ist nicht vorhanden.  
+  
+ - oder -   
+  
+ das zu validierende Steuerelement und das Steuerelement zu vergleichende sind Steuerelement identisch.  
+  
+ - oder -   
+  
+ die Werte der beiden Steuerelemente sind nicht vergleichbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlToCompare">
+      <MemberSignature Language="C#" Value="public string ControlToCompare { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ControlToCompare" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.CompareValidator.ControlToCompare" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.MobileControls.Converters.ValidatedMobileControlConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ID des Eingabesteuerelement, verglichen werden soll. Der Standardwert ist eine leere Zeichenfolge („“). Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die ID des Eingabesteuerelements, verglichen werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die ID des Steuerelements, der ein Wertvergleich vorgenommen werden. Sie können die <xref:System.Web.UI.MobileControls.CompareValidator.ValueToCompare%2A> Eigenschaft als Alternative. Wenn beide angegeben werden, den Wert der <xref:System.Web.UI.MobileControls.CompareValidator.ControlToCompare%2A> -Eigenschaft Vorrang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWebValidator">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.BaseValidator CreateWebValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.BaseValidator CreateWebValidator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.CompareValidator.CreateWebValidator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BaseValidator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ermittelt und definiert die allgemeinen Eigenschaften einer webbasierten Bestätigung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Keine</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateIsValid">
+      <MemberSignature Language="C#" Value="protected override bool EvaluateIsValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool EvaluateIsValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.CompareValidator.EvaluateIsValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird während der Validierungsphase aufgerufen, wenn ASP.NET eine Seite für die Mobile Web Form verarbeitet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Keine</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operator">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ValidationCompareOperator Operator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ValidationCompareOperator Operator" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.CompareValidator.Operator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidationCompareOperator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die Vergleichsoperation, die bei der Validierung verwendet. Der Standardwert ist <see langword="Equal" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Vergleichsoperation, die bei der Validierung verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.BaseValidator.ControlToValidate%2A> -Eigenschaft muss auf der linken Seite des Vergleichsoperators, sein und die <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> Eigenschaft auf der rechten Seite, damit eine gültige Auswertung auftreten.  
+  
+ Die folgende Tabelle zeigt die verfügbaren Vorgänge.  
+  
+ `DataTypeCheck`  
+ Überprüft, ob die Datentypen für die beiden Steuerelemente gültig sind.  
+  
+ `Equal`  
+ Überprüft, ob die beiden Steuerelemente entsprechen.  
+  
+ `GreaterThan`  
+ Überprüft, ob ein Steuerelement die Steuerelemente größer ist.  
+  
+ `GreaterThanEqual`  
+ Überprüft, ob ein Steuerelement größer als oder gleich dem anderen Steuerelement.  
+  
+ `LessThan`  
+ Überprüft, ob ein Steuerelement kleiner als das andere Steuerelement ist.  
+  
+ `LessThanEqual`  
+ Überprüft, ob ein Steuerelement kleiner oder gleich dem anderen Steuerelement ist.  
+  
+ `NotEqual`  
+ Überprüft, ob die Steuerelemente nicht miteinander gleich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ValidationDataType Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ValidationDataType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.CompareValidator.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidationDataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Datentyp der beiden verglichenen Werte fest. Der Standardwert ist <see langword="string" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Datentyp der beiden Werte, die verglichen werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle enthält die Definitionen der <xref:System.Web.UI.WebControls.ValidationDataType> Enumerationen. Die Werte werden implizit in den angegebenen Datentyp konvertiert, bevor der Vergleich durchgeführt wird. Wenn die Datenkonvertierung ein Fehler auftritt, bei der datenvalidierung.  
+  
+|Enumeration|Wert|Datentyp|  
+|-----------------|-----------|---------------|  
+|`String`|0|`String`|  
+|`Integer`|1|`Integer`|  
+|`Double`|2|`Double`|  
+|`Date`|3|`DateTime`|  
+|`Currency`|4|`Currency`|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert ist nicht der <see cref="T:System.Web.UI.WebControls.ValidationDataType" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueToCompare">
+      <MemberSignature Language="C#" Value="public string ValueToCompare { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValueToCompare" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.CompareValidator.ValueToCompare" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert zu vergleichen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der zu vergleichende Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn beide die <xref:System.Web.UI.MobileControls.CompareValidator.ValueToCompare%2A> und <xref:System.Web.UI.MobileControls.CompareValidator.ControlToCompare%2A> Eigenschaften vorhanden sind, den Wert von der <xref:System.Web.UI.MobileControls.CompareValidator.ControlToCompare%2A> Eigenschaft wird verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

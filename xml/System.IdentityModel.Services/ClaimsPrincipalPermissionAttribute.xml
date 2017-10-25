@@ -1,0 +1,173 @@
+<Type Name="ClaimsPrincipalPermissionAttribute" FullName="System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ClaimsPrincipalPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ClaimsPrincipalPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method | System.AttributeTargets.Property, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Sicherheitsattribut verwendet, um deklarative zugriffsüberprüfungen auf der Grundlage der bereitgestellten Logik zuzuweisen der <see cref="T:System.Security.Claims.ClaimsAuthorizationManager" /> Instanz im Kontext aktuellen Anwendung. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> wird verwendet, um deklarativ eine zugriffsprüfung mit den konfigurierten anfordern <xref:System.Security.Claims.ClaimsAuthorizationManager>.  
+  
+ Geben Sie eine der der <xref:System.Security.Permissions.SecurityAction> Werte eine `Resource` und ein `Operation` in Ihrer <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Deklaration. Die `Resource` und `Operation` Eigenschaften angeben, die Ressource und die Aktion für die der aktuelle Prinzipal (<xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>) muss für die Ausführung zu fortfahren autorisiert sein. Wenn der aktuelle Prinzipal zum Ausführen von der angegebenen Aktion (Vorgang) für die angegebene Ressource nicht autorisiert ist eine <xref:System.Security.SecurityException> ausgelöst wird.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Klasse verwendet die Ansprüche Autorisierungs-Manager konfiguriert, indem die <xref:System.IdentityModel.Configuration.IdentityConfiguration> , festgelegt ist, unter der <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> Eigenschaft. Dies ist "true" in allen Fällen auch in Szenarien, in denen WS-Verbund nicht verwendet wird. aktive (WCF)-Webanwendungen und konsolenanwendungen. Sie können die anspruchsautorisierungs-Manager in der Konfiguration oder programmgesteuert festlegen. Um die Ansprüche Autorisierungs-Manager in einer Konfigurationsdatei anzugeben, legen die [ &lt;ClaimsAuthorizationManager&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) Element unter einer [ &lt;IdentityConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element und stellen Sie sicher, dass diese identitätskonfiguration verwiesen wird die [ &lt;FederationConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) Element, das von der Laufzeit geladen wird (z. B. durch Festlegen der `identityConfigurationName` Attribut). Um die Ansprüche Autorisierungs-Manager programmgesteuert festzulegen, geben Sie einen Handler für das <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Methode geschützt werden, indem diese mit der <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Attribut. Das Attribut wird ausgewertet, ob der Zugriff auf den aktuellen Prinzipal erteilt werden soll, durch die Nutzung der Logik von bereitgestellten der <xref:System.Security.Claims.ClaimsAuthorizationManager> Instanz im Kontext Anwendung. Wenn der aktuelle Prinzipal für die angegebene Aktion für die angegebene Ressource nicht autorisiert ist eine <xref:System.Security.SecurityException> auslöst, andernfalls wird die Ausführung fortgesetzt.  
+  
+ [!code-csharp[WifCppWithCam#4](~/samples/snippets/csharp/VS_Snippets_Misc/wifcppwithcam/cs/wifcppwithcam/program.cs#4)]  
+  
+ Das folgende XML zeigt die Mindestkonfiguration erforderlich, um eine benutzerdefinierte anspruchsautorisierung verwenden Manager mit der <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Klasse. Sie müssen zumindest beide deklariert die `system.identityModel` und die `system.identityModel.services` im Berichtsbereiche der `<configSection>` Element, und geben Sie Ihre Autorisierungs-Manager in eine [ &lt;ClaimsAuthorizationManager&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)Element in der Standardkonfiguration für die Identität. Dadurch wird sichergestellt, dass die Autorisierungs-Manager aus der Standardkonfiguration für den Verbund verwiesen wird. Alternativ können Sie angeben, den Namen der identitätskonfiguration, die unter dem Autorisierungs-Manager, in angegeben ist der `identityConfigurationName` Attribut von der [ &lt;FederationConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) Element.  
+  
+```xml  
+<?xml version="1.0" encoding="utf-8" ?>  
+<configuration>  
+  <configSections>  
+    <!-- WIF configuration sections -->  
+    <section name="system.identityModel" type="System.IdentityModel.Configuration.SystemIdentityModelSection, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>  
+    <section name="system.identityModel.services" type="System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>  
+  </configSections>  
+  
+  <startup>  
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
+  </startup>  
+  
+  <system.identityModel>  
+    <identityConfiguration>  
+      <claimsAuthorizationManager type ="MyClaimsAuthorizationManager.MyClaimsAuthorizationManager, MyClaimsAuthorizationManager"/>  
+    </identityConfiguration>  
+  </system.identityModel>  
+  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsPrincipalPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Einer der Werte, die die Sicherheitsaktionen gibt an, die bei Verwendung deklarativen Sicherheit ausgeführt werden können.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Müssen Sie auch angeben der `Operation` und `Resource` Eigenschaften in Ihrem <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Deklaration oder eine Ausnahme ausgelöst, wenn die <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute.CreatePermission%2A> Methode wird aufgerufen, um die Berechtigung zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2103:ReviewImperativeSecurity", Justification="It is expected that the runtime’s behavior would rely on changing data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt neue Instanz der <see cref="T:System.IdentityModel.Services.ClaimsPrincipalPermission" /> -Klasse, die basierend auf der aktuellen Instanz.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Services.ClaimsPrincipalPermission" /> mit den Betrieb und die Ressource, die dieser Instanz zugeordnet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> Objekt wird erstellt, mit dem Wert, der die <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute.Operation%2A> Eigenschaft und die <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute.Resource%2A> Eigenschaft. Sie müssen angeben, der `Operation` und `Resource` Eigenschaften in Ihrer <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Deklaration oder eine Ausnahme ausgelöst, wenn die <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute.CreatePermission%2A> Methode wird aufgerufen, um die Berechtigung erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operation">
+      <MemberSignature Language="C#" Value="public string Operation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Operation" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute.Operation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt Sie den Vorgang für den der aktuelle Prinzipal autorisiert werden soll für die angegebene Ressource fest.</summary>
+        <value>Die Aktion, für die der aktuelle Prinzipal autorisiert werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Vorgang ist die Aktion, die für die der aktuelle Prinzipal für die angegebene Ressource autorisiert werden soll. Müssen Sie festlegen der `Operation` Eigenschaft in Ihrem <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Deklaration oder eine Ausnahme ausgelöst, wenn die <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute.CreatePermission%2A> Methode wird aufgerufen, um die Berechtigung zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resource">
+      <MemberSignature Language="C#" Value="public string Resource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Resource" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute.Resource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ressource, auf der der Prinzipal soll, zum Ausführen der angegebenen Aktion (Vorgang autorisiert werden).</summary>
+        <value>Die Ressource, auf der der aktuelle Prinzipal autorisiert werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ressource, auf der der aktuelle Prinzipal zum Ausführen der angegebenen Aktion autorisiert werden soll. Müssen Sie festlegen der `Resource` Eigenschaft in Ihrem <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Deklaration oder eine Ausnahme ausgelöst, wenn die <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute.CreatePermission%2A> Methode wird aufgerufen, um die Berechtigung zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

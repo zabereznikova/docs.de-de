@@ -1,0 +1,319 @@
+<Type Name="EditorPartCollection" FullName="System.Web.UI.WebControls.WebParts.EditorPartCollection">
+  <TypeSignature Language="C#" Value="public sealed class EditorPartCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EditorPartCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.EditorPartCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält eine Auflistung von <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" />-Steuerelementen zum Bearbeiten von Eigenschaften, Layout, Darstellung und Verhalten von <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />-Steuerelementen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Klasse ist eine schreibgeschützte Auflistung von <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente, die in der Regel verwendet, indem ein <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Zone aus, um den Satz von nachverfolgen <xref:System.Web.UI.WebControls.WebParts.EditorPart> der Zone enthaltenen Steuerelemente.  
+  
+ Wenn eine Webparts-Seite in den Bearbeitungsmodus wechselt, und ein Benutzer ein Steuerelement wählt bearbeiten, beginnt der Bearbeitung. Die Zone erstellt ein neues <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Objekt bestehend aus dem <xref:System.Web.UI.WebControls.WebParts.EditorPart> der Zone enthaltenen Steuerelemente. In verschiedenen Phasen der Bearbeitung, greift die Zone auf der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Objekt speichern oder Abrufen der Eigenschaft liefern Werte zwischen den <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente in der Auflistung und die <xref:System.Web.UI.WebControls.WebParts.WebPart> steuern, gerade bearbeitet wird.  
+  
+ Sie erstellen eine <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Auflistung von Steuerelementen für die programmgesteuerte Verwendung, wenn Sie z. B. einen Batchvorgang für einen Satz von auszuführenden müssen <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente. Obwohl die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Objekt ist schreibgeschützt, Sie können die programmgesteuerte Änderungen vornehmen, auf die Eigenschaften der zugrunde liegenden Steuerelemente in der Auflistung verwiesen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, verwendet die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Klasse. Es gibt vier Teile dieses Codebeispiel:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Anzeigemodi auf einer Webparts-Seite.  
+  
+-   Eine Klasse für ein benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement namens `TextDisplayWebPart`, die auf der Webseite verwiesen wird und diese bearbeitet wird, indem Sie die <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente.  
+  
+-   Eine Webseite, verweist der `TextDisplayWebPart` steuern, enthält ein <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement mit mehreren der <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Steuerelemente aus der Webparts-Steuerelementsatz deklarierte in der Zone, und enthält eine ereignisgesteuerte Code zum Erstellen und Bearbeiten einer <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection>Objekt.  
+  
+-   Eine Erläuterung, wie im Codebeispiel wird funktioniert, wenn Sie in einem Browser zu laden.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_EditorPartCollection_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPartCollection_Overview/CS/displaymodecs.ascx#4)]
+ [!code-aspx-vb[WebParts_EditorPartCollection_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPartCollection_Overview/VB/displaymodevb.ascx#4)]  
+  
+ Der zweite Teil des Codebeispiels wird die `TextDisplayWebPart` Steuerelement. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ Beachten Sie, dass das Steuerelement eine Eigenschaft mit dem Namen besitzt `ContentText`; diese Eigenschaft enthält den Wert, der der Benutzer in das Textfeld eingibt. Diese benutzerdefinierte Eigenschaft kann bearbeitet werden, wenn das Steuerelement in den Bearbeitungsmodus wechseln, zusammen mit der Standard ist <xref:System.Web.UI.WebControls.WebParts.WebPart> Eigenschaften zu steuern.  
+  
+ [!code-csharp[WebParts_EditorPartCollection_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPartCollection_Overview/CS/textdisplaywebpart.cs#3)]
+ [!code-vb[WebParts_EditorPartCollection_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPartCollection_Overview/VB/textdisplaywebpart.vb#3)]  
+  
+ Der dritte Teil des Codebeispiels wird die Webseite. Beachten Sie, dass die `<asp:editorzone>` Element für die Seite enthält Deklarationen für drei <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente. Zwei dieser Steuerelemente sind Teil einer benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> -Objekt, das erstellt wird die `Button1_Click` Methode ausgeführt wird.  
+  
+ [!code-aspx-csharp[WebParts_EditorPartCollection_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPartCollection_Overview/CS/editorpartcollectioncs.aspx#1)]
+ [!code-aspx-vb[WebParts_EditorPartCollection_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPartCollection_Overview/VB/editorpartcollectionvb.aspx#1)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die Seite in den Bearbeitungsmodus wechseln, indem auswählen **bearbeiten** in der **Anzeigemodus** Dropdownlisten-Steuerelement. Sie können die Verbmenü (Pfeil nach unten) in der Titelleiste des klicken Sie auf die `TextDisplayWebPart` Steuerelement, und klicken Sie auf **bearbeiten** so bearbeiten Sie das Steuerelement. Wenn die Bearbeitung Benutzeroberfläche (UI) angezeigt wird, können Sie alle sehen die <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente. Sie klicken Sie auf die **EditorPartCollection erstellen** Schaltfläche, um die Auswirkungen auf finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente, die vom Code erstellt werden, die sind die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Objekt. Beachten Sie außerdem, dass die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement ermöglicht es Ihnen so bearbeiten Sie die benutzerdefinierte `TextDisplayWebPart.ContentText` Eigenschaft. Dies ist möglich, weil die Eigenschaft gekennzeichnet ist ein `WebBrowsable` Attribut im Quellcode für das Steuerelement. Wenn Sie den Wert der Eigenschaft in die bearbeitungs-UI aktualisieren, müssen Sie die Seite zurückkehren, in normalen Durchsuchen-Modus, um die Auswirkung der Aktualisierung finden Sie unter der `TextDisplayWebPart.ContentText` Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditorPartCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPartCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue leere Instanz mit der <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartCollection" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.%23ctor%2A> Konstruktor initialisiert eine leere Instanz der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Klasse. Diese Überladung des Konstruktors wird intern von verwendet die <xref:System.Web.UI.WebControls.WebParts.EditorZone> -Klasse in seiner <xref:System.Web.UI.WebControls.WebParts.EditorZone.CreateEditorParts%2A> Methode, um ein leeres Auflistungsobjekt zu erstellen. Die Zone erstellt dann alle Instanzen der <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente, die in der Vorlage der untergeordneten Zone deklariert und verwendet eine interne Methode, um sie auf die Auflistung hinzuzufügen.  
+  
+ Nicht möglich, verwenden Sie diese Überladung von der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.%23ctor%2A> Konstruktor zum Erstellen einer neuen Instanz des <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> und hinzufügen <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente darauf. Sie müssen mithilfe einer der anderen Überladungen für die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.%23ctor%2A> Konstruktor stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditorPartCollection (System.Collections.ICollection editorParts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection editorParts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPartCollection.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="editorParts" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="editorParts">Ein <see cref="T:System.Collections.ICollection" /> von <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartCollection" /> Klasse durch die Übergabe einer <see cref="T:System.Collections.ICollection" /> Auflistung von <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.%23ctor%2A> Konstruktor initialisiert eine Instanz von der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Klasse auf und übergibt eine Auflistung von <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente. Dies ist eine Überladung von der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.%23ctor%2A> Konstruktor, die Sie, zum Erstellen eines neuen verwenden können <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> -Objekt und fügen Sie <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente darauf.  
+  
+ Obwohl die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> vom Konstruktor erstellte Instanz schreibgeschützt ist, können Sie weiterhin die einzelnen zugreifen <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Steuerelemente in der Auflistung programmgesteuert und ihre Eigenschaften und Methoden aufrufen.  
+  
+ Ein häufiges Szenario für die Verwendung der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.%23ctor%2A> Konstruktor wäre, wenn Sie einige Batchvorgang für einen ganzen Satz von auszuführenden <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente, z. B. das Ändern der Inhalte, die Darstellung oder die Position des von ihnen eine zusammengehörige Gruppe.  
+  
+ Ein weiteres gängiges Szenario für die Verwendung der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.%23ctor%2A> Konstruktor ist das Entwickeln von benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente, die Sie ein Serversteuerelement zuordnen möchten, sodass Benutzer die benutzerdefinierte Eigenschaften des Steuerelements bearbeiten können. In diesem Szenario muss ein Serversteuerelement implementieren die <xref:System.Web.UI.WebControls.WebParts.IWebEditable> -Schnittstelle, und im Rahmen dieser Aufgabe müssen sie implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> Methode. In dieser Methode ein, aktivieren Sie das benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente Serversteuerelements, bearbeiten, müssen Sie Hinzufügen der <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Steuerelementen an eine <xref:System.Collections.ICollection> Instanz, wie z. B. ein <xref:System.Collections.ArrayList> Objekt. Sie die Auflistung von übergeben können <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Steuerelementen an die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.%23ctor%2A> Konstruktor zum Erstellen eines neuen <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Objekt, das die <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Zone verwendet, um alle Steuerelemente einrichten und die Bearbeitung beginnen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> und, auch wenn die Auflistung schreibgeschützt ist, noch ausführen, einen Batchvorgang zum Ändern der einzelnen <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente in der Auflistung. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> -Klassenübersicht.  
+  
+ Der Code in der `Button1_Click` Ereignis erstellt ein <xref:System.Collections.ArrayList> Objekt, fügt zwei der drei <xref:System.Web.UI.WebControls.WebParts.EditorPart> auf der Seite auf das Objekt steuert und erstellt dann ein neues <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> -Objekt unter Verwendung der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.%23ctor%2A> Konstruktor. Es auch veranschaulicht, wie Sie Änderungen an den zugrunde liegenden vornehmen können <xref:System.Web.UI.WebControls.WebParts.EditorPart> steuert, auch wenn die Auflistung schreibgeschützt ist.  
+  
+ [!code-aspx-csharp[WebParts_EditorPartCollection_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPartCollection_Overview/CS/editorpartcollectioncs.aspx#2)]
+ [!code-aspx-vb[WebParts_EditorPartCollection_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPartCollection_Overview/VB/editorpartcollectionvb.aspx#2)]  
+  
+ Sie können die Seite in einem Browser geladen und die Seite in den Bearbeitungsmodus wechseln, indem Sie auswählen **bearbeiten** in der **Anzeigemodus** Dropdownlisten-Steuerelement. Sie können die Verbmenü (Pfeil nach unten) in der Titelleiste des klicken Sie auf die `TextDisplayWebPart` Steuerelement, und klicken Sie auf **bearbeiten** so bearbeiten Sie das Steuerelement. Wenn die Bearbeitung Benutzeroberfläche (UI) angezeigt wird, können Sie alle sehen die <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente. Sie klicken Sie auf die **EditorPartCollection erstellen** Schaltfläche, um die Auswirkungen auf die beiden finden Sie unter <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente, die hinzugefügt werden die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditorPartCollection (System.Web.UI.WebControls.WebParts.EditorPartCollection existingEditorParts, System.Collections.ICollection editorParts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.EditorPartCollection existingEditorParts, class System.Collections.ICollection editorParts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPartCollection.#ctor(System.Web.UI.WebControls.WebParts.EditorPartCollection,System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="existingEditorParts" Type="System.Web.UI.WebControls.WebParts.EditorPartCollection" />
+        <Parameter Name="editorParts" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="existingEditorParts">Ein <see cref="T:System.Collections.ICollection" /> vorhandenen <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente in einer Zone.</param>
+        <param name="editorParts">Ein <see cref="T:System.Collections.ICollection" /> von <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente nicht in einer Zone, sondern programmgesteuert erstellt wurden.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartCollection" /> Klasse durch die Übergabe einer <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartCollection" /> Auflistung von <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> -Steuerelemente, und ein <see cref="T:System.Collections.ICollection" /> Auflistung zusätzlicher <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.WebParts.EditorPart editorPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.WebParts.EditorPart editorPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPartCollection.Contains(System.Web.UI.WebControls.WebParts.EditorPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editorPart" Type="System.Web.UI.WebControls.WebParts.EditorPart" />
+      </Parameters>
+      <Docs>
+        <param name="editorPart">Die <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> , dessen Status als Member der Auflistung getestet.</param>
+        <summary>Gibt einen Wert, der angibt, ob ein bestimmtes Steuerelement in der Auflistung befindet.</summary>
+        <returns>Ein boolescher Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> ist in der Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.Contains%2A> Methode bestimmt, ob ein bestimmtes <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement ist bereits in der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, um festzustellen, ob ein bestimmter <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Steuerelement befindet sich im ein <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Objekt. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> -Klassenübersicht.  
+  
+ Der Code in der `Button1_Click` Ereignis werden nicht hinzugefügt werden. die `LayoutEditorPart1` die Steuerung an die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Objekt, wenn die anderen Steuerelemente hinzugefügt. Bestätigen Sie, dass die `LayoutEditorPart1` -Steuerelement ist nicht in der Auflistung, die der Code verwendet die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.Contains%2A> Methode.  
+  
+ [!code-aspx-csharp[WebParts_EditorPartCollection_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPartCollection_Overview/CS/editorpartcollectioncs.aspx#2)]
+ [!code-aspx-vb[WebParts_EditorPartCollection_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPartCollection_Overview/VB/editorpartcollectionvb.aspx#2)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die Seite in den Bearbeitungsmodus wechseln, indem auswählen **bearbeiten** in der **Anzeigemodus** Dropdownlisten-Steuerelement. Sie können die Verbmenü (Pfeil nach unten) in der Titelleiste des klicken Sie auf die `TextDisplayWebPart` Steuerelement, und klicken Sie auf **bearbeiten** so bearbeiten Sie das Steuerelement. Wenn die Bearbeitung Benutzeroberfläche (UI) angezeigt wird, sehen Sie alle dem <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente. Wenn Sie auf die **EditorPartCollection erstellen** Schaltfläche bemerken, die Farbe des Hintergrunds der `LayoutEditorPart1` Steuerelement unterscheidet sich von der andere Steuerelemente, da er nicht ist Teil der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.WebParts.EditorPart[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.WebParts.EditorPart[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPartCollection.CopyTo(System.Web.UI.WebControls.WebParts.EditorPart[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.WebParts.EditorPart[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> die kopierte Auflistung der Steuerelemente enthalten.</param>
+        <param name="index">Der Startpunkt im Array, an das der Inhalt der Auflistung eingefügt werden soll.</param>
+        <summary>Kopiert die Auflistung in ein Array von <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.CopyTo%2A> Methode ist nützlich, wenn Sie möchten ein benutzerdefiniertes Array erstellen, enthält die <xref:System.Web.UI.WebControls.WebParts.EditorPart> steuert in der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> -Objekt, das eine Teilmenge dieser Steuerelemente oder eine Obermenge dieser Steuerelemente.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.CopyTo%2A> Methode zum Erstellen eines benutzerdefinierten Arrays von <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> -Klassenübersicht.  
+  
+ Der Code in der `Button1_Click` Ereignis erstellt ein Array von <xref:System.Web.UI.WebControls.WebParts.EditorPart> steuert, fügt die `LayoutEditorPart1` Steuerelement das Array und verwendet die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.CopyTo%2A> Methode zum Kopieren der Steuerelemente aus der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Objekt in das Array.  
+  
+ [!code-aspx-csharp[WebParts_EditorPartCollection_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPartCollection_Overview/CS/editorpartcollectioncs.aspx#2)]
+ [!code-aspx-vb[WebParts_EditorPartCollection_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPartCollection_Overview/VB/editorpartcollectionvb.aspx#2)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die Seite in den Bearbeitungsmodus wechseln, indem auswählen **bearbeiten** in der **Anzeigemodus** Dropdownlisten-Steuerelement. Sie können die Verbmenü (Pfeil nach unten) in der Titelleiste des klicken Sie auf die `TextDisplayWebPart` Steuerelement, und klicken Sie auf **bearbeiten** so bearbeiten Sie das Steuerelement. Wenn die Bearbeitung Benutzeroberfläche (UI) angezeigt wird, können Sie alle sehen die <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente. Wenn Sie auf die **EditorPartCollection erstellen** Schaltfläche, werden Sie feststellen, dass die Titel aller Steuerelemente im benutzerdefinierten Array am unteren Rand der Seite aufgeführt sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.WebParts.EditorPartCollection Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.WebControls.WebParts.EditorPartCollection Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.EditorPartCollection.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.EditorPartCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verweist auf eine statische, schreibgeschützte, leere Instanz der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine statische, schreibgeschützte, leere Instanz der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> verringert die speicherauslastung in Fällen, in denen Sie möchten eine leere Auflistungsinstanz zurückzugebenden den richtigen Objekttyp von einer Methode oder die Instanz mit einem anderen Objekt verglichen werden soll, Sie müssen jedoch nicht zum Hinzufügen von Mitgliedern zu, den -Instanz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.WebParts.EditorPart editorPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.WebParts.EditorPart editorPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPartCollection.IndexOf(System.Web.UI.WebControls.WebParts.EditorPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editorPart" Type="System.Web.UI.WebControls.WebParts.EditorPart" />
+      </Parameters>
+      <Docs>
+        <param name="editorPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> , das ein Mitglied der Sammlung.</param>
+        <summary>Gibt die Position eines bestimmten Elements der Auflistung zurück.</summary>
+        <returns>Eine ganze Zahl, die den Index des entspricht einem <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelement in der Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.IndexOf%2A> Methode ist nützlich, wenn mehrere <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente auf einer Webparts-Seite, und Sie müssen ein bestimmtes Steuerelement in der Auflistung gesucht werden soll.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.IndexOf%2A> Methode zum Suchen einer <xref:System.Web.UI.WebControls.WebParts.EditorPart> steuern ein <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Objekt. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> -Klassenübersicht.  
+  
+ Der Code in der `Button1_Click` Ereignis erstellt ein <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> Objekt zugewiesen und dann verwendet der <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection.IndexOf%2A> Methode zum Suchen der `PropertyGridEditorPart1` Steuerelement in der Auflistung, und legen seine <xref:System.Web.UI.WebControls.WebParts.Part.ChromeType%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_EditorPartCollection_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPartCollection_Overview/CS/editorpartcollectioncs.aspx#2)]
+ [!code-aspx-vb[WebParts_EditorPartCollection_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPartCollection_Overview/VB/editorpartcollectionvb.aspx#2)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die Seite in den Bearbeitungsmodus wechseln, indem auswählen **bearbeiten** in der **Anzeigemodus** Dropdownlisten-Steuerelement. Sie können die Verbmenü (Pfeil nach unten) in der Titelleiste des klicken Sie auf die `TextDisplayWebPart` Steuerelement, und klicken Sie auf **bearbeiten** so bearbeiten Sie das Steuerelement. Wenn die Bearbeitung Benutzeroberfläche (UI) angezeigt wird, können Sie alle sehen die <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente. Wenn Sie auf die **EditorPartCollection erstellen** Schaltfläche, werden Sie feststellen, dass die `PropertyGridEditorPart1` -Steuerelement, das am unteren Rand der Seite "ist, verfügt über einen Titel, aber kein Rahmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.EditorPart this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.EditorPart Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.EditorPartCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.EditorPart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index eines bestimmten <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> in einer Auflistung.</param>
+        <summary>Gibt einen bestimmten Member der Auflistung entsprechend einen eindeutigen Bezeichner zurück.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> am angegebenen Index in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

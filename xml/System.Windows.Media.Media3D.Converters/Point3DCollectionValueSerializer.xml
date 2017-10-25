@@ -1,0 +1,155 @@
+<Type Name="Point3DCollectionValueSerializer" FullName="System.Windows.Media.Media3D.Converters.Point3DCollectionValueSerializer">
+  <TypeSignature Language="C#" Value="public class Point3DCollectionValueSerializer : System.Windows.Markup.ValueSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Point3DCollectionValueSerializer extends System.Windows.Markup.ValueSerializer" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.Converters.Point3DCollectionValueSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.ValueSerializer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert Instanzen von <see cref="T:System.String" /> in <see cref="T:System.Windows.Media.Media3D.Point3DCollection" />-Instanzen und umgekehrt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient nur von verwendet die <xref:System.Windows.Markup.Primitives.MarkupWriter> für Serialisierungszwecke.  
+  
+   
+  
+## Examples  
+ <xref:System.Windows.Markup.Primitives.MarkupWriter>  
+  
+ <xref:System.Windows.Media.Media3D.Point3DCollection>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Point3DCollectionValueSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Converters.Point3DCollectionValueSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Media3D.Converters.Point3DCollectionValueSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFromString">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFromString (string value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFromString(string value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Converters.Point3DCollectionValueSerializer.CanConvertFromString(System.String,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Zeichenfolge, die für die Konvertierung ausgewertet werden soll.</param>
+        <param name="context">Für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Bestimmt, ob die Konvertierung von einer bestimmten <see cref="T:System.String" /> mit einer Instanz von <see cref="T:System.Windows.Media.Media3D.Point3DCollection" /> ist möglich.</summary>
+        <returns>
+          <see langword="true" />, wenn der Wert konvertiert werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt immer `true` zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertToString">
+      <MemberSignature Language="C#" Value="public override bool CanConvertToString (object value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertToString(object value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Converters.Point3DCollectionValueSerializer.CanConvertToString(System.Object,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Instanz des <see cref="T:System.Windows.Media.Media3D.Point3DCollection" /> für die Konvertierung ausgewertet.</param>
+        <param name="context">Für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Bestimmt, ob eine Instanz von <see cref="T:System.Windows.Media.Media3D.Point3DCollection" /> konvertiert werden kann, um eine <see cref="T:System.String" />.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value" /> in einen <see cref="T:System.String" /> konvertiert werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Tritt auf, wenn <paramref name="value" /> ist eine <see cref="T:System.Windows.Media.Media3D.Point3DCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFromString">
+      <MemberSignature Language="C#" Value="public override object ConvertFromString (string value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFromString(string value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Converters.Point3DCollectionValueSerializer.ConvertFromString(System.String,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+          <see cref="T:System.String" />Wert, der in konvertiert eine <see cref="T:System.Windows.Media.Media3D.Point3DCollection" />.</param>
+        <param name="context">Für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Konvertiert ein <see cref="T:System.String" />-Element in ein <see cref="T:System.Windows.Media.Media3D.Point3DCollection" />-Element.</summary>
+        <returns>Eine neue Instanz von <see cref="T:System.Windows.Media.Media3D.Point3DCollection" /> anhand des angegebenen <paramref name="value" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertToString">
+      <MemberSignature Language="C#" Value="public override string ConvertToString (object value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ConvertToString(object value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Converters.Point3DCollectionValueSerializer.ConvertToString(System.Object,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Instanz des <see cref="T:System.Windows.Media.Media3D.Point3DCollection" /> für die Konvertierung ausgewertet.</param>
+        <param name="context">Für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Konvertiert eine Instanz von <see cref="T:System.Windows.Media.Media3D.Point3DCollection" /> in eine <see cref="T:System.String" />.</summary>
+        <returns>Ein <see cref="T:System.String" /> -Darstellung des angegebenen <see cref="T:System.Windows.Media.Media3D.Point3DCollection" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

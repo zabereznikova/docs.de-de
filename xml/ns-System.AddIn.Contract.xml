@@ -1,0 +1,17 @@
+<Namespace Name="System.AddIn.Contract">
+  <Docs>
+    <summary>Die <see cref="N:System.AddIn.Contract" /> -Namespace enthält Schnittstellen und Strukturen, die die Grundlage für die Kommunikation zwischen Komponenten bereitstellen, die unabhängig voneinander aktualisiert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.AddIn.Contract?displayProperty=nameWithType> -Namespace definiert einen Satz von Schnittstellen und Strukturen, die unabhängig von verwendet werden können aktualisiert, Komponenten, z. B. eine Anwendung, und ein Add-in zu kommunizieren. Komponenten können die Schnittstellen und Strukturen in den <xref:System.AddIn.Contract?displayProperty=nameWithType> Namespace für die Kommunikation über Prozess- oder Grenzen von Anwendungsdomänen hinweg, oder für die Kommunikation mit anderen Komponenten in derselben Prozess- oder Anwendungsdomäne.  
+  
+ Die Schnittstellen der <xref:System.AddIn.Contract?displayProperty=nameWithType> Namespace werden auch als Datenverträge bezeichnet. Alle Verträge Ableiten der <xref:System.AddIn.Contract.IContract> Schnittstelle. Der Zweck, <xref:System.AddIn.Contract.IContract> dient für Komponenten, die mit .NET Framework erstellt ist vergleichbar mit dem Zweck, die die `IUnknown` Schnittstelle dient für erstellt mithilfe von COM-Komponenten Um zu bestimmen, ob ein Objekt mit einen bestimmten Vertrag implementiert, Komponenten verwenden die <xref:System.AddIn.Contract.IContract.QueryContract%2A> Methode.  
+  
+ Die <xref:System.AddIn.Contract.Automation?displayProperty=nameWithType> und <xref:System.AddIn.Contract.Collections?displayProperty=nameWithType> -Namespaces enthalten zusätzliche Verträge, die als Ergänzung der <xref:System.AddIn.Contract?displayProperty=nameWithType> Namespace. Die <xref:System.AddIn.Contract.Automation?displayProperty=nameWithType> Verträge, die Komponenten verwenden, um Typinformationen Zugriffsversuchs und Typmember-Namespace enthält. Die <xref:System.AddIn.Contract.Collections?displayProperty=nameWithType> -Namespace enthält die Verträge, die Auflistungen von definieren <xref:System.AddIn.Contract.IContract> und <xref:System.AddIn.Contract.RemoteArgument> Objekte.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

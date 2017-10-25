@@ -1,0 +1,68 @@
+<Type Name="KeyEventHandler" FullName="System.Windows.Input.KeyEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void KeyEventHandler(object sender, KeyEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed KeyEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.KeyEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Das Objekt, an das der Ereignishandler angefügt ist.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt die Methode für die Behandlung der Routingereignisse <see cref="E:System.Windows.UIElement.KeyUp" /> und <see cref="E:System.Windows.UIElement.KeyDown" /> sowie verwandter angefügter Ereignisse und Vorschauereignisse dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat wird mit den folgenden angefügten Ereignissen verwendet:  
+  
+-   <xref:System.Windows.Input.Keyboard.KeyUp?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Keyboard.KeyDown?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Keyboard.PreviewKeyUp?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Keyboard.PreviewKeyDown?displayProperty=nameWithType>  
+  
+ Dieser Delegat ist auch mit den folgenden Routingereignissen für Basiselemente verwendet. Diese weitergeleitete Ereignisse weiterleiten, die zuvor aufgelisteten angefügte Ereignisse damit diese mehr zugegriffen werden kann, das Modell der allgemeinen Element im [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)].  
+  
+-   <xref:System.Windows.UIElement.KeyUp?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.KeyDown?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewKeyUp?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewKeyDown?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.KeyUp?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.KeyDown?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewKeyUp?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewKeyDown?displayProperty=nameWithType>  
+  
+ Angefügte Ereignisse und die Ereignisse weitergeleitet Basiselement nutzen ihre Ereignisdaten und die bubbling und tunneling-Versionen Routingereignisse Ereignisdaten auch freigeben. Dies kann die behandelten Eigenschaften des Ereignisses beeinträchtigen, während der Übertragung der Ereignisroute. Weitere Informationen finden Sie unter [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft, ob der Schlüssel, der dem Ereignis zugeordnet ist die <xref:System.Windows.Input.Key.Return> Schlüssel.  
+  
+ [!code-csharp[keydown#KeyDownSample](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml.cs#keydownsample)]
+ [!code-vb[keydown#KeyDownSample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyDown/VisualBasic/Window1.xaml.vb#keydownsample)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

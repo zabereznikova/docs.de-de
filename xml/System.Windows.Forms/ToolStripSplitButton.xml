@@ -1,0 +1,997 @@
+<Type Name="ToolStripSplitButton" FullName="System.Windows.Forms.ToolStripSplitButton">
+  <TypeSignature Language="C#" Value="public class ToolStripSplitButton : System.Windows.Forms.ToolStripDropDownItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolStripSplitButton extends System.Windows.Forms.ToolStripDropDownItem" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripSplitButton" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ToolStripDropDownItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ButtonClick")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Forms.Design.ToolStripItemDesignerAvailability(System.Windows.Forms.Design.ToolStripItemDesignerAvailability.ToolStrip | System.Windows.Forms.Design.ToolStripItemDesignerAvailability.StatusStrip)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Kombination einer Standardschaltfläche auf der linken Seite und einer Dropdownschaltfläche auf der rechten Seite dar, oder umgekehrt, wenn der Wert von <see cref="T:System.Windows.Forms.RightToLeft" /> <see langword="Yes" /> ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolStripSplitButton>kombiniert die Dropdown-Schaltfläche-Funktionalität und Schaltfläche.  
+  
+ Verwenden der <xref:System.Windows.Forms.ToolStripSplitButton.DefaultItem%2A> Eigenschaft zum Synchronisieren der <xref:System.Windows.Forms.Control.Click> Ereignis des ausgewählten Dropdown-Elements mit dem Element, auf die Schaltfläche angezeigt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripSplitButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolStripSplitButton" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripSplitButton (System.Drawing.Image image);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Image image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.#ctor(System.Drawing.Image)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="image">Das auf dem <see cref="T:System.Drawing.Image" /> anzuzeigende <see cref="T:System.Windows.Forms.ToolStripSplitButton" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolStripSplitButton" />-Klasse mit dem angegebenen Bild.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripSplitButton (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der auf dem <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> anzuzeigende Text.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolStripSplitButton" />-Klasse mit dem angegebenen Text.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripSplitButton (string text, System.Drawing.Image image);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, class System.Drawing.Image image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.#ctor(System.String,System.Drawing.Image)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der auf dem <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> anzuzeigende Text.</param>
+        <param name="image">Das auf dem <see cref="T:System.Drawing.Image" /> anzuzeigende <see cref="T:System.Windows.Forms.ToolStripSplitButton" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolStripSplitButton" />-Klasse mit dem angegebenen Text und dem angegebenen Bild.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripSplitButton (string text, System.Drawing.Image image, EventHandler onClick);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, class System.Drawing.Image image, class System.EventHandler onClick) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.#ctor(System.String,System.Drawing.Image,System.EventHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="onClick" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der auf dem <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> anzuzeigende Text.</param>
+        <param name="image">Das auf dem <see cref="T:System.Drawing.Image" /> anzuzeigende <see cref="T:System.Windows.Forms.ToolStripSplitButton" />.</param>
+        <param name="onClick">Löst das <see cref="E:System.Windows.Forms.Control.Click" />-Ereignis aus, wenn auf <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> geklickt wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolStripSplitButton" />-Klasse mit dem angegebenen Anzeigetext, dem angegebenen Bild und dem angegebenen <see cref="E:System.Windows.Forms.Control.Click" />-Ereignishandler.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripSplitButton (string text, System.Drawing.Image image, params System.Windows.Forms.ToolStripItem[] dropDownItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, class System.Drawing.Image image, class System.Windows.Forms.ToolStripItem[] dropDownItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.#ctor(System.String,System.Drawing.Image,System.Windows.Forms.ToolStripItem[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="dropDownItems" Type="System.Windows.Forms.ToolStripItem[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="text">Der auf dem <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> anzuzeigende Text.</param>
+        <param name="image">Das auf dem <see cref="T:System.Drawing.Image" /> anzuzeigende <see cref="T:System.Windows.Forms.ToolStripSplitButton" />.</param>
+        <param name="dropDownItems">Ein <see cref="T:System.Windows.Forms.ToolStripItem" />-Array von Steuerelementen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolStripSplitButton" />-Klasse mit dem angegebenen Text, dem angegebenen Bild und dem angegebenen <see cref="T:System.Windows.Forms.ToolStripItem" />-Array.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripSplitButton (string text, System.Drawing.Image image, EventHandler onClick, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, class System.Drawing.Image image, class System.EventHandler onClick, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.#ctor(System.String,System.Drawing.Image,System.EventHandler,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="onClick" Type="System.EventHandler" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der auf dem <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> anzuzeigende Text.</param>
+        <param name="image">Das auf dem <see cref="T:System.Drawing.Image" /> anzuzeigende <see cref="T:System.Windows.Forms.ToolStripSplitButton" />.</param>
+        <param name="onClick">Löst das <see cref="E:System.Windows.Forms.Control.Click" />-Ereignis aus, wenn auf <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> geklickt wird.</param>
+        <param name="name">Der Name des <see cref="T:System.Windows.Forms.ToolStripSplitButton" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolStripSplitButton" />-Klasse mit dem angegebenen Anzeigetext, dem angegebenen Bild, dem angegebenen <see cref="E:System.Windows.Forms.Control.Click" />-Ereignishandler und dem angegebenen Namen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoToolTip">
+      <MemberSignature Language="C#" Value="public bool AutoToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripSplitButton.AutoToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Standard- oder der benutzerdefinierte <see cref="T:System.Windows.Forms.ToolTip" />-Text auf dem <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> angezeigt wird, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn der Standard-<see cref="T:System.Windows.Forms.ToolTip" />-Text angezeigt wird, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie die <xref:System.Windows.Forms.ToolStripSplitButton.AutoToolTip%2A> Eigenschaft `false` zum Anzeigen von benutzerdefinierten Texts in eine <xref:System.Windows.Forms.ToolStripSplitButton>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonBounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle ButtonBounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle ButtonBounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripSplitButton.ButtonBounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe und Position des Standardschaltflächenbereichs eines <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" />, das die Größe und Position des Standardschaltflächenbereichs eines <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonClick">
+      <MemberSignature Language="C#" Value="public event EventHandler ButtonClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ButtonClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripSplitButton.ButtonClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn auf den Standardschaltflächenbereich eines <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolStripSplitButton.ButtonClick> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ToolStripSplitButton> mit dem Namen `ToolStripSplitButton1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolStripSplitButton.ButtonClick> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#609](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#609)]
+ [!code-vb[System.Windows.Forms.EventExamples#609](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#609)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonDoubleClick">
+      <MemberSignature Language="C#" Value="public event EventHandler ButtonDoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ButtonDoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripSplitButton.ButtonDoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn auf den Standardschaltflächenbereich eines <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> doppelgeklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolStripSplitButton.ButtonDoubleClick> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ToolStripSplitButton> mit dem Namen `ToolStripSplitButton1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolStripSplitButton.ButtonDoubleClick> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#610](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#610)]
+ [!code-vb[System.Windows.Forms.EventExamples#610](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#610)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonPressed">
+      <MemberSignature Language="C#" Value="public bool ButtonPressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ButtonPressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripSplitButton.ButtonPressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob sich der Schaltflächenbereich des <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> im gedrückten Zustand befindet.</summary>
+        <value>
+          <see langword="true" />, wenn sich der Schaltflächenbereich des <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> im gedrückten Zustand befindet, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonSelected">
+      <MemberSignature Language="C#" Value="public bool ButtonSelected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ButtonSelected" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripSplitButton.ButtonSelected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Standardschaltflächenbereich eines <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> ausgewählt wurde oder die <see cref="P:System.Windows.Forms.ToolStripSplitButton.DropDownButtonPressed" />-Eigenschaft <see langword="true" /> ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Schaltflächenbereich eines <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> ausgewählt wurde, oder ob <see cref="P:System.Windows.Forms.ToolStripSplitButton.DropDownButtonPressed" /> <see langword="true" /> ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt für die Barrierefreiheit für den <see cref="T:System.Windows.Forms.ToolStripSplitButton" />.</summary>
+        <returns>Ein neues Objekt für die Barrierefreiheit für den <see cref="T:System.Windows.Forms.ToolStripSplitButton" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultDropDown">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ToolStripDropDown CreateDefaultDropDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.ToolStripDropDown CreateDefaultDropDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.CreateDefaultDropDown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripDropDown</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein generisches <see cref="T:System.Windows.Forms.ToolStripDropDown" />, für das Ereignisse definiert werden können.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.ToolStripDropDown" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultAutoToolTip">
+      <MemberSignature Language="C#" Value="protected override bool DefaultAutoToolTip { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DefaultAutoToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripSplitButton.DefaultAutoToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der als Standard definierte <see cref="T:System.Windows.Forms.ToolTip" /> angezeigt wird.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripItem DefaultItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolStripItem DefaultItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripSplitButton.DefaultItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bereich des <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> ab, der beim ersten Auswählen des Steuerelements aktiviert wird, oder legt diesen fest.</summary>
+        <value>Ein <see langword="Forms.ToolStripItem" />, das den Bereich des <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> darstellt, der beim ersten Auswählen aktiviert wird. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Windows.Forms.ToolStripSplitButton> verfügt über eine <xref:System.Windows.Forms.ToolStripSplitButton.DefaultItem%2A>, die EINGABETASTE drücken, wird die Schaltfläche aktiviert. Andernfalls wird die EINGABETASTE drücken der Dropdown-aktiviert.  
+  
+ Verwenden der <xref:System.Windows.Forms.ToolStripSplitButton.DefaultItem%2A> Eigenschaft zum Synchronisieren der <xref:System.Windows.Forms.Control.Click> Ereignis des ausgewählten Dropdown-Elements mit dem Element, auf die Schaltfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultItemChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler DefaultItemChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DefaultItemChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripSplitButton.DefaultItemChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="P:System.Windows.Forms.ToolStripSplitButton.DefaultItem" /> geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolStripSplitButton.DefaultItemChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ToolStripSplitButton> mit dem Namen `ToolStripSplitButton1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolStripSplitButton.DefaultItemChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#611](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#611)]
+ [!code-vb[System.Windows.Forms.EventExamples#611](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#611)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DismissWhenClicked">
+      <MemberSignature Language="C#" Value="protected override bool DismissWhenClicked { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DismissWhenClicked" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripSplitButton.DismissWhenClicked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Elemente auf einem <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> ausgeblendet werden, nachdem auf sie geklickt wurde.</summary>
+        <value>
+          <see langword="true" />, wenn die Elemente ausgeblendet werden, nachdem auf sie geklickt wurde, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownButtonBounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle DropDownButtonBounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle DropDownButtonBounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripSplitButton.DropDownButtonBounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe und die Position des Dropdown-Schaltflächenbereichs eines <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> als Bildschirmkoordinaten ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" />, das die Größe und Position des Dropdown-Schaltflächenbereichs eines <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> als Bildschirmkoordinaten darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownButtonPressed">
+      <MemberSignature Language="C#" Value="public bool DropDownButtonPressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DropDownButtonPressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripSplitButton.DropDownButtonPressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob sich der Dropdownbereich des <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> im gedrückten Zustand befindet.</summary>
+        <value>
+          <see langword="true" />, wenn sich der Dropdownbereich des <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> im gedrückten Zustand befindet, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownButtonSelected">
+      <MemberSignature Language="C#" Value="public bool DropDownButtonSelected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DropDownButtonSelected" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripSplitButton.DropDownButtonSelected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Dropdown-Schaltflächenbereich eines <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> ausgewählt wurde.</summary>
+        <value>
+          <see langword="true" />, wenn der Dropdown-Schaltflächenbereich eines <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> ausgewählt wurde, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownButtonWidth">
+      <MemberSignature Language="C#" Value="public int DropDownButtonWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DropDownButtonWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripSplitButton.DropDownButtonWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Breite des Dropdown-Schaltflächenbereichs eines <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> in Pixel.</summary>
+        <value>Ein <see cref="T:System.Int32" />, der die Breite in Pixel darstellt. Der Standard ist 11. Ab [!INCLUDE[net_2015](~/includes/net-2015-md.md)] wird der Standardwert von der DPI-Einstellung des Geräts abgeleitet, auf dem die App ausgeführt wird.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Wert ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredSize">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Size GetPreferredSize (System.Drawing.Size constrainingSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Size GetPreferredSize(valuetype System.Drawing.Size constrainingSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.GetPreferredSize(System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constrainingSize" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constrainingSize">Der Bereich mit benutzerdefinierter Größe eines Steuerelements.</param>
+        <summary>Ruft die Größe eines rechteckigen Bereichs ab, in den ein <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> eingefügt werden kann.</summary>
+        <returns>Ein geordnetes Paar vom Typ <see cref="T:System.Drawing.Size" />, das die Breite und Höhe eines Rechtecks darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnButtonClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnButtonClick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnButtonClick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.OnButtonClick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ToolStripSplitButton.ButtonClick" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolStripSplitButton.OnButtonClick%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolStripSplitButton.OnButtonClick(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolStripSplitButton.OnButtonClick(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnButtonDoubleClick">
+      <MemberSignature Language="C#" Value="public virtual void OnButtonDoubleClick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnButtonDoubleClick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.OnButtonDoubleClick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ToolStripSplitButton.ButtonDoubleClick" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolStripSplitButton.OnButtonDoubleClick%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolStripSplitButton.OnButtonDoubleClick(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolStripSplitButton.OnButtonDoubleClick(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDefaultItemChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDefaultItemChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDefaultItemChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.OnDefaultItemChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ToolStripSplitButton.DefaultItemChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolStripSplitButton.OnDefaultItemChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolStripSplitButton.OnDefaultItemChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolStripSplitButton.OnDefaultItemChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.MouseDown" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolStripSplitButton.OnMouseDown%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolStripSplitButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolStripSplitButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeave (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeave(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.OnMouseLeave(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.MouseLeave" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolStripSplitButton.OnMouseLeave%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolStripSplitButton.OnMouseLeave(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolStripSplitButton.OnMouseLeave(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.MouseUp" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolStripSplitButton.OnMouseUp%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolStripSplitButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolStripSplitButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.OnPaint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.PaintEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ToolStripItem.Paint" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRightToLeftChanged">
+      <MemberSignature Language="C#" Value="protected override void OnRightToLeftChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRightToLeftChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.OnRightToLeftChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.RightToLeftChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolStripSplitButton.OnRightToLeftChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolStripSplitButton.OnRightToLeftChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolStripSplitButton.OnRightToLeftChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformButtonClick">
+      <MemberSignature Language="C#" Value="public void PerformButtonClick ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PerformButtonClick() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.PerformButtonClick" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wenn die <see cref="P:System.Windows.Forms.ToolStripItem.Enabled" />-Eigenschaft <see langword="true" /> ist, wird die <see cref="M:System.Windows.Forms.ToolStripSplitButton.OnButtonClick(System.EventArgs)" />-Methode aufgerufen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessDialogKey">
+      <MemberSignature Language="C#" Value="protected override bool ProcessDialogKey (System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool ProcessDialogKey(valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.ProcessDialogKey(System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Einer der <see cref="T:System.Windows.Forms.Keys" />-Werte, die die zu verarbeitende Taste darstellen.</param>
+        <summary>Verarbeitet eine Tastatureingabe im Dialogfeld.</summary>
+        <returns>
+          <see langword="true" />, wenn die Taste vom Element verarbeitet wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, während die Nachricht vorverarbeiten, um die EINGABETASTE und LEERTASTE-Tasten zu behandeln, um das Auslösen der <xref:System.Windows.Forms.ToolStripItem.Click> Ereignis. Jedoch, wenn die <xref:System.Windows.Forms.ToolStripSplitButton> ist nicht aktiviert ist, diese Methode ruft die basisklassenimplementierung stattdessen.  
+  
+ Diese Methode wird aufgerufen, wenn nur die <xref:System.Windows.Forms.Control.IsInputKey%2A> Methode gibt an, dass das Element nicht den Schlüssel verarbeitet wird.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für alle Fenster für erbende Klassen zum Aufrufen dieser Methode. Zugeordnete Enumeration: <see langword="AllWindows" /> Wert <see cref="T:System.Security.Permissions.UIPermissionWindow" />.</permission>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Windows.Forms.ToolStripItem.ProcessDialogKey(System.Windows.Forms.Keys)" /> Methode in einer abgeleiteten Klasse die überschreibende Implementierung sollte zurückgeben <see langword="true" /> um anzugeben, dass sie die Taste verarbeitet wurde. Abgeleitete Klassen selten, müssen wenn überhaupt, diese Methode überschreiben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessMnemonic">
+      <MemberSignature Language="C#" Value="protected override bool ProcessMnemonic (char charCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool ProcessMnemonic(char charCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.ProcessMnemonic(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="charCode" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="charCode">Das zu verarbeitende Zeichen.</param>
+        <summary>Verarbeitet ein mnemonisches Zeichen.</summary>
+        <returns>
+          <see langword="true" /> in allen Fällen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetDropDownButtonWidth">
+      <MemberSignature Language="C#" Value="public virtual void ResetDropDownButtonWidth ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResetDropDownButtonWidth() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSplitButton.ResetDropDownButtonWidth" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Diese Methode ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SplitterBounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle SplitterBounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle SplitterBounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripSplitButton.SplitterBounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Abmessungen der Trennung zwischen dem Standard- und dem Dropdown-Schaltflächenbereich eines <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" />, das die Größe und Position des Trennzeichens darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.ToolStripSplitButton.SplitterBounds%2A> Eigenschaft zum benutzerdefiniertes Zeichnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

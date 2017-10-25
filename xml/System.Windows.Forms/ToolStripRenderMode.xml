@@ -1,0 +1,94 @@
+<Type Name="ToolStripRenderMode" FullName="System.Windows.Forms.ToolStripRenderMode">
+  <TypeSignature Language="C#" Value="public enum ToolStripRenderMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolStripRenderMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripRenderMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, die Zeichnen-Formatvorlage auf einen <see cref="T:System.Windows.Forms.ToolStrip" /> in einem Formular enthalten sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können nicht explizit festlegen, die <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> Benutzerdefiniert. Allerdings die <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> gibt benutzerdefinierte bei der <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> festgelegt ist, um eine Erweiterung der der <xref:System.Windows.Forms.ToolStripRenderer> -Klasse, die nicht <xref:System.Windows.Forms.ToolStripProfessionalRenderer> oder <xref:System.Windows.Forms.ToolStripSystemRenderer>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripRenderMode Custom = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripRenderMode.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripRenderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="P:System.Windows.Forms.ToolStrip.RenderMode" /> ist nicht gemäß der <see cref="T:System.Windows.Forms.ToolStripManager" /> oder die Verwendung von einer <see cref="T:System.Windows.Forms.ToolStripRenderer" /> außer <see cref="T:System.Windows.Forms.ToolStripProfessionalRenderer" />,<see cref="T:System.Windows.Forms.ToolStripSystemRenderer" /></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ManagerRenderMode">
+      <MemberSignature Language="C#" Value="ManagerRenderMode" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripRenderMode ManagerRenderMode = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripRenderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="P:System.Windows.Forms.ToolStripManager.RenderMode" /> oder <see cref="P:System.Windows.Forms.ToolStripManager.Renderer" /> bestimmt den Zeichnungsstil.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Professional">
+      <MemberSignature Language="C#" Value="Professional" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripRenderMode Professional = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripRenderMode.Professional" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripRenderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Verwendung der einen <see cref="T:System.Windows.Forms.ToolStripProfessionalRenderer" /> Paint-Ereignis.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="System" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripRenderMode System = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripRenderMode.System" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripRenderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Verwendung der einen <see cref="T:System.Windows.Forms.ToolStripSystemRenderer" /> Paint-Ereignis.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

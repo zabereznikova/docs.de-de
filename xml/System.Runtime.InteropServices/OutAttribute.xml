@@ -1,0 +1,92 @@
+<Type Name="OutAttribute" FullName="System.Runtime.InteropServices.OutAttribute">
+  <TypeSignature Language="C#" Value="public sealed class OutAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OutAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.OutAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass Daten vom Aufgerufenen zurück zum Aufrufer gemarshallt werden sollen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut auf Parameter anwenden.  
+  
+ Die <xref:System.Runtime.InteropServices.OutAttribute> ist optional. Das Attribut wird unterstützt, für COM-Interop und Plattformaufrufe nur. In Ermangelung explizite Einstellungen vorausgesetzt der Interop-Marshaller Regeln basiert auf dem Parameter, Typ gibt an, ob der Parameter als Verweis oder als Wert übergeben wird, und gibt an, ob der Typ für Blitvorgänge geeigneter oder blitfähige ist. Z. B. die <xref:System.Text.StringBuilder> Klasse ist immer werden als In/Out und wird davon ausgegangen, dass ein Array von Zeichenfolgen nach Wert übergeben werden.  
+  
+ Außenumgrenzung Verhalten ist nie eine Marshallingverhalten für Parameter Standard. Können Sie anwenden der <xref:System.Runtime.InteropServices.OutAttribute> zu Wert- und Referenztypen Verweisübergabe In/Out-Verhalten in außenumgrenzung Verhalten zu ändern, der Verwendung entspricht dem `out` -Schlüsselwort in c#. Beispielsweise können für Arrays, die nach Wert übergeben, als In-Parameter gemarshallt wird, wird standardmäßig auf außenumgrenzung geändert werden. Das Verhalten wird jedoch immer bietet keine erwarteten Semantik, wenn alle blitfähigen Elementen die folgenden Anweisungstypen oder Felder, da der Interop-Marshaller anheften verwendet. Wenn Daten an den aufgerufenen übergibt unerheblich ist, kann das außenumgrenzung Marshalling eine bessere Leistung für nicht blitfähige Typen sind.  
+  
+ Kombiniert die <xref:System.Runtime.InteropServices.InAttribute> und <xref:System.Runtime.InteropServices.OutAttribute> ist besonders nützlich, wenn auf Arrays angewendet und formatiert, nicht blitfähige Typen. Aufrufer finden Sie in der Änderungen, die eine aufrufende Instanz auf diese Typen vornimmt, nur, wenn Sie beide Attribute anwenden. Da diese Typen erforderlich sind, während des Marshallens kopieren, können Sie <xref:System.Runtime.InteropServices.InAttribute> und <xref:System.Runtime.InteropServices.OutAttribute> um unnötige Kopien zu reduzieren.  
+  
+ Weitere Informationen zu den Auswirkungen der <xref:System.Runtime.InteropServices.OutAttribute> zum Marshallen von Verhalten, finden Sie unter [direktionale Attribute](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Anwenden der <xref:System.Runtime.InteropServices.InAttribute> und <xref:System.Runtime.InteropServices.OutAttribute> in einem Plattformaufrufe Prototyp, den ein Array als Parameter übergeben wird. Die Kombination der direktionalen Attribute ermöglicht den Aufrufer, die von der aufgerufenen Instanz vorgenommenen Änderungen finden Sie unter.  
+  
+ [!code-cpp[Interop InOutParameters#1](~/samples/snippets/cpp/VS_Snippets_CLR/Interop InOutParameters/CPP/inout.cpp#1)]
+ [!code-csharp[Interop InOutParameters#1](~/samples/snippets/csharp/VS_Snippets_CLR/Interop InOutParameters/CS/inout.cs#1)]
+ [!code-vb[Interop InOutParameters#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Interop InOutParameters/VB/inout.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.OutAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.InteropServices.OutAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

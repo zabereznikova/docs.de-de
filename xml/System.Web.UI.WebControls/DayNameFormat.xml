@@ -1,0 +1,116 @@
+<Type Name="DayNameFormat" FullName="System.Web.UI.WebControls.DayNameFormat">
+  <TypeSignature Language="C#" Value="public enum DayNameFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DayNameFormat extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DayNameFormat" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt das Anzeigeformat für die Tage der Woche für ein <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DayNameFormat> Enumeration stellt die Anzeigeformate für die Tage der Woche in einem <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+> [!NOTE]
+>  In einigen Kulturen `DayNameFormat.FirstLetter` und `DayNameFormat.FirstTwoLetter` identische Werte für einen oder mehrere Tage der Woche anzeigen. Erwägen Sie in dieser Kulturen `DayNameFormat.Shortest`, woraufhin die kürzestmögliche Abkürzung ohne identische Abkürzungen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Format für das Format für die Tage der Woche in an einem <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[CalendarDayNameFormat#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarDayNameFormat/CS/calendardaynameformatcs.aspx#1)]
+ [!code-aspx-vb[CalendarDayNameFormat#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarDayNameFormat/VB/calendardaynameformatvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FirstLetter">
+      <MemberSignature Language="C#" Value="FirstLetter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DayNameFormat FirstLetter = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DayNameFormat.FirstLetter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DayNameFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Tage der Woche angezeigt, wobei nur der erste Buchstabe. Beispielsweise stellt M Montag dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstTwoLetters">
+      <MemberSignature Language="C#" Value="FirstTwoLetters" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DayNameFormat FirstTwoLetters = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DayNameFormat.FirstTwoLetters" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DayNameFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Tage der Woche angezeigt, wobei nur die ersten beiden Buchstaben. Beispielsweise stellt Mo Montag dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Full">
+      <MemberSignature Language="C#" Value="Full" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DayNameFormat Full = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DayNameFormat.Full" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DayNameFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Tage der Woche im vollständigen Format angezeigt. Beispiel: Montag.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Short">
+      <MemberSignature Language="C#" Value="Short" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DayNameFormat Short = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DayNameFormat.Short" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DayNameFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Tage der Woche in verkürzter Form angezeigt. Beispielsweise entspricht "Mon" Montag.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Shortest">
+      <MemberSignature Language="C#" Value="Shortest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DayNameFormat Shortest = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DayNameFormat.Shortest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DayNameFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Tage der Woche im kürzeste mögliche für die aktuelle Kultur Abkürzungsformat angezeigt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

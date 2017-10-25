@@ -1,0 +1,317 @@
+<Type Name="DebugInfoExpression" FullName="System.Linq.Expressions.DebugInfoExpression">
+  <TypeSignature Language="C#" Value="public class DebugInfoExpression : System.Linq.Expressions.Expression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DebugInfoExpression extends System.Linq.Expressions.Expression" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.Expressions.DebugInfoExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Linq.Expressions.Expression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Linq.Expressions.Expression/DebugInfoExpressionProxy))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient zum Ausgeben oder Löschen eines Sequenzpunkts für Debuginformationen. Dadurch kann der Debugger beim Debuggen den korrekten Quellcode hervorheben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="protected override System.Linq.Expressions.Expression Accept (System.Linq.Expressions.ExpressionVisitor visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Linq.Expressions.Expression Accept(class System.Linq.Expressions.ExpressionVisitor visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.DebugInfoExpression.Accept(System.Linq.Expressions.ExpressionVisitor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Linq.Expressions.ExpressionVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="visitor">Der Besucher, mit dem dieser Knoten besucht werden soll.</param>
+        <summary>Sendet an die spezifische Visit-Methode für diesen Knotentyp. Beispielsweise ruft <see cref="T:System.Linq.Expressions.MethodCallExpression" /> die Methode <see cref="M:System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(System.Linq.Expressions.MethodCallExpression)" /> auf.</summary>
+        <returns>Das Ergebnis eines Besuchs dieses Knotens.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Standardimplementierung für <xref:System.Linq.Expressions.ExpressionType.Extension> Knoten Aufrufe <xref:System.Linq.Expressions.ExpressionVisitor.VisitExtension%2A>. Überschreiben Sie diese Methode in eine genauere Methode für eine Besucherklasse abgeleiteten von Aufrufen der <xref:System.Linq.Expressions.ExpressionVisitor> Klasse. Sie sollten dennoch unbekannte Besucher unterstützen, durch den Aufruf <xref:System.Linq.Expressions.ExpressionVisitor.VisitExtension%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.SymbolDocumentInfo Document { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.SymbolDocumentInfo Document" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.DebugInfoExpression.Document" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.SymbolDocumentInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Linq.Expressions.SymbolDocumentInfo" /> , die die Quelldatei darstellt.</summary>
+        <value>Die <see cref="T:System.Linq.Expressions.SymbolDocumentInfo" />, die die Quelldatei darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndColumn">
+      <MemberSignature Language="C#" Value="public virtual int EndColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.DebugInfoExpression.EndColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endspalte dieser <see cref="T:System.Linq.Expressions.DebugInfoExpression" />.</summary>
+        <value>Die Anzahl der die letzte Spalte des Codes, mit denen die umschlossenen Ausdruck generiert wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndLine">
+      <MemberSignature Language="C#" Value="public virtual int EndLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndLine" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.DebugInfoExpression.EndLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Endzeile dieser <see cref="T:System.Linq.Expressions.DebugInfoExpression" />.</summary>
+        <value>Die Anzahl der dem Ende einer Zeile des Codes, mit denen die umschlossenen Ausdruck generiert wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClear">
+      <MemberSignature Language="C#" Value="public virtual bool IsClear { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClear" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.DebugInfoExpression.IsClear" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert aus, um anzugeben, ob die <see cref="T:System.Linq.Expressions.DebugInfoExpression" /> ist für das Löschen eines Sequenzpunkts.</summary>
+        <value>True, wenn die <see cref="T:System.Linq.Expressions.DebugInfoExpression" /> ist für das Löschen eines Sequenzpunkts, andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override sealed System.Linq.Expressions.ExpressionType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Linq.Expressions.ExpressionType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.DebugInfoExpression.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.ExpressionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Knotentyp dieses <see cref="T:System.Linq.Expressions.Expression" />.</summary>
+        <value>Die <see cref="T:System.Linq.Expressions.ExpressionType" /> , die diesen Ausdruck darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartColumn">
+      <MemberSignature Language="C#" Value="public virtual int StartColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.DebugInfoExpression.StartColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startspalte dieser <see cref="T:System.Linq.Expressions.DebugInfoExpression" />.</summary>
+        <value>Die Anzahl der Startspalte des Codes, mit denen die umschlossenen Ausdruck generiert wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartLine">
+      <MemberSignature Language="C#" Value="public virtual int StartLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartLine" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.DebugInfoExpression.StartLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Startzeile dieser <see cref="T:System.Linq.Expressions.DebugInfoExpression" />.</summary>
+        <value>Die Anzahl der Startzeile des Codes, mit denen die umschlossenen Ausdruck generiert wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public override sealed Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.DebugInfoExpression.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den statischen Typ des Ausdrucks ab, den dieser <see cref="T:System.Linq.Expressions.Expression" /> darstellt.</summary>
+        <value>Der <see cref="P:System.Linq.Expressions.DebugInfoExpression.Type" />, der den statischen Typ des Ausdrucks darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

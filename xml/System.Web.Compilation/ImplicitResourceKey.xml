@@ -1,0 +1,186 @@
+<Type Name="ImplicitResourceKey" FullName="System.Web.Compilation.ImplicitResourceKey">
+  <TypeSignature Language="C#" Value="public sealed class ImplicitResourceKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ImplicitResourceKey extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.ImplicitResourceKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Felder, die einen impliziten Ressourcenschlüssel identifizieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.ImplicitResourceKey> Klasse enthält Felder, die einen impliziten Ressourcenschlüssel identifizieren.  
+  
+ Eine implizite Ressource ist ein Steuerelement in der folgenden Form zugewiesen:  
+  
+```  
+<asp:label runat="server" id="label1" meta:resourcekey="Welcome"  
+    text="Welcome"   
+      ie:text="Welcome Internet Explorer User"    
+    forecolor="blue"/>    
+```  
+  
+ Bei der Seitenanalyse wird eine implizite Ressource in explizite Schlüssel in der Form konvertiert [*Filter*:]*Präfix*.* Eigenschaft*[.* Untereigenschaften*]. Alle Ressourcenwerte mit dem angegebenen Präfix (im vorherigen Beispiel ein Präfix des `Welcome`) den entsprechenden Steuerelementeigenschaften zugewiesen sind. Nehmen Sie beispielsweise an, dass die Werte in den Ressourcencode-Datei oder die Quelle für die folgenden Schlüssel vorhanden sind:  
+  
+ `Welcome.Text`  
+  
+ `Ie:Welcome.Text`  
+  
+ `Welcome.Forecolor`  
+  
+ Diese Werte werden auf ihre entsprechenden Steuerelementeigenschaften zugewiesen.  
+  
+ Implizite Ressourcenschlüssel können nur auf lokale Ressourcen verweisen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImplicitResourceKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ImplicitResourceKey.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Compilation.ImplicitResourceKey" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImplicitResourceKey (string filter, string keyPrefix, string property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filter, string keyPrefix, string property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ImplicitResourceKey.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filter" Type="System.String" />
+        <Parameter Name="keyPrefix" Type="System.String" />
+        <Parameter Name="property" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Der Filterwert, der eine implizite Ressourcenschlüssel werden soll.</param>
+        <param name="keyPrefix">Das Präfix für eine Gruppe von Eigenschaften zu identifizieren.</param>
+        <param name="property">Eine Eigenschaft und die untergeordnete Eigenschaft, wenn für einen impliziten Ressourcenschlüssel bereitgestellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Compilation.ImplicitResourceKey" /> Klasse mit den angegebenen Werten für die <see cref="P:System.Web.Compilation.ImplicitResourceKey.Filter" />, <see cref="P:System.Web.Compilation.ImplicitResourceKey.KeyPrefix" /> und <see cref="P:System.Web.Compilation.ImplicitResourceKey.Property" /> Eigenschaften.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public string Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ImplicitResourceKey.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Filterwert, der eine implizite Ressourcenschlüssel.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem Filterwert für den Ausdruck implizite Ressource.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.ImplicitResourceKey.Filter%2A> Eigenschaft bezieht sich auf den Wert vor dem Doppelpunkt (:) in einem Ausdruck. Angenommen Sie, Sie enthielt eine implizite Ressource in der folgenden Form:  
+  
+```  
+<asp:label runat="server" id="label1" meta:resourcekey="Welcome"  
+        text="Welcome"   
+        ie:text="Welcome Internet Explorer User"    
+        forecolor="blue"/>    
+```  
+  
+ Diese Ressource enthält drei Schlüssel, die potenziell Ressourcenwerte zum Abrufen aus der Ressourcendatei oder dem Quellcode lokalisiert haben. Einer dieser Schlüssel ist `Ie:Welcome.Text`, bei dem "Ie" ist die <xref:System.Web.Compilation.ImplicitResourceKey.Filter%2A> Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyPrefix">
+      <MemberSignature Language="C#" Value="public string KeyPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyPrefix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ImplicitResourceKey.KeyPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Präfix für eine Gruppe von Eigenschaften identifizieren.</summary>
+        <value>Ein <see cref="T:System.String" /> , die das Präfix für einen Ressourcenausdruck implizit enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.ImplicitResourceKey.KeyPrefix%2A> Eigenschaft verknüpft eine Auflistung von Eigenschaften, die ein Steuerelement zugewiesen werden kann. Die <xref:System.Web.Compilation.ImplicitResourceKey.KeyPrefix%2A> Eigenschaft bezieht sich auf den Wert nach dem Doppelpunkt (:) in einem Ausdruck, sofern vorhanden, und vor dem ersten Punkt (.). Angenommen Sie, Sie enthielt eine implizite Ressource in der folgenden Form:  
+  
+```  
+<asp:label runat="server" id="label1" meta:resourcekey="Welcome"  
+        text="Welcome"   
+        ie:text="Welcome Internet Explorer User"    
+        forecolor="blue"/>    
+```  
+  
+ Diese Ressource enthält drei Schlüssel `Welcome.Text`, `Ie:Welcome.Text`, und `Welcome.Forecolor`, die möglicherweise lokalisierte Ressourcenwerte zum Abrufen aus der Ressourcendatei oder dem Quellcode. Jeder Schlüssel hat `"Welcome"` als die <xref:System.Web.Compilation.ImplicitResourceKey.KeyPrefix%2A> Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public string Property { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Property" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ImplicitResourceKey.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, eine Eigenschaft und eine untergeordnete, wenn für einen impliziten Ressourcenschlüssel bereitgestellt.</summary>
+        <value>Ein <see cref="T:System.String" /> , die der Eigenschaft und die untergeordnete Eigenschaft für einen Ressourcenausdruck implizit enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.ImplicitResourceKey.Property%2A> Eigenschaft gibt an, die Steuerelementeigenschaft lokalisiert werden soll. Die <xref:System.Web.Compilation.ImplicitResourceKey.Property%2A> Eigenschaft bezieht sich auf den Wert nach dem ersten Punkt (.) in einem Ausdruck. Angenommen Sie, Sie enthielt eine implizite Ressource in der folgenden Form:  
+  
+```  
+<asp:label runat="server" id="label1" meta:resourcekey="Welcome"  
+        text="Welcome"   
+        ie:text="Welcome Internet Explorer User"    
+        forecolor="blue"/>    
+```  
+  
+ Diese Ressource enthält drei Schlüssel `Welcome.Text`, `Ie:Welcome.Text`, und `Welcome.Forecolor`, die möglicherweise lokalisierte Ressourcenwerte zum Abrufen aus der Ressourcendatei oder dem Quellcode. Diese Schlüssel haben <xref:System.Web.Compilation.ImplicitResourceKey.Property%2A> Werte `"Text"`, `"Text"`, und `"Forecolor"`zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

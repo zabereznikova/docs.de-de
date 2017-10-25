@@ -1,0 +1,1683 @@
+<Type Name="Package" FullName="System.IO.Packaging.Package">
+  <TypeSignature Language="C#" Value="public abstract class Package : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Package extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.Package" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Packaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Container dar, der mehrere Datenobjekte speichern kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.Package>ist eine abstrakte Klasse, die zum Organisieren von Objekten in einer einzelnen Entität mit einem definierten physischen Format für Portabilität und effizienten Zugriff verwendet werden kann.  
+  
+ Eine ZIP-Datei ist das primäre physische Format für die <xref:System.IO.Packaging.Package>.  Andere <xref:System.IO.Packaging.Package> Implementierungen möglicherweise verwenden Sie andere physische Formate wie z. B. ein XML-Dokument, eine Datenbank oder einen Webdienst.  
+  
+ Wie ein Dateisystem Elemente einem <xref:System.IO.Packaging.Package> in eine hierarchische Organisation von Dateien und Ordnern verwiesen wird.  
+  
+ Obwohl <xref:System.IO.Packaging.Package> selbst ist eine abstrakte Klasse, die <xref:System.IO.Packaging.ZipPackage> abgeleiteten Klasse wird als standardmäßig verwendet die <xref:System.IO.Packaging.Package.Open%2A> Methode.  
+  
+ Ein <xref:System.IO.Packaging.PackagePart> ("Teil") ist die abstrakte Klasse, die ein Objekt darstellt, die in gespeichert ist eine <xref:System.IO.Packaging.Package>.  
+  
+ Ein <xref:System.IO.Packaging.PackageRelationship> ("Beziehung") definiert eine Zuordnung zwischen einer Quelle <xref:System.IO.Packaging.Package> oder <xref:System.IO.Packaging.PackagePart> und einem Zielobjekt.  Ein <xref:System.IO.Packaging.PackageRelationship> kann eine von zwei Typen, von denen jeder eine von zwei Formen kann:  
+  
+-   Eine Beziehung auf Paketebene (erstellt, indem die <xref:System.IO.Packaging.Package.CreateRelationship%2A?displayProperty=nameWithType> Methode) bezieht sich eine <xref:System.IO.Packaging.Package> entweder:  
+  
+    -   Ein Ziel-Webpart im Paket.  
+  
+    -   Eine Zielressource außerhalb des Pakets.  
+  
+-   Eine Beziehung Teil-Ebene (erstellt, indem die <xref:System.IO.Packaging.PackagePart.CreateRelationship%2A?displayProperty=nameWithType> Methode) bezieht sich eine Quelle <xref:System.IO.Packaging.PackagePart> entweder:  
+  
+    -   Ein anderes Ziel-Webpart im Paket.  
+  
+    -   Eine Zielressource außerhalb des Pakets.  
+  
+ Die Beziehung Quelle <xref:System.IO.Packaging.Package> oder Quelle <xref:System.IO.Packaging.PackagePart> gilt, dass der "Besitzer" der Beziehung.  Wenn das Quellobjekt, das gelöscht wird, werden alle Beziehungen, die das Quellobjekt, das im Besitz ebenfalls gelöscht.  Der Prozess zum Erstellen oder Löschen einer Beziehung werden nicht physisch entweder am Quell- oder Zielspeicherort Objekte in keiner Weise geändert werden.  
+  
+ Ein <xref:System.IO.Packaging.PackageDigitalSignature> ("digitale Signatur") ist eine Zusammenstellung von Teile und Beziehungen, die eine digitale Signatur enthaltene darstellt eine <xref:System.IO.Packaging.Package>.  Die digitale Signatur der Absender identifiziert und überprüft, dass die signierten Teile und Beziehungen in enthalten die <xref:System.IO.Packaging.Package> nicht geändert wurden.  
+  
+ Pakete unterstützen auch Digital Rights Management (DRM) dadurch Inhaltselemente in einem <xref:System.IO.Packaging.Package> mit bestimmten Zugriffsrechten auf autorisierte Benutzer verschlüsselt werden.  
+  
+ Basierend auf den <xref:System.IO.Packaging.Package> Architektur, eine <xref:System.Windows.Xps.Packaging.XpsDocument> ist ein Paket zum Speichern von Dokumenten, die basierend auf der Open entwickelt [XML Paper Specification (XPS)](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+ [!INCLUDE[TLA#tla_avalonwinfx](~/includes/tlasharptla-avalonwinfx-md.md)]verwendet Pakete zum Speichern von Inhalt, Ressourcen und Beziehungen für Seiten und Dokumente mithilfe einer standard-ZIP-Datei in der Standardeinstellung. Wie bei jeder ZIP-Datei die Anwendung die <xref:System.IO.Packaging> Klassen zum Speichern und optional alle Typ oder die Anzahl der Dateien in einem einzelnen Container Zugriff zu schützen.  
+  
+ Weitere Informationen finden Sie in der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die grundlegenden Schritte zum Erstellen einer <xref:System.IO.Packaging.Package>.  In diesem Beispiel wird ein Paket erstellt, um ein Dokument sowie ein Bild enthalten, die als Teil des Dokuments angezeigt wird.  (Dies ist vergleichbar mit der Fall, in dem eine HTML-Datei hat, eine \<IMG >-Tag, das eine externe Bilddatei verweist.)  Zwei <xref:System.IO.Packaging.PackageRelationship> Elemente sind ebenfalls im Paket enthalten.  Die erste Seite einer Beziehung "Paketebene" definiert den Dokumentteil als Stammelement des Pakets an.  Eine zweite Beziehung "auf" definiert die Zuordnung zwischen den Dokumentteil (der "Quelle" der Beziehung Teil-Ebene) und dessen Verwendung des Image Teils (der "Target" der Beziehung Teil-Ebene).  Das vollständige Beispiel finden Sie unter [Writing a Package Sample](http://go.microsoft.com/fwlink/?LinkID=160055).  
+  
+ [!code-csharp[PackageWrite#PackageWriteCreatePackage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageWrite/CSharp/PackageWrite.cs#packagewritecreatepackage)]
+ [!code-vb[PackageWrite#PackageWriteCreatePackage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageWrite/visualbasic/packagewrite.vb#packagewritecreatepackage)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Package (System.IO.FileAccess openFileAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.IO.FileAccess openFileAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.#ctor(System.IO.FileAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="openFileAccess" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="openFileAccess">Die Datei-e/a-Berechtigungen für das Paket.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.Packaging.Package" /> -Klasse, verwendet einen angegebenen <see cref="T:System.IO.FileAccess" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.Package.%23ctor%2A>wird von ein geschützter Konstruktor, der die <xref:System.IO.Packaging.Package> abstrakte Basisklasse. Beim Aufruf in einer abgeleiteten Klasse die <xref:System.IO.Packaging.Package.%23ctor%2A> Konstruktor initialisiert eine neue Instanz der abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert für <paramref name="openFileAccess" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Package (System.IO.FileAccess openFileAccess, bool streaming);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.IO.FileAccess openFileAccess, bool streaming) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.#ctor(System.IO.FileAccess,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="openFileAccess" Type="System.IO.FileAccess" />
+        <Parameter Name="streaming" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="openFileAccess">Die Datei-e/a-Berechtigungen für das Paket.</param>
+        <param name="streaming">
+          <see langword="true" />Öffnen Sie das Paket für das streaming; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.IO.Packaging.Package" /> -Klasse, verwendet einen angegebenen <see cref="T:System.IO.FileAccess" /> und streaming-Option.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.Package.%23ctor%2A>wird von ein geschützter Konstruktor, der die <xref:System.IO.Packaging.Package> abstrakten Basisklasse. Beim Aufruf in einer abgeleiteten Klasse die <xref:System.IO.Packaging.Package.%23ctor%2A> Konstruktor initialisiert eine neue Instanz der abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert für <paramref name="openFileAccess" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert und schließt das Paket sowie alle zugrunde liegenden Teil-Streams.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die <xref:System.IO.Packaging.Package> Klasse <xref:System.IO.Packaging.Package.Close%2A> und <xref:System.IO.Packaging.Package.Dispose%2A> führen den gleichen Vorgang – es besteht kein Grund Aufrufen <xref:System.IO.Packaging.Package.Dispose%2A> beim Aufrufen <xref:System.IO.Packaging.Package.Close%2A>, oder umgekehrt.  
+  
+ <xref:System.IO.Packaging.Package.Close%2A>und <xref:System.IO.Packaging.Package.Dispose%2A> intern rufen <xref:System.IO.Packaging.Package.Flush%2A>.  
+  
+> [!NOTE]
+>  Die `using` Anweisung (sich von der `using` Namespacedirektive) ist die empfohlene Vorgehensweise für <xref:System.IO.Packaging.Package.Close%2A> und <xref:System.IO.Packaging.Package.Dispose%2A> eines Pakets.  [Schreiben einen Package Sample](http://go.microsoft.com/fwlink/?LinkID=160055) und [lesen eine Package Sample](http://go.microsoft.com/fwlink/?LinkID=160034) wird gezeigt, wie schließen und Freigeben von einem Paket mithilfe der `using` Anweisung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreatePart">
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Erstellt ein neues Paketteil.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.Package.CreatePart%2A>Initialisiert eine leere <xref:System.IO.Stream> des neuen Teils.  Die <xref:System.IO.Packaging.PackagePart.GetStream%2A?displayProperty=nameWithType> Methode kann verwendet werden, um einen Verweis auf die Streaminstanz, die dem Teil zugeordnet zu erhalten.  
+  
+ Weitere Informationen zu paketteilen, finden Sie in Abschnitt 1.1 der Spezifikation (Open Packaging Conventions, OPC) zum Download zur Verfügung, die am [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen eines neuen <xref:System.IO.Packaging.PackagePart> und speichern Sie Daten in den Teil.  Das vollständige Beispiel finden Sie unter [Writing a Package Sample](http://go.microsoft.com/fwlink/?LinkID=160055).  
+  
+ [!code-csharp[PackageWrite#PackageWriteCreatePart](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageWrite/CSharp/PackageWrite.cs#packagewritecreatepart)]
+ [!code-vb[PackageWrite#PackageWriteCreatePart](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageWrite/visualbasic/packagewrite.vb#packagewritecreatepart)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="Overload:System.IO.Packaging.Package.CreatePart" />Intern ruft die abgeleitete Klasse <see cref="M:System.IO.Packaging.Package.CreatePartCore(System.Uri,System.String,System.IO.Packaging.CompressionOption)" /> Methode, um das Element zu erstellen basierend auf das physische Format in der abgeleiteten Klasse implementiert.</para>
+        </block>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreatePart">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackagePart CreatePart (Uri partUri, string contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackagePart CreatePart(class System.Uri partUri, string contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.CreatePart(System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackagePart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partUri" Type="System.Uri" />
+        <Parameter Name="contentType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="partUri">Die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] des neuen Teils.</param>
+        <param name="contentType">Der Inhaltstyp des Datenstroms.</param>
+        <summary>Erstellt ein neues nicht komprimierte Teil mit einem angegebenen URI und den Inhaltstyp an.</summary>
+        <returns>Der neue erstellten Teils.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.Package.CreatePart%2A>Initialisiert eine leere <xref:System.IO.Stream> des neuen Teils.  Die <xref:System.IO.Packaging.PackagePart.GetStream%2A?displayProperty=nameWithType> Methode kann verwendet werden, um einen Verweis auf die Streaminstanz, die dem Teil zugeordnet zu erhalten.  
+  
+ Das Webpart <xref:System.IO.Packaging.PackagePart.CompressionOption%2A> ist <xref:System.IO.Packaging.CompressionOption?displayProperty=nameWithType>.  
+  
+ Weitere Informationen zu paketteilen, finden Sie im Abschnitt 1.1 in der Spezifikation (Open Packaging Conventions, OPC) zum Download zur Verfügung, die am [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen eines neuen <xref:System.IO.Packaging.PackagePart> und speichern Sie Daten in den Teil.  Das vollständige Beispiel finden Sie unter [Writing a Package Sample](http://go.microsoft.com/fwlink/?LinkID=160055).  
+  
+ [!code-csharp[PackageWrite#PackageWriteCreatePart](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageWrite/CSharp/PackageWrite.cs#packagewritecreatepart)]
+ [!code-vb[PackageWrite#PackageWriteCreatePart](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageWrite/visualbasic/packagewrite.vb#packagewritecreatepart)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="partUri" /> oder <paramref name="contentType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="partUri" />ist kein gültiger <see cref="T:System.IO.Packaging.PackagePart" /> [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</exception>
+        <exception cref="T:System.InvalidOperationException">Ein Teil mit dem angegebenen <paramref name="partUri" /> bereits im Paket vorhanden ist.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket ist schreibgeschützt (ein neuer Teil kann nicht hinzugefügt werden).</exception>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.IO.Packaging.Package.CreatePart(System.Uri,System.String)" />Intern ruft der abgeleiteten Klasse <see cref="M:System.IO.Packaging.Package.CreatePartCore(System.Uri,System.String,System.IO.Packaging.CompressionOption)" /> Methode, um das Element zu erstellen basierend auf das physische Format in der abgeleiteten Klasse implementiert.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePart">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackagePart CreatePart (Uri partUri, string contentType, System.IO.Packaging.CompressionOption compressionOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackagePart CreatePart(class System.Uri partUri, string contentType, valuetype System.IO.Packaging.CompressionOption compressionOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.CreatePart(System.Uri,System.String,System.IO.Packaging.CompressionOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackagePart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partUri" Type="System.Uri" />
+        <Parameter Name="contentType" Type="System.String" />
+        <Parameter Name="compressionOption" Type="System.IO.Packaging.CompressionOption" />
+      </Parameters>
+      <Docs>
+        <param name="partUri">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des neuen Teils.</param>
+        <param name="contentType">Der Inhaltstyp des Datenstroms.</param>
+        <param name="compressionOption">Die Komprimierungsoption für den Datenstrom <see cref="F:System.IO.Packaging.CompressionOption.NotCompressed" /> oder <see cref="F:System.IO.Packaging.CompressionOption.Normal" /> Komprimierung.</param>
+        <summary>Erstellt ein neues Teil mit einem angegebenen URI, den Inhaltstyp und die Komprimierungsoption.</summary>
+        <returns>Der neue erstellten Teils.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für den standardmäßigen <xref:System.IO.Packaging.ZipPackage> abgeleitete Klasse, die <xref:System.IO.Packaging.Package.CreatePart%2A> Methode unterstützt nur zwei `compressionOption` Werte <xref:System.IO.Packaging.CompressionOption.NotCompressed> oder <xref:System.IO.Packaging.CompressionOption.Normal> Komprimierung.  Andere <xref:System.IO.Packaging.CompressionOption> Werte <xref:System.IO.Packaging.CompressionOption.Maximum>, <xref:System.IO.Packaging.CompressionOption.Fast>, oder <xref:System.IO.Packaging.CompressionOption.SuperFast> verwenden <xref:System.IO.Packaging.CompressionOption.Normal> Komprimierung.  
+  
+ <xref:System.IO.Packaging.Package.CreatePart%2A>erstellt ein leeres <xref:System.IO.Stream> des neuen Teils.  Die <xref:System.IO.Packaging.PackagePart.GetStream%2A?displayProperty=nameWithType> Methode kann verwendet werden, um einen Verweis auf die Streaminstanz, die dem Teil zugeordnet zu erhalten.  
+  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen eines neuen <xref:System.IO.Packaging.PackagePart> und speichern Sie Daten in den Teil.  Das vollständige Beispiel finden Sie unter [Writing a Package Sample](http://go.microsoft.com/fwlink/?LinkID=160055).  
+  
+ [!code-csharp[PackageWrite#PackageWriteCreatePart](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageWrite/CSharp/PackageWrite.cs#packagewritecreatepart)]
+ [!code-vb[PackageWrite#PackageWriteCreatePart](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageWrite/visualbasic/packagewrite.vb#packagewritecreatepart)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="partUri" /> oder <paramref name="contentType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="partUri" />ist kein gültiger <see cref="T:System.IO.Packaging.PackagePart" /> [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].</exception>
+        <exception cref="T:System.InvalidOperationException">Ein Teil mit dem angegebenen <paramref name="partUri" /> bereits im Paket vorhanden ist.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="compressionOption" /> Wert ist ungültig.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket ist schreibgeschützt (ein neuer Teil kann nicht hinzugefügt werden).</exception>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.IO.Packaging.Package.CreatePart(System.Uri,System.String,System.IO.Packaging.CompressionOption)" />Intern ruft der abgeleiteten Klasse <see cref="M:System.IO.Packaging.Package.CreatePartCore(System.Uri,System.String,System.IO.Packaging.CompressionOption)" /> Methode, um das Element zu erstellen basierend auf das physische Format in der abgeleiteten Klasse implementiert.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePartCore">
+      <MemberSignature Language="C#" Value="protected abstract System.IO.Packaging.PackagePart CreatePartCore (Uri partUri, string contentType, System.IO.Packaging.CompressionOption compressionOption);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IO.Packaging.PackagePart CreatePartCore(class System.Uri partUri, string contentType, valuetype System.IO.Packaging.CompressionOption compressionOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.CreatePartCore(System.Uri,System.String,System.IO.Packaging.CompressionOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackagePart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partUri" Type="System.Uri" />
+        <Parameter Name="contentType" Type="System.String" />
+        <Parameter Name="compressionOption" Type="System.IO.Packaging.CompressionOption" />
+      </Parameters>
+      <Docs>
+        <param name="partUri">Die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] für den Teil, der erstellt wird.</param>
+        <param name="contentType">Der Inhaltstyp des Datenstroms.</param>
+        <param name="compressionOption">Die Komprimierungsoption für den Datenstrom.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse wird einen neuen Teil im Paket erstellt.</summary>
+        <returns>Das erstellte Webpart.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die abgeleitete <xref:System.IO.Packaging.Package.CreatePartCore%2A> Methode wird aufgerufen, indem Sie die <xref:System.IO.Packaging.Package.CreatePart%2A> Methode, um ein Element zu erstellen, basierend auf das physische Format in der abgeleiteten Klasse implementiert.  
+  
+ Wird standardmäßig ein <xref:System.IO.Packaging.ZipPackage> Implementierung der abstrakten Klasse abgeleitet <xref:System.IO.Packaging.Package> Klasse bereitgestellt und verwendet wird.  In der Standardvorgang <xref:System.IO.Packaging.Package.CreatePart%2A> intern ruft <xref:System.IO.Packaging.Package.CreatePartCore%2A> von der <xref:System.IO.Packaging.ZipPackage> Klasse, um ein neues Teil in einer Zipdatei zu erstellen.  
+  
+ Für den standardmäßigen <xref:System.IO.Packaging.ZipPackage> abgeleitete Klasse, die <xref:System.IO.Packaging.Package.CreatePartCore%2A> Methode unterstützt nur zwei `compressionOption` Werte <xref:System.IO.Packaging.CompressionOption.NotCompressed> oder <xref:System.IO.Packaging.CompressionOption.Normal> Komprimierung.  Andere <xref:System.IO.Packaging.CompressionOption> Werte <xref:System.IO.Packaging.CompressionOption.Maximum>, <xref:System.IO.Packaging.CompressionOption.Fast>, oder <xref:System.IO.Packaging.CompressionOption.SuperFast> verwenden <xref:System.IO.Packaging.CompressionOption.Normal> Komprimierung.  
+  
+ Weitere Informationen zum Paketmodell und paketteilen finden Sie unter Chapter 1 der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die abgeleitete <see cref="M:System.IO.Packaging.Package.CreatePartCore(System.Uri,System.String,System.IO.Packaging.CompressionOption)" /> Implementierung sollten keine Annahmen über die Reihenfolge oder Operationen der <see cref="Overload:System.IO.Packaging.Package.CreatePart" /> Methode, die ihn aufruft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateRelationship">
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Erstellt eine Beziehung auf Paketebene zu einem bestimmten Teil.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Beziehung auf Paketebene definiert eine Zuordnung zwischen das Paket und ein Zielteil der zugeordneten oder eine Ressource.  Eine Beziehung auf Paketebene kann zwei Formen besitzen.  
+  
+-   Zwischen einer <xref:System.IO.Packaging.Package> an ein Ziel <xref:System.IO.Packaging.PackagePart> innerhalb des Pakets.  
+  
+-   Zwischen einem <xref:System.IO.Packaging.Package> mit einer Zielressource außerhalb des Pakets.  
+  
+ In einer Beziehung auf Paketebene gilt das Paket der "Besitzer" der Beziehung.  Wenn das Paket gelöscht wird, werden alle Beziehungen, die im Besitz des Pakets ebenfalls gelöscht.  Der Prozess zum Erstellen oder Löschen der Beziehung wird nicht physisch der Zielteil bzw. die Ressource in irgendeiner Weise verändert.  
+  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Erstellung einer <xref:System.IO.Packaging.PackageRelationship> zwischen einem <xref:System.IO.Packaging.Package> und Stammteil Dokument.  Das vollständige Beispiel finden Sie unter [Writing a Package Sample](http://go.microsoft.com/fwlink/?LinkID=160055).  
+  
+ [!code-csharp[PackageWrite#PackageWriteCreatePackageRelationship](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageWrite/CSharp/PackageWrite.cs#packagewritecreatepackagerelationship)]
+ [!code-vb[PackageWrite#PackageWriteCreatePackageRelationship](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageWrite/visualbasic/packagewrite.vb#packagewritecreatepackagerelationship)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateRelationship">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageRelationship CreateRelationship (Uri targetUri, System.IO.Packaging.TargetMode targetMode, string relationshipType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageRelationship CreateRelationship(class System.Uri targetUri, valuetype System.IO.Packaging.TargetMode targetMode, string relationshipType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.CreateRelationship(System.Uri,System.IO.Packaging.TargetMode,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageRelationship</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetUri" Type="System.Uri" />
+        <Parameter Name="targetMode" Type="System.IO.Packaging.TargetMode" />
+        <Parameter Name="relationshipType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetUri">Die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] der Zielkomponente.</param>
+        <param name="targetMode">Gibt an, ob das Ziel gehört <see cref="F:System.IO.Packaging.TargetMode.Internal" /> oder <see cref="F:System.IO.Packaging.TargetMode.External" /> auf das Paket.</param>
+        <param name="relationshipType">Ein URI, der die Rolle der Beziehung eindeutig definiert.</param>
+        <summary>Erstellt eine Beziehung auf Paketebene zu einem Webpart mit einem angegebenen URI, Zielmodus und Beziehungstyp an.</summary>
+        <returns>Die Beziehung auf Paketebene in den angegebenen Teil.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Beziehung auf Paketebene definiert eine Zuordnung zwischen das Paket und ein Zielteil der zugeordneten oder eine Ressource.  Eine Beziehung auf Paketebene kann zwei Formen besitzen.  
+  
+-   Zwischen einem <xref:System.IO.Packaging.Package> an einen Zielteil des Pakets.  
+  
+-   Zwischen einem <xref:System.IO.Packaging.Package> mit einer Zielressource außerhalb des Pakets.  
+  
+ In einer Beziehung auf Paketebene gilt das Paket der "Besitzer" der Beziehung.  Wenn das Paket gelöscht wird, werden alle Beziehungen, die im Besitz des Pakets ebenfalls gelöscht.  
+  
+ <xref:System.IO.Packaging.Package.CreateRelationship%2A>wird nicht physisch der Zielteil bzw. die Ressource in keiner Weise geändert.  
+  
+ Das Ziel einer Beziehung kann nicht auf eine andere Beziehung sein.  
+  
+ Wenn `targetMode` angegeben ist, als <xref:System.IO.Packaging.TargetMode.Internal>, `targetUri` muss ein relativer URI, der gemäß der [RFC 3986](http://tools.ietf.org/html/rfc3986) generische Syntax Uniform Resource Identifier (URI)-Spezifikation.  Der interne relative URI kann entweder ein absoluter Pfad, der mit einem Schrägstrich ("/"), z. B. beginnt "/ page1.xaml" oder "/ /images/picture4.jpg", oder ein relativer Pfad wie ".. / imagespicture1.jpg ", die für das Stammverzeichnis des Pakets ("/ ") als Basis-URI auflöst.  
+  
+ Wenn `targetMode` angegeben ist, als <xref:System.IO.Packaging.TargetMode.External>, `targetUri` kann entweder ein absoluter oder relativer URI angegeben wird, gemäß der [RFC 3986](http://tools.ietf.org/html/rfc3986) generische Syntax Uniform Resource Identifier (URI)-Spezifikation.  "http://www.microsoft.com/page2.xml" ist ein Beispiel für ein absoluter URI, der auf eine externe Zielressource "page2.xml" verweist.  "images/picture1.jpg" ist ein Beispiel für einen relativen URI, der auch eine externe Ressource "1.jpg" jedoch aufgelöst wird anhand des URI für das Paket selbst verweist.  
+  
+ `relationshipType`muss ein [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] , wird gebildet, gemäß der [RFC 3986](http://tools.ietf.org/html/rfc3986) generische Syntax Uniform Resource Identifier (URI)-Spezifikation.  Die folgende Tabelle zeigt die Paketebene `relationshipType` URIs durch die Spezifikation (Open Packaging Conventions, OPC) definiert.  
+  
+|Beziehung auf Paketebene|Beziehungstyp URI|  
+|---------------------------------|---------------------------|  
+|Haupteigenschaften|http://Schemas.openxmlformats.org/Package/2006/Relationships/Meta Daten/Core-Eigenschaften|  
+|Digitale Signatur|http://Schemas.openxmlformats.org/Package/2006/Relationships/Digit al-Signatur/Signatur|  
+|Zertifikat für digitale Signaturen|http://Schemas.openxmlformats.org/Package/2006/Relationships/Digit-al/Signaturzertifikat|  
+|Ursprung der digitalen Signatur|http://Schemas.openxmlformats.org/Package/2006/Relationships/Digit al-Signatur/origin|  
+|Miniaturansicht|http://Schemas.openxmlformats.org/Package/2006/Relationships/Meta Daten/Miniaturansicht|  
+  
+ Weitere Informationen zum Verpacken und paketbeziehungen finden Sie im Abschnitt 1.3 der Spezifikation (Open Packaging Conventions, OPC) zum Download zur Verfügung, die am [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie <xref:System.IO.Packaging.Package.CreateRelationship%2A> zum Erstellen einer <xref:System.IO.Packaging.PackageRelationship> zwischen einem <xref:System.IO.Packaging.Package> und Stammteil Dokument.  Das vollständige Beispiel finden Sie unter [Writing a Package Sample](http://go.microsoft.com/fwlink/?LinkID=160055).  
+  
+ [!code-csharp[packagewrite#PackageWriteCreatePackageRelationship](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageWrite/CSharp/PackageWrite.cs#packagewritecreatepackagerelationship)]
+ [!code-vb[packagewrite#PackageWriteCreatePackageRelationship](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageWrite/visualbasic/packagewrite.vb#packagewritecreatepackagerelationship)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetUri" /> oder <paramref name="relationshipType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="targetUri" /> gehört ein <see cref="T:System.IO.Packaging.PackageRelationship" />, oder <paramref name="targetMode" /> ist <see cref="F:System.IO.Packaging.TargetMode.Internal" /> und <paramref name="targetUri" /> ist ein absoluter URI.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert für <paramref name="targetMode" /> ist ungültig.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRelationship">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageRelationship CreateRelationship (Uri targetUri, System.IO.Packaging.TargetMode targetMode, string relationshipType, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageRelationship CreateRelationship(class System.Uri targetUri, valuetype System.IO.Packaging.TargetMode targetMode, string relationshipType, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.CreateRelationship(System.Uri,System.IO.Packaging.TargetMode,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageRelationship</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetUri" Type="System.Uri" />
+        <Parameter Name="targetMode" Type="System.IO.Packaging.TargetMode" />
+        <Parameter Name="relationshipType" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetUri">Die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] der Zielkomponente.</param>
+        <param name="targetMode">Gibt an, ob das Ziel gehört <see cref="F:System.IO.Packaging.TargetMode.Internal" /> oder <see cref="F:System.IO.Packaging.TargetMode.External" /> auf das Paket.</param>
+        <param name="relationshipType">Ein URI, der die Rolle der Beziehung eindeutig definiert.</param>
+        <param name="id">Ein eindeutiger XML-Bezeichner.</param>
+        <summary>Erstellt eine Beziehung auf Paketebene zu einem Webpart mit einem angegebenen URI, Zielmodus, Beziehungstyp "-", und [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)].</summary>
+        <returns>Die Beziehung auf Paketebene in den angegebenen Teil.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Beziehung auf Paketebene definiert eine Zuordnung zwischen das Paket und ein Zielteil der zugeordneten oder eine Ressource.  Eine Beziehung auf Paketebene kann zwei Formen besitzen.  
+  
+-   Zwischen einem <xref:System.IO.Packaging.Package> an einen Zielteil des Pakets.  
+  
+-   Zwischen einem <xref:System.IO.Packaging.Package> mit einer Zielressource außerhalb des Pakets.  
+  
+ In einer Beziehung auf Paketebene gilt das Paket der "Besitzer" der Beziehung.  Wenn das Paket gelöscht wird, werden alle Beziehungen, die im Besitz des Pakets ebenfalls gelöscht.  
+  
+ <xref:System.IO.Packaging.Package.CreateRelationship%2A>wird nicht physisch der Zielteil bzw. die Ressource in keiner Weise geändert.  
+  
+ Das Ziel einer Beziehung kann nicht auf eine andere Beziehung sein.  
+  
+ `id`ein gültiger XML-Bezeichner muss sein.  Die `id` Typ lautet xsd: ID und muss den in der XML Schema Part 2: Datatypes-Spezifikation (finden Sie unter [http://www.w3.org/TR/xmlschema-2/#ID](http://www.w3.org/TR/xmlschema-2/)).  
+  
+ Wenn `id` angegeben ist, als `null` eine eindeutige ID wird automatisch generiert.  Ein `id` angegeben werden, indem Sie eine leere Zeichenfolge ist ungültig.  
+  
+ Wenn `targetMode` angegeben ist, als <xref:System.IO.Packaging.TargetMode.Internal>, `targetUri` muss ein relativer URI, der gemäß der [RFC 3986](http://tools.ietf.org/html/rfc3986) generische Syntax Uniform Resource Identifier (URI)-Spezifikation.  Der interne relative URI kann entweder ein absoluter Pfad, der mit einem Schrägstrich ("/"), z. B. beginnt "/ page1.xaml" oder "/ /images/picture4.jpg", oder ein relativer Pfad wie ".. / imagespicture1.jpg ", die für das Stammverzeichnis des Pakets ("/ ") als Basis-URI auflöst.  
+  
+ Wenn `targetMode` angegeben ist, als <xref:System.IO.Packaging.TargetMode.External>, `targetUri` kann entweder ein absoluter oder relativer URI angegeben wird, gemäß der [RFC 3986](http://tools.ietf.org/html/rfc3986) generische Syntax Uniform Resource Identifier (URI)-Spezifikation.  "http://www.microsoft.com/page2.xml" ist ein Beispiel für ein absoluter URI, der auf eine externe Zielressource "page2.xml" verweist.  "images/picture1.jpg" ist ein Beispiel für einen relativen URI, der auch eine externe Ressource "1.jpg" jedoch aufgelöst wird anhand des URI für das Paket selbst verweist.  
+  
+ `relationshipType`muss ein URI, der gemäß der [RFC 3986](http://tools.ietf.org/html/rfc3986) generische Syntax Uniform Resource Identifier (URI)-Spezifikation.  Die folgende Tabelle zeigt die Paketebene `relationshipType` URIs durch die Spezifikation (Open Packaging Conventions, OPC) definiert.  
+  
+|Beziehung auf Paketebene|Beziehungstyp URI|  
+|---------------------------------|---------------------------|  
+|Haupteigenschaften|http://Schemas.openxmlformats.org/Package/2006/Relationships/Meta Daten/Core-Eigenschaften|  
+|Digitale Signatur|http://Schemas.openxmlformats.org/Package/2006/Relationships/Digit al-Signatur/Signatur|  
+|Zertifikat für digitale Signaturen|http://Schemas.openxmlformats.org/Package/2006/Relationships/Digit-al/Signaturzertifikat|  
+|Ursprung der digitalen Signatur|http://Schemas.openxmlformats.org/Package/2006/Relationships/Digit al-Signatur/origin|  
+|Miniaturansicht|http://Schemas.openxmlformats.org/Package/2006/Relationships/Meta Daten/Miniaturansicht|  
+  
+ Weitere Informationen zum Verpacken und paketbeziehungen finden Sie im Abschnitt 1.3 der Spezifikation (Open Packaging Conventions, OPC) zum Download zur Verfügung, die am [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie <xref:System.IO.Packaging.Package.CreateRelationship%2A> zum Erstellen einer <xref:System.IO.Packaging.PackageRelationship> zwischen einem <xref:System.IO.Packaging.Package> und Stammteil Dokument.  Das vollständige Beispiel finden Sie unter [Writing a Package Sample](http://go.microsoft.com/fwlink/?LinkID=160055).  
+  
+ [!code-csharp[packagewrite#PackageWriteCreatePackageRelationship](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageWrite/CSharp/PackageWrite.cs#packagewritecreatepackagerelationship)]
+ [!code-vb[packagewrite#PackageWriteCreatePackageRelationship](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageWrite/visualbasic/packagewrite.vb#packagewritecreatepackagerelationship)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetUri" /> oder <paramref name="relationshipType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="targetUri" /> gehört ein <see cref="T:System.IO.Packaging.PackageRelationship" />, oder <paramref name="targetMode" /> ist <see cref="F:System.IO.Packaging.TargetMode.Internal" /> und <paramref name="targetUri" /> ist ein absoluter URI.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert für <paramref name="targetMode" /> ist ungültig.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket ist schreibgeschützt.</exception>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="id" />ist kein gültiger XML-Bezeichner; oder eines Teils mit dem angegebenen <paramref name="id" /> bereits im Paket auftritt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeletePart">
+      <MemberSignature Language="C#" Value="public void DeletePart (Uri partUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeletePart(class System.Uri partUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.DeletePart(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="partUri">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des Teils zu löschen.</param>
+        <summary>Löscht einen Teil mit einem angegebenen URI aus dem Paket.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `partUri`ein relativer URI muss sein, die einen absoluten Pfad besteht aus der mit einem Schrägstrich ("/") beginnt.  Der absolute Pfad ist relativ zum Paketstamm und wird gebildet, gemäß der [RFC 3986](http://tools.ietf.org/html/rfc3986) generische Syntax Uniform Resource Identifier (URI)-Spezifikation.  "/ page1.xaml" und "/ /images/picture4.jpg" sind Beispiele für gültige Teil-URIs.  
+  
+ Es wird keine Ausnahme ausgelöst, wenn ein Teil mit dem angegebenen `partUri` ist nicht im Paket.  (Sie können die <xref:System.IO.Packaging.Package.PartExists%2A> Methode, um zu bestimmen, ob ein Teil mit einem angegebenen `partUri` im Paket ist.)  
+  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="partUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="partUri" />ist kein gültiger <see cref="T:System.IO.Packaging.PackagePart" /> [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket ist schreibgeschützt.</exception>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.IO.Packaging.Package.DeletePart(System.Uri)" />Intern ruft der abgeleiteten Klasse <see cref="M:System.IO.Packaging.Package.DeletePartCore(System.Uri)" /> Methode, um das Webpart tatsächlich löschen basierend auf das physische Format in der abgeleiteten Klasse implementiert.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DeletePartCore">
+      <MemberSignature Language="C#" Value="protected abstract void DeletePartCore (Uri partUri);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DeletePartCore(class System.Uri partUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.DeletePartCore(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="partUri">Die <see cref="P:System.IO.Packaging.PackagePart.Uri" /> von der <see cref="T:System.IO.Packaging.PackagePart" /> zu löschen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse Löscht einen Teil mit einem angegebenen URI.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig ein <xref:System.IO.Packaging.ZipPackage> Implementierung der abstrakten Klasse abgeleitet <xref:System.IO.Packaging.Package> Klasse bereitgestellt und verwendet wird.  In der Standardvorgang <xref:System.IO.Packaging.Package.DeletePart%2A> intern ruft <xref:System.IO.Packaging.Package.DeletePartCore%2A> von der <xref:System.IO.Packaging.ZipPackage> -Klasse, die tatsächlichen Löschvorgang basierend auf dem physischen Format in der abgeleiteten Klasse implementiert.  
+  
+ Weitere Informationen zum Paketmodell und paketteilen finden Sie unter Chapter 1 der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die abgeleitete Klasse <see cref="M:System.IO.Packaging.Package.DeletePartCore(System.Uri)" /> Implementierung wird aufgerufen, indem Sie die <see cref="M:System.IO.Packaging.Package.DeletePart(System.Uri)" /> Methode mit dem angegebenen Webpart basierend auf das physische Format in der abgeleiteten Klasse implementiert.  
+  
+ Die abgeleitete <see cref="M:System.IO.Packaging.Package.DeletePartCore(System.Uri)" /> Implementierung sollten keine Annahmen über die Reihenfolge oder Operationen der <see cref="M:System.IO.Packaging.Package.DeletePart(System.Uri)" /> Methode, die ihn aufruft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteRelationship">
+      <MemberSignature Language="C#" Value="public void DeleteRelationship (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteRelationship(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.DeleteRelationship(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Die <see cref="P:System.IO.Packaging.PackageRelationship.Id" /> von der <see cref="T:System.IO.Packaging.PackageRelationship" /> zu löschen.</param>
+        <summary>Löscht eine Beziehung auf Paketebene.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Beziehung auf Paketebene definiert eine Zuordnung zwischen das Paket und ein Zielteil der zugeordneten oder eine Ressource.  Eine Beziehung auf Paketebene kann zwei Formen besitzen.  
+  
+-   Zwischen einem <xref:System.IO.Packaging.Package> an einen Zielteil des Pakets.  
+  
+-   Zwischen einem <xref:System.IO.Packaging.Package> mit einer Zielressource außerhalb des Pakets.  
+  
+ In einer Beziehung auf Paketebene gilt das Paket der "Besitzer" der Beziehung.  Wenn das Paket gelöscht wird, werden alle Beziehungen, die im Besitz des Pakets ebenfalls gelöscht.  
+  
+ Es wird keine Ausnahme ausgelöst, wenn eine Beziehung mit dem angegebenen `id` ist nicht im Paket.  
+  
+ <xref:System.IO.Packaging.Package.DeleteRelationship%2A>das Zielteil in keiner Weise werden nicht physisch geändert werden.  
+  
+ Weitere Informationen zu paketbeziehungen, finden Sie im Abschnitt 1.3 der Spezifikation (Open Packaging Conventions, OPC) zum Download zur Verfügung, die am [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="id" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket ist schreibgeschützt.</exception>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="id" />ist kein gültiger XML-Bezeichner.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Leert und speichert den Inhalt aller Teile und Beziehungen, schließt das Paket, und gibt alle Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um sicherzustellen, dass alle Änderungen ordnungsgemäß gespeichert wurden, <xref:System.IO.Packaging.Package.Dispose%2A> auch abschließt, wird geleert und schließt alle Teile und Beziehungen, die im Paket enthalten sind.  
+  
+ Für die <xref:System.IO.Packaging.Package> -Klasse, <xref:System.IO.Packaging.Package.Dispose%2A> und <xref:System.IO.Packaging.Package.Close%2A> führen den gleichen Vorgang: Es besteht kein Grund Aufrufen <xref:System.IO.Packaging.Package.Dispose%2A> beim Aufrufen <xref:System.IO.Packaging.Package.Close%2A>, oder umgekehrt.  
+  
+ <xref:System.IO.Packaging.Package.Close%2A>und <xref:System.IO.Packaging.Package.Dispose%2A> intern rufen <xref:System.IO.Packaging.Package.Flush%2A>.  
+  
+ Abgeleitete Klassen, die zuordnen und Verwalten von nicht-Speicherressourcen sollten diese Methode zum Freigeben von Ressourcen überschreiben beim <xref:System.IO.Packaging.Package.Dispose%2A> aufgerufen wird. Abgeleiteten Klasse überschreibt sollten auch aufrufen, <xref:System.IO.Packaging.Package.Flush%2A> und die Basisklasse <xref:System.IO.Packaging.Package.Dispose%2A> Methode, um sicherzustellen, dass diese Basisklasse der Cleanup wird immer ausgeführt.  
+  
+> [!NOTE]
+>  Die `using` Anweisung (sich von der `using` Namespacedirektive) ist die empfohlene Vorgehensweise für <xref:System.IO.Packaging.Package.Close%2A> und <xref:System.IO.Packaging.Package.Dispose%2A> eines Pakets. [Schreiben einen Package Sample](http://go.microsoft.com/fwlink/?LinkID=160055) wird gezeigt, wie schließen und Freigeben von einem Paket mithilfe der `using` Anweisung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileOpenAccess">
+      <MemberSignature Language="C#" Value="public System.IO.FileAccess FileOpenAccess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.FileAccess FileOpenAccess" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.Package.FileOpenAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zugriff auf die Dateien für das Paket festlegen.</summary>
+        <value>Eines der <see cref="T:System.IO.FileAccess" /> Werte: <see cref="F:System.IO.FileAccess.Read" />, <see cref="F:System.IO.FileAccess.Write" />, oder <see cref="F:System.IO.FileAccess.ReadWrite" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaft <xref:System.IO.Packaging.Package.FileOpenAccess%2A> hat keinen Standardwert.  Der Dateizugriff Einstellung wird angegeben, der <xref:System.IO.Packaging.Package.%23ctor%2A> Konstruktor aufrufen, wenn Sie ein neues Paket erstellen oder in der <xref:System.IO.Packaging.Package.Open%2A> aufgerufen wird, wenn Sie ein vorhandenes Paket öffnen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert den Inhalt aller Teile und Beziehungen, die enthalten sind im Paket.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.Package.Flush%2A>Intern ruft der abgeleiteten Klasse <xref:System.IO.Packaging.Package.FlushCore%2A> Implementierung die Format-spezifische Leerung ausführen.  Der abgeleiteten Klasse <xref:System.IO.Packaging.Package.FlushCore%2A> Methode ist verantwortlich für das Speichern von Inhalt der Rahmen und Beziehung tatsächlich für die Implementierung von bestimmten physischen abgeleiteten Klasse.  
+  
+ Wird standardmäßig ein <xref:System.IO.Packaging.ZipPackage> Implementierung der abstrakten abgeleiteten <xref:System.IO.Packaging.Package> Basisklasse bereitgestellt und verwendet wird. In der Standardvorgang <xref:System.IO.Packaging.Package.Flush%2A> intern ruft <xref:System.IO.Packaging.Package.FlushCore%2A> um die Teile und Beziehungen in einem ZIP-Datei-Paket zu speichern.  
+  
+ <xref:System.IO.Packaging.Package.Flush%2A>wird aufgerufen, automatisch von der <xref:System.IO.Packaging.Package.Close%2A> und <xref:System.IO.Packaging.Package.Dispose%2A> Methoden.  Wenn <xref:System.IO.Packaging.Package.Close%2A> oder <xref:System.IO.Packaging.Package.Dispose%2A> wird aufgerufen, Sie müssen keine Aufrufen <xref:System.IO.Packaging.Package.Flush%2A> getrennt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket ist schreibgeschützt und kann nicht geändert werden.</exception>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.IO.Packaging.Package.Flush" />Intern ruft der abgeleiteten Klasse <see cref="M:System.IO.Packaging.Package.FlushCore" /> Methode auf, um das Webpart leeren basierend auf das physische Format in der abgeleiteten Klasse implementiert.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="FlushCore">
+      <MemberSignature Language="C#" Value="protected abstract void FlushCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void FlushCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.FlushCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse werden die Inhalte aller Teile und Beziehungen der abgeleiteten Klasse gespeichert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.Package.FlushCore%2A>wird aufgerufen, indem Sie die <xref:System.IO.Packaging.Package.Flush%2A> Methode zum Ausführen der Leerung basierend auf das physische Format in der abgeleiteten Klasse implementiert.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die abgeleitete <see cref="M:System.IO.Packaging.Package.FlushCore" /> Implementierung sollten keine Annahmen über die Reihenfolge oder Operationen der <see cref="M:System.IO.Packaging.Package.Flush" /> Methode, die ihn aufruft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPart">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackagePart GetPart (Uri partUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackagePart GetPart(class System.Uri partUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.GetPart(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackagePart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="partUri">Die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] des Teils zurückgegeben.</param>
+        <summary>Gibt den Teil mit einem angegebenen URI zurück.</summary>
+        <returns>Der Teil mit dem angegebenen <paramref name="partUri" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.InvalidOperationException> wird ausgelöst, wenn ein Teil mit dem angegebenen `partUri` ist nicht vorhanden.  
+  
+ Die <xref:System.IO.Packaging.Package.PartExists%2A> Methode kann verwendet werden, um zu bestimmen, ob `partUri` verweist auf einen vorhandenen Teil.  
+  
+ Wird standardmäßig ein <xref:System.IO.Packaging.ZipPackage> Implementierung der abstrakten abgeleiteten <xref:System.IO.Packaging.Package> Basisklasse bereitgestellt und verwendet wird.  In der Standardvorgang <xref:System.IO.Packaging.Package.GetPart%2A> intern ruft <xref:System.IO.Packaging.Package.GetPartCore%2A> von der <xref:System.IO.Packaging.ZipPackage> Klasse, um eine angeforderte Teil aus einem ZIP-Datei zurückzugeben.  
+  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Suchen, abrufen und lesen die Teile, die in einem Paket enthalten sind.  Das vollständige Beispiel finden Sie unter [lesen eine Package Sample](http://go.microsoft.com/fwlink/?LinkID=160034).  
+  
+ [!code-csharp[PackageRead#PackageReadUsing](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageRead/CSharp/PackageRead.cs#packagereadusing)]
+ [!code-vb[PackageRead#PackageReadUsing](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageRead/visualbasic/packageread.vb#packagereadusing)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="partUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="partUri" />ist kein gültiger <see cref="T:System.IO.Packaging.PackagePart" /> [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].</exception>
+        <exception cref="T:System.InvalidOperationException">Ein Teil mit dem angegebenen <paramref name="partUri" /> ist nicht im Paket.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket weist nur Schreibzugriff auf.</exception>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.IO.Packaging.Package.GetPart(System.Uri)" />Intern ruft die abgeleitete Klasse <see cref="M:System.IO.Packaging.Package.GetPartCore(System.Uri)" /> Methode auf, um das Webpart leeren basierend auf das physische Format in der abgeleiteten Klasse implementiert.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPartCore">
+      <MemberSignature Language="C#" Value="protected abstract System.IO.Packaging.PackagePart GetPartCore (Uri partUri);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IO.Packaging.PackagePart GetPartCore(class System.Uri partUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.GetPartCore(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackagePart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="partUri">Die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] des Teils abgerufen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt den Teil mit einem angegebenen URI adressiert.</summary>
+        <returns>Das angeforderte Part; oder <see langword="null" />, wenn ein Teil mit dem angegebenen <paramref name="partUri" /> ist nicht im Paket.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig ein <xref:System.IO.Packaging.ZipPackage> Implementierung der abstrakten abgeleiteten <xref:System.IO.Packaging.Package> Klasse bereitgestellt und verwendet wird.  In der Standardvorgang <xref:System.IO.Packaging.Package.GetPart%2A> intern ruft <xref:System.IO.Packaging.Package.GetPartCore%2A> von der <xref:System.IO.Packaging.ZipPackage> Klasse, um einen Teil aus einem ZIP-Datei abzurufen.  
+  
+ Weitere Informationen zum Paketmodell und paketteilen finden Sie unter Chapter 1 der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die abgeleitete Klasse <see cref="M:System.IO.Packaging.Package.GetPartCore(System.Uri)" /> Implementierung wird aufgerufen, indem Sie die <see cref="M:System.IO.Packaging.Package.GetPart(System.Uri)" /> Methode zugreifen und Zurückgeben des angegebenen Teils basierend auf das physische Format in der abgeleiteten Klasse implementiert.  
+  
+ Die abgeleitete <see cref="M:System.IO.Packaging.Package.GetPartCore(System.Uri)" /> Implementierung sollten keine Annahmen über die Reihenfolge oder Operationen der <see cref="M:System.IO.Packaging.Package.GetPart(System.Uri)" /> Methode, die ihn aufruft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParts">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackagePartCollection GetParts ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackagePartCollection GetParts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.GetParts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackagePartCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung aller Teile im Paket zurück.</summary>
+        <returns>Eine Auflistung aller der <see cref="T:System.IO.Packaging.PackagePart" /> Elemente, die im Paket enthalten sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.Package.GetParts%2A>Gibt eine Auflistung aller Teile, die enthalten sind, im Paket, einschließlich <xref:System.IO.Packaging.PackageRelationship> teilen.  
+  
+ <xref:System.IO.Packaging.Package.GetParts%2A>wird niemals zurückgegeben `null`, aber die zurückgegebene Auflistung enthält 0 (null) Elemente aus, wenn das Paket keine Teile enthält.  
+  
+ Wird standardmäßig ein <xref:System.IO.Packaging.ZipPackage> Implementierung der abstrakten abgeleiteten <xref:System.IO.Packaging.Package> Basisklasse bereitgestellt und verwendet wird.  In der Standardvorgang <xref:System.IO.Packaging.Package.GetParts%2A> Aufrufe der <xref:System.IO.Packaging.Package.GetPartsCore%2A> Methode der <xref:System.IO.Packaging.ZipPackage> Klasse, um die Teile aus einem ZIP-Datei zurückzugeben.  
+  
+ Weitere Informationen zu Paketen und paketteilen finden Sie in Abschnitt 1.1 der Spezifikation (Open Packaging Conventions, OPC) zum Download zur Verfügung, die am [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.IO.Packaging.Package.GetParts%2A> Methode zum Abrufen einer Auflistung der Teile, die in enthaltenen eine <xref:System.IO.Packaging.Package>.  Die vollständige Programmquellcode finden Sie unter [Erstellen eines Pakets mit einer digitalen Signatur](http://go.microsoft.com/fwlink/?LinkID=159966).  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket weist nur Schreibzugriff auf.</exception>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.IO.Packaging.Package.GetParts" />Intern ruft die abgeleitete Klasse <see cref="M:System.IO.Packaging.Package.GetPartsCore" /> Methode auf, um das Webpart leeren basierend auf das physische Format in der abgeleiteten Klasse implementiert.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPartsCore">
+      <MemberSignature Language="C#" Value="protected abstract System.IO.Packaging.PackagePart[] GetPartsCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IO.Packaging.PackagePart[] GetPartsCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.GetPartsCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackagePart[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt ein Array aller Teile im Paket zurück.</summary>
+        <returns>Ein Array von alle Teile, die im Paket enthalten sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die abgeleitete Klasse <xref:System.IO.Packaging.Package.GetPartsCore%2A> Implementierung wird aufgerufen, indem Sie die <xref:System.IO.Packaging.Package.GetParts%2A> Methode, um Zugriff auf und gibt das Array der Teile zurück basierend auf das physische Format in der abgeleiteten Klasse implementiert.  
+  
+ Wird standardmäßig ein <xref:System.IO.Packaging.ZipPackage> Implementierung der abstrakten abgeleiteten <xref:System.IO.Packaging.Package> Klasse bereitgestellt und verwendet wird.  In der Standardvorgang <xref:System.IO.Packaging.Package.GetParts%2A> intern ruft <xref:System.IO.Packaging.Package.GetPartCore%2A> von der <xref:System.IO.Packaging.ZipPackage> Klasse, um die Teile aus einem ZIP-Datei abzurufen.  
+  
+ Weitere Informationen zum Paketmodell und paketteilen finden Sie unter Chapter 1 der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die abgeleitete <see cref="M:System.IO.Packaging.Package.GetPartsCore" /> Implementierung sollten keine Annahmen über die Reihenfolge oder Operationen der <see cref="M:System.IO.Packaging.Package.GetParts" /> Methode, die ihn aufruft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelationship">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageRelationship GetRelationship (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageRelationship GetRelationship(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.GetRelationship(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageRelationship</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Die <see cref="P:System.IO.Packaging.PackageRelationship.Id" /> der Beziehung um zurückzugeben.</param>
+        <summary>Gibt die Beziehung auf Paketebene mit einem angegebenen Bezeichner zurück.</summary>
+        <returns>Die Beziehung auf Paketebene, mit dem angegebenen <paramref name="id" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `id`ein gültiger XML-Bezeichner muss sein.  Die `id` Typ lautet xsd: ID und muss den in der XML Schema Part 2: Datatypes-Spezifikation (finden Sie unter [http://www.w3.org/TR/xmlschema-2/#ID](http://www.w3.org/TR/xmlschema-2/#ID)).  
+  
+ Weitere Informationen zum Verpacken und paketbeziehungen finden Sie im Abschnitt 1.3 der Spezifikation (Open Packaging Conventions, OPC) zum Download zur Verfügung, die am [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="id" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="id" />ist kein gültiger XML-Bezeichner.</exception>
+        <exception cref="T:System.InvalidOperationException">Eine Beziehung mit dem angegebenen <paramref name="id" /> ist nicht im Paket.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket weist nur Schreibzugriff auf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelationships">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageRelationshipCollection GetRelationships ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageRelationshipCollection GetRelationships() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.GetRelationships" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageRelationshipCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung aller Paketebene Beziehungen.</summary>
+        <returns>Eine Auflistung aller Paketebene Beziehungen, die im Paket enthalten sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.Package.GetRelationships%2A>wird niemals zurückgegeben `null`; jedoch die zurückgegebene Auflistung 0 (null) Elemente enthalten kann, wenn das Paket keine Paketebene Beziehungen enthält.  
+  
+ Eine Beziehung auf Paketebene definiert eine Zuordnung zwischen das Paket und ein Zielteil der zugeordneten oder eine Ressource.  Eine Beziehung auf Paketebene kann zwei Formen besitzen.  
+  
+-   Zwischen einem <xref:System.IO.Packaging.Package> an einen Zielteil des Pakets.  
+  
+-   Zwischen einem <xref:System.IO.Packaging.Package> mit einer Zielressource außerhalb des Pakets.  
+  
+ In einer Beziehung auf Paketebene gilt das Paket der "Besitzer" der Beziehung.  Wenn das Paket gelöscht wird, werden alle Beziehungen, die im Besitz des Pakets ebenfalls gelöscht.  Der Prozess zum Erstellen oder Löschen der Beziehung wird nicht physisch der Zielteil bzw. die Ressource in irgendeiner Weise verändert.  
+  
+ Weitere Informationen zum Verpacken und paketbeziehungen finden Sie im Abschnitt 1.3 der Spezifikation (Open Packaging Conventions, OPC) zum Download zur Verfügung, die am [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket weist nur Schreibzugriff auf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelationshipsByType">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageRelationshipCollection GetRelationshipsByType (string relationshipType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageRelationshipCollection GetRelationshipsByType(string relationshipType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.GetRelationshipsByType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageRelationshipCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationshipType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relationshipType">Die <see cref="P:System.IO.Packaging.PackageRelationship.RelationshipType" /> entsprechen und in der Auflistung zurückgeben.</param>
+        <summary>Gibt eine Auflistung aller Paketebene Beziehungen, die mit einem bestimmten <see cref="P:System.IO.Packaging.PackageRelationship.RelationshipType" />.</summary>
+        <returns>Eine Auflistung der Beziehungen auf Paketebene, die mit der angegebenen Zeichenfolge <paramref name="relationshipType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.Package.GetRelationships%2A>wird niemals zurückgegeben `null`; jedoch die zurückgegebene Auflistung 0 (null) Elemente enthalten kann, wenn es sind keine Paketebene Beziehungen, die mit der angegebenen Zeichenfolge `relationshipType`.  
+  
+ Die folgende Tabelle zeigt die Paketebene `relationshipType` URIs durch die Spezifikation (Open Packaging Conventions, OPC) definiert.  
+  
+|Beziehung auf Paketebene|Beziehungstyp URI|  
+|---------------------------------|---------------------------|  
+|Haupteigenschaften|http://Schemas.openxmlformats.org/Package/2006/Relationships/Meta Daten/Core-Eigenschaften|  
+|Digitale Signatur|http://Schemas.openxmlformats.org/Package/2006/Relationships/Digit al-Signatur/Signatur|  
+|Zertifikat für digitale Signaturen|http://Schemas.openxmlformats.org/Package/2006/Relationships/Digit-al/Signaturzertifikat|  
+|Ursprung der digitalen Signatur|http://Schemas.openxmlformats.org/Package/2006/Relationships/Digit al-Signatur/origin|  
+|Miniaturansicht|http://Schemas.openxmlformats.org/Package/2006/Relationships/Meta Daten/Miniaturansicht|  
+  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie die Beziehungen abrufen, die für das Paket definiert wurden.  Das vollständige Beispiel finden Sie unter [lesen eine Package Sample](http://go.microsoft.com/fwlink/?LinkID=160034).  
+  
+ [!code-csharp[PackageRead#PackageReadUsing](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageRead/CSharp/PackageRead.cs#packagereadusing)]
+ [!code-vb[PackageRead#PackageReadUsing](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageRead/visualbasic/packageread.vb#packagereadusing)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="relationshipType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="relationshipType" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket weist nur Schreibzugriff auf.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Open">
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Öffnet ein Paket an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.ZipPackage>ist der Standardtyp für das Paket, mit dem die <xref:System.IO.Packaging.Package.Open%2A> Methode.  
+  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen eines neuen <xref:System.IO.Packaging.Package> integriert, die <xref:System.IO.Packaging.PackageRelationship> und <xref:System.IO.Packaging.PackagePart> Elemente zusammen mit gespeicherten Daten.  Das vollständige Beispiel finden Sie unter [Writing a Package Sample](http://go.microsoft.com/fwlink/?LinkID=160055).  
+  
+ [!code-csharp[PackageWrite#PackageWriteCreatePackage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageWrite/CSharp/PackageWrite.cs#packagewritecreatepackage)]
+ [!code-vb[PackageWrite#PackageWriteCreatePackage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageWrite/visualbasic/packagewrite.vb#packagewritecreatepackage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.Package Open (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.Package Open(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.Open(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.Package</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der e/a-Datenstrom auf dem das Paket zu öffnen.</param>
+        <summary>Öffnet ein Paket für einen angegebenen e/a-Datenstrom.</summary>
+        <returns>Das geöffnete Paket.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.ZipPackage>ist der Standardtyp für das Paket, mit dem die <xref:System.IO.Packaging.Package.Open%2A> Methode.  
+  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">Erfordert das Paket zu öffnen, lesen oder Lese-/Schreibzugriff-Berechtigung und die angegebenen <paramref name="stream" /> weist nur Schreibzugriff; oder das Paket zu öffnen, das erforderlich ist, Schreib- oder Lese-/Schreibberechtigung und die angegebene <paramref name="stream" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.Package Open (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.Package Open(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.Open(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.Package</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad und Dateiname des Pakets.</param>
+        <summary>Öffnet ein Paket an einem angegebenen Pfad und Dateiname.</summary>
+        <returns>Das geöffnete Paket.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.ZipPackage>ist der Standardtyp für das Paket, mit dem die <xref:System.IO.Packaging.Package.Open%2A> Methode.  
+  
+ Dies <xref:System.IO.Packaging.Package.Open%2A> Methode öffnet das Paket mit dem Standardattribute <xref:System.IO.FileMode.OpenOrCreate>, <xref:System.IO.FileAccess.ReadWrite>, und <xref:System.IO.FileShare.None> (zur Angabe von verschiedene Attributen verwenden Sie eine der anderen Überladungen auf Open-Methode).  
+  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen eines neuen <xref:System.IO.Packaging.Package> integriert, die <xref:System.IO.Packaging.PackageRelationship> und <xref:System.IO.Packaging.PackagePart> Elemente zusammen mit gespeicherten Daten.  Das vollständige Beispiel finden Sie unter [Writing a Package Sample](http://go.microsoft.com/fwlink/?LinkID=160055).  
+  
+ [!code-csharp[PackageWrite#PackageWriteCreatePackage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageWrite/CSharp/PackageWrite.cs#packagewritecreatepackage)]
+ [!code-vb[PackageWrite#PackageWriteCreatePackage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageWrite/visualbasic/packagewrite.vb#packagewritecreatepackage)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.Package Open (System.IO.Stream stream, System.IO.FileMode packageMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.Package Open(class System.IO.Stream stream, valuetype System.IO.FileMode packageMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.Open(System.IO.Stream,System.IO.FileMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.Package</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="packageMode" Type="System.IO.FileMode" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der e/a-Datenstrom auf dem das Paket zu öffnen.</param>
+        <param name="packageMode">Der Dateimodus in dem das Paket zu öffnen.</param>
+        <summary>Öffnet ein Paket mit einem angegebenen e/a-Datenstrom und den entsprechenden Dateimodus.</summary>
+        <returns>Das geöffnete Paket.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.ZipPackage>ist der Standardtyp für das Paket, mit dem die <xref:System.IO.Packaging.Package.Open%2A> Methode.  
+  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          Der <paramref name="packageMode" />-Wert ist ungültig.</exception>
+        <exception cref="T:System.IO.IOException">Erfordert das Paket zu öffnen, lesen oder Lese-/Schreibzugriff-Berechtigung und die angegebenen <paramref name="stream" /> weist nur Schreibzugriff; oder das Paket zu öffnen, das erforderlich ist, Schreib- oder Lese-/Schreibberechtigung und die angegebene <paramref name="stream" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.Package Open (string path, System.IO.FileMode packageMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.Package Open(string path, valuetype System.IO.FileMode packageMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.Open(System.String,System.IO.FileMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.Package</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="packageMode" Type="System.IO.FileMode" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad und Dateiname des Pakets.</param>
+        <param name="packageMode">Der Dateimodus in dem das Paket zu öffnen.</param>
+        <summary>Öffnet ein Paket in einem angegebenen Pfad mit einem bestimmten Dateimodus.</summary>
+        <returns>Das geöffnete Paket.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.ZipPackage>ist der Standardtyp für das Paket, mit dem die <xref:System.IO.Packaging.Package.Open%2A> Methode.  
+  
+ Dies <xref:System.IO.Packaging.Package.Open%2A> Methode öffnet das Paket mit dem Standardattribute <xref:System.IO.FileAccess.ReadWrite> und <xref:System.IO.FileShare.None> (zur Angabe von verschiedene Attributen verwenden Sie eine der anderen Überladungen auf Open-Methode).  
+  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen eines neuen <xref:System.IO.Packaging.Package> integriert, die <xref:System.IO.Packaging.PackageRelationship> und <xref:System.IO.Packaging.PackagePart> Elemente zusammen mit gespeicherten Daten.  Das vollständige Beispiel finden Sie unter [Writing a Package Sample](http://go.microsoft.com/fwlink/?LinkID=160055).  
+  
+ [!code-csharp[PackageWrite#PackageWriteCreatePackage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageWrite/CSharp/PackageWrite.cs#packagewritecreatepackage)]
+ [!code-vb[PackageWrite#PackageWriteCreatePackage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageWrite/visualbasic/packagewrite.vb#packagewritecreatepackage)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Wert für <paramref name="packageMode" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.Package Open (System.IO.Stream stream, System.IO.FileMode packageMode, System.IO.FileAccess packageAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.Package Open(class System.IO.Stream stream, valuetype System.IO.FileMode packageMode, valuetype System.IO.FileAccess packageAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.Open(System.IO.Stream,System.IO.FileMode,System.IO.FileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.Package</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="packageMode" Type="System.IO.FileMode" />
+        <Parameter Name="packageAccess" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der e/a-Datenstrom auf dem das Paket zu öffnen.</param>
+        <param name="packageMode">Der Dateimodus in dem das Paket zu öffnen.</param>
+        <param name="packageAccess">Der Dateizugriff, in dem das Paket geöffnet werden soll.</param>
+        <summary>Öffnet ein Paket mit einem angegebenen e/a-Datenstrom, Dateimodus und Dateizugriff festlegen.</summary>
+        <returns>Das geöffnete Paket.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.ZipPackage>ist der Standardtyp für das Paket, mit dem die <xref:System.IO.Packaging.Package.Open%2A> Methode.  
+  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert für <paramref name="packageMode" /> oder <paramref name="packageAccess" /> ist ungültig.</exception>
+        <exception cref="T:System.IO.IOException">Erfordert das Paket zu öffnen, lesen oder Lese-/Schreibzugriff-Berechtigung und die angegebenen <paramref name="stream" /> weist nur Schreibzugriff; oder das Paket zu öffnen, das erforderlich ist, Schreib- oder Lese-/Schreibberechtigung und die angegebene <paramref name="stream" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.Package Open (string path, System.IO.FileMode packageMode, System.IO.FileAccess packageAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.Package Open(string path, valuetype System.IO.FileMode packageMode, valuetype System.IO.FileAccess packageAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.Open(System.String,System.IO.FileMode,System.IO.FileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.Package</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="packageMode" Type="System.IO.FileMode" />
+        <Parameter Name="packageAccess" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad und Dateiname des Pakets.</param>
+        <param name="packageMode">Der Dateimodus in dem das Paket zu öffnen.</param>
+        <param name="packageAccess">Der Dateizugriff, in dem das Paket geöffnet werden soll.</param>
+        <summary>Öffnet ein Paket in einem angegebenen Pfad mit einem bestimmten Dateimodus und Dateizugriff festlegen.</summary>
+        <returns>Das geöffnete Paket.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.ZipPackage>ist der Standardtyp für das Paket, mit dem die <xref:System.IO.Packaging.Package.Open%2A> Methode.  
+  
+ Dies <xref:System.IO.Packaging.Package.Open%2A> Methode öffnet das Paket hat den Standardwert <xref:System.IO.FileShare.None> Attribut (So geben Sie ein anderes Attribut mithilfe der <xref:System.IO.Packaging.Package.Open%2A> methodenüberladung).  
+  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Öffnen und Lesen einer <xref:System.IO.Packaging.Package> enthält <xref:System.IO.Packaging.PackageRelationship> und <xref:System.IO.Packaging.PackagePart> Elemente zusammen mit gespeicherten Daten.  Das vollständige Beispiel finden Sie unter [lesen eine Package Sample](http://go.microsoft.com/fwlink/?LinkID=160034).  
+  
+ [!code-csharp[PackageRead#PackageReadUsing](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageRead/CSharp/PackageRead.cs#packagereadusing)]
+ [!code-vb[PackageRead#PackageReadUsing](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageRead/visualbasic/packageread.vb#packagereadusing)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Wert für <paramref name="packageMode" /> oder <paramref name="packageAccess" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.Package Open (string path, System.IO.FileMode packageMode, System.IO.FileAccess packageAccess, System.IO.FileShare packageShare);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.Package Open(string path, valuetype System.IO.FileMode packageMode, valuetype System.IO.FileAccess packageAccess, valuetype System.IO.FileShare packageShare) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.Open(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.Package</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="packageMode" Type="System.IO.FileMode" />
+        <Parameter Name="packageAccess" Type="System.IO.FileAccess" />
+        <Parameter Name="packageShare" Type="System.IO.FileShare" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad und Dateiname des Pakets.</param>
+        <param name="packageMode">Der Dateimodus in dem das Paket zu öffnen.</param>
+        <param name="packageAccess">Der Dateizugriff, in dem das Paket geöffnet werden soll.</param>
+        <param name="packageShare">Die Dateifreigabe-Modus, in dem das Paket zu öffnen.</param>
+        <summary>Öffnet ein Paket in einem angegebenen Pfad mit einer bestimmten Dateimodus, Dateizugriff und Dateifreigabe festlegen.</summary>
+        <returns>Das geöffnete Paket.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.ZipPackage>ist der Standardtyp für das Paket, mit dem die <xref:System.IO.Packaging.Package.Open%2A> Methode.  
+  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen eines neuen <xref:System.IO.Packaging.Package> integriert, die <xref:System.IO.Packaging.PackageRelationship> und <xref:System.IO.Packaging.PackagePart> Elemente zusammen mit gespeicherten Daten.  Das vollständige Beispiel finden Sie unter [Writing a Package Sample](http://go.microsoft.com/fwlink/?LinkID=160055).  
+  
+ [!code-csharp[PackageWrite#PackageWriteCreatePackage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageWrite/CSharp/PackageWrite.cs#packagewritecreatepackage)]
+ [!code-vb[PackageWrite#PackageWriteCreatePackage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageWrite/visualbasic/packagewrite.vb#packagewritecreatepackage)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert für <paramref name="packageMode" />, <paramref name="packageAccess" />, oder <paramref name="packageShare" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PackageProperties">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageProperties PackageProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Packaging.PackageProperties PackageProperties" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.Package.PackageProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kerneigenschaften des Pakets ab.</summary>
+        <value>Die Kerneigenschaften des Pakets.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den Paketeigenschaften Core, finden Sie unter Abschnitt 3.1 in der Spezifikation (Open Packaging Conventions, OPC) zum Download zur Verfügung, die unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PartExists">
+      <MemberSignature Language="C#" Value="public virtual bool PartExists (Uri partUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool PartExists(class System.Uri partUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.PartExists(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="partUri">Die <see cref="T:System.Uri" /> des Teils zu überprüfen.</param>
+        <summary>Gibt an, ob ein Teil mit einem angegebenen URI in das Paket enthalten ist.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Teil mit dem angegebenen <paramref name="partUri" /> im Paket ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `partUri` muss mit einem Schrägstrich beginnen "/" und aus dem Stammverzeichnis des Pakets absolut sein.  
+  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="partUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="partUri" />ist kein gültiger <see cref="T:System.IO.Packaging.PackagePart" /> [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket ist lesegeschützt (Informationen konnten nicht gelesen werden).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RelationshipExists">
+      <MemberSignature Language="C#" Value="public bool RelationshipExists (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RelationshipExists(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.RelationshipExists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Die <see cref="P:System.IO.Packaging.PackageRelationship.Id" /> der zu suchende Beziehung.</param>
+        <summary>Gibt an, ob eine Paketebene Beziehung mit einer angegebenen ID im Paket enthalten ist.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Beziehung auf Paketebene, mit dem angegebenen <paramref name="id" /> im Paket ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC) zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="id" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="id" />ist kein gültiger XML-Bezeichner.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Paket ist nicht geöffnet (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" /> oder <see cref="M:System.IO.Packaging.Package.Close" /> aufgerufen wurde).</exception>
+        <exception cref="T:System.IO.IOException">Das Paket weist nur Schreibzugriff auf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.Package.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Infrastruktur und sollte nicht für die Anwendungsverwendung.  Verwenden Sie stattdessen die typsichere <see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)" />-Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

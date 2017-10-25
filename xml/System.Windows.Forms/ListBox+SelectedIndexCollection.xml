@@ -1,0 +1,667 @@
+<Type Name="ListBox+SelectedIndexCollection" FullName="System.Windows.Forms.ListBox+SelectedIndexCollection">
+  <TypeSignature Language="C#" Value="public class ListBox.SelectedIndexCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit ListBox/SelectedIndexCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListBox.SelectedIndexCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Auflistung mit den Indizes für die aktivierten Elemente in einem <see cref="T:System.Windows.Forms.ListBox" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection> Klasse speichert die Indizes für die ausgewählten Elemente in der <xref:System.Windows.Forms.ListBox>. Die Indizes gespeichert, der <xref:System.Windows.Forms.ListBox.SelectedIndexCollection> sind Indexpositionen in der <xref:System.Windows.Forms.ListBox.ObjectCollection> Klasse. Die <xref:System.Windows.Forms.ListBox.ObjectCollection> Klasse speichert alle Elemente angezeigt, der <xref:System.Windows.Forms.ListBox>.  
+  
+ In der folgenden Tabelle ist ein Beispiel, wie das <xref:System.Windows.Forms.ListBox.ObjectCollection> speichert die Elemente der <xref:System.Windows.Forms.ListBox> sowie ein Beispiel für ihre Auswahl Status <xref:System.Windows.Forms.ListBox>.  
+  
+|Index|Element|Auswahlstatus im Listenfeld|  
+|-----------|----------|----------------------------------------|  
+|0|Objekt1|Nicht markiert|  
+|1|object2|Ausgewählt|  
+|2|object3|Nicht markiert|  
+|3|object4|Ausgewählt|  
+|4|object5|Ausgewählt|  
+  
+ Auf der Grundlage der <xref:System.Windows.Forms.ListBox.ObjectCollection> wird in der vorherigen Tabelle, in der folgenden Tabelle veranschaulicht, wie die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection> angezeigt würde.  
+  
+|Index|Index des ausgewählten Elements in ObjectCollection|  
+|-----------|------------------------------------------------|  
+|0|1|  
+|1|3|  
+|2|4|  
+  
+ Sie können die Eigenschaften und Methoden dieser Klasse verwenden, zum Ausführen einer Vielzahl von Aufgaben mit der Auflistung. Die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection.Contains%2A> Methode können Sie bestimmen, ob eine Indexposition in der <xref:System.Windows.Forms.ListBox.ObjectCollection> Klasse ist ein Mitglied der ausgewählten Indizes gespeichert, der <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>. Wenn Sie wissen, dass das Element in der Auflistung befindet, können Sie die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection.IndexOf%2A> Methode, um zu ermitteln, wo innerhalb einer bestimmten Indexposition der <xref:System.Windows.Forms.ListBox.ObjectCollection> für die <xref:System.Windows.Forms.ListBox> gespeichert ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ListBox.FindString%2A> Methode, um alle Instanzen des Suchtexts in den Elementen der Suchen der <xref:System.Windows.Forms.ListBox>. Im Beispiel wird die Version der <xref:System.Windows.Forms.ListBox.FindString%2A> -Methode, die Ihnen ermöglicht, eine Suche aus dem kontinuierlicher Suchen aller Elemente im Angeben der <xref:System.Windows.Forms.ListBox>. Außerdem wird veranschaulicht, wie Sie ermitteln, wann die <xref:System.Windows.Forms.ListBox.FindString%2A> Methode beginnt die Suche vom Anfang der Liste nach Erreichen des unteren Rand der Liste der Elemente, um eine rekursive Suche zu verhindern. Sobald Elemente, in gefunden werden der <xref:System.Windows.Forms.ListBox>, sie ausgewählt werden, mithilfe der <xref:System.Windows.Forms.ListBox.SetSelected%2A> Methode.  
+  
+ [!code-cpp[ListBox.FindString#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ListBox.FindString/CPP/form1.cpp#1)]
+ [!code-csharp[ListBox.FindString#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListBox.FindString/CS/form1.cs#1)]
+ [!code-vb[ListBox.FindString#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListBox.FindString/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SelectedIndexCollection (System.Windows.Forms.ListBox owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ListBox owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.SelectedIndexCollection.#ctor(System.Windows.Forms.ListBox)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.ListBox" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Ein <see cref="T:System.Windows.Forms.ListBox" /> , der Besitzer der Auflistung darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ListBox.SelectedIndexCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz dieser Klasse kann nicht erstellt werden, ohne Zuordnung zu einem <xref:System.Windows.Forms.ListBox> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.SelectedIndexCollection.Add(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position im Array, an dem Hinzufügen der <see cref="T:System.Windows.Forms.ListBox" />.</param>
+        <summary>Fügt der <see cref="T:System.Windows.Forms.ListBox" /> an der angegebenen Indexposition.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.SelectedIndexCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Steuerelemente aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (int selectedIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(int32 selectedIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.SelectedIndexCollection.Contains(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectedIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="selectedIndex">Der Index in der Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt, ob der angegebene Index in der Auflistung befindet.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Index aus der <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> für die <see cref="T:System.Windows.Forms.ListBox" /> ist ein Element in dieser Auflistung enthalten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection.Contains%2A> Methode können Sie bestimmen, ob eine Indexposition in der <xref:System.Windows.Forms.ListBox.ObjectCollection> Klasse ist ein Mitglied der ausgewählten Indizes gespeichert, der <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>. Sie können Hiermit können Sie bestimmen, ob ein bestimmtes Element in einer Mehrfachauswahl <xref:System.Windows.Forms.ListBox> ausgewählt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array destination, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array destination, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.SelectedIndexCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="destination">Das Zielarray.</param>
+        <param name="index">Der Index im Zielarray, ab dem gespeichert wird.</param>
+        <summary>Kopiert die gesamte Auflistung in ein vorhandenes Array an einer angegebenen Position innerhalb des Arrays.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, der ausgewählten Indizes über mehrere Sammlungen in ein einzelnes Array kombiniert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListBox.SelectedIndexCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der Auflistung ab.</summary>
+        <value>Die Anzahl der Elemente in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie bestimmen die Anzahl der aktivierten Elemente in der <xref:System.Windows.Forms.ListBox>. Anschließend können Sie diesen Wert, wenn die Werte der Auflistung durchlaufen, und Sie müssen eine Anzahl von Iterationen der Schleife bereitstellen. Wenn die <xref:System.Windows.Forms.ListBox.SelectionMode%2A> Eigenschaft von der <xref:System.Windows.Forms.ListBox> auf festgelegt ist `SelectionMode.MultiSimple` oder `SelectionMode.MultiExtended`, gibt diese Eigenschaft immer den Wert 0 (null) oder eins (1) abhängig davon, ob Sie ein Element ausgewählt ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ListBox.FindString%2A> Methode, um alle Instanzen des Suchtexts in den Elementen der Suchen der <xref:System.Windows.Forms.ListBox>. Im Beispiel wird die Version der <xref:System.Windows.Forms.ListBox.FindString%2A> -Methode, die Ihnen ermöglicht, eine Suche aus dem kontinuierlicher Suchen aller Elemente im Angeben der <xref:System.Windows.Forms.ListBox>. Außerdem wird veranschaulicht, wie Sie ermitteln, wann die <xref:System.Windows.Forms.ListBox.FindString%2A> Methode beginnt die Suche vom Anfang der Liste nach Erreichen des unteren Rand der Liste der Elemente, um eine rekursive Suche zu verhindern. Sobald Elemente, in gefunden werden der <xref:System.Windows.Forms.ListBox>, sie ausgewählt werden, mithilfe der <xref:System.Windows.Forms.ListBox.SetSelected%2A> Methode.  
+  
+ [!code-cpp[ListBox.FindString#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ListBox.FindString/CPP/form1.cpp#1)]
+ [!code-csharp[ListBox.FindString#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListBox.FindString/CS/form1.cs#1)]
+ [!code-vb[ListBox.FindString#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListBox.FindString/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.SelectedIndexCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zum Durchlaufen der Auflistung der ausgewählten Indizes verwenden.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> , das die Auflistung der ausgewählten Indizes darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (int selectedIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(int32 selectedIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.SelectedIndexCollection.IndexOf(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectedIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="selectedIndex">Der nullbasierte Index aus der <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> in dieser Auflistung gesucht werden soll.</param>
+        <summary>Gibt den Index in der <see cref="T:System.Windows.Forms.ListBox.SelectedIndexCollection" /> des angegebenen Index aus der <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> von der <see cref="T:System.Windows.Forms.ListBox" />.</summary>
+        <returns>Der nullbasierte Index in der Auflistung, in dem angegebenen Index aus der <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> wurde innerhalb der <see cref="T:System.Windows.Forms.ListBox.SelectedIndexCollection" />ist, andernfalls minus eins (1).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sobald Sie wissen, dass ein Element in der Auflistung befindet (mithilfe der <xref:System.Windows.Forms.ListBox.SelectedIndexCollection.Contains%2A> Methode), können Sie die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection.IndexOf%2A> Methode, um zu ermitteln, wo innerhalb einer bestimmten Indexposition der <xref:System.Windows.Forms.ListBox.ObjectCollection> für die <xref:System.Windows.Forms.ListBox> befindet sich innerhalb der <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListBox.SelectedIndexCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Auflistung schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist immer `true` für diese Sammlung. Die Elemente in dieser Auflistung werden nur geändert, die <xref:System.Windows.Forms.ListBox> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public int this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListBox.SelectedIndexCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Elements in der Auflistung abgerufen werden soll.</param>
+        <summary>Ruft den Indexwert am angegebenen Index in dieser Auflistung ab.</summary>
+        <value>Der Indexwert aus der <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> , der am angegebenen Speicherort gespeichert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Indexer können Sie zum Abrufen eines bestimmten ausgewählten Indexes aus der <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>. Der Index in der Auflistung gespeicherten ist ein Index in die <xref:System.Windows.Forms.ListBox.ObjectCollection> von der <xref:System.Windows.Forms.ListBox> , die ein ausgewähltes Element in darstellt der <xref:System.Windows.Forms.ListBox>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> -Parameter ist kleiner als 0 (null) oder größer als oder gleich dem Wert von der <see cref="P:System.Windows.Forms.ListBox.SelectedIndexCollection.Count" /> Eigenschaft von der <see cref="T:System.Windows.Forms.ListBox.SelectedIndexCollection" /> Klasse.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.SelectedIndexCollection.Remove(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Das Steuerelement entfernt werden soll.</param>
+        <summary>Entfernt das angegebene Steuerelement aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListBox.SelectedIndexCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.IsSynchronized" />.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListBox.SelectedIndexCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.SyncRoot" />.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Windows.Forms.ListBox.SelectedIndexCollection" /> synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.SelectedIndexCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Index der Auflistung hinzugefügt werden soll.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Add(System.Object)" />.</summary>
+        <returns>Die Position, an der der Index eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ Sie können nicht geändert werden die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection> -Klasse direkt verwendet. Zum Hinzufügen eines Elements auf der <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>, verwenden Sie die <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> Eigenschaft oder die <xref:System.Windows.Forms.ListBox.SetSelected%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Clear">
+      <MemberSignature Language="C#" Value="void IList.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.SelectedIndexCollection.System#Collections#IList#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Clear" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object selectedIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object selectedIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.SelectedIndexCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectedIndex" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="selectedIndex">Der Index in der Auflistung gesucht werden soll.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Contains(System.Object)" />.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Index aus der <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> für die <see cref="T:System.Windows.Forms.ListBox" /> ist ein Element in dieser Auflistung enthalten ist, andernfalls false.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ Die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection.System%23Collections%23IList%23Contains%2A> Methode können Sie bestimmen, ob eine Indexposition in der <xref:System.Windows.Forms.ListBox.ObjectCollection> ein Mitglied der ausgewählten Indizes gespeichert, der <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>. Sie können diese Methode verwenden, um festzustellen, ob ein bestimmtes Element in einem Listenfeld Mehrfachauswahl aktiviert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object selectedIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object selectedIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.SelectedIndexCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectedIndex" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="selectedIndex">Der nullbasierte Index aus der <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> in dieser Auflistung gesucht werden soll.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.IndexOf(System.Object)" />.</summary>
+        <returns>Der nullbasierte Index in der Auflistung, in dem angegebenen Index des der <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> befindet, ist in der <see cref="T:System.Windows.Forms.ListBox.SelectedIndexCollection" />ist, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ Die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection> enthält die Indizes der aktivierten Elemente in der <xref:System.Windows.Forms.ListBox.ObjectCollection> von der <xref:System.Windows.Forms.ListBox> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.SelectedIndexCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index, an dem Wert eingefügt werden soll.</param>
+        <param name="value">Das dem <see cref="T:System.Windows.Forms.ListBox.SelectedIndexCollection" /> hinzuzufügende Objekt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Insert(System.Int32,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ Sie können nicht geändert werden die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection> -Klasse direkt verwendet. Zum Hinzufügen eines Elements auf der <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>, verwenden Sie die <xref:System.Windows.Forms.ListBox.SelectedItem%2A> Eigenschaft oder die <xref:System.Windows.Forms.ListBox.SetSelected%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Wird immer ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListBox.SelectedIndexCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IList.IsFixedSize" />.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListBox.SelectedIndexCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des abzurufenden Elements.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IList.Item(System.Int32)" />.</summary>
+        <value>Der Indexwert aus der <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> , der am angegebenen Speicherort gespeichert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.SelectedIndexCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das aus entfernt die <see cref="T:System.Windows.Forms.ListBox.SelectedIndexCollection" />.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Remove(System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ Sie können nicht geändert werden die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection> -Klasse direkt verwendet. So entfernen Sie ein Element aus der <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>, verwenden Sie die <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> Eigenschaft oder die <xref:System.Windows.Forms.ListBox.SetSelected%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Wird immer ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.SelectedIndexCollection.System#Collections#IList#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.RemoveAt(System.Int32)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ Sie können nicht geändert werden die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection> -Klasse direkt verwendet. So entfernen Sie ein Element aus der <xref:System.Windows.Forms.ListBox.SelectedIndexCollection>, verwenden Sie die <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> Eigenschaft oder die <xref:System.Windows.Forms.ListBox.SetSelected%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Wird immer ausgelöst.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

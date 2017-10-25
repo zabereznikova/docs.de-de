@@ -1,0 +1,158 @@
+<Type Name="SerializationBinder" FullName="System.Runtime.Serialization.SerializationBinder">
+  <TypeSignature Language="C#" Value="public abstract class SerializationBinder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit SerializationBinder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.SerializationBinder" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht es Benutzern zu laden und zu bestimmen, welche Klasse geladen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Formatierungsprogramm überträgt während der Serialisierung die Informationen, die zum Erstellen einer Instanz eines Objekts mit dem korrekten Typ und der korrekten Version erforderlich sind. Diese Informationen enthalten i. d. R. den vollständigen Typ- und Assemblynamen des Objekts. Der Assemblyname enthält den Namen, Version und starken Namen (siehe [Assemblys mit starkem Namen](~/docs/framework/app-domains/strong-named-assemblies.md)) Hash der Assembly. In der Standardeinstellung wird bei der Deserialisierung anhand dieser Informationen eine Instanz eines identischen Objekts erstellt. Das Laden durch Sicherheitsrichtlinien eingeschränkter Assemblys bildet hierbei eine Ausnahme. Einige Benutzer müssen möglicherweise steuern können, welche Klasse geladen wird, entweder weil die Klasse von einer Assembly zu einer anderen verschoben wurde oder weil auf dem Client und dem Server jeweils eine andere Version der Klasse erforderlich ist.  
+  
+ <xref:System.Runtime.Serialization.SerializationBinder>kann auch aus Sicherheitsgründen verwendet werden. Es gibt möglicherweise einige Sicherheitslücken Wenn Sie versuchen, einige Daten aus einer nicht vertrauenswürdigen Quelle zu deserialisieren. Der Binder haben Sie die Möglichkeit, zu überprüfen, welche Typen in die Anwendungsdomäne geladen werden. Sie können dann entweder Liste verweigerter Typen oder eine Liste der zulässigen Typen verwalten und einschränken, welche Typen geladen werden und instanziiert. Darüber hinaus sollten Sie beachten, welche Informationen bei der Übertragung abgelegt wird werden, sollten Sie (mit Transport- oder Sicherheit) sichern beim Typnamen oder andere Daten über das Netzwerk senden.  
+  
+> [!WARNING]
+>  Verwenden Sie nur <xref:System.Runtime.Serialization.SerializationBinder> Domänenmodus vollständig genau wissen, welche Informationen serialisiert wird. Bösartige Typen können zu unerwartetem Verhalten führen.  
+  
+ Dies ist eine abstrakte Basisklasse. Diese Klasse wird von allen Bindern erweitert.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SerializationBinder Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SerializationBinder Example/CPP/serializationbinder.cpp#1)]
+ [!code-csharp[SerializationBinder Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SerializationBinder Example/CS/serializationbinder.cs#1)]
+ [!code-vb[SerializationBinder Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SerializationBinder Example/VB/serializationbinder.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Wenn Sie von <see cref="T:System.Runtime.Serialization.SerializationBinder" /> erben, müssen Sie folgenden Member überschreiben: <see cref="M:System.Runtime.Serialization.SerializationBinder.BindToType(System.String,System.String)" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SerializationBinder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationBinder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.SerializationBinder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindToName">
+      <MemberSignature Language="C#" Value="public virtual void BindToName (Type serializedType, out string assemblyName, out string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BindToName(class System.Type serializedType, [out] string&amp; assemblyName, [out] string&amp; typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationBinder.BindToName(System.Type,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedType" Type="System.Type" />
+        <Parameter Name="assemblyName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="typeName" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="serializedType">Der Typ des Objekts, von dem das Formatierungsprogramm eine neue Instanz erstellt.</param>
+        <param name="assemblyName">Gibt an, die <see cref="T:System.Reflection.Assembly" /> -Namen des serialisierten Objekts.</param>
+        <param name="typeName">Gibt an, die <see cref="T:System.Type" /> -Namen des serialisierten Objekts.</param>
+        <summary>Steuert beim Überschreiben in einer abgeleiteten Klasse die Bindung eines serialisierten Objekts an einen Typ.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindToType">
+      <MemberSignature Language="C#" Value="public abstract Type BindToType (string assemblyName, string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type BindToType(string assemblyName, string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationBinder.BindToType(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyName" Type="System.String" />
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyName">Gibt an, die <see cref="T:System.Reflection.Assembly" /> -Namen des serialisierten Objekts.</param>
+        <param name="typeName">Gibt an, die <see cref="T:System.Type" /> -Namen des serialisierten Objekts.</param>
+        <summary>Steuert beim Überschreiben in einer abgeleiteten Klasse die Bindung eines serialisierten Objekts an einen Typ.</summary>
+        <returns>Der Typ des Objekts, von dem das Formatierungsprogramm eine neue Instanz erstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ SerializationBinder-Beispiel 1  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie müssen die aktuelle Methode in einer abgeleiteten Klasse implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,75 @@
+<Type Name="LinqDataSourceDisposeEventArgs" FullName="System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs">
+  <TypeSignature Language="C#" Value="public class LinqDataSourceDisposeEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinqDataSourceDisposeEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.LinqDataSource.ContextDisposing" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie erstellen einen Handler für das <xref:System.Web.UI.WebControls.LinqDataSource.ContextDisposing> Ereignis, um die Bereinigung auszuführen, die spezifisch für die Daten Context-Objekt ist, bevor das Objekt zerstört wird. Die <xref:System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs> Objekt enthält das Context-Objekt, das verwendet wird, wenn Sie auswählen, aktualisieren, einfügen oder Löschen von Daten. Die <xref:System.Web.UI.WebControls.LinqDataSource.ContextDisposing> Ereignis wird ausgelöst, während die <xref:System.Web.UI.Control.Unload> Ereignis vor der <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement verwirft das Context-Objekt.  
+  
+ Das Datenobjekt für den Kontext ist im angegebenen Typ der <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> Eigenschaft oder der Typ der <xref:System.Web.UI.WebControls.LinqDataSourceContextEventArgs.ObjectInstance%2A> von der <xref:System.Web.UI.WebControls.LinqDataSourceContextEventArgs> Klasse.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement interagiert mit einer Datenbank die <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> -Eigenschaftensatz auf die <xref:System.Data.Linq.DataContext> -Objekt, das die Datenbank darstellt. Wenn die <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement interagiert mit einer Auflistung in-Memory-Daten die <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> Eigenschaft festgelegt ist, auf das Objekt, das die Auflistung enthält.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinqDataSourceDisposeEventArgs (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Das Context-Objekt zu verwerfen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectInstance">
+      <MemberSignature Language="C#" Value="public object ObjectInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ObjectInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs.ObjectInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kontext-Datenobjekt zum Verwerfen ab.</summary>
+        <value>Ein Objekt, das Daten darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs.ObjectInstance%2A> Eigenschaft enthält die Daten Context-Objekt, das <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement Vorgänge verwendet. Sie können die <xref:System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs.ObjectInstance%2A> Eigenschaft Daten Context-Objekt abgerufen, wenn Sie möchten das Objekt zu untersuchen, bevor sie freigegeben ist.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement interagiert mit einer Datenbank die <xref:System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs.ObjectInstance%2A> -Eigenschaftensatz auf die <xref:System.Data.Linq.DataContext> -Objekt, das die Datenbank darstellt. Wenn die <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement interagiert mit einer Auflistung in-Memory-Daten die <xref:System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs.ObjectInstance%2A> Eigenschaft festgelegt ist, auf das Objekt, das die Auflistung enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,120 @@
+<Type Name="SelectionPattern+SelectionPatternInformation" FullName="System.Windows.Automation.SelectionPattern+SelectionPatternInformation">
+  <TypeSignature Language="C#" Value="public struct SelectionPattern.SelectionPatternInformation" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi sealed beforefieldinit SelectionPattern/SelectionPatternInformation extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.SelectionPattern.SelectionPatternInformation" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht den Zugriff auf die Eigenschaftswerte einer <see cref="T:System.Windows.Automation.SelectionPattern" /> -Objekt mithilfe seiner <see cref="P:System.Windows.Automation.SelectionPattern.Current" /> oder <see cref="P:System.Windows.Automation.SelectionPattern.Cached" /> Accessoren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanSelectMultiple">
+      <MemberSignature Language="C#" Value="public bool CanSelectMultiple { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSelectMultiple" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.CanSelectMultiple" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Container erlaubt, dass mehrere untergeordnete Elemente gleichzeitig ausgewählt werden.</summary>
+        <value>
+          <see langword="true" />, wenn das Steuerelement die Mehrfachauswahl unterstützt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann in seltenen Fällen, beispielsweise dynamische sein, die ein Steuerelement möglicherweise mehrere Elemente ausgewählt werden, während der Initialisierung, dass anschließend nur einzelne Auswahl erfolgen jedoch ermöglichen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.SelectionPattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement> und anschließend verwendet, um Eigenschaftenwerte abzurufen.  
+  
+ [!code-csharp[UIASelectionPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionPattern_snip/CSharp/UIASelectionPattern_snippets.cs#101)]
+ [!code-vb[UIASelectionPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionPattern_snip/VisualBasic/UIASelectionPattern_snippets.vb#101)]  
+[!code-csharp[UIASelectionPattern_snip#104](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionPattern_snip/CSharp/UIASelectionPattern_snippets.cs#104)]
+[!code-vb[UIASelectionPattern_snip#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionPattern_snip/VisualBasic/UIASelectionPattern_snippets.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelection">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement[] GetSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement[] GetSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft alle Elemente im Auswahlcontainer, die ausgewählt sind.</summary>
+        <returns>Die Auflistung ausgewählter Elemente. Der Standardwert ist ein leeres Array.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel eine Auflistung von <xref:System.Windows.Automation.AutomationElement>, die ausgewählten Elemente in einem Auswahlcontainer abgerufen wird.  
+  
+ [!code-csharp[UIASelectionPattern_snip#1025](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionPattern_snip/CSharp/UIASelectionPattern_snippets.cs#1025)]
+ [!code-vb[UIASelectionPattern_snip#1025](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionPattern_snip/VisualBasic/UIASelectionPattern_snippets.vb#1025)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionRequired">
+      <MemberSignature Language="C#" Value="public bool IsSelectionRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelectionRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.IsSelectionRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Container die Auswahl mindestens eines untergeordneten Elements erfordert.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement mindestens ein Element ausgewählt werden muss; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann dynamisch sein. Im anfänglichen Zustand eines Steuerelements sind z. B. möglicherweise standardmäßig keine Elemente ausgewählt, wodurch angezeigt wird, dass <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> `false`ist. Nach dem Auswählen eines Elements muss für das Steuerelement jedoch immer mindestens ein Element ausgewählt sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.SelectionPattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement> und anschließend verwendet, um Eigenschaftenwerte abzurufen.  
+  
+ [!code-csharp[UIASelectionPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionPattern_snip/CSharp/UIASelectionPattern_snippets.cs#101)]
+ [!code-vb[UIASelectionPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionPattern_snip/VisualBasic/UIASelectionPattern_snippets.vb#101)]  
+[!code-csharp[UIASelectionPattern_snip#104](~/samples/snippets/csharp/VS_Snippets_Wpf/UIASelectionPattern_snip/CSharp/UIASelectionPattern_snippets.cs#104)]
+[!code-vb[UIASelectionPattern_snip#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIASelectionPattern_snip/VisualBasic/UIASelectionPattern_snippets.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

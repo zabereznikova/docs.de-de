@@ -1,0 +1,133 @@
+<Type Name="EndpointIdentityExtension" FullName="System.ServiceModel.EndpointIdentityExtension">
+  <TypeSignature Language="C#" Value="public class EndpointIdentityExtension : System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EndpointIdentityExtension extends System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.EndpointIdentityExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.MarkupExtensionReturnType(typeof(System.ServiceModel.EndpointIdentity))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine Markuperweiterung für die <see cref="T:System.ServiceModel.EndpointIdentity" />-Klasse.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointIdentityExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointIdentityExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.EndpointIdentityExtension" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointIdentityExtension (System.ServiceModel.EndpointIdentity identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.EndpointIdentity identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointIdentityExtension.#ctor(System.ServiceModel.EndpointIdentity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.ServiceModel.EndpointIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Die Endpunktidentität.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.EndpointIdentityExtension" />-Klasse mit der angegebenen <see cref="T:System.ServiceModel.EndpointIdentity" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimResource">
+      <MemberSignature Language="C#" Value="public object ClaimResource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ClaimResource" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EndpointIdentityExtension.ClaimResource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anspruchsressource ab bzw. legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Object" />-Objekt, das die Anspruchsressource enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimRight">
+      <MemberSignature Language="C#" Value="public string ClaimRight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClaimRight" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EndpointIdentityExtension.ClaimRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Anspruchsrecht ab oder legt es fest.</summary>
+        <value>Ein <see cref="T:System.String" />-Wert, der das Anspruchsrecht enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimType">
+      <MemberSignature Language="C#" Value="public string ClaimType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClaimType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EndpointIdentityExtension.ClaimType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anspruchstyp ab oder legt ihn fest.</summary>
+        <value>Ein <see cref="T:System.String" />-Wert, der den Anspruchstyp enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointIdentityExtension.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Dieser Parameter wird gegenwärtig ignoriert.</param>
+        <summary>Stellt ein <see cref="T:System.ServiceModel.EndpointIdentity" />-Objekt für die angegebene <see cref="T:System.IdentityModel.Claims.Claim" />-Instanz bereit.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das den Wert enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

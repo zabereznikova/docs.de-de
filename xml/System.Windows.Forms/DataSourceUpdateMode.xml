@@ -1,0 +1,86 @@
+<Type Name="DataSourceUpdateMode" FullName="System.Windows.Forms.DataSourceUpdateMode">
+  <TypeSignature Language="C#" Value="public enum DataSourceUpdateMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataSourceUpdateMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataSourceUpdateMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wenn eine Datenquelle aktualisiert wird, wenn Änderungen im gebundenen Steuerelement auftreten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Steuerelement gebunden ist, in einer Datenquelle mit einer <xref:System.Windows.Forms.Binding> -Objekt können Sie angeben, wenn ein Update für die Datenquelle erfolgt mithilfe der <xref:System.Windows.Forms.DataSourceUpdateMode> Enumeration.  
+  
+ Bei der Updatemodus nie ist, können Sie erzwingen, dass die Datenquelle aktualisiert werden die <xref:System.Windows.Forms.Binding.WriteValue%2A> Methode.  
+  
+> [!NOTE]
+>  Selbst, wenn Sie der Updatemodus auf nie festgelegt ist, wird die Datenquelle aktualisiert werden, wenn die Bindung zuerst erstellt wird, damit immer an, dass mindestens ein Update ausgeführt wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Never">
+      <MemberSignature Language="C#" Value="Never" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataSourceUpdateMode Never = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataSourceUpdateMode.Never" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataSourceUpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Datenquelle wird nie mehr aktualisiert, und Werte, die in das Steuerelement eingegeben werden nicht analysiert, überprüft oder neu formatiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="OnPropertyChanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataSourceUpdateMode OnPropertyChanged = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataSourceUpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datenquelle wird aktualisiert, sobald der Wert der Eigenschaft des Steuerelements ändert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidation">
+      <MemberSignature Language="C#" Value="OnValidation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataSourceUpdateMode OnValidation = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataSourceUpdateMode.OnValidation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataSourceUpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datenquelle wird aktualisiert, wenn die Steuerelementeigenschaft überprüft wird,</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach der Überprüfung wird der Wert in der Eigenschaft des Steuerelements auch erneut formatiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

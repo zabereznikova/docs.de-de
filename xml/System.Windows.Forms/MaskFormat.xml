@@ -1,0 +1,89 @@
+<Type Name="MaskFormat" FullName="System.Windows.Forms.MaskFormat">
+  <TypeSignature Language="C#" Value="public enum MaskFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MaskFormat extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MaskFormat" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert, wie zum Formatieren des Texts innerhalb einer <see cref="T:System.Windows.Forms.MaskedTextBox" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, indem <xref:System.Windows.Forms.MaskedTextBox.CutCopyMaskFormat%2A> und <xref:System.Windows.Forms.MaskedTextBox.TextMaskFormat%2A> steuern, wie Text zurückgegeben wird: im ersten Fall durch Ausführen eines Vorgangs Ausschneiden und kopieren und im zweiten, mit der <xref:System.Windows.Forms.MaskedTextBox.Text%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExcludePromptAndLiterals">
+      <MemberSignature Language="C#" Value="ExcludePromptAndLiterals" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MaskFormat ExcludePromptAndLiterals = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MaskFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Geben Sie nur die Texteingabe durch den Benutzer zurück.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeLiterals">
+      <MemberSignature Language="C#" Value="IncludeLiterals" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MaskFormat IncludeLiterals = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MaskFormat.IncludeLiterals" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MaskFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Texteingabe mit der Benutzer als auch für alle in der Maske definierten Literalzeichen zurück.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludePrompt">
+      <MemberSignature Language="C#" Value="IncludePrompt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MaskFormat IncludePrompt = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MaskFormat.IncludePrompt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MaskFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Texteingabe mit der Benutzer als auch für alle Instanzen des Prompt Zeichens zurück.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludePromptAndLiterals">
+      <MemberSignature Language="C#" Value="IncludePromptAndLiterals" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MaskFormat IncludePromptAndLiterals = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MaskFormat.IncludePromptAndLiterals" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MaskFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zurückgeben von Texteingabe durch den Benutzer sowie alle Literalzeichen in Maske und alle Instanzen von Eingabeaufforderungszeichen definiert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

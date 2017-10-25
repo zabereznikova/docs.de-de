@@ -1,0 +1,349 @@
+<Type Name="CharacterMetrics" FullName="System.Windows.Media.CharacterMetrics">
+  <TypeSignature Language="C#" Value="public class CharacterMetrics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CharacterMetrics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.CharacterMetrics" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Metrik, um das Layout von einem Zeichen in eine Geräteschriftart dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CharacterMetrics ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.CharacterMetrics.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.CharacterMetrics" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.CharacterMetrics> -Objekt unter Verwendung der Standardwerte für den metrischen erstellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CharacterMetrics (string metrics);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string metrics) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.CharacterMetrics.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="metrics" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metrics">Eine durch Trennzeichen getrennte <see cref="T:System.String" /> -Wert, der die Metriken für das Zeichen darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.CharacterMetrics" /> Klasse durch Angabe der Metriken als Zeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `metrics` Parameter ist eine durch Trennzeichen getrennte Zeichenfolge, der angibt, die <xref:System.Windows.Media.CharacterMetrics> Eigenschaften in der folgenden Reihenfolge:  
+  
+-   <xref:System.Windows.Media.CharacterMetrics.BlackBoxWidth%2A>  
+  
+-   <xref:System.Windows.Media.CharacterMetrics.BlackBoxHeight%2A>  
+  
+-   <xref:System.Windows.Media.CharacterMetrics.Baseline%2A>  
+  
+-   <xref:System.Windows.Media.CharacterMetrics.LeftSideBearing%2A>  
+  
+-   <xref:System.Windows.Media.CharacterMetrics.RightSideBearing%2A>  
+  
+-   <xref:System.Windows.Media.CharacterMetrics.TopSideBearing%2A>  
+  
+-   <xref:System.Windows.Media.CharacterMetrics.BottomSideBearing%2A>  
+  
+ Die ersten beiden Eigenschaften <xref:System.Windows.Media.CharacterMetrics.BlackBoxWidth%2A> und <xref:System.Windows.Media.CharacterMetrics.BlackBoxHeight%2A>, erforderlich sind. Jedoch weiteren fünf Eigenschaften sind optional und werden standardmäßig auf 0 (null), wenn nicht angegeben. Angenommen, wenn Sie für den Zeichenfolgenwert "0.75,0.75,0.1" Angeben der `metrics` Parameter, die <xref:System.Windows.Media.CharacterMetrics.BlackBoxWidth%2A>, <xref:System.Windows.Media.CharacterMetrics.BlackBoxHeight%2A>, und <xref:System.Windows.Media.CharacterMetrics.LeftSideBearing%2A> Eigenschaften werden festgelegt – die nicht angegebenen Eigenschaften werden auf 0 (null) festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Baseline">
+      <MemberSignature Language="C#" Value="public double Baseline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Baseline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.CharacterMetrics.Baseline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Baselinewert für das Zeichen ab.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Double" /> , der Baseline darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert darstellt den vertikalen Offset vom unteren Rand der Blackbox der Baseline. Ein positiver Wert gibt an, dass die Basislinie befindet sich über den unteren Rand der Blackbox, während ein negativer Wert gibt an, dass die Baseline unter dem unteren Rand der Blackbox ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlackBoxHeight">
+      <MemberSignature Language="C#" Value="public double BlackBoxHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 BlackBoxHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.CharacterMetrics.BlackBoxHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe der Blackbox für das Zeichen ab.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Double" /> , die die Höhe der Blackbox darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlackBoxWidth">
+      <MemberSignature Language="C#" Value="public double BlackBoxWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 BlackBoxWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.CharacterMetrics.BlackBoxWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Breite der Blackbox für das Zeichen ab.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Double" /> , die Breite der Blackbox darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomSideBearing">
+      <MemberSignature Language="C#" Value="public double BottomSideBearing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 BottomSideBearing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.CharacterMetrics.BottomSideBearing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den empfohlenen Leerraum unter der Blackbox ab.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Double" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein negativer Wert gibt einen Überhang an. Die Versalhöhe für das Zeichen ist die Summe der Eigenschaftswerte <xref:System.Windows.Media.CharacterMetrics.TopSideBearing%2A>, <xref:System.Windows.Media.CharacterMetrics.BlackBoxHeight%2A>, und <xref:System.Windows.Media.CharacterMetrics.BottomSideBearing%2A>. Die Versalhöhe darf nicht kleiner als 0 (null).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.CharacterMetrics.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Windows.Media.CharacterMetrics" /> mit der aktuellen zu vergleichende Objekt <see cref="T:System.Windows.Media.CharacterMetrics" /> Objekt.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Windows.Media.CharacterMetrics" /> Objekt gleich der aktuellen <see cref="T:System.Windows.Media.CharacterMetrics" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />, wenn die Objekte gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei <xref:System.Windows.Media.CharacterMetrics> Objekte sind gleich, wenn die folgenden Eigenschaften gleich sind:  
+  
+ <xref:System.Windows.Media.CharacterMetrics.BlackBoxHeight%2A>  
+  
+ <xref:System.Windows.Media.CharacterMetrics.BlackBoxWidth%2A>  
+  
+ <xref:System.Windows.Media.CharacterMetrics.BottomSideBearing%2A>  
+  
+ <xref:System.Windows.Media.CharacterMetrics.LeftSideBearing%2A>  
+  
+ <xref:System.Windows.Media.CharacterMetrics.RightSideBearing%2A>  
+  
+ <xref:System.Windows.Media.CharacterMetrics.TopSideBearing%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.CharacterMetrics.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen Hashcode aus den metrischen Werten die <see cref="T:System.Windows.Media.CharacterMetrics" /> Objekt.</summary>
+        <returns>Ein Wert vom Typ <see cref="T:System.Int32" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftSideBearing">
+      <MemberSignature Language="C#" Value="public double LeftSideBearing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LeftSideBearing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.CharacterMetrics.LeftSideBearing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den empfohlenen Leerraum auf der linken Seite der Blackbox ab.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Double" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein negativer Wert gibt einen Überhang an. Der horizontale vorabversandmitteilung für das Zeichen ist.  
+  
+ die Summe der Eigenschaftswerte <xref:System.Windows.Media.CharacterMetrics.LeftSideBearing%2A>, <xref:System.Windows.Media.CharacterMetrics.BlackBoxWidth%2A>, und <xref:System.Windows.Media.CharacterMetrics.RightSideBearing%2A>. Der horizontale vorabversandmitteilung darf nicht kleiner als 0 (null).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metrics">
+      <MemberSignature Language="C#" Value="public string Metrics { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Metrics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.CharacterMetrics.Metrics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine durch Trennzeichen getrennte Zeichenfolge, die Metrikwerte darstellt.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.String" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.String> Wert ist eine durch Trennzeichen getrennte Zeichenfolge, der angibt, die <xref:System.Windows.Media.CharacterMetrics> Eigenschaften in der folgenden Reihenfolge:  
+  
+-   <xref:System.Windows.Media.CharacterMetrics.BlackBoxWidth%2A>  
+  
+-   <xref:System.Windows.Media.CharacterMetrics.BlackBoxHeight%2A>  
+  
+-   <xref:System.Windows.Media.CharacterMetrics.Baseline%2A>  
+  
+-   <xref:System.Windows.Media.CharacterMetrics.LeftSideBearing%2A>  
+  
+-   <xref:System.Windows.Media.CharacterMetrics.RightSideBearing%2A>  
+  
+-   <xref:System.Windows.Media.CharacterMetrics.TopSideBearing%2A>  
+  
+-   <xref:System.Windows.Media.CharacterMetrics.BottomSideBearing%2A>  
+  
+ Die ersten beiden Eigenschaften <xref:System.Windows.Media.CharacterMetrics.BlackBoxWidth%2A> und <xref:System.Windows.Media.CharacterMetrics.BlackBoxHeight%2A>, erforderlich sind. Jedoch weiteren fünf Eigenschaften sind optional und werden standardmäßig auf 0 (null), wenn nicht angegeben. Angenommen, Sie geben Sie den Zeichenfolgenwert des "`0.75,0.75,,0.1`" für die `metrics` Parameter, die <xref:System.Windows.Media.CharacterMetrics.BlackBoxWidth%2A>, <xref:System.Windows.Media.CharacterMetrics.BlackBoxHeight%2A>, und <xref:System.Windows.Media.CharacterMetrics.LeftSideBearing%2A> Eigenschaften werden festgelegt – die nicht angegebenen Eigenschaften werden auf 0 (null) festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightSideBearing">
+      <MemberSignature Language="C#" Value="public double RightSideBearing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 RightSideBearing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.CharacterMetrics.RightSideBearing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den empfohlenen Leerraum rechts neben der Blackbox ab.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Double" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein negativer Wert gibt einen Überhang an. Der horizontale vorabversandmitteilung für das Zeichen ist.  
+  
+ die Summe der Eigenschaftswerte <xref:System.Windows.Media.CharacterMetrics.LeftSideBearing%2A>, <xref:System.Windows.Media.CharacterMetrics.BlackBoxWidth%2A>, und <xref:System.Windows.Media.CharacterMetrics.RightSideBearing%2A>. Der horizontale vorabversandmitteilung darf nicht kleiner als 0 (null).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopSideBearing">
+      <MemberSignature Language="C#" Value="public double TopSideBearing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 TopSideBearing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.CharacterMetrics.TopSideBearing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den empfohlenen Leerraum oberhalb der Schwarz.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Double" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Empfohlene Leerraum oberhalb der Schwarz. Die Versalhöhe für das Zeichen ist die Summe der Eigenschaftswerte <xref:System.Windows.Media.CharacterMetrics.TopSideBearing%2A>, <xref:System.Windows.Media.CharacterMetrics.BlackBoxHeight%2A>, und <xref:System.Windows.Media.CharacterMetrics.BottomSideBearing%2A>. Die Versalhöhe darf nicht kleiner als 0 (null).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

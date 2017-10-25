@@ -1,0 +1,255 @@
+<Type Name="IDataServiceConfiguration" FullName="System.Data.Services.IDataServiceConfiguration">
+  <TypeSignature Language="C#" Value="public interface IDataServiceConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataServiceConfiguration" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.IDataServiceConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Data.Services.IDataServiceConfiguration" /> wird von WCF Data Services, um das Verhalten des Diensts, einschließlich der Rechte für Entitätenmengen und Dienstvorgänge, einzurichten beschränkt, auf die zulässigen Anforderungen, registrieren Standard- und die standardausführlichkeitsgrads der Fehlerbehandlung nicht sichtbaren Typen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Typ wird von <xref:System.Data.Services.DataService%601>-Klassen verwendet, um den Dienst zu konfigurieren, indem eine statische Methode mit dem Namen InitializeService implementiert wird, die ungültige Elemente zurückgibt und ein einzelnes Argument des Typs <xref:System.Data.Services.IDataServiceConfiguration> akzeptiert. Das Konfigurationsobjekt wird ggf. nur während des Aufrufs der Dienstinitialisierung verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MaxBatchCount">
+      <MemberSignature Language="C#" Value="public int MaxBatchCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxBatchCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.IDataServiceConfiguration.MaxBatchCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Anforderungen ab, die in einem Batch verarbeitet werden können.</summary>
+        <value>Ein ganzzahliger Wert, der die maximale Anzahl von Anforderungen angibt, die in einem Batch verarbeitet werden können.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxChangesetCount">
+      <MemberSignature Language="C#" Value="public int MaxChangesetCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxChangesetCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.IDataServiceConfiguration.MaxChangesetCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Änderungssätzen ab, die in einem Batch verarbeitet werden können.</summary>
+        <value>Ein ganzzahliger Wert, der die maximale Anzahl von Changesets angibt, die in einem Batch verarbeitet werden können.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxExpandCount">
+      <MemberSignature Language="C#" Value="public int MaxExpandCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxExpandCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.IDataServiceConfiguration.MaxExpandCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Segmenten ab, die mit der Abfrageoption $expand (für alle Anforderungen an den Datendienst) erweitert werden können, oder legt sie fest.</summary>
+        <value>Die maximale Anzahl zu erweiternder Segmente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Grenzwert überschritten wird, erfolgt die Rückgabe eines Codes vom Typ 400 "Ungültiger Anforderungsstatuscode". Der angegebene Wert muss zwischen 0 und `int.MaxValue`ist, andernfalls ein `ArgumentOutOfRangeException` ausgelöst wird.  
+  
+ Das folgende Beispiel für eine Abfragezeichenfolge verfügt über zwei Segmente:  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxExpandDepth">
+      <MemberSignature Language="C#" Value="public int MaxExpandDepth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxExpandDepth" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.IDataServiceConfiguration.MaxExpandDepth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine maximale Anzahl von Segmenten, die in einer einzelnen unterstützt <c>$expand-</c> -Pfad für alle Anforderungen an den Datendienst.</summary>
+        <value>Integer-Zahl, die maximale Anzahl unterstützter Segmente im <c>$expand-</c> Pfad.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Grenzwert überschritten wird, erfolgt die Rückgabe eines Codes vom Typ 400 "Ungültiger Anforderungsstatuscode". Der angegebene Wert muss zwischen 0 und `int.MaxValue`ist, andernfalls ein `ArgumentOutOfRangeException` ausgelöst wird.  
+  
+ Das folgende Beispiel einer Abfragezeichenfolge verfügt im ersten `$expand`-Pfad über zwei Segmente und im zweiten `$expand`-Pfad über ein Segment:  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxObjectCountOnInsert">
+      <MemberSignature Language="C#" Value="public int MaxObjectCountOnInsert { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxObjectCountOnInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.IDataServiceConfiguration.MaxObjectCountOnInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Objekten ab, die in eine Anfrage eingefügt werden können, oder legt sie fest.</summary>
+        <value>Der ganzzahlige Wert, der die maximale Anzahl von Objekten enthält, die in eine einzelne Anforderung eingefügt werden können.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxResultsPerCollection">
+      <MemberSignature Language="C#" Value="public int MaxResultsPerCollection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxResultsPerCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.IDataServiceConfiguration.MaxResultsPerCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Ergebnissen pro Auflistung ab.</summary>
+        <value>Der ganzzahlige Wert, der die maximale Anzahl von Ergebnissen pro Auflistung angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterKnownType">
+      <MemberSignature Language="C#" Value="public void RegisterKnownType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterKnownType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IDataServiceConfiguration.RegisterKnownType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der zu registrierende Ressourcentyp.</param>
+        <summary>Registriert einen Ressourcentyp zur Verwendung durch den Datendienst.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEntitySetAccessRule">
+      <MemberSignature Language="C#" Value="public void SetEntitySetAccessRule (string name, System.Data.Services.EntitySetRights rights);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetEntitySetAccessRule(string name, valuetype System.Data.Services.EntitySetRights rights) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IDataServiceConfiguration.SetEntitySetAccessRule(System.String,System.Data.Services.EntitySetRights)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="rights" Type="System.Data.Services.EntitySetRights" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Entitätenmenge für den konfigurierten Zugriff.</param>
+        <param name="rights">Die der Entitätenmenge gewährten Rechte.</param>
+        <summary>Legt die Zugriffsregeln für die angegebene Entitätenmenge fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardkonfiguration verweigert den Zugriff auf Ressourcen. Wenn ein Dienst initialisiert wird, müssen die Zugriffsrechte aktiviert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetServiceOperationAccessRule">
+      <MemberSignature Language="C#" Value="public void SetServiceOperationAccessRule (string name, System.Data.Services.ServiceOperationRights rights);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetServiceOperationAccessRule(string name, valuetype System.Data.Services.ServiceOperationRights rights) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IDataServiceConfiguration.SetServiceOperationAccessRule(System.String,System.Data.Services.ServiceOperationRights)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="rights" Type="System.Data.Services.ServiceOperationRights" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Dienstvorgangs, für den Zugriffsrechte festgelegt werden sollen.</param>
+        <param name="rights">Zulässige Rechte gemäß der <see cref="T:System.Data.Services.ServiceOperationRights" />-Enumeration.</param>
+        <summary>Legt die Zugriffsregeln für den angegebenen Dienstvorgang fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardkonfiguration verweigert den Zugriff auf Ressourcen. Wenn ein Dienst initialisiert wird, müssen die Zugriffsrechte aktiviert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseVerboseErrors">
+      <MemberSignature Language="C#" Value="public bool UseVerboseErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseVerboseErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.IDataServiceConfiguration.UseVerboseErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob ausführliche Fehler standardmäßig für alle Antworten vom Datendienst verwendet werden.</summary>
+        <value>Ein boolescher Wert, der angibt, ob ausführliche Fehler zurückgegeben werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Antwort von einer angegebenen Anforderung kann vom Entwickler Datendiensts überschrieben werden, durch Überschreiben der `HandleException` Methode. Aus Sicherheitsgründen sollten ausführliche Fehler nur während der Entwicklung und nicht in Produktionsumgebungen aktiviert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,200 @@
+<Type Name="ProcessModelComAuthenticationLevel" FullName="System.Web.Configuration.ProcessModelComAuthenticationLevel">
+  <TypeSignature Language="C#" Value="public enum ProcessModelComAuthenticationLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProcessModelComAuthenticationLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ProcessModelComAuthenticationLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Ebene der Authentifizierung für DCOM-Sicherheit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ProcessModelComAuthenticationLevel> Listet die Werte zu verwenden, beim Festlegen der <xref:System.Web.Configuration.ProcessModelSection.ComAuthenticationLevel%2A> Eigenschaft.  
+  
+ Der Standardwert ist die Verbindung herstellen.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.Configuration.ProcessModelComAuthenticationLevel.Connect> Einstellungen sind nur bei Verwendung des ASP.NET-Prozessmodells relevant (Internet Information Services, IIS] 5.n oder nur kompatiblen Modus von IIS 6).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie das Abrufen des aktuellen <xref:System.Web.Configuration.ProcessModelSection.ComAuthenticationLevel%2A> Eigenschaftswert und legen Sie anschließend die <xref:System.Web.Configuration.ProcessModelSection.ComAuthenticationLevel%2A> Eigenschaft, um einen neuen Wert des Aufrufs.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#21](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#21)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#21](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#21)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Call">
+      <MemberSignature Language="C#" Value="Call" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.ProcessModelComAuthenticationLevel Call = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.ProcessModelComAuthenticationLevel.Call" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelComAuthenticationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass DCOM die Anmeldeinformationen des Clients authentifiziert. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ DCOM authentifiziert die Anmeldeinformationen des Clients auf, wenn der Server die Anforderung am Anfang jeder Remoteprozeduraufruf empfängt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="Connect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.ProcessModelComAuthenticationLevel Connect = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.ProcessModelComAuthenticationLevel.Connect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelComAuthenticationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass DCOM die Anmeldeinformationen des Clients authentifiziert. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ DCOM authentifiziert die Anmeldeinformationen des Clients nur, wenn der Client eine Beziehung mit dem Server herstellt.  
+  
+ Dies ist der Standardwert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.ProcessModelComAuthenticationLevel Default = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.ProcessModelComAuthenticationLevel.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelComAuthenticationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass DCOM die Authentifizierungsebene bestimmt. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ DCOM bestimmt die Authentifizierungsebene, die mit dem normalen Sicherheitsaushandlung-Algorithmus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.ProcessModelComAuthenticationLevel None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.ProcessModelComAuthenticationLevel.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelComAuthenticationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt keine Authentifizierung. Dieses Feld ist konstant.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pkt">
+      <MemberSignature Language="C#" Value="Pkt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.ProcessModelComAuthenticationLevel Pkt = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.ProcessModelComAuthenticationLevel.Pkt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelComAuthenticationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass DCOM überprüft, ob alle empfangene Daten vom erwarteten Client. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Datagramm-Transporte verwenden immer Pkt-Authentifizierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PktIntegrity">
+      <MemberSignature Language="C#" Value="PktIntegrity" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.ProcessModelComAuthenticationLevel PktIntegrity = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.ProcessModelComAuthenticationLevel.PktIntegrity" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelComAuthenticationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass DCOM authentifiziert und überprüft, ob die Daten übertragen. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ DCOM wird überprüft, dass keine der zwischen dem Client und Server übertragenen Daten geändert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PktPrivacy">
+      <MemberSignature Language="C#" Value="PktPrivacy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.ProcessModelComAuthenticationLevel PktPrivacy = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.ProcessModelComAuthenticationLevel.PktPrivacy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelComAuthenticationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass DCOM alle vorherigen Ebenen authentifiziert und die Verschlüsselung durchführt. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ DCOM alle vorherigen Ebenen authentifiziert und verschlüsselt den Argumentwert jedes Remoteprozeduraufrufs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,200 @@
+<Type Name="KeyContainerPermissionAccessEntryEnumerator" FullName="System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator">
+  <TypeSignature Language="C#" Value="public sealed class KeyContainerPermissionAccessEntryEnumerator : System.Collections.IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit KeyContainerPermissionAccessEntryEnumerator extends System.Object implements class System.Collections.IEnumerator" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt den Enumerator für <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> Objekte in einem <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Enumeratoren können die Daten in der Auflistung nur gelesen. Mit Enumeratoren können nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ Zu Beginn wird der Enumerator vor das erste Element in der Auflistung positioniert. Die <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset%2A> Methode setzt den Enumerator ebenfalls auf diese Position zurück. An dieser position Aufrufen der <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> -Eigenschaft löst eine Ausnahme aus. Sie müssen daher rufen die <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> Methode, um den Enumerator auf das erste Element der Auflistung vor dem Lesen des Werts von der <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> Eigenschaft.  
+  
+ <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> gibt solange dasselbe Objekt zurück, bis <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> oder <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset%2A> aufgerufen wird. <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> legt <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> auf das nächste Element fest.  
+  
+ Nach Erreichen des Endes der Auflistung befindet sich der Enumerator hinter dem letzten Element der Auflistung, und ein Aufruf von <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> gibt `false` zurück. Wenn der letzte Aufruf <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> zurückgegebene `false`Aufrufen <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> löst eine Ausnahme aus. Zurücksetzen <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> aufrufen, auf das erste Element der Auflistung, <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset%2A> gefolgt von einem Aufruf von <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A>.  
+  
+ Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Wenn die Änderungen werden auf die Auflistung, z. B. das Hinzufügen, ändern oder Löschen von Elementen aus, das der Enumerator unwiederbringlich seine ist ungültig, und der nächste Aufruf von <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> oder <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset%2A> löst eine <xref:System.InvalidOperationException>. Wenn die Auflistung zwischen Aufrufen geändert wird <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> und <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A>, <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> gibt das Element, dem sie aktuell festgelegt ist, auch wenn der Enumerator bereits ungültig ist.  
+  
+ Der Enumerator hat keinen exklusiven Zugriff auf die Auflistung; daher ist die Enumeration einer Auflistung systembedingt kein threadsicheres Verfahren. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyContainerPermissionAccessEntryEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.KeyContainerPermissionAccessEntry Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Permissions.KeyContainerPermissionAccessEntry Current" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionAccessEntry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Eintrag in der Auflistung ab.</summary>
+        <value>Die aktuelle <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> Objekt in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Enumerator erstellt wird, es zeigt nicht auf ein Objekt, sodass die <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> Eigenschaft ist ungültig und löst eine Ausnahme aus, wenn darauf zugegriffen wird. Sie müssen zuerst Aufrufen der <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> Methode zur Positionierung des Cursors an das erste Objekt in der Auflistung.  
+  
+ Abrufen der <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> Eigenschaft mehrmals mit ohne einen zwischenzeitlichen Aufruf von <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> wird zurückgegeben, die gleiche <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry> Objekt jedes Mal.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current" /> Eigenschaft erfolgt vor dem ersten Aufruf der <see cref="M:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext" /> Methode. Der Cursor befindet sich vor das erste Objekt in der Auflistung.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current" /> Eigenschaft erfolgt nach einem Aufruf von der <see cref="M:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext" /> -Methode zurückkehrt <see langword="false" />, was bedeutet, dass der Cursor hinter dem letzten Objekt in der Auflistung befindet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wechselt zum nächsten Element in der Auflistung.</summary>
+        <returns>
+          <see langword="true" />, wenn der Enumerator erfolgreich auf das nächste Element gesetzt wurde, <see langword="false" />, wenn der Enumerator das Ende der Auflistung überschritten hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> -Methode zurückkehrt `false` sofort, wenn keine Objekte in der Auflistung vorhanden sind.  
+  
+ <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A>Gibt `true` bis das Ende der Auflistung erreicht ist. Anschließend gibt `false` für jeden nachfolgenden Aufruf. Allerdings nach <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> zurückgekehrt `false`, den Zugriff auf die <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> -Eigenschaft löst eine Ausnahme aus.  
+  
+ Bei der Erstellung ist ein Enumerator vor das erste <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry> Objekt in der Auflistung und der erste Aufruf von <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> positioniert den Enumerator auf das erste Objekt in der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf den Anfang der Auflistung zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Enumerator wechselt in eine Richtung Vorwärtscursor. Verwenden Sie diese Methode, um auf den Anfang der Auflistung zurückzugeben.  
+  
+ Die <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset%2A> Methode positioniert den Cursor auf das erste Objekt in der Auflistung. Nach dem Aufruf <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset%2A>, müssen Sie nicht aufrufen <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> so verschieben Sie den Cursor auf das erste Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerator.Current">
+      <MemberSignature Language="C#" Value="object System.Collections.IEnumerator.Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IEnumerator.Current" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.System#Collections#IEnumerator#Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle Objekt in der Auflistung ab.</summary>
+        <value>Das aktuelle Objekt in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode nicht. Verwenden Sie die <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> Eigenschaft stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

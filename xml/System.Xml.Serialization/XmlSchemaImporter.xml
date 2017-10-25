@@ -1,0 +1,638 @@
+<Type Name="XmlSchemaImporter" FullName="System.Xml.Serialization.XmlSchemaImporter">
+  <TypeSignature Language="C#" Value="public class XmlSchemaImporter : System.Xml.Serialization.SchemaImporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaImporter extends System.Xml.Serialization.SchemaImporter" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlSchemaImporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Serialization.SchemaImporter</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netstandard-2.0">System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Generiert interne Zuordnungen zu .NET Framework-Typen für XML-Schemaelementdeklarationen, einschließlich literal XSD-Nachrichtenteile in einem WSDL-Dokument.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlSchemaImporter> Klasse wird verwendet, durch die [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88) und die <xref:System.Web.Services.Description.ServiceDescriptionImporter> Klasse bei der Generierung von Clientproxyklassen oder abstrakten Klassen von einem Web Services Description Language ( WSDL-Dokument). Die Klasse wird auch verwendet, durch die [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88) beim Generieren von Klassen aus XML-Schemadefinition (XSD)-Dokumenten. Verwenden Sie diese Klasse direkt anstelle Wsdl.exe oder Xsd.exe.  
+  
+ Die <xref:System.Xml.Serialization.XmlSchemaImporter> -Klasse verfügt über Methoden zum Generieren von interner Zuordnungen zu .NET Framework-Typen für Elemente in einem XSD-Dokument oder als Elemente in einem WSDL-Dokument definiert. Die folgende Liste zeigt, wenn die Klasse von Wsdl.exe verwendet wird:  
+  
+-   Ein WSDL-Dokument gibt literal verwenden, wobei der Inhalt des SOAP-Nachricht Parameter und Rückgabewerte (oder Anforderung und Antwort Dokumente) als solches von XML-Schema-Definitionen angegeben wird.  
+  
+-   Ein WSDL-Dokument gibt das .NET Framework nicht-SOAP-Implementierungen von Webdiensten über HTTP-GET und HTTP-POST-Vorgänge.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaImporter (System.Xml.Serialization.XmlSchemas schemas);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Serialization.XmlSchemas schemas) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.#ctor(System.Xml.Serialization.XmlSchemas)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Serialization.XmlSchemas" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Eine Auflistung von <see cref="T:System.Xml.Schema.XmlSchema" />-Objekten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Serialization.XmlSchemaImporter" /> -Klasse, wobei eine Auflistung von <see cref="T:System.Xml.Schema.XmlSchema" /> -Objekten zurück, die von literalen SOAP-Nachrichten in einem WSDL-Dokument definiert verwendeten XML-Schemas darstellen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn ein WSDL-Dokument gibt an, dass die Daten nach einem Schema serialisiert werden (\<Soap: Body verwenden = "literal" / >).  
+  
+ Statt direkt eine Instanz von der <xref:System.Xml.Serialization.XmlSchemaImporter> Klasse, verwenden Sie Wsdl.exe oder Xsd.exe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaImporter (System.Xml.Serialization.XmlSchemas schemas, System.Xml.Serialization.CodeIdentifiers typeIdentifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Serialization.XmlSchemas schemas, class System.Xml.Serialization.CodeIdentifiers typeIdentifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.#ctor(System.Xml.Serialization.XmlSchemas,System.Xml.Serialization.CodeIdentifiers)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Serialization.XmlSchemas" />
+        <Parameter Name="typeIdentifiers" Type="System.Xml.Serialization.CodeIdentifiers" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Ein <see cref="T:System.Xml.Serialization.XmlSchemas" />-Objekt.</param>
+        <param name="typeIdentifiers">Ein <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Objekt, das eine Auflistung von Klassen, die generiert wird, für die in einem WSDL-Dokument definierten Bindungen angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Serialization.XmlSchemaImporter" /> -Klasse, wobei eine Auflistung von <see cref="T:System.Xml.Schema.XmlSchema" /> Objekte, die von literalen SOAP-Nachrichten verwendete XML-Schemas darstellt, sowie Klassen, die für eine Web Services Description Language (WSDL) definierten Bindungen generiert wird Dokument.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn ein WSDL-Dokument gibt an, dass die Daten nach einem Schema serialisiert werden (\<Soap: Body verwenden = "literal" / >).  
+  
+ Statt direkt eine Instanz von der <xref:System.Xml.Serialization.XmlSchemaImporter> Klasse, verwenden Sie Wsdl.exe oder Xsd.exe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaImporter (System.Xml.Serialization.XmlSchemas schemas, System.Xml.Serialization.CodeGenerationOptions options, System.Xml.Serialization.ImportContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Serialization.XmlSchemas schemas, valuetype System.Xml.Serialization.CodeGenerationOptions options, class System.Xml.Serialization.ImportContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.#ctor(System.Xml.Serialization.XmlSchemas,System.Xml.Serialization.CodeGenerationOptions,System.Xml.Serialization.ImportContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Serialization.XmlSchemas" />
+        <Parameter Name="options" Type="System.Xml.Serialization.CodeGenerationOptions" />
+        <Parameter Name="context" Type="System.Xml.Serialization.ImportContext" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Eine Auflistung von <see cref="T:System.Xml.Schema.XmlSchema" />-Objekten.</param>
+        <param name="options">Ein <see cref="T:System.Xml.Serialization.CodeGenerationOptions" /> Enumeration, die den Codegenerierungsoptionen angibt.</param>
+        <param name="context">Ein <see cref="T:System.Xml.Serialization.ImportContext" /> Instanz, die den Importkontext angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Serialization.XmlSchemaImporter" /> Klasse für eine Auflistung von XML-Schemas, mit dem angegebenen Codegenerierungsoptionen und Importieren von Kontext.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaImporter (System.Xml.Serialization.XmlSchemas schemas, System.Xml.Serialization.CodeIdentifiers typeIdentifiers, System.Xml.Serialization.CodeGenerationOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Serialization.XmlSchemas schemas, class System.Xml.Serialization.CodeIdentifiers typeIdentifiers, valuetype System.Xml.Serialization.CodeGenerationOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.#ctor(System.Xml.Serialization.XmlSchemas,System.Xml.Serialization.CodeIdentifiers,System.Xml.Serialization.CodeGenerationOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Serialization.XmlSchemas" />
+        <Parameter Name="typeIdentifiers" Type="System.Xml.Serialization.CodeIdentifiers" />
+        <Parameter Name="options" Type="System.Xml.Serialization.CodeGenerationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Eine Auflistung von <see cref="T:System.Xml.Schema.XmlSchema" />-Objekten.</param>
+        <param name="typeIdentifiers">Ein <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> Objekt, das eine Auflistung von Klassen, die generiert wird, für die in einem WSDL-Dokument definierten Bindungen angibt.</param>
+        <param name="options">Eine bitweise Kombination der <see cref="T:System.Xml.Serialization.CodeGenerationOptions" /> Werte, die beim Generieren von .NET Framework-Typen für einen Webdienst zu verwendenden Optionen angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Serialization.XmlSchemaImporter" /> -Klasse, wobei eine Auflistung von <see cref="T:System.Xml.Schema.XmlSchema" /> Objekte, die die XML-Schemas, die von literalen SOAP-Nachrichten sowie Klassen, die generiert wird für Bindungen, die in einem WSDL-Dokument definiert verwendeten darstellt und eine <see cref="T:System.Xml.Serialization.CodeGenerationOptions" /> -Enumerationswert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn ein WSDL-Dokument gibt an, dass die Daten nach einem Schema serialisiert werden (\<Soap: Body verwenden = "literal" / >).  
+  
+ Statt direkt eine Instanz von der `XmlSchemaImporter` Klasse, verwenden Sie Wsdl.exe oder Xsd.exe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaImporter (System.Xml.Serialization.XmlSchemas schemas, System.Xml.Serialization.CodeGenerationOptions options, System.CodeDom.Compiler.CodeDomProvider codeProvider, System.Xml.Serialization.ImportContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Serialization.XmlSchemas schemas, valuetype System.Xml.Serialization.CodeGenerationOptions options, class System.CodeDom.Compiler.CodeDomProvider codeProvider, class System.Xml.Serialization.ImportContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.#ctor(System.Xml.Serialization.XmlSchemas,System.Xml.Serialization.CodeGenerationOptions,System.CodeDom.Compiler.CodeDomProvider,System.Xml.Serialization.ImportContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Serialization.XmlSchemas" />
+        <Parameter Name="options" Type="System.Xml.Serialization.CodeGenerationOptions" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+        <Parameter Name="context" Type="System.Xml.Serialization.ImportContext" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Eine Auflistung von <see cref="T:System.Xml.Schema.XmlSchema" />-Objekten.</param>
+        <param name="options">Eine bitweise Kombination der <see cref="T:System.Xml.Serialization.CodeGenerationOptions" /> Werte, die beim Generieren von .NET Framework-Typen für einen Webdienst zu verwendenden Optionen angibt.</param>
+        <param name="codeProvider">Ein <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> verwendet, um den Serialisierungscode generieren.</param>
+        <param name="context">Ein <see cref="T:System.Xml.Serialization.ImportContext" /> Instanz, die den Importkontext angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.XmlSchemaImporter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportAnyType">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlMembersMapping ImportAnyType (System.Xml.XmlQualifiedName typeName, string elementName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlMembersMapping ImportAnyType(class System.Xml.XmlQualifiedName typeName, string elementName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.ImportAnyType(System.Xml.XmlQualifiedName,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlMembersMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="elementName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Ein <see cref="T:System.Xml.XmlQualifiedName" /> , angibt, dass der Name der Elementtyp für die .NET Framework-Typ generiert wird.</param>
+        <param name="elementName">Der Name des Teilelements im WSDL-Dokument.</param>
+        <summary>Generiert interne Zuordnung Typinformationen für eine einzelne (SOAP) Literalelement Teil in einem WSDL-Dokument definiert.</summary>
+        <returns>Eine <see cref="T:System.Xml.Serialization.XmlMembersMapping" /> , die .NET Framework-Typzuordnung für ein einzelnes Elementteil der Definition eines WSDL-Meldung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlSchemaImporter.ImportAnyType%2A> Methode wird vom Tool Wsdl.exe verwendet, bei der Generierung von Clientproxyklassen oder abstrakten Klassen aus einem Dokument Web Services Description Language (WSDL). Statt dieser Methode direkt aufzurufen, verwenden Sie Wsdl.exe oder Xsd.exe.  
+  
+ Die <xref:System.Xml.Serialization.XmlSchemaImporter> Klasse dient nur, wenn ein WSDL-Dokument literale Verwendung angibt. Die <xref:System.Xml.Serialization.XmlSchemaImporter.ImportAnyType%2A> Methode wird verwendet, wenn eine WSDL-Nachricht einen einteiligen-Element besitzt, aber der Teil nicht als Wrapperelement identifiziert wurde.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportDerivedTypeMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlTypeMapping ImportDerivedTypeMapping (System.Xml.XmlQualifiedName name, Type baseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlTypeMapping ImportDerivedTypeMapping(class System.Xml.XmlQualifiedName name, class System.Type baseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.ImportDerivedTypeMapping(System.Xml.XmlQualifiedName,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlTypeMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="baseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein <see cref="T:System.Xml.XmlQualifiedName" /> , der den Namen eines Elements in ein XML-Schemadokument definierten angibt.</param>
+        <param name="baseType">Ein Basistyp für den .NET Framework-Typ, der generiert wird, um ein XSD-Element-Typ entsprechen.</param>
+        <summary>Generiert interne Zuordnung Typinformationen für ein Element in einem XML-Schema-Dokument definiert.</summary>
+        <returns>Eine <see cref="T:System.Xml.Serialization.XmlTypeMapping" /> , die.NET Framework-typmappinginformationen für ein XML-Schema-Element darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung von der <xref:System.Xml.Serialization.XmlSchemaImporter.ImportDerivedTypeMapping%2A> Methode wird vom Tool Xsd.exe zum Generieren von Klassen aus einem XML-Schemadefinition (XSD)-Dokument verwendet. Verwenden Sie statt dieser Methode direkt aufzurufen, Xsd.exe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportDerivedTypeMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlTypeMapping ImportDerivedTypeMapping (System.Xml.XmlQualifiedName name, Type baseType, bool baseTypeCanBeIndirect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlTypeMapping ImportDerivedTypeMapping(class System.Xml.XmlQualifiedName name, class System.Type baseType, bool baseTypeCanBeIndirect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.ImportDerivedTypeMapping(System.Xml.XmlQualifiedName,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlTypeMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="baseType" Type="System.Type" />
+        <Parameter Name="baseTypeCanBeIndirect" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein <see cref="T:System.Xml.XmlQualifiedName" /> , der den Namen eines Elements in ein XML-Schemadokument definierten angibt.</param>
+        <param name="baseType">Ein Basistyp für den .NET Framework-Typ, der generiert wird, um ein XSD-Element-Typ entsprechen.</param>
+        <param name="baseTypeCanBeIndirect">
+          <see langword="true" />um anzugeben, dass der Typ, ein XSD-Element entspricht indirekt vom Basistyp erben kann. andernfalls <see langword="false" />.</param>
+        <summary>Generiert interne Zuordnung Typinformationen für ein Element in ein XML-Schemadokument oder als Teil eines WSDL-Dokuments definiert.</summary>
+        <returns>Die .NET Framework-Zuordnung Typinformationen für ein XML-Schema-Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung von der <xref:System.Xml.Serialization.XmlSchemaImporter.ImportDerivedTypeMapping%2A> Methode wird vom Tool Xsd.exe zum Generieren von Klassen aus einem XML-Schemadefinition (XSD)-Dokument verwendet. Es wird auch vom Tool Wsdl.exe verwendet, bei der Generierung von Clientproxyklassen oder abstrakten Klassen aus einem Dokument Web Services Description Language (WSDL). Statt dieser Methode direkt aufzurufen, verwenden Sie Wsdl.exe oder Xsd.exe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportMembersMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlMembersMapping ImportMembersMapping (System.Xml.XmlQualifiedName name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlMembersMapping ImportMembersMapping(class System.Xml.XmlQualifiedName name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.ImportMembersMapping(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlMembersMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein <see cref="T:System.Xml.XmlQualifiedName" /> , der den Namen des Nachrichtenteils angibt.</param>
+        <summary>Generiert interne Zuordnung Typinformationen für ein einzelnes Elementteil der Literal verwenden SOAP-Nachricht in einem WSDL-Dokument definiert.</summary>
+        <returns>Die .NET Framework-Typzuordnung für eine WSDL-Definition, Nachricht, die einen einzelnes Elementteil enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlSchemaImporter.ImportMembersMapping%2A> Methode der <xref:System.Xml.Serialization.XmlSchemaImporter> Klasse wird vom Tool Wsdl.exe verwendet, bei der Generierung von Clientproxyklassen oder abstrakten Klassen aus einem Dokument Web Services Description Language (WSDL). Statt dieser Methode direkt aufzurufen, verwenden Sie Wsdl.exe oder Xsd.exe.  
+  
+ Die <xref:System.Xml.Serialization.XmlSchemaImporter> Klasse dient nur, wenn ein WSDL-Dokument literale Verwendung angibt. Diese Überladung wird verwendet, wenn eine WSDL-Nachricht mit einem einzelnen Teilelement umschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportMembersMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlMembersMapping ImportMembersMapping (System.Xml.XmlQualifiedName[] names);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlMembersMapping ImportMembersMapping(class System.Xml.XmlQualifiedName[] names) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.ImportMembersMapping(System.Xml.XmlQualifiedName[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlMembersMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="names" Type="System.Xml.XmlQualifiedName[]" />
+      </Parameters>
+      <Docs>
+        <param name="names">Ein Array vom Typ <see cref="T:System.Xml.XmlQualifiedName" /> , die die Namen der die Teile der Nachricht angibt.</param>
+        <summary>Generiert interne Datentyp-Zuordnungsinformationen für die Elementteile einer Literal zu verwendenden SOAP-Nachricht, die in einem WSDL-Dokument definiert.</summary>
+        <returns>Eine <see cref="T:System.Xml.Serialization.XmlMembersMapping" /> , die die .NET Framework-Typ-Zuordnungen für die Elementteile der Definition eines WSDL-Meldung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlSchemaImporter.ImportMembersMapping%2A> Methode wird vom Tool Wsdl.exe verwendet, bei der Generierung von Clientproxyklassen oder abstrakten Klassen aus einem Dokument Web Services Description Language (WSDL). Statt dieser Methode direkt aufzurufen, verwenden Sie Wsdl.exe oder Xsd.exe.  
+  
+ Die <xref:System.Xml.Serialization.XmlSchemaImporter> Klasse dient nur, wenn ein WSDL-Dokument literale Verwendung angibt. Der Wert, der die `names` Parameter enthält die qualifizierten Namen der Teile Elemente unter einem Nachrichtendefinition in einem WSDL-Dokument.  
+  
+ Diese Methode wird der Teilelemente Typen nicht berücksichtigt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportMembersMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlMembersMapping ImportMembersMapping (string name, string ns, System.Xml.Serialization.SoapSchemaMember[] members);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlMembersMapping ImportMembersMapping(string name, string ns, class System.Xml.Serialization.SoapSchemaMember[] members) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.ImportMembersMapping(System.String,System.String,System.Xml.Serialization.SoapSchemaMember[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlMembersMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="members" Type="System.Xml.Serialization.SoapSchemaMember[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Elements für die eine Zuordnung generiert werden soll.</param>
+        <param name="ns">Der Namespace des Elements für die eine Zuordnung generiert werden soll.</param>
+        <param name="members">Ein Array von <see cref="T:System.Xml.Serialization.SoapSchemaMember" /> Instanzen, die die Elemente des Elements für die eine Zuordnung generiert angibt.</param>
+        <summary>Generiert interne Datentyp-Zuordnungsinformationen für die Elementteile einer Literal zu verwendenden SOAP-Nachricht, die in einem WSDL-Dokument definiert.</summary>
+        <returns>Ein <see cref="T:System.Xml.Serialization.XmlMembersMapping" /> , die typmappinginformationen enthält.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportMembersMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlMembersMapping ImportMembersMapping (System.Xml.XmlQualifiedName[] names, Type baseType, bool baseTypeCanBeIndirect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlMembersMapping ImportMembersMapping(class System.Xml.XmlQualifiedName[] names, class System.Type baseType, bool baseTypeCanBeIndirect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.ImportMembersMapping(System.Xml.XmlQualifiedName[],System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlMembersMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="names" Type="System.Xml.XmlQualifiedName[]" />
+        <Parameter Name="baseType" Type="System.Type" />
+        <Parameter Name="baseTypeCanBeIndirect" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="names">Ein Array vom Typ <see cref="T:System.Xml.XmlQualifiedName" /> , die die Namen der die Teile der Nachricht angibt.</param>
+        <param name="baseType">Ein Basistyp für alle .NET Framework-Typen, die generiert werden, um die Teile der Nachricht entsprechen.</param>
+        <param name="baseTypeCanBeIndirect">
+          <see langword="true" />um anzugeben, dass die Typen, die Teile der Nachricht entspricht indirekt vom Basistyp erben können. andernfalls <see langword="false" />.</param>
+        <summary>Generiert interne Datentyp-Zuordnungsinformationen für die Elementteile einer Literal zu verwendenden SOAP-Nachricht, die in einem WSDL-Dokument definiert.</summary>
+        <returns>Die .NET Framework-Typ-Zuordnungen für die Elementteile der Definition eines WSDL-Nachricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlSchemaImporter.ImportMembersMapping%2A> Methode wird vom Tool Wsdl.exe verwendet, bei der Generierung von Clientproxyklassen oder abstrakten Klassen aus einem Dokument Web Services Description Language (WSDL). Statt dieser Methode direkt aufzurufen, verwenden Sie Wsdl.exe oder Xsd.exe.  
+  
+ Die <xref:System.Xml.Serialization.XmlSchemaImporter> Klasse dient nur, wenn ein WSDL-Dokument literale Verwendung angibt. Der Wert, der die `names` Parameter enthält die qualifizierten Namen der Teile Elemente unter einem Nachrichtendefinition in einem WSDL-Dokument.  
+  
+ Diese Methode wird der Teilelemente Typen nicht berücksichtigt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportSchemaType">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlTypeMapping ImportSchemaType (System.Xml.XmlQualifiedName typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlTypeMapping ImportSchemaType(class System.Xml.XmlQualifiedName typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.ImportSchemaType(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlTypeMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Ein <see cref="T:System.Xml.XmlQualifiedName" /> , die ein XML-Element angibt.</param>
+        <summary>Generiert interne Zuordnung Typinformationen für ein Element in einem XML-Schema-Dokument definiert.</summary>
+        <returns>Ein <see cref="T:System.Xml.Serialization.XmlTypeMapping" /> Objekt, das eine Zuordnung beschreibt.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportSchemaType">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlTypeMapping ImportSchemaType (System.Xml.XmlQualifiedName typeName, Type baseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlTypeMapping ImportSchemaType(class System.Xml.XmlQualifiedName typeName, class System.Type baseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.ImportSchemaType(System.Xml.XmlQualifiedName,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlTypeMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="baseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Ein <see cref="T:System.Xml.XmlQualifiedName" /> , die ein XML-Element angibt.</param>
+        <param name="baseType">Ein <see cref="T:System.Type" /> Objekt, das einen Basistyp angibt.</param>
+        <summary>Generiert interne Zuordnung Typinformationen für ein Element in einem XML-Schema-Dokument definiert.</summary>
+        <returns>Ein <see cref="T:System.Xml.Serialization.XmlTypeMapping" /> Objekt, das eine Zuordnung beschreibt.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportSchemaType">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlTypeMapping ImportSchemaType (System.Xml.XmlQualifiedName typeName, Type baseType, bool baseTypeCanBeIndirect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlTypeMapping ImportSchemaType(class System.Xml.XmlQualifiedName typeName, class System.Type baseType, bool baseTypeCanBeIndirect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.ImportSchemaType(System.Xml.XmlQualifiedName,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlTypeMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="baseType" Type="System.Type" />
+        <Parameter Name="baseTypeCanBeIndirect" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Ein <see cref="T:System.Xml.XmlQualifiedName" /> , die ein XML-Element angibt.</param>
+        <param name="baseType">Ein <see cref="T:System.Type" /> Objekt, das einen Basistyp angibt.</param>
+        <param name="baseTypeCanBeIndirect">Ein <see cref="T:System.Boolean" /> Wert, der angibt, ob der generierte Typ indirekt erben kann die <c>BaseType</c>.</param>
+        <summary>Generiert interne Zuordnung Typinformationen für ein Element in einem XML-Schema-Dokument definiert.</summary>
+        <returns>Ein <see cref="T:System.Xml.Serialization.XmlTypeMapping" /> Objekt, das eine Zuordnung beschreibt.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportTypeMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlTypeMapping ImportTypeMapping (System.Xml.XmlQualifiedName name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlTypeMapping ImportTypeMapping(class System.Xml.XmlQualifiedName name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaImporter.ImportTypeMapping(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlTypeMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein <see cref="T:System.Xml.XmlQualifiedName" /> , der den Namen eines Elements in ein XML-Schemadokument definierten angibt.</param>
+        <summary>Generiert interne Zuordnung Typinformationen für ein Element in einem XML-Schema-Dokument definiert.</summary>
+        <returns>Die .NET Framework-Zuordnung Typinformationen für ein XML-Schema-Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlSchemaImporter.ImportTypeMapping%2A> Methode wird vom Tool Xsd.exe beim Generieren von Klassen XML-Schemadefinition (XSD) Dokument verwendet. Verwenden Sie statt dieser Methode direkt aufzurufen, Xsd.exe.  
+  
+ Diese Methode wird für die XML-Schema-Element-Typ nicht berücksichtigt.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,229 @@
+<Type Name="MachineKeyValidation" FullName="System.Web.Configuration.MachineKeyValidation">
+  <TypeSignature Language="C#" Value="public enum MachineKeyValidation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MachineKeyValidation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.MachineKeyValidation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Hashalgorithmus an, dem ASP.NET für Formularauthentifizierung und Ansichtszustanddaten überprüfen und Kennzeichnung Out-of-Process-Sitzungszustands verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET verwendet einen hashbasierten Nachrichtenauthentifizierungscode (HMAC) um zu erkennen, ob die Daten für die Formulare oder für den Ansichtszustand verwendeten manipuliert wurde mit. Der HMAC wird generiert, wenn Inhalt der anzeigen-Zustand erstellt wird, und der HMAC wird bei nachfolgenden Anforderungen überprüft. Der HMAC hilft ASP.NET zu bestimmen, ob ein Benutzer Daten, die zwischen dem Server und den Client gesendet wird geändert, aber die Daten können von jedem gelesen werden, während der Übertragung über das Internet, es sei denn, sie auch verschlüsselt wurden. Standardmäßig wird der Ansichtszustand überprüft aber nicht verschlüsselt. Weitere Informationen finden Sie unter <xref:System.Web.UI.Page.ViewStateEncryptionMode%2A> und <xref:System.Web.UI.Page.RegisterRequiresViewStateEncryption%2A>.  
+  
+ Die <xref:System.Web.Configuration.MachineKeyValidation> -Enumeration können Sie den Algorithmus angeben, die ASP.NET verwendet, um den HMAC zu erstellen. Der Standardwert ist HMACSHA256. ASP.NET verwendet den Wert der <xref:System.Web.Configuration.MachineKeySection.ValidationKey%2A> Eigenschaft mit dem ausgewählten Algorithmus, um den HMAC zu generieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.MachineKeyValidation> Enumeration. Im Beispiel `configSection` ist eine Instanz der <xref:System.Web.Configuration.MachineKeySection>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.MachineKeySection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.MachineKeySection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.MachineKeySection/CS/machinekeysection.cs#5)]
+ [!code-vb[System.Web.Configuration.MachineKeySection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.MachineKeySection/VB/machinekeysection.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AES">
+      <MemberSignature Language="C#" Value="AES" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.MachineKeyValidation AES = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.MachineKeyValidation.AES" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyValidation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ASP.NET verwendet die <see langword="AES" /> (Rijndael)-Verschlüsselungsalgorithmus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wählen Sie diese Option, wenn der Ansichtszustand in der Web-Anwendung verschlüsselt werden soll. Bei Auswahl dieser Option die <xref:System.Web.Configuration.MachineKeySection.DecryptionKey%2A> Eigenschaft für die Ver- und Entschlüsselung verwendet werden und die `HMACSHA1` mit Hash-Algorithmus verwendet werden die <xref:System.Web.Configuration.MachineKeySection.ValidationKey%2A> Eigenschaft für die Überprüfung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.MachineKeyValidation Custom = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.MachineKeyValidation.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyValidation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ASP.NET einen benutzerdefinierten Hashalgorithmus verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzerdefinierte Hashalgorithmus kann implementiert werden, in einer Klasse, die abgeleitet <xref:System.Security.Cryptography.KeyedHashAlgorithm>.  
+  
+ Des benutzerdefinierte Algorithmus wird in der Regel deklarativ angegeben, in das Validierungsattribut für das Element im Format `alg:` *Algorithm_name*. Informationen zum Angeben eines benutzerdefinierten Algorithmus im Code finden Sie unter der <xref:System.Web.Configuration.MachineKeySection.ValidationAlgorithm%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HMACSHA256">
+      <MemberSignature Language="C#" Value="HMACSHA256" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.MachineKeyValidation HMACSHA256 = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.MachineKeyValidation.HMACSHA256" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyValidation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ASP.NET verwendet die <see langword="HMACSHA256" /> Hashalgorithmus.  Dies ist der Standardwert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `HMACSHA256`ist ein SHA2-Hashalgorithmus, der einen 256-Bit-Hashcode generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HMACSHA384">
+      <MemberSignature Language="C#" Value="HMACSHA384" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.MachineKeyValidation HMACSHA384 = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.MachineKeyValidation.HMACSHA384" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyValidation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ASP.NET verwendet die <see langword="HMACSHA384" /> Hashalgorithmus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `HMACSHA384`ist ein SHA2-Hashalgorithmus, 384-Bit-Hashcode generiert. Diese Option ist verfügbar für Anwendungen, höhere Sicherheit als mit erfordern, die `HMACSHA256` Algorithmus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HMACSHA512">
+      <MemberSignature Language="C#" Value="HMACSHA512" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.MachineKeyValidation HMACSHA512 = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.MachineKeyValidation.HMACSHA512" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyValidation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ASP.NET verwendet die <see langword="HMACSHA512" /> Hashalgorithmus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `HMACSHA512`ist ein SHA2-Hashalgorithmus, der einen 512-Bit-Hashcode generiert. Diese Option ist verfügbar für Anwendungen, höhere Sicherheit als mit erfordern, die `HMACSHA384` Algorithmus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MD5">
+      <MemberSignature Language="C#" Value="MD5" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.MachineKeyValidation MD5 = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.MachineKeyValidation.MD5" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyValidation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ASP.NET den Message Digest 5 verwendet (<see langword="MD5" />) Hashalgorithmus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `MD5`ist ein Hashalgorithmus, der einen 128-Bit-Hashwert generiert. Diese Option für Legacyzwecke enthalten ist, und muss ausgewählt werden, nur dann, wenn Kompatibilität mit früheren Versionen von ASP.NET erforderlich ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SHA1">
+      <MemberSignature Language="C#" Value="SHA1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.MachineKeyValidation SHA1 = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.MachineKeyValidation.SHA1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyValidation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ASP.NET verwendet die <see langword="HMACSHA1" /> Hashalgorithmus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `HMACSHA1`ist ein Hashalgorithmus, der einen 160-Bit-Hashwert generiert. Diese Option für Legacyzwecke enthalten ist, und muss ausgewählt werden, nur dann, wenn Kompatibilität mit früheren Versionen von ASP.NET erforderlich ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TripleDES">
+      <MemberSignature Language="C#" Value="TripleDES" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.MachineKeyValidation TripleDES = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.MachineKeyValidation.TripleDES" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyValidation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ASP.NET die TripleDES verwendet (<see langword="3DES" />) Verschlüsselungsalgorithmus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ TripleDES ist ein Verschlüsselungsalgorithmus, der verwendet wird, nur dann, wenn Sie angeben, dass der Ansichtszustand verschlüsselt wird. Diese Option für Legacyzwecke enthalten ist, und muss ausgewählt werden, nur dann, wenn Kompatibilität mit früheren Versionen von ASP.NET erforderlich ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

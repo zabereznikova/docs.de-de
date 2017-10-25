@@ -1,0 +1,1240 @@
+<Type Name="SocketOptionName" FullName="System.Net.Sockets.SocketOptionName">
+  <TypeSignature Language="C#" Value="public enum SocketOptionName" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SocketOptionName extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.SocketOptionName" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert die Konfigurationsoptionsnamen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.SocketOptionName> -Enumeration definiert den Namen der einzelnen <xref:System.Net.Sockets.Socket> Konfigurationsoption. Sockets können konfiguriert werden, mit der <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel verwendet diese Enumeration um Socketoptionen festzulegen.  
+  
+ [!code-cpp[Socket_Socket_Options#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Socket_Socket_Options/CPP/source.cpp#1)]
+ [!code-csharp[Socket_Socket_Options#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Socket_Socket_Options/CS/source.cs#1)]
+ [!code-vb[Socket_Socket_Options#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Socket_Socket_Options/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AcceptConnection">
+      <MemberSignature Language="C#" Value="AcceptConnection" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName AcceptConnection = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.AcceptConnection" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Socket überwacht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMembership">
+      <MemberSignature Language="C#" Value="AddMembership" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName AddMembership = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.AddMembership" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fügt eine IP-Gruppenmitgliedschaft hinzu.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSourceMembership">
+      <MemberSignature Language="C#" Value="AddSourceMembership" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName AddSourceMembership = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.AddSourceMembership" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verknüpft eine Quellgruppe.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockSource">
+      <MemberSignature Language="C#" Value="BlockSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName BlockSource = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.BlockSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Blockiert Daten aus einer Quelle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Broadcast">
+      <MemberSignature Language="C#" Value="Broadcast" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName Broadcast = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.Broadcast" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Lässt das Senden von Broadcastmeldungen für den Socket zu.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BsdUrgent">
+      <MemberSignature Language="C#" Value="BsdUrgent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName BsdUrgent = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.BsdUrgent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwendet dringende Daten wie in RFC-1222 definiert. Diese Option kann nur einmal festgelegt werden. Nachdem sie festgelegt wurde, kann sie nicht deaktiviert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ChecksumCoverage">
+      <MemberSignature Language="C#" Value="ChecksumCoverage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName ChecksumCoverage = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.ChecksumCoverage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt die UDP-Prüfsummenabdeckung fest oder ruft diese ab.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Debug">
+      <MemberSignature Language="C#" Value="Debug" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName Debug = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.Debug" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeichnet Debuginformationen auf.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DontFragment">
+      <MemberSignature Language="C#" Value="DontFragment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName DontFragment = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.DontFragment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>IP-Datagramme werden nicht fragmentiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DontLinger">
+      <MemberSignature Language="C#" Value="DontLinger" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName DontLinger = int32(-129)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.DontLinger" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schließt den Socket ordnungsgemäß und unverzüglich.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DontRoute">
+      <MemberSignature Language="C#" Value="DontRoute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName DontRoute = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.DontRoute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Weiterleitung. Das Paket wird direkt an die Schnittstellenadressen gesendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DropMembership">
+      <MemberSignature Language="C#" Value="DropMembership" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName DropMembership = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.DropMembership" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Löscht eine IP-Gruppenmitgliedschaft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DropSourceMembership">
+      <MemberSignature Language="C#" Value="DropSourceMembership" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName DropSourceMembership = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.DropSourceMembership" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Löscht eine Quellgruppe.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName Error = int32(4103)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Fehlerstatus ab und löscht ihn.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExclusiveAddressUse">
+      <MemberSignature Language="C#" Value="ExclusiveAddressUse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName ExclusiveAddressUse = int32(-5)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.ExclusiveAddressUse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermöglicht das Binden eines Sockets für den exklusiven Zugriff.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Expedited">
+      <MemberSignature Language="C#" Value="Expedited" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName Expedited = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.Expedited" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwendet beschleunigte Daten wie in RFC-1222 definiert. Diese Option kann nur einmal festgelegt werden. Nachdem sie festgelegt wurde, kann sie nicht deaktiviert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderIncluded">
+      <MemberSignature Language="C#" Value="HeaderIncluded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName HeaderIncluded = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.HeaderIncluded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Anwendung den IP-Header für ausgehende Datagramme bereitstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HopLimit">
+      <MemberSignature Language="C#" Value="HopLimit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName HopLimit = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.HopLimit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die maximale Anzahl von Routerweiterleitungen für ein IPv6 (Internet Protocol, Version 6)-Paket an. Dies entspricht der Gültigkeitsdauer (TTL) für Internet Protocol, Version 4.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IPOptions">
+      <MemberSignature Language="C#" Value="IPOptions" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName IPOptions = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.IPOptions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die IP-Optionen an, die in ausgehende Datagramme eingefügt werden sollen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IPProtectionLevel">
+      <MemberSignature Language="C#" Value="IPProtectionLevel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName IPProtectionLevel = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.IPProtectionLevel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermöglicht die Einschränkung eines IPv6-Sockets auf einen angegebenen Bereich, z. B. Adressen mit demselben linklokalen oder standortlokalen Präfix. Mithilfe dieser Socketoption können in Anwendungen Zugriffseinschränkungen für IPv6-Sockets festgelegt werden. Mit solchen Einschränkungen kann sich eine im privaten LAN ausgeführte Anwendung selbst einfach und stabil vor externen Angriffen schützen. Diese Socketoption erweitert oder beschränkt den Bereich eines empfangsbereiten Sockets und ermöglicht so bei Bedarf den uneingeschränkten Zugriff von öffentlichen und privaten Benutzern oder beschränkt den Zugriff nur auf denselben Standort. Für diese Socketoption sind in der <see cref="T:System.Net.Sockets.IPProtectionLevel" />-Enumeration angegebene Schutzebenen definiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IpTimeToLive">
+      <MemberSignature Language="C#" Value="IpTimeToLive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName IpTimeToLive = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.IpTimeToLive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt das Time-To-Live-Feld für die Gültigkeitsdauer im IP-Header fest.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IPv6Only">
+      <MemberSignature Language="C#" Value="IPv6Only" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName IPv6Only = int32(27)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.IPv6Only" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob ein für die AF_INET6-Adressfamilie erstellter Socket auf IPv6-Kommunikation beschränkt ist. Für die AF_INET6-Adressfamilie erstellte Sockets können sowohl für IPv6- als auch für IPv4-Kommunikation verwendet werden. In einigen Anwendungen kann es erforderlich sein, die Verwendung eines für die AF_INET6-Adressfamilie erstellten Sockets auf die IPv6-Kommunikation zu beschränken. Wenn dieser Wert ungleich 0 ist (Standardwert unter Windows), kann ein für die AF_INET6-Adressfamilie erstellter Socket verwendet werden, um nur IPv6-Pakete zu senden und zu empfangen. Wenn dieser Wert 0 ist, kann ein für die AF_INET6-Adressfamilie erstellter Socket zum Senden und Empfangen von IPv6- oder IPv4-Paketen verwendet werden. Die Möglichkeit der Interaktion mit einer IPv4-Adresse setzt die Verwendung von IPv4-zugeordneten Adressen voraus. Diese Socketoption wird unter Windows Vista oder höher unterstützt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepAlive">
+      <MemberSignature Language="C#" Value="KeepAlive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName KeepAlive = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.KeepAlive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwendet Keep-Alives.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Linger">
+      <MemberSignature Language="C#" Value="Linger" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName Linger = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.Linger" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Schließen wird verzögert, wenn nicht gesendete Daten vorhanden sind.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxConnections">
+      <MemberSignature Language="C#" Value="MaxConnections" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName MaxConnections = int32(2147483647)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.MaxConnections" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wird nicht unterstützt. Löst bei Verwendung eine <see cref="T:System.Net.Sockets.SocketException" /> aus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MulticastInterface">
+      <MemberSignature Language="C#" Value="MulticastInterface" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName MulticastInterface = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.MulticastInterface" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt die Schnittstelle für ausgehende Multicastpakete fest.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MulticastLoopback">
+      <MemberSignature Language="C#" Value="MulticastLoopback" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName MulticastLoopback = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.MulticastLoopback" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein IP-Multicast-Loopback.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MulticastTimeToLive">
+      <MemberSignature Language="C#" Value="MulticastTimeToLive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName MulticastTimeToLive = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.MulticastTimeToLive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine IP-Multicast-Gültigkeitsdauer.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoChecksum">
+      <MemberSignature Language="C#" Value="NoChecksum" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName NoChecksum = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.NoChecksum" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sendet UDP-Datagramme mit auf 0 festgelegter Prüfsumme.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoDelay">
+      <MemberSignature Language="C#" Value="NoDelay" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName NoDelay = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.NoDelay" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Deaktiviert den Nagle-Algorithmus für Sammelsendungen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OutOfBandInline">
+      <MemberSignature Language="C#" Value="OutOfBandInline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName OutOfBandInline = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.OutOfBandInline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Empfängt Out-Of-Band-Daten im normalen Datenstream.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PacketInformation">
+      <MemberSignature Language="C#" Value="PacketInformation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName PacketInformation = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.PacketInformation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt Informationen über empfangene Pakete zurück.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveBuffer">
+      <MemberSignature Language="C#" Value="ReceiveBuffer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName ReceiveBuffer = int32(4098)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.ReceiveBuffer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Gesamtpufferspeicher pro Socket an, der für Empfangsvorgänge reserviert ist. Dies hängt nicht von der maximalen Meldungsgröße oder der Größe eines TCP-Fensters ab.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveLowWater">
+      <MemberSignature Language="C#" Value="ReceiveLowWater" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName ReceiveLowWater = int32(4100)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.ReceiveLowWater" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die untere Grenze für <see cref="Overload:System.Net.Sockets.Socket.Receive" />-Vorgänge an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveTimeout">
+      <MemberSignature Language="C#" Value="ReceiveTimeout" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName ReceiveTimeout = int32(4102)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.ReceiveTimeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Empfängt ein Timeout. Diese Option gilt nur für synchrone Methoden, sie wirkt sich nicht auf asynchrone Methoden wie die <see cref="M:System.Net.Sockets.Socket.BeginSend(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.AsyncCallback,System.Object)" />-Methode aus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReuseAddress">
+      <MemberSignature Language="C#" Value="ReuseAddress" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName ReuseAddress = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.ReuseAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermöglicht, dass der Socket an eine bereits verwendete Adresse gebunden wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReuseUnicastPort">
+      <MemberSignature Language="C#" Value="ReuseUnicastPort" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName ReuseUnicastPort = int32(12295)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.ReuseUnicastPort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das System die Portzuordnung für ausgehende Verbindungen verzögern soll. Dies entspricht der Verwendung der SO_REUSE_UNICASTPORT-Socketoption von Winsock 2.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SendBuffer">
+      <MemberSignature Language="C#" Value="SendBuffer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName SendBuffer = int32(4097)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.SendBuffer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Gesamtpufferspeicher pro Socket an, der für Sendevorgänge reserviert ist. Dies hängt nicht von der maximalen Meldungsgröße oder der Größe eines TCP-Fensters ab.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SendLowWater">
+      <MemberSignature Language="C#" Value="SendLowWater" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName SendLowWater = int32(4099)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.SendLowWater" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die untere Grenze für <see cref="Overload:System.Net.Sockets.Socket.Send" />-Vorgänge an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SendTimeout">
+      <MemberSignature Language="C#" Value="SendTimeout" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName SendTimeout = int32(4101)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.SendTimeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sendet ein Timeout. Diese Option gilt nur für synchrone Methoden, sie wirkt sich nicht auf asynchrone Methoden wie die <see cref="M:System.Net.Sockets.Socket.BeginSend(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.AsyncCallback,System.Object)" />-Methode aus.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="Type" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName Type = int32(4104)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.Type" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Sockettyp ab.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeOfService">
+      <MemberSignature Language="C#" Value="TypeOfService" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName TypeOfService = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.TypeOfService" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ändert den Dienstfeldtyp des IP-Headers.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnblockSource">
+      <MemberSignature Language="C#" Value="UnblockSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName UnblockSource = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.UnblockSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Hebt die Sperre einer zuvor blockierten Quelle auf.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateAcceptContext">
+      <MemberSignature Language="C#" Value="UpdateAcceptContext" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName UpdateAcceptContext = int32(28683)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.UpdateAcceptContext" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktualisiert die Eigenschaften eines angenommenen Sockets mit den Eigenschaften eines vorhandenen Sockets. Dies entspricht der Verwendung der SO_UPDATE_ACCEPT_CONTEXT-Socketoption von Winsock 2 und wird nur für verbindungsorientierte Sockets unterstützt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateConnectContext">
+      <MemberSignature Language="C#" Value="UpdateConnectContext" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName UpdateConnectContext = int32(28688)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.UpdateConnectContext" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktualisiert die Eigenschaften eines verbundenen Sockets mit den Eigenschaften eines vorhandenen Sockets. Dies entspricht der Verwendung der SO_UPDATE_CONNECT_CONTEXT-Socketoption von Winsock 2 und wird nur für verbindungsorientierte Sockets unterstützt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseLoopback">
+      <MemberSignature Language="C#" Value="UseLoopback" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionName UseLoopback = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionName.UseLoopback" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Umgeht die Hardware nach Möglichkeit.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

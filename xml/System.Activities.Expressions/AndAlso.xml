@@ -1,0 +1,127 @@
+<Type Name="AndAlso" FullName="System.Activities.Expressions.AndAlso">
+  <TypeSignature Language="C#" Value="public sealed class AndAlso : System.Activities.Activity&lt;bool&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AndAlso extends System.Activities.Activity`1&lt;bool&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Expressions.AndAlso" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Activity&lt;System.Boolean&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TResult">System.Boolean</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Berechnet die logische Operation AND von zwei Werten. Beide Werte in den booleschen Wert konvertiert, und wenn beide wahr sind dieser Ausdruck gibt anschließend <see langword="true" />. Wenn einer oder beide Werte auf "false" ausgewertet werden kann, gibt dieser Ausdruck <see langword="false" />. <see cref="T:System.Activities.Expressions.AndAlso" />ist die Version "Kurzschluss" des logischen AND-Operators, "false" zurückgeben, sobald einer der Operanden ausgewertet wird, um <see langword="false" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AndAlso ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.AndAlso.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Expressions.AndAlso" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected override void CacheMetadata (System.Activities.ActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CacheMetadata(valuetype System.Activities.ActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.AndAlso.CacheMetadata(System.Activities.ActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.ActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity&lt;bool&gt; Left { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity`1&lt;bool&gt; Left" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Expressions.AndAlso.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den linken Operanden ab oder legt ihn fest.</summary>
+        <value>Der linke Operand.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateDynamicUpdateMap">
+      <MemberSignature Language="C#" Value="protected override void OnCreateDynamicUpdateMap (System.Activities.DynamicUpdate.UpdateMapMetadata metadata, System.Activities.Activity originalActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnCreateDynamicUpdateMap(class System.Activities.DynamicUpdate.UpdateMapMetadata metadata, class System.Activities.Activity originalActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.AndAlso.OnCreateDynamicUpdateMap(System.Activities.DynamicUpdate.UpdateMapMetadata,System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.DynamicUpdate.UpdateMapMetadata" />
+        <Parameter Name="originalActivity" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <param name="originalActivity">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity&lt;bool&gt; Right { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity`1&lt;bool&gt; Right" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Expressions.AndAlso.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den rechten Operanden ab oder legt ihn fest.</summary>
+        <value>Der rechte Operand.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

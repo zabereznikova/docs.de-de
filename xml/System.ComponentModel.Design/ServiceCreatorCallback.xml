@@ -1,0 +1,56 @@
+<Type Name="ServiceCreatorCallback" FullName="System.ComponentModel.Design.ServiceCreatorCallback">
+  <TypeSignature Language="C#" Value="public delegate object ServiceCreatorCallback(IServiceContainer container, Type serviceType);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ServiceCreatorCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.ServiceCreatorCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="container" Type="System.ComponentModel.Design.IServiceContainer" />
+    <Parameter Name="serviceType" Type="System.Type" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Object</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="container">Der Dienstcontainer, der die Erstellung des Diensts angefordert.</param>
+    <param name="serviceType">Der Typ des zu erstellenden Dienst.</param>
+    <summary>Stellt einen Rückrufmechanismus bereit, der eine Instanz eines Diensts bedarfsgesteuert erstellen können.</summary>
+    <returns>Der angegebene Dienst <paramref name="serviceType" />, oder <see langword="null" /> , wenn der Dienst konnte nicht erstellt werden.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.ServiceCreatorCallback>bietet einen Mechanismus zum Veröffentlichen von Diensten, die Sie erstellt haben, bei Bedarf anfordern können, anstatt den Dienst erstellt werden, sofort, wenn der Designer lädt. Sie können eine Rückruffunktion verwenden, wenn der Dienst nicht unbedingt erforderlich ist und nicht verwendet werden kann. Ein Dienst veröffentlicht werden, mithilfe einer <xref:System.ComponentModel.Design.ServiceCreatorCallback> verwendet nicht so viele zusätzliche Ressourcen aus, wenn es nicht erforderlich und erstellt wird. Übergeben, um eine Rückruffunktion verwenden, um den Dienst veröffentlichen, eine <xref:System.ComponentModel.Design.ServiceCreatorCallback> auf die <xref:System.ComponentModel.Design.IServiceContainer.AddService%2A> Methode eine <xref:System.ComponentModel.Design.IServiceContainer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie beim Veröffentlichen eines Dienstes, der eine Rückruffunktion verwenden.  
+  
+ [!code-cpp[Classic ServiceCreatorCallback Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ServiceCreatorCallback Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ServiceCreatorCallback Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ServiceCreatorCallback Example/CS/source.cs#1)]
+ [!code-vb[Classic ServiceCreatorCallback Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ServiceCreatorCallback Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

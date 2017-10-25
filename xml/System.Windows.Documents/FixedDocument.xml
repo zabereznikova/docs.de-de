@@ -1,0 +1,311 @@
+<Type Name="FixedDocument" FullName="System.Windows.Documents.FixedDocument">
+  <TypeSignature Language="C#" Value="public class FixedDocument : System.Windows.FrameworkContentElement, IServiceProvider, System.Windows.Documents.IDocumentPaginatorSource, System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi FixedDocument extends System.Windows.FrameworkContentElement implements class System.IServiceProvider, class System.Windows.Documents.IDocumentPaginatorSource, class System.Windows.Markup.IAddChild, class System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.FixedDocument" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkContentElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Documents.IDocumentPaginatorSource</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IUriContext</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Pages")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Hostet ein portables Dokument mit hoher Zuverlässigkeit und festem Format mit Lesezugriff für die Benutzertextauswahl, Tastaturnavigation und Suche.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.FixedDocument>logisch bindet eine geordnete Sequenz von Seiten in einem einzelnen, mehrseitigen Dokument mit festem Layout zusammen.  
+  
+ <xref:System.Windows.Documents.PageContent>ist das einzige zulässige untergeordnete Element von der <xref:System.Windows.Documents.FixedDocument> Element.  Jede <xref:System.Windows.Documents.PageContent> Element bezieht sich auf die Quelle des Inhalts für eine einzelne Seite. <xref:System.Windows.Documents.PageContent>Elemente müssen in sequenzieller Markupreihenfolge vorliegen und die Seitenreihenfolge des Dokuments befinden.  
+  
+ <xref:System.Windows.Documents.FixedDocument>Dient zum [!INCLUDE[TLA#tla_wys](~/includes/tlasharptla-wys-md.md)] Anwendungen, in denen das Layout des Dokuments definiert und von der Anwendung für das Rendering in die höchste Genauigkeit der Anzeige oder Druckgerät gesteuert.  
+  
+ <xref:System.Windows.Documents.FlowDocument>, andererseits, dient zum Maximieren des Benutzers Lesbarkeit und dynamisch passt das Layout des Dokuments anhand der benutzereinstellungen (z. B. Benutzer ausgewählten Typgröße oder Schriftart) und andere Variablen, z. B. Größe und Auflösung an.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FixedDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedDocument.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Documents.FixedDocument" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der **FixedDocument** Konstruktor.  
+  
+ [!code-csharp[XpsSave#CreateFixedDocument](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpfContent.cs#createfixeddocument)]
+ [!code-vb[XpsSave#CreateFixedDocument](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpfcontent.vb#createfixeddocument)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentPaginator">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.DocumentPaginator DocumentPaginator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.DocumentPaginator DocumentPaginator" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FixedDocument.DocumentPaginator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.DocumentPaginator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Paginator für die <see cref="T:System.Windows.Documents.FixedDocument" /> seitenbasierten Services wie z. B. eine bestimmte Seite abrufen und als Reaktion auf Änderungen Seitenumbruch bereitstellt.</summary>
+        <value>Ein Objekt einer Klasse abgeleitet <see cref="T:System.Windows.Documents.DocumentPaginator" /> Paginierungsdienste bereitstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ggf. eine Paginator mit durch die automatische erneute Paginierung in Antworten auf Änderungen, z. B. das Hinzufügen von Inhalt auf das Dokument, leiten Sie eine Klasse von <xref:System.Windows.Documents.DynamicDocumentPaginator> die selbst erbt von <xref:System.Windows.Documents.DocumentPaginator>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Documents.FixedDocument> , die eine Paginator für eine bestimmte Seitengröße konfiguriert wurde.  
+  
+ [!code-csharp[XpsPrint#CreateFixedDocumentWithConfiguredPaginator](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/WpfContent.cs#createfixeddocumentwithconfiguredpaginator)]
+ [!code-vb[XpsPrint#CreateFixedDocumentWithConfiguredPaginator](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/wpfcontent.vb#createfixeddocumentwithconfiguredpaginator)]  
+  
+ Das folgende Beispiel zeigt auch die Verwendung der <xref:System.Windows.Documents.FixedDocument.DocumentPaginator%2A> Eigenschaft.  
+  
+ [!code-csharp[XpsSave#CreateFixedDocument](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpfContent.cs#createfixeddocument)]
+ [!code-vb[XpsSave#CreateFixedDocument](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpfcontent.vb#createfixeddocument)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FixedDocument.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerator für den Zugriff auf des Dokuments <see cref="T:System.Windows.Documents.PageContent" /> untergeordnete Elemente.</summary>
+        <value>Ein Enumerator für den Zugriff auf des Dokuments <see cref="T:System.Windows.Documents.PageContent" /> untergeordnete Elemente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedDocument.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen Automatisierungspeer für das Dokument an.</summary>
+        <returns>Ein <see cref="T:System.Windows.Automation.Peers.DocumentAutomationPeer" /> , verfügbar macht die <see cref="T:System.Windows.Documents.FixedDocument" /> für die Microsoft-Benutzeroberflächenautomatisierung.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Die abgeleitete Version kann jedes zurückgeben <see cref="T:System.Windows.Automation.Peers.AutomationPeer" />, es muss keine werden eine <see cref="T:System.Windows.Automation.Peers.DocumentAutomationPeer" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Pages">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.PageContentCollection Pages { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.PageContentCollection Pages" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FixedDocument.Pages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.PageContentCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von des Dokuments <see cref="T:System.Windows.Documents.PageContent" /> Elemente.</summary>
+        <value>Eine Auflistung von des Dokuments <see cref="T:System.Windows.Documents.PageContent" /> Elemente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintTicket">
+      <MemberSignature Language="C#" Value="public object PrintTicket { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object PrintTicket" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FixedDocument.PrintTicket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Printing.PrintTicket" /> , dieses Dokument zugeordnet ist.</summary>
+        <value>Die <see cref="T:System.Printing.PrintTicket" /> für dieses Dokument.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Printing.PrintTicket> enthält Druckinformationen, z. B., ob auf beiden Seiten des jedes Blatt gedruckt.  
+  
+ Wenn dieser <xref:System.Windows.Documents.FixedDocument.PrintTicket%2A> Eigenschaft nicht überprüfen oder ändern Sie den angegebenen <xref:System.Printing.PrintTicket> für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+<a name="dependencyPropertyInfo_PrintTicket"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FixedDocument.PrintTicketProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintTicketProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PrintTicketProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PrintTicketProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FixedDocument.PrintTicketProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FixedDocument.PrintTicket" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IServiceProvider.GetService">
+      <MemberSignature Language="C#" Value="object IServiceProvider.GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.IServiceProvider.GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedDocument.System#IServiceProvider#GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Ein Objekt, das den Typ des abzurufenden Dienstobjekts angibt.</param>
+        <summary>Ruft das Dienstobjekt des angegebenen Typs ab.</summary>
+        <returns>Ein Dienstobjekt vom Typ <paramref name="serviceType" />.  
+  
+ - oder -   
+  
+ <see langword="null" />Es ist kein Dienstobjekt vom Typ <paramref name="serviceType" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedDocument.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende untergeordnete Objekt.</param>
+        <summary>Fügt ein untergeordnetes Objekt hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FixedDocument.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der dem Objekt hinzuzufügende Text.</param>
+        <summary>Fügt dem Objekt den Textinhalt eines Knotens hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IUriContext.BaseUri">
+      <MemberSignature Language="C#" Value="Uri System.Windows.Markup.IUriContext.BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri System.Windows.Markup.IUriContext.BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FixedDocument.System#Windows#Markup#IUriContext#BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Basis-URI des aktuellen Anwendungskontexts ab oder legt diesen fest.</summary>
+        <value>Der Basis-URI des Anwendungskontexts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

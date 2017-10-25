@@ -1,0 +1,103 @@
+<Type Name="SettingsSerializeAsAttribute" FullName="System.Configuration.SettingsSerializeAsAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SettingsSerializeAsAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SettingsSerializeAsAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsSerializeAsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Serialisierungsmechanismus verwenden, den der Anbieter der Einstellungen verwendet werden soll. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Einstellungsanbieter unterstützt oft mit mehr als eine der .NET Framework Standardserialisierungsschemas. Diese Schemas werden von beschrieben, für die <xref:System.Configuration.SettingsSerializeAs> -Enumeration, enthält nur-Text, XML und binäre Serialisierung. Darüber hinaus kann ein Anbieter optional ein benutzerdefiniertes Serialisierungsschema unterstützen.  
+  
+ Mit der <xref:System.Configuration.SettingsSerializeAsAttribute>, können Sie angeben, welche Serialisierungsmechanismus für eine bestimmte Anwendung Settings-Klasse oder die Eigenschaft verwendet werden soll. Dieses Attribut wird eine Anforderung an den Einstellungsanbieter betrachtet. Er kann ignoriert werden oder einen Fehler verursachen, wenn der Anbieter oder der einzelne Eigenschaftentyp das angegebene Serialisierungsschema nicht unterstützt. Wenn dieses Attribut nicht vorhanden ist, wird der Anbieter einen Standard-Serialisierungsmechanismus am häufigsten als nur-Text in der Regel bereitgestellt.  
+  
+ Obwohl eine Möglichkeit, den Serialisierungsmechanismus verwenden, während der Laufzeit dynamisch ändern der Einstellungsanbieter bereitgestellt werden kann, ist dies keine normale Funktion.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsSerializeAsAttribute (System.Configuration.SettingsSerializeAs serializeAs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Configuration.SettingsSerializeAs serializeAs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsSerializeAsAttribute.#ctor(System.Configuration.SettingsSerializeAs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializeAs" Type="System.Configuration.SettingsSerializeAs" />
+      </Parameters>
+      <Docs>
+        <param name="serializeAs">Ein <see cref="T:System.Configuration.SettingsSerializeAs" /> Enumerationswert, der das Serialisierungsschema angibt.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Configuration.SettingsSerializeAsAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Einstellungsanbieter oder der Typ der Eigenschaft, die zu konvertierende von angegebene Serialisierungsschema unterstützt die `serializeAs` Parameter, der Vorgang kann einem der folgenden Ergebnisse haben:  
+  
+-   Der Einstellungsanbieter möglicherweise ignorieren das Attribut und seine Standardserialisierungsschema verwenden.  
+  
+-   Der Serialisierungsprozess fehlschlagen, ohne eine Antwort. Anwendungseinstellungseigenschaft wird nicht beibehalten werden.  
+  
+-   Während der Serialisierung möglicherweise eine Ausnahme ausgelöst werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeAs">
+      <MemberSignature Language="C#" Value="public System.Configuration.SettingsSerializeAs SerializeAs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.SettingsSerializeAs SerializeAs" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsSerializeAsAttribute.SerializeAs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsSerializeAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Configuration.SettingsSerializeAs" /> -Enumerationswert, der das Serialisierungsschema angibt.</summary>
+        <value>Ein <see cref="T:System.Configuration.SettingsSerializeAs" /> Enumerationswert, der das Serialisierungsschema angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird festgelegt, der <xref:System.Configuration.SettingsSerializeAsAttribute.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

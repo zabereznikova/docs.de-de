@@ -1,0 +1,117 @@
+<Type Name="ListItemsCollectionEditor" FullName="System.Web.UI.Design.WebControls.ListItemsCollectionEditor">
+  <TypeSignature Language="C#" Value="public class ListItemsCollectionEditor : System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListItemsCollectionEditor extends System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.ListItemsCollectionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.CollectionEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Komponenten-Editor für <see cref="T:System.Web.UI.WebControls.ListItemCollection" /> Objekte in einem Steuerelement, das von abgeleitet ist die <see cref="T:System.Web.UI.WebControls.ListControl" /> oder ein ähnliches Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.ListItemsCollectionEditor> Klasse bietet eine Benutzeroberfläche zum Bearbeiten der <xref:System.Web.UI.WebControls.ListItem> Elemente der <xref:System.Web.UI.WebControls.ListItemCollection> Objekt in einem Steuerelement, das von abgeleitet ist die <xref:System.Web.UI.WebControls.ListControl> oder ein ähnliches Steuerelement.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.ListItemsCollectionEditor> wird aufgerufen, indem Sie die Auslassungspunkte (**... **) auf die Schaltfläche der **ListItems** Eigenschaft in der **Eigenschaften** Raster mit den visuellen Designer.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.ListItemsCollectionEditor.CanSelectMultipleInstances%2A> immer Methodenrückgabe `false` , um anzugeben, dass nur ein Objekt zu einem Zeitpunkt im Editor ausgewählt werden kann. Die <xref:System.Web.UI.Design.WebControls.ListItemsCollectionEditor.HelpTopic%2A> -Eigenschaft gibt den Namen des Hilfethemas, die im Editor angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.EditorAttribute> Klasse zuordnen der <xref:System.Web.UI.Design.WebControls.ListItemsCollectionEditor> Klasse und die <xref:System.Drawing.Design.UITypeEditor> Klasse (Basisklasse für den auflistungs-Editor) mit einem benutzerdefinierten `ListItems` Eigenschaft.  
+  
+ [!code-csharp[Design.WebControls_CollectionEditorSamples#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Design.WebControls_CollectionEditorSamples/CS/WebControlDesignerCollectionEditors.cs#3)]
+ [!code-vb[Design.WebControls_CollectionEditorSamples#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Design.WebControls_CollectionEditorSamples/VB/webcontroldesignercollectioneditors.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListItemsCollectionEditor (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ListItemsCollectionEditor.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> der Auflistung zu bearbeiten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.ListItemsCollectionEditor" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.ListItemsCollectionEditor> Klasse, wenn Sie mit den Auslassungspunkten (**... **) auf die Schaltfläche der **ListItems** Eigenschaft in der **Eigenschaften** Raster im visuellen Designer, wenn ein Steuerelement zu entwerfen, die abgeleitet ist die <xref:System.Web.UI.WebControls.ListControl> Klasse oder andere zu steuern, Kapselt eine <xref:System.Web.UI.WebControls.ListItemCollection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSelectMultipleInstances">
+      <MemberSignature Language="C#" Value="protected override bool CanSelectMultipleInstances ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanSelectMultipleInstances() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ListItemsCollectionEditor.CanSelectMultipleInstances" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob mehrere <see cref="T:System.Web.UI.WebControls.ListItem" /> Elemente gleichzeitig ausgewählt werden können.</summary>
+        <returns>Immer <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.ListItemsCollectionEditor.CanSelectMultipleInstances%2A> Methode gibt immer `false`daher nur ein <xref:System.Web.UI.WebControls.ListItem> -Objekt ausgewählt werden kann, zu einem Zeitpunkt in der <xref:System.Web.UI.Design.WebControls.ListItemsCollectionEditor> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpTopic">
+      <MemberSignature Language="C#" Value="protected override string HelpTopic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpTopic" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.ListItemsCollectionEditor.HelpTopic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Hilfethema für die anzuzeigenden für die <see cref="T:System.Web.UI.Design.WebControls.ListItemsCollectionEditor" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.String" /> , die angibt, der anzuzeigenden Hilfethemas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Web.UI.Design.WebControls.ListItemsCollectionEditor.HelpTopic%2A> Eigenschaft ruft den Namen des Hilfethemas angezeigt wird, wenn der <xref:System.Web.UI.Design.WebControls.ListItemsCollectionEditor> Dialogfeld **Hilfe** geklickt wird oder wenn der **F1** Taste gedrückt wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie die <see cref="P:System.Web.UI.Design.WebControls.ListItemsCollectionEditor.HelpTopic" /> Eigenschaft, um ein anderes Hilfethema anzuzeigen.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

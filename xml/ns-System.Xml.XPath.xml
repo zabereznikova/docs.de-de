@@ -1,0 +1,6 @@
+<Namespace Name="System.Xml.XPath">
+  <Docs>
+    <summary>Die <see cref="N:System.Xml.XPath" /> -Namespace enthält Klassen, die ein Cursormodell für die Navigation und Bearbeitung von XML-Informationseinheiten als Instanzen des XQuery 1.0 und XPath 2.0-Datenmodells definieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

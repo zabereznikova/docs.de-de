@@ -1,0 +1,414 @@
+<Type Name="DataGridPagerStyle" FullName="System.Web.UI.WebControls.DataGridPagerStyle">
+  <TypeSignature Language="C#" Value="public sealed class DataGridPagerStyle : System.Web.UI.WebControls.TableItemStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataGridPagerStyle extends System.Web.UI.WebControls.TableItemStyle" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataGridPagerStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.TableItemStyle</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt den Stil für den Pager des <see cref="T:System.Web.UI.WebControls.DataGrid" />-Steuerelements an. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Pager ist ein Element auf der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement, das Ihnen ermöglicht, eine Verknüpfung mit anderen Seiten, wenn paging aktiviert ist. Die <xref:System.Web.UI.WebControls.DataGrid.PagerStyle%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement verwendet eine Instanz dieser Klasse, um die Stileigenschaften für den Pager darstellen.  
+  
+ Weitere Informationen über das Paging finden Sie unter <xref:System.Web.UI.WebControls.DataGrid.AllowPaging%2A> und <xref:System.Web.UI.WebControls.DataGrid.AllowCustomPaging%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.Web.UI.WebControls.DataGridPagerStyle> Objekt zur Darstellung von des Stils der Pager-Elements in der <xref:System.Web.UI.WebControls.DataGrid.PagerStyle%2A> Eigenschaft. Die <xref:System.Web.UI.WebControls.DataGridPagerStyle> Objektsätze der Anzeigemodus und Ausrichtung von Paging-Elements.  
+  
+ [!code-aspx-csharp[Classic DataGridPagerStyle Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridPagerStyle Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridPagerStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridPagerStyle Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridPagerStyle.CopyFrom(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Der <see cref="T:System.Web.UI.WebControls.Style" />, aus dem kopiert werden soll.</param>
+        <summary>Kopiert den Stil des angegebenen <see cref="T:System.Web.UI.WebControls.Style" /> Objekt in diese Instanz von der <see cref="T:System.Web.UI.WebControls.DataGridPagerStyle" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridPagerStyle.CopyFrom%2A> Methode, um die Stileigenschaften des angegebenen kopieren <xref:System.Web.UI.WebControls.Style> Objekt in diese Instanz von der <xref:System.Web.UI.WebControls.DataGridPagerStyle> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridPagerStyle.CopyFrom%2A> Methode, um die Eigenschaften des Kopieren einer <xref:System.Web.UI.WebControls.Style> -Objekt an eine <xref:System.Web.UI.WebControls.DataGridPagerStyle> Objekt.  
+  
+ [!code-aspx-csharp[Classic DataGridPagerStyle.CopyFrom Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridPagerStyle.CopyFrom Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridPagerStyle.CopyFrom Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridPagerStyle.CopyFrom Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeWith">
+      <MemberSignature Language="C#" Value="public override void MergeWith (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void MergeWith(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridPagerStyle.MergeWith(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die <see cref="T:System.Web.UI.WebControls.Style" /> für die Zusammenführung.</param>
+        <summary>Führt den Stil des angegebenen <see cref="T:System.Web.UI.WebControls.Style" /> Objekt mit dieser Instanz von der <see cref="T:System.Web.UI.WebControls.DataGridPagerStyle" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridPagerStyle.MergeWith%2A> Methode, um die Stileigenschaften des angegebenen kombinieren <xref:System.Web.UI.WebControls.Style> Objekt mit dieser Instanz von der <xref:System.Web.UI.WebControls.DataGridPagerStyle> Klasse. Wenn eine Eigenschaft aus dieser Instanz bereits auf einen Wert festgelegt ist, ist die Eigenschaft nicht geändert. Wenn eine Eigenschaft nicht festgelegt ist, legt diese Methode diese Eigenschaft mit dem Wert aus der entsprechenden Eigenschaft des der <xref:System.Web.UI.WebControls.Style> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridPagerStyle.MergeWith%2A> Methode, um die Eigenschaften des kombinieren eine <xref:System.Web.UI.WebControls.Style> -Objekt mit einer <xref:System.Web.UI.WebControls.DataGridPagerStyle> Objekt.  
+  
+ [!code-aspx-csharp[Classic DataGridPagerStyle.MergeWith Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridPagerStyle.MergeWith Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridPagerStyle.MergeWith Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridPagerStyle.MergeWith Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.PagerMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.PagerMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridPagerStyle.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.PagerMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Pager-Element zeigt Schaltflächen, die mit der nächsten und vorhergehenden Seite verknüpft oder numerischen Schaltflächen, die direkt auf einer Seite verknüpft sind.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.PagerMode" />-Werte. Der Standardwert ist <see langword="NextPrev" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Web.UI.WebControls.DataGridPagerStyle.Mode%2A> Eigenschaft, um anzugeben, welchen Satz von Pager Schaltflächen auf der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. Sie können Schaltflächen, die mit der nächsten und vorhergehenden Seite verknüpft angeben oder numerische Schaltflächen dieser Link führt direkt zu einer Seite.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridPagerStyle.Mode%2A> Eigenschaft, um anzugeben, dass die Pager-Element als Schaltflächen angezeigt wird, die mit der nächsten und vorhergehenden Seite verknüpft.  
+  
+ [!code-aspx-csharp[Classic DataGridPagerStyle.Mode Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridPagerStyle.Mode Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridPagerStyle.Mode Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridPagerStyle.Mode Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Wert ist nicht der <see cref="T:System.Web.UI.WebControls.PagerMode" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NextPageText">
+      <MemberSignature Language="C#" Value="public string NextPageText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NextPageText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridPagerStyle.NextPageText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("&amp;gt;")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text für die Schaltfläche "Weiter" "angezeigt.</summary>
+        <value>Der Text, der für die Schaltfläche "Weiter" "angezeigt. Der Standardwert ist <see langword="&quot;&amp;gt;&quot;" />, die als das größer-als-Zeichen gerendert wird (&gt;).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridPagerStyle.NextPageText%2A> Eigenschaft, um benutzerdefinierten Text für die Schaltfläche "Weiter" "bereitstellen. Die <xref:System.Web.UI.WebControls.DataGridPagerStyle.Mode%2A> Eigenschaft muss festgelegt werden, um `PagerMode.NextPrev` für diese Eigenschaft wirkt sich nur.  
+  
+ Diese Eigenschaft dient zusammen mit den <xref:System.Web.UI.WebControls.DataGridPagerStyle.PrevPageText%2A> Eigenschaft so erstellen einen benutzerdefinierten Satz von Steuerelementen für die Schaltflächen Weiter und zurück, der den Pager auf die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+> [!NOTE]
+>  Diese Eigenschaft codiert Sonderzeichen in HTML nicht automatisch. Sie müssen diese Zeichen in den entsprechenden HTML-Wert zu konvertieren. Zum Beispiel das größer-als-Zeichen (>) wird nicht automatisch konvertiert `&gt;`.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridPagerStyle.NextPageText%2A> Eigenschaft, um benutzerdefinierten Text für die nächste Seite Navigationsschaltfläche des Pager-Elements anzugeben.  
+  
+ [!code-aspx-csharp[Classic DataGridPagerStyle.NextPageText Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridPagerStyle.NextPageText Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridPagerStyle.NextPageText Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridPagerStyle.NextPageText Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Wert ist kleiner als <see langword="1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PageButtonCount">
+      <MemberSignature Language="C#" Value="public int PageButtonCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageButtonCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridPagerStyle.PageButtonCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(10)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der numerischen Schaltflächen für die gleichzeitig im Pager-Element der Anzeige der <see cref="T:System.Web.UI.WebControls.DataGrid" /> Steuerelement.</summary>
+        <value>Die Anzahl der numerischen Schaltflächen für die gleichzeitig im Pager-Element der Anzeige der <see cref="T:System.Web.UI.WebControls.DataGrid" /> Steuerelement. Der Standardwert ist <see langword="10" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridPagerStyle.PageButtonCount%2A> Eigenschaft, um die Anzahl der numerischen anzuzeigenden Schaltflächen gleichzeitig in Pager-Element des anzugeben der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. Die <xref:System.Web.UI.WebControls.DataGridPagerStyle.Mode%2A> Eigenschaft muss festgelegt werden, um `PagerMode.NumericPages` für diese Eigenschaft wirkt sich nur.  
+  
+ Wenn sind weitere Seiten in der <xref:System.Web.UI.WebControls.DataGrid> steuern, als in dieser Eigenschaft, die Schaltflächen mit den Auslassungszeichen (...) angegeben werden im Pager-Element angezeigt. Beim Klicken auf Schaltflächen diese das nächsten oder vorherigen Satz von numerischen Schaltflächen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridPagerStyle.PageButtonCount%2A> anzuzeigende Eigenschaft fünf numerische Schaltflächen gleichzeitig in Pager-Element des ein <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic DataGridPagerStyle.PageButtonCount Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridPagerStyle.PageButtonCount Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridPagerStyle.PageButtonCount Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridPagerStyle.PageButtonCount Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der ausgewählte Wert ist kleiner als <see langword="1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.PagerPosition Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.PagerPosition Position" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridPagerStyle.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.PagerPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Position des Pager-Elements in der <see cref="T:System.Web.UI.WebControls.DataGrid" /> Steuerelement.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.PagerPosition" />-Werte. Der Standardwert ist <see langword="Bottom" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridPagerStyle.Position%2A> Eigenschaft, um den Speicherort anzugeben, wo die Pager-Element wird, in angezeigt, der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. Pager-Element kann angezeigten am oberen Rand, am unteren Rand oder gleichzeitig am oberen und unteren Rand der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridPagerStyle.Position%2A> Eigenschaft, um anzugeben, dass der Pager am oberen Rand der angezeigt wird der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic DataGridPagerStyle.Position Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridPagerStyle.Position Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridPagerStyle.Position Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridPagerStyle.Position Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Wert ist nicht der <see cref="T:System.Web.UI.WebControls.PagerPosition" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PrevPageText">
+      <MemberSignature Language="C#" Value="public string PrevPageText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PrevPageText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridPagerStyle.PrevPageText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("&amp;lt;")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text für die vorherige Seitenschaltfläche angezeigt.</summary>
+        <value>Der Text, der für die vorherige Seite-Schaltfläche angezeigt werden soll. Der Standardwert ist <see langword="&quot;&amp;lt;&quot;" />, die als das kleiner-als-Zeichen gerendert wird (&lt;).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridPagerStyle.PrevPageText%2A> Eigenschaft, um benutzerdefinierten Text für die Schaltfläche "Weiter" "bereitstellen. Die <xref:System.Web.UI.WebControls.DataGridPagerStyle.Mode%2A> Eigenschaft muss festgelegt werden, um `PagerMode.NextPrev` für diese Eigenschaft wirkt sich nur.  
+  
+ Diese Eigenschaft dient zusammen mit den <xref:System.Web.UI.WebControls.DataGridPagerStyle.NextPageText%2A> Eigenschaft so erstellen Sie eine benutzerdefinierte Darstellung für die Schaltflächen Weiter und zurück, der den Pager auf die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+> [!NOTE]
+>  Diese Eigenschaft codiert Sonderzeichen in HTML nicht automatisch. Sie müssen Sonderzeichen in den entsprechenden HTML-Wert zu konvertieren. Angenommen, das größer-als-Zeichen (>) wird nicht automatisch konvertiert `&gt;`.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridPagerStyle.PrevPageText%2A> Eigenschaft, um benutzerdefinierten Text für die vorherige Seite Navigationsschaltfläche des Pager-Elements anzugeben.  
+  
+ [!code-aspx-csharp[Classic DataGridPagerStyle.NextPageText Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridPagerStyle.NextPageText Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridPagerStyle.NextPageText Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridPagerStyle.NextPageText Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridPagerStyle.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt die <see cref="T:System.Web.UI.WebControls.DataGridPagerStyle" /> Objekt auf ihre Standardwerte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridPagerStyle.Reset%2A> Verfahren zum Wiederherstellen der <xref:System.Web.UI.WebControls.DataGridPagerStyle> Objekt auf ihre Standardwerte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridPagerStyle.Reset%2A> Verfahren zum Wiederherstellen der <xref:System.Web.UI.WebControls.DataGridPagerStyle> Objekt auf ihre Standardwerte.  
+  
+ [!code-aspx-csharp[Classic DataGridPagerStyle.Reset Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridPagerStyle.Reset Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridPagerStyle.Reset Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridPagerStyle.Reset Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridPagerStyle.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Pager auf angezeigt wird der <see cref="T:System.Web.UI.WebControls.DataGrid" /> Steuerelement.</summary>
+        <value>
+          <see langword="true" />zum Anzeigen des Pagers; andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridPagerStyle.Visible%2A> Eigenschaft, um anzugeben, ob der Pager, in angezeigt wird der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridPagerStyle.Visible%2A> Eigenschaft anzeigen und Ausblenden von Pager-Elements in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic DataGridPagerStyle.Visible Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataGridPagerStyle.Visible Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataGridPagerStyle.Visible Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataGridPagerStyle.Visible Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

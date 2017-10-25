@@ -1,0 +1,474 @@
+<Type Name="EnvironmentPermission" FullName="System.Security.Permissions.EnvironmentPermission">
+  <TypeSignature Language="C#" Value="public sealed class EnvironmentPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit EnvironmentPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.EnvironmentPermission" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Steuert den Zugriff auf System- und Benutzerumgebungsvariablen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Umgebungsvariablen sind durch eine oder mehrere Groß-/Kleinschreibung Namen aufgeführt, die durch Semikolons getrennt ein, der separate Listen für den Lese- und Schreibzugriff auf die benannte Variablen gekennzeichnet. Schreibzugriff bietet die Möglichkeit zum Erstellen und Löschen von Umgebungsvariablen ebenfalls Ändern vorhandener Werte.  
+  
+> [!NOTE]
+>  In Versionen von .NET Framework vor der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], können Sie die <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=nameWithType> Methode, um das unbeabsichtigten Zugriff auf Systemressourcen von vertrauenswürdigem Code zu verhindern. <xref:System.Security.CodeAccessPermission.Deny%2A>ist mittlerweile veraltet, und den Zugriff auf Ressourcen wird jetzt ausschließlich durch den gewährten Berechtigungssatz für eine Assembly bestimmt. Um den Zugriff auf Dateien zu beschränken, müssen Sie teilweise vertrauenswürdigen Code in einem Sandkasten ausgeführt und weisen sie Berechtigungen nur für Ressourcen, die der Code zugreifen darf. Informationen zum Ausführen einer Anwendung in einem Sandkasten finden Sie unter [Vorgehensweise: Ausführen von teilweise vertrauenswürdigen Code in einem Sandkasten](~/docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EnvironmentPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.EnvironmentPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Einer der <see cref="T:System.Security.Permissions.PermissionState" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Permissions.EnvironmentPermission" />-Klasse mit eingeschränkter oder uneingeschränkter Berechtigung, wie angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt entweder einen vollständig eingeschränkten (`None`) oder `Unrestricted` Zugriff auf alle Umgebungsvariablen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="state" />-Parameter ist kein gültiger Wert von <see cref="T:System.Security.Permissions.PermissionState" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EnvironmentPermission (System.Security.Permissions.EnvironmentPermissionAccess flag, string pathList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.EnvironmentPermissionAccess flag, string pathList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.EnvironmentPermission.#ctor(System.Security.Permissions.EnvironmentPermissionAccess,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flag" Type="System.Security.Permissions.EnvironmentPermissionAccess" />
+        <Parameter Name="pathList" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="flag">Einer der <see cref="T:System.Security.Permissions.EnvironmentPermissionAccess" />-Werte.</param>
+        <param name="pathList">Eine Liste von Umgebungsvariablen (durch Semikolon getrennt), auf die Zugriff gewährt wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Permissions.EnvironmentPermission" />-Klasse mit dem angegebenen Zugriff auf die festgelegten Umgebungsvariablen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor kann nur eines der der <xref:System.Security.Permissions.EnvironmentPermissionAccess> Werte angegeben werden. Dieser Zugriff gilt für alle aufgelisteten Umgebungsvariablen. Verwendung <xref:System.Security.Permissions.EnvironmentPermission.AddPathList%2A> komplexe Berechtigungen zu definieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="pathList" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der <paramref name="flag" />-Parameter ist kein gültiger Wert von <see cref="T:System.Security.Permissions.EnvironmentPermissionAccess" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPathList">
+      <MemberSignature Language="C#" Value="public void AddPathList (System.Security.Permissions.EnvironmentPermissionAccess flag, string pathList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPathList(valuetype System.Security.Permissions.EnvironmentPermissionAccess flag, string pathList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.EnvironmentPermission.AddPathList(System.Security.Permissions.EnvironmentPermissionAccess,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flag" Type="System.Security.Permissions.EnvironmentPermissionAccess" />
+        <Parameter Name="pathList" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="flag">Einer der <see cref="T:System.Security.Permissions.EnvironmentPermissionAccess" />-Werte.</param>
+        <param name="pathList">Eine Liste von Umgebungsvariablen (durch Semikolon getrennt).</param>
+        <summary>Fügt dem vorhandenen Zustand der Berechtigung den Zugriff für die angegebenen Umgebungsvariablen hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um die Umgebungsvariablen zu ändern, indem Sie in den Zustand der aktuellen Berechtigung hinzufügen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.EnvironmentPermission.AddPathList%2A> Methode.  
+  
+ [!code-csharp[System.Security.Permissions.EnvironmentPermission#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.EnvironmentPermission/CS/environmentpermission.cs#7)]
+ [!code-vb[System.Security.Permissions.EnvironmentPermission#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.EnvironmentPermission/VB/environmentpermission.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="pathList" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der <paramref name="flag" />-Parameter ist kein gültiger Wert von <see cref="T:System.Security.Permissions.EnvironmentPermissionAccess" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.EnvironmentPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine identische Kopie der aktuellen Berechtigung und gibt sie zurück.</summary>
+        <returns>Eine Kopie der aktuellen Berechtigung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Kopie einer Berechtigung stellt den gleichen Zugriff auf Ressourcen wie die ursprüngliche Berechtigung dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement esd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement esd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.EnvironmentPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="esd" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="esd">Die XML-Codierung zur Wiederherstellung der Berechtigung.</param>
+        <summary>Stellt eine Berechtigung mit einem angegebenen Zustand aus einer XML-Codierung wieder her.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="esd" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="esd" /> -Parameter ist kein gültiges Berechtigungselement.  
+  
+ - oder -   
+  
+ Die <paramref name="esd" /> Versionsnummer des Parameters ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathList">
+      <MemberSignature Language="C#" Value="public string GetPathList (System.Security.Permissions.EnvironmentPermissionAccess flag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetPathList(valuetype System.Security.Permissions.EnvironmentPermissionAccess flag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.EnvironmentPermission.GetPathList(System.Security.Permissions.EnvironmentPermissionAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flag" Type="System.Security.Permissions.EnvironmentPermissionAccess" />
+      </Parameters>
+      <Docs>
+        <param name="flag">Eines der <see cref="T:System.Security.Permissions.EnvironmentPermissionAccess" /> Werte, die einen einzelnen Zugriffstyp für Umgebungsvariablen darstellt.</param>
+        <summary>Ruft alle Umgebungsvariablen mit dem angegebenen <see cref="T:System.Security.Permissions.EnvironmentPermissionAccess" />.</summary>
+        <returns>Eine Liste von Umgebungsvariablen (durch Semikolon getrennt) für das ausgewählte Flag.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um den Zustand der aktuellen Berechtigung abzurufen. Beide abzurufenden `Read` und `Write` Zugriff Zustände erfordert zwei Aufrufe dieser Methode.  
+  
+> [!NOTE]
+>  Die `flag` Parameter ist beschränkt auf die Werte der <xref:System.Security.Permissions.EnvironmentPermissionAccess>, der einzelne Typen Zugriffstyp für Umgebungsvariablen darstellt. Diese Werte sind <xref:System.Security.Permissions.EnvironmentPermissionAccess.Read> und <xref:System.Security.Permissions.EnvironmentPermissionAccess.Write>. Die Werte für akzeptabel `flag` beinhalten keine <xref:System.Security.Permissions.EnvironmentPermissionAccess.NoAccess> und <xref:System.Security.Permissions.EnvironmentPermissionAccess.AllAccess>, der einzelne Typen Zugriffstyp für Umgebungsvariablen darstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.EnvironmentPermission.GetPathList%2A> Methode. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.EnvironmentPermission> Klasse.  
+  
+ [!code-csharp[System.Security.Permissions.EnvironmentPermission#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.EnvironmentPermission/CS/environmentpermission.cs#7)]
+ [!code-vb[System.Security.Permissions.EnvironmentPermission#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.EnvironmentPermission/VB/environmentpermission.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="flag" />ist kein gültiger Wert von <see cref="T:System.Security.Permissions.EnvironmentPermissionAccess" />.  
+  
+ - oder -   
+  
+ <paramref name="flag" />ist <see cref="F:System.Security.Permissions.EnvironmentPermissionAccess.AllAccess" />, die mehr als einen Objekttyp Zugriffstyp für Umgebungsvariablen, darstellt oder <see cref="F:System.Security.Permissions.EnvironmentPermissionAccess.NoAccess" />, der keinen Zugriffstyp für Umgebungsvariablen scheiterte darstellt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.EnvironmentPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Berechtigung für die Überschneidung mit der aktuellen Berechtigung. Sie muss denselben Typ aufweisen wie die aktuelle Berechtigung.</param>
+        <summary>Erstellt eine Berechtigung als Schnittmenge der aktuellen und der angegebenen Berechtigung und gibt diese zurück.</summary>
+        <returns>Eine neue Berechtigung, die die Schnittmenge der aktuellen und der angegebenen Berechtigung darstellt. Diese neue Berechtigung ist <see langword="null" /> , wenn die Schnittmenge leer ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Schnittmenge zweier Berechtigungen ist eine Berechtigung, die den Zustand beschreibt, den beide gemeinsam beschreiben. Nur eine Anforderung, die beide ursprünglichen Berechtigungen erfolgreich durchläuft, wird die Schnittmenge übergeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> -Parameter ist kein <see langword="null" /> und weist nicht den gleichen Typ wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.EnvironmentPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Eine Berechtigung, die auf die Teilmengenbeziehung geprüft werden soll. Diese Berechtigung muss denselben Typ aufweisen wie die aktuelle Berechtigung.</param>
+        <summary>Bestimmt, ob die aktuelle Berechtigung eine Teilmenge der angegebenen Berechtigung ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle Berechtigung eine Teilmenge der angegebenen Berechtigung ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Berechtigung ist eine Teilmenge der angegebenen Berechtigung, wenn die aktuelle Berechtigung einen Zustand gibt an, der vollständig in der angegebenen Berechtigung enthalten ist. Eine Berechtigung, die Zugriff auf C:\example.txt darstellt wird z. B. eine Teilmenge einer Berechtigung, die Zugriff auf "c:" darstellt\\. Wenn diese Methode gibt `true`, die aktuelle Berechtigung stellt keine umfassenderen Zugriff auf die geschützte Ressource als die angegebene Berechtigung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="target" /> -Parameter ist kein <see langword="null" /> und weist nicht den gleichen Typ wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.EnvironmentPermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die aktuelle Berechtigung uneingeschränkt ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle Berechtigung uneingeschränkt ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein uneingeschränkter Berechtigungssatz stellt die Union aller möglichen Zustände der Berechtigung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPathList">
+      <MemberSignature Language="C#" Value="public void SetPathList (System.Security.Permissions.EnvironmentPermissionAccess flag, string pathList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPathList(valuetype System.Security.Permissions.EnvironmentPermissionAccess flag, string pathList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.EnvironmentPermission.SetPathList(System.Security.Permissions.EnvironmentPermissionAccess,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flag" Type="System.Security.Permissions.EnvironmentPermissionAccess" />
+        <Parameter Name="pathList" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="flag">Einer der <see cref="T:System.Security.Permissions.EnvironmentPermissionAccess" />-Werte.</param>
+        <param name="pathList">Eine Liste von Umgebungsvariablen (durch Semikolon getrennt).</param>
+        <summary>Legt den angegebenen Zugriff auf die angegebenen Umgebungsvariablen auf den vorhandenen Zustand der Berechtigung fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der vorherige Status des die aktuelle Berechtigung wird überschrieben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.EnvironmentPermission.SetPathList%2A> Methode. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.EnvironmentPermission> Klasse.  
+  
+ [!code-csharp[System.Security.Permissions.EnvironmentPermission#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.EnvironmentPermission/CS/environmentpermission.cs#7)]
+ [!code-vb[System.Security.Permissions.EnvironmentPermission#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.EnvironmentPermission/VB/environmentpermission.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="pathList" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der <paramref name="flag" />-Parameter ist kein gültiger Wert von <see cref="T:System.Security.Permissions.EnvironmentPermissionAccess" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.EnvironmentPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine XML-Codierung der Berechtigung und ihres aktuellen Zustands.</summary>
+        <returns>Eine XML-Codierung der Berechtigung, einschließlich aller Zustandsinformationen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.EnvironmentPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="other">Eine Berechtigung, die mit der aktuellen Berechtigung kombiniert werden soll. Sie muss denselben Typ aufweisen wie die aktuelle Berechtigung.</param>
+        <summary>Erstellt eine Berechtigung als Kombination der aktuellen und der angegebenen Berechtigung.</summary>
+        <returns>Eine neue Berechtigung, die die Kombination der aktuellen und der angegebenen Berechtigung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ergebnis eines Aufrufs von <xref:System.Security.Permissions.EnvironmentPermission.Union%2A> ist eine Berechtigung, die alle Zustände dargestellt darstellt, von der aktuellen Berechtigung und der angegebenen Berechtigung. Jede Anforderung, entweder Berechtigung durchläuft, übergibt die Union.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="other" /> -Parameter ist kein <see langword="null" /> und weist nicht den gleichen Typ wie die aktuelle Berechtigung.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

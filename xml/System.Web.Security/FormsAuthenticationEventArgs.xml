@@ -1,0 +1,127 @@
+<Type Name="FormsAuthenticationEventArgs" FullName="System.Web.Security.FormsAuthenticationEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class FormsAuthenticationEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FormsAuthenticationEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.FormsAuthenticationEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die **FormsAuthentication_OnAuthenticate** Ereignis. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.FormsAuthenticationEventArgs> Klasse wird verwendet, um Ereigniswerte an die **FormsAuthentication_OnAuthenticate** Ereignis und ermöglichen Ihnen die Angabe eine benutzerdefinierte Identität für die aktuelle Anforderung.  
+  
+ Die <xref:System.Web.Security.FormsAuthenticationModule> erstellt eine <xref:System.Web.Security.FormsAuthenticationEventArgs> -Objekt mit dem aktuellen <xref:System.Web.HttpContext> und übergibt es an die **FormsAuthentication_OnAuthenticate** Ereignis.  
+  
+ Können Sie die <xref:System.Web.Security.FormsAuthenticationEventArgs.User%2A> -Eigenschaft zum Festlegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> für eine benutzerdefinierte <xref:System.Security.Principal.IPrincipal> Objekt.  
+  
+ Wenn Sie einen Wert für nicht angeben der <xref:System.Web.Security.FormsAuthenticationEventArgs.User%2A> Eigenschaft während der **FormsAuthentication_OnAuthenticate** Ereignis, das durch das Formularauthentifizierungsticket im Cookie oder URL bereitgestellte Identität verwendet wird.  
+  
+ Die **FormsAuthentication_OnAuthenticate** Ereignis wird nur ausgelöst wird, wenn die Authentifizierung <xref:System.Web.Configuration.AuthenticationSection.Mode%2A> auf festgelegt ist <xref:System.Web.Configuration.AuthenticationMode.Forms> und die <xref:System.Web.Security.FormsAuthenticationModule> ein aktives HTTP-Modul für die Anwendung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der **FormsAuthentication_OnAuthenticate** Ereignis als festzulegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> auf eine <xref:System.Security.Principal.GenericPrincipal> Objekt mit einem benutzerdefinierten <xref:System.Security.Principal.IPrincipal.Identity%2A>.  
+  
+ [!code-csharp[System.Web.Security.FormsAuthenticationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.FormsAuthenticationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.FormsAuthenticationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.FormsAuthenticationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormsAuthenticationEventArgs (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.FormsAuthenticationEventArgs.#ctor(System.Web.HttpContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Kontext für das Ereignis.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Security.FormsAuthenticationEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.FormsAuthenticationModule> erstellt eine <xref:System.Web.Security.FormsAuthenticationEventArgs> Objekt mit dem angegebenen `context` als Wert für die <xref:System.Web.Security.FormsAuthenticationEventArgs.Context%2A> Eigenschaft. Es übergibt dann die <xref:System.Web.Security.FormsAuthenticationEventArgs> -Objekt an die **FormsAuthentication_OnAuthenticate** Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Web.HttpContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.FormsAuthenticationEventArgs.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Web.HttpContext" />-Objekt für die aktuelle HTTP-Anforderung ab.</summary>
+        <value>Das <see cref="T:System.Web.HttpContext" />-Objekt für die aktuelle HTTP-Anforderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpContext> ermöglicht den Zugriff auf <xref:System.Web.HttpContext.Request%2A>, <xref:System.Web.HttpContext.Response%2A>, und <xref:System.Web.HttpContext.User%2A> Objekte für die aktuelle Anforderung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.IPrincipal User { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IPrincipal User" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.FormsAuthenticationEventArgs.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Security.Principal.IPrincipal" /> Objekt, das die aktuelle Anforderung zugeordnet werden.</summary>
+        <value>Die <see cref="T:System.Security.Principal.IPrincipal" /> Objekt, das die aktuelle Anforderung zugeordnet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Web.Security.FormsAuthenticationEventArgs.User%2A> -Eigenschaft zum Festlegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> für eine benutzerdefinierte <xref:System.Security.Principal.IPrincipal> Objekt.  
+  
+ Wenn Sie einen Wert für nicht angeben der <xref:System.Web.Security.FormsAuthenticationEventArgs.User%2A> Eigenschaft während der **FormsAuthentication_OnAuthenticate** Ereignis, das durch das Formularauthentifizierungsticket im Cookie oder URL bereitgestellte Identität verwendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die **FormsAuthentication_OnAuthenticate** Ereignis als festzulegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> auf eine <xref:System.Security.Principal.GenericPrincipal> Objekt mit einem benutzerdefinierten <xref:System.Security.Principal.IPrincipal.Identity%2A>.  
+  
+ [!code-csharp[System.Web.Security.FormsAuthenticationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.FormsAuthenticationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.FormsAuthenticationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.FormsAuthenticationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

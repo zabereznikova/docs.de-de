@@ -1,0 +1,576 @@
+<Type Name="MessageEnumerator" FullName="System.Messaging.MessageEnumerator">
+  <TypeSignature Language="C#" Value="public class MessageEnumerator : MarshalByRefObject, IDisposable, System.Collections.IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageEnumerator extends System.MarshalByRefObject implements class System.Collections.IEnumerator, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Vorwärtscursor zum Aufzählen der Nachrichten in einer Nachrichtenwarteschlange bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Messaging.MessageEnumerator> für dynamische Interaktion mit Nachrichten in einer Warteschlange. Methoden zur Verfügung, über die <xref:System.Messaging.MessageQueue> Klasse kann entweder Zurückgeben einer <xref:System.Messaging.MessageEnumerator> verweist auf eine dynamische Liste von Nachrichten in der Warteschlange oder ein Array, das eine Kopie zu einem angegebenen Zeitpunkt - eine Momentaufnahme - der Warteschlange enthält, die zum Zeitpunkt der angegebenen Methode wurde aufgerufen.  
+  
+ Ein Enumerator kann im Gegensatz zu einem statischen Snapshot Sie zum Ändern der Auflistung. Mit einem <xref:System.Messaging.MessageEnumerator>, können Sie Nachrichten aus der Warteschlange entfernt und in der Warteschlange wird die Änderung sofort übernommen.  
+  
+ Ein Enumerator entfernt nicht die Nachrichten aus der Warteschlange, beim Abfragen der Warteschlangenobjekts. Gibt Informationen über die Meldung an der aktuellen Cursorposition eingefügt, aber es bleibt die Nachricht in der Warteschlange.  
+  
+ Ein <xref:System.Messaging.MessageEnumerator> ist ein Cursor, der an den Anfang einer dynamischen Liste initialisiert. Die Reihenfolge der Liste entspricht der Reihenfolge der Nachrichten in der Warteschlange gemäß der Priorität der Nachricht. Bewegen des Cursors auf die erste Nachricht in die Warteschlange durch Aufrufen von <xref:System.Messaging.MessageEnumerator.MoveNext%2A>. Nachdem der Enumerator initialisiert wurde, können Sie <xref:System.Messaging.MessageEnumerator.MoveNext%2A> um die verbleibenden Nachrichten vorwärts zu durchlaufen. Sie können angeben, ob warten, bis eine Nachricht verfügbar wird durch das Übergeben eines Timeouts in der <xref:System.Messaging.MessageEnumerator.MoveNext%2A> Methode.  
+  
+ Da der Enumerator dynamisch ist, eine Nachricht, die hinter der aktuellen Cursorposition (z. B. aufgrund mit niedriger Priorität), angefügt wird möglich vom Enumerator. Eine Meldung, die eingefügt wird, bevor der aktuellen Cursorposition kann nicht zugegriffen werden. Es ist nicht möglich, auf eine <xref:System.Messaging.MessageEnumerator>. Ein Cursor kann nur vorwärts bewegt. Die <xref:System.Messaging.MessageEnumerator.Reset%2A> Methode können Sie den Cursor wieder an den Anfang der Warteschlange zu platzieren.  
+  
+ Instanzen von <xref:System.Messaging.MessageEnumerator> für eine bestimmte Warteschlange unabhängig arbeiten. Erstellen Sie zwei <xref:System.Messaging.MessageEnumerator> Instanzen, die für dieselbe Warteschlange gelten. Die Änderungen, dass eine <xref:System.Messaging.MessageEnumerator> macht die Nachrichten in der Warteschlange werden sofort in eine zweite Enumerator Wenn der zweite Enumerator vor dem ersten positioniert ist. Jedoch wenn zwei Enumeratoren die gleiche Position haben und einer von ihnen die Meldung an dieser Position entfernt, eine Ausnahme wird ausgelöst, wenn versucht wird, dass der anderen Enumerator Abrufen des Werts der <xref:System.Messaging.MessageEnumerator.Current%2A> Eigenschaft für die Nachricht sofort gelöscht.  
+  
+> [!NOTE]
+>  Bei der Erstellung einer Instanz von <xref:System.Messaging.MessageQueue> mit <xref:System.Messaging.MessageQueue.DenySharedReceive%2A?displayProperty=nameWithType> festgelegt `true`, keine andere Anwendung kann die Nachrichten in einen Enumerator ändern, während Sie die Verbindung mit der Warteschlange haben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ruft eine dynamische Liste von Nachrichten in einer Warteschlange ab und zählt alle Meldungen mit der <xref:System.Messaging.Message.Priority%2A> -Eigenschaftensatz auf <xref:System.Messaging.MessagePriority?displayProperty=nameWithType>.  
+  
+ [!code-cpp[MessageQueue.GetMessageEnumerator#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueue.GetMessageEnumerator/CPP/mqgetmessageenumerator.cpp#1)]
+ [!code-csharp[MessageQueue.GetMessageEnumerator#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueue.GetMessageEnumerator/CS/mqgetmessageenumerator.cs#1)]
+ [!code-vb[MessageQueue.GetMessageEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageQueue.GetMessageEnumerator/VB/mqgetmessageenumerator.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Enumerator zugeordneten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Betriebssystem behält ein geöffnetes Handle an die Warteschlange, während der Lebensdauer des Cursors. Wenn Sie die Arbeit mit dem Enumerator abgeschlossen haben, rufen <xref:System.Messaging.MessageEnumerator.Close%2A> , die dem Handle zugeordneten Ressourcen freizugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Messaging.Message Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.Message Current" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Message</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle <see cref="T:System.Messaging.Message" /> ab, auf das dieser Enumerator zeigt.</summary>
+        <value>Die aktuelle Nachricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Enumerator erstellt wird, zeigt es an den Anfang der Warteschlange, an einer Position vor der ersten Meldung. In diesem Fall <xref:System.Messaging.MessageEnumerator.Current%2A> ist ungültig und löst eine Ausnahme aus, wenn darauf zugegriffen wird. Rufen Sie <xref:System.Messaging.MessageEnumerator.MoveNext%2A> um den Cursor an die erste Nachricht in die Warteschlange einzufügen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Sie wird aufgerufen, <see cref="P:System.Messaging.MessageEnumerator.Current" /> vor dem ersten Aufruf von <see cref="M:System.Messaging.MessageEnumerator.MoveNext" />. Der Cursor befindet sich vor dem ersten Element der Nachricht-Enumeration.  
+  
+ - oder -   
+  
+ Sie wird aufgerufen, <see cref="P:System.Messaging.MessageEnumerator.Current" /> nach einem Aufruf von <see cref="M:System.Messaging.MessageEnumerator.MoveNext" /> wurden zurückgegeben <see langword="false" /> (, der angibt, des Cursors befindet hinter dem letzten Element der Enumeration Nachricht.)</exception>
+        <exception cref="T:System.Messaging.MessageQueueException">Die Nachricht, die der Enumerator derzeit nicht mehr zeigt vorhanden ist. Sie wurde möglicherweise gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CursorHandle">
+      <MemberSignature Language="C#" Value="public IntPtr CursorHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int CursorHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageEnumerator.CursorHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das systemeigene Message Queuing Cursorhandle verwendet, um das Durchsuchen von Nachrichten in der Warteschlange ab.</summary>
+        <value>Das systemeigene Cursorhandle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält das systemeigene Handle der Enumeration. Wenn Sie die Arbeit mit dem Enumerator abgeschlossen haben, rufen <xref:System.Messaging.MessageEnumerator.Close%2A> dieser Ressource freigegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Messaging.MessageQueueException">Das Handle ist nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Messaging.MessageEnumerator" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Messaging.MessageEnumerator.Dispose%2A> können Ressourcen von der <xref:System.Messaging.MessageEnumerator> neu für andere Zwecke reserviert werden. Weitere Informationen zu <xref:System.Messaging.MessageEnumerator.Dispose%2A>, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Messaging.MessageEnumerator" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich <xref:System.Messaging.MessageEnumerator.Dispose%2A> Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.Messaging.MessageEnumerator> verweist. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Beim Überschreiben von <see langword="Dispose(Boolean)" /> müssen Sie darauf achten, nicht auf Objekte zu verweisen, die durch einen früheren Aufruf von <see langword="Dispose" /> freigegeben wurden. Weitere Informationen zum Implementieren <see langword="Dispose" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see langword="Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~MessageEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf die nächste Nachricht in der Warteschlange an, wenn eine verfügbar ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Enumerator erfolgreich auf die nächste Nachricht gesetzt wurde. <see langword="false" /> , wenn der Enumerator das Ende der Warteschlange erreicht hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung wird sofort zurückgegeben, wenn keine Meldung in der Warteschlange vorhanden ist. Es wird eine andere Überladung, die ein angegebenes wartet <xref:System.TimeSpan> für eine Nachricht eintrifft.  
+  
+ Wenn eine Nachricht nicht verfügbar ist, weil die Warteschlange leer ist oder Sie hinter dem letzten Element in der Auflistung verschoben haben <xref:System.Messaging.MessageEnumerator.MoveNext%2A> gibt `false` an die aufrufende Methode.  
+  
+ Bei der Erstellung einer konzeptionell Enumerator wird vor die erste Nachricht der Warteschlange und der erste Aufruf von <xref:System.Messaging.MessageEnumerator.MoveNext%2A> zeigt die erste Nachricht der Warteschlange an.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Messaging.MessageQueueException">Es wurde eine Message Queuing-spezifische Ausnahme ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool MoveNext(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.MoveNext(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Die <see cref="T:System.TimeSpan" /> auf eine Nachricht zur Verfügung, wenn der Enumerator am Ende der Warteschlange gewartet werden soll.</param>
+        <summary>Setzt den Enumerator auf die nächste Nachricht in der Warteschlange an. Wenn der Enumerator am Ende der Warteschlange <see cref="M:System.Messaging.MessageEnumerator.MoveNext" /> wartet, bis eine Nachricht verfügbar ist oder das angegebene Timeout abläuft.</summary>
+        <returns>
+          <see langword="true" />Wenn der Enumerator erfolgreich auf die nächste Nachricht; gesetzt <see langword="false" /> Wenn der Enumerator das Ende der Warteschlange erreicht hat und eine Nachricht nicht in der angegebenen Zeit verfügbar ist die <paramref name="timeout" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung wartet, wenn keine Meldung in der Warteschlange vorhanden ist oder wenn der Cursor am Ende der Warteschlange erreicht hat. Wenn eine Nachricht nicht verfügbar ist, weil die Warteschlange leer ist oder Sie hinter dem letzten Element in der Auflistung verschoben haben <xref:System.Messaging.MessageEnumerator.MoveNext%2A> wartet das festgelegte Timeout.  
+  
+ Wenn der Cursor bereits am Ende der Warteschlange <xref:System.Messaging.MessageEnumerator.MoveNext%2A> gibt nur `true` Wenn innerhalb des angegebenen Zeitintervalls die neue Nachricht eingeht, derzeit hat eine niedrigere Priorität als alle Nachrichten in der Warteschlange und wird am Ende der Warteschlange platziert. Eine Überladung ohne Parameter wird sofort zurückgegeben, wenn keine weiteren Nachrichten in der Warteschlange befinden.  
+  
+ Bei der Erstellung einer konzeptionell Enumerator wird vor die erste Nachricht der Enumeration und der erste Aufruf von <xref:System.Messaging.MessageEnumerator.MoveNext%2A> Schaltet die erste Nachricht der Enumeration in der Ansicht.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Für die Timeout-Parameter angegebene Wert ist ungültig. Es kann keine negative Zahl dargestellt werden.</exception>
+        <exception cref="T:System.Messaging.MessageQueueException">Es wurde eine Message Queuing-spezifische Ausnahme ausgelöst.  
+  
+ - oder -   
+  
+ Das Timeout ist abgelaufen.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="RemoveCurrent">
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Die aktuelle Nachricht aus der Warteschlange entfernt, und die Nachricht an die aufrufende Anwendung zurückgegeben. Entfernen der Nachricht aus der Warteschlange gelöscht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für diese Überladungen beschriebene Verhalten gilt nur, wenn die <xref:System.Messaging.MessageEnumerator> Instanz abgerufen, indem die <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A>. Verwenden Sie keine <xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A> zum Abrufen einer Instanz von <xref:System.Messaging.MessageEnumerator> wie diese Methode wurde als veraltet markiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="RemoveCurrent">
+      <MemberSignature Language="C#" Value="public System.Messaging.Message RemoveCurrent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Messaging.Message RemoveCurrent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.RemoveCurrent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Message</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt die aktuelle Nachricht aus einer Warteschlange transaktional oder nicht transaktional, und die Nachricht an die aufrufende Anwendung zurückgegeben. Es gibt kein Timeout für eine Nachricht in der Warteschlange eintrifft angegeben.</summary>
+        <returns>Ein <see cref="T:System.Messaging.Message" /> , die auf die erste Nachricht in der Warteschlange verfügbar verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>entfernt, und gibt die Meldung an der aktuellen Cursorposition.  
+  
+ Bei Verwendung von Warteschlange Journaling Entfernen der Nachricht wird eine Kopie, die in der Journalwarteschlange gespeichert sind, ebenso wie die <xref:System.Messaging.MessageQueue> Klasse <xref:System.Messaging.MessageQueue.Receive%2A> Methode hat.  
+  
+ Wenn Sie die aktuelle Nachricht entfernen, wird der Cursor auf die nächste Nachricht verschoben. Sie müssen keine Aufrufen <xref:System.Messaging.MessageEnumerator.MoveNext%2A> nach dem Aufruf <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>.  
+  
+ Wenn Sie diese Überladung für eine transaktionale Warteschlange aufrufen, erstellt das Message Queuing eine einzelne, interne Transaktion aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCurrent">
+      <MemberSignature Language="C#" Value="public System.Messaging.Message RemoveCurrent (System.Messaging.MessageQueueTransaction transaction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Messaging.Message RemoveCurrent(class System.Messaging.MessageQueueTransaction transaction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.RemoveCurrent(System.Messaging.MessageQueueTransaction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.Messaging.MessageQueueTransaction" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">Die <see cref="T:System.Messaging.MessageQueueTransaction" /> -Objekt, das die Transaktion gibt an, in dem die Nachricht wird entfernt.</param>
+        <summary>Die aktuelle Nachricht von einer Transaktionswarteschlange entfernt, und die Nachricht an die aufrufende Anwendung zurückgegeben. Es gibt kein Timeout für eine Nachricht in der Warteschlange eintrifft angegeben.</summary>
+        <returns>Ein <see cref="T:System.Messaging.Message" /> , die auf die erste Nachricht in der Warteschlange verfügbar verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>entfernt, und gibt die Meldung an der aktuellen Cursorposition, mit der internen bereits verwendeten Transaktionskontext durch definiert die `transaction` Parameter.  
+  
+ Bei Verwendung von Warteschlange Journaling Entfernen der Nachricht wird eine Kopie, die in der Journalwarteschlange gespeichert sind, ebenso wie die <xref:System.Messaging.MessageQueue> Klasse <xref:System.Messaging.MessageQueue.Receive%2A> Methode hat.  
+  
+ Bei der Arbeit mit Transaktionswarteschlangen ein Rollback einer Transaktion bewirkt, dass alle Nachrichten, die durch einen Aufruf von entfernt <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A> an die Warteschlange zurückgegeben werden sollen. Die Entfernung ist nicht nicht rückgängig gemacht werden, bevor die Transaktion ein Commit ausgeführt wird.  
+  
+ Wenn Sie die aktuelle Nachricht entfernen, wird der Cursor auf die nächste Nachricht verschoben. Sie müssen keine Aufrufen <xref:System.Messaging.MessageEnumerator.MoveNext%2A> nach dem Aufruf <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="transaction" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCurrent">
+      <MemberSignature Language="C#" Value="public System.Messaging.Message RemoveCurrent (System.Messaging.MessageQueueTransactionType transactionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Messaging.Message RemoveCurrent(valuetype System.Messaging.MessageQueueTransactionType transactionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.RemoveCurrent(System.Messaging.MessageQueueTransactionType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transactionType" Type="System.Messaging.MessageQueueTransactionType" />
+      </Parameters>
+      <Docs>
+        <param name="transactionType">Eines der <see cref="T:System.Messaging.MessageQueueTransactionType" /> Werte, der beschreibt des Typs des bereits verwendeten Transaktionskontext der Nachricht zugeordnet werden soll.</param>
+        <summary>Die aktuelle Nachricht aus einer Warteschlange entfernt, und die Nachricht an die aufrufende Anwendung zurückgegeben. Es gibt kein Timeout für eine Nachricht in der Warteschlange eintrifft angegeben.</summary>
+        <returns>Ein <see cref="T:System.Messaging.Message" /> , die auf die erste Nachricht in der Warteschlange verfügbar verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>entfernt, und gibt die Meldung an der aktuellen Cursorposition, verwenden einen bereits verwendeten Transaktionskontext durch definiert die `transactionType` Parameter.  
+  
+ Geben Sie `Automatic` für die `transactionType` Parameter an, wenn es bereits ein externer Transaktionskontext ist angefügt wird, an den Thread, die Sie zum Empfangen der Nachricht verwenden möchten. Geben Sie `Single` , wenn die Nachricht als eine interne Transaktion empfangen werden sollen. Sie können angeben, `None` Wenn eine Nachricht von einer Transaktionswarteschlange außerhalb eines Transaktionskontexts zu empfangen werden sollen.  
+  
+ Bei Verwendung von Warteschlange Journaling Entfernen der Nachricht wird eine Kopie, die in der Journalwarteschlange gespeichert sind, ebenso wie die <xref:System.Messaging.MessageQueue> Klasse <xref:System.Messaging.MessageQueue.Receive%2A> Methode hat.  
+  
+ Bei der Arbeit mit Transaktionswarteschlangen ein Rollback einer Transaktion bewirkt, dass alle Nachrichten, die durch einen Aufruf von entfernt <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A> an die Warteschlange zurückgegeben werden sollen. Die Entfernung ist nicht nicht rückgängig gemacht werden, bevor die Transaktion ein Commit ausgeführt wird.  
+  
+ Wenn Sie die aktuelle Nachricht entfernen, wird der Cursor auf die nächste Nachricht verschoben. Sie müssen keine Aufrufen <xref:System.Messaging.MessageEnumerator.MoveNext%2A> nach dem Aufruf <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Die <paramref name="transactionType" /> Parameter ist nicht die <see cref="T:System.Messaging.MessageQueueTransactionType" /> Elemente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCurrent">
+      <MemberSignature Language="C#" Value="public System.Messaging.Message RemoveCurrent (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Messaging.Message RemoveCurrent(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.RemoveCurrent(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Das Intervall der Zeit zu warten, bis eine Nachricht in der Warteschlange eintrifft.</param>
+        <summary>Die aktuelle Nachricht aus der Warteschlange entfernt, und die Nachricht an die aufrufende Anwendung zurückgegeben. Ist eine Nachricht zu entfernen, gibt Sie in die Methode sofort zurück. Andernfalls wartet die Methode das angegebene Timeout für eine neue Nachricht eintrifft.</summary>
+        <returns>Ein <see cref="T:System.Messaging.Message" /> , die auf die erste Nachricht in der Warteschlange verfügbar verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>entfernt, und gibt die Meldung an der aktuellen Cursorposition. Wenn der Cursor am Ende der Warteschlange befindet, wird diese Überladung der Methode wartet, bis eine Nachricht verfügbar ist oder das Intervall angegeben wird, indem die `timeout` Parameter ist abgelaufen.  
+  
+ Bei Verwendung von Warteschlange Journaling Entfernen der Nachricht wird eine Kopie, die in der Journalwarteschlange gespeichert sind, ebenso wie die <xref:System.Messaging.MessageQueue> Klasse <xref:System.Messaging.MessageQueue.Receive%2A> Methode hat.  
+  
+ Wenn Sie die aktuelle Nachricht entfernen, wird der Cursor auf die nächste Nachricht verschoben. Sie müssen keine Aufrufen <xref:System.Messaging.MessageEnumerator.MoveNext%2A> nach dem Aufruf <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>.  
+  
+ Wenn Sie diese Überladung für eine transaktionale Warteschlange aufrufen, erstellt das Message Queuing eine einzelne, interne Transaktion aus.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert für die <paramref name="timeout" /> Parameter ist ungültig.</exception>
+        <exception cref="T:System.Messaging.MessageQueueException">Das Timeout ist abgelaufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCurrent">
+      <MemberSignature Language="C#" Value="public System.Messaging.Message RemoveCurrent (TimeSpan timeout, System.Messaging.MessageQueueTransaction transaction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Messaging.Message RemoveCurrent(valuetype System.TimeSpan timeout, class System.Messaging.MessageQueueTransaction transaction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.RemoveCurrent(System.TimeSpan,System.Messaging.MessageQueueTransaction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="transaction" Type="System.Messaging.MessageQueueTransaction" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Das Zeitintervall warten, bis die Nachricht entfernt werden soll.</param>
+        <param name="transaction">Die <see cref="T:System.Messaging.MessageQueueTransaction" /> Objekt, das den Transaktionskontext für die Nachricht angibt.</param>
+        <summary>Die aktuelle Nachricht von einer Transaktionswarteschlange entfernt, und die Nachricht an die aufrufende Anwendung zurückgegeben. Ist eine Nachricht zu entfernen, gibt Sie in die Methode sofort zurück. Andernfalls wartet die Methode das angegebene Timeout für eine neue Nachricht eintrifft.</summary>
+        <returns>Ein <see cref="T:System.Messaging.Message" /> , die auf die erste Nachricht in der Warteschlange verfügbar verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>entfernt, und gibt die Meldung an der aktuellen Cursorposition. Wenn der Cursor am Ende der Warteschlange befindet, wird diese Überladung der Methode wartet, bis eine Nachricht verfügbar ist oder das Intervall angegeben wird, indem die `timeout` Parameter ist abgelaufen.  
+  
+ Bei der Arbeit mit Transaktionswarteschlangen ein Rollback einer Transaktion bewirkt, dass alle Nachrichten, die durch einen Aufruf von entfernt <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A> an die Warteschlange zurückgegeben werden sollen. Die Entfernung ist nicht nicht rückgängig gemacht werden, bevor die Transaktion ein Commit ausgeführt wird.  
+  
+ Bei Verwendung von Warteschlange Journaling Entfernen der Nachricht wird eine Kopie, die in der Journalwarteschlange gespeichert sind, ebenso wie die <xref:System.Messaging.MessageQueue> Klasse <xref:System.Messaging.MessageQueue.Receive%2A> Methode hat.  
+  
+ Wenn Sie die aktuelle Nachricht entfernen, wird der Cursor auf die nächste Nachricht verschoben. Sie müssen keine Aufrufen <xref:System.Messaging.MessageEnumerator.MoveNext%2A> nach dem Aufruf <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert für die <paramref name="timeout" /> Parameter ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="transaction" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Messaging.MessageQueueException">Das Timeout ist abgelaufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCurrent">
+      <MemberSignature Language="C#" Value="public System.Messaging.Message RemoveCurrent (TimeSpan timeout, System.Messaging.MessageQueueTransactionType transactionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Messaging.Message RemoveCurrent(valuetype System.TimeSpan timeout, valuetype System.Messaging.MessageQueueTransactionType transactionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.RemoveCurrent(System.TimeSpan,System.Messaging.MessageQueueTransactionType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="transactionType" Type="System.Messaging.MessageQueueTransactionType" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Das Zeitintervall warten, bis die Nachricht entfernt werden soll.</param>
+        <param name="transactionType">Eines der <see cref="T:System.Messaging.MessageQueueTransactionType" /> Werte, der beschreibt des Typs des bereits verwendeten Transaktionskontext der Nachricht zugeordnet werden soll.</param>
+        <summary>Die aktuelle Nachricht aus einer Warteschlange entfernt, und die Nachricht an die aufrufende Anwendung zurückgegeben. Ist eine Nachricht zu entfernen, gibt Sie in die Methode sofort zurück. Andernfalls wartet die Methode das angegebene Timeout für eine neue Nachricht eintrifft.</summary>
+        <returns>Ein <see cref="T:System.Messaging.Message" /> , die auf die erste Nachricht in der Warteschlange verfügbar verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>entfernt, und gibt die Meldung an der aktuellen Cursorposition, verwenden einen bereits verwendeten Transaktionskontext durch definiert die `transactionType` Parameter. Wenn der Cursor am Ende der Warteschlange befindet, wird diese Überladung der Methode wartet, bis eine Nachricht verfügbar ist oder das Intervall angegeben wird, indem die `timeout` Parameter ist abgelaufen.  
+  
+ Geben Sie `Automatic` für die `transactionType` Parameter an, wenn es bereits ein externer Transaktionskontext ist angefügt wird, an den Thread, die Sie zum Empfangen der Nachricht verwenden möchten. Geben Sie `Single` , wenn die Nachricht als eine interne Transaktion empfangen werden sollen. Sie können angeben, `None` Wenn eine Nachricht von einer Transaktionswarteschlange außerhalb eines Transaktionskontexts zu empfangen werden sollen.  
+  
+ Bei Verwendung von Warteschlange Journaling Entfernen der Nachricht wird eine Kopie, die in der Journalwarteschlange gespeichert sind, ebenso wie die <xref:System.Messaging.MessageQueue> Klasse <xref:System.Messaging.MessageQueue.Receive%2A> Methode hat.  
+  
+ Bei der Arbeit mit Transaktionswarteschlangen ein Rollback einer Transaktion bewirkt, dass alle Nachrichten, die durch einen Aufruf von entfernt <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A> an die Warteschlange zurückgegeben werden sollen. Die Entfernung ist nicht nicht rückgängig gemacht werden, bevor die Transaktion ein Commit ausgeführt wird.  
+  
+ Wenn Sie die aktuelle Nachricht entfernen, wird der Cursor auf die nächste Nachricht verschoben. Sie müssen keine Aufrufen <xref:System.Messaging.MessageEnumerator.MoveNext%2A> nach dem Aufruf <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert für die <paramref name="timeout" /> Parameter ist ungültig.</exception>
+        <exception cref="T:System.Messaging.MessageQueueException">Das Timeout ist abgelaufen.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Die <paramref name="transactionType" /> Parameter ist nicht die <see cref="T:System.Messaging.MessageQueueTransactionType" /> Elemente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den aktuellen Enumerator an den Anfang der Warteschlange zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Enumerator kann nur vorwärts verschoben werden. Verwenden Sie diese Methode am Anfang der Warteschlangenobjekts beginnen.  
+  
+ Nach dem Aufruf <xref:System.Messaging.MessageEnumerator.Reset%2A>, der Cursor auf die erste Nachricht verweist. Sie müssen nicht aufrufen <xref:System.Messaging.MessageEnumerator.MoveNext%2A> nach dem Aufruf <xref:System.Messaging.MessageEnumerator.Reset%2A> auf den Cursor in die erste Nachricht in der Warteschlange zu verschieben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerator.Current">
+      <MemberSignature Language="C#" Value="object System.Collections.IEnumerator.Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IEnumerator.Current" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageEnumerator.System#Collections#IEnumerator#Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Messaging.Message" /> , die auf die Nachricht an der aktuellen Cursorposition verweist.</summary>
+        <value>Ein <see cref="T:System.Messaging.Message" /> , die auf die Nachricht an der aktuellen Cursorposition verweist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

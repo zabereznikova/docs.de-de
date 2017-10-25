@@ -1,0 +1,6 @@
+<Namespace Name="System.Diagnostics.CodeAnalysis">
+  <Docs>
+    <summary>Die <see cref="N:System.Diagnostics.CodeAnalysis" /> -Namespace enthält Klassen für die Interaktion mit Codeanalysetools. Diese Tools werden verwendet, um Code für die Übereinstimmung mit Codierungskonventionen wie Benennung oder Regeln zu analysieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

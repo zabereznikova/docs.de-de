@@ -1,0 +1,423 @@
+<Type Name="HttpCookieCollection" FullName="System.Web.HttpCookieCollection">
+  <TypeSignature Language="C#" Value="public sealed class HttpCookieCollection : System.Collections.Specialized.NameObjectCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpCookieCollection extends System.Collections.Specialized.NameObjectCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpCookieCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Specialized.NameObjectCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine typsichere Möglichkeit zum Verarbeiten von HTTP-Cookies.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mithilfe von Cookies zu lesen der <xref:System.Web.HttpRequest.Cookies%2A> Eigenschaft von der <xref:System.Web.HttpRequest> -Objekt und das Schreiben von Cookies mit der <xref:System.Web.HttpResponse.Cookies%2A> Eigenschaft der <xref:System.Web.HttpResponse> Objekt. Beide Eigenschaften zurückgeben <xref:System.Web.HttpCookieCollection> Objekte. Wenn eine der beiden Cookies mit dem Namen `userName` und `lastVisit` sind nicht in der HTTP-Anforderung, und klicken Sie dann in der sie in der HTTP-Antwort erstellt werden. Wenn die zwei Cookies vorhanden sind, werden die Eigenschaften der Cookies angezeigt.  
+  
+ [!code-aspx-csharp[System.Web.HttpCookieCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpCookieCollection/cs/HttpCookieCollection.cs.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpCookieCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpCookieCollection/vb/HttpCookieCollection.vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCookieCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCookieCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.HttpCookieCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET umfasst zwei systeminterne Cookie-Auflistungen. Die Auflistung zugegriffen werden kann, über <xref:System.Web.HttpRequest.Cookies%2A> enthält Cookies übertragen werden vom Client an den Server in der `Cookie` Header. Die Auflistung zugegriffen werden kann, über <xref:System.Web.HttpResponse.Cookies%2A> enthält Cookies auf dem Server generiert und übermittelt an den Client in der `Set-Cookie` Header.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues Cookie-Auflistungsobjekt und füllt sie mit der vom Client empfangenen Cookies.  
+  
+ [!code-csharp[Classic HttpCookieCollection.HttpCookieCollection Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookieCollection.HttpCookieCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookieCollection.HttpCookieCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookieCollection.HttpCookieCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.HttpCookie cookie);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.HttpCookie cookie) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCookieCollection.Add(System.Web.HttpCookie)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cookie" Type="System.Web.HttpCookie" />
+      </Parameters>
+      <Docs>
+        <param name="cookie">Der der Auflistung hinzuzufügende <see cref="T:System.Web.HttpCookie" />.</param>
+        <summary>Die cookieauflistung hinzugefügt der angegebene Cookie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine beliebige Anzahl von Cookie-Sammlungen kann befinden sich in eine Anwendung, sondern nur die Sammlung der verweist die systeminterne Funktion <xref:System.Web.HttpResponse.Cookies%2A> Objekt wird an den Client gesendet.  
+  
+ Die <xref:System.Web.HttpCookieCollection.Add%2A> Methode können doppelte Cookies in der cookieauflistung. Verwenden der <xref:System.Web.HttpCookieCollection.Set%2A> Methode, um die Eindeutigkeit des Cookies in der cookieauflistung sicherzustellen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine neue cookieauflistung und ein neues Cookie mit dem Namen "LastVisit", wird der Wert des Cookies auf das aktuelle Datum und die Uhrzeit und fügt das Cookie an die neue Sammlung.  
+  
+ [!code-csharp[Classic HttpCookieCollection.Add Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookieCollection.Add Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookieCollection.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookieCollection.Add Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllKeys">
+      <MemberSignature Language="C#" Value="public string[] AllKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AllKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCookieCollection.AllKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von Zeichenfolgen, die alle Schlüssel in der cookieauflistung (Cookienamen) enthält.</summary>
+        <value>Ein Array von Cookienamen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein Zeichenfolgenarray mit den Namen des Cookies in einen Client cookieauflistung.  
+  
+ [!code-csharp[Classic HttpCookieCollection.AllKeys Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookieCollection.AllKeys Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookieCollection.AllKeys Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookieCollection.AllKeys Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCookieCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle Cookies von der cookieauflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel löscht alle Cookies aus einer cookieauflistung.  
+  
+ [!code-csharp[Classic HttpCookieCollection.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookieCollection.Clear Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookieCollection.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookieCollection.Clear Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCookieCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">Der Ziel-<see cref="T:System.Array" />.</param>
+        <param name="index">Der Index des Zielarrays, in dem kopiert wird.</param>
+        <summary>Kopiert die Elemente der cookieauflistung, um eine <see cref="T:System.Array" /> beginnend am angegebenen Index des Arrays.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel kopiert die gesamte Auflistung in ein neues Arrayobjekt.  
+  
+ [!code-csharp[Classic HttpCookieCollection.CopyTo Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookieCollection.CopyTo Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookieCollection.CopyTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookieCollection.CopyTo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.HttpCookie Get (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.HttpCookie Get(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCookieCollection.Get(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookie</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Cookies, das aus der Auflistung zurückgegeben werden soll.</param>
+        <summary>Gibt die <see cref="T:System.Web.HttpCookie" /> Element mit dem angegebenen Index aus der Auflistung.</summary>
+        <returns>Die von <see cref="T:System.Web.HttpCookie" /> angegebene <paramref name="index" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel gibt jedes Cookie aus der cookieauflistung, überprüft, ob er dem Namen "LastVisit", und aktualisiert, wenn "LastVisit" gefunden wird, dessen Wert auf das aktuelle Datum und die Uhrzeit.  
+  
+ [!code-csharp[Classic HttpCookieCollection.Get1 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookieCollection.Get1 Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookieCollection.Get1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookieCollection.Get1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.HttpCookie Get (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.HttpCookie Get(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCookieCollection.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookie</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Cookies, das aus der Auflistung abgerufen werden soll.</param>
+        <summary>Gibt das Cookie mit dem angegebenen Namen aus der Auflistung zurück.</summary>
+        <returns>Die von <see cref="T:System.Web.HttpCookie" /> angegebene <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das benannte Cookie nicht vorhanden ist, erstellt diese Methode ein neues Cookie mit diesem Namen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die cookieauflistung in eine neue cookieauflistung vom Client gesendeten erfasst, ruft das Cookie mit dem Namen "LastVisit" aus der neuen Sammlung und der Wert des Cookies auf das aktuelle Datum und die Uhrzeit aktualisiert.  
+  
+ [!code-csharp[Classic HttpCookieCollection.Get Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookieCollection.Get Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookieCollection.Get Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookieCollection.Get Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="public string GetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCookieCollection.GetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Schlüssels, der aus der Auflistung abgerufen werden soll.</param>
+        <summary>Gibt den Schlüssel (Name) des Cookies am angegebenen numerischen Index zurück.</summary>
+        <returns>Der Name des Cookies gemäß <paramref name="index" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel gibt jedes Cookie aus der cookieauflistung, überprüft, ob er dem Namen "LastVisit", und aktualisiert, wenn "LastVisit" gefunden wird, dessen Wert auf das aktuelle Datum und die Uhrzeit.  
+  
+ [!code-csharp[Classic HttpCookieCollection.GetKey Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookieCollection.GetKey Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookieCollection.GetKey Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookieCollection.GetKey Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.HttpCookie this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpCookie Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCookieCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookie</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Cookies, das aus der Auflistung abgerufen werden soll.</param>
+        <summary>Ruft das Cookie mit dem angegebenen numerischen Index aus der Auflistung ab.</summary>
+        <value>Die von <see cref="T:System.Web.HttpCookie" /> angegebene <paramref name="index" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel speichert den Namen des ersten Cookie als eine Zeichenfolgenvariable (Index = 0) in einem cookieauflistung.  
+  
+ [!code-csharp[Classic HttpCookieCollection.this1 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookieCollection.this1 Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookieCollection.this1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookieCollection.this1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.HttpCookie this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpCookie Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCookieCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookie</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Cookies, das abgerufen werden.</param>
+        <summary>Ruft das Cookie mit dem angegebenen Namen aus der Auflistung ab.</summary>
+        <value>Die <see cref="T:System.Web.HttpCookie" /> gemäß<paramref name="name." /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird das Cookie mit dem Namen "LastVisit" und dessen Wert extrahiert.  
+  
+ [!code-csharp[Classic HttpCookieCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookieCollection.this Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookieCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookieCollection.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCookieCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Cookies, das aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt das Cookie mit dem angegebenen Namen aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Cookie mit dem angegebenen `name` existiert nicht in der Auflistung wird keine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird einen Cookie aus der Auflistung entfernt.  
+  
+ [!code-csharp[Classic HttpCookieCollection.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookieCollection.Remove Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookieCollection.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookieCollection.Remove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (System.Web.HttpCookie cookie);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(class System.Web.HttpCookie cookie) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCookieCollection.Set(System.Web.HttpCookie)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cookie" Type="System.Web.HttpCookie" />
+      </Parameters>
+      <Docs>
+        <param name="cookie">Die <see cref="T:System.Web.HttpCookie" /> zu aktualisierenden Objekts.</param>
+        <summary>Aktualisiert den Wert, der ein vorhandenes Cookie in einem cookieauflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpCookieCollection.Set%2A> Methode überprüft zuerst, um festzustellen, ob ein Cookie ist bereits in der Auflistung vorhanden ist, und wenn dies der Fall ist es aktualisiert. Die <xref:System.Web.HttpCookieCollection.Set%2A> Methode lässt keine doppelten Cookies in der cookieauflistung. Verwenden Sie zum Hinzufügen von doppelten Cookies in der cookieauflistung der <xref:System.Web.HttpCookieCollection.Add%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel aktualisiert den Wert eines vorhandenen Cookies.  
+  
+ [!code-csharp[Classic HttpCookieCollection.Set Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookieCollection.Set Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookieCollection.Set Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookieCollection.Set Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

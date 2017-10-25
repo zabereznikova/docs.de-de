@@ -1,0 +1,6 @@
+<Namespace Name="System.IO.Pipes">
+  <Docs>
+    <summary>Die <see cref="N:System.IO.Pipes" /> -Namespace enthält Typen, die ein Mittel zur prozessübergreifenden Kommunikation über anonyme und/oder benannte Pipes bereitstellen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

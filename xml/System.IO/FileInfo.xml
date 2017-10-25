@@ -1,0 +1,1759 @@
+<Type Name="FileInfo" FullName="System.IO.FileInfo">
+  <TypeSignature Language="C#" Value="public sealed class FileInfo : System.IO.FileSystemInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit FileInfo extends System.IO.FileSystemInfo" />
+  <TypeSignature Language="DocId" Value="T:System.IO.FileInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.FileSystemInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Eigenschaften und Instanzmethoden zum Erstellen, Kopieren, Löschen, Verschieben und Öffnen von Dateien bereit und unterstützt das Erstellen von <see cref="T:System.IO.FileStream" />-Objekten. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die .NET Framework-Quellcodes für diesen Typ finden Sie unter der [Verweisquelle](http://referencesource.microsoft.com/#mscorlib/system/io/fileinfo.cs#4ee673c1a4ecad41). Sie können den Quellcode online Durchsuchen, Referenz für die Offlineanzeige herunterladen und schrittweise durchlaufen (inklusive Patches und Updates) während des Debuggens; finden Sie unter [Anweisungen](http://referencesource.microsoft.com/).  
+  
+ Verwenden der <xref:System.IO.FileInfo> Klasse für normale Vorgänge wie kopieren, verschieben, umbenennen, erstellen, öffnen, löschen und Anfügen von Dateien.  
+  
+ Wenn Sie mehrere Vorgänge in derselben Datei ausführen, können eine effizientere Verwendung werden <xref:System.IO.FileInfo> Instanzmethoden anstelle der entsprechenden statischen Methoden der <xref:System.IO.File> Klasse, da eine sicherheitsprüfung nicht immer notwendig sein werden.  
+  
+ Anzahl der <xref:System.IO.FileInfo> Methoden andere e/a-Typen zurückgeben, beim Erstellen oder Öffnen von Dateien. Sie können diese anderen Typen verwenden, um Dateien weiter bearbeiten. Weitere Informationen finden Sie unter bestimmten <xref:System.IO.FileInfo> Elemente wie z. B. <xref:System.IO.FileInfo.Open%2A>, <xref:System.IO.FileInfo.OpenRead%2A>, <xref:System.IO.FileInfo.OpenText%2A>, <xref:System.IO.FileInfo.CreateText%2A>, oder <xref:System.IO.FileInfo.Create%2A>.  
+  
+ Standardmäßig erhält die vollständigen Lese-/Schreibzugriff an neue Dateien für alle Benutzer.  
+  
+ Die folgende Tabelle beschreibt die Enumerationen, mit denen das Verhalten der verschiedenen anpassen <xref:System.IO.FileInfo> Methoden.  
+  
+|Enumeration|Beschreibung|  
+|-----------------|-----------------|  
+|<xref:System.IO.FileAccess>|Gibt an, Lese- und Schreibzugriff auf eine Datei.|  
+|<xref:System.IO.FileShare>|Gibt die Ebene des gewährten Zugriffs für eine Datei, die bereits verwendet wird.|  
+|<xref:System.IO.FileMode>|Gibt an, ob der Inhalt einer vorhandenen Datei beibehalten oder überschrieben werden, und gibt an, ob die Anforderungen zum Erstellen einer vorhandenen Datei einen Ausnahmefehler verursachen.|  
+  
+> [!NOTE]
+>  Bei Membern, die einen Pfad als Eingabezeichenfolge akzeptieren, dass der Pfad muss wohlgeformt sein oder eine Ausnahme ausgelöst. Wenn ein Pfad vollqualifizierte ist aber mit einem Leerzeichen beginnt, wird der Pfad z. B. nicht in Methoden der Klasse gekürzt. Aus diesem Grund der Pfad ist falsch formatiert, und eine Ausnahme ausgelöst. Auf ähnliche Weise kann keinen Pfad oder eine Kombination von Pfaden zweimal vollqualifiziert sein. So löst z. B. "c:\temp c:\windows" auch eine Ausnahme in den meisten Fällen. Stellen Sie sicher, dass die Pfade wohlgeformt sind, wenn Sie Methoden verwenden, die eine Pfadzeichenfolge akzeptieren.  
+  
+ Bei Membern, die einen Pfad zu akzeptieren, kann der Pfad in einer Datei oder einfach ein Verzeichnis verweisen. Der angegebene Pfad kann auch auf einen relativen oder einen Pfad (UNC = Universal Naming Convention) für den Namen eines Servers und der freigabeeinstellungen verweisen. Beispielsweise sind alle folgenden Pfade zulässig:  
+  
+-   "" c: "\\\MyDir\\\MyFile.txt" in C#- oder "c:\MyDir\MyFile.txt" in Visual Basic.  
+  
+-   "" c: "\\\MyDir" in C#- oder "c:\MyDir" in Visual Basic.  
+  
+-   "" MyDir "\\\MySubdir" in C#- oder "MyDir\MySubDir" in Visual Basic.  
+  
+-   "\\\\\\\MyServer\\\MyShare" in C#- oder "\\\MyServer\MyShare" in Visual Basic.  
+  
+ Die <xref:System.IO.FileInfo> Klasse stellt die folgenden Eigenschaften, mit denen Sie Informationen zu einer Datei abrufen können. Ein Beispiel zur Verwendung der einzelnen Eigenschaften finden Sie auf die Eigenschaftenseiten.  
+  
+-   Die <xref:System.IO.FileInfo.Directory%2A> Eigenschaft ruft ein Objekt, das das übergeordnete Verzeichnis einer Datei darstellt.  
+  
+-   Die <xref:System.IO.FileInfo.DirectoryName%2A> Eigenschaft ruft den vollständigen Pfad des übergeordneten Verzeichnisses einer Datei ab.  
+  
+-   Die <xref:System.IO.FileInfo.Exists%2A> Eigenschaft überprüft das Vorhandensein einer Datei vor dem darauf ausgeführt.  
+  
+-   Die <xref:System.IO.FileInfo.IsReadOnly%2A> Eigenschaft ruft ab oder legt einen Wert, der angibt, ob eine Datei geändert werden kann.  
+  
+-   Die <xref:System.IO.FileInfo.Length%2A> Ruft die Größe einer Datei ab.  
+  
+-   Die <xref:System.IO.FileInfo.Name%2A> Ruft den Namen einer Datei ab.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht einige der wichtigsten Elemente der `FileInfo` Klasse.  
+  
+ Wenn die Eigenschaften zuerst abgerufen werden, <xref:System.IO.FileInfo> Aufrufe der <xref:System.IO.FileSystemInfo.Refresh%2A> -Methode und speichert die Informationen zur Datei. Bei nachfolgenden Aufrufen, rufen Sie <xref:System.IO.FileSystemInfo.Refresh%2A> auf die aktuellste Kopie der Informationen abzurufen.  
+  
+ [!code-cpp[FInfo Class#1](~/samples/snippets/cpp/VS_Snippets_CLR/FInfo Class/CPP/finfo class.cpp#1)]
+ [!code-csharp[FInfo Class#1](~/samples/snippets/csharp/VS_Snippets_CLR/FInfo Class/CS/finfo class.cs#1)]
+ [!code-vb[FInfo Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FInfo Class/VB/finfo class.vb#1)]  
+  
+ Dieses Beispiel erzeugt die Ausgabe ähnlich der folgenden.  
+  
+```  
+Hello  
+And  
+Welcome  
+C:\Users\userName\AppData\Local\Temp\tmp70AB.tmp was copied to C:\Users\userName\AppData\Local\Temp\tmp70CB.tmp.  
+C:\Users\userName\AppData\Local\Temp\tmp70CB.tmp was successfully deleted.  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileInfo (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der vollqualifizierte Name der neuen Datei oder der relative Dateiname. Der Pfad darf nicht mit dem Verzeichnistrennzeichen enden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.FileInfo" />-Klasse, die als Wrapper für einen Dateipfad fungiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können den vollqualifizierten oder der relative Dateiname angeben, aber die sicherheitsüberprüfung Ruft den vollqualifizierten Namen ab.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird dieser Konstruktor zum Erstellen von zwei Dateien sind dann geschrieben, gelesen, kopiert und gelöscht.  
+  
+ [!code-cpp[finfo ctor#1](~/samples/snippets/cpp/VS_Snippets_CLR/FInfo Ctor/CPP/finfo ctor.cpp#1)]
+ [!code-csharp[finfo ctor#1](~/samples/snippets/csharp/VS_Snippets_CLR/FInfo Ctor/CS/finfo ctor.cs#1)]
+ [!code-vb[finfo ctor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FInfo Ctor/VB/finfo ctor.vb#1)]  
+  
+ Das folgende Beispiel öffnet eine vorhandene Datei oder eine Datei erstellt, fügt Text an die Datei und zeigt die Ergebnisse.  
+  
+ [!code-cpp[fileinfomain#1](~/samples/snippets/cpp/VS_Snippets_CLR/fileinfomain/CPP/fileinfomain.cpp#1)]
+ [!code-csharp[fileinfomain#1](~/samples/snippets/csharp/VS_Snippets_CLR/fileinfomain/CS/fileinfomain.cs#1)]
+ [!code-vb[fileinfomain#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/fileinfomain/VB/fileinfomain.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentException">Der Dateiname ist leer, enthält nur Leerzeichen oder enthält ungültige Zeichen.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf <paramref name="fileName" /> wird verweigert.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Der angegebene Pfad und/oder der Dateiname überschreiten die vom System definierte maximale Länge. Beispielsweise müssen auf Windows-basierten Plattformen Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen enthalten.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="fileName" /> enthält einen Doppelpunkt (:) innerhalb der Zeichenfolge.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Lesen von Dateien. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendText">
+      <MemberSignature Language="C#" Value="public System.IO.StreamWriter AppendText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.StreamWriter AppendText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.AppendText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.StreamWriter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen <see cref="T:System.IO.StreamWriter" />, der der Datei Text hinzufügt, die von dieser Instanz von <see cref="T:System.IO.FileInfo" /> dargestellt wird.</summary>
+        <returns>Ein neuer <see langword="StreamWriter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel fügt Text in eine Datei und liest Daten aus der Datei.  
+  
+ [!code-cpp[finfo appendtext#1](~/samples/snippets/cpp/VS_Snippets_CLR/FInfo AppendText/CPP/finfo appendtext.cpp#1)]
+ [!code-csharp[finfo appendtext#1](~/samples/snippets/csharp/VS_Snippets_CLR/FInfo AppendText/CS/finfo appendtext.cs#1)]
+ [!code-vb[finfo appendtext#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FInfo AppendText/VB/finfo appendtext.vb#1)]  
+  
+ Im folgenden Beispiel veranschaulicht das Anfügen von Text an das Ende einer Datei und das Ergebnis der Anfügevorgang auch in der Konsole anzeigt. Diese Routine aufgerufen wird, das zum ersten Mal wird die Datei erstellt, wenn er nicht vorhanden ist. Danach wird der angegebene Text an die Datei angefügt.  
+  
+ [!code-cpp[fileinfoappendtext#1](~/samples/snippets/cpp/VS_Snippets_CLR/fileinfoappendtext/CPP/fileinfoappendtext.cpp#1)]
+ [!code-csharp[fileinfoappendtext#1](~/samples/snippets/csharp/VS_Snippets_CLR/fileinfoappendtext/CS/fileinfoappendtext.cs#1)]
+ [!code-vb[fileinfoappendtext#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/fileinfoappendtext/VB/fileinfoappendtext.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Lesen und Anfügen von Dateien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Append" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public System.IO.FileInfo CopyTo (string destFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileInfo CopyTo(string destFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.CopyTo(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="destFileName">Der Name der neuen Datei, in die kopiert werden soll.</param>
+        <summary>Kopiert eine vorhandene Datei in eine neue Datei, ohne das Überschreiben einer vorhandenen Datei zuzulassen.</summary>
+        <returns>Eine neue Datei mit einem vollqualifizierten Pfad.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.IO.FileInfo.CopyTo%2A> Methode, um das Überschreiben einer vorhandenen Datei zuzulassen.  
+  
+> [!CAUTION]
+>  Nach Möglichkeit zu vermeiden, verwenden kurze Dateinamen (z. B. xxxxxx ~ 1.xxx) mit dieser Methode. Wenn zwei Dateien identische kurze Dateinamen und klicken Sie dann diese Methode möglicherweise fehl, und löst eine Ausnahme und/oder zu unerwünschten Verhalten führen  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht beide Überladungen der der `CopyTo` Methode.  
+  
+ [!code-cpp[finfo copyto2#1](~/samples/snippets/cpp/VS_Snippets_CLR/FInfo CopyTo2/CPP/finfo copyto2.cpp#1)]
+ [!code-csharp[finfo copyto2#1](~/samples/snippets/csharp/VS_Snippets_CLR/FInfo CopyTo2/CS/program.cs#1)]
+ [!code-vb[finfo copyto2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FInfo CopyTo2/VB/program.vb#1)]  
+  
+ Das folgende Beispiel veranschaulicht das Kopieren einer Datei in eine andere Datei, die eine Ausnahme auszulösen, wenn die Zieldatei bereits vorhanden ist.  
+  
+ [!code-cpp[FileInfoCopyTo1#1](~/samples/snippets/cpp/VS_Snippets_CLR/FileInfoCopyTo1/CPP/fileinfocopyto1.cpp#1)]
+ [!code-csharp[FileInfoCopyTo1#1](~/samples/snippets/csharp/VS_Snippets_CLR/FileInfoCopyTo1/CS/fileinfocopyto1.cs#1)]
+ [!code-vb[FileInfoCopyTo1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FileInfoCopyTo1/VB/fileinfocopyto1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="destFileName" /> ist leer, enthält nur Leerzeichen oder ungültige Zeichen.</exception>
+        <exception cref="T:System.IO.IOException">Ein Fehler tritt auf, oder die Zieldatei ist bereits vorhanden.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="destFileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Ein Verzeichnispfad wird an ein anderes Laufwerk übergeben, oder die Datei wird auf ein anderes Laufwerk verschoben.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das in <paramref name="destFileName" /> angegebene Verzeichnis ist nicht vorhanden.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Der angegebene Pfad und/oder Dateiname überschreiten die vom System definierte maximale Länge. Beispielsweise müssen auf Windows-basierten Plattformen Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen enthalten.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="destFileName" /> enthält einen Doppelpunkt (:) in der Zeichenfolge, gibt aber kein Volume an.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zum Lesen und Schreiben von Dateien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public System.IO.FileInfo CopyTo (string destFileName, bool overwrite);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileInfo CopyTo(string destFileName, bool overwrite) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.CopyTo(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destFileName" Type="System.String" />
+        <Parameter Name="overwrite" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="destFileName">Der Name der neuen Datei, in die kopiert werden soll.</param>
+        <param name="overwrite">
+          <see langword="true" />, um das Überschreiben einer vorhandenen Datei zuzulassen, andernfalls <see langword="false" />.</param>
+        <summary>Kopiert eine vorhandene Datei in eine neue Datei und lässt das Überschreiben einer vorhandenen Datei zu.</summary>
+        <returns>Eine neue Datei oder eine Überschreibung einer vorhandenen Datei, wenn <paramref name="overwrite" /> <see langword="true" /> ist. Wenn die Datei vorhanden und <paramref name="overwrite" /> <see langword="false" /> ist, wird eine <see cref="T:System.IO.IOException" /> ausgelöst.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode das erlauben oder verhindern einer vorhandenen Datei überschrieben. Verwenden der <xref:System.IO.FileInfo.CopyTo%2A> Methode, um zu verhindern, dass standardmäßig eine vorhandene Datei überschreiben.  
+  
+> [!CAUTION]
+>  Nach Möglichkeit zu vermeiden, verwenden kurze Dateinamen (z. B. xxxxxx ~ 1.xxx) mit dieser Methode. Wenn zwei Dateien identische kurze Dateinamen und klicken Sie dann diese Methode möglicherweise fehl, und löst eine Ausnahme und/oder zu unerwünschten Verhalten führen  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht beide Überladungen der der `CopyTo` Methode.  
+  
+ [!code-cpp[finfo copyto2#1](~/samples/snippets/cpp/VS_Snippets_CLR/FInfo CopyTo2/CPP/finfo copyto2.cpp#1)]
+ [!code-csharp[finfo copyto2#1](~/samples/snippets/csharp/VS_Snippets_CLR/FInfo CopyTo2/CS/program.cs#1)]
+ [!code-vb[finfo copyto2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FInfo CopyTo2/VB/program.vb#1)]  
+  
+ Das folgende Beispiel veranschaulicht das Kopieren einer Datei in eine andere Datei, die angibt, ob eine Datei zu überschreiben, die bereits vorhanden ist.  
+  
+ [!code-cpp[fileinfocopyto#1](~/samples/snippets/cpp/VS_Snippets_CLR/fileinfocopyto/CPP/fileinfocopyto.cpp#1)]
+ [!code-csharp[fileinfocopyto#1](~/samples/snippets/csharp/VS_Snippets_CLR/fileinfocopyto/CS/fileinfocopyto.cs#1)]
+ [!code-vb[fileinfocopyto#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/fileinfocopyto/VB/fileinfocopyto.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="destFileName" /> ist leer, enthält nur Leerzeichen oder ungültige Zeichen.</exception>
+        <exception cref="T:System.IO.IOException">Ein Fehler tritt auf, oder die Zieldatei ist bereits vorhanden, und <paramref name="overwrite" /> ist <see langword="false" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="destFileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das in <paramref name="destFileName" /> angegebene Verzeichnis ist nicht vorhanden.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Ein Verzeichnispfad wird an ein anderes Laufwerk übergeben, oder die Datei wird auf ein anderes Laufwerk verschoben.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Der angegebene Pfad und/oder Dateiname überschreiten die vom System definierte maximale Länge. Beispielsweise müssen auf Windows-basierten Plattformen Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen enthalten.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="destFileName" /> enthält einen Doppelpunkt (:) innerhalb der Zeichenfolge.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zum Lesen und Schreiben von Dateien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public System.IO.FileStream Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileStream Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileStream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Datei.</summary>
+        <returns>Eine neue Datei.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig erhält die vollständigen Lese-/Schreibzugriff an neue Dateien für alle Benutzer.  
+  
+ Diese Methode ist ein Wrapper für die Funktionalität von bereitgestellten <xref:System.IO.File.Create%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt einen Verweis auf eine Datei und erstellt dann die Datei auf dem Datenträger mit `FileInfo.Create()`.  
+  
+ [!code-cpp[fileinfodelete#1](~/samples/snippets/cpp/VS_Snippets_CLR/fileinfodelete/CPP/fileinfodelete.cpp#1)]
+ [!code-csharp[fileinfodelete#1](~/samples/snippets/csharp/VS_Snippets_CLR/fileinfodelete/CS/fileinfodelete.cs#1)]
+ [!code-vb[fileinfodelete#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/fileinfodelete/VB/fileinfodelete.vb#1)]  
+  
+ Im folgende Beispiel wird eine Datei erstellt, Text hinzugefügt und aus der Datei liest.  
+  
+ [!code-cpp[finfo create#1](~/samples/snippets/cpp/VS_Snippets_CLR/FInfo Create/CPP/finfo create.cpp#1)]
+ [!code-csharp[finfo create#1](~/samples/snippets/csharp/VS_Snippets_CLR/FInfo Create/CS/finfo create.cs#1)]
+ [!code-vb[finfo create#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FInfo Create/VB/finfo create.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zum Lesen und Schreiben von Dateien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateText">
+      <MemberSignature Language="C#" Value="public System.IO.StreamWriter CreateText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.StreamWriter CreateText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.CreateText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.StreamWriter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen <see cref="T:System.IO.StreamWriter" />, der eine neue Textdatei erstellt und in diese schreibt.</summary>
+        <returns>Ein neuer <see langword="StreamWriter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig erhält die vollständigen Lese-/Schreibzugriff an neue Dateien für alle Benutzer.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die `CreateText` Methode.  
+  
+ [!code-cpp[finfo createtext#1](~/samples/snippets/cpp/VS_Snippets_CLR/FInfo CreateText/CPP/finfo createtext.cpp#1)]
+ [!code-csharp[finfo createtext#1](~/samples/snippets/csharp/VS_Snippets_CLR/FInfo CreateText/CS/finfo createtext.cs#1)]
+ [!code-vb[finfo createtext#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FInfo CreateText/VB/finfo createtext.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Der Dateiname ist ein Verzeichnis.</exception>
+        <exception cref="T:System.IO.IOException">Der Datenträger ist schreibgeschützt.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zum Lesen und Schreiben von Dateien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Decrypt">
+      <MemberSignature Language="C#" Value="public void Decrypt ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Decrypt() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.Decrypt" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entschlüsselt eine Datei, die vom aktuellen Konto mit der <see cref="M:System.IO.FileInfo.Encrypt" />-Methode verschlüsselt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.FileInfo.Decrypt%2A> Methode können Sie eine Datei entschlüsseln, die mit verschlüsselt war die <xref:System.IO.FileInfo.Encrypt%2A> Methode.  Die <xref:System.IO.FileInfo.Decrypt%2A> Methode kann nur Dateien entschlüsseln, die mit dem aktuellen Benutzerkonto verschlüsselt wurden.  
+  
+ Sowohl die <xref:System.IO.FileInfo.Encrypt%2A> Methode und die <xref:System.IO.FileInfo.Decrypt%2A> Methode verwenden, der Kryptografiedienstanbieter (CSP), auf dem Computer und die Verschlüsselungsschlüssel des Prozesses, der beim Aufrufen der Methode wird installiert.  
+  
+ Das aktuelle Dateisystem muss formatiert sein wie NTFS-Berechtigungen und das aktuelle Betriebssystem Microsoft Windows NT oder höher.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.IO.FileInfo.Encrypt%2A> Methode und die <xref:System.IO.FileInfo.Decrypt%2A> Methode zum Verschlüsseln und Entschlüsseln von Dateien.  
+  
+ [!code-cpp[IO.FileInfo.Encrypt-Decrypt#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.FileInfo.Encrypt-Decrypt/cpp/sample.cpp#1)]
+ [!code-csharp[IO.FileInfo.Encrypt-Decrypt#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.FileInfo.Encrypt-Decrypt/CS/sample.cs#1)]
+ [!code-vb[IO.FileInfo.Encrypt-Decrypt#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.FileInfo.Encrypt-Decrypt/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.DriveNotFoundException">Es wurde ein ungültiges Laufwerk angegeben.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die durch das aktuelle <see cref="T:System.IO.FileInfo" />-Objekt beschriebene Datei konnte nicht gefunden werden.</exception>
+        <exception cref="T:System.IO.IOException">Beim Öffnen der Datei ist ein E/A-Fehler aufgetreten.</exception>
+        <exception cref="T:System.NotSupportedException">Das Dateisystem ist nicht NTFS.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Das aktuelle Betriebssystem ist nicht Microsoft Windows NT oder höher.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Die durch das aktuelle <see cref="T:System.IO.FileInfo" />-Objekt beschriebene Datei ist schreibgeschützt.  
+  
+ - oder -   
+  
+ Dieser Vorgang wird von der aktuellen Plattform nicht unterstützt.  
+  
+ - oder -  
+  
+ Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.AccessControl.FileSystemRights.Write" />  
+  
+ Sicherheitsaktion: Anforderung.  
+  
+ Für die Berechtigung zum Lesen und Schreiben in die Datei, die vom aktuellen beschrieben <see cref="T:System.IO.FileInfo" /> Objekt.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public override void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht eine Datei unwiderruflich.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Datei nicht vorhanden ist, wird diese Methode keine Aktion ausgeführt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die `Delete` Methode.  
+  
+ [!code-cpp[finfo delete#1](~/samples/snippets/cpp/VS_Snippets_CLR/FInfo Delete/CPP/finfo delete.cpp#1)]
+ [!code-csharp[finfo delete#1](~/samples/snippets/csharp/VS_Snippets_CLR/FInfo Delete/CS/finfo delete.cs#1)]
+ [!code-vb[finfo delete#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FInfo Delete/VB/finfo delete.vb#1)]  
+  
+ Das folgende Beispiel erstellt, schließt und löscht eine Datei.  
+  
+ [!code-cpp[fileinfodelete#1](~/samples/snippets/cpp/VS_Snippets_CLR/fileinfodelete/CPP/fileinfodelete.cpp#1)]
+ [!code-csharp[fileinfodelete#1](~/samples/snippets/csharp/VS_Snippets_CLR/fileinfodelete/CS/fileinfodelete.cs#1)]
+ [!code-vb[fileinfodelete#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/fileinfodelete/VB/fileinfodelete.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Die Zieldatei ist geöffnet, oder es handelt sich um eine Speicherabbilddatei auf einem Computer unter Microsoft Windows NT.  
+  
+ - oder -   
+  
+ Es liegt ein geöffnetes Handle für die Datei vor, und das Betriebssystem ist Windows XP oder früher. Dieses geöffnete Handle kann vom Auflisten von Verzeichnissen und Dateien stammen. Weitere Informationen finden Sie unter [wie: Auflisten von Verzeichnissen und Dateien](~/docs/standard/io/how-to-enumerate-directories-and-files.md).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Pfad ist ein Verzeichnis.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zum Lesen und Schreiben von Dateien. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Directory">
+      <MemberSignature Language="C#" Value="public System.IO.DirectoryInfo Directory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.DirectoryInfo Directory" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileInfo.Directory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.DirectoryInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Instanz des übergeordneten Verzeichnisses ab.</summary>
+        <value>Ein <see cref="T:System.IO.DirectoryInfo" />-Objekt, das das übergeordnete Verzeichnis dieser Datei darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um das übergeordnete Verzeichnis als Zeichenfolge abzurufen, verwenden die <xref:System.IO.FileInfo.DirectoryName%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird geöffnet oder erstellt eine Datei, bestimmt den vollen Pfad und bestimmt, und zeigt den gesamten Inhalt des Verzeichnisses.  
+  
+ [!code-cpp[fileinfodirectory#1](~/samples/snippets/cpp/VS_Snippets_CLR/fileinfodirectory/CPP/fileinfodirectory.cpp#1)]
+ [!code-csharp[fileinfodirectory#1](~/samples/snippets/csharp/VS_Snippets_CLR/fileinfodirectory/CS/fileinfodirectory.cs#1)]
+ [!code-vb[fileinfodirectory#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/fileinfodirectory/VB/fileinfodirectory.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig, z. B. befindet er sich auf einem nicht zugeordneten Laufwerk.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Lesen von Dateien. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectoryName">
+      <MemberSignature Language="C#" Value="public string DirectoryName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DirectoryName" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileInfo.DirectoryName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die den vollständigen Pfad des Verzeichnisses darstellt.</summary>
+        <value>Eine Zeichenfolge, die den vollständigen Pfad des Verzeichnisses darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Abrufen des übergeordneten Verzeichnisses als eine <xref:System.IO.DirectoryInfo> -Objekts die <xref:System.IO.FileInfo.Directory%2A> Eigenschaft.  
+  
+ Beim ersten Aufruf <xref:System.IO.FileInfo> Aufrufe <xref:System.IO.FileSystemInfo.Refresh%2A> und Informationen zur Datei zwischengespeichert. Bei nachfolgenden Aufrufen, rufen Sie <xref:System.IO.FileSystemInfo.Refresh%2A> auf die aktuellste Kopie der Informationen abzurufen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel ruft den vollständigen Pfad der angegebenen Datei ab.  
+  
+ [!code-cpp[System.IO.FileInfo members#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.FileInfo members/CPP/fileinfomembers.cpp#3)]
+ [!code-csharp[System.IO.FileInfo members#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.FileInfo members/CS/fileinfomembers.cs#3)]
+ [!code-vb[System.IO.FileInfo members#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.FileInfo members/VB/fileinfomembers.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see langword="null" /> wurde für den Namen des Verzeichnisses übergeben.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Der vollqualifizierte Pfad hat 260 oder mehr Zeichen.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Lesen von Dateien. Zugeordnete Enumeration:<see cref="T:System.Security.Permissions.FileIOPermissionAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Encrypt">
+      <MemberSignature Language="C#" Value="public void Encrypt ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Encrypt() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.Encrypt" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verschlüsselt eine Datei, sodass sie nur mit dem Konto, mit dem die Datei verschlüsselt wurde, entschlüsselt werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.FileInfo.Encrypt%2A> Methode können Sie eine Datei zu verschlüsseln, sodass nur der Aufruf dieser Methode verwendete Konto entschlüsselt werden kann.  Verwenden der <xref:System.IO.FileInfo.Decrypt%2A> Methode zum Verschlüsseln einer Datei verschlüsselt die <xref:System.IO.FileInfo.Encrypt%2A> Methode.  
+  
+ Sowohl die <xref:System.IO.FileInfo.Encrypt%2A> Methode und die <xref:System.IO.FileInfo.Decrypt%2A> Methode verwenden, der Kryptografiedienstanbieter (CSP), auf dem Computer und die Verschlüsselungsschlüssel des Prozesses, der beim Aufrufen der Methode wird installiert.  
+  
+ Das aktuelle Dateisystem muss formatiert sein wie NTFS-Berechtigungen und das aktuelle Betriebssystem Microsoft Windows NT oder höher.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.IO.FileInfo.Encrypt%2A> Methode und die <xref:System.IO.FileInfo.Decrypt%2A> Methode, um eine Datei zu verschlüsseln und dann entschlüsselt werden kann.  
+  
+ [!code-cpp[IO.FileInfo.Encrypt-Decrypt#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.FileInfo.Encrypt-Decrypt/cpp/sample.cpp#1)]
+ [!code-csharp[IO.FileInfo.Encrypt-Decrypt#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.FileInfo.Encrypt-Decrypt/CS/sample.cs#1)]
+ [!code-vb[IO.FileInfo.Encrypt-Decrypt#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.FileInfo.Encrypt-Decrypt/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.DriveNotFoundException">Es wurde ein ungültiges Laufwerk angegeben.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die durch das aktuelle <see cref="T:System.IO.FileInfo" />-Objekt beschriebene Datei konnte nicht gefunden werden.</exception>
+        <exception cref="T:System.IO.IOException">Beim Öffnen der Datei ist ein E/A-Fehler aufgetreten.</exception>
+        <exception cref="T:System.NotSupportedException">Das Dateisystem ist nicht NTFS.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Das aktuelle Betriebssystem ist nicht Microsoft Windows NT oder höher.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Die durch das aktuelle <see cref="T:System.IO.FileInfo" />-Objekt beschriebene Datei ist schreibgeschützt.  
+  
+ - oder -   
+  
+ Dieser Vorgang wird von der aktuellen Plattform nicht unterstützt.  
+  
+ - oder -  
+  
+ Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.AccessControl.FileSystemRights.Write" />  
+  
+ Sicherheitsaktion: Anforderung.  
+  
+ Für die Berechtigung zum Lesen und Schreiben in die Datei, die vom aktuellen beschrieben <see cref="T:System.IO.FileInfo" /> Objekt.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Exists">
+      <MemberSignature Language="C#" Value="public override bool Exists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Exists" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileInfo.Exists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob eine Datei vorhanden ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Datei vorhanden ist; <see langword="false" />, wenn die Datei nicht vorhanden ist oder es sich um ein Verzeichnis handelt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim ersten Aufruf <xref:System.IO.FileInfo> Aufrufe <xref:System.IO.FileSystemInfo.Refresh%2A> und Informationen zur Datei zwischengespeichert. Bei nachfolgenden Aufrufen, rufen Sie <xref:System.IO.FileSystemInfo.Refresh%2A> auf die aktuellste Kopie der Informationen abzurufen.  
+  
+ Die <xref:System.IO.FileInfo.Exists%2A> -Eigenschaft gibt `false` Wenn ein Fehler auftritt, bei dem Versuch, um festzustellen, ob die angegebene Datei vorhanden ist. Dies kann auftreten, in Situationen, in denen Auslösen von Ausnahmen, z. B. ein Dateiname ungültige Zeichen oder zu viele Zeichen, d. h. einen fehlerhaften oder fehlenden Datenträger übergeben oder wenn der Aufrufer nicht über die Berechtigung zum Lesen der Datei.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.IO.FileInfo.Exists%2A> Eigenschaft überprüfen Sie, ob eine Datei vor dem Öffnen.  Sie können diese Technik verwenden, um eine benutzerdefinierte Ausnahme auslösen, wenn die Datei nicht gefunden wird.  
+  
+ [!code-cpp[IO.FileInfo.Exists#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.FileInfo.Exists/cpp/sample.cpp#1)]
+ [!code-csharp[IO.FileInfo.Exists#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.FileInfo.Exists/cs/sample.cs#1)]
+ [!code-vb[IO.FileInfo.Exists#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.FileInfo.Exists/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetAccessControl">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Security.AccessControl.FileSecurity" />-Objekt ab, das die Einträge in der Zugriffssteuerungsliste für die Datei kapselt, das vom aktuellen <see cref="T:System.IO.FileInfo" />-Objekt beschrieben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.IO.FileInfo.GetAccessControl%2A> Methoden zum Abrufen des Zugriffs Zugriffssteuerungseinträgen (List, ACL) für die aktuelle Datei.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetAccessControl">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.FileSecurity GetAccessControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.AccessControl.FileSecurity GetAccessControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.GetAccessControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSecurity</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Security.AccessControl.FileSecurity" />-Objekt ab, das die Einträge in der Zugriffssteuerungsliste für die Datei kapselt, das vom aktuellen <see cref="T:System.IO.FileInfo" />-Objekt beschrieben wird.</summary>
+        <returns>Ein <see cref="T:System.Security.AccessControl.FileSecurity" />-Objekt, das die Zugriffssteuerungsregeln für die aktuelle Datei kapselt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.IO.FileInfo.GetAccessControl%2A> Methode, um das die Einträge in der Zugriffssteuerungsliste für die aktuelle Datei abzurufen.  
+  
+ Eine ACL beschreibt einzelne Benutzer und/oder Gruppen besitzen oder verfügen nicht über, Rechte für bestimmte Aktionen für die angegebene Datei. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](~/docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.IO.FileInfo.GetAccessControl%2A> Methode und die <xref:System.IO.FileInfo.SetAccessControl%2A> Methode hinzufügen und entfernen Sie dann einen Zugriffssteuerungseintrag für die Zugriffssteuerungsliste (ACL) aus einer Datei.  Sie müssen ein gültiges Benutzer- oder Gruppenkonto angeben, um dieses Beispiel auszuführen.  
+  
+ [!code-cpp[IO.FileInfo.GetAccessControl-SetAccessControl#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.FileInfo.GetAccessControl-SetAccessControl/cpp/sample.cpp#1)]
+ [!code-csharp[IO.FileInfo.GetAccessControl-SetAccessControl#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.FileInfo.GetAccessControl-SetAccessControl/CS/sample.cs#1)]
+ [!code-vb[IO.FileInfo.GetAccessControl-SetAccessControl#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.FileInfo.GetAccessControl-SetAccessControl/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Beim Öffnen der Datei ist ein E/A-Fehler aufgetreten.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Das aktuelle Betriebssystem ist nicht Microsoft Windows 2000 oder höher.</exception>
+        <exception cref="T:System.Security.AccessControl.PrivilegeNotHeldException">Das aktuelle Systemkonto verfügt nicht über Administratorrechte.</exception>
+        <exception cref="T:System.SystemException">Die Datei wurde nicht gefunden.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Dieser Vorgang wird von der aktuellen Plattform nicht unterstützt.  
+  
+ - oder -  
+  
+ Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.NoAccess" />,<see cref="F:System.Security.AccessControl.AccessControlActions.View" />  
+  
+ Sicherheitsaktion: Anforderung.  
+  
+ Für die Berechtigung zum Lesen von Access Control List.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessControl">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.FileSecurity GetAccessControl (System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.AccessControl.FileSecurity GetAccessControl(valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.GetAccessControl(System.Security.AccessControl.AccessControlSections)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSecurity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="includeSections">Einer der <see cref="T:System.Security.AccessControl.AccessControlSections" />-Werte, die angeben, welche Gruppe von Zugriffssteuerungseinträgen abgerufen werden soll.</param>
+        <summary>Ruft ein <see cref="T:System.Security.AccessControl.FileSecurity" />-Objekt ab, das den angegebenen Typ der Einträge in der Zugriffssteuerungsliste für die Datei kapselt, die vom aktuellen <see cref="T:System.IO.FileInfo" />-Objekt beschrieben wird.</summary>
+        <returns>Ein <see cref="T:System.Security.AccessControl.FileSecurity" />-Objekt, das die Zugriffssteuerungsregeln für die aktuelle Datei kapselt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.IO.FileInfo.GetAccessControl%2A> Methode, um das die Einträge in der Zugriffssteuerungsliste für die aktuelle Datei abzurufen.  
+  
+ Eine ACL beschreibt einzelne Benutzer und/oder Gruppen besitzen oder verfügen nicht über, Rechte für bestimmte Aktionen für die angegebene Datei. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](~/docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Beim Öffnen der Datei ist ein E/A-Fehler aufgetreten.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Das aktuelle Betriebssystem ist nicht Microsoft Windows 2000 oder höher.</exception>
+        <exception cref="T:System.Security.AccessControl.PrivilegeNotHeldException">Das aktuelle Systemkonto verfügt nicht über Administratorrechte.</exception>
+        <exception cref="T:System.SystemException">Die Datei wurde nicht gefunden.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Dieser Vorgang wird von der aktuellen Plattform nicht unterstützt.  
+  
+ - oder -  
+  
+ Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.NoAccess" />,<see cref="F:System.Security.AccessControl.AccessControlActions.View" />  
+  
+ Sicherheitsaktion: Anforderung.  
+  
+ Für die Berechtigung zum Lesen von Access Control List.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileInfo.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der bestimmt, ob die aktuelle Datei schreibgeschützt ist, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die aktuelle Datei schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.IO.FileInfo.IsReadOnly%2A> Eigenschaft schnell zu ermitteln oder zu ändern, ob die aktuelle Datei schreibgeschützt ist.  
+  
+ Beim ersten Aufruf <xref:System.IO.FileInfo> Aufrufe <xref:System.IO.FileSystemInfo.Refresh%2A> und Informationen zur Datei zwischengespeichert. Bei nachfolgenden Aufrufen, rufen Sie <xref:System.IO.FileSystemInfo.Refresh%2A> auf die aktuellste Kopie der Informationen abzurufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.IO.FileInfo.IsReadOnly%2A> Eigenschaft, um eine Datei als schreibgeschützt gekennzeichnet und als schreibgeschützt markieren.  
+  
+ [!code-cpp[IO.FileInfo.IsReadOnly#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.FileInfo.isReadOnly/cpp/sample.cpp#1)]
+ [!code-csharp[IO.FileInfo.IsReadOnly#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.FileInfo.isReadOnly/CS/sample.cs#1)]
+ [!code-vb[IO.FileInfo.IsReadOnly#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.FileInfo.isReadOnly/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.FileNotFoundException">Die durch das aktuelle <see cref="T:System.IO.FileInfo" />-Objekt beschriebene Datei konnte nicht gefunden werden.</exception>
+        <exception cref="T:System.IO.IOException">Beim Öffnen der Datei ist ein E/A-Fehler aufgetreten.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Dieser Vorgang wird von der aktuellen Plattform nicht unterstützt.  
+  
+ - oder -  
+  
+ Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentException">Der Benutzer keine Schreibberechtigung, aber versucht, diese Eigenschaft festgelegt wird, um <see langword="false" />.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.AccessControl.FileSystemRights.Write" />  
+  
+ Sicherheitsaktion: Anforderung.  
+  
+ Für die Berechtigung zum Lesen und Schreiben in die Datei, die vom aktuellen beschrieben <see cref="T:System.IO.FileInfo" /> Objekt.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileInfo.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe der aktuellen Datei in Byte ab.</summary>
+        <value>Die Größe der aktuellen Datei in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert von der <xref:System.IO.FileInfo.Length%2A> -Eigenschaft wird zwischengespeichert, wenn der aktuellen Instanz der der <xref:System.IO.FileInfo> vom keines der folgenden zurückgegebenen Objekts wurde <xref:System.IO.DirectoryInfo> Methoden:  
+  
+-   <xref:System.IO.DirectoryInfo.GetDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A>  
+  
+ Rufen Sie zum Abrufen des aktuelle Wert der <xref:System.IO.FileSystemInfo.Refresh%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Größe der angegebenen Dateien.  
+  
+ [!code-cpp[FileLength#1](~/samples/snippets/cpp/VS_Snippets_CLR/FileLength/CPP/filelength.cpp#1)]
+ [!code-csharp[FileLength#1](~/samples/snippets/csharp/VS_Snippets_CLR/FileLength/CS/filelength.cs#1)]
+ [!code-vb[FileLength#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FileLength/VB/filelength.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">
+          <see cref="M:System.IO.FileSystemInfo.Refresh" />der Status der Datei oder des Verzeichnisses kann nicht aktualisiert werden.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Datei ist nicht vorhanden.  
+  
+ - oder -   
+  
+ Die <see langword="Length" /> Eigenschaft für ein Verzeichnis aufgerufen wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveTo">
+      <MemberSignature Language="C#" Value="public void MoveTo (string destFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MoveTo(string destFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.MoveTo(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="destFileName">Der Pfad, in den die Datei verschoben werden soll. Dadurch kann ein anderer Dateiname angegeben werden.</param>
+        <summary>Verschiebt eine angegebene Datei an einen neuen Speicherort und ermöglicht das Angeben eines neuen Dateinamens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode funktioniert über Volumes hinweg. Beispielsweise wird die Datei c:\MyFile.txt d:\Public verschoben werden können und NewFile.txt umbenannt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, eine Datei an einen anderen Speicherort verschieben und Umbenennen der Datei.  
+  
+ [!code-csharp[IO.FileInfo.MoveTo#1](~/samples/snippets/csharp/VS_Snippets_Misc/IO.FileInfo.MoveTo/CS/Program.cs#1)]
+ [!code-vb[IO.FileInfo.MoveTo#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/IO.FileInfo.MoveTo/VB/Program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf, z. B. die Zieldatei ist bereits vorhanden oder das Zielgerät ist nicht bereit.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="destFileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="destFileName" /> ist leer, enthält nur Leerzeichen oder ungültige Zeichen.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">
+          <paramref name="destFileName" />ist schreibgeschützt oder ein Verzeichnis.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Datei wird nicht gefunden.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig, z. B. befindet er sich auf einem nicht zugeordneten Laufwerk.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Der angegebene Pfad und/oder Dateiname überschreiten die vom System definierte maximale Länge. Beispielsweise müssen auf Windows-basierten Plattformen Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen enthalten.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="destFileName" /> enthält einen Doppelpunkt (:) innerhalb der Zeichenfolge.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zum Lesen und Schreiben von Dateien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Datei ab.</summary>
+        <value>Der Name der Datei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim ersten Aufruf <xref:System.IO.FileInfo> Aufrufe <xref:System.IO.FileSystemInfo.Refresh%2A> und Informationen zur Datei zwischengespeichert. Bei nachfolgenden Aufrufen, rufen Sie <xref:System.IO.FileSystemInfo.Refresh%2A> auf die aktuellste Kopie der Informationen abzurufen.  
+  
+ Der Name der Datei, einschließlich der Dateierweiterung.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `Name` Eigenschaft, um die Namen der Dateien im aktuellen Verzeichnis anzuzeigen.  
+  
+ [!code-cpp[fileinfoname#1](~/samples/snippets/cpp/VS_Snippets_CLR/fileinfoname/CPP/fileinfoname.cpp#1)]
+ [!code-csharp[fileinfoname#1](~/samples/snippets/csharp/VS_Snippets_CLR/fileinfoname/CS/fileinfoname.cs#1)]
+ [!code-vb[fileinfoname#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/fileinfoname/VB/fileinfoname.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public System.IO.FileStream Open (System.IO.FileMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileStream Open(valuetype System.IO.FileMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.Open(System.IO.FileMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Eine <see cref="T:System.IO.FileMode" />-Konstante, die den Modus angibt, in dem die Datei geöffnet werden soll (z. B. <see langword="Open" /> oder <see langword="Append" />).</param>
+        <summary>Öffnet eine Datei im angegebenen Modus.</summary>
+        <returns>Eine im angegebenen Modus geöffnete Datei mit Lese-/Schreibzugriff und ohne Freigabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird eine Datei geöffnet, einige Informationen zur Datei hinzugefügt und liest die Datei.  
+  
+ [!code-cpp[finfo open1#1](~/samples/snippets/cpp/VS_Snippets_CLR/FInfo Open1/CPP/finfo open1.cpp#1)]
+ [!code-csharp[finfo open1#1](~/samples/snippets/csharp/VS_Snippets_CLR/FInfo Open1/CS/finfo open1.cs#1)]
+ [!code-vb[finfo open1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FInfo Open1/VB/finfo open1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.FileNotFoundException">Die Datei wird nicht gefunden.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Die Datei ist schreibgeschützt oder ein Verzeichnis.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig, z. B. befindet er sich auf einem nicht zugeordneten Laufwerk.</exception>
+        <exception cref="T:System.IO.IOException">Die Datei ist bereits geöffnet.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für das Schreiben in und aus Dateien lesen. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /> und<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public System.IO.FileStream Open (System.IO.FileMode mode, System.IO.FileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileStream Open(valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.Open(System.IO.FileMode,System.IO.FileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Eine <see cref="T:System.IO.FileMode" />-Konstante, die den Modus angibt, in dem die Datei geöffnet werden soll (z. B. <see langword="Open" /> oder <see langword="Append" />).</param>
+        <param name="access">Eine <see cref="T:System.IO.FileAccess" />-Konstante, die angibt, ob die Datei mit <see langword="Read" />-Zugriff, <see langword="Write" />-Zugriff oder <see langword="ReadWrite" />-Zugriff geöffnet werden soll.</param>
+        <summary>Öffnet eine Datei im angegebenen Modus mit Lese-, Schreib- oder Lese-/Schreibzugriff.</summary>
+        <returns>Ein im angegebenen Modus und mit dem angegebenem Zugriff geöffnetes <see cref="T:System.IO.FileStream" />-Objekt ohne Freigabe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel öffnet eine Datei als nur-Lese und liest Daten aus der Datei.  
+  
+ [!code-cpp[finfo open2#1](~/samples/snippets/cpp/VS_Snippets_CLR/FInfo Open2/CPP/finfo open2.cpp#1)]
+ [!code-csharp[finfo open2#1](~/samples/snippets/csharp/VS_Snippets_CLR/FInfo Open2/CS/finfo open2.cs#1)]
+ [!code-vb[finfo open2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FInfo Open2/VB/finfo open2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Datei wird nicht gefunden.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">
+          <paramref name="path" />ist schreibgeschützt oder ein Verzeichnis.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig, z. B. befindet er sich auf einem nicht zugeordneten Laufwerk.</exception>
+        <exception cref="T:System.IO.IOException">Die Datei ist bereits geöffnet.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für das Schreiben in und aus Dateien lesen. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /> und<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public System.IO.FileStream Open (System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileStream Open(valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access, valuetype System.IO.FileShare share) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.Open(System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+        <Parameter Name="share" Type="System.IO.FileShare" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Eine <see cref="T:System.IO.FileMode" />-Konstante, die den Modus angibt, in dem die Datei geöffnet werden soll (z. B. <see langword="Open" /> oder <see langword="Append" />).</param>
+        <param name="access">Eine <see cref="T:System.IO.FileAccess" />-Konstante, die angibt, ob die Datei mit <see langword="Read" />-Zugriff, <see langword="Write" />-Zugriff oder <see langword="ReadWrite" />-Zugriff geöffnet werden soll.</param>
+        <param name="share">Eine <see cref="T:System.IO.FileShare" />-Konstante, die die Art des Zugriffs angibt, die andere <see langword="FileStream" />-Objekte auf diese Datei haben.</param>
+        <summary>Öffnet eine Datei im angegebenen Modus mit Lese-, Schreib- oder Lese-/Schreibzugriff und der angegebenen Freigabeoption.</summary>
+        <returns>Ein mit dem angegebenen Modus, dem angegebenen Zugriff und den angegebenen Freigabeoptionen geöffnetes <see cref="T:System.IO.FileStream" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt das Öffnen einer Datei zum Lesen und schreiben, jedoch Zugriff auf die anderen Benutzern oder Prozessen zu untersagen.  
+  
+ [!code-cpp[fileinfoopen#1](~/samples/snippets/cpp/VS_Snippets_CLR/fileinfoopen/CPP/fileinfoopen.cpp#1)]
+ [!code-csharp[fileinfoopen#1](~/samples/snippets/csharp/VS_Snippets_CLR/fileinfoopen/CS/fileinfoopen.cs#1)]
+ [!code-vb[fileinfoopen#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/fileinfoopen/VB/fileinfoopen.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Datei wird nicht gefunden.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">
+          <paramref name="path" />ist schreibgeschützt oder ein Verzeichnis.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig, z. B. befindet er sich auf einem nicht zugeordneten Laufwerk.</exception>
+        <exception cref="T:System.IO.IOException">Die Datei ist bereits geöffnet.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für das Schreiben in und aus Dateien lesen. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /> und<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenRead">
+      <MemberSignature Language="C#" Value="public System.IO.FileStream OpenRead ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileStream OpenRead() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.OpenRead" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileStream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen schreibgeschützten <see cref="T:System.IO.FileStream" />.</summary>
+        <returns>Ein neues schreibgeschütztes <see cref="T:System.IO.FileStream" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt ein schreibgeschützter <xref:System.IO.FileStream> -Objekt mit den <xref:System.IO.FileShare> Modus legen Sie auf <xref:System.IO.FileShare.Read>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel öffnet eine Datei als nur-Lese und daraus gelesen.  
+  
+ [!code-cpp[finfo openread#1](~/samples/snippets/cpp/VS_Snippets_CLR/FInfo OpenRead/CPP/finfo openread.cpp#1)]
+ [!code-csharp[finfo openread#1](~/samples/snippets/csharp/VS_Snippets_CLR/FInfo OpenRead/CS/finfo openread.cs#1)]
+ [!code-vb[finfo openread#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FInfo OpenRead/VB/finfo openread.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">
+          <paramref name="path" />ist schreibgeschützt oder ein Verzeichnis.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig, z. B. befindet er sich auf einem nicht zugeordneten Laufwerk.</exception>
+        <exception cref="T:System.IO.IOException">Die Datei ist bereits geöffnet.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Lesen von Dateien. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenText">
+      <MemberSignature Language="C#" Value="public System.IO.StreamReader OpenText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.StreamReader OpenText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.OpenText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.StreamReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen <see cref="T:System.IO.StreamReader" /> mit UTF8-Codierung, der aus einer vorhandenen Textdatei liest.</summary>
+        <returns>Ein neuer <see langword="StreamReader" /> mit UTF8-Codierung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird Text aus einer Datei gelesen.  
+  
+ [!code-cpp[finfo opentext#1](~/samples/snippets/cpp/VS_Snippets_CLR/FInfo OpenText/CPP/file opentext.cpp#1)]
+ [!code-csharp[finfo opentext#1](~/samples/snippets/csharp/VS_Snippets_CLR/FInfo OpenText/CS/file opentext.cs#1)]
+ [!code-vb[finfo opentext#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FInfo OpenText/VB/file opentext.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Datei wird nicht gefunden.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">
+          <paramref name="path" />ist schreibgeschützt oder ein Verzeichnis.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig, z. B. befindet er sich auf einem nicht zugeordneten Laufwerk.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zum Lesen und Schreiben von Dateien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenWrite">
+      <MemberSignature Language="C#" Value="public System.IO.FileStream OpenWrite ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileStream OpenWrite() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.OpenWrite" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileStream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen lesegeschützten <see cref="T:System.IO.FileStream" />.</summary>
+        <returns>Ein lesegeschütztes nicht freigegebenes <see cref="T:System.IO.FileStream" />-Objekt für eine neue oder existierende Datei.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.FileInfo.OpenWrite%2A> -Methode öffnet eine Datei aus, wenn eine bereits für den Dateipfad vorhanden, oder eine neue Datei erstellt, sofern noch nicht vorhanden. Für eine vorhandene Datei fügt es den neuen Text nicht an den vorhandenen Text. Stattdessen wird die vorhandenen Zeichen durch die neuen Zeichen überschrieben. Wenn Sie eine längere Zeichenfolge (z. B. "This is einen Test der OpenWrite-Methode") mit einer kürzeren Zeichenfolge (z. B. "zweite ausführen") überschreiben, die Datei enthält eine Mischung aus Zeichenfolgen ("zweiter Ausführungstest der OpenWrite-Methode").  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Datei zum Schreiben geöffnet und anschließend aus der Datei gelesen.  
+  
+ [!code-cpp[finfo openwrite#1](~/samples/snippets/cpp/VS_Snippets_CLR/FInfo OpenWrite/CPP/file openwrite.cpp#1)]
+ [!code-csharp[finfo openwrite#1](~/samples/snippets/csharp/VS_Snippets_CLR/FInfo OpenWrite/CS/file openwrite.cs#1)]
+ [!code-vb[finfo openwrite#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FInfo OpenWrite/VB/file openwrite.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Beim Erstellen einer Instanz der angegebene Pfad der <see cref="T:System.IO.FileInfo" /> Objekt ist schreibgeschützt oder ein Verzeichnis.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Beim Erstellen einer Instanz der angegebene Pfad der <see cref="T:System.IO.FileInfo" /> Objekt ist ungültig, z. B. befindet er sich auf einem nicht zugeordneten Laufwerk.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zum Lesen und Schreiben von Dateien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Replace">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ersetzt den Inhalt einer angegebenen Datei durch die vom aktuellen <see cref="T:System.IO.FileInfo" />-Objekt beschriebene Datei, löscht die ursprüngliche Datei und erstellt eine Sicherungskopie der ersetzten Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.IO.FileInfo.Replace%2A> Methoden, wenn Sie schnell eine Datei mit dem Inhalt der Datei beschrieben, die vom aktuellen ersetzen müssen <xref:System.IO.FileInfo> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Replace">
+      <MemberSignature Language="C#" Value="public System.IO.FileInfo Replace (string destinationFileName, string destinationBackupFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileInfo Replace(string destinationFileName, string destinationBackupFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.Replace(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.FileInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationFileName" Type="System.String" />
+        <Parameter Name="destinationBackupFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="destinationFileName">Der Name einer Datei, die durch die aktuelle Datei ersetzt werden soll.</param>
+        <param name="destinationBackupFileName">Der Name einer Datei mit dem eine Sicherung der beschriebenen Datei erstellt die <c>DestFileName</c> Parameter.</param>
+        <summary>Ersetzt den Inhalt einer angegebenen Datei durch die vom aktuellen <see cref="T:System.IO.FileInfo" />-Objekt beschriebene Datei, löscht die ursprüngliche Datei und erstellt eine Sicherungskopie der ersetzten Datei.</summary>
+        <returns>Ein <see cref="T:System.IO.FileInfo" />-Objekt, das Informationen zu der mit dem <paramref name="destFileName" />-Parameter beschriebenen Datei kapselt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.FileInfo.Replace%2A> Methode ersetzt den Inhalt einer angegebenen Datei mit dem Inhalt der Datei beschrieben, die vom aktuellen <xref:System.IO.FileInfo> Objekt.  Es erstellt auch eine Sicherung der Datei, die ersetzt wurde.  Schließlich gibt es einen neuen <xref:System.IO.FileInfo> -Objekt, das die überschriebene Datei beschreibt.  
+  
+> [!CAUTION]
+>  Diese Methode ist in Windows 2000-Umgebungen erfolgreich, wenn die `destFileName` ist schreibgeschützt und wird keine Ausnahme ausgelöst. Verwenden der <xref:System.IO.FileInfo.IsReadOnly%2A> Eigenschaft zu überprüfen, ob die Zieldatei schreibgeschützt ist, bevor Sie versuchen, ihn zu ersetzen.  
+  
+ Übergeben Sie `null` auf die `destBackupFileName` Parameter an, wenn Sie nicht, erstellen Sie eine Sicherung der ersetzten Datei möchten.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.IO.File.Replace%2A> Methode, um die alte Datei durch eine andere Datei, und erstellen Sie eine Sicherung der ersetzten Datei.  
+  
+ [!code-cpp[IO.FileInfo.Replace#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.FileInfo.Replace/cpp/sample.cpp#1)]
+ [!code-csharp[IO.FileInfo.Replace#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.FileInfo.Replace/CS/sample.cs#1)]
+ [!code-vb[IO.FileInfo.Replace#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.FileInfo.Replace/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Pfad von beschrieben die <paramref name="destFileName" /> Parameter hat ein ungültiges Format.  
+  
+ - oder -   
+  
+ Der Pfad von beschrieben die <paramref name="destBackupFileName" /> Parameter hat ein ungültiges Format.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="destFileName" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die durch das aktuelle <see cref="T:System.IO.FileInfo" />-Objekt beschriebene Datei konnte nicht gefunden werden.  
+  
+ - oder -   
+  
+ Die durch den <paramref name="destinationFileName" />-Parameter beschriebene Datei konnte nicht gefunden werden.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Das aktuelle Betriebssystem ist nicht Microsoft Windows NT oder höher.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" />  
+  
+ Sicherheitsaktion: Anforderung.  
+  
+ Für die Berechtigung zum Schreiben in Datei beschrieben, die von der <paramref name="destBackupFileName" /> Parameter an, wenn ein solcher festgelegt wurde.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Replace">
+      <MemberSignature Language="C#" Value="public System.IO.FileInfo Replace (string destinationFileName, string destinationBackupFileName, bool ignoreMetadataErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileInfo Replace(string destinationFileName, string destinationBackupFileName, bool ignoreMetadataErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.Replace(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.FileInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationFileName" Type="System.String" />
+        <Parameter Name="destinationBackupFileName" Type="System.String" />
+        <Parameter Name="ignoreMetadataErrors" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="destinationFileName">Der Name einer Datei, die durch die aktuelle Datei ersetzt werden soll.</param>
+        <param name="destinationBackupFileName">Der Name einer Datei mit dem eine Sicherung der beschriebenen Datei erstellt die <c>DestFileName</c> Parameter.</param>
+        <param name="ignoreMetadataErrors">
+          <see langword="true" />, um Fehler beim Zusammenführen der ersetzten Datei und der Ersetzungsdatei zu ignorieren (z. B. Zugriffssteuerungslisten), andernfalls <see langword="false" />.</param>
+        <summary>Ersetzt den Inhalt einer angegebenen Datei durch die vom aktuellen <see cref="T:System.IO.FileInfo" />-Objekt beschriebene Datei, löscht die ursprüngliche Datei und erstellt eine Sicherungskopie der ersetzten Datei.  Gibt auch an, ob Mergefehler ignoriert werden sollen.</summary>
+        <returns>Ein <see cref="T:System.IO.FileInfo" />-Objekt, das Informationen zu der mit dem <paramref name="destFileName" />-Parameter beschriebenen Datei kapselt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.FileInfo.Replace%2A> Methode ersetzt den Inhalt einer angegebenen Datei mit dem Inhalt der Datei beschrieben, die vom aktuellen <xref:System.IO.FileInfo> Objekt.  Es erstellt auch eine Sicherung der Datei, die ersetzt wurde.  Schließlich gibt es einen neuen <xref:System.IO.FileInfo> -Objekt, das die überschriebene Datei beschreibt.  
+  
+> [!CAUTION]
+>  Diese Methode ist in Windows 2000-Umgebungen erfolgreich, wenn die `destFileName` ist schreibgeschützt und wird keine Ausnahme ausgelöst. Verwenden der <xref:System.IO.FileInfo.IsReadOnly%2A> Eigenschaft zu überprüfen, ob die Zieldatei schreibgeschützt ist, bevor Sie versuchen, ihn zu ersetzen.  
+  
+ Übergeben Sie `null` auf die `destBackupFileName` Parameter an, wenn Sie nicht, erstellen Sie eine Sicherung der ersetzten Datei möchten.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.IO.File.Replace%2A> Methode, um die alte Datei durch eine andere Datei, und erstellen Sie eine Sicherung der ersetzten Datei.  
+  
+ [!code-cpp[IO.FileInfo.Replace#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.FileInfo.Replace/cpp/sample.cpp#1)]
+ [!code-csharp[IO.FileInfo.Replace#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.FileInfo.Replace/CS/sample.cs#1)]
+ [!code-vb[IO.FileInfo.Replace#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.FileInfo.Replace/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Pfad von beschrieben die <paramref name="destFileName" /> Parameter hat ein ungültiges Format.  
+  
+ - oder -   
+  
+ Der Pfad von beschrieben die <paramref name="destBackupFileName" /> Parameter hat ein ungültiges Format.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="destFileName" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die durch das aktuelle <see cref="T:System.IO.FileInfo" />-Objekt beschriebene Datei konnte nicht gefunden werden.  
+  
+ - oder -   
+  
+ Die durch den <paramref name="destinationFileName" />-Parameter beschriebene Datei konnte nicht gefunden werden.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Das aktuelle Betriebssystem ist nicht Microsoft Windows NT oder höher.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" />  
+  
+ Sicherheitsaktion: Anforderung.  
+  
+ Für die Berechtigung zum Schreiben in Datei beschrieben, die von der <paramref name="destBackupFileName" /> Parameter an, wenn ein solcher festgelegt wurde.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccessControl">
+      <MemberSignature Language="C#" Value="public void SetAccessControl (System.Security.AccessControl.FileSecurity fileSecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccessControl(class System.Security.AccessControl.FileSecurity fileSecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.SetAccessControl(System.Security.AccessControl.FileSecurity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileSecurity" Type="System.Security.AccessControl.FileSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="fileSecurity">Ein <see cref="T:System.Security.AccessControl.FileSecurity" />-Objekt, das einen Eintrag in einer Zugriffssteuerungsliste beschreibt, der auf die aktuelle Datei angewendet werden soll.</param>
+        <summary>Wendet von einem <see cref="T:System.Security.AccessControl.FileSecurity" />-Objekt beschriebene Einträge in Zugriffssteuerungslisten auf die Datei an, die vom aktuellen <see cref="T:System.IO.FileInfo" />-Objekt beschrieben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.FileInfo.SetAccessControl%2A> Methode gilt Einträge Access Control List (ACL) für die aktuelle Datei, die nicht geerbte Zugriffssteuerungsliste darstellt.  
+  
+ Verwenden der <xref:System.IO.FileInfo.SetAccessControl%2A> Methode Bedarf hinzufügen oder Entfernen von ACL-Einträge aus einer Datei.  
+  
+> [!CAUTION]
+>  Die ACL angegeben, für die `fileSecurity` Parameter ersetzt die vorhandene Zugriffssteuerungsliste für die Datei. Um Berechtigungen für einen neuen Benutzer hinzuzufügen, verwenden die <xref:System.IO.Directory.GetAccessControl%2A> Methode zum Abrufen der vorhandenen ACL, ändern und verwenden Sie dann <xref:System.IO.FileInfo.SetAccessControl%2A> , wieder in der Datei anzuwenden.  
+  
+ Eine ACL beschreibt einzelne Benutzer und/oder Gruppen besitzen oder verfügen nicht über, Rechte für bestimmte Aktionen für die angegebene Datei. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](~/docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+  
+ Die <xref:System.IO.FileInfo.SetAccessControl%2A> Methode speichert nur <xref:System.Security.AccessControl.FileSecurity> Objekte, die nach der Erstellung des Objekts geändert wurden.  Wenn ein <xref:System.Security.AccessControl.FileSecurity> Objekt wurde nicht verändert, wird nicht in einer Datei beibehalten werden.  Es ist daher nicht möglich, zum Abrufen einer <xref:System.Security.AccessControl.FileSecurity> Objekt aus einer Datei, und wenden Sie das gleiche Objekt in eine andere Datei erneut an.  
+  
+ ACL-Informationen aus einer Datei in einen anderen zu kopieren:  
+  
+1.  Verwenden der <xref:System.IO.FileInfo.GetAccessControl%2A> Methode zum Abrufen der <xref:System.Security.AccessControl.FileSecurity> Objekt aus der Quelldatei.  
+  
+2.  Erstellen Sie ein neues <xref:System.Security.AccessControl.FileSecurity> Objekt für die Zieldatei.  
+  
+3.  Verwenden der <xref:System.Security.AccessControl.ObjectSecurity.GetSecurityDescriptorBinaryForm%2A> oder <xref:System.Security.AccessControl.ObjectSecurity.GetSecurityDescriptorSddlForm%2A> Methode der Quelle <xref:System.Security.AccessControl.FileSecurity> Objekt, das die ACL-Informationen abzurufen.  
+  
+4.  Verwenden der <xref:System.Security.AccessControl.ObjectSecurity.SetSecurityDescriptorBinaryForm%2A> oder <xref:System.Security.AccessControl.ObjectSecurity.SetSecurityDescriptorSddlForm%2A> Methode, um die Informationen zu kopieren, die in Schritt 3 in das Ziel abgerufenen <xref:System.Security.AccessControl.FileSecurity> Objekt.  
+  
+5.  Legen Sie das Ziel <xref:System.Security.AccessControl.FileSecurity> Objekt, das die Ziel-Datei mithilfe der <xref:System.IO.FileInfo.SetAccessControl%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.IO.FileInfo.GetAccessControl%2A> Methode und die <xref:System.IO.FileInfo.SetAccessControl%2A> Methode zum Hinzufügen und entfernen Sie einen ACL-Eintrag aus einer Datei.  Sie müssen ein gültiges Benutzer- oder Gruppenkonto angeben, um dieses Beispiel auszuführen.  
+  
+ [!code-cpp[IO.FileInfo.GetAccessControl-SetAccessControl#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.FileInfo.GetAccessControl-SetAccessControl/cpp/sample.cpp#1)]
+ [!code-csharp[IO.FileInfo.GetAccessControl-SetAccessControl#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.FileInfo.GetAccessControl-SetAccessControl/CS/sample.cs#1)]
+ [!code-vb[IO.FileInfo.GetAccessControl-SetAccessControl#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.FileInfo.GetAccessControl-SetAccessControl/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="fileSecurity" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.SystemException">Die Datei konnte nicht gefunden oder geändert werden.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der aktuelle Prozess hat keinen Zugriff zum Öffnen der Datei.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Das aktuelle Betriebssystem ist nicht Microsoft Windows 2000 oder höher.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.NoAccess" />,<see cref="F:System.Security.AccessControl.AccessControlActions.Change" />  
+  
+ Sicherheitsaktion: Anforderung  
+  
+ Für die Berechtigung zum Zugriff auf die Datei.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileInfo.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Pfad als Zeichenfolge zurück.</summary>
+        <returns>Eine Zeichenfolge, die den Pfad darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Zeichenfolge den <xref:System.IO.FileInfo.ToString%2A> Methode darstellt, Pfad, der an den Konstruktor übergeben wurde.  Beim Erstellen einer <xref:System.IO.FileInfo> -Objekt mithilfe der Konstruktoren der <xref:System.IO.FileInfo.ToString%2A> -Methode den vollqualifizierten Pfad zurück.  Es gibt jedoch Fälle, in denen die Zeichenfolge, durch zurückgegeben, die <xref:System.IO.FileInfo.ToString%2A> Methode stellt nicht den vollqualifizierten Pfad dar.  Z. B. beim Erstellen einer <xref:System.IO.FileInfo> -Objekt unter Verwendung der <xref:System.IO.DirectoryInfo.GetFiles%2A> -Methode, die <xref:System.IO.FileInfo.ToString%2A> Methode stellt nicht den vollqualifizierten Pfad dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

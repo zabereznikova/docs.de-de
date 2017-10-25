@@ -1,0 +1,148 @@
+<Type Name="IDesignerLoaderService" FullName="System.ComponentModel.Design.Serialization.IDesignerLoaderService">
+  <TypeSignature Language="C#" Value="public interface IDesignerLoaderService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerLoaderService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.IDesignerLoaderService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle, die ein Designerladeprogramm zur Unterstützung von asynchronen Laden von externen Komponenten erweitern kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ComponentModel.Design.Serialization.DesignerLoader> kann diese Schnittstelle zum Verwalten der externen Komponenten-Designer laden implementieren. Diese Schnittstelle ermöglicht auch externe Komponenten durch Aufrufen der Entwurfsoberfläche erneut initiieren <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.Reload%2A>. Ein Designerladeprogramm keinen diese Schnittstelle implementieren, wenn es keine Unterstützung für das asynchrone Laden erforderlich ist.  
+  
+ Laden, verwenden eine benutzerdefinierte Implementierung der Designer die <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService> kann eine Vielzahl von Möglichkeiten auftreten. In einigen Fällen externe Komponenten sind in den Ladevorgang beteiligt. Um das Laden mit externen Abhängigkeiten zu erleichtern, bietet die Designerladeprogramm-Schnittstelle einen Mechanismus, der bestimmt wird, wenn das Laden abgeschlossen ist, und kann jeden Teil der loading, um zu signalisieren, dass er abgeschlossen wurde. Die <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService> bestimmt, in der Regel beim Ladevorgang abgeschlossen ist, testen Sie einen Indikator, der die Anzahl der verbleibenden Load-Abhängigkeiten verfolgt. Nach Abschluss jeder Teil der Last <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete%2A> aufgerufen wird, und der Dienst verringert den Zähler. Rufen Sie zum Festlegen der Anzahl der abhängigen Ladevorgänge <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.AddLoadDependency%2A> einmal für jeden Ladeprozess, die aufruft <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete%2A> Wenn der Ladevorgang abgeschlossen ist. Wenn das letzte Laden abgeschlossen ist, ruft der Dienst <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost.EndLoad%2A> auf dem Ladeprogrammhost.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddLoadDependency">
+      <MemberSignature Language="C#" Value="public void AddLoadDependency ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddLoadDependency() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerLoaderService.AddLoadDependency" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Registriert eine externe Komponente als Teil des Ladevorgangs von dieser Schnittstelle verwaltet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.AddLoadDependency%2A> einmal für jedes externe Objekt, das den Ladevorgang. <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete%2A>wird aufgerufen, wenn die den Ladevorgang ausgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependentLoadComplete">
+      <MemberSignature Language="C#" Value="public void DependentLoadComplete (bool successful, System.Collections.ICollection errorCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DependentLoadComplete(bool successful, class System.Collections.ICollection errorCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete(System.Boolean,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="successful" Type="System.Boolean" />
+        <Parameter Name="errorCollection" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="successful">
+          <see langword="true" />Wenn das Laden des Designers erfolgreich ist; <see langword="false" /> Wenn Fehler aufgrund der Last von nicht abschließen.</param>
+        <param name="errorCollection">Eine Auflistung von Fehlern, die während des Ladens ggf. aufgetreten sind. Wenn keine Fehler aufgetreten ist, übergeben Sie entweder eine leere Auflistung oder <see langword="null" />.</param>
+        <summary>Signalisiert, die ein abhängiger Ladevorgang abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, um zu signalisieren, dass ein abhängiger Ladevorgang abgeschlossen wurde. Rufen Sie <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete%2A> einmal für jeden Prozess auf, die durch den Aufruf registriert war <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.AddLoadDependency%2A>, der bereits abgeschlossen.  
+  
+ Bei erfolgreichem abhängige laden, die der Aufrufer legt den `successful` Parameter `true` und übergibt Sie entweder eine leere Auflistung oder `null` auf die `errorCollection` Parameter. Der Aufrufer legt fest, wenn die abhängige Last Fehler feststellt, der `successful` Parameter `false` und übergibt eine Auflistung von Ausnahmen, die angeben, den Grund oder die Gründe für das Fehlschlagen der `errorCollection` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reload">
+      <MemberSignature Language="C#" Value="public bool Reload ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Reload() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerLoaderService.Reload" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lädt das Dokument entwerfen.</summary>
+        <returns>
+          <see langword="true" />Wenn die Anforderung zum erneuten Laden akzeptiert wird, oder <see langword="false" /> , wenn das Ladeprogramm für das erneute Laden nicht erlaubt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Objekt kann diese Methode, um anzufordern, die Ladeprogramm zum erneuten Laden der Entwurfsdokument aufrufen. Wenn das Ladeprogramm für das Neuladen unterstützt und das erneute Laden einhält, kann das Designerladeprogramm zurückgeben `true`. Andernfalls wird zurückgegeben `false`, der angibt, die das erneute Laden nicht stattfinden. Aufrufer können nicht auf die erneute Ladevorgang sofort basieren; Das Designerladeprogramm kann dies für einen anderen Zeitpunkt planen, oder sie können versuchen, gleichzeitig laden.  
+  
+ Der Aufrufer kann dem Benutzer eine Meldung angezeigt, wenn der Designer erneut geladen werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

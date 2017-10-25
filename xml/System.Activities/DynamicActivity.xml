@@ -1,0 +1,542 @@
+<Type Name="DynamicActivity" FullName="System.Activities.DynamicActivity">
+  <TypeSignature Language="C#" Value="public sealed class DynamicActivity : System.Activities.Activity, System.ComponentModel.ICustomTypeDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DynamicActivity extends System.Activities.Activity implements class System.ComponentModel.ICustomTypeDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.DynamicActivity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Activity</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ICustomTypeDescriptor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Implementation")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Objektmodell bereit, das die dynamische Erstellung von Aktivitäten ermöglicht, die per <see cref="T:System.ComponentModel.ICustomTypeDescriptor" /> mit dem WF-Designer und der Workflowlaufzeit interagieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie ein <xref:System.Activities.DynamicActivity> erstellt wird.  
+  
+ [!code-csharp[DynamicActivityCreation#0](~/samples/snippets/csharp/VS_Snippets_CFX/dynamicactivitycreation/cs/program.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicActivity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.DynamicActivity" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mithilfe von <xref:System.Activities.DynamicActivity> können Sie neue Aktivitäten erstellen, ohne neue Typen erstellen zu müssen. <xref:System.Activities.DynamicActivity> ermöglicht in Verbindung mit der XAML-Unterstützung in <xref:System.Activities.XamlIntegration.ActivityXamlServices> das Definieren neuer Argumente im XAML-Format und das Binden durch den Host, ohne dass eine Kompilierung der XAML-Daten erforderlich ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Attribute&gt; Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Attribute&gt; Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DynamicActivity.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Name")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Attribute&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Attribute für die dynamisch generierte Aktivität ab.</summary>
+        <value>Die Auflistung der Attribute.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Constraints">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Activities.Validation.Constraint&gt; Constraints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Activities.Validation.Constraint&gt; Constraints" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DynamicActivity.Constraints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Properties")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Activities.Validation.Constraint&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Auflistung mit <see cref="T:System.Activities.Validation.Constraint" />-Aktivitäten zurück, die konfiguriert werden, um die Validierung für die <see cref="T:System.Activities.DynamicActivity" /> bereitstellen zu können.</summary>
+        <value>Die Auflistung der Einschränkungen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Implementation">
+      <MemberSignature Language="C#" Value="public Func&lt;System.Activities.Activity&gt; Implementation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`1&lt;class System.Activities.Activity&gt; Implementation" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DynamicActivity.Implementation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.Ambient</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.XamlDeferLoad(typeof(System.Activities.XamlIntegration.FuncDeferringLoader), typeof(System.Activities.Activity))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Activities.Activity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausführungslogik der Aktivität ab oder legt sie fest.</summary>
+        <value>Die Ausführungslogik.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie die Implementierung für eine dynamische Aktivität angegeben wird.  
+  
+ [!code-csharp[DynamicActivityCreation#0](~/samples/snippets/csharp/VS_Snippets_CFX/dynamicactivitycreation/cs/program.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplementationVersion">
+      <MemberSignature Language="C#" Value="public Version ImplementationVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version ImplementationVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DynamicActivity.ImplementationVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Activities.XamlIntegration.ImplementationVersionConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die implementierungsversion der Aktivität.</summary>
+        <value>Die implementierungsversion der Aktivität.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DynamicActivity.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name, der für die Aktivität im Workflow-Designer angezeigt werden soll.</summary>
+        <value>Der Name der Aktivität.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.KeyedCollection&lt;string,System.Activities.DynamicActivityProperty&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.KeyedCollection`2&lt;string, class System.Activities.DynamicActivityProperty&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DynamicActivity.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Attributes")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.KeyedCollection&lt;System.String,System.Activities.DynamicActivityProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Eigenschaften ab, die den Argumenten der dynamisch generierten Aktivität zugeordnet werden.</summary>
+        <value>Die Auflistung der Eigenschaften.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetAttributes">
+      <MemberSignature Language="C#" Value="System.ComponentModel.AttributeCollection ICustomTypeDescriptor.GetAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.AttributeCollection System.ComponentModel.ICustomTypeDescriptor.GetAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicActivity.System#ComponentModel#ICustomTypeDescriptor#GetAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung mit Attributen der dynamischen Aktivität zurück.</summary>
+        <returns>Die Attribute der dynamischen Aktivität.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.DynamicActivity>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetClassName">
+      <MemberSignature Language="C#" Value="string ICustomTypeDescriptor.GetClassName ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.ICustomTypeDescriptor.GetClassName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicActivity.System#ComponentModel#ICustomTypeDescriptor#GetClassName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Klassennamen der dynamischen Aktivität zurück.</summary>
+        <returns>Der Klassenname.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.DynamicActivity>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetComponentName">
+      <MemberSignature Language="C#" Value="string ICustomTypeDescriptor.GetComponentName ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.ICustomTypeDescriptor.GetComponentName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicActivity.System#ComponentModel#ICustomTypeDescriptor#GetComponentName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Komponentennamen der dynamischen Aktivität zurück.</summary>
+        <returns>Der Komponentenname.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.DynamicActivity>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetConverter">
+      <MemberSignature Language="C#" Value="System.ComponentModel.TypeConverter ICustomTypeDescriptor.GetConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.TypeConverter System.ComponentModel.ICustomTypeDescriptor.GetConverter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicActivity.System#ComponentModel#ICustomTypeDescriptor#GetConverter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt für die dynamische Aktivität einen Typkonverter zurück.</summary>
+        <returns>Ein Typkonverter für diese Instanz der dynamischen Aktivität.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.DynamicActivity>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptor ICustomTypeDescriptor.GetDefaultEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptor System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicActivity.System#ComponentModel#ICustomTypeDescriptor#GetDefaultEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das Standardereignis für die dynamische Aktivität zurück.</summary>
+        <returns>Das Standardereignis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.DynamicActivity>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptor ICustomTypeDescriptor.GetDefaultProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptor System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicActivity.System#ComponentModel#ICustomTypeDescriptor#GetDefaultProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Standardeigenschaft für die dynamische Aktivität zurück.</summary>
+        <returns>Die Standardeigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.DynamicActivity>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEditor">
+      <MemberSignature Language="C#" Value="object ICustomTypeDescriptor.GetEditor (Type editorBaseType);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.ICustomTypeDescriptor.GetEditor(class System.Type editorBaseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicActivity.System#ComponentModel#ICustomTypeDescriptor#GetEditor(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editorBaseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="editorBaseType">Der Basistyp des Editors, nach dem Sie suchen möchten.</param>
+        <summary>Gibt einen Editor mit dem angegebenen Basistyp zurück.</summary>
+        <returns>Eine Instanz des Editors, die in den angegebenen Editortyp umgewandelt werden kann oder <see langword="null" /> Falls kein Editor des angeforderten Typs gefunden werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.DynamicActivity>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptorCollection ICustomTypeDescriptor.GetEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicActivity.System#ComponentModel#ICustomTypeDescriptor#GetEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Auflistung mit Ereignissen der dynamischen Aktivität zurück.</summary>
+        <returns>Die Auflistung von Ereignissen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.DynamicActivity>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptorCollection ICustomTypeDescriptor.GetEvents (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetEvents(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicActivity.System#ComponentModel#ICustomTypeDescriptor#GetEvents(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Ein Array, das Sie als Filter verwenden können.</param>
+        <summary>Gibt die Auflistung mit den Ereignissen der dynamischen Aktivität zurück. Hierbei wird das angegebene Array mit Attributen als Filter verwendet.</summary>
+        <returns>Die Auflistung der Ereignisse, die mit den angegebenen Attributen übereinstimmen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.DynamicActivity>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicActivity.System#ComponentModel#ICustomTypeDescriptor#GetProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Auflistung mit den Eigenschaften der dynamischen Aktivität zurück.</summary>
+        <returns>Die Auflistung der Eigenschaften.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.DynamicActivity>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetProperties(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicActivity.System#ComponentModel#ICustomTypeDescriptor#GetProperties(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Ein Array, das Sie als Filter verwenden können.</param>
+        <summary>Gibt die Auflistung mit den Eigenschaften der dynamischen Aktivität zurück. Hierbei wird das angegebene Array mit Attributen als Filter verwendet.</summary>
+        <returns>Die Auflistung der Eigenschaften, die mit den angegebenen Attributen übereinstimmen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.DynamicActivity>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner">
+      <MemberSignature Language="C#" Value="object ICustomTypeDescriptor.GetPropertyOwner (System.ComponentModel.PropertyDescriptor pd);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner(class System.ComponentModel.PropertyDescriptor pd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicActivity.System#ComponentModel#ICustomTypeDescriptor#GetPropertyOwner(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pd" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="pd">Die Eigenschaft, nach deren Besitzer gesucht werden soll.</param>
+        <summary>Gibt diese Instanz der <see cref="T:System.Activities.DynamicActivity" />-Klasse zurück.</summary>
+        <returns>Diese Instanz von <see cref="T:System.Activities.DynamicActivity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der `pd`-Parameter wird von dieser Methode ignoriert. Dieser Parameter wird zum Implementieren der <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle verwendet.  
+  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Activities.DynamicActivity>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

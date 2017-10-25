@@ -1,0 +1,194 @@
+<Type Name="ResourceExpressionEditorSheet" FullName="System.Web.UI.Design.ResourceExpressionEditorSheet">
+  <TypeSignature Language="C#" Value="public class ResourceExpressionEditorSheet : System.Web.UI.Design.ExpressionEditorSheet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResourceExpressionEditorSheet extends System.Web.UI.Design.ExpressionEditorSheet" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ResourceExpressionEditorSheet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ExpressionEditorSheet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Editorblatt zur Entwurfszeit-für die Eigenschaften einer Ressource-Ausdrucks in der Benutzeroberfläche von einem Designerhost zur Entwurfszeit an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der visuelle Designer verwendet die <xref:System.Web.UI.Design.ResourceExpressionEditor> -Klasse mit der <xref:System.Web.UI.Design.ResourceExpressionEditorSheet> Klasse, um die einzelnen Eigenschaften einer Ressource Verweisausdruck auszuwählen und die Eigenschaftswerte der ausgewählten Ressource Ausdruck in einen Ressourcenausdruck zu kombinieren.  
+  
+ Die <xref:System.Web.UI.Design.ConnectionStringsExpressionEditor.GetExpressionEditorSheet%2A?displayProperty=nameWithType>-Methode gibt ein <xref:System.Web.UI.Design.ResourceExpressionEditorSheet>-Objekt zurück. Klicken Sie im Dialogfeld Ausdrücke beim Auswählen einer Steuerelementeigenschaft und binden es auf eine Ressourcenausdruck der visuelle Designer Ruft die <xref:System.Web.UI.Design.ResourceExpressionEditor.GetExpressionEditorSheet%2A> Methode. Der visuelle Designer verwendet das zurückgegebene <xref:System.Web.UI.Design.ResourceExpressionEditorSheet> Objekt, das zur Eingabe der <xref:System.Web.UI.Design.ResourceExpressionEditorSheet.ClassKey%2A> und <xref:System.Web.UI.Design.ResourceExpressionEditorSheet.ResourceKey%2A> Eigenschaften. Nachdem die Ressourceneigenschaften der Ausdruck ausgewählt sind, ruft der visuelle Designer die <xref:System.Web.UI.Design.ResourceExpressionEditorSheet.GetExpression%2A> Methode, um die Eigenschaften in einer Ressourcenzeichenfolge für den Ausdruck zu kombinieren.  
+  
+ Die <xref:System.Web.UI.Design.ResourceExpressionEditorSheet.ResourceKey%2A> Eigenschaft muss angegeben werden, in einem Ressourcenausdruck, den Ressourcenwert indiziert. Die <xref:System.Web.UI.Design.ResourceExpressionEditorSheet.ClassKey%2A> Eigenschaft ist optional. Er verweist auf den Klassennamen Schlüssel oder eine Datei, der die Ressource im Ordner "globale Ressourcen" definiert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Binden der <xref:System.Web.UI.WebControls.HyperLink.Text%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.HyperLink> Steuerelement mit einer Ressource Ausdruck mithilfe der <xref:System.Web.UI.Design.ResourceExpressionEditor>. So verwenden Sie das Beispiel:  
+  
+1.  Fügen Sie in einer Website-Projekt eine neue Ressourcendatei mit der Bezeichnung Strings.resx der Ordner "App_GlobalResources" hinzu.  
+  
+2.  Fügen Sie eine Zeichenfolge mit dem Namen `myLinkText` auf die Ressource Strings.resx Datei, und legen Sie den Wert auf den Text für ein <xref:System.Web.UI.WebControls.HyperLink> Steuerelement. Legen Sie z. B. die `myLinkText` Zeichenfolgenwert `This is a link`.  
+  
+3.  Fügen Sie in einer ASP.NET-Webseite ein <xref:System.Web.UI.WebControls.HyperLink> Steuerelement.  
+  
+4.  Im Eigenschaftenraster für die `Hyperlink` steuern, und klicken Sie auf **Ausdrücke**, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**...) ** um das Dialogfeld für die Bindung des Ausdrucks anzuzeigen.  
+  
+5.  Wählen Sie die `Text` Eigenschaft von einem Steuerelement, und legen **Ausdruckstyp** auf die `Resources` Ausdruckstyp. Der visuelle Designer zeigt die Ressourceneigenschaften-Ausdruck definiert, indem die <xref:System.Web.UI.Design.ResourceExpressionEditorSheet> Objekt.  
+  
+6.  Legen Sie die **Ausdruckseigenschaften** wie folgt:  
+  
+    -   Legen Sie **LocalizedText** auf `Strings`, der Klassenname für die kompilierte Ressourcendatei Strings.resx.  
+  
+    -   Legen Sie **ResourceKey** zu `myLinkText`, den Zeichenfolgennamen in Strings.resx.  
+  
+ Der visuelle Designer verwendet die <xref:System.Web.UI.Design.ResourceExpressionEditor> -Objekt, weisen Sie den Ressourcenausdruck für die `Text` Eigenschaft. Die folgende Aspx-Quelle zeigt ein Beispiel für einen Eigenschaftswert, der mithilfe eines Ressourcenausdrucks festgelegt:  
+  
+ [!code-aspx-csharp[ControlsUsingExpressions#3](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlsUsingExpressions/CS/controlsusingexpressionscs.aspx#3)]
+ [!code-aspx-vb[ControlsUsingExpressions#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlsUsingExpressions/VB/controlsusingexpressionsvb.aspx#3)]
+ [!code-xml[ControlsUsingExpressions#3](~/samples/snippets/common/VS_Snippets_WebNet/ControlsUsingExpressions/Common/controlsusingexpressions.xml#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceExpressionEditorSheet (string expression, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string expression, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ResourceExpressionEditorSheet.#ctor(System.String,System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Ein Ressourcenausdruck verwendet, um das Blatt der Ausdrucks-Editor zu initialisieren.</param>
+        <param name="serviceProvider">Eine Implementierung von Service Provider bereitgestellten vom Designerhost verwendet, um zusätzliche Entwurfszeitdienste abzurufen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.ResourceExpressionEditorSheet" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der ursprüngliche <xref:System.Web.UI.Design.ResourceExpressionEditorSheet.ClassKey%2A> und <xref:System.Web.UI.Design.ResourceExpressionEditorSheet.ResourceKey%2A> Eigenschaftswerte festgelegt werden, werden die Eingabe `expression` Zeichenfolge. Die <xref:System.Web.UI.Design.ExpressionEditorSheet.ServiceProvider%2A> Eigenschaft festgelegt ist, verwenden die Eingabe `serviceProvider` Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassKey">
+      <MemberSignature Language="C#" Value="public string ClassKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClassKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ResourceExpressionEditorSheet.ClassKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schlüssel, der den Dateinamen für die Ressource im globalen Ressourcenordner des Projekts entspricht.</summary>
+        <value>Der Schlüssel für eine Ressourcendatei im Ordner "globale Ressource".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], globaler Ressourcendateien die befinden sich im Ordner "App_GlobalResources".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpression">
+      <MemberSignature Language="C#" Value="public override string GetExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetExpression() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ResourceExpressionEditorSheet.GetExpression" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Ressource zurück, die durch die Eigenschaftswerte des Ausdrucks-Editor Blatt gebildet wird.</summary>
+        <returns>Die Ressource Ausdruckszeichenfolge für die aktuellen Einstellungen in der Tabelle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public override bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ResourceExpressionEditorSheet.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Ressource Ausdruckszeichenfolge gültig ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Ressource Ausdruckszeichenfolge gültig ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt diese basisimplementierung immer `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceKey">
+      <MemberSignature Language="C#" Value="public string ResourceKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResourceKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ResourceExpressionEditorSheet.ResourceKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.ResourceExpressionEditorSheet/ResourceKeyTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Ressource, die als Schlüssel verwendet wird, um den Ressourcenwert suchen.</summary>
+        <value>Der Name der Ressource.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ResourceExpressionEditorSheet.ResourceKey%2A> Eigenschaft ist für eine Ressourcenausdruck erforderlich; Es gibt den Namen der Ressource. Der Name der Ressource wird zur sowohl auch zur Entwurfszeit ausführen, suchen Sie nach einer Ressource, und weisen diese einer Steuerelementeigenschaft verwendet.  
+  
+ Z. B. wenn die <xref:System.Web.UI.WebControls.Label.Text%2A> -Eigenschaft für eine <xref:System.Web.UI.WebControls.Label> Steuerelement wird an den Ressourcenausdruck zugewiesen `<%$ Resources:Strings, labelText $>`, der Ressourcenausdruck wird ausgewertet und die <xref:System.Web.UI.WebControls.Label.Text%2A> Feld zugewiesen wird die `labelText` Ressourcenwert in der `Strings` Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

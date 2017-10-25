@@ -1,0 +1,108 @@
+<Type Name="QueryInterceptorAttribute" FullName="System.Data.Services.QueryInterceptorAttribute">
+  <TypeSignature Language="C#" Value="public sealed class QueryInterceptorAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit QueryInterceptorAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.QueryInterceptorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:System.Data.Services.QueryInterceptorAttribute" /> merkt Sie es auf eine Methode als einen Abfrage-Interceptor für die angegebene Entitätenmenge.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entität Autorisierung und Überprüfung von Methoden mit implementiert ist die <xref:System.Data.Services.QueryInterceptorAttribute>. [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)]s Sicherheitsrichtlinien nicht implementieren aber stattdessen Geben Sie die erforderliche Infrastruktur für Dienstentwickler zum Schreiben von eigenen Sicherheitsregeln und Business-Validierung.  
+  
+ Zugriffssteuerung der Entitätenmenge und Überprüfung wird durch die Abfragevorgänge aktiviert, mithilfe der abfragekomposition. Um entitätsbasierten Zugriff steuern, implementieren Sie eine Methode-pro-Entitätenmenge gemäß den folgenden Regeln:  
+  
+ Die Methode muss einen öffentlichen Bereich aufweisen und mit Anmerkungen versehen werden, mit der <xref:System.Data.Services.QueryInterceptorAttribute>, wobei der Name einer Entität als Parameter festgelegt.  
+  
+ Die Methode darf keine Parameter akzeptieren.  
+  
+ Die Methode muss einen Ausdruck vom Typ zurückgeben `Expression<Func<T, bool>>` also den Filter für die Entitätenmenge gebildet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel steuert den Zugriff auf die `Customers` Entitätenmenge. Jede `Customer` sehen nur `Orders` zugeordnet sind, `Customer`.  
+  
+```  
+[QueryInterceptor("Orders")]  
+public Expression<Func<Order, bool>> FilterOrders()   
+{  
+    return o => o.Customer.Name == /* Current principal name. */;  
+}   
+  
+// Insures that the user accessing the customer(s) has the appropriate  
+// rights as defined in the QueryRules object to access the customer  
+// resource(s).  
+  
+[QueryInterceptor ("Customers")]  
+public Expression<Func<Customer, bool>> FilterCustomers()   
+{  
+  return c => c.Name == /* Current principal name. */ &&  
+              this.CurrentDataSource.QueryRules.Contains(  
+                rule => rule.Name == c.Name &&  
+                        rule.CustomerAllowedToQuery == true  
+              );  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryInterceptorAttribute (string entitySetName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string entitySetName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.QueryInterceptorAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="entitySetName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entitySetName">Der Name der Entitätenmenge, die die Entität enthält, für die der Interceptor gilt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.Services.QueryInterceptorAttribute" /> Klasse für die angegebene Entitätenmenge der <paramref name="entitySetName" /> Parameter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntitySetName">
+      <MemberSignature Language="C#" Value="public string EntitySetName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EntitySetName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.QueryInterceptorAttribute.EntitySetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Entitätenmenge, die die Entität enthält, für die der Interceptor gilt.</summary>
+        <value>Eine Zeichenfolge, die den Namen des Entitätssatzes, die die Entität enthält angibt, für die der Interceptor gilt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

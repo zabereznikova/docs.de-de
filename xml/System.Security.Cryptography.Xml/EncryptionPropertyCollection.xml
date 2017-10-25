@@ -1,0 +1,705 @@
+<Type Name="EncryptionPropertyCollection" FullName="System.Security.Cryptography.Xml.EncryptionPropertyCollection">
+  <TypeSignature Language="C#" Value="public sealed class EncryptionPropertyCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EncryptionPropertyCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" />-Klassen dar, die bei der XML-Verschlüsselung verwendet werden. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.EncryptionProperty> -Klasse kapselt die `<EncryptionProperty>` Element definiert, die von der Spezifikation des World Wide Web Consortium XML-Verschlüsselung unter http://www.w3.org/TR/xmlenc-core/ befindet.  
+  
+ Verwenden der <xref:System.Security.Cryptography.Xml.EncryptionProperty> Klasse, um zusätzliche Verschlüsselung Informationen im Zusammenhang mit der <xref:System.Security.Cryptography.Xml.EncryptedData> und <xref:System.Security.Cryptography.Xml.EncryptedKey> Elemente.  Diese Klasse können Sie z. B. einen Zeitstempel angeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird verschlüsselt und entschlüsselt ein XML-Dokument.  Dieses Codebeispiel erstellt eine <xref:System.Security.Cryptography.Xml.EncryptionProperty> -Objekt, das benutzerdefinierte Informationen enthält, zu der <xref:System.Security.Cryptography.Xml.EncryptedKey> Element, und fügt die <xref:System.Security.Cryptography.Xml.EncryptionProperty> -Objekt an die <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> Auflistung von der <xref:System.Security.Cryptography.Xml.EncryptedXml> Klasse.  Dieses Codebeispiel zeigt außerdem Informationen zu den <xref:System.Security.Cryptography.Xml.EncryptionProperty> Objekt und die <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> Auflistung.  
+  
+ [!code-csharp[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/vb/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncryptionPropertyCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird verschlüsselt und entschlüsselt ein XML-Dokument.  Dieses Codebeispiel erstellt eine <xref:System.Security.Cryptography.Xml.EncryptionProperty> -Objekt, das benutzerdefinierte Informationen enthält, zu der <xref:System.Security.Cryptography.Xml.EncryptedKey> Element, und fügt die <xref:System.Security.Cryptography.Xml.EncryptionProperty> -Objekt an die <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> Auflistung von der <xref:System.Security.Cryptography.Xml.EncryptedXml> Klasse.  Dieses Codebeispiel zeigt außerdem Informationen zu den <xref:System.Security.Cryptography.Xml.EncryptionProperty> Objekt und die <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> Auflistung.  
+  
+ [!code-csharp[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Security.Cryptography.Xml.EncryptionProperty value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Security.Cryptography.Xml.EncryptionProperty value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.Add(System.Security.Cryptography.Xml.EncryptionProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Security.Cryptography.Xml.EncryptionProperty" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> hinzuzufügendes Objekt die <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt.</param>
+        <summary>Fügt dem <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" />-Objekt ein <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" />-Objekt hinzu.</summary>
+        <returns>Die Position, an der das neue Element eingefügt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird verschlüsselt und entschlüsselt ein XML-Dokument.  Dieses Codebeispiel erstellt eine <xref:System.Security.Cryptography.Xml.EncryptionProperty> -Objekt, das benutzerdefinierte Informationen enthält, zu der <xref:System.Security.Cryptography.Xml.EncryptedKey> Element, und fügt die <xref:System.Security.Cryptography.Xml.EncryptionProperty> -Objekt an die <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> Auflistung von der <xref:System.Security.Cryptography.Xml.EncryptedXml> Klasse.  Dieses Codebeispiel zeigt außerdem Informationen zu den <xref:System.Security.Cryptography.Xml.EncryptionProperty> Objekt und die <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> Auflistung.  
+  
+ [!code-csharp[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Security.Cryptography.Xml.EncryptionProperty value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Security.Cryptography.Xml.EncryptionProperty value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.Contains(System.Security.Cryptography.Xml.EncryptionProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Security.Cryptography.Xml.EncryptionProperty" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> in zu suchende Objekt die <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt.</param>
+        <summary>Bestimmt, ob die <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt enthält eine bestimmte <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> Objekt befindet sich der <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" /> -Objekt, das das Ziel der aus kopierten Elemente ist die <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt in ein Array, beginnend an einem bestimmten Arrayindex begonnen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Security.Cryptography.Xml.EncryptionProperty[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Security.Cryptography.Xml.EncryptionProperty[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.CopyTo(System.Security.Cryptography.Xml.EncryptionProperty[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Security.Cryptography.Xml.EncryptionProperty[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale Array von <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" />-Objekten, in das die Elemente aus dem <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" />-Objekt kopiert werden. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente des <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" />-Objekts in ein Array von <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" />-Objekten, beginnend bei einem bestimmten Arrayindex.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptionPropertyCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt.</summary>
+        <value>Die Anzahl der Elemente, die im <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" />-Objekt enthalten sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird verschlüsselt und entschlüsselt ein XML-Dokument.  Dieses Codebeispiel erstellt eine <xref:System.Security.Cryptography.Xml.EncryptionProperty> -Objekt, das benutzerdefinierte Informationen enthält, zu der <xref:System.Security.Cryptography.Xml.EncryptedKey> Element, und fügt die <xref:System.Security.Cryptography.Xml.EncryptionProperty> -Objekt an die <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> Auflistung von der <xref:System.Security.Cryptography.Xml.EncryptedXml> Klasse.  Dieses Codebeispiel zeigt außerdem Informationen zu den <xref:System.Security.Cryptography.Xml.EncryptionProperty> Objekt und die <xref:System.Security.Cryptography.Xml.EncryptionPropertyCollection> Auflistung.  
+  
+ [!code-csharp[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptionProperty#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptionProperty/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator, der durchläuft ein <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> -Objekt, das zum Durchlaufen verwendet werden kann ein <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Enumeratoren können die Daten in der Auflistung nur gelesen. Mit Enumeratoren können nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Security.Cryptography.Xml.EncryptionProperty value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Security.Cryptography.Xml.EncryptionProperty value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.IndexOf(System.Security.Cryptography.Xml.EncryptionProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Security.Cryptography.Xml.EncryptionProperty" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> in zu suchende Objekt die <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt.</param>
+        <summary>Bestimmt den Index eines bestimmten Elements in der <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt.</summary>
+        <returns>Der Index des <paramref name="value" /> Wenn in der Auflistung gefunden wurde, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Security.Cryptography.Xml.EncryptionProperty value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Security.Cryptography.Xml.EncryptionProperty value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.Insert(System.Int32,System.Security.Cryptography.Xml.EncryptionProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Security.Cryptography.Xml.EncryptionProperty" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Wert</c> eingefügt werden soll.</param>
+        <param name="value">Ein <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> Objekt zum Einfügen in die <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt.</param>
+        <summary>Fügt eine <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> -Objekt in der <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt an der angegebenen Position.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptionPropertyCollection.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" />-Objekt eine feste Größe hat.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" />-Objekt eine feste Größe hat, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Auflistung mit fester Größe lässt das Hinzufügen oder Entfernen von Elementen nach dem die Auflistung erstellt, aber die Änderung von vorhandenen Elementen lässt nicht zu.  
+  
+ Eine Auflistung mit fester Größe ist eine Auflistung mit einem Wrapper, der verhindert, dass hinzufügen und Entfernen von Elementen. Deshalb spiegelt die Auflistung mit fester Größe zum Änderungen vorgenommen werden, auf die zugrunde liegende Auflistung, z. B. das Hinzufügen oder Entfernen von Elementen, die Änderungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptionPropertyCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" />-Objekt schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" />-Objekt schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine schreibgeschützte Auflistung gestattet nach dem Erstellen der Auflistung weder das Hinzufügen noch das Ändern oder Entfernen von Elementen.  
+  
+ Eine Auflistung, die schreibgeschützt ist, ist eine Auflistung mit einem Wrapper, der verhindert, dass die Auflistung ändern; Wenn Änderungen an der zugrunde liegenden Auflistung vorgenommen werden, spiegelt die schreibgeschützte Auflistung daher diese Änderungen wider.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptionPropertyCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Zugriff auf die <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> -Objekt synchronisiert (threadsicher).</summary>
+        <value>
+          <see langword="true" />, wenn der Zugriff auf das <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" />-Objekt synchronisiert (threadsicher) ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.EncryptionProperty Item (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Cryptography.Xml.EncryptionProperty Item(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.Item(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.EncryptionProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des zurückzugebenden <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" />-Objekts.</param>
+        <summary>Gibt die <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> Objekt am angegebenen Index.</summary>
+        <returns>Das <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" />-Objekt am angegebenen Index.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemOf">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.EncryptionProperty this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.EncryptionProperty ItemOf(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptionPropertyCollection.ItemOf(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.EncryptionProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des zurückzugebenden <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" />-Objekts.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> Objekt am angegebenen Index.</summary>
+        <value>Das <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" />-Objekt am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Security.Cryptography.Xml.EncryptionProperty value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Security.Cryptography.Xml.EncryptionProperty value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.Remove(System.Security.Cryptography.Xml.EncryptionProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Security.Cryptography.Xml.EncryptionProperty" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> Objekt, das Aufheben der <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt.</param>
+        <summary>Entfernt das erste Vorkommen eines bestimmten <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> -Objekt aus der <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" />-Objekts.</param>
+        <summary>Entfernt die <see cref="T:System.Security.Cryptography.Xml.EncryptionProperty" /> Objekt am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptionPropertyCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf das <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" />-Objekt synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf das <see cref="T:System.Security.Cryptography.Xml.EncryptionPropertyCollection" />-Objekt synchronisiert werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das <see cref="T:System.Object" />, das in <see cref="T:System.Collections.IList" /> eingefügt werden soll.</param>
+        <summary>Fügt der <see cref="T:System.Collections.IList" /> ein Element hinzu.</summary>
+        <returns>Die Position, an der das neue Element eingefügt wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />verwendet einen falschen Objekttyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das <see cref="T:System.Object" />, das in der <see cref="T:System.Collections.IList" /> gesucht werden soll.</param>
+        <summary>Ermittelt, ob die <see cref="T:System.Collections.IList" /> einen bestimmten Wert enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn <see cref="T:System.Object" /> in der <see cref="T:System.Collections.IList" /> gefunden wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />verwendet einen falschen Objekttyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das <see cref="T:System.Object" />, das in der <see cref="T:System.Collections.IList" /> gesucht werden soll.</param>
+        <summary>Bestimmt den Index eines bestimmten Elements in der <see cref="T:System.Collections.IList" />.</summary>
+        <returns>Der Index von <paramref name="value" />, wenn das Element in der Liste gefunden wird, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />verwendet einen falschen Objekttyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Wert</c> eingefügt werden soll.</param>
+        <param name="value">Die <see cref="T:System.Object" /> zum Einfügen in die <see cref="T:System.Collections.IList" />.</param>
+        <summary>Fügt am angegebenen Index ein Element in die <see cref="T:System.Collections.IList" /> ein.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />verwendet einen falschen Objekttyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptionPropertyCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der <see cref="T:System.Object" />, der aus der <see cref="T:System.Collections.IList" /> entfernt werden soll.</param>
+        <summary>Ruft das Element am angegebenen Index ab.</summary>
+        <value>Das Element am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionPropertyCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der <see cref="T:System.Object" />, der aus der <see cref="T:System.Collections.IList" /> entfernt werden soll.</param>
+        <summary>Entfernt das erste Vorkommen eines angegebenen Objekts aus der <see cref="T:System.Collections.IList" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />verwendet einen falschen Objekttyp.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

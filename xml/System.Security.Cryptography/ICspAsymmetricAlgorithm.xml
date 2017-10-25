@@ -1,0 +1,151 @@
+<Type Name="ICspAsymmetricAlgorithm" FullName="System.Security.Cryptography.ICspAsymmetricAlgorithm">
+  <TypeSignature Language="C#" Value="public interface ICspAsymmetricAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICspAsymmetricAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.ICspAsymmetricAlgorithm" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Methoden, die einer <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm" />-Klasse das Aufzählen von Schlüsselcontainerinformationen und das Importieren und Exportieren von Microsoft CAPI-kompatiblen (Cryptographic API) Schlüssel-Blobs ermöglichen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, Erweitern der <xref:System.Security.Cryptography.AsymmetricAlgorithm> Klasse implementieren sollten die <xref:System.Security.Cryptography.ICspAsymmetricAlgorithm> Schnittstelle zum Auflisten von Schlüsselcontainer Informationen mithilfe einer <xref:System.Security.Cryptography.CspKeyContainerInfo> -Objekt, sowie zum Importieren und Exportieren von Microsoft Cryptographic API (CAPI) – kompatibel Schlüssel-Blobs.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CspKeyContainerInfo">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CspKeyContainerInfo CspKeyContainerInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CspKeyContainerInfo CspKeyContainerInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ICspAsymmetricAlgorithm.CspKeyContainerInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CspKeyContainerInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Security.Cryptography.CspKeyContainerInfo" />-Objekt ab, das zusätzliche beschreibende Informationen zu einem kryptografischen Schlüsselpaar enthält.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.CspKeyContainerInfo" />-Objekt, das zusätzliche beschreibende Informationen zu einem kryptografischen Schlüsselpaar enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:System.Security.Cryptography.CspKeyContainerInfo> Objekt angibt, ob der Schlüssel exportierbar ist, und den Schlüsselcontainernamen, Informationen zum Anbieter und andere Informationen stellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportCspBlob">
+      <MemberSignature Language="C#" Value="public byte[] ExportCspBlob (bool includePrivateParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] ExportCspBlob(bool includePrivateParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ICspAsymmetricAlgorithm.ExportCspBlob(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includePrivateParameters">
+          <see langword="true" />, wenn der private Schlüssel enthalten sein soll, anderenfalls <see langword="false" />.</param>
+        <summary>Exportiert ein BLOB, das die Schlüsselinformationen enthält, die einem <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm" />-Objekt zugeordnet sind.</summary>
+        <returns>Ein Bytearray, das die Schlüsselinformationen enthält, die einem <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm" />-Objekt zugeordnet sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.ICspAsymmetricAlgorithm.ExportCspBlob%2A> -Methode gibt ein Blob, die Schlüsselinformationen enthält, die mit der nicht verwaltete Microsoft Cryptographic API (CAPI) kompatibel ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportCspBlob">
+      <MemberSignature Language="C#" Value="public void ImportCspBlob (byte[] rawData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ImportCspBlob(unsigned int8[] rawData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ICspAsymmetricAlgorithm.ImportCspBlob(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rawData">Ein Bytearray, das ein BLOB für asymmetrische Schlüssel darstellt.</param>
+        <summary>Importiert ein BLOB, das Informationen zu asymmetrischen Schlüsseln darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.ICspAsymmetricAlgorithm.ImportCspBlob%2A> Methode initialisiert die Schlüsseldaten für ein <xref:System.Security.Cryptography.AsymmetricAlgorithm> -Objekt mithilfe eines BLOBs, die mit der nicht verwaltete Microsoft Cryptographic API (CAPI) kompatibel ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1333 @@
+<Type Name="Timeline" FullName="System.Windows.Media.Animation.Timeline">
+  <TypeSignature Language="C#" Value="public abstract class Timeline : System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Timeline extends System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.Timeline" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Animatable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.RuntimeNameProperty("Name")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert einen Zeitabschnitt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Zeitachse stellt einen Zeitabschnitt dar.  Sie bietet Eigenschaften, mit denen Sie z.B. die Länge dieses Abschnitts, seinen Start, die Anzahl der Wiederholungen und die Geschwindigkeit des Fortschreitens der Zeit im Abschnitt Segment angeben.  
+  
+ Klassen, die von der Timeline-Klasse erben, bieten zusätzliche Funktionen, wie z.B. Animation und Medienwiedergabe. Es folgen Beispiele für einige der verschiedenen Typen von spezialisierten Zeitplänen verfügbar.  
+  
+-   **Animationen**: eine <xref:System.Windows.Media.Animation.AnimationTimeline> ist ein Typ von Zeitachse, der Ausgabewerte erzeugt. Wenn Sie eine Animation mit einer Eigenschaft zuordnen, aktualisiert die Animation den Wert der Eigenschaft, bei der Wiedergabe, wodurch die "Animation" es. Eine Einführung in Animationen, finden Sie unter [Übersicht über Animation](~/docs/framework/wpf/graphics-multimedia/animation-overview.md). Informationen über die verschiedenen Methoden zum Anwenden von Animationen finden Sie unter der [Property Animation Techniques Overview](~/docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
+  
+-   **MediaTimelines**: ein <xref:System.Windows.Media.MediaTimeline> ist ein Zeitplan, der die Wiedergabe einer Mediendatei steuert.  
+  
+-   **ParallelTimelines**: ein <xref:System.Windows.Media.Animation.ParallelTimeline> ist ein Typ der Zeitachse, die andere Zeitachsen gruppiert.  
+  
+-   **Storyboards**: ein <xref:System.Windows.Media.Animation.Storyboard> ist eine besondere Art von <xref:System.Windows.Media.Animation.ParallelTimeline> Objekt und Eigenschaft Zielinformationen für die Zeitachsen, er enthält, bereitstellt. Weitere Informationen zu <xref:System.Windows.Media.Animation.Storyboard> anzuzeigen, die [Storyboards Overview](~/docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+  
+ Weitere Informationen zum Verwenden von Zeitplänen finden Sie unter der [Übersicht über Animation](~/docs/framework/wpf/graphics-multimedia/animation-overview.md). Eine Einführung in die Funktionen der zeitlichen Steuerung von Zeitachsen werden soll, finden Sie unter der [Timing Behaviors Overview](~/docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md).  
+  
+## <a name="data-binding-and-animating-timelines"></a>Datenbindung und Animieren von Zeitplänen  
+ Die meisten Zeitachse Eigenschaften können Daten gebunden oder animiert werden; Allerdings wird aufgrund der Art und Weise die Zeitsteuerungssystems funktioniert, ein datengebundenen oder animierte Zeitachsen keine anderen Daten verhalten sich wie gebunden oder animierte Objekte. Um ihr Verhalten zu verstehen, sollten sie wissen, worum es sich dabei um einen Zeitplan zu aktivieren.  
+  
+ Wenn eine Zeitachse angewendet wird, werden Kopien der Zeitachse und deren untergeordnete Zeitachsen erstellt. Diese Kopien werden gesperrt (schreibgeschützt) und <xref:System.Windows.Media.Animation.Clock> Objekte daraus erstellt werden. Es ist diese Uhren, die den eigentlichen Animieren der Zieleigenschaften ausführen. Wenn eine Zeitachse war datengebunden oder animiert wird, eine Momentaufnahme der aktuellen Werte wurde vorgenommen, die Uhr erstellt wurde. Obwohl möglicherweise so ändern Sie die ursprünglichen Zeitplan fortgesetzt, nicht die Uhr.  
+  
+ Eine Zeitachse Daten Bindung oder Animation widerzuspiegeln muss die Uhr neu generiert werden. Uhren werden nicht automatisch neu generiert. Im Folgenden werden verschiedene Methoden beschrieben, wie Änderungen der Zeitachse übernommen werden können:  
+  
+-   Wenn die Zeitachse oder gehört zu einer <xref:System.Windows.Media.Animation.Storyboard>, haben, damit es die Änderungen zu berücksichtigen, durch die erneute Anwendung der Storyboard mit einer <xref:System.Windows.Media.Animation.BeginStoryboard> oder <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> Methode. Dies hat den Nebeneffekt, dass auch die Animation neu gestartet wird. Im Code können Sie die <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> Methode, um das Storyboard zu wechseln zur vorherigen Position zurück.  
+  
+-   Wenn Sie eine Animation direkt an eine Eigenschaft mit der <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> -Methode, rufen die <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> -Methode erneut und übergeben sie die Animation, die geändert wurden, ist.  
+  
+-   Wenn Sie direkt auf der Uhrebene arbeiten, erstellen Sie einen neuen Satz von Uhren, und verwenden sie diese, um den zuvor generierten Satz von Uhren zu ersetzen.  
+  
+ Ein Beispiel einer Animation gebunden ist, finden Sie unter der [Key Spline Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160011) .  
+  
+## <a name="using-a-timeline-as-a-timer"></a>Verwenden eine Zeitachse als Zeitgeber  
+ Uhr einer Zeitachse wird nur ausgeführt, wenn ein Ereignishandler zugeordnet ist oder (im Fall von einem <xref:System.Windows.Media.Animation.AnimationClock> Objekt) eine Eigenschaft zugeordnet ist. Aus diesem Grund (und andere), wird nicht empfohlen, Sie verwenden eine <xref:System.Windows.Media.Animation.Timeline> als Zeitgeber.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Timeline ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.Timeline" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Timeline (Nullable&lt;TimeSpan&gt; beginTime);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; beginTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.#ctor(System.Nullable{System.TimeSpan})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="beginTime" Type="System.Nullable&lt;System.TimeSpan&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="beginTime">Die Zeit, zu der diese <see cref="T:System.Windows.Media.Animation.Timeline" /> beginnen soll. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" />-Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.Timeline" />-Klasse mit der angegebenen <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Timeline (Nullable&lt;TimeSpan&gt; beginTime, System.Windows.Duration duration);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; beginTime, valuetype System.Windows.Duration duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.#ctor(System.Nullable{System.TimeSpan},System.Windows.Duration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="beginTime" Type="System.Nullable&lt;System.TimeSpan&gt;" />
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="beginTime">Die Zeit, zu der diese <see cref="T:System.Windows.Media.Animation.Timeline" /> beginnen soll. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" />-Eigenschaft.</param>
+        <param name="duration">Die Zeitdauer, für die diese Zeitachse spielt Wiederholungen wird dabei nicht mitgezählt. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Windows.Media.Animation.Timeline.Duration" />-Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.Timeline" />-Klasse mit den angegebenen <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" /> und dem angegebenen <see cref="P:System.Windows.Media.Animation.Timeline.Duration" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A>  
+  
+ <xref:System.Windows.Media.Animation.Timeline.Duration%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Timeline (Nullable&lt;TimeSpan&gt; beginTime, System.Windows.Duration duration, System.Windows.Media.Animation.RepeatBehavior repeatBehavior);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; beginTime, valuetype System.Windows.Duration duration, valuetype System.Windows.Media.Animation.RepeatBehavior repeatBehavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.#ctor(System.Nullable{System.TimeSpan},System.Windows.Duration,System.Windows.Media.Animation.RepeatBehavior)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="beginTime" Type="System.Nullable&lt;System.TimeSpan&gt;" />
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+        <Parameter Name="repeatBehavior" Type="System.Windows.Media.Animation.RepeatBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="beginTime">Die Zeit, zu der diese <see cref="T:System.Windows.Media.Animation.Timeline" /> beginnen soll. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" />-Eigenschaft.</param>
+        <param name="duration">Die Zeitdauer, für die diese Zeitachse spielt Wiederholungen wird dabei nicht mitgezählt. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Windows.Media.Animation.Timeline.Duration" />-Eigenschaft.</param>
+        <param name="repeatBehavior">Das Wiederholungsverhalten dieser Zeitachse, entweder als Iteration <see cref="P:System.Windows.Media.Animation.RepeatBehavior.Count" /> oder eine Wiederholung <see cref="P:System.Windows.Media.Animation.RepeatBehavior.Duration" />. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Windows.Media.Animation.Timeline.RepeatBehavior" />-Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Animation.Timeline" /> Klasse mit dem angegebenen <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" />, <see cref="P:System.Windows.Media.Animation.Timeline.Duration" />, und <see cref="P:System.Windows.Media.Animation.Timeline.RepeatBehavior" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A>  
+  
+ <xref:System.Windows.Media.Animation.Timeline.Duration%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccelerationRatio">
+      <MemberSignature Language="C#" Value="public double AccelerationRatio { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 AccelerationRatio" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Timeline.AccelerationRatio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt diesen fest, der den Prozentsatz der <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> der Zeitachse angibt, der für die Beschleunigung des Zeitverlaufs von null bis zur maximalen Rate aufgewendet wird.</summary>
+        <value>Ein Wert von 0 bis 1, der den Prozentsatz der <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> der Zeitachse angibt, der für die Beschleunigung des Zeitverlaufs von null bis zur maximalen Rate aufgewendet wird. Wenn die <see cref="P:System.Windows.Media.Animation.Timeline.DecelerationRatio" />-Eigenschaft der Zeitachse auch festgelegt ist, muss die Summe von <see cref="P:System.Windows.Media.Animation.Timeline.AccelerationRatio" /> und <see cref="P:System.Windows.Media.Animation.Timeline.DecelerationRatio" /> kleiner als oder gleich 1 sein. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> Eigenschaft Animationen erstellen, die langsam gestartet, und klicken Sie dann im Laufe der Zeit beschleunigen. Die <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> Eigenschaft ist nützlich zum Erstellen einfache in Effekte oder Verschiebung natürlicher erscheinen. Verwenden der <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> und <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> Eigenschaften zusammen, um Animationen erstellen, die die langsam beginnen beschleunigen, und klicken Sie dann erneut, bevor Sie Beenden verlangsamt.  
+  
+<a name="dependencyPropertyInfo_AccelerationRatio"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.Timeline.AccelerationRatioProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Media.Animation.Timeline.AccelerationRatio" /> ist kleiner als 0 (null) oder größer als 1.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Summe von <see cref="P:System.Windows.Media.Animation.Timeline.AccelerationRatio" /> und <see cref="P:System.Windows.Media.Animation.Timeline.DecelerationRatio" /> überschreitet 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AccelerationRatioProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AccelerationRatioProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AccelerationRatioProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.Timeline.AccelerationRatioProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.Timeline.AccelerationRatio" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllocateClock">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Media.Animation.Clock AllocateClock ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Windows.Media.Animation.Clock AllocateClock() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.AllocateClock" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Clock</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine <see cref="T:System.Windows.Media.Animation.Clock" /> dafür <see cref="T:System.Windows.Media.Animation.Timeline" />.</summary>
+        <returns>Eine Uhr für diese <see cref="T:System.Windows.Media.Animation.Timeline" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> Methode und sollte nicht direkt von Ihrem Code aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Implementierer der <see cref="T:System.Windows.Media.Animation.Timeline" /> sollten diese Methode überschreiben, wenn es sich um eine entsprechende benutzerdefinierte Uhr aufweist, die mit der Klasse verwendet werden soll. Die überschriebene Methode erstellen und eine neue Instanz der Klasse, die von erben zurückgeben sollte <see cref="T:System.Windows.Media.Animation.Clock" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoReverse">
+      <MemberSignature Language="C#" Value="public bool AutoReverse { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoReverse" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Timeline.AutoReverse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Zeitachse nach einem vollständigen Durchgang vorwärts in umgekehrter Reihenfolge abspielt.</summary>
+        <value>
+          <see langword="true" />Wenn die Zeitachse nach dem Ende jedes Durchgangs in umgekehrter Reihenfolge abspielt; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> -Eigenschaftensatz auf `true`, die Zeitachse für zweimal die Länge des angegebenen Zeitintervalls seine <xref:System.Windows.Media.Animation.Timeline.Duration%2A> Eigenschaft.  
+  
+### <a name="autoreverse-and-repetitions"></a>AutoReverse und Wiederholungen  
+ Wenn einer Zeitachse <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> -Eigenschaftensatz auf `true` und seine <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> -Eigenschaft bewirkt, dass es zu wiederholen, jeder forward Iteration folgt ein rückwärts durchlaufen. Dadurch wird eine Wiederholung. Z. B. eine Zeitachse mit der ein <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> Wert `true` mit einer Iteration <xref:System.Windows.Media.Animation.RepeatBehavior.Count%2A> 2 würde Play einmal vorwärts, dann rückwärts, erneut vorwärts und dann rückwärts erneut aus.  
+  
+<a name="dependencyPropertyInfo_AutoReverse"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.Timeline.AutoReverseProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoReverseProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AutoReverseProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AutoReverseProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.Timeline.AutoReverseProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.Timeline.AutoReverse" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTime">
+      <MemberSignature Language="C#" Value="public Nullable&lt;TimeSpan&gt; BeginTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; BeginTime" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Timeline.BeginTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeit fest, zu der diese <see cref="T:System.Windows.Media.Animation.Timeline" /> beginnen soll.</summary>
+        <value>Die Zeit, zu der diese <see cref="T:System.Windows.Media.Animation.Timeline" /> beginnen soll, relativ zu seinem übergeordneten <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" />. Wenn diese Zeitachse eine Stammzeitachse ist, ist die Uhrzeit relativ zu ihrer interaktiven Anfangszeit (dem Zeitpunkt, an dem die Zeitachse ausgelöst wurde). Dieser Wert möglicherweise positiv, negativ oder <see langword="null" />; ein <see langword="null" /> Wert bedeutet, dass die Zeitachse nie wiedergegeben wird. Der Standardwert ist 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> Eigenschaft ist nützlich zum Erstellen von Zeitachsen, in einer Sequenz: infolge einer Erhöhung der <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> von aufeinander folgenden Zeitachsen, die demselben übergeordneten Element gemeinsam nutzen, können Sie staffeln wiedergegeben.  
+  
+## <a name="negative-values"></a>Negative Werte  
+ Eine Negative <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> Werts wird eine <xref:System.Windows.Media.Animation.Timeline> verhält, als wäre er zu einem Zeitpunkt in der Vergangenheit gestartet. Z. B. eine <xref:System.Windows.Media.Animation.Timeline> mit einer <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> von 2,5 Sekunden negativ und ein <xref:System.Windows.Media.Animation.Timeline.Duration%2A> von 5 Sekunden sind offenbar Halb fertig gestellt, wenn er gestartet wird.  
+  
+## <a name="begintime-and-speedratio"></a>BeginTime und SpeedRatio  
+ Die Zeit, die durch beschrieben die <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> -Eigenschaft in der Zeitachse des übergeordneten Zeit gemessen wird. Z. B. eine Zeitachse mit einem <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> 5, dessen übergeordnetes Element besitzt, ein <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> 2 beginnt nach 2,5 Sekunden.  
+  
+ Der Zeitachse selbst <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Einstellung keine Auswirkungen auf die <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A>. Z. B. eine Zeitachse mit der eine <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> von 5 Sekunden ein <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> 2 und einer übergeordneten Zeitachse mit einer <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> 1 startet nach 5 Sekunden nicht 2.5.  
+  
+<a name="dependencyPropertyInfo_BeginTime"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.Timeline.BeginTimeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+<a name="xamlAttributeUsage_BeginTime"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ \<*Objekt* <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A>= "[-] [*Tage*.] *Stunden*:*Minuten*:*Sekunden*[.* FractionalSeconds*] "/ >  
+  
+ \- oder –  
+  
+ \<*Objekt* <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A>= "[-] [*Tage*.] *Stunden*:*Minuten*"/ >  
+  
+ \- oder –  
+  
+ \<*Objekt* <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A>= "[-]*Tage*" / >  
+  
+ \- oder –  
+  
+ \<*Objekt* <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A>= "{[X: Null-Markuperweiterung](~/docs/framework/xaml-services/x-null-markup-extension.md)}" / >  
+  
+<a name="xamlValues_BeginTime"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ Elemente in eckigen Klammern (`[` und `]`) sind optional.  
+  
+ *Tage*  
+ <xref:System.Int32?displayProperty=nameWithType>  
+  
+ Ein Wert größer als oder gleich 0, der die Anzahl der Tage, die von diesem übergreifende beschreibt Anfangszeit.  
+  
+ *Stunden*  
+ <xref:System.Int32?displayProperty=nameWithType>  
+  
+ Anfangszeit für ein Wert zwischen 0 und 23, der die Anzahl der Stunden, die von diesem übergreifende darstellt.  
+  
+ *Minuten*  
+ <xref:System.Int32?displayProperty=nameWithType>  
+  
+ Anfangszeit für ein Wert zwischen 0 und 59, der die Anzahl der Minuten für diese Anfangszeit darstellt.  
+  
+ *Sekunden*  
+ <xref:System.Int32?displayProperty=nameWithType>  
+  
+ Anfangszeit für ein Wert zwischen 0 und 59, der die Anzahl der Sekunden, die von diesem übergreifende darstellt.  
+  
+ *fractionalSeconds*  
+ <xref:System.Int32?displayProperty=nameWithType>  
+  
+ Ein Wert, der mit 1 bis 7 Ziffern, der Bruchteile von Sekunden darstellt.  
+  
+ Für die vollständige <xref:System.TimeSpan> -Syntax finden Sie im Abschnitt "Hinweise" der <xref:System.TimeSpan.Parse%2A> Seite.  
+  
+   
+  
+## Examples  
+ Einer Zeitachse <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> Eigenschaft bestimmt den Anfang des aktiven Zeitraums einer Zeitachse. Wenn die Zeitachse eine übergeordnete Zeitachse verfügt die <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> Eigenschaft bestimmt, wie lange dauert die Zeitachse nach dem Start von seinem übergeordneten Elements. Wenn die Zeitachse eine Stammzeitachse ist (eine <xref:System.Windows.Media.Animation.Storyboard>, z. B.), wird die <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> Eigenschaft bestimmt, wie lange dauert auf die Zeitachse Wiedergabe nach ausgelöst wird.  
+  
+ Das folgende Beispiel zeigt mehrere unterschiedliche Zeitpläne mit verschiedenen <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> Einstellungen.  
+  
+ [!code-xaml[timingbehaviors_snip#_graphicsmm_BeginTimeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/BeginTimeExample.xaml#_graphicsmm_begintimeexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTimeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BeginTimeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BeginTimeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.Timeline.BeginTimeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Timeline Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.Timeline Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Timeline</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Animation.Timeline" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Timeline CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.Timeline CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Timeline</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Animation.Timeline" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Des geklonten Objekts <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft <see langword="false" /> selbst wenn der Quelle <see cref="P:System.Windows.Freezable.IsFrozen" /> Eigenschaft ist <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Completed">
+      <MemberSignature Language="C#" Value="public event EventHandler Completed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Completed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Animation.Timeline.Completed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn diese Zeitachse vollständig beendet wurde: Es wird nicht mehr geben seines Aktivitätszeitraums fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Zeitachse der Stammzeitachse einer Zeitachse-Struktur ist, hat es abgeschlossen, spielen nach des Endes des aktiven Zeitraums erreichen (einschließlich Wiederholungen) und aller diesem untergeordneten Elemente am Ende ihrer aktiven Zeiträume erreicht haben. Wenn diese Zeitachse eine untergeordnete Zeitachse ist, gilt es vollständig abgeschlossen ist wiedergegeben, wenn die Zeitachse der Zeitachsenstruktur, die zu der sie erreicht gehört das Ende seines Aktivitätszeitraums fest und aller untergeordneten Zeitachsen Wiedergabe beendet wurde.  
+  
+ Beenden einer Zeitachse das abgeschlossene Ereignis nicht ausgelöst, jedoch wird auf den Füllzeitraum übersprungen wird.  
+  
+ Die <xref:System.Object> Parameter von der <xref:System.EventHandler> -Ereignishandler ist der Zeitachse <xref:System.Windows.Media.Animation.Clock>.  
+  
+ Obwohl dieser Ereignishandler angezeigt wird, einen Zeitplan zugeordnet werden soll, tatsächlich bei registriert die <xref:System.Windows.Media.Animation.Clock> für diese Zeitachse erstellt.  Weitere Informationen finden Sie unter der [Timing Ereignisübersicht](~/docs/framework/wpf/graphics-multimedia/timing-events-overview.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel zwei <xref:System.Windows.Media.Animation.Storyboard> Objekte dienen zum Erstellen eines Animation Übergangs zwischen zwei Bildern, mit gespeichert <xref:System.Windows.Media.ImageSource> Objekte und angezeigt, mit einer <xref:System.Windows.Controls.Image> Steuerelement. Ein Storyboard verkleinert das Image-Steuerelement, bis er gelöscht wird. Nach Abschluss der alte <xref:System.Windows.Media.ImageSource> wird mit den anderen ausgetauscht <xref:System.Windows.Media.ImageSource>, und ein zweites Storyboard, die das Bild wird erweitert, bis er wieder ist voller Größe zu steuern.  
+  
+ [!code-xaml[timingbehaviors_snip#TimelineCompletedExampleMarkupUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/TimelineCompletedExample.xaml#timelinecompletedexamplemarkupusingwholepage)]  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateClock">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Clock CreateClock ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.Clock CreateClock() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.CreateClock" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Clock</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue, steuerbare <see cref="T:System.Windows.Media.Animation.Clock" /> aus dieser <see cref="T:System.Windows.Media.Animation.Timeline" />. Wenn diese <see cref="T:System.Windows.Media.Animation.Timeline" /> untergeordnete Elemente besitzt, wird eine Struktur von Uhren mit dieser <see cref="T:System.Windows.Media.Animation.Timeline" /> als Stamm erstellt.</summary>
+        <returns>Eine neue, steuerbare, aus dieser <see cref="T:System.Windows.Media.Animation.Timeline" /> erstellte <see cref="T:System.Windows.Media.Animation.Clock" />. Wenn diese <see cref="T:System.Windows.Media.Animation.Timeline" /> eine <see cref="T:System.Windows.Media.Animation.TimelineGroup" /> ist, die untergeordnete Zeitachsen enthält, wird eine Struktur von <see cref="T:System.Windows.Media.Animation.Clock" />-Objekten mit einer steuerbaren <see cref="T:System.Windows.Media.Animation.Clock" /> erstellt, die aus dieser <see cref="T:System.Windows.Media.Animation.Timeline" /> als Stamm erstellt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl dies <xref:System.Windows.Media.Animation.Timeline> möglicherweise das untergeordnete Element von einem oder mehreren <xref:System.Windows.Media.Animation.TimelineGroup> Objekte aufweist, diese Informationen ignoriert: Diese Methode behandelt das aktuelle <xref:System.Windows.Media.Animation.Timeline> als Stamm <xref:System.Windows.Media.Animation.Timeline>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateClock">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Clock CreateClock (bool hasControllableRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.Clock CreateClock(bool hasControllableRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.CreateClock(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Clock</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hasControllableRoot" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="hasControllableRoot">
+          <see langword="true" />Wenn der Stamm <see cref="T:System.Windows.Media.Animation.Clock" /> zurückgegeben zurückgeben sollte eine <see cref="T:System.Windows.Media.Animation.ClockController" /> aus seiner <see cref="P:System.Windows.Media.Animation.Clock.Controller" /> Eigenschaft, damit die <see cref="T:System.Windows.Media.Animation.Clock" /> Struktur kann interaktiv kontrollierten ist, andernfalls <see langword="false" />.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Windows.Media.Animation.Clock" /> aus diesem <see cref="T:System.Windows.Media.Animation.Timeline" /> und gibt an, ob das neue <see cref="T:System.Windows.Media.Animation.Clock" /> steuerbar ist. Wenn diese <see cref="T:System.Windows.Media.Animation.Timeline" /> untergeordnete Elemente besitzt, wird eine Struktur von Uhren mit dieser <see cref="T:System.Windows.Media.Animation.Timeline" /> als Stamm erstellt.</summary>
+        <returns>Ein neues <see cref="T:System.Windows.Media.Animation.Clock" /> erstellt aus dieser <see cref="T:System.Windows.Media.Animation.Timeline" />. Wenn diese <see cref="T:System.Windows.Media.Animation.Timeline" /> eine <see cref="T:System.Windows.Media.Animation.TimelineGroup" /> ist, die untergeordnete Zeitachsen enthält, wird eine Struktur von <see cref="T:System.Windows.Media.Animation.Clock" />-Objekten mit einer steuerbaren <see cref="T:System.Windows.Media.Animation.Clock" /> erstellt, die aus dieser <see cref="T:System.Windows.Media.Animation.Timeline" /> als Stamm erstellt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl dies <xref:System.Windows.Media.Animation.Timeline> möglicherweise das untergeordnete Element von einem oder mehreren <xref:System.Windows.Media.Animation.TimelineGroup> Objekte aufweist, diese Informationen ignoriert: Diese Methode behandelt das aktuelle <xref:System.Windows.Media.Animation.Timeline> als Stamm <xref:System.Windows.Media.Animation.Timeline>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentGlobalSpeedInvalidated">
+      <MemberSignature Language="C#" Value="public event EventHandler CurrentGlobalSpeedInvalidated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CurrentGlobalSpeedInvalidated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Rate zu diesem Zeitpunkt auf der Zeitachse Uhr Änderungen wechselt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle globale Geschwindigkeit einer Zeitachse Uhr Änderungen in den folgenden Umständen:  
+  
+-   Die Uhr ändert Richtung aufgrund der Zeitachse <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> Einstellung.  
+  
+-   Die Uhr beschleunigt oder aufgrund der Zeitachse verlangsamt <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> oder <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> eigenschafteneinstellungen.  
+  
+-   Die Uhr angehalten oder fortgesetzt.  
+  
+-   Die Uhr inaktiv oder reaktiviert werden.  
+  
+-   Die <xref:System.Windows.Media.Animation.Clock.CurrentGlobalSpeed%2A> eines der Uhr übergeordneten Änderungen.  
+  
+ Die <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated> Ereignis ist nützlich zum Nachverfolgen von beim Anhalten einer Zeitachse Uhr; im Ereignishandler, verwenden Sie des Storyboards <xref:System.Windows.Media.Animation.Storyboard.GetCurrentGlobalSpeed%2A> -Methode oder die Kontrollkästchen der Uhr <xref:System.Windows.Media.Animation.Clock.IsPaused%2A> Eigenschaft, um zu bestimmen, ob die Uhr angehalten wird, vergleichen Sie dies gegen ein zuvor zwischengespeicherte Wert angeben, ob sie geändert werden soll.  
+  
+ Die <xref:System.Object> Parameter von der <xref:System.EventHandler> -Ereignishandler ist der Zeitachse <xref:System.Windows.Media.Animation.Clock>.  
+  
+ Obwohl dieser Ereignishandler angezeigt wird, einen Zeitplan zugeordnet werden soll, tatsächlich bei registriert die <xref:System.Windows.Media.Animation.Clock> für diese Zeitachse erstellt.  Weitere Informationen finden Sie unter der [Timing Ereignisübersicht](~/docs/framework/wpf/graphics-multimedia/timing-events-overview.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Registrieren für die <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated> Ereignis.  
+  
+ [!code-csharp[timingbehaviors_procedural_snip#TimelineCurrentGlobalSpeedInvalidatedExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/TimelineCurrentGlobalSpeedInvalidatedExample.cs#timelinecurrentglobalspeedinvalidatedexamplewholepage)]
+ [!code-vb[timingbehaviors_procedural_snip#TimelineCurrentGlobalSpeedInvalidatedExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/timelinecurrentglobalspeedinvalidatedexample.vb#timelinecurrentglobalspeedinvalidatedexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentStateInvalidated">
+      <MemberSignature Language="C#" Value="public event EventHandler CurrentStateInvalidated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CurrentStateInvalidated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die <see cref="P:System.Windows.Media.Animation.Clock.CurrentState" />-Eigenschaft der <see cref="T:System.Windows.Media.Animation.Clock" /> der Zeitachse aktualisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> Ereignis aus, wenn Sie benachrichtigt werden, wenn einer Zeitachse möchten <xref:System.Windows.Media.Animation.Clock> gestartet, beendet oder ausgefüllt wird.  
+  
+ Durch das Anhalten einer <xref:System.Windows.Media.Animation.Clock> ändert nicht ihre <xref:System.Windows.Media.Animation.Clock.CurrentState%2A>. Um benachrichtigt zu werden, wenn eine Uhr angehalten wird, verwenden die <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated> Ereignis.  
+  
+ Obwohl dieses Ereignis tritt auf, wenn die <xref:System.Windows.Media.Animation.ClockState> ungültig, die nicht unbedingt bedeutet der <xref:System.Windows.Media.Animation.ClockState> geändert: eine <xref:System.Windows.Media.Animation.Clock> , wechselt von <xref:System.Windows.Media.Animation.ClockState.Active> zu <xref:System.Windows.Media.Animation.ClockState.Filling> und dann zurück in <xref:System.Windows.Media.Animation.ClockState.Active> am selben Teilstrich führt dazu, dass Dieses Ereignis ausgelöst wird, aber seine <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> Eigenschaft wird nicht tatsächlich ändern.  
+  
+ Die <xref:System.Object> Parameter von der <xref:System.EventHandler> -Ereignishandler ist der <xref:System.Windows.Media.Animation.Clock> , der für diese Zeitachse erstellt wurde.  
+  
+ Obwohl dieser Ereignishandler angezeigt wird, einen Zeitplan zugeordnet werden soll, tatsächlich bei registriert die <xref:System.Windows.Media.Animation.Clock> für diese Zeitachse erstellt.  Weitere Informationen finden Sie unter der [Timing Ereignisübersicht](~/docs/framework/wpf/graphics-multimedia/timing-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentTimeInvalidated">
+      <MemberSignature Language="C#" Value="public event EventHandler CurrentTimeInvalidated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CurrentTimeInvalidated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Animation.Timeline.CurrentTimeInvalidated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die <see cref="P:System.Windows.Media.Animation.Clock.CurrentTime" />-Eigenschaft der <see cref="T:System.Windows.Media.Animation.Clock" /> der Zeitachse aktualisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> Ereignis aus, wenn Sie möchten benachrichtigt, wenn die <xref:System.Windows.Media.Animation.Clock.CurrentTime%2A> einer Zeitachse <xref:System.Windows.Media.Animation.Clock> wird aktualisiert.  
+  
+ Die <xref:System.Object> Parameter von der <xref:System.EventHandler> -Ereignishandler ist der Zeitachse <xref:System.Windows.Media.Animation.Clock>.  
+  
+ Obwohl dieser Ereignishandler angezeigt wird, einen Zeitplan zugeordnet werden soll, tatsächlich bei registriert die <xref:System.Windows.Media.Animation.Clock> für diese Zeitachse erstellt.  Weitere Informationen finden Sie unter der [Timing Ereignisübersicht](~/docs/framework/wpf/graphics-multimedia/timing-events-overview.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Registrieren für die <xref:System.Windows.Media.Animation.Timeline.CurrentTimeInvalidated> Ereignis.  
+  
+ [!code-csharp[timingbehaviors_procedural_snip#TimelineCurrentTimeInvalidatedExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/TimelineCurrentTimeInvalidatedExample.cs#timelinecurrenttimeinvalidatedexamplewholepage)]
+ [!code-vb[timingbehaviors_procedural_snip#TimelineCurrentTimeInvalidatedExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/timelinecurrenttimeinvalidatedexample.vb#timelinecurrenttimeinvalidatedexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecelerationRatio">
+      <MemberSignature Language="C#" Value="public double DecelerationRatio { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 DecelerationRatio" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Timeline.DecelerationRatio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt diesen fest, der den Prozentsatz der <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> der Zeitachse angibt, der für die Verlangsamung des Zeitverlaufs von der maximalen Rate auf null aufgewendet wird.</summary>
+        <value>Ein Wert von 0 bis 1, der den Prozentsatz der <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> der Zeitachse angibt, der für die Verlangsamung des Zeitverlaufs von der maximalen Rate auf null aufgewendet wird. Wenn die <see cref="P:System.Windows.Media.Animation.Timeline.AccelerationRatio" />-Eigenschaft der Zeitachse auch festgelegt ist, muss die Summe von <see cref="P:System.Windows.Media.Animation.Timeline.DecelerationRatio" /> und <see cref="P:System.Windows.Media.Animation.Timeline.AccelerationRatio" /> kleiner als oder gleich 1 sein. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> Eigenschaft Animationen erstellen können, die vor dem Beenden verlangsamt. Die <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> Eigenschaft ist nützlich zum Erstellen einfache in Effekte oder Verschiebung natürlicher erscheinen. Verwenden der <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> und <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> Eigenschaften zusammen, um Animationen erstellen, die die langsam beginnen beschleunigen, und klicken Sie dann erneut, bevor Sie Beenden verlangsamt.  
+  
+<a name="dependencyPropertyInfo_DecelerationRatio"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.Timeline.DecelerationRatioProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Media.Animation.Timeline.DecelerationRatio" /> ist kleiner als 0 (null) oder größer als 1.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Summe von <see cref="P:System.Windows.Media.Animation.Timeline.AccelerationRatio" /> und <see cref="P:System.Windows.Media.Animation.Timeline.DecelerationRatio" /> überschreitet 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DecelerationRatioProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DecelerationRatioProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DecelerationRatioProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.Timeline.DecelerationRatioProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.Timeline.DecelerationRatio" /> Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredFrameRateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DesiredFrameRateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DesiredFrameRateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.Timeline.DesiredFrameRateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Media.Animation.Timeline.DesiredFrameRate" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="public System.Windows.Duration Duration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Duration Duration" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Timeline.Duration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeitspanne, für die diese Zeitachse spielt Wiederholungen wird dabei nicht mitgezählt.</summary>
+        <value>Die Zeitachse einfache Dauer: die Zeitspanne, die diese Zeitachse eine forward Iteration abgeschlossen. Der Standardwert ist <see cref="P:System.Windows.Duration.Automatic" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einfache Dauer einer Zeitachse bildet die Zeit für eine einzelnes forward Iteration im Vergleich zu der Zeit insgesamt Play, einschließlich Wiederholungen.  
+  
+## <a name="default-duration-behavior"></a>Standardverhalten für die Dauer  
+ Das Verhalten einer <xref:System.Windows.Media.Animation.Timeline.Duration%2A> Struktur mit einem Wert von <xref:System.Windows.Duration.Automatic%2A> hängt vom Typ des Zeitplans:  
+  
+|**Zeitachse**|**Verhalten**|  
+|-|-|  
+|<xref:System.Windows.Media.Animation.Timeline>|Unbestimmt (<xref:System.Windows.Media.Animation.Timeline> ist abstrakt)|  
+|<xref:System.Windows.Media.Animation.ParallelTimeline>,<br /><br /> <xref:System.Windows.Media.Animation.Storyboard>,<br /><br /> <xref:System.Windows.Media.Animation.TimelineGroup>|Wird erweitert, um untergeordnete Zeitachsen|  
+|\<*Typ*> Animation (bezeichnet als "Von/zu/von" oder "Basis" Animationen)|1 Sekunde|  
+|\<*Typ*> AnimationUsingKeyFrames (als Keyframe-Animationen bezeichnet)|Summe aller Keyframes <xref:System.Windows.Media.Animation.KeyTime> Werte|  
+  
+<a name="dependencyPropertyInfo_Duration"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.Timeline.DurationProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ <xref:System.Windows.Media.Animation.ParallelTimeline>und <xref:System.Windows.Media.Animation.Storyboard> Typen von <xref:System.Windows.Media.Animation.TimelineGroup> Objekte. Die Dauer einer <xref:System.Windows.Media.Animation.TimelineGroup> wird durch die Dauer der untergeordneten Zeitachsen bestimmt. Z. B. die <xref:System.Windows.Media.Animation.Storyboard> im folgenden wird ausgeführt für sechs Sekunden (Dauer von 6 Sekunden) ist, die beim seines letzten untergeordneten Zeitachsen (<xref:System.Windows.Media.Animation.DoubleAnimation>) endet.  
+  
+> [!NOTE]
+>  Hinweis: Code wurde aus den folgenden Beispielen wird ausgelassen, die bereitgestellt werden, ausgelassen.  
+  
+ [xaml]  
+  
+```  
+...  
+  <Storyboard>  
+    <DoubleAnimation Duration="0:0:2" …/>  
+    <DoubleAnimation Duration="0:0:4" BeginTime="0:0:2" …/>  
+  </Storyboard>   
+...  
+```  
+  
+ Beispiele für \< *Typ*> Animationen enthalten <xref:System.Windows.Media.Animation.DoubleAnimation>, <xref:System.Windows.Media.Animation.PointAnimation>, <xref:System.Windows.Media.Animation.ColorAnimation>usw.. Wenn kein <xref:System.Windows.Media.Animation.Timeline.Duration%2A> angegeben für diese Typen von Animationen, sie können eine Sekunde ausgeführt wird.  
+  
+ [xaml]  
+  
+```  
+...  
+  <!-- With no Duration specified, this animation will run for   
+       one second -->  
+  <DoubleAnimation .../>  
+...  
+```  
+  
+ Beispiele für \< *Typ*> AnimationUsingKeyFrames sind <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>, <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>usw.. Wenn kein <xref:System.Windows.Media.Animation.Timeline.Duration%2A> ist für diese Typen von Animationen, sie ausgeführt werden, bis alle Keyframes beendet wurde, angegeben.  
+  
+ [xaml]  
+  
+```  
+...  
+  <Storyboard>  
+  
+    <!-- This key frame animation will end at 4.5 seconds  
+         Because that is when its last KeyFrame KeyTime ends. -->  
+    <DoubleAnimationUsingKeyFrames ...>  
+      <LinearDoubleKeyFrame ... KeyTime="0:0:3" />  
+      <DiscreteDoubleKeyFrame ... KeyTime="0:0:3.5" />  
+      <DiscreteDoubleKeyFrame ... KeyTime="0:0:4" />  
+      <DiscreteDoubleKeyFrame ... KeyTime="0:0:4.5" />  
+    </DoubleAnimationUsingKeyFrames>  
+  </Storyboard>   
+...  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DurationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DurationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DurationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.Timeline.DurationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.Timeline.Duration" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillBehavior">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.FillBehavior FillBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Animation.FillBehavior FillBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Timeline.FillBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.FillBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, wie die <see cref="T:System.Windows.Media.Animation.Timeline" /> verhält, wenn das Ende des aktiven Zeitraums erreicht.</summary>
+        <value>Ein Wert, der angibt, wie sich die Zeitachse verhält, nachdem sie das Ende des aktiven Zeitraums erreicht hat, ihr übergeordnetes Element sich aber in einem aktiven Zeitraum oder Füllzeitraum befindet. Der Standardwert ist <see cref="F:System.Windows.Media.Animation.FillBehavior.HoldEnd" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie eine Animationen <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Eigenschaft <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd> Wenn die Animation, dessen Wert enthalten soll, nachdem das Ende des aktiven Zeitraums erreicht werden soll. Hat eine Animation, die dem Ende ihres aktiven Zeitraums erreicht hat eine <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Einstellung des <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd> gilt als in den Füllzeitraum. Wenn Sie nicht möchten, dass eine Animation ihren Wert nach dem Erreichen des Endes seines Aktivitätszeitraums fest, legen Sie dessen  
+  
+ <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>Eigenschaft, um <xref:System.Windows.Media.Animation.FillBehavior.Stop>.  
+  
+ Da eine Animation in den Füllzeitraum ihre Zieleigenschaft Wert außer Kraft setzen weiterhin, scheinen beim Festlegen der Zieleigenschaft Wert über andere Mittel keine Auswirkungen. Ein Beispiel, das zeigt, wie einen Eigenschaftswert festgelegt wird, nachdem sie animiert wurde, finden Sie unter [Vorgehensweise: Festlegen einer Eigenschaft nach dem Animieren mit einem Storyboard](~/docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md).  
+  
+ Eine untergeordnete Zeitachse beendet wiedergeben und ausfüllen, wenn die übergeordnete Zeitachse beendet wird. Wenn eine untergeordnete Zeitachse ausgefüllt werden soll, stellen Sie sicher, dass die übergeordnete Zeitachse eine <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> von <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>.  
+  
+<a name="dependencyPropertyInfo_FillBehavior"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.Timeline.FillBehaviorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillBehaviorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FillBehaviorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FillBehaviorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.Timeline.FillBehaviorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.Timeline.FillBehavior" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FreezeCore">
+      <MemberSignature Language="C#" Value="protected override bool FreezeCore (bool isChecking);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool FreezeCore(bool isChecking) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.FreezeCore(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isChecking" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isChecking">
+          <see langword="true" />zum Überprüfen, ob diese Instanz fixiert werden kann; <see langword="false" /> an diese Instanz zu fixieren.</param>
+        <summary>Macht diese <see cref="T:System.Windows.Media.Animation.Timeline" /> als nicht änderbar fest oder bestimmt, ob es als nicht änderbar festgelegt werden kann.</summary>
+        <returns>Wenn <paramref name="isChecking" /> ist "true", gibt diese Methode <see langword="true" /> ob diese Instanz schreibgeschützt ist, hergestellt werden kann oder <see langword="false" /> , wenn sie als schreibgeschützt festgelegt werden kann.  
+  
+ Wenn <paramref name="isChecking" /> "false", gibt diese Methode ist <see langword="true" /> Wenn diese Instanz jetzt schreibgeschützt ist oder <see langword="false" /> , wenn sie als schreibgeschützt, mit dem Nebeneffekt, dass begonnen wurde, ändern Sie den fixierten Status dieses Objekts festgelegt werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode direkt (außer beim Aufrufen der Basis in einer Implementierung) nicht. Diese Methode wird intern von aufgerufen <xref:System.Windows.Freezable.Freeze%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="T:System.Windows.Media.Animation.Timeline" />Implementierer müssen diese Methode überschreiben, wenn die Klasse Daten enthält, die nicht mit Abhängigkeitseigenschaften gespeichert werden.  
+  
+ Eine typische Implementierung Basis aufrufen würde, und rufen Sie die statische <see cref="M:System.Windows.Freezable.Freeze" /> -Methode bei allen <see cref="T:System.Windows.Freezable" /> typisierte Eigenschaften, die die Klasse zurückgeben enthält, <see langword="true" /> nur, wenn alle Eigenschaften wurden fixiert ist (oder konnte haben Sie wurde, im Fall von übergeben eingefroren durch eine <see langword="false" /> Wert für <paramref name="isChecking" />).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">Die <see cref="T:System.Windows.Media.Animation.Timeline" /> Instanz zu klonen.</param>
+        <summary>Macht diese Instanz zu einem Klon des angegebenen <see cref="T:System.Windows.Media.Animation.Timeline" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte. Beachten Sie, dass, wenn diese Eigenschaften Ressourcenverweise oder datenbindungen, enthalten <xref:System.Windows.Freezable.GetAsFrozen%2A> schlägt fehl, wenn das Objekt fixieren möchten, und löst eine <xref:System.InvalidOperationException>.  
+  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Windows.Freezable.GetAsFrozen%2A> Methode und sollte nicht aufgerufen werden direkt aus Ihrem Code, außer wenn beim Überschreiben dieser Methode die basisimplementierung aufrufen. Rufen Sie zum Erstellen einer fixierten Kopie des aktuellen Objekts <xref:System.Windows.Freezable.GetAsFrozen%2A> statt dieser Methode direkt aufzurufen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.GetAsFrozenCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetCurrentValueAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetCurrentValueAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">Das <see cref="T:System.Windows.Media.Animation.Timeline" />, das kopiert und fixiert werden soll.</param>
+        <summary>Macht diese Instanz als fixierten Klon des angegebenen <see cref="T:System.Windows.Media.Animation.Timeline" />. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> Methode und sollte nicht aufgerufen werden direkt aus Ihrem Code, außer wenn beim Überschreiben dieser Methode die basisimplementierung aufrufen. Rufen Sie zum Erstellen einer fixierten Kopie des aktuellen Objekts <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> statt dieser Methode direkt aufzurufen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesiredFrameRate">
+      <MemberSignature Language="C#" Value="public static Nullable&lt;int&gt; GetDesiredFrameRate (System.Windows.Media.Animation.Timeline timeline);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Nullable`1&lt;int32&gt; GetDesiredFrameRate(class System.Windows.Media.Animation.Timeline timeline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.GetDesiredFrameRate(System.Windows.Media.Animation.Timeline)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeline" Type="System.Windows.Media.Animation.Timeline" />
+      </Parameters>
+      <Docs>
+        <param name="timeline">Die Zeitachse, von dem die gewünschten Framerate abgerufen werden soll.</param>
+        <summary>Ruft die gewünschte Framerate des angegebenen <see cref="T:System.Windows.Media.Animation.Timeline" />.</summary>
+        <returns>Die gewünschte Framerate dieser Zeitachse. Der Standardwert ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode stellt Lesezugriff auf die <xref:System.Windows.Media.Animation.Timeline.DesiredFrameRate%2A> -Eigenschaft. Weitere Informationen finden Sie unter der <xref:System.Windows.Media.Animation.Timeline.DesiredFrameRate%2A> Seite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNaturalDuration">
+      <MemberSignature Language="C#" Value="protected System.Windows.Duration GetNaturalDuration (System.Windows.Media.Animation.Clock clock);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance valuetype System.Windows.Duration GetNaturalDuration(class System.Windows.Media.Animation.Clock clock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.GetNaturalDuration(System.Windows.Media.Animation.Clock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clock" Type="System.Windows.Media.Animation.Clock" />
+      </Parameters>
+      <Docs>
+        <param name="clock">Die <see cref="T:System.Windows.Media.Animation.Clock" /> für diesen erstellten <see cref="T:System.Windows.Media.Animation.Timeline" />.</param>
+        <summary>Gibt die Länge einer einzelnen Iteration dieses <see cref="T:System.Windows.Media.Animation.Timeline" />.</summary>
+        <returns>Die Länge einer einzelnen Iteration dieses <see cref="T:System.Windows.Media.Animation.Timeline" />, oder <see cref="P:System.Windows.Duration.Automatic" /> , wenn die natürliche Dauer unbekannt ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sollte nur aufgerufen werden, wenn die <xref:System.Windows.Media.Animation.Timeline.Duration%2A> -Eigenschaftensatz auf <xref:System.Windows.Duration.Automatic%2A>. Wenn <xref:System.Windows.Media.Animation.Timeline.Duration%2A> ist <xref:System.Windows.Duration.Automatic%2A>, die natürliche Dauer richtet sich nach der Implementierung dieser bestimmten Klasse <xref:System.Windows.Media.Animation.Timeline.GetNaturalDurationCore%2A>.  
+  
+ Wenn <xref:System.Windows.Media.Animation.Timeline.GetNaturalDuration%2A> gibt <xref:System.Windows.Duration.Automatic%2A>, dies bedeutet, dass die natürliche Dauer unbekannt ist, wird dadurch ergibt sich eine natürliche Dauer von <xref:System.Windows.Duration.Forever%2A>. Dies ist der Fall für streaming-Medien.  
+  
+ Beachten Sie, die diese Methode übergeben, eine Uhr als dasjenige, das erstellt wurde, für diese Zeitachse ist möglich, aber das unzuverlässige Ergebnisse bietet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNaturalDurationCore">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Duration GetNaturalDurationCore (System.Windows.Media.Animation.Clock clock);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Windows.Duration GetNaturalDurationCore(class System.Windows.Media.Animation.Clock clock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.GetNaturalDurationCore(System.Windows.Media.Animation.Clock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clock" Type="System.Windows.Media.Animation.Clock" />
+      </Parameters>
+      <Docs>
+        <param name="clock">Die <see cref="T:System.Windows.Media.Animation.Clock" /> für diesen erstellten <see cref="T:System.Windows.Media.Animation.Timeline" />.</param>
+        <summary>Gibt die Länge einer einzelnen Iteration dieses <see cref="T:System.Windows.Media.Animation.Timeline" />. Diese Methode stellt die Implementierung für <see cref="M:System.Windows.Media.Animation.Timeline.GetNaturalDuration(System.Windows.Media.Animation.Clock)" />.</summary>
+        <returns>Die Länge einer einzelnen Iteration dieses <see cref="T:System.Windows.Media.Animation.Timeline" />, oder <see cref="P:System.Windows.Duration.Automatic" /> , wenn die natürliche Dauer unbekannt ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode stellt die Implementierung für <xref:System.Windows.Media.Animation.Timeline.GetNaturalDuration%2A> und sollte nicht direkt aus Ihrem Code aufgerufen werden. Verwenden Sie stattdessen <xref:System.Windows.Media.Animation.Timeline.GetNaturalDuration%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Methode sollte von Zeitachsenklassen, die eine benutzerdefinierte natürliche bereitstellen müssen implementiert werden <see cref="T:System.Windows.Duration" /> bei der <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> -Eigenschaftensatz auf <see cref="P:System.Windows.Duration.Automatic" />. Wenn der Autor die natürliche Dauer ermitteln kann, sollte diese Methode zurückgeben <see cref="P:System.Windows.Duration.Automatic" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Timeline.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen dieses <see cref="T:System.Windows.Media.Animation.Timeline" />.</summary>
+        <value>Der Name dieser Zeitachse. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty NameProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty NameProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.Timeline.NameProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.Timeline.Name" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRequested">
+      <MemberSignature Language="C#" Value="public event EventHandler RemoveRequested;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RemoveRequested" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Animation.Timeline.RemoveRequested" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Uhr für diese Zeitachse erstellt oder wenn einer der übergeordneten Zeitachsen entfernt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird durch Anwenden einer <xref:System.Windows.Media.Animation.RemoveStoryboard> Aktion aus, um ein Storyboard mit einem Storyboard <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> -Methode, oder (Wenn Sie direkt mit Uhren zu arbeiten) Aufrufen der <xref:System.Windows.Media.Animation.ClockController.Remove%2A?displayProperty=nameWithType> Methode.  
+  
+ Obwohl dieser Ereignishandler angezeigt wird, einen Zeitplan zugeordnet werden soll, tatsächlich bei registriert die <xref:System.Windows.Media.Animation.Clock> für diese Zeitachse erstellt.  Weitere Informationen finden Sie unter der [Timing Ereignisübersicht](~/docs/framework/wpf/graphics-multimedia/timing-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RepeatBehavior">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.RepeatBehavior RepeatBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Animation.RepeatBehavior RepeatBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Timeline.RepeatBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.RepeatBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Wiederholungsverhalten dieser Zeitachse ab oder legt es fest.</summary>
+        <value>Eine Iteration <see cref="P:System.Windows.Media.Animation.RepeatBehavior.Count" /> , angibt, wie oft die Zeitachse wiedergegeben werden soll, eine <see cref="T:System.TimeSpan" /> -Wert, der die Gesamtlänge des aktiven Zeitraums dieser Zeitachse angibt, oder der spezielle Wert <see cref="P:System.Windows.Media.Animation.RepeatBehavior.Forever" />, der angibt, dass die Zeitachse sollten Wiederholen Sie die unbegrenzt. Der Standardwert ist eine <see cref="T:System.Windows.Media.Animation.RepeatBehavior" /> mit einer <see cref="P:System.Windows.Media.Animation.RepeatBehavior.Count" /> von <c>1</c>, was bedeutet, dass die Zeitachse einmal wiedergegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Iteration <xref:System.Windows.Media.Animation.RepeatBehavior.Count%2A> angegeben ist und der Zeitachse <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> -Eigenschaftensatz auf `true`, eine einzelne Wiederholung besteht aus einer forward-Iteration und eine Ebene nach hinten Iteration. Eine Zeitachse mit der ein <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> -Eigenschaftensatz auf eine Iteration "true" <xref:System.Windows.Media.Animation.RepeatBehavior.Count%2A> 2 würde wiedergeben vorwärts und rückwärts, erneut vorwärts und dann rückwärts erneut.  
+  
+ Statt anzugeben, die Anzahl der Häufigkeit, mit die eine Zeitachse wiedergegeben wird, können Sie auch die gesamte Zeitdauer angeben, die Zeitachse wiedergeben möchten. Eine Zeitachse, wiederholen Sie diesen Schritt <xref:System.Windows.Media.Animation.RepeatBehavior.Duration%2A?displayProperty=nameWithType> Wert muss größer sein als der Zeitachse <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. Beispielsweise wird eine Zeitachse mit eine <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 2 Sekunden und eine <xref:System.Windows.Media.Animation.RepeatBehavior.Duration%2A?displayProperty=nameWithType> von 4 Sekunden zweimal wiedergegeben. Wenn die <xref:System.Windows.Media.Animation.RepeatBehavior.Duration%2A?displayProperty=nameWithType> ist kleiner als der Zeitachse <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, aktiven Zeitraum der Zeitachse abgeschnitten.  
+  
+ Weitere Informationen zum Wiederholen von Zeitachsen finden Sie unter [Übersicht über Animation](~/docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+  
+<a name="dependencyPropertyInfo_RepeatBehavior"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.Timeline.RepeatBehaviorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RepeatBehaviorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RepeatBehaviorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RepeatBehaviorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.Timeline.RepeatBehaviorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.Timeline.RepeatBehavior" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDesiredFrameRate">
+      <MemberSignature Language="C#" Value="public static void SetDesiredFrameRate (System.Windows.Media.Animation.Timeline timeline, Nullable&lt;int&gt; desiredFrameRate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetDesiredFrameRate(class System.Windows.Media.Animation.Timeline timeline, valuetype System.Nullable`1&lt;int32&gt; desiredFrameRate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Timeline.SetDesiredFrameRate(System.Windows.Media.Animation.Timeline,System.Nullable{System.Int32})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeline" Type="System.Windows.Media.Animation.Timeline" />
+        <Parameter Name="desiredFrameRate" Type="System.Nullable&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="timeline">Die <see cref="T:System.Windows.Media.Animation.Timeline" /> , <c>DesiredFrameRate</c> zugewiesen ist.</param>
+        <param name="desiredFrameRate">Die maximale Anzahl von Frames, die dieser Zeitachse pro Sekunde generiert werden sollen oder <see langword="null" /> , wenn das System die Anzahl der Frames gesteuert werden soll.</param>
+        <summary>Legt die gewünschte Framerate des angegebenen <see cref="T:System.Windows.Media.Animation.Timeline" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt die <xref:System.Windows.Media.Animation.Timeline.DesiredFrameRate%2A> -Eigenschaft. Weitere Informationen finden Sie unter der <xref:System.Windows.Media.Animation.Timeline.DesiredFrameRate%2A> Seite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpeedRatio">
+      <MemberSignature Language="C#" Value="public double SpeedRatio { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SpeedRatio" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Timeline.SpeedRatio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Geschwindigkeit relativ zu seinem übergeordneten Element an der zeitliche Verlauf für diese <see cref="T:System.Windows.Media.Animation.Timeline" />.</summary>
+        <value>Ein endlicher Wert größer als 0, die die Rate an, welche Zeit im Verlauf für diese Zeitachse, relativ zu der Geschwindigkeit des übergeordneten Element der Zeitachse beschreibt oder, wenn dies eine Stammzeitachse Geschwindigkeit Zeitachse "Standard" ist. Der Standardwert ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einer Zeitachse <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Einstellung hat keine Auswirkungen für seine <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A>; diese ist relativ zum übergeordneten Element der Zeitachse oder, wenn die Zeitachse eine Stammzeitachse Moment ist, an dem die Zeitachse Uhr gestartet wurde.  
+  
+ Wenn <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> oder <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> angegeben sind, dies <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> ist die durchschnittliche Verhältnis über die interne Länge der Zeitachse.  
+  
+<a name="dependencyPropertyInfo_SpeedRatio"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.Timeline.SpeedRatioProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Einer Zeitachse <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Eigenschaft steuert die Rate der ausgeführt wird, relativ zu seinem übergeordneten Element. Wenn die Zeitachse über einen Stamm ist der <xref:System.Windows.Media.MediaPlayer.SpeedRatio%2A> ist relativ zum Standard-Zeitachse-Geschwindigkeit. Das folgende Beispiel zeigt mehrere Zeitpläne mit verschiedenen <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Einstellungen.  
+  
+ [!code-xaml[timingbehaviors_snip#_graphicsmm_SpeedExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/SpeedExample.xaml#_graphicsmm_speedexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Media.Animation.Timeline.SpeedRatio" />ist kleiner als 0 oder kein endlichen Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SpeedRatioProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SpeedRatioProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SpeedRatioProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.Timeline.SpeedRatioProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.Timeline.SpeedRatio" /> Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

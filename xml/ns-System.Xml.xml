@@ -1,0 +1,244 @@
+<Namespace Name="System.Xml">
+  <Docs>
+    <summary>Der <see cref="N:System.Xml" />-Namespace stellt standardbasierte Unterstützung für die XML-Verarbeitung bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="std"></a>   
+## <a name="supported-standards"></a>Unterstützten standards  
+ Die <xref:System.Xml> Namespace unterstützt dieser Standards:  
+  
+-   XML 1.0, einschließlich der DTD-Unterstützung: [http://www.w3.org/TR/2006/REC-xml-20060816/](http://www.w3.org/TR/2006/REC-xml-20060816/)  
+  
+-   XML-Namespaces, beide Streamebene und DOM: [http://www.w3.org/TR/REC-xml-names/](http://www.w3.org/TR/REC-xml-names/)  
+  
+-   XML-Schemas: [http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema)  
+  
+-   XPath-Ausdrücke: [http://www.w3.org/TR/xpath](http://www.w3.org/TR/xpath)  
+  
+-   XSLT-Transformationen: [http://www.w3.org/TR/xslt](http://www.w3.org/TR/xslt)  
+  
+-   DOM Level 1 Core: [http://www.w3.org/TR/REC-DOM-Level-1/](http://www.w3.org/TR/REC-DOM-Level-1/)  
+  
+-   DOM Level 2 Core: [http://www.w3.org/TR/DOM-Level-2/](http://www.w3.org/TR/DOM-Level-2/)  
+  
+ Finden Sie im Abschnitt [Unterschiede gegenüber der W3C-Spezifikationen](#diff) für zwei Fälle, in der XML-Klassen, die von der W3C-Empfehlungen abweicht.  
+  
+<a name="related"></a>   
+## <a name="related-namespaces"></a>Verwandte namespaces  
+ .NET Framework bietet auch andere Namespaces für XML-bezogene Vorgänge. Eine Liste, Beschreibungen und Links finden Sie in der [System.Xml-Namespaces](http://msdn.microsoft.com/library/gg145036.aspx) Webseite.  
+  
+<a name="async"></a>   
+## <a name="processing-xml-asynchronously"></a>Die XML-Verarbeitung, asynchron  
+ Die <xref:System.Xml.XmlReader?displayProperty=nameWithType> und <xref:System.Xml.XmlWriter?displayProperty=nameWithType> Klassen umfassen eine Reihe von asynchronen Methoden auf der Basis der. Diese Methoden können durch die Zeichenfolge "Async" am Ende des Namens identifiziert werden. Mit diesen Methoden können Sie asynchronen Code schreiben, der synchrone Code ähnlich ist, und Sie können asynchronen Code einfach Ihre vorhandenen synchronen Code migrieren.  
+  
+-   Die asynchronen Methoden in apps können sich erhebliche Stream Netzwerklatenz. Vermeiden Sie die Verwendung von asynchronen APIs für Speicherstream oder eine lokale Datei Stream Lese-/Schreibvorgänge. Der Eingabedatenstrom <xref:System.Xml.XmlTextReader>, und <xref:System.Xml.XmlTextWriter> sollte auch asynchrone Vorgänge unterstützen. Andernfalls werden Threads weiterhin durch e/a-Vorgänge blockiert.  
+  
+-   Es empfiehlt sich nicht Mischen von synchronen und asynchronen Funktionsaufrufe, da Sie möglicherweise vergessen Sie verwenden die `await` -Schlüsselwort, oder verwenden eine synchrone API, in dem asynchronen erforderlich ist.  
+  
+-   Legen Sie nicht die <xref:System.Xml.XmlReaderSettings.Async%2A?displayProperty=nameWithType> oder <xref:System.Xml.XmlWriterSettings.Async%2A?displayProperty=nameWithType> flag `true` , wenn Sie nicht beabsichtigen, eine asynchrone Methode zu verwenden.  
+  
+-   Wenn Sie vergessen, geben Sie die `await` -Schlüsselwort, wenn Sie eine asynchrone Methode aufrufen, die die Ergebnisse sind nicht deterministisch: erhalten Sie möglicherweise das Ergebnis, das von Ihnen erwartet, oder eine Ausnahme.  
+  
+-   Wenn ein <xref:System.Xml.XmlReader> Lesen des Objekts ist einen große Textknoten, möglicherweise nur einen teilweise Textwert Zwischenspeichern und zurückgeben den Textknoten, also das Abrufen der <xref:System.Xml.XmlReader.Value%2A?displayProperty=nameWithType> Eigenschaft von einem e/a-Vorgang blockiert werden. Verwenden Sie die <xref:System.Xml.XmlReader.GetValueAsync%2A> Methode, um den Textwert im asynchronen Modus, oder lesen die <xref:System.Xml.XmlReader.ReadValueChunkAsync%2A> Methode, um eine große Text zu lesen, blockieren in Blöcken.  
+  
+-   Bei Verwendung einer <xref:System.Xml.XmlWriter> -Objekt, rufen Sie die <xref:System.Xml.XmlWriter.FlushAsync%2A> Methode vor dem Aufruf <xref:System.Xml.XmlWriter.Close%2A> zum Blockieren eines e/a-Vorgangs zu verhindern.  
+  
+<a name="diff"></a>   
+## <a name="differences-from-the-w3c-specs"></a>Unterschiede in der W3C-Spezifikationen  
+ In beiden Fällen, Beschränkungen Modell Gruppe Schemakomponenten, bei denen, die <xref:System.Xml> Namespace unterscheidet sich von der W3C-Empfehlungen.  
+  
+ **Die Konsistenz in Elementdeklarationen:**  
+  
+ In einigen Fällen, in denen Ersetzungsgruppen verwendet werden die <xref:System.Xml> Implementierung erfüllt nicht die "Schema-Komponente Einschränkung: Element Deklarationen konsistent sind," in beschriebene ist die [Beschränkungen Modell Gruppe Schemakomponenten ](http://go.microsoft.com/fwlink/?LinkId=137029) Abschnitt der W3C-Spezifikation.  
+  
+ Beispielsweise das folgende Schema enthält Elemente, die den gleichen Namen haben, aber verschiedene Typen in der gleichen Inhaltsmodell und Ersetzungsgruppen werden verwendet. Dies sollte zu einem Fehler führen, <xref:System.Xml> kompiliert und validiert das Schema jedoch ohne Fehler.  
+  
+```  
+<?xml version="1.0" encoding="utf-8" ?>   
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">  
+  
+   <xs:element name="e1" type="t1"/>  
+   <xs:complexType name="t1"/>  
+  
+   <xs:element name="e2" type="t2" substitutionGroup="e1"/>  
+      <xs:complexType name="t2">  
+         <xs:complexContent>  
+            <xs:extension base="t1">  
+         </xs:extension>  
+      </xs:complexContent>  
+   </xs:complexType>  
+  
+   <xs:complexType name="t3">  
+      <xs:sequence>  
+         <xs:element ref="e1"/>  
+         <xs:element name="e2" type="xs:int"/>  
+      </xs:sequence>  
+   </xs:complexType>  
+</xs:schema>  
+```  
+  
+ In diesem Schema enthält der Typ `t3` eine Sequenz von Elementen. Aufgrund der Ersetzung kann der Verweis auf das Element `e1` aus der Sequenz als Ergebnis entweder das Element `e1` des Typs `t1` oder das Element `e2` des Typs `t2` haben. Die letzteren Fall würde sich in einer Sequenz von zwei `e2` Elemente, wobei eine vom Typ ist `t2` und der andere vom Typ `xs:int`.  
+  
+ **Eindeutige partikelzuordnung:**  
+  
+ Unter den folgenden Bedingungen die <xref:System.Xml> Implementierung erfüllt nicht die "Schema-Komponente Einschränkung: Unique Particle Attribution," in beschriebene ist die [Beschränkungen Modell Gruppe Schemakomponenten](http://go.microsoft.com/fwlink/?LinkId=137029) Abschnitt von der W3C-Spezifikation.  
+  
+-   Eines der Elemente in der Gruppe verweist auf ein anderes Element.  
+  
+-   Das Element, auf das verwiesen wird, ist ein Anfangselement einer Ersetzungsgruppe.  
+  
+-   Der Ersetzungsgruppe enthält ein Element mit dem gleichen Namen wie eines der Elemente in der Gruppe.  
+  
+-   Die Kardinalität des Elements, das die Ersetzung Gruppe Head-Element und das Element mit demselben Namen verweist, wie ein Ersatz-Group-Element nicht festgelegt ist (MinOccurs < MaxOccurs).  
+  
+-   Die Definition des Elements, das der Ersetzungsgruppe verweist auf steht vor der Definition des Elements mit dem gleichen Namen wie ein Ersatz-Group-Element.  
+  
+ So ist das Inhaltsmodell im unten aufgeführten Schema nicht eindeutig und sollte zu einem Kompilierungsfehler führen; <xref:System.Xml> kompiliert das Schema jedoch ohne Fehler.  
+  
+```  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">  
+  
+  <xs:element name="e1" type="xs:int"/>  
+  <xs:element name="e2" type="xs:int" substitutionGroup="e1"/>  
+  
+  <xs:complexType name="t3">  
+    <xs:sequence>  
+      <xs:element ref="e1" minOccurs="0" maxOccurs="1"/>  
+      <xs:element name="e2" type="xs:int" minOccurs="0" maxOccurs="1"/>  
+    </xs:sequence>  
+  </xs:complexType>  
+  
+  <xs:element name="e3" type="t3"/>  
+</xs:schema>  
+```  
+  
+ Wenn Sie versuchen, den folgenden XML-Code für das oben stehende Schema zu überprüfen, die Überprüfung mit der folgenden Meldung fehl: "das Element"e3"weist ungültigen untergeordneten Element"e2"." und ein <xref:System.Xml.Schema.XmlSchemaValidationException> Ausnahme wird ausgelöst.  
+  
+```  
+<e3>  
+  <e2>1</e2>  
+  <e2>2</e2>  
+</e3>  
+```  
+  
+ Um dieses Problem zu umgehen, können Sie Elementdeklarationen im XSD-Dokument austauschen. Zum Beispiel:  
+  
+```  
+<xs:sequence>  
+  <xs:element ref="e1" minOccurs="0" maxOccurs="1"/>  
+  <xs:element name="e2" type="xs:int" minOccurs="0" maxOccurs="1"/>  
+</xs:sequence>  
+```  
+  
+ zu  
+  
+```  
+<xs:sequence>  
+  <xs:element name="e2" type="xs:int" minOccurs="0" maxOccurs="1"/>  
+  <xs:element ref="e1" minOccurs="0" maxOccurs="1"/>  
+</xs:sequence>  
+```  
+  
+ Hier ist ein weiteres Beispiel für das gleiche Problem:  
+  
+```  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">  
+   <xs:element name="e1" type="xs:string"/>  
+   <xs:element name="e2" type="xs:string" substitutionGroup="e1"/>  
+  
+   <xs:complexType name="t3">  
+      <xs:sequence>  
+         <xs:element ref="e1" minOccurs="0" maxOccurs="1"/>  
+         <xs:element name="e2" type="xs:int" minOccurs="0" maxOccurs="1"/>  
+      </xs:sequence>  
+   </xs:complexType>  
+   <xs:element name="e3" type="t3"/>  
+</xs:schema>  
+```  
+  
+ Wenn Sie versuchen, den folgenden XML-Code für das oben stehende Schema zu überprüfen, die Überprüfung mit folgender Ausnahme fehl: "nicht behandelte Ausnahme: System.Xml.Schema.XmlSchemaValidationException: das"e2"el-Element ist ungültig: der Wert 'Abc' ist ungültig aufgrund seines Datentyps 'Http://www.w3.org/2001/XMLSchema:int' - ist die Zeichenfolge 'Abc' kein gültiger Int32-Wert." \  
+  
+```  
+<e3><e2>abc</e2></e3>  
+```  
+  
+<a name="security"></a>   
+## <a name="security-considerations"></a>Sicherheitsüberlegungen  
+ Die Typen und Member in der <xref:System.Xml> Namespace basieren auf der. In den folgenden Abschnitten erläutert Sicherheitsprobleme, die für XML-Technologien spezifisch sind. Einzelheiten finden Sie in die spezifische Klassen und Member, die bereits erwähnt, und rufen Sie die [XML Developer Center](http://go.microsoft.com/fwlink/?linkid=42458) für technische Informationen, Downloads, Newsgroups und weitere Ressourcen für XML-Entwickler.  
+  
+ Beachten Sie, dass bei Verwendung der <xref:System.Xml> Typen und Member, wenn die XML Daten enthält, die potenzielle datenschutzauswirkungen aufweist, müssen Sie Ihre app auf eine Weise zu implementieren, die Ihre Endbenutzer Datenschutz berücksichtigt.  
+  
+ **Externer Zugriff**  
+  
+ Einige XML-Technologien können bei der Verarbeitung andere Dokumente abrufen. In dem gerade analysierten Dokument kann sich z. B. eine DTD (Document Type Definition) befinden. Die DTD kann sich auch in einem externen Dokument befinden, auf das in dem gerade analysierten Dokument verwiesen wird. Die XSD- und XSLT-Technologien können auch Informationen aus anderen Dateien verwenden. Die externen Ressourcen können ein Sicherheitsproblem darstellen. Beispielsweise sollten Sie sicherstellen, dass Ihre app Dateien nur von vertrauenswürdigen Websites abgerufen, wenn die Datei empfängt, er keine schädliche Daten enthält.  
+  
+ Die <xref:System.Xml.XmlUrlResolver> Klasse dient zum Laden von XML-Dokumente und zum Auflösen externer Ressourcen wie Entitäten, DTDs und Schemata, und importieren oder #include-Direktiven hinzu.  
+  
+ Sie können diese Klasse überschreiben und Angeben der <xref:System.Xml.XmlResolver> Objekt verwenden. Verwenden Sie die <xref:System.Xml.XmlSecureResolver>-Klasse, wenn Sie eine Ressource öffnen möchten, die nicht von Ihnen gesteuert wird oder die nicht vertrauenswürdig ist. Der <xref:System.Xml.XmlSecureResolver> umschließt einen <xref:System.Xml.XmlResolver> und ermöglicht das Einschränken der Ressourcen, auf die der zu Grunde liegende <xref:System.Xml.XmlResolver> Zugriff hat.  
+  
+ **Dienstverweigerung**  
+  
+ Die folgenden Szenarios gelten als weniger empfindlich für Denial-of-Service-Angriffe, da die <xref:System.Xml>-Klassen Schutz vor diesen Angriffen bieten.  
+  
+-   Analysieren von XML-Textdaten.  
+  
+-   Binary XML-Daten analysieren, ob die binären XML-Daten von Microsoft SQL Server generiert wurde.  
+  
+-   Schreiben von XML-Dokumenten und -Fragmenten aus Datenquellen in ein Dateisystem, einen Stream, einen <xref:System.IO.TextWriter> oder einen <xref:System.Text.StringBuilder>.  
+  
+-   Laden von Dokumenten in das DOM-Objekt (Document Object Model), wenn ein <xref:System.Xml.XmlReader>-Objekt verwendet wird und <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> auf <xref:System.Xml.DtdProcessing.Prohibit> festgelegt ist.  
+  
+-   Navigieren im DOM-Objekt.  
+  
+ Die folgenden Szenarios sind nicht zu empfehlen, wenn Sie Denial-of-Service-Angriffe befürchten oder wenn Sie in einer nicht vertrauenswürdigen Umgebung arbeiten.  
+  
+-   DTD-Verarbeitung.  
+  
+-   Schema-Verarbeitung. Dazu gehört das Hinzufügen eines nicht vertrauenswürdigen Schemas zur Schemaauflistung, das Kompilieren eines nicht vertrauenswürdigen Schemas und das Validieren mit einem nicht vertrauenswürdigen Schema.  
+  
+-   XSLT-Verarbeitung.  
+  
+-   Analysieren eines beliebigen Streams von binären XML-Daten eines Benutzers  
+  
+-   DOM-Operationen wie Abfragen, Bearbeiten, Verschieben von Teilstrukturen zwischen Dokumenten und Speichern von DOM-Objekten.  
+  
+ Aktivieren Sie Wenn Sie Bedenken bezüglich eines Denial-of-Service-Problemen-haben oder wenn Sie mit nicht vertrauenswürdigen Quellen arbeiten, die DTD-Verarbeitung nicht. Dies ist standardmäßig deaktiviert, auf <xref:System.Xml.XmlReader> Objekte, die <xref:System.Xml.XmlReader.Create%2A> Methode erstellt.  
+  
+> [!NOTE]
+>  Beim <xref:System.Xml.XmlTextReader> ist die DTD-Verarbeitung standardmäßig aktiviert. Diese Funktion kann mit der <xref:System.Xml.XmlTextReader.DtdProcessing%2A?displayProperty=nameWithType>-Eigenschaft deaktiviert werden.  
+  
+ Wenn Sie die DTD-Verarbeitung aktiviert haben, können Sie mithilfe der <xref:System.Xml.XmlSecureResolver> Klasse, um die Ressourcen zu beschränken, die die <xref:System.Xml.XmlReader> zugreifen können. Sie können auch Ihre app entwerfen, damit die XML-Verarbeitung bezüglich Arbeitsspeicher und Zeit eingeschränkt. Beispielsweise können Sie Grenzwerte für Timeout in Ihrer ASP.NET app konfigurieren.  
+  
+ **Überlegungen zur Verarbeitung**  
+  
+ Da XML-Dokumente Verweise auf andere Dateien enthalten können, ist es schwierig, den für die Analyse eines XML-Dokuments erforderlichen Verarbeitungsaufwand zu ermitteln. XML-Dokumente können z B. eine DTD enthalten. Wenn die DTD verschachtelte Entitäten oder komplexe Inhaltsmodelle umfasst, kann die Analyse des Dokuments außerordentlich viel Zeit beanspruchen.  
+  
+ Bei der Verwendung von <xref:System.Xml.XmlReader> können Sie die Größe des zu analysierenden Dokuments mit der <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A>-Eigenschaft begrenzen. Sie können die Anzahl von Zeichen einschränken, die sich durch das Erweitern von Entitäten ergeben, indem Sie die <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A>-Eigenschaft einrichten. Beispiele für das Einrichten dieser Eigenschaften finden Sie in den entsprechenden Referenzthemen.  
+  
+ Die XSD- und die XSLT-Technologien weisen weitere Funktionen auf, die die Verarbeitungsgeschwindigkeit beeinflussen können. Es ist z. B. möglich, ein XML-Schema zu erstellen, dessen Verarbeitung bereits bei der Auswertung für ein relativ kleines Dokument erhebliche Zeit in Anspruch nimmt. Es ist auch möglich, in einen XSLT-Stylesheet Skriptblöcke einzubetten. Beide Fälle darstellen, ein potenzielles Sicherheitsrisiko zu Ihrer app.  
+  
+ Wenn eine app erstellen, verwendet die <xref:System.Xml.Xsl.XslCompiledTransform> -Klasse, sollten Ihnen die folgenden Elemente und deren Auswirkungen bekannt sein:  
+  
+-   Die XSLT-Skriptverarbeitung ist standardmäßig deaktiviert. XSLT-Skripts sollten nur aktiviert werden, wenn eine Skriptunterstützung erforderlich ist und Sie mit einer vollständig vertrauenswürdigen Umgebung arbeiten.  
+  
+-   Die XSLT-`document()`-Funktion ist standardmäßig deaktiviert. Wenn Sie die `document()`-Funktion aktivieren, schränken Sie die verfügbaren Ressourcen ein, indem Sie der <xref:System.Xml.XmlSecureResolver>-Methode ein <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Objekt übergeben.  
+  
+-   Erweiterungsobjekte sind standardmäßig aktiviert. Wenn der <xref:System.Xml.Xsl.XsltArgumentList>-Methode ein <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Objekt übergeben wird, das Erweiterungsobjekte enthält, so werden diese verwendet.  
+  
+-   XSLT-Stylesheets können Verweise auf andere Dateien und eingebettete Skriptblöcke enthalten. Ein böswilliger Benutzer kann dies ausnutzen, indem er Daten oder Stylesheets bereitstellt, deren Verarbeitung die Ressourcen des Computers erschöpft.  
+  
+-   XSLT-apps, die in einer teilweise vertrauenswürdigen Umgebung ausgeführt können Stylesheet spoofing ausgesetzt sein. Ein böswilliger Benutzer könnte z. B. ein Objekt mit einem schädlichen Stylesheet laden und es an einen anderen Benutzer übermitteln, der die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode aufruft und die Transformation ausführt.  
+  
+ Diese Sicherheitsprobleme können durch Deaktivieren von Skripts oder der `document()`-Funktion bei aus nicht vertrauenswürdigen Quellen stammenden Stylesheets und durch das Abweisen von <xref:System.Xml.Xsl.XslCompiledTransform>-Objekten, XSLT-Stylesheets und XML-Quelldaten aus nicht vertrauernswürdigen Quellen reduziert werden.  
+  
+ **Ausnahmebehandlung**  
+  
+ Von untergeordneten Komponenten ausgelöste Ausnahmen können Pfadinformationen, die Sie nicht verfügbar gemacht werden, um die app anzugeben. Ihre apps müssen Ausnahmen auffangen und entsprechend verarbeiten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

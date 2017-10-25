@@ -1,0 +1,1458 @@
+<Type Name="IsolatedStorageFileStream" FullName="System.IO.IsolatedStorage.IsolatedStorageFileStream">
+  <TypeSignature Language="C#" Value="public class IsolatedStorageFileStream : System.IO.FileStream" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IsolatedStorageFileStream extends System.IO.FileStream" />
+  <TypeSignature Language="DocId" Value="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.FileStream</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht eine Datei im isolierten Speicher verfügbar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Klasse zum Lesen, schreiben und Erstellen von Dateien im isolierten Speicher.  
+  
+ Da diese Klasse erweitert <xref:System.IO.FileStream>, können Sie eine Instanz von <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> in den meisten Fällen, in denen eine <xref:System.IO.FileStream> andernfalls verwendet werden kann, z. B. Erstellen einer <xref:System.IO.StreamReader> oder <xref:System.IO.StreamWriter>.  
+  
+ Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+> [!IMPORTANT]
+>  Isolierte Speicherung ist nicht für [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]-Apps verfügbar. Verwenden Sie stattdessen die zum Speichern von lokalen Daten und Dateien in der `Windows.Storage`-API enthaltenen Anwendungsdatenklassen in den [!INCLUDE[wrt](~/includes/wrt-md.md)]-Namespaces. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](http://go.microsoft.com/fwlink/?LinkId=229175) .  
+  
+   
+  
+## Examples  
+ Die folgende Konsolenanwendung zeigt, wie Sie verwenden können <xref:System.IO.IsolatedStorage.IsolatedStorageFile> und <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Daten in eine isolierte Speicherdatei geschrieben. Der Benutzer wird aufgefordert, sich anzumelden. Wenn der Benutzer einen neuen Benutzer ist, werden eine News-URL und eine Sport-URL als persönliche Einstellungen bei der isolierten Speicherung aufgezeichnet. Wenn der Benutzer einen Benutzer zurückgeben wird, werden die aktuellen Einstellungen des Benutzers angezeigt. Die Codebeispiele in diesem Namespace verwendet, werden im Rahmen dieser beispielanwendung dargestellt. Sie können die [Storeadm.exe (Isolated Storage-Tool)](~/docs/framework/tools/storeadm-exe-isolated-storage-tool.md) Hilfsprogramm zum Auflisten und entfernen die Dateien der isolierten Speicherung, die mit dieser Konsolenanwendung erstellt werden.  
+  
+ [!code-cpp[System.IO.IsolatedStorage.IsolatedStorage#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CPP/source.cpp#1)]
+ [!code-csharp[System.IO.IsolatedStorage.IsolatedStorage#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CS/source.cs#1)]
+ [!code-vb[System.IO.IsolatedStorage.IsolatedStorage#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IsolatedStorageFileStream (string path, System.IO.FileMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.#ctor(System.String,System.IO.FileMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der relative Pfad der Datei innerhalb des isolierten Speichers.</param>
+        <param name="mode">Einer der <see cref="T:System.IO.FileMode" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz eines <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekts, das im angegebenen <paramref name="mode" /> Zugriff auf die mit <paramref name="path" /> bezeichnete Datei ermöglicht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der isolierte Speicher, der verwendet wird ist beschränkt, wird die aktuelle derzeit ausgeführte Assembly Identitäts- und, die von der Anwendungsdomäne, in der er ausgeführt wird. Dieser Speicher wird nur für die Lebensdauer des geöffnet bleiben die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekt. An einem anderen isolierten Speicherbereichs oder den Speicher geöffnet bleiben erlaubt (also mehrere <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekte daraus geöffnet werden können), verwenden Sie die Form des Konstruktors, die akzeptiert ein <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Objekt.  
+  
+ Die `mode` Parameter gibt an, ob eine neue Datei erstellt werden soll, eine vorhandene verwendet usw..  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, werden die Zeichen möglicherweise nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Format von <paramref name="path" /> ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das Verzeichnis im <paramref name="path" /> ist nicht vorhanden.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Es wurde keine Datei gefunden und der <paramref name="mode" /> auf festgelegt ist<see cref="F:System.IO.FileMode.Open" /></exception>
+        <permission cref="T:System.Security.Permissions.IsolatedStorageFilePermission">für den Zugriff von isoliertem Speicher</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IsolatedStorageFileStream (string path, System.IO.FileMode mode, System.IO.FileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der relative Pfad der Datei innerhalb des isolierten Speichers.</param>
+        <param name="mode">Einer der <see cref="T:System.IO.FileMode" />-Werte.</param>
+        <param name="access">Eine bitweise Kombination der <see cref="T:System.IO.FileAccess" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Klasse, die im angegebenen <paramref name="mode" /> mit der Art des angeforderten <paramref name="access" /> einen Zugriff auf die mit <paramref name="path" /> bezeichnete Datei ermöglicht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der isolierte Speicher, der verwendet wird ist beschränkt, wird die aktuelle derzeit ausgeführte Assembly Identitäts- und, die von der Anwendungsdomäne, in der er ausgeführt wird. Dieser Speicher wird nur für die Lebensdauer des geöffnet bleiben die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekt. An einem anderen isolierten Speicherbereichs oder den Speicher geöffnet bleiben erlaubt (also mehrere <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekte daraus geöffnet werden können), verwenden Sie die Form des Konstruktors, die akzeptiert ein <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Objekt.  
+  
+ Die `mode` Parameter gibt an, ob eine neue Datei erstellt werden muss oder eine vorhandene verwendet. Die `access` Parameter enthält, schreibgeschützt, Lese-/Schreibzugriff, und nur-schreiben.  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, der Zeichen können nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Format von <paramref name="path" /> ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Es wurde keine Datei gefunden, und <paramref name="mode" /> ist auf <see cref="F:System.IO.FileMode.Open" /> festgelegt.</exception>
+        <permission cref="T:System.Security.Permissions.IsolatedStorageFilePermission">für den Zugriff von isoliertem Speicher</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IsolatedStorageFileStream (string path, System.IO.FileMode mode, System.IO.IsolatedStorage.IsolatedStorageFile isf);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode, class System.IO.IsolatedStorage.IsolatedStorageFile isf) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.#ctor(System.String,System.IO.FileMode,System.IO.IsolatedStorage.IsolatedStorageFile)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="isf" Type="System.IO.IsolatedStorage.IsolatedStorageFile" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der relative Pfad der Datei innerhalb des isolierten Speichers.</param>
+        <param name="mode">Einer der <see cref="T:System.IO.FileMode" />-Werte.</param>
+        <param name="isf">Die <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFile" />, in der der <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" /> geöffnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Klasse, die im angegebenen <paramref name="mode" /> und im Kontext der durch <paramref name="isf" /> angegebenen <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFile" />-Klasse Zugriff auf die durch <paramref name="path" /> bezeichnete Datei ermöglicht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `mode` Parameter gibt an, ob eine neue Datei erstellt werden soll, eine vorhandene verwendet usw..  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, der Zeichen können nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht. Den vollständigen Kontext dieses Beispiels, finden Sie unter der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> (Übersicht).  
+  
+ [!code-cpp[System.IO.IsolatedStorage.IsolatedStorage#11](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CPP/source.cpp#11)]
+ [!code-csharp[System.IO.IsolatedStorage.IsolatedStorage#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CS/source.cs#11)]
+ [!code-vb[System.IO.IsolatedStorage.IsolatedStorage#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/VB/source.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Format von <paramref name="path" /> ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Es wurde keine Datei gefunden, und <paramref name="mode" /> ist auf <see cref="F:System.IO.FileMode.Open" /> festgelegt.</exception>
+        <exception cref="T:System.IO.IsolatedStorage.IsolatedStorageException">
+          <paramref name="isf" /> hat kein Kontingent.</exception>
+        <permission cref="T:System.Security.Permissions.IsolatedStorageFilePermission">für den Zugriff von isoliertem Speicher</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IsolatedStorageFileStream (string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access, valuetype System.IO.FileShare share) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+        <Parameter Name="share" Type="System.IO.FileShare" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der relative Pfad der Datei innerhalb des isolierten Speichers.</param>
+        <param name="mode">Einer der <see cref="T:System.IO.FileMode" />-Werte.</param>
+        <param name="access">Eine bitweise Kombination der <see cref="T:System.IO.FileAccess" />-Werte.</param>
+        <param name="share">Eine bitweise Kombination der <see cref="T:System.IO.FileShare" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz einer <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Klasse, die im angegebenen <paramref name="mode" /> mit dem angegebenen Datei-<paramref name="access" /> und unter Verwendung des durch <paramref name="share" /> angegebenen Dateifreigabemodus Zugriff auf die durch <paramref name="path" /> angegebene Datei ermöglicht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der isolierte Speicher, der verwendet wird ist beschränkt, wird die aktuelle derzeit ausgeführte Assembly Identitäts- und, die von der Anwendungsdomäne, in der er ausgeführt wird. Dieser Speicher wird nur für die Lebensdauer des geöffnet bleiben die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekt. An einem anderen isolierten Speicherbereichs oder den Speicher geöffnet bleiben erlaubt (also mehrere <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekte daraus geöffnet werden können), verwenden Sie die Form des Konstruktors, die akzeptiert ein <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Objekt.  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, werden die Zeichen möglicherweise nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht. Den vollständigen Kontext dieses Beispiels, finden Sie unter der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> (Übersicht).  
+  
+ [!code-cpp[System.IO.IsolatedStorage.IsolatedStorage#15](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CPP/source.cpp#15)]
+ [!code-csharp[System.IO.IsolatedStorage.IsolatedStorage#15](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CS/source.cs#15)]
+ [!code-vb[System.IO.IsolatedStorage.IsolatedStorage#15](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/VB/source.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Format von <paramref name="path" /> ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Es wurde keine Datei gefunden, und <paramref name="mode" /> ist auf <see cref="F:System.IO.FileMode.Open" /> festgelegt.</exception>
+        <permission cref="T:System.Security.Permissions.IsolatedStorageFilePermission">für den Zugriff von isoliertem Speicher</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IsolatedStorageFileStream (string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.IsolatedStorage.IsolatedStorageFile isf);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access, class System.IO.IsolatedStorage.IsolatedStorageFile isf) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.IsolatedStorage.IsolatedStorageFile)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+        <Parameter Name="isf" Type="System.IO.IsolatedStorage.IsolatedStorageFile" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der relative Pfad der Datei innerhalb des isolierten Speichers.</param>
+        <param name="mode">Einer der <see cref="T:System.IO.FileMode" />-Werte.</param>
+        <param name="access">Eine bitweise Kombination der <see cref="T:System.IO.FileAccess" />-Werte.</param>
+        <param name="isf">Die <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFile" />, in der der <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" /> geöffnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz einer <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Klasse, die im angegebenen <paramref name="mode" /> im durch <paramref name="isf" /> angegebenen Kontext von <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFile" /> den angegebenen Datei-<paramref name="access" /> auf die durch <paramref name="path" /> definierte Datei ermöglicht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `mode` Parameter gibt an, ob eine neue Datei erstellt werden muss oder eine vorhandene verwendet. Die `access` Parameter enthält, schreibgeschützt, Lese-/Schreibzugriff, und nur-schreiben.  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, der Zeichen können nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht. Den vollständigen Kontext dieses Beispiels, finden Sie unter der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> (Übersicht).  
+  
+ [!code-cpp[System.IO.IsolatedStorage.IsolatedStorage#10](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CPP/source.cpp#10)]
+ [!code-csharp[System.IO.IsolatedStorage.IsolatedStorage#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CS/source.cs#10)]
+ [!code-vb[System.IO.IsolatedStorage.IsolatedStorage#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/VB/source.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Format von <paramref name="path" /> ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der isolierte Speicher wird geschlossen.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Es wurde keine Datei gefunden, und <paramref name="mode" /> ist auf <see cref="F:System.IO.FileMode.Open" /> festgelegt.</exception>
+        <exception cref="T:System.IO.IsolatedStorage.IsolatedStorageException">
+          <paramref name="isf" /> hat kein Kontingent.</exception>
+        <permission cref="T:System.Security.Permissions.IsolatedStorageFilePermission">für den Zugriff von isoliertem Speicher</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IsolatedStorageFileStream (string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access, valuetype System.IO.FileShare share, int32 bufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+        <Parameter Name="share" Type="System.IO.FileShare" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der relative Pfad der Datei innerhalb des isolierten Speichers.</param>
+        <param name="mode">Einer der <see cref="T:System.IO.FileMode" />-Werte.</param>
+        <param name="access">Eine bitweise Kombination der <see cref="T:System.IO.FileAccess" />-Werte.</param>
+        <param name="share">Eine bitweise Kombination der <see cref="T:System.IO.FileShare" />-Werte.</param>
+        <param name="bufferSize">Die <see cref="T:System.IO.FileStream" />-Puffergröße.</param>
+        <summary>Initialisiert eine neue Instanz einer <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Klasse, die im angegebenen <paramref name="mode" /> mit dem angegebenen Datei-<paramref name="access" /> und unter Verwendung des durch <paramref name="share" /> angegebenen Dateifreigabemodus Zugriff auf die durch <paramref name="path" /> angegebene Datei ermöglicht, wobei <paramref name="buffersize" /> angegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der isolierte Speicher, der verwendet wird ist beschränkt, wird die aktuelle derzeit ausgeführte Assembly Identitäts- und, die von der Anwendungsdomäne, in der er ausgeführt wird. Dieser Speicher wird nur für die Lebensdauer des geöffnet bleiben die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekt. An einem anderen isolierten Speicherbereichs oder den Speicher geöffnet bleiben erlaubt (also mehrere <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekte daraus geöffnet werden können), verwenden Sie die Form des Konstruktors, die akzeptiert ein <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Objekt.  
+  
+ Die `mode` Parameter gibt an, ob eine neue Datei erstellt werden muss oder eine vorhandene verwendet. Die `access` Parameter enthält, schreibgeschützt, Lese-/Schreibzugriff, und nur-schreiben.  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, der Zeichen können nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Format von <paramref name="path" /> ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Es wurde keine Datei gefunden, und <paramref name="mode" /> ist auf <see cref="F:System.IO.FileMode.Open" /> festgelegt.</exception>
+        <permission cref="T:System.Security.Permissions.IsolatedStorageFilePermission">für den Zugriff von isoliertem Speicher</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IsolatedStorageFileStream (string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.IO.IsolatedStorage.IsolatedStorageFile isf);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access, valuetype System.IO.FileShare share, class System.IO.IsolatedStorage.IsolatedStorageFile isf) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.IO.IsolatedStorage.IsolatedStorageFile)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+        <Parameter Name="share" Type="System.IO.FileShare" />
+        <Parameter Name="isf" Type="System.IO.IsolatedStorage.IsolatedStorageFile" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der relative Pfad der Datei innerhalb des isolierten Speichers.</param>
+        <param name="mode">Einer der <see cref="T:System.IO.FileMode" />-Werte.</param>
+        <param name="access">Eine bitweise Kombination der <see cref="T:System.IO.FileAccess" />-Werte.</param>
+        <param name="share">Eine bitweise Kombination der <see cref="T:System.IO.FileShare" />-Werte.</param>
+        <param name="isf">Die <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFile" />, in der der <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" /> geöffnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz einer <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Klasse, die im angegebenen <paramref name="mode" /> im durch <paramref name="isf" /> angegebenen Kontext des <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFile" /> des durch <paramref name="share" /> angegebenen Dateifreigabemodus den angegebenen Datei-<paramref name="access" /> auf die durch <paramref name="path" /> definierte Datei ermöglicht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `mode` Parameter gibt an, ob eine neue Datei erstellt werden muss oder eine vorhandene verwendet. Die `access` Parameter enthält, schreibgeschützt, Lese-/Schreibzugriff, und nur-schreiben.  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, der Zeichen können nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht. Den vollständigen Kontext dieses Beispiels, finden Sie unter der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> (Übersicht).  
+  
+ [!code-cpp[System.IO.IsolatedStorage.IsolatedStorage#11](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CPP/source.cpp#11)]
+ [!code-csharp[System.IO.IsolatedStorage.IsolatedStorage#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CS/source.cs#11)]
+ [!code-vb[System.IO.IsolatedStorage.IsolatedStorage#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/VB/source.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Format von <paramref name="path" /> ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Es wurde keine Datei gefunden, und <paramref name="mode" /> ist auf <see cref="F:System.IO.FileMode.Open" /> festgelegt.</exception>
+        <exception cref="T:System.IO.IsolatedStorage.IsolatedStorageException">
+          <paramref name="isf" /> hat kein Kontingent.</exception>
+        <permission cref="T:System.Security.Permissions.IsolatedStorageFilePermission">für den Zugriff von isoliertem Speicher</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IsolatedStorageFileStream (string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, System.IO.IsolatedStorage.IsolatedStorageFile isf);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access, valuetype System.IO.FileShare share, int32 bufferSize, class System.IO.IsolatedStorage.IsolatedStorageFile isf) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32,System.IO.IsolatedStorage.IsolatedStorageFile)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+        <Parameter Name="share" Type="System.IO.FileShare" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+        <Parameter Name="isf" Type="System.IO.IsolatedStorage.IsolatedStorageFile" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der relative Pfad der Datei innerhalb des isolierten Speichers.</param>
+        <param name="mode">Einer der <see cref="T:System.IO.FileMode" />-Werte.</param>
+        <param name="access">Eine bitweise Kombination der <see cref="T:System.IO.FileAccess" />-Werte.</param>
+        <param name="share">Eine bitweise Kombination der <see cref="T:System.IO.FileShare" />-Werte.</param>
+        <param name="bufferSize">Die <see cref="T:System.IO.FileStream" />-Puffergröße.</param>
+        <param name="isf">Die <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFile" />, in der der <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" /> geöffnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz einer <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Klasse, die im angegebenen <paramref name="mode" /> mit dem angegebenen Datei-<paramref name="access" /> und unter Verwendung des durch <paramref name="share" /> angegebenen Dateifreigabemodus Zugriff auf die durch <paramref name="path" /> angegebene Datei ermöglicht, wobei <paramref name="buffersize" /> angegeben wird. Dies erfolgt im Kontext von <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFile" />, angegeben durch <paramref name="isf" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `mode` Parameter gibt an, ob eine neue Datei erstellt werden muss oder eine vorhandene verwendet. Die `access` Parameter enthält, schreibgeschützt, Lese-/Schreibzugriff, und nur-schreiben.  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, der Zeichen können nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht. Den vollständigen Kontext dieses Beispiels, finden Sie unter der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> (Übersicht).  
+  
+ [!code-cpp[System.IO.IsolatedStorage.IsolatedStorage#12](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CPP/source.cpp#12)]
+ [!code-csharp[System.IO.IsolatedStorage.IsolatedStorage#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CS/source.cs#12)]
+ [!code-vb[System.IO.IsolatedStorage.IsolatedStorage#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/VB/source.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Format von <paramref name="path" /> ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Es wurde keine Datei gefunden, und <paramref name="mode" /> ist auf <see cref="F:System.IO.FileMode.Open" /> festgelegt.</exception>
+        <exception cref="T:System.IO.IsolatedStorage.IsolatedStorageException">
+          <paramref name="isf" /> hat kein Kontingent.</exception>
+        <permission cref="T:System.Security.Permissions.IsolatedStorageFilePermission">für den Zugriff von isoliertem Speicher</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRead">
+      <MemberSignature Language="C#" Value="public override IAsyncResult BeginRead (byte[] buffer, int offset, int numBytes, AsyncCallback userCallback, object stateObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IAsyncResult BeginRead(unsigned int8[] buffer, int32 offset, int32 numBytes, class System.AsyncCallback userCallback, object stateObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="numBytes" Type="System.Int32" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="stateObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, in den Daten gelesen werden sollen.</param>
+        <param name="offset">Der Byteoffset im <c>Puffer</c> an der Lesevorgang beginnen soll.</param>
+        <param name="numBytes">Die maximale Anzahl der zu lesenden Bytes.</param>
+        <param name="userCallback">Die Methode, die aufgerufen wird, wenn der asynchrone Lesevorgang abgeschlossen ist. Dieser Parameter ist optional.</param>
+        <param name="stateObject">Der Status des asynchronen Lesevorgangs.</param>
+        <summary>Beginnt einen asynchronen Lesevorgang.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" />-Objekt, das den asynchronen Lesevorgang darstellt, der möglicherweise noch aussteht. Dieses <see cref="T:System.IAsyncResult" /> muss an die <see cref="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.EndRead(System.IAsyncResult)" />-Methode dieses Streams übergeben werden, um die Anzahl der gelesenen Bytes zu bestimmen. Sie können dafür den gleichen Code wie für den Aufruf von <see cref="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" /> verwenden oder einen Rückruf an <see cref="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" /> übergeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Position im Stream wird aktualisiert, wenn Sie veranlassen, die den asynchronen Lesevorgang oder schreiben, nicht verwendet werden, wenn der e/a-Vorgang abgeschlossen ist.  
+  
+ Rufen Sie <xref:System.IO.Stream.EndRead%2A> mit diesem <xref:System.IAsyncResult> um herauszufinden, wie viele Bytes gelesen wurden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Es wurde ein asynchroner Lesevorgang nach Erreichen des Dateiendes versucht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWrite">
+      <MemberSignature Language="C#" Value="public override IAsyncResult BeginWrite (byte[] buffer, int offset, int numBytes, AsyncCallback userCallback, object stateObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IAsyncResult BeginWrite(unsigned int8[] buffer, int32 offset, int32 numBytes, class System.AsyncCallback userCallback, object stateObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="numBytes" Type="System.Int32" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="stateObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, in den Daten geschrieben werden sollen.</param>
+        <param name="offset">Der Byteoffset im <c>Puffer</c> ab dem geschrieben werden soll.</param>
+        <param name="numBytes">Die maximale Anzahl der zu schreibenden Bytes.</param>
+        <param name="userCallback">Die Methode, die aufgerufen wird, wenn der asynchrone Schreibvorgang abgeschlossen ist. Dieser Parameter ist optional.</param>
+        <param name="stateObject">Der Status des asynchronen Schreibvorgangs.</param>
+        <summary>Beginnt einen asynchronen Schreibvorgang.</summary>
+        <returns>Eine <see cref="T:System.IAsyncResult" />-Schnittstelle, die den asynchronen Schreibvorgang darstellt, der möglicherweise noch aussteht. Dieses <see cref="T:System.IAsyncResult" /> muss an die <see cref="M:System.IO.Stream.EndWrite(System.IAsyncResult)" />-Methode des Streams übergeben werden, um sicherzustellen, dass der Schreibvorgang abgeschlossen ist und die Ressourcen entsprechend freigegeben werden. Sie können dafür den gleichen Code wie für den Aufruf von <see cref="M:System.IO.Stream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" /> verwenden oder einen Rückruf an <see cref="M:System.IO.Stream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" /> übergeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekt beschreibbar ist, Schreiben am Ende des Streams erweitert den Stream.  
+  
+ Die aktuelle Position im Stream wird aktualisiert, wenn Sie veranlassen, die den asynchronen Lesevorgang oder schreiben, nicht verwendet werden, wenn der e/a-Vorgang abgeschlossen ist.  
+  
+ Rufen Sie <xref:System.IO.Stream.EndWrite%2A> mit der <xref:System.IAsyncResult> -Objekt, das diese Methode zurückgegeben wird, um herauszufinden, wie viele Bytes geschrieben wurden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Es wurde ein asynchroner Schreibvorgang nach Erreichen des Dateiendes versucht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public override bool CanRead { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRead" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorageFileStream.CanRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob die Datei gelesen werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn ein <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt gelesen werden kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um zu bestimmen, ob die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekt gelesen werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie verwenden die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.CanRead%2A> Eigenschaft als eine Prüfung, ob ein Stream vor dem Aufrufen gelesen werden kann die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.Read%2A> oder <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.BeginRead%2A> Methoden. Den vollständigen Kontext dieses Beispiels, finden Sie unter der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> (Übersicht).  
+  
+ [!code-cpp[System.IO.IsolatedStorage.IsolatedStorage#11](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CPP/source.cpp#11)]
+ [!code-csharp[System.IO.IsolatedStorage.IsolatedStorage#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CS/source.cs#11)]
+ [!code-vb[System.IO.IsolatedStorage.IsolatedStorage#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/VB/source.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSeek">
+      <MemberSignature Language="C#" Value="public override bool CanSeek { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSeek" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorageFileStream.CanSeek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob Suchvorgänge unterstützt werden.</summary>
+        <value>
+          <see langword="true" />, wenn ein <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt Suchvorgänge unterstützt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um zu bestimmen, ob die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> -Objekt Suchvorgänge unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWrite">
+      <MemberSignature Language="C#" Value="public override bool CanWrite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanWrite" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorageFileStream.CanWrite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob in die Datei geschrieben werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn ein <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt geschrieben werden kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um zu bestimmen, ob die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> -Objekt geschrieben werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie verwenden die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.CanWrite%2A> Eigenschaft als eine Prüfung, ob ein Stream vor dem Aufrufen gelesen werden kann die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.Write%2A> oder <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.BeginWrite%2A> Methoden. Den vollständigen Kontext dieses Beispiels, finden Sie unter der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> (Übersicht).  
+  
+ [!code-cpp[System.IO.IsolatedStorage.IsolatedStorage#13](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CPP/source.cpp#13)]
+ [!code-csharp[System.IO.IsolatedStorage.IsolatedStorage#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CS/source.cs#13)]
+ [!code-vb[System.IO.IsolatedStorage.IsolatedStorage#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/VB/source.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich <xref:System.IDisposable.Dispose%2A> Methode und die <xref:System.Object.Finalize%2A> Methode. <xref:System.IDisposable.Dispose%2A>Ruft die geschützte <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.Dispose%2A> Methode mit dem `disposing` Parameter auf "true" festgelegt. <xref:System.Object.Finalize%2A>Ruft <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.Dispose%2A> mit `disposing` auf "false" festgelegt.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Verweise. Diese Methode ruft die <xref:System.IDisposable.Dispose%2A>-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.IDisposable.Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Beim Überschreiben von <see cref="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.Dispose(System.Boolean)" /> müssen Sie darauf achten, nicht auf Objekte zu verweisen, die durch einen früheren Aufruf von <see cref="M:System.IDisposable.Dispose" /> freigegeben wurden. Weitere Informationen zum Implementieren <see cref="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.Dispose(System.Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see cref="M:System.IDisposable.Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRead">
+      <MemberSignature Language="C#" Value="public override int EndRead (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 EndRead(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.EndRead(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Die ausstehende asynchrone Anforderung.</param>
+        <summary>Beendet eine ausstehende asynchrone Leseanforderung.</summary>
+        <returns>Die Anzahl der aus dem Stream gelesenen Bytes. Diese Anzahl kann zwischen 0 (null) und der Anzahl der angeforderten Bytes liegen. Streams geben nur am Ende des Streams 0 (null) zurück. Andernfalls blockieren diese, bis mindestens ein Byte verfügbar ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.EndRead%2A>muss genau einmal aufgerufen werden, für jede <xref:System.IAsyncResult> -Sitzungsobjekts <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.BeginRead%2A>, und Aufrufen <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.EndRead%2A> ist die einzige Möglichkeit, zu wissen, wie viele Bytes gelesen wurden die <xref:System.IO.Stream>. <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.EndRead%2A>blockiert, bis die e/a-Operation abgeschlossen ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="asyncResult" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWrite">
+      <MemberSignature Language="C#" Value="public override void EndWrite (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndWrite(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.EndWrite(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Die ausstehende, zu beendende asynchrone E/A-Anforderung.</param>
+        <summary>Beendet einen asynchronen Schreibvorgang.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.EndWrite%2A>muss genau einmal aufgerufen werden, für jede <xref:System.IAsyncResult> aus <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.BeginWrite%2A>.  
+  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.EndWrite%2A>blockiert, bis die e/a-Operation abgeschlossen ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="asyncResult" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Puffer für diesen Datenstrom und veranlasst die Ausgabe aller gepufferten Daten in die Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da Sie ein Puffer zum Lesen oder schreiben, aber nicht beide gleichzeitig verwendet werden kann <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.Flush%2A> erfüllt zwei Funktionen. Zunächst alle zuvor in den Puffer geschriebenen Daten in die Datei kopiert und der Puffer ist deaktiviert. Zweitens If <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.CanSeek%2A> ist `true` und Daten wurde zuvor in den Puffer zum Lesen aus der Datei kopiert, die aktuelle Position in der Datei verringert, um die Anzahl der gelesenen Bytes im Puffer ist. Der Puffer wird dann gelöscht.  
+  
+ Verwenden der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.Flush%28System.Boolean%29> -methodenüberladung, wenn Sie sicherstellen möchten, dass alle Zwischendateipuffer Daten gepuffert bezieht sich auf den Datenträger.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush (bool flushToDisk);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush(bool flushToDisk) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.Flush(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flushToDisk" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="flushToDisk">
+          <see langword="true" />, um alle Zwischendateipuffer zu leeren, andernfalls <see langword="false" />.</param>
+        <summary>Löscht die Puffer für diesen Datenstrom, veranlasst die Ausgabe aller gepufferten Daten in die Datei und löscht zudem alle Zwischendateipuffer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung, wenn Sie möchten, um sicherzustellen, dass alle Zwischendateipuffer Daten gepuffert wird geschrieben auf den Datenträger.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public override IntPtr Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Handle" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorageFileStream.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use SafeFileHandle - once available")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Dateihandle für die Datei ab, die vom aktuellen <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt gekapselt wird. Der Zugriff auf diese Eigenschaft ist für ein <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt nicht zulässig und löst eine <see cref="T:System.IO.IsolatedStorage.IsolatedStorageException" />-Ausnahme aus.</summary>
+        <value>Das Dateihandle für die Datei, die vom aktuellen <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt gekapselt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.IO.FileStream.Handle%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.Handle%2A> Eigenschaft.  
+  
+ [!code-cpp[System.IO.IsolatedStorage.IsolatedStorage#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CPP/source.cpp#4)]
+ [!code-csharp[System.IO.IsolatedStorage.IsolatedStorage#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CS/source.cs#4)]
+ [!code-vb[System.IO.IsolatedStorage.IsolatedStorage#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IsolatedStorage.IsolatedStorageException">Die <see cref="P:System.IO.IsolatedStorage.IsolatedStorageFileStream.Handle" /> -Eigenschaft generiert immer diese Ausnahme ausgelöst.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /> Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />.</permission>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAsync">
+      <MemberSignature Language="C#" Value="public override bool IsAsync { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAsync" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorageFileStream.IsAsync" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob das <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt asynchron oder synchron geöffnet wurde.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt den asynchronen Zugriff unterstützt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Asynchrone <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekte konnten nicht erstellt werden, im Gegensatz zum <xref:System.IO.FileStream>. Allerdings die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.BeginWrite%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.BeginRead%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.EndWrite%2A>, und <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.EndRead%2A> Methoden für synchrone-Instanzen mit Leistungseinbußen unterstützt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie verwenden können die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.IsAsync%2A> Eigenschaft, um zu überprüfen, ob ein <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> ist synchron. Den vollständigen Kontext dieses Beispiels, finden Sie unter der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> (Übersicht).  
+  
+ [!code-cpp[System.IO.IsolatedStorage.IsolatedStorage#7](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CPP/source.cpp#7)]
+ [!code-csharp[System.IO.IsolatedStorage.IsolatedStorage#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CS/source.cs#7)]
+ [!code-vb[System.IO.IsolatedStorage.IsolatedStorage#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public override long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorageFileStream.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge des <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekts ab.</summary>
+        <value>Die Länge des <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekts in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.Length%2A>Gibt die Anzahl der Bytes, die derzeit in der Datei. Es wird durch isolierte Speicherung Kontingent nicht beeinflusst.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.Length%2A> Eigenschaft.  
+  
+ [!code-cpp[System.IO.IsolatedStorage.IsolatedStorage#14](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CPP/source.cpp#14)]
+ [!code-csharp[System.IO.IsolatedStorage.IsolatedStorage#14](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CS/source.cs#14)]
+ [!code-vb[System.IO.IsolatedStorage.IsolatedStorage#14](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/VB/source.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Lock">
+      <MemberSignature Language="C#" Value="public override void Lock (long position, long length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Lock(int64 position, int64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.Lock(System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Int64" />
+        <Parameter Name="length" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="position">Die Anfangsposition des zu sperrenden Bereichs. Der Wert dieses Parameters muss größer oder gleich 0 (Null) sein.</param>
+        <param name="length">Die Anzahl der zu sperrenden Bytes.</param>
+        <summary>Verhindert, dass andere Prozesse im Stream lesen oder schreiben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Sperren eines Bereichs eines Dateidatenstroms erhält die Threads mit der Sperren exklusiven Zugriff auf dieses Bereichs des Dateidatenstroms.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="position" /> oder <paramref name="length" /> ist ein negativer Wert.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Datei ist geschlossen.</exception>
+        <exception cref="T:System.IO.IOException">Der Prozess kann nicht auf die Datei zugreifen, da sie teilweise von einem anderen Prozess gesperrt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public override long Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Position" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorageFileStream.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Position des aktuellen <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekts ab oder legt diese fest.</summary>
+        <value>Die aktuelle Position dieses <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft funktioniert, wenn die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.CanSeek%2A> Eigenschaft ist `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.Position%2A> Eigenschaft, um Daten in eine Datei schreiben.  
+  
+ [!code-cpp[System.IO.IsolatedStorage.IsolatedStorage#14](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CPP/source.cpp#14)]
+ [!code-csharp[System.IO.IsolatedStorage.IsolatedStorage#14](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CS/source.cs#14)]
+ [!code-vb[System.IO.IsolatedStorage.IsolatedStorage#14](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/VB/source.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Position kann nicht auf eine negative Zahl festgelegt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override int Read (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Read(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.Read(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der zu lesende Puffer.</param>
+        <param name="offset">Der Offset im Puffer, ab dem geschrieben werden soll.</param>
+        <param name="count">Die maximale Anzahl der zu lesenden Bytes.</param>
+        <summary>Kopiert Bytes aus dem aktuellen gepufferten <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt in ein Array.</summary>
+        <returns>Die Anzahl der insgesamt in den <paramref name="buffer" /> gelesenen Bytes. Dies kann weniger als die Anzahl der angeforderten Bytes sein, wenn diese Anzahl an Bytes derzeit nicht verfügbar ist, oder 0 (null), wenn das Streamende erreicht ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `buffer` Parameter kann eine Instanz von der <xref:System.Buffer> Klasse oder ein Array von einem der folgenden Typen: <xref:System.Byte>, <xref:System.SByte>, <xref:System.Char>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32> , <xref:System.UInt64>, <xref:System.Single>, oder <xref:System.Double>. Die `offset` Parameter gibt den Offset des Bytes im Puffer, ab dem geschrieben (Index im Puffer) werden soll und die `count` -Parameter gibt die maximale Anzahl von Bytes, die aus diesem Stream gelesen werden. Der zurückgegebene Wert ist die tatsächliche Anzahl der gelesenen Bytes oder 0 (null), wenn das Ende des Streams erreicht ist. Wenn der Lesevorgang erfolgreich ist, wird die aktuelle Position im Stream um die Anzahl der gelesenen Bytes erweiterte. Wenn eine Ausnahme auftritt, ist die aktuelle Position im Stream nicht geändert.  
+  
+ Die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.Read%2A> Methode behandelt das `buffer` Parameter als einen Block von Bytes, unabhängig vom tatsächlichen Typ. Entsprechend der `offset` und `count` Parameter werden immer in Bytes angegeben. Für `buffer` Parameter als Bytearrays, dies bedeutet, dass ein Index des Elements mit der Elementgröße in Bytes, die einen richtigen Wert für multipliziert muss `offset` oder `count`.  
+  
+ Die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.Read%2A> Methode gibt 0 (null) zurück, nur dann, wenn das Ende des Streams erreicht ist. In allen anderen Fällen <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.Read%2A> liest immer mindestens ein Byte aus dem Stream vor der Rückgabe. Wenn keine Daten verfügbar sind die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekt bei einem Aufruf von <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.Read%2A>, die Methode blockiert, bis mindestens 1 Byte Daten zurückgegeben werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadByte">
+      <MemberSignature Language="C#" Value="public override int ReadByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ReadByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.ReadByte" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liest ein einzelnes Byte aus dem <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt im isolierten Speicher.</summary>
+        <returns>Der aus der Datei im isolierten Speicher gelesene Wert in Form einer 8-Bit-Ganzzahl ohne Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.ReadByte%2A> Methode kann verwendet werden, um das Lesen von Daten aus einer <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekt. Den vollständigen Kontext dieses Beispiels, finden Sie unter der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> (Übersicht).  
+  
+ [!code-cpp[System.IO.IsolatedStorage.IsolatedStorage#14](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CPP/source.cpp#14)]
+ [!code-csharp[System.IO.IsolatedStorage.IsolatedStorage#14](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CS/source.cs#14)]
+ [!code-vb[System.IO.IsolatedStorage.IsolatedStorage#14](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/VB/source.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeFileHandle">
+      <MemberSignature Language="C#" Value="public override Microsoft.Win32.SafeHandles.SafeFileHandle SafeFileHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.SafeHandles.SafeFileHandle SafeFileHandle" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorageFileStream.SafeFileHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SafeHandles.SafeFileHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:Microsoft.Win32.SafeHandles.SafeFileHandle" />-Objekt ab, das das Dateihandle des Betriebssystems für die Datei darstellt, die vom aktuellen <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt gekapselt wird.</summary>
+        <value>Ein <see cref="T:Microsoft.Win32.SafeHandles.SafeFileHandle" />-Objekt, das das Dateihandle des Betriebssystems für die Datei darstellt, die das aktuelle <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt kapselt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.SafeFileHandle%2A> Eigenschaft wird nicht unterstützt und generiert immer eine <xref:System.IO.IsolatedStorage.IsolatedStorageException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IsolatedStorage.IsolatedStorageException">Die <see cref="P:System.IO.IsolatedStorage.IsolatedStorageFileStream.SafeFileHandle" /> -Eigenschaft generiert immer diese Ausnahme ausgelöst.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public override long Seek (long offset, System.IO.SeekOrigin origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 Seek(int64 offset, valuetype System.IO.SeekOrigin origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.Seek(System.Int64,System.IO.SeekOrigin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="origin" Type="System.IO.SeekOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Die neue Position des <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekts.</param>
+        <param name="origin">Einer der <see cref="T:System.IO.SeekOrigin" />-Werte.</param>
+        <summary>Legt die aktuelle Position dieses <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekts auf den angegebenen Wert fest.</summary>
+        <returns>Die neue Position im <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekte unterstützen das überschreitet die Länge des Streams positionieren, während andere in diesem Fall eine Ausnahme auslösen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="origin" /> muss einer der <see cref="T:System.IO.SeekOrigin" />-Werte sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLength">
+      <MemberSignature Language="C#" Value="public override void SetLength (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetLength(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.SetLength(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die neue Länge des <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekts.</param>
+        <summary>Legt die Länge dieses <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekts auf den angegebenen <paramref name="value" /> fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das angegebene `value` ist kleiner als die aktuelle Länge der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> -Objekt, der Stream wird abgeschnitten. Wenn das angegebene `value` ist größer als die aktuelle Länge des Streams befindet, wird der Stream erweitert. Wenn der Stream erweitert wird, sind den Inhalt des Streams zwischen der alten und die neue Länge nicht definiert. Damit diese Methode verwendet eine <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekt muss sowohl Schreib- und Suchvorgänge unterstützen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="value" /> ist eine negative Zahl.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Unlock">
+      <MemberSignature Language="C#" Value="public override void Unlock (long position, long length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Unlock(int64 position, int64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.Unlock(System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Int64" />
+        <Parameter Name="length" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="position">Die Anfangsposition des zu entsperrenden Bereichs. Der Wert dieses Parameters muss größer oder gleich 0 (Null) sein.</param>
+        <param name="length">Die Anzahl der zu entsperrenden Bytes.</param>
+        <summary>Ermöglicht anderen Prozessen den Zugriff auf die gesamte Datei oder einen Teil der Datei, die zuvor gesperrt war.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="position" /> oder <paramref name="length" /> ist ein negativer Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.Write(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der zu schreibende Puffer.</param>
+        <param name="offset">Der Byteoffset im Puffer, ab dem begonnen wird.</param>
+        <param name="count">Die maximale Anzahl der zu schreibenden Bytes.</param>
+        <summary>Schreibt einen Block von Bytes mit den aus einem Bytearray gelesenen Daten in das <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `offset` -Parameter gibt den Offset des Bytes in der `buffer` ab dem gelesen werden soll und die `count` -Parameter gibt die Anzahl der Bytes, die in diese geschrieben werden, <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekt. Wenn der Schreibvorgang erfolgreich ist, die aktuelle position der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekt wird erweitert, um die Anzahl der geschriebenen Bytes. Wenn eine Ausnahme auftritt, die aktuelle Position der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekt bleibt unverändert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IsolatedStorage.IsolatedStorageException">Der versuchte Schreibvorgang überschreitet das Kontingent für das <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteByte">
+      <MemberSignature Language="C#" Value="public override void WriteByte (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteByte(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageFileStream.WriteByte(System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der in die Datei im isolierten Speicher zu schreibende Bytewert.</param>
+        <summary>Schreibt ein einzelnes Byte in das <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.WriteByte%2A> Methode kann verwendet werden, um das Lesen von Daten aus einer <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Objekt. Den vollständigen Kontext dieses Beispiels, finden Sie unter der <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> (Übersicht).  
+  
+ [!code-cpp[System.IO.IsolatedStorage.IsolatedStorage#14](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CPP/source.cpp#14)]
+ [!code-csharp[System.IO.IsolatedStorage.IsolatedStorage#14](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/CS/source.cs#14)]
+ [!code-vb[System.IO.IsolatedStorage.IsolatedStorage#14](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.IsolatedStorage.IsolatedStorage/VB/source.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IsolatedStorage.IsolatedStorageException">Der versuchte Schreibvorgang überschreitet das Kontingent für das <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFileStream" />-Objekt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

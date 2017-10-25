@@ -1,0 +1,45 @@
+<Namespace Name="System.Speech.Recognition">
+  <Docs>
+    <summary>Die <see cref="N:System.Speech.Recognition" /> Namespace enthält Typen, Windows-Desktop-Speech-Technologie für die Implementierung von der Spracherkennung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Software für Windows Desktop Speech-Technologie bietet eine grundlegende Speech Recognition-Infrastruktur, die digitalisiert Geräuschmeßnorm Signale und Wörter und Spracherkennung Elemente aus einer Audioeingabe wiederhergestellt wird.  
+  
+ Anwendungen verwenden die <xref:System.Speech.Recognition> Namespace zugreifen, und erweitern diese grundlegenden Speech Recognition Technologie durch Algorithmen zum Identifizieren und agiert auf bestimmte Ausdrücke oder Word-Muster zu definieren und verwalten das Laufzeitverhalten des diese Sprache Infrastruktur.  
+  
+ **Erstellen von Grammatiken**  
+  
+ Sie erstellen die Grammatiken, die einem Satz von Regeln oder Einschränkungen, die zum Definieren von Wörtern und Ausdrücken, die von die Anwendung erkannt wird als sinnvolle Eingabe bestehen. Verwenden einen Konstruktor für die <xref:System.Speech.Recognition.Grammar> -Klasse, können Sie eine grammatikobjekt erstellen, während der Laufzeit aus <xref:System.Speech.Recognition.GrammarBuilder> oder <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> Instanzen, oder aus einer Datei, eine Zeichenfolge oder einen Stream, der eine Definition der Grammatik enthält.  
+  
+ Mithilfe der <xref:System.Speech.Recognition.GrammarBuilder> und <xref:System.Speech.Recognition.Choices> Klassen können programmgesteuert erstellt Grammatiken der geringen bis mittleren Komplexität, die zum Ausführen der Erkennung für viele häufige Szenarien verwendet werden kann. Grammatiken erstellen, das die entsprechen, programmgesteuert die [Speech Recognition Grammatik Spezifikation 1.0 (SRGS)](http://go.microsoft.com/fwlink/?LinkId=201761) und nutzen Sie die Flexibilität, authoring SRGS, verwenden Sie die Typen von der <xref:System.Speech.Recognition.SrgsGrammar> Namespace. Sie können auch XML-Format SRGS Grammatiken mit einem beliebigen Text-Editor erstellen und verwenden Sie das Ergebnis erstellen <xref:System.Speech.Recognition.GrammarBuilder>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> , oder <xref:System.Speech.Recognition.Grammar> Objekte.  
+  
+ Darüber hinaus die <xref:System.Speech.Recognition.DictationGrammar> -Klasse bietet eine spezielle Grammatik zur Unterstützung einer konventionellen diktieren-Modell.  
+  
+ Finden Sie unter [erstellen Grammatiken](http://msdn.microsoft.com/en-us/dbea278c-21a5-4816-aee7-5fd88ef993dd) in der [System Spracherkennung Programmierhandbuch für .NET Framework 4.0](http://msdn.microsoft.com/en-us/610116c7-3817-40ff-857b-5d41e8511043) für Weitere Informationen und Beispiele.  
+  
+ **Verwalten von Spracherkennungsmoduls**  
+  
+ Instanzen von <xref:System.Speech.Recognition.SpeechRecognizer> und <xref:System.Speech.Recognition.SpeechRecognitionEngine> Lieferumfang <xref:System.Speech.Recognition.Grammar> Objekte der primären Zugriff auf die Spracherkennungsmoduls Windows Desktop-Speech-Technologie bereitstellen.  
+  
+ Können Sie die <xref:System.Speech.Recognition.SpeechRecognizer> Klasse zum Erstellen von Clientanwendungen, die mit dem Spracherkennung Recognition-Technologie, die von Windows, die Sie durch konfigurieren können bereitgestellten der **Systemsteuerung**. Solche Anwendungen Eingaben über audio input Standardmechanismus für einen Computer an.  
+  
+ Mehr Kontrolle über die Konfiguration und die Art der Erkennungsmodul, erstellen Sie eine Anwendung mit <xref:System.Speech.Recognition.SpeechRecognitionEngine>, der prozessintern ausgeführt. Mithilfe der <xref:System.Speech.Recognition.SpeechRecognitionEngine> -Klasse, Sie können auch dynamisch von Geräten, Dateien oder Streams Eingabe Audio auswählen.  
+  
+ Finden Sie unter [initialisieren und Verwalten einer Spracherkennungsmoduls](http://msdn.microsoft.com/en-us/6eed5b59-1258-4013-8a4c-a1ddabd93ae4) in der [System Spracherkennung Programmierhandbuch für .NET Framework 4.0](http://msdn.microsoft.com/en-us/610116c7-3817-40ff-857b-5d41e8511043) für Weitere Informationen.  
+  
+ **Reagieren auf Ereignisse**  
+  
+ <xref:System.Speech.Recognition.SpeechRecognizer>und <xref:System.Speech.Recognition.SpeechRecognitionEngine> Objekte Ereignisse als Antwort auf Audioeingabe an die Spracherkennungsmoduls generieren. Die `AudioLevelUpdated`, `AudioSignalProblemOccurred`, `AudioStateChanged` Ereignisse werden als Reaktion auf Änderungen in das Eingangssignal ausgelöst. Die `SpeechDetected` Ereignis wird ausgelöst, wenn die Spracherkennungsmoduls eingehende Audio als Sprache identifiziert. Löst das Spracherkennungsmodul der `SpeechRecognized` Ereignis, wenn es in eines seiner geladenen Grammatiken Spracheingabe entspricht, und löst die `SpeechRecognitionRejected` wenn Spracheingabe stimmt mit keinem der seine geladenen Grammatiken.  
+  
+ Andere Typen von Ereignissen gehören die `LoadGrammarCompleted` Ereignis, das eine Spracherkennungsmoduls auslöst, wenn es eine Grammatik geladen wurde. Die <xref:System.Speech.Recognition.SpeechRecognizer.StateChanged> ist exklusiv für die <xref:System.Speech.Recognition.SpeechRecognizer> -Klasse, die löst das Ereignis, wenn der Status der Windows-Spracherkennung ändert.  
+  
+ Sie können registrieren, um nach Ereignissen, die die Spracherkennungsmoduls löst benachrichtigt werden, und erstellen Handler mithilfe der `EventsArgs` Klassen im Zusammenhang mit jedes dieser Ereignisse auf das Verhalten der Anwendung zu programmieren, wenn ein Ereignis ausgelöst wird.  
+  
+ Finden Sie unter [mit Spracherkennung Recognition Ereignissen](http://msdn.microsoft.com/en-us/01c598ca-2e0e-4e89-b303-cd1cef9e8482) in der [System Spracherkennung Programmierhandbuch für .NET Framework 4.0](http://msdn.microsoft.com/en-us/610116c7-3817-40ff-857b-5d41e8511043) für Weitere Informationen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

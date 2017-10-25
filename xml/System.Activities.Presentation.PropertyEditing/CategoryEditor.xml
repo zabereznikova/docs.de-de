@@ -1,0 +1,166 @@
+<Type Name="CategoryEditor" FullName="System.Activities.Presentation.PropertyEditing.CategoryEditor">
+  <TypeSignature Language="C#" Value="public abstract class CategoryEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CategoryEditor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.PropertyEditing.CategoryEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen benutzerdefinierten <see cref="T:System.Activities.Presentation.PropertyEditing.CategoryEditor" /> bereit, der für Gruppierungseigenschaften verwendet werden soll, die in einem <see cref="T:System.Windows.Forms.PropertyGrid" /> angezeigt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CategoryEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.CategoryEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Presentation.PropertyEditing.CategoryEditor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsumesProperty">
+      <MemberSignature Language="C#" Value="public abstract bool ConsumesProperty (System.Activities.Presentation.PropertyEditing.PropertyEntry propertyEntry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ConsumesProperty(class System.Activities.Presentation.PropertyEditing.PropertyEntry propertyEntry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.CategoryEditor.ConsumesProperty(System.Activities.Presentation.PropertyEditing.PropertyEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyEntry" Type="System.Activities.Presentation.PropertyEditing.PropertyEntry" />
+      </Parameters>
+      <Docs>
+        <param name="propertyEntry">Die <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyEntry" />-Instanz, die überprüft wird, um zu bestimmen, ob sie in den vom <see cref="T:System.Activities.Presentation.PropertyEditing.CategoryEditor" /> bearbeiteten Eigenschaften enthalten ist.</param>
+        <summary>Bestimmt, welche Eigenschaften vom <see cref="T:System.Activities.Presentation.PropertyEditing.CategoryEditor" /> bearbeitet werden.</summary>
+        <returns>
+          <see langword="true" />Wenn dieser Editor die angegebene Eigenschaft; bearbeitet. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEditorAttribute">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.EditorAttribute CreateEditorAttribute (System.Activities.Presentation.PropertyEditing.CategoryEditor editor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.EditorAttribute CreateEditorAttribute(class System.Activities.Presentation.PropertyEditing.CategoryEditor editor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.CategoryEditor.CreateEditorAttribute(System.Activities.Presentation.PropertyEditing.CategoryEditor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EditorAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editor" Type="System.Activities.Presentation.PropertyEditing.CategoryEditor" />
+      </Parameters>
+      <Docs>
+        <param name="editor">Der <see cref="T:System.Activities.Presentation.PropertyEditing.CategoryEditor" />, für den ein neues <see cref="T:System.ComponentModel.EditorAttribute" /> erstellt werden soll.</param>
+        <summary>Erstellt ein neues <see cref="T:System.ComponentModel.EditorAttribute" /> für den angegebenen <see cref="T:System.Activities.Presentation.PropertyEditing.CategoryEditor" />.</summary>
+        <returns>Ein neuer <see cref="T:System.ComponentModel.EditorAttribute" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEditorAttribute">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.EditorAttribute CreateEditorAttribute (Type categoryEditorType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.EditorAttribute CreateEditorAttribute(class System.Type categoryEditorType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.CategoryEditor.CreateEditorAttribute(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EditorAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryEditorType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="categoryEditorType">Der <see cref="T:System.Activities.Presentation.PropertyEditing.CategoryEditor" />-Typ, für den das neue <see cref="T:System.ComponentModel.EditorAttribute" /> erstellt werden soll.</param>
+        <summary>Erstellt ein neues <see cref="T:System.ComponentModel.EditorAttribute" /> für den angegebenen <see cref="T:System.Activities.Presentation.PropertyEditing.CategoryEditor" />-Typ.</summary>
+        <returns>Ein neuer <see cref="T:System.ComponentModel.EditorAttribute" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditorTemplate">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.DataTemplate EditorTemplate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate EditorTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.CategoryEditor.EditorTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.DataTemplate" /> ab, die von der Eigenschaftenanalyse gehostet wird, um die Benutzeroberfläche für einen <see cref="T:System.Activities.Presentation.PropertyEditing.CategoryEditor" /> bereitzustellen.</summary>
+        <value>Ein <see cref="T:System.Windows.DataTemplate" />-Benutzeroberfläche</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImage">
+      <MemberSignature Language="C#" Value="public abstract object GetImage (System.Windows.Size desiredSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetImage(valuetype System.Windows.Size desiredSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.CategoryEditor.GetImage(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="desiredSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="desiredSize">Die gewünschte <see cref="T.Systems.Windows.Size" /> des zurückzugebenden Bilds.</param>
+        <summary>Gibt ein <see cref="T:System.Object" /> zurück, das der Host in einem <see cref="T:System.Windows.Controls.ContentControl" /> anzeigen kann.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das im <see cref="T:System.Windows.Controls.ContentControl" /> angezeigt werden soll.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetCategory">
+      <MemberSignature Language="C#" Value="public abstract string TargetCategory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetCategory" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.CategoryEditor.TargetCategory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine lokalisierte Zeichenfolge ab, die angibt, zu welcher Kategorie der Editor gehört.</summary>
+        <value>Eine <see cref="T:System.String" />, die die Editorkategorie darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kategorie-Editoren werden für Typen definiert und müssen deshalb beim Laden angeben, zu welcher Kategorie sie gehören.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

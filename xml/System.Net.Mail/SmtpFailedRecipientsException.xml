@@ -1,0 +1,295 @@
+<Type Name="SmtpFailedRecipientsException" FullName="System.Net.Mail.SmtpFailedRecipientsException">
+  <TypeSignature Language="C#" Value="public class SmtpFailedRecipientsException : System.Net.Mail.SmtpFailedRecipientException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SmtpFailedRecipientsException extends System.Net.Mail.SmtpFailedRecipientException implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Mail.SmtpFailedRecipientsException" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Mail</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.Mail.SmtpFailedRecipientException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn e-Mails versendet werden mithilfe einer <see cref="T:System.Net.Mail.SmtpClient" /> und nicht an alle Empfänger ausgeliefert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Mail.SmtpFailedRecipientsException.InnerExceptions%2A> Eigenschaft enthält die Ausnahmen, die beim Versuch zum Senden von E-mail empfangen. Die e-Mail-Nachricht möglicherweise erfolgreich an einige Empfänger übermittelt wurden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel sendet eine e-Mail-Nachricht, die nicht zugestellt wurde, da ein Postfach ausgelastet oder nicht verfügbar war.  
+  
+ [!code-cpp[NclMailSync#27](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#27)]
+ [!code-csharp[NclMailSync#27](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#27)]  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SmtpFailedRecipientsException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.SmtpFailedRecipientsException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine leere Instanz der <see cref="T:System.Net.Mail.SmtpFailedRecipientsException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SmtpFailedRecipientsException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.SmtpFailedRecipientsException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Mail.SmtpFailedRecipientsException" />-Klasse mit der angegebenen <see cref="T:System.String" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SmtpFailedRecipientsException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.SmtpFailedRecipientsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Eine <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Instanz mit den zum Serialisieren der neuen <see cref="T:System.Net.Mail.SmtpFailedRecipientsException" />-Instanz erforderlichen Informationen.</param>
+        <param name="context">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" />, der das Ziel des serialisierten Streams angibt, der der neuen <see cref="T:System.Net.Mail.SmtpFailedRecipientsException" />-Instanz zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Mail.SmtpFailedRecipientsException" />-Klasse aus den angegebenen Instanzen der <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Klasse und der <see cref="T:System.Runtime.Serialization.StreamingContext" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor implementiert die <xref:System.Runtime.Serialization.ISerializable> eine Schnittstelle für die <xref:System.Net.Mail.SmtpFailedRecipientsException> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SmtpFailedRecipientsException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.SmtpFailedRecipientsException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <param name="innerException">Die innere Ausnahme.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.Mail.SmtpFailedRecipientsException" /> Klasse mit dem angegebenen <see cref="T:System.String" /> und inneren <see cref="T:System.Exception" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SmtpFailedRecipientsException (string message, System.Net.Mail.SmtpFailedRecipientException[] innerExceptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Net.Mail.SmtpFailedRecipientException[] innerExceptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.SmtpFailedRecipientsException.#ctor(System.String,System.Net.Mail.SmtpFailedRecipientException[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerExceptions" Type="System.Net.Mail.SmtpFailedRecipientException[]" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Ausnahmemeldung.</param>
+        <param name="innerExceptions">Das Array von Empfänger mit Fehlern bei der Zustellung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.Mail.SmtpFailedRecipientsException" /> Klasse mit dem angegebenen <see cref="T:System.String" /> und ein Array vom Typ <see cref="T:System.Net.Mail.SmtpFailedRecipientException" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.SmtpFailedRecipientsException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">To be added.</param>
+        <param name="context">To be added.</param>
+        <summary>Füllt eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> Instanz mit den Daten, die erforderlich ist, zum Serialisieren der <see cref="T:System.Net.Mail.SmtpFailedRecipientsException" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InnerExceptions">
+      <MemberSignature Language="C#" Value="public System.Net.Mail.SmtpFailedRecipientException[] InnerExceptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Mail.SmtpFailedRecipientException[] InnerExceptions" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.SmtpFailedRecipientsException.InnerExceptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.SmtpFailedRecipientException[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine oder mehrere <see cref="T:System.Net.Mail.SmtpFailedRecipientException" />s, die mit Fehlern bei der SMTP-Zustellung der E-mail-Empfänger angeben.</summary>
+        <value>Ein Array vom Typ <see cref="T:System.Net.Mail.SmtpFailedRecipientException" /> , das die Empfänger mit Fehlern bei der Zustellung aufgelistet.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.SmtpFailedRecipientsException.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">To be added.</param>
+        <param name="context">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Mail.SmtpFailedRecipientsException" />-Klasse aus der angegebenen <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Instanz und der <see cref="T:System.Runtime.Serialization.StreamingContext" />-Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor implementiert die <xref:System.Runtime.Serialization.ISerializable> eine Schnittstelle für die <xref:System.Net.Mail.SmtpFailedRecipientsException> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

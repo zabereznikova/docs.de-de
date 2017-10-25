@@ -1,0 +1,486 @@
+<Type Name="LoginViewDesigner" FullName="System.Web.UI.Design.WebControls.LoginViewDesigner">
+  <TypeSignature Language="C#" Value="public class LoginViewDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LoginViewDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.LoginViewDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Entwurfszeitunterstützung in einem visuellen Designer für das <see cref="T:System.Web.UI.WebControls.LoginView" />-Webserversteuerelement bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LoginView> Steuerelement rendert eine seiner Vorlagen, die ermittelt, ob ein Benutzer angemeldet ist der Host-Website und die Rollen, die das angemeldete Benutzerkonto enthalten.  
+  
+ In einem visuellen Designer beim Wechsel aus Quelle zur Entwurfsansicht Markup-Quellcode, beschreibt die <xref:System.Web.UI.WebControls.LoginView> Steuerelement wird analysiert und eine Entwurfszeitversion des Steuerelements wird erstellt, auf der Entwurfsoberfläche angezeigt. Wenn Sie zurück zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit auf den Markupquellcode beibehalten und in das Markup für die Webseite bearbeitet. Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner> -Klasse bietet zur Entwurfszeit Unterstützung für die <xref:System.Web.UI.WebControls.LoginView> Steuerelement.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.ActionLists%2A> Eigenschaft gibt eine <xref:System.ComponentModel.Design.DesignerActionListCollection> -Objekt, das in der Regel auf ein Objekt enthält, die abgeleitet ist die <xref:System.ComponentModel.Design.DesignerActionList> Klasse für jede Ebene in der Vererbungsstruktur des Designers. Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.TemplateGroups%2A> -Eigenschaft gibt eine Auflistung der Vorlagengruppen für die Vorlagen der zugeordneten <xref:System.Web.UI.WebControls.LoginView> Steuerelement. Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.UsePreviewControl%2A> -Eigenschaft gibt immer `true`, gibt an, dass der Designer eine temporäre Kopie des zugeordneten erstellt <xref:System.Web.UI.WebControls.LoginView> Steuerelement, um das Markup zur Entwurfszeit zu generieren.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner> -Klasse, Methoden bieten die folgenden Funktionen:  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetDesignTimeHtml%2A> Methoden zurück, das Markup ab, das Rendering des zugeordneten <xref:System.Web.UI.WebControls.LoginView> -Steuerelements zur Entwurfszeit. Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetEmptyDesignTimeHtml%2A> Methode ruft das Markup, das einen Platzhalter für das zugeordnete Steuerelement zur Entwurfszeit gerendert wird, wenn die aktuelle Vorlage nicht definiert ist. Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetErrorDesignTimeHtml%2A> Methode bietet das Markup, das das zugeordnete Steuerelement zur Entwurfszeit gerendert wird, wenn ein Fehler aufgetreten.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetEditableDesignerRegionContent%2A> Methode gibt eine serialisierte Kopie der aktuellen Vorlage für den zugeordneten <xref:System.Web.UI.WebControls.LoginView> Steuerelement. Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.SetEditableDesignerRegionContent%2A> Methode legt einen Bereich des zugeordneten Steuerelements aus einem serialisierten Kopie einer Steuerelementvorlage.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.Initialize%2A> Methode bereitet den Designer zum Anzeigen, bearbeiten und Entwerfen des zugeordneten <xref:System.Web.UI.WebControls.LoginView> Steuerelement. Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.OnComponentChanged%2A> Methode wird aufgerufen, wenn das zugeordnete Steuerelement geändert wird. Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.PreFilterProperties%2A> Methode zum Entfernen von Eigenschaften aus, fügen zusätzliche Eigenschaften oder Shadowing für die Eigenschaften des zugeordneten Steuerelements verwendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erweitern der <xref:System.Web.UI.Design.WebControls.LoginViewDesigner> so ändern Sie das Aussehen und Verhalten von Steuerelementen, die von der abgeleiteten Klasse die <xref:System.Web.UI.WebControls.LoginView> -Steuerelements zur Entwurfszeit.  
+  
+ Im Beispiel leitet der `MyLoginView` -Steuerelement aus der <xref:System.Web.UI.WebControls.LoginView>. Die `MyLoginView` ist eine Kopie der <xref:System.Web.UI.WebControls.LoginView> Steuerelement. Im Beispiel wird außerdem abgeleitet der `MyLoginViewDesigner` -Klasse aus der <xref:System.Web.UI.Design.WebControls.LoginViewDesigner> Klasse und wendet eine <xref:System.ComponentModel.DesignerAttribute> -Attribut für die `MyLoginViewDesigner` auf die `MyLoginView` Steuerelement.  
+  
+ Die `MyLoginViewDesigner` Steuerelement überschreibt die folgenden <xref:System.Web.UI.Design.WebControls.LoginViewDesigner> Elemente:  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.PreFilterProperties%2A> Methode zum Erstellen der <xref:System.Web.UI.Control.NamingContainer%2A> Eigenschaft sichtbar ist, in der **Eigenschaften** Raster zur Entwurfszeit.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetDesignTimeHtml%2A> Methode zum Zeichnen von orangefarbenen Rahmens um das Steuerelement an sein Wertebereich mehr sichtbar zu machen.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetErrorDesignTimeHtml%2A> Methode, um das Markup für einen Platzhalter zu generieren, die die Fehlermeldung in Rot gerendert wird, enthält fett formatierter Text.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetEmptyDesignTimeHtml%2A> Methode, um das Markup für einen Platzhalter zu generieren, die den Namen der Rollengruppen enthält, die für das Steuerelement definiert sind.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.Initialize%2A> -Methode auslöst ein <xref:System.ArgumentException> Ausnahme, wenn das zugeordnete Steuerelement nicht ist ein `MyLoginView` Objekt.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.LoginViewDesigner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginViewDesigner/CS/LoginViewDesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.WebControls.LoginViewDesigner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginViewDesigner/VB/LoginViewDesigner.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LoginViewDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LoginViewDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.LoginViewDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.LoginViewDesigner> Klasse bei der Erstellung der zugeordneten <xref:System.Web.UI.WebControls.LoginView> Steuerelement oder eine Kopie des Steuerelements auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LoginViewDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Designer-Aktionslistenauflistung für diesen Designer ab.</summary>
+        <value>Die diesem Designer zugeordnete <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.ActionLists%2A> Eigenschaft erstellt eine <xref:System.ComponentModel.Design.DesignerActionList> -Objekt für die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner> Klasse, fügt es der <xref:System.ComponentModel.Design.DesignerActionListCollection> abgerufener der <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.ActionLists%2A> Basiseigenschaft und gibt dann die <xref:System.ComponentModel.Design.DesignerActionListCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LoginViewDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Markup ab, das zum Rendern des zugeordneten Steuerelements zur Entwurfszeit verwendet wird.</summary>
+        <returns>Eine Zeichenfolge, enthält das Markup zum Rendern verwendet die <see cref="T:System.Web.UI.WebControls.LoginView" /> zur Entwurfszeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetDesignTimeHtml%2A> Methode legt die Vorlagenindex der zugeordneten <xref:System.Web.UI.WebControls.LoginView> Steuerelement auf die aktuellen zur Entwurfszeit Index und die zugeordnete Ursachen steuern, um erneut zu erstellen und Daten, die untergeordneten Steuerelemente ggf. zu binden. Als Nächstes wird die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetDesignTimeHtml%2A> Aufrufe der <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> Basis-Methode, um das Markup zu generieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetDesignTimeHtml%2A> Methode in einer Klasse, die vom geerbt wird die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner> Klasse, um die Darstellung eines Steuerelements ändern, die abgeleitet ist die <xref:System.Web.UI.WebControls.LoginView> Klasse zur Entwurfszeit. Im Beispiel zeichnet orangefarbenen Rahmen um das Steuerelement an sein Wertebereich mehr sichtbar zu machen.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.LoginViewDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginViewDesigner/CS/LoginViewDesigner.cs#4)]
+ [!code-vb[System.Web.UI.Design.WebControls.LoginViewDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginViewDesigner/VB/LoginViewDesigner.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen die <see cref="M:System.Web.UI.Design.WebControls.LoginViewDesigner.GetDesignTimeHtml" /> -Methode aufrufen der <see cref="M:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml" /> base-Methode, da es schließlich durch mehrere überschreiben, Ebenen, ruft Sie auf die <see cref="T:System.Web.UI.WebControls.LoginView" /> Steuerelement oder eine Kopie des Steuerelements zum Generieren des Markups.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml (System.Web.UI.Design.DesignerRegionCollection regions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml(class System.Web.UI.Design.DesignerRegionCollection regions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LoginViewDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="regions" Type="System.Web.UI.Design.DesignerRegionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="regions">Ein <see cref="T:System.Web.UI.Design.DesignerRegionCollection" /> , der Definitionen der auswählbaren sind und durch Klicken aktivierbaren Regionen in der Entwurfszeitansicht des der <see cref="T:System.Web.UI.WebControls.LoginView" /> hinzugefügt werden.</param>
+        <summary>Ruft das Markup ab, das für das Rendering des zugeordneten Steuerelements zur Entwurfszeit verwendet wird, und füllt eine Auflistung von Designerbereichen auf.</summary>
+        <returns>Eine Zeichenfolge, enthält das Markup zum Rendern verwendet die <see cref="T:System.Web.UI.WebControls.LoginView" /> zur Entwurfszeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetDesignTimeHtml%2A> Methode erstellt ein <xref:System.Web.UI.Design.EditableDesignerRegion> -Objekt für eine Vorlage bearbeiten Bereich visuelle Designeroberfläche, und klicken Sie dann initialisiert es als Vorlage. Wenn keine Vorlagen definiert sind, wird eine Zeichenfolge angezeigt, die Sie aufgefordert werden, klicken, um die Bearbeitung beginnen. Eine vordefinierte Konstante wird verwendet, um das zurückgegebene Markup zu generieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetDesignTimeHtml%2A> Methode in einer Klasse, die vom geerbt wird die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner> Klasse, um die Darstellung eines Steuerelements ändern, die abgeleitet ist die <xref:System.Web.UI.WebControls.LoginView> Klasse zur Entwurfszeit. Im Beispiel zeichnet orangefarbenen Rahmen um das Steuerelement an sein Wertebereich mehr sichtbar zu machen.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.LoginViewDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginViewDesigner/CS/LoginViewDesigner.cs#4)]
+ [!code-vb[System.Web.UI.Design.WebControls.LoginViewDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginViewDesigner/VB/LoginViewDesigner.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Dies <see cref="M:System.Web.UI.Design.WebControls.LoginViewDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)" /> Überladung nicht auf ihrer Basismethode aufgerufen oder die <see cref="T:System.Web.UI.WebControls.LoginView" /> Steuerelement zum Generieren des Markups.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public override string GetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LoginViewDesigner.GetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+      </Parameters>
+      <Docs>
+        <param name="region">Die <see cref="T:System.Web.UI.Design.EditableDesignerRegion" /> für den Inhalte abgerufen.</param>
+        <summary>Gibt eine serialisierte Kopie der aktuellen Vorlage, die zum Rendern des zugeordneten Steuerelements zur Entwurfszeit verwendet wird.</summary>
+        <returns>Eine Zeichenfolge, die eine serialisierte Kopie der Vorlage verwendet, um das Rendering des zugeordneten <see cref="T:System.Web.UI.WebControls.LoginView" /> zur Entwurfszeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Vorlage implementieren die <xref:System.Web.UI.ITemplate> Schnittstelle abgerufen werden kann, aus der `region` Parameter, die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetEditableDesignerRegionContent%2A> Methodenrückgabe beibehaltene Vorlage. Andernfalls ruft der <xref:System.Web.UI.Design.ControlDesigner.GetEditableDesignerRegionContent%2A> -Basismethode zum Generieren des Inhalts.  
+  
+ Die serialisierte Vorlage kann wiederhergestellt werden, um die <xref:System.Web.UI.WebControls.LoginView> -Steuerelement mithilfe der <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.SetEditableDesignerRegionContent%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmptyDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected override string GetEmptyDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetEmptyDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LoginViewDesigner.GetEmptyDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Markup, das einen Platzhalter für das zugeordnete Steuerelement zur Entwurfszeit gerendert wird, wenn die aktuelle Vorlage nicht definiert ist.</summary>
+        <returns>Eine Zeichenfolge mit Markuptext gerendert wird, das an einen Platzhalter auf der Entwurfsoberfläche angezeigt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetEmptyDesignTimeHtml%2A> Methode formatiert zunächst eine Meldungszeichenfolge, der angibt, den Namen der aktuellen Vorlage des zugeordneten <xref:System.Web.UI.WebControls.LoginView> steuern und gibt außerdem an, dass die Vorlage leer ist. Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetEmptyDesignTimeHtml%2A> generiert das Markup für einen Platzhalter, der diese Nachricht enthält.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetEmptyDesignTimeHtml%2A> Methode in einer Klasse, die vom geerbt wird die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner> Klasse, um die Darstellung eines Steuerelements ändern, die abgeleitet ist die <xref:System.Web.UI.WebControls.LoginView> Klasse zur Entwurfszeit. Im Beispiel wird das Markup für einen Platzhalter, der die Namen aller enthält generiert die <xref:System.Web.UI.WebControls.RoleGroup> Objekte, die für das zugeordnete Steuerelement definiert sind.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.LoginViewDesigner#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginViewDesigner/CS/LoginViewDesigner.cs#5)]
+ [!code-vb[System.Web.UI.Design.WebControls.LoginViewDesigner#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginViewDesigner/VB/LoginViewDesigner.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrorDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected override string GetErrorDesignTimeHtml (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetErrorDesignTimeHtml(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LoginViewDesigner.GetErrorDesignTimeHtml(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die <see cref="T:System.Exception" /> , ausgelöst wurde.</param>
+        <summary>Stellt das Markup, das des zugeordneten Steuerelements zur Entwurfszeit gerendert wird, wenn ein Fehler aufgetreten ist.</summary>
+        <returns>Eine Zeichenfolge, das Markup enthält für das Rendering des zugeordneten <see cref="T:System.Web.UI.WebControls.LoginView" /> zur Entwurfszeit, nachdem ein Fehler aufgetreten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Fehler zur Entwurfszeit <xref:System.Web.UI.WebControls.LoginView> Steuerelement gerendert wird, als ein Bereich, der den vollständigen Typnamen, der Steuerelementname sowie Nachrichten, die Ankündigung und die Beschreibung des Fehlers enthält.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetErrorDesignTimeHtml%2A> Methode in einer Klasse, die vom geerbt wird die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner> Klasse, um die Darstellung eines Steuerelements ändern, die abgeleitet ist die <xref:System.Web.UI.WebControls.LoginView> Klasse zur Entwurfszeit. Im Beispiel wird das Markup für einen Platzhalter, der die Fehlermeldung enthält die roten, fett formatierter Text gerendert wird.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.LoginViewDesigner#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginViewDesigner/CS/LoginViewDesigner.cs#2)]
+ [!code-vb[System.Web.UI.Design.WebControls.LoginViewDesigner#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginViewDesigner/VB/LoginViewDesigner.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LoginViewDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Ein <see cref="T:System.Web.UI.WebControls.LoginView" />, das eine <see cref="T:System.ComponentModel.IComponent" /> implementiert.</param>
+        <summary>Bereitet den Designer zum Anzeigen, Bearbeiten und Entwerfen des zugeordneten Steuerelements vor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der visuelle Designer Ruft die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.Initialize%2A> Methode, wenn es der Designer zum Rendern verwenden kann die <xref:System.Web.UI.WebControls.LoginView> Steuerelement. Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.Initialize%2A> und ihre Basismethoden konfigurieren Eigenschaften und Ereignisse, die erforderlich, für den Vorgang des Designers sind einrichten.  
+  
+ Die `component` Parameter ist der <xref:System.Web.UI.WebControls.LoginView> Steuerelement, das diesem Designer zugeordnet oder eine Kopie des der <xref:System.Web.UI.WebControls.LoginView> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.Initialize%2A> Methode in einer Klasse, die vom geerbt wird die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner> Klasse, um das Verhalten eines Steuerelements ändern, die abgeleitet ist die <xref:System.Web.UI.WebControls.LoginView> Klasse zur Entwurfszeit. Löst das Beispiel ein <xref:System.ArgumentException>, sofern nicht das zugeordnete Steuerelement ist ein `MyLoginView` Objekt.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.LoginViewDesigner#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginViewDesigner/CS/LoginViewDesigner.cs#6)]
+ [!code-vb[System.Web.UI.Design.WebControls.LoginViewDesigner#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginViewDesigner/VB/LoginViewDesigner.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="component" />ist eine <see cref="T:System.Web.UI.WebControls.LoginView" /> oder einer Klasse abgeleitet <see cref="T:System.Web.UI.WebControls.LoginView" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanged">
+      <MemberSignature Language="C#" Value="public override void OnComponentChanged (object sender, System.ComponentModel.Design.ComponentChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnComponentChanged(object sender, class System.ComponentModel.Design.ComponentChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LoginViewDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.ComponentModel.Design.ComponentChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.ComponentModel.Design.ComponentChangedEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Wird aufgerufen, wenn eine Änderung an das Steuerelement, das diesem Designer zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.OnComponentChanged%2A> Methode wird aufgerufen, wenn die <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> -Ereignis für die zugeordnete <xref:System.Web.UI.WebControls.LoginView> -Steuerelement ausgeführt wird. Dies ist normalerweise als Reaktion auf die Änderung einer Eigenschaft des Steuerelements (z. B. eine **Eigenschaften** Raster ändern). Wenn die <xref:System.Web.UI.WebControls.LoginView> Steuerelementvorlage geändert wird, die **Eigenschaften** Raster wird aktualisiert.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.OnComponentChanged%2A> stellt sicher, dass der Vorlagenindex der aktuellen gültig ist, und dann Ruft die <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> -Basismethode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LoginViewDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Eine Auflistung implementieren die <see cref="T:System.Collections.IDictionary" /> der hinzugefügten oder Shadowing-Eigenschaften.</param>
+        <summary>Vom Designer verwendet werden, um die Anzeige in Eigenschaften hinzufügen oder Entfernen von Eigenschaften aus der **Eigenschaften** Raster oder Shadowing von Eigenschaften des zugeordneten Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuerelement-Designer verwenden von abgeleiteten Methoden, die <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties%2A?displayProperty=nameWithType> Methode verschiedene Steuerelementeigenschaften mit entsprechenden zur Entwurfszeit zu überschatten, die der Designer implementiert, um Eigenschaften hinzufügen oder Entfernen von Eigenschaften aus der ** Eigenschaften** Raster.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.PreFilterProperties%2A> Methode gilt die <xref:System.ComponentModel.BrowsableAttribute> Attribut des der <xref:System.Web.UI.WebControls.LoginView.RoleGroups%2A> Eigenschaft, sodass die It nicht, in angezeigt wird der **Eigenschaften** Raster.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.PreFilterProperties%2A> Methode in einer Klasse, die vom geerbt wird die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner> -Klasse zum Ändern der **Eigenschaften** Raster eines Steuerelements, das von abgeleitet ist die <xref:System.Web.UI.WebControls.LoginView> Klasse zur Entwurfszeit Zeit. Im Beispiel wird die <xref:System.Web.UI.Control.NamingContainer%2A> Eigenschaft sichtbar ist, in der **Eigenschaften** Raster.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.LoginViewDesigner#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginViewDesigner/CS/LoginViewDesigner.cs#3)]
+ [!code-vb[System.Web.UI.Design.WebControls.LoginViewDesigner#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginViewDesigner/VB/LoginViewDesigner.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie die <see cref="M:System.Web.UI.Design.WebControls.LoginViewDesigner.PreFilterProperties(System.Collections.IDictionary)" /> Methode, um Eigenschaften zum Entfernen von Eigenschaften aus, oder Ändern von Eigenschaften in der Entwurfszeiteigenschaft Auflistung hinzuzufügen. Aufrufen der <see cref="M:System.Web.UI.Design.ControlDesigner.PreFilterProperties(System.Collections.IDictionary)" /> Methode vor der weiteren Verarbeitung basieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public override void SetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region, string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region, string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LoginViewDesigner.SetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="region">Ein <see cref="T:System.Web.UI.Design.EditableDesignerRegion" /> , der den Namen des zu aktualisierenden Bereichs bereitstellt.</param>
+        <param name="content">Eine Zeichenfolge, die eine serialisierte Vorlage für das zugeordnete Steuerelement enthält.</param>
+        <summary>Legt einen Bereich des zugeordneten Steuerelements aus einem serialisierten Kopie einer Steuerelementvorlage fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.SetEditableDesignerRegionContent%2A> -Methode analysiert eine serialisierte Vorlage für den zugeordneten <xref:System.Web.UI.WebControls.LoginView> Steuerelement, das angegeben wird die `content` Parameter, und verwendet dann die Vorlage, um den Bereich des Steuerelements zu aktualisieren, die von angegeben wird die <xref:System.Web.UI.Design.DesignerObject.Name%2A> Eigenschaft die `region` Parameter.  
+  
+ Von der aktuellen Vorlage der <xref:System.Web.UI.WebControls.LoginView> Steuerelement kann serialisiert werden, mithilfe der <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.GetEditableDesignerRegionContent%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateGroups">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.TemplateGroupCollection TemplateGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateGroupCollection TemplateGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LoginViewDesigner.TemplateGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Vorlagengruppen für die Felder des zugeordneten Steuerelements ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Design.TemplateGroupCollection" /> , enthält ein Element für jede Vorlage in die <see cref="T:System.Web.UI.WebControls.LoginView" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.TemplateGroups%2A> Eigenschaft ruft eine <xref:System.Web.UI.Design.TemplateGroupCollection> -Objekt aus der <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.TemplateGroups%2A> -Basiseigenschaft, und fügt dann <xref:System.Web.UI.Design.TemplateGroup> Objekte, die eine einzelne enthalten <xref:System.Web.UI.Design.TemplateDefinition> Objekt für die anonymous-Vorlage (der kein Benutzer angemeldet entspricht), für die angemeldete Vorlage und für jede <xref:System.Web.UI.WebControls.RoleGroup> Element in der <xref:System.Web.UI.WebControls.LoginView.RoleGroups%2A> Auflistung der zugeordneten <xref:System.Web.UI.WebControls.LoginView> die Steuerung an die <xref:System.Web.UI.Design.TemplateGroupCollection>. Die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.TemplateGroups%2A> gibt dies <xref:System.Web.UI.Design.TemplateGroupCollection> an den Aufrufer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected override bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LoginViewDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Designer das tatsächliche Steuerelement, das der Designer zum Generieren des Markups zur Entwurfszeit zugeordnet ist, anstatt eine temporäre Kopie verwenden soll.</summary>
+        <value>Immer <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.UsePreviewControl%2A> Eigenschaft ist immer `true`, Designer <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> Eigenschaft gibt eine Kopie des zugeordneten <xref:System.Web.UI.WebControls.LoginView> Steuerelement, um das Markup zur Entwurfszeit zu generieren. Die <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> Eigenschaft erstellt die Kopie durch Persistentes Speichern der tatsächlichen <xref:System.Web.UI.WebControls.LoginView> -Steuerelement, und Analysieren der Zeichenfolge beibehaltene Steuerelement. Das kopierte Steuerelement wirkt sich nicht auf die Persistenz der eigentlichen <xref:System.Web.UI.WebControls.LoginView>.  
+  
+ Wenn die <xref:System.Web.UI.Design.WebControls.LoginViewDesigner.UsePreviewControl%2A> Eigenschaft wurde überschrieben, um zurückzukehren `false`, mithilfe des Designers die zugeordnete <xref:System.Web.UI.WebControls.LoginView> Steuerelement selbst, um das Markup zur Entwurfszeit zu generieren, und bleiben erhalten, während der Entwurfszeit Änderungen an das Steuerelement an die Seite Markup-Quelle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können außer Kraft setzen die <see cref="P:System.Web.UI.Design.WebControls.LoginViewDesigner.UsePreviewControl" /> -Eigenschaft zum Zurückgeben von <see langword="false" /> oder um zu bestimmen, deren Wert basierend auf, ob das Steuerelement mit einem auf Klassenebene gekennzeichnet ist <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> Attribut. Wenn die <see cref="P:System.Web.UI.Design.WebControls.LoginViewDesigner.UsePreviewControl" /> nicht überschrieben wird, die <see cref="T:System.Web.UI.WebControls.LoginView" /> ignoriert die <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,209 @@
+<Type Name="CreateUserWizardStep" FullName="System.Web.UI.WebControls.CreateUserWizardStep">
+  <TypeSignature Language="C#" Value="public sealed class CreateUserWizardStep : System.Web.UI.WebControls.TemplatedWizardStep" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CreateUserWizardStep extends System.Web.UI.WebControls.TemplatedWizardStep" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CreateUserWizardStep" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.TemplatedWizardStep</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält die grundlegenden Funktionen zum Erstellen eines Benutzers in einem Schritt, der auf Vorlagen basieren kann. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CreateUserWizard> Steuerelement erstellt neue Benutzerkonten im Datenspeicher für eine Website-Benutzer. Die <xref:System.Web.UI.WebControls.CreateUserWizardStep> ist, wird standardmäßig der erste Schritt innerhalb der <xref:System.Web.UI.WebControls.CreateUserWizard> Steuerelement. Die <xref:System.Web.UI.WebControls.CreateUserWizardStep> Schritt ist ein erforderlicher Schritt innerhalb der <xref:System.Web.UI.WebControls.CreateUserWizard> Steuerelement.  
+  
+ Die <xref:System.Web.UI.WebControls.CreateUserWizardStep> abgeleitete Klasse wird von der <xref:System.Web.UI.WebControls.TemplatedWizardStep> Klasse. Die <xref:System.Web.UI.WebControls.CreateUserWizardStep> wird angezeigt, der <xref:System.Web.UI.WebControls.CreateUserWizard> vor Steuern die <xref:System.Web.UI.WebControls.CompleteWizardStep> Schritt.  
+  
+> [!NOTE]
+>  Obwohl die <xref:System.Web.UI.WebControls.CreateUserWizardStep> Schritt ist der erste Schritt des Assistenten standardmäßig, es ist möglich, einen anderen ersten Schritt bereitzustellen. Dies wirkt sich daher, allerdings kann aus, ob die **vorherige** -Schaltfläche angezeigt wird. Z. B. wenn die <xref:System.Web.UI.WebControls.CreateUserWizardStep> Schritt verfügt nicht über eine benutzerdefinierte Navigation-Vorlage, und einen weiteren Schritt, der vor dem Rendern vorangestellt ist <xref:System.Web.UI.WebControls.CreateUserWizardStep>, und klicken Sie dann die **zurück** Schaltfläche wird angezeigt, auf die <xref:System.Web.UI.WebControls.CreateUserWizardStep> Schritt zur Laufzeit. Wenn die <xref:System.Web.UI.WebControls.CreateUserWizardStep> Schritt vor dem alternativen "das erste" Schritt dargestellt wird und dann die **zurück** Schaltfläche nicht angezeigt wird. Darüber hinaus die **vorherige** Schaltfläche nie zur Entwurfszeit gerendert wird. Wenn Sie möchten die **zurück** Schaltfläche, um zur Entwurfszeit gerendert werden, müssen Sie sie hinzufügen, um die benutzerdefinierte Navigation-Vorlage des der <xref:System.Web.UI.WebControls.CreateUserWizardStep> Schritt.  
+  
+ Sie können ändern, die <xref:System.Web.UI.WebControls.CreateUserWizardStep> Schritt, um zusätzliche Felder enthalten, oder ändern Sie die Reihenfolge der Felder der <xref:System.Web.UI.WebControls.CreateUserWizardStep> Schritt, durch die Bearbeitung der Vorlage, die dem Steuerelement zugeordnet.  
+  
+ Das neue Benutzerkonto für die Website wird im Datenspeicher erstellt, wenn der Benutzer klickt auf die **Weiter** Schaltfläche auf der <xref:System.Web.UI.WebControls.CreateUserWizardStep> Schritt. Wird standardmäßig die <xref:System.Web.UI.WebControls.CreateUserWizardStep.AllowReturn%2A> -Eigenschaftensatz auf `false` verhindern, dass den Benutzer zum Zurückgeben der <xref:System.Web.UI.WebControls.CreateUserWizardStep> Schritt und versehentlich versuchen, ein anderes Benutzerkonto mit den gleichen Anmeldeinformationen zu erstellen. Wenn Sie festlegen, die <xref:System.Web.UI.WebControls.CreateUserWizardStep.AllowReturn%2A> Eigenschaft, um `true`, schließen Sie die Logik in der Anwendung können Sie das Benutzerkonto zu entfernen, die ursprünglich erstellt wurde, bevor der Benutzer zu diesem Schritt zurückgegeben und ermöglicht dem Benutzer Informationen zu bearbeiten, er oder sie ursprünglich eingegeben haben.  
+  
+   
+  
+## Examples  
+ Im erste Codebeispiel verwendet die Kurzform deklarative Syntax der <xref:System.Web.UI.WebControls.CreateUserWizardStep> Klasse, um eine zusätzliche Kontrolle zum Hinzufügen einer <xref:System.Web.UI.WebControls.CreateUserWizard> Steuerelement. Das Codebeispiel erfordert die folgenden Einträge in der Datei "Web.config".  
+  
+ `<configuration>`  
+  
+ `<system.web>`  
+  
+ `<profile>`  
+  
+ `<properties>`  
+  
+ `<add name="lastName" />`  
+  
+ `<add name="firstName" />`  
+  
+ `</properties>`  
+  
+ `</profile>`  
+  
+ `</system.web>`  
+  
+ `</configuration>`  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CreateUserWizardCreatedUser#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CreateUserWizardCreatedUser/CS/createuserwizardcreatedusercs.aspx#1)]
+ [!code-aspx-vb[CreateUserWizardCreatedUser#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CreateUserWizardCreatedUser/VB/createuserwizardcreateduservb.aspx#1)]  
+  
+> [!IMPORTANT]
+>  Dieses Steuerelement besitzt ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Benutzereingaben in einer Webseite kann potenziell bösartige Clientskripts enthalten. Standardmäßig stellen ASP.NET-Webseiten sicher Benutzereingaben, um sicherzustellen, dass die Eingabe keine Skript- oder HTML-Elemente enthält. Solange diese Überprüfung aktiviert ist, müssen Sie nicht explizit für Skript- oder HTML-Elemente, Benutzereingaben zu überprüfen. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ Das zweite Codebeispiel listet die gesamte <xref:System.Web.UI.WebControls.CreateUserWizardStep> Steuerelement.  
+  
+ [!code-aspx-csharp[CreateUserWizardStep#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CreateUserWizardStep/CS/createuserwizardstepcs.aspx#1)]
+ [!code-aspx-vb[CreateUserWizardStep#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CreateUserWizardStep/VB/createuserwizardstepvb.aspx#1)]  
+  
+> [!IMPORTANT]
+>  Dieses Steuerelement besitzt ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Benutzereingaben in einer Webseite kann potenziell bösartige Clientskripts enthalten. Standardmäßig stellen ASP.NET-Webseiten sicher Benutzereingaben, um sicherzustellen, dass die Eingabe keine Skript- oder HTML-Elemente enthält. Solange diese Überprüfung aktiviert ist, müssen Sie nicht explizit für Skript- oder HTML-Elemente, Benutzereingaben zu überprüfen. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CreateUserWizardStep ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizardStep.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.CreateUserWizardStep" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowReturn">
+      <MemberSignature Language="C#" Value="public override bool AllowReturn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowReturn" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizardStep.AllowReturn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Benutzer wieder den aktuellen Schritt in einem nachfolgenden Schritt in einem <see cref="T:System.Web.UI.WebControls.CreateUserWizard" /> Steuerelement.</summary>
+        <value>
+          <see langword="true" />Wenn der Benutzer zugelassen wird, um wieder die <see cref="T:System.Web.UI.WebControls.CreateUserWizardStep" /> Schritt; anderenfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CreateUserWizardStep.AllowReturn%2A> -Eigenschaftensatz auf `false` verhindern, dass Benutzer zum Zurückgeben der <xref:System.Web.UI.WebControls.CreateUserWizardStep> Schritt und versehentlich versuchen, ein anderes Benutzerkonto mit den gleichen Anmeldeinformationen zu erstellen. Wenn Sie überschreiben die <xref:System.Web.UI.WebControls.CreateUserWizardStep.AllowReturn%2A> Eigenschaft, und legen Sie es auf `true`, schließen Sie Logik in Ihrer Anwendung können Sie das Benutzerkonto zu entfernen, die ursprünglich erstellt wurde, bevor der Benutzer zu diesem Schritt zurückgegeben und ermöglicht dem Benutzer Informationen zu bearbeiten, er ursprünglich eingegeben haben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, die Eigenschaft festgelegt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StepType">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WizardStepType StepType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.WizardStepType StepType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizardStep.StepType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Filterable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WizardStepType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Benutzeroberfläche (UI) für die anzuzeigenden für die <see cref="T:System.Web.UI.WebControls.CreateUserWizardStep" /> Schritt eine <see cref="T:System.Web.UI.WebControls.CreateUserWizard" /> Steuerelement.</summary>
+        <value>Die <see cref="F:System.Web.UI.WebControls.WizardStepType.Auto" /> Enumerationswert, der die <see cref="T:System.Web.UI.WebControls.WizardStepType" /> Enumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CreateUserWizardStep.StepType%2A> Eigenschaft gibt an, die Navigationsoptionen für den Benutzer der kontoerstellung Schritt des anzuzeigenden der <xref:System.Web.UI.WebControls.CreateUserWizard> Steuerelement.  
+  
+ Die <xref:System.Web.UI.WebControls.CreateUserWizardStep.StepType%2A> Eigenschaft bestimmt, welche die <xref:System.Web.UI.WebControls.Wizard> Navigationsschaltflächen des Steuerelements angezeigt werden, auf die <xref:System.Web.UI.WebControls.CreateUserWizardStep> Steuerelement. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Web.UI.WebControls.WizardStepBase.StepType%2A?displayProperty=nameWithType>-Eigenschaft.  
+  
+> [!CAUTION]
+>  Wenn Sie versuchen, Ändern der <xref:System.Web.UI.WebControls.CreateUserWizardStep.StepType%2A> -Eigenschaft auf einen anderen Wert als die <xref:System.Web.UI.WebControls.WizardStepType.Auto> Wert der <xref:System.Web.UI.WebControls.WizardStepType> -Enumeration, ein <xref:System.InvalidOperationException> ausgelöst.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, Festlegen der <see cref="P:System.Web.UI.WebControls.CreateUserWizardStep.StepType" /> -Eigenschaft auf einen anderen Wert als die <see langword="WizardStepType.Auto" /> -Enumerationswert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public override string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizardStep.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Titel für den Benutzer der kontoerstellung der verschlüsselungsschritt der <see cref="T:System.Web.UI.WebControls.CreateUserWizard" /> Steuerelement.</summary>
+        <value>Der Titel für den Benutzer der kontoerstellung der verschlüsselungsschritt der <see cref="T:System.Web.UI.WebControls.CreateUserWizard" /> Steuerelement. Der Standardwert ist "Registrieren Sie sich für Ihr neues Konto." Der Standardtext für das Steuerelement wird basierend auf dem aktuellen Gebietsschema des Servers lokalisiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

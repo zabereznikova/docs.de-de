@@ -1,0 +1,763 @@
+<Type Name="HotSpot" FullName="System.Web.UI.WebControls.HotSpot">
+  <TypeSignature Language="C#" Value="public abstract class HotSpot : System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HotSpot extends System.Object implements class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.HotSpot" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert die Grundfunktionen, die alle Hotspotformen aufweisen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können Instanzen von der abstrakten nicht direkt erstellen <xref:System.Web.UI.WebControls.HotSpot> Klasse. Stattdessen wird von dieser Klasse geerbt der <xref:System.Web.UI.WebControls.CircleHotSpot>, <xref:System.Web.UI.WebControls.RectangleHotSpot>, und <xref:System.Web.UI.WebControls.PolygonHotSpot> Klassen, die allgemeine grundlegende Funktionalität für einen Hotspot bereitstellen. Leiten Sie von der <xref:System.Web.UI.WebControls.HotSpot> Klasse zum Erstellen einer benutzerdefinierten Hotspot-Klasse, die eine eindeutige Form darstellt, die Sie definieren. Sie können jedoch die meisten mit Formen definieren die <xref:System.Web.UI.WebControls.CircleHotSpot>, <xref:System.Web.UI.WebControls.RectangleHotSpot>, und <xref:System.Web.UI.WebControls.PolygonHotSpot> Klassen.  
+  
+ Wenn eine <xref:System.Web.UI.WebControls.HotSpot> in einem <xref:System.Web.UI.WebControls.ImageMap> Steuerelement geklickt wird, wird die Seite entweder navigiert zu einer URL, generiert ein Postback an den Server oder wird keine Aktion ausgeführt. Die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft gibt an, dieses Verhalten. Um zu einer URL zu navigieren, legen Sie die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft `HotSpotMode.Navigate`. Verwenden der <xref:System.Web.UI.WebControls.HotSpot.NavigateUrl%2A> Eigenschaft zum Angeben der URL zu navigieren. Um an den Server zu senden, legen Sie die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft `HotSpotMode.PostBack`. Verwenden der <xref:System.Web.UI.WebControls.HotSpot.PostBackValue%2A> -Eigenschaft geben Sie einen Namen für die <xref:System.Web.UI.WebControls.HotSpot> Objekt. Dieser Name wird übergeben werden, der <xref:System.Web.UI.WebControls.ImageMapEventArgs> Ereignisdaten bei der <xref:System.Web.UI.WebControls.HotSpot> Objekt geklickt wird. Wenn Sie möchten die <xref:System.Web.UI.WebControls.HotSpot> Objekt kein Verhalten festgelegt die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft, um `HotSpotMode.Inactive`.  
+  
+ Alternativ können Sie die <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> -Eigenschaft für das enthaltende <xref:System.Web.UI.WebControls.ImageMap> Steuerelement an eine <xref:System.Web.UI.WebControls.HotSpot> Verhalten des Objekts. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A>.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Wenn Sie von <see cref="T:System.Web.UI.WebControls.HotSpot" /> erben, müssen die folgenden Member überschrieben werden: <see cref="M:System.Web.UI.WebControls.HotSpot.GetCoordinates" /> und <see cref="P:System.Web.UI.WebControls.HotSpot.MarkupName" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HotSpot ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HotSpot.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.HotSpot" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird von abgeleiteten Klassenkonstruktoren Zustand bei dieser Art initialisiert aufgerufen. Die <xref:System.Web.UI.WebControls.HotSpot> Klasse ist abstrakt und kann daher nicht direkt instanziiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessKey">
+      <MemberSignature Language="C#" Value="public virtual string AccessKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AccessKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HotSpot.AccessKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zugriffstaste, die Ihnen ermöglicht, schnell zu navigieren der <see cref="T:System.Web.UI.WebControls.HotSpot" /> Region.</summary>
+        <value>Der Zugriffsschlüssel für schnelle Navigation zu der <see cref="T:System.Web.UI.WebControls.HotSpot" /> Region. Der Standardwert ist <see cref="F:System.String.Empty" />, was bedeutet, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.HotSpot.AccessKey%2A> -Eigenschaft an die Tastenkombination für einen <xref:System.Web.UI.WebControls.HotSpot> Region. Dadurch können Sie schnell auf die Region zu navigieren, durch Drücken der ALT-Taste und der Schlüssel für das angegebene Zeichen auf der Tastatur drücken. Festlegen von z. B. die Zugriffstaste für eine <xref:System.Web.UI.WebControls.HotSpot> Region, in der Zeichenfolge "D" gibt an, dass der Benutzer auf das Steuerelement durch Drücken von ALT + D navigieren kann.  
+  
+ Nur eine einzelne Zeichenfolge ist zulässig, für die <xref:System.Web.UI.WebControls.HotSpot.AccessKey%2A> Eigenschaft. Wenn Sie versuchen, diese Eigenschaft auf einen Wert festgelegt, der weder `null`, <xref:System.String.Empty>, noch eine einzelne Zeichenfolge, die eine Ausnahme ausgelöst wird.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird nur in Internet Explorer 4.0 und höher unterstützt.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die angegebene Zugriffstaste ist weder <see langword="null" />, eine leere Zeichenfolge (""), noch in einer einzelnen Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternateText">
+      <MemberSignature Language="C#" Value="public virtual string AlternateText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AlternateText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HotSpot.AlternateText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den alternativen Text für die anzuzeigenden für eine <see cref="T:System.Web.UI.WebControls.HotSpot" /> -Objekt in ein <see cref="T:System.Web.UI.WebControls.ImageMap" /> steuern, wann das Bild ist nicht verfügbar oder rendert in einem Browser, die Bilder nicht unterstützt.</summary>
+        <value>Anstelle von angezeigte Text der <see cref="T:System.Web.UI.WebControls.HotSpot" /> bei der <see cref="T:System.Web.UI.WebControls.ImageMap" /> des Steuerelements Image ist nicht verfügbar. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.HotSpot.AlternateText%2A> Eigenschaft an, der für die anzuzeigende Text einer <xref:System.Web.UI.WebControls.HotSpot> -Objekt in ein <xref:System.Web.UI.WebControls.ImageMap> steuern, wenn das Image von angegeben die <xref:System.Web.UI.WebControls.Image.ImageUrl%2A> Eigenschaft ist nicht verfügbar.  
+  
+ Wenn ein <xref:System.Web.UI.WebControls.ImageMap> Steuerelement gerendert wird, an einen Browser, die Bilder, statt ein Image nicht unterstützt, sondert rendert einen Link für die einzelnen <xref:System.Web.UI.WebControls.HotSpot> in die <xref:System.Web.UI.WebControls.ImageMap> Steuerelement. Das Steuerelement ruft die für jeden Link von anzuzeigenden Text ab dem <xref:System.Web.UI.WebControls.HotSpot.AlternateText%2A> Eigenschaft für die einzelnen <xref:System.Web.UI.WebControls.HotSpot>. Wenn ein Benutzer einen der Links klickt, wird es verhält sich wie ein <xref:System.Web.UI.WebControls.HotSpot> durch Navigieren zu einer angegebenen URL, ein Postback an den Server generiert, oder nichts zu machen.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.ImageMap> Steuerelement gerendert wird, um einen Webbrowser, das Feature "QuickInfo" den Wert des unterstützt, der <xref:System.Web.UI.WebControls.HotSpot.AlternateText%2A> Eigenschaft wird angezeigt, wie in einer QuickInfo für die <xref:System.Web.UI.WebControls.HotSpot>.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCoordinates">
+      <MemberSignature Language="C#" Value="public abstract string GetCoordinates ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetCoordinates() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HotSpot.GetCoordinates" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt eine Zeichenfolge, die die Koordinaten der stellt die <see cref="T:System.Web.UI.WebControls.HotSpot" /> Region.</summary>
+        <returns>Eine Zeichenfolge, die die Koordinaten der stellt die <see cref="T:System.Web.UI.WebControls.HotSpot" /> Region.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft beim Überschreiben in einer abgeleiteten Klasse die <xref:System.Web.UI.WebControls.HotSpot.GetCoordinates%2A> Methode gibt die Zeichenfolgendarstellung der Koordinaten des der <xref:System.Web.UI.WebControls.HotSpot> Region.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von <see cref="T:System.Web.UI.WebControls.HotSpot" />, müssen Sie überschreiben die <see cref="M:System.Web.UI.WebControls.HotSpot.GetCoordinates" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="HotSpotMode">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.HotSpotMode HotSpotMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.HotSpotMode HotSpotMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HotSpot.HotSpotMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.HotSpotMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Verhalten des einen <see cref="T:System.Web.UI.WebControls.HotSpot" /> -Objekt in ein <see cref="T:System.Web.UI.WebControls.ImageMap" /> steuern, wann die <see cref="T:System.Web.UI.WebControls.HotSpot" /> geklickt wird.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.HotSpotMode" />-Enumerationswerte. Die Standardeinstellung ist <see langword="Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft zum Festlegen des Verhaltens von einer <xref:System.Web.UI.WebControls.HotSpot> -Objekt in ein <xref:System.Web.UI.WebControls.ImageMap> steuern, wann die <xref:System.Web.UI.WebControls.HotSpot> geklickt wird. Diese Eigenschaft wird festgelegt, mit einer von der <xref:System.Web.UI.WebControls.HotSpotMode> Enumerationswerte. In der folgenden Tabelle sind die möglichen Werte aufgeführt.  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`NotSet`|Die <xref:System.Web.UI.WebControls.HotSpot> verwendet das Verhalten durch Festlegen der <xref:System.Web.UI.WebControls.ImageMap> des Steuerelements <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> Eigenschaft. Wenn die <xref:System.Web.UI.WebControls.ImageMap> Steuerelement definiert das Verhalten nicht die <xref:System.Web.UI.WebControls.HotSpot> Objekte zu einer URL zu navigieren.|  
+|`Inactive`|Die <xref:System.Web.UI.WebControls.HotSpot> verfügt nicht über jedes Verhalten.|  
+|`Navigate`|Die <xref:System.Web.UI.WebControls.HotSpot> an eine URL navigiert.|  
+|`PostBack`|Die <xref:System.Web.UI.WebControls.HotSpot> generiert ein Postback an den Server.|  
+  
+ Können Sie angeben, <xref:System.Web.UI.WebControls.HotSpot> Verhalten entweder auf die <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> -Eigenschaft des Steuerelements oder auf die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> -Eigenschaft jedes einzelnen <xref:System.Web.UI.WebControls.HotSpot> Objekt. Wenn beide Eigenschaften festgelegt werden, die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> für jedes einzelne angegebene Eigenschaft <xref:System.Web.UI.WebControls.HotSpot> Objekt hat Vorrang vor den <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> Eigenschaft auf die <xref:System.Web.UI.WebControls.ImageMap> Steuerelement.  
+  
+ Bei Angabe von `HotSpotMode.NotSet` für die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft eines einzelnen <xref:System.Web.UI.WebControls.HotSpot> -Objekt, das <xref:System.Web.UI.WebControls.HotSpot> Ruft das Verhalten aus dem entsprechenden <xref:System.Web.UI.WebControls.ImageMap> des Steuerelements <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> Eigenschaft. In diesem Szenario Wenn die <xref:System.Web.UI.WebControls.ImageMap> des Steuerelements <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> Eigenschaft ist nicht auf einen Wert festgelegt ist, oder auf festgelegt ist `HotSpotMode.NotSet`, das Standardverhalten besteht darin, eine URL zu navigieren.  
+  
+ Bei Angabe `HotSpotMode.Navigate` für die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.HotSpot> -Objekt, das <xref:System.Web.UI.WebControls.HotSpot> Objekt navigiert zu einer URL, wenn die Hotspotbereich geklickt wird. Verwenden der <xref:System.Web.UI.WebControls.HotSpot.NavigateUrl%2A> Eigenschaft zum Angeben der URL zu navigieren.  
+  
+ Bei Angabe `HotSpotMode.PostBack` für die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.HotSpot> -Objekt, der <xref:System.Web.UI.WebControls.HotSpot> -Objekts generiert ein Post an den Server bei der <xref:System.Web.UI.WebControls.HotSpot> geklickt wird. Verwenden der <xref:System.Web.UI.WebControls.HotSpot.PostBackValue%2A> -Eigenschaft geben Sie einen Namen für die <xref:System.Web.UI.WebControls.HotSpot>. Dieser Name wird übergeben werden, der <xref:System.Web.UI.WebControls.ImageMapEventArgs> Ereignisdaten auf, wenn ein Postbackereignis eintritt. Wenn ein Postback <xref:System.Web.UI.WebControls.HotSpot> geklickt wird, die <xref:System.Web.UI.WebControls.ImageMap.Click> Ereignis wird ausgelöst. Programmgesteuerte Steuerung der Aktionen ausgeführt werden soll, wenn ein Postback <xref:System.Web.UI.WebControls.HotSpot> ist geklickt haben, geben Sie einen Ereignishandler für das <xref:System.Web.UI.WebControls.ImageMap.Click> Ereignis.  
+  
+ Alle <xref:System.Web.UI.WebControls.HotSpot> Objekte in ein <xref:System.Web.UI.WebControls.ImageMap> Steuerelement weisen das gleiche Verhalten, legen Sie die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> Eigenschaft für jedes einzelne <xref:System.Web.UI.WebControls.HotSpot> -Objekt `HotSpotMode.NotSet` , oder geben Sie einen Wert für nicht die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Für unterschiedliche Verhaltensweisen angeben <xref:System.Web.UI.WebControls.HotSpot> Objekte in einer <xref:System.Web.UI.WebControls.ImageMap> steuern, legen Sie die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> Eigenschaft für jedes einzelne <xref:System.Web.UI.WebControls.HotSpot> Objekt entweder `HotSpotMode.Navigate`, `HotSpotMode.PostBack`, oder `HotSpotMode.Inactive`.  
+  
+> [!NOTE]
+>  Wenn ein <xref:System.Web.UI.WebControls.ImageMap> des Steuerelements <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> Eigenschaft oder die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> Eigenschaft auf die <xref:System.Web.UI.WebControls.HotSpot> darin enthaltenen Objekte ist nicht auf einen Wert festgelegt oder auf festgelegt `HotSpotMode.NotSet`, standardmäßig das Verhalten ist `HotSpotMode.Navigate`.  
+  
+ Bei Angabe von `HotSpotMode.Inactive` für die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> -Eigenschaft, die <xref:System.Web.UI.WebControls.HotSpot> Objekt liegen keines Verhalten vor, wenn darauf geklickt wird. Sie können diesen Wert verwenden, um einen inaktiven Hotspot innerhalb einer größeren aktiven Hotspot zu erstellen. Diese Option dient der ermöglichen Ihnen die Erstellung komplexere hot-Spot Zonen innerhalb einer <xref:System.Web.UI.WebControls.ImageMap> Steuerelement.  
+  
+ Um in einem aktiven Hotspot einen inaktiven Bereich erstellen möchten, müssen Sie den inaktiven Hotspot vor den aktiven Hotspot im Angeben der <xref:System.Web.UI.WebControls.ImageMap> Steuerelement. Beispielsweise die folgenden <xref:System.Web.UI.WebControls.ImageMap> definiert Sie einen aktiven Ring, indem Sie einen inaktiven kreisförmigen Hotspot in eine größere aktiven kreisförmigen Hotspot:  
+  
+```  
+<asp:ImageMap ID="SaturnImage"   
+  ImageUrl="~/saturn.PNG"   
+  runat="server" OnClick="SaturnImage_Click">  
+  <asp:CircleHotSpot AlternateText="planet" HotSpotMode=PostBack  
+    PostBackValue="planet" Radius=40 X=100 Y=100 />  
+  <asp:CircleHotSpot HotSpotMode=Inactive   
+    Radius=60 X=100 Y=100 />  
+  <asp:CircleHotSpot AlternateText="rings" HotSpotMode=PostBack  
+    PostBackValue="rings" Radius=80 X=100 Y=100 />  
+</asp:ImageMap>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Typ ist nicht die <see cref="T:System.Web.UI.WebControls.HotSpotMode" /> Enumerationswerte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrackingViewState">
+      <MemberSignature Language="C#" Value="protected virtual bool IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HotSpot.IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt seine Änderungen am Ansichtszustand nachverfolgt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt seine Änderungen am Ansichtszustand nachverfolgt wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HotSpot.IsTrackingViewState%2A> Member wird hauptsächlich von Steuerelemententwicklern verwendet, wenn eine benutzerdefinierte Implementierung von Ableiten der <xref:System.Web.UI.WebControls.HotSpot> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected virtual void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HotSpot.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Object" /> darstellt, die die <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt wiederherstellen.</param>
+        <summary>Stellt die <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt den zuvor gespeicherten Ansichtszustand auf das Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient in erster Linie durch die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden. Allerdings können Entwickler von Steuerelementen überschreiben Sie diese Methode, um anzugeben, wie ein benutzerdefiniertes Serversteuerelement seinen Ansichtszustand wiederherstellt. Weitere Informationen finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ Die <xref:System.Web.UI.WebControls.HotSpot.LoadViewState%2A> Methode wird hauptsächlich von Steuerelemententwicklern verwendet, wenn eine benutzerdefinierte Implementierung von Ableiten der <xref:System.Web.UI.WebControls.HotSpot> Klasse.  
+  
+ Diese Methode stellt die Ansichtszustandsinformationen für die <xref:System.Web.UI.WebControls.HotSpot> Objekt aus einer früheren Seitenanforderung wieder, die gespeichert wurde, durch die <xref:System.Web.UI.WebControls.HotSpot.SaveViewState%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkupName">
+      <MemberSignature Language="C#" Value="protected abstract string MarkupName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MarkupName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HotSpot.MarkupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft eine Zeichenfolgendarstellung für den <see cref="T:System.Web.UI.WebControls.HotSpot" /> Form "des Objekts".</summary>
+        <value>Eine Zeichenfolge, die den Namen der darstellt, die <see cref="T:System.Web.UI.WebControls.HotSpot" /> Form "des Objekts".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HotSpot.MarkupName%2A> Member wird hauptsächlich von Steuerelemententwicklern verwendet, wenn eine benutzerdefinierte Implementierung von Ableiten der <xref:System.Web.UI.WebControls.HotSpot> Klasse.  
+  
+ Ruft beim Überschreiben in einer abgeleiteten Klasse die <xref:System.Web.UI.WebControls.HotSpot.MarkupName%2A> Eigenschaft ruft eine Zeichenfolge, die den Namen des darstellt der <xref:System.Web.UI.WebControls.HotSpot> Form "des Objekts".  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von <see cref="T:System.Web.UI.WebControls.HotSpot" />, müssen Sie überschreiben die <see cref="P:System.Web.UI.WebControls.HotSpot.MarkupName" /> Eigenschaft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateUrl">
+      <MemberSignature Language="C#" Value="public string NavigateUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NavigateUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HotSpot.NavigateUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu navigieren, wenn eine <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt geklickt wird.</summary>
+        <value>Die URL zu navigieren, wenn eine <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt geklickt wird. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.HotSpot.NavigateUrl%2A> -Eigenschaft an die URL zu navigieren, wenn eine <xref:System.Web.UI.WebControls.HotSpot> Objekt geklickt wird. Diese Eigenschaft wirkt sich nur, wenn die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> -Eigenschaftensatz auf `HotSpotMode.Navigate`, um eine URL zu navigieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostBackValue">
+      <MemberSignature Language="C#" Value="public string PostBackValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PostBackValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HotSpot.PostBackValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der der <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt, das im Ereignis übergeben von Daten bei der <see cref="T:System.Web.UI.WebControls.HotSpot" /> geklickt wird.</summary>
+        <value>Der Name des der <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt, das im Ereignis übergeben von Daten bei der <see cref="T:System.Web.UI.WebControls.HotSpot" /> geklickt wird. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.HotSpot.PostBackValue%2A> -Eigenschaft geben Sie einen Namen für eine <xref:System.Web.UI.WebControls.HotSpot> Objekt. Dieser Name wird übergeben werden, der <xref:System.Web.UI.WebControls.ImageMapEventArgs> Ereignisdaten bei der <xref:System.Web.UI.WebControls.HotSpot> geklickt wird. Diese Eigenschaft wirkt sich nur, wenn die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> -Eigenschaftensatz auf `HotSpotMode.PostBack`, um ein Postback an den Server zu generieren.  
+  
+ Programmgesteuerte Steuerung die Aktionen ausgeführt, wenn eine <xref:System.Web.UI.WebControls.HotSpot> Objekt geklickt wird, geben Sie einen Ereignishandler für das <xref:System.Web.UI.WebControls.ImageMap.Click> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected virtual object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HotSpot.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die Änderungen an der <see cref="T:System.Web.UI.WebControls.HotSpot" /> Ansicht-Zustand des Objekts seit dem Zeitpunkt die Seite an den Server zurückgesendet wurde.</summary>
+        <returns>Die <see cref="T:System.Object" /> , enthält die Änderungen an der <see cref="T:System.Web.UI.WebControls.HotSpot" /> Ansichtszustand des Objekts. Wenn kein Ansichtszustand für das Objekt ist, gibt diese Methode <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HotSpot.SaveViewState%2A> Member wird hauptsächlich von Steuerelemententwicklern verwendet, wenn eine benutzerdefinierte Implementierung von Ableiten der <xref:System.Web.UI.WebControls.HotSpot> Klasse.  
+  
+ Ansichtszustand besteht in der Ansammlung der Werte der Eigenschaften eines Serversteuerelements. Diese Werte werden automatisch in des Serversteuerelements platziert <xref:System.Web.UI.Control.ViewState%2A> -Eigenschaft, die eine Instanz von der <xref:System.Web.UI.StateBag> Klasse. Der Wert dieser Eigenschaft wird dann nach speichern Status, Phase des Lebenszyklus des Serversteuerelements an ein Zeichenfolgenobjekt beibehalten. Weitere Informationen finden Sie unter [Übersicht über den Lebenszyklus von ASP.NET für IIS 5.0 und 6.0](http://msdn.microsoft.com/library/de0d8a1c-b1bc-48e1-b246-26e32289a82f).  
+  
+ Wenn der Ansichtszustand gespeichert wird, wird dieser String-Objekt als Variable an den Client zurückgegeben, die in ein verborgenes HTML-Eingabeelement gespeichert ist. Wenn Sie benutzerdefinierte Steuerelemente erstellen, können Sie die Effizienz verbessern, indem Sie diese Methode überschreiben und Ändern des Serversteuerelements `ViewState` Eigenschaft. Weitere Informationen finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HotSpot.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt seine Änderungen am Ansichtszustand nachverfolgt wird.</summary>
+        <value>
+          <see langword="true" />Wenn eine <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt seine Änderungen am Ansichtszustand nachverfolgt wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.HotSpot.IsTrackingViewState%2A?displayProperty=nameWithType> Member, um zu bestimmen, ob ein <xref:System.Web.UI.WebControls.HotSpot> Objekt Änderungen am Ansichtszustand nachverfolgt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.HotSpot.System%23Web%23UI%23IStateManager%23IsTrackingViewState%2A> Member ist eine explizite Schnittstellenmember-Implementierung. Kann verwendet werden nur, wenn eine <xref:System.Web.UI.WebControls.HotSpot> Instanz umgewandelt wird eine <xref:System.Web.UI.IStateManager> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Definieren Sie eine benutzerdefinierte Implementierung zum Nachverfolgen der Ansichtszustand für ein <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt außer Kraft, indem die <see cref="P:System.Web.UI.WebControls.HotSpot.IsTrackingViewState" /> Member. Die explizite Implementierung ruft die <see cref="P:System.Web.UI.WebControls.HotSpot.IsTrackingViewState" /> Eigenschaft, um zu bestimmen, ob das Objekt, Änderungen am Ansichtszustand nachverfolgt wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HotSpot.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Object" /> , enthält die gespeicherten Ansichtszustandswerte für das <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt wiederherstellen.</param>
+        <summary>Stellt die <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt den zuvor gespeicherten Ansichtszustand auf das Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.HotSpot.LoadViewState%2A?displayProperty=nameWithType> Member zum Wiederherstellen des Ansichtszustands für eine <xref:System.Web.UI.WebControls.HotSpot> Objekt.  
+  
+ Die <xref:System.Web.UI.WebControls.HotSpot.System%23Web%23UI%23IStateManager%23LoadViewState%2A> Member ist eine explizite Schnittstellenmember-Implementierung. Kann verwendet werden nur, wenn eine <xref:System.Web.UI.WebControls.HotSpot> Instanz umgewandelt wird eine <xref:System.Web.UI.IStateManager> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Definieren Sie eine benutzerdefinierte Implementierung zum Wiederherstellen des Ansichtszustands für eine <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt außer Kraft, indem die <see cref="M:System.Web.UI.WebControls.HotSpot.LoadViewState(System.Object)" /> Member. Die explizite Implementierung ruft die <see cref="M:System.Web.UI.WebControls.HotSpot.LoadViewState(System.Object)" /> Verfahren zum Wiederherstellen des Ansichtszustands für das <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HotSpot.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die Änderungen an der <see cref="T:System.Web.UI.WebControls.HotSpot" /> Ansichtszustand des Objekts, seit der letzten Ausführung die Seite an den Server zurückgesendet wurde.</summary>
+        <returns>Die <see cref="T:System.Object" /> , enthält die Änderungen an der <see cref="T:System.Web.UI.WebControls.HotSpot" /> Ansichtszustand des Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.HotSpot.SaveViewState%2A?displayProperty=nameWithType> Methode zum Speichern des Ansichtszustands für die <xref:System.Web.UI.WebControls.HotSpot> Region.  
+  
+ Die <xref:System.Web.UI.WebControls.HotSpot.System%23Web%23UI%23IStateManager%23SaveViewState%2A> Methode ist eine explizite Schnittstellenmember-Implementierung. Kann verwendet werden nur, wenn eine <xref:System.Web.UI.WebControls.HotSpot> Instanz umgewandelt wird eine <xref:System.Web.UI.IStateManager> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Definieren Sie eine benutzerdefinierte Implementierung zum Nachverfolgen der Ansichtszustand für ein <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt außer Kraft, indem die <see cref="M:System.Web.UI.WebControls.HotSpot.SaveViewState" /> Member. Die explizite Implementierung ruft die <see cref="M:System.Web.UI.WebControls.HotSpot.SaveViewState" /> Methode, um die Änderungen am Ansichtszustand für das Objekt zu speichern.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HotSpot.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Weist die <see cref="T:System.Web.UI.WebControls.HotSpot" /> Region Änderungen an seinem Ansichtszustand nachverfolgt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.HotSpot.TrackViewState%2A?displayProperty=nameWithType> Methode zum Nachverfolgen der Änderungen am Ansichtszustand für die <xref:System.Web.UI.WebControls.HotSpot> Region.  
+  
+ Die <xref:System.Web.UI.WebControls.HotSpot.System%23Web%23UI%23IStateManager%23TrackViewState%2A> Methode ist eine explizite Schnittstellenmember-Implementierung. Kann verwendet werden nur, wenn eine <xref:System.Web.UI.WebControls.HotSpot> Instanz umgewandelt wird eine <xref:System.Web.UI.IStateManager> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Definieren Sie eine benutzerdefinierte Implementierung zum Nachverfolgen der Ansichtszustand für ein <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt außer Kraft, indem die <see cref="M:System.Web.UI.WebControls.HotSpot.TrackViewState" /> Member. Die explizite Implementierung ruft die <see cref="M:System.Web.UI.WebControls.HotSpot.TrackViewState" /> Methode, um die Überwachung der Ansichtszustand für das Objekt zu initialisieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="TabIndex">
+      <MemberSignature Language="C#" Value="public virtual short TabIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 TabIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HotSpot.TabIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Registerkartenindex des der <see cref="T:System.Web.UI.WebControls.HotSpot" /> Region.</summary>
+        <value>Der Registerkartenindex des der <see cref="T:System.Web.UI.WebControls.HotSpot" /> Region. Der Standardwert ist -0 und bedeutet, dass diese Eigenschaft nicht festgelegt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.HotSpot.TabIndex%2A> Eigenschaft angeben oder ermitteln den Registerkartenindex des eine <xref:System.Web.UI.WebControls.HotSpot> Region auf der Web Forms-Seite.  
+  
+ Wenn Sie die TAB-Taste drücken, richtet sich die Reihenfolge, in der Webserver-Steuerelement den Fokus erhalten, nach dem <xref:System.Web.UI.WebControls.HotSpot.TabIndex%2A> -Eigenschaft jedes Steuerelements. Beim erstmaligen eine Seite laden ist das erste Element, das Fokus erhält, wenn die TAB-Taste gedrückt wird, die Adressleiste ein. Als Nächstes die Steuerelemente auf der Web Forms-Seite werden im Registerkartenformat in aufsteigender Reihenfolge basierend auf dem Wert von der <xref:System.Web.UI.WebControls.HotSpot.TabIndex%2A> -Eigenschaft jedes Steuerelements, beginnend mit der kleinste positive Wert ungleich NULL. Wenn mehrere Steuerelemente, die den gleichen Registerkartenindex freigeben, erhalten die Steuerelemente den Fokus in der Reihenfolge, die sie auf der Seite "Web Forms" deklariert werden. Schließlich werden Steuerelemente, die einen Registerkartenindex von 0 (null), in der Reihenfolge im Registerkartenformat, in die sie deklariert werden.  
+  
+> [!NOTE]
+>  Nur Steuerelemente mit einem Wert ungleich NULL Registerkartenindex rendert die `tabindex` Attribut.  
+  
+ Entfernen Sie eine <xref:System.Web.UI.WebControls.HotSpot> Region aus der Aktivierreihenfolge durch Festlegen der <xref:System.Web.UI.WebControls.HotSpot.TabIndex%2A> Eigenschaft auf einen negativen Wert.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird nur in Internet Explorer 4.0 und höher unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Index für die angegebene Registerkarte befindet sich nicht zwischen-32768 und 32767.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public virtual string Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Target" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HotSpot.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.TargetConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Zielfenster oder der Zielframe, die zum Anzeigen der Webseiteninhalt verknüpft, wenn ein <see cref="T:System.Web.UI.WebControls.HotSpot" /> -Objekt geklickt wird, die an eine URL navigiert.</summary>
+        <value>Das Zielfenster oder der Zielframe, in dem die Webseite geladen verknüpft, wenn ein <see cref="T:System.Web.UI.WebControls.HotSpot" /> -Objekt geklickt wird, die an eine URL navigiert. Der Standardwert ist eine leere Zeichenfolge (""), die das Fenster oder den Frame mit dem Fokus aktualisiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.HotSpot.Target%2A> Eigenschaft, um anzugeben, den Frame oder das Fenster, in dem die Webseite angezeigt, wenn verknüpft eine <xref:System.Web.UI.WebControls.HotSpot> -Objekt geklickt wird, die an eine URL navigiert. Diese Eigenschaft wirkt sich nur, wenn die <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> -Eigenschaftensatz auf `HotSpotMode.Navigate`, um eine URL zu navigieren. Wenn diese Eigenschaft nicht festgelegt ist, den Browser oder das Fenster mit dem Fokus aktualisiert, wenn die <xref:System.Web.UI.WebControls.HotSpot> Objekt geklickt wird.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.HotSpot.Target%2A> Eigenschaft als rendert eine `target` Attribut. Die `target` Attribut Ankerelemente ist in der Dokumenttypdefinition XHTML 1.1 nicht zulässig. Legen Sie nicht die <xref:System.Web.UI.WebControls.HotSpot.Target%2A> Eigenschaft Wenn der gerenderten Ausgabe für die <xref:System.Web.UI.WebControls.HotSpot> XHTML 1.1 kompatibel sein muss. Weitere Informationen finden Sie unter dem Thema [XHTML-Standards in Visual Studio und ASP.NET](http://msdn.microsoft.com/library/1b78d416-66bb-43a5-ac77-c703aab55b97).  
+  
+> [!CAUTION]
+>  Es wird dringend empfohlen, dass beim accessible Web Pages zu erstellen, verwenden Sie vermeiden die <xref:System.Web.UI.WebControls.HotSpot.Target%2A> Eigenschaft, um ein weiteres Fenster als Ziel. Weitere Informationen finden Sie unter [NIB: ASP.NET Accessibility](http://msdn.microsoft.com/en-us/9b5f3e05-e88d-4248-a5f4-9e64850fa0ae).  
+  
+ Die <xref:System.Web.UI.WebControls.HotSpot.Target%2A> Wert muss mit einem Buchstaben im Bereich von A bis Z (Groß-/Kleinschreibung), mit Ausnahme der folgenden speziellen Werte, die beginnen mit einem Unterstrich beginnen.  
+  
+|Zielwert|Beschreibung|  
+|------------------|-----------------|  
+|`_blank`|Rendert den Inhalt in einem neuen Fenster ohne Frames.|  
+|`_parent`|Rendert den Inhalt im unmittelbar übergeordneten Frameset.|  
+|`_search`|Rendert den Inhalt im Suchbereich.|  
+|`_self`|Rendert den Inhalt im Rahmen mit Fokus.|  
+|`_top`|Rendert den Inhalt in der gesamten Fenster ohne Frames.|  
+  
+> [!NOTE]
+>  Überprüfen Sie Ihre Browserdokumentation, um zu bestimmen, ob die `_search` Wert wird unterstützt.  Z. B. Internet Explorer 5.0 oder höher unterstützt die `_search` Zielwert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HotSpot.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.String" /> Darstellung dieser Instanz von einem <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt.</summary>
+        <returns>Eine Zeichenfolge, die dieses <see cref="T:System.Web.UI.WebControls.HotSpot" />-Objekt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HotSpot.ToString%2A> Methode gibt eine Zeichenfolge, die das aktuelle darstellt <xref:System.Web.UI.WebControls.HotSpot> Objekt. Z. B. wenn die aktuelle <xref:System.Web.UI.WebControls.HotSpot> ist eine Instanz einer der <xref:System.Web.UI.WebControls.CircleHotSpot> Klasse, die beim Aufrufen dieser Methode gibt die Zeichenfolge "CircleHotSpot" zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected virtual void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HotSpot.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass die <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt, das Änderungen an seinem Ansichtszustand nachverfolgt, damit sie in des Objekts gespeichert werden können <see cref="T:System.Web.UI.StateBag" /> Objekt. Auf dieses Objekt kann über die <see cref="P:System.Web.UI.Control.ViewState" />-Eigenschaft zugegriffen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HotSpot.TrackViewState%2A> Member wird hauptsächlich von Steuerelemententwicklern verwendet, wenn eine benutzerdefinierte Implementierung von Ableiten der <xref:System.Web.UI.WebControls.HotSpot> Klasse.  
+  
+ Diese Methode wird automatisch von ASP.NET aufgerufen bei der <xref:System.Web.UI.WebControls.HotSpot> -Objekt initialisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewState">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.StateBag ViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.StateBag ViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HotSpot.ViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.StateBag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch von Zustandsinformationen, die zum Speichern und Wiederherstellen von den Ansichtszustand des ermöglicht eine <see cref="T:System.Web.UI.WebControls.HotSpot" /> Objekt in mehreren Anforderungen der gleichen Seite.</summary>
+        <value>Eine Instanz von der <see cref="T:System.Web.UI.StateBag" /> Klasse enthält die <see cref="T:System.Web.UI.WebControls.HotSpot" /> Ansichtszustandsinformationen des Bereichs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HotSpot.ViewState%2A> Member wird hauptsächlich von Steuerelemententwicklern verwendet, wenn eine benutzerdefinierte Implementierung von Ableiten der <xref:System.Web.UI.WebControls.HotSpot> Klasse.  
+  
+ Ansichtszustand eines Serversteuerelements besteht in der Ansammlung der alle Eigenschaftswerte. Um diese Werte über HTTP-Anforderungen beizubehalten, ASP.NET-Serversteuerelemente verwenden die <xref:System.Web.UI.WebControls.HotSpot.ViewState%2A> -Eigenschaft, die eine Instanz von der <xref:System.Web.UI.StateBag> -Klasse, um die Eigenschaftswerte zu speichern. Die Werte werden dann als Variable an ein ausgeblendetes HTML-Element übergeben, wenn nachfolgende Anforderungen verarbeitet werden. Weitere Informationen zum Speichern von Server-steuerelementansichtzustand finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ Ansichtszustand ist standardmäßig für alle Serversteuerelemente aktiviert, es gibt jedoch Situationen, in denen Sie deaktivieren möchten. Weitere Informationen finden Sie unter [Übersicht über die Leistung von ASP.NET](http://msdn.microsoft.com/library/f882bf1b-a009-4312-ac06-74370ffabc0b).  
+  
+ Informationen zu Wörterbüchern und deren Verwendung finden Sie unter [Auflistungen und Datenstrukturen](http://msdn.microsoft.com/library/60cc581f-1db5-445b-ba04-a173396bf872).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

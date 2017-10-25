@@ -1,0 +1,67 @@
+<Type Name="IConfigErrorInfo" FullName="System.Configuration.Internal.IConfigErrorInfo">
+  <TypeSignature Language="C#" Value="public interface IConfigErrorInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IConfigErrorInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Internal.IConfigErrorInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Schnittstelle, die von .NET Framework zur Unterstützung der Erstellung Fehlerdatensätze Konfiguration verwendet.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Filename">
+      <MemberSignature Language="C#" Value="public string Filename { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filename" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IConfigErrorInfo.Filename" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die Namen der Datei im Zusammenhang mit den Einzelheiten der Konfiguration angeben.</summary>
+        <value>Eine Zeichenfolge, die einen Dateinamen angeben.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IConfigErrorInfo.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine ganze Zahl, die im Zusammenhang mit der Konfigurationsdetails Zeilennummer angibt.</summary>
+        <value>Eine ganze Zahl, eine Zeilennummer angibt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

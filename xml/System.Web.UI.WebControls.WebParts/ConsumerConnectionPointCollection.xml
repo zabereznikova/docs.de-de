@@ -1,0 +1,254 @@
+<Type Name="ConsumerConnectionPointCollection" FullName="System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection">
+  <TypeSignature Language="C#" Value="public sealed class ConsumerConnectionPointCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConsumerConnectionPointCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von Verbindungspunkten für ein Steuerelement in einer Webparts-Zone dar, das als Consumer fungiert. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Steuerelement in einer Webparts-Zone, die als Consumer fungiert kann nur zu einem Anbieter standardmäßig eine Verbindung herstellen. Jedoch, wenn die <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.AllowsMultipleConnections%2A> -Eigenschaftensatz auf `true`, mehrere Anbieter können an den Consumer eine Verbindung herstellen.  
+  
+ Beachten Sie, die diese Klasse erbt die <xref:System.Collections.ReadOnlyCollectionBase> -Klasse, wodurch aus dieser Auflistung eine stark typisierte, nicht-generische, schreibgeschützte Auflistung. Sie können nicht hinzufügen oder Entfernen von Mitgliedern, nachdem eine Instanz erstellt wurde.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConsumerConnectionPointCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine neue Instanz der dem <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection> Klasse ohne Elemente in der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConsumerConnectionPointCollection (System.Collections.ICollection connectionPoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection connectionPoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionPoints" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="connectionPoints">Eine Auflistung von Verbindungspunkten Consumer.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection" /> -Klasse unter Verwendung der angegebenen Auflistung von Verbindungspunkten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine neue Instanz der dem <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection> -Klasse und fügt die in enthaltenen Verbindungspunkte der `connectionPoints` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="connectionPoints" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Auflistung enthält einen ungültigen Verbindungspunkt.  
+  
+ \- oder –  
+  
+ Die Auflistung enthält ein Element mit einem doppelten ID.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint connectionPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint connectionPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.Contains(System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionPoint" Type="System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" />
+      </Parameters>
+      <Docs>
+        <param name="connectionPoint">Der zu suchende Verbindungspunkt.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> Objekt befindet sich in der Auflistung.</summary>
+        <returns>
+          <see langword="true" />Wenn der Consumerverbindungspunkt in der Auflistung enthalten ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um zu bestimmen, ob eine <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Objekt befindet sich in der aktuellen <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection> Auflistung. Diese Methode wird häufig verwendet, um das Vorhandensein einer <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Objekt vor dem Ausführen einer Aufgabe, z. B. ein Menüelement zu hinzufügen oder Entfernen eines Menüelements aus der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.CopyTo(System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein nullbasiertes Array von <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> Objekten, empfängt der kopierten Elemente aus dem aktuellen <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection" />.</param>
+        <param name="index">Die Position im Zielarray, an dem Empfang des kopierten Inhalts beginnen.</param>
+        <summary>Kopiert alle Elemente aus der <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection" /> Auflistung in ein kompatibles eindimensionales Array von <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> -Objekten, beginnend am angegebenen Index im Zielarray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Kopieren der Inhalte des aktuellen <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection> Objekt in das angegebene nullbasierte Array. Elemente werden kopiert, beginnend am angegebenen Index des Zielarrays. Sie können mit dem Array dann Arraysyntax verwenden, den Zugriff auf die Elemente in der <xref:System.Array> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint Default" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft der Standard-Consumerverbindungspunkt zeigen.</summary>
+        <value>Der standardmäßige <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht eine schnelle Möglichkeit zum Suchen des Consumerverbindungspunkt in eine Auflistung der Standardverbindungspunkt zeigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint connectionPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint connectionPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.IndexOf(System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionPoint" Type="System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" />
+      </Parameters>
+      <Docs>
+        <param name="connectionPoint">Die zu suchende <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" />.</param>
+        <summary>Bestimmt den Index des angegebenen <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> Objekt in der Auflistung.</summary>
+        <returns>Der nullbasierte Index des ersten Vorkommens des <paramref name="connectionPoint" /> in der aktuellen <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection" />, sofern gefunden, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der angegebene Consumerverbindungspunkt-Element mehrmals in der Auflistung angezeigt wird, wird der Index des ersten Vorkommens zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index eines bestimmten <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> Element in der Auflistung.</param>
+        <summary>Ruft das Element in der Auflistung an der durch den ganzzahligen Wert angegebenen Position ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> am angegebenen Index in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um einen Verbindungspunkt aus der Auflistung abgerufen werden, wenn Sie wissen, dass seinen Indexwert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint this[string id] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Ein Zeichenfolgenwert, der Verbindungspunkt abgerufen werden sollen-ID Punkt Verbindung darstellt.</param>
+        <summary>Ruft den Verbindungspunkt mit dem angegebenen <see cref="P:System.Web.UI.WebControls.WebParts.ConnectionPoint.ID" /> Eigenschaft.</summary>
+        <value>Die erste <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> in der Auflistung, deren ID dem Wert entspricht <paramref name="id" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie einen Verbindungspunkt aus der Auflistung abgerufen werden, wenn Sie wissen, dass seine Verbindungspunkt-ID  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

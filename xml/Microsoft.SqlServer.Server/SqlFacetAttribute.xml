@@ -1,0 +1,223 @@
+<Type Name="SqlFacetAttribute" FullName="Microsoft.SqlServer.Server.SqlFacetAttribute">
+  <TypeSignature Language="C#" Value="public class SqlFacetAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlFacetAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.SqlFacetAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter | System.AttributeTargets.ReturnValue, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Merkt sich beim zurückgegebene Ergebnis von einem benutzerdefinierten Typ (UDT) mit zusätzlichen Informationen, die in Transact-SQL verwendet werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.SqlServer.Server.SqlFacetAttribute>kann nur für Rückgabewerte nicht als "void" angegeben werden.  
+  
+ <xref:Microsoft.SqlServer.Server.SqlFacetAttribute>wird nur zum Ableiten von Informationen über den Rückgabetyp verwendet und sollte kein Einschränkung dafür auf, was in den Typ gespeichert werden können. Daher, wenn das Feld hat eine <xref:Microsoft.SqlServer.Server.SqlFacetAttribute> , der angibt, seine Größe 2 Zeichen lang sein, klicken Sie dann die SQL Server-Datentyp des Ausdrucks für den Feldzugriff von der Größe 2, aber Zuweisungen in das Feld sind nicht darauf beschränkt ist durch dieses Facet.  
+  
+ In der folgenden Tabelle werden die Matrix gültiger Werte für die verschiedenen Eigenschaften bestimmter Feldtypen erfasst. In dieser Tabelle bedeutet "Y" an, dass die Eigenschaft ist gültig, "N" gibt an, dass die Eigenschaft nicht gültig ist.  
+  
+ Das angegebene <xref:Microsoft.SqlServer.Server.SqlFacetAttribute> muss mit dem Feldtyp kompatibel sein. Wenn die Eigenschaft nicht gültig ist, meldet typregistrierung einen Fehler, wenn der Benutzer einen nicht standardmäßigen Wert für die Eigenschaft angibt. Die maximalen Werte für <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Precision%2A> und <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Scale%2A> Eigenschaften sind 38. Für die <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.MaxSize%2A> -Eigenschaft der Wert muss im Bereich von 1-8000 für binäre und nicht-Unicode-Daten, 1-4000 für Unicode-Daten oder-1 sein. Alle anderen Werte sind ungültig.  
+  
+|Typ|IsFixedLength|MaxSize|Genauigkeit|Skalieren|IsNullable|  
+|----------|-------------------|-------------|---------------|-----------|----------------|  
+|<xref:System.Data.SqlTypes.SqlBoolean>|N|N|N|N|J|  
+|<xref:System.Data.SqlTypes.SqlByte>|N|N|N|N|J|  
+|<xref:System.Data.SqlTypes.SqlInt16>|N|N|N|N|J|  
+|<xref:System.Data.SqlTypes.SqlInt32>|N|N|N|N|J|  
+|<xref:System.Data.SqlTypes.SqlInt64>|N|N|N|N|J|  
+|<xref:System.Data.SqlTypes.SqlSingle>|N|N|N|N|J|  
+|<xref:System.Data.SqlTypes.SqlDouble>|N|N|N|N|J|  
+|<xref:System.Data.SqlTypes.SqlDateTime>|N|N|N|N|J|  
+|<xref:System.Data.SqlTypes.SqlMoney>|N|N|N|N|J|  
+|<xref:System.Data.SqlTypes.SqlGuid>|N|N|N|N|J|  
+|<xref:System.Data.SqlTypes.SqlDecimal>|N|N|J|J|J|  
+|<xref:System.Data.SqlTypes.SqlString>|J|J|N|N|J|  
+|<xref:System.Data.SqlTypes.SqlBinary>|J|J|N|N|J|  
+|<xref:System.Data.SqlTypes.SqlXml>|N|N|N|N|J|  
+|<xref:System.Data.SqlTypes.SqlBytes>|J|J|N|N|J|  
+|<xref:System.Data.SqlTypes.SqlChars>|J|J|N|N|J|  
+|Eingebettete UDTs|N|N|N|N|J|  
+|<xref:System.String>|J|J|N|N|J|  
+|Byte[]|J|J|N|N|J|  
+|Char[]|J|J|N|N|J|  
+|<xref:System.DateTime>|N|N|N|Y<sup>1</sup>|N|  
+|<xref:System.Decimal>|N|N|J|J|J|  
+  
+ (1) angeben der Skalierung für einen Typ "DateTime" führt dazu, dass den Wert in Transact-SQL als DateTime2-Typ mit dem angegebenen Maßstab zurückgegeben werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlFacetAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlFacetAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Ein optionales Attribut für einen benutzerdefinierten Typ (UDT) Rückgabetyp, die verwendet, um das zurückgegebene Ergebnis mit zusätzlichen Informationen mit einer Anmerkung versehen, die in Transact-SQL verwendet werden kann.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedLength">
+      <MemberSignature Language="C#" Value="public bool IsFixedLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedLength" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlFacetAttribute.IsFixedLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob der Rückgabetyp des benutzerdefinierten Typs eine feste Länge ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Rückgabetyp eine feste Länge ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss festgelegt werden, um `false` Wenn die <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.MaxSize%2A> Eigenschaft auf 1 festgelegt ist.  
+  
+ Der Standardwert ist `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNullable">
+      <MemberSignature Language="C#" Value="public bool IsNullable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNullable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlFacetAttribute.IsNullable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob der Rückgabetyp des benutzerdefinierten Typs kann <see langword="null" />.</summary>
+        <value>
+          <see langword="true" />Wenn der Rückgabetyp des benutzerdefinierten Typs sein kann <see langword="null" />andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSize">
+      <MemberSignature Language="C#" Value="public int MaxSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxSize" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlFacetAttribute.MaxSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die maximale Größe in logischen Einheiten, die von der zugrunde liegenden Typ des Felds des benutzerdefinierten Typs.</summary>
+        <value>Eine <see cref="T:System.Int32" /> , die die maximale Größe in logischen Einheiten, die von der zugrunde liegenden Typ des Felds darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die logische Einheit ist Bytes (mit einer maximalen Größe von 8000) für binäre und nicht-Unicode-Datentypen und die Anzahl der Unicode-Zeichen (mit einer maximalen Größe von 4000) für Zeichenfeldtypen.  
+  
+ Der Wert-1 ist für große Zeichen- und Binärtypen reserviert.  
+  
+ Der Standardwert ist 4000 für Unicode-Zeichen und 8000 für binäre und nicht-Unicode-Datentypen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Precision">
+      <MemberSignature Language="C#" Value="public int Precision { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Precision" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlFacetAttribute.Precision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Genauigkeit des Rückgabetyps des benutzerdefinierten Typs.</summary>
+        <value>Eine <see cref="T:System.Int32" /> , die die Genauigkeit des Rückgabetyps darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Precision%2A> Eigenschaft gilt nur für numerische Datentypen. Die <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Scale%2A> Eigenschaft muss angegeben werden, der zum Einstellen der <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Precision%2A> Eigenschaft.  
+  
+ Der Maximalwert der der <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Precision%2A> Eigenschaft ist 38; der Standardwert ist 38.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scale">
+      <MemberSignature Language="C#" Value="public int Scale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Scale" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlFacetAttribute.Scale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Skalierung des Rückgabetyps des benutzerdefinierten Typs.</summary>
+        <value>Eine <see cref="T:System.Int32" /> , die Skalierung des Rückgabetyps darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Scale%2A> Eigenschaft gilt nur für Dezimaltypen. Die <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Precision%2A> Eigenschaft muss angegeben werden, der zum Einstellen der <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Scale%2A> Eigenschaft.  
+  
+ Der Maximalwert der der <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Scale%2A> Eigenschaft ist 38; der Standardwert ist 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,17 @@
+<Namespace Name="System.Web.Profile">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Profile" /> -Namespace enthält Klassen, die zum Arbeiten mit ASP.NET-Benutzerprofile in Server-Webanwendungen verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET-Profilen dienen zum Speichern und Abrufen von benutzereinstellungen in einer Datenquelle, z. B. eine Datenbank. Profil und die Eigenschaftswerte werden mithilfe eines Profilanbieters verwaltet. Profilinformationen kann in einer Microsoft SQL Server-Datenbank gespeichert werden, mithilfe der <xref:System.Web.Profile.SqlProfileProvider> -Klasse, oder in eine benutzerdefinierte Datenquelle mit einer Implementierung von der <xref:System.Web.Profile.ProfileProvider> abstrakte Klasse.  
+  
+ ASP.NET-Profilen werden mithilfe des Konfigurationsabschnitts konfiguriert.  
+  
+ Wenn eine Anwendung gestartet wird, die Profile aktiviert ist, erstellt ASP.NET eine neue Klasse des Typs `ProfileCommon`, erbt von der <xref:System.Web.Profile.ProfileBase> Klasse. Stark typisierte Accessoren werden hinzugefügt, um die `ProfileCommon` Klasse für jede Eigenschaft, die in den Konfigurationsabschnitt definiert ist. Eine Instanz von der `ProfileCommon` "Class" festgelegt ist, als Wert für die <xref:System.Web.HttpContext.Profile%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> Objekt. Sie können eine benutzerdefiniertes Profil-Implementierung, die von erbt erstellen die <xref:System.Web.Profile.ProfileBase> abstrakte Klasse, die definiert Eigenschaften für das Benutzerprofil, die nicht in das Konfigurationselement angegeben sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

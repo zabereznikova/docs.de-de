@@ -1,0 +1,95 @@
+<Type Name="MenuEventHandler" FullName="System.Web.UI.WebControls.MenuEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void MenuEventHandler(object sender, MenuEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MenuEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.MenuEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.MenuEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.MenuEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode, verarbeitet die <see cref="E:System.Web.UI.WebControls.Menu.MenuItemClick" /> Ereignis oder <see cref="E:System.Web.UI.WebControls.Menu.MenuItemDataBound" /> -Ereignis für ein <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.MenuEventHandler> Klasse wird verwendet, um die Methode darstellen, die Behandlung der Ereignisse in der folgenden Tabelle an.  
+  
+|Ereignis|Beschreibung|  
+|-----------|-----------------|  
+|<xref:System.Web.UI.WebControls.Menu.MenuItemClick>|Tritt auf, wenn ein Menüelement geklickt wird. Dieses Ereignis wird häufig zum Synchronisieren einer <xref:System.Web.UI.WebControls.Menu> -Steuerelement mit einem anderen Steuerelement auf der Seite.|  
+|<xref:System.Web.UI.WebControls.Menu.MenuItemDataBound>|Tritt auf, wenn ein Menüelement an Daten gebunden ist. Dieses Ereignis wird häufig verwendet, um ein Menüelement zu ändern, bevor er in gerendert wird ein <xref:System.Web.UI.WebControls.Menu> Steuerelement.|  
+  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.MenuEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuEventHandler> Delegat, der programmgesteuert registrieren Sie einen Ereignishandler für die <xref:System.Web.UI.WebControls.Menu.MenuItemClick> -Ereignis für ein <xref:System.Web.UI.WebControls.Menu> Steuerelement. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die Beispiel-Siteübersichtsdaten unten in einer Datei namens Web.sitemap kopieren.  
+  
+ [!code-aspx-csharp[MenuEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuEventHandler/CS/menueventhandlercs.aspx#1)]
+ [!code-aspx-vb[MenuEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuEventHandler/VB/menueventhandlervb.aspx#1)]  
+  
+ Im folgenden finden Beispiel-Siteübersichtsdaten für das vorherige Beispiel.  
+  
+ `<siteMap>`  
+  
+ `<siteMapNode title="Home"`  
+  
+ `description="Home">`  
+  
+ `<siteMapNode title="Music"`  
+  
+ `description="Music">`  
+  
+ `<siteMapNode title="Classical"`  
+  
+ `description="Classical"/>`  
+  
+ `<siteMapNode title="Rock"`  
+  
+ `description="Rock"/>`  
+  
+ `<siteMapNode title="Jazz"`  
+  
+ `description="Jazz"/>`  
+  
+ `</siteMapNode>`  
+  
+ `<siteMapNode title="Movies"`  
+  
+ `description="Movies">`  
+  
+ `<siteMapNode title="Action"`  
+  
+ `description="Action"/>`  
+  
+ `<siteMapNode title="Drama"`  
+  
+ `description="Drama"/>`  
+  
+ `<siteMapNode title="Musical"`  
+  
+ `description="Musical"/>`  
+  
+ `</siteMapNode>`  
+  
+ `</siteMapNode>`  
+  
+ `</siteMap>`  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

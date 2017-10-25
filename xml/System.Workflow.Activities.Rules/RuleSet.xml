@@ -1,0 +1,265 @@
+<Type Name="RuleSet" FullName="System.Workflow.Activities.Rules.RuleSet">
+  <TypeSignature Language="C#" Value="public class RuleSet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit RuleSet extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.RuleSet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält eine Auflistung von <see cref="T:System.Workflow.Activities.Rules.Rule" />-Klassen sowie die Semantik für das Ausführen dieser Regeln in Vorwärtsverkettung. Ein <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> kann direkt in Code oder mithilfe der <see cref="T:System.Workflow.Activities.PolicyActivity" />-Aktivität ausgeführt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleSet ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleSet.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.RuleSet" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleSet (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleSet.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</param>
+        <summary>Initialisiert mithilfe des Namens des <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.RuleSet" />-Klasse .</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleSet (string name, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleSet.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</param>
+        <param name="description">Eine Beschreibung des <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.RuleSet" />-Klasse unter Verwendung des Namens und der Beschreibung des <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChainingBehavior">
+      <MemberSignature Language="C#" Value="public System.Workflow.Activities.Rules.RuleChainingBehavior ChainingBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.Activities.Rules.RuleChainingBehavior ChainingBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleSet.ChainingBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.Rules.RuleChainingBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Vorwärtsverkettungsverhalten für die <see cref="T:System.Workflow.Activities.Rules.Rule" />-Klassen im <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> ab oder legt es fest.</summary>
+        <value><see cref="T:System.Workflow.Activities.Rules.RuleChainingBehavior" /> für die <see cref="T:System.Workflow.Activities.Rules.Rule" />-Klassen im <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Workflow.Activities.Rules.RuleSet Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.Activities.Rules.RuleSet Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleSet.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.Rules.RuleSet</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine tiefe Kopie der aktuellen <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</summary>
+        <returns>Eine <see cref="T:System.Workflow.Activities.Rules.RuleSet" />, die mit dieser Instanz identisch ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleSet.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibung der <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> ab oder legt sie fest.</summary>
+        <value>Eine Beschreibung des <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleSet.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das <see cref="T:System.Object" />, das mit dem aktuellen <see cref="T:System.Object" /> verglichen werden soll.</param>
+        <summary>Stellt fest, ob zwei Objektinstanzen gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die Objekte gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public void Execute (System.Workflow.Activities.Rules.RuleExecution ruleExecution);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Execute(class System.Workflow.Activities.Rules.RuleExecution ruleExecution) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleSet.Execute(System.Workflow.Activities.Rules.RuleExecution)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ruleExecution" Type="System.Workflow.Activities.Rules.RuleExecution" />
+      </Parameters>
+      <Docs>
+        <param name="ruleExecution">Der <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" />, der der <see cref="T:System.Workflow.ComponentModel.Activity" /> zugeordnet ist, die den <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> aufruft.</param>
+        <summary>Wertet die <see cref="T:System.Workflow.Activities.Rules.Rule" />-Instanzen im <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> aus.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ruleExecution" /> ist ein <see langword="null" />-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.InvalidOperationException">Die zwischengespeicherte <see cref="T:System.Workflow.Activities.Rules.RuleExecution" /> kann nicht überprüft werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleSet.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Der Hashcode für diese Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleSet.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> ab oder legt ihn fest.</summary>
+        <value>Der Name des <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rules">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.Workflow.Activities.Rules.Rule&gt; Rules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.Workflow.Activities.Rules.Rule&gt; Rules" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleSet.Rules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Workflow.Activities.Rules.Rule&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der <see cref="T:System.Workflow.Activities.Rules.Rule" />-Klassen in <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> ab.</summary>
+        <value>Eine Liste der <see cref="T:System.Workflow.Activities.Rules.Rule" />-Klassen in <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public bool Validate (System.Workflow.Activities.Rules.RuleValidation validation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Validate(class System.Workflow.Activities.Rules.RuleValidation validation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleSet.Validate(System.Workflow.Activities.Rules.RuleValidation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validation" Type="System.Workflow.Activities.Rules.RuleValidation" />
+      </Parameters>
+      <Docs>
+        <param name="validation"><see cref="T:System.Workflow.ComponentModel.Compiler.ValidationManager" /> zum Verwalten der Validierung.</param>
+        <summary>Überprüft die <see cref="T:System.Workflow.Activities.Rules.RuleSet" />-Attribute und die <see cref="T:System.Workflow.Activities.Rules.Rule" />-Klassen im <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</summary>
+        <returns>Eine <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection" /> von Fehlern, die bei der Validierung festgestellt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Workflow.Activities.Rules.RuleSet> Fehler aufweist (die `Validate`-Methode gibt `false` zurück), enthält <xref:System.Workflow.Activities.Rules.RuleValidation.Errors%2A?displayProperty=nameWithType> eine Liste der festgestellten Fehler.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="validation" /> ist ein <see langword="null" />-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

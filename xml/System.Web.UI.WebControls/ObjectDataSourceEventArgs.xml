@@ -1,0 +1,108 @@
+<Type Name="ObjectDataSourceEventArgs" FullName="System.Web.UI.WebControls.ObjectDataSourceEventArgs">
+  <TypeSignature Language="C#" Value="public class ObjectDataSourceEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectDataSourceEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ObjectDataSourceEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating" /> und <see cref="E:System.Web.UI.WebControls.ObjectDataSource.ObjectCreated" /> Ereignisse der <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs> Klasse wird verwendet, der <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnObjectCreating%2A> und <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnObjectCreated%2A> Methoden, um den Zugriff auf die Business-Objektinstanz, bevor Datenoperationen anzugeben, mit dem, die <xref:System.Web.UI.WebControls.ObjectDataSource> Steuerelement und Business-Objekt ausgeführt werden. Das Geschäftsobjekt festgelegt ist und Zugriff auf die Verwendung der <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs.ObjectInstance%2A> Eigenschaft. Durch Hinzufügen von einem eventhandlerdelegaten, behandeln die <xref:System.Web.UI.WebControls.ObjectDataSourceView.ObjectCreating> -Ereignis können Sie eine Instanz des Geschäftsobjekts in benutzerdefiniertem Code anstelle von erstellen die <xref:System.Web.UI.WebControls.ObjectDataSource> die Instanziierung ausführen. Dies ist nützlich, wenn Sie möchten, dass eine nicht standardmäßige Instanz Ihres Business-Objekts oder einen nicht standardmäßigen Konstruktor zum Erstellen der Instanz aufzurufen. die <xref:System.Web.UI.WebControls.ObjectDataSource> ruft immer die standardmäßigen Konstruktor zum Erstellen einer Instanz des Geschäftsobjekts, generische Vergleich funktioniert mit. Sie können auch hinzufügen, einem eventhandlerdelegaten, behandeln die <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreated> Ereignis, das Ihnen ermöglicht, den Zugriff auf öffentlich verfügbar gemacht, das Geschäftsobjekt Mitglied, um eine zusätzliche Initialisierung oder Arbeit auszuführen.  
+  
+ Die <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnObjectCreating%2A> und <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnObjectCreated%2A> Methoden werden nicht aufgerufen, indem die <xref:System.Web.UI.WebControls.ObjectDataSource> zu steuern, wenn der Business-Objektmethoden, der die Datenoperationen ausgeführt ist `static`.  
+  
+ Die <xref:System.Web.UI.WebControls.ObjectDataSource> Steuerelement viele Ereignisse, die Sie behandeln können, um die Arbeit mit den zugrunde liegenden Geschäftsobjekten zu verschiedenen Zeiten im Lebenszyklus verfügbar gemacht werden. Die folgende Tabelle enthält die Ereignisse und den zugehörigen <xref:System.EventArgs> Klassen und Ereignishandlerdelegaten.  
+  
+|Ereignis|EventArgs|EventHandler|  
+|-----------|---------------|------------------|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating>.<br /><br /> Tritt auf, unmittelbar bevor die Instanz das Geschäftsobjekt erstellt wird.|<xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreated>.<br /><br /> Tritt unmittelbar nach der Instanz das Geschäftsobjekt erstellt wird.|<xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Selecting>.<br /><br /> Tritt auf, bevor die Daten abgerufen werden.|<xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Inserting>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updating> und <xref:System.Web.UI.WebControls.ObjectDataSource.Deleting>.<br /><br /> Erfolgen Sie, bevor eine INSERT-, Update- oder Delete-Vorgang ausgeführt wird.|<xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Selected>.<br /><br /> Tritt auf, nachdem die Daten abgerufen werden.|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Inserted>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updated>, <xref:System.Web.UI.WebControls.ObjectDataSource.Deleted>.<br /><br /> Erfolgen Sie, wenn die INSERT-, Update- oder Delete-Vorgang abgeschlossen ist.|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing>.<br /><br /> Tritt auf, bevor ein Geschäftsobjekt zerstört wird.|<xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventHandler>|  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.ObjectDataSource> -Steuerelement mit einem Geschäftsobjekt und einem <xref:System.Web.UI.WebControls.GridView> Steuerelement abrufen und Anzeigen von Informationen. Das zweite Codebeispiel enthält das Beispiel grundlegender geschäftlicher-Objekt, das im ersten Codebeispiel wird verwendet.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.ObjectDataSource> -Steuerelement mit einem Geschäftsobjekt und einem <xref:System.Web.UI.WebControls.GridView> Steuerelement abrufen und Anzeigen von Informationen. In diesem Beispiel, wie viele reale Szenarien möglicherweise nicht möglich, noch sinnvoll sein, der das Geschäftsobjekt mit eine Standardinstanz verwenden die <xref:System.Web.UI.WebControls.ObjectDataSource> Steuerelement. In diesem Beispiel wird die <xref:System.Web.UI.WebControls.ObjectDataSource> den Standardkonstruktor kann nicht erfolgreich aufgerufen werden, da eine Ausnahme ausgelöst wird. In einigen Fällen könnten der Standardkonstruktor geschützt werden und in anderen möglicherweise nicht initialisiert werden das Geschäftsobjekt auf einen gewünschten Zustand. Unabhängig vom Grund können Sie eine Instanz des Geschäftsobjekts selbst erstellen und Festlegen der Instanz die <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs.ObjectInstance%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs> -Objekt, das an den Ereignishandler übergeben wird. Dies ist das Geschäftsobjekt Instanz, die <xref:System.Web.UI.WebControls.ObjectDataSource> verwendet, um seine Funktion auszuführen.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_15#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/CS/objds15cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_15#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/VB/objds15vb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, die Beispiel-grundlegender geschäftlicher-Objekt, das im vorherigen Codebeispiel verwendet wird.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ObjectDataSource_15#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/CS/northwindemployee15.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.ObjectDataSource_15#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/VB/northwindemployee15.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectDataSourceEventArgs (object objectInstance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object objectInstance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ObjectDataSourceEventArgs.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="objectInstance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="objectInstance">Das Geschäftsobjekt, mit denen die <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> zum Ausführen von Datenvorgängen interagiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.ObjectDataSourceEventArgs" /> -Klasse mit dem angegebenen Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectInstance">
+      <MemberSignature Language="C#" Value="public object ObjectInstance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ObjectInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ObjectDataSourceEventArgs.ObjectInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Objekt, das das Geschäftsobjekt mit dem die <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> -Steuerelement Datenoperationen ausführt.</summary>
+        <value>Das Geschäftsobjekt der <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> verwendet zum Ausführen von Datenvorgängen; hingegen <see langword="null" />, wenn <see langword="null" /> wird zum Übergeben der <see cref="T:System.Web.UI.WebControls.ObjectDataSourceEventArgs" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.ObjectDataSource> -Steuerelement mit einem Geschäftsobjekt und einem <xref:System.Web.UI.WebControls.GridView> Steuerelement abrufen und Anzeigen von Informationen. Das zweite Codebeispiel enthält das Beispiel grundlegender geschäftlicher-Objekt, das im ersten Codebeispiel wird verwendet.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.ObjectDataSource> -Steuerelement mit einem Geschäftsobjekt und einem <xref:System.Web.UI.WebControls.GridView> Steuerelement abrufen und Anzeigen von Informationen. In diesem Beispiel, wie viele reale Szenarien möglicherweise nicht möglich, noch sinnvoll sein, der das Geschäftsobjekt mit eine Standardinstanz verwenden die <xref:System.Web.UI.WebControls.ObjectDataSource> Steuerelement. In diesem Beispiel wird die <xref:System.Web.UI.WebControls.ObjectDataSource> den Standardkonstruktor kann nicht erfolgreich aufgerufen werden, da eine Ausnahme ausgelöst wird. In einigen Fällen könnten der Standardkonstruktor geschützt werden und in anderen möglicherweise nicht initialisiert werden das Geschäftsobjekt auf einen gewünschten Zustand. Unabhängig vom Grund können Sie eine Instanz des Geschäftsobjekts selbst erstellen und Festlegen der Instanz die <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs.ObjectInstance%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs> -Objekt, das an den Ereignishandler übergeben wird. Dies ist das Geschäftsobjekt Instanz, die <xref:System.Web.UI.WebControls.ObjectDataSource> verwendet, um seine Funktion auszuführen.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_15#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/CS/objds15cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_15#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/VB/objds15vb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, die Beispiel-grundlegender geschäftlicher-Objekt, das im vorherigen Codebeispiel verwendet wird.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ObjectDataSource_15#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/CS/northwindemployee15.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.ObjectDataSource_15#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/VB/northwindemployee15.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

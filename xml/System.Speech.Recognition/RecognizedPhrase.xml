@@ -1,0 +1,448 @@
+<Type Name="RecognizedPhrase" FullName="System.Speech.Recognition.RecognizedPhrase">
+  <TypeSignature Language="C#" Value="public class RecognizedPhrase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit RecognizedPhrase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.RecognizedPhrase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{Text}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält ausführliche Informationen, die von der Spracherkennung generiert wurden, über die erkannte Eingabe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse enthält ausführliche Informationen zu den Wörtern und Ausdrücken, die während der Spracherkennung Recognition Vorgänge, einschließlich der folgenden verarbeitet werden:  
+  
+-   Die <xref:System.Speech.Recognition.RecognizedPhrase.Grammar%2A> Eigenschaftenverweise der <xref:System.Speech.Recognition.Grammar> , dass die Erkennung verwendet wird, um die Eingabe zu identifizieren.  
+  
+-   Die <xref:System.Speech.Recognition.RecognizedPhrase.Text%2A> Eigenschaft enthält den normalisierten Text für den Ausdruck.  
+  
+-   Die <xref:System.Speech.Recognition.RecognizedPhrase.Semantics%2A> -Eigenschaft verweist auf die semantischen Informationen, die im Resultset enthalten sind. Die semantische Informationen ist ein Wörterbuch mit den Schlüsselnamen und zugehörige semantische Daten.  
+  
+-   Die <xref:System.Speech.Recognition.RecognizedPhrase.Words%2A> Eigenschaft enthält eine geordnete Auflistung von <xref:System.Speech.Recognition.RecognizedWordUnit> Objekte, die jeweils darstellen erkannt Wort in der Eingabe. À Word enthält Anzeigeformat lexikalischen Format und Aussprache-Informationen für das entsprechende Wort.  
+  
+-   Die <xref:System.Speech.Recognition.RecognizedPhrase.ReplacementWordUnits%2A> Eigenschaft enthält Informationen über spezielle Word Ersetzung.  
+  
+-   Die <xref:System.Speech.Recognition.RecognizedPhrase.Homophones%2A> und <xref:System.Speech.Recognition.RecognizedPhrase.HomophoneGroupId%2A> Eigenschaften enthalten Informationen über Erkennungsalternativen, die gleiche oder ähnlich wie Aussprache verfügen.  
+  
+-   Der Wert, der die <xref:System.Speech.Recognition.RecognizedPhrase.Confidence%2A> Eigenschaft gibt den Grad an Sicherheit, von der Spracherkennung zugewiesen, dass die Eingabe ein erkannten Ausdrucks entspricht, an.  
+  
+ Gibt zurück, die von der Spracherkennung Erkennungsergebnisse in einem <xref:System.Speech.Recognition.RecognitionResult> -Objekt, das erbt <xref:System.Speech.Recognition.RecognizedPhrase>. Das Erkennungsergebnis <xref:System.Speech.Recognition.RecognitionResult.Alternates%2A> Eigenschaft enthält eine geordnete Auflistung von <xref:System.Speech.Recognition.RecognizedPhrase> Objekte, von denen jedes eine mögliche Entsprechung für die Eingabe für die Erkennung ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Handler für ein <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechRecognized?displayProperty=nameWithType>, <xref:System.Speech.Recognition.SpeechRecognizer.SpeechRecognized?displayProperty=nameWithType>, oder <xref:System.Speech.Recognition.Grammar.SpeechRecognized?displayProperty=nameWithType> Ereignis und einige Informationen zum zugeordneten der <xref:System.Speech.Recognition.RecognitionResult> Objekt. Die <xref:System.Speech.Recognition.RecognitionResult>-Klasse wird aus der <xref:System.Speech.Recognition.RecognizedPhrase>-Klasse abgeleitet.  
+  
+```csharp  
+void SpeechRecognizedHandler(object sender, SpeechRecognizedEventArgs e)  
+{  
+  if (e.Result == null) return;  
+  
+  // Add event handler code here.  
+  
+  // The following code illustrates some of the information available  
+  // in the recognition result.  
+  Console.WriteLine("Recognition result summary:");  
+  Console.WriteLine(  
+    "  Recognized phrase: {0}\n" +   
+    "  Confidence score {1}\n" +   
+    "  Grammar used: {2}\n",   
+    e.Result.Text, e.Result.Confidence, e.Result.Grammar.Name);  
+  
+  // Display the semantic values in the recognition result.  
+  Console.WriteLine("  Semantic results:");  
+  foreach (KeyValuePair<String, SemanticValue> child in e.Result.Semantics)  
+  {  
+    Console.WriteLine("    The {0} city is {1}",  
+      child.Key, child.Value.Value ?? "null");  
+  }  
+  Console.WriteLine();  
+  
+  // Display information about the words in the recognition result.  
+  Console.WriteLine("  Word summary: ");  
+  foreach (RecognizedWordUnit word in e.Result.Words)  
+  {  
+    Console.WriteLine(  
+      "    Lexical form ({1})" +  
+      " Pronunciation ({0})" +  
+      " Display form ({2})",  
+      word.Pronunciation, word.LexicalForm, word.DisplayAttributes);  
+  }  
+  
+  // Display information about the audio in the recognition result.  
+  Console.WriteLine("  Input audio summary:\n" +  
+    "    Candidate Phrase at:       {0} mSec\n" +  
+    "    Phrase Length:             {1} mSec\n" +  
+    "    Input State Time:          {2}\n" +  
+    "    Input Format:              {3}\n",  
+    e.Result.Audio.AudioPosition,  
+    e.Result.Audio.Duration,  
+    e.Result.Audio.StartTime,  
+    e.Result.Audio.Format.EncodingFormat);  
+  
+  // Display information about the alternate recognitions in the recognition result.  
+  Console.WriteLine("  Alternate phrase collection:");  
+  foreach (RecognizedPhrase phrase in e.Result.Alternates)  
+  {  
+    Console.WriteLine("    Phrase: " + phrase.Text);  
+    Console.WriteLine("    Confidence score: " + phrase.Confidence);  
+  }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Confidence">
+      <MemberSignature Language="C#" Value="public float Confidence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Confidence" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognizedPhrase.Confidence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen durch die Erkennung zugewiesenen Wert ab, der die Wahrscheinlichkeit angibt, dass ein <see cref="T:System.Speech.Recognition.RecognizedPhrase" />-Objekt mit einer angegebenen Eingabe übereinstimmt.</summary>
+        <value>Eine relative Maßnahme der Sicherheit der richtigen Erkennung eines Ausdrucks. Der Wert liegt zwischen 0,0 und 1,0 (geringes bis hohes Vertrauen).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vertrauensergebnisse nicht die absolute Wahrscheinlichkeit an, dass ein Ausdruck ordnungsgemäß erkannt wurde. Stattdessen geben vertrauensergebnisse einen Mechanismus für die relative Genauigkeit für mehrere Erkennungsalternativen für eine gegebene Eingabe verglichen. Dies erleichtert die genaueste Recognition Resultsets zurückgeben. Beispielsweise verfügt ein erkannten Ausdrucks ein vertrauensergebnis 0,8, bedeutet dies nicht, dass der Ausdruck wird die korrekte Übereinstimmung für die Eingabe einer 80 % Wahrscheinlichkeit hat.  Dies bedeutet, dass der Ausdruck ist wahrscheinlicher, dass der korrekte Übereinstimmung für die Eingabe als andere Ergebnisse, die vertrauen Bewertungen kleiner als 0,8.  
+  
+ Ein vertrauensergebnis selbst hat keine Bedeutung, es sei denn, Sie alternative Ergebnisse berücksichtigt werden sollen, aus der gleichen Erkennungsvorgang oder vorherigen Anerkennungen von derselben Eingabe vergleichen haben. Die Werte werden verwendet, um alternative Candidate Ausdrücke zurückgegebenes Rangfolge der <xref:System.Speech.Recognition.RecognitionResult.Alternates%2A> Eigenschaft <xref:System.Speech.Recognition.RecognitionResult> Objekte.  
+  
+ Vertrauenswerte sind relativ und eindeutige auf jede Audioeingabe. Vertrauen Rückgabewerte von zwei verschiedenen Erkennungsmodule können nicht sinnvoll verglichen werden.  
+  
+ Ein Spracherkennungsmodul möglicherweise Spracheingabe einschließlich Hintergrund Störungen, inarticulate-Sprache, oder bis zur servicebereitstellung Wörter oder Word Sequenzen aus verschiedenen Gründen ein niedriges vertrauensergebnis zuweisen. Wenn die Anwendung Parallelität mit einer <xref:System.Speech.Recognition.SpeechRecognitionEngine> Instanz können Sie den Vertrauensgrad, welche Sprache Eingabe akzeptiert oder abgelehnt wird, mit einem der, Ändern der <xref:System.Speech.Recognition.SpeechRecognitionEngine.UpdateRecognizerSetting%2A> Methoden. Vertrauen Schwellenwerte für die freigegebenen Erkennung von verwalteten <xref:System.Speech.Recognition.SpeechRecognizer>, ein Benutzerprofil zugeordnet und in der Windows-Registrierung gespeichert sind. Anwendungen sollten keine Änderungen an der Registrierung für die Eigenschaften der freigegebenen Erkennung schreiben.  
+  
+ Die <xref:System.Speech.Recognition.RecognitionResult.Alternates%2A> Eigenschaft von der <xref:System.Speech.Recognition.RecognitionResult> Objekt enthält eine geordnete Auflistung von <xref:System.Speech.Recognition.RecognizedPhrase> Objekte, von denen jedes eine mögliche Entsprechung für die Eingabe für die Erkennung ist. Die Varianten sind vom höchsten zum niedrigsten vertrauen sortiert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Handler für ein <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechRecognized?displayProperty=nameWithType>, <xref:System.Speech.Recognition.SpeechRecognizer.SpeechRecognized?displayProperty=nameWithType>, oder <xref:System.Speech.Recognition.Grammar.SpeechRecognized?displayProperty=nameWithType> Ereignis. Das Beispiel zeigt Informationen über die <xref:System.Speech.Recognition.RecognitionResult> Objekt, von denen einige stammt aus <xref:System.Speech.Recognition.RecognizedPhrase>. Der Ereignishandler zeigt vertrauensergebnisse für eines erkannten Ausdrucks sowie für Erkennungsalternativen an.  
+  
+```csharp  
+void SpeechRecognizedHandler(object sender, SpeechRecognizedEventArgs e)  
+{  
+  if (e.Result == null) return;  
+  
+  // Add event handler code here.  
+  
+  // The following code illustrates some of the information available  
+  // in the recognition result.  
+  Console.WriteLine("Recognition result summary:");  
+  Console.WriteLine(  
+    "  Recognized phrase: {0}\n" +   
+    "  Confidence score {1}\n" +   
+    "  Grammar used: {2}\n",   
+    e.Result.Text, e.Result.Confidence, e.Result.Grammar.Name);  
+  
+  // Display the semantic values in the recognition result.  
+  Console.WriteLine("  Semantic results:");  
+  foreach (KeyValuePair<String, SemanticValue> child in e.Result.Semantics)  
+  {  
+    Console.WriteLine("    The {0} city is {1}",  
+      child.Key, child.Value.Value ?? "null");  
+  }  
+  Console.WriteLine();  
+  
+  // Display information about the words in the recognition result.  
+  Console.WriteLine("  Word summary: ");  
+  foreach (RecognizedWordUnit word in e.Result.Words)  
+  {  
+    Console.WriteLine(  
+      "    Lexical form ({1})" +  
+      " Pronunciation ({0})" +  
+      " Display form ({2})",  
+      word.Pronunciation, word.LexicalForm, word.DisplayAttributes);  
+  }  
+  
+  // Display information about the audio in the recognition result.  
+  Console.WriteLine("  Input audio summary:\n" +  
+    "    Candidate Phrase at:       {0} mSec\n" +  
+    "    Phrase Length:             {1} mSec\n" +  
+    "    Input State Time:          {2}\n" +  
+    "    Input Format:              {3}\n",  
+    e.Result.Audio.AudioPosition,  
+    e.Result.Audio.Duration,  
+    e.Result.Audio.StartTime,  
+    e.Result.Audio.Format.EncodingFormat);  
+  
+  // Display information about the alternate recognitions in the recognition result.  
+  Console.WriteLine("  Alternate phrase collection:");  
+  foreach (RecognizedPhrase phrase in e.Result.Alternates)  
+  {  
+    Console.WriteLine("    Phrase: " + phrase.Text);  
+    Console.WriteLine("    Confidence score: " + phrase.Confidence);  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConstructSmlFromSemantics">
+      <MemberSignature Language="C#" Value="public System.Xml.XPath.IXPathNavigable ConstructSmlFromSemantics ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XPath.IXPathNavigable ConstructSmlFromSemantics() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.RecognizedPhrase.ConstructSmlFromSemantics" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.IXPathNavigable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein semantisches Markupsprachen-Dokument (SML )zu der semantischen Informationen im <see cref="T:System.Speech.Recognition.RecognizedPhrase" />-Objekt zurück.</summary>
+        <returns>Gibt eine SML-Beschreibung der Semantik von der <see cref="T:System.Speech.Recognition.RecognizedPhrase" /> als ein [XPath](http://msdn.microsoft.com/library/ms256115.aspx) navigierbar Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zu den semantic Markup Language (SML), finden Sie unter der [Semantic Markup Language Reference](http://msdn.microsoft.com/en-us/f9d83443-2cac-49bc-a447-210feda62f5d).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel gibt eine Methode eine Zeichenfolge, die das SML für die Semantik eines erkannten Ausdrucks enthält, zurück.  
+  
+```  
+private string GetSemanticsSML(RecognizedPhrase result)  
+{  
+  if (result.Semantics.Count > 0)  
+  {  
+    return result.ConstructSmlFromSemantics().CreateNavigator().OuterXml;  
+  }  
+  else  
+  {  
+    return null;  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Grammar">
+      <MemberSignature Language="C#" Value="public System.Speech.Recognition.Grammar Grammar { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Speech.Recognition.Grammar Grammar" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognizedPhrase.Grammar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.Grammar</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Speech.Recognition.Grammar" /> ab, die von der Spracherkennung zum Zurückgeben der <see cref="T:System.Speech.Recognition.RecognizedPhrase" /> verwendet wurde.</summary>
+        <value>Das Grammatikobjekt, das die Spracherkennung verwendet, um die Eingabe zu identifizieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HomophoneGroupId">
+      <MemberSignature Language="C#" Value="public int HomophoneGroupId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 HomophoneGroupId" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognizedPhrase.HomophoneGroupId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner für die Homophongruppe für den Ausdruck ab.</summary>
+        <value>Der Bezeichner für die Homophongruppe für den Ausdruck.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die von der Spracherkennung weist eine Gruppen-ID zu allen Erkennungsalternativen, die dieselbe Aussprache verfügen. Für jede alternative, die über eine eindeutige Aussprache verfügt, erstellt die Erkennung einer homophongruppe. Die von der Spracherkennung generiert neue Gruppe von Bezeichnern für jeden Vorgang ausführen und die Bezeichner können nicht verwendet werden, um aus, die aus separaten Erkennungsvorgänge generiert.  
+  
+ Z. B. für eine Erkennungsergebnis, das die alternativen "Tale", "Tail" und "warnen" enthalten, die ersten beiden alternativen würde zu einer homophongruppe gehören, und die letzte Alternative wäre das einzige Element der eine zweite homophongruppe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Homophones">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Speech.Recognition.RecognizedPhrase&gt; Homophones { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Speech.Recognition.RecognizedPhrase&gt; Homophones" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognizedPhrase.Homophones" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Speech.Recognition.RecognizedPhrase&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Erkennungsalternativen ab, die über dieselbe Aussprache verfügen wie dieser erkannte Ausdruck.</summary>
+        <value>Eine schreibgeschützte Auflistung von Erkennungsalternativen, die über dieselbe Aussprache verfügen wie dieser erkannte Ausdruck.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt alle anderen Erkennungsalternativen, die dieselbe Aussprache verfügen wie dieser erkannte Ausdruck.  
+  
+ Beispielsweise würde die Homophonen-Auflistung für die erste Alternative, "Tale" für eine Erkennungsergebnis, das die alternativen, "Tale" und "Ende" enthalten, der zweite Ausdruck "Tail" enthalten. Die Auflistung der Homophonen für die zweite Alternative, "Tail" würde der erste Ausdruck "Tale" enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplacementWordUnits">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Speech.Recognition.ReplacementText&gt; ReplacementWordUnits { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Speech.Recognition.ReplacementText&gt; ReplacementWordUnits" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognizedPhrase.ReplacementWordUnits" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Speech.Recognition.ReplacementText&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Informationen zu dem Text ab, der von der Spracherkennung als Teil der Sprache-zu-Text-Normalisierung geändert wurde.</summary>
+        <value>Eine Auflistung der <see cref="T:System.Speech.Recognition.ReplacementText" />-Objekte, die Textabschnitte beschreiben, die die Spracherkennung ersetzt hat, als sie die erkannte Eingabe normalisierte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Rahmen des Prozesses Recognition Spracherkennung normalisiert die Spracherkennung die erkannte Eingabe in einem Anzeigeformular.  
+  
+ Die Spracheingabe "25 Dollar", generiert z. B. ein Erkennungsergebnis, in dem die <xref:System.Speech.Recognition.RecognizedPhrase.Words%2A> Eigenschaft enthält, die Wörter "20", "5" und "Dollar", und die <xref:System.Speech.Recognition.RecognizedPhrase.Text%2A> Eigenschaft enthält den Ausdruck "25,00". Weitere Informationen zu textnormalisierung, finden Sie unter der <xref:System.Speech.Recognition.ReplacementText> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Semantics">
+      <MemberSignature Language="C#" Value="public System.Speech.Recognition.SemanticValue Semantics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Speech.Recognition.SemanticValue Semantics" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognizedPhrase.Semantics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SemanticValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die semantischen Informationen ab, die dem erkannten Ausdruck zugeordnet sind.</summary>
+        <value>Die semantischen Informationen, die dem erkannten Ausdruck zugeordnet sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Sprache Recognition Grammatik kann semantischen Informationen enthalten. Wenn eine von der Spracherkennung ein Erkennungsergebnis für eine solche Grammatik generiert, kann die semantische Informationen im Ergebnis Recognition gemäß den Regeln der Grammatik und die Eingabe für die Erkennung von enthalten. Weitere Informationen zu semantischen Informationen finden Sie unter [semantische Grundlegendes zu den Ergebnissen](http://msdn.microsoft.com/en-us/2a9dbd8b-cf6d-42cd-bbb9-ca0b3e534005) und <xref:System.Speech.Recognition.SemanticResultKey> und <xref:System.Speech.Recognition.SemanticResultValue> Klassen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert eine Methode, die bestimmte semantischen Informationen aus einer erkannten Ausdruck abruft. Bei Rückgabe dieser Methode enthält den Wert für die semantische Schlüssel oder Null, wenn der Wert nicht abgerufen wurde. Diese Methode überprüft nur für den Schlüssel der obersten Ebene. Da die semantische Informationen in einer Struktur von Werten enthalten ist, müssen auf niedrigerer Ebene Schlüssel über den zurückgegebenen semantische Wert zugegriffen werden.  
+  
+```  
+static bool TryGetSemanticValue(  
+      RecognizedPhrase phrase, string key, out SemanticValue value)  
+{  
+  value = null;  
+  bool found = phrase.Semantics.ContainsKey(key);  
+  if (found)  
+  {  
+    value = phrase.Semantics[key];  
+  }  
+  
+  return found;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognizedPhrase.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den normalisierten Text ab, der von einer Spracherkennung aus einer erkannten Eingabe generiert wurde.</summary>
+        <value>Der normalisierte Text, der von einer Spracherkennung aus einer erkannten Eingabe generiert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Rahmen des Prozesses Recognition Spracherkennung führt die von der Spracherkennung Sprache-zu-Text-Normalisierung die erkannte Eingabe in einem Anzeigeformular.  
+  
+ Die Spracheingabe "25 Dollar", generiert z. B. ein Erkennungsergebnis, in dem die <xref:System.Speech.Recognition.RecognizedPhrase.Words%2A> Eigenschaft enthält, die Wörter "20", "5" und "Dollar", und die <xref:System.Speech.Recognition.RecognizedPhrase.Text%2A> Eigenschaft enthält den Ausdruck "25,00". Weitere Informationen zu textnormalisierung, finden Sie unter <xref:System.Speech.Recognition.ReplacementText>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Words">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Speech.Recognition.RecognizedWordUnit&gt; Words { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Speech.Recognition.RecognizedWordUnit&gt; Words" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognizedPhrase.Words" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Speech.Recognition.RecognizedWordUnit&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Wörter ab, die von einer Spracherkennung aus einer gültigen Eingabe generiert wurden.</summary>
+        <value>Die Auflistung von <see cref="T:System.Speech.Recognition.RecognizedWordUnit" />-Objekten, die durch eine Spracherkennung für eine bekannte Eingabe generiert wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält die Wörter, die aus der Eingabe durch die Spracherkennung vor der Erkennung Sprache-zu-Text-Normalisierung des Ergebnisses erzeugt.  
+  
+ Die Spracheingabe "25 Dollar", generiert z. B. ein Erkennungsergebnis, in dem die <xref:System.Speech.Recognition.RecognizedPhrase.Words%2A> Eigenschaft enthält, die Wörter "20", "5" und "Dollar", und die <xref:System.Speech.Recognition.RecognizedPhrase.Text%2A> Eigenschaft enthält den Ausdruck "25,00". Weitere Informationen zu textnormalisierung, finden Sie unter <xref:System.Speech.Recognition.ReplacementText>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

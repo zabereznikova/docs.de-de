@@ -1,0 +1,307 @@
+<Type Name="EntityPropertyMappingAttribute" FullName="System.Data.Services.Common.EntityPropertyMappingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EntityPropertyMappingAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EntityPropertyMappingAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Common.EntityPropertyMappingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Attribut, das eine benutzerdefinierte Zuordnung zwischen Eigenschaften eines Entitätstyps und Elementen eines Eintrags in einem Feed zurückgegeben, die von WCF Data Services angibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> wird verwendet, um die benutzerdefinierte Zuordnung mit einem feed in einem reflektionsanbieter das Datenmodell zu definieren. Dieses Attribut wird auch zum generierten clientdatendienstklassen angewendet, wenn die Metadaten, die zum Generieren von Klassen verwendet gibt an, dass die benutzerdefinierte feedzuordnungen im Datenmodell definiert sind. Diese Informationen sind erforderlich, um sicherzustellen, dass der Client erstellen und Verarbeiten von Nachrichten, die benutzerdefinierte Feeds unterstützen kann. Weitere Informationen finden Sie unter [Feed Anpassung](~/docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden die beiden Eigenschaften von der `Order` vorhandenen Feedelementen zugeordnet sind. Einem benutzerdefinierten Feedattribut wird in einem separaten Namespace die `Product`-Eigenschaft des `Item`-Typs zugeordnet.  
+  
+ [!code-csharp[Astoria Custom Feeds#CustomIQueryableFeeds](~/samples/snippets/csharp/VS_Snippets_Misc/astoria custom feeds/cs/orderitems.svc.cs#customiqueryablefeeds)]
+ [!code-vb[Astoria Custom Feeds#CustomIQueryableFeeds](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria custom feeds/vb/orderitems.svc.vb#customiqueryablefeeds)]  
+  
+ Das vorherige Beispiel gibt das folgende Ergebnis für den URI `http://myservice/OrderItems.svc/Orders(0)?$expand=Items` zurück.  
+  
+ [!code-xml[Astoria Custom Feeds#IQueryableFeedResultInline](~/samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/iqueryablefeedresultinline.xml#iqueryablefeedresultinline)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityPropertyMappingAttribute (string sourcePath, System.Data.Services.Common.SyndicationItemProperty targetSyndicationItem, System.Data.Services.Common.SyndicationTextContentKind targetTextContentKind, bool keepInContent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sourcePath, valuetype System.Data.Services.Common.SyndicationItemProperty targetSyndicationItem, valuetype System.Data.Services.Common.SyndicationTextContentKind targetTextContentKind, bool keepInContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Common.EntityPropertyMappingAttribute.#ctor(System.String,System.Data.Services.Common.SyndicationItemProperty,System.Data.Services.Common.SyndicationTextContentKind,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourcePath" Type="System.String" />
+        <Parameter Name="targetSyndicationItem" Type="System.Data.Services.Common.SyndicationItemProperty" />
+        <Parameter Name="targetTextContentKind" Type="System.Data.Services.Common.SyndicationTextContentKind" />
+        <Parameter Name="keepInContent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourcePath">Der Name der Eigenschaft, als Zeichenfolge, aus der Entität vom Typ, der die angegebene Eigenschaft des feed-Element zugeordnet ist.</param>
+        <param name="targetSyndicationItem">Ein <see cref="T:System.Data.Services.Common.SyndicationItemProperty" /> Wert, der das Element im Feed, der zum Zuordnen der Eigenschaft darstellt. Dieser Wert muss festgelegt werden, um <c>keine</c> Wenn die <see cref="P:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetPath" /> nicht <see langword="null" />.</param>
+        <param name="targetTextContentKind">Ein <see cref="P:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetTextContentKind" /> Wert, der das Format des Inhalts im Feed angezeigt.</param>
+        <param name="keepInContent">Boolescher Wert, <see langword="true" /> Wann sollte die zugeordnete Eigenschaft sowohl am Speicherort zugeordnet und in den Inhaltsabschnitt des Feeds angezeigt werden.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Data.Services.Common.EntityPropertyMappingAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityPropertyMappingAttribute (string sourcePath, string targetPath, string targetNamespacePrefix, string targetNamespaceUri, bool keepInContent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sourcePath, string targetPath, string targetNamespacePrefix, string targetNamespaceUri, bool keepInContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Common.EntityPropertyMappingAttribute.#ctor(System.String,System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourcePath" Type="System.String" />
+        <Parameter Name="targetPath" Type="System.String" />
+        <Parameter Name="targetNamespacePrefix" Type="System.String" />
+        <Parameter Name="targetNamespaceUri" Type="System.String" />
+        <Parameter Name="keepInContent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourcePath">Der Name der Eigenschaft des Entitätstyps als Zeichenfolge, die die angegebene Eigenschaft im Feed zugeordnet ist.</param>
+        <param name="targetPath">Der Name des Ziels, als Zeichenfolge, in der resultierenden feed, der die Eigenschaft zugeordnet ist.</param>
+        <param name="targetNamespacePrefix">Dieser Parameter, die zusammen mit <c>TargetNamespaceUri</c>, gibt Sie den Namespace, in dem die <c>TargetPath</c> Element vorhanden ist.</param>
+        <param name="targetNamespaceUri">Gibt den Namespace-URI des Elements, als Zeichenfolge, die gemäß der <c>TargetName</c> Eigenschaft.</param>
+        <param name="keepInContent">Boolescher Wert, <see langword="true" /> Wann sollte die zugeordnete Eigenschaft sowohl am Speicherort zugeordnet und in den Inhaltsabschnitt des Feeds angezeigt werden.</param>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Data.Services.Common.EntityPropertyMappingAttribute" /> zuordnen eine Eigenschaft zu einem benutzerdefinierten feed-Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn weder `targetNamespacePrefix` noch `targetNamespaceUri` angegeben sind, die `targetName` wird im Standardnamespace platziert werden. Wenn `targetNamespacePrefix` nicht angegeben ist, wird ein Präfix wird automatisch generiert. Wenn `targetNamespacePrefix` angegeben ist, aber `targetNamespaceUri` nicht angegeben ist, wird eine Ausnahme wird ausgelöst, bei der Konstruktion.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepInContent">
+      <MemberSignature Language="C#" Value="public bool KeepInContent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeepInContent" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Common.EntityPropertyMappingAttribute.KeepInContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert, der angibt, ob ein Eigenschaftswert sowohl im Inhaltsabschnitt des Feeds als auch im zugeordneten Speicherort wiederholt werden soll.</summary>
+        <value>Ein <see cref="T:System.Boolean" /> Wert, der <see langword="true" /> Wenn die Eigenschaft in beide Speicherorte im Feed zugeordnet ist, andernfalls ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wert des Sicherung- <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.KeepInContent%2A> ist `true`, der Feed ist abwärtskompatibel mit [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] Clientanwendungen, Protocol, Version 1.0 verwenden. Wenn der Wert der <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.KeepInContent%2A>'' ist `false`, die vom Datendienst verwendete Protokollversion muss 2.0 oder höher sein. Weitere Informationen finden Sie unter [Datendienst-Versionskontrolle](~/docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourcePath">
+      <MemberSignature Language="C#" Value="public string SourcePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourcePath" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Eigenschaft des Syndication-Elements, die auf das nächste Element des Feeds zugeordnet werden.</summary>
+        <value>Ein Zeichenfolgenwert, der den Eigenschaftennamen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A>-Eigenschaft kann nicht direkt auf einen komplexen Typ verweisen. Für komplexe Typen müssen Sie einen Pfadausdruck verwenden, in dem Eigenschaftennamen durch einen umgekehrten Schrägstrich (`/`) getrennt werden. Die folgenden Werte sind z. B. für einen Entitätstyp zulässig `Person` mit Ganzzahleigenschaft `Age` und eine komplexe Eigenschaft `Address`:  
+  
+-   `Age`  
+  
+-   `Address/Street`  
+  
+ Die <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A>-Eigenschaft kann nicht auf einen Wert festgelegt werden, der ein Leerzeichen oder ein anderes Zeichen enthält, das in einem Eigenschaftennamen ungültig ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetNamespacePrefix">
+      <MemberSignature Language="C#" Value="public string TargetNamespacePrefix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetNamespacePrefix" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetNamespacePrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Zeichenfolgenwert ab, der zusammen mit <see cref="P:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetNamespaceUri" /> den Namespace angibt, in dem das <see cref="P:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetPath" />-Element vorhanden ist.</summary>
+        <value>Zeichenfolgenwert, der das Präfix des Zielnamespace enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn weder <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetNamespacePrefix%2A> noch <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetNamespaceUri%2A> angegeben sind, die <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetPath%2A> wird im Standardnamespace platziert werden. Wenn <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetNamespacePrefix%2A> nicht angegeben ist, wird ein Präfix wird automatisch generiert. Wenn <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetNamespacePrefix%2A> angegeben ist, aber <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetNamespaceUri%2A> nicht angegeben ist, wird eine Ausnahme wird ausgelöst, bei der Konstruktion.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetNamespaceUri">
+      <MemberSignature Language="C#" Value="public string TargetNamespaceUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetNamespaceUri" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetNamespaceUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Zeichenfolgenwert, der angibt, den Namespace-URI des Elements gemäß der <see cref="P:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetPath" /> Eigenschaft.</summary>
+        <value>Eine Zeichenfolge, die den Namespace-URI enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Zuordnung zu nicht-Syndication-Elements/Attributs, ist diese Eigenschaft den Namespace für das Target-Element/Attribut an.  
+  
+ Wenn weder <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetNamespacePrefix%2A> noch <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetNamespaceUri%2A> angegeben sind, die <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetPath%2A> wird im Standardnamespace platziert werden. Wenn <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetNamespacePrefix%2A> nicht angegeben ist, wird ein Präfix wird automatisch generiert. Wenn <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetNamespacePrefix%2A> angegeben ist, aber <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetNamespaceUri%2A> nicht angegeben ist, wird eine Ausnahme wird ausgelöst, bei der Konstruktion.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetPath">
+      <MemberSignature Language="C#" Value="public string TargetPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetPath" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des benutzerdefinierten Ziels im Feed ab, der die Eigenschaft zugeordnet ist.</summary>
+        <value>Ein Zeichenfolgenwert mit dem Ziel-XML-Element oder Attribut.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetPath%2A> Eigenschaft festgelegt ist, die <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetNamespaceUri%2A> und <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetNamespacePrefix%2A> Eigenschaften müssen ebenfalls festgelegt werden.  
+  
+ Den Wert der <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetPath%2A> muss `null` (`Nothing` in Visual Basic) Wenn der Wert des der <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetSyndicationItem%2A> Eigenschaft ist alles andere als <xref:System.Data.Services.Common.SyndicationItemProperty.CustomProperty>.  
+  
+ <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetPath%2A>muss ein Pfadausdruck, in dem geschachtelte Elemente durch einen umgekehrten Schrägstrich voneinander getrennt sind (`/`) und Attribute angegeben werden, durch ein kaufmännisches und-Zeichen (`@`). Im folgenden Beispiel ordnet die Zeichenfolge `UnitsInStock/@ReorderLevel` einen Eigenschaftswert dem Attribut `ReorderLevel` auf dem untergeordneten Element `UnitsInStock` des Stammeintragselements zu.  
+  
+ [!code-xml[Astoria Custom Feeds#EdmFeedMappedToAttributeSpecific](~/samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedmappedtoattributespecific)]  
+  
+ Die <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetPath%2A> Eigenschaft darf keine Leerzeichen enthalten.  
+  
+ Die <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetPath%2A> Eigenschaft wird nicht als "true" XPath-Ausdruck ausgedrückt, aber die Namen der angegebenen Element- und Attributnamen müssen wohlgeformte XML-Elemente und Attribute darstellen. Ein ungültiger Wert bewirkt, dass eine Ausnahme auftreten, wenn der Datendienst initialisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetSyndicationItem">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Common.SyndicationItemProperty TargetSyndicationItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Services.Common.SyndicationItemProperty TargetSyndicationItem" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetSyndicationItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Common.SyndicationItemProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Eigenschaft ab, auf die <see cref="T:System.ServiceModel.Syndication.SyndicationItem" /> Klasse.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Zuordnung zu Syndication-Element, ist diese Eigenschaft den Namen des Syndication-Elements.  
+  
+ Dieser Wert muss festgelegt werden, um `None` Wenn die <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetPath%2A> ist ungleich null.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetTextContentKind">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Common.SyndicationTextContentKind TargetTextContentKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Services.Common.SyndicationTextContentKind TargetTextContentKind" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetTextContentKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Common.SyndicationTextContentKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Inhalts der Eigenschaft zugeordnet, indem <see cref="T:System.Data.Services.Common.EntityPropertyMappingAttribute" />.</summary>
+        <value>Eine Zeichenfolge, die den Typ des Inhalts im feed-Element identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Zuordnung zu Syndication-Inhalte, ist diese Eigenschaft den Inhaltstyp des Syndication-Elements.  
+  
+ Wenn Sie den Wert <xref:System.Data.Services.Common.SyndicationTextContentKind.xhtml> für das <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.TargetTextContentKind%2A>-Attribut angeben, müssen Sie sicherstellen, dass der Eigenschaftswert ordnungsgemäß formatiertes XML enthält. Der Datendienst gibt den Wert zurück, ohne irgendwelche Transformationen auszuführen. Sie müssen auch sicherstellen, dass alle XML-Elementpräfixe im zurückgegebenen XML einen Namespace-URI und ein Präfix haben, die im zugeordneten Feed definiert sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

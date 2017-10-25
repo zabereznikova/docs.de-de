@@ -1,0 +1,964 @@
+<Type Name="UpdatePanel" FullName="System.Web.UI.UpdatePanel">
+  <TypeSignature Language="C#" Value="public class UpdatePanel : System.Web.UI.Control, System.Web.UI.IAttributeAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UpdatePanel extends System.Web.UI.Control implements class System.Web.UI.IAttributeAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.UpdatePanel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IAttributeAccessor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Triggers")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.UpdatePanelDesigner, System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(EmbeddedResourceFinder), "System.Web.Resources.UpdatePanel.bmp")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht das teilweise Rendern von Seitenabschnitten ohne Postback.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [UpdatePanel-Inhalt wird aktualisiert.](#refreshing_updatepanel_content)  
+  
+-   [UpdatePanel-Verwendung](#updatepanel_usage)  
+  
+-   [Anwenden von Stilen](#applying_styles)  
+  
+-   [Deklarationssyntax](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ <xref:System.Web.UI.UpdatePanel>Steuerelemente sind ein zentraler Bestandteil von AJAX-Funktionen in ASP.NET. Sie werden verwendet, mit der <xref:System.Web.UI.ScriptManager> Steuerelement, das Teilrendering von Seiten zu aktivieren. Teilrendering von Seiten reduziert die Notwendigkeit synchrone Postbacks und Updates auf der Seite abgeschlossen, wenn nur ein Teil der Seite aktualisiert werden. Teilrendering von Seiten verbessert die benutzerfreundlichkeit, da es Flackern reduziert, das während einer Aktualisierung Postback auftritt und verbessert die Webseite Interaktivität.  
+  
+<a name="refreshing_updatepanel_content"></a>   
+## <a name="refreshing-updatepanel-content"></a>UpdatePanel-Inhalt wird aktualisiert.  
+ Wenn Teilrendering von Seiten aktiviert ist, kann ein Steuerelement ausführen, ein Postback, das die gesamte Seite aktualisiert oder eines asynchronen Postbacks an, die den Inhalt von einem oder mehreren aktualisiert <xref:System.Web.UI.UpdatePanel> Steuerelemente. Gibt an, ob ein Steuerelement eines asynchronen Postbacks und Updates bewirkt, dass ein <xref:System.Web.UI.UpdatePanel> Steuerelement hängt von folgendem:  
+  
+-   Wenn die <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> Eigenschaft der <xref:System.Web.UI.UpdatePanel> Steuerelement festgelegt ist, um <xref:System.Web.UI.UpdatePanelUpdateMode.Always>, die <xref:System.Web.UI.UpdatePanel> wird der Inhalt des Steuerelements auf jedes Postback, die von der Seite stammt aktualisiert. Dies schließt die asynchrone Postbacks von Steuerelementen, die innerhalb von anderen <xref:System.Web.UI.UpdatePanel> Steuerelemente und Postbacks von Steuerelementen, die nicht in <xref:System.Web.UI.UpdatePanel> Steuerelemente.  
+  
+-   Wenn die <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> -Eigenschaftensatz auf <xref:System.Web.UI.UpdatePanelUpdateMode.Conditional>, die <xref:System.Web.UI.UpdatePanel> wird der Inhalt des Steuerelements in den folgenden Umständen aktualisiert:  
+  
+    -   Beim Aufrufen der <xref:System.Web.UI.UpdatePanel.Update%2A> Methode der <xref:System.Web.UI.UpdatePanel> explizit zu steuern.  
+  
+    -   Wenn die <xref:System.Web.UI.UpdatePanel> in einem anderen Steuerelement geschachtelt ist <xref:System.Web.UI.UpdatePanel> Steuerelement und dem übergeordneten Bereich aktualisiert wird.  
+  
+    -   Wenn ein Postback verursacht wird, von einem Steuerelement, das als Trigger, mithilfe definiert ist der `Triggers` Eigenschaft von der <xref:System.Web.UI.UpdatePanel> Steuerelement. In diesem Fall löst das Steuerelement explizit ein Update des Inhalts des Bereichs. Das Steuerelement kann entweder innerhalb oder außerhalb der <xref:System.Web.UI.UpdatePanel> Steuerelement, das der Trigger zugeordnet ist.  
+  
+    -   Wenn die <xref:System.Web.UI.UpdatePanel.ChildrenAsTriggers%2A> -Eigenschaftensatz auf `true` und ein untergeordnetes Steuerelement von der <xref:System.Web.UI.UpdatePanel> Steuerelement ein Postback bewirkt. Untergeordnete Steuerelemente von geschachtelten <xref:System.Web.UI.UpdatePanel> Steuerelemente führen nicht dazu, dass ein Update für die äußere <xref:System.Web.UI.UpdatePanel> steuern, es sei denn, sie sind explizit als Trigger definiert.  
+  
+ Die Kombination der Einstellung der <xref:System.Web.UI.UpdatePanel.ChildrenAsTriggers%2A> Eigenschaft, um `false` und die <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> Eigenschaft <xref:System.Web.UI.UpdatePanelUpdateMode.Always> ist nicht zulässig und löst eine Ausnahme aus.  
+  
+ Wenn die <xref:System.Web.UI.UpdatePanel> Steuerelement einen asynchronen Post ausführt, einen benutzerdefinierten HTTP-Header hinzugefügt. Einige Proxys Entfernen dieser benutzerdefinierten HTTP-Header. In diesem Fall übernimmt der Server die Anforderung als reguläres Postback, das einen Fehler verursacht. Um dieses Problem zu beheben, fügen Sie ein benutzerdefiniertes Formularfeld beim Ausführen von asynchronen Posts. Überprüfen Sie die Kopf- oder der benutzerdefinierten Formularfelds in Servercode.  
+  
+<a name="updatepanel_usage"></a>   
+## <a name="updatepanel-usage"></a>UpdatePanel-Verwendung  
+ Sie können mehrere <xref:System.Web.UI.UpdatePanel> Seitenbereiche unabhängig von Steuerelementen an andere aktualisieren. Wenn die Seite, die einer mehreren oder <xref:System.Web.UI.UpdatePanel> zuerst Steuerelemente gerendert wird, wird den Inhalt aller <xref:System.Web.UI.UpdatePanel> Steuerelemente gerendert und an den Browser gesendet werden. Bei nachfolgenden asynchronen Postbacks, den Inhalt der einzelnen <xref:System.Web.UI.UpdatePanel> Steuerelement kann nicht aktualisiert werden, je nach den Einstellungen der Systemsteuerung und auf dem Client oder Server-Logik für einzelne Bereiche.  
+  
+ Sie können auch <xref:System.Web.UI.UpdatePanel> Steuerelemente in den folgenden Szenarien:  
+  
+-   In Benutzersteuerelemente.  
+  
+-   Auf Seiten, die Master- und Inhalt.  
+  
+-   In anderen geschachtelt <xref:System.Web.UI.UpdatePanel> Steuerelemente.  
+  
+-   In auf Vorlagen basierende Steuerelemente wie z. B. die <xref:System.Web.UI.WebControls.GridView> oder <xref:System.Web.UI.WebControls.Repeater> Steuerelemente.  
+  
+ <xref:System.Web.UI.UpdatePanel>Steuerelemente können deklarativ oder programmgesteuert hinzugefügt werden.  
+  
+ Sie können Hinzufügen einer <xref:System.Web.UI.UpdatePanel> programmgesteuert zu steuern, aber Sie können keine Trigger programmgesteuert hinzufügen. Um Trigger-ähnliches Verhalten zu erstellen, können Sie ein Steuerelement auf der Seite als asynchrone postback registrieren. Dazu rufen die <xref:System.Web.UI.ScriptManager.RegisterAsyncPostBackControl%2A> Methode der <xref:System.Web.UI.ScriptManager> Steuerelement. Sie können dann erstellen, einen Ereignishandler, der als Reaktion auf das asynchrone Postback, und klicken Sie im Ereignishandler Aufruf ausgeführt wird die <xref:System.Web.UI.UpdatePanel.Update%2A> Methode der <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+<a name="applying_styles"></a>   
+## <a name="applying-styles"></a>Anwenden von Stilen  
+ Die <xref:System.Web.UI.UpdatePanel> Steuerelement akzeptiert Expando-Attributen. Dadurch können Sie eine CSS-Klasse für die HTMLelements festlegen, die den Steuerelementen so gerendert werden. Beispielsweise können Sie das Markup, das im folgenden Beispiel gezeigt erstellen:  
+  
+```  
+<asp:UpdatePanel runat="server" class="myStyle">  
+</asp:UpdatePanel>   
+```  
+  
+ Das Markup im vorherigen Beispiel wird HTML ähnlich der folgenden gerendert, wenn die Seite ausgeführt wird:  
+  
+```  
+<div id="ctl00_MainContent_UpdatePanel1" class="MyStyle">  
+</div>  
+```  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:UpdatePanel  
+    ChildrenAsTriggers="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    RenderMode="Block|Inline"  
+    runat="server"  
+    SkinID="string"  
+    UpdateMode="Always|Conditional"  
+    Visible="True|False"  
+>  
+    <ContentTemplate>  
+        <!-- child controls -->  
+    </ContentTemplate>  
+    <Triggers>  
+        <asp:AsyncPostBackTrigger   
+            ControlID="string"  
+            EventName="string"  
+        />  
+        <asp:PostBackTrigger   
+            ControlID="string"  
+        />  
+    </Triggers>  
+</asp:UpdatePanel>  
+```  
+  
+   
+  
+## Examples  
+ Die folgenden Beispiele veranschaulichen die unterschiedliche Verwendungsmöglichkeiten von der <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+ **Steuerelemente in einem UpdatePanel-Steuerelement**  
+  
+ Das folgende Beispiel zeigt, wie Steuerelemente in einer versetzt ein <xref:System.Web.UI.UpdatePanel> Steuerelement, um Flackern zu verringern, wenn Sie auf dem Server bereitzustellen. In diesem Beispiel wird eine <xref:System.Web.UI.WebControls.Calendar> und ein <xref:System.Web.UI.WebControls.DropDownList> im Steuerelement enthalten sind ein <xref:System.Web.UI.UpdatePanel> Steuerelement. Wird standardmäßig die <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> Eigenschaft ist <xref:System.Web.UI.UpdatePanelUpdateMode.Always> und <xref:System.Web.UI.UpdatePanel.ChildrenAsTriggers%2A> Eigenschaft ist `true`. Aus diesem Grund verursachen die untergeordneten Steuerelemente des Bereichs ein asynchrones Postbacks.  
+  
+ [!code-aspx-csharp[System.Web.UI.UpdatePanel#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.UpdatePanel/CS/UpdatePanelExample1CS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.UpdatePanel#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.UpdatePanel/VB/UpdatePanelExample1VB.aspx#1)]  
+  
+ **Master/Detail-Szenario mit UpdatePanel-Steuerelementen**  
+  
+ Im folgenden Beispiel ein <xref:System.Web.UI.UpdatePanel> Steuerelement wird in eine Master/Detail-Szenario, das zeigt, Bestellungen und Bestellungsdetails aus der Northwind-Datenbank verwendet. Eine <xref:System.Web.UI.UpdatePanel> Steuerelement enthält die <xref:System.Web.UI.WebControls.GridView> -Steuerelement, das eine Liste der Aufträge angezeigt. Ein zweites <xref:System.Web.UI.UpdatePanel> Steuerelement enthält eine <xref:System.Web.UI.WebControls.DetailsView> Steuerelement, das die Details einer Bestellung anzeigt. Wenn Sie eine Bestellung aus der ersten Tabelle auswählen, werden die Details für diesen Auftrag in der zweiten Tabelle angezeigt. In der zweiten Tabelle wird asynchron basierend auf der Auswahl in der ersten Tabelle aktualisiert. Die Sortierung und paging Vorgänge in der Zusammenfassungstabelle Bestellungen verursachen auch teilweise Updates.  
+  
+ [!code-aspx-csharp[System.Web.UI.UpdatePanel#2](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.UpdatePanel/CS/UpdatePanelExample2CS.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.UpdatePanel#2](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.UpdatePanel/VB/UpdatePanelExample2VB.aspx#2)]  
+  
+ Wenn Sie übertragen ein <xref:System.Web.UI.WebControls.GridView> -Steuerelement innerhalb einer <xref:System.Web.UI.UpdatePanel> Steuerelement festlegen der <xref:System.Web.UI.WebControls.GridView> des Steuerelements <xref:System.Web.UI.WebControls.GridView.EnableSortingAndPagingCallbacks%2A> Eigenschaft `true` wird nicht unterstützt. Allerdings da die <xref:System.Web.UI.UpdatePanel> Steuerelement unterstützt asynchrone Postbacks, alle Postbacks, die sich ändern die <xref:System.Web.UI.WebControls.GridView> -Steuerelement innerhalb einer <xref:System.Web.UI.UpdatePanel> Steuerelement dazu führen, dass das gleiche Verhalten wie Sortierung und Auslagerung Rückrufe.  
+  
+ **Die Verwendung eines UpdatePanel-Steuerelements in einer Vorlage**  
+  
+ Im folgenden Beispiel ein <xref:System.Web.UI.UpdatePanel> Steuerelement wird verwendet, in die Elementvorlage für eine <xref:System.Web.UI.WebControls.GridView> Steuerelement. <xref:System.Web.UI.UpdatePanel>Steuerelemente in jeder Datenzeile werden automatisch generiert. Jede Zeile <xref:System.Web.UI.UpdatePanel> Steuerelement enthält eine <xref:System.Web.UI.WebControls.Label> Steuerelement, um die Menge des Elements in dieser Zeile anzuzeigen und eine <xref:System.Web.UI.WebControls.Button> Steuerelement zum Vergrößern und Verkleinern der Menge.  
+  
+ [!code-aspx-csharp[System.Web.UI.UpdatePanel#3](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.UpdatePanel/CS/UpdatePanelExample3CS.aspx#3)]
+ [!code-aspx-vb[System.Web.UI.UpdatePanel#3](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.UpdatePanel/VB/UpdatePanelExample3VB.aspx#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpdatePanel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.UpdatePanel" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.UpdatePanel> Klasse. Dynamisch Hinzufügen einer <xref:System.Web.UI.UpdatePanel> zu einer Seite zu steuern, erstellen Sie ein neues <xref:System.Web.UI.UpdatePanel> Instanz, und fügen Sie die untergeordneten Steuerelemente für das Steuerelementobjekt, das von der Instanz verfügbar gemacht wird <xref:System.Web.UI.UpdatePanel.ContentTemplateContainer%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie dynamisch erstellen eine <xref:System.Web.UI.UpdatePanel> steuern und eine Seite hinzugefügt wird. Wenn Sie klicken Sie auf die Schaltfläche in der <xref:System.Web.UI.UpdatePanel> -Steuerelement, die Nachricht mit Datum und Uhrzeit aktualisiert wird. Untergeordnete Steuerelemente werden hinzugefügt, mit der <xref:System.Web.UI.UpdatePanel.ContentTemplateContainer%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[System.Web.UI.UpdatePanel.Constructor#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.Constructor/CS/UpdatePanelConstructorCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.UpdatePanel.Constructor#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.Constructor/VB/UpdatePanelConstructorVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Web.UI.AttributeCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.AttributeCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdatePanel.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.WebSysDescription("WebControl_Attributes")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das cascading Stylesheet (CSS) Attribute eine Auflistung von der <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement.</summary>
+        <value>Die Namen der CSS-Stilregeln in der attributauflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdatePanel.Attributes%2A> Eigenschaft enthält eine Auflistung von CSS-Stilattribute, die in der einschließenden verwendet werden können `div` Element von der <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildrenAsTriggers">
+      <MemberSignature Language="C#" Value="public bool ChildrenAsTriggers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ChildrenAsTriggers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdatePanel.ChildrenAsTriggers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Postbacks von unmittelbar untergeordneten Steuerelemente des ein <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement aktualisieren, den Inhalt des Bereichs.</summary>
+        <value>
+          <see langword="true" />Wenn Postbacks von unmittelbar untergeordneten Steuerelemente von der <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement Update im Bereich des Inhalts ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Web.UI.UpdatePanel.ChildrenAsTriggers%2A> Eigenschaft, um `true` gegebenenfalls Postbacks von unmittelbar untergeordneten Steuerelemente von der <xref:System.Web.UI.UpdatePanel> -Steuerelement dazu führen, dass ein Update des Inhalts des Bereichs. Untergeordnete Steuerelemente von geschachtelten <xref:System.Web.UI.UpdatePanel> Steuerelemente führt nicht dazu, dass ein Update des übergeordneten Elements <xref:System.Web.UI.UpdatePanel> des Steuerelements Inhalt, es sei denn, Sie rufen die <xref:System.Web.UI.UpdatePanel.Update%2A> Methode explizit oder definieren Sie die untergeordneten Steuerelemente als Trigger.  
+  
+> [!NOTE]
+>  Bei der <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> -Eigenschaftensatz auf <xref:System.Web.UI.UpdatePanelUpdateMode.Always> und die <xref:System.Web.UI.UpdatePanel.ChildrenAsTriggers%2A> Eigenschaft auf festgelegt ist `false`, wird ein <xref:System.InvalidOperationException> Ausnahme wird ausgelöst, während die <xref:System.Web.UI.UpdatePanel.OnPreRender%2A> Methode. Diese Kombination von Eigenschaften ist nicht zulässig, für die <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+ Ein Szenario, in dem Sie festlegen <xref:System.Web.UI.UpdatePanel.ChildrenAsTriggers%2A> auf `false` ist, wenn zwei <xref:System.Web.UI.UpdatePanel> Steuerelemente und Sie möchten ein Postback aus dem ersten Bereich aktualisieren Sie den Inhalt des zweiten Bereichs, aber keine eigenen Inhalt aktualisieren. Beispielsweise der ersten Bereich handelt es sich möglicherweise um eine Liste der Produkte kaufen und im zweite Bereich möglicherweise den Einkaufswagen legen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTemplate">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ITemplate ContentTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate ContentTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdatePanel.ContentTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateInstance(System.Web.UI.TemplateInstance.Single)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vorlage, die den Inhalt des definiert die <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ITemplate" /> -Instanz, die den Inhalt des definiert die <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdatePanel.ContentTemplate%2A> Eigenschaft enthält den Inhalt, der innerhalb einer <xref:System.Web.UI.UpdatePanel> steuern, wann er gerendert wird. Sie können den Inhalt der Vorlage deklarativ oder programmgesteuert erstellen. Den Inhalt der Vorlage von einer <xref:System.Web.UI.UpdatePanel> -Steuerelement ist ein Einzelinstanz-Vorlage. Aus diesem Grund können die Eigenschaften der darin enthaltenen Steuerelemente direkt auf der Seite zugegriffen werden, ohne die <xref:System.Web.UI.Page.FindControl%2A> Methode. Weitere Informationen finden Sie unter der <xref:System.Web.UI.TemplateInstanceAttribute> -Klassenübersicht.  
+  
+ Elemente hinzufügen das <xref:System.Web.UI.UpdatePanel> deklarativ zu steuern, fügen Sie ein `<ContentTemplate>` zwischen dem Start- und Endtags des Elements der <xref:System.Web.UI.UpdatePanel> Steuerelement. Innerhalb der `<ContentTemplate>` Elementtags, deklarieren Sie andere Steuerelemente und die HTML-Elemente.  
+  
+ Elemente hinzufügen das <xref:System.Web.UI.UpdatePanel> dynamisch zu steuern, verwenden Sie die <xref:System.Web.UI.UpdatePanel.ContentTemplateContainer%2A> -Eigenschaft, die ermöglicht es Ihnen, die untergeordnete Steuerelemente hinzufügen, ohne dass eine benutzerdefinierte Vorlage zu erstellen, implementiert der <xref:System.Web.UI.ITemplate> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.UpdatePanel.ContentTemplate" /> Eigenschaft von der <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement festgelegt ist, nachdem eine Instanz der Vorlage erstellt wird oder der Inhaltsvorlage-Container erstellt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTemplateContainer">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control ContentTemplateContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control ContentTemplateContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdatePanel.ContentTemplateContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Control-Objekt, das auf die untergeordneten Steuerelemente programmgesteuert hinzufügen können.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Control" /> -Objekt, das den Inhalt des definiert die <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdatePanel.ContentTemplateContainer%2A> Eigenschaft ermöglicht Ihnen, die untergeordnete Steuerelemente programmgesteuert hinzufügen der <xref:System.Web.UI.UpdatePanel> Steuerelement ohne eine benutzerdefinierte Vorlage zu definieren, die von erben die <xref:System.Web.UI.ITemplate> Schnittstelle. Wenn Sie Inhalt hinzufügen der <xref:System.Web.UI.UpdatePanel> deklarativ zu steuern oder über einen Designer sollten Sie Inhalt hinzufügen der <xref:System.Web.UI.UpdatePanel.ContentTemplate%2A> Eigenschaft mithilfe einer `<ContentTemplate>` Element.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie programmgesteuert angeben, die <xref:System.Web.UI.UpdatePanel.ContentTemplateContainer%2A> Eigenschaft ein <xref:System.Web.UI.UpdatePanel> Steuerelement. Die <xref:System.Web.UI.WebControls.Label.Text%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.Label> Steuerelement wird festgelegt, wenn `Button1` geklickt wird.  
+  
+ [!code-aspx-csharp[System.Web.UI.UpdatePanel.Constructor#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.Constructor/CS/UpdatePanelConstructorCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.UpdatePanel.Constructor#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.Constructor/VB/UpdatePanelConstructorVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public override sealed System.Web.UI.ControlCollection Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlCollection Controls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdatePanel.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.ControlCollection" /> -Objekt, das untergeordnete Element enthält, Steuerelemente, für die <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement.</summary>
+        <value>Die Auflistung der untergeordneten Steuerelemente für die <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdatePanel.Controls%2A> Eigenschaft wird von der Basisklasse überschrieben <xref:System.Web.UI.Control> Klasse und versiegelt, um weitere Ableitung zu verhindern. Zum Hinzufügen von Steuerelementen an die <xref:System.Web.UI.UpdatePanel> deklarativ zu steuern, erstellen Sie eine `<ContentTemplate>` Element innerhalb der <xref:System.Web.UI.UpdatePanel> Steuerelementmarkup. Zum Hinzufügen von Steuerelementen an die <xref:System.Web.UI.UpdatePanel> programmgesteuert zu steuern, verwenden Sie die <xref:System.Web.UI.UpdatePanel.ContentTemplateContainer%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="M:System.Web.UI.ControlCollection.Add(System.Web.UI.Control)" />, <see cref="M:System.Web.UI.ControlCollection.AddAt(System.Int32,System.Web.UI.Control)" />, <see cref="M:System.Web.UI.ControlCollection.Clear" />, <see cref="M:System.Web.UI.ControlCollection.Remove(System.Web.UI.Control)" />, oder <see cref="M:System.Web.UI.ControlCollection.RemoveAt(System.Int32)" /> Methode der <see cref="T:System.Web.UI.ControlCollection" /> Klasse aufgerufen wurde. So ändern Sie den Inhalt der <see cref="T:System.Web.UI.UpdatePanel" /> steuern, ändern Sie die untergeordneten Steuerelemente von der <see cref="P:System.Web.UI.UpdatePanel.ContentTemplateContainer" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateContentTemplateContainer">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.Control CreateContentTemplateContainer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.Control CreateContentTemplateContainer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanel.CreateContentTemplateContainer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine <see cref="T:System.Web.UI.Control" /> -Objekt, das als Container für untergeordnete Steuerelemente fungiert, definieren die <see cref="T:System.Web.UI.UpdatePanel" /> der Inhalt des Steuerelements.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.Control" /> Container für die <see cref="T:System.Web.UI.UpdatePanel" /> der Inhalt des Steuerelements.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient zur Verwendung von Steuerelemententwicklern erweitern möchte die <xref:System.Web.UI.UpdatePanel> Steuerelement. Geben Sie z. B. in abgeleiteten Klassen ein anderes Stammsteuerelement, das fungiert als Container für Ihre <xref:System.Web.UI.UpdatePanel> der Inhalt des Steuerelements. Die Standardimplementierung gibt ein <xref:System.Web.UI.Control> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.UpdatePanel.CreateContentTemplateContainer%2A> Methode in einem benutzerdefinierten <xref:System.Web.UI.UpdatePanel> Steuerelement gerendert werden immer die `<fieldset>` und `<legend>` Elemente für den Inhalt des Bereichs. Die benutzerdefinierte <xref:System.Web.UI.UpdatePanel> -Steuerelement definiert eine öffentliche Eigenschaft mit dem Namen `GroupingText` also ein Zeichenfolgenliteral in den `<legend>` Element.  
+  
+ Eine benutzerdefinierte <xref:System.Web.UI.UpdatePanel> Steuerelement namens `CustomUpdatePanel` leitet sich von <xref:System.Web.UI.UpdatePanel> und überschreibt die <xref:System.Web.UI.UpdatePanel.CreateContentTemplateContainer%2A> Methode. Versetzen der `CustomUpdatePanel` Klasse Quellcode im Ordner "App_Code" der Website.  
+  
+ [!code-csharp[System.Web.UI.UpdatePanel.CreateContentTemplateContainer#2](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.CreateContentTemplateContainer/CS/App_Code/CustomUpdatePanel.cs#2)]
+ [!code-vb[System.Web.UI.UpdatePanel.CreateContentTemplateContainer#2](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.CreateContentTemplateContainer/VB/App_Code/CustomUpdatePanel.vb#2)]  
+  
+ Die benutzerdefinierte <xref:System.Web.UI.UpdatePanel> Steuerelement auf der Seite verwendet wird wie die <xref:System.Web.UI.UpdatePanel> -Steuerelement ist. Das folgende Beispiel zeigt eine Seite mit den benutzerdefinierten <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.UpdatePanel.CreateContentTemplateContainer#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.CreateContentTemplateContainer/CS/UpdatePanelCreateContentTemplateContainerCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.UpdatePanel.CreateContentTemplateContainer#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.CreateContentTemplateContainer/VB/UpdatePanelCreateContentTemplateContainerVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override sealed System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanel.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Auflistung aller Steuerelemente, die in enthaltenen der <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.ControlCollection" /> Objekt, das von allen Steuerelementen besteht, die den Inhalt definieren den <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdatePanel.CreateControlCollection%2A> Methode wird von Steuerelemententwicklern verwendet.  
+  
+ Da diese Methode geschützt und versiegelt ist, ist sichtbar für Klassen, die von erben die <xref:System.Web.UI.UpdatePanel> Klasse, aber es kann nicht überschrieben werden. Diese Methode überschreibt die basisimplementierung zum Zurückgeben eines speziellen <xref:System.Web.UI.ControlCollection> -Objekt, das ausgelöst ein <xref:System.InvalidOperationException> bei der <xref:System.Web.UI.ControlCollection.Add%2A>, <xref:System.Web.UI.ControlCollection.AddAt%2A>, <xref:System.Web.UI.ControlCollection.Clear%2A>, <xref:System.Web.UI.ControlCollection.Remove%2A>, oder <xref:System.Web.UI.ControlCollection.RemoveAt%2A> Methode der <xref:System.Web.UI.ControlCollection> -Klasse aufgerufen wird. So ändern Sie den Inhalt der <xref:System.Web.UI.UpdatePanel> steuern, ändern Sie die untergeordneten Steuerelemente von der <xref:System.Web.UI.UpdatePanel.ContentTemplateContainer%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected virtual void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanel.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die <see cref="T:System.Web.UI.UpdatePanel" /> Trigger Datensammlung steuern, wenn das Teilrendering von Seiten aktiviert ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Teilrendering von Seiten nicht aktiviert ist, die Trigger, die in definierten der <xref:System.Web.UI.UpdatePanel.Triggers%2A> Eigenschaft sind nicht initialisiert werden, da sie keine Auswirkungen haben. Die <xref:System.Web.UI.ScriptManager.EnablePartialRendering%2A> Eigenschaft von der <xref:System.Web.UI.ScriptManager> Steuerelement ruft ab oder legt einen Wert, der angibt, ob das Teilrendering von Seiten aktiviert ist. Die <xref:System.Web.UI.ScriptManager.SupportsPartialRendering%2A> Eigenschaft von der <xref:System.Web.UI.ScriptManager> Steuerelement ruft ab oder legt einen Wert, der angibt, ob das Teilrendering von Seiten unterstützt wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Überschreiben der <see cref="M:System.Web.UI.UpdatePanel.Initialize" /> -Methode, stellen Sie sicher, dass die Basisklasse aufrufen, sodass Trigger registriert werden, wenn das Teilrendering von Seiten aktiviert ist.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInPartialRendering">
+      <MemberSignature Language="C#" Value="public bool IsInPartialRendering { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInPartialRendering" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdatePanel.IsInPartialRendering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement wird als Ergebnis eines asynchronen Postbacks aktualisiert.</summary>
+        <value>
+          <see langword="true" />Wenn die aktuelle <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement wird als Ergebnis eines asynchronen Postbacks aktualisiert wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdatePanel.IsInPartialRendering%2A> Eigenschaft für die Verwendung durch Entwickler von Steuerelementen, die wissen möchten, sollte ein <xref:System.Web.UI.UpdatePanel> Steuerelement wird als Ergebnis eines asynchronen Postbacks aktualisiert. Seite Entwicklungsszenarien verwenden die <xref:System.Web.UI.ScriptManager.IsInAsyncPostBack%2A> Eigenschaft, um zu bestimmen, ob eine Seite, die als Ergebnis eines asynchronen Postbacks verarbeitet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanel.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Init" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdatePanel> des Steuerelements <xref:System.Web.UI.UpdatePanel.ContentTemplate%2A> Eigenschaft instanziiert wird, während die <xref:System.Web.UI.UpdatePanel.OnInit%2A> Methode.  
+  
+ Die <xref:System.Web.UI.UpdatePanel.OnInit%2A> Methode wird von Steuerelemententwicklern verwendet, zum Erweitern der Funktionalität von der <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.UpdatePanel.ContentTemplate" /> Eigenschaft wird definiert, wenn die <see cref="P:System.Web.UI.UpdatePanel.ContentTemplateContainer" /> Eigenschaft wurde bereits erstellt.</exception>
+        <block subset="none" type="overrides">
+          <para>Beim Überschreiben der <see cref="M:System.Web.UI.UpdatePanel.OnInit(System.EventArgs)" /> Methode in einer abgeleiteten Klasse, achten Sie darauf, rufen Sie die <see cref="M:System.Web.UI.UpdatePanel.OnInit(System.EventArgs)" /> -Methode der Basisklasse, damit Delegaten registrierte das Ereignis empfangen kann.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoad">
+      <MemberSignature Language="C#" Value="protected override void OnLoad (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnLoad(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanel.OnLoad(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Load" /> -Ereignis für die <see cref="T:System.Web.UI.UpdatePanel" /> steuern und ruft die <see cref="M:System.Web.UI.UpdatePanel.Initialize" /> Methode, wenn das Teilrendering von Seiten nicht aktiviert ist.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen der <see cref="M:System.Web.UI.UpdatePanel.OnLoad(System.EventArgs)" /> -Methode, stellen Sie sicher, dass die Basisklasse aufrufen, damit die <see cref="E:System.Web.UI.Control.Load" /> Ereignis wird ausgelöst.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanel.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdatePanel.OnPreRender%2A> Methode wird von Steuerelemententwicklern verwendet, zum Erweitern der Funktionalität von der <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.UpdatePanel.ChildrenAsTriggers" /> -Eigenschaftensatz auf <see langword="false" />, und die <see cref="P:System.Web.UI.UpdatePanel.UpdateMode" /> -Eigenschaftensatz auf <see cref="F:System.Web.UI.UpdatePanelUpdateMode.Always" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnload">
+      <MemberSignature Language="C#" Value="protected override void OnUnload (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnUnload(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanel.OnUnload(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" /> -Objekt, das Ereignisdaten enthält.</param>
+        <summary>Potenziert die Basis gemäß <see cref="E:System.Web.UI.Control.Unload" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdatePanel.OnUnload%2A> Methode wird von Steuerelemententwicklern verwendet, zum Erweitern der Funktionalität von der <xref:System.Web.UI.UpdatePanel> Steuerelement  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanel.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" /> -Objekt, das den Ausgabestream zum Rendern von HTML-Inhalte darstellt.</param>
+        <summary>Löst das <see cref="M:System.Web.UI.Control.Render(System.Web.UI.HtmlTextWriter)" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdatePanel.Render%2A> Methode wird von Steuerelemententwicklern verwendet, zum Erweitern der Funktionalität von der <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+ Die <xref:System.Web.UI.UpdatePanel.Render%2A> Methode schreibt den gerenderten Inhalt der <xref:System.Web.UI.UpdatePanel> Steuerelement an den Browser mit dem bereitgestellten <xref:System.Web.UI.HtmlTextWriter> Objekt. Beim Überschreiben der <xref:System.Web.UI.UpdatePanel.Render%2A> Methode in einer abgeleiteten Klasse, achten Sie darauf, rufen Sie die <xref:System.Web.UI.UpdatePanel.Render%2A> -Methode der Basisklasse Klasse, damit die untergeordneten Steuerelemente den <xref:System.Web.UI.UpdatePanel> Steuerelement gerendert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderChildren">
+      <MemberSignature Language="C#" Value="protected override void RenderChildren (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderChildren(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanel.RenderChildren(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" /> -Objekt, das den Ausgabestream zum Rendern von HTML-Inhalte darstellt.</param>
+        <summary>Löst das <see cref="M:System.Web.UI.UpdatePanel.RenderChildren(System.Web.UI.HtmlTextWriter)" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdatePanel.RenderChildren%2A> Methode wird von Steuerelemententwicklern verwendet, zum Erweitern der Funktionalität von der <xref:System.Web.UI.UpdatePanel> Steuerelement.  
+  
+ Die <xref:System.Web.UI.UpdatePanel.RenderChildren%2A> Methode schreibt den gerenderten Inhalt der <xref:System.Web.UI.UpdatePanel> Steuerelement an den Browser mit dem bereitgestellten <xref:System.Web.UI.HtmlTextWriter> Objekt. Beim Überschreiben der <xref:System.Web.UI.UpdatePanel.RenderChildren%2A> Methode in einer abgeleiteten Klasse, achten Sie darauf, rufen Sie die <xref:System.Web.UI.UpdatePanel.RenderChildren%2A> -Methode der Basisklasse Klasse, damit die untergeordneten Steuerelemente den <xref:System.Web.UI.UpdatePanel> Steuerelement gerendert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.UpdatePanelRenderMode RenderMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.UpdatePanelRenderMode RenderMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdatePanel.RenderMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.UpdatePanelRenderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein <see cref="T:System.Web.UI.UpdatePanel" /> wird der Inhalt des Steuerelements in einem HTML-eingeschlossen <see langword="&lt;div&gt;" /> oder <see langword="&lt;span&gt;" /> Element.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.UpdatePanelRenderMode" />-Werte. Die Standardeinstellung ist <see cref="F:System.Web.UI.UpdatePanelRenderMode.Block" /> , damit der Inhalt des Bereichs in einem HTML-eingeschlossen ist <see langword="&lt;div&gt;" /> Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.UpdatePanel.RenderMode%2A> -Eigenschaftensatz auf <xref:System.Web.UI.UpdatePanelRenderMode.Inline>, den Inhalt des ein <xref:System.Web.UI.UpdatePanel> in einem HTML-Steuerelement gerendert wird `<span>` Element. Wenn die <xref:System.Web.UI.UpdatePanel.RenderMode%2A> -Eigenschaftensatz auf <xref:System.Web.UI.UpdatePanelRenderMode.Block>, wird es gerendert, in einem HTML- `<div>` Element.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Web.UI.UpdatePanel.RenderMode%2A> Eigenschaft deklarativ. Die <xref:System.Web.UI.UpdatePanel> Steuerelement namens `UpdatePanel1` wird in HTML gerendert `<span>` Element. Wenn die <xref:System.Web.UI.UpdatePanel.RenderMode%2A> -Eigenschaftensatz auf <xref:System.Web.UI.UpdatePanelRenderMode.Block>, der sich ergebenden Absatz aufgrund der Art und Weise in der separaten angezeigt würde HTML `<div>` Element gerendert wird.  
+  
+ [!code-aspx-csharp[System.Web.UI.UpdatePanel.RenderMode#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.RenderMode/CS/UpdatePanelRenderModeCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.UpdatePanel.RenderMode#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.RenderMode/VB/UpdatePanelRenderModeVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresUpdate">
+      <MemberSignature Language="C#" Value="protected virtual bool RequiresUpdate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresUpdate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdatePanel.RequiresUpdate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Inhalt der <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement wird aktualisiert.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.UpdatePanel" /> aktualisiert wurde, andernfalls ist der Inhalt des Steuerelements werden <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig die <xref:System.Web.UI.UpdatePanel.RequiresUpdate%2A> -Eigenschaft gibt `true` Wenn die <xref:System.Web.UI.UpdatePanel.Update%2A> -Methode explizit aufgerufen wurde oder wenn die <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> -Eigenschaftensatz auf <xref:System.Web.UI.UpdatePanelUpdateMode.Always>.  
+  
+ Diese Eigenschaft dient zur Verwendung von Steuerelemententwicklern erweitern möchte die <xref:System.Web.UI.UpdatePanel> Steuerelement. Z. B. in abgeleiteten Klassen Sie möglicherweise zusätzliche Logik bereitstellen, um zu bestimmen, ob ein <xref:System.Web.UI.UpdatePanel> Steuerelement aktualisiert werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IAttributeAccessor.GetAttribute">
+      <MemberSignature Language="C#" Value="string IAttributeAccessor.GetAttribute (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.Web.UI.IAttributeAccessor.GetAttribute(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanel.System#Web#UI#IAttributeAccessor#GetAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des Attributs.</param>
+        <summary>Gibt ein Attribut des ein Websteuerelement mithilfe eines angegebenen Namens zurück.</summary>
+        <returns>Der Wert des Attributs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.UpdatePanel>-Instanz in eine <xref:System.Web.UI.IAttributeAccessor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IAttributeAccessor.SetAttribute">
+      <MemberSignature Language="C#" Value="void IAttributeAccessor.SetAttribute (string key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IAttributeAccessor.SetAttribute(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanel.System#Web#UI#IAttributeAccessor#SetAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des festzulegenden Attributs.</param>
+        <param name="value">Der Wert des festzulegenden Attributs.</param>
+        <summary>Legt den Wert des Attributs angegebene Steuerelement fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.UpdatePanel>-Instanz in eine <xref:System.Web.UI.IAttributeAccessor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Triggers">
+      <MemberSignature Language="C#" Value="public System.Web.UI.UpdatePanelTriggerCollection Triggers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.UpdatePanelTriggerCollection Triggers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdatePanel.Triggers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UpdatePanelTriggerCollectionEditor, System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.UpdatePanelTriggerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.UpdatePanelTriggerCollection" /> Objekt, das enthält <see cref="T:System.Web.UI.AsyncPostBackTrigger" /> und <see cref="T:System.Web.UI.PostBackTrigger" /> Objekte, die deklarativ für registriert wurden die <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement.</summary>
+        <value>Eine Auflistung von Objekten des Typs <see cref="T:System.Web.UI.AsyncPostBackTrigger" /> und <see cref="T:System.Web.UI.PostBackTrigger" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.UpdatePanel.Triggers%2A> Eigenschaft ruft eine Auflistung aller Trigger, die für definiert wurden die <xref:System.Web.UI.UpdatePanel> Steuerelement. (Sie können Trigger deklarativ definieren, mit der **UpdatePanelTrigger-Auflistungs-Editor** Dialogfeld im Designer oder mithilfe der `<Triggers>` Element von der <xref:System.Web.UI.UpdatePanel> Steuerelement.) Die Sammlung enthält <xref:System.Web.UI.AsyncPostBackTrigger> und <xref:System.Web.UI.PostBackTrigger> Objekte.  
+  
+ Deklarative Trigger, die in definierten der <xref:System.Web.UI.UpdatePanel.Triggers%2A> Auflistung werden nicht im Ansichtszustand nachverfolgt.  
+  
+ Wenn ein Steuerelement, das einem Benennungscontainer als Trigger verwendet wird, verhalten sich alle untergeordneten Steuerelemente, die dazu führen, Postback dass als Trigger ein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public void Update ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Update() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanel.Update" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass ein Update des Inhalts einer <see cref="T:System.Web.UI.UpdatePanel" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Seite für das Teilrendering von Seiten Rendering,, beim Aufrufen aktiviert ist der <xref:System.Web.UI.UpdatePanel.Update%2A> -Methode, die <xref:System.Web.UI.UpdatePanel> wird der Inhalt des Steuerelements im Browser aktualisiert. Rufen Sie die <xref:System.Web.UI.UpdatePanel.Update%2A> Methode, wenn Sie Server-Code, die ausgeführt werden muss verfügen, um zu bestimmen, ob ein <xref:System.Web.UI.UpdatePanel> Steuerelement aktualisiert werden soll. Wenn Sie planen, verwenden Sie die <xref:System.Web.UI.UpdatePanel.Update%2A> festgelegt ist, die <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> Eigenschaft <xref:System.Web.UI.UpdatePanelUpdateMode.Conditional>. Wenn Sie die Entscheidung über den Bereich in Serverlogik aktualisieren möchten, stellen sicher, dass die <xref:System.Web.UI.UpdatePanel.ChildrenAsTriggers%2A> Eigenschaft ist `false` und keine expliziten Trigger für den Bereich definiert sind.  
+  
+ In einem typischen Seite Entwicklungsszenario Wenn Trigger zu definieren oder die <xref:System.Web.UI.UpdatePanel.ChildrenAsTriggers%2A> Eigenschaft ist `true` für die <xref:System.Web.UI.UpdatePanel> -Steuerelement, die <xref:System.Web.UI.UpdatePanel.Update%2A> Methode wird automatisch während des Lebenszyklus der Seite aufgerufen.  
+  
+ Wenn die <xref:System.Web.UI.UpdatePanel.ContentTemplate%2A> Eigenschaft ist nicht definiert, für die <xref:System.Web.UI.UpdatePanel> zu steuern, erfolgt keine Aktualisierung des Bereichs.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.UI.UpdatePanel.Update%2A> Methode, um das update von einer <xref:System.Web.UI.UpdatePanel> steuern, wenn mehr als fünf Sekunden seit dem letzten Update vergangen sind.  
+  
+ [!code-aspx-csharp[System.Web.UI.UpdatePanel.UpdateMode#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.UpdateMode/CS/UpdatePanelUpdateModeCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.UpdatePanel.UpdateMode#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.UpdateMode/VB/UpdatePanelUpdateModeVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.UpdatePanel.UpdateMode" />-Eigenschaft ist auf <see cref="F:System.Web.UI.UpdatePanelUpdateMode.Always" /> festgelegt.  
+  
+ \-"oder" –  
+  
+ Die <see cref="M:System.Web.UI.UpdatePanel.Update" /> Methode wird aufgerufen, während oder nach der Seite <see cref="M:System.Web.UI.Page.Render(System.Web.UI.HtmlTextWriter)" /> Ereignis.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.UpdatePanelUpdateMode UpdateMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.UpdatePanelUpdateMode UpdateMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdatePanel.UpdateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.UpdatePanelUpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert an, die eine <see cref="T:System.Web.UI.UpdatePanel" /> der Inhalt des Steuerelements wird aktualisiert.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.UpdatePanelUpdateMode" />-Werte. Die Standardeinstellung ist <see cref="F:System.Web.UI.UpdatePanelUpdateMode.Always" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein <xref:System.Web.UI.UpdatePanel> -Steuerelement ist nicht in einem anderen <xref:System.Web.UI.UpdatePanel> -Steuerelement, das Panel wird entsprechend den Einstellungen des aktualisiert die <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> und <xref:System.Web.UI.UpdatePanel.ChildrenAsTriggers%2A> Eigenschaften zusammen mit der Auflistung von Triggern. Wenn ein <xref:System.Web.UI.UpdatePanel> -Steuerelement ist in einem anderen <xref:System.Web.UI.UpdatePanel> -Steuerelement, dem untergeordneten Bereich wird automatisch aktualisiert, wenn der übergeordnete Bereich aktualisiert wird.  
+  
+ Der Inhalt einer <xref:System.Web.UI.UpdatePanel> Steuerelement wird in den folgenden Umständen aktualisiert:  
+  
+-   Wenn die <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> -Eigenschaftensatz auf <xref:System.Web.UI.UpdatePanelUpdateMode.Always>, die <xref:System.Web.UI.UpdatePanel> wird der Inhalt des Steuerelements auf jedes Postback, die an einer beliebigen Stelle auf der Seite stammt aktualisiert. Dies schließt die asynchrone Postbacks von Steuerelementen, die innerhalb von anderen <xref:System.Web.UI.UpdatePanel> Steuerelemente und Postbacks von Steuerelementen, die nicht in <xref:System.Web.UI.UpdatePanel> Steuerelemente.  
+  
+-   Wenn die <xref:System.Web.UI.UpdatePanel> in einem anderen Steuerelement geschachtelt ist <xref:System.Web.UI.UpdatePanel> Steuerelements und der übergeordnete Aktualisierungsbereich aktualisiert wird.  
+  
+-   Wenn die <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> -Eigenschaftensatz auf <xref:System.Web.UI.UpdatePanelUpdateMode.Conditional>, und eine der folgenden Bedingungen auftritt:  
+  
+    -   Rufen Sie die <xref:System.Web.UI.UpdatePanel.Update%2A> Methode der <xref:System.Web.UI.UpdatePanel> explizit zu steuern.  
+  
+    -   Wird das Postback verursacht, von einem Steuerelement, das als Trigger, mithilfe definiert ist der <xref:System.Web.UI.UpdatePanel.Triggers%2A> Eigenschaft von der <xref:System.Web.UI.UpdatePanel> Steuerelement. In diesem Fall löst das Steuerelement explizit ein Update des Inhalts des Bereichs. Das Steuerelement kann entweder innerhalb oder außerhalb der <xref:System.Web.UI.UpdatePanel> Steuerelement, das den Trigger definiert.  
+  
+    -   Die <xref:System.Web.UI.UpdatePanel.ChildrenAsTriggers%2A> -Eigenschaftensatz auf `true` und ein untergeordnetes Steuerelement von der <xref:System.Web.UI.UpdatePanel> Steuerelement ein Postback bewirkt. Ein untergeordnetes Steuerelement von einem geschachtelten <xref:System.Web.UI.UpdatePanel> Steuerelement nicht dazu, dass ein Update für die äußere <xref:System.Web.UI.UpdatePanel> steuern, es sei denn, sie explizit als Trigger definiert ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Web.UI.UpdatePanel.UpdateMode%2A>-Eigenschaft veranschaulicht. Das Beispiel deklariert zwei <xref:System.Web.UI.UpdatePanel> Steuerelemente. Im ersten Bereich der <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> -Eigenschaftensatz auf <xref:System.Web.UI.UpdatePanelUpdateMode.Conditional>. Im zweiten Bereich <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> festgelegt ist, um <xref:System.Web.UI.UpdatePanelUpdateMode.Always>. Eine Schaltfläche außerhalb beider Bereiche wird als asynchrone postback registriert, durch Aufrufen der <xref:System.Web.UI.ScriptManager.RegisterAsyncPostBackControl%2A> Methode der <xref:System.Web.UI.ScriptManager> Steuerelement. In der Schaltfläche `Click` Ereignishandler, d. h. die <xref:System.Web.UI.UpdatePanel.Update%2A> Methode des ersten Bereichs wird aufgerufen, wenn mehr als fünf Sekunden seit der letzten Aktualisierung vergangen sind. In diesem Szenario wird der Inhalt des Bereichs nur aktualisiert, wenn der letzten Aktualisierung des Bereichs vor mehr als fünf Sekunden wurde. Der Inhalt des zweiten Bereichs wird immer aktualisiert.  
+  
+ [!code-aspx-csharp[System.Web.UI.UpdatePanel.UpdateMode#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.UpdateMode/CS/UpdatePanelUpdateModeCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.UpdatePanel.UpdateMode#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.UpdateMode/VB/UpdatePanelUpdateModeVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Typ ist nicht die <see cref="T:System.Web.UI.UpdatePanelUpdateMode" /> Werte.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

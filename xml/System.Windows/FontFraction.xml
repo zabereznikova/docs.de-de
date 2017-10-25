@@ -1,0 +1,86 @@
+<Type Name="FontFraction" FullName="System.Windows.FontFraction">
+  <TypeSignature Language="C#" Value="public enum FontFraction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FontFraction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FontFraction" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt das Format der Anteil für eine <see cref="T:System.Windows.Documents.Typography" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ OpenType-Schriftarten unterstützen Formatvorlagen, einschließlich durchgestrichenen und gestapelte. Im folgenden Text werden Bruchformate für die Schriftart Palatino Linotype gezeigt.  
+  
+ ![Text mit OpenType-Ziffern mit und waagerechtem Bruchstrich](~/add/media/opentypefont12.gif "Text mit OpenType-Ziffern mit und waagerechtem Bruchstrich")  
+Beispiel für durchgestrichenen und gestapelte Bruch Stile  
+  
+> [!NOTE]
+>  Die meisten OpenType-Schriftarten verfügbar machen nur eine Teilmenge der insgesamt verfügbaren OpenType-Funktionen. Wenn eine angegebene Schriftart eine bestimmte Funktion nicht unterstützt, werden die Standardglyphen stattdessen verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Bruch Stile für die Schriftart Palatino Linotype, die mit den Eigenschaften des definieren die <xref:System.Windows.Documents.Typography> Objekt.  
+  
+ [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontFraction Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontFraction.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontFraction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Standard-Format verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Slashed">
+      <MemberSignature Language="C#" Value="Slashed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontFraction Slashed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontFraction.Slashed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontFraction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Durchgestrichenen Bruchformat verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stacked">
+      <MemberSignature Language="C#" Value="Stacked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontFraction Stacked = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontFraction.Stacked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontFraction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gestapelte Bruchformat verwendet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

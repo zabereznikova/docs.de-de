@@ -1,0 +1,133 @@
+<Type Name="UnregisterAssembly" FullName="Microsoft.Build.Tasks.UnregisterAssembly">
+  <TypeSignature Language="C#" Value="public class UnregisterAssembly : Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UnregisterAssembly extends Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.UnregisterAssembly" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert die <c>UnregisterAssembly</c> Aufgabe. Verwenden der <c>UnregisterAssembly</c> Element in der Projektdatei erstellen und Ausführen dieser Aufgabe. Weitere Informationen zu Verwendung und Parametern finden Sie unter [UnregisterAssembly-Aufgabe](http://msdn.microsoft.com/library/04f549dd-3591-4dda-9c3a-cf6ede9df2c3).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Framework64 /\<Version > / UnRegisterAssemblyTask eine Bibliothek von COM-Objekten, die als 32-Bit-Komponenten registriert kann nicht aufgelöst werden. Framework /\<Version > / UnRegisterAssemblyTask eine Bibliothek von COM-Objekten, die als 64-Bit-Komponenten registriert kann nicht aufgelöst werden.  
+  
+ Z. B. Wenn Sie eine Bibliothek von COM-Objekte mit dem Namen "ClassLibrary1" als 32-Bit-Komponenten auf einem 64-Bit-Computer zu registrieren, führen Sie Visual Studio und das Ziel in X64 ändern, schlägt fehl, der Build mit dem folgenden Fehler:  
+  
+ `ClassLibrary1.dll is not a valid assembly`  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnregisterAssembly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.UnregisterAssembly.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.UnregisterAssembly" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Assemblies">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] Assemblies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] Assemblies" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.UnregisterAssembly.Assemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Assemblys ab, deren Registrierung aufgehoben werden soll, oder legt sie fest.</summary>
+        <value>Die Assemblys, deren Registrierung aufgehoben werden soll.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyListFile">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem AssemblyListFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem AssemblyListFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.UnregisterAssembly.AssemblyListFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie Informationen zum Zustand zwischen der <c>RegisterAssembly</c> Aufgabe und die <c>UnregisterAssembly</c> task von der <c>UnregisterAssembly</c> Aufgabe verwendet, um zu vermeiden Aufheben der Registrierung einer Assembly, die nicht registriert werden konnte die <c>RegisterAssembly</c> Aufgabe.</summary>
+        <value>Informationen zum Zustand zwischen der <c>RegisterAssembly</c> Aufgabe und die <c>UnregisterAssembly</c> Aufgabe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft angegeben wird, die <xref:Microsoft.Build.Tasks.UnregisterAssembly.Assemblies%2A> und <xref:Microsoft.Build.Tasks.UnregisterAssembly.TypeLibFiles%2A> Eigenschaften werden ignoriert.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.UnregisterAssembly.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die <c>UnregisterAssembly</c> Aufgabe.</summary>
+        <returns>
+          <see langword="true" />, wenn die Aufgabe erfolgreich ausgeführt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TypeLibFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] TypeLibFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] TypeLibFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.UnregisterAssembly.TypeLibFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob die Registrierung der angegebenen Typbibliothek aus der angegebenen Assembly aufgehoben werden soll, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn die <c>UnregisterAssembly</c> Aufgabe sollte Aufheben der Registrierung der angegebenen Typbibliothek aus der angegebenen Assembly; anderenfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

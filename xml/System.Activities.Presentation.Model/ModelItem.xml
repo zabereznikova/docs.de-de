@@ -1,0 +1,518 @@
+<Type Name="ModelItem" FullName="System.Activities.Presentation.Model.ModelItem">
+  <TypeSignature Language="C#" Value="public abstract class ModelItem : System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ModelItem extends System.Object implements class System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Model.ModelItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt ein einzelnes Element im Bearbeitungsmodell dar. Bei einem Element kann es sich um alles von einer komplexen Datenstruktur bis hin zu einer Farbe oder ganzen Zahl handeln.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auf die Eigenschaften des Elements über seine <xref:System.Activities.Presentation.Model.ModelItem.Properties%2A>-Auflistung zugreifen und Änderungen an den Werten der Eigenschaften vornehmen.  
+  
+ Ein <xref:System.Activities.Presentation.Model.ModelItem> ist ein Wrapper um das zugrunde liegende Datenmodell des Designers. Sie können über die <xref:System.Activities.Presentation.Model.ModelItem.GetCurrentValue%2A>-Methode auf das zugrunde liegende Modell zugreifen.  
+  
+> [!NOTE]
+>  Änderungen, die Sie am von der <xref:System.Activities.Presentation.Model.ModelItem.GetCurrentValue%2A>-Methode zurückgegebenen Objekt vornehmen, werden von der Serialisierung und den Rückgängig-Systemen des Designers nicht widergespiegelt.  
+  
+   
+  
+## Examples  
+ Sie können sich das <xref:System.Activities.Presentation.Model.ModelItem> als einen Thin-Proxy für ein Objekt vorstellen, auf das gezeigt wird. Definieren Sie zuerst ein einfaches `Animal`-Objekt.  
+  
+```  
+  
+public class Animal  
+{  
+    // simple property  
+    public string Name { get; set; }  
+    // complex property   
+    public Location Residence { get; set; }   
+    // list   
+    public List<Animal> CloseRelatives { get; set; }  
+    // dictionary  
+    public Dictionary<string, object> Features { get; set; }   
+}  
+  
+public class Location  
+{  
+    public string StreetAddress { get; set; }  
+    public string City { get; set; }  
+    public string State { get; set; }   
+}  
+  
+```  
+  
+ Erstellen Sie im zweiten Schritt eine Instanz dieses `Animal`-Objekts sowie ein <xref:System.Activities.Presentation.Model.ModelItem>, das dafür als Proxy fungiert. Sie können das Objekt dann abrufen, indem Sie <xref:System.Activities.Presentation.Model.ModelItem.GetCurrentValue%2A> aufrufen. Im folgenden Code wird auch gezeigt, wie Sie andere von <xref:System.Activities.Presentation.Model.ModelItem> definierte Eigenschaften verwenden.  
+  
+```  
+  
+EditingContext ec = new EditingContext();  
+var companion1 = new Animal { Name = "Houdini the parakeet" };  
+var companion2 = new Animal { Name = "Groucho the fish" };  
+var animal = new Animal   
+   {  
+      Name = "Sasha the pug",  
+      Residence = new Location   
+      {  
+         StreetAddress = "123 Main Street",  
+         City = "AnyTown",  
+         State = "Washington"  
+      },  
+      Features = new Dictionary<string, object> {   
+         {"noise", "snort" },  
+         {"MeanTimeUntilNaps", TimeSpan.FromMinutes(15) }  
+      },  
+      CloseRelatives = new List<Animal> { companion1, companion2 }   
+   };  
+ModelTreeManager mtm = new ModelTreeManager(ec);  mtm.Load(animal);  
+ModelItem mi = mtm.Root;  
+  
+//Testing other properties of the class  
+ModelItem root = mtm.Root;  
+Assert.IsTrue(root.GetCurrentValue() == animal, "GetCurrentValue() returns same object");  
+Assert.IsTrue(root.ItemType == typeof(Animal),"ItemType describes the item");  
+Assert.IsTrue(root.Parent == null,"root parent is null");  
+Assert.IsTrue(root.Source == null, "root source is null");  
+Assert.IsTrue(((List<Animal>)root.Properties["CloseRelatives"].ComputedValue)[0] == companion1,   
+   "ComputedValue of prop == actual object");  
+Assert.IsFalse(((List<Animal>)root.Properties["CloseRelatives"].ComputedValue)[0] == companion2,   
+   "ComputedValue of prop == actual object");  
+Assert.AreEqual(root.Properties["Residence"].  
+   Value.  
+   Properties["StreetAddress"].  
+   Value.GetCurrentValue(), "123 Main Street", "get actual value back out");  
+Assert.AreEqual(root, root.Properties["Residence"].Parent, "property points to owner");  
+ModelItem location = root.Properties["Residence"].Value;  
+Assert.AreEqual(root.Properties["Residence"], location.Source, "sources point to the right place");  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ModelItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Presentation.Model.ModelItem" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public abstract System.ComponentModel.AttributeCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.AttributeCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.ModelItem.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Attribute für dieses Element deklariert.</summary>
+        <value>Eine Auflistung, die die Attribute des Elements enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEdit">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Presentation.Model.ModelEditingScope BeginEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Activities.Presentation.Model.ModelEditingScope BeginEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelItem.BeginEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelEditingScope</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Öffnet einen Bearbeitungsbereich für den Designer. Wenn ein Bearbeitungsbereich geöffnet ist, werden alle Änderungen an allen Objekten in dem Bereich gespeichert, bis die Transaktion abgeschlossen ist oder wiederhergestellt wird. Bearbeitungsbereiche können geschachtelt sein, jedoch muss beim Ausführen von Commits die Reihenfolge eingehalten werden.</summary>
+        <returns>Ein <see cref="T:System.Activities.Presentation.Model.ModelEditingScope" />, diese entweder abgeschlossen oder rückgängig gemacht werden müssen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Bearbeitungsbereich ermöglicht es, dass mehrere Änderungen am Modell als eine einzelne Transaktion angewendet werden. Alle im Bearbeitungsbereich vorgenommenen Änderungen können vor Abschluss der Transaktion jederzeit wiederhergestellt werden.  
+  
+ Bearbeitungsbereiche gelten global für den Designer. Ein Bearbeitungsbereich kann für jedes Element im Designer erstellt werden. Sie müssen keinen Bearbeitungsbereich speziell für das Element erstellen, an dem Sie Änderungen vornehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEdit">
+      <MemberSignature Language="C#" Value="public virtual System.Activities.Presentation.Model.ModelEditingScope BeginEdit (bool shouldApplyChangesImmediately);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Activities.Presentation.Model.ModelEditingScope BeginEdit(bool shouldApplyChangesImmediately) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelItem.BeginEdit(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelEditingScope</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="shouldApplyChangesImmediately" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="shouldApplyChangesImmediately">
+          <see langword="true" />um anzugeben, dass die Änderungen sofort angewendet werden soll. andernfalls <see langword="false" />.</param>
+        <summary>Öffnet einen Bearbeitungsbereich für den Designer.</summary>
+        <returns>Ein <see cref="T:System.Activities.Presentation.Model.ModelEditingScope" />, diese entweder abgeschlossen oder rückgängig gemacht werden müssen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEdit">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Presentation.Model.ModelEditingScope BeginEdit (string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Activities.Presentation.Model.ModelEditingScope BeginEdit(string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelItem.BeginEdit(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelEditingScope</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="description">Eine optionale Beschreibung der Änderung. Diese wird in der <see cref="P:System.Activities.Presentation.Model.ModelEditingScope.Description" />-Eigenschaft des Bearbeitungsbereichs festgelegt.</param>
+        <summary>Öffnet einen Bearbeitungsbereich für den Designer. Wenn ein Bearbeitungsbereich geöffnet ist, werden alle Änderungen an allen Objekten in dem Bereich gespeichert, bis die Transaktion abgeschlossen ist oder wiederhergestellt wird. Bearbeitungsbereiche können geschachtelt sein, jedoch muss beim Ausführen von Commits die Reihenfolge eingehalten werden.</summary>
+        <returns>Ein <see cref="T:System.Activities.Presentation.Model.ModelEditingScope" />, diese entweder abgeschlossen oder rückgängig gemacht werden müssen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Bearbeitungsbereich ermöglicht es, dass mehrere Änderungen am Modell als eine einzelne Transaktion angewendet werden. Alle im Bearbeitungsbereich vorgenommenen Änderungen können vor Abschluss der Transaktion jederzeit wiederhergestellt werden.  
+  
+ Bearbeitungsbereiche gelten global für den Designer. Ein Bearbeitungsbereich kann für jedes Element im Designer erstellt werden. Sie müssen keinen Bearbeitungsbereich speziell für das Element erstellen, an dem Sie Änderungen vornehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEdit">
+      <MemberSignature Language="C#" Value="public virtual System.Activities.Presentation.Model.ModelEditingScope BeginEdit (string description, bool shouldApplyChangesImmediately);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Activities.Presentation.Model.ModelEditingScope BeginEdit(string description, bool shouldApplyChangesImmediately) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelItem.BeginEdit(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelEditingScope</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="shouldApplyChangesImmediately" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="description">Eine optionale Beschreibung der Änderung. Diese wird in der <see cref="P:System.Activities.Presentation.Model.ModelEditingScope.Description" />-Eigenschaft des Bearbeitungsbereichs festgelegt.</param>
+        <param name="shouldApplyChangesImmediately">
+          <see langword="true" />um anzugeben, dass die Änderungen sofort angewendet werden soll. andernfalls <see langword="false" />.</param>
+        <summary>Öffnet einen Bearbeitungsbereich für den Designer.</summary>
+        <returns>Ein <see cref="T:System.Activities.Presentation.Model.ModelEditingScope" />, diese entweder abgeschlossen oder rückgängig gemacht werden müssen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Presentation.Model.ModelProperty Content { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Model.ModelProperty Content" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.ModelItem.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see langword="ContentPropertyAttribute" /> des Elements oder <see langword="null" />.</summary>
+        <value>Die <see langword="ContentPropertyAttribute" /> des Elements als eine <see cref="T:System.Activities.Presentation.Model.ModelProperty" />. Wenn die <see langword="ContentPropertyAttribute" /> wird nicht deklariert werden, indem die <see cref="P:System.Activities.Presentation.Model.ModelItem.ItemType" /> dieses Elements <see cref="P:System.Activities.Presentation.Model.ModelItem.Content" /> gibt <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValue">
+      <MemberSignature Language="C#" Value="public abstract object GetCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelItem.GetCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den aktuellen Wert des zugrunde liegenden Modellobjekts zurück, das von dem <see cref="T:System.Activities.Presentation.Model.ModelItem" /> umschlossen wird.</summary>
+        <returns>Der aktuelle Wert der zugrunde liegenden Modell Objekt, mit der <see cref="T:System.Activities.Presentation.Model.ModelItem" /> als Wrapper fungiert als ein <see cref="T:System.Object" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Objekt überprüfen, aber Sie sollten daran keine Änderungen vornehmen. Änderungen, die am zurückgegebenen Objekt vorgenommen werden, werden nicht in den Designer integriert. Die <xref:System.Activities.Presentation.Model.ModelItem.GetCurrentValue%2A>-Methode kann entweder eine vorhandene oder eine neue geklonte Instanz des Objekts zurückgeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public abstract Type ItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.ModelItem.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Objekts, das das Element darstellt.</summary>
+        <value>Der Typ des Objekts, das das Element darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public abstract string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.ModelItem.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, den Namen oder die ID des Elements.</summary>
+        <value>Der Name oder die ID des Elements als eine <see cref="T:System.String" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nicht alle Elemente müssen Namen haben, damit dies möglicherweise zurückgeben `null`. Abhängig vom Typ des Elements und seiner Position in der Hierarchie ist es möglicherweise nicht immer zulässig, den <xref:System.Activities.Presentation.Model.ModelItem.Name%2A> für ein Element festzulegen. Wenn die <xref:System.Activities.Presentation.Model.ModelItem.ItemType%2A> dieses Elements deklariert eine `RuntimeNamePropertyAttribute`die <xref:System.Activities.Presentation.Model.ModelItem.Name%2A> Eigenschaft ist eine direkte Zuordnung zu der Eigenschaft, die durch dieses Attribut vorgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Presentation.Model.ModelItem Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Model.ModelItem Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.ModelItem.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element, das das übergeordnete Element dieses Elements ist.</summary>
+        <value>Ein <see cref="T:System.Activities.Presentation.Model.ModelItem" /> , der das übergeordnete Element dieses Elements. Wenn ein Element in einer Auflistung oder einem Wörterbuch enthalten ist, wird stattdessen das Objekt zurückgegeben, das die Auflistung oder das Wörterbuch besitzt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parents">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelItem&gt; Parents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Activities.Presentation.Model.ModelItem&gt; Parents" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.ModelItem.Parents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelItem&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle übergeordneten Elemente dieses Elements ab.</summary>
+        <value>Den übergeordneten Elementen dieses Elements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Presentation.Model.ModelPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Model.ModelPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.ModelItem.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die öffentlichen Eigenschaften für dieses Element ab.</summary>
+        <value>Ein <see cref="T:System.Activities.Presentation.Model.ModelItemCollection" /> , die die öffentlichen Eigenschaften dieses Elements enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene Satz von Eigenschaften kann sich abhängig von den angefügten Eigenschaften oder Änderungen im Bearbeitungsbereich möglicherweise ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyChanged">
+      <MemberSignature Language="C#" Value="public abstract event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.PropertyChangedEventHandler PropertyChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.Model.ModelItem.PropertyChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Implementiert <see langword="INotifyPropertyChanged" />. Verwenden Sie dieses Ereignis, um das Modell auf Änderungen zu überwachen. Dies wird auch von den Datenbindungsfunktionen der WPF verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Trennen Sie Ereignisse von Elementen, wenn Sie diese nicht mehr benötigen. Andernfalls kann der Garbage Collector Elemente, die nicht mehr verwendet werden, möglicherweise nicht entfernen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Root">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Presentation.Model.ModelItem Root { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Model.ModelItem Root" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.ModelItem.Root" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element, das den Stamm der Struktur ist.</summary>
+        <value>Ein <see cref="T:System.Activities.Presentation.Model.ModelItem" /> d. h. der Stamm dieser Struktur oder <see langword="null" /> Wenn dieses Element nicht in einer Struktur ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Presentation.Model.ModelProperty Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Model.ModelProperty Source" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.ModelItem.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Eigenschaft, die diesen Wert bereitgestellt.</summary>
+        <value>Ein <see cref="T:System.Activities.Presentation.Model.ModelProperty" /> , der die Quelle dieses Werts angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Element den Stamm des Objektdiagramms darstellt, gibt diese zurück `null`. Wenn ein Element ein Member einer Auflistung oder eines Wörterbuchs ist, ist die von Source zurückgegebene Eigenschaft eine von der Auflistung oder dem Wörterbuch bereitgestellte Pseudoeigenschaft. Für andere Werte gibt die Source-Eigenschaft die Eigenschaft zurück, in der der Wert tatsächlich festgelegt wurde. Wenn ein Wert geerbt wird, können Sie daher mit Source herausfinden, welches Element den Wert ursprünglich bereitgestellt hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sources">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelProperty&gt; Sources { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Activities.Presentation.Model.ModelProperty&gt; Sources" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.ModelItem.Sources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle Eigenschaften, die diesen Wert enthalten.</summary>
+        <value>Die Quellen dieses Werts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.ModelItem.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung des zugrunde liegenden Modellobjekts zurück, das in diesem Modellelement enthalten ist.</summary>
+        <returns>Eine Zeichenfolgendarstellung des zugrunde liegenden Modellobjekts, das in diesem Modellelement enthalten ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="View">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.DependencyObject View { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyObject View" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.ModelItem.View" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.DependencyObject" /> , die dieses Element grafisch darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.DependencyObject" /> , die dieses Element grafisch darstellt oder <see langword="null" /> , wenn es keine solche Darstellung gibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,873 @@
+<Type Name="InstancePersistenceContext" FullName="System.Runtime.DurableInstancing.InstancePersistenceContext">
+  <TypeSignature Language="C#" Value="public sealed class InstancePersistenceContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InstancePersistenceContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.DurableInstancing.InstancePersistenceContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Ausführungszustandsinformationen dar, während ein Dauerhaftigkeitsbefehl ausgeführt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz dieser Klasse wird an die TryCommand-Methode der Persistenzanbieterimplementierungen übergeben. Persistenzanbieter überprüfen mit dieser Klasse die speicherinterne Sicht der Instanz und geben die Ergebnisse der Vorgänge im externen Speicher an, die sich auf die Sicht oder anderen speicherinternen Kontext auswirken können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AssociatedInstanceKey">
+      <MemberSignature Language="C#" Value="public void AssociatedInstanceKey (Guid key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AssociatedInstanceKey(valuetype System.Guid key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.AssociatedInstanceKey(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Instanzschlüsselbezeichner für den zugeordneten Schlüssel. Darf nicht "Guid.Empty" sein.</param>
+        <summary>Gibt an, dass der Persistenzanbieter der aktuellen Instanz im Instanzspeicher erfolgreich einen Schlüssel zugeordnet hat. Der Bezeichner des Schlüssels wird als Parameter angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zuordnung des Instanzschlüssels muss aufgehoben werden. Das aktuelle Instanzhandle muss an eine Instanz sowie an eine Sperre für diese Instanz gebunden werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginBindReclaimedLock">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginBindReclaimedLock (long instanceVersion, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginBindReclaimedLock(int64 instanceVersion, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.BeginBindReclaimedLock(System.Int64,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceVersion" Type="System.Int64" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceVersion">Die Version der Sperre, die für die Instanz gehalten wird, oder 0 (null), wenn der Persistenzanbieter keine Sperrversionen implementiert.</param>
+        <param name="timeout">Das Zeitlimit für den asynchronen Vorgang.</param>
+        <param name="callback">Die Methode, die aufgerufen werden soll, wenn der Vorgang abgeschlossen ist.</param>
+        <param name="state">Die dem asynchronen Vorgang zugeordneten Statusinformationen.</param>
+        <summary>Beginnen einen asynchronen Vorgang, um eine vorhandene Sperre auf einer Instanz an das aktuelle Instanzhandle zu binden. Die Version der vorhandenen Sperre wird als Parameter übergeben.</summary>
+        <returns>Der Status eines asynchronen Vorgangs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Versuch, eine Sperre festzulegen, kann der Persistenzanbieter entscheiden, dass die aktuelle Instanz bereits im aktuellen Speicher gesperrt ist. Wenn das Sperrtoken mit dem Sperrtoken des aktuellen Handles übereinstimmt, kann der Persistenzanbieter versuchen, die Sperre freizugeben, indem er die Version überprüft und an BeginBindReclaimedLock übergibt. Der Persistenzanbieter darf erst Änderungen an der Instanz vornehmen, wenn die Sperre erfolgreich freigegeben wurde. Wenn kein anderes Handle an die Sperre gebunden ist, ist der BeginBindReclaimedLock-Vorgang erfolgreich, und das aktuelle Handle wird an die Sperre gebunden. Andernfalls löst BeginBindReclaimedLock oder EndBindReclaimedLock die Ausnahme InstanceHandleConflictException aus. Wenn Befehle für andere Handles in Bearbeitung sind, wird der Vorgang möglicherweise nicht abgeschlossen, um auf das Ergebnis dieser Befehle zu warten, bevor über die Freigabe der Sperre entschieden wird.  
+  
+ Das aktuelle Instanzhandle muss an einen Instanz- und einen Sperrbesitzer gebunden sein. Die Instanz darf nicht abgeschlossen sein. Das dem Sperrbesitzer zugeordnete Sperrtoken wird verwendet, um den Besitzer der Sperre zu identifizieren.  
+  
+ Sobald eine Sperre an ein Handle gebunden wird, bleibt diese für die Lebensdauer des Handles gebunden. Weder das Sperrtoken noch die Instanzversion kann geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginExecute">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginExecute (System.Runtime.DurableInstancing.InstancePersistenceCommand command, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginExecute(class System.Runtime.DurableInstancing.InstancePersistenceCommand command, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.BeginExecute(System.Runtime.DurableInstancing.InstancePersistenceCommand,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.Runtime.DurableInstancing.InstancePersistenceCommand" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="command">Der Dauerhaftigkeitsbefehl, der ausgeführt werden soll.</param>
+        <param name="timeout">Der Timeoutwert für den Vorgang.</param>
+        <param name="callback">Der Delegat, der die Benachrichtigung vom asynchronen Empfangsvorgang darüber empfängt, dass ein Anforderungsvorgang abgeschlossen wird.</param>
+        <param name="state">Die Statusinformationen.</param>
+        <summary>Beginnt mit der asychronen Ausführung eines Dauerhaftigkeitsbefehls.</summary>
+        <returns>Der Status eines asynchronen Vorgangs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Persistenzanbieter kann mithilfe dieser Methode untergeordnete Befehle als Teil eines Befehls ausführen. Der Unterbefehl wird mit BeginTryCommand ausgeführt, ähnlich wie bei Befehlen, die an InstanceStore.BeginExecute übergeben werden. Befehle können geschachtelt werden, ein Befehl darf jedoch nicht mehrere Unterbefehle gleichzeitig ausführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindAcquiredLock">
+      <MemberSignature Language="C#" Value="public void BindAcquiredLock (long instanceVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BindAcquiredLock(int64 instanceVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.BindAcquiredLock(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceVersion" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="instanceVersion">Version der Sperre, die für die Instanz festgelegt wurde, oder 0 (null), wenn der Persistenzanbieter keine Sperrversionen implementiert.</param>
+        <summary>Bindet eine neu festgelegte Sperre für eine Instanz an das aktuelle Instanzhandle. Die Version der festgelegten Sperre wird als Parameter übergeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Persistenzanbieter die Sperrversionsverwaltung implementiert, muss die Version jedes Mal von einer Version im externen Speicher inkrementiert werden, wenn eine Sperre für die Instanz festgelegt wird. Das erste Mal, wenn die Instanz gesperrt wird, sollte die Version 1 sein. Jede Sperrdefinition macht die vorherige Sperre ungültig. Das aktuelle Instanzhandle muss an einen Instanz- und einen Sperrbesitzer gebunden sein. Die Instanz darf nicht abgeschlossen sein. Das dem Sperrbesitzer zugeordnete Sperrtoken wird verwendet, um den Besitzer der Sperre zu identifizieren.  
+  
+ Sobald eine Sperre an ein Handle gebunden wird, bleibt diese für die Lebensdauer des Handles gebunden. Weder das Sperrtoken noch die Instanzversion kann geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindEvent">
+      <MemberSignature Language="C#" Value="public void BindEvent (System.Runtime.DurableInstancing.InstancePersistenceEvent persistenceEvent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BindEvent(class System.Runtime.DurableInstancing.InstancePersistenceEvent persistenceEvent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.BindEvent(System.Runtime.DurableInstancing.InstancePersistenceEvent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="persistenceEvent" Type="System.Runtime.DurableInstancing.InstancePersistenceEvent" />
+      </Parameters>
+      <Docs>
+        <param name="persistenceEvent">Ein <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceEvent" />-Objekt, das Informationen zum Ereignis enthält.</param>
+        <summary>Bindet ein <see cref="T:System.Runtime.DurableInstancing.InstancePersistenceEvent" /> an einen Instanzhandle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindInstance">
+      <MemberSignature Language="C#" Value="public void BindInstance (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BindInstance(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstance(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Ein Instanzbezeichner. Darf nicht "Guid.Empty" sein.</param>
+        <summary>Bindet eine Instanz, deren Bezeichner als Parameter für das aktuelle Instanzhandle festgelegt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sobald eine Instanz an ein Handle gebunden wird, bleibt diese für die Lebensdauer des Handles gebunden. An das Handle kann keine andere Instanz mehr gebunden werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindInstanceOwner">
+      <MemberSignature Language="C#" Value="public void BindInstanceOwner (Guid instanceOwnerId, Guid lockToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BindInstanceOwner(valuetype System.Guid instanceOwnerId, valuetype System.Guid lockToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner(System.Guid,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceOwnerId" Type="System.Guid" />
+        <Parameter Name="lockToken" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceOwnerId">Der Bezeichner für den Instanzbesitzer.</param>
+        <param name="lockToken">Das Sperrtoken des Instanzbesitzers. Ein Persistenzanbieter kann den gleichen Wert für den Bezeichner des Instanzbesitzers und das Sperrtoken des Besitzers auswählen.</param>
+        <summary>Bindet einen Instanzbesitzer an das aktuelle Instanzhandle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sobald ein Instanzbesitzer an ein Handle gebunden wird, bleibt dieser für die Lebensdauer des Handles gebunden. An das Handle kann kein anderer Instanzbesitzer mehr gebunden werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindReclaimedLock">
+      <MemberSignature Language="C#" Value="public void BindReclaimedLock (long instanceVersion, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BindReclaimedLock(int64 instanceVersion, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.BindReclaimedLock(System.Int64,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceVersion" Type="System.Int64" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="instanceVersion">Version der Sperre, die für die Instanz gehalten wird, oder 0 (null), wenn der Persistenzanbieter keine Sperrversionen implementiert.</param>
+        <param name="timeout">Der Timeoutwert für den Vorgang.</param>
+        <summary>Bindet eine vorhandene Sperre auf einer Instanz an das aktuelle Instanzhandle. Die Version der vorhandenen Sperre wird als Parameter übergeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Versuch, eine Sperre festzulegen, kann der Persistenzanbieter entscheiden, dass die aktuelle Instanz bereits im aktuellen Speicher gesperrt ist. Wenn das Sperrtoken mit dem Sperrtoken des aktuellen Handles übereinstimmt, kann der Persistenzanbieter versuchen, die Sperre erneut freizugeben, indem er die Version überprüft und an BindReclaimedLock übergibt. Der Persistenzanbieter darf erst Änderungen an der Instanz vornehmen, wenn die Sperre erfolgreich freigegeben wurde. Wenn kein anderes Handle an die Sperre gebunden ist, kann BindReclaimedLock erfolgreich ausgeführt werden, und das aktuelle Handle wird an die Sperre gebunden. Andernfalls löst BindReclaimedLock die Ausnahme InstanceHandleConflictException aus. Wenn Befehle auf anderen Handles ausgeführt werden, blockiert BindReclaimedLock möglicherweise, um auf das Ergebnis dieser Befehle zu warten, bevor über die Freigabe der Sperre entschieden wird.  
+  
+ Das aktuelle Instanzhandle muss an einen Instanz- und einen Sperrbesitzer gebunden sein. Die Instanz darf nicht abgeschlossen sein. Das dem Sperrbesitzer zugeordnete Sperrtoken wird verwendet, um den Besitzer der Sperre zu identifizieren.  
+  
+ Sobald eine Sperre an ein Handle gebunden wird, bleibt diese für die Lebensdauer des Handles gebunden. Weder das Sperrtoken noch die Instanzversion kann geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletedInstance">
+      <MemberSignature Language="C#" Value="public void CompletedInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CompletedInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.CompletedInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass der Persistenzanbieter die aktuelle Instanz im Instanzspeicher erfolgreich als vollständig gekennzeichnet hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das aktuelle Instanzhandle muss an eine Instanz sowie an eine Sperre für diese Instanz gebunden werden. Die Instanz muss initialisiert werden und darf nicht bereits abgeschlossen sein. (Eine Instanz wird initialisiert, wenn jemals ein Satz von Instanzdaten für sie beibehalten wurde.) Alle der Instanz zugeordneten Schlüssel müssen abgeschlossen sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletedInstanceKey">
+      <MemberSignature Language="C#" Value="public void CompletedInstanceKey (Guid key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CompletedInstanceKey(valuetype System.Guid key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.CompletedInstanceKey(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Instanzschlüsselbezeichner für den Schlüssel, der abgeschlossen wurde. Darf nicht "Guid.Empty" sein.</param>
+        <summary>Gibt an, dass der Persistenzanbieter einen Schlüssel im externen Speicher erfolgreich als vollständig gekennzeichnet hat. Der Bezeichner des Schlüssels wird als Parameter angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das aktuelle Instanzhandle muss an eine Instanz sowie an eine Sperre für diese Instanz gebunden werden. Der Instanzschlüssel muss der aktuellen Instanz zugeordnet werden und darf nicht bereits abgeschlossen sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBindReclaimedLockException">
+      <MemberSignature Language="C#" Value="public Exception CreateBindReclaimedLockException (long instanceVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Exception CreateBindReclaimedLockException(int64 instanceVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.CreateBindReclaimedLockException(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceVersion" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="instanceVersion">Die Version der Sperre, die für die Instanz gehalten wird, oder 0 (null), wenn der Persistenzanbieter keine Sperrversionen implementiert.</param>
+        <summary>Erstellt eine Instanz einer Ausnahme, die von TryCommand ausgelöst werden kann, um das BindReclaimedLock-Verhalten auszulösen.</summary>
+        <returns>Eine Ausnahme.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beispielcode:  
+  
+```  
+  
+protected override bool TryCommand(InstancePersistenceContext context, InstancePersistenceCommand command, TimeSpan timeout)  
+{  
+    throw context.CreateBindReclaimedLockException(5);  
+}  
+is equivalent to  
+protected override bool TryCommand(InstancePersistenceContext context, InstancePersistenceCommand command, TimeSpan timeout)  
+{  
+    context.BindReclaimedLock(5, timeout);  
+    throw new OperationCanceledException();  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndBindReclaimedLock">
+      <MemberSignature Language="C#" Value="public void EndBindReclaimedLock (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndBindReclaimedLock(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.EndBindReclaimedLock(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das Ergebnis des asynchronen Vorgangs.</param>
+        <summary>Beendet den von der <see cref="M:System.Runtime.DurableInstancing.InstancePersistenceContext.BeginBindReclaimedLock(System.Int64,System.TimeSpan,System.AsyncCallback,System.Object)" />-Methode gestarteten asynchronen Vorgang.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndExecute">
+      <MemberSignature Language="C#" Value="public void EndExecute (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndExecute(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.EndExecute(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Der Status eines asynchronen Vorgangs.</param>
+        <summary>Beendet den asynchronen Vorgang.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public void Execute (System.Runtime.DurableInstancing.InstancePersistenceCommand command, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Execute(class System.Runtime.DurableInstancing.InstancePersistenceCommand command, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.Execute(System.Runtime.DurableInstancing.InstancePersistenceCommand,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.Runtime.DurableInstancing.InstancePersistenceCommand" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="command">Der Dauerhaftigkeitsbefehl, der ausgeführt werden soll.</param>
+        <param name="timeout">Der Timeoutwert für den Vorgang.</param>
+        <summary>Führt einen Dauerhaftigkeitsbefehl aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Persistenzanbieter kann mithilfe dieser Methode untergeordnete Befehle als Teil eines Befehls ausführen. Der Unterbefehl wird mit TryCommand ausgeführt, ähnlich wie bei Befehlen, die an InstanceStore.Execute übergeben werden. Befehle können geschachtelt werden, ein Befehl darf jedoch nicht mehrere Unterbefehle gleichzeitig ausführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceHandle">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceHandle InstanceHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.DurableInstancing.InstanceHandle InstanceHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle Instanzhandle ab.</summary>
+        <value>Das aktuelle Instanzhandle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceVersion">
+      <MemberSignature Language="C#" Value="public long InstanceVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 InstanceVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version der Sperre ab, die auf der aktuellen Instanz durch das aktuelle Instanzhandle gehalten wird.</summary>
+        <value>Die Version der Instanzsperre, die an das aktuelle Instanzhandle gebunden ist, oder -1, wenn das Handle nicht an eine Sperre gebunden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Persistenzanbieter sollte diesen Wert mit der Version der Sperre vergleichen, die für eine Instanz im Instanzspeicher gilt, wenn ein Vorgang, der eine Sperre erfordert (z. B. das Beibehalten von Instanzdaten) mithilfe eines an die Sperre gebundenen Handles ausgeführt wird. Wenn die Sperrversionen nicht übereinstimmen, sollte der Befehl mit InstanceLockLostException fehlschlagen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceView">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceView InstanceView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.DurableInstancing.InstanceView InstanceView" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Instanzansichtsobjekt ab, das den speicherinternen Zustand der aktuellen Instanz darstellt. Diese Sicht zeigt die Updates an, die durch den jeweilig ausgeführten Befehl durchgeführt werden.</summary>
+        <value>Das Instanzansichtsobjekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadedInstance">
+      <MemberSignature Language="C#" Value="public void LoadedInstance (System.Runtime.DurableInstancing.InstanceState state, System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt; instanceData, System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt; instanceMetadata, System.Collections.Generic.IDictionary&lt;Guid,System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;&gt; associatedInstanceKeyMetadata, System.Collections.Generic.IDictionary&lt;Guid,System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;&gt; completedInstanceKeyMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadedInstance(valuetype System.Runtime.DurableInstancing.InstanceState state, class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt; instanceData, class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt; instanceMetadata, class System.Collections.Generic.IDictionary`2&lt;valuetype System.Guid, class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt;&gt; associatedInstanceKeyMetadata, class System.Collections.Generic.IDictionary`2&lt;valuetype System.Guid, class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt;&gt; completedInstanceKeyMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.LoadedInstance(System.Runtime.DurableInstancing.InstanceState,System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue},System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue},System.Collections.Generic.IDictionary{System.Guid,System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue}},System.Collections.Generic.IDictionary{System.Guid,System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Runtime.DurableInstancing.InstanceState" />
+        <Parameter Name="instanceData" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;" />
+        <Parameter Name="instanceMetadata" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;" />
+        <Parameter Name="associatedInstanceKeyMetadata" Type="System.Collections.Generic.IDictionary&lt;System.Guid,System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;&gt;" />
+        <Parameter Name="completedInstanceKeyMetadata" Type="System.Collections.Generic.IDictionary&lt;System.Guid,System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="state">Die Instanzstatusinformationen.</param>
+        <param name="instanceData">Die Instanzdaten als Wörterbuch mit <see cref="T:System.Xml.Linq.XName" />- und <see cref="T:System.Runtime.DurableInstancing.InstanceValue" />-Objekten.</param>
+        <param name="instanceMetadata">Instanzmetadaten als Auflistung von <see cref="T:System.Xml.Linq.XName" />- und <see cref="T:System.Runtime.DurableInstancing.InstanceValue" />-Objekten.</param>
+        <param name="associatedInstanceKeyMetadata">Zugeordnete Instanzschlüsselmetadaten als Wörterbuch mit Instanzbezeichner- und Instanzschlüsselmetadaten, also ein Wörterbuch mit <see cref="T:System.Xml.Linq.XName" />- und <see cref="T:System.Runtime.DurableInstancing.InstanceValue" />-Objekten.</param>
+        <param name="completedInstanceKeyMetadata">Abgeschlossene Instanzmetadaten als Wörterbuch mit Instanzbezeichner- und Instanzschlüsselmetadaten, also ein Wörterbuch mit <see cref="T:System.Xml.Linq.XName" />- und <see cref="T:System.Runtime.DurableInstancing.InstanceValue" />-Objekten.</param>
+        <summary>Gibt an, dass der Persistenzanbieter erfolgreich die aktuelle Instanz aus dem Instanzspeicher abgerufen hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das aktuelle Instanzhandle muss an eine Instanz gebunden sein. Wenn das Instanzhandle an eine Sperre gebunden oder die geladene Instanz als vollständig markiert ist, werden die geladenen Daten als konsistent angesehen. Andernfalls wird dies angezweifelt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LockToken">
+      <MemberSignature Language="C#" Value="public Guid LockToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid LockToken" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstancePersistenceContext.LockToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Sperrtoken des Instanzbesitzers ab, das an das aktuelle Instanzhandle gebunden ist.</summary>
+        <value>Das Sperrtoken, das an das aktuelle Instanzhandle gebunden ist, oder Guid.Empty, wenn das Handle nicht an einen Instanzbesitzer gebunden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Persistenzanbieter sollte diesen Wert mit dem Sperrtoken der Sperre vergleichen, das für eine Instanz im Instanzspeicher gilt, wenn ein Vorgang, der eine Sperre erfordert (z. B. das Beibehalten von Instanzdaten) mithilfe eines an die Sperre gebundenen Handles ausgeführt wird. Wenn das Sperrtoken nicht übereinstimmt, sollte der Befehl mit InstanceLockLostException fehlschlagen.  
+  
+ Der Persistenzanbieter sollte diesen Wert beim Festlegen einer neuen Sperre für eine Instanz als Sperrtoken verwenden (z. B. beim Beibehalten von Instanzdaten mithilfe eines Handles, das noch nicht an eine Sperre gebunden ist). Wenn die Instanz bereits im Instanzspeicher gesperrt ist, und das Sperrtoken mit diesem Sperrtoken übereinstimmt, kann der Persistenzanbieter versuchen, die Instanz mit BindReclaimedLock erneut freizugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistedInstance">
+      <MemberSignature Language="C#" Value="public void PersistedInstance (System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt; data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PersistedInstance(class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.PersistedInstance(System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="data">Instanzdaten als Wörterbuch mit <see cref="T:System.Xml.Linq.XName" />- und <see cref="T:System.Runtime.DurableInstancing.InstanceValue" />-Objekten.</param>
+        <summary>Gibt an, dass der Persistenzanbieter erfolgreich ein Satz von Instanzdaten dauerhaft im Instanzspeicher gespeichert hat. Dadurch wird die Instanz initialisiert, sofern dies noch nicht geschehen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das aktuelle Instanzhandle muss an eine Instanz sowie an eine Sperre für diese Instanz gebunden werden. Jeder Satz von Instanzdaten ersetzt den vorhergehenden Satz vollständig. Der Satz von Instanzdaten ist möglicherweise NULL, es bedeutet das Gleiche wie leer. Das Speichern eines NULL-Satzes von Instanzdaten löscht den vorhandenen Satz von Instanzdaten. (Das Speichern eines Satzes von Instanzdaten hat keine Auswirkungen auf die Instanzmetadaten.)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueriedInstanceStore">
+      <MemberSignature Language="C#" Value="public void QueriedInstanceStore (System.Runtime.DurableInstancing.InstanceStoreQueryResult queryResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void QueriedInstanceStore(class System.Runtime.DurableInstancing.InstanceStoreQueryResult queryResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.QueriedInstanceStore(System.Runtime.DurableInstancing.InstanceStoreQueryResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="queryResult" Type="System.Runtime.DurableInstancing.InstanceStoreQueryResult" />
+      </Parameters>
+      <Docs>
+        <param name="queryResult">Die Ergebnisse einer Abfrage bei einem Instanzspeicher.</param>
+        <summary>Fügt das als Parameter übergebene <see cref="T:System.Runtime.DurableInstancing.InstanceStoreQueryResult" /> einer Liste mit <see cref="T:System.Runtime.DurableInstancing.InstanceStoreQueryResult" />-Objekten in einer <see cref="T:System.Runtime.DurableInstancing.InstanceView" /> hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadInstanceKeyMetadata">
+      <MemberSignature Language="C#" Value="public void ReadInstanceKeyMetadata (Guid key, System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt; metadata, bool complete);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReadInstanceKeyMetadata(valuetype System.Guid key, class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt; metadata, bool complete) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.ReadInstanceKeyMetadata(System.Guid,System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue},System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Guid" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;" />
+        <Parameter Name="complete" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Instanzschlüsselbezeichner für den Schlüssel, dessen Metadaten gelesen wurden. Darf nicht "Guid.Empty" sein.</param>
+        <param name="metadata">Die Metadaten als Wörterbuch von <see cref="T:System.Xml.Linq.XName" />- und <see cref="T:System.Runtime.DurableInstancing.InstanceValue" />-Objekten.</param>
+        <param name="complete">
+          <see langword="True" />Wenn die Metadaten, alle Metadaten darstellt, die dem Instanzschlüssel zugeordnet sind, andernfalls <see langword="false" />.</param>
+        <summary>Gibt an, dass der Persistenzanbieter erfolgreich verschiedene Instanzschlüsselmetadaten für einen Schlüssel gelesen hat, der der aktuellen Instanz des Instanzspeichers zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das aktuelle Instanzhandle muss an eine Instanz gebunden sein. Wenn das Instanzhandle an eine Sperre gebunden, oder die aktuelle Instanz als vollständig markiert ist, werden die Metadaten als konsistent angesehen. Andernfalls wird dies angezweifelt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadInstanceMetadata">
+      <MemberSignature Language="C#" Value="public void ReadInstanceMetadata (System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt; metadata, bool complete);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReadInstanceMetadata(class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt; metadata, bool complete) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.ReadInstanceMetadata(System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue},System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;" />
+        <Parameter Name="complete" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Die Metadaten als Wörterbuch von <see cref="T:System.Xml.Linq.XName" />- und <see cref="T:System.Runtime.DurableInstancing.InstanceValue" />-Objekten.</param>
+        <param name="complete">
+          <see langword="True" />Wenn die Metadaten, alle Metadaten darstellt, die der Instanz zugeordnet sind, andernfalls <see langword="false" />.</param>
+        <summary>Gibt an, dass der Persistenzanbieter erfolgreich verschiedene Instanzmetadaten für die aktuelle Instanz des Instanzspeichers gelesen hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadInstanceOwnerMetadata">
+      <MemberSignature Language="C#" Value="public void ReadInstanceOwnerMetadata (System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt; metadata, bool complete);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReadInstanceOwnerMetadata(class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt; metadata, bool complete) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.ReadInstanceOwnerMetadata(System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue},System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;" />
+        <Parameter Name="complete" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Das Wörterbuch mit <see cref="T:System.Xml.Linq.XName" />- und <see cref="T:System.Runtime.DurableInstancing.InstanceValue" />-Objekten.</param>
+        <param name="complete">Der Wert, mit dem angegeben wird, ob die Konsistenz auf <see cref="F:System.Runtime.DurableInstancing.InstanceValueConsistency.InDoubt" /> oder <see cref="F:System.Runtime.DurableInstancing.InstanceValueConsistency.Partial" /> festgelegt werden soll.</param>
+        <summary>Legt die Instanzbesitzermetadaten unter Verwendung der im Parameter übergebenen Daten fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das aktuelle Instanzhandle muss an eine Instanz gebunden sein. Wenn das Instanzhandle an eine Sperre gebunden, oder die aktuelle Instanz als vollständig markiert ist, werden die Metadaten als konsistent angesehen. Andernfalls wird dies angezweifelt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCancellationHandler">
+      <MemberSignature Language="C#" Value="public void SetCancellationHandler (Action&lt;System.Runtime.DurableInstancing.InstancePersistenceContext&gt; cancellationHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCancellationHandler(class System.Action`1&lt;class System.Runtime.DurableInstancing.InstancePersistenceContext&gt; cancellationHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.SetCancellationHandler(System.Action{System.Runtime.DurableInstancing.InstancePersistenceContext})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationHandler" Type="System.Action&lt;System.Runtime.DurableInstancing.InstancePersistenceContext&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationHandler">Der Verweis auf eine Funktion, die aufgerufen werden soll.</param>
+        <summary>Legt den Abbruchhandler fest, der aufgerufen werden soll, wenn der Abbruch eines Vorgangs angefordert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Abbruchhandler aufgerufen wird, sollte der Persistenzanbieter alle ausstehenden Vorgänge abbrechen und OperationCanceledException aus TryCommand auslösen, um anzugeben, dass der Persistenzbefehl unterbrochen wurde, bevor er abgeschlossen werden konnte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnassociatedInstanceKey">
+      <MemberSignature Language="C#" Value="public void UnassociatedInstanceKey (Guid key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnassociatedInstanceKey(valuetype System.Guid key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.UnassociatedInstanceKey(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Instanzschlüsselbezeichner für den Schlüssel, dessen Zuordnung aufgehoben wurde. Darf nicht "Guid.Empty" sein.</param>
+        <summary>Gibt an, dass der Persistenzanbieter erfolgreich die Zuordnung eines Schlüssels zur aktuellen Instanz im Instanzspeicher aufgehoben hat. Der Bezeichner des Schlüssels wird als Parameter angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das aktuelle Instanzhandle muss an eine Instanz sowie an eine Sperre für diese Instanz gebunden werden. Der Instanzschlüssel muss der aktuellen Instanz zugeordnet werden und als vollständig gekennzeichnet sein. Die aktuelle Instanz darf nicht als vollständig gekennzeichnet sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserContext">
+      <MemberSignature Language="C#" Value="public object UserContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object UserContext" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstancePersistenceContext.UserContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die an das aktuelle Instanzhandle angefügten Benutzerkontextinformationen ab.</summary>
+        <value>Die Benutzerkontextinformationen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Objekt ist dasjenige, das von InstanceStore.OnNewInstanceHandle für das aktuelle Instanzhandle zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WroteInstanceKeyMetadataValue">
+      <MemberSignature Language="C#" Value="public void WroteInstanceKeyMetadataValue (Guid key, System.Xml.Linq.XName name, System.Runtime.DurableInstancing.InstanceValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WroteInstanceKeyMetadataValue(valuetype System.Guid key, class System.Xml.Linq.XName name, class System.Runtime.DurableInstancing.InstanceValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.WroteInstanceKeyMetadataValue(System.Guid,System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Guid" />
+        <Parameter Name="name" Type="System.Xml.Linq.XName" />
+        <Parameter Name="value" Type="System.Runtime.DurableInstancing.InstanceValue" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Instanzschlüsselbezeichner für den Schlüssel. Darf nicht "Guid.Empty" sein.</param>
+        <param name="name">Der Name der Metadateneigenschaft.</param>
+        <param name="value">Der Wert der Metadateneigenschaft.</param>
+        <summary>Gibt an, dass der Persistenzanbieter erfolgreich einen Metadatenwert für einen Instanzschlüssel geschrieben hat, der zusammen mit der aktuellen Instanz dem Instanzspeicher zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das aktuelle Instanzhandle muss an eine Instanz sowie an eine Sperre für diese Instanz gebunden werden. Der Instanzschlüssel muss der aktuellen Instanz zugeordnet werden und darf nicht abgeschlossen sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WroteInstanceMetadataValue">
+      <MemberSignature Language="C#" Value="public void WroteInstanceMetadataValue (System.Xml.Linq.XName name, System.Runtime.DurableInstancing.InstanceValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WroteInstanceMetadataValue(class System.Xml.Linq.XName name, class System.Runtime.DurableInstancing.InstanceValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.WroteInstanceMetadataValue(System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.Linq.XName" />
+        <Parameter Name="value" Type="System.Runtime.DurableInstancing.InstanceValue" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Metadateneigenschaft.</param>
+        <param name="value">Der Wert der Metadateneigenschaft.</param>
+        <summary>Gibt an, dass der Persistenzanbieter erfolgreich einen Metadatenwert für die aktuelle Instanz in den externen Instanzspeicher geschrieben hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das aktuelle Instanzhandle muss an eine Instanz sowie an eine Sperre für diese Instanz gebunden werden. Die Instanz darf nicht abgeschlossen sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WroteInstanceOwnerMetadataValue">
+      <MemberSignature Language="C#" Value="public void WroteInstanceOwnerMetadataValue (System.Xml.Linq.XName name, System.Runtime.DurableInstancing.InstanceValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WroteInstanceOwnerMetadataValue(class System.Xml.Linq.XName name, class System.Runtime.DurableInstancing.InstanceValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstancePersistenceContext.WroteInstanceOwnerMetadataValue(System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.Linq.XName" />
+        <Parameter Name="value" Type="System.Runtime.DurableInstancing.InstanceValue" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Metadateneigenschaft.</param>
+        <param name="value">Der Wert der Metadateneigenschaft.</param>
+        <summary>Gibt an, dass der Persistenzanbieter erfolgreich einen Metadatenwert für den aktuellen Instanzbesitzer in den Instanzspeicher geschrieben hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das aktuelle Instanzhandle muss an einen Instanzbesitzer gebunden sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

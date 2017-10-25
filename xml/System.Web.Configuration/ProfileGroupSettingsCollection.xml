@@ -1,0 +1,497 @@
+<Type Name="ProfileGroupSettingsCollection" FullName="System.Web.Configuration.ProfileGroupSettingsCollection">
+  <TypeSignature Language="C#" Value="public sealed class ProfileGroupSettingsCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProfileGroupSettingsCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ProfileGroupSettingsCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.ProfileGroupSettings), AddItemName="group")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält eine Reihe von <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ProfileGroupSettingsCollection> Klasse enthält eine Auflistung von <xref:System.Web.Configuration.ProfileGroupSettings> Objekte, die jeweils eine Auflistung von <xref:System.Web.Configuration.ProfilePropertySettings> Objekte.  
+  
+ Die <xref:System.Web.Configuration.ProfilePropertySettings> -Klasse bietet eine Möglichkeit, programmgesteuert erstellen, Zugriff auf und ändern Sie die Definition einer einzelnen Eigenschaft hinzugefügt der `<properties>` -Unterabschnitt des der `<profile>` Abschnitt einer Konfigurationsdatei.  
+  
+ Die `<profile>` Abschnitt der Konfigurationsdatei gibt ein Schema für Benutzerprofile an. Zur Laufzeit verwendet das ASP.NET Kompilierungssystem die Angaben der `<profile>` Abschnitt zum Generieren einer Klasse mit dem Namen `ProfileCommon`, abgeleitet aus <xref:System.Web.Profile.ProfileBase>. Die `ProfileCommon` Klassendefinition basiert darauf, dass die Eigenschaften definiert, der `<properties>` -Unterabschnitt des der `<profile>` Abschnitt der Konfigurationsdatei.  
+  
+ Weitere Informationen zu den Profileigenschaften, finden Sie unter [ASP.NET Profil Eigenschaftenübersicht](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d). Weitere Informationen zu der Profilfunktionen in ASP.NET Version 2.0, finden Sie unter [ASP.NET Profil Eigenschaftenübersicht](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
+  
+   
+  
+## Examples  
+ Im folgenden Auszug aus einer Datei veranschaulicht, wie Werte für mehrere Eigenschaften der deklarativ angegeben die <xref:System.Web.Configuration.ProfileGroupSettingsCollection> als `<group>` Elemente der `<properties>` Element von der `<profile>` Konfigurationsdateiabschnitt.  
+  
+```  
+<system.web>  
+  <profile enabled = "true"          defaultProvider="AspNetSqlProfileProvider">  
+    <providers>  
+      <add  name="AspNetSqlProfileProvider"  
+        type="System.Web.Profile.SqlProfileProvider "  
+        connectionStringName="LocalSqlServer"  
+        applicationName="/"  
+        description="Stores and retrieves profile data from the   
+        local Microsoft SQL Server database" />  
+    </providers>  
+  
+    <properties>  
+      <group name = "SiteColors" >  
+        <add name = "BackGround"/>  
+        <add name = "SideBar"/>  
+        <add name = "ForeGroundText"/>  
+        <add name = "ForeGroundBorders"/>  
+      </group>  
+      <group name="Forums">  
+        <add name = "HasAvatar" type="bool" provider="Forums"/>  
+        <add name = "LastLogin" type="DateTime" provider="Forums"/>  
+        <add name = "TotalPosts" type="int" provider="Forums"/>  
+      </group>  
+    </properties>  
+  </profile>  
+</system.web>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileGroupSettingsCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettingsCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.ProfileGroupSettingsCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.ProfileGroupSettings group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.ProfileGroupSettings group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettingsCollection.Add(System.Web.Configuration.ProfileGroupSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.Web.Configuration.ProfileGroupSettings" />
+      </Parameters>
+      <Docs>
+        <param name="group">Ein <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt, das der Auflistung hinzugefügt.</param>
+        <summary>Fügt der Auflistung ein <see cref="T:System.Web.Configuration.ProfileGroupSettings" />-Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung darf nicht bereits ein <xref:System.Web.Configuration.ProfileGroupSettings> Objekt mit demselben Namen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfileGroupSettingsCollection.Add%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.ProfileSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#13](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#13)]
+ [!code-vb[System.Web.Configuration.ProfileSection#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Die <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt bereits in der Auflistung vorhanden ist, oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllKeys">
+      <MemberSignature Language="C#" Value="public string[] AllKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AllKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileGroupSettingsCollection.AllKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Zeichenfolgenarray mit den Schlüsselwerten in der Auflistung ab.</summary>
+        <value>Ein Zeichenfolgenarray von Schlüsselwerten in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettingsCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.Web.Configuration.ProfileGroupSettings" />-Objekte aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `clear` Richtlinie in den entsprechenden Abschnitt der Konfigurationsdatei So löschen Sie alle Verweise auf Elemente in einer Konfigurationsdatei definiert. Entfernt alle Elemente im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfileGroupSettingsCollection.Clear%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.ProfileSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#2)]
+ [!code-vb[System.Web.Configuration.ProfileSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettingsCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ProfileGroupSettings Get (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Configuration.ProfileGroupSettings Get(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettingsCollection.Get(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProfileGroupSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des der <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> abzurufenden Objekts.</param>
+        <summary>Gibt die <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt am angegebenen Index.</summary>
+        <returns>Die <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt am angegebenen Index oder <see langword="null" /> Wenn an diesem Index kein Objekt vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ProfileGroupSettings Get (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Configuration.ProfileGroupSettings Get(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettingsCollection.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProfileGroupSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des abzurufenden <see cref="T:System.Web.Configuration.ProfileGroupSettings" />-Objekts.</param>
+        <summary>Gibt die <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt mit dem angegebenen Namen.</summary>
+        <returns>Die <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt mit dem angegebenen Namen oder <see langword="null" /> , wenn der Name nicht vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettingsCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="public string GetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettingsCollection.GetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des ein <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt.</param>
+        <summary>Gibt den Namen des der <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt am angegebenen Index.</summary>
+        <returns>Der Name des der <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt am angegebenen Index oder <see langword="null" /> Wenn an diesem Index kein Objekt vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.Configuration.ProfileGroupSettings group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.Configuration.ProfileGroupSettings group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettingsCollection.IndexOf(System.Web.Configuration.ProfileGroupSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.Web.Configuration.ProfileGroupSettings" />
+      </Parameters>
+      <Docs>
+        <param name="group">Ein <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt in der Auflistung.</param>
+        <summary>Gibt den Index des angegebenen <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt.</summary>
+        <returns>Der Index des angegebenen <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> -Objekt, oder -1, wenn das angegebene <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt nicht in der Auflistung enthalten ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsModified">
+      <MemberSignature Language="C#" Value="protected override bool IsModified ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsModified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettingsCollection.IsModified" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ProfileGroupSettings this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.ProfileGroupSettings Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileGroupSettingsCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProfileGroupSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des ein <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt in der Auflistung.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt an der angegebenen Indexposition.</summary>
+        <value>Die <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt am angegebenen Index oder <see langword="null" /> Wenn an diesem Index kein Objekt vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ProfileGroupSettings this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.ProfileGroupSettings Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileGroupSettingsCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProfileGroupSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des ein <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt in der Auflistung.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt mit dem angegebenen Namen.</summary>
+        <value>Die <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt mit dem angegebenen Namen oder <see langword="null" /> , wenn kein Objekt mit diesem Namen vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileGroupSettingsCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettingsCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> aus der Auflistung zu entfernende Objekt.</param>
+        <summary>Entfernt eine <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `<remove>` Element in den entsprechenden Abschnitt der Konfigurationsdatei für jedes Element in einer Konfigurationsdatei definiert. Wenn das Element im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert ist, wird der Eintrag aus der Konfigurationsdatei entfernt. Das zu entfernende Objekt muss in der Auflistung vorhanden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfileGroupSettingsCollection.Remove%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.ProfileSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#1)]
+ [!code-vb[System.Web.Configuration.ProfileSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Es ist keine <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> -Objekt am angegebenen Index in der Auflistung das Element bereits entfernt wurde oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettingsCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des der <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> aus der Auflistung zu entfernende Objekt.</param>
+        <summary>Entfernt eine <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `<remove>` Element in den entsprechenden Abschnitt der Konfigurationsdatei für jedes Element in einer Konfigurationsdatei definiert. Wenn das Element im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert ist, wird der Eintrag aus der Konfigurationsdatei entfernt. Das zu entfernende Objekt muss in der Auflistung vorhanden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Es ist keine <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> -Objekt am angegebenen Index in der Auflistung das Element bereits entfernt wurde oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetModified">
+      <MemberSignature Language="C#" Value="protected override void ResetModified ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ResetModified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettingsCollection.ResetModified" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (System.Web.Configuration.ProfileGroupSettings group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(class System.Web.Configuration.ProfileGroupSettings group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfileGroupSettingsCollection.Set(System.Web.Configuration.ProfileGroupSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.Web.Configuration.ProfileGroupSettings" />
+      </Parameters>
+      <Docs>
+        <param name="group">Ein <see cref="T:System.Web.Configuration.ProfileGroupSettings" />-Objekt.</param>
+        <summary>Fügt der Auflistung das angegebene <see cref="T:System.Web.Configuration.ProfileGroupSettings" />-Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode hat dieselbe Wirkung wie das Aufrufen der <xref:System.Web.Configuration.ProfileGroupSettingsCollection.Add%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Die <see cref="T:System.Web.Configuration.ProfileGroupSettings" /> Objekt bereits in der Auflistung vorhanden ist, oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

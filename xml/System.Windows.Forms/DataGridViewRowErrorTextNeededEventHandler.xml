@@ -1,0 +1,44 @@
+<Type Name="DataGridViewRowErrorTextNeededEventHandler" FullName="System.Windows.Forms.DataGridViewRowErrorTextNeededEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DataGridViewRowErrorTextNeededEventHandler(object sender, DataGridViewRowErrorTextNeededEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewRowErrorTextNeededEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewRowErrorTextNeededEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Windows.Forms.DataGridView.RowErrorTextNeeded" />-Ereignisses eines <see cref="T:System.Windows.Forms.DataGridView" />-Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> Ereignis tritt nur auf bei der <xref:System.Windows.Forms.DataGridView> Steuerelement <xref:System.Windows.Forms.DataGridView.DataSource%2A> Eigenschaft festgelegt ist oder seine <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft ist `true`. Behandlung von der <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> Ereignis ist nützlich, wenn der Fehler für eine Zeile je nach den Zustand und die darin enthaltenen Werte bestimmt werden sollen.  
+  
+ Bei der Behandlung der <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> Ereignis, und geben Sie Fehlertext im Handler, ein Fehlersymbol angezeigt, in den Zeilenheader fest, wenn die <xref:System.Windows.Forms.DataGridView.ShowRowErrors%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `false`. Wenn der Benutzer den Mauszeiger über das Fehlersymbol bewegt, wird der Fehlermeldungstext als QuickInfo angezeigt.  
+  
+ Die <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> -Ereignis tritt auch bei jedem der Wert von der <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A?displayProperty=nameWithType> Eigenschaft abgerufen wird.  
+  
+ Sie können die <xref:System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs.RowIndex%2A?displayProperty=nameWithType> Eigenschaft, um zu bestimmen, das Bundesland oder den Wert einer Zeile, und verwenden Sie diese Informationen zum Ändern oder die <xref:System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs.ErrorText%2A?displayProperty=nameWithType> Eigenschaft. Diese Eigenschaft wird mit dem Wert der Zeile initialisiert <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> -Eigenschaft, die der Wert außer Kraft setzt.  
+  
+ Behandeln der <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> Ereignis bei der Arbeit mit der große Mengen von Daten, um Leistungseinbußen beim Festlegen des der Zeile zu vermeiden <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> Wert für mehrere Zeilen. Weitere Informationen finden Sie unter [Best Practices zum Skalieren des DataGridView-Steuerelements in Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Beim Erstellen eines <xref:System.Windows.Forms.DataGridViewRowErrorTextNeededEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

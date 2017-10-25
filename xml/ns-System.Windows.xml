@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows">
+  <Docs>
+    <summary>Bietet mehrere wichtige Windows Presentation Foundation (WPF)-Basiselement-Klassen, die verschiedene Klassen, die Unterstützung der WPF-Eigenschaftensystem und die Ereignis-Logik und die andere Typen, die von der WPF-Kern- und Framework breiterer genutzt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

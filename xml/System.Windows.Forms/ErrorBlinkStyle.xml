@@ -1,0 +1,82 @@
+<Type Name="ErrorBlinkStyle" FullName="System.Windows.Forms.ErrorBlinkStyle">
+  <TypeSignature Language="C#" Value="public enum ErrorBlinkStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ErrorBlinkStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ErrorBlinkStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt Konstanten an, der angibt, wann das Fehlersymbol, angegeben durch eine <see cref="T:System.Windows.Forms.ErrorProvider" />, sollten blinken, damit den Benutzer benachrichtigt werden, die ein Fehler aufgetreten ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, indem Sie <xref:System.Windows.Forms.ErrorProvider>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.ErrorProvider> Klasse, um die Benachrichtigung des Benutzers einen Dateneingabefehler. Das Beispiel erstellt eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.TextBox> -Steuerelement, ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, und ein <xref:System.Windows.Forms.ComboBox> steuern, von denen jede seinen Inhalt zu überprüfen und eine <xref:System.Windows.Forms.ErrorProvider> für jedes Steuerelement. Im Beispiel wird Fehler Symboloptionen mithilfe der <xref:System.Windows.Forms.ErrorProvider.BlinkRate%2A> und <xref:System.Windows.Forms.ErrorProvider.BlinkStyle%2A> Eigenschaften und die <xref:System.Windows.Forms.ErrorProvider.SetIconAlignment%2A> und <xref:System.Windows.Forms.ErrorProvider.SetIconPadding%2A> Methoden. Die <xref:System.Windows.Forms.ErrorProvider.SetError%2A> Methode wird aufgerufen, mit oder ohne entsprechenden Fehlertext während eines Steuerelements <xref:System.Windows.Forms.Control.Validated> Ereignis, abhängig von den Inhalt des Steuerelements.  
+  
+ [!code-cpp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CPP/errorproviderexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CS/errorproviderexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/VB/errorproviderexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AlwaysBlink">
+      <MemberSignature Language="C#" Value="AlwaysBlink" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorBlinkStyle AlwaysBlink = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorBlinkStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Blink immer, wenn das Fehlersymbol zuerst angezeigt wird, oder wenn eine Zeichenfolge zur fehlerbeschreibung für das Steuerelement festgelegt ist und das Symbol "Fehler" wird bereits angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BlinkIfDifferentError">
+      <MemberSignature Language="C#" Value="BlinkIfDifferentError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorBlinkStyle BlinkIfDifferentError = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorBlinkStyle.BlinkIfDifferentError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorBlinkStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Blinkt, wenn das Symbol "bereits angezeigt wird und eine neue Fehlerzeichenfolge für das Steuerelement festgelegt ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NeverBlink">
+      <MemberSignature Language="C#" Value="NeverBlink" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorBlinkStyle NeverBlink = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorBlinkStyle.NeverBlink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorBlinkStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nie das Fehlersymbol blinkt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

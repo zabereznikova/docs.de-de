@@ -1,0 +1,182 @@
+<Type Name="MembershipProviderCollection" FullName="System.Web.Security.MembershipProviderCollection">
+  <TypeSignature Language="C#" Value="public sealed class MembershipProviderCollection : System.Configuration.Provider.ProviderCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MembershipProviderCollection extends System.Configuration.Provider.ProviderCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.MembershipProviderCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Provider.ProviderCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web, Version=2.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine Auflistung von Objekten, die erben die <see cref="T:System.Web.Security.MembershipProvider" /> abstrakte Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Mitgliedschaftsanbieter für eine Anwendung microservices wird als eine nur-Lese- <xref:System.Web.Security.MembershipProviderCollection> durch die <xref:System.Web.Security.Membership.Providers%2A> Eigenschaft der <xref:System.Web.Security.Membership> Klasse. Sie können Zugriff auf einen bestimmten Mitgliedschaftsanbieter in der Auflistung anhand des Namens und wandeln Sie sie z. B. die spezifischen Anbietertyp <xref:System.Web.Security.SqlMembershipProvider>. Dadurch können Sie Informationen zur Mitgliedschaft aus mehreren Datenspeichern in einer einzigen Anwendung zu verwalten sowie zum Zugriff auf benutzerdefinierte Elemente von einem Mitgliedschaftsanbieter, die nicht Teil der <xref:System.Web.Security.MembershipProvider> abstrakte Klasse.  
+  
+> [!NOTE]
+>  Wenn Sie nicht mit den Mitgliedschaftsfunktionen von ASP.NET vertraut sind, finden Sie unter [Einführung in die Mitgliedschaft](http://msdn.microsoft.com/library/79184d17-f4c7-4c9f-a073-cec4f5543980) bevor Sie fortfahren. Eine Liste mit anderen Themen im Zusammenhang mit der Mitgliedschaft, finden Sie unter [Verwalten von Benutzern durch Mitgliedschaft](http://msdn.microsoft.com/library/824c3a24-f0af-427c-a652-0d2d1e9397cd).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel listet Anbieter, die für eine Anwendung und ihren entsprechenden Typen aktiviert.  
+  
+ [!code-aspx-csharp[System.Web.Security.Membership#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Membership/CS/Providerscs.aspx#7)]
+ [!code-aspx-vb[System.Web.Security.Membership#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Membership/VB/Providersvb.aspx#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MembershipProviderCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipProviderCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue, leere Auflistung von Mitgliedschaftsanbietern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ist nicht für die Verwendung aus dem Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (System.Configuration.Provider.ProviderBase provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(class System.Configuration.Provider.ProviderBase provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipProviderCollection.Add(System.Configuration.Provider.ProviderBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Configuration.Provider.ProviderBase" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Der Mitgliedschaftsanbieter, der der Auflistung hinzugefügt werden soll.</param>
+        <summary>Fügt der Auflistung einen Mitgliedschaftsanbieter hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht für die Verwendung aus dem Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="provider" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="provider" />ist nicht von einem Typ, erbt die <see cref="T:System.Web.Security.MembershipProvider" /> abstrakte Klasse.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.Security.MembershipProvider[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.Security.MembershipProvider[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipProviderCollection.CopyTo(System.Web.Security.MembershipProvider[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.Security.MembershipProvider[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale Array, in das die Elemente aus <see cref="T:System.Web.Security.MembershipProviderCollection" /> kopiert werden. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Auflistung der Mitgliedschaftsanbieter in ein eindimensionales Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet <xref:System.Collections.ArrayList.CopyTo%2A?displayProperty=nameWithType> Anbieter rollenobjekte in das angegebene Array kopiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.Security.MembershipProviderCollection.CopyTo%2A> Methode zum Kopieren der Inhalte von einem <xref:System.Web.Security.MembershipProviderCollection> auf ein Array von <xref:System.Web.Security.MembershipProvider> Objekte.  
+  
+ [!code-csharp[System.Web.Security.MembershipProviderCollection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.MembershipProviderCollection/CS/snippetscs.aspx#3)]
+ [!code-vb[System.Web.Security.MembershipProviderCollection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.MembershipProviderCollection/VB/snippetsvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente im Quellarray ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des Ziel-<paramref name="array" />.</exception>
+        <exception cref="T:System.InvalidCastException">Der Typ des Quellarrays kann nicht automatisch in den Typ des Ziel-<paramref name="array" /> umgewandelt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Security.MembershipProvider this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Security.MembershipProvider Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.MembershipProviderCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Mitgliedschaftsanbieters.</param>
+        <summary>Ruft den Mitgliedschaftsanbieter in der Auflistung ab, auf die vom angegebenen Anbieternamen verwiesen wird.</summary>
+        <value>Ein Objekt, das erbt die <see cref="T:System.Web.Security.MembershipProvider" /> abstrakte Klasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Mitgliedschaftsanbieter für eine Anwendung microservices wird als eine nur-Lese- <xref:System.Web.Security.MembershipProviderCollection> durch die <xref:System.Web.Security.Membership.Providers%2A> Eigenschaft der <xref:System.Web.Security.Membership> Klasse. Sie können Zugriff auf einen bestimmten Mitgliedschaftsanbieter in der Auflistung anhand des Namens und wandeln Sie sie z. B. die spezifischen Anbietertyp <xref:System.Web.Security.SqlMembershipProvider>. Dadurch können Sie Informationen zur Mitgliedschaft aus mehreren Datenspeichern in einer einzigen Anwendung zu verwalten sowie zum Zugriff auf benutzerdefinierte Elemente von einem Mitgliedschaftsanbieter, die nicht Teil der <xref:System.Web.Security.MembershipProvider> abstrakte Klasse.  
+  
+   
+  
+## Examples  
+ Der folgende code Beispiel greift auf eine <xref:System.Web.Security.SqlMembershipProvider> konfiguriert, die für eine Anwendung aus der <xref:System.Web.Security.Membership.Providers%2A> Eigenschaft von der <xref:System.Web.Security.Membership> Klasse nach Namen.  
+  
+ [!code-csharp[System.Web.Security.MembershipProviderCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.MembershipProviderCollection/CS/snippetscs.aspx#2)]
+ [!code-vb[System.Web.Security.MembershipProviderCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.MembershipProviderCollection/VB/snippetsvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

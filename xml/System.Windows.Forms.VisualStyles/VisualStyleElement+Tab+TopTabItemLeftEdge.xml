@@ -1,0 +1,166 @@
+<Type Name="VisualStyleElement+Tab+TopTabItemLeftEdge" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+Tab+TopTabItemLeftEdge">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.Tab.TopTabItemLeftEdge" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/Tab/TopTabItemLeftEdge extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> Objekte für jeden Zustand eines Registerkartensteuerelements, der die unteren und rechten Rand mit anderen Registerkarten-Steuerelemente. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Eigenschaft von der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge> -Klasse zurückgegeben wird ein <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für einen anderen Zustand des ein Registerkarten-Steuerelement, der die unteren und rechten Rand mit anderen Registerkarten-Steuerelemente.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge.Normal%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementTabTopTabItemLeftEdge1` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#126](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#126)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#126](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#126)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Disabled">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Disabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Disabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge.Disabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuelles Stilelement, das ein deaktiviertes Registerkarten-Steuerelement darstellt, der die unteren und rechten Rand mit anderen Registerkarten-Steuerelemente.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> , ein deaktiviertes Registerkarten-Steuerelement, der die unteren und rechten Rand mit anderen Registerkarten-Steuerelementen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge.Disabled%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge.Disabled%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementTabTopTabItemLeftEdge4` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#129](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#129)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#129](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#129)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hot">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Hot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Hot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge.Hot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuelles Stilelement, das ein aktives Registerkarten-Steuerelement darstellt, der die unteren und rechten Rand mit anderen Registerkarten-Steuerelemente.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> , ein im laufenden Systembetrieb Registerkarten-Steuerelement, der die unteren und rechten Rand mit anderen Registerkarten-Steuerelementen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge.Hot%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge.Hot%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementTabTopTabItemLeftEdge2` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#127](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#127)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#127](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#127)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Normal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Normal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge.Normal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuelles Stilelement aus, das eine normale Registerkarten-Steuerelement darstellt, der die unteren und rechten Rand mit anderen Registerkarten-Steuerelemente.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> , eine normale Registerkarten-Steuerelement, der die unteren und rechten Rand mit anderen Registerkarten-Steuerelementen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge.Normal%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge.Normal%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementTabTopTabItemLeftEdge1` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#126](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#126)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#126](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#126)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pressed">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Pressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Pressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge.Pressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein visuelles Stilelement aus, das einem gedrückten Registerkarten-Steuerelement darstellt, der die unteren und rechten Rand mit anderen Registerkarten-Steuerelemente.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> , ein gedrückten Registerkarten-Steuerelement, der die unteren und rechten Rand mit anderen Registerkarten-Steuerelementen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge.Pressed%2A> Eigenschaft zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zurückgegebenes der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge.Pressed%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawVisualStyleElementTabTopTabItemLeftEdge3` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#128](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#128)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#128](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#128)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

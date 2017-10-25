@@ -1,0 +1,402 @@
+<Type Name="ToolboxBitmapAttribute" FullName="System.Drawing.ToolboxBitmapAttribute">
+  <TypeSignature Language="C#" Value="public class ToolboxBitmapAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ToolboxBitmapAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.ToolboxBitmapAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht Ihnen die Angabe ein Symbol zum Darstellen eines Steuerelements in einem Container, z. B. die Microsoft Visual Studio-Formular-Designer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können Anwenden einer <xref:System.Drawing.ToolboxBitmapAttribute> an ein Steuerelement, damit ein Symbol von Containern, z. B. Microsoft Visual Studio Formulardesigner abgerufen werden können, die Steuerelement darstellt. Die Bitmap für das Symbol kann in einer Datei allein oder in der Assembly eingebettet, die das Steuerelement enthält. Die Größe der Bitmap, die Sie in Einbetten des Steuerelements Assembly (oder in einer separaten Datei speichern) sollten 16 x 16 sein. Die <xref:System.Drawing.ToolboxBitmapAttribute.GetImage%2A> Methode von einer <xref:System.Drawing.ToolboxBitmapAttribute> Objekt zurückgeben kann, die kleine 16 x 16-Image oder ein großes 32 x 32-Image, das erstellt wird, indem Sie das kleine Bild zu skalieren.  
+  
+ Wenn Sie unterschiedliche Versionen des Symbole mit verschiedenen Versionen der Assembly verwenden möchten, müssen Sie nicht ändern, die <xref:System.Drawing.ToolboxBitmapAttribute> für jede Version. Stattdessen können Sie die Assembly mit Deklarieren einer <xref:System.Drawing.BitmapSuffixInSameAssemblyAttribute> oder ein <xref:System.Drawing.BitmapSuffixInSatelliteAssemblyAttribute>, und geben Sie eine <xref:System.Drawing.Configuration.SystemDrawingSection.BitmapSuffix%2A> Konfigurationswert für jede Version der Assembly. In diesem Fall ein Dateinamen angegeben, indem eine <xref:System.Drawing.ToolboxBitmapAttribute> wird mit dem Bitmap-Suffix angehängt interpretiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.ToolboxBitmapAttribute> Klasse festzulegende `stop.bmp` als das Symbol "Toolbox" für die `StopSignControl`. In diesem Beispiel wird davon ausgegangen, das Vorhandensein einer 16 x 16 Pixel-Bitmap mit dem Namen `stop.bmp` unter "c:"\\.  
+  
+ [!code-cpp[System.Drawing.ToolBoxBitmapExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ToolBoxBitmapExamples/cpp/usercontrol1.cpp#1)]
+ [!code-csharp[System.Drawing.ToolBoxBitmapExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ToolBoxBitmapExamples/CS/usercontrol1.cs#1)]
+ [!code-vb[System.Drawing.ToolBoxBitmapExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ToolBoxBitmapExamples/VB/usercontrol1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolboxBitmapAttribute (string imageFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string imageFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ToolboxBitmapAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="imageFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="imageFile">Der Name der Datei, die eine 16 x 16-Bitmap enthält.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt mit einem Bild aus einer angegebenen Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.ToolboxBitmapAttribute.%23ctor%2A> Konstruktor festzulegende `stop.bmp` als das Symbol "Toolbox" für die `StopSignControl`. In diesem Beispiel wird davon ausgegangen, das Vorhandensein einer 16 x 16 Pixel-Bitmap mit dem Namen `stop.bmp` unter "c:"\\.  
+  
+ [!code-cpp[System.Drawing.ToolBoxBitmapExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ToolBoxBitmapExamples/cpp/usercontrol1.cpp#1)]
+ [!code-csharp[System.Drawing.ToolBoxBitmapExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ToolBoxBitmapExamples/CS/usercontrol1.cs#1)]
+ [!code-vb[System.Drawing.ToolBoxBitmapExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ToolBoxBitmapExamples/VB/usercontrol1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolboxBitmapAttribute (Type t);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type t) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ToolboxBitmapAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="t" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="t">Ein <see cref="T:System.Type" /> für die Bitmapressource, deren definierenden Assembly durchsucht.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> -Objekt auf Grundlage einer 16 x 16-Bitmap, die als Ressource in einer angegebenen Assembly eingebettet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor sucht eine eingebettete Ressource in der Assembly, die den vom angegebenen Typ definiert die `t` Parameter. Der Konstruktor sucht nach einer Ressource mit dem Namen Namespace.ClassName.bmp, in dem Namespace für den Namespace steht, mit der Definition der Klasse, die gemäß der `t` Parameter. Z. B. wenn ControlA im in AssemblyA.dll gespeicherten ist, sucht dann der Konstruktor AssemblyA.dll für eine Ressource mit dem Namen NamespaceA.ControlA.bmp.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.ToolboxBitmapAttribute.%23ctor%2A> Konstruktor hat, legen Sie das Symbol für das Schaltflächen-Steuerelement auf das Symbol "Toolbox" für eine <xref:System.Windows.Forms.UserControl> mit dem Namen `StopSignControl3`.  
+  
+ [!code-cpp[System.Drawing.ToolBoxBitmapExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ToolBoxBitmapExamples/cpp/usercontrol1.cpp#3)]
+ [!code-csharp[System.Drawing.ToolBoxBitmapExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ToolBoxBitmapExamples/CS/usercontrol1.cs#3)]
+ [!code-vb[System.Drawing.ToolBoxBitmapExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ToolBoxBitmapExamples/VB/usercontrol1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolboxBitmapAttribute (Type t, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type t, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ToolboxBitmapAttribute.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="t" Type="System.Type" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="t">Ein <see cref="T:System.Type" /> für die Bitmapressource, deren definierenden Assembly durchsucht.</param>
+        <param name="name">Der Name des eingebetteten Bitmapressource.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> -Objekt auf Grundlage einer 16 x 16-Bitmap, die als Ressource in einer angegebenen Assembly eingebettet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor sucht eine eingebettete Ressource in der Assembly, die den vom angegebenen Typ definiert die `t` Parameter. Der Konstruktor sucht nach einer Ressource mit dem Namen namespace.name, wobei Namespace der Namespace ist mit der Definition der Klasse, die gemäß der `t` Parameter. Nehmen wir beispielsweise an, dass ControlA einer Klasse im in AssemblyA.dll gespeicherten ist und Sie haben "MyBitmap.bmp" übergeben, um die `name` Parameter. Anschließend sucht der Konstruktor AssemblyA.dll für eine Ressource mit dem Namen NamespaceA.MyBitmap.bmp.  
+  
+   
+  
+## Examples  
+ "Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.ToolboxBitmapAttribute.%23ctor%2A> Konstruktor festzulegende `StopSignControl2.bmp` als ein Symbol" Toolbox "für die `StopSignControl2`. In diesem Beispiel wird davon ausgegangen, das Vorhandensein einer 16 x 16 Pixel-Bitmap mit dem Namen `StopSignControl2.bmp` mit seiner **BuildAction** -Eigenschaftensatz auf **EmbeddedResource**.  
+  
+ [!code-cpp[System.Drawing.ToolBoxBitmapExamples#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ToolBoxBitmapExamples/cpp/usercontrol1.cpp#2)]
+ [!code-csharp[System.Drawing.ToolBoxBitmapExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ToolBoxBitmapExamples/CS/usercontrol1.cs#2)]
+ [!code-vb[System.Drawing.ToolBoxBitmapExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ToolBoxBitmapExamples/VB/usercontrol1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.ToolboxBitmapAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Drawing.ToolboxBitmapAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.ToolboxBitmapAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.ToolboxBitmapAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> -Objekt, das die kleine und große Bild festgelegt hat <see langword="null" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ToolboxBitmapAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu überprüfende <see cref="T:System.Object" />.</param>
+        <summary>Gibt an, ob das angegebene Objekt eine <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> -Objekt und identisch mit dieser <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt.</summary>
+        <returns>Diese Methode gibt <see langword="true" /> Wenn <paramref name="value" /> ist sowohl ein <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> -Objekt und identisch mit dieser <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ToolboxBitmapAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Hashcode für diese <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt.</summary>
+        <returns>Der Hashcode für diese <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImage">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image GetImage (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Image GetImage(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ToolboxBitmapAttribute.GetImage(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">Wenn diese <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt verfügt noch nicht über ein kleines Bild diese Methode sucht eine Bitmapressource in der Assembly, die den Typ des Objekts, angegeben durch den Komponentenparameter definiert. Z. B. Wenn Sie ein Objekt vom Typ ControlA an den Komponentenparameter übergeben, durchsucht diese Methode die Assembly, die ControlA definiert.</param>
+        <summary>Ruft den kleinen <see cref="T:System.Drawing.Image" /> zugeordnete <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt.</summary>
+        <returns>Kleine <see cref="T:System.Drawing.Image" /> zugeordnete <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sucht eine Ressource mit dem Namen Namespace.ClassName.bmp, in dem Namespace für den Namespace steht, mit der Definition des Typs des Objekts gemäß der `component` Parameter. Nehmen wir beispielsweise an, die Sie ein Objekt vom Typ ControlA übergeben, die `component` Parameter. Wenn ControlA im in AssemblyA.dll gespeicherten ist, sucht diese Methode für eine Ressource mit dem Namen NamespaceA.ControlA.bmp AssemblyA.dll.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Drawing.ToolboxBitmapAttribute.GetImage%2A>-Methode veranschaulicht.  
+  
+ [!code-cpp[System.Drawing.ToolBoxBitmapExamples#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ToolBoxBitmapExamples/cpp/usercontrol1.cpp#4)]
+ [!code-csharp[System.Drawing.ToolBoxBitmapExamples#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ToolBoxBitmapExamples/CS/usercontrol1.cs#4)]
+ [!code-vb[System.Drawing.ToolBoxBitmapExamples#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ToolBoxBitmapExamples/VB/usercontrol1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImage">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image GetImage (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Image GetImage(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ToolboxBitmapAttribute.GetImage(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Wenn diese <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt verfügt noch nicht über ein kleines Bild diese Methode sucht eine Bitmapressource in der Assembly, die durch den Typparameter angegebenen Typ definiert. Z. B. wenn typeof(ControlA) an den Typparameter übergeben wird, durchsucht dieser Methode die Assembly, die ControlA definiert.</param>
+        <summary>Ruft den kleinen <see cref="T:System.Drawing.Image" /> zugeordnete <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt.</summary>
+        <returns>Kleine <see cref="T:System.Drawing.Image" /> zugeordnete <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sucht eine Ressource mit dem Namen Namespace.ClassName.bmp, in dem Namespace für den Namespace steht, mit der Definition des Typs gemäß den `type` Parameter. Nehmen wir beispielsweise an Sie übergeben typeof(ControlA) an die `type` Parameter. Wenn ControlA im in AssemblyA.dll gespeicherten ist, sucht diese Methode für eine Ressource mit dem Namen NamespaceA.ControlA.bmp AssemblyA.dll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImage">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image GetImage (object component, bool large);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Image GetImage(object component, bool large) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ToolboxBitmapAttribute.GetImage(System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="large" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="component">Wenn diese <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt verfügt noch nicht über ein kleines Bild diese Methode sucht eine Bitmapressource in der Assembly, die den Typ des Objekts, angegeben durch den Komponentenparameter definiert. Z. B. Wenn Sie ein Objekt vom Typ ControlA an den Komponentenparameter übergeben, durchsucht diese Methode die Assembly, die ControlA definiert.</param>
+        <param name="large">Gibt an, ob diese Methode gibt ein großes Bild zurück (<see langword="true" />) oder ein kleines Bild (<see langword="false" />). Das kleine Bild ist 16 x 16, und das große Bild ist 32 x 32.</param>
+        <summary>Ruft ab, die kleinen oder großen <see cref="T:System.Drawing.Image" /> zugeordnete <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Image" /> Objekt zugeordnete <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sucht eine Ressource mit dem Namen Namespace.ClassName.bmp, in dem Namespace für den Namespace steht, mit der Definition des Typs des Objekts gemäß der `component` Parameter. Nehmen wir beispielsweise an, die Sie ein Objekt vom Typ ControlA übergeben, die `component` Parameter. Wenn ControlA im in AssemblyA.dll gespeicherten ist, sucht diese Methode für eine Ressource mit dem Namen NamespaceA.ControlA.bmp AssemblyA.dll.  
+  
+ Wenn diese <xref:System.Drawing.ToolboxBitmapAttribute> Objekt verfügt noch nicht über ein großes Bild, erstellt diese Methode ein großes Bild, indem Sie das kleine Bild zu skalieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImage">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image GetImage (Type type, bool large);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Image GetImage(class System.Type type, bool large) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ToolboxBitmapAttribute.GetImage(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="large" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">Wenn diese <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt verfügt noch nicht über ein kleines Bild diese Methode sucht eine Bitmapressource in der Assembly, die mit dem Typ der Komponente definiert. Z. B. wenn typeof(ControlA) an den Typparameter übergeben wird, durchsucht dieser Methode die Assembly, die ControlA definiert.</param>
+        <param name="large">Gibt an, ob diese Methode gibt ein großes Bild zurück (<see langword="true" />) oder ein kleines Bild (<see langword="false" />). Das kleine Bild ist 16 x 16, und das große Bild ist 32 x 32.</param>
+        <summary>Ruft ab, die kleinen oder großen <see cref="T:System.Drawing.Image" /> zugeordnete <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Image" /> zugeordnete <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sucht eine Ressource mit dem Namen Namespace.ClassName.bmp, in dem Namespace für den Namespace steht, mit der Definition des Typs gemäß den `type` Parameter. Nehmen wir beispielsweise an Sie übergeben ein typeof(ControlA) an die `type` Parameter. Wenn ControlA im in AssemblyA.dll gespeicherten ist, sucht diese Methode für eine Ressource mit dem Namen NamespaceA.ControlA.bmp AssemblyA.dll.  
+  
+ Wenn diese <xref:System.Drawing.ToolboxBitmapAttribute> Objekt verfügt noch nicht über ein großes Bild, erstellt diese Methode ein großes Bild, indem Sie das kleine Bild zu skalieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImage">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image GetImage (Type type, string imgName, bool large);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Image GetImage(class System.Type type, string imgName, bool large) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ToolboxBitmapAttribute.GetImage(System.Type,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="imgName" Type="System.String" />
+        <Parameter Name="large" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">Wenn diese <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt verfügt noch nicht über ein kleines Bild diese Methode sucht eine eingebettete Bitmap-Ressource in der Assembly, die mit dem Typ der Komponente definiert. Z. B. wenn typeof(ControlA) an den Typparameter übergeben wird, durchsucht dieser Methode die Assembly, die ControlA definiert.</param>
+        <param name="imgName">Der Name des eingebetteten Bitmapressource.</param>
+        <param name="large">Gibt an, ob diese Methode gibt ein großes Bild zurück (<see langword="true" />) oder ein kleines Bild (<see langword="false" />). Das kleine Bild ist 16 x 16, und das große Bild ist 32 x 32.</param>
+        <summary>Ruft ab, die kleinen oder großen <see cref="T:System.Drawing.Image" /> zugeordnete <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Image" /> zugeordnete <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sucht eine Ressource mit dem Namen Namespace.ClassName.bmp, in dem Namespace für den Namespace steht, mit der Definition des Typs gemäß den `type` Parameter. Nehmen wir beispielsweise an Sie übergeben typeof(ControlA) an die `type` Parameter, und Sie "haben MyBitmap.bmp" an den ImgName-Parameter übergeben. Wenn ControlA im in AssemblyA.dll gespeicherten ist, sucht diese Methode für eine Ressource mit dem Namen NamespaceA.MyBitmap.bmp AssemblyA.dll.  
+  
+ Wenn diese <xref:System.Drawing.ToolboxBitmapAttribute> Objekt verfügt noch nicht über ein großes Bild, erstellt diese Methode ein großes Bild, indem Sie das kleine Bild zu skalieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImageFromResource">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Image GetImageFromResource (Type t, string imageName, bool large);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Image GetImageFromResource(class System.Type t, string imageName, bool large) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ToolboxBitmapAttribute.GetImageFromResource(System.Type,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t" Type="System.Type" />
+        <Parameter Name="imageName" Type="System.String" />
+        <Parameter Name="large" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="t">Diese Methode sucht nach einer eingebetteten Bitmapressource in der Assembly, die von der t-Parameter angegeben Typs definiert. Z. B. wenn typeof(ControlA) an den t-Parameter übergeben wird, durchsucht dieser Methode die Assembly, die ControlA definiert.</param>
+        <param name="imageName">Der Name des eingebetteten Bitmapressource.</param>
+        <param name="large">Gibt an, ob diese Methode ein großes Bild (True) oder ein kleines Bild (False) zurückgibt. Das kleine Bild ist 16 x 16, und das große Bild ist 32 x 32.</param>
+        <summary>Gibt ein <see cref="T:System.Drawing.Image" /> -Objekt auf Grundlage einer Bitmapressource, die in einer Assembly eingebettet ist.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Image" /> -Objekt auf Grundlage der abgerufenen Bitmap.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sucht eine Ressource mit dem Namen Namespace.ClassName.bmp, in dem Namespace für den Namespace steht, mit der Definition des Typs gemäß den `t` Parameter. Nehmen wir beispielsweise an Sie übergeben typeof(ControlA) an den `t` angeben und Sie "MyBitmap.bmp" an den ImgName-Parameter übergeben. Wenn ControlA im in AssemblyA.dll gespeicherten ist, sucht diese Methode für eine Ressource mit dem Namen NamespaceA.MyBitmap.bmp AssemblyA.dll.  
+  
+ Diese Methode dient zum Abrufen einer 16 x 16-Bitmap-Ressource, die in einer Assembly eingebettet ist. Es ist jedoch nicht erforderlich, dass die eingebettete Bitmap eine Größe von 16 x 16 hat. Die Bitmap, die aus der Assembly (unabhängig von der Größe) abgerufen werden, gilt das kleine Bild. Das große Bild wird durch die "small" Image auf eine Größe von 32 x 32 Skalierung erstellt. Damit das große Bild immer 32 x 32, unabhängig von der Größe der Bitmap aus der Assembly abgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

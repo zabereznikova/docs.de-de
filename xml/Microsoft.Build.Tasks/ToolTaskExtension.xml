@@ -1,0 +1,226 @@
+<Type Name="ToolTaskExtension" FullName="Microsoft.Build.Tasks.ToolTaskExtension">
+  <TypeSignature Language="C#" Value="public abstract class ToolTaskExtension : Microsoft.Build.Utilities.ToolTask" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ToolTaskExtension extends Microsoft.Build.Utilities.ToolTask" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.ToolTaskExtension" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Utilities.ToolTask</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Umfasst erweiterte Hilfsprogrammmethoden zum Erstellen einer Aufgabe, die ein Befehlszeilentool umschließt.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="AddCommandLineCommands">
+      <MemberSignature Language="C#" Value="protected virtual void AddCommandLineCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void AddCommandLineCommands(class Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ToolTaskExtension.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandLine" Type="Microsoft.Build.Tasks.CommandLineBuilderExtension" />
+      </Parameters>
+      <Docs>
+        <param name="commandLine">Die <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> ausgefüllt.</param>
+        <summary>Füllt den angegebenen <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> mit den Schaltern und anderen Informationen, die das Befehlszeilentool von der Befehlszeile und nicht aus einer Antwortdatei ausführen muss.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddResponseFileCommands">
+      <MemberSignature Language="C#" Value="protected virtual void AddResponseFileCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void AddResponseFileCommands(class Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ToolTaskExtension.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandLine" Type="Microsoft.Build.Tasks.CommandLineBuilderExtension" />
+      </Parameters>
+      <Docs>
+        <param name="commandLine">Die <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> ausgefüllt.</param>
+        <summary>Füllt den angegebenen <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> mit den Schaltern und anderen Informationen, die das Befehlszeilentool aus einer Antwortdatei ausgeführt werden kann.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Bag">
+      <MemberSignature Language="C#" Value="protected System.Collections.Hashtable Bag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Hashtable Bag" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ToolTaskExtension.Bag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der von der abgeleiteten Klasse verwendeten Parameter ab.</summary>
+        <value>Die Auflistung der von der abgeleiteten Klasse verwendeten Parameter.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCommandLineCommands">
+      <MemberSignature Language="C#" Value="protected override string GenerateCommandLineCommands ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GenerateCommandLineCommands() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ToolTaskExtension.GenerateCommandLineCommands" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Schalter und andere Informationen ab, die das Befehlszeilentool direkt von der Befehlszeile aus und nicht aus einer Antwortdatei heraus ausführen muss.</summary>
+        <returns>Eine Zeichenfolge, die die Schalter und andere Informationen enthält, die das Befehlszeilentool direkt von der Befehlszeile aus und nicht aus einer Antwortdatei heraus ausführen muss.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateResponseFileCommands">
+      <MemberSignature Language="C#" Value="protected override string GenerateResponseFileCommands ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GenerateResponseFileCommands() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ToolTaskExtension.GenerateResponseFileCommands" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den vom Befehlszeilentool verwendeten Schalter ab, um die Antwortdatei anzugeben.</summary>
+        <returns>Der vom Befehlszeilentool verwendete Schalter zum Angeben der Antwortdatei.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoolParameterWithDefault">
+      <MemberSignature Language="C#" Value="protected bool GetBoolParameterWithDefault (string parameterName, bool defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance bool GetBoolParameterWithDefault(string parameterName, bool defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ToolTaskExtension.GetBoolParameterWithDefault(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="defaultValue" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters, der zurückgegeben werden soll.</param>
+        <param name="defaultValue">Der Wert wird zurückgegeben, wenn <c>ParameterName</c> ist nicht in der <see cref="P:Microsoft.Build.Tasks.ToolTaskExtension.Bag" />.</param>
+        <summary>Ruft den Wert des angegebenen booleschen Parameters ab.</summary>
+        <returns>Der Parameterwert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `parameterName` ist nicht in der <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag%2A>, `defaultValue` wird zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetIntParameterWithDefault">
+      <MemberSignature Language="C#" Value="protected int GetIntParameterWithDefault (string parameterName, int defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance int32 GetIntParameterWithDefault(string parameterName, int32 defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ToolTaskExtension.GetIntParameterWithDefault(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="defaultValue" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters, der zurückgegeben werden soll.</param>
+        <param name="defaultValue">Der Wert wird zurückgegeben, wenn <c>ParameterName</c> ist nicht in der <see cref="P:Microsoft.Build.Tasks.ToolTaskExtension.Bag" />.</param>
+        <summary>Ruft den Wert des angegebenen ganzzahligen Parameters ab.</summary>
+        <returns>Der Parameterwert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `parameterName` ist nicht in der <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag%2A>, `defaultValue` wird zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HasLoggedErrors">
+      <MemberSignature Language="C#" Value="protected override bool HasLoggedErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasLoggedErrors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ToolTaskExtension.HasLoggedErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt zurück, ob diese ToolTask Fehler protokolliert hat.</summary>
+        <value>
+          <see langword="true" />Wenn die ToolTask Fehler protokolliert wurden, <see langword="false" /> Wenn andernfalls.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Utilities.TaskLoggingHelper Log { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Utilities.TaskLoggingHelper Log" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ToolTaskExtension.Log" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Utilities.TaskLoggingHelper</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Instanz von einem <see cref="T:Microsoft.Build.Tasks.TaskLoggingHelperExtension" /> Klasse, die Aufgabenprotokollierungsmethoden enthält.</summary>
+        <value>Eine Instanz von einem <see cref="T:Microsoft.Build.Tasks.TaskLoggingHelperExtension" /> Klasse, die Aufgabenprotokollierungsmethoden enthält.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

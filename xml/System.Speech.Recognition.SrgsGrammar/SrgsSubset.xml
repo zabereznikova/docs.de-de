@@ -1,0 +1,125 @@
+<Type Name="SrgsSubset" FullName="System.Speech.Recognition.SrgsGrammar.SrgsSubset">
+  <TypeSignature Language="C#" Value="public class SrgsSubset : System.Speech.Recognition.SrgsGrammar.SrgsElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SrgsSubset extends System.Speech.Recognition.SrgsGrammar.SrgsElement" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SrgsGrammar.SrgsSubset" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Speech.Recognition.SrgsGrammar.SrgsElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{DebuggerDisplayString ()}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Methoden und Eigenschaften, die entsprechend eine angegebene Zeichenfolge mit einem gesprochenen Ausdruck verwendet werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der gesprochene Ausdruck kann als eine Teilmenge die angegebene Zeichenfolge enthalten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsSubset (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsSubset.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Teil des Ausdrucks verglichen werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsSubset" /> -Klasse und gibt den Teil des Ausdrucks verglichen werden.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsSubset (string text, System.Speech.Recognition.SubsetMatchingMode matchingMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, valuetype System.Speech.Recognition.SubsetMatchingMode matchingMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsSubset.#ctor(System.String,System.Speech.Recognition.SubsetMatchingMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="matchingMode" Type="System.Speech.Recognition.SubsetMatchingMode" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Teil des Ausdrucks verglichen werden.</param>
+        <param name="matchingMode">Der Modus, in dem <c>Text</c> sollte mit der gesprochene Satz abgeglichen werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsSubset" /> -Klasse und gibt den Teil verglichen werden und der Modus, in dem der Text abgeglichen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `matchingMode` Parameter muss ein Mitglied der <xref:System.Speech.Recognition.SubsetMatchingMode> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="text" /> ist leer.  
+  
+ <paramref name="text" />enthält nur Leerzeichen (d. h. "", "\t", "\n", "\r").  
+  
+ <paramref name="matchingMode" />wird festgelegt, auf einen Wert in der <see cref="T:System.Speech.Recognition.SubsetMatchingMode" /> Enumeration.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchingMode">
+      <MemberSignature Language="C#" Value="public System.Speech.Recognition.SubsetMatchingMode MatchingMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Speech.Recognition.SubsetMatchingMode MatchingMode" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsSubset.MatchingMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SubsetMatchingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den übereinstimmungsmodus für die Teilmenge.</summary>
+        <value>Ein Member aus der <see cref="T:System.Speech.Recognition.SubsetMatchingMode" />-Enumeration.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Es wird versucht, festzulegende <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsSubset.MatchingMode" /> auf einen Wert, der nicht Mitglied ist die <see cref="T:System.Speech.Recognition.SubsetMatchingMode" /> Enumeration.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsSubset.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt als Zeichenfolge, die Teil einer gesprochene Satz abzugleichenden enthält.</summary>
+        <value>Eine Zeichenfolge, die Teil einer gesprochene Satz abzugleichenden enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Es wird versucht, festzulegende <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsSubset.Text" /> auf <see langword="null" /> oder auf eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentException">Es wird versucht, festzulegende <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsSubset.Text" /> verwenden eine Zeichenfolge, nur Leerzeichen enthält ("", "\t", "\n", "\r").</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

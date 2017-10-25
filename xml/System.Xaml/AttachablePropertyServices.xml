@@ -1,0 +1,200 @@
+<Type Name="AttachablePropertyServices" FullName="System.Xaml.AttachablePropertyServices">
+  <TypeSignature Language="C#" Value="public static class AttachablePropertyServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AttachablePropertyServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.AttachablePropertyServices" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt statische Hilfsmethoden erhalten, Werte und Accessor-Methodeninformationen über eine anfügbare Eigenschaft und Arbeiten mit einem Speicher für angefügte Eigenschaften bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten Funktionen in dieser Klasse benötigt ein Speicher für angefügte Eigenschaften, die in der Regel implementiert die <xref:System.Xaml.IAttachedPropertyStore> Schnittstelle. Allerdings Parameter zum Übergeben des Speichers in <xref:System.Xaml.AttachablePropertyServices> sind nicht typisiert als Schnittstelle und stattdessen als typisiert sind `object`. Dies liegt daran können Sie ein beliebiges Objekt übergeben, und in diesem Fall wird eine interne anfügbare Eigenschaft Standardspeicher verwendet.  
+  
+ Bewährte Methode für die Objekte ist an das Objekt übergeben, die sonst dem Speicher zugeordnet. Übergeben Sie `null` um anzugeben, dass Sie kein <xref:System.Xaml.IAttachedPropertyStore> verwenden. Übergeben von `null` gibt Codepfade, die keine weiteren Aktionen erforderlich. Ein Objekt übergeben, die ungleich Null ist, wertet aber als `null` für eine versuchte <xref:System.Xaml.IAttachedPropertyStore> umgewandelt, die anfügbare Eigenschaft Standardspeicher verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CopyPropertiesTo">
+      <MemberSignature Language="C#" Value="public static void CopyPropertiesTo (object instance, System.Collections.Generic.KeyValuePair&lt;System.Xaml.AttachableMemberIdentifier,object&gt;[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CopyPropertiesTo(object instance, valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.Xaml.AttachableMemberIdentifier, object&gt;[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.AttachablePropertyServices.CopyPropertiesTo(System.Object,System.Collections.Generic.KeyValuePair{System.Xaml.AttachableMemberIdentifier,System.Object}[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="array" Type="System.Collections.Generic.KeyValuePair&lt;System.Xaml.AttachableMemberIdentifier,System.Object&gt;[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Einen bestimmten anfügbaren Eigenschaftenspeicher, der implementiert <see cref="T:System.Xaml.IAttachedPropertyStore" />; oder eine statische anfügbare Eigenschaft Standardspeicher Zugriff auf Objekte ungleich Null.</param>
+        <param name="array">Das Zielarray. Das Array ist ein generisches Array übergeben werden sollte und Komponenten müssen <see cref="T:System.Xaml.AttachableMemberIdentifier" /> und <see langword="object" />.</param>
+        <param name="index">Der Quellindex, in das kopiert werden soll.</param>
+        <summary>Kopiert alle anfügbare Eigenschaft/Wert-Paare an, aus einem Store angegebene anfügbare Eigenschaft und in ein Zielarray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode wird aufgerufen, die einen zugrunde liegenden <xref:System.Collections.Generic.ICollection%601.CopyTo%2A> Implementierung, die eingeschränkt wird mit einem Schlüssel/Wert-Paar, die Quelle von Ausnahmen, die nicht in diesem Thema aufgeführt sind, die möglicherweise.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttachedPropertyCount">
+      <MemberSignature Language="C#" Value="public static int GetAttachedPropertyCount (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetAttachedPropertyCount(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.AttachablePropertyServices.GetAttachedPropertyCount(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Einen bestimmten anfügbaren Eigenschaftenspeicher, der implementiert <see cref="T:System.Xaml.IAttachedPropertyStore" />; oder eine statische anfügbare Eigenschaft Standardspeicher Zugriff auf Objekte ungleich Null.</param>
+        <summary>Gibt die Anzahl der Einträge anfügbare Eigenschaft, die im angegebenen Speicher zurück.</summary>
+        <returns>Die ganzzahligen Anzahl von Einträgen im Speicher.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveProperty">
+      <MemberSignature Language="C#" Value="public static bool RemoveProperty (object instance, System.Xaml.AttachableMemberIdentifier name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool RemoveProperty(object instance, class System.Xaml.AttachableMemberIdentifier name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.AttachablePropertyServices.RemoveProperty(System.Object,System.Xaml.AttachableMemberIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="name" Type="System.Xaml.AttachableMemberIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Einen bestimmten anfügbaren Eigenschaftenspeicher, der implementiert <see cref="T:System.Xaml.IAttachedPropertyStore" />; oder eine statische anfügbare Eigenschaft Standardspeicher Zugriff auf Objekte ungleich Null.</param>
+        <param name="name">Der Bezeichner für den Eintrag anfügbare Eigenschaft aus dem Speicher entfernt werden soll.</param>
+        <summary>Entfernt den Eintrag für die angegebene anfügbare Eigenschaft aus dem angegebenen Speicher.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Eintrag anfügbare Eigenschaft für <paramref name="name" /> wurde im Speicher gefunden und daraus entfernt wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geschäfte sind pro Instanz; aus diesem Grund in einem Speicher der `name` Wert sollte eindeutig sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public static void SetProperty (object instance, System.Xaml.AttachableMemberIdentifier name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetProperty(object instance, class System.Xaml.AttachableMemberIdentifier name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.AttachablePropertyServices.SetProperty(System.Object,System.Xaml.AttachableMemberIdentifier,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="name" Type="System.Xaml.AttachableMemberIdentifier" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Einen bestimmten anfügbaren Eigenschaftenspeicher, der implementiert <see cref="T:System.Xaml.IAttachedPropertyStore" />; oder ein beliebiges Objekt ungleich Null, um einen statischen Standardwert anfügbare Eigenschaftenspeicher verwenden.</param>
+        <param name="name">Der Bezeichner des Eintrags anfügbare Eigenschaft für die einen Wert festgelegt werden soll.</param>
+        <param name="value">Der festzulegende Wert.</param>
+        <summary>Legt einen Wert für die angegebene anfügbare Eigenschaft im angegebenen Speicher fest.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Ein Wert konnte nicht im Speicher festgelegt werden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetProperty">
+      <MemberSignature Language="C#" Value="public static bool TryGetProperty (object instance, System.Xaml.AttachableMemberIdentifier name, out object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryGetProperty(object instance, class System.Xaml.AttachableMemberIdentifier name, [out] object&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.AttachablePropertyServices.TryGetProperty(System.Object,System.Xaml.AttachableMemberIdentifier,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="name" Type="System.Xaml.AttachableMemberIdentifier" />
+        <Parameter Name="value" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Einen bestimmten anfügbaren Eigenschaftenspeicher, der implementiert <see cref="T:System.Xaml.IAttachedPropertyStore" />; oder ein beliebiges Objekt ungleich Null, um einen statischen Standardwert anfügbare Eigenschaftenspeicher verwenden.</param>
+        <param name="name">Der Bezeichner des Eintrags anfügbare Eigenschaft für den einen Wert abgerufen werden soll.</param>
+        <param name="value">Out-Parameter. Diese Methode zurückgibt, enthält das Zielobjekt für den Wert, wenn <c>Namen</c> im Speicher vorhanden ist und einen Wert hat.</param>
+        <summary>Versucht, einen Wert für die angegebene anfügbare Eigenschaft im angegebenen Speicher abzurufen. Wird keine Ausnahme auslöst, wenn die bestimmte anfügbare Eigenschaft im Speicher nicht vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Eintrag anfügbare Eigenschaft für <paramref name="name" /> im Speicher gefunden wurde und ein Wert bereitgestellt wurde, um <paramref name="value" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static bool TryGetProperty&lt;T&gt; (object instance, System.Xaml.AttachableMemberIdentifier name, out T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryGetProperty&lt;T&gt;(object instance, class System.Xaml.AttachableMemberIdentifier name, [out] !!T&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.AttachablePropertyServices.TryGetProperty``1(System.Object,System.Xaml.AttachableMemberIdentifier,``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="name" Type="System.Xaml.AttachableMemberIdentifier" />
+        <Parameter Name="value" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der erwartete Typ der Ausgabe.</typeparam>
+        <param name="instance">Einen bestimmten anfügbaren Eigenschaftenspeicher, der implementiert <see cref="T:System.Xaml.IAttachedPropertyStore" />; oder eine statische anfügbare Eigenschaft Standardspeicher Zugriff auf Objekte ungleich Null.</param>
+        <param name="name">Der Bezeichner des Eintrags anfügbare Eigenschaft für den einen Wert abgerufen werden soll.</param>
+        <param name="value">Out-Parameter. Diese Methode zurückgibt, enthält das Zielobjekt für den Wert, wenn <c>Namen</c> im Speicher vorhanden ist und einen Wert hat.</param>
+        <summary>Versucht, einen Wert für die angegebene anfügbare Eigenschaft im angegebenen Speicher abrufen ein Formulars generische Ausgabe zurückgeben. Wird keine Ausnahme auslöst, wenn die bestimmte anfügbare Eigenschaft im Speicher nicht vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Eintrag anfügbare Eigenschaft für <paramref name="name" /> im Speicher gefunden wurde und ein Wert bereitgestellt wurde, um <paramref name="value" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

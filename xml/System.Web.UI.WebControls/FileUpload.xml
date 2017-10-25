@@ -1,0 +1,629 @@
+<Type Name="FileUpload" FullName="System.Web.UI.WebControls.FileUpload">
+  <TypeSignature Language="C#" Value="public class FileUpload : System.Web.UI.WebControls.WebControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileUpload extends System.Web.UI.WebControls.WebControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FileUpload" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.PreviewControlDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlValueProperty("FileBytes")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ValidationProperty("FileName")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Zeigt ein Textfeldsteuerelement und eine Schaltfläche zum Durchsuchen an, mit denen Benutzer eine Datei zum Hochladen auf den Server auswählen können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [Speichern von hochgeladenen Dateien](#saving_uploaded_files)  
+  
+-   [Überlegungen zur Sicherheit](#security_considerations)  
+  
+-   [Einschränkungen beim Arbeitsspeicher](#memory_limitations)  
+  
+-   [Verwenden das FileUpload-Steuerelement mit dem UpdatePanel-Steuerelement](#using_the_FileUpload_Control_with_the_UpdatePanel_control)  
+  
+-   [Deklarationssyntax](#DeclarativeSyntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Die <xref:System.Web.UI.WebControls.FileUpload> -Klasse zeigt ein Textfeldsteuerelement und eine Schaltfläche zum Durchsuchen, mit denen Benutzer wählen Sie eine Datei auf dem Client und auf dem Webserver hochladen. Der Benutzer gibt die Datei hochladen, indem Sie den vollständigen Pfad der Datei auf dem lokalen Computer eingeben (z. B. **C:\MyFiles\TestFile.txt**) in das Textfeld des Steuerelements. Alternativ kann der Benutzer die Datei auswählen, durch Klicken auf die **Durchsuchen** aus, und suchen Sie in der **Choose File** (Dialogfeld).  
+  
+ Verwenden der <xref:System.Web.UI.WebControls.FileUpload.FileName%2A> Eigenschaft, um den Namen einer Datei auf einem Client mit dem Hochladen der <xref:System.Web.UI.WebControls.FileUpload> Steuerelement. Der Dateiname, die diese Eigenschaft gibt umfasst nicht den Pfad der Datei auf dem Client.  
+  
+ Die <xref:System.Web.UI.WebControls.FileUpload.FileContent%2A> Eigenschaft ruft eine <xref:System.IO.Stream> -Objekt, das auf eine Datei zum Hochladen verweist. Verwenden Sie diese Eigenschaft, Zugriff auf den Inhalt der Datei als Byte. Beispielsweise können Sie die <xref:System.IO.Stream> von zurückgegebene Objekt der <xref:System.Web.UI.WebControls.FileUpload.FileContent%2A> Eigenschaft, um den Inhalt der Datei als Bytes lesen und speichern sie in ein Bytearray. Alternativ können Sie die <xref:System.Web.UI.WebControls.FileUpload.FileBytes%2A> Eigenschaft zum Abrufen aller Bytes in der Datei.  
+  
+ Die <xref:System.Web.UI.WebControls.FileUpload.PostedFile%2A> Eigenschaft ruft den zugrunde liegenden <xref:System.Web.HttpPostedFile> -Objekt für die Datei hochladen. Sie können diese Eigenschaft verwenden, um zusätzliche Eigenschaften für die Datei zugreifen. Die <xref:System.Web.HttpPostedFile.ContentLength%2A> Eigenschaft ruft die Länge der Datei ab. Die <xref:System.Web.HttpPostedFile.ContentType%2A> -Eigenschaft ruft den MIME-Inhaltstyp der Datei ab. Darüber hinaus können Sie die <xref:System.Web.UI.WebControls.FileUpload.PostedFile%2A> aufzurufende Eigenschaft der <xref:System.Web.HttpPostedFile.FileName%2A> -Eigenschaft, die <xref:System.Web.HttpPostedFile.InputStream%2A> -Eigenschaft, und die <xref:System.Web.HttpPostedFile.SaveAs%2A> Methode. Allerdings wird die gleiche Funktionalität bereitgestellt, durch die <xref:System.Web.UI.WebControls.FileUpload.FileName%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.FileUpload.FileContent%2A> -Eigenschaft, und die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> Methode.  
+  
+<a name="saving_uploaded_files"></a>   
+## <a name="saving-uploaded-files"></a>Speichern von hochgeladenen Dateien  
+ Die <xref:System.Web.UI.WebControls.FileUpload> Steuerelement speichert nicht automatisch eine Datei mit dem Server, nachdem der Benutzer die hochzuladende Datei auswählt. Sie müssen explizit ein Steuerelement oder einen Mechanismus, der der Benutzer auf die angegebene Datei Absenden angeben. Sie können z. B. eine Schaltfläche bereitstellen, die der Benutzer klickt, um die Datei hochzuladen. Der Code, den Sie zum Speichern der angegebenen Datei schreiben sollten Aufrufen der <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> -Methode, die den Inhalt einer Datei in einem angegebenen Pfad auf dem Server gespeichert. In der Regel die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> Methode wird aufgerufen, in eine Ereignisbehandlungsmethode für ein Ereignis, das ein an den Server auslöst. Wenn Sie eine Schaltfläche zum Absenden einer Datei angeben, können Sie den Code zum Speichern der Datei in die Ereignisbehandlungsmethode für das Click-Ereignis einschließen.  
+  
+ Vor dem Aufruf der <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> Methode zum Speichern der Datei mit dem Server, der <xref:System.Web.UI.WebControls.FileUpload.HasFile%2A> Eigenschaft, um zu überprüfen, ob die <xref:System.Web.UI.WebControls.FileUpload> -Steuerelement eine Datei enthält. Wenn die <xref:System.Web.UI.WebControls.FileUpload.HasFile%2A> gibt `true`, rufen Sie die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> Methode. Wenn zurückgegeben `false`, eine Meldung angezeigt, die der Benutzer, der angibt, dass das Steuerelement eine Datei nicht enthalten ist. Aktivieren Sie nicht die <xref:System.Web.UI.WebControls.FileUpload.PostedFile%2A> Eigenschaft, um zu bestimmen, ob eine Datei zum Hochladen vorhanden ist, da standardmäßig enthält diese Eigenschaft auf 0 Byte. Daher auch dann, wenn die <xref:System.Web.UI.WebControls.FileUpload> Steuerelement leer ist, ist die <xref:System.Web.UI.WebControls.FileUpload.PostedFile%2A> Eigenschaft gibt einen Wert ungleich Null zurück.  
+  
+<a name="security_considerations"></a>   
+## <a name="security-considerations"></a>Sicherheitsüberlegungen  
+ Beim Aufrufen der <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> -Methode, geben Sie den vollständigen Pfad des Verzeichnisses, in dem die hochgeladene Datei gespeichert. Wenn Sie explizit keinen Pfad in Ihrem Anwendungscode angeben, wird eine Ausnahme ausgelöst, wenn ein Benutzer versucht, eine Datei hochzuladen. Dieses Verhalten trägt die Dateien auf dem Server zu schützen, indem Sie verhindern, dass Benutzer können auf beliebige Speicherbereiche Verzeichnisstruktur für die Anwendung zu schreiben, als auch den Zugriff auf vertrauliche Stammverzeichnisse verhindern.  
+  
+ Die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> -Methode schreibt die hochgeladene Datei in das angegebene Verzeichnis. Aus diesem Grund muss die ASP.NET-Anwendung Schreibzugriff auf das Verzeichnis auf dem Server verfügen. Es gibt zwei Möglichkeiten, die Anwendung Schreibzugriff abrufen kann. Sie können explizit Schreibzugriff auf das Konto gewähren, unter denen die Anwendung ausgeführt wird, in das Verzeichnis, in dem die hochgeladenen Dateien gespeichert werden. Alternativ können Sie die Ebene der Vertrauenswürdigkeit erhöhen, die das die ASP.NET-Anwendung gewährt wird. Um Schreibzugriff auf das ausführende Verzeichnis für die Anwendung zu erhalten, müssen Sie die Anwendung gewährt der <xref:System.Web.AspNetHostingPermission> Objekt mit der Vertrauensebene, die zum Festlegen der <xref:System.Web.AspNetHostingPermissionLevel?displayProperty=nameWithType> Wert. Erhöhen die Ebene der Vertrauenswürdigkeit erhöht die Anwendung Zugriff auf Ressourcen auf dem Server. Beachten Sie, dass dies keine sichere Vorgehensweise ist, da ein böswilliger Benutzer, der die Kontrolle über Ihre Anwendung erlangt auch unter diesem höheres Maß an Vertrauenswürdigkeit ausgeführt werden kann. Es ist eine bewährte Methode, eine ASP.NET-Anwendung im Kontext eines Benutzers mit den mindestens erforderlichen Berechtigungen ausgeführt werden, die zum Ausführen der Anwendung erforderlich sind. Weitere Informationen zur Sicherheit in ASP.NET-Anwendungen finden Sie unter [grundlegende Sicherheitsmaßnahmen für Webanwendungen](http://msdn.microsoft.com/library/3eeeee9e-b09f-4c7f-8ce5-d9ca1f9322ad) und [ASP.NET Trust Levels and Policy Files](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1).  
+  
+<a name="memory_limitations"></a>   
+## <a name="memory-limitations"></a>Einschränkungen beim Arbeitsspeicher  
+ Möglichkeit zum Schutz gegen Denial-of Service-Angriffe ist die Größe der Dateien zu beschränken, die mit hochgeladen werden können die <xref:System.Web.UI.WebControls.FileUpload> Steuerelement. Sie sollten eine maximale Größe festlegen, die für die Typen von Dateien geeignet ist, die Sie erwarten hochgeladen werden. Der Standardgrenzwert ist 4096 Kilobyte (KB) oder 4 Megabyte (MB). Sie können größere Dateien hochgeladen werden, durch Festlegen der `maxRequestLength` -Attribut des Elements. Um die maximal zulässige Dateigröße für die gesamte Anwendung zu erhöhen, legen Sie die `maxRequestLength` Attribut in der Datei "Web.config". Um die maximal zulässige Dateigröße für eine angegebene Seite zu erhöhen, legen Sie die `maxRequestLength` Attribut innerhalb der `location` Element in der Datei "Web.config". Ein Beispiel finden Sie unter [Speicherort Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/922ef7d5-da38-4661-b1c6-5b9e5ceda1d5).  
+  
+ Beim Hochladen großer Dateien kann ein Benutzer auch die folgende Fehlermeldung angezeigt:  
+  
+ `aspnet_wp.exe (PID: 1520) was recycled because memory consumption exceeded 460 MB (60 percent of available RAM).`  
+  
+ Wenn Ihre Benutzer diese Fehlermeldung auftritt, erhöhen Sie den Wert von der `memoryLimit` Attribut in die des Elements der Datei "Web.config"-Datei für die Anwendung. Die `memoryLimit` -Attribut gibt die Höchstmenge an Arbeitsspeicher, die ein Arbeitsprozess verwenden können. Wenn der Arbeitsprozess überschreitet die `memoryLimit` Menge, ein neuer Prozess erstellt wird, um ihn zu ersetzen, und alle aktuellen Anforderungen an den neuen Prozess neu zugewiesen werden.  
+  
+ Steuern, ob die hochzuladende Datei vorübergehend im Arbeitsspeicher oder auf dem Server gespeichert, während die Anforderung verarbeitet wird, legen Sie die `requestLengthDiskThreshold` -Attribut des Elements. Dieses Attribut können Sie die Größe des Puffers Eingabestream zu verwalten. Der Standardwert ist 256 Bytes. Der angegebene Wert sollte nicht überschreiten den Wert an die von Ihnen für die `maxRequestLength` Attribut.  
+  
+<a name="using_the_FileUpload_Control_with_the_UpdatePanel_control"></a>   
+## <a name="using-the-fileupload-control-with-the-updatepanel-control"></a>Verwenden das FileUpload-Steuerelement mit dem UpdatePanel-Steuerelement  
+ Die <xref:System.Web.UI.WebControls.FileUpload> Steuerelement während des Teilrenderings von Seiten nur in postback-Szenarien und nicht in asynchronen postback-Szenarien verwendet werden soll. Bei Verwendung von ein <xref:System.Web.UI.WebControls.FileUpload> -Steuerelement innerhalb einer <xref:System.Web.UI.UpdatePanel> -Steuerelement, muss die Datei hochgeladen werden, mit einem Steuerelement, ein <xref:System.Web.UI.PostBackTrigger> -Objekt für den Bereich. <xref:System.Web.UI.UpdatePanel>Steuerelemente werden verwendet, um die ausgewählten Bereiche einer Seite statt zu aktualisieren die gesamte Seite mit einem Postback zu aktualisieren. Weitere Informationen finden Sie unter [Übersicht über das Steuerelement UpdatePanel](http://msdn.microsoft.com/library/29a2265d-9674-4c19-b70e-e5560ee9689a) und [Teilrendering von Seiten Rendering Overview](http://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
+  
+<a name="DeclarativeSyntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:FileUpload  
+    AccessKey="string"  
+    BackColor="color name|#dddddd"  
+    BorderColor="color name|#dddddd"  
+    BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|Groove|Ridge|  
+        Inset|Outset"  
+    BorderWidth="size"  
+    CssClass="string"  
+    Enabled="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    Font-Bold="True|False"  
+    Font-Italic="True|False"  
+    Font-Names="string"  
+    Font-Overline="True|False"  
+    Font-Size="string|Smaller|Larger|XX-Small|X-Small|Small|Medium|  
+        Large|X-Large|XX-Large"  
+    Font-Strikeout="True|False"  
+    Font-Underline="True|False"  
+    ForeColor="color name|#dddddd"  
+    Height="size"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Style="string"  
+    TabIndex="integer"  
+    ToolTip="string"  
+    Visible="True|False"  
+    Width="size"  
+/>  
+```  
+  
+   
+  
+## Examples  
+ Ist ein Visual Studio Web Site-Projekt mit Quellcode zu diesem Thema steht verfügbar: [herunterladen](http://go.microsoft.com/fwlink/?LinkId=191897).  
+  
+ Dieser Abschnitt enthält die folgenden vier Beispielen:  
+  
+-   Im ersten Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.FileUpload> Steuerelement, das Dateien in einen Pfad gespeichert, die im Code angegeben wird.  
+  
+-   Im zweiten Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.FileUpload> Steuerelement, das Dateien in einem angegebenen Verzeichnis im Dateisystem für die Anwendung speichert.  
+  
+-   Im dritten Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.FileUpload> Steuerelement, das Dateien in einem angegebenen Pfad gespeichert, und schränkt die Größe der Datei, die hochgeladen werden kann.  
+  
+-   Die vierten Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.FileUpload> Steuerelement, das Dateien in einem angegebenen Pfad gespeichert und kann nur Dateien, die die DOC- oder XLS-Datei hochgeladen werden namenserweiterungen.  
+  
+> [!CAUTION]
+>  Diese Beispiele zeigen die grundlegende Syntax für die <xref:System.Web.UI.WebControls.FileUpload> -Steuerelement, aber sie zeigen nicht alle der erforderlichen Überprüfung von Fehlern, die vor der zum Speichern der Datei abgeschlossen werden soll. Ein ausführlicheres Beispiel finden Sie unter <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A>.  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.FileUpload> Steuerelement, das Dateien in einen Pfad gespeichert, die im Code angegeben wird. Die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> Methode wird aufgerufen, um die Datei auf den angegebenen Pfad auf dem Server zu speichern.  
+  
+ [!code-aspx-csharp[FileUploadClass1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FileUploadClass1/cs/fileuploadclass1cs.aspx#1)]
+ [!code-aspx-vb[FileUploadClass1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FileUploadClass1/VB/fileuploadclass1vb.aspx#1)]  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.FileUpload> Steuerelement, das Dateien in einem angegebenen Verzeichnis im Dateisystem für die Anwendung speichert. Die <xref:System.Web.HttpRequest.PhysicalApplicationPath%2A?displayProperty=nameWithType> Eigenschaft wird verwendet, um den physischen Dateisystempfad des Stammverzeichnisses für die aktuell ausgeführte Serveranwendung zu erhalten. Die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> Methode wird aufgerufen, um die Datei auf den angegebenen Pfad auf dem Server zu speichern.  
+  
+ [!code-aspx-csharp[FileUploadClass2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FileUploadClass2/cs/fileuploadclass2cs.aspx#1)]
+ [!code-aspx-vb[FileUploadClass2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FileUploadClass2/VB/fileuploadclass2vb.aspx#1)]  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.FileUpload> Steuerelement, das Dateien in einen Pfad gespeichert, die im Code angegeben wird. Das Steuerelement schränkt die Größe der Datei, die auf 5 MB hochgeladen werden kann. Die <xref:System.Web.UI.WebControls.FileUpload.PostedFile%2A> Eigenschaft wird verwendet, um Zugriff auf die zugrunde liegenden <xref:System.Web.HttpPostedFile.ContentLength%2A> Eigenschaft und die Rückgabewerte der Größe der Datei. Wenn die Größe der hochzuladenden Datei weniger als 2 MB beträgt, ist die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> Methode wird aufgerufen, um die Datei auf den angegebenen Pfad auf dem Server zu speichern. Sie können zusätzlich zur Überprüfung der Einstellung für die maximale Größe in Ihrem Anwendungscode Festlegen der `maxRequestLength` Attribut des Elements, das maximal zulässige Größe in der Konfigurationsdatei für Ihre Anwendung.  
+  
+ [!code-aspx-csharp[FileUploadClass3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FileUploadClass3/cs/fileuploadclass3cs.aspx#1)]
+ [!code-aspx-vb[FileUploadClass3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FileUploadClass3/VB/fileuploadclass3vb.aspx#1)]  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.FileUpload> Steuerelement, das Dateien in einen Pfad gespeichert, die im Code angegeben wird. In diesem Beispiel kann nur Dateien mit der die DOC- oder XLS Dateinamenerweiterungen hochgeladen werden. Die <xref:System.IO.Path.GetExtension%2A?displayProperty=nameWithType> Methode wird aufgerufen, um die Erweiterung der hochzuladenden Datei zurückzugeben. Wenn die Datei eine .doc oder einer xls Dateinamenerweiterung, hat die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> Methode wird aufgerufen, um die Datei auf den angegebenen Pfad auf dem Server zu speichern.  
+  
+ [!code-aspx-csharp[FileUploadClass4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FileUploadClass4/cs/fileuploadclass4cs.aspx#1)]
+ [!code-aspx-vb[FileUploadClass4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FileUploadClass4/VB/fileuploadclass4vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileUpload ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FileUpload.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.FileUpload" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FileUpload.%23ctor%2A> Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.FileUpload> Klasse. Die <xref:System.Web.UI.WebControls.FileUpload> Steuerelement speichert nicht automatisch eine Datei mit dem Server, nachdem der Benutzer die hochzuladende Datei auswählt. Sie müssen explizit ein Steuerelement oder einen Mechanismus, der der Benutzer auf die angegebene Datei Absenden angeben. Sie können z. B. eine Schaltfläche bereitstellen, die der Benutzer klickt, um die Datei hochzuladen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie Initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.FileUpload> Klasse. Beachten Sie, dass in diesem Beispiel wird die Konstruktorsyntax veranschaulicht jedoch werden nicht an das Steuerelement Funktionalität hinzugefügt, nachdem er erstellt wurde.  
+  
+ In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.FileUpload> Klasse.  
+  
+ [!code-aspx-vb[FileUploadCstr#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FileUploadCstr/VB/fileuploadcstrvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FileUpload.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />, der den Ausgabestream für das Rendering von HTML-Inhalten auf dem Client darstellt.</param>
+        <summary>Fügt die HTML-Attribute und -Stile eines <see cref="T:System.Web.UI.WebControls.FileUpload" />-Steuerelements hinzu, die in dem angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt gerendert werden sollen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FileUpload.AddAttributesToRender%2A> Methode wird hauptsächlich von Steuerelemententwicklern verwendet, die entsprechenden Attribute eingefügt und Stile in die <xref:System.Web.UI.HtmlTextWriter?displayProperty=nameWithType> Ausgabestream für das ein <xref:System.Web.UI.WebControls.FileUpload> Steuerelement. Die <xref:System.Web.UI.WebControls.FileUpload.AddAttributesToRender%2A> methodenüberschreibungen die <xref:System.Web.UI.WebControls.WebControl.AddAttributesToRender%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowMultiple">
+      <MemberSignature Language="C#" Value="public virtual bool AllowMultiple { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowMultiple" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FileUpload.AllowMultiple" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob mehrere Dateien zum Hochladen ausgewählt werden können.</summary>
+        <value>
+          <see langword="true" />, wenn mehrere Dateien ausgewählt werden können, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileBytes">
+      <MemberSignature Language="C#" Value="public byte[] FileBytes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] FileBytes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FileUpload.FileBytes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von Bytes in einer durch das <see cref="T:System.Web.UI.WebControls.FileUpload" />-Steuerelement angegebenen Datei ab.</summary>
+        <value>Ein <see cref="T:System.Byte" />-Array mit dem Inhalt der angegebenen Datei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FileUpload> Steuerelement werden die Datei nicht automatisch vom Client gelesen. Sie müssen explizit ein Steuerelement oder einen Mechanismus, der der Benutzer auf die angegebene Datei Absenden angeben. Sie können z. B. eine Schaltfläche bereitstellen, die der Benutzer klicken kann, um die Datei hochzuladen. Der Code, den Sie zum Speichern der angegebenen Datei schreiben konnte aufrufen, die <xref:System.Web.UI.WebControls.FileUpload.FileBytes%2A> -Eigenschaft, die den Inhalt der Datei zurückgibt.  
+  
+ Vor dem Aufruf der <xref:System.Web.UI.WebControls.FileUpload.FileBytes%2A> -Eigenschaft, verwenden Sie die <xref:System.Web.UI.WebControls.FileUpload.HasFile%2A> Eigenschaft, um zu überprüfen, ob die <xref:System.Web.UI.WebControls.FileUpload> Steuerelement enthält eine Datei zum Hochladen. Wenn die <xref:System.Web.UI.WebControls.FileUpload.HasFile%2A> gibt `true`, rufen Sie die <xref:System.Web.UI.WebControls.FileUpload.FileBytes%2A> Eigenschaft. Wenn zurückgegeben `false`, eine Meldung angezeigt, die der Benutzer, der angibt, dass das Steuerelement eine Datei nicht enthalten ist. Wenn Sie keinen Fehlerbehandlungscode angeben, um sicherzustellen, dass eine Datei vorhanden ist, löst ein Versuch, eine nicht vorhandene Datei zu speichern ein <xref:System.Web.HttpException> Ausnahme.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.FileUpload> Steuerelement. Wenn der Benutzer klickt auf die **Uploaddatei** Schaltfläche, den Inhalt der Datei werden als Bytes in einem Textfeld auf der Seite angezeigt. Dieses Beispiel verwendet die <xref:System.Web.UI.WebControls.FileUpload.FileBytes%2A> Eigenschaft, um die gesamte Datei hochladen.  
+  
+ [!code-aspx-csharp[FileUploadFileBytes#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FileUploadFileBytes/CS/FileUploadFileBytesCS.aspx#1)]
+ [!code-aspx-vb[FileUploadFileBytes#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FileUploadFileBytes/VB/FileUploadFileBytesVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die gesamte Datei wurde nicht gelesen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FileContent">
+      <MemberSignature Language="C#" Value="public System.IO.Stream FileContent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream FileContent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FileUpload.FileContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.IO.Stream" />-Objekt ab, das auf eine Datei verweist, die mithilfe des <see cref="T:System.Web.UI.WebControls.FileUpload" />-Steuerelements hochgeladen werden soll.</summary>
+        <value>Ein <see cref="T:System.IO.Stream" />, der auf eine Datei verweist, die mit dem <see cref="T:System.Web.UI.WebControls.FileUpload" /> hochgeladen werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FileUpload.FileContent%2A> Eigenschaft ruft eine <xref:System.IO.Stream> -Objekt, das auf eine Datei zum Hochladen mit zeigt die <xref:System.Web.UI.WebControls.FileUpload> Steuerelement. Verwenden der <xref:System.Web.UI.WebControls.FileUpload.FileContent%2A> Eigenschaft Zugriff auf den Inhalt der Datei. Beispielsweise können Sie die <xref:System.IO.Stream> -Objekt, das durch diese Eigenschaft auf den Inhalt der Datei als Bytes lesen und speichern sie in ein Byte-Array zurückgegeben wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.FileUpload> Steuerelement. Die <xref:System.Web.UI.WebControls.FileUpload.FileContent%2A> Eigenschaft wird verwendet, um den Inhalt der Datei in ein Bytearray zu lesen. Wenn der Benutzer klickt auf die **Uploaddatei** Schaltfläche, den Inhalt der Datei werden als Bytes in einem Textfeld auf der Seite angezeigt.  
+  
+ [!code-aspx-csharp[FileUpload.FileContent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FileUpload.FileContent/cs/fileupload.filecontentcs.aspx#1)]
+ [!code-aspx-vb[FileUpload.FileContent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FileUpload.FileContent/VB/fileupload.filecontentvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="public string FileName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FileUpload.FileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen einer Datei auf einem Client ab, die mithilfe des <see cref="T:System.Web.UI.WebControls.FileUpload" />-Steuerelements hochgeladen werden soll.</summary>
+        <value>Eine Zeichenfolge, die den Namen einer Datei auf einem Client angibt, die mit <see cref="T:System.Web.UI.WebControls.FileUpload" /> hochgeladen werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft den Namen einer Datei auf einem Client ab, die mithilfe des <xref:System.Web.UI.WebControls.FileUpload>-Steuerelements hochgeladen werden soll. Benennen Sie die Datei, die die <xref:System.Web.UI.WebControls.FileUpload.FileName%2A> Eigenschaft gibt schließt nicht den Pfad der Datei auf dem Client.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.FileUpload> Steuerelement, das Dateien in einen Pfad gespeichert, die im Code angegeben wird. Die <xref:System.Web.UI.WebControls.FileUpload.FileName%2A> Eigenschaft wird verwendet, um den Namen der hochzuladenden Datei abzurufen. Die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> Methode wird aufgerufen, um die Datei auf den angegebenen Pfad auf dem Server zu speichern, mit dem gleichen Namen die Datei wurde auf dem Client. Beachten Sie, dass in diesem Beispiel die grundlegende Syntax für dieses Steuerelement veranschaulicht, aber wird nicht veranschaulicht alle der erforderlichen Überprüfung von Fehlern bei, dass vor dem Speichern der Datei erledigt werden soll. Ein ausführlicheres Beispiel finden Sie unter <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A>.  
+  
+ [!code-aspx-csharp[FileUploadClass1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FileUploadClass1/cs/fileuploadclass1cs.aspx#1)]
+ [!code-aspx-vb[FileUploadClass1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FileUploadClass1/VB/fileuploadclass1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasFile">
+      <MemberSignature Language="C#" Value="public bool HasFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasFile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FileUpload.HasFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.FileUpload" />-Steuerelement eine Datei enthält.</summary>
+        <value>
+          <see langword="true" />, wenn der <see cref="T:System.Web.UI.WebControls.FileUpload" /> eine Datei enthält, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FileUpload.HasFile%2A> Eigenschaft ruft einen Wert, der angibt, ob die <xref:System.Web.UI.WebControls.FileUpload> Steuerelement enthält eine Datei zum Hochladen. Verwenden Sie diese Eigenschaft, um sicherzustellen, dass eine Datei zum Hochladen, die vor dem Ausführen von Vorgängen für die Datei vorhanden ist. Angenommen, vor dem Aufrufen der <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> aufzurufende Methode speichern Sie die Datei verwenden, um auf den Datenträger der <xref:System.Web.UI.WebControls.FileUpload.HasFile%2A> Eigenschaft, um sicherzustellen, dass die Datei vorhanden ist. Wenn <xref:System.Web.UI.WebControls.FileUpload.HasFile%2A> gibt `true`, rufen Sie die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> Methode. Wenn zurückgegeben `false`, eine Meldung angezeigt, die der Benutzer, der angibt, dass das Steuerelement eine Datei nicht enthalten ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.FileUpload> Steuerelement, die Überprüfung von Fehlern führt. Vor dem Speichern der Datei die <xref:System.Web.UI.WebControls.FileUpload.HasFile%2A> Methode wird aufgerufen, um sicherzustellen, dass das Steuerelement eine Datei zum Hochladen enthält. Darüber hinaus die <xref:System.IO.File.Exists%2A?displayProperty=nameWithType> Methode wird aufgerufen, um zu überprüfen, ob bereits eine Datei mit dem gleichen Namen im Pfad vorhanden. Wenn dies der Fall ist, wird der Name der hochzuladenden Datei mit einem Unterstrich vor vorangestellt die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> -Methode aufgerufen wird. Dadurch wird verhindert, dass die vorhandene Datei überschrieben wird.  
+  
+ [!code-aspx-csharp[FileUpload.SaveAs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FileUpload.SaveAs/cs/fileupload.saveascs.aspx#1)]
+ [!code-aspx-vb[FileUpload.SaveAs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FileUpload.SaveAs/VB/fileupload.saveasvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasFiles">
+      <MemberSignature Language="C#" Value="public bool HasFiles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasFiles" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FileUpload.HasFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Dateien hochgeladen wurden.</summary>
+        <value>
+          <see langword="true" />, wenn Dateien hochgeladen wurden; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt auch zurück `false` Wenn eine leere Datei (null Byte) hochgeladen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FileUpload.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis für das <see cref="T:System.Web.UI.WebControls.FileUpload" />-Steuerelement aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FileUpload.OnPreRender%2A> von der Methode wird die <xref:System.Web.UI.WebControls.FileUpload> Steuerelement alle Rendern vorbereitenden Schritte vor der Ansichtszustand gespeichert und Rendern von Inhalt ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostedFile">
+      <MemberSignature Language="C#" Value="public System.Web.HttpPostedFile PostedFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpPostedFile PostedFile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FileUpload.PostedFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpPostedFile</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das zugrunde liegende <see cref="T:System.Web.HttpPostedFile" />-Objekt für eine Datei ab, die mit dem <see cref="T:System.Web.UI.WebControls.FileUpload" />-Steuerelement hochgeladen wird.</summary>
+        <value>Ein <see cref="T:System.Web.HttpPostedFile" /> für eine mit <see cref="T:System.Web.UI.WebControls.FileUpload" /> hochgeladene Datei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FileUpload.PostedFile%2A> Eigenschaft ruft den zugrunde liegenden <xref:System.Web.HttpPostedFile> -Objekt für eine Datei, die hochgeladen wird die <xref:System.Web.UI.WebControls.FileUpload> Steuerelement. Verwenden Sie diese Eigenschaft, um zusätzliche Eigenschaften für die hochgeladene Datei zugreifen.  
+  
+ Sie können die <xref:System.Web.HttpPostedFile.ContentLength%2A> Eigenschaft, um die Länge der Datei abzurufen. Sie können die <xref:System.Web.HttpPostedFile.ContentType%2A> Eigenschaft, um den MIME-Inhaltstyp der Datei. Darüber hinaus können Sie die <xref:System.Web.UI.WebControls.FileUpload.PostedFile%2A> aufzurufende Eigenschaft der <xref:System.Web.HttpPostedFile.FileName%2A> -Eigenschaft, die <xref:System.Web.HttpPostedFile.InputStream%2A> -Eigenschaft, und die <xref:System.Web.HttpPostedFile.SaveAs%2A> Methode. Allerdings wird die gleiche Funktionalität bereitgestellt, durch die <xref:System.Web.UI.WebControls.FileUpload.FileName%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.FileUpload.FileContent%2A> -Eigenschaft, und die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.FileUpload> Steuerelement. Wenn der Benutzer klickt auf die **Uploaddatei** Schaltfläche, den Inhalt der Datei werden als Bytes in einem Textfeld auf der Seite angezeigt. Dieses Beispiel verwendet die <xref:System.Web.UI.WebControls.FileUpload.PostedFile%2A> aufzurufende Eigenschaft der <xref:System.Web.HttpPostedFile.ContentLength%2A?displayProperty=nameWithType> Eigenschaft. Die <xref:System.Web.HttpPostedFile.ContentLength%2A> Eigenschaft wird verwendet, um die Länge der Datei, die vor dem Kopieren den Inhalt der Datei in ein Bytearray zu bestimmen.  
+  
+ [!code-aspx-csharp[FileUpload.FileContent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FileUpload.FileContent/cs/fileupload.filecontentcs.aspx#1)]
+ [!code-aspx-vb[FileUpload.FileContent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FileUpload.FileContent/VB/fileupload.filecontentvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostedFiles">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Web.HttpPostedFile&gt; PostedFiles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Web.HttpPostedFile&gt; PostedFiles" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FileUpload.PostedFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Web.HttpPostedFile&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von hochgeladenen Dateien ab.</summary>
+        <value>Die Auflistung von hochgeladenen Dateien.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FileUpload.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt, das den Inhalt des <see cref="T:System.Web.UI.WebControls.FileUpload" />-Steuerelements empfängt.</param>
+        <summary>Sendet den Inhalt des <see cref="T:System.Web.UI.WebControls.FileUpload" />-Steuerelements an das angegebene <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt, das den auf dem Client zu rendernden Inhalt schreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FileUpload.Render%2A> -Methode sendet die <xref:System.Web.UI.WebControls.FileUpload> Steuern des Inhalts auf den angegebenen <xref:System.Web.UI.HtmlTextWriter?displayProperty=nameWithType> Objekt, das auf dem Client der zu rendernden Inhalt schreibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAs">
+      <MemberSignature Language="C#" Value="public void SaveAs (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveAs(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FileUpload.SaveAs(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Eine Zeichenfolge, die den vollständigen Pfad des Speicherorts auf dem Server angibt, an dem die hochgeladene Datei gespeichert werden soll.</param>
+        <summary>Speichert den Inhalt einer hochgeladenen Datei auf dem Webserver unter einem angegebenen Pfad.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> Methode speichert den Inhalt einer hochgeladenen Datei in einem angegebenen Pfad auf dem Webserver.  
+  
+ Die <xref:System.Web.UI.WebControls.FileUpload> Steuerelement speichert nicht automatisch eine Datei mit dem Server, nachdem der Benutzer die hochzuladende Datei auswählt. Sie müssen explizit ein Steuerelement oder einen Mechanismus, der der Benutzer auf die angegebene Datei Absenden angeben. Sie können z. B. eine Schaltfläche bereitstellen, die der Benutzer klickt, um die Datei hochzuladen. Der Code, den Sie zum Speichern der angegebenen Datei schreiben sollten Aufrufen der <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> -Methode, die den Inhalt einer Datei in einem angegebenen Pfad auf dem Server gespeichert. In der Regel die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> Methode wird aufgerufen, in eine Ereignisbehandlungsmethode für ein Ereignis, das ein an den Server auslöst. Z. B. Wenn Sie eine Schaltfläche zum Absenden einer Datei angeben, konnte der Code zum Speichern der Datei an den Server klicken Sie dann in die Ereignisbehandlungsmethode für das Click-Ereignis eingeschlossen werden.  
+  
+ Beim Aufrufen der <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> -Methode, müssen Sie den vollständigen Pfad des Verzeichnisses angeben, auf dem Server, in dem die hochgeladene Datei gespeichert. Wenn Sie nicht explizit den Pfad in Ihrem Anwendungscode angeben einer <xref:System.Web.HttpException> Ausnahme wird ausgelöst, wenn ein Benutzer versucht, eine Datei hochzuladen. Dieses Verhalten trägt die Dateien auf dem Server sicheren, nicht zulassen, dass Benutzer geben Sie einen Pfad, in dem die Dateien gespeichert, die sie hochladen.  
+  
+ Vor dem Aufruf der <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> -Methode, die Sie verwenden sollten die <xref:System.Web.UI.WebControls.FileUpload.HasFile%2A> Eigenschaft, um zu überprüfen, ob die <xref:System.Web.UI.WebControls.FileUpload> Steuerelement enthält eine Datei zum Hochladen. Wenn die <xref:System.Web.UI.WebControls.FileUpload.HasFile%2A> gibt `true`, rufen Sie die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> Methode. Wenn zurückgegeben `false`, eine Meldung angezeigt, die der Benutzer, der angibt, dass das Steuerelement eine Datei nicht enthalten ist. Wenn Sie keinen Fehlerbehandlungscode angeben, um sicherzustellen, dass eine Datei vorhanden ist, löst ein Versuch, eine nicht vorhandene Datei zu speichern ein <xref:System.Web.HttpException> Ausnahme.  
+  
+ Für einen Aufruf der <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> funktioniert, muss die ASP.NET-Anwendung Schreibzugriff auf das Verzeichnis auf dem Server verfügen. Es gibt zwei Möglichkeiten, die Anwendung Schreibzugriff abrufen kann. Sie können explizit Schreibzugriff auf das Konto gewähren, unter denen die Anwendung ausgeführt wird, in das Verzeichnis, in dem die hochgeladenen Dateien gespeichert werden. Alternativ können Sie die Ebene der Vertrauenswürdigkeit erhöhen, die das die ASP.NET-Anwendung gewährt wird. Um Schreibzugriff auf das ausführende Verzeichnis für die Anwendung zu erhalten, müssen Sie die Anwendung gewährt der <xref:System.Web.AspNetHostingPermission> Objekt mit der Vertrauensebene, die zum Festlegen der <xref:System.Web.AspNetHostingPermissionLevel?displayProperty=nameWithType> Wert. Erhöhen die Ebene der Vertrauenswürdigkeit erhöht die Anwendung Zugriff auf Ressourcen auf dem Server. Beachten Sie, dass dies keine sichere Vorgehensweise ist, da ein böswilliger Benutzer, der die Kontrolle über Ihre Anwendung erlangt auch unter diesem höheres Maß an Vertrauenswürdigkeit ausgeführt werden kann. Es ist eine bewährte Methode, eine ASP.NET-Anwendung im Kontext eines Benutzers ausgeführt werden, der die mindestens erforderlichen Berechtigungen verfügt, die zum Ausführen der Anwendung erforderlich sind. Weitere Informationen zur Sicherheit in ASP.NET-Anwendungen finden Sie unter [grundlegende Sicherheitsmaßnahmen für Webanwendungen](http://msdn.microsoft.com/library/3eeeee9e-b09f-4c7f-8ce5-d9ca1f9322ad) und [ASP.NET Trust Levels and Policy Files](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.FileUpload> Steuerelement, die Überprüfung von Fehlern führt. Vor dem Speichern der Datei die <xref:System.Web.UI.WebControls.FileUpload.HasFile%2A> Methode wird aufgerufen, um sicherzustellen, dass eine Datei zum Hochladen vorhanden ist. Darüber hinaus die <xref:System.IO.File.Exists%2A?displayProperty=nameWithType> Methode wird aufgerufen, um zu überprüfen, ob eine Datei mit dem gleichen Namen bereits im Pfad vorhanden ist. Wenn dies der Fall ist, wird der Name der hochzuladenden Datei mit einer Zahl vor dem vorangestellt die <xref:System.Web.UI.WebControls.FileUpload.SaveAs%2A> -Methode aufgerufen wird. Dadurch wird verhindert, dass die vorhandene Datei überschrieben wird.  
+  
+ [!code-aspx-csharp[FileUpload.SaveAs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FileUpload.SaveAs/cs/fileupload.saveascs.aspx#1)]
+ [!code-aspx-vb[FileUpload.SaveAs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FileUpload.SaveAs/VB/fileupload.saveasvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="filename" />ist kein vollständiger Pfad.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

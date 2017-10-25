@@ -1,0 +1,152 @@
+<Type Name="CompilerType" FullName="System.Web.Compilation.CompilerType">
+  <TypeSignature Language="C#" Value="public sealed class CompilerType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CompilerType extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.CompilerType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die compilereinstellungen, die zum Generieren und Kompilieren von Quellcode aus einem virtuellen Pfad in der ASP.NET-Buildumgebung verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A> Eigenschaft eine <xref:System.Web.Compilation.BuildProvider> -Implementierung, überprüfen Sie die Einstellungen, die zum Generieren und Kompilieren von Quellcode aus einem virtuellen Pfad für diesen Buildanbieter verwendet.  
+  
+ Wird für die ASP.NET-Buildumgebung <xref:System.Web.Compilation.BuildProvider> Objekte zum Generieren von Quellcode für benutzerdefinierte Dateitypen im Projekt. Abgeleitete Klassen von <xref:System.Web.Compilation.BuildProvider> Geben Sie die Builddetails für Quelldateien, Webseiten, Ressourcen und andere benutzerdefinierte Elemente. Der Buildanbieter eine bestimmte Programmiersprache benötigt, überschreibt die <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A> -Eigenschaft und ruft die <xref:System.Web.Compilation.BuildProvider.GetDefaultCompilerType%2A> -Methode zurückgegeben ein <xref:System.Web.Compilation.CompilerType> Objekt für die unterstützte Programmiersprache.  
+  
+ Festlegen der <xref:System.Web.Compilation.CompilerType> Objekt in einem Build-anbieterimplementierung verwenden die <xref:System.Web.Compilation.BuildProvider.GetDefaultCompilerType%2A> Methode oder die <xref:System.Web.Compilation.BuildProvider.GetDefaultCompilerTypeForLanguage%2A> Methode.  
+  
+ Die <xref:System.Web.Compilation.CompilerType.CodeDomProviderType%2A> Eigenschaft gibt an, die <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierung, die zum Generieren und Kompilieren von Quellcode für ein Buildanbieter verwendet. Die <xref:System.Web.Compilation.CompilerType.CompilerParameters%2A> Eigenschaft definiert die Einstellungen verwendet, um den Quellcode in eine Assembly kompilieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht eine einfache Buildanbieterimplementierung erben von der abstrakten <xref:System.Web.Compilation.BuildProvider> Basisklasse. Der Buildanbieter überschreibt die <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A>, <xref:System.Web.Compilation.BuildProvider.GetGeneratedType%2A>, und <xref:System.Web.Compilation.BuildProvider.GenerateCode%2A> Member der Basisklasse.  
+  
+ [!code-csharp[System.Web.Compilation_SampleBuildProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation_SampleBuildProvider/CS/samplebuildprovider.cs#2)]
+ [!code-vb[System.Web.Compilation_SampleBuildProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation_SampleBuildProvider/VB/samplebuildprovider.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CodeDomProviderType">
+      <MemberSignature Language="C#" Value="public Type CodeDomProviderType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type CodeDomProviderType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.CompilerType.CodeDomProviderType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Type" /> für die konfigurierte <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> Implementierung.</summary>
+        <value>Ein schreibgeschützter <see cref="T:System.Type" /> , die den konfigurierten Anbieter Codetyp darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.CompilerType.CodeDomProviderType%2A> Eigenschaft gibt an, die <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierung, die zum Generieren und Kompilieren von Quellcode für ein Buildanbieter verwendet.  
+  
+ Angenommen, der Buildanbieter für die Verwendung von Visual Basic-Code-Anbieters in .NET Framework konfiguriert ist <xref:System.Web.Compilation.CompilerType.CodeDomProviderType%2A> gibt eine <xref:System.Type> für die <xref:Microsoft.VisualBasic.VBCodeProvider> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompilerParameters">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CompilerParameters CompilerParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.Compiler.CompilerParameters CompilerParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.CompilerType.CompilerParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerParameters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Einstellungen und Optionen, die zum Kompilieren von Quellcode in eine Assembly verwendet.</summary>
+        <value>Ein schreibgeschützter <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> Objekt, das die Einstellungen und Optionen von der Codecompiler darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.Compilation.CompilerType.CompilerParameters%2A> Eigenschaft, um die Compileroptionen konfiguriert für den Compiler zu untersuchen. Die <xref:System.Web.Compilation.CompilerType.CompilerParameters%2A> Eigenschaft angibt, ob Warnungen als Fehler behandelt werden, ob die Compilerausgabe Debuginformationen und andere compilereinstellungen enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.CompilerType.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Das Objekt für den Vergleich mit der aktuellen Instanz der <see cref="T:System.Web.Compilation.CompilerType" />.</param>
+        <summary>Bestimmt, ob das angegebene Objekt die gleichen Code Sprachanbieter- und Einstellungen wie die aktuelle Instanz von darstellt <see cref="T:System.Web.Compilation.CompilerType" />.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="o" /> ist ein <see cref="T:System.Web.Compilation.CompilerType" /> Objekt und seinen Wert entspricht dem diese Instanz hat; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.CompilerType.Equals%2A> methodenüberschreibungen die <xref:System.Object.Equals%2A?displayProperty=nameWithType> Methode.  
+  
+ <xref:System.Web.Compilation.CompilerType.Equals%2A>Vergleicht zwei Instanzen, basierend auf deren <xref:System.Web.Compilation.CompilerType.CodeDomProviderType%2A>, <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A?displayProperty=nameWithType>, <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A?displayProperty=nameWithType>, und <xref:System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation%2A?displayProperty=nameWithType> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.CompilerType.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Ganzzahl-Hashcode für die aktuelle Instanz von <see cref="T:System.Web.Compilation.CompilerType" />, für die Verwendung in Hashalgorithmen und Datenstrukturen, z. B. einer Hashtabelle geeignet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.CompilerType.GetHashCode%2A> methodenüberschreibungen die <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> Methode.  
+  
+ <xref:System.Web.Compilation.CompilerType.GetHashCode%2A>generiert für zwei Objekte, die entsprechend dem gleich sind, denselben Hashcode der <xref:System.Web.Compilation.CompilerType.Equals%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

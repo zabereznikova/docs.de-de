@@ -1,0 +1,197 @@
+<Type Name="LegendItemsCollection" FullName="System.Web.UI.DataVisualization.Charting.LegendItemsCollection">
+  <TypeSignature Language="C#" Value="public class LegendItemsCollection : System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;System.Web.UI.DataVisualization.Charting.LegendItem&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LegendItemsCollection extends System.Web.UI.DataVisualization.Charting.ChartElementCollection`1&lt;class System.Web.UI.DataVisualization.Charting.LegendItem&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.LegendItemsCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;System.Web.UI.DataVisualization.Charting.LegendItem&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Web.UI.DataVisualization.Charting.LegendItem</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Web.UI.DataVisualization.Charting.LegendItem" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.LegendItemsCollection> Klasse stellt eine Auflistung von <xref:System.Web.UI.DataVisualization.Charting.LegendItem> Objekte, die wiederum Elemente in einer Legende darstellen.  
+  
+ Diese Auflistungsklasse wird auf zwei Arten bereitgestellt:  
+  
+-   Als die <xref:System.Web.UI.DataVisualization.Charting.Legend.CustomItems%2A> -Objekteigenschaft des der <xref:System.Web.UI.DataVisualization.Charting.Legend> -Objekt, das zum Hinzufügen, löschen oder ändern die benutzerdefinierte Legendenelemente verwendet werden kann. Der Begriff "custom" bezieht sich auf Legendenelemente aus, die benutzerdefinierter Text, Symbolfarbe usw. verfügen. Im Gegensatz dazu sind "Default" Legendenelemente Elemente, die in der Legende automatisch eingefügt, und stellen Reihe oder einen Datenpunkt dar. Standardmäßige Element Legendeneinträge für Kreis-und Ringdiagramme dargestellt der gezeichneten Daten zeigt, werden während der Elementeinträge für alle anderen Diagrammtypen die gezeichnete Reihe darstellen. Die <xref:System.Web.UI.DataVisualization.Charting.Legend.CustomItems%2A> Eigenschaft ist zur Entwurfszeit und zur Laufzeit verfügbar.  
+  
+-   In der <xref:System.Web.UI.DataVisualization.Charting.Chart.CustomizeLegend> Ereignis, als die <xref:System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs.LegendItems%2A> Eigenschaft von der <xref:System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs> Parameter. Die <xref:System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs.LegendItems%2A> Eigenschaft speichert die standardmäßige Legendenelemente und benutzerdefinierte Legendenelemente, die hinzugefügt wurden die <xref:System.Web.UI.DataVisualization.Charting.Chart> -Steuerelements zur Entwurfszeit. Legendenelemente können geändert oder gelöscht werden; Darüber hinaus kann die Reihenfolge geändert werden.  
+  
+ Um der Auflistung Legendenelemente hinzugefügt haben, verwenden Sie eine der überladenen `Add` und `Insert` Methoden in dieser Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Drawing.Color color, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(valuetype System.Drawing.Color color, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.LegendItemsCollection.Add(System.Drawing.Color,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="color" Type="System.Drawing.Color" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="color">Die Symbolfarbe des Legendenelements.</param>
+        <param name="text">Der Text des Legendenelements.</param>
+        <summary>Fügt eine benutzerdefinierte <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItem" /> Objekt mit dem angegebenen Text und Symbol an das Ende der Auflistung.</summary>
+        <returns>Ein <see langword="integer" /> , der die Position in der nullbasierte Index, in dem das Element, in der Auflistung eingefügt wurde, darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fügt ein benutzerdefiniertes Legendenelement mit dem angegebenen Text und Symbol an das Ende der Auflistung.  
+  
+ Um ein benutzerdefiniertes Legendenelement hinzuzufügen, die für das Symbol ein Bild verwendet, rufen Sie die <xref:System.Web.UI.DataVisualization.Charting.LegendItemsCollection.Add%2A> Methode.  
+  
+ Um ein benutzerdefiniertes <xref:System.Web.UI.DataVisualization.Charting.LegendItem> -Objekt in der Auflistung, verwenden Sie eine von der `Insert` Methoden in dieser Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (string image, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(string image, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.LegendItemsCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="image" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="image">Die absolute oder relative URL der Bilddatei, die für das Legendenelementsymbol verwendet werden soll.</param>
+        <param name="text">Der Text des Legendenelements.</param>
+        <summary>Fügt eine benutzerdefinierte <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItem" /> Objekt mit dem angegebenen Bild am Ende der Auflistung.</summary>
+        <returns>Ein <see langword="integer" /> , der die Position in der nullbasierte Index, in dem das Element, in der Auflistung eingefügt wurde, darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fügt ein benutzerdefiniertes Legendenelement auf die Auflistung mit dem angegebenen Text und Bild, das als Symbol für das Legendenelement verwendet werden.  
+  
+ Um ein benutzerdefiniertes Legendenelement hinzuzufügen, die eine Farbe für das Symbol verwendet, rufen Sie die <xref:System.Web.UI.DataVisualization.Charting.LegendItemsCollection.Add%2A> Methode.  
+  
+ Zum Einfügen einer <xref:System.Web.UI.DataVisualization.Charting.LegendItem> Objekt in der Auflistung verwenden die `Insert` Methoden in dieser Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Drawing.Color color, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, valuetype System.Drawing.Color color, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.LegendItemsCollection.Insert(System.Int32,System.Drawing.Color,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="color" Type="System.Drawing.Color" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position im nullbasierten Index, an der das <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItem" />-Objekt eingefügt werden soll.</param>
+        <param name="color">Die Symbolfarbe des Legendenelements.</param>
+        <param name="text">Der Text des Legendenelements.</param>
+        <summary>Fügt ein <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItem" />-Objekt mit dem angegebenen Text und der angegebenen Symbolfarbe an der angegebenen Position in die Sammlung ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fügt ein benutzerdefiniertes Legendenelement in der Auflistung am angegebenen Speicherort mit der angegebenen Farbe für Text und Symbol an.  
+  
+ Um ein Legendenelement einzufügen, die für das Symbol ein Bild verwendet, verwenden die <xref:System.Web.UI.DataVisualization.Charting.LegendItemsCollection.Insert%2A> Methode.  
+  
+ Verwenden der <xref:System.Web.UI.DataVisualization.Charting.LegendItemsCollection.Add%2A> -Methode, um eine <xref:System.Web.UI.DataVisualization.Charting.LegendItem> -Objekt, das eine Farbe für das Symbol am Ende verwendet, wenn die Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, string image, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, string image, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.LegendItemsCollection.Insert(System.Int32,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="image" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position im nullbasierten Index, an der das <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItem" />-Objekt eingefügt werden soll.</param>
+        <param name="image">Die absolute oder relative URL der Bilddatei, die für das Legendenelementsymbol verwendet werden soll.</param>
+        <param name="text">Der Text des Legendenelements.</param>
+        <summary>Fügt ein <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItem" />-Objekt mit dem angegebenen Text und dem angegebenen Symbolbild an der angegebenen Position in die Sammlung ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fügt der Auflistung am angegebenen Speicherort mit dem angegebenen Text und Bild für das Symbol ein benutzerdefiniertes Legendenelement zu.  
+  
+ Um ein Legendenelement einzufügen, die eine Farbe für das Symbol verwendet, verwenden die <xref:System.Web.UI.DataVisualization.Charting.LegendItemsCollection.Insert%2A> Methode.  
+  
+ Verwenden der <xref:System.Web.UI.DataVisualization.Charting.LegendItemsCollection.Add%2A> -Methode, um eine <xref:System.Web.UI.DataVisualization.Charting.LegendItem> Objekt mit einem Symbol Image bis zum Ende, wenn die Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reverse">
+      <MemberSignature Language="C#" Value="public void Reverse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reverse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.LegendItemsCollection.Reverse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Kehrt die Reihenfolge der Elemente in der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

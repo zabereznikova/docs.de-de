@@ -1,0 +1,608 @@
+<Type Name="XmlEntity" FullName="System.Xml.XmlEntity">
+  <TypeSignature Language="C#" Value="public class XmlEntity : System.Xml.XmlNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlEntity extends System.Xml.XmlNode" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlEntity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlNode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Entitätsdeklaration dar, z. B. &lt;! ENTITÄT... &gt;.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BaseURI">
+      <MemberSignature Language="C#" Value="public override string BaseURI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseURI" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntity.BaseURI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Basis-URI (Uniform Resource Identifier) des aktuellen Knotens ab.</summary>
+        <value>Der Speicherort, von dem aus der Knoten geladen wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Netzwerk-XML-Dokument besteht aus Segmenten der Daten unter Verwendung verschiedener World Wide Web Consortium (W3C) standard aggregiert und enthält daher Knoten, die aus verschiedenen Quellen stammen. Die `BaseURI` gibt Aufschluss darüber, woher diese Knoten stammen.  
+  
+ Der Wert dieser Eigenschaft variiert abhängig vom Knotentyp. Knoten, die untergeordneten Elemente des externen EntityReference-Knoten sind geben die Position der Entität selbst zurück. Betrachten Sie beispielsweise das folgende XML-Dokument:  
+  
+```  
+<!DOCTYPE item [  
+<!ENTITY xyz SYSTEM "a/b.xml">  
+]>  
+<item num='123'>&xyz;</item>  
+```  
+  
+ in dem die externe Entität `a/b.xml` enthält den XML-Text `<test>123</test>`.  
+  
+ Wenn das Dokument von http://server/mydata.xml geladen wird `BaseURI` gibt Folgendes zurück:  
+  
+|NodeType|Name|BaseURI|  
+|--------------|----------|-------------|  
+|Attribut|num|http://Server/mydata.Xml|  
+|Dokument|#document|http://Server/mydata.Xml|  
+|DocumentType|Element|http://Server/mydata.Xml|  
+|Entität|XYZ|http://Server/mydata.Xml|  
+|Element|Element|http://Server/mydata.Xml|  
+|EntityReference|XYZ|http://Server/mydata.Xml|  
+|Element|Test|http://Server/a/b.Xml|  
+|Text|#text|http://Server/a/b.Xml|  
+  
+ `BaseURI`Sucht nach Verweis entitätsgrenzen, damit die Entitäten erweitert werden, diese Informationen nicht beibehalten und diese Eigenschaft die Position des gibt der `XmlDocument` Objekt in allen Fällen.  
+  
+ Betrachten Sie das folgende XML-Dokument als ein zweites Beispiel:  
+  
+```  
+<!DOCTYPE Mydata SYSTEM "http://localhost/doctype.dtd">  
+<baa>&xyz;</baa>  
+```  
+  
+ in dem die Datei Document Type Definition (DTD) Folgendes enthält:  
+  
+```  
+<!ENTITY xyz "<E1>My Data</E1>">  
+<!ELEMENT baa #PCDATA>  
+<!ATTLIST baa attr1 "woof">  
+```  
+  
+ Wenn das XML-Dokument von http://localhost/mydata.xml geladen wird `BaseURI` gibt für jeden der Knoten Folgendes zurück:  
+  
+|NodeType|Name|BaseURI|  
+|--------------|----------|-------------|  
+|Dokument|#document|http://localhost/mydata.Xml|  
+|DocumentType|Mydata|http://localhost/DOCTYPE.DTD|  
+|Element|Baa|http://localhost/mydata.Xml|  
+|Entität|XYZ|http://localhost/DOCTYPE.DTD|  
+|EntityReference|XYZ|http://localhost/mydata.Xml|  
+|Attribut|woof|http://localhost/mydata.Xml|  
+  
+> [!NOTE]
+>  Die base-URI des ein Standardattribut ist identisch mit der Basis-URI des Elements, zu dem sie gehören.  
+  
+ Diese Eigenschaft ist eine Microsoft-Erweiterung des Dokumentobjektmodells (DOM).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneNode">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode CloneNode (bool deep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlNode CloneNode(bool deep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlEntity.CloneNode(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deep" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="deep">
+          <see langword="true" />, wenn die Teilstruktur unter dem angegebenen Knoten rekursiv geklont werden soll, <see langword="false" />, wenn nur der Knoten selbst geklont werden soll.</param>
+        <summary>Erstellt ein Duplikat dieses Knotens. Entitätsknoten können nicht geklont werden. Beim Aufrufen dieser Methode auf eine <see cref="T:System.Xml.XmlEntity" /> -Objekt löst eine Ausnahme aus.</summary>
+        <returns>Gibt eine Kopie der <see cref="T:System.Xml.XmlNode" /> aus dem die Methode aufgerufen wird.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Entitätsknoten können nicht geklont werden. Beim Aufrufen dieser Methode auf eine <see cref="T:System.Xml.XmlEntity" /> -Objekt löst eine Ausnahme aus.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerText">
+      <MemberSignature Language="C#" Value="public override string InnerText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerText" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntity.InnerText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die verketteten Werte des Entitätsknotens und aller diesem untergeordneten Elemente ab.</summary>
+        <value>Die verketteten Werte des Knotens und aller diesem untergeordneten Elemente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `XmlEntity`Knoten sind schreibgeschützt. Durch Festlegen dieser Eigenschaft eine Ausnahme ausgelöst.  
+  
+ Diese Eigenschaft ist eine Microsoft-Erweiterung des Dokumentobjektmodells (DOM).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Fehler beim Festlegen der Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerXml">
+      <MemberSignature Language="C#" Value="public override string InnerXml { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerXml" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntity.InnerXml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Markup ab, das die untergeordneten Elemente dieses Knotens darstellt.</summary>
+        <value>Für <see langword="XmlEntity" /> Knoten "String.Empty" wird zurückgegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `XmlEntity`Knoten sind schreibgeschützt. Durch Festlegen dieser Eigenschaft eine Ausnahme ausgelöst.  
+  
+ Diese Eigenschaft ist eine Microsoft-Erweiterung des Dokumentobjektmodells (DOM).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Fehler beim Festlegen der Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntity.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Knoten schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Knoten schreibgeschützt ist, andernfalls <see langword="false" />.  
+  
+ Da <see langword="XmlEntity" /> Knoten sind schreibgeschützt, gibt diese Eigenschaft immer <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein nur-Lese Knoten ist, deren Eigenschaften, Attribute oder untergeordnete Elemente geändert werden. Sie können einen schreibgeschützten Knoten aus der Struktur entfernen und an anderer Stelle einfügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalName">
+      <MemberSignature Language="C#" Value="public override string LocalName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntity.LocalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Knotens ohne Namespacepräfix ab.</summary>
+        <value>Für <see langword="XmlEntity" /> -Knoten gibt diese Eigenschaft den Namen der Entität zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntity.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Knotens ab.</summary>
+        <value>Der Name der Entität.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt Informationen für die Entitäten, die in das XML-Dokument deklariert.  
+  
+ [!code-cpp[XmlEntity#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlEntity/CPP/entities.cpp#1)]
+ [!code-csharp[XmlEntity#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlEntity/CS/entities.cs#1)]
+ [!code-vb[XmlEntity#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlEntity/VB/entities.vb#1)]  
+  
+ Im Beispiel wird die Datei `doment.xml` als Eingabe.  
+  
+ [!code-xml[XmlEntity#2](~/samples/snippets/xml/VS_Snippets_Data/XmlEntity/XML/doment.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntity.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Knotens ab.</summary>
+        <value>Der Knotentyp. Für <see langword="XmlEntity" /> -Knoten ist der Wert XmlNodeType.Entity.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt Informationen für die Entitäten, die in das XML-Dokument deklariert.  
+  
+ [!code-cpp[XmlEntity#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlEntity/CPP/entities.cpp#1)]
+ [!code-csharp[XmlEntity#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlEntity/CS/entities.cs#1)]
+ [!code-vb[XmlEntity#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlEntity/VB/entities.vb#1)]  
+  
+ Im Beispiel wird die Datei `doment.xml` als Eingabe.  
+  
+ [!code-xml[XmlEntity#2](~/samples/snippets/xml/VS_Snippets_Data/XmlEntity/XML/doment.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotationName">
+      <MemberSignature Language="C#" Value="public string NotationName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NotationName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntity.NotationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des optionalen NDATA-Attributs in der Entitätsdeklaration ab.</summary>
+        <value>Der Name des Attributs NDATA. Es ist keine NDATA <see langword="null" /> zurückgegeben wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt Informationen für die Entitäten, die in das XML-Dokument deklariert.  
+  
+ [!code-cpp[XmlEntity#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlEntity/CPP/entities.cpp#1)]
+ [!code-csharp[XmlEntity#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlEntity/CS/entities.cs#1)]
+ [!code-vb[XmlEntity#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlEntity/VB/entities.vb#1)]  
+  
+ Im Beispiel wird die Datei `doment.xml`als Eingabe.  
+  
+ [!code-xml[XmlEntity#2](~/samples/snippets/xml/VS_Snippets_Data/XmlEntity/XML/doment.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OuterXml">
+      <MemberSignature Language="C#" Value="public override string OuterXml { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OuterXml" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntity.OuterXml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Markup ab, die dieses Knotens und aller diesem untergeordneten Elemente darstellt.</summary>
+        <value>Für <see langword="XmlEntity" /> Knoten "String.Empty" wird zurückgegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist eine Microsoft-Erweiterung des Dokumentobjektmodells (DOM).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicId">
+      <MemberSignature Language="C#" Value="public string PublicId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PublicId" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntity.PublicId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des öffentlichen Bezeichners in der Entitätsdeklaration ab.</summary>
+        <value>Der öffentliche Bezeichner für die Entität. Es ist keine öffentlicher Bezeichner <see langword="null" /> zurückgegeben wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt Informationen für die Entitäten, die in das XML-Dokument deklariert.  
+  
+ [!code-cpp[XmlEntity#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlEntity/CPP/entities.cpp#1)]
+ [!code-csharp[XmlEntity#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlEntity/CS/entities.cs#1)]
+ [!code-vb[XmlEntity#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlEntity/VB/entities.vb#1)]  
+  
+ Im Beispiel wird die Datei `doment.xml`als Eingabe.  
+  
+ [!code-xml[XmlEntity#2](~/samples/snippets/xml/VS_Snippets_Data/XmlEntity/XML/doment.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemId">
+      <MemberSignature Language="C#" Value="public string SystemId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SystemId" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntity.SystemId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Systembezeichners in der Entitätsdeklaration ab.</summary>
+        <value>Der Systembezeichner für die Entität. Es ist keine Systembezeichner <see langword="null" /> zurückgegeben wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt Informationen für die Entitäten, die in das XML-Dokument deklariert.  
+  
+ [!code-cpp[XmlEntity#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlEntity/CPP/entities.cpp#1)]
+ [!code-csharp[XmlEntity#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlEntity/CS/entities.cs#1)]
+ [!code-vb[XmlEntity#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlEntity/VB/entities.vb#1)]  
+  
+ Im Beispiel wird die Datei `doment.xml` als Eingabe.  
+  
+ [!code-xml[XmlEntity#2](~/samples/snippets/xml/VS_Snippets_Data/XmlEntity/XML/doment.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteContentTo">
+      <MemberSignature Language="C#" Value="public override void WriteContentTo (System.Xml.XmlWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteContentTo(class System.Xml.XmlWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlEntity.WriteContentTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">Der <see langword="XmlWriter" />, in dem gespeichert werden soll.</param>
+        <summary>Speichert alle untergeordneten Elemente des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />. Für <see langword="XmlEntity" /> Knoten, wählen Sie diese Methode hat keine Auswirkungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine Microsoft-Erweiterung, die (DOKUMENTOBJEKTMODELL).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public override void WriteTo (System.Xml.XmlWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteTo(class System.Xml.XmlWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlEntity.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">Der <see langword="XmlWriter" />, in dem gespeichert werden soll.</param>
+        <summary>Speichert den Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />. Für <see langword="XmlEntity" /> Knoten, wählen Sie diese Methode hat keine Auswirkungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine Microsoft-Erweiterung, die (DOKUMENTOBJEKTMODELL).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,90 @@
+<Type Name="IVsaScriptCodeItem" FullName="Microsoft.JScript.IVsaScriptCodeItem">
+  <TypeSignature Language="C#" Value="public interface IVsaScriptCodeItem : Microsoft.JScript.Vsa.IJSVsaCodeItem" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IVsaScriptCodeItem implements class Microsoft.JScript.Vsa.IJSVsaCodeItem, class Microsoft.JScript.Vsa.IJSVsaItem" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.IVsaScriptCodeItem" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.JScript.Vsa.IJSVsaCodeItem</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("E0C0FFE8-7eea-4ee5-b7e4-0080c7eb0b74")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert zusätzliche Funktionen, die von einem IActiveScript-Host benötigt wird.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public object Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IVsaScriptCodeItem.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bei Implementierung in einer Klasse kompiliert, und führt diesen Code.</summary>
+        <returns>Der Rückgabewert der Code ausgeführt wird, wenn keine; Andernfalls wird null verwendet.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StartColumn">
+      <MemberSignature Language="C#" Value="public int StartColumn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartColumn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.IVsaScriptCodeItem.StartColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei Implementierung in einer Klasse ruft ab oder legt die Nummer der Spalte in der Zeile, in dem dieser Code beginnt.</summary>
+        <value>Die Nummer der Spalte, in dem dieser Code wird gestartet.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StartLine">
+      <MemberSignature Language="C#" Value="public int StartLine { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartLine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.IVsaScriptCodeItem.StartLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei Implementierung in einer Klasse ruft ab oder legt die Nummer der Zeile, in dem dieser Code beginnt.</summary>
+        <value>Die Zeilennummer, in dem dieser Code wird gestartet.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

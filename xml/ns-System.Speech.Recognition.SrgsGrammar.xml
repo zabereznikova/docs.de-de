@@ -1,0 +1,25 @@
+<Namespace Name="System.Speech.Recognition.SrgsGrammar">
+  <Docs>
+    <summary>Mit den Elementen der <see cref="N:System.Speech.Recognition.SrgsGrammar" /> -Namespace können programmgesteuert erstellt Grammatiken entsprechen, die mit den W3C <see href="http://go.microsoft.com/fwlink/?LinkId=201761">Speech Recognition Grammatik Spezifikation Version 1.0</see> (SRGS).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum programmgesteuerten Erstellen eine SRGS-Grammatik, die Sie Erstellen einer leeres <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> -Instanz, und fügen Sie Instanzen von Klassen, die SRGS Elemente darstellen. Die <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsSemanticInterpretationTag>, und <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken> Klassen stellen die Elemente, die in der SRGS-Spezifikation definiert. Einige der Eigenschaften von der <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> Klasse repräsentieren Attribute in der SRGS-Spezifikation, wie z. B. <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument.Root%2A>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument.Mode%2A>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument.Culture%2A>, und <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument.XmlBase%2A>. Finden Sie unter [SRGS Grammatik XML](http://msdn.microsoft.com/en-us/b888942f-637c-4243-b49f-1fbb6c12d9f1) für einen Verweis auf die Elemente und Attribute der SRGS-Spezifikation von System.Speech unterstützt.  
+  
+ Grammatikregel zum Hinzufügen einer <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument>, verwenden die <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.Add%2A> Methode der <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Klasse. Können Sie den Text in einem Element mit SRGS ändern die <xref:System.Speech.Recognition.SrgsGrammar.SrgsText.Text%2A> Eigenschaft eine <xref:System.Speech.Recognition.SrgsGrammar.SrgsText> Instanz.  
+  
+ Mit der <xref:System.Speech.Recognition.SrgsGrammar.SrgsSubset> -Klasse, können Sie Erkennung von Ausdrücken in einer Grammatik optimieren, durch Angeben von Teilmengen von einer vollständigen Ausdruck an, der darf werden, eine Übereinstimmung zurückgegeben und durch Auswahl eines entsprechenden Modus aus dem <xref:System.Speech.Recognition.SubsetMatchingMode> Enumeration.  
+  
+ Finden Sie unter [erstellen Grammatiken mithilfe SrgsGrammar](http://msdn.microsoft.com/en-us/e4d9f96e-2241-4c39-b9e0-ac9ef4e9a906) in der [System Spracherkennung Programmierhandbuch für .NET Framework 4.0](http://msdn.microsoft.com/en-us/610116c7-3817-40ff-857b-5d41e8511043) für Weitere Informationen und Beispiele.  
+  
+ Sie können auch erstellen <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> Instanzen aus vorhandenen SRGS kompatible XML-Grammatik-Dateien aus einer Instanz von <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule>, oder von einer Instanz von <xref:System.Speech.Recognition.GrammarBuilder>.  
+  
+ Können Sie die Methoden der <xref:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler> Klasse So bereiten Sie vor Abschluss <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> Objekte für die Verwendung einer Spracherkennungsmoduls.  
+  
+ Grammatiken mit Elementen erstellt die <xref:System.Speech.Recognition.SrgsGrammar> Namespace von Konstruktoren, der verwendet werden kann die <xref:System.Speech.Recognition.Grammar> zu erstellenden Klasse <xref:System.Speech.Recognition.Grammar> Objekte.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

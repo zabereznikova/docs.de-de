@@ -1,0 +1,139 @@
+<Type Name="CodeTypeDelegate" FullName="System.CodeDom.CodeTypeDelegate">
+  <TypeSignature Language="C#" Value="public class CodeTypeDelegate : System.CodeDom.CodeTypeDeclaration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeTypeDelegate extends System.CodeDom.CodeTypeDeclaration" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeTypeDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeTypeDeclaration</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Delegatdeklaration dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeTypeDelegate>kann verwendet werden, um einen Delegattyp bzw. den Ereignishandler zu deklarieren. Ein Delegat definiert die Signatur einer Methode, die von Calback Methoden oder Ereignishandler verwendet werden kann. Delegaten können in andere Typen geschachtelt oder auf Namespace-Ebene deklariert werden. Delegaten können nicht in anderen Delegaten geschachtelt werden.  
+  
+ Die <xref:System.CodeDom.CodeTypeDelegate.ReturnType%2A> Eigenschaft gibt den Datentyp des ereignishandlers durch den Delegaten zurückgegeben. Die <xref:System.CodeDom.CodeTypeDelegate.Parameters%2A> Eigenschaft enthält die Parameter für den Delegattyp.  
+  
+ <xref:System.CodeDom.CodeTypeDelegate>sollte nicht für die Enumeration, Schnittstelle oder Typdeklaration verwendet werden. Verwenden Sie stattdessen <xref:System.CodeDom.CodeTypeDeclaration> für Benutzer.  
+  
+> [!NOTE]
+>  Nicht alle Sprachen unterstützen die Deklaration eines Delegaten. Rufen Sie die <xref:System.CodeDom.Compiler.ICodeGenerator.Supports%2A> Methode mit der <xref:System.CodeDom.Compiler.GeneratorSupport.DeclareDelegates> Flag, um festzustellen, ob es in einer bestimmten Sprache unterstützt wird.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht die Verwendung von einem <xref:System.CodeDom.CodeTypeDelegate> auf einen neuen Delegattyp deklariert.  
+  
+ [!code-cpp[CodeTypeDelegateExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTypeDelegateExample/CPP/codetypedelegateexample.cpp#3)]
+ [!code-csharp[CodeTypeDelegateExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTypeDelegateExample/CS/codetypedelegateexample.cs#3)]
+ [!code-vb[CodeTypeDelegateExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTypeDelegateExample/VB/codetypedelegateexample.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeDelegate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeDelegate.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeTypeDelegate" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeDelegate (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeDelegate.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Delegaten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeTypeDelegate" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeParameterDeclarationExpressionCollection Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeParameterDeclarationExpressionCollection Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeDelegate.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeParameterDeclarationExpressionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Parameter des Delegaten ab.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeParameterDeclarationExpressionCollection" /> , der die Parameter des Delegaten angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference ReturnType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference ReturnType" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeDelegate.ReturnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Rückgabetyp des Delegaten.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeTypeReference" /> , den Rückgabetyp des Delegaten angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

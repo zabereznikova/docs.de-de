@@ -1,0 +1,100 @@
+<Type Name="OracleRowUpdatedEventArgs" FullName="System.Data.OracleClient.OracleRowUpdatedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class OracleRowUpdatedEventArgs : System.Data.Common.RowUpdatedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OracleRowUpdatedEventArgs extends System.Data.Common.RowUpdatedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OracleRowUpdatedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.RowUpdatedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Data.OracleClient.OracleDataAdapter.RowUpdated" />-Ereignis bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OracleClient.OracleDataAdapter.RowUpdated> Ereignis wird ausgelöst, wenn ein <xref:System.Data.Common.DbDataAdapter.Update%2A> auf eine Zeile abgeschlossen ist.  
+  
+ Bei Verwendung <xref:System.Data.Common.DbDataAdapter.Update%2A>, es gibt zwei Ereignisse, die für jede Datenzeile aktualisiert auftreten. Die Reihenfolge der Ausführung lautet wie folgt:  
+  
+1.  Die Werte in der <xref:System.Data.DataRow> in die Parameterwerte verschoben werden.  
+  
+2.  Das <xref:System.Data.Common.DbDataAdapter.OnRowUpdating%2A>-Ereignis wird ausgelöst.  
+  
+3.  Der Befehl ausgeführt wird.  
+  
+4.  Wenn der Befehl, um festgelegt ist `FirstReturnedRecord`, das erste zurückgegebene Ergebnis befindet sich der <xref:System.Data.DataRow>.  
+  
+5.  Wenn Output-Parameter vorhanden sind, werden sie platziert, der <xref:System.Data.DataRow>.  
+  
+6.  Das <xref:System.Data.Common.DbDataAdapter.OnRowUpdated%2A>-Ereignis wird ausgelöst.  
+  
+7.  <xref:System.Data.DataRow.AcceptChanges%2A> wird aufgerufen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie sowohl die <xref:System.Data.OracleClient.OracleDataAdapter.RowUpdating> und <xref:System.Data.OracleClient.OracleDataAdapter.RowUpdated> Ereignisse.  
+  
+ Die <xref:System.Data.OracleClient.OracleDataAdapter.RowUpdating> -Ereignis wird diese Ausgabe zurückgegeben:  
+  
+ `Event Arguments: (command=OracleCommand commandType=2status=0)`  
+  
+ Die <xref:System.Data.OracleClient.OracleDataAdapter.RowUpdated> -Ereignis wird diese Ausgabe zurückgegeben:  
+  
+ `Event Arguments: (command= OracleCommend commandType=2 recordsAffected=1 row=System.Data.DataRow[37] status=0)`  
+  
+ [!code-csharp[Classic WebData OracleRowUpdatedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OracleRowUpdatedEventArgs/CS/source.cs#1)]
+ [!code-vb[Classic WebData OracleRowUpdatedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OracleRowUpdatedEventArgs/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleRowUpdatedEventArgs (System.Data.DataRow row, System.Data.IDbCommand command, System.Data.StatementType statementType, System.Data.Common.DataTableMapping tableMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataRow row, class System.Data.IDbCommand command, valuetype System.Data.StatementType statementType, class System.Data.Common.DataTableMapping tableMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleRowUpdatedEventArgs.#ctor(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" />
+        <Parameter Name="command" Type="System.Data.IDbCommand" />
+        <Parameter Name="statementType" Type="System.Data.StatementType" />
+        <Parameter Name="tableMapping" Type="System.Data.Common.DataTableMapping" />
+      </Parameters>
+      <Docs>
+        <param name="row">Die <see cref="T:System.Data.DataRow" /> gesendeter ein <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" />.</param>
+        <param name="command">Die <see cref="T:System.Data.IDbCommand" /> ausgeführt wird, wenn <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> aufgerufen wird.</param>
+        <param name="statementType">Eines der <see cref="T:System.Data.StatementType" /> Werte, die den Typ der ausgeführten Abfrage angibt.</param>
+        <param name="tableMapping">Die <see cref="T:System.Data.Common.DataTableMapping" /> gesendeter ein <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.OracleClient.OracleRowUpdatedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleCommand Command { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OracleClient.OracleCommand Command" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleRowUpdatedEventArgs.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Data.OracleClient.OracleCommand" /> ausgeführt wird, wenn <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> aufgerufen wird.</summary>
+        <value>Die <see cref="T:System.Data.OracleClient.OracleCommand" /> ausgeführt wird, wenn <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> aufgerufen wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

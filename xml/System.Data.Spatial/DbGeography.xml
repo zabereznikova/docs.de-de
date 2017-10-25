@@ -1,0 +1,1252 @@
+<Type Name="DbGeography" FullName="System.Data.Spatial.DbGeography">
+  <TypeSignature Language="C#" Value="public class DbGeography" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit DbGeography extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Spatial.DbGeography" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DataAnnotations.BindableType</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten in einem geodätischen (Erdkugel-) Koordinatensystem dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Area">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; Area { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; Area" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.Area" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen NULL-Werte zulassen double-Wert, der den Clientbereich dieses DbGeography-Wert, die möglicherweise null angibt, wenn dieser Wert keine Oberfläche darstellt.</summary>
+        <value>Ein NULL-Werte zulassen double-Wert, der den Clientbereich dieses DbGeography-Wert angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsBinary">
+      <MemberSignature Language="C#" Value="public byte[] AsBinary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] AsBinary() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.AsBinary" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert die bekannte Binärdaten dieser DbGeography-Wert.</summary>
+        <returns>Die bekannten binäre Darstellung dieser DbGeography-Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsGml">
+      <MemberSignature Language="C#" Value="public string AsGml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string AsGml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.AsGml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert die Geography Markup Language (GML)-Darstellung dieses DbGeography-Wert.</summary>
+        <returns>Eine Zeichenfolge aus der GML-Darstellung dieser DbGeography-Wert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsText">
+      <MemberSignature Language="C#" Value="public string AsText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string AsText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.AsText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert die bekannte Textdarstellung dieses DbGeography-Wert.  Enthält nur die Längen- und Breitengrad für Punkte.</summary>
+        <returns>Eine Zeichenfolge, die die bekannten Textdarstellung dieses DbGeography-Wert enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Buffer">
+      <MemberSignature Language="C#" Value="public System.Data.Spatial.DbGeography Buffer (Nullable&lt;double&gt; distance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Spatial.DbGeography Buffer(valuetype System.Nullable`1&lt;float64&gt; distance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.Buffer(System.Nullable{System.Double})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="distance" Type="System.Nullable&lt;System.Double&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="distance">Der Abstand.</param>
+        <summary>Gibt eine Geography-Objekt, das die Vereinigung aller Punkte darstellt, deren Abstand zu einer Geography-Instanz kleiner oder gleich einem angegebenen Wert zurück.</summary>
+        <returns>Eine Geography-Objekt, das die Vereinigung aller Punkte darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CoordinateSystemId">
+      <MemberSignature Language="C#" Value="public int CoordinateSystemId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CoordinateSystemId" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.CoordinateSystemId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner, der das Koordinatensystem zugeordnet.</summary>
+        <value>Der Bezeichner, der das Koordinatensystem zugeordnet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCoordinateSystemId">
+      <MemberSignature Language="C#" Value="public static int DefaultCoordinateSystemId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 DefaultCoordinateSystemId" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.DefaultCoordinateSystemId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standard-Koordinatensystem-Id (SRID) für die Geografie (WGS 84).</summary>
+        <value>Die Standard-Koordinatensystem Id (SRID) für die Geografie (WGS 84).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Difference">
+      <MemberSignature Language="C#" Value="public System.Data.Spatial.DbGeography Difference (System.Data.Spatial.DbGeography other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Spatial.DbGeography Difference(class System.Data.Spatial.DbGeography other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.Difference(System.Data.Spatial.DbGeography)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Data.Spatial.DbGeography" />
+      </Parameters>
+      <Docs>
+        <param name="other">Der Geography-Wert für den die Differenz mit diesem Wert berechnet werden soll.</param>
+        <summary>Berechnet die Differenz zwischen dieser DbGeography-Wert und einen anderen DbGeography-Wert.</summary>
+        <returns>Ein neuer DbGeography-Wert repräsentiert den Unterschied zwischen diesem Geography-Wert und <paramref name="other" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dimension">
+      <MemberSignature Language="C#" Value="public int Dimension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Dimension" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.Dimension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Dimension von der angegebenen <see cref="T:System.Data.Spatial.DbGeography" /> Wert oder, wenn der Wert eine Auflistungen, die die größte Dimension des Elements ist.</summary>
+        <value>Die Dimension von der angegebenen <see cref="T:System.Data.Spatial.DbGeography" /> Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Disjoint">
+      <MemberSignature Language="C#" Value="public bool Disjoint (System.Data.Spatial.DbGeography other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Disjoint(class System.Data.Spatial.DbGeography other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.Disjoint(System.Data.Spatial.DbGeography)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Data.Spatial.DbGeography" />
+      </Parameters>
+      <Docs>
+        <param name="other">Der Geography-Wert, der mit diesem Geography-Wert für Disjointness verglichen werden sollen.</param>
+        <summary>Bestimmt, ob diese DbGeography aus dem angegebenen DbGeography-Argument räumlich disjunkt ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="other" /> ist dieser Wert Geography disjunkt andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Distance">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; Distance (System.Data.Spatial.DbGeography other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Nullable`1&lt;float64&gt; Distance(class System.Data.Spatial.DbGeography other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.Distance(System.Data.Spatial.DbGeography)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Data.Spatial.DbGeography" />
+      </Parameters>
+      <Docs>
+        <param name="other">Der Geography-Wert für den der Abstand zwischen diesen Wert berechnet werden soll.</param>
+        <summary>Berechnet den Abstand zwischen den nächstgelegenen Punkten dieser DbGeography-Wert und einen anderen DbGeography-Wert.</summary>
+        <returns>Ein double-Wert, der den Abstand zwischen den nächsten zwei Punkten in diesem Geography-Wert angibt und <paramref name="other" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementAt">
+      <MemberSignature Language="C#" Value="public System.Data.Spatial.DbGeography ElementAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Spatial.DbGeography ElementAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.ElementAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index.</param>
+        <summary>Gibt ein Element dieser DbGeography-Wert aus einer bestimmten Position zurück, wenn es sich um eine Geography-Auflistung darstellt. &lt;Param Name = "index"&gt;die Position innerhalb dieser Geography-Wert, der aus dem das Element gezogen werden sollten.&lt; /param&gt;&lt;gibt&gt;das Element in diesem Geography-Wert an der angegebenen Position, wenn es sich um eine Auflistung von anderen Geografie; darstellt andernfalls <see langword="null" />.&lt; /returns&gt;</summary>
+        <returns>Ein Element aus einer bestimmten Position dieser DbGeography-Wert</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementCount">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; ElementCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; ElementCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.ElementCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in dieser DbGeography-Wert, wenn es sich um eine Geography-Auflistung darstellt. &lt;Gibt&gt;die Anzahl der Elemente in diesem Geography-Wert, wenn es sich um eine Auflistung von anderen Geografie; darstellt andernfalls <see langword="null" />.&lt; /returns&gt;</summary>
+        <value>Die Anzahl der Elemente in dieser DbGeography-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Elevation">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; Elevation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; Elevation" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.Elevation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausweitung (Z-Koordinate) von dieser DbGeography-Wert ab, wenn es sich um einen Punkt darstellt. &lt;Gibt&gt;Höhenwerts (Z-Koordinate) des dieser Geography-Wert, wenn es sich um einen Punkt darstellt andernfalls <see langword="null" />.&lt; /returns&gt;</summary>
+        <value>Die Erhöhung der Rechte (Z-Koordinate) des dieser DbGeography-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndPoint">
+      <MemberSignature Language="C#" Value="public System.Data.Spatial.DbGeography EndPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Spatial.DbGeography EndPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.EndPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen DbGeography-Wert, den den Startpunkt dieses Werts, die möglicherweise null, wenn dieser DbGeography-Wert keine Kurve darstellt darstellt.</summary>
+        <value>Ein DbGeography-Wert, der den Ausgangspunkt dieses Werts darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromBinary">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography FromBinary (byte[] wellKnownBinary);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography FromBinary(unsigned int8[] wellKnownBinary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.FromBinary(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wellKnownBinary" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="wellKnownBinary">Ein Bytearray, das eine bekannte binäre Darstellung der Geography-Wert enthält.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Spatial.DbGeography" /> -Wert auf Grundlage der angegebenen bekannte Binärwert.</summary>
+        <returns>Eine neue DbGeography-Wert gemäß der bekannte Binärwert mit dem Standardwert Geography koordinatensystembezeichner (SRID) (<see cref="P:System.Data.Spatial.DbGeography.DefaultCoordinateSystemId" />).</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="wellKnownBinary" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromBinary">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography FromBinary (byte[] wellKnownBinary, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography FromBinary(unsigned int8[] wellKnownBinary, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.FromBinary(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wellKnownBinary" Type="System.Byte[]" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="wellKnownBinary">Ein Bytearray, das eine bekannte binäre Darstellung der Geography-Wert enthält.</param>
+        <param name="coordinateSystemId">Der Bezeichner des Koordinatensystems an, die den neue DbGeography-Wert übernehmen sollen.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Spatial.DbGeography" /> Wert auf Grundlage der angegebenen bekannten Binärwerts und koordinatensystembezeichners (SRID)).</summary>
+        <returns>Eine neue DbGeography-Wert gemäß der Definition von der bekannte Binärwert mit der angegebenen koordinatensystembezeichner.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="wellKnownBinary" />
+        </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="coordinateSystemId" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromGml">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography FromGml (string geographyMarkup);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography FromGml(string geographyMarkup) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.FromGml(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geographyMarkup" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="geographyMarkup">Eine Zeichenfolge, die eine Darstellung Geography Markup Language (GML) der Geography-Werts enthält.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Spatial.DbGeography" /> Wert basierend auf dem angegebenen Geography Markup Language (GML)-Wert.</summary>
+        <returns>Eine neue DbGeography-Wert gemäß der GML-Wert mit Standardwert Geography Koordinatensystem Identifier (SRID) (<see cref="P:System.Data.Spatial.DbGeography.DefaultCoordinateSystemId" />).</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="geographyMarkup" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromGml">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography FromGml (string geographyMarkup, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography FromGml(string geographyMarkup, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.FromGml(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geographyMarkup" Type="System.String" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="geographyMarkup">Eine Zeichenfolge, die eine Darstellung Geography Markup Language (GML) der Geography-Werts enthält.</param>
+        <param name="coordinateSystemId">Der Bezeichner des Koordinatensystems an, die den neue DbGeography-Wert übernehmen sollen.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Spatial.DbGeography" /> Wert auf Grundlage des angegebenen Geography Markup Language (GML) und koordinatensystembezeichners (SRID)).</summary>
+        <returns>Eine neue DbGeography-Wert gemäß Definition durch den Wert GML bereit, mit der angegebenen koordinatensystembezeichner.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="geographyMarkup" />
+        </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="coordinateSystemId" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromText">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography FromText (string wellKnownText);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography FromText(string wellKnownText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.FromText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wellKnownText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="wellKnownText">Eine Zeichenfolge, die eine bekannte Textdarstellung der Geography-Wert enthält.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Spatial.DbGeography" /> Wert auf Grundlage des angegebenen bekannten Textwerts-Werts.</summary>
+        <returns>Eine neue DbGeography-Wert gemäß der bekannte Textwert mit dem Standardwert Geography koordinatensystembezeichner (SRID) (<see cref="P:System.Data.Spatial.DbGeography.DefaultCoordinateSystemId" />).</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="wellKnownText" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromText">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography FromText (string wellKnownText, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography FromText(string wellKnownText, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.FromText(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wellKnownText" Type="System.String" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="wellKnownText">Eine Zeichenfolge, die eine bekannte Textdarstellung der Geography-Wert enthält.</param>
+        <param name="coordinateSystemId">Der Bezeichner des Koordinatensystems an, die den neue DbGeography-Wert übernehmen sollen.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Spatial.DbGeography" /> Wert auf Grundlage des angegebenen bekannten Textwerts und koordinatensystembezeichners (SRID)).</summary>
+        <returns>Eine neue DbGeography-Wert gemäß Definition durch den bekannten Textwert mit der angegebenen koordinatensystembezeichner.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="wellKnownText" />
+        </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="coordinateSystemId" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GeographyCollectionFromBinary">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography GeographyCollectionFromBinary (byte[] geographyCollectionWellKnownBinary, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography GeographyCollectionFromBinary(unsigned int8[] geographyCollectionWellKnownBinary, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.GeographyCollectionFromBinary(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geographyCollectionWellKnownBinary" Type="System.Byte[]" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="geographyCollectionWellKnownBinary">Ein Bytearray, das eine bekannte binäre Darstellung der Geography-Wert enthält.</param>
+        <param name="coordinateSystemId">Der Bezeichner des Koordinatensystems an, die den neue DbGeography-Wert übernehmen sollen.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Spatial.DbGeography" /> Auflistungswert auf Grundlage der angegebenen bekannten Binärwerts und koordinatensystembezeichners (SRID)).</summary>
+        <returns>Eine neue DbGeography-Wert gemäß der Definition von der bekannte Binärwert mit der angegebenen koordinatensystembezeichner.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="geographyCollectionWellKnownBinary" />
+        </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="coordinateSystemId" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GeographyCollectionFromText">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography GeographyCollectionFromText (string geographyCollectionWellKnownText, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography GeographyCollectionFromText(string geographyCollectionWellKnownText, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.GeographyCollectionFromText(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geographyCollectionWellKnownText" Type="System.String" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="geographyCollectionWellKnownText">Eine Zeichenfolge, die eine bekannte Textdarstellung der Geography-Wert enthält.</param>
+        <param name="coordinateSystemId">Der Bezeichner des Koordinatensystems an, die den neue DbGeography-Wert übernehmen sollen.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Spatial.DbGeography" /> Auflistungswert auf Grundlage des angegebenen bekannten Textwerts und koordinatensystembezeichners (SRID)).</summary>
+        <returns>Eine neue DbGeography-Wert gemäß Definition durch den bekannten Textwert mit der angegebenen koordinatensystembezeichner.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="geographyCollectionWellKnownText" />
+        </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="coordinateSystemId" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersection">
+      <MemberSignature Language="C#" Value="public System.Data.Spatial.DbGeography Intersection (System.Data.Spatial.DbGeography other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Spatial.DbGeography Intersection(class System.Data.Spatial.DbGeography other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.Intersection(System.Data.Spatial.DbGeography)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Data.Spatial.DbGeography" />
+      </Parameters>
+      <Docs>
+        <param name="other">Der Geography-Wert für den die Schnittmenge mit diesem Wert berechnet werden soll.</param>
+        <summary>Berechnet die Schnittmenge dieser DbGeography-Wert und einen anderen DbGeography-Wert.</summary>
+        <returns>Ein neuer DbGeography-Wert repräsentiert die Schnittmenge zwischen diesen Wert Geography und <paramref name="other" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersects">
+      <MemberSignature Language="C#" Value="public bool Intersects (System.Data.Spatial.DbGeography other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Intersects(class System.Data.Spatial.DbGeography other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.Intersects(System.Data.Spatial.DbGeography)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Data.Spatial.DbGeography" />
+      </Parameters>
+      <Docs>
+        <param name="other">Der Geography-Wert, der mit diesem Geography-Wert für die Schnittmenge verglichen werden sollen.</param>
+        <summary>Bestimmt, ob dieser DbGeography-Wert das angegebene DbGeography-Argument räumlich überlappt.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="other" /> schneidet diese geografiewert andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClosed">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsClosed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsClosed" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.IsClosed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen NULL-Werte zulässt, booleschen Wert, der angibt, ob dieser DbGeography-Wert geschlossen ist die darf null sein. wenn dieser Wert keine Kurve darstellt.</summary>
+        <value>
+          <see langword="True" />Wenn dieser Wert DbGeography geschlossen wird. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen NULL-Werte zulässt, booleschen Wert, der angibt, ob dieser DbGeography-Wert leer ist.</summary>
+        <value>
+          <see langword="True" />Wenn dieser DbGeography-Wert leer ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Latitude">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; Latitude { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; Latitude" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.Latitude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Koordinate Breitengrad dieses DbGeography-Wert ab, wenn es sich um einen Punkt darstellt. &lt;Gibt&gt;die Breitengrad-Koordinatenwert dieses Geography-Werts, wenn es sich um einen bestimmten; darstellt andernfalls <see langword="null" />.&lt; /returns&gt;</summary>
+        <value>Die Koordinate für den Breitengrad dieses DbGeography-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; Length" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen NULL-Werte zulassen double-Wert, der die Länge dieses Werts DbGeography, die möglicherweise null angibt, wenn dieser Wert keine Kurve darstellt.</summary>
+        <value>Ein NULL-Werte zulassen double-Wert, der die Länge dieser DbGeography-Wert angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineFromBinary">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography LineFromBinary (byte[] lineWellKnownBinary, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography LineFromBinary(unsigned int8[] lineWellKnownBinary, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.LineFromBinary(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lineWellKnownBinary" Type="System.Byte[]" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="lineWellKnownBinary">Ein Bytearray, das eine bekannte binäre Darstellung der Geography-Wert enthält.</param>
+        <param name="coordinateSystemId">Der Bezeichner des Koordinatensystems an, die den neue DbGeography-Wert übernehmen sollen.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Spatial.DbGeography" /> Zeile Wert auf Grundlage der angegebenen bekannten Binärwerts und koordinatensystembezeichners (SRID)).</summary>
+        <returns>Eine neue DbGeography-Wert gemäß der Definition von der bekannte Binärwert mit der angegebenen koordinatensystembezeichner.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="lineWellKnownBinary" />
+        </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="coordinateSystemId" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LineFromText">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography LineFromText (string lineWellKnownText, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography LineFromText(string lineWellKnownText, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.LineFromText(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lineWellKnownText" Type="System.String" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="lineWellKnownText">Eine Zeichenfolge, die eine bekannte Textdarstellung der Geography-Wert enthält.</param>
+        <param name="coordinateSystemId">Der Bezeichner des Koordinatensystems an, die den neue DbGeography-Wert übernehmen sollen.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Spatial.DbGeography" /> Zeile Wert auf Grundlage des angegebenen bekannten Textwerts und koordinatensystembezeichners (SRID)).</summary>
+        <returns>Eine neue DbGeography-Wert gemäß Definition durch den bekannten Textwert mit der angegebenen koordinatensystembezeichner.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="lineWellKnownText" />
+        </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="coordinateSystemId" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Longitude">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; Longitude { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; Longitude" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.Longitude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Längenkoordinate dieser DbGeography-Wert ab, wenn es sich um einen Punkt darstellt. &lt;Gibt&gt;der Längengrad Koordinatenwert dieses Geography-Werts, wenn es sich um einen bestimmten; darstellt andernfalls <see langword="null" />.&lt; /returns&gt;</summary>
+        <value>Die Längenkoordinate dieser DbGeography-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Measure">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; Measure { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; Measure" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.Measure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Koordinate M (Measure) dieser DbGeography-Wert ab, wenn es sich um einen Punkt darstellt. &lt;Gibt&gt;der M (Measure)-Koordinatenwert dieses Geography-Werts, wenn es sich um einen bestimmten; darstellt andernfalls <see langword="null" />.&lt; /returns&gt;</summary>
+        <value>Die Koordinate M (Measure) dieser DbGeography-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiLineFromBinary">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography MultiLineFromBinary (byte[] multiLineWellKnownBinary, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography MultiLineFromBinary(unsigned int8[] multiLineWellKnownBinary, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.MultiLineFromBinary(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="multiLineWellKnownBinary" Type="System.Byte[]" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="multiLineWellKnownBinary">Der bekannte Binärwert.</param>
+        <param name="coordinateSystemId">Der Koordinatensystembezeichner.</param>
+        <summary>Gibt den mehrzeiligen Wert aus einem Binärwert zurück.</summary>
+        <returns>Der mehrzeilige Wert aus einem Binärwert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiLineFromText">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography MultiLineFromText (string multiLineWellKnownText, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography MultiLineFromText(string multiLineWellKnownText, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.MultiLineFromText(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="multiLineWellKnownText" Type="System.String" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="multiLineWellKnownText">Der bekannte Text.</param>
+        <param name="coordinateSystemId">Der Koordinatensystembezeichner.</param>
+        <summary>Gibt den Mehrzeilenwert eines bekannten Textwerts zurück.</summary>
+        <returns>Den Mehrzeilenwert eines bekannten Textwerts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiPointFromBinary">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography MultiPointFromBinary (byte[] multiPointWellKnownBinary, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography MultiPointFromBinary(unsigned int8[] multiPointWellKnownBinary, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.MultiPointFromBinary(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="multiPointWellKnownBinary" Type="System.Byte[]" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="multiPointWellKnownBinary">Der bekannte Binärwert.</param>
+        <param name="coordinateSystemId">Der Koordinatensystembezeichner.</param>
+        <summary>Gibt den Multipointwert von einem bekannten Binärwert zurück.</summary>
+        <returns>Der Multipointwert eines bekannten Binärwerts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiPointFromText">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography MultiPointFromText (string multiPointWellKnownText, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography MultiPointFromText(string multiPointWellKnownText, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.MultiPointFromText(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="multiPointWellKnownText" Type="System.String" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="multiPointWellKnownText">Der bekannte Textwert.</param>
+        <param name="coordinateSystemId">Der Koordinatensystembezeichner.</param>
+        <summary>Gibt den Multipointwert von einem bekannten Textwert zurück.</summary>
+        <returns>Der Multipointwert aus einem bekannten Textwert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiPolygonFromBinary">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography MultiPolygonFromBinary (byte[] multiPolygonWellKnownBinary, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography MultiPolygonFromBinary(unsigned int8[] multiPolygonWellKnownBinary, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.MultiPolygonFromBinary(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="multiPolygonWellKnownBinary" Type="System.Byte[]" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="multiPolygonWellKnownBinary">Der bekannte Multipolygon-Binärwert.</param>
+        <param name="coordinateSystemId">Der Koordinatensystembezeichner.</param>
+        <summary>Gibt den Multipolygonwert aus einem bekannten Binärwert zurück.</summary>
+        <returns>Der Multipolygonwert aus einem bekannten Binärwert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiPolygonFromText">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography MultiPolygonFromText (string multiPolygonWellKnownText, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography MultiPolygonFromText(string multiPolygonWellKnownText, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.MultiPolygonFromText(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="multiPolygonWellKnownText" Type="System.String" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="multiPolygonWellKnownText">Der bekannte Textwert des Multipolygons.</param>
+        <param name="coordinateSystemId">Der Koordinatensystembezeichner.</param>
+        <summary>Gibt den Multipolygonwert aus einem bekannten Textwert zurück.</summary>
+        <returns>Der Multipolygonwert eines bekannten Textwerts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PointAt">
+      <MemberSignature Language="C#" Value="public System.Data.Spatial.DbGeography PointAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Spatial.DbGeography PointAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.PointAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index.</param>
+        <summary>Gibt ein Element dieser DbGeography-Wert aus einer bestimmten Position zurück, wenn es sich um einen Linestring oder linearen Ring darstellt. &lt;Param Name = "index"&gt;die Position innerhalb dieser Geography-Wert, der aus dem das Element gezogen werden sollten.&lt; /param&gt;&lt;gibt&gt;das Element in diesem Geography-Wert an der angegebenen Position, wenn es sich um einen Linestring oder linearen Ring; darstellt andernfalls <see langword="null" />.&lt; /returns&gt;</summary>
+        <returns>Ein Element aus einer bestimmten Position dieser DbGeography-Wert</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PointCount">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; PointCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; PointCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.PointCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Punkte in diesem DbGeography-Wert, wenn es sich um einen Linestring oder linearen Ring darstellt. &lt;Gibt&gt;die Anzahl der Elemente in diesem Geography-Wert, wenn es sich um einen Linestring oder linearen Ring; darstellt andernfalls <see langword="null" />.&lt; /returns&gt;</summary>
+        <value>Die Anzahl der Punkte in diesem DbGeography-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PointFromBinary">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography PointFromBinary (byte[] pointWellKnownBinary, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography PointFromBinary(unsigned int8[] pointWellKnownBinary, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.PointFromBinary(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pointWellKnownBinary" Type="System.Byte[]" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pointWellKnownBinary">Ein Bytearray, das eine bekannte binäre Darstellung der Geography-Wert enthält.</param>
+        <param name="coordinateSystemId">Der Bezeichner des Koordinatensystems an, die den neue DbGeography-Wert übernehmen sollen.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Spatial.DbGeography" /> Datenpunktwert auf Grundlage der angegebenen bekannten Binärwerts und koordinatensystembezeichners (SRID)).</summary>
+        <returns>Eine neue DbGeography-Wert gemäß der Definition von der bekannte Binärwert mit der angegebenen koordinatensystembezeichner.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pointWellKnownBinary" />
+        </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="coordinateSystemId" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PointFromText">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography PointFromText (string pointWellKnownText, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography PointFromText(string pointWellKnownText, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.PointFromText(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pointWellKnownText" Type="System.String" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pointWellKnownText">Eine Zeichenfolge, die eine bekannte Textdarstellung der Geography-Wert enthält.</param>
+        <param name="coordinateSystemId">Der Bezeichner des Koordinatensystems an, die den neue DbGeography-Wert übernehmen sollen.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Spatial.DbGeography" /> Wert auf Grundlage des angegebenen bekannten Textwerts und koordinatensystembezeichners (SRID)) zeigen.</summary>
+        <returns>Eine neue DbGeography-Wert gemäß Definition durch den bekannten Textwert mit der angegebenen koordinatensystembezeichner.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pointWellKnownText" />
+        </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="coordinateSystemId" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PolygonFromBinary">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography PolygonFromBinary (byte[] polygonWellKnownBinary, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography PolygonFromBinary(unsigned int8[] polygonWellKnownBinary, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.PolygonFromBinary(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="polygonWellKnownBinary" Type="System.Byte[]" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="polygonWellKnownBinary">Ein Bytearray, das eine bekannte binäre Darstellung der Geography-Wert enthält.</param>
+        <param name="coordinateSystemId">Der Bezeichner des Koordinatensystems an, die den neue DbGeography-Wert übernehmen sollen.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Spatial.DbGeography" /> Polygon-Wert auf Grundlage der angegebenen bekannten Binärwerts und koordinatensystembezeichners (SRID)).</summary>
+        <returns>Eine neue DbGeography-Wert gemäß der Definition von der bekannte Binärwert mit der angegebenen koordinatensystembezeichner.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="polygonWellKnownBinary" />
+        </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="coordinateSystemId" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PolygonFromText">
+      <MemberSignature Language="C#" Value="public static System.Data.Spatial.DbGeography PolygonFromText (string polygonWellKnownText, int coordinateSystemId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Spatial.DbGeography PolygonFromText(string polygonWellKnownText, int32 coordinateSystemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.PolygonFromText(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="polygonWellKnownText" Type="System.String" />
+        <Parameter Name="coordinateSystemId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="polygonWellKnownText">Eine Zeichenfolge, die eine bekannte Textdarstellung der Geography-Wert enthält.</param>
+        <param name="coordinateSystemId">Der Bezeichner des Koordinatensystems an, die den neue DbGeography-Wert übernehmen sollen.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Spatial.DbGeography" /> Polygon-Wert auf Grundlage des angegebenen bekannten Textwerts und koordinatensystembezeichners (SRID)).</summary>
+        <returns>Eine neue DbGeography-Wert gemäß Definition durch den bekannten Textwert mit der angegebenen koordinatensystembezeichner.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="polygonWellKnownText" />
+        </exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="coordinateSystemId" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderValue">
+      <MemberSignature Language="C#" Value="public object ProviderValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ProviderValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.ProviderValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolgendarstellung dieser DbGeography-Wert, der an den zugrunde liegenden Anbieter spezifisch ist, dem Sie erstellt.</summary>
+        <value>Eine Darstellung dieser DbGeography-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpatialEquals">
+      <MemberSignature Language="C#" Value="public bool SpatialEquals (System.Data.Spatial.DbGeography other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SpatialEquals(class System.Data.Spatial.DbGeography other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.SpatialEquals(System.Data.Spatial.DbGeography)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Data.Spatial.DbGeography" />
+      </Parameters>
+      <Docs>
+        <param name="other">Der Geography-Wert, der mit diesem Geography-Wert auf Gleichheit verglichen werden sollen.</param>
+        <summary>Bestimmt, ob diese DbGeography räumlich gleich dem angegebenen DbGeography-Argument.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="other" /> räumlich gleich diesem Wert Geography andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SpatialTypeName">
+      <MemberSignature Language="C#" Value="public string SpatialTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SpatialTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.SpatialTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den räumlichen Typnamen der DBGeography ab.</summary>
+        <value>Der Datentyp für räumliche-Name, der die DBGeography werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartPoint">
+      <MemberSignature Language="C#" Value="public System.Data.Spatial.DbGeography StartPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Spatial.DbGeography StartPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.StartPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen DbGeography-Wert, den den Startpunkt dieses Werts, die möglicherweise null, wenn dieser DbGeography-Wert keine Kurve darstellt darstellt.</summary>
+        <value>Ein DbGeography-Wert, der den Ausgangspunkt dieses Werts darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SymmetricDifference">
+      <MemberSignature Language="C#" Value="public System.Data.Spatial.DbGeography SymmetricDifference (System.Data.Spatial.DbGeography other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Spatial.DbGeography SymmetricDifference(class System.Data.Spatial.DbGeography other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.SymmetricDifference(System.Data.Spatial.DbGeography)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Data.Spatial.DbGeography" />
+      </Parameters>
+      <Docs>
+        <param name="other">Der Geography-Wert für den des symmetrischen Unterschieds mit diesem Wert berechnet werden soll.</param>
+        <summary>Berechnet den symmetrischen Unterschied der dieser DbGeography-Wert und einen anderen DbGeography-Wert.</summary>
+        <returns>Eine neue DbGeography-Wert, der den symmetrischen Unterschied zwischen diesem Geography-Wert darstellt und <paramref name="other" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung des Werts Geografie zurück.</summary>
+        <returns>Eine Zeichenfolgendarstellung des Werts Geography.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public System.Data.Spatial.DbGeography Union (System.Data.Spatial.DbGeography other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Spatial.DbGeography Union(class System.Data.Spatial.DbGeography other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Spatial.DbGeography.Union(System.Data.Spatial.DbGeography)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeography</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Data.Spatial.DbGeography" />
+      </Parameters>
+      <Docs>
+        <param name="other">Der Geography-Wert für den die Vereinigung mit diesem Wert berechnet werden soll.</param>
+        <summary>Berechnet die Kombination dieser DbGeography-Wert und einen anderen DbGeography-Wert.</summary>
+        <returns>Ein neuer DbGeography-Wert, der die Verbindung zwischen diesem Geography-Wert und <paramref name="other" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" />
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WellKnownValue">
+      <MemberSignature Language="C#" Value="public System.Data.Spatial.DbGeographyWellKnownValue WellKnownValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Spatial.DbGeographyWellKnownValue WellKnownValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Spatial.DbGeography.WellKnownValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember(Name="Geography")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Spatial.DbGeographyWellKnownValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert eine Vertrag serialisierbar bekannte Darstellung der Daten dieser DbGeography-Wert.</summary>
+        <value>Ein Datenvertrag serialisierbare bekannte Darstellung dieser DbGeography-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,109 @@
+<Type Name="TransactionScopeOption" FullName="System.Transactions.TransactionScopeOption">
+  <TypeSignature Language="C#" Value="public enum TransactionScopeOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TransactionScopeOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.TransactionScopeOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Stellt zusätzliche Optionen zum Erstellen eines Transaktionsbereichs bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Transactions.TransactionScopeOption> -Enumeration wird an die verschiedenen Konstruktoren der übergeben der <xref:System.Transactions.TransactionScope> Klasse, um das Transaktionsverhalten des Bereichs zu definieren. Weitere Informationen zur Verwendung dieser Enumeration finden Sie im Abschnitt "Verwalten des Transaktionsflusses mithilfe von TransactionScopeOption" [implementieren eine implizite Transaktion mithilfe von Transaktionsbereich](~/docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="Required" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.TransactionScopeOption Required = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.TransactionScopeOption.Required" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.TransactionScopeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Bereich ist eine Transaktion erforderlich. Er verwendet eine Ambiente-Transaktion, wenn bereits eine vorhanden ist. Andernfalls erstellt sie eine neue Transaktion vor dem Wechsel in des Bereichs an. Dies ist der Standardwert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresNew">
+      <MemberSignature Language="C#" Value="RequiresNew" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.TransactionScopeOption RequiresNew = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.TransactionScopeOption.RequiresNew" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.TransactionScopeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine neue Transaktion wird immer für den Bereich erstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Suppress">
+      <MemberSignature Language="C#" Value="Suppress" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.TransactionScopeOption Suppress = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.TransactionScopeOption.Suppress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.TransactionScopeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Kontext der ambient-Transaktion wird unterdrückt, für die Erstellung des Bereichs. Alle Vorgänge innerhalb des Bereichs werden ohne einen Kontext der ambient-Transaktion ausgeführt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

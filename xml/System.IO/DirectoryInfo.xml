@@ -1,0 +1,2424 @@
+<Type Name="DirectoryInfo" FullName="System.IO.DirectoryInfo">
+  <TypeSignature Language="C#" Value="public sealed class DirectoryInfo : System.IO.FileSystemInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DirectoryInfo extends System.IO.FileSystemInfo" />
+  <TypeSignature Language="DocId" Value="T:System.IO.DirectoryInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.FileSystemInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht Instanzmethoden zum Erstellen, Verschieben und Auflisten in Verzeichnissen und Unterverzeichnissen verfügbar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die .NET Framework-Quellcodes für diesen Typ finden Sie unter der [Verweisquelle](http://referencesource.microsoft.com/#mscorlib/system/io/directoryinfo.cs#30fa608717e5ce8e). Sie können den Quellcode online Durchsuchen, Referenz für die Offlineanzeige herunterladen und schrittweise durchlaufen (inklusive Patches und Updates) während des Debuggens; finden Sie unter [Anweisungen](http://referencesource.microsoft.com/).  
+  
+ Verwenden der <xref:System.IO.DirectoryInfo> Klasse für normale Vorgänge wie kopieren, verschieben, umbenennen, erstellen und Löschen von Verzeichnissen.  
+  
+ Wenn Sie ein Objekt mehrmals wiederverwenden möchten, erwägen Sie die Instanzmethode <xref:System.IO.DirectoryInfo> anstelle der entsprechenden statischen Methoden der <xref:System.IO.Directory> Klasse, da eine sicherheitsprüfung nicht immer notwendig sein werden.  
+  
+> [!NOTE]
+>  Bei Membern, die einen Pfad als Eingabezeichenfolge akzeptieren, dass der Pfad muss wohlgeformt sein oder eine Ausnahme ausgelöst. Wenn ein Pfad vollqualifizierte ist aber mit einem Leerzeichen beginnt, wird der Pfad z. B. nicht in Methoden der Klasse gekürzt. Aus diesem Grund der Pfad ist falsch formatiert, und eine Ausnahme ausgelöst. Auf ähnliche Weise kann keinen Pfad oder eine Kombination von Pfaden zweimal vollqualifiziert sein. So löst z. B. "c:\temp c:\windows" auch eine Ausnahme in den meisten Fällen. Stellen Sie sicher, dass die Pfade wohlgeformt sind, wenn Sie Methoden verwenden, die eine Pfadzeichenfolge akzeptieren.  
+  
+ Bei Membern, die einen Pfad zu akzeptieren, kann der Pfad in einer Datei oder einfach ein Verzeichnis verweisen. Der angegebene Pfad kann auch auf einen relativen oder einen Pfad (UNC = Universal Naming Convention) für den Namen eines Servers und der freigabeeinstellungen verweisen. Beispielsweise sind alle folgenden Pfade zulässig:  
+  
+-   "" c: "\\\MyDir\\\MyFile.txt" in C#- oder "c:\MyDir\MyFile.txt" in Visual Basic.  
+  
+-   "" c: "\\\MyDir" in C#- oder "c:\MyDir" in Visual Basic.  
+  
+-   "" MyDir "\\\MySubdir" in C#- oder "MyDir\MySubDir" in Visual Basic.  
+  
+-   "\\\\\\\MyServer\\\MyShare" in C#- oder "\\\MyServer\MyShare" in Visual Basic.  
+  
+ Standardmäßig erhält die vollständigen Lese-/Schreibzugriff auf neue Verzeichnisse für alle Benutzer.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht einige der wichtigsten Elemente der `DirectoryInfo` Klasse.  
+  
+ [!code-cpp[DirInfo Class Example#1](~/samples/snippets/cpp/VS_Snippets_CLR/DirInfo Class Example/CPP/dirinfo class example.cpp#1)]
+ [!code-csharp[DirInfo Class Example#1](~/samples/snippets/csharp/VS_Snippets_CLR/DirInfo Class Example/CS/dirinfo class example.cs#1)]
+ [!code-vb[DirInfo Class Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/DirInfo Class Example/VB/dirinfo class example.vb#1)]  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Verzeichnis und dessen Inhalt kopiert wird.  
+  
+ [!code-csharp[IO.DirectoryInfo-CopyDir#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.DirectoryInfo-CopyDir/cs/copydir.cs#1)]
+ [!code-vb[IO.DirectoryInfo-CopyDir#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.DirectoryInfo-CopyDir/vb/CopyDir.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryInfo (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Eine Zeichenfolge, die den Pfad angibt, auf dem die <see langword="DirectoryInfo" /> erstellt werden sollen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.DirectoryInfo" />-Klasse im angegebenen Pfad.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird nicht überprüft werden, wenn ein Verzeichnis vorhanden ist. Dieser Konstruktor ist ein Platzhalter für eine Zeichenfolge, die Zugriff auf die Festplatte in nachfolgenden Vorgängen verwendet wird.  
+  
+ Die `path` Parameter kann einen Dateinamen, einschließlich einer Datei auf einer Freigabe (UNC = Universal Naming Convention) sein.  
+  
+> [!CAUTION]
+>  Wenn Sie einen Satz von Zeichen mit einer bestimmten kultureinstellung kompilieren und dieser dieselben Zeichen mit einer anderen kultureinstellung abrufen, der Zeichen können nicht interpretiert werden und können dazu führen, dass eine Ausnahme ausgelöst werden.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird dieser Konstruktor verwendet wird, um die angegebene Verzeichnis und Unterverzeichnis erstellen und beweist, dass das Verzeichnis Unterverzeichnisse enthält die nicht gelöscht werden kann.  
+  
+ [!code-cpp[DirInfo Ctor#1](~/samples/snippets/cpp/VS_Snippets_CLR/DirInfo Ctor/CPP/dirinfo ctor.cpp#1)]
+ [!code-csharp[DirInfo Ctor#1](~/samples/snippets/csharp/VS_Snippets_CLR/DirInfo Ctor/CS/dirinfo ctor.cs#1)]
+ [!code-vb[DirInfo Ctor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/DirInfo Ctor/VB/dirinfo ctor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />enthält ein ungültige Zeichen, z. B. ", &lt;, &gt;, oder |.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Der angegebene Pfad und/oder Dateiname überschreiten die vom System definierte maximale Länge. Beispielsweise müssen auf Windows-basierten Plattformen Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen enthalten. Der angegebene Pfad und/oder Dateiname sind zu lang.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für das Lesen aus Dateien und Verzeichnisse. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public void Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein Verzeichnis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Verzeichnis bereits vorhanden ist, wird diese Methode keine Aktion ausgeführt.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird überprüft, ob ein angegebenes Verzeichnis vorhanden ist, erstellt das Verzeichnis ist nicht vorhanden, und löscht das Verzeichnis.  
+  
+ [!code-cpp[DirInfo Create#1](~/samples/snippets/cpp/VS_Snippets_CLR/DirInfo Create/CPP/dirinfo create.cpp#1)]
+ [!code-csharp[DirInfo Create#1](~/samples/snippets/csharp/VS_Snippets_CLR/DirInfo Create/CS/dirinfo create.cs#1)]
+ [!code-vb[DirInfo Create#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/DirInfo Create/VB/dirinfo create.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Das Verzeichnis kann nicht erstellt werden.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Schreiben von Dateien. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public void Create (System.Security.AccessControl.DirectorySecurity directorySecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Create(class System.Security.AccessControl.DirectorySecurity directorySecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.Create(System.Security.AccessControl.DirectorySecurity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="directorySecurity" Type="System.Security.AccessControl.DirectorySecurity" />
+      </Parameters>
+      <Docs>
+        <param name="directorySecurity">Die Zugriffssteuerung, die auf das Verzeichnis angewendet werden soll.</param>
+        <summary>Erstellt mithilfe eines <see cref="T:System.Security.AccessControl.DirectorySecurity" />-Objekts ein Verzeichnis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese methodenüberladung, um erstellen Sie ein Verzeichnis mit der Zugriffssteuerung, daher ist es nicht möglich, die das Verzeichnis zugegriffen werden kann, bevor Sicherheit angewendet wird.  
+  
+ Wenn das Verzeichnis bereits vorhanden ist, wird diese Methode keine Aktion ausgeführt.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Das von <paramref name="path" /> angegebene Verzeichnis ist schreibgeschützt oder nicht leer.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> ist eine leere Zeichenfolge, enthält nur Leerzeichen oder mindestens ein ungültiges Zeichen gemäß der Definition von <see cref="F:System.IO.Path.InvalidPathChars" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Der angegebene Pfad und/oder Dateiname überschreiten die vom System definierte maximale Länge. Beispielsweise müssen auf Windows-basierten Plattformen Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen enthalten.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig, z. B. befindet er sich auf einem nicht zugeordneten Laufwerk.</exception>
+        <exception cref="T:System.NotSupportedException">Es wurde versucht, ein Verzeichnis ausschließlich mit dem Doppelpunkt (:) zu erstellen.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für die Berechtigung zum Erstellen eines Verzeichnisses. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.EnvironmentPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSubdirectory">
+      <MemberSignature Language="C#" Value="public System.IO.DirectoryInfo CreateSubdirectory (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.DirectoryInfo CreateSubdirectory(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.CreateSubdirectory(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.DirectoryInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der angegebene Pfad. Dieser kann nicht ein anderer Datenträgervolumename oder ein anderer UNC-Name (Universal Naming Convention) sein.</param>
+        <summary>Erstellt ein oder mehrere Unterverzeichnisse im angegebenen Pfad. Der angegebene Pfad kann zu dieser Instanz der <see cref="T:System.IO.DirectoryInfo" />-Klasse relativ sein.</summary>
+        <returns>Das letzte im <paramref name="path" /> angegebene Verzeichnis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Verzeichnisse im angegebenen `path` erstellt werden, es sei denn, ein Teil des `path` ist ungültig. Die `path` Parameter gibt einen Verzeichnispfad aufweist, keinen Dateipfad. Wenn das Unterverzeichnis bereits vorhanden ist, wird diese Methode keine Aktion ausgeführt.  
+  
+> [!NOTE]
+>  Pfadnamen sind auf 248 Zeichen beschränkt.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Erstellen eines Unterverzeichnisses. In diesem Beispiel werden die Verzeichnisse entfernt nachdem dieses erstellt wurde. Aus diesem Grund zum Testen dieses Beispiels Zeilen kommentieren Sie aus, den Löschvorgang im Code.  
+  
+ [!code-cpp[directoryinfocreatesub#1](~/samples/snippets/cpp/VS_Snippets_CLR/directoryinfocreatesub/CPP/directoryinfocreatesub.cpp#1)]
+ [!code-csharp[directoryinfocreatesub#1](~/samples/snippets/csharp/VS_Snippets_CLR/directoryinfocreatesub/CS/directoryinfocreatesub.cs#1)]
+ [!code-vb[directoryinfocreatesub#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/directoryinfocreatesub/VB/directoryinfocreatesub.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> gibt keinen gültigen Dateipfad an oder enthält ungültige <see langword="DirectoryInfo" />-Zeichen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig, z. B. befindet er sich auf einem nicht zugeordneten Laufwerk.</exception>
+        <exception cref="T:System.IO.IOException">Das Unterverzeichnis kann nicht erstellt werden.  
+  
+ - oder -   
+  
+ Eine Datei oder ein Verzeichnis weist bereits den durch <paramref name="path" /> angegebenen Namen auf.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Der angegebene Pfad und/oder Dateiname überschreiten die vom System definierte maximale Länge. Beispielsweise müssen auf Windows-basierten Plattformen Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen enthalten. Der angegebene Pfad und/oder Dateiname sind zu lang.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die Codezugriffsberechtigung zum Erstellen des Verzeichnisses.  
+  
+ - oder -   
+  
+ Der Aufrufer verfügt nicht über die Codezugriffsberechtigung zum Lesen des Verzeichnisses, das vom zurückgegebenen <see cref="T:System.IO.DirectoryInfo" />-Objekt beschrieben wird.  Dies kann der Fall sein, wenn der <paramref name="path" />-Parameter ein vorhandenes Verzeichnis beschreibt.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="path" />enthält einen Doppelpunkt (:)), die nicht Teil einer laufwerksbezeichnung ("" c: "\\").</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zum Lesen und Schreiben von Dateien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSubdirectory">
+      <MemberSignature Language="C#" Value="public System.IO.DirectoryInfo CreateSubdirectory (string path, System.Security.AccessControl.DirectorySecurity directorySecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.DirectoryInfo CreateSubdirectory(string path, class System.Security.AccessControl.DirectorySecurity directorySecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.CreateSubdirectory(System.String,System.Security.AccessControl.DirectorySecurity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.DirectoryInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="directorySecurity" Type="System.Security.AccessControl.DirectorySecurity" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der angegebene Pfad. Dieser kann nicht ein anderer Datenträgervolumename oder ein anderer UNC-Name (Universal Naming Convention) sein.</param>
+        <param name="directorySecurity">Die anzuwendende Sicherheit.</param>
+        <summary>Erstellt ein oder mehrere Unterverzeichnisse im angegebenen Pfad mit der angegebenen Sicherheit. Der angegebene Pfad kann zu dieser Instanz der <see cref="T:System.IO.DirectoryInfo" />-Klasse relativ sein.</summary>
+        <returns>Das letzte im <paramref name="path" /> angegebene Verzeichnis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Verzeichnisse im angegebenen `path` erstellt werden, es sei denn, ein Teil des `path` ist ungültig. Die `path` Parameter gibt einen Verzeichnispfad aufweist, keinen Dateipfad. Wenn das Unterverzeichnis bereits vorhanden ist, wird diese Methode keine Aktion ausgeführt.  
+  
+> [!NOTE]
+>  Pfadnamen sind auf 248 Zeichen beschränkt.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> gibt keinen gültigen Dateipfad an oder enthält ungültige <see langword="DirectoryInfo" />-Zeichen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig, z. B. befindet er sich auf einem nicht zugeordneten Laufwerk.</exception>
+        <exception cref="T:System.IO.IOException">Das Unterverzeichnis kann nicht erstellt werden.  
+  
+ - oder -   
+  
+ Eine Datei oder ein Verzeichnis weist bereits den durch <paramref name="path" /> angegebenen Namen auf.</exception>
+        <exception cref="T:System.IO.PathTooLongException">Der angegebene Pfad und/oder Dateiname überschreiten die vom System definierte maximale Länge. Beispielsweise müssen auf Windows-basierten Plattformen Pfade weniger als 248 Zeichen und Dateinamen weniger als 260 Zeichen enthalten. Der angegebene Pfad und/oder Dateiname sind zu lang.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die Codezugriffsberechtigung zum Erstellen des Verzeichnisses.  
+  
+ - oder -   
+  
+ Der Aufrufer verfügt nicht über die Codezugriffsberechtigung zum Lesen des Verzeichnisses, das vom zurückgegebenen <see cref="T:System.IO.DirectoryInfo" />-Objekt beschrieben wird.  Dies kann der Fall sein, wenn der <paramref name="path" />-Parameter ein vorhandenes Verzeichnis beschreibt.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="path" />enthält einen Doppelpunkt (:)), die nicht Teil einer laufwerksbezeichnung ("" c: "\\").</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Zum Lesen und Schreiben von Dateien. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public override void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht diese <see cref="T:System.IO.DirectoryInfo" />, wenn diese leer sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel löst eine Ausnahme aus, wenn Sie versuchen, ein Verzeichnis löschen, die nicht leer ist.  
+  
+ [!code-cpp[DirInfo Delete1#1](~/samples/snippets/cpp/VS_Snippets_CLR/DirInfo Delete1/CPP/dirinfo delete1.cpp#1)]
+ [!code-csharp[DirInfo Delete1#1](~/samples/snippets/csharp/VS_Snippets_CLR/DirInfo Delete1/CS/dirinfo delete1.cs#1)]
+ [!code-vb[DirInfo Delete1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/DirInfo Delete1/VB/dirinfo delete1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Das Verzeichnis enthält eine schreibgeschützte Datei.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das von diesem <see cref="T:System.IO.DirectoryInfo" />-Objekt beschriebene Verzeichnis ist nicht vorhanden oder konnte nicht gefunden werden.</exception>
+        <exception cref="T:System.IO.IOException">Das Verzeichnis ist nicht leer.  
+  
+ - oder -   
+  
+ Das Verzeichnis ist das aktuelle Arbeitsverzeichnis der Anwendung.  
+  
+ - oder -   
+  
+ Es liegt ein geöffnetes Handle für das Verzeichnis vor und das Betriebssystem ist Windows XP oder früher. Dieses geöffnete Handle kann vom Auflisten von Verzeichnissen stammen. Weitere Informationen finden Sie unter [wie: Auflisten von Verzeichnissen und Dateien](~/docs/standard/io/how-to-enumerate-directories-and-files.md).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Schreiben von Verzeichnissen. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete (bool recursive);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete(bool recursive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.Delete(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="recursive" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="recursive">
+          <see langword="true" />, um dieses Verzeichnis, seine Unterverzeichnisse und alle Dateien zu löschen, andernfalls <see langword="false" />.</param>
+        <summary>Löscht diese Instanz von <see cref="T:System.IO.DirectoryInfo" /> und gibt an, ob Unterverzeichnisse und Dateien gelöscht werden sollen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `DirectoryInfo` hat keine Dateien oder Unterverzeichnisse, die diese Methode löscht die `DirectoryInfo` selbst wenn `recursive` ist `false`. Zu löschen versuchen, eine `DirectoryInfo` , die ist nicht leer, wenn `recursive` ist `false` löst eine <xref:System.IO.IOException>.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Löschen eines Verzeichnisses. Da das Verzeichnis entfernt wird, kommentieren Sie zunächst die `Delete` Zeile zu testen, ob das Verzeichnis vorhanden ist. Kommentieren Sie dann die gleiche Zeile des Codes zu testen, ob das Verzeichnis erfolgreich entfernt wurde.  
+  
+ [!code-cpp[directoryinfodelete#1](~/samples/snippets/cpp/VS_Snippets_CLR/directoryinfodelete/CPP/directoryinfodelete.cpp#1)]
+ [!code-csharp[directoryinfodelete#1](~/samples/snippets/csharp/VS_Snippets_CLR/directoryinfodelete/CS/directoryinfodelete.cs#1)]
+ [!code-vb[directoryinfodelete#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/directoryinfodelete/VB/directoryinfodelete.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Das Verzeichnis enthält eine schreibgeschützte Datei.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das von diesem <see cref="T:System.IO.DirectoryInfo" />-Objekt beschriebene Verzeichnis ist nicht vorhanden oder konnte nicht gefunden werden.</exception>
+        <exception cref="T:System.IO.IOException">Das Verzeichnis ist schreibgeschützt.  
+  
+ - oder -   
+  
+ Das Verzeichnis enthält mindestens eine Datei oder ein Unterverzeichnis, und <paramref name="recursive" /> ist <see langword="false" />.  
+  
+ - oder -   
+  
+ Das Verzeichnis ist das aktuelle Arbeitsverzeichnis der Anwendung.  
+  
+ - oder -   
+  
+ Es liegt ein geöffnetes Handle für das Verzeichnis oder eines seiner Dateien vor, und das Betriebssystem ist Windows XP oder früher. Dieses geöffnete Handle kann vom Auflisten von Verzeichnissen und Dateien stammen. Weitere Informationen finden Sie unter [wie: Auflisten von Verzeichnissen und Dateien](~/docs/standard/io/how-to-enumerate-directories-and-files.md).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermissionAccess">Schreiben Sie Flag erforderlich für über die Schreibberechtigung für die <see langword="DirectoryInfo" /> und Unterverzeichnissen gelöscht werden soll.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateDirectories">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.IO.DirectoryInfo&gt; EnumerateDirectories ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.IO.DirectoryInfo&gt; EnumerateDirectories() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.EnumerateDirectories" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.DirectoryInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine aufzählbare Auflistung von Verzeichnisinformationen im aktuellen Verzeichnis zurück.</summary>
+        <returns>Eine aufzählbare Auflistung der Verzeichnisse im aktuellen Verzeichnis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A> und <xref:System.IO.DirectoryInfo.GetDirectories%2A> Methoden unterscheiden sich wie folgt:  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A>, können Sie anfangen die Auflistung der <xref:System.IO.DirectoryInfo> Objekte, bevor die ganze Auflistung zurückgegeben wird.  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.GetDirectories%2A>, müssen Sie warten, bis das gesamte Array von <xref:System.IO.DirectoryInfo> Objekte zurückgegeben werden, bevor Sie das Array zugreifen können.  
+  
+ Aus diesem Grund, wenn Sie arbeiten mit vielen Dateien und Verzeichnisse <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A> kann effizienter sein.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.DirectoryInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+ Die zurückgegebene Auflistung wird nicht zwischengespeichert. Bei jedem Aufruf der <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> Methode für die Auflistung startet eine neue Enumeration.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden die Unterverzeichnisse unter dem Verzeichnis C:\Program Files und verwendet eine LINQ-Abfrage, um die Namen aller Verzeichnisse zurückzugeben, die vor 2009 erstellt wurden, durch Überprüfung des Werts von der <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A> Eigenschaft.  
+  
+ Wenn Sie nur die Namen der Unterverzeichnisse benötigen, verwenden Sie die statische <xref:System.IO.Directory> Klasse für eine bessere Leistung. Ein Beispiel finden Sie die <xref:System.IO.Directory.EnumerateDirectories%28System.String%29> Methode.  
+  
+ [!code-csharp[System.IO.DirectoryInfo.EnumDirs#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/cs/program.cs#1)]
+ [!code-vb[System.IO.DirectoryInfo.EnumDirs#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der im <see cref="T:System.IO.DirectoryInfo" />-Objekt gekapselte Pfad ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateDirectories">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.IO.DirectoryInfo&gt; EnumerateDirectories (string searchPattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.IO.DirectoryInfo&gt; EnumerateDirectories(string searchPattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.EnumerateDirectories(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.DirectoryInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="searchPattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="searchPattern">Die Suchzeichenfolge für die Überprüfung der Namen von Verzeichnissen auf Übereinstimmungen.  Dieser Parameter darf eine Kombination aus gültigem Literalpfad und Platzhalterzeichen (* und?) Zeichen, aber sie unterstützt keine regulären Ausdrücke. Das Standardmuster ist "*", wobei alle Dateien zurückgegeben werden.</param>
+        <summary>Gibt eine aufzählbare Auflistung von Verzeichnisinformationen zurück, die einem angegebenen Suchmuster entsprechen.</summary>
+        <returns>Eine aufzählbare Auflistung von Verzeichnissen, die <paramref name="searchPattern" /> entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `searchPattern`kann eine Kombination von Literal-und Platzhalterzeichen, es unterstützt jedoch keine regulären Ausdrücke. Die folgenden Bezeichner für Platzhalter sind zulässig, `searchPattern`.  
+  
+|Platzhalter-Spezifizierer|Entsprechungen|  
+|------------------------|-------------|  
+|* (Sternchen)|NULL oder mehr Zeichen an dieser Stelle.|  
+|? (Fragezeichen)|0 (null) oder ein Zeichen an dieser Stelle.|  
+  
+ Zeichen als die Platzhalter sind Literalzeichen. Z. B. die Zeichenfolge "* t" sucht nach allen Namen mit dem Buchstaben "t" beendet wird. ". Die `searchPattern` Zeichenfolge "s\*" sucht nach allen Namen in `path` mit dem Buchstaben "s" beginnen.  
+  
+ Die <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A> und <xref:System.IO.DirectoryInfo.GetDirectories%2A> Methoden unterscheiden sich wie folgt:  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A>, können Sie anfangen die Auflistung der <xref:System.IO.DirectoryInfo> Objekte, bevor die ganze Auflistung zurückgegeben wird.  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.GetDirectories%2A>, müssen Sie warten, bis das gesamte Array von <xref:System.IO.DirectoryInfo> Objekte zurückgegeben werden, bevor Sie das Array zugreifen können.  
+  
+ Aus diesem Grund, wenn Sie arbeiten mit vielen Dateien und Verzeichnisse <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A> kann effizienter sein.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.DirectoryInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+ Die zurückgegebene Auflistung wird nicht zwischengespeichert. Bei jedem Aufruf der <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> Methode für die Auflistung startet eine neue Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der im <see cref="T:System.IO.DirectoryInfo" />-Objekt gekapselte Pfad ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateDirectories">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.IO.DirectoryInfo&gt; EnumerateDirectories (string searchPattern, System.IO.SearchOption searchOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.IO.DirectoryInfo&gt; EnumerateDirectories(string searchPattern, valuetype System.IO.SearchOption searchOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.EnumerateDirectories(System.String,System.IO.SearchOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.DirectoryInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="searchPattern" Type="System.String" />
+        <Parameter Name="searchOption" Type="System.IO.SearchOption" />
+      </Parameters>
+      <Docs>
+        <param name="searchPattern">Die Suchzeichenfolge für die Überprüfung der Namen von Verzeichnissen auf Übereinstimmungen.  Dieser Parameter darf eine Kombination aus gültigem Literalpfad und Platzhalterzeichen (* und?) Zeichen, aber sie unterstützt keine regulären Ausdrücke. Das Standardmuster ist "*", wobei alle Dateien zurückgegeben werden.</param>
+        <param name="searchOption">Einer der Enumerationswerte, der angibt, ob nur das aktuelle Verzeichnis oder auch alle Unterverzeichnisse durchsucht werden sollen. Der Standardwert ist <see cref="F:System.IO.SearchOption.TopDirectoryOnly" />.</param>
+        <summary>Gibt eine aufzählbare Auflistung von Verzeichnisinformationen zurück, die einem angegebenen Suchmuster und einer angegebenen Option zum Durchsuchen von Unterverzeichnissen entspricht.</summary>
+        <returns>Eine aufzählbare Auflistung von Verzeichnissen, die <paramref name="searchPattern" /> und <paramref name="searchOption" /> entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `searchPattern`kann eine Kombination von Literal-und Platzhalterzeichen, es unterstützt jedoch keine regulären Ausdrücke. Die folgenden Bezeichner für Platzhalter sind zulässig, `searchPattern`.  
+  
+|Platzhalter-Spezifizierer|Entsprechungen|  
+|------------------------|-------------|  
+|* (Sternchen)|NULL oder mehr Zeichen an dieser Stelle.|  
+|? (Fragezeichen)|0 (null) oder ein Zeichen an dieser Stelle.|  
+  
+ Zeichen als die Platzhalter sind Literalzeichen. Z. B. die Zeichenfolge "* t" sucht nach allen Namen mit dem Buchstaben "t" beendet wird. ". Die `searchPattern` Zeichenfolge "s\*" sucht nach allen Namen in `path` mit dem Buchstaben "s" beginnen.  
+  
+ Die <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A> und <xref:System.IO.DirectoryInfo.GetDirectories%2A> Methoden unterscheiden sich wie folgt:  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A>, können Sie anfangen die Auflistung der <xref:System.IO.DirectoryInfo> Objekte, bevor die ganze Auflistung zurückgegeben wird.  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.GetDirectories%2A>, müssen Sie warten, bis das gesamte Array von <xref:System.IO.DirectoryInfo> Objekte zurückgegeben werden, bevor Sie das Array zugreifen können.  
+  
+ Aus diesem Grund, wenn Sie arbeiten mit vielen Dateien und Verzeichnisse <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A> kann effizienter sein.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.DirectoryInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+ Die zurückgegebene Auflistung wird nicht zwischengespeichert. Bei jedem Aufruf der <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> Methode für die Auflistung startet eine neue Enumeration.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel, beginnend bei einem angegebenen Verzeichnis, wird diese Methode und die <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> Methode zum Auflisten von Dateien und Verzeichnisse im Startverzeichnis und Anzeigen von Details aller Dateien über 10 MB groß.  
+  
+ [!code-csharp[System.IO.DirectoryInfo.EnumerateDirectories#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/cs/program.cs#1)]
+ [!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="searchOption" /> ist kein gültiger <see cref="T:System.IO.SearchOption" />-Wert.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der im <see cref="T:System.IO.DirectoryInfo" />-Objekt gekapselte Pfad ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateFiles">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.IO.FileInfo&gt; EnumerateFiles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.IO.FileInfo&gt; EnumerateFiles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.EnumerateFiles" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.FileInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine aufzählbare Auflistung von Dateiinformationen im aktuellen Verzeichnis zurück.</summary>
+        <returns>Eine aufzählbare Auflistung der Dateien im aktuellen Verzeichnis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> und <xref:System.IO.DirectoryInfo.GetFiles%2A> Methoden unterscheiden sich wie folgt:  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, können Sie anfangen die Auflistung der <xref:System.IO.FileInfo> Objekte, bevor die ganze Auflistung zurückgegeben wird.  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.GetFiles%2A>, müssen Sie warten, bis das gesamte Array von <xref:System.IO.FileInfo> Objekte zurückgegeben werden, bevor Sie das Array zugreifen können.  
+  
+ Aus diesem Grund, wenn Sie arbeiten mit vielen Dateien und Verzeichnisse <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> kann effizienter sein.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.FileInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+-   <xref:System.IO.FileInfo.Length%2A>  
+  
+ Die zurückgegebene Auflistung wird nicht zwischengespeichert. Bei jedem Aufruf der <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> Methode für die Auflistung startet eine neue Enumeration.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden die Dateien in einem angegebenen Verzeichnis aufgelistet und verwendet eine LINQ-Abfrage, um die Namen aller Dateien zurückzugeben, die vor 2009 erstellt wurden, durch die Überprüfung des Werts der der <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A> Eigenschaft.  
+  
+ Wenn Sie nur die Namen der Dateien benötigen, verwenden Sie die statische <xref:System.IO.Directory> Klasse für eine bessere Leistung. Ein Beispiel finden Sie die <xref:System.IO.Directory.EnumerateFiles%28System.String%29?displayProperty=nameWithType> Methode.  
+  
+ [!code-csharp[System.IO.DirectoryInfo.EnumFiles#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumfiles/cs/program.cs#1)]
+ [!code-vb[System.IO.DirectoryInfo.EnumFiles#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumfiles/vb/module1.vb#1)]  
+  
+ Im folgende Beispiel veranschaulicht das Aufzählen von Dateien in ein Verzeichnis mit unterschiedlichen Suchoptionen. Im Beispiel wird vorausgesetzt, ein Verzeichnis mit Dateien, die mit dem Namen log1.txt, log2.txt test1.txt, test2.txt, test3.txt und ein Unterverzeichnis, das eine Datei namens SubFile.txt verfügt.  
+  
+ [!code-csharp[System.IO.DirectoryInfo.EnumFiles#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumfiles/cs/program2.cs#2)]
+ [!code-vb[System.IO.DirectoryInfo.EnumFiles#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumfiles/vb/module2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der im <see cref="T:System.IO.DirectoryInfo" />-Objekt gekapselte Pfad ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateFiles">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.IO.FileInfo&gt; EnumerateFiles (string searchPattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.IO.FileInfo&gt; EnumerateFiles(string searchPattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.EnumerateFiles(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.FileInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="searchPattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="searchPattern">Die Suchzeichenfolge für die Überprüfung der Namen von Dateien auf Übereinstimmungen.  Dieser Parameter darf eine Kombination aus gültigem Literalpfad und Platzhalterzeichen (* und?) Zeichen, aber sie unterstützt keine regulären Ausdrücke. Das Standardmuster ist "*", wobei alle Dateien zurückgegeben werden.</param>
+        <summary>Gibt eine aufzählbare Auflistung von Dateiinformationen zurück, die einem Suchmuster entsprechen.</summary>
+        <returns>Eine aufzählbare Auflistung von Dateien, die <paramref name="searchPattern" /> entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `searchPattern`kann eine Kombination von Literal-und Platzhalterzeichen, es unterstützt jedoch keine regulären Ausdrücke. Die folgenden Bezeichner für Platzhalter sind zulässig, `searchPattern`.  
+  
+|Platzhalter-Spezifizierer|Entsprechungen|  
+|------------------------|-------------|  
+|* (Sternchen)|NULL oder mehr Zeichen an dieser Stelle.|  
+|? (Fragezeichen)|0 (null) oder ein Zeichen an dieser Stelle.|  
+  
+ Zeichen als die Platzhalter sind Literalzeichen. Z. B. die Zeichenfolge "* t" sucht nach allen Namen mit dem Buchstaben "t" beendet wird. ". Die `searchPattern` Zeichenfolge "s\*" sucht nach allen Namen in `path` mit dem Buchstaben "s" beginnen.  
+  
+ Die <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> und <xref:System.IO.DirectoryInfo.GetFiles%2A> Methoden unterscheiden sich wie folgt:  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, können Sie anfangen die Auflistung der <xref:System.IO.FileInfo> Objekte, bevor die ganze Auflistung zurückgegeben wird.  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.GetFiles%2A>, müssen Sie warten, bis das gesamte Array von <xref:System.IO.FileInfo> Objekte zurückgegeben werden, bevor Sie das Array zugreifen können.  
+  
+ Aus diesem Grund, wenn Sie arbeiten mit vielen Dateien und Verzeichnisse <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> kann effizienter sein.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.FileInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+-   <xref:System.IO.FileInfo.Length%2A>  
+  
+ Die zurückgegebene Auflistung wird nicht zwischengespeichert. Bei jedem Aufruf der <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> Methode für die Auflistung startet eine neue Enumeration.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Aufzählen von Dateien in ein Verzeichnis mit unterschiedlichen Suchoptionen. Im Beispiel wird vorausgesetzt, ein Verzeichnis mit Dateien, die mit dem Namen log1.txt, log2.txt test1.txt, test2.txt, test3.txt und ein Unterverzeichnis, das eine Datei namens SubFile.txt verfügt.  
+  
+ [!code-csharp[System.IO.DirectoryInfo.EnumFiles#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumfiles/cs/program2.cs#2)]
+ [!code-vb[System.IO.DirectoryInfo.EnumFiles#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumfiles/vb/module2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der im <see cref="T:System.IO.DirectoryInfo" />-Objekt gekapselte Pfad ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateFiles">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.IO.FileInfo&gt; EnumerateFiles (string searchPattern, System.IO.SearchOption searchOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.IO.FileInfo&gt; EnumerateFiles(string searchPattern, valuetype System.IO.SearchOption searchOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.EnumerateFiles(System.String,System.IO.SearchOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.FileInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="searchPattern" Type="System.String" />
+        <Parameter Name="searchOption" Type="System.IO.SearchOption" />
+      </Parameters>
+      <Docs>
+        <param name="searchPattern">Die Suchzeichenfolge für die Überprüfung der Namen von Dateien auf Übereinstimmungen.  Dieser Parameter darf eine Kombination aus gültigem Literalpfad und Platzhalterzeichen (* und?) Zeichen, aber sie unterstützt keine regulären Ausdrücke. Das Standardmuster ist "*", wobei alle Dateien zurückgegeben werden.</param>
+        <param name="searchOption">Einer der Enumerationswerte, der angibt, ob nur das aktuelle Verzeichnis oder auch alle Unterverzeichnisse durchsucht werden sollen. Der Standardwert ist <see cref="F:System.IO.SearchOption.TopDirectoryOnly" />.</param>
+        <summary>Gibt eine aufzählbare Auflistung von Dateiinformationen zurück, die einem angegebenen Suchmuster und einer angegebenen Option zum Durchsuchen von Unterverzeichnissen entspricht.</summary>
+        <returns>Eine aufzählbare Auflistung von Dateien, die <paramref name="searchPattern" /> und <paramref name="searchOption" /> entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `searchPattern`kann eine Kombination von Literal-und Platzhalterzeichen, es unterstützt jedoch keine regulären Ausdrücke. Die folgenden Bezeichner für Platzhalter sind zulässig, `searchPattern`.  
+  
+|Platzhalter-Spezifizierer|Entsprechungen|  
+|------------------------|-------------|  
+|* (Sternchen)|NULL oder mehr Zeichen an dieser Stelle.|  
+|? (Fragezeichen)|0 (null) oder ein Zeichen an dieser Stelle.|  
+  
+ Zeichen als die Platzhalter sind Literalzeichen. Z. B. die Zeichenfolge "* t" sucht nach allen Namen mit dem Buchstaben "t" beendet wird. ". Die `searchPattern` Zeichenfolge "s\*" sucht nach allen Namen in `path` mit dem Buchstaben "s" beginnen.  
+  
+ Die <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> und <xref:System.IO.DirectoryInfo.GetFiles%2A> Methoden unterscheiden sich wie folgt:  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, können Sie anfangen die Auflistung der <xref:System.IO.FileInfo> Objekte, bevor die ganze Auflistung zurückgegeben wird.  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.GetFiles%2A>, müssen Sie warten, bis das gesamte Array von <xref:System.IO.FileInfo> Objekte zurückgegeben werden, bevor Sie das Array zugreifen können.  
+  
+ Aus diesem Grund, wenn Sie arbeiten mit vielen Dateien und Verzeichnisse <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> kann effizienter sein.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.FileInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+-   <xref:System.IO.FileInfo.Length%2A>  
+  
+ Die zurückgegebene Auflistung wird nicht zwischengespeichert. Bei jedem Aufruf der <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> Methode für die Auflistung startet eine neue Enumeration.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Aufzählen von Dateien in ein Verzeichnis mit unterschiedlichen Suchoptionen. Im Beispiel wird vorausgesetzt, ein Verzeichnis mit Dateien, die mit dem Namen log1.txt, log2.txt test1.txt, test2.txt, test3.txt und ein Unterverzeichnis, das eine Datei namens SubFile.txt verfügt.  
+  
+ [!code-csharp[System.IO.DirectoryInfo.EnumFiles#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumfiles/cs/program2.cs#2)]
+ [!code-vb[System.IO.DirectoryInfo.EnumFiles#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumfiles/vb/module2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="searchOption" /> ist kein gültiger <see cref="T:System.IO.SearchOption" />-Wert.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der im <see cref="T:System.IO.DirectoryInfo" />-Objekt gekapselte Pfad ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateFileSystemInfos">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.IO.FileSystemInfo&gt; EnumerateFileSystemInfos ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.IO.FileSystemInfo&gt; EnumerateFileSystemInfos() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.EnumerateFileSystemInfos" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.FileSystemInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine aufzählbare Auflistung von Systeminformationen im aktuellen Verzeichnis zurück.</summary>
+        <returns>Eine aufzählbare Auflistung von Systeminformationen im aktuellen Verzeichnis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A> und <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A> Methoden unterscheiden sich wie folgt:  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A>, können Sie anfangen die Auflistung der <xref:System.IO.FileInfo> Objekte, bevor die ganze Auflistung zurückgegeben wird.  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A>, müssen Sie warten, bis das gesamte Array von <xref:System.IO.FileSystemInfo> Objekte zurückgegeben werden, bevor Sie das Array zugreifen können.  
+  
+ Aus diesem Grund, wenn Sie arbeiten mit vielen Dateien und Verzeichnisse <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A> kann effizienter sein.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.FileSystemInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+ Die zurückgegebene Auflistung wird nicht zwischengespeichert. Bei jedem Aufruf der <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> Methode für die Auflistung startet eine neue Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der im <see cref="T:System.IO.DirectoryInfo" />-Objekt gekapselte Pfad ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateFileSystemInfos">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.IO.FileSystemInfo&gt; EnumerateFileSystemInfos (string searchPattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.IO.FileSystemInfo&gt; EnumerateFileSystemInfos(string searchPattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.EnumerateFileSystemInfos(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.FileSystemInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="searchPattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="searchPattern">Die Suchzeichenfolge für die Überprüfung der Namen von Verzeichnissen auf Übereinstimmungen.  Dieser Parameter darf eine Kombination aus gültigem Literalpfad und Platzhalterzeichen (* und?) Zeichen, aber sie unterstützt keine regulären Ausdrücke. Das Standardmuster ist "*", wobei alle Dateien zurückgegeben werden.</param>
+        <summary>Gibt eine aufzählbare Auflistung von Dateisysteminformationen zurück, die einem angegebenen Suchmuster entsprechen.</summary>
+        <returns>Eine aufzählbare Auflistung von Objekten mit Dateisysteminformationen, die <paramref name="searchPattern" /> entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `searchPattern`kann eine Kombination von Literal-und Platzhalterzeichen, es unterstützt jedoch keine regulären Ausdrücke. Die folgenden Bezeichner für Platzhalter sind zulässig, `searchPattern`.  
+  
+|Platzhalter-Spezifizierer|Entsprechungen|  
+|------------------------|-------------|  
+|* (Sternchen)|NULL oder mehr Zeichen an dieser Stelle.|  
+|? (Fragezeichen)|0 (null) oder ein Zeichen an dieser Stelle.|  
+  
+ Zeichen als die Platzhalter sind Literalzeichen. Z. B. die Zeichenfolge "* t" sucht nach allen Namen mit dem Buchstaben "t" beendet wird. ". Die `searchPattern` Zeichenfolge "s\*" sucht nach allen Namen in `path` mit dem Buchstaben "s" beginnen.  
+  
+ Die <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A> und <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A> Methoden unterscheiden sich wie folgt:  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A>, können Sie anfangen die Auflistung der <xref:System.IO.FileInfo> Objekte, bevor die ganze Auflistung zurückgegeben wird.  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A>, müssen Sie warten, bis das gesamte Array von <xref:System.IO.FileSystemInfo> Objekte zurückgegeben werden, bevor Sie das Array zugreifen können.  
+  
+ Aus diesem Grund, wenn Sie arbeiten mit vielen Dateien und Verzeichnisse <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A> kann effizienter sein.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.FileSystemInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+ Die zurückgegebene Auflistung wird nicht zwischengespeichert. Bei jedem Aufruf der <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> Methode für die Auflistung startet eine neue Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der im <see cref="T:System.IO.DirectoryInfo" />-Objekt gekapselte Pfad ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateFileSystemInfos">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.IO.FileSystemInfo&gt; EnumerateFileSystemInfos (string searchPattern, System.IO.SearchOption searchOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.IO.FileSystemInfo&gt; EnumerateFileSystemInfos(string searchPattern, valuetype System.IO.SearchOption searchOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.EnumerateFileSystemInfos(System.String,System.IO.SearchOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.FileSystemInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="searchPattern" Type="System.String" />
+        <Parameter Name="searchOption" Type="System.IO.SearchOption" />
+      </Parameters>
+      <Docs>
+        <param name="searchPattern">Die Suchzeichenfolge für die Überprüfung der Namen von Verzeichnissen auf Übereinstimmungen.  Dieser Parameter darf eine Kombination aus gültigem Literalpfad und Platzhalterzeichen (* und?) Zeichen, aber sie unterstützt keine regulären Ausdrücke. Das Standardmuster ist "*", wobei alle Dateien zurückgegeben werden.</param>
+        <param name="searchOption">Einer der Enumerationswerte, der angibt, ob nur das aktuelle Verzeichnis oder auch alle Unterverzeichnisse durchsucht werden sollen. Der Standardwert ist <see cref="F:System.IO.SearchOption.TopDirectoryOnly" />.</param>
+        <summary>Gibt eine aufzählbare Auflistung von Dateisysteminformationen zurück, die einem angegebenen Suchmuster und einer angegebenen Option zum Durchsuchen von Unterverzeichnissen entspricht.</summary>
+        <returns>Eine aufzählbare Auflistung von Objekten mit Dateisysteminformationen, die <paramref name="searchPattern" /> und <paramref name="searchOption" /> entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `searchPattern`kann eine Kombination von Literal-und Platzhalterzeichen, es unterstützt jedoch keine regulären Ausdrücke. Die folgenden Bezeichner für Platzhalter sind zulässig, `searchPattern`.  
+  
+|Platzhalter-Spezifizierer|Entsprechungen|  
+|------------------------|-------------|  
+|* (Sternchen)|NULL oder mehr Zeichen an dieser Stelle.|  
+|? (Fragezeichen)|0 (null) oder ein Zeichen an dieser Stelle.|  
+  
+ Zeichen als die Platzhalter sind Literalzeichen. Z. B. die Zeichenfolge "* t" sucht nach allen Namen mit dem Buchstaben "t" beendet wird. ". Die `searchPattern` Zeichenfolge "s\*" sucht nach allen Namen in `path` mit dem Buchstaben "s" beginnen.  
+  
+ Die <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A> und <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A> Methoden unterscheiden sich wie folgt:  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A>, können Sie anfangen die Auflistung der <xref:System.IO.FileInfo> Objekte, bevor die ganze Auflistung zurückgegeben wird.  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A>, müssen Sie warten, bis das gesamte Array von <xref:System.IO.FileSystemInfo> Objekte zurückgegeben werden, bevor Sie das Array zugreifen können.  
+  
+ Aus diesem Grund, wenn Sie arbeiten mit vielen Dateien und Verzeichnisse <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A> kann effizienter sein.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.FileSystemInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+ Die zurückgegebene Auflistung wird nicht zwischengespeichert. Bei jedem Aufruf der <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> Methode für die Auflistung startet eine neue Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="searchOption" /> ist kein gültiger <see cref="T:System.IO.SearchOption" />-Wert.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der im <see cref="T:System.IO.DirectoryInfo" />-Objekt gekapselte Pfad ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exists">
+      <MemberSignature Language="C#" Value="public override bool Exists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Exists" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DirectoryInfo.Exists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Verzeichnis vorhanden ist.</summary>
+        <value>
+          <see langword="true" />, wenn das Verzeichnis vorhanden ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.DirectoryInfo.Exists%2A> -Eigenschaft gibt `false` Wenn ein Fehler auftritt, bei dem Versuch, um festzustellen, ob die angegebene Datei vorhanden ist. Dies kann auftreten, in Situationen, in denen Auslösen von Ausnahmen, z. B. ein Dateiname ungültige Zeichen oder zu viele Zeichen, d. h. einen fehlerhaften oder fehlenden Datenträger übergeben oder wenn der Aufrufer nicht über die Berechtigung zum Lesen der Datei.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von der `Exists` Eigenschaft im Kontext ein Quellverzeichnisses in ein Zielverzeichnis kopiert.  
+  
+ [!code-cpp[DirectoryInfo Usage Example#1](~/samples/snippets/cpp/VS_Snippets_CLR/DirectoryInfo Usage Example/CPP/copydirectory.cpp#1)]
+ [!code-csharp[DirectoryInfo Usage Example#1](~/samples/snippets/csharp/VS_Snippets_CLR/DirectoryInfo Usage Example/CS/copydirectory.cs#1)]
+ [!code-vb[DirectoryInfo Usage Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/DirectoryInfo Usage Example/VB/copydirectory.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public override string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DirectoryInfo.FullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen Pfad des Verzeichnisses ab.</summary>
+        <value>Eine Zeichenfolge mit dem vollständigen Pfad.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetAccessControl">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ruft die Einträge in der Zugriffssteuerungsliste für das aktuelle Verzeichnis ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.IO.DirectoryInfo.GetAccessControl%2A> Methoden zum Abrufen des Zugriffs Zugriffssteuerungseinträgen (List, ACL) für die aktuelle Datei.  
+  
+ Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](~/docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetAccessControl">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.DirectorySecurity GetAccessControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.AccessControl.DirectorySecurity GetAccessControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.GetAccessControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.DirectorySecurity</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Security.AccessControl.DirectorySecurity" />-Objekt ab, das die Einträge in der Zugriffssteuerungsliste für das Verzeichnis kapselt, das vom aktuellen <see cref="T:System.IO.DirectoryInfo" />-Objekt beschrieben wird.</summary>
+        <returns>Ein <see cref="T:System.Security.AccessControl.DirectorySecurity" />-Objekt, das die Zugriffssteuerungsregeln für das Verzeichnis kapselt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Aufrufen dieser methodenüberladung entspricht dem Aufrufen der <xref:System.IO.Directory.GetAccessControl%2A> methodenüberladung und Angeben von den Zugriff steuern Abschnitte <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType> &#124; <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType> &#124; <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType> (<xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType> `Or` <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType> `Or` <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType> in Visual Basic).  
+  
+ Verwenden der <xref:System.IO.DirectoryInfo.GetAccessControl%2A> Methode, um das die Einträge in der Zugriffssteuerungsliste für die aktuelle Datei abzurufen.  
+  
+ Eine ACL beschreibt einzelne Benutzer und/oder Gruppen besitzen, oder, die Rechte für bestimmte Aktionen für die angegebene Datei oder das Verzeichnis verfügen. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](~/docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.IO.DirectoryInfo.GetAccessControl%2A> und <xref:System.IO.DirectoryInfo.SetAccessControl%2A> Methoden zum Hinzufügen und entfernen Sie den Zugriff steuern Zugriffssteuerungsliste Eintrag in einem Verzeichnis.  
+  
+ [!code-cpp[IO.DiretoryInfo.GetAccessControl-SetAccessControl#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.DiretoryInfo.GetAccessControl-SetAccessControl/cpp/sample.cpp#1)]
+ [!code-csharp[IO.DiretoryInfo.GetAccessControl-SetAccessControl#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.DiretoryInfo.GetAccessControl-SetAccessControl/CS/sample.cs#1)]
+ [!code-vb[IO.DiretoryInfo.GetAccessControl-SetAccessControl#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.DiretoryInfo.GetAccessControl-SetAccessControl/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.SystemException">Das Verzeichnis wurde nicht gefunden und konnte nicht geändert werden.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Das Verzeichnis ist schreibgeschützt.  
+  
+ - oder -  
+  
+ Dieser Vorgang wird von der aktuellen Plattform nicht unterstützt.  
+  
+ - oder -  
+  
+ Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.IO.IOException">E/A-Fehler beim Öffnen des Verzeichnisses.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Das aktuelle Betriebssystem ist nicht Microsoft Windows 2000 oder höher.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">nach der Installationsberechtigung für eine Zugriffssteuerungsliste (ACL) für ein Verzeichnis aufgelistet werden. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.NoAccess" />,<see cref="F:System.Security.AccessControl.AccessControlActions.View" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessControl">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.DirectorySecurity GetAccessControl (System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.AccessControl.DirectorySecurity GetAccessControl(valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.GetAccessControl(System.Security.AccessControl.AccessControlSections)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.DirectorySecurity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="includeSections">Einer der <see cref="T:System.Security.AccessControl.AccessControlSections" />-Werte, der den Typ der zu empfangenden ACL-Informationen angibt.</param>
+        <summary>Ruft ein <see cref="T:System.Security.AccessControl.DirectorySecurity" />-Objekt ab, das den angegebenen Typ der Einträge in der Zugriffssteuerungsliste für das Verzeichnis kapselt, das vom aktuellen <see cref="T:System.IO.DirectoryInfo" />-Objekt beschrieben wird.</summary>
+        <returns>Ein <see cref="T:System.Security.AccessControl.DirectorySecurity" />-Objekt, das die Zugriffssteuerungsregeln für die vom <paramref name="path" />-Parameter beschriebene Datei kapselt.  
+  
+ Ausnahmen  
+  
+ <list type="table"><listheader><term>Ausnahmetyp  
+  
+ </term><description>Bedingung  
+  
+ </description></listheader><item><term><see cref="T:System.SystemException" /></term><description>Das Verzeichnis konnte nicht gefunden oder geändert werden.  
+  
+ </description></item><item><term><see cref="T:System.UnauthorizedAccessException" /></term><description>Der aktuelle Prozess verfügt nicht über die Zugriffsrechte zum Öffnen des Verzeichnisses.  
+  
+ </description></item><item><term><see cref="T:System.IO.IOException" /></term><description>E/a-Fehler beim Öffnen des Verzeichnisses.  
+  
+ </description></item><item><term><see cref="T:System.PlatformNotSupportedException" /></term><description>Das aktuelle Betriebssystem ist nicht Microsoft Windows 2000 oder höher.  
+  
+ </description></item><item><term><see cref="T:System.UnauthorizedAccessException" /></term><description>Das Verzeichnis ist schreibgeschützt.  
+  
+ - oder -   
+  
+ Dieser Vorgang wird von der aktuellen Plattform nicht unterstützt.  
+  
+ - oder -  
+  
+ Der Aufrufer verfügt nicht über die erforderliche Berechtigung.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.IO.DirectoryInfo.GetAccessControl%2A> Methode, um das die Einträge in der Zugriffssteuerungsliste für die aktuelle Datei abzurufen.  
+  
+ Eine ACL beschreibt einzelne Benutzer und/oder Gruppen besitzen, oder, die Rechte für bestimmte Aktionen für die angegebene Datei oder das Verzeichnis verfügen. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](~/docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">nach der Installationsberechtigung für eine Zugriffssteuerungsliste (ACL) für ein Verzeichnis aufgelistet werden. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.NoAccess" />,<see cref="F:System.Security.AccessControl.AccessControlActions.View" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDirectories">
+      <MemberSignature Language="C#" Value="public System.IO.DirectoryInfo[] GetDirectories ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.DirectoryInfo[] GetDirectories() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.GetDirectories" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.DirectoryInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Unterverzeichnisse des aktuellen Verzeichnisses zurück.</summary>
+        <returns>Ein Array von <see cref="T:System.IO.DirectoryInfo" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Unterverzeichnisse vorhanden sind, gibt diese Methode ein leeres Array zurück. Diese Methode ist nicht rekursiv.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.DirectoryInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ruft alle Verzeichnisse im Stammverzeichnis ab und zeigt die Namen der Verzeichnisse.  
+  
+ [!code-cpp[directoryinfogetdirectories#1](~/samples/snippets/cpp/VS_Snippets_CLR/directoryinfogetdirectories/CPP/directoryinfogetdirectories.cpp#1)]
+ [!code-csharp[directoryinfogetdirectories#1](~/samples/snippets/csharp/VS_Snippets_CLR/directoryinfogetdirectories/CS/directoryinfogetdirectories.cs#1)]
+ [!code-vb[directoryinfogetdirectories#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/directoryinfogetdirectories/VB/directoryinfogetdirectories.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Gekapselte Pfad der <see cref="T:System.IO.DirectoryInfo" /> Objekt ist ungültig, z. B. befindet er sich auf einem nicht zugeordneten Laufwerk.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Lesen von Verzeichnissen. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDirectories">
+      <MemberSignature Language="C#" Value="public System.IO.DirectoryInfo[] GetDirectories (string searchPattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.DirectoryInfo[] GetDirectories(string searchPattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.GetDirectories(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.DirectoryInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="searchPattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="searchPattern">Die Suchzeichenfolge für die Überprüfung der Namen von Verzeichnissen auf Übereinstimmungen.  Dieser Parameter darf eine Kombination aus gültigem Literalpfad und Platzhalterzeichen (* und?) Zeichen, aber sie unterstützt keine regulären Ausdrücke. Das Standardmuster ist "*", wobei alle Dateien zurückgegeben werden.</param>
+        <summary>Gibt ein Array von Verzeichnissen im aktuellen <see cref="T:System.IO.DirectoryInfo" /> zurück, die den angegebenen Suchkriterien entsprechen.</summary>
+        <returns>Ein Array vom Typ <see langword="DirectoryInfo" />, der <paramref name="searchPattern" /> entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `searchPattern`kann eine Kombination von Literal-und Platzhalterzeichen, es unterstützt jedoch keine regulären Ausdrücke. Die folgenden Bezeichner für Platzhalter sind zulässig, `searchPattern`.  
+  
+|Platzhalter-Spezifizierer|Entsprechungen|  
+|------------------------|-------------|  
+|* (Sternchen)|NULL oder mehr Zeichen an dieser Stelle.|  
+|? (Fragezeichen)|0 (null) oder ein Zeichen an dieser Stelle.|  
+  
+ Zeichen als die Platzhalter sind Literalzeichen. Z. B. die Zeichenfolge "* t" sucht nach allen Namen mit dem Buchstaben "t" beendet wird. ". Die `searchPattern` Zeichenfolge "s\*" sucht nach allen Namen in `path` mit dem Buchstaben "s" beginnen.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.DirectoryInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verzeichnisse in einem Pfad, die den angegebenen Buchstaben enthalten.  
+  
+ [!code-cpp[DirInfo GetDirs2#1](~/samples/snippets/cpp/VS_Snippets_CLR/DirInfo GetDirs2/CPP/dirinfo getdirs2.cpp#1)]
+ [!code-csharp[DirInfo GetDirs2#1](~/samples/snippets/csharp/VS_Snippets_CLR/DirInfo GetDirs2/CS/dirinfo getdirs2.cs#1)]
+ [!code-vb[DirInfo GetDirs2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/DirInfo GetDirs2/VB/dirinfo getdirs2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="searchPattern" />enthält mindestens ein ungültige Zeichen gemäß der Definition der <see cref="M:System.IO.Path.GetInvalidPathChars" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der im <see langword="DirectoryInfo" />-Objekt gekapselte Pfad ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Lesen aus Dateien und Verzeichnissen und für den Zugriff auf den Pfad. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDirectories">
+      <MemberSignature Language="C#" Value="public System.IO.DirectoryInfo[] GetDirectories (string searchPattern, System.IO.SearchOption searchOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.DirectoryInfo[] GetDirectories(string searchPattern, valuetype System.IO.SearchOption searchOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.GetDirectories(System.String,System.IO.SearchOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.DirectoryInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="searchPattern" Type="System.String" />
+        <Parameter Name="searchOption" Type="System.IO.SearchOption" />
+      </Parameters>
+      <Docs>
+        <param name="searchPattern">Die Suchzeichenfolge für die Überprüfung der Namen von Verzeichnissen auf Übereinstimmungen.  Dieser Parameter darf eine Kombination aus gültigem Literalpfad und Platzhalterzeichen (* und?) Zeichen, aber sie unterstützt keine regulären Ausdrücke. Das Standardmuster ist "*", wobei alle Dateien zurückgegeben werden.</param>
+        <param name="searchOption">Einer der Enumerationswerte, der angibt, ob nur das aktuelle Verzeichnis oder auch alle Unterverzeichnisse durchsucht werden sollen.</param>
+        <summary>Gibt ein Array von Verzeichnissen im aktuellen <see cref="T:System.IO.DirectoryInfo" /> zurück, die den angegebenen Suchkriterien entsprechen. Anhand eines Werts wird bestimmt, ob in Unterverzeichnissen gesucht wird.</summary>
+        <returns>Ein Array vom Typ <see langword="DirectoryInfo" />, der <paramref name="searchPattern" /> entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `searchPattern`kann eine Kombination von Literal-und Platzhalterzeichen, es unterstützt jedoch keine regulären Ausdrücke. Die folgenden Bezeichner für Platzhalter sind zulässig, `searchPattern`.  
+  
+|Platzhalter-Spezifizierer|Entsprechungen|  
+|------------------------|-------------|  
+|* (Sternchen)|NULL oder mehr Zeichen an dieser Stelle.|  
+|? (Fragezeichen)|0 (null) oder ein Zeichen an dieser Stelle.|  
+  
+ Zeichen als die Platzhalter sind Literalzeichen. Z. B. die Zeichenfolge "* t" sucht nach allen Namen mit dem Buchstaben "t" beendet wird. ". Die `searchPattern` Zeichenfolge "s\*" sucht nach allen Namen in `path` mit dem Buchstaben "s" beginnen.  
+  
+ Wenn keine Unterverzeichnisse vorhanden sind oder keine Unterverzeichnisse entsprechen den `searchPattern` Parameter dieser Methode ein leeres Array zurück.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.DirectoryInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Liste aller Verzeichnisse und Dateien, die mit dem Buchstaben "c" beginnen "c:\\".  
+  
+ [!code-cpp[System.IO.DirectoryInfo_SearchOptions#00](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.DirectoryInfo_SearchOptions/cpp/searchoption.cpp#00)]
+ [!code-csharp[System.IO.DirectoryInfo_SearchOptions#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DirectoryInfo_SearchOptions/cs/searchoption.cs#00)]
+ [!code-vb[System.IO.DirectoryInfo_SearchOptions#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DirectoryInfo_SearchOptions/vb/searchoption.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="searchPattern" />enthält mindestens ein ungültige Zeichen gemäß der Definition der <see cref="M:System.IO.Path.GetInvalidPathChars" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="searchOption" /> ist kein gültiger <see cref="T:System.IO.SearchOption" />-Wert.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der im <see langword="DirectoryInfo" />-Objekt gekapselte Pfad ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Lesen aus Dateien und Verzeichnissen und für den Zugriff auf den Pfad. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFiles">
+      <MemberSignature Language="C#" Value="public System.IO.FileInfo[] GetFiles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileInfo[] GetFiles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.GetFiles" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Dateiliste des aktuellen Verzeichnisses zurück.</summary>
+        <returns>Ein Array vom Typ <see cref="T:System.IO.FileInfo" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> und <xref:System.IO.DirectoryInfo.GetFiles%2A> Methoden unterscheiden sich wie folgt:  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, können Sie anfangen die Auflistung der <xref:System.IO.FileInfo> Objekte, bevor die ganze Auflistung zurückgegeben wird.  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.GetFiles%2A>, müssen Sie warten, bis das gesamte Array von <xref:System.IO.FileInfo> Objekte zurückgegeben werden, bevor Sie das Array zugreifen können.  
+  
+ Aus diesem Grund, wenn Sie arbeiten mit vielen Dateien und Verzeichnisse <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> kann effizienter sein.  
+  
+ Wenn es keine Dateien in sind den <xref:System.IO.DirectoryInfo>, diese Methode ein leeres Array zurück.  
+  
+ Die Reihenfolge der zurückgegebenen Dateinamen ist nicht sichergestellt; Verwenden Sie die <xref:System.Array.Sort%2A> Methode, wenn keine bestimmte Sortierreihenfolge erforderlich ist.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.FileInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+-   <xref:System.IO.FileInfo.Length%2A>  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine Liste von Dateien aus einem Verzeichnis abrufen, mithilfe von verschiedenen Suchoptionen. Im Beispiel wird vorausgesetzt, ein Verzeichnis mit Dateien, die mit dem Namen log1.txt, log2.txt test1.txt, test2.txt, test3.txt und ein Unterverzeichnis, das eine Datei namens SubFile.txt verfügt.  
+  
+ [!code-csharp[directoryinfogetfiles#2](~/samples/snippets/csharp/VS_Snippets_CLR/directoryinfogetfiles/CS/directoryinfogetfiles2.cs#2)]
+ [!code-vb[directoryinfogetfiles#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/directoryinfogetfiles/VB/directoryinfogetfiles2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der Pfad ist ungültig, weil er sich beispielsweise auf einem nicht zugeordneten Laufwerk befindet.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Lesen von Verzeichnissen. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFiles">
+      <MemberSignature Language="C#" Value="public System.IO.FileInfo[] GetFiles (string searchPattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileInfo[] GetFiles(string searchPattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.GetFiles(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="searchPattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="searchPattern">Die Suchzeichenfolge für die Überprüfung der Namen von Dateien auf Übereinstimmungen.  Dieser Parameter darf eine Kombination aus gültigem Literalpfad und Platzhalterzeichen (* und?) Zeichen, aber sie unterstützt keine regulären Ausdrücke. Das Standardmuster ist "*", wobei alle Dateien zurückgegeben werden.</param>
+        <summary>Gibt eine Dateiliste des aktuellen Verzeichnisses zurück, das dem angegebenen Suchmuster entspricht.</summary>
+        <returns>Ein Array vom Typ <see cref="T:System.IO.FileInfo" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `searchPattern`kann eine Kombination von Literal-und Platzhalterzeichen, es unterstützt jedoch keine regulären Ausdrücke. Die folgenden Bezeichner für Platzhalter sind zulässig, `searchPattern`.  
+  
+|Platzhalter-Spezifizierer|Entsprechungen|  
+|------------------------|-------------|  
+|* (Sternchen)|NULL oder mehr Zeichen an dieser Stelle.|  
+|? (Fragezeichen)|0 (null) oder ein Zeichen an dieser Stelle.|  
+  
+ Zeichen als die Platzhalter sind Literalzeichen. Z. B. die Zeichenfolge "* t" sucht nach allen Namen mit dem Buchstaben "t" beendet wird. Die `searchPattern` Zeichenfolge "s\*" sucht nach allen Namen in `path` mit dem Buchstaben "s" beginnen.  
+  
+ Die <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> und <xref:System.IO.DirectoryInfo.GetFiles%2A> Methoden unterscheiden sich wie folgt:  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, können Sie anfangen die Auflistung der <xref:System.IO.FileInfo> Objekte, bevor die ganze Auflistung zurückgegeben wird.  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.GetFiles%2A>, müssen Sie warten, bis das gesamte Array von <xref:System.IO.FileInfo> Objekte zurückgegeben werden, bevor Sie das Array zugreifen können.  
+  
+ Aus diesem Grund, wenn Sie arbeiten mit vielen Dateien und Verzeichnisse <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> kann effizienter sein.  
+  
+ Wenn es keine Dateien in sind den <xref:System.IO.DirectoryInfo>, diese Methode ein leeres Array zurück.  
+  
+ Die folgenden Bezeichner für Platzhalter sind zulässig, der `searchPattern` Parameter.  
+  
+|Platzhalterzeichen|Beschreibung|  
+|------------------------|-----------------|  
+|*|NULL oder mehr Zeichen.|  
+|?|Genau 0 (null) oder ein Zeichen.|  
+  
+ Die Reihenfolge der zurückgegebenen Dateinamen ist nicht sichergestellt; Verwenden Sie die <xref:System.Array.Sort%2A> Methode, wenn keine bestimmte Sortierreihenfolge erforderlich ist.  
+  
+ Platzhalter sind zulässig. Z. B. die `searchPattern` Zeichenfolge "*.txt" Suchvorgänge für alle Namen, die mit der Erweiterung "Txt". Die `searchPattern` Zeichenfolge "s\*" sucht nach allen Dateinamen, die mit dem Buchstaben "s" beginnen. Wenn es keine Dateien oder keine sind Dateien, bei denen die `searchPattern` Zeichenfolge in die <xref:System.IO.DirectoryInfo>, diese Methode ein leeres Array zurück.  
+  
+> [!NOTE]
+>  Bei Verwendung des Platzhalterzeichens Sternchen in einem `searchPattern` (z. B. "*.txt"), das Vergleichsverhalten variiert abhängig von der die angegebene Dateierweiterung. Ein `searchPattern` mit einer Datei Erweiterung von genau drei Zeichen gibt Dateien mit der Erweiterung von drei oder mehr Zeichen, bei denen die ersten drei Zeichen die angegebene Dateierweiterung übereinstimmen der `searchPattern`. Ein `searchPattern` mit einer Datei gibt die Erweiterung einer, zwei oder mehr als drei Zeichen nur Dateien mit den Erweiterungen genau diese Länge, die die angegebene Dateierweiterung entsprechen den `searchPattern`. Wenn Sie das Fragezeichen-Platzhalterzeichen verwenden, gibt diese Methode nur die Dateien, die die angegebene Dateierweiterung entsprechen. Angenommen, zwei Dateien in einem Verzeichnis, "file1.txt" und "file1.txtother", die einem Suchmuster von "Datei?. TXT"gibt nur die erste Datei beim Suchmuster" Datei\*".txt" "beide Dateien zurückgegeben.  
+  
+> [!NOTE]
+>  Da diese Methode für den Dateinamen mit der 8.3-Namensformat und das Format des lange Datei eincheckt, ein Suchmuster "* 1\*".txt "" möglicherweise unerwartete Dateinamen zurück. Beispiel für die Verwendung von einem Suchmuster "\*1\*".txt "" "longfilename.txt" wird zurückgegeben, weil das Äquivalent der 8.3-Namensformat "longf~1.txt" wäre.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.FileInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+-   <xref:System.IO.FileInfo.Length%2A>  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine Liste von Dateien aus einem Verzeichnis abrufen, mithilfe von verschiedenen Suchoptionen. Im Beispiel wird vorausgesetzt, ein Verzeichnis mit Dateien, die mit dem Namen log1.txt, log2.txt test1.txt, test2.txt, test3.txt und ein Unterverzeichnis, das eine Datei namens SubFile.txt verfügt.  
+  
+ [!code-csharp[directoryinfogetfiles#2](~/samples/snippets/csharp/VS_Snippets_CLR/directoryinfogetfiles/CS/directoryinfogetfiles2.cs#2)]
+ [!code-vb[directoryinfogetfiles#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/directoryinfogetfiles/VB/directoryinfogetfiles2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="searchPattern" />enthält mindestens ein ungültige Zeichen gemäß der Definition der <see cref="M:System.IO.Path.GetInvalidPathChars" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der Pfad ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für den Zugriff auf den Pfad und zum Lesen aus Dateien und Verzeichnisse. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFiles">
+      <MemberSignature Language="C#" Value="public System.IO.FileInfo[] GetFiles (string searchPattern, System.IO.SearchOption searchOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileInfo[] GetFiles(string searchPattern, valuetype System.IO.SearchOption searchOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.GetFiles(System.String,System.IO.SearchOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="searchPattern" Type="System.String" />
+        <Parameter Name="searchOption" Type="System.IO.SearchOption" />
+      </Parameters>
+      <Docs>
+        <param name="searchPattern">Die Suchzeichenfolge für die Überprüfung der Namen von Dateien auf Übereinstimmungen.  Dieser Parameter darf eine Kombination aus gültigem Literalpfad und Platzhalterzeichen (* und?) Zeichen, aber sie unterstützt keine regulären Ausdrücke. Das Standardmuster ist "*", wobei alle Dateien zurückgegeben werden.</param>
+        <param name="searchOption">Einer der Enumerationswerte, der angibt, ob nur das aktuelle Verzeichnis oder auch alle Unterverzeichnisse durchsucht werden sollen.</param>
+        <summary>Gibt eine Dateiliste des aktuellen Verzeichnisses zurück, das dem angegebenen Suchmuster entspricht. Anhand eines Werts wird bestimmt, ob in Unterverzeichnissen gesucht wird.</summary>
+        <returns>Ein Array vom Typ <see cref="T:System.IO.FileInfo" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> und <xref:System.IO.DirectoryInfo.GetFiles%2A> Methoden unterscheiden sich wie folgt:  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, können Sie anfangen die Auflistung der <xref:System.IO.FileInfo> Objekte, bevor die ganze Auflistung zurückgegeben wird.  
+  
+-   Bei Verwendung von <xref:System.IO.DirectoryInfo.GetFiles%2A>, müssen Sie warten, bis das gesamte Array von <xref:System.IO.FileInfo> Objekte zurückgegeben werden, bevor Sie das Array zugreifen können.  
+  
+ Aus diesem Grund, wenn Sie arbeiten mit vielen Dateien und Verzeichnisse <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> kann effizienter sein.  
+  
+ Wenn es keine Dateien in sind den <xref:System.IO.DirectoryInfo>, diese Methode ein leeres Array zurück.  
+  
+ Die folgenden Bezeichner für Platzhalter sind zulässig, `searchPattern`.  
+  
+|Platzhalterzeichen|Beschreibung|  
+|------------------------|-----------------|  
+|* (Sternchen)|NULL oder mehr Zeichen.|  
+|? (Fragezeichen)|Genau 0 (null) oder ein Zeichen.|  
+  
+ Die Reihenfolge der zurückgegebenen Dateinamen ist nicht sichergestellt; Verwenden Sie die <xref:System.Array.Sort%2A> Methode, wenn keine bestimmte Sortierreihenfolge erforderlich ist.  
+  
+ Platzhalter sind zulässig. Z. B. die `searchPattern` Zeichenfolge "*.txt" Suchvorgänge für alle Namen, die mit der Erweiterung "Txt". Die `searchPattern` Zeichenfolge "s\*" sucht nach allen Dateinamen, die mit dem Buchstaben "s" beginnen. Wenn es keine Dateien oder keine sind Dateien, bei denen die `searchPattern` Zeichenfolge in die <xref:System.IO.DirectoryInfo>, diese Methode ein leeres Array zurück.  
+  
+> [!NOTE]
+>  Bei Verwendung des Platzhalterzeichens Sternchen in einem `searchPattern` (z. B. "*.txt"), das Vergleichsverhalten variiert abhängig von der die angegebene Dateierweiterung. Ein `searchPattern` mit einer Datei Erweiterung von genau drei Zeichen gibt Dateien mit der Erweiterung von drei oder mehr Zeichen, bei denen die ersten drei Zeichen die angegebene Dateierweiterung übereinstimmen der `searchPattern`. Ein `searchPattern` mit einer Datei gibt die Erweiterung einer, zwei oder mehr als drei Zeichen nur Dateien mit den Erweiterungen genau diese Länge, die die angegebene Dateierweiterung entsprechen den `searchPattern`. Wenn Sie das Fragezeichen-Platzhalterzeichen verwenden, gibt diese Methode nur die Dateien, die die angegebene Dateierweiterung entsprechen. Angenommen, zwei Dateien in einem Verzeichnis, "file1.txt" und "file1.txtother", die einem Suchmuster von "Datei?. TXT"gibt nur die erste Datei beim Suchmuster" Datei\*".txt" "beide Dateien zurückgegeben.  
+  
+ Die folgende Liste zeigt das Verhalten der verschiedenen Längen der `searchPattern` Parameter:  
+  
+-   "* abc" gibt Dateien mit einer Erweiterung of.abc,.abcd,.abcde,.abcdef und so weiter.  
+  
+-   "*.abcd" gibt nur die Dateien, die mit der Erweiterung.abcd zurück.  
+  
+-   "*.abcde" gibt nur die Dateien, die mit der Erweiterung.abcde zurück.  
+  
+-   "*.abcdef" gibt nur die Dateien, die mit der Erweiterung.abcdef zurück.  
+  
+> [!NOTE]
+>  Da diese Methode für den Dateinamen mit der 8.3-Namensformat und das Format des lange Datei eincheckt, ein Suchmuster "* 1\*".txt "" möglicherweise unerwartete Dateinamen zurück. Beispiel für die Verwendung von einem Suchmuster "\*1\*".txt "" "longfilename.txt" wird zurückgegeben, weil das Äquivalent der 8.3-Namensformat "longf~1.txt" wäre.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.FileInfo> Eigenschaften:  
+  
+1.  <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+2.  <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+3.  <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+4.  <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+5.  <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+6.  <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+7.  <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+8.  <xref:System.IO.FileInfo.Length%2A>  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine Liste von Dateien aus einem Verzeichnis abrufen, mithilfe von verschiedenen Suchoptionen. Im Beispiel wird vorausgesetzt, ein Verzeichnis mit Dateien, die mit dem Namen log1.txt, log2.txt test1.txt, test2.txt, test3.txt und ein Unterverzeichnis, das eine Datei namens SubFile.txt verfügt.  
+  
+ [!code-csharp[directoryinfogetfiles#2](~/samples/snippets/csharp/VS_Snippets_CLR/directoryinfogetfiles/CS/directoryinfogetfiles2.cs#2)]
+ [!code-vb[directoryinfogetfiles#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/directoryinfogetfiles/VB/directoryinfogetfiles2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="searchPattern" />enthält mindestens ein ungültige Zeichen gemäß der Definition der <see cref="M:System.IO.Path.GetInvalidPathChars" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="searchOption" /> ist kein gültiger <see cref="T:System.IO.SearchOption" />-Wert.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der Pfad ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für den Zugriff auf den Pfad und zum Lesen aus Dateien und Verzeichnisse. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileSystemInfos">
+      <MemberSignature Language="C#" Value="public System.IO.FileSystemInfo[] GetFileSystemInfos ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileSystemInfo[] GetFileSystemInfos() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.GetFileSystemInfos" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileSystemInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Array von stark typisierten <see cref="T:System.IO.FileSystemInfo" />-Einträgen zurück, das alle Dateien und Unterverzeichnisse in einem Verzeichnis darstellt.</summary>
+        <returns>Ein Array von stark typisierten <see cref="T:System.IO.FileSystemInfo" />-Einträgen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn es keine Dateien oder Verzeichnisse in sind den <xref:System.IO.DirectoryInfo>, diese Methode ein leeres Array zurück. Diese Methode ist nicht rekursiv.  
+  
+ Unterverzeichnisse, für die <xref:System.IO.FileSystemInfo> Objekte, die von dieser Methode zurückgegebene umgewandelt werden können, auf die abgeleitete Klasse <xref:System.IO.DirectoryInfo>. Verwenden der <xref:System.IO.FileAttributes> zurückgegebene Wert den <xref:System.IO.FileSystemInfo.Attributes%2A?displayProperty=nameWithType> -Eigenschaft können Sie bestimmen, ob die <xref:System.IO.FileSystemInfo> eine Datei oder ein Verzeichnis darstellt.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.FileSystemInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Dateien und Verzeichnisse unter dem angegebenen Verzeichnis.  
+  
+ [!code-csharp[FSizeSort#1](~/samples/snippets/csharp/VS_Snippets_CLR/FSizeSort/CS/fsizesort.cs#1)]
+ [!code-vb[FSizeSort#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FSizeSort/VB/fsizesort.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der Pfad ist ungültig (z. B. befindet er sich auf einem nicht zugeordneten Laufwerk).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileSystemInfos">
+      <MemberSignature Language="C#" Value="public System.IO.FileSystemInfo[] GetFileSystemInfos (string searchPattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileSystemInfo[] GetFileSystemInfos(string searchPattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.GetFileSystemInfos(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileSystemInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="searchPattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="searchPattern">Die Suchzeichenfolge für die Überprüfung der Namen von Verzeichnissen und Dateien auf Übereinstimmungen.  Dieser Parameter darf eine Kombination aus gültigem Literalpfad und Platzhalterzeichen (* und?) Zeichen, aber sie unterstützt keine regulären Ausdrücke. Das Standardmuster ist "*", wobei alle Dateien zurückgegeben werden.</param>
+        <summary>Ruft ein Array von stark typisierten <see cref="T:System.IO.FileSystemInfo" />-Objekten ab, das die Dateien und Unterverzeichnisse darstellt, die den angegebenen Suchkriterien entsprechen.</summary>
+        <returns>Ein Array von stark typisierten <see langword="FileSystemInfo" />-Objekten, die den Suchkriterien entsprechen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `searchPattern`kann eine Kombination von Literal-und Platzhalterzeichen, es unterstützt jedoch keine regulären Ausdrücke. Die folgenden Bezeichner für Platzhalter sind zulässig, `searchPattern`.  
+  
+|Platzhalter-Spezifizierer|Entsprechungen|  
+|------------------------|-------------|  
+|* (Sternchen)|NULL oder mehr Zeichen an dieser Stelle.|  
+|? (Fragezeichen)|0 (null) oder ein Zeichen an dieser Stelle.|  
+  
+ Zeichen als die Platzhalter sind Literalzeichen. Z. B. die Zeichenfolge "* t" sucht nach allen Namen mit dem Buchstaben "t" beendet wird. ". Die `searchPattern` Zeichenfolge "s\*" sucht nach allen Namen in `path` mit dem Buchstaben "s" beginnen.  
+  
+ Diese Methode ist nicht rekursiv.  
+  
+ Unterverzeichnisse, für die <xref:System.IO.FileSystemInfo> Objekte, die von dieser Methode zurückgegebene umgewandelt werden können, auf die abgeleitete Klasse <xref:System.IO.DirectoryInfo>. Verwenden der <xref:System.IO.FileAttributes> zurückgegebene Wert den <xref:System.IO.FileSystemInfo.Attributes%2A?displayProperty=nameWithType> -Eigenschaft können Sie bestimmen, ob die <xref:System.IO.FileSystemInfo> eine Datei oder ein Verzeichnis darstellt.  
+  
+ Platzhalter sind zulässig. Z. B. die `searchPattern` Zeichenfolge "* t" sucht alle Verzeichnisnamen in `path` mit dem Buchstaben "t" enden. Die `searchPattern` Zeichenfolge "s\*" sucht alle Verzeichnisnamen in `path` mit dem Buchstaben "s" beginnen.  
+  
+ Die Zeichenfolge ".." kann nur verwendet werden, `searchPattern` Wenn es als Teil einer gültigen Verzeichnisnamen an, wie z. B. in den Namen des Verzeichnisses angegeben ist "ein.. "b". Es kann nicht verwendet werden, um der Directory-Hierarchie nach oben zu verschieben. Wenn es sind keine Dateien oder Verzeichnisse, oder keine Dateien oder Verzeichnissen, die übereinstimmen der `searchPattern` Zeichenfolge in die <xref:System.IO.DirectoryInfo>, diese Methode ein leeres Array zurück.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.FileSystemInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Dateien und Verzeichnisse, die das angegebenen Suchmuster entsprechen.  
+  
+ [!code-csharp[DirInfo GetFileSysInfos2#1](~/samples/snippets/csharp/VS_Snippets_CLR/DirInfo GetFileSysInfos2/CS/dirinfo getfilesysinfos2.cs#1)]
+ [!code-vb[DirInfo GetFileSysInfos2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/DirInfo GetFileSysInfos2/VB/dirinfo getfilesysinfos2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="searchPattern" />enthält mindestens ein ungültige Zeichen gemäß der Definition der <see cref="M:System.IO.Path.GetInvalidPathChars" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig (er befindet sich z. B. auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Lesen aus Dateien und Verzeichnissen und für den Zugriff auf den Pfad. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileSystemInfos">
+      <MemberSignature Language="C#" Value="public System.IO.FileSystemInfo[] GetFileSystemInfos (string searchPattern, System.IO.SearchOption searchOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.FileSystemInfo[] GetFileSystemInfos(string searchPattern, valuetype System.IO.SearchOption searchOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.GetFileSystemInfos(System.String,System.IO.SearchOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileSystemInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="searchPattern" Type="System.String" />
+        <Parameter Name="searchOption" Type="System.IO.SearchOption" />
+      </Parameters>
+      <Docs>
+        <param name="searchPattern">Die Suchzeichenfolge für die Überprüfung der Namen von Verzeichnissen und Dateien auf Übereinstimmungen.  Dieser Parameter darf eine Kombination aus gültigem Literalpfad und Platzhalterzeichen (* und?) Zeichen, aber sie unterstützt keine regulären Ausdrücke. Das Standardmuster ist "*", wobei alle Dateien zurückgegeben werden.</param>
+        <param name="searchOption">Einer der Enumerationswerte, der angibt, ob nur das aktuelle Verzeichnis oder auch alle Unterverzeichnisse durchsucht werden sollen. Der Standardwert ist <see cref="F:System.IO.SearchOption.TopDirectoryOnly" />.</param>
+        <summary>Ruft ein Array von <see cref="T:System.IO.FileSystemInfo" />-Objekten ab, die die Dateien und Unterverzeichnisse darstellen, die den angegebenen Suchkriterien entsprechen.</summary>
+        <returns>Ein Array von Dateisystemeinträgen, die den Suchkriterien entsprechen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `searchPattern`kann eine Kombination von Literal-und Platzhalterzeichen, es unterstützt jedoch keine regulären Ausdrücke. Die folgenden Bezeichner für Platzhalter sind zulässig, `searchPattern`.  
+  
+|Platzhalter-Spezifizierer|Entsprechungen|  
+|------------------------|-------------|  
+|* (Sternchen)|NULL oder mehr Zeichen an dieser Stelle.|  
+|? (Fragezeichen)|0 (null) oder ein Zeichen an dieser Stelle.|  
+  
+ Zeichen als die Platzhalter sind Literalzeichen. Z. B. die Zeichenfolge "* t" sucht nach allen Namen mit dem Buchstaben "t" beendet wird. ". Die `searchPattern` Zeichenfolge "s\*" sucht nach allen Namen in `path` mit dem Buchstaben "s" beginnen.  
+  
+ Unterverzeichnisse, für die <xref:System.IO.FileSystemInfo> Objekte, die von dieser Methode zurückgegebene umgewandelt werden können, auf die abgeleitete Klasse <xref:System.IO.DirectoryInfo>. Verwenden der <xref:System.IO.FileAttributes> zurückgegebene Wert den <xref:System.IO.FileSystemInfo.Attributes%2A?displayProperty=nameWithType> -Eigenschaft können Sie bestimmen, ob die <xref:System.IO.FileSystemInfo> eine Datei oder ein Verzeichnis darstellt.  
+  
+ Diese Methode füllt die Werte der folgenden <xref:System.IO.FileSystemInfo> Eigenschaften:  
+  
+-   <xref:System.IO.FileSystemInfo.Attributes%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>  
+  
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="searchPattern" />enthält mindestens ein ungültige Zeichen gemäß der Definition der <see cref="M:System.IO.Path.GetInvalidPathChars" /> Methode.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="searchPattern" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="searchOption" /> ist kein gültiger <see cref="T:System.IO.SearchOption" />-Wert.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Der angegebene Pfad ist ungültig (er befindet sich z. B. auf einem nicht zugeordneten Laufwerk).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveTo">
+      <MemberSignature Language="C#" Value="public void MoveTo (string destDirName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MoveTo(string destDirName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.MoveTo(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destDirName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="destDirName">Der Name und Pfad des Verzeichnisses, in das das Verzeichnis verschoben werden soll. Das Ziel darf kein anderes Datenträgervolume und kein Verzeichnis mit dem gleichen Namen sein. Es kann ein vorhandenes Verzeichnis sein, dem dieses Verzeichnis als Unterverzeichnis hinzugefügt werden soll.</param>
+        <summary>Verschiebt eine <see cref="T:System.IO.DirectoryInfo" />-Instanz und deren Inhalt in einen neuen Pfad.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst eine <xref:System.IO.IOException> Wenn Sie beispielsweise versuchen, c:\mydir nach c:\public zu verschieben und c:\public bereits vorhanden ist. Geben Sie "" c: "\\\public\\\mydir" als die `destDirName` Parameter, oder geben Sie den Namen eines neuen Verzeichnisses z. B. "" c: "\\\newdir".  
+  
+ Diese Methode ermöglicht das Verschieben eines Verzeichnisses in ein nur-Lese Verzeichnis. Die Lese-/Schreibattribut der beiden Verzeichnisse ist davon betroffen.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Verzeichnis verschoben wird.  
+  
+ [!code-cpp[directoryinfomoveto#1](~/samples/snippets/cpp/VS_Snippets_CLR/directoryinfomoveto/CPP/directoryinfomoveto.cpp#1)]
+ [!code-csharp[directoryinfomoveto#1](~/samples/snippets/csharp/VS_Snippets_CLR/directoryinfomoveto/CS/directoryinfomoveto.cs#1)]
+ [!code-vb[directoryinfomoveto#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/directoryinfomoveto/VB/directoryinfomoveto.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="destDirName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="destDirName" />ist eine leere Zeichenfolge ("").</exception>
+        <exception cref="T:System.IO.IOException">Es wurde versucht, ein Verzeichnis auf ein anderes Volume zu verschieben.  
+  
+ - oder -   
+  
+ <paramref name="destDirName" /> ist bereits vorhanden.  
+  
+ - oder -   
+  
+ Sie sind nicht autorisiert, auf diesen Pfad zuzugreifen.  
+  
+ - oder -   
+  
+ Das verschobene Verzeichnis und das Zielverzeichnis haben denselben Namen.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das Zielverzeichnis kann nicht gefunden werden.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Lesen und Schreiben von Dateien und Verzeichnissen und für den Zugriff auf das Zielverzeichnis. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DirectoryInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen dieser <see cref="T:System.IO.DirectoryInfo" />-Instanz ab.</summary>
+        <value>Der Name des Verzeichnisses.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies <xref:System.IO.DirectoryInfo.Name%2A> Eigenschaft gibt nur den Namen des Verzeichnisses, z. B. "Bin". Verwenden Sie den vollständigen Pfad, z. B. "c:\public\Bin", Abrufen der <xref:System.IO.FileSystemInfo.FullName%2A> Eigenschaft.  
+  
+ Die <xref:System.IO.DirectoryInfo.Name%2A> Eigenschaft eine <xref:System.IO.DirectoryInfo> ist keine Berechtigung erforderlich (über die Leseberechtigung für das Verzeichnis zum Erstellen der <xref:System.IO.DirectoryInfo.Exists%2A>), Sie aber können den Namen des Verzeichnisses. Bei Bedarf zur hand out eine <xref:System.IO.DirectoryInfo> auf einem geschützten Verzeichnis mit einem kryptografisch sichere Namen, erstellen Sie eine dummy-Verzeichnis für den nicht vertrauenswürdigen Code verwenden.  
+  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Namen des aktuellen `DirectoryInfo` nur Instanz.  
+  
+ [!code-cpp[Classic DirectoryInfo.Name Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic DirectoryInfo.Name Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DirectoryInfo.Name Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic DirectoryInfo.Name Example/CS/source.cs#1)]
+ [!code-vb[Classic DirectoryInfo.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic DirectoryInfo.Name Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.IO.DirectoryInfo Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.DirectoryInfo Parent" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DirectoryInfo.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.DirectoryInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das übergeordnete Verzeichnis eines angegebenen Unterverzeichnisses ab.</summary>
+        <value>Das übergeordnete Verzeichnis oder <see langword="null" /> , wenn der Pfad null ist oder der Dateipfad ein Stammverzeichnis angibt (z. B. "\\", "C:" oder * "\\\server\share").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der allgemeinen e/a-Aufgaben finden Sie [allgemeine e/a-Aufgaben](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Verweisen auf das übergeordnete Verzeichnis eines angegebenen Verzeichnisses.  
+  
+ [!code-cpp[directoryinfoparent#1](~/samples/snippets/cpp/VS_Snippets_CLR/directoryinfoparent/CPP/directoryinfoparent.cpp#1)]
+ [!code-csharp[directoryinfoparent#1](~/samples/snippets/csharp/VS_Snippets_CLR/directoryinfoparent/CS/directoryinfoparent.cs#1)]
+ [!code-vb[directoryinfoparent#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/directoryinfoparent/VB/directoryinfoparent.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Lesen aus Dateien und Verzeichnissen und für den Zugriff auf den Pfad. Zugeordnete Enumerationen: <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />,<see cref="T:System.Security.Permissions.FileIOPermissionAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Root">
+      <MemberSignature Language="C#" Value="public System.IO.DirectoryInfo Root { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.DirectoryInfo Root" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DirectoryInfo.Root" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.DirectoryInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stammteil des Verzeichnisses ab.</summary>
+        <value>Ein Objekt, das den Stamm des Verzeichnisses darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Stamm-Speicherorte für die angegebenen Verzeichnisse.  
+  
+ [!code-csharp[directoryinforoot#2](~/samples/snippets/csharp/VS_Snippets_CLR/directoryinforoot/CS/directoryinforoot2.cs#2)]
+ [!code-vb[directoryinforoot#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/directoryinforoot/VB/directoryinforoot2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Lesen aus Dateien und Verzeichnissen und für den Zugriff auf den Pfad. Zugeordnete Enumerationen: <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />,<see cref="T:System.Security.Permissions.FileIOPermissionAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccessControl">
+      <MemberSignature Language="C#" Value="public void SetAccessControl (System.Security.AccessControl.DirectorySecurity directorySecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccessControl(class System.Security.AccessControl.DirectorySecurity directorySecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.SetAccessControl(System.Security.AccessControl.DirectorySecurity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="directorySecurity" Type="System.Security.AccessControl.DirectorySecurity" />
+      </Parameters>
+      <Docs>
+        <param name="directorySecurity">Ein Objekt, das einen ACL-Eintrag von beschriebene Verzeichnis angewendet wird beschrieben, die <c>Pfad</c> Parameter.</param>
+        <summary>Wendet von einem <see cref="T:System.Security.AccessControl.DirectorySecurity" />-Objekt beschriebene Einträge in Zugriffssteuerungslisten auf die Datei an, die vom aktuellen <see cref="T:System.IO.DirectoryInfo" />-Objekt beschrieben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Zugriffssteuerungsliste (ACL) beschreibt Einzelpersonen und/oder Gruppen besitzen, oder, die Rechte für bestimmte Aktionen für die angegebene Datei oder das Verzeichnis verfügen. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](~/docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+  
+ Die <xref:System.IO.DirectoryInfo.SetAccessControl%2A> Methode gilt die ACL-Einträge für eine Datei, die nicht geerbte Zugriffssteuerungsliste darstellt.  
+  
+> [!CAUTION]
+>  Die ACL für angegebene `directorySecurity` ersetzt die vorhandene Zugriffssteuerungsliste für das Verzeichnis. Um Berechtigungen für einen neuen Benutzer hinzuzufügen, verwenden die <xref:System.IO.DirectoryInfo.GetAccessControl%2A> Methode zum Abrufen der vorhandenen ACL, und ändern Sie sie.  
+  
+ Die <xref:System.IO.DirectoryInfo.SetAccessControl%2A> Methode speichert nur <xref:System.Security.AccessControl.DirectorySecurity> Objekte, die nach der Erstellung des Objekts geändert wurden.  Wenn ein <xref:System.Security.AccessControl.DirectorySecurity> Objekt wurde nicht verändert, wird nicht in einer Datei beibehalten werden.  Es ist daher nicht möglich, zum Abrufen einer <xref:System.Security.AccessControl.DirectorySecurity> Objekt aus einer Datei, und wenden Sie das gleiche Objekt in eine andere Datei erneut an.  
+  
+ ACL-Informationen aus einer Datei in einen anderen zu kopieren:  
+  
+1.  Verwenden der <xref:System.IO.DirectoryInfo.GetAccessControl%2A> Methode zum Abrufen der <xref:System.Security.AccessControl.DirectorySecurity> Objekt aus der Quelldatei.  
+  
+2.  Erstellen Sie ein neues <xref:System.Security.AccessControl.DirectorySecurity> Objekt für die Zieldatei.  
+  
+3.  Verwenden der <xref:System.Security.AccessControl.ObjectSecurity.GetSecurityDescriptorBinaryForm%2A> oder <xref:System.Security.AccessControl.ObjectSecurity.GetSecurityDescriptorSddlForm%2A> Methode der Quelle <xref:System.Security.AccessControl.DirectorySecurity> Objekt, das die ACL-Informationen abzurufen.  
+  
+4.  Verwenden der <xref:System.Security.AccessControl.ObjectSecurity.SetSecurityDescriptorBinaryForm%2A> oder <xref:System.Security.AccessControl.ObjectSecurity.SetSecurityDescriptorSddlForm%2A> Methode, um die Informationen zu kopieren, die in Schritt 3 in das Ziel abgerufenen <xref:System.Security.AccessControl.DirectorySecurity> Objekt.  
+  
+5.  Legen Sie das Ziel <xref:System.Security.AccessControl.DirectorySecurity> Objekt, das die Ziel-Datei mithilfe der <xref:System.IO.DirectoryInfo.SetAccessControl%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.IO.DirectoryInfo.GetAccessControl%2A> und <xref:System.IO.DirectoryInfo.SetAccessControl%2A> Methoden zum Hinzufügen und entfernen Sie den Zugriff steuern Zugriffssteuerungsliste Eintrag in einem Verzeichnis.  
+  
+ [!code-cpp[IO.DiretoryInfo.GetAccessControl-SetAccessControl#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.DiretoryInfo.GetAccessControl-SetAccessControl/cpp/sample.cpp#1)]
+ [!code-csharp[IO.DiretoryInfo.GetAccessControl-SetAccessControl#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.DiretoryInfo.GetAccessControl-SetAccessControl/CS/sample.cs#1)]
+ [!code-vb[IO.DiretoryInfo.GetAccessControl-SetAccessControl#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.DiretoryInfo.GetAccessControl-SetAccessControl/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="directorySecurity" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.SystemException">Die Datei konnte nicht gefunden oder geändert werden.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Der aktuelle Prozess hat keinen Zugriff zum Öffnen der Datei.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Das aktuelle Betriebssystem ist nicht Microsoft Windows 2000 oder höher.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">für die Berechtigung zum Auflisten der Zugriffssteuerungsliste (ACL) für ein Verzeichnis. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.NoAccess" />,<see cref="F:System.Security.AccessControl.AccessControlActions.View" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DirectoryInfo.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den ursprünglichen Pfad zurück, der vom Benutzer übergeben wurde.</summary>
+        <returns>Gibt den ursprünglichen Pfad zurück, der vom Benutzer übergeben wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

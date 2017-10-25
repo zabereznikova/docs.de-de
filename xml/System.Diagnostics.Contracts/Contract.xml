@@ -1,0 +1,1278 @@
+<Type Name="Contract" FullName="System.Diagnostics.Contracts.Contract">
+  <TypeSignature Language="C#" Value="public static class Contract" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Contract extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Contracts.Contract" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält statische Methoden zum Darstellen von Programmverträgen, z. B. Vorbedingungen, Nachbedingungen und Objektinvarianten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datenvertragsklassen Code können Sie die Vorbedingungen, nachbedingungen und objektinvarianten im Code angeben. Vorbedingungen sind Anforderungen, die beim Eingeben einer Methode oder Eigenschaft erfüllt werden müssen. Nachbedingungen beschreiben Erwartungen zu dem Zeitpunkt, zu dem die Methode oder der Eigenschaftencode beendet wird. Objektinvarianten beschreiben den erwarteten Zustand für eine Klasse, die keine Bedingung Probleme aufgetreten sind. Weitere Informationen zu Vorbedingungen, nachbedingungen und objektinvarianten finden Sie unter [Codeverträge](~/docs/framework/debug-trace-profile/code-contracts.md).  
+  
+ Tools und detaillierte Anweisungen zur Verwendung von Codeverträgen finden Sie auf der MSDN DevLabs-Website unter [Codeverträge](http://go.microsoft.com/fwlink/?LinkId=152461).  
+  
+> [!IMPORTANT]
+>  Sie müssen eine binäre Rewrite-Modul verwenden, um zur Laufzeit Erzwingung von Verträgen einzufügen. Andernfalls, wie Verträge die <xref:System.Diagnostics.Contracts.Contract.Ensures%2A?displayProperty=nameWithType> Methode kann nur statisch getestet und wird nicht zur Laufzeit Ausnahmen auslösen, wenn ein Vertrag verletzt wird. Sie können den binary Rewriter CCRewrite Herunterladen von [Codeverträge](http://go.microsoft.com/fwlink/?LinkId=152461) auf der MSDN DevLabs-Website. CCRewrite stammen, mit einem Visual Studio-add-in, die Ihnen ermöglicht, die zur Laufzeit Vertrag Erzwingung aus dem Projekt aktivieren **Eigenschaften** Seite. Der binary Rewriter und die Visual Studio-add-in ist nicht im Lieferumfang [!INCLUDE[vs_dev10_long](~/includes/vs-dev10-long-md.md)] oder das Windows SDK.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Assert">
+      <MemberSignature Language="C#" Value="public static void Assert (bool condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Assert(bool condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.Assert(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der bedingte Ausdruck, der getestet werden soll.</param>
+        <summary>Überprüft eine Bedingung; Wenn die Bedingung <see langword="false" />, folgt die ausweitungsrichtlinien für den Analyzer festgelegt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardrichtlinie für die sperrenausweitung wird, benachrichtigen den angefügten Debugger über einen Vertragsfehler oder Anzeigen einer **Assert** (Dialogfeld), wenn kein Debugger angefügt ist. Optional kann der Analyzer angewiesen werden, um eine Ausnahme auszulösen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assert">
+      <MemberSignature Language="C#" Value="public static void Assert (bool condition, string userMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Assert(bool condition, string userMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.Assert(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="userMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der bedingte Ausdruck, der getestet werden soll.</param>
+        <param name="userMessage">Eine Meldung, die angezeigt wird, wenn die Bedingung nicht erfüllt wird.</param>
+        <summary>Überprüft eine Bedingung; Wenn die Bedingung <see langword="false" />, folgt die ausweitungsrichtlinien vom Analyzer festgelegt und zeigt die angegebene Meldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardrichtlinie für die sperrenausweitung wird, benachrichtigen den angefügten Debugger über einen Vertragsfehler oder Anzeigen einer **Assert** (Dialogfeld), wenn kein Debugger angefügt ist. Optional kann der Analyzer angewiesen werden, um eine Ausnahme auszulösen. Die `userMessage` Parameter an die Ausgabe des Debuggers übergeben wird. Wenn `userMessage` ist keine Konstante Zeichenfolge literal Tools möglicherweise nicht lesbar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assume">
+      <MemberSignature Language="C#" Value="public static void Assume (bool condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Assume(bool condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.Assume(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der bedingte Ausdruck annehmen <see langword="true" />.</param>
+        <summary>Weist Codeanalysetools wird davon ausgegangen, dass die angegebene Bedingung ist <see langword="true" />, auch wenn nicht statisch belegt werden kann, immer <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Laufzeit mit dieser Methode entspricht der <xref:System.Diagnostics.Contracts.Contract.Assert%28System.Boolean%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assume">
+      <MemberSignature Language="C#" Value="public static void Assume (bool condition, string userMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Assume(bool condition, string userMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.Assume(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("DEBUG")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="userMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der bedingte Ausdruck annehmen <see langword="true" />.</param>
+        <param name="userMessage">Die Meldung, die angezeigt wird, wenn die Annahme fehlschlägt.</param>
+        <summary>Weist Codeanalysetools wird davon ausgegangen, dass eine Bedingung ist <see langword="true" />, auch wenn nicht statisch belegt werden kann, immer <see langword="true" />, und eine Meldung angezeigt, wenn die Annahme fehlschlägt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `userMessage` ist keine Konstante Zeichenfolge literal ist, wird der Vertrag möglicherweise nicht von Tools verstanden werden.  
+  
+ Zur Laufzeit mit dieser Methode entspricht der <xref:System.Diagnostics.Contracts.Contract.Assert%28System.Boolean%2CSystem.String%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractFailed">
+      <MemberSignature Language="C#" Value="public static event EventHandler&lt;System.Diagnostics.Contracts.ContractFailedEventArgs&gt; ContractFailed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Diagnostics.Contracts.ContractFailedEventArgs&gt; ContractFailed" />
+      <MemberSignature Language="DocId" Value="E:System.Diagnostics.Contracts.Contract.ContractFailed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Diagnostics.Contracts.ContractFailedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Vertrag fehlschlägt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ereignisinformationen für dieses Ereignis wird bereitgestellt, indem die <xref:System.Diagnostics.Contracts.ContractFailedEventArgs?displayProperty=nameWithType> -Objekt, das an den Ereignishandler übergeben wird. Dieses Ereignis benachrichtigt eine verwaltete Anwendung-Umgebung, wie ein interaktives Interpreter oder einem Browser Webhost, den ein Vertrag ein Fehler aufgetreten ist. Bevor Sie auf diese Weise wird ein Ereignis ausgelöst, die eine Anwendung bewältigt Ermessen. Wenn Code in ein Testframework ausgeführt wird, können Sie z. B. protokollieren ein Testfehlers abgebrochen und beenden Sie den Test.  
+  
+ Die standardmäßige Implementierung des der <xref:System.Diagnostics.Contracts.Internal.ContractHelper.RaiseContractFailedEvent%2A> Methode in der .NET Framework-Klassenbibliothek ist jeder Handler aufgerufen, die registriert wird die <xref:System.Diagnostics.Contracts.Contract.ContractFailed> Ereignis. Vom Handler ausgelöste Ausnahmen werden ignoriert, aber jeder Handler kann darauf hinweisen, ob der Fehler, durch Aufrufen behandelt wird der <xref:System.Diagnostics.Contracts.ContractFailedEventArgs.SetHandled%2A> Methode für die Ereignisargumente. Wenn ein Handler als behandelt den Fehler festlegt, gibt die Methode `null` und keine weitere Aktion erforderlich ist. Sie können auch Handler Aufrufen der <xref:System.Diagnostics.Contracts.ContractFailedEventArgs.SetUnwind%2A> aufzurufende Methode anzuweisen, den Code entladen. In diesem Fall wird eine Ausnahme ausgelöst, nachdem alle Handler ausgeführt wurden.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="EndContractBlock">
+      <MemberSignature Language="C#" Value="public static void EndContractBlock ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EndContractBlock() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.EndContractBlock" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Markiert das Ende des Abschnitts Vertrag aus, wenn eine Methode Verträge nur Vorbedingungen in enthalten die <see langword="if" /> - <see langword="then" /> - <see langword="throw" /> Formular.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Großteil des Codes enthält bereits einige Parametervalidierungsfunktionen in Form von `if` - `then` - `throw` Code. Die vertragstools erkennen `if` - `then` - `throw` Anweisungen als Vorbedingungen, wenn die Anweisungen werden als Erstes innerhalb einer Methode und der gesamte Satz solcher Anweisungen ein expliziter folgt<xref:System.Diagnostics.Contracts.Contract> Methode aufrufen, wie z. B. eine <xref:System.Diagnostics.Contracts.Contract.Requires%2A>, <xref:System.Diagnostics.Contracts.Contract.Ensures%2A>, <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A>, oder <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A>.  
+  
+ Wenn `if` - `then` - `throw` Anweisungen angezeigt, in diesem Formular die vertragstools erkennen diese als Legacy-Anweisungen erfordern. Die <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A> Formular wird verwendet, nur dann, wenn keine anderen Verträge führen Sie die `if` - `then` - `throw` Sequenzen, aber sie sollten immer noch als ältere markiert-erfordert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ensures">
+      <MemberSignature Language="C#" Value="public static void Ensures (bool condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Ensures(bool condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.Ensures(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der bedingte Ausdruck, der getestet werden soll. Der Ausdruck kann enthalten <see cref="M:System.Diagnostics.Contracts.Contract.OldValue``1(``0)" />, <see cref="M:System.Diagnostics.Contracts.Contract.ValueAtReturn``1(``0@)" />, und <see cref="M:System.Diagnostics.Contracts.Contract.Result``1" /> Werte.</param>
+        <summary>Gibt einen Nachbedingungsvertrag für die einschließende Methode oder Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `condition` Parameter gibt an, eine nachbedingung, die voraussichtlich `true` Wenn die einschließende Methode oder Eigenschaft normalerweise zurückgegeben.  
+  
+-   Dieser Methodenaufruf muss am Anfang einer Methode oder Eigenschaft, die vor jedem anderen Code.  
+  
+-   Sie müssen den binary Rewriter verwenden (verfügbar unter [Codeverträge](http://go.microsoft.com/fwlink/?LinkId=152461) auf der MSDN DevLabs-Website) für Laufzeit-Durchsetzung von diesem nachbedingung.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Diagnostics.Contracts.Contract.Ensures%2A> Methode, um sicherzustellen, dass es sich bei ein erwarteten Wert zurückgegeben wird. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.Contracts.ContractClassAttribute> Klasse.  
+  
+ [!code-csharp[ContractExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#3)]
+ [!code-vb[ContractExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ensures">
+      <MemberSignature Language="C#" Value="public static void Ensures (bool condition, string userMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Ensures(bool condition, string userMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.Ensures(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="userMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der bedingte Ausdruck, der getestet werden soll. Der Ausdruck kann enthalten <see cref="M:System.Diagnostics.Contracts.Contract.OldValue``1(``0)" /> und <see cref="M:System.Diagnostics.Contracts.Contract.Result``1" /> Werte.</param>
+        <param name="userMessage">Die Meldung angezeigt, wenn der Ausdruck nicht <see langword="true" />.</param>
+        <summary>Gibt einen Nachbedingungsvertrag für einen bereitgestellten beenden-Bedingung und eine Meldung angezeigt, wenn die Bedingung <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `condition` Parameter gibt an, eine nachbedingung, die voraussichtlich `true` Wenn die einschließende Methode oder Eigenschaft normalerweise zurückgegeben.  
+  
+-   Dieser Methodenaufruf muss am Anfang einer Methode oder Eigenschaft, die vor jedem anderen Code.  
+  
+-   Dieser Vertrag wird für Clients verfügbar gemacht. Daher muss er nur Verweis-Elemente, die als die einschließende Methode mindestens ebenso sichtbar sind.  
+  
+-   Sie müssen den binary Rewriter verwenden (verfügbar unter [Codeverträge](http://go.microsoft.com/fwlink/?LinkId=152461) auf der MSDN DevLabs-Website) für Laufzeit-Durchsetzung von diesem nachbedingung.  
+  
+-   Wenn `userMessage` ist keine Konstante Zeichenfolge literal ist, wird der Vertrag möglicherweise nicht von Tools verstanden werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsuresOnThrow&lt;TException&gt;">
+      <MemberSignature Language="C#" Value="public static void EnsuresOnThrow&lt;TException&gt; (bool condition) where TException : Exception;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnsuresOnThrow&lt;(class System.Exception) TException&gt;(bool condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.EnsuresOnThrow``1(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TException">
+          <Constraints>
+            <BaseTypeName>System.Exception</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TException">Der Ausnahmetyp, von dem die Nachbedingungsüberprüfung aufgerufen wird.</typeparam>
+        <param name="condition">Der bedingte Ausdruck, der getestet werden soll.</param>
+        <summary>Gibt einen Nachbedingungsvertrag für die einschließende Methode oder Eigenschaft auf Grundlage der angegebenen Ausnahme und Bedingung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `condition` Parameter gibt an, eine nachbedingung, die voraussichtlich `true` Wenn die einschließende Methode oder Eigenschaft nicht normal beendet wird und eine Ausnahme vom Typ `TException` ausgelöst wird.  
+  
+-   Dieser Methodenaufruf muss am Anfang einer Methode oder Eigenschaft, die vor jedem anderen Code.  
+  
+-   Dieser Vertrag wird für Clients verfügbar gemacht. Daher muss er nur Verweis-Elemente, die als die einschließende Methode mindestens ebenso sichtbar sind.  
+  
+-   Sie müssen den binary Rewriter für Laufzeit-Durchsetzung von diesem nachbedingung verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsuresOnThrow&lt;TException&gt;">
+      <MemberSignature Language="C#" Value="public static void EnsuresOnThrow&lt;TException&gt; (bool condition, string userMessage) where TException : Exception;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnsuresOnThrow&lt;(class System.Exception) TException&gt;(bool condition, string userMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.EnsuresOnThrow``1(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TException">
+          <Constraints>
+            <BaseTypeName>System.Exception</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="userMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TException">Der Ausnahmetyp, von dem die Nachbedingungsüberprüfung aufgerufen wird.</typeparam>
+        <param name="condition">Der bedingte Ausdruck, der getestet werden soll.</param>
+        <param name="userMessage">Die Meldung angezeigt, wenn der Ausdruck ist <see langword="false" />.</param>
+        <summary>Gibt einen Nachbedingungsvertrag und eine Meldung angezeigt, wenn die Bedingung <see langword="false" /> für die einschließende Methode oder Eigenschaft auf Grundlage der angegebenen Ausnahme und Bedingung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `condition` Parameter gibt an, eine nachbedingung, die voraussichtlich `true` Wenn die einschließende Methode oder Eigenschaft nicht normal beendet wird und eine Ausnahme vom Typ `TException` ausgelöst wird. Die `message` -Parameter gibt eine Meldung angezeigt, wenn die Bedingung `false`.  
+  
+-   Dieser Methodenaufruf muss am Anfang einer Methode oder Eigenschaft, die vor jedem anderen Code.  
+  
+-   Dieser Vertrag wird für Clients verfügbar gemacht. Daher muss er nur Verweis-Elemente, die als die einschließende Methode mindestens ebenso sichtbar sind.  
+  
+-   Sie müssen den binary Rewriter für Laufzeit-Durchsetzung von diesem nachbedingung verwenden.  
+  
+-   Wenn `userMessage` ist keine Konstante Zeichenfolge literal ist, wird der Vertrag möglicherweise nicht von Tools verstanden werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exists">
+      <MemberSignature Language="C#" Value="public static bool Exists (int fromInclusive, int toExclusive, Predicate&lt;int&gt; predicate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Exists(int32 fromInclusive, int32 toExclusive, class System.Predicate`1&lt;int32&gt; predicate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.Exists(System.Int32,System.Int32,System.Predicate{System.Int32})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int32" />
+        <Parameter Name="toExclusive" Type="System.Int32" />
+        <Parameter Name="predicate" Type="System.Predicate&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="fromInclusive">Die erste ganze Zahl, für die Übergabe an <c>Prädikat</c>.</param>
+        <param name="toExclusive">Mehr als die letzte ganze Zahl, für die Übergabe an <c>Prädikat</c>.</param>
+        <param name="predicate">Die Funktion zum Auswerten auf Ganzzahlwerte im angegebenen Bereich.</param>
+        <summary>Bestimmt, ob ein bestimmter Test für jede ganze Zahl in einem Bereich von ganzen Zahlen den den Wert true zurückgibt.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="predicate" /> gibt <see langword="true" /> für eine beliebige ganze Zahl, beginnend mit <paramref name="fromInclusive" /> auf <paramref name="toExclusive" /> - 1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `toExclusive` Parameter mehr als die letzte ganze Zahl, um zu ermöglichen, mit der Länge eines Bereichs von ganzen Zahlen, beginnend mit 0. Es würde z. B. auf 5 für ganze Zahlen 0 bis 4 festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="predicate" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="toExclusive" /> ist kleiner als <paramref name="fromInclusive" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exists&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static bool Exists&lt;T&gt; (System.Collections.Generic.IEnumerable&lt;T&gt; collection, Predicate&lt;T&gt; predicate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Exists&lt;T&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; collection, class System.Predicate`1&lt;!!T&gt; predicate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.Exists``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+        <Parameter Name="predicate" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ, der in enthalten ist <c>Auflistung</c>.</typeparam>
+        <param name="collection">Die Auflistung der Elemente des Typs <c>T</c> gezeichnet wird zum Übergeben an <c>Prädikat</c>.</param>
+        <param name="predicate">Die Funktion für die auszuwertende für ein Element in <c>Auflistung</c>.</param>
+        <summary>Bestimmt, ob ein Element in einer Auflistung von Elementen in einer Funktion vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="predicate" /> gibt <see langword="true" /> für jedes Element des Typs <paramref name="T" /> in <paramref name="collection" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="collection" /> oder <paramref name="predicate" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForAll">
+      <MemberSignature Language="C#" Value="public static bool ForAll (int fromInclusive, int toExclusive, Predicate&lt;int&gt; predicate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ForAll(int32 fromInclusive, int32 toExclusive, class System.Predicate`1&lt;int32&gt; predicate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.ForAll(System.Int32,System.Int32,System.Predicate{System.Int32})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int32" />
+        <Parameter Name="toExclusive" Type="System.Int32" />
+        <Parameter Name="predicate" Type="System.Predicate&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="fromInclusive">Die erste ganze Zahl, für die Übergabe an <c>Prädikat</c>.</param>
+        <param name="toExclusive">Mehr als die letzte ganze Zahl, für die Übergabe an <c>Prädikat</c>.</param>
+        <param name="predicate">Die Funktion, mit der überprüft wird, ob die ganzen Zahlen im angegebenen Bereich vorhanden sind.</param>
+        <summary>Bestimmt, ob eine angegebene Bedingung für alle ganzen Zahlen in einem angegebenen Bereich gültig ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="predicate" /> gibt <see langword="true" /> für alle ganzen Zahlen, beginnend mit <paramref name="fromInclusive" /> auf <paramref name="toExclusive" /> - 1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `toExclusive` Parameter mehr als die letzte ganze Zahl, um zu ermöglichen, mit der Länge eines Bereichs von ganzen Zahlen, beginnend mit 0. Es würde z. B. auf 5 für ganze Zahlen 0 bis 4 festgelegt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> Methode, um zu bestimmen, ob ein Array, ein null-Element hat.  
+  
+ [!code-csharp[Contract.ForAllExample#1](~/samples/snippets/csharp/VS_Snippets_CLR/contract.forallexample/cs/program.cs#1)]
+ [!code-vb[Contract.ForAllExample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/contract.forallexample/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="predicate" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="toExclusive" /> ist kleiner als <paramref name="fromInclusive" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForAll&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static bool ForAll&lt;T&gt; (System.Collections.Generic.IEnumerable&lt;T&gt; collection, Predicate&lt;T&gt; predicate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ForAll&lt;T&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; collection, class System.Predicate`1&lt;!!T&gt; predicate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.ForAll``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+        <Parameter Name="predicate" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ, der in enthalten ist <c>Auflistung</c>.</typeparam>
+        <param name="collection">Die Auflistung der Elemente des Typs <c>T</c> gezeichnet wird zum Übergeben an <c>Prädikat</c>.</param>
+        <param name="predicate">Die Funktion, die das Vorhandensein aller Elemente in auswerten <c>Auflistung</c>.</param>
+        <summary>Bestimmt, ob alle Elemente in einer Auflistung in einer Funktion vorhanden sind.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="predicate" /> gibt <see langword="true" /> für alle Elemente des Typs <paramref name="T" /> in <paramref name="collection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> Methode, um zu bestimmen, ob eine Auflistung ein null-Element hat.  
+  
+ [!code-csharp[Contract.ForAllExample#1](~/samples/snippets/csharp/VS_Snippets_CLR/contract.forallexample/cs/program.cs#1)]
+ [!code-vb[Contract.ForAllExample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/contract.forallexample/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="collection" /> oder <paramref name="predicate" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invariant">
+      <MemberSignature Language="C#" Value="public static void Invariant (bool condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Invariant(bool condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.Invariant(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der bedingte Ausdruck, der getestet werden soll.</param>
+        <summary>Gibt einen invarianten Vertrag für die einschließende Methode oder Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.Contracts.Contract.Invariant%2A>Verträge sind innerhalb einer Methode, die identifizierte enthalten die <xref:System.Diagnostics.Contracts.ContractInvariantMethodAttribute> Attribut, das in der Regel wird die Methode namens `ObjectInvariant`.  
+  
+-   Dieser Vertrag kann nur in einer dedizierten invariante Methode angegeben werden, die für eine Klasse deklariert wird. Wenn die Methode nicht versiegelt ist, sollte es nur für geschützte Member, nicht privaten Members verweisen, sodass Unterklassen sicher, dass die Invarianten beibehalten werden können.  
+  
+-   Dieser Vertrag wird nicht für Clients verfügbar gemacht. Es kann daher Elemente verweisen, die kleiner als die einschließende Methode sichtbar sind.  
+  
+-   Sie müssen den binary Rewriter für Laufzeit-Durchsetzung von diesem invarianten verwenden.  
+  
+-   Invarianten werden bedingt definiert basierend auf dem Vorhandensein der `CONTRACTS FULL` Symbol. Bei der Laufzeitüberprüfung werden die Invarianten am Ende jeder öffentlichen Methode überprüft. Wenn eine invariante eine öffentliche Methode in der gleichen Klasse erwähnt, wird die invariantenüberprüfung, die normalerweise am Ende dieser öffentlichen Methode geschieht deaktiviert und nur am Ende des äußersten Methodenaufrufs dieser Klasse. Dies geschieht auch, wenn die Klasse wegen eines Aufrufs einer Methode in einer anderen Klasse erneut eingegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invariant">
+      <MemberSignature Language="C#" Value="public static void Invariant (bool condition, string userMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Invariant(bool condition, string userMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.Invariant(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="userMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der bedingte Ausdruck, der getestet werden soll.</param>
+        <param name="userMessage">Die Meldung angezeigt, wenn die Bedingung <see langword="false" />.</param>
+        <summary>Gibt einen invarianten Vertrag für die einschließende Methode oder Eigenschaft an und zeigt eine Meldung an, wenn die Bedingung für den Vertrag nicht erfüllt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.Contracts.Contract.Invariant%2A>Verträge sind innerhalb einer Methode, die identifizierte enthalten die <xref:System.Diagnostics.Contracts.ContractInvariantMethodAttribute> Attribut, das in der Regel wird die Methode namens `ObjectInvariant`.  
+  
+-   Dieser Vertrag kann nur in einer dedizierten invariante Methode angegeben werden, die für eine Klasse deklariert wird.  
+  
+-   Dieser Vertrag wird nicht für Clients verfügbar gemacht. Es kann daher Elemente verweisen, die kleiner als die einschließende Methode sichtbar sind.  
+  
+-   Sie müssen den binary Rewriter für Laufzeit-Durchsetzung von diesem invarianten verwenden.  
+  
+-   Invarianten werden bedingt definiert, auf die `CONTRACTS FULL` Symbol. Bei der Laufzeitüberprüfung werden die Invarianten am Ende jeder öffentlichen Methode überprüft. Wenn eine invariante eine öffentliche Methode in der gleichen Klasse erwähnt, wird die invariantenüberprüfung, die normalerweise am Ende dieser öffentlichen Methode geschieht deaktiviert und nur am Ende des äußersten Methodenaufrufs dieser Klasse. Dies geschieht auch, wenn die Klasse wegen eines Aufrufs einer Methode in einer anderen Klasse erneut eingegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldValue&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T OldValue&lt;T&gt; (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T OldValue&lt;T&gt;(!!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.OldValue``1(``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Werts.</typeparam>
+        <param name="value">Der darzustellende Wert (Feld oder Parameter).</param>
+        <summary>Stellt Werte in ihrem Zustand beim Starten einer Methode oder einer Eigenschaft dar.</summary>
+        <returns>Der Wert des Parameters oder Felds am Anfang einer Methode oder Eigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, nur in der bedingte Ausdruck für die <xref:System.Diagnostics.Contracts.Contract.Ensures%2A> Vertrag.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Diagnostics.Contracts.Contract.OldValue%2A> Methode, um sicherzustellen, dass ein Zähler aktualisiert wurde. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.Contracts.ContractClassAttribute> Klasse.  
+  
+ [!code-csharp[ContractExample#5](~/samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#5)]
+ [!code-vb[ContractExample#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Requires">
+      <MemberSignature Language="C#" Value="public static void Requires (bool condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Requires(bool condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.Requires(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der bedingte Ausdruck, der getestet werden soll.</param>
+        <summary>Gibt einen Vorbedingungsvertrag für die einschließende Methode oder Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Dieser Methodenaufruf muss am Anfang einer Methode oder Eigenschaft, die vor jedem anderen Code.  
+  
+-   Dieser Vertrag wird für Clients verfügbar gemacht. Daher muss er nur Verweis-Elemente, die als die einschließende Methode mindestens ebenso sichtbar sind.  
+  
+-   Verwenden Sie diese Methode anstelle der <xref:System.Diagnostics.Contracts.Contract.Requires%60%601%28System.Boolean%29?displayProperty=nameWithType> Methode, wenn die Abwärtskompatibilität erzwingt nicht mit Ihnen, eine bestimmte Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Requires">
+      <MemberSignature Language="C#" Value="public static void Requires (bool condition, string userMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Requires(bool condition, string userMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.Requires(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="userMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Der bedingte Ausdruck, der getestet werden soll.</param>
+        <param name="userMessage">Die Meldung angezeigt, wenn die Bedingung <see langword="false" />.</param>
+        <summary>Gibt einen Vorbedingungsvertrag für die einschließende Methode oder Eigenschaft an, und zeigt eine Meldung an, wenn die Bedingung für den Vertrag nicht erfüllt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Dieser Methodenaufruf muss am Anfang einer Methode oder Eigenschaft, die vor jedem anderen Code.  
+  
+-   Dieser Vertrag wird für Clients verfügbar gemacht. Daher muss er nur Verweis-Elemente, die als die einschließende Methode mindestens ebenso sichtbar sind.  
+  
+-   Verwenden Sie diese Methode anstelle der <xref:System.Diagnostics.Contracts.Contract.Requires%60%601%28System.Boolean%2CSystem.String%29?displayProperty=nameWithType> Methode, wenn die Abwärtskompatibilität erzwingt nicht mit Ihnen, eine bestimmte Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Requires&lt;TException&gt;">
+      <MemberSignature Language="C#" Value="public static void Requires&lt;TException&gt; (bool condition) where TException : Exception;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Requires&lt;(class System.Exception) TException&gt;(bool condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.Requires``1(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TException">
+          <Constraints>
+            <BaseTypeName>System.Exception</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TException">Die Ausnahme auslöst, wenn die Bedingung <see langword="false" />.</typeparam>
+        <param name="condition">Der bedingte Ausdruck, der getestet werden soll.</param>
+        <summary>Gibt einen Vorbedingungsvertrag für die einschließende Methode oder Eigenschaft an, und löst eine Ausnahme aus, wenn die Bedingung für den Vertrag nicht erfüllt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Sie müssen zur Laufzeit überprüft wird, verwenden Sie aktivieren die <xref:System.Diagnostics.Contracts.Contract.Requires%2A> Methode. Wenn die laufzeitüberprüfung deaktiviert ist, wird der Prozess beendet. Um die Tools für die Überprüfung der Common Language Runtime zu erhalten, finden Sie unter [Codeverträge](http://go.microsoft.com/fwlink/?LinkId=152461) auf der MSDN DevLabs-Website.  
+  
+-   Dieser Methodenaufruf muss am Anfang einer Methode oder Eigenschaft, die vor jedem anderen Code.  
+  
+-   Dieser Vertrag wird für Clients verfügbar gemacht. Daher muss er nur Verweis-Elemente, die als die einschließende Methode mindestens ebenso sichtbar sind.  
+  
+-   Verwenden Sie diese Methode anstelle der <xref:System.Diagnostics.Contracts.Contract.Requires%28System.Boolean%29?displayProperty=nameWithType> Methode, wenn Sie möchten eine Ausnahme auslöst, wenn die Vorbedingung fehlschlägt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Requires&lt;TException&gt;">
+      <MemberSignature Language="C#" Value="public static void Requires&lt;TException&gt; (bool condition, string userMessage) where TException : Exception;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Requires&lt;(class System.Exception) TException&gt;(bool condition, string userMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.Requires``1(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TException">
+          <Constraints>
+            <BaseTypeName>System.Exception</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="userMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TException">Die Ausnahme auslöst, wenn die Bedingung <see langword="false" />.</typeparam>
+        <param name="condition">Der bedingte Ausdruck, der getestet werden soll.</param>
+        <param name="userMessage">Die Meldung angezeigt, wenn die Bedingung <see langword="false" />.</param>
+        <summary>Gibt einen Vorbedingungsvertrag für die einschließende Methode oder Eigenschaft an, und löst eine Ausnahme mit der angegebenen Meldung aus, wenn die Bedingung für den Vertrag nicht erfüllt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   > [!IMPORTANT]
+    >  Sie müssen zur Laufzeit überprüft wird, verwenden Sie aktivieren die <xref:System.Diagnostics.Contracts.Contract.Requires%2A> Methode. Wenn die laufzeitüberprüfung deaktiviert ist, wird der Prozess beendet. Um die Tools für die Überprüfung der Common Language Runtime zu erhalten, finden Sie unter [Codeverträge](http://go.microsoft.com/fwlink/?LinkId=152461) auf der MSDN DevLabs-Website.  
+  
+     Dieser Methodenaufruf muss am Anfang einer Methode oder Eigenschaft, die vor jedem anderen Code.  
+  
+-   Dieser Vertrag wird für Clients verfügbar gemacht. Daher muss er nur Verweis-Elemente, die als die einschließende Methode mindestens ebenso sichtbar sind.  
+  
+-   Verwenden Sie diese Methode anstelle der <xref:System.Diagnostics.Contracts.Contract.Requires%28System.Boolean%2CSystem.String%29?displayProperty=nameWithType> Methode, wenn Sie möchten eine Ausnahme auslöst, wenn die Vorbedingung fehlschlägt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Result&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T Result&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Result&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.Result``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Der Typ des Rückgabewerts der einschließenden Methode oder Eigenschaft.</typeparam>
+        <summary>Stellt den Rückgabewert einer Methode oder Eigenschaft dar.</summary>
+        <returns>Der Rückgabewert der einschließenden Methode oder Eigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, nur in der bedingte Ausdruck für die <xref:System.Diagnostics.Contracts.Contract.Ensures%2A> Vertrag.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Diagnostics.Contracts.Contract.Result``1*> Methode, um eine erwartete Rückgabewert anzugeben. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.Contracts.ContractClassAttribute> Klasse.  
+  
+ [!code-csharp[ContractExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#3)]
+ [!code-vb[ContractExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueAtReturn&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T ValueAtReturn&lt;T&gt; (out T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T ValueAtReturn&lt;T&gt;([out] !!T&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.Contract.ValueAtReturn``1(``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="value" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des <see langword="out" />-Parameters.</typeparam>
+        <param name="value">Die <see langword="out" /> Parameter.</param>
+        <summary>Stellt den endgültigen (Ausgabe)-Wert, der eine <see langword="out" /> -Parameter, wenn von einer Methode zurückgeben.</summary>
+        <returns>Der Ausgabewert der <see langword="out" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, nur in der bedingte Ausdruck für die <xref:System.Diagnostics.Contracts.Contract.Ensures%2A> Vertrag. Wie bei der <xref:System.Diagnostics.Contracts.Contract.OldValue%2A>-Methode können Sie den generischen Typparameter weglassen, wenn der Compiler den Typ ableiten kann. Der Vertrags-Rewriter ersetzt den Methodenaufruf durch den Wert des `out`-Parameters. Die <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A>-Methode kann nur in Nachbedingungen angezeigt werden. Das Argument für die Methode muss ein `out`-Parameter oder ein Feld eines strukturbezogenen `out`-Parameters sein. Letzteres ist auch hilfreich, wenn auf Felder in der Nachbedingung eines Strukturkonstruktors verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

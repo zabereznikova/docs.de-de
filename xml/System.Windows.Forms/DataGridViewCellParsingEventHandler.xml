@@ -1,0 +1,53 @@
+<Type Name="DataGridViewCellParsingEventHandler" FullName="System.Windows.Forms.DataGridViewCellParsingEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DataGridViewCellParsingEventHandler(object sender, DataGridViewCellParsingEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewCellParsingEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewCellParsingEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.DataGridViewCellParsingEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.DataGridViewCellParsingEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung einer <see cref="E:System.Windows.Forms.DataGridView.CellParsing" /> -Ereignis für ein <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln der <xref:System.Windows.Forms.DataGridView.CellParsing> Ereignis, um benutzerdefinierte Konvertierung aus einer vom Benutzer angegebener Wert auf einen Wert in der Zelle angegebene Typ bereitzustellen <xref:System.Windows.Forms.DataGridViewCell.ValueType%2A> Eigenschaft.  
+  
+ Bei der Behandlung der <xref:System.Windows.Forms.DataGridView.CellParsing> Ereignis den Wert selbst umwandeln, oder Sie können die Standard-Konvertierung anpassen. Beispielsweise konvertieren Sie können den Wert selbst unter Verwendung der Zelle <xref:System.Windows.Forms.DataGridViewCell.ParseFormattedValue%2A> -Methode durch den Einsatz von Typkonvertern Ihrer Wahl. Alternativ, lassen Sie den Standardtyp Typkonverter analysieren Sie den Wert jedoch ändern, die <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>, und <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A> Eigenschaften des Objekts zurückgegeben wird, indem Sie die <xref:System.Windows.Forms.DataGridViewCellParsingEventArgs.InheritedCellStyle%2A?displayProperty=nameWithType> -Eigenschaft, die Initialisierung der Zelle mit <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> Diese Eigenschaft.  
+  
+ Wenn Sie den Wert selbst konvertieren, ersetzen Sie den anfänglichen, formatierten Wert der die <xref:System.Windows.Forms.ConvertEventArgs.Value%2A?displayProperty=nameWithType> Eigenschaft mit dem konvertierten Wert in der Zelle angegebene Typ <xref:System.Windows.Forms.DataGridViewCell.ValueType%2A> Eigenschaft. Um anzugeben, dass keine weitere Analyse erforderlich ist, legen die <xref:System.Windows.Forms.DataGridViewCellParsingEventArgs.ParsingApplied%2A?displayProperty=nameWithType> Eigenschaft `true`.  
+  
+ Wenn der Ereignishandler abgeschlossen wird, wenn die <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> ist `null` oder weist nicht den richtigen Typ aufweist, oder die <xref:System.Windows.Forms.DataGridViewCellParsingEventArgs.ParsingApplied%2A> Eigenschaft ist `false`, <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> analysiert die Zelle <xref:System.Windows.Forms.DataGridViewCell.ParseFormattedValue%2A> Methode mit Standard-Typkonverter. Die standardmäßige Implementierung dieser Methode analysiert den Wert mit der <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>, und <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A> Eigenschaften der Zellenstil übergeben. Wenn der Wert nicht gleich <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A>, der Wert wird mit analysiert die <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A> -Eigenschaft und die den Einsatz von Typkonvertern übergebenen.  
+  
+ Um die Konvertierung in einen formatierten Wert für die Anzeige eines Werts für die Zelle anzupassen, behandeln die <xref:System.Windows.Forms.DataGridView.CellFormatting> Ereignis.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Beim Erstellen eines <xref:System.Windows.Forms.DataGridViewCellParsingEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung <xref:System.Windows.Forms.DataGridViewCellParsingEventHandler> überprüft die Gültigkeit der Datumseinträge.  
+  
+ [!code-cpp[System.Windows.Forms.GridViewUnbound#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.GridViewUnbound/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.GridViewUnbound#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GridViewUnbound/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.GridViewUnbound#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GridViewUnbound/VB/form1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

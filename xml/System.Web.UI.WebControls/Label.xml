@@ -1,0 +1,453 @@
+<Type Name="Label" FullName="System.Web.UI.WebControls.Label">
+  <TypeSignature Language="C#" Value="public class Label : System.Web.UI.WebControls.WebControl, System.Web.UI.ITextControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Label extends System.Web.UI.WebControls.WebControl implements class System.Web.UI.ITextControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Label" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.ITextControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.LabelDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.WebControls.LabelControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlValueProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.DataBindingHandler("System.Web.UI.Design.TextDataBindingHandler, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:Label runat="server" Text="Label"&gt;&lt;/{0}:Label&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Bezeichnung-Steuerelement das, das Text auf einer Webseite anzeigt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [Barrierefreiheit](#accessibility)  
+  
+-   [Deklarationssyntax](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Verwenden der <xref:System.Web.UI.WebControls.Label> -Steuerelement zum Anzeigen von Text in einer festgelegten Position auf der Seite. Im Gegensatz zur statischen Text, können Sie den angezeigten Text durch Anpassen der <xref:System.Web.UI.WebControls.Label.Text%2A> Eigenschaft.  
+  
+ Sie können auch die <xref:System.Web.UI.WebControls.Literal> und <xref:System.Web.UI.WebControls.PlaceHolder> Steuerelemente zum Anzeigen von Text in Web Forms-Seite. Anders als bei der <xref:System.Web.UI.WebControls.Label> Steuerelement diese Steuerelemente werden nicht gerendert, keine weiteren Tags.  
+  
+> [!IMPORTANT]
+>  Dieses Steuerelement kann verwendet werden, um Benutzereingaben zu anzuzeigen, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+<a name="accessibility"></a>   
+## <a name="accessibility"></a>Barrierefreiheit  
+ Weitere Informationen dazu, wie das Steuerelement so konfigurieren, dass er Markup generiert, das den Accessibility Standards entspricht, finden Sie unter [Barrierefreiheit in Visual Studio und ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) und [ASP.NET-Steuerelemente und Barrierefreiheit](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:Label  
+    AccessKey="string"  
+    AssociatedControlID="string"  
+    BackColor="color name|#dddddd"  
+    BorderColor="color name|#dddddd"  
+    BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|Groove|Ridge|  
+        Inset|Outset"  
+    BorderWidth="size"  
+    CssClass="string"  
+    Enabled="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    Font-Bold="True|False"  
+    Font-Italic="True|False"  
+    Font-Names="string"  
+    Font-Overline="True|False"  
+    Font-Size="string|Smaller|Larger|XX-Small|X-Small|Small|Medium|  
+        Large|X-Large|XX-Large"  
+    Font-Strikeout="True|False"  
+    Font-Underline="True|False"  
+    ForeColor="color name|#dddddd"  
+    Height="size"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Style="string"  
+    TabIndex="integer"  
+    Text="string"  
+    ToolTip="string"  
+    Visible="True|False"  
+    Width="size"  
+/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Web.UI.WebControls.Label> Steuerelement auf einer Webseite.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen zu ASP.NET Web-Seite-Codemodell, finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic Label Example 2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Label Example 2/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Label Example 2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Label Example 2/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Label ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Label.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Label" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.Label> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt das Erstellen und initialisieren eine neue Instanz der dem <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic Label.Label Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Label.Label Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Label.Label Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Label.Label Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Label.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />, der den Ausgabestream für das Rendering von HTML-Inhalten auf dem Client darstellt.</param>
+        <summary>Fügt die HTML-Attribute und-Stile eines ein <see cref="T:System.Web.UI.WebControls.Label" /> Steuerelement in den angegebenen Ausgabestream gerendert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Label.AddAttributesToRender%2A> Methode hauptsächlich von Steuerelemententwicklern verwendet, um die zusätzlichen Attribute einzufügen und Stile in die <xref:System.Web.UI.HtmlTextWriter> Ausgabestream für das ein <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ Die <xref:System.Web.UI.WebControls.Label.AddAttributesToRender%2A> Methode für eine <xref:System.Web.UI.WebControls.Label> Steuerelement bestimmt, ob die `for` Attribut hinzugefügt werden sollen, mit der <xref:System.Web.UI.WebControls.Label.AssociatedControlID%2A> Wert, und wenn der inlineblock Stil angewendet werden soll, um die Rahmenart und Rahmenbreite anzuzeigen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Das Steuerelement im angegebenen die <see cref="P:System.Web.UI.WebControls.Label.AssociatedControlID" /> Eigenschaft wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParsedSubObject">
+      <MemberSignature Language="C#" Value="protected override void AddParsedSubObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddParsedSubObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Label.AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt, das das analysierte Element darstellt.</param>
+        <summary>Benachrichtigt das Steuerelement, das ein Element analysiert wurde, und fügt das Element an der <see cref="T:System.Web.UI.WebControls.Label" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Label.AddParsedSubObject%2A> Methode wird hauptsächlich von Steuerelemententwicklern verwendet, wenn Ableiten eines benutzerdefinierten Steuerelements aus der <xref:System.Web.UI.WebControls.Label> Klasse.  
+  
+ Ist das Eingabeobjekt eine <xref:System.Web.UI.LiteralControl>, und die <xref:System.Web.UI.WebControls.Label> Steuerelement verfügt über keine untergeordneten Steuerelemente, die das Eingabeobjekt dient zum Festlegen der <xref:System.Web.UI.WebControls.Label.Text%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Label> Steuerelement. Andernfalls die <xref:System.Web.UI.Control.AddParsedSubObject%2A> -Methode der Basisklasse <xref:System.Web.UI.Control> Klasse aufgerufen wird und das angegebene Objekt hinzugefügt wird die <xref:System.Web.UI.Control.Controls%2A> Auflistung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Label.AddParsedSubObject%2A> Methode in einem benutzerdefinierten <xref:System.Web.UI.WebControls.Label> Server steuern, damit immer die Texteigenschaft des Objekts, auf die analysierten Text-Eigenschaft festgelegt, wenn das analysierte Objekt ist eine <xref:System.Web.UI.WebControls.Literal>, und klicken Sie auf eine leere Zeichenfolge andernfalls.  
+  
+ [!code-aspx-csharp[CustomLabelAddParsedSubObject#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLabelAddParsedSubObject/CS/custom_label_addparsedsubobjectcs.aspx#1)]
+ [!code-aspx-vb[CustomLabelAddParsedSubObject#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLabelAddParsedSubObject/VB/custom_label_addparsedsubobjectvb.aspx#1)]  
+[!code-csharp[CustomLabelAddParsedSubObject#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLabelAddParsedSubObject/CS/custom_label_addparsedsubobject.cs#2)]
+[!code-vb[CustomLabelAddParsedSubObject#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLabelAddParsedSubObject/VB/custom_label_addparsedsubobject.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedControlID">
+      <MemberSignature Language="C#" Value="public virtual string AssociatedControlID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssociatedControlID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Label.AssociatedControlID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.AssociatedControlConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.IDReferenceProperty</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, den Bezeichner ein Servers zu steuern, die die <see cref="T:System.Web.UI.WebControls.Label" /> Steuerelement zugeordnet ist.</summary>
+        <value>Eine Zeichenfolge entsprechenden Wert der <see cref="P:System.Web.UI.Control.ID" /> nach einem Serversteuerelement in das Web Form enthalten sind. Der Standardwert ist eine leere Zeichenfolge (""), um anzugeben, die die <see cref="T:System.Web.UI.WebControls.Label" /> Steuerelement ist nicht mit einem anderen Steuerelement verknüpft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Label.AssociatedControlID%2A> zu verknüpfende Eigenschaft ein <xref:System.Web.UI.WebControls.Label> Steuerelement mit einem anderen Serversteuerelement in einem Web Form. Wenn ein <xref:System.Web.UI.WebControls.Label> Steuerelement mit einem anderen Steuerelement verknüpft ist, seine Attribute können zum Erweitern der Funktionalität des zugeordneten Steuerelements verwendet werden. Sie können die <xref:System.Web.UI.WebControls.Label> steuern eine Beschriftung für ein anderes Steuerelement, oder Sie können den Registerkartenindex oder die Zugriffstaste für eine zugeordnete Steuerelement festgelegt.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.Label.AssociatedControlID%2A> Eigenschaft festgelegt ist, die <xref:System.Web.UI.WebControls.Label> Steuerelement wird als HTML gerendert `label` Element, mit der `for` -Attributsatz zur der <xref:System.Web.UI.Control.ID%2A> Eigenschaft des zugeordneten Steuerelements. Sie können andere Attribute der Festlegen der `label` Element mit der <xref:System.Web.UI.WebControls.Label> Eigenschaften. Beispielsweise können Sie die <xref:System.Web.UI.WebControls.Label.Text%2A> und <xref:System.Web.UI.WebControls.WebControl.AccessKey%2A> Eigenschaften, die Beschriftung und die Zugriffstaste für eine zugeordnete Steuerelement bereitstellt.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Label.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein Objekt, das die gespeicherten Ansichtszustandswerte für das Steuerelement enthält.</param>
+        <summary>Lädt den zuvor gespeicherten Zustand für das Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient in erster Linie durch die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden. Allerdings können Entwickler von Steuerelementen überschreiben Sie diese Methode, um anzugeben, wie ein benutzerdefiniertes Serversteuerelement seinen Ansichtszustand wiederherstellt. Weitere Informationen finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ Die <xref:System.Web.UI.WebControls.Label.LoadViewState%2A> Methode stellt die Ansichtszustandsinformationen für die <xref:System.Web.UI.WebControls.Label> -Steuerelement aus einer früheren Seitenanforderung wieder, die gespeichert wurde, durch die <xref:System.Web.UI.WebControls.WebControl.SaveViewState%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Label.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der Ausgabestream, der HTML-Inhalt für den Client rendert.</param>
+        <summary>Rendert den Inhalt der <see cref="T:System.Web.UI.WebControls.Label" /> in den angegebenen Writer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Label.RenderContents%2A> Methode in einem benutzerdefinierten steuern, sodass Text angefügt wird, um die <xref:System.Web.UI.WebControls.Label>.  
+  
+ [!code-aspx-csharp[CustomLabelRenderContents#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLabelRenderContents/CS/custom_label_rendercontentscs.aspx#1)]
+ [!code-aspx-vb[CustomLabelRenderContents#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLabelRenderContents/VB/custom_label_rendercontentsvb.aspx#1)]  
+[!code-csharp[CustomLabelRenderContents#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLabelRenderContents/CS/custom_label_rendercontents.cs#2)]
+[!code-vb[CustomLabelRenderContents#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLabelRenderContents/VB/custom_label_rendercontents.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDisabledAttribute">
+      <MemberSignature Language="C#" Value="public override bool SupportsDisabledAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDisabledAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Label.SupportsDisabledAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob vom Steuerelement das <see langword="disabled" />-Attribut des gerenderten HTML-Elements auf "disabled" festgelegt werden soll, wenn die <see cref="P:System.Web.UI.WebControls.WebControl.IsEnabled" />-Eigenschaft des Steuerelements <see langword="false" /> ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> Eigenschaft gibt an, eine frühere ASP.NET-Version als <c>4.0</c>ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, wie ASP.NET HTML für ein Steuerelement rendern soll, wenn das Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `true`, rendert ASP.NET ein `disabled` Attribut, wenn ein Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `false`, rendert ASP.NET ein `class` Attribut, wenn ein Steuerelement deaktiviert ist. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagKey">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.HtmlTextWriterTag TagKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.HtmlTextWriterTag TagKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Label.TagKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das HTML-Tag, der verwendet wird, zum Rendern der <see cref="T:System.Web.UI.WebControls.Label" /> Steuerelement.</summary>
+        <value>Die <see cref="T:System.Web.UI.HtmlTextWriterTag" /> Wert verwendet, um das Rendern der <see cref="T:System.Web.UI.WebControls.Label" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Label.TagKey%2A> -Eigenschaft zum Bestimmen der <xref:System.Web.UI.HtmlTextWriterTag> -Wert, der zugeordnet ist ein <xref:System.Web.UI.WebControls.Label> Steuerelement. Die <xref:System.Web.UI.WebControls.Label.TagKey%2A> Eigenschaft wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Label.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text des Inhalts der <see cref="T:System.Web.UI.WebControls.Label" /> Steuerelement.</summary>
+        <value>Der Textinhalt des Steuerelements. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Label.Text%2A> Eigenschaft angeben oder ermitteln den Inhalt der Text der <xref:System.Web.UI.WebControls.Label> Steuerelement. Diese Eigenschaft wird häufig verwendet, um programmgesteuert den Text anpassen möchten, die in angezeigt wird der <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ Die <xref:System.Web.UI.WebControls.Label.Text%2A> -Eigenschaft kann HTML enthalten. Wenn dies der Fall ist, der HTML-Code wird übergeben werden unverändert an den Browser, in denen möglicherweise wird als Markup und nicht als Text interpretiert werden. Wenn den Browser HTML-Markup als nur-Text angezeigt werden sollen, können Sie die <xref:System.Web.HttpServerUtility.HtmlEncode%2A> Methode, wie im Beispiel für die Übersicht über die Klasse gezeigt. Können Sie auch die <xref:System.Web.UI.WebControls.Literal> steuern anstelle von der <xref:System.Web.UI.WebControls.Label> steuern, und legen Sie die <xref:System.Web.UI.WebControls.Literal.Mode%2A> Eigenschaft <xref:System.Web.UI.WebControls.LiteralMode.Encode>.  
+  
+> [!NOTE]
+>  Festlegen der <xref:System.Web.UI.WebControls.Label.Text%2A> löschen Eigenschaft alle anderen Steuerelemente der <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+> [!IMPORTANT]
+>  Dieses Steuerelement kann verwendet werden, um Benutzereingaben zu anzuzeigen, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [ASP.NET-Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+ Diese Eigenschaft ist die Standardeigenschaft, die eine <xref:System.Web.UI.WebControls.ControlParameter> -Objekt zur Laufzeit gebunden wird. Weitere Informationen finden Sie unter <xref:System.Web.UI.ControlValuePropertyAttribute>, <xref:System.Web.UI.WebControls.ControlParameter>, und [Verwenden von Parametern mit Steuerelementen für Datenquellen für das Filtern](http://msdn.microsoft.com/library/88622d04-2989-484e-93fe-594cd98dcf5f).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine neue Instanz der dem <xref:System.Web.UI.WebControls.Label> steuern und Festlegen der <xref:System.Web.UI.WebControls.Label.Text%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic Label.Text Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Label.Text Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Label.Text Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Label.Text Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

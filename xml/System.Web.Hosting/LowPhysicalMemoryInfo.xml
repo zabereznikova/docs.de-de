@@ -1,0 +1,93 @@
+<Type Name="LowPhysicalMemoryInfo" FullName="System.Web.Hosting.LowPhysicalMemoryInfo">
+  <TypeSignature Language="C#" Value="public sealed class LowPhysicalMemoryInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LowPhysicalMemoryInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.LowPhysicalMemoryInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Kapselt Informationen zu Ereignissen, die vom Arbeitsspeichermonitor der Anwendung ausgelöst werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LowPhysicalMemoryInfo (int currentPercentUsed, int percentLimit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 currentPercentUsed, int32 percentLimit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.LowPhysicalMemoryInfo.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="currentPercentUsed" Type="System.Int32" />
+        <Parameter Name="percentLimit" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="currentPercentUsed">Der erkannte Prozentsatz des insgesamt auf dem lokalen Computer verwendeten Arbeitsspeichers.</param>
+        <param name="percentLimit">Der festgelegte Grenzwert für den Prozentsatz an verwendetem RAM für den aktuellen Computer.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Hosting.LowPhysicalMemoryInfo" />-Klasse mit dem angegebenen genutzten Prozentsatz und der Begrenzung für den Prozentsatz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPercentUsed">
+      <MemberSignature Language="C#" Value="public int CurrentPercentUsed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentPercentUsed" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.LowPhysicalMemoryInfo.CurrentPercentUsed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den erkannten Prozentsatz des insgesamt auf dem Computer verwendeten Arbeitsspeichers ab. Wert kann zwischen 0 und 100 liegen.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PercentLimit">
+      <MemberSignature Language="C#" Value="public int PercentLimit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PercentLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.LowPhysicalMemoryInfo.PercentLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den festgelegten Grenzwert für den Prozentsatz an verwendetem RAM für den Computer ab. Wert kann zwischen 0 und 100 liegen.</summary>
+        <value>Der festgelegte Grenzwert für den Prozentsatz an verwendetem RAM für den Computer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestGC">
+      <MemberSignature Language="C#" Value="public bool RequestGC { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequestGC" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.LowPhysicalMemoryInfo.RequestGC" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt einen booleschen Wert an die Quelle für die Observable-Ereignis, das verwendet werden kann, um anzugeben, ob die Quelle des Ereignisses sollte eine Garbage Collection auslösen, nachdem alle Beobachter das Ereignis verarbeitet haben zurückgegeben. (Die wenig Arbeitsspeicher Standardmonitor in ASP.NET dieses Flag ignoriert und nicht die Garbage Collection auslösen.)</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

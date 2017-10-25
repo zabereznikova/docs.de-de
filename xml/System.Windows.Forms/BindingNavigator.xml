@@ -1,0 +1,788 @@
+<Type Name="BindingNavigator" FullName="System.Windows.Forms.BindingNavigator">
+  <TypeSignature Language="C#" Value="public class BindingNavigator : System.Windows.Forms.ToolStrip, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BindingNavigator extends System.Windows.Forms.ToolStrip implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.BindingNavigator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ToolStrip</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("RefreshItems")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("BindingSource")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.BindingNavigatorDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Benutzeroberfläche zum Navigieren und Bearbeiten von Steuerelementen, die an Daten gebunden sind, auf einem Formular dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement stellt eine standardisierte Möglichkeit zum Navigieren und Bearbeiten von Daten in einem Formular dar. In den meisten Fällen eine <xref:System.Windows.Forms.BindingNavigator> zugeordnet ist ein <xref:System.Windows.Forms.BindingSource> Steuerelement Daten in einem Formular durchlaufen und mit ihnen interagieren. In diesen Fällen die <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> Eigenschaftensatz wird an die zugeordnete <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> Komponente, die als Datenquelle fungiert.  
+  
+ Wird standardmäßig die <xref:System.Windows.Forms.BindingNavigator> der Benutzeroberfläche (UI) des Steuerelements besteht aus einer Reihe von <xref:System.Windows.Forms.ToolStrip> Schaltflächen, Textfelder und statischen Text-Elemente für die am häufigsten verwendeten datenbezogenen Aktionen, z. B. Daten hinzufügen, Löschen von Daten und Navigieren durch Daten. Jedes dieser Steuerelemente kann abgerufen oder festgelegt, die über einen zugeordneten Member von der <xref:System.Windows.Forms.BindingNavigator> Steuerelement. Ebenso zudem besteht eine 1: 1-Entsprechung zu Membern innerhalb der <xref:System.Windows.Forms.BindingSource> Klasse, die dieselbe Funktionalität programmgesteuert ausführen, wie in der folgenden Tabelle gezeigt.  
+  
+|UI-Steuerelement|<xref:System.Windows.Forms.BindingNavigator>-Member|<xref:System.Windows.Forms.BindingSource>-Member|  
+|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|**Verschieben Sie zunächst**|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A>|<xref:System.Windows.Forms.BindingSource.MoveFirst%2A>|  
+|**Vorherige verschieben**|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A>|<xref:System.Windows.Forms.BindingSource.MovePrevious%2A>|  
+|**Aktuelle Position**|<xref:System.Windows.Forms.BindingNavigator.PositionItem%2A>|<xref:System.Windows.Forms.BindingSource.Current%2A>|  
+|**Anzahl**|<xref:System.Windows.Forms.BindingNavigator.CountItem%2A>|<xref:System.Windows.Forms.BindingSource.Count%2A>|  
+|**Nächste verschieben**|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A>|<xref:System.Windows.Forms.BindingSource.MoveNext%2A>|  
+|**Letzten wechseln.**|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A>|<xref:System.Windows.Forms.BindingSource.MoveLast%2A>|  
+|**Neues hinzufügen**|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A>|<xref:System.Windows.Forms.BindingSource.AddNew%2A>|  
+|**Löschen**|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A>|<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>|  
+  
+ Hinzufügen einer <xref:System.Windows.Forms.BindingNavigator> Steuerelement einem Formular und die Bindung an eine Datenquelle, z. B. eine <xref:System.Windows.Forms.BindingSource>, erfolgt die Beziehungen automatisch in dieser Tabelle.  
+  
+ Diese Symbolleiste anpassen, können Sie eine der folgenden Methoden verwenden:  
+  
+-   Erstellen der <xref:System.Windows.Forms.BindingNavigator> mit der <xref:System.Windows.Forms.BindingNavigator.%23ctor%28System.Boolean%29> Konstruktor, der einen boolescher Wert akzeptiert `addStandardItems` Parameter, und legen Sie diesen Parameter zu `false`. Fügen Sie dann auf die gewünschte <xref:System.Windows.Forms.ToolStripItem> Datenbankobjekte in der <xref:System.Windows.Forms.ToolStrip.Items%2A> Auflistung.  
+  
+-   Wenn eine sehr viel systemverarbeitungszeit in der Anpassung ist oder der benutzerdefinierten Entwurf entwickeln, wiederverwendet werden wird, leiten Sie eine Klasse von <xref:System.Windows.Forms.BindingNavigator> und überschreiben die <xref:System.Windows.Forms.BindingNavigator.AddStandardItems%2A> Methode, um zusätzliche oder andere Standardelemente definieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Windows.Forms.BindingNavigator> Steuerelement, das über ein Dataset verschoben. Das Dataset befindet sich in <xref:System.Data.DataView>, die an ein <xref:System.Windows.Forms.TextBox>-Steuerelement mit einer <xref:System.Windows.Forms.BindingSource>-Komponente gebunden ist.  
+  
+ [!code-csharp[System.Windows.Forms.DataNavigator#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataNavigator/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.DataNavigator#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataNavigator/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingNavigator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingNavigator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.BindingNavigator" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor legt die <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> Eigenschaft `null`. Dieser Konstruktor entspricht dem Aufrufen der <xref:System.Windows.Forms.BindingNavigator.%23ctor%28System.Boolean%29> Konstruktor mit einem Parameterwert von `false`. Sie können die standard-Elemente hinzufügen, indem Sie einen separaten Aufruf von <xref:System.Windows.Forms.BindingNavigator.AddStandardItems%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingNavigator (bool addStandardItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool addStandardItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingNavigator.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="addStandardItems" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="addStandardItems">
+          <see langword="true" />um die standardmäßige Navigationsbenutzeroberfläche anzuzeigen; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.BindingNavigator" /> -Klasse, der angibt, ob die Standardnavigation-Benutzeroberfläche (UI) anzuzeigen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> Eigenschaft `null`. Wenn <xref:System.Windows.Forms.BindingNavigator.AddStandardItems%2A> ist `false`, <xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A>, <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A>, <xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A>, <xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A>, <xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A>, <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A>, <xref:System.Windows.Forms.BindingNavigator.CountItem%2A> und <xref:System.Windows.Forms.BindingNavigator.PositionItem%2A> werden auch `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingNavigator (System.ComponentModel.IContainer container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IContainer container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingNavigator.#ctor(System.ComponentModel.IContainer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="container" Type="System.ComponentModel.IContainer" />
+      </Parameters>
+      <Docs>
+        <param name="container">Die <see cref="T:System.ComponentModel.IContainer" /> zum Hinzufügen der neuen <see cref="T:System.Windows.Forms.BindingNavigator" /> zu steuern.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.BindingNavigator" /> Klasse und den angegebenen Container dieser neuen Instanz hinzugefügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird als Annehmlichkeit, kombinieren die Schritte zum Erstellen einer neuen bereitgestellt <xref:System.Windows.Forms.BindingNavigator> -Steuerelement und das Hinzufügen zu einem übergeordneten Element <xref:System.ComponentModel.IContainer>. Wie der Standardkonstruktor legt er die <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> Eigenschaft `null` und nicht die Standardbenutzeroberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingNavigator (System.Windows.Forms.BindingSource bindingSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.BindingSource bindingSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingNavigator.#ctor(System.Windows.Forms.BindingSource)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bindingSource" Type="System.Windows.Forms.BindingSource" />
+      </Parameters>
+      <Docs>
+        <param name="bindingSource">Die <see cref="T:System.Windows.Forms.BindingSource" /> als Datenquelle verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.BindingNavigator" /> Klasse mit dem angegebenen <see cref="T:System.Windows.Forms.BindingSource" /> als Datenquelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor verwendet den `BindingSource` -Parameter zum Initialisieren der <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> Eigenschaft. Außerdem fügt den Standardsatz von Navigationsschaltflächen und ihre entsprechenden legt Eigenschaften fest, wie z. B. <xref:System.Windows.Forms.BindingNavigator.CountItem%2A> und <xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNewItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripItem AddNewItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolStripItem AddNewItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingNavigator.AddNewItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ReferenceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Forms.ToolStripItem" /> darstellt, die die **neuer** Schaltfläche.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ToolStripItem" /> darstellt, die die **hinzufügen** Schaltfläche für die <see cref="T:System.Windows.Forms.BindingSource" />. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn festgelegt ist, die <xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> Eigenschaft generiert die <xref:System.Windows.Forms.Control.Click> -Ereignishandler für die **hinzufügen** Schaltfläche. Dieser Ereignishandler ruft die <xref:System.Windows.Forms.BindingSource.AddNew%2A> Methode bei der **neuer** geklickt wird zur Laufzeit.  
+  
+ Diese Eigenschaft ist `null` wenn er nicht zuvor festgelegt wurde die <xref:System.Windows.Forms.BindingNavigator.AddStandardItems%2A> wird implizit oder explizit aufgerufen.  
+  
+ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement deaktiviert die **neue hinzufügen** Schaltfläche, wenn die <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> Eigenschaft ist `null` oder <xref:System.Windows.Forms.BindingSource.AllowNew%2A> Eigenschaft ist `false`.  
+  
+ In der Standardimplementierung dieser Eigenschaft stellt ein Steuerelement vom Typ <xref:System.Windows.Forms.ToolStripButton>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddStandardItems">
+      <MemberSignature Language="C#" Value="public virtual void AddStandardItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddStandardItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingNavigator.AddStandardItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt den Standardsatz der Navigationselemente, die die <see cref="T:System.Windows.Forms.BindingNavigator" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingNavigator.AddStandardItems%2A> Methode fügt den Standardsatz von Benutzeroberfläche <xref:System.Windows.Forms.ToolStripItem> Datenbankobjekte in der <xref:System.Windows.Forms.BindingNavigator> Bereichsstreifen für Vorgänge der Grundlagen zur Navigation, wie z. B. tool **erste verschieben**, **letzte verschieben**, und **Hinzufügen neuer**.  
+  
+ Überschreiben Sie <xref:System.Windows.Forms.BindingNavigator.AddStandardItems%2A> in abgeleiteten Klassen, um zusätzliche oder alternative Tool Bereichsstreifen Elemente zu definieren. Um eine optimale zur Entwurfszeit Unterstützung für die abgeleitete Klasse, stellen Sie sicher, stellen Sie sicher, dass jedes Element verfügt über keinen sinnvollen Wert seine <xref:System.Windows.Forms.ToolStripItem.Name%2A> Eigenschaft. Zur Entwurfszeit wird dies verwendet, um einen eindeutigen Namen für die entsprechende Membervariable zu generieren. Des Elements <xref:System.Windows.Forms.ToolStripItem.Name%2A> Eigenschaft wird dann aktualisiert, um die Namen der Membervariable übereinstimmt.  
+  
+> [!NOTE]
+>  Diese Methode nicht explizit entfernen den zuvor vorhandene Elemente aus der <xref:System.Windows.Forms.BindingNavigator>, neue Werte für festgelegt wird, aber der <xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A>, <xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A>, <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A>, <xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A>, <xref:System.Windows.Forms.BindingNavigator.PositionItem%2A>, <xref:System.Windows.Forms.BindingNavigator.CountItem%2A>, <xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> und <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> Eigenschaften. Auch <xref:System.Windows.Forms.BindingNavigator.AddStandardItems%2A> Layout beim Hinzufügen von Elementen nicht ausgesetzt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingNavigator.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Deaktiviert die Updates für die <see cref="T:System.Windows.Forms.ToolStripItem" /> von steuert die <see cref="T:System.Windows.Forms.BindingNavigator" /> während der Initialisierung der Komponente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingNavigator.BeginInit%2A> und <xref:System.Windows.Forms.BindingNavigator.EndInit%2A> Methoden ermöglichen es dem <xref:System.Windows.Forms.BindingNavigator> Steuerelement, um die Änderungen an mehrere Eigenschaften zu optimieren. Mithilfe dieses Paars Methoden können Sie Co abhängigen Eigenschaften initialisieren oder Batch mehrere Eigenschaften zur Entwurfszeit festgelegt. Rufen Sie die <xref:System.Windows.Forms.BindingNavigator.BeginInit%2A> Methode, um dem Steuerelement zu signalisieren, dass die Initialisierung gestartet wird; der Aufruf der <xref:System.Windows.Forms.BindingNavigator.EndInit%2A> Methode, um zu signalisieren, dass die Initialisierung abgeschlossen ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingSource">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BindingSource BindingSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.BindingSource BindingSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingNavigator.BindingSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ReferenceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Forms.BindingSource" /> Komponente, die die Quelle der Daten ist.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.BindingSource" /> zugeordnete Komponente <see cref="T:System.Windows.Forms.BindingNavigator" />. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> Eigenschaft stellt die Datenquelle, die die <xref:System.Windows.Forms.BindingNavigator> navigiert. Genauer gesagt, die <xref:System.Windows.Forms.BindingSource.List%2A> Eigenschaft von der <xref:System.Windows.Forms.BindingSource> die tatsächliche Liste darstellt.  
+  
+ Dies ist die Standardeigenschaft für die <xref:System.Windows.Forms.BindingNavigator> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Windows.Forms.BindingNavigator> Steuerelement, das über ein Dataset verschoben. Das Dataset befindet sich in <xref:System.Data.DataView>, die an ein <xref:System.Windows.Forms.TextBox>-Steuerelement mit einer <xref:System.Windows.Forms.BindingSource>-Komponente gebunden ist. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [Vorgehensweise: Verschieben Sie über ein DataSet mit BindingNavigator-Steuerelement in Windows Forms](~/docs/framework/winforms/controls/move-through-a-dataset-with-wf-bindingnavigator-control.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataNavigator#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataNavigator/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.DataNavigator#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataNavigator/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CountItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripItem CountItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolStripItem CountItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingNavigator.CountItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ReferenceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Forms.ToolStripItem" /> , die zeigt die Gesamtanzahl der Elemente in der zugeordneten <see cref="T:System.Windows.Forms.BindingSource" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ToolStripItem" /> , die zeigt die Gesamtanzahl der Elemente in der zugeordneten <see cref="T:System.Windows.Forms.BindingSource" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingNavigator.CountItem%2A> Eigenschaft `null` wenn er nicht zuvor festgelegt wurde die <xref:System.Windows.Forms.BindingNavigator.AddStandardItems%2A> wird implizit oder explizit aufgerufen.  
+  
+ Die Anzahl der Elemente erfolgt über die <xref:System.Windows.Forms.BindingSource.Count%2A> Eigenschaft von der <xref:System.Windows.Forms.BindingSource>.  
+  
+ In der Standardimplementierung dieser Eigenschaft stellt ein Steuerelement vom Typ <xref:System.Windows.Forms.ToolStripLabel>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CountItemFormat">
+      <MemberSignature Language="C#" Value="public string CountItemFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CountItemFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingNavigator.CountItemFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Zeichenfolge verwendet, um die Informationen im format der <see cref="P:System.Windows.Forms.BindingNavigator.CountItem" /> Steuerelement.</summary>
+        <value>Das Format <see cref="T:System.String" /> verwendet, um die Anzahl der Elemente zu formatieren. Der Standardwert ist die Zeichenfolge "of {0}".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingNavigator.CountItem%2A> -Steuerelement ist ein <xref:System.Windows.Forms.ToolStripLabel> , die zeigt, dass die Gesamtanzahl der Elemente in der <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A>. Die <xref:System.Windows.Forms.BindingNavigator.CountItemFormat%2A> Eigenschaft wird die Formatzeichenfolge zum Formatieren der Anzahl verwendet.  
+  
+ Weitere Informationen zu Formatzeichenfolgen finden Sie unter der <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripItem DeleteItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolStripItem DeleteItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingNavigator.DeleteItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ReferenceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Forms.ToolStripItem" /> zugeordneten der **löschen** Funktionalität.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ToolStripItem" /> darstellt, die die **löschen** Schaltfläche für die <see cref="T:System.Windows.Forms.BindingSource" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn festgelegt ist, erzeugt diese Eigenschaft die <xref:System.Windows.Forms.Control.Click> -Ereignishandler für das **löschen** Schaltfläche. Dieser Ereignishandler ruft die <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> Methode bei der **löschen** geklickt wird zur Laufzeit.  
+  
+ Diese Eigenschaft ist `null` wenn er nicht zuvor festgelegt wurde die <xref:System.Windows.Forms.BindingNavigator.AddStandardItems%2A> wird implizit oder explizit aufgerufen.  
+  
+ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement deaktiviert die **löschen** Schaltfläche in folgenden Situationen zur Laufzeit: die <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> Eigenschaft ist `null`, die <xref:System.Windows.Forms.BindingSource.Count%2A> Eigenschaft ist 0 (null) oder die <xref:System.Windows.Forms.BindingSource.AllowRemove%2A> Eigenschaft ist `false`.  
+  
+ In der Standardimplementierung dieser Eigenschaft stellt ein Steuerelement vom Typ <xref:System.Windows.Forms.ToolStripButton>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingNavigator.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Windows.Forms.BindingNavigator" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.Windows.Forms.BindingNavigator> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingNavigator.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Können Sie Updates für die <see cref="T:System.Windows.Forms.ToolStripItem" /> steuert, der die <see cref="T:System.Windows.Forms.BindingNavigator" /> , nachdem die Komponente die Initialisierung abgeschlossen hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingNavigator.BeginInit%2A> und <xref:System.Windows.Forms.BindingNavigator.EndInit%2A> Methoden ermöglichen es dem <xref:System.Windows.Forms.BindingNavigator> Steuerelement, um die Änderungen an mehrere Eigenschaften zu optimieren. Mithilfe dieses Paars Methoden können Sie Co abhängigen Eigenschaften initialisieren oder Batch mehrere Eigenschaften zur Entwurfszeit festgelegt. Rufen Sie die <xref:System.Windows.Forms.BindingNavigator.BeginInit%2A> Methode, um dem Steuerelement zu signalisieren, dass die Initialisierung gestartet wird; der Aufruf der <xref:System.Windows.Forms.BindingNavigator.EndInit%2A> Methode, um zu signalisieren, dass die Initialisierung abgeschlossen ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFirstItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripItem MoveFirstItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolStripItem MoveFirstItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingNavigator.MoveFirstItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ReferenceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Forms.ToolStripItem" /> , zugeordnet ist die **erste verschieben** Funktionalität.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ToolStripItem" /> darstellt, die die **erste verschieben** Schaltfläche für die <see cref="T:System.Windows.Forms.BindingSource" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn festgelegt ist, erzeugt diese Eigenschaft die <xref:System.Windows.Forms.Control.Click> -Ereignishandler für das **erste verschieben** Schaltfläche. Dieser Ereignishandler ruft die <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> Methode bei der **erste verschieben** geklickt wird zur Laufzeit.  
+  
+ Diese Eigenschaft ist `null` wenn er nicht zuvor festgelegt wurde die <xref:System.Windows.Forms.BindingNavigator.AddStandardItems%2A> wird implizit oder explizit aufgerufen.  
+  
+ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement deaktiviert die **erste verschieben** Schaltfläche in folgenden Situationen zur Laufzeit: die <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> Eigenschaft ist `null`, die <xref:System.Windows.Forms.BindingSource.Position%2A?displayProperty=nameWithType> Eigenschaft ist 0 (null), oder <xref:System.Windows.Forms.BindingSource.AllowNew%2A> für die Verwandte <xref:System.Windows.Forms.BindingSource> ist `false`.  
+  
+ In der Standardimplementierung dieser Eigenschaft stellt ein Steuerelement vom Typ <xref:System.Windows.Forms.ToolStripButton>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveLastItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripItem MoveLastItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolStripItem MoveLastItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingNavigator.MoveLastItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ReferenceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Forms.ToolStripItem" /> , zugeordnet ist die **letzte verschieben** Funktionalität.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ToolStripItem" /> darstellt, die die **letzte verschieben** Schaltfläche für die <see cref="T:System.Windows.Forms.BindingSource" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn festgelegt ist, erzeugt diese Eigenschaft die <xref:System.Windows.Forms.Control.Click> -Ereignishandler für das **letzte verschieben** Schaltfläche. Dieser Ereignishandler ruft die <xref:System.Windows.Forms.BindingSource.MoveLast%2A> Methode bei der **letzte verschieben** geklickt wird zur Laufzeit.  
+  
+ Diese Eigenschaft ist `null` wenn er nicht zuvor festgelegt wurde die <xref:System.Windows.Forms.BindingNavigator.AddStandardItems%2A> wird implizit oder explizit aufgerufen.  
+  
+ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement deaktiviert die **letzte verschieben** Schaltfläche in folgenden Situationen zur Laufzeit: die <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> Eigenschaft ist `null` oder <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft ist größer als oder gleich der <xref:System.Windows.Forms.BindingSource.Count%2A> Eigenschaft.  
+  
+ In der Standardimplementierung dieser Eigenschaft stellt ein Steuerelement vom Typ <xref:System.Windows.Forms.ToolStripButton>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNextItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripItem MoveNextItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolStripItem MoveNextItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingNavigator.MoveNextItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ReferenceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Forms.ToolStripItem" /> zugeordneten der **nächste verschieben** Funktionalität.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ToolStripItem" /> darstellt, die die **nächste verschieben** Schaltfläche für die <see cref="T:System.Windows.Forms.BindingSource" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn festgelegt ist, erzeugt diese Eigenschaft die <xref:System.Windows.Forms.Control.Click> -Ereignishandler für das **nächste verschieben** Schaltfläche. Dieser Ereignishandler ruft die <xref:System.Windows.Forms.BindingSource.MoveNext%2A> Methode bei der **nächste verschieben** geklickt wird zur Laufzeit.  
+  
+ Diese Eigenschaft ist `null` wenn er nicht zuvor festgelegt wurde die <xref:System.Windows.Forms.BindingNavigator.AddStandardItems%2A> wird implizit oder explizit aufgerufen.  
+  
+ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement deaktiviert die **nächste verschieben** Schaltfläche in folgenden Situationen zur Laufzeit: die <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> Eigenschaft ist `null` oder <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft ist größer als oder gleich der <xref:System.Windows.Forms.BindingSource.Count%2A> Eigenschaft.  
+  
+ In der Standardimplementierung dieser Eigenschaft stellt ein Steuerelement vom Typ <xref:System.Windows.Forms.ToolStripButton>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MovePreviousItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripItem MovePreviousItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolStripItem MovePreviousItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingNavigator.MovePreviousItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ReferenceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Forms.ToolStripItem" /> , zugeordnet ist die **vorherige verschieben** Funktionalität.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.ToolStripItem" /> darstellt, die die **vorherige verschieben** Schaltfläche für die <see cref="T:System.Windows.Forms.BindingSource" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn festgelegt ist, die <xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> Eigenschaft generiert die <xref:System.Windows.Forms.Control.Click> -Ereignishandler für das **vorherige verschieben** Schaltfläche. Dieser Ereignishandler ruft die <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> Methode bei der **vorherige verschieben** geklickt wird zur Laufzeit.  
+  
+ Diese Eigenschaft ist `null` wenn er nicht zuvor festgelegt wurde die <xref:System.Windows.Forms.BindingNavigator.AddStandardItems%2A> wird implizit oder explizit aufgerufen.  
+  
+ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement deaktiviert die **vorherige verschieben** Schaltfläche in folgenden Situationen zur Laufzeit: die <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> Eigenschaft ist `null` oder <xref:System.Windows.Forms.BindingSource.Position%2A> -Eigenschaft muss kleiner oder gleich 0.  
+  
+ In der Standardimplementierung dieser Eigenschaft stellt ein Steuerelement vom Typ <xref:System.Windows.Forms.ToolStripButton>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRefreshItems">
+      <MemberSignature Language="C#" Value="protected virtual void OnRefreshItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRefreshItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingNavigator.OnRefreshItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst das <see cref="E:System.Windows.Forms.BindingNavigator.RefreshItems" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zusätzlich zu den durch das Auslösen der entsprechenden <xref:System.Windows.Forms.BindingNavigator.RefreshItems> Ereignis, das <xref:System.Windows.Forms.BindingNavigator.OnRefreshItems%2A> -Methode führt die folgenden Vorgänge für den Status des zugeordneten <xref:System.Windows.Forms.BindingSource>.  
+  
+-   Legt die internen Member mit dem aktuellen <xref:System.Windows.Forms.BindingSource> Zustand.  
+  
+-   Aktiviert oder deaktiviert die Elemente der Benutzeroberfläche (UI) für den aktuellen <xref:System.Windows.Forms.BindingSource> Zustand.  
+  
+-   Updates der <xref:System.Windows.Forms.BindingNavigator.CountItem%2A> und <xref:System.Windows.Forms.BindingNavigator.PositionItem%2A> Steuerelemente.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.BindingNavigator.OnRefreshItems%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.BindingNavigator.OnRefreshItems" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.BindingNavigator.OnRefreshItems" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripItem PositionItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolStripItem PositionItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingNavigator.PositionItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ReferenceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Forms.ToolStripItem" /> , anzeigt, dass die aktuelle Position innerhalb der <see cref="T:System.Windows.Forms.BindingSource" />.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.ToolStripItem" /> , die die aktuelle Position anzeigt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Standardimplementierung der <xref:System.Windows.Forms.BindingNavigator.PositionItem%2A> -Eigenschaft ist vom Typ <xref:System.Windows.Forms.ToolStripTextBox>.  
+  
+ Diese Eigenschaft ist `null` wenn er nicht zuvor festgelegt wurde die <xref:System.Windows.Forms.BindingNavigator.AddStandardItems%2A> wird implizit oder explizit aufgerufen.  
+  
+ Abrufen die aktuelle Position berechnet die <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft von der <xref:System.Windows.Forms.BindingSource>, und 1 an, um die Position in einen Zähler auf 1 basierende Transformation hinzufügen.  
+  
+ In der Standardimplementierung dieser Eigenschaft stellt ein Steuerelement vom Typ <xref:System.Windows.Forms.ToolStripTextBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshItems">
+      <MemberSignature Language="C#" Value="public event EventHandler RefreshItems;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RefreshItems" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.BindingNavigator.RefreshItems" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Zustand der Navigationsbenutzeroberfläche aktualisiert werden muss, um den aktuellen Zustand der zugrunde liegenden Daten widerzuspiegeln.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingNavigator.RefreshItems?displayProperty=nameWithType> Ereignis signalisiert, dass die Navigationsbenutzeroberfläche der <xref:System.Windows.Forms.BindingNavigator> muss aktualisiert werden, um den aktuellen Zustand der zugeordneten <xref:System.Windows.Forms.BindingSource>.  
+  
+ Dies ist das Standardereignis für die <xref:System.Windows.Forms.BindingNavigator> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.BindingNavigator.RefreshItems> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.BindingNavigator> mit dem Namen `BindingNavigator1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.BindingNavigator.RefreshItems> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#124](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#124)]
+ [!code-vb[System.Windows.Forms.EventExamples#124](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#124)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshItemsCore">
+      <MemberSignature Language="C#" Value="protected virtual void RefreshItemsCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RefreshItemsCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingNavigator.RefreshItemsCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert den Zustand der Standardelemente, um den aktuellen Zustand der Daten widerzuspiegeln.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie außer Kraft gesetzt haben <xref:System.Windows.Forms.BindingNavigator.AddStandardItems%2A> in einer abgeleiteten Klasse sollten Sie auch überschreiben <xref:System.Windows.Forms.BindingNavigator.RefreshItemsCore%2A> alle benutzerdefinierten Standardelemente aktualisieren Sie hinzugefügt haben die <xref:System.Windows.Forms.BindingNavigator> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public bool Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingNavigator.Validate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass die Formularvalidierung ausgeführt wird, und gibt zurück, ob die Validierung erfolgreich war.</summary>
+        <returns>
+          <see langword="true" />Wenn die Überprüfung erfolgreich war, und kann den Fokus auf die <see cref="T:System.Windows.Forms.BindingNavigator" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um zu bestätigen, können den Fokus vor dem Ausführen der Klickaktion für ein Element auf der <xref:System.Windows.Forms.BindingNavigator> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

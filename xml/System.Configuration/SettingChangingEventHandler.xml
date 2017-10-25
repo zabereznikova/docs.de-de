@@ -1,0 +1,36 @@
+<Type Name="SettingChangingEventHandler" FullName="System.Configuration.SettingChangingEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void SettingChangingEventHandler(object sender, SettingChangingEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SettingChangingEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingChangingEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Configuration.SettingChangingEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses, in der Regel eine Wrapperklasse für Anwendungseinstellungen abgeleitet, von der <see cref="T:System.Configuration.ApplicationSettingsBase" /> Klasse.</param>
+    <param name="e">Ein <see cref="T:System.Configuration.SettingChangingEventArgs" /> mit den Daten für das Ereignis.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Configuration.ApplicationSettingsBase.SettingChanging" />-Ereignisses dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> Ereignis tritt auf, bevor der Wert einer Anwendungseinstellungseigenschaft, in der Regel durch einen Aufruf geändert wird der <xref:System.Configuration.ApplicationSettingsBase.Item%2A> Methode. <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>kann abgebrochen werden, über die <xref:System.Configuration.SettingChangingEventArgs> Ereignisdatenklasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

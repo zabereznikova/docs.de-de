@@ -1,0 +1,13 @@
+<Namespace Name="System.Net.Sockets">
+  <Docs>
+    <summary>Die <see cref="N:System.Net.Sockets" /> Namespace stellt eine verwaltete Implementierung der Windows Sockets (Winsock)-Schnittstelle für Entwickler, die Zugriff auf das Netzwerk streng kontrollieren müssen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, und <xref:System.Net.Sockets.UdpClient> Klassen kapseln die Details der TCP- und UDP-Verbindungen mit dem Internet erstellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

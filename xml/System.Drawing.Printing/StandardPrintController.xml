@@ -1,0 +1,193 @@
+<Type Name="StandardPrintController" FullName="System.Drawing.Printing.StandardPrintController">
+  <TypeSignature Language="C#" Value="public class StandardPrintController : System.Drawing.Printing.PrintController" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StandardPrintController extends System.Drawing.Printing.PrintController" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Printing.StandardPrintController" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Printing.PrintController</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt einen Druckercontroller an, der Informationen an einen Drucker sendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Printing.PrintDocument>Diese Klasse verwendet.  
+  
+ Weitere Informationen zu drucken, finden Sie unter der <xref:System.Drawing.Printing> Namespace (Übersicht).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StandardPrintController ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.StandardPrintController.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.Printing.StandardPrintController" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndPage">
+      <MemberSignature Language="C#" Value="public override void OnEndPage (System.Drawing.Printing.PrintDocument document, System.Drawing.Printing.PrintPageEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnEndPage(class System.Drawing.Printing.PrintDocument document, class System.Drawing.Printing.PrintPageEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.StandardPrintController.OnEndPage(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintPageEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Drawing.Printing.PrintDocument" />
+        <Parameter Name="e" Type="System.Drawing.Printing.PrintPageEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="document">Ein <see cref="T:System.Drawing.Printing.PrintDocument" /> , das zu druckende Dokument darstellt.</param>
+        <param name="e">Ein <see cref="T:System.Drawing.Printing.PrintPageEventArgs" /> , das Daten über das Drucken einer Seite im Dokument enthält.</param>
+        <summary>Schließt die Steuersequenz ab, die bestimmt, wann und wie eine Seite eines Dokuments gedruckt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Printing.StandardPrintController.OnEndPage%2A>wird aufgerufen, unmittelbar nachdem die <xref:System.Drawing.Printing.PrintDocument> löst die <xref:System.Drawing.Printing.PrintDocument.PrintPage> Ereignis. Wenn eine Ausnahme, innerhalb ausgelöst wird einer <xref:System.Drawing.Printing.PrintDocument.PrintPage> -Ereignis für ein <xref:System.Drawing.Printing.PrintDocument>, <xref:System.Drawing.Printing.StandardPrintController.OnEndPage%2A> wird nicht aufgerufen.  
+  
+ <xref:System.Drawing.Printing.StandardPrintController.OnStartPrint%2A>erstellt die <xref:System.Drawing.Graphics> -Objekt, das an den Drucker gesendet wird. Nach dem <xref:System.Drawing.Printing.StandardPrintController.OnStartPrint%2A> aufgerufen wird, die <xref:System.Drawing.Printing.StandardPrintController.OnStartPage%2A> Methode legt die <xref:System.Drawing.Graphics> Objekt, das eine Grafik aus einer einzelnen Seite. Die <xref:System.Drawing.Printing.StandardPrintController.OnEndPage%2A> -Methode löscht die <xref:System.Drawing.Graphics> -Objekt, während die <xref:System.Drawing.Printing.StandardPrintController.OnEndPrint%2A> Methode das Objekt freigibt.  
+  
+ Wenn <xref:System.Drawing.Printing.StandardPrintController.OnEndPage%2A> drucken Kontext aufgerufen wird eine <xref:System.Windows.Forms.PrintDialog> eine <xref:System.Drawing.Printing.PrintingPermission> von <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> ist erforderlich. Auf dem Standarddrucker drucken erfordert eine <xref:System.Drawing.Printing.PrintingPermission> von <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>. Alle anderen Aufrufe dieser Methode muss einen <xref:System.Drawing.Printing.PrintingPermission> von<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Die systemeigenen Win32-Application Programming Interface (API) konnte das Schreiben in eine Seite nicht abgeschlossen werden.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">für das Steuern des Zugriffs auf Drucker. Im Zusammenhang Enumeration: <see cref="T:System.Drawing.Printing.PrintingPermissionLevel" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndPrint">
+      <MemberSignature Language="C#" Value="public override void OnEndPrint (System.Drawing.Printing.PrintDocument document, System.Drawing.Printing.PrintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnEndPrint(class System.Drawing.Printing.PrintDocument document, class System.Drawing.Printing.PrintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.StandardPrintController.OnEndPrint(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Drawing.Printing.PrintDocument" />
+        <Parameter Name="e" Type="System.Drawing.Printing.PrintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="document">Ein <see cref="T:System.Drawing.Printing.PrintDocument" /> , das zu druckende Dokument darstellt.</param>
+        <param name="e">Ein <see cref="T:System.Drawing.Printing.PrintEventArgs" /> , das Daten zum Drucken des Dokuments enthält.</param>
+        <summary>Schließt die Steuersequenz ab, die bestimmt, wann und wie ein Dokument gedruckt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Printing.StandardPrintController.OnEndPrint%2A>wird aufgerufen, unmittelbar nachdem <xref:System.Drawing.Printing.PrintDocument> löst die <xref:System.Drawing.Printing.PrintDocument.EndPrint> Ereignis. Selbst wenn eine nicht abgefangene Ausnahme, während des Druckvorgangs ausgelöst wurde <xref:System.Drawing.Printing.StandardPrintController.OnEndPrint%2A> aufgerufen wird.  
+  
+ <xref:System.Drawing.Printing.StandardPrintController.OnStartPrint%2A>erstellt die <xref:System.Drawing.Graphics> -Objekt, das an den Drucker gesendet wird. Nach dem <xref:System.Drawing.Printing.StandardPrintController.OnStartPrint%2A> aufgerufen wird, die <xref:System.Drawing.Printing.StandardPrintController.OnStartPage%2A> Methode legt die <xref:System.Drawing.Graphics> Objekt, das eine Grafik aus einer einzelnen Seite. Die <xref:System.Drawing.Printing.StandardPrintController.OnEndPage%2A> -Methode löscht die <xref:System.Drawing.Graphics> -Objekt, während die <xref:System.Drawing.Printing.StandardPrintController.OnEndPrint%2A> Methode das Objekt freigibt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Die systemeigenen Win32-Application Programming Interface (API) konnte den Druckauftrag nicht abgeschlossen werden.  
+  
+ - oder -   
+  
+ Die systemeigenen Win32-API konnte den angegebenen Gerätekontext (DC) nicht gelöscht werden.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">für das Steuern des Zugriffs auf Drucker. Im Zusammenhang Enumeration: <see cref="T:System.Drawing.Printing.PrintingPermissionLevel" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStartPage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Graphics OnStartPage (System.Drawing.Printing.PrintDocument document, System.Drawing.Printing.PrintPageEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Drawing.Graphics OnStartPage(class System.Drawing.Printing.PrintDocument document, class System.Drawing.Printing.PrintPageEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.StandardPrintController.OnStartPage(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintPageEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Drawing.Printing.PrintDocument" />
+        <Parameter Name="e" Type="System.Drawing.Printing.PrintPageEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="document">Ein <see cref="T:System.Drawing.Printing.PrintDocument" /> , das zu druckende Dokument darstellt.</param>
+        <param name="e">Ein <see cref="T:System.Drawing.Printing.PrintPageEventArgs" /> , das Daten über das Drucken einer Seite im Dokument enthält. Zu Beginn der <see cref="P:System.Drawing.Printing.PrintPageEventArgs.Graphics" /> -Eigenschaft für diesen Parameter <see langword="null" />. Der Rückgabewert der <see cref="M:System.Drawing.Printing.StandardPrintController.OnStartPage(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintPageEventArgs)" /> Methode zum Festlegen dieser Eigenschaft verwendet werden.</param>
+        <summary>Beginnt die Steuersequenz, die bestimmt, wann und wie eine Seite in einem Dokument zu drucken.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Graphics" /> -Objekt, das eine Seite aus einem <see cref="T:System.Drawing.Printing.PrintDocument" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Printing.StandardPrintController.OnStartPage%2A>wird aufgerufen, unmittelbar bevor <xref:System.Drawing.Printing.PrintDocument> löst die <xref:System.Drawing.Printing.PrintDocument.PrintPage> Ereignis.  
+  
+ <xref:System.Drawing.Printing.StandardPrintController.OnStartPrint%2A>erstellt die <xref:System.Drawing.Graphics> Objekt, das beim Drucken verwendet. Nach dem <xref:System.Drawing.Printing.StandardPrintController.OnStartPrint%2A> aufgerufen wird, die <xref:System.Drawing.Printing.StandardPrintController.OnStartPage%2A> Methode legt die <xref:System.Drawing.Graphics> Objekt, das eine Grafik aus einer einzelnen Seite. Die <xref:System.Drawing.Printing.StandardPrintController.OnEndPage%2A> -Methode löscht die <xref:System.Drawing.Graphics> -Objekt, während die <xref:System.Drawing.Printing.StandardPrintController.OnEndPrint%2A> Methode das Objekt freigibt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Die systemeigenen Win32-Application Programming Interface (API) konnte des Druckertreibers Daten akzeptieren nicht vorbereitet werden.  
+  
+ - oder -   
+  
+ Die systemeigenen Win32-API konnte den angegebenen Drucker oder Plotter Gerätekontext (DC) unter Verwendung des angegebenen nicht aktualisiert werden.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">für das Steuern des Zugriffs auf Drucker. Im Zusammenhang Enumeration: <see cref="T:System.Drawing.Printing.PrintingPermissionLevel" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStartPrint">
+      <MemberSignature Language="C#" Value="public override void OnStartPrint (System.Drawing.Printing.PrintDocument document, System.Drawing.Printing.PrintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnStartPrint(class System.Drawing.Printing.PrintDocument document, class System.Drawing.Printing.PrintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.StandardPrintController.OnStartPrint(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Drawing.Printing.PrintDocument" />
+        <Parameter Name="e" Type="System.Drawing.Printing.PrintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="document">Ein <see cref="T:System.Drawing.Printing.PrintDocument" /> , das zu druckende Dokument darstellt.</param>
+        <param name="e">Ein <see cref="T:System.Drawing.Printing.PrintEventArgs" /> , das Daten zum Drucken des Dokuments enthält.</param>
+        <summary>Beginnt die Steuersequenz, die bestimmt, wann und wie ein Dokument gedruckt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Printing.StandardPrintController.OnStartPrint%2A>wird aufgerufen, unmittelbar nachdem <xref:System.Drawing.Printing.PrintDocument> löst die <xref:System.Drawing.Printing.PrintDocument.BeginPrint> Ereignis.  
+  
+ <xref:System.Drawing.Printing.StandardPrintController.OnStartPrint%2A>erstellt die <xref:System.Drawing.Graphics> Objekt, das beim Drucken verwendet. Nach dem <xref:System.Drawing.Printing.StandardPrintController.OnStartPrint%2A> aufgerufen wird, die <xref:System.Drawing.Printing.StandardPrintController.OnStartPage%2A> Methode legt die <xref:System.Drawing.Graphics> Objekt, das eine Grafik aus einer einzelnen Seite. Die <xref:System.Drawing.Printing.StandardPrintController.OnEndPage%2A> -Methode löscht die <xref:System.Drawing.Graphics> -Objekt, während die <xref:System.Drawing.Printing.StandardPrintController.OnEndPrint%2A> Methode das Objekt freigibt.  
+  
+ <xref:System.Drawing.Printing.StandardPrintController.OnStartPrint%2A>Stellt sicher, dass die Druckereinstellungen gültig sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Drawing.Printing.InvalidPrinterException">Die Druckereinstellungen sind nicht gültig.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Die systemeigenen Win32-Application Programming Interface (API) konnte einen Druckauftrag nicht gestartet werden.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">für das Steuern des Zugriffs auf Drucker. Verwandte Enumeration:<see cref="T:System.Drawing.Printing.PrintingPermissionLevel" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

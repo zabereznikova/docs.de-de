@@ -1,0 +1,103 @@
+<Type Name="RsaEndpointIdentity" FullName="System.ServiceModel.RsaEndpointIdentity">
+  <TypeSignature Language="C#" Value="public class RsaEndpointIdentity : System.ServiceModel.EndpointIdentity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RsaEndpointIdentity extends System.ServiceModel.EndpointIdentity" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.RsaEndpointIdentity" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.EndpointIdentity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt eine RSA-Identität für den Dienstendpunkt an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ RSA ist ein zur Signierung und Verschlüsselung von Nachrichten verwendeter Verschlüsselungsalgorithmus mit öffentlichem Schlüssel. Hierfür wird ein allgemein bekannter öffentlicher Schlüssel zur Verschlüsselung von Nachrichten und ein privater Schlüssel zur Entschlüsselung von Nachrichten verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RsaEndpointIdentity (System.IdentityModel.Claims.Claim identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Claims.Claim identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.RsaEndpointIdentity.#ctor(System.IdentityModel.Claims.Claim)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.IdentityModel.Claims.Claim" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Die <see cref="T:System.IdentityModel.Claims.Claim" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.RsaEndpointIdentity" />-Klasse aus einem Anspruch.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identity" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Anspruchstyp <paramref name="identity" /> ist kein <see cref="P:System.IdentityModel.Claims.ClaimTypes.Rsa" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RsaEndpointIdentity (System.Security.Cryptography.X509Certificates.X509Certificate2 cert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 cert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.RsaEndpointIdentity.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="cert">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.RsaEndpointIdentity" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das `certificate` wird in einen RSA-Anspruch konvertiert, und von der <xref:System.ServiceModel.EndpointIdentity.Initialize%2A>-Methode wird eine Endpunktidentität erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="cert" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Der öffentliche Schlüssel von <paramref name="cert" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Auf den öffentlichen Schlüssel des Zertifikats kann nicht zugegriffen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RsaEndpointIdentity (string publicKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string publicKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.RsaEndpointIdentity.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="publicKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="publicKey">Der öffentliche Schlüssel.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.RsaEndpointIdentity" />-Klasse aus einem öffentlichen Schlüssel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der öffentliche Schlüssel wird in einen RSA-Anspruch konvertiert, und von der <xref:System.ServiceModel.EndpointIdentity.Initialize%2A>-Methode wird eine Endpunktidentität erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="publicKey" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

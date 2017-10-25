@@ -1,0 +1,259 @@
+<Type Name="IAdviseSink" FullName="System.Runtime.InteropServices.ComTypes.IAdviseSink">
+  <TypeSignature Language="C#" Value="public interface IAdviseSink" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAdviseSink" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComTypes.IAdviseSink" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("0000010F-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine verwaltete Definition der der <see langword="IAdviseSink" /> Schnittstelle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `IAdviseSink` Schnittstelle ermöglicht, Container und andere Objekte zum Empfangen von Benachrichtigungen über Änderungen der Daten und Änderungen an und Compound-Dokument Änderungen in Objekte, die von Interesse sind.  
+  
+ Weitere Informationen zu den `IAdviseSink` Schnittstelle, finden Sie in der MSDN Library.  
+  
+ Die common Language Runtime löst eine Ausnahme aus, wenn eine COM-Methode in systemeigenem Code ein HRESULT zurückgibt. Weitere Informationen finden Sie unter [Vorgehensweise: Zuordnen von HRESULTs und Ausnahmen](~/docs/framework/interop/how-to-map-hresults-and-exceptions.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OnClose">
+      <MemberSignature Language="C#" Value="public void OnClose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnClose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IAdviseSink.OnClose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Benachrichtigt, dass alle registrierten Advise-Senken, die das Objekt vom Zustand Ausführung in den geladenen Zustand geändert hat.  Diese Methode wird von einem Server aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Runtime.InteropServices.ComTypes.IAdviseSink.OnClose%2A> Benachrichtigung gibt an, dass ein Objekt wird den Übergang vom Zustand Ausführung in den geladenen Zustand, damit dessen Container, geeignete Maßnahmen zur ordnungsgemäßes Herunterfahren sicherzustellen werden kann. Beispielsweise muss ein Objekthandler, der Zeiger auf das Objekt freigeben.  
+  
+ Weitere Informationen zu `IAdviseSink::OnClose`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataChange">
+      <MemberSignature Language="C#" Value="public void OnDataChange (ref System.Runtime.InteropServices.ComTypes.FORMATETC format, ref System.Runtime.InteropServices.ComTypes.STGMEDIUM stgmedium);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnDataChange([in]valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; format, [in]valuetype System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp; stgmedium) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IAdviseSink.OnDataChange(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="stgmedium" Type="System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="format">Ein <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" />, Gerät, Rendering und Speicher-Informationen des aufrufenden Objekts übergeben als Verweis, der das Format beschrieben wird, als Ziel.</param>
+        <param name="stgmedium">Ein <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" />, übergeben als Verweis, der das Speichermedium definiert (globalen Arbeitsspeicher, Datenträger-Datei, Speicherobjekt, Streamobjekt, Graphics Device Interface (GDI)-Objekt oder nicht definiert ist) und zum Eigentum des, "Mittel" für das aufrufende Objekt.</param>
+        <summary>Benachrichtigt, dass alle Datenobjekte registrierten derzeit Advise-Senken, die Daten in das Objekt geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IAdviseSink::OnDataChange`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRename">
+      <MemberSignature Language="C#" Value="public void OnRename (System.Runtime.InteropServices.ComTypes.IMoniker moniker);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnRename(class System.Runtime.InteropServices.ComTypes.IMoniker moniker) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IAdviseSink.OnRename(System.Runtime.InteropServices.ComTypes.IMoniker)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="moniker" Type="System.Runtime.InteropServices.ComTypes.IMoniker" />
+      </Parameters>
+      <Docs>
+        <param name="moniker">Ein Zeiger auf die <see langword="IMoniker" /> Schnittstelle auf die neuen vollständigen Moniker des Objekts.</param>
+        <summary>Benachrichtigt alle registrierten Advise-Senken, dass das Objekt umbenannt wurde. Diese Methode wird von einem Server aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IAdviseSink::IMoniker`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSave">
+      <MemberSignature Language="C#" Value="public void OnSave ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnSave() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IAdviseSink.OnSave" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Benachrichtigt, dass alle registrierten Advise-Senken, die das Objekt gespeichert wurde. Diese Methode wird von einem Server aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IAdviseSink::OnSave`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnViewChange">
+      <MemberSignature Language="C#" Value="public void OnViewChange (int aspect, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnViewChange(int32 aspect, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IAdviseSink.OnViewChange(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="aspect" Type="System.Int32" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="aspect">Der Aspekt, oder die Sicht, des Objekts. Enthält einen Wert, der von der <see cref="T:System.Runtime.InteropServices.ComTypes.DVASPECT" /> Enumeration.</param>
+        <param name="index">Der Teil der Sicht, die geändert wurde. Derzeit wird nur-1 gültig.</param>
+        <summary>Benachrichtigt, dass ein Objekt registrierten Advise-Senken, die die Sicht geändert wurden. Diese Methode wird von einem Server aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `IAdviseSink::OnViewChange`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

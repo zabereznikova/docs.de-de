@@ -1,0 +1,59 @@
+<Type Name="HideModuleNameAttribute" FullName="Microsoft.VisualBasic.HideModuleNameAttribute">
+  <TypeSignature Language="C#" Value="public sealed class HideModuleNameAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HideModuleNameAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.HideModuleNameAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see langword="HideModuleNameAttribute" /> Attribut, wenn auf ein Modul angewendet die Modulmember zugegriffen werden nur die für das Modul erforderlichen Qualifikation verwenden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut ist nützlich für Modulmember und das Modul selbst wird nicht angezeigt. Bei Verwendung von IntelliSense in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Umgebung IDE (Integrated Development) für [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], das Modul wird nicht in der Anweisungsvervollständigungsliste angezeigt. Stattdessen zeigt IntelliSense die Member des Moduls.  
+  
+ Selbst wenn der Name des Moduls ausgeblendet ist, sind die Member des Moduls weiterhin zugegriffen werden kann, durch das Modul.  
+  
+ Wenn Sie ein Elementnamen mit einer anderen Bezeichner oder mit einem Member mit einem anderen Modul mit in Konflikt steht die `HideModuleNameAttribute` Attribut, und klicken Sie dann das Element nicht in IntelliSense auf der Ebene des Moduls angezeigt wird.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die `HideModuleNameAttribute` -Attribut zum Hinzufügen zu einem Datenbankobjekt `My`, zugegriffen werden kann, über `My.Database`.  
+  
+ [!code-vb[VbCnAttributes#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbCnAttributes/VB/Class2.vb#26)]  
+  
+ Die `Namespace` -Anweisung muss außerhalb aller Klassen oder Module stehen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HideModuleNameAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.HideModuleNameAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz des <see cref="T:Microsoft.VisualBasic.HideModuleNameAttribute" />-Attributs.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

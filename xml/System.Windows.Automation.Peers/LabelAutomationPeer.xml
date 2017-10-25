@@ -1,0 +1,101 @@
+<Type Name="LabelAutomationPeer" FullName="System.Windows.Automation.Peers.LabelAutomationPeer">
+  <TypeSignature Language="C#" Value="public class LabelAutomationPeer : System.Windows.Automation.Peers.FrameworkElementAutomationPeer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LabelAutomationPeer extends System.Windows.Automation.Peers.FrameworkElementAutomationPeer" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.LabelAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.FrameworkElementAutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Macht <see cref="T:System.Windows.Controls.Label" /> Typen für die UI-Automatisierung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LabelAutomationPeer (System.Windows.Controls.Label owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Controls.Label owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.LabelAutomationPeer.#ctor(System.Windows.Controls.Label)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Controls.Label" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Der <see cref="T:System.Windows.Controls.Label" />, der diesem <see cref="T:System.Windows.Automation.Peers.LabelAutomationPeer" /> zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Automation.Peers.LabelAutomationPeer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationControlTypeCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.LabelAutomationPeer.GetAutomationControlTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationControlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Steuerelementtyp für die <see cref="T:System.Windows.Controls.Label" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.LabelAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" /> aufgerufen.</summary>
+        <returns>Der <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Text" />-Enumerationswert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetClassNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetClassNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.LabelAutomationPeer.GetClassNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Namen des der <see cref="T:System.Windows.Controls.Label" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Automation.Peers.LabelAutomationPeer" />. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" /> aufgerufen.</summary>
+        <returns>Eine Zeichenfolge, die "Label" enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.LabelAutomationPeer.GetNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Textbezeichnung des <see cref="T:System.Windows.Controls.Label" /> ab, das diesem <see cref="T:System.Windows.Automation.Peers.LabelAutomationPeer" /> zugeordnet ist. Diese Methode wird von <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetName" /> aufgerufen.</summary>
+        <returns>Die Zeichenfolge, die die Bezeichnung enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können der Name-Eigenschaft vorstellen, als wäre er eine Textzeichenfolge, die Benutzer verwenden, um das Steuerelement zu erläutern die Namenseigenschaft sind. Stellen Sie sicher, dass Sie eine Textdarstellung für alle Steuerelemente in verfügen die [!INCLUDE[TLA#tla_gui](~/includes/tlasharptla-gui-md.md)] , damit Sie programmgesteuert auf das Steuerelement in lokalisierten Versionen verweisen können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

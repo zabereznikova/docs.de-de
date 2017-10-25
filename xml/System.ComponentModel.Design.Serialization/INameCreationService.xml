@@ -1,0 +1,189 @@
+<Type Name="INameCreationService" FullName="System.ComponentModel.Design.Serialization.INameCreationService">
+  <TypeSignature Language="C#" Value="public interface INameCreationService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INameCreationService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.INameCreationService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet einen Dienst, der eindeutige Namen für Objekte generieren kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ComponentModel.Design.Serialization.DesignerLoader> können implementieren diesen Dienst, um damit ein Designer neue, eindeutige Namen für Objekte erstellen können. Wenn dieser Dienst nicht verfügbar ist, verwendet der Designer eine Standardimplementierung auf.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht <xref:System.ComponentModel.Design.Serialization.INameCreationService> Implementierung. Der Dienst kann einen eindeutigen Namen, die anhand eines Typs, das die Namen im angegebenen Container nicht erstellen. Sie können auch auf eine angegebenen Namenszeichenfolge überprüfen.  
+  
+ [!code-cpp[INameCreationServiceExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/INameCreationServiceExample/CPP/class1.cpp#1)]
+ [!code-csharp[INameCreationServiceExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/INameCreationServiceExample/CS/class1.cs#1)]
+ [!code-vb[INameCreationServiceExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/INameCreationServiceExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateName">
+      <MemberSignature Language="C#" Value="public string CreateName (System.ComponentModel.IContainer container, Type dataType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateName(class System.ComponentModel.IContainer container, class System.Type dataType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.INameCreationService.CreateName(System.ComponentModel.IContainer,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.ComponentModel.IContainer" />
+        <Parameter Name="dataType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="container">Der Container, in dem das neue Objekt hinzugefügt wird.</param>
+        <param name="dataType">Der Datentyp des Objekts, das den Namen empfängt.</param>
+        <summary>Erstellt einen neuen Namen, der für alle Komponenten im angegebenen Container eindeutig ist.</summary>
+        <returns>Ein eindeutiger Name für den Datentyp.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt einen Namen für das neue Objekt, das in den angegebenen Container eindeutig ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel enthält ein Beispiel <xref:System.ComponentModel.Design.Serialization.INameCreationService.CreateName%2A?displayProperty=nameWithType> methodenimplementierung. Die Methode kann erstellen Sie einen Namen basierend auf den Namen eines angegebenen Typs, der den Namen der Komponenten im angegebenen Container eindeutig ist.  
+  
+ [!code-cpp[INameCreationServiceExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/INameCreationServiceExample/CPP/class1.cpp#2)]
+ [!code-csharp[INameCreationServiceExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/INameCreationServiceExample/CS/class1.cs#2)]
+ [!code-vb[INameCreationServiceExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/INameCreationServiceExample/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Dieser Typ des Diensts wird häufig implementiert, um ein eindeutiges Objekt zu erstellen, aus dem Namen des Datentyps, häufig mit einer Zahl, die den Namen in einen eindeutigen Bezeichner ermöglicht angefügt. Beispielsweise <see langword="ListBox1" /> für eine <see langword="ListBox" /> Objekt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidName">
+      <MemberSignature Language="C#" Value="public bool IsValidName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsValidName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.INameCreationService.IsValidName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name, dessen Gültigkeit validiert werden soll.</param>
+        <summary>Ruft einen Wert, der angibt, ob der angegebene Name gültig ist.</summary>
+        <returns>
+          <see langword="true" />, wenn der Name gültig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Implementierung der <xref:System.ComponentModel.Design.Serialization.INameCreationService> Regeln, die die Parameter für gültige Namen definieren können. Diese Methode kann implementiert werden, um einen Namen zu überprüfen und diese Regeln erzwingen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel enthält ein Beispiel <xref:System.ComponentModel.Design.Serialization.INameCreationService.IsValidName%2A?displayProperty=nameWithType> methodenimplementierung. Die Methode verwendet ein Validierungsschema Zeichenfolge, die untersucht jedes Zeichen der angegebenen Zeichenfolge zu bestimmen, ob die angegebene Zeichenfolge ein gültiger Name ist. Gibt die Methode `true` Wenn die Zeichenfolge gültig ist oder `false` andernfalls.  
+  
+ [!code-cpp[INameCreationServiceExample#3](~/samples/snippets/cpp/VS_Snippets_Winforms/INameCreationServiceExample/CPP/class1.cpp#3)]
+ [!code-csharp[INameCreationServiceExample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/INameCreationServiceExample/CS/class1.cs#3)]
+ [!code-vb[INameCreationServiceExample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/INameCreationServiceExample/VB/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateName">
+      <MemberSignature Language="C#" Value="public void ValidateName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ValidateName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.INameCreationService.ValidateName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name, dessen Gültigkeit validiert werden soll.</param>
+        <summary>Ruft einen Wert, der angibt, ob der angegebene Name gültig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Implementierung der <xref:System.ComponentModel.Design.Serialization.INameCreationService> Regeln, die die Parameter für gültige Namen definieren können. Diese Methode kann implementiert werden, um einen Namen zu überprüfen und diese Regeln erzwingen.  
+  
+ Diese Methode ist vergleichbar mit <xref:System.ComponentModel.Design.Serialization.INameCreationService.IsValidName%2A>, mit dem Unterschied, dass diese Methode eine Ausnahme auslöst, wenn der Name ungültig ist. Dadurch wird die Implementierung zu detaillierten Informationen in der Ausnahmemeldung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel enthält ein Beispiel <xref:System.ComponentModel.Design.Serialization.INameCreationService.IsValidName%2A?displayProperty=nameWithType> methodenimplementierung, die ein Validierungsschema Zeichenfolge, die untersucht jedes Zeichen der angegebenen Zeichenfolge verwendet zu bestimmen, ob die angegebene Zeichenfolge ein gültiger Name ist. Die Methode löst eine Ausnahme aus, wenn die Zeichenfolge nicht gültig ist.  
+  
+ [!code-cpp[INameCreationServiceExample#4](~/samples/snippets/cpp/VS_Snippets_Winforms/INameCreationServiceExample/CPP/class1.cpp#4)]
+ [!code-csharp[INameCreationServiceExample#4](~/samples/snippets/csharp/VS_Snippets_Winforms/INameCreationServiceExample/CS/class1.cs#4)]
+ [!code-vb[INameCreationServiceExample#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/INameCreationServiceExample/VB/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

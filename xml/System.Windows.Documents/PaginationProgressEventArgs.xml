@@ -1,0 +1,89 @@
+<Type Name="PaginationProgressEventArgs" FullName="System.Windows.Documents.PaginationProgressEventArgs">
+  <TypeSignature Language="C#" Value="public class PaginationProgressEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PaginationProgressEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.PaginationProgressEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Documents.DynamicDocumentPaginator.PaginationProgress" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PaginationProgressEventArgs (int start, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 start, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.PaginationProgressEventArgs.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="start">Die Seitenzahl der ersten Seite, die paginiert (nullbasiert) ist.</param>
+        <param name="count">Die Anzahl der kontinuierlichen paginierten Seiten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Documents.PaginationProgressEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.PaginationProgressEventArgs.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der fortlaufenden Seiten, die paginiert wurden.</summary>
+        <value>Die Anzahl der fortlaufenden Seiten, die paginiert wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.PaginationProgressEventArgs.Start%2A> Eigenschaft identifiziert die erste Seite, die paginiert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public int Start { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Start" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.PaginationProgressEventArgs.Start" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Seitenzahl der ersten Seite, die paginiert wurde.</summary>
+        <value>Die Seitenzahl der ersten Seite, die paginiert wurde (nullbasiert) ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.PaginationProgressEventArgs.Count%2A> -Eigenschaft gibt die Anzahl der fortlaufenden Seiten, die paginiert wurden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

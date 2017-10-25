@@ -1,0 +1,107 @@
+<Type Name="RouteValueExpressionEditor" FullName="System.Web.UI.Design.RouteValueExpressionEditor">
+  <TypeSignature Language="C#" Value="public class RouteValueExpressionEditor : System.Web.UI.Design.ExpressionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RouteValueExpressionEditor extends System.Web.UI.Design.ExpressionEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.RouteValueExpressionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ExpressionEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Eigenschaften und Methoden zum Verfassen von einem <see langword="RouteValue" /> Ausdruck zur Entwurfszeit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein visuellen Designer hosten, wie z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], verwendet der <xref:System.Web.UI.Design.RouteValueExpressionEditor> Klasse zum Erstellen einer `RouteValue` Markup-Ausdruck.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RouteValueExpressionEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.RouteValueExpressionEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.RouteValueExpressionEditor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateExpression">
+      <MemberSignature Language="C#" Value="public override object EvaluateExpression (string expression, object parseTimeData, Type propertyType, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EvaluateExpression(string expression, object parseTimeData, class System.Type propertyType, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.RouteValueExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="parseTimeData" Type="System.Object" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Ein <see langword="RouteValue" /> auszuwertende Ausdruck. Der Ausdruck schließt nicht die <see langword="RouteValue" /> Ausdruckspräfix.</param>
+        <param name="parseTimeData">Ein Objekt, das zusätzliche Analyseinformationen enthält, die zum Auswerten des Ausdrucks verwendet wird.</param>
+        <param name="propertyType">Der Typ der Steuerelementeigenschaft.</param>
+        <param name="serviceProvider">Eine Implementierung Service Provider, die vom Designerhost angegeben wird und zum Abrufen zusätzlicher Entwurfszeitdienste verwendet wird.</param>
+        <summary>Wertet einen <see langword="RouteValue" /> Ausdruck und gibt den Wert zur Entwurfszeit.</summary>
+        <returns>Der Wert der angegebenen URL-Parameter, wenn die Auswertung von Ausdrücken erfolgreich war; andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der visuelle Designer verwendet die <xref:System.Web.UI.Design.RouteValueExpressionEditor.EvaluateExpression%2A> Methode zum Auswerten einer `RouteValue` Ausdruck und eine Eigenschaft des zugeordneten Steuerelements zur Entwurfszeit-Wert bereit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpressionEditorSheet">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet (string expression, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet(string expression, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.RouteValueExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ExpressionEditorSheet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Die Ausdruckszeichenfolge, die verwendet wird, um das Blatt der Ausdrucks-Editor zu initialisieren. Der Ausdruck schließt nicht die <see langword="RouteValue" /> Ausdruckspräfix.</param>
+        <param name="serviceProvider">Eine Implementierung Service Provider, die vom Designerhost angegeben wird und zum Abrufen zusätzlicher Entwurfszeitdienste verwendet wird.</param>
+        <summary>Gibt ein Ausdrucks-Editor-Arbeitsblatt für eine <see langword="RouteValue" /> Ausdruck.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.Design.RouteValueExpressionEditorSheet" /> -Instanz, definiert die <see langword="RouteValue" /> Ausdruckseigenschaften.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.RouteValueExpressionEditor.GetExpressionEditorSheet%2A> Methodenrückgabe eine Editor-Blatt Implementierung für `RouteValue` Ausdrücke. Das Editorblatt für `RouteValue` Ausdrücke ermöglicht Benutzern die Auswahl der URL-Parameter. Nachdem Benutzer die Parameter ausgewählt haben, generiert die Editor-Blatt Implementierung einer `RouteValue` Ausdruck, der zum visuellen Designer zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

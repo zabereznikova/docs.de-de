@@ -1,0 +1,194 @@
+<Type Name="DetailsViewDeleteEventArgs" FullName="System.Web.UI.WebControls.DetailsViewDeleteEventArgs">
+  <TypeSignature Language="C#" Value="public class DetailsViewDeleteEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DetailsViewDeleteEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewDeleteEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.DetailsView.ItemDeleting" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement löst die <xref:System.Web.UI.WebControls.DetailsView.ItemDeleting> Ereignis aus, wenn eine Schaltfläche "löschen" (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Löschen") innerhalb des Steuerelements geklickt wird, jedoch bevor die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement löscht den Datensatz. Dadurch können Sie einen Ereignishandler bereitstellen, der eine benutzerdefinierte Routine ausführt, z. B. das Überprüfen eines Datensatzes, bevor Sie Sie löschen, wenn dieses Ereignis tritt auf.  
+  
+ Ein <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs> Objekt übergeben wird, an den Ereignishandler, wodurch Sie den Index des gelöschten Datensatzes ermitteln und um anzugeben, dass der Delete-Vorgang abgebrochen werden soll. Um den Index eines Datensatzes zu bestimmen, verwenden die <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.RowIndex%2A> Eigenschaft. Um den Löschvorgang abzubrechen, legen die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`. Sie können auch die Schlüsselfelder und nichtschlüsselfelder zugreifen, mithilfe der <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.Keys%2A> und <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.Values%2A> Eigenschaften bzw.. Diese Werte sind hilfreich, wenn Sie den Datensatz zu überprüfen, bevor Sie Sie löschen möchten.  
+  
+> [!NOTE]
+>  Es ist möglich, ändern Sie die wichtigsten Feldwerte in der <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.Keys%2A> Eigenschaft. Wenn Sie diese Werte ändern, wird der Datensatz, der den neuen Schlüsselfeldwerten entspricht, gelöscht werden.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs> Klasse, finden Sie unter der <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs> -Objekt übergeben, um den Ereignishandler für das <xref:System.Web.UI.WebControls.DetailsView.ItemDeleting> Ereignis, um einen Löschvorgang abzubrechen.  
+  
+ [!code-aspx-csharp[DetailsViewDeleteEventArgsCodeInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewDeleteEventArgsCodeInline/CS/detailsviewdeleteeventargsinlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewDeleteEventArgsCodeInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewDeleteEventArgsCodeInline/VB/detailsviewdeleteeventargsinlinevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DetailsViewDeleteEventArgs (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index des zu löschenden Zeile.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DetailsViewDeleteEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs> Klasse.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von der <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs> Klasse.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.RowIndex%2A>|Der Wert des `rowIndex`-Parameters.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein sortiertes Wörterbuch mit Schlüsselfeld Name/Wert-Paaren mit den Namen und Werte von den Schlüsselfeldern des gelöschten Elemente ab.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> , enthält ein sortiertes Wörterbuch Schlüsselfeld Name/Wert-Paaren verwendet, um das Element zu vergleichen zu löschen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.Keys%2A> Eigenschaft, um den Zugriff auf die Werte des Schlüsselfelds oder der Felder für den Datensatz gelöscht werden soll. Beispielsweise können Sie diese Werte, um den Datensatz zu überprüfen, bevor Sie Sie löschen, um den Datensatz zu löschen oder gelöschte Datensätze protokollieren zu ändern.  
+  
+> [!NOTE]
+>  Diese Eigenschaft enthält nur die wichtigsten Felder. Verwenden Sie die Name-Wert-Paare für die Schlüsselfelder für den Zugriff auf die <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.Values%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.Keys%2A> Eigenschaft gibt ein Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary> Schnittstelle. Das Objekt enthält <xref:System.Collections.DictionaryEntry> Objekte, die die Schlüsselfelder darstellen.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie auch den Indexer, der die <xref:System.Collections.Specialized.IOrderedDictionary> Objekt, das Zugriff auf das Schlüsselfeld-Werte. Der Vorteil der Verwendung des Indexers ist, dass sie wichtige Feldwerte direkt zurückgibt.  
+  
+ Diese Eigenschaft ist schreibgeschützt. Allerdings können Sie die Werte Schlüsselfeld der Ändern der <xref:System.Collections.Specialized.IOrderedDictionary> -Objekt wird zurückgegeben. Wenn Sie das Schlüsselfeldwerte ändern, ist der entsprechende Datensatz gelöscht werden aus der Datenquelle.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.Keys%2A> Eigenschaft Zugriff auf den Wert des Schlüsselfelds für den Datensatz gelöscht wird.  
+  
+ [!code-aspx-csharp[DetailsViewDeleteEventArgsCodeInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewDeleteEventArgsCodeInline/CS/detailsviewdeleteeventargsinlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewDeleteEventArgsCodeInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewDeleteEventArgsCodeInline/VB/detailsviewdeleteeventargsinlinevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index der gelöschten Zeile.</summary>
+        <value>Der Index des zu löschenden Zeile.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.RowIndex%2A> -Eigenschaft bestimmt den Index des zu löschenden Zeile. Der Zeilenindex wird häufig verwendet, zum Abrufen der angegebenen Zeile aus der <xref:System.Web.UI.WebControls.DetailsView.Rows%2A> Auflistung von der <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement, das Sie Eigenschaften der Zeile zugreifen kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.RowIndex%2A> -Eigenschaft bestimmt den Index des zu löschenden Zeile.  
+  
+ [!code-aspx-csharp[DetailsViewDeleteEventArgsCodeInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewDeleteEventArgsCodeInline/CS/detailsviewdeleteeventargsinlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewDeleteEventArgsCodeInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewDeleteEventArgsCodeInline/VB/detailsviewdeleteeventargsinlinevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch der Schlüsselfelder Name/Wert-Paare für das Element gelöscht.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> , enthält ein Wörterbuch der Schlüsselfelder Name/Wert-Paare für das Element gelöscht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.Values%2A> Eigenschaft, um den Zugriff auf die Werte der nichtschlüsselfelder für den Datensatz gelöscht werden soll. Sie können z. B. diese Werte können Sie den Datensatz zu überprüfen, bevor Sie Sie löschen und gelöschte Datensätze protokollieren verwenden.  
+  
+> [!NOTE]
+>  Diese Eigenschaft ist nicht das oder Primärschlüsselfelder enthalten. Verwenden Sie die Name-Wert-Paar für das oder Primärschlüsselfelder für den Zugriff auf die <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.Keys%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.Values%2A> Eigenschaft gibt ein Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary> Schnittstelle. Das Objekt enthält <xref:System.Collections.DictionaryEntry> Objekte, die die Schlüsselfelder darstellen.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie auch den Indexer, der die <xref:System.Collections.Specialized.IOrderedDictionary> Objekt, das die Feldwerte zugreifen. Der Vorteil der Verwendung des Indexers ist, dass es Feldwerte direkt zurückgibt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewDeleteEventArgs.Values%2A> Eigenschaft, um den Zugriff auf die Werte nicht schlüsselbezogene Felder des Datensatzes wird gelöscht.  
+  
+ [!code-aspx-csharp[DetailsViewDeleteEventArgsCodeInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewDeleteEventArgsCodeInline/CS/detailsviewdeleteeventargsinlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewDeleteEventArgsCodeInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewDeleteEventArgsCodeInline/VB/detailsviewdeleteeventargsinlinevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

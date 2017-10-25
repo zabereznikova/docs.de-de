@@ -1,0 +1,146 @@
+<Type Name="IIdentity" FullName="System.Security.Principal.IIdentity">
+  <TypeSignature Language="C#" Value="public interface IIdentity" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IIdentity" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Principal.IIdentity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Principal</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die grundlegende Funktionalität eines Identity-Objekts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Identity-Objekts darstellt, den Benutzer, den der Code ausgeführt wird. Diese Schnittstelle wird implementiert, indem Sie die <xref:System.Security.Principal.GenericIdentity> und <xref:System.Security.Principal.WindowsIdentity> Klassen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AuthenticationType">
+      <MemberSignature Language="C#" Value="public string AuthenticationType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthenticationType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Principal.IIdentity.AuthenticationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des verwendeten Authentifizierungstyp ab.</summary>
+        <value>Der zur Identifizierung des Benutzers verwendete Authentifizierungstyp.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Authentifizierungstyp wird vom Betriebssystem oder von einem anderen Authentifizierungsanbieter für die common Language Runtime übergeben. Basic-Authentifizierung, NTLM, Kerberos und Passport sind Beispiele für die Authentifizierungstypen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAuthenticated">
+      <MemberSignature Language="C#" Value="public bool IsAuthenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAuthenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Principal.IIdentity.IsAuthenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Benutzer authentifiziert wurde.</summary>
+        <value>
+          <see langword="true" />, wenn der Benutzer authentifiziert wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Einstellung für diese Eigenschaft wird bestimmt, der von Windows `SECURITY_AUTHENTICATED_USER_RID` Sicherheits-ID (SID).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Principal.IIdentity.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des aktuellen Benutzers ab.</summary>
+        <value>Der Name des Benutzers, den der Code ausgeführt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Benutzername wird durch das Betriebssystem oder andere Authentifizierungsanbieter (z. B. ASP.NET) für die common Language Runtime übergeben.  
+  
+ <xref:System.Security.Principal.IIdentity.Name%2A>in der Regel auf eine leere Zeichenfolge festgelegt ist ("") für eine nicht authentifizierte Entität können andere Werte annehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

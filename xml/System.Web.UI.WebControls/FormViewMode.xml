@@ -1,0 +1,89 @@
+<Type Name="FormViewMode" FullName="System.Web.UI.WebControls.FormViewMode">
+  <TypeSignature Language="C#" Value="public enum FormViewMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FormViewMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Stellt die Modi verschiedene Dateneingabe, der eine <see cref="T:System.Web.UI.WebControls.FormView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FormViewMode> Enumeration wird verwendet, um die Dateneingabe Modi des darstellen einer <xref:System.Web.UI.WebControls.FormView> Steuerelement. Um den aktuellen Modus des Steuerelements zu bestimmen, verwenden die <xref:System.Web.UI.WebControls.FormView.CurrentMode%2A> Eigenschaft. Nach einem INSERT- oder Update-Vorgang der <xref:System.Web.UI.WebControls.FormView> steuerelementrückgabe für den Modus gemäß der <xref:System.Web.UI.WebControls.FormView.DefaultMode%2A> Eigenschaft. Standardmäßig wird das Steuerelement auf nur-Lese-Modus zurück. Sie können angeben, einen alternativen Modus wieder durch Festlegen der <xref:System.Web.UI.WebControls.FormView.DefaultMode%2A> Eigenschaft. Um Modi programmgesteuert zu ändern, verwenden die <xref:System.Web.UI.WebControls.FormView.ChangeMode%2A> Methode. Wenn die <xref:System.Web.UI.WebControls.FormView> Steuerelement Modus ändert, werden die Ereignisse in der folgenden Tabelle werden ausgelöst.  
+  
+|Ereignis|Beschreibung|  
+|-----------|-----------------|  
+|<xref:System.Web.UI.WebControls.FormView.ModeChanging>|Tritt auf, wenn eine <xref:System.Web.UI.WebControls.FormView> -Steuerelement versucht, wechseln zwischen bearbeiten, einfügen und nur-Lese-Modus, jedoch bevor der Modus tatsächlich ändert. Dieses Ereignis wird häufig verwendet, um eine Änderung des Modus "Abbrechen".|  
+|<xref:System.Web.UI.WebControls.FormView.ModeChanged>|Tritt ein, nachdem ein <xref:System.Web.UI.WebControls.FormView> -Steuerelements aus bearbeiten, einfügen oder nur-Lese-Modus in einen anderen Modus geändert hat. Dieses Ereignis wird häufig verwendet, um eine Aufgabe auszuführen, wenn die <xref:System.Web.UI.WebControls.FormView> -Steuerelement den Modus geändert.|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie beibehalten der <xref:System.Web.UI.WebControls.FormView> -Steuerelement in den Bearbeitungsmodus wechseln, nach einem Updatevorgang durch Festlegen der <xref:System.Web.UI.WebControls.FormView.DefaultMode%2A> Eigenschaft `FormViewMode.Edit`.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormViewDefaultMode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewDefaultMode/CS/formviewdefaultmodecs.aspx#1)]
+ [!code-aspx-vb[FormViewDefaultMode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewDefaultMode/VB/formviewdefaultmodevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Edit">
+      <MemberSignature Language="C#" Value="Edit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FormViewMode Edit = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FormViewMode.Edit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FormViewMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Bearbeitungsmodus, der dem Benutzer ermöglicht, die Werte von einem vorhandenen Datensatz aktualisieren.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="Insert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FormViewMode Insert = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FormViewMode.Insert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FormViewMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Einfügemodus, die dem Benutzer ermöglicht, geben die Werte für einen neuen Datensatz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="ReadOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FormViewMode ReadOnly = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FormViewMode.ReadOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FormViewMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Einen Anzeigemodus, der verhindert, dass den Benutzer die Werte eines Datensatzes ändern.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

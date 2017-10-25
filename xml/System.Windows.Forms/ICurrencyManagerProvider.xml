@@ -1,0 +1,74 @@
+<Type Name="ICurrencyManagerProvider" FullName="System.Windows.Forms.ICurrencyManagerProvider">
+  <TypeSignature Language="C#" Value="public interface ICurrencyManagerProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICurrencyManagerProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ICurrencyManagerProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht die Verwaltung der benutzerdefinierten Bindung für Komponenten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle kann Komponentenautoren Geben Sie ihre eigenen <xref:System.Windows.Forms.CurrencyManager> für Komponenten, die mit dem Modul der Windows Forms-Datenbindung interagiert. Es wird nur selten für eine Komponente erstellen, die diese Schnittstelle implementieren müssen.  
+  
+ Die <xref:System.Windows.Forms.BindingSource> -Klasse bietet eine beispielimplementierung von <xref:System.Windows.Forms.ICurrencyManagerProvider>.  
+  
+ Beachten Sie, dass diese Klasse für Smartphone-Anwendungen, Windows Mobile Version 5.0-Software für Smartphones erfordert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CurrencyManager">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.CurrencyManager CurrencyManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CurrencyManager CurrencyManager" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CurrencyManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den diesem <see cref="T:System.Windows.Forms.CurrencyManager" /> zugeordneten <see cref="T:System.Windows.Forms.ICurrencyManagerProvider" /> ab.</summary>
+        <value>Das dieser <see cref="T:System.Windows.Forms.CurrencyManager" /> zugeordnete <see cref="T:System.Windows.Forms.ICurrencyManagerProvider" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelatedCurrencyManager">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.CurrencyManager GetRelatedCurrencyManager (string dataMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.CurrencyManager GetRelatedCurrencyManager(string dataMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ICurrencyManagerProvider.GetRelatedCurrencyManager(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CurrencyManager</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataMember" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataMember">Der Name der Spalte oder Liste innerhalb der Datenquelle, zum Abrufen der <see cref="T:System.Windows.Forms.CurrencyManager" /> für.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.CurrencyManager" /> dafür <see cref="T:System.Windows.Forms.ICurrencyManagerProvider" /> und den angegebenen Datenmember.</summary>
+        <returns>Die verwandte <see cref="T:System.Windows.Forms.CurrencyManager" /> abgerufen, die von diesem <see cref="T:System.Windows.Forms.ICurrencyManagerProvider" /> und den angegebenen Datenmember.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `dataMember` ist `null` oder eine leere Zeichenfolge (""), <xref:System.Windows.Forms.ICurrencyManagerProvider.GetRelatedCurrencyManager%2A> gibt die hauptwährung-Manager für diese <xref:System.Windows.Forms.ICurrencyManagerProvider>, der der gleichen Currency Manager zurückgegeben wird aus der <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

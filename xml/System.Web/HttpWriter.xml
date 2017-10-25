@@ -1,0 +1,277 @@
+<Type Name="HttpWriter" FullName="System.Web.HttpWriter">
+  <TypeSignature Language="C#" Value="public sealed class HttpWriter : System.IO.TextWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpWriter extends System.IO.TextWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.TextWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine <see cref="T:System.IO.TextWriter" /> -Objekt, das über die systeminternen Funktionen zugegriffen wird <see cref="T:System.Web.HttpResponse" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpResponse.Write%2A> Methoden der systeminternen <xref:System.Web.HttpResponse> -Objekt stellen interne Aufrufe von einer <xref:System.Web.HttpWriter> Objekt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpWriter.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sendet alle gepufferte Ausgabe an den HTTP-Ausgabestream und schließt die Socketverbindung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public override System.Text.Encoding Encoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding Encoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpWriter.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Text.Encoding" /> -Objekt für die <see cref="T:System.IO.TextWriter" />.</summary>
+        <value>Eine Instanz von der <see cref="T:System.Text.Encoding" /> Klasse, der angibt, des Zeichensatzes der aktuellen Antwort.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpWriter.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sendet die gesamte gepufferte Ausgabe an den HTTP-Ausgabestream.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream OutputStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream OutputStream" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpWriter.OutputStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.IO.Stream" /> Objekt, das Aktivieren von HTTP-Ausgabe direkt aus dem <see cref="T:System.IO.Stream" />.</summary>
+        <value>Eine Instanz von der <see cref="T:System.IO.Stream" /> Klasse, die mit den Daten an den Client senden</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (char ch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(char ch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpWriter.Write(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ch" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="ch">Das Zeichen an die HTTP-Ausgabestream.</param>
+        <summary>Sendet ein einzelnes Zeichen in den HTTP-Ausgabestream.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpWriter.Write(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Object" /> zum Senden an den HTTP-Ausgabestream.</param>
+        <summary>Sendet eine <see cref="T:System.Object" /> in den HTTP-Ausgabestream.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpWriter.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die Zeichenfolge zum Senden an den HTTP-Ausgabestream.</param>
+        <summary>Sendet eine Zeichenfolge an den HTTP-Ausgabestream.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpWriter.Write(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Speicherpuffer, die mit den Zeichen zum Senden an den HTTP-Ausgabestream.</param>
+        <param name="index">Die Pufferposition des ersten Zeichens senden.</param>
+        <param name="count">Die Anzahl der Zeichen, die zum Senden von Anfang an der Position gemäß <c>Index</c>.</param>
+        <summary>Sendet ein Datenstrom von Zeichen mit der angegebenen Startposition und die Anzahl der Zeichen in den HTTP-Ausgabestream.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="buffer" />, ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ <paramref name="index" /> ist kleiner als Null.  
+  
+ \- oder –  
+  
+ <paramref name="count" /> ist kleiner als Null.  
+  
+ \- oder –  
+  
+ <paramref name="buffer" />die Länge minus <paramref name="index" /> ist kleiner als <paramref name="count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBytes">
+      <MemberSignature Language="C#" Value="public void WriteBytes (byte[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteBytes(unsigned int8[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpWriter.WriteBytes(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Speicherpuffer, die mit der zu sendenden Bytes, in den HTTP-Ausgabestream.</param>
+        <param name="index">Die Pufferposition des ersten Bytes zu senden.</param>
+        <param name="count">Die Anzahl der zu sendenden Bytes, beginnend an die Byteposition gemäß <c>Index</c>.</param>
+        <summary>Sendet ein Datenstrom von Bytes mit der angegebenen Startposition und die Anzahl der Bytes in den HTTP-Ausgabestream.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpWriter.WriteLine" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sendet einen Wagenrücklauf + Zeilenvorschub (CRLF) Paar von Zeichen in den HTTP-Ausgabestream.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteString">
+      <MemberSignature Language="C#" Value="public void WriteString (string s, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteString(string s, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpWriter.WriteString(System.String,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die Zeichenfolge zum Senden an den HTTP-Ausgabestream.</param>
+        <param name="index">Die Zeichenposition des ersten Bytes zu senden.</param>
+        <param name="count">Die Anzahl der Zeichen zu senden, beginnend an der Position des Zeichens gemäß <c>Index</c>.</param>
+        <summary>Sendet eine Zeichenfolge mit der angegebenen Startposition und die Anzahl der Zeichen in den HTTP-Ausgabestream.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> ist kleiner als 0 (null).  
+  
+ \- oder –  
+  
+ Die <paramref name="count" /> ist kleiner als 0 (null).  
+  
+ \- oder –  
+  
+ Die Summe der <paramref name="index" /> und die <paramref name="count" /> größer sind als die Länge der Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

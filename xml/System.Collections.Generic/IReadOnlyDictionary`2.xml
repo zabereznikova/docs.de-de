@@ -1,0 +1,280 @@
+<Type Name="IReadOnlyDictionary&lt;TKey,TValue&gt;" FullName="System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;">
+  <TypeSignature Language="C#" Value="public interface IReadOnlyDictionary&lt;TKey,TValue&gt; : System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;, System.Collections.Generic.IReadOnlyCollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IReadOnlyDictionary`2&lt;TKey, TValue&gt; implements class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.IReadOnlyDictionary`2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TKey" />
+    <TypeParameter Name="TValue" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TKey">Der Typ der Schlüssel im Wörterbuch schreibgeschützt ist.</typeparam>
+    <typeparam name="TValue">Der Typ der Werte im schreibgeschützten Wörterbuch.</typeparam>
+    <summary>Stellt eine generische, schreibgeschützte Auflistung von Schlüssel-Wert-Paaren dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Element ist ein Schlüssel/Wert-Paar, die in gespeichert ist ein <xref:System.Collections.Generic.KeyValuePair%602> Objekt.  
+  
+ Jedes Paar muss einen eindeutigen Schlüssel aufweisen. Implementierungen können je nach gibt an, ob sie Ihnen die ermöglichen Angabe ein Schlüssels, der `null`. Der Wert kann `null` und muss nicht eindeutig sein. Die <xref:System.Collections.Generic.IDictionary%602> Schnittstelle ermöglicht es, die Schlüssel und Werte aufgelistet werden sollen, aber es keine bestimmte Sortierreihenfolge nicht impliziert.  
+  
+ Die `foreach` -Anweisung der Programmiersprache c# (`For Each` in Visual Basic `for each` in C++) muss der Typ jedes Elements in der Auflistung. Da jedes Element der <xref:System.Collections.Generic.IReadOnlyDictionary%602> Schnittstelle ist ein Schlüssel/Wert-Paar, der Elementtyp nicht den Typ des Schlüssels oder den Typ des Werts. Stattdessen ist der Typ des Elements <xref:System.Collections.Generic.KeyValuePair%602>, wie das folgende Beispiel veranschaulicht.  
+  
+ [!code-cpp[Generic.IDictionary#11](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source2.cpp#11)]
+ [!code-csharp[Generic.IDictionary#11](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source2.cs#11)]
+ [!code-vb[Generic.IDictionary#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source2.vb#11)]  
+  
+ Die `foreach` Anweisung ist ein Wrapper um den Enumerator; es kann nur das Lesen aus der Auflistung, nicht das Schreiben in die Auflistung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public bool ContainsKey (TKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(!TKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.IReadOnlyDictionary`2.ContainsKey(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der zu suchende Schlüssel.</param>
+        <summary>Bestimmt, ob das Wörterbuch schreibgeschützt ein Element mit den angegebenen Schlüssel enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn das Wörterbuch schreibgeschützt sind und ein Element, die dem angegebenen Schlüssel enthält enthält; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementierungen können variieren, bestimmen die Gleichheit von Objekten. beispielsweise die Klasse, die implementiert <xref:System.Collections.Generic.IReadOnlyDictionary%602> können die <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> -Eigenschaft, oder er kann implementieren die <xref:System.Collections.Generic.IComparer%601> Methode.  
+  
+ Implementierungen können variieren, ob sie ermöglichen `key` werden `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public TValue this[TKey key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TValue Item(!TKey)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.IReadOnlyDictionary`2.Item(`0)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der zu suchende Schlüssel.</param>
+        <summary>Ruft das Element mit dem angegebenen Schlüssel im schreibgeschützten Wörterbuch ab.</summary>
+        <value>Das Element, das dem angegebenen Schlüssel im Wörterbuch schreibgeschützt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie ein bestimmtes Element in der Auflistung mithilfe folgenden Syntax zugreifen: `myCollection[key]` (`myCollection(key)` in Visual Basic).  
+  
+ Implementierungen können variieren, bestimmen die Gleichheit von Objekten: z. B. Klasse, die implementiert <xref:System.Collections.Generic.IReadOnlyDictionary%602> können die <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> -Eigenschaft, oder er kann implementieren die <xref:System.Collections.Generic.IComparer%601> Methode.  
+  
+ Implementierungen können variieren, ob sie ermöglichen `key` werden `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">Die Eigenschaft wird abgerufen und <paramref name="key" /> wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;TKey&gt; Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;!TKey&gt; Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.IReadOnlyDictionary`2.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TKey&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine aufzählbare Auflistung ab, die die Schlüssel im schreibgeschützten Wörterbuch enthält.</summary>
+        <value>Eine aufzählbare Sammlung, die die Schlüssel im schreibgeschützten Wörterbuch enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge der Schlüssel in der zählbaren Auflistung ist nicht angegeben, aber die Implementierung muss sicherstellen, dass die Schlüssel in der gleichen Reihenfolge wie die entsprechenden Werte in der zählbaren Auflistung, die von zurückgegeben wird, sind die <xref:System.Collections.Generic.IReadOnlyDictionary%602.Values%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public bool TryGetValue (TKey key, out TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetValue(!TKey key, [out] !TValue&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.IReadOnlyDictionary`2.TryGetValue(`0,`1@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der zu suchende Schlüssel.</param>
+        <param name="value">Bei der Rückgabe dieser Methode den zugeordneten Wert mit dem angegebenen Schlüssel, wenn der Schlüssel gefunden wird; andernfalls der Standardwert für den Typ der <c>Wert</c> Parameter. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Ruft den Wert, der mit dem angegebenen Schlüssel zugeordnet ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt, die implementiert die <see cref="T:System.Collections.Generic.IReadOnlyDictionary`2" /> Schnittstelle enthält ein Element mit dem angegebenen Schlüssel ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kombiniert die Funktionalität der <xref:System.Collections.Generic.IReadOnlyDictionary%602.ContainsKey%2A> Methode und die <xref:System.Collections.Generic.IReadOnlyDictionary%602.Item%2A> Eigenschaft.  
+  
+ Wenn der Schlüssel nicht gefunden wird, die `value` Parameter Ruft den entsprechenden Standardwert für den Typ `TValue`: z. B. 0 (null) für ganzzahlige Typen, `false` für boolesche Typen und `null` für Verweistypen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;TValue&gt; Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;!TValue&gt; Values" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.IReadOnlyDictionary`2.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine aufzählbare Auflistung ab, die die Werte im schreibgeschützten Wörterbuch enthält.</summary>
+        <value>Eine aufzählbare Sammlung, die die Werte im schreibgeschützten Wörterbuch enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge der Werte in der zählbaren Auflistung ist nicht angegeben, aber die Implementierung muss sicherstellen, dass die Werte in der gleichen Reihenfolge wie die entsprechenden Schlüssel in der zählbaren Auflistung, die von zurückgegeben wird, sind die <xref:System.Collections.Generic.IReadOnlyDictionary%602.Keys%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

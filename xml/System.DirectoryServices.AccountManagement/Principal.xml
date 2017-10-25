@@ -1,0 +1,1058 @@
+<Type Name="Principal" FullName="System.DirectoryServices.AccountManagement.Principal">
+  <TypeSignature Language="C#" Value="public abstract class Principal : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Principal extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.AccountManagement.Principal" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Name ( {Name} )")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Kapselt die Kontodaten und Vorgänge für alle Sicherheitsprinzipale. Dies ist die abstrakte Basisklasse, die alle Prinzipale abgeleitet sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzerdefinierte Erweiterungsklassen, die von dieser Klasse ableiten können Aufruf dieses Konstruktors vom Konstruktor abgeleiteten Klasse die Basisklasse der Klasse initialisiert werden. Weitere Informationen finden Sie unter der [Principal Extensions](http://msdn.microsoft.com/en-us/49d1b257-d652-4224-bdae-2edabced8f00) Übersichtsthema.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Principal ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.DirectoryServices.AccountManagement.Principal" />-Klasse. Dieser Konstruktor wird von abgeleiteten Klasse Konstruktoren initialisieren die Basisklasse aufgerufen und sollte nicht direkt aus Ihrem Code aufgerufen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzerdefinierte Erweiterungsklassen, die von dieser Klasse ableiten können Aufruf dieses Konstruktors vom Konstruktor abgeleiteten Klasse die Basisklasse der Klasse initialisiert werden. Weitere Informationen finden Sie unter der [Principal Extensions](http://msdn.microsoft.com/en-us/49d1b257-d652-4224-bdae-2edabced8f00) Übersichtsthema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckDisposedOrDeleted">
+      <MemberSignature Language="C#" Value="protected void CheckDisposedOrDeleted ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckDisposedOrDeleted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.CheckDisposedOrDeleted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die <see cref="M:System.DirectoryServices.AccountManagement.Principal.Dispose" /> oder <see cref="M:System.DirectoryServices.AccountManagement.Principal.Delete" /> Methoden dieser Klasse aufgerufen wurden. Diese Methode wird von Klassen aufgerufen, die von diesem Prinzipal Klasse abgeleitet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft, ob das Objekt verworfen wurde, bevor sie bestimmt, ob er gelöscht wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="M:System.DirectoryServices.AccountManagement.Principal.Dispose" /> Methode auf das Prinzipalobjekt aufgerufen wurde.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="M:System.DirectoryServices.AccountManagement.Principal.Delete" /> Methode auf das Prinzipalobjekt aufgerufen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.AccountManagement.PrincipalContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.AccountManagement.PrincipalContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.PrincipalContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die einen Prinzipal Kontext, der den Prinzipal zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> -Objekt, das die diesem Prinzipal zugeordneten Kontext enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextRaw">
+      <MemberSignature Language="C#" Value="protected System.DirectoryServices.AccountManagement.PrincipalContext ContextRaw { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.AccountManagement.PrincipalContext ContextRaw" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.ContextRaw" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.PrincipalContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die einen Prinzipal Kontext, der diesem Prinzipal zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> -Objekt, das die diesem Prinzipal zugeordneten Kontext enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextType">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.AccountManagement.ContextType ContextType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.AccountManagement.ContextType ContextType" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.ContextType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.ContextType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Kontexttyps Kontexttyp, der den Typ der Prinzipal Kontext, die diesem Prinzipal zugeordneten angibt.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.AccountManagement.ContextType" /> -Enumerationswert, der den Kontext angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Kontexttyp festgelegt ist, den Prinzipal Context-Objekts in der <xref:System.DirectoryServices.AccountManagement.PrincipalContext> Konstruktor. Der Wert gespeichert, die in dieser Klasse zugeordnet ist die <xref:System.DirectoryServices.AccountManagement.PrincipalContext.ContextType%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht das principal-Objekt aus dem Speicher.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Das Objekt, das nicht im Speicher beibehalten wird.  
+  
+ Das Objekt wurde bereits gelöscht.  
+  
+ Der Ziel-Kontexttyp muss den Kontexttyp des aktuellen Prinzipals übereinstimmen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschreibung des Prinzipals.</summary>
+        <value>Der Beschreibungstext für den Prinzipal, oder Null, wenn keine Beschreibung vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Anzeigenamen für diesen Prinzipal.</summary>
+        <value>Die Anzeige für diesen Prinzipal oder null, wenn kein Anzeigename vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verwirft die aktuelle Instanz des <see cref="T:System.DirectoryServices.AccountManagement.Principal" />-Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistinguishedName">
+      <MemberSignature Language="C#" Value="public string DistinguishedName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DistinguishedName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.DistinguishedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den distinguished Name (DN) für diesen Prinzipal an.</summary>
+        <value>Der DN für den Prinzipal, oder Null, wenn kein DN vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Die <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> -Objekt, das mit der aktuellen Instanz verglichen wird.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das bereitgestellte Objekt und das aktuelle principal-Objekte den gleichen zugrunde liegenden Prinzipal im Speicher darstellen; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtensionGet">
+      <MemberSignature Language="C#" Value="protected object[] ExtensionGet (string attribute);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object[] ExtensionGet(string attribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.ExtensionGet(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attribute" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attribute">Der Name des abzurufenden Attributs.</param>
+        <summary>Ruft ein Attribut eines erweiterten Klassenobjekts ab.</summary>
+        <returns>Gibt ein Array aus Objekten oder <see langword="null" /> zurück, wenn kein Attribut mit diesem Namen vorhanden ist. Finden Sie unter [System.DirectoryServices.AccountManagement Principle Extensions](http://msdn.microsoft.com/en-us/49d1b257-d652-4224-bdae-2edabced8f00) ein Beispiel zur Verwendung dieser Funktion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtensionSet">
+      <MemberSignature Language="C#" Value="protected void ExtensionSet (string attribute, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ExtensionSet(string attribute, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.ExtensionSet(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attribute" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="attribute">Der Name des Attributs.</param>
+        <param name="value">Das Objekt, das den Wert des Attributs enthält.</param>
+        <summary>Legt den Wert eines Attributs in einer erweiterten Klasse fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Finden Sie unter [System.DirectoryServices.AccountManagement Principle Extensions](http://msdn.microsoft.com/en-us/49d1b257-d652-4224-bdae-2edabced8f00) für ein Beispiel für diese Funktion.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByIdentity">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.AccountManagement.Principal FindByIdentity (System.DirectoryServices.AccountManagement.PrincipalContext context, string identityValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.AccountManagement.Principal FindByIdentity(class System.DirectoryServices.AccountManagement.PrincipalContext context, string identityValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.FindByIdentity(System.DirectoryServices.AccountManagement.PrincipalContext,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.Principal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+        <Parameter Name="identityValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" />, der den Server oder die Domäne angibt, für den bzw. die Vorgänge ausgeführt werden.</param>
+        <param name="identityValue">Die Identität des Prinzipals. Dieser Parameter kann ein beliebiges Format aufweisen, das in der <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" />-Enumeration enthalten ist.</param>
+        <summary>Gibt ein Hauptobjekt, das dem angegebenen Identitätswert übereinstimmt.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.AccountManagement.Principal" />-Objekt, das dem angegebenen Identitätswert und -typ entspricht, oder NULL, wenn keine Übereinstimmungen gefunden werden.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.MultipleMatchesException">Es wurden mehrere Prinzipalobjekte gefunden, die dem aktuellen Objekt entsprechen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByIdentity">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.AccountManagement.Principal FindByIdentity (System.DirectoryServices.AccountManagement.PrincipalContext context, System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.AccountManagement.Principal FindByIdentity(class System.DirectoryServices.AccountManagement.PrincipalContext context, valuetype System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.FindByIdentity(System.DirectoryServices.AccountManagement.PrincipalContext,System.DirectoryServices.AccountManagement.IdentityType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.Principal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+        <Parameter Name="identityType" Type="System.DirectoryServices.AccountManagement.IdentityType" />
+        <Parameter Name="identityValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" />, der den Server oder die Domäne angibt, für den bzw. die Vorgänge ausgeführt werden.</param>
+        <param name="identityType">Ein <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> -Enumerationswert, der angibt, das Format der <c>IdentityValue</c> Parameter.</param>
+        <param name="identityValue">Die Identität des Prinzipals. Dieser Parameter kann ein beliebiges Format aufweisen, das in der <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" />-Enumeration enthalten ist.</param>
+        <summary>Gibt ein Prinzipalobjekt zurück, das dem angegebenen Identitätstyp und -wert entspricht. Diese Version der <see cref="M:System.DirectoryServices.AccountManagement.Principal.FindByIdentity(System.DirectoryServices.AccountManagement.PrincipalContext,System.DirectoryServices.AccountManagement.IdentityType,System.String)" />-Methode bestimmt das Format des Identitätswerts.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.AccountManagement.Principal" />-Objekt, das dem angegebenen Identitätswert und -typ entspricht, oder NULL, wenn keine Übereinstimmungen gefunden werden.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.AccountManagement.MultipleMatchesException">Es wurden mehrere Prinzipalobjekte gefunden, die dem aktuellen Objekt entsprechen.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Identitätstyp ist kein gültiger <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" />-Enumerationswert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByIdentityWithType">
+      <MemberSignature Language="C#" Value="protected static System.DirectoryServices.AccountManagement.Principal FindByIdentityWithType (System.DirectoryServices.AccountManagement.PrincipalContext context, Type principalType, string identityValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.DirectoryServices.AccountManagement.Principal FindByIdentityWithType(class System.DirectoryServices.AccountManagement.PrincipalContext context, class System.Type principalType, string identityValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.FindByIdentityWithType(System.DirectoryServices.AccountManagement.PrincipalContext,System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.Principal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+        <Parameter Name="principalType" Type="System.Type" />
+        <Parameter Name="identityValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" />, der den Server oder die Domäne angibt, für den bzw. die Vorgänge ausgeführt werden.</param>
+        <param name="principalType">Der Typ des Objekts, die für die Ergebnisse zurückgegeben werden. Dies muss vom Typ <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> oder einen abgeleiteten Typ aus der <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> Klasse.</param>
+        <param name="identityValue">Die Identität des Prinzipals.</param>
+        <summary>Gibt ein Prinzipalobjekt zurück, das dem angegebenen Identitätstyp und -wert entspricht. Diese Methode wird aufgerufen, durch die Implementierung von der abgeleiteten Klasse **FindByIdentity** Methode, um die Suche auf den abgeleiteten Klassentyp zu beschränken und sollte nicht direkt aus Ihrem Code aufgerufen werden.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.AccountManagement.Principal" />-Objekt, das dem angegebenen Identitätswert und -typ entspricht, oder NULL, wenn keine Übereinstimmungen gefunden werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByIdentityWithType">
+      <MemberSignature Language="C#" Value="protected static System.DirectoryServices.AccountManagement.Principal FindByIdentityWithType (System.DirectoryServices.AccountManagement.PrincipalContext context, Type principalType, System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.DirectoryServices.AccountManagement.Principal FindByIdentityWithType(class System.DirectoryServices.AccountManagement.PrincipalContext context, class System.Type principalType, valuetype System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.FindByIdentityWithType(System.DirectoryServices.AccountManagement.PrincipalContext,System.Type,System.DirectoryServices.AccountManagement.IdentityType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.Principal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+        <Parameter Name="principalType" Type="System.Type" />
+        <Parameter Name="identityType" Type="System.DirectoryServices.AccountManagement.IdentityType" />
+        <Parameter Name="identityValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" />, der den Server oder die Domäne angibt, für den bzw. die Vorgänge ausgeführt werden.</param>
+        <param name="principalType">Der Typ des Objekts, die für die Ergebnisse zurückgegeben werden. Dies muss vom Typ <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> oder einen abgeleiteten Typ aus der <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> Klasse.</param>
+        <param name="identityType">Ein <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> -Enumerationswert ab, der den Typ des Identitätswerts angibt.</param>
+        <param name="identityValue">Die Identität des Prinzipals.</param>
+        <summary>Gibt ein Prinzipalobjekt zurück, das dem angegebenen Identitätstyp und -wert entspricht. Diese Methode wird aufgerufen, durch die Implementierung von der abgeleiteten Klasse **FindByIdentity** Methode, um die Suche auf den abgeleiteten Klassentyp zu beschränken und sollte nicht direkt aus Ihrem Code aufgerufen werden.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.AccountManagement.Principal" />-Objekt, das dem angegebenen Identitätswert und -typ entspricht, oder NULL, wenn keine Übereinstimmungen gefunden werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetGroups">
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt eine Auflistung von Gruppenobjekten, die die Gruppen angeben, der der aktuelle Prinzipal angehört.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser überladenen Methode gibt nur die Gruppen, von denen der Prinzipal direkt ein Element ist; Es werden keine rekursive Suchvorgänge ausgeführt. Rekursive Suchergebnisse stehen für Dienstprinzipalname Benutzerobjekte zur Verfügung. Weitere Informationen finden Sie unter der Methode <xref:System.DirectoryServices.AccountManagement.UserPrincipal.GetAuthorizationGroups%2A>.  
+  
+ Wenn der Prinzipale Speicher AD DS ist, enthält die Liste der Gruppen primäre Gruppe des Benutzers, die durch die primäre Gruppen-ID-Attribut in der AD DS-Objekt identifiziert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetGroups">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.AccountManagement.PrincipalSearchResult&lt;System.DirectoryServices.AccountManagement.Principal&gt; GetGroups ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.AccountManagement.PrincipalSearchResult`1&lt;class System.DirectoryServices.AccountManagement.Principal&gt; GetGroups() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.GetGroups" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.PrincipalSearchResult&lt;System.DirectoryServices.AccountManagement.Principal&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung von Gruppenobjekten, die die Gruppen angeben, der der aktuelle Prinzipal angehört.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> -Objekten, die die Gruppen angeben, von denen der aktuelle Prinzipal angehört.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt nur die Gruppen an, von denen der Prinzipal direkt ein Element ist; Es werden keine rekursive Suchvorgänge ausgeführt. Rekursive Suchergebnisse stehen für Dienstprinzipalname Benutzerobjekte zur Verfügung. Weitere Informationen finden Sie unter der Methode <xref:System.DirectoryServices.AccountManagement.UserPrincipal.GetAuthorizationGroups%2A>.  
+  
+ Die Gruppen, die von dieser Methode zurückgegeben werden können es sich um Gruppen von einem anderen Bereich und speichern als der Prinzipal enthalten. Z. B., wenn der Prinzipal ein AD DS-Objekt ist, einen DN sind "CN SpecialGroups, DC = Fabrikam, DC = = com, der zurückgegebenen Menge kann auch Gruppen, die zu gehören enthalten die" CN NormalGroups, DC = = Fabrikam, DC = com.  
+  
+ Wenn der aktuelle Prinzipal ein AD DS-Prinzipal ist, enthalten die zurückgegebenen Gruppen die primäre Gruppe des Prinzipals, an, wie vom "PrimaryGroupId"-Attribut für das AD DS-Objekt angegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGroups">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.AccountManagement.PrincipalSearchResult&lt;System.DirectoryServices.AccountManagement.Principal&gt; GetGroups (System.DirectoryServices.AccountManagement.PrincipalContext contextToQuery);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.AccountManagement.PrincipalSearchResult`1&lt;class System.DirectoryServices.AccountManagement.Principal&gt; GetGroups(class System.DirectoryServices.AccountManagement.PrincipalContext contextToQuery) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.GetGroups(System.DirectoryServices.AccountManagement.PrincipalContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.PrincipalSearchResult&lt;System.DirectoryServices.AccountManagement.Principal&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contextToQuery" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+      </Parameters>
+      <Docs>
+        <param name="contextToQuery">Die <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> -Objekt, das den Kontext angibt, für die die Abfrage ausgeführt wird.  
+  
+ Wenn der Kontext in einer anderen Domäne befindet, wird die Abfrage gegen den principal-Objekte Darstellung im angegebenen Kontext ausgeführt.</param>
+        <summary>Gibt eine Auflistung von Gruppenobjekten, die der Prinzipal angehört, die im Speicher zur Verfügung gestellt, von dem angegebenen Kontextparameter vorhanden ist.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> -Objekten, die die Gruppen angeben, von denen der aktuelle Prinzipal angehört.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt nur die Gruppen an, von denen der Prinzipal direkt ein Element ist; Es werden keine rekursive Suchvorgänge ausgeführt. Rekursive Suchergebnisse stehen für Dienstprinzipalname Benutzerobjekte zur Verfügung. Weitere Informationen finden Sie unter der Methode <xref:System.DirectoryServices.AccountManagement.UserPrincipal.GetAuthorizationGroups%2A>.  
+  
+ Die Gruppen, die von dieser Methode zurückgegeben werden können es sich um Gruppen von einem anderen Bereich und speichern als der Prinzipal enthalten. Z. B., wenn der Prinzipal ein AD DS-Objekt ist, einen DN sind "CN SpecialGroups, DC = Fabrikam, DC = = com, der zurückgegebenen Menge kann auch Gruppen, die zu gehören enthalten die" CN NormalGroups, DC = = Fabrikam, DC = com.  
+  
+ Wenn der aktuelle Prinzipal ein AD DS-Prinzipal ist, enthalten die zurückgegebenen Gruppen die primäre Gruppe von Prinzipalen, wie die primäre Gruppen-ID-Attribut für das AD DS-Objekt angegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode aus dem Inhalt der principal-Objekt, für die Verwendung in Hashalgorithmen und Datenstrukturen, z. B. einer Hashtabelle geeignet.</summary>
+        <returns>Ein Hashcode für den aktuellen Prinzipal.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnderlyingObject">
+      <MemberSignature Language="C#" Value="public object GetUnderlyingObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetUnderlyingObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.GetUnderlyingObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das zugrunde liegende <see cref="T:System.DirectoryServices.DirectoryEntry" />-Objekt zurück, das die Kontaktdaten für das Prinzipalobjekt bereitstellt.</summary>
+        <returns>Das zugrunde liegende <see cref="T:System.DirectoryServices.DirectoryEntry" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationExtension">Der aktuelle Prinzipal wurde nicht persistent gespeichert und besitzt kein zugeordnetes <see cref="T:System.DirectoryServices.DirectoryEntry" />-Objekt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnderlyingObjectType">
+      <MemberSignature Language="C#" Value="public Type GetUnderlyingObjectType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Type GetUnderlyingObjectType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.GetUnderlyingObjectType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den zugrunde liegenden Objekttyp zurück.</summary>
+        <returns>Der zugrunde liegenden Objekttyp. Für AD DS und AD LDS SAM der Typ ist <see cref="T:System.DirectoryServices.DirectoryEntry" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Guid">
+      <MemberSignature Language="C#" Value="public Nullable&lt;Guid&gt; Guid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Guid&gt; Guid" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.Guid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Guid&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die diesem Prinzipal zugeordnete GUID ab.</summary>
+        <value>Die Nullable <see cref="T:System.Guid" /> diesem Prinzipal zugeordnet oder null, wenn keine GUID vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird immer null zurück, wenn die <xref:System.DirectoryServices.AccountManagement.Principal.ContextType%2A> -Eigenschaft ist auf dem Computer festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMemberOf">
+      <MemberSignature Language="C#" Value="public bool IsMemberOf (System.DirectoryServices.AccountManagement.GroupPrincipal group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsMemberOf(class System.DirectoryServices.AccountManagement.GroupPrincipal group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.IsMemberOf(System.DirectoryServices.AccountManagement.GroupPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.DirectoryServices.AccountManagement.GroupPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="group">Die <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> -Objekt, für die Mitgliedschaft des Prinzipals bestimmt wird.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob der Prinzipal ein Mitglied der angegebenen Gruppe zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn der Prinzipal ein Mitglied der angegebenen Gruppe ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der aktuelle Prinzipal ein AD DS-Prinzipal ist, enthalten die zurückgegebenen Gruppen primäre Gruppe des Prinzipals, gekennzeichnet durch die primäre Gruppen-ID-Attribut für das AD DS-Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.AccountManagement.NoMatchingPrincipalException">Die <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> in der Gruppe angegebenen Parameter wurde nicht gefunden.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.MultipleMatchesException">Mehrere übereinstimmende <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> wurde gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMemberOf">
+      <MemberSignature Language="C#" Value="public bool IsMemberOf (System.DirectoryServices.AccountManagement.PrincipalContext context, System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsMemberOf(class System.DirectoryServices.AccountManagement.PrincipalContext context, valuetype System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.IsMemberOf(System.DirectoryServices.AccountManagement.PrincipalContext,System.DirectoryServices.AccountManagement.IdentityType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+        <Parameter Name="identityType" Type="System.DirectoryServices.AccountManagement.IdentityType" />
+        <Parameter Name="identityValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" />, der den Server oder die Domäne angibt, für den bzw. die Vorgänge ausgeführt werden.</param>
+        <param name="identityType">Ein <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> -Enumerationswert ab, der den Typ des Identitätswerts angibt.</param>
+        <param name="identityValue">Die Identität der Gruppe.</param>
+        <summary>Gibt einen booleschen Wert, der angibt, ob der Prinzipal ein Mitglied der Gruppe von Identity-Typ und Wert angegeben ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Prinzipal ein Mitglied der angegebenen Gruppe ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der aktuelle Prinzipal ein AD DS-Prinzipal ist, enthalten die zurückgegebenen Gruppen primäre Gruppe des Prinzipals, gekennzeichnet durch die primäre Gruppen-ID-Attribut für das AD DS-Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.AccountManagement.NoMatchingPrincipalException">Der Identitätstyp oder Wert entspricht einem <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" />.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.MultipleMatchesException">Mehrere übereinstimmende <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> wurde gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Prinzipals.</summary>
+        <value>Der Name des Prinzipals oder Null, wenn das Name-Attribut nicht festgelegt ist.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die Anwendung versucht, den Namen auf null festgelegt.</exception>
+        <exception cref="T:System.InvalidOperationException">Der zugrunde liegende Speicher unterstützt diese Eigenschaft nicht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SamAccountName">
+      <MemberSignature Language="C#" Value="public string SamAccountName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SamAccountName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.SamAccountName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den SAM-Kontonamen für diesen Prinzipal.</summary>
+        <value>Der SAM-Kontoname für den Prinzipal, oder Null, wenn kein Name festgelegt wurde.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die Anwendung versucht, den SAM-Kontonamen auf null festgelegt.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Anwendung versucht, den SAM-Kontonamen für einen beibehaltenen Prinzipal festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die vorgenommenen Änderungen auf das Prinzipalobjekt in den Speicher. Ist dies ein neues Hauptobjekt, fügt diese Methode es in den Speicher.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der Prinzipal wurde noch nicht mit verknüpften ein <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> Objekt.  
+  
+ Diesen Typ von Prinzipal kann nicht im Speicher nicht eingefügt werden.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalOperationException">Beim Speichern der Änderungen Tnso der Informationsspeicher oder das Aktualisieren der Gruppenmitgliedschaft im Speicher ist eine Ausnahme aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalExistsException">Der Prinzipal ist bereits im Speicher.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.PasswordException">Das Kennwort erfüllt nicht die komplexitätsanforderungen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.DirectoryServices.AccountManagement.PrincipalContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.DirectoryServices.AccountManagement.PrincipalContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.Save(System.DirectoryServices.AccountManagement.PrincipalContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" />, der den Server oder die Domäne angibt, für den bzw. die Vorgänge ausgeführt werden.</param>
+        <summary>Speichert die vorgenommenen Änderungen auf das Prinzipalobjekt in den Speicher. Ist dies ein neues Hauptobjekt, fügt diese Methode es in den angegebenen Kontext. Wenn der Prinzipal bereits beibehalten wurde, wird es aus dem ursprünglichen Kontext in den angegebenen Kontext verschoben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der angegebene Prinzipale Kontext aus dem vorhandenen Kontext abweicht, der Prinzipal wird in den angegebenen Kontext verschoben, und das principal-Objekt ist nicht mehr im alten Speicherort befindet. Wenn der angegebene Kontext mit dem vorhandenen Kontext identisch ist, speichert diese Methode die Updates, die vorgenommen wurden, auf das Prinzipalobjekt in den Speicher. Der Kontexttyp des angegebenen Kontexts muss denselben Typ wie der aktuelle Kontexttyp sein. Diese Methode kann nicht aufgerufen werden, mithilfe den Kontexttyp Computer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Prinzipal wurde noch nicht mit verknüpften ein <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> Objekt.  
+  
+ Diesen Typ von Prinzipal kann nicht im Speicher nicht eingefügt werden.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalOperationException">Beim Speichern der Änderungen in den Speicher oder Aktualisieren der Gruppenmitgliedschaft im Speicher ist eine Ausnahme aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalExistsException">Der Prinzipal ist bereits im Speicher.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.PasswordException">Das Kennwort erfüllt nicht die komplexitätsanforderungen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Sid">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.SecurityIdentifier Sid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.SecurityIdentifier Sid" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.Sid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.SecurityIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Sicherheits-ID (SID) des Prinzipals ab.</summary>
+        <value>Die <see cref="T:System.Security.Principal.SecurityIdentifier" /> für diesen Prinzipal oder null, wenn keine SID vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StructuralObjectClass">
+      <MemberSignature Language="C#" Value="public string StructuralObjectClass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StructuralObjectClass" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.StructuralObjectClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Verzeichnisattribut strukturellen Objektklasse ab.</summary>
+        <value>Die strukturelle Verzeichnisattribut Objektklasse.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Benutzer benutzerfreundliche Zeichenfolgendarstellung der aktuellen principal-Objekt zurück.</summary>
+        <returns>Eine Zeichenfolgendarstellung des aktuellen <see cref="T:System.DirectoryServices.AccountManagement.Principal" />-Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserPrincipalName">
+      <MemberSignature Language="C#" Value="public string UserPrincipalName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserPrincipalName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.UserPrincipalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den diesem Prinzipal zugeordneten Benutzerprinzipalnamen (User Principal Name, UPN) ab, oder legt diesen fest.</summary>
+        <value>Der diesem Prinzipal zugeordnete UPN oder NULL, wenn kein UPN festgelegt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen dieser Eigenschaft auf null entfernt, so wird die vorhandenen UPN, falls vorhanden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der zugrunde liegende Speicher unterstützt diese Eigenschaft nicht.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

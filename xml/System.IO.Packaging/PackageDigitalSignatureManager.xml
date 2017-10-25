@@ -1,0 +1,840 @@
+<Type Name="PackageDigitalSignatureManager" FullName="System.IO.Packaging.PackageDigitalSignatureManager">
+  <TypeSignature Language="C#" Value="public sealed class PackageDigitalSignatureManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PackageDigitalSignatureManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.PackageDigitalSignatureManager" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Hilfsklasse für die Erstellung und Überprüfung digitaler Signaturen in einem <see cref="T:System.IO.Packaging.Package" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.PackageDigitalSignatureManager>baut auf der Architektur des [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] digitale Signatur Klassen und stellt eine Dienstprogrammklasse für häufige Aufgaben bei der Verwendung von digitaler Signaturen mit <xref:System.IO.Packaging.Package> Elemente.  
+  
+ Weitere Informationen zu digitalen Paketsignaturen finden Sie im MSDN-Artikel Digital signieren Framework von der Open Packaging Conventions unter [http://go.microsoft.com/fwlink/?LinkId=74494](http://go.microsoft.com/fwlink/?LinkId=74494).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.IO.Packaging.PackageDigitalSignatureManager>.  Das vollständige Beispiel finden Sie unter [Erstellen eines Pakets mit einer digitalen Signatur](http://go.microsoft.com/fwlink/?LinkID=159966).  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PackageDigitalSignatureManager (System.IO.Packaging.Package package);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Packaging.Package package) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignatureManager.#ctor(System.IO.Packaging.Package)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="package" Type="System.IO.Packaging.Package" />
+      </Parameters>
+      <Docs>
+        <param name="package">Das Paket diese Signatur-Manager zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.Packaging.PackageDigitalSignatureManager" /> Klasse zur Verwendung mit einem angegebenen <see cref="T:System.IO.Packaging.Package" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Zielpaket, das den Signatur-Manager zugeordnet wird während der Initialisierung festgelegt werden. Nachdem sie festgelegt wurde, kann das Paket die Signatur-Manager zugeordnete geändert werden. Erstellen Sie eine neue Signatur-Manager für jedes Paket nach Bedarf.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung dieses Konstruktors veranschaulicht.  Das vollständige Beispiel finden Sie unter [Erstellen eines Pakets mit einer digitalen Signatur](http://go.microsoft.com/fwlink/?LinkID=159966).  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateOption">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.CertificateEmbeddingOption CertificateOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Packaging.CertificateEmbeddingOption CertificateOption" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignatureManager.CertificateOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.CertificateEmbeddingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Option zum Einbetten des X.509-Zertifikats ab oder legt diese fest, die von der <see cref="M:System.IO.Packaging.PackageDigitalSignatureManager.Sign(System.Collections.Generic.IEnumerable{System.Uri})" />-Methode zum digitalen Signieren von Paketteilen verwendet wird.</summary>
+        <value>Einer der <see cref="T:System.IO.Packaging.CertificateEmbeddingOption" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, in dem x. 509-Zertifikat des Signaturgebers beim digitalen Signieren von zwingend gespeichert werden.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft als Vorbereitung zum digitalen Signieren von den Teilen innerhalb eines Pakets festgelegt wird.  Das vollständige Beispiel finden Sie unter [Erstellen eines Pakets mit einer digitalen Signatur](http://go.microsoft.com/fwlink/?LinkID=159966).  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Countersign">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageDigitalSignature Countersign ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageDigitalSignature Countersign() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignatureManager.Countersign" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageDigitalSignature</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Signiert alle Signaturen im Paket mit einem vom Benutzer ausgewähltenX.509-Zertifikat gegen.</summary>
+        <returns>Die Signatur, die als Gegensignatur hinzugefügt wurde, oder <see langword="null" />, wenn kein Zertifikat gefunden wurde oder der Benutzer das Dialogfeld für die Zertifikatauswahl abgebrochen hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn kein x. 509-Zertifikat im Aufruf angegeben wird, wird diese Methode eine Zertifikatauswahl-Dialogfeld, das den Benutzer auffordert, wählen ein Zertifikat zum Signieren zu verwendende geöffnet.  
+  
+ Legen Sie in der das Fensterhandle der <xref:System.IO.Packaging.PackageDigitalSignatureManager.ParentWindow%2A> Eigenschaft vor dem Aufruf <xref:System.IO.Packaging.PackageDigitalSignatureManager.Countersign%2A> um das Dialogfeld für die Zertifikatauswahl auf das angegebene Fenster modal zu machen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Countersign">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageDigitalSignature Countersign (System.Security.Cryptography.X509Certificates.X509Certificate certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageDigitalSignature Countersign(class System.Security.Cryptography.X509Certificates.X509Certificate certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignatureManager.Countersign(System.Security.Cryptography.X509Certificates.X509Certificate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageDigitalSignature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Das X.509-Zertifikat, das als Gegensignatur hinzugefügt werden soll.</param>
+        <summary>Signiert alle Signaturen im Paket mit einem angegebenen X.509-Zertifikat gegen.</summary>
+        <returns>Die Signatur, die als Gegensignatur hinzugefügt wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Countersign">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageDigitalSignature Countersign (System.Security.Cryptography.X509Certificates.X509Certificate certificate, System.Collections.Generic.IEnumerable&lt;Uri&gt; signatures);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageDigitalSignature Countersign(class System.Security.Cryptography.X509Certificates.X509Certificate certificate, class System.Collections.Generic.IEnumerable`1&lt;class System.Uri&gt; signatures) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignatureManager.Countersign(System.Security.Cryptography.X509Certificates.X509Certificate,System.Collections.Generic.IEnumerable{System.Uri})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageDigitalSignature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+        <Parameter Name="signatures" Type="System.Collections.Generic.IEnumerable&lt;System.Uri&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Das x. 509-Zertifikat zum gegensignieren jeder der angegebenen <c>Signaturen</c>.</param>
+        <param name="signatures">Die Liste der Signaturen, die gegensigniert werden sollen.</param>
+        <summary>Signiert eine Liste von Signaturen mit einem angegebenen X.509-Zertifikat gegen.</summary>
+        <returns>Die digitale Signatur, die zum Gegensignieren jeder der <paramref name="signatures" /> verwendet wird.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Entweder der <paramref name="certificate" />- oder der <paramref name="signatures" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Das Paket enthält keine signierten <see cref="T:System.IO.Packaging.PackagePart" />-Objekte.</exception>
+        <exception cref="T:System.ArgumentException">Das Paket enthält keine <see cref="T:System.IO.Packaging.PackageDigitalSignature" />-Teile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultHashAlgorithm">
+      <MemberSignature Language="C#" Value="public static string DefaultHashAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string DefaultHashAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignatureManager.DefaultHashAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Zeichenfolge, identifiziert der Standardhashalgorithmus, der zum Erstellen und Überprüfen von Signaturen verwendet.</summary>
+        <value>Ein [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Zeichenfolge, identifiziert der Standardhashalgorithmus, der zum Erstellen und Überprüfen von Signaturen verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardhashalgorithmus für den Standard <xref:System.IO.Packaging.PackageDigitalSignatureManager> Klasse ist <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA1Url> ([!INCLUDE[TLA#tla_sha1](~/includes/tlasharptla-sha1-md.md)]).  
+  
+ Die <xref:System.IO.Packaging.PackageDigitalSignatureManager.HashAlgorithm%2A> Eigenschaft ruft ab oder legt den tatsächlichen Hashalgorithmus dient zum Erstellen und Überprüfen von Signaturen.  
+  
+ Die <xref:System.IO.Packaging.PackageDigitalSignatureManager.DefaultHashAlgorithm%2A> Eigenschaft dient normalerweise zum Zurücksetzen der <xref:System.IO.Packaging.PackageDigitalSignatureManager.HashAlgorithm%2A> Eigenschaft an Standardeinstellung nach einer temporären Änderung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSignature">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageDigitalSignature GetSignature (Uri signatureUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageDigitalSignature GetSignature(class System.Uri signatureUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignatureManager.GetSignature(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageDigitalSignature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signatureUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="signatureUri">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] der digitalen Signatur zurückgegeben.</param>
+        <summary>Gibt die digitale Signatur für einen angegebenen Signatur- [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].</summary>
+        <returns>Die digitale Signatur für den angegebenen <paramref name="signatureUri" />, oder <see langword="null" /> Wenn eine Signatur für den angegebenen <paramref name="signatureUri" /> wurde nicht gefunden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashAlgorithm">
+      <MemberSignature Language="C#" Value="public string HashAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HashAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignatureManager.HashAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Bezeichner für die <see cref="T:System.Security.Cryptography.HashAlgorithm" /> Instanz, die zum Erstellen und Überprüfen von Signaturen verwendet.</summary>
+        <value>Die <see cref="T:System.Security.Cryptography.Xml.SignedXml" /> [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Bezeichner für die <see cref="T:System.Security.Cryptography.HashAlgorithm" /> Instanz, die zum Erstellen und Überprüfen von Signaturen verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardhashalgorithmus-Bezeichner für den standardmäßigen digitale Signatur-Manager ist <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA1Url> (<xref:System.Security.Cryptography.SHA1>– Secure Hash-Algorithmus Version 1.0).  
+  
+ Sofern nicht explizit anders festgelegt, diese Eigenschaft den gleichen Wert wie ruft <xref:System.IO.Packaging.PackageDigitalSignatureManager.DefaultHashAlgorithm%2A>.  
+  
+ Die <xref:System.IO.Packaging.PackageDigitalSignatureManager.HashAlgorithm%2A> Eigenschaft wird vom Standardwert in der Regel nicht geändert. Diese Eigenschaft muss geändert werden, nur, wenn eine Signatur, die einen anderen bekannten verwendet und zugänglich <xref:System.Security.Cryptography.HashAlgorithm> festgestellt wird.  Mit der Signatur, die einen anderen Hash-Algorithmus wird verwendet, rufen Sie abschließend <xref:System.IO.Packaging.PackageDigitalSignatureManager.DefaultHashAlgorithm%2A> zum Zurücksetzen der <xref:System.IO.Packaging.PackageDigitalSignatureManager.HashAlgorithm%2A> Eigenschaft auf die Standardwerte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Zeichenfolge für die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] festzulegende ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Zeichenfolge für die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] festzulegende ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidSignatureEvent">
+      <MemberSignature Language="C#" Value="public event System.IO.Packaging.InvalidSignatureEventHandler InvalidSignatureEvent;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.IO.Packaging.InvalidSignatureEventHandler InvalidSignatureEvent" />
+      <MemberSignature Language="DocId" Value="E:System.IO.Packaging.PackageDigitalSignatureManager.InvalidSignatureEvent" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.InvalidSignatureEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn <see cref="M:System.IO.Packaging.PackageDigitalSignatureManager.VerifySignatures(System.Boolean)" /> trifft eine ungültige Signatur.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSigned">
+      <MemberSignature Language="C#" Value="public bool IsSigned { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSigned" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignatureManager.IsSigned" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Paket Signaturen enthält.</summary>
+        <value>
+          <see langword="true" />Wenn das Paket Signaturen enthält; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Packaging.PackageDigitalSignatureManager.IsSigned%2A> Eigenschaft keine Signatur Überprüfungen ausgeführt. Wenn die Signaturen vorhanden sind und <xref:System.IO.Packaging.PackageDigitalSignatureManager.IsSigned%2A> ist `true`, mindestens einer der Signaturen ist möglicherweise nicht gültig.  Rufen Sie <xref:System.IO.Packaging.PackageDigitalSignatureManager.VerifySignatures%2A> zu bestätigen, dass die Signaturen gültig sind und nicht geändert wurden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.IO.Packaging.PackageDigitalSignatureManager.IsSigned%2A> Eigenschaft, um zu bestimmen, ob ein Paket digitale Signaturen enthält.  Das vollständige Beispiel finden Sie unter [Erstellen eines Pakets mit einer digitalen Signatur](http://go.microsoft.com/fwlink/?LinkID=159966).  
+  
+ [!code-csharp[PackageDigitalSignature#PackageDigSigValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageDigitalSignature/CSharp/PackageDigitalSignature.cs#packagedigsigvalidate)]
+ [!code-vb[PackageDigitalSignature#PackageDigSigValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageDigitalSignature/visualbasic/packagedigitalsignature.vb#packagedigsigvalidate)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentWindow">
+      <MemberSignature Language="C#" Value="public IntPtr ParentWindow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int ParentWindow" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignatureManager.ParentWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Handle für das übergeordnete Fenster für die Anzeige einer Zertifikatauswahl-Dialogfeld.</summary>
+        <value>Das Handle des übergeordneten Fensters zu verwenden, um die Zertifikatauswahl-Dialogfeld anzuzeigen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Zertifikatauswahl-Dialogfeld wird angezeigt, nur dann, wenn eine <xref:System.IO.Packaging.PackageDigitalSignatureManager.Sign%2A> Aufruf enthält keine Zertifikate. Wenn keine Zertifikate angegeben werden, <xref:System.IO.Packaging.PackageDigitalSignatureManager.Sign%2A> eine Zertifikatauswahl-Dialogfeld, das dem Benutzer ermöglicht, welches Zertifikat zum Signieren zu verwendende auswählen wird angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAllSignatures">
+      <MemberSignature Language="C#" Value="public void RemoveAllSignatures ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAllSignatures() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignatureManager.RemoveAllSignatures" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle digitale Signaturen aus dem Paket.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entfernt auch alle x. 509-Zertifikate aus dem Paket.  Rufen Sie nach dem Entfernen alle Signaturen und Zertifikate, <xref:System.IO.Packaging.Package.Flush%2A> alle Änderungen an den Speicher beibehalten werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSignature">
+      <MemberSignature Language="C#" Value="public void RemoveSignature (Uri signatureUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveSignature(class System.Uri signatureUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignatureManager.RemoveSignature(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signatureUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="signatureUri">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des zu entfernenden <see cref="T:System.IO.Packaging.PackageDigitalSignature" />.</param>
+        <summary>Entfernt die digitale Signatur mit einem angegebenen Signatur- [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entfernt auch das zugeordnete x. 509-Zertifikat aus, wenn keine andere digitale Signatur nicht darauf verwiesen wird.  
+  
+ Rufen Sie nach dem Entfernen einer Signatur <xref:System.IO.Packaging.Package.Flush%2A> die Änderung im Speicher beibehalten werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Sign">
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Signiert eine Liste von Paketteilen mit einem angegebenen X.509-Zertifikat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Schritte zum Signieren einer Liste der Teile in einer <xref:System.IO.Packaging.Package>.  Das vollständige Beispiel finden Sie unter [Erstellen eines Pakets mit einer digitalen Signatur](http://go.microsoft.com/fwlink/?LinkID=159966).  
+  
+ [!code-csharp[PackageDigitalSignature#PackageDigSigSign](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageDigitalSignature/CSharp/PackageDigitalSignature.cs#packagedigsigsign)]
+ [!code-vb[PackageDigitalSignature#PackageDigSigSign](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageDigitalSignature/visualbasic/packagedigitalsignature.vb#packagedigsigsign)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageDigitalSignature Sign (System.Collections.Generic.IEnumerable&lt;Uri&gt; parts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageDigitalSignature Sign(class System.Collections.Generic.IEnumerable`1&lt;class System.Uri&gt; parts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignatureManager.Sign(System.Collections.Generic.IEnumerable{System.Uri})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageDigitalSignature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parts" Type="System.Collections.Generic.IEnumerable&lt;System.Uri&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="parts">Die Liste der [!INCLUDE[TLA#tla_uri#plural](~/includes/tlasharptla-urisharpplural-md.md)] für die <see cref="T:System.IO.Packaging.PackagePart" /> zu signierende Elemente an.</param>
+        <summary>Fordert vom Benutzer ein X.509-Zertifikat an, mit dem dann eine angegebene Liste der Paketteile digital signiert wird.</summary>
+        <returns>Die digitale Signatur, die zum Signieren der Liste von <paramref name="parts" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um das Dialogfeld für die Zertifikatauswahl für ein bestimmtes Fenster modal zu machen, legen Sie die <xref:System.IO.Packaging.PackageDigitalSignatureManager.ParentWindow%2A> Eigenschaft vor dem Aufruf <xref:System.IO.Packaging.PackageDigitalSignatureManager.Sign%2A>.  
+  
+ <xref:System.IO.Packaging.PackageDigitalSignatureManager.Sign%2A>wird nicht für Zertifikate angefordert werden, wenn keine im Standardzertifikatspeicher vorhanden sind.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Liste der Paketteile digital signiert wird.  Das vollständige Beispiel finden Sie unter der [Erstellen eines Pakets mit einer digitalen Signatur](http://go.microsoft.com/fwlink/?LinkID=159966).  
+  
+ [!code-csharp[PackageDigitalSignature#PackageDigSigSign](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageDigitalSignature/CSharp/PackageDigitalSignature.cs#packagedigsigsign)]
+ [!code-vb[PackageDigitalSignature#PackageDigSigSign](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageDigitalSignature/visualbasic/packagedigitalsignature.vb#packagedigsigsign)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageDigitalSignature Sign (System.Collections.Generic.IEnumerable&lt;Uri&gt; parts, System.Security.Cryptography.X509Certificates.X509Certificate certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageDigitalSignature Sign(class System.Collections.Generic.IEnumerable`1&lt;class System.Uri&gt; parts, class System.Security.Cryptography.X509Certificates.X509Certificate certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignatureManager.Sign(System.Collections.Generic.IEnumerable{System.Uri},System.Security.Cryptography.X509Certificates.X509Certificate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageDigitalSignature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parts" Type="System.Collections.Generic.IEnumerable&lt;System.Uri&gt;" />
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+      </Parameters>
+      <Docs>
+        <param name="parts">Die Liste der [!INCLUDE[TLA#tla_uri#plural](~/includes/tlasharptla-urisharpplural-md.md)] für die <see cref="T:System.IO.Packaging.PackagePart" /> zu signierende Elemente an.</param>
+        <param name="certificate">Das x. 509-Zertifikat zum digitalen Signieren jedes der angegebenen <c>Teile</c>.</param>
+        <summary>Signiert eine Liste von Paketteilen mit einem angegebenen X.509-Zertifikat.</summary>
+        <returns>Die digitale Signatur, die zum Signieren der angegebenen Liste von <paramref name="parts" />; oder <see langword="null" /> Wenn kein Zertifikat gefunden wurde oder der Benutzer auf "Abbrechen", in die Zertifikatauswahl-Dialogfeld geklickt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum digitalen Signieren von eine Liste mit Teilen innerhalb einer <xref:System.IO.Packaging.Package>.  Das vollständige Beispiel finden Sie unter der [Erstellen eines Pakets mit einer digitalen Signatur](http://go.microsoft.com/fwlink/?LinkID=159966).  
+  
+ [!code-csharp[PackageDigitalSignature#PackageDigSigSign](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageDigitalSignature/CSharp/PackageDigitalSignature.cs#packagedigsigsign)]
+ [!code-vb[PackageDigitalSignature#PackageDigSigSign](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageDigitalSignature/visualbasic/packagedigitalsignature.vb#packagedigsigsign)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageDigitalSignature Sign (System.Collections.Generic.IEnumerable&lt;Uri&gt; parts, System.Security.Cryptography.X509Certificates.X509Certificate certificate, System.Collections.Generic.IEnumerable&lt;System.IO.Packaging.PackageRelationshipSelector&gt; relationshipSelectors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageDigitalSignature Sign(class System.Collections.Generic.IEnumerable`1&lt;class System.Uri&gt; parts, class System.Security.Cryptography.X509Certificates.X509Certificate certificate, class System.Collections.Generic.IEnumerable`1&lt;class System.IO.Packaging.PackageRelationshipSelector&gt; relationshipSelectors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignatureManager.Sign(System.Collections.Generic.IEnumerable{System.Uri},System.Security.Cryptography.X509Certificates.X509Certificate,System.Collections.Generic.IEnumerable{System.IO.Packaging.PackageRelationshipSelector})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageDigitalSignature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parts" Type="System.Collections.Generic.IEnumerable&lt;System.Uri&gt;" />
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+        <Parameter Name="relationshipSelectors" Type="System.Collections.Generic.IEnumerable&lt;System.IO.Packaging.PackageRelationshipSelector&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="parts">Die Liste der [!INCLUDE[TLA#tla_uri#plural](~/includes/tlasharptla-urisharpplural-md.md)] für die <see cref="T:System.IO.Packaging.PackagePart" /> zu signierende Objekte an.</param>
+        <param name="certificate">Das X.509-Zertifikat, mit dem jedes der angegebenen Teile und jede der angegebenen Beziehungen digital signiert werden soll.</param>
+        <param name="relationshipSelectors">Die Liste der <see cref="T:System.IO.Packaging.PackageRelationship" /> zu signierende Objekte an.</param>
+        <summary>Signiert eine Liste von Paketteilen und Paketbeziehungen mit einem angegebenen X.509-Zertifikat.</summary>
+        <returns>Die digitale Signatur verwendet, um die Elemente im angegebenen signiert die <paramref name="parts" /> und <paramref name="relationshipSelectors" /> aufgeführt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwischen `parts` und `relationshipSelectors` muss mindestens ein Element zum Signieren von vorhanden sein.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Liste der Paketteile digital signiert wird.  Das vollständige Beispiel finden Sie unter der [Erstellen eines Pakets mit einer digitalen Signatur](http://go.microsoft.com/fwlink/?LinkID=159966).  
+  
+ [!code-csharp[PackageDigitalSignature#PackageDigSigSign](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageDigitalSignature/CSharp/PackageDigitalSignature.cs#packagedigsigsign)]
+ [!code-vb[PackageDigitalSignature#PackageDigSigSign](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageDigitalSignature/visualbasic/packagedigitalsignature.vb#packagedigsigsign)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Weder <paramref name="parts" /> noch <paramref name="relationshipSelectors" /> geben zu signierende Objekte an.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageDigitalSignature Sign (System.Collections.Generic.IEnumerable&lt;Uri&gt; parts, System.Security.Cryptography.X509Certificates.X509Certificate certificate, System.Collections.Generic.IEnumerable&lt;System.IO.Packaging.PackageRelationshipSelector&gt; relationshipSelectors, string signatureId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageDigitalSignature Sign(class System.Collections.Generic.IEnumerable`1&lt;class System.Uri&gt; parts, class System.Security.Cryptography.X509Certificates.X509Certificate certificate, class System.Collections.Generic.IEnumerable`1&lt;class System.IO.Packaging.PackageRelationshipSelector&gt; relationshipSelectors, string signatureId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignatureManager.Sign(System.Collections.Generic.IEnumerable{System.Uri},System.Security.Cryptography.X509Certificates.X509Certificate,System.Collections.Generic.IEnumerable{System.IO.Packaging.PackageRelationshipSelector},System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageDigitalSignature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parts" Type="System.Collections.Generic.IEnumerable&lt;System.Uri&gt;" />
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+        <Parameter Name="relationshipSelectors" Type="System.Collections.Generic.IEnumerable&lt;System.IO.Packaging.PackageRelationshipSelector&gt;" />
+        <Parameter Name="signatureId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parts">Die Liste der [!INCLUDE[TLA#tla_uri#plural](~/includes/tlasharptla-urisharpplural-md.md)] für die <see cref="T:System.IO.Packaging.PackagePart" /> zu signierende Objekte an.</param>
+        <param name="certificate">Das X.509-Zertifikat, mit dem jedes der angegebenen Teile und jede der angegebenen Beziehungen digital signiert werden soll.</param>
+        <param name="relationshipSelectors">Die Liste der <see cref="T:System.IO.Packaging.PackageRelationship" /> zu signierende Objekte an.</param>
+        <param name="signatureId">Eine ID-Zeichenfolge, die der Signatur zugeordnet werden soll.</param>
+        <summary>Signiert eine Liste von paketteilen und paketbeziehungen mit einem angegebenen x. 509-Zertifikat und [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)].</summary>
+        <returns>Die digitale Signatur verwendet, um die Elemente im angegebenen signiert die <paramref name="parts" /> und <paramref name="relationshipSelectors" /> aufgeführt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `parts` Liste kann leer sein oder `null` Wenn `relationshipSelectors` mindestens einen Eintrag enthält.  
+  
+ Die `relationshipSelectors` Liste kann leer sein oder `null` Wenn `parts` mindestens einen Eintrag enthält.  
+  
+ Zwischen der `parts` Liste und `relationshipSelectors` muss mindestens ein Element zum Signieren von vorhanden sein.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Liste der Paketteile digital signiert wird.  Das vollständige Beispiel finden Sie unter der [Erstellen eines Pakets mit einer digitalen Signatur](http://go.microsoft.com/fwlink/?LinkID=159966).  
+  
+ [!code-csharp[PackageDigitalSignature#PackageDigSigSign](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageDigitalSignature/CSharp/PackageDigitalSignature.cs#packagedigsigsign)]
+ [!code-vb[PackageDigitalSignature#PackageDigSigSign](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageDigitalSignature/visualbasic/packagedigitalsignature.vb#packagedigsigsign)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Weder <paramref name="parts" /> noch <paramref name="relationshipSelectors" /> geben zu signierende Elemente an.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageDigitalSignature Sign (System.Collections.Generic.IEnumerable&lt;Uri&gt; parts, System.Security.Cryptography.X509Certificates.X509Certificate certificate, System.Collections.Generic.IEnumerable&lt;System.IO.Packaging.PackageRelationshipSelector&gt; relationshipSelectors, string signatureId, System.Collections.Generic.IEnumerable&lt;System.Security.Cryptography.Xml.DataObject&gt; signatureObjects, System.Collections.Generic.IEnumerable&lt;System.Security.Cryptography.Xml.Reference&gt; objectReferences);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.PackageDigitalSignature Sign(class System.Collections.Generic.IEnumerable`1&lt;class System.Uri&gt; parts, class System.Security.Cryptography.X509Certificates.X509Certificate certificate, class System.Collections.Generic.IEnumerable`1&lt;class System.IO.Packaging.PackageRelationshipSelector&gt; relationshipSelectors, string signatureId, class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Cryptography.Xml.DataObject&gt; signatureObjects, class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Cryptography.Xml.Reference&gt; objectReferences) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignatureManager.Sign(System.Collections.Generic.IEnumerable{System.Uri},System.Security.Cryptography.X509Certificates.X509Certificate,System.Collections.Generic.IEnumerable{System.IO.Packaging.PackageRelationshipSelector},System.String,System.Collections.Generic.IEnumerable{System.Security.Cryptography.Xml.DataObject},System.Collections.Generic.IEnumerable{System.Security.Cryptography.Xml.Reference})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageDigitalSignature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parts" Type="System.Collections.Generic.IEnumerable&lt;System.Uri&gt;" />
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+        <Parameter Name="relationshipSelectors" Type="System.Collections.Generic.IEnumerable&lt;System.IO.Packaging.PackageRelationshipSelector&gt;" />
+        <Parameter Name="signatureId" Type="System.String" />
+        <Parameter Name="signatureObjects" Type="System.Collections.Generic.IEnumerable&lt;System.Security.Cryptography.Xml.DataObject&gt;" />
+        <Parameter Name="objectReferences" Type="System.Collections.Generic.IEnumerable&lt;System.Security.Cryptography.Xml.Reference&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="parts">Die Liste der [!INCLUDE[TLA#tla_uri#plural](~/includes/tlasharptla-urisharpplural-md.md)] für die <see cref="T:System.IO.Packaging.PackagePart" /> zu signierende Objekte an.</param>
+        <param name="certificate">Das X.509-Zertifikat, mit dem jedes der angegebenen Teile und jede der angegebenen Beziehungen digital signiert werden soll.</param>
+        <param name="relationshipSelectors">Die Liste der <see cref="T:System.IO.Packaging.PackageRelationship" /> zu signierende Objekte an.</param>
+        <param name="signatureId">Eine ID-Zeichenfolge, die der Signatur zugeordnet werden soll.</param>
+        <param name="signatureObjects">Eine Liste der zu signierenden benutzerdefinierten Datenobjekte.</param>
+        <param name="objectReferences">Eine Liste der Verweise auf benutzerdefinierte Objekte, die signiert werden sollen.</param>
+        <summary>Signiert eine Liste von paketteilen, paketbeziehungen oder benutzerdefinierten Objekten mit einem angegebenen x. 509-Zertifikat und die Signatur [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)].</summary>
+        <returns>Die digitale Signatur verwendet, um die Elemente im angegebenen signiert die <paramref name="parts" /> und <paramref name="relationshipSelectors" /> aufgeführt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es muss mindestens ein Element anmelden `parts`, `relationshipSelectors`, `signatureObjects`, oder `objectReferences`.  
+  
+> [!NOTE]
+>  Die Begriffe `Object`, `Manifest`, `Reference`, `SignatureProperties`, und `Transform` finden Sie in den folgenden zwei "Hinweise" beziehen sich auf Elementtypen und Tags, die von der W3C XML Signature Syntax and Processing-Spezifikation definierten [http:// www.w3.org/TR/xmldsig-core/](http://www.w3.org/TR/xmldsig-core/).  
+  
+ Diese und andere <xref:System.IO.Packaging.PackageDigitalSignatureManager.Sign%2A> -methodenüberladungen verwenden Sie die aktuelle <xref:System.IO.Packaging.PackageDigitalSignatureManager.TransformMapping%2A> Wörterbuch, das definiert eine `Transform` anzuwendende basierend auf das Paketteil <xref:System.IO.Packaging.PackagePart.ContentType%2A>.  Die Microsoft OPC Open Packaging Conventions ()-Spezifikation lässt derzeit nur zwei `Transform` Algorithmen: C14 und C14N.  Das W3C XML Signature Syntax and Processing Standard lässt keine leere `Manifest` Tags.  Die Open Packaging Conventions-Spezifikation erfordert außerdem eine <xref:System.IO.Packaging.Package>-spezifische `Object` Tags, das beide enthält `Manifest` und `SignatureProperties` Tags.  Jede `Manifest` -Tag enthält zudem auch enthalten mindestens eine `Reference` Tag.  Diese Tags erfordern, dass jede Signatur signiert wird, mindestens eine <xref:System.IO.Packaging.PackagePart> (Tag, nicht leere Teile) oder <xref:System.IO.Packaging.PackageRelationship> (nicht leere `relationshipSelectors`), auch wenn die Signatur erforderlich ist, nur zum Signieren von `signatureObjects` oder `objectReferences`.  
+  
+ Dies <xref:System.IO.Packaging.PackageDigitalSignatureManager.Sign%2A> -Methode ignoriert die <xref:System.Security.Cryptography.Xml.Reference.DigestMethod%2A> jede zugeordnete Eigenschaft <xref:System.Security.Cryptography.Xml.Reference> in definierten `objectReferences`.  
+  
+ Dies <xref:System.IO.Packaging.PackageDigitalSignatureManager.Sign%2A> Überladung bietet Unterstützung für die Generierung von [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] Signaturen, die benutzerdefinierte erfordern `Object` Tags.  Eines bereitgestellten `Object` Tag signiert werden soll, ein entsprechendes `Reference` Tag muss angegeben werden, mit einer [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] , die angibt, die `Object` Tag in der Syntax für lokale Fragmente.  Z. B. wenn die `Object` Tag hat eine ID von "MyObject", den URI in die `Reference` Tag wäre "#myObject".  Für unsignierte Objekte nicht `Reference` ist erforderlich.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Weder <paramref name="parts" />, <paramref name="relationshipSelectors" />, <paramref name="signatureObjects" />, noch <paramref name="objectReferences" /> geben zu signierende Elemente an.</exception>
+        <exception cref="T:System.InvalidOperationException">Ein <see cref="P:System.IO.Packaging.PackagePart.ContentType" /> eines Teils werden mit Vorzeichen Verweise ein leeres <see langword="null" />, oder nicht definierter <see cref="P:System.IO.Packaging.PackageDigitalSignatureManager.TransformMapping" />.</exception>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="signatureId" />ist kein <see langword="null" /> und ist kein gültiger [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] Schema-ID (z. B. beginnt mit einer Ziffer).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureOrigin">
+      <MemberSignature Language="C#" Value="public Uri SignatureOrigin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SignatureOrigin" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignatureManager.SignatureOrigin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] des Teils Ursprung Signatur.</summary>
+        <value>Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des Teils Ursprung Signatur.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Packaging.PackageDigitalSignatureManager.SignatureOrigin%2A> [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] kann vom Paket variieren, da der Name nicht formal definiert ist. Während diese Implementierung den gleichen Standardwert in der Regel verwenden, der von dieser Eigenschaft zurückgegebene Wert wider jedoch den Ursprung bereits vorhanden ist, in der aktuellen ist <xref:System.IO.Packaging.Package>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureOriginRelationshipType">
+      <MemberSignature Language="C#" Value="public static string SignatureOriginRelationshipType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string SignatureOriginRelationshipType" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignatureManager.SignatureOriginRelationshipType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Ursprung von standardbeziehung-Signatur ab.</summary>
+        <value>Der Typ der Ursprung von standardbeziehung-Signatur.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Signatures">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IO.Packaging.PackageDigitalSignature&gt; Signatures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IO.Packaging.PackageDigitalSignature&gt; Signatures" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignatureManager.Signatures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IO.Packaging.PackageDigitalSignature&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung aller Signaturen im Paket enthalten sind.</summary>
+        <value>Eine Auflistung aller der <see cref="T:System.IO.Packaging.PackageDigitalSignature" /> Objekte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeFormat">
+      <MemberSignature Language="C#" Value="public string TimeFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TimeFormat" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignatureManager.TimeFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Datum/Uhrzeit-Format, das zum Erstellen einer Signatur verwendet <see cref="P:System.IO.Packaging.PackageDigitalSignature.SigningTime" />.</summary>
+        <value>Das Datum/Uhrzeit-Format, das zum Erstellen einer Signatur verwendet <see cref="P:System.IO.Packaging.PackageDigitalSignature.SigningTime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung <xref:System.IO.Packaging.PackageDigitalSignatureManager.TimeFormat%2A> ist "JJJJ-MM-DDThh:mm:ss.sTZD".  
+  
+ Datum/Uhrzeit-Formate führen Sie die Syntax der Spezifikation "W3C Datums-und Zeitformate" unter [http://www.w3.org/TR/Note-datetime.html](http://www.w3.org/TR/Note-datetime.html). Die unten angezeigten Komponenten müssen vorhanden sein, und verwenden Sie die Syntax und Interpunktion gemäß der Definition.  
+  
+|"TimeFormat"|Beschreibung|Beispiel|  
+|----------------|-----------------|-------------|  
+|YYYY|Jahr|2005|  
+|JJJJ-MM-|Jahr und Monat|2005-07|  
+|YYYY-MM-DD|Vollständiges Datum|2005-07-28|  
+|JJJJ-MM-DDThh:mmTZD|Vollständiges Datum plus Stunden und Minuten|2005-07-28T19:20-01:00 UHR|  
+|JJJJ-MM-DDThh:mm:ssTZD|Vollständiges Datum plus Stunden, Minuten und Sekunden|2005-07-28T19:20:45-01:00 UHR|  
+|JJJJ-MM-DDThh:mm:ss.sTZD|Vollständiges Datum plus Stunden, Minuten und Sekunden mit einem Dezimalbruch|2005-07-28T19:20:45.75-01:00 UHR|  
+  
+ Dabei gilt:  
+  
+|||  
+|-|-|  
+|YYYY|vierstellige Jahreszahl (z. B. 2005)|  
+|MM|zweistellige Monatsangabe (01 = Januar)|  
+|DD|zweistellige Tag des Monats (01 bis 31)|  
+|Thh|zweistellige Stundenangabe (00 bis 23, 24-Stunden-Uhrzeit)|  
+|mm|zwei Ziffern des Minuten (00 bis 59)|  
+|ss|zwei Ziffern des Sekunden (00 bis 59)|  
+|s|eine oder mehrere Ziffern, die einen Dezimalbruch einer Sekunde darstellt.|  
+|TZD|zeitzonenkennzeichner (Z oder + hh: mm oder -Hh: mm)|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformMapping">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,string&gt; TransformMapping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, string&gt; TransformMapping" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageDigitalSignatureManager.TransformMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch, das jeden enthält <see cref="P:System.IO.Packaging.PackagePart.ContentType" /> und die zugehörigen [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] <see cref="T:System.Security.Cryptography.Xml.Transform" />.<see cref="P:System.Security.Cryptography.Xml.Transform.Algorithm" /> Der Bezeichner.</summary>
+        <value>Ein Wörterbuch, das jeden enthält <see cref="P:System.IO.Packaging.PackagePart.ContentType" /> und die zugehörigen [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] <see cref="T:System.Security.Cryptography.Xml.Transform" />.<see cref="P:System.Security.Cryptography.Xml.Transform.Algorithm" /> Der Bezeichner.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während eines Vorgangs für die Anmeldung für die einzelnen Inhaltstypen zugeordnete Transformationsalgorithmus angewendet, bevor die <xref:System.IO.Packaging.PackageDigitalSignatureManager.HashAlgorithm%2A> ausgeführt wird.  
+  
+ Inhalt und die Transformation standardzuordnungen gehören:  
+  
+|Inhalt|ContentType|Algorithmusbezeichner transformieren|  
+|-------------|-----------------|------------------------------------|  
+|Beziehung|"application/vnd.openxmlformats-package.relationships+xml"|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigC14NTransformUrl>|  
+|Digitale Signatur|"application/vnd.openxmlformats-package.digital-signature-xmlsignature+xml"|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigC14NTransformUrl>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyCertificate">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.X509Certificates.X509ChainStatusFlags VerifyCertificate (System.Security.Cryptography.X509Certificates.X509Certificate certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags VerifyCertificate(class System.Security.Cryptography.X509Certificates.X509Certificate certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignatureManager.VerifyCertificate(System.Security.Cryptography.X509Certificates.X509Certificate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Das zu überprüfende X.509-Zertifikat.</param>
+        <summary>Überprüft ein bestimmtes X.509-Zertifikat.</summary>
+        <returns>
+          <see cref="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.NoError" />(Wert 0), wenn das Zertifikat erfolgreich überprüft. andernfalls kennzeichnet eine bitweise Enumeration aus Fehler.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifySignatures">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.VerifyResult VerifySignatures (bool exitOnFailure);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.IO.Packaging.VerifyResult VerifySignatures(bool exitOnFailure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageDigitalSignatureManager.VerifySignatures(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.VerifyResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exitOnFailure" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="exitOnFailure">
+          <see langword="true" />Beim ersten Fehler beendet wird; andernfalls <see langword="false" /> zu fortfahren und alle Signaturen überprüft.</param>
+        <summary>Überprüft die Signaturen für alle signierten Teile im Paket.</summary>
+        <returns>
+          <see cref="F:System.IO.Packaging.VerifyResult.Success" />(Wert 0), wenn alle Signaturen erfolgreich überprüft wurden andernfalls eine Enumeration, die den Fehler kennzeichnet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft nur die digitalen Signaturen. Es wird die verwandte x. 509-Zertifikate nicht überprüft.  Die <xref:System.IO.Packaging.PackageDigitalSignatureManager.VerifyCertificate%2A> Methode kann zum Überprüfen der x. 509-Zertifikate verwendet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Methode verwendet, um alle signierten Teile innerhalb eines Pakets zu überprüfen.  Das vollständige Beispiel finden Sie unter [Erstellen eines Pakets mit einer digitalen Signatur](http://go.microsoft.com/fwlink/?LinkID=159966).  
+  
+ [!code-csharp[PackageDigitalSignature#PackageDigSigValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageDigitalSignature/CSharp/PackageDigitalSignature.cs#packagedigsigvalidate)]
+ [!code-vb[PackageDigitalSignature#PackageDigSigValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageDigitalSignature/visualbasic/packagedigitalsignature.vb#packagedigsigvalidate)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

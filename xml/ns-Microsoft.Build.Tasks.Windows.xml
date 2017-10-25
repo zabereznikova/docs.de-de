@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Tasks.Windows">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.Build.Tasks.Windows" /> -Namespace enthält die Implementierung aller Aufgaben, die von MSBuild. Die Typen in diesem Namespace unterstützt die Infrastruktur von Windows Presentation Foundation (WPF) und nicht direkt aus Ihrem Code verwendet werden sollen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

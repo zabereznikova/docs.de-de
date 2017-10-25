@@ -1,0 +1,513 @@
+<Type Name="DesignerTransaction" FullName="System.ComponentModel.Design.DesignerTransaction">
+  <TypeSignature Language="C#" Value="public abstract class DesignerTransaction : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DesignerTransaction extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerTransaction" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt ein Verfahren zum Gruppieren einer Reihe von Entwurfszeitaktionen bereit, um die Leistung zu verbessern und das Rückgängigmachen der meisten Arten von Änderungen zu ermöglichen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Transaktionen können Aktionen nachverfolgen, die später rückgängig gemacht werden kann. Während einer Transaktion vorgenommenen Änderungen können rückgängig gemacht werden, durch das Abbrechen einer Transaktions, die automatisch versucht, jede Änderung umkehren, indem jeder geänderten Eigenschaft festlegen, auf den Wert vor der Änderung. Transaktionen können auch die Leistung bei einer Reihe von Vorgängen verbessern, indem Updates für die Anzeige zu verzögern, bis zum Abschluss der Transaktion.  
+  
+ Wenn eine Transaktion ausgeführt wird, einige Komponenten zurückstellen ihre verarbeiten, bis die Transaktion abgeschlossen wurde, durch Überwachen der <xref:System.ComponentModel.Design.IDesignerHost.TransactionOpening> und <xref:System.ComponentModel.Design.IDesignerHost.TransactionClosed> Ereignisse. Eigenschaftenfenster, Aktualisierung der Anzeige beispielsweise nicht, nachdem eine Transaktion geöffnet wurde, bis die Transaktion geschlossen wurde.  
+  
+ Um Transaktionen für mehrere Vorgänge bzw. verwenden zu können, müssen Sie Ihren Designer erstellen Sie eine <xref:System.ComponentModel.Design.DesignerTransaction> für jeden Vorgang oder eine Reihe von Vorgängen, die rückgängig gemacht werden. Achten Sie darauf, dass Sie keine Aktionen außerhalb der Transaktionen, die eine Folge von Rückgängig-Ereignissen verhindern, dass möglicherweise nicht erfolgreich abgeschlossen werden.  
+  
+ Sie erhalten ein neues <xref:System.ComponentModel.Design.DesignerTransaction> durch Aufrufen der <xref:System.ComponentModel.Design.IDesignerHost.CreateTransaction%2A> Methode eine <xref:System.ComponentModel.Design.IDesignerHost>. Achten Sie darauf, dass Sie jede abrufen <xref:System.ComponentModel.Design.DesignerTransaction> aus dem aktiven <xref:System.ComponentModel.Design.IDesignerHost> um richtig in die Designertransaktion verarbeitungsmechanismen, statt beim Erstellen eines neuen integriert <xref:System.ComponentModel.Design.DesignerTransaction> direkt.  
+  
+ Um eine Aktion innerhalb einer Transaktion auszuführen, müssen Sie zunächst eine Transaktion erstellen. Dann, Sie aufrufen müssen die <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanging%2A> -Methode auf, bevor jede Änderung oder eine Gruppe von Änderungen tritt auf, und die <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanged%2A> Methode nach jeder Änderung oder eine Gruppe von Änderungen auftreten. Schließlich abschließen und schließen Sie die Transaktion durch Aufrufen der <xref:System.ComponentModel.Design.DesignerTransaction.Commit%2A> Methode.  
+  
+> [!NOTE]
+>  Verwenden Sie beim vornehmen von Änderungen von Eigenschaftswerten der <xref:System.ComponentModel.PropertyDescriptor.SetValue%2A> Methode eine <xref:System.ComponentModel.PropertyDescriptor>, die Komponente ändern Methoden aufruft der <xref:System.ComponentModel.Design.IComponentChangeService> und erstellt eine <xref:System.ComponentModel.Design.DesignerTransaction> , die die Änderung automatisch darstellt.  
+  
+ Um eine Transaktion auszuführen, müssen führen Sie die folgenden Schritte aus:  
+  
+1.  Rufen Sie <xref:System.ComponentModel.Design.IDesignerHost.CreateTransaction%2A> zum Abrufen einer <xref:System.ComponentModel.Design.DesignerTransaction> , die verwendet werden kann, um die Transaktion zu steuern.  
+  
+2.  Innerhalb einer `try` -Block für jede Aktion, die Sie überwachen möchten eine <xref:System.ComponentModel.Design.DesignerTransaction>, Aufrufen der <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanging%2A> -Methode, stellen die Änderung oder ändert, rufen Sie dann die <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanged%2A> Methode, um zu signalisieren, dass das Ändern oder Änderungen vorgenommen wurden.  
+  
+3.  Rufen Sie zum Abschließen der Transaktion <xref:System.ComponentModel.Design.DesignerTransaction.Commit%2A> innerhalb einer `finally` Block.  
+  
+ In c# können Sie die `using` Anweisung anstelle eines `try/finally` blockieren, wie im folgenden Beispiel.  
+  
+```  
+using (host.CreateTransaction() {  
+// Insert your code here.  
+}  
+```  
+  
+ Wenn Sie "Abbrechen", und versuchen, eine Transaktion einen Rollback ausführt, bevor sie ein Commit ausgeführt wurde, rufen die <xref:System.ComponentModel.Design.DesignerTransaction.Cancel%2A> Methode. Wenn die <xref:System.ComponentModel.Design.DesignerTransaction.Cancel%2A> Methode wird aufgerufen, die Aktionen, die vom nachverfolgt werden die <xref:System.ComponentModel.Design.DesignerTransaction> werden vertauscht, um zu versuchen, ein Rollback der Änderungen. Aktionen rückgängig machen, die im Rahmen von früheren Transaktionen aufgetreten sind, müssen Sie den Befehl "Rückgängig" bereitgestellt, die von der Entwicklungsumgebung verwenden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird Programm veranschaulicht, wie ein <xref:System.ComponentModel.Design.DesignerTransaction> aus einem Designer. Um dieses Beispiel ausführen zu können, müssen kompilieren Sie den Quellcode in einer Klassenbibliothek. Sie müssen einen Verweis auf die System.Design-Assembly hinzufügen. In einem neuen Projekt einen Verweis auf die kompilierte DLL hinzufügen, und fügen Sie die Komponente in der Bibliothek die **Toolbox**.  
+  
+ Es gibt umfassende Unterstützung für dieses Feature in Visual Studio.  
+  
+ Siehe auch [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](http://msdn.microsoft.com/library/fw694kde\(v=vs.110\).aspx).  
+  
+ Der Designer kann optional Benachrichtigungen zu Designertransaktion-Ereignissen anzeigen. Wenn Sie eine Instanz des Hinzufügen der `DTComponent` zu einem Formular im Entwurfsmodus, ein Meldungsfeld gefragt, ob Sie Designertransaktion ereignisbenachrichtigungen erhalten sollen. Sie können diese Benachrichtigungen über das Kontextmenü, das angezeigt wird, wenn Sie eine Instanz von mit der rechten Maustaste ein-oder Ausblenden der `DTComponent`. Transaktionen werden erstellt, wenn Sie Werte, die über das Eigenschaftenfenster zu ändern. Sie können auch veranlassen, eine Transaktion auszuführen, indem Sie auf Designer **Ausführen der Beispiel-Transaktion** im Kontextmenü für die Komponente.  
+  
+ [!code-cpp[DesignerTransaction Sample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DesignerTransaction Sample/CPP/source.cpp#1)]
+ [!code-csharp[DesignerTransaction Sample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DesignerTransaction Sample/CS/source.cs#1)]
+ [!code-vb[DesignerTransaction Sample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DesignerTransaction Sample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DesignerTransaction ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerTransaction.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.DesignerTransaction" />-Klasse ohne Beschreibung.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DesignerTransaction (string description);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerTransaction.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="description">Eine Beschreibung für diese Transaktion.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.DesignerTransaction" />-Klasse mit der angegebenen Transaktionsbeschreibung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die Transaktion mit der angegebenen Beschreibung.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public void Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerTransaction.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht die Transaktion ab und versucht, einen Rollback der Änderungen durchzuführen, die von den Ereignissen der Transaktion vorgenommen wurden.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Canceled">
+      <MemberSignature Language="C#" Value="public bool Canceled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Canceled" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerTransaction.Canceled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Transaktion abgebrochen wurde.</summary>
+        <value>
+          <see langword="true" />, wenn die Transaktion abgebrochen wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei einem Designer abgebrochen wird, versucht der Transaction Processing-Mechanismus Rollback der Änderungen, die bisher in der Transaktion vorgenommen wurden. Gibt an, ob dies gelingt richtet sich nach Faktoren wie der Typ jedes Vorgangs, ob andere Vorgänge mit den betroffenen Code Zustand hat einen Konflikt verursacht, und ob eine Sequenz von erwarteten Vorgängen Fehler bei der Durchführung.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerTransaction.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt diese Transaktion durch.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Designer-Transaktion ein Commit ausgeführt wird, wird die Transaktion als vollständig angesehen und verfolgt keine weiteren Änderungen.  
+  
+ Sobald eine Transaktion ein Commit ausgeführt wurde, werden weitere Aufrufe dieser Methode keine Aktionen ausgeführt. Rufen Sie diese Methode immer nach dem Erstellen einer Transaktions, um sicherzustellen, dass die Transaktion ordnungsgemäß geschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Committed">
+      <MemberSignature Language="C#" Value="public bool Committed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Committed" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerTransaction.Committed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Transaktion durchgeführt wurde.</summary>
+        <value>
+          <see langword="true" />, wenn die Transaktion durchgeführt wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Designer-Transaktion ein Commit ausgeführt wird, wird die Transaktion als vollständig angesehen und verfolgt keine weiteren Änderungen.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerTransaction.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Beschreibung für diese Transaktion ab.</summary>
+        <value>Eine Beschreibung für die Transaktion.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Transaktion kann es sich um eine Beschreibung haben, die ist nützlich, identifizieren die Art des Vorgangs oder Vorgänge.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerTransaction.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.ComponentModel.Design.DesignerTransaction" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.ComponentModel.Design.DesignerTransaction> verweist. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Beim Überschreiben von <see langword="Dispose(Boolean)" /> müssen Sie darauf achten, nicht auf Objekte zu verweisen, die durch einen früheren Aufruf von <see langword="Dispose" /> freigegeben wurden. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~DesignerTransaction ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerTransaction.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die diesem Objekt zugeordneten Ressourcen frei. Falls noch kein Commit für diese Transaktion ausgeführt wurde, wird er durch diese Überschreibung ausgeführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Object.Finalize%2A?displayProperty=nameWithType> und bereinigt Ressourcen durch Aufrufen von `Dispose(false)`. Überschreiben Sie `Dispose(Boolean)`, um die Bereinigung anzupassen.  
+  
+ Diese Methode sollte nicht von Anwendungscode aufgerufen werden. ein Objekt `Finalize` Methode wird automatisch während der Garbagecollection aufgerufen, durch einen Aufruf von seiner Finalisierung verfolgt, durch den Garbage Collector deaktiviert wurde die <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> Methode.  
+  
+ Weitere Informationen finden Sie unter [Finalize-Methoden und Destruktoren](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70), [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md), und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCancel">
+      <MemberSignature Language="C#" Value="protected abstract void OnCancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerTransaction.OnCancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst das <see langword="Cancel" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei einem Designer abgebrochen wird, versucht der Transaction Processing-Mechanismus Rollback der Änderungen, die bisher in der Transaktion vorgenommen wurden. Gibt an, ob dies gelingt richtet sich nach Faktoren wie der Typ jedes Vorgangs, ob andere Vorgänge mit den betroffenen Code Zustand hat einen Konflikt verursacht, und ob eine Sequenz von erwarteten Vorgängen Fehler bei der Durchführung.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+        <block subset="none" type="overrides">
+          <para>Beim Implementieren in einer abgeleiteten Klasse wird diese Methode eine Transaktion abgebrochen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCommit">
+      <MemberSignature Language="C#" Value="protected abstract void OnCommit ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCommit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerTransaction.OnCommit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt den eigentlichen Commit einer Transaktion aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Designer-Transaktion ein Commit ausgeführt wird, wird die Transaktion als vollständig angesehen und verfolgt keine weiteren Änderungen.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+        <block subset="none" type="overrides">
+          <para>Beim Implementieren in einer abgeleiteten Klasse führt diese Methode die Arbeit mit der Verarbeitung der Transaktions zugeordnet ist.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerTransaction.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.ComponentModel.Design.DesignerTransaction" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Transaktion verworfen wird, ist es ein Commit ausgeführt wurde.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

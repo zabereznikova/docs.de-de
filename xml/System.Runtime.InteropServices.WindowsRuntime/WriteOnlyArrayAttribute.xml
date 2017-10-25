@@ -1,0 +1,71 @@
+<Type Name="WriteOnlyArrayAttribute" FullName="System.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute">
+  <TypeSignature Language="C#" Value="public sealed class WriteOnlyArrayAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WriteOnlyArrayAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass der Inhalt eines Arrays, das an diesen Parameter übergeben wird nur für die Ausgabe verwendet wird, bei Anwendung auf einen Arrayparameter in einer Windows-Runtime-Komponente. Der Aufrufer gewährleistet nicht, dass der Inhalt initialisiert wird, und die aufgerufene Methode soll den Inhalt nicht lesen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn auf einen Arrayparameter in Ihre [!INCLUDE[wrt](~/includes/wrt-md.md)] Komponente als Wert übergeben wird (`ByVal` in Visual Basic), müssen Sie eines der folgenden Attribute darauf anwenden:  
+  
+-   Anwenden der <xref:System.Runtime.InteropServices.WindowsRuntime.ReadOnlyArrayAttribute> Attribut, wenn Sie beabsichtigen, den Inhalt des Arrays, das für die Eingabe nur verwendet werden.  
+  
+-   Anwenden der <xref:System.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute> Attribut, wenn Sie beabsichtigen, den Inhalt des Arrays, die nur für die Ausgabe verwendet werden (d. h. die Methode wird der Inhalt des Arrays jedoch nicht gelesen).  
+  
+ Beide Attribute auf einen Parameter angewendet, verursacht einen Fehler. Weitere Informationen, einschließlich das Standardmuster für Änderung in ein Array, finden Sie unter [übergeben von Arrays an eine Windows-Runtime-Komponente](http://go.microsoft.com/fwlink/?LinkId=251026) im Windows Developer Center.  
+  
+> [!IMPORTANT]
+>  Parameter, die <xref:System.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute> Attribut Verhalten sich unterschiedlich, je nachdem, ob der Aufrufer in systemeigenem Code oder verwaltetem Code geschrieben wird. Wenn der Aufrufer systemeigenem Code ist (JavaScript oder [!INCLUDE[cppwrt](~/includes/cppwrt-md.md)]), die aufgerufene Methode darf nicht keine Annahmen über den Inhalt des ursprünglichen Arrays. Beispielsweise ist das Array, das die Methode empfängt, möglicherweise nicht oder mit Standardwerten initialisiert. Von der Methode wird das Festlegen der Werte aller Elemente im Array erwartet.  
+>   
+>  Wenn der Aufrufer in verwaltetem code, des Aufrufers ursprüngliche Array für die aufgerufene Methode übergeben wird, wie bei jedem Methodenaufruf in .NET Framework. Inhalt des Arrays sind änderbar in verwaltetem Code, damit die Methode selektiv zu lesen und diese Werte ändern kann. Dies ist wichtig, da sie Komponententests für geschrieben wirkt sich auf eine [!INCLUDE[wrt](~/includes/wrt-md.md)] Komponente. Wenn die Tests in verwaltetem Code geschrieben werden, werden der Inhalt eines Arrays änderbare werden während der Tests angezeigt, und die Ergebnisse sind wahrscheinlich anders, wenn die Methode später von systemeigenem Code aufgerufen wird.  
+  
+ Anwenden dieses Attributs auf eine `out` Parameter oder einen Parameter mit dem <xref:System.Runtime.InteropServices.InAttribute> Attribut verursacht einen Fehler aus, wenn das Modul exportiert wird. Anwenden des Attributs auf einen Parameter mit dem <xref:System.Runtime.InteropServices.OutAttribute> Attribut verursacht einen Fehler, es sei denn, die Parameter auch Visual Basic `ByRef` Modifizierer. In diesem Fall ist das Attribut redundante jedoch zulässig.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WriteOnlyArrayAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

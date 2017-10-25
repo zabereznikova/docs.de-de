@@ -1,0 +1,59 @@
+<Type Name="DueDate" FullName="Microsoft.VisualBasic.DueDate">
+  <TypeSignature Language="C#" Value="public enum DueDate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DueDate extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.DueDate" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wann Zahlungen fällig sind beim finanzielle Methoden aufrufen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie finanzmathematischen Funktionen aufrufen, können Sie Enumerationsmember im Code anstelle der eigentlichen Werte.  
+  
+ Die `DueDate` -Enumeration definiert Konstanten, die verwendet werden, um herauszufinden, wann Zahlungen fällig sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BegOfPeriod">
+      <MemberSignature Language="C#" Value="BegOfPeriod" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.DueDate BegOfPeriod = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.DueDate.BegOfPeriod" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.DueDate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Am Anfang des Datumsintervalls liegt</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EndOfPeriod">
+      <MemberSignature Language="C#" Value="EndOfPeriod" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.DueDate EndOfPeriod = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.DueDate.EndOfPeriod" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.DueDate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Am Ende des Datumsintervalls liegt</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

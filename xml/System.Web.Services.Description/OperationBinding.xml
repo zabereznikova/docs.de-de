@@ -1,0 +1,235 @@
+<Type Name="OperationBinding" FullName="System.Web.Services.Description.OperationBinding">
+  <TypeSignature Language="C#" Value="public sealed class OperationBinding : System.Web.Services.Description.NamedItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OperationBinding extends System.Web.Services.Description.NamedItem" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.OperationBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Description.NamedItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Services.Configuration.XmlFormatExtensionPoint("Extensions")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Spezifikationen für Protokollen und Datenformaten für die Nachrichten in der Aktion, die von der XML-Webdienst unterstützt verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `OperationBinding` Klasse entspricht, auf die WSDL Web Services Description Language () `<operation>` Element eingeschlossen wird, indem Sie die `<binding>` -Element, das wiederum entspricht der <xref:System.Web.Services.Description.Binding> Klasse. Weitere Informationen zu WDSL finden Sie in der Spezifikation unter http://www.w3.org/TR/wsdl/.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der Eigenschaften und Methoden verfügbar gemacht werden, indem die `OperationBinding` Klasse. Es gibt es ein vorhandenes <xref:System.Web.Services.Description.ServiceDescription> und bietet Unterstützung für das SOAP-Protokoll.  
+  
+ [!code-cpp[OperationBinding_OperationBinding#1](~/samples/snippets/cpp/VS_Snippets_Remoting/OperationBinding_OperationBinding/CPP/operationbinding_operationbinding.cpp#1)]
+ [!code-csharp[OperationBinding_OperationBinding#1](~/samples/snippets/csharp/VS_Snippets_Remoting/OperationBinding_OperationBinding/CS/operationbinding_operationbinding.cs#1)]
+ [!code-vb[OperationBinding_OperationBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/OperationBinding_OperationBinding/VB/operationbinding_operationbinding.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OperationBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.OperationBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Description.OperationBinding" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Binding">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Binding Binding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Binding Binding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.OperationBinding.Binding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Binding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Services.Description.Binding" /> der aktuellen <see cref="T:System.Web.Services.Description.OperationBinding" /> Mitglied ist.</summary>
+        <value>Eine Bindung, von denen das aktuelle <see cref="T:System.Web.Services.Description.OperationBinding" /> Mitglied ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle <xref:System.Web.Services.Description.OperationBinding> ist ein Mitglied der <xref:System.Web.Services.Description.Binding.Operations%2A> Auflistung.  
+  
+   
+  
+## Examples  
+ [!code-cpp[OperationBinding_OperationBinding#5](~/samples/snippets/cpp/VS_Snippets_Remoting/OperationBinding_OperationBinding/CPP/operationbinding_operationbinding.cpp#5)]
+ [!code-csharp[OperationBinding_OperationBinding#5](~/samples/snippets/csharp/VS_Snippets_Remoting/OperationBinding_OperationBinding/CS/operationbinding_operationbinding.cs#5)]
+ [!code-vb[OperationBinding_OperationBinding#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/OperationBinding_OperationBinding/VB/operationbinding_operationbinding.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public override System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.OperationBinding.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Erweiterbarkeitselemente spezifisch für die aktuelle <see cref="T:System.Web.Services.Description.OperationBinding" />.</summary>
+        <value>Eine Auflistung der Erweiterbarkeitselemente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu Web Services Description Language (WSDL) finden Sie in der Spezifikation unter http://www.w3.org/TR/wsdl/.  
+  
+   
+  
+## Examples  
+ [!code-cpp[OperationBinding_OperationBinding#6](~/samples/snippets/cpp/VS_Snippets_Remoting/OperationBinding_OperationBinding/CPP/operationbinding_operationbinding.cpp#6)]
+ [!code-csharp[OperationBinding_OperationBinding#6](~/samples/snippets/csharp/VS_Snippets_Remoting/OperationBinding_OperationBinding/CS/operationbinding_operationbinding.cs#6)]
+ [!code-vb[OperationBinding_OperationBinding#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/OperationBinding_OperationBinding/VB/operationbinding_operationbinding.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Faults">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.FaultBindingCollection Faults { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.FaultBindingCollection Faults" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.OperationBinding.Faults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("fault")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.FaultBindingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Services.Description.FaultBindingCollection" /> zugeordneten der <see cref="T:System.Web.Services.Description.OperationBinding" /> Instanz.</summary>
+        <value>Eine Auflistung des Fault-Bindung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[OperationBinding_OperationBinding#6](~/samples/snippets/cpp/VS_Snippets_Remoting/OperationBinding_OperationBinding/CPP/operationbinding_operationbinding.cpp#6)]
+ [!code-csharp[OperationBinding_OperationBinding#6](~/samples/snippets/csharp/VS_Snippets_Remoting/OperationBinding_OperationBinding/CS/operationbinding_operationbinding.cs#6)]
+ [!code-vb[OperationBinding_OperationBinding#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/OperationBinding_OperationBinding/VB/operationbinding_operationbinding.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Input">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.InputBinding Input { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.InputBinding Input" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.OperationBinding.Input" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("input")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.InputBinding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Web.Services.Description.InputBinding" /> ab, der dem <see cref="T:System.Web.Services.Description.OperationBinding" /> zugeordnet ist, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Web.Services.Description.InputBinding" /> zugeordneten der <see cref="T:System.Web.Services.Description.OperationBinding" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `OperationBinding` genau einem zugeordnet werden `InputBinding`.  
+  
+   
+  
+## Examples  
+ [!code-cpp[OperationBinding_OperationBinding#4](~/samples/snippets/cpp/VS_Snippets_Remoting/OperationBinding_OperationBinding/CPP/operationbinding_operationbinding.cpp#4)]
+ [!code-csharp[OperationBinding_OperationBinding#4](~/samples/snippets/csharp/VS_Snippets_Remoting/OperationBinding_OperationBinding/CS/operationbinding_operationbinding.cs#4)]
+ [!code-vb[OperationBinding_OperationBinding#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/OperationBinding_OperationBinding/VB/operationbinding_operationbinding.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Output">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.OutputBinding Output { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.OutputBinding Output" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.OperationBinding.Output" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("output")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.OutputBinding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Web.Services.Description.OutputBinding" /> ab, der dem <see cref="T:System.Web.Services.Description.OperationBinding" /> zugeordnet ist, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Web.Services.Description.OutputBinding" /> zugeordneten der <see cref="T:System.Web.Services.Description.OperationBinding" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `OperationBinding` genau einem zugeordnet werden `OutputBinding`.  
+  
+   
+  
+## Examples  
+ OperationBinding_OperationBinding Nr. 5  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

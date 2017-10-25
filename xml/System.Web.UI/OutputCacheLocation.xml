@@ -1,0 +1,129 @@
+<Type Name="OutputCacheLocation" FullName="System.Web.UI.OutputCacheLocation">
+  <TypeSignature Language="C#" Value="public enum OutputCacheLocation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OutputCacheLocation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.OutputCacheLocation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die gültigen Werte für den Speicherort der Ausgabe zwischengespeichert HTTP-Antwort für eine Ressource zu steuern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch diese Enumeration angegebenen Werte werden verwendet, wenn Sie enthalten eine `@ OutputCache` -Direktive in einer ASPX-Datei. Diese Werte bestimmen den Cachespeicherort für Seitenausgabe. Weitere Informationen finden Sie unter [Zwischenspeichern von ASP.NET-Seiten](http://msdn.microsoft.com/library/e9666a1b-88df-4931-af0b-a754fc65660b).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie der Serverwert verwendet wird um anzugeben, dass die Seite auf dem Webserver zwischengespeichert werden soll, in dem die Anforderung verarbeitet wird.  
+  
+ [!code-aspx-csharp[OutputCacheLocation_Resubmit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/OutputCacheLocation_Resubmit/CS/outputcachelocationcs.aspx#1)]
+ [!code-aspx-vb[OutputCacheLocation_Resubmit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/OutputCacheLocation_Resubmit/VB/outputcachelocationvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Any">
+      <MemberSignature Language="C#" Value="Any" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.OutputCacheLocation Any = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.OutputCacheLocation.Any" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.OutputCacheLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherort des Ausgabecaches kann sich auf dem Browserclient (von dem die Anforderung stammt), auf einem an der Anforderung beteiligten Proxyserver (bzw. beliebigen anderen beteiligten Servern) oder auf dem Server befinden, auf dem die Anforderung verarbeitet wurde. Dieser Wert entspricht der <see cref="F:System.Web.HttpCacheability.Public" /> -Enumerationswert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Client">
+      <MemberSignature Language="C#" Value="Client" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.OutputCacheLocation Client = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.OutputCacheLocation.Client" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.OutputCacheLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Ausgabecache befindet sich auf dem Browserclient, von dem die Anforderung stammt. Dieser Wert entspricht der <see cref="F:System.Web.HttpCacheability.Private" /> -Enumerationswert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Downstream">
+      <MemberSignature Language="C#" Value="Downstream" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.OutputCacheLocation Downstream = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.OutputCacheLocation.Downstream" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.OutputCacheLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Ausgabecache kann in jedem cachefähigen HTTP 1.1-Gerät gespeichert werden, jedoch nicht auf dem Ausgangsserver. Dies schließt Proxyserver und den Client ein, von dem die Anforderung stammt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.OutputCacheLocation None = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.OutputCacheLocation.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.OutputCacheLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Ausgabecache wird für die angeforderte Seite deaktiviert. Dieser Wert entspricht der <see cref="F:System.Web.HttpCacheability.NoCache" /> -Enumerationswert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Server">
+      <MemberSignature Language="C#" Value="Server" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.OutputCacheLocation Server = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.OutputCacheLocation.Server" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.OutputCacheLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Ausgabecache befindet sich auf dem Webserver, auf dem die Anforderung verarbeitet wurde. Dieser Wert entspricht der <see cref="F:System.Web.HttpCacheability.Server" /> -Enumerationswert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerAndClient">
+      <MemberSignature Language="C#" Value="ServerAndClient" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.OutputCacheLocation ServerAndClient = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.OutputCacheLocation.ServerAndClient" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.OutputCacheLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Ausgabecache kann nur auf dem Ausgangsserver oder dem anfordernden Client gespeichert werden. Die Zwischenspeicherung der Antwort durch Proxyserver ist nicht zulässig. Dieser Wert entspricht der Kombination der <see cref="F:System.Web.HttpCacheability.Private" /> und <see cref="F:System.Web.HttpCacheability.Server" /> Enumerationswerte.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

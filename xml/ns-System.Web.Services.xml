@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.Services">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Services" /> Namespace enthält Klassen, mit denen Sie XML-Webdienste, die mithilfe von ASP.NET und XML-Webdienstclients erstellen können. XML-Webdienste sind Anwendungen, die die Fähigkeit zum Austauschen von Nachrichten in einer lose verbundenen Umgebung mithilfe von Standardprotokollen wie HTTP, XML, XSD, SOAP und WSDL bereitstellen. XML-Webdienste ermöglichen das Erstellen eines modulare Anwendungen innerhalb und außerhalb von Unternehmen in heterogenen Umgebungen, sodass sie nicht mit einer Vielzahl von Implementierungen, Plattformen und Geräte. Die SOAP-basiertes XML-Nachrichten dieser Anwendungen haben klar definierten, (strukturiert und eingegeben), oder grob Teile (mit beliebigen XML-Code). Die Möglichkeit der Nachrichten, die Laufe der Zeit ändern, ohne dass das Protokoll ist für die Zukunft des Webdiensts für die Flexibilität und Stabilität von XML-Webdienste als ein grundlegender Baustein von grundlegender Wichtigkeit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Betrachten Sie zum Einstieg Erstellen von XML-Webdiensten, die mithilfe von ASP.NET die <xref:System.Web.Services.WebService> -Klasse, welche XML-Webdienste für den Zugriff auf die ASP.NET systeminternen Funktionen ableiten können und die <xref:System.Web.Services.WebMethodAttribute> -Klasse, die für jede Methode, die Sie programmgesteuert möchten, platziert werden muss verfügbar zu machen, über das Internet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

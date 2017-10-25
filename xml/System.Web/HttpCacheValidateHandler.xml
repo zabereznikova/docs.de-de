@@ -1,0 +1,42 @@
+<Type Name="HttpCacheValidateHandler" FullName="System.Web.HttpCacheValidateHandler">
+  <TypeSignature Language="C#" Value="public delegate void HttpCacheValidateHandler(HttpContext context, object data, ref HttpValidationStatus validationStatus);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpCacheValidateHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpCacheValidateHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="context" Type="System.Web.HttpContext" />
+    <Parameter Name="data" Type="System.Object" />
+    <Parameter Name="validationStatus" Type="System.Web.HttpValidationStatus&amp;" RefType="ref" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="context">Die <see cref="T:System.Web.HttpContext" /> Objekt, das Informationen zur aktuellen Anforderung enthält.</param>
+    <param name="data">Vom Benutzer bereitgestellten Daten verwendet, um das zwischengespeicherte Element zu überprüfen.</param>
+    <param name="validationStatus">Ein <see cref="T:System.Web.HttpValidationStatus" />-Enumerationswert. Der Delegat sollte dieser Wert an, dass das Ergebnis der Überprüfung festgelegt.</param>
+    <summary>Stellt eine Methode, die aufgerufen wird, um ein zwischengespeichertes Element zu überprüfen, bevor das Element aus dem Cache bedient wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn im Rahmen ein zwischengespeichertes Elements ungültig wird die <xref:System.Web.HttpCacheValidateHandler> -Methode, wird es aus dem Cache entfernt, und die Anforderung für das Element als cacheeinfügung behandelt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Anwendung einen neuen Cache Überprüfung Delegaten hinzu.  
+  
+ [!code-csharp[System.WEb.HttpCacheValidateHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.WEb.HttpCacheValidateHandler/CS/validate.cs#1)]
+ [!code-vb[System.WEb.HttpCacheValidateHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.WEb.HttpCacheValidateHandler/VB/validate.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,193 @@
+<Type Name="PersistenceIOParticipant" FullName="System.Activities.Persistence.PersistenceIOParticipant">
+  <TypeSignature Language="C#" Value="public abstract class PersistenceIOParticipant : System.Activities.Persistence.PersistenceParticipant" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PersistenceIOParticipant extends System.Activities.Persistence.PersistenceParticipant" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Persistence.PersistenceIOParticipant" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Persistence.PersistenceParticipant</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine abgeleitete Klasse der <see cref="T:System.Activities.Persistence.PersistenceParticipant" />-Klasse mit Methoden, die neben dem Beibehalten und Laden von Workflowinstanzen im Dauerhaftigkeitsprozess auch Eingabe- und Ausgabevorgänge ausführen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Beibehalten einer Instanz führt ein Host die folgenden Schritte (oder Phasen) aus:  
+  
+1.  Erfasst Werte, die beibehalten werden sollen.  
+  
+2.  Ordnet einzelnen Werten Felder mit monolithisch strukturierten Werten zu.  
+  
+3.  Gibt den <xref:System.Activities.DurableInstancing.SaveWorkflowCommand> an den Dauerhaftigkeitsanbieter aus.  
+  
+4.  Führt E/A im Rahmen der Dauerhaftigkeitstransaktion aus.  
+  
+ Ein Host schließt eine Phase ab, bevor er mit der nächsten Phase beginnt. Beim Beibehalten erfasst der Host bespielsweise Werte von allen Dauerhaftigkeitsteilnehmern, bevor er mit der zweiten Phase fortfährt. In der zweiten Phase stellt der Host alle in der ersten Phase erfassten Werte für alle Dauerhaftigkeitsteilnehmer in der zweiten Phase bereit, um die Zuordnung sicherzustellen. In der dritten Phase stellt der Host alle in der ersten und zweiten Phase erfassten Werte für den Dauerhaftigkeitsanbieter bereit, wenn <xref:System.Activities.DurableInstancing.SaveWorkflowCommand> aufgerufen wird. In der vierten Phase stellt der Host dann alle erfassten Werte für alle Dauerhaftigkeits-EA-Teilnehmer im Rahmen der Dauerhaftigkeitstransaktion bereit.  
+  
+ Beim Laden einer Dauerhaftigkeitsinstanz führt ein Host die folgenden Phasen aus:  
+  
+1.  Gibt <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> und <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand> an den Dauerhaftigkeitsanbieter aus.  
+  
+2.  Führt E/A im Rahmen der Dauerhaftigkeitstransaktion aus.  
+  
+3.  Veröffentlicht die geladenen Werte.  
+  
+ Auf der höchsten Ebene können Workflowinstanzerweiterungen, die von der <xref:System.Activities.Persistence.PersistenceParticipant>-Klasse abgeleitet sind, an der ersten und zweiten Phase (Erfassen, Zuordnen) des Dauerhaftigkeitsprozesses und an der dritten Phase (Veröffentlichen) des Ladeprozesses teilnehmen.  Workflowinstanzerweiterungen, die sich von der PersistenceIOParticipant-Klasse ableiten, können darüber hinaus an der vierten Phase des Dauerhaftigkeitsprozesses und an der zweiten Phase des Ladeprozesses teilnehmen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PersistenceIOParticipant (bool isSaveTransactionRequired, bool isLoadTransactionRequired);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool isSaveTransactionRequired, bool isLoadTransactionRequired) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Persistence.PersistenceIOParticipant.#ctor(System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isSaveTransactionRequired" Type="System.Boolean" />
+        <Parameter Name="isLoadTransactionRequired" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isSaveTransactionRequired">
+          <see langword="true" />Wenn eine Transaktion für den Speichervorgang erforderlich ist. Wenn die <see cref="T:System.Activities.Persistence.PersistenceIOParticipant" /> -Objekts wird mit diesem Parameter festgelegt <see langword="true" />, wird sichergestellt, dass Transaction.Current-Eigenschaft festgelegt werden, wenn die BeginOnSave aufgerufen wird. Die Transaktion ist für den Dauerhaftigskeitsanbieter, allen PersistenceIOParticipant-Erweiterungen und potenziell anderen Transaktionsteilnehmern freigegeben.</param>
+        <param name="isLoadTransactionRequired">
+          <see langword="true" />Wenn eine Transaktion für den Ladevorgang erforderlich ist. Wenn die <see cref="T:System.Activities.Persistence.PersistenceIOParticipant" /> -Objekts wird mit diesem Parameter festgelegt <see langword="true" />, wird sichergestellt, dass Transaction.Current-Eigenschaft festgelegt werden, wenn BeginOnLoad aufgerufen wird. Die Transaktion ist für den Dauerhaftigskeitsanbieter, allen PersistenceIOParticipant-Erweiterungen und potenziell anderen Transaktionsteilnehmern freigegeben.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Activities.Persistence.PersistenceIOParticipant" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="protected abstract void Abort ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Abort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Persistence.PersistenceIOParticipant.Abort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht den ausstehenden EA-Vorgang (Laden oder Speichern) ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen, die BeginOnSave oder BeginOnLoad überschreiben und nicht immer sofort abgeschlossen werden können, müssen Abort überschreiben. Wenn Abort aufgerufen wird, müssen alle ausstehenden EA-Vorgänge abgebrochen werden. Wenn ein Vorgang auf diese Weise abgebrochen wird, sollte die entsprechende End-Methode OperationCanceledException ausgelöst werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginOnLoad">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult BeginOnLoad (System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,object&gt; readWriteValues, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult BeginOnLoad(class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, object&gt; readWriteValues, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad(System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Object},System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="readWriteValues" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Object&gt;" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="readWriteValues">Ein Wörterbuch mit Lese-/Schreibwerten, das vom Dauherhaftigkeitsanbieter geladen wird. Dies entspricht dem Satz von Lese-/Schreibwerten, der in der letzten Dauerhaftigkeitsepisode für diese Instanz an BeginOnSave übergeben wurde.</param>
+        <param name="timeout">Die Zeitspanne, in der der Vorgang vor dem Ablaufen abgeschlossen werden sollte.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der die Benachrichtigung über den Abschluss des asynchronen Ladevorgangs empfängt.</param>
+        <param name="state">Die dem asynchronen Vorgang zugeordneten Statusinformationen.</param>
+        <summary>Startet einen asynchronen Vorgang, um zusätzlichen Status in Verbindung mit einer Instanz zu laden, die aus dem Instanzspeicher geladen wird.</summary>
+        <returns>Der Status eines asynchronen Vorgangs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginOnSave">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult BeginOnSave (System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,object&gt; readWriteValues, System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,object&gt; writeOnlyValues, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult BeginOnSave(class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, object&gt; readWriteValues, class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, object&gt; writeOnlyValues, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave(System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Object},System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Object},System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="readWriteValues" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Object&gt;" />
+        <Parameter Name="writeOnlyValues" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Object&gt;" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="readWriteValues">Ein Wörterbuch mit Lese-/Schreibwerten, die in den Phasen CollectValues und MapValues erfasst wurden.</param>
+        <param name="writeOnlyValues">Ein Wörterbuch mit lesegeschützten Werten, die in den Phasen CollectValues und MapValues erfasst wurden.</param>
+        <param name="timeout">Die Zeitspanne, in der der Vorgang vor dem Ablaufen abgeschlossen werden sollte.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der die Benachrichtigung über die Beendigung des asynchronen Vorgangs empfängt.</param>
+        <param name="state">Die dem asynchronen Vorgang zugeordneten Statusinformationen.</param>
+        <summary>Startet einen asynchronen Vorgang, um zusätzlichen Status in Verbindung mit einer Instanz zu speichern, die im Instanzspeicher beibehalten wird.</summary>
+        <returns>Der Status eines asynchronen Vorgangs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndOnLoad">
+      <MemberSignature Language="C#" Value="protected virtual void EndOnLoad (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EndOnLoad(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Persistence.PersistenceIOParticipant.EndOnLoad(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das asynchrone Ergebnis, das von einem Aufruf der <see cref="M:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave(System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Object},System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Object},System.TimeSpan,System.AsyncCallback,System.Object)" />-Methode zurückgegeben wird.</param>
+        <summary>Schließt den asynchronen Ladevorgang ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndOnSave">
+      <MemberSignature Language="C#" Value="protected virtual void EndOnSave (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EndOnSave(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Persistence.PersistenceIOParticipant.EndOnSave(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das asynchrone Ergebnis, das von einem Aufruf der <see cref="M:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave(System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Object},System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Object},System.TimeSpan,System.AsyncCallback,System.Object)" />-Methode zurückgegeben wird.</param>
+        <summary>Schließt den asynchronen Speichervorgang ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

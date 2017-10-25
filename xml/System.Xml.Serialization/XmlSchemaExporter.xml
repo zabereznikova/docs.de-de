@@ -1,0 +1,300 @@
+<Type Name="XmlSchemaExporter" FullName="System.Xml.Serialization.XmlSchemaExporter">
+  <TypeSignature Language="C#" Value="public class XmlSchemaExporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaExporter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlSchemaExporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Füllt <see cref="T:System.Xml.Schema.XmlSchema" /> Zuordnungsobjekte Geben Sie Objekte mit XML-Schemaelementdeklarationen, die in gefunden werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlSchemaExporter> -Klasse bietet eine programmgesteuerte Darstellung eines Dokuments der XML Schema Definition Language (XSD). Anstatt <xref:System.Xml.Serialization.XmlSchemaExporter> direkt zu verwenden, die <xref:System.Web.Services.Description.ServiceDescriptionReflector> Klasse oder die [XML-Schemadefinitionstools (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).  
+  
+ Die <xref:System.Web.Services.Description.ServiceDescriptionReflector> Klasse erstellt <xref:System.Web.Services.Description.ServiceDescription> Objekte von Klassen, die als Webdienste identifiziert werden. Er verwendet die <xref:System.Xml.Serialization.XmlSchemaExporter> Klasse bei eine Web-Dienstklasse gibt:  
+  
+-   Literal verwenden, der angibt, dass der Inhalt des SOAP-Nachricht Parameter und Rückgabewerte (oder Anforderung und Antwort Dokumente) als solcher mit XML-Schema-Definitionen angegeben werden.  
+  
+-   Nicht-SOAP-Implementierungen von Webdiensten, die mithilfe von HTTP-GET und HTTP-POST-Vorgängen.  
+  
+ XSD.exe generiert XML-Schemadokumente aus einem oder mehreren Typen in einer Assembly zur Laufzeit mithilfe der <xref:System.Xml.Serialization.XmlSchemaExporter> Klasse und Reflektion.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaExporter (System.Xml.Serialization.XmlSchemas schemas);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Serialization.XmlSchemas schemas) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaExporter.#ctor(System.Xml.Serialization.XmlSchemas)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Serialization.XmlSchemas" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Eine Auflistung von <see cref="T:System.Xml.Schema.XmlSchema" /> Objekte, welches Element Typmappings abgerufene Deklarationen hinzugefügt werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.XmlSchemaExporter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlSchemaExporter> Klasse stellt die Auflistung von <xref:System.Xml.Schema.XmlSchema> Objekte, die auf die XML-Schemaelementdeklarationen hinzugefügt werden sollen. Sie müssen nicht zum Erstellen einer Instanz von der <xref:System.Xml.Serialization.XmlSchemaExporter> -Klasse direkt verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExportAnyType">
+      <MemberSignature Language="C#" Value="public string ExportAnyType (string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ExportAnyType(string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaExporter.ExportAnyType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ns">Der Namespace des XML-Schemadokument zu dem hinzuzufügenden ein ** &lt;alle&gt; ** Element.</param>
+        <summary>Exportiert eine ** &lt;alle&gt; ** Element auf der <see cref="T:System.Xml.Schema.XmlSchema" /> -Objekt, das durch den angegebenen Namespace identifiziert wird.</summary>
+        <returns>Ein beliebiger Name zugewiesen, um die ** &lt;alle&gt; ** Deklaration des Elements.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen nicht die Methode direkt aufzurufen.  
+  
+ Die <xref:System.Web.Services.Description.ServiceDescriptionReflector> erstellt <xref:System.Web.Services.Description.ServiceDescription> Objekte von Klassen, die als Webdienste identifiziert werden.  
+  
+ Ein Feld oder eine Eigenschaft vom Typ <xref:System.Xml.XmlElement>, mit einem Attribut <xref:System.Xml.Serialization.XmlAnyElementAttribute>, übersetzt in ein ** \<alle >** Element.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExportAnyType">
+      <MemberSignature Language="C#" Value="public string ExportAnyType (System.Xml.Serialization.XmlMembersMapping members);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ExportAnyType(class System.Xml.Serialization.XmlMembersMapping members) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaExporter.ExportAnyType(System.Xml.Serialization.XmlMembersMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="members" Type="System.Xml.Serialization.XmlMembersMapping" />
+      </Parameters>
+      <Docs>
+        <param name="members">Ein <see cref="T:System.Xml.Serialization.XmlMembersMapping" /> , enthält die Zuordnungen zu exportieren.</param>
+        <summary>Fügt eine Deklaration des Elements für ein Objekt oder Typ einer SOAP-Nachricht bzw. ein <see cref="T:System.Xml.Schema.XmlSchema" /> Objekt.</summary>
+        <returns>Die Zeichenfolge "Beliebig" durch eine angefügte ganze Zahl.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExportMembersMapping">
+      <MemberSignature Language="C#" Value="public void ExportMembersMapping (System.Xml.Serialization.XmlMembersMapping xmlMembersMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExportMembersMapping(class System.Xml.Serialization.XmlMembersMapping xmlMembersMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaExporter.ExportMembersMapping(System.Xml.Serialization.XmlMembersMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlMembersMapping" Type="System.Xml.Serialization.XmlMembersMapping" />
+      </Parameters>
+      <Docs>
+        <param name="xmlMembersMapping">Die interne .NET Framework typzuordnungen für die Elementteile der Nachrichtendefinition eines Web Services Description Language (WSDL).</param>
+        <summary>Fügt eine Deklaration des Elements auf die entsprechenden <see cref="T:System.Xml.Schema.XmlSchema" /> für die einzelnen Bestandteile einer SOAP-Nachricht literaldefinition Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für jeden Teil der SOAP-Nachricht die <xref:System.Xml.Serialization.XmlSchemaExporter.ExportMembersMapping%2A> Methode fügt eine XML-Schema-Element-Deklaration, die <xref:System.Xml.Schema.XmlSchema> , die den gleichen Namespace verwendet, die im Rahmen. Eine literal Meldungsdefinition enthält normalerweise ein einzelnes Teil.  
+  
+ Verwenden Sie stattdessen die <xref:System.Web.Services.Description.ServiceDescriptionReflector>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExportMembersMapping">
+      <MemberSignature Language="C#" Value="public void ExportMembersMapping (System.Xml.Serialization.XmlMembersMapping xmlMembersMapping, bool exportEnclosingType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExportMembersMapping(class System.Xml.Serialization.XmlMembersMapping xmlMembersMapping, bool exportEnclosingType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaExporter.ExportMembersMapping(System.Xml.Serialization.XmlMembersMapping,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlMembersMapping" Type="System.Xml.Serialization.XmlMembersMapping" />
+        <Parameter Name="exportEnclosingType" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="xmlMembersMapping">Die interne Zuordnung zwischen .NET Framework-Typ und ein XML-Schema-Element.</param>
+        <param name="exportEnclosingType">
+          <see langword="true" />Wenn die Schemaelemente, die das Schema einschließen eingeschlossen werden sollen; andernfalls <see langword="false" />.</param>
+        <summary>Fügt eine Deklaration des Elements auf die entsprechenden <see cref="T:System.Xml.Schema.XmlSchema" /> für jedes Element Bestandteile einer SOAP-Nachricht literaldefinition, und gibt an, ob der einschließenden Elemente enthalten sind.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExportTypeMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName ExportTypeMapping (System.Xml.Serialization.XmlMembersMapping xmlMembersMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlQualifiedName ExportTypeMapping(class System.Xml.Serialization.XmlMembersMapping xmlMembersMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaExporter.ExportTypeMapping(System.Xml.Serialization.XmlMembersMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlMembersMapping" Type="System.Xml.Serialization.XmlMembersMapping" />
+      </Parameters>
+      <Docs>
+        <param name="xmlMembersMapping">Interner .NET Framework-datentypzuordnungen für die Elementteile der Nachrichtendefinition eines Web Services Description Language (WSDL).</param>
+        <summary>Fügt eine Deklaration des Elements auf die entsprechenden <see cref="T:System.Xml.Schema.XmlSchema" /> Objekt für ein einzelnes Elementteil der Definition eines literalen SOAP-Nachricht.</summary>
+        <returns>Eine <see cref="T:System.Xml.XmlQualifiedName" /> , die den qualifizierten XML-Namen des exportierten Elementdeklaration darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung fügt eine XML-Schema-Element-Deklaration, die <xref:System.Xml.Schema.XmlSchema> , die den gleichen Namespace wie der SOAP-Nachrichtenteils verwendet. Die literale Meldungsdefinition muss ein einzelnes Teil enthalten.  
+  
+ Verwenden Sie stattdessen die <xref:System.Web.Services.Description.ServiceDescriptionReflector>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExportTypeMapping">
+      <MemberSignature Language="C#" Value="public void ExportTypeMapping (System.Xml.Serialization.XmlTypeMapping xmlTypeMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExportTypeMapping(class System.Xml.Serialization.XmlTypeMapping xmlTypeMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaExporter.ExportTypeMapping(System.Xml.Serialization.XmlTypeMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlTypeMapping" Type="System.Xml.Serialization.XmlTypeMapping" />
+      </Parameters>
+      <Docs>
+        <param name="xmlTypeMapping">Die interne Zuordnung zwischen .NET Framework-Typ und ein XML-Schema-Element.</param>
+        <summary>Fügt eine Deklaration des Elements für .NET Framework-Typ auf den relevanten <see cref="T:System.Xml.Schema.XmlSchema" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

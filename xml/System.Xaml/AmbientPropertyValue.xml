@@ -1,0 +1,96 @@
+<Type Name="AmbientPropertyValue" FullName="System.Xaml.AmbientPropertyValue">
+  <TypeSignature Language="C#" Value="public class AmbientPropertyValue" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AmbientPropertyValue extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.AmbientPropertyValue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Meldet Informationen zu einer ambient-Eigenschaft als Teil einer <see cref="T:System.Xaml.IAmbientProvider" /> Implementierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.AmbientPropertyValue>Stellt ein Informationselement, die durch den Aufruf zurückgegeben wird ein <xref:System.Xaml.IAmbientProvider> -service-Methode. Die `GetAll` Methoden zurückgegeben, Enumerationen bzw. von Arrays <xref:System.Xaml.AmbientPropertyValue> Elemente; die `GetFirst` -Methoden zurückgeben eine einzelnen <xref:System.Xaml.AmbientPropertyValue>.  
+  
+## <a name="about-ambient-properties"></a>Zur Ambient-Eigenschaften  
+ Eine Ambiente-Eigenschaft ist eine Eigenschaft, dessen Eigenschaftswert Wert Konverter zur Nutzung in der XAML-Knotenstruktur und dem Objektdiagramm darunter gewährt werden soll. Das Umgebungskonzept ist relevant für einen XAML-Prozessor, während der Phase Objekt zum Schreiben der Ladepfad oder der Serialisierungsphase eines Speichervorgangs Pfad.  
+  
+ Ein Typ kann auch als Umgebung zugeschrieben werden. In diesem Fall werden alle Eigenschaften, mit denen den attributierten Typ als Umgebung gemeldet.  
+  
+ Im Fall Pfad laden könnte der ambient-Eigenschaft-Wert den Graphen Objektwert mit anderen Eigenschaften auswirken, die darunter in eine XAML-Knotenstruktur vorhanden sind. Wenn als einen XAML-Knotenstream verarbeitet, das Umgebungskonzept impliziert, dass die ambient-Eigenschaft-Wert für Typkonverter und Markuperweiterungen aus verfügbar sein muss `StartObject` auf `EndObject`. Auf ähnliche Weise ein Typkonverter oder die Markuperweiterung typerweiterung, die verwendet wird, für die Speicherfunktion Pfad kann Nachschlagen der ambient-Eigenschaft und seinen Wert. Daher ist der XAML-Code, das erzeugt wird eine bessere Roundtripdarstellung.  
+  
+ Definitionsgemäß Sprache ist in XAML nicht die Reihenfolge angeben, in der Member eines Objekts verarbeitet werden müssen. Allerdings ausnahmslos ambient-Eigenschaft muss zuerst verarbeitet werden, die XAML-Reader, damit die Typ-Konverter und Markuperweiterungsverwendungen, die in anderen Eigenschaften enthalten sind, die über zugreifen kann die <xref:System.Xaml.IAmbientProvider> Dienst.  
+  
+ <xref:System.Xaml.XamlMember.DependsOn%2A>ist ein ähnliches Konzept, das auch die Verwendung von XAML-Knoten-Verarbeitungsreihenfolge von Artikeln beeinflusst. Allerdings <xref:System.Xaml.XamlMember.DependsOn%2A> kann nur verwendet werden, für die Peer-Member und Knoten Beziehungen; es kann nicht beeinflusst werden alle abhängigen Elemente. Darüber hinaus <xref:System.Xaml.XamlMember.DependsOn%2A> direkt beeinflusst Graph-Eigenschaft festlegen,-Objekt während das Ambiente-Verfahren auf den Einsatz von Typkonvertern oder Markuperweiterungen beruht. In der ambient-Technik muss gibt es zudem eine bestimmte Typkonverter oder der ressourcenerweiterungsdefinition Markup. Es liegt im Ermessen jedes Typkonverter oder die Markuperweiterung, um zu bestimmen, wie der ambient-Eigenschaft-Wert interpretiert und angewendet werden, um den Speicherort des Objekts-Diagramm, in dem der Typkonverter oder die Markuperweiterung verwendet wird.  
+  
+## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
+ Eine ambient-Eigenschaft das in dargestellte Szenario ist die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] -Funktionsgruppe ist <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>, können die erforderliche Eigenschaft Name Suchvorgängen wird für andere Werte qualifizieren. In diesem Fall die <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType> Wert qualifiziert die <xref:System.Windows.Setter.Property%2A?displayProperty=nameWithType> Werte in den XAML-Knoten darunter. <xref:System.Windows.Setter.Property%2A?displayProperty=nameWithType>verwendet das Verhalten des Typ-Konverter für eine <xref:System.Windows.DependencyProperty>. Dieses Verhalten greift auf den Ambient- <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType> Wert durch Abfragen <xref:System.Xaml.IAmbientProvider.GetFirstAmbientValue%2A> aus einen Dienstkontext, der für Typkonverter und Markuperweiterungen verfügbar ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AmbientPropertyValue (System.Xaml.XamlMember property, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlMember property, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.AmbientPropertyValue.#ctor(System.Xaml.XamlMember,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="property" Type="System.Xaml.XamlMember" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="property">Der Bezeichner, der die Ambiente-Eigenschaft darstellt.</param>
+        <param name="value">Der Wert, den Bericht.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xaml.AmbientPropertyValue" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetrievedProperty">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlMember RetrievedProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlMember RetrievedProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.AmbientPropertyValue.RetrievedProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlMember</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den XAML-Typsystembezeichner (<see cref="T:System.Xaml.XamlMember" />), die Ambiente-Eigenschaft darstellt.</summary>
+        <value>Der Bezeichner, der die Ambiente-Eigenschaft darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.AmbientPropertyValue.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der ambient-Eigenschaft ab.</summary>
+        <value>Der Wert der ambient-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

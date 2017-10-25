@@ -1,0 +1,6 @@
+<Namespace Name="System.Workflow.Activities.Configuration">
+  <Docs>
+    <summary>Bietet Klassen, die Abschnitte der Konfigurationsdatei darstellen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

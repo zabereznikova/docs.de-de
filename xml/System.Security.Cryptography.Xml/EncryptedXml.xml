@@ -1,0 +1,1924 @@
+<Type Name="EncryptedXml" FullName="System.Security.Cryptography.Xml.EncryptedXml">
+  <TypeSignature Language="C#" Value="public class EncryptedXml" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EncryptedXml extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.EncryptedXml" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das Prozessmodell für die Implementierung von XML-Verschlüsselung dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.EncryptedXml> Klasse ist die Hauptklasse für die XML-Verschlüsselung in .NET Framework verwendet. XML-Verschlüsselung ist eine standardbasierte und interoperable Möglichkeit, ganz oder teilweise ein XML-Dokument oder sonstigen Daten zu verschlüsseln. .NET Framework XML-Verschlüsselungsklassen implementieren die World Wide Web Consortium (W3C)-Spezifikation für XML-Verschlüsselung unter http://www.w3.org/TR/xmlenc-core/.  
+  
+ Verwenden der <xref:System.Security.Cryptography.Xml.EncryptedXml> -Klasse auf, wenn Sie zur Freigabe von verschlüsselter XML-Daten zwischen Anwendungen oder Organisationen in ein gängiges Verfahren müssen. Von einer Implementierung der W3C-Spezifikation für XML-Verschlüsselung können mit dieser Klasse verschlüsselten Daten entschlüsselt werden.  
+  
+ XML-Verschlüsselung ersetzt nur-Text-XML-Element oder ein Dokument mit der `<EncryptedData>` -Element, das ein verschlüsseltes enthält (oder verschlüsselten Text) Darstellung des nur-Text-XML oder sonstigen Daten. Die `<EncryptedData>` Element kann optional enthalten Informationen dazu, wo Sie einen Schlüssel zu suchen, die den Verschlüsselungstext entschlüsselt und welcher Kryptografiealgorithmus verwendet wurde, um den nur-Text zu verschlüsseln.  
+  
+ Die `<EncryptedKey>` -Element ähnelt dem `<EncryptedData>` Element im Format "und" Verwendung "," mit dem Unterschied, dass Sie einen Schlüssel zu verschlüsseln, die den Wert des entschlüsselt werden können die `<EncryptedData>` Element. Beachten Sie, dass die `<EncryptedKey>` Element und die `<EncryptedData>` Element wird nie einen unverschlüsselten Schlüssel enthalten.  
+  
+ Verwenden Sie eine der folgenden Methoden an, für den Austausch von Schlüsselinformationen:  
+  
+-   Schließen Sie keine Schlüsselinformationen. Wenn Sie diese Option auswählen, müssen beide Parteien auf einen Algorithmus und Schlüssel zustimmen, bevor sie die verschlüsselte Daten austauschen.  
+  
+-   Schließen Sie den Speicherort des Schlüssels in der Uniform Resource Identifier (URI)-Attribut des der `<RetrievalMethod>` Element. Beide Parteien müssen auf den Speicherort des Schlüssels voraus stimmen, und dieser Speicherort muss geheim gehalten werden.  
+  
+-   Ein Zeichenfolgenname, der einen Schlüssel in zugeordnet sind die `<KeyName>` Element. Beide Parteien müssen übereinstimmen, auf die Zuordnung der Name des Schlüssels, bevor sie die verschlüsselte Daten austauschen und diese Zuordnung geheim gehalten werden muss.  
+  
+-   Schließen Sie einen verschlüsselten Schlüssel in der `<EncryptedKey>` Element. Beide Parteien müssen über den Schlüssel verständigt haben, die den verschlüsselten Schlüssel entschlüsselt, bevor sie die verschlüsselte Daten austauschen. Sie können optional einen Namen oder Speicherort des Schlüssels, der den Schlüssel im entschlüsselt einschließen der `<EncryptedKey>` Element.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine einfache Hilfsklasse zu erstellen, verwendet die <xref:System.Security.Cryptography.TripleDES> Algorithmus zum Verschlüsseln eines XML-Dokuments.  
+  
+ [!code-cpp[Cryptography.XML.MainXMLEncDecryptDataOOP#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.MainXMLEncDecryptDataOOP/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.MainXMLEncDecryptDataOOP#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.MainXMLEncDecryptDataOOP/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.MainXMLEncDecryptDataOOP#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.MainXMLEncDecryptDataOOP/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel enthält das verschlüsselte XML-Dokument keine Schlüsselinformationen.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel bettet ein Schlüsselname in das verschlüsselte XML-Dokument, das die Entschlüsselungsmethode verwendet, um den entsprechenden Entschlüsselungsschlüssel zu finden.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CPP/Cryptography.XML.XMLEncMapKey.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines asymmetrischen Schlüssels zu verschlüsseln. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann den asymmetrischen Schlüssel verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mit einem x. 509-Zertifikat verschlüsselt. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann das x. 509-Zertifikat verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/CPP/Cryptography.XML.XMLEncMapKeyX509.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.EncryptedXml" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel enthält das verschlüsselte XML-Dokument keine Schlüsselinformationen.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel bettet ein Schlüsselname in das verschlüsselte XML-Dokument, das die Entschlüsselungsmethode verwendet, um den entsprechenden Entschlüsselungsschlüssel zu finden.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CPP/Cryptography.XML.XMLEncMapKey.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines asymmetrischen Schlüssels zu verschlüsseln. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann den asymmetrischen Schlüssel verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mit einem x. 509-Zertifikat verschlüsselt. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann das x. 509-Zertifikat verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/CPP/Cryptography.XML.XMLEncMapKeyX509.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncryptedXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.EncryptedXml" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist der Standardkonstruktor für die Hauptklasse für die XML-Verschlüsselung in .NET Framework.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel enthält das verschlüsselte XML-Dokument keine Schlüsselinformationen.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel bettet ein Schlüsselname in das verschlüsselte XML-Dokument, das die Entschlüsselungsmethode verwendet, um den entsprechenden Entschlüsselungsschlüssel zu finden.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CPP/Cryptography.XML.XMLEncMapKey.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines asymmetrischen Schlüssels zu verschlüsseln. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann den asymmetrischen Schlüssel verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mit einem x. 509-Zertifikat verschlüsselt. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann das x. 509-Zertifikat verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/CPP/Cryptography.XML.XMLEncMapKeyX509.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncryptedXml (System.Xml.XmlDocument document);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlDocument document) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.#ctor(System.Xml.XmlDocument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="document" Type="System.Xml.XmlDocument" />
+      </Parameters>
+      <Docs>
+        <param name="document">Ein <see cref="T:System.Xml.XmlDocument" />-Objekt für die Initialisierung des <see cref="T:System.Security.Cryptography.Xml.EncryptedXml" />-Objekts.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.EncryptedXml" />-Klasse mithilfe des angegebenen XML-Dokuments.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer <xref:System.Security.Cryptography.Xml.EncryptedXml> Objekt, wenn Sie das zu verschlüsselnde XML-Dokument angeben möchten.  Die `document` Parameter umfasst die XML-Elemente, die später das verschlüsselte XML bilden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel bettet ein Schlüsselname in das verschlüsselte XML-Dokument, das die Entschlüsselungsmethode verwendet, um den entsprechenden Entschlüsselungsschlüssel zu finden.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CPP/Cryptography.XML.XMLEncMapKey.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines asymmetrischen Schlüssels zu verschlüsseln. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann den asymmetrischen Schlüssel verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncryptedXml (System.Xml.XmlDocument document, System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlDocument document, class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.#ctor(System.Xml.XmlDocument,System.Security.Policy.Evidence)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="document" Type="System.Xml.XmlDocument" />
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="document">Ein <see cref="T:System.Xml.XmlDocument" />-Objekt für die Initialisierung des <see cref="T:System.Security.Cryptography.Xml.EncryptedXml" />-Objekts.</param>
+        <param name="evidence">Ein <see cref="T:System.Security.Policy.Evidence" />-Objekt, das dem <see cref="T:System.Xml.XmlDocument" />-Objekt zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.EncryptedXml" />-Klasse unter Verwendung des angegebenen XML-Dokuments und von Beweisen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer <xref:System.Security.Cryptography.Xml.EncryptedXml> Objekt, wenn Sie das XML-Dokument zu verschlüsseln, und geben Sie den Sicherheitsbeweis angeben möchten. Die `document` Parameter umfasst die XML-Elemente, die später das verschlüsselte XML bilden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddKeyNameMapping">
+      <MemberSignature Language="C#" Value="public void AddKeyNameMapping (string keyName, object keyObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddKeyNameMapping(string keyName, object keyObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.AddKeyNameMapping(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+        <Parameter Name="keyObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">Der Name zum Zuweisen <c>KeyObject</c>.</param>
+        <param name="keyObject">Der symmetrische Schlüssel zum Zuweisen <c>KeyName</c>.</param>
+        <summary>Definiert die Zuordnung zwischen einem Schlüsselnamen und einem symmetrischen Schlüssel oder einem asymmetrischen Schlüssel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.EncryptedXml.AddKeyNameMapping%2A> Methode können Sie einen symmetrischen Schlüssel oder einem asymmetrischen Schlüssel zu einem Zeichenfolgennamen zugeordnet. Diese Methode fügt die Werte der `keyName` und `keyObject` Parameter auf eine Tabelle mit gültigen Schlüssel name Zuordnungen.  
+  
+ Verwenden der <xref:System.Security.Cryptography.Xml.EncryptedXml.ClearKeyNameMappings%2A> Methode, um der Zuordnungstabelle Schlüsselnamen zu deaktivieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel bettet ein Schlüsselname in das verschlüsselte XML-Dokument, das die Entschlüsselungsmethode verwendet, um den entsprechenden Entschlüsselungsschlüssel zu finden.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecrypt#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecrypt/CPP/Cryptography.XML.XMLEncMinimalDecrypt.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecrypt#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecrypt/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecrypt#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecrypt/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="keyName" />-Parameters ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der Wert des <paramref name="keyObject" />-Parameters ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Wert, der die <paramref name="keyObject" /> -Parameter ist kein RSA-Algorithmus oder einen symmetrischen Schlüssel.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearKeyNameMappings">
+      <MemberSignature Language="C#" Value="public void ClearKeyNameMappings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearKeyNameMappings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.ClearKeyNameMappings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt alle Schlüsselnamenzuordnungen zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können um alle schlüsselnamenzuordnungen zu löschen, die Sie festgelegt haben, mit der <xref:System.Security.Cryptography.Xml.EncryptedXml.AddKeyNameMapping%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptData">
+      <MemberSignature Language="C#" Value="public byte[] DecryptData (System.Security.Cryptography.Xml.EncryptedData encryptedData, System.Security.Cryptography.SymmetricAlgorithm symAlg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] DecryptData(class System.Security.Cryptography.Xml.EncryptedData encryptedData, class System.Security.Cryptography.SymmetricAlgorithm symAlg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.DecryptData(System.Security.Cryptography.Xml.EncryptedData,System.Security.Cryptography.SymmetricAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptedData" Type="System.Security.Cryptography.Xml.EncryptedData" />
+        <Parameter Name="symmetricAlgorithm" Type="System.Security.Cryptography.SymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="encryptedData">Die zu entschlüsselnden Daten.</param>
+        <param name="symAlg">To be added.</param>
+        <summary>Entschlüsselt mit dem angegebenen symmetrischen Algorithmus ein <see langword="&lt;EncryptedData&gt;" />-Element.</summary>
+        <returns>Ein Bytearray, das den unformatierten entschlüsselten Klartext enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptData%2A> Methode zum Entschlüsseln einer <xref:System.Security.Cryptography.Xml.EncryptedData> Element mithilfe eines symmetrischen Schlüssels.  
+  
+ Beachten Sie, dass die <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptData%2A> Methode wird nur auf oberster Ebene entschlüsselt <`EncryptedData`> RFID-Transponder.  In Fällen, in denen eine oder mehrere <`EncryptedData`> Tags verschlüsselt wurden, und sind innerhalb der höheren Ebene enthalten <`EncryptedData`>-Tags, die Sie aufrufen können die <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> separat für jeden dieser Methode.  Finden Sie unter der <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> Methode für ein Codebeispiel.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel enthält das verschlüsselte XML-Dokument keine Schlüsselinformationen.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="encryptedData" />-Parameters ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der Wert des <paramref name="symmetricAlgorithm" />-Parameters ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptDocument">
+      <MemberSignature Language="C#" Value="public void DecryptDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DecryptDocument() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entschlüsselt alle <see langword="&lt;EncryptedData&gt;" />-Elemente des XML-Dokuments, die während der Initialisierung der <see cref="T:System.Security.Cryptography.Xml.EncryptedXml" />-Klasse angegeben wurden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> -Methode entschlüsselt alle `<EncryptedData>` Elemente eines XML-Dokument geladen wird, während der Initialisierung. Nach dem Aufruf dieser Methode alle `<EncryptedData>` Elemente im Dokument mit nur-Text-Versionen ersetzt werden.  
+  
+ Die <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> Methode wird nur auf oberster Ebene entschlüsselt `<EncryptedData>` Elemente.  Wenn Sie ein verschlüsseltes (ein Dokument, das mehr als einmal verschlüsselt ist) entschlüsseln müssen, müssen Sie Aufrufen der <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> Methode solange wiederholt, bis alle die `<EncryptedData>` Elemente haben entschlüsselt wurde.  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> -Methode entschlüsselt nur gültige XML-Daten. Verwenden, um beliebige Daten zu entschlüsseln, die <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptData%2A> Methode.  
+  
+ Um XML-Verschlüsselung mit x. 509-Zertifikate verwenden, benötigen Sie die Microsoft Enhanced Cryptographic Provider installiert, und das x. 509-Zertifikat muss der Enhanced Provider verwenden. Wenn Sie keine der Microsoft Enhanced Cryptographic Provider installiert bzw. für das x. 509-Zertifikat nicht der Enhanced Provider verwendet eine <xref:System.Security.Cryptography.CryptographicException> mit "Unbekannter Fehler" wird beim Entschlüsseln eines XML-Dokuments ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines asymmetrischen Schlüssels zu verschlüsseln. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann den asymmetrischen Schlüssel verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mit einem x. 509-Zertifikat verschlüsselt. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann das x. 509-Zertifikat verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/CPP/Cryptography.XML.XMLEncMapKeyX509.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine hohe entschlüsseln <`EncryptedData`>-Tag, das eine andere verschlüsselt enthält <`EncryptedData`> Tag.  
+  
+ [!code-csharp[Cryptography.XML.EncryptedDocument.DecryptDocument-SuperEncryption#1](~/samples/snippets/csharp/VS_Snippets_Misc/Cryptography.XML.EncryptedDocument.DecryptDocument-SuperEncryption/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptedDocument.DecryptDocument-SuperEncryption#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/Cryptography.XML.EncryptedDocument.DecryptDocument-SuperEncryption/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der kryptografische Schlüssel zum Entschlüsseln des Dokuments wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptEncryptedKey">
+      <MemberSignature Language="C#" Value="public virtual byte[] DecryptEncryptedKey (System.Security.Cryptography.Xml.EncryptedKey encryptedKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] DecryptEncryptedKey(class System.Security.Cryptography.Xml.EncryptedKey encryptedKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.DecryptEncryptedKey(System.Security.Cryptography.Xml.EncryptedKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptedKey" Type="System.Security.Cryptography.Xml.EncryptedKey" />
+      </Parameters>
+      <Docs>
+        <param name="encryptedKey">Das <see cref="T:System.Security.Cryptography.Xml.EncryptedKey" />-Objekt, das den abzurufenden Schlüssel enthält.</param>
+        <summary>Bestimmt den durch das <see cref="T:System.Security.Cryptography.Xml.EncryptedKey" />-Element dargestellten Schlüssel.</summary>
+        <returns>Ein Bytearray, das den Schlüssel enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptEncryptedKey%2A> -Methode entschlüsselt einen verschlüsselten Schlüssel, der als Bestandteil der `<EncryptedKey>` Element eines XML-Dokuments.  
+  
+ Diese rekursive Methode sucht den Schlüssel, dargestellt durch die <xref:System.Security.Cryptography.Xml.EncryptedKey> Objekt. Beachten Sie, dass ein <xref:System.Security.Cryptography.Xml.EncryptedKey> -Objekt enthalten kann eine andere <xref:System.Security.Cryptography.Xml.EncryptedKey> Objekt, der angibt, seine <xref:System.Security.Cryptography.Xml.KeyInfo> Wert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="encryptedKey" />-Parameters ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Wert, der die <paramref name="encryptedKey" /> -Parameter ist nicht der Triple DES Key Wrap-Algorithmus oder der erweiterte Verschlüsselung (Advanced Encryption Standard, AES) Key Wrap-Algorithmus (auch als Rijndael bezeichnet).</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="DecryptKey">
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Entschlüsselt ein <see langword="&lt;EncryptedKey&gt;" />-Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptKey%2A> Methode zum Entschlüsseln einer `<EncryptedKey>` Element und rufen Sie den Schlüssel verwendet, um dieses Element zu entschlüsseln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="DecryptKey">
+      <MemberSignature Language="C#" Value="public static byte[] DecryptKey (byte[] keyData, System.Security.Cryptography.SymmetricAlgorithm symAlg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] DecryptKey(unsigned int8[] keyData, class System.Security.Cryptography.SymmetricAlgorithm symAlg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.DecryptKey(System.Byte[],System.Security.Cryptography.SymmetricAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Byte[]" />
+        <Parameter Name="symmetricAlgorithm" Type="System.Security.Cryptography.SymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Ein Bytearray, das ein verschlüsseltes <see langword="&lt;EncryptedKey&gt;" />-Element darstellt.</param>
+        <param name="symAlg">To be added.</param>
+        <summary>Entschlüsselt mit einem symmetrischen Algorithmus ein <see langword="&lt;EncryptedKey&gt;" />-Element.</summary>
+        <returns>Ein Bytearray, das den Klartextschlüssel enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptKey%2A> -Methode entschlüsselt einen verschlüsselten Schlüssel, der als Bestandteil der `<EncryptedKey>` Element eines XML-Dokuments. Diese Methode akzeptiert einen Wert für die `symmetricAlgorithm` Parameter, der die Triple DES-Algorithmus oder den AES-Key Wrap-Algorithmus (auch als Rijndael bezeichnet) darstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="keyData" />-Parameters ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der Wert des <paramref name="symmetricAlgorithm" />-Parameters ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Wert, der die <paramref name="symmetricAlgorithm" /> Element ist nicht der Triple DES Key Wrap-Algorithmus oder der erweiterte Verschlüsselung (Advanced Encryption Standard, AES) Key Wrap-Algorithmus (auch als Rijndael bezeichnet).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptKey">
+      <MemberSignature Language="C#" Value="public static byte[] DecryptKey (byte[] keyData, System.Security.Cryptography.RSA rsa, bool fOAEP);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] DecryptKey(unsigned int8[] keyData, class System.Security.Cryptography.RSA rsa, bool fOAEP) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.DecryptKey(System.Byte[],System.Security.Cryptography.RSA,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Byte[]" />
+        <Parameter Name="rsa" Type="System.Security.Cryptography.RSA" />
+        <Parameter Name="useOAEP" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Ein Bytearray, das ein verschlüsseltes <see langword="&lt;EncryptedKey&gt;" />-Element darstellt.</param>
+        <param name="rsa">Der asymmetrische Schlüssel zum Entschlüsseln <c>KeyData</c>.</param>
+        <param name="fOAEP">To be added.</param>
+        <summary>Entschlüsselt mit einem asymmetrischen Algorithmus ein <see langword="&lt;EncryptedKey&gt;" />-Element.</summary>
+        <returns>Ein Bytearray, das den Klartextschlüssel enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptKey%2A> -Methode entschlüsselt einen verschlüsselten Schlüssel, der als Bestandteil der `<EncryptedKey>` Element eines XML-Dokuments. Diese Methode akzeptiert einen Wert für die `rsa` Parameter, der den RSA-PKCS #1 v1. 5-Algorithmus oder den RSA PKCS #1-Typ 2-Algorithmus (so genannte OAEP-Padding) darstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="keyData" />-Parameters ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der Wert des <paramref name="rsa" />-Parameters ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentEvidence">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.Evidence DocumentEvidence { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Policy.Evidence DocumentEvidence" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedXml.DocumentEvidence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.Evidence</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beweise des <see cref="T:System.Xml.XmlDocument" />-Objekts ab, aus denen das <see cref="T:System.Security.Cryptography.Xml.EncryptedXml" />-Objekt erstellt wird, oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Security.Policy.Evidence" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das XML-Dokument erstellt die <xref:System.Security.Cryptography.Xml.EncryptedXml> Objekt Sicherheitsbeweise, sollten Sie die Beweise für das Hinzufügen der <xref:System.Security.Cryptography.Xml.EncryptedXml.DocumentEvidence%2A> Eigenschaft.  Wenn Sie diese Eigenschaft, alle zugeordneten nicht festlegen <xref:System.Security.Cryptography.Xml.CipherReference> Objekte werden nicht dereferenziert werden, da sie nicht die erforderliche Berechtigung erteilt werden können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding Encoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding Encoding" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedXml.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Codierung für die XML-Verschlüsselung ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Text.Encoding" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ UTF-8-Codierung ist die standardcodierung für XML-Verschlüsselung. Sie können diese Eigenschaft verwenden, andere Typen von Codierung angeben der <xref:System.Text.Encoding> Klasse, z. B. UTF-16 oder ASCII.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Encrypt">
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Verschlüsselt das äußere XML eines Elements mit dem in der Schlüsselzuordnungstabelle angegebenen Zertifikat bzw. Schlüssel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecrypt#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecrypt/CPP/Cryptography.XML.XMLEncMinimalDecrypt.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecrypt#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecrypt/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecrypt#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecrypt/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mit einem x. 509-Zertifikat verschlüsselt. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann das x. 509-Zertifikat verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/CPP/Cryptography.XML.XMLEncMapKeyX509.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Encrypt">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.EncryptedData Encrypt (System.Xml.XmlElement inputElement, System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Cryptography.Xml.EncryptedData Encrypt(class System.Xml.XmlElement inputElement, class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.Encrypt(System.Xml.XmlElement,System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.EncryptedData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputElement" Type="System.Xml.XmlElement" />
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="inputElement">Das zu verschlüsselnde XML-Element.</param>
+        <param name="certificate">Das X.509-Zertifikat für die Verschlüsselung.</param>
+        <summary>Verschlüsselt das äußere XML eines Elements mit dem angegebenen X.509-Zertifikat.</summary>
+        <returns>Ein <see cref="T:System.Security.Cryptography.Xml.EncryptedData" />-Element, das die verschlüsselten XML-Daten darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> Methode ist eine einfache Möglichkeit, das äußere XML eines Elements mit einem Zertifikat verschlüsselt. Diese Methode generiert einen 256-Bit-Sitzungsschlüssel für erweiterte Verschlüsselung (Advanced Encryption Standard, AES) zum Verschlüsseln eines XML-Elements, und klicken Sie dann verschlüsselt und signiert den AES-Schlüssel mit dem <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Objekt. Die <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> Methode gibt dann das resultierende XML als ein <xref:System.Security.Cryptography.Xml.EncryptedData> Element.  
+  
+ Wenn Sie mehr Kontrolle über die Verschlüsselung benötigen, also Geben Sie können an die verschlüsselten Informationen in einer `<CipherReference>` Element oder angeben, ob das gesamte XML-Element oder nur den Inhalt sein soll, verschlüsselt ist, verwenden Sie die <xref:System.Security.Cryptography.Xml.EncryptedXml.EncryptData%2A> Überladungen der Methode.  
+  
+ Um XML-Verschlüsselung mit x. 509-Zertifikate verwenden, benötigen Sie die Microsoft Enhanced Cryptographic Provider installiert, und das x. 509-Zertifikat muss der Enhanced Provider verwenden. Wenn Sie keine der Microsoft Enhanced Cryptographic Provider installiert bzw. für das x. 509-Zertifikat nicht der Enhanced Provider verwendet eine <xref:System.Security.Cryptography.CryptographicException> mit "Unbekannter Fehler" wird beim Entschlüsseln eines XML-Dokuments ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mit einem x. 509-Zertifikat verschlüsselt. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann das x. 509-Zertifikat verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/CPP/Cryptography.XML.XMLEncMapKeyX509.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMapKeyX509#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKeyX509/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="inputElement" />-Parameters ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der Wert des <paramref name="certificate" />-Parameters ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Der Wert, der die <paramref name="certificate" /> Parameter stellt keinen Algorithmus ein RSA-Schlüssel dar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Encrypt">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.EncryptedData Encrypt (System.Xml.XmlElement inputElement, string keyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Cryptography.Xml.EncryptedData Encrypt(class System.Xml.XmlElement inputElement, string keyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.Encrypt(System.Xml.XmlElement,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.EncryptedData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputElement" Type="System.Xml.XmlElement" />
+        <Parameter Name="keyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="inputElement">Das zu verschlüsselnde XML-Element.</param>
+        <param name="keyName">Ein Schlüsselname aus der Schlüsselzuordnungstabelle.</param>
+        <summary>Verschlüsselt das äußere XML eines Elements mit dem in der Schlüsselzuordnungstabelle angegebenen Schlüssel.</summary>
+        <returns>Ein <see cref="T:System.Security.Cryptography.Xml.EncryptedData" />-Objekt, das die verschlüsselten XML-Daten darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine einfache Möglichkeit, das äußere XML eines Elements mit einem Schlüsselnamen zu verschlüsseln. Wenn Sie mehr Kontrolle über die Verschlüsselung benötigen, also Geben Sie können an die verschlüsselten Informationen in einer `<CipherReference>` Element oder angeben, ob das gesamte XML-Element oder nur den Inhalt sein soll, verschlüsselt ist, verwenden Sie die <xref:System.Security.Cryptography.Xml.EncryptedXml.EncryptData%2A> Überladungen der Methode.  
+  
+ Eine Liste aller unterstützten Algorithmen finden Sie in der Liste der Konstanten zugeordneten Felder die <xref:System.Security.Cryptography.Xml.EncryptedXml> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecrypt#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecrypt/CPP/Cryptography.XML.XMLEncMinimalDecrypt.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecrypt#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecrypt/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecrypt#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecrypt/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="inputElement" />-Parameters ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der Wert des <paramref name="keyName" />-Parameters ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Wert, der die <paramref name="keyName" /> Parameter stimmt nicht mit ein paar registrierten Schlüsselname überein.  
+  
+ - oder -   
+  
+ Der kryptografische Schlüssel beschrieben, die von der <paramref name="keyName" /> Parameter wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="EncryptData">
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Verschlüsselt XML-Daten mit einem symmetrischen Algorithmus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel enthält das verschlüsselte XML-Dokument keine Schlüsselinformationen.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel bettet ein Schlüsselname in das verschlüsselte XML-Dokument, das die Entschlüsselungsmethode verwendet, um den entsprechenden Entschlüsselungsschlüssel zu finden.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CPP/Cryptography.XML.XMLEncMapKey.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines asymmetrischen Schlüssels zu verschlüsseln. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann den asymmetrischen Schlüssel verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="EncryptData">
+      <MemberSignature Language="C#" Value="public byte[] EncryptData (byte[] plainText, System.Security.Cryptography.SymmetricAlgorithm symAlg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] EncryptData(unsigned int8[] plainText, class System.Security.Cryptography.SymmetricAlgorithm symAlg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.EncryptData(System.Byte[],System.Security.Cryptography.SymmetricAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="plaintext" Type="System.Byte[]" />
+        <Parameter Name="symmetricAlgorithm" Type="System.Security.Cryptography.SymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="plainText">To be added.</param>
+        <param name="symAlg">To be added.</param>
+        <summary>Verschlüsselt Daten im angegebenen Bytearray mit dem angegebenen symmetrischen Algorithmus.</summary>
+        <returns>Ein Bytearray von verschlüsselten Daten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Byte-Array platziert werden kann, in einem `<CipherValue>` Element. Diese Methode wird davon ausgegangen, dass die Daten angegeben, die in der `plaintext` -Parameter ist ein Bytearray, das XML-Daten enthält.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel enthält das verschlüsselte XML-Dokument keine Schlüsselinformationen.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel bettet ein Schlüsselname in das verschlüsselte XML-Dokument, das die Entschlüsselungsmethode verwendet, um den entsprechenden Entschlüsselungsschlüssel zu finden.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CPP/Cryptography.XML.XMLEncMapKey.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/VB/sample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines asymmetrischen Schlüssels zu verschlüsseln. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann den asymmetrischen Schlüssel verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="plaintext" />-Parameters ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der Wert des <paramref name="symmetricAlgorithm" />-Parameters ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die Daten konnten nicht mit den angegebenen Parametern verschlüsselt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptData">
+      <MemberSignature Language="C#" Value="public byte[] EncryptData (System.Xml.XmlElement inputElement, System.Security.Cryptography.SymmetricAlgorithm symAlg, bool content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] EncryptData(class System.Xml.XmlElement inputElement, class System.Security.Cryptography.SymmetricAlgorithm symAlg, bool content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.EncryptData(System.Xml.XmlElement,System.Security.Cryptography.SymmetricAlgorithm,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputElement" Type="System.Xml.XmlElement" />
+        <Parameter Name="symmetricAlgorithm" Type="System.Security.Cryptography.SymmetricAlgorithm" />
+        <Parameter Name="content" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inputElement">Das zu verschlüsselnde Element oder dessen Inhalt.</param>
+        <param name="symAlg">To be added.</param>
+        <param name="content">
+          <see langword="true" />, wenn nur der Inhalt des Elements verschlüsselt werden soll; <see langword="false" />, wenn das gesamte Element verschlüsselt werden soll.</param>
+        <summary>Verschlüsselt mit dem angegebenen symmetrischen Algorithmus das angegebene Element oder dessen Inhalt.</summary>
+        <returns>Ein Bytearray, das die verschlüsselten Daten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Array Bytedaten ist der Wert der `<CipherValue>` Element.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel enthält das verschlüsselte XML-Dokument keine Schlüsselinformationen.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="inputElement" />-Parameters ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der Wert des <paramref name="symmetricAlgorithm" />-Parameters ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="EncryptKey">
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Verschlüsselt den Schlüssel, mit dem ein Empfänger ein <see langword="&lt;EncryptedData&gt;" />-Element entschlüsselt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Security.Cryptography.Xml.EncryptedXml.EncryptKey%2A> Methode zum Verschlüsseln des Schlüssels, mit dem ein Empfänger zum Entschlüsseln einer `<EncryptedData>` Element. Diese Methode wird der verschlüsselte Schlüssel innerhalb einer `<EncryptedKey>` Element.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines asymmetrischen Schlüssels zu verschlüsseln. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann den asymmetrischen Schlüssel verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="EncryptKey">
+      <MemberSignature Language="C#" Value="public static byte[] EncryptKey (byte[] keyData, System.Security.Cryptography.SymmetricAlgorithm symAlg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] EncryptKey(unsigned int8[] keyData, class System.Security.Cryptography.SymmetricAlgorithm symAlg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.EncryptKey(System.Byte[],System.Security.Cryptography.SymmetricAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Byte[]" />
+        <Parameter Name="symmetricAlgorithm" Type="System.Security.Cryptography.SymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Der zu verschlüsselnde Schlüssel.</param>
+        <param name="symAlg">To be added.</param>
+        <summary>Verschlüsselt einen Schlüssel mit einem symmetrischen Algorithmus, mit dem ein Empfänger ein <see langword="&lt;EncryptedData&gt;" />-Element entschlüsselt.</summary>
+        <returns>Ein Bytearray, das den verschlüsselten Wert des <paramref name="keyData" />-Parameters darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Security.Cryptography.Xml.EncryptedXml.EncryptKey%2A> Methode zum Verschlüsseln des Schlüssels, mit dem ein Empfänger zum Entschlüsseln einer `<EncryptedData>` Element. Diese Methode akzeptiert einen Wert für die `symmetricAlgorithm` Parameter, der die Triple DES-Algorithmus oder den AES-Key Wrap-Algorithmus (auch als Rijndael bezeichnet) darstellt.  
+  
+ Beachten Sie, dass diese Methode nicht automatisch in den verschlüsselten Schlüssel platziert eine `<EncryptedKey>` Element.  Sie müssen manuell erstellen, die `<EncryptedKey>` Element innerhalb des Dokuments.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="keyData" />-Parameters ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der Wert des <paramref name="symmetricAlgorithm" />-Parameters ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Wert, der die <paramref name="symmetricAlgorithm" /> -Parameter ist nicht der Triple DES Key Wrap-Algorithmus oder der erweiterte Verschlüsselung (Advanced Encryption Standard, AES) Key Wrap-Algorithmus (auch als Rijndael bezeichnet).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptKey">
+      <MemberSignature Language="C#" Value="public static byte[] EncryptKey (byte[] keyData, System.Security.Cryptography.RSA rsa, bool fOAEP);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] EncryptKey(unsigned int8[] keyData, class System.Security.Cryptography.RSA rsa, bool fOAEP) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.EncryptKey(System.Byte[],System.Security.Cryptography.RSA,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Byte[]" />
+        <Parameter Name="rsa" Type="System.Security.Cryptography.RSA" />
+        <Parameter Name="useOAEP" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Der zu verschlüsselnde Schlüssel.</param>
+        <param name="rsa">Der asymmetrische Schlüssel zum Verschlüsseln von <c>KeyData</c>.</param>
+        <param name="fOAEP">To be added.</param>
+        <summary>Verschlüsselt den Schlüssel, mit dem ein Empfänger ein <see langword="&lt;EncryptedData&gt;" />-Element entschlüsselt.</summary>
+        <returns>Ein Bytearray, das den verschlüsselten Wert des <paramref name="keyData" />-Parameters darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Security.Cryptography.Xml.EncryptedXml.EncryptKey%2A> Methode zum Verschlüsseln des Schlüssels, mit dem ein Empfänger zum Entschlüsseln einer `<EncryptedData>` Element. Diese Methode akzeptiert einen Wert für `rsa` , die den RSA-PKCS #1 v1. 5-Algorithmus oder den RSA PKCS #1-Typ 2-Algorithmus (auch als OAEP bezeichnet) darstellt.  
+  
+ Beachten Sie, dass diese Methode nicht automatisch in den verschlüsselten Schlüssel platziert eine `<EncryptedKey>` Element.  Sie müssen manuell erstellen, die `<EncryptedKey>` Element innerhalb des Dokuments.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines asymmetrischen Schlüssels zu verschlüsseln. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann den asymmetrischen Schlüssel verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="keyData" />-Parameters ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der Wert des <paramref name="rsa" />-Parameters ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDecryptionIV">
+      <MemberSignature Language="C#" Value="public virtual byte[] GetDecryptionIV (System.Security.Cryptography.Xml.EncryptedData encryptedData, string symAlgUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetDecryptionIV(class System.Security.Cryptography.Xml.EncryptedData encryptedData, string symAlgUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.GetDecryptionIV(System.Security.Cryptography.Xml.EncryptedData,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptedData" Type="System.Security.Cryptography.Xml.EncryptedData" />
+        <Parameter Name="symmetricAlgorithmUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="encryptedData">Das <see cref="T:System.Security.Cryptography.Xml.EncryptedData" />-Objekt, das den abzurufenden Initialisierungsvektor (IV) enthält.</param>
+        <param name="symAlgUri">To be added.</param>
+        <summary>Ruft den Entschlüsselungsinitialisierungsvektor (IV) von einem <see cref="T:System.Security.Cryptography.Xml.EncryptedData" />-Objekt ab.</summary>
+        <returns>Ein Bytearray, das den Entschlüsselungsinitialisierungsvektor (IV) enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erhält ein <xref:System.Security.Cryptography.Xml.EncryptedData> -Objekt, diese Methode ruft den Entschlüsselungsinitialisierungsvektor (IV) ab. Das Standardverhalten ruft den IV als die ersten Bytes des der <xref:System.Security.Cryptography.Xml.CipherData.CipherValue%2A> Bytearray.  
+  
+ Eine Liste der Uniform Resource Identifier (URI)-Werte, die von unterstützt die `symmetricAlgorithmUri` Parameter, finden Sie in die Liste der Konstante Felder zugeordnet der <xref:System.Security.Cryptography.Xml.EncryptedXml> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="encryptedData" />-Parameters ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Wert von der <paramref name="encryptedData" /> Parameter hat eine <see cref="P:System.Security.Cryptography.Xml.EncryptedType.EncryptionMethod" /> -Eigenschaft, die null ist.  
+  
+ - oder -   
+  
+ Der Wert, der die <paramref name="symmetricAlgorithmUrisymAlgUri" /> -Parameter ist kein unterstützter Algorithmus.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDecryptionKey">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.SymmetricAlgorithm GetDecryptionKey (System.Security.Cryptography.Xml.EncryptedData encryptedData, string symAlgUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.SymmetricAlgorithm GetDecryptionKey(class System.Security.Cryptography.Xml.EncryptedData encryptedData, string symAlgUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.GetDecryptionKey(System.Security.Cryptography.Xml.EncryptedData,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.SymmetricAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptedData" Type="System.Security.Cryptography.Xml.EncryptedData" />
+        <Parameter Name="symmetricAlgorithmUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="encryptedData">Das <see cref="T:System.Security.Cryptography.Xml.EncryptedData" />-Objekt, das den abzurufenden Entschlüsselungsschlüssel enthält.</param>
+        <param name="symAlgUri">To be added.</param>
+        <summary>Ruft den Entschlüsselungsschlüssel aus dem angegebenen <see cref="T:System.Security.Cryptography.Xml.EncryptedData" />-Objekt ab.</summary>
+        <returns>Ein dem Entschlüsselungsschlüssel zugeordnetes <see cref="T:System.Security.Cryptography.SymmetricAlgorithm" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erhält ein <xref:System.Security.Cryptography.Xml.EncryptedData> -Objekt, diese Methode sucht nach den Entschlüsselungsschlüssel, der zum Abrufen der nur-Text-Daten verwendet werden kann. Wenn ein Schlüsselname angegeben wird, sucht die Methode für den symmetrischen Algorithmus oder des asymmetrischen Algorithmus, der mit dem Schlüsselnamen gemäß Definition in der schlüsselnamenzuordnungen zugeordnet ist. Hingegen Wenn eine Methode zum Abrufen oder ein <xref:System.Security.Cryptography.Xml.EncryptedKey> Objekt angegeben wird, die Methode lädt die <xref:System.Security.Cryptography.Xml.EncryptedKey> -Objekt und ruft die <xref:System.Security.Cryptography.Xml.EncryptedXml.GetDecryptionKey%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="encryptedData" />-Parameters ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der EncryptedData-Parameter hat eine <see cref="P:System.Security.Cryptography.Xml.EncryptedType.EncryptionMethod" /> -Eigenschaft, die null ist.  
+  
+ - oder -   
+  
+ Der verschlüsselte Schlüssel kann nicht mit den angegebenen Parametern abgerufen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIdElement">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlElement GetIdElement (System.Xml.XmlDocument document, string idValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlElement GetIdElement(class System.Xml.XmlDocument document, string idValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.GetIdElement(System.Xml.XmlDocument,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Xml.XmlDocument" />
+        <Parameter Name="idValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="document">Ein <see cref="T:System.Xml.XmlDocument" />-Objekt, das ein Element mit einem ID-Wert enthält.</param>
+        <param name="idValue">Eine Zeichenfolge, die den ID-Wert darstellt.</param>
+        <summary>Bestimmt, wie interne URI-Verweise (Uniform Resource Identifier) aufgelöst werden.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlElement" />-Objekt, das eine ID enthält, die angibt, wie interne URIs (Uniform Resource Identifier) aufgelöst werden müssen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.EncryptedXml.GetIdElement%2A> Methode bestimmt, wie interne Uniform Resource Identifiers (URIs) zu beheben. Es sieht für Elemente mit einem angegebenen Wert oder für Elemente mit einem ID-Attribut, das einen angegebenen Wert enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CipherMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.CipherMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedXml.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Verschlüsselungsmodus für die XML-Verschlüsselung ab oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Security.Cryptography.CipherMode" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cipher Block Chaining (CBC) Modus ist der Standardmodus für die Verschlüsselung für XML-Verschlüsselung. Können Sie diese Eigenschaft an andere Modi Cipher von der <xref:System.Security.Cryptography.CipherMode> -Enumeration, z. B. Feedback CFB Modus (Cipher).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.PaddingMode Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.PaddingMode Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedXml.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.PaddingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Füllzeichenmodus für die XML-Verschlüsselung ab oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Security.Cryptography.PaddingMode" />-Werte, der den Typ der Füllzeichen für die Verschlüsselung angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ISO-10126 ist, der Standardmodus für die Auffüllung für XML-Verschlüsselung wird. Sie können diese Eigenschaft an andere Modi Auffüllung von der <xref:System.Security.Cryptography.PaddingMode> -Enumeration, z. B. ANSI x 9.23 oder PKCS #5.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Recipient">
+      <MemberSignature Language="C#" Value="public string Recipient { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Recipient" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedXml.Recipient" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Empfänger der verschlüsselten Schlüsselinformationen ab oder legt diesen fest.</summary>
+        <value>Der Empfänger der verschlüsselten Schlüsselinformationen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie erreichen die <xref:System.Security.Cryptography.Xml.EncryptedXml> Objekt verweist ein Schlüsselname durch Untersuchen der <xref:System.Security.Cryptography.Xml.EncryptedKey.CarriedKeyName%2A> Eigenschaft.  
+  
+ Verwenden der <xref:System.Security.Cryptography.Xml.EncryptedXml.Recipient%2A> Eigenschaft zum Identifizieren der <xref:System.Security.Cryptography.Xml.EncryptedXml> Element, das der aktuelle Empfänger entschlüsselt werden kann, um einen Entschlüsselungsschlüssel abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaceData">
+      <MemberSignature Language="C#" Value="public void ReplaceData (System.Xml.XmlElement inputElement, byte[] decryptedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReplaceData(class System.Xml.XmlElement inputElement, unsigned int8[] decryptedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.ReplaceData(System.Xml.XmlElement,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputElement" Type="System.Xml.XmlElement" />
+        <Parameter Name="decryptedData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="inputElement">Das zu ersetzende <see langword="&lt;EncryptedData&gt;" />-Element.</param>
+        <param name="decryptedData">Die entschlüsselten Daten zum Ersetzen <c>InputElement</c> mit.</param>
+        <summary>Ersetzt ein <see langword="&lt;EncryptedData&gt;" />-Element durch eine angegebene entschlüsselte Bytefolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.EncryptedXml.ReplaceData%2A> Methode ersetzt eine `<EncryptedData>` Element mit dem Wert, der die `decryptedData` Parameter.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel enthält das verschlüsselte XML-Dokument keine Schlüsselinformationen.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="inputElement" />-Parameters ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der Wert des <paramref name="decryptedData" />-Parameters ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaceElement">
+      <MemberSignature Language="C#" Value="public static void ReplaceElement (System.Xml.XmlElement inputElement, System.Security.Cryptography.Xml.EncryptedData encryptedData, bool content);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ReplaceElement(class System.Xml.XmlElement inputElement, class System.Security.Cryptography.Xml.EncryptedData encryptedData, bool content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedXml.ReplaceElement(System.Xml.XmlElement,System.Security.Cryptography.Xml.EncryptedData,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputElement" Type="System.Xml.XmlElement" />
+        <Parameter Name="encryptedData" Type="System.Security.Cryptography.Xml.EncryptedData" />
+        <Parameter Name="content" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inputElement">Das durch ein <see langword="&lt;EncryptedData&gt;" />-Element zu ersetzende Element.</param>
+        <param name="encryptedData">Die <see cref="T:System.Security.Cryptography.Xml.EncryptedData" /> zu ersetzende Objekt die <c>InputElement</c> Parameter mit.</param>
+        <param name="content">
+          <see langword="true" />, wenn nur der Inhalt des Elements ersetzt werden soll; <see langword="false" />, wenn das gesamte Element ersetzt werden soll.</param>
+        <summary>Ersetzt das angegebene Element durch das angegebene <see cref="T:System.Security.Cryptography.Xml.EncryptedData" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.EncryptedXml.ReplaceElement%2A> Methode ersetzt die `inputElement` Parameter mit dem angegebenen Wert der `encryptedData` Parameter.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel enthält das verschlüsselte XML-Dokument keine Schlüsselinformationen.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert des <paramref name="inputElement" />-Parameters ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der Wert des <paramref name="encryptedData" />-Parameters ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolver">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlResolver Resolver { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlResolver Resolver" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedXml.Resolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Xml.XmlResolver" />-Objekt ab, mit dem das Dokumentobjektmodell (DOM) externe XML-Verweise auflöst, oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:System.Xml.XmlResolver" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält eine <xref:System.Xml.XmlResolver> Objekt, das zum Auflösen externer XML-Ressourcen wie Entitäten, Dokumenttypdefinitionen (DTDs) oder Schemas verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlDSigSearchDepth">
+      <MemberSignature Language="C#" Value="public int XmlDSigSearchDepth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 XmlDSigSearchDepth" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedXml.XmlDSigSearchDepth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rekursionstiefe für digitale XML-Signaturen ab, um unendliche Rekursion sowie Stapelüberlauf zu verhindern, oder legt diese Tiefe fest. Dies kann vorkommen, wenn die digitale XML-Signatur den URI enthält, der dann zurück auf den ursprünglichen XML-Code zeigt.</summary>
+        <value>Gibt <see cref="T:System.Int32" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncAES128KeyWrapUrl">
+      <MemberSignature Language="C#" Value="public const string XmlEncAES128KeyWrapUrl;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncAES128KeyWrapUrl" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncAES128KeyWrapUrl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für den 128-Bit-AES-Key Wrap-Algorithmus (Advanced Encryption Standard) dar (auch als Rijndael Key Wrap-Algorithmus bezeichnet). Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncAES128KeyWrapUrl> Feld ist "http://www.w3.org/2001/04/xmlenc#kw-aes128".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncAES128Url">
+      <MemberSignature Language="C#" Value="public const string XmlEncAES128Url;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncAES128Url" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncAES128Url" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für den 128-Bit-AES-Algorithmus (Advanced Encryption Standard) dar (auch als Rijndael-Algorithmus bezeichnet). Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncAES128Url> Feld ist "http://www.w3.org/2001/04/xmlenc#aes128-cbc".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel enthält das verschlüsselte XML-Dokument keine Schlüsselinformationen.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncAES192KeyWrapUrl">
+      <MemberSignature Language="C#" Value="public const string XmlEncAES192KeyWrapUrl;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncAES192KeyWrapUrl" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncAES192KeyWrapUrl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für den 192-Bit-AES-Key Wrap-Algorithmus (Advanced Encryption Standard) dar (auch als Rijndael Key Wrap-Algorithmus bezeichnet). Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncAES192KeyWrapUrl> Feld ist "http://www.w3.org/2001/04/xmlenc#kw-aes192".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncAES192Url">
+      <MemberSignature Language="C#" Value="public const string XmlEncAES192Url;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncAES192Url" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncAES192Url" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für den 192-Bit-AES-Algorithmus (Advanced Encryption Standard) dar (auch als Rijndael-Algorithmus bezeichnet). Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncAES192Url> Feld ist "http://www.w3.org/2001/04/xmlenc#aes192-cbc".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel enthält das verschlüsselte XML-Dokument keine Schlüsselinformationen.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncAES256KeyWrapUrl">
+      <MemberSignature Language="C#" Value="public const string XmlEncAES256KeyWrapUrl;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncAES256KeyWrapUrl" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncAES256KeyWrapUrl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für den 256-Bit-AES-Key Wrap-Algorithmus (Advanced Encryption Standard) dar (auch als Rijndael Key Wrap-Algorithmus bezeichnet). Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncAES256KeyWrapUrl> Feld ist "http://www.w3.org/2001/04/xmlenc#kw-aes256".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncAES256Url">
+      <MemberSignature Language="C#" Value="public const string XmlEncAES256Url;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncAES256Url" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncAES256Url" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für den 256-Bit-AES-Algorithmus (Advanced Encryption Standard) dar (auch als Rijndael-Algorithmus bezeichnet). Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncAES256Url> Feld ist "http://www.w3.org/2001/04/xmlenc#aes256-cbc".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel enthält das verschlüsselte XML-Dokument keine Schlüsselinformationen.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncDESUrl">
+      <MemberSignature Language="C#" Value="public const string XmlEncDESUrl;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncDESUrl" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncDESUrl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für den DES-Algorithmus (Digital Encryption Standard) dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncDESUrl> Feld ist "http://www.w3.org/2001/04/xmlenc#des-cbc".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel enthält das verschlüsselte XML-Dokument keine Schlüsselinformationen.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncElementContentUrl">
+      <MemberSignature Language="C#" Value="public const string XmlEncElementContentUrl;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncElementContentUrl" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncElementContentUrl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für den Inhalt des XML-Verschlüsselungselements dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncElementContentUrl> Feld ist "http://www.w3.org/2001/04/xmlenc#Content".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncElementUrl">
+      <MemberSignature Language="C#" Value="public const string XmlEncElementUrl;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncElementUrl" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncElementUrl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für ein XML-Verschlüsselungselement dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncElementUrl> Feld ist "http://www.w3.org/2001/04/xmlenc#Element".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel enthält das verschlüsselte XML-Dokument keine Schlüsselinformationen.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncEncryptedKeyUrl">
+      <MemberSignature Language="C#" Value="public const string XmlEncEncryptedKeyUrl;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncEncryptedKeyUrl" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncEncryptedKeyUrl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für das <see langword="&lt;EncryptedKey&gt;" />-XML-Verschlüsselungselement dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncEncryptedKeyUrl> Feld ist "http://www.w3.org/2001/04/xmlenc#EncryptedKey".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncNamespaceUrl">
+      <MemberSignature Language="C#" Value="public const string XmlEncNamespaceUrl;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncNamespaceUrl" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncNamespaceUrl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für XML-Verschlüsselungssyntax und -Verarbeitung dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncNamespaceUrl> Feld ist "http://www.w3.org/2001/04/xmlenc#".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncRSA15Url">
+      <MemberSignature Language="C#" Value="public const string XmlEncRSA15Url;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncRSA15Url" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSA15Url" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für den RSA-PKCS-Algorithmus (Public Key Cryptography Standard), Version 1.5, dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSA15Url> Feld ist "http://www.w3.org/2001/04/xmlenc#rsa-1_5".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines asymmetrischen Schlüssels zu verschlüsseln. In diesem Beispiel erstellt einen symmetrischen Sitzungsschlüssel, um das Dokument zu verschlüsseln, und klicken Sie dann den asymmetrischen Schlüssel verwendet, um eine verschlüsselte Version des Sitzungsschlüssels in das XML-Dokument einzubetten.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncRSAOAEPUrl">
+      <MemberSignature Language="C#" Value="public const string XmlEncRSAOAEPUrl;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncRSAOAEPUrl" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSAOAEPUrl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für den RSA-OAEP-Verschlüsselungsalgorithmus (Optimal Asymmetric Encryption Padding) dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSAOAEPUrl> Feld ist "http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncSHA256Url">
+      <MemberSignature Language="C#" Value="public const string XmlEncSHA256Url;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncSHA256Url" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncSHA256Url" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für den SHA-256-Algorithmus dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncSHA256Url> Feld ist "http://www.w3.org/2001/04/xmlenc#sha256".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncSHA512Url">
+      <MemberSignature Language="C#" Value="public const string XmlEncSHA512Url;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncSHA512Url" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncSHA512Url" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für den SHA-512-Algorithmus dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncSHA512Url> Feld ist "http://www.w3.org/2001/04/xmlenc#sha512".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncTripleDESKeyWrapUrl">
+      <MemberSignature Language="C#" Value="public const string XmlEncTripleDESKeyWrapUrl;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncTripleDESKeyWrapUrl" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncTripleDESKeyWrapUrl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für den TRIPLEDES-Key Wrap-Algorithmus dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncTripleDESKeyWrapUrl> Feld ist "http://www.w3.org/2001/04/xmlenc#kw-tripledes".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEncTripleDESUrl">
+      <MemberSignature Language="C#" Value="public const string XmlEncTripleDESUrl;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XmlEncTripleDESUrl" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncTripleDESUrl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namespace-URI (Uniform Resource Identifier) für den TRIPLEDES-Algorithmus dar. Dieses Feld ist konstant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncTripleDESUrl> Feld ist "http://www.w3.org/2001/04/xmlenc#tripledes-cbc".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein XML-Dokument mithilfe eines symmetrischen Schlüssels verschlüsseln. In diesem Beispiel enthält das verschlüsselte XML-Dokument keine Schlüsselinformationen.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,281 @@
+<Type Name="ExtensionCollection&lt;T&gt;" FullName="System.ServiceModel.ExtensionCollection&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class ExtensionCollection&lt;T&gt; : System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.IExtension&lt;T&gt;&gt;, System.Collections.Generic.ICollection&lt;System.ServiceModel.IExtension&lt;T&gt;&gt;, System.Collections.Generic.IEnumerable&lt;System.ServiceModel.IExtension&lt;T&gt;&gt;, System.ServiceModel.IExtensionCollection&lt;T&gt; where T : IExtensibleObject&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExtensionCollection`1&lt;(class System.ServiceModel.IExtensibleObject`1&lt;!T&gt;) T&gt; extends System.Collections.Generic.SynchronizedCollection`1&lt;class System.ServiceModel.IExtension`1&lt;!T&gt;&gt; implements class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.IExtension`1&lt;!T&gt;&gt;, class System.Collections.Generic.IEnumerable`1&lt;class System.ServiceModel.IExtension`1&lt;!T&gt;&gt;, class System.Collections.IEnumerable, class System.ServiceModel.IExtensionCollection`1&lt;!T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ExtensionCollection`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <InterfaceName>System.ServiceModel.IExtensibleObject&lt;T&gt;</InterfaceName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.IExtension&lt;T&gt;&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.ServiceModel.IExtension&lt;T&gt;</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.ServiceModel.IExtension&lt;T&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.ServiceModel.IExtension&lt;T&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.IExtensionCollection&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">Der Typ der Auflistung.</typeparam>
+    <summary>Stellt eine Auflistung von Erweiterungen dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel geben Implementierungen von <xref:System.ServiceModel.IExtensibleObject%601?displayProperty=nameWithType> eine <xref:System.ServiceModel.ExtensionCollection%601> aus der <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A?displayProperty=nameWithType>-Eigenschaft zurück.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtensionCollection (T owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ExtensionCollection`1.#ctor(`0)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Der Besitzer der Auflistung.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.ExtensionCollection`1" />-Klasse mit einem angegebenen Besitzer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtensionCollection (T owner, object syncRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T owner, object syncRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ExtensionCollection`1.#ctor(`0,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="T" />
+        <Parameter Name="syncRoot" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Der Besitzer der Auflistung.</param>
+        <param name="syncRoot">Das Objekt, das für das Synchronisieren verwendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.ExtensionCollection`1" />-Klasse mit einem angegebenen Besitzer und einem angegebenen Stamm der Synchronisierung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearItems">
+      <MemberSignature Language="C#" Value="protected override void ClearItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ExtensionCollection`1.ClearItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find&lt;E&gt;">
+      <MemberSignature Language="C#" Value="public E Find&lt;E&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!E Find&lt;E&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ExtensionCollection`1.Find``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>E</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="E" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="E">Der Typ der gesuchten Erweiterung.</typeparam>
+        <summary>Gibt eine Erweiterung zurück, wenn sie in der Auflistung vorhanden ist.</summary>
+        <returns>Eine Erweiterung des gesuchten Typs oder <see langword="null" />, wenn keine Erweiterung diesen Typ implementiert. Wenn mehr als eine Erweiterung diesen Typ implementiert, wird der zuletzt Hinzugefügte zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll&lt;E&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;E&gt; FindAll&lt;E&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ObjectModel.Collection`1&lt;!!E&gt; FindAll&lt;E&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ExtensionCollection`1.FindAll``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;E&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="E" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="E">Der Typ, für den die Auflistung von Erweiterungen gesucht wird.</typeparam>
+        <summary>Gibt die Auflistung der Erweiterungen zurück, wenn in der Auflistung gefunden.</summary>
+        <returns>Eine Auflistung von Erweiterungen des gesuchten Typs. Wenn keine Erweiterung diesen Typ implementiert, wird eine leere Auflistung Nicht-NULL zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, System.ServiceModel.IExtension&lt;T&gt; item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, class System.ServiceModel.IExtension`1&lt;!T&gt; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ExtensionCollection`1.InsertItem(System.Int32,System.ServiceModel.IExtension{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.ServiceModel.IExtension&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="item">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ExtensionCollection`1.RemoveItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, System.ServiceModel.IExtension&lt;T&gt; item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, class System.ServiceModel.IExtension`1&lt;!T&gt; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ExtensionCollection`1.SetItem(System.Int32,System.ServiceModel.IExtension{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.ServiceModel.IExtension&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="item">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.ServiceModel.IExtension&lt;T&gt;&gt;.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.Generic.ICollection&lt;System.ServiceModel.IExtension&lt;T&gt;&gt;.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;System.ServiceModel.IExtension&lt;T&gt;&gt;.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ExtensionCollection`1.System#Collections#Generic#ICollection&lt;System#ServiceModel#IExtension&lt;T&gt;&gt;#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt, ob die Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see cref="T:System.ServiceModel.ExtensionCollection`1" /> gibt immer <see langword="false" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

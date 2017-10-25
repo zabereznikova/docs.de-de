@@ -1,0 +1,219 @@
+<Type Name="SplashScreen" FullName="System.Windows.SplashScreen">
+  <TypeSignature Language="C#" Value="public class SplashScreen" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SplashScreen extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.SplashScreen" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical(System.Security.SecurityCriticalScope.Everything)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Startbildschirm für eine Windows Presentation Foundation (WPF)-Anwendung bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.SplashScreen> Klasse, um ein Bild in einem Startfenster anzuzeigen oder *Begrüßungsbildschirm*, wenn eine WPF-Anwendung gestartet wird. Rufen Sie die <xref:System.Windows.SplashScreen.Show%2A> Methode, um den Begrüßungsbildschirm anzuzeigen. Rufen Sie die <xref:System.Windows.SplashScreen.Close%2A> Methode zum Schließen des Begrüßungsbildschirms. Geben Sie das Bild zur Verwendung in der <xref:System.Windows.SplashScreen> Konstruktor.  
+  
+ Die <xref:System.Windows.SplashScreen> -Klasse kann anzeigen jedes Bildformat, die von der Windows Imaging-Komponente (WIC) unterstützt wird. Sie können z. B. BMP, GIF, JPEG, PNG und TIFF-Format verwenden. Wenn das Bild eine PNG-Datei ist, und es einen alpha-Kanal enthält, wird das Bild gerendert, verwenden die Transparenz in den alpha-Kanal definiert.  
+  
+ Sie darf keine der Begrüßungsbildschirm Platzhaltertext enthalten, die später durch Ihren Code hinzugefügt wird. Wenn Sie Text im Begrüßungsbildschirm einschließen möchten, müssen Sie es zur Bilddatei hinzufügen.  
+  
+> [!NOTE]
+>  Es ist nicht erforderlich, um einen Begrüßungsbildschirm anzuzeigen Code schreiben. Ab [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)] SP1 können Sie schnell konfigurieren einen Begrüßungsbildschirm mit Standardeinstellungen. Weitere Informationen finden Sie unter [wie: Hinzufügen eines Begrüßungsbildschirms für eine WPF-Anwendung](~/docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+  
+ Die <xref:System.Windows.SplashScreen> -Klasse zeigt den Begrüßungsbildschirm so bald wie möglich nach dem Start der Anwendung. Mithilfe von systemeigenen Code ab, bevor die Instanz der WPF-Anwendung erstellt wird, wird der Begrüßungsbildschirm angezeigt. Der Begrüßungsbildschirm wird in der Mitte des Bildschirms angezeigt. Wenn die Anwendung geladen wird, wird der Begrüßungsbildschirm ausgeblendet.  
+  
+ Wenn die Anwendung kompiliert wird, wird das Bild in der Assembly als verwaltete Ressource eingebettet. Wenn die Anwendung lokalisiert wird, wird das Bild in die lokalisierte Satelliten-DLL eingebettet.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.SplashScreen> Klasse ist nicht verfügbar unter teilweiser Vertrauenswürdigkeit.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.SplashScreen> Klasse kann nicht in XAML-Browseranwendungen (XBAPs), verwendet werden, da sie eine andere Startarchitektur verwenden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen und Anzeigen einer Startparameter mithilfe der <xref:System.Windows.SplashScreen> Klasse.  
+  
+ [!code-csharp[System.Windows.SplashScreen#2](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.SplashScreen/CS/App.xaml.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Ressourcen. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SplashScreen (string resourceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string resourceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.SplashScreen.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="resourceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resourceName">Der Name der eingebetteten Ressource.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.SplashScreen" /> Klasse mit der angegebenen Ressource.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `resourceName` Parameter folgt den üblichen Regeln für eingebettete Ressourcen. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Resources.ResourceManager>-Klasse. Die `resourceName` Parameter gibt den Namen der Ressourcendatei und nicht mit einem URI.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Ressourcen. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SplashScreen (System.Reflection.Assembly resourceAssembly, string resourceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.Assembly resourceAssembly, string resourceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.SplashScreen.#ctor(System.Reflection.Assembly,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="resourceAssembly" Type="System.Reflection.Assembly" />
+        <Parameter Name="resourceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resourceAssembly">Die Assembly, die eingebettete Ressource enthält.</param>
+        <param name="resourceName">Der Name der eingebetteten Ressource.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.SplashScreen" /> Klasse mit der angegebenen Ressource-Assembly.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `resourceAssembly` und `resourceName` Parameter den üblichen Regeln für eingebettete Ressourcen entsprechen. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Resources.ResourceManager>-Klasse. Die `resourceName` Parameter gibt den Namen der Ressourcendatei und nicht mit einem URI.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close (TimeSpan fadeoutDuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close(valuetype System.TimeSpan fadeoutDuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.SplashScreen.Close(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fadeoutDuration" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="fadeoutDuration">Ein <see cref="T:System.TimeSpan" /> , die angibt, wie lange es dauern wird für den Begrüßungsbildschirm ausgeblendet, nachdem der schließen-Vorgang initiiert wurde.</param>
+        <summary>Schließt den Begrüßungsbildschirm.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei einem Aufruf der <xref:System.Windows.SplashScreen.Show%2A> Methode mit der `autoClose` Parameter festgelegt wird, um `true`, Sie keine Aufrufen der <xref:System.Windows.SplashScreen.Close%2A> Methode. Der Begrüßungsbildschirm wird automatisch geschlossen, nachdem die Anwendung geladen wird. Wenn der Begrüßungsbildschirm geschlossen wird, richtet sich die Länge der Zeit, die zum Ausblenden von der Standardwert für die `fadeoutDuration` -Parameter, der 300 Millisekunden ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (bool autoClose);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(bool autoClose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.SplashScreen.Show(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="autoClose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="autoClose">
+          <see langword="true" />den Begrüßungsbildschirm automatisch geschlossen werden; <see langword="false" /> den Begrüßungsbildschirm manuell schließen.</param>
+        <summary>Zeigt den Begrüßungsbildschirm.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen der <xref:System.Windows.SplashScreen.Show%2A> Methode mit `autoClose` festgelegt `true`, Sie müssen keine Aufrufen der <xref:System.Windows.SplashScreen.Close%2A> Methode. Der Begrüßungsbildschirm wird automatisch geschlossen, nachdem die Anwendung geladen wird. Wenn der Begrüßungsbildschirm geschlossen wird, richtet sich die Länge der Zeit, die zum Ausblenden von der Standardwert für die `fadeoutDuration` -Parameter, der 300 Millisekunden ist.  
+  
+ Rufen Sie die <xref:System.Windows.SplashScreen.Show%2A> Methode mit `autoClose` festgelegt `false` Wenn Sie einen nicht standardmäßigen Wert für die Dauer zum ein-und Ausblenden bereitstellen möchten. Aufrufen, müssen die <xref:System.Windows.SplashScreen.Close%2A> Methode zum Schließen des Begrüßungsbildschirms.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Im Konstruktor angegebene Ressource konnte nicht gefunden werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (bool autoClose, bool topMost);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(bool autoClose, bool topMost) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.SplashScreen.Show(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="autoClose" Type="System.Boolean" />
+        <Parameter Name="topMost" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="autoClose">
+          <see langword="true" />den Begrüßungsbildschirm automatisch geschlossen werden; <see langword="false" /> den Begrüßungsbildschirm manuell schließen.</param>
+        <param name="topMost">
+          <see langword="true" />Wenn das Fenster für den Begrüßungsbildschirm den WS_EX_TOPMOST-Stil verwenden soll; andernfalls <see langword="false" />.</param>
+        <summary>Zeigt den Begrüßungsbildschirm.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

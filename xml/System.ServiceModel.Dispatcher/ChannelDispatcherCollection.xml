@@ -1,0 +1,124 @@
+<Type Name="ChannelDispatcherCollection" FullName="System.ServiceModel.Dispatcher.ChannelDispatcherCollection">
+  <TypeSignature Language="C#" Value="public class ChannelDispatcherCollection : System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.ChannelDispatcherBase&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChannelDispatcherCollection extends System.Collections.Generic.SynchronizedCollection`1&lt;class System.ServiceModel.Dispatcher.ChannelDispatcherBase&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.ChannelDispatcherCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.ChannelDispatcherBase&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.ServiceModel.Dispatcher.ChannelDispatcherBase</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine threadsichere Auflistung bereit, die Kanalverteiler enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Auflistung wird von <xref:System.ServiceModel.ServiceHostBase> verwendet, um die dem Host zugeordneten Kanalverteiler zu verwalten. Eine <xref:System.ServiceModel.Dispatcher.ChannelDispatcherCollection> wird erstellt, wenn <xref:System.ServiceModel.ServiceHostBase.%23ctor%2A> aufgerufen wird, und die Auflistung kann über die <xref:System.ServiceModel.ServiceHostBase.ChannelDispatchers%2A>-Eigenschaft aufgerufen werden.  
+  
+ Die Auflistung enthält <xref:System.ServiceModel.Dispatcher.ChannelDispatcherBase> Objekte (und nicht nur Instanzen von <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>), da er auch von Entwicklern verwendet wird, die beibehalten möchten die [!INCLUDE[indigo1](~/includes/indigo1-md.md)]programming Model jedoch vom System bereitgestellte Laufzeit ersetzen. Sie leiten eine Klasse von <xref:System.ServiceModel.Dispatcher.ChannelDispatcherBase> ab und erweitern <xref:System.ServiceModel.ServiceHost> (die von <xref:System.ServiceModel.ServiceHostBase> erbt), indem sie <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> überschreiben und dabei Instanzen der von <xref:System.ServiceModel.Dispatcher.ChannelDispatcherBase> abgeleiteten Klasse zu <xref:System.ServiceModel.ServiceHostBase.ChannelDispatchers%2A> hinzufügen.  
+  
+ Diese Klasse verfügt über keine öffentlichen Konstruktoren und ist nicht für die Verwendung außerhalb von <xref:System.ServiceModel.ServiceHost> geeignet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClearItems">
+      <MemberSignature Language="C#" Value="protected override void ClearItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcherCollection.ClearItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Kanalverteiler aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, System.ServiceModel.Dispatcher.ChannelDispatcherBase item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, class System.ServiceModel.Dispatcher.ChannelDispatcherBase item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcherCollection.InsertItem(System.Int32,System.ServiceModel.Dispatcher.ChannelDispatcherBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.ServiceModel.Dispatcher.ChannelDispatcherBase" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Kanalverteilers, der aus der Auflistung abgerufen werden soll.</param>
+        <param name="item">Der Kanalverteiler, der in die Auflistung als Element eingefügt werden soll.</param>
+        <summary>Fügt einen Kanalverteiler bei einem angegebenen Index in die Auflistung ein.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Der der Kanalverteilerauflistung zugeordnete Diensthost ist geschlossen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene <paramref name="index" /> ist kleiner als null (0) oder größer als die Anzahl der Elemente in der Auflistung.</exception>
+        <exception cref="T:System.InvalidOperationException">Das Kommutationsobjekt hat keinen Zustand</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcherCollection.RemoveItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Kanalverteilers, der aus der Auflistung abgerufen werden soll.</param>
+        <summary>Entfernt einen Kanalverteiler bei einem angegebenen Index aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene <paramref name="index" /> ist kleiner als null (0) oder größer als die Anzahl der Elemente in der Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, System.ServiceModel.Dispatcher.ChannelDispatcherBase item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, class System.ServiceModel.Dispatcher.ChannelDispatcherBase item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ChannelDispatcherCollection.SetItem(System.Int32,System.ServiceModel.Dispatcher.ChannelDispatcherBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.ServiceModel.Dispatcher.ChannelDispatcherBase" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Kanalverteilers, der ersetzt werden soll.</param>
+        <param name="item">Der Kanalverteiler, der ersetzt werden soll</param>
+        <summary>Ersetzt den Kanalverteiler bei einem angegebenen Index durch ein anderes Element.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Der dieser Auflistung von Kanalverteilern zugeordnete Dienst befindet sich in einem <see cref="F:System.ServiceModel.CommunicationState.Closed" />-Zustand.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene <paramref name="index" /> ist kleiner als null (0) oder größer als die Anzahl der Elemente in der Auflistung.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

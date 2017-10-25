@@ -1,0 +1,177 @@
+<Type Name="SqlDataSourceStatusEventArgs" FullName="System.Web.UI.WebControls.SqlDataSourceStatusEventArgs">
+  <TypeSignature Language="C#" Value="public class SqlDataSourceStatusEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlDataSourceStatusEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für ein Ereignis, das ausgelöst wird, indem Sie die <see cref="T:System.Web.UI.WebControls.SqlDataSource" /> steuern, nachdem ein Datenvorgang abgeschlossen wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs> Klasse wird verwendet, der <xref:System.Web.UI.WebControls.SqlDataSource.Selected>, <xref:System.Web.UI.WebControls.SqlDataSource.Updated>, <xref:System.Web.UI.WebControls.SqlDataSource.Inserted>, und <xref:System.Web.UI.WebControls.SqlDataSource.Deleted> quellcodeverwaltung für Ereignisse, um Informationen zu einem Datenbankvorgang zu übergeben, nachdem sie durch die Daten ausgeführt werden. Diese Informationen umfassen die Anzahl der Zeilen, die von dem Vorgang betroffenen der <xref:System.Data.Common.DbCommand> Objekt, das die Datenquelle verwendet wird, zum Ausführen des Vorgangs und alle Informationen zur Ausnahme, die geführt haben. Durch Hinzufügen von einem eventhandlerdelegaten, behandeln die <xref:System.Web.UI.WebControls.SqlDataSource.Selected>, <xref:System.Web.UI.WebControls.SqlDataSource.Updated>, <xref:System.Web.UI.WebControls.SqlDataSource.Inserted> oder <xref:System.Web.UI.WebControls.SqlDataSource.Deleted> Ereignisse, Sie können diese Daten untersuchen und zusätzliche Post erforderlichen Verarbeitungsvorgänge ausführen.  
+  
+ Die <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement viele Ereignisse, die Sie behandeln können, um mit den zugrunde liegenden Datenobjekten arbeiten, im Rahmen eines Datenvorgangs verfügbar gemacht werden. In der folgenden Tabelle werden die Ereignisse aufgelistet und die zugehörigen <xref:System.EventArgs> und -Handler-Ereignisklassen, um eine bessere Übersicht über die verschiedenen Ereignisse erhalten, die den Lebenszyklus einer Vorgang unter Verwendung entsprechen den <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement.  
+  
+|Ereignis|EventArgs|EventHandler|  
+|-----------|---------------|------------------|  
+|<xref:System.Web.UI.WebControls.SqlDataSource.Selecting>Tritt auf, bevor die Daten abgerufen werden.|<xref:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs>|<xref:System.Web.UI.WebControls.SqlDataSourceSelectingEventHandler>|  
+|<xref:System.Web.UI.WebControls.SqlDataSource.Inserting>, <xref:System.Web.UI.WebControls.SqlDataSource.Updating>, <xref:System.Web.UI.WebControls.SqlDataSource.Deleting> erfolgen, bevor eine Einfügung, Update oder Delete-Vorgang ausgeführt wird.|<xref:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs>|<xref:System.Web.UI.WebControls.SqlDataSourceCommandEventHandler>|  
+|<xref:System.Web.UI.WebControls.SqlDataSource.Selected>, <xref:System.Web.UI.WebControls.SqlDataSource.Inserted>, <xref:System.Web.UI.WebControls.SqlDataSource.Updated>, <xref:System.Web.UI.WebControls.SqlDataSource.Deleted> treten nach dem Abrufen von Daten, INSERT-, Update- oder delete-Operationen abgeschlossen ist.|<xref:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.SqlDataSourceStatusEventHandler>|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs> Klasse, um den Rückgabewert und die Werte von Ausgabeparametern an, die zurückgegeben werden, wenn mit untersuchen eine <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement mit einer gespeicherten Prozedur zum Auffüllen einer <xref:System.Web.UI.WebControls.GridView> Steuerelement. Die gespeicherte Prozedur wählt Daten, die in angezeigt wird der <xref:System.Web.UI.WebControls.GridView>, aber auch andere Informationen zurück an dem Aufrufer, z. B. eine ganze Zahl Output-Parameter und einen Rückgabewert übergibt. Die Parameter, die die <xref:System.Web.UI.WebControls.SqlDataSource> verwendet für die gespeicherte Prozedur enthalten sind die <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> -Auflistung, und bestehen aus Parametern, die Informationen aus dem Web-Formular an die gespeicherte Prozedur übergeben als auch Parameter, die Weitergabe von Informationen zum Sichern der das Formular. Die <xref:System.Web.UI.WebControls.Parameter.Direction%2A> dieser Parameter ist-Eigenschaftensatz auf <xref:System.Data.ParameterDirection.Output> und <xref:System.Data.ParameterDirection.ReturnValue>.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSourceStatusEventArgs_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSourceStatusEventArgs_1/CS/sql21cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSourceStatusEventArgs_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSourceStatusEventArgs_1/VB/sql21vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlDataSourceStatusEventArgs (System.Data.Common.DbCommand command, int affectedRows, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.Common.DbCommand command, int32 affectedRows, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs.#ctor(System.Data.Common.DbCommand,System.Int32,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.Data.Common.DbCommand" />
+        <Parameter Name="affectedRows" Type="System.Int32" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="command">Die <see cref="T:System.Data.Common.DbCommand" /> darstellt, die der Datenbankabfrage, Befehl oder gespeicherte Prozedur, die gesendet wird auf die Datenbank durch die <see cref="T:System.Web.UI.WebControls.SqlDataSource" /> Steuerelement.</param>
+        <param name="affectedRows">Die Anzahl der Zeilen, die Database-Vorgang auswirkt, falls zutreffend.</param>
+        <param name="exception">Ein <see cref="T:System.Exception" /> von Database-Vorgang ausgelöst wird, falls zutreffend.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs" /> -Klasse unter Verwendung der angegebenen Output-Parameter, den Rückgabewert und die Anzahl der Zeilen, die von den Database-Vorgang betroffen sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectedRows">
+      <MemberSignature Language="C#" Value="public int AffectedRows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AffectedRows" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs.AffectedRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der von einem Datenbankvorgang betroffenen Zeilen.</summary>
+        <value>Die Anzahl der von einem Datenbankvorgang betroffenen Zeilen. Der Standardwert ist -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Vorgänge wird die Anzahl der vom Vorgang betroffenen Zeilen zurück. Die <xref:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs.AffectedRows%2A> Eigenschaft hat den gleichen Wert wie der Rückgabewert von der <xref:System.Web.UI.WebControls.SqlDataSource.Update%2A>, <xref:System.Web.UI.WebControls.SqlDataSource.Insert%2A>, und <xref:System.Web.UI.WebControls.SqlDataSource.Delete%2A> Methoden.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.SqlDataSource.Select%2A> Methode wird aufgerufen, und die Datenquelle festgelegt ist, um <xref:System.Web.UI.WebControls.SqlDataSourceMode.DataReader> Modus, der Rückgabewert ist 0 in allen Fällen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbCommand Command { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbCommand Command" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Database-Befehl an die Datenbank gesendet.</summary>
+        <value>Die <see cref="T:System.Data.Common.DbCommand" /> -Objekt, das den Befehl "Datenbank" darstellt, die an die Datenbank gesendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie behandeln können die <xref:System.Web.UI.WebControls.SqlDataSource.Selected>, <xref:System.Web.UI.WebControls.SqlDataSource.Updated>, <xref:System.Web.UI.WebControls.SqlDataSource.Inserted>, oder <xref:System.Web.UI.WebControls.SqlDataSource.Deleted> zum Überprüfen und bearbeiten die Eigenschaften des Ereignisses die <xref:System.Data.Common.DbCommand> nach der Übergabe durch die <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement an die Datenbank. Die <xref:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs.Command%2A> Eigenschaft ermöglicht Ihnen, Werte in der Output-Parameter und Rückgabewerte zugreifen, nachdem der Datenbankvorgang, über ausgeführt wird dessen <xref:System.Data.Common.DbCommand.Parameters%2A> -Eigenschaft, als auch die <xref:System.Data.Common.DbCommand.CommandText%2A> Eigenschaft, die die SQL-Abfrage darstellt, Befehl ein, oder Namen der gespeicherten Prozedur, die an die Datenbank gesendet wurde.  
+  
+ Output-Parameter werden insbesondere von Parametern mit einer <xref:System.Data.ParameterDirection.InputOutput> oder <xref:System.Data.ParameterDirection.Output> Wert für die <xref:System.Web.UI.WebControls.Parameter.Direction%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Parameter> Objekt. Ein Rückgabewert ist über einen Parameter mit einem <xref:System.Data.ParameterDirection.ReturnValue> Wert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Werte von Ausgabeparametern zu untersuchen, bei Verwendung einer <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement mit einer gespeicherten Prozedur. Die <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> Auflistung enthält die Parameter, die die <xref:System.Web.UI.WebControls.SqlDataSource> für die gespeicherte Prozedur verwendet, und besteht aus Parametern, die Informationen aus dem Web-Formular an die gespeicherte Prozedur übergeben als auch für Parameter, die Informationen an das Formular zu übergeben. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs> Klasse.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSourceStatusEventArgs_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSourceStatusEventArgs_1/CS/sql21cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSourceStatusEventArgs_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSourceStatusEventArgs_1/VB/sql21vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wrapper für alle Ausnahmen, die von der Datenbank während eines Datenvorgangs ab.</summary>
+        <value>Ein <see cref="T:System.Exception" /> , die dient als Wrapper für alle Ausnahmen, die von der Datenbank, in dessen <see cref="P:System.Exception.InnerException" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Exception> Eigenschaft stellt keinen tatsächlichen von den Datenbankvorgang ausgelöste Ausnahme dar. Sie erreichen die ausgelöste Ausnahme mit der <xref:System.Exception.InnerException%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionHandled">
+      <MemberSignature Language="C#" Value="public bool ExceptionHandled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExceptionHandled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs.ExceptionHandled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine von der Datenbank ausgelöste Ausnahme behandelt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn eine von der Datenbank ausgelöste Ausnahme behandelt wurde, und nicht durch ausgelöst werden soll die <see cref="T:System.Web.UI.WebControls.SqlDataSource" /> steuern; anderenfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Datenbank eine Ausnahme auslöst, die <xref:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs.ExceptionHandled%2A> -Eigenschaftensatz auf `false` und die Ausnahme umschlossen ist die <xref:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs.Exception%2A> Eigenschaft. Bei Verwendung einer <xref:System.Web.UI.WebControls.SqlDataSourceStatusEventHandler>, sehen Sie sich die <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.Exception%2A> -Eigenschaft und die Ausnahme behandeln. Wenn Sie die Ausnahme zu behandeln, legen Sie die <xref:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs.ExceptionHandled%2A> Eigenschaft, um `true` oder die <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

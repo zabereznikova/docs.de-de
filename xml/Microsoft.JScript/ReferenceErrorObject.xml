@@ -1,0 +1,19 @@
+<Type Name="ReferenceErrorObject" FullName="Microsoft.JScript.ReferenceErrorObject">
+  <TypeSignature Language="C#" Value="public sealed class ReferenceErrorObject : Microsoft.JScript.ErrorObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ReferenceErrorObject extends Microsoft.JScript.ErrorObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.ReferenceErrorObject" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.ErrorObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Referenz-Fehler dar. Beispielsweise kann ein Verweisfehler auftreten, wenn Sie eine nicht deklarierte Variable verweisen.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members />
+</Type>

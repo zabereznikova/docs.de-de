@@ -1,0 +1,344 @@
+<Type Name="ContractFailedEventArgs" FullName="System.Diagnostics.Contracts.ContractFailedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ContractFailedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContractFailedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Contracts.ContractFailedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden und Daten für die <see cref="E:System.Diagnostics.Contracts.Contract.ContractFailed" /> Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Diagnostics.Contracts.ContractFailedEventArgs> Objekt wird zum Übergeben der <xref:System.Diagnostics.Contracts.Contract.ContractFailed?displayProperty=nameWithType> Ereignis aus, wenn ein Vertrag fehlschlägt. Die <xref:System.Diagnostics.Contracts.Contract.ContractFailed> -Ereignis können Sie eine verwaltete Anwendung-Umgebung, wie ein interaktives Interpreter, einem Webhost-Browser, eine testumgebung oder eine Protokollierungsinfrastruktur Vertragsfehler benachrichtigt zu werden. Das Ereignis erfordert volle Vertrauenswürdigkeit.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContractFailedEventArgs (System.Diagnostics.Contracts.ContractFailureKind failureKind, string message, string condition, Exception originalException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Diagnostics.Contracts.ContractFailureKind failureKind, string message, string condition, class System.Exception originalException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.ContractFailedEventArgs.#ctor(System.Diagnostics.Contracts.ContractFailureKind,System.String,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="failureKind" Type="System.Diagnostics.Contracts.ContractFailureKind" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+        <Parameter Name="originalException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="failureKind">Einer der Enumerationswerte, der der Vertrag gibt an, die nicht bestanden.</param>
+        <param name="message">Die Meldung für das Ereignis.</param>
+        <param name="condition">Die Bedingung für das Ereignis.</param>
+        <param name="originalException">Die Ausnahme, die das Ereignis verursacht hat.</param>
+        <summary>Stellt Daten für das <see cref="E:System.Diagnostics.Contracts.Contract.ContractFailed" />-Ereignis bereit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public string Condition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Condition" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Contracts.ContractFailedEventArgs.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bedingung für den Fehler des Vertrags ab.</summary>
+        <value>Die Bedingung für den Fehler.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FailureKind">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Contracts.ContractFailureKind FailureKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.Contracts.ContractFailureKind FailureKind" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Contracts.ContractFailedEventArgs.FailureKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Contracts.ContractFailureKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Vertrags, der Fehler ab.</summary>
+        <value>Einer der Enumerationswerte, der den Typ des Vertrags angibt, die nicht bestanden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Contracts.ContractFailedEventArgs.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die <see cref="E:System.Diagnostics.Contracts.Contract.ContractFailed" /> Ereignis behandelt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn das Ereignis behandelt wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Diagnostics.Contracts.Contract.ContractFailed?displayProperty=nameWithType> Ereignis nicht behandelt wurde, wird der Debugger benachrichtigt. Wenn kein Debugger angefügt ist, ein **Assert** Dialogfeld wird angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Contracts.ContractFailedEventArgs.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Meldung, beschreibt die <see cref="E:System.Diagnostics.Contracts.Contract.ContractFailed" /> Ereignis.</summary>
+        <value>Die Meldung, die das Ereignis beschreibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalException">
+      <MemberSignature Language="C#" Value="public Exception OriginalException { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception OriginalException" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Contracts.ContractFailedEventArgs.OriginalException" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ursprüngliche Ausnahme, durch die <see cref="E:System.Diagnostics.Contracts.Contract.ContractFailed" /> Ereignis.</summary>
+        <value>Die Ausnahme, die das Ereignis verursacht hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHandled">
+      <MemberSignature Language="C#" Value="public void SetHandled ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetHandled() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.ContractFailedEventArgs.SetHandled" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die <see cref="P:System.Diagnostics.Contracts.ContractFailedEventArgs.Handled" />-Eigenschaft auf <see langword="true" /> fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.Contracts.ContractFailedEventArgs.SetHandled%2A> Methode bietet eine Möglichkeit für die Common Language Runtime Analyse aus, um anzugeben, dass eine Vertragsausnahme verarbeitet wurde. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Diagnostics.Contracts.ContractFailedEventArgs.Handled%2A?displayProperty=nameWithType>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetUnwind">
+      <MemberSignature Language="C#" Value="public void SetUnwind ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetUnwind() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.ContractFailedEventArgs.SetUnwind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die <see cref="P:System.Diagnostics.Contracts.ContractFailedEventArgs.Unwind" />-Eigenschaft auf <see langword="true" /> fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.Contracts.ContractFailedEventArgs.SetUnwind%2A> Methode bietet eine Möglichkeit, um anzugeben, dass die ausweitungsrichtlinien für den Codevertrag angewendet werden soll. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Diagnostics.Contracts.ContractFailedEventArgs.Unwind%2A?displayProperty=nameWithType>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Unwind">
+      <MemberSignature Language="C#" Value="public bool Unwind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Unwind" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Contracts.ContractFailedEventArgs.Unwind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob der Code Vertrag ausweitungsrichtlinien angewendet werden soll.</summary>
+        <value>
+          <see langword="true" />zum Anwenden von den ausweitungsrichtlinien; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Rückgabewert ist `true`, die Ausweitungsrichtlinie befindet sich auf den angefügten Debugger über einen Vertragsfehler benachrichtigen oder Anzeigen einer **Assert** (Dialogfeld), wenn kein Debugger angefügt ist.  
+  
+> [!WARNING]
+>  Dieser Wert sollte festgelegt werden, um `false` für Analysis, die auf einem Server (z. B. ASP.NET) ausgeführt Tools.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

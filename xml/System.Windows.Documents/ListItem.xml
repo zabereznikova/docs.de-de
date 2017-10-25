@@ -1,0 +1,926 @@
+<Type Name="ListItem" FullName="System.Windows.Documents.ListItem">
+  <TypeSignature Language="C#" Value="public class ListItem : System.Windows.Documents.TextElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListItem extends System.Windows.Documents.TextElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.ListItem" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.TextElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Blocks")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein fortlaufendes Inhaltselement, das ein bestimmtes Inhaltselement in einem geordneten darstellt oder ungeordnete <see cref="T:System.Windows.Documents.List" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.ListItem>Erzwingt ein starkes Inhaltsmodell für den untergeordneten Inhalt an. Finden Sie unter [Übersicht über das TextElement](~/docs/framework/wpf/advanced/textelement-content-model-overview.md) Weitere Informationen zu den <xref:System.Windows.Documents.ListItem> Inhaltsmodell.  
+  
+ <xref:System.Windows.Documents.ListItem>Elemente enthalten sein müssen ein <xref:System.Windows.Documents.List> Element.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Documents.List> mit [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)].  
+  
+ [!code-xaml[ListSnippets#_ListXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ListSnippets/CSharp/Window1.xaml#_listxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen und Auffüllen einer <xref:System.Windows.Documents.List> programmgesteuert.  
+  
+ [!code-csharp[ListSnippets#_List_Props](~/samples/snippets/csharp/VS_Snippets_Wpf/ListSnippets/CSharp/Window1.xaml.cs#_list_props)]
+ [!code-vb[ListSnippets#_List_Props](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListSnippets/visualbasic/window1.xaml.vb#_list_props)]  
+  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: Sortierte Liste](~/add/media/ordered-list.png "Screenshot: sortierte Liste")  
+  
+ Im folgende Beispiel wird gezeigt, wie eine geschachtelte definieren <xref:System.Windows.Documents.List> (Listen in Listen) mit [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)].  
+  
+ [!code-xaml[ListSnippets#_NestedListXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ListSnippets/CSharp/Window1.xaml#_nestedlistxaml)]  
+  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
+  
+ ![Geschachtelte Liste](~/add/media/flow-nested-list-example.png "Nested-Liste")  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.ListItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue, leere Instanz der dem <see cref="T:System.Windows.Documents.ListItem" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListItem (System.Windows.Documents.Paragraph paragraph);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Paragraph paragraph) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.ListItem.#ctor(System.Windows.Documents.Paragraph)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="paragraph" Type="System.Windows.Documents.Paragraph" />
+      </Parameters>
+      <Docs>
+        <param name="paragraph">Ein <see cref="T:System.Windows.Documents.Paragraph" /> angeben die anfänglichen Inhalte des neuen Objekts <see cref="T:System.Windows.Documents.ListItem" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Documents.ListItem" /> -Klasse, wobei eine angegebene <see cref="T:System.Windows.Documents.Paragraph" /> Objekt als die anfänglichen Inhalte des neuen <see cref="T:System.Windows.Documents.ListItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung dieses Konstruktors.  
+  
+ [!code-csharp[ListSnippets#_List_Const](~/samples/snippets/csharp/VS_Snippets_Wpf/ListSnippets/CSharp/Window1.xaml.cs#_list_const)]
+ [!code-vb[ListSnippets#_List_Const](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListSnippets/visualbasic/window1.xaml.vb#_list_const)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Blocks">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.BlockCollection Blocks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.BlockCollection Blocks" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.ListItem.Blocks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.BlockCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine bausteinauflistung, die der obersten Ebene enthält <see cref="T:System.Windows.Documents.Block" /> Elemente der <see cref="T:System.Windows.Documents.ListItem" />.</summary>
+        <value>Eine Auflistung von Block, enthält die <see cref="T:System.Windows.Documents.Block" /> Elemente der<see cref="T:System.Windows.Documents.ListItem" /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Block-Auflistung, die von dieser Eigenschaft zurückgegebene aufzuzählen oder zu bearbeiten des Inhalts des ein <xref:System.Windows.Documents.Section> Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush BorderBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush BorderBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.ListItem.BorderBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Media.Brush" /> beim Zeichnen des Rahmens des Elements verwendet.</summary>
+        <value>Der Pinsel, der auf den Rand des Elements angewendet. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Tabelle der Muster, die die verfügbaren vordefinierten Pinsel Farben angezeigt werden, finden Sie unter <xref:System.Windows.Media.Brushes>.  
+  
+<a name="dependencyPropertyInfo_BorderBrush"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.ListItem.BorderBrushProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.BorderBrush%2A> Attribut des eine <xref:System.Windows.Documents.Block> Element (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_BordersXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_bordersxaml)]  
+  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: Blau, 1 &#47; 4-Zoll-Rahmen um Block](~/add/media/block-borders.png "Screenshot: Blau, 1/4-Zoll-Rahmen um Block")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.BorderBrush%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[BlockSnippets#_Block_Borders](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_borders)]
+ [!code-vb[BlockSnippets#_Block_Borders](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_borders)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BorderBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BorderBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.ListItem.BorderBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.ListItem.BorderBrush" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderThickness">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness BorderThickness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness BorderThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.ListItem.BorderThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stärke des Rahmens des Elements ab oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Windows.Thickness" />-Struktur, die die Stärke des Rahmens in geräteunabhängigen Pixeln angibt. Der Standardwert ist die einheitliche Stärke 0 (null), also (0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_BorderThickness"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object BorderThickness="uniformThickness"/>  
+- or -  
+<object BorderThickness="independentThickness"/>  
+- or -  
+<object BorderThickness="qualifiedUniformThickness"/>  
+- or -  
+<object BorderThickness="qualifiedIndependentThickness"/>  
+```  
+  
+<a name="xamlValues_BorderThickness"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *uniformThickness*  
+ Entspricht der Zeichenfolgendarstellung eines einzelnen <xref:System.Double> Wert gleichmäßig auf alle vier Stärke Dimensionen angewendet.  Z. B. einen Wert von `"10"` entspricht dem Wert `"10,10,10,10"`.  Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *independentThickness*  
+ Entspricht der Zeichenfolgendarstellung von vier geordnete <xref:System.Double> Werten, die Dicke Dimensionen für Links, oben, mit der rechten Maustaste, und unten in dieser Reihenfolge.  Die vier Werte müssen durch Kommas getrennt werden; Leerzeichen sind nicht zulässig.  Beispielsweise 5,10,15,20 "" in 5 Pixel des Rahmens um links neben dem Inhalt, 10 Pixel des Rahmens oben, 15 Pixel des Rahmens, der rechts vom Inhalt und 20 Pixel des Rahmens unterhalb des Inhalts.  
+  
+ *qualifiedUniformThickness*  
+ Ein Wert von beschriebenen *UniformThickness* gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ Beispielsweise `"1in"` uniform Rahmen 1 Zoll in allen Richtungen bereitstellt.  
+  
+ *qualifiedIndependentThickness*  
+ Ein Wert von beschrieben *IndependentThickness*, wobei jeder unabhängigen Wert gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ Beispielsweise `"1.5in,0.8in,1.5in,0.8in"`.  Einheit-Spezifizierer möglicherweise gemischt oder aus einem oder mehreren Werten weggelassen werden.  
+  
+<a name="dependencyPropertyInfo_BorderThickness"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.ListItem.BorderThicknessProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.BorderThickness%2A> Attribut des eine <xref:System.Windows.Documents.Block> Element (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_BordersXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_bordersxaml)]  
+  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: Blau, 1 &#47; 4-Zoll-Rahmen um Block](~/add/media/block-borders.png "Screenshot: Blau, 1/4-Zoll-Rahmen um Block")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.BorderThickness%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[BlockSnippets#_Block_Borders](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_borders)]
+ [!code-vb[BlockSnippets#_Block_Borders](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_borders)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderThicknessProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BorderThicknessProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BorderThicknessProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.ListItem.BorderThicknessProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.ListItem.BorderThickness" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.FlowDirection FlowDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FlowDirection FlowDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.ListItem.FlowDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die relative Richtung für den Ablauf von Inhalten innerhalb einer <see cref="T:System.Windows.Documents.ListItem" /> Element.</summary>
+        <value>Eines der <see cref="T:System.Windows.FlowDirection" /> Werten, die die relative flussrichtung angibt.  Die Standardeinstellung ist <see cref="F:System.Windows.FlowDirection.LeftToRight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abrufen dieser Eigenschaft gibt die derzeit gültigen flussrichtung zurück.  Durch Festlegen dieser Eigenschaft führt dazu, dass der Inhalt der <xref:System.Windows.Documents.ListItem> Element in der angegebenen Richtung erneut zu übertragen.  
+  
+ Die flussrichtung von Inhalten entspricht in der Regel die Standard-flussrichtung der Sprache, dargestellt wird.  Hebräisch und Arabisch sind Beispiele für Sprachen, die natürliche Weise von rechts nach links fließen.  Englisch, Deutsch und Russisch sind Beispiele für Sprachen, die von links nach rechts geschrieben.  
+  
+> [!NOTE]
+>  Der Wert dieser Eigenschaft wird nicht automatisch geändert, entsprechend die Sprache, die vom Betriebssystem verwendet wird. Wenn Sie einen anderen Wert als den Standardwert verwenden müssen <xref:System.Windows.FlowDirection.LeftToRight>, Sie müssen selbst angeben.  
+  
+<a name="dependencyPropertyInfo_FlowDirection"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.ListItem.FlowDirectionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.FlowDirection%2A> Attribut des eine <xref:System.Windows.Documents.Block> Element (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_FlowDirectionXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_flowdirectionxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.FlowDirection%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[BlockSnippets#_Block_FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_flowdirection)]
+ [!code-vb[BlockSnippets#_Block_FlowDirection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_flowdirection)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowDirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FlowDirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FlowDirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.ListItem.FlowDirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.ListItem.FlowDirection" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineHeight">
+      <MemberSignature Language="C#" Value="public double LineHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LineHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.ListItem.LineHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe jeder Inhaltszeile ab bzw. legt diese fest.</summary>
+        <value>Die Höhe der einzelnen Zeilen in geräteunabhängigen Pixeln im Bereich von 0,0034 bis 160000.  Der Wert <see cref="F:System.Double.NaN" /> (entspricht dem Attributwert "<c>automatisch</c>") wird die Zeilenhöhe automatisch anhand der aktuellen Schriftartmerkmale bestimmt.  Die Standardeinstellung ist <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ändern der <xref:System.Windows.Documents.ListItem.LineHeight%2A> Wert ändert sich nicht auf die Höhe des zugehörigen Texts; er ändert vielmehr die Höhe der Zeile, die den Text enthält.  
+  
+ Zusätzlich zu dieser Eigenschaft, die das Layout der Zeilen in einer <xref:System.Windows.Documents.ListItem> hat Auswirkungen auf die <xref:System.Windows.Documents.ListItem.LineStackingStrategy%2A> Eigenschaft.  
+  
+<a name="xamlAttributeUsage_LineHeight"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object LineHeight="double"/>  
+- or -  
+<object LineHeight="qualifiedDouble"/>  
+- or -  
+<object LineHeight="Auto"/>  
+```  
+  
+<a name="xamlValues_LineHeight"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert im Bereich `0.0034` auf `160000`. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert wie oben beschrieben (ausgenommen `Auto`) gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+ Auto  
+ Bewirkt, dass die Zeilenhöhe automatisch anhand der aktuellen Schriftartmerkmale bestimmt.  Entspricht einem Eigenschaftswert des <xref:System.Double.NaN?displayProperty=nameWithType>.  
+  
+<a name="dependencyPropertyInfo_LineHeight"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.ListItem.LineHeightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.LineHeight%2A> Attribut des ein <xref:System.Windows.Documents.Block> Element.  
+  
+ [!code-xaml[BlockSnippets#_Block_LineHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_lineheightxaml)]  
+  
+ Die folgende Abbildung zeigt, wie im vorherige Beispiel gerendert wird.  
+  
+ ![Bildschirmabbildung: FlowDocument LineHeight](~/add/media/flowdocument-lineheight.png "Bildschirmabbildung: FlowDocument LineHeight")  
+  
+ Die folgende Abbildung zeigt, wie das gleiche Beispiel mit der Standardeinstellung von rendert <xref:System.Windows.Documents.ListItem.LineHeight%2A> = <xref:System.Double.NaN?displayProperty=nameWithType>.  
+  
+ ![Bildschirmabbildung: FlowDocument LineHeight Standard](~/add/media/flowdocument-lineheightdefault.png "Bildschirmabbildung: FlowDocument LineHeight Standard")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.LineHeight%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[BlockSnippets#_Block_LineHeight](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_lineheight)]
+ [!code-vb[BlockSnippets#_Block_LineHeight](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_lineheight)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LineHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LineHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.ListItem.LineHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.ListItem.LineHeight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineStackingStrategy">
+      <MemberSignature Language="C#" Value="public System.Windows.LineStackingStrategy LineStackingStrategy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.LineStackingStrategy LineStackingStrategy" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.ListItem.LineStackingStrategy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineStackingStrategy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der Mechanismus, mit dem eine zeilenbox bestimmt wird, für jede Textzeile in der <see cref="T:System.Windows.Documents.ListItem" />.</summary>
+        <value>Eines der <see cref="T:System.Windows.LineStackingStrategy" /> Werte, der angibt, der Mechanismus, mit dem eine zeilenbox bestimmt wird, für jede Textzeile in der <see cref="T:System.Windows.Documents.ListItem" />. Die Standardeinstellung ist <see cref="F:System.Windows.LineStackingStrategy.MaxHeight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_LineStackingStrategy"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.ListItem.LineStackingStrategyProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> -Eigenschaft können Sie bestimmen, wie die Zeilenfelder für Textzeilen erstellt werden ein <xref:System.Windows.Controls.TextBlock>. Die erste <xref:System.Windows.Controls.TextBlock> verfügt über eine <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> Wert <xref:System.Windows.LineStackingStrategy.MaxHeight> und das zweite <xref:System.Windows.Controls.TextBlock> hat den Wert <xref:System.Windows.LineStackingStrategy.BlockLineHeight>.  
+  
+ [!code-xaml[FlowMiscSnippets_snip#LineStackingStrategyExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_snip/cs/linestackingstrategyexample.xaml#linestackingstrategyexamplewholepage)]  
+  
+ Die folgende Abbildung zeigt das Ergebnis des vorangehenden Codes.  
+  
+ ![Bildschirmabbildung: Vergleichen von LineStackingStrategy-Werten](~/add/media/flow-linestackingstrategy.gif "Bildschirmabbildung: Vergleichen von LineStackingStrategy-Werten")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineStackingStrategyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LineStackingStrategyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LineStackingStrategyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.ListItem.LineStackingStrategyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.ListItem.LineStackingStrategy" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.List List { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.List List" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.ListItem.List" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.List</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Documents.List" /> , enthält die <see cref="T:System.Windows.Documents.ListItem" />.</summary>
+        <value>Der Liste, enthält die <see cref="T:System.Windows.Documents.ListItem" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Margin">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness Margin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness Margin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.ListItem.Margin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stärke des Rands des Elements ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Thickness" /> -Struktur, die Stärke des Rands anzuwendenden in geräteunabhängigen Pixeln angibt. Der Standardwert ist die einheitliche Stärke 0 (null), also (0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.ListItem.Margin%2A>ist Pufferbereich außerhalb eines Inhaltsbereichs des Elements zwischen den Rändern des Inhaltsbereichs des Elements und den Rändern des übergeordneten Elements.  Im Gegensatz dazu <xref:System.Windows.Documents.ListItem.Padding%2A>, also Pufferbereich innerhalb des Elements im Inhaltsbereich, zwischen dem Inhalt des Elements und dem inneren Rand des Elements.  
+  
+<a name="xamlAttributeUsage_Margin"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object Margin="uniformThickness"/>  
+- or -  
+<object Margin="independentThickness"/>  
+- or -  
+<object Margin="qualifiedUniformThickness"/>  
+- or -  
+<object Margin="qualifiedIndependentThickness"/>  
+```  
+  
+<a name="xamlValues_Margin"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *uniformThickness*  
+ Entspricht der Zeichenfolgendarstellung eines einzelnen <xref:System.Double> Wert gleichmäßig auf alle vier Stärke Dimensionen angewendet.  Z. B. einen Wert von `"10"` entspricht dem Wert `"10,10,10,10"`.  Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *independentThickness*  
+ Entspricht der Zeichenfolgendarstellung von vier geordnete <xref:System.Double> Werten, die Dicke Dimensionen für Links, oben, mit der rechten Maustaste, und unten in dieser Reihenfolge.  Die vier Werte müssen durch Kommas getrennt werden; Leerzeichen sind nicht zulässig.  Beispielsweise 5,10,15,20 "" 5 Pixeln Rand um links neben dem Inhalt, 10 Pixel von oben, rechts vom Inhalt 15 Pixeln und 20 Pixel des Rands unterhalb des Inhalts.  
+  
+ *qualifiedUniformThickness*  
+ Ein Wert von beschriebenen *UniformThickness* gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ Beispielsweise `"1in"` uniform Rand 1 Zoll in allen Richtungen bereitstellt.  
+  
+ *qualifiedIndependentThickness*  
+ Ein Wert von beschrieben *IndependentThickness*, wobei jeder unabhängigen Wert gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ Beispielsweise `"1.5in,0.8in,1.5in,0.8in"`.  Einheit-Spezifizierer möglicherweise gemischt oder aus einem oder mehreren Werten weggelassen werden.  
+  
+<a name="dependencyPropertyInfo_Margin"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.ListItem.MarginProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.Margin%2A> Attribut des eine <xref:System.Windows.Documents.Block> Element (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_MarginPaddingXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_marginpaddingxaml)]  
+  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  Übertriebenen Dicke und Farben werden zur Veranschaulichung verwendet.  
+  
+ ![Bildschirmabbildung: Absätze mit Abstand und Rändern](~/add/media/block-marginpadding.png "Bildschirmabbildung: Absätze mit Abstand und Rändern")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.Margin%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[BlockSnippets#_Block_MarginPadding](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_marginpadding)]
+ [!code-vb[BlockSnippets#_Block_MarginPadding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_marginpadding)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarginProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MarginProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MarginProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.ListItem.MarginProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.ListItem.Margin" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextListItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.ListItem NextListItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.ListItem NextListItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.ListItem.NextListItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.ListItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den nächsten <see cref="T:System.Windows.Documents.ListItem" /> im mit <see cref="T:System.Windows.Documents.List" />.</summary>
+        <value>Das nächste <see cref="T:System.Windows.Documents.ListItem" /> in der <see cref="T:System.Windows.Documents.List" />, oder <see langword="null" /> es ist keine Weiter <see cref="T:System.Windows.Documents.ListItem" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.ListItem.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Abstandsstärke für das Element ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Thickness" /> -Struktur, die den anzuwendenden Abstand in geräteunabhängigen Pixeln angibt. Der Standardwert ist die einheitliche Stärke 0 (null), also (0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.ListItem.Padding%2A>ist Pufferbereich innerhalb des Elements im Inhaltsbereich, zwischen dem Inhalt des Elements und dem inneren Rand des Elements an.  Im Gegensatz dazu <xref:System.Windows.Documents.ListItem.Margin%2A>, Pufferbereich außerhalb eines Inhaltsbereichs des Elements zwischen den Rändern des Inhaltsbereichs des Elements und den Rändern des übergeordneten Elements ist.  
+  
+<a name="xamlAttributeUsage_Padding"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object Padding="uniformThickness"/>  
+- or -  
+<object Padding="independentThickness"/>  
+- or -  
+<object Padding="qualifiedUniformThickness"/>  
+- or -  
+<object Padding="qualifiedIndependentThickness"/>  
+```  
+  
+<a name="xamlValues_Padding"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *uniformThickness*  
+ Entspricht der Zeichenfolgendarstellung eines einzelnen <xref:System.Double> Wert gleichmäßig auf alle vier Stärke Dimensionen angewendet.  Z. B. einen Wert von `"10"` entspricht dem Wert `"10,10,10,10"`.  Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *independentThickness*  
+ Entspricht der Zeichenfolgendarstellung von vier geordnete <xref:System.Double> Werten, die Dicke Dimensionen für Links, oben, mit der rechten Maustaste, und unten in dieser Reihenfolge.  Die vier Werte müssen durch Kommas getrennt werden; Leerzeichen sind nicht zulässig.  Beispielsweise 5,10,15,20 "" 5 Pixeln Abstand um links neben dem Inhalt, 10 Pixeln oben, 15 Pixel der Auffüllung rechts vom Inhalt und 20 Pixel Abstand unterhalb des Inhalts.  
+  
+ *qualifiedUniformThickness*  
+ Ein Wert von beschriebenen *UniformThickness* gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ Beispielsweise `"1in"` uniform Abstand von 1 Zoll in allen Richtungen bereitstellt.  
+  
+ *qualifiedIndependentThickness*  
+ Ein Wert von beschrieben *IndependentThickness*, wobei jeder unabhängigen Wert gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ Beispielsweise `"1.5in,0.8in,1.5in,0.8in"`.  Einheit-Spezifizierer möglicherweise gemischt oder aus einem oder mehreren Werten weggelassen werden.  
+  
+<a name="dependencyPropertyInfo_Padding"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.ListItem.PaddingProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.Padding%2A> Attribut des eine <xref:System.Windows.Documents.Block> Element (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_MarginPaddingXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_marginpaddingxaml)]  
+  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  Übertriebenen Dicke und Farben werden zur Veranschaulichung verwendet.  
+  
+ ![Bildschirmabbildung: Absätze mit Abstand und Rändern](~/add/media/block-marginpadding.png "Bildschirmabbildung: Absätze mit Abstand und Rändern")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.Padding%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[BlockSnippets#_Block_MarginPadding](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_marginpadding)]
+ [!code-vb[BlockSnippets#_Block_MarginPadding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_marginpadding)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PaddingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PaddingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.ListItem.PaddingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.ListItem.Padding" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousListItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.ListItem PreviousListItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.ListItem PreviousListItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.ListItem.PreviousListItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.ListItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vorherige <see cref="T:System.Windows.Documents.ListItem" /> im mit <see cref="T:System.Windows.Documents.List" />.</summary>
+        <value>Der vorherige <see cref="T:System.Windows.Documents.ListItem" /> in der <see cref="T:System.Windows.Documents.List" />, oder <see langword="null" /> Wenn es kein vorheriges ist <see cref="T:System.Windows.Documents.ListItem" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeBlocks">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeBlocks (System.Windows.Markup.XamlDesignerSerializationManager manager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeBlocks(class System.Windows.Markup.XamlDesignerSerializationManager manager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.ListItem.ShouldSerializeBlocks(System.Windows.Markup.XamlDesignerSerializationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.Windows.Markup.XamlDesignerSerializationManager" />
+      </Parameters>
+      <Docs>
+        <param name="manager">Eine Serialisierung Service Manager-Objekt für das Objekt.</param>
+        <summary>Gibt einen Wert, der angibt, ob der tatsächliche Wert der <see cref="P:System.Windows.Documents.ListItem.Blocks" /> Eigenschaft serialisiert werden soll, während der Serialisierung die <see cref="T:System.Windows.Documents.ListItem" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="P:System.Windows.Documents.ListItem.Blocks" /> Eigenschaft sollte serialisiert werden, andernfalls, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NullReferenceException">
+          <paramref name="manager" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SiblingListItems">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.ListItemCollection SiblingListItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.ListItemCollection SiblingListItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.ListItem.SiblingListItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.ListItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Documents.ListItemCollection" /> , enthält die <see cref="T:System.Windows.Documents.ListItem" /> Elemente, die gleichgeordnete Elemente des aktuellen sind <see cref="T:System.Windows.Documents.ListItem" /> Element.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.ListItemCollection" /> , enthält das untergeordnete Element <see cref="T:System.Windows.Documents.ListItem" /> Elemente, die direkt vom übergeordneten Element des aktuellen gehostet werden <see cref="T:System.Windows.Documents.ListItem" /> Element oder <see langword="null" /> Wenn das aktuelle <see cref="T:System.Windows.Documents.ListItem" /> kein übergeordnetes Element besitzt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.ListItemCollection> von dieser Eigenschaft zurückgegebene umfasst die <xref:System.Windows.Documents.ListItem> Element über den Zugriff auf die Auflistung; d. h. das Element, diese Eigenschaft besitzt, gilt sein eigenes gleichgeordnetes Element für Zwecke der Auflistung der nebengeordneten Elemente zu generieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignment">
+      <MemberSignature Language="C#" Value="public System.Windows.TextAlignment TextAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.TextAlignment TextAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.ListItem.TextAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die horizontale Ausrichtung von Textinhalten angibt, oder legt diesen fest.</summary>
+        <value>Eines der <see cref="T:System.Windows.TextAlignment" /> Werte, die die gewünschte Ausrichtung angeben. Die Standardeinstellung ist <see cref="F:System.Windows.TextAlignment.Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_TextAlignment"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.ListItem.TextAlignmentProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.Block.TextAlignment%2A> Attribut des ein <xref:System.Windows.Documents.Block> Element.  
+  
+ [!code-xaml[BlockSnippets#_Block_TextAlignmentXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_textalignmentxaml)]  
+  
+ Die folgende Abbildung zeigt, wie im vorherige Beispiel mit rendert <xref:System.Windows.TextAlignment.Left> textausrichtung (Standard).  
+  
+ ![Bildschirmabbildung: TextAlign-Eigenschaftswert Left](~/add/media/flowdoc-textalign-left.png "Bildschirmabbildung: TextAlign-Eigenschaftswert Left")  
+  
+ Die folgende Abbildung zeigt, wie das gleiche Beispiel mit rendert <xref:System.Windows.TextAlignment.Right> textausrichtung.  
+  
+ ![Bildschirmabbildung: TextAlign-Wert rechts](~/add/media/flowdoc-textalign-right.png "Bildschirmabbildung: TextAlign-Wert, der rechts")  
+  
+ Die folgende Abbildung zeigt, wie das gleiche Beispiel mit rendert <xref:System.Windows.TextAlignment.Center> textausrichtung.  
+  
+ ![Bildschirmabbildung: TextAlign-Eigenschaftswert Center](~/add/media/flowdoc-textalign-center.png "Bildschirmabbildung: TextAlign-Eigenschaftswert Center")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.ListItem.TextAlignment%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[BlockSnippets#_Block_TextAlignment](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_textalignment)]
+ [!code-vb[BlockSnippets#_Block_TextAlignment](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_textalignment)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignmentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextAlignmentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextAlignmentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.ListItem.TextAlignmentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.ListItem.TextAlignment" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

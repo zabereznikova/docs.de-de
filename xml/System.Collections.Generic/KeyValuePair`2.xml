@@ -1,0 +1,265 @@
+<Type Name="KeyValuePair&lt;TKey,TValue&gt;" FullName="System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;">
+  <TypeSignature Language="C#" Value="public struct KeyValuePair&lt;TKey,TValue&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit KeyValuePair`2&lt;TKey, TValue&gt; extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.KeyValuePair`2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TKey" />
+    <TypeParameter Name="TValue" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TKey">Der Typ des Schlüssels.</typeparam>
+    <typeparam name="TValue">Der Typ des Werts.</typeparam>
+    <summary>Definiert ein Schlüssel-Wert-Paar, das festgelegt oder abgerufen werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Collections.Generic.Dictionary%602.Enumerator.Current%2A?displayProperty=nameWithType> Eigenschaft gibt eine Instanz dieses Typs zurück.  
+  
+ Die `foreach` -Anweisung der Programmiersprache c# (`for each` in C++ `For Each` in Visual Basic) ein Objekt des Typs der Elemente in der Auflistung zurück. Da jedes Element einer Auflistung basierend auf <xref:System.Collections.Generic.IDictionary%602> ist ein Schlüssel/Wert-Paar der Elementtyp ist nicht der Typ des Schlüssels oder den Typ des Werts. Stattdessen der Elementtyp ist <xref:System.Collections.Generic.KeyValuePair%602>. Zum Beispiel:  
+  
+ [!code-cpp[Generic.Dictionary#11](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.Dictionary/cpp/source2.cpp#11)]
+ [!code-csharp[Generic.Dictionary#11](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Dictionary/CS/source2.cs#11)]
+ [!code-vb[Generic.Dictionary#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Dictionary/VB/source2.vb#11)]  
+  
+ Die `foreach` Anweisung ist ein Wrapper um den Enumerator, der nur das Lesen aus nicht das Schreiben in die Auflistung zulässt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Schlüssel und Werte in einem Wörterbuch aufgelistet werden mithilfe der <xref:System.Collections.Generic.KeyValuePair%602> Struktur.  
+  
+ Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.Generic.Dictionary%602> Klasse.  
+  
+ [!code-cpp[Generic.Dictionary#7](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.Dictionary/cpp/source.cpp#7)]
+ [!code-csharp[Generic.Dictionary#7](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Dictionary/CS/source.cs#7)]
+ [!code-vb[Generic.Dictionary#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Dictionary/VB/source.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyValuePair (TKey key, TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TKey key, !TValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.KeyValuePair`2.#ctor(`0,`1)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="key">Das Objekt, das in jedem Schlüssel-Wert-Paar definiert ist.</param>
+        <param name="value">Der zugeordnete Workflowdefinition <c>Schlüssel</c>.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Collections.Generic.KeyValuePair`2" />-Struktur mit dem angegebenen Schlüssel und Wert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deconstruct">
+      <MemberSignature Language="C#" Value="public void Deconstruct (out TKey key, out TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Deconstruct([out] !TKey&amp; key, [out] !TValue&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.KeyValuePair`2.Deconstruct(`0@,`1@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey&amp;" RefType="out" />
+        <Parameter Name="value" Type="TValue&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public TKey Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TKey Key" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.KeyValuePair`2.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüssel im Schlüssel-Wert-Paar ab.</summary>
+        <value>Ein <typeparamref name="TKey" />, der den Schlüssel des <see cref="T:System.Collections.Generic.KeyValuePair`2" /> darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nur-Lese /.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Schlüssel und Werte in einem Wörterbuch aufgelistet werden mithilfe der <xref:System.Collections.Generic.KeyValuePair%602> Struktur.  
+  
+ Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.Generic.Dictionary%602> Klasse.  
+  
+ [!code-cpp[Generic.Dictionary#7](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.Dictionary/cpp/source.cpp#7)]
+ [!code-csharp[Generic.Dictionary#7](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Dictionary/CS/source.cs#7)]
+ [!code-vb[Generic.Dictionary#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Dictionary/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.KeyValuePair`2.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgenentsprechung des <see cref="T:System.Collections.Generic.KeyValuePair`2" /> zurück, wobei die Zeichenfolgenentsprechungen des Schlüssels und des Werts verwendet werden.</summary>
+        <returns>Eine Zeichenfolgenentsprechung des <see cref="T:System.Collections.Generic.KeyValuePair`2" />, die die Zeichenfolgenentsprechungen des Schlüssels und des Werts enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichenfolgendarstellung besteht die zeichenfolgenentsprechungen des Schlüssels und des Werts, getrennt durch ein Komma und ein Leerzeichen und eingeschlossen in eckige Klammern aus. Z. B. die <xref:System.Collections.Generic.KeyValuePair%602.ToString%2A> Methode für eine <xref:System.Collections.Generic.KeyValuePair%602> Struktur mit der Zeichenfolge <xref:System.Collections.Generic.KeyValuePair%602.Key%2A> "Test" und die ganze Zahl <xref:System.Collections.Generic.KeyValuePair%602.Value%2A> 14 gibt die Zeichenfolge "[Test, 14]" zurück.  
+  
+> [!NOTE]
+>  Diese Methode verwendet die `ToString` die Schlüssel- und Werttypen bereitgestellten Methoden. Einige Rückgabetypen nicht nützlich oder informativen Werte für ihre `ToString` Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public TValue Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TValue Value" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.KeyValuePair`2.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert im Schlüssel-Wert-Paar ab.</summary>
+        <value>Eine <typeparamref name="TValue" />-Klasse, die den Wert der <see cref="T:System.Collections.Generic.KeyValuePair`2" />-Klasse darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nur-Lese /.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Schlüssel und Werte in einem Wörterbuch aufgelistet werden mithilfe der <xref:System.Collections.Generic.KeyValuePair%602> Struktur.  
+  
+ Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.Generic.Dictionary%602> Klasse.  
+  
+ [!code-cpp[Generic.Dictionary#7](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.Dictionary/cpp/source.cpp#7)]
+ [!code-csharp[Generic.Dictionary#7](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Dictionary/CS/source.cs#7)]
+ [!code-vb[Generic.Dictionary#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Dictionary/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

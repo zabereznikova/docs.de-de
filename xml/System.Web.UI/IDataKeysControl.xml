@@ -1,0 +1,61 @@
+<Type Name="IDataKeysControl" FullName="System.Web.UI.IDataKeysControl">
+  <TypeSignature Language="C#" Value="public interface IDataKeysControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataKeysControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IDataKeysControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Eigenschaften, die angeben, wie ASP.NET Client IDs für ein datengebundenes Steuerelement erstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IDataKeysControl> Schnittstelle definiert zwei Eigenschaften, die datengebundene Steuerelemente implementieren, können Sie angeben, wie eine Client-ID erstellt wird. Ein datengebundenes Steuerelement, das mehrere Instanzen eines Steuerelements anzeigt, muss eine ID für jede Instanz des Steuerelements erstellen. Diese ID muss damit können den Zugriff auf das Steuerelement von Clientskripts eindeutig sein.  
+  
+ Die <xref:System.Web.UI.IDataKeysControl.ClientIDRowSuffix%2A> -Eigenschaft können Sie angeben, den oder die Namen von Datenfeldern, deren Werte sind in den generierten Wert zur enthalten, die <xref:System.Web.UI.Control.ClientID%2A> Eigenschaft. Diese Werte werden verwendet, um jede Instanz des Steuerelements auf eine Weise eindeutig zu identifizieren, die einem Wert aussagekräftige Daten anstatt auf einen beliebigen Wert z. B. die Ordnungszahl entspricht in dem die Steuerelemente auf der Seite gerendert werden. Z. B. Wenn Sie Datensätze aus einer Produktdatentabelle anzeigen, Sie können zuweisen `ProductID` auf die <xref:System.Web.UI.IDataKeysControl.ClientIDRowSuffix%2A> Eigenschaft. In diesem Fall kann jede Instanz des datengebundenen Steuerelements identifiziert werden, durch den Wert aus der `ProductID` Feld.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClientIDRowSuffix">
+      <MemberSignature Language="C#" Value="public string[] ClientIDRowSuffix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ClientIDRowSuffix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IDataKeysControl.ClientIDRowSuffix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Namen der Datenfelder zugeordnet, deren Werte verwendet werden, um jede Instanz eines datengebundenen Steuerelements eindeutig zu identifizieren, wenn ASP.NET generiert, die <see cref="P:System.Web.UI.Control.ClientID" /> Wert mithilfe der <see cref="F:System.Web.UI.ClientIDMode.Predictable" /> Algorithmus.</summary>
+        <value>Eine Auflistung von Daten-Feldnamen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientIDRowSuffixDataKeys">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataKeyArray ClientIDRowSuffixDataKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataKeyArray ClientIDRowSuffixDataKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IDataKeysControl.ClientIDRowSuffixDataKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataKeyArray</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Datenwerte, die verwendet werden, um jede Instanz eines datengebundenen Steuerelements eindeutig zu identifizieren, wenn ASP.NET generiert die <see cref="P:System.Web.UI.Control.ClientID" /> Wert.</summary>
+        <value>Eine Auflistung der Datenfeld Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

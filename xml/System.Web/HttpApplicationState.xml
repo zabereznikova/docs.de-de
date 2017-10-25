@@ -1,0 +1,575 @@
+<Type Name="HttpApplicationState" FullName="System.Web.HttpApplicationState">
+  <TypeSignature Language="C#" Value="public sealed class HttpApplicationState : System.Collections.Specialized.NameObjectCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpApplicationState extends System.Collections.Specialized.NameObjectCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpApplicationState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Specialized.NameObjectCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht es, in einer ASP.NET-Anwendung globale Informationen über mehrere Sitzungen und Anforderungen hinweg freizugeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine ASP.NET-Anwendung ist die Summe aller Dateien, Seiten, Handler, Module und Code innerhalb des Bereichs ein virtuelles Verzeichnis und seinen Unterverzeichnissen auf einem einzelnen Webserver.  
+  
+ Eine einzelne Instanz einer <xref:System.Web.HttpApplicationState> Klasse wird ein Client eine URL-Ressource in einem bestimmten virtuellen Verzeichnis einer ASP.NET-Anwendung fordert erstmalig erstellt. Eine separate Einzelinstanz wird für jede ASP.NET-Anwendung auf einem Webserver erstellt. Ein Verweis auf jede Instanz wird dann über die systeminterne Funktion verfügbar gemachte <xref:System.Web.HttpContext.Application%2A> Objekt.  
+  
+ Anwendungsstatus wird nicht in einer Webfarm (in dem eine Anwendung auf mehreren Servern gehostet wird) oder eines Webgartens (in dem eine Anwendung mehrere Prozesse auf demselben Computer gehostet wird) freigegeben.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplicationState.Add(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Objekts, das der Auflistung hinzugefügt werden.</param>
+        <param name="value">Der Wert des Objekts.</param>
+        <summary>Fügt ein neues Objekt, das <see cref="T:System.Web.HttpApplicationState" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel fügt zwei Anwendungsvariablen MyAppVar1 und MyAppVar2 auf die Auflistung der Anwendung hinzu.  
+  
+ [!code-csharp[Classic HttpApplicationState.Add Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpApplicationState.Add Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpApplicationState.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpApplicationState.Add Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllKeys">
+      <MemberSignature Language="C#" Value="public string[] AllKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AllKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplicationState.AllKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zugriffsschlüssel die <see cref="T:System.Web.HttpApplicationState" /> Auflistung.</summary>
+        <value>Ein Zeichenfolgenarray mit <see cref="T:System.Web.HttpApplicationState" /> Objektnamen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird ein Zeichenfolgenarray mit den Objektnamen in der Anwendung-Status-Auflistung.  
+  
+ [!code-csharp[Classic HttpApplicationState.AllKeys Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpApplicationState.AllKeys Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpApplicationState.AllKeys Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpApplicationState.AllKeys Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplicationState.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Objekte aus einer <see cref="T:System.Web.HttpApplicationState" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel entfernt alle <xref:System.Web.HttpApplicationState> Variablen aus der Auflistung.  
+  
+ [!code-csharp[Classic HttpApplicationState.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpApplicationState.Clear Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpApplicationState.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpApplicationState.Clear Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contents">
+      <MemberSignature Language="C#" Value="public System.Web.HttpApplicationState Contents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpApplicationState Contents" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplicationState.Contents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpApplicationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf das <see cref="T:System.Web.HttpApplicationState" />-Objekt ab.</summary>
+        <value>Ruft einen Verweis auf das <see cref="T:System.Web.HttpApplicationState" />-Objekt ab.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bietet Kompatibilität mit früheren Versionen von ASP.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Web.HttpApplicationState> -Objekt, das verwendet wird, um die zu verwendenden Objektnamen in der Anwendung Status Auflistung zugreifen.  
+  
+ [!code-csharp[Classic HttpApplicationState.Contents Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpApplicationState.Contents Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpApplicationState.Contents Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpApplicationState.Contents Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public override int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplicationState.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Objekte in der <see cref="T:System.Web.HttpApplicationState" />-Auflistung ab.</summary>
+        <value>Die Anzahl der Objekte in der Auflistung. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel führt nur dann, wenn die Anzahl der Objekte in der Auflistung fünf überschreitet.  
+  
+ [!code-csharp[Classic HttpApplicationState.Count Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpApplicationState.Count Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpApplicationState.Count Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpApplicationState.Count Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public object Get (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Get(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplicationState.Get(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Anwendungszustandsobjekts.</param>
+        <summary>Ruft ein <see cref="T:System.Web.HttpApplicationState" /> Objekt über einen numerischen Index.</summary>
+        <returns>Das Objekt verweist <paramref name="index" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel gibt das erste Objekt (Index = 0) aus der <xref:System.Web.HttpApplicationState> Auflistung der systeminternen <xref:System.Web.HttpContext.Application%2A> -Objekt und kopiert ihn in eine neue Objektvariable.  
+  
+ [!code-csharp[Classic HttpApplicationState.Get1 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpApplicationState.Get1 Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpApplicationState.Get1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpApplicationState.Get1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public object Get (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Get(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplicationState.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Objekts.</param>
+        <summary>Ruft ein <see cref="T:System.Web.HttpApplicationState" /> Objekt anhand des Namens.</summary>
+        <returns>Das Objekt verweist <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Beispiel gibt ein Objekt MyAppVar1 aus der <xref:System.Web.HttpApplicationState> Auflistung der systeminternen <xref:System.Web.HttpContext.Application%2A> -Objekt und kopiert ihn in eine neue Objektvariable.  
+  
+```vb  
+Dim MyObject As Object  
+MyObject = Application.Get("MyAppVar1")  
+```  
+  
+```csharp  
+Object MyObject;  
+MyObject = Application.Get("MyAppVar1");  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="public string GetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplicationState.GetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Anwendungszustandsobjekts.</param>
+        <summary>Ruft eine <see cref="T:System.Web.HttpApplicationState" /> Objektname nach Index.</summary>
+        <returns>Der Name, unter dem das Anwendungszustandsobjekt gespeichert wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel gibt die Namen aller Objekte in der Auflistung der Anwendung Status und die Namen in einem Zeichenfolgenarray gespeichert.  
+  
+ [!code-csharp[Classic HttpApplicationState.GetKey Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpApplicationState.GetKey Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpApplicationState.GetKey Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpApplicationState.GetKey Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplicationState.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der numerische Index des Objekts in der Auflistung.</param>
+        <summary>Ruft ein einzelnes <see cref="T:System.Web.HttpApplicationState" /> Objekt nach Index.</summary>
+        <value>Das Objekt verweist <paramref name="index" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel gibt das erste Objekt (Index = 0) aus der <xref:System.Web.HttpApplicationState> Auflistung der systeminternen <xref:System.Web.HttpContext.Application%2A> -Objekt und kopiert ihn in eine neue Objektvariable.  
+  
+ [!code-csharp[Classic HttpApplicationState.this1 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpApplicationState.this1 Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpApplicationState.this1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpApplicationState.this1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string name] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplicationState.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Objekts in der Auflistung.</param>
+        <summary>Ruft den Wert einer einzelnen <see cref="T:System.Web.HttpApplicationState" /> Objekt anhand des Namens.</summary>
+        <value>Das Objekt verweist <paramref name="name" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel gibt ein Objekt mit dem Namen `MyAppVar1` aus der <xref:System.Web.HttpApplicationState> Auflistung der systeminternen <xref:System.Web.HttpContext.Application%2A> -Objekt und kopiert ihn in eine neue Objektvariable.  
+  
+ [!code-csharp[Classic HttpApplicationState.this Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpApplicationState.this Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpApplicationState.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpApplicationState.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Lock">
+      <MemberSignature Language="C#" Value="public void Lock ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Lock() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplicationState.Lock" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sperrt den Zugriff auf eine <see cref="T:System.Web.HttpApplicationState" /> Variable zum Synchronisieren des Zugriffs auf zu erleichtern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplicationState> Klasse führt automatisch sperren und entsperren mit der <xref:System.Web.HttpApplicationState.AllKeys%2A> und <xref:System.Web.HttpApplicationState.Count%2A> Eigenschaften und die <xref:System.Web.HttpApplicationState.Add%2A>, <xref:System.Web.HttpApplicationState.Clear%2A>, <xref:System.Web.HttpApplicationState.Get%2A>, <xref:System.Web.HttpApplicationState.GetKey%2A>, <xref:System.Web.HttpApplicationState.Remove%2A>, <xref:System.Web.HttpApplicationState.RemoveAt%2A> und <xref:System.Web.HttpApplicationState.Set%2A> Methoden. Jedoch explizit mithilfe der <xref:System.Web.HttpApplicationState.Lock%2A> und <xref:System.Web.HttpApplicationState.UnLock%2A> Methoden, wenn Sie eine Reihe von Vorgängen haben können effizienter sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.HttpApplicationState.Lock%2A> Methode und <xref:System.Web.HttpApplicationState.UnLock%2A> Methode, um zu verhindern, dass die anderen Sitzungen den Wert der zwei Anwendungsvariablen erst ändern, nachdem die lokale Sitzung, die sie geändert wurde.  
+  
+ [!code-csharp[Classic HttpApplicationState.Lock Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpApplicationState.Lock Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpApplicationState.Lock Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpApplicationState.Lock Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplicationState.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Objekts aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt das benannte Objekt aus einer <see cref="T:System.Web.HttpApplicationState" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird eine Anwendungszustandsvariable aus der Auflistung entfernt.  
+  
+ [!code-csharp[Classic HttpApplicationState.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpApplicationState.Remove Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpApplicationState.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpApplicationState.Remove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAll">
+      <MemberSignature Language="C#" Value="public void RemoveAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplicationState.RemoveAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Objekte aus einer <see cref="T:System.Web.HttpApplicationState" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.HttpApplicationState.RemoveAll%2A>ist ein interner Aufruf von <xref:System.Web.HttpApplicationState.Clear%2A>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel entfernt alle <xref:System.Web.HttpApplicationState> Variablen aus der Auflistung.  
+  
+ [!code-csharp[Classic HttpApplicationState.RemoveAll Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpApplicationState.RemoveAll Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpApplicationState.RemoveAll Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpApplicationState.RemoveAll Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplicationState.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position des zu entfernenden Elements in der Auflistung.</param>
+        <summary>Entfernt ein <see cref="T:System.Web.HttpApplicationState" /> Objekt aus einer Auflistung nach Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zwei Anwendungsvariablen in die Auflistung einfügen, und klicken Sie dann verwenden die <xref:System.Web.HttpApplicationState.RemoveAt%2A> Methode, um die erste Variable in einem benutzerdefinierten entfernen <xref:System.Web.HttpApplicationState> Objekt.  
+  
+ [!code-aspx-csharp[HttpApplicationStateRemoveAt#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpApplicationStateRemoveAt/CS/httpapplicationstate_removeatcs.aspx#1)]
+ [!code-aspx-vb[HttpApplicationStateRemoveAt#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpApplicationStateRemoveAt/VB/httpapplicationstate_removeatvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplicationState.Set(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu aktualisierenden Objekts.</param>
+        <param name="value">Der aktualisierte Wert des Objekts.</param>
+        <summary>Aktualisiert den Wert eines Objekts in eine <see cref="T:System.Web.HttpApplicationState" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel aktualisiert den Wert einer vorhandenen Anwendung State-Variable.  
+  
+ [!code-csharp[Classic HttpApplicationState.Set Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpApplicationState.Set Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpApplicationState.Set Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpApplicationState.Set Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaticObjects">
+      <MemberSignature Language="C#" Value="public System.Web.HttpStaticObjectsCollection StaticObjects { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpStaticObjectsCollection StaticObjects" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpApplicationState.StaticObjects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpStaticObjectsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle Objekte, die deklariert, indem ein <see langword="&lt;object&gt;" /> Tag, der Bereich innerhalb der ASP.NET-Anwendung auf "Application" festgelegt ist.</summary>
+        <value>Eine Auflistung von Objekten auf der Seite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungsobjekte werden definiert, in der Datei "Global.asax" innerhalb der `<object runat="server" scope="Application"> </object>` Tags.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die allen Anwendungsobjekten in einer <xref:System.Web.HttpStaticObjectsCollection> Variable und eine Routine nur ausgeführt, wenn die Anzahl der Objekte größer als 0 ist.  
+  
+ [!code-csharp[Classic HttpApplicationState.StaticObjects Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpApplicationState.StaticObjects Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpApplicationState.StaticObjects Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpApplicationState.StaticObjects Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnLock">
+      <MemberSignature Language="C#" Value="public void UnLock ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnLock() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpApplicationState.UnLock" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entsperrt den Zugriff auf eine <see cref="T:System.Web.HttpApplicationState" /> Variable zum Synchronisieren des Zugriffs auf zu erleichtern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpApplicationState> Klasse führt automatisch sperren und entsperren mit der <xref:System.Web.HttpApplicationState.AllKeys%2A> und <xref:System.Web.HttpApplicationState.Count%2A> Eigenschaften und die <xref:System.Web.HttpApplicationState.Add%2A>, <xref:System.Web.HttpApplicationState.Clear%2A>, <xref:System.Web.HttpApplicationState.Get%2A>, <xref:System.Web.HttpApplicationState.GetKey%2A>, <xref:System.Web.HttpApplicationState.Remove%2A>, <xref:System.Web.HttpApplicationState.RemoveAt%2A> und <xref:System.Web.HttpApplicationState.Set%2A> Methoden. Jedoch explizit mithilfe der <xref:System.Web.HttpApplicationState.Lock%2A> und <xref:System.Web.HttpApplicationState.UnLock%2A> Methoden, wenn Sie eine Reihe von Vorgängen haben können effizienter sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.HttpApplicationState.Lock%2A> Methode und <xref:System.Web.HttpApplicationState.UnLock%2A> Methode, um zu verhindern, dass die anderen Sitzungen den Wert der zwei Anwendungsvariablen erst ändern, nachdem die lokale Sitzung, die sie geändert wurde.  
+  
+ [!code-csharp[Classic HttpApplicationState.Lock Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpApplicationState.Lock Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpApplicationState.Lock Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpApplicationState.Lock Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

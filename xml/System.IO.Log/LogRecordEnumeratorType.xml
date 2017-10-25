@@ -1,0 +1,73 @@
+<Type Name="LogRecordEnumeratorType" FullName="System.IO.Log.LogRecordEnumeratorType">
+  <TypeSignature Language="C#" Value="public enum LogRecordEnumeratorType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LogRecordEnumeratorType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.LogRecordEnumeratorType" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Art an, in der Datensätze von einer <see cref="T:System.IO.Log.LogRecordSequence" /> gelesen werden sollen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird für die <xref:System.IO.Log.IRecordSequence.ReadLogRecords%2A>-Methode zum Festlegen der Reihenfolge, in der die Datensätze gelesen werden sollen, bereitgestellt. Jeder Wert entspricht einer der Metadaten-Sequenznummern, die in einem Protokolldatensatz gespeichert sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="Next" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Log.LogRecordEnumeratorType Next = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Log.LogRecordEnumeratorType.Next" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.LogRecordEnumeratorType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Datensätze sollen in der Reihenfolge gelesen werden, in der sie an die Sequenz angefügt wurden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Previous">
+      <MemberSignature Language="C#" Value="Previous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Log.LogRecordEnumeratorType Previous = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Log.LogRecordEnumeratorType.Previous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.LogRecordEnumeratorType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Datensätze sollen in der von der vorherigen Sequenznummer des Protokolldatensatzes angegebenen Reihenfolge gelesen werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="User" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Log.LogRecordEnumeratorType User = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Log.LogRecordEnumeratorType.User" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.LogRecordEnumeratorType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Datensätze sollen in der von der Benutzersequenznummer des Protokolldatensatzes angegebenen Reihenfolge gelesen werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

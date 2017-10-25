@@ -1,0 +1,82 @@
+<Type Name="UserPreferenceChangingEventArgs" FullName="Microsoft.Win32.UserPreferenceChangingEventArgs">
+  <TypeSignature Language="C#" Value="public class UserPreferenceChangingEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UserPreferenceChangingEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.UserPreferenceChangingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:Microsoft.Win32.SystemEvents.UserPreferenceChanging" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> Ereignis tritt auf, wenn eine Änderung an einer benutzereinstellung übernommen werden sollen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:Microsoft.Win32.UserPreferenceChangingEventArgs> Typ zum Überwachen der <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> Ereignis. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+ [!code-cpp[SystemEvents#1](~/samples/snippets/cpp/VS_Snippets_Winforms/SystemEvents/cpp/SystemEvents.cpp#1)]
+ [!code-csharp[SystemEvents#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemEvents/CS/SystemEvents.cs#1)]
+ [!code-vb[SystemEvents#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemEvents/VB/SystemEvents.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserPreferenceChangingEventArgs (Microsoft.Win32.UserPreferenceCategory category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Win32.UserPreferenceCategory category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.UserPreferenceChangingEventArgs.#ctor(Microsoft.Win32.UserPreferenceCategory)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="category" Type="Microsoft.Win32.UserPreferenceCategory" />
+      </Parameters>
+      <Docs>
+        <param name="category">Eines der <see cref="T:Microsoft.Win32.UserPreferenceCategory" /> Werte, die die Kategorie des Benutzer-Einstellung angeben, die geändert wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.Win32.UserPreferenceChangingEventArgs" /> -Klasse unter Verwendung des angegebenen Benutzerbezeichners Voreinstellung Kategorie.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.UserPreferenceCategory Category { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Win32.UserPreferenceCategory Category" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.UserPreferenceChangingEventArgs.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.UserPreferenceCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kategorie der benutzereinstellungen, die geändert wird.</summary>
+        <value>Eines der <see cref="T:Microsoft.Win32.UserPreferenceCategory" /> Werte, die die Kategorie der benutzereinstellungen angeben, die geändert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:Microsoft.Win32.UserPreferenceChangingEventArgs> Typ zum Überwachen der <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> Ereignis. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+ [!code-cpp[SystemEvents#1](~/samples/snippets/cpp/VS_Snippets_Winforms/SystemEvents/cpp/SystemEvents.cpp#1)]
+ [!code-csharp[SystemEvents#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemEvents/CS/SystemEvents.cs#1)]
+ [!code-vb[SystemEvents#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemEvents/VB/SystemEvents.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

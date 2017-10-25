@@ -1,0 +1,30 @@
+<Type Name="OnChangedCallback" FullName="System.Runtime.Caching.OnChangedCallback">
+  <TypeSignature Language="C#" Value="public delegate void OnChangedCallback(object state);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OnChangedCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.OnChangedCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="state" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="state">Der Status des abhängigen Objekts an, die geändert wurde.</param>
+    <summary>Definiert einen Verweis auf eine Methode, die Änderungen an überwachten Elementen behandelt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.OnChangedCallback> Delegat wird durch eine änderungsüberwachung verwendet, für eine Cacheimplementierung angeben, dass eine Änderung in einem Objekt aufgetreten ist, deren Inhalt zwischengespeichert werden. Die Aufgabe von der Implementierung einer von der <xref:System.Runtime.Caching.ChangeMonitor> ist zum Überwachen von Änderungen an Objekten, die zwischengespeichert werden. Beispielsweise muss, wenn der Inhalt einer Datei in einen Eintrag im Cache enthalten sind und die Datei aktualisiert wird, seine zugehörige Cacheeintrag auch geändert werden. In einer typischen Cacheimplementierung ein abgeleiteter <xref:System.Runtime.Caching.ChangeMonitor> -Instanz verwendet eine <xref:System.Runtime.Caching.OnChangedCallback> Delegat, der den Cache zu einer Änderung zu benachrichtigen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

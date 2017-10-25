@@ -1,0 +1,204 @@
+<Type Name="AggregateExportProvider" FullName="System.ComponentModel.Composition.Hosting.AggregateExportProvider">
+  <TypeSignature Language="C#" Value="public class AggregateExportProvider : System.ComponentModel.Composition.Hosting.ExportProvider, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AggregateExportProvider extends System.ComponentModel.Composition.Hosting.ExportProvider implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Hosting.AggregateExportProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Composition.Hosting.ExportProvider</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ruft ab, durch eine Auflistung von Exporten <see cref="T:System.ComponentModel.Composition.Hosting.ExportProvider" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AggregateExportProvider (System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Hosting.ExportProvider&gt; providers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Hosting.ExportProvider&gt; providers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.AggregateExportProvider.#ctor(System.Collections.Generic.IEnumerable{System.ComponentModel.Composition.Hosting.ExportProvider})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providers" Type="System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Hosting.ExportProvider&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="providers">Priorisierte Liste von Exportanbietern. Die Anbieter sind in der Reihenfolge angezeigt, in denen sie bereitgestellt werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Composition.Hosting.AggregateExportProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Composition.Hosting.AggregateExportProvider> -Klasse wendet der Anbieter in der Reihenfolge, in der sie angegeben wurden, beim Aufrufen von <xref:System.ComponentModel.Composition.Hosting.ExportProvider.GetExports%2A>.  
+  
+ Die <xref:System.ComponentModel.Composition.Hosting.AggregateExportProvider> übernimmt den Besitz der angegebenen Anbieter. Das heißt, wird versucht, von jedem Dienstanbieter zu verwerfen, wenn er verworfen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Mindestens ein Element von <paramref name="providers" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AggregateExportProvider (params System.ComponentModel.Composition.Hosting.ExportProvider[] providers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Composition.Hosting.ExportProvider[] providers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.AggregateExportProvider.#ctor(System.ComponentModel.Composition.Hosting.ExportProvider[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providers" Type="System.ComponentModel.Composition.Hosting.ExportProvider[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="providers">Priorisierte Liste von Exportanbietern.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Composition.Hosting.AggregateExportProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Composition.Hosting.AggregateExportProvider> -Klasse wendet der Anbieter in der Reihenfolge, in der sie angegeben wurden, beim Aufrufen von <xref:System.ComponentModel.Composition.Hosting.ExportProvider.GetExports%2A>.  
+  
+ Die <xref:System.ComponentModel.Composition.Hosting.AggregateExportProvider> übernimmt den Besitz der angegebenen Anbieter.  Das heißt, wird versucht, von jedem Dienstanbieter zu verwerfen, wenn er verworfen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.AggregateExportProvider.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.ComponentModel.Composition.Hosting.AggregateExportProvider" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie `Dispose` auf, wenn Sie <xref:System.ComponentModel.Composition.Hosting.AggregateExportProvider> nicht mehr benötigen. Die `Dispose`-Methode bewirkt, dass <xref:System.ComponentModel.Composition.Hosting.AggregateExportProvider> nicht mehr verwendet werden kann. Nach dem Aufruf `Dispose`, müssen Sie alle Verweise auf Freigeben der <xref:System.ComponentModel.Composition.Hosting.AggregateExportProvider> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.ComponentModel.Composition.Hosting.AggregateExportProvider> belegt wurde.  
+  
+ Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer `Dispose` auf, bevor Sie den letzten Verweis auf das <xref:System.ComponentModel.Composition.Hosting.AggregateExportProvider> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.ComponentModel.Composition.Hosting.AggregateExportProvider>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.AggregateExportProvider.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von der <see cref="T:System.ComponentModel.Composition.Hosting.AggregateExportProvider" />-Klasse verwendeten nicht verwalteten Ressourcen frei und gibt (optional) auch die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportsCore">
+      <MemberSignature Language="C#" Value="protected override System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt; GetExportsCore (System.ComponentModel.Composition.Primitives.ImportDefinition definition, System.ComponentModel.Composition.Hosting.AtomicComposition atomicComposition);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.Export&gt; GetExportsCore(class System.ComponentModel.Composition.Primitives.ImportDefinition definition, class System.ComponentModel.Composition.Hosting.AtomicComposition atomicComposition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.AggregateExportProvider.GetExportsCore(System.ComponentModel.Composition.Primitives.ImportDefinition,System.ComponentModel.Composition.Hosting.AtomicComposition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definition" Type="System.ComponentModel.Composition.Primitives.ImportDefinition" />
+        <Parameter Name="atomicComposition" Type="System.ComponentModel.Composition.Hosting.AtomicComposition" />
+      </Parameters>
+      <Docs>
+        <param name="definition">Die Bedingungen für die <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> Objekte zurückgegeben werden.</param>
+        <param name="atomicComposition">Der Transaktionscontainer für die Komposition.</param>
+        <summary>Ruft alle Exporte, die mit die Bedingungen für den angegebenen Import übereinstimmen.</summary>
+        <returns>Eine Auflistung, die alle Exporte enthält, die mit die angegebene Bedingung übereinstimmen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementierer Kardinalität bezogene Konflikte sollten nicht als Fehler behandeln und Auslösen von Ausnahmen in diesen Fällen nicht erwartet.  
+  
+ Z. B. wenn der Import genau einem Export anfordert, und der Anbieter keine übereinstimmenden Exporte oder mehr als eine hat, die-Methode zurückgeben sollte eine leere <xref:System.Collections.Generic.IEnumerable%601> Auflistung von <xref:System.ComponentModel.Composition.Primitives.Export>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ComponentModel.Composition.Hosting.ExportProvider&gt; Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.ComponentModel.Composition.Hosting.ExportProvider&gt; Providers" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.AggregateExportProvider.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ComponentModel.Composition.Hosting.ExportProvider&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung, die Anbieter enthält, die die <see cref="T:System.ComponentModel.Composition.Hosting.AggregateExportProvider" /> Aggregate-Objekt.</summary>
+        <value>Eine Auflistung von der <see cref="T:System.ComponentModel.Composition.Hosting.ExportProvider" /> Objekte, die <see cref="T:System.ComponentModel.Composition.Hosting.AggregateExportProvider" /> Aggregate.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Composition.Hosting.AggregateExportProvider" /> Objekt wurde verworfen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

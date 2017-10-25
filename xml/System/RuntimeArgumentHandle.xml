@@ -1,0 +1,39 @@
+<Type Name="RuntimeArgumentHandle" FullName="System.RuntimeArgumentHandle">
+  <TypeSignature Language="C#" Value="public struct RuntimeArgumentHandle" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit RuntimeArgumentHandle extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.RuntimeArgumentHandle" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verweist auf eine Argumentliste mit variabler Länge.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Struktur hat keine Member außer denen, die sie erbt die <xref:System.Object> und <xref:System.ValueType> Klassen. Es ist nur für die um Funktionen der C/C++-Programmiersprache zu unterstützen, die eine Variable von Parametern Anzahl vorhanden. Eine Instanz der Struktur wird zum Übergeben der <xref:System.ArgIterator> Konstruktor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

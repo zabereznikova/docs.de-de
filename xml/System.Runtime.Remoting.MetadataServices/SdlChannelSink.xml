@@ -1,0 +1,213 @@
+<Type Name="SdlChannelSink" FullName="System.Runtime.Remoting.MetadataServices.SdlChannelSink">
+  <TypeSignature Language="C#" Value="public class SdlChannelSink : System.Runtime.Remoting.Channels.IServerChannelSink" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SdlChannelSink extends System.Object implements class System.Runtime.Remoting.Channels.IChannelSinkBase, class System.Runtime.Remoting.Channels.IServerChannelSink" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.MetadataServices.SdlChannelSink" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IServerChannelSink</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Implementierung für einen Server Kanal-Ereignissenke, die Web Services Description Language (WSDL) auf dem Server dynamisch generiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.MetadataServices.SdlChannelSink> wird verwendet, um WSDL in Situationen zu erstellen, in dem die URL mit der Zeichenfolge endet "? Wsdl".  
+  
+ Die folgende Tabelle zeigt den Kanal Konfigurationseigenschaften, die für diesen Kanalsenke angegeben werden können. Die ersten beiden Eigenschaften kombinieren, um zu steuern, die WSDL-Veröffentlichung von Objekten, die von der Anwendungsdomäne veröffentlicht. Wenn `false` angegeben wird für die erste Eigenschaft kein WSDL zurückgegeben, unabhängig von der zweiten Eigenschaft. (Der Standardwert ist `true`.) Andernfalls steuert die zweite Eigenschaft, ob die globale Metadatenobjekt URI zulässig ist, reagiert. (Der Standardwert ist `false`.)  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|`metadataEnabled`|Ein boolescher Wert, der angibt, ob Anforderungen berücksichtigen, die am Ende "? Wsdl", wenn diese Senke in der Senkenkette Kanal ist. Die Standardeinstellung ist `true`. Bei dem Wert `false` löst die Senke immer dann eine Ausnahme aus, wenn für ein Objekt in der Anwendungsdomäne Metadaten angefordert werden.<br /><br /> Diese Eigenschaft wird nur von Version&#160;1.1 von .NET&#160;Framework für die folgenden Plattformen unterstützt: Windows&#160;98, Windows NT&#160;4.0, Windows&#160;Millenium&#160;Edition, Windows&#160;2000, Windows&#160;XP Home&#160;Edition, Windows&#160;XP Professional und die Windows Server&#160;2003-Familie.|  
+|`remoteApplicationMetadataEnabled`|Ein boolescher Wert, der angibt, ob die Anforderungen für das Objekt URI berücksichtigen "' RemoteApplicationMetadata '? Wsdl", womit WSDL, die alle Objekte beschrieben werden, die veröffentlicht werden von der Anwendungsdomäne. Wenn `false`, und klicken Sie dann jede Anforderung von "RemoteApplicationMetadata.rem" eine Ausnahme auslöst. Alle anderen "? Wsdl" Anforderungen bei URIs werden berücksichtigt. Bei dem Wert `true` wird die Anforderung globaler Metadaten berücksichtigt. Die Standardeinstellung ist `false`.<br /><br /> Diese Eigenschaft wird nur von Version&#160;1.1 von .NET&#160;Framework für die folgenden Plattformen unterstützt: Windows&#160;98, Windows NT&#160;4.0, Windows&#160;Millenium&#160;Edition, Windows&#160;2000, Windows&#160;XP Home&#160;Edition, Windows&#160;XP Professional und die Windows Server&#160;2003-Familie.|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdlChannelSink (System.Runtime.Remoting.Channels.IChannelReceiver receiver, System.Runtime.Remoting.Channels.IServerChannelSink nextSink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Remoting.Channels.IChannelReceiver receiver, class System.Runtime.Remoting.Channels.IServerChannelSink nextSink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.SdlChannelSink.#ctor(System.Runtime.Remoting.Channels.IChannelReceiver,System.Runtime.Remoting.Channels.IServerChannelSink)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="receiver" Type="System.Runtime.Remoting.Channels.IChannelReceiver" />
+        <Parameter Name="nextSink" Type="System.Runtime.Remoting.Channels.IServerChannelSink" />
+      </Parameters>
+      <Docs>
+        <param name="receiver">Gibt an, den Kanal, der die Nachrichten, die durch die neue Instanz der serialisiert erhält <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSink" />.</param>
+        <param name="nextSink">Die nächste Senke in der Senkenkette.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSink" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncProcessResponse">
+      <MemberSignature Language="C#" Value="public void AsyncProcessResponse (System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, System.Runtime.Remoting.Messaging.IMessage msg, System.Runtime.Remoting.Channels.ITransportHeaders headers, System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AsyncProcessResponse(class System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, class System.Runtime.Remoting.Messaging.IMessage msg, class System.Runtime.Remoting.Channels.ITransportHeaders headers, class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.SdlChannelSink.AsyncProcessResponse(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sinkStack" Type="System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="headers" Type="System.Runtime.Remoting.Channels.ITransportHeaders" />
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="sinkStack">Ein Stapel von senken, die zurück an den Server-Transport-Ereignissenke führen.</param>
+        <param name="state">Informationen der aktuellen Senke zugeordnet, auf der Anforderungsseite generiert und auf der Antwortseite benötigt.</param>
+        <param name="msg">Die Antwortnachricht.</param>
+        <param name="headers">Die Header der Antwortnachricht Überschrift an den Client hinzu.</param>
+        <param name="stream">Die Überschrift Stream zurück an die Transportsenke.</param>
+        <summary>Fordert die Verarbeitung von der aktuellen Senke der Antwort aus dem Aufruf einer Methode, der asynchron gesendet wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResponseStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetResponseStream (System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, System.Runtime.Remoting.Messaging.IMessage msg, System.Runtime.Remoting.Channels.ITransportHeaders headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream GetResponseStream(class System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, class System.Runtime.Remoting.Messaging.IMessage msg, class System.Runtime.Remoting.Channels.ITransportHeaders headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.SdlChannelSink.GetResponseStream(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sinkStack" Type="System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="headers" Type="System.Runtime.Remoting.Channels.ITransportHeaders" />
+      </Parameters>
+      <Docs>
+        <param name="sinkStack">Ein Stapel von senken, die zurück an den Server-Transport-Ereignissenke führen.</param>
+        <param name="state">Informationen der aktuellen Senke zugeordnet, auf der Anforderungsseite generiert und auf der Antwortseite benötigt.</param>
+        <param name="msg">Die Antwortnachricht zu serialisieren.</param>
+        <param name="headers">Die Header in den Ausgabestream für Antworten an den Client aufgenommen werden sollen.</param>
+        <summary>Gibt die <see cref="T:System.IO.Stream" /> in dem die angegebene Antwortnachricht serialisiert werden.</summary>
+        <returns>Die <see cref="T:System.IO.Stream" /> in dem die angegebene Antwortnachricht serialisiert werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Methode wird aufgerufen, wenn ein Antwortstream erstellt werden muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextChannelSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.IServerChannelSink NextChannelSink { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Channels.IServerChannelSink NextChannelSink" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.MetadataServices.SdlChannelSink.NextChannelSink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.IServerChannelSink</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das nächste <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" /> in der Senkenkette.</summary>
+        <value>Das nächste <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" /> in der Senkenkette.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessMessage">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.ServerProcessing ProcessMessage (System.Runtime.Remoting.Channels.IServerChannelSinkStack sinkStack, System.Runtime.Remoting.Messaging.IMessage requestMsg, System.Runtime.Remoting.Channels.ITransportHeaders requestHeaders, System.IO.Stream requestStream, out System.Runtime.Remoting.Messaging.IMessage responseMsg, out System.Runtime.Remoting.Channels.ITransportHeaders responseHeaders, out System.IO.Stream responseStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Runtime.Remoting.Channels.ServerProcessing ProcessMessage(class System.Runtime.Remoting.Channels.IServerChannelSinkStack sinkStack, class System.Runtime.Remoting.Messaging.IMessage requestMsg, class System.Runtime.Remoting.Channels.ITransportHeaders requestHeaders, class System.IO.Stream requestStream, [out] class System.Runtime.Remoting.Messaging.IMessage&amp; responseMsg, [out] class System.Runtime.Remoting.Channels.ITransportHeaders&amp; responseHeaders, [out] class System.IO.Stream&amp; responseStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.SdlChannelSink.ProcessMessage(System.Runtime.Remoting.Channels.IServerChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream,System.Runtime.Remoting.Messaging.IMessage@,System.Runtime.Remoting.Channels.ITransportHeaders@,System.IO.Stream@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.ServerProcessing</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sinkStack" Type="System.Runtime.Remoting.Channels.IServerChannelSinkStack" />
+        <Parameter Name="requestMsg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="requestHeaders" Type="System.Runtime.Remoting.Channels.ITransportHeaders" />
+        <Parameter Name="requestStream" Type="System.IO.Stream" />
+        <Parameter Name="responseMsg" Type="System.Runtime.Remoting.Messaging.IMessage&amp;" RefType="out" />
+        <Parameter Name="responseHeaders" Type="System.Runtime.Remoting.Channels.ITransportHeaders&amp;" RefType="out" />
+        <Parameter Name="responseStream" Type="System.IO.Stream&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="sinkStack">Ein Stapel von senken, die die aktuelle Senke aufgerufen.</param>
+        <param name="requestMsg">Die Meldung, die die Anforderung enthält.</param>
+        <param name="requestHeaders">Die Header, die aus der eingehenden Nachricht vom Client abgerufen werden.</param>
+        <param name="requestStream">Der Stream, der verarbeitet und an die Deserialisierungssenke übergeben werden muss.</param>
+        <param name="responseMsg">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> , die die Antwortnachricht enthält. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="responseHeaders">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.Runtime.Remoting.Channels.ITransportHeaders" /> , enthält die-Header hinzufügen, um die Überschrift der Nachricht an den Client zurückgegeben. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="responseStream">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.IO.Stream" /> also Spaltenüberschrift, um die Transportsenke. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Anforderungen der Nachrichtenverarbeitung von der aktuellen Senke.</summary>
+        <returns>Ein <see cref="T:System.Runtime.Remoting.Channels.ServerProcessing" /> Statuswert, der enthält Informationen wie die Nachricht verarbeitet wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Proxy-Auftrag ist einen Methodenaufruf zu konvertieren, der darauf in einer Message-Objekt aufgerufen wird. Die Message-Objekt, das implementiert die <xref:System.Runtime.Remoting.Messaging.IMessage> Schnittstelle, wird vom Client an den Server übergeben, durch den Aufruf <xref:System.Runtime.Remoting.Channels.IServerChannelSink.ProcessMessage%2A> auf Senke Nachrichtenobjekte. Nachricht senken verkettet werden, was bedeutet, dass jede Nachricht Senke verantwortlich für das Aufrufen ist <xref:System.Runtime.Remoting.Channels.IServerChannelSink.ProcessMessage%2A> auf die nächste Nachricht Senke, nachdem er seine Arbeit ausgeführt wurde. Eine Synchronisierung zugehörigen Nachricht Senke möglicherweise z. B. eine Sperre abgerufen oder freigegeben und an die Senke downstreamverarbeitung von Nachrichten delegiert werden.  
+  
+ Wenn ruft Kanal Formatierungssenke besteht eine Meldung, die gesendet über den Kanal aufgerufen werden muss <xref:System.Runtime.Remoting.Messaging.IMessageSink.SyncProcessMessage%2A>, die Nachricht als Parameter übergeben. Die Formatierungssenke erstellt anschließend die Transport-Header-Array und ruft <xref:System.Runtime.Remoting.Channels.IClientChannelSink.GetRequestStream%2A> auf Formatierungssenke besteht. Dieser Aufruf wird entlang der Senkenkette weitergeleitet, und jede Senke kann einen Anforderungsstream erstellen, der wieder an die Formatierungssenken übergeben wird. Rufen Sie anschließend zurück, die Nachricht serialisiert wird, <xref:System.Runtime.Remoting.Channels.IClientChannelSink.ProcessMessage%2A> für die erste Kette in der Senkenkette aufgerufen wird und die Nachricht an den Kanal senken übergeben wird.  
+  
+ Nachdem der Kanal senken zum Abrufen der Meldung, sie können Daten in den Datenstrom schreibt, des Header-Arrays Header hinzu, und sich selbst auf dem Stapel hinzufügen, bevor der Aufruf an den nächsten Empfänger weitergeleitet. Erreicht der Aufruf die Transportsenke am Ende der Kette, wird die Transportsenke sendet die Header und serialisierte Meldung über den Kanal an den Server, auf dem der Prozess umgekehrt wird.  
+  
+ Erreicht die Nachricht auf die Serverseite, ruft die Header ab, die Transportsenke und serialisierte Meldung aus dem Stream und diese über der Senkenkette weitergeleitet, bis auf der Formatierungssenke besteht. Formatierungssenke besteht anschließend deserialisiert die Meldung und leitet sie an, in dem die Nachricht in einem Methodenaufruf aktiviert ist und das Serverobjekt wird aufgerufen,-Remoting weiter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.MetadataServices.SdlChannelSink.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Collections.IDictionary" /> von Eigenschaften für den aktuellen Kanal Senke.</summary>
+        <value>Ein <see cref="T:System.Collections.IDictionary" /> von Eigenschaften für den aktuellen Kanal Senke.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Weitere Informationen finden Sie unter [&#91;\< Topic://cpconchannelformatterconfigurationproperties > &#93; ](http://msdn.microsoft.com/en-us/226ecf74-ebbd-4ea0-a701-dcf4441deefe).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

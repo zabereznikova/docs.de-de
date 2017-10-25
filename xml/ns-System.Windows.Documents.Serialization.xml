@@ -1,0 +1,15 @@
+<Namespace Name="System.Windows.Documents.Serialization">
+  <Docs>
+    <summary>Stellt Typen bereit, die die Erstellung und Verwendung von Plug-In-Serialisierungsprogrammen unterstützen, auf die zur Laufzeit zugegriffen werden kann und die Dokumente in verschiedenen Datenformaten lesen und schreiben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Plug-In-Serialisierungsprogrammen können nur mit Anwendungen mit voller Vertrauenswürdigkeit verwendet werden.  
+  
+ Wenn von der Anwendung aufgerufen wird, wird das Plug-In-Serialisierungsprogramm im selben Thread wie die Anwendung ausgeführt wird und kann nur Zugriff auf die Elemente, die im Thread Anwendung erstellt wurden.  Beim Entwerfen eines benutzerdefinierten Plug-In-Serialisierungsprogramms ist es wichtig, alle möglichen Fehlerzustände ordnungsgemäß behandelt. Ein Fehler in Plug-In-Serialisierungsprogramms kann ein Anwendungsfehler verursachen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

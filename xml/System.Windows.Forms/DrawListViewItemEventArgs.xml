@@ -1,0 +1,410 @@
+<Type Name="DrawListViewItemEventArgs" FullName="System.Windows.Forms.DrawListViewItemEventArgs">
+  <TypeSignature Language="C#" Value="public class DrawListViewItemEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DrawListViewItemEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DrawListViewItemEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.ListView.DrawItem" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> -Ereignis können Sie die Darstellung anpassen einer <xref:System.Windows.Forms.ListView> -Steuerelement mit dem Ownerdrawing.  
+  
+ Die <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> Ereignis wird durch eine <xref:System.Windows.Forms.ListView> steuern, wann die <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `true`. Die <xref:System.Windows.Forms.DrawListViewItemEventArgs> übergeben an das Ereignis Handler enthält Informationen zu den <xref:System.Windows.Forms.ListViewItem> gezeichnet werden soll und bietet auch Methoden, mit denen Sie das Zeichnen des Elements helfen.  
+  
+ Verwenden der <xref:System.Windows.Forms.DrawListViewItemEventArgs.State%2A> oder <xref:System.Windows.Forms.DrawListViewItemEventArgs.Item%2A> Eigenschaften zum Abrufen von Informationen über das Element gezeichnet werden soll. Verwenden der <xref:System.Windows.Forms.DrawListViewItemEventArgs.ItemIndex%2A?displayProperty=nameWithType> Eigenschaft, um den Index des Elements abzurufen.  
+  
+ Verwenden der <xref:System.Windows.Forms.DrawListViewItemEventArgs.Graphics%2A> Eigenschaft, um die eigentliche Zeichenvorgang innerhalb des Bereichs, die gemäß der <xref:System.Windows.Forms.DrawListViewItemEventArgs.Bounds%2A> Eigenschaft. Zum Zeichnen von Standard <xref:System.Windows.Forms.ListView> Elemente, die Anpassung nicht benötigen, verwenden die <xref:System.Windows.Forms.DrawListViewItemEventArgs.DrawBackground%2A>, <xref:System.Windows.Forms.DrawListViewItemEventArgs.DrawText%2A>, und <xref:System.Windows.Forms.DrawListViewItemEventArgs.DrawFocusRectangle%2A> Methoden.  
+  
+> [!NOTE]
+>  Zur Vermeidung von Problemen Flackern von Grafiken beim Ownerdrawing der <xref:System.Windows.Forms.ListView> steuern und Festlegen der <xref:System.Windows.Forms.ListView.DoubleBuffered%2A> Eigenschaft `true`. Diese Funktion ist nur unter Windows XP und Windows Server 2003-Produktfamilie verfügbar, wenn Ihre Anwendung ruft die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie benutzerdefinierte Zeichnung für Bereitstellen einer <xref:System.Windows.Forms.ListView> Steuerelement. Die <xref:System.Windows.Forms.ListView> im Beispiel-Steuerelement einem Farbverlaufshintergrund. Unterelemente mit negativen Werten haben einen roten Vordergrund und schwarzem Hintergrund.  
+  
+ Ein Handler für das <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> Ereignis zeichnet den Hintergrund für das gesamte Element. Ein Handler für das <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> Ereignis zeichnet die Textwerte sowie Text und Hintergrund für Unterelemente, die negative Werte haben. Ein Handler für das <xref:System.Windows.Forms.ListView.DrawColumnHeader> Ereignis zeichnet jede Spaltenüberschrift.  
+  
+ Ein <xref:System.Windows.Forms.ContextMenu> Komponente bietet eine Möglichkeit, zwischen der Ansicht und der Listenansicht zu wechseln. In der Listenansicht, nur die <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> Ereignis ausgelöst wird. In diesem Fall Text und Hintergrund werden sowohl in gezeichnet der <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> -Ereignishandler.  
+  
+ [!code-csharp[ListViewOwnerDraw#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#1)]
+ [!code-vb[ListViewOwnerDraw#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DrawListViewItemEventArgs (System.Drawing.Graphics graphics, System.Windows.Forms.ListViewItem item, System.Drawing.Rectangle bounds, int itemIndex, System.Windows.Forms.ListViewItemStates state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics graphics, class System.Windows.Forms.ListViewItem item, valuetype System.Drawing.Rectangle bounds, int32 itemIndex, valuetype System.Windows.Forms.ListViewItemStates state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawListViewItemEventArgs.#ctor(System.Drawing.Graphics,System.Windows.Forms.ListViewItem,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.ListViewItemStates)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="item" Type="System.Windows.Forms.ListViewItem" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="itemIndex" Type="System.Int32" />
+        <Parameter Name="state" Type="System.Windows.Forms.ListViewItemStates" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> Oberfläche, auf dem gezeichnet werden soll.</param>
+        <param name="item">Das zu zeichnende <see cref="T:System.Windows.Forms.ListViewItem" />.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> innerhalb der gezeichnet werden soll.</param>
+        <param name="itemIndex">Der Index des der <see cref="T:System.Windows.Forms.ListViewItem" /> innerhalb der <see cref="P:System.Windows.Forms.ListView.Items" /> Auflistung.</param>
+        <param name="state">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.ListViewItemStates" /> , der angibt, des aktuellen Status der Werte der <see cref="T:System.Windows.Forms.ListViewItem" /> gezeichnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DrawListViewItemEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewItemEventArgs.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe und Position von der <see cref="T:System.Windows.Forms.ListViewItem" /> gezeichnet werden soll.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen des darstellt die <see cref="T:System.Windows.Forms.ListViewItem" /> gezeichnet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Von dieser Eigenschaft angegebene Speicherort ist relativ zu der oberen linken Ecke des der <xref:System.Windows.Forms.ListView> Steuerelement.  
+  
+ Die Begrenzung für bestimmte Teile des abzurufenden eine <xref:System.Windows.Forms.ListViewItem>, verwenden Sie die <xref:System.Windows.Forms.ListViewItem.GetBounds%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DrawListViewItemEventArgs.Bounds%2A> Eigenschaft in einer Anwendung, die benutzerdefinierte Zeichnung für bietet ein <xref:System.Windows.Forms.ListView> Steuerelement. Im Beispiel einen Handler für das <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> Ereignis zeichnet den Hintergrund für das gesamte Element. In allen Ansichten mit Ausnahme der Detailansicht zeichnet dieser Handler auch den Text im Vordergrund. In der Detailansicht wird der Text im Vordergrund gezeichnet, der <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> Ereignis.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.DrawListViewItemEventArgs> Verweis Übersichtsthema.  
+  
+ [!code-csharp[ListViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#3)]
+ [!code-vb[ListViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBackground">
+      <MemberSignature Language="C#" Value="public void DrawBackground ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawBackground() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawListViewItemEventArgs.DrawBackground" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeichnet den Hintergrund der <see cref="T:System.Windows.Forms.ListViewItem" /> mit seiner aktuellen Hintergrundfarbe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode einen standardmäßigen Hintergrund gezeichnet werden soll, die den aktuellen Wert des verwendet die <xref:System.Windows.Forms.ListViewItem.BackColor%2A?displayProperty=nameWithType> Eigenschaft. Der Hintergrund gezeichnet wird, um den vom angegebenen Bereich zu füllen die <xref:System.Windows.Forms.DrawListViewItemEventArgs.Bounds%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawDefault">
+      <MemberSignature Language="C#" Value="public bool DrawDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DrawDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewItemEventArgs.DrawDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, eine Eigenschaft, der angibt, ob die <see cref="T:System.Windows.Forms.ListView" /> Steuerelement verwendet den Standardnamen für die <see cref="T:System.Windows.Forms.ListViewItem" />.</summary>
+        <value>
+          <see langword="true" />Wenn das System das Element gezeichnet; <see langword="false" /> , wenn der Ereignishandler das Element zeichnet. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie diese Eigenschaft auf `true` Wenn das Element keine benutzerdefinierte Zeichnung erforderlich. Dies ist hilfreich, wenn Sie nur bestimmte Elemente innerhalb des Steuerelements, wie z. B. die ausgewählten Elemente anpassen müssen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListView> mit dem Namen `ListView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#471](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#471)]
+ [!code-vb[System.Windows.Forms.EventExamples#471](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#471)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawFocusRectangle">
+      <MemberSignature Language="C#" Value="public void DrawFocusRectangle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawFocusRectangle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawListViewItemEventArgs.DrawFocusRectangle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeichnet ein Fokusrechteck für die <see cref="T:System.Windows.Forms.ListViewItem" /> , wenn es den Fokus besitzt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um ein standard Fokusrechteck um das Element zu zeichnen. Fokusrechtecks normalerweise innerhalb des Bereichs von angegeben gezeichnet wird die <xref:System.Windows.Forms.DrawListViewItemEventArgs.Bounds%2A> Eigenschaft. Wenn das Steuerelement in der Detailansicht ist und die <xref:System.Windows.Forms.ListView.FullRowSelect%2A?displayProperty=nameWithType> Eigenschaftswert ist `false`, allerdings Fokusrechtecks für die erste Spalte des Elements um den Standardbereich für Text gezeichnet wird.  
+  
+ Das Fokusrechteck gezeichnet wird, nur, wenn das Element den Fokus besitzt, damit Sie nicht benötigen, um des Fokuszustands des Elements zu überprüfen, bevor Sie diese Methode aufrufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DrawListViewItemEventArgs.DrawFocusRectangle%2A> Methode in einer Anwendung, die benutzerdefinierte Zeichnung für bietet ein <xref:System.Windows.Forms.ListView> Steuerelement. Im Beispiel einen Handler für das <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> Ereignis zeichnet den Hintergrund für das gesamte Element. In allen Ansichten mit Ausnahme der Detailansicht zeichnet dieser Handler auch den Text im Vordergrund. In der Detailansicht wird der Text im Vordergrund gezeichnet, der <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> Ereignis.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.DrawListViewItemEventArgs> Verweis Übersichtsthema.  
+  
+ [!code-csharp[ListViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#3)]
+ [!code-vb[ListViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public void DrawText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawListViewItemEventArgs.DrawText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeichnet den Text, der die <see cref="T:System.Windows.Forms.ListViewItem" /> mit seiner aktuellen Vordergrundfarbe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Zeichnen von Text des Elements mit den aktuellen Werten der der <xref:System.Windows.Forms.ListViewItem.ForeColor%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.ListViewItem.Font%2A?displayProperty=nameWithType> Eigenschaften. Der Text gezeichnet wird, innerhalb des Bereichs, die gemäß der <xref:System.Windows.Forms.DrawListViewItemEventArgs.Bounds%2A> Eigenschaft. Sie können auch den Text manuell mit zeichnen die <xref:System.Drawing.Graphics> abgerufen, die über die <xref:System.Windows.Forms.DrawListViewItemEventArgs.Graphics%2A> Eigenschaft.  
+  
+ Die <xref:System.Windows.Forms.DrawListViewItemEventArgs.DrawText%2A> Methode ist besonders hilfreich, wenn die <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType> Eigenschaft wird auf einen Wert festgelegt, außer <xref:System.Windows.Forms.View?displayProperty=nameWithType>. In der Detailansicht zeichnet diese Methode den Text für die <xref:System.Windows.Forms.ListViewItem>, jedoch nicht den Text für Unterelemente zeichnet. Deshalb in der Detailansicht, ist es sinnvoller, zeichnen Sie alle dem <xref:System.Windows.Forms.ListView> Text in einem Ereignishandler für das <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DrawListViewItemEventArgs.DrawText%2A> Methode in einer Anwendung, die benutzerdefinierte Zeichnung für bietet ein <xref:System.Windows.Forms.ListView> Steuerelement. Im Beispiel einen Handler für das <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> Ereignis zeichnet den Hintergrund für das gesamte Element. In allen Ansichten mit Ausnahme der Detailansicht zeichnet dieser Handler auch den Text im Vordergrund. In der Detailansicht wird der Text im Vordergrund gezeichnet, der <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> Ereignis.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.DrawListViewItemEventArgs> Verweis Übersichtsthema.  
+  
+ [!code-csharp[ListViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#3)]
+ [!code-vb[ListViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public void DrawText (System.Windows.Forms.TextFormatFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawText(valuetype System.Windows.Forms.TextFormatFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawListViewItemEventArgs.DrawText(System.Windows.Forms.TextFormatFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Eine bitweise Kombination von <see cref="T:System.Windows.Forms.TextFormatFlags" /> Werte.</param>
+        <summary>Zeichnet den Text von der <see cref="T:System.Windows.Forms.ListViewItem" /> mit seiner aktuellen Vordergrundfarbe und formatieren es mit dem angegebenen <see cref="T:System.Windows.Forms.TextFormatFlags" /> Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Zeichnen von Text des Elements mit den aktuellen Werten der der <xref:System.Windows.Forms.ListViewItem.ForeColor%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.ListViewItem.Font%2A?displayProperty=nameWithType> Eigenschaften. Die <xref:System.Windows.Forms.TextFormatFlags> im angegebenen Werte die `flags` Parameter können Sie Formatierungseigenschaften für die knotenbezeichnung, z. B. textausrichtung bereitstellen. Der Text gezeichnet wird, innerhalb des Bereichs, die gemäß der <xref:System.Windows.Forms.DrawListViewItemEventArgs.Bounds%2A> Eigenschaft. Sie können auch den Text manuell mit zeichnen die <xref:System.Drawing.Graphics> abgerufen, die über die <xref:System.Windows.Forms.DrawListViewItemEventArgs.Graphics%2A> Eigenschaft.  
+  
+ Die <xref:System.Windows.Forms.DrawListViewItemEventArgs.DrawText%2A> Methode ist besonders hilfreich, wenn die <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType> Eigenschaft wird auf einen Wert festgelegt, außer <xref:System.Windows.Forms.View?displayProperty=nameWithType>. In der Detailansicht zeichnet diese Methode den Text für die <xref:System.Windows.Forms.ListViewItem>, jedoch nicht den Text für Unterelemente zeichnet. Deshalb in der Detailansicht, ist es sinnvoller, zeichnen Sie alle dem <xref:System.Windows.Forms.ListView> Text in einem Ereignishandler für das <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Graphics">
+      <MemberSignature Language="C#" Value="public System.Drawing.Graphics Graphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Graphics Graphics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewItemEventArgs.Graphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Drawing.Graphics" /> zum Zeichnen der <see cref="T:System.Windows.Forms.ListViewItem" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Graphics" /> zum Zeichnen der <see cref="T:System.Windows.Forms.ListViewItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Graphics> Klasse stellt Eigenschaften und Methoden für das Zeichnen auf dem Anzeigegerät bereit.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DrawListViewItemEventArgs.Graphics%2A> Eigenschaft in einer Anwendung, die benutzerdefinierte Zeichnung für bietet ein <xref:System.Windows.Forms.ListView> Steuerelement. Im Beispiel einen Handler für das <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> Ereignis zeichnet den Hintergrund für das gesamte Element. In allen Ansichten mit Ausnahme der Detailansicht zeichnet dieser Handler auch den Text im Vordergrund. In der Detailansicht wird der Text im Vordergrund gezeichnet, der <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> Ereignis.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.DrawListViewItemEventArgs> Verweis Übersichtsthema.  
+  
+ [!code-csharp[ListViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#3)]
+ [!code-vb[ListViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListViewItem Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ListViewItem Item" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewItemEventArgs.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.ListViewItem" /> gezeichnet werden soll.</summary>
+        <value>Das zu zeichnende <see cref="T:System.Windows.Forms.ListViewItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft den Zugriff auf die <xref:System.Windows.Forms.ListViewItem> gezeichnet werden soll. Dies ist hilfreich, wenn die <xref:System.Windows.Forms.DrawListViewItemEventArgs.State%2A> Eigenschaft bietet keine ausreichende Informationen gemäß Ihren Anforderungen anpassen. Die <xref:System.Windows.Forms.DrawListViewItemEventArgs.State%2A> Eigenschaft ermöglicht nur grundlegende Zustandsinformationen, die Sie z. B. verwenden können, um festzustellen, ob ein Element ausgewählt, überprüft oder fokussiert ist. Die <xref:System.Windows.Forms.DrawListViewItemEventArgs.Item%2A> Eigenschaft andererseits, ermöglicht den Zugriff auf alle Member der <xref:System.Windows.Forms.ListViewItem>. Sie müssen das Element greifen direkt auf, z. B. zum Zeichnen der <xref:System.Windows.Forms.ListViewItem.Text%2A?displayProperty=nameWithType> Wert selbst und nicht anhand der <xref:System.Windows.Forms.DrawListViewItemEventArgs.DrawText%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DrawListViewItemEventArgs.Item%2A> Eigenschaft in einer Anwendung, die benutzerdefinierte Zeichnung für bietet ein <xref:System.Windows.Forms.ListView> Steuerelement. Im Beispiel einen Handler für das <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> Ereignis zeichnet den Hintergrund für das gesamte Element. In allen Ansichten mit Ausnahme der Detailansicht zeichnet dieser Handler auch den Text im Vordergrund. In der Detailansicht wird der Text im Vordergrund gezeichnet, der <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> Ereignis.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.DrawListViewItemEventArgs> Verweis Übersichtsthema.  
+  
+ [!code-csharp[ListViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#3)]
+ [!code-vb[ListViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemIndex">
+      <MemberSignature Language="C#" Value="public int ItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewItemEventArgs.ItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des der <see cref="T:System.Windows.Forms.ListViewItem" /> innerhalb der <see cref="P:System.Windows.Forms.ListView.Items" /> der enthaltenden Auflistung <see cref="T:System.Windows.Forms.ListView" />.</summary>
+        <value>Der Index des der <see cref="T:System.Windows.Forms.ListViewItem" /> innerhalb der <see cref="P:System.Windows.Forms.ListView.Items" /> Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListView> mit dem Namen `ListView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#471](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#471)]
+ [!code-vb[System.Windows.Forms.EventExamples#471](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#471)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListViewItemStates State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ListViewItemStates State" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewItemEventArgs.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItemStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Status des der <see cref="T:System.Windows.Forms.ListViewItem" /> gezeichnet werden soll.</summary>
+        <value>Eine bitweise Kombination von <see cref="T:System.Windows.Forms.ListViewItemStates" /> , der angibt, des aktuellen Status der Werte der <see cref="T:System.Windows.Forms.ListViewItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um zu überprüfen, ob die <xref:System.Windows.Forms.ListViewItem> gezeichnet wird, in einem bestimmten Status. Diese Eigenschaft ermöglicht nur grundlegende Zustandsinformationen über das Element. Diese Eigenschaft können bestimmen, ob ein Element ausgewählt, überprüft oder fokussiert ist. Wenn Sie weitere Informationen benötigen, rufen Sie das Element über die <xref:System.Windows.Forms.DrawListViewItemEventArgs.Item%2A> Eigenschaft, und überprüfen Sie die Eigenschaften direkt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.DrawListViewItemEventArgs.State%2A> Eigenschaft in einer Anwendung, die benutzerdefinierte Zeichnung für bietet ein <xref:System.Windows.Forms.ListView> Steuerelement. Im Beispiel einen Handler für das <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> Ereignis zeichnet den Hintergrund für das gesamte Element. In allen Ansichten mit Ausnahme der Detailansicht zeichnet dieser Handler auch den Text im Vordergrund. In der Detailansicht wird der Text im Vordergrund gezeichnet, der <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> Ereignis.  
+  
+ Das vollständige Beispiel finden Sie unter der <xref:System.Windows.Forms.DrawListViewItemEventArgs> Verweis Übersichtsthema.  
+  
+ [!code-csharp[ListViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#3)]
+ [!code-vb[ListViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

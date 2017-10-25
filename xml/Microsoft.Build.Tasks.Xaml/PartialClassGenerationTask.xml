@@ -1,0 +1,414 @@
+<Type Name="PartialClassGenerationTask" FullName="Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask">
+  <TypeSignature Language="C#" Value="public class PartialClassGenerationTask : Microsoft.Build.Utilities.Task" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PartialClassGenerationTask extends Microsoft.Build.Utilities.Task" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask" />
+  <AssemblyInfo>
+    <AssemblyName>XamlBuildTask</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Utilities.Task</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Greift auf die Verwendung von XAML-Dateien, die Typen definieren (mit <see langword="x:Class" />) und generiert den entsprechenden Quellcode, die in eine Assembly kompiliert werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die von dieser Aufgabe verarbeiteten XAML-Dateien definieren neue Typen und instanziieren diese Typen. Die <xref:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask>-Klasse liest in den neuen Typdefinitionen und generiert Quellcodedateien. Außerdem generiert sie eine XAML-Datei, die das Markup enthält, das die neu generierten Typen instanziiert.  
+  
+ Diese Aufgabe sollte nicht verwendet werden, um nicht vertrauenswürdige XAML-Eingaben zu nutzen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PartialClassGenerationTask ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationMarkup">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ApplicationMarkup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ApplicationMarkup" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.ApplicationMarkup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest eine Liste von XAML-Dateien zu verarbeiten, per MS Build aufgefüllt.</summary>
+        <value>Eine Liste von <see cref="T:Microsoft.Build.Framework.ITaskItem" />, welche die zu verarbeitenden XAML-Dateien darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public string AssemblyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Assembly ab, die kompiliert wird, oder legt diesen fest.</summary>
+        <value>Der Name der Assembly, die kompiliert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird nur festgelegt, wenn Nur-Stamm-XAML-Dateien verarbeitet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildTaskPath">
+      <MemberSignature Language="C#" Value="public string BuildTaskPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BuildTaskPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.BuildTaskPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad der Assembly ab, die diese Buildaufgabe enthält, oder legt diesen fest.</summary>
+        <value>Der Buildaufgabenpfad.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird von MSBuild aufgerufen, um die Codegenerierungsaufgabe auszuführen.</summary>
+        <returns>
+          <see langword="true" />Wenn der Code erfolgreich generiert wird. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratedCodeFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] GeneratedCodeFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] GeneratedCodeFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.GeneratedCodeFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste generierter Codedateien ab, eine für jede Eingabedatei, oder legt diese fest.</summary>
+        <value>Eine Liste von <see cref="T:Microsoft.Build.Framework.ITaskItem" />, welche die XAML-Quelldateien darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratedResources">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] GeneratedResources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] GeneratedResources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.GeneratedResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste von XAML-Dateien ab, die das Markup zum Instanziieren der neu generierten Typen enthalten (einen für jede Eingabedatei), oder legt diese fest.</summary>
+        <value>Eine Liste von <see cref="T:Microsoft.Build.Framework.ITaskItem" />, welche die generierten XAML-Dateien darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratedSourceExtension">
+      <MemberSignature Language="C#" Value="public string GeneratedSourceExtension { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GeneratedSourceExtension" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.GeneratedSourceExtension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Dateierweiterung ab, die den generierten Quelldateien hinzugefügt werden soll, oder legt diese fest.</summary>
+        <value>Die Dateierweiterung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInProcessXamlMarkupCompile">
+      <MemberSignature Language="C#" Value="public bool IsInProcessXamlMarkupCompile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInProcessXamlMarkupCompile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.IsInProcessXamlMarkupCompile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob die Kompilierung der XAML-Markup verarbeitet wird.</summary>
+        <value>True, wenn die Kompilierung der XAML-Markup verarbeitet wird. andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KnownReferencePaths">
+      <MemberSignature Language="C#" Value="public string[] KnownReferencePaths { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] KnownReferencePaths" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.KnownReferencePaths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die bekannten Verweispfade ab oder legt diese fest.</summary>
+        <value>Die bekannten Verweispfade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public string Language { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Language" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.Language" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Sprache des zu generierenden Codes ab oder legt diese fest.</summary>
+        <value>Die Sprache, in der Quellcode generiert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSBuildProjectDirectory">
+      <MemberSignature Language="C#" Value="public string MSBuildProjectDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MSBuildProjectDirectory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.MSBuildProjectDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Verzeichnis des MS Build-Projekts.</summary>
+        <value>Das Verzeichnis des MS Build-Projekts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputPath">
+      <MemberSignature Language="C#" Value="public string OutputPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OutputPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.OutputPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Verzeichnis ab, in dem die generierten Dateien abgelegt werden, oder legt dieses fest.</summary>
+        <value>Das Verzeichnis, in dem die generierten Dateien gespeichert werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="References">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] References { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] References" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.References" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste von Assemblys ab, auf die verwiesen werden soll, oder legt diese fest.</summary>
+        <value>Eine Liste von <see cref="T:Microsoft.Build.Framework.ITaskItem" />, welche die Assemblys darstellt, auf die verwiesen wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresCompilationPass2">
+      <MemberSignature Language="C#" Value="public bool RequiresCompilationPass2 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresCompilationPass2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.RequiresCompilationPass2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob dieses Projekt das Ausführen der Aufgabe <see cref="T:Microsoft.Build.Tasks.Xaml.CompilationPass2Task" /> erfordert, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn nicht aufgelöste Typen vorhanden sind; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der Verarbeitung der XAML-Dateien, sucht die <xref:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask> nach nicht aufgelösten Typen. Wenn Typen gefunden werden, wird die <xref:Microsoft.Build.Tasks.Xaml.CompilationPass2Task> gestartet, die alle XAML-Dateien im Projekt kompiliert und überprüft, ob alle Typen aufgelöst sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootNamespace">
+      <MemberSignature Language="C#" Value="public string RootNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RootNamespace" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.RootNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stammnamespace für das Projekt ab oder legt diesen fest.</summary>
+        <value>Der Stammnamespace.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceCodeFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] SourceCodeFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] SourceCodeFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.SourceCodeFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste von Quellcodedateien in dem Projekt ab oder legt diese fest.</summary>
+        <value>Eine Liste von <see cref="T:Microsoft.Build.Framework.ITaskItem" />, welche die Quellcodedateien im Projekt darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XamlBuildTypeGenerationExtensionNames">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] XamlBuildTypeGenerationExtensionNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] XamlBuildTypeGenerationExtensionNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.XamlBuildTypeGenerationExtensionNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auflistung der Namen in XAML-Build-typgenerierung verwendet.</summary>
+        <value>Die Sammlung der Erweiterung verwendet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XamlBuildTypeInspectionExtensionNames">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] XamlBuildTypeInspectionExtensionNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] XamlBuildTypeInspectionExtensionNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.XamlBuildTypeInspectionExtensionNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>XamlBuildTask</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auflistung der Namen in XAML-Build-Typ-Überprüfung verwendet.</summary>
+        <value>Die Sammlung der Erweiterung verwendet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

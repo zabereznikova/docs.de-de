@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Cryptography">
+  <Docs>
+    <summary>Die <see cref="N:System.Security.Cryptography" /> Namespace stellt kryptografische Dienste, z. B. sichere Codierung und Decodierung von Daten sowie viele andere Vorgänge wie hashing, Erzeugung von Zufallszahlen und Nachrichtenauthentifizierung. Weitere Informationen finden Sie unter [Kryptografiedienste](~/docs/standard/security/cryptographic-services.md).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

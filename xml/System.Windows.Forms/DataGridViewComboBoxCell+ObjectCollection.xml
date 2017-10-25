@@ -1,0 +1,565 @@
+<Type Name="DataGridViewComboBoxCell+ObjectCollection" FullName="System.Windows.Forms.DataGridViewComboBoxCell+ObjectCollection">
+  <TypeSignature Language="C#" Value="public class DataGridViewComboBoxCell.ObjectCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit DataGridViewComboBoxCell/ObjectCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Auflistung der Auswahloptionen in einer <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell" /> dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie abrufen <xref:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection> Objekte aus der <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A?displayProperty=nameWithType> Eigenschaft oder die <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectCollection (System.Windows.Forms.DataGridViewComboBoxCell owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataGridViewComboBoxCell owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.#ctor(System.Windows.Forms.DataGridViewComboBoxCell)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.DataGridViewComboBoxCell" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell" /> , die die Auflistung besitzt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Ein Objekt, das der Auflistung hinzuzufügende Element darstellt.</param>
+        <summary>Fügt ein Element der Liste der Elemente für eine <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell" />.</summary>
+        <returns>Die Position, an der das neue Element eingefügt wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Zelle <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DataSource" /> -Eigenschaftswert ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Zelle wird eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (params object[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(object[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.AddRange(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="items">Ein oder mehrere Objekte, die für die Dropdown-Liste Elemente darstellen.  
+  
+ - oder -   
+  
+ Ein <see cref="T:System.Array" /> von <see cref="T:System.Object" /> Werte.</param>
+        <summary>Fügt ein oder mehrere Elemente der Liste der Elemente für eine <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="items" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Zelle wird eine freigegebene Zeile.</exception>
+        <exception cref="T:System.ArgumentException">Der Zelle <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DataSource" /> -Eigenschaftswert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Windows.Forms.DataGridViewComboBoxCell/ObjectCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.AddRange(System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.DataGridViewComboBoxCell+ObjectCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection" /> zum Laden von in dieser Auflistung.</param>
+        <summary>Fügt die Elemente einer vorhandenen <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection" /> zur Liste der Elemente in einem <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Zelle wird eine freigegebene Zeile.</exception>
+        <exception cref="T:System.ArgumentException">Der Zelle <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DataSource" /> -Eigenschaftswert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle Elemente aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die Auflistung enthält mindestens ein Element, und die Zelle <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DataSource" /> -Eigenschaftswert ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Auflistung enthält mindestens ein Element aus, und die Zelle wird eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, das in der Auflistung zu suchende Element darstellt.</param>
+        <summary>Bestimmt, ob das angegebene Element in der Auflistung enthalten ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="item" /> befindet sich in der Auflistung befindet, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (object[] destination, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(object[] destination, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.CopyTo(System.Object[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="System.Object[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="destination">Das Zielarray, an dem der Inhalt kopiert wird.</param>
+        <param name="arrayIndex">Der Index des Elements im <c>Dest</c> an der mit dem Kopieren begonnen werden.</param>
+        <summary>Kopiert die gesamte Auflistung in ein vorhandenes Array von Objekten an einer angegebenen Position innerhalb des Arrays.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="destination" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="arrayIndex" />ist kleiner als 0 oder gleich oder größer als die Länge des <paramref name="destination" />.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection" /> ist größer als der verfügbare Platz vom <paramref name="arrayIndex" /> bis zum Ende des <paramref name="destination" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="destination" /> ist mehrdimensional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der Auflistung ab.</summary>
+        <value>Die Anzahl der Elemente in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator, der durchlaufen kann eine <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection" />.</summary>
+        <returns>Ein Enumerator vom Typ <see cref="T:System.Collections.IEnumerator" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, das in der Auflistung zu suchende Element darstellt.</param>
+        <summary>Gibt den Index des angegebenen Elements in der Auflistung zurück.</summary>
+        <returns>Der nullbasierte Index des der <paramref name="value" /> Parameters, wenn es in der Auflistung gefunden wurde, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem platziert <c>Element</c> innerhalb einer unsortierten <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell" />.</param>
+        <param name="item">Ein Objekt, das das einzufügende Element repräsentiert.</param>
+        <summary>Fügt ein Element am angegebenen Index in die Auflistung ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Forms.DataGridViewComboBoxCell.Sorted%2A> ist `false`, und klicken Sie dann die `index` Wert darstellt, die Position, an dem die `item` Wert eingefügt wird. Wenn <xref:System.Windows.Forms.DataGridViewComboBoxCell.Sorted%2A> ist `true`, klicken Sie dann `index` wird ignoriert und `item` befindet sich in der Auflistung in der Lage, die durch die Sortierreihenfolge bestimmt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />ist kleiner als 0 oder größer als die Anzahl der Elemente in der Auflistung.</exception>
+        <exception cref="T:System.ArgumentException">Der Zelle <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DataSource" /> -Eigenschaftswert ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Zelle wird eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Auflistung schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Elements, das abgerufen oder festgelegt werden soll.</param>
+        <summary>Ruft ab oder legt das Element an der aktuellen Indexposition fest. In C# ist diese Eigenschaft der Indexer für die <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection" />-Klasse.</summary>
+        <value>Die <see cref="T:System.Object" /> am angegebenen Index gespeichert.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />ist kleiner als 0 oder größer als die Anzahl der Elemente in der Auflistung minus 1.</exception>
+        <exception cref="T:System.ArgumentNullException">Der beim Festlegen dieser Eigenschaft angegebene Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Beim Festlegen dieser Eigenschaft, die Zelle des <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DataSource" /> -Eigenschaftswert ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Beim Festlegen dieser Eigenschaft ist die Zelle in eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, das die aus der Auflistung zu entfernenden Elements darstellt.</param>
+        <summary>Entfernt das angegebene Objekt aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `value` Parameter ist nicht in der Auflistung, die diese Methode wird keine Aktion ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Zelle <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DataSource" /> -Eigenschaftswert ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Zelle wird eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Objekts.</param>
+        <summary>Entfernt das Objekt am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />ist kleiner als 0 oder größer als die Anzahl der Elemente in der Auflistung minus 1.</exception>
+        <exception cref="T:System.ArgumentException">Der Zelle <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DataSource" /> -Eigenschaftswert ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Zelle wird eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array destination, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array destination, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="destination">Das eindimensionales Array, bei dem es sich um das Ziel der aus der Auflistung kopierten Elemente handelt. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im Array, ab dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der Auflistung in das angegebene Array, beginnend am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="destination" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />ist kleiner als 0 oder gleich oder größer als die Länge des <paramref name="destination" />.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection" /> ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des <paramref name="destination" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="destination" /> ist mehrdimensional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die Auflistung synchronisiert ist (threadsicher).</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection" /> synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Objekt, das der Auflistung hinzugefügt werden soll.</param>
+        <summary>Fügt der Auflistung ein Objekt hinzu.</summary>
+        <returns>Die Position, in dem das neue Element eingefügt werden soll.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Zelle <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DataSource" /> -Eigenschaftswert ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Zelle wird eine freigegebene Zeile.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung eine feste Größe aufweist.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

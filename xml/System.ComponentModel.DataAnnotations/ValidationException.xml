@@ -1,0 +1,304 @@
+<Type Name="ValidationException" FullName="System.ComponentModel.DataAnnotations.ValidationException">
+  <TypeSignature Language="C#" Value="public class ValidationException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ValidationException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.ValidationException" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Ausnahme dar, die während der Validierung eines Datenfelds auftritt, Feld, wenn die <see cref="T:System.ComponentModel.DataAnnotations.ValidationAttribute" /> Klasse dient.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Validierungsausnahme tritt auf, wenn ein Eingabewert nicht dem erwarteten Datentyp, Bereich oder Muster aus dem Feld "Daten" übereinstimmt. Z. B. wenn ein Benutzer einen ganzzahligen Wert in einem Datenfeld eingibt, der erwartet, dass ein <xref:System.Data.SqlDbType.DateTime> Wert, tritt eine Validierungsausnahme auf.  
+  
+ Diese Klasse verwendet die <xref:System.ComponentModel.DataAnnotations.ValidationAttribute> Klasse Überprüfungen anpassen. Ein <xref:System.ComponentModel.DataAnnotations.ValidationException> wird ausgelöst, wenn ein Validierungsfehler auftritt. Die Ausnahme wird ausgelöst, wenn die <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.Validate%2A> -Methode aufgerufen wird. Alle Ausnahmen, die während der Überprüfung ausgelöst werden, sind in enthalten die <xref:System.Web.DynamicData.IDynamicValidatorException.InnerExceptions%2A> Auflistung. Sie können jede Validierungsausnahme abrufen, indem Sie durchlaufen die <xref:System.Web.DynamicData.IDynamicValidatorException.InnerExceptions%2A> Auflistung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.ValidationException" /> -Klasse unter Verwendung einer vom System generierten Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist der Standardkonstruktor für die <xref:System.ComponentModel.DataAnnotations.ValidationException> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Einer angegebenen Meldung, die den Fehler angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.ValidationException" /> -Klasse mit einer angegebenen Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen dazu, wie dieser Konstruktor verwendet, finden Sie unter [wie: Anpassen von Daten Feldvalidierung im Datenmodell](http://msdn.microsoft.com/library/47d3b04e-1ab5-466d-bc58-92f163f3d7f5).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ValidationException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die serialisierten Daten enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel des serialisierten Objekts.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.ValidationException" /> Klasse mit serialisierten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung, das über einen Stream übertragene Ausnahmeobjekt aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung.</param>
+        <param name="innerException">Die Auflistung der Ausnahmen für die Überprüfung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.ValidationException" /> -Klasse mit einer angegebenen Fehlermeldung und einer Auflistung von Instanzen der inneren Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird normalerweise nicht verwendet, da Validierungsausnahmen, in gespeichert werden der <xref:System.Web.DynamicData.IDynamicValidatorException.InnerExceptions%2A> -Eigenschaft, nicht `innerException`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationException (System.ComponentModel.DataAnnotations.ValidationResult validationResult, System.ComponentModel.DataAnnotations.ValidationAttribute validatingAttribute, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.DataAnnotations.ValidationResult validationResult, class System.ComponentModel.DataAnnotations.ValidationAttribute validatingAttribute, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationException.#ctor(System.ComponentModel.DataAnnotations.ValidationResult,System.ComponentModel.DataAnnotations.ValidationAttribute,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validationResult" Type="System.ComponentModel.DataAnnotations.ValidationResult" />
+        <Parameter Name="validatingAttribute" Type="System.ComponentModel.DataAnnotations.ValidationAttribute" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="validationResult">Die Liste der Validierungsergebnisse.</param>
+        <param name="validatingAttribute">Das Attribut, das die aktuelle Ausnahme verursacht hat.</param>
+        <param name="value">Der Wert des Objekts, das das Attribut zum Auslösen des Überprüfung Fehlers verursacht hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.ValidationException" /> Klasse, indem ein Validierungsergebnis, ein Validierungsattribut und den Wert der aktuellen Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationException (string errorMessage, System.ComponentModel.DataAnnotations.ValidationAttribute validatingAttribute, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string errorMessage, class System.ComponentModel.DataAnnotations.ValidationAttribute validatingAttribute, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationException.#ctor(System.String,System.ComponentModel.DataAnnotations.ValidationAttribute,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorMessage" Type="System.String" />
+        <Parameter Name="validatingAttribute" Type="System.ComponentModel.DataAnnotations.ValidationAttribute" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="errorMessage">Die Meldung, die den Fehler angibt.</param>
+        <param name="validatingAttribute">Das Attribut, das die aktuelle Ausnahme verursacht hat.</param>
+        <param name="value">Der Wert des Objekts, das das Attribut zum Auslösen von Validierungsfehler verursacht hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.ValidationException" /> -Klasse mit einer angegebenen Fehlermeldung, ein Validierungsattribut und den Wert der aktuellen Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter Vorgehensweise: Anpassen von Daten Feldvalidierung im Datenmodell.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationAttribute">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.DataAnnotations.ValidationAttribute ValidationAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.DataAnnotations.ValidationAttribute ValidationAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ValidationException.ValidationAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.ValidationAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Instanz von der <see cref="T:System.ComponentModel.DataAnnotations.ValidationAttribute" /> -Klasse, die diese Ausnahme ausgelöst hat.</summary>
+        <value>Eine Instanz des Validierungsattributtyps, die diese Ausnahme ausgelöst hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Typ wird verwendet, für die Überprüfung auf Grundlage der Metadaten der Tabelle zugeordnet. Wenn ein Fehler auftritt, die <xref:System.ComponentModel.DataAnnotations.ValidationAttribute> -Klasse Trigger eine <xref:System.ComponentModel.DataAnnotations.ValidationException>.  
+  
+ Diese Klasse kann überschrieben werden, um eigene benutzerdefinierte Validierungsattribute erstellen.  
+  
+ <xref:System.Web.UI.WebControls.LinqDataSourceValidationException>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationResult">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.DataAnnotations.ValidationResult ValidationResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.DataAnnotations.ValidationResult ValidationResult" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ValidationException.ValidationResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.ValidationResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="P:System.ComponentModel.DataAnnotations.ValidationException.ValidationResult" /> -Instanz, die den Validierungsfehler beschreibt.</summary>
+        <value>Die <see cref="P:System.ComponentModel.DataAnnotations.ValidationException.ValidationResult" /> -Instanz, die den Validierungsfehler beschreibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ValidationException.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Objekts, das bewirkt, dass die <see cref="T:System.ComponentModel.DataAnnotations.ValidationAttribute" /> Klasse, um diese Ausnahme ausgelöst.</summary>
+        <value>Der Wert des Objekts, das aufgrund der <see cref="T:System.ComponentModel.DataAnnotations.ValidationAttribute" /> Klasse, um den Validierungsfehler auslöst.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

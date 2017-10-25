@@ -1,0 +1,205 @@
+<Type Name="DebuggableAttribute+DebuggingModes" FullName="System.Diagnostics.DebuggableAttribute+DebuggingModes">
+  <TypeSignature Language="C#" Value="public enum DebuggableAttribute.DebuggingModes" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed DebuggableAttribute/DebuggingModes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DebuggableAttribute.DebuggingModes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Debugmodus für den Just-In-Time (JIT)-Compiler an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> Enumeration gibt an, wie die Common Language Runtime wichtiger Informationen an den Debugger bei der codegenerierung zu verfolgen. Diese Informationen helfen den Debugger bieten eine umfassende Debugleistung. Im Gegensatz zu .NET Framework, Version 1.1 sind die deaktivieren die Überwachung durch den Just-in-Time (JIT)-Compiler, Version 2.0 oder höher nicht zulässig. JIT-Verfolgung ist für Debugfähige Dateien immer aktiviert.  In Version 2.0 oder höher haben Enumerationswerte folgende Auswirkungen.  
+  
+|Debugmodus|Ergebnis|  
+|--------------------|------------|  
+|Keine|Überwachung auf JIT-Optimierungen aktiviert|  
+|Standard|Überwachung auf JIT-Optimierungen aktiviert|  
+|DisableOptimizations|Überwachung auf JIT-Optimierungen aktiviert|  
+|Standard &#124; DisableOptimizations|Überwachung auf JIT Optimierungen werden deaktiviert.|  
+  
+ Sequenzpunkte werden verwendet, um Positionen in der Microsoft intermediate Language (MSIL)-Code anzugeben, die Benutzer eines Debuggers erwartet wird, eindeutig verweisen können, z. B. durch Festlegen eines Haltepunkts. Der JIT-Compiler wird sichergestellt, dass der MSIL-Code auf zwei unterschiedlichen Sequenzpunkten in eine einzelne systemeigene Anweisung nicht kompiliert werden kann. Standardmäßig überprüft der JIT-Compiler den Symbolspeicher in die Programmdatenbankdatei (PDB) eine Liste der zusätzlichen Sequenzpunkte. Laden die PDB Datei erfordert jedoch, dass die Datei kann verwendet werden und wirkt sich negativ auf die Leistung. Ab Version 2.0, können Compiler "implizite Sequenzpunkte" in der MSIL-Codestream durch die Verwendung von MSIL ausgeben "`nop"` Anweisungen. Solche Compilern sollte das Flag IgnoreSymbolStoreSequencePoints benachrichtigen der common Language Runtime nicht geladen werden die PDB-Datei festgelegt.  
+  
+> [!NOTE]
+>  Diese Enumeration wird in erster Linie von Sprachenentwicklern verwendet. Im Allgemeinen ist es nicht in der Anwendungsentwicklung verwendet. Entwicklungsumgebungen verwenden <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints> basierend auf Parametern der Compiler z. B. **/debug** und **/ optimize**.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.DebuggableAttribute/DebuggingModes Default = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.DebuggableAttribute.DebuggingModes.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.DebuggableAttribute+DebuggingModes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Weist den Just-In-Time (JIT)-Compiler an, sein Standardverhalten zu verwenden. Dieses umfasst das Aktivieren von Optimierungen, das Deaktivieren des Bearbeiten- und Fortfahren-Supports und das Verwenden von Symbolspeichersequenzpunkten (sofern vorhanden). In .NET Framework Version 2.0 werden JIT-Tracking-Informationen (der MSIL-Offset (Microsoft Intermediate Language) zum Offset des systemeigenen Codes in einer Methode) immer generiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableOptimizations">
+      <MemberSignature Language="C#" Value="DisableOptimizations" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.DebuggableAttribute/DebuggingModes DisableOptimizations = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.DebuggableAttribute.DebuggingModes.DisableOptimizations" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.DebuggableAttribute+DebuggingModes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Deaktivieren Sie die vom Compiler durchgeführten Optimierungen, damit Ihre Ausgabedatei kleiner, schneller und effizienter wird. Optimierungen führen zu Neuanordnungen von Code in der Ausgabedatei, wodurch das Debuggen erschwert werden kann. In der Regel sollte die Optimierung beim Debuggen deaktiviert werden. Kombinieren Sie diesen Wert in den Versionen ab 2.0 mit Default (Default | DisableOptimizations), um JIT-Tracking zu aktivieren und Optimierungen zu deaktivieren.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableEditAndContinue">
+      <MemberSignature Language="C#" Value="EnableEditAndContinue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.DebuggableAttribute/DebuggingModes EnableEditAndContinue = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.DebuggableAttribute.DebuggingModes.EnableEditAndContinue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.DebuggableAttribute+DebuggingModes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktivieren Sie Bearbeiten und Fortfahren. Mit Bearbeiten und Fortfahren können Sie Änderungen am Quellcode vornehmen, während sich das Programm im Unterbrechungsmodus befindet. Die Möglichkeit des Bearbeitens und Fortfahrens ist vom Compiler abhängig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreSymbolStoreSequencePoints">
+      <MemberSignature Language="C#" Value="IgnoreSymbolStoreSequencePoints" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.DebuggableAttribute/DebuggingModes IgnoreSymbolStoreSequencePoints = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.DebuggableAttribute+DebuggingModes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie die impliziten MSIL-Sequenzpunkte und nicht die Programmdatenbank-Sequenzpunkte (PDB). Die Symbolinformationen enthalten i. d. R. mindestens einen MSIL-Offset (Microsoft Intermediate Language) für jede Quellzeile. Bevor der JIT-Compiler (Just-In-Time) eine Methode kompiliert, fordert er von den Profilerstellungsdiensten eine Liste der zu speichernden MSIL-Offsets an. Diese MSIL-Offsets werden Sequenzpunkte genannt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.DebuggableAttribute/DebuggingModes None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.DebuggableAttribute.DebuggingModes.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.DebuggableAttribute+DebuggingModes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ab .NET Framework Version 2.0 werden stets JIT-Tracking-Informationen generiert. Dieses Flag hat denselben Effekt wie <see cref="F:System.Diagnostics.DebuggableAttribute.DebuggingModes.Default" />, jedoch mit der Ausnahme, dass die <see cref="P:System.Diagnostics.DebuggableAttribute.IsJITTrackingEnabled" />-Eigenschaft auf <see langword="false" /> gesetzt wird. Da die JIT-Verfolgung jedoch immer aktiviert ist, wird der Eigenschaftswert in Version 2.0 oder höher ignoriert.  
+  
+ Beachten Sie, dass das <see cref="F:System.Diagnostics.DebuggableAttribute.DebuggingModes.None" />-Flag im Gegensatz zum <see cref="F:System.Diagnostics.DebuggableAttribute.DebuggingModes.DisableOptimizations" />-Flag nicht zum Deaktivieren von JIT-Optimierungen verwendet werden kann.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

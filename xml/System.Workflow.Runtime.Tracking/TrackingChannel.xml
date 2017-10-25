@@ -1,0 +1,113 @@
+<Type Name="TrackingChannel" FullName="System.Workflow.Runtime.Tracking.TrackingChannel">
+  <TypeSignature Language="C#" Value="public abstract class TrackingChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TrackingChannel extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.TrackingChannel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see langword="abstract" /> Basisklasse, die einen Verfolgungskanal darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Wenn ein <xref:System.Workflow.Runtime.Tracking.TrackingService> vorhanden ist, ruft die Laufzeitverfolgungsinfrastruktur <xref:System.Workflow.Runtime.Tracking.TrackingService.GetTrackingChannel%2A> auf, um einen Verfolgungskanal für eine Workflowinstanz zu erhalten. Die Laufzeitverfolgungsinfrastruktur verwendet diesen Verfolgungskanal, um mit der Workflowinstanz verbundene Verfolgungsdatensätze zurück zur Hostanwendung zu senden. Die Datensätze werden immer dann gesendet, wenn die Verfolgungsinfrastruktur einem Verfolgungspunkt des <xref:System.Workflow.Runtime.Tracking.TrackingProfile> entspricht, das der Workflowinstanz zugeordnet ist. Die Anwendung kann diese Verfolgungsinformationen so behandeln, wie Sie möchten. <xref:System.Workflow.Runtime.Tracking.SqlTrackingService> beispielsweise schreibt Verfolgungsinformationen in eine SQL-Datenbank.  
+  
+ Um einen Verfolgungskanal für den Überwachungsdienst zu erstellen, leiten Sie eine Klasse von der <xref:System.Workflow.Runtime.Tracking.TrackingChannel>-Basisklasse ab.  Sie können das <xref:System.Workflow.Runtime.Tracking.TrackingParameters>-Objekt verwenden, das von der Laufzeitverfolgungsinfrastruktur im Aufruf Ihrer Implementierung von <xref:System.Workflow.Runtime.Tracking.TrackingService.GetTrackingChannel%2A> übergeben wird, um jede Instanz des Verfolgungskanals einer bestimmten Workflowinstanz zuzuordnen. Das Workflowlaufzeitmodul fordert von jedem Überwachungsdienst, der ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile> für eine Workflowinstanz bereitgestellt hat, einen Verfolgungskanal an.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TrackingChannel ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingChannel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert beim Implementieren in einer abgeleiteten Klasse eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.TrackingChannel" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceCompletedOrTerminated">
+      <MemberSignature Language="C#" Value="protected abstract void InstanceCompletedOrTerminated ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void InstanceCompletedOrTerminated() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingChannel.InstanceCompletedOrTerminated" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Benachrichtigt beim Implementieren in einer abgeleiteten Klasse einen Datenempfänger des Verfolgungskanals, dass die Workflowinstanz, die dem Verfolgungskanal zugeordnet ist, abgeschlossen oder beendet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Laufzeitverfolgungsinfrastruktur ruft <xref:System.Workflow.Runtime.Tracking.TrackingChannel.InstanceCompletedOrTerminated%2A> auf, um den Datenempfänger des Verfolgungskanals zu benachrichtigen dass die Workflowinstanz, die dem Verfolgungskanal zugeordnet ist, abgeschlossen oder beendet wurde. Es werden keine weiteren Daten über den Verfolgungskanal gesendet. Wenn <xref:System.Workflow.Runtime.Tracking.TrackingChannel.InstanceCompletedOrTerminated%2A> aufgerufen wird, können Sie die Aktionen ausführen, die Ihre Implementierung der <xref:System.Workflow.Runtime.Tracking.TrackingChannel>-Klasse erfordert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="protected abstract void Send (System.Workflow.Runtime.Tracking.TrackingRecord record);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Send(class System.Workflow.Runtime.Tracking.TrackingRecord record) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingChannel.Send(System.Workflow.Runtime.Tracking.TrackingRecord)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="record" Type="System.Workflow.Runtime.Tracking.TrackingRecord" />
+      </Parameters>
+      <Docs>
+        <param name="record">Der zu sendende <see cref="T:System.Workflow.Runtime.Tracking.TrackingRecord" />.</param>
+        <summary>Sendet beim Implementieren in einer abgeleiteten Klasse einen <see cref="T:System.Workflow.Runtime.Tracking.TrackingRecord" /> über den <see cref="T:System.Workflow.Runtime.Tracking.TrackingChannel" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Laufzeitverfolgungsinfrastruktur ruft <xref:System.Workflow.Runtime.Tracking.TrackingChannel.Send%2A> auf, um einen <xref:System.Workflow.Runtime.Tracking.TrackingRecord> über den <xref:System.Workflow.Runtime.Tracking.TrackingChannel> zu senden, wenn sie mit einem Verfolgungspunkt in einem <xref:System.Workflow.Runtime.Tracking.TrackingProfile> übereinstimmt. Sie können die über einen <xref:System.Workflow.Runtime.Tracking.TrackingChannel> gesendeten Verfolgungsinformationen den Erfordernissen Ihrer Anwendung entsprechend beliebig verarbeiten.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Implementierung der Send-Methode veranschaulicht.  In dieser Implementierung werden Verfolgungsmeldungen nach Beendigung eines Workflows in das Ereignisprotokoll geschrieben.  Dieses Beispiel stammt aus dem Termination Tracking Service SDK-Beispiel.  Weitere Informationen finden Sie unter [Termination Tracking Service-Beispiel](http://msdn.microsoft.com/en-us/29b7c0d7-cece-4bb9-96d0-c5b6c6e14439).  
+  
+ [!code-csharp[WF_Samples#117](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#117)]
+ [!code-vb[WF_Samples#117](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#117)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

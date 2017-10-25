@@ -1,0 +1,62 @@
+<Type Name="DataBindingValueUIHandler" FullName="System.Web.UI.Design.DataBindingValueUIHandler">
+  <TypeSignature Language="C#" Value="public class DataBindingValueUIHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataBindingValueUIHandler extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.DataBindingValueUIHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen UI-Handler für Datenwerte für die Bindung.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataBindingValueUIHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataBindingValueUIHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.DataBindingValueUIHandler" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OnGetUIValueItem">
+      <MemberSignature Language="C#" Value="public void OnGetUIValueItem (System.ComponentModel.ITypeDescriptorContext context, System.ComponentModel.PropertyDescriptor propDesc, System.Collections.ArrayList valueUIItemList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OnGetUIValueItem(class System.ComponentModel.ITypeDescriptorContext context, class System.ComponentModel.PropertyDescriptor propDesc, class System.Collections.ArrayList valueUIItemList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataBindingValueUIHandler.OnGetUIValueItem(System.ComponentModel.ITypeDescriptorContext,System.ComponentModel.PropertyDescriptor,System.Collections.ArrayList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="propDesc" Type="System.ComponentModel.PropertyDescriptor" />
+        <Parameter Name="valueUIItemList" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> Objekt, das zusätzliche Kontextinformationen bereitstellen kann.</param>
+        <param name="propDesc">Ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> , eine Datenbindung für hinzuzufügenden Eigenschaft darstellt.</param>
+        <param name="valueUIItemList">Ein <see cref="T:System.Collections.ArrayList" /> von Elementen, die datenbindungen haben.</param>
+        <summary>Fügt eine Datenbindung für die angegebene Eigenschaft und der Liste angegebenen Wert hinzu, wenn das aktuelle Steuerelement, datenbindungen enthält und das aktuelle Objekt keine Bindung noch.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

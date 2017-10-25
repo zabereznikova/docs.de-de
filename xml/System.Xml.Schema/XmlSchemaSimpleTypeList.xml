@@ -1,0 +1,183 @@
+<Type Name="XmlSchemaSimpleTypeList" FullName="System.Xml.Schema.XmlSchemaSimpleTypeList">
+  <TypeSignature Language="C#" Value="public class XmlSchemaSimpleTypeList : System.Xml.Schema.XmlSchemaSimpleTypeContent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaSimpleTypeList extends System.Xml.Schema.XmlSchemaSimpleTypeContent" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaSimpleTypeList" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Schema.XmlSchemaSimpleTypeContent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die <see langword="list" /> Element im XML-Schema gemäß World Wide Web Consortium (W3C). Diese Klasse kann verwendet werden, definieren eine <see langword="simpleType" /> Element als eine Liste von Werten eines angegebenen Datentyps.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Listendatentyp ein Datentyp abgeleitet wird, können die folgenden Einschränkungsfacets verwendet werden: `length`, `maxLength`, `minLength`, `enumeration`, `pattern`, und `whiteSpace`.  
+  
+ Für jede `length`, `maxLength`, und `minLength`, die Längeneinheit in Anzahl von Elementen in der angegeben wird. Der Wert der `whiteSpace` wird repariert, die `collapse` Wert.  
+  
+   
+  
+## Examples  
+ Finden Sie unter <xref:System.Xml.Schema.XmlSchemaSimpleType> für ein Beispiel für die Verwendung dieser Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaSimpleTypeList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSimpleTypeList.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Schema.XmlSchemaSimpleTypeList" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseItemType">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaSimpleType BaseItemType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaSimpleType BaseItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaSimpleTypeList.BaseItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaSimpleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Xml.Schema.XmlSchemaSimpleType" /> , die den Typ des darstellt der <see langword="simpleType" /> Element auf der Grundlage der <see cref="P:System.Xml.Schema.XmlSchemaSimpleTypeList.ItemType" /> und <see cref="P:System.Xml.Schema.XmlSchemaSimpleTypeList.ItemTypeName" /> Werte des einfachen Typs.</summary>
+        <value>Die <see cref="T:System.Xml.Schema.XmlSchemaSimpleType" /> , die den Typ des darstellt der <see langword="simpleType" /> Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist eine post-schema-Compilation-Infoset-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaSimpleType ItemType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaSimpleType ItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaSimpleTypeList.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("simpleType", typeof(System.Xml.Schema.XmlSchemaSimpleType))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaSimpleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see langword="simpleType" /> -Element, das durch den Basiswert angegebenen Typ abgeleitet ist.</summary>
+        <value>Der Elementtyp für das simpleType-Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Basiswert muss ein QName sein. Die Verwendung von <xref:System.Xml.Schema.XmlSchemaSimpleTypeList.ItemTypeName%2A> und `ItemType` gegenseitig aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemTypeName">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName ItemTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName ItemTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaSimpleTypeList.ItemTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("itemType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen eines integrierten Datentyps oder <see langword="simpleType" /> in diesem Schema (oder einem anderen durch den angegebenen Namespace bezeichneten Schema) definierten Elemente.</summary>
+        <value>Der Typname der Liste mit einfachen Typen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert eines einfachen Typs Liste muss ein QName sein. Die Verwendung von `ItemTypeName` und <xref:System.Xml.Schema.XmlSchemaSimpleTypeList.ItemType%2A> gegenseitig aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

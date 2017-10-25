@@ -1,0 +1,142 @@
+<Type Name="CheckBox" FullName="System.Windows.Controls.CheckBox">
+  <TypeSignature Language="C#" Value="public class CheckBox : System.Windows.Controls.Primitives.ToggleButton" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi CheckBox extends System.Windows.Controls.Primitives.ToggleButton" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.CheckBox" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Primitives.ToggleButton</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("CheckStateChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.CheckBox)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement, das ein Benutzer aktivieren und deaktivieren kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.CheckBox>Steuerelemente, die von erben <xref:System.Windows.Controls.Primitives.ToggleButton> und kann drei Status aufweisen: aktiviert (ausgewählt), deaktiviert (deaktiviert), und unbestimmt.  
+  
+ Ein <xref:System.Windows.Controls.CheckBox> ist eine <xref:System.Windows.Controls.ContentControl>, was bedeutet, dass es ein einzelnes Objekt eines beliebigen Typs (z. B. eine Zeichenfolge, ein Bild oder ein Bereich) enthalten kann. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Controls.ContentControl>-Klasse.  
+  
+## <a name="customizing-the-checkbox-control"></a>Anpassen der CheckBox-Steuerelement  
+ Zum Anwenden der gleichen eigenschafteneinstellungen mit mehreren <xref:System.Windows.Controls.CheckBox> -Steuerelemente verwenden die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen. Weitere Informationen zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, finden Sie unter [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Um anzuzeigen, die Teile und Zustände, die spezifisch für die <xref:System.Windows.Controls.CheckBox>, finden Sie unter [Kontrollkästchen-Stile und Vorlagen](~/docs/framework/wpf/controls/checkbox-styles-and-templates.md).  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden.  Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird.  Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Festlegen einer visuellen Eigenschaft haben nur Auswirkungen, wenn diese Eigenschaft sowohl in vorhanden ist <xref:System.Windows.Controls.CheckBox> Steuerelement die Standardvorlage und festgelegt ist, mit ein. Sie finden eine Liste der Eigenschaften visueller Elemente im Abschnitt "Ändern der visuellen Struktur eines Steuerelements" [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.CheckBox> und behandelt die <xref:System.Windows.Controls.Primitives.ToggleButton.Checked>, <xref:System.Windows.Controls.Primitives.ToggleButton.Unchecked>, und <xref:System.Windows.Controls.Primitives.ToggleButton.Indeterminate> Ereignisse.  
+  
+ [!code-xaml[CheckBox_Snippets#4](~/samples/snippets/csharp/VS_Snippets_Wpf/CheckBox_Snippets/CSharp/Window1.xaml#4)]  
+  
+ [!code-csharp[CheckBox_Snippets#5](~/samples/snippets/csharp/VS_Snippets_Wpf/CheckBox_Snippets/CSharp/Window1.xaml.cs#5)]
+ [!code-vb[CheckBox_Snippets#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CheckBox_Snippets/VisualBasic/Window1.xaml.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CheckBox ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.CheckBox.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.CheckBox" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAccessKey">
+      <MemberSignature Language="C#" Value="protected override void OnAccessKey (System.Windows.Input.AccessKeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAccessKey(class System.Windows.Input.AccessKeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.CheckBox.OnAccessKey(System.Windows.Input.AccessKeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.AccessKeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Das <see cref="T:System.Windows.Input.AccessKeyEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Wird aufgerufen, wenn die Zugriffstaste für eine <see cref="T:System.Windows.Controls.CheckBox" /> aufgerufen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.CheckBox.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für den <see cref="T:System.Windows.Controls.CheckBox" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für das <see cref="T:System.Windows.Controls.CheckBox" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.CheckBox.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Das <see cref="T:System.Windows.Input.KeyEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Reagiert auf eine <see cref="T:System.Windows.Controls.CheckBox" /> <see cref="E:System.Windows.UIElement.KeyDown" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung kennzeichnet die <xref:System.Windows.UIElement.KeyDown> Ereignis als behandelt, indem die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft der Ereignisdaten zu `true` Wenn der Benutzer drückt die Plus- und Minustaste.  
+  
+ Diese Methode legt <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> auf `true` Wenn der Benutzer die plus-Taste drückt, und um `false` Wenn der Benutzer die MINUSTASTE drückt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen <see cref="M:System.Windows.Controls.CheckBox.OnKeyDown(System.Windows.Input.KeyEventArgs)" />, rufen Sie immer die grundlegende Implementierung Ihrer <see cref="M:System.Windows.Controls.CheckBox.OnKeyDown(System.Windows.Input.KeyEventArgs)" /> Implementierung. Die basisimplementierung aufgerufen wird verhindert, dass Basisklassen Behandlung des Ereignisses mit einem Klassenhandler, der das Laufzeitverhalten der endgültigen Klasse ändern kann. Sie können die grundlegende Implementierung entweder vor oder nach Ihrem besondere Behandlung, je nach Ihren Anforderungen aufrufen.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

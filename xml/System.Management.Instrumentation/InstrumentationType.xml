@@ -1,0 +1,78 @@
+<Type Name="InstrumentationType" FullName="System.Management.Instrumentation.InstrumentationType">
+  <TypeSignature Language="C#" Value="public enum InstrumentationType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed InstrumentationType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.InstrumentationType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Typ der von einer Klasse bereitgestellten Instrumentierung an.  
+  
+ Hinweis: Die WMI .NET-Bibliotheken werden jetzt als abgeschlossen betrachtet, und keine weiteren Entwicklungen, Verbesserungen oder Updates werden für nicht sicherheitsrelevante Aspekte verfügbar sein, die diese Bibliotheken betreffen. Die [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) für alle neuen Entwicklungen verwendet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Management-Ereignisklasse mithilfe der <xref:System.Management.Instrumentation.InstrumentationType> Enumeration.  
+  
+ [!code-csharp[wminet_InstrumentationType#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_InstrumentationType/cs/InstrumentationType.cs#1)]
+ [!code-vb[wminet_InstrumentationType#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_InstrumentationType/vb/InstrumentationType.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Abstract">
+      <MemberSignature Language="C#" Value="Abstract" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Instrumentation.InstrumentationType Abstract = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Instrumentation.InstrumentationType.Abstract" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Instrumentation.InstrumentationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Klasse definiert eine abstrakte Klasse für die Verwaltungsinstrumentierung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Event">
+      <MemberSignature Language="C#" Value="Event" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Instrumentation.InstrumentationType Event = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Instrumentation.InstrumentationType.Event" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Instrumentation.InstrumentationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Klasse stellt Ereignisse für die Verwaltungsinstrumentierung bereit.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Instance">
+      <MemberSignature Language="C#" Value="Instance" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Instrumentation.InstrumentationType Instance = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Instrumentation.InstrumentationType.Instance" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Instrumentation.InstrumentationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Klasse stellt Instanzen für die Verwaltungsinstrumentierung bereit.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

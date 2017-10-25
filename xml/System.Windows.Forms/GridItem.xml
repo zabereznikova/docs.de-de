@@ -1,0 +1,279 @@
+<Type Name="GridItem" FullName="System.Windows.Forms.GridItem">
+  <TypeSignature Language="C#" Value="public abstract class GridItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit GridItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.GridItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert eine Zeile in einer <see cref="T:System.Windows.Forms.PropertyGrid" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rasterelemente darstellen, die Hierarchie der Sicht in einer <xref:System.Windows.Forms.PropertyGrid>. Sie können eine <xref:System.Windows.Forms.GridItem> zum Abrufen von Informationen zum Status und den Inhalt des Datenblatts.  
+  
+ <xref:System.Windows.Forms.GridItem>-Objekte sollten nicht zwischengespeichert werden, da sie eine Momentaufnahme des Zustands des darstellen der <xref:System.Windows.Forms.PropertyGrid> Zeitpunkt darauf zugegriffen werden, und Rasteraktivitäten im kann verworfen werden. Die <xref:System.Windows.Forms.PropertyGrid> häufig neu <xref:System.Windows.Forms.GridItem> Objekte intern ohne Ändern der Ansicht für den Benutzer.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected GridItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.GridItem" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expandable">
+      <MemberSignature Language="C#" Value="public virtual bool Expandable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Expandable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.Expandable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft einen Wert ab, ob die angegebene Eigenschaft erweiterbar ist, um geschachtelte Eigenschaften anzuzeigen.</summary>
+        <value>
+          <see langword="true" />Wenn die angegebene Eigenschaft erweitert werden kann. andernfalls <see langword="false" />. Der Standardwert ist false.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Eigenschaft erweiterbar ist, wird ein Pluszeichen (+) Anmeldung wird angezeigt, mit dem Namen der Eigenschaft in der <xref:System.Windows.Forms.PropertyGrid>. Wenn das Pluszeichen (+) geklickt wird, und keine geschachtelte Eigenschaften verfügbar sind, wird das Pluszeichen entfernt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expanded">
+      <MemberSignature Language="C#" Value="public virtual bool Expanded { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Expanded" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.Expanded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.GridItem" /> befindet sich in einem erweiterten Zustand.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Die <see cref="P:System.Windows.Forms.GridItem.Expanded" /> -Eigenschaft wurde festgelegt, um <see langword="true" />, aber ein <see cref="T:System.Windows.Forms.GridItem" /> ist nicht erweiterbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GridItems">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Forms.GridItemCollection GridItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.GridItemCollection GridItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.GridItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GridItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft die Auflistung der <see cref="T:System.Windows.Forms.GridItem" /> Objekte, sofern vorhanden, zugehörige, als untergeordnetes Element dieses <see cref="T:System.Windows.Forms.GridItem" />.</summary>
+        <value>Die Auflistung von <see cref="T:System.Windows.Forms.GridItem" />-Objekten</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GridItemType">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Forms.GridItemType GridItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.GridItemType GridItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.GridItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GridItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Typ dieses <see cref="T:System.Windows.Forms.GridItem" />.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.GridItemType" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine <xref:System.Windows.Forms.GridItem> des Typs <xref:System.Windows.Forms.GridItemType?displayProperty=nameWithType>, Sie müssen auch sicherstellen, dass die <xref:System.Windows.Forms.GridItem.PropertyDescriptor%2A> verfügt über einen gültigen Wert. Für eine <xref:System.Windows.Forms.GridItem> des Typs <xref:System.Windows.Forms.GridItemType?displayProperty=nameWithType> der <xref:System.Windows.Forms.GridItem.Parent%2A> Eigenschaft muss `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public abstract string Label { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Text dieser <see cref="T:System.Windows.Forms.GridItem" />.</summary>
+        <value>Ein <see cref="T:System.String" /> zugeordneten Text darstellt <see cref="T:System.Windows.Forms.GridItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ruft den Text ab, der in der linken Spalte des Rasters angezeigt. Der abgerufene Text kann von den tatsächlichen Eigenschaftsnamen der dargestellt, die von dieser Eigenschaft abweichen <xref:System.Windows.Forms.GridItem>. Sie erhalten den Namen für eine <xref:System.Windows.Forms.GridItem> vom Typ <xref:System.Windows.Forms.GridItemType?displayProperty=nameWithType> durch Abrufen der <xref:System.Windows.Forms.GridItem.PropertyDescriptor%2A> und Überprüfen seiner <xref:System.ComponentModel.MemberDescriptor.Name%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Forms.GridItem Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.GridItem Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GridItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft das übergeordnete Element <see cref="T:System.Windows.Forms.GridItem" /> dieses <see cref="T:System.Windows.Forms.GridItem" />, sofern vorhanden.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.GridItem" /> , die das übergeordnete Element darstellt. die <see cref="T:System.Windows.Forms.GridItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.GridItem.GridItemType%2A> für die <xref:System.Windows.Forms.GridItem> ist <xref:System.Windows.Forms.GridItemType?displayProperty=nameWithType>, dieser Wert `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyDescriptor">
+      <MemberSignature Language="C#" Value="public abstract System.ComponentModel.PropertyDescriptor PropertyDescriptor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptor PropertyDescriptor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.PropertyDescriptor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die <see cref="T:System.ComponentModel.PropertyDescriptor" /> , die mit dieser verknüpft ist <see cref="T:System.Windows.Forms.GridItem" />.</summary>
+        <value>Das dieser <see cref="T:System.ComponentModel.PropertyDescriptor" /> zugeordnete <see cref="T:System.Windows.Forms.GridItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gilt nur für eine <xref:System.Windows.Forms.GridItem> vom Typ <xref:System.Windows.Forms.GridItemType?displayProperty=nameWithType>.  
+  
+ Sie können diese Eigenschaft verwenden, zum Abrufen von Informationen wie z. B. den Eigenschaftentyp des Rasterelements, den Namen des Rasterelements oder der Typkonverter für das Grid-Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public abstract bool Select ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Select() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GridItem.Select" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse wählt diese <see cref="T:System.Windows.Forms.GridItem" /> in der <see cref="T:System.Windows.Forms.PropertyGrid" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die Auswahl erfolgreich ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest benutzerdefinierten Daten zu den <see cref="T:System.Windows.Forms.GridItem" />.</summary>
+        <value>Ein <see cref="T:System.Object" />, das Daten über den <see cref="T:System.Windows.Forms.GridItem" /> enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public abstract object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GridItem.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den aktuellen Wert dieses <see cref="T:System.Windows.Forms.GridItem" />.</summary>
+        <value>Der aktuelle Wert dieser <see cref="T:System.Windows.Forms.GridItem" />. Dieser Wert kann <see langword="null" /> sein.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

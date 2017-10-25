@@ -1,0 +1,399 @@
+<Type Name="XmlSyndicationContent" FullName="System.ServiceModel.Syndication.XmlSyndicationContent">
+  <TypeSignature Language="C#" Value="public class XmlSyndicationContent : System.ServiceModel.Syndication.SyndicationContent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSyndicationContent extends System.ServiceModel.Syndication.SyndicationContent" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Syndication.XmlSyndicationContent" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Syndication.SyndicationContent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Steht für XML-Syndication-Inhalte, die nicht in einem Browser angezeigt werden sollen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird verwendet, um serialisierte Objekte oder andere Anwendungszustandsdaten als XML zu senden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlSyndicationContent (System.ServiceModel.Syndication.XmlSyndicationContent source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Syndication.XmlSyndicationContent source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.XmlSyndicationContent.#ctor(System.ServiceModel.Syndication.XmlSyndicationContent)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.ServiceModel.Syndication.XmlSyndicationContent" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" />-Instanz.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" /> mit der angegebenen <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" />-Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSyndicationContent (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.XmlSyndicationContent.#ctor(System.Xml.XmlReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSyndicationContent (string type, System.ServiceModel.Syndication.SyndicationElementExtension extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, class System.ServiceModel.Syndication.SyndicationElementExtension extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.XmlSyndicationContent.#ctor(System.String,System.ServiceModel.Syndication.SyndicationElementExtension)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="extension" Type="System.ServiceModel.Syndication.SyndicationElementExtension" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Inhaltstyp, der in der Regel als MIME-Inhaltstyp ausgedrückt wird, z.&amp;#160;B. Anwendung/XML oder Anwendung/xml+customer.</param>
+        <param name="extension">Die <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtension" /> zur Platzierung im <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" />.</param>
+        <summary>Initialisiert eine neue Instanz des <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" /> mit dem angegebenen Typ und der <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtension" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSyndicationContent (string type, object dataContractExtension, System.Runtime.Serialization.XmlObjectSerializer dataContractSerializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, object dataContractExtension, class System.Runtime.Serialization.XmlObjectSerializer dataContractSerializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.XmlSyndicationContent.#ctor(System.String,System.Object,System.Runtime.Serialization.XmlObjectSerializer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="dataContractExtension" Type="System.Object" />
+        <Parameter Name="dataContractSerializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ des Inhalts.</param>
+        <param name="dataContractExtension">Die Erweiterung des Datenvertrags.</param>
+        <param name="dataContractSerializer">Der zu verwendende <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" />.</param>
+        <summary>Initialisiert eine neue Instanz des <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" /> mit dem angegebenen Typ, dem Objekt und dem <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Runtime.Serialization.DataContractSerializer> ist ein Untertyp des <xref:System.Runtime.Serialization.XmlObjectSerializer>. Bei der Übergabe von Null wird eine Standardinstanz von <xref:System.Runtime.Serialization.DataContractSerializer> eingerichtet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSyndicationContent (string type, object xmlSerializerExtension, System.Xml.Serialization.XmlSerializer serializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, object xmlSerializerExtension, class System.Xml.Serialization.XmlSerializer serializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.XmlSyndicationContent.#ctor(System.String,System.Object,System.Xml.Serialization.XmlSerializer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="xmlSerializerExtension" Type="System.Object" />
+        <Parameter Name="serializer" Type="System.Xml.Serialization.XmlSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ des Inhalts.</param>
+        <param name="xmlSerializerExtension">Die XML-Serialisierer-Erweiterung.</param>
+        <param name="serializer">Der zu verwendende <see cref="T:System.Xml.Serialization.XmlSerializer" />.</param>
+        <summary>Initialisiert eine neue Instanz des <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" /> mit dem angegebenen Typ, dem Objekt und dem <see cref="T:System.Xml.Serialization.XmlSerializer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Syndication.SyndicationContent Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Syndication.SyndicationContent Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.XmlSyndicationContent.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationContent</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie der vorhandenen <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" />-Instanz.</summary>
+        <returns>Eine neue <see cref="T:System.ServiceModel.Syndication.SyndicationContent" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extension">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Syndication.SyndicationElementExtension Extension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Syndication.SyndicationElementExtension Extension" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.XmlSyndicationContent.Extension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationElementExtension</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtension" /> ab.</summary>
+        <value>Eine <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtension" />-Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Senden/Serialisieren steht diese Eigenschaft für den zu serialisierenden XML-Inhalt.  
+  
+ Beim Empfangen/Deserialisieren ist diese Eigenschaft stets `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReaderAtContent">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryReader GetReaderAtContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlDictionaryReader GetReaderAtContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.XmlSyndicationContent.GetReaderAtContent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Reader aus dem Inhalt des <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" /> ab.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlDictionaryReader" /> aus dem Inhalt des <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadContent&lt;TContent&gt;">
+      <MemberSignature Language="C#" Value="public TContent ReadContent&lt;TContent&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TContent ReadContent&lt;TContent&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.XmlSyndicationContent.ReadContent``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TContent</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TContent" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TContent">Der Typ des zu lesenden Inhalts.</typeparam>
+        <summary>Liest den Inhalt des angegebenen Typs in die <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" />-Instanz ein.</summary>
+        <returns>Ein Objekt des angegebenen Typs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ist beim Empfangen/Deserialisieren das XML-Syndication-Inhaltselement ein leeres XML-Element, wird default(`TContent`) zurückgegeben. Ist dies nicht der Fall, wird eine neue <xref:System.Runtime.Serialization.DataContractSerializer>-Instanz erstellt und zur Deserialisierung des inneren XML-Codes des XML-Syndication-Inhaltselements in eine Instanz von `TContent` verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Das Eingabe-XML kann nicht in den angeforderten Typ deserialisiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadContent&lt;TContent&gt;">
+      <MemberSignature Language="C#" Value="public TContent ReadContent&lt;TContent&gt; (System.Runtime.Serialization.XmlObjectSerializer serializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TContent ReadContent&lt;TContent&gt;(class System.Runtime.Serialization.XmlObjectSerializer serializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.XmlSyndicationContent.ReadContent``1(System.Runtime.Serialization.XmlObjectSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TContent</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TContent" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="dataContractSerializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TContent">Der Typ des zu lesenden Inhalts.</typeparam>
+        <param name="serializer">To be added.</param>
+        <summary>Liest den Inhalt des angegebenen Typs mit dem angegebenen Serialisierungsprogramm in das <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" />-Objekt ein.</summary>
+        <returns>Ein Objekt des angegebenen Typs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ist beim Empfangen/Deserialisieren das XML-Syndication-Inhaltselement ein leeres XML-Element, wird default(`TContent`) zurückgegeben. Ist dies nicht der Fall, wird die übergebene <xref:System.Runtime.Serialization.XmlObjectSerializer>-Instanz zur Deserialisierung des inneren XML-Codes des XML-Syndication-Inhaltselements in eine Instanz von `TContent` verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Das Eingabe-XML kann nicht in den angeforderten Typ deserialisiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadContent&lt;TContent&gt;">
+      <MemberSignature Language="C#" Value="public TContent ReadContent&lt;TContent&gt; (System.Xml.Serialization.XmlSerializer serializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TContent ReadContent&lt;TContent&gt;(class System.Xml.Serialization.XmlSerializer serializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.XmlSyndicationContent.ReadContent``1(System.Xml.Serialization.XmlSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TContent</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TContent" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serializer" Type="System.Xml.Serialization.XmlSerializer" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TContent">Der Typ des zu lesenden Inhalts.</typeparam>
+        <param name="serializer">Der zu verwendende <see cref="T:System.Xml.Serialization.XmlSerializer" />.</param>
+        <summary>Liest den Inhalt des angegebenen Typs mit dem angegebenen Serialisierungsprogramm in das <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" />-Objekt ein.</summary>
+        <returns>Ein Objekt des angegebenen Typs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ist beim Empfangen/Deserialisieren das XML-Syndication-Inhaltselement ein leeres XML-Element, wird default(`TContent`) zurückgegeben. Ist dies nicht der Fall, wird die übergebene <xref:System.Xml.Serialization.XmlSerializer>-Instanz zur Deserialisierung des inneren XML-Codes des XML-Syndication-Inhaltselements in eine Instanz von `TContent` verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Eingabe-XML kann nicht in den angeforderten Typ deserialisiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public override string Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.XmlSyndicationContent.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des XML-Syndication-Inhalts ab.</summary>
+        <value>Der XML-Syndication-Inhaltstyp.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteContentsTo">
+      <MemberSignature Language="C#" Value="protected override void WriteContentsTo (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WriteContentsTo(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.XmlSyndicationContent.WriteContentsTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den geschrieben werden soll.</param>
+        <summary>Schreiben Sie den Inhalt des <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" /> in den angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode schreibt den inneren XML-Inhalt der <xref:System.ServiceModel.Syndication.XmlSyndicationContent>-Instanz (schreibt z.&#160;B. nicht die obersten Start- und die Endelemente des Syndication-Inhalts).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

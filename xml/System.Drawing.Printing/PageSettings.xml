@@ -1,0 +1,580 @@
+<Type Name="PageSettings" FullName="System.Drawing.Printing.PageSettings">
+  <TypeSignature Language="C#" Value="public class PageSettings : ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PageSettings extends System.Object implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Printing.PageSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Gibt die Einstellungen, die für einen einzelnen, gedruckte Seite gelten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Printing.PageSettings> Klasse wird verwendet, um Einstellungen anzugeben, die die Art und Weise ändern, eine Seite gedruckt werden wird. In der Regel legen Sie die Standardeinstellungen für alle Seiten durch gedruckt werden die <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A?displayProperty=nameWithType> Eigenschaft. Um die Einstellungen auf Basis der Seite für Seite angeben, behandelt der <xref:System.Drawing.Printing.PrintDocument.PrintPage?displayProperty=nameWithType> oder <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings?displayProperty=nameWithType> Ereignis und Ändern der <xref:System.Drawing.Printing.PageSettings> Argument enthalten, die der <xref:System.Drawing.Printing.PrintPageEventArgs> oder <xref:System.Drawing.Printing.QueryPageSettingsEventArgs>bzw..  
+  
+ Weitere Informationen zum Behandeln von <xref:System.Drawing.Printing.PrintDocument> -Ereignissen finden Sie unter der <xref:System.Drawing.Printing.PrintDocument> -Klassenübersicht. Weitere Informationen zu drucken, finden Sie unter der <xref:System.Drawing.Printing> Namespace (Übersicht).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Behandlung der <xref:System.Drawing.Printing.PrintDocument.PrintPage> -Ereignisses und das Überprüfen der <xref:System.Drawing.Printing.PageSettings> Argument <xref:System.Drawing.Printing.PrintPageEventArgs>. Um diesen Code verwenden möchten, fügen eine <xref:System.Drawing.Printing.PrintDocument> Komponente namens `PrintDocument1` auf einem Windows Form und ordnen die <xref:System.Drawing.Printing.PrintDocument.PrintPage> Ereignis "mit" der `printDocument1_PrintPage` -Methode im Beispiel.  
+  
+ [!code-csharp[System.Windows.Forms.MiscBugDriven#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MiscBugDriven/CS/Form1.cs#3)]
+ [!code-vb[System.Windows.Forms.MiscBugDriven#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MiscBugDriven/VB/form1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PageSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Printing.PageSettings" /> -Klasse mit den Standarddrucker.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor initialisiert alle Felder mit ihren Standardwerten.  
+  
+ Normalerweise erstellen Sie keine Instanz von <xref:System.Drawing.Printing.PageSettings>, aber verwenden Sie stattdessen die <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A?displayProperty=nameWithType> um die Einstellungen für alle Seiten festzulegen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageSettings (System.Drawing.Printing.PrinterSettings printerSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Printing.PrinterSettings printerSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PageSettings.#ctor(System.Drawing.Printing.PrinterSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="printerSettings" Type="System.Drawing.Printing.PrinterSettings" />
+      </Parameters>
+      <Docs>
+        <param name="printerSettings">Die <see cref="T:System.Drawing.Printing.PrinterSettings" /> , die den zu verwendenden Drucker beschreibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Printing.PageSettings" /> -Klasse mit einem angegebenen Drucker.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Printing.PageSettings.%23ctor%2A> Konstruktor ähnelt der Initialisieren einer neuen Instanz der <xref:System.Drawing.Printing.PageSettings> verwendet wird und die <xref:System.Drawing.Printing.PageSettings.PrinterSettings%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PageSettings.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe der Seite, und berücksichtigt die seitenausrichtung, die gemäß der <see cref="P:System.Drawing.Printing.PageSettings.Landscape" /> Eigenschaft.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" /> , die die Länge und Breite in hunderstel Zoll, der die Seite darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Drawing.Printing.PageSettings.Bounds%2A> Eigenschaft zusammen mit der <xref:System.Drawing.Printing.PageSettings.Margins%2A> Eigenschaft zum Berechnen des Druckbereichs der Seite.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Drawing.Printing.InvalidPrinterException">Der Drucker mit dem Namen der <see cref="P:System.Drawing.Printing.PrinterSettings.PrinterName" /> Eigenschaft ist nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PageSettings.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie dieser <see cref="T:System.Drawing.Printing.PageSettings" />.</summary>
+        <returns>Eine Kopie dieses Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Color">
+      <MemberSignature Language="C#" Value="public bool Color { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Color" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PageSettings.Color" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Seite in Farbe gedruckt werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn die Seite in Farbe gedruckt werden soll andernfalls <see langword="false" />. Der Standardwert wird vom Drucker bestimmt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Drawing.Printing.PrinterSettings.SupportsColor%2A?displayProperty=nameWithType> Eigenschaft, um zu bestimmen, ob der Drucker Farbdruck unterstützt. Wenn der Drucker Farbdruck unterstützt, aber Sie keine sollten in Farbe gedruckt, legen Sie die <xref:System.Drawing.Printing.PageSettings.Color%2A> Eigenschaft `false`. Standardmäßig werden `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird Druckt ein Dokument mit der ersten Seite in Farbe an, wenn der Drucker unterstützt. Im Beispiel erfordert, dass eine <xref:System.Drawing.Printing.PrintDocument> Variable mit dem Namen `printDoc` erstellt wurde, und die <xref:System.Drawing.Printing.PrintDocument.PrintPage> und <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> Ereignisse behandelt.  
+  
+ Verwenden der <xref:System.Drawing> und <xref:System.Drawing.Printing> Namespaces für dieses Beispiel.  
+  
+ [!code-cpp[PaperSource and PaperSize Example with Resolution#6](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#6)]
+ [!code-csharp[PaperSource and PaperSize Example with Resolution#6](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#6)]
+ [!code-vb[PaperSource and PaperSize Example with Resolution#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Drawing.Printing.InvalidPrinterException">Der Drucker mit dem Namen der <see cref="P:System.Drawing.Printing.PrinterSettings.PrinterName" /> Eigenschaft ist nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyToHdevmode">
+      <MemberSignature Language="C#" Value="public void CopyToHdevmode (IntPtr hdevmode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyToHdevmode(native int hdevmode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PageSettings.CopyToHdevmode(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hdevmode" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hdevmode">Das Handle für eine Win32- <see langword="DEVMODE" /> Struktur.</param>
+        <summary>Kopiert die relevanten Informationen aus der <see cref="T:System.Drawing.Printing.PageSettings" /> in den angegebenen <see langword="DEVMODE" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen der <xref:System.Drawing.Printing.PageSettings.CopyToHdevmode%2A> Methode, um relevante Informationen zum Kopieren einer `DEVMODE` Struktur aus einer <xref:System.Drawing.Printing.PageSettings>. Diese Methode ist nützlich, wenn Sie möchten, nicht verwalteten Win32-aufrufen, die erfordern einen `DEVMODE`.  
+  
+ Zum Kopieren einer `DEVMODE` -Struktur in der <xref:System.Drawing.Printing.PageSettings>, rufen Sie <xref:System.Drawing.Printing.PageSettings.SetHdevmode%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Drawing.Printing.InvalidPrinterException">Der Drucker mit dem Namen der <see cref="P:System.Drawing.Printing.PrinterSettings.PrinterName" /> Eigenschaft ist nicht vorhanden oder es ist kein Drucker installiert.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">zum Drucken und den Zugriff auf alle Drucker im Netzwerk. Zugeordnete Enumeration:<see cref="F:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="HardMarginX">
+      <MemberSignature Language="C#" Value="public float HardMarginX { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 HardMarginX" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PageSettings.HardMarginX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die X-Koordinate, in hunderstel Zoll, von der Festplatte Rand am linken Rand der Seite ab.</summary>
+        <value>Die X-Koordinate, in in hunderstel Zoll des linken Rands.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rands stellt den physischen Rand festgelegt, die für den Drucker.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Im Zusammenhang Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">für Vollzugriff auf alle Drucker. Verwandte Enumeration:<see cref="F:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="HardMarginY">
+      <MemberSignature Language="C#" Value="public float HardMarginY { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 HardMarginY" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PageSettings.HardMarginY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die y-Koordinate, in hunderstel Zoll Rands am oberen Rand der Seite ab.</summary>
+        <value>Die y-Koordinate, in in hunderstel Zoll Rands am oberen Rand der Seite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rands stellt den physischen Rand festgelegt, die für den Drucker.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Im Zusammenhang Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">für Vollzugriff auf alle Drucker. Verwandte Enumeration:<see cref="F:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Landscape">
+      <MemberSignature Language="C#" Value="public bool Landscape { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Landscape" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PageSettings.Landscape" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Seite im Quer-oder Hochformat gedruckt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Seite im Querformat; gedruckt werden soll andernfalls <see langword="false" />. Der Standardwert wird vom Drucker bestimmt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Drawing.Printing.PrinterSettings.LandscapeAngle%2A?displayProperty=nameWithType> Eigenschaft, um den Winkel in Grad, zu bestimmen, dass die Ausrichtung im Hochformat gedreht wird, um die Querformat.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt ein Dokument standardausrichtung auf Querformat über die <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A?displayProperty=nameWithType> -Eigenschaft, und das Dokument gedruckt. Das Beispiel besteht aus drei Komponenten:  
+  
+-   Eine Variable namens `filePath` auf den Pfad der Datei zum Drucken festgelegt wurde.  
+  
+-   Eine Methode namens `pd_PrintPage`, welche behandelt die <xref:System.Drawing.Printing.PrintDocument.PrintPage> Ereignis definiert wurde.  
+  
+-   Eine Variable namens `printer` auf den Namen des Druckers festgelegt wurde.  
+  
+ Verwenden der <xref:System.Drawing>, <xref:System.Drawing.Printing>, und <xref:System.IO> Namespaces für dieses Beispiel.  
+  
+ [!code-cpp[Classic PageSettings Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic PageSettings Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic PageSettings Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic PageSettings Example/CS/source.cs#1)]
+ [!code-vb[Classic PageSettings Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic PageSettings Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Drawing.Printing.InvalidPrinterException">Der Drucker mit dem Namen der <see cref="P:System.Drawing.Printing.PrinterSettings.PrinterName" /> Eigenschaft ist nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Margins">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.Margins Margins { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.Margins Margins" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PageSettings.Margins" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.Margins</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ränder für diese Seite.</summary>
+        <value>Ein <see cref="T:System.Drawing.Printing.Margins" /> , die die Ränder, in hunderstel Zoll für die Seite darstellt. Der Standardwert ist 1 Zoll Ränder auf allen Seiten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Verarbeiten der <xref:System.Drawing.Printing.PrintDocument.PrintPage?displayProperty=nameWithType> -Ereignis können Sie diese Eigenschaft zusammen mit der <xref:System.Drawing.Printing.PageSettings.Bounds%2A> Eigenschaft zum Berechnen des Druckbereichs der Seite.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Standardeinstellung legt seiteneinstellungen fest für ein Dokument dem Seitenrand auf 1 Zoll auf jeder Seite. Das Beispiel besteht aus drei Komponenten:  
+  
+-   Eine Variable namens `filePath` auf den Pfad der Datei zum Drucken festgelegt wurde.  
+  
+-   Eine Methode namens `pd_PrintPage`, welche behandelt die <xref:System.Drawing.Printing.PrintDocument.PrintPage> Ereignis definiert wurde.  
+  
+-   Eine Variable namens `printer` auf den Namen des Druckers festgelegt wurde.  
+  
+ Verwenden der <xref:System.Drawing>, <xref:System.Drawing.Printing>, und <xref:System.IO> Namespaces für dieses Beispiel.  
+  
+ [!code-cpp[Classic PageSettings.Margins Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic PageSettings.Margins Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic PageSettings.Margins Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic PageSettings.Margins Example/CS/source.cs#1)]
+ [!code-vb[Classic PageSettings.Margins Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic PageSettings.Margins Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Drawing.Printing.InvalidPrinterException">Der Drucker mit dem Namen der <see cref="P:System.Drawing.Printing.PrinterSettings.PrinterName" /> Eigenschaft ist nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PaperSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PaperSize PaperSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.PaperSize PaperSize" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PageSettings.PaperSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PaperSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Papierformat für die Seite.</summary>
+        <value>Ein <see cref="T:System.Drawing.Printing.PaperSize" /> , die die Größe der in diesem Dokument darstellt. Der Standardwert ist der Drucker Standard-Papierformat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Printing.PaperSize> stellt das Papierformat über die <xref:System.Drawing.Printing.PaperSize.Kind%2A?displayProperty=nameWithType> -Eigenschaft, die eine enthält die <xref:System.Drawing.Printing.PaperKind> Werte.  
+  
+ Legen Sie die <xref:System.Drawing.Printing.PageSettings.PaperSize%2A> Eigenschaft für die Seite einem gültigen <xref:System.Drawing.Printing.PaperSize>, über die <xref:System.Drawing.Printing.PrinterSettings.PaperSizes%2A?displayProperty=nameWithType> Auflistung.  
+  
+ Weitere Informationen dazu, wie Sie eine benutzerdefinierte Papiergröße angeben können, finden Sie unter der <xref:System.Drawing.Printing.PaperSize.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt drei Eigenschaften für das Dokument-Standardseite, z. B. das Papierformat, die auf Grundlage der Größe, die im ausgewählten der `comboPaperSize` Kombinationsfeld, und gibt dann das Dokument mit der <xref:System.Drawing.Printing.PrintDocument.Print%2A> Methode. Im Beispiel erfordert, dass eine <xref:System.Drawing.Printing.PrintDocument> Variable mit dem Namen `printDoc` vorhanden ist und, die die bestimmten Kombinationsfelder vorhanden sind.  
+  
+ [!code-cpp[PaperSource and PaperSize Example with Resolution#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#1)]
+ [!code-csharp[PaperSource and PaperSize Example with Resolution#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#1)]
+ [!code-vb[PaperSource and PaperSize Example with Resolution#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#1)]  
+[!code-cpp[PaperSource and PaperSize Example with Resolution#2](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#2)]
+[!code-csharp[PaperSource and PaperSize Example with Resolution#2](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#2)]
+[!code-vb[PaperSource and PaperSize Example with Resolution#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#2)]  
+[!code-cpp[PaperSource and PaperSize Example with Resolution#3](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#3)]
+[!code-csharp[PaperSource and PaperSize Example with Resolution#3](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#3)]
+[!code-vb[PaperSource and PaperSize Example with Resolution#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#3)]  
+[!code-cpp[PaperSource and PaperSize Example with Resolution#4](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#4)]
+[!code-csharp[PaperSource and PaperSize Example with Resolution#4](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#4)]
+[!code-vb[PaperSource and PaperSize Example with Resolution#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Drawing.Printing.InvalidPrinterException">Der Drucker mit dem Namen der <see cref="P:System.Drawing.Printing.PrinterSettings.PrinterName" /> Eigenschaft ist nicht vorhanden oder es ist kein Drucker installiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PaperSource">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PaperSource PaperSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.PaperSource PaperSource" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PageSettings.PaperSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PaperSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Anzeigezustand der Seite Papierquelle; z. B. den Drucker oberen Fach.</summary>
+        <value>Ein <see cref="T:System.Drawing.Printing.PaperSource" /> , die die Quelle des Papiers angibt. Der Standardwert ist der Drucker Papier Standardquelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Printing.PaperSource> stellt die Quelle des Papiers über die <xref:System.Drawing.Printing.PaperSource.Kind%2A?displayProperty=nameWithType> -Eigenschaft, die eine enthält die <xref:System.Drawing.Printing.PaperSourceKind> Werte.  
+  
+ Legen Sie die <xref:System.Drawing.Printing.PageSettings.PaperSource%2A> Eigenschaft für die Seite einem gültigen <xref:System.Drawing.Printing.PaperSource>, über die <xref:System.Drawing.Printing.PrinterSettings.PaperSources%2A?displayProperty=nameWithType> Auflistung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt drei Eigenschaften für das Dokument-Standardseite, einschließlich der Papierquelle basierend auf der Quelle, die im ausgewählten der `comboPaperSource` Kombinationsfeld, und gibt dann das Dokument mit der <xref:System.Drawing.Printing.PrintDocument.Print%2A> Methode. Im Beispiel erfordert, dass eine <xref:System.Drawing.Printing.PrintDocument> Variable mit dem Namen `printDoc` vorhanden ist und, die die bestimmten Kombinationsfelder vorhanden sind.  
+  
+ [!code-cpp[PaperSource and PaperSize Example with Resolution#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#1)]
+ [!code-csharp[PaperSource and PaperSize Example with Resolution#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#1)]
+ [!code-vb[PaperSource and PaperSize Example with Resolution#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#1)]  
+[!code-cpp[PaperSource and PaperSize Example with Resolution#2](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#2)]
+[!code-csharp[PaperSource and PaperSize Example with Resolution#2](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#2)]
+[!code-vb[PaperSource and PaperSize Example with Resolution#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#2)]  
+[!code-cpp[PaperSource and PaperSize Example with Resolution#3](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#3)]
+[!code-csharp[PaperSource and PaperSize Example with Resolution#3](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#3)]
+[!code-vb[PaperSource and PaperSize Example with Resolution#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#3)]  
+[!code-cpp[PaperSource and PaperSize Example with Resolution#4](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#4)]
+[!code-csharp[PaperSource and PaperSize Example with Resolution#4](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#4)]
+[!code-vb[PaperSource and PaperSize Example with Resolution#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Drawing.Printing.InvalidPrinterException">Der Drucker mit dem Namen der <see cref="P:System.Drawing.Printing.PrinterSettings.PrinterName" /> Eigenschaft ist nicht vorhanden oder es ist kein Drucker installiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintableArea">
+      <MemberSignature Language="C#" Value="public System.Drawing.RectangleF PrintableArea { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.RectangleF PrintableArea" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PageSettings.PrintableArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.RectangleF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Grenzen des Druckbereichs der Seite für den Drucker ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.RectangleF" /> die Länge und Breite in hunderstel Zoll des Bereichs darstellt wird der Drucker drucken kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Printing.PageSettings.PrintableArea%2A> Eigenschaft gibt den richtigen Wert, ob die seitenausrichtung Quer- oder Hochformat ist.  
+  
+ Sie können diese Eigenschaft verwenden, außerhalb der Rand der Seite, aber innerhalb des Druckbereichs gedruckt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrinterResolution">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PrinterResolution PrinterResolution { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.PrinterResolution PrinterResolution" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PageSettings.PrinterResolution" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PrinterResolution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Auflösung des Druckers für die Seite.</summary>
+        <value>Ein <see cref="T:System.Drawing.Printing.PrinterResolution" /> , die der Auflösung des Druckers für die Seite angibt. Der Standardwert ist der Drucker Standardlösung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Printing.PrinterResolution> stellt die Auflösung Drucker über die <xref:System.Drawing.Printing.PrinterResolution.Kind%2A?displayProperty=nameWithType> -Eigenschaft, die eine enthält die <xref:System.Drawing.Printing.PrinterResolutionKind> Werte.  
+  
+ Legen Sie die <xref:System.Drawing.Printing.PageSettings.PrinterResolution%2A> Eigenschaft für die Seite einem gültigen <xref:System.Drawing.Printing.PrinterResolution>, über die <xref:System.Drawing.Printing.PrinterSettings.PrinterResolutions%2A?displayProperty=nameWithType> Auflistung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt drei Eigenschaften für das Dokument-Standardseite, einschließlich des Druckers Auflösung basierend auf der Auflösung, die im ausgewählten der `comboPrintResolution` Kombinationsfeld, und gibt dann das Dokument mit der <xref:System.Drawing.Printing.PrintDocument.Print%2A> Methode. Im Beispiel erfordert, dass eine <xref:System.Drawing.Printing.PrintDocument> Variable mit dem Namen `printDoc` vorhanden ist und, die die bestimmten Kombinationsfelder vorhanden sind.  
+  
+ [!code-cpp[PaperSource and PaperSize Example with Resolution#4](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#4)]
+ [!code-csharp[PaperSource and PaperSize Example with Resolution#4](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#4)]
+ [!code-vb[PaperSource and PaperSize Example with Resolution#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Drawing.Printing.InvalidPrinterException">Der Drucker mit dem Namen der <see cref="P:System.Drawing.Printing.PrinterSettings.PrinterName" /> Eigenschaft ist nicht vorhanden oder es ist kein Drucker installiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PrinterSettings">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PrinterSettings PrinterSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.PrinterSettings PrinterSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PageSettings.PrinterSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PrinterSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Druckereinstellungen im Zusammenhang mit der Seite.</summary>
+        <value>Ein <see cref="T:System.Drawing.Printing.PrinterSettings" /> , den Druckereinstellungen im Zusammenhang mit der Seite darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Druckereinstellungen können Sie die um Standardwerte für Eigenschaften der Seite zu finden, die nicht festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHdevmode">
+      <MemberSignature Language="C#" Value="public void SetHdevmode (IntPtr hdevmode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetHdevmode(native int hdevmode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PageSettings.SetHdevmode(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hdevmode" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hdevmode">Das Handle für eine Win32- <see langword="DEVMODE" /> Struktur.</param>
+        <summary>Kopiert die relevanten Informationen zu den <see cref="T:System.Drawing.Printing.PageSettings" /> aus dem angegebenen <see langword="DEVMODE" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie relevanten Informationen im Kopieren einer `DEVMODE` -Struktur in der <xref:System.Drawing.Printing.PageSettings>.  
+  
+ Zum Kopieren der <xref:System.Drawing.Printing.PageSettings> auf eine `DEVMODE`, rufen Sie <xref:System.Drawing.Printing.PageSettings.CopyToHdevmode%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Druckerhandle ist ungültig.</exception>
+        <exception cref="T:System.Drawing.Printing.InvalidPrinterException">Der Drucker mit dem Namen der <see cref="P:System.Drawing.Printing.PrinterSettings.PrinterName" /> Eigenschaft ist nicht vorhanden oder es ist kein Drucker installiert.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">zum Drucken und den Zugriff auf alle Drucker im Netzwerk. Zugeordnete Enumeration:<see cref="F:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PageSettings.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert die <see cref="T:System.Drawing.Printing.PageSettings" /> , in Form einer Zeichenfolge.</summary>
+        <returns>Eine Zeichenfolge, die mit den verschiedenen Einstellungen für die <see cref="T:System.Drawing.Printing.PageSettings" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

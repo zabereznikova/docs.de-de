@@ -1,0 +1,96 @@
+<Type Name="CodeAccessSecurityAttribute" FullName="System.Security.Permissions.CodeAccessSecurityAttribute">
+  <TypeSignature Language="C#" Value="public abstract class CodeAccessSecurityAttribute : System.Security.Permissions.SecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit CodeAccessSecurityAttribute extends System.Security.Permissions.SecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.SecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Basisattributklasse für Codezugriffssicherheit an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Attributklasse verknüpft eine <xref:System.Security.Permissions.SecurityAction>, z. B. `Demand`, mit einem benutzerdefinierten Attribut.  
+  
+ Die Typen, die Ableitung <xref:System.Security.Permissions.CodeAccessSecurityAttribute> verwendet, um den Zugriff auf Ressourcen oder sicherungsfähige Vorgänge einschränken.  
+  
+ Die Sicherheitsinformationen, die von einem Sicherheitsattribut deklariert wird in den Metadaten des Attributziels gespeichert und vom System zur Laufzeit erfolgt. Sicherheitsattribute werden nur für die deklarative Sicherheit verwendet. Verwenden Sie die entsprechende Berechtigungsklasse abgeleitet <xref:System.Security.CodeAccessPermission> für imperative Sicherheit.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Berechtigungsattribut abgeleitet wurde. die <xref:System.Security.Permissions.CodeAccessSecurityAttribute> Klasse.  
+  
+ [!code-cpp[System.Security.Permissions.CodeAccessSecurityAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.CodeAccessSecurityAttribute/CPP/nameidpermissionattribute.cpp#1)]
+ [!code-csharp[System.Security.Permissions.CodeAccessSecurityAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.CodeAccessSecurityAttribute/CS/nameidpermissionattribute.cs#1)]
+ [!code-vb[System.Security.Permissions.CodeAccessSecurityAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.CodeAccessSecurityAttribute/VB/nameidpermissionattribute.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Alle Berechtigungsattribute, die von dieser Klasse abgeleiteten benötigen nur einen einzelnen Konstruktor, akzeptiert eine <see cref="T:System.Security.Permissions.SecurityAction" /> als einzigen Parameter.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CodeAccessSecurityAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.CodeAccessSecurityAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Einer der <see cref="T:System.Security.Permissions.SecurityAction" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Permissions.CodeAccessSecurityAttribute" /> mit dem angegebenen <see cref="T:System.Security.Permissions.SecurityAction" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz dieser Klasse kann nicht erstellt werden. Sie müssen von dieser Klasse erben ihrer Funktionen verwenden.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen müssen nur über einen Konstruktor, der akzeptiert haben eine <see cref="T:System.Security.Permissions.SecurityAction" /> als einzigen Parameter.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

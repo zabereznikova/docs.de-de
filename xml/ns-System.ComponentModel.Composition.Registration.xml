@@ -1,0 +1,6 @@
+<Namespace Name="System.ComponentModel.Composition.Registration">
+  <Docs>
+    <summary>Die <see cref="N:System.ComponentModel.Composition.Registration" /> -Namespace enthält Typen, die Regel-basierte Konfiguration von Teilen des Managed Extensibility Framework (MEF) zu ermöglichen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

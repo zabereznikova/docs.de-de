@@ -1,0 +1,75 @@
+<Type Name="FillMode" FullName="System.Drawing.Drawing2D.FillMode">
+  <TypeSignature Language="C#" Value="public enum FillMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FillMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.FillMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie das Innere einer geschlossenen Pfad ausgefüllt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Anwendung füllt das Innere eines Pfades mithilfe einer der beiden Modi: alternate oder winding. Der Modus bestimmt, wie zum Füllen und das Innere eines eine geschlossene Form zugeschnitten werden soll.  
+  
+ Der Standardmodus handelt es sich um alternative. Um die Innenbereiche der geschlossenen Körpern im anderen Modus zu bestimmen, zeichnen Sie eine Linie von einem beliebigen Punkt im Pfad zu einem Punkt offensichtlich außerhalb des Pfads. Wenn die Zeile eine ungerade Anzahl von Pfadsegmenten überschreitet, wird den Ausgangspunkt befindet sich innerhalb der geschlossenen Region und ist daher Teil die Füllung oder Clippingbereichs. Eine gerade Anzahl von überschneidungen bedeutet, dass der Punkt ist nicht in einem Bereich gefüllt oder abgeschnitten werden. Eine offene Figur wird ausgefüllt oder abgeschnitten wird, indem eine Zeile für den ersten Punkt der Abbildung die Verbindung den letzten Punkt verwenden.  
+  
+ Der Modus Wickeln betrachtet die Richtung der Pfadsegmente in jedem Schnittpunkt. Er fügt eine für jeden Schnittpunkt im Uhrzeigersinn und subtrahiert einen für jede Schnittmenge gegen den Uhrzeigersinn. Wenn das Ergebnis ungleich NULL ist, wird der Punkt in die Füllung oder Clip-Bereich angesehen. Anzahl 0 (null) bedeutet, dass es sich bei liegt der Punkt außerhalb der Füllung oder Clip-Bereich.  
+  
+ Eine Abbildung wird im Uhrzeigersinn berücksichtigt oder gegen den Uhrzeigersinn gedreht basierend auf der Reihenfolge, in der die Segmente der Abbildung gezeichnet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt einen Pfad mit einer offenen Figur (einen Bogen) und eine geschlossene Form (Ellipse). Die FillPath-Methode füllt den Pfad entsprechend der Standardmodus für die Füllung, also Alternate.The folgende Abbildung zeigt die Ausgabe des Beispielcodes. Beachten Sie, dass der Pfad (gemäß der alternativen) gefüllt ist, als wäre der offene Körper durch eine gerade Linie vom Endpunkt an seinem Ausgangspunkt geschlossen wurden.  
+  
+ ![Offenen Pfad ausfüllen](~/add/media/fillopenpath.png "offenen Pfad ausfüllen")  
+  
+ Im folgende Beispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.  
+  
+ [!code-csharp[System.Drawing.ConstructingDrawingPaths#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.ConstructingDrawingPaths#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Alternate">
+      <MemberSignature Language="C#" Value="Alternate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.FillMode Alternate = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.FillMode.Alternate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.FillMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die alternativen Füllmodus an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Winding">
+      <MemberSignature Language="C#" Value="Winding" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.FillMode Winding = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.FillMode.Winding" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.FillMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die winding Füllmodus an.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

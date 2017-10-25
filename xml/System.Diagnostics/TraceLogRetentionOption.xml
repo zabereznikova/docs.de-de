@@ -1,0 +1,117 @@
+<Type Name="TraceLogRetentionOption" FullName="System.Diagnostics.TraceLogRetentionOption">
+  <TypeSignature Language="C#" Value="public enum TraceLogRetentionOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TraceLogRetentionOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.TraceLogRetentionOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, der Dateistruktur, die für verwendet werden, die <see cref="T:System.Diagnostics.EventSchemaTraceListener" /> Protokoll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.TraceLogRetentionOption> Enumeration dient zum Angeben des Werts eines der <xref:System.Diagnostics.EventSchemaTraceListener.TraceLogRetentionOption%2A> Eigenschaft in der <xref:System.Diagnostics.EventSchemaTraceListener> Klasse. Dass die Einstellung der Eigenschaft bestimmt, die Werte möglich und Standardwerte für die <xref:System.Diagnostics.EventSchemaTraceListener.MaximumFileSize%2A?displayProperty=nameWithType> und <xref:System.Diagnostics.EventSchemaTraceListener.MaximumNumberOfFiles%2A?displayProperty=nameWithType> Eigenschaften.  
+  
+ Können Sie festlegen, die <xref:System.Diagnostics.EventSchemaTraceListener.MaximumFileSize%2A> und <xref:System.Diagnostics.EventSchemaTraceListener.MaximumNumberOfFiles%2A> Eigenschaften über die `maximumFileSize` und `maximumNumberOfFiles` benutzerdefinierte Attribute in der Konfigurationsdatei oder mithilfe der `maximumFileSize` oder `maximumNumberOfFiles` Parameter in der <xref:System.Diagnostics.EventSchemaTraceListener.%23ctor%2A> Konstruktor. Wenn die `maximumFileSize` oder `maximumNumberOfFiles` Attribute in der Konfigurationsdatei Geben Sie einen Wert außerhalb des Bereichs, die Eigenschaften werden auf ihre Standardwerte festgelegt. Wenn Sie einen Wert außerhalb des Bereichs in angeben der `maximumFileSize` oder `maximumNumberOfFiles` -Parameter beim Aufrufen der <xref:System.Diagnostics.EventSchemaTraceListener.%23ctor%2A> -Konstruktor ein <xref:System.ArgumentOutOfRangeException> ausgelöst.  
+  
+ In der folgenden Tabelle zeigt die Werte möglich und Standardwerte für die Dateigröße und Anzahl der Dateien, die jede Beibehaltungsoptionen für zugeordnet sind. "N/v" gibt an, dass die zugeordnete Eigenschaft nicht auf, die überprüft wird <xref:System.Diagnostics.TraceLogRetentionOption> Wert.  
+  
+|TraceLogRetentionOption|Maximale Dateigröße|Standardmäßige Dateigröße|Maximale Anzahl von Dateien|Standardanzahl von Dateien|  
+|-----------------------------|-----------------------|-----------------------|-----------------------------|-----------------------------|  
+|LimitedCircularFiles|Nicht zutreffend|-1|Nicht zutreffend|1|  
+|LimitedSequentialFiles|>0|4-kB|Nicht zutreffend|1|  
+|SingleFileBoundedSize|>0|4-kB|Nicht zutreffend|-1|  
+|SingleFileUnboundedSize|>0|4-kB|>0|1|  
+|UnlimitedSequentialFiles|>0|4-kB|>1|2|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LimitedCircularFiles">
+      <MemberSignature Language="C#" Value="LimitedCircularFiles" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceLogRetentionOption LimitedCircularFiles = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceLogRetentionOption.LimitedCircularFiles" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceLogRetentionOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine endliche Anzahl von sequenziellen Dateien, jeweils mit einer maximalen Dateigröße. Wenn die <see cref="P:System.Diagnostics.EventSchemaTraceListener.MaximumFileSize" /> Eigenschaftswert erreicht wird, wird in eine neue Datei mit einem inkrementierten ganzzahligen Suffix der Schreibvorgang beginnt. Wenn die <see cref="P:System.Diagnostics.EventSchemaTraceListener.MaximumNumberOfFiles" /> Eigenschaftswert erreicht wurde, wird die erste Datei wird gelöscht und überschrieben werden kann. Dateien werden dann inkrementell in einer kreisförmigen Weise überschrieben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LimitedSequentialFiles">
+      <MemberSignature Language="C#" Value="LimitedSequentialFiles" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceLogRetentionOption LimitedSequentialFiles = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceLogRetentionOption.LimitedSequentialFiles" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceLogRetentionOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine endliche Anzahl von sequenziellen Dateien, jeweils mit einer maximalen Dateigröße. Wenn die <see cref="P:System.Diagnostics.EventSchemaTraceListener.MaximumFileSize" /> Eigenschaftswert erreicht wird, wird in eine neue Datei mit einem inkrementierten ganzzahligen Suffix der Schreibvorgang beginnt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleFileBoundedSize">
+      <MemberSignature Language="C#" Value="SingleFileBoundedSize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceLogRetentionOption SingleFileBoundedSize = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceLogRetentionOption.SingleFileBoundedSize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceLogRetentionOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Datei mit einer maximalen Dateigröße, die vom bestimmt die <see cref="P:System.Diagnostics.EventSchemaTraceListener.MaximumFileSize" /> Eigenschaft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleFileUnboundedSize">
+      <MemberSignature Language="C#" Value="SingleFileUnboundedSize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceLogRetentionOption SingleFileUnboundedSize = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceLogRetentionOption.SingleFileUnboundedSize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceLogRetentionOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Datei mit der Einschränkung nicht die maximale Größe.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnlimitedSequentialFiles">
+      <MemberSignature Language="C#" Value="UnlimitedSequentialFiles" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.TraceLogRetentionOption UnlimitedSequentialFiles = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.TraceLogRetentionOption.UnlimitedSequentialFiles" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceLogRetentionOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine unbegrenzte Anzahl von sequenziellen Dateien mit einer maximalen Dateigröße, die vom bestimmt die <see cref="P:System.Diagnostics.EventSchemaTraceListener.MaximumFileSize" /> Eigenschaft. Es gibt keine logischen Grenze auf die Anzahl oder die Größe der Dateien, aber es durch die physische Einschränkungen durch den Computer beschränkt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

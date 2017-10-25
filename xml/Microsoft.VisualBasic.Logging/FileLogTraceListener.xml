@@ -1,0 +1,1064 @@
+<Type Name="FileLogTraceListener" FullName="Microsoft.VisualBasic.Logging.FileLogTraceListener">
+  <TypeSignature Language="C#" Value="public class FileLogTraceListener : System.Diagnostics.TraceListener" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileLogTraceListener extends System.Diagnostics.TraceListener" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Logging.FileLogTraceListener" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.TraceListener</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen einfachen Listener, der Protokollausgabe an eine Datei weiterleitet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> -Klasse stellt automatisierte Wartungsfunktionen Protokolldateien archivieren Bedarf auf täglich oder pro Anwendung. Diese Funktionen zum automatischen Archivierung kann die Wartung Aufgaben von Entwicklern und Administratoren reduziert werden.  
+  
+ Eine Instanz von <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> hinzugefügt werden können die <xref:System.Diagnostics.Debug.Listeners%2A?displayProperty=nameWithType> oder <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> Sammlungen Protokollausgabe in eine Textdatei umleiten. Instanzen dieser Klasse können auch hinzugefügt werden, um `My.Application.Log` oder `My.Log` (für Webanwendungen) in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Anwendungen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: ändern, wohin "My.Application.log" schreibt Informationen](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)`.`  
+  
+ Die Hauptfunktionen von dieser Klasse werden zu können:  
+  
+1.  *Archivierung Funktionalität*. Die von dieser Klasse generierten Protokolldateien heißen gemäß dem Basisnamen und dem Datum wird zusammen mit einer Zahl in die Protokolldatei von aufeinander folgenden Versionen des Protokolls zu unterscheiden. Neue Protokolldateien werden auf Basis bei Bedarf erstellt.  
+  
+     Die explizite Form des Dateinamens ist `baseName`[-`dateStamp`] [-`version`] .log, wobei:  
+  
+    -   Die `baseName` Teil ist der grundlegende Protokollnamen gemäß der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> Eigenschaft.  
+  
+    -   Die `dateStamp` Teil hat das Format "YYYY-MM-DD" und wird angezeigt, wenn <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> ist <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily> oder <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly>.  
+  
+    -   Ggf. mehr als eine Protokolldatei mit dem gleichen `baseName` und `dateStamp`, `version` Webpart, ein positiver `Integer`, wird dem Dateinamen hinzugefügt.  
+  
+2.  *Mehrere Klasseninstanzen*. Wenn eine Instanz von der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> Klasse schreibt in eine Datei, die verwendet wird:  
+  
+    -   Die Klasse gibt die Datei frei, wenn sie von einer anderen Instanz verwendet wird, wird die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> Klasse im gleichen Prozess.  
+  
+    -   Die Klasse erstellt eine neue Protokolldatei mit den Namen des nächsten verfügbar, wenn die Datei von einem anderen Prozess verwendet wird.  
+  
+3.  *Threadsicherheit*. Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> -Klasse ist threadsicher. Dadurch können Sie problemlos in das Protokoll aus mehreren Threads Schreiben von Nachrichten ohne Verwendung von Sperren.  
+  
+ **Protokolldatei Speicherort**  
+  
+-   Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> Eigenschaft akzeptiert einen <xref:Microsoft.VisualBasic.Logging.LogFileLocation> Enumeration eines üblichen Verzeichnisse an, die Protokolldatei geschrieben werden soll.  
+  
+-   Um das Protokoll an einen anderen Speicherort zu schreiben, legen die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> Eigenschaft für diesen Speicherort.  
+  
+ **Name der Protokolldatei.**  
+  
+-   Der Basisname der Protokolldatei wird gemäß der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> Eigenschaft.  
+  
+-   Name der aktuellen Protokolldatei gelesen werden kann, aus der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> Eigenschaft. Es wird über mehrere weitere Eigenschaften und den aktuellen Status der Protokolle im Dateisystem abgeleitet.  
+  
+ **Pflege**  
+  
+-   Die mindesthäufigkeit für die Erstellung neuer Protokolldateien richtet sich nach der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> Eigenschaft. Wenn der Wert ist <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily> oder <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly>, eine neue Protokolldatei wird jedem Tag oder Woche mindestens einmal erstellt und einen Datumsstempel in den <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> Namen.  
+  
+-   Die maximale Größe (in Bytes) der Protokolldatei richtet sich nach der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> Eigenschaft. Wenn die Größe der Protokolldatei diese Größe überschreitet, werden zusätzliche Nachrichten, die in das Protokoll geschrieben verworfen und, je nach den <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> -Eigenschaft, eine Ausnahme ausgelöst.  
+  
+-   Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> Eigenschaft bestimmt, wie viel freier Speicherplatz (in Byte) verfügbar sein muss. So kann sichergestellt werden, die die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> Klasse werden nicht alle verfügbaren Speicherplatz zu nutzen. Verwenden der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> Eigenschaft zum Festlegen des Verhaltens von Protokoll schreibt, wenn stehen weniger als <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> freien Bytes verfügbar.  
+  
+ **Protokolldatei Ausgabeeinstellungen**  
+  
+-   Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.AutoFlush%2A> Eigenschaft gibt an, ob der zugrunde liegende Stream nach jedem Schreibvorgang in die Protokolldatei automatisch geleert werden soll.  
+  
+-   Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Append%2A> Eigenschaft gibt an, ob Nachrichten in die aktuelle Protokolldatei anfügen, wenn die zugelassen oder in eine neue Protokolldatei schreiben.  
+  
+-   Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Delimiter%2A> Eigenschaft gibt die Zeichenfolge zum begrenzen die Felder in einer Lognachricht verwendet werden soll.  
+  
+-   Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Encoding%2A> Eigenschaft gibt an, die beim Erstellen einer neuen Protokolldatei zu verwendende Codierung.  
+  
+ **Protokolldatei Ausgabe**  
+  
+-   Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData%2A> und <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent%2A> Methoden schreiben Nachrichten in der Protokolldatei gespeichert. Diese Methoden vergleichen die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> Eigenschaft zusammen mit der vorhandenen Protokolle mit den gleichen Basisnamen, um festzustellen, ob ein neues Protokoll erstellt werden soll.  
+  
+-   Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush%2A> Methode leert Nachrichten, die derzeit in den Ausgabepuffer in der Protokolldatei gespeichert.  
+  
+-   Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Close%2A> Methode schließt die Protokolldatei, damit er von anderen Prozessen verwendet werden kann.  
+  
+ **Aktivieren der Ausgabe**  
+  
+ Sie müssen die Ablaufverfolgungs- oder Debuggen verwenden Sie einen Ablaufverfolgungslistener aktivieren. Die folgende Syntax ist compilerspezifisch. Wenn Sie als C#-Compiler verwenden dabei oder [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], finden Sie in der Dokumentation für den Compiler.  
+  
+-   Fügen Sie zum Aktivieren des Debuggens in C# geschrieben, die `/d:DEBUG` Flag an die Befehlszeile des Compilers beim Kompilieren des Codes, oder Sie fügen `#define DEBUG` an den Anfang der Datei. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], Hinzufügen der `/d:DEBUG=True` -Kennzeichen an die Befehlszeile des Compilers.  
+  
+-   Fügen Sie zum Aktivieren der Ablaufverfolgung in c# die `/d:TRACE` Flag an die Befehlszeile des Compilers beim Kompilieren des Codes, oder fügen `#define TRACE` an den Anfang der Datei. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], Hinzufügen der `/d:TRACE=True` -Kennzeichen an die Befehlszeile des Compilers.  
+  
+ Bearbeiten Sie die Konfigurationsdatei für die Anwendung, zum Festlegen der Ebene des Listeners. In dieser Datei können Sie einen Listener hinzufügen und dessen Typ und Parameter festlegen, einen Listener zu entfernen oder deaktivieren die Listener, die zuvor von der Anwendung festgelegt. Die Konfigurationsdatei sollte wie im folgenden Beispiel formatiert werden.  
+  
+ Für dieses Beispiel ausführen müssen Sie den vollqualifizierten Assemblynamen bereitstellen. Informationen zur Vorgehensweise zum Abrufen der vollqualifizierte Assemblyname finden Sie unter [Assemblynamen](~/docs/framework/app-domains/assembly-names.md).  
+  
+```  
+<configuration>  
+    <system.diagnostics>  
+        <sharedListeners>  
+            <add name="FileLog"  
+                type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
+                      Microsoft.VisualBasic, Version=8.0.0.0,   
+                      Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a,   
+                      processorArchitecture=MSIL"   
+                initializeData="FileLogWriter"/>  
+        </sharedListeners>  
+    </system.diagnostics>  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileLogTraceListener ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.FileLogTraceListener.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.VisualBasic.Logging.FileLogTraceListener" /> Klasse mit dem Standardnamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt den Instanznamen, der die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> Klasse auf FileLogTraceListener fest.  
+  
+ Sie erreichen den Namen der Instanz über die <xref:System.Diagnostics.TraceListener.Name%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileLogTraceListener (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.FileLogTraceListener.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+          <see langword="String" />. Der Name des Instanzobjekts.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.VisualBasic.Logging.FileLogTraceListener" /> Klasse mit dem angegebenen Namen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt den Instanznamen, der die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> Klasse `name`.  
+  
+ Sie erreichen den Instanznamen der <xref:System.Diagnostics.TraceListener.Name%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public bool Append { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Append" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.Append" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob die Ausgabe an die aktuelle Datei anfügen oder in eine neue Datei zu schreiben.</summary>
+        <value>
+          <see langword="Boolean" />, mit <see langword="True" /> gibt an, dass die Ausgabe an die aktuelle Datei angefügt wird und <see langword="False" /> gibt an, dass die Ausgabe in eine neue Datei geschrieben wird. Die Standardeinstellung für diese Eigenschaft ist <see langword="True" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Append%2A> Eigenschaft ist `False`, wird die Ausgabe in eine neue Datei geschrieben. Wenn die Eigenschaft den Wert `True`, die Ausgabe wird an die aktuelle Datei angefügt, es sei denn:  
+  
+-   Die Ausgabedatei wird von einem anderen Prozess gesperrt. In diesem Fall wird eine neue Protokolldatei erstellt, mit einer Versionsnummer, die in vorhandenen der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> Name.  
+  
+-   Die aktuelle Dateigröße ist größer als die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> Eigenschaft ermöglicht. In diesem Fall werden zusätzliche Nachrichten verworfen, und, je nachdem, auf die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> -Eigenschaft, eine Ausnahme ausgelöst.  
+  
+-   Der Name der vorhandenen gemäß den vom angegebenen protokollerstellung Zeitplan nicht mehr aktuell ist die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> Eigenschaft. In diesem Fall wird eine neue Protokolldatei erstellt, und der Datumsstempel in den <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> Namen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFlush">
+      <MemberSignature Language="C#" Value="public bool AutoFlush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoFlush" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.AutoFlush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, und zwar unabhängig davon, ob das Schreiben in den Protokolldateistream die Puffer geleert.</summary>
+        <value>
+          <see langword="Boolean" />, mit <see langword="True" /> gibt an, dass der Stream nach jedem Schreibvorgang geleert wird andernfalls die Protokolleinträge werden gepuffert und effizienter geschrieben. Die Standardeinstellung für diese Eigenschaft ist <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `False` Einstellung für die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.AutoFlush%2A> Eigenschaft bietet die beste Leistung für die meisten Anwendungen, da es effizienter, mehrere Nachrichten gleichzeitig in die Protokolldatei geschrieben wird. Sie können die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush%2A> Methode, um alle Nachrichten derzeit in der Protokolldatei zu leeren Ausgabe des Puffers. Sie können auch die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Close%2A> -Methode, die implizit den Stream entleert vor dem Schließen der Protokolldatei.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseFileName">
+      <MemberSignature Language="C#" Value="public string BaseFileName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseFileName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Basisnamen für die Protokolldateien, die zum Erstellen der vollständige Dateiname des Protokolls verwendet wird.</summary>
+        <value>
+          <see langword="String" />. Der Basisname für die Protokolldateien. Der Standardwert ist die Anwendung-Produktname.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> Eigenschaft bestimmt den Basisnamen für die Protokolldateien der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> schreibt-Klasse auf.  
+  
+ Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> Eigenschaft ermöglicht es den Namen der aktuellen vollständigen Protokolldatei. Es wird gemäß den Pfad des Protokolls, den Basisnamen, das Datum und eine Zahl zur Unterscheidung von verschiedenen Versionen des Protokolls generiert. Neue Protokolldateien werden auf Basis bei Bedarf erstellt.  
+  
+ Die explizite Form der Name der Protokolldatei voll ist `path` \\ `baseName`[-`dateStamp`] [-`iteration`] .log, wobei  
+  
+-   Die `path` Teil richtet sich nach der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> Eigenschaft und, wenn dieser Eigenschaftswert, um festgelegt ist <xref:Microsoft.VisualBasic.Logging.LogFileLocation.Custom>die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> Eigenschaft.  
+  
+-   Die `baseName` Teil ist der grundlegende Protokollnamen gemäß der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> Eigenschaft.  
+  
+-   Die `dateStamp` Teil hat das Format "YYYY-MM-DD" und wird angezeigt, wenn <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> festgelegt ist, um <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily> oder <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly>.  
+  
+-   Ggf. mehr als eine Protokolldatei mit dem gleichen `baseName` und `dateStamp`, `iteration` Webpart, ein positiver `Integer`, wird dem Dateinamen hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.FileLogTraceListener.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt den zugrunde liegenden Stream für die aktuelle Protokolldatei, und gibt alle dem aktuellen Stream zugeordneten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen nicht Aufrufen der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Close%2A> Methode explizit, da die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> Klasse verwaltet den zugrunde liegenden Stream.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomLocation">
+      <MemberSignature Language="C#" Value="public string CustomLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Protokolldateiverzeichnis bei der <see cref="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location" /> -Eigenschaftensatz auf <see cref="F:Microsoft.VisualBasic.Logging.LogFileLocation.Custom" />.</summary>
+        <value>
+          <see langword="String" />, dies ist der Name des Protokolldatei Verzeichnisses. Die Standardeinstellung für diese Eigenschaft ist Verzeichnis für Anwendungsdaten des Benutzers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> -Eigenschaft gesetzt ist, wird auch die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> Eigenschaft, um <xref:Microsoft.VisualBasic.Logging.LogFileLocation.Custom>.  
+  
+ Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> -Eigenschaft löst eine Ausnahme aus, wenn das Verzeichnis nicht aufgelöst werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delimiter">
+      <MemberSignature Language="C#" Value="public string Delimiter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Delimiter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.Delimiter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert das Trennzeichen, die zum Begrenzen von Feldern in einer Lognachricht verwendet.</summary>
+        <value>
+          <see langword="String" />, dem das Trennzeichen für Felder in einer Lognachricht verwendet wird. Die Standardeinstellung für diese Eigenschaft ist das Tabstoppzeichen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Delimiter%2A> Eigenschaft können Sie das Standardtrennzeichen zu ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiskSpaceExhaustedBehavior">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption DiskSpaceExhaustedBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption DiskSpaceExhaustedBehavior" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vorgehensweise beim Schreiben in die Protokolldatei bestimmt und weniger freier Speicherplatz verfügbar ist als die <see cref="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace" /> Eigenschaft.</summary>
+        <value>
+          <see cref="T:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption" />. Bestimmt, auf welche Vorgehensweise beim Schreiben in das Protokoll weniger freier Speicherplatz verfügbar ist als die <see cref="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace" /> -Eigenschaft, oder wenn die Größe der Protokolldatei größer als Was ist die <see cref="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize" /> -Eigenschaft kann. Der Standardwert ist <see cref="F:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.DiscardMessages" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> -Eigenschaftensatz auf <xref:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.DiscardMessages>, die protokollmeldungen werden automatisch verworfen werden, wenn nicht genügend reservierte Speicherplatz vorhanden ist. Dies ist das Standardverhalten, und es wird verhindert, dass einfache Anwendungen fehlschlägt, wenn der Datenträger zu voll abruft.  
+  
+ Robustere Anwendungen können festlegen, die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> Eigenschaft <xref:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.ThrowException>, und fügen `Try...Catch` -Blöcke für Code, der in das Protokoll schreibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="True" />Gibt sowohl verwaltete als auch nicht verwaltete Ressourcen frei; <see langword="False" /> nur nicht verwaltete Ressourcen frei.</param>
+        <summary>Schließt den zugrunde liegenden Stream und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der `disposing`-Parameter `True` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> verweist. Diese Methode ruft die `Dispose`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Beim Überschreiben von <see langword="Dispose" /> müssen Sie darauf achten, nicht auf Objekte zu verweisen, die durch einen früheren Aufruf von <see langword="Dispose" /> freigegeben wurden.  
+  
+ Diese Methode ruft die <see langword="Dispose" /> Methode der Basisklasse, <see langword="Dispose" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding Encoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding Encoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, die beim Erstellen einer neuen Protokolldatei zu verwendende Codierung.</summary>
+        <value>
+          <see cref="T:System.Text.Encoding" />, der die zu verwendende Codierung ist eine neue Protokolldatei erstellen. Der Standardwert dieser Eigenschaft ist <see cref="T:System.Text.UTF8Encoding" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Anfügen von Text an eine vorhandene Protokolldatei die Codierung für diese Datei anstatt durch die angegebene Codierung verwendet die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Encoding%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entleert den zugrunde liegenden Stream, der in der aktuellen Protokolldatei schreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush%2A> Methode, um alle gepufferten Daten in der aktuellen Protokolldatei zu schreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullLogFileName">
+      <MemberSignature Language="C#" Value="public string FullLogFileName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullLogFileName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der aktuellen Protokolldatei voll.</summary>
+        <value>
+          <see langword="String" />, dies ist der Name der aktuellen Protokolldatei voll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> Eigenschaft ermöglicht es den Namen der aktuellen vollständigen Protokolldatei. Es wird gemäß den Pfad des Protokolls, den Basisnamen, das Datum und eine Zahl zur Unterscheidung von verschiedenen Versionen des Protokolls generiert. Neue Protokolldateien werden auf Basis bei Bedarf erstellt.  
+  
+ Die explizite Form der der vollständige Dateiname des Protokolls wird `path` \\ `baseName`[-`dateStamp`] [-`iteration`] .log, wobei:  
+  
+-   Die `path` Teil richtet sich nach der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> Eigenschaft und, wenn dieser Eigenschaftswert, um festgelegt ist <xref:Microsoft.VisualBasic.Logging.LogFileLocation.Custom>die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> Eigenschaft.  
+  
+-   Die `baseName` Teil ist der grundlegende Protokollnamen gemäß der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> Eigenschaft.  
+  
+-   Die `dateStamp` Teil hat das Format JJJJ-MM-TT und wird angezeigt, wenn <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> ist <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily> oder <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly>.  
+  
+-   Ggf. mehr als eine Protokolldatei mit dem gleichen `baseName` und `dateStamp`, `iteration` Webpart, ein positiver `Integer`, wird dem Dateinamen hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSupportedAttributes">
+      <MemberSignature Language="C#" Value="protected override string[] GetSupportedAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string[] GetSupportedAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die vom Ablaufverfolgungslistener unterstützten benutzerdefinierten XML-Konfigurationsattribute ab.</summary>
+        <returns>
+          <see langword="String" />Array, das von diesem Listener erkannten XML-Konfigurationsattribute enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die benutzerdefinierten Attribute für die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> können verwendet werden, in der XML-Konfigurationsdatei zum Steuern des Verhaltens einer Instanz von der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> Klasse. Andere Attribute verwenden, führt dazu, dass eine Konfigurationsausnahme.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeHostName">
+      <MemberSignature Language="C#" Value="public bool IncludeHostName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeHostName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.IncludeHostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, und zwar unabhängig davon, ob der Hostname des Computers Protokollierung in die Ausgabe aufgenommen werden.</summary>
+        <value>
+          <see langword="Boolean" />. Verwenden Sie <see langword="True" /> , wenn der Hostbezeichner enthalten; andernfalls verwenden <see langword="False" />. Der Standardwert ist <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Eigenschaft so konfigurieren Sie das Verhalten der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData%2A> und <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Logging.LogFileLocation Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.VisualBasic.Logging.LogFileLocation Location" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Logging.LogFileLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest Speicherort für die Protokolldateien.</summary>
+        <value>
+          <see cref="T:Microsoft.VisualBasic.Logging.LogFileLocation" />, der den Speicherort für die Protokolldatei ist. Der Standardwert ist <see cref="F:Microsoft.VisualBasic.Logging.LogFileLocation.LocalUserApplicationDirectory" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> -Eigenschaft zum Festlegen des Pfads des Protokolls auf einen der vordefinierten Pfade bestimmt, indem die <xref:Microsoft.VisualBasic.Logging.LogFileLocation> Enumerationswerte.  
+  
+|**Location-Wert**|**Pfad**|  
+|------------------------|--------------|  
+|<xref:Microsoft.VisualBasic.Logging.LogFileLocation.CommonApplicationDirectory>|Der Pfad für die Anwendungsdaten, die für alle Benutzer, mit dem Format freigegeben werden:<br /><br /> `BasePath`\\`CompanyName`\\`ProductName`\\`ProductVersion`<br /><br /> Ein häufig angegebener Wert für `BasePath` ist:<br /><br /> C:\Documents and Einstellungen\All Einstellungen\Alle Daten<br /><br /> Die Werte der `CompanyName`, `ProductName`, und `ProductVersion` stammen aus der Assembly.|  
+|<xref:Microsoft.VisualBasic.Logging.LogFileLocation.ExecutableDirectory>|Der Pfad für die ausführbare Datei, die die Anwendung gestartet hat.|  
+|<xref:Microsoft.VisualBasic.Logging.LogFileLocation.LocalUserApplicationDirectory>|Der Pfad für die Anwendungsdaten eines Benutzers, mit dem Format:<br /><br /> `BasePath`\\`CompanyName`\\`ProductName`\\`ProductVersion`<br /><br /> Ein häufig angegebener Wert für `BasePath` ist:<br /><br /> C:\Dokumente und Einstellungen\\`username`\Anwendungsdaten<br /><br /> Die Werte der `CompanyName`, `ProductName`, und `ProductVersion` stammen aus der Assembly.|  
+|<xref:Microsoft.VisualBasic.Logging.LogFileLocation.TempDirectory>|Der Pfad des temporären Ordners des aktuellen Systems.|  
+|<xref:Microsoft.VisualBasic.Logging.LogFileLocation.Custom>|Wenn die Zeichenfolge durch angegebene <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> ist nicht leer ist, und klicken Sie dann als Pfad verwenden; verwenden Sie andernfalls den Pfad für die Anwendungsdaten eines Benutzers.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogFileCreationSchedule">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption LogFileCreationSchedule { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption LogFileCreationSchedule" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, welches Datum in die Namen der Protokolldateien eingeschlossen werden sollen.</summary>
+        <value>
+          <see cref="T:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption" />. Hiermit wird das Datum, das die Namen der Protokolldatei einschließt. Der Standardwert ist <see cref="F:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zuweisen eines der <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption> -Enumerationswerte zum die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> Eigenschaft, um das Datum, das die Namen der Protokolldateien einschließt anzugeben.  
+  
+ Das Format des Datums ist JJJJ-MM-TT. Weitere Informationen zum Format der Name der Protokolldatei finden Sie unter <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A>.  
+  
+|**LogFileCreationSchedule-Wert**|**Das Datum in den Protokolldateinamen**|  
+|---------------------------------------|-----------------------------------|  
+|<xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily>|Schließen Sie das aktuelle Datum in den Protokolldateinamen an.|  
+|<xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.None>|Nehmen Sie das Datum nicht in den Protokolldateinamen aus.|  
+|<xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly>|Schließen Sie den ersten Tag der aktuellen Woche in den Protokolldateinamen an.<br /><br /> Die Woche beginnt am Samstag.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxFileSize">
+      <MemberSignature Language="C#" Value="public long MaxFileSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxFileSize" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale zulässige Größe der Protokolldatei, in Bytes fest.</summary>
+        <value>
+          <see langword="Long" />. Dies ist die maximale zulässige-Protokolldatei-Größe in Bytes. Der Standardwert ist 5000000.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um sicherzustellen, dass die Protokolldateien nicht zu groß werden.  
+  
+ Wenn die Größe (in Byte) Protokolldatei ist größer als der Wert dieser Eigenschaft bei der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> -Klasse versucht, eine Meldung im Ereignisprotokoll zu schreiben, wird die Nachricht verworfen, und der Fehler ist, ob eine automatische oder eine Ausnahme wird ausgelöst, abhängig vom Wert der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A>Eigenschaft. Hingegen ist die Nachricht in das Protokoll geschrieben, wenn die Menge des freien Speicherplatzes (in Bytes) ist kleiner als <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Wenn diese Eigenschaft auf einen Wert kleiner als 1000 festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReserveDiskSpace">
+      <MemberSignature Language="C#" Value="public long ReserveDiskSpace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ReserveDiskSpace" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Zeitraum fest freier Speicherplatz in Bytes erforderlich, bevor Nachrichten in die Protokolldatei geschrieben werden können.</summary>
+        <value>
+          <see langword="Long" />. Dies ist die Menge an Speicherplatz erforderlich. Der Standardwert ist 10000000.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um sicherzustellen, dass die Protokolldateien den Datenträger nicht vollständig aufgefüllt.  
+  
+ Wenn Speicherplatz, der den Umfang des freien Speicherplatzes (in Byte) ist kleiner als der Wert dieser Eigenschaft, wenn die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> -Klasse versucht, eine Meldung im Ereignisprotokoll zu schreiben, wird die Nachricht verworfen, und der Fehler ist, ob eine automatische oder eine Ausnahme wird ausgelöst, abhängig vom Wert der < C2 > <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A>  Eigenschaft. Andernfalls wird die Nachricht in das Protokoll geschrieben, ist die Größe der Protokolldatei (in Bytes) größer als <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Wenn diese Eigenschaft auf einen Wert kleiner als 0 festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="TraceData">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Schreibt Ablaufverfolgungsdaten in die Ausgabedatei an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData%2A>Methoden dürfen nicht von Anwendungscode aufgerufen werden. Diese Methoden werden aufgerufen, von einem Mitglied der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen zum Schreiben von auszugebenden Ablaufverfolgungsdaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein <see cref="T:System.Diagnostics.TraceEventCache" />-Objekt mit der aktuellen Prozess-ID, Thread-ID und den aktuellen Stapelüberwachungsinformationen.</param>
+        <param name="source">Ein Name der Ablaufverfolgungsquelle, die diese Methode aufgerufen werden soll.</param>
+        <param name="eventType">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Enumerationswerte.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="data">Die auszugebenden Ablaufverfolgungsdaten.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, ein Datenobjekt und Ereignisinformationen in die Ausgabedatei oder den Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode:  
+  
+1.  Formatiert die Daten und dem angegebenen Kontext Informationen für die Ausgabe an.  
+  
+2.  Eine neue Protokolldatei erstellt, bei Bedarf.  
+  
+3.  Schreibt die Informationen in der Protokolldatei gespeichert.  
+  
+ Weitere Informationen zum Erstellen von neuen Protokolldateien finden Sie unter <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A>.  
+  
+ In der folgenden Tabelle sind die Ausgabefelder "in der Reihenfolge aufgeführt. Die Felder werden durch die Zeichenfolge begrenzt, die die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Delimiter%2A> Eigenschaft gibt an, und gefolgt von einem Zeilenabschluss.  
+  
+|**Feld**|**Ausgabe-Bedingung**|**Beschreibung**|  
+|---------------|--------------------------|---------------------|  
+|`source`|Immer|Der Wert von `name`.|  
+|`severity`|Immer|Die Enumeration Wertnamen des `eventType`.|  
+|`id`|Immer|Eine Zeichenfolgendarstellung von `id`.|  
+|`message`|Immer|Eine Zeichenfolgendarstellung von `data`.|  
+|`callStack`|Wenn die <xref:System.Diagnostics.TraceOptions.Callstack> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die <xref:System.Diagnostics.TraceEventCache.Callstack%2A> Eigenschaft `eventCache`.|  
+|`CorrelationID`|Wenn die <xref:System.Diagnostics.TraceOptions.LogicalOperationStack> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die <xref:System.Diagnostics.TraceEventCache.ThreadId%2A> Eigenschaft `eventCache`.|  
+|`DateTime`|Wenn die <xref:System.Diagnostics.TraceOptions.DateTime> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die Zeichenfolgendarstellung der <xref:System.Diagnostics.TraceEventCache.DateTime%2A> Eigenschaft `eventCache`. Die invariante Kultur wird für die zeichenfolgenkonvertierung verwendet.|  
+|`ProcessID`|Wenn die <xref:System.Diagnostics.TraceOptions.ProcessId> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die Zeichenfolgendarstellung der <xref:System.Diagnostics.TraceEventCache.ProcessId%2A> Eigenschaft `eventCache`. Die invariante Kultur wird für die zeichenfolgenkonvertierung verwendet.|  
+|`ThreadID`|Wenn die <xref:System.Diagnostics.TraceOptions.ThreadId> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die <xref:System.Diagnostics.TraceEventCache.ThreadId%2A> Eigenschaft `eventCache`.|  
+|`Timestamp`|Wenn die <xref:System.Diagnostics.TraceOptions.Timestamp> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die Zeichenfolgendarstellung der <xref:System.Diagnostics.TraceEventCache.Timestamp%2A> Eigenschaft `eventCache`. Die invariante Kultur wird für die zeichenfolgenkonvertierung verwendet.|  
+|`HostName`|Wenn die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.IncludeHostName%2A> Eigenschaft ist `True`.|Der Name des Computers.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, params object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein <see cref="T:System.Diagnostics.TraceEventCache" />-Objekt mit der aktuellen Prozess-ID, Thread-ID und den aktuellen Stapelüberwachungsinformationen.</param>
+        <param name="source">Der Name der Ablaufverfolgungsquelle, die diese Methode aufgerufen werden soll.</param>
+        <param name="eventType">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Enumerationswerte.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="data">Ein Objektarray, das in Form von Daten ausgegeben werden soll.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, ein Array von Datenobjekten und Ereignisinformationen in die Ausgabedatei oder den Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode:  
+  
+1.  Formatiert die Daten und dem angegebenen Kontext Informationen für die Ausgabe,  
+  
+2.  Eine neue Protokolldatei erstellt, bei Bedarf,  
+  
+3.  Schreibt die Informationen in der Protokolldatei gespeichert.  
+  
+ Weitere Informationen zum Erstellen von neuen Protokolldateien finden Sie unter <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A>.  
+  
+ In dieser Tabelle sind die Ausgabefelder "in der Reihenfolge aufgeführt. Die Felder werden durch die Zeichenfolge begrenzt, die die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Delimiter%2A> Eigenschaft gibt an, und gefolgt von einem Zeilenabschluss.  
+  
+|**Feld**|**Ausgabe-Bedingung**|**Beschreibung**|  
+|---------------|--------------------------|---------------------|  
+|`source`|Immer|Der Wert von `name`.|  
+|`severity`|Immer|Die Enumeration Wertnamen des `eventType`.|  
+|`id`|Immer|Eine Zeichenfolgendarstellung von `id`.|  
+|`message`|Immer|Die Zeichenfolge besteht die Zeichenfolgendarstellung für jedes Element im `data`, jeweils getrennt durch <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Delimiter%2A>.|  
+|`callStack`|Wenn die <xref:System.Diagnostics.TraceOptions.Callstack> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die <xref:System.Diagnostics.TraceEventCache.Callstack%2A> Eigenschaft `eventCache`.|  
+|`CorrelationID`|Wenn die <xref:System.Diagnostics.TraceOptions.LogicalOperationStack> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die <xref:System.Diagnostics.TraceEventCache.ThreadId%2A> Eigenschaft `eventCache`.|  
+|`DateTime`|Wenn die <xref:System.Diagnostics.TraceOptions.DateTime> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die Zeichenfolgendarstellung der <xref:System.Diagnostics.TraceEventCache.DateTime%2A> Eigenschaft `eventCache`. Die invariante Kultur wird für die zeichenfolgenkonvertierung verwendet.|  
+|`ProcessID`|Wenn die <xref:System.Diagnostics.TraceOptions.ProcessId> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die Zeichenfolgendarstellung der <xref:System.Diagnostics.TraceEventCache.ProcessId%2A> Eigenschaft `eventCache`. Die invariante Kultur wird für die zeichenfolgenkonvertierung verwendet.|  
+|`ThreadID`|Wenn die <xref:System.Diagnostics.TraceOptions.ThreadId> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die <xref:System.Diagnostics.TraceEventCache.ThreadId%2A> Eigenschaft `eventCache`.|  
+|`Timestamp`|Wenn die <xref:System.Diagnostics.TraceOptions.Timestamp> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die Zeichenfolgendarstellung der <xref:System.Diagnostics.TraceEventCache.Timestamp%2A> Eigenschaft `eventCache`. Die invariante Kultur wird für die zeichenfolgenkonvertierung verwendet.|  
+|`HostName`|Wenn die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.IncludeHostName%2A> Eigenschaft ist `True`.|Der Name des Computers.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="TraceEvent">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Schreibt Ablaufverfolgungs- und Ereignisinformationen Informationen in die Ausgabedatei oder den Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent%2A>Methoden dürfen nicht von Anwendungscode aufgerufen werden. Diese Methoden werden aufgerufen, von einem Mitglied der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen zum Schreiben von auszugebenden Ablaufverfolgungsdaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein <see cref="T:System.Diagnostics.TraceEventCache" />-Objekt mit der aktuellen Prozess-ID, Thread-ID und den aktuellen Stapelüberwachungsinformationen.</param>
+        <param name="source">Ein Name der Ablaufverfolgungsquelle, die diese Methode aufgerufen werden soll.</param>
+        <param name="eventType">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Enumerationswerte.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="message">Eine zu schreibende Meldung.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, eine Meldung und Ereignisinformationen in die Ausgabedatei oder den Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode:  
+  
+1.  Formatiert die Daten und dem angegebenen Kontext Informationen für die Ausgabe an.  
+  
+2.  Eine neue Protokolldatei erstellt, bei Bedarf.  
+  
+3.  Schreibt die Informationen in der Protokolldatei gespeichert.  
+  
+ Weitere Informationen zum Erstellen von neuen Protokolldateien finden Sie unter <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A>.  
+  
+ Diese Tabelle enthält die Ausgabefelder in der Reihenfolge, in der sie angezeigt werden. Die Felder werden durch die Zeichenfolge begrenzt, die die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Delimiter%2A> Eigenschaft gibt an, und gefolgt von einem Zeilenabschluss.  
+  
+|**Feld**|**Ausgabe-Bedingung**|**Beschreibung**|  
+|---------------|--------------------------|---------------------|  
+|`source`|Immer|Der Wert von `name`.|  
+|`severity`|Immer|Die Enumeration Wertnamen des `eventType`.|  
+|`id`|Immer|Eine Zeichenfolgendarstellung von `id`.|  
+|`message`|Immer|Der Wert von `message`.|  
+|`callStack`|Wenn die <xref:System.Diagnostics.TraceOptions.Callstack> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die <xref:System.Diagnostics.TraceEventCache.Callstack%2A> Eigenschaft `eventCache`.|  
+|`CorrelationID`|Wenn die <xref:System.Diagnostics.TraceOptions.LogicalOperationStack> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die <xref:System.Diagnostics.TraceEventCache.ThreadId%2A> Eigenschaft `eventCache`.|  
+|`DateTime`|Wenn die <xref:System.Diagnostics.TraceOptions.DateTime> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die Zeichenfolgendarstellung der <xref:System.Diagnostics.TraceEventCache.DateTime%2A> Eigenschaft `eventCache`. Die invariante Kultur wird für die zeichenfolgenkonvertierung verwendet.|  
+|`ProcessID`|Wenn die <xref:System.Diagnostics.TraceOptions.ProcessId> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die Zeichenfolgendarstellung der <xref:System.Diagnostics.TraceEventCache.ProcessId%2A> Eigenschaft `eventCache`. Die invariante Kultur wird für die zeichenfolgenkonvertierung verwendet.|  
+|`ThreadID`|Wenn die <xref:System.Diagnostics.TraceOptions.ThreadId> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die <xref:System.Diagnostics.TraceEventCache.ThreadId%2A> Eigenschaft `eventCache`.|  
+|`Timestamp`|Wenn die <xref:System.Diagnostics.TraceOptions.Timestamp> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die Zeichenfolgendarstellung der <xref:System.Diagnostics.TraceEventCache.Timestamp%2A> Eigenschaft `eventCache`. Die invariante Kultur wird für die zeichenfolgenkonvertierung verwendet.|  
+|`HostName`|Wenn die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.IncludeHostName%2A> Eigenschaft ist `True`.|Der Name des Computers.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein <see cref="T:System.Diagnostics.TraceEventCache" />-Objekt mit der aktuellen Prozess-ID, Thread-ID und den aktuellen Stapelüberwachungsinformationen.</param>
+        <param name="source">Ein Name der Ablaufverfolgungsquelle, die diese Methode aufgerufen werden soll.</param>
+        <param name="eventType">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Enumerationswerte.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="format">Eine Formatzeichenfolge, die NULL oder mehr Formatelementen, die Objekten im entsprechen den <c>Args</c> Array.</param>
+        <param name="args">Ein <see langword="Object" />-Array mit 0 oder mehr zu formatierenden Objekten.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, ein formatiertes Array von Objekten und Ereignisinformationen in die Ausgabedatei oder den Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode:  
+  
+1.  Formatiert die Daten und dem angegebenen Kontext Informationen für die Ausgabe an.  
+  
+2.  Erstellt ein neues eine neue Protokolldatei bei Bedarf.  
+  
+3.  Schreibt die Informationen in der Protokolldatei gespeichert.  
+  
+ Weitere Informationen zum Erstellen der neuen Protokolldatei finden Sie unter <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A>.  
+  
+ Diese Tabelle enthält die Ausgabefelder in der Reihenfolge, in der sie angezeigt werden. Die Felder werden durch die Zeichenfolge begrenzt, die die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Delimiter%2A> Eigenschaft gibt an, und gefolgt von einem Zeilenabschluss.  
+  
+|**Feld**|**Ausgabe-Bedingung**|**Beschreibung**|  
+|---------------|--------------------------|---------------------|  
+|`source`|Immer|Der Wert von `name`.|  
+|`severity`|Immer|Die Enumeration Wertnamen des `eventType`.|  
+|`id`|Immer|Eine Zeichenfolgendarstellung von `id`.|  
+|`message`|Immer|Die Daten in `args` mit formatiert die `format` Zeichenfolge und mit der invarianten Kultur für zeichenfolgenkonvertierungen.|  
+|`callStack`|Wenn die <xref:System.Diagnostics.TraceOptions.Callstack> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die <xref:System.Diagnostics.TraceEventCache.Callstack%2A> Eigenschaft `eventCache`.|  
+|`CorrelationID`|Wenn die <xref:System.Diagnostics.TraceOptions.LogicalOperationStack> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die <xref:System.Diagnostics.TraceEventCache.ThreadId%2A> Eigenschaft `eventCache`.|  
+|`DateTime`|Wenn die <xref:System.Diagnostics.TraceOptions.DateTime> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die Zeichenfolgendarstellung der <xref:System.Diagnostics.TraceEventCache.DateTime%2A> Eigenschaft `eventCache`. Die invariante Kultur wird für die zeichenfolgenkonvertierung verwendet.|  
+|`ProcessID`|Wenn die <xref:System.Diagnostics.TraceOptions.ProcessId> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die Zeichenfolgendarstellung der <xref:System.Diagnostics.TraceEventCache.ProcessId%2A> Eigenschaft `eventCache`. Die invariante Kultur wird für die zeichenfolgenkonvertierung verwendet.|  
+|`ThreadID`|Wenn die <xref:System.Diagnostics.TraceOptions.ThreadId> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die <xref:System.Diagnostics.TraceEventCache.ThreadId%2A> Eigenschaft `eventCache`.|  
+|`Timestamp`|Wenn die <xref:System.Diagnostics.TraceOptions.Timestamp> Flag wird festgelegt, der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.|Die Zeichenfolgendarstellung der <xref:System.Diagnostics.TraceEventCache.Timestamp%2A> Eigenschaft `eventCache`. Die invariante Kultur wird für die zeichenfolgenkonvertierung verwendet.|  
+|`HostName`|Wenn die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.IncludeHostName%2A> Eigenschaft ist `True`.|Der Name des Computers.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.FileLogTraceListener.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">
+          <see langword="String" />. Die benutzerdefinierte zu schreibende Meldung.</param>
+        <summary>Schreibt eine wörtliche Meldung auf den Datenträger ohne weitere Kontextinformationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Write%2A> -Methode schreibt eine bestimmte Nachricht in der Protokolldatei gespeichert, ohne weitere Kontextinformationen.  
+  
+ Wenden Sie eines der der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData%2A> Methoden, die Kontextinformationen in die Protokollausgabe aufgenommen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">
+          <see langword="String" />. Die benutzerdefinierte zu schreibende Meldung.</param>
+        <summary>Schreibt eine wörtliche Meldung auf den Datenträger, gefolgt vom aktuellen Zeichen für den Zeilenabschluss, ohne weitere Kontextinformationen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine%2A> -Methode schreibt eine bestimmte Nachricht in der Protokolldatei gespeichert, ohne weitere Kontextinformationen.  
+  
+ Wenden Sie eines der der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData%2A> Methoden, die Kontextinformationen in die Protokollausgabe aufgenommen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

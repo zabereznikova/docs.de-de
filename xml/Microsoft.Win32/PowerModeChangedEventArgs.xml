@@ -1,0 +1,78 @@
+<Type Name="PowerModeChangedEventArgs" FullName="Microsoft.Win32.PowerModeChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class PowerModeChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PowerModeChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.PowerModeChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:Microsoft.Win32.SystemEvents.PowerModeChanged" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:Microsoft.Win32.SystemEvents.PowerModeChanged> Ereignis wird ausgelöst, wenn der Benutzer hält oder das Betriebssystem, oder eine Benachrichtigung zum Status der Stromversorgung des Systems auftritt. Eine Benachrichtigung zum Status der Stromversorgung des Systems kann auftreten, wenn eine Stromquelle schwache oder Aufladen erkannt wird, oder ein Übergang von AC oder Akku Stromquelle auftritt.  
+  
+ Die <xref:Microsoft.Win32.PowerModeChangedEventArgs.Mode%2A> Eigenschaft von einem <xref:Microsoft.Win32.PowerModeChangedEventArgs> gibt den Typ des Power-Modus-Ereignis, das aufgetreten ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PowerModeChangedEventArgs (Microsoft.Win32.PowerModes mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Win32.PowerModes mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.PowerModeChangedEventArgs.#ctor(Microsoft.Win32.PowerModes)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mode" Type="Microsoft.Win32.PowerModes" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Eines der <see cref="T:Microsoft.Win32.PowerModes" /> Werte, die den Typ der Power-Modus-Ereignis darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.Win32.PowerModeChangedEventArgs" /> -Klasse unter Verwendung der angegebenen Potenz Modus-Ereignis des Typs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor kann verwendet werden, zum Erstellen einer <xref:Microsoft.Win32.PowerModeChangedEventArgs> , der ein Ereignistyp Power Modus angibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.PowerModes Mode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Win32.PowerModes Mode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.PowerModeChangedEventArgs.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.PowerModes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Bezeichner, der den Typ des Ereignisses im Modus "Power" gibt an, der aufgetreten ist.</summary>
+        <value>Einer der <see cref="T:Microsoft.Win32.PowerModes" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den Typ des Übergangs Modus Power, das auftritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

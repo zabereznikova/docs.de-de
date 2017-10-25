@@ -1,0 +1,355 @@
+<Type Name="CatalogPart" FullName="System.Web.UI.WebControls.WebParts.CatalogPart">
+  <TypeSignature Language="C#" Value="public abstract class CatalogPart : System.Web.UI.WebControls.WebParts.Part" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CatalogPart extends System.Web.UI.WebControls.WebParts.Part" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.CatalogPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.Part</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient als Basisklasse für Steuerelemente in <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> bieten Sie Zonen, die auch Kataloge mit verfügbaren Webserversteuerelementen (insbesondere <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente), dass Benutzer zu einer Webseite hinzufügen können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse ist eine Basisklasse für spezielle Steuerelemente, die sich in <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Zonen. Diese abgeleiteten <xref:System.Web.UI.WebControls.WebParts.CatalogPart> -Steuerelemente bieten Kataloge von Webserversteuerelementen, die Endbenutzer zu einer Webseite hinzufügen können. Verwendung <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente in einer Web-Anwendung, wenn Sie Endbenutzer die erforderliche Flexibilität, um die Funktionalität einer Webseite zu ändern, indem Sie hinzufügen oder Entfernen von Serversteuerelementen bereitstellen möchten.  
+  
+ Ein Katalog ist lediglich eine Liste von einem oder mehreren verfügbaren Webserversteuerelementen (einschließlich <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, Serversteuerelemente von ASP.NET und benutzerdefinierten Steuerelemente), dass Benutzer zu einer Webseite hinzufügen können. Ein Katalog ist eine Anzahl gemeinsamer Merkmale, einschließlich Anweisungstext für Endbenutzer; Text zur Beschreibung jedes Serversteuerelement; Hilfssteuerelemente, wählen die Serversteuerelemente und fügen sie auf der Seite "; eine allgemeine Header, Footer und Rahmen; und eine Anzahl der Formatattribute.  
+  
+ Es gibt drei Arten von <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente, die mit dem Webparts-Steuerelementsatz bereitgestellt werden, wie in der folgenden Tabelle beschrieben. Jede Art von <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelement enthält Serversteuerelemente, die auf eine Seite aus einer anderen Quelle hinzugefügt werden.  
+  
+> [!IMPORTANT]
+>  Steuerelemente, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse kann nur in abgeleiteten von Zonen befinden der <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Klasse.  
+  
+|Steuerelement|Beschreibung|  
+|-------------|-----------------|  
+|<xref:System.Web.UI.WebControls.WebParts.PageCatalogPart>|Enthält Steuerelemente, die auf einer Seite geschlossen wurde, und, die erneut geöffnet werden kann (wieder in der Seite ") von Benutzern. Die Steuerelemente in dieser Art von Katalog sind, die bereits auf der Seite aus einer anderen Quelle hinzugefügt wurden, und klicken Sie dann von einem Benutzer geschlossen wurden.|  
+|<xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart>|Deklariert innerhalb von Serversteuerelementen enthält eine <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement, das sich selbst in befindet eine <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Zone im Markup einer Webseite.|  
+|<xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart>|Stellt die Benutzeroberfläche (UI) für einen Benutzer auf ein Steuerelement-Definitionsdatei (eine XML-Datei, die durch ein Schema definiert, das Zustandsinformationen enthält) in einen Katalog hochladen, damit das Steuerelement zu einer Webseite hinzugefügt werden kann. Die Steuerelemente selbst werden nicht in dieser Art von Katalog angezeigt. der Katalog ist nur einen Mechanismus für den Zugriff auf die Definitionsdateien für externe Steuerelemente, damit sie auf eine Seite hinzugefügt werden können.|  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse erbt von der Basisklasse <xref:System.Web.UI.WebControls.WebParts.Part> Klasse, sodass er die gemeinsame Verhalten anderer Teilsteuerelemente im Webparts-Steuerelementsatz aufweist. Darüber hinaus fügt es einige Member, die für die Features des Katalogs nützlich sind. Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart.DisplayTitle%2A> Eigenschaft ruft die tatsächliche Zeichenfolge, die gegenwärtig als Titel des Steuerelements angezeigt wird. Der Wert dieser Eigenschaft kann der Wert der identisch sein der <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> Eigenschaft oder, wenn diese Eigenschaft, die einen Standardwert von .NET Framework bereitgestellten kein Wert zugewiesen wurde. Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart.WebPartManager%2A> und <xref:System.Web.UI.WebControls.WebParts.CatalogPart.Zone%2A> Eigenschaften beide bieten einfachen Zugriff auf die beiden wichtigen Objekte, die den Lebenszyklus des steuern eine <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelement: die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> -Steuerelement, und die <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Zone, enthält die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuern Sie, bzw..  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> -Klasse enthält auch mehrere Methoden. Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions%2A> -Methode deklariert ist, als eine abstrakte Methode, die von Erben implementiert werden muss. Der beabsichtigte Zweck ist eine Auflistung von Beschreibungen der Steuerelemente im Katalog zurückgegeben. Eine verwandte Methode <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetWebPart%2A>, wird auch als abstrakt deklariert und muss von Erben implementiert werden. Diese Methode dient zum Zurückgeben einer Instanz von einem <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement auf der Grundlage von einer Beschreibung, die an die Methode als Parameter übergeben wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Da die Klasse abstrakt ist, wird er nicht direkt im Code verwendet. Allerdings wird im Beispiel gezeigt, wie mit den drei abgeleiteten arbeiten <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente, die mit den Webparts-Steuerelementsatz allgemeine Anwendungsszenarien bereitgestellt.  
+  
+ Es gibt vier Teile im Codebeispiel:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu ändern.  
+  
+-   Eine Webseite, die die drei enthält <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente bereitgestellt, mit dem Webparts-Steuerelementsatz, alle deklarierten innerhalb einer <xref:System.Web.UI.WebControls.WebParts.CatalogZone> auf einer Webseite. Die Seite enthält außerdem eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> -Steuerelement, mit einem <xref:System.Web.UI.WebControls.AdRotator> Steuerelement deklariert werden, in der Zone.  
+  
+-   Eine XML-Datei mit Zitaten angezeigt, der <xref:System.Web.UI.WebControls.AdRotator> Steuerelement auf der Webseite.  
+  
+-   Eine Erläuterung zum Ausführen des Beispiels.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Speichern Sie diesen Code in einer Datei namens DisplayModeMenuCS.ascx oder DisplayModeMenuVB.ascx (je nachdem welche Sprache Sie verwenden). Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_CatalogPart_Overview#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogPart_Overview/CS/displaymodemenucs.ascx#5)]
+ [!code-aspx-vb[WebParts_CatalogPart_Overview#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogPart_Overview/VB/displaymodemenuvb.ascx#5)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite. Diese Seite enthält eine <xref:System.Web.UI.WebControls.WebParts.CatalogZone> -Steuerelement, und innerhalb der untergeordneten `<zonetemplate>` Element jeder der drei <xref:System.Web.UI.WebControls.WebParts.CatalogPart> steuert bereitgestellten mit den Webparts-Steuerelementsatzes deklariert wird. Einige Attribute werden festgelegt, auf die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement, und auch in der \<Skript > Abschnitt der Seite, die Attribute auf das entsprechende Steuerelement programmgesteuert zugegriffen werden. Das Steuerelement enthält ein untergeordnetes Steuerelement, die ein Benutzer auf der Seite hinzufügen können: eine Standard <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Die <xref:System.Web.UI.WebControls.WebParts.CatalogZone> und <xref:System.Web.UI.WebControls.WebParts.CatalogPart> -Steuerelement wird nur sichtbar sein, wenn der Benutzer die Seite in den Kataloganzeigemodus wechselt.  
+  
+ Die Seite enthält außerdem eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> -Steuerelement, und innerhalb dessen untergeordnetem `<zonetemplate>` Element ist ein <xref:System.Web.UI.WebControls.AdRotator> Steuerelement, das sich abwechselnden Nachrichten aus einer XML-Datei zeigt. Wenn ein Benutzer das Steuerelement schließt durch Klicken auf das Beenden-Verb, wenn die Seite wird angezeigt, das Steuerelement im Katalog Seite hinzugefügt wird und der Benutzer kann das Steuerelement durch Wechsel von der Seite zu Kataloganzeigemodus erneut öffnen, den Zugriff auf die <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> steuern und zurück Hinzufügen der geschlossene Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_CatalogPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogPart_Overview/CS/catalogpartcs.aspx#1)]
+ [!code-aspx-vb[WebParts_CatalogPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogPart_Overview/VB/catalogpartvb.aspx#1)]  
+  
+ Der dritte Teil des Codebeispiels wird die XML-Datei. Diese Datei ist eine Quelldatei für die <xref:System.Web.UI.WebControls.AdRotator> Steuerelement, das auf der Seite deklariert wird. Die Datei enthält bevorzugten Angebote, die das Steuerelement in regelmäßigen Abständen dreht und zeigt. Kopieren Sie den folgenden Inhalt in einem Text-Editor, und speichern Sie die Datei als Quotes.xml.  
+  
+```  
+<?xml version="1.0" encoding="utf-8" ?>  
+<Advertisements>  
+  <Ad>  
+    <AlternateText>  
+      A stitch in time saves nine.  
+    </AlternateText>      
+  </Ad>  
+  <Ad>  
+    <AlternateText>  
+      A penny saved is a penny earned.  
+    </AlternateText>      
+  </Ad>  
+</Advertisements>  
+```  
+  
+ Führen Sie im Codebeispiel wird geladen Sie die Webseite in einem Browser werden. Verwenden der **Anzeigemodus** Dropdown-Steuerelement auswählen **Katalog** und schalten Sie die Seite zum Kataloganzeigemodus. Beachten Sie die Auswirkungen der verschiedenen Eigenschaftswerte, die für festgelegt wurden die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement, enthält die <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Sie können das Kontrollkästchen neben den <xref:System.Web.UI.WebControls.Calendar> Steuerelement, und klicken Sie auf **hinzufügen** auf der Seite hinzugefügt. Wenn Sie auf die **DeclarativeCatalogPart Anzeigeeigenschaften** Schaltfläche, die Werte der Eigenschaften für dieses Steuerelement angezeigt werden. Klicken Sie auf **schließen** die Seite zu normalen Durchsuchen-Modus zurückkehren und das hinzugefügte Steuerelement auf der Seite anzuzeigen. Kehren Sie nun zu Verbmenü auf die <xref:System.Web.UI.WebControls.AdRotator> -Steuerelement (dargestellt durch den Pfeil nach unten in der Titelleiste), und klicken Sie auf **schließen**. Das Steuerelement geschlossen und die Seitenkatalog hinzugefügt. Wechseln Sie wieder die Seite in Kataloganzeigemodus, und klicken Sie auf der Seite Link zum Anzeigen der <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> Steuerelement. Beachten Sie, dass die <xref:System.Web.UI.WebControls.AdRotator> Steuerelement wird es mit dem Titel verwiesen **Favorite Quotes**. Wählen Sie die **Favorite Quotes** Steuerelement, und klicken Sie auf die **hinzufügen** Schaltfläche, um das Steuerelement zurück zur Seite hinzuzufügen. Klicken Sie auf die **schließen** Schaltfläche, um die Seite, um den Durchsuchen-Modus zurückzukehren.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement auf dieser Seite auch deklariert wird, aber damit optimal nutzen des Steuerelements nicht in diesem Codebeispiel wird gezeigt, ist ein Beispiel zum Importieren von Steuerelementen komplizierter,. Ein vollständiges funktionsfähiges Beispiel finden Sie in der Klasse Übersichtsdokumenten der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Klasse oder die <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Klasse.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Da die <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Klasse ist abstrakt, können Sie nicht direkt auf einer Webseite verwenden. Die Webparts-Steuerelementsatz enthält drei <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelemente (in der Tabelle im Abschnitt "Hinweise" in diesem Thema aufgeführt), die von der Basisklasse abgeleitet sind und auf Webparts-Seiten verwendet werden können. Diese Steuerelemente sollten die meisten Funktionen, die zum Erstellen der Kataloge von Webserversteuerelementen benötigt bereitstellen. Allerdings Sie möglicherweise spezielle Anforderungen, die eine würde Entwickeln eines benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelement. Sie können z. B. eine besondere Art von erstellen <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelement, das Serversteuerelemente über einen Webdienst oder direkt aus einer Datenbank verfügbar macht. Zu diesem Zweck müssen Sie erben von der <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Klasse. Müssen Sie auch die abstrakte überschreiben <see cref="M:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions" /> und <see cref="M:System.Web.UI.WebControls.WebParts.CatalogPart.GetWebPart(System.Web.UI.WebControls.WebParts.WebPartDescription)" /> Methoden, um eine Implementierung bereitstellen, die gibt die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder andere Serversteuerelemente und ihren Beschreibungen. Sie benötigen auch Methoden, um die verschiedenen Serversteuerelemente aus der Datenbank oder den Webdienst zu laden.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CatalogPart ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPart.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die Klasse zur Verwendung durch eine geerbte Klasseninstanz. Dieser Konstruktor kann nur von einer geerbten Klasse aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayTitle">
+      <MemberSignature Language="C#" Value="public string DisplayTitle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogPart.DisplayTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die den aktuellen Titel der enthält einem <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die den vollständigen, sichtbaren Titel des Steuerelements darstellt. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart.DisplayTitle%2A> Eigenschaft gibt den aktuellen Wert des basistexts <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> Eigenschaft oder, wenn das Steuerelement über keinen Titel, einen berechneten Wert verfügt.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart.DisplayTitle%2A> Eigenschaft eine Eigenschaft schreibgeschützt, berechnet den tatsächlichen aktuellen Wert des angezeigten Titels zur Laufzeit abgerufen werden soll. Sie sollten deshalb nicht versuchen, diese Eigenschaft verwenden, legen Sie einen Titel für eine <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelement. Um einen Titel festzulegen, verwenden Sie die Basis <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.CatalogPart.DisplayTitle%2A> Eigenschaft. In der `<script>` Abschnitt der Seite greift der Code auf die <xref:System.Web.UI.WebControls.WebParts.CatalogPart.DisplayTitle%2A> Eigenschaft `DeclarativeCatalogPart1` , die auf der Seite deklariert ist. Dieser Code zeigt nur die Webseite; den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.CatalogPart> -Klassenübersicht.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAvailableWebPartDescriptions">
+      <MemberSignature Language="C#" Value="public abstract System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection GetAvailableWebPartDescriptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection GetAvailableWebPartDescriptions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung der Beschreibungen der verfügbaren <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente in einem Katalog.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection" /> , enthält eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> für jedes Steuerelement in einem Katalog.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions%2A> Methodenrückgabe Beschreibungsinformationen für jedes Steuerelement in einem Katalog. Ein <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekt ist ein einfaches Objekt, das enthält wichtige Informationen zu einem <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, darunter seine ID, einen Objektverweis auf das Steuerelement und die Werte für mehrere wichtige Eigenschaften, die von der Basisklasse geerbtwerden<xref:System.Web.UI.WebControls.WebParts.Part>-Klasse wie z. B. <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> und <xref:System.Web.UI.WebControls.WebParts.Part.Description%2A>.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions%2A> Methode verbessert die Leistung. Wenn ein Katalog erstellt wird, benötigt er einige Informationen über jedes Steuerelement darin enthaltenen z. B. einen Titel, eine Beschreibung, ein Symbol (falls vorhanden) und einer ID, Anstatt eine Instanz jedes Steuerelements zum Abrufen dieser Informationen zu erstellen, können Sie ein Aufrufer die <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions%2A> Methode, die nur die Beschreibungsinformationen über jedes Steuerelement zurückgibt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions" /> Methode ist abstrakt, damit von implementiert werden, muss abgeleitet <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelemente. Diese Methode wird aufgerufen, indem Sie die Zone, enthält eine <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> -Steuerelement, und ein zugeordnetes <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartChrome" /> Objekt beim den Inhalt einer <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> Zone gerendert werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignModeState">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IDictionary GetDesignModeState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.IDictionary GetDesignModeState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPart.GetDesignModeState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den aktuellen Zustand einer <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> -Steuerelements übergeordnete Zone.</summary>
+        <returns>Ein <see cref="T:System.Collections.IDictionary" /> , die den aktuellen Status der enthält die <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> Zone, enthält eine <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetDesignModeState%2A> Methodenrückgabe Informationen über den Status der Zone, enthält eine <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelement. Informationen über den Zustand wird in Form eines Wörterbuchs zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWebPart">
+      <MemberSignature Language="C#" Value="public abstract System.Web.UI.WebControls.WebParts.WebPart GetWebPart (System.Web.UI.WebControls.WebParts.WebPartDescription description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.WebControls.WebParts.WebPart GetWebPart(class System.Web.UI.WebControls.WebParts.WebPartDescription description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPart.GetWebPart(System.Web.UI.WebControls.WebParts.WebPartDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.Web.UI.WebControls.WebParts.WebPartDescription" />
+      </Parameters>
+      <Docs>
+        <param name="description">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> , enthält einen Verweis auf ein bestimmtes <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />.</param>
+        <summary>Ruft ab, aus einem Katalog der <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement, das vom verwiesen wird die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> Objekt an die Methode übergeben.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> , verweist das Objekt in der <paramref name="description" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetWebPart%2A> Methode gibt ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement aus einem Katalog. Die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> -Objekt, das an die Methode übergeben wird, entspricht einem bestimmten <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement und ermöglicht, mit denen gesteuert wird, von der-Methode zurückgegeben werden sollen.  
+  
+ Wenn ein Katalog ein Serversteuerelement enthält, die nicht von abgeleitet ist die <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse, z. B. ein ASP.NET-Serversteuerelement, ein benutzerdefiniertes Steuerelement oder ein Benutzersteuerelement, ein <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelement muss das Serversteuerelement mit umschließen einer <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> steuern und zurück die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Steuerelement aus dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.Web.UI.WebControls.WebParts.CatalogPart.GetWebPart(System.Web.UI.WebControls.WebParts.WebPartDescription)" /> Methode ist abstrakt, damit von implementiert werden, muss abgeleitet <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelemente. Diese Methode wird aufgerufen, indem Sie die Zone, enthält eine <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> -Steuerelement, ein zugeordnetes <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartChrome" /> -Objekt, und durch die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Objekt auf einer Webseite.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPart.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart.OnPreRender%2A> Methode ruft die Basis <xref:System.Web.UI.Control.OnPreRender%2A?displayProperty=nameWithType> -Methode, und stellt sicher, dass eine Instanz von der <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Klasse erstellt wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> , enthält die <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelement <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Diese Methode kann optional in einer abgeleiteten Klasse überschrieben werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDesignModeState">
+      <MemberSignature Language="C#" Value="protected override void SetDesignModeState (System.Collections.IDictionary data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDesignModeState(class System.Collections.IDictionary data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogPart.SetDesignModeState(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="data">Ein <see cref="T:System.Collections.IDictionary" />, das die Entwurfszeitdaten für das Steuerelement enthält.</param>
+        <summary>Legt die Entwurfszeitdaten für ein Steuerelement fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebPartManager">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebParts.WebPartManager WebPartManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartManager WebPartManager" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogPart.WebPartManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die aktuelle Instanz von der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Klasse.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> für die aktuelle Webseite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart.WebPartManager%2A> Eigenschaft bietet eine Möglichkeit für eine <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelement auf das aktuelle <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Objekt auf der Seite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zone">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebParts.CatalogZoneBase Zone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.CatalogZoneBase Zone" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogPart.Zone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.CatalogZoneBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> Zone, enthält eine <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> , entspricht die Zone, die das Steuerelement enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart.Zone%2A> ermöglicht eine <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelement zum Abrufen eines Verweises auf die Zone. Obwohl die Eigenschaft schreibgeschützt ist, können die zugrunde liegenden Eigenschaften der Zone selbst programmgesteuert geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

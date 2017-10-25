@@ -1,0 +1,62 @@
+<Type Name="SecurityTokenVersion" FullName="System.IdentityModel.Selectors.SecurityTokenVersion">
+  <TypeSignature Language="C#" Value="public abstract class SecurityTokenVersion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SecurityTokenVersion extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.SecurityTokenVersion" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die technischen Daten dar, z. B. technische WS-*Daten, in denen Sicherheitstoken definiert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.IdentityModel.Selectors.SecurityTokenVersion>-Klasse bestimmen Sie die Version der technischen WS-*Daten, die von Sicherheitstoken in einer SOAP-Nachricht bestätigt werden.  
+  
+ Mit der <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>-Methode erstellen Sie eine <xref:System.IdentityModel.Selectors.SecurityTokenSerializer>, die Sicherheitstoken gemäß der Gruppe von technischen Daten, die einer von der <xref:System.IdentityModel.Selectors.SecurityTokenVersion>-Klasse abgeleiteten Klasse zugeordnet sind, serialisieren und deserialisieren kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityTokenVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenVersion.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Selectors.SecurityTokenVersion" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSecuritySpecifications">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; GetSecuritySpecifications ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; GetSecuritySpecifications() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenVersion.GetSecuritySpecifications" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Auflistung unterstützter sicherheitstechnischer Daten ab.</summary>
+        <returns>Eine <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> des Typs <see cref="T:System.String" />, die den Satz unterstützter sicherheitstechnischer Daten enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

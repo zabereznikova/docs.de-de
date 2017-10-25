@@ -1,0 +1,80 @@
+<Type Name="IXmlJsonWriterInitializer" FullName="System.Runtime.Serialization.Json.IXmlJsonWriterInitializer">
+  <TypeSignature Language="C#" Value="public interface IXmlJsonWriterInitializer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXmlJsonWriterInitializer" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.Json.IXmlJsonWriterInitializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+    <AssemblyVersion>4.0.4.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.ServiceModel.Web, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Schnittstelle für die Initialisierung eines JSON-Writers (JavaScript Object Notation) an, wenn dieser zum Schreiben in einen bestimmten Ausgabestream wiederverwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XmlDictionaryWriter>-Objekte, die von den <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory.CreateJsonWriter%2A>-Methoden erstellt werden, implementieren diese Schnittstelle und können nach dem Erstellen direkt JSON-codierte Daten schreiben. Wenn ein Benutzer jedoch das gleiche <xref:System.Xml.XmlDictionaryWriter>-Objekt zum Schreiben eines neuen JSON-Dokuments in einen anderen Ausgabestream wiederverwenden möchte, muss der Writer mit der <xref:System.Runtime.Serialization.Json.IXmlJsonWriterInitializer.SetOutput%28System.IO.Stream%2CSystem.Text.Encoding%2CSystem.Boolean%29>-Methode für den jeweiligen Stream initialisiert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SetOutput">
+      <MemberSignature Language="C#" Value="public void SetOutput (System.IO.Stream stream, System.Text.Encoding encoding, bool ownsStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetOutput(class System.IO.Stream stream, class System.Text.Encoding encoding, bool ownsStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Json.IXmlJsonWriterInitializer.SetOutput(System.IO.Stream,System.Text.Encoding,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="ownsStream" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Ausgabe-<see cref="T:System.IO.Stream" />, in den der Writer schreibt.</param>
+        <param name="encoding">Das <see cref="T:System.Text.Encoding" />-Objekt, das die Zeichencodierung des Ausgabestreams angibt.</param>
+        <param name="ownsStream"><see langword="true" />, wenn der Ausgabestream nach Abschluss des Vorgangs vom Writer geschlossen werden soll, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert (oder reinitialisiert) einen JSON-Writer (JavaScript Object Notation) für einen bestimmten Ausgabestream mit der angegebenen Zeichencodierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XmlDictionaryWriter>-Objekte, die von den <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory.CreateJsonWriter%2A>-Methoden erstellt werden, implementieren diese Schnittstelle und können nach dem Erstellen direkt JSON-codierte Daten schreiben. Wenn ein Benutzer jedoch das gleiche <xref:System.Xml.XmlDictionaryWriter>-Objekt zum Schreiben eines neuen JSON-Dokuments in einen anderen Ausgabestream wiederverwenden möchte, muss der Writer mit der <xref:System.Runtime.Serialization.Json.IXmlJsonWriterInitializer.SetOutput%28System.IO.Stream%2CSystem.Text.Encoding%2CSystem.Boolean%29>-Methode für den jeweiligen Stream initialisiert werden.  
+  
+ Die von <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> erstellten Writer können UTF-8- und UTF-16-Codierungen (Big- oder Little-Endian) verarbeiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

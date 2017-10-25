@@ -1,0 +1,359 @@
+<Type Name="MetafileHeader" FullName="System.Drawing.Imaging.MetafileHeader">
+  <TypeSignature Language="C#" Value="public sealed class MetafileHeader" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit MetafileHeader extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.MetafileHeader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Attribute eines zugeordneten <see cref="T:System.Drawing.Imaging.Metafile" />. Nicht vererbt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetafileHeader.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Rectangle" /> , umschließt der zugeordneten <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" /> , umschließt der zugeordneten <see cref="T:System.Drawing.Imaging.Metafile" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DpiX">
+      <MemberSignature Language="C#" Value="public float DpiX { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 DpiX" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetafileHeader.DpiX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die horizontale Auflösung in dpi-Wert, der das zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <value>Die horizontale Auflösung in dpi-Wert, der das zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DpiY">
+      <MemberSignature Language="C#" Value="public float DpiY { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 DpiY" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetafileHeader.DpiY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vertikale Auflösung in dpi-Wert, der das zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <value>Die vertikale Auflösung in dpi-Wert, der das zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmfPlusHeaderSize">
+      <MemberSignature Language="C#" Value="public int EmfPlusHeaderSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EmfPlusHeaderSize" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetafileHeader.EmfPlusHeaderSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe in Bytes, die erweiterte Metadatei plus die Headerdatei an.</summary>
+        <value>Die Größe in Bytes, der das erweiterte Metadatei plus der Headerdatei.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDisplay">
+      <MemberSignature Language="C#" Value="public bool IsDisplay ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsDisplay() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.MetafileHeader.IsDisplay" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> Gerät abhängig ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> Gerät abhängig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmf">
+      <MemberSignature Language="C#" Value="public bool IsEmf ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsEmf() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.MetafileHeader.IsEmf" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> befindet sich im Windows-enhanced Metafile-Format.</summary>
+        <returns>
+          <see langword="true" />Wenn die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> befindet sich im Windows enhanced Metafile Format; anderenfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmfOrEmfPlus">
+      <MemberSignature Language="C#" Value="public bool IsEmfOrEmfPlus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsEmfOrEmfPlus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.MetafileHeader.IsEmfOrEmfPlus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> Windows enhanced Metafile-Format oder die erweiterte Metadatei Plus Format ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> Windows enhanced Metafile-Format oder die erweiterte Metadatei Plus Format ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmfPlus">
+      <MemberSignature Language="C#" Value="public bool IsEmfPlus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsEmfPlus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.MetafileHeader.IsEmfPlus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> ist das Format Erweiterte Metadatei Plus.</summary>
+        <returns>
+          <see langword="true" />Wenn die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> in das Windows-EMF-Format; plus ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmfPlusDual">
+      <MemberSignature Language="C#" Value="public bool IsEmfPlusDual ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsEmfPlusDual() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.MetafileHeader.IsEmfPlusDual" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> befindet sich in zwei enhanced Metafile Format. Dieses Format unterstützt die verbesserten und die verbesserten plus-Format.</summary>
+        <returns>
+          <see langword="true" />Wenn die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> befindet sich in zwei enhanced Metafile Format; anderenfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmfPlusOnly">
+      <MemberSignature Language="C#" Value="public bool IsEmfPlusOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsEmfPlusOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.MetafileHeader.IsEmfPlusOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> unterstützt nur Windows Metafile-Format plus verbessert.</summary>
+        <returns>
+          <see langword="true" />Wenn die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> unterstützt nur Metadatei plus aufweist erweiterte; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWmf">
+      <MemberSignature Language="C#" Value="public bool IsWmf ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsWmf() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.MetafileHeader.IsWmf" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> wird im Windows Metafile-Format.</summary>
+        <returns>
+          <see langword="true" />Wenn die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> ist im Windows Metafile-Format; anderenfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWmfPlaceable">
+      <MemberSignature Language="C#" Value="public bool IsWmfPlaceable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsWmfPlaceable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.MetafileHeader.IsWmfPlaceable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> befindet sich in der Windows-Platzierung Metafile-Format.</summary>
+        <returns>
+          <see langword="true" />Wenn die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" /> weist das Format für den Windows-Metadatei Platzierung; anderenfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalDpiX">
+      <MemberSignature Language="C#" Value="public int LogicalDpiX { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LogicalDpiX" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetafileHeader.LogicalDpiX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die logische horizontale Auflösung in dpi-Wert, der das zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <value>Die logische horizontale Auflösung in dpi-Wert, der das zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalDpiY">
+      <MemberSignature Language="C#" Value="public int LogicalDpiY { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LogicalDpiY" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetafileHeader.LogicalDpiY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die logische vertikale Auflösung in dpi-Wert, der das zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <value>Die logische vertikale Auflösung in dpi-Wert, der das zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetafileSize">
+      <MemberSignature Language="C#" Value="public int MetafileSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MetafileSize" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetafileHeader.MetafileSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe in Bytes des zugeordneten <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <value>Die Größe in Bytes, der zugeordneten <see cref="T:System.Drawing.Imaging.Metafile" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Drawing.Imaging.MetafileType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Imaging.MetafileType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetafileHeader.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.MetafileType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der zugeordneten <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Imaging.MetafileType" /> -Enumeration, der den Typ der zugeordneten darstellt <see cref="T:System.Drawing.Imaging.Metafile" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public int Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Version" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetafileHeader.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Versionsnummer der zugeordneten <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <value>Die Versionsnummer des zugeordneten <see cref="T:System.Drawing.Imaging.Metafile" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WmfHeader">
+      <MemberSignature Language="C#" Value="public System.Drawing.Imaging.MetaHeader WmfHeader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Imaging.MetaHeader WmfHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.MetafileHeader.WmfHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.MetaHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Windows-Metadatei (WMF)-Header-Datei für den zugeordneten <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Imaging.MetaHeader" /> , enthält die WMF-Headerdatei für die zugeordnete <see cref="T:System.Drawing.Imaging.Metafile" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

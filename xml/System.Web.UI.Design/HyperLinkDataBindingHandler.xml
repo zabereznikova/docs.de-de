@@ -1,0 +1,82 @@
+<Type Name="HyperLinkDataBindingHandler" FullName="System.Web.UI.Design.HyperLinkDataBindingHandler">
+  <TypeSignature Language="C#" Value="public class HyperLinkDataBindingHandler : System.Web.UI.Design.DataBindingHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HyperLinkDataBindingHandler extends System.Web.UI.Design.DataBindingHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.HyperLinkDataBindingHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.DataBindingHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Handler für die Datenbindung für eine Link-Eigenschaft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Klasse, mit dem Namen `CustomHyperLinkDataBindingHandler`, die sich daraus ableitet der `HyperLinkDataBindingHandler` Klasse. Löst während der Entwurfszeit Datenbindung für die `CustomHyperLink` -Klasse unter Verwendung der <xref:System.Web.UI.Design.HyperLinkDataBindingHandler.DataBindControl%2A> Methode.  
+  
+ [!code-csharp[HyperLinkDesigner_Resubmit#2](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkDesigner_Resubmit/CS/CustomHyperLinkDesigner.cs#2)]
+ [!code-vb[HyperLinkDesigner_Resubmit#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkDesigner_Resubmit/VB/customhyperlinkdesigner.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HyperLinkDataBindingHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HyperLinkDataBindingHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Web.UI.Design.HyperLinkDataBindingHandler" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindControl">
+      <MemberSignature Language="C#" Value="public override void DataBindControl (System.ComponentModel.Design.IDesignerHost designerHost, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DataBindControl(class System.ComponentModel.Design.IDesignerHost designerHost, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HyperLinkDataBindingHandler.DataBindControl(System.ComponentModel.Design.IDesignerHost,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designerHost" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="designerHost">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> für das Dokument, das das Steuerelement enthält.</param>
+        <param name="control">Die <see cref="T:System.Web.UI.Control" /> an Daten gebunden werden.</param>
+        <summary>Löst die zur Entwurfszeit die Datenbindung für das angegebene Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bestimmt, ob die <xref:System.Web.UI.WebControls.HyperLink.Text%2A> und <xref:System.Web.UI.WebControls.HyperLink.NavigateUrl%2A> Eigenschaften der <xref:System.Web.UI.WebControls.HyperLink> -Steuerelement an Daten gebunden sind. Wenn die <xref:System.Web.UI.WebControls.HyperLink.Text%2A> Eigenschaft datengebunden ist, legt diese Methode den Wert der Eigenschaft auf "Datengebundenen". Wenn die <xref:System.Web.UI.WebControls.HyperLink.NavigateUrl%2A> Eigenschaft datengebunden ist, diese Methode legt den Wert der Eigenschaft in eine Textzeichenfolge fest, sodass das Steuerelement eine funktionierende Link dargestellt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Klasse, mit dem Namen `CustomHyperLinkDataBindingHandler`, die sich daraus ableitet der `HyperLinkDataBindingHandler` Klasse. Löst während der Entwurfszeit Datenbindung für die <xref:System.Web.UI.WebControls.HyperLink.ImageUrl%2A> Eigenschaft von der `CustomHyperLink` Klasse, damit Platzhaltertext für die Eigenschaft angezeigt wird, wenn es zur Entwurfszeit datengebundene ist.  
+  
+ [!code-csharp[HyperLinkDesigner_Resubmit#2](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkDesigner_Resubmit/CS/CustomHyperLinkDesigner.cs#2)]
+ [!code-vb[HyperLinkDesigner_Resubmit#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkDesigner_Resubmit/VB/customhyperlinkdesigner.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

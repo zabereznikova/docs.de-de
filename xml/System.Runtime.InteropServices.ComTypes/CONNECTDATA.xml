@@ -1,0 +1,106 @@
+<Type Name="CONNECTDATA" FullName="System.Runtime.InteropServices.ComTypes.CONNECTDATA">
+  <TypeSignature Language="C#" Value="public struct CONNECTDATA" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential sealed beforefieldinit CONNECTDATA extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComTypes.CONNECTDATA" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Beschreibt eine bestehende Verbindung mit einem bestimmten Verbindungspunkt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `CONNECTDATA` Struktur ist der Typ, durch die <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections.Next%2A?displayProperty=nameWithType> Methode.  
+  
+ Weitere Informationen zu `CONNECTDATA`, finden Sie in der MSDN Library.  
+  
+ Die common Language Runtime löst eine Ausnahme aus, wenn eine COM-Methode in systemeigenem Code ein HRESULT zurückgibt. Weitere Informationen finden Sie unter [Vorgehensweise: Zuordnen von HRESULTs und Ausnahmen](~/docs/framework/interop/how-to-map-hresults-and-exceptions.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="dwCookie">
+      <MemberSignature Language="C#" Value="public int dwCookie;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 dwCookie" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.CONNECTDATA.dwCookie" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt ein Verbindungstoken, das von einem Aufruf zurückgegeben wird <see cref="M:System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise(System.Object,System.Int32@)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="pUnk">
+      <MemberSignature Language="C#" Value="public object pUnk;" />
+      <MemberSignature Language="ILAsm" Value=".field public object pUnk" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.CONNECTDATA.pUnk" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen Zeiger auf die <see langword="IUnknown" /> -Schnittstelle für einen verbundenen Advise-Senke. Der Aufrufer muss Aufrufen <see langword="IUnknown::Release" /> für diesen Zeiger bei der <see langword="CONNECTDATA" /> Struktur wird nicht mehr benötigt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

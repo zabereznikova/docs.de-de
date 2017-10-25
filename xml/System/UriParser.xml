@@ -1,0 +1,441 @@
+<Type Name="UriParser" FullName="System.UriParser">
+  <TypeSignature Language="C#" Value="public abstract class UriParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract UriParser extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.UriParser" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Analysiert ein neues URI-Schema. Dies ist eine abstrakte Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die UriParser-Klasse ermöglicht Ihnen das Erstellen von Parser für neue URI-Schemas. Sie können diese Parser in ihrer Gesamtheit schreiben, oder der Parser von bekannten Schemas (HTTP, FTP und andere Schemas, die basierend auf Netzwerkprotokolle) abgeleitet werden können. Wenn Sie einen vollständig neuen Parser erstellen möchten, erben Sie von <xref:System.GenericUriParser>. Wenn einen Parser erstellen, die ein bekanntes URI-Schema erweitert werden sollen, erben Sie von <xref:System.FtpStyleUriParser>, <xref:System.HttpStyleUriParser>, <xref:System.FileStyleUriParser>, <xref:System.GopherStyleUriParser>, oder <xref:System.LdapStyleUriParser>.  
+  
+ Microsoft empfiehlt dringend, dass Sie einen Parser, der im Lieferumfang von .NET Framework verwenden. Erstellen eigene Parser erhöht die Komplexität Ihrer Anwendung und wird nicht ausgeführt werden, sowie die gelieferten Parser.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UriParser ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriParser.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen Standard-URI-Parser.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetComponents">
+      <MemberSignature Language="C#" Value="protected virtual string GetComponents (Uri uri, UriComponents components, UriFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetComponents(class System.Uri uri, valuetype System.UriComponents components, valuetype System.UriFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriParser.GetComponents(System.Uri,System.UriComponents,System.UriFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="components" Type="System.UriComponents" />
+        <Parameter Name="format" Type="System.UriFormat" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Der zu analysierende URI.</param>
+        <param name="components">Die <see cref="T:System.UriComponents" /> zum Abrufen von <c>Uri</c>.</param>
+        <param name="format">Einer der <see cref="T:System.UriFormat" />-Werte, die steuern, wie Sonderzeichen mit Escapezeichen versehen werden.</param>
+        <summary>Ruft die Komponenten aus einem URI ab.</summary>
+        <returns>Eine Zeichenfolge, die die Komponenten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.UriParser.GetComponents%2A> Methode, um den Wert der verschiedenen Teile des URIS, z. B. Festlegen der <xref:System.UriComponents.Scheme>, <xref:System.UriComponents.Host>, oder <xref:System.UriComponents.Port>.  
+  
+ Die Komponenten werden in der Reihenfolge zurückgegeben, die sie im URI angezeigt werden. Z. B. wenn <xref:System.UriComponents.Scheme> angegeben wird, wird zuerst angezeigt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="uriFormat" /> ist ungültig.  
+  
+ \- oder –  
+  
+ <paramref name="uriComponents" />ist keine Kombination aus gültigen <see cref="T:System.UriComponents" /> Werte.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="uri" />Benutzer gesteuerte Analyse erfordert  
+  
+ \- oder –  
+  
+ Der <paramref name="uri" /> ist kein absoluter URI. Mit dieser Methode kann keine relativen URIs verwendet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeAndValidate">
+      <MemberSignature Language="C#" Value="protected virtual void InitializeAndValidate (Uri uri, out UriFormatException parsingError);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitializeAndValidate(class System.Uri uri, [out] class System.UriFormatException&amp; parsingError) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriParser.InitializeAndValidate(System.Uri,System.UriFormatException@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="parsingError" Type="System.UriFormatException&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="uri">T: System.URI überprüft werden soll.</param>
+        <param name="parsingError">Validierungsfehler, sofern vorhanden.</param>
+        <summary>Initialisieren Sie den Status des Parsers, und überprüfen Sie den URI.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.UriParser.InitializeAndValidate%2A> Methode wird jedes Mal aufgerufen, wenn ein <xref:System.Uri> instanziiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBaseOf">
+      <MemberSignature Language="C#" Value="protected virtual bool IsBaseOf (Uri baseUri, Uri relativeUri);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsBaseOf(class System.Uri baseUri, class System.Uri relativeUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriParser.IsBaseOf(System.Uri,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseUri" Type="System.Uri" />
+        <Parameter Name="relativeUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="baseUri">Der Basis-URI.</param>
+        <param name="relativeUri">Der URI, zu testen.</param>
+        <summary>Bestimmt, ob <paramref name="baseUri" /> ist ein Basis-URI für <paramref name="relativeUri" />.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="baseUri" /> ist ein Basis-URI für <paramref name="relativeUri" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKnownScheme">
+      <MemberSignature Language="C#" Value="public static bool IsKnownScheme (string schemeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsKnownScheme(string schemeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriParser.IsKnownScheme(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="schemeName">Der Schemaname, um zu überprüfen.</param>
+        <summary>Gibt an, ob der Parser für ein Schema registriert ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="schemeName" /> wurde registriert ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="schemeName" /> -Parameter ist null.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="schemeName" /> -Parameter ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWellFormedOriginalString">
+      <MemberSignature Language="C#" Value="protected virtual bool IsWellFormedOriginalString (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsWellFormedOriginalString(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriParser.IsWellFormedOriginalString(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Der URI, um zu überprüfen.</param>
+        <summary>Gibt an, ob ein URI wohlgeformt ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="uri" /> wohlgeformt ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.UriParser.IsWellFormedOriginalString%2A> Methode gibt "false" zurück, wenn:  
+  
+-   Die Zeichenfolge ist nicht ordnungsgemäß gemäß RFC 2396 mit Escapezeichen versehen.  
+  
+-   Die Zeichenfolge darstellt, einen absoluten URI, der eine implizite Datei-URI verweist.  
+  
+-   Die Zeichenfolge darstellt, einen absoluten URI, der einen Schrägstrich vor der Pfadkomponente fehlt.  
+  
+-   Die Zeichenfolge enthält umgekehrte Schrägstriche ohne Escapezeichen, selbst wenn sie als Schrägstriche behandelt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNewUri">
+      <MemberSignature Language="C#" Value="protected virtual UriParser OnNewUri ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.UriParser OnNewUri() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriParser.OnNewUri" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UriParser</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aufgerufene durch eine <see cref="T:System.Uri" /> Konstruktor zum Abrufen einer <see cref="T:System.UriParser" /> Instanz</summary>
+        <returns>Ein <see cref="T:System.UriParser" /> für das erstellte <see cref="T:System.Uri" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung gibt denselben Wert zurück <xref:System.UriParser> Instanz. Möglicherweise müssen Sie diese Methode überschreiben und Zurückgeben einer anderen <xref:System.UriParser> für jeden Aufruf, wenn Sie in einer Multithreadumgebung ausgeführt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRegister">
+      <MemberSignature Language="C#" Value="protected virtual void OnRegister (string schemeName, int defaultPort);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRegister(string schemeName, int32 defaultPort) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriParser.OnRegister(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemeName" Type="System.String" />
+        <Parameter Name="defaultPort" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="schemeName">Das Schema, das mit dieser verknüpft ist <see cref="T:System.UriParser" />.</param>
+        <param name="defaultPort">Die Nummer des Ports des Schemas.</param>
+        <summary>Wird vom Framework aufgerufen, wenn eine <see cref="T:System.UriParser" /> Methode registriert ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public static void Register (UriParser uriParser, string schemeName, int defaultPort);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Register(class System.UriParser uriParser, string schemeName, int32 defaultPort) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriParser.Register(System.UriParser,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uriParser" Type="System.UriParser" />
+        <Parameter Name="schemeName" Type="System.String" />
+        <Parameter Name="defaultPort" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="uriParser">Der URI-Parser zu registrieren.</param>
+        <param name="schemeName">Der Name des Schemas, das diesem Parser zugeordnet ist.</param>
+        <param name="defaultPort">Die Standardportnummer für das angegebene Schema.</param>
+        <summary>Ordnet ein Schema und die Port-Nummer mit einem <see cref="T:System.UriParser" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `defaultPort` Parameter wird auf-1 festgelegt, die <xref:System.UriParser.Register%2A> Methode registriert keinen Standardwert für die Portnummer an.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uriParser" />Parameter ist null.  
+  
+ \- oder –  
+  
+ <paramref name="schemeName" />Parameter ist null.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="schemeName" />der Parameter ist ungültig  
+  
+ \- oder –  
+  
+ <paramref name="defaultPort" />Parameter ist ungültig. Die <paramref name="defaultPort" /> Parameter ist kleiner als-1 oder größer als 65.534.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="protected virtual string Resolve (Uri baseUri, Uri relativeUri, out UriFormatException parsingError);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string Resolve(class System.Uri baseUri, class System.Uri relativeUri, [out] class System.UriFormatException&amp; parsingError) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriParser.Resolve(System.Uri,System.Uri,System.UriFormatException@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseUri" Type="System.Uri" />
+        <Parameter Name="relativeUri" Type="System.Uri" />
+        <Parameter Name="parsingError" Type="System.UriFormatException&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="baseUri">Eine Basis-URI.</param>
+        <param name="relativeUri">Ein relativer URI.</param>
+        <param name="parsingError">Fehler beim Auflösen-Prozess, sofern vorhanden.</param>
+        <summary>Wird aufgerufen, indem <see cref="T:System.Uri" /> Konstruktoren und <see cref="Overload:System.Uri.TryCreate" /> um einen relativen URI aufzulösen.</summary>
+        <returns>Die Zeichenfolge des aufgelösten relativen <see cref="T:System.Uri" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Uri>Konstruktoren und <xref:System.Uri.TryCreate%2A?displayProperty=nameWithType> verwenden <xref:System.UriParser.Resolve%2A> zum Erstellen eines URIS vom `baseUri` und `relativeUri`.  
+  
+ Wenn eine Analyse tritt Fehler auf, die zurückgegebene Zeichenfolge für den aufgelösten relativen <xref:System.Uri> ist null.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="baseUri" />-Parameter ist kein absoluter<see cref="T:System.Uri" />  
+  
+ \- oder –  
+  
+ <paramref name="baseUri" />Parameter muss Benutzer gesteuerte Analyse.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,153 @@
+<Type Name="SoapDuration" FullName="System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration">
+  <TypeSignature Language="C#" Value="public sealed class SoapDuration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapDuration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt statische Methoden für die Serialisierung und Deserialisierung von <see cref="T:System.TimeSpan" /> in eine Zeichenfolge, die im XSD-Format formatiert sind <see langword="duration" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen über XSD-Datentypen finden Sie unter der "XML Data Types Reference" in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Methoden in der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration> -Klasse zum Konvertieren zwischen einem <xref:System.TimeSpan> -Objekt und ein XSD- `duration` Zeichenfolge.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration#10](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration/CPP/demo.cpp#10)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration#10](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration/CS/demo.cs#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapDuration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz von <see cref="T:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static TimeSpan Parse (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.TimeSpan Parse(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende <see cref="T:System.String" />.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.String" /> in einem <see cref="T:System.TimeSpan" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.TimeSpan" /> -Objekt, das von der abgerufen wird <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration.Parse%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration#11](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration/CPP/demo.cpp#11)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration#11](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration/CS/demo.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">
+          <paramref name="value" />enthält keine Datum und Uhrzeit, das keines der erkannten Muster entspricht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (TimeSpan timeSpan);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(valuetype System.TimeSpan timeSpan) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration.ToString(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeSpan" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeSpan">Das zu konvertierende <see cref="T:System.TimeSpan" />-Objekt.</param>
+        <summary>Gibt den angegebenen <see cref="T:System.TimeSpan" /> -Objekt als eine <see cref="T:System.String" />.</summary>
+        <returns>Ein <see cref="T:System.String" /> Darstellung des <paramref name="timeSpan" /> im Format "PxxYxxDTxxHxxMxx.xxxS" oder "PxxYxxDTxxHxxMxxS". Die "PxxYxxDTxxHxxMxx.xxxS" wird verwendet, wenn <see cref="P:System.TimeSpan.Milliseconds" /> stimmt nicht mit 0 (null).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration.ToString%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration#12](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration/CPP/demo.cpp#12)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration#12](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration/CS/demo.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XsdType">
+      <MemberSignature Language="C#" Value="public static string XsdType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string XsdType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration.XsdType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die XML-Schemadefinitionssprache (XSD) des aktuellen SOAP-Typs ab.</summary>
+        <value>Ein <see cref="T:System.String" /> , der die XSD des aktuellen SOAP-Typs angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration.XsdType%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration> Klasse.  
+  
+ [!code-cpp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration#13](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration/CPP/demo.cpp#13)]
+ [!code-csharp[System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration#13](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration/CS/demo.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,697 @@
+<Type Name="IsolatedStorage" FullName="System.IO.IsolatedStorage.IsolatedStorage">
+  <TypeSignature Language="C#" Value="public abstract class IsolatedStorage : MarshalByRefObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit IsolatedStorage extends System.MarshalByRefObject" />
+  <TypeSignature Language="DocId" Value="T:System.IO.IsolatedStorage.IsolatedStorage" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die abstrakte Basisklasse, die von der alle Implementierungen von isoliertem Speicher abgeleitet werden müssen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zum dateibasierten isolierten Speicher finden Sie unter der <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Klasse.  
+  
+> [!IMPORTANT]
+>  Isolierte Speicherung ist nicht für [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]-Apps verfügbar. Verwenden Sie stattdessen die zum Speichern von lokalen Daten und Dateien in der `Windows.Storage`-API enthaltenen Anwendungsdatenklassen in den [!INCLUDE[wrt](~/includes/wrt-md.md)]-Namespaces. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](http://go.microsoft.com/fwlink/?LinkId=229175) .  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected IsolatedStorage ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorage.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.IsolatedStorage.IsolatedStorage" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationIdentity">
+      <MemberSignature Language="C#" Value="public object ApplicationIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ApplicationIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorage.ApplicationIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einer Anwendungsidentität, Bereiche des isolierten Speichers.</summary>
+        <value>Ein <see cref="T:System.Object" /> darstellt, die die <see cref="F:System.IO.IsolatedStorage.IsolatedStorageScope.Application" /> Identität.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die Definition einer Anwendung alle Assemblys, die der Anwendung zugeordnet enthält, können Sie diese Art der Identität verwenden, um sicherzustellen, dass nur die Assemblys der Anwendung zugeordneten Zugriffs auf isolierte Speicherplätze verfügen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Code verfügt nicht über die erforderlichen <see cref="T:System.Security.Permissions.SecurityPermission" /> Zugriff auf dieses Objekt. Diese Berechtigungen werden von der Laufzeit basierend auf der Sicherheitsrichtlinie gewährt.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.IO.IsolatedStorage.IsolatedStorage" /> Objekt wird nicht von der Anwendung isoliert <see cref="T:System.IO.IsolatedStorage.IsolatedStorageScope" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf Beweisen. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyIdentity">
+      <MemberSignature Language="C#" Value="public object AssemblyIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object AssemblyIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorage.AssemblyIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Identität einer Assembly verwendet, um den Bereich des isolierten Speichers.</summary>
+        <value>Ein <see cref="T:System.Object" /> darstellt, die die <see cref="T:System.Reflection.Assembly" /> Identität.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der Code verfügt nicht über die erforderlichen <see cref="T:System.Security.Permissions.SecurityPermission" /> Zugriff auf dieses Objekt.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Assembly ist nicht definiert.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf Beweisen. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AvailableFreeSpace">
+      <MemberSignature Language="C#" Value="public virtual long AvailableFreeSpace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 AvailableFreeSpace" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse den verfügbaren freien Speicherplatz für isolierten Speicher in Bytes ab.</summary>
+        <value>Der verfügbare freie Speicherplatz für isolierten Speicher in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.AvailableFreeSpace%2A?displayProperty=nameWithType> Eigenschaft überschreibt diese Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde ein Vorgang ausgeführt, der Zugriff auf <see cref="P:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace" /> erfordert, diese Eigenschaft ist jedoch für diesen Speicher nicht definiert. Speicher, die mithilfe von Enumerationen abgerufen werden, besitzen keine klar definierte <see cref="P:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace" />-Eigenschaft, weil zum Öffnen des Speichers ein partieller Beweis verwendet wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentSize">
+      <MemberSignature Language="C#" Value="public virtual ulong CurrentSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int64 CurrentSize" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorage.CurrentSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der die aktuelle Größe des isolierten Speichers darstellt.</summary>
+        <value>Die Anzahl der Speichereinheiten, die derzeit innerhalb des isolierten Speicherbereichs verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die Gesamtverwendung für alle Speicherressourcen innerhalb des isolierten Speicherbereichs dar. <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CurrentSize%2A?displayProperty=nameWithType>wird diese Eigenschaft implementiert. Im Fall von <xref:System.IO.IsolatedStorage.IsolatedStorageFile> -Objekte ist dieser Wert in Bytes. Dieser Wert möglicherweise im Fall von Implementierungen von anderen Speicherobjekten, z. B. eine Datenbank in anderen Speichereinheiten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle Größe des isolierten Speichers ist nicht definiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DomainIdentity">
+      <MemberSignature Language="C#" Value="public object DomainIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DomainIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorage.DomainIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einer Domänenidentität, Bereiche des isolierten Speichers.</summary>
+        <value>Ein <see cref="T:System.Object" /> darstellt, die die <see cref="F:System.IO.IsolatedStorage.IsolatedStorageScope.Domain" /> Identität.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der Code verfügt nicht über die erforderlichen <see cref="T:System.Security.Permissions.SecurityPermission" /> Zugriff auf dieses Objekt. Diese Berechtigungen werden von der Laufzeit basierend auf der Sicherheitsrichtlinie gewährt.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.IO.IsolatedStorage.IsolatedStorage" /> Objekt wird nicht von der Domäne isoliert <see cref="T:System.IO.IsolatedStorage.IsolatedStorageScope" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf Beweisen. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPermission">
+      <MemberSignature Language="C#" Value="protected abstract System.Security.Permissions.IsolatedStoragePermission GetPermission (System.Security.PermissionSet ps);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Security.Permissions.IsolatedStoragePermission GetPermission(class System.Security.PermissionSet ps) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorage.GetPermission(System.Security.PermissionSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.IsolatedStoragePermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ps" Type="System.Security.PermissionSet" />
+      </Parameters>
+      <Docs>
+        <param name="ps">Die <see cref="T:System.Security.PermissionSet" /> -Objekt, das den Satz von Berechtigungen für Code, bei dem Versuch, die Verwendung von isolierter Speicherung enthält.</param>
+        <summary>Bei der Implementierung durch eine abgeleitete Klasse gibt eine Berechtigung, die Zugriff auf isolierte Speicherplätze aus einem Berechtigungssatz darstellt.</summary>
+        <returns>Ein <see cref="T:System.Security.Permissions.IsolatedStoragePermission" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie rufen diese Methode für abgeleitete Klassen, um zu bestimmen, welche Berechtigungstyp ihre Verwendung bestimmt und die Berechtigung des Typs zurückgeben, die erteilt wurde. Verwenden Sie diese Informationen, um das zulässige Kontingent und anderen Einstellungen, die abgeleitete Klasse-spezifische isolierten Speicher zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseQuotaTo">
+      <MemberSignature Language="C#" Value="public virtual bool IncreaseQuotaTo (long newQuotaSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IncreaseQuotaTo(int64 newQuotaSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorage.IncreaseQuotaTo(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newQuotaSize" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="newQuotaSize">Die angeforderte neue Kontingentgröße in Bytes, der für den Benutzer zu genehmigen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse wird ein Benutzer eine größere Kontingentgröße in Bytes, der für die isolierte Speicherung genehmigen aufgefordert.</summary>
+        <returns>
+          <see langword="false" /> in allen Fällen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.IncreaseQuotaTo%2A?displayProperty=nameWithType> Methode überschreibt diese Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitStore">
+      <MemberSignature Language="C#" Value="protected void InitStore (System.IO.IsolatedStorage.IsolatedStorageScope scope, Type appEvidenceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitStore(valuetype System.IO.IsolatedStorage.IsolatedStorageScope scope, class System.Type appEvidenceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorage.InitStore(System.IO.IsolatedStorage.IsolatedStorageScope,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.IO.IsolatedStorage.IsolatedStorageScope" />
+        <Parameter Name="appEvidenceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Eine bitweise Kombination der <see cref="T:System.IO.IsolatedStorage.IsolatedStorageScope" />-Werte.</param>
+        <param name="appEvidenceType">Der Typ des <see cref="T:System.Security.Policy.Evidence" /> , denen Sie auswählen können, aus der Liste der <see cref="T:System.Security.Policy.Evidence" /> für die aufrufende Anwendung. <see langword="null" />ermöglicht die <see cref="T:System.IO.IsolatedStorage.IsolatedStorage" /> Objekt auswählen des Beweises.</param>
+        <summary>Initialisiert ein neues <see cref="T:System.IO.IsolatedStorage.IsolatedStorage" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen mit dieser Methode können Sie um ein neues Objekt zu initialisieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IsolatedStorage.IsolatedStorageException">Die angegebene Assembly hat unzureichende Berechtigungen zum Erstellen von isolierten Speicher.</exception>
+        <permission cref="T:System.Security.Permissions.IsolatedStorageFilePermission">nach der Installationsberechtigung für isolierte Speicherung verwenden. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser" />  
+  
+ - oder -   
+  
+ <see cref="F:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByUser" />  
+  
+ - oder -   
+  
+ <see cref="F:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByRoamingUser" />  
+  
+ - oder -   
+  
+ <see cref="F:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InitStore">
+      <MemberSignature Language="C#" Value="protected void InitStore (System.IO.IsolatedStorage.IsolatedStorageScope scope, Type domainEvidenceType, Type assemblyEvidenceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitStore(valuetype System.IO.IsolatedStorage.IsolatedStorageScope scope, class System.Type domainEvidenceType, class System.Type assemblyEvidenceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorage.InitStore(System.IO.IsolatedStorage.IsolatedStorageScope,System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.IO.IsolatedStorage.IsolatedStorageScope" />
+        <Parameter Name="domainEvidenceType" Type="System.Type" />
+        <Parameter Name="assemblyEvidenceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Eine bitweise Kombination der <see cref="T:System.IO.IsolatedStorage.IsolatedStorageScope" />-Werte.</param>
+        <param name="domainEvidenceType">Der Typ des <see cref="T:System.Security.Policy.Evidence" /> , denen Sie auswählen können, aus der Liste der <see cref="T:System.Security.Policy.Evidence" /> in der Domäne der aufrufenden Anwendung vorhanden. <see langword="null" />ermöglicht die <see cref="T:System.IO.IsolatedStorage.IsolatedStorage" /> Objekt auswählen des Beweises.</param>
+        <param name="assemblyEvidenceType">Der Typ des <see cref="T:System.Security.Policy.Evidence" /> , denen Sie auswählen können, aus der Liste der <see cref="T:System.Security.Policy.Evidence" /> in der Assembly der aufrufenden Anwendung vorhanden. <see langword="null" />ermöglicht die <see cref="T:System.IO.IsolatedStorage.IsolatedStorage" /> Objekt auswählen des Beweises.</param>
+        <summary>Initialisiert ein neues <see cref="T:System.IO.IsolatedStorage.IsolatedStorage" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen mit dieser Methode können Sie um ein neues Objekt zu initialisieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IsolatedStorage.IsolatedStorageException">Die angegebene Assembly hat unzureichende Berechtigungen zum Erstellen von isolierten Speicher.</exception>
+        <permission cref="T:System.Security.Permissions.IsolatedStorageFilePermission">nach der Installationsberechtigung für isolierte Speicherung verwenden. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser" />  
+  
+ - oder -   
+  
+ <see cref="F:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByUser" />  
+  
+ - oder -   
+  
+ <see cref="F:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByRoamingUser" />  
+  
+ - oder -   
+  
+ <see cref="F:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumSize">
+      <MemberSignature Language="C#" Value="public virtual ulong MaximumSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int64 MaximumSize" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorage.MaximumSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der die Höchstmenge des verfügbaren Speicherplatzes für isolierten Speicher darstellt. Dieser Wert kann beim Überschreiben in einer abgeleiteten Klasse unterschiedliche Maßeinheiten angegeben werden.</summary>
+        <value>Die Höchstmenge des isolierten Speicherplatz in Bytes. Abgeleitete Klassen können unterschiedliche Einheiten des Werts zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung des der <xref:System.IO.IsolatedStorage.IsolatedStorage.MaximumSize%2A> Eigenschaft gibt den Wert der <xref:System.Security.Permissions.IsolatedStoragePermission.UserQuota%2A?displayProperty=nameWithType>, die in Byte ausgedrückt wird. Abgeleitete Klassen können den Wert in anderen Maßeinheiten Ausdrücken. Ein Beispiel für eine solche Implementierung potenzielle ist eine isolierte Speicherdatenbank.  
+  
+ Sie können keine festlegen <xref:System.IO.IsolatedStorage.IsolatedStorage.MaximumSize%2A>, aber das Kontingent wird in der Sicherheitsrichtlinie konfiguriert und kann festgelegt werden. Empfängt der Code ein Kontingent von Speicherplatz auf der Grundlage seines Beweises aus, damit der gleiche Code ein anderes Kontingent empfangen kann, wenn es mit anderen Beweis ausgeführt wird (z. B. dieselbe Anwendung lokal als auch aus einer Freigabe in einem Intranet auszuführen kann unterschiedliche Kontingente empfangen). <xref:System.IO.IsolatedStorage.IsolatedStorageFile.MaximumSize%2A?displayProperty=nameWithType>wird diese Eigenschaft implementiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Kontingent wurde nicht definiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Quota">
+      <MemberSignature Language="C#" Value="public virtual long Quota { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Quota" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorage.Quota" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft einen Wert, der die Höchstmenge des verfügbaren Speicherplatzes für isolierten Speicher darstellt.</summary>
+        <value>Die Grenze der isolierten Speicherplatz in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Quota%2A?displayProperty=nameWithType> Eigenschaft überschreibt diese Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde ein Vorgang ausgeführt, der Zugriff auf <see cref="P:System.IO.IsolatedStorage.IsolatedStorage.Quota" /> erfordert, diese Eigenschaft ist jedoch für diesen Speicher nicht definiert. Speicher, die mithilfe von Enumerationen abgerufen werden, besitzen keine klar definierte <see cref="P:System.IO.IsolatedStorage.IsolatedStorage.Quota" />-Eigenschaft, weil zum Öffnen des Speichers ein partieller Beweis verwendet wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public abstract void Remove ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorage.Remove" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse entfernt die einzelnen isolierten Speicher und alle darin enthaltenen Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType>Diese Methode implementiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public System.IO.IsolatedStorage.IsolatedStorageScope Scope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.IsolatedStorage.IsolatedStorageScope Scope" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorage.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.IsolatedStorage.IsolatedStorageScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.IO.IsolatedStorage.IsolatedStorageScope" /> Enumerationswert festlegen des Bereichs verwendet, um den Store zu isolieren.</summary>
+        <value>Eine bitweise Kombination von <see cref="T:System.IO.IsolatedStorage.IsolatedStorageScope" /> Werte, die Angabe des Bereichs verwendet, um den Store zu isolieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Speicher werden durch eine Kombination von Faktoren (Benutzer, Assembly, Domäne und So weiter) isoliert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorExternal">
+      <MemberSignature Language="C#" Value="protected virtual char SeparatorExternal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char SeparatorExternal" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorage.SeparatorExternal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen umgekehrten Schrägstrich, der in einer Verzeichniszeichenfolge verwendet werden kann. Ruft beim Überschreiben in einer abgeleiteten Klasse kann ein anderes Zeichen zurückgegeben werden.</summary>
+        <value>Gibt die standardmäßige Implementierung der "\\" (umgekehrter Schrägstrich) Zeichen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann verwendet werden, um ein Zeichen abrufen, die in einer Verzeichniszeichenfolge verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von <see cref="T:System.IO.IsolatedStorage.IsolatedStorage" />, Sie überschreiben können <see cref="P:System.IO.IsolatedStorage.IsolatedStorage.SeparatorExternal" /> und ein Zeichen außer Zurückgeben der "\\" um die Syntax für parameterbenennung des Speichers zu steuern. In einer Windows <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFile" /> das Trennzeichen ist eine "\\".</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorInternal">
+      <MemberSignature Language="C#" Value="protected virtual char SeparatorInternal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char SeparatorInternal" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorage.SeparatorInternal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Punkt ab, die in einer Verzeichniszeichenfolge verwendet werden kann. Ruft beim Überschreiben in einer abgeleiteten Klasse kann ein anderes Zeichen zurückgegeben werden.</summary>
+        <value>Gibt die standardmäßige Implementierung der "." (Punkt) Zeichen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann verwendet werden, um ein Zeichen abrufen, die in einer Verzeichniszeichenfolge verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von <see cref="T:System.IO.IsolatedStorage.IsolatedStorage" />, Sie überschreiben können <see cref="P:System.IO.IsolatedStorage.IsolatedStorage.SeparatorInternal" /> und ein Zeichen außer Zurückgeben der "." um die Syntax für parameterbenennung des Speichers zu steuern. In einer Windows <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFile" /> das Trennzeichen ist eine '.'.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="UsedSize">
+      <MemberSignature Language="C#" Value="public virtual long UsedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 UsedSize" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorage.UsedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft einen Wert, der die Menge des belegten für isolierte Speicherung darstellt.</summary>
+        <value>Die verwendete Speichermenge isolierten Speicher, in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.UsedSize%2A?displayProperty=nameWithType> Eigenschaft überschreibt diese Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Es wurde ein Vorgang ausgeführt, der Zugriff auf <see cref="P:System.IO.IsolatedStorage.IsolatedStorage.UsedSize" /> erfordert, diese Eigenschaft ist jedoch für diesen Speicher nicht definiert. Speicher, die mithilfe von Enumerationen abgerufen werden, besitzen keine klar definierte <see cref="P:System.IO.IsolatedStorage.IsolatedStorage.UsedSize" />-Eigenschaft, weil zum Öffnen des Speichers ein partieller Beweis verwendet wird.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

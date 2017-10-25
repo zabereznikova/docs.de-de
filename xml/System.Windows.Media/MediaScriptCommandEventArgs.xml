@@ -1,0 +1,55 @@
+<Type Name="MediaScriptCommandEventArgs" FullName="System.Windows.Media.MediaScriptCommandEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class MediaScriptCommandEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MediaScriptCommandEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.MediaScriptCommandEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Controls.MediaElement.ScriptCommand" />-Ereignis und das <see cref="E:System.Windows.Media.MediaPlayer.ScriptCommand" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ParameterType">
+      <MemberSignature Language="C#" Value="public string ParameterType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaScriptCommandEventArgs.ParameterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Skriptbefehls, die ausgelöst wurde.</summary>
+        <value>Der Typ des Skriptbefehls.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterValue">
+      <MemberSignature Language="C#" Value="public string ParameterValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.MediaScriptCommandEventArgs.ParameterValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Argumente, die den Typ des Skriptbefehls zugeordnet.</summary>
+        <value>Die Argumente, die den Typ des Skriptbefehls zugeordnet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

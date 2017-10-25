@@ -1,0 +1,64 @@
+<Type Name="ConditionalWeakTable&lt;TKey,TValue&gt;+CreateValueCallback" FullName="System.Runtime.CompilerServices.ConditionalWeakTable&lt;TKey,TValue&gt;+CreateValueCallback">
+  <TypeSignature Language="C#" Value="public delegate TValue ConditionalWeakTable&lt;TKey,TValue&gt;.CreateValueCallback(TKey key) where TKey : class where TValue : class;" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed ConditionalWeakTable`2/CreateValueCallback&lt;class TKey, class TValue&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.ConditionalWeakTable`2.CreateValueCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TKey">
+      <Constraints>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="TValue">
+      <Constraints>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="key" Type="TKey" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>TValue</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="key">Der Schlüssel, der dem zu erstellenden Wert angehört.</param>
+    <summary>Stellt eine Methode dar, die einen nicht standardmäßigen Wert erstellt, der als Teil eines Schlüssel-Wert-Paars einem <see cref="T:System.Runtime.CompilerServices.ConditionalWeakTable`2" />-Objekt hinzugefügt wird.</summary>
+    <returns>Eine Instanz eines Verweistyps, der den Wert darstellt, der an den angegebenen Schlüssel angefügt werden soll.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602.CreateValueCallback> Delegat kapselt eine Rückrufmethode, die aufgerufen wird, indem Sie die <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602.GetValue%2A?displayProperty=nameWithType> Methode, wenn der Schlüssel an die Methode übergebenen befindet sich nicht der <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602> Objekt. Die <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602.GetValue%2A> Methode der Rückrufmethode übergibt den Schlüssel, der ein verwaltetes Objekt darstellt, zu dem ein Eigenschaftswert dynamisch angefügt werden. Die Methode ist verantwortlich für die Rückgabe von des Eigenschaftswerts an ihren Aufrufer, der wiederum das Schlüssel/Wert-Paar der Tabelle hinzugefügt.  
+  
+ Die <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602.CreateValueCallback> Methode wird verwendet, um eine Instanz eines Verweistyps zurückzugeben, die dem angegebenen Schlüssel zugeordnet werden kann. Dadurch werden diese Instanz mit nicht standardmäßigen Werten initialisiert werden. Wenn der Schlüssel in der Tabelle nicht gefunden wurde die <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602.GetOrCreateValue%2A?displayProperty=nameWithType> Methode fügt ein Schlüssel/Wert-Paar, das in dem der Wert wird initialisiert mit Standardwerten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert eine `MainClass` Klasse und einer `MainInfo` Klasse. `MainInfo`enthält Informationen über die `MainClass` Instanz. Es definiert auch eine statische (`Shared` in Visual Basic) `CreateAttachedValue` -Methode, die zugewiesen werden kann die <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602.CreateValueCallback> delegieren und an die <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602.GetValue%2A> Methode. Im Beispiel wird die <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602.GetValue%2A> -Methode zum Hinzufügen einer `MainClass` Objekt und dem zugehörigen `MainInfo` -Objekt an eine <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602> Tabelle. Das Beispiel veranschaulicht auch Aufrufe an die <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602.Add%2A> und <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602.GetOrCreateValue%2A> Methoden zum Hinzufügen von Schlüssel/Wert-Paare der Tabelle und einem Aufruf der <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602.TryGetValue%2A> Methode zum Abrufen des Werts, der einem vorhandenen Schlüssel gehört.  
+  
+ [!code-csharp[System.Runtime.CompilerServices.ConditionalWeakTable.GetValue#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.compilerservices.conditionalweaktable.getvalue/cs/getvalue1.cs#1)]
+ [!code-vb[System.Runtime.CompilerServices.ConditionalWeakTable.GetValue#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.compilerservices.conditionalweaktable.getvalue/vb/getvalue1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

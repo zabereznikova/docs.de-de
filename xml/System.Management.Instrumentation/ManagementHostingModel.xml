@@ -1,0 +1,91 @@
+<Type Name="ManagementHostingModel" FullName="System.Management.Instrumentation.ManagementHostingModel">
+  <TypeSignature Language="C#" Value="public enum ManagementHostingModel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ManagementHostingModel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.ManagementHostingModel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert Werte, die das Hostingmodell für den Anbieter angeben.  
+  
+ Hinweis: Die WMI .NET-Bibliotheken werden jetzt als abgeschlossen betrachtet, und keine weiteren Entwicklungen, Verbesserungen oder Updates werden für nicht sicherheitsrelevante Aspekte verfügbar sein, die diese Bibliotheken betreffen. Die [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) für alle neuen Entwicklungen verwendet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um weitere Informationen zum WMI-Anbieter hosten Modelle finden Sie im Anbieterhosting und Sicherheit Thema auf MSDN online.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Decoupled">
+      <MemberSignature Language="C#" Value="Decoupled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Instrumentation.ManagementHostingModel Decoupled = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Instrumentation.ManagementHostingModel.Decoupled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Instrumentation.ManagementHostingModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktiviert den Anbieter als entkoppelten Anbieter.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalService">
+      <MemberSignature Language="C#" Value="LocalService" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Instrumentation.ManagementHostingModel LocalService = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Instrumentation.ManagementHostingModel.LocalService" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Instrumentation.ManagementHostingModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktiviert den Anbieter im Anbieterhostprozess, der im LocalService-Konto ausgeführt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalSystem">
+      <MemberSignature Language="C#" Value="LocalSystem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Instrumentation.ManagementHostingModel LocalSystem = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Instrumentation.ManagementHostingModel.LocalSystem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Instrumentation.ManagementHostingModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktiviert den Anbieter im Anbieterhostprozess, der im LocalSystem-Konto ausgeführt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkService">
+      <MemberSignature Language="C#" Value="NetworkService" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Instrumentation.ManagementHostingModel NetworkService = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Instrumentation.ManagementHostingModel.NetworkService" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Instrumentation.ManagementHostingModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktiviert den Anbieter im Anbieterhostprozess, der im NetworkService-Konto ausgeführt wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

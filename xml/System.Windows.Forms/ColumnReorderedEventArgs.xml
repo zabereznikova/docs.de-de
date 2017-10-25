@@ -1,0 +1,158 @@
+<Type Name="ColumnReorderedEventArgs" FullName="System.Windows.Forms.ColumnReorderedEventArgs">
+  <TypeSignature Language="C#" Value="public class ColumnReorderedEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ColumnReorderedEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ColumnReorderedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.ListView.ColumnReordered" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListView.ColumnReordered> Ereignis kann abgebrochen werden, indem die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`. Jedoch, wenn das Ereignis abgebrochen wird, die <xref:System.Windows.Forms.ColumnReorderedEventArgs.NewDisplayIndex%2A> ändert sich nicht auf die <xref:System.Windows.Forms.ColumnReorderedEventArgs.OldDisplayIndex%2A> Wert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListView.ColumnReordered> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListView> mit dem Namen `ListView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListView.ColumnReordered> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#467](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#467)]
+ [!code-vb[System.Windows.Forms.EventExamples#467](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#467)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ColumnReorderedEventArgs (int oldDisplayIndex, int newDisplayIndex, System.Windows.Forms.ColumnHeader header);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 oldDisplayIndex, int32 newDisplayIndex, class System.Windows.Forms.ColumnHeader header) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ColumnReorderedEventArgs.#ctor(System.Int32,System.Int32,System.Windows.Forms.ColumnHeader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oldDisplayIndex" Type="System.Int32" />
+        <Parameter Name="newDisplayIndex" Type="System.Int32" />
+        <Parameter Name="header" Type="System.Windows.Forms.ColumnHeader" />
+      </Parameters>
+      <Docs>
+        <param name="oldDisplayIndex">Die vorherige Anzeigeposition von der <see cref="T:System.Windows.Forms.ColumnHeader" />.</param>
+        <param name="newDisplayIndex">Die neue Anzeigeposition für die <see cref="T:System.Windows.Forms.ColumnHeader" />.</param>
+        <param name="header">Die <see cref="T:System.Windows.Forms.ColumnHeader" /> , die gerade neu angeordnet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ColumnReorderedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ColumnHeader Header { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ColumnHeader Header" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ColumnReorderedEventArgs.Header" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ColumnHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.ColumnHeader" /> , die gerade neu angeordnet.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.ColumnHeader" /> , die gerade neu angeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListView.ColumnReordered?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListView> mit dem Namen `ListView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListView.ColumnReordered?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#467](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#467)]
+ [!code-vb[System.Windows.Forms.EventExamples#467](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#467)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewDisplayIndex">
+      <MemberSignature Language="C#" Value="public int NewDisplayIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewDisplayIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ColumnReorderedEventArgs.NewDisplayIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die neue Anzeigeposition des der<see cref="T:System.Windows.Forms.ColumnHeader" /></summary>
+        <value>Die neue Anzeigeposition des der <see cref="T:System.Windows.Forms.ColumnHeader" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListView.ColumnReordered> Ereignis kann abgebrochen werden, indem die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`. Jedoch, wenn das Ereignis abgebrochen wird, die <xref:System.Windows.Forms.ColumnReorderedEventArgs.NewDisplayIndex%2A> ändert sich nicht auf die <xref:System.Windows.Forms.ColumnReorderedEventArgs.OldDisplayIndex%2A> Wert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListView.ColumnReordered?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListView> mit dem Namen `ListView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListView.ColumnReordered?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#467](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#467)]
+ [!code-vb[System.Windows.Forms.EventExamples#467](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#467)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldDisplayIndex">
+      <MemberSignature Language="C#" Value="public int OldDisplayIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OldDisplayIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ColumnReorderedEventArgs.OldDisplayIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vorherige Anzeigeposition der ab dem <see cref="T:System.Windows.Forms.ColumnHeader" />.</summary>
+        <value>Die vorherige Anzeigeposition von der<see cref="T:System.Windows.Forms.ColumnHeader" /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListView.ColumnReordered> Ereignis kann abgebrochen werden, indem die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`. Jedoch, wenn das Ereignis abgebrochen wird, die <xref:System.Windows.Forms.ColumnReorderedEventArgs.NewDisplayIndex%2A> ändert sich nicht auf die <xref:System.Windows.Forms.ColumnReorderedEventArgs.OldDisplayIndex%2A> Wert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ListView.ColumnReordered?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ListView> mit dem Namen `ListView1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ListView.ColumnReordered?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#467](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#467)]
+ [!code-vb[System.Windows.Forms.EventExamples#467](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#467)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

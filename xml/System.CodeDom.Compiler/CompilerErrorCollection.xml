@@ -1,0 +1,502 @@
+<Type Name="CompilerErrorCollection" FullName="System.CodeDom.Compiler.CompilerErrorCollection">
+  <TypeSignature Language="C#" Value="public class CompilerErrorCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CompilerErrorCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.Compiler.CompilerErrorCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.CodeDom.Compiler.CompilerError" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.CodeDom.Compiler.CompilerErrorCollection>-Klasse stellt ein einfaches Auflistungsobjekt bereit, mit dem ein Satz von <xref:System.CodeDom.Compiler.CompilerError>-Objekten gespeichert werden kann.  
+  
+> [!NOTE]
+>  Diese Klasse enthält eine vererbungsanforderung auf Klassenebene, die für alle Member gilt. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn die abgeleitete Klasse keinen volle Vertrauenswürdigkeit. Informationen über vererbungsanforderungen finden Sie unter [Vererbungsanforderungen](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.CodeDom.Compiler.CompilerErrorCollection>-Klasse veranschaulicht. Das Beispiel erstellt eine neue Instanz der Klasse und verwendet mehrere Methoden Anweisungen auf die Auflistung, deren Index zurückzugeben und hinzufügen oder Entfernen von Attributen zu einem bestimmten Index.  
+  
+ [!code-cpp[CompilerErrorCollectionExample#1](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerErrorCollectionExample/CPP/class1.cpp#1)]
+ [!code-csharp[CompilerErrorCollectionExample#1](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerErrorCollectionExample/CS/class1.cs#1)]
+ [!code-vb[CompilerErrorCollectionExample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerErrorCollectionExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">für die Ableitung von der <see cref="T:System.CodeDom.Compiler.CompilerErrorCollection" /> Klasse. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; <see cref="T:System.Security.PermissionSet" />: <see langword="FullTrust" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompilerErrorCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerErrorCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.Compiler.CompilerErrorCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine leere Instanz der <xref:System.CodeDom.Compiler.CompilerErrorCollection> Klasse.  
+  
+ [!code-cpp[CompilerErrorCollectionExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerErrorCollectionExample/CPP/class1.cpp#2)]
+ [!code-csharp[CompilerErrorCollectionExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerErrorCollectionExample/CS/class1.cs#2)]
+ [!code-vb[CompilerErrorCollectionExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerErrorCollectionExample/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompilerErrorCollection (System.CodeDom.Compiler.CompilerError[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.Compiler.CompilerError[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerErrorCollection.#ctor(System.CodeDom.Compiler.CompilerError[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.Compiler.CompilerError[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Array von <see cref="T:System.CodeDom.Compiler.CompilerError" /> Objekte in die Auflistung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.Compiler.CompilerErrorCollection" /> , enthält das angegebene Array von <see cref="T:System.CodeDom.Compiler.CompilerError" /> Objekte.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompilerErrorCollection (System.CodeDom.Compiler.CompilerErrorCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.Compiler.CompilerErrorCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerErrorCollection.#ctor(System.CodeDom.Compiler.CompilerErrorCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.Compiler.CompilerErrorCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.CodeDom.Compiler.CompilerErrorCollection" /> Objekt, mit dem die Auflistung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.Compiler.CompilerErrorCollection" /> Klasse mit dem Inhalt des angegebenen <see cref="T:System.CodeDom.Compiler.CompilerErrorCollection" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.CodeDom.Compiler.CompilerError value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.CodeDom.Compiler.CompilerError value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerErrorCollection.Add(System.CodeDom.Compiler.CompilerError)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.Compiler.CompilerError" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende <see cref="T:System.CodeDom.Compiler.CompilerError" />-Objekt.</param>
+        <summary>Fügt das angegebene <see cref="T:System.CodeDom.Compiler.CompilerError" /> Objekt der fehlerauflistung.</summary>
+        <returns>Der Index, an dem das neue Element eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.CodeDom.Compiler.CompilerErrorCollection.Add%2A> -Methode zum Hinzufügen einer <xref:System.CodeDom.Compiler.CompilerError> -Objekt an eine <xref:System.CodeDom.Compiler.CompilerErrorCollection>.  
+  
+ [!code-cpp[CompilerErrorCollectionExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerErrorCollectionExample/CPP/class1.cpp#3)]
+ [!code-csharp[CompilerErrorCollectionExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerErrorCollectionExample/CS/class1.cs#3)]
+ [!code-vb[CompilerErrorCollectionExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerErrorCollectionExample/VB/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.CodeDom.Compiler.CompilerError[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.CodeDom.Compiler.CompilerError[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerErrorCollection.AddRange(System.CodeDom.Compiler.CompilerError[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.Compiler.CompilerError[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Array vom Typ <see cref="T:System.CodeDom.Compiler.CompilerError" /> , enthält die Objekte in der Auflistung hinzu.</param>
+        <summary>Kopiert die Elemente eines Arrays an das Ende der fehlerauflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.CodeDom.Compiler.CompilerErrorCollection.AddRange%28System.CodeDom.Compiler.CompilerError%5B%5D%29> -methodenüberladung, um ein Array von hinzufügen <xref:System.CodeDom.Compiler.CompilerError> Datenbankobjekte in einem <xref:System.CodeDom.Compiler.CompilerErrorCollection>.  
+  
+ [!code-cpp[CompilerErrorCollectionExample#4](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerErrorCollectionExample/CPP/class1.cpp#4)]
+ [!code-csharp[CompilerErrorCollectionExample#4](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerErrorCollectionExample/CS/class1.cs#4)]
+ [!code-vb[CompilerErrorCollectionExample#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerErrorCollectionExample/VB/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.CodeDom.Compiler.CompilerErrorCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.CodeDom.Compiler.CompilerErrorCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerErrorCollection.AddRange(System.CodeDom.Compiler.CompilerErrorCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.Compiler.CompilerErrorCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.CodeDom.Compiler.CompilerErrorCollection" /> -Objekt, das die Objekte in der Auflistung hinzu.</param>
+        <summary>Fügt den Inhalt der Auflistung den angegebenen Compiler-Fehler an das Ende der Auflistung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.CodeDom.Compiler.CompilerErrorCollection.AddRange%28System.CodeDom.Compiler.CompilerErrorCollection%29> methodenüberladung hinzufügen <xref:System.CodeDom.Compiler.CompilerError> Objekte aus einer <xref:System.CodeDom.Compiler.CompilerErrorCollection> in eine andere <xref:System.CodeDom.Compiler.CompilerErrorCollection>.  
+  
+ [!code-cpp[CompilerErrorCollectionExample#4](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerErrorCollectionExample/CPP/class1.cpp#4)]
+ [!code-csharp[CompilerErrorCollectionExample#4](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerErrorCollectionExample/CS/class1.cs#4)]
+ [!code-vb[CompilerErrorCollectionExample#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerErrorCollectionExample/VB/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.CodeDom.Compiler.CompilerError value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.CodeDom.Compiler.CompilerError value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerErrorCollection.Contains(System.CodeDom.Compiler.CompilerError)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.Compiler.CompilerError" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu suchende <see cref="T:System.CodeDom.Compiler.CompilerError" />.</param>
+        <summary>Ruft einen Wert, der angibt, ob die Auflistung das angegebene <see cref="T:System.CodeDom.Compiler.CompilerError" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.CodeDom.Compiler.CompilerError" /> in der Auflistung enthalten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.CodeDom.Compiler.CompilerErrorCollection.Contains%2A> Methode zum Suchen eines bestimmtes <xref:System.CodeDom.Compiler.CompilerError> Objekt, und bestimmen Sie den Indexwert festlegt, an dem es gefunden wurde.  
+  
+ [!code-cpp[CompilerErrorCollectionExample#5](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerErrorCollectionExample/CPP/class1.cpp#5)]
+ [!code-csharp[CompilerErrorCollectionExample#5](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerErrorCollectionExample/CS/class1.cs#5)]
+ [!code-vb[CompilerErrorCollectionExample#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerErrorCollectionExample/VB/class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.CodeDom.Compiler.CompilerError[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.CodeDom.Compiler.CompilerError[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerErrorCollection.CopyTo(System.CodeDom.Compiler.CompilerError[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.CodeDom.Compiler.CompilerError[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.CodeDom.Compiler.CompilerErrorCollection" /> kopierten Werte ist.</param>
+        <param name="index">Der Index im Array, ab dem mit dem Kopieren begonnen werden soll.</param>
+        <summary>Kopiert die Auflistungswerte in ein eindimensionales <see cref="T:System.Array" /> Instanz am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.CodeDom.Compiler.CompilerErrorCollection.CopyTo%2A> Methode zum Kopieren der Inhalte von einem <xref:System.CodeDom.Compiler.CompilerErrorCollection> in ein Array, beginnend am angegebenen Index-Wert.  
+  
+ [!code-cpp[CompilerErrorCollectionExample#6](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerErrorCollectionExample/CPP/class1.cpp#6)]
+ [!code-csharp[CompilerErrorCollectionExample#6](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerErrorCollectionExample/CS/class1.cs#6)]
+ [!code-vb[CompilerErrorCollectionExample#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerErrorCollectionExample/VB/class1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Array angegeben wird, durch die <paramref name="array" /> -Parameter ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der <see cref="T:System.CodeDom.Compiler.CompilerErrorCollection" /> ist größer als der verfügbare Platz zwischen den Indexwert des der <paramref name="arrayIndex" /> Parameter im Array angegeben wird, durch die <paramref name="array" /> Parameter und das Ende des Arrays angegeben, durch die <paramref name="array" /> Parameter.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="array" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> -Parameter kleiner ist als die Untergrenze des Arrays, angegeben durch die <paramref name="array" /> Parameter.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasErrors">
+      <MemberSignature Language="C#" Value="public bool HasErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasErrors" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerErrorCollection.HasErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Auflistung Fehler enthält.</summary>
+        <value>
+          <see langword="true" />Wenn die Auflistung Fehler enthält; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasWarnings">
+      <MemberSignature Language="C#" Value="public bool HasWarnings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasWarnings" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerErrorCollection.HasWarnings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Auflistung Warnungen enthält.</summary>
+        <value>
+          <see langword="true" />Wenn die Auflistung Warnungen enthält; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.CodeDom.Compiler.CompilerError value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.CodeDom.Compiler.CompilerError value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerErrorCollection.IndexOf(System.CodeDom.Compiler.CompilerError)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.Compiler.CompilerError" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu suchende <see cref="T:System.CodeDom.Compiler.CompilerError" />.</param>
+        <summary>Ruft den Index des angegebenen <see cref="T:System.CodeDom.Compiler.CompilerError" /> Objekt in der Auflistung, wenn sie in der Auflistung vorhanden ist.</summary>
+        <returns>Der Index des angegebenen <see cref="T:System.CodeDom.Compiler.CompilerError" /> in die <see cref="T:System.CodeDom.Compiler.CompilerErrorCollection" />, sofern gefunden, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel sucht nach einer bestimmten <xref:System.CodeDom.Compiler.CompilerError> -Objekt und verwendet die <xref:System.CodeDom.Compiler.CompilerErrorCollection.IndexOf%2A> Methode, um zu bestimmen, den Index Wert, bei dem es gefunden wurde.  
+  
+ [!code-cpp[CompilerErrorCollectionExample#5](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerErrorCollectionExample/CPP/class1.cpp#5)]
+ [!code-csharp[CompilerErrorCollectionExample#5](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerErrorCollectionExample/CS/class1.cs#5)]
+ [!code-vb[CompilerErrorCollectionExample#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerErrorCollectionExample/VB/class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.CodeDom.Compiler.CompilerError value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.CodeDom.Compiler.CompilerError value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerErrorCollection.Insert(System.Int32,System.CodeDom.Compiler.CompilerError)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.CodeDom.Compiler.CompilerError" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, in dem der Compilerfehler eingefügt werden soll.</param>
+        <param name="value">Der einzufügende <see cref="T:System.CodeDom.Compiler.CompilerError" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.CodeDom.Compiler.CompilerError" /> am angegebenen Index in die Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.CodeDom.Compiler.CompilerErrorCollection.Insert%2A> Methode zum Einfügen einer <xref:System.CodeDom.Compiler.CompilerError> -Objekt in ein <xref:System.CodeDom.Compiler.CompilerErrorCollection>.  
+  
+ [!code-cpp[CompilerErrorCollectionExample#8](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerErrorCollectionExample/CPP/class1.cpp#8)]
+ [!code-csharp[CompilerErrorCollectionExample#8](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerErrorCollectionExample/CS/class1.cs#8)]
+ [!code-vb[CompilerErrorCollectionExample#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerErrorCollectionExample/VB/class1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CompilerError this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.Compiler.CompilerError Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerErrorCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Eintrags, der in der Auflistung gesucht werden soll.</param>
+        <summary>Ruft die <see cref="T:System.CodeDom.Compiler.CompilerError" />-Klasse am angegebenen Index ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.CodeDom.Compiler.CompilerError" /> an jedem gültigen Index.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Indexwert angegeben wird, durch die <paramref name="index" /> liegt außerhalb des gültigen Bereichs von Indizes für die Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.CodeDom.Compiler.CompilerError value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.CodeDom.Compiler.CompilerError value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerErrorCollection.Remove(System.CodeDom.Compiler.CompilerError)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.Compiler.CompilerError" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der <see cref="T:System.CodeDom.Compiler.CompilerError" />, der aus der <see cref="T:System.CodeDom.Compiler.CompilerErrorCollection" /> entfernt werden soll.</param>
+        <summary>Entfernt ein bestimmtes <see cref="T:System.CodeDom.Compiler.CompilerError" /> aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Entfernen einer <xref:System.CodeDom.Compiler.CompilerError> -Element aus einem <xref:System.CodeDom.Compiler.CompilerErrorCollection>.  
+  
+ [!code-cpp[CompilerErrorCollectionExample#9](~/samples/snippets/cpp/VS_Snippets_CLR/CompilerErrorCollectionExample/CPP/class1.cpp#9)]
+ [!code-csharp[CompilerErrorCollectionExample#9](~/samples/snippets/csharp/VS_Snippets_CLR/CompilerErrorCollectionExample/CS/class1.cs#9)]
+ [!code-vb[CompilerErrorCollectionExample#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/CompilerErrorCollectionExample/VB/class1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das angegebene Objekt ist nicht in der Auflistung gefunden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,172 @@
+<Type Name="TimestampInformation" FullName="System.Security.Cryptography.X509Certificates.TimestampInformation">
+  <TypeSignature Language="C#" Value="public sealed class TimestampInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TimestampInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.TimestampInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Details zu den Zeitstempel, der auf einer Authenticode-Signatur für ein Manifest angewendet wurde.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HashAlgorithm">
+      <MemberSignature Language="C#" Value="public string HashAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HashAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.TimestampInformation.HashAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Hash-Algorithmus verwendet, um die Zeitstempelsignatur zu berechnen.</summary>
+        <value>Der Hashalgorithmus verwendet, um die Zeitstempelsignatur zu berechnen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HResult">
+      <MemberSignature Language="C#" Value="public int HResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 HResult" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.TimestampInformation.HResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den HRESULT-Wert, der aus der Überprüfung der Signatur ab.</summary>
+        <value>Der HRESULT-Wert, der aus der Überprüfung der Signatur.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.TimestampInformation.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Zeitstempel der Signatur gültig ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Zeitstempel gültig ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureChain">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Chain SignatureChain { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Chain SignatureChain" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.TimestampInformation.SignatureChain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Chain</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kette von Zertifikaten verwendet, um zu überprüfen, ob den Zeitstempel der Signatur ab.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Chain" /> Objekt, das die Zertifikatkette darstellt.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.StorePermission">für das Recht, Zertifikate aufzulisten. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.StorePermissionFlags.EnumerateCertificates" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SigningCertificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 SigningCertificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 SigningCertificate" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.TimestampInformation.SigningCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zertifikat ab, das den Zeitstempel signiert hat.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> -Objekt, das Zertifikat darstellt.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.StorePermission">für das Recht, Zertifikate aufzulisten. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.StorePermissionFlags.EnumerateCertificates" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Timestamp">
+      <MemberSignature Language="C#" Value="public DateTime Timestamp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime Timestamp" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.TimestampInformation.Timestamp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeitstempel, der mit der Signatur angewendet wurde.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> Objekt, das den Zeitstempel darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Zeitstempel wird in Ortszeit angegeben. Der Zeitstempel ist nur verfügbar, wenn der Verleger als vertrauenswürdig eingestuft wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerificationResult">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.SignatureVerificationResult VerificationResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.SignatureVerificationResult VerificationResult" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.TimestampInformation.VerificationResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.SignatureVerificationResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Ergebnis der Überprüfung der Zeitstempelsignatur ab.</summary>
+        <value>Einer der <see cref="T:System.Security.Cryptography.SignatureVerificationResult" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt eine positive Überprüfung der <xref:System.Security.Cryptography.SignatureVerificationResult.Valid>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

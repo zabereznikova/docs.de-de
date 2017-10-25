@@ -1,0 +1,392 @@
+<Type Name="IPv4InterfaceProperties" FullName="System.Net.NetworkInformation.IPv4InterfaceProperties">
+  <TypeSignature Language="C#" Value="public abstract class IPv4InterfaceProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit IPv4InterfaceProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.IPv4InterfaceProperties" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen über die Netzwerkschnittstellen, Internet Protocol Version 4 (IPv4) unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse bietet Zugriff auf Konfigurations- und Adressinformationen für Netzwerkschnittstellen, IPv4 zu unterstützen. Erstellen Sie Instanzen dieser Klasse nicht. Sie werden zurückgegeben, durch die <xref:System.Net.NetworkInformation.IPInterfaceProperties.GetIPv4Properties%2A> Methode.  
+  
+ IPv6-Eigenschaften finden Sie unter <xref:System.Net.NetworkInformation.IPInterfaceProperties.GetIPv6Properties%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein <xref:System.Net.NetworkInformation.IPInterfaceProperties.GetIPv4Properties%2A> -Objekt und zeigt seine Daten an.  
+  
+ [!code-cpp[NclNetInfo2#48](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#48)]
+ [!code-csharp[NclNetInfo2#48](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#48)]
+ [!code-vb[NclNetInfo2#48](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#48)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected IPv4InterfaceProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPv4InterfaceProperties.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.NetworkInformation.IPv4InterfaceProperties" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor kann nur durch abgeleitete Klassen aufgerufen werden <xref:System.Net.NetworkInformation.IPv4InterfaceProperties>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public abstract int Index { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPv4InterfaceProperties.Index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index der Netzwerkschnittstelle zugeordnete Internetprotokoll Version 4 (IPv4) zu beheben.</summary>
+        <value>Eine <see cref="T:System.Int32" /> , die den Index des IPv4-Schnittstelle enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert dieser Eigenschaft auf 0 (null) ist, wird IPv4 nicht von dieser Schnittstelle unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein <xref:System.Net.NetworkInformation.IPv4InterfaceProperties> -Objekt und zeigt seine Daten an.  
+  
+ [!code-cpp[NclNetInfo2#48](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#48)]
+ [!code-csharp[NclNetInfo2#48](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#48)]
+ [!code-vb[NclNetInfo2#48](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#48)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAutomaticPrivateAddressingActive">
+      <MemberSignature Language="C#" Value="public abstract bool IsAutomaticPrivateAddressingActive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAutomaticPrivateAddressingActive" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPv4InterfaceProperties.IsAutomaticPrivateAddressingActive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob diese Schnittstelle einen automatische private IP-Adressierung (APIPA) Adresse verfügt.</summary>
+        <value>
+          <see langword="true" />Wenn die Schnittstelle eine APIPA-Adresse verwendet. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Automatische private IP-Adressierung ermöglicht Computern, auf denen kein Zugriff auf einen Server Dynamic Host Configuration Protocol (DHCP), um eine IP-Adresse, die nicht in Konflikt mit öffentlichen Adressen automatisch zugewiesen. Diese Adressen werden im Bereich 169.254.0.0 bis 169.254.255.255.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein <xref:System.Net.NetworkInformation.IPv4InterfaceProperties> -Objekt und zeigt seine Daten an.  
+  
+ [!code-cpp[NclNetInfo2#48](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#48)]
+ [!code-csharp[NclNetInfo2#48](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#48)]
+ [!code-vb[NclNetInfo2#48](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#48)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAutomaticPrivateAddressingEnabled">
+      <MemberSignature Language="C#" Value="public abstract bool IsAutomaticPrivateAddressingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAutomaticPrivateAddressingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPv4InterfaceProperties.IsAutomaticPrivateAddressingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob diese Schnittstelle verfügt über automatische private IP-Adressierung (APIPA) aktiviert.</summary>
+        <value>
+          <see langword="true" />Wenn die Schnittstelle APIPA verwendet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Automatische private IP-Adressierung ermöglicht Computern, auf denen kein Zugriff auf einen Server Dynamic Host Configuration Protocol (DHCP), um eine IP-Adresse, die nicht in Konflikt mit öffentlichen Adressen automatisch zugewiesen. Diese Adressen werden im Bereich 169.254.0.0 bis 169.254.255.255.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein <xref:System.Net.NetworkInformation.IPv4InterfaceProperties> -Objekt und zeigt seine Daten an.  
+  
+ [!code-cpp[NclNetInfo2#48](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#48)]
+ [!code-csharp[NclNetInfo2#48](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#48)]
+ [!code-vb[NclNetInfo2#48](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#48)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDhcpEnabled">
+      <MemberSignature Language="C#" Value="public abstract bool IsDhcpEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDhcpEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPv4InterfaceProperties.IsDhcpEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die Schnittstelle, eine Dynamic Host Configuration Protocol (DHCP) Server, mit der IP-Adressen konfiguriert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Schnittstelle zum Abrufen von IP-Adresse von einem DHCP-Server konfiguriert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft den Wert `true`, ein DHCP-Server die Schnittstelle die IP-Adresse zugewiesen, wenn der Computer die Netzwerkverbindungen hergestellt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein <xref:System.Net.NetworkInformation.IPv4InterfaceProperties> -Objekt und zeigt seine Daten an.  
+  
+ [!code-cpp[NclNetInfo2#48](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#48)]
+ [!code-csharp[NclNetInfo2#48](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#48)]
+ [!code-vb[NclNetInfo2#48](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#48)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsForwardingEnabled">
+      <MemberSignature Language="C#" Value="public abstract bool IsForwardingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsForwardingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPv4InterfaceProperties.IsForwardingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob diese Schnittstelle weitergeleitet werden kann (Route) Pakete.</summary>
+        <value>
+          <see langword="true" />Wenn diese Schnittstelle Pakete; weiterleitet andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn routing deaktiviert ist, werden Pakete, die durch die Schnittstelle mit einer Zieladresse empfangen werden, die durch die Schnittstelle nicht aufrechterhalten wird verworfen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein <xref:System.Net.NetworkInformation.IPv4InterfaceProperties> -Objekt und zeigt seine Daten an.  
+  
+ [!code-cpp[NclNetInfo2#48](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#48)]
+ [!code-csharp[NclNetInfo2#48](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#48)]
+ [!code-vb[NclNetInfo2#48](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#48)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mtu">
+      <MemberSignature Language="C#" Value="public abstract int Mtu { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Mtu" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPv4InterfaceProperties.Mtu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximum Transmission Unit (MTU) für diese Netzwerkschnittstelle ab.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die maximale Übertragungseinheit angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die maximale Übertragungseinheit der Netzwerkschnittstelle ist das größte Paket, das übertragen werden kann. Es wird in Oktetten (8-Bit-Bytes) gemessen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein <xref:System.Net.NetworkInformation.IPv4InterfaceProperties> -Objekt und zeigt seine Daten an.  
+  
+ [!code-cpp[NclNetInfo2#48](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#48)]
+ [!code-csharp[NclNetInfo2#48](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#48)]
+ [!code-vb[NclNetInfo2#48](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#48)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesWins">
+      <MemberSignature Language="C#" Value="public abstract bool UsesWins { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsesWins" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPv4InterfaceProperties.UsesWins" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> -Wert, der angibt, ob eine Schnittstelle Windows Internet Name Service (WINS) verwendet.</summary>
+        <value>
+          <see langword="true" />Wenn die Schnittstelle WINS verwendet. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ WINS bietet eine verteilte Datenbank für das Registrieren und Abfragen von dynamischen NetBIOS-Namen auf IPv4-Adresszuordnungen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein <xref:System.Net.NetworkInformation.IPv4InterfaceProperties> -Objekt und zeigt seine Daten an.  
+  
+ [!code-cpp[NclNetInfo2#48](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#48)]
+ [!code-csharp[NclNetInfo2#48](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#48)]
+ [!code-vb[NclNetInfo2#48](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#48)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

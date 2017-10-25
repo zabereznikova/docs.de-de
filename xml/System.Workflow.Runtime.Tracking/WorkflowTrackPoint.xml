@@ -1,0 +1,113 @@
+<Type Name="WorkflowTrackPoint" FullName="System.Workflow.Runtime.Tracking.WorkflowTrackPoint">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowTrackPoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WorkflowTrackPoint extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.WorkflowTrackPoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert einen Punkt, der einer Reihe von Workflowstatusereignissen zugeordnet ist, die im möglichen Ausführungspfad einer Stammworkflowinstanz nachverfolgt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Bei jeder Statusänderung der Workflowinstanz gibt die Workflowinstanz ein Workflowstatusereignis basierend auf einem der <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent>-Werte an die Laufzeitverfolgungsinfrastruktur aus. <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> definiert alle relevanten Punkte, an denen bestimmte Typen von Workflowstatusereignissen während der Ausführung einer Workflowinstanz eintreten. Sie können <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> einen <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A?displayProperty=nameWithType> hinzufügen, um die Laufzeitverfolgungsinfrastruktur anzuweisen, einen <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord> an den Überwachungsdienst zu senden, wenn ein angegebenes Workflowstatusereignis eintritt. Ein <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> kann an verschiedenen Punkten in der Workflowinstanz abgeglichen werden.  
+  
+ Legen Sie <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation%2A> mit einem ordnungsgemäß konfigurierten <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation> fest, um die Typen von Workflowstatusereignissen anzugeben, die die Laufzeitverfolgungsinfrastruktur zum Abgleich von <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> verwendet. Sie können <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.Annotations%2A> hinzufügen. Damit können Sie weitere, dem Verfolgungspunkt zugeordnete Informationen angeben, die von der Laufzeitverfolgungsinfrastruktur beim Abgleich des Verfolgungspunkts gesendet werden sollen.  
+  
+ Diese Klasse kann nicht vererbt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowTrackPoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackPoint" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> wird ohne Anmerkungen und ohne <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation%2A> initialisiert. Sie müssen <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation%2A> für den Verfolgungspunkt festlegen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingAnnotationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Anmerkungen ab, die dem Verfolgungspunkt zugeordnet sind.</summary>
+        <value><see cref="T:System.Workflow.Runtime.Tracking.TrackingAnnotationCollection" /> mit den Anmerkungen, die dem Verfolgungspunkt zugeordnet sind. Der Standardwert ist eine leere Auflistung. Damit wird angegeben, dass dem Verfolgungspunkt keine Anmerkungen zugeordnet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.Annotations%2A> hinzufügen. Damit können Sie Anmerkungen angeben, die beim Abgleich des Verfolgungspunkts in dem <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord> zurückgegeben werden, der an den Überwachungsdienst gesendet wird.  
+  
+ Anmerkungen sind von Ihnen definierte Zeichenfolgen mit Informationen, die dem Verfolgungspunkt zugeordnet werden sollen. Eine Anmerkung kann z. &#160;B. Informationen über den möglichen Ausführungspfad enthalten, den der Workflow ab diesem Punkt folgt, oder sie enthält Informationen, die in einer Benutzeroberfläche angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchingLocation">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.WorkflowTrackingLocation MatchingLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.WorkflowTrackingLocation MatchingLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.WorkflowTrackingLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation" /> ab oder legt die Verfolgungsposition fest, die die Workflowstatusereignisse angibt, die von der Laufzeitverfolgungsinfrastruktur mit dem Verfolgungspunkt abgeglichen werden sollen.</summary>
+        <value>Ein <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation" /> , angegeben, dass die workflowstatusereignisse, die von der laufzeitverfolgungsinfrastruktur für den Verfolgungspunkt abgeglichen werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation%2A> für den Verfolgungspunkt festlegen. <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation%2A> gibt einen oder mehrere <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent>s an, die von der Laufzeitverfolgungsinfrastruktur zum Abgleich mit dem Verfolgungspunkt verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

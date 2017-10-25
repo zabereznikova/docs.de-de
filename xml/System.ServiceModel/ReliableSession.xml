@@ -1,0 +1,159 @@
+<Type Name="ReliableSession" FullName="System.ServiceModel.ReliableSession">
+  <TypeSignature Language="C#" Value="public class ReliableSession" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ReliableSession extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ReliableSession" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet komfortablen Zugriff auf die Eigenschaften eines Bindungselements einer zuverlässigen Sitzung, die bei Verwendung einer der vom System bereitgestellten Bindungen verfügbar sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die in der <xref:System.ServiceModel.ReliableSession>-Klasse enthaltenen Eigenschaften sind die Teilmenge derjenigen Eigenschaften, die in <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> enthalten sind und auf die über eine vordefinierte Bindung zugegriffen werden kann. Diese Teilmenge besteht aus der <xref:System.ServiceModel.ReliableSession.InactivityTimeout%2A>-Eigenschaft und der <xref:System.ServiceModel.ReliableSession.Ordered%2A>-Eigenschaft. Die <xref:System.ServiceModel.ReliableSession>-Klasse verweist auf die gleichen Objekte wie <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>; wenn daher der Wert eines dieser Elemente geändert wird, so ändert sich auch der Wert des anderen. Diese Klasse sammelt diese zwei Eigenschaften des Bindungselements für zuverlässige Sitzungen für eine bessere Auffindbarkeit.  
+  
+   
+  
+## Examples  
+ Im nachstehenden Beispiel ist dargestellt, wie eine neue zuverlässige Sitzung erstellt werden kann und wie die Eigenschaftswerte dieser Sitzung aufgerufen und geändert werden können. Mit der <xref:System.ServiceModel.ReliableSession>-Klasse können Sie Folgendes schreiben:  
+  
+ [!code-csharp[UEReliableSession#1](~/samples/snippets/csharp/VS_Snippets_CFX/uereliablesession/cs/program.cs#1)]
+ [!code-vb[UEReliableSession#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/uereliablesession/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReliableSession ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ReliableSession.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.ReliableSession" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReliableSession (System.ServiceModel.Channels.ReliableSessionBindingElement binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.ReliableSessionBindingElement binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ReliableSession.#ctor(System.ServiceModel.Channels.ReliableSessionBindingElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reliableSessionBindingElement" Type="System.ServiceModel.Channels.ReliableSessionBindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="binding">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.ReliableSession" />-Klasse von einem Bindungselement einer zuverlässigen Sitzung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[UEReliableSession#1](~/samples/snippets/csharp/VS_Snippets_CFX/uereliablesession/cs/program.cs#1)]
+ [!code-vb[UEReliableSession#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/uereliablesession/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="binding" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InactivityTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan InactivityTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan InactivityTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ReliableSession.InactivityTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Zeitintervall ab oder legt ein Zeitintervall fest, währenddessen ein Dienst vor Schließung inaktiv bleiben kann.</summary>
+        <value>Die <see cref="T:System.TimeSpan" />, die das Zeitintervall angibt, während der ein Dienst vor Schließung inaktiv bleibt. Der Standardwert ist 10 Minuten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaft ruft den Wert der <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.InactivityTimeout%2A>-Eigenschaft ab und legt ihn fest.  
+  
+ Aktivität auf einem Kanal wird als Empfang einer Anwendungs- oder Infrastrukturnachricht definiert. Diese Eigenschaft für das Inaktivitätstimeout steuert die maximale Zeitdauer, die erforderlich ist, um eine inaktive Sitzung am Leben zu erhalten. Bei einem Zeitintervall länger als unter <xref:System.ServiceModel.ReliableSession.InactivityTimeout%2A> angegeben, wird die Sitzung durch die Infrastruktur beendet, und im Kanal wird ein Fehler ausgelöst. Die zuverlässige Sitzung wird einseitig abgebrochen.  
+  
+ Wenn die sendende Anwendung keine Nachrichten zum Senden hat, zeigt die zuverlässige Sitzung normalerweise keinen Fehler wegen Inaktivität an. Stattdessen wird die Sitzung durch einen Keep-Alive-Mechanismus unbegrenzt aktiv gehalten. Der Verteiler kann unabhängig davon die zuverlässige Sitzung abbrechen, wenn keine Anwendungsnachrichten gesendet oder empfangen werden. Deshalb läuft das Timeout bei Inaktivität normalerweise ab, wenn die Netzwerkbedingungen dazu führen, dass keine Nachrichten empfangen werden oder beim Absender ein Fehler auftritt.  
+  
+ Durch Einstellen dieses Timeouts wird der Server daran gehindert, eine Sicherheitssitzung weiter auszuführen, wenn sie nicht vom Client beendet wird. Wenn die Sicherheitssitzung während des Inaktivitätsintervalls keine Nachricht empfängt, wird sie vom Server beendet. Dies schwächt einen potenziellen Denial-of-Service-Angriff ab.  
+  
+ Bei der Verwendung einer zuverlässigen Sitzung sind zwei verschiedene Inaktivitätszeitgeber vorhanden, deren Voraussetzungen erfüllt werden müssen, um die Verbindung aufrechtzuerhalten. Wenn einer dieser Inaktivitätszeitgeber ausgeht, dann wird die Verbindung beendet.  
+  
+-   Der erste Inaktivitätszeitgeber befindet sich in der zuverlässigen Sitzung und wird als <xref:System.ServiceModel.ReliableSession.InactivityTimeout%2A> bezeichnet. Dieser Inaktivitätszeitgeber wird ausgelöst, wenn innerhalb des Timeouts keine Nachrichten von der Anwendung oder der Infrastruktur empfangen werden. Eine Infrastrukturnachricht wird eher für den Zweck eines der Protokolle in einem Kanalstapel generiert, wie z.&#160;B dem Aufrechterhalten oder einer Bestätigung, als dass es Anwendungsdaten enthielte.  
+  
+-   Der zweite Inaktivitätszeitgeber ist im Dienst und verwendet die Einstellung <xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A> der Bindung. Dieser Inaktivitätszeitgeber wird ausgelöst, wenn innerhalb des Timeouts keine Anwendungsnachrichten empfangen werden.  
+  
+ Da die Verbindung beendet wird, wenn einer der Inaktivitätszeitgeber ausgelöst wird, besitzt die Erhöhung der <xref:System.ServiceModel.ReliableSession.InactivityTimeout%2A> keine Auswirkungen, sobald sie größer als die <xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A> ist. Der Standardwert für beide Timeouts beträgt 10 Minuten, sodass bei Verwendung einer zuverlässigen Sitzung stets beide erhöht werden müssen, um etwas zu bewirken.  
+  
+   
+  
+## Examples  
+ [!code-csharp[UEReliableSession#2](~/samples/snippets/csharp/VS_Snippets_CFX/uereliablesession/cs/program.cs#2)]
+ [!code-vb[UEReliableSession#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/uereliablesession/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der festgelegte Wert ist kleiner oder gleich 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Ordered">
+      <MemberSignature Language="C#" Value="public bool Ordered { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Ordered" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ReliableSession.Ordered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob bei der Nachrichtenübermittlung die Reihenfolge beibehalten werden soll, in der die Nachrichten gesendet wurden.</summary>
+        <value>
+          <see langword="true" />, wenn Nachrichten in der gesendeten Reihenfolge zugestellt werden sollen; andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaft ruft den Wert der <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.Ordered%2A>-Eigenschaft ab und legt ihn fest.  
+  
+   
+  
+## Examples  
+ [!code-csharp[UEReliableSession#2](~/samples/snippets/csharp/VS_Snippets_CFX/uereliablesession/cs/program.cs#2)]
+ [!code-vb[UEReliableSession#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/uereliablesession/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

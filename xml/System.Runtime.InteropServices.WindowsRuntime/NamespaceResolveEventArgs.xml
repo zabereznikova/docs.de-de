@@ -1,0 +1,110 @@
+<Type Name="NamespaceResolveEventArgs" FullName="System.Runtime.InteropServices.WindowsRuntime.NamespaceResolveEventArgs">
+  <TypeSignature Language="C#" Value="public class NamespaceResolveEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NamespaceResolveEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.WindowsRuntime.NamespaceResolveEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMetadata.ReflectionOnlyNamespaceResolve" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamespaceResolveEventArgs (string namespaceName, System.Reflection.Assembly requestingAssembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string namespaceName, class System.Reflection.Assembly requestingAssembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.NamespaceResolveEventArgs.#ctor(System.String,System.Reflection.Assembly)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="requestingAssembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceName">Der Namespace aufgelöst.</param>
+        <param name="requestingAssembly">Die Assembly, deren Abhängigkeit aufgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.WindowsRuntime.NamespaceResolveEventArgs" /> -Klasse und gibt den Namespace aufgelöst und die Assembly, deren Abhängigkeit aufgelöst wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceName">
+      <MemberSignature Language="C#" Value="public string NamespaceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamespaceName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.WindowsRuntime.NamespaceResolveEventArgs.NamespaceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Namespaces aufgelöst.</summary>
+        <value>Der Name des Namespaces aufgelöst.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestingAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly RequestingAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly RequestingAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.WindowsRuntime.NamespaceResolveEventArgs.RequestingAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Assembly, deren Abhängigkeit aufgelöst wird.</summary>
+        <value>Der Name der Assembly, deren Abhängigkeit aufgelöst wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvedAssemblies">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Reflection.Assembly&gt; ResolvedAssemblies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Reflection.Assembly&gt; ResolvedAssemblies" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.WindowsRuntime.NamespaceResolveEventArgs.ResolvedAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Reflection.Assembly&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Assemblys ab. Wenn der Ereignishandler für das <see cref="E:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMetadata.ReflectionOnlyNamespaceResolve" /> Ereignis aufgerufen wird, die Auflistung leer ist und der Ereignishandler für das Hinzufügen der erforderlichen Assemblys verantwortlich ist.</summary>
+        <value>Eine Auflistung von Assemblys, die den angeforderten Namespace definieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Ereignishandler fügt dieser Auflistung alle Assemblys, die den Namespace definieren, die von angegeben wird die <xref:System.Runtime.InteropServices.WindowsRuntime.NamespaceResolveEventArgs.NamespaceName%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

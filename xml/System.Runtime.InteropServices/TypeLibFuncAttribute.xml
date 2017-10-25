@@ -1,0 +1,119 @@
+<Type Name="TypeLibFuncAttribute" FullName="System.Runtime.InteropServices.TypeLibFuncAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TypeLibFuncAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TypeLibFuncAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.TypeLibFuncAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält die <see cref="T:System.Runtime.InteropServices.FUNCFLAGS" /> , die ursprünglich für diese Methode aus der COM-Typbibliothek importiert wurden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [Tlbimp.exe (Type Library Importer-Tool)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) dieses Attribut auf Methoden angewendet.  
+  
+ Dieses Attribut wird angewendet, wenn eine Typbibliothek importiert und nie geändert werden sollte. Es wird nur angewendet, wenn der Methode <xref:System.Runtime.InteropServices.FUNCFLAGS> ergeben nicht 0 (null). Das Attribut soll von Tools verwendet werden, müssen wissen, wie die ursprüngliche <xref:System.Runtime.InteropServices.FUNCFLAGS> festgelegt wurden. Die common Language Runtime verwendet dieses Attribut nicht.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Abrufen der <xref:System.Runtime.InteropServices.TypeLibFuncAttribute> Wert einer Methode.  
+  
+ [!code-cpp[ImprovedInteropSnippets#5](~/samples/snippets/cpp/VS_Snippets_CLR/ImprovedInteropSnippets/CPP/codefile5.cpp#5)]
+ [!code-csharp[ImprovedInteropSnippets#5](~/samples/snippets/csharp/VS_Snippets_CLR/ImprovedInteropSnippets/CS/codefile5.cs#5)]
+ [!code-vb[ImprovedInteropSnippets#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/ImprovedInteropSnippets/VB/codefile5.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeLibFuncAttribute (short flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int16 flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.TypeLibFuncAttribute.#ctor(System.Int16)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Die <see cref="T:System.Runtime.InteropServices.TypeLibFuncFlags" /> Wert für die attributierte Methode wie in der Typbibliothek, die es von importiert wurde.</param>
+        <summary>Initialisiert eine neue Instanz der <see langword="TypeLibFuncAttribute" />-Klasse mit dem angegebenen <see cref="T:System.Runtime.InteropServices.TypeLibFuncFlags" />-Wert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeLibFuncAttribute (System.Runtime.InteropServices.TypeLibFuncFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.InteropServices.TypeLibFuncFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.TypeLibFuncAttribute.#ctor(System.Runtime.InteropServices.TypeLibFuncFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Runtime.InteropServices.TypeLibFuncFlags" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Die <see cref="T:System.Runtime.InteropServices.TypeLibFuncFlags" /> Wert für die attributierte Methode wie in der Typbibliothek, die es von importiert wurde.</param>
+        <summary>Initialisiert eine neue Instanz der <see langword="TypeLibFuncAttribute" />-Klasse mit dem angegebenen <see cref="T:System.Runtime.InteropServices.TypeLibFuncFlags" />-Wert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.TypeLibFuncFlags Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.InteropServices.TypeLibFuncFlags Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.TypeLibFuncAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibFuncFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Runtime.InteropServices.TypeLibFuncFlags" /> Wert für diese Methode.</summary>
+        <value>Die <see cref="T:System.Runtime.InteropServices.TypeLibFuncFlags" /> Wert für diese Methode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

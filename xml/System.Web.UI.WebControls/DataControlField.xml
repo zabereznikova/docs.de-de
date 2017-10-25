@@ -1,0 +1,1171 @@
+<Type Name="DataControlField" FullName="System.Web.UI.WebControls.DataControlField">
+  <TypeSignature Language="C#" Value="public abstract class DataControlField : System.Web.UI.IDataSourceViewSchemaAccessor, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataControlField extends System.Object implements class System.Web.UI.IDataSourceViewSchemaAccessor, class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataControlField" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IDataSourceViewSchemaAccessor</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("HeaderText")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient als Basisklasse für alle Feldtypen von Datensteuerelementen, die eine Datenspalte in tabellarischen datengebundenen Steuerelementen darstellen, z. B. <see cref="T:System.Web.UI.WebControls.DetailsView" /> und <see cref="T:System.Web.UI.WebControls.GridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlField> Klasse fungiert als Basisklasse für alle Feldtypen von Datensteuerelementen. Steuerelement Datenfelder von datengebundenen Steuerelementen verwendet, um ein Datenfeld, ähnlich wie beim darzustellen ein <xref:System.Web.UI.WebControls.DataGridColumn> Objekt stellt einen Datentyp der Spalte in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+ Verwenden Sie die Klassen, die von der abgeleiteten <xref:System.Web.UI.WebControls.DataControlField> steuern, wie ein Datenfeld wie z. B. in einem datengebundenen Steuerelement angezeigt wird <xref:System.Web.UI.WebControls.DetailsView> oder <xref:System.Web.UI.WebControls.GridView>. Die folgende Tabelle enthält die verschiedenen Feldtypen von Datensteuerelementen von ASP.NET bereitgestellt.  
+  
+|Spalte-Feldtyp|Beschreibung|  
+|-----------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.BoundField>|Zeigt den Wert eines Felds in einer Datenquelle als Text an.|  
+|<xref:System.Web.UI.WebControls.ButtonField>|Zeigt eine Befehlsschaltfläche in einem datengebundenen Steuerelement. Je nach Steuerelement können Sie diese zum Anzeigen einer Zeile oder eine Spalte mit einem benutzerdefinierten Schaltflächen-Steuerelements, wie z. B. eine Schaltfläche hinzufügen oder entfernen.|  
+|<xref:System.Web.UI.WebControls.CheckBoxField>|Zeigt ein Kontrollkästchen in einem datengebundenen Steuerelement. Dieses Steuerelement Datenfeldtyp wird häufig verwendet, um Felder mit einem booleschen Wert anzuzeigen.|  
+|<xref:System.Web.UI.WebControls.CommandField>|Integrierte Befehl zeigt Schaltflächen zum Ausführen von "Bearbeiten", insert oder delete-Operationen in einem datengebundenen Steuerelement.|  
+|<xref:System.Web.UI.WebControls.HyperLinkField>|Zeigt den Wert eines Felds in einer Datenquelle als Hyperlink an. Dieser Typ des Datenfelds Steuerelement können Sie ein zweites Feld an die URL des Links zu binden.|  
+|<xref:System.Web.UI.WebControls.ImageField>|Zeigt ein Bild in einem datengebundenen Steuerelement.|  
+|<xref:System.Web.UI.WebControls.TemplateField>|Zeigt in einem datengebundenen Steuerelement entsprechend einer angegebenen Vorlage benutzerdefinierten Inhalt an.|  
+  
+ Sie können auch erweitern, die <xref:System.Web.UI.WebControls.DataControlField> und <xref:System.Web.UI.WebControls.BoundField> Klassen, Ihre eigenen Datensteuerelement Feldtypen erstellen.  
+  
+ Die <xref:System.Web.UI.WebControls.DataControlField> -Klasse bietet zahlreiche Eigenschaften, die bestimmen, wie die Elemente der Benutzeroberfläche (UI) im datengebundenen Steuerelement angezeigt werden. Nicht jedes Steuerelement verwendet alle verfügbaren Daten Feld Steuerelementeigenschaft beim Rendern einer Benutzeroberfläche. Z. B. die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement, das die Datenfelder für das Steuerelement als Zeilen angezeigt wird, enthält einen Headerelement für jedes Datenfeld für das Steuerelement, aber kein Footer-Element. Aus diesem Grund die <xref:System.Web.UI.WebControls.DataControlField.FooterText%2A> und <xref:System.Web.UI.WebControls.DataControlField.FooterStyle%2A> Eigenschaften werden ignoriert, durch die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Die <xref:System.Web.UI.WebControls.GridView> steuern, allerdings verwendet die <xref:System.Web.UI.WebControls.DataControlField.FooterText%2A> und <xref:System.Web.UI.WebControls.DataControlField.FooterStyle%2A> Eigenschaften Wenn die <xref:System.Web.UI.WebControls.GridView.ShowFooter%2A> -Eigenschaftensatz auf `true`. Ebenso betreffen die Steuerelementeigenschaften Feld Daten, die Darstellung von Benutzeroberflächenelementen je nachdem, was das Element ist. Die <xref:System.Web.UI.WebControls.DataControlField.ItemStyle%2A> -Eigenschaft immer auf das Feld angewendet wird. Wenn der Typ von abgeleitet <xref:System.Web.UI.WebControls.DataControlField> enthält ein Steuerelement, wie in der <xref:System.Web.UI.WebControls.ButtonField> oder <xref:System.Web.UI.WebControls.CheckBoxField> Klassen, die <xref:System.Web.UI.WebControls.DataControlField.ControlStyle%2A> -Eigenschaft auf das Feld angewendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.Web.UI.WebControls.BoundField> und <xref:System.Web.UI.WebControls.ButtonField> Objekte, die abgeleitet sind <xref:System.Web.UI.WebControls.DataControlField>, Zeilen in einer <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement hat den <xref:System.Web.UI.WebControls.DetailsView.AutoGenerateRows%2A> -Eigenschaftensatz auf `false`, eine Teilmenge von zurückgegebenen Daten anzeigen, wodurch die <xref:System.Web.UI.WebControls.SqlDataSource.SelectCommand%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.DataControlField_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_1/CS/datacontrolfield1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.DataControlField_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_1/VB/datacontrolfield1vb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erweitern der <xref:System.Web.UI.WebControls.BoundField> Klasse zum Erstellen eines benutzerdefinierten gebundenen Felds, das in verwendet werden kann ein <xref:System.Web.UI.WebControls.GridView> Steuerelement. Ähnlich wie die <xref:System.Web.UI.WebControls.CheckBoxField> -Klasse, die `RadioButtonField` Klasse stellt eine Spalte mit `true` oder `false` Daten. Allerdings zwar die Daten, die die <xref:System.Web.UI.WebControls.CheckBoxField> -Klasse gebunden ist kann einen beliebigen Satz von `true` oder `false` Werte, die Datenmenge, die `RadioButtonField` -Klasse gebunden ist sind nur möglich `true` Wert zu einem beliebigen Zeitpunkt. Dieses Beispiel veranschaulicht das Implementieren der <xref:System.Web.UI.WebControls.DataControlField.ExtractValuesFromCell%2A> und <xref:System.Web.UI.WebControls.DataControlField.InitializeCell%2A> Methoden, die zwei Hauptmethoden, der alle von abgeleiteten Klassen <xref:System.Web.UI.WebControls.DataControlField>.  
+  
+ [!code-csharp[Samples.AspNet.RadioButtonField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.RadioButtonField/CS/radiobuttonfield.cs#1)]
+ [!code-vb[Samples.AspNet.RadioButtonField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.RadioButtonField/VB/radiobuttonfield.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die `RadioButtonField` -Klasse, die im vorherigen Beispiel, in bereitgestellt wird einem <xref:System.Web.UI.WebControls.GridView> Steuerelement. In diesem Beispiel wird die <xref:System.Web.UI.WebControls.GridView> Steuerelement Daten für ein Sportteam angezeigt. Die Player-Daten werden in einer Datentabelle verwaltet, die eine ID-Spalte, Spalten für die Player-Namen und eine "true" oder "false"-Spalte, die den Kapitän des vom Team identifiziert enthält. Die `RadioButtonField` Klasse zeigt an, welchem Teammitglied der aktuellen Teamleiter verwendet wird. Die <xref:System.Web.UI.WebControls.GridView> Steuerelement bearbeitet werden kann, um eine neue Teamleiter auszuwählen oder anderen Player Informationen zu ändern.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.DataControlField_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_4/CS/datacontrolfield4cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.DataControlField_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_4/VB/datacontrolfield4vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataControlField ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DataControlField" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.UI.WebControls.DataControlField> Klasse ist abstrakt, können Sie erstellen eine <xref:System.Web.UI.WebControls.DataControlField> -Objekts direkt. Dieser Konstruktor wird häufig aufgerufen, die vom Konstruktor einer abgeleiteten Klasse initialisiert werden, die in definierten Eigenschaften der <xref:System.Web.UI.WebControls.DataControlField> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessibleHeaderText">
+      <MemberSignature Language="C#" Value="public virtual string AccessibleHeaderText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AccessibleHeaderText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.AccessibleHeaderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest Text, der als gerendert wird die <see langword="AbbreviatedText" /> Eigenschaftswert bei einigen Steuerelementen.</summary>
+        <value>Eine Zeichenfolge, die abgekürzten von Bildschirmsprachausgaben gelesen Text darstellt. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Web.UI.WebControls.DataControlField.OnFieldChanged%2A> Methode wird aufgerufen, um ein Statusänderungsereignis zu erhöhen, wenn der <xref:System.Web.UI.WebControls.DataControlField.AccessibleHeaderText%2A> festgelegt wird.  
+  
+ Der Wert, der die <xref:System.Web.UI.WebControls.DataControlField.AccessibleHeaderText%2A> Eigenschaft im Ansichtszustand gespeichert wird.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneField">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.DataControlField CloneField ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class System.Web.UI.WebControls.DataControlField CloneField() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.CloneField" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlField</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie des aktuellen <see cref="T:System.Web.UI.WebControls.DataControlField" />-abgeleitetes Objekt.</summary>
+        <returns>Eine Kopie des aktuellen <see cref="T:System.Web.UI.WebControls.DataControlField" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A> Methode ist eine Hilfsmethode, die von der <xref:System.Web.UI.WebControls.DataControlFieldCollection.CloneFields%2A> Methode zum Erstellen einer Kopie des aktuellen <xref:System.Web.UI.WebControls.DataControlField>-abgeleitetes Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Control Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einem Verweis auf das Steuerelement ab, der <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt zugeordnet ist.</summary>
+        <value>Das Steuerelement, das Besitzer ist, der <see cref="T:System.Web.UI.WebControls.DataControlField" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlField.Control%2A> Verweis wird festgelegt, wenn die <xref:System.Web.UI.WebControls.DataControlField.Initialize%2A> -Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style ControlStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style ControlStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.ControlStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stil der aller Webserver-Steuerelemente enthalten die <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.Style" /> , steuert die Darstellung von Webserversteuerelementen nach dem Feld enthalten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlField.ControlStyle%2A> Eigenschaft steuert die Darstellung aller Webserver-Steuerelemente enthalten, die von abgeleiteten Typen <xref:System.Web.UI.WebControls.DataControlField>.  
+  
+ Diese Eigenschaft wirkt sich nicht auf alle abgeleitete Typen aus. Die <xref:System.Web.UI.WebControls.BoundField> Steuerelement, das in der Regel Textdaten angezeigt und enthält nur <xref:System.Web.UI.WebControls.TextBox> steuert, hat nur Auswirkungen auf die <xref:System.Web.UI.WebControls.DataControlField.ControlStyle%2A> Eigenschaft im <xref:System.Web.UI.WebControls.DataControlRowState.Edit> Zustand. Webserver-Steuerelemente wie z. B. <xref:System.Web.UI.WebControls.ButtonField> und <xref:System.Web.UI.WebControls.CheckBoxField> beeinträchtigt werden könnte, indem Sie die <xref:System.Web.UI.WebControls.DataControlField.ControlStyle%2A> -Eigenschaft, abhängig von der spezifischen Konfiguration der im Feld enthaltenen Instanzen. Z. B. die <xref:System.Web.UI.WebControls.ButtonField> Steuerelement gerendert werden kann, wie eine <xref:System.Web.UI.WebControls.LinkButton>, <xref:System.Web.UI.WebControls.ImageButton>, oder <xref:System.Web.UI.WebControls.Button> Objekt. Obwohl eine <xref:System.Web.UI.WebControls.LinkButton> Steuerelement betroffen `font` Attribute des angegebenen <xref:System.Web.UI.WebControls.Style> -Objekt, ein <xref:System.Web.UI.WebControls.Button> -Steuerelement ist nicht.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.Web.UI.WebControls.BoundField> und <xref:System.Web.UI.WebControls.ButtonField> Objekte, die abgeleitet sind <xref:System.Web.UI.WebControls.DataControlField>, Zeilen in einer <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Die <xref:System.Web.UI.WebControls.DataControlField.ControlStyle%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.ButtonField> Objekt festgelegt ist, und bestimmt, wie die <xref:System.Web.UI.WebControls.LinkButton> Steuerelement nach dem Feld angezeigt wird.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.DataControlField_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_2/CS/datacontrolfield2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.DataControlField_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_2/VB/datacontrolfield2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyProperties">
+      <MemberSignature Language="C#" Value="protected virtual void CopyProperties (System.Web.UI.WebControls.DataControlField newField);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CopyProperties(class System.Web.UI.WebControls.DataControlField newField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.CopyProperties(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newField" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="newField">Die <see cref="T:System.Web.UI.WebControls.DataControlField" /> , kopieren Sie die Eigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.DataControlField" />.</param>
+        <summary>Kopiert die Eigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.DataControlField" />-abgeleitetes Objekt mit dem angegebenen <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlField.CopyProperties%2A> Methode ist eine Hilfsmethode, die von der <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A> Methode, um die Eigenschaften des aktuellen kopieren <xref:System.Web.UI.WebControls.DataControlField>-abgeleitete Objekt, das die <xref:System.Web.UI.WebControls.DataControlField> Objekt von der Methode erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateField">
+      <MemberSignature Language="C#" Value="protected abstract System.Web.UI.WebControls.DataControlField CreateField ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.DataControlField CreateField() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.CreateField" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlField</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse erstellt ein leeres <see cref="T:System.Web.UI.WebControls.DataControlField" />-abgeleitetes Objekt.</summary>
+        <returns>Eine leere <see cref="T:System.Web.UI.WebControls.DataControlField" />-abgeleitetes Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlField.CreateField%2A> Methode ist eine Hilfsmethode, die von der <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A> Methode zum Erstellen eines leeren <xref:System.Web.UI.WebControls.DataControlField>-abgeleitetes Objekt, um die Eigenschaften des aktuellen kopieren <xref:System.Web.UI.WebControls.DataControlField>-abgeleitetes Objekt in.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignMode">
+      <MemberSignature Language="C#" Value="protected bool DesignMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DesignMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.DesignMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Datenfeld für das Steuerelement gegenwärtig in einer Umgebung zur Entwurfszeit angezeigt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.DataControlField" /> befindet sich derzeit in einer Umgebung zur Entwurfszeit angezeigt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlField.DesignMode%2A> Eigenschaft macht die <xref:System.Web.UI.Control.DesignMode%2A?displayProperty=nameWithType> Eigenschaft. Die <xref:System.Web.UI.Control> -Instanz, die an die <xref:System.Web.UI.WebControls.DataControlField.Initialize%2A> Methode wird verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractValuesFromCell">
+      <MemberSignature Language="C#" Value="public virtual void ExtractValuesFromCell (System.Collections.Specialized.IOrderedDictionary dictionary, System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlRowState rowState, bool includeReadOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExtractValuesFromCell(class System.Collections.Specialized.IOrderedDictionary dictionary, class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlRowState rowState, bool includeReadOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.ExtractValuesFromCell(System.Collections.Specialized.IOrderedDictionary,System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlRowState,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Collections.Specialized.IOrderedDictionary" />
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+        <Parameter Name="includeReadOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">Eine <see cref="T:System.Collections.Specialized.IOrderedDictionary" />.</param>
+        <param name="cell">Ein <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> , enthält den Text oder Steuerelemente von der <see cref="T:System.Web.UI.WebControls.DataControlField" />.</param>
+        <param name="rowState">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowState" />-Werte.</param>
+        <param name="includeReadOnly">
+          <see langword="true" />um anzugeben, dass die Werte von schreibgeschützten Feldern, in enthalten sind der <c>Wörterbuch</c> Auflistung ist, andernfalls <see langword="false" />.</param>
+        <summary>Extrahiert den Wert des Datenfelds Steuerelement aus der aktuellen Tabellenzelle und fügt den Wert der angegebenen <see cref="T:System.Collections.IDictionary" /> Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlField.ExtractValuesFromCell%2A> Methode wird von abgeleiteten Typen implementiert <xref:System.Web.UI.WebControls.DataControlField> das aktuelle Feld einen Wert ggf. zugeordnet werden soll. Die Feld-/Wert-Paars befindet sich in der `dictionary` -Auflistung, die an die Methode übergeben wird. Die <xref:System.Web.UI.WebControls.DataControlField.ExtractValuesFromCell%2A> Methode wird aufgerufen, indem Sie die `ExtractRowValues` Methode Datenmenge wird gesteuert, wie z. B. <xref:System.Web.UI.WebControls.DetailsView> und <xref:System.Web.UI.WebControls.GridView>.  
+  
+ Rufen Sie diese Methode, wenn Sie schreiben eine benutzerdefinierte datengebundene Steuerelement, verwendet <xref:System.Web.UI.WebControls.DataControlFieldCell> Objekte, um eine Reihe von Zellen und die zugehörigen Werte zu assemblieren. Implementieren Sie diese Methode, wenn Sie eine abgeleitete Klasse schreiben <xref:System.Web.UI.WebControls.DataControlField> , Benutzerdaten oder datengebundene Daten anzeigt. Nicht alle abgeleitete Typen implementieren die <xref:System.Web.UI.WebControls.DataControlField.ExtractValuesFromCell%2A> -Methode, da nicht alle Felder Benutzerdaten anzuzeigen. Z. B. die <xref:System.Web.UI.WebControls.ButtonField> Steuerelement zeigt eine Schaltfläche und verfügt über keine Benutzerdaten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Implementieren der <xref:System.Web.UI.WebControls.DataControlField.ExtractValuesFromCell%2A> Methode für ein Steuerelement, das von abgeleitet ist die <xref:System.Web.UI.WebControls.DataControlField> Klasse. Die `RadioButtonField` Klasse rendert eine datengebundene Optionsfeld für jede Zeile in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement. Wenn die <xref:System.Web.UI.WebControls.DataControlField.ExtractValuesFromCell%2A> -Methode aufgerufen wird, die Methode versucht, um zu bestimmen, ob der aktuelle Wert der die <xref:System.Web.UI.WebControls.RadioButton> in der Zelle enthaltenes Objekt ausgewählt ist oder gelöscht, und fügt den Wert auf der <xref:System.Collections.IDictionary> Auflistung. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.DataControlField> Klasse.  
+  
+ [!code-csharp[Samples.AspNet.RadioButtonField#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.RadioButtonField/CS/radiobuttonfield.cs#2)]
+ [!code-vb[Samples.AspNet.RadioButtonField#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.RadioButtonField/VB/radiobuttonfield.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FooterStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle FooterStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle FooterStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.FooterStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Stil der Fußzeile des Daten-Steuerwort-Genauigkeitskontrollfeld fest.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> , steuert die Darstellung des Fußzeilenelements in der der <see cref="T:System.Web.UI.WebControls.DataControlField" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlField.FooterStyle%2A> Eigenschaft steuert die Darstellung von Text angezeigt, in der Fußzeilenelement eines Typs abgeleitet <xref:System.Web.UI.WebControls.DataControlField>.  
+  
+> [!NOTE]
+>  Einige von datengebundenen Steuerelementen werden ein Footer-Element für ein Datenfeld für das Steuerelement nicht gerendert. Z. B. die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement zeigt die Datenfelder für das Steuerelement als Zeilen. Ein Footer-Element ist für diese Daten Felder nicht gerendert. Die <xref:System.Web.UI.WebControls.DataControlField.FooterStyle%2A> Eigenschaft wird in diesen Steuerelementen ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FooterText">
+      <MemberSignature Language="C#" Value="public virtual string FooterText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FooterText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.FooterText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der im Fußzeilenelement ein Datenfeld für das Steuerelement angezeigt wird.</summary>
+        <value>Eine Zeichenfolge, die im Fußzeilenelement angezeigt wird der <see cref="T:System.Web.UI.WebControls.DataControlField" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataControlField.FooterText%2A> hinzuzufügenden Eigenschaft Notizen oder Kommentare für ein Datenfeld für das Steuerelement, oder andere Daten im Zusammenhang mit dem Feld.  
+  
+> [!NOTE]
+>  Einige von datengebundenen Steuerelementen werden ein Footer-Element für ein Datenfeld für das Steuerelement nicht gerendert. Z. B. die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement zeigt die Datenfelder für das Steuerelement als Zeilen. Ein Footer-Element ist für diese Daten Felder nicht gerendert. Die <xref:System.Web.UI.WebControls.DataControlField.FooterStyle%2A> Eigenschaft wird in diesen Steuerelementen ignoriert.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string HeaderImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.HeaderImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL eines Bilds, das in das Headerelement eines Datenfelds Steuerelement angezeigt wird.</summary>
+        <value>Eine Zeichenfolge, eine vollqualifizierte oder relative URL zu einem Bild darstellt, die im Headerelement angezeigt wird, der <see cref="T:System.Web.UI.WebControls.DataControlField" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie die <xref:System.Web.UI.WebControls.DataControlField.HeaderImageUrl%2A> Eigenschaft, wenn Sie in das Headerelement eines Steuerelements anstelle von Headertext angezeigt werden soll.  
+  
+> [!NOTE]
+>  Wenn beide die <xref:System.Web.UI.WebControls.DataControlField.HeaderText%2A> und <xref:System.Web.UI.WebControls.DataControlField.HeaderImageUrl%2A> Eigenschaften festgelegt sind, wird die <xref:System.Web.UI.WebControls.DataControlField.HeaderImageUrl%2A> Eigenschaft hat Vorrang vor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ festgelegt die <xref:System.Web.UI.WebControls.DataControlField.HeaderImageUrl%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.ButtonField> Spalte, die ein Bild im zeigt die <xref:System.Web.UI.WebControls.GridView> Spaltenüberschrift statt Headertext des Steuerelements.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.DataControlField_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_3/CS/datacontrolfield3cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.DataControlField_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_3/VB/datacontrolfield3vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle HeaderStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle HeaderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.HeaderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Stil des Headers des Datenfelds Steuerelement fest.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> , steuert die Darstellung der <see cref="T:System.Web.UI.WebControls.DataControlField" /> Headerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlField.HeaderStyle%2A> Eigenschaft steuert die Darstellung von Text angezeigt, die in den Headerelement eines Typs abgeleitet <xref:System.Web.UI.WebControls.DataControlField>. Die am häufigsten verwendete Anwendung von der <xref:System.Web.UI.WebControls.DataControlField.HeaderStyle%2A> Eigenschaft ist, ändern das Format der angegebenen Spalte in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ festgelegt die <xref:System.Web.UI.WebControls.DataControlField.HeaderStyle%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.HyperLinkField> Spalte, die eine gelbe Hintergrundfarbe für den Spaltenüberschrift im zeigt die <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.DataControlField_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_3/CS/datacontrolfield3cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.DataControlField_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_3/VB/datacontrolfield3vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderText">
+      <MemberSignature Language="C#" Value="public virtual string HeaderText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.HeaderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der in das Headerelement eines Datenfelds Steuerelement angezeigt wird.</summary>
+        <value>Eine Zeichenfolge, die im Headerelement angezeigt wird der <see cref="T:System.Web.UI.WebControls.DataControlField" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataControlField.HeaderText%2A> Eigenschaft, um ein Feld in einem Steuerelement mit einem Anzeigenamen zu identifizieren. Die am häufigsten verwendete Anwendung von der <xref:System.Web.UI.WebControls.DataControlField.HeaderText%2A> darin, dass die Eigenschaft bereitzustellen, sinnvolle Spaltennamen für datengebundene Felder in einem <xref:System.Web.UI.WebControls.GridView> oder <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+> [!NOTE]
+>  Wenn beide die <xref:System.Web.UI.WebControls.DataControlField.HeaderText%2A> und <xref:System.Web.UI.WebControls.DataControlField.HeaderImageUrl%2A> Eigenschaften festgelegt sind, wird die <xref:System.Web.UI.WebControls.DataControlField.HeaderImageUrl%2A> Eigenschaft hat Vorrang vor.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ festgelegt die <xref:System.Web.UI.WebControls.DataControlField.HeaderText%2A> Eigenschaften des <xref:System.Web.UI.WebControls.BoundField> Spalten für die Anzeige von Text in den Spaltenüberschriften einer <xref:System.Web.UI.WebControls.GridView> Steuerelement. Dieses Codebeispiel zeigt eine Master / Detail-Szenario, in dem ein <xref:System.Web.UI.WebControls.GridView> Steuerelement wird verwendet, um eine Teilmenge der Daten beim Anzeigen der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement wird verwendet, um einen größeren Satz von Daten anzeigen, und fügen Sie neue Datensätze. Im Beispiel verwendet zwei <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelemente: eines zum Auffüllen der <xref:System.Web.UI.WebControls.GridView> -Steuerelement und die andere zum Auffüllen der <xref:System.Web.UI.WebControls.DetailsView> steuern und Einfügen von Daten.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSource_15sql#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_15sql/CS/sql15cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSource_15sql#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_15sql/VB/sql15vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public virtual bool Initialize (bool sortingEnabled, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Initialize(bool sortingEnabled, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.Initialize(System.Boolean,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sortingEnabled" Type="System.Boolean" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="sortingEnabled">Ein Wert, der angibt, ob das Steuerelement unterstützt das Sortieren von Spalten mit Daten.</param>
+        <param name="control">Das Steuerelement, das Besitzer ist, der <see cref="T:System.Web.UI.WebControls.DataControlField" />.</param>
+        <summary>Führt eine grundlegende instanzeninitialisierung für ein Datenfeld für das Steuerelement.</summary>
+        <returns>Gibt immer <see langword="false" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Steuerelement, das <xref:System.Web.UI.WebControls.DataControlField> Objekt bezieht sich auf Aufrufe der <xref:System.Web.UI.WebControls.DataControlField.Initialize%2A> Methode, um das Feld zu initialisieren, bevor sie eine Zeilen-Auflistung hinzugefügt wird. Daten steuert, wie z. B. <xref:System.Web.UI.WebControls.DetailsView> und <xref:System.Web.UI.WebControls.GridView> rufen die <xref:System.Web.UI.WebControls.DataControlField.Initialize%2A> Methode in ihren `CreateChildControls` Methoden vor dem Aufruf anderer Methoden, wie z. B. `CreateRow` , bestimmte Zeilen mit Daten zu erstellen.  
+  
+ Rufen Sie diese Methode, wenn Sie schreiben eine benutzerdefinierte datengebundene Steuerelement, verwendet <xref:System.Web.UI.WebControls.DataControlFieldCell> Objekte für die grundlegende Initialisierung für alle <xref:System.Web.UI.WebControls.DataControlField> Objekte. Implementieren Sie diese Methode, wenn der abgeleitete Typ Initialisierungen Objekt erforderlich ist, bevor es füllt <xref:System.Web.UI.WebControls.DataControlFieldCell> Objekte mit Daten oder Steuerelemente in der <xref:System.Web.UI.WebControls.DataControlField.InitializeCell%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeCell">
+      <MemberSignature Language="C#" Value="public virtual void InitializeCell (System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlCellType cellType, System.Web.UI.WebControls.DataControlRowState rowState, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitializeCell(class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlCellType cellType, valuetype System.Web.UI.WebControls.DataControlRowState rowState, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.InitializeCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlCellType,System.Web.UI.WebControls.DataControlRowState,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="cellType" Type="System.Web.UI.WebControls.DataControlCellType" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Ein <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> , enthält den Text oder Steuerelemente von der <see cref="T:System.Web.UI.WebControls.DataControlField" />.</param>
+        <param name="cellType">Einer der <see cref="T:System.Web.UI.WebControls.DataControlCellType" />-Werte.</param>
+        <param name="rowState">Eines der <see cref="T:System.Web.UI.WebControls.DataControlRowState" /> Werte, die den Zustand der Zeile, enthält die Angabe der <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" />.</param>
+        <param name="rowIndex">Der Index der Zeile, die die <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> in enthalten ist.</param>
+        <summary>Fügt Text oder Steuerelemente steuerelementeauflistung einer Zelle an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Typen von <xref:System.Web.UI.WebControls.DataControlField> implementieren die <xref:System.Web.UI.WebControls.DataControlField.InitializeCell%2A> -Methode zum Hinzufügen von Text und Steuerelemente an eine <xref:System.Web.UI.WebControls.DataControlFieldCell> -Objekt, das an ein Steuerelement, die Tabellen verwendet gehört, um eine Benutzeroberfläche (UI) anzeigen. Diese Datensteuerelemente erstellen, die vollständige Tabellenstruktur zeilenweise bei ihren jeweiligen `CreateChildControls` Methoden aufgerufen werden. Die <xref:System.Web.UI.WebControls.DataControlField.InitializeCell%2A> Methode wird aufgerufen, indem Sie die `InitializeRow` Methode Datenmenge wird gesteuert, wie z. B. <xref:System.Web.UI.WebControls.DetailsView> und <xref:System.Web.UI.WebControls.GridView>.  
+  
+ Rufen Sie diese Methode, wenn Sie schreiben eine benutzerdefinierte datengebundene Steuerelement, verwendet <xref:System.Web.UI.WebControls.DataControlFieldCell> Objekte zum Initialisieren der Zellen der Tabellenstruktur mit Daten oder Steuerelemente. Implementieren Sie diese Methode, wenn Sie eine abgeleitete Klasse schreiben <xref:System.Web.UI.WebControls.DataControlField>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Implementieren der <xref:System.Web.UI.WebControls.DataControlField.InitializeCell%2A> Methode für ein Steuerelement, das von abgeleitet ist die <xref:System.Web.UI.WebControls.DataControlField> Klasse. Die `RadioButtonField` Klasse rendert eine datengebundene Optionsfeld für jede Zeile in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement. Wenn die Zeile Daten für einen Benutzer anzeigt und nicht in den Bearbeitungsmodus wechseln, die <xref:System.Web.UI.WebControls.RadioButton> -Steuerelement ist deaktiviert. Wenn die Zeile wird in den Bearbeitungsmodus wechseln, z. B. wenn der Benutzer entscheidet, aktualisieren Sie eine Zeile in der <xref:System.Web.UI.WebControls.GridView> -Steuerelement, das <xref:System.Web.UI.WebControls.RadioButton> Steuerelement gerendert wird, wie aktiviert, sodass er auf den geklickt werden kann. In diesem Beispiel bitweise AND-Operatoren verwendet, da dem Zeilenstatus eine Kombination aus einem oder mehreren möglicherweise <xref:System.Web.UI.WebControls.DataControlRowState> Werte.  
+  
+ [!code-csharp[Samples.AspNet.RadioButtonField#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.RadioButtonField/CS/radiobuttonfield.cs#3)]
+ [!code-vb[Samples.AspNet.RadioButtonField#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.RadioButtonField/VB/radiobuttonfield.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertVisible">
+      <MemberSignature Language="C#" Value="public virtual bool InsertVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InsertVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.InsertVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.DataControlField" /> -Objekts sichtbar ist, wenn das übergeordnete datengebundene Steuerelement im Einfügemodus ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Feld angezeigt wird, wenn das übergeordnete datengebundene Steuerelement gerendert wird Einfügemodus; andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein datengebundenes Steuerelement wird im Einfügemodus, wenn der Status der aktuellen Anzeigezeile ist <xref:System.Web.UI.WebControls.DataControlRowState?displayProperty=nameWithType>.  
+  
+ Die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement überprüft den Wert dieser Eigenschaft, bevor sie einen Satz von Feldern gerendert wird. Wenn die <xref:System.Web.UI.WebControls.DataControlField.InsertVisible%2A> Eigenschaft ist `false`, die <xref:System.Web.UI.Control.Visible%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.DetailsViewRow> -Objekts festgelegt wird, um `false`.  
+  
+ Der Wert, der die <xref:System.Web.UI.WebControls.DataControlField.InsertVisible%2A> Eigenschaft im Ansichtszustand gespeichert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrackingViewState">
+      <MemberSignature Language="C#" Value="protected bool IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt Änderungen an seinem Ansichtszustand speichert.</summary>
+        <value>
+          <see langword="true" />Wenn die Datenquellensicht ist zum Speichern ihres Zustands markiert; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle ItemStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle ItemStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.ItemStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Format von textbasierten Inhalt angezeigt, die für ein Datenfeld für das Steuerelement ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> , steuert die Darstellung des angezeigten Texts in einem <see cref="T:System.Web.UI.WebControls.DataControlField" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlField.ItemStyle%2A> Eigenschaft steuert die Darstellung von Textdaten angezeigt, die von einem Typ abgeleitet wurde. <xref:System.Web.UI.WebControls.DataControlField>. Z. B. beim Binden einer <xref:System.Web.UI.WebControls.BoundField> Steuerelement um Textdaten, können Sie anhand der <xref:System.Web.UI.WebControls.DataControlField.ItemStyle%2A> Eigenschaft, um die Darstellung des Texts zu ändern, die angezeigt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ festgelegt der <xref:System.Web.UI.WebControls.DataControlField.ItemStyle%2A> Eigenschaft auf die <xref:System.Web.UI.WebControls.BoundField> zur Anzeige von Objekten `FirstName` und `LastName` Daten in eine <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement hat den <xref:System.Web.UI.WebControls.DetailsView.AutoGenerateRows%2A> -Eigenschaftensatz auf `false`, eine Teilmenge von zurückgegebenen Daten anzeigen, wodurch die <xref:System.Web.UI.WebControls.SqlDataSource.SelectCommand%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.DataControlField_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_1/CS/datacontrolfield1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.DataControlField_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_1/VB/datacontrolfield1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected virtual void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein Objekt, das den wiederherzustellenden <see cref="T:System.Web.UI.WebControls.DataControlField" />-Zustand darstellt.</param>
+        <summary>Stellt der Datenquellensicht den vorher gespeicherten Ansichtszustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient in erster Linie durch die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden. Allerdings können Entwickler von Steuerelementen überschreiben Sie diese Methode, um anzugeben, wie ein benutzerdefiniertes Serversteuerelement seinen Ansichtszustand wiederherstellt. Weitere Informationen finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ Diese Methode stellt die Ansichtszustandsinformationen für die <xref:System.Web.UI.WebControls.DataControlField> Objekt aus einer früheren Seitenanforderung wieder, die gespeichert wurde, durch die <xref:System.Web.UI.WebControls.DataControlField.SaveViewState%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFieldChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnFieldChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFieldChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.OnFieldChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst das <see langword="FieldChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlField.OnFieldChanged%2A> -Methode löst ein Ereignis signalisiert wird, dass die <xref:System.Web.UI.WebControls.DataControlField> Zustand des Objekts wurde geändert. Änderungen an den folgenden Eigenschaften dazu führen, dass dieses Ereignis ausgelöst werden soll: <xref:System.Web.UI.WebControls.DataControlField.FooterText%2A>, <xref:System.Web.UI.WebControls.DataControlField.HeaderImageUrl%2A>, <xref:System.Web.UI.WebControls.DataControlField.HeaderText%2A>, <xref:System.Web.UI.WebControls.DataControlField.ShowHeader%2A>, <xref:System.Web.UI.WebControls.DataControlField.SortExpression%2A>, und <xref:System.Web.UI.WebControls.DataControlField.Visible%2A>. Abgeleiteter Typ-Eigenschaften wird auch dieses Ereignis bei Zustandsänderungen. Webserver-Steuerelemente wie z. B. <xref:System.Web.UI.WebControls.DetailsView> und <xref:System.Web.UI.WebControls.GridView> rufen Sie in der Regel die `DataBind` -Methode als Reaktion auf ein Feld change-Ereignis.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Web.UI.WebControls.DataControlField.OnFieldChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.WebControls.DataControlField.OnFieldChanged" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.WebControls.DataControlField.OnFieldChanged" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected virtual object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die Änderungen an der <see cref="T:System.Web.UI.WebControls.DataControlField" /> Ansichtszustand ab dem Zeitpunkt die Seite an den Server zurückgesendet wurde.</summary>
+        <returns>Das Objekt, das die Änderungen an der <see cref="T:System.Web.UI.WebControls.DataControlField" /> den Ansichtszustand. Wenn es kein Ansichtszustand, der dem Objekt zugeordnet ist, gibt diese Methode <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ Ansichtszustand besteht in der Ansammlung der Werte der Eigenschaften eines Serversteuerelements. Diese Werte werden automatisch in des Serversteuerelements platziert <xref:System.Web.UI.Control.ViewState%2A> -Eigenschaft, die eine Instanz von der <xref:System.Web.UI.StateBag> Klasse. Der Wert dieser Eigenschaft wird dann nach speichern Status, Phase des Lebenszyklus des Serversteuerelements an ein Zeichenfolgenobjekt beibehalten.  
+  
+ Wenn der Ansichtszustand gespeichert wird, wird eine Zeichenfolge an den Client als eine Variable, die in einem HTML-gespeichert sind zurückgegeben `hidden` Element. Wenn Sie benutzerdefinierte Steuerelemente erstellen, können Sie die Effizienz verbessern, indem Sie diese Methode überschreiben und Ändern des Serversteuerelements <xref:System.Web.UI.Control.ViewState%2A> Eigenschaft. Weitere Informationen finden Sie unter [ASP.NET View State Overview](http://msdn.microsoft.com/library/19d2a6ed-9a77-4c7c-a7f5-74dd4b6c3818).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHeader">
+      <MemberSignature Language="C#" Value="public virtual bool ShowHeader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.ShowHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Headerelement eines Datenfelds für das Steuerelement gerendert wird.</summary>
+        <value>
+          <see langword="true" />Wenn das Headerelement, der die <see cref="T:System.Web.UI.WebControls.DataControlField" /> gerenderten ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataControlField.ShowHeader%2A> Eigenschaft, um anzugeben, ob das Headerelement, in angezeigt wird einem <xref:System.Web.UI.WebControls.DataControlField> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortExpression">
+      <MemberSignature Language="C#" Value="public virtual string SortExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SortExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.SortExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen Sortierungsausdruck an, der durch ein Datenquellen-Steuerelement verwendet wird, um Daten zu sortieren.</summary>
+        <value>Ein Sortierungsausdruck, der durch ein Datenquellen-Steuerelement verwendet wird, um Daten zu sortieren. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Web.UI.WebControls.DataControlField.OnFieldChanged%2A> Methode wird aufgerufen, um ein Statusänderungsereignis zu erhöhen, wenn der <xref:System.Web.UI.WebControls.DataControlField.SortExpression%2A> festgelegt wird.  
+  
+ Der Wert, der die <xref:System.Web.UI.WebControls.DataControlField.SortExpression%2A> Eigenschaft im Ansichtszustand gespeichert wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataControlField.SortExpression%2A> Eigenschaft, um ein Kontrollfeld für Daten einen Sortierungsausdruck zuweisen.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.DataControlField_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_1/CS/datacontrolfield1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.DataControlField_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_1/VB/datacontrolfield1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataSourceViewSchemaAccessor.DataSourceViewSchema">
+      <MemberSignature Language="C#" Value="object System.Web.UI.IDataSourceViewSchemaAccessor.DataSourceViewSchema { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Web.UI.IDataSourceViewSchemaAccessor.DataSourceViewSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.System#Web#UI#IDataSourceViewSchemaAccessor#DataSourceViewSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Schema ab, das diesem <see cref="T:System.Web.UI.WebControls.DataControlField" />-Objekt zugeordnet ist, oder legt es fest.</summary>
+        <value>Das Schema, das diesem <see cref="T:System.Web.UI.WebControls.DataControlField" /> zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt Änderungen an seinem Ansichtszustand speichert.</summary>
+        <value>
+          <see langword="true" />Gibt an, dass die <see cref="T:System.Web.UI.WebControls.DataControlField" /> Änderungen des Ansichtszustands speichert die Ansicht wechselt, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Ein <see cref="T:System.Object" />, das die gespeicherten Ansichtszustandswerte für das Steuerelement enthält.</param>
+        <summary>Wird die zuvor gespeicherten Ansichtszustand der Kontrollfeld Daten wiederhergestellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die Änderungen an der <see cref="T:System.Web.UI.WebControls.DataControlField" /> Ansichtszustand ab dem Zeitpunkt die Seite an den Server zurückgesendet wurde.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das die gespeicherten Ansichtszustandswerte für das Steuerelement enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass die <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt, das Änderungen an seinem Ansichtszustand nachverfolgt, damit sie in des Steuerelements gespeichert werden können <see cref="P:System.Web.UI.WebControls.DataControlField.ViewState" /> -Eigenschaft und die Anforderungen der gleichen Seite hinweg beibehalten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, die dies stellt <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt.</summary>
+        <returns>Eine Zeichenfolge, die diese <see cref="T:System.Web.UI.WebControls.DataControlField" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird implementiert, um den Wert des Zurückgeben der <xref:System.Web.UI.WebControls.DataControlField.HeaderText%2A> Eigenschaft, wenn die Eigenschaft festgelegt ist. Andernfalls gibt diese Methode einfach eine Zeichenfolge, die den Typ des Daten-Steuerwort-Genauigkeitskontrollfeld (z. B. "BoundField-") darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected virtual void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass die <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt, das Änderungen an seinem Ansichtszustand nachverfolgt, damit sie in des Steuerelements gespeichert werden können <see cref="P:System.Web.UI.WebControls.DataControlField.ViewState" /> -Eigenschaft und die Anforderungen der gleichen Seite hinweg beibehalten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateRequestMode">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.ValidateRequestMode ValidateRequestMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.ValidateRequestMode ValidateRequestMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.ValidateRequestMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ValidateRequestMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Steuerelement Clienteingabe überprüft.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement Clienteingabe überprüft; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateSupportsCallback">
+      <MemberSignature Language="C#" Value="public virtual void ValidateSupportsCallback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ValidateSupportsCallback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlField.ValidateSupportsCallback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse unterstützen Signale, die die von einem Feld Steuerelemente enthaltenen Rückrufe an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataControlField.ValidateSupportsCallback%2A> Methode ist eine Hilfsmethode verwendet, um zu bestimmen, ob die in Steuerelemente enthaltenen eine <xref:System.Web.UI.WebControls.DataControlField> -Objekt Rückrufe unterstützen. Die grundlegende Implementierung dieser Methode wurde implementiert, um das Auslösen einer <xref:System.NotSupportedException> Ausnahme aus, um anzugeben, dass Rückrufe nicht unterstützt werden.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Methode wird aufgerufen, auf einer Standardinstanz von die <see cref="T:System.Web.UI.WebControls.DataControlField" /> Klasse.</exception>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen die <see cref="T:System.Web.UI.WebControls.DataControlField" /> Klasse kann diese Methode, um anzugeben, ob die Steuerelemente im Feld Unterstützung Rückrufe enthaltenen überschreiben. Implementieren Sie diese Methode als eine leere Methode, die keine Ausnahme auslöst, um anzugeben, dass Rückrufe unterstützt werden, Andernfalls lösen Sie eine Ausnahme mit einer aussagekräftigen Meldung erläutert, warum Rückrufe nicht unterstützt werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewState">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.StateBag ViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.StateBag ViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.ViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.StateBag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch von Zustandsinformationen, die zum Speichern und Wiederherstellen von den Ansichtszustand des ermöglicht eine <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt in mehreren Anforderungen der gleichen Seite.</summary>
+        <value>Eine Instanz von <see cref="T:System.Web.UI.StateBag" /> , enthält die <see cref="T:System.Web.UI.WebControls.DataControlField" /> Ansichtszustandsinformationen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Datensteuerelement des Felds der Ansichtszustand alle Eigenschaftswerte. Um diese Werte über HTTP-Anforderungen beizubehalten, ASP.NET-Serversteuerelemente verwenden Sie diese Eigenschaft, die eine Instanz von der <xref:System.Web.UI.StateBag> -Klasse, um die Eigenschaftswerte zu speichern. Die Werte werden dann als Variable an ein ausgeblendetes HTML-Eingabeelement übergeben, wenn nachfolgende Anforderungen verarbeitet werden. Weitere Informationen zum Speichern von Server-steuerelementansichtzustand finden Sie unter [ASP.NET View State Overview](http://msdn.microsoft.com/library/19d2a6ed-9a77-4c7c-a7f5-74dd4b6c3818).  
+  
+ Ansichtszustand ist standardmäßig für alle Serversteuerelemente aktiviert, es gibt jedoch Situationen, wenn Sie, deaktivieren Sie es möchten. Weitere Informationen finden Sie unter [Übersicht über die Leistung von ASP.NET](http://msdn.microsoft.com/library/f882bf1b-a009-4312-ac06-74370ffabc0b).  
+  
+ Weitere Informationen zu Wörterbüchern und deren Verwendung finden Sie unter [Auflistungen und Datenstrukturen](http://msdn.microsoft.com/library/60cc581f-1db5-445b-ba04-a173396bf872).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlField.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Datenfeld für das Steuerelement gerendert wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.DataControlField" /> gerenderten ist, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataControlField.Visible%2A> Eigenschaft anzeigen oder ausblenden <xref:System.Web.UI.WebControls.DataControlField> Objekte in einem datengebundenen Steuerelement.  
+  
+ Wenn die die <xref:System.Web.UI.WebControls.DataControlField.Visible%2A> Eigenschaft ist `false`, das die Datenwerte werden nicht angezeigt, und nehmen Sie keinen Roundtrip an dem Client. Sie nach Bedarf Roundtrip der Daten für ein Feld, die nicht sichtbar ist, fügen Sie den Feldnamen in der `DataKeyNames` Eigenschaft des datengebundenen Steuerelements.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.Web.UI.WebControls.BoundField> und <xref:System.Web.UI.WebControls.ButtonField> Objekte, die abgeleitet sind <xref:System.Web.UI.WebControls.DataControlField>, Zeilen in einer <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Die <xref:System.Web.UI.WebControls.DataControlField.Visible%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.BoundField> -Objekt, das zeigt die `EmployeeID` Spalte `false`, und die Spalte nicht gerendert wird die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.DataControlField_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_2/CS/datacontrolfield2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.DataControlField_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.DataControlField_2/VB/datacontrolfield2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

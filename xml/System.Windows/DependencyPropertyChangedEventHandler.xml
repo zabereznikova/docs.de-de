@@ -1,0 +1,36 @@
+<Type Name="DependencyPropertyChangedEventHandler" FullName="System.Windows.DependencyPropertyChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DependencyPropertyChangedEventHandler(object sender, DependencyPropertyChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DependencyPropertyChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DependencyPropertyChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt die Methode zum Behandeln von Ereignissen dar, die beim Ändern einer <see cref="T:System.Windows.DependencyProperty" /> für eine bestimmte <see cref="T:System.Windows.DependencyObject" />-Implementierung ausgelöst werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat ist die Handlersignatur für bestimmte Ereignisse, die-Abhängigkeitseigenschaft melden.  
+  
+ Ein Ereignis, das mit diesem Handler verwendet wird verfügbar gemacht, als ein [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] Ereignis nicht als ein Routingereignis. Diese Ereignisse folgen normalerweise das Benennungsmuster `Is(` *PropertyName*`)Changed`, wobei *PropertyName* ist die <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> der geänderten Eigenschaft ab. Die Argumente des Ereignisses werden zum Abfragen von des alten und neuen Wert der Eigenschaft verwendet, wie vom Ereignis gemeldet. In der Regel besteht eine 1:1-Entsprechung zwischen Eigenschaften dieser Änderung und ein bestimmtes Ereignis, das die Änderung meldet. Es ist auch möglich, obwohl ungewöhnlich, dass die gleichen Änderungen wie Ereignis Bericht mehr als eine Eigenschaft aufweisen. In diesem Fall die <xref:System.Windows.DependencyPropertyChangedEventArgs> sollte aktiviert sein, um die Eigenschaft zu bestimmen, die sich geändert.  
+  
+ Die Ereignisdatenklasse <xref:System.Windows.DependencyPropertyChangedEventArgs> weist eine Verwendung des breitere als nur diesen Delegaten. <xref:System.Windows.DependencyPropertyChangedEventArgs>wird auch verwendet, um Daten für die Kommunikation <xref:System.Windows.PropertyChangedCallback> Implementierungen, die Teil der Funktionen zur Anpassung und Besonderheiten werden von der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem, und durch die <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> virtuelle Methode, die überschrieben werden kann, um klassenspezifische bereitzustellen Benachrichtigungen bei jeder Änderung einer Abhängigkeitseigenschaft für das Objekt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

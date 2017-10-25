@@ -1,0 +1,83 @@
+<Type Name="IAuthorizeRemotingConnection" FullName="System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection">
+  <TypeSignature Language="C#" Value="public interface IAuthorizeRemotingConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAuthorizeRemotingConnection" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection" /> Schnittstelle bietet Methoden, die angeben, ob ein Client für die Verbindung auf dem aktuellen Kanal basierend auf der Identität des Clients Netzwerk Adresse und der Benutzer autorisiert ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von der <xref:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection> Schnittstelle übergeben <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.%23ctor%28System.Collections.IDictionary%2CSystem.Runtime.Remoting.Channels.IServerChannelSinkProvider%2CSystem.Runtime.Remoting.Channels.IAuthorizeRemotingConnection%29>. Es bietet eine zentrale Autorisierung für alle eingehenden Verbindungen auf eine <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel>. Sie können für die Autorisierung des Aufrufers vor alle eingehenden Nachrichten deserialisiert, um das Sicherheitsrisiko aus nicht vertrauenswürdigen Quellen zu minimieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsConnectingEndPointAuthorized">
+      <MemberSignature Language="C#" Value="public bool IsConnectingEndPointAuthorized (System.Net.EndPoint endPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsConnectingEndPointAuthorized(class System.Net.EndPoint endPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection.IsConnectingEndPointAuthorized(System.Net.EndPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPoint" Type="System.Net.EndPoint" />
+      </Parameters>
+      <Docs>
+        <param name="endPoint">Die <see cref="T:System.Net.EndPoint" /> , identifiziert die Netzwerkadresse des Clients.</param>
+        <summary>Ruft einen booleschen Wert, der angibt, ob die Netzwerkadresse des Clients für die Verbindung auf dem aktuellen Kanal autorisiert ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Netzwerkadresse des Clients autorisiert ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von der <xref:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection> Schnittstelle übergeben <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.%23ctor%28System.Collections.IDictionary%2CSystem.Runtime.Remoting.Channels.IServerChannelSinkProvider%2CSystem.Runtime.Remoting.Channels.IAuthorizeRemotingConnection%29>. Es bietet eine zentrale Autorisierung für alle eingehenden Verbindungen auf eine <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel>. Sie können für die Autorisierung des Aufrufers vor alle eingehenden Nachrichten deserialisiert, um das Sicherheitsrisiko aus nicht vertrauenswürdigen Quellen zu minimieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConnectingIdentityAuthorized">
+      <MemberSignature Language="C#" Value="public bool IsConnectingIdentityAuthorized (System.Security.Principal.IIdentity identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsConnectingIdentityAuthorized(class System.Security.Principal.IIdentity identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection.IsConnectingIdentityAuthorized(System.Security.Principal.IIdentity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Die <see cref="T:System.Security.Principal.IIdentity" /> , die die Benutzeridentität des Clients darstellt.</param>
+        <summary>Ruft einen booleschen Wert, der angibt, ob die Identität der Client autorisiert ist, für die Verbindung auf dem aktuellen Kanal ab.</summary>
+        <returns>
+          <see langword="true" />Wenn die Identität der Client autorisiert ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von der <xref:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection> Schnittstelle übergeben <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.%23ctor%28System.Collections.IDictionary%2CSystem.Runtime.Remoting.Channels.IServerChannelSinkProvider%2CSystem.Runtime.Remoting.Channels.IAuthorizeRemotingConnection%29>. Es bietet eine zentrale Autorisierung für alle eingehenden Verbindungen auf eine <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel>. Sie können für die Autorisierung des Aufrufers vor alle eingehenden Nachrichten deserialisiert, um das Sicherheitsrisiko aus nicht vertrauenswürdigen Quellen zu minimieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

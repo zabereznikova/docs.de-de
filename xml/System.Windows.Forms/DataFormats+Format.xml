@@ -1,0 +1,104 @@
+<Type Name="DataFormats+Format" FullName="System.Windows.Forms.DataFormats+Format">
+  <TypeSignature Language="C#" Value="public class DataFormats.Format" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit DataFormats/Format extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataFormats.Format" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Format Zwischenablage dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein anderes Format besteht aus einem textbasierten Formatnamen und eine ID-Nummer. Das Format Name/ID-Paar kann ein System definieren <xref:System.Windows.Forms.Clipboard> oder ein anderes Format.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen einer <xref:System.Windows.Forms.DataFormats.Format> ein Format Name-ID-Paar darstellt. Die <xref:System.Windows.Forms.DataFormats.UnicodeText> Format angefordert wird, und der Inhalt der abgerufenen <xref:System.Windows.Forms.DataFormats.Format> werden in einem Textfeld angezeigt.  
+  
+ Dieser Code erfordert, dass `textBox1` erstellt wurde.  
+  
+ [!code-cpp[Classic DataFormats.GetFormat Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataFormats.GetFormat Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataFormats.GetFormat Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataFormats.GetFormat Example/CS/source.cs#1)]
+ [!code-vb[Classic DataFormats.GetFormat Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataFormats.GetFormat Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Format (string name, int id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, int32 id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataFormats.Format.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="id" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name dieses Formats.</param>
+        <param name="id">Die ID-Nummer für dieses Format.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.DataFormats.Format" /> Klasse mit einem booleschen Wert, der angibt, ob eine <see langword="Win32" /> Handle wird erwartet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein neues Format für einen Namen und eine eindeutige ID-Nummer. Das neue Format ist ein Windows-Handle nicht erforderlich. Es erfordert, dass `textBox1` instanziiert wurde.  
+  
+ [!code-cpp[Classic DataFormats.Format.Format Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataFormats.Format.Format Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataFormats.Format.Format Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataFormats.Format.Format Example/CS/source.cs#1)]
+ [!code-vb[Classic DataFormats.Format.Format Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataFormats.Format.Format Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataFormats.Format.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID-Nummer für dieses Format ab.</summary>
+        <value>Die ID-Nummer für dieses Format.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataFormats.Format.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen dieses Formats ab.</summary>
+        <value>Der Name dieses Formats.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

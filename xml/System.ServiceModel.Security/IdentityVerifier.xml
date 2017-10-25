@@ -1,0 +1,119 @@
+<Type Name="IdentityVerifier" FullName="System.ServiceModel.Security.IdentityVerifier">
+  <TypeSignature Language="C#" Value="public abstract class IdentityVerifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit IdentityVerifier extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.IdentityVerifier" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine <see langword="abstract" />-Basisklasse, die implementiert werden kann, um eine erwartete Identität anhand eines Autorisierungskontexts zu prüfen, der einen Remoteendpunkt repräsentiert, oder um eine Identität aus einer Endpunktadresse zu erstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Infrastruktur ruft die <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A>-Methode auf, um zunächst die Identität des Diensts aus der Nachricht abzurufen. Danach ruft die Infrastruktur die <xref:System.ServiceModel.Security.IdentityVerifier.CheckAccess%2A>-Methode mit der zurückgegebenen <xref:System.ServiceModel.EndpointIdentity> und dem zurückgegebenen <xref:System.IdentityModel.Policy.AuthorizationContext> auf.  
+  
+ Weitere Informationen zur Implementierung der Klasse finden Sie unter [Vorgehensweise: Erstellen einer benutzerdefinierten Clientidentitätsüberprüfung](~/docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected IdentityVerifier ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.IdentityVerifier.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz dieser Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckAccess">
+      <MemberSignature Language="C#" Value="public abstract bool CheckAccess (System.ServiceModel.EndpointIdentity identity, System.IdentityModel.Policy.AuthorizationContext authContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CheckAccess(class System.ServiceModel.EndpointIdentity identity, class System.IdentityModel.Policy.AuthorizationContext authContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.IdentityVerifier.CheckAccess(System.ServiceModel.EndpointIdentity,System.IdentityModel.Policy.AuthorizationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.ServiceModel.EndpointIdentity" />
+        <Parameter Name="authContext" Type="System.IdentityModel.Policy.AuthorizationContext" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Die zu überprüfende <see cref="T:System.ServiceModel.EndpointIdentity" />.</param>
+        <param name="authContext">Die <see cref="T:System.IdentityModel.Policy.AuthorizationContext" /> zum Testen der <c>Identität</c> vor.</param>
+        <summary>Implementiert eine Methode, um eine Identität zu überprüfen.</summary>
+        <returns>
+          <see langword="true" />, wenn die Identität überprüft wird, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefault">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.IdentityVerifier CreateDefault ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Security.IdentityVerifier CreateDefault() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.IdentityVerifier.CreateDefault" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.IdentityVerifier</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Standardinstanz dieser Klasse.</summary>
+        <returns>Eine Standardinstanz von <see cref="T:System.ServiceModel.Security.IdentityVerifier" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetIdentity">
+      <MemberSignature Language="C#" Value="public abstract bool TryGetIdentity (System.ServiceModel.EndpointAddress reference, out System.ServiceModel.EndpointIdentity identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetIdentity(class System.ServiceModel.EndpointAddress reference, [out] class System.ServiceModel.EndpointIdentity&amp; identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity(System.ServiceModel.EndpointAddress,System.ServiceModel.EndpointIdentity@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reference" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="identity" Type="System.ServiceModel.EndpointIdentity&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="reference">Die beim Erstellen der Identität zu verwendende <see cref="T:System.ServiceModel.EndpointAddress" />.</param>
+        <param name="identity"><see cref="T:System.ServiceModel.EndpointIdentity" />, die zurückgegeben wird.</param>
+        <summary>Es wird versucht, eine Identität aus einem Endpunkt zu erstellen.</summary>
+        <returns>
+          <see langword="true" />, wenn die Identität zurückgegeben wird, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige <xref:System.ServiceModel.Security.IdentityVerifier> erstellt eine <xref:System.ServiceModel.DnsEndpointIdentity> basierend auf dem Hostnamen in <xref:System.ServiceModel.EndpointAddress.Uri%2A>, wenn keine explizite <xref:System.ServiceModel.EndpointIdentity> als Teil der <xref:System.ServiceModel.EndpointAddress> angegeben wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

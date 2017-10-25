@@ -1,0 +1,231 @@
+<Type Name="DispatcherPriority" FullName="System.Windows.Threading.DispatcherPriority">
+  <TypeSignature Language="C#" Value="public enum DispatcherPriority" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DispatcherPriority extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Threading.DispatcherPriority" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt die Prioritäten, an denen Vorgänge können, über aufgerufen werden, die <see cref="T:System.Windows.Threading.Dispatcher" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt keine spezifischen Systemzustand oder "Leerlauf" in der aktuellen Version von ApplicationIdle und ContextIdle entspricht [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)].  Beide sind weiterhin gültig Prioritäten; Deshalb hat ein Vorgang mit einer Priorität von ContextIdle eine höhere Priorität als ein Vorgang mit der Priorität SystemIdle.  
+  
+ Die <xref:System.Windows.Threading.DispatcherPriority.ApplicationIdle> nicht die Ausführung eines Vorgangs einen bestimmter Prozentsatz der CPU überschreitet einschränken.  Eine Möglichkeit zum Einschränken von eines Prozess um einen Zeitgeber zu verwenden.  
+  
+ Wenn Sie eine bereitgestellte Operation wird mit <xref:System.Windows.Threading.Dispatcher.Invoke%2A> allein <xref:System.Windows.Threading.DispatcherPriority.ContextIdle> mit Priorität des Sendeports, der Vorgang umgeht die Warteschlange und wird sofort ausgeführt.  
+  
+<a name="xamlTextUsage_DispatcherPriority"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein Aufruf von <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> , die übergibt eines Delegaten, die ein Argument akzeptiert.  Die Priorität wird normal festgelegt.  
+  
+ [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherDispatcherOneArge](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherdispatcheronearge)]
+ [!code-vb[ThreadingWeatherForecast#ThreadingWeatherDispatcherOneArge](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherdispatcheronearge)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationIdle">
+      <MemberSignature Language="C#" Value="ApplicationIdle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherPriority ApplicationIdle = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherPriority.ApplicationIdle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Enumerationswert ist 2.  Vorgänge werden verarbeitet, wenn die Anwendung im Leerlauf befindet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Background">
+      <MemberSignature Language="C#" Value="Background" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherPriority Background = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherPriority.Background" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Enumerationswert ist 4.  Vorgänge werden verarbeitet, nachdem alle anderen nicht im Leerlauf Vorgänge abgeschlossen sind.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextIdle">
+      <MemberSignature Language="C#" Value="ContextIdle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherPriority ContextIdle = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherPriority.ContextIdle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Enumerationswert ist 3.  Vorgänge werden verarbeitet, nachdem Hintergrundvorgänge abgeschlossen haben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="DataBind" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherPriority DataBind = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherPriority.DataBind" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Enumerationswert ist 8.  Vorgänge werden auf die gleiche Priorität als dem Datenbindung verarbeitet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inactive">
+      <MemberSignature Language="C#" Value="Inactive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherPriority Inactive = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherPriority.Inactive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Enumerationswert ist 0.  Vorgänge werden nicht verarbeitet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Input">
+      <MemberSignature Language="C#" Value="Input" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherPriority Input = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherPriority.Input" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Enumerationswert ist 5.  Vorgänge werden auf die gleiche Priorität als Eingabe verarbeitet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalid">
+      <MemberSignature Language="C#" Value="Invalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherPriority Invalid = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherPriority.Invalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Enumerationswert ist-1.  Dies ist eine ungültige Priorität.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Loaded">
+      <MemberSignature Language="C#" Value="Loaded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherPriority Loaded = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherPriority.Loaded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Enumerationswert ist 6.  Vorgänge werden verarbeitet, wenn Layout und Rendering abgeschlossen wurde, aber bevor Elemente Eingabe Priorität bedient werden. Insbesondere wird verwendet, wenn das geladene Ereignis auslöst.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherPriority Normal = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherPriority.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Aufzählungswert ist 9.  Vorgänge werden mit normaler Priorität verarbeitet.  Dies ist die typische Anwendungspriorität.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="Render" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherPriority Render = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherPriority.Render" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Enumerationswert ist 7.  Vorgänge, die mit der gleichen Priorität als Rendering verarbeitet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="Send" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherPriority Send = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherPriority.Send" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Enumerationswert ist 10.  Vorgänge werden vor anderen asynchronen Vorgängen verarbeitet.  Dies ist die höchste Priorität.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemIdle">
+      <MemberSignature Language="C#" Value="SystemIdle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherPriority SystemIdle = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherPriority.SystemIdle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Enumerationswert ist 1.  Vorgänge werden verarbeitet, wenn das System im Leerlauf befindet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

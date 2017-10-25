@@ -1,0 +1,74 @@
+<Type Name="ICertificatePolicy" FullName="System.Net.ICertificatePolicy">
+  <TypeSignature Language="C#" Value="public interface ICertificatePolicy" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICertificatePolicy" />
+  <TypeSignature Language="DocId" Value="T:System.Net.ICertificatePolicy" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Überprüft ein Serverzertifikat.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.ICertificatePolicy> Schnittstelle wird verwendet, um die benutzerdefinierte Sicherheitsrolle die Überprüfung des Zertifikats für eine Anwendung bereitstellen. Die Standardrichtlinie ist, können Sie gültige Zertifikate als auch gültige Zertifikate, die abgelaufen sind. Implementieren Sie zum Ändern dieser Richtlinie die <xref:System.Net.ICertificatePolicy> Schnittstelle eine andere Richtlinie, und weisen Sie diese Richtlinie auf <xref:System.Net.ServicePointManager.CertificatePolicy%2A?displayProperty=nameWithType>.  
+  
+ <xref:System.Net.ICertificatePolicy>verwendet die Security Support Provider Interface (SSPI). Weitere Informationen finden Sie unter der SSPI-Dokumentation auf MSDN.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Zertifikatrichtlinie, die zurückgibt `false` nach möglichen Problemen Zertifikat und eine Meldung, die das Problem in der Konsole ausgegeben. CertificateProblem-Enumeration definiert SSPI-Konstanten für das Zertifikatprobleme, und die private GetProblemMessage-Methode erstellt eine druckbare Nachricht über das Problem.  
+  
+ [!code-cpp[Classic ICertificatePolicy Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic ICertificatePolicy Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ICertificatePolicy Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic ICertificatePolicy Example/CS/source.cs#1)]
+ [!code-vb[Classic ICertificatePolicy Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic ICertificatePolicy Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CheckValidationResult">
+      <MemberSignature Language="C#" Value="public bool CheckValidationResult (System.Net.ServicePoint srvPoint, System.Security.Cryptography.X509Certificates.X509Certificate certificate, System.Net.WebRequest request, int certificateProblem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CheckValidationResult(class System.Net.ServicePoint srvPoint, class System.Security.Cryptography.X509Certificates.X509Certificate certificate, class System.Net.WebRequest request, int32 certificateProblem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.ICertificatePolicy.CheckValidationResult(System.Net.ServicePoint,System.Security.Cryptography.X509Certificates.X509Certificate,System.Net.WebRequest,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="srvPoint" Type="System.Net.ServicePoint" />
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+        <Parameter Name="request" Type="System.Net.WebRequest" />
+        <Parameter Name="certificateProblem" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="srvPoint">Die <see cref="T:System.Net.ServicePoint" /> , wird das Zertifikat verwenden.</param>
+        <param name="certificate">Das Zertifikat zu überprüfen.</param>
+        <param name="request">Die Anforderung, die das Zertifikat erhalten haben.</param>
+        <param name="certificateProblem">Das Problem, das bei der Verwendung des Zertifikats aufgetreten ist.</param>
+        <summary>Überprüft ein Serverzertifikat.</summary>
+        <returns>
+          <see langword="true" />Wenn das Zertifikat berücksichtigt werden sollte; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.ICertificatePolicy.CheckValidationResult%2A> Methode implementiert die Zertifikatrichtlinie Überprüfung Anwendung. Untersuchen Sie die Methode kann die `srvPoint`, `certificate`, `request`, und `certificateProblem` Parameter, um festzustellen, ob das Zertifikat beachtet werden soll.  
+  
+ Die `certificateProblem` Parameter wird ein Statuscode "Security Support Provider Interface (SSPI)". Weitere Informationen finden Sie unter der SSPI-Dokumentation auf MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

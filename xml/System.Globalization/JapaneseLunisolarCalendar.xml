@@ -1,0 +1,281 @@
+<Type Name="JapaneseLunisolarCalendar" FullName="System.Globalization.JapaneseLunisolarCalendar">
+  <TypeSignature Language="C#" Value="public class JapaneseLunisolarCalendar : System.Globalization.EastAsianLunisolarCalendar" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit JapaneseLunisolarCalendar extends System.Globalization.EastAsianLunisolarCalendar" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.JapaneseLunisolarCalendar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization.Calendars</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Globalization.EastAsianLunisolarCalendar</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Zeit in Abschnitten, z. B. Monate, Tage und Jahre. Jahre werden wie bei der japanische Kalender berechnet, Tage und Monate mit dem Mond-Sonne-Kalender berechnet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.JapaneseLunisolarCalendar> von abgeleitete Klasse die <xref:System.Globalization.EastAsianLunisolarCalendar> Klasse, die den Mond-Sonne-Kalender darstellt. Die <xref:System.Globalization.EastAsianLunisolarCalendar> Klasse unterstützt den Zyklus des sexagenary Jahr (der alle 60 Jahre wiederholt), zusätzlich zu den Sonnenjahr und Monate nach Mondkalender. Jedes Sonnenjahr im Kalender ein Sexagenary Jahr, einen Astronomischer Stamm und einem Erdzweig zugeordnet ist können, und diesen Kalendern enthaltenen Leap Monate nach jedem Monat des Jahres.  
+  
+> [!NOTE]
+>  Informationen zum Verwenden der <xref:System.Globalization.JapaneseLunisolarCalendar> Klasse und der andere Klassen in .NET Framework "Kalender", finden Sie unter [arbeiten mit Kalendern](~/docs/standard/datetime/working-with-calendars.md).  
+  
+ Z. B. die <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%2A> Methode gibt eine Zahl zwischen 1 und 13, der den einem bestimmten Datum zugeordneten Monat angibt. Wenn ein Schaltmonat zwischen dem achten und neunten Monate des Jahres, besteht die <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%2A> Methodenrückgabe 8 für den achten Monat, 9 für den Schaltmonat und 10 für den neunten Monat.  
+  
+ Derzeit ist der <xref:System.Globalization.JapaneseLunisolarCalendar> wird nicht von einer der vom unterstützten Kulturen verwendet die <xref:System.Globalization.CultureInfo> Klasse. Daher kann diese Klasse verwendet werden, nur für die Datumsangaben im japanischen Mond-Sonne-Kalender berechnet.  
+  
+ Jede <xref:System.Globalization.CultureInfo> Objekt unterstützt einen Satz von Kalendern. Die <xref:System.Globalization.CultureInfo.Calendar%2A> Eigenschaft gibt den Standardkalender für die Kultur und die <xref:System.Globalization.CultureInfo.OptionalCalendars%2A> Eigenschaft gibt ein Array mit allen Kalendern, die von der Kultur unterstützt. So ändern Sie den verwendeten Kalender ein <xref:System.Globalization.CultureInfo>, sollte die Anwendung Festlegen der <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> Eigenschaft <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> in ein neues <xref:System.Globalization.Calendar>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JapaneseLunisolarCalendar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseLunisolarCalendar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Globalization.JapaneseLunisolarCalendar" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DaysInYearBeforeMinSupportedYear">
+      <MemberSignature Language="C#" Value="protected override int DaysInYearBeforeMinSupportedYear { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DaysInYearBeforeMinSupportedYear" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.JapaneseLunisolarCalendar.DaysInYearBeforeMinSupportedYear" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Tage im Jahr, die das Jahr vor, die von angegeben wird die <see cref="P:System.Globalization.JapaneseLunisolarCalendar.MinSupportedDateTime" /> Eigenschaft.</summary>
+        <value>Die Anzahl der Tage im Jahr, der vom angegebenen Jahr vorausgeht <see cref="P:System.Globalization.JapaneseLunisolarCalendar.MinSupportedDateTime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt einen konstanten Wert des 354 zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eras">
+      <MemberSignature Language="C#" Value="public override int[] Eras { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] Eras" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.JapaneseLunisolarCalendar.Eras" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeiträume, die relevant sind die <see cref="T:System.Globalization.JapaneseLunisolarCalendar" /> Objekt.</summary>
+        <value>Ein Array von 32-Bit-Ganzzahlen mit Vorzeichen, die die relevanten Zeiträume angeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte im Array, das von dieser Eigenschaft zurückgegebene sind Zahlen, die zwischen 1 und die Höchstanzahl der Zeitraum liegen. Die Höchstanzahl der Zeitraum in das erste Arrayelement zurückgegeben, und die kleinste Anzahl von Zeiträumen wird im letzten Element zurückgegeben.  
+  
+ Die <xref:System.Globalization.JapaneseLunisolarCalendar.Eras%2A> Eigenschaft gibt die gleichen Werte wie die <xref:System.Globalization.JapaneseCalendar.Eras%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEra">
+      <MemberSignature Language="C#" Value="public override int GetEra (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetEra(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseLunisolarCalendar.GetEra(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">Die zu lesende <see cref="T:System.DateTime" />.</param>
+        <summary>Ruft den Zeitraum, der dem angegebenen entspricht <see cref="T:System.DateTime" />.</summary>
+        <returns>Eine ganze Zahl, die im angegebenen Zeitraum darstellt, der <paramref name="time" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JapaneseEra">
+      <MemberSignature Language="C#" Value="public const int JapaneseEra = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 JapaneseEra = (1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.JapaneseLunisolarCalendar.JapaneseEra" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Gibt den aktuellen Zeitraum an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieses Felds ist 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSupportedDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime MaxSupportedDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MaxSupportedDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.JapaneseLunisolarCalendar.MaxSupportedDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximalen Datums- und Uhrzeitangaben, die von unterstützt die <see cref="T:System.Globalization.JapaneseLunisolarCalendar" /> Klasse.</summary>
+        <value>Das späteste Datum und Uhrzeit unterstützt werden, durch die <see cref="T:System.Globalization.JapaneseLunisolarCalendar" /> -Klasse, entspricht das späteste 22. Januar 2050 unserer Zeitrechnung im gregorianischen Kalender.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinSupportedDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime MinSupportedDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MinSupportedDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.JapaneseLunisolarCalendar.MinSupportedDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das kleinstmögliche Datum und die Uhrzeit, die von unterstützt die <see cref="T:System.Globalization.JapaneseLunisolarCalendar" /> Klasse.</summary>
+        <value>Das früheste Datum und Uhrzeit unterstützt werden, durch die <see cref="T:System.Globalization.JapaneseLunisolarCalendar" /> -Klasse, die dem ersten Moment des 28 Januar 1960 unserer Zeitrechnung entspricht im gregorianischen Kalender.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

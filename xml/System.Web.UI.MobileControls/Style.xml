@@ -1,0 +1,1025 @@
+<Type Name="Style" FullName="System.Web.UI.MobileControls.Style">
+  <TypeSignature Language="C#" Value="public class Style : ICloneable, System.Web.UI.IParserAccessor, System.Web.UI.IStateManager, System.Web.UI.MobileControls.ITemplateable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Style extends System.Object implements class System.ICloneable, class System.Web.UI.IParserAccessor, class System.Web.UI.IStateManager, class System.Web.UI.MobileControls.ITemplateable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Style" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IParserAccessor</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.MobileControls.ITemplateable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ExpandableObjectConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.MobileControls.MobileControlBuilder))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Organisiert die Stilmerkmale des mobilen ASP.NET-Steuerelements. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Basis <xref:System.Web.UI.MobileControls.Style> Klasse enthält Formateigenschaften für alle mobilen Steuerelemente. Klassen, die von erben die <xref:System.Web.UI.MobileControls.Style> Klasse enthalten zusätzliche Formateigenschaften speziell für ihre zugeordnete Steuerelement.  
+  
+ Aufgrund der Vielfalt von Geräten, die von mobile-Steuerelemente unterstützt alle Formateigenschaften advisory, und möglicherweise bzw. möglicherweise nicht berücksichtigt werden, abhängig von den Funktionen des Zielgeräts.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt drei benutzerdefinierte Formate in einem <xref:System.Web.UI.MobileControls.StyleSheet> Objekt. Ein <xref:System.Web.UI.MobileControls.SelectionList> -Objekt enthält drei Werte, die den drei definierten Formaten entsprechen. Die `OnClick` Befehl Ereignisaufrufe der `SelectStyle` -Funktion, die Änderungen der <xref:System.Web.UI.MobileControls.Style.StyleReference%2A> Eigenschaft von der <xref:System.Web.UI.MobileControls.TextView> Objekt.  
+  
+ [!code-aspx-csharp[MobileStyleSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileStyleSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobileStyleSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileStyleSample/vb/Default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Style ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Style.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.Style" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParsedSubObject">
+      <MemberSignature Language="C#" Value="protected void AddParsedSubObject (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddParsedSubObject(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Style.AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Das Objekt, das als Wert des festzulegenden <see cref="P:System.Web.UI.MobileControls.Style.DeviceSpecific" />.</param>
+        <summary>Legt die <see cref="P:System.Web.UI.MobileControls.Style.DeviceSpecific" /> Eigenschaft mit dem angegebenen Objekt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Style.AddParsedSubObject%2A> Methode unterstützt nicht mehrere <xref:System.Web.UI.MobileControls.DeviceSpecific> Objekte und löst eine <xref:System.Exception> Wenn die <xref:System.Web.UI.MobileControls.Style.DeviceSpecific%2A> Eigenschaft ist nicht `null` Wenn <xref:System.Web.UI.MobileControls.Style.AddParsedSubObject%2A> aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Die <see cref="P:System.Web.UI.MobileControls.Style.DeviceSpecific" /> Eigenschaft ist nicht <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Alignment">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.Alignment Alignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.MobileControls.Alignment Alignment" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Style.Alignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Alignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die angegebene Ausrichtung für das Format fest. Der Standardwert ist <see cref="F:System.Web.UI.MobileControls.Alignment.NotSet" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein Enumerationswert, der die angegebene Ausrichtung für das Format darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Style.Alignment%2A> Eigenschaft kann mit einem der folgenden Werte festgelegt werden:  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|<xref:System.Web.UI.MobileControls.Alignment?displayProperty=nameWithType>|Für das angegebene Objekt ist keine Ausrichtung festgelegt.|  
+|<xref:System.Web.UI.MobileControls.Alignment?displayProperty=nameWithType>|Am linken Rand ausgerichtet.|  
+|<xref:System.Web.UI.MobileControls.Alignment?displayProperty=nameWithType>|Richtet an das Rechenzentrum.|  
+|<xref:System.Web.UI.MobileControls.Alignment?displayProperty=nameWithType>|Rechts ausgerichtet.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignmentKey">
+      <MemberSignature Language="C#" Value="public static readonly object AlignmentKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object AlignmentKey" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Style.AlignmentKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Schlüssel dar, die zum Abrufen der <see cref="P:System.Web.UI.MobileControls.Style.Alignment" /> festlegen, der die <see cref="T:System.Web.UI.MobileControls.Style" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyTo">
+      <MemberSignature Language="C#" Value="public void ApplyTo (System.Web.UI.WebControls.WebControl control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyTo(class System.Web.UI.WebControls.WebControl control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Style.ApplyTo(System.Web.UI.WebControls.WebControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.WebControls.WebControl" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, auf dem die Stileigenschaften angewendet werden.</param>
+        <summary>Wendet die Eigenschaften einer Formatvorlage auf ein Steuerelement an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Steuereigenschaften sind betroffen:  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.MobileControls.FontInfo.Size%2A?displayProperty=nameWithType>|Der Schriftgrad.|  
+|<xref:System.Web.UI.MobileControls.FontInfo.Bold%2A?displayProperty=nameWithType>|Gibt an, ob die Schriftart fett formatiert ist.|  
+|<xref:System.Web.UI.MobileControls.FontInfo.Italic%2A?displayProperty=nameWithType>|Gibt an, ob die Schriftart kursiv formatiert ist.|  
+|<xref:System.Web.UI.MobileControls.Style.ForeColor%2A?displayProperty=nameWithType>|Die Vordergrundfarbe.|  
+|<xref:System.Web.UI.MobileControls.Style.BackColor%2A?displayProperty=nameWithType>|Die Hintergrundfarbe.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Style.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.WebColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die angegebene Hintergrundfarbe für das Format fest. Der Standardwert ist <see cref="F:System.Drawing.Color.Empty" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die angegebene Hintergrundfarbe für das Format.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den anderen Eigenschaften die <xref:System.Web.UI.MobileControls.Style.BackColor%2A> Eigenschaft wird nicht aus dem übergeordneten Element geerbt. Z. B., wenn Sie festlegen, die <xref:System.Web.UI.MobileControls.Style.BackColor%2A> -Eigenschaft für ein übergeordnetes Steuerelement, ein untergeordnetes Steuerelement eine Hintergrundfarbe Zyan nicht erben, müssen Sie explizit festlegen, des untergeordnete Steuerelements `BackColor` Zyan oder Ihnen-Eigenschaft muss festgelegt der <xref:System.Web.UI.MobileControls.Style.BackColor%2A> Eigenschaft der übergeordnete Steuerelement, und wenden Sie das Stylesheet auf das untergeordnete Steuerelement. Dies ist mit dem Verhalten von cascading Stylesheets konsistent.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColorKey">
+      <MemberSignature Language="C#" Value="public static readonly object BackColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object BackColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Style.BackColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schlüssel zum Abrufen des Formats aus dem eingebetteten Stylesheet für <see cref="P:System.Web.UI.MobileControls.Style.BackColor" /> Eigenschaft. Wird intern von ASP.NET verwendet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BoldKey">
+      <MemberSignature Language="C#" Value="public static readonly object BoldKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object BoldKey" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Style.BoldKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schlüssel zum Abrufen des Formats aus dem eingebetteten Stylesheet für die Einstellung der <see cref="P:System.Web.UI.MobileControls.FontInfo.Bold" /> Eigenschaft von der <see cref="P:System.Web.UI.MobileControls.Style.Font" />. Wird intern von ASP.NET verwendet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Style.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Kopie dieser Instanz von der <see cref="T:System.Web.UI.MobileControls.Style" /> Objekt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Eine Kopie dieser Instanz von <see cref="T:System.Web.UI.MobileControls.Style" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.MobileControl Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.MobileControl Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Style.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobileControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen stark typisierten Verweis auf das zugeordnete Steuerelement zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Einen stark typisierten Verweis auf das zugeordnete Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt das Steuerelement, das der Container für das angegebene Format ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceSpecific">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.DeviceSpecific DeviceSpecific { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.DeviceSpecific DeviceSpecific" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Style.DeviceSpecific" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.DeviceSpecific</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest DeviceSpecific/Choice-Konstrukt, das dem Steuerelement zugeordnet. Der Accessor gibt <see langword="null" /> Wenn kein solches Konstrukt vorhanden ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das DeviceSpecific/Choice-Konstrukt, das dem Steuerelement zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.FontInfo Font { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.FontInfo Font" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Style.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.FontInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Web.UI.WebControls.FontInfo" /> Objekt, das Schriftartinformationen über das Steuerelement enthält. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein Enumerationswert, der Sie die Schriftartinformationen über das Steuerelement angegeben wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FontInfo> -Klasse verfügt über die folgenden Eigenschaften:  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.MobileControls.FontInfo.Bold%2A?displayProperty=nameWithType>|Gibt an, ob die Schriftart fett formatiert ist.|  
+|<xref:System.Web.UI.MobileControls.FontInfo.Italic%2A?displayProperty=nameWithType>|Gibt an, ob die Schriftart kursiv formatiert ist.|  
+|<xref:System.Web.UI.MobileControls.FontInfo.Name%2A?displayProperty=nameWithType>|Ein Bezeichner für diese Schriftartinstanz.|  
+|<xref:System.Web.UI.MobileControls.FontInfo.Size%2A?displayProperty=nameWithType>|Der Schriftgrad.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontNameKey">
+      <MemberSignature Language="C#" Value="public static readonly object FontNameKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object FontNameKey" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Style.FontNameKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schlüssel zum Abrufen des Formats aus dem eingebetteten Stylesheet für die <see cref="P:System.Web.UI.MobileControls.FontInfo.Name" /> Eigenschaft von der <see cref="P:System.Web.UI.MobileControls.Style.Font" /> Eigenschaft. Wird intern von ASP.NET verwendet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontSizeKey">
+      <MemberSignature Language="C#" Value="public static readonly object FontSizeKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object FontSizeKey" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Style.FontSizeKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schlüssel zum Abrufen des Formats aus dem eingebetteten Stylesheet für die <see cref="P:System.Web.UI.MobileControls.FontInfo.Size" /> Eigenschaft von der <see cref="P:System.Web.UI.MobileControls.Style.Font" /> Eigenschaft. Wird intern von ASP.NET verwendet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Style.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.WebColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die angegebene Vordergrundfarbe für das Format fest. In der Regel wird diese Eigenschaft die Farbe für den Text an. Der Standardwert ist <see cref="F:System.Drawing.Color.Empty" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die angegebene Vordergrundfarbe für das Format.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Web.UI.MobileControls.Style.ForeColor%2A> Eigenschaft zum Anzeigen von Text in unterschiedlichen Farben. Die Zeichenfolgen, die für Farben verwendet werden, können sind eine Reihe von festen Farben und hexadezimalen RGB-Werte. Diese Werte können auch als "#bb7023" angegeben werden.  
+  
+ Sie können auch die Microsoft Windows-Farben-Konstanten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColorKey">
+      <MemberSignature Language="C#" Value="public static readonly object ForeColorKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object ForeColorKey" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Style.ForeColorKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schlüssel zum Abrufen des Formats aus dem eingebetteten Stylesheet für die <see cref="P:System.Web.UI.MobileControls.Style.ForeColor" /> Eigenschaft. Wird intern von ASP.NET verwendet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTemplate">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ITemplate GetTemplate (string templateName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.ITemplate GetTemplate(string templateName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Style.GetTemplate(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="templateName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="templateName">Der Name der angegebenen Vorlage.</param>
+        <summary>Gibt die Vorlage mit dem angegebenen Namen zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Die Vorlage mit dem angegebenen Namen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt `null` , wenn das Steuerelement nicht auf Vorlagen basierende ist oder wenn die Vorlage in der Menge für die ausgewählte Vorlage nicht vorhanden ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTemplated">
+      <MemberSignature Language="C#" Value="public bool IsTemplated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTemplated" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Style.IsTemplated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein <see cref="T:System.Web.UI.MobileControls.Style" /> Objekt verfügt über einen aktiven Vorlagensatz. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn das Format einen aktiven Vorlagensatz verfügt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aus einer Vorlage gebildete betrachtet werden, benötigen Sie ein Objekt eine [ \<DeviceSpecific >](http://msdn.microsoft.com/en-us/5984e67a-91cf-4f32-8815-7e7fab3d3b5b) Element mit einem `<Choice>` Element erfolgreich ausgewertet, für das Zielgerät. Die Auswahl muss Vorlagen definiert sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrackingViewState">
+      <MemberSignature Language="C#" Value="protected bool IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Style.IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.MobileControls.Style" /> Objekt Änderungen an seinem Ansichtszustand speichert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement Änderungen an seinem Ansichtszustand nachverfolgt wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItalicKey">
+      <MemberSignature Language="C#" Value="public static readonly object ItalicKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object ItalicKey" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Style.ItalicKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schlüssel zum Abrufen des Formats aus dem eingebetteten Stylesheet für die <see cref="P:System.Web.UI.MobileControls.FontInfo.Italic" /> Eigenschaft von der <see cref="P:System.Web.UI.MobileControls.Style.Font" /> Eigenschaft. Wird intern von ASP.NET verwendet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Style.Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des abzurufenden oder festzulegenden Formats.</param>
+        <summary>Gibt den Schriftschnitt über den Key-Parameter, mit oder ohne Verwendung von Vererbung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das Format gemäß der angegebenen <paramref name="key" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[object key, bool inherit] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(object, bool)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Style.Item(System.Object,System.Boolean)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des abzurufenden oder festzulegenden Formats.</param>
+        <param name="inherit">
+          <see langword="true" />um die Vererbung verwenden zu können. andernfalls <see langword="false" />.</param>
+        <summary>Gibt den Schriftschnitt, über den Key-Parameter, mit oder ohne Verwendung von Vererbung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der angegebene Stil <paramref name="key" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected void LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Style.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Das Objekt, das die Informationen zum Ansichtszustand enthält.</param>
+        <summary>Lädt den Ansichtszustand in der <see cref="P:System.Web.UI.MobileControls.Style.State" /> von der <see cref="T:System.Web.UI.MobileControls.Style" /> Objekt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient in erster Linie durch die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden.  Allerdings können Entwickler von Steuerelementen überschreiben Sie diese Methode, um anzugeben, wie ein benutzerdefiniertes Serversteuerelement seinen Ansichtszustand wiederherstellt. Weitere Informationen finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Style.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des angegebenen Objekts fest. Der Standardwert ist eine leere Zeichenfolge („“). Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Name des angegebenen Objekts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterStyle">
+      <MemberSignature Language="C#" Value="public static object RegisterStyle (string name, Type type, object defaultValue, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object RegisterStyle(string name, class System.Type type, object defaultValue, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Style.RegisterStyle(System.String,System.Type,System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Style-Eigenschaft.</param>
+        <param name="type">Der Typ, der für die Eigenschaft verwendet wird.</param>
+        <param name="defaultValue">Der Standardwert der Eigenschaft.</param>
+        <param name="inherit">Gibt an, ob das Format von übergeordneten Objekten geerbt. Die Standardeinstellung ist <see langword="true" />.</param>
+        <summary>Registriert eine Formateigenschaft und gibt einen eindeutigen Schlüssel für die Suche. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Ein eindeutiger Schlüssel für die Suche.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur von übergeordneten Formatklassen aufgerufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.Style.RegisterStyle%2A> Methode, um eine Zeichenfolgeneigenschaft zu registrieren, die Vererbung unterstützt und deren Standardwert ist eine leere Zeichenfolge (""). Dieses unvollständige Beispiel enthält eine öffentliche Eigenschaft, deren Implementierung ein Element dieser Eigenschaft zugreift, mithilfe der Standardindexereigenschaft der Basisklasse.  
+  
+ [!code-csharp[MobileStyleSample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileStyleSample/cs/Default2.aspx#2)]
+ [!code-vb[MobileStyleSample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileStyleSample/vb/Default2.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Style.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die Änderungen am Ansichtszustand zu einem <see cref="T:System.Object" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Das Objekt, das den Ansichtszustand enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.StateBag State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.StateBag State" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Style.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.StateBag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Inhalt der <see cref="T:System.Web.UI.StateBag" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Dem aktuellen Inhalt der <see cref="T:System.Web.UI.StateBag" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StyleReference">
+      <MemberSignature Language="C#" Value="public virtual string StyleReference { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StyleReference" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Style.StyleReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.MobileControls.Converters.StyleReferenceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Verweis auf die Stileigenschaften für ein <see cref="T:System.Web.UI.MobileControls.Style" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein Verweis auf die Stileigenschaften für ein <see cref="T:System.Web.UI.MobileControls.Style" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert des der <xref:System.Web.UI.MobileControls.Style.StyleReference%2A> Eigenschaft muss der <xref:System.Web.UI.MobileControls.Style.Name%2A> Eigenschaft ein <xref:System.Web.UI.MobileControls.Style> Objekt. Können Sie die <xref:System.Web.UI.MobileControls.Style.StyleReference%2A> Eigenschaft Formate für Steuerelemente, gemeinsam mit Vererbung oder mithilfe der <xref:System.Web.UI.MobileControls.Style.StyleReference%2A> Eigenschaft eines Stylesheets. Weitere Informationen finden Sie unter [Stile](http://msdn.microsoft.com/en-us/ba186999-7707-426b-9376-7eed6970e7b1) und [Erstellen neuer Stile](http://msdn.microsoft.com/en-us/da7f9825-3cc7-4c0f-9800-7d3cb15041d1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IParserAccessor.AddParsedSubObject">
+      <MemberSignature Language="C#" Value="void IParserAccessor.AddParsedSubObject (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IParserAccessor.AddParsedSubObject(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Style.System#Web#UI#IParserAccessor#AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Das analysierte Unterobjekt hinzugefügt werden.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IParserAccessor.AddParsedSubObject(System.Object)" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.MobileControls.Style>-Instanz in eine <xref:System.Web.UI.IParserAccessor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Style.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Web.UI.IStateManager.IsTrackingViewState" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.MobileControls.Style>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Style.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Das Objekt, das den Ansichtszustand zu ladende darstellt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IStateManager.LoadViewState(System.Object)" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.MobileControls.Style>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Style.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IStateManager.SaveViewState" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.MobileControls.Style>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Style.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IStateManager.TrackViewState" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.MobileControls.Style>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Style.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktiviert die Überwachung der Anzeigestatus in der <see cref="T:System.Web.UI.MobileControls.Style" /> Objekt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt die <xref:System.Web.UI.MobileControls.Style.IsTrackingViewState%2A> Eigenschaft `true`. Ruft auch die <xref:System.Web.UI.IStateManager.TrackViewState%2A> Methode für die <xref:System.Web.UI.StateBag> Objekt verweist die <xref:System.Web.UI.MobileControls.Style.State%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrapping">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.Wrapping Wrapping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.MobileControls.Wrapping Wrapping" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Style.Wrapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Wrapping</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den angegebenen Umbruchmodus für das Format. Der Standardwert ist <see cref="F:System.Web.UI.MobileControls.Wrapping.NotSet" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein Enumerationswert, der den Umbruchmodus für das Format angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle enthält die Definitionen der <xref:System.Web.UI.MobileControls.Wrapping> Enumerationen.  
+  
+|Enumeration|Wert|Beschreibung|  
+|-----------------|-----------|-----------------|  
+|<xref:System.Web.UI.MobileControls.Wrapping?displayProperty=nameWithType>|0|Für das angegebene Objekt ist keine Größe festgelegt. Dies ist der Standardwert.|  
+|<xref:System.Web.UI.MobileControls.Wrapping?displayProperty=nameWithType>|1|Die nächste Zeile umbrochen.|  
+|<xref:System.Web.UI.MobileControls.Wrapping?displayProperty=nameWithType>|2|Der Text wird nicht in die nächste Zeile umbrochen.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrappingKey">
+      <MemberSignature Language="C#" Value="public static readonly object WrappingKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object WrappingKey" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Style.WrappingKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schlüssel zum Abrufen des Formats aus dem eingebetteten Stylesheet für <see cref="P:System.Web.UI.MobileControls.Style.Wrapping" />. Wird intern von ASP.NET verwendet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

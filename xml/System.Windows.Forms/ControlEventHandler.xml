@@ -1,0 +1,41 @@
+<Type Name="ControlEventHandler" FullName="System.Windows.Forms.ControlEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ControlEventHandler(object sender, ControlEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ControlEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ControlEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.ControlEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.ControlEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Windows.Forms.Control.ControlAdded" /> und <see cref="E:System.Windows.Forms.Control.ControlRemoved" /> Ereignisse der <see cref="T:System.Windows.Forms.Control" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Windows.Forms.ControlEventArgs>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.Binding>, fügt eine <xref:System.Windows.Forms.ConvertEventHandler> Delegat, der sowohl die <xref:System.Windows.Forms.Binding.Parse> und <xref:System.Windows.Forms.Binding.Format> Ereignisse, und fügt die <xref:System.Windows.Forms.Binding> zu der <xref:System.Windows.Forms.BindingsCollection> von eine <xref:System.Windows.Forms.TextBox> steuern Sie über die <xref:System.Windows.Forms.Control.DataBindings%2A> Diese Eigenschaft. Die `DecimalToCurrencyString` Ereignisdelegaten, hinzugefügt der <xref:System.Windows.Forms.Binding.Format> Ereignis, formatiert den gebundenen Wert (eine <xref:System.Decimal> Typ) als Währung mit der <xref:System.Decimal.ToString%2A> Methode. Die `CurrencyStringToDecimal` Ereignisdelegaten, hinzugefügt der <xref:System.Windows.Forms.Binding.Parse> Ereignis konvertiert den Wert, der im Steuerelement angezeigt wird zurück an den <xref:System.Decimal> Typ.  
+  
+ [!code-cpp[Classic ControlEventHandler Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ControlEventHandler Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ControlEventHandler Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ControlEventHandler Example/CS/source.cs#1)]
+ [!code-vb[Classic ControlEventHandler Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ControlEventHandler Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

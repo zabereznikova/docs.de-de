@@ -1,0 +1,186 @@
+<Type Name="SettingChangingEventArgs" FullName="System.Configuration.SettingChangingEventArgs">
+  <TypeSignature Language="C#" Value="public class SettingChangingEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SettingChangingEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingChangingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Configuration.ApplicationSettingsBase.SettingChanging" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.SettingChangingEventArgs> Klasse stellt Daten für die <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> -Ereignis, das signalisiert, dass der Wert einer Anwendungseinstellungseigenschaft geändert wird. Die häufigste Ursache für dieses Ereignis wird die `get` Accessor, der die <xref:System.Configuration.ApplicationSettingsBase.Item%2A> Methode in der <xref:System.Configuration.ApplicationSettingsBase> Klasse.  
+  
+ Da <xref:System.Configuration.SettingChangingEventArgs> stammt aus <xref:System.ComponentModel.CancelEventArgs>, der Handler hat die Möglichkeit, den Schreibvorgang abzubrechen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingChangingEventArgs (string settingName, string settingClass, string settingKey, object newValue, bool cancel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string settingName, string settingClass, string settingKey, object newValue, bool cancel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingChangingEventArgs.#ctor(System.String,System.String,System.String,System.Object,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settingName" Type="System.String" />
+        <Parameter Name="settingClass" Type="System.String" />
+        <Parameter Name="settingKey" Type="System.String" />
+        <Parameter Name="newValue" Type="System.Object" />
+        <Parameter Name="cancel" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="settingName">Ein <see cref="T:System.String" /> mit dem Namen der anwendungseinstellung für die.</param>
+        <param name="settingClass">Ein <see cref="T:System.String" /> mit einer Kategorie Beschreibung der Einstellung. Häufig wird dieser Parameter auf den Namen der Anwendungsgruppe Einstellungen festgelegt.</param>
+        <param name="settingKey">Ein <see cref="T:System.String" /> , die den Anwendungsschlüssel für die Einstellungen enthält.</param>
+        <param name="newValue">Ein <see cref="T:System.Object" /> , enthält den neuen Wert der Anwendungseinstellungseigenschaft zugewiesen werden.</param>
+        <param name="cancel">
+          <see langword="true" />um das Ereignis abzubrechen; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Configuration.SettingChangingEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.SettingChangingEventArgs.%23ctor%2A> Konstruktor weist die Werte der Parameter nur die entsprechenden Eigenschaften in der <xref:System.Configuration.SettingChangingEventArgs> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValue">
+      <MemberSignature Language="C#" Value="public object NewValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object NewValue" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingChangingEventArgs.NewValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den neuen Wert der Anwendungseinstellungseigenschaft zugewiesen wird.</summary>
+        <value>Ein <see cref="T:System.Object" /> , enthält den neuen Wert der Anwendungseinstellungseigenschaft zugewiesen werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der tatsächliche Typ des der <xref:System.Configuration.SettingChangingEventArgs.NewValue%2A> Eigenschaft sollte mit der festzulegenden Eigenschaft kompatibel sein. Letzterer ist verfügbar über den <xref:System.Configuration.SettingsProperty.PropertyType%2A> Eigenschaft von der <xref:System.Configuration.SettingsProperty> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SettingClass">
+      <MemberSignature Language="C#" Value="public string SettingClass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SettingClass" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingChangingEventArgs.SettingClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anwendung Einstellungen Eigenschaftenkategorie ab.</summary>
+        <value>Ein <see cref="T:System.String" /> mit einer Kategorie Beschreibung der Einstellung. In der Regel wird dieser Parameter auf den Namen der Anwendungsgruppe Einstellungen festgelegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Anwendungseigenschaften gehören zu einer Anwendungseinstellungsgruppe. Der Gruppenname kann explizit bereitgestellt werden, indem die Klasse mit einer <xref:System.Configuration.SettingsGroupNameAttribute>ist, andernfalls wird eine generiert, mit dem Namen des von der Wrapperklasse für Anwendungseinstellungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SettingKey">
+      <MemberSignature Language="C#" Value="public string SettingKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SettingKey" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingChangingEventArgs.SettingKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anwendungsschlüssel-Einstellungen der Eigenschaft zugeordnet.</summary>
+        <value>Ein <see cref="T:System.String" /> , die den Anwendungsschlüssel für die Einstellungen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Wrapperklasse für Anwendungseinstellungen, abgeleitet aus <xref:System.Configuration.ApplicationSettingsBase>, verfügt über einen zugeordneten, d. h. eine Zeichenfolge, die Einstellungsschlüssel des gleichen Wrappers in einer einzigen Anwendung. Da jede Wrapperklasse einen Satz von Eigenschaften, die Anwendungseinstellungen darstellen definiert, können der Einstellungsschlüssel auf ähnliche Weise ihrer Verwendung zu unterscheiden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SettingName">
+      <MemberSignature Language="C#" Value="public string SettingName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SettingName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingChangingEventArgs.SettingName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen für die anwendungseinstellung Anwendungseinstellungseigenschaft zugeordnet.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem Namen der anwendungseinstellung für die.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel die Einstellungswrapperklasse abgeleitet <xref:System.Configuration.ApplicationSettingsBase>, so, dass der Name der Anwendungseinstellungseigenschaft identisch mit der Einstellung der zugehörigen Anwendung werden erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

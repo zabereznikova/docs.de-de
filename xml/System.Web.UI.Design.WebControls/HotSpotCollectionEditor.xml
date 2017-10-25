@@ -1,0 +1,135 @@
+<Type Name="HotSpotCollectionEditor" FullName="System.Web.UI.Design.WebControls.HotSpotCollectionEditor">
+  <TypeSignature Language="C#" Value="public class HotSpotCollectionEditor : System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HotSpotCollectionEditor extends System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.HotSpotCollectionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.CollectionEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Komponenten-Editor für <see cref="T:System.Web.UI.WebControls.HotSpotCollection" /> Objekte in einer <see cref="T:System.Web.UI.WebControls.ImageMap" /> oder ein ähnliches Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor> Klasse bietet eine Benutzeroberfläche zum Bearbeiten der <xref:System.Web.UI.WebControls.HotSpot> Elemente der <xref:System.Web.UI.WebControls.HotSpotCollection> -Objekt, das in eingebettet ist ein <xref:System.Web.UI.WebControls.ImageMap> oder ein ähnliches Steuerelement.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor> wird aufgerufen, indem Sie die Schaltfläche mit den Auslassungspunkten (**... **) auf die **HotSpots** Eigenschaft im visuellen Designers **Eigenschaften** Raster.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.CanSelectMultipleInstances%2A> immer Methodenrückgabe `false` , um anzugeben, dass nur ein Objekt zu einem Zeitpunkt im Editor ausgewählt werden kann. Die <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.CreateNewItemTypes%2A> Methode gibt ein Array von Typen, die der Editor erstellen kann. Die <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.HelpTopic%2A> -Eigenschaft gibt den Namen des Hilfethemas, die im Editor angezeigt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HotSpotCollectionEditor (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ der Auflistung zu bearbeiten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.HotSpotCollectionEditor" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor> Klasse bei der Auswahl der Schaltfläche mit den Auslassungspunkten (**... **) auf die **HotSpots** Eigenschaft im visuellen Designers **Eigenschaften** Raster beim Entwerfen einer <xref:System.Web.UI.WebControls.ImageMap> Steuerelement oder ein anderes Steuerelement, das kapselt einen <xref:System.Web.UI.WebControls.HotSpotCollection> -Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSelectMultipleInstances">
+      <MemberSignature Language="C#" Value="protected override bool CanSelectMultipleInstances ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanSelectMultipleInstances() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.CanSelectMultipleInstances" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob mehrere <see cref="T:System.Web.UI.WebControls.HotSpot" /> Sammlungselemente gleichzeitig ausgewählt werden können.</summary>
+        <returns>Immer <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.CanSelectMultipleInstances%2A> Methode gibt immer `false`daher nur ein <xref:System.Web.UI.WebControls.HotSpot> -Objekt ausgewählt werden kann, zu einem Zeitpunkt in der <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewItemTypes">
+      <MemberSignature Language="C#" Value="protected override Type[] CreateNewItemTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type[] CreateNewItemTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.CreateNewItemTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ab, die mehrere Datentypen, die der auflistungs-Editor erstellen können.</summary>
+        <returns>Ein Typarray der Datentypen der <see cref="T:System.Web.UI.Design.WebControls.HotSpotCollectionEditor" /> erstellen können.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Typen, die die <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor> Objekt erstellen kann sind <xref:System.Web.UI.WebControls.CircleHotSpot>, <xref:System.Web.UI.WebControls.RectangleHotSpot>, <xref:System.Web.UI.WebControls.PolygonHotSpot>, und andere Personen, die von abgeleitet werden kann die <xref:System.Web.UI.WebControls.HotSpot> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpTopic">
+      <MemberSignature Language="C#" Value="protected override string HelpTopic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpTopic" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.HelpTopic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Hilfethema für die anzuzeigenden für die <see cref="T:System.Web.UI.Design.WebControls.HotSpotCollectionEditor" /> Objekt.</summary>
+        <value>Eine Zeichenfolge, die anzuzeigenden Hilfethemas angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.HelpTopic%2A> Eigenschaft ruft den Namen des Hilfethemas angezeigt wird, wenn der <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor> Dialogfeld **Hilfe** geklickt wird oder wenn der **F1** Taste gedrückt wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie die <see cref="P:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.HelpTopic" /> Eigenschaft, um ein anderes Hilfethema anzuzeigen.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

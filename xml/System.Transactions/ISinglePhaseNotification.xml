@@ -1,0 +1,85 @@
+<Type Name="ISinglePhaseNotification" FullName="System.Transactions.ISinglePhaseNotification">
+  <TypeSignature Language="C#" Value="public interface ISinglePhaseNotification : System.Transactions.IEnlistmentNotification" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISinglePhaseNotification implements class System.Transactions.IEnlistmentNotification" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.ISinglePhaseNotification" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Transactions.IEnlistmentNotification</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Beschreibt ein Ressourcenobjekt, das die Einphasencommit-Optimierung für die Einbeziehung in eine Transaktion unterstützt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass selbst wenn der Ressourcen-Manager einphasige Commits unterstützt diese Schnittstelle implementiert, nicht garantiert ist, dass er einen einzelnen Phasen-Commit erhält. Der Transaktions-Manager kann weiterhin stattdessen Zweiphasen-Commit-Benachrichtigung senden.  
+  
+ Aufrufen, um die Ressourcen-Manager als Teilnehmer in einer Transaktion einzutragen, die <xref:System.Transactions.Transaction.EnlistVolatile%2A> Methode oder die <xref:System.Transactions.Transaction.EnlistDurable%2A> Methode der <xref:System.Transactions.Transaction> Klasse. Insbesondere die `EnlistmentOptions` Parameter sollte gleich <xref:System.Transactions.EnlistmentOptions.None> um sicherzustellen, dass ein Commit für die einzelnen Phase ausgeführt wird. Wenn sie versehentlich, um festgelegt ist <xref:System.Transactions.EnlistmentOptions.EnlistDuringPrepareRequired>, kein Commit ausgeführt, einphasige.  
+  
+ Seit der <xref:System.Transactions.ISinglePhaseNotification> Schnittstelle leitet sich von der <xref:System.Transactions.IEnlistmentNotification> -Schnittstelle, der Ressourcen-Manager muss auch alle Methoden der letztere für-Commit-Benachrichtigung Zweiphasen implementieren.  Dies ist der Transaktions-Manager die Wahl, ob-Commit Zweiphasen, oder die einphasige Commits mit diesen Ressourcen-Manager verwendet wird.  Allerdings ermöglicht es implementieren diese Schnittstelle dem Ressourcen-Manager Nutzen der Optimierung, sobald es verfügbar ist.  
+  
+ Wenn die Optimierung verwendet wird und der Transaktions-Manager Ruft die <xref:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit%2A> Methode der eingetragenen Ressource, der Ressourcen-Manager auf diesen Aufruf reagieren soll, mithilfe der verschiedenen Methoden der <xref:System.Transactions.SinglePhaseEnlistment> Klasse, um den Transaktions-Manager zu informieren, wenn die Transaktion wird ein Commit oder Rollback.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SinglePhaseCommit">
+      <MemberSignature Language="C#" Value="public void SinglePhaseCommit (System.Transactions.SinglePhaseEnlistment enlistment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SinglePhaseCommit(class System.Transactions.SinglePhaseEnlistment enlistment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit(System.Transactions.SinglePhaseEnlistment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="singlePhaseEnlistment" Type="System.Transactions.SinglePhaseEnlistment" />
+      </Parameters>
+      <Docs>
+        <param name="enlistment">To be added.</param>
+        <summary>Stellt die Ressourcen-Manager-Implementierung des Rückrufs für die einphasige Commits.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist der Transaktions-Manager die Wahl, ob-Commit Zweiphasen, oder die einphasige Commits mit diesen Ressourcen-Manager verwendet wird.  Weitere Informationen zu einzelnen Phase und zwei-Phasen-Commit, finden Sie unter [Ausführen eines Commits für eine Transaktion In Single-Phase und mehreren Phasen bestehender](http://msdn.microsoft.com/en-us/74b3cfe1-d33a-45b8-91f4-dfd6f6598c4d).  
+  
+ Aus diesem Grund für diese Eintragung des Ressourcen-Managers entweder die <xref:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit%2A> Methode aufgerufen wird, oder das Zweiphasen-Commit-Methoden, die in anderen definierten <xref:System.Transactions.IEnlistmentNotification> Schnittstelle aufgerufen werden.  
+  
+ Die Implementierung dieser Methode sollte rufen Sie entweder die <xref:System.Transactions.SinglePhaseEnlistment.Committed%2A> Methode oder die <xref:System.Transactions.SinglePhaseEnlistment.Aborted%2A> Methode der `singlePhaseEnlistment` Parameter, um anzugeben, ob ein Commit oder ein Rollback der Transaktion ausgeführt werden soll.  
+  
+ Der Transaktions-Manager ruft diese Methode auf, wenn besteht nur ein flüchtigen Eintragung, die einphasige Commits unterstützt, oder 0 (null) oder mehr flüchtige Eintragungen und eine dauerhafte Eintragung vorhanden sind. Im letzteren Fall empfangen die flüchtigen Eintragungen <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> Benachrichtigungen für Zweiphasencommit- und der einzige dauerhafte Eintragung erhält eine Phase hat Commit-Benachrichtigung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

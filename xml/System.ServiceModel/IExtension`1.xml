@@ -1,0 +1,124 @@
+<Type Name="IExtension&lt;T&gt;" FullName="System.ServiceModel.IExtension&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IExtension&lt;T&gt; where T : IExtensibleObject&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExtension`1&lt;(class System.ServiceModel.IExtensibleObject`1&lt;!T&gt;) T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.IExtension`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <InterfaceName>System.ServiceModel.IExtensibleObject&lt;T&gt;</InterfaceName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">Das Objekt, das am benutzerdefinierten Verhalten teilnimmt.</typeparam>
+    <summary>Aktiviert ein Objekt, um durch Aggregation ein anderes Objekt zu erweitern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit [!INCLUDE[indigo2](~/includes/indigo2-md.md)] können Sie <xref:System.ServiceModel.IExtensibleObject%601?displayProperty=nameWithType>-Objekte (die <xref:System.ServiceModel.IContextChannel?displayProperty=nameWithType>-Klasse, die <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>, <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>-Klasse und die <xref:System.ServiceModel.OperationContext?displayProperty=nameWithType>-Klasse) erweitern, indem Sie mithilfe des erweiterbaren Objektmusters einen neuen Zustand oder ein neues Verhalten hinzufügen. Das erweiterbare Objektmuster wird in [!INCLUDE[indigo2](~/includes/indigo2-md.md)] verwendet, um vorhandene Laufzeit-Klassen um neue Funktionen zu erweitern oder um neue Zustandsfunktionen zu einem Objekt hinzuzufügen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Attach">
+      <MemberSignature Language="C#" Value="public void Attach (T owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Attach(!T owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.IExtension`1.Attach(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Das erweiterbare Objekt, das diese Erweiterung aggregiert.</param>
+        <summary>Aktiviert ein Erweiterungsobjekt, um herauszufinden, wann es aggregiert wurde. Wird aufgerufen, wenn die Erweiterung in die <see cref="P:System.ServiceModel.IExtensibleObject`1.Extensions" />-Eigenschaft eingefügt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um das <xref:System.ServiceModel.IExtensibleObject%601>-Objekt nachzuverfolgen, zu dem die aktuelle Instanz der Erweiterung gehört. Dank dieses Aufrufs können Erweiterungen Ereignisse verarbeiten oder Eigenschaften ihres Besitzers überprüfen.  
+  
+   
+  
+## Examples  
+ Mit dem folgenden Beispielcode wird veranschaulicht, wie mit dieser Methode das <xref:System.ServiceModel.IExtensibleObject%601>-Objekt, zu dem die aktuelle Instanz der Erweiterung gehört, nachverfolgt werden kann.  
+  
+```csharp  
+InstanceContext owner;  
+  
+public void Attach(InstanceContext owner)  
+{  
+  this.owner = owner;   
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Detach">
+      <MemberSignature Language="C#" Value="public void Detach (T owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Detach(!T owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.IExtension`1.Detach(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Das erweiterbare Objekt, das diese Erweiterung aggregiert.</param>
+        <summary>Aktiviert ein Objekt, um zu kennzeichnen, wenn es nicht mehr aggregiert wird. Wird aufgerufen, wenn eine Erweiterung aus der <see cref="P:System.ServiceModel.IExtensibleObject`1.Extensions" />-Eigenschaft entfernt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.IExtension%601.Detach%2A>-Methode, um herauszufinden, wann die Erweiterung entfernt wurde. Eine Erweiterung kann dies verwenden, um die Verknüpfung der Ereignisse auf dem erweiterbaren Objekt aufzuheben. Eine Erweiterung kann auch <xref:System.InvalidOperationException?displayProperty=nameWithType> aus dieser Methode auslösen, um anzugeben, dass die Erweiterung nach dem Hinzufügen nicht mehr entfernt werden kann.  
+  
+ Beachten Sie, dass diese Methode nicht aufgerufen wird, wenn das Besitzerobjekt verworfen oder geschlossen wurde. Falls erforderlich ist es Aufgabe der Erweiterung oder des Codes, der die Erweiterung hinzufügt, die entsprechenden <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType>-Ereignisse zu verknüpfen oder die geeignete Schnittstellen (für <xref:System.ServiceModel.OperationContext?displayProperty=nameWithType>) zu implementieren, um den Lebenszyklus des Besitzers zu beachten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,98 @@
+<Type Name="IHierarchicalDataSource" FullName="System.Web.UI.IHierarchicalDataSource">
+  <TypeSignature Language="C#" Value="public interface IHierarchicalDataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IHierarchicalDataSource" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IHierarchicalDataSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine hierarchische Daten, hierarchische datengebundene Steuerelemente wie z. B. <see cref="T:System.Web.UI.WebControls.TreeView" /> können zu binden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET unterstützt ein Steuerelement Datenbindungsarchitektur, mit der Webserver-Steuerelemente an Daten binden, und sie auf konsistente Weise präsentieren kann. Webserversteuerelemente, die an Daten binden sind datengebundene Steuerelemente aufgerufen, und die Klassen, die die Bindung zu erleichtern, werden als Datenquellensteuerelemente bezeichnet. Datenquellensteuerelemente können jede beliebige Datenquelle darstellen: eine Datei, einen Stream, eine relationale Datenbank, ein Geschäftsobjekt usw.. Datenquelle steuert die Darstellung der Daten auf konsistente Weise für datengebundene Steuerelemente, unabhängig von der Quelle oder das Format der zugrunde liegenden Daten.  
+  
+ Ableiten von Steuerelementen für Datenquellen, die hierarchische Daten darstellen der <xref:System.Web.UI.HierarchicalDataSourceControl> -Klasse, die die basisimplementierung von ASP.NET wird von der <xref:System.Web.UI.IHierarchicalDataSource> Schnittstelle. Die <xref:System.Web.UI.IHierarchicalDataSource> Schnittstelle ist mit Steuerelementen für Datenquellen zu definieren, die hierarchische Daten verfügbar machen, anstatt tabellarische oder Listendaten Webserver steuert, ableiten der <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse, z. B. die <xref:System.Web.UI.WebControls.TreeView> Steuerelement. Die Schnittstelle definiert eine einzelne Methode <xref:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView%2A>, die einen stark typisierten abgerufen <xref:System.Web.UI.HierarchicalDataSourceView> Objekt. Datenquellen-Steuerelementen, die diese Schnittstelle implementieren, unterstützen eine hierarchische Sicht für jede hierarchische Daten, die sie darstellen. Die Datenquellensichten sind nicht benannt, z. B. <xref:System.Web.UI.DataSourceView> Objekte, jedoch werden durch ihren eindeutigen hierarchischen Pfad, also identifiziert die `viewPath` Parameter zu übergeben, um die <xref:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView%2A> Methode.  
+  
+ Sie können ein Datenquellensteuerelement vorstellen, als die Kombination der <xref:System.Web.UI.IHierarchicalDataSource> Objekt und der zugehörigen Ansichten auf die zugrunde liegenden Daten. Jeweils zugeordneten <xref:System.Web.UI.HierarchicalDataSourceView> Objekt definiert, das die Funktionen des Datenquellen-Steuerelements für die hierarchischen Ebene dargestellt, sowie wie alle ASP.NET Datenquellensicht-Objekte, führt Sie Vorgänge wie z. B. Insert, Update, Delete und sortieren.  
+  
+ Datenquellen-Steuerelementen, die nur hierarchische Daten, z. B. verfügbar machen <xref:System.Web.UI.WebControls.SiteMapDataSource>, abgeleitet sind die <xref:System.Web.UI.HierarchicalDataSourceControl> Klasse. Andere Datenquellen-Steuerelemente, die ihre Daten als hierarchische Daten und Tabellendaten, z. B. verfügbar machen <xref:System.Web.UI.WebControls.XmlDataSource>, abgeleitet sind <xref:System.Web.UI.HierarchicalDataSourceControl> , implementiert jedoch die <xref:System.Web.UI.IDataSource> und <xref:System.ComponentModel.IListSource> Schnittstellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie der abstrakten erweitert <xref:System.Web.UI.HierarchicalDataSourceControl> Klasse implementiert die <xref:System.Web.UI.IHierarchicalDataSource> Schnittstelle, um ein Datenquellen-Steuerelement zu erstellen, die Systeminformationen anzeigt. Die `FileSystemDataSource` -Klasse stellt eine Implementierung der <xref:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView%2A> -Methode, die einen stark typisierten Ansicht-Objekt für einen angegebenen Dateisystempfad abruft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.HierarchicalDataSourceControl> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.FileSystemDataSource_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/CS/filesystemdatasource.cs#1)]
+ [!code-vb[Urtue.Samples.Alexkr.FileSystemDataSource_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/VB/filesystemdatasource.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataSourceChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler DataSourceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DataSourceChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.IHierarchicalDataSource.DataSourceChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Speicherung von Daten, die die <see cref="T:System.Web.UI.IHierarchicalDataSource" /> Schnittstelle stellt hat sich geändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IHierarchicalDataSource.DataSourceChanged> Ereignis wird ausgelöst, wenn eine Änderung, um Eigenschaften für das Datenquellensteuerelement, z. B. das Ändern vorgenommen wird der <xref:System.Web.UI.WebControls.XmlDataSource.DataFile%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.XmlDataSource> -Steuerelement, oder ändern die Daten in der zugrunde liegenden Datenspeicher verfügt, was geschieht, wenn die XML-Knoten geändert werden durch eine Aktion bearbeiten, eine <xref:System.Web.UI.WebControls.XmlDataSource> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHierarchicalView">
+      <MemberSignature Language="C#" Value="public System.Web.UI.HierarchicalDataSourceView GetHierarchicalView (string viewPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.HierarchicalDataSourceView GetHierarchicalView(string viewPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HierarchicalDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewPath">Der hierarchische Pfad der abzurufenden Ansicht.</param>
+        <summary>Ruft das Ansichtsobjekt-Hilfsprogramm für die <see cref="T:System.Web.UI.IHierarchicalDataSource" /> Schnittstelle für den angegebenen Pfad.</summary>
+        <returns>Gibt eine <see cref="T:System.Web.UI.HierarchicalDataSourceView" /> , die eine einzige Ansicht der Daten auf der Hierarchieebene identifizierte darstellt der <paramref name="viewPath" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IHierarchicalDataSource> -Schnittstelle ein, z. B. die <xref:System.Web.UI.IDataSource> -Schnittstelle, definiert eine Methode, die hierarchische Datenquellensteuerelemente zu verwenden, um eine Datenquellensicht abzurufen. Wie alle <xref:System.Web.UI.DataSourceView> Hilfsobjekte, die Datenquellen-Steuerelementen zugeordnet sind ein <xref:System.Web.UI.HierarchicalDataSourceView> Objekt definiert die Vorgänge, die die Datenquelle mit den zugrunde liegenden Daten ausführen können. Obwohl Steuerelementen für Datenquellen, die tabellarische Daten, in der Regel darstellen nur eine benannte Ansicht verwenden, unterstützen Hierarchische Datenquellensteuerelemente jedoch eine Sicht für jede Ebene der hierarchischen Daten, die Datenquellen-Steuerelements darstellt. Die Ebene der hierarchischen Daten wird durch einen eindeutigen hierarchischen Pfad, übergeben als identifiziert die `viewPath` Parameter.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView%2A> Methode in einer Klasse, die erweitert die <xref:System.Web.UI.HierarchicalDataSourceControl> Klasse, um ein stark typisiertes abzurufen <xref:System.Web.UI.HierarchicalDataSourceView> Objekt für einen eindeutigen hierarchischen Pfad. Die `FileSystemDataSource` Implementierung der Klasse <xref:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView%2A> Ruft eine `FileSystemDataSourceView` Objekt für einen angegebenen Dateisystempfad. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.HierarchicalDataSourceControl> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.FileSystemDataSource_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/CS/filesystemdatasource.cs#1)]
+ [!code-vb[Urtue.Samples.Alexkr.FileSystemDataSource_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/VB/filesystemdatasource.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

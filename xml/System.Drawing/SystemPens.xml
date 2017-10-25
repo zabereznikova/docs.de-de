@@ -1,0 +1,1021 @@
+<Type Name="SystemPens" FullName="System.Drawing.SystemPens">
+  <TypeSignature Language="C#" Value="public sealed class SystemPens" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SystemPens extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.SystemPens" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Jede Eigenschaft von der <see cref="T:System.Drawing.SystemPens" /> Klasse ist eine <see cref="T:System.Drawing.Pen" /> , ist die Farbe eines Windows-Anzeigeelements und einer Breite von 1 Pixel.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt Größen, die unter Verwendung mehrerer überladener Operatoren für diese Typen definiert und Punkte. Außerdem wird veranschaulicht, wie die <xref:System.Drawing.SystemPens> Klasse.  
+  
+ In diesem Beispiel dient, die mit Windows Forms verwendet werden. Erstellen Sie ein Formular, enthält ein <xref:System.Windows.Forms.Button> mit dem Namen `subtractButton`. Fügen Sie den Code in das Formular, und rufen die `CreatePointsAndSizes` Methode aus des Formulars `Paint` Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.PointsAndSizes#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.PointsAndSizes#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.PointsAndSizes#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActiveBorder">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen ActiveBorder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen ActiveBorder" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.ActiveBorder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> d. h. die Farbe des Rahmens des aktiven Fensters.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> d. h. die Farbe des Rahmens des aktiven Fensters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.ActiveBorder%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithActiveBorderPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#13)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveCaption">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen ActiveCaption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen ActiveCaption" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.ActiveCaption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> , der die Farbe des Hintergrunds der Titelleiste des aktiven Fensters.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> , der die Farbe des Hintergrunds der Titelleiste des aktiven Fensters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.ActiveCaption%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithActiveCaptionPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#14)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveCaptionText">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen ActiveCaptionText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen ActiveCaptionText" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.ActiveCaptionText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Drawing.Pen" /> ab, der die Farbe des Texts in der Titelleiste des aktiven Fensters aufweist.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> d. h. die Farbe des Texts in der Titelleiste des aktiven Fensters.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppWorkspace">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen AppWorkspace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen AppWorkspace" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.AppWorkspace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> , der die Farbe des Anwendungsarbeitsbereichs.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> , der die Farbe des Anwendungsarbeitsbereichs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungsarbeitsbereichs ist der Bereich mehrere Dokument anzeigen, die nicht von Dokumenten eingenommen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.AppWorkspace%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithActiveAppWorkspacePen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#14)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonFace">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen ButtonFace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen ButtonFace" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.ButtonFace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> also die Vorderseitenfarbe eines 3D-Elements.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> also die Vorderseitenfarbe eines 3D-Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.ButtonFace%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithButtonSpacePen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#16)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonHighlight">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen ButtonHighlight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen ButtonHighlight" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.ButtonHighlight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> also die Hervorhebungsfarbe eines 3D-Elements.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> also die Hervorhebungsfarbe eines 3D-Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Farbe wird auf Teile eines 3D Elements angewendet, die die Lichtquelle stoßen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.ButtonHighlight%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithButtonHighlightPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#17)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonShadow">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen ButtonShadow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen ButtonShadow" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.ButtonShadow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> also die Schattenfarbe eines 3D-Elements.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> also die Schattenfarbe eines 3D-Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Farbe wird auf Teile eines 3D Elements angewendet, die von der Lichtquelle stoßen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.ButtonShadow%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithButtonShadowPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#18](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#18)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#18](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen Control" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> also die Vorderseitenfarbe eines 3D-Elements.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> also die Vorderseitenfarbe eines 3D-Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.Control%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithControlPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#19](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#19)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#19](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlDark">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen ControlDark { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen ControlDark" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.ControlDark" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> also die Schattenfarbe eines 3D-Elements.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> also die Schattenfarbe eines 3D-Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Farbe wird auf Teile eines 3D Elements angewendet, die von der Lichtquelle stoßen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.ControlDark%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithControlDarkPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#20)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlDarkDark">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen ControlDarkDark { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen ControlDarkDark" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.ControlDarkDark" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> also die dunkle Schattenfarbe eines 3D-Elements.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> also die dunkle Schattenfarbe eines 3D-Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Farbe wird auf die Teile des 3D-Element angewendet, die die dunkelsten Farbe sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.ControlDarkDark%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithControlDarkDarkPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#21)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlLight">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen ControlLight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen ControlLight" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.ControlLight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> also die helle Farbe eines 3D-Elements.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> also die helle Farbe eines 3D-Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Farbe wird auf Teile eines 3D Elements angewendet, die die Lichtquelle stoßen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.ControlLight%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithControlLightPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#22)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlLightLight">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen ControlLightLight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen ControlLightLight" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.ControlLightLight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> also die Hervorhebungsfarbe eines 3D-Elements.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> also die Hervorhebungsfarbe eines 3D-Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Farbe wird auf die Teile des 3D-Element angewendet, die der hellsten Farbe sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.ControlLightLight%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithControlLightLightPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#23)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlText">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen ControlText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen ControlText" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.ControlText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> d. h. die Farbe des Texts in einem 3D-Element.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> d. h. die Farbe des Texts in einem 3D-Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.ControlText%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithControlTextPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#24](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#24)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#24](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Desktop">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen Desktop { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen Desktop" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.Desktop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> , der die Farbe des Windows-Desktops.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> , der die Farbe des Windows-Desktops.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.Desktop%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithControlDesktopPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#25](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#25)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#25](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromSystemColor">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen FromSystemColor (System.Drawing.Color c);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Pen FromSystemColor(valuetype System.Drawing.Color c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.SystemPens.FromSystemColor(System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="c">Die <see cref="T:System.Drawing.Color" /> für die neue <see cref="T:System.Drawing.Pen" />.</param>
+        <summary>Erstellt eine <see cref="T:System.Drawing.Pen" /> aus dem angegebenen <see cref="T:System.Drawing.Color" />.</summary>
+        <returns>Die <see cref="T:System.Drawing.Pen" />, die von dieser Methode erstellt wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GradientActiveCaption">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen GradientActiveCaption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen GradientActiveCaption" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.GradientActiveCaption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> mit der hellsten Farbe im Farbverlauf der Titelleiste eines aktiven Fensters.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> mit der hellsten Farbe im Farbverlauf der Titelleiste eines aktiven Fensters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.GradientActiveCaption%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithGradientActiveCaptionPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#26](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#26)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#26](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#26)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GradientInactiveCaption">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen GradientInactiveCaption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen GradientInactiveCaption" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.GradientInactiveCaption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> mit der hellsten Farbe im Farbverlauf der Titelleiste eines inaktiven Fensters.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> mit der hellsten Farbe im Farbverlauf der Titelleiste eines inaktiven Fensters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.GradientInactiveCaption%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithGradientInactiveCaptionPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#27](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#27)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#27](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#27)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GrayText">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen GrayText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen GrayText" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.GrayText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> also die Textfarbe abgeblendet.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> also die Textfarbe abgeblendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elemente in einer Liste, die deaktiviert sind, werden abgeblendet Text angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.GrayText%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithGrayTextPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#28](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#28)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#28](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Highlight">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen Highlight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen Highlight" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.Highlight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> , der die Farbe des Hintergrunds ausgewählter Elemente.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> , der die Farbe des Hintergrunds ausgewählter Elemente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausgewählte Elemente können Menüelemente sowie markierten Text enthalten. Stiftfarbe kann z. B. die Farbe für den Hintergrund ausgewählter Elemente in einem Listenfeld, sein.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt Größen, die unter Verwendung mehrerer überladener Operatoren für diese Typen definiert und Punkte. Außerdem wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.Highlight%2A> Eigenschaft.  
+  
+ In diesem Beispiel dient, die mit Windows Forms verwendet werden. Erstellen Sie ein Formular, enthält ein <xref:System.Windows.Forms.Button> mit dem Namen `subtractButton`. Fügen Sie den Code in das Formular, und rufen die `CreatePointsAndSizes` Methode aus des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.PointsAndSizes#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.PointsAndSizes#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.PointsAndSizes#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HighlightText">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen HighlightText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen HighlightText" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.HighlightText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Drawing.Pen" /> mit der Textfarbe der ausgewählten Elemente ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> d. h. die Farbe des Texts in der ausgewählten Elemente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausgewählte Elemente können Menüelemente sowie markierten Text enthalten. Stiftfarbe kann z. B. die Farbe für den Text ausgewählter Elemente in einem Listenfeld, sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.HighlightText%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithHighlightTextPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#30)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HotTrack">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen HotTrack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen HotTrack" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.HotTrack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> , der die Farbe, die zum Kennzeichnen eines Gehoverter Elements verwendet.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> , der die Farbe, die zum Kennzeichnen eines Gehoverter Elements verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.HotTrack%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithHotTrackPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#31)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InactiveBorder">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen InactiveBorder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen InactiveBorder" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.InactiveBorder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> ist die Farbe des Rahmens eines inaktiven Fensters.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> d. h. die Farbe des Rahmens eines inaktiven Fensters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.InactiveBorder%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithInactiveBorderPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#32)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InactiveCaption">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen InactiveCaption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen InactiveCaption" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.InactiveCaption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> , der die Farbe der Beschriftung der Titelleiste eines inaktiven Fensters.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> , der die Farbe der Beschriftung der Titelleiste eines inaktiven Fensters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.InactiveCaption%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithInactiveCaptionPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#33](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#33)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#33](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InactiveCaptionText">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen InactiveCaptionText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen InactiveCaptionText" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.InactiveCaptionText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> d. h. die Farbe des Texts in der Titelleiste eines inaktiven Fensters.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> d. h. die Farbe des Texts in der Titelleiste eines inaktiven Fensters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.InactiveCaptionText%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithInactiveCaptionTextPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#34](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#34)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Info">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen Info { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen Info" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.Info" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> , der die Farbe des Hintergrunds einer QuickInfo.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> , der die Farbe des Hintergrunds einer QuickInfo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.Info%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithInfoPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#35](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#35)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#35](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#35)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InfoText">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen InfoText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen InfoText" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.InfoText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> d. h. die Farbe des Texts in der QuickInfo angezeigt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> d. h. die Farbe des Texts in der QuickInfo angezeigt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.InfoText%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithInfoTextPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#36](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#36)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#36](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#36)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Menu">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen Menu { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen Menu" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.Menu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> , der die Farbe des Menühintergrunds.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> , der die Farbe des Menühintergrunds.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.Menu%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithMenuPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#37](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#37)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#37](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#37)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuBar">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen MenuBar { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen MenuBar" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.MenuBar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> , der die Farbe des Hintergrunds einer Menüleiste.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> , der die Farbe des Hintergrunds einer Menüleiste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.MenuBar%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithMenuBarPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#38](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#38)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#38](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#38)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuHighlight">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen MenuHighlight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen MenuHighlight" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.MenuHighlight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> d. h. die Farbe, die zum Hervorheben von Menüelementen, wenn das Menü als flaches Menü angezeigt wird.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> d. h. die Farbe, die zum Hervorheben von Menüelementen, wenn das Menü als flaches Menü angezeigt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.MenuHighlight%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithMenuHighlightPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#39](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#39)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#39](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#39)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuText">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen MenuText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen MenuText" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.MenuText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> d. h. die Farbe des Texts eines Menüs.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> d. h. die Farbe des Texts eines Menüs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.MenuText%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithMenuTextPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#40)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollBar">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen ScrollBar { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen ScrollBar" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.ScrollBar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> , der die Farbe des Hintergrunds einer Bildlaufleiste.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> , der die Farbe des Hintergrunds einer Bildlaufleiste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.ScrollBar%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithScrollBarPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#41)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#41)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Window">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen Window { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen Window" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.Window" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> , der die Farbe des Hintergrunds im Clientbereich eines Fensters.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> , der die Farbe des Hintergrunds im Clientbereich eines Fensters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.Window%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithWindowPen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#42)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#42)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowFrame">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen WindowFrame { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen WindowFrame" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.WindowFrame" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> , der die Farbe eines Fensterrahmens.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> , der die Farbe eines Fensterrahmens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.WindowFrame%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithWindowFramePen` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#44](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#44)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#44](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#44)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowText">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Pen WindowText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.Pen WindowText" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SystemPens.WindowText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Drawing.Pen" /> d. h. die Farbe des Texts im Clientbereich eines Fensters.</summary>
+        <value>Ein <see cref="T:System.Drawing.Pen" /> d. h. die Farbe des Texts im Clientbereich eines Fensters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.SystemPens.WindowText%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie ihn in einem Windows Form. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und rufen die `DrawWithWindowText` Methode aus der <xref:System.Windows.Forms.Control.Paint> Ereignisbehandlungsmethode, übergeben `e` als <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#45](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#45)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#45](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#45)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

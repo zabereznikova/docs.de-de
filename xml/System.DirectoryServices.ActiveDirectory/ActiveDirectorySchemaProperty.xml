@@ -1,0 +1,578 @@
+<Type Name="ActiveDirectorySchemaProperty" FullName="System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty">
+  <TypeSignature Language="C#" Value="public class ActiveDirectorySchemaProperty : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActiveDirectorySchemaProperty extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Klasse stellt eine Schemaeigenschaftendefinition dar, die in der Schemapartition enthalten ist.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectorySchemaProperty (System.DirectoryServices.ActiveDirectory.DirectoryContext context, string ldapDisplayName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, string ldapDisplayName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.#ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="ldapDisplayName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" />-Objekt, das den Kontext für dieses <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekt angibt.</param>
+        <param name="ldapDisplayName">Ein <see cref="T:System.String" />, der den LDAP-Anzeigenamen für dieses <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekt darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.Save%2A?displayProperty=nameWithType> Methode muss aufgerufen werden, um einen commit der <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty> -Objekt, das für den Active Directory-Domänendiensten erstellt wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="context" />verweist nicht auf eine gültige <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> oder <see cref="T:System.DirectoryServices.ActiveDirectory.ConfigurationSet" />, oder <paramref name="ldapDisplayName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> oder <paramref name="ldapDisplayName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonName">
+      <MemberSignature Language="C#" Value="public string CommonName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommonName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.CommonName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den allgemeinen Namen (CN) des <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekts ab oder legt diesen fest.</summary>
+        <value>Eine <see cref="T:System.String" />, die den gemeinsamen Namen (CN) des <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekts abruft oder festlegt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Beschreibung des <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekts ab oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.String" />, die eine Beschreibung des aktuellen <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekts abruft oder festlegt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekt verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, wenn die verwalteten Ressourcen freigegeben werden sollen, <see langword="false" />, wenn nur die nicht verwalteten Ressourcen freigegeben werden sollen.</param>
+        <summary>Gibt die vom <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekt verwendeten nicht verwalteten Ressourcen und optional auch die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByName">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty FindByName (System.DirectoryServices.ActiveDirectory.DirectoryContext context, string ldapDisplayName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty FindByName(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, string ldapDisplayName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.FindByName(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="ldapDisplayName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" />-Objekt, das den Kontext für die Suche angibt.</param>
+        <param name="ldapDisplayName">Eine <see cref="T:System.String" />, die den LDAP-Anzeigenamen der Schemaeigenschaft angibt, nach der gesucht werden soll.</param>
+        <summary>Ruft ein <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekt in der Active Directory-Domänendienste-Schemapartition ab, das mit einem angegebenen Verzeichniskontext und Namen übereinstimmt.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekt für die Schemaeigenschaft, die gefunden wurde. <see langword="null" />, wenn die Eigenschaft nicht gefunden wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Das Objekt wurde nicht gefunden.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="context" />verweist nicht auf eine gültige <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> oder <see cref="T:System.DirectoryServices.ActiveDirectory.ConfigurationSet" />, oder <paramref name="ldapDisplayName" /> Parameter ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> oder <paramref name="ldapDisplayName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDirectoryEntry">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.DirectoryEntry GetDirectoryEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.DirectoryEntry GetDirectoryEntry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.GetDirectoryEntry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectoryEntry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das <see cref="T:System.DirectoryServices.DirectoryEntry" />-Objekt für das <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekt ab.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.DirectoryEntry" />-Objekt, das den Verzeichniseintrag für die Schemaeigenschaft darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> Objekt ist keine gültige Instanz.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefunct">
+      <MemberSignature Language="C#" Value="public bool IsDefunct { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefunct" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.IsDefunct" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekt außer Kraft gesetzt wurde, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Boolean" />-Wert, der angibt, ob das aktuelle Schemaeigenschaftenobjekt überschrieben wurde. <see langword="true" />, wenn das Objekt außer Kraft gesetzt wurde, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInAnr">
+      <MemberSignature Language="C#" Value="public bool IsInAnr { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInAnr" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.IsInAnr" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Schemaeigenschaft im ANR-Set vorhanden ist, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Boolean" />-Wert, der angibt, ob die Schemaeigenschaft im ANR-Set vorhanden ist. <see langword="true" />, wenn die Eigenschaft im ANR-Set vorhanden ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIndexed">
+      <MemberSignature Language="C#" Value="public bool IsIndexed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIndexed" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.IsIndexed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Schemaeigenschaft im Active Directory-Domänendienste-Speicher indiziert ist, oder legt diesen fest.</summary>
+        <value>A <see cref="T:System.Boolean" />-Wert, der angibt, ob die aktuelle Schemaeigenschaft im Active Directory-Domänendienste-Speicher indiziert ist. <see langword="true" />, wenn die Eigenschaft indiziert ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIndexedOverContainer">
+      <MemberSignature Language="C#" Value="public bool IsIndexedOverContainer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIndexedOverContainer" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.IsIndexedOverContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Schemaeigenschaft in allen Containern indiziert ist, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Boolean" />-Wert, der angibt, ob die Schemaeigenschaft in allen Containern indiziert ist.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInGlobalCatalog">
+      <MemberSignature Language="C#" Value="public bool IsInGlobalCatalog { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInGlobalCatalog" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.IsInGlobalCatalog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Schemaeigenschaft im globalen Katalog enthalten ist, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Boolean" />-Wert, der angibt, ob die Schemaeigenschaft im globalen Katalog enthalten ist. <see langword="true" />, wenn die Eigenschaft im globalen Katalog enthalten ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOnTombstonedObject">
+      <MemberSignature Language="C#" Value="public bool IsOnTombstonedObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOnTombstonedObject" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.IsOnTombstonedObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Schemaeigenschaft im Tombstone-Objekt vorhanden ist, das gelöschte Eigenschaften enthält, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Boolean" />-Wert, der angibt, ob die Schemaeigenschaft im Tombstone-Objekt enthalten ist. <see langword="true" />, wenn die Eigenschaft im Tombstone-Objekt enthalten ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSingleValued">
+      <MemberSignature Language="C#" Value="public bool IsSingleValued { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSingleValued" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.IsSingleValued" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Schemaeigenschaft einwertig ist, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Boolean" />-Wert, der angibt, ob die Schemaeigenschaft einwertig ist. <see langword="true" />, wenn diese einwertig ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTupleIndexed">
+      <MemberSignature Language="C#" Value="public bool IsTupleIndexed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTupleIndexed" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.IsTupleIndexed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Tupelindex für diese Schemaeigenschaft vorhanden ist, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Boolean" />-Wert, der angibt, ob die Schemaeigenschaft über einen Tupelindex verfügt. <see langword="true" />, wenn es einen Tupelindex für die Eigenschaft gibt, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Link">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty Link { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty Link" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.Link" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> mit einer Verknüpfung zur aktuellen Schemaeigenschaft ab.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekt, das mit dem aktuellen <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekt verknüpft ist.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkId">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; LinkId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; LinkId" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.LinkId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert für den Linkbezeichner ab, wenn die Schemaeigenschaft verknüpft wird, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Int32" />-Wert, der den linkID-Wert darstellt, wenn die Schemaeigenschaft verknüpft wird. Weitere Informationen finden Sie im Thema [Link-ID](http://msdn.microsoft.com/library/default.asp?url=/library/adschema/adschema/a_linkid.asp) in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den "ldapDisplayName" des <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekts ab. Weitere Informationen finden Sie im Thema [LDAP-Anzeigenamen](http://msdn.microsoft.com/library/default.asp?url=/library/adschema/adschema/a_ldapdisplayname.asp) in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).</summary>
+        <value>Ein <see cref="T:System.String" />-Wert, der den ldapDisplayName des <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekts enthält. Weitere Informationen finden Sie im Thema [LDAP-Anzeigenamen](http://msdn.microsoft.com/library/default.asp?url=/library/adschema/adschema/a_ldapdisplayname.asp) in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Oid">
+      <MemberSignature Language="C#" Value="public string Oid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Oid" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.Oid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Objektbezeichner (OID) der Schemaeigenschaft ab oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.String" />-Wert, der den Objektbezeichner des aktuellen <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekts enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RangeLower">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; RangeLower { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; RangeLower" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.RangeLower" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der den Mindestwert oder die Mindestlänge darstellt, den bzw. die die Schemaeigenschaft aufweisen muss, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Int32" />, das den Mindestwert oder die Mindestlänge des <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objektwerts darstellt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentNullException">Es gibt keine untere Bereich für diese Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RangeUpper">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; RangeUpper { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; RangeUpper" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.RangeUpper" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der den Höchstwert oder die maximale Länge darstellt, den bzw. die das <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekt aufweisen darf, oder legt diesen Wert fest.</summary>
+        <value>Ein <see cref="T:System.Int32" />-Wert, der den Höchstwert oder die maximale Länge des <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objektwerts angibt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentNullException">Es gibt keinen oberen Bereich für diese Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Übernimmt alle Änderungen am aktuellen <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekt per Commit in den zugrunde liegenden Verzeichnisspeicher.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> Objekt mit demselben Namen ist bereits vorhanden.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaGuid">
+      <MemberSignature Language="C#" Value="public Guid SchemaGuid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid SchemaGuid" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.SchemaGuid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die schemaIDGuid für das <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekt ab oder legt diese fest. Weitere Informationen finden Sie im Thema [Schema-ID-GUID](http://msdn.microsoft.com/library/default.asp?url=/library/adschema/adschema/a_schemaidguid.asp) in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).</summary>
+        <value>Eine <see cref="T:System.Guid" />, die die schemaIDGuid für das <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekt darstellt. Weitere Informationen finden Sie im Thema [Schema-ID-GUID](http://msdn.microsoft.com/library/default.asp?url=/library/adschema/adschema/a_schemaidguid.asp) in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.SchemaGuid%2A> in viele Active Directory Domain Services-Konfiguration-Vorgänge, wie das Verwalten von erweiterten Rechte verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Syntax">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax Syntax { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax Syntax" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.Syntax" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax" />-Objekt ab, das den Eigenschaftentyp (Syntax) des <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekts angibt, oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax" />-Objekt, das den Eigenschaftentyp des <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekts definiert.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der angegebene Typ ist kein gültiger <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax" /> Wert (gilt nur für Festlegungsvorgänge).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den LDAP-Anzeigenamen des <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekts ab.</summary>
+        <returns>Ein <see cref="T:System.String" />, der den LDAP-Anzeigenamen für das <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />-Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

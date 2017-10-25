@@ -1,0 +1,433 @@
+<Type Name="FigureLength" FullName="System.Windows.FigureLength">
+  <TypeSignature Language="C#" Value="public struct FigureLength : IEquatable&lt;System.Windows.FigureLength&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit FigureLength extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Windows.FigureLength&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FigureLength" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Windows.FigureLength&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.FigureLengthConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Beschreibt die Höhe oder Breite einer <see cref="T:System.Windows.Documents.Figure" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_Duration"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="length"/>  
+- or -  
+<object property="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_Thickness"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *length*  
+ Die Breite oder Höhe der <xref:System.Windows.Documents.Figure> in Pixel beschrieben, wie eine <xref:System.Double> Wert. Alternativ kann dieser Wert qualifiziert werden, mit einer Zeichenfolge (`px`, `in`, `cm`, `pt`) finden Sie unter *QualifiedDouble* unten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert, wie oben beschrieben, gefolgt von einem der folgenden Deklaration Einheitenzeichenfolgen: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel, klickt der Benutzer auf die <xref:System.Windows.Documents.Figure>, <xref:System.Windows.Documents.Figure.Width%2A> von der <xref:System.Windows.Documents.Figure> verringert. Im folgenden wird der XAML-Code für das Beispiel aus.  
+  
+ [!code-xaml[FlowMiscSnippets_snip#FigureLengthExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_snip/cs/figurelengthexample.xaml#figurelengthexamplewholepage)]  
+  
+ Im folgenden finden Sie den Code zum Verringern der <xref:System.Windows.Documents.Figure.Width%2A> von der <xref:System.Windows.Documents.Figure>.  
+  
+ [!code-csharp[FlowMiscSnippets_snip#FigureLengthCodeBehindExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_snip/cs/figurelengthexample.xaml.cs#figurelengthcodebehindexamplewholepage)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FigureLength (double pixels);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 pixels) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FigureLength.#ctor(System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pixels" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="pixels">Die Anzahl der geräteunabhängige Pixel (96 Pixel pro Zoll), die die Länge bilden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.FigureLength" /> Klasse mit der angegebenen Anzahl von Pixeln lang.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel, klickt der Benutzer auf die <xref:System.Windows.Documents.Figure>, <xref:System.Windows.Documents.Figure.Width%2A> von der <xref:System.Windows.Documents.Figure> verringert. Im folgenden wird der XAML-Code für das Beispiel aus.  
+  
+ [!code-xaml[FlowMiscSnippets_snip#FigureLengthExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_snip/cs/figurelengthexample.xaml#figurelengthexamplewholepage)]  
+  
+ Im folgenden finden Sie den Code zum Verringern der <xref:System.Windows.Documents.Figure.Width%2A> von der <xref:System.Windows.Documents.Figure>.  
+  
+ [!code-csharp[FlowMiscSnippets_snip#FigureLengthCodeBehindExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_snip/cs/figurelengthexample.xaml.cs#figurelengthcodebehindexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FigureLength (double value, System.Windows.FigureUnitType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 value, valuetype System.Windows.FigureUnitType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FigureLength.#ctor(System.Double,System.Windows.FigureUnitType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.FigureUnitType" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="P:System.Windows.FigureLength.Value" /> von der <see cref="T:System.Windows.FigureLength" /> Klasse.</param>
+        <param name="type">Die <see cref="P:System.Windows.FigureLength.Value" /> von der <see cref="P:System.Windows.FigureLength.FigureUnitType" /> Klasse.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.FigureLength" />-Klasse mit den angegebenen <see cref="P:System.Windows.FigureLength.Value" /> und dem angegebenen <see cref="P:System.Windows.FigureLength.FigureUnitType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel, klickt der Benutzer auf die <xref:System.Windows.Documents.Figure>, <xref:System.Windows.Documents.Figure.Width%2A> von der <xref:System.Windows.Documents.Figure> verringert. Im folgenden wird der XAML-Code für das Beispiel aus.  
+  
+ [!code-xaml[FlowMiscSnippets_snip#FigureLengthExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_snip/cs/figurelengthexample.xaml#figurelengthexamplewholepage)]  
+  
+ Im folgenden finden Sie den Code zum Verringern der <xref:System.Windows.Documents.Figure.Width%2A> von der <xref:System.Windows.Documents.Figure>.  
+  
+ [!code-csharp[FlowMiscSnippets_snip#FigureLengthCodeBehindExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_snip/cs/figurelengthexample.xaml.cs#figurelengthcodebehindexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Equals">
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Vergleicht zwei <see cref="T:System.Windows.FigureLength" /> -Strukturen auf Gleichheit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die beiden <xref:System.Windows.FigureLength> Strukturen müssen genau identisch sein in jeder Hinsicht nicht nur die gleiche <xref:System.Windows.FigureLength.Value%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object oCompare);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object oCompare) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FigureLength.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oCompare" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="oCompare">Die <see cref="T:System.Object" /> dieser Instanz verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Object" /> ist ein <see cref="T:System.Windows.FigureLength" /> und ob sie identisch mit dieser <see cref="T:System.Windows.FigureLength" />.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="oCompare" /> eine <see cref="T:System.Windows.FigureLength" /> und identisch mit dieser <see cref="T:System.Windows.FigureLength" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.FigureLength figureLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Windows.FigureLength figureLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FigureLength.Equals(System.Windows.FigureLength)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="figureLength" Type="System.Windows.FigureLength" />
+      </Parameters>
+      <Docs>
+        <param name="figureLength">Die <see cref="T:System.Windows.FigureLength" /> dieser Instanz verglichen werden soll.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Windows.FigureLength" /> -Strukturen auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="figureLength" /> ist identisch mit dieser <see cref="T:System.Windows.FigureLength" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FigureUnitType">
+      <MemberSignature Language="C#" Value="public System.Windows.FigureUnitType FigureUnitType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FigureUnitType FigureUnitType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FigureLength.FigureUnitType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FigureUnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Einheitentyp der <see cref="P:System.Windows.FigureLength.Value" /> ab.</summary>
+        <value>Unit-Typ dieses <see cref="P:System.Windows.FigureLength.Value" />. Der Standardwert ist <see cref="F:System.Windows.FigureUnitType.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der zusammen mit diesem Einheitentyp wechselt verwendbaren mithilfe der <xref:System.Windows.FigureLength.Value%2A> Eigenschaft.  
+  
+ Diese Eigenschaft ist schreibgeschützt. Verwenden Sie zum Festlegen des Werts dieser Eigenschaft die <xref:System.Windows.FigureLength.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FigureLength.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diesen <see cref="T:System.Windows.FigureLength" /> zurück.</summary>
+        <returns>Der Hashcode für diese <see cref="T:System.Windows.FigureLength" /> Struktur.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAbsolute">
+      <MemberSignature Language="C#" Value="public bool IsAbsolute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAbsolute" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FigureLength.IsAbsolute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der bestimmt, ob dies <see cref="T:System.Windows.FigureLength" /> enthält einen absoluten Wert (in Pixel).</summary>
+        <value>**"true"** Wenn diese <see cref="T:System.Windows.FigureLength" /> enthält einen absoluten Wert (in Pixel) ist, andernfalls **"false"**. Der Standardwert ist **"false"**.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAuto">
+      <MemberSignature Language="C#" Value="public bool IsAuto { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAuto" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FigureLength.IsAuto" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der bestimmt, ob dies <see cref="T:System.Windows.FigureLength" /> erfolgt automatisch (nicht angegeben).</summary>
+        <value>**"true"** Wenn diese <see cref="T:System.Windows.FigureLength" /> erfolgt automatisch (nicht angegeben); andernfalls **"false"**. Der Standardwert ist **"true"**.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsColumn">
+      <MemberSignature Language="C#" Value="public bool IsColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FigureLength.IsColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der bestimmt, ob dies <see cref="T:System.Windows.FigureLength" /> verfügt über eine <see cref="T:System.Windows.FigureUnitType" /> Eigenschaftswert <see cref="F:System.Windows.FigureUnitType.Column" />.</summary>
+        <value>**"true"** Wenn diese <see cref="T:System.Windows.FigureLength" /> verfügt über eine <see cref="T:System.Windows.FigureUnitType" /> Eigenschaftswert <see cref="F:System.Windows.FigureUnitType.Column" />ist, andernfalls **"false"**. Der Standardwert ist **"false"**.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContent">
+      <MemberSignature Language="C#" Value="public bool IsContent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsContent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FigureLength.IsContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der bestimmt, ob dies <see cref="T:System.Windows.FigureLength" /> verfügt über eine <see cref="T:System.Windows.FigureUnitType" /> Eigenschaftswert <see cref="F:System.Windows.FigureUnitType.Content" />.</summary>
+        <value>Gibt **"true"** Wenn diese <see cref="T:System.Windows.FigureLength" /> verfügt über eine <see cref="T:System.Windows.FigureUnitType" /> Eigenschaftswert <see cref="F:System.Windows.FigureUnitType.Content" />ist, andernfalls **"false"**. Der Standardwert ist **"false"**.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPage">
+      <MemberSignature Language="C#" Value="public bool IsPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FigureLength.IsPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der bestimmt, ob dies <see cref="T:System.Windows.FigureLength" /> verfügt über eine <see cref="T:System.Windows.FigureUnitType" /> Eigenschaftswert <see cref="F:System.Windows.FigureUnitType.Page" />.</summary>
+        <value>**"true"** Wenn diese <see cref="T:System.Windows.FigureLength" /> verfügt über eine <see cref="T:System.Windows.FigureUnitType" /> Eigenschaftswert <see cref="F:System.Windows.FigureUnitType.Page" />ist, andernfalls **"false"**. Der Standardwert ist **"false"**.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.FigureLength fl1, System.Windows.FigureLength fl2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.FigureLength fl1, valuetype System.Windows.FigureLength fl2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FigureLength.op_Equality(System.Windows.FigureLength,System.Windows.FigureLength)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fl1" Type="System.Windows.FigureLength" />
+        <Parameter Name="fl2" Type="System.Windows.FigureLength" />
+      </Parameters>
+      <Docs>
+        <param name="fl1">Die erste zu vergleichende <see cref="T:System.Windows.FigureLength" />-Struktur.</param>
+        <param name="fl2">Die zweite zu vergleichende <see cref="T:System.Windows.FigureLength" />-Struktur.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Windows.FigureLength" /> -Strukturen auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="fl1" /> und <paramref name="fl2" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Windows.FigureLength.Equals%2A?displayProperty=nameWithType>. ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.FigureLength fl1, System.Windows.FigureLength fl2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.FigureLength fl1, valuetype System.Windows.FigureLength fl2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FigureLength.op_Inequality(System.Windows.FigureLength,System.Windows.FigureLength)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fl1" Type="System.Windows.FigureLength" />
+        <Parameter Name="fl2" Type="System.Windows.FigureLength" />
+      </Parameters>
+      <Docs>
+        <param name="fl1">Die erste zu vergleichende <see cref="T:System.Windows.FigureLength" />-Struktur.</param>
+        <param name="fl2">Die zweite zu vergleichende <see cref="T:System.Windows.FigureLength" />-Struktur.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Windows.FigureLength" /> Strukturen auf Ungleichheit.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="fl1" /> und <paramref name="fl2" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist die Negation des <xref:System.Windows.FigureLength.Equals%2A?displayProperty=nameWithType>. ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FigureLength.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine <see cref="T:System.String" /> Darstellung dieses <see cref="T:System.Windows.FigureLength" />.</summary>
+        <returns>Ein <see cref="T:System.String" /> Darstellung dieses <see cref="T:System.Windows.FigureLength" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public double Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FigureLength.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert dieses <see cref="T:System.Windows.FigureLength" /> ab.</summary>
+        <value>Der Wert dieses <see cref="T:System.Windows.FigureLength" />. Der Standardwert ist <c>1</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unit-Typ dieses Werts kann gefunden werden, mithilfe der <xref:System.Windows.FigureLength.FigureUnitType%2A> Eigenschaft.  
+  
+ Diese Eigenschaft ist schreibgeschützt. Verwenden Sie zum Festlegen des Werts dieser Eigenschaft die <xref:System.Windows.FigureLength.%23ctor%2A> oder <xref:System.Windows.FigureLength.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,208 @@
+<Type Name="MethodImplAttribute" FullName="System.Runtime.CompilerServices.MethodImplAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MethodImplAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit MethodImplAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.MethodImplAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Constructor | System.AttributeTargets.Method, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Implementierungsdetails für eine Methode an. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut auf Methoden oder Konstruktoren anwenden.  
+  
+ Dieses Attribut ermöglicht Ihnen das Anpassen von der Konfigurations der Methode oder der Konstruktor für die sie durch Angabe gilt eine <xref:System.Runtime.CompilerServices.MethodImplOptions> Wert an den Klassenkonstruktor. Die Mitglieder der <xref:System.Runtime.CompilerServices.MethodImplOptions> Enumeration entsprechen Bitfelder in der `CorMethodImpl` Metadatentabelle. Dies bedeutet, dass Informationen über das-Attribut durch den Aufruf zur Laufzeit abgerufen werden kann die <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> Methode; stattdessen wird er durch den Aufruf eines abgerufen der `MethodInfo.GetMethodImplementationFlags` oder die `ConstructorInfo.GetMethodImplementationFlags` Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet die <xref:System.Runtime.CompilerServices.MethodImplAttribute> auf die `GetCalendarName` Methode, um sicherzustellen, dass es nicht inline zur Laufzeit durch den Just-in-Time (JIT)-Compiler.  
+  
+ [!code-csharp[System.Runtime.CompilerServices.MethodImplAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.compilerservices.methodimplattribute/cs/methodimplattribute1.cs#1)]
+ [!code-vb[System.Runtime.CompilerServices.MethodImplAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.compilerservices.methodimplattribute/vb/methodimplattribute1.vb#1)]  
+  
+ Im folgende Beispiel ruft dann die `MethodInfo.GetMethodImplementationFlags` Methode, um zu bestimmen, welche Flags festgelegt sind, für die `GetCalendarName` Methode. Es veranschaulicht auch, dass diese Informationen nicht, durch abgerufen werden die <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-csharp[System.Runtime.CompilerServices.MethodImplAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.compilerservices.methodimplattribute/cs/getmethodimplattribute1.cs#2)]
+ [!code-vb[System.Runtime.CompilerServices.MethodImplAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.compilerservices.methodimplattribute/vb/getmethodimplattribute1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MethodImplAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.MethodImplAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.CompilerServices.MethodImplAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MethodImplAttribute (short value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.MethodImplAttribute.#ctor(System.Int16)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine Bitmaske, die den gewünschten <see cref="T:System.Runtime.CompilerServices.MethodImplOptions" /> Wert, der Eigenschaften für die attributierte Methode angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.CompilerServices.MethodImplAttribute" />-Klasse mit dem angegebenen <see cref="T:System.Runtime.CompilerServices.MethodImplOptions" />-Wert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MethodImplAttribute (System.Runtime.CompilerServices.MethodImplOptions methodImplOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.CompilerServices.MethodImplOptions methodImplOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.MethodImplAttribute.#ctor(System.Runtime.CompilerServices.MethodImplOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="methodImplOptions" Type="System.Runtime.CompilerServices.MethodImplOptions" />
+      </Parameters>
+      <Docs>
+        <param name="methodImplOptions">Ein <see cref="T:System.Runtime.CompilerServices.MethodImplOptions" /> Wert, der Eigenschaften für die attributierte Methode angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.CompilerServices.MethodImplAttribute" />-Klasse mit dem angegebenen <see cref="T:System.Runtime.CompilerServices.MethodImplOptions" />-Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die `CorMethodImpl` Bitfelder in der Metadatentabelle. Der Wert eines dieser Flags kann zur Laufzeit abgerufen werden, durch Aufrufen der `MethodInfo.GetMethodImplementationFlags` oder `ConstructorInfo.GetMethodImplementationFlags` Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodCodeType">
+      <MemberSignature Language="C#" Value="public System.Runtime.CompilerServices.MethodCodeType MethodCodeType;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Runtime.CompilerServices.MethodCodeType MethodCodeType" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.CompilerServices.MethodImplAttribute.MethodCodeType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.MethodCodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Runtime.CompilerServices.MethodCodeType" /> Wert, der angibt, welche Art der Implementierung dieser Methode bereitgestellt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public System.Runtime.CompilerServices.MethodImplOptions Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.CompilerServices.MethodImplOptions Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.CompilerServices.MethodImplAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.MethodImplOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Runtime.CompilerServices.MethodImplOptions" /> Wert, der die attributierte Methode beschreibt.</summary>
+        <value>Die <see cref="T:System.Runtime.CompilerServices.MethodImplOptions" /> Wert, der die attributierte Methode beschreibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

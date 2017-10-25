@@ -1,0 +1,470 @@
+<Type Name="AuthorizationRuleCollection" FullName="System.Web.Configuration.AuthorizationRuleCollection">
+  <TypeSignature Language="C#" Value="public sealed class AuthorizationRuleCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AuthorizationRuleCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.AuthorizationRuleCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.AuthorizationRule), AddItemName="allow,deny", CollectionType=System.Configuration.ConfigurationElementCollectionType.BasicMapAlternate)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Web.Configuration.AuthorizationRule" />-Objekten dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.AuthorizationRuleCollection> Typ ermöglicht den Zugriff auf die Elemente der `authorization` im Abschnitt Sammlung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Web.Configuration.AuthorizationRuleCollection> Objekt aus der Konfigurationsdatei von einer vorhandenen Webanwendung. Sie verwenden dieses Objekt an, um ihre Member zuzugreifen, wie in den folgenden Themen dargestellt. Die Konfigurationsdatei enthält einen Setup folgt oder ähnlich.  
+  
+```  
+<authorization>  
+  <allow users="userName" roles="admin" verbs="post" />  
+  <deny users="*" verbs="post"/>  
+</authorization>  
+```  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#1)]
+ [!code-vb[System.Web.Configuration.Authorization#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#1)]  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#2)]
+ [!code-vb[System.Web.Configuration.Authorization#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#2)]  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#3)]
+ [!code-vb[System.Web.Configuration.Authorization#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthorizationRuleCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRuleCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.AuthorizationRuleCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.AuthorizationRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.AuthorizationRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRuleCollection.Add(System.Web.Configuration.AuthorizationRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Web.Configuration.AuthorizationRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Das <see cref="T:System.Web.Configuration.AuthorizationRule" />-Objekt, das zur Auflistung hinzugefügt werden soll.</param>
+        <summary>Fügt der Auflistung ein <see cref="T:System.Web.Configuration.AuthorizationRule" />-Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung darf nicht bereits die <xref:System.Web.Configuration.AuthorizationRule> -Objekt hinzufügen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.AuthorizationRuleCollection.Add%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#6)]
+ [!code-vb[System.Web.Configuration.Authorization#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Die <see cref="T:System.Web.Configuration.AuthorizationRule" /> Objekt bereits in der Auflistung vorhanden ist, oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRuleCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.Web.Configuration.AuthorizationRule" />-Objekte aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `clear` Richtlinie in den entsprechenden Abschnitt der Konfigurationsdatei So löschen Sie alle Verweise auf Elemente in einer Konfigurationsdatei definiert. Entfernt alle Elemente im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.AuthorizationRuleCollection.Clear%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#7)]
+ [!code-vb[System.Web.Configuration.Authorization#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionType">
+      <MemberSignature Language="C#" Value="public override System.Configuration.ConfigurationElementCollectionType CollectionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.ConfigurationElementCollectionType CollectionType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AuthorizationRuleCollection.CollectionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementCollectionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ dieses <see cref="T:System.Web.Configuration.AuthorizationRuleCollection" /> ab.</summary>
+        <value>Ein Wert aus der <see cref="T:System.Configuration.ConfigurationElementCollectionType" /> Enumeration, die den Typ dieser Auflistung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRuleCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement (string elementName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement(string elementName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRuleCollection.CreateNewElement(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementName">
+      <MemberSignature Language="C#" Value="protected override string ElementName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AuthorizationRuleCollection.ElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.AuthorizationRule Get (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Configuration.AuthorizationRule Get(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRuleCollection.Get(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.AuthorizationRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die <see cref="T:System.Web.Configuration.AuthorizationRule" /> Index.</param>
+        <summary>Ruft den <see cref="T:System.Web.Configuration.AuthorizationRule" /> am angegebenen Index ab.</summary>
+        <returns>Der <see cref="T:System.Web.Configuration.AuthorizationRule" /> am angegebenen Index.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.AuthorizationRuleCollection.Get%2A>-Methode veranschaulicht. Verweisen auf das Codebeispiel in die <xref:System.Web.Configuration.AuthorizationSection> klassenthema Informationen zum Abrufen der Auflistung.  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#13](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#13)]
+ [!code-vb[System.Web.Configuration.Authorization#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRuleCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.Configuration.AuthorizationRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.Configuration.AuthorizationRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRuleCollection.IndexOf(System.Web.Configuration.AuthorizationRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Web.Configuration.AuthorizationRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Die <see cref="T:System.Web.Configuration.AuthorizationRule" /> -Objekt, dessen Index zurückgegeben wird.</param>
+        <summary>Ruft den Auflistungsindex des angegebenen <see cref="T:System.Web.Configuration.AuthorizationRule" /> Objekt.</summary>
+        <returns>Der Index des angegebenen <see cref="T:System.Web.Configuration.AuthorizationRule" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.AuthorizationRuleCollection.IndexOf%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#9)]
+ [!code-vb[System.Web.Configuration.Authorization#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsElementName">
+      <MemberSignature Language="C#" Value="protected override bool IsElementName (string elementname);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsElementName(string elementname) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRuleCollection.IsElementName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementname" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="elementname">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.AuthorizationRule this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.AuthorizationRule Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AuthorizationRuleCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.AuthorizationRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">
+          <see cref="T:System.Web.Configuration.AuthorizationRule" />Auflistungsindex</param>
+        <summary>Ruft ab oder legt ein Element in dieser Auflistung.</summary>
+        <value>Der <see cref="T:System.Web.Configuration.AuthorizationRule" /> am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AuthorizationRuleCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.Configuration.AuthorizationRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.Configuration.AuthorizationRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRuleCollection.Remove(System.Web.Configuration.AuthorizationRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Web.Configuration.AuthorizationRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Das zu entfernende <see cref="T:System.Web.Configuration.AuthorizationRule" />-Objekt.</param>
+        <summary>Entfernt eine <see cref="T:System.Web.Configuration.AuthorizationRule" /> Objekt aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `remove` Element in den entsprechenden Abschnitt der Konfigurationsdatei für jedes Element in einer Konfigurationsdatei definiert. Wenn das Element im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert ist, wird der Eintrag aus der Konfigurationsdatei entfernt. Das zu entfernende Objekt muss in der Auflistung vorhanden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.AuthorizationRuleCollection.Remove%2A>-Methode veranschaulicht. Verweisen auf das Codebeispiel in die <xref:System.Web.Configuration.AuthorizationSection> klassenthema Informationen zum Abrufen der Auflistung.  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#10)]
+ [!code-vb[System.Web.Configuration.Authorization#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Der übergebene <see cref="T:System.Web.Configuration.AuthorizationRule" /> Objekt in der Auflistung nicht vorhanden, das Element bereits entfernt wurde oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRuleCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Indexposition des der <see cref="T:System.Web.Configuration.AuthorizationRule" /> zu entfernen.</param>
+        <summary>Entfernt eine <see cref="T:System.Web.Configuration.AuthorizationRule" /> Objekt am angegebenen Index aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt eine `remove` Element in den entsprechenden Abschnitt der Konfigurationsdatei für jedes Element in einer Konfigurationsdatei definiert. Wenn das Element im entsprechenden Abschnitt der aktuellen Konfigurationsdatei definiert ist, wird der Eintrag aus der Konfigurationsdatei entfernt. Das zu entfernende Objekt muss in der Auflistung vorhanden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.AuthorizationRuleCollection.RemoveAt%2A>-Methode veranschaulicht. Verweisen auf das Codebeispiel in die <xref:System.Web.Configuration.AuthorizationSection> klassenthema Informationen zum Abrufen der Auflistung.  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#8)]
+ [!code-vb[System.Web.Configuration.Authorization#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Es ist keine <see cref="T:System.Web.Configuration.AuthorizationRule" /> -Objekt mit dem angegebenen Index in der Auflistung das Element bereits entfernt wurde oder die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (int index, System.Web.Configuration.AuthorizationRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(int32 index, class System.Web.Configuration.AuthorizationRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRuleCollection.Set(System.Int32,System.Web.Configuration.AuthorizationRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="rule" Type="System.Web.Configuration.AuthorizationRule" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Indexposition, an dem das angegebene hinzuzufügende <see cref="T:System.Web.Configuration.AuthorizationRuleCollection" /> Objekt.</param>
+        <param name="rule">Die <see cref="T:System.Web.Configuration.AuthorizationRule" /> hinzuzufügende Objekt.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.Configuration.AuthorizationRule" /> Objekt der Auflistung am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.AuthorizationRuleCollection.Set%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#11)]
+ [!code-vb[System.Web.Configuration.Authorization#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

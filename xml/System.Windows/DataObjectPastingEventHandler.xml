@@ -1,0 +1,44 @@
+<Type Name="DataObjectPastingEventHandler" FullName="System.Windows.DataObjectPastingEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DataObjectPastingEventHandler(object sender, DataObjectPastingEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataObjectPastingEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DataObjectPastingEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.DataObjectPastingEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Das Objekt, an das der Ereignishandler angefügt ist.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt eine Methode für die Behandlung der <see cref="E:System.Windows.DataObject.Pasting" /> angefügtes Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DataObject.Pasting> angefügtes Ereignis tritt auf, wenn ein Einfügevorgang ein Datenformat einfügen ausgewählt hat, aber bevor die Daten tatsächlich eingefügt werden.  
+  
+ Aktionen, die in der Regel durch einen <xref:System.Windows.DataObject.Pasting> angefügten Ereignishandler enthalten:  
+  
+-   Ändern Sie das Einfügeformat des ausgewählten durch Festlegen der neuen Wert für die <xref:System.Windows.DataObjectPastingEventArgs.FormatToApply%2A> Eigenschaft.  
+  
+-   Wenden Sie ein benutzerdefiniertes Format für die Einfügeauswahl.  
+  
+-   Erstellen Sie ein neues <xref:System.Windows.DataObject>, und weisen Sie ihn der <xref:System.Windows.DataObjectPastingEventArgs.DataObject%2A> Eigenschaft `e`.  Eine schreibgeschützte Kopie des ursprünglichen Objekts befindet sich in <xref:System.Windows.DataObjectPastingEventArgs.SourceDataObject%2A>.  
+  
+-   Brechen Sie den Einfügevorgang durch Aufrufen von <xref:System.Windows.DataObjectEventArgs.CancelCommand%2A>.  
+  
+ **Wichtige** der Einfügeformat geändert, wird die Handlermethode dafür verantwortlich, dass neu ausgewählte Einfügeformat durch das Ziel des Einfügevorgangs konsumierbar ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,62 @@
+<Type Name="SessionSwitchEventArgs" FullName="Microsoft.Win32.SessionSwitchEventArgs">
+  <TypeSignature Language="C#" Value="public class SessionSwitchEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SessionSwitchEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.SessionSwitchEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:Microsoft.Win32.SystemEvents.SessionSwitch" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:Microsoft.Win32.SystemEvents.SessionSwitch> Ereignis wird ausgelöst, wenn der aktuelle Benutzer ändert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionSwitchEventArgs (Microsoft.Win32.SessionSwitchReason reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Win32.SessionSwitchReason reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SessionSwitchEventArgs.#ctor(Microsoft.Win32.SessionSwitchReason)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reason" Type="Microsoft.Win32.SessionSwitchReason" />
+      </Parameters>
+      <Docs>
+        <param name="reason">Ein <see cref="T:Microsoft.Win32.SessionSwitchReason" /> , der den Typ der Sitzung Change-Ereignis angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.Win32.SessionSwitchEventArgs" /> -Klasse unter Verwendung der angegebenen Sitzungs Sitzungsänderungsereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.SessionSwitchReason Reason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Win32.SessionSwitchReason Reason" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.SessionSwitchEventArgs.Reason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionSwitchReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Bezeichner, der den Typ der Sitzung angibt change-Ereignis.</summary>
+        <value>Ein <see cref="T:Microsoft.Win32.SessionSwitchReason" /> Ereignis ändern, der angibt, des Typs der Sitzung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

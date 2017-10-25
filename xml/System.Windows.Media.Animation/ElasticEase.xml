@@ -1,0 +1,251 @@
+<Type Name="ElasticEase" FullName="System.Windows.Media.Animation.ElasticEase">
+  <TypeSignature Language="C#" Value="public class ElasticEase : System.Windows.Media.Animation.EasingFunctionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ElasticEase extends System.Windows.Media.Animation.EasingFunctionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.ElasticEase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.EasingFunctionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Beschleunigungsfunktion, die eine Animation, die eine hin-und erstellt bis sie zum Stillstand kommt oszilliert Spring ähnelt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können steuern, wenn in der "Spring" Verhalten in einer Animation, durch angeben auftritt der <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> Eigenschaftswert. Das folgende Diagramm veranschaulicht die unterschiedlichen Werte von <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>, wobei *f*(*t*) den Animationsstatus und *t* Uhrzeit darstellt.  
+  
+ ![ElasticEase mit Diagrammen von anderen Easingmodes. ] (~/add/media/elasticease-graph.png "ElasticEase mit Diagrammen von anderen Easingmodes.")  
+  
+ Können Sie angeben, wie viele Wiederholungen die Animation gekennzeichnet hin-und mithilfe der <xref:System.Windows.Media.Animation.ElasticEase.Oscillations%2A> -Eigenschaft, und wie eng die Springiness von der pendeln verwenden die <xref:System.Windows.Media.Animation.ElasticEase.Springiness%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Da diese Animation Werte hin und her oszilliert dazu führt, kann die Animation unerwartet in negative Zahlen interpoliert. Dies kann Fehler verursachen, beim Animieren von Eigenschaften, die keine negative Zahlen zulassen. Z. B., wenn Sie diese Animation zum Anwenden der <xref:System.Windows.FrameworkElement.Height%2A> eines Objekts (z. B. von 0 bis 200 mit einer <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> von <xref:System.Windows.Media.Animation.EasingMode.EaseIn>), versucht die Animation interpoliert, durch negative Zahlen für <xref:System.Windows.FrameworkElement.Height%2A> die löst einen Fehler aus.  
+  
+ Es gibt mehrere andere Beschleunigungsfunktionen neben <xref:System.Windows.Media.Animation.ElasticEase> die Sie mit dem folgenden Silverlight-Beispiel untersuchen können.  
+  
+ [Dieses Beispiel ausführen](http://go.microsoft.com/fwlink/?LinkId=139798&sref=easing_functions_gallery)  
+  
+ Zusätzlich zur Verwendung der in der Laufzeit enthaltenen Beschleunigungsfunktionen, können Sie eigene benutzerdefinierten Beschleunigungsfunktionen erstellen, durch Vererben von <xref:System.Windows.Media.Animation.EasingFunctionBase>.  
+  
+<a name="xamlObjectElementUsage_ElasticEase"></a>   
+## <a name="xaml-object-element-usage"></a>Verwendung von XAML-Objektelementen  
+  
+```  
+<ElasticEase .../>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet eine <xref:System.Windows.Media.Animation.ElasticEase> Beschleunigungsfunktionen-Funktion, um eine <xref:System.Windows.Media.Animation.DoubleAnimation> eine Animation erstellen, die eine hin-und bis sie zum Stillstand kommt oszilliert Spring ähnelt.  
+  
+ [!code-xaml[ElasticEase#ElasticEase](~/samples/snippets/csharp/VS_Snippets_Wpf/elasticease/CS/window1.xaml#elasticease)]
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ElasticEase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ElasticEase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.ElasticEase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ElasticEase.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der aus <see cref="T:System.Windows.Freezable" /> abgeleiteten Klasse. Beim Erstellen einer abgeleiteten Klasse muss diese Methode überschrieben werden.</summary>
+        <returns>Die neue Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Animation-Klassen erben indirekt von <xref:System.Windows.Freezable>. Aus diesem Grund müssen Sie überschreiben die <xref:System.Windows.Media.Animation.BackEase.CreateInstanceCore%2A> Methode zum Erstellen einer benutzerdefinierten Animation-Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine typische Implementierung der <xref:System.Windows.Freezable.CreateInstanceCore%2A>.  
+  
+ [!code-csharp[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#createinstancecoreexample)]
+ [!code-vb[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#createinstancecoreexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInCore">
+      <MemberSignature Language="C#" Value="protected override double EaseInCore (double normalizedTime);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance float64 EaseInCore(float64 normalizedTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ElasticEase.EaseInCore(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="normalizedTime" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="normalizedTime">Die normalisierte Zeit (Fortschritt) der Animation.</param>
+        <summary>Stellt die Logik der Beschleunigungsfunktion bereit, die überschrieben werden kann, um den <see cref="F:System.Windows.Media.Animation.EasingMode.EaseIn" />-Modus der benutzerdefinierten Beschleunigungsfunktion zu erzeugen.</summary>
+        <returns>Ein Double-Wert, der den transformierten Fortschritt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode transformiert die normalisierte Zeit zu steuern, der die Geschwindigkeit der Animation für die <xref:System.Windows.Media.Animation.EasingMode.EaseIn> der Groß-/Kleinschreibung <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>.  
+  
+ Müssen nur die Beschleunigungsfunktion für angeben der <xref:System.Windows.Media.Animation.EasingMode.EaseIn> Fall, da die Implementierung der <xref:System.Windows.Media.Animation.EasingFunctionBase.Ease%2A> Methode Transformationen `normalizedTime` für die <xref:System.Windows.Media.Animation.EasingMode.EaseOut> und <xref:System.Windows.Media.Animation.EasingMode.EaseInOut> Fällen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Oscillations">
+      <MemberSignature Language="C#" Value="public int Oscillations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Oscillations" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ElasticEase.Oscillations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest wie oft die Ziel-Folien hin-und über das Ziel der Animation.</summary>
+        <value>Die Anzahl der Wiederholungen, die das Ziel über das Ziel der Animation hin-und Folien. Dieser Wert muss größer als oder gleich 0 sein. Der Standard ist 3.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DP_ID_field_label](~/includes/dp-id-field-label-md.md)] <xref:System.Windows.Media.Animation.ElasticEase.OscillationsProperty>  
+  
+<a name="xamlAttributeUsage_Occilations"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<ElasticEase Oscillations="int"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet eine <xref:System.Windows.Media.Animation.ElasticEase> Beschleunigungsfunktionen-Funktion, um eine <xref:System.Windows.Media.Animation.DoubleAnimation> eine Animation erstellen, die eine hin-und bis sie zum Stillstand kommt oszilliert Spring ähnelt.  
+  
+ [!code-xaml[ElasticEase#ElasticEase](~/samples/snippets/csharp/VS_Snippets_Wpf/elasticease/CS/window1.xaml#elasticease)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OscillationsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OscillationsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OscillationsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.ElasticEase.OscillationsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.ElasticEase.Oscillations" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Springiness">
+      <MemberSignature Language="C#" Value="public double Springiness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Springiness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ElasticEase.Springiness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die von für die Steifheit der Spirale. Je kleiner der Elastizitätswert ist, desto fester Spring und desto schneller Elastizität verringert Intensität über jede und angegebenem schwingungsbereich.</summary>
+        <value>Eine positive Zahl, die der für die Steifheit der Spirale angibt. Der Standardwert ist 3.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die kleinere der <xref:System.Windows.Media.Animation.ElasticEase.Springiness%2A> Wert ist, desto fester Spring und desto schneller Elastizität verringert Intensität über jede und angegebenem schwingungsbereich.  
+  
+ [!INCLUDE[DP_ID_field_label](~/includes/dp-id-field-label-md.md)] <xref:System.Windows.Media.Animation.ElasticEase.SpringinessProperty>  
+  
+ Das folgende Diagramm veranschaulicht die Auswirkungen der unterschiedlichen Werte von <xref:System.Windows.Media.Animation.ElasticEase.Springiness%2A>.  
+  
+ ![Veranschaulicht unterschiedliche Elastizitätswerte an. ] (~/add/media/elasticease-springiness.png "Veranschaulicht unterschiedliche Elastizitätswerte.")  
+  
+<a name="xamlAttributeUsage_Springiness"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<ElasticEase Springiness="double"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet eine <xref:System.Windows.Media.Animation.ElasticEase> Beschleunigungsfunktionen-Funktion, um eine <xref:System.Windows.Media.Animation.DoubleAnimation> eine Animation erstellen, die eine hin-und bis sie zum Stillstand kommt oszilliert Spring ähnelt.  
+  
+ [!code-xaml[ElasticEase#ElasticEase](~/samples/snippets/csharp/VS_Snippets_Wpf/elasticease/CS/window1.xaml#elasticease)]
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpringinessProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SpringinessProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SpringinessProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.ElasticEase.SpringinessProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.ElasticEase.Springiness" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

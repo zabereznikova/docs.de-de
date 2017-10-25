@@ -1,0 +1,121 @@
+<Type Name="FontEastAsianWidths" FullName="System.Windows.FontEastAsianWidths">
+  <TypeSignature Language="C#" Value="public enum FontEastAsianWidths" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FontEastAsianWidths extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FontEastAsianWidths" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Bietet einen Mechanismus für den Benutzer zur Auswahl von Glyphen unterschiedliche Breiten-Formate.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine angegebene Schriftart einen bestimmten Symbolsatz nicht unterstützt, werden stattdessen die Standardglyphen angezeigt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Full">
+      <MemberSignature Language="C#" Value="Full" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianWidths Full = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianWidths.Full" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianWidths</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ersetzt einheitliche Breite Symbole mit voller Breite (in der Regel Em)-Glyphen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Half">
+      <MemberSignature Language="C#" Value="Half" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianWidths Half = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianWidths.Half" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianWidths</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ersetzt einheitliche Breite Symbole mit halber Breite (halbe Em)-Glyphen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianWidths Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianWidths.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianWidths</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Breite Standardformat.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Proportional">
+      <MemberSignature Language="C#" Value="Proportional" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianWidths Proportional = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianWidths.Proportional" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianWidths</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Einheitliche Breite von Symbolen mit Proportionalschrift Glyphen ersetzt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Quarter">
+      <MemberSignature Language="C#" Value="Quarter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianWidths Quarter = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianWidths.Quarter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianWidths</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ersetzt einheitliche Breite Symbole mit Viertel Breite (ein Viertel Em)-Glyphen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Third">
+      <MemberSignature Language="C#" Value="Third" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianWidths Third = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianWidths.Third" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianWidths</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ersetzt einheitliche Breite Symbole mit einem Drittel Breite (ein Drittel Em)-Glyphen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

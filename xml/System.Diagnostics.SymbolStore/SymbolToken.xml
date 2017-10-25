@@ -1,0 +1,252 @@
+<Type Name="SymbolToken" FullName="System.Diagnostics.SymbolStore.SymbolToken">
+  <TypeSignature Language="C#" Value="public struct SymbolToken" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit SymbolToken extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SymbolStore.SymbolToken" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:System.Diagnostics.SymbolStore.SymbolToken" /> Struktur ist eine objektdarstellung eines Tokens, das Symbolinformationen darstellt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymbolToken (int val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymbolToken.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="val" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="val">Der Wert für das Token verwendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.SymbolStore.SymbolToken" /> Struktur, wenn ein Wert zugewiesen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Diagnostics.SymbolStore.SymbolToken obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Diagnostics.SymbolStore.SymbolToken obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymbolToken.Equals(System.Diagnostics.SymbolStore.SymbolToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Der zu überprüfende <see cref="T:System.Diagnostics.SymbolStore.SymbolToken" />.</param>
+        <summary>Bestimmt, ob <paramref name="obj" /> gleich dieser Instanz ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> gleich dieser Instanz ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymbolToken.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu überprüfende Objekt.</param>
+        <summary>Bestimmt, ob <paramref name="obj" /> ist eine Instanz der <see cref="T:System.Diagnostics.SymbolStore.SymbolToken" /> und gleich dieser Instanz ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="obj" /> ist eine Instanz der <see cref="T:System.Diagnostics.SymbolStore.SymbolToken" /> und gleich dieser Instanz ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymbolToken.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert den Hashcode für das aktuelle Token.</summary>
+        <returns>Der Hashcode für das aktuelle Token.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToken">
+      <MemberSignature Language="C#" Value="public int GetToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymbolToken.GetToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Wert des aktuellen Tokens ab.</summary>
+        <returns>Der Wert des aktuellen Tokens.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Diagnostics.SymbolStore.SymbolToken a, System.Diagnostics.SymbolStore.SymbolToken b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Diagnostics.SymbolStore.SymbolToken a, valuetype System.Diagnostics.SymbolStore.SymbolToken b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymbolToken.op_Equality(System.Diagnostics.SymbolStore.SymbolToken,System.Diagnostics.SymbolStore.SymbolToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+        <Parameter Name="b" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+      </Parameters>
+      <Docs>
+        <param name="a">Eine <see cref="T:System.Diagnostics.SymbolStore.SymbolToken" />-Struktur.</param>
+        <param name="b">Eine <see cref="T:System.Diagnostics.SymbolStore.SymbolToken" />-Struktur.</param>
+        <summary>Gibt einen Wert, der angibt, ob zwei <see cref="T:System.Diagnostics.SymbolStore.SymbolToken" /> -Objekte gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="a" /> und <paramref name="b" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Diagnostics.SymbolStore.SymbolToken.Equals%28System.Diagnostics.SymbolStore.SymbolToken%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Diagnostics.SymbolStore.SymbolToken a, System.Diagnostics.SymbolStore.SymbolToken b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Diagnostics.SymbolStore.SymbolToken a, valuetype System.Diagnostics.SymbolStore.SymbolToken b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymbolToken.op_Inequality(System.Diagnostics.SymbolStore.SymbolToken,System.Diagnostics.SymbolStore.SymbolToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+        <Parameter Name="b" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+      </Parameters>
+      <Docs>
+        <param name="a">Eine <see cref="T:System.Diagnostics.SymbolStore.SymbolToken" />-Struktur.</param>
+        <param name="b">Eine <see cref="T:System.Diagnostics.SymbolStore.SymbolToken" />-Struktur.</param>
+        <summary>Gibt einen Wert, der angibt, ob zwei <see cref="T:System.Diagnostics.SymbolStore.SymbolToken" /> -Objekte ungleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="a" /> und <paramref name="b" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Diagnostics.SymbolStore.SymbolToken.Equals%28System.Diagnostics.SymbolStore.SymbolToken%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

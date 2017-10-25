@@ -1,0 +1,347 @@
+<Type Name="RibbonControlSizeDefinition" FullName="System.Windows.Controls.Ribbon.RibbonControlSizeDefinition">
+  <TypeSignature Language="C#" Value="public class RibbonControlSizeDefinition : System.Windows.Freezable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RibbonControlSizeDefinition extends System.Windows.Freezable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Freezable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt Informationen über die Größe und die Sichtbarkeit von Bildern und eine Menübandsteuerelement zugeordnete Bezeichnung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Menübandlayout und Resizing](http://msdn.microsoft.com/library/b9734605-83aa-4e69-b0e0-a45df7261a94).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RibbonControlSizeDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine neue Instanz der <see cref="T:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition" />-Klasse zurück.</summary>
+        <returns>Die neue Instanz dieser Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageSize">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Ribbon.RibbonImageSize ImageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Ribbon.RibbonImageSize ImageSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.ImageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Ribbon.RibbonImageSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der zum Anzeigen des Bilds auf einem Steuerelement angibt.</summary>
+        <value>Einer der Enumerationswerte, die zum Anzeigen des Bilds auf einem Steuerelement angeben. Der registrierte Standardwert ist <see cref="F:System.Windows.Controls.Ribbon.RibbonImageSize.Large" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.Ribbon.Ribbon> Steuerelement anzeigen kann eine <xref:System.Windows.Controls.Ribbon.RibbonImageSize.Large> Bild, ein <xref:System.Windows.Controls.Ribbon.RibbonImageSize.Small> Bild oder das Bild kann <xref:System.Windows.Controls.Ribbon.RibbonImageSize.Collapsed>. Wenn das Steuerelement kein Bild der Größe angeben, die entspricht der <xref:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.ImageSize%2A> festlegen, wird kein Bild angezeigt.  
+  
+<a name="dependencyPropertyInfo_ImageSize"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.ImageSizeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageSizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ImageSizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ImageSizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.ImageSizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.ImageSize" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCollapsed">
+      <MemberSignature Language="C#" Value="public bool IsCollapsed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCollapsed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.IsCollapsed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Steuerelement reduziert ist.</summary>
+        <value>
+          <see langword="true" />Wenn ein Steuerelement reduziert ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCollapsedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsCollapsedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsCollapsedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.IsCollapsedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.IsCollapsed" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLabelVisible">
+      <MemberSignature Language="C#" Value="public bool IsLabelVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLabelVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.IsLabelVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Beschriftung des Steuerelements sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Beschriftung des Steuerelements sichtbar ist. andernfalls <see langword="false" />. Der registrierte Standardwert ist <see langword="true" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Bezeichnungseigenschaft des Steuerelements nicht festgelegt ist, wird keine Bezeichnung angezeigt werden auch dann, wenn die <xref:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.IsLabelVisible%2A> Eigenschaft ist `true`.  
+  
+<a name="dependencyPropertyInfo_IsLabelVisible"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.IsLabelVisibleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLabelVisibleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsLabelVisibleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsLabelVisibleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.IsLabelVisibleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.IsLabelVisible" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxWidth">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Ribbon.RibbonControlLength MaxWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Ribbon.RibbonControlLength MaxWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.MaxWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Ribbon.RibbonControlLength</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Einschränkung für die maximale Breite eines Containersteuerelements in einem Menüband.</summary>
+        <value>Die maximale Breite des Steuerelements. Der registrierte Standardwert ist <see cref="F:System.Double.PositiveInfinity" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft hat nur Auswirkungen, wenn das Steuerelement ein Container für andere Objekte.  
+  
+<a name="dependencyPropertyInfo_MaxWidth"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.MaxWidthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaxWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaxWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.MaxWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.MaxWidth" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinWidth">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Ribbon.RibbonControlLength MinWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Ribbon.RibbonControlLength MinWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.MinWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Ribbon.RibbonControlLength</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Einschränkung für die minimale Breite eines Containersteuerelements in einem Menüband.</summary>
+        <value>Die minimale Breite des Steuerelements. Der registrierte Standardwert ist 0. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft hat nur Auswirkungen, wenn das Steuerelement ein Container für andere Objekte.  
+  
+<a name="dependencyPropertyInfo_MinWidth"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.MinWidthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MinWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MinWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.MinWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.MinWidth" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Ribbon.RibbonControlLength Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Ribbon.RibbonControlLength Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Ribbon.RibbonControlLength</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite eines Containersteuerelements in einem Menüband.</summary>
+        <value>Die Breite des Steuerelements. Der registrierte Standardwert ist <see cref="P:System.Windows.GridLength.Auto" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft hat nur Auswirkungen, wenn das Steuerelement ein Container für andere Objekte.  
+  
+<a name="dependencyPropertyInfo_Width"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.WidthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty WidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty WidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.WidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition.Width" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

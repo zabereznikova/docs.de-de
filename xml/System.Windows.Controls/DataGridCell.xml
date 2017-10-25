@@ -1,0 +1,588 @@
+<Type Name="DataGridCell" FullName="System.Windows.Controls.DataGridCell">
+  <TypeSignature Language="C#" Value="public class DataGridCell : System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi DataGridCell extends System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridCell" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ContentControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Zelle von einem <see cref="T:System.Windows.Controls.DataGrid" /> Steuerelement.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridCell ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCell.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.DataGridCell" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCell.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">Die maximale Größe, die die Zelle einnehmen kann.</param>
+        <summary>Bestimmt die endgültige Größe und die Platzierung des Inhalts der Zelle.</summary>
+        <returns>Die endgültige Größe des Steuerelements.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.DataGridCell.ArrangeOverride%2A> Methode bestimmt die Anordnung des Zelleninhalts mit einer Rasterlinie auf der rechten Seite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataGridColumn Column { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataGridColumn Column" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridCell.Column" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGridColumn</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Spalte, der die Zelle wird.</summary>
+        <value>Die Spalte, der in die Zelle befindet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ColumnProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ColumnProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridCell.ColumnProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridCell.Column" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEditing">
+      <MemberSignature Language="C#" Value="public bool IsEditing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEditing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridCell.IsEditing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Zelle im Bearbeitungsmodus befindet.</summary>
+        <value>
+          <see langword="true" />Wenn die Zelle im Bearbeitungsmodus befindet; andernfalls <see langword="false" />. Der registrierte Standardwert ist <see langword="false" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEditingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsEditingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsEditingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridCell.IsEditingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridCell.IsEditing" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridCell.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Zelle im Bearbeitungsmodus verwendet werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die Zelle nicht werden, im abgelegt kann Bearbeitungsmodus; andernfalls <see langword="false" />. Der registrierte Standardwert ist <see langword="false" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie die <xref:System.Windows.Controls.DataGridCell.IsReadOnly%2A> Eigenschaft `true` auf eine einzelne Zelle schreibgeschützt machen. Legen Sie die <xref:System.Windows.Controls.DataGridColumn.IsReadOnly%2A?displayProperty=nameWithType> Eigenschaft `true` auf alle Zellen in einer einzelnen Spalte schreibgeschützt machen. Festlegen der <xref:System.Windows.Controls.DataGrid.IsReadOnly%2A?displayProperty=nameWithType> Eigenschaft, um `true` auf alle Zellen in der <xref:System.Windows.Controls.DataGrid> schreibgeschützt, wenn es ein Konflikt zwischen den Einstellungen in liegt der <xref:System.Windows.Controls.DataGrid>, Spalten- und Ebenen der Zelle, ein Wert von `true` hat Vorrang vor einem Wert von `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnlyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsReadOnlyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsReadOnlyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridCell.IsReadOnlyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridCell.IsReadOnly" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelected">
+      <MemberSignature Language="C#" Value="public bool IsSelected { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelected" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridCell.IsSelected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Zelle ausgewählt ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Zelle ausgewählt ist. andernfalls <see langword="false" />. Der registrierte Standardwert ist <see langword="false" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.DataGridCell.Selected> Ereignis tritt auf, wenn die <xref:System.Windows.Controls.DataGridCell.IsSelected%2A> -Eigenschaftensatz auf `true`.  
+  
+ Die <xref:System.Windows.Controls.DataGridCell.Unselected> Ereignis tritt auf, wenn die <xref:System.Windows.Controls.DataGridCell.IsSelected%2A> -Eigenschaftensatz auf `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSelectedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSelectedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridCell.IsSelectedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridCell.IsSelected" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCell.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Die maximale Größe, die die Zelle einnehmen kann.</param>
+        <summary>Bestimmt die gewünschte Größe für die <see cref="T:System.Windows.Controls.DataGridCell" />.</summary>
+        <returns>Die gewünschte Größe des <see cref="T:System.Windows.Controls.DataGridCell" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.DataGridCell.MeasureOverride%2A> Methode misst den Bereich für die Zelle und die Rasterlinie dort auf der rechten Seite erforderlich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnColumnChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnColumnChanged (System.Windows.Controls.DataGridColumn oldColumn, System.Windows.Controls.DataGridColumn newColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnColumnChanged(class System.Windows.Controls.DataGridColumn oldColumn, class System.Windows.Controls.DataGridColumn newColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCell.OnColumnChanged(System.Windows.Controls.DataGridColumn,System.Windows.Controls.DataGridColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldColumn" Type="System.Windows.Controls.DataGridColumn" />
+        <Parameter Name="newColumn" Type="System.Windows.Controls.DataGridColumn" />
+      </Parameters>
+      <Docs>
+        <param name="oldColumn">Die alte Spaltendefinition.</param>
+        <param name="newColumn">Die neuen Spaltendefinition.</param>
+        <summary>Wird aufgerufen, wenn der Zelle <see cref="P:System.Windows.Controls.DataGridCell.Column" /> -Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht aufgerufen, wenn die aktuelle Definition der Spalte geändert werden. Es wird nur aufgerufen, wenn die <xref:System.Windows.Controls.DataGridCell.Column%2A> festgelegt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCell.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Automatisierungspeer für diesen <see cref="T:System.Windows.Controls.DataGridCell" />.</summary>
+        <returns>Der Automatisierungspeer für diesen <see cref="T:System.Windows.Controls.DataGridCell" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Automation.Peers.DataGridCellAutomationPeer> macht die <xref:System.Windows.Controls.DataGrid> auf [!INCLUDE[TLA#tla_uiautomation#initcap](~/includes/tlasharptla-uiautomationsharpinitcap-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIsEditingChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnIsEditingChanged (bool isEditing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnIsEditingChanged(bool isEditing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCell.OnIsEditingChanged(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isEditing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isEditing">Der neue Wert der <see cref="P:System.Windows.Controls.DataGridCell.IsEditing" />-Eigenschaft.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.DataGridCell.IsEditing" /> -Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ändert den visuellen Status der Zelle zwischen den Zuständen bearbeiten und anzeigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCell.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Daten für das Ereignis.</param>
+        <summary>Gibt an, dass eine Taste gedrückt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode übergibt Tastatureingaben an die <xref:System.Windows.Controls.DataGridCell.Column%2A> , die die Zelle enthält. Jede Spalte behandelt die Eingabe auf eine Weise, die für den Spaltentyp geeignet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCell.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Daten für das Ereignis.</param>
+        <summary>Gibt an, dass eine Taste gedrückt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode übergibt Tastatureingaben an die <xref:System.Windows.Controls.DataGridCell.Column%2A> , die die Zelle enthält. Jede Spalte behandelt die Eingabe auf eine Weise, die für den Spaltentyp geeignet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRender">
+      <MemberSignature Language="C#" Value="protected override void OnRender (System.Windows.Media.DrawingContext drawingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRender(class System.Windows.Media.DrawingContext drawingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCell.OnRender(System.Windows.Media.DrawingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drawingContext" Type="System.Windows.Media.DrawingContext" />
+      </Parameters>
+      <Docs>
+        <param name="drawingContext">Die Zeichnung Anweisungen für die Zelle.</param>
+        <summary>Zeichnet die Zelle und die rechte Gitternetzlinie.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelected">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelected (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelected(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCell.OnSelected(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Daten für das Ereignis.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.DataGridCell.Selected" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Die <xref:System.Windows.Controls.DataGridCell.OnSelected%2A> -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Controls.DataGridCell.OnSelected(System.Windows.RoutedEventArgs)" /> in einer abgeleiteten Klasse sicher, dass Sie der Basisklasse aufrufen, <see cref="M:System.Windows.Controls.DataGridCell.OnSelected(System.Windows.RoutedEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextInput">
+      <MemberSignature Language="C#" Value="protected override void OnTextInput (System.Windows.Input.TextCompositionEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTextInput(class System.Windows.Input.TextCompositionEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCell.OnTextInput(System.Windows.Input.TextCompositionEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.TextCompositionEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Daten für das Ereignis.</param>
+        <summary>Gibt Text Zusammensetzung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode transferiert Texteingabe auf der <xref:System.Windows.Controls.DataGridCell.Column%2A> , die die Zelle enthält. Jede Spalte behandelt die Eingabe auf eine Weise, die für den Spaltentyp geeignet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnselected">
+      <MemberSignature Language="C#" Value="protected virtual void OnUnselected (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnUnselected(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridCell.OnUnselected(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Daten für das Ereignis.</param>
+        <summary>Löst das <see cref="E:System.Windows.Controls.DataGridCell.Unselected" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Die <xref:System.Windows.Controls.DataGridCell.OnUnselected%2A> -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Controls.DataGridCell.OnUnselected(System.Windows.RoutedEventArgs)" /> in einer abgeleiteten Klasse sicher, dass Sie der Basisklasse aufrufen, <see cref="M:System.Windows.Controls.DataGridCell.OnUnselected(System.Windows.RoutedEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Selected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Selected" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.DataGridCell.Selected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Zelle ausgewählt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt auf, wenn die <xref:System.Windows.Controls.DataGridCell.IsSelected%2A> -Eigenschaftensatz auf `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent SelectedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent SelectedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridCell.SelectedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.DataGridCell.Selected" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unselected">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Unselected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Unselected" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.DataGridCell.Unselected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Zellenauswahl aufgehoben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt auf, wenn die <xref:System.Windows.Controls.DataGridCell.IsSelected%2A> -Eigenschaftensatz auf `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnselectedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent UnselectedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent UnselectedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridCell.UnselectedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.DataGridCell.Unselected" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

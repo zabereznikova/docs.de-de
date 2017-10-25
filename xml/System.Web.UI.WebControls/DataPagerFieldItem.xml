@@ -1,0 +1,124 @@
+<Type Name="DataPagerFieldItem" FullName="System.Web.UI.WebControls.DataPagerFieldItem">
+  <TypeSignature Language="C#" Value="public class DataPagerFieldItem : System.Web.UI.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataPagerFieldItem extends System.Web.UI.Control implements class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataPagerFieldItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Pagerfeldelement in einem <see cref="T:System.Web.UI.WebControls.DataPager" />-Steuerelement dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von der <xref:System.Web.UI.WebControls.DataPagerFieldItem> -Klasse erstellt, um die Pager-Steuerelemente in einem <xref:System.Web.UI.WebControls.DataPager> Steuerelement. Die <xref:System.Web.UI.INamingContainer> -Schnittstelle ist ein Marker, der angibt, dass das Containersteuerelement szenariobeschreibungen der <xref:System.Web.UI.WebControls.DataPagerFieldItem> Klasse ist Teil der <xref:System.Web.UI.Page> Steuerelementhierarchie des Objekts.  
+  
+ Die <xref:System.Web.UI.WebControls.DataPagerFieldItem> Klasse dient in der Regel im Handler für das <xref:System.Web.UI.WebControls.TemplatePagerField.PagerCommand> -Ereignis für ein <xref:System.Web.UI.WebControls.TemplatePagerField> Objekt. Wird verwendet, Zugriff auf Steuerelemente innerhalb der <xref:System.Web.UI.WebControls.TemplatePagerField> Objekt und die Eigenschaften der Zugriff auf die <xref:System.Web.UI.WebControls.DataPager> Steuerelement. Die <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.Item%2A?displayProperty=nameWithType> Eigenschaft stellt das Pagerfeldelement dar.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataPagerFieldItem (System.Web.UI.WebControls.DataPagerField field, System.Web.UI.WebControls.DataPager pager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.DataPagerField field, class System.Web.UI.WebControls.DataPager pager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataPagerFieldItem.#ctor(System.Web.UI.WebControls.DataPagerField,System.Web.UI.WebControls.DataPager)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="field" Type="System.Web.UI.WebControls.DataPagerField" />
+        <Parameter Name="pager" Type="System.Web.UI.WebControls.DataPager" />
+      </Parameters>
+      <Docs>
+        <param name="field">Die Pager-Field-Objekt.</param>
+        <param name="pager">Die Pagersteuerelement, das die Pager-Field-Objekt enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DataPagerFieldItem" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataPagerFieldItem.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Quelle des Ereignisses.</param>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Bestimmt, ob das Ereignis für das Serversteuerelement in der UI-Serversteuerelementhierarchie der Seite nach oben übergeben wird.</summary>
+        <returns>
+          <see langword="true" />Wenn das Ereignis an das übergeordnete Steuerelement gesendet wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pager">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataPager Pager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataPager Pager" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataPagerFieldItem.Pager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataPager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Pagersteuerelement, das die Pager-Field-Objekt enthält.</summary>
+        <value>Das Pagersteuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataPagerFieldItem.Pager%2A> Eigenschaft zum Abrufen der <xref:System.Web.UI.WebControls.DataPager> Steuerelement. Diese Eigenschaft wird normalerweise verwendet, um Zugriff auf die Eigenschaften des Steuerelements in einem Ereignishandler für das <xref:System.Web.UI.WebControls.TemplatePagerField.PagerCommand?displayProperty=nameWithType> Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Eigenschaften für den Zugriff auf die <xref:System.Web.UI.WebControls.DataPager> Steuerelement mithilfe der <xref:System.Web.UI.WebControls.DataPagerFieldItem.Pager%2A> Eigenschaft in einem Ereignishandler für die <xref:System.Web.UI.WebControls.TemplatePagerField.PagerCommand?displayProperty=nameWithType> Ereignis. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.DataPagerCommandEventArgs#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.DataPagerCommandEventArgs/CS/DataPagerCommandEventArgsCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.DataPagerCommandEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.DataPagerCommandEventArgs/VB/DataPagerCommandEventArgsVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagerField">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataPagerField PagerField { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataPagerField PagerField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataPagerFieldItem.PagerField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataPagerField</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Web.UI.WebControls.DataPagerField" />-Objekt ab.</summary>
+        <value>Die Pager-Field-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

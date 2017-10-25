@@ -1,0 +1,210 @@
+<Type Name="ServiceSecurityAuditElement" FullName="System.ServiceModel.Configuration.ServiceSecurityAuditElement">
+  <TypeSignature Language="C#" Value="public sealed class ServiceSecurityAuditElement : System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServiceSecurityAuditElement extends System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.ServiceSecurityAuditElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.BehaviorExtensionElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Konfigurationselement dar, das überwachungsverwandte Konfigurationseinstellungen für ein Verhalten definiert. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceSecurityAuditElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceSecurityAuditElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.ServiceSecurityAuditElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditLogLocation">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.AuditLogLocation AuditLogLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.AuditLogLocation AuditLogLocation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceSecurityAuditElement.AuditLogLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("auditLogLocation", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AuditLogLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Speicherort für das Überwachungsprotokoll ab oder legt diesen fest.</summary>
+        <value>Ein gültiger <see cref="T:System.ServiceModel.AuditLogLocation" />-Wert, der den Speicherort des Überwachungsprotokolls angibt. Der Standardwert ist <see cref="F:System.ServiceModel.AuditLogLocation.Default" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BehaviorType">
+      <MemberSignature Language="C#" Value="public override Type BehaviorType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BehaviorType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceSecurityAuditElement.BehaviorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ dieses Verhaltenskonfigurationselements ab.</summary>
+        <value>Der Verhaltenstyp.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.ServiceModel.Configuration.ServiceModelExtensionElement from);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.ServiceModel.Configuration.ServiceModelExtensionElement from) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceSecurityAuditElement.CopyFrom(System.ServiceModel.Configuration.ServiceModelExtensionElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.ServiceModel.Configuration.ServiceModelExtensionElement" />
+      </Parameters>
+      <Docs>
+        <param name="from">Ein <see cref="T:System.ServiceModel.Configuration.ServiceModelExtensionElement" />, das das zu kopierende Konfigurationselement darstellt.</param>
+        <summary>Kopiert den Inhalt des angegebenen Konfigurationselements in dieses <see cref="T:System.ServiceModel.Configuration.ServiceSecurityAuditElement" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBehavior">
+      <MemberSignature Language="C#" Value="protected override object CreateBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object CreateBehavior() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceSecurityAuditElement.CreateBehavior" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageAuthenticationAuditLevel">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.AuditLevel MessageAuthenticationAuditLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.AuditLevel MessageAuthenticationAuditLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceSecurityAuditElement.MessageAuthenticationAuditLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("messageAuthenticationAuditLevel", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AuditLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Meldungsauthentifizierungsebene ab, die verwendet wird, um Überwachungsereignisse zu protokollieren, oder legt ihn fest.</summary>
+        <value>Ein gültiger <see cref="T:System.ServiceModel.AuditLevel" />-Wert, der den Typ der Meldungsauthentifizierungsebene angibt, die verwendet wird, um Überwachungsereignisse zu protokollieren. Der Standardwert ist <see cref="F:System.ServiceModel.AuditLevel.None" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceSecurityAuditElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceAuthorizationAuditLevel">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.AuditLevel ServiceAuthorizationAuditLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.AuditLevel ServiceAuthorizationAuditLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceSecurityAuditElement.ServiceAuthorizationAuditLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("serviceAuthorizationAuditLevel", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AuditLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Typen von Autorisierungsereignissen, die im Überwachungsprotokoll aufgezeichnet werden, ab oder legt sie fest.</summary>
+        <value>Ein gültiger <see cref="T:System.ServiceModel.AuditLevel" />-Wert, der die Typen von Autorisierungsereignissen angibt, die im Überwachungsprotokoll aufgezeichnet werden. Der Standardwert ist <see cref="F:System.ServiceModel.AuditLevel.None" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressAuditFailure">
+      <MemberSignature Language="C#" Value="public bool SuppressAuditFailure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SuppressAuditFailure" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceSecurityAuditElement.SuppressAuditFailure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("suppressAuditFailure", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab oder legt einen booleschen Wert fest, der das Verhalten für das Unterdrücken von Fehlern beim Schreiben in das Überwachungsprotokoll angibt.</summary>
+        <value>
+          <see langword="true" />, wenn Ausnahmen außer <see cref="T:System.OutOfMemoryException" />, <see cref="T:System.StackOverflowException" />, <see cref="T:System.Threading.ThreadAbortException" /> und <see cref="T:System.ArgumentException" />, die aus Versuchen resultieren, Überwachungsereignisse zu schreiben, vom System verarbeitet werden und nicht an die Anwendung weitergegeben werden; <see langword="false" />, wenn alle Ausnahmen, die aus Versuchen resultieren, Überwachungsereignisse zu schreiben, an die Anwendung weitergegeben werden. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungen sollten über Schreibfehler im Überwachungsprotokoll benachrichtigt werden. Wenn die Anwendung nicht für das Verarbeiten von Überwachungsfehlern ausgelegt ist, sollten Sie diese Eigenschaft verwenden, um Fehler beim Schreiben in das Überwachungsprotokoll zu unterdrücken.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

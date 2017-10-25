@@ -1,0 +1,1365 @@
+<Type Name="MessageBox" FullName="System.Windows.Forms.MessageBox">
+  <TypeSignature Language="C#" Value="public class MessageBox" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageBox extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MessageBox" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Zeigt ein Meldungsfenster an, auch als Dialogfeld bezeichnet, das dem Benutzer eine Nachricht anzeigt. Dabei handelt es sich um ein modales Fenster, das andere Aktionen in der Anwendung blockiert, bis der Benutzer es schließt. A <see cref="T:System.Windows.Forms.MessageBox" /> kann Text, Schaltflächen und Symbole mit Informationen und Anweisungen für den Benutzer enthalten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine neue Instanz der können nicht erstellt die <xref:System.Windows.Forms.MessageBox> Klasse. Um ein Meldungsfeld anzuzeigen, rufen die `static` Methode <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType>. Der Titel, Nachricht, Schaltflächen und Symbole, die im Meldungsfeld angezeigt werden durch Parameter bestimmt, die Sie an diese Methode übergeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.Windows.Forms.MessageBox> informiert den Benutzer, der einen fehlenden Eintrag in einer <xref:System.Windows.Forms.TextBox>. Dieses Beispiel benötigen Sie, dass die Methode aufgerufen wird, von einem vorhandenen Formular mit einem <xref:System.Windows.Forms.TextBox> mit dem Namen **ServerName** darauf.  
+  
+ [!code-cpp[MessageBox.Show Variations#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#1)]
+ [!code-csharp[MessageBox.Show Variations#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#1)]
+ [!code-vb[MessageBox.Show Variations#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie dem Benutzer eine Ja oder Nein Frage und eine Entscheidung basierend auf der Antwort.  
+  
+ [!code-cpp[Classic MessageBox Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MessageBox Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MessageBox Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MessageBox Example/CS/source.cs#1)]
+ [!code-vb[Classic MessageBox Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MessageBox Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <summary>Zeigt ein Meldungsfenster mit angegebenem Text an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig zeigt das Meldungsfeld eine **OK** Schaltfläche. Das Meldungsfeld enthält keine Beschriftung im Titel.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt ein einfaches Meldungsfeld an.  
+  
+ [!code-csharp[MessageBox.Show Variations#6](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#6)]
+ [!code-vb[MessageBox.Show Variations#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster, um diese Eigenschaft festzulegen. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <summary>Zeigt ein Meldungsfenster mit dem angegebenen Text und der angegebenen Beschriftung an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig zeigt das Meldungsfeld eine **OK** Schaltfläche.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Eine Implementierung von <see cref="T:System.Windows.Forms.IWin32Window" />, die Besitzer des modalen Dialogfelds wird.</param>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <summary>Zeigt vor dem angegebenen Objekt ein Meldungsfenster mit dem angegebenen Text an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die `owner` Parameter an ein bestimmtes Objekt implementiert die <xref:System.Windows.Forms.IWin32Window> Schnittstelle, die als Fenster der obersten Ebene und der Besitzer des Dialogfelds fungieren soll. Ein Meldungsfeld wird ein modales Dialogfeld, d. h. keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte auf dem Formular modal außer auftreten kann. Das Programm muss ausblenden oder schließen ein modales Formular (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe in ein anderes Format auftreten kann.  
+  
+ Standardmäßig zeigt das Meldungsfeld eine **OK** Schaltfläche. Das Meldungsfeld enthält keine Beschriftung im Titel.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <summary>Zeigt ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung und den angegebenen Schaltflächen an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können maximal drei Schaltflächen im Meldungsfeld haben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> mit den Optionen, die von dieser Überladung von unterstützt <xref:System.Windows.Forms.MessageBox.Show%2A>. Nach dem Überprüfen, ob eine Zeichenfolgenvariable `ServerName`, ist leer, das Beispiel zeigt eine <xref:System.Windows.Forms.MessageBox>, bietet des Benutzers die Option aus, um den Vorgang abzubrechen. Wenn die <xref:System.Windows.Forms.MessageBox.Show%2A> Rückgabewert der Methode ergibt <xref:System.Windows.Forms.DialogResult.Yes>, angezeigten Formular die <xref:System.Windows.Forms.MessageBox> geschlossen wird.  
+  
+ [!code-cpp[MessageBox.Show Variations#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#1)]
+ [!code-csharp[MessageBox.Show Variations#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#1)]
+ [!code-vb[MessageBox.Show Variations#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Die <paramref name="buttons" /> angegebene Parameter ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Eine Implementierung von <see cref="T:System.Windows.Forms.IWin32Window" />, die Besitzer des modalen Dialogfelds wird.</param>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <summary>Zeigt vor dem angegebenen Objekt ein Meldungsfenster mit dem angegebenen Text und der angegebenen Beschriftung an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die `owner` Parameter an ein bestimmtes Objekt implementiert die <xref:System.Windows.Forms.IWin32Window> Schnittstelle, die als Fenster der obersten Ebene und der Besitzer des Dialogfelds fungieren soll. Ein Meldungsfeld wird ein modales Dialogfeld, d. h. keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte auf dem Formular modal außer auftreten kann. Das Programm muss ausblenden oder schließen ein modales Formular (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe in ein anderes Format auftreten kann.  
+  
+ Standardmäßig zeigt das Meldungsfeld eine **OK** Schaltfläche.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <param name="icon">Einer der <see cref="T:System.Windows.Forms.MessageBoxIcon" />-Werte, der angibt, welches Symbol im Meldungsfenster angezeigt werden soll.</param>
+        <summary>Zeigt ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung, den angegebenen Schaltflächen und dem angegebenen Symbol an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können maximal drei Schaltflächen im Meldungsfeld haben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eines der <xref:System.Windows.Forms.MessageBox.Show%2A> Methoden bei der Verarbeitung von der <xref:System.Windows.Forms.ComboBox.DropDown?displayProperty=nameWithType> Ereignis. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, und rufen die `InitializeComboBox` Methode aus den Konstruktor des Formulars oder `Load` Methode.  
+  
+ [!code-cpp[System.Windows.Forms.ComboBoxDropDown#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ComboBoxDropDown/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ComboBoxDropDown#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ComboBoxDropDown/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ComboBoxDropDown#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComboBoxDropDown/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Die <paramref name="buttons" /> angegebene Parameter ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ - oder -   
+  
+ Die <paramref name="icon" /> angegebene Parameter ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxIcon" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Eine Implementierung von <see cref="T:System.Windows.Forms.IWin32Window" />, die Besitzer des modalen Dialogfelds wird.</param>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <summary>Zeigt vor dem angegebenen Objekt ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung und den angegebenen Schaltflächen an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die `owner` Parameter an ein bestimmtes Objekt implementiert die <xref:System.Windows.Forms.IWin32Window> Schnittstelle, die als Fenster der obersten Ebene und der Besitzer des Dialogfelds fungieren soll. Ein Meldungsfeld wird ein modales Dialogfeld, d. h. keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte auf dem Formular modal außer auftreten kann. Das Programm muss ausblenden oder schließen ein modales Formular (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe in ein anderes Format auftreten kann.  
+  
+ Sie können maximal drei Schaltflächen im Meldungsfeld haben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> mit den Optionen, die von dieser Überladung von unterstützt <xref:System.Windows.Forms.MessageBox.Show%2A>. Nach dem Überprüfen, ob eine Zeichenfolgenvariable `ServerName`, ist leer, das Beispiel zeigt eine <xref:System.Windows.Forms.MessageBox>, bietet des Benutzers die Option aus, um den Vorgang abzubrechen. Wenn die <xref:System.Windows.Forms.MessageBox.Show%2A> Rückgabewert der Methode ergibt <xref:System.Windows.Forms.DialogResult.Yes>, angezeigten Formular die <xref:System.Windows.Forms.MessageBox> geschlossen wird.  
+  
+ [!code-cpp[MessageBox.Show Variations#5](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#5)]
+ [!code-csharp[MessageBox.Show Variations#5](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#5)]
+ [!code-vb[MessageBox.Show Variations#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <param name="icon">Einer der <see cref="T:System.Windows.Forms.MessageBoxIcon" />-Werte, der angibt, welches Symbol im Meldungsfenster angezeigt werden soll.</param>
+        <param name="defaultButton">Einer der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />-Werte, der die Standardschaltfläche für das Meldungsfenster angibt.</param>
+        <summary>Zeigt ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung, dem angegebenen Symbol und der Standardschaltfläche an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können maximal drei Schaltflächen im Meldungsfeld haben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> mit den Optionen, die von dieser Überladung von unterstützt <xref:System.Windows.Forms.MessageBox.Show%2A>. Nach dem Überprüfen, ob eine Zeichenfolgenvariable `ServerName`, ist leer, das Beispiel zeigt eine <xref:System.Windows.Forms.MessageBox> mit einem fragesymbol Feld bietet dem Benutzer die Option aus, um den Vorgang abzubrechen. Wenn die <xref:System.Windows.Forms.MessageBox.Show%2A> Rückgabewert der Methode ergibt <xref:System.Windows.Forms.DialogResult.Yes>, angezeigten Formular die <xref:System.Windows.Forms.MessageBox> geschlossen wird.  
+  
+ [!code-cpp[MessageBox.Show Variations#3](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#3)]
+ [!code-csharp[MessageBox.Show Variations#3](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#3)]
+ [!code-vb[MessageBox.Show Variations#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ - oder -   
+  
+ <paramref name="icon" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ - oder -   
+  
+ <paramref name="defaultButton" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Eine Implementierung von <see cref="T:System.Windows.Forms.IWin32Window" />, die Besitzer des modalen Dialogfelds wird.</param>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <param name="icon">Einer der <see cref="T:System.Windows.Forms.MessageBoxIcon" />-Werte, der angibt, welches Symbol im Meldungsfenster angezeigt werden soll.</param>
+        <summary>Zeigt vor dem angegebenen Objekt ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung, den angegebenen Schaltflächen und dem angegebenen Symbol an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die `owner` Parameter an ein bestimmtes Objekt implementiert die <xref:System.Windows.Forms.IWin32Window> Schnittstelle, die als Fenster der obersten Ebene und der Besitzer des Dialogfelds fungieren soll. Ein Meldungsfeld wird ein modales Dialogfeld, d. h. keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte auf dem Formular modal außer auftreten kann. Das Programm muss ausblenden oder schließen ein modales Formular (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe in ein anderes Format auftreten kann.  
+  
+ Sie können maximal drei Schaltflächen im Meldungsfeld haben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> mit den Optionen, die von dieser Überladung von unterstützt <xref:System.Windows.Forms.MessageBox.Show%2A>. Nach dem Überprüfen, ob eine Zeichenfolgenvariable `ServerName`, ist leer, das Beispiel zeigt eine <xref:System.Windows.Forms.MessageBox>, bietet des Benutzers die Option aus, um den Vorgang abzubrechen. Wenn die <xref:System.Windows.Forms.MessageBox.Show%2A> Rückgabewert der Methode ergibt <xref:System.Windows.Forms.DialogResult.Yes>, angezeigten Formular die <xref:System.Windows.Forms.MessageBox> geschlossen wird.  
+  
+ [!code-cpp[MessageBox.Show Variations#4](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#4)]
+ [!code-csharp[MessageBox.Show Variations#4](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#4)]
+ [!code-vb[MessageBox.Show Variations#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ - oder -   
+  
+ <paramref name="icon" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxIcon" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <param name="icon">Einer der <see cref="T:System.Windows.Forms.MessageBoxIcon" />-Werte, der angibt, welches Symbol im Meldungsfenster angezeigt werden soll.</param>
+        <param name="defaultButton">Einer der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />-Werte, der die Standardschaltfläche für das Meldungsfenster angibt.</param>
+        <param name="options">Einer der <see cref="T:System.Windows.Forms.MessageBoxOptions" />-Werte, der die Anzeige- und Zuordnungsoptionen für das Meldungsfenster angibt. Sie können 0 (null) übergeben, wenn Sie die Standardwerte verwenden möchten.</param>
+        <summary>Zeigt ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung, den angegebenen Schaltflächen, dem angegebenen Symbol, der Standardschaltfläche und Optionen an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können maximal drei Schaltflächen im Meldungsfeld haben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> mit den Optionen, die von dieser Überladung von unterstützt <xref:System.Windows.Forms.MessageBox.Show%2A>. Nach dem Überprüfen, ob eine Zeichenfolgenvariable `ServerName`, ist leer, das Beispiel zeigt eine <xref:System.Windows.Forms.MessageBox> mit einem fragesymbol Feld bietet dem Benutzer die Option aus, um den Vorgang abzubrechen. Im Beispiel wird die <xref:System.Windows.Forms.MessageBoxOptions.RightAlign> Mitglied der <xref:System.Windows.Forms.MessageBoxOptions> Enumeration, um den Text an den rechten Rand des Dialogfelds auszurichten. Wenn die <xref:System.Windows.Forms.MessageBox.Show%2A> Rückgabewert der Methode ergibt <xref:System.Windows.Forms.DialogResult.Yes>, angezeigten Formular die <xref:System.Windows.Forms.MessageBox> geschlossen wird.  
+  
+ [!code-cpp[MessageBox.Show Variations#2](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#2)]
+ [!code-csharp[MessageBox.Show Variations#2](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#2)]
+ [!code-vb[MessageBox.Show Variations#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ - oder -   
+  
+ <paramref name="icon" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ - oder -   
+  
+ Die <paramref name="defaultButton" /> angegeben, ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />beide angegeben <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> und <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ - oder -   
+  
+ <paramref name="buttons" />eine ungültige Kombination von angegebenen <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Eine Implementierung von <see cref="T:System.Windows.Forms.IWin32Window" />, die Besitzer des modalen Dialogfelds wird.</param>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <param name="icon">Einer der <see cref="T:System.Windows.Forms.MessageBoxIcon" />-Werte, der angibt, welches Symbol im Meldungsfenster angezeigt werden soll.</param>
+        <param name="defaultButton">Einer der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />-Werte, der die Standardschaltfläche für das Meldungsfenster angibt.</param>
+        <summary>Zeigt vor dem angegebenen Objekt ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung, den angegebenen Schaltflächen, dem angegebenen Symbol und der Standardschaltfläche an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die `owner` Parameter an ein bestimmtes Objekt implementiert die <xref:System.Windows.Forms.IWin32Window> Schnittstelle, die als Fenster der obersten Ebene und der Besitzer des Dialogfelds fungieren soll. Ein Meldungsfeld wird ein modales Dialogfeld, d. h. keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte auf dem Formular modal außer auftreten kann. Das Programm muss ausblenden oder schließen ein modales Formular (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe in ein anderes Format auftreten kann.  
+  
+ Sie können maximal drei Schaltflächen im Meldungsfeld haben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> mit den Optionen, die von dieser Überladung von unterstützt <xref:System.Windows.Forms.MessageBox.Show%2A>. Nach dem Überprüfen, ob eine Zeichenfolgenvariable `ServerName`, ist leer, das Beispiel zeigt eine <xref:System.Windows.Forms.MessageBox>, bietet des Benutzers die Option aus, um den Vorgang abzubrechen. Wenn die <xref:System.Windows.Forms.MessageBox.Show%2A> Rückgabewert der Methode ergibt <xref:System.Windows.Forms.DialogResult.Yes>, angezeigten Formular die <xref:System.Windows.Forms.MessageBox> geschlossen wird.  
+  
+ [!code-cpp[MessageBox.Show Variations#2](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#2)]
+ [!code-csharp[MessageBox.Show Variations#2](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#2)]
+ [!code-vb[MessageBox.Show Variations#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ - oder -   
+  
+ <paramref name="icon" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ - oder -   
+  
+ <paramref name="defaultButton" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, bool displayHelpButton);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, bool displayHelpButton) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="displayHelpButton" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <param name="icon">Einer der <see cref="T:System.Windows.Forms.MessageBoxIcon" />-Werte, der angibt, welches Symbol im Meldungsfenster angezeigt werden soll.</param>
+        <param name="defaultButton">Einer der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />-Werte, der die Standardschaltfläche für das Meldungsfenster angibt.</param>
+        <param name="options">Einer der <see cref="T:System.Windows.Forms.MessageBoxOptions" />-Werte, der die Anzeige- und Zuordnungsoptionen für das Meldungsfenster angibt. Sie können 0 (null) übergeben, wenn Sie die Standardwerte verwenden möchten.</param>
+        <param name="displayHelpButton">
+          <see langword="true" />, um die Schaltfläche „Hilfe“ anzuzeigen, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</param>
+        <summary>Zeigt ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung, den angegebenen Schaltflächen, dem angegebenen Symbol, der angegebenen Standardschaltfläche, den angegebenen Optionen und der Schaltfläche „Hilfe“ an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Meldungsfeld wird ein modales Dialogfeld, d. h. keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte auf dem Formular modal außer auftreten kann. Das Programm muss ausblenden oder schließen ein modales Formular (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe in ein anderes Format auftreten kann.  
+  
+ Wenn der Benutzer die Schaltfläche "Hilfe" klickt, empfängt das Formular, das im Meldungsfeld (oder das aktive Formular) besitzt die <xref:System.Windows.Forms.Control.HelpRequested> Ereignis. Behandeln der <xref:System.Windows.Forms.Control.HelpRequested> Ereignis für benutzerdefinierte Hilfe-Aktionen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Meldungsfeld mit einer Schaltfläche "Hilfe" anzuzeigen, behandeln die <xref:System.Windows.Forms.Control.HelpRequested?displayProperty=nameWithType> Ereignis und zeigt ein benutzerdefiniertes Hilfefenster als Antwort auf das Ereignis.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#2)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#2)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ - oder -   
+  
+ <paramref name="icon" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ - oder -   
+  
+ Die <paramref name="defaultButton" /> angegeben, ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />beide angegeben <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> und <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ - oder -   
+  
+ <paramref name="buttons" />eine ungültige Kombination von angegebenen <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <param name="icon">Einer der <see cref="T:System.Windows.Forms.MessageBoxIcon" />-Werte, der angibt, welches Symbol im Meldungsfenster angezeigt werden soll.</param>
+        <param name="defaultButton">Einer der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />-Werte, der die Standardschaltfläche für das Meldungsfenster angibt.</param>
+        <param name="options">Einer der <see cref="T:System.Windows.Forms.MessageBoxOptions" />-Werte, der die Anzeige- und Zuordnungsoptionen für das Meldungsfenster angibt. Sie können 0 (null) übergeben, wenn Sie die Standardwerte verwenden möchten.</param>
+        <param name="helpFilePath">Pfad und Name der Hilfedatei, die angezeigt werden soll, wenn der Benutzer auf die Schaltfläche „Hilfe“ klickt.</param>
+        <summary>Zeigt unter Verwendung der angegebenen Hilfedatei ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung, den angegebenen Schaltflächen, dem angegebenen Symbol, der angegebenen Standardschaltfläche, den angegebenen Optionen und der Schaltfläche „Hilfe“ an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Meldungsfeld wird ein modales Dialogfeld, d. h. keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte auf dem Formular modal außer auftreten kann. Das Programm muss ausblenden oder schließen ein modales Formular (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe in ein anderes Format auftreten kann.  
+  
+ Klickt der Benutzer die Schaltfläche "Hilfe", wird die Hilfe-Datei angegeben, der `helpFilePath` Parameter wird geöffnet. Das Formular, die im Meldungsfeld (oder das aktive Formular) besitzt auch empfängt die <xref:System.Windows.Forms.Control.HelpRequested> Ereignis.  
+  
+ Die `helpFilePath` Parameter des Formulars C:\path\sample.chm oder /Ordner/Datei.htm haben kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Meldungsfeld mit einer Schaltfläche "Hilfe" angezeigt wird. Wenn der Benutzer die Schaltfläche "Hilfe" klickt der `Mspaint.chm` Hilfedatei wird geöffnet. Im Beispiel erfordert, dass die `Mspaint.chm` Hilfedatei installiert ist.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#3)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#3)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ - oder -   
+  
+ <paramref name="icon" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ - oder -   
+  
+ Die <paramref name="defaultButton" /> angegeben, ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />beide angegeben <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> und <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ - oder -   
+  
+ <paramref name="buttons" />eine ungültige Kombination von angegebenen <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">Um eine HTML-Hilfedatei über eine HTTP-Anforderung zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Um eine HTML-Hilfedatei, die nicht von einem HTTP-Server bedient zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Eine Implementierung von <see cref="T:System.Windows.Forms.IWin32Window" />, die Besitzer des modalen Dialogfelds wird.</param>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <param name="icon">Einer der <see cref="T:System.Windows.Forms.MessageBoxIcon" />-Werte, der angibt, welches Symbol im Meldungsfenster angezeigt werden soll.</param>
+        <param name="defaultButton">Einer der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />-Werte, der die Standardschaltfläche für das Meldungsfenster angibt.</param>
+        <param name="options">Einer der <see cref="T:System.Windows.Forms.MessageBoxOptions" />-Werte, der die Anzeige- und Zuordnungsoptionen für das Meldungsfenster angibt. Sie können 0 (null) übergeben, wenn Sie die Standardwerte verwenden möchten.</param>
+        <summary>Zeigt vor dem angegebenen Objekt ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung, den angegebenen Schaltflächen, dem angegebenen Symbol, der Standardschaltfläche und Optionen an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die `owner` Parameter an ein bestimmtes Objekt implementiert die <xref:System.Windows.Forms.IWin32Window> Schnittstelle, die als Fenster der obersten Ebene und der Besitzer des Dialogfelds fungieren soll. Ein Meldungsfeld wird ein modales Dialogfeld, d. h. keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte auf dem Formular modal außer auftreten kann. Das Programm muss ausblenden oder schließen ein modales Formular (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe in ein anderes Format auftreten kann.  
+  
+ Sie können maximal drei Schaltflächen im Meldungsfeld haben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> mit den Optionen, die von dieser Überladung von unterstützt <xref:System.Windows.Forms.MessageBox.Show%2A>. Nach dem Überprüfen, ob eine Zeichenfolgenvariable `ServerName`, ist leer, das Beispiel zeigt eine <xref:System.Windows.Forms.MessageBox>, bietet des Benutzers die Option aus, um den Vorgang abzubrechen. Wenn die <xref:System.Windows.Forms.MessageBox.Show%2A> Rückgabewert der Methode ergibt <xref:System.Windows.Forms.DialogResult.Yes>, angezeigten Formular die <xref:System.Windows.Forms.MessageBox> geschlossen wird.  
+  
+ [!code-cpp[MessageBox.Show Variations#2](~/samples/snippets/cpp/VS_Snippets_Winforms/MessageBox.Show Variations/CPP/form1.cpp#2)]
+ [!code-csharp[MessageBox.Show Variations#2](~/samples/snippets/csharp/VS_Snippets_Winforms/MessageBox.Show Variations/CS/form1.cs#2)]
+ [!code-vb[MessageBox.Show Variations#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MessageBox.Show Variations/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ - oder -   
+  
+ <paramref name="icon" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ - oder -   
+  
+ <paramref name="defaultButton" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />beide angegeben <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> und <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ - oder -   
+  
+ <paramref name="options" />angegebene <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> oder <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" /> und einen Wert in der <paramref name="owner" /> Parameter. Diese beiden Optionen sollte verwendet werden, nur dann, wenn Sie die Version dieser Methode aufrufen, der keine akzeptiert ein <paramref name="owner" /> Parameter.  
+  
+ - oder -   
+  
+ <paramref name="buttons" />eine ungültige Kombination von angegebenen <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath, string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath, string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <param name="icon">Einer der <see cref="T:System.Windows.Forms.MessageBoxIcon" />-Werte, der angibt, welches Symbol im Meldungsfenster angezeigt werden soll.</param>
+        <param name="defaultButton">Einer der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />-Werte, der die Standardschaltfläche für das Meldungsfenster angibt.</param>
+        <param name="options">Einer der <see cref="T:System.Windows.Forms.MessageBoxOptions" />-Werte, der die Anzeige- und Zuordnungsoptionen für das Meldungsfenster angibt. Sie können 0 (null) übergeben, wenn Sie die Standardwerte verwenden möchten.</param>
+        <param name="helpFilePath">Pfad und Name der Hilfedatei, die angezeigt werden soll, wenn der Benutzer auf die Schaltfläche „Hilfe“ klickt.</param>
+        <param name="keyword">Das Hilfestichwort, das angezeigt wird, wenn der Benutzer auf die Schaltfläche „Hilfe“ klickt.</param>
+        <summary>Zeigt mithilfe der angegebenen Hilfedatei und des angegebenen Hilfestichworts ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung, den angegebenen Schaltflächen, dem angegebenen Symbol, der angegebenen Standardschaltfläche, den angegebenen Optionen und der Schaltfläche „Hilfe“ an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Meldungsfeld wird ein modales Dialogfeld, d. h. keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte auf dem Formular modal außer auftreten kann. Das Programm muss ausblenden oder schließen ein modales Formular (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe in ein anderes Format auftreten kann.  
+  
+ Klickt der Benutzer auf die Schaltfläche "Hilfe", wird die Hilfe-Datei angegeben, der `helpFilePath` Parameter geöffnet wird, und das Hilfethema für das Schlüsselwort durch identifiziert die `keyword` Parameter angezeigt wird. Das Formular, die im Meldungsfeld (oder das aktive Formular) besitzt auch empfängt die <xref:System.Windows.Forms.Control.HelpRequested> Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Meldungsfeld mit einer Schaltfläche "Hilfe" angezeigt wird. Klickt der Benutzer die Schaltfläche "Hilfe" die `Mspaint.chm` Hilfedatei geöffnet wird, und durch das Thema identifiziert die `mspaint.chm::/paint_brush.htm` Schlüsselwort wird angezeigt. Im Beispiel erfordert, dass die `Mspaint.chm` Hilfedatei installiert ist.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#9)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#9)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ - oder -   
+  
+ <paramref name="icon" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ - oder -   
+  
+ Die <paramref name="defaultButton" /> angegeben, ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />beide angegeben <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> und <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ - oder -   
+  
+ <paramref name="buttons" />eine ungültige Kombination von angegebenen <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">Um eine HTML-Hilfedatei über eine HTTP-Anforderung zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Um eine HTML-Hilfedatei, die nicht von einem HTTP-Server bedient zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath, System.Windows.Forms.HelpNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath, valuetype System.Windows.Forms.HelpNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String,System.Windows.Forms.HelpNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+        <Parameter Name="navigator" Type="System.Windows.Forms.HelpNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <param name="icon">Einer der <see cref="T:System.Windows.Forms.MessageBoxIcon" />-Werte, der angibt, welches Symbol im Meldungsfenster angezeigt werden soll.</param>
+        <param name="defaultButton">Einer der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />-Werte, der die Standardschaltfläche für das Meldungsfenster angibt.</param>
+        <param name="options">Einer der <see cref="T:System.Windows.Forms.MessageBoxOptions" />-Werte, der die Anzeige- und Zuordnungsoptionen für das Meldungsfenster angibt. Sie können 0 (null) übergeben, wenn Sie die Standardwerte verwenden möchten.</param>
+        <param name="helpFilePath">Pfad und Name der Hilfedatei, die angezeigt werden soll, wenn der Benutzer auf die Schaltfläche „Hilfe“ klickt.</param>
+        <param name="navigator">Einer der <see cref="T:System.Windows.Forms.HelpNavigator" />-Werte.</param>
+        <summary>Zeigt mithilfe der angegebenen Hilfedatei und <see langword="HelpNavigator" /> ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung, den angegebenen Schaltflächen, dem angegebenen Symbol, der angegebenen  Standardschaltfläche, den angegebenen Optionen und der Schaltfläche „Hilfe“ an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Meldungsfeld wird ein modales Dialogfeld, d. h. keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte auf dem Formular modal außer auftreten kann. Das Programm muss ausblenden oder schließen ein modales Formular (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe in ein anderes Format auftreten kann.  
+  
+ Klickt der Benutzer auf die Schaltfläche "Hilfe", wird die Hilfedatei angegeben, der `helpFilePath` Parameter geöffnet wird, und die Hilfeinhalte identifiziert, von der `navigator` Parameter ist hervorgehoben. Das Formular, die im Meldungsfeld (oder das aktive Formular) besitzt auch empfängt die <xref:System.Windows.Forms.Control.HelpRequested> Ereignis.  
+  
+ Kompilierte Hilfedateien Dateien bieten Inhaltsverzeichnis, Indexes, Suche und-Schlüsselwort Links in Seiten. Sie können die folgenden Werte für `navigator`: <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Find>, <xref:System.Windows.Forms.HelpNavigator.Index>, oder <xref:System.Windows.Forms.HelpNavigator.Topic>.  
+  
+ Die `helpFilePath` Parameter des Formulars C:\path\sample.chm oder /Ordner/Datei.htm haben kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Meldungsfeld mit einer Schaltfläche "Hilfe" angezeigt wird. Wenn der Benutzer die Schaltfläche "Hilfe" klickt der `Mspaint.chm` Hilfedatei wird geöffnet, und die Hilfe zur Registerkarte "Index" wird angezeigt. Im Beispiel erfordert, dass die `Mspaint.chm` Hilfedatei installiert ist.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#5)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#5)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ - oder -   
+  
+ <paramref name="icon" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ - oder -   
+  
+ Die <paramref name="defaultButton" /> angegeben, ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />beide angegeben <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> und <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ - oder -   
+  
+ <paramref name="buttons" />eine ungültige Kombination von angegebenen <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">Um eine HTML-Hilfedatei über eine HTTP-Anforderung zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Um eine HTML-Hilfedatei, die nicht von einem HTTP-Server bedient zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Eine Implementierung von <see cref="T:System.Windows.Forms.IWin32Window" />, die Besitzer des modalen Dialogfelds wird.</param>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <param name="icon">Einer der <see cref="T:System.Windows.Forms.MessageBoxIcon" />-Werte, der angibt, welches Symbol im Meldungsfenster angezeigt werden soll.</param>
+        <param name="defaultButton">Einer der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />-Werte, der die Standardschaltfläche für das Meldungsfenster angibt.</param>
+        <param name="options">Einer der <see cref="T:System.Windows.Forms.MessageBoxOptions" />-Werte, der die Anzeige- und Zuordnungsoptionen für das Meldungsfenster angibt. Sie können 0 (null) übergeben, wenn Sie die Standardwerte verwenden möchten.</param>
+        <param name="helpFilePath">Pfad und Name der Hilfedatei, die angezeigt werden soll, wenn der Benutzer auf die Schaltfläche „Hilfe“ klickt.</param>
+        <summary>Zeigt unter Verwendung der angegebenen Hilfedatei ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung, den angegebenen Schaltflächen, dem angegebenen Symbol, der angegebenen Standardschaltfläche, den angegebenen Optionen und der Schaltfläche „Hilfe“ an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Meldungsfeld wird ein modales Dialogfeld, d. h. keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte auf dem Formular modal außer auftreten kann. Das Programm muss ausblenden oder schließen ein modales Formular (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe in ein anderes Format auftreten kann. Können Sie die `owner` Parameter an ein bestimmtes Objekt implementiert die <xref:System.Windows.Forms.IWin32Window> Schnittstelle, die als Fenster der obersten Ebene und der Besitzer des Dialogfelds fungieren soll.  
+  
+ Klickt der Benutzer auf die Schaltfläche "Hilfe", wird die Hilfe-Datei angegeben, der `helpFilePath` Parameter wird geöffnet. Das Formular, die im Meldungsfeld (oder das aktive Formular) besitzt auch empfängt die <xref:System.Windows.Forms.Control.HelpRequested> Ereignis.  
+  
+ Die `helpFilePath` Parameter des Formulars C:\path\sample.chm oder /Ordner/Datei.htm haben kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Meldungsfeld angezeigt, die dem Hauptformular übergeordnet ist. Das Meldungsfeld zeigt eine Schaltfläche "Hilfe". Wenn der Benutzer die Schaltfläche "Hilfe" klickt der `Mspaint.chm` Hilfedatei wird geöffnet. Im Beispiel erfordert, dass die `Mspaint.chm` Hilfedatei installiert ist.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#4)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#4)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ - oder -   
+  
+ <paramref name="icon" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ - oder -   
+  
+ Die <paramref name="defaultButton" /> angegeben, ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />beide angegeben <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> und <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ - oder -   
+  
+ <paramref name="buttons" />eine ungültige Kombination von angegebenen <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">Um eine HTML-Hilfedatei über eine HTTP-Anforderung zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Um eine HTML-Hilfedatei, die nicht von einem HTTP-Server bedient zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath, System.Windows.Forms.HelpNavigator navigator, object param);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath, valuetype System.Windows.Forms.HelpNavigator navigator, object param) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String,System.Windows.Forms.HelpNavigator,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+        <Parameter Name="navigator" Type="System.Windows.Forms.HelpNavigator" />
+        <Parameter Name="param" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <param name="icon">Einer der <see cref="T:System.Windows.Forms.MessageBoxIcon" />-Werte, der angibt, welches Symbol im Meldungsfenster angezeigt werden soll.</param>
+        <param name="defaultButton">Einer der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />-Werte, der die Standardschaltfläche für das Meldungsfenster angibt.</param>
+        <param name="options">Einer der <see cref="T:System.Windows.Forms.MessageBoxOptions" />-Werte, der die Anzeige- und Zuordnungsoptionen für das Meldungsfenster angibt. Sie können 0 (null) übergeben, wenn Sie die Standardwerte verwenden möchten.</param>
+        <param name="helpFilePath">Pfad und Name der Hilfedatei, die angezeigt werden soll, wenn der Benutzer auf die Schaltfläche „Hilfe“ klickt.</param>
+        <param name="navigator">Einer der <see cref="T:System.Windows.Forms.HelpNavigator" />-Werte.</param>
+        <param name="param">Die numerische ID des Hilfethemas, die angezeigt werden soll, wenn der Benutzer auf die Schaltfläche „Hilfe“ klickt.</param>
+        <summary>Zeigt mithilfe der angegebenen Hilfedatei, <see langword="HelpNavigator" /> und dem angegebenen Hilfethema ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung, den angegebenen Schaltflächen, dem angegebenen Symbol, der angegebenen Standardschaltfläche, den angegebenen Optionen und der Schaltfläche „Hilfe“ an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Meldungsfeld wird ein modales Dialogfeld, d. h. keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte auf dem Formular modal außer auftreten kann. Das Programm muss ausblenden oder schließen ein modales Formular (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe in ein anderes Format auftreten kann.  
+  
+ Klickt der Benutzer auf die Schaltfläche "Hilfe", wird die Hilfe-Datei angegeben, der `helpFilePath` Parameter geöffnet wird, und die Hilfeinhalte identifiziert, von der `navigator` Parameter ist hervorgehoben. Das Formular, die im Meldungsfeld (oder das aktive Formular) besitzt auch empfängt die <xref:System.Windows.Forms.Control.HelpRequested> Ereignis.  
+  
+ Kompilierte Hilfedateien Dateien bieten Inhaltsverzeichnis, Indexes, Suche und-Schlüsselwort Links in Seiten. Sie können die folgenden Werte für `navigator`: <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Find>, <xref:System.Windows.Forms.HelpNavigator.Index>, oder <xref:System.Windows.Forms.HelpNavigator.Topic>.  
+  
+ Sie können `param` , genauer die <xref:System.Windows.Forms.HelpNavigator.Topic> Befehl. Wenn der angegebene Wert in der `navigator` Parameter ist <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Index>, oder <xref:System.Windows.Forms.HelpNavigator.Find>, muss dieser Wert `null`. Wenn die `navigator` Parameterverweise <xref:System.Windows.Forms.HelpNavigator.Topic>, sollte dieser Wert auf ein Objekt, das den numerischen Wert des anzuzeigenden Themas enthält verweisen.  
+  
+ Die `helpFilePath` Parameter des Formulars C:\path\sample.chm oder /Ordner/Datei.htm haben kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Meldungsfeld mit einer Schaltfläche "Hilfe" angezeigt wird. Klickt der Benutzer die Schaltfläche "Hilfe" die `Mspaint.chm` Hilfe-Datei wird geöffnet und die Hilfe zur Registerkarte "Index" und das Thema identifizierte der `ovals` Schlüsselwort angezeigt werden. Im Beispiel erfordert, dass die `Mspaint.chm` Hilfedatei installiert ist.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#7)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#7)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ - oder -   
+  
+ <paramref name="icon" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ - oder -   
+  
+ Die <paramref name="defaultButton" /> angegeben, ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />beide angegeben <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> und <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ - oder -   
+  
+ <paramref name="buttons" />eine ungültige Kombination von angegebenen <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">Um eine HTML-Hilfedatei über eine HTTP-Anforderung zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Um eine HTML-Hilfedatei, die nicht von einem HTTP-Server bedient zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath, string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath, string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Eine Implementierung von <see cref="T:System.Windows.Forms.IWin32Window" />, die Besitzer des modalen Dialogfelds wird.</param>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <param name="icon">Einer der <see cref="T:System.Windows.Forms.MessageBoxIcon" />-Werte, der angibt, welches Symbol im Meldungsfenster angezeigt werden soll.</param>
+        <param name="defaultButton">Einer der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />-Werte, der die Standardschaltfläche für das Meldungsfenster angibt.</param>
+        <param name="options">Einer der <see cref="T:System.Windows.Forms.MessageBoxOptions" />-Werte, der die Anzeige- und Zuordnungsoptionen für das Meldungsfenster angibt. Sie können 0 (null) übergeben, wenn Sie die Standardwerte verwenden möchten.</param>
+        <param name="helpFilePath">Pfad und Name der Hilfedatei, die angezeigt werden soll, wenn der Benutzer auf die Schaltfläche „Hilfe“ klickt.</param>
+        <param name="keyword">Das Hilfestichwort, das angezeigt wird, wenn der Benutzer auf die Schaltfläche „Hilfe“ klickt.</param>
+        <summary>Zeigt mithilfe der angegebenen Hilfedatei und des angegebenen Hilfestichworts ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung, den angegebenen Schaltflächen, dem angegebenen Symbol, der angegebenen Standardschaltfläche, den angegebenen Optionen und der Schaltfläche „Hilfe“ an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Meldungsfeld wird ein modales Dialogfeld, d. h. keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte auf dem Formular modal außer auftreten kann. Das Programm muss ausblenden oder schließen ein modales Formular (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe in ein anderes Format auftreten kann. Können Sie die `owner` Parameter an ein bestimmtes Objekt implementiert die <xref:System.Windows.Forms.IWin32Window> Schnittstelle, das als Besitzer der obersten Ebene des Dialogfelds fungieren soll.  
+  
+ Klickt der Benutzer auf die Schaltfläche "Hilfe", wird die Hilfe-Datei angegeben, der `helpFilePath` Parameter geöffnet wird, und das Hilfethema für das Schlüsselwort durch identifiziert die `keyword` Parameter angezeigt wird. Das Formular, die im Meldungsfeld (oder das aktive Formular) besitzt auch empfängt die <xref:System.Windows.Forms.Control.HelpRequested> Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Meldungsfeld mit dem ein übergeordnetes Element besitzt, die im Hauptfenster angezeigt wird. Das Meldungsfeld zeigt eine Schaltfläche "Hilfe". Klickt der Benutzer die Schaltfläche "Hilfe" die `Mspaint.chm` Hilfedatei geöffnet wird, und durch das Thema identifiziert die `mspaint.chm::/paint_brush.htm` Schlüsselwort wird angezeigt. Im Beispiel erfordert, dass die `Mspaint.chm` Hilfedatei installiert ist.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#10)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#10)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ - oder -   
+  
+ <paramref name="icon" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ - oder -   
+  
+ Die <paramref name="defaultButton" /> angegeben, ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />beide angegeben <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> und <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ - oder -   
+  
+ <paramref name="buttons" />eine ungültige Kombination von angegebenen <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">Um eine HTML-Hilfedatei über eine HTTP-Anforderung zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Um eine HTML-Hilfedatei, die nicht von einem HTTP-Server bedient zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath, System.Windows.Forms.HelpNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath, valuetype System.Windows.Forms.HelpNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String,System.Windows.Forms.HelpNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+        <Parameter Name="navigator" Type="System.Windows.Forms.HelpNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Eine Implementierung von <see cref="T:System.Windows.Forms.IWin32Window" />, die Besitzer des modalen Dialogfelds wird.</param>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <param name="icon">Einer der <see cref="T:System.Windows.Forms.MessageBoxIcon" />-Werte, der angibt, welches Symbol im Meldungsfenster angezeigt werden soll.</param>
+        <param name="defaultButton">Einer der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />-Werte, der die Standardschaltfläche für das Meldungsfenster angibt.</param>
+        <param name="options">Einer der <see cref="T:System.Windows.Forms.MessageBoxOptions" />-Werte, der die Anzeige- und Zuordnungsoptionen für das Meldungsfenster angibt. Sie können 0 (null) übergeben, wenn Sie die Standardwerte verwenden möchten.</param>
+        <param name="helpFilePath">Pfad und Name der Hilfedatei, die angezeigt werden soll, wenn der Benutzer auf die Schaltfläche „Hilfe“ klickt.</param>
+        <param name="navigator">Einer der <see cref="T:System.Windows.Forms.HelpNavigator" />-Werte.</param>
+        <summary>Zeigt mithilfe der angegebenen Hilfedatei und <see langword="HelpNavigator" /> ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung, den angegebenen Schaltflächen, dem angegebenen Symbol, der angegebenen  Standardschaltfläche, den angegebenen Optionen und der Schaltfläche „Hilfe“ an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Meldungsfeld wird ein modales Dialogfeld, d. h. keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte auf dem Formular modal außer auftreten kann. Das Programm muss ausblenden oder schließen ein modales Formular (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe in ein anderes Format auftreten kann. Können Sie die `owner` Parameter an ein bestimmtes Objekt implementiert die <xref:System.Windows.Forms.IWin32Window> Schnittstelle, die als Fenster der obersten Ebene und der Besitzer des Dialogfelds fungieren soll.  
+  
+ Klickt der Benutzer auf die Schaltfläche "Hilfe", wird die Hilfe-Datei angegeben, der `helpFilePath` Parameter geöffnet wird, und die Hilfeinhalte identifiziert, von der `navigator` Parameter ist hervorgehoben. Das Formular, die im Meldungsfeld (oder das aktive Formular) besitzt auch empfängt die <xref:System.Windows.Forms.Control.HelpRequested> Ereignis.  
+  
+ Kompilierte Hilfedateien Dateien bieten Inhaltsverzeichnis, Indexes, Suche und-Schlüsselwort Links in Seiten. Sie können die folgenden Werte für `navigator`: <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Find>, <xref:System.Windows.Forms.HelpNavigator.Index>, oder <xref:System.Windows.Forms.HelpNavigator.Topic>.  
+  
+ Die `helpFilePath` Parameter des Formulars C:\path\sample.chm oder /Ordner/Datei.htm haben kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Meldungsfeld mit dem ein übergeordnetes Element besitzt, die im Hauptfenster angezeigt wird. Das Meldungsfeld zeigt eine Schaltfläche "Hilfe". Wenn der Benutzer die Schaltfläche "Hilfe" klickt der `Mspaint.chm` Hilfedatei wird geöffnet, und die Hilfe zur Registerkarte "Index" wird angezeigt. Im Beispiel erfordert, dass die `Mspaint.chm` Hilfedatei installiert ist.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#6)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#6)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ - oder -   
+  
+ <paramref name="icon" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ - oder -   
+  
+ Die <paramref name="defaultButton" /> angegeben, ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />beide angegeben <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> und <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ - oder -   
+  
+ <paramref name="buttons" />eine ungültige Kombination von angegebenen <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">Um eine HTML-Hilfedatei über eine HTTP-Anforderung zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Um eine HTML-Hilfedatei, die nicht von einem HTTP-Server bedient zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.DialogResult Show (System.Windows.Forms.IWin32Window owner, string text, string caption, System.Windows.Forms.MessageBoxButtons buttons, System.Windows.Forms.MessageBoxIcon icon, System.Windows.Forms.MessageBoxDefaultButton defaultButton, System.Windows.Forms.MessageBoxOptions options, string helpFilePath, System.Windows.Forms.HelpNavigator navigator, object param);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.DialogResult Show(class System.Windows.Forms.IWin32Window owner, string text, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons, valuetype System.Windows.Forms.MessageBoxIcon icon, valuetype System.Windows.Forms.MessageBoxDefaultButton defaultButton, valuetype System.Windows.Forms.MessageBoxOptions options, string helpFilePath, valuetype System.Windows.Forms.HelpNavigator navigator, object param) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions,System.String,System.Windows.Forms.HelpNavigator,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+        <Parameter Name="icon" Type="System.Windows.Forms.MessageBoxIcon" />
+        <Parameter Name="defaultButton" Type="System.Windows.Forms.MessageBoxDefaultButton" />
+        <Parameter Name="options" Type="System.Windows.Forms.MessageBoxOptions" />
+        <Parameter Name="helpFilePath" Type="System.String" />
+        <Parameter Name="navigator" Type="System.Windows.Forms.HelpNavigator" />
+        <Parameter Name="param" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Eine Implementierung von <see cref="T:System.Windows.Forms.IWin32Window" />, die Besitzer des modalen Dialogfelds wird.</param>
+        <param name="text">Der im Meldungsfenster anzuzeigende Text.</param>
+        <param name="caption">Der in der Titelleiste des Meldungsfensters anzuzeigende Text.</param>
+        <param name="buttons">Ein <see cref="T:System.Windows.Forms.MessageBoxButtons" />-Wert, der angibt, welche Schaltflächen im Meldungsfenster angezeigt werden sollen.</param>
+        <param name="icon">Einer der <see cref="T:System.Windows.Forms.MessageBoxIcon" />-Werte, der angibt, welches Symbol im Meldungsfenster angezeigt werden soll.</param>
+        <param name="defaultButton">Einer der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />-Werte, der die Standardschaltfläche für das Meldungsfenster angibt.</param>
+        <param name="options">Einer der <see cref="T:System.Windows.Forms.MessageBoxOptions" />-Werte, der die Anzeige- und Zuordnungsoptionen für das Meldungsfenster angibt. Sie können 0 (null) übergeben, wenn Sie die Standardwerte verwenden möchten.</param>
+        <param name="helpFilePath">Pfad und Name der Hilfedatei, die angezeigt werden soll, wenn der Benutzer auf die Schaltfläche „Hilfe“ klickt.</param>
+        <param name="navigator">Einer der <see cref="T:System.Windows.Forms.HelpNavigator" />-Werte.</param>
+        <param name="param">Die numerische ID des Hilfethemas, die angezeigt werden soll, wenn der Benutzer auf die Schaltfläche „Hilfe“ klickt.</param>
+        <summary>Zeigt mithilfe der angegebenen Hilfedatei, <see langword="HelpNavigator" /> und dem angegebenen Hilfethema ein Meldungsfenster mit dem angegebenen Text, der angegebenen Beschriftung, den angegebenen Schaltflächen, dem angegebenen Symbol, der angegebenen Standardschaltfläche, den angegebenen Optionen und der Schaltfläche „Hilfe“ an.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Meldungsfeld wird ein modales Dialogfeld, d. h. keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte auf dem Formular modal außer auftreten kann. Das Programm muss ausblenden oder schließen ein modales Formular (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe in ein anderes Format auftreten kann. Können Sie die `owner` Parameter an ein bestimmtes Objekt implementiert die <xref:System.Windows.Forms.IWin32Window> Schnittstelle, die als Fenster der obersten Ebene und der Besitzer des Dialogfelds fungieren soll.  
+  
+ Klickt der Benutzer auf die Schaltfläche "Hilfe", wird die Hilfe-Datei angegeben, der `helpFilePath` Parameter geöffnet wird, und die Hilfeinhalte identifiziert, von der `navigator` Parameter ist hervorgehoben. Das Formular, die im Meldungsfeld (oder das aktive Formular) besitzt auch empfängt die <xref:System.Windows.Forms.Control.HelpRequested> Ereignis.  
+  
+ Kompilierte Hilfedateien Dateien bieten Inhaltsverzeichnis, Indexes, Suche und-Schlüsselwort Links in Seiten. Sie können die folgenden Werte für `navigator`: <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Find>, <xref:System.Windows.Forms.HelpNavigator.Index>, oder <xref:System.Windows.Forms.HelpNavigator.Topic>.  
+  
+ Sie können `param` , genauer die <xref:System.Windows.Forms.HelpNavigator.Topic> Befehl. Wenn der angegebene Wert in der `navigator` Parameter ist <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Index>, oder <xref:System.Windows.Forms.HelpNavigator.Find>, muss dieser Wert `null`. Wenn die `navigator` Parameterverweise <xref:System.Windows.Forms.HelpNavigator.Topic>, sollte dieser Wert auf ein Objekt, das den numerischen Wert des anzuzeigenden Themas enthält verweisen.  
+  
+ Die `helpFilePath` Parameter des Formulars C:\path\sample.chm oder /Ordner/Datei.htm haben kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Meldungsfeld mit dem ein übergeordnetes Element besitzt, die im Hauptfenster angezeigt wird. Das Meldungsfeld zeigt eine Schaltfläche "Hilfe". Klickt der Benutzer die Schaltfläche "Hilfe" die `Mspaint.chm` Hilfe-Datei wird geöffnet und die Hilfe zur Registerkarte "Index" und das Thema identifizierte der `ovals` Schlüsselwort angezeigt werden. Im Beispiel erfordert, dass die `Mspaint.chm` Hilfedatei installiert ist.  
+  
+ [!code-cpp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MessageBox with Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.MessageBox with Help#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CPP/form1.cpp#8)]
+[!code-csharp[System.Windows.Forms.MessageBox with Help#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/CS/form1.cs#8)]
+[!code-vb[System.Windows.Forms.MessageBox with Help#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MessageBox with Help/VB/form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="buttons" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxButtons" />.  
+  
+ - oder -   
+  
+ <paramref name="icon" />ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxIcon" />.  
+  
+ - oder -   
+  
+ Die <paramref name="defaultButton" /> angegeben, ist kein Mitglied der <see cref="T:System.Windows.Forms.MessageBoxDefaultButton" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, zum Anzeigen der <see cref="T:System.Windows.Forms.MessageBox" /> in einem Prozess, die nicht im interaktiven Modus ausgeführt wird. Dadurch wird angegeben, indem die <see cref="P:System.Windows.Forms.SystemInformation.UserInteractive" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" />beide angegeben <see cref="F:System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly" /> und <see cref="F:System.Windows.Forms.MessageBoxOptions.ServiceNotification" />.  
+  
+ - oder -   
+  
+ <paramref name="buttons" />eine ungültige Kombination von angegebenen <see cref="T:System.Windows.Forms.MessageBoxButtons" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+        <permission cref="T:System.Net.WebPermission">Um eine HTML-Hilfedatei über eine HTTP-Anforderung zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Um eine HTML-Hilfedatei, die nicht von einem HTTP-Server bedient zugreifen zu können. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

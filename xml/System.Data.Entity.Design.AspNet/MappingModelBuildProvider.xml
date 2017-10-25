@@ -1,0 +1,82 @@
+<Type Name="MappingModelBuildProvider" FullName="System.Data.Entity.Design.AspNet.MappingModelBuildProvider">
+  <TypeSignature Language="C#" Value="public class MappingModelBuildProvider : System.Web.Compilation.BuildProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MappingModelBuildProvider extends System.Web.Compilation.BuildProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Entity.Design.AspNet.MappingModelBuildProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Compilation.BuildProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Compilation.BuildProviderAppliesTo(System.Web.Compilation.BuildProviderAppliesTo.Code)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt den MSL-Buildanbieter für die ASP.NET-Buildumgebung dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MappingModelBuildProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.AspNet.MappingModelBuildProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Entity.Design.AspNet.MappingModelBuildProvider" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCode">
+      <MemberSignature Language="C#" Value="public override void GenerateCode (System.Web.Compilation.AssemblyBuilder assemblyBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GenerateCode(class System.Web.Compilation.AssemblyBuilder assemblyBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.AspNet.MappingModelBuildProvider.GenerateCode(System.Web.Compilation.AssemblyBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyBuilder" Type="System.Web.Compilation.AssemblyBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyBuilder">Der Assembly-Generator, der auf den vom Buildanbieter generierten Quellcode verweist.</param>
+        <summary>Bettet die MSL-Datei als Ressource des angegebenen Assembly-Generators ein.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResultFlags">
+      <MemberSignature Language="C#" Value="public override System.Web.Compilation.BuildProviderResultFlags GetResultFlags (System.CodeDom.Compiler.CompilerResults results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Web.Compilation.BuildProviderResultFlags GetResultFlags(class System.CodeDom.Compiler.CompilerResults results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.AspNet.MappingModelBuildProvider.GetResultFlags(System.CodeDom.Compiler.CompilerResults)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.BuildProviderResultFlags</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="results" Type="System.CodeDom.Compiler.CompilerResults" />
+      </Parameters>
+      <Docs>
+        <param name="results">Die Kompilierungsergebnisse für den Buildanbieter.</param>
+        <summary>Gibt einen Wert zurück, der beim Erstellen eines Buildanbieters für ein Speichermodell erforderliche Aktionen angibt.</summary>
+        <returns>Der <see cref="F:System.Web.Compilation.BuildProviderResultFlags.ShutdownAppDomainOnChange" />-Wert, der angibt, dass die enthaltende <see cref="T:System.AppDomain" /> entladen und neu gestartet wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

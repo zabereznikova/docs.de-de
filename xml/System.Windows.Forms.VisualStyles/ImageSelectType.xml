@@ -1,0 +1,75 @@
+<Type Name="ImageSelectType" FullName="System.Windows.Forms.VisualStyles.ImageSelectType">
+  <TypeSignature Language="C#" Value="public enum ImageSelectType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ImageSelectType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.ImageSelectType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wenn der visuelle Stil eine andere mehrere-Image-Datei zum Zeichnen eines Elements auswählt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein visueller Stil kann bis zu fünf Dateien mit mehreren Bildern nach einem Element definieren. Diese Bilddateien werden angegeben, indem die <xref:System.Windows.Forms.VisualStyles.FilenameProperty> Werte <xref:System.Windows.Forms.VisualStyles.FilenameProperty.ImageFile1> über <xref:System.Windows.Forms.VisualStyles.FilenameProperty.ImageFile5>. Die <xref:System.Windows.Forms.VisualStyles.ImageSelectType> Werte deuten auf, wenn der visuelle Stil für eine andere Bilddatei Zeichnen des Elements auswählt.  
+  
+ Die <xref:System.Windows.Forms.VisualStyles.ImageSelectType> Werte darstellen, die Rückgabewerte der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetEnumValue%2A?displayProperty=nameWithType> Methode, wenn sie mit einem Argumentwert, der aufgerufen wird <xref:System.Windows.Forms.VisualStyles.EnumProperty?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dpi">
+      <MemberSignature Language="C#" Value="Dpi" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ImageSelectType Dpi = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ImageSelectType.Dpi" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ImageSelectType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abbildung-dateiänderungen basieren auf Punkte pro Zoll (DPI)-Einstellungen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ImageSelectType None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ImageSelectType.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ImageSelectType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Bilddatei wird nicht geändert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="Size" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ImageSelectType Size = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ImageSelectType.Size" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ImageSelectType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abbildung-dateiänderungen basieren auf größeneinstellungen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

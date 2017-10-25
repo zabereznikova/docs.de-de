@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Routing.Configuration">
+  <Docs>
+    <summary>Dieser Namespace beinhaltet Konfigurationsklassen, die von der Windows Communication Foundation (WCF)-Infrastruktur zum Konvertieren von XML in Common Language Runtime (CLR)-Typen verwendet werden. Diese Klassen können auch direkt zu Erweiterungszwecken geändert werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

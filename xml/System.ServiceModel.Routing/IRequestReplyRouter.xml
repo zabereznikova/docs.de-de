@@ -1,0 +1,83 @@
+<Type Name="IRequestReplyRouter" FullName="System.ServiceModel.Routing.IRequestReplyRouter">
+  <TypeSignature Language="C#" Value="public interface IRequestReplyRouter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRequestReplyRouter" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Routing.IRequestReplyRouter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.ServiceContract(Namespace="http://schemas.microsoft.com/netfx/2009/05/routing", SessionMode=System.ServiceModel.SessionMode.Allowed)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Schnittstelle, die erforderlich ist, um Meldungen von Anforderung-Antwort-Channels zu verarbeiten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vertrag hat die folgenden Einstellungen:  
+  
+-   Sitzungen sind zugelassen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginProcessRequest">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginProcessRequest (System.ServiceModel.Channels.Message message, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginProcessRequest(class System.ServiceModel.Channels.Message message, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.IRequestReplyRouter.BeginProcessRequest(System.ServiceModel.Channels.Message,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Action="*", AsyncPattern=true, IsOneWay=false, ReplyAction="*")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu verarbeitende Meldung.</param>
+        <param name="callback">Ein asynchroner Rückrufdelegat, der aufgerufen wird, wenn die Meldungsverarbeitung abgeschlossen wurde.</param>
+        <param name="state">Ein benutzerdefiniertes Zustandsobjekt, das an die Rückrufprozedur übergeben wird.</param>
+        <summary>Initiiert die asynchrone Verarbeitung der Meldung.</summary>
+        <returns>Ein asynchrones Ergebnis, das zum Abfragen von Ergebnissen oder Warten auf Ergebnisse oder für beides verwendet werden kann. Dieser Wert wird auch zum Aufrufen von <see cref="M:System.ServiceModel.Routing.IRequestReplyRouter.EndProcessRequest(System.IAsyncResult)" />benötigt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessRequest">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Message EndProcessRequest (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.Message EndProcessRequest(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.IRequestReplyRouter.EndProcessRequest(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das asynchrone Ergebnis, das vom Aufruf von <see cref="M:System.ServiceModel.Routing.IRequestReplyRouter.BeginProcessRequest(System.ServiceModel.Channels.Message,System.AsyncCallback,System.Object)" /> zurückgegeben wurde.</param>
+        <summary>Beendet die asynchrone Ausführung der Meldungsverarbeitung.</summary>
+        <returns>Die Antwort.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

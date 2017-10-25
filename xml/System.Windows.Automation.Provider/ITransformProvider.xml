@@ -1,0 +1,240 @@
+<Type Name="ITransformProvider" FullName="System.Windows.Automation.Provider.ITransformProvider">
+  <TypeSignature Language="C#" Value="public interface ITransformProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITransformProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.ITransformProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("6829ddc4-4f91-4ffa-b86f-bd3e2987cb4c")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht Methoden und Eigenschaften verfügbar, um dem Benutzeroberflächenautomatisierungs-Client den Zugriff auf Steuerelemente zu ermöglichen, die im zweidimensionalen Raum verschoben, in der Größe geändert oder gedreht werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert ein Benutzeroberflächenautomatisierungs-Anbieter, die unterstützen, muss die <xref:System.Windows.Automation.TransformPattern> -Steuerelementmuster.  
+  
+ Die Unterstützung für dieses Steuerelementmuster ist nicht auf Objekte auf dem Desktop beschränkt. Dieses Steuerelementmuster muss auch von den untergeordneten Elementen eines Containerobjekts implementiert werden, solange die untergeordneten Elemente verschoben, Größe oder innerhalb der Grenzen des Containers frei gedreht werden können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanMove">
+      <MemberSignature Language="C#" Value="public bool CanMove { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanMove" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.ITransformProvider.CanMove" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Steuerelement verschoben werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn das Element bewegt werden kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung dieser Methode für ein Steuerelement, das verschoben werden kann.  
+  
+ [!code-csharp[UIAITransformProvider_snip#CanMove](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAITransformProvider_snip/CSharp/TransformFragment.cs#canmove)]
+ [!code-vb[UIAITransformProvider_snip#CanMove](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAITransformProvider_snip/visualbasic/transformfragment.vb#canmove)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanResize">
+      <MemberSignature Language="C#" Value="public bool CanResize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanResize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.ITransformProvider.CanResize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] -Elements geändert werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn die Größe des Elements geändert werden kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung dieser Methode für ein Steuerelement, dessen Größe angepasst werden kann.  
+  
+ [!code-csharp[UIAITransformProvider_snip#CanResize](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAITransformProvider_snip/CSharp/TransformFragment.cs#canresize)]
+ [!code-vb[UIAITransformProvider_snip#CanResize](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAITransformProvider_snip/visualbasic/transformfragment.vb#canresize)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRotate">
+      <MemberSignature Language="C#" Value="public bool CanRotate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRotate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.ITransformProvider.CanRotate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Steuerelement gedreht werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn das Element gedreht werden kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung dieser Methode für ein Steuerelement, das nicht gedreht werden kann.  
+  
+ [!code-csharp[UIAITransformProvider_snip#CanRotate](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAITransformProvider_snip/CSharp/TransformFragment.cs#canrotate)]
+ [!code-vb[UIAITransformProvider_snip#CanRotate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAITransformProvider_snip/visualbasic/transformfragment.vb#canrotate)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="public void Move (double x, double y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Move(float64 x, float64 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITransformProvider.Move(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Absolute Bildschirmkoordinaten des linken Rands des Steuerelements.</param>
+        <param name="y">Absolute Bildschirmkoordinaten des oberen Rands des Steuerelements.</param>
+        <summary>Verschiebt das Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Objekt kann nicht verschoben, geändert oder gedreht werden, dass seine resultierende Bildschirmposition vollständig außerhalb der Koordinaten des Containers und kann nicht zugegriffen werden, um Tastatur- oder Maustastenzustand wäre. Z. B. wird Wenn ein Fenster der obersten Ebene vollständig außerhalb des Bildschirms verschoben wird oder ein untergeordnetes Objekt außerhalb der Grenzen des Containers verschoben. In diesen Fällen wird das Objekt so nahe bei den angeforderten Bildschirmkoordinaten wie möglich mit den oberen oder linken Koordinaten außer Kraft gesetzt, um innerhalb der Containergrenzen werden eingefügt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine mögliche Implementierung dieser Methode für ein benutzerdefiniertes Steuerelement, das verschoben werden kann.  
+  
+ [!code-csharp[UIAITransformProvider_snip#Move](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAITransformProvider_snip/CSharp/TransformFragment.cs#move)]
+ [!code-vb[UIAITransformProvider_snip#Move](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAITransformProvider_snip/visualbasic/transformfragment.vb#move)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn die <see cref="P:System.Windows.Automation.Provider.ITransformProvider.CanMove" />-Eigenschaft „false“ ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resize">
+      <MemberSignature Language="C#" Value="public void Resize (double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Resize(float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITransformProvider.Resize(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="width">Die neue Breite des Fensters in Pixeln.</param>
+        <param name="height">Die neue Höhe des Fensters in Pixeln.</param>
+        <summary>Ändert die Größe des Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei einem Aufruf in einem Steuerelement, das Teilen Bereiche unterstützt, diese Methode kann den Nebeneffekt, Ändern der Größe von anderen Bereichen zusammenhängenden haben.  
+  
+ Ein Objekt kann nicht verschoben, geändert oder gedreht werden, dass seine resultierende Bildschirmposition vollständig außerhalb der Koordinaten des Containers und kann nicht zugegriffen werden, um Tastatur- oder Maustastenzustand wäre. Z. B. wird Wenn ein Fenster der obersten Ebene vollständig außerhalb des Bildschirms verschoben wird oder ein untergeordnetes Objekt außerhalb der Grenzen des Containers verschoben. In diesen Fällen wird das Objekt so nahe bei den angeforderten Bildschirmkoordinaten wie möglich mit den oberen oder linken Koordinaten außer Kraft gesetzt, um innerhalb der Containergrenzen werden eingefügt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine mögliche Implementierung dieser Methode für ein benutzerdefiniertes Steuerelement, das Größe angepasst werden kann.  
+  
+ [!code-csharp[UIAITransformProvider_snip#Resize](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAITransformProvider_snip/CSharp/TransformFragment.cs#resize)]
+ [!code-vb[UIAITransformProvider_snip#Resize](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAITransformProvider_snip/visualbasic/transformfragment.vb#resize)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn die <see cref="P:System.Windows.Automation.Provider.ITransformProvider.CanResize" />-Eigenschaft „false“ ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Rotate">
+      <MemberSignature Language="C#" Value="public void Rotate (double degrees);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Rotate(float64 degrees) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITransformProvider.Rotate(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="degrees" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="degrees">Die Gradzahl, um die das Steuerelement gedreht wird. Bei einer positiven Zahl wird im Uhrzeigersinn gedreht; bei einer negativen Zahl wird gegen den Uhrzeigersinn gedreht.</param>
+        <summary>Dreht das Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Objekt kann nicht verschoben, geändert oder gedreht werden, dass seine resultierende Bildschirmposition vollständig außerhalb der Koordinaten des Containers und kann nicht zugegriffen werden, um Tastatur- oder Maustastenzustand wäre. Z. B. wird Wenn ein Fenster der obersten Ebene vollständig außerhalb des Bildschirms verschoben wird oder ein untergeordnetes Objekt außerhalb der Grenzen des Containers verschoben. In diesen Fällen wird das Objekt so nahe bei den angeforderten Bildschirmkoordinaten wie möglich mit den oberen oder linken Koordinaten außer Kraft gesetzt, um innerhalb der Containergrenzen werden eingefügt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine mögliche Implementierung dieser Methode für ein benutzerdefiniertes Steuerelement, das nicht gedreht werden kann.  
+  
+ [!code-csharp[UIAITransformProvider_snip#Rotate](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAITransformProvider_snip/CSharp/TransformFragment.cs#rotate)]
+ [!code-vb[UIAITransformProvider_snip#Rotate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAITransformProvider_snip/visualbasic/transformfragment.vb#rotate)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn die <see cref="P:System.Windows.Automation.Provider.ITransformProvider.CanRotate" />-Eigenschaft „false“ ist.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

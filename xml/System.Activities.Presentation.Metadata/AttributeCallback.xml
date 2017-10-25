@@ -1,0 +1,32 @@
+<Type Name="AttributeCallback" FullName="System.Activities.Presentation.Metadata.AttributeCallback">
+  <TypeSignature Language="C#" Value="public delegate void AttributeCallback(AttributeCallbackBuilder builder);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AttributeCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Metadata.AttributeCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="builder" Type="System.Activities.Presentation.Metadata.AttributeCallbackBuilder" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="builder">Ein <see cref="T:System.Activities.Presentation.Metadata.AttributeCallbackBuilder" />, der verwendet werden kann, um Attribute hinzuzufügen.</param>
+    <summary>Wird aufgerufen, wenn Attribute für einen Typ benötigt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Rückruf ermöglicht die verzögerte Registrierung von Metadatenattributen sowie die Bereitstellung von Code, der dynamisch bestimmt, welche Attribute angewendet werden sollen. Dieser Rückruf wird für die <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCallback%2A>-Methode der <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder>-Klasse bereitgestellt.  
+  
+ <xref:System.Activities.Presentation.Metadata.AttributeCallbackBuilder>-Objekte können Attribute nur für den Typ erstellen, der Metadaten anfordert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

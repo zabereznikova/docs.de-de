@@ -1,0 +1,35 @@
+<Type Name="VisualStyleElement+Spin" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+Spin">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.Spin" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/Spin extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.Spin" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Klassen, ermöglichen <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> Schaltflächensteuerelement Objekte für die Pfeile eines Drehfeld (auch bekannt als auf-ab-Steuerelement). Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Spin> Klasse bietet eine Grundlage, die in der folgenden Klassen definiert werden:  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Spin.Down>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Spin.DownHorizontal>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Spin.Up>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Spin.UpHorizontal>  
+  
+ Jede dieser Klassen enthält eine oder mehrere Eigenschaften, die Zurückgeben einer <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für jeden Status des Pfeils Schaltfläche Drehfeld dem Klassennamen angegeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

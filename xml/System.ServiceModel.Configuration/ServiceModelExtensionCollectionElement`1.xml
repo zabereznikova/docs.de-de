@@ -1,0 +1,608 @@
+<Type Name="ServiceModelExtensionCollectionElement&lt;TServiceModelExtensionElement&gt;" FullName="System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement&lt;TServiceModelExtensionElement&gt;">
+  <TypeSignature Language="C#" Value="public abstract class ServiceModelExtensionCollectionElement&lt;TServiceModelExtensionElement&gt; : System.Configuration.ConfigurationElement, System.Collections.Generic.ICollection&lt;TServiceModelExtensionElement&gt;, System.Collections.Generic.IEnumerable&lt;TServiceModelExtensionElement&gt; where TServiceModelExtensionElement : ServiceModelExtensionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServiceModelExtensionCollectionElement`1&lt;(class System.ServiceModel.Configuration.ServiceModelExtensionElement) TServiceModelExtensionElement&gt; extends System.Configuration.ConfigurationElement implements class System.Collections.Generic.ICollection`1&lt;!TServiceModelExtensionElement&gt;, class System.Collections.Generic.IEnumerable`1&lt;!TServiceModelExtensionElement&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TServiceModelExtensionElement">
+      <Constraints>
+        <BaseTypeName>System.ServiceModel.Configuration.ServiceModelExtensionElement</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;TServiceModelExtensionElement&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;TServiceModelExtensionElement&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TServiceModelExtensionElement">Ein ServiceModel-Erweiterungselement.</typeparam>
+    <summary>Eine abstrakte Basisklasse für eine Auflistung von <see cref="T:System.ServiceModel.Configuration.ServiceModelExtensionElement" />-Objekten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual void Add (TServiceModelExtensionElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(!TServiceModelExtensionElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="TServiceModelExtensionElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein hinzuzufügendes <see cref="T:System.ServiceModel.Configuration.ServiceModelExtensionElement" />.</param>
+        <summary>Fügt diesem Konfigurationsabschnitt das angegebene Element hinzu.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Die Konfigurationsdatei ist schreibgeschützt.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="element" /> ist bereits in der Auflistung vorhanden.  
+  
+ - oder -   
+  
+ Der durch <paramref name="element" /> angegebene Elementtyp ist nicht zulässig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanAdd">
+      <MemberSignature Language="C#" Value="public virtual bool CanAdd (TServiceModelExtensionElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanAdd(!TServiceModelExtensionElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.CanAdd(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="TServiceModelExtensionElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein hinzuzufügendes <see cref="T:System.ServiceModel.Configuration.ServiceModelExtensionElement" />.</param>
+        <summary>Fügt diesem Abschnitt ein neues Verhaltenselement hinzu und gibt einen Wert zurück, der anzeigt, ob der Vorgang erfolgreich war.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle Elemente in dieser Auflistung. Diese Methode kann nicht vererbt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode leert die Auflistung und setzt ihre <xref:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement%601.Count%2A>-Eigenschaft auf 0 zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Die Konfigurationsdatei ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (TServiceModelExtensionElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(!TServiceModelExtensionElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="TServiceModelExtensionElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das zu suchende Element.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Auflistung ein bestimmtes Element enthält. Diese Methode kann nicht vererbt werden.</summary>
+        <returns>
+          <see langword="true" />, wenn die Auflistung das angegebene Element enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public bool ContainsKey (string elementName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsKey(string elementName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">Der Name des Elements, nach dem gesucht werden soll.</param>
+        <summary>Ermittelt, ob diese Auflistung ein Element mit dem angegebenen Namen enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn die Auflistung ein Element mit dem angegebenen Namen enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="elementName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public bool ContainsKey (Type elementType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsKey(class System.Type elementType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.ContainsKey(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="elementType">Der Typ des zu suchenden Elements.</param>
+        <summary>Ermittelt, ob diese Auflistung ein Element mit dem angegebenen Typ enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn die Auflistung ein Element mit dem angegebenen Typ enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="elementName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (TServiceModelExtensionElement[] elements, int start);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(!TServiceModelExtensionElement[] elements, int32 start) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.CopyTo(`0[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elements" Type="TServiceModelExtensionElement[]" />
+        <Parameter Name="start" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="elements">Ein eindimensionales Array, das das Ziel der aus der Auflistung kopierten Elemente ist. Für das Array muss eine nullbasierte Indizierung verwendet werden</param>
+        <param name="start">Der nullbasierte Index in der <c>Elemente</c> Array, an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die gesamte Auflistung in ein kompatibles eindimensionales Array, wobei am angegebenen Index im Zielarray begonnen wird. Diese Methode kann nicht vererbt werden.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="start" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in dieser Auflistung ab.</summary>
+        <value>Die Anzahl der Elemente in dieser Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeElement">
+      <MemberSignature Language="C#" Value="protected override void DeserializeElement (System.Xml.XmlReader reader, bool serializeCollectionKey);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DeserializeElement(class System.Xml.XmlReader reader, bool serializeCollectionKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.DeserializeElement(System.Xml.XmlReader,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="serializeCollectionKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, der aus der Konfigurationsdatei liest.</param>
+        <param name="serializeCollectionKey">
+          <see langword="true" />, um nur die Auflistungsschlüsseleigenschaften zu serialisieren, andernfalls <see langword="false" />.</param>
+        <summary>Liest XML aus der Konfigurationsdatei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;TServiceModelExtensionElement&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!TServiceModelExtensionElement&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1/&lt;GetEnumerator&gt;d__37))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;TServiceModelExtensionElement&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen <see cref="T:System.Collections.IEnumerator" /> zurück, der eine Auflistung durchläuft. Diese Methode kann nicht vererbt werden.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsModified">
+      <MemberSignature Language="C#" Value="protected override bool IsModified ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsModified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.IsModified" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob dieses Konfigurationselement geändert wurde, seit es zuletzt gespeichert oder geladen wurde, wenn es in einer abgeleiteten Klasse implementiert wurde.</summary>
+        <returns>
+          <see langword="true" />, wenn das Element geändert wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bestimmt, ob dieses Objekt in die Konfigurationsdatei geschrieben wird. Wenn der Rückgabewert gleich `false` ist, wird davon ausgegangen, dass die Konfigurationsdatei den aktuellen Zustand des Elements darstellt.  
+  
+ Standardmäßig gibt diese Eigenschaft den Wert `true` zurück, nachdem eine Eigenschaft durch den Indexer auf dieses Objekt festgelegt worden ist.  
+  
+ Sie sollten diese Methode überschreiben, um eine benutzerdefinierte Angabe über den Zustand dieses -Elements bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public TServiceModelExtensionElement this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TServiceModelExtensionElement Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TServiceModelExtensionElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Elements in der Auflistung, das abgerufen werden soll.</param>
+        <summary>Ruft das Element am angegebenen Index in der Auflistung ab.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Configuration.ServiceModelExtensionElement" />, das das Element am angegebenen Index in der Auflistung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public TServiceModelExtensionElement this[Type extensionType] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TServiceModelExtensionElement Item(class System.Type)" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.Item(System.Type)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TServiceModelExtensionElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extensionType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="extensionType">Der abzurufende Typ des Elements in der Auflistung.</param>
+        <summary>Ruft das Element des angegebenen Typs in der Auflistung ab.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Configuration.ServiceModelExtensionElement" />, das das Element am angegebenen Index in der Auflistung darstellt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="extensionType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="extensionType" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserializeUnrecognizedElement">
+      <MemberSignature Language="C#" Value="protected override bool OnDeserializeUnrecognizedElement (string elementName, System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnDeserializeUnrecognizedElement(string elementName, class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.OnDeserializeUnrecognizedElement(System.String,System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">Der Name des unbekannten Unterelements.</param>
+        <param name="reader">Der für die Deserialisierung verwendete <see cref="T:System.Xml.XmlReader" />.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob während der Deserialisierung ein unbekanntes Element aufgetreten ist.</summary>
+        <returns>
+          <see langword="true" />, wenn bei der Deserialisierung ein unbekanntes Element aufgetreten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz ab, die eine Auflistung von <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</summary>
+        <value>Eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz, die eine Sammlung mit <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die entweder Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (TServiceModelExtensionElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(!TServiceModelExtensionElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="TServiceModelExtensionElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, das aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt das angegebene Element aus der Auflistung. Diese Methode kann nicht vererbt werden.</summary>
+        <returns>
+          <see langword="true" />, wenn das Element gefunden und entfernt wurde, andernfalls <see langword="false" />. Diese Methode gibt <see langword="false" />, wenn das Element nicht in der Auflistung gefunden wird.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="protected override void Reset (System.Configuration.ConfigurationElement parentElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Reset(class System.Configuration.ConfigurationElement parentElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.Reset(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="parentElement">Das übergeordnete <see cref="T:System.Configuration.ConfigurationElement" />-Objekt des aktuellen Elements oder <see langword="null" />, wenn dies die oberste Ebene ist.</param>
+        <summary>Setzt diese Auflistung auf ihren unveränderten Zustand zurück, wenn sie in einer abgeleiteten Klasse überschrieben wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardverhalten dieser Methode ist es, alle geänderten Elemente zu löschen, die eine Auflistung enthalten, und die geänderten Elemente auf Werte festzulegen, die von ihrer übergeordneten Konfigurationsdatei angegeben wurden. Wenn ein Element in der Auflistung über untergeordnete Elemente verfügt, wird diese Methode auch für diese untergeordneten Elemente aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetModified">
+      <MemberSignature Language="C#" Value="protected override void ResetModified ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ResetModified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.ResetModified" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Wert der <see cref="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.IsModified" />-Eigenschaft auf <see langword="false" /> zurück, wenn er in einer abgeleiteten Klasse überschrieben wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt fest, ob die Elemente dieser Auflistung in die Konfigurationsdatei geschrieben werden, wenn die Konfiguration aktualisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsModified">
+      <MemberSignature Language="C#" Value="protected void SetIsModified ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetIsModified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.SetIsModified" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die <see cref="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.IsModified" />-Eigenschaft für diese Auflistung fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReadOnly">
+      <MemberSignature Language="C#" Value="protected override void SetReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.SetReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die interne <see langword="IsReadOnly" />-Eigenschaft für diese Auflistung und für alle Unterelemente fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;TServiceModelExtensionElement&gt;.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.Generic.ICollection&lt;TServiceModelExtensionElement&gt;.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;TServiceModelExtensionElement&gt;.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.System#Collections#Generic#ICollection&lt;TServiceModelExtensionElement&gt;#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1" /> schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1" /> schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine schreibgeschützte Auflistung gestattet nach dem Erstellen der Auflistung weder das Hinzufügen noch das Ändern oder Entfernen von Elementen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen <see cref="T:System.Collections.IEnumerator" /> zurück, der eine Auflistung durchläuft. Diese Methode kann nicht vererbt werden.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unmerge">
+      <MemberSignature Language="C#" Value="protected override void Unmerge (System.Configuration.ConfigurationElement sourceElement, System.Configuration.ConfigurationElement parentElement, System.Configuration.ConfigurationSaveMode saveMode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Unmerge(class System.Configuration.ConfigurationElement sourceElement, class System.Configuration.ConfigurationElement parentElement, valuetype System.Configuration.ConfigurationSaveMode saveMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelExtensionCollectionElement`1.Unmerge(System.Configuration.ConfigurationElement,System.Configuration.ConfigurationElement,System.Configuration.ConfigurationSaveMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceElement" Type="System.Configuration.ConfigurationElement" />
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+        <Parameter Name="saveMode" Type="System.Configuration.ConfigurationSaveMode" />
+      </Parameters>
+      <Docs>
+        <param name="sourceElement">Ein <see cref="T:System.Configuration.ConfigurationElement" />-Objekt auf der aktuellen Ebene, das eine Ansicht der zusammengeführten Eigenschaften enthält.</param>
+        <param name="parentElement">Das übergeordnete <see cref="T:System.Configuration.ConfigurationElement" />-Objekt des aktuellen Elements oder <see langword="null" />, wenn dies die oberste Ebene ist.</param>
+        <param name="saveMode">Ein <see cref="T:System.Configuration.ConfigurationSaveMode" />-Enumerationswert, der bestimmt, welche Eigenschaftswerte eingeschlossen werden sollen.</param>
+        <summary>Kehrt die Auswirkungen der Zusammenführung von Konfigurationsinformationen aus verschiedenen Ebenen der Konfigurationshierarchie um.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kehrt die Auswirkungen der Zusammenführung von Konfigurationsinformationen aus verschiedenen Ebenen der Konfigurationshierarchie um. Dadurch kann vor der Serialisierung die auf der aktuellen Hierarchieebene festgelegte Konfiguration von der unterschieden werden, die auf übergeordneten Ebenen festgelegt ist.  
+  
+ Diese Methode wird vom System für ein neues temporäres Element aufgerufen, um das übergeordnete Objekt und das Quellobjekt zu vergleichen. Auf der Grundlage des `saveMode`-Werts wird dann das temporäre Objekt festgelegt, das die Daten enthält, die serialisiert werden müssen. [!INCLUDE[crabout](~/includes/crabout-md.md)] zu den Speichermodi finden Sie unter <xref:System.Configuration.ConfigurationSaveMode.Minimal>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

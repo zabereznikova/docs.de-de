@@ -1,0 +1,126 @@
+<Type Name="WebBrowserProgressChangedEventArgs" FullName="System.Windows.Forms.WebBrowserProgressChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class WebBrowserProgressChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebBrowserProgressChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.WebBrowserProgressChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.WebBrowser.ProgressChanged" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie behandeln können die <xref:System.Windows.Forms.WebBrowser.ProgressChanged?displayProperty=nameWithType> Ereignis implementiert eine Statusleiste Navigation für das <xref:System.Windows.Forms.WebBrowser> Steuerelement in Internet Explorer ähnelt. Verwenden der <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs.CurrentProgress%2A> -Eigenschaft können Sie die Anzahl der Bytes zu bestimmen, die erfolgreich heruntergeladen wurden. Verwenden der <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs.MaximumProgress%2A> -Eigenschaft können Sie bestimmen die Anzahl der Bytes, die als Download zur Verfügung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.WebBrowser.ProgressChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.WebBrowser> mit dem Namen `WebBrowser1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.WebBrowser.ProgressChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#652](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#652)]
+ [!code-vb[System.Windows.Forms.EventExamples#652](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#652)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebBrowserProgressChangedEventArgs (long currentProgress, long maximumProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 currentProgress, int64 maximumProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowserProgressChangedEventArgs.#ctor(System.Int64,System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="currentProgress" Type="System.Int64" />
+        <Parameter Name="maximumProgress" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="currentProgress">Die Anzahl der Bytes, die bereits geladen werden.</param>
+        <param name="maximumProgress">Die Gesamtanzahl der Bytes, die geladen werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.WebBrowserProgressChangedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentProgress">
+      <MemberSignature Language="C#" Value="public long CurrentProgress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 CurrentProgress" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowserProgressChangedEventArgs.CurrentProgress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Bytes, die heruntergeladen wurden.</summary>
+        <value>Die Anzahl der Bytes, die geladen wurden oder -1, um anzugeben, dass der Download abgeschlossen ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft zum Anzeigen des aktuelle Navigationsstatus in einem <xref:System.Windows.Forms.ProgressBar> Steuerelement. Verwenden der <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs.MaximumProgress%2A> -Eigenschaft zum Bestimmen der Gesamtanzahl der Bytes, die als Download zur Verfügung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.WebBrowser.ProgressChanged?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.WebBrowser> mit dem Namen `WebBrowser1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.WebBrowser.ProgressChanged?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#652](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#652)]
+ [!code-vb[System.Windows.Forms.EventExamples#652](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#652)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumProgress">
+      <MemberSignature Language="C#" Value="public long MaximumProgress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaximumProgress" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowserProgressChangedEventArgs.MaximumProgress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtanzahl der Bytes im geladenen Dokument ab.</summary>
+        <value>Die Gesamtanzahl der Bytes, die geladen werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft zum Anzeigen des aktuelle Navigationsstatus in einem <xref:System.Windows.Forms.ProgressBar> Steuerelement. Verwenden der <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs.CurrentProgress%2A> -Eigenschaft können Sie die Anzahl der Bytes zu bestimmen, die erfolgreich heruntergeladen wurden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.WebBrowser.ProgressChanged?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.WebBrowser> mit dem Namen `WebBrowser1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.WebBrowser.ProgressChanged?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#652](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#652)]
+ [!code-vb[System.Windows.Forms.EventExamples#652](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#652)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,426 @@
+<Type Name="ZipArchiveEntry" FullName="System.IO.Compression.ZipArchiveEntry">
+  <TypeSignature Language="C#" Value="public class ZipArchiveEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ZipArchiveEntry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Compression.ZipArchiveEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Compression</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine komprimierte Datei in einem Zip-Archiv dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Zip-Archiv enthält einen Eintrag für jede komprimierten Datei. Die <xref:System.IO.Compression.ZipArchiveEntry> -Klasse können Sie die Eigenschaften eines Eintrags untersuchen, und öffnen oder löschen Sie den Eintrag. Wenn Sie einen Eintrag öffnen, können Sie die komprimierte Datei durch Schreiben in den Datenstrom für die komprimierte Datei ändern.  
+  
+ Die Methoden zum Bearbeiten von Zip-Archive und deren-Dateieinträge werden auf drei Klassen verteilt: <xref:System.IO.Compression.ZipFile>, <xref:System.IO.Compression.ZipArchive> und <xref:System.IO.Compression.ZipArchiveEntry>.  
+  
+|An...|Empfohlen...|  
+|---------|----------|  
+|Erstellen Sie eine Zip-Archiv in einem Verzeichnis|<xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>|  
+|Extrahieren Sie den Inhalt der Zip-Archiv in ein Verzeichnis|<xref:System.IO.Compression.ZipFile.ExtractToDirectory%2A?displayProperty=nameWithType>|  
+|Fügen Sie neuer Dateien zu einem vorhandenen Zip-Archiv hinzu|<xref:System.IO.Compression.ZipArchive.CreateEntry%2A?displayProperty=nameWithType>|  
+|Rufen Sie eine Datei in eine Zip-Archiv|<xref:System.IO.Compression.ZipArchive.GetEntry%2A?displayProperty=nameWithType>|  
+|Rufen Sie aller Dateien in Zip-Archiv ab|<xref:System.IO.Compression.ZipArchive.Entries%2A?displayProperty=nameWithType>|  
+|Zum Öffnen eines Datenstroms in eine einzelne Datei, die in einem Zip-Archiv enthalten sind|<xref:System.IO.Compression.ZipArchiveEntry.Open%2A?displayProperty=nameWithType>|  
+|Löschen einer Datei aus einem Zip-Archiv|<xref:System.IO.Compression.ZipArchiveEntry.Delete%2A?displayProperty=nameWithType>|  
+  
+ Verweisen auf die `System.IO.Compression.FileSystem` -Assembly in Ihrem Projekt zugreifen Sie zwei Erweiterungsmethoden für die <xref:System.IO.Compression.ZipArchiveEntry> Klasse. Diese Methoden sind <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%28System.IO.Compression.ZipArchiveEntry%2CSystem.String%29> und <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%28System.IO.Compression.ZipArchiveEntry%2CSystem.String%2CSystem.Boolean%29>, und sie ermöglichen Ihnen, den Inhalt des Eintrags, der eine Datei dekomprimiert werden. Die `System.IO.Compression.FileSystem` Assembly ist nicht verfügbar in [!INCLUDE[win8](~/includes/win8-md.md)]. In [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] -apps können Sie den Inhalt von einem Archiv dekomprimiert werden mit <xref:System.IO.Compression.DeflateStream> oder <xref:System.IO.Compression.GZipStream>, oder Sie können die [!INCLUDE[wrt](~/includes/wrt-md.md)] Typen [Komprimierungsprogramm](http://go.microsoft.com/fwlink/p/?LinkId=246357) und [Dekomprimierungsprogramm](http://go.microsoft.com/fwlink/?LinkId=246358) auf Komprimieren und Dekomprimieren von Dateien.  
+  
+   
+  
+## Examples  
+ Im erste Beispiel wird gezeigt, wie einen neuen Eintrag im Zip-Archiv zu erstellen und in diese schreiben.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveMode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchiveMode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/vb/program1.vb#1)]  
+  
+ Im zweite Beispiel wird gezeigt, wie die <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%28System.IO.Compression.ZipArchiveEntry%2CSystem.String%29> Erweiterungsmethode. Sie müssen verweisen die `System.IO.Compression.FileSystem` Assembly im Projekt für den Code ausführen.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchive#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchive/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchive#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchive/vb/program1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Archive">
+      <MemberSignature Language="C#" Value="public System.IO.Compression.ZipArchive Archive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Compression.ZipArchive Archive" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchiveEntry.Archive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Compression.ZipArchive</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zip-Archiv ab, zu dem der Eintrag gehört.</summary>
+        <value>Das Zip-Archiv, zu der der Eintrag gehört oder <see langword="null" /> , wenn der Eintrag gelöscht wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompressedLength">
+      <MemberSignature Language="C#" Value="public long CompressedLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 CompressedLength" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchiveEntry.CompressedLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die komprimierte Größe des unkomprimierten Eintrags im ZIP-Archiv ab.</summary>
+        <value>Die Größe des komprimierten Eintrags im ZIP-Archiv.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nicht abgerufen werden, wenn der Modus, um festgelegt ist <xref:System.IO.Compression.ZipArchiveMode.Create>, oder das-Modus festgelegt ist, um <xref:System.IO.Compression.ZipArchiveMode.Update> und der Eintrag wurde geöffnet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt das Abrufen von Einträgen im Zip-Archiv, und bewerten die Eigenschaften der Einträge. Er verwendet die <xref:System.IO.Compression.ZipArchiveEntry.Name%2A> Eigenschaft, um den Namen des Eintrags, anzuzeigen und die <xref:System.IO.Compression.ZipArchiveEntry.Length%2A> und <xref:System.IO.Compression.ZipArchiveEntry.CompressedLength%2A> Eigenschaften zu berechnen, wie viel die Datei komprimiert wurde.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveEntry#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchiveEntry#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/vb/program1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Wert der Eigenschaft ist nicht verfügbar, da der Eintrag geändert wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.ZipArchiveEntry.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht den Eintrag aus dem Zip-Archiv.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.IOException">Der Eintrag ist bereits geöffnet zum Lesen oder schreiben.</exception>
+        <exception cref="T:System.NotSupportedException">Das Zip-Archiv für diesen Eintrag in einem Modus geöffnet wurde außer <see cref="F:System.IO.Compression.ZipArchiveMode.Update" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Zip-Archiv für diesen Eintrag wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExternalAttributes">
+      <MemberSignature Language="C#" Value="public int ExternalAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ExternalAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchiveEntry.ExternalAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchiveEntry.FullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den relativen Pfad des Eintrags im ZIP-Archiv ab.</summary>
+        <value>Der relative Pfad des Eintrags im Zip-Archiv.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A> Eigenschaft enthält den relativen Pfad, einschließlich der Hierarchie Unterverzeichnis eines Eintrags im Zip-Archiv. (Im Gegensatz dazu die <xref:System.IO.Compression.ZipArchiveEntry.Name%2A> Eigenschaft enthält nur den Namen des Eintrags und enthält keine Hierarchie Unterverzeichnis.) Angenommen, Sie zwei Einträge in einem Zip-Archiv erstellen, indem Sie mit der <xref:System.IO.Compression.ZipFileExtensions.CreateEntryFromFile%2A> Methode, und geben Sie `NewEntry.txt` als Namen für den ersten Eintrag und `AddedFolder\\NewEntry.txt` für den zweiten Eintrag müssen beide Einträge `NewEntry.txt` in der <xref:System.IO.Compression.ZipArchiveEntry.Name%2A> Eigenschaft. Der erste Eintrag müssen zudem `NewEntry.txt` in der <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A> Eigenschaft verwenden, aber der zweite Eintrag haben `AddedFolder\\NewEntry.txt` in der <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A> Eigenschaft.  
+  
+ Sie können eine beliebige Zeichenfolge angeben, wie der Pfad eines Eintrags, einschließlich Zeichenfolgen, die ungültige und absolute Pfade angeben. Aus diesem Grund die <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A> Eigenschaft enthalten einen Wert, der nicht ordnungsgemäß formatiert ist. Ein ungültiger oder absoluter Pfad möglicherweise eine Ausnahme ausgelöst, wenn Sie den Inhalt der Zip-Archiv zu extrahieren.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Iteration durch den Inhalt der ZIP-Datei, und Extrahieren von Dateien, die die Erweiterung ".txt" enthalten.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchive#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchive/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchive#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchive/vb/program1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastWriteTime">
+      <MemberSignature Language="C#" Value="public DateTimeOffset LastWriteTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset LastWriteTime" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchiveEntry.LastWriteTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den letzten Zeitpunkt ab, zu dem der Eintrag im Zip-Archiv geändert wurde, oder legt diesen fest.</summary>
+        <value>Der letzte Zeitpunkt, an dem der Eintrag im ZIP-Archiv geändert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines neuen Eintrags aus einer vorhandenen Datei durch Aufrufen der <xref:System.IO.Compression.ZipFileExtensions.CreateEntryFromFile%2A> -Methode, die <xref:System.IO.Compression.ZipArchiveEntry.LastWriteTime%2A> -Eigenschaft, für der Eintrag automatisch den Wert der letzten Ausführung die Datei geändert wurde. Beim Erstellen eines neuen Eintrags programmgesteuert durch Aufrufen der <xref:System.IO.Compression.ZipArchive.CreateEntry%2A> -Methode, die <xref:System.IO.Compression.ZipArchiveEntry.LastWriteTime%2A> Eigenschaft für den Eintrag mit der Zeit der Ausführung automatisch festgelegt ist. Wenn Sie den Eintrag ändern, müssen Sie explizit festlegen der <xref:System.IO.Compression.ZipArchiveEntry.LastWriteTime%2A> Eigenschaft, wenn der Wert entsprechend der Uhrzeit der letzten Änderung verwendet werden soll.  
+  
+ Beim Festlegen dieser Eigenschaft die <xref:System.DateTimeOffset> konvertierte Wert ist ein Zeitstempelformat, das für die zip-Archiven spezifisch ist. Dieses Format unterstützt eine Auflösung von zwei Sekunden. Der frühesten zulässige Wert 1. Januar 1980 ist 0:00:00 (Mitternacht). Die neuesten zulässige Wert 2107 wird zum 31. Dezember 23:59:58 (eine Sekunde vor Mitternacht). Wenn der Wert für den Zeitpunkt des letzten Schreibzugriffs nicht gültig ist, gibt die Eigenschaft den Standardwert 1980 1. Januar 0:00:00 (Mitternacht).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie einen Eintrag im Zip-Archiv zu öffnen, ändern und Festlegen der <xref:System.IO.Compression.ZipArchiveEntry.LastWriteTime%2A> Eigenschaft zur aktuellen Zeit.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveEntry#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/cs/program2.cs#2)]
+ [!code-vb[System.IO.Compression.ZipArchiveEntry#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/vb/program2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Der Versuch zum Festlegen dieser Eigenschaft fehlgeschlagen, weil die Zip-Archiv für den Eintrag wird <see cref="F:System.IO.Compression.ZipArchiveMode.Read" /> Modus.</exception>
+        <exception cref="T:System.IO.IOException">Das Archivmodus festgelegt ist, um <see cref="F:System.IO.Compression.ZipArchiveMode.Create" />.  
+  
+ \- oder –  
+  
+ Das Archivmodus festgelegt ist, um <see cref="F:System.IO.Compression.ZipArchiveMode.Update" /> und der Eintrag wurde geöffnet.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Es wurde versucht, diese Eigenschaft auf einen Wert festgelegt, der entweder 1980 vor dem 1. Januar ist 0:00:00 (Mitternacht) oder eine höhere 2107 31. Dezember 23:59:58 (eine Sekunde vor Mitternacht).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchiveEntry.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des unkomprimierten Eintrags im ZIP-Archiv ab.</summary>
+        <value>Die Größe des unkomprimierten Eintrags im ZIP-Archiv.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nicht abgerufen werden, wenn der Modus, um festgelegt ist <xref:System.IO.Compression.ZipArchiveMode.Create>, oder das-Modus festgelegt ist, um <xref:System.IO.Compression.ZipArchiveMode.Update> und der Eintrag wurde geöffnet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt das Abrufen von Einträgen aus einem Zip-Archiv, und bewerten die Eigenschaften der Einträge. Er verwendet die <xref:System.IO.Compression.ZipArchiveEntry.Name%2A> Eigenschaft, um den Namen des Eintrags, anzuzeigen und die <xref:System.IO.Compression.ZipArchiveEntry.Length%2A> und <xref:System.IO.Compression.ZipArchiveEntry.CompressedLength%2A> Eigenschaften zu berechnen, wie viel die Datei komprimiert wurde.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveEntry#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchiveEntry#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/vb/program1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Wert der Eigenschaft ist nicht verfügbar, da der Eintrag geändert wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchiveEntry.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Dateinamen des Eintrags im ZIP-Archiv ab.</summary>
+        <value>Der Dateiname des Eintrags im ZIP-Archiv.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Compression.ZipArchiveEntry.Name%2A> Eigenschaft enthält, die Teil der <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A> -Eigenschaft, die das letzte Verzeichnistrennzeichen folgt (\\), und enthält keine Hierarchie Unterverzeichnis. Angenommen, Sie zwei Einträge in einem Zip-Archiv erstellen, indem Sie mit der <xref:System.IO.Compression.ZipFileExtensions.CreateEntryFromFile%2A> Methode, und geben Sie `NewEntry.txt` als Namen für den ersten Eintrag und `AddedFolder\\NewEntry.txt` für den zweiten Eintrag müssen beide Einträge `NewEntry.txt` in der <xref:System.IO.Compression.ZipArchiveEntry.Name%2A> Eigenschaft. Der erste Eintrag müssen zudem `NewEntry.txt` in der <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A> Eigenschaft verwenden, aber der zweite Eintrag haben `AddedFolder\\NewEntry.txt` in der <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Abrufen von Einträgen aus einem Zip-Archiv und bewerten die Eigenschaften der Einträge. Er verwendet die <xref:System.IO.Compression.ZipArchiveEntry.Name%2A> Eigenschaft, um den Namen des Eintrags, anzuzeigen und die <xref:System.IO.Compression.ZipArchiveEntry.Length%2A> und <xref:System.IO.Compression.ZipArchiveEntry.CompressedLength%2A> Eigenschaften zu berechnen, wie viel die Datei komprimiert wurde.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveEntry#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchiveEntry#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/vb/program1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public System.IO.Stream Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.ZipArchiveEntry.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Öffnet den Eintrag aus dem Zip-Archiv.</summary>
+        <returns>Der Stream, der den Inhalt des Eintrags darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, um den Zugriff für einen Eintrag im Zip-Archiv. Sie können nach dem Abrufen des Streams, auslesen oder in den Datenstrom schreibt. Wenn Sie in den Stream schreiben, werden die Änderungen an den Eintrag im Zip-Archiv angezeigt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie einen neuen Eintrag zu erstellen, öffnen Sie ihn mit der <xref:System.IO.Compression.ZipArchiveEntry.Open%2A> -Methode und Schreiben in den Stream.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveMode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchiveMode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/vb/program1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Eintrag ist bereits in der derzeit zum Schreiben geöffnet.  
+  
+ - oder -   
+  
+ Das Element wurde aus dem Archiv gelöscht.  
+  
+ - oder -   
+  
+ Das Archiv für diesen Eintrag wurde geöffnet, mit der <see cref="F:System.IO.Compression.ZipArchiveMode.Create" /> Modus, und dieser Eintrag wurde bereits um geschrieben.</exception>
+        <exception cref="T:System.IO.InvalidDataException">Der Eintrag ist entweder aus dem Archiv fehlt oder ist beschädigt und kann nicht gelesen werden.  
+  
+ - oder -   
+  
+ Der Eintrag wurde mit einer Komprimierungsmethode komprimiert, die nicht unterstützt wird.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Zip-Archiv für diesen Eintrag wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.ZipArchiveEntry.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den relativen Pfad des Eintrags im Zip-Archiv ab.</summary>
+        <returns>Der relative Pfad des Eintrags, der der Wert gespeichert, der <see cref="P:System.IO.Compression.ZipArchiveEntry.FullName" /> Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,102 @@
+<Type Name="LoadOption" FullName="System.Data.LoadOption">
+  <TypeSignature Language="C#" Value="public enum LoadOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LoadOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.LoadOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Steuert, wie die Werte aus der Datenquelle zu vorhandenen Zeilen angewendet werden, wenn mit der <see cref="Overload:System.Data.DataTable.Load" /> oder <see cref="Overload:System.Data.DataSet.Load" /> Methode.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OverwriteChanges">
+      <MemberSignature Language="C#" Value="OverwriteChanges" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.LoadOption OverwriteChanges = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.LoadOption.OverwriteChanges" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.LoadOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die empfangenen Werten für diese Zeile werden in den aktuellen Wert und den ursprünglichen Wert Versionen der Daten für jede Spalte geschrieben werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreserveChanges">
+      <MemberSignature Language="C#" Value="PreserveChanges" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.LoadOption PreserveChanges = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.LoadOption.PreserveChanges" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.LoadOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die empfangenen Werten für diese Zeile werden in der Originalversion der Wert der einzelnen Spalten geschrieben werden. Die aktuelle Version der Daten in jeder Spalte wird nicht geändert werden.  Dies ist die Standardeinstellung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Upsert">
+      <MemberSignature Language="C#" Value="Upsert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.LoadOption Upsert = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.LoadOption.Upsert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.LoadOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die eingehenden Werte für diese Zeile werden auf die aktuelle Version der einzelnen Spalten geschrieben werden. Die ursprüngliche Version der Daten für jede Spalte wird nicht geändert werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,605 @@
+<Type Name="DbColumn" FullName="System.Data.Common.DbColumn">
+  <TypeSignature Language="C#" Value="public abstract class DbColumn" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DbColumn extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.DbColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Spalte mit einer Datenquelle dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DbColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Common.DbColumn" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowDBNull">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; AllowDBNull { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; AllowDBNull" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.AllowDBNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen NULL-Wert auf, der angibt, ob <see langword="DBNull" />-Werte in dieser Spalte zulässig sind, oder gibt <see langword="null" /> zurück, wenn kein Wert festgelegt ist. Kann entweder auf <see langword="true" /> oder <see langword="false" /> festgelegt werden, was angibt, ob <see langword="DBNull" />-Werte in dieser Spalte zulässig sind, oder <see langword="null" /> (<see langword="Nothing" /> in Visual Basic), wenn er in einer abgeleiteten Klasse außer Kraft gesetzt wird.</summary>
+        <value>Gibt <see langword="true" /> zurück, wenn <see langword="DBNull" />-Werte in dieser Spalte nicht zulässig sind; andernfalls <see langword="false" />. Wenn kein Wert festgelegt wurde, gibt es einen NULL-Verweis zurück (<see langword="Nothing" /> in Visual Studio).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseCatalogName">
+      <MemberSignature Language="C#" Value="public string BaseCatalogName { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseCatalogName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.BaseCatalogName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Katalognamen auf, der der Datenquelle zugeordnet ist; andernfalls <see langword="null" />, wenn kein Wert festgelegt ist. Kann beim Überschreiben in einer abgeleiteten Klasse auf den Katalognamen oder <see langword="null" /> festgelegt werden.</summary>
+        <value>Der Katalogname, der der Datenquelle zugeordnet ist; andernfalls ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), wenn kein Wert festgelegt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseColumnName">
+      <MemberSignature Language="C#" Value="public string BaseColumnName { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseColumnName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.BaseColumnName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Basisspalte ab; ist andernfalls <see langword="null" />, wenn kein Wert festgelegt ist. Kann beim Überschreiben in einer abgeleiteten Klasse auf den Spaltennamen oder <see langword="null" /> festgelegt werden.</summary>
+        <value>Der Name der Basisspalte; andernfalls ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), wenn kein Wert festgelegt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseSchemaName">
+      <MemberSignature Language="C#" Value="public string BaseSchemaName { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseSchemaName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.BaseSchemaName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schemanamen auf, der der Datenquelle zugeordnet ist; andernfalls <see langword="null" />, wenn kein Wert festgelegt ist. Kann beim Überschreiben in einer abgeleiteten Klasse auf den Schemanamen oder <see langword="null" /> festgelegt werden.</summary>
+        <value>Der Schemaname, der mit der Datenquelle verknüpft ist; andernfalls ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), wenn kein Wert festgelegt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseServerName">
+      <MemberSignature Language="C#" Value="public string BaseServerName { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseServerName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.BaseServerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Servernamen ab, der der Spalte zugeordnet ist; andernfalls <see langword="null" />, wenn kein Wert festgelegt ist. Kann beim Überschreiben in einer abgeleiteten Klasse auf den Servernamen oder <see langword="null" /> festgelegt werden.</summary>
+        <value>Der Servername, der der Spalte zugeordnet ist; andernfalls ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), wenn kein Wert festgelegt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseTableName">
+      <MemberSignature Language="C#" Value="public string BaseTableName { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseTableName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.BaseTableName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Tabellennamen im Schema ab. Andernfalls <see langword="null" />, wenn kein Wert festgelegt wurde. Kann entweder auf den Tabellennamen oder <see langword="null" /> festgelegt werden, wenn es in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <value>Der Tabellenname ist das Schema. Andernfalls ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), wenn kein Wert festgelegt wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnName">
+      <MemberSignature Language="C#" Value="public string ColumnName { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ColumnName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.ColumnName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Spalte ab. Kann auf den Namen der Spalte beim Überschreiben in einer abgeleiteten Klasse festgelegt werden.</summary>
+        <value>Der Name der Spalte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnOrdinal">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; ColumnOrdinal { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; ColumnOrdinal" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.ColumnOrdinal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position der Spalte (ordinal) in der Zeile der Datenquelle ab; andernfalls <see langword="null" />, falls kein Wert festgelegt ist. Sie kann entweder auf einen <see langword="int32" />-Wert festgelegt werden, um die Spaltenposition anzugeben, oder auf <see langword="null" />, wenn sie in einer abgeleiteten Klasse außer Kraft gesetzt wird.</summary>
+        <value>Ein <see langword="int32" />-Wert für die Ordnungszahl der Spalte; andernfalls ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), wenn kein Wert festgelegt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnSize">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; ColumnSize { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; ColumnSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.ColumnSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe der Spalte ab. Ist andernfalls <see langword="null" />, wenn kein Wert festgelegt ist. Sie kann entweder auf einen <see langword="int32" />-Wert festgelegt werden, um die Spaltengröße anzugeben, oder auf <see langword="null" />, wenn sie in einer abgeleiteten Klasse außer Kraft gesetzt wird.</summary>
+        <value>Ein <see langword="int32" /> Wert für die Spaltengröße; andernfalls eine Null-Verweis (<see langword="Nothing" /> in Visual Basic), wenn kein Wert festgelegt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataType">
+      <MemberSignature Language="C#" Value="public Type DataType { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DataType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.DataType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Typ der in der Spalte gespeicherten Daten zurück. Kann festgelegt werden, um eine <see cref="T:System.Type" /> -Objekt, das den Typ der Daten in der Spalte beim Überschreiben in einer abgeleiteten Klasse darstellt.</summary>
+        <value>Ein <see cref="T:System.Type" />-Objekt, das den in der Spalte enthaltenen Datentyp darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTypeName">
+      <MemberSignature Language="C#" Value="public string DataTypeName { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.DataTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Datentyps ab; andernfalls <see langword="null" />, wenn kein Wert festgelegt wurde. Kann entweder auf den Datentypnamen oder <see langword="null" /> festgelegt werden, wenn es in einer abgeleiteten Klasse überschrieben wird.</summary>
+        <value>Der Name des Datentyps; andernfalls ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), wenn kein Wert festgelegt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAliased">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsAliased { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsAliased" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.IsAliased" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen NULL-Wert auf, der angibt, ob diese Spalte ein Alias ist, oder gibt <see langword="null" /> zurück, wenn kein Wert festgelegt ist. Kann entweder auf <see langword="true" /> oder <see langword="false" /> festgelegt werden, was angibt, ob die Spalte ein Alias ist, oder <see langword="null" /> (<see langword="Nothing" /> in Visual Basic), wenn er in einer abgeleiteten Klasse außer Kraft gesetzt wird.</summary>
+        <value>Gibt <see langword="true" /> zurück, wenn diese Spalte ein Alias ist, andernfalls <see langword="false" />. Wenn kein Wert festgelegt wurde, gibt es einen NULL-Verweis zurück (<see langword="Nothing" /> in Visual Studio).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAutoIncrement">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsAutoIncrement { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsAutoIncrement" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.IsAutoIncrement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen NULL-Wert auf, der angibt, ob Werte in dieser Spalte automatisch inkrementiert werden, oder gibt <see langword="null" /> zurück, wenn kein Wert festgelegt ist. Kann entweder auf <see langword="true" /> oder <see langword="false" /> festgelegt werden, was angibt, ob Werte in dieser Spalte automatisch inkrementiert werden, oder <see langword="null" /> (<see langword="Nothing" /> in Visual Basic), wenn er in einer abgeleiteten Klasse außer Kraft gesetzt wird.</summary>
+        <value>Gibt <see langword="true" /> zurück, wenn Werte in dieser Spalte automatisch inkrementiert werden; andernfalls <see langword="false" />. Wenn kein Wert festgelegt wurde, gibt es einen NULL-Verweis zurück (<see langword="Nothing" /> in Visual Studio).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExpression">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsExpression { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.IsExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen NULL-Wert auf, der angibt, ob diese Spalte ein Ausdruck ist, oder gibt <see langword="null" /> zurück, wenn kein Wert festgelegt ist. Kann entweder auf <see langword="true" /> oder <see langword="false" /> festgelegt werden, was angibt, ob die Spalte ein Ausdruck ist, oder <see langword="null" /> (<see langword="Nothing" /> in Visual Basic), wenn er in einer abgeleiteten Klasse außer Kraft gesetzt wird.</summary>
+        <value>Gibt <see langword="true" /> zurück, wenn diese Spalte ein Ausdruck ist, andernfalls <see langword="false" />. Wenn kein Wert festgelegt wurde, gibt es einen NULL-Verweis zurück (<see langword="Nothing" /> in Visual Studio).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHidden">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsHidden { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsHidden" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.IsHidden" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen NULL-Wert auf, der angibt, ob diese Spalte ausgeblendet ist oder <see langword="null" /> zurückgibt, wenn kein Wert festgelegt ist. Kann entweder auf <see langword="true" /> oder <see langword="false" /> festgelegt werden, was angibt, ob die Spalte ausgeblendet ist, oder <see langword="null" /> (<see langword="Nothing" /> in Visual Basic), wenn er in einer abgeleiteten Klasse außer Kraft gesetzt wird.</summary>
+        <value>Gibt <see langword="true" /> zurück, wenn die Spalte ausgeblendet ist, andernfalls <see langword="false" />. Wenn kein Wert festgelegt wurde, gibt es einen NULL-Verweis zurück (<see langword="Nothing" /> in Visual Studio).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIdentity">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsIdentity { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.IsIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen NULL-Wert auf, der angibt, ob diese Spalte eine Identität ist, oder gibt <see langword="null" /> zurück, wenn kein Wert festgelegt ist. Kann entweder auf <see langword="true" /> oder <see langword="false" /> festgelegt werden, was angibt, ob die Spalte eine Identität ist, oder <see langword="null" /> (<see langword="Nothing" /> in Visual Basic), wenn er in einer abgeleiteten Klasse außer Kraft gesetzt wird.</summary>
+        <value>Gibt <see langword="true" /> zurück, wenn diese Spalte eine Identität ist, andernfalls <see langword="false" />. Wenn kein Wert festgelegt wurde, gibt es einen NULL-Verweis zurück (<see langword="Nothing" /> in Visual Studio).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKey">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsKey { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsKey" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.IsKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen NULL-Wert auf, der angibt, ob diese Spalte ein Schlüssel ist oder gibt <see langword="null" /> zurück, wenn kein Wert festgelegt ist. Kann entweder auf <see langword="true" /> oder <see langword="false" /> festgelegt werden, was angibt, ob die Spalte ein Schlüssel ist, oder <see langword="null" /> (<see langword="Nothing" /> in Visual Basic), wenn er in einer abgeleiteten Klasse außer Kraft gesetzt wird.</summary>
+        <value>Gibt <see langword="true" /> zurück, wenn diese Spalte ein Schlüssel ist, andernfalls <see langword="false" />. Wenn kein Wert festgelegt wurde, gibt es einen NULL-Verweis zurück (<see langword="Nothing" /> in Visual Studio).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLong">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsLong { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsLong" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.IsLong" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen NULL-Wert auf, der angibt, ob diese Spalte lange Daten enthält, oder gibt <see langword="null" /> zurück, wenn kein Wert festgelegt ist. Kann entweder auf <see langword="true" /> oder <see langword="false" /> festgelegt werden, was angibt, ob die Spalte lange Daten enthält, oder <see langword="null" /> (<see langword="Nothing" /> in Visual Basic), wenn er in einer abgeleiteten Klasse außer Kraft gesetzt wird.</summary>
+        <value>Gibt <see langword="true" /> zurück, wenn diese Spalte lange Daten enthält; andernfalls <see langword="false" />. Wenn kein Wert festgelegt wurde, gibt es einen NULL-Verweis zurück (<see langword="Nothing" /> in Visual Studio).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsReadOnly { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen NULL-Wert auf, der angibt, ob diese Spalte schreibgeschützt ist oder <see langword="null" /> zurückgibt, wenn kein Wert festgelegt ist. Kann entweder auf <see langword="true" /> oder <see langword="false" /> festgelegt werden, was angibt, ob die Spalte schreibgeschützt ist, oder <see langword="null" /> (<see langword="Nothing" /> in Visual Basic), wenn er in einer abgeleiteten Klasse außer Kraft gesetzt wird.</summary>
+        <value>Gibt <see langword="true" /> zurück, wenn die Spalte schreibgeschützt ist, andernfalls <see langword="false" />. Wenn kein Wert festgelegt wurde, gibt es einen NULL-Verweis zurück (<see langword="Nothing" /> in Visual Studio).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnique">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsUnique { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsUnique" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.IsUnique" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen NULL-Wert auf, der angibt, ob eine eindeutige Einschränkung für diese Spalte gilt oder gibt <see langword="null" /> zurück, wenn kein Wert festgelegt ist. Kann entweder auf <see langword="true" /> oder <see langword="false" /> festgelegt werden, was angibt, ob eine eindeutige Einschränkung für diese Spalte gilt, oder <see langword="null" /> (<see langword="Nothing" /> in Visual Basic), wenn er in einer abgeleiteten Klasse außer Kraft gesetzt wird.</summary>
+        <value>Gibt <see langword="true" /> zurück, wenn eine eindeutige Einschränkung für diese Spalte gilt; andernfalls <see langword="false" />. Wenn kein Wert festgelegt wurde, gibt es einen NULL-Verweis zurück (<see langword="Nothing" /> in Visual Studio).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual object this[string property] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="property">Der Spalteneigenschaftenname.</param>
+        <summary>Ruft das Objekt auf Grundlage des Spalteneigenschaftennamens ab.</summary>
+        <value>Das Objekt auf Grundlage des Spalteneigenschaftennamens.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumericPrecision">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; NumericPrecision { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; NumericPrecision" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.NumericPrecision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die numerische Präzision der Spaltendaten ab; andernfalls <see langword="null" />, wenn kein Fest angegeben wurde. Kann entweder auf einen <see langword="int32" />-Wert festgelegt werden, um die numerische Präzision der Spaltendaten anzugeben, oder auf <see langword="null" />, wenn sie in einer abgeleiteten Klasse außer Kraft gesetzt wird.</summary>
+        <value>Ein <see langword="int32" /> -Wert, der die Genauigkeit des ausgewählten Spalte gibt an, ob die Daten numerisch ist; andernfalls, ein null-Verweis (<see langword="Nothing" /> in Visual Basic), wenn kein Wert festgelegt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumericScale">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; NumericScale { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; NumericScale" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.NumericScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen auf NULL-festlegbaren <see langword="int32" />-Wert ab, der entweder <see langword="null" /> oder den numerischen Bereich der Spaltendaten zurückgibt. Kann festgelegt werden, entweder <see langword="null" /> oder ein <see langword="int32" /> Wert für die numerischen Dezimalstellen der Spaltendaten beim Überschreiben in einer abgeleiteten Klasse.</summary>
+        <value>Ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), wenn kein Wert festgelegt wurde. Andernfalls ein <see langword="int32" />-Wert, der den Bereich der Spaltendaten angibt, wenn die Daten numerisch sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UdtAssemblyQualifiedName">
+      <MemberSignature Language="C#" Value="public string UdtAssemblyQualifiedName { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UdtAssemblyQualifiedName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbColumn.UdtAssemblyQualifiedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den durch die Assembly qualifizierten Namen des <see cref="T:System.Type" />-Objekts ab, das den Datentyp in der Spalte darstellt; andernfalls <see langword="null" />, wenn kein Wert festgelegt ist. Kann beim Überschreiben in einer abgeleiteten Klasse auf den durch die Assembly qualifizierten Namen oder <see langword="null" /> festgelegt werden.</summary>
+        <value>Der durch die Assembly qualifizierte Name des <see cref="T:System.Type" />-Objekts, das den Datentyp in der Spalte darstellt; andernfalls ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), wenn kein Wert festgelegt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

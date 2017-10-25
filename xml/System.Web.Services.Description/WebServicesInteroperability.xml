@@ -1,0 +1,145 @@
+<Type Name="WebServicesInteroperability" FullName="System.Web.Services.Description.WebServicesInteroperability">
+  <TypeSignature Language="C#" Value="public sealed class WebServicesInteroperability" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebServicesInteroperability extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.WebServicesInteroperability" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Web.Services.Description.WebServicesInteroperability" /> -Klasse enthält Methoden zum Überprüfen, ob für einen bestimmten Webdienst oder Dienste entspricht einem bestimmten Web Services Interoperability (WS-I) Organisation-Spezifikation.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der WS-I veröffentlicht nicht Spezifikationen für Dienste, um die Interoperabilität von Webdiensten über Plattformen hinweg zu fördern.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="CheckConformance">
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Überprüft, ob für einen bestimmten Webdienst oder Dienste entspricht einem bestimmten WS-ich-Spezifikation und enthält eine Liste mit allen Verstößen, die es findet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der WS-I veröffentlicht nicht Spezifikationen für Dienste, um die Interoperabilität von Webdiensten über Plattformen hinweg zu fördern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CheckConformance">
+      <MemberSignature Language="C#" Value="public static bool CheckConformance (System.Web.Services.WsiProfiles claims, System.Web.Services.Description.ServiceDescription description, System.Web.Services.Description.BasicProfileViolationCollection violations);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool CheckConformance(valuetype System.Web.Services.WsiProfiles claims, class System.Web.Services.Description.ServiceDescription description, class System.Web.Services.Description.BasicProfileViolationCollection violations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.WebServicesInteroperability.CheckConformance(System.Web.Services.WsiProfiles,System.Web.Services.Description.ServiceDescription,System.Web.Services.Description.BasicProfileViolationCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claims" Type="System.Web.Services.WsiProfiles" />
+        <Parameter Name="description" Type="System.Web.Services.Description.ServiceDescription" />
+        <Parameter Name="violations" Type="System.Web.Services.Description.BasicProfileViolationCollection" />
+      </Parameters>
+      <Docs>
+        <param name="claims">Ein Mitglied <see cref="T:System.Web.Services.WsiProfiles" /> , die eine Web services Interoperabilitätsspezifikation angibt.</param>
+        <param name="description">Ein <see cref="T:System.Web.Services.Description.ServiceDescription" /> , die einen Webdienst beschreibt.</param>
+        <param name="violations">Ein <see cref="T:System.Web.Services.Description.BasicProfileViolationCollection" /> , ob Verstöße gegen die gefundenen enthält.</param>
+        <summary>Überprüft, ob für einen bestimmten Webdienst oder Dienste entspricht einem bestimmten WS-ich-Spezifikation und enthält eine Liste mit allen Verstößen, die es findet.</summary>
+        <returns>
+          <see langword="true" />Wenn der Webdienst von beschrieben <paramref name="description" /> entspricht der Spezifikation Web Services Interoperability erkennbar <paramref name="claims" />andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der WS-I veröffentlicht nicht Spezifikationen für Dienste, um die Interoperabilität von Webdiensten über Plattformen hinweg zu fördern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckConformance">
+      <MemberSignature Language="C#" Value="public static bool CheckConformance (System.Web.Services.WsiProfiles claims, System.Web.Services.Description.ServiceDescriptionCollection descriptions, System.Web.Services.Description.BasicProfileViolationCollection violations);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool CheckConformance(valuetype System.Web.Services.WsiProfiles claims, class System.Web.Services.Description.ServiceDescriptionCollection descriptions, class System.Web.Services.Description.BasicProfileViolationCollection violations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.WebServicesInteroperability.CheckConformance(System.Web.Services.WsiProfiles,System.Web.Services.Description.ServiceDescriptionCollection,System.Web.Services.Description.BasicProfileViolationCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claims" Type="System.Web.Services.WsiProfiles" />
+        <Parameter Name="descriptions" Type="System.Web.Services.Description.ServiceDescriptionCollection" />
+        <Parameter Name="violations" Type="System.Web.Services.Description.BasicProfileViolationCollection" />
+      </Parameters>
+      <Docs>
+        <param name="claims">Ein Mitglied <see cref="T:System.Web.Services.WsiProfiles" /> , die eine Web services Interoperabilitätsspezifikation angibt.</param>
+        <param name="descriptions">Ein <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" /> enthält Beschreibungen der Web-Dienst.</param>
+        <param name="violations">Ein <see cref="T:System.Web.Services.Description.BasicProfileViolationCollection" /> , ob Verstöße gegen die gefundenen enthält.</param>
+        <summary>Überprüft, ob für einen bestimmten Webdienst oder Dienste entspricht einem bestimmten WS-ich-Spezifikation und enthält eine Liste mit allen Verstößen, die es findet.</summary>
+        <returns>
+          <see langword="true" />Wenn die Web-dienstbeschreibungen in enthalten <paramref name="descriptions" /> entsprechen der Spezifikation Web Services Interoperability erkennbar <paramref name="claims" />; <see langword="false" /> andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der WS-I veröffentlicht nicht Spezifikationen für Dienste, um die Interoperabilität von Webdiensten über Plattformen hinweg zu fördern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckConformance">
+      <MemberSignature Language="C#" Value="public static bool CheckConformance (System.Web.Services.WsiProfiles claims, System.Web.Services.Description.WebReference webReference, System.Web.Services.Description.BasicProfileViolationCollection violations);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool CheckConformance(valuetype System.Web.Services.WsiProfiles claims, class System.Web.Services.Description.WebReference webReference, class System.Web.Services.Description.BasicProfileViolationCollection violations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.WebServicesInteroperability.CheckConformance(System.Web.Services.WsiProfiles,System.Web.Services.Description.WebReference,System.Web.Services.Description.BasicProfileViolationCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claims" Type="System.Web.Services.WsiProfiles" />
+        <Parameter Name="webReference" Type="System.Web.Services.Description.WebReference" />
+        <Parameter Name="violations" Type="System.Web.Services.Description.BasicProfileViolationCollection" />
+      </Parameters>
+      <Docs>
+        <param name="claims">Ein Mitglied <see cref="T:System.Web.Services.WsiProfiles" /> , die eine Web services Interoperabilitätsspezifikation angibt.</param>
+        <param name="webReference">Ein <see cref="T:System.Web.Services.Description.WebReference" /> , die einen Webdienst beschreibt.</param>
+        <param name="violations">Ein <see cref="T:System.Web.Services.Description.BasicProfileViolationCollection" /> , ob Verstöße gegen die gefundenen enthält.</param>
+        <summary>Überprüft, ob für einen bestimmten Webdienst oder Dienste entspricht einem bestimmten WS-ich-Spezifikation und enthält eine Liste mit allen Verstößen, die es findet.</summary>
+        <returns>
+          <see langword="true" />Wenn der Webdienst von beschrieben <paramref name="webReference" /> entspricht der Spezifikation Web Services Interoperability erkennbar <paramref name="claims" />; <see langword="false" /> andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der WS-I veröffentlicht nicht Spezifikationen für Dienste, um die Interoperabilität von Webdiensten über Plattformen hinweg zu fördern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

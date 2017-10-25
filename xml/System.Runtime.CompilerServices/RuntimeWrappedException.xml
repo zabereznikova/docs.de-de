@@ -1,0 +1,126 @@
+<Type Name="RuntimeWrappedException" FullName="System.Runtime.CompilerServices.RuntimeWrappedException">
+  <TypeSignature Language="C#" Value="public sealed class RuntimeWrappedException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit RuntimeWrappedException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.RuntimeWrappedException" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Umschließt eine Ausnahme, die nicht von abgeleitet ist die <see cref="T:System.Exception" /> Klasse. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Sprachen, z. B. C++, können Sie Ausnahmen eines beliebigen verwalteten Typs ausgelöst werden soll.  Andere Sprachen, z. B. Microsoft c# und Visual Basic erfordert, dass alle ausgelösten Ausnahme abgeleitet werden die <xref:System.Exception> Klasse.  Um die Kompatibilität zwischen Sprachen zu verwalten, die common Language Runtime (CLR) dient als Wrapper für Objekte, die nicht von abgeleitet sind, <xref:System.Exception> in einem <xref:System.Runtime.CompilerServices.RuntimeWrappedException> Objekt.  
+  
+ Sie können die <xref:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute> Klasse, um anzugeben, ob Ausnahmen im Catch-Blöcken und Ausnahmefiltern umschlossen, für eine Assembly werden sollen.  Viele Sprachcompiler, z. B. die Microsoft c# und Visual Basic-Compiler, Anwenden dieses Attribut standardmäßig an Textumbruchverhalten.  
+  
+ Beachten Sie, dass die Common Language Runtime Ausnahmen weiterhin umschließt, selbst wenn Sie mithilfe der <xref:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute> Klasse, um anzugeben, dass Sie nicht eingeschlossen werden sollen.  In diesem Fall werden Ausnahmen nur innerhalb von Catch-Blöcken und Ausnahmefilter nicht eingeschlossen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Auslösen einer <xref:System.String> Objekt als eine Ausnahme in C++, und fangen sie mit einer <xref:System.Runtime.CompilerServices.RuntimeWrappedException> Objekt.  
+  
+ [!code-cpp[System.Runtime.CompilerServices.RuntimeWrappedException#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Runtime.CompilerServices.RuntimeWrappedException/cpp/sample.cpp#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeWrappedException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt, das die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Das <see cref="T:System.Runtime.Serialization.StreamingContext" />-Objekt, das die Kontextinformationen für die Quelle oder das Ziel enthält.</param>
+        <summary>Legt das <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit Informationen zur Ausnahme fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.CompilerServices.RuntimeWrappedException.GetObjectData%2A> -Methode legt eine <xref:System.Runtime.Serialization.SerializationInfo> Objekt mit allen Daten des Ausnahmeobjekts für die Serialisierung vorgesehen. Während der Deserialisierung wird die Ausnahme aus der über den Stream übertragenen `SerializationInfo` wiederhergestellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="info" />-Parameter ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="WrappedException">
+      <MemberSignature Language="C#" Value="public object WrappedException { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object WrappedException" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das vom umschlossene der <see cref="T:System.Runtime.CompilerServices.RuntimeWrappedException" /> Objekt.</summary>
+        <value>Das Objekt, das vom umschlossene der <see cref="T:System.Runtime.CompilerServices.RuntimeWrappedException" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> Eigenschaft ruft ein Objekt, das als Ausnahme in einer anderen Sprache, die Ausnahmen, die nicht ausgelöst wurde von abgeleitet sind, können die <xref:System.Exception> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

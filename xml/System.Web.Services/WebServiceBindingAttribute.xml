@@ -1,0 +1,303 @@
+<Type Name="WebServiceBindingAttribute" FullName="System.Web.Services.WebServiceBindingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class WebServiceBindingAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebServiceBindingAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.WebServiceBindingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Deklariert eine Bindung, die eine oder mehrere XML-Webdienstmethoden definiert. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Bindung ist von Web Services Description Language (WSDL) definiert eine Schnittstelle ähnelt insofern, dass es sich um eine konkrete Reihe von Vorgängen definiert. Jede XML-Webdienstmethode ist ein Vorgang innerhalb einer bestimmten Bindung. XML-Webdienstmethoden sind Elemente von der standardbindung für einen XML-Webdienst oder einer angegebenen Bindung eine <xref:System.Web.Services.WebServiceBindingAttribute> auf eine Klasse implementieren eines XML-Webdiensts angewendet. Ein XML-Webdienst kann mehrere Bindungen implementieren, durch Anwenden von mehreren <xref:System.Web.Services.WebServiceBindingAttribute> -Attribute verwenden, um einen XML-Webdienst.  
+  
+ Mindestens einmal <xref:System.Web.Services.WebServiceAttribute> Attribute gelten für einen XML-Webdienst eine <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> oder <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute> auf einzelne XML-Webdienstmethoden an, der durch eine bestimmte XML-Webdienstmethode implementierten Bindungsvorgang angewendet werden können. Legen Sie die <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.Binding%2A> Eigenschaft <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> oder <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute> die Bindung an eine XML-Webdienstmethode einen Vorgang für eine implementiert wird.  
+  
+   
+  
+## Examples  
+ Der folgende XML-Webdienst implementiert Vorgänge von vier Bindungen. Insbesondere der XML-Webdienst deklariert drei Bindungen, die durch Anwenden von drei Vorgänge für implementiert <xref:System.Web.Services.WebServiceBindingAttribute> -Attribute verwenden, um den XML-Webdienst.  
+  
+ Um anzugeben, welche Bindung eine XML-Webdienstmethode einen Vorgang implementiert eine <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> auf die einzelnen XML-Webdienstmethoden angewendet wird, mit Ausnahme von `DefaultBindingMethod`. Indem Sie eine Bindung für nicht angeben `DefaultBindingMethod`, einen Vorgang für die standardbindung für den XML-Webdienst implementiert wird.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebServiceBindingAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.WebServiceBindingAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.WebServiceBindingAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebServiceBindingAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.WebServiceBindingAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Bindung, der eine XML-Webdienstmethode einen Vorgang implementiert wird. Legt die <see cref="P:System.Web.Services.WebServiceBindingAttribute.Name" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.WebServiceBindingAttribute" /> -Klasse den Namen der Bindung, die die XML-Webdienstmethode implementiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor dient zum Angeben eines Namens für eine Bindung, die in der XML-Webdienst auf angewendet wird, und es ist ein Mitglied der Standardnamespace definiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Bindung mit dem Namen `LocalBinding` , definiert ist, der `BindingSample` XML-Webdienst.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebServiceBindingAttribute (string name, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.WebServiceBindingAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Bindung, der eine XML-Webdienstmethode einen Vorgang implementiert wird. Legt die <see cref="P:System.Web.Services.WebServiceBindingAttribute.Name" />-Eigenschaft fest.</param>
+        <param name="ns">Der Namespace der Bindung zugeordnet wird. Legt die <see cref="P:System.Web.Services.WebServiceBindingAttribute.Namespace" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.WebServiceBindingAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor dient zum Angeben eines Namens für eine Bindung, die in der XML-Webdienst, den er angewendet wird, und ist ein Mitglied der angegebenen Namespace, definiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Bindung mit dem Namen `LocalBindingNonDefaultNamespace` ein Mitglied der `http://www.contoso.com/MyBinding` Namespace definiert, in der `BindingSample` XML-Webdienst.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebServiceBindingAttribute (string name, string ns, string location);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string ns, string location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.WebServiceBindingAttribute.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="location" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Bindung, der eine XML-Webdienstmethode einen Vorgang implementiert wird. Legt die <see cref="P:System.Web.Services.WebServiceBindingAttribute.Name" />-Eigenschaft fest.</param>
+        <param name="ns">Der Namespace der Bindung zugeordnet wird. Legt die <see cref="P:System.Web.Services.WebServiceBindingAttribute.Namespace" />-Eigenschaft fest.</param>
+        <param name="location">Der Speicherort, in dem die Bindung definiert ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.WebServiceBindingAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor dient zum Angeben eines Namens für eine Bindung, die nicht im XML-Webdienst, den er angewendet wird, und ist ein Mitglied der angegebenen Namespace, definiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Bindung mit dem Namen `RemoteBinding` ein Mitglied der `http://www.contoso.com/MyBinding` Namespace und am definierten `http://www.contoso.com/MyService.asmx?wsdl`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConformsTo">
+      <MemberSignature Language="C#" Value="public System.Web.Services.WsiProfiles ConformsTo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.WsiProfiles ConformsTo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.WebServiceBindingAttribute.ConformsTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.WsiProfiles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest (Web Services Interoperability, WSI)-Spezifikation, die auf die Anspruchsanbieter-Bindung entsprechen.</summary>
+        <value>Eines der <see cref="T:System.Web.Services.WsiProfiles" /> Werte, der WSI-Spezifikation angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der WS-I Organisation veröffentlicht Richtlinien, um die Interoperabilität von Webdiensten über Plattformen hinweg sicherzustellen. Diese Eigenschaft gibt die WSI-Spezifikation, die die Bindung angeblich entsprechen.  
+  
+ Die <xref:System.Web.Services.WebServiceBindingAttribute.EmitConformanceClaims%2A> Eigenschaft steuert, ob die Konformitätsansprüche bei einer WSDL-Beschreibung des Webdiensts bereitgestellten veröffentlicht wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmitConformanceClaims">
+      <MemberSignature Language="C#" Value="public bool EmitConformanceClaims { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EmitConformanceClaims" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.WebServiceBindingAttribute.EmitConformanceClaims" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Bindung Konformitätsansprüche ausgibt.</summary>
+        <value>
+          <see langword="true" />Wenn die Bindung Konformitätsansprüche ausgibt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft steuert, ob die Konformitätsansprüche durch ausgedrückt der <xref:System.Web.Services.WebServiceBindingAttribute.ConformsTo%2A> Eigenschaft werden bereitgestellt, wenn eine WSDL-Beschreibung des Webdiensts veröffentlicht wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public string Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Location" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.WebServiceBindingAttribute.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Speicherort, in dem die Bindung definiert ist.</summary>
+        <value>Der Speicherort, in dem die Bindung definiert ist. Der Standardwert ist die URL des XML-Webdiensts, der das Attribut angewendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird eine Bindung mit dem Namen `RemoteBinding` ein Mitglied der `http://www.contoso.com/MyBinding` Namespace und am definierten `http://www.contoso.com/MyService.asmx?wsdl`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.WebServiceBindingAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Bindung ab oder legt diesen fest.</summary>
+        <value>Der Name der Bindung. Die Standardeinstellung ist der Name des XML-Webdiensts "SOAP" angehängt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird eine Bindung mit dem Namen `LocalBinding` , definiert ist, der `BindingSample` XML-Webdienst.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.WebServiceBindingAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namespace der Bindung zugeordneten.</summary>
+        <value>Der Namespace für die Bindung. Der Standardwert ist http://tempuri.org/.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird eine Bindung mit dem Namen `LocalBindingNonDefaultNamespace` ein Mitglied der `http://www.contoso.com/MyBinding` Namespace definiert, in der `BindingSample` XML-Webdienst.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

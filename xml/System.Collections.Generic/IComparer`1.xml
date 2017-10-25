@@ -1,0 +1,130 @@
+<Type Name="IComparer&lt;T&gt;" FullName="System.Collections.Generic.IComparer&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IComparer&lt;in T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IComparer`1&lt;- T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.IComparer`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">Der Typ der zu vergleichenden Objekte.</typeparam>
+    <summary>Definiert eine Methode, die ein Typ implementiert, um zwei Objekte zu vergleichen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle wird verwendet, mit der <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> und <xref:System.Collections.Generic.List%601.BinarySearch%2A?displayProperty=nameWithType> Methoden. Er bietet eine Möglichkeit zum Anpassen der Sortierreihenfolge einer Auflistung. Klassen, die diese Schnittstelle implementieren, enthalten die <xref:System.Collections.Generic.SortedDictionary%602> und <xref:System.Collections.Generic.SortedList%602> generische Klassen.  
+  
+ Die standardmäßige Implementierung dieser Schnittstelle ist die <xref:System.Collections.Generic.Comparer%601> Klasse. Die <xref:System.StringComparer> -Klasse implementiert diese Schnittstelle für den Typ <xref:System.String>.  
+  
+ Diese Schnittstelle unterstützt Vergleiche der Reihenfolge. Das heißt, wenn die <xref:System.Collections.Generic.Comparer%601.Compare%2A> Methode gibt 0 zurück, bedeutet dies, dass zwei Objekte gleich sortiert. Implementierung des genauen Übereinstimmungsvergleiche wird bereitgestellt, von der <xref:System.Collections.Generic.IEqualityComparer%601> generische Schnittstelle.  
+  
+ Es wird empfohlen, dass beim Ableiten von der <xref:System.Collections.Generic.Comparer%601> Klasse anstatt zu implementieren die <xref:System.Collections.Generic.IComparer%601> Schnittstelle, da die <xref:System.Collections.Generic.Comparer%601> -Klasse stellt eine explizite Implementierung von der <xref:System.Collections.Generic.Comparer%601.System%23Collections%23IComparer%23Compare%2A> Methode und die <xref:System.Collections.Generic.Comparer%601.Default%2A> Eigenschaft, die Ruft die standardmäßige Vergleichsfunktion für das Objekt ab.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel implementiert die <xref:System.Collections.Generic.IComparer%601> Schnittstelle, um Objekte des Typs zu vergleichen `Box` gemäß ihrer Dimensionen. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.Generic.Comparer%601> Klasse.  
+  
+ [!code-csharp[System.Collections.Generic.BoxCompare#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.boxcompare/cs/program.cs#7)]
+ [!code-vb[System.Collections.Generic.BoxCompare#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.boxcompare/vb/program.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Compare">
+      <MemberSignature Language="C#" Value="public int Compare (T x, T y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Compare(!T x, !T y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.IComparer`1.Compare(`0,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="T" />
+        <Parameter Name="y" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="x">Das erste zu vergleichende Objekt.</param>
+        <param name="y">Das zweite zu vergleichende Objekt.</param>
+        <summary>Vergleicht zwei Objekte und gibt einen Wert zurück, der angibt, ob ein Wert niedriger, gleich oder größer als der andere Wert ist.</summary>
+        <returns>Eine ganze Zahl mit Vorzeichen, die die relativen Werte von <paramref name="x" /> und <paramref name="y" /> angibt, wie in der folgenden Tabelle veranschaulicht.  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Bedeutung  
+  
+ </description></listheader><item><term>Kleiner als 0 (null)  
+  
+ </term><description><paramref name="x" /> ist kleiner als <paramref name="y" />.  
+  
+ </description></item><item><term>0 (null)  
+  
+ </term><description><paramref name="x" /> ist gleich <paramref name="y" />.  
+  
+ </description></item><item><term>Größer als 0 (null)  
+  
+ </term><description><paramref name="x" /> ist größer als <paramref name="y" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie diese Methode zum Bereitstellen einer benutzerdefinierten Vergleich für den Typ der Sortierreihenfolge `T`.  
+  
+ Vergleichen von `null` mit einem beliebigen Verweistyp ist zulässig und löst keine Ausnahme. Ein null-Verweis gilt als kleiner als jedes beliebige Verweis handeln, der nicht null ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel implementiert die <xref:System.Collections.Generic.IComparer%601> Schnittstelle, um Objekte des Typs zu vergleichen `Box` gemäß ihrer Dimensionen. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.Generic.Comparer%601> Klasse.  
+  
+ [!code-csharp[System.Collections.Generic.BoxCompare#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.boxcompare/cs/program.cs#7)]
+ [!code-vb[System.Collections.Generic.BoxCompare#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.boxcompare/vb/program.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

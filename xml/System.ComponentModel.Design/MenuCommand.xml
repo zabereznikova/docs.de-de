@@ -1,0 +1,504 @@
+<Type Name="MenuCommand" FullName="System.ComponentModel.Design.MenuCommand">
+  <TypeSignature Language="C#" Value="public class MenuCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MenuCommand extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.MenuCommand" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Element zum Windows-Menüs oder Symbolleisten-Befehl.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.MenuCommand> Klasse stellt Informationen zu einem Windows-Menüs oder Symbolleisten-Befehl. Die <xref:System.ComponentModel.Design.IMenuCommandService> Schnittstelle ermöglicht es Ihnen hinzuzufügende <xref:System.ComponentModel.Design.MenuCommand> -Objekten, die Visual Studio-Menü.  
+  
+ Diese Klasse bietet die folgenden Elemente:  
+  
+-   Eine Ereignishandler-Eigenschaft, zu der Sie einen Ereignishandler für den Befehl anfügen können.  
+  
+-   Ein <xref:System.ComponentModel.Design.CommandID> -Eigenschaft, die den Befehl eindeutig identifiziert.  
+  
+-   Ein <xref:System.ComponentModel.Design.MenuCommand.Invoke%2A> -Methode, die der Befehl ausgeführt wird.  
+  
+-   Ein <xref:System.ComponentModel.Design.MenuCommand.OnCommandChanged%2A> -Methode, die überschrieben werden kann, um das Ereignis zu behandeln, das auftritt, wenn ein neuer Befehl aktiviert ist.  
+  
+-   Boolesches Flag, das Zustände, die angeben, ob der Befehl ist <xref:System.ComponentModel.Design.MenuCommand.Checked%2A>, <xref:System.ComponentModel.Design.MenuCommand.Enabled%2A>, <xref:System.ComponentModel.Design.MenuCommand.Supported%2A>, oder <xref:System.ComponentModel.Design.MenuCommand.Visible%2A>.  
+  
+-   Ein <xref:System.ComponentModel.Design.MenuCommand.OleStatus%2A> -Eigenschaft, die die OLE--Befehl Statuscode für den Befehl.  
+  
+-   Eine Außerkraftsetzung für die <xref:System.ComponentModel.Design.MenuCommand.ToString%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.ComponentModel.Design.MenuCommand> -Objekt, dessen Eigenschaften konfiguriert und fügt es der <xref:System.ComponentModel.Design.IMenuCommandService>.  
+  
+ Erstellen Sie eine Instanz von der `Component1` -Klasse auf das Formular, und öffnen Sie das Formular in einer entwurfsumgebung wie Visual Studio. Drücken Sie die F1-Taste zum Aufrufen der <xref:System.ComponentModel.Design.MenuCommand>.  
+  
+ [!code-cpp[MenuCommand Example#10](~/samples/snippets/cpp/VS_Snippets_Winforms/MenuCommand Example/CPP/component1.cpp#10)]
+ [!code-csharp[MenuCommand Example#10](~/samples/snippets/csharp/VS_Snippets_Winforms/MenuCommand Example/CS/component1.cs#10)]
+ [!code-vb[MenuCommand Example#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MenuCommand Example/VB/component1.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuCommand (EventHandler handler, System.ComponentModel.Design.CommandID command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.EventHandler handler, class System.ComponentModel.Design.CommandID command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommand.#ctor(System.EventHandler,System.ComponentModel.Design.CommandID)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="handler" Type="System.EventHandler" />
+        <Parameter Name="command" Type="System.ComponentModel.Design.CommandID" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Das Ereignis ausgelöst werden soll, wenn der Benutzer über Menüs oder Symbolleisten-Schaltflächen auswählt.</param>
+        <param name="command">Die eindeutige Befehls-ID, die dieser Menübefehl mit der Umgebung im Menü verknüpft.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.MenuCommand" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.ComponentModel.Design.MenuCommand> -Objekt, dessen Eigenschaften konfiguriert und fügt es ein <xref:System.ComponentModel.Design.IMenuCommandService> Objekt.  
+  
+ [!code-cpp[MenuCommand Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MenuCommand Example/CPP/component1.cpp#1)]
+ [!code-csharp[MenuCommand Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MenuCommand Example/CS/component1.cs#1)]
+ [!code-vb[MenuCommand Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MenuCommand Example/VB/component1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="public virtual bool Checked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Checked" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.MenuCommand.Checked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob dieses Menüelement aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Element aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CommandChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CommandChanged" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.MenuCommand.CommandChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt bei der Menübefehl aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn es aktiviert oder deaktiviert wird, kann ein Befehl ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandID">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.Design.CommandID CommandID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.CommandID CommandID" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.MenuCommand.CommandID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.ComponentModel.Design.CommandID" /> dieser Menübefehl zugeordnet.</summary>
+        <value>Die <see cref="T:System.ComponentModel.Design.CommandID" /> des Menübefehls zugeordnet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public virtual bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.MenuCommand.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dieses Menüelement verfügbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Element aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.ComponentModel.Design.MenuCommand> -Objekt, dessen Eigenschaften konfiguriert und fügt es <xref:System.ComponentModel.Design.IMenuCommandService>.  
+  
+ [!code-cpp[MenuCommand Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MenuCommand Example/CPP/component1.cpp#1)]
+ [!code-csharp[MenuCommand Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MenuCommand Example/CS/component1.cs#1)]
+ [!code-vb[MenuCommand Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MenuCommand Example/VB/component1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public virtual void Invoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Invoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommand.Invoke" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Befehl.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public virtual void Invoke (object arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Invoke(object arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommand.Invoke(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="arg">Ein optionales Argument für die Verwendung durch den Befehl.</param>
+        <summary>Ruft den Befehl mit dem angegebenen Parameter auf.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Die standardmäßige Implementierung dieser Methode ignoriert <paramref name="arg" />, aber diese Methode überschreiben und verwenden Sie es möglicherweise abgeleitete Klassen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OleStatus">
+      <MemberSignature Language="C#" Value="public virtual int OleStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OleStatus" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.MenuCommand.OleStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Statuscode der OLE-Befehl für dieses Menüelement ab.</summary>
+        <value>Eine ganze Zahl, die eine Kombination von Statusflags, die den Zustand dieses Menüelements enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCommandChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnCommandChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCommandChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommand.OnCommandChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.ComponentModel.Design.MenuCommand.CommandChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.ComponentModel.Design.MenuCommand.OnCommandChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.ComponentModel.Design.MenuCommand.OnCommandChanged(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.ComponentModel.Design.MenuCommand.OnCommandChanged(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IDictionary Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.MenuCommand.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die öffentlichen Eigenschaften für die <see cref="T:System.ComponentModel.Design.MenuCommand" />.</summary>
+        <value>Ein <see cref="T:System.Collections.IDictionary" /> mit öffentlichen Eigenschaften der <see cref="T:System.ComponentModel.Design.MenuCommand" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Befehle im Menü speichern ihre öffentliche Eigenschaften in der <xref:System.ComponentModel.Design.MenuCommand.Properties%2A> Auflistung. Der Schlüssel im Eigenschaftenwörterbuch ist der Eigenschaftenname. Dies ermöglicht die Enumeration der allgemeinen Eigenschaften und bietet eine konsistente Substrate aus dem neue Eigenschaften hinzugefügt werden können, ohne die Klassendefinition ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Supported">
+      <MemberSignature Language="C#" Value="public virtual bool Supported { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Supported" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.MenuCommand.Supported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob dieses Menüelement unterstützt wird.</summary>
+        <value>
+          <see langword="true" />Wenn das Element unterstützt wird, wird die Standardeinstellung; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.ComponentModel.Design.MenuCommand> -Objekt, dessen Eigenschaften konfiguriert und fügt es der <xref:System.ComponentModel.Design.IMenuCommandService>.  
+  
+ [!code-cpp[MenuCommand Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MenuCommand Example/CPP/component1.cpp#1)]
+ [!code-csharp[MenuCommand Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MenuCommand Example/CS/component1.cs#1)]
+ [!code-vb[MenuCommand Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MenuCommand Example/VB/component1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommand.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung dieser Menübefehl zurück.</summary>
+        <returns>Eine Zeichenfolge, die mit dem Wert von der <see cref="P:System.ComponentModel.Design.MenuCommand.CommandID" /> Eigenschaft angefügt, mit den Namen der Flags, die festgelegt werden, durch den senkrechten Balken (|) getrennt. Zu diesen Flageigenschaften zählen <see cref="P:System.ComponentModel.Design.MenuCommand.Checked" />, <see cref="P:System.ComponentModel.Design.MenuCommand.Enabled" />, <see cref="P:System.ComponentModel.Design.MenuCommand.Supported" />, und <see cref="P:System.ComponentModel.Design.MenuCommand.Visible" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public virtual bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.MenuCommand.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob dieses Menüelement sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Element sichtbar ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.ComponentModel.Design.MenuCommand> -Objekt, dessen Eigenschaften konfiguriert und fügt es der <xref:System.ComponentModel.Design.IMenuCommandService>.  
+  
+ [!code-cpp[MenuCommand Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MenuCommand Example/CPP/component1.cpp#1)]
+ [!code-csharp[MenuCommand Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MenuCommand Example/CS/component1.cs#1)]
+ [!code-vb[MenuCommand Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MenuCommand Example/VB/component1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

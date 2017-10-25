@@ -1,0 +1,251 @@
+<Type Name="DynamicDataRouteHandler" FullName="System.Web.DynamicData.DynamicDataRouteHandler">
+  <TypeSignature Language="C#" Value="public class DynamicDataRouteHandler : System.Web.Routing.IRouteHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DynamicDataRouteHandler extends System.Object implements class System.Web.Routing.IRouteHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.DynamicDataRouteHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.Routing.IRouteHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>ASP.NET Dynamic Data-Routenmuster Prozesse.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicDataRouteHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataRouteHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.DynamicData.DynamicDataRouteHandler" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHandler">
+      <MemberSignature Language="C#" Value="public virtual System.Web.IHttpHandler CreateHandler (System.Web.DynamicData.DynamicDataRoute route, System.Web.DynamicData.MetaTable table, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.IHttpHandler CreateHandler(class System.Web.DynamicData.DynamicDataRoute route, class System.Web.DynamicData.MetaTable table, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataRouteHandler.CreateHandler(System.Web.DynamicData.DynamicDataRoute,System.Web.DynamicData.MetaTable,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.IHttpHandler</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="route" Type="System.Web.DynamicData.DynamicDataRoute" />
+        <Parameter Name="table" Type="System.Web.DynamicData.MetaTable" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="route">Die übereinstimmende Route.</param>
+        <param name="table">Die Metadatentabelle, die in der Route enthalten ist.</param>
+        <param name="action">Die Aktion, die in der Route enthalten ist.</param>
+        <summary>Erstellt einen Handler zum Verarbeiten einer Anforderung an.</summary>
+        <returns>Der Handler, der eine Anforderung verarbeiten kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ .  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomPageVirtualPath">
+      <MemberSignature Language="C#" Value="protected virtual string GetCustomPageVirtualPath (System.Web.DynamicData.MetaTable table, string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetCustomPageVirtualPath(class System.Web.DynamicData.MetaTable table, string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataRouteHandler.GetCustomPageVirtualPath(System.Web.DynamicData.MetaTable,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Web.DynamicData.MetaTable" />
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="table">Die Metadaten des Datenmodells-Tabelle, der für die Seite ist.</param>
+        <param name="viewName">Der Name der Ansicht-Aktion ist also den Seitennamen ohne die Dateinamenerweiterung ".aspx".</param>
+        <summary>Erstellt den virtuellen Pfad der eine benutzerdefinierte Seite an.</summary>
+        <returns>Der virtuelle Pfad der benutzerdefinierten Seite.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequestContext">
+      <MemberSignature Language="C#" Value="public static System.Web.Routing.RequestContext GetRequestContext (System.Web.HttpContext httpContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Routing.RequestContext GetRequestContext(class System.Web.HttpContext httpContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataRouteHandler.GetRequestContext(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.RequestContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="httpContext" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="httpContext">Die Kontextinformationen, die die Web-Anforderung zugeordnet ist.</param>
+        <summary>Gibt die <see cref="T:System.Web.Routing.RequestContext" /> -Instanz für den aktuellen webanforderung.</summary>
+        <returns>Der Anforderungskontext für die webanforderung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn es erforderlich ist, wird ein neuer Kontext erstellt. Dies kann auftreten, wenn die aktuelle Anforderung keine Dynamic Data-Anforderung ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="httpContext" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequestMetaTable">
+      <MemberSignature Language="C#" Value="public static System.Web.DynamicData.MetaTable GetRequestMetaTable (System.Web.HttpContext httpContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.DynamicData.MetaTable GetRequestMetaTable(class System.Web.HttpContext httpContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataRouteHandler.GetRequestMetaTable(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="httpContext" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="httpContext">Die Kontextinformationen, die die Web-Anforderung zugeordnet ist.</param>
+        <summary>Gibt eine <see cref="T:System.Web.DynamicData.MetaTable" /> -Objekt aus der <see cref="T:System.Web.HttpContext" /> Objekt.</summary>
+        <returns>Die Metadaten des Datenmodells-Tabelle, die der aktuellen webanforderung zugeordnet ist oder <see langword="null" /> ist die Anforderung keine Dynamic Data-Anforderung</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="httpContext" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScaffoldPageVirtualPath">
+      <MemberSignature Language="C#" Value="protected virtual string GetScaffoldPageVirtualPath (System.Web.DynamicData.MetaTable table, string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetScaffoldPageVirtualPath(class System.Web.DynamicData.MetaTable table, string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataRouteHandler.GetScaffoldPageVirtualPath(System.Web.DynamicData.MetaTable,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Web.DynamicData.MetaTable" />
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="table">Die Metadatentabelle, der für die Seite ist.</param>
+        <param name="viewName">Der Name der Ansicht-Aktion ist also den Seitennamen ohne die Dateinamenerweiterung ".aspx".</param>
+        <summary>Gibt den virtuellen Pfad einer Seite, die für dynamische Daten aktiviert ist.</summary>
+        <returns>Der virtuelle Pfad der Seite.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Model">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaModel Model { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaModel Model" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicDataRouteHandler.Model" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.DynamicData.MetaModel" /> Objekt, mit der <see cref="T:System.Web.DynamicData.DynamicDataRouteHandler" /> Klasse zugeordnet ist.</summary>
+        <value>Das Datenmodell, das <see cref="T:System.Web.DynamicData.DynamicDataRouteHandler" /> Klasse zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRequestMetaTable">
+      <MemberSignature Language="C#" Value="public static void SetRequestMetaTable (System.Web.HttpContext httpContext, System.Web.DynamicData.MetaTable table);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetRequestMetaTable(class System.Web.HttpContext httpContext, class System.Web.DynamicData.MetaTable table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataRouteHandler.SetRequestMetaTable(System.Web.HttpContext,System.Web.DynamicData.MetaTable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="httpContext" Type="System.Web.HttpContext" />
+        <Parameter Name="table" Type="System.Web.DynamicData.MetaTable" />
+      </Parameters>
+      <Docs>
+        <param name="httpContext">Die Kontextinformationen, die die Web-Anforderung zugeordnet ist.</param>
+        <param name="table">Die Metatabelle, die die aktuelle Anforderung zugeordnet ist.</param>
+        <summary>Legt die <see cref="T:System.Web.DynamicData.MetaTable" /> -Objekt, das mit dem aktuellen anfallen <see cref="T:System.Web.HttpRequest" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpRequest> Objekt kann es sich `null` für nicht - Dynamic Data-Anforderungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.Routing.IRouteHandler.GetHttpHandler">
+      <MemberSignature Language="C#" Value="System.Web.IHttpHandler IRouteHandler.GetHttpHandler (System.Web.Routing.RequestContext requestContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Web.IHttpHandler System.Web.Routing.IRouteHandler.GetHttpHandler(class System.Web.Routing.RequestContext requestContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataRouteHandler.System#Web#Routing#IRouteHandler#GetHttpHandler(System.Web.Routing.RequestContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.IHttpHandler</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestContext" Type="System.Web.Routing.RequestContext" />
+      </Parameters>
+      <Docs>
+        <param name="requestContext">Die Kontextinformationen, die die Web-Anforderung zugeordnet ist.</param>
+        <summary>Gibt den Handler, der ASP.NET Dynamic Data-Routenmuster verarbeitet zurück.</summary>
+        <returns>Der Handler, der ASP.NET Dynamic Data-Routenmuster verarbeitet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert die <xref:System.Web.Routing.IRouteHandler.GetHttpHandler%2A> -Schnittstellenmethode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,170 @@
+<Type Name="UrlMapping" FullName="System.Web.Configuration.UrlMapping">
+  <TypeSignature Language="C#" Value="public sealed class UrlMapping : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UrlMapping extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.UrlMapping" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ordnet eine URL, die für Benutzer an die URL einer Seite in der Webanwendung angezeigt wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.UrlMapping> -Klasse ermöglicht es Ihnen, eine URL zuzuordnen, das Benutzern an eine URL angezeigt wird, die in der Web-Anwendung vorhanden ist. Hinzufügen einer <xref:System.Web.Configuration.UrlMapping> -Objekt an eine <xref:System.Web.Configuration.UrlMappingCollection> ist die programmgesteuerte Entsprechung, einschließlich eine `add` Element in der `urlMappings` Abschnitt einer Konfigurationsdatei.  
+  
+ Jede <xref:System.Web.Configuration.UrlMapping> Objekt enthält zwei Eigenschaften, die eine URL zu identifizieren. Eine Eigenschaft gibt die URL für den Benutzer angezeigt. die andere gibt eine URL in der Webanwendung an. Nachfolgende Leerzeichen, sowohl ignoriert werden die <xref:System.Web.Configuration.UrlMapping.Url%2A> und <xref:System.Web.Configuration.UrlMapping.MappedUrl%2A> Eigenschaften.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.Configuration.UrlMapping> Eigenschaft schreiben Informationen in den zugehörigen Abschnitt der Konfigurationsdatei entsprechend den Einschränkungen, die von der Abschnittseigenschaft im definiert <xref:System.Configuration.SectionInformation.AllowDefinition%2A> , dessen Wert <xref:System.Configuration.ConfigurationAllowDefinition.MachineToApplication>. Jeder Versuch, die in einer Konfigurationsdatei auf einer Ebene nicht zulässig, in der Hierarchie zu schreiben, führt in einer Fehlermeldung, die vom Parser erzeugt. Allerdings können Sie diese Klasse zum Lesen von Konfigurationsinformationen auf jeder Ebene in der Hierarchie aus.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.Configuration.UrlMappingsSection> von der Datei "Web.config"-Datei zum Zuordnen von zwei URLs und fügt eine Zuordnung für eine zusätzliche URL. Wenn Sie ändern und speichern Sie die Datei "Web.config", startet die Anwendung neu.  
+  
+  
+[!code-aspx-csharp[System.Web.Configuration.UrlMapping2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping2/cs/default.aspx#1)]
+[!code-aspx-vb[System.Web.Configuration.UrlMapping2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping2/vb/default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UrlMapping (string url, string mappedUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string url, string mappedUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UrlMapping.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="mappedUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">Die URL, die dem Benutzer angezeigt werden.</param>
+        <param name="mappedUrl">Eine URL, die in der Web-Anwendung vorhanden ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.UrlMapping" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.UrlMapping.%23ctor%2A> Konstruktor wird von ASP.NET in erster Linie für die interne Verwendung gedacht. Sie müssen nicht von dieser Klasse ableiten, und da er verwendet werden kann, ändern Sie die Datei "Web.config", wahrscheinlich nie müssen Sie für die Verwendung im Code.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.Configuration.UrlMappingsSection> von der Datei "Web.config"-Datei zum Zuordnen von zwei URLs und fügt eine Zuordnung für eine zusätzliche URL. Wenn Sie ändern und speichern Sie die Datei "Web.config", startet die Anwendung neu.  
+  
+  
+[!code-aspx-csharp[System.Web.Configuration.UrlMapping2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping2/cs/default.aspx#1)]
+[!code-aspx-vb[System.Web.Configuration.UrlMapping2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping2/vb/default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MappedUrl">
+      <MemberSignature Language="C#" Value="public string MappedUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MappedUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.UrlMapping.MappedUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("mappedUrl", IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine URL in der Webanwendung.</summary>
+        <value>Die URL in der Web-Anwendung, die dem angegebenen Wert zugeordnet wurde die <see cref="P:System.Web.Configuration.UrlMapping.Url" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.UrlMapping.MappedUrl%2A> Eigenschaft ist die programmgesteuerte Entsprechung der `mappedUrl` Attribut des der `add` Element in der `urlMappings` Abschnitt einer Konfigurationsdatei.  
+  
+> [!NOTE]
+>  Bei Verwendung von IIS 5.0: bei Verwendung der <xref:System.Web.Configuration.UrlMapping.MappedUrl%2A> Eigenschaft zuordnen aus einer unterstützten Seitentyp (z. B. eine ASPX-Datei) auf einen nicht unterstützten Seitentyp (z. B. einer ASP-Seite), wird eine Fehlermeldung angezeigt. Diese Art von Zuordnung wird in IIS, Version 6.0 unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Web.Configuration.UrlMapping.MappedUrl%2A> Eigenschaft. Dieses Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.UrlMapping> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.UrlMapping2#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping2/cs/default.aspx#4)]
+ [!code-vb[System.Web.Configuration.UrlMapping2#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping2/vb/default.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.UrlMapping.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.UrlMapping.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("url", IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die URL, die dem Benutzer angezeigt wird.</summary>
+        <value>Die URL, die dem Benutzer angezeigt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.UrlMapping.Url%2A> Eigenschaft ist die programmgesteuerte Entsprechung der `Url` Attribut des der `add` Element in der `urlMappings` Abschnitt einer Konfigurationsdatei.  
+  
+   
+  
+## Examples  
+ Ein Beispiel finden Sie unter der <xref:System.Web.Configuration.UrlMapping> -Klassenübersicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

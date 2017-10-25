@@ -1,0 +1,57 @@
+<Type Name="IInstanceContextInitializer" FullName="System.ServiceModel.Dispatcher.IInstanceContextInitializer">
+  <TypeSignature Language="C#" Value="public interface IInstanceContextInitializer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInstanceContextInitializer" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.IInstanceContextInitializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Methoden, die notwendig sind, um das Erstellen von <see cref="T:System.ServiceModel.InstanceContext" />-Objekten zu überprüfen oder abzuändern, wenn erforderlich.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ServiceModel.InstanceContext>-Objekte beim Erstellen zu überprüfen oder abzuändern, implementieren Sie die <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer>-Schnittstellen, und verwenden Sie ein <xref:System.ServiceModel.Description.IContractBehavior>, um dieses an die <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A>-Eigenschaft anzuhängen.  
+  
+ Es kann eine beliebige Anzahl von Kontextinitialisierern für einen Dienst geben. In der Regel wird der <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> hinzugefügt, um eine Erweiterung an das <xref:System.ServiceModel.InstanceContext>-Objekt anzuhängen, die als Mechanismus für die Weitergabe von Daten in einer Anwendung dient.  
+  
+ Wenn Sie die Bereitstellung oder Auswahl des <xref:System.ServiceModel.InstanceContext>-Objekts steuern möchten, das eine Nachricht verarbeitet, finden Sie weitere Informationen dazu unter <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (System.ServiceModel.InstanceContext instanceContext, System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class System.ServiceModel.InstanceContext instanceContext, class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IInstanceContextInitializer.Initialize(System.ServiceModel.InstanceContext,System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceContext" Type="System.ServiceModel.InstanceContext" />
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="instanceContext">Der vom System bereitgestellte Instanzkontext.</param>
+        <param name="message">Die Nachricht, die das Erstellen des Instanzkontexts ausgelöst hat.</param>
+        <summary>Bietet die Möglichkeit, das neu erstellte <see cref="T:System.ServiceModel.InstanceContext" />-Objekt abzuändern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer.Initialize%2A>-Methode wird beim Erstellen eines <xref:System.ServiceModel.InstanceContext>-Objekts aufgerufen. In der Regel wird diese Methode verwendet, um eine Erweiterung anzuhängen, sodass auf benutzerdefinierte Daten überall innerhalb einer Anwendung zugegriffen werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

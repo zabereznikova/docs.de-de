@@ -1,0 +1,112 @@
+<Type Name="IsolatedStorageSecurityState" FullName="System.IO.IsolatedStorage.IsolatedStorageSecurityState">
+  <TypeSignature Language="C#" Value="public class IsolatedStorageSecurityState : System.Security.SecurityState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IsolatedStorageSecurityState extends System.Security.SecurityState" />
+  <TypeSignature Language="DocId" Value="T:System.IO.IsolatedStorage.IsolatedStorageSecurityState" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.SecurityState</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Einstellungen für die Aufrechterhaltung der Kontingentgröße für isolierten Speicher bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt eine Anwendung mit den Einstellungen auszuführenden richtlinienentscheidungen in die Host-Implementierung von der <xref:System.AppDomainManager.CheckSecuritySettings%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName="EnsureState">
+      <MemberSignature Language="C#" Value="public override void EnsureState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EnsureState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.IsolatedStorageSecurityState.EnsureState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt sicher, dass der durch <see cref="T:System.IO.IsolatedStorage.IsolatedStorageSecurityState" /> dargestellte Zustand auf dem Host verfügbar ist.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.IsolatedStorage.IsolatedStorageException">Der Zustand ist nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.IO.IsolatedStorage.IsolatedStorageSecurityOptions Options { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.IsolatedStorage.IsolatedStorageSecurityOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorageSecurityState.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.IsolatedStorage.IsolatedStorageSecurityOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Option zum Verwalten der Sicherheit des isolierten Speichers ab.</summary>
+        <value>Die Option aus, um die Speichergröße isolierten Kontingent zu erhöhen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht der <xref:System.IO.IsolatedStorage.IsolatedStorageSecurityOptions?displayProperty=nameWithType> -Enumerationswert, der der einzige Wert in der Enumeration ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Quota">
+      <MemberSignature Language="C#" Value="public long Quota { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Quota" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorageSecurityState.Quota" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die aktuelle Größe des Kontingents für den isolierten Speicher.</summary>
+        <value>Die aktuellen Kontingentgröße in Bytes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsedSize">
+      <MemberSignature Language="C#" Value="public long UsedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 UsedSize" />
+      <MemberSignature Language="DocId" Value="P:System.IO.IsolatedStorage.IsolatedStorageSecurityState.UsedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Verwendungsgröße bei der isolierten Speicherung.</summary>
+        <value>Die aktuelle Auslastung Größe in Bytes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

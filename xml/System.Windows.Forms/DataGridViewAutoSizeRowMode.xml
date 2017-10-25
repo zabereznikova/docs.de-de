@@ -1,0 +1,88 @@
+<Type Name="DataGridViewAutoSizeRowMode" FullName="System.Windows.Forms.DataGridViewAutoSizeRowMode">
+  <TypeSignature Language="C#" Value="public enum DataGridViewAutoSizeRowMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewAutoSizeRowMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewAutoSizeRowMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert Werte für die Angabe, wie die Höhe einer Zeile angepasst wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridView> Steuerelement kann die Größe die Zeilen basierend auf die bevorzugte Höhe jeder Zeile ändern. Die bevorzugte Zeilenhöhe beträgt die minimale Höhe erforderlich, um den größten Zellenwert in dieser Zeile anzuzeigen. Andere Größe Modi können Sie die anzugeben, welche Zellen verwendet werden, um die neue Höhe (Headerzellen oder nicht-Headerzellen) berechnen und angibt, ob Größe alle Zeilen oder nur die Zeilen, die gerade angezeigt werden. Ändern der Größe einer Teilmenge von Zeilen ist nützlich, um Leistungseinbußen zu vermeiden, bei der Arbeit mit vielen Zeilen mit Daten.  
+  
+ Automatische Größenänderung inhaltsbasierten wird verhindert, dass Benutzer Anpassen der Zeilenhöhe mit der Maus.  
+  
+ Diese Enumeration wird verwendet, durch die <xref:System.Windows.Forms.DataGridView> Steuerelement <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A> Methode.  
+  
+ Weitere Informationen zu Größenanpassungsmodi, finden Sie unter [Sizing Optionen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Größe der dritten Zeile im Steuerelement an den Inhalt der Headerzellen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels [wie: Programmgesteuertes Ändern der Größe von Zellen an Inhalt anpassen im DataGridView-Steuerelement von Windows Forms](~/docs/framework/winforms/controls/programmatically-resize-cells-to-fit-content-in-the-datagrid.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ProgrammaticResizing#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ProgrammaticResizing/CPP/programmaticsizing.cpp#4)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ProgrammaticResizing#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ProgrammaticResizing/CS/programmaticsizing.cs#4)]
+ [!code-vb[System.Windows.Forms.DataGridView.ProgrammaticResizing#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ProgrammaticResizing/VB/programmaticsizing.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllCells">
+      <MemberSignature Language="C#" Value="AllCells" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeRowMode AllCells = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeRowMode.AllCells" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeRowMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zeilenhöhe passt den Inhalt aller Zellen in der Zeile, einschließlich der Headerzelle an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AllCellsExceptHeader">
+      <MemberSignature Language="C#" Value="AllCellsExceptHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeRowMode AllCellsExceptHeader = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeRowMode.AllCellsExceptHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeRowMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Den Inhalt aller Zellen in der Zeile, ausgenommen die Headerzelle passt die Höhe der Zeilen an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RowHeader">
+      <MemberSignature Language="C#" Value="RowHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeRowMode RowHeader = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeRowMode.RowHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeRowMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Den Inhalt des Zeilenheaders passt die Höhe der Zeilen an.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

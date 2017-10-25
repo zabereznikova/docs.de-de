@@ -1,0 +1,236 @@
+<Type Name="Span" FullName="System.Windows.Documents.Span">
+  <TypeSignature Language="C#" Value="public class Span : System.Windows.Documents.Inline" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Span extends System.Windows.Documents.Inline" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Span" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.Inline</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Inlines")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gruppiert andere <see cref="T:System.Windows.Documents.Inline" /> Inhaltselemente fließen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.Span>Dient zum Gruppieren anderer Inline-Inhaltselemente. Nicht inhärent gerendert wird angewendet, um Inhalt oder andere Elemente innerhalb einer <xref:System.Windows.Documents.Span> Element.  
+  
+ <xref:System.Windows.Documents.Span>Erzwingt ein starkes Inhaltsmodell für den untergeordneten Inhalt an. Untergeordnete Elemente in einem <xref:System.Windows.Documents.Span> Element muss abgeleitet sein <xref:System.Windows.Documents.Inline>. Gültige untergeordnete Elemente enthalten:  
+  
+-   <xref:System.Windows.Documents.Bold>  
+  
+-   <xref:System.Windows.Documents.Figure>  
+  
+-   <xref:System.Windows.Documents.Floater>  
+  
+-   <xref:System.Windows.Documents.Hyperlink>  
+  
+-   <xref:System.Windows.Documents.InlineUIContainer>  
+  
+-   <xref:System.Windows.Documents.Italic>  
+  
+-   <xref:System.Windows.Documents.LineBreak>  
+  
+-   <xref:System.Windows.Documents.Run>  
+  
+-   <xref:System.Windows.Documents.Span>  
+  
+-   <xref:System.Windows.Documents.Underline>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Span ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Span.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue, leere Instanz der dem <see cref="T:System.Windows.Documents.Span" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Span (System.Windows.Documents.Inline childInline);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Inline childInline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Span.#ctor(System.Windows.Documents.Inline)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="childInline" Type="System.Windows.Documents.Inline" />
+      </Parameters>
+      <Docs>
+        <param name="childInline">Die anfänglichen Inhalte des neuen <see cref="T:System.Windows.Documents.Span" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Documents.Span" /> Klasse mit dem angegebenen <see cref="T:System.Windows.Documents.Inline" /> Objekt als die anfänglichen Inhalte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie dieser Konstruktor verwendet, um einen neuen Bereich erstellen, enthält eine <xref:System.Windows.Documents.Run>.  
+  
+ [!code-csharp[SpanSnippets#_Span_Const1](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_span_const1)]
+ [!code-vb[SpanSnippets#_Span_Const1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_span_const1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Span (System.Windows.Documents.Inline childInline, System.Windows.Documents.TextPointer insertionPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Inline childInline, class System.Windows.Documents.TextPointer insertionPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Span.#ctor(System.Windows.Documents.Inline,System.Windows.Documents.TextPointer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="childInline" Type="System.Windows.Documents.Inline" />
+        <Parameter Name="insertionPosition" Type="System.Windows.Documents.TextPointer" />
+      </Parameters>
+      <Docs>
+        <param name="childInline">Ein <see cref="T:System.Windows.Documents.Inline" /> -Objekt, das die anfänglichen Inhalte des neuen gibt <see cref="T:System.Windows.Documents.Span" />. Dieser Parameter kann null sein, in diesem Fall nicht <see cref="T:System.Windows.Documents.Inline" /> eingefügt wird.</param>
+        <param name="insertionPosition">Ein <see cref="T:System.Windows.Documents.TextPointer" /> , die die Position, an der einzufügende gibt die <see cref="T:System.Windows.Documents.Span" /> Element nach der Erstellung oder Null, wenn kein automatisches einfügen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Documents.Span" /> -Klasse, wobei eine angegebene <see cref="T:System.Windows.Documents.Inline" /> Objekt als die anfänglichen Inhalte des neuen <see cref="T:System.Windows.Documents.Span" />, und ein <see cref="T:System.Windows.Documents.TextPointer" /> , die eine Einfügeposition für den neuen <see cref="T:System.Windows.Documents.Inline" /> Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung dieses Konstruktors zum Erstellen eines neuen <xref:System.Windows.Documents.Span> , enthält eine <xref:System.Windows.Documents.Run> eingefügt, die am Anfang einer <xref:System.Windows.Documents.Paragraph>.  
+  
+ [!code-csharp[SpanSnippets#_Span_Const2](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_span_const2)]
+ [!code-vb[SpanSnippets#_Span_Const2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_span_const2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Span (System.Windows.Documents.TextPointer start, System.Windows.Documents.TextPointer end);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.TextPointer start, class System.Windows.Documents.TextPointer end) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Span.#ctor(System.Windows.Documents.TextPointer,System.Windows.Documents.TextPointer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="start" Type="System.Windows.Documents.TextPointer" />
+        <Parameter Name="end" Type="System.Windows.Documents.TextPointer" />
+      </Parameters>
+      <Docs>
+        <param name="start">Ein <see cref="T:System.Windows.Documents.TextPointer" /> , der den Anfang des ausgewählten Inhalts angibt, die die neue <see cref="T:System.Windows.Documents.Span" /> enthält.</param>
+        <param name="end">Ein <see cref="T:System.Windows.Documents.TextPointer" /> , der das Ende der Auswahl des Inhalts angibt, die die neue <see cref="T:System.Windows.Documents.Span" /> enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Documents.Span" /> -Klasse, indem zwei <see cref="T:System.Windows.Documents.TextPointer" /> Objekte, die angeben, Anfang und Ende einer Auswahl von Inhalt, der sich die neue <see cref="T:System.Windows.Documents.Span" /> enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor dient zur Initialisierung einer neuen <xref:System.Windows.Documents.Span> content-Element so, dass es sich um eine Auswahl von bereits vorhandenen umschließt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung dieses Konstruktors zum Erstellen eines neuen <xref:System.Windows.Documents.Span> , die für einen Bereich von Inhalt angewendet. Der Bereich des Inhalts richtet sich nach den Anfangs-als auch <xref:System.Windows.Documents.TextPointer> Objekte, die vom Konstruktor angegeben.  
+  
+ [!code-csharp[SpanSnippets#_Span_Const3](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_span_const3)]
+ [!code-vb[SpanSnippets#_Span_Const3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_span_const3)]  
+  
+ Die folgende Abbildung zeigt, wie in diesem Beispiel wird in rendert eine <xref:System.Windows.Documents.FlowDocument>.  
+  
+ ![Bildschirmabbildung: Drei textausführungen](~/add/media/span-grouping.png "Screenshot: drei textausführungen")  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn <paramref name="start" /> oder <paramref name="end" /> ist null.</exception>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn <paramref name="start" /> und <paramref name="end" /> nicht auf einen Bereich von Inhaltsbereich durch Auflösen einer <see cref="T:System.Windows.Documents.Span" /> Element, z. B. wenn <paramref name="start" /> und <paramref name="end" /> Positionen in anderen Absätzen anzugeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Inlines">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.InlineCollection Inlines { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.InlineCollection Inlines" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Span.Inlines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.InlineCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Documents.InlineCollection" /> , enthält der obersten Ebene <see cref="T:System.Windows.Documents.Inline" /> Elemente, die den Inhalt des umfassen die <see cref="T:System.Windows.Documents.Span" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.InlineCollection" /> , enthält die <see cref="T:System.Windows.Documents.Inline" /> Elemente, die den Inhalt des umfassen die <see cref="T:System.Windows.Documents.Span" />.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Documents.InlineCollection> zurückgegeben, die von dieser Eigenschaft aufzuzählen oder zu bearbeiten des Inhalts des ein <xref:System.Windows.Documents.Span> Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeInlines">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeInlines (System.Windows.Markup.XamlDesignerSerializationManager manager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeInlines(class System.Windows.Markup.XamlDesignerSerializationManager manager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Span.ShouldSerializeInlines(System.Windows.Markup.XamlDesignerSerializationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.Windows.Markup.XamlDesignerSerializationManager" />
+      </Parameters>
+      <Docs>
+        <param name="manager">Eine Serialisierung Service Manager-Objekt für dieses Objekt.</param>
+        <summary>Gibt einen Wert, der angibt, ob der Inhalt einer <see cref="T:System.Windows.Documents.Span" /> Element serialisiert werden soll, während der Serialisierung eine <see cref="T:System.Windows.Documents.Run" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn der Inhalt serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies `ShouldSerialize` Methode wird bereitgestellt, da die <xref:System.Windows.Documents.Span.Inlines%2A> Eigenschaft verfügt nicht über einen einfachen Standardwert. Diese Methode gibt an, ob die-Eigenschaft ihren Standardwert geändert hat. Diese Methode wird in der Regel aufgerufen, wenn Sie entweder einen Designer für das Entwickeln der <xref:System.Windows.Documents.Span> oder entwickeln eine eigene Steuerelement einbinden der <xref:System.Windows.Documents.Span>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">
+          <paramref name="manager" /> ist NULL.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

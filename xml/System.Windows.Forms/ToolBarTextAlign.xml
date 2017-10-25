@@ -1,0 +1,68 @@
+<Type Name="ToolBarTextAlign" FullName="System.Windows.Forms.ToolBarTextAlign">
+  <TypeSignature Language="C#" Value="public enum ToolBarTextAlign" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolBarTextAlign extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolBarTextAlign" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Ausrichtung des Texts auf der Symbolleiste Schaltflächen-Steuerelement an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird von Elementen verwendet, z. B. <xref:System.Windows.Forms.ToolBar.TextAlign%2A?displayProperty=nameWithType>.  
+  
+ Platz ist für ein Bild auf die Schaltflächen der Symbolleiste angezeigt werden reserviert. Die Ausrichtung des Texts wird in Bezug auf das Bild auf der Symbolleiste auf die Schaltfläche angezeigt. Wenn kein Bild der Schaltfläche zugewiesen ist, wird der reservierte Platz auf der linken Seite oder über den angezeigten Text angezeigt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Forms.ToolBar> -Steuerelement, einige allgemeine Eigenschaften festlegt und fügt es einer <xref:System.Windows.Forms.Form>. Delegaten werden ebenfalls hinzugefügt, um die <xref:System.Windows.Forms.ToolBar.ButtonClick> und <xref:System.Windows.Forms.ToolBar.ButtonDropDown> Ereignisse. In diesem Beispiel geht davon aus einem <xref:System.Windows.Forms.ToolBar> mit dem Namen `toolBar1` und ein <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1` deklariert wurden.  
+  
+ [!code-cpp[ToolBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolBar/CPP/mytoolbar.cpp#1)]
+ [!code-csharp[ToolBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolBar/CS/mytoolbar.cs#1)]
+ [!code-vb[ToolBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolBar/VB/mytoolbar.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolBarTextAlign Right = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolBarTextAlign.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarTextAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Text wird rechts neben der Symbolleistenschaltfläche ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Underneath">
+      <MemberSignature Language="C#" Value="Underneath" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolBarTextAlign Underneath = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolBarTextAlign.Underneath" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarTextAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Text wird unterhalb der Schaltfläche Symbolleistenbild ausgerichtet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

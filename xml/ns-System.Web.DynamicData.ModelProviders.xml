@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.DynamicData.ModelProviders">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.DynamicData.ModelProviders" /> -Namespace enthält Klassen, die die Kernfunktionalität für ASP.NET Dynamic Data-Anbieter definieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

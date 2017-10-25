@@ -1,0 +1,99 @@
+<Type Name="IArgumentProvider" FullName="System.Linq.Expressions.IArgumentProvider">
+  <TypeSignature Language="C#" Value="public interface IArgumentProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IArgumentProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.Expressions.IArgumentProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine interne Schnittstelle für den Zugriff auf die Argumente von mehreren Strukturknoten (DynamicExpression, ElementInit, MethodCallExpression, InvocationExpression, NewExpression und InexExpression) bereit.  Sie sollten diese API nicht verwenden.  Sie ist nur aufgrund von DLL-Umgestaltung öffentlich und nur für interne Leistungsoptimierungen vorhanden.  
+  
+ Dadurch werden zwei Optimierungen ermöglicht, bei denen Ausdrucksbaumstrukturen verkleinert werden.  Die erste Optimierung ermöglicht die Strukturknoten, dass Sie IList enthalten&lt;T&gt; statt ReadOnlyCollection.  IList&lt;T&gt; spart Kosten zuordnen der ReadOnlyCollection für jeden Knoten.  Die zweite Optimierung ermöglicht das Erstellen spezialisierter Unterklassen, die eine bestimmte Anzahl von Argumenten (z. B. Block2, Block3, Block4) enthalten.  Daher wird für diese Knoten vermieden, dass für sie sowohl eine ReadOnlyCollection als auch ein Array zum Speichern von deren Elementen zugeordnet wird, wodurch 32 Bytes pro Knoten gespart werden.  
+  
+ Die Knoten der Ausdrucksbaumstruktur machen weiterhin die ursprünglichen LINQ-Eigenschaften von ReadOnlyCollections verfügbar.  Dies geschieht, indem für die Knoten erneut ein Feld verwendet wird, in dem das Array oder ein Element gespeichert wird, das normalerweise im Array gespeichert würde.  
+  
+ Für den Fall Arrays die Auflistung typisiert ist, um IList&lt;T&gt; anstelle von ReadOnlyCollection&lt;T&gt;.  Wenn der Knoten erstmalig erstellt wird, ist er ein Array.  Wenn der Compiler auf die Member zugreift, verwendet er diese Schnittstelle.  Durch Zugreifen auf Arrayelemente wird das Array in eine ReadOnlyCollection hochgestuft.  
+  
+ Für den Objektfall wir das erste Argument in einem Feld mit dem Objekttyp gespeichert.  Wenn der Knoten erstmalig erstellt wird, enthält das Feld den Ausdruck (Expression).  Der Compiler greift über diese Schnittstelle auf Argumente zu, und der Accessor für das erste Argument verwendet Expression.ReturnObject, um das Objekt zurückzugeben, das den Expression- oder ReadOnlyCollection-Fall verarbeitet.  Wenn der Benutzer auf die ReadOnlyCollection zugreift, wird das Objekt-Feld aktualisiert, sodass es direkt auf die ReadOnlyCollection verweist.  
+  
+ Es ist unverzichtbar, dass die Ausdrücke stets dieselbe ReadOnlyCollection zurückgeben.  Andernfalls wird der Rewriter-Strukturdurchlauf abgebrochen.  Es ist eine bedeutende Änderung von LINQ v1, dass unterschiedliche ReadOnlyCollections aus demselben Ausdrucksknoten zurückgegeben werden.  Derzeit können sich Benutzer auf die Objektidentität verlassen, um zu erkennen, ob der Knoten geändert wurde.  Ein Speichern der ReadOnlyCollection in einem überladenen Feld reduziert die Speicherauslastung und erhält die Kompatibilität für die öffentliche API.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ArgumentCount">
+      <MemberSignature Language="C#" Value="public int ArgumentCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ArgumentCount" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.IArgumentProvider.ArgumentCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Anzahl der Argumente für den Ausdrucksbaumstrukturknoten zurück.  Sie sollten diesen Typ nicht verwenden.  Er ist nur aufgrund der Assemblyumgestaltung öffentlich und wird intern zur Leistungsoptimierung verwendet.</summary>
+        <value>Die Anzahl von Argumenten für den Ausdrucksstrukturknoten als <see cref="T:System.Int32" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArgument">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.Expression GetArgument (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Linq.Expressions.Expression GetArgument(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.IArgumentProvider.GetArgument(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Arguments.</param>
+        <summary>Gibt das Argument bei Index zurück, das ausgelöst wird, wenn der Index außerhalb des gültigen Bereichs liegt.  Sie sollten diesen Typ nicht verwenden.  Es ist nur aufgrund der Assemblyumgestaltung öffentlich und wird intern zur Leistungsoptimierung verwendet.</summary>
+        <returns>Das Argument am Index, das ausgelöst wird, wenn Index außerhalb des gültigen Bereichs liegt, als <see cref="T:System.Linq.Expressions.Expression" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

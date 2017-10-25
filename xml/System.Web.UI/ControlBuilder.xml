@@ -1,0 +1,1114 @@
+<Type Name="ControlBuilder" FullName="System.Web.UI.ControlBuilder">
+  <TypeSignature Language="C#" Value="public class ControlBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ControlBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Unterstützt den Parser bei der Erstellung eines Steuerelements und dem untergeordneten Element darin enthaltenen Steuerelemente an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist jedes Steuerelement auf einer Seite zugeordnet ist, hat den Standardwert <xref:System.Web.UI.ControlBuilder> Klasse. Bei der Analyse erstellt das ASP.NET-Seitenframework eine Struktur von <xref:System.Web.UI.ControlBuilder> Objekte, die die Struktur von Steuerelementen für die Seite. Die <xref:System.Web.UI.ControlBuilder> Struktur wird anschließend verwendet, um die Seitencode zum Erstellen der Struktur des Steuerelements zu generieren. Zusätzlich zu den untergeordneten Steuerelementen die <xref:System.Web.UI.ControlBuilder> definiert das Verhalten wie der Inhalt innerhalb der Steuerelementtags analysiert wird. Sie können dieses Standardverhalten überschreiben, indem Sie eine eigene benutzerdefinierte Steuerelement-Generator-Klasse definieren. Dies erfolgt durch Anwenden einer <xref:System.Web.UI.ControlBuilderAttribute> -Attribut auf die Steuerelement-Generator-Klasse wie folgt:  
+  
+ `[ControlBuilderAttribute(typeof(ControlBuilderType))]`  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Web.UI.WebControls.Table> Steuerelement, deren Attribute und Inhalt werden definiert, die zum Zeitpunkt die Tabelle basiert. Im folgenden finden die Befehlszeile verwenden, um die ausführbare Datei erstellt.  
+  
+```vb  
+vbc /r:System.dll /r:System.Web.dll /r:System.Drawing.dll /t:library /out:myWebAppPath/Bin/vb_mycontrolbuilder.dll myControlBuilder.vb  
+```  
+  
+```csharp  
+csc /t:library /out:myWebAppPath/Bin/cs_mycontrolbuilder.dll myControlBuilder.cs  
+```  
+  
+ [!code-csharp[SystemWebUI_ControlBuilder_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_ControlBuilder_2/CS/controlbuilder.cs#1)]
+ [!code-vb[SystemWebUI_ControlBuilder_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_ControlBuilder_2/VB/controlbuilder.vb#1)]  
+  
+ Das folgende Codebeispiel verwendet das vorherige benutzerdefinierte Steuerelement. Insbesondere erstellt einer Tabelle, deren Attribute und Inhalt zur Laufzeit definiert werden. Beachten Sie, dass die Werte in der Richtlinie die vorherige Befehlszeile widerspiegeln.  
+  
+ [!code-aspx-csharp[SystemWebUI_ControlBuilder_2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_ControlBuilder_2/CS/controlbuilder.aspx#2)]
+ [!code-aspx-vb[SystemWebUI_ControlBuilder_2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_ControlBuilder_2/VB/controlbuilder.aspx#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.ControlBuilder" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz der <xref:System.Web.UI.ControlBuilder> Klasse.  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird von ASP.NET in der Regel verwendet, bei der Analyse der Seite und der Hierarchie zu erstellen. Es ist nicht für die Verwendung im Code vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowWhitespaceLiterals">
+      <MemberSignature Language="C#" Value="public virtual bool AllowWhitespaceLiterals ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool AllowWhitespaceLiterals() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.AllowWhitespaceLiterals" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob im Inhalt zwischen dem Start- und dem Endtag eines Steuerelements Leerstellenliterale zulässig sind. Diese Methode wird durch das ASP.NET-Seitenframework aufgerufen.</summary>
+        <returns>Gibt immer <see langword="true" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ControlBuilder.AllowWhitespaceLiterals%2A> Methode wird verwendet, um zu bestimmen, ob Leerraum im Inhalt zwischen die Start- und Endtag eines Steuerelements zulässig sind. Diese Methode gibt `false`, bevor der Inhalt vom Seitenparser verarbeitet wird, werden die leerzeichenliterale aus dem Inhalt abgeschnitten. Diese Methode gibt `true`, die leerzeichenliterale nicht entfernt.  
+  
+ Diese Methode wird während der Analyse durch das ASP.NET-Seitenframework aufgerufen und sollte nicht direkt im code aufgerufen werden.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ControlBuilderSamples_1#4](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_1/CS/ctrlbuilder_1.cs#4)]
+ [!code-vb[ControlBuilderSamples_1#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_1/VB/ctrlbuilder_1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können diese Methode überschreiben, in die abgeleitete Klasse, um anzugeben, ob leerzeichenliterale, in das benutzerdefinierte Steuerelement zulässig sind.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendLiteralString">
+      <MemberSignature Language="C#" Value="public virtual void AppendLiteralString (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AppendLiteralString(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.AppendLiteralString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Der dem Steuerelement hinzuzufügende Inhalt.</param>
+        <summary>Fügt den angegebenen literalen Inhalt einem Steuerelement hinzu. Diese Methode wird durch das ASP.NET-Seitenframework aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie die <xref:System.Web.UI.ControlBuilder.AppendLiteralString%2A> Methode, um zu steuern, wie literalen Inhalt zwischen die Start- und Endtag des Steuerelements wird verarbeitet. Literalen Inhalt kann beliebiger Text sein, die vom Browser an das Steuerelement übergeben wird. Beispielsweise sind alle HTML-Elemente und der Text zwischen die Start- und Endtags, literalen Inhalt.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ControlBuilderSamples_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_1/CS/ctrlbuilder_1.cs#3)]
+ [!code-vb[ControlBuilderSamples_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_1/VB/ctrlbuilder_1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Das Zeichenfolgenliteral ist nicht wohlgeformt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSubBuilder">
+      <MemberSignature Language="C#" Value="public virtual void AppendSubBuilder (System.Web.UI.ControlBuilder subBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AppendSubBuilder(class System.Web.UI.ControlBuilder subBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.AppendSubBuilder(System.Web.UI.ControlBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subBuilder" Type="System.Web.UI.ControlBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="subBuilder">Das dem untergeordneten Steuerelement zugeordnete <see cref="T:System.Web.UI.ControlBuilder" />-Objekt.</param>
+        <summary>Fügt dem <see cref="T:System.Web.UI.ControlBuilder" />-Objekt Generatoren für alle untergeordneten Steuerelemente hinzu, die zu dem Containersteuerelement gehören.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel überschreibt die <xref:System.Web.UI.ControlBuilder.AppendSubBuilder%2A> -Methode auslöst ein <xref:System.Exception> , wenn das Steuerelement, das diesem Steuerelementgenerator angewendet wird versucht, um die Steuerelemente in einer Instanz von <xref:System.Web.UI.ControlCollection> Klasse.  
+  
+ [!code-csharp[ControlBuilderSamples_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_2/cs/ctrlbuilder1.cs#1)]
+ [!code-vb[ControlBuilderSamples_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_2/VB/ctrlbuilder1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingContainerBuilder">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ControlBuilder BindingContainerBuilder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlBuilder BindingContainerBuilder" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.BindingContainerBuilder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlBuilder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Steuerelementgenerator, der entspricht auf dem Container für die Bindung für das Steuerelement, das diesem Generator erstellt.</summary>
+        <value>Der Steuerelementgenerator, das die Bindung Containersteuerelement entspricht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingContainerType">
+      <MemberSignature Language="C#" Value="public virtual Type BindingContainerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BindingContainerType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.BindingContainerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Bindungscontainers für das Steuerelement, das diesem Generator erstellt.</summary>
+        <value>Ein <see cref="T:System.Type" /> , die den Typ des Bindungscontainers für das Steuerelement, das diesem Generator erstellt darstellen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildObject">
+      <MemberSignature Language="C#" Value="public virtual object BuildObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object BuildObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.BuildObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Entwurfszeitinstanz des Steuerelements, das von dieser so genannte <see cref="T:System.Web.UI.ControlBuilder" /> Objekt.</summary>
+        <returns>Das resultierende erstellte Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseControl">
+      <MemberSignature Language="C#" Value="public virtual void CloseControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CloseControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.CloseControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, durch den Parser, dem Generator zu informieren, dass die Analyse von Start- und Endtag des Steuerelements abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ControlBuilder.CloseControl%2A> Methode wird vom Parser verwendet, der Generator an, dass das Analysieren des Steuerelements abgeschlossen wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComplexPropertyEntries">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection ComplexPropertyEntries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection ComplexPropertyEntries" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.ComplexPropertyEntries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Einträgen für komplexe Eigenschaft.</summary>
+        <value>Eine Auflistung von Einträgen für komplexe Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Einträge vorhanden sind, wird eine statische leere Auflistung zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlType">
+      <MemberSignature Language="C#" Value="public Type ControlType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ControlType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.ControlType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> für das Steuerelement erstellt werden soll.</summary>
+        <value>Die <see cref="T:System.Type" /> für das Steuerelement erstellt werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel überschreibt die <xref:System.Web.UI.ControlBuilder.OnAppendToParentBuilder%2A> -Methode überprüft die <xref:System.Web.UI.ControlBuilder.ControlType%2A> auf die Eigenschaft, um zu bestimmen, welche Art von Steuerelement diesem Generator angewendet wird. Wird jedoch eine `CustomTextBox`, überprüft der Generator, ob der Wert der <xref:System.Web.UI.ControlBuilder.HasAspCode%2A> Eigenschaft im Steuerelement enthalten ist. Wenn also eine Ausnahme ausgelöst, wenn nicht wird die <xref:System.Web.UI.ControlBuilder.HasBody%2A> -Methode aufgerufen wird.  
+  
+ [!code-csharp[ControlBuilderSamples_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_4/cs/controlbuilder_4.cs#1)]
+ [!code-vb[ControlBuilderSamples_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_4/VB/controlbuilder_4.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBuilderFromType">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.ControlBuilder CreateBuilderFromType (System.Web.UI.TemplateParser parser, System.Web.UI.ControlBuilder parentBuilder, Type type, string tagName, string id, System.Collections.IDictionary attribs, int line, string sourceFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.ControlBuilder CreateBuilderFromType(class System.Web.UI.TemplateParser parser, class System.Web.UI.ControlBuilder parentBuilder, class System.Type type, string tagName, string id, class System.Collections.IDictionary attribs, int32 line, string sourceFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.CreateBuilderFromType(System.Web.UI.TemplateParser,System.Web.UI.ControlBuilder,System.Type,System.String,System.String,System.Collections.IDictionary,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parser" Type="System.Web.UI.TemplateParser" />
+        <Parameter Name="parentBuilder" Type="System.Web.UI.ControlBuilder" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="attribs" Type="System.Collections.IDictionary" />
+        <Parameter Name="line" Type="System.Int32" />
+        <Parameter Name="sourceFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parser">Die <see cref="T:System.Web.UI.TemplateParser" /> Objekt zum Analysieren des Steuerelements verantwortlich.</param>
+        <param name="parentBuilder">Die <see cref="T:System.Web.UI.ControlBuilder" /> Objekt zum Erstellen des übergeordneten Steuerelements verantwortlich.</param>
+        <param name="type">Die <see cref="T:System.Type" /> des Objekts, das vom Generator erstellt wird.</param>
+        <param name="tagName">Der Name des zu erstellenden Tags. Dadurch wird den Generator, der mehrere Transpondertypen unterstützen.</param>
+        <param name="id">Die <see cref="P:System.Web.UI.ControlBuilder.ID" /> Attribut, das dem Steuerelement zugewiesen.</param>
+        <param name="attribs">Die <see cref="T:System.Collections.IDictionary" /> -Objekt, das die angegebenen Tagattribute enthält.</param>
+        <param name="line">Die Datei Quellzeilennummer für das angegebene Steuerelement.</param>
+        <param name="sourceFileName">Der Name der Quelldatei, von der das Steuerelement ist, erstellt werden.</param>
+        <summary>Erstellt eine <see cref="T:System.Web.UI.ControlBuilder" /> Objekt aus den angegebenen Tagnamen und Objekttyp sowie anderen Parametern, die den Generator definieren.</summary>
+        <returns>Der Generator, der für das Erstellen des Steuerelements zuständig ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentFilterResolutionService">
+      <MemberSignature Language="C#" Value="public System.Web.UI.IFilterResolutionService CurrentFilterResolutionService { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.IFilterResolutionService CurrentFilterResolutionService" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.CurrentFilterResolutionService" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IFilterResolutionService</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Web.UI.IFilterResolutionService" /> -Objekt, das verwendet wird, zum Verwalten von Gerätefilter Verwandte Dienste aus, wenn im Designer analysiert und beibehalten Steuerelemente.</summary>
+        <value>Ein <see cref="T:System.Web.UI.IFilterResolutionService" /> -Objekt, das verwendet wird, zum Verwalten von Gerätefilter Verwandte Dienste aus, wenn im Designer analysiert und beibehalten Steuerelemente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IFilterResolutionService> Schnittstelle ist eine Schnittstelle, die wie ein Steuerelement Gerätefilter in einem Designer spezifisch ist. Wenn Steuerelemente im Designer außerhalb des Kontexts einer Browseranforderung beibehalten oder analysiert die <xref:System.Web.UI.IFilterResolutionService> bietet eine Möglichkeit, um zu bestimmen, ob das aktuelle Steuerelement ein benannter Filter betroffen ist, und gibt an, ob ein benannter Filter Teil einer bestimmten Gerätefilter ist Hierarchie.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclareType">
+      <MemberSignature Language="C#" Value="public virtual Type DeclareType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DeclareType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.DeclareType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ, der Generierung von Code verwendet wird, um das Steuerelement zu deklarieren.</summary>
+        <value>Die <see cref="T:System.Type" /> des Steuerelements durch codegenerierung verwendet werden, um das Steuerelement zu deklarieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerFilter">
+      <MemberSignature Language="C#" Value="public static readonly string DesignerFilter;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string DesignerFilter" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ControlBuilder.DesignerFilter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <c>"__designer"</c> Literalzeichenfolge.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FChildrenAsProperties">
+      <MemberSignature Language="C#" Value="protected bool FChildrenAsProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FChildrenAsProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.FChildrenAsProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der bestimmt, ob das Steuerelement hat eine <see cref="T:System.Web.UI.ParseChildrenAttribute" /> mit <see cref="P:System.Web.UI.ParseChildrenAttribute.ChildrenAsProperties" /> festgelegt <see langword="true" />.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement besitzt eine <see cref="T:System.Web.UI.ParseChildrenAttribute" /> mit <see cref="P:System.Web.UI.ParseChildrenAttribute.ChildrenAsProperties" /> festgelegt <see langword="true" />, da andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FIsNonParserAccessor">
+      <MemberSignature Language="C#" Value="protected bool FIsNonParserAccessor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FIsNonParserAccessor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.FIsNonParserAccessor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der bestimmt, ob das Steuerelement implementiert die <see cref="T:System.Web.UI.IParserAccessor" /> Schnittstelle.</summary>
+        <value>
+          <see langword="false" />Wenn das Steuerelement implementiert die <see cref="T:System.Web.UI.IParserAccessor" /> Schnittstelle, die andernfalls <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildControlType">
+      <MemberSignature Language="C#" Value="public virtual Type GetChildControlType (string tagName, System.Collections.IDictionary attribs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetChildControlType(string tagName, class System.Collections.IDictionary attribs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.GetChildControlType(System.String,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="attribs" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="tagName">Der Tagname des untergeordneten Elements.</param>
+        <param name="attribs">Ein Array von Attributen im untergeordneten Steuerelement.</param>
+        <summary>Ruft den <see cref="T:System.Type" /> des Steuerelementtyps ab, der einem untergeordneten Tag entspricht. Diese Methode wird durch das ASP.NET-Seitenframework aufgerufen.</summary>
+        <returns>Der <see cref="T:System.Type" /> des untergeordneten Elements des angegebenen Steuerelements.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird während der Analyse durch das ASP.NET-Seitenframework aufgerufen und sollte nicht direkt im code aufgerufen werden.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ControlBuilderSamples_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_1/CS/ctrlbuilder_1.cs#2)]
+ [!code-vb[ControlBuilderSamples_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_1/VB/ctrlbuilder_1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectPersistData">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ObjectPersistData GetObjectPersistData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.ObjectPersistData GetObjectPersistData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.GetObjectPersistData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ObjectPersistData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die <see cref="T:System.Web.UI.ObjectPersistData" /> für dieses Objekt <see cref="T:System.Web.UI.ControlBuilder" /> Objekt.</summary>
+        <returns>Das <see cref="T:System.Web.UI.ObjectPersistData" /> für dieses <see cref="T:System.Web.UI.ControlBuilder" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResourceKey">
+      <MemberSignature Language="C#" Value="public string GetResourceKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetResourceKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.GetResourceKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Den Ressourcenschlüssel für diesen abgerufen <see cref="T:System.Web.UI.ControlBuilder" /> Objekt.</summary>
+        <returns>Der Ressourcenschlüssel für diesen <see cref="T:System.Web.UI.ControlBuilder" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasAspCode">
+      <MemberSignature Language="C#" Value="public virtual bool HasAspCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasAspCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.HasAspCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Steuerelement Codeblöcke enthält.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement über mindestens ein Codeblock enthält; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel überschreibt die <xref:System.Web.UI.ControlBuilder.OnAppendToParentBuilder%2A> -Methode überprüft die <xref:System.Web.UI.ControlBuilder.ControlType%2A> auf die Eigenschaft, um zu bestimmen, welche Art von Steuerelement diesem Generator angewendet wird. Wird jedoch eine `CustomTextBox`, überprüft der Generator, ob der Wert der <xref:System.Web.UI.ControlBuilder.HasAspCode%2A> Eigenschaft im Steuerelement enthalten ist. Wenn also eine Ausnahme ausgelöst, wenn nicht wird die <xref:System.Web.UI.ControlBuilder.HasBody%2A> -Methode aufgerufen wird.  
+  
+ [!code-csharp[ControlBuilderSamples_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_4/cs/controlbuilder_4.cs#1)]
+ [!code-vb[ControlBuilderSamples_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_4/VB/controlbuilder_4.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBody">
+      <MemberSignature Language="C#" Value="public virtual bool HasBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.HasBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob ein Steuerelement sowohl ein öffnendes und schließendes Tag aufweist. Diese Methode wird durch das ASP.NET-Seitenframework aufgerufen.</summary>
+        <returns>
+          <see langword="true" />Wenn das Steuerelement ein öffnendes und ein schließendes Tag besitzt; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird während der Analyse durch das ASP.NET-Seitenframework aufgerufen und sollte nicht direkt im code aufgerufen werden.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel überschreibt die <xref:System.Web.UI.ControlBuilder.OnAppendToParentBuilder%2A> -Methode überprüft die <xref:System.Web.UI.ControlBuilder.ControlType%2A> auf die Eigenschaft, um zu bestimmen, welche Art von Steuerelement diesem Generator angewendet wird. Wird jedoch eine `CustomTextBox`, überprüft der Generator, ob der Wert der <xref:System.Web.UI.ControlBuilder.HasAspCode%2A> Eigenschaft im Steuerelement enthalten ist. Wenn also eine Ausnahme ausgelöst, wenn nicht wird die <xref:System.Web.UI.ControlBuilder.HasBody%2A> -Methode aufgerufen wird.  
+  
+ [!code-csharp[ControlBuilderSamples_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_4/cs/controlbuilder_4.cs#1)]
+ [!code-vb[ControlBuilderSamples_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_4/VB/controlbuilder_4.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlDecodeLiterals">
+      <MemberSignature Language="C#" Value="public virtual bool HtmlDecodeLiterals ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HtmlDecodeLiterals() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.HtmlDecodeLiterals" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die literale Zeichenfolge eines HTML-Steuerelements HTML-decodiert sein muss. Diese Methode wird durch das ASP.NET-Seitenframework aufgerufen.</summary>
+        <returns>
+          <see langword="true" />Wenn die HTML-literal Steuerelements ist Zeichenfolge decodiert werden. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Literalzeichenfolge bezieht sich auf den Text zwischen dem Start- und Endtag des HTML-Steuerelement. HTML-Codierung ist, wenn der Text in eine Zeichenfolgendarstellung konvertiert wird, die der Browser wird anzuzeigen anstatt als HTML zu interpretieren. Zeichen, z. B. die Frage markieren (?), kaufmännisches und-Zeichen (&), Schrägstrich (/) zu markieren und Leerzeichen werden möglicherweise abgeschnitten oder von einigen Browsern beschädigt werden, damit diese Zeichen codiert werden müssen, wenn sie in angezeigt werden `a` Tags oder in Abfragezeichenfolgen.  
+  
+ Die <xref:System.Web.UI.ControlBuilder.HtmlDecodeLiterals%2A> Methode wird während der Analyse durch das ASP.NET-Seitenframework aufgerufen und sollte nicht direkt im code aufgerufen werden.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel überschreibt die <xref:System.Web.UI.ControlBuilder.HtmlDecodeLiterals%2A> Methode, um zuzulassen, HTML-Decodierung von Literalzeichenfolgen in jedes Steuerelement, das diesem Generator angewendet wird.  
+  
+ [!code-csharp[ControlBuilderSamples_2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_2/cs/ctrlbuilder1.cs#2)]
+ [!code-vb[ControlBuilderSamples_2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_2/VB/ctrlbuilder1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public string ID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ID-Eigenschaft für das Steuerelement erstellt werden sollen.</summary>
+        <value>Die ID-Eigenschaft für das Steuerelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InDesigner">
+      <MemberSignature Language="C#" Value="protected bool InDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.InDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt zurück, ob die <see cref="T:System.Web.UI.ControlBuilder" /> im Designer ausgeführt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.ControlBuilder" /> im Designer; ausgeführt wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.UI.ControlBuilder.InDesigner%2A> Eigenschaft bei der <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> -Methode aufgerufen wird. Wenn ein Steuerelement mit diesem Generator angefügt ist, verfügt über die <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> Methode bestimmt, ob das Steuerelement zur Entwurfszeit über einen Designer zugegriffen wird. Die <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> gibt den Wert der die <xref:System.Web.UI.ControlBuilder.InDesigner%2A> -Eigenschaft, und klicken Sie dann die <xref:System.Web.UI.ControlBuilder.SetTagInnerText%2A> Methode wird aufgerufen. Wenn die <xref:System.Web.UI.ControlBuilder.InDesigner%2A> -Eigenschaftensatz auf `false`, wird eine <xref:System.Exception> ausgelöst wird. Andernfalls wird der innere Text des Steuerelements zurückgegeben, auf die <xref:System.Web.UI.ControlBuilder.SetTagInnerText%2A> aufrufen.  
+  
+ [!code-csharp[ControlBuilderSamples_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_3/cs/controlbuilder_samples3.cs#1)]
+ [!code-vb[ControlBuilderSamples_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_3/VB/controlbuilder_samples3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public virtual void Init (System.Web.UI.TemplateParser parser, System.Web.UI.ControlBuilder parentBuilder, Type type, string tagName, string id, System.Collections.IDictionary attribs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Init(class System.Web.UI.TemplateParser parser, class System.Web.UI.ControlBuilder parentBuilder, class System.Type type, string tagName, string id, class System.Collections.IDictionary attribs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.Init(System.Web.UI.TemplateParser,System.Web.UI.ControlBuilder,System.Type,System.String,System.String,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parser" Type="System.Web.UI.TemplateParser" />
+        <Parameter Name="parentBuilder" Type="System.Web.UI.ControlBuilder" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="attribs" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="parser">Die <see cref="T:System.Web.UI.TemplateParser" /> Objekt zum Analysieren des Steuerelements verantwortlich.</param>
+        <param name="parentBuilder">Die <see cref="T:System.Web.UI.ControlBuilder" /> Objekt zum Erstellen des übergeordneten Steuerelements verantwortlich.</param>
+        <param name="type">Die <see cref="T:System.Type" /> zugewiesen werden, um das Steuerelement, das vom Generator erstellt wird.</param>
+        <param name="tagName">Der Name des zu erstellenden Tags. Dadurch wird den Generator, der mehrere Transpondertypen unterstützen.</param>
+        <param name="id">Die <see cref="P:System.Web.UI.ControlBuilder.ID" /> Attribut, das dem Steuerelement zugewiesen.</param>
+        <param name="attribs">Die <see cref="T:System.Collections.IDictionary" /> -Objekt, das die angegebenen Tagattribute enthält.</param>
+        <summary>Initialisiert die <see cref="T:System.Web.UI.ControlBuilder" /> für die Verwendung, nachdem er instanziiert wird. Diese Methode wird durch das ASP.NET-Seitenframework aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird während der Analyse durch das ASP.NET-Seitenframework aufgerufen und sollte nicht direkt im code aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InPageTheme">
+      <MemberSignature Language="C#" Value="protected bool InPageTheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InPageTheme" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.InPageTheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert, der angibt, ob dies <see cref="T:System.Web.UI.ControlBuilder" /> Objekt wird verwendet, um die Generierung von Seitendesigns.</summary>
+        <value>
+          <see langword="true" />Dieses <see cref="T:System.Web.UI.ControlBuilder" /> zum Generieren von Seitendesigns; anderenfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public virtual string ItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ für den Container für die Bindung festgelegt.</summary>
+        <value>Der Typ, der für den Container für die Bindung festgelegt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Localize">
+      <MemberSignature Language="C#" Value="public bool Localize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Localize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.Localize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert, der angibt, ob das Steuerelement die erstellten <see cref="T:System.Web.UI.ControlBuilder" /> Objekt lokalisiert ist.</summary>
+        <value>
+          <see langword="true" />um anzugeben, dass das Steuerelement erstellt, von diesem hat <see cref="T:System.Web.UI.ControlBuilder" /> Objekt lokalisiert wird; andernfalls, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamingContainerType">
+      <MemberSignature Language="C#" Value="public Type NamingContainerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type NamingContainerType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.NamingContainerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Namenscontainer für das Steuerelement, das diesem Generator erstellt.</summary>
+        <value>Ein <see cref="T:System.Type" /> , die den Typ der für das Steuerelement, das diesem Generator erstellt den Benennungscontainer darstellen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NeedsTagInnerText">
+      <MemberSignature Language="C#" Value="public virtual bool NeedsTagInnerText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool NeedsTagInnerText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.NeedsTagInnerText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob der Steuerelementgenerator den inneren Text abrufen muss. Wenn dies der Fall ist, die <see cref="M:System.Web.UI.ControlBuilder.SetTagInnerText(System.String)" /> -Methode muss aufgerufen werden. Diese Methode wird durch das ASP.NET-Seitenframework aufgerufen.</summary>
+        <returns>
+          <see langword="true" />Wenn der Steuerelement-Generator den inneren Text abrufen muss. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der innere Text ist der Text zwischen den Start- und Endtag des Steuerelements.  
+  
+ Diese Methode wird während der Analyse durch das ASP.NET-Seitenframework aufgerufen und sollte nicht direkt im code aufgerufen werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.UI.ControlBuilder.InDesigner%2A> Eigenschaft bei der <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> -Methode aufgerufen wird. Wenn ein Steuerelement mit diesem Generator angefügt ist, verfügt über die <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> bestimmt, ob das Steuerelement zur Entwurfszeit über einen Designer zugegriffen wird. Die <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> gibt den Wert der die <xref:System.Web.UI.ControlBuilder.InDesigner%2A> -Eigenschaft, und klicken Sie dann die <xref:System.Web.UI.ControlBuilder.SetTagInnerText%2A> Methode wird aufgerufen. Wenn die <xref:System.Web.UI.ControlBuilder.InDesigner%2A> -Eigenschaftensatz auf `false`, wird eine <xref:System.Exception> ausgelöst wird. Andernfalls wird der innere Text des Steuerelements zurückgegeben, auf die <xref:System.Web.UI.ControlBuilder.SetTagInnerText%2A> aufrufen.  
+  
+ [!code-csharp[ControlBuilderSamples_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_3/cs/controlbuilder_samples3.cs#1)]
+ [!code-vb[ControlBuilderSamples_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_3/VB/controlbuilder_samples3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAppendToParentBuilder">
+      <MemberSignature Language="C#" Value="public virtual void OnAppendToParentBuilder (System.Web.UI.ControlBuilder parentBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnAppendToParentBuilder(class System.Web.UI.ControlBuilder parentBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.OnAppendToParentBuilder(System.Web.UI.ControlBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentBuilder" Type="System.Web.UI.ControlBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="parentBuilder">Die <see cref="T:System.Web.UI.ControlBuilder" /> -Objekt, dem der aktuelle Generator hinzugefügt wird.</param>
+        <summary>Benachrichtigt den <see cref="T:System.Web.UI.ControlBuilder" /> , die es einem übergeordneten Steuerelement-Generator hinzugefügt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel überschreibt die <xref:System.Web.UI.ControlBuilder.OnAppendToParentBuilder%2A> -Methode überprüft die <xref:System.Web.UI.ControlBuilder.ControlType%2A> auf die Eigenschaft, um zu bestimmen, welche Art von Steuerelement diesem Generator angewendet wird. Wird jedoch eine `CustomTextBox`, überprüft der Generator, ob der Wert der <xref:System.Web.UI.ControlBuilder.HasAspCode%2A> Eigenschaft im Steuerelement enthalten ist. Wenn also eine Ausnahme ausgelöst, wenn nicht wird die <xref:System.Web.UI.ControlBuilder.HasBody%2A> -Methode aufgerufen wird.  
+  
+ [!code-csharp[ControlBuilderSamples_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_4/cs/controlbuilder_4.cs#1)]
+ [!code-vb[ControlBuilderSamples_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_4/VB/controlbuilder_4.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageVirtualPath">
+      <MemberSignature Language="C#" Value="public string PageVirtualPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PageVirtualPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.PageVirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den virtuellen Pfad der Seite an, die von dieser erstellt werden <see cref="T:System.Web.UI.ControlBuilder" /> Instanz.</summary>
+        <value>Der virtuelle Pfad der Seite erstellt werden sollen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parser">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.TemplateParser Parser { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.TemplateParser Parser" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.Parser" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.TemplateParser</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.TemplateParser" /> verantwortlich für die Analyse des Steuerelements.</summary>
+        <value>Die <see cref="T:System.Web.UI.TemplateParser" /> verwendet, um das Steuerelement zu analysieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft die <xref:System.Web.UI.TemplateParser> verantwortlich für die Analyse des Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessGeneratedCode">
+      <MemberSignature Language="C#" Value="public virtual void ProcessGeneratedCode (System.CodeDom.CodeCompileUnit codeCompileUnit, System.CodeDom.CodeTypeDeclaration baseType, System.CodeDom.CodeTypeDeclaration derivedType, System.CodeDom.CodeMemberMethod buildMethod, System.CodeDom.CodeMemberMethod dataBindingMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessGeneratedCode(class System.CodeDom.CodeCompileUnit codeCompileUnit, class System.CodeDom.CodeTypeDeclaration baseType, class System.CodeDom.CodeTypeDeclaration derivedType, class System.CodeDom.CodeMemberMethod buildMethod, class System.CodeDom.CodeMemberMethod dataBindingMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.ProcessGeneratedCode(System.CodeDom.CodeCompileUnit,System.CodeDom.CodeTypeDeclaration,System.CodeDom.CodeTypeDeclaration,System.CodeDom.CodeMemberMethod,System.CodeDom.CodeMemberMethod)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="codeCompileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="baseType" Type="System.CodeDom.CodeTypeDeclaration" />
+        <Parameter Name="derivedType" Type="System.CodeDom.CodeTypeDeclaration" />
+        <Parameter Name="buildMethod" Type="System.CodeDom.CodeMemberMethod" />
+        <Parameter Name="dataBindingMethod" Type="System.CodeDom.CodeMemberMethod" />
+      </Parameters>
+      <Docs>
+        <param name="codeCompileUnit">Der Stammcontainer eines CodeDOM-Diagramms des Steuerelements, das erstellt wird.</param>
+        <param name="baseType">Der Basistyp für die Seite oder das Benutzersteuerelement, die das Steuerelement enthält, das erstellt wird.</param>
+        <param name="derivedType">Der abgeleitete Typ, der die Seite oder das Benutzersteuerelement, die das Steuerelement enthält, das erstellt wird.</param>
+        <param name="buildMethod">Der Code, der verwendet wird, um das Steuerelement zu erstellen.</param>
+        <param name="dataBindingMethod">Der Code, der verwendet wird, um die Datenbindung Methode des Steuerelements zu erstellen.</param>
+        <summary>Können benutzerdefinierte Steuerelement-Generatoren Zugriff auf den generierten Code Document Object Model (CodeDom) und einfügen und Ändern von Code während des Prozesses analysieren und Erstellen von Steuerelementen an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Modell Einzeldateiseite der `baseType` und `derivedType` Parameter sind dieselben <xref:System.CodeDom.CodeTypeDeclaration> -Typ, der in der Regel von abgeleitet ist die <xref:System.Web.UI.Page> Klasse.  
+  
+ In der Code-Behind-Seitenmodell `baseType` ist die <xref:System.CodeDom.CodeTypeDeclaration> Typ, der die CodeBehind-Klasse darstellt, das in der Regel von abgeleitet ist die <xref:System.Web.UI.Page> Klasse. Die `derivedType` Parameter ist die Klasse, die von der partiellen Klasse abgeleitet wird, die das Markup enthält.  
+  
+ Weitere Informationen zu ASP.NET Web-Seite-Modellen finden Sie unter [ASP.NET Web Forms-Seite Syntaxübersicht](http://msdn.microsoft.com/library/09074b20-ece9-46fa-bc8f-ab2595ed2c02).  
+  
+ Weitere Informationen zum Verwenden von CodeDOM zum darstellen und Generieren von Quellcode, finden Sie unter [dynamische Quelle generieren und Kompilieren von](~/docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceProvider">
+      <MemberSignature Language="C#" Value="public IServiceProvider ServiceProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IServiceProvider ServiceProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.ServiceProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IServiceProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Dienstobjekt für <see cref="T:System.Web.UI.ControlBuilder" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.IServiceProvider" /> , der das Dienstobjekt für dieses darstellt <see cref="T:System.Web.UI.ControlBuilder" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetResourceKey">
+      <MemberSignature Language="C#" Value="public void SetResourceKey (string resourceKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetResourceKey(string resourceKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.SetResourceKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">Der Ressourcenschlüssel für diesen <see cref="T:System.Web.UI.ControlBuilder" />.</param>
+        <summary>Den Ressourcenschlüssel für diesen legt <see cref="T:System.Web.UI.ControlBuilder" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetServiceProvider">
+      <MemberSignature Language="C#" Value="public void SetServiceProvider (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetServiceProvider(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.SetServiceProvider(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Ein <see cref="T:System.IServiceProvider" /> , der das Dienstobjekt für stellt die <see cref="T:System.Web.UI.ControlBuilder" />.</param>
+        <summary>Legt das Dienstobjekt für dieses <see cref="T:System.Web.UI.ControlBuilder" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTagInnerText">
+      <MemberSignature Language="C#" Value="public virtual void SetTagInnerText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetTagInnerText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.SetTagInnerText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text zur Verfügung gestellt werden.</param>
+        <summary>Stellt die <see cref="T:System.Web.UI.ControlBuilder" /> mit dem inneren Text des Steuerelementtags.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn nur <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> zuvor zurückgegeben `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Web.UI.ControlBuilder.InDesigner%2A> Eigenschaft bei der <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> -Methode aufgerufen wird. Wenn ein Steuerelement mit diesem Generator angefügt ist, verfügt über die <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> bestimmt, ob das Steuerelement zur Entwurfszeit über einen Designer zugegriffen wird. Die <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> gibt den Wert der die <xref:System.Web.UI.ControlBuilder.InDesigner%2A> -Eigenschaft, und klicken Sie dann die <xref:System.Web.UI.ControlBuilder.SetTagInnerText%2A> Methode wird aufgerufen. Wenn die <xref:System.Web.UI.ControlBuilder.InDesigner%2A> -Eigenschaftensatz auf `false`, wird eine <xref:System.Exception> ausgelöst wird. Andernfalls wird der innere Text des Steuerelements zurückgegeben, auf die <xref:System.Web.UI.ControlBuilder.SetTagInnerText%2A> aufrufen.  
+  
+ [!code-csharp[ControlBuilderSamples_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_3/cs/controlbuilder_samples3.cs#1)]
+ [!code-vb[ControlBuilderSamples_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_3/VB/controlbuilder_samples3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubBuilders">
+      <MemberSignature Language="C#" Value="public System.Collections.ArrayList SubBuilders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList SubBuilders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.SubBuilders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste mit untergeordneten <see cref="T:System.Web.UI.ControlBuilder" /> Objekte für diesen <see cref="T:System.Web.UI.ControlBuilder" /> Objekt.</summary>
+        <value>Eine Liste mit untergeordneten <see cref="T:System.Web.UI.ControlBuilder" /> Objekte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagName">
+      <MemberSignature Language="C#" Value="public string TagName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TagName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.TagName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Tagnamen für das Steuerelement erstellt werden sollen.</summary>
+        <value>Der Tagname für das Steuerelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplatePropertyEntries">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection TemplatePropertyEntries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection TemplatePropertyEntries" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.TemplatePropertyEntries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Einträgen für Vorlage-Eigenschaft ab.</summary>
+        <value>Eine Auflistung von Vorlage Eigenschafteneinträge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Einträge vorhanden sind, wird eine statische leere Auflistung zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThemeResolutionService">
+      <MemberSignature Language="C#" Value="public System.Web.UI.IThemeResolutionService ThemeResolutionService { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.IThemeResolutionService ThemeResolutionService" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.ThemeResolutionService" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IThemeResolutionService</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Web.UI.IThemeResolutionService" /> -Objekt, das zur Entwurfszeit, zum Verwalten von Steuerelementdesigns und Skins verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Web.UI.IThemeResolutionService" /> -Objekt, das zur Entwurfszeit, zum Verwalten von Steuerelementdesigns und Skins verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IThemeResolutionService> Schnittstelle ist ein Container für eine oder mehrere <xref:System.Web.UI.ThemeProvider> Objekte, die wiederum geben die <xref:System.Web.UI.SkinBuilder> Objekte, Anwenden von Designs und Skins auf Steuerelemente zu steuern, wenn sie in einem Designer erstellt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

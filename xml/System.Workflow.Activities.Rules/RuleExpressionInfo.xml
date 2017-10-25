@@ -1,0 +1,64 @@
+<Type Name="RuleExpressionInfo" FullName="System.Workflow.Activities.Rules.RuleExpressionInfo">
+  <TypeSignature Language="C#" Value="public class RuleExpressionInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RuleExpressionInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.RuleExpressionInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Instanz dieser Klasse wird von der <see cref="M:System.Workflow.Activities.Rules.IRuleExpression.Validate(System.Workflow.Activities.Rules.RuleValidation,System.Boolean)" />-Methode eines <see cref="T:System.Workflow.Activities.Rules.IRuleExpression" />-Ausdrucks zurückgegeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Workflow.Activities.Rules.RuleExpressionInfo.ExpressionType%2A>-Eigenschaft von <xref:System.Workflow.Activities.Rules.RuleExpressionInfo> gibt den Rückgabetyp des Ausdrucks an. Beispielsweise hat ein binärer Ausdruck bei der Auswertung einen Rückgabetyp Boolean; oder ein Ausdruck, der auf eine Eigenschaft zugreift, kann einen Typ Integer zurückgeben.  
+  
+ Mit den Informationen in <xref:System.Workflow.Activities.Rules.RuleExpressionInfo> kann die Verwendung des Ausdrucks überprüft werden. Beispielsweise können zwei Ausdrücke nicht mit einem Größer-als-Test verglichen werden, wenn einer davon einen Wert vom Typ Boolean zurückgibt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleExpressionInfo (Type expressionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type expressionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleExpressionInfo.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expressionType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="expressionType">Der <see cref="T:System.Type" /> des Ausdrucks.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Activities.Rules.RuleExpressionInfo" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpressionType">
+      <MemberSignature Language="C#" Value="public Type ExpressionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ExpressionType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleExpressionInfo.ExpressionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typs des Ausdrucks ab.</summary>
+        <value>Der <see cref="T:System.Type" /> des Ausdrucks.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

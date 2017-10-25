@@ -1,0 +1,140 @@
+<Type Name="UnauthorizedWebPart" FullName="System.Web.UI.WebControls.WebParts.UnauthorizedWebPart">
+  <TypeSignature Language="C#" Value="public sealed class UnauthorizedWebPart : System.Web.UI.WebControls.WebParts.ProxyWebPart" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UnauthorizedWebPart extends System.Web.UI.WebControls.WebParts.ProxyWebPart" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.ProxyWebPart</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Zum Erstellen eines Platzhalterobjekts verwendet immer die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> des Steuerelements <see cref="Overload:System.Web.UI.WebControls.WebParts.WebPartManager.IsAuthorized" /> -Methode zurückkehrt <see langword="false" /> für eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Webparts-Steuerelementsatzes bietet eine zugriffsautorisierungsmechanismus verwendet, um zu bestimmen, ob einzelne <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente können zu einer Seite hinzugefügt werden. Entwickler können optional eine beliebige Zeichenfolge zum Zuweisen der <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> Eigenschaft auf einen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Wenn die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelemente ist das Steuerelement zu einer Seite hinzufügen, überprüft er diese Filterwert anhand der Kriterien, die vom Entwickler festgelegt werden, mithilfe der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.IsAuthorized%2A> -Methode, und gibt `false` Wenn ein Steuerelement nicht autorisiert ist.  
+  
+> [!NOTE]
+>  Dieser Mechanismus funktioniert auch mit Serversteuerelemente und Benutzersteuerelemente, die in platziert werden <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zonen, da diese Steuerelemente mit umschlossen sind eine <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Objekt zur Laufzeit und dieses Objekt erbt die <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> Eigenschaft.  
+  
+ Wenn eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement ist nicht autorisiert, die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern Fügt eine <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart> Steuerelement in der Konsolenstruktur der Seite anstelle des nicht autorisierten Steuerelements. Ein <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart> Steuerelement in der Konsolenstruktur reserviert die Position des Steuerelements nicht autorisiert, auf der Seite, und verhindert, dass Personalisierungsdaten, die ein Benutzer möglicherweise bereits auf angewendet der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, verloren gehen.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart> Steuerelement ist nie auf einer Seite, in denen es eingefügt wurde, noch im Quellcode für die gerenderte Seite, angezeigt. Entwickler können Sie überprüfen, ob das Vorhandensein in der Konsolenstruktur Seite der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebParts%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart> Steuerelement.  
+  
+ Der erste Teil des Codebeispiels ist eine benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPartManager> -Steuerelement, überschreibt die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.IsAuthorized%28System.Web.UI.WebControls.WebParts.WebPart%29> Methode zum Erstellen von benutzerdefinierten Autorisierungs-Kriterien. Alle <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement mit seiner <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> -Eigenschaft auf einen bestimmten Wert oder jedes Steuerelement, das keinen der Eigenschaft zugewiesen Wert ist, dürfen, und Steuerelemente, die diese Kriterien nicht erfüllt werden nicht autorisiert werden.  
+  
+ [!code-csharp[WebParts_UnauthorizedWebPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_UnauthorizedWebPart_Overview/CS/MyManagerAuthorize.cs#2)]
+ [!code-vb[WebParts_UnauthorizedWebPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_UnauthorizedWebPart_Overview/VB/MyManagerAuthorize.vb#2)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite, die die benutzerdefinierte hostet <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement. Es gibt drei statische Serversteuerelemente deklariert die `<asp:webpartzone>` Element. Obwohl diese Steuerelemente nicht tatsächlich sind <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, sie werden umschlossen werden mit einer <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Objekt zur Laufzeit, damit Sie sie, als behandeln können <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelemente sowie die Werte daher zuweisen ihre <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> Eigenschaften. Beachten Sie, dass die <xref:System.Web.UI.WebControls.BulletedList> Steuerelement hat ihren Filter, die auf den Wert, mit denen es gemäß den Kriterien in der benutzerdefinierten autorisiert werden kann, sollten festgelegt <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement. Die <xref:System.Web.UI.WebControls.Label> Steuerelement verfügt über eine Filterwert, der es nicht autorisiert werden auftreten soll. Die <xref:System.Web.UI.WebControls.Calendar> Steuerelement weist keinen Wert der Eigenschaft, damit standardmäßig es autorisiert werden.  
+  
+ [!code-aspx-csharp[WebParts_UnauthorizedWebPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_UnauthorizedWebPart_Overview/CS/IsAuthorizedCS.aspx#1)]
+ [!code-aspx-vb[WebParts_UnauthorizedWebPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_UnauthorizedWebPart_Overview/VB/IsAuthorizedVB.aspx#1)]  
+  
+ Der dritte Teil des Codebeispiels wird eine Einstellung, die Sie in der Datei "Web.config" So aktivieren Sie die Webparts Description-Dateien exportieren hinzufügen müssen. Stellen Sie sicher, dass Sie eine Datei "Web.config" im gleichen Verzeichnis wie die Webseite für dieses Codebeispiel verfügen. Innerhalb der `<system.web>` Abschnitt, stellen Sie sicher, dass eine `<webParts>` Element mit einem `enableExport` -Attributsatz zur `true`, wie im folgenden Markup.  
+  
+ `<webParts enableExport="true">`  
+  
+ `...`  
+  
+ `</webParts>`  
+  
+ Laden Sie die Seite in einem Browser, und beachten Sie, dass die <xref:System.Web.UI.WebControls.BulletedList> und <xref:System.Web.UI.WebControls.Calendar> Steuerelemente gerendert werden, wie erwartet, aber die <xref:System.Web.UI.WebControls.Label> Steuerelement ist nicht gerendert werden, weil sie nicht autorisiert wurde. Klicken auf die **WebPart Listensteuerelemente** Schaltfläche Ursachen der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement die IDs aller Steuerelemente in seiner <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebParts%2A> Auflistung. Beachten Sie, dass die ID für die <xref:System.Web.UI.WebControls.Label> Steuerelement aufgelistet, die ein <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart> Steuerelement wurde der Struktur hinzugefügt, Seite Steuerelement an seiner Stelle zu halten, obwohl die Bezeichnung nicht auf der Seite gerendert wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert Eigenschaftendaten für eine neue Instanz der ein <see cref="T:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart.%23ctor%2A> Konstruktor, auf den entsprechenden Überladungen Ruft Basis Konstruktoren der <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> Klasse. Diese Konstruktoren jeweils Eigenschaftendaten initialisieren und erstellen Sie eine neue Instanz der ein <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart> Steuerelement.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> ist das Steuerelement hinzufügen <xref:System.Web.UI.WebControls.WebParts.WebPart> (und andere Steuerelemente Server bzw. Benutzer) der Auflistung von Steuerelementen, überprüft er jedes Steuerelement mit der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.IsAuthorized%2A> Methode. Wenn eine Instanz des Steuerelements nicht autorisiert ist, werden bestimmte Eigenschaftswerte aus dem Steuerelement (z. B. seine ID) den Eigenschaften in einem neuen zugewiesen <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart> -Steuerelement, und die <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart> Steuerelement wird dann an die Steuerelementstruktur der Seite anstelle des Steuerelements, die nicht hinzugefügt Autorisierung.  
+  
+ Ein <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart> Steuerelement ist nie auf einer Seite gerendert, und ein Benutzer hat keine Möglichkeit gibt es wissen. Allerdings ein <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart> Steuerelement fungiert außerdem als ein Platzhalter, der die Position des ursprünglichen Steuerelements in der Konsolenstruktur, und behält alle bereits vorhandenen Personalisierungsdaten für das ursprüngliche Steuerelement. Wenn ein Benutzer ein Steuerelement personalisiert, es wird dann unbefugte aus irgendeinem Grund zur und es später erneut autorisiert wird, auf diese Weise können die Personalisierungsdaten des Benutzers wiederhergestellt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnauthorizedWebPart (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart.#ctor(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> , das nicht autorisiert werden, indem die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement.</param>
+        <summary>Initialisiert eine neue Instanz der ein <see cref="T:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart" /> Steuerelement aufgerufen, wenn eine statische <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Steuerelement (oder Server oder das Benutzersteuerelement) verweigert die Autorisierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart.%23ctor%2A> Konstruktor akzeptiert ein statisches Steuerelement `webPart` als Parameter, in dem `webPart` mit einer autorisierungsprüfung ist fehlgeschlagen. Ein statisches Steuerelement wird im Markup einer Webseite, hinzugefügt, sondern programmgesteuert deklariert ist. Der Konstruktor gibt eine neue Instanz der ein <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart> -Steuerelement, das die Struktur der Seite des Steuerelements anstelle von hinzugefügt wird `webPart`. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart.%23ctor%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnauthorizedWebPart (string originalID, string originalTypeName, string originalPath, string genericWebPartID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string originalID, string originalTypeName, string originalPath, string genericWebPartID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart.#ctor(System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="originalID" Type="System.String" />
+        <Parameter Name="originalTypeName" Type="System.String" />
+        <Parameter Name="originalPath" Type="System.String" />
+        <Parameter Name="genericWebPartID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="originalID">Eine Zeichenfolge, die die ID des dem ursprünglichen Server oder das Benutzersteuerelement enthält das hinzugefügte eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> zur Teilnahme an einer Webparts-Anwendung.</param>
+        <param name="originalTypeName">Eine Zeichenfolge mit dem Namen des ursprünglichen den Typ des Steuerelements.</param>
+        <param name="originalPath">Eine Zeichenfolge mit dem relativen virtuellen Pfad auf das Benutzersteuerelement, wenn das ursprüngliche Steuerelement ein benutzerdefiniertes Steuerelement ist.</param>
+        <param name="genericWebPartID">Eine Zeichenfolge, enthält die ID des dem <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> Steuerelement, das die ursprünglichen Server oder das Benutzersteuerelement umschließt.</param>
+        <summary>Initialisiert eine neue Instanz der ein <see cref="T:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart" /> Steuerelement aufgerufen, wenn eine dynamische <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Steuerelement (oder Server oder das Benutzersteuerelement) verweigert die Autorisierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart.%23ctor%2A> Konstruktor wird aufgerufen, wenn eine dynamische <xref:System.Web.UI.WebControls.WebParts.WebPart> oder andere nicht seine autorisierungsprüfung. Ein dynamisches Steuerelement ist eine, die programmgesteuert auf eine Seite hinzugefügt wird, oder durch einen Benutzer aus einem Katalog von Webparts steuert. Die <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart.%23ctor%2A> Konstruktor gibt eine neue Instanz der ein <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart> Steuerelement, das dynamische Steuerelement zu ersetzen, die Fehler bei der Autorisierung. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.UnauthorizedWebPart.%23ctor%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

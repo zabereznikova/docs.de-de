@@ -1,0 +1,182 @@
+<Type Name="RecipientInfo" FullName="System.Security.Cryptography.Pkcs.RecipientInfo">
+  <TypeSignature Language="C#" Value="public abstract class RecipientInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RecipientInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.RecipientInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfo" /> Klasse stellt Informationen über die Empfänger einer CMS/PKCS #7-Nachricht dar. Die <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfo" /> Klasse ist eine abstrakte Klasse, die von geerbt, die <see cref="T:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo" /> und <see cref="T:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo" /> Klassen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine abstrakte Klasse, die nicht instanziiert werden kann.  Es erbt die <xref:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo> und <xref:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo> Klassen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EncryptedKey">
+      <MemberSignature Language="C#" Value="public abstract byte[] EncryptedKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] EncryptedKey" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfo.EncryptedKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.RecipientInfo.EncryptedKey" /> abstrakte Eigenschaft ruft der verschlüsselte Schlüsselinformationen für den Empfänger.</summary>
+        <value>Ein Array von Bytewerten, die die verschlüsselte Schlüsselinformationen für den Empfänger enthalten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine abstrakte Eigenschaft überschrieben, indem <xref:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo> und <xref:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyEncryptionAlgorithm">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.Pkcs.AlgorithmIdentifier KeyEncryptionAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Pkcs.AlgorithmIdentifier KeyEncryptionAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfo.KeyEncryptionAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.AlgorithmIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.RecipientInfo.KeyEncryptionAlgorithm" /> abstrakte Eigenschaft ruft den Algorithmus für die Einrichtung des Schlüssels ausgeführt.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.Pkcs.AlgorithmIdentifier" /> -Objekt, das den Wert des-Algorithmus verwendet, um den Schlüssel zwischen dem Absender und Empfänger der CMS/PKCS #7-Meldung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine abstrakte Eigenschaft überschrieben, indem <xref:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo> und <xref:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecipientIdentifier">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.Pkcs.SubjectIdentifier RecipientIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Pkcs.SubjectIdentifier RecipientIdentifier" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfo.RecipientIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.SubjectIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.RecipientInfo.RecipientIdentifier" /> abstrakte Eigenschaft ruft den Bezeichner des Empfängers ab.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifier" /> -Objekt, das den Bezeichner des Empfängers enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine abstrakte Eigenschaft überschrieben, indem <xref:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo> und <xref:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Pkcs.RecipientInfoType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.Pkcs.RecipientInfoType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfo.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.RecipientInfoType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.RecipientInfo.Type" /> Eigenschaft ruft den Typ des Empfängers ab. Der Typ des Empfängers bestimmt, welche der beiden wichtigen Protokolle verwendet wird, um einen Schlüssel zwischen dem Absender und Empfänger einer CMS/PKCS #7-Nachricht festzulegen.</summary>
+        <value>Der Wert der <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoType" /> -Enumeration, der den Typ des Empfängers definiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public abstract int Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Version" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfo.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.RecipientInfo.Version" /> abstrakte Eigenschaft ruft die Version der Empfängerinformationen ab. Abgeleitete Klassen legen Sie diese Eigenschaft für Objekte automatisch aus, und der Wert gibt an, ob es PKCS #7 oder Cryptographic Message Syntax (CMS) verwendet wird, um Nachrichten zu schützen. Die Version darüber hinaus angegeben, ob die <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfo" /> Objekt richtet einen kryptografischen Schlüssel durch einen Schlüssel Vereinbarung-Algorithmus oder einen Schlüssel Transport-Algorithmus.</summary>
+        <value>Ein <see cref="T:System.Int32" /> -Wert, der die Version des darstellen der <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfo" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine abstrakte Eigenschaft überschrieben, indem <xref:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo> und <xref:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo>.  
+  
+ Die Version bestimmt, ob die Nachricht eine PKCS #7-Nachricht oder eine CMS-Nachricht ist. CMS ist eine neuere Obermenge von PKCS #7.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

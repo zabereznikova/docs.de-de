@@ -1,0 +1,116 @@
+<Type Name="BaseDataListComponentEditor" FullName="System.Web.UI.Design.WebControls.BaseDataListComponentEditor">
+  <TypeSignature Language="C#" Value="public abstract class BaseDataListComponentEditor : System.Windows.Forms.Design.WindowsFormsComponentEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BaseDataListComponentEditor extends System.Windows.Forms.Design.WindowsFormsComponentEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.BaseDataListComponentEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Design.WindowsFormsComponentEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Komponenten-Editor für Webserversteuerelemente, die von der abgeleiteten Basisklasse die <see cref="T:System.Web.UI.WebControls.BaseDataList" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Komponenten-Editor stellt eine Benutzeroberfläche zum Bearbeiten der Eigenschaften eines Steuerelements bereit. Komponenten-Editoren werden von Steuerelement-Designer aufgerufen, mit der **Eigenschaften-Generator** Menüelement im Kontextmenü für das Steuerelement. Komponenten-Editoren, die abgeleitet sind die <xref:System.Web.UI.Design.WebControls.BaseDataListComponentEditor> Klasse werden aufgerufen, in Designern abgeleitet wurde. die <xref:System.Web.UI.Design.WebControls.BaseDataListDesigner> Klasse, und werden verwendet, um die Eigenschaften der Steuerelemente bearbeiten, die von der abgeleiteten der <xref:System.Web.UI.WebControls.BaseDataList> Klasse. Beispiele für solche Steuerelemente finden Sie unter <xref:System.Web.UI.WebControls.DataGrid> und <xref:System.Web.UI.WebControls.DataList>.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.BaseDataListComponentEditor.EditComponent%2A> Methode zeigt einen Komponenten-Editor für das zugeordnete Steuerelement an, wenn dieser erstellt werden kann. Die <xref:System.Web.UI.Design.WebControls.BaseDataListComponentEditor.GetInitialComponentEditorPageIndex%2A> -Methode gibt den Index der ersten Seite in der Komponenten-Editor angezeigt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BaseDataListComponentEditor (int initialPage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 initialPage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataListComponentEditor.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialPage" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="initialPage">Der Index im Array der Seitensteuerelementtypen, von der ersten Seite angezeigt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.BaseDataListComponentEditor" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Designer, die abgeleitet ist die <xref:System.Web.UI.Design.WebControls.BaseDataListDesigner> -Klasse erstellt einen Komponenten-Editor, die abgeleitet ist die <xref:System.Web.UI.Design.WebControls.BaseDataListComponentEditor> Klasse, wenn der Benutzer auswählt **Eigenschaften-Generator** aus dem Kontextmenü im Designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditComponent">
+      <MemberSignature Language="C#" Value="public override bool EditComponent (System.ComponentModel.ITypeDescriptorContext context, object obj, System.Windows.Forms.IWin32Window parent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool EditComponent(class System.ComponentModel.ITypeDescriptorContext context, object obj, class System.Windows.Forms.IWin32Window parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataListComponentEditor.EditComponent(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Windows.Forms.IWin32Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="parent" Type="System.Windows.Forms.IWin32Window" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> -Objekt, das verwendet werden kann, um die zusätzliche Kontextinformationen abgerufen werden können.</param>
+        <param name="obj">Ein <see cref="T:System.Object" /> implementieren die <see cref="T:System.ComponentModel.IComponent" />, die die zu bearbeitende Komponente darstellt.</param>
+        <param name="parent">Die <see cref="T:System.Windows.Forms.IWin32Window" /> , die das übergeordnete Fenster darstellt.</param>
+        <summary>Bearbeitet die angegebene Komponente mit dem angegebenen Kontext-Deskriptor und übergeordneten Fenster.</summary>
+        <returns>
+          <see langword="true" />die Komponente wurde erfolgreich bearbeitet. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.BaseDataListComponentEditor.EditComponent%2A> Methode ruft eine <xref:System.Type> Array der Seitensteuerelementtypen mithilfe der <xref:System.Windows.Forms.Design.WindowsFormsComponentEditor.GetComponentEditorPages%2A> Methode. Erstellt eine <xref:System.Windows.Forms.Design.ComponentEditorForm> -Objekt, und ruft dann die <xref:System.Windows.Forms.Design.ComponentEditorForm.ShowForm%2A> Methode, um die Komponenten-Editor anzuzeigen.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.Windows.Forms.Design.WindowsFormsComponentEditor.GetComponentEditorPages" /> Methode muss überschrieben wurde zum Zurückgeben einer <see cref="T:System.Type" /> Array von Seite-Steuerelementtypen. Dieses Array muss vorhanden sein, damit die <see cref="Overload:System.Web.UI.Design.WebControls.BaseDataListComponentEditor.EditComponent" /> Methode erfolgreich ausgeführt werden kann.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInitialComponentEditorPageIndex">
+      <MemberSignature Language="C#" Value="protected override int GetInitialComponentEditorPageIndex ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 GetInitialComponentEditorPageIndex() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataListComponentEditor.GetInitialComponentEditorPageIndex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Index der ersten Seite in der Komponenten-Editor angezeigt.</summary>
+        <returns>Der Index der ersten Seite im Array.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die erste Seite wird angegeben. wenn die <xref:System.Web.UI.Design.WebControls.BaseDataListComponentEditor> Objekt erstellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

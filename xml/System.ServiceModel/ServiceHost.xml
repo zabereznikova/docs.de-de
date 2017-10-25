@@ -1,0 +1,489 @@
+<Type Name="ServiceHost" FullName="System.ServiceModel.ServiceHost">
+  <TypeSignature Language="C#" Value="public class ServiceHost : System.ServiceModel.ServiceHostBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceHost extends System.ServiceModel.ServiceHostBase" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ServiceHost" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.ServiceHostBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Host für Dienste bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert den Host, der vom Programmiermodell für das [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Dienstmodell verwendet wird.  
+  
+ Verwenden Sie die <xref:System.ServiceModel.ServiceHost>-Klasse, um einen Dienst für die Verwendung durch Clientanwendungen zu konfigurieren und verfügbar zu machen, sofern Sie hierfür nicht Internetinformationsdienste (IIS) oder Windows Activation Services (WAS) verwenden. Sowohl IIS als auch WAS interagieren für Sie mit einem <xref:System.ServiceModel.ServiceHost>-Objekt.  
+  
+ Um einen Dienst zur Verwendung durch Aufrufer verfügbar zu machen, erfordert [!INCLUDE[indigo2](~/includes/indigo2-md.md)] eine umfassende Dienstbeschreibung (dargestellt durch die <xref:System.ServiceModel.Description.ServiceDescription>-Klasse). Die <xref:System.ServiceModel.ServiceHost>-Klasse erstellt anhand des Diensttyps und der Konfigurationsinformationen eine <xref:System.ServiceModel.Description.ServiceDescription> und verwendet diese Beschreibung zum Erstellen von <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>-Objekten für jeden Endpunkt in der Beschreibung.  
+  
+ Verwenden Sie ein <xref:System.ServiceModel.ServiceHost>-Objekt, um einen Dienst zu laden, Endpunkte zu konfigurieren, Sicherheitseinstellungen anzuwenden und Listener zur Behandlung eingehender Anforderungen zu starten.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_SelfHost#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_selfhost/cs/wholeenchilada.cs#1)]
+ [!code-vb[S_SelfHost#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_selfhost/vb/wholeenchilada.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ServiceHost ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHost.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.ServiceHost" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um eine Instanz der <xref:System.ServiceModel.ServiceHost>-Klasse zu erstellen, sind zwei Konstruktoren verfügbar. In den meisten Fällen verwenden Sie den <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>-Konstruktor, der den Diensttyp als Eingabeparameter verwendet. Mit diesem Konstruktor kann der Host bei Bedarf neue Dienste erstellen. Den <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29>-Konstruktor sollten Sie stattdessen nur verwenden, wenn der Diensthost eine bestimmte Singletoninstanz des Diensts verwenden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceHost (object singletonInstance, params Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object singletonInstance, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHost.#ctor(System.Object,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="singletonInstance" Type="System.Object" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="singletonInstance">Die Instanz des gehosteten Diensts.</param>
+        <param name="baseAddresses">Ein <see cref="T:System.Array" /> vom Typ <see cref="T:System.Uri" />, das die Basisadressen für den gehosteten Dienst enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.ServiceHost" />-Klasse mit der angegebenen Dienstinstanz und ihrer Basisadresse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, anstatt einen benutzerdefinierten <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> zu implementieren, wenn Sie eine bestimmte Objektinstanz zur Verwendung durch einen Singletondienst bereitstellen möchten. Diese Überladung empfiehlt sich, wenn der Dienstimplementierungstyp schwer zu erstellen ist (wenn er z.&#160;B. keinen öffentlichen Standardkonstruktor implementiert, der über keine Parameter verfügt).  
+  
+ Beachten Sie, dass sich einige Features im Zusammenhang mit dem [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Instanziierungsverhalten anders verhalten, wenn ein Objekt für diese Überladung bereitgestellt wird. Der Aufruf von <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> hat beispielsweise keine Auswirkung, wenn mit dieser Konstruktorüberladung eine bekannte Objektinstanz bereitgestellt wird. Dementsprechend werden auch alle anderen Instanzfreigabemechanismen ignoriert. Der <xref:System.ServiceModel.ServiceHost> verhält sich immer so, als ob die <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType>-Eigenschaft für alle Vorgänge auf <xref:System.ServiceModel.ReleaseInstanceMode?displayProperty=nameWithType> festgelegt ist.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEServiceHost2#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueservicehost2/cs/service.cs#1)]
+ [!code-vb[S_UEServiceHost2#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueservicehost2/vb/service.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="singletonInstance" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceHost (Type serviceType, params Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type serviceType, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHost.#ctor(System.Type,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Typ des gehosteten Diensts.</param>
+        <param name="baseAddresses">Ein Array vom Typ <see cref="T:System.Uri" />, das die Basisadressen für den gehosteten Dienst enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.ServiceHost" />-Klasse mit dem angegebenen Diensttyp und seiner Basisadresse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn Sie über den Diensttyp verfügen und bei Bedarf neue Instanzen davon erstellen können, auch wenn Sie eine Singletoninstanz benötigen. Den <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29>-Konstruktor sollten Sie stattdessen nur verwenden, wenn der Diensthost eine bestimmte Singletoninstanz des Diensts verwenden soll.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.ServiceModel.ServiceHost>-Klasse verwendet wird, um einen Windows Communication Foundation-Dienst zu hosten:  
+  
+ [!code-csharp[S_UEServiceHost#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueservicehost/cs/service.cs#1)]
+ [!code-vb[S_UEServiceHost#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueservicehost/vb/service.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (Type implementedContract, System.ServiceModel.Channels.Binding binding, string address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(class System.Type implementedContract, class System.ServiceModel.Channels.Binding binding, string address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.Type" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">Der <see cref="T:System.Type" /> des Vertrags für den hinzugefügten Endpunkt.</param>
+        <param name="binding">Die <see cref="T:System.ServiceModel.Channels.Binding" />-Einstellung für den hinzugefügten Endpunkt.</param>
+        <param name="address">Die Adresse für den hinzugefügten Endpunkt.</param>
+        <summary>Fügt dem gehosteten Dienst einen Dienstendpunkt mit einem angegebenen Vertrag, einer Bindung und einer Endpunktadresse hinzu.</summary>
+        <returns>Der <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />, der dem gehosteten Dienst hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UEServiceHost#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueservicehost/cs/service.cs#3)]
+ [!code-vb[S_UEServiceHost#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueservicehost/vb/service.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="implementedContract" /> oder <paramref name="binding" /> oder <paramref name="address" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (Type implementedContract, System.ServiceModel.Channels.Binding binding, Uri address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(class System.Type implementedContract, class System.ServiceModel.Channels.Binding binding, class System.Uri address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.Type" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">Der <see cref="T:System.Type" /> des Vertrags für den hinzugefügten Endpunkt.</param>
+        <param name="binding">Die <see cref="T:System.ServiceModel.Channels.Binding" />-Einstellung für den hinzugefügten Endpunkt.</param>
+        <param name="address">Der <see cref="T:System.Uri" />, der die Adresse für den hinzugefügten Endpunkt enthält.</param>
+        <summary>Fügt dem gehosteten Dienst einen Dienstendpunkt mit einem angegebenen Vertrag, einer Bindung und einem URI mit der Endpunktadresse hinzu.</summary>
+        <returns>Der <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />, der dem gehosteten Dienst hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UEServiceHost#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueservicehost/cs/service.cs#4)]
+ [!code-vb[S_UEServiceHost#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueservicehost/vb/service.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="implementedContract" /> oder <paramref name="binding" /> oder <paramref name="address" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (Type implementedContract, System.ServiceModel.Channels.Binding binding, string address, Uri listenUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(class System.Type implementedContract, class System.ServiceModel.Channels.Binding binding, string address, class System.Uri listenUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.String,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.Type" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.String" />
+        <Parameter Name="listenUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">Der <see cref="T:System.Type" /> des Vertrags für den hinzugefügten Endpunkt.</param>
+        <param name="binding">Die <see cref="T:System.ServiceModel.Channels.Binding" />-Einstellung für den hinzugefügten Endpunkt.</param>
+        <param name="address">Die Endpunktadresse für den Dienst.</param>
+        <param name="listenUri">Der <see cref="T:System.Uri" />, an dem die Dienstendpunkte lauschen können.</param>
+        <summary>Fügt dem gehosteten Dienst einen Dienstendpunkt mit einem angegebenen Vertrag, einer Bindung, einer Endpunktadresse und einem URI, an dem der Dienst lauscht, hinzu.</summary>
+        <returns>Der <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />, der dem gehosteten Dienst hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Version der Methode, wenn Sie über mehrere Endpunkte verfügen, die am gleichen URI lauschen müssen.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEServiceHost#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueservicehost/cs/service.cs#5)]
+ [!code-vb[S_UEServiceHost#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueservicehost/vb/service.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="implementedContract" /> oder <paramref name="binding" /> oder <paramref name="address" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (Type implementedContract, System.ServiceModel.Channels.Binding binding, Uri address, Uri listenUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(class System.Type implementedContract, class System.ServiceModel.Channels.Binding binding, class System.Uri address, class System.Uri listenUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.Uri,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.Type" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.Uri" />
+        <Parameter Name="listenUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">Der <see cref="T:System.Type" /> des Vertrags für den hinzugefügten Endpunkt.</param>
+        <param name="binding">Die <see cref="T:System.ServiceModel.Channels.Binding" />-Einstellung für den hinzugefügten Endpunkt.</param>
+        <param name="address">Der <see cref="T:System.Uri" />, der die Adresse für den hinzugefügten Endpunkt enthält.</param>
+        <param name="listenUri">Der <see cref="T:System.Uri" />, an dem die Dienstendpunkte lauschen können.</param>
+        <summary>Fügt dem gehosteten Dienst einen Dienstendpunkt mit einem angegebenen Vertrag, einer Bindung, einem URI mit der Endpunktadresse und einem URI, den der Dienst überwacht, hinzu.</summary>
+        <returns>Der <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />, der dem gehosteten Dienst hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Version der Methode, wenn Sie über mehrere Endpunkte verfügen, die am gleichen URI lauschen müssen.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEServiceHost#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueservicehost/cs/service.cs#6)]
+ [!code-vb[S_UEServiceHost#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueservicehost/vb/service.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="implementedContract" /> oder <paramref name="binding" /> oder <paramref name="address" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Verträge werden nicht initialisiert, oder die Vertragsschlüssel können nicht gefunden werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyConfiguration">
+      <MemberSignature Language="C#" Value="protected override void ApplyConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ApplyConfiguration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHost.ApplyConfiguration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lädt die dienstbeschreibung aus der Konfigurationsdatei und wendet sie auf die Laufzeit erstellt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDescription">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Description.ServiceDescription CreateDescription (out System.Collections.Generic.IDictionary&lt;string,System.ServiceModel.Description.ContractDescription&gt; implementedContracts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Description.ServiceDescription CreateDescription([out] class System.Collections.Generic.IDictionary`2&lt;string, class System.ServiceModel.Description.ContractDescription&gt;&amp; implementedContracts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHost.CreateDescription(System.Collections.Generic.IDictionary{System.String,System.ServiceModel.Description.ContractDescription}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContracts" Type="System.Collections.Generic.IDictionary&lt;System.String,System.ServiceModel.Description.ContractDescription&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContracts">Das <see cref="T:System.Collections.Generic.IDictionary`2" /> mit Schlüsselpaaren eines Typs (<see cref="T:System.String" />, <see cref="T:System.ServiceModel.Description.ContractDescription" />), der die verschlüsselten Verträge des gehosteten Diensts enthält, die implementiert wurden.</param>
+        <summary>Erstellt eine Beschreibung des gehosteten Diensts.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.Description.ServiceDescription" /> des gehosteten Diensts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um Vertragsbeschreibungen aus benutzerdefinierten Programmiermodellen zu erstellen. Überschreiben Sie die entsprechende Basisklassenmethode, <xref:System.ServiceModel.ServiceHostBase.CreateDescription%28System.Collections.Generic.IDictionary%7BSystem.String%2CSystem.ServiceModel.Description.ContractDescription%7D%40%29>, um das benutzerdefinierte Modell zu implementieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Typ des gehosteten Diensts ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="InitializeDescription">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine Beschreibung des auf der Grundlage seines Typ oder seiner Instanz gehosteten Dienst.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode macht die Übergabe von Basisadressen als Teil von <xref:System.ServiceModel.ServiceHost.%23ctor%2A> überflüssig. Klassen, die von <xref:System.ServiceModel.ServiceHost> erben, können <xref:System.ServiceModel.ServiceHost.%23ctor%2A> und anschließend eine <xref:System.ServiceModel.ServiceHost.InitializeDescription%2A> aufrufen, wenn eine Basisadresse verfügbar ist. Auf diese Weise wird das Service Model Metadata Utility Tool (Svcutil.exe) implementiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="InitializeDescription">
+      <MemberSignature Language="C#" Value="protected void InitializeDescription (object singletonInstance, System.ServiceModel.UriSchemeKeyedCollection baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitializeDescription(object singletonInstance, class System.ServiceModel.UriSchemeKeyedCollection baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHost.InitializeDescription(System.Object,System.ServiceModel.UriSchemeKeyedCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="singletonInstance" Type="System.Object" />
+        <Parameter Name="baseAddresses" Type="System.ServiceModel.UriSchemeKeyedCollection" />
+      </Parameters>
+      <Docs>
+        <param name="singletonInstance">Die Instanz des gehosteten Diensts.</param>
+        <param name="baseAddresses">Die <see cref="T:System.ServiceModel.UriSchemeKeyedCollection" />, die die Basisadressen für den gehosteten Dienst enthält.</param>
+        <summary>Initialisiert eine Beschreibung des auf der Grundlage seiner Instanz und der angegebenen Basisadressen gehosteten Dienst.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="singletonInstance" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeDescription">
+      <MemberSignature Language="C#" Value="protected void InitializeDescription (Type serviceType, System.ServiceModel.UriSchemeKeyedCollection baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitializeDescription(class System.Type serviceType, class System.ServiceModel.UriSchemeKeyedCollection baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHost.InitializeDescription(System.Type,System.ServiceModel.UriSchemeKeyedCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="baseAddresses" Type="System.ServiceModel.UriSchemeKeyedCollection" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der <see cref="T:System.Type" /> des gehosteten Diensts.</param>
+        <param name="baseAddresses">Die <see cref="T:System.ServiceModel.UriSchemeKeyedCollection" />, die die Basisadressen für den gehosteten Dienst enthält.</param>
+        <summary>Initialisiert eine Beschreibung des auf der Grundlage seines Typs und der angegebenen Basisadressen gehosteten Dienst.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosed">
+      <MemberSignature Language="C#" Value="protected override void OnClosed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClosed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHost.OnClosed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verwirft gehostete Dienste, wenn der Diensthost geschlossen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Überschreiben der <xref:System.ServiceModel.ServiceHost.OnClosed%2A> Methode müssen Sie die Basis sicherstellen. OnClosed-Methode wird aufgerufen, auch wenn eine Ausnahme auftritt. Der folgende Code veranschaulicht dies.  
+  
+```  
+protected override void OnClosed()  
+{  
+    try  
+    {  
+        if (FaultFlagService.faultFlag == ThrowDuring.OnClosed)  
+        {  
+            FaultFlagService.faultFlag = ThrowDuring.Never;  
+            throw new ServiceActivationException("Faulting the service because FaultFlagService.faultFlag = ThrowDuring.OnClosed");  
+        }  
+    }  
+    finally  
+    {  
+        base.OnClosed();  
+    }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SingletonInstance">
+      <MemberSignature Language="C#" Value="public object SingletonInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SingletonInstance" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHost.SingletonInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Singletoninstanz des gehosteten Diensts ab.</summary>
+        <value>Das gehostete Dienstobjekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie den <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29>-Konstruktor, um eine Singletoninstanz des zu hostenden Diensts zu initialisieren, wenn Sie die verwendete Dienstinstanz steuern möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

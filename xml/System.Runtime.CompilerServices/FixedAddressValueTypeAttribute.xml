@@ -1,0 +1,84 @@
+<Type Name="FixedAddressValueTypeAttribute" FullName="System.Runtime.CompilerServices.FixedAddressValueTypeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class FixedAddressValueTypeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit FixedAddressValueTypeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Field)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Behebt die Adresse eines statischen Werttypfelds des Typs in der gesamten Lebensdauer. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute> -Attribut markieren von statischen Wert eingibt, wie bei der Erstellung angeheftet.  
+  
+ Dieses Attribut wird von Microsoft Visual C++-Compiler.  
+  
+ Statische Werttypfelder werden als geschachtelte Objekte erstellt. Dies bedeutet, dass ihre Adresse ändern kann, während die Garbagecollection ausgeführt wird. Wenn Sie dieses Attribut auf einen statischen Werttyp anwenden, bleibt seine Adresse während seiner Lebensdauer konstant.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute> Attribut so heften Sie ein statisches Feld in den Arbeitsspeicher an. Definiert eine `Age` -Struktur und zwei Klassen, die statischen des Typs Felder initialisiert `Age`. Die zweite Klasse gilt <xref:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute> so heften Sie die Adresse des Felds an. Eine Anzahl von speicherbelegungen erfolgen vor und nach diesen beiden Objekten instanziiert werden, und der Garbage Collector aufgerufen wird. Die Ausgabe des Beispiels zeigt, dass, obwohl die Adresse des ersten `Age` Feld nach der Garbagecollection, die Adresse des Felds, der geändert wurde <xref:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute> gilt nicht.  
+  
+ [!code-csharp[System.Runtime.CompilerServices.FixedAddressValueTypeAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.compilerservices.fixedaddressvaluetypeattribute/cs/example1.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FixedAddressValueTypeAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute> Attribut so heften Sie ein statisches Feld in den Arbeitsspeicher an. Definiert eine `Age` -Struktur und zwei Klassen, die statischen des Typs Felder initialisiert `Age`. Die zweite Klasse gilt <xref:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute> so heften Sie die Adresse des Felds an. Eine Anzahl von speicherbelegungen erfolgen vor und nach diesen beiden Objekten instanziiert werden, und der Garbage Collector aufgerufen wird. Die Ausgabe des Beispiels zeigt, dass, obwohl die Adresse des ersten `Age` Feld nach der Garbagecollection, die Adresse des Felds, der geändert wurde <xref:System.Runtime.CompilerServices.FixedAddressValueTypeAttribute> gilt nicht.  
+  
+ [!code-csharp[System.Runtime.CompilerServices.FixedAddressValueTypeAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.compilerservices.fixedaddressvaluetypeattribute/cs/example1.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

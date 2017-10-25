@@ -1,0 +1,487 @@
+<Type Name="JsonReaderWriterFactory" FullName="System.Runtime.Serialization.Json.JsonReaderWriterFactory">
+  <TypeSignature Language="C#" Value="public static class JsonReaderWriterFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit JsonReaderWriterFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.Json.JsonReaderWriterFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+    <AssemblyVersion>4.0.4.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.ServiceModel.Web, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Erzeugt Instanzen von <see cref="T:System.Xml.XmlDictionaryReader" />, die mit JSON (JavaScript Object Notation) codierte Daten aus einem Stream oder Puffer lesen und diese einem XML-Infoset zuordnen können, sowie Instanzen von <see cref="T:System.Xml.XmlDictionaryWriter" />, die ein XML-Infoset zu JSON zuordnen und JSON-codierte Daten in einen Stream schreiben können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[indigo1](~/includes/indigo1-md.md)] werden JSON-Nachrichten verarbeitet, indem die JSON-Daten dem XML-Infoset zugeordnet werden. Normalerweise erfolgt diese Zuordnung im Hintergrund. In einigen erweiterten Szenarien kann jedoch eine manuelle Konvertierung zwischen JSON und XML erforderlich sein. In diesem Fall kann die <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>-Klasse verwendet werden, um die notwendigen XML-Reader und -Writer zu erstellen. Beachten Sie, dass nicht jedes XML-Infoset-Element JSON zugeordnet werden kann. [!INCLUDE[crabout](~/includes/crabout-md.md)]zur Zuordnung finden Sie unter [wie: Serialisieren und Deserialisieren von JSON-Daten](~/docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="CreateJsonReader">
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Erstellt einen <see cref="T:System.Xml.XmlDictionaryReader" />, der mit JSON (JavaScript Object Notation) codierte Streams oder Puffer einem XML-Infoset zuordnen kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede der Überladungen verwendet ein <xref:System.Xml.XmlDictionaryReaderQuotas>-Objekt, das beim Lesen nicht vertrauenswürdiger Daten Denial-of-Service-Angriffe verhindert. [!INCLUDE[crabout](~/includes/crabout-md.md)]mit <xref:System.Xml.XmlDictionaryReaderQuotas> um Denial-of-Service-Angriffe beim Lesen nicht vertrauenswürdiger Daten zu verhindern, finden Sie unter [Sicherheitsüberlegungen zu Daten](~/docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateJsonReader">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlDictionaryReader CreateJsonReader (byte[] buffer, System.Xml.XmlDictionaryReaderQuotas quotas);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlDictionaryReader CreateJsonReader(unsigned int8[] buffer, class System.Xml.XmlDictionaryReaderQuotas quotas) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Json.JsonReaderWriterFactory.CreateJsonReader(System.Byte[],System.Xml.XmlDictionaryReaderQuotas)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="quotas" Type="System.Xml.XmlDictionaryReaderQuotas" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das <see cref="T:System.Byte" />-Eingabepufferarray, aus dem gelesen wird.</param>
+        <param name="quotas">Das <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />-Objekt, das beim Lesen nicht vertrauenswürdiger Daten Denial-of-Service-Angriffe verhindert.</param>
+        <summary>Erstellt einen <see cref="T:System.Xml.XmlDictionaryReader" />, der mit JSON (JavaScript Object Notation) codierte Puffer einem XML-Infoset zuordnen kann.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlDictionaryReader" />, der JSON-Daten (JavaScript Object Notation) verarbeiten kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung lässt keinen <xref:System.Text.Encoding>-Parameter zu. Die Zeichencodierung (UTF-8, Unicode oder Big-Endian Unicode) wird automatisch erkannt, wenn die Daten gelesen werden.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]mit <xref:System.Xml.XmlDictionaryReaderQuotas> um Denial-of-Service-Angriffe beim Lesen nicht vertrauenswürdiger Daten zu verhindern, finden Sie unter [Sicherheitsüberlegungen zu Daten](~/docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateJsonReader">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlDictionaryReader CreateJsonReader (System.IO.Stream stream, System.Xml.XmlDictionaryReaderQuotas quotas);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlDictionaryReader CreateJsonReader(class System.IO.Stream stream, class System.Xml.XmlDictionaryReaderQuotas quotas) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Json.JsonReaderWriterFactory.CreateJsonReader(System.IO.Stream,System.Xml.XmlDictionaryReaderQuotas)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="quotas" Type="System.Xml.XmlDictionaryReaderQuotas" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Eingabe-<see cref="T:System.IO.Stream" />, aus dem gelesen wird.</param>
+        <param name="quotas">Das <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />-Objekt, das beim Lesen nicht vertrauenswürdiger Daten Denial-of-Service-Angriffe verhindert.</param>
+        <summary>Erstellt einen <see cref="T:System.Xml.XmlDictionaryReader" />, der mit JSON (JavaScript Object Notation) codierte Streams einem XML-Infoset zuordnen kann.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlDictionaryReader" />, der JSON (JavaScript Object Notation) lesen kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung verwendet keinen <xref:System.Text.Encoding>-Parameter. Die Zeichencodierung (UTF-8, Unicode oder Big-Endian Unicode) wird automatisch erkannt, wenn die Daten gelesen werden.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]mit <xref:System.Xml.XmlDictionaryReaderQuotas> um Denial-of-Service-Angriffe beim Lesen nicht vertrauenswürdiger Daten zu verhindern, finden Sie unter [Sicherheitsüberlegungen zu Daten](~/docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateJsonReader">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlDictionaryReader CreateJsonReader (byte[] buffer, int offset, int count, System.Xml.XmlDictionaryReaderQuotas quotas);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlDictionaryReader CreateJsonReader(unsigned int8[] buffer, int32 offset, int32 count, class System.Xml.XmlDictionaryReaderQuotas quotas) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Json.JsonReaderWriterFactory.CreateJsonReader(System.Byte[],System.Int32,System.Int32,System.Xml.XmlDictionaryReaderQuotas)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="quotas" Type="System.Xml.XmlDictionaryReaderQuotas" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das <see cref="T:System.Byte" />-Eingabepufferarray, aus dem gelesen wird.</param>
+        <param name="offset">Anfangsposition, von dem Einlesen <c>Puffer</c>.</param>
+        <param name="count">Anzahl der Bytes, die aus gelesen werden kann <c>Puffer</c>.</param>
+        <param name="quotas">Das <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />-Objekt, das beim Lesen nicht vertrauenswürdiger Daten Denial-of-Service-Angriffe verhindert.</param>
+        <summary>Erstellt einen <see cref="T:System.Xml.XmlDictionaryReader" />, der mit JSON (JavaScript Object Notation) codierte Puffer mit einer festen Größe und einem festen Offset einem XML-Infoset zuordnen kann.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlDictionaryReader" />, der JSON (JavaScript Object Notation) lesen kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung verwendet keinen <xref:System.Text.Encoding>-Parameter. Die Zeichencodierung (UTF-8, Unicode oder Big-Endian Unicode) wird automatisch erkannt, wenn die Daten gelesen werden.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]mit <xref:System.Xml.XmlDictionaryReaderQuotas> um Denial-of-Service-Angriffe beim Lesen nicht vertrauenswürdiger Daten zu verhindern, finden Sie unter [Sicherheitsüberlegungen zu Daten](~/docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateJsonReader">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlDictionaryReader CreateJsonReader (System.IO.Stream stream, System.Text.Encoding encoding, System.Xml.XmlDictionaryReaderQuotas quotas, System.Xml.OnXmlDictionaryReaderClose onClose);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlDictionaryReader CreateJsonReader(class System.IO.Stream stream, class System.Text.Encoding encoding, class System.Xml.XmlDictionaryReaderQuotas quotas, class System.Xml.OnXmlDictionaryReaderClose onClose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Json.JsonReaderWriterFactory.CreateJsonReader(System.IO.Stream,System.Text.Encoding,System.Xml.XmlDictionaryReaderQuotas,System.Xml.OnXmlDictionaryReaderClose)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="quotas" Type="System.Xml.XmlDictionaryReaderQuotas" />
+        <Parameter Name="onClose" Type="System.Xml.OnXmlDictionaryReaderClose" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Eingabe-<see cref="T:System.IO.Stream" />, aus dem gelesen wird.</param>
+        <param name="encoding">Das <see cref="T:System.Text.Encoding" />-Objekt, das die von dem Reader verwendete Zeichencodierung angibt. Wenn als Wert <see langword="null" /> angegeben wird, versucht der Reader, die Codierung automatisch zu erkennen.</param>
+        <param name="quotas">Das <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />-Objekt, das beim Lesen nicht vertrauenswürdiger Daten Denial-of-Service-Angriffe verhindert.</param>
+        <param name="onClose">Der <see cref="T:System.Xml.OnXmlDictionaryReaderClose" />-Delegat, der beim Schließen des Readers aufgerufen wird.</param>
+        <summary>Erstellt einen <see cref="T:System.Xml.XmlDictionaryReader" />, der mit JSON (JavaScript Object Notation) codierte Streams mit einer festen Größe und einem festen Offset einem XML-Infoset zuordnen kann.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlDictionaryReader" />, der JSON (JavaScript Object Notation) lesen kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]mit <xref:System.Xml.XmlDictionaryReaderQuotas> um Denial-of-Service-Angriffe beim Lesen nicht vertrauenswürdiger Daten zu verhindern, finden Sie unter [Sicherheitsüberlegungen zu Daten](~/docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateJsonReader">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlDictionaryReader CreateJsonReader (byte[] buffer, int offset, int count, System.Text.Encoding encoding, System.Xml.XmlDictionaryReaderQuotas quotas, System.Xml.OnXmlDictionaryReaderClose onClose);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlDictionaryReader CreateJsonReader(unsigned int8[] buffer, int32 offset, int32 count, class System.Text.Encoding encoding, class System.Xml.XmlDictionaryReaderQuotas quotas, class System.Xml.OnXmlDictionaryReaderClose onClose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Json.JsonReaderWriterFactory.CreateJsonReader(System.Byte[],System.Int32,System.Int32,System.Text.Encoding,System.Xml.XmlDictionaryReaderQuotas,System.Xml.OnXmlDictionaryReaderClose)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="quotas" Type="System.Xml.XmlDictionaryReaderQuotas" />
+        <Parameter Name="onClose" Type="System.Xml.OnXmlDictionaryReaderClose" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das <see cref="T:System.Byte" />-Eingabepufferarray, aus dem gelesen wird.</param>
+        <param name="offset">Anfangsposition, von dem Einlesen <c>Puffer</c>.</param>
+        <param name="count">Anzahl der Bytes, die aus gelesen werden kann <c>Puffer</c>.</param>
+        <param name="encoding">Das <see cref="T:System.Text.Encoding" />-Objekt, das die von dem Reader verwendete Zeichencodierung angibt. Wenn als Wert <see langword="null" /> angegeben wird, versucht der Reader, die Codierung automatisch zu erkennen.</param>
+        <param name="quotas">Das <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />-Objekt, das beim Lesen nicht vertrauenswürdiger Daten Denial-of-Service-Angriffe verhindert.</param>
+        <param name="onClose">Der <see cref="T:System.Xml.OnXmlDictionaryReaderClose" />-Delegat, der beim Schließen des Readers aufgerufen wird. Der Standardwert ist <see langword="null" />.</param>
+        <summary>Erstellt einen <see cref="T:System.Xml.XmlDictionaryReader" />, der mit JSON (JavaScript Object Notation) codierte Puffer mit einer festen Größe, einem festen Offset und einer spezifischen Zeichencodierung einem XML-Infoset zuordnen kann.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlDictionaryReader" />, der JSON (JavaScript Object Notation) lesen kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]mit <xref:System.Xml.XmlDictionaryReaderQuotas> um Denial-of-Service-Angriffe beim Lesen nicht vertrauenswürdiger Daten zu verhindern, finden Sie unter [Sicherheitsüberlegungen zu Daten](~/docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateJsonWriter">
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Erstellt einen <see cref="T:System.Xml.XmlDictionaryWriter" />, der mit JSON codierte Daten in einen Stream schreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die statische <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory.CreateJsonWriter%2A>-Methode gibt eine <xref:System.Xml.XmlDictionaryWriter>-Instanz zurück, die ein XML-Infoset einem JSON-Stream zuordnen kann. Für den <xref:System.Xml.XmlDictionaryWriter> besteht keine Garantie, dass er gültige JSON-Daten erzeugt. Wird er auf eine von der JSON-XML-Zuordnung nicht unterstützte Weise verwendet, wird entweder eine Ausnahme ausgelöst, oder es wird ein ungültiges JSON-Dokument geschrieben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateJsonWriter">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlDictionaryWriter CreateJsonWriter (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlDictionaryWriter CreateJsonWriter(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Json.JsonReaderWriterFactory.CreateJsonWriter(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Ausgabe-<see cref="T:System.IO.Stream" /> für den JSON-Writer.</param>
+        <summary>Erstellt einen <see cref="T:System.Xml.XmlDictionaryWriter" />, der mit JSON codierte Daten in einen Stream schreibt.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlDictionaryWriter" />-Objekt, das mit JSON codierte Daten basierend auf einem XML-Infoset in den Stream schreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardzeichencodierung ist UTF-8. Wenn der Writer geschlossen wird, wird der Stream ebenfalls geschlossen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateJsonWriter">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlDictionaryWriter CreateJsonWriter (System.IO.Stream stream, System.Text.Encoding encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlDictionaryWriter CreateJsonWriter(class System.IO.Stream stream, class System.Text.Encoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Json.JsonReaderWriterFactory.CreateJsonWriter(System.IO.Stream,System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Ausgabe-<see cref="T:System.IO.Stream" /> für den JSON-Writer.</param>
+        <param name="encoding">Das <see cref="T:System.Text.Encoding" />-Objekt, das die von dem Writer verwendete Zeichencodierung angibt. Die Standardcodierung ist UTF-8.</param>
+        <summary>Erstellt einen <see cref="T:System.Xml.XmlDictionaryWriter" />, der mit JSON codierte Daten mit einer spezifischen Zeichencodierung in einen Stream schreibt.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlDictionaryWriter" />-Objekt, das mit JSON codierte Daten basierend auf einem XML-Infoset in den Stream schreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Writer geschlossen wird, wird der Stream ebenfalls geschlossen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateJsonWriter">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlDictionaryWriter CreateJsonWriter (System.IO.Stream stream, System.Text.Encoding encoding, bool ownsStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlDictionaryWriter CreateJsonWriter(class System.IO.Stream stream, class System.Text.Encoding encoding, bool ownsStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Json.JsonReaderWriterFactory.CreateJsonWriter(System.IO.Stream,System.Text.Encoding,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="ownsStream" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Ausgabe-<see cref="T:System.IO.Stream" /> für den JSON-Writer.</param>
+        <param name="encoding">Das <see cref="T:System.Text.Encoding" />-Objekt, das die von dem Writer verwendete Zeichencodierung angibt. Die Standardcodierung ist UTF-8.</param>
+        <param name="ownsStream"><see langword="true" />, wenn der Ausgabestream nach Abschluss des Vorgangs vom Writer geschlossen werden soll, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</param>
+        <summary>Erstellt einen <see cref="T:System.Xml.XmlDictionaryWriter" />, der mit JSON codierte Daten mit einer spezifischen Zeichencodierung in einen Stream schreibt.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlDictionaryWriter" />-Objekt, das mit JSON codierte Daten basierend auf einem XML-Infoset in den Stream schreibt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateJsonWriter">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlDictionaryWriter CreateJsonWriter (System.IO.Stream stream, System.Text.Encoding encoding, bool ownsStream, bool indent);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlDictionaryWriter CreateJsonWriter(class System.IO.Stream stream, class System.Text.Encoding encoding, bool ownsStream, bool indent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Json.JsonReaderWriterFactory.CreateJsonWriter(System.IO.Stream,System.Text.Encoding,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="ownsStream" Type="System.Boolean" />
+        <Parameter Name="indent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Ausgabe-<see cref="T:System.IO.Stream" /> für den JSON-Writer.</param>
+        <param name="encoding">Das <see cref="T:System.Text.Encoding" />-Objekt, das die von dem Writer verwendete Zeichencodierung angibt. Die Standardcodierung ist UTF-8.</param>
+        <param name="ownsStream"><see langword="true" />, wenn der Ausgabestream nach Abschluss des Vorgangs vom Writer geschlossen werden soll, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</param>
+        <param name="indent">Wenn <see langword="true" />, die Ausgabe verwendet mehrzeiligen Format, Festlegen von Einzügen für jede Ebene richtig ist, andernfalls <see langword="false" />.</param>
+        <summary>Erstellt ein <see cref="T:System.Xml.XmlDictionaryWriter" /> , der mit JSON codierte Daten in einen Stream mit einem angegebenen Zeichen schreibt.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlDictionaryWriter" />-Objekt, das mit JSON codierte Daten basierend auf einem XML-Infoset in den Stream schreibt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateJsonWriter">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlDictionaryWriter CreateJsonWriter (System.IO.Stream stream, System.Text.Encoding encoding, bool ownsStream, bool indent, string indentChars);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlDictionaryWriter CreateJsonWriter(class System.IO.Stream stream, class System.Text.Encoding encoding, bool ownsStream, bool indent, string indentChars) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Json.JsonReaderWriterFactory.CreateJsonWriter(System.IO.Stream,System.Text.Encoding,System.Boolean,System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="ownsStream" Type="System.Boolean" />
+        <Parameter Name="indent" Type="System.Boolean" />
+        <Parameter Name="indentChars" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Ausgabe-<see cref="T:System.IO.Stream" /> für den JSON-Writer.</param>
+        <param name="encoding">Das <see cref="T:System.Text.Encoding" />-Objekt, das die von dem Writer verwendete Zeichencodierung angibt. Die Standardcodierung ist UTF-8.</param>
+        <param name="ownsStream"><see langword="true" />, wenn der Ausgabestream nach Abschluss des Vorgangs vom Writer geschlossen werden soll, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</param>
+        <param name="indent">Wenn <see langword="true" />, die Ausgabe verwendet mehrzeiligen Format, Festlegen von Einzügen für jede Ebene richtig ist, andernfalls <see langword="false" />.</param>
+        <param name="indentChars">Die Zeichenfolge zum Einrücken der einzelnen Ebenen verwendet.</param>
+        <summary>Erstellt ein <see cref="T:System.Xml.XmlDictionaryWriter" /> , der mit JSON codierte Daten in einen Stream mit einem angegebenen Zeichen schreibt.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlDictionaryWriter" />-Objekt, das mit JSON codierte Daten basierend auf einem XML-Infoset in den Stream schreibt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

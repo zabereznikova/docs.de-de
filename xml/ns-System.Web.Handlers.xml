@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Handlers">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Handlers" /> -Namespace enthält Klassen von HTTP-Handler, die HTTP-Anforderungen an einen Webserver zu verarbeiten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

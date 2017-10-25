@@ -1,0 +1,443 @@
+<Type Name="ProfilePropertySettings" FullName="System.Web.Configuration.ProfilePropertySettings">
+  <TypeSignature Language="C#" Value="public sealed class ProfilePropertySettings : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProfilePropertySettings extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ProfilePropertySettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> -Klasse bietet eine Möglichkeit zum programmgesteuerten Zugriff auf und Ändern der <see langword="profiles" /> Abschnitt einer Konfigurationsdatei. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ProfilePropertySettings> -Klasse bietet eine Möglichkeit, programmgesteuert erstellen, Zugriff auf und ändern Sie die Definition einer einzelnen Eigenschaft hinzugefügt der `properties` -Unterabschnitt des der `profile` Abschnitt einer Konfigurationsdatei.  
+  
+ Die `profile` Abschnitt der Konfigurationsdatei gibt ein Schema für Benutzerprofile an. Zur Laufzeit verwendet das ASP.NET Kompilierungssystem die Angaben der `profile` Abschnitt zum Generieren einer Klasse mit dem Namen `ProfileCommon`, abgeleitet aus <xref:System.Web.Profile.ProfileBase>. Die `ProfileCommon` Klassendefinition basiert darauf, dass die Eigenschaften definiert, der `properties` -Unterabschnitt des der `profile` Abschnitt der Konfigurationsdatei. Eine Instanz dieser Klasse wird für jedes Benutzerprofil erstellt, und Sie können die Werte der einzelnen Profil zugreifen, im Code über die <xref:System.Web.HttpContext.Profile%2A?displayProperty=nameWithType> Eigenschaft. Weitere Informationen zu den Profileigenschaften, finden Sie unter [ASP.NET Profil Eigenschaftenübersicht](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d). Für Weitere Informationen zu den Profilfunktionen hinzugefügt [!INCLUDE[vstecasplong](~/includes/vstecasplong-md.md)], finden Sie unter [ASP.NET Profil Eigenschaftenübersicht](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie den Zugriff auf die <xref:System.Web.Configuration.ProfileSection.PropertySettings%2A> Eigenschaftenwert, der enthält eine Auflistung von <xref:System.Web.Configuration.ProfilePropertySettings> Objekte. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.ProfileSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#10)]
+ [!code-vb[System.Web.Configuration.ProfileSection#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfilePropertySettings (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettings.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Einen eindeutigen Namen für die <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.ProfilePropertySettings" />-Klasse mit dem angegebenen Namen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die Standardeinstellungen, die für diesen Konstruktor verwendet werden.  
+  
+|Einstellung|Standardwert|  
+|-------------|-------------------|  
+|<xref:System.Web.Configuration.ProfilePropertySettings.AllowAnonymous%2A>|`false`.|  
+|<xref:System.Web.Configuration.ProfilePropertySettings.DefaultValue%2A>|Eine leere Zeichenfolge ("").|  
+|<xref:System.Web.Configuration.ProfilePropertySettings.ReadOnly%2A>|`false`.|  
+|<xref:System.Web.Configuration.ProfilePropertySettings.SerializeAs%2A>|<xref:System.Web.Configuration.SerializationMode.ProviderSpecific>.|  
+|<xref:System.Web.Configuration.ProfilePropertySettings.Type%2A>|Eine leere Zeichenfolge ("").|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfilePropertySettings (string name, bool readOnly, System.Web.Configuration.SerializationMode serializeAs, string providerName, string defaultValue, string profileType, bool allowAnonymous, string customProviderData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, bool readOnly, valuetype System.Web.Configuration.SerializationMode serializeAs, string providerName, string defaultValue, string profileType, bool allowAnonymous, string customProviderData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettings.#ctor(System.String,System.Boolean,System.Web.Configuration.SerializationMode,System.String,System.String,System.String,System.Boolean,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="readOnly" Type="System.Boolean" />
+        <Parameter Name="serializeAs" Type="System.Web.Configuration.SerializationMode" />
+        <Parameter Name="providerName" Type="System.String" />
+        <Parameter Name="defaultValue" Type="System.String" />
+        <Parameter Name="profileType" Type="System.String" />
+        <Parameter Name="allowAnonymous" Type="System.Boolean" />
+        <Parameter Name="customProviderData" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Einen eindeutigen Namen für die <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> Objekt.</param>
+        <param name="readOnly">
+          <see langword="true" />Gibt an, dass die zugeordnete Eigenschaft in der dynamisch generierten <see langword="ProfileCommon" /> Klasse sollte schreibgeschützt ist, andernfalls <see langword="false" />.</param>
+        <param name="serializeAs">Einer der <see cref="T:System.Web.Configuration.SerializationMode" />-Werte.</param>
+        <param name="providerName">Der Name des Anbieters aus der <see cref="P:System.Web.Configuration.ProfileSection.Providers" /> Eigenschaft oder eine leere Zeichenfolge ("").</param>
+        <param name="defaultValue">Eine Zeichenfolge, die als Standardwert für die benannte Eigenschaft in der generierten Profil Seitenklasse enthält.</param>
+        <param name="profileType">Ein gültiger Typverweis oder eine leere Zeichenfolge.</param>
+        <param name="allowAnonymous">
+          <see langword="true" />an die zugeordnete Eigenschaft in der dynamisch generierten <see langword="ProfileCommon" /> -Klasse anonyme Benutzer unterstützen soll, andernfalls <see langword="false" />, um anzugeben, dass anonyme Benutzer die benannte Eigenschaft nicht ändern können.</param>
+        <param name="customProviderData">Eine Zeichenfolge mit anbieterspezifischen Informationen vom Anbieter mit der Eigenschaft verknüpften verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> Klasse mit dem angegebenen Namen und Einstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Laufzeit verwendet das ASP.NET Kompilierungssystem die Angaben der `profile` Abschnitt der Konfigurationsdatei zum Generieren einer Klasse mit der Bezeichnung `ProfileCommon`, abgeleitet aus <xref:System.Web.Profile.ProfileBase>. Die Klasse ermöglicht den Zugriff auf und ändern Sie die Werte für einzelne Benutzerprofile.  
+  
+ Die `ProfileCommon` Klassendefinition basiert darauf, dass die Eigenschaften definiert, der `properties` -Unterabschnitt des der `profile` Abschnitt der Konfigurationsdatei. Die Parameterwerte an die von Ihnen beim Erstellen einer Instanz von der <xref:System.Web.Configuration.ProfilePropertySettings> Klasse wird verwendet, um eine zugeordnete Eigenschaft in definieren die `ProfileCommon` Klasse.  
+  
+ Weitere Informationen zu den Profileigenschaften, finden Sie unter [ASP.NET Profil Eigenschaftenübersicht](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowAnonymous">
+      <MemberSignature Language="C#" Value="public bool AllowAnonymous { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowAnonymous" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.AllowAnonymous" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("allowAnonymous", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die zugeordnete Eigenschaft in der dynamisch generierten <see langword="ProfileCommon" /> "Class" anonyme Benutzer festgelegt werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die zugeordnete Eigenschaft in der <see langword="ProfileCommon" /> "Class" anonyme Benutzer; festgelegt werden kann, andernfalls <see langword="false" />, gibt an, dass anonyme Benutzer den Wert der Eigenschaft nicht ändern können. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Laufzeit verwendet das ASP.NET Kompilierungssystem die Angaben der `profile` Abschnitt der Konfigurationsdatei zum Generieren einer Klasse mit der Bezeichnung `ProfileCommon`, abgeleitet aus <xref:System.Web.Profile.ProfileBase>. Die Klasse ermöglicht den Zugriff auf und ändern Sie die Werte für einzelne Benutzerprofile.  
+  
+ Die `ProfileCommon` Klassendefinition basiert darauf, dass die Eigenschaften definiert, der `properties` -Unterabschnitt des der `profile` Abschnitt der Konfigurationsdatei. Die Eigenschaftswerte, die Sie für eine Instanz von angeben der <xref:System.Web.Configuration.ProfilePropertySettings> Klasse wird verwendet, um eine zugeordnete Eigenschaft in definieren die `ProfileCommon` Klasse.  
+  
+ Eine Ausnahme wird ausgelöst, wenn eine Eigenschaft in der `ProfileCommon` Klasse durch einen anonymen Benutzer geändert wird bei der <xref:System.Web.Configuration.ProfilePropertySettings.AllowAnonymous%2A> Eigenschaftswert ist `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfilePropertySettings.AllowAnonymous%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.ProfileSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#16](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#16)]
+ [!code-vb[System.Web.Configuration.ProfileSection#16](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomProviderData">
+      <MemberSignature Language="C#" Value="public string CustomProviderData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomProviderData" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.CustomProviderData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("customProviderData", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Zeichenfolge benutzerdefinierter Daten für den Anbieter der Profil-Eigenschaft.</summary>
+        <value>Eine Zeichenfolge mit benutzerdefinierten Daten für den Anbieter der Profil-Eigenschaft. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public string DefaultValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.DefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("defaultValue", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Standardwert für die zugeordnete Eigenschaft in der dynamisch generierten <see langword="ProfileCommon" /> Klasse.</summary>
+        <value>Eine Zeichenfolge, die als Standardwert für die zugeordnete Eigenschaft in der dynamisch generierten <see langword="ProfileCommon" /> Klasse. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Laufzeit verwendet das ASP.NET Kompilierungssystem die Angaben der `profile` Abschnitt der Konfigurationsdatei zum Generieren einer Klasse mit der Bezeichnung `ProfileCommon`, abgeleitet aus <xref:System.Web.Profile.ProfileBase>. Die Klasse ermöglicht den Zugriff auf und ändern Sie die Werte für einzelne Benutzerprofile.  
+  
+ Die `ProfileCommon` Klassendefinition basiert darauf, dass die Eigenschaften definiert, der `properties` -Unterabschnitt des der `profile` Abschnitt der Konfigurationsdatei. Die Eigenschaftswerte, die Sie für eine Instanz von angeben der <xref:System.Web.Configuration.ProfilePropertySettings> Klasse wird verwendet, um eine zugeordnete Eigenschaft in definieren die `ProfileCommon` Klasse.  
+  
+ Der Standardwert als Anfangswert verwendet wird, für den zugeordneten `ProfileCommon` Klasseneigenschaft aus, wenn ein Benutzerprofil nicht über einen Wert für die Eigenschaft enthält. Die <xref:System.Web.Configuration.ProfilePropertySettings.DefaultValue%2A> Eigenschaft ist möglicherweise ein Zeichenfolgenwert, der ein XML-codierter Wert (Serialisierungsmodus für die Eigenschaft ist für XML-Serialisierung) oder eine Base-64-codierte binäre Zeichenfolge sein (Wenn für die Eigenschaft der Serialisierungsmodus binäre Serialisierung ist).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfilePropertySettings.DefaultValue%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.ProfileSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#19](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#19)]
+ [!code-vb[System.Web.Configuration.ProfileSection#19](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der der <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> -Objekt und die zugehörige Eigenschaft in der dynamisch generierten <see langword="ProfileCommon" /> Klasse.</summary>
+        <value>Eine Zeichenfolge mit dem Namen des <see cref="T:System.Web.Configuration.ProfilePropertySettings" />-Objekts. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Laufzeit verwendet das ASP.NET Kompilierungssystem die Angaben der `profile` Abschnitt der Konfigurationsdatei zum Generieren einer Klasse mit der Bezeichnung `ProfileCommon`, abgeleitet aus <xref:System.Web.Profile.ProfileBase>. Die Klasse ermöglicht den Zugriff auf und ändern Sie die Werte für einzelne Benutzerprofile.  
+  
+ Die `ProfileCommon` Klassendefinition basiert darauf, dass die Eigenschaften definiert, der `properties` -Unterabschnitt des der `profile` Abschnitt der Konfigurationsdatei. Die Eigenschaftswerte, die Sie für eine Instanz von angeben der <xref:System.Web.Configuration.ProfilePropertySettings> Klasse wird verwendet, um eine zugeordnete Eigenschaft in definieren die `ProfileCommon` Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfilePropertySettings.Name%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.ProfileSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#21](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#21)]
+ [!code-vb[System.Web.Configuration.ProfileSection#21](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public string Provider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("provider", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen eines Anbieters beim Serialisieren der benannten Eigenschaft verwendet.</summary>
+        <value>Der Name des Anbieters aus der <see cref="P:System.Web.Configuration.ProfileSection.Providers" /> Eigenschaft oder eine leere Zeichenfolge (""). Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Profilanbieter sind Datenquellen, die in denen Benutzerprofil Werte gespeichert sind. Sie können angeben, dass Profilanbieter in der `providers` -Unterabschnitt des der `profile` Abschnitt einer Konfigurationsdatei.  
+  
+ Wenn der Wert dieser Eigenschaft eine leere Zeichenfolge ist, wird der Standardanbieter angegeben, der <xref:System.Web.Configuration.ProfileSection.DefaultProvider%2A?displayProperty=nameWithType> Eigenschaft wird verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfilePropertySettings.Provider%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.ProfileSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#20](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#20)]
+ [!code-vb[System.Web.Configuration.ProfileSection#20](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("readOnly", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob die zugeordnete Eigenschaft in der dynamisch generierten <see langword="ProfileCommon" /> Klasse ist schreibgeschützt.</summary>
+        <value>
+          <see langword="true" />Wenn die zugeordnete Eigenschaft in der <see langword="ProfileCommon" /> Klasse ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Laufzeit verwendet das ASP.NET Kompilierungssystem die Angaben der `profile` Abschnitt der Konfigurationsdatei zum Generieren einer Klasse mit der Bezeichnung `ProfileCommon`, abgeleitet aus <xref:System.Web.Profile.ProfileBase>. Die Klasse ermöglicht den Zugriff auf und ändern Sie die Werte für einzelne Benutzerprofile.  
+  
+ Die `ProfileCommon` Klassendefinition basiert darauf, dass die Eigenschaften definiert, der `properties` -Unterabschnitt des der `profile` Abschnitt der Konfigurationsdatei. Die Eigenschaftswerte, die Sie für eine Instanz von angeben der <xref:System.Web.Configuration.ProfilePropertySettings> Klasse wird verwendet, um eine zugeordnete Eigenschaft in definieren die `ProfileCommon` Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfilePropertySettings.ReadOnly%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.ProfileSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#15](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#15)]
+ [!code-vb[System.Web.Configuration.ProfileSection#15](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeAs">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.SerializationMode SerializeAs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.SerializationMode SerializeAs" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.SerializeAs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("serializeAs", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.SerializationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Serialisierungsmethode verwendet für die zugeordnete Eigenschaft in der dynamisch generierten <see langword="ProfileCommon" /> Klasse.</summary>
+        <value>Einer der <see cref="T:System.Web.Configuration.SerializationMode" />-Werte. Die Standardeinstellung ist <see cref="F:System.Web.Configuration.SerializationMode.ProviderSpecific" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den Profileigenschaften, finden Sie unter [ASP.NET Profil Eigenschaftenübersicht](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfilePropertySettings.SerializeAs%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.ProfileSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#17](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#17)]
+ [!code-vb[System.Web.Configuration.ProfileSection#17](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("type", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Typs der zugeordneten Eigenschaft in der dynamisch generierten <see langword="ProfileCommon" /> Klasse.</summary>
+        <value>Einen gültigen Typ, der den vollqualifizierten Verweis oder eine leere Zeichenfolge (""). Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Einstellung gültiger Typverweis dieses Typs für die benannte Eigenschaft in der generierten verwendet `ProfileCommon` Klasse.  
+  
+ Der Typverweis wird wie folgt gebildet (Elemente in Klammern sind nicht erforderlich):`Namespace.Typename, Assemblyname[,] [Version=x,] [Culture=y,] [PublicKeyToken=z]`  
+  
+ Zum Beispiel:  
+  
+ `"ExampleNameSpace.ExampleType, Example.Assembly, Version=%ASSEMBLY_VERSION%, Culture=neutral, PublicKeyToken=%MICROSOFT_PUBLICKEY%"`  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProfilePropertySettings.Type%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.ProfileSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#18](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#18)]
+ [!code-vb[System.Web.Configuration.ProfileSection#18](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

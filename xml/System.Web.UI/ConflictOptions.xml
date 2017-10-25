@@ -1,0 +1,61 @@
+<Type Name="ConflictOptions" FullName="System.Web.UI.ConflictOptions">
+  <TypeSignature Language="C#" Value="public enum ConflictOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConflictOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ConflictOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Bestimmt, wie ASP.NET-Datenquelle Handle Datenkonflikte beim Aktualisieren oder Löschen von Daten steuert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parallelitätssteuerung ist ein Verfahren, das Verwenden von Datenspeichern zu steuern, wie Daten gelesen und im Speicher geändert werden, wenn mehrere Clients den Zugriff auf und bearbeiten die gleichen Daten. Beispielsweise ein Client liest Daten und stellt für einen Benutzer dar, während ein anderer Client die gleichen Daten liest und sie an einen anderen Benutzer zeigt. Wenn beide Benutzer die Daten aktualisieren und an den Datenspeicher zu übermitteln, kann unerwartete Ergebnisse auftreten, da Clients u. unterschiedliche Werte für die gleichen Daten aktualisieren können. Dies wird als Konflikt betrachtet.  
+  
+ Die `ConflictDetection` für ASP.NET-Datenquellensteuerelemente definierte Eigenschaft wird verwendet, um zu bestimmen, wie ein Steuerelement von Datenkonflikten in der zugrunde liegenden Datenspeicher behandelt, wenn der zugrunde liegenden Datenspeicher vollständige Parallelität und eine Delete oder Update-Vorgang ausgeführt.  
+  
+ Wird standardmäßig die `ConflictDetection` Eigenschaftensatz zu OverwriteChanges, d. h. das Datenquellensteuerelement überschreibt alle Änderungen an einer Datenzeile zwischen dem Zeitpunkt, die Datenquellen-Steuerelements zuerst Daten aus der Zeile lesen und die Zeit, die die Zeile aktualisiert wird. Der Primärschlüssel wird verwendet, für die Suche nach der Datenzeile, die aktualisiert oder gelöscht werden, aber keine anderen Vergleich der Daten erfolgt. Wenn die Datenquellen-Steuerelements zur Verwendung der Option CompareAllValues konfiguriert ist, jedoch das Steuerelement übergibt die ursprünglichen Daten in der `oldValues` Sammlungen von der `Update` und `Delete` Methoden, damit Sie die Logik zum Aktualisieren oder Löschen von Daten nur dann, wenn schreiben können Diese Werte entsprechen die aktuellen Werten in den Datenspeicher. Die übereinstimmenden Werte geben an, dass die Daten seit dem Zeitpunkt, die er gelesen wurde, nicht geändert hat.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CompareAllValues">
+      <MemberSignature Language="C#" Value="CompareAllValues" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ConflictOptions CompareAllValues = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ConflictOptions.CompareAllValues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ConflictOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Datenquellen-Steuerelement verwendet die <paramref name="oldValues" /> Auflistung von der <see langword="Update" /> und <see langword="Delete" /> Methoden, um zu bestimmen, ob die Daten von einem anderen Prozess geändert wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OverwriteChanges">
+      <MemberSignature Language="C#" Value="OverwriteChanges" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ConflictOptions OverwriteChanges = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ConflictOptions.OverwriteChanges" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ConflictOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Datenquellensteuerelement überschreibt alle Werte in einer Datenzeile durch eigene Werte für die Zeile an.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

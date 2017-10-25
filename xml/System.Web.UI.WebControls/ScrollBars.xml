@@ -1,0 +1,125 @@
+<Type Name="ScrollBars" FullName="System.Web.UI.WebControls.ScrollBars">
+  <TypeSignature Language="C#" Value="public enum ScrollBars" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ScrollBars extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ScrollBars" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, die Sichtbarkeit und der Position des Bildlaufleisten in einem <see cref="T:System.Web.UI.WebControls.Panel" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ScrollBars> -Enumeration stellt dar, die Sichtbarkeit und der Position der Schiebeleisten in einem <xref:System.Web.UI.WebControls.Panel> Steuerelement. Die <xref:System.Web.UI.WebControls.Panel.ScrollBars%2A> Eigenschaft verwendet diese Enumerationswerte zur Angabe von Bildlaufleisten, um die Anzeige in einem <xref:System.Web.UI.WebControls.Panel> Steuerelement. Der Standardwert für die <xref:System.Web.UI.WebControls.Panel.ScrollBars%2A> Eigenschaft `None`, der angibt, die keine Bildlaufleisten angezeigt werden.  
+  
+ Bei Angabe von `Auto` für die <xref:System.Web.UI.WebControls.Panel.ScrollBars%2A> Eigenschaft Bildlaufleisten werden automatisch angezeigt, wenn die Größe des Inhalts in einen <xref:System.Web.UI.WebControls.Panel> Steuerelement überschreitet die Größe des der <xref:System.Web.UI.WebControls.Panel> Steuerelement. Z. B. wenn ein <xref:System.Web.UI.WebControls.Panel> Steuerelement enthält eine Tabelle und der Bereich ist nicht breit genug, um alle Zeilen in der Tabelle anzeigen, eine vertikale Bildlaufleiste angezeigt wird. Wenn die Größe der Tabelle die Höhe und Breite des Bereichs überschreitet, werden beide vertikalen und horizontalen Bildlaufleisten angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarative Festlegen der <xref:System.Web.UI.WebControls.Panel.ScrollBars%2A> Eigenschaft `Auto`. Der Bereich enthält eine Tabelle, die den gesamten, die Inhalt aus, von denen die Größe des Bereichs übersteigen. Dies bewirkt, dass beide vertikalen und horizontalen Bildlaufleisten, um automatisch angezeigt werden, wenn der Bereich gerendert wird. Der Benutzer kann dann einen Bildlauf zum Anzeigen aller Daten in der Tabelle.  
+  
+ [!code-aspx-csharp[Panel.Scrollbars#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Panel.Scrollbars/CS/panel.scrollbarscs.aspx#1)]
+ [!code-aspx-vb[Panel.Scrollbars#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Panel.Scrollbars/VB/panel.scrollbarsvb.aspx#1)]  
+  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Web.UI.WebControls.ScrollBars> Enumerationswerte. Ein <xref:System.Web.UI.WebControls.ListBox> Steuerelement wird aufgefüllt, mit der <xref:System.Web.UI.WebControls.ScrollBars> Enumerationswerte. Die Bildlaufleisten, die auf den Bereich ändern, basierend auf dem Wert, den der Benutzer aus dem Listenfeld angezeigt wird.  
+  
+ [!code-aspx-csharp[Panel.Scrollbars2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Panel.Scrollbars2/CS/panel.scrollbars2cs.aspx#1)]
+ [!code-aspx-vb[Panel.Scrollbars2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Panel.Scrollbars2/VB/panel.scrollbars2vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ScrollBars Auto = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ScrollBars.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ScrollBars</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeigt, Horizontal, vertikal oder beides Bildlaufleisten nach Bedarf. Andernfalls werden keine Schiebeleisten angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Both">
+      <MemberSignature Language="C#" Value="Both" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ScrollBars Both = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ScrollBars.Both" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ScrollBars</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeigt eine horizontale und eine vertikale Bildlaufleiste angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Horizontal">
+      <MemberSignature Language="C#" Value="Horizontal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ScrollBars Horizontal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ScrollBars.Horizontal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ScrollBars</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeigt nur eine horizontale Bildlaufleiste angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ScrollBars None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ScrollBars.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ScrollBars</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Bildlaufleisten angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Vertical">
+      <MemberSignature Language="C#" Value="Vertical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ScrollBars Vertical = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ScrollBars.Vertical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ScrollBars</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeigt nur eine vertikale Bildlaufleiste angezeigt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

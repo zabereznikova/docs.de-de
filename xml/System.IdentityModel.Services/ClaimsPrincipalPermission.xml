@@ -1,0 +1,389 @@
+<Type Name="ClaimsPrincipalPermission" FullName="System.IdentityModel.Services.ClaimsPrincipalPermission">
+  <TypeSignature Language="C#" Value="public sealed class ClaimsPrincipalPermission : System.Security.IPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ClaimsPrincipalPermission extends System.Object implements class System.Security.IPermission, class System.Security.ISecurityEncodable, class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.ClaimsPrincipalPermission" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.IPermission</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Berechtigung, die mithilfe einer <see cref="T:System.Security.Claims.ClaimsAuthorizationManager" /> Implementierung zu bestimmen, ob Sie den aktiven Prinzipal Zugriff auf eine Ressource gewährt werden soll. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> Klasse bietet die Möglichkeit, mithilfe von imperativen zugriffsüberprüfungen Durchführen der <xref:System.Security.Claims.ClaimsAuthorizationManager> , die für eine Anwendung konfiguriert ist. Durch Aufrufen der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Demand%2A> -Methode oder die statische <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.CheckAccess%2A> -Methode können Sie Schutz auf Ressourcen in den Ausführungspfad des Codes entsprechend der Autorisierungsrichtlinie für Ihre Ansprüche Authentifizierungs-Manager definierten bereitstellen. Deklarative zugriffsüberprüfungen ausgeführt werden kann, mithilfe der <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Klasse.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> Klasse verwendet die Ansprüche Autorisierungs-Manager konfiguriert, indem die <xref:System.IdentityModel.Configuration.IdentityConfiguration> , festgelegt ist, unter der <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> Eigenschaft. Dies ist "true" in allen Fällen auch in Szenarien, in denen WS-Verbund nicht verwendet wird. aktive (WCF)-Webanwendungen und konsolenanwendungen. Sie können die anspruchsautorisierungs-Manager in der Konfiguration oder programmgesteuert festlegen. Um die Ansprüche Autorisierungs-Manager in einer Konfigurationsdatei anzugeben, legen die [ &lt;ClaimsAuthorizationManager&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) Element unter einer [ &lt;IdentityConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element und stellen Sie sicher, dass diese identitätskonfiguration verwiesen wird die [ &lt;FederationConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) Element, das von der Laufzeit geladen wird (z. B. durch Festlegen der `identityConfigurationName` Attribut). Um die Ansprüche Autorisierungs-Manager programmgesteuert festzulegen, geben Sie einen Handler für das <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> Ereignis.  
+  
+ Auf einer Ebene, die Funktionalität von bereitgestellten <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> ähnelt die rollenbasierte zugriffsüberprüfungen (RBAC) mithilfe von der <xref:System.Security.Permissions.PrincipalPermission> -Klasse; allerdings die <xref:System.Security.Claims.ClaimsAuthorizationManager> Klasse führt Überprüfungen, die basierend auf den Ansprüchen ab, die von den aktiven Prinzipal bereitgestellt. Dadurch wird jedoch weitaus höher Granularität als reine RBAC erhältlich ist, in denen viele Berechtigungen in der Regel unter einer einzelnen Rolle gesammelt werden. Vielleicht, vor allem ermöglicht anspruchsbasierte Autorisierung eine bessere Trennung der Geschäftsrichtlinie Logik und die Autorisierung, da Berechtigungen für eine bestimmte Aktion für eine Ressource im Code erforderlich werden kann und Back-End-Richtlinie verwendet werden, kann welche Ansprüche Konfigurieren der Entität vorlegen muss besitzen, um die Anforderung zu erfüllen. Wie RBAC hinaus <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> führt eine benutzerbasierte zugriffsüberprüfung, d. h. im Gegensatz zur Codezugriffssicherheit durch abgeleitete Klassen implementiert die <xref:System.Security.CodeAccessPermission> Klasse, und einen Stackwalk verwenden, um sicherzustellen, dass alle Aufrufer des Codes eine Berechtigung erteilt wurde <xref:System.IdentityModel.Services.ClaimsPrincipalPermission>führt die Überprüfung nur auf den aktuellen Prinzipal.  
+  
+ Die statische <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.CheckAccess%2A> Methode überprüft den Zugriff für eine angegebene Aktion für eine angegebene Ressource. Die Ressource und der Aktion sind Zeichenfolgen, und sind in der Regel URIs. Sie können auch eine Instanz von initialisieren <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> mit einer Aktion und eine Ressource und ein Aufruf der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Demand%2A> Methode. Obwohl der Konstruktor nur eine einzelne Ressource und die Aktion, akzeptiert <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> Objekte können miteinander kombiniert werden, über die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Union%2A> und <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Intersect%2A> Methoden. Eine Berechtigung erstellt mit diesen Methoden kann mehrere ressourcenaktion Paare enthalten.  
+  
+ Beide Methoden steuern den Zugriff durch den Aufruf der <xref:System.Security.Claims.ClaimsAuthorizationManager.CheckAccess%2A?displayProperty=nameWithType> -Methode des konfigurierten Ansprüchen Autorisierungs-Managers mit einem <xref:System.Security.Claims.AuthorizationContext> besteht aus den aktiven Prinzipal (<xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>), die Ressource und die Aktion. Sie lösen eine <xref:System.Security.SecurityException> andernfalls, wenn der aktuelle Prinzipal nicht, zum Ausführen der Aktion für die Ressource autorisiert ist; die Ausführung erfolgt.  
+  
+ Im Fall von einer <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> , mehrere ressourcenaktion Paare enthält die <xref:System.Security.Claims.ClaimsAuthorizationManager.CheckAccess%2A?displayProperty=nameWithType> Methode wird aufgerufen, für jedes der ressourcenaktion Paare, die in den Berechtigungssatz enthalten.  Für den Aufruf von <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Demand%2A> erfolgreich ist, muss für alle ressourcenaktion Paare, die in den Berechtigungssatz enthalten der aktive Prinzipal autorisiert sein.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Schützen einer Ressource mit der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Demand%2A> -Methode, die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.CheckAccess%2A> -Methode oder eine <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Deklaration. In jedem Fall die konfigurierte <xref:System.Security.Claims.ClaimsAuthorizationManager> wird aufgerufen, um den aktuellen Prinzipal für die angegebene Ressource und der Aktion ausgewertet. Wenn der aktuelle Prinzipal für die angegebene Aktion für die angegebene Ressource nicht autorisiert ist eine <xref:System.Security.SecurityException> auslöst, andernfalls wird die Ausführung fortgesetzt.  
+  
+ [!code-csharp[WifCppWithCam#1](~/samples/snippets/csharp/VS_Snippets_Misc/wifcppwithcam/cs/wifcppwithcam/program.cs#1)]  
+  
+ Das folgende XML zeigt die Mindestkonfiguration erforderlich, um eine benutzerdefinierte anspruchsautorisierung verwenden Manager mit der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> Klasse. Sie müssen zumindest beide deklariert die `system.identityModel` und die `system.identityModel.services` im Berichtsbereiche der `<configSection>` Element, und geben Sie Ihre Autorisierungs-Manager in eine [ &lt;ClaimsAuthorizationManager&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)Element in der Standardkonfiguration für die Identität. Dadurch wird sichergestellt, dass die Autorisierungs-Manager aus der Standardkonfiguration für den Verbund verwiesen wird. Alternativ können Sie angeben, den Namen der identitätskonfiguration, die unter dem Autorisierungs-Manager, in angegeben ist der `identityConfigurationName` Attribut von der [ &lt;FederationConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) Element.  
+  
+```xml  
+<?xml version="1.0" encoding="utf-8" ?>  
+<configuration>  
+  <configSections>  
+    <!-- WIF configuration sections -->  
+    <section name="system.identityModel" type="System.IdentityModel.Configuration.SystemIdentityModelSection, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>  
+    <section name="system.identityModel.services" type="System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>  
+  </configSections>  
+  
+  <startup>  
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
+  </startup>  
+  
+  <system.identityModel>  
+    <identityConfiguration>  
+      <claimsAuthorizationManager type ="MyClaimsAuthorizationManager.MyClaimsAuthorizationManager, MyClaimsAuthorizationManager"/>  
+    </identityConfiguration>  
+  </system.identityModel>  
+  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsPrincipalPermission (string resource, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string resource, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsPrincipalPermission.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="resource" Type="System.String" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resource">Die Ressource, auf der der Prinzipal autorisiert werden soll.</param>
+        <param name="action">Die Aktion, die für die Prinzipal autorisiert werden soll.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.IdentityModel.Services.ClaimsPrincipalPermission" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> -Objekt mit dem angegebenen ressourcenaktion Paar initialisiert wird. Sie erreichen die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Demand%2A> Methode, um eine zugriffsprüfung durchzuführen.  
+  
+ Obwohl der Konstruktor nur eine einzelne Ressource und die Aktion, akzeptiert <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> Objekte können miteinander kombiniert werden, über die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Union%2A> und <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Intersect%2A> Methoden. Die Berechtigung, die in der folgenden Methoden erstellt, kann mehrere ressourcenaktion Paare enthalten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          Der <paramref name="resource" /> ist <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="action" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckAccess">
+      <MemberSignature Language="C#" Value="public static void CheckAccess (string resource, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CheckAccess(string resource, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsPrincipalPermission.CheckAccess(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2103:ReviewImperativeSecurity", Justification="It is expected that the runtime’s behavior would rely on changing data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resource" Type="System.String" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resource">Die Ressource, auf der der Prinzipal autorisiert werden soll.</param>
+        <param name="action">Die Aktion, die für die Prinzipal autorisiert werden soll.</param>
+        <summary>Überprüft, ob der aktuelle Prinzipal autorisiert ist, um die angegebene Aktion für die angegebene Ressource auszuführen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Prinzipal muss für die angegebene Aktion für die angegebene Ressource autorisiert sein oder die <xref:System.Security.SecurityException> Ausnahme wird ausgelöst.  
+  
+ Die <xref:System.Security.Claims.ClaimsAuthorizationManager.CheckAccess%2A?displayProperty=nameWithType> -Methode des konfigurierten Ansprüchen Autorisierungs-Managers wird aufgerufen, mit einer <xref:System.Security.Claims.AuthorizationContext> besteht aus den aktiven Prinzipal (<xref:System.Threading.Thread.CurrentPrincipal%2A>), die Ressource und die Aktion.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Schützen einer Ressource mit der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.CheckAccess%2A> Methode. Der konfigurierten Ansprüchen Autorisierungs-Manager wird aufgerufen, um den aktuellen Prinzipal für die angegebene Ressource und der Aktion ausgewertet. Wenn der aktuelle Prinzipal für die angegebene Aktion für die angegebene Ressource nicht autorisiert ist eine <xref:System.Security.SecurityException> auslöst, andernfalls wird die Ausführung fortgesetzt.  
+  
+ [!code-csharp[WifCppWithCam#2](~/samples/snippets/csharp/VS_Snippets_Misc/wifcppwithcam/cs/wifcppwithcam/program.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der aktuelle Prinzipal ist nicht von <see cref="T:System.Security.Claims.ClaimsPrincipal" />.  
+  
+ - oder -   
+  
+ Es ist keine <see cref="T:System.Security.Claims.ClaimsAuthorizationManager" /> konfiguriert.</exception>
+        <exception cref="T:System.Security.SecurityException">Fehler bei der Überprüfung der Autorisierung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsPrincipalPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2103:ReviewImperativeSecurity", Justification="It is expected that the runtime’s behavior would rely on changing data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Kopie des aktuellen <see cref="T:System.IdentityModel.Services.ClaimsPrincipalPermission" /> Instanz.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Services.ClaimsPrincipalPermission" /> aus der aktuellen Instanz kopiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Demand">
+      <MemberSignature Language="C#" Value="public void Demand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Demand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsPrincipalPermission.Demand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft, ob der aktuelle Prinzipal für die ressourcenaktion Paare, die der aktuellen Instanz zugeordneten autorisiert ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der aktuelle Prinzipal muss für alle von der Ressource-Aktion-Paaren, die dieser Instanz zugeordnet autorisiert sein oder die <xref:System.Security.SecurityException> Ausnahme wird ausgelöst.  
+  
+ Obwohl der Konstruktor nur eine einzelne Ressource und die Aktion, akzeptiert <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> Objekte können miteinander kombiniert werden, über die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Union%2A> und <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Intersect%2A> Methoden. Die Berechtigung, die in der folgenden Methoden erstellt, kann mehrere ressourcenaktion Paare enthalten.  
+  
+ Die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Demand%2A> Methode ruft die <xref:System.Security.Claims.ClaimsAuthorizationManager.CheckAccess%2A?displayProperty=nameWithType> -Methode des konfigurierten Ansprüchen Autorisierungs-Managers mit einer <xref:System.Security.Claims.AuthorizationContext> besteht aus den aktiven Prinzipal (<xref:System.Threading.Thread.CurrentPrincipal%2A>), die Ressource und die Aktion für jedes der ressourcenaktion Paare enthalten in den Berechtigungssatz. Für die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Demand%2A> erfolgreich den aktiven Prinzipal muss für alle ressourcenaktion Paare, die in den Berechtigungssatz enthalten sind autorisiert sein.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Schützen einer Ressource mit der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Demand%2A> Methode. Der konfigurierten Ansprüchen Autorisierungs-Manager wird aufgerufen, um den aktuellen Prinzipal für die angegebene Ressource und der Aktion ausgewertet. Wenn der aktuelle Prinzipal für die angegebene Aktion für die angegebene Ressource nicht autorisiert ist eine <xref:System.Security.SecurityException> auslöst, andernfalls wird die Ausführung fortgesetzt.  
+  
+ [!code-csharp[WifCppWithCam#3](~/samples/snippets/csharp/VS_Snippets_Misc/wifcppwithcam/cs/wifcppwithcam/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der aktuelle Prinzipal ist nicht von <see cref="T:System.Security.Claims.ClaimsPrincipal" />.  
+  
+ - oder -   
+  
+ Es ist keine <see cref="T:System.Security.Claims.ClaimsAuthorizationManager" /> konfiguriert.</exception>
+        <exception cref="T:System.Security.SecurityException">Fehler bei der Überprüfung der Autorisierung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public void FromXml (System.Security.SecurityElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FromXml(class System.Security.SecurityElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsPrincipalPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Die XML-Codierung zur Wiederherstellung der Berechtigung.</param>
+        <summary>Stellt die aktuelle Berechtigung und ihres Zustands aus der angegebenen XML-Codierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rekonstruiert eine Berechtigung für die XML-Codierung, die durch einen Aufruf von erstellt die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.ToXml%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Codierung enthält das unbekannte Elemente oder Attribute oder falsch formatierte XML.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsPrincipalPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Die Berechtigung für die Überschneidung mit der aktuellen Berechtigung. Es muss eine Instanz von <see cref="T:System.IdentityModel.Services.ClaimsPrincipalPermission" />.</param>
+        <summary>Gibt eine Berechtigung, die die Schnittmenge der aktuellen Berechtigung und der angegebenen Berechtigung ist.</summary>
+        <returns>Ein neues <see cref="T:System.IdentityModel.Services.ClaimsPrincipalPermission" /> , die die Schnittmenge der aktuellen Berechtigung und der angegebenen Berechtigung darstellt oder <see langword="null" /> Wenn <paramref name="target" /> ist <paramref name="null" /> oder ist keine Instanz des <see cref="T:System.IdentityModel.Services.ClaimsPrincipalPermission" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Berechtigung, die zurückgegeben wird, hat nur die ressourcenaktion Paare, die in der aktuellen Berechtigung und in die angegebene Berechtigung vorhanden waren. Ressourcenaktion Paare, die in der nur eines dieser Zuordnungsverfahren Berechtigungen vorhanden waren, sind nicht eingeschlossen. Für eine <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Demand%2A> auf die neue Berechtigung erfolgreich ist, der aktuelle Prinzipal muss nur für die Ressource Aktionspaare autorisiert werden, die für die aktuelle Berechtigung und der angegebenen Berechtigung waren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsPrincipalPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Die Berechtigung, auf die teilmengenbeziehung geprüft werden soll. Es muss eine Instanz von <see cref="T:System.IdentityModel.Services.ClaimsPrincipalPermission" />.</param>
+        <summary>Gibt einen Wert, der angibt, ob die aktuelle Berechtigung eine Teilmenge der angegebenen Berechtigung ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle Berechtigung eine Teilmenge der angegebenen Berechtigung ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Berechtigung ist eine Teilmenge der angegebenen Berechtigung, wenn alle der ressourcenaktion Paare in der aktuellen Berechtigung auch in die angegebene Berechtigung vorhanden sind. Wenn `target` ist `null` oder ist keine Instanz des <xref:System.IdentityModel.Services.ClaimsPrincipalPermission>, <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.IsSubsetOf%2A> gibt `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsPrincipalPermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die Berechtigung uneingeschränkt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die Berechtigung uneingeschränkt ist, andernfalls <see langword="false" />. Gibt immer <see langword="true" /> zurück, was angibt, dass die Berechtigung uneingeschränkt ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsPrincipalPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die XML-codierte Form der aktuellen Berechtigung und ihren Zustand zurück.</summary>
+        <returns>Die XML-codierte Form der aktuellen Berechtigung und ihr Zustand.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Prinzipal kann aus seiner XML-codierte Form rekonstruiert werden durch Aufrufen der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.FromXml%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ClaimsPrincipalPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Die Berechtigung, die mit der aktuellen Berechtigung kombiniert werden soll. Das Objekt muss vom Typ <see cref="T:System.IdentityModel.Services.ClaimsPrincipalPermission" /> sein.</param>
+        <summary>Gibt eine neue Berechtigung, die die Kombination der aktuellen Berechtigung und der angegebenen Berechtigung ist. <see cref="T:System.IdentityModel.Services.ClaimsPrincipalPermission" />Objekt, das alle ressourcenaktion Paare enthält, die in der aktuellen Instanz und der Zielinstanz vorhanden sind.</summary>
+        <returns>Ein neues <see cref="T:System.IdentityModel.Services.ClaimsPrincipalPermission" /> , die die Kombination der aktuellen Berechtigung und der angegebenen Berechtigung darstellt oder <see langword="null" /> Wenn <paramref name="target" /> ist <paramref name="null" /> oder ist keine Instanz des <see cref="T:System.IdentityModel.Services.ClaimsPrincipalPermission" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verfügt über die Berechtigung, die zurückgegeben werden alle der ressourcenaktion Paare, die in der aktuellen Berechtigung vorhanden sind, und präsentieren Sie alle ressourcenaktion Paare, die die angegebene Berechtigung. Für eine <xref:System.IdentityModel.Services.ClaimsPrincipalPermission.Demand%2A> auf die neue Berechtigung erfolgreich ist, muss der aktuelle Prinzipal autorisiert werden für alle der ressourcenaktion Paare, die in der aktuellen Berechtigung vorhanden waren und die ressourcenaktion Paare, die in die angegebene Berechtigung vorhanden waren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

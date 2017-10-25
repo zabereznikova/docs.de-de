@@ -1,0 +1,339 @@
+<Type Name="SpecularMaterial" FullName="System.Windows.Media.Media3D.SpecularMaterial">
+  <TypeSignature Language="C#" Value="public sealed class SpecularMaterial : System.Windows.Media.Media3D.Material" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SpecularMaterial extends System.Windows.Media.Media3D.Material" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.SpecularMaterial" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.Material</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht es einen Pinsel 2D-wie eine <see cref="T:System.Windows.Media.SolidColorBrush" /> oder <see cref="T:System.Windows.Media.TileBrush" />, um auf ein 3D-Modell mit glänzender angewendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.SpecularMaterial>Farbe und anderen Materialien, die auf einem Netz angewendet werden, anstatt subtrahieren hinzugefügt.  
+  
+ <xref:System.Windows.Media.Media3D.SpecularMaterial>angewendet auf einem Netz wird beleuchtet, wenn zusätzlicher spiegelnder Highlights für das Modell vorkommen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Instanz des <xref:System.Windows.Media.Media3D.SpecularMaterial> und legt deren Pinseleigenschaften fest.  
+  
+ [!code-xaml[hittest3d#_MIL3D_HitTest3D_xaml_n1](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/MyApp.xaml#_mil3d_hittest3d_xaml_n1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SpecularMaterial ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.SpecularMaterial.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Media3D.SpecularMaterial" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.SpecularMaterial>Farbe und anderen Materialien, die auf einem Netz angewendet werden, anstatt subtrahieren hinzugefügt.  
+  
+ <xref:System.Windows.Media.Media3D.SpecularMaterial>angewendet auf einem Netz wird beleuchtet, wenn zusätzlicher spiegelnder Highlights für das Modell vorkommen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SpecularMaterial (System.Windows.Media.Brush brush, double specularPower);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Brush brush, float64 specularPower) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.SpecularMaterial.#ctor(System.Windows.Media.Brush,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="brush" Type="System.Windows.Media.Brush" />
+        <Parameter Name="specularPower" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="brush">Der Pinsel angewendet, indem Sie die neue <see cref="T:System.Windows.Media.Media3D.SpecularMaterial" />.</param>
+        <param name="specularPower">Der zusätzlicher spiegelnder Exponent.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Media3D.SpecularMaterial" /> Klasse mit dem angegebenen Pinsel und zusätzlicher spiegelnder Exponenten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.SpecularMaterial>Farbe und anderen Materialien, die auf einem Netz angewendet werden, anstatt subtrahieren hinzugefügt.  
+  
+ <xref:System.Windows.Media.Media3D.SpecularMaterial>angewendet auf einem Netz wird beleuchtet, wenn zusätzlicher spiegelnder Highlights für das Modell vorkommen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Brush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Brush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Brush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.SpecularMaterial.Brush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die [!INCLUDE[TLA#tla_2d](~/includes/tlasharptla-2d-md.md)] Pinsel eine glänzender zuweisen [!INCLUDE[TLA#tla_3d](~/includes/tlasharptla-3d-md.md)] Modell.</summary>
+        <value>Der Pinsel angewendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Texturkoordinaten, für angegeben werden eine <xref:System.Windows.Media.Media3D.MeshGeometry3D>, seine Material möglicherweise nicht wie erwartet gerendert.  Die einzige Ausnahme ist, wenn diese Eigenschaft gibt eine <xref:System.Windows.Media.SolidColorBrush>; in diesem Fall das Material wird mit einem Standardsatz von Texturkoordinaten gerendert werden.  
+  
+<a name="dependencyPropertyInfo_BrushProperty"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.SpecularMaterial.BrushProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Instanz des <xref:System.Windows.Media.Media3D.SpecularMaterial> und legt deren Pinseleigenschaften fest.  
+  
+ [!code-xaml[hittest3d#_MIL3D_HitTest3D_xaml_n1](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/MyApp.xaml#_mil3d_hittest3d_xaml_n1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.SpecularMaterial.BrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.SpecularMaterial.Brush" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.SpecularMaterial Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.SpecularMaterial Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.SpecularMaterial.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.SpecularMaterial</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Media3D.SpecularMaterial" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.SpecularMaterial CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.SpecularMaterial CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.SpecularMaterial.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.SpecularMaterial</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Media3D.SpecularMaterial" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Color">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Color Color { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Color Color" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.SpecularMaterial.Color" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert an, der filtert, die Eigenschaften der Farbe des Materials für das Modell angewendet.</summary>
+        <value>Die Farbe, mit dem das Material gefiltert werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft hat den Effekt der Filterung der Materialien, die auf das Modell angewendet wird, durch den Farbwert angegeben.  Wenn Sie diese Eigenschaft beispielsweise auf `Colors.Red` Blau und Grün im Material verdeckt.  
+  
+<a name="dependencyPropertyInfo_Color"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.SpecularMaterial.ColorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ [!code-xaml[hittest3d#_MIL3D_HitTest3D_xaml_n1](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/MyApp.xaml#_mil3d_hittest3d_xaml_n1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ColorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ColorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.SpecularMaterial.ColorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.SpecularMaterial.Color" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Bezeichner für die <xref:System.Windows.Media.Media3D.SpecularMaterial.Color%2A>-Abhängigkeitseigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.SpecularMaterial.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecularPower">
+      <MemberSignature Language="C#" Value="public double SpecularPower { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SpecularPower" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der den Grad angibt, den ein Material, das auf ein 3D-Modell angewendet Beleuchtungsmodell als ergänzen widerspiegelt.</summary>
+        <value>Der relative Anteil für Material angewendet, als eine [!INCLUDE[TLA2#tla_2d](~/includes/tla2sharptla-2d-md.md)] Pinsel, um eine [!INCLUDE[TLA2#tla_3d](~/includes/tla2sharptla-3d-md.md)] Modell der Komponente zusätzlicher spiegelnder Beleuchtung-Modells.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zusätzlicher spiegelnder Beleuchtung reproduziert die Darstellung von Oberflächen, die glänzend oder tendenziell Highlights widerzuspiegeln. Diese Eigenschaft gibt an, die relativen "Glanz" Material für das Modell angewendet wird.  Ein höheren Wert für diese Eigenschaft gibt an, Größe und die Schärfe der ergänzen von Material reflektiert wird.  
+  
+<a name="dependencyPropertyInfo_SpecularPowerProperty"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPowerProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Instanz des <xref:System.Windows.Media.Media3D.SpecularMaterial> und legt diese Eigenschaft fest.  
+  
+ [!code-xaml[hittest3d#_MIL3D_HitTest3D_xaml_n1](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/MyApp.xaml#_mil3d_hittest3d_xaml_n1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecularPowerProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SpecularPowerProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SpecularPowerProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.SpecularMaterial.SpecularPowerProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

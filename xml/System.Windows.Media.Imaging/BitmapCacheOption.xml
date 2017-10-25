@@ -1,0 +1,92 @@
+<Type Name="BitmapCacheOption" FullName="System.Windows.Media.Imaging.BitmapCacheOption">
+  <TypeSignature Language="C#" Value="public enum BitmapCacheOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BitmapCacheOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.BitmapCacheOption" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie ein Bitmapbild die Zwischenspeicherung im Arbeitsspeicher ausnutzt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie beim Laden einer <xref:System.Windows.Media.Imaging.BitmapImage> , und geben Sie die <xref:System.Windows.Media.Imaging.BitmapCacheOption>.  
+  
+ [!code-csharp[bitmapimageprops#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#1)]
+ [!code-vb[bitmapimageprops#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Imaging.BitmapCacheOption Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.BitmapCacheOption.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapCacheOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speichert das gesamte Bild im Arbeitsspeicher zwischen. Dies ist der Standardwert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Imaging.BitmapCacheOption None = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.BitmapCacheOption.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapCacheOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keinen Arbeitsspeicherbereich erstellen. Alle Anforderungen für das Bild werden direkt von der Bilddatei gefüllt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDemand">
+      <MemberSignature Language="C#" Value="OnDemand" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Imaging.BitmapCacheOption OnDemand = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.BitmapCacheOption.OnDemand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapCacheOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erstellt einen Arbeitsspeicherbereich ausschließlich für angeforderte Daten. Die erste Anforderung lädt das Bild direkt. Nachfolgende Anforderungen werden aus dem Zwischenspeicher gefüllt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoad">
+      <MemberSignature Language="C#" Value="OnLoad" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Imaging.BitmapCacheOption OnLoad = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Imaging.BitmapCacheOption.OnLoad" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapCacheOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speichert das gesamte Bild zur Ladezeit im Arbeitsspeicher zwischen. Alle Anforderungen für Bilddaten werden aus dem Arbeitsspeicherbereich gefüllt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,116 @@
+<Type Name="ClientSettingsSection" FullName="System.Configuration.ClientSettingsSection">
+  <TypeSignature Language="C#" Value="public sealed class ClientSettingsSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ClientSettingsSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ClientSettingsSection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Gruppe von benutzerspezifische Anwendungseinstellungen in einer Konfigurationsdatei dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] enthält einen einzelnen Standardeinstellungsanbieter <xref:System.Configuration.LocalFileSettingsProvider>, die Konfigurationsdaten im lokalen Dateisystem in Dateien mit der Erweiterung speichert `.config`. Der Inhalt der Konfigurationsdateien werden als XML-Dokumente strukturiert. Benutzerspezifische Einstellungen werden beibehalten, in einer Datei mit dem Namen `username.config`. In dieser Datei Daten gespeichert ist, werden als Elemente innerhalb einer `<userSettings>` Abschnitt. Den folgenden Abschnitten wird dargestellt, von einer entsprechenden <xref:System.Configuration.ClientSettingsSection>. Jedes Abschnittsobjekt gehört und verwaltet, die durch einen Konfigurationsabschnittshandler, also ein <xref:System.Configuration.IConfigurationSectionHandler>.  
+  
+ Die <xref:System.Configuration.ClientSettingsSection> Klasse stellt eine einfache Erweiterung der <xref:System.Configuration.ConfigurationSection> -Klasse, die verwendet wird die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] für allgemeine Konfigurationsdateien zu unterstützen.  
+  
+ Weitere Informationen zu Anwendungseinstellungen finden Sie im Thema [Anwendung Einstellungen für Windows Forms](~/docs/framework/winforms/advanced/application-settings-for-windows-forms.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientSettingsSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ClientSettingsSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ClientSettingsSection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung <xref:System.Configuration.ClientSettingsSection.%23ctor%2A> Konstruktor initialisiert die <xref:System.Configuration.ClientSettingsSection.Settings%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ClientSettingsSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Settings">
+      <MemberSignature Language="C#" Value="public System.Configuration.SettingElementCollection Settings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.SettingElementCollection Settings" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ClientSettingsSection.Settings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("", Options=System.Configuration.ConfigurationPropertyOptions.IsDefaultCollection)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Clienteinstellungen für den Abschnitt.</summary>
+        <value>Ein <see cref="T:System.Configuration.SettingElementCollection" /> , enthält alle Clienteinstellungen in der aktuellen Konfigurationsabschnitt gefunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ClientSettingsSection.Settings%2A> Eigenschaft ist selbst eine Konfigurationseigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

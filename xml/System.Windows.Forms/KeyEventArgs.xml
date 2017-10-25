@@ -1,0 +1,405 @@
+<Type Name="KeyEventArgs" FullName="System.Windows.Forms.KeyEventArgs">
+  <TypeSignature Language="C#" Value="public class KeyEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeyEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.KeyEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Windows.Forms.Control.KeyDown" /> oder <see cref="E:System.Windows.Forms.Control.KeyUp" /> Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Forms.KeyEventArgs>, dem gibt den Schlüssel an der Benutzer gedrückt, und ob alle (STRG, ALT und UMSCHALT) zur gleichen Zeit Modifizierertasten wurden übergeben wird, mit jedem <xref:System.Windows.Forms.Control.KeyDown> oder <xref:System.Windows.Forms.Control.KeyUp> Ereignis.  
+  
+ Die <xref:System.Windows.Forms.Control.KeyDown> Ereignis tritt auf, wenn der Benutzer eine beliebige Taste drückt. Die <xref:System.Windows.Forms.Control.KeyUp> Ereignis tritt auf, wenn der Benutzer die Taste loslässt. Doppelte <xref:System.Windows.Forms.Control.KeyDown> Ereignisse auftreten jedes Mal wiederholt auf der Schlüssel, wenn der Schlüssel, aber nur ein aufrechterhalten wird <xref:System.Windows.Forms.Control.KeyUp> Ereignis wird generiert, wenn der Benutzer die Taste loslässt.  
+  
+ Die <xref:System.Windows.Forms.Control.KeyPress> Ereignis tritt auch auf, wenn eine Taste gedrückt wird. Ein <xref:System.Windows.Forms.KeyPressEventArgs> wird mit jedem übergeben <xref:System.Windows.Forms.Control.KeyPress> Ereignis, und gibt das Zeichen an, die als Ergebnis der einzelnen Tastendruck erstellt wurde.  
+  
+ Informationen über das Ereignismodell finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Die folgenden Codebeispiele veranschaulichen, wie den Status der Drücken einer Taste erkennen.  
+  
+ **Beispiel 1**  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.Control.KeyDown> Ereignis mit der <xref:System.Windows.Forms.Help> zum Anzeigen der Popup-Hilfe für den Benutzer der Anwendung. Im Beispiel wird die <xref:System.Windows.Forms.KeyEventArgs> Eigenschaften an die Ereignishandlermethode zum Filtern nach allen Varianten des Drücken der Taste F1 mit Modifizierertaste übergeben. Wenn der Benutzer eine Variante von F1 drückt, die Modifizierer Tastatur enthält die <xref:System.Windows.Forms.Help> Klasse wird ein Popupfenster, der ähnlich wie eine <xref:System.Windows.Forms.ToolTip>, in der Nähe des Steuerelements. Wenn der Benutzer ALT + F2 drückt, wird eine andere kontextbezogene Hilfe mit zusätzlichen Informationen angezeigt.  
+  
+ [!code-cpp[KeyEventArgs.Modifiers#1](~/samples/snippets/cpp/VS_Snippets_Winforms/KeyEventArgs.Modifiers/CPP/form1.cpp#1)]
+ [!code-csharp[KeyEventArgs.Modifiers#1](~/samples/snippets/csharp/VS_Snippets_Winforms/KeyEventArgs.Modifiers/CS/form1.cs#1)]
+ [!code-vb[KeyEventArgs.Modifiers#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/KeyEventArgs.Modifiers/VB/form1.vb#1)]  
+  
+ **Beispiel 2**  
+  
+ Im folgenden Beispiel wird bestimmt, ob der Benutzer ALT + E gedrückt, und wenn der Mauszeiger über ein <xref:System.Windows.Forms.TreeNode>, ermöglicht es dem Benutzer, die bearbeiten <xref:System.Windows.Forms.TreeNode>.  
+  
+ [!code-cpp[Windows.Forms.Control Members4#3](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.Control Members4/CPP/controlmembers4.cpp#3)]
+ [!code-csharp[Windows.Forms.Control Members4#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.Control Members4/CS/controlmembers4.cs#3)]
+ [!code-vb[Windows.Forms.Control Members4#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.Control Members4/VB/controlmembers4.vb#3)]  
+  
+ **Beispiel 3**  
+  
+ Im folgenden Beispiel wird bestimmt, ob der Benutzer einen nicht numerischen, gedrückt, und wenn dies der Fall ist, bricht der <xref:System.Windows.Forms.Control.KeyPress> Ereignis mithilfe der <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> Eigenschaft.  
+  
+ [!code-cpp[Control.KeyDown#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Control.KeyDown/CPP/form1.cpp#1)]
+ [!code-csharp[Control.KeyDown#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Control.KeyDown/CS/form1.cs#1)]
+ [!code-vb[Control.KeyDown#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Control.KeyDown/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyEventArgs (System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.KeyEventArgs.#ctor(System.Windows.Forms.Keys)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Ein <see cref="T:System.Windows.Forms.Keys" /> mit Modifiziererflags, die angeben, welche STRG, UMSCHALTTASTE und ALT-Taste gleichzeitig gedrückt wurden kombiniert, die die Schlüssel, die gedrückt wurde, darstellt. Mögliche Werte werden abgerufen, den bitweisen OR-Operator angewendet werden (|)-Operator, um Konstanten aus der <see cref="T:System.Windows.Forms.Keys" /> Enumeration.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.KeyEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Alt">
+      <MemberSignature Language="C#" Value="public virtual bool Alt { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Alt" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.KeyEventArgs.Alt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ALT gedrückt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn Sie die ALT-Taste gedrückt wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ **Beispiel 1**  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.Control.KeyDown> Ereignis mit der <xref:System.Windows.Forms.Help> zum Anzeigen der Popup-Hilfe für den Benutzer der Anwendung. Im Beispiel wird die <xref:System.Windows.Forms.KeyEventArgs> Eigenschaften an die Ereignishandlermethode zum Filtern nach allen Varianten des Drücken der Taste F1 mit Modifizierertaste übergeben. Wenn der Benutzer eine Variante von F1 drückt, die Modifizierer Tastatur enthält die <xref:System.Windows.Forms.Help> Klasse wird ein Popupfenster, der ähnlich wie eine <xref:System.Windows.Forms.ToolTip>, in der Nähe des Steuerelements. Wenn der Benutzer ALT + F2 drückt, wird eine andere kontextbezogene Hilfe mit zusätzlichen Informationen angezeigt.  
+  
+ [!code-cpp[KeyEventArgs.Modifiers#1](~/samples/snippets/cpp/VS_Snippets_Winforms/KeyEventArgs.Modifiers/CPP/form1.cpp#1)]
+ [!code-csharp[KeyEventArgs.Modifiers#1](~/samples/snippets/csharp/VS_Snippets_Winforms/KeyEventArgs.Modifiers/CS/form1.cs#1)]
+ [!code-vb[KeyEventArgs.Modifiers#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/KeyEventArgs.Modifiers/VB/form1.vb#1)]  
+  
+ **Beispiel 2**  
+  
+ Im folgenden Beispiel wird bestimmt, ob der Benutzer ALT + E gedrückt, und wenn der Mauszeiger über <xref:System.Windows.Forms.TreeNode>, ermöglicht es dem Benutzer, die bearbeiten <xref:System.Windows.Forms.TreeNode>.  
+  
+ [!code-cpp[Windows.Forms.Control Members4#3](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.Control Members4/CPP/controlmembers4.cpp#3)]
+ [!code-csharp[Windows.Forms.Control Members4#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.Control Members4/CS/controlmembers4.cs#3)]
+ [!code-vb[Windows.Forms.Control Members4#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.Control Members4/VB/controlmembers4.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public bool Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Control" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.KeyEventArgs.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob STRG gedrückt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn Sie die STRG-Taste gedrückt wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.Control.KeyDown> Ereignis mit der <xref:System.Windows.Forms.Help> zum Anzeigen der Popup-Hilfe für den Benutzer der Anwendung. Im Beispiel wird die <xref:System.Windows.Forms.KeyEventArgs> Eigenschaften an die Ereignishandlermethode zum Filtern nach allen Varianten des Drücken der Taste F1 mit Modifizierertaste übergeben. Wenn der Benutzer eine Variante von F1 drückt, die Modifizierer Tastatur enthält die <xref:System.Windows.Forms.Help> Klasse wird ein Popupfenster, der ähnlich wie eine <xref:System.Windows.Forms.ToolTip>, in der Nähe des Steuerelements. Wenn der Benutzer ALT + F2 drückt, wird eine andere kontextbezogene Hilfe mit zusätzlichen Informationen angezeigt.  
+  
+ [!code-cpp[KeyEventArgs.Modifiers#1](~/samples/snippets/cpp/VS_Snippets_Winforms/KeyEventArgs.Modifiers/CPP/form1.cpp#1)]
+ [!code-csharp[KeyEventArgs.Modifiers#1](~/samples/snippets/csharp/VS_Snippets_Winforms/KeyEventArgs.Modifiers/CS/form1.cs#1)]
+ [!code-vb[KeyEventArgs.Modifiers#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/KeyEventArgs.Modifiers/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.KeyEventArgs.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Ereignis behandelt wurde, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />zum Umgehen des Steuerelements Standardbehandlung des; andernfalls <see langword="false" /> auch das Ereignis zusammen an der Standardhandler für das Steuerelement übergeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.KeyEventArgs.Handled%2A>von den verschiedenen Steuerelementen in Windows Forms wird anders implementiert werden. Für Steuerelemente wie <xref:System.Windows.Forms.TextBox> die Unterklasse systemeigenes Win32 gesteuert, es wird interpretiert, dass die Hauptnachricht nicht an das zugrunde liegende systemeigene Steuerelement übergeben werden sollen. Wenn Sie festlegen, `Handled` auf "true", auf eine <xref:System.Windows.Forms.TextBox>, dass das Drücken das Taste die Steuerung nicht übergeben wird `events` an das zugrunde liegende Win32-Textfeld-Steuerelement, sondern zeigt weiterhin die Zeichen, die der Benutzer eingegeben.  
+  
+ Wenn Sie verhindern, dass das aktuelle Steuerelement ein Tastendruck verwenden empfangen möchten die <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird bestimmt, ob der Benutzer einen nicht numerischen, gedrückt, und wenn dies der Fall ist, bricht der <xref:System.Windows.Forms.Control.KeyPress> Ereignis mithilfe der <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> Eigenschaft.  
+  
+ [!code-cpp[Control.KeyDown#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Control.KeyDown/CPP/form1.cpp#1)]
+ [!code-csharp[Control.KeyDown#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Control.KeyDown/CS/form1.cs#1)]
+ [!code-vb[Control.KeyDown#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Control.KeyDown/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyCode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Keys KeyCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Keys KeyCode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.KeyEventArgs.KeyCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Keys</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Tastaturcode für eine <see cref="E:System.Windows.Forms.Control.KeyDown" /> oder <see cref="E:System.Windows.Forms.Control.KeyUp" /> Ereignis.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Keys" /> Wert, der den Tastencode für das Ereignis ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Die folgenden Codebeispiele zeigen, wie mithilfe der <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> -Eigenschaft können Sie bestimmen, welche-Taste gedrückt wurde.  
+  
+ **Beispiel 1**  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.Control.KeyDown> Ereignis mit der <xref:System.Windows.Forms.Help> zum Anzeigen der Popup-Hilfe für den Benutzer der Anwendung. Im Beispiel wird die <xref:System.Windows.Forms.KeyEventArgs> Eigenschaften an die Ereignishandlermethode zum Filtern nach allen Varianten des Drücken der Taste F1 mit Modifizierertaste übergeben. Wenn der Benutzer eine Variante von F1 drückt, die Modifizierer Tastatur enthält die <xref:System.Windows.Forms.Help> Klasse wird ein Popupfenster, der ähnlich wie eine <xref:System.Windows.Forms.ToolTip>, in der Nähe des Steuerelements. Wenn der Benutzer ALT + F2 drückt, wird eine andere kontextbezogene Hilfe mit zusätzlichen Informationen angezeigt.  
+  
+ [!code-cpp[KeyEventArgs.Modifiers#1](~/samples/snippets/cpp/VS_Snippets_Winforms/KeyEventArgs.Modifiers/CPP/form1.cpp#1)]
+ [!code-csharp[KeyEventArgs.Modifiers#1](~/samples/snippets/csharp/VS_Snippets_Winforms/KeyEventArgs.Modifiers/CS/form1.cs#1)]
+ [!code-vb[KeyEventArgs.Modifiers#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/KeyEventArgs.Modifiers/VB/form1.vb#1)]  
+  
+ **Beispiel 2**  
+  
+ Im folgenden Beispiel wird bestimmt, ob der Benutzer ALT + E gedrückt, und wenn der Mauszeiger über ein <xref:System.Windows.Forms.TreeNode>, ermöglicht es dem Benutzer, die bearbeiten <xref:System.Windows.Forms.TreeNode>.  
+  
+ [!code-cpp[Windows.Forms.Control Members4#3](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.Control Members4/CPP/controlmembers4.cpp#3)]
+ [!code-csharp[Windows.Forms.Control Members4#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.Control Members4/CS/controlmembers4.cs#3)]
+ [!code-vb[Windows.Forms.Control Members4#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.Control Members4/VB/controlmembers4.vb#3)]  
+  
+ **Beispiel 3**  
+  
+ Im folgenden Beispiel wird bestimmt, ob der Benutzer einen nicht numerischen, gedrückt, und wenn dies der Fall ist, bricht der <xref:System.Windows.Forms.Control.KeyPress> Ereignis mithilfe der <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> Eigenschaft.  
+  
+ [!code-cpp[Control.KeyDown#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Control.KeyDown/CPP/form1.cpp#1)]
+ [!code-csharp[Control.KeyDown#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Control.KeyDown/CS/form1.cs#1)]
+ [!code-vb[Control.KeyDown#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Control.KeyDown/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyData">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Keys KeyData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Keys KeyData" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.KeyEventArgs.KeyData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Keys</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schlüsseldaten für ein <see cref="E:System.Windows.Forms.Control.KeyDown" /> oder <see cref="E:System.Windows.Forms.Control.KeyUp" /> Ereignis.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Keys" /> mit Modifiziererflags, die angeben, welche Kombination aus STRG, UMSCHALTTASTE und ALT-Taste gleichzeitig gedrückt wurde kombiniert, die den Tastencode für den Schlüssel, die gedrückt wurde, darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konstanten können <xref:System.Windows.Forms.Keys> zum Extrahieren von Informationen aus der <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> Eigenschaft. Verwenden Sie den bitweisen AND-Operator zurückgegebene Daten vergleichen <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> in Konstanten <xref:System.Windows.Forms.Keys> zum Abrufen von Informationen über die Schlüssel der Benutzer geklickt hat. Um zu bestimmen, ob eine bestimmte Taste gedrückt wurde, verwenden die <xref:System.Windows.Forms.KeyEventArgs.Control%2A>, <xref:System.Windows.Forms.KeyEventArgs.Shift%2A>, und <xref:System.Windows.Forms.KeyEventArgs.Alt%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Control.KeyDown?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.Control>, z. B. eine <xref:System.Windows.Forms.Button> oder <xref:System.Windows.Forms.ComboBox>. Geben Sie den Namen der Instanz `Control1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Control.KeyDown?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#48](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#48)]
+ [!code-vb[System.Windows.Forms.EventExamples#48](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#48)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyValue">
+      <MemberSignature Language="C#" Value="public int KeyValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeyValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.KeyEventArgs.KeyValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Tastaturwert für einen <see cref="E:System.Windows.Forms.Control.KeyDown" /> oder <see cref="E:System.Windows.Forms.Control.KeyUp" /> Ereignis.</summary>
+        <value>Die Darstellung der Ganzzahl die <see cref="P:System.Windows.Forms.KeyEventArgs.KeyCode" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Control.KeyDown?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.Control>, z. B. eine <xref:System.Windows.Forms.Button> oder <xref:System.Windows.Forms.ComboBox>. Geben Sie den Namen der Instanz `Control1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Control.KeyDown?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#48](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#48)]
+ [!code-vb[System.Windows.Forms.EventExamples#48](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#48)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modifiers">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Keys Modifiers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Keys Modifiers" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.KeyEventArgs.Modifiers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Keys</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Modifiziererflags für eine <see cref="E:System.Windows.Forms.Control.KeyDown" /> oder <see cref="E:System.Windows.Forms.Control.KeyUp" /> Ereignis. Die Flags geben an, welche Kombination aus STRG, UMSCHALTTASTE und ALT gedrückt wurde.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Keys" /> Wert, der ein oder mehrere Modifiziererflags darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu bestimmen, ob eine bestimmte Taste gedrückt wurde, verwenden die <xref:System.Windows.Forms.KeyEventArgs.Control%2A>, <xref:System.Windows.Forms.KeyEventArgs.Shift%2A>, und <xref:System.Windows.Forms.KeyEventArgs.Alt%2A> Eigenschaften. Modifiziererflags können zusammen mit bitweisen OR-Operator.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> -Eigenschaft können Sie bestimmen, welche Modifizierertasten zusammen mit dem primären Schlüssel wurden.  
+  
+ [!code-cpp[KeyEventArgs.Modifiers#1](~/samples/snippets/cpp/VS_Snippets_Winforms/KeyEventArgs.Modifiers/CPP/form1.cpp#1)]
+ [!code-csharp[KeyEventArgs.Modifiers#1](~/samples/snippets/csharp/VS_Snippets_Winforms/KeyEventArgs.Modifiers/CS/form1.cs#1)]
+ [!code-vb[KeyEventArgs.Modifiers#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/KeyEventArgs.Modifiers/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shift">
+      <MemberSignature Language="C#" Value="public virtual bool Shift { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Shift" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.KeyEventArgs.Shift" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die UMSCHALTTASTE gedrückt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn Sie die UMSCHALTTASTE gedrückt wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird bestimmt, ob der Benutzer die UMSCHALT-Taste mit der F1-Taste gedrückt, und zeigt daher die Hilfe an.  
+  
+ [!code-cpp[KeyEventArgs.Modifiers#1](~/samples/snippets/cpp/VS_Snippets_Winforms/KeyEventArgs.Modifiers/CPP/form1.cpp#1)]
+ [!code-csharp[KeyEventArgs.Modifiers#1](~/samples/snippets/csharp/VS_Snippets_Winforms/KeyEventArgs.Modifiers/CS/form1.cs#1)]
+ [!code-vb[KeyEventArgs.Modifiers#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/KeyEventArgs.Modifiers/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressKeyPress">
+      <MemberSignature Language="C#" Value="public bool SuppressKeyPress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SuppressKeyPress" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.KeyEventArgs.SuppressKeyPress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Key-Ereignis an das zugrunde liegende Steuerelement übergeben werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn das Key-Ereignis nicht an das Steuerelement gesendet werden sollen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie zuweisen können `true` für diese Eigenschaft in einem Ereignishandler, wie z. B. <xref:System.Windows.Forms.Control.KeyDown> um Benutzereingaben zu vermeiden.  
+  
+ Festlegen von <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> auf `true` setzt auch <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> auf `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird verhindert, dass numerische Tastatureingaben erreichen der <xref:System.Windows.Forms.TextBox> Steuerelement namens `textBox1`.  
+  
+ [!code-csharp[KeyEventArgs.SuppressKeyPress#1](~/samples/snippets/csharp/VS_Snippets_Winforms/keyeventargs.suppresskeypress/cs/form1.cs#1)]
+ [!code-vb[KeyEventArgs.SuppressKeyPress#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/keyeventargs.suppresskeypress/vb/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

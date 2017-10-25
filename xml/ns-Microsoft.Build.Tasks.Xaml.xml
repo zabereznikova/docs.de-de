@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Tasks.Xaml">
+  <Docs>
+    <summary>Stellt Klassen im Zusammenhang mit XAML-Buildaufgaben bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

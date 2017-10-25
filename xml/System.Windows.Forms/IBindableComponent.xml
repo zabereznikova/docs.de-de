@@ -1,0 +1,68 @@
+<Type Name="IBindableComponent" FullName="System.Windows.Forms.IBindableComponent">
+  <TypeSignature Language="C#" Value="public interface IBindableComponent : IDisposable, System.ComponentModel.IComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBindableComponent implements class System.ComponentModel.IComponent, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.IBindableComponent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ermöglicht eine nicht-Control-Komponente zum Emulieren des Verhaltens Datenbindungsfunktionen eines Windows Forms-Steuerelements an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Forms.Binding> enthält einen Verweis auf die <xref:System.Windows.Forms.IBindableComponent> Besitzer über die <xref:System.Windows.Forms.Binding.BindableComponent%2A> Eigenschaft.  
+  
+ Die <xref:System.Windows.Forms.Control> -Klasse implementiert diese Schnittstelle, wenn Ihre bindbare Komponente erbt <xref:System.Windows.Forms.Control>, müssen Sie nicht diese Schnittstelle implementieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BindingContext">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BindingContext BindingContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.BindingContext BindingContext" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.IBindableComponent.BindingContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auflistung der Currency-Managern für die <see cref="T:System.Windows.Forms.IBindableComponent" />.</summary>
+        <value>Die Auflistung von <see cref="T:System.Windows.Forms.BindingManagerBase" />-Objekten für diese <see cref="T:System.Windows.Forms.IBindableComponent" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindings">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ControlBindingsCollection DataBindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ControlBindingsCollection DataBindings" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.IBindableComponent.DataBindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlBindingsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Datenbindungsobjekte für diesen <see cref="T:System.Windows.Forms.IBindableComponent" />.</summary>
+        <value>Das <see cref="T:System.Windows.Forms.ControlBindingsCollection" /> für dieses <see cref="T:System.Windows.Forms.IBindableComponent" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,368 @@
+<Type Name="Brush" FullName="System.Windows.Media.Brush">
+  <TypeSignature Language="C#" Value="public abstract class Brush : System.Windows.Media.Animation.Animatable, IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract Brush extends System.Windows.Media.Animation.Animatable implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Brush" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Animatable</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Media.BrushConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Media.Converters.BrushValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Objekte, die zum Zeichnen von Grafikobjekten verwendet werden. Von <see cref="T:System.Windows.Media.Brush" /> abgeleitete Klassen beschreiben, wie der Bereich gezeichnet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Media.Brush> "zeichnet" oder "füllt" einen Bereich mit der Ausgabe. Unterschiedlicher Pinsel werden verschiedene Typen der Ausgabe aufweisen. Einige Pinsel zeichnen einen Bereich mit einer Volltonfarbe, andere Personen mit einem Farbverlauf, Muster, Bild oder Zeichnung. Die folgende Liste beschreibt die verschiedenen Typen von [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Pinsel:  
+  
+-   <xref:System.Windows.Media.SolidColorBrush>: Zeichnet einen Bereich mit einer einfarbigen <xref:System.Windows.Media.Color>.  
+  
+-   <xref:System.Windows.Media.LinearGradientBrush>: Zeichnet einen Bereich mit einem linearen Farbverlauf.  
+  
+-   <xref:System.Windows.Media.RadialGradientBrush>: Zeichnet einen Bereich mit einem radialen Farbverlauf.  
+  
+-   <xref:System.Windows.Media.ImageBrush>: Zeichnet einen Bereich mit einem Bild (dargestellt durch eine <xref:System.Windows.Media.ImageSource> Objekt).  
+  
+-   <xref:System.Windows.Media.DrawingBrush>: Zeichnet einen Bereich mit einem <xref:System.Windows.Media.Drawing>. Die Zeichnung kann Vektor- und Bitmap-Objekte enthalten.  
+  
+-   <xref:System.Windows.Media.VisualBrush>: Zeichnet einen Bereich mit einem <xref:System.Windows.Media.Visual> Objekt. Ein <xref:System.Windows.Media.VisualBrush> ermöglicht es Ihnen, den Inhalt von einem Teil der Anwendung in einem anderen Client-Bereich duplizieren diese Funktion ist hilfreich zum Erstellen von Reflektion Auswirkungen und Teile des Bildschirms vergrößern.  
+  
+## <a name="predefined-brushes"></a>Vordefinierte Pinsel  
+ Verwenden der <xref:System.Windows.Media.Brushes> Klasse, um ein Objekt mit einer vordefinierten Volltonfarbe wie zeichnen <xref:System.Windows.Media.Brushes.AliceBlue%2A> oder <xref:System.Windows.Media.Brushes.Red%2A>.  
+  
+## <a name="brushes-in-xaml"></a>Pinsel in XAML  
+ Die folgende Tabelle enthält die verschiedenen <xref:System.Windows.Media.Brush> Typen, die in zu verwendenden [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] und die Syntax, die sie unterstützen. Ausführliche Informationen zur Syntax für einen bestimmten Pinsel finden Sie unter Seite "des Pinsels".  
+  
+|Klasse|Die Attributsyntax|Objektelementsyntax|  
+|-----------|----------------------|---------------------------|  
+|<xref:System.Windows.Media.SolidColorBrush>|Ja|Ja|  
+|<xref:System.Windows.Media.DrawingBrush>|Nein|Ja|  
+|<xref:System.Windows.Media.ImageBrush>|Nein|Ja|  
+|<xref:System.Windows.Media.LinearGradientBrush>|Nein|Ja|  
+|<xref:System.Windows.Media.RadialGradientBrush>|Nein|Ja|  
+|<xref:System.Windows.Media.VisualBrush>|Nein|Ja|  
+  
+ Ein Beispiel zeigt, wie schnell einen Bereich mit einer Volltonfarbe gezeichnet wird, finden Sie unter [wie: Zeichnen eines Bereichs mit einer Volltonfarbe](~/docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md).  
+  
+## <a name="freezable-features"></a>Funktionen von Freezable-Objekten  
+ Ein Pinsel ist eine Art von <xref:System.Windows.Freezable> Objekt. Informationen zu <xref:System.Windows.Freezable> Funktionen, z. B. Einfrieren und Klonen, finden Sie unter der [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+<a name="xamlTextUsage_Brush"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter der **"Hinweise"** Abschnitt.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von der <see cref="T:System.Windows.Media.Brush" /> -Klasse, die Sie überschreiben müssen die <see cref="M:System.Windows.Freezable.CreateInstanceCore" /> Methode. Je nachdem, ob die Klasse zusätzliche Initialisierungsfunktionen ausführen muss oder nicht Abhängigkeitseigenschaft-Datenmember enthält, müssen möglicherweise außer Kraft setzen zusätzliche <see cref="T:System.Windows.Freezable" /> Methoden. Weitere Informationen über das Vererben von <see cref="T:System.Windows.Freezable" /> , finden Sie unter der [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Brush ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Brush.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Brush" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Brush Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Brush.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Brush" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Brush CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Brush.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Brush" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opacity">
+      <MemberSignature Language="C#" Value="public double Opacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Opacity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Brush.Opacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Grad der Deckkraft, der eine <see cref="T:System.Windows.Media.Brush" />.</summary>
+        <value>Der Wert, der die <see cref="P:System.Windows.Media.Brush.Opacity" /> Eigenschaft wird als Wert zwischen 0,0 und 1,0 ausgedrückt. Der Standardwert ist 1,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Media.Brush.Opacity%2A> Wert 0 gibt an, dass der Pinsel vollständig transparent ist, während der Wert 1 gibt an, dass der Pinsel vollständig deckend ist. Der Wert 0,5 gibt an, dass es sich bei der Pinsel ist 50 % undurchsichtig ist, wird ein Wert 0,725 bedeutet, dass der Pinsel zu 72,5 % undurchsichtig usw.. Kleinere Werte als 0 werden als 0 behandelt, größere Werte als 1 als 1.  
+  
+<a name="dependencyPropertyInfo_Opacity"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Brush.OpacityProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpacityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OpacityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OpacityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Brush.OpacityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Brush.Opacity" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativeTransform">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Transform RelativeTransform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Transform RelativeTransform" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Brush.RelativeTransform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Transform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die auf den Pinsel über relative Koordinaten angewendete Transformation ab oder legt diese fest.</summary>
+        <value>Die auf den Pinsel über relative Koordinaten angewendete Transformation.  Der Standardwert ist die <see cref="P:System.Windows.Media.Transform.Identity" /> Transformation.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist besonders nützlich, wenn Sie drehen, zu skalieren, verzerren oder andernfalls Transformieren eines Kacheleffekts über seinen Mittelpunkt, möchten jedoch Sie nicht, dass die Größe des Bereichs mit dem Pinsel gezeichnet wissen oder Sie den gleichen Pinsel verwenden unterschiedliche Bereiche mit unterschiedlichen Größen Paint-Ereignis.  
+  
+ Ausführliche Informationen zu dieser Eigenschaft finden Sie unter der [Pinsel Transformation Overview](~/docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md).  
+  
+<a name="dependencyPropertyInfo_RelativeTransform"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Brush.RelativeTransformProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativeTransformProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RelativeTransformProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RelativeTransformProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Brush.RelativeTransformProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Brush.RelativeTransform" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Brush.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Das zu verwendende Format.  
+  
+ - oder -   
+  
+ Ein null-Verweis (<see langword="Nothing" /> in Visual Basic), verwenden Sie das Standardformat für den Typ des definiert die <see cref="T:System.IFormattable" /> Implementierung.</param>
+        <param name="provider">Der zum Formatieren des Werts zu verwendende Anbieter.  
+  
+ - oder -   
+  
+ Ein null-Verweis (<see langword="Nothing" /> in Visual Basic) um die Zahlenformatinformationen aus dem aktuellen Gebietsschema des Betriebssystems abzurufen.</param>
+        <summary>Formatiert den Wert der aktuellen Instanz mit dem angegebenen Format.</summary>
+        <returns>Der Wert der aktuellen Instanz im angegebenen Format.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Brush.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zurückgeben der Zeichenfolgendarstellung dieses <see cref="T:System.Windows.Media.Brush" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung dieses Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Brush.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Kulturspezifische Formatierungsinformationen oder <see langword="null" /> der standardformatierung des die aktuelle Kultur verwendet.</param>
+        <summary>Erstellt eine Zeichenfolgendarstellung für dieses Objekt basierend auf der angegebenen kulturspezifischen Formatierungsinformationen.</summary>
+        <returns>Eine Zeichenfolgendarstellung dieses Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Transform Transform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Transform Transform" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Brush.Transform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Transform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen der auf den Pinsel angewendeten Transformation. Diese Transformation wird angewendet, nachdem die Ausgabe des Pinsels zugeordnet und positioniert wurde.</summary>
+        <value>Die Transformation, die auf den Pinsel angewendet werden soll. Der Standardwert ist die <see cref="P:System.Windows.Media.Transform.Identity" /> Transformation.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft zum Drehen, zu skalieren, neigen oder Übersetzen der Inhalt des Pinsels. Ausführliche Informationen zu dieser Eigenschaft finden Sie unter der [Pinsel Transformation Overview](~/docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TransformProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TransformProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Brush.TransformProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Brush.Transform" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

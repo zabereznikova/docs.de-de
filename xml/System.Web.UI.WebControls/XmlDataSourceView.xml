@@ -1,0 +1,94 @@
+<Type Name="XmlDataSourceView" FullName="System.Web.UI.WebControls.XmlDataSourceView">
+  <TypeSignature Language="C#" Value="public sealed class XmlDataSourceView : System.Web.UI.DataSourceView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlDataSourceView extends System.Web.UI.DataSourceView" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.XmlDataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataSourceView</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine tabellarische Datenquellensicht auf XML-Daten für ein <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.XmlDataSource> Steuerelement kann die zugrunde liegenden Daten in tabellarische und hierarchischen Format für Webserversteuerelemente, die an diese binden dargestellt. Steuert, wie z. B. <xref:System.Web.UI.WebControls.GridView> oder <xref:System.Web.UI.WebControls.DropDownList> verwenden die <xref:System.Web.UI.WebControls.XmlDataSource> zum Binden an XML-Daten und stellt sie in der Listen- oder Tabellenform, while, abgeleitet sind, die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse, z. B. <xref:System.Web.UI.WebControls.TreeView>, binden an XML-Daten und stellt sie in hierarchischer Form .  
+  
+ Die <xref:System.Web.UI.WebControls.XmlDataSource> einzelnen Ansichtstypen über verschiedene Codepfade intern erstellt. Wenn die <xref:System.Web.UI.IDataSource.GetView%2A> Methode wird aufgerufen, auf die <xref:System.Web.UI.WebControls.XmlDataSource>, wird ein <xref:System.Web.UI.WebControls.XmlDataSourceView> wird erstellt, indem die <xref:System.Web.UI.WebControls.XmlDataSource>. Wenn die <xref:System.Web.UI.WebControls.XmlDataSource.GetHierarchicalView%2A> -Methode aufgerufen wird, eine <xref:System.Web.UI.WebControls.XmlHierarchicalDataSourceView> wird erstellt. Die <xref:System.Web.UI.WebControls.XmlDataSourceView> Klasse dient für Webserversteuerelemente, die davon Herleiten <xref:System.Web.UI.WebControls.DataBoundControl> und binden Sie Listen und Tabellendaten, während die <xref:System.Web.UI.WebControls.XmlHierarchicalDataSourceView> für Webserversteuerelemente, die Ableitung erfolgt <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> und eine Bindung mit hierarchischen Daten. Alle datengebundenen Steuerelementmethoden intern rufen die `Select` Methode auf, unabhängig davon, welche Datenquellensicht-Objekt zurückgegeben wird.  
+  
+ Wie alle <xref:System.Web.UI.DataSourceView> Hilfsobjekte, die <xref:System.Web.UI.WebControls.XmlDataSourceView> definiert die Vorgänge, die die Datenquelle mit den zugrunde liegenden Daten ausführen können. Da die <xref:System.Web.UI.WebControls.XmlDataSourceView> -Klasse nur überschreibt die <xref:System.Web.UI.HierarchicalDataSourceView.Select%2A> -Methode, die zugehörigen <xref:System.Web.UI.WebControls.XmlDataSource> Steuerelement unterstützt nicht aktualisieren, einfügen oder delete-Operationen. Da die <xref:System.Web.UI.WebControls.XmlDataSourceView> Klasse ist versiegelt, können nicht erweitert die <xref:System.Web.UI.WebControls.XmlDataSourceView> Klasse, um diese Funktionalität hinzufügen, aber Sie können ein Datenquellen-Steuerelement aus ableiten <xref:System.Web.UI.WebControls.XmlDataSource> und eine Ansicht aus <xref:System.Web.UI.DataSourceView> Wenn Sie zusätzliche Funktionalität benötigen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDataSourceView (System.Web.UI.WebControls.XmlDataSource owner, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.XmlDataSource owner, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.XmlDataSourceView.#ctor(System.Web.UI.WebControls.XmlDataSource,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.WebControls.XmlDataSource" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Das <see cref="T:System.Web.UI.WebControls.XmlDataSource" />, das <see cref="T:System.Web.UI.WebControls.XmlDataSourceView" /> zugeordnet ist.</param>
+        <param name="name">Der Name der Sicht.</param>
+        <summary>Initialisiert eine neue benannte Instanz von der <see cref="T:System.Web.UI.WebControls.XmlDataSourceView" /> -Klasse und ordnet die angegebene <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> mit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteSelect">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerable ExecuteSelect (System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Collections.IEnumerable ExecuteSelect(class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.XmlDataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable Select (System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerable Select(class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.XmlDataSourceView.Select(System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Ein <see cref="T:System.Web.UI.DataSourceSelectArguments" /> -Objekt, das verwendet wird, um Vorgänge für die Daten jenseits der grundlegenden Datenabruf anzufordern.</param>
+        <summary>Ruft eine Liste von Datenzeilen aus der zugrunde liegenden XML ab.</summary>
+        <returns>Eine <see cref="T:System.Collections.IEnumerable" /> Auflistung von Datenelementen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

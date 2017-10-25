@@ -1,0 +1,144 @@
+<Type Name="OutputCache" FullName="System.Web.Caching.OutputCache">
+  <TypeSignature Language="C#" Value="public static class OutputCache" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit OutputCache extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.OutputCache" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet programmgesteuerten Zugriff auf den Ausgabecacheanbieter, die in der Konfigurationsdatei für eine Website angegeben werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwischenspeichern der Ausgabe werden die generierte Ausgabe von Seiten, Steuerelemente und HTTP-Antworten im Arbeitsspeicher gespeichert. Ausgabezwischenspeicherung ermöglicht es Ihnen, verschiedene Versionen von Inhalt, je nach der Abfragezeichenfolge und Formular-Post-Parameter auf eine Seite, Browsertyp oder die Sprache des Benutzers zwischengespeichert. Sie können ASP.NET um einen Ausgabecache-Eintrag für einen bestimmten Zeitraum zwischenspeichern konfigurieren. Sie können auch konfigurieren, dass ASP.NET zum Entfernen eines Cacheeintrags automatisch basierend auf ein externes Ereignis z. B. Änderungen in der Datenbank, der der Cache abhängt.  
+  
+ Die <xref:System.Web.Caching.OutputCache> -Klasse ermöglicht es Ihnen, zum Zwischenspeichern der Ausgabe zu erweitern. Beispielsweise können Sie eine oder mehrere benutzerdefinierte Ausgabecacheanbieter konfigurieren, die auf andere Speichergeräte, z. B. lokale Datenträger oder Remotedatenträger, Datenbanken, Cloud-Speicher und verteilter Cache Engines abzielen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DefaultProviderName">
+      <MemberSignature Language="C#" Value="public static string DefaultProviderName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string DefaultProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.OutputCache.DefaultProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des standardmäßigen Anbieters an, die so konfiguriert ist, für den Ausgabecache ab.</summary>
+        <value>Der Name des standardmäßigen Anbieters an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig werden alle HTTP-Antworten, gerenderten Seiten und Steuerelemente verwenden `AspNetInternalProvider`, die in-Memory-Ausgabecacheanbieter. Um einen anderen Anbieter zu verwenden, legen die `defaultProvider` -Attribut auf den Namen des anderen Anbieters.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public static object Deserialize (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Deserialize(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.OutputCache.Deserialize(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Die zu deserialisierenden Daten.</param>
+        <summary>Deserialisiert ein binäres Objekt in Ausgabecachedaten.</summary>
+        <returns>Ein Objekt, das die deserialisierten Daten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird vom Ausgabecacheanbieter verwendet, in dem unter teilweiser Vertrauenswürdigkeit ausgeführt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das deserialisierte Objekt, das von der Methode zurückgegeben wird, ist kein gültige Ausgabecache-Typ.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public static System.Web.Caching.OutputCacheProviderCollection Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.Caching.OutputCacheProviderCollection Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.OutputCache.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.OutputCacheProviderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Ausgabecache-Anbieter, die in der Konfigurationsdatei für eine Website angegeben werden.</summary>
+        <value>Die Auflistung der konfigurierten Anbieter.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konfigurieren Sie einen oder mehrere benutzerdefinierte Ausgabecache-Anbieter, die auf andere Speichergeräte, z. B. lokale Datenträger oder Remotedatenträger, Datenbanken, Cloud-Speicher und verteilter Cache Engines abzielen. Um benutzerdefinierte Ausgabecacheanbieter konfigurieren Sie einen Anbieter hinzufügen, auf die Auflistung, die durch dargestellt ist die <xref:System.Web.Caching.OutputCache.Providers%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public static void Serialize (System.IO.Stream stream, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Serialize(class System.IO.Stream stream, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.OutputCache.Serialize(System.IO.Stream,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Das Objekt, das die serialisierten Binärdaten enthalten.</param>
+        <param name="data">Der Ausgabecache-Daten zu serialisieren.</param>
+        <summary>Serialisiert Ausgabecachedaten in Binärdaten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird vom Ausgabecacheanbieter verwendet, in dem unter teilweiser Vertrauenswürdigkeit ausgeführt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="data" />ist keiner der angegebenen Ausgabecache-Typen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" /> oder <paramref name="stream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

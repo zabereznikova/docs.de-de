@@ -1,0 +1,47 @@
+<Type Name="DetailsViewUpdatedEventHandler" FullName="System.Web.UI.WebControls.DetailsViewUpdatedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DetailsViewUpdatedEventHandler(object sender, DetailsViewUpdatedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DetailsViewUpdatedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewUpdatedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.DetailsViewUpdatedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.DetailsViewUpdatedEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode, verarbeitet die <see cref="E:System.Web.UI.WebControls.DetailsView.ItemUpdated" /> -Ereignis für ein <see cref="T:System.Web.UI.WebControls.DetailsView" /> Steuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement löst die <xref:System.Web.UI.WebControls.DetailsView.ItemUpdated> Ereignis aus, wenn eine Schaltfläche "Aktualisieren" (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Update" festgelegt) innerhalb des Steuerelements geklickt wird, aber nachdem die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement aktualisiert den Datensatz. Dadurch können Sie einen Ereignishandler bereitstellen, der eine benutzerdefinierte Routine ausführt, z. B. Überprüfen der Ergebnisse einer Update-Vorgang aus, wenn dieses Ereignis tritt auf.  
+  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.DetailsViewUpdatedEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie programmgesteuert hinzufügen eine <xref:System.Web.UI.WebControls.DetailsViewUpdatedEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.DetailsView.ItemUpdated> -Ereignis für ein <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ [!code-aspx-csharp[DetailsViewUpdatedEventHandlerDynamic#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewUpdatedEventHandlerDynamic/CS/detailsviewupdatedeventhandlerdynamiccs.aspx#1)]
+ [!code-aspx-vb[DetailsViewUpdatedEventHandlerDynamic#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewUpdatedEventHandlerDynamic/VB/detailsviewupdatedeventhandlerdynamicvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie deklarativ hinzufügen, eine <xref:System.Web.UI.WebControls.DetailsViewUpdatedEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.DetailsView.ItemUpdated> -Ereignis für eine <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ [!code-aspx-csharp[DetailsViewUpdatedEventHandlerDeclarative#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewUpdatedEventHandlerDeclarative/CS/detailsviewupdatedeventhandlerdeclarativecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewUpdatedEventHandlerDeclarative#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewUpdatedEventHandlerDeclarative/VB/detailsviewupdatedeventhandlerdeclarativevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

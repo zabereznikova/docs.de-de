@@ -1,0 +1,439 @@
+<Type Name="ToolStripDropDownButton" FullName="System.Windows.Forms.ToolStripDropDownButton">
+  <TypeSignature Language="C#" Value="public class ToolStripDropDownButton : System.Windows.Forms.ToolStripDropDownItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolStripDropDownButton extends System.Windows.Forms.ToolStripDropDownItem" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripDropDownButton" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ToolStripDropDownItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Forms.Design.ToolStripItemDesignerAvailability(System.Windows.Forms.Design.ToolStripItemDesignerAvailability.ToolStrip | System.Windows.Forms.Design.ToolStripItemDesignerAvailability.StatusStrip)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement dar, dass beim Klicken, zeigt eine zugeordnete <see cref="T:System.Windows.Forms.ToolStripDropDown" /> in dem der Benutzer ein einzelnes Element auswählen kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolStripDropDownButton>sieht wie <xref:System.Windows.Forms.ToolStripButton>, aber es zeigt einen Dropdown-Bereich, wenn der Benutzer darauf klickt. Ein- oder Ausblenden der Dropdown-Pfeil durch Festlegen der <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> Eigenschaft. <xref:System.Windows.Forms.ToolStripDropDownButton>Hosts eine <xref:System.Windows.Forms.ToolStripOverflowButton> , die Elemente angezeigt, die "Überlauf", die <xref:System.Windows.Forms.ToolStrip>.  
+  
+ Verwenden der <xref:System.Windows.Forms.ToolStripDropDownButton> vertraut Dropdown-Steuerelemente wie z. B. Farbwähler aktivieren. Legen Sie die <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> Eigenschaft `true` um besser zu verdeutlichen, dass weitere Optionen in der Dropdownliste verfügbar sind.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt drei <xref:System.Windows.Forms.ToolStripButton> steuert, wann die <xref:System.Windows.Forms.ToolStripDropDownButton> geklickt wird. Die Schaltflächen ändern die Vordergrundfarbe des Formulars.  
+  
+ [!code-cpp[System.Windows.Forms.ToolStrip1#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip1/CPP/form1.cpp#5)]
+ [!code-csharp[System.Windows.Forms.ToolStrip1#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip1/CS/form1.cs#5)]
+ [!code-vb[System.Windows.Forms.ToolStrip1#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip1/VB/form1.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripDropDownButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownButton.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolStripDropDownButton" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.ToolStripDropDownButton> Steuerelement.  
+  
+ [!code-cpp[System.Windows.Forms.ToolStrip1#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip1/CPP/form1.cpp#5)]
+ [!code-csharp[System.Windows.Forms.ToolStrip1#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip1/CS/form1.cs#5)]
+ [!code-vb[System.Windows.Forms.ToolStrip1#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip1/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripDropDownButton (System.Drawing.Image image);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Image image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownButton.#ctor(System.Drawing.Image)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="image">Ein <see cref="T:System.Drawing.Image" /> Anzeige der <see cref="T:System.Windows.Forms.ToolStripDropDownButton" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ToolStripDropDownButton" /> -Klasse, die das angegebene Bild anzeigt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripDropDownButton (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownButton.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der auf dem <see cref="T:System.Windows.Forms.ToolStripDropDownButton" /> anzuzeigende Text.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ToolStripDropDownButton" /> -Klasse, die den angegebenen Text anzeigt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripDropDownButton (string text, System.Drawing.Image image);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, class System.Drawing.Image image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownButton.#ctor(System.String,System.Drawing.Image)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der auf dem <see cref="T:System.Windows.Forms.ToolStripDropDownButton" /> anzuzeigende Text.</param>
+        <param name="image">Ein <see cref="T:System.Drawing.Image" /> Anzeige der <see cref="T:System.Windows.Forms.ToolStripDropDownButton" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ToolStripDropDownButton" /> Klasse, die dem angegebenen Text und Bild anzeigt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripDropDownButton (string text, System.Drawing.Image image, EventHandler onClick);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, class System.Drawing.Image image, class System.EventHandler onClick) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownButton.#ctor(System.String,System.Drawing.Image,System.EventHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="onClick" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der auf dem <see cref="T:System.Windows.Forms.ToolStripDropDownButton" /> anzuzeigende Text.</param>
+        <param name="image">Ein <see cref="T:System.Drawing.Image" /> Anzeige der <see cref="T:System.Windows.Forms.ToolStripDropDownButton" />.</param>
+        <param name="onClick">Der Ereignishandler für das <see cref="E:System.Windows.Forms.Control.Click" />-Ereignis.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ToolStripDropDownButton" /> Klasse, die dem angegebenen Text und Bild anzeigt und löst die <see langword="Click" /> Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripDropDownButton (string text, System.Drawing.Image image, params System.Windows.Forms.ToolStripItem[] dropDownItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, class System.Drawing.Image image, class System.Windows.Forms.ToolStripItem[] dropDownItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownButton.#ctor(System.String,System.Drawing.Image,System.Windows.Forms.ToolStripItem[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="dropDownItems" Type="System.Windows.Forms.ToolStripItem[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="text">Der auf dem <see cref="T:System.Windows.Forms.ToolStripDropDownButton" /> anzuzeigende Text.</param>
+        <param name="image">Ein <see cref="T:System.Drawing.Image" /> Anzeige der <see cref="T:System.Windows.Forms.ToolStripDropDownButton" />.</param>
+        <param name="dropDownItems">Ein Array vom Typ <see cref="T:System.Windows.Forms.ToolStripItem" /> mit den Elementen von der <see cref="T:System.Windows.Forms.ToolStripDropDownButton" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolStripDropDownButton" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripDropDownButton (string text, System.Drawing.Image image, EventHandler onClick, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, class System.Drawing.Image image, class System.EventHandler onClick, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownButton.#ctor(System.String,System.Drawing.Image,System.EventHandler,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="onClick" Type="System.EventHandler" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der auf dem <see cref="T:System.Windows.Forms.ToolStripDropDownButton" /> anzuzeigende Text.</param>
+        <param name="image">Ein <see cref="T:System.Drawing.Image" /> Anzeige der <see cref="T:System.Windows.Forms.ToolStripDropDownButton" />.</param>
+        <param name="onClick">Der Ereignishandler für das <see cref="E:System.Windows.Forms.Control.Click" />-Ereignis.</param>
+        <param name="name">Der Name des <see cref="T:System.Windows.Forms.ToolStripDropDownButton" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ToolStripDropDownButton" /> Klasse, die den angegebenen Namen verfügt, zeigt an, dem angegebenen Text und Bild und löst die <see langword="Click" /> Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoToolTip">
+      <MemberSignature Language="C#" Value="public bool AutoToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripDropDownButton.AutoToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see langword="Text" />-Eigenschaft oder die <see cref="P:System.Windows.Forms.ToolStripItem.ToolTipText" />-Eigenschaft für die <see cref="T:System.Windows.Forms.ToolStripDropDownButton" />-QuickInfo verwendet wird, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="P:System.Windows.Forms.Control.Text" />-Eigenschaft für die QuickInfo verwendet werden soll, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultDropDown">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ToolStripDropDown CreateDefaultDropDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.ToolStripDropDown CreateDefaultDropDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownButton.CreateDefaultDropDown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripDropDown</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein generisches <see cref="T:System.Windows.Forms.ToolStripDropDown" />, für das Ereignisse definiert werden können.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.ToolStripDropDown" /> für das Ereignisse definiert werden können.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultAutoToolTip">
+      <MemberSignature Language="C#" Value="protected override bool DefaultAutoToolTip { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DefaultAutoToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripDropDownButton.DefaultAutoToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der als Standard definierte <see cref="T:System.Windows.Forms.ToolTip" /> angezeigt wird.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ToolStripItem.MouseDown" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolStripDropDownButton.OnMouseDown%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolStripDropDownButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolStripDropDownButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeave (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeave(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownButton.OnMouseLeave(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ToolStripItem.MouseLeave" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolStripDropDownButton.OnMouseLeave%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolStripDropDownButton.OnMouseLeave(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolStripDropDownButton.OnMouseLeave(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ToolStripItem.MouseUp" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownButton.OnPaint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.PaintEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ToolStripItem.Paint" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolStripDropDownButton.OnPaint%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolStripDropDownButton.OnPaint(System.Windows.Forms.PaintEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolStripDropDownButton.OnPaint(System.Windows.Forms.PaintEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessMnemonic">
+      <MemberSignature Language="C#" Value="protected override bool ProcessMnemonic (char charCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool ProcessMnemonic(char charCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownButton.ProcessMnemonic(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="charCode" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="charCode">Das zu verarbeitende Zeichen.</param>
+        <summary>Ruft einen Wert, der angibt, ob der Dropdown Liste von der <see cref="T:System.Windows.Forms.ToolStripDropDownButton" /> Elemente enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn die Dropdown Liste Elemente enthält; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für alle Fenster für erbende Klassen zum Aufrufen dieser Methode. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> Wert <see cref="T:System.Security.Permissions.UIPermissionWindow" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDropDownArrow">
+      <MemberSignature Language="C#" Value="public bool ShowDropDownArrow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowDropDownArrow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Pfeil angezeigt wird, auf die <see cref="T:System.Windows.Forms.ToolStripDropDownButton" />, was bedeutet, dass die weitere Optionen in einer Dropdownliste verfügbar sind.</summary>
+        <value>
+          <see langword="true" />So zeigen Sie auf einen Pfeil an die <see cref="T:System.Windows.Forms.ToolStripDropDownButton" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und initialisiert ein <xref:System.Windows.Forms.ToolStripDropDownButton> Steuerelement. Die <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A>-Eigenschaft ist auf `false` festgelegt.  
+  
+ [!code-cpp[System.Windows.Forms.ToolStrip1#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip1/CPP/form1.cpp#5)]
+ [!code-csharp[System.Windows.Forms.ToolStrip1#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip1/CS/form1.cs#5)]
+ [!code-vb[System.Windows.Forms.ToolStrip1#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip1/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

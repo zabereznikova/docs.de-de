@@ -1,0 +1,43 @@
+<Type Name="EventPrivateKey" FullName="System.Windows.EventPrivateKey">
+  <TypeSignature Language="C#" Value="public class EventPrivateKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventPrivateKey extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.EventPrivateKey" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine eindeutige Identifikation für Ereignisse, deren Handler in einer internen Hashtabelle gespeichert sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Dieser Typ vorhanden ist, insbesondere, damit Compiler, Buildregeln oder andere Mechanismen zum erzwingen können überprüfen, ob alle Ereignisschlüssel dieses Typs ausschließlich von privaten statischen Felder der Klasse Ereignis deklarieren erstellt werden. Fehler bei den Ereignisschlüssel als privat kennzeichnen löst Ereignis mögliches Spoofing aus.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventPrivateKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventPrivateKey.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.EventPrivateKey" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

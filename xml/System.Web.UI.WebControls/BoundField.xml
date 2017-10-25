@@ -1,0 +1,974 @@
+<Type Name="BoundField" FullName="System.Web.UI.WebControls.BoundField">
+  <TypeSignature Language="C#" Value="public class BoundField : System.Web.UI.WebControls.DataControlField" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BoundField extends System.Web.UI.WebControls.DataControlField" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.BoundField" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.DataControlField</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Feld dar, das als Text in einem datengebundenen Steuerelement angezeigt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BoundField> Klasse wird verwendet, indem Sie datengebundene Steuerelemente (z. B. <xref:System.Web.UI.WebControls.GridView> und <xref:System.Web.UI.WebControls.DetailsView>) den Wert eines Felds als Text anzuzeigen. Die <xref:System.Web.UI.WebControls.BoundField> Objekt wird anders angezeigt, je nach dem datengebundenen Steuerelement in der er verwendet wird. Z. B. die <xref:System.Web.UI.WebControls.GridView> -Steuerelement zeigt eine <xref:System.Web.UI.WebControls.BoundField> Objekt als eine Spalte während der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement als eine Zeile angezeigt.  
+  
+ Sie das Feld anzuzeigenden an eine <xref:System.Web.UI.WebControls.BoundField> Objekt, das Festlegen der <xref:System.Web.UI.WebControls.BoundField.DataField%2A> Eigenschaft, um den Namen des Felds. Der Wert des Felds kann bleiben HTML-codierte, bevor er, indem angezeigt wird die <xref:System.Web.UI.WebControls.BoundField.HtmlEncode%2A> Eigenschaft `true`. Sie können eine benutzerdefinierte Formatierungszeichenfolge auf den Wert des Felds anwenden, durch Festlegen der <xref:System.Web.UI.WebControls.BoundField.DataFormatString%2A> Eigenschaft. Wenn die <xref:System.Web.UI.WebControls.BoundField.HtmlEncode%2A> Eigenschaft ist `true`, wird die codierte Zeichenfolge-Wert des Felds in der benutzerdefinierten Formatzeichenfolge verwendet. Standardmäßig wird die Formatierungszeichenfolge auf Feldwerte angewendet, nur, wenn das datengebundene Steuerelement im schreibgeschützten Modus befindet. Legen Sie zum Anwenden von der Formatierungszeichenfolge mit Werten angezeigt, während das datengebundene Steuerelement im Bearbeitungsmodus befindet, die <xref:System.Web.UI.WebControls.BoundField.ApplyFormatInEditMode%2A> Eigenschaft `true`. Wenn der Wert eines Felds null ist, können Sie eine benutzerdefinierte Beschriftung anzeigen, durch Festlegen der <xref:System.Web.UI.WebControls.BoundField.NullDisplayText%2A> Eigenschaft. Die <xref:System.Web.UI.WebControls.BoundField> Objekt kann auch automatisch konvertieren die leere Zeichenfolge ("")-Feldwerte mit null-Werten durch Festlegen der <xref:System.Web.UI.WebControls.BoundField.ConvertEmptyStringToNull%2A> Eigenschaft, um `true`.  
+  
+ Können Sie Ausblenden einer <xref:System.Web.UI.WebControls.BoundField> Objekt in einem datengebundenen Steuerelement durch Festlegen der <xref:System.Web.UI.WebControls.DataControlField.Visible%2A> Eigenschaft `false`. Um zu verhindern, dass den Wert eines Felds im Bearbeitungsmodus geändert wird, legen Sie die <xref:System.Web.UI.WebControls.BoundField.ReadOnly%2A> Eigenschaft `true`. In datengebundenen Steuerelementen, die das Einfügen von Datensätzen unterstützen (z. B. die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement), können Sie Ausblenden einer <xref:System.Web.UI.WebControls.BoundField> Objekt durch Festlegen der <xref:System.Web.UI.WebControls.DataControlField.InsertVisible%2A> Eigenschaft, um `false`. Dies geschieht häufig, wenn Sie ein automatisch generiertes Schlüsselfeld im Einfügemodus ausblenden möchten.  
+  
+ Sie können anpassen, die Abschnitte für Kopf- und Fußzeilen, der eine <xref:System.Web.UI.WebControls.BoundField> Objekt. Um eine Beschriftung in der Kopf- oder Fußzeile Abschnitte anzuzeigen, legen Sie die <xref:System.Web.UI.WebControls.DataControlField.HeaderText%2A> oder <xref:System.Web.UI.WebControls.DataControlField.FooterText%2A> Eigenschaften bzw.. Sie können ein Bild anstelle von Text in der Kopfzeile anzeigen, durch Festlegen der <xref:System.Web.UI.WebControls.DataControlField.HeaderImageUrl%2A> Eigenschaft. Der Headerabschnitt kann ausgeblendet werden, der <xref:System.Web.UI.WebControls.BoundField> Objekt durch Festlegen der <xref:System.Web.UI.WebControls.DataControlField.ShowHeader%2A> Eigenschaft `false`.  
+  
+> [!NOTE]
+>  Einige datengebundene Steuerelemente (z. B. die <xref:System.Web.UI.WebControls.GridView> Steuerelement) können ein- oder ausblenden nur den gesamten Kopfzeilenbereich des Steuerelements. Diese datengebundenen Steuerelemente unterstützen nicht die <xref:System.Web.UI.WebControls.DataControlField.ShowHeader%2A> -Eigenschaft für ein einzelnes gebundenen Feld. Für das Anzeigen oder Ausblenden der gesamte Headerabschnitt eines datengebundenen Steuerelements (falls verfügbar), verwenden Sie das Steuerelement `ShowHeader` Eigenschaft.  
+  
+ Die Darstellung der können auch Anpassen der <xref:System.Web.UI.WebControls.BoundField> Objekt (Schriftfarbe, Hintergrundfarbe und So weiter), indem Sie die Stileigenschaften für die verschiedenen Teile des Felds festlegen. Die folgende Tabelle enthält die verschiedenen Stileigenschaften.  
+  
+|Style-Eigenschaft|Beschreibung|  
+|--------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.DataControlField.ControlStyle%2A>|Die Stileigenschaften für die untergeordneten Webserversteuerelemente von der <xref:System.Web.UI.WebControls.BoundField> Objekt.|  
+|<xref:System.Web.UI.WebControls.DataControlField.FooterStyle%2A>|Die Stileigenschaften für den Fußzeilenbereich der <xref:System.Web.UI.WebControls.BoundField> Objekt.|  
+|<xref:System.Web.UI.WebControls.DataControlField.HeaderStyle%2A>|Die Stileigenschaften für den Headerabschnitt, der die <xref:System.Web.UI.WebControls.BoundField> Objekt.|  
+|<xref:System.Web.UI.WebControls.DataControlField.ItemStyle%2A>|Die stileinstellungen für die Datenelemente in der <xref:System.Web.UI.WebControls.BoundField> Objekt.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.Web.UI.WebControls.BoundField> Objekt Anzeigen der Werte eines Felds in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[BoundField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BoundField/CS/boundfieldcs.aspx#1)]
+ [!code-aspx-vb[BoundField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BoundField/VB/boundfieldvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BoundField ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundField.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.BoundField" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.BoundField> Klasse. Dieser Konstruktor wird normalerweise verwendet, beim Hinzufügen von Feldern zu einem dynamisch erstellten datengebundenen Steuerelement.  
+  
+ Dynamisch Hinzufügen einer <xref:System.Web.UI.WebControls.BoundField> -Objekt in einem datengebundenen Steuerelement, erstellen Sie ein neues <xref:System.Web.UI.WebControls.BoundField> Objekt, dessen Eigenschaften festlegen und dann zur feldauflistung für das datengebundene Steuerelement hinzufügen. Z. B. bei Verwendung der <xref:System.Web.UI.WebControls.GridView> steuern, fügen Sie der <xref:System.Web.UI.WebControls.BoundField> -Objekt an die <xref:System.Web.UI.WebControls.GridView.Columns%2A> Auflistung.  
+  
+> [!NOTE]
+>  Obwohl Sie Felder zu einem datengebundenen Steuerelement dynamisch hinzufügen können, wird dringend empfohlen, dass Felder statisch deklariert und dann angezeigt oder ausgeblendet werden, je nach Bedarf. Deklarieren alle Ihre Felder statisch reduziert die Größe des Ansichtszustands für das übergeordnete datengebundene Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mithilfe des Konstruktors dynamisch Hinzufügen einer <xref:System.Web.UI.WebControls.BoundField> -Objekt an eine <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[BoundFieldCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BoundFieldCtor/CS/boundfieldctorcs.aspx#1)]
+ [!code-aspx-vb[BoundFieldCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BoundFieldCtor/VB/boundfieldctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyFormatInEditMode">
+      <MemberSignature Language="C#" Value="public virtual bool ApplyFormatInEditMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ApplyFormatInEditMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BoundField.ApplyFormatInEditMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Formatierungszeichenfolge vom angegeben die <see cref="P:System.Web.UI.WebControls.BoundField.DataFormatString" /> Eigenschaft auf Feldwerte angewendet wird, wenn das datengebundene Steuerelement, die enthält die <see cref="T:System.Web.UI.WebControls.BoundField" /> Objekt befindet sich im Bearbeitungsmodus befindet.</summary>
+        <value>
+          <see langword="true" />um die Formatierungszeichenfolge auf Feldwerte im Bearbeitungsmodus anzuwenden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datengebundene Steuerelemente (z. B. <xref:System.Web.UI.WebControls.DetailsView>, <xref:System.Web.UI.WebControls.FormView>, und <xref:System.Web.UI.WebControls.GridView>) verfügen über unterschiedliche Anzeigemodi, mit denen der Benutzer zum Lesen, bearbeiten oder Einfügen von Datensätzen. Die Formatierungszeichenfolge angegeben wird standardmäßig von der <xref:System.Web.UI.WebControls.BoundField.DataFormatString%2A> Eigenschaft auf Feldwerte angewendet wird, nur, wenn das datengebundene Steuerelement im schreibgeschützten Modus befindet. Legen Sie zum Anwenden von der Formatierungszeichenfolge mit Werten angezeigt, während das datengebundene Steuerelement im Bearbeitungsmodus befindet, die <xref:System.Web.UI.WebControls.BoundField.ApplyFormatInEditMode%2A> Eigenschaft `true`.  
+  
+> [!NOTE]
+>  Ein <xref:System.Web.UI.WebControls.BoundField> Objekt automatisch entfernt nicht die Formatierung an, wenn das Feld in der Datenquelle aktualisiert wird. Wenn Sie nicht, die Formatierung im Rahmen des gespeicherten Werts möchten, müssen Sie die Formatierung programmgesteuert zu entfernen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BoundField.ApplyFormatInEditMode%2A> string-Eigenschaft, um die Formatierung angewendet für Feldwerte beim eine <xref:System.Web.UI.WebControls.GridView> -Steuerelement befindet sich im Bearbeitungsmodus befindet. Die Formatierung wird dann programmgesteuert entfernt, bevor der Wert in der Datenquelle aktualisiert wird.  
+  
+ [!code-aspx-csharp[BoundFieldApplyFormatInEditMode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/boundfieldapplyformatineditmode/CS/boundfieldapplyformatineditmodecs.aspx#1)]
+ [!code-aspx-vb[BoundFieldApplyFormatInEditMode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/boundfieldapplyformatineditmode/VB/boundfieldapplyformatineditmodevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertEmptyStringToNull">
+      <MemberSignature Language="C#" Value="public virtual bool ConvertEmptyStringToNull { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ConvertEmptyStringToNull" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BoundField.ConvertEmptyStringToNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob leere Zeichenfolgenwerte ("") werden automatisch in null-Werte konvertiert, wenn das Feld "Daten" in der Datenquelle aktualisiert wird.</summary>
+        <value>
+          <see langword="true" />Um leere Zeichenfolgenwerte automatisch in null-Werte konvertiert werden. andernfalls die <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einigen Fällen kann der Benutzer eine leere Zeichenfolge für einen Feldwert beim Aktualisieren oder Einfügen von Datensätzen eingeben. Verwenden der <xref:System.Web.UI.WebControls.BoundField.ConvertEmptyStringToNull%2A> Eigenschaft, um anzugeben, ob es sich bei ein leeren Zeichenfolgenwert automatisch in null konvertiert wird, wenn das Feld "Daten" in der Datenquelle aktualisiert wird.  
+  
+> [!NOTE]
+>  Wird standardmäßig ein <xref:System.Web.UI.WebControls.BoundField> Objekt zeigt null-Werte als leere Zeichenfolgen. Wenn einen anderen Wert anzeigen zu können, legen Sie die <xref:System.Web.UI.WebControls.BoundField.NullDisplayText%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BoundField.ConvertEmptyStringToNull%2A> Eigenschaft angeben, dass eine leere Zeichenfolge ("") Wert des Felds sollten automatisch in null konvertiert werden.  
+  
+ [!code-aspx-csharp[BoundFieldConvertEmptyStringToNull#1](~/samples/snippets/csharp/VS_Snippets_WebNet/boundfieldconvertemptystringtonull/CS/boundfieldconvertemptystingtonullcs.aspx#1)]
+ [!code-aspx-vb[BoundFieldConvertEmptyStringToNull#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/boundfieldconvertemptystringtonull/VB/boundfieldconvertemptystingtonullvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyProperties">
+      <MemberSignature Language="C#" Value="protected override void CopyProperties (System.Web.UI.WebControls.DataControlField newField);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CopyProperties(class System.Web.UI.WebControls.DataControlField newField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundField.CopyProperties(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newField" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="newField">Die <see cref="T:System.Web.UI.WebControls.DataControlField" /> So kopieren Sie die Eigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.BoundField" /> an.</param>
+        <summary>Kopiert die Eigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.BoundField" /> Objekt mit dem angegebenen <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BoundField.CopyProperties%2A> Methode ist eine Hilfsmethode, die von der <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A?displayProperty=nameWithType> Methode, um die Eigenschaften des aktuellen kopieren <xref:System.Web.UI.WebControls.BoundField> -Objekt an die <xref:System.Web.UI.WebControls.DataControlField> Objekt von der Methode erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateField">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.DataControlField CreateField ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.DataControlField CreateField() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundField.CreateField" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlField</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein leeres <see cref="T:System.Web.UI.WebControls.BoundField" />-Objekt.</summary>
+        <returns>Ein leerer <see cref="T:System.Web.UI.WebControls.BoundField" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BoundField.CreateField%2A> Methode ist eine Hilfsmethode, die von der <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A?displayProperty=nameWithType> Methode zum Erstellen eines leeren <xref:System.Web.UI.WebControls.BoundField> Objekt so kopieren Sie die Eigenschaften des aktuellen <xref:System.Web.UI.WebControls.BoundField> -Objekt hinzu.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataField">
+      <MemberSignature Language="C#" Value="public virtual string DataField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BoundField.DataField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Datenfelds zum Binden an die <see cref="T:System.Web.UI.WebControls.BoundField" /> Objekt.</summary>
+        <value>Der Name des Datenfelds zum Binden an die <see cref="T:System.Web.UI.WebControls.BoundField" />. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BoundField.DataField%2A> -Eigenschaft an den Namen des Datenfelds zum Binden an die <xref:System.Web.UI.WebControls.BoundField> Objekt. Werden die Werte des angegebenen Felds angezeigt, der <xref:System.Web.UI.WebControls.BoundField> Objekt als Text. Sie können optional den angezeigten Text formatieren, durch Festlegen der <xref:System.Web.UI.WebControls.BoundField.DataFormatString%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn der Wert eines Felds null ist, ist eine leere Zeichenfolge ("") wird standardmäßig für den Wert angezeigt. Legen Sie zum Angeben einer alternativen Beschriftung der <xref:System.Web.UI.WebControls.BoundField.NullDisplayText%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BoundField.DataField%2A> Eigenschaft an, welches Feld anzuzeigenden eine <xref:System.Web.UI.WebControls.BoundField> Field-Spalte einer <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[BoundField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BoundField/CS/boundfieldcs.aspx#1)]
+ [!code-aspx-vb[BoundField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BoundField/VB/boundfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataFormatString">
+      <MemberSignature Language="C#" Value="public virtual string DataFormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataFormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BoundField.DataFormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolge, die das Anzeigeformat für den Wert des Felds angibt.</summary>
+        <value>Eine Formatierungszeichenfolge, die das Anzeigeformat für den Wert des Felds angibt. Der Standardwert ist eine leere Zeichenfolge (""), die angibt, dass keine besondere Formatierung auf den Feldwert angewendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BoundField.DataFormatString%2A> Eigenschaft, um ein benutzerdefiniertes Format für die Werte anzugeben, die in angezeigt werden die <xref:System.Web.UI.WebControls.BoundField> Objekt. Wenn die <xref:System.Web.UI.WebControls.BoundField.DataFormatString%2A> Eigenschaft nicht festgelegt ist, wird der Wert des Felds ohne besondere Formatierung angezeigt.  
+  
+> [!NOTE]
+>  In Versionen von ASP.NET 3.5 vor, müssen Sie festlegen der <xref:System.Web.UI.WebControls.BoundField.HtmlEncode%2A> Eigenschaft `false` um formatieren Felder, die nicht string-Datentypen. Andernfalls der Wert des Felds wird konvertiert in eine Zeichenfolge durch die Standardmethode für die Konvertierung vor die Formatzeichenfolge, die in gespeichert ist die <xref:System.Web.UI.WebControls.BoundField.DataFormatString%2A> -Eigenschaft angewendet wird.  
+  
+ Standardmäßig wird die Formatierungszeichenfolge auf den Feldwert angewendet, nur, wenn das datengebundene Steuerelement, die enthält die <xref:System.Web.UI.WebControls.BoundField> Objekt befindet sich im schreibgeschützten Modus. Um die Formatierungszeichenfolge auf Feldwerte im Bearbeitungsmodus anzuwenden, legen Sie die <xref:System.Web.UI.WebControls.BoundField.ApplyFormatInEditMode%2A> Eigenschaft `true`.  
+  
+ Die Formatierungszeichenfolge kann eine literale Zeichenfolge sein und in der Regel enthält einen Platzhalter für den Wert des Felds. Beispielsweise ist in der Formatzeichenfolge `Item Value: {0}`, {0} Platzhalter durch den Wert des Felds ersetzt, wenn die Zeichenfolge, in angezeigt wird der <xref:System.Web.UI.WebControls.BoundField> Objekt. Der Rest der Formatierungszeichenfolge wird als Literaltext angezeigt.  
+  
+ Wenn die Formatierungszeichenfolge keine Platzhalter enthalten, ist nur die Formatierungszeichenfolge selbst in den endgültigen Anzeigetext enthalten (der Wert des Felds aus der Datenquelle nicht enthalten ist). Wenn der Platzhalter eine 0 (null) in geschweiften Klammern, wie im vorherigen Beispiel gezeigt wird, wird der Wert des Felds durch die Standardmethode in eine Zeichenfolge umgewandelt. Sie können die 0 (null) eine Zeichenfolge anfügen, die angibt, wie der Wert des Felds formatiert werden soll. Z. B. den Platzhalter `{0:C}` für ein numerisches Feld gibt an, dass der Wert des Felds in ein Währungsformat konvertiert werden sollen.  
+  
+ Formatierung angewendet wird, mithilfe der <xref:System.String.Format%2A> Methode. Die Anzahl, die auf der linken geschweiften Klammer folgt ist Teil der Syntax, die von dieser Methode verwendet und gibt an, welche mehreren aus einer Reihe von Werten der Platzhalter verwenden soll. Da nur ein Wert des Felds in jeder Zelle vorhanden ist, kann nur die Anzahl, die auf der linken geschweiften Klammer folgt auf 0 festgelegt werden.  
+  
+ Die folgende Tabelle enthält die Standardzeichen-Format für numerische Felder. Diese Zeichen sind nicht in der Groß-/Kleinschreibung beachtet, mit Ausnahme von `X`, woraufhin Hexadezimalzeichen in die Groß-/Kleinschreibung, der angegeben wird. Sie können eine Zahl auf die meisten Formatzeichen anfügen, um anzugeben, wie viele signifikante Ziffern oder Dezimalstellen angezeigt werden soll.  
+  
+> [!NOTE]
+>  In den meisten Fällen hängt kultureinstellung des Servers Formatierung. Die Beispiele sind kultureinstellung des `en-US`.  
+  
+|Formatzeichen|Beschreibung|Beispiel|  
+|----------------------|-----------------|-------------|  
+|`C` oder `c`|Zeigt numerische Werte im Währungsformat an. Sie können die Anzahl der Dezimalstellen angeben.|Format: `{0:C}`<br /><br /> 123.456 -> $123.46<br /><br /> Format: `{0:C3}`<br /><br /> 123.456  -> $123.456|  
+|`D` oder `d`|Ganzzahlige Werte im Dezimalformat anzeigt. Sie können die Anzahl der Ziffern angeben. (Obwohl der Typ als "Decimal" bezeichnet wird, werden die Zahlen als ganze Zahlen formatiert.)|Format: `{0:D}`<br /><br /> 1234 -> 1234<br /><br /> Format: `{0:D6}`<br /><br /> 1234  -> 001234|  
+|`E` oder `e`|Numerischen Werte in wissenschaftlicher (exponentieller) Format angezeigt. Sie können die Anzahl der Dezimalstellen angeben.|Format: `{0:E}`<br /><br /> 1052.0329112756 -> 1.052033E + 003 AUSGEGEBEN<br /><br /> Format: `{0:E2}`<br /><br /> -1052.0329112756 > - 1, 05e + 003 ausgegeben|  
+|`F` oder `f`|Numerischen Werte in festgelegten Format angezeigt. Sie können die Anzahl der Dezimalstellen angeben.|Format: `{0:F}`<br /><br /> 1234.567 -> 1234.57<br /><br /> Format: `{0:F3}`<br /><br /> 1234.567 -> 1234.567|  
+|`G` oder `g`|Zeigt numerische Werte im Allgemeinen Format (möglichst kompakte Festkomma- oder wissenschaftliche Notation) an. Sie können die Anzahl der signifikanten Stellen angeben.|Format: `{0:G}`<br /><br /> -123.456 -> -123.456<br /><br /> Format: `{0:G2}`<br /><br /> -123.456 -> -120|  
+|`N` oder `n`|Zeigt die numerische Werte im Zahlenformat (einschließlich Gruppentrennzeichen und optionalem Minuszeichen). Sie können die Anzahl der Dezimalstellen angeben.|Format: `{0:N}`<br /><br /> 1234.567 -> 1,234.57<br /><br /> Format: `{0:N4}`<br /><br /> 1234.567 -> 1,234.5670|  
+|`P` oder `p`|Zeigt numerische Werte als Prozentsatz an. Sie können die Anzahl der Dezimalstellen angeben.|Format: `{0:P}`<br /><br /> 1 -> 100.00%<br /><br /> Format: `{0:P1}`<br /><br /> .5 -> 50.0%|  
+|`R` oder `r`|Zeigt <xref:System.Single>, <xref:System.Double>, oder `BigInteger` Werte im Round-Trip-Format.|Format: `{0:R}`<br /><br /> 123456789.12345678 -> 123456789.12345678|  
+|`X` oder `x`|Ganzzahlige Werte im Hexadezimalformat anzeigt. Sie können die Anzahl der Ziffern angeben.|Format: `{0:X}`<br /><br /> 255-FF ><br /><br /> Format: `{0:x4}`<br /><br /> 255-00ff >|  
+  
+ Weitere Informationen und Beispiele für die Formatierung für andere Werte für die Kultur, finden Sie unter [Standard Numeric Format Strings](~/docs/standard/base-types/standard-numeric-format-strings.md). Sie können auch benutzerdefinierte numerische Formatzeichenfolgen erstellen. Weitere Informationen finden Sie unter [Benutzerdefinierte Zahlenformatzeichenfolgen](~/docs/standard/base-types/custom-numeric-format-strings.md).  
+  
+ Die folgende Tabelle enthält Formatzeichen für <xref:System.DateTime> Felder. Bei den meisten Formatierung Spezifikationen führen in eine andere Ausgabe je nach den kultureinstellungen. Die Beispiele sind für eine <xref:System.DateTime> Wert 6/15/2009 13:45:30 Uhr mit einem kultureinstellung `en-US`.  
+  
+|Formatzeichen|Beschreibung|Beispiel|  
+|----------------------|-----------------|-------------|  
+|`d`|Kurzes Datumsmuster.|Format: `{0:d}`<br /><br /> 6/15/2009 13:45:30 UHR -> 6/15/2009|  
+|`D`|Langes Datumsmuster.|Format: `{0:D}`<br /><br /> 6/15/2009 13:45:30 Uhr -> Montag, 15. Juni 2009|  
+|`f`|Vollständiges Datums-/Zeitmuster (kurze Zeit).|Format: `{0:f}`<br /><br /> 6/15/2009 13:45:30 Uhr -> Montag, 15. Juni 2009 13:45 Uhr|  
+|`F`|Vollständiges Datums-/Zeitmuster (lange Zeit).|Format: `{0:F}`<br /><br /> 6/15/2009 13:45:30 Uhr -> Montag, 15. Juni 2009 13:45:30 Uhr|  
+|`g`|Allgemeines Datums-/Zeitmuster (kurze Zeit).|Format: `{0:g}`<br /><br /> 6/15/2009 13:45:30 UHR -> 6/15/2009 13:45 UHR|  
+|`G`|Allgemeines Datums-/Zeitmuster (lange Zeit).|Format: `{0:G}`<br /><br /> 6/15/2009 13:45:30 UHR -> 6/15/2009 13:45:30 UHR|  
+|`M` oder `m`|Monatstagmuster.|Format: `{0:M}`<br /><br /> 6/15/2009 Juni 15 13:45:30 Uhr ->|  
+|`O` oder `o`|Zurückkonvertieren von Datums-/Zeitmuster.|Format: `{0:o}`<br /><br /> 15.06.2009 13:45:30 -> 2009-06-15T13:45:30.0900000|  
+|`R` oder `r`|RFC1123-Muster (Informationen finden Sie unter <xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A?displayProperty=nameWithType>).|Format: `{0:R}`<br /><br /> 6/15/2009 1:45:30 PM -> Mon, 15 Jun 2009 20:45:30 GMT|  
+|`s`|Sortierbares Datums-/Zeitmuster.|Format: `{0:s}`<br /><br /> 6/15/2009 1:45:30 PM -> 2009-06-15T13:45:30|  
+|`t`|Kurzes Zeitmuster.|Format: `{0:t}`<br /><br /> 6/15/2009 13:45:30 UHR -> 13:45 UHR|  
+|`T`|Langes Zeitmuster.|Format: `{0:T}`<br /><br /> 6/15/2009 13:45:30 UHR -> 13:45:30 UHR|  
+|`u`|Universelles, sortierbares Datums-/Zeitmuster.|Format: `{0:u}`<br /><br /> 6/15/2009 1:45:30 PM -> 2009-06-15 20:45:30Z|  
+|`U`|Universelles Datums-/Zeitmuster (Koordinierte Weltzeit).|Format: `{0:U}`<br /><br /> 6/15/2009 13:45:30 Uhr -> Montag, 15. Juni 2009 20:45:30 Uhr|  
+|`Y` oder `y`|Jahr-Monat-Muster.|Format: `{0:Y}`<br /><br /> 6/15/2009 13:45:30 Uhr -> Juni 2009|  
+  
+ Weitere Informationen und Beispiele für die Formatierung für andere Werte für die Kultur, finden Sie unter [Standardformatbezeichner für Datum und Uhrzeit-Formatzeichenfolgen](~/docs/standard/base-types/standard-date-and-time-format-strings.md). Sie können auch die benutzerdefinierten Formatbezeichner für Datum und Uhrzeit-Formatzeichenfolgen erstellen. Weitere Informationen finden Sie unter [benutzerdefinierte Datums- und Uhrzeit-Formatzeichenfolgen](~/docs/standard/base-types/custom-date-and-time-format-strings.md).  
+  
+   
+  
+## Examples  
+ Ist ein Visual Studio Web Site-Projekt mit Quellcode zu diesem Thema steht verfügbar: [herunterladen](http://go.microsoft.com/fwlink/?LinkId=191889).  
+  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.BoundField.DataFormatString%2A> -Eigenschaft ein benutzerdefiniertes Format für die Werte eines Felds an.  
+  
+  
+  
+ Das folgende Beispiel zeigt eine Zeile der Ausgabe, die durch dieses Beispiel erzeugt wird.  
+  
+|ProductID|Name|ProductNumber|ListPrice|Schriftbreite|ModifiedDate|  
+|---------------|----------|-------------------|---------------|------------|------------------|  
+|`000680`|`HL Road Frame - Black, 58`|`#FR-R92B-58`|`$1,431.50`|`1016.040`|`3/11/2004`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractValuesFromCell">
+      <MemberSignature Language="C#" Value="public override void ExtractValuesFromCell (System.Collections.Specialized.IOrderedDictionary dictionary, System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlRowState rowState, bool includeReadOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ExtractValuesFromCell(class System.Collections.Specialized.IOrderedDictionary dictionary, class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlRowState rowState, bool includeReadOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundField.ExtractValuesFromCell(System.Collections.Specialized.IOrderedDictionary,System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlRowState,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Collections.Specialized.IOrderedDictionary" />
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+        <Parameter Name="includeReadOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">Ein <see cref="T:System.Collections.IDictionary" /> verwendet, um die Werte der angegebenen Zelle zu speichern.</param>
+        <param name="cell">Die <see cref="T:System.Web.UI.WebControls.TableCell" /> , die die abzurufenden Werte enthält.</param>
+        <param name="rowState">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowState" />-Werte.</param>
+        <param name="includeReadOnly">
+          <see langword="true" />um die Werte der schreibgeschützte Felder enthalten. andernfalls <see langword="false" />.</param>
+        <summary>Füllt den angegebenen <see cref="T:System.Collections.IDictionary" /> Objekt mit den Werten aus dem angegebenen <see cref="T:System.Web.UI.WebControls.TableCell" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BoundField.ExtractValuesFromCell%2A> Methode wird bereitgestellt, wie eine einfache Möglichkeit zum Abrufen der Werte der Felder aus dem angegebenen <xref:System.Web.UI.WebControls.TableCell> -Objekt in ein <xref:System.Web.UI.WebControls.BoundField> Objekt.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ Diese Methode keinen Rückgabewert. Stattdessen werden die Feldwerte zurückgegeben, als Verweis über die <xref:System.Collections.IDictionary?displayProperty=nameWithType> für übergebene Objekt die `dictionary` Parameter. Nach dem Aufruf der Methode durchlaufen die <xref:System.Collections.IDictionary?displayProperty=nameWithType> Objekt, das die Feldwerte zugreifen.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.TableCell> Objekt schreibgeschützten Feld-Werte enthält, müssen Sie übergeben `true` für die `includeReadOnly` Parameter, um die Werte enthalten sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatDataValue">
+      <MemberSignature Language="C#" Value="protected virtual string FormatDataValue (object dataValue, bool encode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string FormatDataValue(object dataValue, bool encode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundField.FormatDataValue(System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataValue" Type="System.Object" />
+        <Parameter Name="encode" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dataValue">Der Wert des Felds zu formatieren.</param>
+        <param name="encode">
+          <see langword="true" />um den Wert zu codieren. andernfalls <see langword="false" />.</param>
+        <summary>Formatiert den angegebenen Feldwert für eine Zelle in der <see cref="T:System.Web.UI.WebControls.BoundField" /> Objekt.</summary>
+        <returns>Der Wert des Felds in dem vom angegebenen Format konvertiert <see cref="P:System.Web.UI.WebControls.BoundField.DataFormatString" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BoundField.FormatDataValue%2A> Methode ist eine Hilfsmethode verwendet, um einen Feldwert, ab dem die vom angegebenen Format Transformieren der <xref:System.Web.UI.WebControls.BoundField.DataFormatString%2A> Eigenschaft. Wenn ein Feldwert null ist, den Wert von der <xref:System.Web.UI.WebControls.BoundField.NullDisplayText%2A> -Eigenschaft zurückgegeben wird.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.BoundField" /> -Klasse, überschreiben Sie diese Methode, um eine benutzerdefinierte Formatierung Routine durchführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeValue">
+      <MemberSignature Language="C#" Value="protected virtual object GetDesignTimeValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetDesignTimeValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundField.GetDesignTimeValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Wert für den Wert eines Felds verwendet wird, beim Rendern der <see cref="T:System.Web.UI.WebControls.BoundField" /> Objekt in einem Designer.</summary>
+        <returns>Der Wert im Designer als der Wert des Felds angezeigt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BoundField.GetDesignTimeValue%2A> Methode ist eine Hilfsmethode, um zu bestimmen, welcher Wert für ein Feld angezeigt wird, beim Rendern der <xref:System.Web.UI.WebControls.BoundField> Objekt in einem Designer. Wenn sich um echte Daten aus der Datenquelle zur Entwurfszeit abgerufen werden können nicht, wird von dieser Methode zurückgegebene Wert stattdessen angezeigt.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.BoundField" /> -Klasse, überschreiben Sie diese Methode, um einen anderen Wert für das Feld in einem Designer anzuzeigende zurück.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="protected virtual object GetValue (System.Web.UI.Control controlContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetValue(class System.Web.UI.Control controlContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundField.GetValue(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controlContainer" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="controlContainer">Der Container für den Wert des Felds.</param>
+        <summary>Ruft den Wert des Felds gebunden werden, um die <see cref="T:System.Web.UI.WebControls.BoundField" /> Objekt.</summary>
+        <returns>Der Wert des Felds gebunden werden, um die <see cref="T:System.Web.UI.WebControls.BoundField" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BoundField.GetValue%2A> Methode ist eine Hilfsmethode verwendet, um den Wert eines Felds zu bestimmen. Wenn die <xref:System.Web.UI.WebControls.BoundField> Objekt in einem Designer angezeigt wird, und der Wert des Felds kann nicht zur Entwurfszeit bestimmt werden, wird der Wert zurückgegeben, aus der <xref:System.Web.UI.WebControls.BoundField.GetDesignTimeValue%2A> Methode anstelle der tatsächlichen Feldwert zurückgegeben.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Der Container, die gemäß der <paramref name="controlContainer" /> Parameter ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ Der Container, die gemäß der <paramref name="controlContainer" /> Parameter enthält kein Datenelement.  
+  
+ \- oder –  
+  
+ Das Feld "Daten" wurde nicht gefunden.</exception>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.BoundField" /> -Klasse, überschreiben Sie diese Methode, um eine benutzerdefinierte Routine, um zu bestimmen, der Wert eines Felds bereitstellen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderText">
+      <MemberSignature Language="C#" Value="public override string HeaderText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BoundField.HeaderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der im Header des ein Steuerelement angezeigt wird.</summary>
+        <value>Der Text, der in der Kopfzeile ein Steuerelement angezeigt wird. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BoundField.HeaderText%2A> Eigenschaft, um ein Feld in einem Steuerelement mit einem Anzeigenamen zu identifizieren. Die am häufigsten verwendete Anwendung von der <xref:System.Web.UI.WebControls.BoundField.HeaderText%2A> darin, dass die Eigenschaft bereitzustellen, sinnvolle Spaltennamen für datengebundene Felder in einem <xref:System.Web.UI.WebControls.GridView> oder <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncode">
+      <MemberSignature Language="C#" Value="public virtual bool HtmlEncode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HtmlEncode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BoundField.HtmlEncode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Feldwerte HTML-codiert werden, bevor sie in angezeigt werden ein <see cref="T:System.Web.UI.WebControls.BoundField" /> Objekt.</summary>
+        <value>
+          <see langword="true" />Wenn die Feldwerte HTML-codiert werden, bevor sie in angezeigt werden eine <see cref="T:System.Web.UI.WebControls.BoundField" /> Objekt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BoundField.HtmlEncode%2A> Eigenschaft, um anzugeben, ob Feldwerte sind in ihren jeweiligen zeichenfolgendarstellungen HTML-codierte, bevor sie in angezeigt werden ein <xref:System.Web.UI.WebControls.BoundField> Objekt. Wenn diese Eigenschaft ist z. B. `true`, ein Zeichenfolgenwert, der "\<Skript >" würde als gerendert werden "&lt;Skript&gt;". Wenn diese Eigenschaft ist `false`, würde die Zeichenfolge gerendert werden unverändert.  
+  
+> [!NOTE]
+>  HTML-Codierung von Feldwerten helfen zu verhindern, dass Cross-Site scripting-Angriffe und schädliche Inhalte angezeigt werden. Diese Eigenschaft sollte nach Möglichkeit aktiviert werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BoundField.HtmlEncode%2A> Eigenschaft, um zu verhindern, dass die Feldwerte vor der Anzeige wird HTML-codierte ein <xref:System.Web.UI.WebControls.BoundField> Objekt.  
+  
+ [!code-aspx-csharp[BoundFieldHtmlEncode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BoundFieldHtmlEncode/CS/BoundFieldHtmlEncodecs.aspx#1)]
+ [!code-aspx-vb[BoundFieldHtmlEncode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BoundFieldHtmlEncode/VB/BoundFieldHtmlEncodevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncodeFormatString">
+      <MemberSignature Language="C#" Value="public virtual bool HtmlEncodeFormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HtmlEncodeFormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BoundField.HtmlEncodeFormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Text erstellt, indem die <see cref="P:System.Web.UI.WebControls.BoundField.DataFormatString" /> Eigenschaft, um die <see cref="T:System.Web.UI.WebControls.BoundField" /> Wert muss ein HTML-codiert werden, wenn er angezeigt wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Text HTML-codiert werden soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ HTML-Codierung Werte können verhindern, dass Cross-Site scripting-Angriffe und schädliche Inhalte angezeigt werden. HTML-Codierung ist auch nützlich, wenn Sie HTML-Code im Browser, z. B. das Anzeigen der Zeichenfolge angezeigt werden soll "\<Br / >" statt einen Zeilenumbruch einfügen (`<br/>` Element) auf der Seite.  
+  
+> [!NOTE]
+>  Diese Eigenschaft ist neu in ASP.NET 3.5. Festlegen dieser Eigenschaft auf `false` stellt das Standardverhalten der <xref:System.Web.UI.WebControls.BoundField.DataFormatString%2A> Eigenschaft in früheren Versionen von ASP.NET als 3.5. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Web.UI.WebControls.BoundField.DataFormatString%2A>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override bool Initialize (bool enableSorting, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Initialize(bool enableSorting, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundField.Initialize(System.Boolean,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enableSorting" Type="System.Boolean" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="enableSorting">
+          <see langword="true" />Wenn Sortierung unterstützt wird. andernfalls <see langword="false" />.</param>
+        <param name="control">Das Steuerelement, das Besitzer ist, der <see cref="T:System.Web.UI.WebControls.BoundField" />.</param>
+        <summary>Initialisiert die <see cref="T:System.Web.UI.WebControls.BoundField" /> Objekt.</summary>
+        <returns>
+          <see langword="false" /> in allen Fällen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BoundField.Initialize%2A> Methode wird aufgerufen, indem Sie das Steuerelement mit dem die <xref:System.Web.UI.WebControls.BoundField> -Objekt bezieht, führen Sie die grundlegende Initialisierung für Instanzen des Felds, bevor das Feld jemals eine Zeilen-Auflistung hinzugefügt wird. Daten steuert, wie z. B. <xref:System.Web.UI.WebControls.DetailsView> und <xref:System.Web.UI.WebControls.GridView> rufen die <xref:System.Web.UI.WebControls.DataControlField.Initialize%2A> Methode in ihren `CreateChildControls` Methoden vor anderen Methoden wie z. B. `CreateRow` werden aufgerufen, um bestimmte Zeilen mit Daten zu erstellen.  
+  
+ Rufen Sie diese Methode, wenn Sie schreiben eine benutzerdefinierte datengebundene Steuerelement, verwendet <xref:System.Web.UI.WebControls.TableCell> Objekte für die grundlegende Initialisierung für einen <xref:System.Web.UI.WebControls.BoundField> Objekt. Implementieren Sie diese Methode, wenn Ihre <xref:System.Web.UI.WebControls.BoundField>-abgeleiteten Typ erfordert Initialisierungen Objekt aus, bevor er füllt <xref:System.Web.UI.WebControls.TableCell> Objekte mit Daten oder Steuerelemente in der <xref:System.Web.UI.WebControls.BoundField.InitializeCell%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeCell">
+      <MemberSignature Language="C#" Value="public override void InitializeCell (System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlCellType cellType, System.Web.UI.WebControls.DataControlRowState rowState, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InitializeCell(class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlCellType cellType, valuetype System.Web.UI.WebControls.DataControlRowState rowState, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundField.InitializeCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlCellType,System.Web.UI.WebControls.DataControlRowState,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="cellType" Type="System.Web.UI.WebControls.DataControlCellType" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Die zu initialisierende <see cref="T:System.Web.UI.WebControls.TableCell" />.</param>
+        <param name="cellType">Einer der <see cref="T:System.Web.UI.WebControls.DataControlCellType" />-Werte.</param>
+        <param name="rowState">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowState" />-Werte.</param>
+        <param name="rowIndex">Der nullbasierte Index der Zeile.</param>
+        <summary>Initialisiert das angegebene <see cref="T:System.Web.UI.WebControls.TableCell" /> Objekt, das dem angegebenen Zeilenstatus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BoundField.InitializeCell%2A> Methode implementiert wird <xref:System.Web.UI.WebControls.BoundField>-abgeleitete Typen zum Hinzufügen von Text und Steuerelementen zu einer <xref:System.Web.UI.WebControls.TableCell> Objekt eines Daten-Steuerelements, die Tabellen verwendet, um eine Benutzeroberfläche (UI) anzeigen. Diese Datensteuerelemente erstellen der vollständigen Tabelle Struktur Zeile für Zeile bei der des Steuerelements `CreateChildControls` -Methode aufgerufen wird. Die <xref:System.Web.UI.WebControls.BoundField.InitializeCell%2A> Methode wird aufgerufen, indem Sie die `InitializeRow` Methode Datenmenge wird gesteuert, wie z. B. <xref:System.Web.UI.WebControls.DetailsView> und <xref:System.Web.UI.WebControls.GridView>.  
+  
+ Rufen Sie diese Methode, wenn Sie schreiben eine benutzerdefinierte datengebundene Steuerelement, verwendet <xref:System.Web.UI.WebControls.TableCell> Objekte zum Initialisieren der Zellen der Tabellenstruktur mit Daten oder Steuerelemente. Implementieren Sie diese Methode, wenn Sie schreiben eine <xref:System.Web.UI.WebControls.BoundField>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeDataCell">
+      <MemberSignature Language="C#" Value="protected virtual void InitializeDataCell (System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlRowState rowState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitializeDataCell(class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlRowState rowState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundField.InitializeDataCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlRowState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Die zu initialisierende <see cref="T:System.Web.UI.WebControls.TableCell" />.</param>
+        <param name="rowState">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowState" />-Werte.</param>
+        <summary>Initialisiert das angegebene <see cref="T:System.Web.UI.WebControls.TableCell" /> Objekt, das dem angegebenen Zeilenstatus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BoundField.InitializeDataCell%2A> Methode ist eine Hilfsmethode, die zur Initialisierung einer Zelle in der <xref:System.Web.UI.WebControls.BoundField> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.BoundField" /> -Klasse, überschreiben Sie diese Methode, um eine benutzerdefinierte Initialisierungsroutine durchführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundField.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Stellt den Zustand des Steuerelements wiederhergestellt werden.</param>
+        <summary>Die zuvor gespeicherte Ansichtszustand Informationen für dieses Feld wird wiederhergestellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NullDisplayText">
+      <MemberSignature Language="C#" Value="public virtual string NullDisplayText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NullDisplayText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BoundField.NullDisplayText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschriftung für ein Feld angezeigt wird, wenn der Wert des Felds null ist.</summary>
+        <value>Die Beschriftung für ein Feld angezeigt wird, wenn der Wert des Felds null ist. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einigen Fällen ist der Wert eines Felds als null in der Datenquelle gespeichert. Sie können eine benutzerdefinierte Beschriftung für Felder anzuzeigen, die einen null-Wert verfügen angeben der <xref:System.Web.UI.WebControls.BoundField.NullDisplayText%2A> Eigenschaft. Wenn diese Eigenschaft nicht festgelegt ist, werden null-Feldwerte angezeigt, als leere Zeichenfolgen (""). Wenn ein Datensatz ist aktualisiert oder in einem datengebundenen Steuerelement eingefügt werden, wenn der Benutzer den Wert eingibt, wird von dieser Eigenschaft angegebenen (als eine leere Zeichenfolge) für ein Feld in einem datengebundenen Steuerelement, dass der Wert in der Datenquelle automatisch in null konvertiert wird.  
+  
+> [!NOTE]
+>  Um eine leere Zeichenfolge als Feldwert in einen null-Wert zu konvertieren, legen Sie die <xref:System.Web.UI.WebControls.BoundField.ConvertEmptyStringToNull%2A> Eigenschaft `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BoundField.NullDisplayText%2A> -Eigenschaft an eine benutzerdefinierte Beschriftung, die für null-Feldwerte angezeigt.  
+  
+ [!code-aspx-csharp[BoundFieldNullDisplayText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BoundFieldNullDisplayText/CS/boundfieldnulldisplaytextcs.aspx#1)]
+ [!code-aspx-vb[BoundFieldNullDisplayText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BoundFieldNullDisplayText/VB/boundfieldnulldisplaytextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataBindField">
+      <MemberSignature Language="C#" Value="protected virtual void OnDataBindField (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDataBindField(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundField.OnDataBindField(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Bindet den Wert eines Felds, das die <see cref="T:System.Web.UI.WebControls.BoundField" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CheckBoxField.OnDataBindField%2A> Methode ist eine Hilfsmethode verwendet, um den Wert eines Felds in der Datenquelle binden, in eine entsprechende Zelle in der <xref:System.Web.UI.WebControls.BoundField> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Das Steuerelement an die der Wert des Felds gebunden ist, ist keine <see cref="T:System.Web.UI.WebControls.TextBox" /> oder ein <see cref="T:System.Web.UI.WebControls.TableCell" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.BoundField" /> -Klasse, überschreiben Sie diese Methode, um eine benutzerdefinierte Bindungsroutine durchführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BoundField.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Wert des Felds im Bearbeitungsmodus geändert werden kann.</summary>
+        <value>
+          <see langword="true" />um zu verhindern, dass den Wert des Felds im Bearbeitungsmodus geändert wird; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BoundField.ReadOnly%2A> Eigenschaft, um zu verhindern, dass die Werte in einer <xref:System.Web.UI.WebControls.BoundField> Objekt bearbeitet werden. Wenn ein datengebundenes Steuerelement im Bearbeitungsmodus befindet, werden Felder, die schreibgeschützt werden als nur-Text, ohne alle Bearbeitungssteuerelemente angezeigt.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.BoundField.ReadOnly%2A> Eigenschaft gilt nur für den Bearbeitungsmodus. Um zu verhindern, dass Felder im Einfügemodus angezeigt, verwenden Sie die <xref:System.Web.UI.WebControls.DataControlField.InsertVisible%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BoundField.ReadOnly%2A> Eigenschaft, um zu verhindern, dass die Werte des Schlüsselfelds angezeigt, die einer <xref:System.Web.UI.WebControls.BoundField> Objekt im Bearbeitungsmodus bearbeitet werden.  
+  
+ [!code-aspx-csharp[BoundField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BoundField/CS/boundfieldcs.aspx#1)]
+ [!code-aspx-vb[BoundField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BoundField/VB/boundfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsHtmlEncode">
+      <MemberSignature Language="C#" Value="protected virtual bool SupportsHtmlEncode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsHtmlEncode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BoundField.SupportsHtmlEncode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob HTML-Codierung von unterstützt wird ein <see cref="T:System.Web.UI.WebControls.BoundField" /> Objekt.</summary>
+        <value>Gibt immer <see langword="true" /> , um anzugeben, dass durch die HTML-Codierung unterstützt wird eine <see cref="T:System.Web.UI.WebControls.BoundField" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BoundField.SupportsHtmlEncode%2A> Eigenschaft ist eine Helper-Eigenschaft, die verwendet werden, indem die <xref:System.Web.UI.WebControls.BoundField> Klasse und abgeleitete Klassen, um zu bestimmen, ob HTML-Codierung von der Klasse unterstützt wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Ableiten von der <see cref="T:System.Web.UI.WebControls.BoundField" /> -Klasse, überschreiben Sie diese Eigenschaft, um anzugeben, ob HTML-Codierung von der Klasse unterstützt wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ThisExpression">
+      <MemberSignature Language="C#" Value="public static readonly string ThisExpression;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string ThisExpression" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BoundField.ThisExpression" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Ausdruck „this“ dar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld wird verwendet, um anzugeben, dass die <xref:System.Web.UI.WebControls.BoundField> Objekt sollten selbst, sondern ein Feld der Datenquelle für die Datenquelle binden. In diesem Fall wird das Objekt des `ToString` Wert in das Feld angezeigt werden.  
+  
+ Dieses Feld wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateRequestMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ValidateRequestMode ValidateRequestMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.ValidateRequestMode ValidateRequestMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BoundField.ValidateRequestMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ValidateRequestMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob das Steuerelement Client Eingabe- oder nicht überprüft.</summary>
+        <value>Ein Wert, der bestimmt, ob das Steuerelement Client Eingabe- oder nicht überprüft. Die Standardeinstellung ist <see cref="F:System.Web.UI.ValidateRequestMode.Inherit" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateSupportsCallback">
+      <MemberSignature Language="C#" Value="public override void ValidateSupportsCallback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ValidateSupportsCallback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BoundField.ValidateSupportsCallback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die in Steuerelemente enthaltenen eine <see cref="T:System.Web.UI.WebControls.BoundField" /> -Objekt Rückrufe unterstützen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BoundField.ValidateSupportsCallback%2A> Methode ist eine Hilfsmethode verwendet, um zu bestimmen, ob die in Steuerelemente enthaltenen eine <xref:System.Web.UI.WebControls.BoundField> -Objekt Rückrufe unterstützen. Diese Methode wurde implementiert, als eine leere Methode (eine Methode, die keinen Code enthalten ist), um anzugeben, dass Rückrufe unterstützt werden.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen die <see cref="T:System.Web.UI.WebControls.BoundField" /> Klasse kann diese Methode, um anzugeben, ob die Steuerelemente im Feld Unterstützung Rückrufe enthaltenen überschreiben. Implementieren Sie diese Methode als eine leere Methode, die keine Ausnahme auslöst, um anzugeben, dass Rückrufe unterstützt werden, Andernfalls lösen Sie eine Ausnahme mit einer aussagekräftigen Meldung erläutert, warum Rückrufe nicht unterstützt werden.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

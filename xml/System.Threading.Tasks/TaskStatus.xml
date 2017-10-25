@@ -1,0 +1,287 @@
+<Type Name="TaskStatus" FullName="System.Threading.Tasks.TaskStatus">
+  <TypeSignature Language="C#" Value="public enum TaskStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TaskStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.TaskStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Stellt die aktuelle Phase im Lebenszyklus eines <see cref="T:System.Threading.Tasks.Task" /> dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> Eigenschaft gibt ein Mitglied der <xref:System.Threading.Tasks.TaskStatus> Enumeration zum aktuellen Status des Vorgangs anzugeben.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt 20 Aufgaben, die Schleife werden, bis ein Wert von 2 Millionen erhöht wird. Wenn die ersten 10 Aufgaben 2 Millionen erreichen, das Abbruchtoken abgebrochen wird, und alle Aufgaben, deren Leistungsindikatoren 2 Millionen nicht erreicht haben, werden abgebrochen. Im Beispiel wird dann untersucht die <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> Eigenschaft der einzelnen Aufgaben aus, um anzugeben, ob der Task wurde erfolgreich abgeschlossen oder abgebrochen wurde. Für Entitäten, die abgeschlossen wurden, wird den Wert, der von der Aufgabe zurückgegebenen angezeigt.  
+  
+ [!code-csharp[System.Threading.Tasks.Task.Run#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.task.run/cs/Run7.cs#7)]
+ [!code-vb[System.Threading.Tasks.Task.Run#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.task.run/vb/Run7.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Canceled">
+      <MemberSignature Language="C#" Value="Canceled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskStatus Canceled = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskStatus.Canceled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Aufgabe hat den Abbruch durch Auslösen einer OperationCanceledException mit einem eigenen CancellationToken bestätigt, während das Token im Zustand „signalisiert“ war, oder das CancellationToken der Aufgabe wurde bereits vor dem Start der Aufgabenausführung signalisiert. Weitere Informationen finden Sie unter [Aufgabenabbruch](~/docs/standard/parallel-programming/task-cancellation.md).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Created">
+      <MemberSignature Language="C#" Value="Created" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskStatus Created = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskStatus.Created" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Aufgabe wurde initialisiert, aber noch nicht geplant.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Faulted">
+      <MemberSignature Language="C#" Value="Faulted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskStatus Faulted = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskStatus.Faulted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Aufgabe wurde aufgrund eines Ausnahmefehlers abgeschlossen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RanToCompletion">
+      <MemberSignature Language="C#" Value="RanToCompletion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskStatus RanToCompletion = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskStatus.RanToCompletion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ausführung der Aufgabe wurde erfolgreich abgeschlossen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Running">
+      <MemberSignature Language="C#" Value="Running" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskStatus Running = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskStatus.Running" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Aufgabe wird ausgeführt, wurde aber noch nicht abgeschlossen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitingForActivation">
+      <MemberSignature Language="C#" Value="WaitingForActivation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskStatus WaitingForActivation = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskStatus.WaitingForActivation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Aufgabe wartet auf ihre Aktivierung und interne Planung durch die .NET Framework-Infrastruktur.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitingForChildrenToComplete">
+      <MemberSignature Language="C#" Value="WaitingForChildrenToComplete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskStatus WaitingForChildrenToComplete = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskStatus.WaitingForChildrenToComplete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Aufgabe hat die Ausführung beendet und wartet implizit auf den Abschluss angefügter untergeordneter Aufgaben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitingToRun">
+      <MemberSignature Language="C#" Value="WaitingToRun" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskStatus WaitingToRun = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskStatus.WaitingToRun" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Aufgabe wurde zur Ausführung geplant, aber noch nicht gestartet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

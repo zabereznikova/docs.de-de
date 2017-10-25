@@ -1,0 +1,312 @@
+<Type Name="InstanceLockedException" FullName="System.Runtime.DurableInstancing.InstanceLockedException">
+  <TypeSignature Language="C#" Value="public class InstanceLockedException : System.Runtime.DurableInstancing.InstancePersistenceCommandException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit InstanceLockedException extends System.Runtime.DurableInstancing.InstancePersistenceCommandException" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.DurableInstancing.InstanceLockedException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.DurableInstancing.InstancePersistenceCommandException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Dauerhaftigkeitsanbieter löst diese Ausnahme aus, wenn er eine Instanz nicht sperren kann, da sie bereits von einem anderen Besitzer gesperrt wurde.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceLockedException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceLockedException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceLockedException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceLockedException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceLockedException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der Grund für die Ausnahme.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceLockedException" />-Klasse unter Verwendung der als Parameter übergebenen Fehlermeldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InstanceLockedException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceLockedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Informationen zur aktuellen Ausnahme.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceLockedException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceLockedException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceLockedException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der Grund für die Ausnahme.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceLockedException" />-Klasse unter Verwendung der Fehlermeldung und der Informationen zu inneren Ausnahme (als Parameter übergeben).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, weist in der Regel in der <xref:System.ServiceModel.ExceptionDetail.InnerException%2A>-Eigenschaft einen Verweis auf die vorhergehende Ausnahme auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceLockedException (System.Xml.Linq.XName commandName, Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceLockedException.#ctor(System.Xml.Linq.XName,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="instanceId">Die ID der Zielinstanz, für die der Befehl ausgeführt wurde.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceLockedException" />-Klasse unter Verwendung des XName (Kombination aus Namespace und Name) des Befehls und der ID der Zielinstanz, für die der Befehl ausgeführt wurde (als Parameter übergeben).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceLockedException (System.Xml.Linq.XName commandName, Guid instanceId, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, valuetype System.Guid instanceId, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceLockedException.#ctor(System.Xml.Linq.XName,System.Guid,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="instanceId">Die ID der Zielinstanz, für die der Befehl ausgeführt wurde.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceLockedException" />-Klasse unter Verwendung des XName (Kombination aus Namespace und Name) des Befehls, der ID der Zielinstanz, für die der Befehl ausgeführt wurde, sowie der Informationen zu inneren Ausnahme (als Parameter übergeben).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceLockedException (System.Xml.Linq.XName commandName, Guid instanceId, Guid instanceOwnerId, System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,object&gt; serializableInstanceOwnerMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, valuetype System.Guid instanceId, valuetype System.Guid instanceOwnerId, class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, object&gt; serializableInstanceOwnerMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceLockedException.#ctor(System.Xml.Linq.XName,System.Guid,System.Guid,System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Object})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="instanceOwnerId" Type="System.Guid" />
+        <Parameter Name="serializableInstanceOwnerMetadata" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="instanceId">Die ID der Zielinstanz, für die der Befehl ausgeführt wurde.</param>
+        <param name="instanceOwnerId">Die ID des Besitzers, der die Instanz derzeit sperrt.</param>
+        <param name="serializableInstanceOwnerMetadata">Informationen zu serialisierbaren Metadaten über den Instanzbesitzer (der die Instanz sperrt).</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceLockedException" />-Klasse unter Verwendung des XName (Kombination aus Namespace und Name) des Befehls, der ID der Zielinstanz, für die der Befehl ausgeführt wurde, der ID des Benutzers, der die Instanz derzeit sperrt, sowie der Informationen zu serialisierbaren Metadaten des Benutzers (als Parameter übergeben).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceLockedException (System.Xml.Linq.XName commandName, Guid instanceId, string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, valuetype System.Guid instanceId, string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceLockedException.#ctor(System.Xml.Linq.XName,System.Guid,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="instanceId">Die ID der Zielinstanz, für die der Befehl ausgeführt wurde.</param>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceLockedException" />-Klasse unter Verwendung des XName (Kombination aus Namespace und Name) des Befehls, der ID der Zielinstanz, für die der Befehl ausgeführt wurde, der Fehlermeldung, aus der der Grund für die aktuelle Ausnahme hervorgeht, und der Ausnahme, die die aktuelle Ausnahme verursacht hat (als Parameter übergeben).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceLockedException (System.Xml.Linq.XName commandName, Guid instanceId, Guid instanceOwnerId, System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,object&gt; serializableInstanceOwnerMetadata, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, valuetype System.Guid instanceId, valuetype System.Guid instanceOwnerId, class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, object&gt; serializableInstanceOwnerMetadata, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceLockedException.#ctor(System.Xml.Linq.XName,System.Guid,System.Guid,System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Object},System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="instanceOwnerId" Type="System.Guid" />
+        <Parameter Name="serializableInstanceOwnerMetadata" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Object&gt;" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="instanceId">Die ID der Zielinstanz, für die der Befehl ausgeführt wurde.</param>
+        <param name="instanceOwnerId">Die ID des Besitzers, der die Instanz derzeit sperrt.</param>
+        <param name="serializableInstanceOwnerMetadata">Informationen zu serialisierbaren Metadaten über den Instanzbesitzer (der die Instanz sperrt).</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceLockedException" />-Klasse unter Verwendung des XName (Kombination aus Namespace und Name) des Befehls, der ID der Zielinstanz, für die der Befehl ausgeführt wurde, der ID des Benutzers, der die Instanz derzeit sperrt, der Informationen zu serialisierbaren Metadaten über den Besitzer sowie der Ausnahme, die die aktuelle Ausnahme verursacht hat (als Parameter übergeben).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceLockedException (System.Xml.Linq.XName commandName, Guid instanceId, Guid instanceOwnerId, System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,object&gt; serializableInstanceOwnerMetadata, string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, valuetype System.Guid instanceId, valuetype System.Guid instanceOwnerId, class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, object&gt; serializableInstanceOwnerMetadata, string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceLockedException.#ctor(System.Xml.Linq.XName,System.Guid,System.Guid,System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Object},System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="instanceOwnerId" Type="System.Guid" />
+        <Parameter Name="serializableInstanceOwnerMetadata" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Object&gt;" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="instanceId">Die ID der Zielinstanz, für die der Befehl ausgeführt wurde.</param>
+        <param name="instanceOwnerId">Die ID des Besitzers, der die Instanz derzeit sperrt.</param>
+        <param name="serializableInstanceOwnerMetadata">Die Informationen zu serialisierbaren Metadaten über den Instanzbesitzer (der die Instanz sperrt).</param>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceLockedException" />-Klasse unter Verwendung des XName (Kombination aus Namespace und Name) des Befehls, der ID der Zielinstanz, für die der Befehl ausgeführt wurde, der ID des Benutzers, der die Instanz derzeit sperrt, der Informationen zu serialisierbaren Metadaten über den Besitzer, der Fehlermeldung, aus der der Grund für die Ausnahme hervorgeht, sowie der Ausnahme, die die aktuelle Ausnahme verursacht hat (als Parameter übergeben).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceLockedException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die serialisierten Objektdaten über die ausgelöste Ausnahme.</param>
+        <param name="context">Das Objekt, das die Kontextinformationen über die Quelle bzw. das Ziel enthält.</param>
+        <summary>Legt das <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit Informationen zur Ausnahme fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceOwnerId">
+      <MemberSignature Language="C#" Value="public Guid InstanceOwnerId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceOwnerId" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceLockedException.InstanceOwnerId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dem aktuellen Instanzbesitzer (der die Instanz derzeit sperrt) zugeordnete GUID ab.</summary>
+        <value>Die dem aktuellen Instanzbesitzer zugeordnete GUID.  Gibt "Guid.Empty" zurück, wenn der aktuelle Instanzbesitzer nicht bekannt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializableInstanceOwnerMetadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,object&gt; SerializableInstanceOwnerMetadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, object&gt; SerializableInstanceOwnerMetadata" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceLockedException.SerializableInstanceOwnerMetadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Informationen zu serialisierbaren Metadaten über den aktuellen Instanzbesitzer (der die Instanz derzeit sperrt) ab.  Wenn vorhanden, handelt es sich hierbei um die Teilmenge der Instanzbesitzermetadaten, die serialisierbar sind.  In den Metadaten sind möglicherweise Informationen wie der Ort des Instanzbesitzers enthalten, der derzeit im Besitz der Sperre ist.</summary>
+        <value>Die serialisierbaren Metadaten über den aktuellen Instanzbesitzer (der die Instanz derzeit sperrt).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

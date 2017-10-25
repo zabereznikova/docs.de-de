@@ -1,0 +1,244 @@
+<Type Name="OSFeature" FullName="System.Windows.Forms.OSFeature">
+  <TypeSignature Language="C#" Value="public class OSFeature : System.Windows.Forms.FeatureSupport" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OSFeature extends System.Windows.Forms.FeatureSupport" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.OSFeature" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.FeatureSupport</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt bestimmte Funktion von Betriebssystem-Abfragen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der `static` Instanz dieser Klasse bereitgestellt, der <xref:System.Windows.Forms.OSFeature.Feature%2A> Eigenschaft zum Abfragen von Betriebssystemfunktionen. Eine Instanz dieser Klasse kann nicht erstellt werden.  
+  
+ Um die Version einer Funktion zu bestimmen, rufen die <xref:System.Windows.Forms.OSFeature.GetVersionPresent%2A> Methode. Um festzustellen, ob eine Funktion oder eine bestimmte Version vorhanden ist, rufen Sie die <xref:System.Windows.Forms.FeatureSupport.IsPresent%2A> Methode, und geben Sie die Funktion, mit der Feature-IDs, die in dieser Klasse bereitgestellten gesucht.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Windows.Forms.OSFeature> zum Abfragen des Betriebssystems, um festzustellen, ob die <xref:System.Windows.Forms.OSFeature.LayeredWindows> Feature installiert ist. Im Beispiel wird dargestellt, zwei unterschiedliche Arten prüfen um festzustellen, ob die Funktion vorhanden ist. Bei der ersten Methode `myVersion` wird überprüft, um festzustellen, ob es `null`. Wenn die Version `null`, das Feature ist nicht installiert. Bei der zweiten Methode im Beispiel wird die Basisklassenmethode <xref:System.Windows.Forms.FeatureSupport.IsPresent%2A> um festzustellen, ob die Funktion installiert ist. Die Ergebnisse werden in einem Textfeld angezeigt.  
+  
+ Dieser Code geht davon aus `textBox1` erstellt und in einem Formular platziert wurde.  
+  
+ [!code-cpp[Classic OSFeature Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OSFeature Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OSFeature Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OSFeature Example/CS/source.cs#1)]
+ [!code-vb[Classic OSFeature Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OSFeature Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected OSFeature ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.OSFeature.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.OSFeature" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse kann nicht instanziiert werden. Verwenden Sie die Abfrage nach den Funktionen des Betriebssystems die `static` Instanz <xref:System.Windows.Forms.OSFeature> in dieser Klasse bereitgestellten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Feature">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.OSFeature Feature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.OSFeature Feature" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.OSFeature.Feature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.OSFeature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see langword="static" /> -Instanz die <see cref="T:System.Windows.Forms.OSFeature" /> Klasse, die für Featureabfragen verwendet. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Eine Instanz der <see cref="T:System.Windows.Forms.OSFeature" />-Klasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese `static` Eigenschaft zum Abfragen von Betriebssystemfunktionen. Eine Instanz dieser Klasse kann nicht erstellt werden.  
+  
+ Um die Version einer Funktion zu bestimmen, rufen die <xref:System.Windows.Forms.OSFeature.GetVersionPresent%2A> Methode. Um festzustellen, ob eine Funktion oder eine bestimmte Version vorhanden ist, rufen Sie die <xref:System.Windows.Forms.FeatureSupport.IsPresent%2A> Methode, und geben Sie die Funktion, mit der Feature-IDs, die in dieser Klasse bereitgestellten gesucht.  
+  
+   
+  
+## Examples  
+ Die folgende Beispielabfrage <xref:System.Windows.Forms.OSFeature> für die <xref:System.Windows.Forms.OSFeature.LayeredWindows> Funktion. Die Version wird überprüft, um festzustellen, ob es `null`, um zu bestimmen, ob die Funktion vorhanden ist. Das Ergebnis wird in einem Textfeld angezeigt. Dieser Code geht davon aus `textBox1` erstellt und in einem Formular platziert wurde.  
+  
+ [!code-cpp[Classic OSFeature.GetVersionPresent Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OSFeature.GetVersionPresent Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OSFeature.GetVersionPresent Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OSFeature.GetVersionPresent Example/CS/source.cs#1)]
+ [!code-vb[Classic OSFeature.GetVersionPresent Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OSFeature.GetVersionPresent Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVersionPresent">
+      <MemberSignature Language="C#" Value="public override Version GetVersionPresent (object feature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Version GetVersionPresent(object feature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.OSFeature.GetVersionPresent(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="feature" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="feature">Die Funktion, deren Version wird, entweder angefordert <see cref="F:System.Windows.Forms.OSFeature.LayeredWindows" /> oder <see cref="F:System.Windows.Forms.OSFeature.Themes" />.</param>
+        <summary>Ruft die Version der angegebenen Funktion derzeit verfügbar ist, auf dem System ab.</summary>
+        <returns>Ein <see cref="T:System.Version" /> , die Version der angegebenen Betriebssystem-Funktion, die derzeit verfügbar ist, auf dem System; darstellt oder <see langword="null" /> , wenn die Funktion kann nicht gefunden werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.OSFeature.Feature%2A> -Eigenschaft, die `static` Instanz <xref:System.Windows.Forms.OSFeature> in dieser Klasse, zum Abfragen der Versionsnummer einer Funktion bereitgestellt.  
+  
+   
+  
+## Examples  
+ Die folgende Beispielabfrage <xref:System.Windows.Forms.OSFeature> für die <xref:System.Windows.Forms.OSFeature.LayeredWindows> Funktion. Die Version wird überprüft, um festzustellen, ob es `null`, um zu bestimmen, ob die Funktion vorhanden ist. Das Ergebnis wird in einem Textfeld angezeigt. Dieser Code geht davon aus `textBox1` erstellt und in einem Formular platziert wurde.  
+  
+ [!code-cpp[Classic OSFeature.GetVersionPresent Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OSFeature.GetVersionPresent Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OSFeature.GetVersionPresent Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OSFeature.GetVersionPresent Example/CS/source.cs#1)]
+ [!code-vb[Classic OSFeature.GetVersionPresent Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OSFeature.GetVersionPresent Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPresent">
+      <MemberSignature Language="C#" Value="public static bool IsPresent (System.Windows.Forms.SystemParameter enumVal);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsPresent(valuetype System.Windows.Forms.SystemParameter enumVal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.OSFeature.IsPresent(System.Windows.Forms.SystemParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumVal" Type="System.Windows.Forms.SystemParameter" />
+      </Parameters>
+      <Docs>
+        <param name="enumVal">Ein <see cref="T:System.Windows.Forms.SystemParameter" /> zu suchende Funktion darstellt.</param>
+        <summary>Ruft einen Wert, der angibt, ob das Betriebssystem die angegebene Funktion oder Metrik unterstützt.</summary>
+        <returns>
+          <see langword="true" />Wenn das Feature auf dem System verfügbar ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalerweise verwenden Sie die <xref:System.Windows.Forms.OSFeature.IsPresent%2A> Methode, um zu bestimmen, ob ein bestimmtes Feature oder die identifizierte Metrik systemintegrierte `enumValue`. Auf Grundlage des Werts zurückgegebenen aus <xref:System.Windows.Forms.OSFeature.IsPresent%2A>, bedingte Aktionen in Ihrem Code ausführen. Z. B. wenn der Aufruf dieser Methode mit einem Parameterwert von <xref:System.Windows.Forms.SystemParameter.FlatMenu> gibt `true`, Sie können ownerdrawn-Menüs erstellen, in der Anwendung in einem Flatfile-Format.  
+  
+ Beim Zugriff auf einige Systemfunktionen oder Metriken kann Ausnahmen ausgelöst werden, wenn sie nicht auf eine bestimmte Betriebssystemversion verfügbar sind. In diesem Fall zuerst verwenden Sie das entsprechende <xref:System.Windows.Forms.SystemParameter> -Enumerationswert mit <xref:System.Windows.Forms.OSFeature.IsPresent%2A>, um zu bestimmen, ob die Metrik unterstützt wird. Rufen Sie z. B. <xref:System.Windows.Forms.OSFeature.IsPresent%2A> mit <xref:System.Windows.Forms.SystemInformation.CaretWidth%2A> vor dem Abrufen der <xref:System.Windows.Forms.SystemInformation.CaretWidth%2A?displayProperty=nameWithType> Eigenschaftswert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.OSFeature.IsPresent%2A> Methode mit dem <xref:System.Windows.Forms.SystemParameter> Enumeration. Im Beispiel wird ermittelt, wenn das Betriebssystem unterstützt das `CaretWidth` Metrik vor dem Aufruf der <xref:System.Windows.Forms.SystemInformation.CaretWidth%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ [!code-cpp[System.Windows.Forms.OSFeature.IsPresent#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.OSFeature.IsPresent/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.OSFeature.IsPresent#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.OSFeature.IsPresent/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.OSFeature.IsPresent#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.OSFeature.IsPresent/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.OSFeature.IsPresent#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.OSFeature.IsPresent/CPP/form1.cpp#2)]
+[!code-csharp[System.Windows.Forms.OSFeature.IsPresent#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.OSFeature.IsPresent/CS/form1.cs#2)]
+[!code-vb[System.Windows.Forms.OSFeature.IsPresent#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.OSFeature.IsPresent/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LayeredWindows">
+      <MemberSignature Language="C#" Value="public static readonly object LayeredWindows;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object LayeredWindows" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.OSFeature.LayeredWindows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die Funktion überlappende Fenster oberster Ebene dar. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein überlappendes Fenster kann transparenten oder transparent vom Betriebssystem vorgenommen werden. Unterstützung für überlappende Fenster wurde erstmals in Windows 2000 eingeführt. Weitere Informationen finden Sie unter "In den Ebenen Windows: A New Möglichkeit zum Verwenden Lichtdurchlässigkeit und Transparenz Effekte in Windows Applications" in der Platform SDK-Dokumentation unter http://msdn.microsoft.com.  
+  
+ Um festzustellen, ob die überlappende Fenster-Funktion installiert ist, verwenden die <xref:System.Windows.Forms.OSFeature.Feature%2A> Eigenschaft Methode der Basisklasse aufrufen <xref:System.Windows.Forms.FeatureSupport.IsPresent%2A> mit <xref:System.Windows.Forms.OSFeature.LayeredWindows> als das Feature zum Suchen nach.  
+  
+ Sie können Alternativ können Sie überprüfen, um festzustellen, ob die Funktion, durch den Aufruf installiert ist der <xref:System.Windows.Forms.OSFeature.GetVersionPresent%2A> Methode mit <xref:System.Windows.Forms.OSFeature.LayeredWindows> als die Funktion gefunden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird bestimmt, ob das aktuelle System überlappende Fenster unterstützt. Die Basisklassenmethode <xref:System.Windows.Forms.FeatureSupport.IsPresent%2A> aufgerufen wird und <xref:System.Windows.Forms.OSFeature.LayeredWindows> als das Feature zum Suchen nach. Das Ergebnis wird in einem Textfeld angezeigt. Dieser Code geht davon aus `textBox1` instanziiert und in einem Formular platziert wurde.  
+  
+ [!code-cpp[Classic OSFeature.LayeredWindows Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OSFeature.LayeredWindows Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OSFeature.LayeredWindows Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OSFeature.LayeredWindows Example/CS/source.cs#1)]
+ [!code-vb[Classic OSFeature.LayeredWindows Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OSFeature.LayeredWindows Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Themes">
+      <MemberSignature Language="C#" Value="public static readonly object Themes;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object Themes" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.OSFeature.Themes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die Betriebssystem-Designs-Funktion. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Design ist eine Auflistung von Einstellungen für die visuelle Schnittstelle, die in Microsoft Plus Hintergrundbild, Cursor, Schriftarten, Sounds und eingeführt wurden und Symbole enthalten. für Windows 95. .NET Framework unterstützt nicht direkt bearbeiten von Designs, wobei es bietet umfassende Unterstützung für visuelle Stile in die <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Namespace. Weitere Informationen zu Windows-Designs finden Sie unter den Themen, Designs und visuelle Stile und Visual Styles Reference in der Win32 SDK.  
+  
+ Um festzustellen, ob die Designs-Funktion installiert ist, rufen Sie die Basisklassenmethode <xref:System.Windows.Forms.FeatureSupport.IsPresent%2A> mit <xref:System.Windows.Forms.OSFeature.Themes> als das Feature zum Suchen nach.  
+  
+ Sie können Alternativ können Sie überprüfen, um festzustellen, ob die Funktion, durch den Aufruf installiert ist der <xref:System.Windows.Forms.OSFeature.GetVersionPresent%2A> Methode mit <xref:System.Windows.Forms.OSFeature.Themes> als die Funktion gefunden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

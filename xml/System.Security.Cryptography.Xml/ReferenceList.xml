@@ -1,0 +1,520 @@
+<Type Name="ReferenceList" FullName="System.Security.Cryptography.Xml.ReferenceList">
+  <TypeSignature Language="C#" Value="public sealed class ReferenceList : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ReferenceList extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.ReferenceList" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die <see langword="&lt;ReferenceList&gt;" /> Element in XML-Verschlüsselung verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.ReferenceList> -Klasse stellt die `<ReferenceList>` Element einer verschlüsselten Dokument XML-Signatur, die durch die XML-Verschlüsselung-Spezifikation definiert.  
+  
+ Die <xref:System.Security.Cryptography.Xml.ReferenceList> Klasse enthält Verweise auf <xref:System.Security.Cryptography.Xml.EncryptedData> und <xref:System.Security.Cryptography.Xml.EncryptedKey> Elemente, die mit einem Schlüssel, die innerhalb einer anderen enthaltenen verschlüsselt wurden <xref:System.Security.Cryptography.Xml.EncryptedKey> Element. Die <xref:System.Security.Cryptography.Xml.ReferenceList> -Klasse verwendet <xref:System.Security.Cryptography.Xml.DataReference> Elemente auf verweisen <xref:System.Security.Cryptography.Xml.EncryptedData> Elemente und <xref:System.Security.Cryptography.Xml.KeyReference> Elemente auf verweisen <xref:System.Security.Cryptography.Xml.EncryptedKey> Elemente.  
+  
+ Sie können nur hinzufügen <xref:System.Security.Cryptography.Xml.DataReference> oder <xref:System.Security.Cryptography.Xml.KeyReference> Datenbankobjekte in der <xref:System.Security.Cryptography.Xml.ReferenceList> Auflistung.  
+  
+ Weitere Informationen zu XML-Verschlüsselungsstandards finden Sie unter http://www.w3.org/TR/xmlenc-core.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReferenceList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.ReferenceList.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.ReferenceList" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.ReferenceList.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> hinzuzufügendes Objekt die <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Auflistung.</param>
+        <summary>Fügt eine <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> -Objekt an die <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Auflistung.</summary>
+        <returns>Die Position, an der das neue Element eingefügt wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="value" /> -Parameter ist ein <see cref="T:System.Security.Cryptography.Xml.DataReference" /> Objekt.  
+  
+ - oder -   
+  
+ Die <paramref name="value" /> -Parameter ist ein <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> Objekt.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.ReferenceList.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der <see cref="T:System.Security.Cryptography.Xml.ReferenceList" />-Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.ReferenceList.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> in zu suchende Objekt die <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Auflistung.</param>
+        <summary>Bestimmt, ob die <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Auflistung enthält einen bestimmten <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> Objekt befindet sich der <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Auflistung ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.ReferenceList.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" /> -Objekt, das das Ziel der aus kopierten Elemente ist die <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Objekt. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Objekt in ein Array, beginnend am angegebenen Arrayindex.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.ReferenceList.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Objekt.</summary>
+        <value>Die Anzahl der Elemente, die im <see cref="T:System.Security.Cryptography.Xml.ReferenceList" />-Objekt enthalten sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.ReferenceList.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator, der durchläuft eine <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Auflistung.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> -Objekt, das verwendet werden kann, durchlaufen eine <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Enumeratoren können die Daten in der Auflistung nur gelesen. Mit Enumeratoren können nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.ReferenceList.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> in zu suchende Objekt die <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Auflistung.</param>
+        <summary>Bestimmt den Index eines bestimmten Elements in der <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Auflistung.</summary>
+        <returns>Der Index des <paramref name="value" /> Wenn in der Auflistung gefunden wurde, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.ReferenceList.Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Wert</c> eingefügt werden soll.</param>
+        <param name="value">Ein <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> Objekt zum Einfügen in die <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Auflistung.</param>
+        <summary>Fügt eine <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> -Objekt in der <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Auflistung an der angegebenen Position.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="value" /> -Parameter ist ein <see cref="T:System.Security.Cryptography.Xml.DataReference" /> Objekt.  
+  
+ - oder -   
+  
+ Die <paramref name="value" /> -Parameter ist ein <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> Objekt.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.ReferenceList.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Zugriff auf die <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> -Objekt synchronisiert (threadsicher).</summary>
+        <value>
+          <see langword="true" />, wenn der Zugriff auf das <see cref="T:System.Security.Cryptography.Xml.ReferenceList" />-Objekt synchronisiert (threadsicher) ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.EncryptedReference Item (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Cryptography.Xml.EncryptedReference Item(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.ReferenceList.Item(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.EncryptedReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des der <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> zurückzugebenden Objekts.</param>
+        <summary>Gibt die <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> Objekt am angegebenen Index.</summary>
+        <returns>Die <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> Objekt am angegebenen Index.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemOf">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.EncryptedReference this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.EncryptedReference ItemOf(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.ReferenceList.ItemOf(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.EncryptedReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des der <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> zurückzugebenden Objekts.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> Objekt am angegebenen Index.</summary>
+        <value>Das <see cref="T:System.Security.Cryptography.Xml.ReferenceList" />-Objekt am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.ReferenceList.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> Objekt, das Aufheben der <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Auflistung.</param>
+        <summary>Entfernt das erste Vorkommen eines bestimmten <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> -Objekt aus der <see cref="T:System.Security.Cryptography.Xml.ReferenceList" /> Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.ReferenceList.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, der die <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> zu entfernende Objekt.</param>
+        <summary>Entfernt die <see cref="T:System.Security.Cryptography.Xml.DataReference" /> oder <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> Objekt am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.ReferenceList.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf das <see cref="T:System.Security.Cryptography.Xml.ReferenceList" />-Objekt synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf das <see cref="T:System.Security.Cryptography.Xml.ReferenceList" />-Objekt synchronisiert werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.ReferenceList.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IList.IsFixedSize" />.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Collections.IList" /> eine feste Größe aufweist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Security.Cryptography.Xml.ReferenceList>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.ReferenceList.System#Collections#IList#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IList.IsReadOnly" />.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Collections.IList" /> schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Security.Cryptography.Xml.ReferenceList>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.ReferenceList.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Elements, das abgerufen oder festgelegt werden soll.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IList.Item(System.Int32)" />.</summary>
+        <value>Das Element am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Security.Cryptography.Xml.ReferenceList>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kein gültiger Index in <see cref="T:System.Collections.IList" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

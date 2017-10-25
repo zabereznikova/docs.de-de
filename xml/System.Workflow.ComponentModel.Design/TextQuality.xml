@@ -1,0 +1,66 @@
+<Type Name="TextQuality" FullName="System.Workflow.ComponentModel.Design.TextQuality">
+  <TypeSignature Language="C#" Value="public enum TextQuality" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TextQuality extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.TextQuality" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Textrendereinstellungen für die AmbientTheme-Klasse an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Mithilfe von <xref:System.Workflow.ComponentModel.Design.TextQuality> können Benutzer bestimmen, ob für den auf der Workflowentwurfsoberfläche sowie für den für alle untergeordneten Designer angezeigten Text die Kantenglättung verwendet werden soll. Text mit Kantenglättung besitzt eine höhere Anzeigequalität, Text ohne Kantenglättung benötigt dagegen weniger Ressourcen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Aliased">
+      <MemberSignature Language="C#" Value="Aliased" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.Design.TextQuality Aliased = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.TextQuality.Aliased" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.TextQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für die Qualitätseinstellung des Umgebungstexts ist ohne Glättung festgelegt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AntiAliased">
+      <MemberSignature Language="C#" Value="AntiAliased" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.Design.TextQuality AntiAliased = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.TextQuality.AntiAliased" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.TextQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für die Qualitätseinstellung des Umgebungstexts ist mit Glättung festgelegt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

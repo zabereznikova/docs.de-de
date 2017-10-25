@@ -1,0 +1,160 @@
+<Type Name="RequiredAttribute" FullName="System.ComponentModel.DataAnnotations.RequiredAttribute">
+  <TypeSignature Language="C#" Value="public class RequiredAttribute : System.ComponentModel.DataAnnotations.ValidationAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RequiredAttribute extends System.ComponentModel.DataAnnotations.ValidationAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.RequiredAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.DataAnnotations.ValidationAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass ein Datenfeldwert erforderlich ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.DataAnnotations.RequiredAttribute> Attribut gibt an, dass wenn ein Feld in einem Formular überprüft wird, das Feld einen Wert enthalten muss. Eine Validierungsausnahme ausgelöst, wenn die Eigenschaft `null`, enthält eine leere Zeichenfolge (""), oder enthält nur Leerzeichen.  
+  
+> [!NOTE]
+>  Wenn die MVC Daten Modells oder einer Entität partielle Klasse ein Feld enthält, die mit Anmerkung versehen ist die <xref:System.ComponentModel.DataAnnotations.RequiredAttribute> -Attribut, aber die Seite enthält nicht die Eigenschaft, ein Fehler wird nicht ausgelöst. Die Überprüfung erfolgt nur für Felder, die an den Server gesendet werden.  
+  
+ Visual Studio-Projekt mit Quellcode ist zu diesem Thema steht zur Verfügung: [herunterladen](http://go.microsoft.com/fwlink/?linkid=158686).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.ComponentModel.DataAnnotations.RequiredAttribute> Attribut, um die Datenbank-Schema-Regel außer Kraft, die ein Feld "Daten" leer sein können. Das Beispiel führt die folgenden Schritte aus:  
+  
+-   Implementiert eine partielle Klasse für Metadaten und die zugehörigen Metadaten-Klasse.  
+  
+-   In der zugehörigen Metadaten-Klasse, es gilt die <xref:System.ComponentModel.DataAnnotations.RequiredAttribute> -Attribut, das gibt die folgenden Anforderungen:  
+  
+    -   Die Daten-Feld "Titel" darf nicht leer sein. Bei einem Überprüfungsfehler wird der Code im Beispiel wird eine Validierungsausnahme ausgelöst, und zeigt eine Fehlermeldung an. Die Fehlermeldung wird angegeben. zum Zeitpunkt, die das Attribut, um das Feld "Daten angewendet wird".  
+  
+    -   Der MiddleName-Feld "Daten" darf nicht leer sein. Bei einem Überprüfungsfehler wird der Code im Beispiel wird eine Validierungsausnahme ausgelöst, und zeigt eine Fehlermeldung an.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.RequiredAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.RequiredAttribute/CS/Customer.cs#1)]
+ [!code-vb[System.ComponentModel.DataAnnotations.RequiredAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.RequiredAttribute/VB/Customer.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequiredAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DataAnnotations.RequiredAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung des <xref:System.ComponentModel.DataAnnotations.RequiredAttribute.%23ctor%2A>-Konstruktors veranschaulicht. Wenn die Validierung fehlschlägt, zeigt das Beispiel eine Validierungsfehlermeldung angezeigt, die durch dynamische Daten bereitgestellt wird.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.RequiredAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.RequiredAttribute/CS/Customer.cs#3)]
+ [!code-vb[System.ComponentModel.DataAnnotations.RequiredAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.RequiredAttribute/VB/Customer.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowEmptyStrings">
+      <MemberSignature Language="C#" Value="public bool AllowEmptyStrings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowEmptyStrings" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.RequiredAttribute.AllowEmptyStrings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine leere Zeichenfolge zulässig ist.</summary>
+        <value>
+          <see langword="true" />Wenn eine leere Zeichenfolge zulässig ist; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Festlegung <xref:System.ComponentModel.DataAnnotations.RequiredAttribute.AllowEmptyStrings%2A> auf `true` für ein Datenfeld Dynamic Data führt keine Überprüfung und transformiert die leere Zeichenfolge, die eine `null` Wert. Dieser Wert wird dann an die Datenbank übergeben.  
+  
+ Wenn die Datenbank nicht zulässig ist `null` Werte, löst dies einen Fehler. Sie müssen auch festlegen, um diesen Fehler zu vermeiden, die <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.ConvertEmptyStringToNull%2A> auf `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public override bool IsValid (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsValid(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.RequiredAttribute.IsValid(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Datenfeld zu überprüfende Wert.</param>
+        <summary>Überprüft, dass der Wert des Felds erforderlichen Daten nicht leer ist.</summary>
+        <returns>
+          <see langword="true" /> wenn die Validierung erfolgreich ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert eine leere Zeichenfolge ist, gibt die Methode `false` und Überprüfung ein Fehler wird angezeigt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">Der Wert des Felds wurde <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

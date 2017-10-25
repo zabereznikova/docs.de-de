@@ -1,0 +1,766 @@
+<Type Name="SystemEvents" FullName="Microsoft.Win32.SystemEvents">
+  <TypeSignature Language="C#" Value="public sealed class SystemEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SystemEvents extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.SystemEvents" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Zugriff auf die System-ereignisbenachrichtigungen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.Win32.SystemEvents> Klasse bietet die Möglichkeit, die auf bestimmte Systemereignisse zu reagieren.  
+  
+ Wenn ein Systemereignis ausgelöst wird, werden alle Delegaten, der dem Ereignis zugeordnet mithilfe von Threads, der überwacht für Systemereignisse aufgerufen. Stellen Sie daher alle Aufrufe aus der Ereignis-Handler-threadsicher. Wenn Sie eine Systemereignis aufrufen, die nicht als Member dieser Klasse verfügbar gemacht wird, können Sie die <xref:Microsoft.Win32.SystemEvents.InvokeOnEventsThread%2A> Methode.  
+  
+> [!CAUTION]
+>  Führen Sie keine zeitaufwändigen Verarbeitung auf dem Thread, der einen System-Ereignishandler auslöst, da es möglicherweise, dass andere Anwendungen funktioniert verhindern.  
+  
+> [!NOTE]
+>  Möglicherweise nicht auf bestimmte Systemereignisse ausgegeben [!INCLUDE[windowsver](~/includes/windowsver-md.md)]. Stellen Sie sicher, dass die Anwendung erwartungsgemäß auf [!INCLUDE[windowsver](~/includes/windowsver-md.md)].  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Beispiele. Im erste Beispiel wird gezeigt, wie in einer normalen Anwendung Systemereignisse verwenden und im zweite Beispiel wird gezeigt, wie Systemereignisse in einem Windowsdienst zu verwenden.  
+  
+ **Beispiel 1**  
+  
+ Im folgenden Codebeispiel wird registriert Interesse an bestimmte Systemereignisse und wartet dann, bis eines dieser Ereignisse auftreten. Die dargestellte Ausgabe tritt auf, wenn der Benutzer die Bildschirmauflösung ändert.  
+  
+ [!code-cpp[SystemEvents#1](~/samples/snippets/cpp/VS_Snippets_Winforms/SystemEvents/cpp/SystemEvents.cpp#1)]
+ [!code-csharp[SystemEvents#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemEvents/CS/SystemEvents.cs#1)]
+ [!code-vb[SystemEvents#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemEvents/VB/SystemEvents.vb#1)]  
+  
+ **Beispiel 2**  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, einen sehr einfachen Windows-Dienst, der verarbeitet die <xref:Microsoft.Win32.SystemEvents.TimeChanged> und <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> Ereignisse. Das Beispiel enthält einen Dienst namens `SimpleService`, ein Formular mit dem Namen `HiddenForm`, und einen Installer. Das Formular stellt die Nachrichtenschleife, die Ereignisse im System erforderlich ist.  
+  
+> [!NOTE]
+>  Dienste müssen nicht Nachrichtenschleifen, es sei denn, sie zulässig sind, mit dem Desktop interagieren. Wenn die Nachrichtenschleife nicht von einem ausgeblendeten Formular bereitgestellt wird, wie in diesem Beispiel muss der Dienst unter dem lokalen Systemkonto ausgeführt werden und manuelle Eingriffe ist erforderlich, um die Interaktion mit dem Desktop zu aktivieren. D. h. der Administrator muss manuell überprüfen der **Datenaustausch zwischen Dienst und Desktop zulassen** Kontrollkästchen auf der **anmelden** Registerkarte im Dialogfeld Eigenschaften von Service. In diesem Fall wird eine Nachrichtenschleife automatisch bereitgestellt. Diese Option steht nur, wenn der Dienst unter dem lokalen Systemkonto ausgeführt wird. Interaktion mit dem Desktop kann programmgesteuert aktiviert werden.  
+  
+ Starten des Diensts in diesem Beispiel wird einen Thread, der eine Instanz des ausgeführt `HiddenForm`. Die Ereignisse werden verknüpft und in das Formular behandelt. Die Ereignisse müssen eingebunden werden, in das Load-Ereignis des Formulars, um sicherzustellen, dass das Formular zuerst vollständig geladen wird; Andernfalls werden die Ereignisse nicht ausgelöst werden.  
+  
+> [!NOTE]
+>  Das Beispiel enthält alle erforderlichen Code, einschließlich Formular Initialisierungscode in der Regel durch generiert [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Designer. Wenn Sie Ihren Dienst im entwickeln [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], können Sie die zweite partielle Klasse weglassen und die **Eigenschaften** Fenster aus, um die Höhe und Breite des Formulars auf 0 (null), der die Rahmenart, ausgeblendete festgelegt <xref:System.Windows.Forms.FormBorderStyle?displayProperty=nameWithType>, und das Fensterstatus <xref:System.Windows.Forms.FormWindowState?displayProperty=nameWithType>.  
+  
+ So führen Sie das Beispiel aus:  
+  
+1.  Kompilieren Sie den Code über die Befehlszeile an. Der Name, mit denen Sie die Quelldatei ist nicht wichtig.  
+  
+2.  Installieren Sie den Dienst über die Befehlszeile mithilfe der [Installutil.exe (Installer-Tool)](~/docs/framework/tools/installutil-exe-installer-tool.md) Hilfsprogramm. Beispielsweise `InstallUtil example.exe` ist der Name der Quelldatei `example.cs` oder `example.vb`. Sie müssen ein Administrator zum Installieren des Diensts sein.  
+  
+3.  Verwenden Sie die Dienstekonsole, zum Starten des Diensts.  
+  
+4.  Ändern der Systemzeit oder benutzereinstellungen, z. B. Mauseigenschaften ändern.  
+  
+5.  Zeigen Sie die Nachrichten in der **Anwendung** Kategorie der Ereignisanzeige.  
+  
+6.  Verwenden Sie die Dienstekonsole, zum Beenden des Diensts.  
+  
+7.  Deinstallieren Sie den Dienst über die Befehlszeile mithilfe der `/u` Option. Beispielsweise `InstallUtil /u example.exe`.  
+  
+ [!code-csharp[ManagedWindowsService#1](~/samples/snippets/csharp/VS_Snippets_CLR/ManagedWindowsService/cs/source.cs#1)]
+ [!code-vb[ManagedWindowsService#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ManagedWindowsService/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordneten Zustand:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateTimer">
+      <MemberSignature Language="C#" Value="public static IntPtr CreateTimer (int interval);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native int CreateTimer(int32 interval) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SystemEvents.CreateTimer(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="interval" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="interval">Gibt das Intervall zwischen den Timer-Benachrichtigungen in Millisekunden.</param>
+        <summary>Erstellt einen neue Fensterzeitgeber Fenster Ereignisse System zugeordnet.</summary>
+        <returns>Die ID des neuen Zeitgebers.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Das Intervall ist kleiner als oder gleich 0 (null).</exception>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch zum Erstellen von einem Systemthread für Ereignisse im Fenster war nicht erfolgreich, oder der Versuch zum Erstellen des Zeitgebers war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplaySettingsChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler DisplaySettingsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DisplaySettingsChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.DisplaySettingsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer die Anzeigeeinstellungen ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Da dies ein statisches Ereignis ist, müssen Sie Ihre Ereignishandler trennen, wenn Ihre Anwendung verfügbar gemacht wird, oder von Arbeitsspeicherverlusten führt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Überwachen der <xref:Microsoft.Win32.SystemEvents.DisplaySettingsChanged> Ereignis. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+ [!code-cpp[SystemEvents#2](~/samples/snippets/cpp/VS_Snippets_Winforms/SystemEvents/cpp/SystemEvents.cpp#2)]
+ [!code-csharp[SystemEvents#2](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemEvents/CS/SystemEvents.cs#2)]
+ [!code-vb[SystemEvents#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemEvents/VB/SystemEvents.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch, einen Systemthread für Ereignisse im Fenster zu erstellen, war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplaySettingsChanging">
+      <MemberSignature Language="C#" Value="public static event EventHandler DisplaySettingsChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DisplaySettingsChanging" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.DisplaySettingsChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Ändern der Anzeigeeinstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Da dies ein statisches Ereignis ist, müssen Sie Ihre Ereignishandler trennen, wenn Ihre Anwendung verfügbar gemacht wird, oder von Arbeitsspeicherverlusten führt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch, einen Systemthread für Ereignisse im Fenster zu erstellen, war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EventsThreadShutdown">
+      <MemberSignature Language="C#" Value="public static event EventHandler EventsThreadShutdown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler EventsThreadShutdown" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.EventsThreadShutdown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor der Thread, der für Systemereignisse überwacht beendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, als der Thread, der für Systemereignisse überwacht beendet ist. Systemereignisdelegaten werden aufgerufen, mit dem Thread, der Systemereignisse überwacht.  
+  
+> [!CAUTION]
+>  Da dies ein statisches Ereignis ist, müssen Sie Ihre Ereignishandler trennen, wenn Ihre Anwendung verfügbar gemacht wird, oder von Arbeitsspeicherverlusten führt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch, einen Systemthread für Ereignisse im Fenster zu erstellen, war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InstalledFontsChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler InstalledFontsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler InstalledFontsChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.InstalledFontsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer Schriftarten fügt oder Schriftarten aus dem System entfernt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Da dies ein statisches Ereignis ist, müssen Sie Ihre Ereignishandler trennen, wenn Ihre Anwendung verfügbar gemacht wird, oder von Arbeitsspeicherverlusten führt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch, einen Systemthread für Ereignisse im Fenster zu erstellen, war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeOnEventsThread">
+      <MemberSignature Language="C#" Value="public static void InvokeOnEventsThread (Delegate method);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InvokeOnEventsThread(class System.Delegate method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SystemEvents.InvokeOnEventsThread(System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="method">Ein Delegat aufgerufen wird, mit dem Thread, der für Systemereignisse überwacht werden soll.</param>
+        <summary>Ruft den angegebenen Delegaten mit dem Thread, der Systemereignisse überwacht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode jedes Mal, die Sie benötigen, um ein Systemereignis zu behandeln, die andernfalls nicht von verfügbar gemacht wird die <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+ Wenn Sie diese Methode aufrufen, wird der angegebene Delegaten vom Thread aufgerufen werden, die Ihre Anwendung verwendet, um die Ereignisse im System zu verarbeiten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch, einen Systemthread für Ereignisse im Fenster zu erstellen, war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KillTimer">
+      <MemberSignature Language="C#" Value="public static void KillTimer (IntPtr timerId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void KillTimer(native int timerId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SystemEvents.KillTimer(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timerId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="timerId">Die ID des Zeitgebers, der beendet werden soll.</param>
+        <summary>Beendet den Zeitgeber, die von der angegebenen Id angegeben.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch zum Erstellen von einem Systemthread für Ereignisse im Fenster war nicht erfolgreich, oder der Versuch, den Zeitgeber beendet war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LowMemory">
+      <MemberSignature Language="C#" Value="public static event EventHandler LowMemory;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LowMemory" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.LowMemory" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das System außerhalb des verfügbaren RAM-Arbeitsspeichers ausgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis dient als Wrapper für die WM_COMPACTING-Meldung. Diese Nachricht wird an alle Fenster auf oberster Ebene gesendet, wenn das System erkennt, dass mehr als 12,5 Prozent der Systemzeit über einen Zeitraum von 30 - 60 Sekunden aufgewendet wird durch das Komprimieren Arbeitsspeicher. Dies gibt an, dass der Systemspeicher gering ist.  
+  
+> [!NOTE]
+>  Dieses Ereignis wird nur ausgelöst, wenn die Meldungsverteilschleife ausgeführt wird. In einem Windowsdienst wird dieses Ereignis nicht ausgelöst, es sei denn, ein ausgeblendetes Formular verwendet wird oder die Meldungsverteilschleife manuell gestartet werden. Ein Codebeispiel, das Systemereignisse zu behandeln, indem Sie ein ausgeblendetes Formular in einem Windowsdienst veranschaulicht, finden Sie unter der <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+> [!CAUTION]
+>  Da dies ein statisches Ereignis ist, müssen Sie Ihre Ereignishandler trennen, wenn Ihre Anwendung verfügbar gemacht wird, oder von Arbeitsspeicherverlusten führt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch, einen Systemthread für Ereignisse im Fenster zu erstellen, war nicht erfolgreich.</exception>
+        <block subset="none" type="usage">
+          <para>Diese Meldung dient nur für Kompatibilität mit 16-Bit-Windows-basierten Anwendungen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PaletteChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler PaletteChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaletteChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.PaletteChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer in einer Anwendung wechselt, die eine andere Palette verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Dieses Ereignis wird nur ausgelöst, wenn die Meldungsverteilschleife ausgeführt wird. In einem Windowsdienst wird dieses Ereignis nicht ausgelöst, es sei denn, ein ausgeblendetes Formular verwendet wird oder die Meldungsverteilschleife manuell gestartet werden. Ein Codebeispiel, das Systemereignisse zu behandeln, indem Sie ein ausgeblendetes Formular in einem Windowsdienst veranschaulicht, finden Sie unter der <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+> [!CAUTION]
+>  Da dies ein statisches Ereignis ist, müssen Sie Ihre Ereignishandler trennen, wenn Ihre Anwendung verfügbar gemacht wird, oder von Arbeitsspeicherverlusten führt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Überwachen der <xref:Microsoft.Win32.SystemEvents.PaletteChanged> Ereignis. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+ [!code-cpp[SystemEvents#2](~/samples/snippets/cpp/VS_Snippets_Winforms/SystemEvents/cpp/SystemEvents.cpp#2)]
+ [!code-csharp[SystemEvents#2](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemEvents/CS/SystemEvents.cs#2)]
+ [!code-vb[SystemEvents#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemEvents/VB/SystemEvents.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch, einen Systemthread für Ereignisse im Fenster zu erstellen, war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerModeChanged">
+      <MemberSignature Language="C#" Value="public static event Microsoft.Win32.PowerModeChangedEventHandler PowerModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Win32.PowerModeChangedEventHandler PowerModeChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.PowerModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.PowerModeChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer angehalten oder fortgesetzt das System wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Dieses Ereignis wird nur ausgelöst, wenn die Meldungsverteilschleife ausgeführt wird. In einem Windowsdienst wird dieses Ereignis nicht ausgelöst, es sei denn, ein ausgeblendetes Formular verwendet wird oder die Meldungsverteilschleife manuell gestartet werden. Ein Codebeispiel, das Systemereignisse zu behandeln, indem Sie ein ausgeblendetes Formular in einem Windowsdienst veranschaulicht, finden Sie unter der <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+> [!CAUTION]
+>  Da dies ein statisches Ereignis ist, müssen Sie Ihre Ereignishandler trennen, wenn Ihre Anwendung verfügbar gemacht wird, oder von Arbeitsspeicherverlusten führt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch, einen Systemthread für Ereignisse im Fenster zu erstellen, war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionEnded">
+      <MemberSignature Language="C#" Value="public static event Microsoft.Win32.SessionEndedEventHandler SessionEnded;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Win32.SessionEndedEventHandler SessionEnded" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.SessionEnded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionEndedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer abmelden oder durch das System heruntergefahren wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Dieses Ereignis wird nur ausgelöst, wenn die Meldungsverteilschleife ausgeführt wird. In einem Windowsdienst wird dieses Ereignis nicht ausgelöst, es sei denn, ein ausgeblendetes Formular verwendet wird oder die Meldungsverteilschleife manuell gestartet werden. Ein Codebeispiel, das Systemereignisse zu behandeln, indem Sie ein ausgeblendetes Formular in einem Windowsdienst veranschaulicht, finden Sie unter der <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+> [!CAUTION]
+>  Da dies ein statisches Ereignis ist, müssen Sie Ihre Ereignishandler trennen, wenn Ihre Anwendung verfügbar gemacht wird, oder von Arbeitsspeicherverlusten führt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch, einen Systemthread für Ereignisse im Fenster zu erstellen, war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionEnding">
+      <MemberSignature Language="C#" Value="public static event Microsoft.Win32.SessionEndingEventHandler SessionEnding;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Win32.SessionEndingEventHandler SessionEnding" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.SessionEnding" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionEndingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer versucht, sich abmelden, oder das System heruntergefahren wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein abbrechbares Ereignis. Festlegen der <xref:Microsoft.Win32.SessionEndingEventArgs.Cancel%2A> Eigenschaft `true` fordert an, dass die Sitzung wird weiterhin ausgeführt. Es bietet keine Garantie, die die Sitzung nicht beendet wird.  
+  
+ Bei Verwendung von <xref:Microsoft.Win32.SystemEvents.SessionEnding> in einem Windows Form ein System abmelden oder einen Neustart zu erkennen, besteht keine deterministische Art und Weise zu entscheiden, ob die <xref:System.Windows.Forms.Form.Closing> Ereignis wird ausgelöst, bevor Sie dieses Ereignis.  
+  
+ Wenn Sie bestimmte Tasks vor dem ausführen möchten <xref:System.Windows.Forms.Form.Closing> ist ausgelöst werden, müssen Sie sicherstellen, dass <xref:Microsoft.Win32.SystemEvents.SessionEnding> ausgelöst wird, bevor Sie <xref:System.Windows.Forms.Form.Closing>. Zu diesem Zweck müssen Sie zum Abfangen der `WM_QUERYENDSESSION` in der Form durch Überschreiben der `WndProc` Funktion.  In diesem Beispiel wird veranschaulicht, wie dies.  
+  
+```vb  
+Private Shared WM_QUERYENDSESSION As Integer = &H11  
+ Private Shared systemShutdown As Boolean = False  
+ Protected Overrides Sub WndProc(ByRef m As System.Windows.Forms.Message)  
+     If m.Msg = WM_QUERYENDSESSION Then  
+         MessageBox.Show("queryendsession: this is a logoff, shutdown, or reboot")  
+         systemShutdown = True  
+     End If  
+     ' If this is WM_QUERYENDSESSION, the closing event should be raised in the base WndProc.  
+     MyBase.WndProc(m)  
+ End Sub 'WndProc   
+ Private Sub Form1_Closing(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing  
+     If (systemShutdown) Then  
+     ' Reset the variable because the user might cancel the shutdown.  
+         systemShutdown = False  
+         If (System.Windows.Forms.DialogResult.Yes = _  
+                 MessageBox.Show("My application", "Do you want to save your work before logging off?", MessageBoxButtons.YesNo)) Then  
+                 e.Cancel = True  
+         Else  
+                 e.Cancel = False  
+         End If  
+     End If  
+ End Sub  
+  
+```  
+  
+```csharp  
+private static int WM_QUERYENDSESSION = 0x11;  
+private static bool systemShutdown = false;  
+protected override void WndProc(ref System.Windows.Forms.Message m)  
+{  
+    if (m.Msg==WM_QUERYENDSESSION)  
+    {  
+        MessageBox.Show("queryendsession: this is a logoff, shutdown, or reboot");  
+        systemShutdown = true;  
+    }  
+  
+    // If this is WM_QUERYENDSESSION, the closing event should be  
+    // raised in the base WndProc.  
+    base.WndProc(ref m);  
+  
+} //WndProc   
+  
+private void Form1_Closing(  
+    System.Object sender,   
+    System.ComponentModel.CancelEventArgs e)  
+{  
+    if (systemShutdown)  
+        // Reset the variable because the user might cancel the   
+        // shutdown.  
+    {  
+        systemShutdown = false;  
+        if (DialogResult.Yes==MessageBox.Show("My application",   
+            "Do you want to save your work before logging off?",   
+            MessageBoxButtons.YesNo))  
+        {  
+            e.Cancel = true;  
+        }  
+        else  
+        {  
+            e.Cancel = false;  
+        }  
+    }  
+}  
+```  
+  
+> [!IMPORTANT]
+>  Konsolenanwendungen keine Auslösen der <xref:Microsoft.Win32.SystemEvents.SessionEnding> Ereignis.  
+  
+> [!NOTE]
+>  Dieses Ereignis wird nur ausgelöst, wenn die Meldungsverteilschleife ausgeführt wird. In einem Windowsdienst wird dieses Ereignis nicht ausgelöst, es sei denn, ein ausgeblendetes Formular verwendet wird oder die Meldungsverteilschleife manuell gestartet werden. Ein Codebeispiel, das Systemereignisse zu behandeln, indem Sie ein ausgeblendetes Formular in einem Windowsdienst veranschaulicht, finden Sie unter der <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+> [!CAUTION]
+>  Da dies ein statisches Ereignis ist, müssen Sie Ihre Ereignishandler trennen, wenn Ihre Anwendung verfügbar gemacht wird, oder von Arbeitsspeicherverlusten führt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch, einen Systemthread für Ereignisse im Fenster zu erstellen, war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionSwitch">
+      <MemberSignature Language="C#" Value="public static event Microsoft.Win32.SessionSwitchEventHandler SessionSwitch;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Win32.SessionSwitchEventHandler SessionSwitch" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.SessionSwitch" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionSwitchEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn es sich bei dem derzeit angemeldeten Benutzers geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Dieses Ereignis wird nur ausgelöst, wenn die Meldungsverteilschleife ausgeführt wird. In einem Windowsdienst wird dieses Ereignis nicht ausgelöst, es sei denn, ein ausgeblendetes Formular verwendet wird oder die Meldungsverteilschleife manuell gestartet werden. Ein Codebeispiel, das Systemereignisse zu behandeln, indem Sie ein ausgeblendetes Formular in einem Windowsdienst veranschaulicht, finden Sie unter der <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+> [!CAUTION]
+>  Da dies ein statisches Ereignis ist, müssen Sie Ihre Ereignishandler trennen, wenn Ihre Anwendung verfügbar gemacht wird, oder von Arbeitsspeicherverlusten führt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch, einen Systemthread für Ereignisse im Fenster zu erstellen, war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler TimeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TimeChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.TimeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer die Zeit auf der Systemzeit ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Dieses Ereignis wird nur ausgelöst, wenn die Meldungsverteilschleife ausgeführt wird. In einem Windowsdienst wird dieses Ereignis nicht ausgelöst, es sei denn, ein ausgeblendetes Formular verwendet wird oder die Meldungsverteilschleife manuell gestartet werden. Ein Codebeispiel, das Systemereignisse zu behandeln, indem Sie ein ausgeblendetes Formular in einem Windowsdienst veranschaulicht, finden Sie unter der <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+> [!CAUTION]
+>  Da dies ein statisches Ereignis ist, müssen Sie Ihre Ereignishandler trennen, wenn Ihre Anwendung verfügbar gemacht wird, oder von Arbeitsspeicherverlusten führt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch, einen Systemthread für Ereignisse im Fenster zu erstellen, war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimerElapsed">
+      <MemberSignature Language="C#" Value="public static event Microsoft.Win32.TimerElapsedEventHandler TimerElapsed;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Win32.TimerElapsedEventHandler TimerElapsed" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.TimerElapsed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.TimerElapsedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Windows-Zeitgeberintervall abgelaufen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Dieses Ereignis wird nur ausgelöst, wenn die Meldungsverteilschleife ausgeführt wird. In einem Windowsdienst wird dieses Ereignis nicht ausgelöst, es sei denn, ein ausgeblendetes Formular verwendet wird oder die Meldungsverteilschleife manuell gestartet werden. Ein Codebeispiel, das Systemereignisse zu behandeln, indem Sie ein ausgeblendetes Formular in einem Windowsdienst veranschaulicht, finden Sie unter der <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+> [!CAUTION]
+>  Da dies ein statisches Ereignis ist, müssen Sie Ihre Ereignishandler trennen, wenn Ihre Anwendung verfügbar gemacht wird, oder von Arbeitsspeicherverlusten führt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch, einen Systemthread für Ereignisse im Fenster zu erstellen, war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UserPreferenceChanged">
+      <MemberSignature Language="C#" Value="public static event Microsoft.Win32.UserPreferenceChangedEventHandler UserPreferenceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Win32.UserPreferenceChangedEventHandler UserPreferenceChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.UserPreferenceChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.UserPreferenceChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine benutzereinstellung für die geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Dieses Ereignis wird nur ausgelöst, wenn die Meldungsverteilschleife ausgeführt wird. In einem Windowsdienst wird dieses Ereignis nicht ausgelöst, es sei denn, ein ausgeblendetes Formular verwendet wird oder die Meldungsverteilschleife manuell gestartet werden. Ein Codebeispiel, das Systemereignisse zu behandeln, indem Sie ein ausgeblendetes Formular in einem Windowsdienst veranschaulicht, finden Sie unter der <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+> [!CAUTION]
+>  Da dies ein statisches Ereignis ist, müssen Sie Ihre Ereignishandler trennen, wenn Ihre Anwendung verfügbar gemacht wird, oder von Arbeitsspeicherverlusten führt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch, einen Systemthread für Ereignisse im Fenster zu erstellen, war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UserPreferenceChanging">
+      <MemberSignature Language="C#" Value="public static event Microsoft.Win32.UserPreferenceChangingEventHandler UserPreferenceChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Win32.UserPreferenceChangingEventHandler UserPreferenceChanging" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.UserPreferenceChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.UserPreferenceChangingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich einer benutzereinstellung ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Dieses Ereignis wird nur ausgelöst, wenn die Meldungsverteilschleife ausgeführt wird. In einem Windowsdienst wird dieses Ereignis nicht ausgelöst, es sei denn, ein ausgeblendetes Formular verwendet wird oder die Meldungsverteilschleife manuell gestartet werden. Ein Codebeispiel, das Systemereignisse zu behandeln, indem Sie ein ausgeblendetes Formular in einem Windowsdienst veranschaulicht, finden Sie unter der <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+> [!CAUTION]
+>  Da dies ein statisches Ereignis ist, müssen Sie Ihre Ereignishandler trennen, wenn Ihre Anwendung verfügbar gemacht wird, oder von Arbeitsspeicherverlusten führt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Überwachen der <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> Ereignis. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:Microsoft.Win32.SystemEvents> Klasse.  
+  
+ [!code-cpp[SystemEvents#2](~/samples/snippets/cpp/VS_Snippets_Winforms/SystemEvents/cpp/SystemEvents.cpp#2)]
+ [!code-csharp[SystemEvents#2](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemEvents/CS/SystemEvents.cs#2)]
+ [!code-vb[SystemEvents#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemEvents/VB/SystemEvents.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">System-ereignisbenachrichtigungen werden im aktuellen Kontext nicht unterstützt. Server-Prozesse möglicherweise ereignisbenachrichtigungen globalen System beispielsweise nicht unterstützt.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Der Versuch, einen Systemthread für Ereignisse im Fenster zu erstellen, war nicht erfolgreich.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

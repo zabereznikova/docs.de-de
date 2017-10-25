@@ -1,0 +1,406 @@
+<Type Name="VisualStateManager" FullName="System.Windows.VisualStateManager">
+  <TypeSignature Language="C#" Value="public class VisualStateManager : System.Windows.DependencyObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VisualStateManager extends System.Windows.DependencyObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.VisualStateManager" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.DependencyObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet die Zustände und die Logik für den Übergang zwischen Zuständen für Steuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.VisualStateManager> ermöglicht es Ihnen, Zustände für ein Steuerelement, das die Darstellung eines Steuerelements angeben, wenn es in einem bestimmten Zustand befindet, und wenn ein Steuerelement Zustände ändert. Angenommen, ein <xref:System.Windows.Controls.Button> möglicherweise eine etwas andere Darstellung aus, wenn sie als gedrückt wird, wenn er nicht gedrückt wird. Mit zwei Zuständen, die die <xref:System.Windows.Controls.Button> definiert entsprechen, wenn es gedrückt wird (`"Pressed"`) und wenn es keine ist (`"Normal"`). Die Darstellung eines Steuerelements, wenn es in einem Zustand befindet, wird durch definiert eine <xref:System.Windows.VisualState>. Ein <xref:System.Windows.VisualState> enthält eine Auflistung von <xref:System.Windows.Media.Animation.Storyboard> Objekten, die angeben, wie die Darstellung des Steuerelements ändert, wenn das Steuerelement in diesem Zustand befindet. Sie können visuelle Zustände auf ein Steuerelement hinzufügen, indem die `VisualStateManager.VisualStateGroups` angefügte Eigenschaft für das Steuerelement. Jede <xref:System.Windows.VisualStateGroup> enthält eine Auflistung von <xref:System.Windows.VisualState> Objekte, die sich gegenseitig ausschließende sind. D. h. das Steuerelement ist immer in genau einem Zustand, der in den einzelnen <xref:System.Windows.VisualStateGroup>.  
+  
+ Die <xref:System.Windows.VisualStateManager> auch können Sie angeben, wenn ein Steuerelement in einem bestimmten Zustand eintritt. Die Methode, die Änderung seines Zustands aufgerufen werden soll, hängt von Ihrem Szenario ab. Wenn Sie ein Steuerelement erstellen, verwendet die <xref:System.Windows.VisualStateManager> in seiner <xref:System.Windows.Controls.ControlTemplate>, rufen Sie die <xref:System.Windows.VisualStateManager.GoToState%2A> Methode. Weitere Informationen über das Erstellen, bei denen Steuerelementen die <xref:System.Windows.VisualStateManager>, finden Sie unter [erstellen ein Steuerelement verfügt, eine anpassbare Darstellung](~/docs/framework/wpf/controls/creating-a-control-that-has-a-customizable-appearance.md). Bei Verwendung von der <xref:System.Windows.VisualStateManager> außerhalb von eine <xref:System.Windows.Controls.ControlTemplate> (z. B. bei Verwendung eine <xref:System.Windows.VisualStateManager> in eine <xref:System.Windows.Controls.UserControl> oder in ein einzelnes Element), rufen Sie die <xref:System.Windows.VisualStateManager.GoToElementState%2A> Methode. In beiden Fällen die <xref:System.Windows.VisualStateManager> führt die Logik, die erforderlich sind, entsprechend starten und beenden die Storyboards, die dem betreffenden Zustand zugeordnet sind. Nehmen wir beispielsweise an, dass ein Steuerelement die Zustände definiert `State1` und `State2`, von denen jeder ein Storyboard zugeordnet wurde. Wenn das Steuerelement in `State1` und übergeben Sie `State2` auf <xref:System.Windows.VisualStateManager.GoToState%2A> oder <xref:System.Windows.VisualStateManager.GoToElementState%2A>, <xref:System.Windows.VisualStateManager> startet das Storyboard im `State2` und beendet das Storyboard in `State1`.  
+  
+ Steuerelemente, die in enthaltenen [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] verwenden die <xref:System.Windows.VisualStateManager> visuelle Zustände zu ändern. Beim Erstellen einer <xref:System.Windows.Controls.ControlTemplate> für ein Steuerelement, das enthalten ist [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], können Sie hinzufügen <xref:System.Windows.VisualState> Objekte an des Steuerelements <xref:System.Windows.Controls.ControlTemplate> an die Darstellung des Steuerelements in einem bestimmten Zustand befinden. Um die Namen der visuellen Zustände für die Steuerelemente zu suchen, die in enthaltenen [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], finden Sie unter [Steuerelementstile und Vorlagen](~/docs/framework/wpf/controls/control-styles-and-templates.md). Definieren Sie das Steuerelement Logik behandelt, die sich im Übergang zwischen Zuständen an, damit Sie nicht benötigen, nichts zu tun außer der <xref:System.Windows.VisualState> Objekte in der neuen <xref:System.Windows.Controls.ControlTemplate>. Weitere Informationen über das Erstellen von Steuerelementvorlagen für vorhandene Steuerelemente finden Sie unter [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+ Wenn Sie Ihre eigene Logik für den Übergang zwischen Zuständen implementieren möchten, müssen Sie erben von <xref:System.Windows.VisualStateManager>, überschreiben die <xref:System.Windows.VisualStateManager.GoToStateCore%2A> -Methode, und legen die <xref:System.Windows.VisualStateManager.CustomVisualStateManager%2A?displayProperty=nameWithType> -Eigenschaft auf das Steuerelement, das die benutzerdefinierte Logik verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Shapes.Rectangle> und fügt eine <xref:System.Windows.VisualStateGroup> mit dem Namen `CommonStates` auf die `VisualStateManager.VisualStatesGroups` -Eigenschaft. Im Beispiel definiert die `MouseOver` und `Normal` <xref:System.Windows.VisualState> Objekte in der `CommonStates` <xref:System.Windows.VisualStateGroup>. Wenn der Benutzer den Mauszeiger über die <xref:System.Windows.Shapes.Rectangle>, er wechselt von Rot, Grün eine halbe Sekunde. Wenn der Benutzer die Maus von dem Rechteck weg bewegt die <xref:System.Windows.Controls.Grid> sofort zu rot zurück. Beachten Sie, dass die `Normal` Status ist nicht definiert. eine <xref:System.Windows.Media.Animation.Storyboard>. Ein <xref:System.Windows.Media.Animation.Storyboard> ist nicht erforderlich, da bei der <xref:System.Windows.Shapes.Rectangle> Übergang von der `MouseOver` Zustands, in der `Normal` Zustand, der <xref:System.Windows.Media.Animation.Storyboard> für `MouseOver` wird beendet und die <xref:System.Windows.Media.SolidColorBrush.Color%2A> -Eigenschaft für die <xref:System.Windows.Media.SolidColorBrush> gibt in Rot.  
+  
+ [!code-xaml[VSMCustomControl#VSMNoTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#vsmnotemplate)]  
+  
+ Das folgende Beispiel zeigt die Ereignishandler, die im vorherigen Beispiel und Aufrufe definiert ist die <xref:System.Windows.VisualStateManager.GoToElementState%2A> Methode für den Übergang zwischen Zuständen. Das Rechteck im vorherigen Beispiel wurde Teil einer <xref:System.Windows.Controls.ControlTemplate>, müsste im Beispiel zum Aufrufen der <xref:System.Windows.VisualStateManager.GoToState%2A> Methode.  
+  
+ [!code-csharp[VSMCustomControl#GoToElementState](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml.cs#gotoelementstate)]
+ [!code-vb[VSMCustomControl#GoToElementState](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/window1.xaml.vb#gotoelementstate)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VisualStateManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.VisualStateManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.VisualStateManager" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomVisualStateManagerProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CustomVisualStateManagerProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CustomVisualStateManagerProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.VisualStateManager.CustomVisualStateManagerProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.VisualStateManager.CustomVisualStateManager" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomVisualStateManager">
+      <MemberSignature Language="C#" Value="public static System.Windows.VisualStateManager GetCustomVisualStateManager (System.Windows.FrameworkElement obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.VisualStateManager GetCustomVisualStateManager(class System.Windows.FrameworkElement obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.VisualStateManager.GetCustomVisualStateManager(System.Windows.FrameworkElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.VisualStateManager</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Windows.FrameworkElement" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Element zum Abrufen der <see cref="P:System.Windows.VisualStateManager.CustomVisualStateManager" /> angefügte Eigenschaft aus.</param>
+        <summary>Ruft die <see cref="P:System.Windows.VisualStateManager.CustomVisualStateManager" /> -Eigenschaft.</summary>
+        <returns>Der visuellen Zustands-Manager, der zwischen den Status eines Steuerelements übergeht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisualStateGroups">
+      <MemberSignature Language="C#" Value="public static System.Collections.IList GetVisualStateGroups (System.Windows.FrameworkElement obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IList GetVisualStateGroups(class System.Windows.FrameworkElement obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.VisualStateManager.GetVisualStateGroups(System.Windows.FrameworkElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Windows.FrameworkElement" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Element zum Abrufen der <see cref="P:System.Windows.VisualStateManager.VisualStateGroups" /> angefügte Eigenschaft aus.</param>
+        <summary>Ruft die <see cref="P:System.Windows.VisualStateManager.VisualStateGroups" /> -Eigenschaft.</summary>
+        <returns>Die Auflistung der <see cref="T:System.Windows.VisualStateGroup" /> Objekte, die mit dem angegebenen Objekt zugeordnet ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GoToElementState">
+      <MemberSignature Language="C#" Value="public static bool GoToElementState (System.Windows.FrameworkElement stateGroupsRoot, string stateName, bool useTransitions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GoToElementState(class System.Windows.FrameworkElement stateGroupsRoot, string stateName, bool useTransitions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.VisualStateManager.GoToElementState(System.Windows.FrameworkElement,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stateGroupsRoot" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="stateName" Type="System.String" />
+        <Parameter Name="useTransitions" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stateGroupsRoot">Das Stammelement, enthält die <see cref="T:System.Windows.VisualStateManager" />.</param>
+        <param name="stateName">Der Zustand, in den der Übergang durchgeführt wird.</param>
+        <param name="useTransitions">
+          <see langword="true" />Verwenden einer <see cref="T:System.Windows.VisualTransition" /> Objekt für den Übergang zwischen Zuständen; anderenfalls <see langword="false" />.</param>
+        <summary>Bewirkt, dass das Element zwischen zwei Zuständen. Verwenden Sie diese Methode für Übergänge zwischen Zuständen, die werden von einer Anwendung definiert wird, anstatt von einem Steuerelement definiert.</summary>
+        <returns>
+          <see langword="true" />Wenn das Steuerelement erfolgreich in den Zustand "Neu" gewechselt hat; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen der <xref:System.Windows.VisualStateManager.GoToElementState%2A> -Methode ändern, Zustände für ein Element außerhalb des eine <xref:System.Windows.Controls.ControlTemplate> (z. B. bei Verwendung einer <xref:System.Windows.VisualStateManager> in einer <xref:System.Windows.DataTemplate> oder <xref:System.Windows.Window>). Rufen Sie die <xref:System.Windows.VisualStateManager.GoToState%2A> Methode, wenn Sie die Zustände, in einem Steuerelement ändern, die verwendet die <xref:System.Windows.VisualStateManager> in seiner <xref:System.Windows.Controls.ControlTemplate>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Anwendung, die den Benutzer auffordert, eine Zahl zwischen 1 und 100 zu erraten.  Wenn der Benutzer eine Zahl eingibt, überprüfen, ob die Anwendung die Schätzung zu hoch, Niedrig oder richtig ist.  Die folgenden [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] die Benutzeroberfläche für die Anwendung erstellt und definiert 4 Zustände: `TooLow`, `TooHigh`, `Correct`, und `Guessing`. Wenn die Anwendung beginnt, wird Sie der `Guessing` Zustand. .  
+  
+ [!code-xaml[VSMGoToElementState#GoToElementStateXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmgotoelementstate/csharp/mainwindow.xaml#gotoelementstatexaml)]  
+  
+ Der folgende Code zeigt die Logik der Anwendung.  Wenn der Benutzer eine Zahl eingibt und auf die Schaltfläche klickt, ruft die Anwendung <xref:System.Windows.VisualStateManager.GoToElementState%2A> für den Übergang in `TooHigh`, `TooLow`, oder `Correct` zum Bereitstellen von Feedback für den Benutzer zu den zu erratenden Wert.  Rufen Sie zum Testen dieses Beispiels die `GenerateNumber` Methode, wenn die Anwendung beginnt.  
+  
+ [!code-csharp[VSMGoToElementState#GoToElementStateCode](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmgotoelementstate/csharp/mainwindow.xaml.cs#gotoelementstatecode)]
+ [!code-vb[VSMGoToElementState#GoToElementStateCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmgotoelementstate/visualbasic/mainwindow.xaml.vb#gotoelementstatecode)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stateGroupsRoot" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="stateName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GoToState">
+      <MemberSignature Language="C#" Value="public static bool GoToState (System.Windows.FrameworkElement control, string stateName, bool useTransitions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GoToState(class System.Windows.FrameworkElement control, string stateName, bool useTransitions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.VisualStateManager.GoToState(System.Windows.FrameworkElement,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="stateName" Type="System.String" />
+        <Parameter Name="useTransitions" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement für den Übergang zwischen Zuständen.</param>
+        <param name="stateName">Der Zustand, in den der Übergang durchgeführt wird.</param>
+        <param name="useTransitions">
+          <see langword="true" />Verwenden einer <see cref="T:System.Windows.VisualTransition" /> Objekt für den Übergang zwischen Zuständen; anderenfalls <see langword="false" />.</param>
+        <summary>Führt Übergang des Steuerelements von einem Zustand in einen anderen durch. Mit dieser Methode können Übergangs Staaten-Steuerelement mit einem <see cref="T:System.Windows.Controls.ControlTemplate" />.</summary>
+        <returns>
+          <see langword="true" />Wenn das Steuerelement erfolgreich in den Zustand "Neu" gewechselt hat; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.Windows.VisualStateManager.GoToState%2A> Methode, wenn Sie die Zustände, in einem Steuerelement ändern, die verwendet die <xref:System.Windows.VisualStateManager> in seiner <xref:System.Windows.Controls.ControlTemplate>. Aufrufen der <xref:System.Windows.VisualStateManager.GoToElementState%2A> -Methode ändern, Zustände für ein Element außerhalb des eine <xref:System.Windows.Controls.ControlTemplate> (z. B. bei Verwendung einer <xref:System.Windows.VisualStateManager> in einer <xref:System.Windows.Controls.UserControl> oder in ein einzelnes Element).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt ein Steuerelement, verwendet die <xref:System.Windows.VisualStateManager.GoToState%2A> Methode für den Übergang zwischen Zuständen. Das vollständige Beispiel finden Sie unter [erstellen ein Steuerelement, hat eine anpassbare Darstellung](~/docs/framework/wpf/controls/creating-a-control-that-has-a-customizable-appearance.md).  
+  
+ [!code-csharp[VSMCustomControl#UpdateStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#updatestates)]
+ [!code-vb[VSMCustomControl#UpdateStates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#updatestates)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="stateName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GoToStateCore">
+      <MemberSignature Language="C#" Value="protected virtual bool GoToStateCore (System.Windows.FrameworkElement control, System.Windows.FrameworkElement stateGroupsRoot, string stateName, System.Windows.VisualStateGroup group, System.Windows.VisualState state, bool useTransitions);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool GoToStateCore(class System.Windows.FrameworkElement control, class System.Windows.FrameworkElement stateGroupsRoot, string stateName, class System.Windows.VisualStateGroup group, class System.Windows.VisualState state, bool useTransitions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.VisualStateManager.GoToStateCore(System.Windows.FrameworkElement,System.Windows.FrameworkElement,System.String,System.Windows.VisualStateGroup,System.Windows.VisualState,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="stateGroupsRoot" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="stateName" Type="System.String" />
+        <Parameter Name="group" Type="System.Windows.VisualStateGroup" />
+        <Parameter Name="state" Type="System.Windows.VisualState" />
+        <Parameter Name="useTransitions" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement für den Übergang zwischen Zuständen.</param>
+        <param name="stateGroupsRoot">Das Stammelement, enthält die <see cref="T:System.Windows.VisualStateManager" />.</param>
+        <param name="stateName">Der Name des für den Übergang zum Status.</param>
+        <param name="group">Die <see cref="T:System.Windows.VisualStateGroup" /> , das der Status zu gehört.</param>
+        <param name="state">Die Darstellung des Status für den Übergang zu.</param>
+        <param name="useTransitions">
+          <see langword="true" />Verwenden einer <see cref="T:System.Windows.VisualTransition" /> Objekt für den Übergang zwischen Zuständen; anderenfalls <see langword="false" />.</param>
+        <summary>Bewirkt, dass ein Steuerelement zwischen Zuständen.</summary>
+        <returns>
+          <see langword="true" />Wenn das Steuerelement erfolgreich in den Zustand "Neu" gewechselt hat; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.VisualStateManager.GoToStateCore%2A> -Methode führt die Logik zum entsprechend starten und beenden die Storyboards, die bei einem Übergang zugeordnet sind. Wenn ein Steuerelement ruft <xref:System.Windows.VisualStateManager.GoToState%2A> so ändern Sie den Zustand der <xref:System.Windows.VisualStateManager> bewirkt Folgendes:  
+  
+-   Wenn zunächst die <xref:System.Windows.VisualState> hat, dass das Steuerelement wechselt ein <xref:System.Windows.Media.Animation.Storyboard>, beginnt das Storyboard. Wenn danach die <xref:System.Windows.VisualState> hat, dass das Steuerelement von stammt eine <xref:System.Windows.Media.Animation.Storyboard>, das Storyboard beendet.  
+  
+-   Wenn das Steuerelement bereits in der `stateName` Zustand <xref:System.Windows.VisualStateManager.GoToState%2A> führt keine Aktion aus, und gibt `true`.  
+  
+-   Wenn `stateName` ist nicht in der <xref:System.Windows.Controls.ControlTemplate> von `control`, <xref:System.Windows.VisualStateManager.GoToState%2A> führt keine Aktion aus, und gibt `false`.  
+  
+ Eigene implementieren <xref:System.Windows.VisualStateManager> abweichender Logik für den Übergang zwischen Zuständen bereitstellen. Beispielsweise können Sie die zuvor beschriebene Logik ändern, oder können Sie Logik für den Übergang zwischen benutzerdefinierten Animationstypen bereitstellen.  Implementiert eine <xref:System.Windows.VisualStateManager>, erstellen Sie eine Klasse, die von erben <xref:System.Windows.VisualStateManager> und überschreiben die <xref:System.Windows.VisualStateManager.GoToStateCore%2A> Methode. Um die benutzerdefinierte Klasse zu verwenden, legen die <xref:System.Windows.VisualStateManager.CustomVisualStateManager%2A> Eigenschaft auf ein Objekt des benutzerdefinierten Typs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseCurrentStateChanged">
+      <MemberSignature Language="C#" Value="protected void RaiseCurrentStateChanged (System.Windows.VisualStateGroup stateGroup, System.Windows.VisualState oldState, System.Windows.VisualState newState, System.Windows.FrameworkElement control, System.Windows.FrameworkElement stateGroupsRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaiseCurrentStateChanged(class System.Windows.VisualStateGroup stateGroup, class System.Windows.VisualState oldState, class System.Windows.VisualState newState, class System.Windows.FrameworkElement control, class System.Windows.FrameworkElement stateGroupsRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.VisualStateManager.RaiseCurrentStateChanged(System.Windows.VisualStateGroup,System.Windows.VisualState,System.Windows.VisualState,System.Windows.FrameworkElement,System.Windows.FrameworkElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stateGroup" Type="System.Windows.VisualStateGroup" />
+        <Parameter Name="oldState" Type="System.Windows.VisualState" />
+        <Parameter Name="newState" Type="System.Windows.VisualState" />
+        <Parameter Name="control" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="stateGroupsRoot" Type="System.Windows.FrameworkElement" />
+      </Parameters>
+      <Docs>
+        <param name="stateGroup">Das Objekt, das die <see cref="E:System.Windows.VisualStateGroup.CurrentStateChanging" /> -Ereignis aufgetreten ist.</param>
+        <param name="oldState">Der Zustand, dem das Steuerelement wird in einen Übergang beginnt.</param>
+        <param name="newState">Der Zustand, dem das Steuerelement in übergeht.</param>
+        <param name="control">Das Steuerelement, das Status übergeht.</param>
+        <param name="stateGroupsRoot">Das Stammelement, enthält die <see cref="T:System.Windows.VisualStateManager" />.</param>
+        <summary>Löst das <see cref="E:System.Windows.VisualStateGroup.CurrentStateChanging" /> Ereignis auf dem angegebenen <see cref="T:System.Windows.VisualStateGroup" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Windows.VisualStateGroup> festgelegt ist, auf die <xref:System.Windows.Controls.ControlTemplate> eines Steuerelements, der `control` Parametersatz an das Steuerelement, das Besitzer ist <xref:System.Windows.Controls.ControlTemplate>.  Wenn die <xref:System.Windows.VisualStateGroup> festgelegt ist, auf eine <xref:System.Windows.FrameworkElement>, `control` ist `null` und Sie sollten mit der `stateGroupsRoot` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stateGroupsRoot" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="newState" /> ist <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.VisualStateManager.RaiseCurrentStateChanged(System.Windows.VisualStateGroup,System.Windows.VisualState,System.Windows.VisualState,System.Windows.FrameworkElement,System.Windows.FrameworkElement)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.VisualStateManager.RaiseCurrentStateChanged(System.Windows.VisualStateGroup,System.Windows.VisualState,System.Windows.VisualState,System.Windows.FrameworkElement,System.Windows.FrameworkElement)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseCurrentStateChanging">
+      <MemberSignature Language="C#" Value="protected void RaiseCurrentStateChanging (System.Windows.VisualStateGroup stateGroup, System.Windows.VisualState oldState, System.Windows.VisualState newState, System.Windows.FrameworkElement control, System.Windows.FrameworkElement stateGroupsRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaiseCurrentStateChanging(class System.Windows.VisualStateGroup stateGroup, class System.Windows.VisualState oldState, class System.Windows.VisualState newState, class System.Windows.FrameworkElement control, class System.Windows.FrameworkElement stateGroupsRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.VisualStateManager.RaiseCurrentStateChanging(System.Windows.VisualStateGroup,System.Windows.VisualState,System.Windows.VisualState,System.Windows.FrameworkElement,System.Windows.FrameworkElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stateGroup" Type="System.Windows.VisualStateGroup" />
+        <Parameter Name="oldState" Type="System.Windows.VisualState" />
+        <Parameter Name="newState" Type="System.Windows.VisualState" />
+        <Parameter Name="control" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="stateGroupsRoot" Type="System.Windows.FrameworkElement" />
+      </Parameters>
+      <Docs>
+        <param name="stateGroup">Das Objekt, das die <see cref="E:System.Windows.VisualStateGroup.CurrentStateChanging" /> -Ereignis aufgetreten ist.</param>
+        <param name="oldState">Der Zustand, dem das Steuerelement wird in einen Übergang beginnt.</param>
+        <param name="newState">Der Zustand, dem das Steuerelement in übergeht.</param>
+        <param name="control">Das Steuerelement, das Status übergeht.</param>
+        <param name="stateGroupsRoot">Das Stammelement, enthält die <see cref="T:System.Windows.VisualStateManager" />.</param>
+        <summary>Löst das <see cref="E:System.Windows.VisualStateGroup.CurrentStateChanging" /> Ereignis auf dem angegebenen <see cref="T:System.Windows.VisualStateGroup" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Windows.VisualStateGroup> festgelegt ist, auf die <xref:System.Windows.Controls.ControlTemplate> eines Steuerelements, der `control` Parametersatz an das Steuerelement, das Besitzer ist <xref:System.Windows.Controls.ControlTemplate>.  Wenn die <xref:System.Windows.VisualStateGroup> festgelegt ist, auf eine <xref:System.Windows.FrameworkElement>, `control` ist `null` und Sie sollten mit der `stateGroupsRoot` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stateGroupsRoot" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="newState" /> ist <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.VisualStateManager.RaiseCurrentStateChanging(System.Windows.VisualStateGroup,System.Windows.VisualState,System.Windows.VisualState,System.Windows.FrameworkElement,System.Windows.FrameworkElement)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.VisualStateManager.RaiseCurrentStateChanging(System.Windows.VisualStateGroup,System.Windows.VisualState,System.Windows.VisualState,System.Windows.FrameworkElement,System.Windows.FrameworkElement)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCustomVisualStateManager">
+      <MemberSignature Language="C#" Value="public static void SetCustomVisualStateManager (System.Windows.FrameworkElement obj, System.Windows.VisualStateManager value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetCustomVisualStateManager(class System.Windows.FrameworkElement obj, class System.Windows.VisualStateManager value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.VisualStateManager.SetCustomVisualStateManager(System.Windows.FrameworkElement,System.Windows.VisualStateManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="value" Type="System.Windows.VisualStateManager" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das die Eigenschaft auf festgelegt.</param>
+        <param name="value">Der visuellen Zustands-Manager, der zwischen den Status eines Steuerelements übergeht.</param>
+        <summary>Legt die angefügte <see cref="P:System.Windows.VisualStateManager.CustomVisualStateManager" />-Eigenschaft fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualStateGroupsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VisualStateGroupsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VisualStateGroupsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.VisualStateManager.VisualStateGroupsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.VisualStateManager.VisualStateGroups" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,89 @@
+<Type Name="SettingsSavedEventArgs" FullName="System.Web.ClientServices.Providers.SettingsSavedEventArgs">
+  <TypeSignature Language="C#" Value="public class SettingsSavedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SettingsSavedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ClientServices.Providers.SettingsSavedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=nameWithType> Ereignis tritt auf, nachdem der Anbieter der Einstellungen den Einstellungsdienst zugreift, auch wenn die Einstellungen nicht erfolgreich gespeichert wurden. Ein Grund, dass der Anbieter nicht ausgeführt kann, um die Einstellungen zu speichern, ist der aktuelle Benutzer abgemeldet hat. Sie können die <xref:System.Web.ClientServices.Providers.SettingsSavedEventArgs.FailedSettingsList%2A> Eigenschaft, um zu bestimmen, ob alle Einstellungen nicht erfolgreich gespeichert wurden.  
+  
+ Dieses Ereignis tritt nicht auf, wenn der Einstellungsanbieter den Einstellungsdienst, die den Anbieter zugreifen kann ausgelöst werden stattdessen bewirkt, dass eine <xref:System.Net.WebException>.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht, wie Sie diese Klasse verwenden, um eine Liste der Einstellungen anzuzeigen, die nicht erfolgreich gespeichert.  
+  
+ [!code-csharp[ClientApplicationServices#304](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#304)]
+ [!code-vb[ClientApplicationServices#304](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#304)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsSavedEventArgs (System.Collections.Generic.IEnumerable&lt;string&gt; failedSettingsList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;string&gt; failedSettingsList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.Providers.SettingsSavedEventArgs.#ctor(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="failedSettingsList" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="failedSettingsList">Die Einstellungen, die der Einstellungsanbieter nicht speichern konnte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.ClientServices.Providers.SettingsSavedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FailedSettingsList">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; FailedSettingsList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; FailedSettingsList" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ClientServices.Providers.SettingsSavedEventArgs.FailedSettingsList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Einstellungen ab, die die <see cref="T:System.Web.ClientServices.Providers.ClientSettingsProvider" /> konnte auf dem Server zu speichern.</summary>
+        <value>Die Einstellungen, die nicht gespeichert wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Grund, dass der Anbieter nicht ausgeführt kann, um die Einstellungen zu speichern, ist der aktuelle Benutzer abgemeldet hat. Sie können die <xref:System.Web.ClientServices.Providers.SettingsSavedEventArgs.FailedSettingsList%2A> Eigenschaft, um zu bestimmen, ob alle Einstellungen nicht erfolgreich gespeichert wurden.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht, wie diese Eigenschaft verwendet, um eine Liste der Einstellungen anzuzeigen, die nicht erfolgreich gespeichert.  
+  
+ [!code-csharp[ClientApplicationServices#304](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#304)]
+ [!code-vb[ClientApplicationServices#304](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#304)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,569 @@
+<Type Name="SecurityPermissionAttribute" FullName="System.Security.Permissions.SecurityPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SecurityPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SecurityPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.SecurityPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht, dass Sicherheitsaktionen für <see cref="T:System.Security.Permissions.SecurityPermission" /> unter Verwendung deklarativer Sicherheit auf Code angewendet werden. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Gültigkeitsbereich der Deklaration, die zulässig ist, hängt die <xref:System.Security.Permissions.SecurityAction> , der verwendet wird.  
+  
+ Die Sicherheitsinformationen, die von einem Sicherheitsattribut deklariert wird in den Metadaten des Attributziels gespeichert und vom System zur Laufzeit erfolgt. Sicherheitsattribute werden nur für die deklarative Sicherheit verwendet. Verwenden Sie für imperative Sicherheit die entsprechende Berechtigungsklasse.  
+  
+ Bei Verwendung der <xref:System.Security.Permissions.SecurityPermissionAttribute> Klasse, befolgen Sie die Sicherheitsaktion, die angefordert werden. Jede Sicherheitsberechtigung, die gemäß angefordert kann die <xref:System.Security.Permissions.SecurityPermissionFlag> -Enumeration, hat eine entsprechende Eigenschaft der <xref:System.Security.Permissions.SecurityPermissionAttribute> Klasse. Führen Sie z. B. die Anweisung bei Bedarf mit der Einstellung der Eigenschaft, die, wie folgt angefordert wird, um den Zugriff auf nicht verwalteten Code "demand",: `SecurityPermissionAttribute(SecurityAction.Demand, UnmanagedCode=true)`.  
+  
+> [!NOTE]
+>  Eine Ausnahme der Übereinstimmung zwischen der <xref:System.Security.Permissions.SecurityPermissionFlag> Enumeration und die <xref:System.Security.Permissions.SecurityPermissionAttribute> Eigenschaften ist, die die <xref:System.Security.Permissions.SecurityPermissionFlag.AllFlags> Enumerationswert dargestellte der <xref:System.Security.Permissions.SecurityAttribute.Unrestricted%2A> Eigenschaft (geerbt von der <xref:System.Security.Permissions.SecurityAttribute> Klasse). Wenn alle Sicherheitsberechtigungen anfordern möchten, geben Sie `Unrestricted=true`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.SecurityPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Einer der <see cref="T:System.Security.Permissions.SecurityAction" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Permissions.SecurityPermissionAttribute" />-Klasse mit der angegebenen <see cref="T:System.Security.Permissions.SecurityAction" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assertion">
+      <MemberSignature Language="C#" Value="public bool Assertion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Assertion" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SecurityPermissionAttribute.Assertion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Berechtigung zur Bestätigung, dass alle Aufrufer dieses Codes über die erforderliche Berechtigung für den Vorgang verfügen, deklariert ist, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Bestätigungsberechtigung deklariert ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingRedirects">
+      <MemberSignature Language="C#" Value="public bool BindingRedirects { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BindingRedirects" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SecurityPermissionAttribute.BindingRedirects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Code zum Ausführen einer Bindungsumleitung in der Anwendungskonfigurationsdatei berechtigt ist, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn der Code Bindungsumleitungen ausführen kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Berechtigung ermöglicht die Umleitung von .NET Framework-Assemblys, die vereinheitlicht wurden als auch von anderen Assemblys, die außerhalb von .NET Framework gefunden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlAppDomain">
+      <MemberSignature Language="C#" Value="public bool ControlAppDomain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ControlAppDomain" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SecurityPermissionAttribute.ControlAppDomain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Berechtigung zum Bearbeiten von <see cref="T:System.AppDomain" /> deklariert ist, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Berechtigung zum Bearbeiten von <see cref="T:System.AppDomain" /> deklariert ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlDomainPolicy">
+      <MemberSignature Language="C#" Value="public bool ControlDomainPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ControlDomainPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SecurityPermissionAttribute.ControlDomainPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Berechtigung zum Bearbeiten oder Ändern der Domänensicherheitsrichtlinie deklariert ist, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Berechtigung zum Bearbeiten oder Ändern von Sicherheitsrichtlinien in einer Anwendungsdomäne deklariert ist, anderenfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlEvidence">
+      <MemberSignature Language="C#" Value="public bool ControlEvidence { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ControlEvidence" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SecurityPermissionAttribute.ControlEvidence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Berechtigung zum Bearbeiten oder Ändern von Beweisen deklariert ist, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Möglichkeit zum Ändern oder Bearbeiten von Beweisen deklariert ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlPolicy">
+      <MemberSignature Language="C#" Value="public bool ControlPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ControlPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SecurityPermissionAttribute.ControlPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Berechtigung zum Anzeigen und Bearbeiten der Sicherheitsrichtlinie deklariert ist, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Berechtigung zum Bearbeiten der Sicherheitsrichtlinie deklariert ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlPrincipal">
+      <MemberSignature Language="C#" Value="public bool ControlPrincipal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ControlPrincipal" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SecurityPermissionAttribute.ControlPrincipal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Berechtigung zum Bearbeiten des aktuellen Prinzipals deklariert ist, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Berechtigung zum Bearbeiten des aktuellen Prinzipals deklariert ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlThread">
+      <MemberSignature Language="C#" Value="public bool ControlThread { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ControlThread" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SecurityPermissionAttribute.ControlThread" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Berechtigung zum Bearbeiten von Threads deklariert ist, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Berechtigung zum Bearbeiten von Threads deklariert ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.Threading.Thread>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.SecurityPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue <see cref="T:System.Security.Permissions.SecurityPermission" /> und gibt diese zurück.</summary>
+        <returns>Eine <see cref="T:System.Security.Permissions.SecurityPermission" />, die diesem Attribut entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sollte nur durch das Sicherheitssystem nie von Anwendungscode aufgerufen werden.  
+  
+ Zum Zeitpunkt der Kompilierung konvertieren Attribute Sicherheitsdeklarationen in serialisierter Form in Metadaten an. Deklarative Sicherheit von Daten in den Metadaten werden über die Berechtigung, die Rückgabe dieser Methode erstellt, die dieses Attribut entspricht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execution">
+      <MemberSignature Language="C#" Value="public bool Execution { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Execution" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SecurityPermissionAttribute.Execution" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Berechtigung zum Ausführen von Code deklariert ist, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Berechtigung zum Ausführen von Code deklariert ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Anforderung für <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> Berechtigung auf Assemblyebene wird ignoriert. Wenn eine Assembly die Berechtigung zum Ausführen verfügt <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> Berechtigung wird automatisch gewährt wurde, und durch Festlegen der <xref:System.Security.Permissions.SecurityPermissionAttribute.Execution%2A> -Eigenschaft entweder `true` oder `false` hat keine Auswirkungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.SecurityPermissionFlag Flags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.SecurityPermissionFlag Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SecurityPermissionAttribute.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest alle Berechtigungsflags der <see cref="T:System.Security.Permissions.SecurityPermission" /> Berechtigungen.</summary>
+        <value>Ein oder mehrere der <see cref="T:System.Security.Permissions.SecurityPermissionFlag" /> Werte, die mithilfe einer bitweisen OR kombiniert.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Es wird versucht, diese Eigenschaft auf einen ungültigen Wert festzulegen. Finden Sie unter <see cref="T:System.Security.Permissions.SecurityPermissionFlag" /> die gültigen Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Infrastructure">
+      <MemberSignature Language="C#" Value="public bool Infrastructure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Infrastructure" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SecurityPermissionAttribute.Infrastructure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt diesen fest, der angibt, ob Code in die Common Language Runtime-Infrastruktur eingebunden werden kann, z. B. beim Hinzufügen von Remotekontextsenken, Botensenken und dynamischen Senken.</summary>
+        <value>
+          <see langword="true" />Wenn Code in der common Language Runtime-Infrastruktur eingebunden werden kann; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemotingConfiguration">
+      <MemberSignature Language="C#" Value="public bool RemotingConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RemotingConfiguration" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SecurityPermissionAttribute.RemotingConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Code Remotetypen und Kanäle konfigurieren kann, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn Code Remotetypen und Kanäle konfigurieren kann; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializationFormatter">
+      <MemberSignature Language="C#" Value="public bool SerializationFormatter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SerializationFormatter" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Code zum Serialisieren oder Deserialisieren eines Objekts eine Serialisierungsformatierung verwenden kann, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn der Code kann eine Serialisierungsformatierung verwenden zum Serialisieren oder Deserialisieren eines Objekts; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipVerification">
+      <MemberSignature Language="C#" Value="public bool SkipVerification { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SkipVerification" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen eines Werts, der angibt, ob die Berechtigung zum Umgehen der Codeüberprüfung deklariert ist.</summary>
+        <value>
+          <see langword="true" />Wenn Sie über die Berechtigung zum Umgehen der codeüberprüfung deklariert ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Dies ist eine leistungsstarke Berechtigung, die nur für hoch vertrauenswürdigen Code erteilt werden sollte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnmanagedCode">
+      <MemberSignature Language="C#" Value="public bool UnmanagedCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UnmanagedCode" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Berechtigung zum Aufrufen von nicht verwaltetem Code deklariert ist, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn die Berechtigung zum Aufrufen von nicht verwalteten Codes deklariert ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

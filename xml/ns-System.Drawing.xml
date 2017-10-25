@@ -1,0 +1,16 @@
+<Namespace Name="System.Drawing">
+  <Docs>
+    <summary>Der <see cref="N:System.Drawing" />-Namespace ermöglicht den Zugriff auf die grundlegenden GDI+-Grafikfunktionen. Die Namespaces <see cref="N:System.Drawing.Drawing2D" />, <see cref="N:System.Drawing.Imaging" /> und <see cref="N:System.Drawing.Text" /> bieten eine erweiterte Funktionalität.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Graphics> -Klasse stellt Methoden zum Zeichnen auf dem Anzeigegerät bereit. Klassen wie <xref:System.Drawing.Rectangle> und <xref:System.Drawing.Point> GDI + primitive Typen kapseln. Die <xref:System.Drawing.Pen> Klasse dient zum Zeichnen von Linien und Kurven, während von der abstrakten Klasse abgeleitete Klassen <xref:System.Drawing.Brush> zum Füllen von Formen verwendet werden.  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Drawing> Namespace werden nicht unterstützt, für die Verwendung innerhalb eines Diensts Windows- oder ASP.NET. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen. Eine unterstützte Alternative finden Sie unter [Windows Imaging Components](http://msdn.microsoft.com/library/windows/desktop/ee719654\(v=vs.85\).aspx).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

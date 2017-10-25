@@ -1,0 +1,456 @@
+<Type Name="ThreadLocal&lt;T&gt;" FullName="System.Threading.ThreadLocal&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class ThreadLocal&lt;T&gt; : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ThreadLocal`1&lt;T&gt; extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.ThreadLocal`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("IsValueCreated={IsValueCreated}, Value={ValueForDebugDisplay}, Count={ValuesCountForDebugDisplay}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Threading.SystemThreading_ThreadLocalDebugView`1))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">Gibt den gespeicherten Datentyp pro Thread an.</typeparam>
+    <summary>Stellt Thread-lokalen Datenspeicher bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von <xref:System.Threading.ThreadLocal%601>:  
+  
+ [!code-csharp[System.Threading.ThreadLocal#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.threadlocal/cs/threadlocal.cs#01)]
+ [!code-vb[System.Threading.ThreadLocal#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.threadlocal/vb/threadlocal.vb#01)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Mit Ausnahme von <see cref="M:System.Threading.ThreadLocal`1.Dispose" />sind alle öffentlichen und geschützten Member der <see cref="T:System.Threading.ThreadLocal`1" /> sind threadsicher und können von mehreren Threads gleichzeitig verwendet werden. Der Rückgabewert für die <see cref="P:System.Threading.ThreadLocal`1.Value" /> und <see cref="P:System.Threading.ThreadLocal`1.IsValueCreated" /> Eigenschaften ist spezifisch für den Thread, auf dem die Eigenschaft zugegriffen wird.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThreadLocal ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadLocal`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die <see cref="T:System.Threading.ThreadLocal`1" />-Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert von `T` wird verwendet, um die Instanz initialisiert werden, wenn <xref:System.Threading.ThreadLocal%601.Value%2A> zum ersten Mal zugegriffen wird.  
+  
+ Dieser Konstruktor entspricht dem Aufrufen der <xref:System.Threading.ThreadLocal%601.%23ctor%28System.Boolean%29> Konstruktor mit einem Wert von `false` für die `trackAllValues` Argument.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThreadLocal (bool trackAllValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool trackAllValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadLocal`1.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="trackAllValues" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="trackAllValues">
+          <see langword="true" />Gruppe für alle Werte in der Instanz nachverfolgen und verfügbar zu machen, über die <see cref="P:System.Threading.ThreadLocal`1.Values" /> Eigenschaft ein. <see langword="false" /> andernfalls.</param>
+        <summary>Initialisiert die <see cref="T:System.Threading.ThreadLocal`1" /> -Instanz und gibt an, ob alle Werte von jedem Thread aus zugegriffen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `trackAllValues` ist `false`, nur den Wert dieser Instanz für den aktuellen Thread zugegriffen wird. Verwendung der <xref:System.Threading.ThreadLocal%601.Values%2A> abzurufenden alle Eigenschaftswerte löst eine <xref:System.InvalidOperationException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThreadLocal (Func&lt;T&gt; valueFactory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Func`1&lt;!T&gt; valueFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadLocal`1.#ctor(System.Func{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="valueFactory" Type="System.Func&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="valueFactory">Die <see cref="T:System.Func`1" /> aufgerufen, um einen verzögert initialisierten Wert zu erzeugen, bei dem Versuch zum Abrufen <see cref="P:System.Threading.ThreadLocal`1.Value" /> ohne ihn zuvor initialisiert.</param>
+        <summary>Initialisiert die <see cref="T:System.Threading.ThreadLocal`1" /> Instanz mit dem angegebenen <paramref name="valueFactory" /> Funktion.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="valueFactory" /> ist ein NULL-Verweis (Nothing in Visual&amp;#160;Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThreadLocal (Func&lt;T&gt; valueFactory, bool trackAllValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Func`1&lt;!T&gt; valueFactory, bool trackAllValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadLocal`1.#ctor(System.Func{`0},System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="valueFactory" Type="System.Func&lt;T&gt;" />
+        <Parameter Name="trackAllValues" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="valueFactory">Die <see cref="T:System.Func`1" /> aufgerufen, um einen verzögert initialisierten Wert zu erzeugen, bei dem Versuch zum Abrufen <see cref="P:System.Threading.ThreadLocal`1.Value" /> ohne ihn zuvor initialisiert.</param>
+        <param name="trackAllValues">
+          <see langword="true" />Gruppe für alle Werte in der Instanz nachverfolgen und verfügbar zu machen, über die <see cref="P:System.Threading.ThreadLocal`1.Values" /> Eigenschaft ein. <see langword="false" /> andernfalls.</param>
+        <summary>Initialisiert die <see cref="T:System.Threading.ThreadLocal`1" /> Instanz mit dem angegebenen <paramref name="valueFactory" /> -Funktion und ein Flag, das angibt, ob alle Werte von jedem Thread aus zugegriffen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `trackAllValues` ist `false`, nur den Wert dieser Instanz für den aktuellen Thread zugegriffen wird. Verwendung der <xref:System.Threading.ThreadLocal%601.Values%2A> abzurufenden alle Eigenschaftswerte löst eine <xref:System.InvalidOperationException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="valueFactory" /> ist ein <see langword="null" />-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadLocal`1.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.Threading.ThreadLocal`1" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie `Dispose` auf, wenn Sie <xref:System.Threading.ThreadLocal%601> nicht mehr benötigen. Die `Dispose`-Methode bewirkt, dass <xref:System.Threading.ThreadLocal%601> nicht mehr verwendet werden kann. Nach dem Aufruf `Dispose`, müssen Sie alle Verweise auf Freigeben der <xref:System.Threading.ThreadLocal%601> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Threading.ThreadLocal%601> belegt wurde.  
+  
+ Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer `Dispose` auf, bevor Sie den letzten Verweis auf das <xref:System.Threading.ThreadLocal%601> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Threading.ThreadLocal%601>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadLocal`1.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Ein boolescher Wert, der angibt, ob diese Methode aufgrund eines Aufrufs von <see cref="M:System.Threading.ThreadLocal`1.Dispose" /> aufgerufen wird.</param>
+        <summary>Gibt die von dieser <see cref="T:System.Threading.ThreadLocal`1" />-Instanz verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den Großteil der Mitglieder <xref:System.Threading.ThreadLocal%601>, diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ThreadLocal`1 ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadLocal`1.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die von dieser <see cref="T:System.Threading.ThreadLocal`1" />-Instanz verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValueCreated">
+      <MemberSignature Language="C#" Value="public bool IsValueCreated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValueCreated" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.ThreadLocal`1.IsValueCreated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob <see cref="P:System.Threading.ThreadLocal`1.Value" /> für den aktuellen Thread initialisiert wird.</summary>
+        <value>True, wenn <see cref="P:System.Threading.ThreadLocal`1.Value" /> ist auf den aktuellen Thread initialisiert; andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.ThreadLocal`1" />-Instanz wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ThreadLocal`1.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine Zeichenfolgendarstellung dieser Instanz für den aktuellen Thread zurück.</summary>
+        <returns>Das Ergebnis des Aufrufs <see cref="M:System.Object.ToString" /> auf die <see cref="P:System.Threading.ThreadLocal`1.Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode erzwingt die Initialisierung für den aktuellen Thread, wie bei den Zugriff auf <xref:System.Threading.ThreadLocal%601.Value%2A> direkt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.ThreadLocal`1" />-Instanz wurde verworfen.</exception>
+        <exception cref="T:System.NullReferenceException">Die <see cref="P:System.Threading.ThreadLocal`1.Value" /> für der aktuelle Thread ein null-Verweis (Nothing in Visual Basic) ist.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Initialisierungsfunktion versucht, referenzieren <see cref="P:System.Threading.ThreadLocal`1.Value" /> rekursiv.</exception>
+        <exception cref="T:System.MissingMemberException">Kein Standardkonstruktor wird bereitgestellt, und die Wertfactory kein angegeben wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public T Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Value" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.ThreadLocal`1.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert dieser Instanz für den aktuellen Thread fest.</summary>
+        <value>Gibt eine Instanz des Objekts, dass dieser ThreadLocal für die Initialisierung zuständig ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Instanz nicht zuvor für den aktuellen Thread initialisiert wurde, den Zugriff auf <xref:System.Threading.ThreadLocal%601.Value%2A> wird versucht, sie zu initialisieren. Wenn eine Initialisierungsfunktion während der Erstellung angegeben wurde, erfolgt die Initialisierung durch Aufrufen der Funktion zum Abrufen des Anfangswert für <xref:System.Threading.ThreadLocal%601.Value%2A>. Andernfalls wird der Standardwert verwendet werden. Wenn eine Ausnahme ausgelöst wird, wird diese Ausnahme zwischengespeichert und bei jedem nachfolgenden Zugriff der Eigenschaft ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.ThreadLocal`1" />-Instanz wurde verworfen.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Initialisierungsfunktion versucht, referenzieren <see cref="P:System.Threading.ThreadLocal`1.Value" /> rekursiv.</exception>
+        <exception cref="T:System.MissingMemberException">Kein Standardkonstruktor wird bereitgestellt, und die Wertfactory kein angegeben wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;T&gt; Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;!T&gt; Values" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.ThreadLocal`1.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste aller zurzeit durch alle Threads, die diese Instanz zugegriffen haben gespeicherten Werte.</summary>
+        <value>Eine Liste aller zurzeit durch alle Threads, die diese Instanz zugegriffen haben gespeicherten Werte.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Von allen Threads gespeicherten Werte sind nicht verfügbar, da mit dieser Instanz initialisiert wurde die <paramref name="trackAllValues" /> Argument festgelegt wird, um <see langword="false" /> im Aufruf für einen Klassenkonstruktor.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Threading.ThreadLocal`1" />-Instanz wurde verworfen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

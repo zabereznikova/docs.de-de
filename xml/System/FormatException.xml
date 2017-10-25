@@ -1,0 +1,303 @@
+<Type Name="FormatException" FullName="System.FormatException">
+  <TypeSignature Language="C#" Value="public class FormatException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit FormatException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.FormatException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn das Format eines Arguments ungültig ist oder wenn eine [kombinierte Formatzeichenfolge](~/docs/standard/base-types/composite-formatting.md) ist nicht wohlgeformt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.FormatException> Ausnahme kann ausgelöst werden, für eine der folgenden Gründe:  
+  
+-   Nicht in einem Aufruf an eine Methode, die eine Zeichenfolge in einen anderen Datentyp konvertiert, entspricht die erforderlichen Muster die Zeichenfolge. Dies tritt normalerweise bei einigen Methoden aufrufen auf der <xref:System.Convert> Klasse und die `Parse` und `ParseExact` Methoden einige Typen.  
+  
+     In den meisten Fällen besonders wenn die Zeichenfolge, die Sie konvertieren von einem Benutzer Eingabe oder aus einer Datei lesen sollten Sie verwenden eine `try/catch` blockieren und behandeln die <xref:System.FormatException> -Ausnahme aus, wenn die Konvertierung erfolgreich ist. Sie können auch den Aufruf der Konvertierungsmethode ersetzen, mit einem Aufruf von einem `TryParse` oder `TryParseExact` -Methode, falls vorhanden. Allerdings eine <xref:System.FormatException> Ausnahme wird ausgelöst, wenn Sie versuchen, auf eine vordefinierte oder hartcodierte Zeichenfolge analysieren gibt ein Programmfehler an. In diesem Fall sollten Sie den Fehler zu beheben anstatt die Ausnahme zu behandeln.  
+  
+     Die Konvertierung einer Zeichenfolge in der folgenden Typen in den <xref:System> Namespace lösen kann eine <xref:System.FormatException> Ausnahme:  
+  
+    -   <xref:System.Boolean>. Die <xref:System.Boolean.Parse%28System.String%29?displayProperty=nameWithType> und <xref:System.Convert.ToBoolean%28System.String%29?displayProperty=nameWithType> Methoden erfordern die Zeichenfolge konvertiert werden, um "True", "true", "False" oder "false". Jeder andere Wert löst eine <xref:System.FormatException> Ausnahme.  
+  
+    -   <xref:System.DateTime> und <xref:System.DateTimeOffset>. Alle Daten für Datum und Uhrzeit interpretiert basierend auf den Formatierungskonventionen einer bestimmten Kultur: die aktuelle Threadkultur verwendet (oder in einigen Fällen der aktuellen Kultur der Anwendung Domäne), die invariante Kultur oder einer angegebenen Kultur. Beim Aufrufen der <xref:System.DateTime.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> und <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%5B%5D%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> Methoden, Datums-und Uhrzeitdaten muss auch entsprechen *genau* an ein Muster, die von einem oder mehreren angegebenen [Standardformatzeichenfolgen](~/docs/standard/base-types/standard-date-and-time-format-strings.md) oder [benutzerdefinierte Formatzeichenfolgen für](~/docs/standard/base-types/custom-date-and-time-format-strings.md) , die als Argumente im Aufruf Methode bereitgestellt werden. Wenn sie eine erwartete kulturspezifische Muster entsprechen keine <xref:System.FormatException> Ausnahme wird ausgelöst. Dies bedeutet, dass die Datums- und Zeitdaten in einem kulturabhängigen Format gespeichert werden, auf dem einen System nicht erfolgreich auf einem anderen System analysiert werden können.  
+  
+         Weitere Informationen zum Analysieren von Datumsangaben und Uhrzeiten, finden Sie unter [Analysieren von Zeichenfolgen für Datum und Uhrzeit](~/docs/standard/base-types/parsing-datetime.md) und die Dokumentation für die Methode, die die Ausnahme ausgelöst hat.  
+  
+    -   **GUIDs.** Die angegebene Zeichenfolgendarstellung einer GUID muss 32 hexadezimale Ziffern (0-F) bestehen und muss in einem der fünf Formate Ausgabe durch die <xref:System.Guid.ToString%2A?displayProperty=nameWithType> Methode. Weitere Informationen finden Sie unter der Methode <xref:System.Guid.Parse%2A?displayProperty=nameWithType>.  
+  
+    -   **Numerische Typen, einschließlich alle signierten Ganzzahlen, Ganzzahlen ohne Vorzeichen und Gleitkomma-Datentypen.** Die Zeichenfolge, die analysiert werden, muss der westlichen Ziffern 0-9 bestehen. Ein positiven oder negativen Vorzeichen, Dezimaltrennzeichen, Gruppentrennzeichen und Währungssymbol können auch zugelassen werden. Bei dem Versuch, eine Zeichenfolge zu analysieren, die andere enthält Zeichen immer löst eine <xref:System.FormatException> Ausnahme.  
+  
+         Alle numerische Zeichenfolgen basierend auf den Formatierungskonventionen einer bestimmten Kultur interpretiert werden: die aktuelle Threadkultur verwendet (oder in einigen Fällen der aktuellen Kultur der Anwendung Domäne), die invariante Kultur oder einer angegebenen Kultur. Daher kann eine numerische Zeichenfolge, die analysiert wird, mit den Konventionen der Kultur eine misslingen, sobald die Konventionen einer anderen verwenden.  
+  
+         Weitere Informationen zum Analysieren von numerischer Zeichenfolgen finden Sie unter [Analysieren von numerischen Zeichenfolgen](~/docs/standard/base-types/parsing-numeric.md) und die Dokumentation für die jeweilige Methode, die die Ausnahme ausgelöst hat.  
+  
+    -   **Zeitintervalle.** Die Zeichenfolge, die analysiert werden muss, in festen kulturunabhängigen Format oder in einem kulturabhängigen Format definiert, durch die aktuelle Threadkultur (oder in einigen Fällen der aktuellen Kultur der Anwendung Domäne), die invariante Kultur oder einer angegebenen Kultur. Wenn die Zeichenfolge befindet sich nicht in ein geeignetes Format oder wenn auf mindestens, Tage, Stunden, Minuten Komponenten des Zeitintervalls nicht vorhanden sind, löst die Analysemethode eine <xref:System.FormatException> Ausnahme. Weitere Informationen finden Sie in der Dokumentation für die <xref:System.TimeSpan> Analysemethode, die die Ausnahme ausgelöst hat.  
+  
+-   Ein Typ implementiert die <xref:System.IFormattable> -Schnittstelle, die Formatzeichenfolgen, die definieren, wie ein Objekt in seine Zeichenfolgendarstellung konvertiert wird unterstützt, und eine ungültige Formatzeichenfolge wird verwendet. Das geschieht meistens bei einem Formatierungsvorgang. Im folgenden Beispiel wird die Standardformatzeichenfolge "Q" in eine zusammengesetzte Formatzeichenfolge zum Formatieren einer Zahl verwendet. "Q" ist jedoch kein gültiger [Standardformatzeichenfolge](~/docs/standard/base-types/standard-numeric-format-strings.md).  
+  
+     [!code-csharp[System.FormatException#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.formatexception/cs/iformattable1.cs#7)]
+     [!code-vb[System.FormatException#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.formatexception/vb/iformattable1.vb#7)]  
+  
+     Diese Ausnahme ergibt sich aus einem Codefehler. Um den Fehler zu beheben, entfernen Sie die Formatzeichenfolge oder Ersetzen Sie einen gültigen. Im folgende Beispiel korrigiert den Fehler, indem die ungültige Formatzeichenfolge mit der Formatzeichenfolge "C" (Währung) ersetzt.  
+  
+     [!code-csharp[System.FormatException#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.formatexception/cs/iformattable2.cs#8)]
+     [!code-vb[System.FormatException#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.formatexception/vb/iformattable2.vb#8)]  
+  
+     Ein <xref:System.FormatException> kann auch ausgelöst durch Analysieren von Methoden, wie z. B. <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> und <xref:System.Guid.ParseExact%2A?displayProperty=nameWithType>, erfordern die Zeichenfolge, die analysiert werden, um genau die von einer Formatzeichenfolge angegebenen Muster entsprechen. Im folgenden Beispiel wird die angegebene Zeichenfolgendarstellung einer GUID erwartet, die von der Standardformatzeichenfolge "G" angegebenen Muster entsprechen. Allerdings die <xref:System.Guid> -Struktur-Implementierung von <xref:System.IFormattable> die Formatzeichenfolge "G" nicht unterstützt.  
+  
+     [!code-csharp[System.FormatException#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.formatexception/cs/iformattable3.cs#9)]
+     [!code-vb[System.FormatException#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.formatexception/vb/iformattable3.vb#9)]  
+  
+     Diese Ausnahme führt auch aus einem Codefehler. Um ihn zu korrigieren, Aufrufen eine Analysemethode, die einem präzisen Format, z. B. erfordern keine <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> oder <xref:System.Guid.Parse%2A?displayProperty=nameWithType>, oder Ersetzen eine gültigen Formatzeichenfolge. Im folgenden Beispiel wird den Fehler korrigiert, durch Aufrufen der <xref:System.Guid.Parse%2A?displayProperty=nameWithType> Methode.  
+  
+     [!code-csharp[System.FormatException#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.formatexception/cs/iformattable4.cs#10)]
+     [!code-vb[System.FormatException#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.formatexception/vb/iformattable4.vb#10)]  
+  
+-   Eine oder mehrere der Indizes der die Formatelemente in einer [kombinierte Formatzeichenfolge](~/docs/standard/base-types/composite-formatting.md) ist größer als die Indizes der Elemente im Objektarray Liste oder Parameter. Im folgenden Beispiel ist der größte Index eines Formatelements in der Formatzeichenfolge 3. Da die Indizes der Elemente in der Objektliste nullbasiert sind, müssten diese Formatzeichenfolge Objektliste sind vier Elemente erforderlich. Stattdessen hat es nur drei `dat`, `temp`, und `scale`, sodass der Code führt eine <xref:System.FormatException> -Ausnahme zur Laufzeit:.  
+  
+     [!code-csharp[System.FormatException#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.formatexception/cs/example1.cs#1)]
+     [!code-vb[System.FormatException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.formatexception/vb/example1.vb#1)]  
+  
+     In diesem Fall die <xref:System.FormatException> Ausnahme ist das Ergebnis der Developer-Fehler. Es werden korrigiert eher als sollte in behandelt eine `try/catch` blockieren, indem sichergestellt wird, dass jedes Element in der Objektliste der Index eines Formatelements entspricht. Um dieses Beispiel zu beheben, ändern Sie den Index, der das zweite Formatelement zum Verweisen auf die `dat` Variable und Dekrementoperatoren der Index jedes Elements nachfolgende Format um eins.  
+  
+     [!code-csharp[System.FormatException#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.formatexception/cs/example2.cs#2)]
+     [!code-vb[System.FormatException#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.formatexception/vb/example2.vb#2)]  
+  
+-   Die zusammengesetzte Formatierungszeichenfolge ist nicht wohlgeformt ist. In diesem Fall die <xref:System.FormatException> Ausnahme wird immer ein Entwickler Fehler zurückzuführen. Es werden korrigiert eher als sollte in behandelt eine `try/catch` Block.  
+  
+     Versuchen, Literale geschweifte Klammern in einer Zeichenfolge enthalten, wie im folgenden Beispiel wird, wird die Ausnahme ausgelöst.  
+  
+     [!code-csharp[System.String.Format#23](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.String.Format/cs/qa3.cs#23)]
+     [!code-vb[System.String.Format#23](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.String.Format/vb/qa3.vb#23)]  
+  
+     Das empfohlene Verfahren zum Einschließen von literaler geschweiften Klammern in eine zusammengesetzte Formatzeichenfolge besteht darin enthalten sind, in der Objektliste und Formatelemente zum Einfügen in die Ergebniszeichenfolge verwenden. Beispielsweise können Sie die vorherigen zusammengesetzte Formatierungszeichenfolge ändern, wie hier gezeigt.  
+  
+     [!code-csharp[System.String.Format#24](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.String.Format/cs/qa3.cs#24)]
+     [!code-vb[System.String.Format#24](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.String.Format/vb/qa3.vb#24)]  
+  
+     Die Ausnahme wird auch ausgelöst, wenn die Formatzeichenfolge einen Tippfehler enthält. Beim folgenden Aufruf der <xref:System.String.Format%2A?displayProperty=nameWithType> Methode lässt eine schließende Klammer und öffnende geschweifte Klammer mit einer schließenden Klammer-Paaren.  
+  
+     [!code-csharp[System.FormatException#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.formatexception/cs/example3.cs#3)]
+     [!code-vb[System.FormatException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.formatexception/vb/example3.vb#3)]  
+  
+     Um den Fehler zu beheben, stellen Sie sicher, dass alle öffnende und schließende Klammern entsprechen.  
+  
+     [!code-csharp[System.FormatException#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.formatexception/cs/example3.cs#4)]
+     [!code-vb[System.FormatException#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.formatexception/vb/example3.vb#4)]  
+  
+-   Sie haben angegeben, der Objektliste in einer kombinierten Formatierungsmethode als stark typisierte Parameterarray und <xref:System.FormatException> -Ausnahme gibt an, dass der Index für eine oder mehrere Formatelemente die Anzahl von Argumenten in der Objektliste überschreitet. Dies tritt auf, da keine explizite Konvertierung zwischen Arraytypen stattdessen der Compiler behandelt das Array als ein einziges Argument und nicht als ein Parameterarray vorhanden sind, verwenden. Beispielsweise beim folgenden Aufruf der <xref:System.Console.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> -Methode löst eine <xref:System.FormatException> Ausnahme zwar zum höchste Index, der die Formatelemente 3 und das Parameterarray vom Typ <xref:System.Int32> verfügt über vier Elemente.  
+  
+     [!code-csharp[System.FormatException#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.formatexception/cs/qa1.cs#5)]
+     [!code-vb[System.FormatException#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.formatexception/vb/qa1.vb#5)]  
+  
+     Statt diese Ausnahme wird verarbeitet, sollten die Ursache entfernt werden. Da weder Visual Basic oder c# ein Array von Ganzzahlen in einem Objektarray konvertieren kann, müssen Sie zum Durchführen der Konvertierung selbst vor dem Aufrufen der Methode zur kombinierten Formatierung. Im folgende Beispiel stellt eine Implementierung bereit.  
+  
+     [!code-csharp[System.FormatException#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.formatexception/cs/qa2.cs#6)]
+     [!code-vb[System.FormatException#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.formatexception/vb/qa2.vb#6)]  
+  
+ <xref:System.FormatException>verwendet HRESULT COR_E_FORMAT mit den Wert 0 x 80131537.  
+  
+ Die <xref:System.FormatException> Klasse leitet sich von <xref:System.Exception> und fügt keine speziellen Elemente. Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.FormatException>, finden Sie unter der <xref:System.FormatException.%23ctor%2A> Konstruktoren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormatException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.FormatException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.FormatException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Exception.Message%2A> -Eigenschaft der neuen Instanz mit einer vom System gelieferten Meldung, die den Fehler, z. B. "Ungültiges Format". Diese Meldung berücksichtigt die aktuelle Systemkultur.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.FormatException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Die lokalisierte Zeichenfolge mit der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormatException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.FormatException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.FormatException" />-Klasse mit einer angegebenen Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Exception.Message%2A?displayProperty=nameWithType> -Eigenschaft der neuen Ausnahme unter Verwendung der `message` Parameter. Der Inhalt der `message` soll in verständlicher Sprache gehalten sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.FormatException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FormatException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.FormatException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die Daten des serialisierten Objekts enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.FormatException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung aufgerufen, um das über einen Stream übertragene Ausnahmeobjekt wiederherzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormatException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.FormatException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="innerException">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>"InnerException"</c> Parameter ist kein null-Verweis (<see langword="Nothing" /> in Visual Basic), die aktuelle Ausnahme wird ausgelöst, einem <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.FormatException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt denselben Wert zurück, der an den Konstruktor übergeben wurde, bzw. einen NULL-Verweis (`Nothing` in Visual Basic), wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft nicht den Wert für die innere Ausnahme für den Konstruktor bereitstellt.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.FormatException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Der Verweis auf die interne Ausnahme.|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,416 @@
+<Type Name="RelationshipManager" FullName="System.Data.Objects.DataClasses.RelationshipManager">
+  <TypeSignature Language="C#" Value="public class RelationshipManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit RelationshipManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.RelationshipManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Wird verwendet, um Beziehungen zwischen Objekten im Objektkontext nachzuverfolgen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.DataClasses.RelationshipManager> wird verwendet, um Beziehungen zwischen Objekten in einem Objektkontext nachzuverfolgen. Es gibt für jede im Objektkontext nachverfolgte Beziehung eine Instanz der <xref:System.Data.Objects.DataClasses.RelationshipManager>-Klasse. Beziehungen werden durch Zuordnungen in einem konzeptionellen Modell definiert. Weitere Informationen finden Sie unter [Association-Element (CSDL)](http://msdn.microsoft.com/en-us/c305169a-8af7-432f-9ba7-800a163aed41).  
+  
+   
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Im Beispiel fügt die neuen `SalesOrderHeader` Entitäten aus, um die `Contact` Entität. Anschließend werden alle verknüpfte Enden vom abgerufen der `Contact` Entität und der Name der Beziehung, Quelle Rollenname und Zielrolle ein name für jede End verknüpften zeigt.  
+  
+ [!code-csharp[DP ObjectServices Concepts#IRelatedEnd](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#irelatedend)]
+ [!code-vb[DP ObjectServices Concepts#IRelatedEnd](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#irelatedend)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Data.Objects.DataClasses.RelationshipManager Create (System.Data.Objects.DataClasses.IEntityWithRelationships owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Objects.DataClasses.RelationshipManager Create(class System.Data.Objects.DataClasses.IEntityWithRelationships owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.Create(System.Data.Objects.DataClasses.IEntityWithRelationships)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.DataClasses.RelationshipManager</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Data.Objects.DataClasses.IEntityWithRelationships" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Verweis auf die Entität, die diese Methode aufruft.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Objects.DataClasses.RelationshipManager" />-Objekt.</summary>
+        <returns>Der angeforderte <see cref="T:System.Data.Objects.DataClasses.RelationshipManager" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.RelationshipManager.Create%2A>-Methode wird von Objekten verwendet, die <xref:System.Data.Objects.DataClasses.IEntityWithRelationships> implementieren. Wenn Object Services die <xref:System.Data.Objects.DataClasses.RelationshipManager>-Eigenschaft eines Objekts anfordert, das <xref:System.Data.Objects.DataClasses.IEntityWithRelationships> implementiert, und für das Objekt noch kein Beziehungs-Manager vorhanden ist, wird die <xref:System.Data.Objects.DataClasses.RelationshipManager.Create%2A>-Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllRelatedEnds">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Data.Objects.DataClasses.IRelatedEnd&gt; GetAllRelatedEnds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Data.Objects.DataClasses.IRelatedEnd&gt; GetAllRelatedEnds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.GetAllRelatedEnds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Data.Objects.DataClasses.RelationshipManager/&lt;GetAllRelatedEnds&gt;d__40))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Data.Objects.DataClasses.IRelatedEnd&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Enumeration aller verknüpften Enden zurück, die vom Beziehungs-Manager verwaltet werden.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> von Objekten, implementieren <see cref="T:System.Data.Objects.DataClasses.IRelatedEnd" />. Es wird eine leere Enumeration zurückgegeben, wenn die Beziehungen noch nicht aufgefüllt sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.RelationshipManager.GetAllRelatedEnds%2A> Methode gibt eine Enumeration von <xref:System.Data.Objects.DataClasses.EntityCollection%601> und <xref:System.Data.Objects.DataClasses.EntityReference%601> Objekte. <xref:System.Data.Objects.DataClasses.EntityCollection%601>und <xref:System.Data.Objects.DataClasses.EntityReference%601> konkrete Typen, die abgeleitet sind <xref:System.Data.Objects.DataClasses.RelatedEnd>. Die <xref:System.Data.Objects.DataClasses.RelatedEnd> abstrakten Klasse implementiert die <xref:System.Data.Objects.DataClasses.IRelatedEnd> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Im Beispiel fügt die neuen `SalesOrderHeader` Entitäten aus, um die `Contact` Entität. Anschließend werden alle verknüpfte Enden vom abgerufen der `Contact` Entität und zeigt Beziehungsnamen, Quelle Rollenname und Zielrollennamen für jedes verknüpfte Ende  
+  
+ [!code-csharp[DP ObjectServices Concepts#IRelatedEnd](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#irelatedend)]
+ [!code-vb[DP ObjectServices Concepts#IRelatedEnd](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#irelatedend)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelatedCollection&lt;TTargetEntity&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.DataClasses.EntityCollection&lt;TTargetEntity&gt; GetRelatedCollection&lt;TTargetEntity&gt; (string relationshipName, string targetRoleName) where TTargetEntity : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.DataClasses.EntityCollection`1&lt;!!TTargetEntity&gt; GetRelatedCollection&lt;class TTargetEntity&gt;(string relationshipName, string targetRoleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.GetRelatedCollection``1(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.DataClasses.EntityCollection&lt;TTargetEntity&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TTargetEntity">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="relationshipName" Type="System.String" />
+        <Parameter Name="targetRoleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TTargetEntity">Der Typ des zurückgegebenen <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" />.</typeparam>
+        <param name="relationshipName">Name der Beziehung, zu der navigiert werden soll. Der Beziehungsname ist kein namespacequalifizierter Name.</param>
+        <param name="targetRoleName">Name der Zielrolle für die Navigation. Gibt die Richtung der Navigation in der Beziehung an.</param>
+        <summary>Ruft eine <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" /> von verknüpften Objekten mit dem angegebenen Beziehungs- und Zielrollennamen ab.</summary>
+        <returns>Die <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" /> der verknüpften Objekte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft eine <xref:System.Data.Objects.DataClasses.EntityCollection%601> von verknüpften Objekten mit dem angegebenen Beziehungs- und Zielrollennamen ab.  
+  
+ Der Beziehungsname sollte kein namespacequalifizierter Name sein. Es tritt ein Fehler auf, wenn Sie den Namespace dem Beziehungsnamen voranstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die angegebene Rolle hat statt eines <see cref="T:System.Data.Objects.DataClasses.EntityReference`1" /> eine <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" /> zurückgegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelatedEnd">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.DataClasses.IRelatedEnd GetRelatedEnd (string relationshipName, string targetRoleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.DataClasses.IRelatedEnd GetRelatedEnd(string relationshipName, string targetRoleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.GetRelatedEnd(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.DataClasses.IRelatedEnd</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationshipName" Type="System.String" />
+        <Parameter Name="targetRoleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relationshipName">Der Name der Beziehung in der <c>TargetRoleName</c> definiert ist. Der Beziehungsname ist kein namespacequalifizierter Name.</param>
+        <param name="targetRoleName">Zum Abrufen von anderen Ende der Zielrolle <c>RelationshipName</c>.</param>
+        <summary>Gibt für die angegebene Zielrolle in einer Beziehung eine <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" /> oder einen <see cref="T:System.Data.Objects.DataClasses.EntityReference`1" /> des richtigen Typs zurück.</summary>
+        <returns>
+          <see cref="T:System.Data.Objects.DataClasses.IRelatedEnd" />, das die abgerufene <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" /> oder <see cref="T:System.Data.Objects.DataClasses.EntityReference`1" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für Szenarios gedacht, in denen der Benutzer über keine vollständigen Metadaten verfügt, einschließlich der Informationen zum statischen Typ für beide Enden der Beziehung. Diese Metadaten sind für jeden Entitätstyp der Beziehung im <xref:System.Data.Objects.DataClasses.EdmRelationshipAttribute>-Objekt angegeben, sodass sie vom Metadatensystem abhängig vom angegebenen Beziehungsnamen und Zielrollennamen abgerufen werden können.  
+  
+ Der Beziehungsname sollte kein namespacequalifizierter Name sein. Es tritt ein Fehler auf, wenn Sie den Namespace dem Beziehungsnamen voranstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="relationshipName" /> oder <paramref name="targetRoleName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Quelltyp entspricht nicht dem Typ des Besitzers.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetRoleName" /> ist ungültig.  
+  
+ - oder -   
+  
+ Der Beziehungstyp konnte in den Metadaten nicht gefunden werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelatedReference&lt;TTargetEntity&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.DataClasses.EntityReference&lt;TTargetEntity&gt; GetRelatedReference&lt;TTargetEntity&gt; (string relationshipName, string targetRoleName) where TTargetEntity : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.DataClasses.EntityReference`1&lt;!!TTargetEntity&gt; GetRelatedReference&lt;class TTargetEntity&gt;(string relationshipName, string targetRoleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.GetRelatedReference``1(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.DataClasses.EntityReference&lt;TTargetEntity&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TTargetEntity">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="relationshipName" Type="System.String" />
+        <Parameter Name="targetRoleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TTargetEntity">Der Typ des zurückgegebenen <see cref="T:System.Data.Objects.DataClasses.EntityReference`1" />.</typeparam>
+        <param name="relationshipName">Name der Beziehung, zu der navigiert werden soll. Der Beziehungsname ist kein namespacequalifizierter Name.</param>
+        <param name="targetRoleName">Name der Zielrolle für die Navigation. Gibt die Richtung der Navigation in der Beziehung an.</param>
+        <summary>Ruft den <see cref="T:System.Data.Objects.DataClasses.EntityReference`1" /> für ein verbundenes Objekt mit der angegebenen Kombination von Beziehungsnamen und Zielrollennamen ab.</summary>
+        <returns>Der <see cref="T:System.Data.Objects.DataClasses.EntityReference`1" /> eines verknüpften Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Beziehungsname sollte kein namespacequalifizierter Name sein. Es tritt ein Fehler auf, wenn Sie den Namespace dem Beziehungsnamen voranstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die angegebene Rolle hat statt eines <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" /> eine <see cref="T:System.Data.Objects.DataClasses.EntityReference`1" /> zurückgegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeRelatedCollection&lt;TTargetEntity&gt;">
+      <MemberSignature Language="C#" Value="public void InitializeRelatedCollection&lt;TTargetEntity&gt; (string relationshipName, string targetRoleName, System.Data.Objects.DataClasses.EntityCollection&lt;TTargetEntity&gt; entityCollection) where TTargetEntity : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InitializeRelatedCollection&lt;class TTargetEntity&gt;(string relationshipName, string targetRoleName, class System.Data.Objects.DataClasses.EntityCollection`1&lt;!!TTargetEntity&gt; entityCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.InitializeRelatedCollection``1(System.String,System.String,System.Data.Objects.DataClasses.EntityCollection{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TTargetEntity">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="relationshipName" Type="System.String" />
+        <Parameter Name="targetRoleName" Type="System.String" />
+        <Parameter Name="entityCollection" Type="System.Data.Objects.DataClasses.EntityCollection&lt;TTargetEntity&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TTargetEntity">Der Typ des der <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" /> initialisiert wird.</typeparam>
+        <param name="relationshipName">Der Beziehungsname.</param>
+        <param name="targetRoleName">Der Rollenname des verknüpften Endes.</param>
+        <param name="entityCollection">Die zu initialisierende <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" />.</param>
+        <summary>Initialisiert eine vorhandene <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" />, die mit dem Standardkonstruktor erstellt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.RelationshipManager.InitializeRelatedCollection%2A>-Methode initialisiert eine vorhandene <xref:System.Data.Objects.DataClasses.EntityCollection%601>, die mit dem Standardkonstruktor erstellt wurde. Die <xref:System.Data.Objects.DataClasses.EntityCollection%601> wird mit dem bereitgestellten Beziehungs- und Zielrollennamen initialisiert.  
+  
+ Die <xref:System.Data.Objects.DataClasses.RelationshipManager.InitializeRelatedCollection%2A>-Methode wird nur während der Deserialisierung verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn die bereitgestellte <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" /> bereits initialisiert ist.  
+  
+ - oder -   
+  
+ Wenn der Beziehungs-Manager bereits an einen <see cref="T:System.Data.Objects.ObjectContext" /> angefügt ist.  
+  
+ - oder -   
+  
+ Wenn der Beziehungs-Manager bereits eine Beziehung mit diesem Namen und dieser Zielrolle enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeRelatedReference&lt;TTargetEntity&gt;">
+      <MemberSignature Language="C#" Value="public void InitializeRelatedReference&lt;TTargetEntity&gt; (string relationshipName, string targetRoleName, System.Data.Objects.DataClasses.EntityReference&lt;TTargetEntity&gt; entityReference) where TTargetEntity : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InitializeRelatedReference&lt;class TTargetEntity&gt;(string relationshipName, string targetRoleName, class System.Data.Objects.DataClasses.EntityReference`1&lt;!!TTargetEntity&gt; entityReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.InitializeRelatedReference``1(System.String,System.String,System.Data.Objects.DataClasses.EntityReference{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TTargetEntity">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="relationshipName" Type="System.String" />
+        <Parameter Name="targetRoleName" Type="System.String" />
+        <Parameter Name="entityReference" Type="System.Data.Objects.DataClasses.EntityReference&lt;TTargetEntity&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TTargetEntity">Der Typ des der <see cref="T:System.Data.Objects.DataClasses.EntityReference`1" /> initialisiert wird.</typeparam>
+        <param name="relationshipName">Der Beziehungsname.</param>
+        <param name="targetRoleName">Der Rollenname des verknüpften Endes.</param>
+        <param name="entityReference">Die zu initialisierende <see cref="T:System.Data.Objects.DataClasses.EntityReference`1" />.</param>
+        <summary>Initialisiert eine vorhandene <see cref="T:System.Data.Objects.DataClasses.EntityReference`1" />, die mit dem Standardkonstruktor erstellt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.RelationshipManager.InitializeRelatedReference%2A>-Methode initialisiert eine vorhandene <xref:System.Data.Objects.DataClasses.EntityReference%601>, die mit dem Standardkonstruktor erstellt wurde. Die <xref:System.Data.Objects.DataClasses.EntityReference%601> wird mit dem bereitgestellten Beziehungs- und Zielrollennamen initialisiert.  
+  
+ Die <xref:System.Data.Objects.DataClasses.RelationshipManager.InitializeRelatedReference%2A>-Methode wird nur während der Deserialisierung verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn die bereitgestellte <see cref="T:System.Data.Objects.DataClasses.EntityReference`1" /> bereits initialisiert ist.  
+  
+ - oder -   
+  
+ Wenn der Beziehungs-Manager bereits an einen <see cref="T:System.Data.Objects.ObjectContext" /> angefügt ist.  
+  
+ - oder -   
+  
+ Wenn der Beziehungs-Manager bereits eine Beziehung mit diesem Namen und dieser Zielrolle enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserialized">
+      <MemberSignature Language="C#" Value="public void OnDeserialized (System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OnDeserialized(valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.OnDeserialized(System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.OnDeserialized</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der serialisierten Stream.</param>
+        <summary>Intern verwendet, um die Deserialisierung von Entitätsobjekten zusammen mit den <see cref="T:System.Data.Objects.DataClasses.RelationshipManager" /> Instanzen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSerializing">
+      <MemberSignature Language="C#" Value="public void OnSerializing (System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OnSerializing(valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.OnSerializing(System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.OnSerializing</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Beschreibt die Quelle und das Ziel eines angegebenen serialisierten Streams und stellt einen zusätzlichen, vom Aufrufer definierten Kontext bereit.</param>
+        <summary>Wird von Object Services aufgerufen, um einen <see cref="T:System.Data.EntityKey" /> auf die binäre Serialisierung in einer serialisierten Beziehung vorzubereiten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es werden nur binäre Serialisierungen von Beziehungen unterstützt. Vollständige Objektdiagramme, einschließlich der Beziehungen, werden bei Windows Communication Foundation- und XML-Serialisierungen nicht unterstützt. Weitere Informationen finden Sie unter [Serialisieren von Objekten](http://msdn.microsoft.com/en-us/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

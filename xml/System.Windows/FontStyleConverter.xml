@@ -1,0 +1,173 @@
+<Type Name="FontStyleConverter" FullName="System.Windows.FontStyleConverter">
+  <TypeSignature Language="C#" Value="public sealed class FontStyleConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FontStyleConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FontStyleConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert Instanzen <see cref="T:System.Windows.FontStyle" /> in und aus anderen Datentypen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.FontStyleConverter> -Objekt unterstützt die Konvertierung in und aus der <xref:System.String> Typ.  
+  
+<a name="XAMLTextUsage_FontStyleConverter"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontStyleConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStyleConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz des <see cref="T:System.Windows.FontStyleConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext td, Type t);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext td, class System.Type t) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStyleConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="td" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="t" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="td">Beschreibt die Kontextinformationen eines Typs.</param>
+        <param name="t">Der Typ der Quelle, die für die Konvertierung ausgewertet wird.</param>
+        <summary>Gibt einen Wert, der angibt, ob dieser Konverter ein Objekt des angegebenen Typs mit einer Instanz von konvertieren kann <see cref="T:System.Windows.FontStyle" />.</summary>
+        <returns>
+          <see langword="true" />Wenn der Konverter den bereitgestellten Typ mit einer Instanz von konvertieren kann <see cref="T:System.Windows.FontStyle" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStyleConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die Kontextinformationen eines Typs.</param>
+        <param name="destinationType">Der gewünschte Typ, der den diese Instanz des <see cref="T:System.Windows.FontStyle" /> für die Konvertierung in ausgewertet wird.</param>
+        <summary>Bestimmt, ob eine Instanz von <see cref="T:System.Windows.FontStyle" /> in einen anderen Typ konvertiert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn diese Instanz von der Konverter konvertiert werden kann <see cref="T:System.Windows.FontStyle" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext td, System.Globalization.CultureInfo ci, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext td, class System.Globalization.CultureInfo ci, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStyleConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="td" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="ci" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="td">Die Kontextinformationen eines Typs.</param>
+        <param name="ci">
+          <see cref="T:System.Globalization.CultureInfo" />des Typs, der konvertiert wird.</param>
+        <param name="value">Das Objekt, das konvertiert wird.</param>
+        <summary>Versucht, ein angegebenes Objekt in eine Instanz von <see cref="T:System.Windows.FontStyle" /> zu konvertieren.</summary>
+        <returns>Die Instanz von <see cref="T:System.Windows.FontStyle" /> erstellt aus der konvertierten <paramref name="value" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="value" />ist <see langword="null" /> oder ist kein gültiger Typ für die Konvertierung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStyleConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die Kontextinformationen eines Typs.</param>
+        <param name="culture">
+          <see cref="T:System.Globalization.CultureInfo" />des Typs, der konvertiert wird.</param>
+        <param name="value">Die Instanz von <see cref="T:System.Windows.FontStyle" /> konvertieren.</param>
+        <param name="destinationType">Der Typ dieser Instanz von <see cref="T:System.Windows.FontStyle" /> konvertiert.</param>
+        <summary>Versucht, eine Instanz der <see cref="T:System.Windows.FontStyle" /> in einen angegebenen Typ.</summary>
+        <returns>Das Objekt, das aus der konvertierten Instanz von erstellt <see cref="T:System.Windows.FontStyle" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `destinationType` kann <xref:System.String> oder <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor> sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="value" /> ist gleich <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="value" />ist keine Instanz von<see cref="T:System.Windows.FontStyle" />  
+  
+ - oder -   
+  
+ <paramref name="destinationType" />ist kein gültiges Ziel-Typ.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

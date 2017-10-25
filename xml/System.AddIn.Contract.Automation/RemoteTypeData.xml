@@ -1,0 +1,269 @@
+<Type Name="RemoteTypeData" FullName="System.AddIn.Contract.Automation.RemoteTypeData">
+  <TypeSignature Language="C#" Value="public struct RemoteTypeData" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit RemoteTypeData extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Automation.RemoteTypeData" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen über einen Typ, den Komponenten Anwendungsdomänen- und Prozessgrenzen hinweg zugreifen können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.AddIn.Contract.Automation.RemoteTypeData> Struktur enthält Informationen zu einem Objekt, implementiert die <xref:System.AddIn.Contract.Automation.IRemoteObjectContract> Schnittstelle. Rufen Sie zum Abrufen von Informationen zu einem Remoteobjekt Komponenten der <xref:System.AddIn.Contract.Automation.IRemoteObjectContract.GetRemoteType%2A> Methode zum Abrufen einer <xref:System.AddIn.Contract.Automation.IRemoteTypeContract>. Anschließend Komponenten Aufruf der <xref:System.AddIn.Contract.Automation.IRemoteTypeContract.GetTypeData%2A> Methode zum Abrufen einer <xref:System.AddIn.Contract.Automation.RemoteTypeData>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ArrayRank">
+      <MemberSignature Language="C#" Value="public int ArrayRank;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 ArrayRank" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteTypeData.ArrayRank" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Rang (d. h. die Anzahl der Dimensionen) von der remote-Array an, den dieses <see cref="T:System.AddIn.Contract.Automation.RemoteTypeData" /> beschreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu bestimmen, ob eine <xref:System.AddIn.Contract.Automation.RemoteTypeData> wird beschrieben, ein Array ist, verwenden die <xref:System.AddIn.Contract.Automation.RemoteTypeData.IsArray> Feld.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public string AssemblyName;" />
+      <MemberSignature Language="ILAsm" Value=".field public string AssemblyName" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteTypeData.AssemblyName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den vollständigen Namen der Assembly, die die Remote enthält geben, die von diesem <see cref="T:System.AddIn.Contract.Automation.RemoteTypeData" /> beschreibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyQualifiedName">
+      <MemberSignature Language="C#" Value="public string AssemblyQualifiedName;" />
+      <MemberSignature Language="ILAsm" Value=".field public string AssemblyQualifiedName" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteTypeData.AssemblyQualifiedName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namen der Remoteinstanz dar, den dieses <see cref="T:System.AddIn.Contract.Automation.RemoteTypeData" /> beschreibt, die durch den Namen der Assembly mit dem Typ qualifiziert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Assembly qualifizierte Name eines Typs enthält den Namen der Assembly aus der der Typ geladen wurde. Weitere Informationen zum Format von einer Assembly qualifizierten Namen finden Sie unter der <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Reflection.TypeAttributes Attributes;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Reflection.TypeAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteTypeData.Attributes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.TypeAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die Attribute der Remoteinstanz Typ dar, die von diesem <see cref="T:System.AddIn.Contract.Automation.RemoteTypeData" /> beschreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieses Felds ist <xref:System.Reflection.TypeAttributes.Public> Wenn diese <xref:System.AddIn.Contract.Automation.RemoteTypeData> beschreibt den Typ eines COM-Objekts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseType">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.IRemoteTypeContract BaseType;" />
+      <MemberSignature Language="ILAsm" Value=".field public class System.AddIn.Contract.Automation.IRemoteTypeContract BaseType" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteTypeData.BaseType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.IRemoteTypeContract</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Basistyp der Remoteinstanz eingeben, die von diesem <see cref="T:System.AddIn.Contract.Automation.RemoteTypeData" /> beschreibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementType">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.IRemoteTypeContract ElementType;" />
+      <MemberSignature Language="ILAsm" Value=".field public class System.AddIn.Contract.Automation.IRemoteTypeContract ElementType" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteTypeData.ElementType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.IRemoteTypeContract</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Typ der Elemente in der remote-Array dar, den dieses <see cref="T:System.AddIn.Contract.Automation.RemoteTypeData" /> beschreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu bestimmen, ob eine <xref:System.AddIn.Contract.Automation.RemoteTypeData> wird beschrieben, ein Array ist, verwenden die <xref:System.AddIn.Contract.Automation.RemoteTypeData.IsArray> Feld.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public string FullName;" />
+      <MemberSignature Language="ILAsm" Value=".field public string FullName" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteTypeData.FullName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Namen der Remoteinstanz dar, den dieses <see cref="T:System.AddIn.Contract.Automation.RemoteTypeData" /> beschreibt, der durch den Namespace qualifiziert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der vollqualifizierte Name eines Typs enthält den Namespace des Typs, jedoch ohne die Assembly, die aus der der Typ geladen wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsArray">
+      <MemberSignature Language="C#" Value="public bool IsArray;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool IsArray" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteTypeData.IsArray" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob dies <see cref="T:System.AddIn.Contract.Automation.RemoteTypeData" /> beschreibt einen Arraytyp.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieses Felds ist `true` Wenn das aktuelle <xref:System.AddIn.Contract.Automation.RemoteTypeData> beschreibt einen Arraytyp ist; andernfalls wird der Wert dieses Felds `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsByRef">
+      <MemberSignature Language="C#" Value="public bool IsByRef;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool IsByRef" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteTypeData.IsByRef" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob dies <see cref="T:System.AddIn.Contract.Automation.RemoteTypeData" /> beschreibt einen Typ, der als Verweis übergeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieses Felds ist `true` Wenn das aktuelle <xref:System.AddIn.Contract.Automation.RemoteTypeData> beschreibt einen Typ, der als Verweis übergeben wird; andernfalls wird der Wert dieses Felds `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberData">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.RemoteMemberData MemberData;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.AddIn.Contract.Automation.RemoteMemberData MemberData" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteTypeData.MemberData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.RemoteMemberData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Elementdaten darstellt, für die Remote geben, die von diesem <see cref="T:System.AddIn.Contract.Automation.RemoteTypeData" /> beschreibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeCode">
+      <MemberSignature Language="C#" Value="public TypeCode TypeCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.TypeCode TypeCode" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteTypeData.TypeCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Typ der Remoteinstanz dar, den dieses <see cref="T:System.AddIn.Contract.Automation.RemoteTypeData" /> beschreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der remote-Typ ist ein <xref:System.AddIn.Contract.IContract>, ist der Wert dieses Felds <xref:System.TypeCode?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,13 @@
+<Namespace Name="Microsoft.VisualBasic.Compatibility.VB6">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.VisualBasic.Compatibility.VB6" /> -Namespace enthält Funktionen und Objekte verwenden über die Tools zur Aktualisierung von Visual Basic 6.0 auf Visual Basic 2008 bereitgestellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Funktionen und Objekte im <xref:Microsoft.VisualBasic.Compatibility.VB6>-Namespace werden in den Tools zur Aktualisierung von Visual Basic 6.0 auf Visual Basic 2008 bereitgestellt. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind nur notwendig, wenn das Visual Basic 6.0-Codemodell sich maßgeblich von der .NET Framework-Implementierung unterscheidet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

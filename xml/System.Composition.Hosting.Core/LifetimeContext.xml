@@ -1,0 +1,210 @@
+<Type Name="LifetimeContext" FullName="System.Composition.Hosting.Core.LifetimeContext">
+  <TypeSignature Language="C#" Value="public sealed class LifetimeContext : System.Composition.CompositionContext, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LifetimeContext extends System.Composition.CompositionContext implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Composition.Hosting.Core.LifetimeContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Composition.Hosting</AssemblyName>
+    <AssemblyVersion>1.0.31.0</AssemblyVersion>
+    <AssemblyVersion>1.0.32.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Composition.CompositionContext</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Knoten in der Struktur der Lebensdauer dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+Die <xref:System.Composition.Hosting.Core.LifetimeContext> Objekt ist die Einheit der Freigabe für freigegebene Komponenten. Es steuert das Verwerfen der gebundenen Teile und kann zum Abrufen von Instanzen, entweder als Teil einer vorhandenen Kompositionsvorgangs oder als Grundlage für einen neuen Kompositionsvorgang verwendet werden. Der Kontext eines einzelnen Lebensdauer kann gekennzeichnet werden, um Teile enthalten, die von bestimmten Freigabe Grenzen eingeschränkt werden.
+
+Dieses Objekt enthält zwei Angaben unabhängig geschützten Freigabezustand: freigegebene Instanzen des Webparts und Instanzen des Webparts gebunden. Eine freigegebene Teileinstanz sperrenfreie, lesbar ist, und führt nicht zu Problemen, wenn es während der Freigabe hinzugefügt wird. Es wird mit gesperrten selbst geschützt. Aktivierung Logik ist unvermeidlich unter diese Sperre aufgerufen. Eine gebundene Teileinstanz wird immer durch Sperren geschützt <see langword="this" />, und sollte nie in nach der Freigabe geschrieben werden. Eine gebundene Teileinstanz wird festgelegt, um <see langword="null" /> unter eine Sperre in der <xref:System.Composition.Hosting.Core.LifetimeContext.Dispose> Methode. Wenn schreiben nach Beseitigung für eine gebundene Teileinstanz zugelassen wird, führt er zu verwerfbare Teile, die nicht freigegeben wird. Die Dispose-Methode auf eine gebundene Teil wird außerhalb der Sperre aufgerufen. 
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddBoundInstance">
+      <MemberSignature Language="C#" Value="public void AddBoundInstance (IDisposable instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddBoundInstance(class System.IDisposable instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.LifetimeContext.AddBoundInstance(System.IDisposable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.IDisposable" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Der Teil.</param>
+        <summary>Bindet die Lebensdauer eines verwerfbaren Teils in diesem Kontext Lebensdauer.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Der Vorgang wurde für ein verworfenes Objekt ausgeführt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllocateSharingId">
+      <MemberSignature Language="C#" Value="public static int AllocateSharingId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 AllocateSharingId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.LifetimeContext.AllocateSharingId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert einen Bezeichner, der freigegebene Bereich Datenbankinstanzen verwendet werden kann.</summary>
+        <returns>Ein neuer Eindeutiger Bezeichner.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.LifetimeContext.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Kontext für die Lebensdauer und die teileinstanzen gebunden frei.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindContextWithin">
+      <MemberSignature Language="C#" Value="public System.Composition.Hosting.Core.LifetimeContext FindContextWithin (string sharingBoundary);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Hosting.Core.LifetimeContext FindContextWithin(string sharingBoundary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.LifetimeContext.FindContextWithin(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Hosting.Core.LifetimeContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sharingBoundary" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sharingBoundary">Die Freigabe Grenze an, die einen Kontext Lebensdauer in suchen.</param>
+        <summary>Findet den größten Lebensdauer-Kontext, in alle von der angegebenen Freigabe Grenzen an.</summary>
+        <returns>Der größte in allen von der angegebenen Freigabe Grenzen Lebensdauer-Kontext.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derzeit kann nicht im Stammverzeichnis einer Grenze sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrCreate">
+      <MemberSignature Language="C#" Value="public object GetOrCreate (int sharingId, System.Composition.Hosting.Core.CompositionOperation operation, System.Composition.Hosting.Core.CompositeActivator creator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetOrCreate(int32 sharingId, class System.Composition.Hosting.Core.CompositionOperation operation, class System.Composition.Hosting.Core.CompositeActivator creator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.LifetimeContext.GetOrCreate(System.Int32,System.Composition.Hosting.Core.CompositionOperation,System.Composition.Hosting.Core.CompositeActivator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sharingId" Type="System.Int32" />
+        <Parameter Name="operation" Type="System.Composition.Hosting.Core.CompositionOperation" />
+        <Parameter Name="creator" Type="System.Composition.Hosting.Core.CompositeActivator" />
+      </Parameters>
+      <Docs>
+        <param name="sharingId">Die ID der freigegebene Bereich.</param>
+        <param name="operation">Ein Vorgang in dem Teil, bei Bedarf erstellt.</param>
+        <param name="creator">Eine Aktivierung, die eine neue Teileinstanz, bei Bedarf aktiviert werden kann.</param>
+        <summary>Ruft eine Instanz der freigegebene Bereich mit der angegebenen ID ab, oder wenn die Teileinstanz nicht gefunden werden kann, erstellt und gibt eine Teileinstanz, die mithilfe des angegebenen Erstellers innerhalb des angegebenen Vorgangs frei.</summary>
+        <returns>Der neue oder abgerufenen Teil.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist Sperre frei, wenn die Teileinstanz bereits vorhanden ist. Wenn die Teileinstanz erstellt werden muss, eine Sperre ausgeführt werden, andere Schreibvorgänge, die diese Methode verwenden (gleichzeitige Lesevorgänge sind weiterhin sicher und sperrenfreie) serialisiert. Es ist wichtig, die die Zusammensetzung und somit sperrdefinition, ist streng Leaf-zu-Stamm in die Struktur der Lebensdauer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.LifetimeContext.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolgendarstellung dieses <see cref="T:System.Composition.Hosting.Core.LifetimeContext" />-Objekts zurück.</summary>
+        <returns>Die Zeichenfolgendarstellung dieses <see cref="T:System.Composition.Hosting.Core.LifetimeContext" />-Objekts.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetExport">
+      <MemberSignature Language="C#" Value="public override bool TryGetExport (System.Composition.Hosting.Core.CompositionContract contract, out object export);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TryGetExport(class System.Composition.Hosting.Core.CompositionContract contract, [out] object&amp; export) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.LifetimeContext.TryGetExport(System.Composition.Hosting.Core.CompositionContract,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contract" Type="System.Composition.Hosting.Core.CompositionContract" />
+        <Parameter Name="export" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="contract">Der Vertrag.</param>
+        <param name="export">Nach dem Beenden dieser Methode enthält der Vertrag-Instanz, falls verfügbar. andernfalls <see langword="null" />.</param>
+        <summary>Ruft eine Instanz des Vertrags aus dem Kontext Komposition ab.</summary>
+        <returns>
+          <see langword="true" />Wenn die Instanz abgerufen wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

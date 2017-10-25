@@ -1,0 +1,50 @@
+<Type Name="SUDSGeneratorException" FullName="System.Runtime.Remoting.MetadataServices.SUDSGeneratorException">
+  <TypeSignature Language="C#" Value="public class SUDSGeneratorException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SUDSGeneratorException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.MetadataServices.SUDSGeneratorException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn ein Fehler, während der Generierung von Web Services Description Language (WSDL auftritt).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.MetadataServices.SUDSGeneratorException> wird von den Remoting-WSDL-Generator generiert. Der WSDL-Generator wird verwendet, durch die [Soapsuds-Tool (Soapsuds.exe)](http://msdn.microsoft.com/en-us/40f6f8c8-b80c-4e9f-a920-31bcd0cf45c5), und kann auch programmgesteuert mithilfe von aufgerufen werden der <xref:System.Runtime.Remoting.MetadataServices.MetaData> Klasse.  
+  
+ <xref:System.Runtime.Remoting.MetadataServices.SUDSGeneratorException>verwendet HRESULT COR_E_EXCEPTION mit den Wert 0 x 80131500.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Runtime.Remoting.MetadataServices.SUDSGeneratorException>, finden Sie unter der <xref:System.Exception> Konstruktoren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SUDSGeneratorException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.SUDSGeneratorException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Der <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen über die Quelle oder das Ziel enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Remoting.MetadataServices.SUDSGeneratorException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

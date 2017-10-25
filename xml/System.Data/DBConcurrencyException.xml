@@ -1,0 +1,334 @@
+<Type Name="DBConcurrencyException" FullName="System.Data.DBConcurrencyException">
+  <TypeSignature Language="C#" Value="public sealed class DBConcurrencyException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DBConcurrencyException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DBConcurrencyException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, indem Sie die <see cref="T:System.Data.Common.DataAdapter" /> während einer INSERT-, Update- und Löschvorgang, wenn die Anzahl der betroffenen Zeilen gleich 0 (null) ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.DataAdapter> untersucht die Anzahl der Zeilen, die von der Ausführung der einzelnen INSERT-, Update- oder Delete-Vorgang betroffen sind, und löst diese Ausnahme aus, wenn die Anzahl 0 (null) entspricht. Diese Ausnahme wird im Allgemeinen durch eine parallelitätsverletzung verursacht.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DBConcurrencyException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DBConcurrencyException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.DBConcurrencyException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor initialisiert alle Felder mit ihren Standardwerten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DBConcurrencyException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DBConcurrencyException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Textzeichenfolge, die die Details der Ausnahme beschreibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.DBConcurrencyException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DBConcurrencyException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DBConcurrencyException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Textzeichenfolge, die die Details der Ausnahme beschreibt.</param>
+        <param name="inner">Ein Verweis auf eine Beschreibung der eingeschlossenen Ausnahme.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.DBConcurrencyException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine neue Ausnahme erstellen, die eine frühere Ausnahme abfängt. Der Code, der die zweite Ausnahme behandelt, kann die zusätzliche Informationen aus der früheren Ausnahme, die eine innere Ausnahme, so genannte verwenden, um die Ursache für den ursprünglichen Fehler untersuchen zu können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DBConcurrencyException (string message, Exception inner, System.Data.DataRow[] dataRows);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner, class System.Data.DataRow[] dataRows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DBConcurrencyException.#ctor(System.String,System.Exception,System.Data.DataRow[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+        <Parameter Name="dataRows" Type="System.Data.DataRow[]" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache dieser Ausnahme erklärt wird.</param>
+        <param name="inner">Die Ausnahme, die die aktuelle Ausnahme verursacht hat, oder ein Nullverweis (<see langword="Nothing" /> in Visual Basic), wenn keine innere Ausnahme angegeben ist.</param>
+        <param name="dataRows">Ein Array mit den <see cref="T:System.Data.DataRow" /> Objekte, deren Aktualisierungsfehler diese Ausnahme generiert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.DBConcurrencyException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyToRows">
+      <MemberSignature Language="C#" Value="public void CopyToRows (System.Data.DataRow[] array);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyToRows(class System.Data.DataRow[] array) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DBConcurrencyException.CopyToRows(System.Data.DataRow[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Data.DataRow[]" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale Array von <see cref="T:System.Data.DataRow" /> Objekte kopieren der <see cref="T:System.Data.DataRow" /> Objekten in.</param>
+        <summary>Kopiert die <see cref="T:System.Data.DataRow" /> Objekte, deren Aktualisierungsfehler diese Ausnahme, in das angegebene Array von generiert <see cref="T:System.Data.DataRow" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Ausführen von BatchUpdates mit der <xref:System.Data.Common.DataAdapter.ContinueUpdateOnError%2A> Eigenschaft von der <xref:System.Data.Common.DataAdapter> festgelegt `true`, diese Ausnahme wird ausgelöst, wenn alle Updates fehlgeschlagen Zeile. In diesem Fall dies <xref:System.Data.DBConcurrencyException> enthält <xref:System.Data.DataRow> Objekte für alle Zeilen, deren Updatefehler, anstatt nur die Aktivität <xref:System.Data.DataRow> -Objekt in <xref:System.Data.DBConcurrencyException.Row%2A>, und die betroffenen <xref:System.Data.DataRow> Objekte abgerufen werden können, durch den Aufruf <xref:System.Data.DBConcurrencyException.CopyToRows%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyToRows">
+      <MemberSignature Language="C#" Value="public void CopyToRows (System.Data.DataRow[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyToRows(class System.Data.DataRow[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DBConcurrencyException.CopyToRows(System.Data.DataRow[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Data.DataRow[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale Array von <see cref="T:System.Data.DataRow" /> Objekte kopieren der <see cref="T:System.Data.DataRow" /> Objekten in.</param>
+        <param name="arrayIndex">Der Index im Zielarray Kopieren gestartet werden.</param>
+        <summary>Kopiert die <see cref="T:System.Data.DataRow" /> Objekte, deren Aktualisierungsfehler diese Ausnahme, in das angegebene Array von generiert <see cref="T:System.Data.DataRow" /> -Objekten, beginnend am angegebenen Arrayindex begonnen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Ausführen von BatchUpdates mit der <xref:System.Data.Common.DataAdapter.ContinueUpdateOnError%2A> Eigenschaft von der <xref:System.Data.Common.DataAdapter> festgelegt `true`, diese Ausnahme wird ausgelöst, wenn alle Updates fehlgeschlagen Zeile. In diesem Fall dies <xref:System.Data.DBConcurrencyException> enthält <xref:System.Data.DataRow> Objekte für alle Zeilen, deren Updatefehler, anstatt nur die Aktivität <xref:System.Data.DataRow> -Objekt in <xref:System.Data.DBConcurrencyException.Row%2A>, und die betroffenen <xref:System.Data.DataRow> Objekte abgerufen werden können, durch den Aufruf <xref:System.Data.DBConcurrencyException.CopyToRows%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo si, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DBConcurrencyException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="si" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="si">Eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den serialisierten Daten, die der <see cref="T:System.Data.DBConcurrencyException" /> zugeordnet sind.</param>
+        <param name="context">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" />, der Quelle und Ziel des serialisierten Streams enthält, der dem <see cref="T:System.Data.DBConcurrencyException" /> zugeordnet ist.</param>
+        <summary>Füllt die Serialisierungsinformationsobjekt mit den zum Serialisieren von Daten der <see cref="T:System.Data.DBConcurrencyException" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="info" /> Parameter ist ein null-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Row">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow Row { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataRow Row" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DBConcurrencyException.Row" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die <see cref="T:System.Data.DataRow" /> , generiert der <see cref="T:System.Data.DBConcurrencyException" />.</summary>
+        <value>Der Wert von <see cref="T:System.Data.DataRow" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Data.DBConcurrencyException.Row%2A> zum Abrufen des Werts von der <xref:System.Data.DataRow> erstellten Zeile die <xref:System.Data.DBConcurrencyException>. Festlegen des Werts der <xref:System.Data.DataRow> hat keine Auswirkungen.  
+  
+ Beim Ausführen von BatchUpdates mit der <xref:System.Data.Common.DataAdapter.ContinueUpdateOnError%2A> Eigenschaft von der <xref:System.Data.Common.DataAdapter> festgelegt `true`, diese Ausnahme wird ausgelöst, wenn alle Updates fehlgeschlagen Zeile. In diesem Fall dies <xref:System.Data.DBConcurrencyException> enthält <xref:System.Data.DataRow> Objekte für alle Zeilen, deren Updatefehler, anstatt nur die Aktivität <xref:System.Data.DataRow> -Objekt in <xref:System.Data.DBConcurrencyException.Row%2A>, und die betroffenen <xref:System.Data.DataRow> Objekte abgerufen werden können, durch den Aufruf <xref:System.Data.DBConcurrencyException.CopyToRows%2A>.  
+  
+ Unterstützung von Serialisierung ist nicht vorhanden für <xref:System.Data.DataRow> Objekte. Aus diesem Grund Wenn Sie Serialisieren einer <xref:System.Data.DBConcurrencyException> -Objekt, das der Wert der <xref:System.Data.DBConcurrencyException.Row%2A> Eigenschaft in die serialisierte Version des Objekts auf einen null-Wert festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowCount">
+      <MemberSignature Language="C#" Value="public int RowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DBConcurrencyException.RowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Zeilen, deren Updatefehler generieren diese Ausnahme, ab.</summary>
+        <value>Eine ganze Zahl, die die Anzahl der Zeilen, deren Updatefehler, enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1471 @@
+<Type Name="HttpListenerRequest" FullName="System.Net.HttpListenerRequest">
+  <TypeSignature Language="C#" Value="public sealed class HttpListenerRequest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpListenerRequest extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.HttpListenerRequest" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.HttpListener</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Beschreibt eine eingehende HTTP-Anforderung für ein <see cref="T:System.Net.HttpListener" /> Objekt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Client eine Anforderung an einen Uniform Resource Identifier (URI) sendet behandelt, indem ein <xref:System.Net.HttpListener> -Objekt, der <xref:System.Net.HttpListener> bietet eine <xref:System.Net.HttpListenerContext> -Objekt, das enthält Informationen zu den Absender der Anforderung und die Antwort, die an den Client gesendet wird. Die <xref:System.Net.HttpListenerContext.Request%2A?displayProperty=nameWithType> -Eigenschaft gibt die <xref:System.Net.HttpListenerRequest> -Objekt, das die Anforderung beschreiben.  
+  
+ Die <xref:System.Net.HttpListenerRequest> -Objekt enthält Informationen über die Anforderung, z. B. die Anforderung <xref:System.Net.HttpListenerRequest.HttpMethod%2A> Zeichenfolge <xref:System.Net.HttpListenerRequest.UserAgent%2A> -Zeichenfolge ein, und Textdaten anfordern (finden Sie unter der <xref:System.Net.HttpListenerRequest.InputStream%2A> Eigenschaft).  
+  
+ Um die Anforderung zu antworten, benötigen Sie die zugehörige Antwort mit der <xref:System.Net.HttpListenerContext.Response%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Empfangen und reagieren auf eine <xref:System.Net.HttpListenerRequest>.  
+  
+ [!code-csharp[Net_Listener_Basic#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AcceptTypes">
+      <MemberSignature Language="C#" Value="public string[] AcceptTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AcceptTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.AcceptTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den MIME-Typen, die vom Client akzeptiert.</summary>
+        <value>Ein <see cref="T:System.String" /> Array, das in der Anforderung angegebenen Typnamen enthält <see langword="Accept" /> Header oder <see langword="null" /> , wenn die Clientanforderung nicht eingeschlossen war ein <see langword="Accept" /> Header.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Accept` Header ist eine Zeichenfolge mit Leerzeichen getrennten Multipurpose Internet Mail Extensions (MIME)-Typnamen (z. B. `image/jpeg`), die angibt, ob der MIME-Typen, die der Client akzeptieren und verarbeiten, die in einer Antwort vorbereitet ist. Die `*/*` Eintrag gibt an, dass der Client MIME-Typ akzeptiert. Eine ausführliche Beschreibung der `Accept` -Header, finden Sie unter RFC 2616, verfügbar unter [http://www.rfc-editor.org](http://www.rfc-editor.org/).  
+  
+ Eine vollständige Liste von Anforderungsheadern finden Sie unter der <xref:System.Net.HttpRequestHeader> Enumeration.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#15](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetClientCertificate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginGetClientCertificate (AsyncCallback requestCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginGetClientCertificate(class System.AsyncCallback requestCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerRequest.BeginGetClientCertificate(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="requestCallback">Ein <see cref="T:System.AsyncCallback" />-Delegat, der auf die Methode verweist, die bei Abschluss des Vorgangs aufgerufen werden soll.</param>
+        <param name="state">Ein benutzerdefiniertes Objekt, das Informationen über den Vorgang enthält. Dieses Objekt wird an den Rückrufdelegaten übergeben, bei Abschluss des Vorgangs.</param>
+        <summary>Beginnt eine asynchrone Anforderung für das Zertifikat des Clients x. 509 v. 3.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" /> , der den Status des Vorgangs angibt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCertificateError">
+      <MemberSignature Language="C#" Value="public int ClientCertificateError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ClientCertificateError" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.ClientCertificateError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Fehlercode zur Identifizierung von ein Problem mit der <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate" /> vom Client bereitgestellt.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der einen Windows-Fehlercode enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält einen Windows-Fehlercode zurückgegeben, durch den Secure Channel (Schannel) Security Support Provider Interface (SSPI), die zur Validierung des Zertifikats verwendet wird. Weitere Informationen zu SSPI-Unterstützung für Schannel finden Sie unter "Erstellen einer sicheren Verbindung mithilfe Schannel" in der Dokumentation zur Sicherheit unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel überprüft diese Eigenschaft, um zu bestimmen, ob die Anforderung ein gültiges Clientzertifikat enthält.  
+  
+ [!code-csharp[NCLListener#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLListener/CS/sample.cs#3)]
+ [!code-vb[NCLListener#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLListener/vb/sample.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Clientzertifikat wurde noch nicht initialisiert wurde durch einen Aufruf der <see cref="M:System.Net.HttpListenerRequest.BeginGetClientCertificate(System.AsyncCallback,System.Object)" /> oder <see cref="M:System.Net.HttpListenerRequest.GetClientCertificate" /> Methoden  
+  
+ - oder -   
+  
+ Der Vorgang wird noch ausgeführt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding ContentEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding ContentEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.ContentEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die inhaltscodierung, die mit der Anforderung gesendete Daten verwendet werden können</summary>
+        <value>Ein <see cref="T:System.Text.Encoding" /> Objekt, das für die Verwendung mit den Daten in der <see cref="P:System.Net.HttpListenerRequest.InputStream" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Text.Encoding> Objekt kann verwendet werden, um Bytesequenzen in Zeichensätze (Codepages) und die Zeichen in Bytesequenzen zu konvertieren. Diese Eigenschaft verwendet den Charset-Wert aus der `Content-Type` Header bestimmt die Codierung. Wenn diese Informationen nicht verfügbar ist, gibt diese Eigenschaft <xref:System.Text.Encoding.Default%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Net.HttpListenerRequest.ContentEncoding%2A> Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#16](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentLength64">
+      <MemberSignature Language="C#" Value="public long ContentLength64 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ContentLength64" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.ContentLength64" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge der Textdaten in der Anforderung enthalten.</summary>
+        <value>Der Wert aus der Anforderung <see langword="Content-Length" /> Header. Dieser Wert ist 1, wenn die Inhaltslänge nicht bekannt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Content-Length` -Header gibt die Länge in Bytes, der Textdaten, die mit der Anforderung.  
+  
+ Eine vollständige Liste von Anforderungsheadern finden Sie unter der <xref:System.Net.HttpRequestHeader> Enumeration.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Net.HttpListenerRequest.ContentLength64%2A> Eigenschaft bei der Verarbeitung von Textdaten.  
+  
+ [!code-csharp[Net_Listener_Basic#16](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public string ContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den MIME-Typ, der die Textdaten in der Anforderung enthalten.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält den Text der Anforderung <see langword="Content-Type" /> Header.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Client in einer Anforderung Textdaten enthält, wird den Multipurpose Internet Mail Extensions (MIME)-Typ, der die Textdaten in deklariert die `Content-Type` Header. Z. B. der Standard-MIME-Typ der Daten zurückgegeben, aus einem Web Form mithilfe der `POST` Methode ist `application/x-www-form-urlencoded`.  
+  
+ Eine vollständige Liste von Anforderungsheadern finden Sie unter der <xref:System.Net.HttpRequestHeader> -Enumeration und RFC 2616, verfügbar unter [http://www.rfc-editor.org](http://www.rfc-editor.org/).  
+  
+ Die <xref:System.Net.HttpListenerRequest.ContentType%2A> ist null, wenn es ist keine `Content-Type` Header in der Anforderung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie diese Eigenschaft verwendet wird.  
+  
+ [!code-csharp[Net_Listener_Basic#16](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cookies">
+      <MemberSignature Language="C#" Value="public System.Net.CookieCollection Cookies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.CookieCollection Cookies" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.Cookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.CookieCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die mit der Anforderung gesendeten Cookies ab.</summary>
+        <value>Ein <see cref="T:System.Net.CookieCollection" /> , mit der Anforderung gesendete Cookies enthält. Diese Eigenschaft gibt eine leere Auflistung zurück, wenn die Anforderung keine Cookies enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Cookie ist Name/Wert-Text-Daten von einem Webserver, der auf dem Computer lokalen (Client) gespeichert ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte der mit der Anforderung gesendeten Cookies.  
+  
+ [!code-csharp[Net_Listener_Basic#18](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetClientCertificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 EndGetClientCertificate (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Cryptography.X509Certificates.X509Certificate2 EndGetClientCertificate(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerRequest.EndGetClientCertificate(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Die ausstehende Anforderung für das Zertifikat.</param>
+        <summary>Beendet eine asynchrone Anforderung für das Zertifikat des Clients x. 509 v. 3.</summary>
+        <returns>Die <see cref="T:System.IAsyncResult" /> -Objekt, das zurückgegeben wird, wenn der Vorgang wurde gestartet.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asyncResult" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="asyncResult" />durch den Aufruf wurde nicht abgerufen werden.<see cref="M:System.Net.HttpListenerRequest.BeginGetClientCertificate(System.AsyncCallback,System.Object)" /><paramref name="e." /></exception>
+        <exception cref="T:System.InvalidOperationException">Diese Methode wurde bereits aufgerufen, für den Vorgang identifizierten <paramref name="asyncResult" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClientCertificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 GetClientCertificate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Cryptography.X509Certificates.X509Certificate2 GetClientCertificate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerRequest.GetClientCertificate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die x. 509 v. 3-Zertifikats des Clients ab.</summary>
+        <returns>Ein <see cref="N:System.Security.Cryptography.X509Certificates" /> Objekt, das x. 509 v. 3-Zertifikats des Clients enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode blockiert, bis das Zertifikat abgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ein Aufruf dieser Methode zum Abrufen von x. 509 v. 3-Zertifikats des Clients wird ausgeführt und kann einen weiteren Aufruf dieser Methode kann nicht vorgenommen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClientCertificateAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt; GetClientCertificateAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Security.Cryptography.X509Certificates.X509Certificate2&gt; GetClientCertificateAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerRequest.GetClientCertificateAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die x. 509 v. 3-Zertifikats des Clients als einen asynchronen Vorgang ab.</summary>
+        <returns>Gibt <see cref="T:System.Threading.Tasks.Task`1" />zurück.  
+  
+ Das Aufgabenobjekt, das den asynchronen Vorgang darstellt. Die <see cref="P:System.Threading.Tasks.Task`1.Result" /> -Eigenschaft im Aufgabenobjekt gibt ein <see cref="N:System.Security.Cryptography.X509Certificates" /> Objekt, das x. 509 v. 3-Zertifikats des Clients enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang wird nicht blockiert. Das zurückgegebene <xref:System.Threading.Tasks.Task%601> Objekt wird abgeschlossen, wenn das Zertifikat abgerufen wurde.  
+  
+ Wenn ein Aufruf dieser Methode zum Abrufen von x. 509 v. 3-Zertifikats des Clients ausgeführt wird, kann einen weiteren Aufruf dieser Methode gemacht werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasEntityBody">
+      <MemberSignature Language="C#" Value="public bool HasEntityBody { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasEntityBody" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.HasEntityBody" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die Anforderung Textdaten zugeordnet sind.</summary>
+        <value>
+          <see langword="true" />Wenn die Anforderung Textdaten; verknüpft ist andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Anforderung, die Daten mit dem Server sendet die `POST` -Methode sollte z. B. einen Entitätstext haben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#16](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Name/Wert-Paaren für Header in der Anforderung gesendet.</summary>
+        <value>Ein <see cref="T:System.Net.WebHeaderCollection" /> , enthält die HTTP-Header in der Anforderung enthalten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anforderungsheader enthalten Metadaten. Z. B. Header darf den Uniform Resource Identifier (URI) der Ressource, die der Client an den Server verwiesen, die Identität des Benutzer-Agent, der vom Client und die zulässigen MIME-Typen für Daten im Antworttext eingesetzt.  
+  
+ Eine vollständige Liste von Anforderungsheadern finden Sie unter der <xref:System.Net.HttpRequestHeader> Enumeration.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Informationen in einer bestimmten <xref:System.Net.WebHeaderCollection> Objekt.  
+  
+ [!code-csharp[Net_Listener_Basic#21](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpMethod">
+      <MemberSignature Language="C#" Value="public string HttpMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HttpMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.HttpMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die HTTP-Methode, die vom Client angegeben.</summary>
+        <value>Ein <see cref="T:System.String" /> , die in der Anforderung verwendete Methode enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die HTTP-Methode wird in der Regel GET oder POST, abhängig von der Aktion, die vom Client gewünscht.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#17](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream InputStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream InputStream" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.InputStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Stream, der vom Client gesendeten Textdaten enthält.</summary>
+        <value>Eine lesbare <see cref="T:System.IO.Stream" /> -Objekt, das vom Client in den Text der Anforderung gesendeten Bytes enthält. Diese Eigenschaft gibt <see cref="F:System.IO.Stream.Null" /> , wenn keine Daten mit der Anforderung gesendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Client Daten überträgt (z. B. mit der HTTP- `POST` Methode), die von dieser Methode zurückgegebene Datenstrom enthält die Daten.  
+  
+> [!NOTE]
+>  Schließen die Anforderung wird den von dieser Eigenschaft zurückgegebene Stream nicht geschlossen. Wenn Sie den Stream nicht mehr benötigen, sollten Sie es schließen, durch Aufrufen der <xref:System.IO.Stream.Close%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht die Verwendung dieser Eigenschaft zum Lesen der Daten, die mit einer Anforderung gesendet.  
+  
+ [!code-csharp[Net_Listener_Basic#16](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#16)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>Dieser Member gibt Ablaufverfolgungsinformationen aus, wenn Sie die Netzwerkablaufverfolgung in der Anwendung aktivieren. Weitere Informationen finden Sie unter [Netzwerkablaufverfolgung in .NET Framework](~/docs/framework/network-programming/network-tracing.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAuthenticated">
+      <MemberSignature Language="C#" Value="public bool IsAuthenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAuthenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.IsAuthenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Always returns false")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob der Client sendet diese Anforderung authentifiziert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn der Client authentifiziert wurde. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anwendung fordert Clientauthentifizierung mit dem <xref:System.Net.HttpListener.AuthenticationSchemes%2A> oder <xref:System.Net.HttpListener.AuthenticationSchemeSelectorDelegate%2A> Eigenschaft.  
+  
+ Die Anwendung erhält kein <xref:System.Net.HttpListenerContext> auf Anforderungen von Clients, die nicht erfolgreich authentifiziert wurden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert, der die <xref:System.Net.HttpListenerRequest.IsAuthenticated%2A> Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#17](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLocal">
+      <MemberSignature Language="C#" Value="public bool IsLocal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLocal" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.IsLocal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die Anforderung vom lokalen Computer gesendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Anforderung, auf dem gleichen Computer wie stammt der <see cref="T:System.Net.HttpListener" /> -Objekt, das die Anforderung bereitgestellt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungen können diese Eigenschaft verwenden, zum Ausführen der besonderen Verarbeitung, wenn Anforderungen von dem lokalen Computer ausgeführt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Net.HttpListenerRequest.IsLocal%2A> Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#17](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecureConnection">
+      <MemberSignature Language="C#" Value="public bool IsSecureConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecureConnection" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.IsSecureConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die TCP-Verbindung verwendet, um die Anforderung zu senden, das Secure Sockets Layer (SSL)-Protokoll verwendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn die TCP-Verbindung SSL verwendet wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um eine sichere Verbindung anzufordern, verwendet die Clientanforderung <xref:System.Uri.UriSchemeHttps> anstelle von <xref:System.Uri.UriSchemeHttp>. Wenn die Verbindung mithilfe von SSL hergestellt werden kann, wird der Client empfängt ein <xref:System.Net.WebException> , Informationen zum Fehler bereitstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Net.HttpListenerRequest.IsSecureConnection%2A> Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#17](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWebSocketRequest">
+      <MemberSignature Language="C#" Value="public bool IsWebSocketRequest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWebSocketRequest" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.IsWebSocketRequest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> -Wert, der angibt, ob die TCP-Verbindung eine websocketanforderung war.</summary>
+        <value>Gibt <see cref="T:System.Boolean" />zurück.  
+  
+ <see langword="true" />Wenn die TCP-Verbindung eine websocketanforderung ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepAlive">
+      <MemberSignature Language="C#" Value="public bool KeepAlive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeepAlive" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.KeepAlive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob der Client eine permanente Verbindung anfordert.</summary>
+        <value>
+          <see langword="true" />Wenn die Verbindung geöffnet werden soll; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein HTTP-Client und Server für den Austausch von Daten mehrere Male in kurzer Zeit davon ausgehen dass, beschleunigt eine permanente Verbindung Kommunikation durch, sodass sie zur Vermeidung des Mehraufwands für das Öffnen und schließen eine TCP-Verbindung für jede Nachricht. Für Clients mit HTTP/1.1, der Standardwert für diese Eigenschaft ist `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#17](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalEndPoint">
+      <MemberSignature Language="C#" Value="public System.Net.IPEndPoint LocalEndPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPEndPoint LocalEndPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.LocalEndPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPEndPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen des Servers IP-Adresse und Port-Nummer an den die Anforderung gerichtet ist.</summary>
+        <value>Eine <see cref="T:System.Net.IPEndPoint" /> , die IP-Adresse, die an die Anforderung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nützlich, wenn reagieren auf Clientanforderungen basierend auf dem Weg, die sie behandelt werden sollen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#17](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtocolVersion">
+      <MemberSignature Language="C#" Value="public Version ProtocolVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version ProtocolVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.ProtocolVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, von dem anfordernden Client verwendete HTTP-Version.</summary>
+        <value>Ein <see cref="T:System.Version" /> , die HTTP-Version des Clients identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Funktionen anderer HTTP-Versionen werden angegeben, in den Dokumenten, die unter [http://www.rfc-editor.org](http://www.rfc-editor.org/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#17](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryString">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection QueryString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection QueryString" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.QueryString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Abfragezeichenfolge, die in der Anforderung enthalten.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.NameValueCollection" /> -Objekt, das Abfragen von Daten in der Anforderung enthaltenen enthält <see cref="P:System.Net.HttpListenerRequest.Url" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einer URL ist die Abfrageinformationen aus der Pfadinformationen durch ein Fragezeichen (?) getrennt. Name/Wert-Paare werden durch ein Gleichheitszeichen (=) getrennt. Für den Zugriff auf die Abfragedaten als einzelne Zeichenfolge rufen die <xref:System.Uri.Query%2A> Eigenschaftswert aus dem <xref:System.Uri> zurückgegebenes Objekt <xref:System.Net.HttpListenerRequest.Url%2A>.  
+  
+> [!NOTE]
+>  Abfragen ohne ein Gleichheitszeichen (Beispiel: [http://www.contoso.com/query.htm?Name](http://www.contoso.com/query.htm?Name) ) werden hinzugefügt, um die `null` -Schlüssel in der <xref:System.Collections.Specialized.NameValueCollection>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Net.HttpListenerRequest.QueryString%2A> Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#15](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawUrl">
+      <MemberSignature Language="C#" Value="public string RawUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RawUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.RawUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die URL-Informationen (ohne den Host und Port) vom Client angefordert werden.</summary>
+        <value>Ein <see cref="T:System.String" /> , die die Basis-URL für diese Anforderung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Basis-URL wird als Teil der URL, befolgen die Domäneninformationen definiert. In der URL-Zeichenfolge `http://www.contoso.com/articles/recent.aspx`, ist die Basis-URL `/articles/recent.aspx`. Die Basis-URL enthält die Abfragezeichenfolge an, falls vorhanden.  
+  
+ Verwenden Sie zum Abrufen der Informationen zur Host und Port der <xref:System.Net.HttpListenerRequest.RemoteEndPoint%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Net.HttpListenerRequest.RawUrl%2A> Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#11](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteEndPoint">
+      <MemberSignature Language="C#" Value="public System.Net.IPEndPoint RemoteEndPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPEndPoint RemoteEndPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.RemoteEndPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPEndPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft der Client-IP-Adresse und Port-Nummer von dem die Anforderung stammt.</summary>
+        <value>Ein <see cref="T:System.Net.IPEndPoint" /> stellt die IP-Adresse und Anschlussnummer Anzahl von dem die Anforderung stammt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#17](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestTraceIdentifier">
+      <MemberSignature Language="C#" Value="public Guid RequestTraceIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid RequestTraceIdentifier" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.RequestTraceIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Always returns Guid.Empty")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anforderungsbezeichner der eingehenden HTTP-Anforderung ab.</summary>
+        <value>Ein <see cref="T:System.Guid" /> -Objekt, das den Bezeichner der HTTP-Anforderung enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceName">
+      <MemberSignature Language="C#" Value="public string ServiceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServiceName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.ServiceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Service Provider (Name, SPN), die der Client für die Anforderung gesendet hat.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält die SPN-Clients, auf die Anforderung gesendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Anwendung kann verwenden die <xref:System.Net.HttpListenerRequest.ServiceName%2A> Eigenschaft benutzerdefinierte (Service Geben Sie Name, SPN) validiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportContext">
+      <MemberSignature Language="C#" Value="public System.Net.TransportContext TransportContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.TransportContext TransportContext" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.TransportContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.TransportContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Net.TransportContext" /> für die Clientanforderung.</summary>
+        <value>Ein <see cref="T:System.Net.TransportContext" /> Objekt für die Clientanforderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.TransportContext> Eigenschaft kann verwendet werden, beim Abrufen der Kanalbindungstoken (CBT) für eine <xref:System.Net.HttpListenerRequest> die über HTTPS gesendet wurde.  
+  
+ Eine Anwendung kann verwenden die <xref:System.Net.TransportContext> Eigenschaft zum Durchführen der benutzerdefinierten Authentifizierung mithilfe von Aufrufen an die systemeigenen Win32 [AcceptSecurityContext](http://go.microsoft.com/fwlink/?LinkId=147021) Funktion.  
+  
+ Wenn eine Anwendung versucht, das Kanalbindungstoken (CBT) aus dieser abgerufen <xref:System.Net.HttpListenerRequest.TransportContext%2A> Eigenschaft mit der <xref:System.Net.TransportContext.GetChannelBinding%2A> Methode und die <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind> ist nicht <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint>, und klicken Sie dann die <xref:System.Net.HttpListenerRequest> löst <xref:System.NotSupportedException>. Die <xref:System.Net.HttpListenerRequest> überschreibt die <xref:System.Net.TransportContext.GetChannelBinding%2A> Methode mit einer internen Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public Uri Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Url" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Uri" /> Objekt vom Client angefordert werden.</summary>
+        <value>Ein <see cref="T:System.Uri" /> -Objekt, das vom Client angeforderte Ressource identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.HttpListenerRequest.Url%2A> Eigenschaft ermöglicht erhalten Sie alle Informationen, die von einem <xref:System.Uri> Objekt. Wenn Sie nur den unformatierten Text der URI-Anforderung kennen müssen, sollten Sie verwenden die <xref:System.Net.HttpListenerRequest.RawUrl%2A> Eigenschaft stattdessen.  
+  
+ Die <xref:System.Net.HttpListenerRequest.Url%2A> Eigenschaft ist null, wenn die <xref:System.Uri> vom Client nicht analysiert werden konnte.  
+  
+ Die <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> Eigenschaft gibt an, ob <xref:System.Net.HttpListener> verwendet den unformatierten URI ohne Escapezeichen anstelle des konvertierten URI, in dem alle Prozentzeichen codiert Werte konvertiert und andere Normalisierungsschritte unternommen werden.  
+  
+ Wenn eine <xref:System.Net.HttpListener> Instanz empfängt eine Anforderung über die `http.sys` Service, erstellt er eine Instanz der URI-Zeichenfolge, die von bereitgestellte `http.sys`, und verfügbar gemacht wird, als die <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Die `http.sys` Dienst macht zwei Zeichenfolgen der Anfrage-URI:  
+  
+-   RAW-URI  
+  
+-   Konvertierte URI  
+  
+ Der unformatierte URI ist der <xref:System.Uri?displayProperty=nameWithType> in der Anforderungszeile einer HTTP-Anforderung bereitgestellt:  
+  
+ `GET /path/`  
+  
+ `Host: www.contoso.com`  
+  
+ Der unformatierte URI gebotenen `http.sys` für die oben genannte Anforderung ist "/ Path /". Dies stellt die Zeichenfolge, die das HTTP-Verb folgt, da sie über das Netzwerk gesendet wurden.  
+  
+ Die `http.sys` Dienst erstellt einen konvertierten URI aus den Angaben in die Anforderung mit der in der Anforderungszeile HTTP-URI und der Hostheader, um zu bestimmen, den Ursprungsserver die Anforderung weitergeleitet werden sollen. Dies erfolgt durch Vergleichen der Informationen aus der Anforderung mit einem Satz von registrierten URI-Präfixen. Damit Sie diese Werte vergleichen kann, muss eine Normalisierung der Anforderung erfolgen. Für das Beispiel oben des konvertierten URI würde wie folgt lauten:  
+  
+ `http://www.contoso.com/path/`  
+  
+ Die `http.sys` service kombiniert die <xref:System.Uri.Host%2A?displayProperty=nameWithType> Eigenschaftswert und die Zeichenfolge in der Anforderungszeile, um einen konvertierten URI zu erstellen. Darüber hinaus `http.sys` und die <xref:System.Uri?displayProperty=nameWithType> Klasse auch folgendermaßen vorgehen:  
+  
+-   Alle Prozentangaben codierte un-Escapezeichen.  
+  
+-   Konvertiert Prozentzeichen codiert nicht-ASCII-Zeichen in eine UTF-16-Zeichen-Darstellung. Beachten Sie, dass UTF-8 und ANSI/DBCS-Zeichen sowie Unicode-Zeichen (Unicode-Codierung mit dem % uXXXX-Format) unterstützt werden.  
+  
+-   Führt andere Normalisierungsschritte, ebenso wie die Pfad-Komprimierung an.  
+  
+ Da die Anforderung keine Informationen enthält über die Codierung für Werte Prozentzeichen codiert möglich, Bestimmen der richtigen Codierung nur durch das Analysieren der Prozentzeichen codiert Werte möglicherweise nicht.  
+  
+ Aus diesem Grund `http.sys` bietet zwei Registrierungsschlüssel zum Ändern des Prozesses:  
+  
+|-Registrierungsschlüssel|Standardwert|Beschreibung|  
+|------------------|-------------------|-----------------|  
+|EnableNonUTF8|1|Wenn der Wert 0, `http.sys` akzeptiert nur UTF-8-codierte URLs.<br /><br /> Wenn ungleich 0 (null), `http.sys` auch ANSI-codiert oder DBCS-codierte URLs in Anforderungen akzeptiert.|  
+|FavorUTF8|1|Wenn ungleich 0 (null), `http.sys` immer versucht, eine URL als UTF-8 zuerst decodiert werden, wenn dieser Konvertierung ein Fehler auftritt und EnableNonUTF8 ungleich NULL ist, "http.sys" und dann versucht, die als ANSI oder DBCS decodiert werden.<br /><br /> Wenn der Wert 0 (und EnableNonUTF8 ist ungleich null), `http.sys` versucht, die als ANSI oder DBCS; Wenn für das decodiert nicht erfolgreich ist, versucht eine UTF-8-Konvertierung.|  
+  
+ Wenn <xref:System.Net.HttpListener> eine Anforderung empfängt, verwendet es den konvertierten URI aus `http.sys` als Eingabe in die <xref:System.Net.HttpListenerRequest.Url%2A> Eigenschaft.  
+  
+ Es ist erforderlich für die Unterstützung von Zeichen als Buchstaben und Zahlen in URIs. Ein Beispiel ist der folgende URI, die verwendet wird, um Kundeninformationen für Kunden abrufen Nummer "1/3812":  
+  
+ `http://www.contoso.com/Customer('1%2F3812')/`  
+  
+ Beachten Sie das Prozentzeichen codiert Schrägstrich in der Uri (% 2F). Dies ist erforderlich, da in diesem Fall die Schrägstrich Daten und kein Pfadtrennzeichen darstellt.  
+  
+ Die Zeichenfolge an den Uri-Konstruktor übergeben wird, führen zu den folgenden URI:  
+  
+ `http://www.contoso.com/Customer('1/3812')/`  
+  
+ Aufteilen des Pfads in seine Segmente würde dazu führen, dass die folgenden Elemente:  
+  
+ `Customer('1`  
+  
+ `3812')`  
+  
+ Dies ist nicht die Absicht des Absenders der Anforderung.  
+  
+ Wenn die <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> Eigenschaft auf "false" festgelegt ist bei der <xref:System.Net.HttpListener> eine Anforderung empfängt, verwendet es den unformatierten URI anstelle des konvertierten URI aus `http.sys` als Eingabe in die <xref:System.Net.HttpListenerRequest.Url%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Net.HttpListenerRequest.Url%2A> Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#15](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlReferrer">
+      <MemberSignature Language="C#" Value="public Uri UrlReferrer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri UrlReferrer" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.UrlReferrer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Uniform Resource Identifier (URI) der Ressource, die der Client an den Server verwiesen.</summary>
+        <value>Ein <see cref="T:System.Uri" /> -Objekt, das den Text der Anforderung enthält <see cref="F:System.Net.HttpRequestHeader.Referer" /> -Header oder <see langword="null" /> , wenn der Header in der Anforderung nicht enthalten war.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Client einen Link zum angeforderten URI befolgt hat, kann die Anforderung enthalten eine `Referrer` Header, der den URI der Ressource identifiziert, die den Link enthalten.  
+  
+ Clients können fälschen oder keine präsentieren einer <xref:System.Net.HttpRequestHeader.Referer> Header. Daher die <xref:System.Net.HttpListenerRequest.UrlReferrer%2A> Eigenschaft kann zum Identifizieren von grundlegenden Trends im Webdatenverkehr hilfreich sein; Sie sollten nicht verwenden, als Teil einer Autorisierungsschemas zum Steuern des Zugriffs auf Daten.  
+  
+ Eine vollständige Liste von Anforderungsheadern finden Sie unter der <xref:System.Net.HttpRequestHeader> Enumeration.  
+  
+ Die <xref:System.Net.HttpListenerRequest.UrlReferrer%2A> ist null, wenn es ist keine `Referrer` Header in der Anforderung oder wenn die `Referrer` Header in der Anforderung vorhanden ist, aber nicht auf eine gültige analysiert <xref:System.Uri>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#15](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAgent">
+      <MemberSignature Language="C#" Value="public string UserAgent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserAgent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.UserAgent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Benutzer-Agent, die vom Client vorgelegte ab.</summary>
+        <value>Ein <see cref="T:System.String" /> -Objekt, das den Text der Anforderung enthält <see langword="User-Agent" /> Header.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `User-Agent` Header in der Regel enthält Text, der Name und Version der Software zum Generieren der Anforderung angibt.  
+  
+ Eine vollständige Liste von Anforderungsheadern finden Sie unter der <xref:System.Net.HttpRequestHeader> Enumeration.  
+  
+ Die <xref:System.Net.HttpListenerRequest.UserAgent%2A> ist null, wenn es ist keine `User-Agent` Header in der Anforderung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#15](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserHostAddress">
+      <MemberSignature Language="C#" Value="public string UserHostAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserHostAddress" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.UserHostAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die IP-Adresse und Port-Nummer an den die Anforderung gerichtet ist ab.</summary>
+        <value>Ein <see cref="T:System.String" /> , die die Host-Adressinformationen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Informationen, die von dieser Eigenschaft zurückgegebene steht auch in der <xref:System.Net.HttpListenerRequest.LocalEndPoint%2A> Eigenschaftswert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#15](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserHostName">
+      <MemberSignature Language="C#" Value="public string UserHostName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserHostName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.UserHostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den DNS-Namen und, falls vorhanden, wird die Portnummer vom Client angegeben.</summary>
+        <value>Ein <see cref="T:System.String" /> -Wert, der den Text der Anforderung enthält <see langword="Host" /> Header.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Host` Header enthält den angeforderten Host Servernamen und Portnummer an, wenn angegeben, durch einen Doppelpunkt getrennt (z. B. `www.contoso.com:8080`).  
+  
+ Sie können diese Eigenschaft verwenden, unterschiedliche Antworten je nach den in der Anforderung angegebenen Hostnamen zurückgeben.  
+  
+ Eine vollständige Liste von Anforderungsheadern finden Sie unter der <xref:System.Net.HttpRequestHeader> Enumeration.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft.  
+  
+ [!code-csharp[Net_Listener_Basic#15](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserLanguages">
+      <MemberSignature Language="C#" Value="public string[] UserLanguages { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] UserLanguages" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.UserLanguages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die natürlichen Sprachen, die für die Antwort bevorzugt werden.</summary>
+        <value>Ein <see cref="T:System.String" /> Array, das die in der Anforderung angegebenen Sprachen enthält <see cref="F:System.Net.HttpRequestHeader.AcceptLanguage" /> Header oder <see langword="null" /> , wenn die Clientanforderung nicht eingeschlossen war ein <see cref="F:System.Net.HttpRequestHeader.AcceptLanguage" /> Header.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine ausführliche Beschreibung der `Accept-Language` -Header, finden Sie unter RFC 2616, Abschnitt 14,4 unter [http://www.rfc-editor.org](http://www.rfc-editor.org/).  
+  
+ Eine vollständige Liste von Anforderungsheadern finden Sie unter der <xref:System.Net.HttpRequestHeader> Enumeration.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Sprachen in der Anforderung `Accept-Language` Header.  
+  
+ [!code-csharp[Net_Listener_Basic#15](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

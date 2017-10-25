@@ -1,0 +1,112 @@
+<Type Name="DynamicResourceExtensionConverter" FullName="System.Windows.DynamicResourceExtensionConverter">
+  <TypeSignature Language="C#" Value="public class DynamicResourceExtensionConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DynamicResourceExtensionConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DynamicResourceExtensionConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert analysiertes XAML in <see cref="T:System.Windows.DynamicResourceExtension" /> und unterstützt dynamische Ressourcenverweise aus XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verweisen auf den Typkonverter ist nicht in der Regel für typische Szenarien, bei denen, wodurch Ressourcenverweise entweder über XAML oder Code, erforderlich. Weitere Informationen zur Markuperweiterung, die dieser Typkonverter unterstützt, finden Sie unter [DynamicResource Markuperweiterung](~/docs/framework/wpf/advanced/dynamicresource-markup-extension.md).  
+  
+<a name="XAMLTextUsage_DynamicResourceExtensionConverter"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicResourceExtensionConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DynamicResourceExtensionConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.DynamicResourceExtensionConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DynamicResourceExtensionConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Kontext, in dem der angegebene Typ ausgewertet werden soll.</param>
+        <param name="destinationType">Der Typ der Ziel/Ausgabe der Konvertierung.</param>
+        <summary>Gibt einen Wert, der angibt, ob dieser Konverter ein Objekt in den angegebenen Zieltyp unter Verwendung des Kontexts konvertieren kann.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="destinationType" /> ist der Typ des <see cref="T:System.ComponentModel.Design.Serialization.InstanceDescriptor" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DynamicResourceExtensionConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> -Objekt, das einen Formatierungskontext bereitstellt.</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die Kultur, um die Darstellung der Zahl angibt.</param>
+        <param name="value">Zu konvertierender Wert. Dies wird als Typ erwartet <see cref="T:System.Windows.DynamicResourceExtension" />.</param>
+        <param name="destinationType">Der Typ, der konvertiert werden soll.</param>
+        <summary>Konvertiert das angegebene Objekt in einen anderen Typ.</summary>
+        <returns>Das zurückgegebene konvertierte Objekt. Dies in den angeforderten Typ umgewandelt. Dies sollte normalerweise umgewandelt werden, um <see cref="T:System.ComponentModel.Design.Serialization.InstanceDescriptor" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `destinationType`muss sein Typ <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor>; Wenn nicht der Fall, klicken Sie dann die Implementierung greift auf die Basis (<xref:System.ComponentModel.TypeConverter.ConvertTo%2A>, die möglicherweise eine Ausnahme ausgelöst).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />konnte nicht zugewiesen werden, als <see cref="T:System.Windows.DynamicResourceExtension" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,65 @@
+<Type Name="UnreferencedObjectEventHandler" FullName="System.Xml.Serialization.UnreferencedObjectEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void UnreferencedObjectEventHandler(object sender, UnreferencedObjectEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UnreferencedObjectEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.UnreferencedObjectEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Xml.Serialization.UnreferencedObjectEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Xml.Serialization.UnreferencedObjectEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode, verarbeitet die <see cref="E:System.Xml.Serialization.XmlSerializer.UnreferencedObject" /> -Ereignis für ein <see cref="T:System.Xml.Serialization.XmlSerializer" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer <xref:System.Xml.Serialization.UnreferencedObjectEventHandler> -Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [NIB: Ereignissen und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115)  
+  
+ Die <xref:System.Xml.Serialization.XmlSerializer.UnreferencedObject> Ereignis tritt auf, wenn Sie nur Aufrufen der <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein <xref:System.Xml.Serialization.UnreferencedObjectEventHandler> auf eine <xref:System.Xml.Serialization.XmlSerializer>. Das Ereignis wird behandelt, durch die `Serializer_UnreferencedObject` Methode. Zum Ausführen des Beispiels schneiden Sie, und fügen Sie die folgenden XML-Code in eine Datei mit dem Namen UnrefObj.xml.  
+  
+```  
+<wrapper>  
+  <Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="id1" n1:GroupName=".NET" xmlns:n1="http://www.cpandl.com">  
+   </Group>  
+<Vehicle id="id2" n1:type="Vehicle" xmlns:n1="http://www.w3.org/2001/XMLSchema-instance">  
+    <licenseNumber xmlns:q1="http://www.w3.org/2001/XMLSchema" n1:type="q1:string">ABCD</licenseNumber>  
+  </Vehicle>  
+<Vehicle id="id3" n1:type="Vehicle" xmlns:n1="http://www.w3.org/2001/XMLSchema-instance">  
+    <licenseNumber xmlns:q1="http://www.w3.org/2001/XMLSchema" n1:type="q1:string">1234</licenseNumber>  
+  </Vehicle>  
+</wrapper>  
+```  
+  
+ [!code-cpp[UnreferencedObject Event Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/UnreferencedObject Event Example/CPP/unrefobj.cpp#1)]
+ [!code-csharp[UnreferencedObject Event Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/UnreferencedObject Event Example/CS/unrefobj.cs#1)]
+ [!code-vb[UnreferencedObject Event Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/UnreferencedObject Event Example/VB/unrefobj.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

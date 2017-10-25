@@ -1,0 +1,338 @@
+<Type Name="Comparer&lt;T&gt;" FullName="System.Collections.Generic.Comparer&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public abstract class Comparer&lt;T&gt; : System.Collections.Generic.IComparer&lt;T&gt;, System.Collections.IComparer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit Comparer`1&lt;T&gt; extends System.Object implements class System.Collections.Generic.IComparer`1&lt;!T&gt;, class System.Collections.IComparer" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.Comparer`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IComparer&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IComparer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">Der Typ der zu vergleichenden Objekte.</typeparam>
+    <summary>Stellt eine Basisklasse für Implementierungen der <see cref="T:System.Collections.Generic.IComparer`1" /> generische Schnittstelle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ableiten von dieser Klasse, die eine benutzerdefinierte Implementierung von der <xref:System.Collections.Generic.IComparer%601> Schnittstelle für die Verwendung mit Auflistungsklassen, z. B. die <xref:System.Collections.Generic.SortedList%602> und <xref:System.Collections.Generic.SortedDictionary%602> generische Klassen.  
+  
+ Der Unterschied zwischen der Ableitung von der <xref:System.Collections.Generic.Comparer%601> Klasse und Implementieren der <xref:System.IComparable?displayProperty=nameWithType> Schnittstelle lautet wie folgt:  
+  
+-   Angeben, wie zwei Objekte standardmäßig verglichen werden sollen, implementieren die <xref:System.IComparable?displayProperty=nameWithType> Schnittstelle in der Klasse. Dadurch wird sichergestellt, dass Sortiervorgänge den Standardcode für den Vergleich verwendet, den Sie bereitgestellt.  
+  
+-   Zum Definieren eines Vergleichs anstelle der Standardvergleich verwendet Ableiten der <xref:System.Collections.Generic.Comparer%601> Klasse. Sie können dieses Vergleichs klicken Sie dann in Sortiervorgänge verwenden, die einen Vergleich als Parameter akzeptieren.  
+  
+ Das zurückgegebene Objekt der <xref:System.Collections.Generic.Comparer%601.Default%2A> Eigenschaft verwendet die <xref:System.IComparable%601?displayProperty=nameWithType> generische Schnittstelle (`IComparable<T>` in c# `IComparable(Of T)` in Visual Basic) um zwei Objekte zu vergleichen. Wenn Typ `T` implementiert nicht die <xref:System.IComparable%601?displayProperty=nameWithType> generische Schnittstellen, die <xref:System.Collections.Generic.Comparer%601.Default%2A> Eigenschaft gibt eine <xref:System.Collections.Generic.Comparer%601> , verwendet die <xref:System.IComparable?displayProperty=nameWithType> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Klasse abgeleitet `BoxLengthFirst`, aus der <xref:System.Collections.Generic.Comparer%601> Klasse. Dieser Vergleich vergleicht zwei Objekte des Typs `Box`. Sortiert zuerst nach Länge, und klicken Sie dann durch die Höhe und dann nach Breite. Die `Box` -Klasse implementiert die <xref:System.IComparable%601> Schnittstelle zum Steuern der Standardvergleich zwischen zwei `Box` Objekte. Diese Standardimplementierung wird zuerst sortiert, durch die Höhe, und klicken Sie dann durch die Länge und dann nach Breite. Das Beispiel zeigt die Unterschiede zwischen den zwei Vergleiche beim Sortieren einer Liste der `Box` Objekte zunächst mithilfe der `BoxLengthFirst` Vergleich und mithilfe des Standardcomparers.  
+  
+ [!code-csharp[System.Collections.Generic.BoxCompare#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.boxcompare/cs/program.cs#1)]
+ [!code-vb[System.Collections.Generic.BoxCompare#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.boxcompare/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>
+        <see cref="M:System.Collections.Generic.Comparer`1.Compare(`0,`0)" />und <see cref="M:System.Collections.Generic.EqualityComparer`1.Equals(`0,`0)" /> möglicherweise im Hinblick auf die Berücksichtigung von Kultur und Groß-/Kleinschreibung unterschiedlich Verhalten.  
+  
+ Für Zeichenfolgenvergleiche die <see cref="T:System.StringComparer" /> Klasse vorzuziehen <c>Vergleich&lt;Zeichenfolge&gt;</c>.  Eigenschaften der <see cref="T:System.StringComparer" /> Klasse zurückgeben, vordefinierte Instanzen, die Zeichenfolgenvergleiche mit verschiedenen Kombinationen der Berücksichtigung von Kultur und Groß-/Kleinschreibung durchzuführen.  Die Groß-und Kleinschreibung und Berücksichtigung der Kultur entsprechen den Namen der Elemente des gleichen <see cref="T:System.StringComparer" /> Instanz.  
+  
+ Weitere Informationen zu kulturabhängige Vergleiche, finden Sie unter der <see cref="N:System.Globalization" /> Namespace und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/9a59696b-d89b-45bd-946d-c75da4732d02).</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Comparer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Comparer`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Collections.Generic.Comparer`1" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compare">
+      <MemberSignature Language="C#" Value="public abstract int Compare (T x, T y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Compare(!T x, !T y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Comparer`1.Compare(`0,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="T" />
+        <Parameter Name="y" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="x">Das erste zu vergleichende Objekt.</param>
+        <param name="y">Das zweite zu vergleichende Objekt.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse führt einen Vergleich zweier Objekte desselben Typs und gibt einen Wert, der angibt, ob ein Objekt kleiner, gleich oder größer als die andere ist.</summary>
+        <returns>Eine ganze Zahl mit Vorzeichen, die die relativen Werte von <paramref name="x" /> und <paramref name="y" /> angibt, wie in der folgenden Tabelle veranschaulicht.  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Bedeutung  
+  
+ </description></listheader><item><term>Kleiner als 0 (null)  
+  
+ </term><description><paramref name="x" /> ist kleiner als <paramref name="y" />.  
+  
+ </description></item><item><term>0 (null)  
+  
+ </term><description><paramref name="x" /> ist gleich <paramref name="y" />.  
+  
+ </description></item><item><term>Größer als 0 (null)  
+  
+ </term><description><paramref name="x" /> ist größer als <paramref name="y" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie diese Methode zum Bereitstellen einer benutzerdefinierten Vergleich für den Typ der Sortierreihenfolge `T`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert einen Vergleich eines `Box` Objekte, die statt der Standardvergleich verwendet werden können. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.Generic.Comparer%601> Klasse.  
+  
+ [!code-csharp[System.Collections.Generic.BoxCompare#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.boxcompare/cs/program.cs#5)]
+ [!code-vb[System.Collections.Generic.BoxCompare#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.boxcompare/vb/program.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Typ <paramref name="T" /> implementiert nicht entweder die <see cref="T:System.IComparable`1" /> generische Schnittstelle oder die <see cref="T:System.IComparable" /> Schnittstelle.</exception>
+        <block subset="none" type="overrides">
+          <para>Vergleichen von <see langword="null" /> mit einem beliebigen Verweistyp ist zulässig und löst keine Ausnahme. Ein null-Verweis gilt als kleiner als jedes beliebige Verweis handeln, der nicht null ist.  
+  
+ Informationen über kulturabhängige Vergleiche finden Sie unter der <see cref="N:System.Globalization" /> Namespace und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/9a59696b-d89b-45bd-946d-c75da4732d02).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.Comparer&lt;T&gt; Create (Comparison&lt;T&gt; comparison);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.Comparer`1&lt;!T&gt; Create(class System.Comparison`1&lt;!T&gt; comparison) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Comparer`1.Create(System.Comparison{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Comparer&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparison" Type="System.Comparison&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="comparison">Der Vergleich verwendet.</param>
+        <summary>Erstellt einen Vergleich unter Verwendung des angegebenen Vergleichs an.</summary>
+        <returns>Der neue Vergleich.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.Comparer&lt;T&gt; Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.Comparer`1&lt;!T&gt; Default" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.Comparer`1.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Comparer&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Standardwert Standardvergleich für den vom generischen Argument angegebenen Typ zu sortieren.</summary>
+        <value>Ein Objekt, das erbt <see cref="T:System.Collections.Generic.Comparer`1" /> und dient als eine Sortierreihenfolge Standardvergleich für den Typ <paramref name="T" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Collections.Generic.Comparer%601> von dieser Eigenschaft zurückgegebene verwendet die <xref:System.IComparable%601?displayProperty=nameWithType> generische Schnittstelle (`IComparable<T>` in c# `IComparable(Of T)` in Visual Basic), zwei Objekte zu vergleichen. Wenn Typ `T` implementiert nicht die <xref:System.IComparable%601?displayProperty=nameWithType> generische Schnittstellen, die diese Eigenschaft gibt eine <xref:System.Collections.Generic.Comparer%601> , verwendet die <xref:System.IComparable?displayProperty=nameWithType> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Collections.Generic.Comparer%601.Default%2A> Eigenschaft, um ein Objekt abzurufen, die den Standardvergleich ausführt. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.Generic.Comparer%601> Klasse.  
+  
+ [!code-csharp[System.Collections.Generic.BoxCompare#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.boxcompare/cs/program.cs#3)]
+ [!code-vb[System.Collections.Generic.BoxCompare#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.boxcompare/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>Für Zeichenfolgenvergleiche die <see cref="T:System.StringComparer" /> Klasse vorzuziehen <c>Vergleich&lt;Zeichenfolge&gt; </c> (<c>Vergleich (der Zeichenfolge)</c> in Visual Basic).  Eigenschaften der <see cref="T:System.StringComparer" /> Klasse zurückgeben, vordefinierte Instanzen, die Zeichenfolgenvergleiche mit verschiedenen Kombinationen der Berücksichtigung von Kultur und Groß-/Kleinschreibung durchzuführen.  Die Groß-und Kleinschreibung und Berücksichtigung der Kultur entsprechen den Namen der Elemente des gleichen <see cref="T:System.StringComparer" /> Instanz.  
+  
+ Weitere Informationen zu kulturabhängige Vergleiche, finden Sie unter der <see cref="N:System.Globalization" /> Namespace und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/9a59696b-d89b-45bd-946d-c75da4732d02).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IComparer.Compare">
+      <MemberSignature Language="C#" Value="int IComparer.Compare (object x, object y);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IComparer.Compare(object x, object y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Comparer`1.System#Collections#IComparer#Compare(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Object" />
+        <Parameter Name="y" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="x">Das erste zu vergleichende Objekt.</param>
+        <param name="y">Das zweite zu vergleichende Objekt.</param>
+        <summary>Vergleicht zwei Objekte und gibt einen Wert zurück, der angibt, ob ein Wert niedriger, gleich oder größer als der andere Wert ist.</summary>
+        <returns>Eine ganze Zahl mit Vorzeichen, die die relativen Werte von <paramref name="x" /> und <paramref name="y" /> angibt, wie in der folgenden Tabelle veranschaulicht.  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Bedeutung  
+  
+ </description></listheader><item><term>Kleiner als 0 (null)  
+  
+ </term><description><paramref name="x" /> ist kleiner als <paramref name="y" />.  
+  
+ </description></item><item><term>0 (null)  
+  
+ </term><description><paramref name="x" /> ist gleich <paramref name="y" />.  
+  
+ </description></item><item><term>Größer als 0 (null)  
+  
+ </term><description><paramref name="x" /> ist größer als <paramref name="y" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist ein Wrapper für die <xref:System.Collections.Generic.Comparer%601.Compare%28%600%2C%600%29> Methode, sodass `obj` müssen in den vom generischen Argument angegebenen Typ umgewandelt werden `T` der aktuellen Instanz. Wenn es in umgewandelt werden kann `T`, wird eine <xref:System.ArgumentException> ausgelöst wird.  
+  
+ Vergleichen von `null` mit einem beliebigen Verweistyp ist zulässig und löst keine Ausnahme. Beim Sortieren `null` gilt als kleiner als ein anderes Objekt sein.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Collections.Generic.Comparer%601.System%23Collections%23IComparer%23Compare%2A> Methode, um zwei Objekte zu vergleichen. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.Generic.Comparer%601> Klasse.  
+  
+ [!code-csharp[System.Collections.Generic.BoxCompare#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.boxcompare/cs/program.cs#4)]
+ [!code-vb[System.Collections.Generic.BoxCompare#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.boxcompare/vb/program.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="x" />oder <paramref name="y" /> umgewandelt Typ ein Typ, der nicht möglich ist <paramref name="T" />.  
+  
+ - oder -   
+  
+ <paramref name="x" />und <paramref name="y" /> nicht implementieren, entweder die <see cref="T:System.IComparable`1" /> generische Schnittstelle oder die <see cref="T:System.IComparable" /> Schnittstelle.</exception>
+        <block subset="none" type="usage">
+          <para>
+            <see cref="M:System.Collections.Generic.Comparer`1.Compare(`0,`0)" />und <see cref="M:System.Collections.Generic.EqualityComparer`1.Equals(`0,`0)" /> im Hinblick auf die Berücksichtigung von Kultur und Groß-/Kleinschreibung unterschiedlich Verhalten.  
+  
+ Für Zeichenfolgenvergleiche die <see cref="T:System.StringComparer" /> Klasse vorzuziehen <c>Vergleich&lt;Zeichenfolge&gt;</c>.  Eigenschaften der <see cref="T:System.StringComparer" /> Klasse zurückgeben, vordefinierte Instanzen, die Zeichenfolgenvergleiche mit verschiedenen Kombinationen der Berücksichtigung von Kultur und Groß-/Kleinschreibung durchzuführen.  Die Groß-und Kleinschreibung und Berücksichtigung der Kultur entsprechen den Namen der Elemente des gleichen <see cref="T:System.StringComparer" /> Instanz.  
+  
+ Weitere Informationen zu kulturabhängige Vergleiche, finden Sie unter der <see cref="N:System.Globalization" /> Namespace und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/9a59696b-d89b-45bd-946d-c75da4732d02).</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

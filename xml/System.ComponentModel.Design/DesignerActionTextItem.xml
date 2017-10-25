@@ -1,0 +1,77 @@
+<Type Name="DesignerActionTextItem" FullName="System.ComponentModel.Design.DesignerActionTextItem">
+  <TypeSignature Language="C#" Value="public class DesignerActionTextItem : System.ComponentModel.Design.DesignerActionItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DesignerActionTextItem extends System.ComponentModel.Design.DesignerActionItem" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerActionTextItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.DesignerActionItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen statischen Text-Element auf einen Smarttagbereich dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignerActionTextItem> Klasse stellt einzelnen statischen Text-Elemente in einen Smarttagbereich dar. Einzelne Elemente werden zusammen, um einen Bereich zu bilden, durch das Zurückgeben der Gruppe von einem Aufruf zugeordneten die <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A> Methode.  
+  
+ In den meisten Fällen wird ein statischer Text-Element verwendet, um eine informative Bezeichnung in einem Bereich zu erstellen. Durch Klicken auf ein Element statischen Text, wird keine Aktion ausgeführt. Der abgeleitete Typ <xref:System.ComponentModel.Design.DesignerActionHeaderItem> wird normalerweise verwendet, um Bezeichnungen zum Trennen von Kategorien zu erstellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Sammlung von <xref:System.ComponentModel.Design.DesignerActionItem> Objekte.  
+  
+ Ein vollständiges Beispiel Smarttags implementieren, finden Sie unter [wie: Anfügen von Smarttags auf eine Komponente in Windows Forms](http://msdn.microsoft.com/library/42cc4a0c-9ab3-47e1-93b8-03b6a6ccf233).  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#7)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerActionTextItem (string displayName, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionTextItem.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Der Bereichstext für dieses Element.</param>
+        <param name="category">Die Kategorie verwendet, um ähnliche Elemente im Bereich zu gruppieren.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.DesignerActionTextItem" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignerActionTextItem.%23ctor%2A> Konstruktor legt die <xref:System.ComponentModel.Design.DesignerActionItem.Description%2A> Eigenschaft `null`.  
+  
+ Weitere Informationen darüber, wie die `category` Parameter dient zum Gruppieren von Elementen in einem Bereich finden Sie unter der <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Sammlung von <xref:System.ComponentModel.Design.DesignerActionItem> Objekte.  
+  
+ Ein vollständiges Beispiel Smarttags implementieren, finden Sie unter [wie: Anfügen von Smarttags auf eine Komponente in Windows Forms](http://msdn.microsoft.com/library/42cc4a0c-9ab3-47e1-93b8-03b6a6ccf233).  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#7)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

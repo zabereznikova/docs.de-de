@@ -1,0 +1,130 @@
+<Type Name="ScriptingScriptResourceHandlerSection" FullName="System.Web.Configuration.ScriptingScriptResourceHandlerSection">
+  <TypeSignature Language="C#" Value="public sealed class ScriptingScriptResourceHandlerSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ScriptingScriptResourceHandlerSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ScriptingScriptResourceHandlerSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine <see langword="ScriptingScriptResourceHandler" /> Konfigurationsabschnitt in die <see langword="&lt;scripting&gt;" /> Element der Konfigurationsdatei. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Typ zum Abrufen oder festlegen, ob Zwischenspeichern noch die Komprimierung für ECMAScript (JavaScript)-Dateien aktiviert ist, die als Ressourcen in einer Assembly eingebettet sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptingScriptResourceHandlerSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ScriptingScriptResourceHandlerSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.ScriptingScriptResourceHandlerSection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableCaching">
+      <MemberSignature Language="C#" Value="public bool EnableCaching { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableCaching" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingScriptResourceHandlerSection.EnableCaching" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enableCaching", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob das Zwischenspeichern für Skriptdateien aktiviert ist, die als Ressourcen in einer Assembly eingebettet sind.</summary>
+        <value>
+          <see langword="true" />Wenn das Zwischenspeichern für Skriptdateien aktiviert ist, die als Ressourcen in einer Assembly eingebettet sind; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ScriptingScriptResourceHandlerSection.EnableCaching%2A> Eigenschaft ruft ab oder legt den Wert für die Ergebnisse der eingebetteten Skriptdatei zwischenzuspeichern, zum Zwischenspeichern von potenziellen Lokalisierungsobjekte und zum Zwischenspeichern von Skripts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableCompression">
+      <MemberSignature Language="C#" Value="public bool EnableCompression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableCompression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingScriptResourceHandlerSection.EnableCompression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enableCompression", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob die Komprimierung für Skriptdateien aktiviert ist, die als Ressourcen in einer Assembly eingebettet sind.</summary>
+        <value>
+          <see langword="true" />Wenn die Komprimierung für Skriptdateien aktiviert ist, die als Ressourcen in einer Assembly eingebettet sind; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ScriptingScriptResourceHandlerSection.EnableCompression%2A> Eigenschaft ruft ab oder legt den Wert, der angibt, ob die folgenden komprimiert werden sollen:  
+  
+-   Die Skriptdateien, die als Ressourcen in einer Assembly eingebettet sind.  
+  
+-   Lokalisierungsobjekte, z. B. Zeichenfolgenressourcen, die in einer Ressourcendatei (.resx) enthalten sind.  
+  
+-   Skripts, die vom Skript Ressource Handler behandelt werden.  
+  
+> [!NOTE]
+>  Wenn der anfordernde Browser keine Komprimierung unterstützt, hat diese Eigenschaft keine Auswirkungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingScriptResourceHandlerSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,33 @@
+<Namespace Name="System.DirectoryServices.AccountManagement">
+  <Docs>
+    <summary>Die <see cref="N:System.DirectoryServices.AccountManagement" /> Namespace bietet einheitlichen Zugriff und die Bearbeitung von Benutzer-, Computer- und Gruppe Sicherheitsprinzipale über mehrere Informationsspeicher für Dienstprinzipalname: Active Directory-Domänendienste (AD DS), Active Directory Lightweight Directory Services (ADLDS) Außerdem wird SAM (MSAM). <see cref="N:System.DirectoryServices.AccountManagement" />verwaltet die Verzeichnisobjekte, die unabhängig von der <see cref="N:System.DirectoryServices" /> Namespace.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwaltete Verzeichnisdienste nutzen die <xref:System.DirectoryServices.AccountManagement> API zum Vereinfachen der Verwaltung von Benutzer-, Computer und Prinzipalen. Lösungen, die zuvor umfassende Kenntnisse des Speichers oder langen Code erforderlichen, z. B. Suchen aller Gruppen, denen ein Benutzer angehört, werden mit wenigen Codezeilen erreicht die <xref:System.DirectoryServices.AccountManagement> API.  
+  
+ Die folgenden Funktionen sind verfügbar, auf die <xref:System.DirectoryServices.AccountManagement> API:  
+  
+-   Grundlegende Verzeichnisvorgänge wie das Erstellen und Aktualisieren von Sicherheitsprinzipalen wurde vereinfacht. Die Anwendung erfordert weniger Kenntnisse der zugrunde liegenden Speicher zum Ausführen dieser Vorgänge.  
+  
+-   Anwendungen können das Objektmodell, um neue Typen von Verzeichnisobjekten aufzunehmen erweitern.  
+  
+-   Konto-Verwaltungsaufgaben, z. B. das Aktivieren und Deaktivieren eines Benutzerkontos vereinfacht werden.  
+  
+-   Cross-Store-Unterstützung können Gruppenobjekte in Active Directory-Domänendienste (AD DS), Active Directory Lightweight Directory Services (AD LDS) und Computer SAM (MSAM)-Datenbanken Member aus verschiedenen Typen von Geschäften enthalten.  
+  
+-   Abfrage durch das Beispiel zu suchen, auf die <xref:System.DirectoryServices.AccountManagement.PrincipalSearcher> Klasse, ermöglicht Anwendungen legen Sie Eigenschaften für ein Hauptobjekt, und suchen Sie im ausgewählten Store andere Objekte, die entsprechenden Eigenschaftswerte enthalten.  
+  
+-   Erweiterte Suche auf Computer, Benutzer und Gruppe principal-Objekten ermöglicht Anwendungen, den ausgewählten Store für den Abgleich von principal-Objekte gesucht werden soll.  
+  
+-   Rekursive Suche an, auf das Gruppenprinzipalobjekt, kann Anwendungen einen Gruppe rekursiv zu suchen und nur principal-Objekte, die Blattknoten sind zurückgeben.  
+  
+-   Überprüfung der Anmeldeinformationen für die Computer-SAM, AD DS und AD LS-Speicher wurde vereinfacht.  
+  
+-   Mindestgeschwindigkeiten für die Verbindungen werden erhöht, mithilfe der Funktion schnelle gleichzeitige binden (FSB), falls verfügbar. Verbindung Zwischenspeichern verringert die Anzahl der verwendeten Ports.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

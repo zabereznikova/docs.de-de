@@ -1,0 +1,209 @@
+<Type Name="PolyBezierSegment" FullName="System.Windows.Media.PolyBezierSegment">
+  <TypeSignature Language="C#" Value="public sealed class PolyBezierSegment : System.Windows.Media.PathSegment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PolyBezierSegment extends System.Windows.Media.PathSegment" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.PolyBezierSegment" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.PathSegment</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine oder mehrere kubische Bézier-Kurven.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden einer <xref:System.Windows.Media.PathFigure> Objekt zum Speichern von <xref:System.Windows.Media.PolyBezierSegment> Objekte und andere Segmente.  
+  
+ Eine kubische Bézier-Kurve wird durch vier Punkte definiert: einen Startpunkt, Endpunkt und zwei Steuerpunkte. Ein <xref:System.Windows.Media.PolyBezierSegment> gibt mindestens eine kubische Bézier-Kurven durch Festlegen der <xref:System.Windows.Media.PolyBezierSegment.Points%2A> Eigenschaft, um eine Auflistung von Punkten. Für alle drei Punkte in der Auflistung der erste und zweite Punkt geben die beiden Steuerpunkte der Kurve, und der dritte Punkt gibt den Endpunkt. Beachten Sie, dass keine Anfangspunkt der Kurve angegeben wird, da Start, zeigen Sie den Endpunkt des letzten Segments identisch ist.  
+  
+ Die beiden Steuerpunkte, der eine kubische Bézier-Kurve Verhalten sich wie Magnete attraktiv Abschnitte einer geraden Linie gegen sich selbst und erzeugt eine Kurve. Der erste Kontrollpunkt wirkt sich auf den Anfangsabschnitt der Kurve. der zweite Kontrollpunkt wirkt sich auf den Endabschnitt der Kurve. Beachten Sie, dass die Kurve nicht unbedingt über entweder die Steuerpunkte bestanden haben. Jeder Kontrollpunkt verschiebt die Teil der Zeile, die gegen sich selbst, aber nicht über sich selbst.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Media.PolyBezierSegment> zwei kubische Bézier-Kurven gezeichnet werden soll.  
+  
+ [!code-xaml[GeometriesMiscSnippets_snip#PolyBezierSegmentExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/PolyBezierSegmentExample.xaml#polybeziersegmentexamplewholepage)]  
+  
+ [!code-csharp[GeometriesMiscSnippets_procedural_snip#PolyBezierSegmentCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/CSharp/PolyBezierSegmentExample.cs#polybeziersegmentcodeexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_procedural_snip#PolyBezierSegmentCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/visualbasic/polybeziersegmentexample.vb#polybeziersegmentcodeexamplewholepage)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PolyBezierSegment ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PolyBezierSegment.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.PolyBezierSegment" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PolyBezierSegment (System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt; points, bool isStroked);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Point&gt; points, bool isStroked) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PolyBezierSegment.#ctor(System.Collections.Generic.IEnumerable{System.Windows.Point},System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="points" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt;" />
+        <Parameter Name="isStroked" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="points">Die Auflistung von Punkten, die angeben, die die kubische Bézier-Kurvensegmente-Geometrie.</param>
+        <param name="isStroked">Wert, der angibt, ob die Segmente gezeichnet werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.PolyBezierSegment" /> -Klasse mit der angegebenen Auflistung von <see cref="T:System.Windows.Point" /> -Objekten und einem Wert, der angibt, ob die Segmente gezeichnet werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PolyBezierSegment Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.PolyBezierSegment Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PolyBezierSegment.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PolyBezierSegment</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.PolyBezierSegment" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PolyBezierSegment CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.PolyBezierSegment CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PolyBezierSegment.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PolyBezierSegment</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.PolyBezierSegment" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PolyBezierSegment.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Points">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PointCollection Points { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.PointCollection Points" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.PolyBezierSegment.Points" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PointCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Media.PointCollection" /> , definieren diese <see cref="T:System.Windows.Media.PolyBezierSegment" /> Objekt.</summary>
+        <value>Die Definition dieser Auflistung <see cref="T:System.Windows.Media.PolyBezierSegment" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Points"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.PolyBezierSegment.PointsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Media.PolyBezierSegment.Points%2A> Eigenschaft eine <xref:System.Windows.Media.PolyBezierSegment> , definiert zwei kubische Bézier-Kurven.  
+  
+ [!code-xaml[GeometriesMiscSnippets_snip#PolyBezierSegmentExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/PolyBezierSegmentExample.xaml#polybeziersegmentexamplewholepage)]  
+  
+ [!code-csharp[GeometriesMiscSnippets_procedural_snip#PolyBezierSegmentCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/CSharp/PolyBezierSegmentExample.cs#polybeziersegmentcodeexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_procedural_snip#PolyBezierSegmentCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/visualbasic/polybeziersegmentexample.vb#polybeziersegmentcodeexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PointsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PointsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PointsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.PolyBezierSegment.PointsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.PolyBezierSegment.Points" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

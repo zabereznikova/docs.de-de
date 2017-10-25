@@ -1,0 +1,73 @@
+<Type Name="ProcessRequestArgs" FullName="System.Data.Services.ProcessRequestArgs">
+  <TypeSignature Language="C#" Value="public sealed class ProcessRequestArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProcessRequestArgs extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.ProcessRequestArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Argumente, die von einer HTTP-Anforderung an den Datendienst verwendet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsBatchOperation">
+      <MemberSignature Language="C#" Value="public bool IsBatchOperation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBatchOperation" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.ProcessRequestArgs.IsBatchOperation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert, der angibt, ob die HTTP-Anforderung an den Datendienst ein Batchvorgang ist.</summary>
+        <value>Der boolesche Wert, der angibt, ob die HTTP-Anforderung an den Datendienst ein Batchvorgang ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationContext">
+      <MemberSignature Language="C#" Value="public System.Data.Services.DataServiceOperationContext OperationContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Services.DataServiceOperationContext OperationContext" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.ProcessRequestArgs.OperationContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.DataServiceOperationContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Kontext, der Informationen zu den aktuell verarbeiteten Vorgang enthält.</summary>
+        <value>Ein <see cref="T:System.Data.Services.DataServiceOperationContext" /> Objekt, das Informationen über den aktuellen Vorgang enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestUri">
+      <MemberSignature Language="C#" Value="public Uri RequestUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri RequestUri" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.ProcessRequestArgs.RequestUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den URI einer HTTP-Anforderung für die Verarbeitung ab.</summary>
+        <value>Ein <see cref="T:System.Uri" /> , enthält den URI der Anforderung, die verarbeitet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

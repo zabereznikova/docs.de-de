@@ -1,0 +1,134 @@
+<Type Name="DefaultParameterValueAttribute" FullName="System.Runtime.InteropServices.DefaultParameterValueAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DefaultParameterValueAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DefaultParameterValueAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.DefaultParameterValueAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Legt den Standardwert eines Parameters fest, wenn dieser mit einer Sprache aufgerufen wird, die Standardparameter unterstützt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.InteropServices.DefaultParameterValueAttribute> Attribut ermöglicht, dass Sie einen Standardparameterwert in einer anderen Sprache angeben, das andernfalls keine Standardparameter unterstützt.  Nachdem Sie dieses Attribut in den Code angewendet haben, können Sprachen, die Standardparameter unterstützt den angegebenen Wert als Standardparameter.  
+  
+ Beachten Sie, dass die <xref:System.Runtime.InteropServices.DefaultParameterValueAttribute> Unterstützung für Standardparameter Sprachen, die diese Funktion nicht unterstützen nicht hinzu.  Angenommen, Sie verwenden die <xref:System.Runtime.InteropServices.DefaultParameterValueAttribute> mit einer Methode in c# geschrieben, die Standardparameter nicht unterstützen, können keine Standardparameter beim Aufrufen der Methode in c#.  Sie können den Standardparameter verwenden, nur beim Aufrufen der Methode in einer anderen Sprache wie C++, die das Feature unterstützt wird.  
+  
+ Die <xref:System.Runtime.InteropServices.DefaultParameterValueAttribute> ist besonders nützlich, um die Standardparameter für Methoden einer COM-Interop-Schnittstelle angegeben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Anwenden der <xref:System.Runtime.InteropServices.DefaultParameterValueAttribute> -Attribut auf einen Parameter einer Methode in c# geschrieben.  
+  
+ [!code-csharp[System.Runtime.InteropServices.DefaultParameterValueAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.InteropServices.DefaultParameterValueAttribute/cs/sample.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultParameterValueAttribute (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.DefaultParameterValueAttribute.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, das den Standardwert eines Parameters darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.DefaultParameterValueAttribute" /> Klasse mit dem Standardwert eines Parameters.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Anwenden der <xref:System.Runtime.InteropServices.DefaultParameterValueAttribute> -Attribut auf einen Parameter, geschrieben in einer anderen Sprache wie Microsoft Visual c#, die Standardparameter nicht unterstützt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Anwenden der <xref:System.Runtime.InteropServices.DefaultParameterValueAttribute> -Attribut auf einen Parameter einer Methode in c# geschrieben.  
+  
+ [!code-csharp[System.Runtime.InteropServices.DefaultParameterValueAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.InteropServices.DefaultParameterValueAttribute/cs/sample.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.DefaultParameterValueAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardwert eines Parameters ab.</summary>
+        <value>Ein Objekt, das den Standardwert eines Parameters darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

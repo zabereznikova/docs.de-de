@@ -1,0 +1,76 @@
+<Type Name="ChunkedCookieHandlerElement" FullName="System.IdentityModel.Services.ChunkedCookieHandlerElement">
+  <TypeSignature Language="C#" Value="public class ChunkedCookieHandlerElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChunkedCookieHandlerElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.ChunkedCookieHandlerElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die <see langword="&lt;chunkedCookieHandler&gt;" /> Konfigurationselement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse, konfiguriert die Segmentgröße für eine <xref:System.IdentityModel.Services.ChunkedCookieHandler> -Objekt, das über den konfiguriert ist die <xref:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChunkedCookieHandlerElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ChunkedCookieHandlerElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Services.ChunkedCookieHandlerElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChunkSize">
+      <MemberSignature Language="C#" Value="public int ChunkSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ChunkSize" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.ChunkedCookieHandlerElement.ChunkSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("chunkSize", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=1000)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Blockgröße für den Handler.</summary>
+        <value>Die Größe des Blocks in Byte. Die Standardeinstellung ist <see cref="F:System.IdentityModel.Services.ChunkedCookieHandler.DefaultChunkSize" />. Legen Sie einen Wert unterhalb der minimalen Segmentgröße von definiert nicht <see cref="F:System.IdentityModel.Services.ChunkedCookieHandler.MinimumChunkSize" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen vorsichtig Segmentgröße anpassen können. Webbrowser haben verschiedene Grenzwerte auf die Größe des Cookies und die Anzahl der zulässigen insgesamt und pro Domäne Cookies an. Z. B. die ursprünglichen Netscape-Spezifikation angegeben, diese Grenzen: 300 Cookies addieren, 4096 Bytes pro Cookie-Header (einschließlich Metadaten, nicht nur den Cookiewert) und 20 Cookies pro Domäne. Weitere Informationen finden Sie unter <xref:System.IdentityModel.Services.ChunkedCookieHandler>.  
+  
+ Stellt die `chunkSize` Attribut von der [ &lt;ChunkedCookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md) Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

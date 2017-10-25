@@ -1,0 +1,148 @@
+<Type Name="DetailsViewCommandEventArgs" FullName="System.Web.UI.WebControls.DetailsViewCommandEventArgs">
+  <TypeSignature Language="C#" Value="public class DetailsViewCommandEventArgs : System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DetailsViewCommandEventArgs extends System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewCommandEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.CommandEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.DetailsView.ItemCommand" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement löst die <xref:System.Web.UI.WebControls.DetailsView.ItemCommand> Ereignis aus, wenn eine Schaltfläche in einem <xref:System.Web.UI.WebControls.ButtonField>, <xref:System.Web.UI.WebControls.CommandField>, oder <xref:System.Web.UI.WebControls.TemplateField> Zeilenfeld geklickt wird. Dadurch können Sie einen Ereignishandler bereitstellen, der eine benutzerdefinierte Routine ausführt, wenn dieses Ereignis tritt auf.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement löst auch andere spezielle Ereignisse bestimmte Schaltflächen geklickt werden (Schaltflächen mit der `CommandName` -Eigenschaft auf "Löschen", "Einfügen", "Seite" oder "Update" festgelegt). Wenn Sie eine der folgenden Schaltflächen verwenden, sollten Sie eine der speziellen Ereignisse vom Steuerelement bereitgestellte verwenden (z. B. <xref:System.Web.UI.WebControls.DetailsView.ItemDeleted> oder <xref:System.Web.UI.WebControls.DetailsView.ItemDeleting>).  
+  
+ Ein <xref:System.Web.UI.WebControls.DetailsViewCommandEventArgs> Objekt an den Ereignishandler übergeben wird. Wenn die Schaltfläche, die das Ereignis ausgelöst hat eine Befehlsname oder der Befehlsargumentwert aufweist, können Sie mithilfe der <xref:System.Web.UI.WebControls.DetailsViewCommandEventArgs> Objekt, das diese Werte bestimmen. Name des Befehls und Befehlsargument der Schaltfläche geklickt ermitteln Sie mithilfe der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> und <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> Eigenschaften bzw.. Sie können auch zugreifen der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement, das das Ereignis ausgelöst, mithilfe hat der <xref:System.Web.UI.WebControls.DetailsViewCommandEventArgs.CommandSource%2A> Eigenschaft.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.DetailsViewCommandEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.DetailsViewCommandEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewCommandEventArgs> -Objekt übergeben, um den Ereignishandler für das <xref:System.Web.UI.WebControls.DetailsView.ItemCommand> Ereignis, um zu bestimmen, den Befehlsnamen der Schaltfläche der Benutzer geklickt hat. In diesem Beispiel verwendet das Einzeldatei Codierung.  
+  
+ [!code-aspx-csharp[DetailsViewCommandEventArgsCodeInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewCommandEventArgsCodeInline/CS/detailsviewcommandeventargscs.aspx#1)]
+ [!code-aspx-vb[DetailsViewCommandEventArgsCodeInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewCommandEventArgsCodeInline/VB/detailsviewcommandeventargsvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, Code-Behind-Codierung Modellversion des vorherigen Beispiels. Für dieses Beispiel funktioniert müssen Sie den folgenden Code in der zugehörigen Code-Behind-Datei kopieren.  
+  
+ [!code-aspx-csharp[DetailsViewCommandEventArgsCodeBehind2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewCommandEventArgsCodeBehind2/CS/Default.aspx#1)]
+ [!code-aspx-vb[DetailsViewCommandEventArgsCodeBehind2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewCommandEventArgsCodeBehind2/VB/DefaultVB.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, die Code-Behind-Datei für das vorherige Beispiel.  
+  
+ [!code-csharp[DetailsViewCommandEventArgsCodeBehind2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewCommandEventArgsCodeBehind2/CS/Default.aspx.cs#2)]
+ [!code-vb[DetailsViewCommandEventArgsCodeBehind2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewCommandEventArgsCodeBehind2/VB/DefaultVB.aspx.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DetailsViewCommandEventArgs (object commandSource, System.Web.UI.WebControls.CommandEventArgs originalArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object commandSource, class System.Web.UI.WebControls.CommandEventArgs originalArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewCommandEventArgs.#ctor(System.Object,System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandSource" Type="System.Object" />
+        <Parameter Name="originalArgs" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="commandSource">Die Quelle des Befehls.</param>
+        <param name="originalArgs">Ein <see cref="T:System.Web.UI.WebControls.CommandEventArgs" /> , das Ereignisdaten enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DetailsViewCommandEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.DetailsViewCommandEventArgs> Klasse.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Web.UI.WebControls.DetailsViewCommandEventArgs>-Instanz aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A>|Der Wert des der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.CommandEventArgs> in enthaltenen der `originalArgs` Parameter.|  
+|<xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A>|Der Wert des der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.CommandEventArgs> in enthaltenes Objekt die `originalArgs` Parameter.|  
+|<xref:System.Web.UI.WebControls.DetailsViewCommandEventArgs.CommandSource%2A>|Das Objekt in der `commandSource` Parameter.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandSource">
+      <MemberSignature Language="C#" Value="public object CommandSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewCommandEventArgs.CommandSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Quelle des Befehls ab.</summary>
+        <value>Eine Instanz von der <see cref="T:System.Object" /> Klasse, die die Quelle des Befehls darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DetailsViewCommandEventArgs.CommandSource%2A> Eigenschaft, um die Eigenschaften des Objekts zuzugreifen, die die Quelle des Befehls darstellt. In einigen Fällen werden die <xref:System.Web.UI.WebControls.DetailsView> selbst zu steuern und in anderen Fällen werden die <xref:System.Web.UI.WebControls.Button> Steuerelement, das auf die geklickt wurde.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewCommandEventArgs.CommandSource%2A> Eigenschaft ermitteln, welche der beiden <xref:System.Web.UI.WebControls.DetailsView> Steuerelemente ausgelöst, die <xref:System.Web.UI.WebControls.DetailsView.ItemCommand> Ereignis.  
+  
+ [!code-aspx-csharp[DetailsViewCommandEventArgsCommandSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewCommandEventArgsCommandSource/CS/detailsviewcommandeventargscommandsourcecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewCommandEventArgsCommandSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewCommandEventArgsCommandSource/VB/detailsviewcommandeventargscommandsourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewCommandEventArgs.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Steuerelement das Ereignis behandelt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn datengebundenen Ereigniscode übersprungen wurde oder erfolgreich ausgeführt wurde. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie diese Eigenschaft auf `true` im Ereignishandler an, dass die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement sollte das Ereignis nicht behandeln, da Sie es im Code behandeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

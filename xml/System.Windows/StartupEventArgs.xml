@@ -1,0 +1,37 @@
+<Type Name="StartupEventArgs" FullName="System.Windows.StartupEventArgs">
+  <TypeSignature Language="C#" Value="public class StartupEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StartupEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.StartupEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält die Argumente für die <see cref="E:System.Windows.Application.Startup" /> Ereignis.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Args">
+      <MemberSignature Language="C#" Value="public string[] Args { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Args" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.StartupEventArgs.Args" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Befehlszeilenargumente, die von der Eingabeaufforderung oder den Desktop an die Anwendung übergeben wurden.</summary>
+        <value>Ein Zeichenfolgenarray, das die Befehlszeilenargumente enthält, die von der Eingabeaufforderung oder den Desktop an die Anwendung übergeben wurden. Wenn keine Befehlszeilenargumente übergeben wurden, wird die Zeichenfolge als 0 (null) Elemente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

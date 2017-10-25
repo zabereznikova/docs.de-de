@@ -1,0 +1,6 @@
+<Namespace Name="System.Xaml.Permissions">
+  <Docs>
+    <summary>Enthält Typen, die Berechtigungen für bestimmte XAML-Szenarien für das Laden, z. B. Laden unter teilweiser Vertrauenswürdigkeit oder des Ladens von internen Typen angeben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

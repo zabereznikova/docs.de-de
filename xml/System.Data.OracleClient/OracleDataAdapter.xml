@@ -1,0 +1,1464 @@
+<Type Name="OracleDataAdapter" FullName="System.Data.OracleClient.OracleDataAdapter">
+  <TypeSignature Language="C#" Value="public sealed class OracleDataAdapter : System.Data.Common.DbDataAdapter, ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OracleDataAdapter extends System.Data.Common.DbDataAdapter implements class System.Data.IDataAdapter, class System.Data.IDbDataAdapter, class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OracleDataAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbDataAdapter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("RowUpdated")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("Microsoft.VSDesigner.Data.VS.OracleDataAdapterDesigner, Microsoft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("Microsoft.VSDesigner.Data.VS.OracleDataAdapterToolboxItem, Microsoft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("OracleDataAdapter has been deprecated. http://go.microsoft.com/fwlink/?LinkID=144260", false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Satz von Datenbefehlen und eine Verbindung mit einer Datenbank, die zum Füllen der <see cref="T:System.Data.DataSet" /> und die Datenbank zu aktualisieren. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Typ ist veraltet und wird in einer zukünftigen Version von .NET Framework entfernt. Weitere Informationen finden Sie unter [Oracle und ADO.NET](~/docs/framework/data/adonet/oracle-and-adonet.md).  
+  
+ Die <xref:System.Data.OracleClient.OracleDataAdapter> dient als Brücke zwischen einer **DataSet** und die Datenbank für das Abrufen und Speichern von Daten. Die <xref:System.Data.OracleClient.OracleDataAdapter> bietet diese Brücke mit <xref:System.Data.Common.DbDataAdapter.Fill%2A> zum Laden von Daten aus der Datenbank in der <xref:System.Data.DataSet>, und Verwenden von <xref:System.Data.Common.DbDataAdapter.Update%2A> zum Senden von Änderungen in der <xref:System.Data.DataSet> zurück an die Datenquelle.  
+  
+ Wenn die <xref:System.Data.OracleClient.OracleDataAdapter> füllt eine <xref:System.Data.DataSet>, erstellt er die erforderlichen Tabellen und Spalten für die zurückgegebenen Daten, sofern sie nicht bereits vorhanden sind. Allerdings Primärschlüsselinformationen ist nicht im enthalten implizit erstellten Schemas, wenn die <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> -Eigenschaftensatz auf <xref:System.Data.MissingSchemaAction.AddWithKey>. Möglicherweise müssen Sie auch die <xref:System.Data.OracleClient.OracleDataAdapter> erstellen das Schema der <xref:System.Data.DataSet>, einschließlich Primärschlüsselinformationen vor dem Füllen mit Daten mithilfe <xref:System.Data.Common.DbDataAdapter.FillSchema%2A>. Weitere Informationen finden Sie unter [Hinzufügen vorhandener Einschränkungen zu einem DataSet](~/docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md).  
+  
+> [!NOTE]
+>  Standardmäßig werden numerische Felder in importiert eine <xref:System.Data.DataTable> mit <xref:System.Data.Common.DbDataAdapter.Fill%2A> zugeordnet sind <xref:System.Data.OracleClient.OracleNumber> Objekte. Es ist möglich, einen Überlauf der <xref:System.Data.OracleClient.OracleNumber>, und löst eine Ausnahme Oracle durch Importieren eines nicht ganzzahligen numerischen Werts, der für die Genauigkeit zu groß oder zu hoch ist der <xref:System.Data.OracleClient.OracleNumber>des Einschränkungen mit einfacher Genauigkeit. Finden Sie in der Beschreibung <xref:System.Data.OracleClient.OracleNumber> für Weitere Informationen.  
+  
+ Die <xref:System.Data.OracleClient.OracleDataAdapter> umfasst auch die <xref:System.Data.OracleClient.OracleDataAdapter.SelectCommand%2A>, <xref:System.Data.OracleClient.OracleDataAdapter.InsertCommand%2A>, <xref:System.Data.OracleClient.OracleDataAdapter.DeleteCommand%2A>, <xref:System.Data.OracleClient.OracleDataAdapter.UpdateCommand%2A>, und `TableMappings` Eigenschaften zum Laden und Aktualisieren von Daten zu ermöglichen.  
+  
+ Die .NET Framework-Datenanbieter für Oracle unterstützt die SQL-Anweisungsbatches nicht. Sie können jedoch die Verwendung mehrerer `REF CURSOR` Ausgabeparameter zum Auffüllen einer **DataSet**, jeweils in eigenen <xref:System.Data.DataTable>. Müssen Sie definieren Sie die Parameter, markieren Sie sie als Output-Parameter und angeben, dass sie `REF CURSOR` -Datentypen. Beachten Sie, das nicht der <xref:System.Data.Common.DbDataAdapter.Update%2A> Methode bei der <xref:System.Data.OracleClient.OracleDataAdapter> gefüllt wird, mithilfe von `REF CURSOR` Parameter, die von einer gespeicherten Prozedur zurückgegeben werden, da Oracle keine, dass die Informationen, die erforderlich sind bietet, um zu bestimmen, welche die Tabellen- und Spaltennamen sind Wenn die SQL-Anweisung ausgeführt wird. Im folgenden C#-Beispiel wird davon ausgegangen, dass Sie diese gespeicherte Prozedur erstellt haben.  
+  
+ Erstellen Sie das folgende Oracle-Paket auf dem Oracle-Server.  
+  
+```  
+CREATE OR REPLACE PACKAGE CURSPKG AS   
+   TYPE T_CURSOR IS REF CURSOR;   
+   PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,   
+      IO_CURSOR OUT T_CURSOR);   
+   PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,   
+      DEPTCURSOR OUT T_CURSOR);  
+END CURSPKG;  
+/  
+```  
+  
+ Erstellen Sie den folgenden Oracle-Paketkörper auf dem Oracle-Server.  
+  
+```  
+CREATE OR REPLACE PACKAGE BODY CURSPKG AS   
+    PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,   
+                               IO_CURSOR OUT T_CURSOR)   
+    IS   
+        V_CURSOR T_CURSOR;   
+    BEGIN   
+        IF N_EMPNO <> 0 THEN   
+             OPEN V_CURSOR FOR   
+             SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME   
+                  FROM EMP, DEPT   
+                  WHERE EMP.DEPTNO = DEPT.DEPTNO   
+                        AND EMP.EMPNO = N_EMPNO;   
+        ELSE   
+             OPEN V_CURSOR FOR   
+             SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME   
+                  FROM EMP, DEPT   
+                  WHERE EMP.DEPTNO = DEPT.DEPTNO;   
+        END IF;   
+        IO_CURSOR := V_CURSOR;   
+    END OPEN_ONE_CURSOR;   
+    PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,   
+                                DEPTCURSOR OUT T_CURSOR)   
+    IS   
+        V_CURSOR1 T_CURSOR;   
+        V_CURSOR2 T_CURSOR;   
+    BEGIN   
+        OPEN V_CURSOR1 FOR SELECT * FROM EMP;   
+        OPEN V_CURSOR2 FOR SELECT * FROM DEPT;   
+        EMPCURSOR  := V_CURSOR1;   
+        DEPTCURSOR := V_CURSOR2;   
+    END OPEN_TWO_CURSORS;   
+END CURSPKG;  
+ /  
+```  
+  
+ Im folgenden C#-Beispiel wird veranschaulicht, wie Sie Tabellen- und Informationen, die mit der gespeicherten Prozedur abrufen können.  
+  
+```csharp  
+// GetConnectionString() returns a connection string for  
+// the data source.  
+  
+string connString = GetConnectionString();  
+DataSet ds = new DataSet();  
+OracleConnection conn = new OracleConnection(connString);  
+OracleCommand cmd = conn.CreateCommand();  
+  
+cmd.CommandText = "CURSPKG.OPEN_TWO_CURSORS";  
+cmd.CommandType = CommandType.StoredProcedure;  
+cmd.Parameters.Add("EMPCURSOR", OracleType.Cursor).Direction =   
+       ParameterDirection.Output;  
+cmd.Parameters.Add("DEPTCURSOR", OracleType.Cursor).Direction =   
+       ParameterDirection.Output;  
+  
+OracleDataAdapter da = new OracleDataAdapter(cmd);  
+da.TableMappings.Add("Table", "Emp");  
+da.TableMappings.Add("Table1", "Dept");  
+da.Fill(ds);  
+  
+ds.Relations.Add("EmpDept", ds.Tables["Dept"].Columns["Deptno"],   
+      ds.Tables["Emp"].Columns["Deptno"], false);  
+```  
+  
+ Im folgende Visual Basic-Beispiel veranschaulicht, wie ein <xref:System.Data.OracleClient.OracleDataAdapter> zum Auffüllen einer <xref:System.Data.DataSet> mit einer Oracle `REF CURSOR`. Diese Beispiele verwenden die Tabellen, die im Oracle Scott/Tiger-Schema definiert sind und das folgende PL/SQL-Paket und Paketkörper benötigen. Sie müssen diese auf dem Server anhand der Beispiele erstellen.  
+  
+ Erstellen Sie das folgende Oracle-Paket auf dem Oracle-Server.  
+  
+```  
+CREATE OR REPLACE PACKAGE CURSPKG AS   
+   TYPE T_CURSOR IS REF CURSOR;   
+   PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,   
+      IO_CURSOR OUT T_CURSOR);   
+   PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,   
+      DEPTCURSOR OUT T_CURSOR);  
+END CURSPKG;  
+/  
+```  
+  
+ Erstellen Sie den folgenden Oracle-Paketkörper auf dem Oracle-Server.  
+  
+``` 
+CREATE OR REPLACE PACKAGE BODY CURSPKG AS   
+    PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,   
+                               IO_CURSOR OUT T_CURSOR)   
+    IS   
+        V_CURSOR T_CURSOR;   
+    BEGIN   
+        IF N_EMPNO <> 0 THEN   
+             OPEN V_CURSOR FOR   
+             SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME   
+                  FROM EMP, DEPT   
+                  WHERE EMP.DEPTNO = DEPT.DEPTNO   
+                        AND EMP.EMPNO = N_EMPNO;   
+        ELSE   
+             OPEN V_CURSOR FOR   
+             SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME   
+                  FROM EMP, DEPT   
+                  WHERE EMP.DEPTNO = DEPT.DEPTNO;   
+        END IF;   
+        IO_CURSOR := V_CURSOR;   
+    END OPEN_ONE_CURSOR;   
+    PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,   
+                                DEPTCURSOR OUT T_CURSOR)   
+    IS   
+        V_CURSOR1 T_CURSOR;   
+        V_CURSOR2 T_CURSOR;   
+    BEGIN   
+        OPEN V_CURSOR1 FOR SELECT * FROM EMP;   
+        OPEN V_CURSOR2 FOR SELECT * FROM DEPT;   
+        EMPCURSOR  := V_CURSOR1;   
+        DEPTCURSOR := V_CURSOR2;   
+    END OPEN_TWO_CURSORS;   
+END CURSPKG;  
+ /  
+```  
+  
+ In diesem Beispiel Visual Basic führt eine gespeicherte PL/SQL-Prozedur, die zwei zurückgibt `REF CURSOR` Parameter und füllt eine <xref:System.Data.DataSet> mit den Zeilen, die zurückgegeben werden.  
+  
+```vb  
+  
+' GetConnectionString() returns a connection string for  
+' the data source.  
+  
+    Dim connString As New String(GetConnectionString())  
+    Dim ds As New DataSet()  
+    Dim conn As New OracleConnection(connString)  
+    Dim cmd As OracleCommand = conn.CreateCommand()  
+  
+    cmd.CommandText = "CURSPKG.OPEN_TWO_CURSORS"  
+    cmd.CommandType = CommandType.StoredProcedure  
+    cmd.Parameters.Add("EMPCURSOR", OracleType.Cursor).Direction = _  
+       ParameterDirection.Output  
+    cmd.Parameters.Add("DEPTCURSOR", OracleType.Cursor).Direction = _  
+       ParameterDirection.Output  
+  
+    Dim da As New OracleDataAdapter(cmd)  
+    da.TableMappings.Add("Table", "Emp")  
+    da.TableMappings.Add("Table1", "Dept")  
+    da.Fill(ds)  
+  
+    ds.Relations.Add("EmpDept", ds.Tables("Dept").Columns("Deptno"), _  
+      ds.Tables("Emp").Columns("Deptno"), False)  
+```  
+  
+ Nach der Verwendung der <xref:System.Data.OracleClient.OracleDataAdapter> zum Ausführen einer `Fill` oder `FillSchema` Vorgang, der `DataColumn.ReadOnly` Eigenschaft immer false zurück, unabhängig davon, ob die Spalte aktualisiert werden kann, da diese Informationen nicht in der Oracle-Server zurückgegeben wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleDataAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.OracleClient.OracleDataAdapter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer Instanz von <xref:System.Data.OracleClient.OracleDataAdapter>, die folgenden Lese-/Schreibeigenschaften werden auf ihre Standardwerte festgelegt, wie in der Tabelle dargestellt.  
+  
+|Eigenschaften|Standardwert|  
+|----------------|-------------------|  
+|<xref:System.Data.Common.DataAdapter.MissingMappingAction%2A>|`MissingMappingAction.Passthrough`|  
+|<xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>|`MissingSchemaAction.Add`|  
+  
+ Sie können den Wert der alle diese Eigenschaften über einen separaten Aufruf der Eigenschaft ändern.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleDataAdapter> und legt einige ihrer Eigenschaften.  
+  
+```vb  
+Public Sub CreateOracleDataAdapter()  
+    Dim myOracleConnection As OracleConnection = New OracleConnection("Data Source=Oracle8i;Integrated Security=yes")  
+    Dim custDA As OracleDataAdapter = New OracleDataAdapter  
+    custDA.MissingSchemaAction = MissingSchemaAction.AddWithKey  
+  
+    custDA.SelectCommand = New OracleCommand("SELECT DeptNo, DName FROM Dept", myOracleConnection)  
+    custDA.InsertCommand = New OracleCommand("INSERT INTO Dept (DeptNo, DName) " & _  
+                                            "VALUES (:pDeptNo, :pDName)", myOracleConnection)  
+    custDA.UpdateCommand = New OracleCommand("UPDATE Dept SET DeptNo = :pDeptNo, DName = :pDName " & _  
+                                            "WHERE DeptNo = :pDeptNo", myOracleConnection)  
+    custDA.DeleteCommand = New OracleCommand("DELETE FROM Dept WHERE DeptNo = :pDeptNo", myOracleConnection)  
+  
+    custDA.InsertCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo")  
+    custDA.InsertCommand.Parameters.Add("pDName", OracleType.VarChar, 14, "DName")  
+  
+    custDA.UpdateCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo")  
+    custDA.UpdateCommand.Parameters.Add("pDName", OracleType.VarChar, 14, "DName")  
+    custDA.UpdateCommand.Parameters.Add("poldDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original  
+  
+    custDA.DeleteCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original  
+End Sub  
+```  
+  
+```csharp  
+public static void CreateOracleDataAdapter()   
+{  
+    OracleConnection myOracleConnection = new OracleConnection("Data Source=Oracle8i;Integrated Security=yes");  
+    OracleDataAdapter custDA = new OracleDataAdapter();  
+    custDA.MissingSchemaAction = MissingSchemaAction.AddWithKey;  
+  
+    custDA.SelectCommand = new OracleCommand("SELECT DeptNo, CompanyName FROM Dept", myOracleConnection);  
+    custDA.InsertCommand = new OracleCommand("INSERT INTO Dept (DeptNo, CompanyName) " +  
+                                            "VALUES (:pDeptNo, :pCompanyName)", myOracleConnection);  
+    custDA.UpdateCommand = new OracleCommand("UPDATE Dept SET DeptNo = :pDeptNo, CompanyName = :pCompanyName " +  
+                                            "WHERE DeptNo = :pDeptNo", myOracleConnection);  
+    custDA.DeleteCommand = new OracleCommand("DELETE FROM Dept WHERE DeptNo = :pDeptNo", myOracleConnection);  
+  
+    custDA.InsertCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo");  
+    custDA.InsertCommand.Parameters.Add("pCompanyName", OracleType.VarChar, 14, "CompanyName");  
+  
+    custDA.UpdateCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo");  
+    custDA.UpdateCommand.Parameters.Add("pCompanyName", OracleType.VarChar, 14, "CompanyName");  
+    custDA.UpdateCommand.Parameters.Add("poldDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original;  
+  
+    custDA.DeleteCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleDataAdapter (System.Data.OracleClient.OracleCommand selectCommand);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.OracleClient.OracleCommand selectCommand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.#ctor(System.Data.OracleClient.OracleCommand)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="selectCommand" Type="System.Data.OracleClient.OracleCommand" />
+      </Parameters>
+      <Docs>
+        <param name="selectCommand">Ein <see cref="T:System.Data.OracleClient.OracleCommand" /> , eine SQL SELECT-Anweisung oder gespeicherte Prozedur ist und als festgelegt ist die <see cref="P:System.Data.OracleClient.OracleDataAdapter.SelectCommand" /> Eigenschaft von der <see cref="T:System.Data.OracleClient.OracleDataAdapter" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleDataAdapter" /> Klasse mit der angegebenen SQL-SELECT-Anweisung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung der <xref:System.Data.OracleClient.OracleDataAdapter> Standardkonstruktor legt die <xref:System.Data.OracleClient.OracleDataAdapter.SelectCommand%2A> -Eigenschaft auf den Wert im angegebenen der `selectCommand` Parameter.  
+  
+ Beim Erstellen einer Instanz von <xref:System.Data.OracleClient.OracleDataAdapter>, die folgenden Lese-/Schreibeigenschaften werden auf ihre Standardwerte festgelegt, wie in der Tabelle dargestellt.  
+  
+|Eigenschaften|Anfangswert|  
+|----------------|-------------------|  
+|<xref:System.Data.Common.DataAdapter.MissingMappingAction%2A>|`MissingMappingAction.Passthrough`|  
+|<xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>|`MissingSchemaAction.Add`|  
+  
+ Sie können den Wert der alle diese Eigenschaften über einen separaten Aufruf der Eigenschaft ändern.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleDataAdapter> und legt einige ihrer Eigenschaften.  
+  
+```vb  
+Public Sub CreateOracleDataAdapter()  
+    Dim myOracleConnection As OracleConnection = New OracleConnection("Data Source=Oracle8i;Integrated Security=yes")  
+    Dim myOracleCommand As OracleCommand = New OracleCommand("SELECT DeptNo, DName FROM Dept", myOracleConnection)  
+    Dim custDA As OracleDataAdapter = New OracleDataAdapter(myOracleCommand)  
+    custDA.MissingSchemaAction = MissingSchemaAction.AddWithKey  
+  
+    custDA.InsertCommand = New OracleCommand("INSERT INTO Dept (DeptNo, DName) " & _  
+                                            "VALUES (:pDeptNo, :pDName)", myOracleConnection)  
+    custDA.UpdateCommand = New OracleCommand("UPDATE Dept SET DeptNo = :pDeptNo, DName = :pDName " & _  
+                                            "WHERE DeptNo = :pDeptNo", myOracleConnection)  
+    custDA.DeleteCommand = New OracleCommand("DELETE FROM Dept WHERE DeptNo = :pDeptNo", myOracleConnection)  
+  
+    custDA.InsertCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo")  
+    custDA.InsertCommand.Parameters.Add("pDName", OracleType.VarChar, 14, "DName")  
+  
+    custDA.UpdateCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo")  
+    custDA.UpdateCommand.Parameters.Add("pDName", OracleType.VarChar, 14, "DName")  
+    custDA.UpdateCommand.Parameters.Add("poldDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original  
+  
+    custDA.DeleteCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original  
+End Sub  
+```  
+  
+```csharp  
+public static void CreateOracleDataAdapter()   
+{  
+    OracleConnection myOracleConnection = new OracleConnection("Data Source=Oracle8i;Integrated Security=yes");  
+    OracleCommand myOracleCommand = new OracleCommand("SELECT DeptNo, DName FROM Dept", myOracleConnection);  
+    OracleDataAdapter custDA = new OracleDataAdapter(myOracleCommand);  
+    custDA.MissingSchemaAction = MissingSchemaAction.AddWithKey;  
+  
+    custDA.InsertCommand = new OracleCommand("INSERT INTO Dept (DeptNo, DName) " +  
+                                            "VALUES (:pDeptNo, :pDName)", myOracleConnection);  
+    custDA.UpdateCommand = new OracleCommand("UPDATE Dept SET DeptNo = :pDeptNo, DName = :pDName " +  
+                                            "WHERE DeptNo = :pDeptNo", myOracleConnection);  
+    custDA.DeleteCommand = new OracleCommand("DELETE FROM Dept WHERE DeptNo = :pDeptNo", myOracleConnection);  
+  
+    custDA.InsertCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo");  
+    custDA.InsertCommand.Parameters.Add("pDName", OracleType.VarChar, 14, "DName");  
+  
+    custDA.UpdateCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo");  
+    custDA.UpdateCommand.Parameters.Add("pDName", OracleType.VarChar, 14, "DName");  
+    custDA.UpdateCommand.Parameters.Add("poldDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original;  
+  
+    custDA.DeleteCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleDataAdapter (string selectCommandText, System.Data.OracleClient.OracleConnection selectConnection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string selectCommandText, class System.Data.OracleClient.OracleConnection selectConnection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.#ctor(System.String,System.Data.OracleClient.OracleConnection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="selectCommandText" Type="System.String" />
+        <Parameter Name="selectConnection" Type="System.Data.OracleClient.OracleConnection" />
+      </Parameters>
+      <Docs>
+        <param name="selectCommandText">Eine Zeichenfolge, die eine SQL SELECT-Anweisung oder gespeicherte Prozedur von verwendet die <see cref="P:System.Data.OracleClient.OracleDataAdapter.SelectCommand" /> Eigenschaft von der <see cref="T:System.Data.OracleClient.OracleDataAdapter" />.</param>
+        <param name="selectConnection">Eine <see cref="T:System.Data.OracleClient.OracleConnection" /> , die die Verbindung darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleDataAdapter" /> Klasse mit einer SQL SELECT-Anweisung und eine <see cref="T:System.Data.OracleClient.OracleConnection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung der <xref:System.Data.OracleClient.OracleDataAdapter> kann in einer Anwendung, die aufgerufen werden muss, nützlich sein, die `Fill` Methode für zwei oder mehr <xref:System.Data.OracleClient.OracleDataAdapter> Objekte.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleDataAdapter> und legt einige ihrer Eigenschaften.  
+  
+```vb  
+Public Sub CreateOracleDataAdapter()  
+    Dim myOracleConnection As OracleConnection = New OracleConnection("Data Source=Oracle8i;Integrated Security=yes")  
+    Dim mySelectText As String = "SELECT DeptNo, DName FROM Dept"  
+    Dim custDA As OracleDataAdapter = New OracleDataAdapter(mySelectText, myOracleConnection)   
+    custDA.MissingSchemaAction = MissingSchemaAction.AddWithKey  
+  
+    custDA.InsertCommand = New OracleCommand("INSERT INTO Dept (DeptNo, DName) " & _  
+                                            "VALUES (:pDeptNo, :pDName)", myOracleConnection)  
+    custDA.UpdateCommand = New OracleCommand("UPDATE Dept SET DeptNo = :pDeptNo, DName = :pDName " & _  
+                                            "WHERE DeptNo = :pDeptNo", myOracleConnection)  
+    custDA.DeleteCommand = New OracleCommand("DELETE FROM Dept WHERE DeptNo = :pDeptNo", myOracleConnection)  
+  
+    custDA.InsertCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo")  
+    custDA.InsertCommand.Parameters.Add("pDName", OracleType.VarChar, 14, "DName")  
+  
+    custDA.UpdateCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo")  
+    custDA.UpdateCommand.Parameters.Add("pDName", OracleType.VarChar, 14, "DName")  
+    custDA.UpdateCommand.Parameters.Add("poldDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original  
+  
+    custDA.DeleteCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original  
+End Sub  
+```  
+  
+```csharp  
+public static void CreateOracleDataAdapter()   
+{  
+    OracleConnection myOracleConnection = new OracleConnection("Data Source=Oracle8i;Integrated Security=yes");  
+  
+    string mySelectText = "SELECT DeptNo, DName FROM Dept";  
+  
+    OracleDataAdapter custDA = new OracleDataAdapter(mySelectText, myOracleConnection );  
+    custDA.MissingSchemaAction = MissingSchemaAction.AddWithKey;  
+  
+    custDA.InsertCommand = new OracleCommand("INSERT INTO Dept (DeptNo, DName) " +  
+                                            "VALUES (:pDeptNo, :pDName)", myOracleConnection);  
+    custDA.UpdateCommand = new OracleCommand("UPDATE Dept SET DeptNo = :pDeptNo, DName = :pDName " +  
+                                            "WHERE DeptNo = :pDeptNo", myOracleConnection);  
+    custDA.DeleteCommand = new OracleCommand("DELETE FROM Dept WHERE DeptNo = :pDeptNo", myOracleConnection);  
+  
+    custDA.InsertCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo");  
+    custDA.InsertCommand.Parameters.Add("pDName", OracleType.VarChar, 14, "DName");  
+  
+    custDA.UpdateCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo");  
+    custDA.UpdateCommand.Parameters.Add("pDName", OracleType.VarChar, 14, "DName");  
+    custDA.UpdateCommand.Parameters.Add("poldDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original;  
+  
+    custDA.DeleteCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleDataAdapter (string selectCommandText, string selectConnectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string selectCommandText, string selectConnectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="selectCommandText" Type="System.String" />
+        <Parameter Name="selectConnectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="selectCommandText">Eine Zeichenfolge, die eine SQL SELECT-Anweisung oder gespeicherte Prozedur von verwendet die <see cref="P:System.Data.OracleClient.OracleDataAdapter.SelectCommand" /> Eigenschaft von der <see cref="T:System.Data.OracleClient.OracleDataAdapter" />.</param>
+        <param name="selectConnectionString">Verbindungszeichenfolge.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleDataAdapter" /> Klasse mit einer SQL SELECT-Anweisung und eine Verbindungszeichenfolge enthalten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleDataAdapter> und legt einige ihrer Eigenschaften.  
+  
+```vb  
+Public Sub CreateOracleDataAdapter()  
+    Dim myConnectionText As String = "Data Source=Oracle8i;Integrated Security=yes"  
+    Dim mySelectText As String = "SELECT DeptNo, DName FROM Dept"  
+    Dim custDA As OracleDataAdapter = New OracleDataAdapter(mySelectText, myConnectionText )   
+    Dim myOracleConnection As OracleConnection = custDA.SelectCommand.Connection  
+  
+    custDA.MissingSchemaAction = MissingSchemaAction.AddWithKey     
+  
+    custDA.InsertCommand = New OracleCommand("INSERT INTO Dept (DeptNo, DName) " & _  
+                                            "VALUES (:pDeptNo, :pDName)", myOracleConnection)  
+    custDA.UpdateCommand = New OracleCommand("UPDATE Dept SET DeptNo = :pDeptNo, DName = :pDName " & _  
+                                            "WHERE DeptNo = :pDeptNo", myOracleConnection)  
+    custDA.DeleteCommand = New OracleCommand("DELETE FROM Dept WHERE DeptNo = :pDeptNo", myOracleConnection)  
+  
+    custDA.InsertCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo")  
+    custDA.InsertCommand.Parameters.Add("pDName", OracleType.VarChar, 14, "DName")  
+  
+    custDA.UpdateCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo")  
+    custDA.UpdateCommand.Parameters.Add("pDName", OracleType.VarChar, 14, "DName")  
+    custDA.UpdateCommand.Parameters.Add("poldDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original  
+  
+    custDA.DeleteCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original  
+End Sub  
+```  
+  
+```csharp  
+public static void CreateOracleDataAdapter()   
+{  
+    string myConnectionText = "Data Source=Oracle8i;Integrated Security=yes";  
+  
+    string mySelectText = "SELECT DeptNo, DName FROM Dept";  
+  
+    OracleDataAdapter custDA = new OracleDataAdapter(mySelectText, myConnectionText );  
+   OracleConnection myOracleConnection = custDA.SelectCommand.Connection;  
+  
+    custDA.MissingSchemaAction = MissingSchemaAction.AddWithKey;  
+  
+    custDA.InsertCommand = new OracleCommand("INSERT INTO Dept (DeptNo, DName) " +  
+                                            "VALUES (:pDeptNo, :pDName)", myOracleConnection);  
+    custDA.UpdateCommand = new OracleCommand("UPDATE Dept SET DeptNo = :pDeptNo, DName = :pDName " +  
+                                            "WHERE DeptNo = :pDeptNo", myOracleConnection);  
+    custDA.DeleteCommand = new OracleCommand("DELETE FROM Dept WHERE DeptNo = :pDeptNo", myOracleConnection);  
+  
+    custDA.InsertCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo");  
+    custDA.InsertCommand.Parameters.Add("pDName", OracleType.VarChar, 14, "DName");  
+  
+    custDA.UpdateCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo");  
+    custDA.UpdateCommand.Parameters.Add("pDName", OracleType.VarChar, 14, "DName");  
+    custDA.UpdateCommand.Parameters.Add("poldDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original;  
+  
+    custDA.DeleteCommand.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo").SourceVersion = DataRowVersion.Original;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddToBatch">
+      <MemberSignature Language="C#" Value="protected override int AddToBatch (System.Data.IDbCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 AddToBatch(class System.Data.IDbCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.AddToBatch(System.Data.IDbCommand)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.Data.IDbCommand" />
+      </Parameters>
+      <Docs>
+        <param name="command">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearBatch">
+      <MemberSignature Language="C#" Value="protected override void ClearBatch ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearBatch() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.ClearBatch" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRowUpdatedEvent">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.RowUpdatedEventArgs CreateRowUpdatedEvent (System.Data.DataRow dataRow, System.Data.IDbCommand command, System.Data.StatementType statementType, System.Data.Common.DataTableMapping tableMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.RowUpdatedEventArgs CreateRowUpdatedEvent(class System.Data.DataRow dataRow, class System.Data.IDbCommand command, valuetype System.Data.StatementType statementType, class System.Data.Common.DataTableMapping tableMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.CreateRowUpdatedEvent(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.RowUpdatedEventArgs</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataRow" Type="System.Data.DataRow" />
+        <Parameter Name="command" Type="System.Data.IDbCommand" />
+        <Parameter Name="statementType" Type="System.Data.StatementType" />
+        <Parameter Name="tableMapping" Type="System.Data.Common.DataTableMapping" />
+      </Parameters>
+      <Docs>
+        <param name="dataRow">To be added.</param>
+        <param name="command">To be added.</param>
+        <param name="statementType">To be added.</param>
+        <param name="tableMapping">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRowUpdatingEvent">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.RowUpdatingEventArgs CreateRowUpdatingEvent (System.Data.DataRow dataRow, System.Data.IDbCommand command, System.Data.StatementType statementType, System.Data.Common.DataTableMapping tableMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.RowUpdatingEventArgs CreateRowUpdatingEvent(class System.Data.DataRow dataRow, class System.Data.IDbCommand command, valuetype System.Data.StatementType statementType, class System.Data.Common.DataTableMapping tableMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.CreateRowUpdatingEvent(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.RowUpdatingEventArgs</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataRow" Type="System.Data.DataRow" />
+        <Parameter Name="command" Type="System.Data.IDbCommand" />
+        <Parameter Name="statementType" Type="System.Data.StatementType" />
+        <Parameter Name="tableMapping" Type="System.Data.Common.DataTableMapping" />
+      </Parameters>
+      <Docs>
+        <param name="dataRow">To be added.</param>
+        <param name="command">To be added.</param>
+        <param name="statementType">To be added.</param>
+        <param name="tableMapping">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteCommand">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleCommand DeleteCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OracleClient.OracleCommand DeleteCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataAdapter.DeleteCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DBCommandEditor, Microsoft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt sie fest, eine SQL-Anweisung oder gespeicherte Prozedur zum Löschen von Datensätzen in der Datenbank verwendet.</summary>
+        <value>Ein <see cref="T:System.Data.OracleClient.OracleCommand" /> während eines Updatevorgangs verwendet, um Datensätze in der Datenbank zu löschen, die gelöschten Zeilen entsprechen den <see langword="DataSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Data.OracleClient.OracleDataAdapter.DeleteCommand%2A> Eigenschaft zugewiesen ist, ein zuvor erstelltes <xref:System.Data.OracleClient.OracleCommand>, die <xref:System.Data.OracleClient.OracleCommand> nicht geklont. Stattdessen die <xref:System.Data.OracleClient.OracleDataAdapter.DeleteCommand%2A> behält einen Verweis auf das zuvor erstellte <xref:System.Data.OracleClient.OracleCommand>.  
+  
+ Während eines Updatevorgangs Wenn <xref:System.Data.OracleClient.OracleDataAdapter.DeleteCommand%2A> nicht festgelegt ist und Primärschlüssel Informationen ist vorhanden, in der <xref:System.Data.DataSet>, können Sie die <xref:System.Data.OracleClient.OracleCommandBuilder> Klasse zum automatischen Generieren von der <xref:System.Data.OracleClient.OracleDataAdapter.DeleteCommand%2A>, und zusätzliche Befehle zum Abstimmen der <xref:System.Data.DataSet>mit der Datenbank. Legen Sie hierzu die <xref:System.Data.OracleClient.OracleDataAdapter.SelectCommand%2A> Eigenschaft von der <xref:System.Data.OracleClient.OracleDataAdapter>. Die Generierungslogik auch Schlüsselspalteninformationen vorhanden sein müssen die <xref:System.Data.DataSet>. Weitere Informationen finden Sie unter [Generieren von Befehlen mit CommandBuilder-Objekten](~/docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleDataAdapter> und legt die <xref:System.Data.OracleClient.OracleDataAdapter.SelectCommand%2A> und <xref:System.Data.OracleClient.OracleDataAdapter.DeleteCommand%2A> Eigenschaften. Es wird vorausgesetzt, Sie haben bereits erstellt ein <xref:System.Data.OracleClient.OracleConnection> Objekt.  
+  
+```vb  
+Public Shared Function CreateCustomerAdapter(conn As OracleConnection) As OracleDataAdapter   
+  
+  Dim da As OracleDataAdapter = New OracleDataAdapter()  
+  Dim cmd As OracleCommand  
+  Dim parm As OracleParameter  
+  
+  ' Create the SelectCommand.  
+  
+  cmd = New OracleCommand("SELECT * FROM Dept " & _  
+                       "WHERE DName = :pDName AND Loc = :pLoc", conn)  
+  
+  cmd.Parameters.Add("pDName", OracleType.NVarChar, 14)  
+  cmd.Parameters.Add("pLoc", OracleType.NVarChar, 13)  
+  
+  da.SelectCommand = cmd  
+  
+  ' Create the DeleteCommand.  
+  
+  cmd = New OracleCommand("DELETE FROM Dept WHERE DeptNo = :pDeptNo", conn)  
+  
+  parm = cmd.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo")  
+  parm.SourceVersion = DataRowVersion.Original  
+  
+  da.DeleteCommand = cmd  
+  
+  Return da  
+End Function  
+```  
+  
+```csharp  
+public static OracleDataAdapter CreateCustomerAdapter(OracleConnection conn)  
+{  
+  OracleDataAdapter da = new OracleDataAdapter();  
+  OracleCommand cmd;  
+  OracleParameter parm;  
+  
+  // Create the SelectCommand.  
+  
+  cmd = new OracleCommand("SELECT * FROM Dept " +  
+                       "WHERE DName = :pDName AND Loc = :pLoc", conn);  
+  
+  cmd.Parameters.Add("pDName", OracleType.NVarChar, 14);  
+  cmd.Parameters.Add("pLoc", OracleType.NVarChar, 13);  
+  
+  da.SelectCommand = cmd;  
+  
+  // Create the DeleteCommand.  
+  
+  cmd = new OracleCommand("DELETE FROM Dept WHERE DeptNo = :pDeptNo", conn);  
+  
+  parm = cmd.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo");  
+  parm.SourceVersion = DataRowVersion.Original;  
+  
+  da.DeleteCommand = cmd;  
+  
+  return da;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteBatch">
+      <MemberSignature Language="C#" Value="protected override int ExecuteBatch ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteBatch() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.ExecuteBatch" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBatchedParameter">
+      <MemberSignature Language="C#" Value="protected override System.Data.IDataParameter GetBatchedParameter (int commandIdentifier, int parameterIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.IDataParameter GetBatchedParameter(int32 commandIdentifier, int32 parameterIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.GetBatchedParameter(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDataParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandIdentifier" Type="System.Int32" />
+        <Parameter Name="parameterIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="commandIdentifier">To be added.</param>
+        <param name="parameterIndex">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBatchedRecordsAffected">
+      <MemberSignature Language="C#" Value="protected override bool GetBatchedRecordsAffected (int commandIdentifier, out int recordsAffected, out Exception error);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool GetBatchedRecordsAffected(int32 commandIdentifier, [out] int32&amp; recordsAffected, [out] class System.Exception&amp; error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.GetBatchedRecordsAffected(System.Int32,System.Int32@,System.Exception@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandIdentifier" Type="System.Int32" />
+        <Parameter Name="recordsAffected" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="error" Type="System.Exception&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="commandIdentifier">To be added.</param>
+        <param name="recordsAffected">To be added.</param>
+        <param name="error">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeBatching">
+      <MemberSignature Language="C#" Value="protected override void InitializeBatching ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InitializeBatching() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.InitializeBatching" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertCommand">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleCommand InsertCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OracleClient.OracleCommand InsertCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataAdapter.InsertCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DBCommandEditor, Microsoft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt sie fest, eine SQL-Anweisung oder gespeicherte Prozedur zum Einfügen neuer Datensätze in der Datenbank verwendet.</summary>
+        <value>Ein <see cref="T:System.Data.OracleClient.OracleCommand" /> während eines Updatevorgangs verwendet werden, um das Einfügen von Datensätzen in der Datenbank, die neuen Zeilen in entsprechen den <see cref="T:System.Data.DataSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Data.OracleClient.OracleDataAdapter.InsertCommand%2A> Eigenschaft zugewiesen ist auf eine zuvor erstellte <xref:System.Data.OracleClient.OracleCommand> -Objekt, das <xref:System.Data.OracleClient.OracleCommand> nicht geklont. Stattdessen <xref:System.Data.OracleClient.OracleDataAdapter.InsertCommand%2A> behält einen Verweis auf das zuvor erstellte <xref:System.Data.OracleClient.OracleCommand>.  
+  
+ Während eines Updatevorgangs Wenn <xref:System.Data.OracleClient.OracleDataAdapter.InsertCommand%2A> nicht festgelegt ist und Primärschlüssel Informationen ist vorhanden, in der <xref:System.Data.DataSet>, können Sie die <xref:System.Data.OracleClient.OracleCommandBuilder> Klasse zum automatischen Generieren von <xref:System.Data.OracleClient.OracleDataAdapter.InsertCommand%2A>, und zusätzliche Befehle zum Abstimmen der <xref:System.Data.DataSet> mit der Datenbank. Legen Sie hierzu die <xref:System.Data.OracleClient.OracleDataAdapter.SelectCommand%2A> Eigenschaft von der <xref:System.Data.OracleClient.OracleDataAdapter>. Die Generierungslogik auch Schlüsselspalteninformationen vorhanden sein müssen die <xref:System.Data.DataSet>. Weitere Informationen finden Sie unter [Generieren von Befehlen mit CommandBuilder-Objekten](~/docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+  
+> [!NOTE]
+>  Wenn die Ausführung dieses Befehls Zeilen zurückgegeben werden, können diese Zeilen hinzugefügt werden, auf die <xref:System.Data.DataSet> je nachdem, wie Sie festlegen der <xref:System.Data.OracleClient.OracleCommand.UpdatedRowSource%2A> Eigenschaft von der <xref:System.Data.OracleClient.OracleCommand> Objekt.  
+  
+ Beim Aktualisieren einer Spalteninhalts mit dem `LONG RAW` -Datentyp, eine Ausnahme wird ausgelöst, wenn Sie einen Wert eingeben `NULL` in der Spalte. Die Oracle `LONG RAW` -Datentyp ist ein veralteter Typ in Oracle, Version 8.0. Um diesen Fehler zu vermeiden, verwenden Sie die `BLOB` -Datentyp anstelle von `LONG RAW`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleDataAdapter> und legt die <xref:System.Data.OracleClient.OracleDataAdapter.SelectCommand%2A> und <xref:System.Data.OracleClient.OracleDataAdapter.InsertCommand%2A> Eigenschaften. Es wird vorausgesetzt, Sie haben bereits erstellt ein <xref:System.Data.OracleClient.OracleConnection> Objekt.  
+  
+```vb  
+Public Shared Function CreateCustomerAdapter(conn As OracleConnection) As OracleDataAdapter   
+  
+  Dim da As OracleDataAdapter = New OracleDataAdapter()  
+  Dim cmd As OracleCommand  
+  
+  ' Create the SelectCommand.  
+  
+  cmd = New OracleCommand("SELECT * FROM Dept " & _  
+                       "WHERE DName = :pDName AND Loc = :pLoc", conn)  
+  
+  cmd.Parameters.Add("pDName", OracleType.NVarChar, 14)  
+  cmd.Parameters.Add("pLoc", OracleType.NVarChar, 13)  
+  
+  da.SelectCommand = cmd  
+  
+  ' Create the InsertCommand.  
+  
+  cmd = New OracleCommand("INSERT INTO Dept (DeptNo, DName) " & _  
+                       "VALUES (:pDeptNo, :pDName)", conn)  
+  
+  cmd.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo")  
+  cmd.Parameters.Add("pDName", OracleType.NVarChar, 14, "DName")  
+  
+  da.InsertCommand = cmd  
+  
+  Return da  
+End Function  
+```  
+  
+```csharp  
+public static OracleDataAdapter CreateCustomerAdapter(OracleConnection conn)  
+{  
+  OracleDataAdapter da = new OracleDataAdapter();  
+  OracleCommand cmd;  
+  
+  // Create the SelectCommand.  
+  
+  cmd = new OracleCommand("SELECT * FROM Dept " +  
+                       "WHERE DName = :pDName AND Loc = :pLoc", conn);  
+  
+  cmd.Parameters.Add("pDName", OracleType.NVarChar, 14);  
+  cmd.Parameters.Add("pLoc", OracleType.NVarChar, 13);  
+  
+  da.SelectCommand = cmd;  
+  
+  // Create the InsertCommand.  
+  
+  cmd = new OracleCommand("INSERT INTO Dept (DeptNo, DName) " +  
+                       "VALUES (:pDeptNo, :pDName)", conn);  
+  
+  cmd.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo");  
+  cmd.Parameters.Add("pDName", OracleType.NVarChar, 14, "DName");  
+  
+  da.InsertCommand = cmd;  
+  
+  return da;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRowUpdated">
+      <MemberSignature Language="C#" Value="protected override void OnRowUpdated (System.Data.Common.RowUpdatedEventArgs value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRowUpdated(class System.Data.Common.RowUpdatedEventArgs value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.OnRowUpdated(System.Data.Common.RowUpdatedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.Common.RowUpdatedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRowUpdating">
+      <MemberSignature Language="C#" Value="protected override void OnRowUpdating (System.Data.Common.RowUpdatingEventArgs value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRowUpdating(class System.Data.Common.RowUpdatingEventArgs value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.OnRowUpdating(System.Data.Common.RowUpdatingEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.Common.RowUpdatingEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowUpdated">
+      <MemberSignature Language="C#" Value="public event System.Data.OracleClient.OracleRowUpdatedEventHandler RowUpdated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Data.OracleClient.OracleRowUpdatedEventHandler RowUpdated" />
+      <MemberSignature Language="DocId" Value="E:System.Data.OracleClient.OracleDataAdapter.RowUpdated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleRowUpdatedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, während eines Updatevorgangs, nachdem ein Befehl für die Datenbank ausgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung der `Update` -Methode, es gibt zwei Ereignisse, die pro Datenzeile aktualisiert auftreten. Die Reihenfolge der Ausführung lautet wie folgt:  
+  
+1.  Die Werte in der <xref:System.Data.DataRow> in die Parameterwerte verschoben werden.  
+  
+2.  Das `OnRowUpdating`-Ereignis wird ausgelöst.  
+  
+3.  Der Befehl ausgeführt wird.  
+  
+4.  Wenn die `UpdateRowSource` -Enumeration festgelegt ist, um `FirstReturnedRecord`, das erste zurückgegebene Ergebnis befindet sich der **DataRow**.  
+  
+5.  Wenn Output-Parameter vorhanden sind, werden sie platziert, der **DataRow**.  
+  
+6.  Das `OnRowUpdated`-Ereignis wird ausgelöst.  
+  
+7.  `AcceptChanges` wird aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowUpdating">
+      <MemberSignature Language="C#" Value="public event System.Data.OracleClient.OracleRowUpdatingEventHandler RowUpdating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Data.OracleClient.OracleRowUpdatingEventHandler RowUpdating" />
+      <MemberSignature Language="DocId" Value="E:System.Data.OracleClient.OracleDataAdapter.RowUpdating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleRowUpdatingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt während der <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> , bevor ein Befehl für die Datenquelle ausgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung der `Update` -Methode, es gibt zwei Ereignisse, die pro Datenzeile aktualisiert auftreten. Die Reihenfolge der Ausführung lautet wie folgt:  
+  
+1.  Die Werte in der <xref:System.Data.DataRow> in die Parameterwerte verschoben werden.  
+  
+2.  Das `OnRowUpdating`-Ereignis wird ausgelöst.  
+  
+3.  Der Befehl ausgeführt wird.  
+  
+4.  Wenn die `UpdateRowSource` -Enumeration festgelegt ist, um `FirstReturnedRecord`, das erste zurückgegebene Ergebnis befindet sich der **DataRow**.  
+  
+5.  Wenn Output-Parameter vorhanden sind, werden sie platziert, der **DataRow**.  
+  
+6.  Das `OnRowUpdated`-Ereignis wird ausgelöst.  
+  
+7.  `AcceptChanges` wird aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectCommand">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleCommand SelectCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OracleClient.OracleCommand SelectCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataAdapter.SelectCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DBCommandEditor, Microsoft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt sie fest, eine SQL-Anweisung oder gespeicherte Prozedur, die zum Auswählen von Datensätzen in der Datenbank verwendet.</summary>
+        <value>Ein <see cref="T:System.Data.OracleClient.OracleCommand" /> wird, während eines Vorgangs ausfüllen, zum Auswählen von Datensätzen aus der Datenbank für die Platzierung in der <see cref="T:System.Data.DataSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Data.OracleClient.OracleDataAdapter.SelectCommand%2A> zugewiesen ist, ein zuvor erstelltes <xref:System.Data.OracleClient.OracleCommand>, die <xref:System.Data.OracleClient.OracleCommand> nicht geklont. Stattdessen die <xref:System.Data.OracleClient.OracleDataAdapter.SelectCommand%2A> behält einen Verweis auf das zuvor erstellte <xref:System.Data.OracleClient.OracleCommand> Objekt.  
+  
+ Wenn <xref:System.Data.OracleClient.OracleDataAdapter.SelectCommand%2A> werden keine Zeilen zurückgegeben werden keine Tabellen hinzugefügt, um die **DataSet**, und keine Ausnahme ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleDataAdapter> und legt die <xref:System.Data.OracleClient.OracleDataAdapter.SelectCommand%2A> und <xref:System.Data.OracleClient.OracleDataAdapter.InsertCommand%2A> Eigenschaften. Es wird vorausgesetzt, Sie haben bereits erstellt ein <xref:System.Data.OracleClient.OracleConnection> Objekt.  
+  
+```vb  
+Public Shared Function CreateCustomerAdapter(conn As OracleConnection) As OracleDataAdapter   
+  
+  Dim da As OracleDataAdapter = New OracleDataAdapter()  
+  Dim cmd As OracleCommand  
+  
+  ' Create the SelectCommand.  
+  
+  cmd = New OracleCommand("SELECT * FROM Dept " & _  
+                       "WHERE DName = :pDName AND Loc = :pLoc", conn)  
+  
+  cmd.Parameters.Add("pDName", OracleType.NVarChar, 14)  
+  cmd.Parameters.Add("pLoc", OracleType.NVarChar, 13)  
+  
+  da.SelectCommand = cmd  
+  
+  ' Create the InsertCommand.  
+  
+  cmd = New OracleCommand("INSERT INTO Dept (DeptNo, DName) " & _  
+                       "VALUES (pDeptNo, pDName)", conn)  
+  
+  cmd.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo")  
+  cmd.Parameters.Add("pDName", OracleType.NVarChar, 14, "DName")  
+  
+  da.InsertCommand = cmd  
+  
+  Return da  
+End Function  
+```  
+  
+```csharp  
+public static OracleDataAdapter CreateCustomerAdapter(OracleConnection conn)  
+{  
+  OracleDataAdapter da = new OracleDataAdapter();  
+  OracleCommand cmd;  
+  
+  // Create the SelectCommand.  
+  
+  cmd = new OracleCommand("SELECT * FROM Dept " +  
+                       "WHERE DName = :pDName AND Loc = :pLoc", conn);  
+  
+  cmd.Parameters.Add("pDName", OracleType.NVarChar, 14);  
+  cmd.Parameters.Add("pLoc", OracleType.NVarChar, 13);  
+  
+  da.SelectCommand = cmd;  
+  
+  // Create the InsertCommand.  
+  
+  cmd = new OracleCommand("INSERT INTO Dept (DeptNo, DName) " +  
+                       "VALUES (:pDeptNo, :pDName)", conn);  
+  
+  cmd.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo");  
+  cmd.Parameters.Add("pDName", OracleType.NVarChar, 14, "DName");  
+  
+  da.InsertCommand = cmd;  
+  
+  return da;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbDataAdapter.DeleteCommand">
+      <MemberSignature Language="C#" Value="System.Data.IDbCommand System.Data.IDbDataAdapter.DeleteCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDbCommand System.Data.IDbDataAdapter.DeleteCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataAdapter.System#Data#IDbDataAdapter#DeleteCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Data.IDbDataAdapter.DeleteCommand" />.</summary>
+        <value>Eine Zeichenfolge, die den Befehl darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OracleClient.OracleDataAdapter>-Instanz in eine <xref:System.Data.IDbDataAdapter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbDataAdapter.InsertCommand">
+      <MemberSignature Language="C#" Value="System.Data.IDbCommand System.Data.IDbDataAdapter.InsertCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDbCommand System.Data.IDbDataAdapter.InsertCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataAdapter.System#Data#IDbDataAdapter#InsertCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Data.IDbDataAdapter.InsertCommand" />.</summary>
+        <value>Eine Zeichenfolge, die den Befehl darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OracleClient.OracleDataAdapter>-Instanz in eine <xref:System.Data.IDbDataAdapter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbDataAdapter.SelectCommand">
+      <MemberSignature Language="C#" Value="System.Data.IDbCommand System.Data.IDbDataAdapter.SelectCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDbCommand System.Data.IDbDataAdapter.SelectCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataAdapter.System#Data#IDbDataAdapter#SelectCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Data.IDbDataAdapter.SelectCommand" />.</summary>
+        <value>Eine Zeichenfolge, die den Befehl darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OracleClient.OracleDataAdapter>-Instanz in eine <xref:System.Data.IDbDataAdapter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbDataAdapter.UpdateCommand">
+      <MemberSignature Language="C#" Value="System.Data.IDbCommand System.Data.IDbDataAdapter.UpdateCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDbCommand System.Data.IDbDataAdapter.UpdateCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataAdapter.System#Data#IDbDataAdapter#UpdateCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Data.IDbDataAdapter.UpdateCommand" />.</summary>
+        <value>Eine Zeichenfolge, die den Befehl darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OracleClient.OracleDataAdapter>-Instanz in eine <xref:System.Data.IDbDataAdapter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ICloneable.Clone" />.</summary>
+        <returns>Ein neues Objekt, das eine Kopie dieser Instanz ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OracleClient.OracleDataAdapter>-Instanz in eine <xref:System.ICloneable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminateBatching">
+      <MemberSignature Language="C#" Value="protected override void TerminateBatching ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TerminateBatching() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataAdapter.TerminateBatching" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateBatchSize">
+      <MemberSignature Language="C#" Value="public override int UpdateBatchSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 UpdateBatchSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataAdapter.UpdateBatchSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der aktiviert oder deaktiviert die Batchverarbeitung, und gibt die Anzahl der Befehle, die in einem Batch ausgeführt werden kann.</summary>
+        <value>Die Anzahl der Zeilen pro Batch verarbeitet werden soll.  
+  
+ <list type="table"><listheader><term>Wert:  
+  
+ </term><description>Auswirkung:  
+  
+ </description></listheader><item><term> 0  
+  
+ </term><description>Es gibt keine Beschränkung für die Batchgröße.  
+  
+ </description></item><item><term> 1  
+  
+ </term><description>Deaktiviert die Batchaktualisierung.  
+  
+ </description></item><item><term> &gt; 1  
+  
+ </term><description>Änderungen gesendet werden, verwenden von Batches von <see cref="P:System.Data.OracleClient.OracleDataAdapter.UpdateBatchSize" /> Vorgänge zu einem Zeitpunkt.  
+  
+ </description></item></list>  
+  
+ Wenn dies die zugehörigen Befehle auf einen anderen Wert als 1 Festlegen der <see cref="T:System.Data.OracleClient.OracleDataAdapter" /> haben ihre <see cref="P:System.Data.IDbCommand.UpdatedRowSource" /> -Eigenschaftensatz auf <see langword="None" /> oder <see langword="OutputParameters" />. Andernfalls wird eine Ausnahme ausgelöst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Data.OracleClient.OracleDataAdapter.UpdateBatchSize%2A> Eigenschaft so aktualisieren eine Datenquelle mit Änderungen von einem <xref:System.Data.DataSet>. Dies kann die Leistung der Anwendung verbessern, durch das Reduzieren der Anzahl von Roundtrips an den Server.  
+  
+ Die Ausführung eines extrem großen Batches könnte die Leistung verringern. Aus diesem Grund sollten Sie testen, für die eine optimale Batchgröße Größe festlegen, bevor Sie Ihre Anwendung implementieren.  
+  
+ Ein <xref:System.ArgumentOutOfRangeException> wird ausgelöst, wenn der Wert, auf eine Zahl festgelegt ist kleiner als 0 (null).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateCommand">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleCommand UpdateCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OracleClient.OracleCommand UpdateCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataAdapter.UpdateCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DBCommandEditor, Microsoft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt sie fest, eine SQL-Anweisung oder gespeicherte Prozedur, die zum Aktualisieren von Datensätzen in der Datenbank verwendet.</summary>
+        <value>Ein <see cref="T:System.Data.OracleClient.OracleCommand" /> während eines Updatevorgangs verwendet wird, zum Aktualisieren von Datensätzen in der Datenbank, die entsprechen geänderten Zeilen in der <see cref="T:System.Data.DataSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Data.OracleClient.OracleDataAdapter.UpdateCommand%2A> zugewiesen ist, ein zuvor erstelltes <xref:System.Data.OracleClient.OracleCommand>, die <xref:System.Data.OracleClient.OracleCommand> nicht geklont. Stattdessen die <xref:System.Data.OracleClient.OracleDataAdapter.UpdateCommand%2A> behält einen Verweis auf das zuvor erstellte <xref:System.Data.OracleClient.OracleCommand> Objekt.  
+  
+ Während eines Updatevorgangs Wenn <xref:System.Data.OracleClient.OracleDataAdapter.InsertCommand%2A> nicht festgelegt ist und Primärschlüssel Informationen ist vorhanden, in der **DataSet**, können Sie die <xref:System.Data.OracleClient.OracleCommandBuilder> Klasse zum automatischen Generieren von <xref:System.Data.OracleClient.OracleDataAdapter.InsertCommand%2A>, und zusätzliche Befehle benötigt, um Abstimmen der <xref:System.Data.DataSet> mit der Datenbank. Legen Sie hierzu die <xref:System.Data.OracleClient.OracleDataAdapter.SelectCommand%2A> Eigenschaft von der <xref:System.Data.OracleClient.OracleDataAdapter>. Die Generierungslogik auch Schlüsselspalteninformationen vorhanden sein müssen die <xref:System.Data.DataSet>. Weitere Informationen finden Sie unter [Generieren von Befehlen mit CommandBuilder-Objekten](~/docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+  
+> [!NOTE]
+>  Wenn die Ausführung dieses Befehls Zeilen zurückgegeben werden, können diese Zeilen mit zusammengeführt werden die <xref:System.Data.DataSet> je nachdem, wie Sie festlegen der <xref:System.Data.OracleClient.OracleCommand.UpdatedRowSource%2A> Eigenschaft von der <xref:System.Data.OracleClient.OracleCommand> Objekt.  
+  
+ Beim Aktualisieren einer Spalteninhalts mit dem `LONG RAW` -Datentyp, eine Ausnahme wird ausgelöst, wenn Sie einen Wert eingeben `NULL` in der Spalte. Die Oracle `LONG RAW` -Datentyp ist ein veralteter Typ in Oracle, Version 8.0. Um diesen Fehler zu vermeiden, verwenden Sie die `BLOB` -Datentyp anstelle von `LONG RAW`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleDataAdapter> und legt die <xref:System.Data.OracleClient.OracleDataAdapter.SelectCommand%2A> und <xref:System.Data.OracleClient.OracleDataAdapter.UpdateCommand%2A> Eigenschaften. Es wird vorausgesetzt, Sie haben bereits erstellt ein <xref:System.Data.OracleClient.OracleConnection> Objekt.  
+  
+```vb  
+Public Shared Function CreateCustomerAdapter(conn As OracleConnection) As OracleDataAdapter   
+  
+  Dim da As OracleDataAdapter = New OracleDataAdapter()  
+  Dim cmd As OracleCommand  
+  Dim parm As OracleParameter  
+  
+  ' Create the SelectCommand.  
+  
+  cmd = New OracleCommand("SELECT * FROM Dept " & _  
+                       "WHERE DName = pDName AND Loc = pLoc", conn)  
+  
+  cmd.Parameters.Add("pDName", OracleType.NVarChar, 14)  
+  cmd.Parameters.Add("pLoc", OracleType.NVarChar, 13)  
+  
+  da.SelectCommand = cmd  
+  
+  ' Create the UpdateCommand.  
+  
+  cmd = New OracleCommand("UPDATE Dept SET DeptNo = pDeptNo, DName = pDName " & _  
+                       "WHERE DeptNo = poldDeptNo", conn)  
+  
+  cmd.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo")  
+  cmd.Parameters.Add("pDName", OracleType.NVarChar, 14, "DName")  
+  
+  parm = cmd.Parameters.Add("poldDeptNo", OracleType.Number, 2, "DeptNo")  
+  parm.SourceVersion = DataRowVersion.Original  
+  
+  da.UpdateCommand = cmd  
+  
+  Return da  
+End Function  
+```  
+  
+```csharp  
+public static OracleDataAdapter CreateCustomerAdapter(OracleConnection conn)  
+{  
+  OracleDataAdapter da = new OracleDataAdapter();  
+  OracleCommand cmd;  
+  OracleParameter parm;  
+  
+  // Create the SelectCommand.  
+  
+  cmd = new OracleCommand("SELECT * FROM Dept " +  
+                       "WHERE DName = pDName AND Loc = pLoc", conn);  
+  
+  cmd.Parameters.Add("pDName", OracleType.NVarChar, 14);  
+  cmd.Parameters.Add("pLoc", OracleType.NVarChar, 13);  
+  
+  da.SelectCommand = cmd;  
+  
+  // Create the UpdateCommand.  
+  
+  cmd = new OracleCommand("UPDATE Dept SET DeptNo = pDeptNo, DName = pDName " +  
+                       "WHERE DeptNo = poldDeptNo", conn);  
+  
+  cmd.Parameters.Add("pDeptNo", OracleType.Number, 2, "DeptNo");  
+  cmd.Parameters.Add("pDName", OracleType.NVarChar, 14, "DName");  
+  
+  parm = cmd.Parameters.Add("poldDeptNo", OracleType.Number, 2, "DeptNo");  
+  parm.SourceVersion = DataRowVersion.Original;  
+  
+  da.UpdateCommand = cmd;  
+  
+  return da;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

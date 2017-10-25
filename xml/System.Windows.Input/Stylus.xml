@@ -1,0 +1,1997 @@
+<Type Name="Stylus" FullName="System.Windows.Input.Stylus">
+  <TypeSignature Language="C#" Value="public static class Stylus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Stylus extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.Stylus" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Zugriff auf allgemeine Informationen zu einem Tablettstift.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Koordinaten des Tablettstifts aufgezeichnet, selbst wenn der Stift den Bereich verlässt eine <xref:System.Windows.Controls.TextBox>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.TextBox> aufgerufen `textBox1`, und dass die <xref:System.Windows.Input.Stylus.StylusDown>, <xref:System.Windows.Input.Stylus.StylusUp>, und <xref:System.Windows.Input.Stylus.StylusMove> Ereignisse Ereignishandler verbunden sind.  
+  
+ [!code-csharp[StylusSamples#1](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusSamples/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[StylusSamples#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusSamples/VisualBasic/Window1.xaml.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddGotStylusCaptureHandler">
+      <MemberSignature Language="C#" Value="public static void AddGotStylusCaptureHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddGotStylusCaptureHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddGotStylusCaptureHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.GotStylusCapture" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLostStylusCaptureHandler">
+      <MemberSignature Language="C#" Value="public static void AddLostStylusCaptureHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddLostStylusCaptureHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddLostStylusCaptureHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.LostStylusCapture" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewStylusButtonDownHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewStylusButtonDownHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusButtonEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewStylusButtonDownHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusButtonEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddPreviewStylusButtonDownHandler(System.Windows.DependencyObject,System.Windows.Input.StylusButtonEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusButtonEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusButtonDown" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewStylusButtonUpHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewStylusButtonUpHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusButtonEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewStylusButtonUpHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusButtonEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddPreviewStylusButtonUpHandler(System.Windows.DependencyObject,System.Windows.Input.StylusButtonEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusButtonEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusButtonUp" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewStylusDownHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewStylusDownHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusDownEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewStylusDownHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusDownEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddPreviewStylusDownHandler(System.Windows.DependencyObject,System.Windows.Input.StylusDownEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusDownEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusDown" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewStylusInAirMoveHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewStylusInAirMoveHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewStylusInAirMoveHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddPreviewStylusInAirMoveHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusInAirMove" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewStylusInRangeHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewStylusInRangeHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewStylusInRangeHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddPreviewStylusInRangeHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusInRange" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewStylusMoveHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewStylusMoveHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewStylusMoveHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddPreviewStylusMoveHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusMove" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewStylusOutOfRangeHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewStylusOutOfRangeHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewStylusOutOfRangeHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddPreviewStylusOutOfRangeHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusOutOfRange" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewStylusSystemGestureHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewStylusSystemGestureHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusSystemGestureEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewStylusSystemGestureHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusSystemGestureEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddPreviewStylusSystemGestureHandler(System.Windows.DependencyObject,System.Windows.Input.StylusSystemGestureEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusSystemGestureEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusSystemGesture" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewStylusUpHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewStylusUpHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewStylusUpHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddPreviewStylusUpHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusUp" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddStylusButtonDownHandler">
+      <MemberSignature Language="C#" Value="public static void AddStylusButtonDownHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusButtonEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddStylusButtonDownHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusButtonEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddStylusButtonDownHandler(System.Windows.DependencyObject,System.Windows.Input.StylusButtonEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusButtonEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusButtonDown" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddStylusButtonUpHandler">
+      <MemberSignature Language="C#" Value="public static void AddStylusButtonUpHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusButtonEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddStylusButtonUpHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusButtonEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddStylusButtonUpHandler(System.Windows.DependencyObject,System.Windows.Input.StylusButtonEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusButtonEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusButtonUp" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddStylusDownHandler">
+      <MemberSignature Language="C#" Value="public static void AddStylusDownHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusDownEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddStylusDownHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusDownEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddStylusDownHandler(System.Windows.DependencyObject,System.Windows.Input.StylusDownEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusDownEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusDown" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddStylusEnterHandler">
+      <MemberSignature Language="C#" Value="public static void AddStylusEnterHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddStylusEnterHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddStylusEnterHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusEnter" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddStylusInAirMoveHandler">
+      <MemberSignature Language="C#" Value="public static void AddStylusInAirMoveHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddStylusInAirMoveHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddStylusInAirMoveHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusInAirMove" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddStylusInRangeHandler">
+      <MemberSignature Language="C#" Value="public static void AddStylusInRangeHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddStylusInRangeHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddStylusInRangeHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusInRange" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddStylusLeaveHandler">
+      <MemberSignature Language="C#" Value="public static void AddStylusLeaveHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddStylusLeaveHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddStylusLeaveHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusLeave" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddStylusMoveHandler">
+      <MemberSignature Language="C#" Value="public static void AddStylusMoveHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddStylusMoveHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddStylusMoveHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusMove" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddStylusOutOfRangeHandler">
+      <MemberSignature Language="C#" Value="public static void AddStylusOutOfRangeHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddStylusOutOfRangeHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddStylusOutOfRangeHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusOutOfRange" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddStylusSystemGestureHandler">
+      <MemberSignature Language="C#" Value="public static void AddStylusSystemGestureHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusSystemGestureEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddStylusSystemGestureHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusSystemGestureEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddStylusSystemGestureHandler(System.Windows.DependencyObject,System.Windows.Input.StylusSystemGestureEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusSystemGestureEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusSystemGesture" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddStylusUpHandler">
+      <MemberSignature Language="C#" Value="public static void AddStylusUpHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddStylusUpHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.AddStylusUpHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der hinzuzufügende Ereignishandler.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusUp" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Capture">
+      <MemberSignature Language="C#" Value="public static bool Capture (System.Windows.IInputElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Capture(class System.Windows.IInputElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.Capture(System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, das den Tablettstift zu erfassen.</param>
+        <summary>Zeichnet den Tablettstift an das angegebene Element.</summary>
+        <returns>
+          <see langword="true" />Wenn der Tablettstift, um erfasst wird <paramref name="element" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Input.Stylus.Capture%28System.Windows.IInputElement%29> Methode, um sicherzustellen, dass `element` empfängt Stylus-Ereignisse, selbst wenn der Cursor die Grenzen des Elements verlässt. Um den Tablettstift freizugeben, rufen <xref:System.Windows.Input.Stylus.Capture%28System.Windows.IInputElement%2CSystem.Windows.Input.CaptureMode%29> mit der <xref:System.Windows.Input.CaptureMode> festgelegt <xref:System.Windows.Input.CaptureMode.None>.  
+  
+ Die <xref:System.Windows.Input.Stylus.Capture%28System.Windows.IInputElement%29> -Methode zurückkehrt `false` Wenn `element` ist nicht angezeigt oder aktiviert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Koordinaten des Tablettstifts aufgezeichnet, selbst wenn der Stift den Bereich verlässt eine <xref:System.Windows.Controls.TextBox>. In diesem Beispiel davon aus, dass es eine <xref:System.Windows.Controls.TextBox> aufgerufen `textBox1`, und dass die <xref:System.Windows.Input.Stylus.StylusDown>, <xref:System.Windows.Input.Stylus.StylusUp>, und <xref:System.Windows.Input.Stylus.StylusMove> Ereignisse Ereignishandler verbunden sind.  
+  
+ [!code-csharp[StylusSamples#1](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusSamples/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[StylusSamples#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusSamples/VisualBasic/Window1.xaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Capture">
+      <MemberSignature Language="C#" Value="public static bool Capture (System.Windows.IInputElement element, System.Windows.Input.CaptureMode captureMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Capture(class System.Windows.IInputElement element, valuetype System.Windows.Input.CaptureMode captureMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.Capture(System.Windows.IInputElement,System.Windows.Input.CaptureMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.IInputElement" />
+        <Parameter Name="captureMode" Type="System.Windows.Input.CaptureMode" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, das den Tablettstift zu erfassen.</param>
+        <param name="captureMode">Einer der <see cref="T:System.Windows.Input.CaptureMode" />-Werte.</param>
+        <summary>Zeichnet den Tablettstift an das angegebene Element.</summary>
+        <returns>
+          <see langword="true" />Wenn der Tablettstift, um erfasst wird <paramref name="element" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Input.Stylus.Capture%28System.Windows.IInputElement%2CSystem.Windows.Input.CaptureMode%29> Methode, um sicherzustellen, dass `element` empfängt Stylus-Ereignisse, selbst wenn der Cursor die Grenzen des Elements verlässt. Um den Tablettstift freizugeben, rufen <xref:System.Windows.Input.Stylus.Capture%28System.Windows.IInputElement%2CSystem.Windows.Input.CaptureMode%29> mit der <xref:System.Windows.Input.CaptureMode> festgelegt <xref:System.Windows.Input.CaptureMode.None>.  
+  
+ Die <xref:System.Windows.Input.Stylus.Capture%28System.Windows.IInputElement%2CSystem.Windows.Input.CaptureMode%29> -Methode zurückkehrt `false` Wenn `element` ist nicht angezeigt oder aktiviert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Koordinaten des Tablettstifts aufgezeichnet, selbst wenn der Stift den Bereich verlässt eine <xref:System.Windows.Controls.TextBox>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.TextBox> aufgerufen `textBox1`, und dass die <xref:System.Windows.Input.Stylus.StylusDown>, <xref:System.Windows.Input.Stylus.StylusUp>, und <xref:System.Windows.Input.Stylus.StylusMove> Ereignisse an die Ereignishandler verbunden sind.  
+  
+ [!code-csharp[StylusSamples#1](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusSamples/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[StylusSamples#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusSamples/VisualBasic/Window1.xaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Captured">
+      <MemberSignature Language="C#" Value="public static System.Windows.IInputElement Captured { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.IInputElement Captured" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Stylus.Captured" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element, das an das der Tablettstift gebunden ist.</summary>
+        <value>Die <see cref="T:System.Windows.IInputElement" /> an den der Tablettstift gebunden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie um sicherzustellen, dass der Tablettstift nicht erfasst wird, wenn der Benutzer den Tablettstift den Digitizer berührt. In diesem Beispiel wird vorausgesetzt, dass die <xref:System.Windows.Input.Stylus.PreviewStylusDown> Ereignis an den Ereignishandler verbunden ist.  
+  
+ [!code-csharp[StylusSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusSamples/CSharp/Window1.xaml.cs#5)]
+ [!code-vb[StylusSamples#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusSamples/VisualBasic/Window1.xaml.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentStylusDevice">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.StylusDevice CurrentStylusDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.StylusDevice CurrentStylusDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Stylus.CurrentStylusDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Tablettstift, der den Tablettstift derzeit darstellt.</summary>
+        <value>Die <see cref="T:System.Windows.Input.StylusDevice" /> , die den derzeit verwendeten Tablettstift darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie Text löschen, der mit einem umgekehrten Tablettstift aktiviert ist. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.TextBox> aufgerufen `textBox1` und dass die <xref:System.Windows.Input.Stylus.StylusUpEvent> Ereignis an den Ereignishandler verbunden ist.  
+  
+ [!code-csharp[StylusSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusSamples/CSharp/Window1.xaml.cs#8)]
+ [!code-vb[StylusSamples#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusSamples/VisualBasic/Window1.xaml.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectlyOver">
+      <MemberSignature Language="C#" Value="public static System.Windows.IInputElement DirectlyOver { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.IInputElement DirectlyOver" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Stylus.DirectlyOver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element, das direkt unterhalb des Tablettstifts ab.</summary>
+        <value>Die <see cref="T:System.Windows.IInputElement" /> direkt unterhalb des Tablettstifts ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie um zu bestimmen, welches Element der Tablettstift positioniert ist. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.TextBox> aufgerufen `textBox1` und dass die <xref:System.Windows.Input.Stylus.StylusInAirMove> Ereignis an den Ereignishandler verbunden ist.  
+  
+ [!code-csharp[StylusSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusSamples/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[StylusSamples#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusSamples/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsFlicksEnabled">
+      <MemberSignature Language="C#" Value="public static bool GetIsFlicksEnabled (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsFlicksEnabled(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.GetIsFlicksEnabled(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" /> , zu bestimmen, ob streichbewegungen aktiviert sind.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Input.Stylus.IsFlicksEnabled" /> -Eigenschaft für das angegebene Element.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Element streichen aktiviert hat. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unter Windows Vista ist eine Bewegung, eines der Gesten mögliche eines kurzen, schnell und gerade Strichs, das an einen Befehl Navigation oder im Kontextmenü zugeordnet werden kann. Standardmäßig streichen deaktiviert sind, auf die <xref:System.Windows.Controls.InkCanvas>, <xref:System.Windows.Controls.InkPresenter>, und <xref:System.Windows.Controls.Primitives.ScrollBar>. Auf alle anderen Steuerelemente sind streichen aktiviert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zu bestimmen, ob streichbewegungen aktiviert sind, auf eine <xref:System.Windows.Controls.Canvas>.  
+  
+ [!code-csharp[GestureSample#6](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureSample/CSharp/Window1.xaml.cs#6)]
+ [!code-vb[GestureSample#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureSample/VisualBasic/Window1.xaml.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsPressAndHoldEnabled">
+      <MemberSignature Language="C#" Value="public static bool GetIsPressAndHoldEnabled (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsPressAndHoldEnabled(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.GetIsPressAndHoldEnabled(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" /> , zu bestimmen, ob das Gedrückthalten aktiviert ist.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Input.Stylus.IsPressAndHoldEnabled" /> -Eigenschaft für das angegebene Element.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Element das Gedrückthalten aktiviert ist; andernfalls <see langword="false" />;</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Aktivieren von drücken und halten Sie eine <xref:System.Windows.Controls.Slider>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.Slider> aufgerufen `horizontalSlider1`.  
+  
+ [!code-csharp[StylusSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusSamples/CSharp/Window1.xaml.cs#9)]
+ [!code-vb[StylusSamples#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusSamples/VisualBasic/Window1.xaml.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsTapFeedbackEnabled">
+      <MemberSignature Language="C#" Value="public static bool GetIsTapFeedbackEnabled (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsTapFeedbackEnabled(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.GetIsTapFeedbackEnabled(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" /> , zu bestimmen, ob das Feedback durch Tippen aktiviert.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Input.Stylus.IsTapFeedbackEnabled" /> -Eigenschaft für das angegebene Element.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Element das Feedback durch Tippen aktiviert ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unter Windows Vista wird eine kurze Animation beim Tippen auf des Steuerelements.  Standardmäßig ist deaktiviert Feedback durch Tippen auf die <xref:System.Windows.Controls.InkCanvas>. Es wird auf alle anderen Steuerelemente aktiviert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zu bestimmen, ob das Feedback durch Tippen aktiviert ist, auf eine <xref:System.Windows.Controls.Canvas>.  
+  
+ [!code-csharp[GestureSample#5](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureSample/CSharp/Window1.xaml.cs#5)]
+ [!code-vb[GestureSample#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureSample/VisualBasic/Window1.xaml.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsTouchFeedbackEnabled">
+      <MemberSignature Language="C#" Value="public static bool GetIsTouchFeedbackEnabled (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsTouchFeedbackEnabled(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.GetIsTouchFeedbackEnabled(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" /> , zu bestimmen, ob toucheingabefeedback aktiviert.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Input.Stylus.IsTouchFeedbackEnabled" /> -Eigenschaft für das angegebene Element.</summary>
+        <returns>
+          <see langword="true" />Wenn toucheingabefeedback, andernfalls aktiviert ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zu bestimmen, ob das Feedback durch Tippen aktiviert ist, auf ein <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[GestureSample#7](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureSample/CSharp/Window1.xaml.cs#7)]
+ [!code-vb[GestureSample#7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureSample/VisualBasic/Window1.xaml.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GotStylusCaptureEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent GotStylusCaptureEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent GotStylusCaptureEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.GotStylusCaptureEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.GotStylusCapture" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFlicksEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsFlicksEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsFlicksEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.IsFlicksEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Input.Stylus.IsFlicksEnabled" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPressAndHoldEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsPressAndHoldEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsPressAndHoldEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.IsPressAndHoldEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Input.Stylus.IsPressAndHoldEnabled" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTapFeedbackEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsTapFeedbackEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsTapFeedbackEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.IsTapFeedbackEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Input.Stylus.IsTapFeedbackEnabled" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTouchFeedbackEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsTouchFeedbackEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsTouchFeedbackEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.IsTouchFeedbackEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Input.Stylus.IsTouchFeedbackEnabled" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LostStylusCaptureEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent LostStylusCaptureEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent LostStylusCaptureEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.LostStylusCaptureEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.LostStylusCapture" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusButtonDownEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewStylusButtonDownEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewStylusButtonDownEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.PreviewStylusButtonDownEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.PreviewStylusButtonDown" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusButtonUpEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewStylusButtonUpEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewStylusButtonUpEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.PreviewStylusButtonUpEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.PreviewStylusButtonUp" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusDownEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewStylusDownEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewStylusDownEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.PreviewStylusDownEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.PreviewStylusDown" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusInAirMoveEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewStylusInAirMoveEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewStylusInAirMoveEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.PreviewStylusInAirMoveEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.PreviewStylusInAirMove" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusInRangeEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewStylusInRangeEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewStylusInRangeEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.PreviewStylusInRangeEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.PreviewStylusInRange" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusMoveEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewStylusMoveEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewStylusMoveEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.PreviewStylusMoveEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.PreviewStylusMove" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusOutOfRangeEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewStylusOutOfRangeEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewStylusOutOfRangeEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.PreviewStylusOutOfRangeEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.PreviewStylusOutOfRange" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusSystemGestureEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewStylusSystemGestureEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewStylusSystemGestureEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.PreviewStylusSystemGestureEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.PreviewStylusSystemGesture" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusUpEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewStylusUpEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewStylusUpEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.PreviewStylusUpEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.PreviewStylusUp" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveGotStylusCaptureHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveGotStylusCaptureHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveGotStylusCaptureHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemoveGotStylusCaptureHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.GotStylusCapture" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveLostStylusCaptureHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveLostStylusCaptureHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveLostStylusCaptureHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemoveLostStylusCaptureHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.LostStylusCapture" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewStylusButtonDownHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewStylusButtonDownHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusButtonEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewStylusButtonDownHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusButtonEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemovePreviewStylusButtonDownHandler(System.Windows.DependencyObject,System.Windows.Input.StylusButtonEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusButtonEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusButtonDown" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewStylusButtonUpHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewStylusButtonUpHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusButtonEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewStylusButtonUpHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusButtonEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemovePreviewStylusButtonUpHandler(System.Windows.DependencyObject,System.Windows.Input.StylusButtonEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusButtonEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusButtonUp" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewStylusDownHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewStylusDownHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusDownEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewStylusDownHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusDownEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemovePreviewStylusDownHandler(System.Windows.DependencyObject,System.Windows.Input.StylusDownEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusDownEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusDown" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewStylusInAirMoveHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewStylusInAirMoveHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewStylusInAirMoveHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemovePreviewStylusInAirMoveHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusInAirMove" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewStylusInRangeHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewStylusInRangeHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewStylusInRangeHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemovePreviewStylusInRangeHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusInRange" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewStylusMoveHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewStylusMoveHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewStylusMoveHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemovePreviewStylusMoveHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusMove" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewStylusOutOfRangeHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewStylusOutOfRangeHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewStylusOutOfRangeHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemovePreviewStylusOutOfRangeHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusOutOfRange" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewStylusSystemGestureHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewStylusSystemGestureHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusSystemGestureEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewStylusSystemGestureHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusSystemGestureEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemovePreviewStylusSystemGestureHandler(System.Windows.DependencyObject,System.Windows.Input.StylusSystemGestureEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusSystemGestureEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusSystemGesture" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewStylusUpHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewStylusUpHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewStylusUpHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemovePreviewStylusUpHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.PreviewStylusUp" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveStylusButtonDownHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveStylusButtonDownHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusButtonEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveStylusButtonDownHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusButtonEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemoveStylusButtonDownHandler(System.Windows.DependencyObject,System.Windows.Input.StylusButtonEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusButtonEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusButtonDown" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveStylusButtonUpHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveStylusButtonUpHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusButtonEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveStylusButtonUpHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusButtonEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemoveStylusButtonUpHandler(System.Windows.DependencyObject,System.Windows.Input.StylusButtonEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusButtonEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusButtonUp" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveStylusDownHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveStylusDownHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusDownEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveStylusDownHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusDownEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemoveStylusDownHandler(System.Windows.DependencyObject,System.Windows.Input.StylusDownEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusDownEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusDown" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveStylusEnterHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveStylusEnterHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveStylusEnterHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemoveStylusEnterHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusEnter" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveStylusInAirMoveHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveStylusInAirMoveHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveStylusInAirMoveHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemoveStylusInAirMoveHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusInAirMove" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveStylusInRangeHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveStylusInRangeHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveStylusInRangeHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemoveStylusInRangeHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusInRange" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveStylusLeaveHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveStylusLeaveHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveStylusLeaveHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemoveStylusLeaveHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusLeave" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveStylusMoveHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveStylusMoveHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveStylusMoveHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemoveStylusMoveHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusMove" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveStylusOutOfRangeHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveStylusOutOfRangeHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveStylusOutOfRangeHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemoveStylusOutOfRangeHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusOutOfRange" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveStylusSystemGestureHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveStylusSystemGestureHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusSystemGestureEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveStylusSystemGestureHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusSystemGestureEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemoveStylusSystemGestureHandler(System.Windows.DependencyObject,System.Windows.Input.StylusSystemGestureEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusSystemGestureEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusSystemGesture" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveStylusUpHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveStylusUpHandler (System.Windows.DependencyObject element, System.Windows.Input.StylusEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveStylusUpHandler(class System.Windows.DependencyObject element, class System.Windows.Input.StylusEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.RemoveStylusUpHandler(System.Windows.DependencyObject,System.Windows.Input.StylusEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Input.StylusEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der zu entfernende Ereignishandler.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Input.Stylus.StylusUp" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsFlicksEnabled">
+      <MemberSignature Language="C#" Value="public static void SetIsFlicksEnabled (System.Windows.DependencyObject element, bool enabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsFlicksEnabled(class System.Windows.DependencyObject element, bool enabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.SetIsFlicksEnabled(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="enabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Die <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" /> für das streichen aktiviert werden soll.</param>
+        <param name="enabled">
+          <see langword="true" />Um streichen zu aktivieren; <see langword="false" /> um streichen zu deaktivieren.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Input.Stylus.IsFlicksEnabled" /> -Eigenschaft für das angegebene Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unter Windows Vista ist eine Bewegung, eines der Gesten mögliche eines kurzen, schnell und gerade Strichs, das an einen Befehl Navigation oder im Kontextmenü zugeordnet werden kann. Standardmäßig streichen deaktiviert sind, auf die <xref:System.Windows.Controls.InkCanvas>, <xref:System.Windows.Controls.InkPresenter>, und <xref:System.Windows.Controls.Primitives.ScrollBar>. Auf alle anderen Steuerelemente sind streichen aktiviert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie streichen zu deaktivieren, auf eine <xref:System.Windows.Controls.Canvas>.  
+  
+ [!code-csharp[GestureSample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureSample/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[GestureSample#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureSample/VisualBasic/Window1.xaml.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsPressAndHoldEnabled">
+      <MemberSignature Language="C#" Value="public static void SetIsPressAndHoldEnabled (System.Windows.DependencyObject element, bool enabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsPressAndHoldEnabled(class System.Windows.DependencyObject element, bool enabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.SetIsPressAndHoldEnabled(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="enabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Die <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" /> auf dem Drücken und halten aktiviert.</param>
+        <param name="enabled">
+          <see langword="true" />So aktivieren Sie Sie mit gedrückter; <see langword="false" /> deaktivieren drücken und halten.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Input.Stylus.IsPressAndHoldEnabled" /> -Eigenschaft für das angegebene Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Drücken Sie und halten Sie Zuordnungen auf der rechten Maustaste auf eine Maus. In Windows Vista können Sie dieses Verhalten für Elemente deaktivieren, wenn Sie eine Situation erwarten, in der Benutzer den Tablettstift möglicherweise gedrückt hält, ohne dass einen Rechtsklick simuliert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Aktivieren von drücken und halten Sie eine <xref:System.Windows.Controls.Slider>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.Slider> aufgerufen `horizontalSlider1`.  
+  
+ [!code-csharp[StylusSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusSamples/CSharp/Window1.xaml.cs#9)]
+ [!code-vb[StylusSamples#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusSamples/VisualBasic/Window1.xaml.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsTapFeedbackEnabled">
+      <MemberSignature Language="C#" Value="public static void SetIsTapFeedbackEnabled (System.Windows.DependencyObject element, bool enabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsTapFeedbackEnabled(class System.Windows.DependencyObject element, bool enabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.SetIsTapFeedbackEnabled(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="enabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Die <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" /> auf dem aktiviert Feedback durch Tippen.</param>
+        <param name="enabled">
+          <see langword="true" />Um Feedback durch Tippen zu aktivieren; <see langword="false" /> um Feedback durch Tippen zu deaktivieren.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Input.Stylus.IsTapFeedbackEnabled" /> -Eigenschaft für das angegebene Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unter Windows Vista wird eine kurze Animation beim Tippen auf des Steuerelements. Standardmäßig ist deaktiviert Feedback durch Tippen auf die <xref:System.Windows.Controls.InkCanvas>. Es wird auf alle anderen Steuerelemente aktiviert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel deaktiviert Feedback durch Tippen auf eine <xref:System.Windows.Controls.Canvas>.  
+  
+ [!code-csharp[GestureSample#4](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureSample/CSharp/Window1.xaml.cs#4)]
+ [!code-vb[GestureSample#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureSample/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsTouchFeedbackEnabled">
+      <MemberSignature Language="C#" Value="public static void SetIsTouchFeedbackEnabled (System.Windows.DependencyObject element, bool enabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsTouchFeedbackEnabled(class System.Windows.DependencyObject element, bool enabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.SetIsTouchFeedbackEnabled(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="enabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Die <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.ContentElement" /> auf dem aktiviert Feedback durch Tippen.</param>
+        <param name="enabled">
+          <see langword="true" />toucheingabefeedback aktiviert, und <see langword="false" /> Eingabe Feedback durch Toucheingabe zu deaktivieren.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Input.Stylus.IsTouchFeedbackEnabled" /> -Eigenschaft für das angegebene Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird Touch Feedback auf eine <xref:System.Windows.Controls.InkCanvas>.  
+  
+ [!code-csharp[GestureSample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureSample/CSharp/Window1.xaml.cs#8)]
+ [!code-vb[GestureSample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureSample/VisualBasic/Window1.xaml.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusButtonDownEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent StylusButtonDownEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent StylusButtonDownEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.StylusButtonDownEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.StylusButtonDown" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusButtonUpEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent StylusButtonUpEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent StylusButtonUpEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.StylusButtonUpEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.StylusButtonUp" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusDownEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent StylusDownEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent StylusDownEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.StylusDownEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.StylusDown" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusEnterEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent StylusEnterEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent StylusEnterEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.StylusEnterEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.StylusEnter" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusInAirMoveEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent StylusInAirMoveEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent StylusInAirMoveEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.StylusInAirMoveEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.StylusInAirMove" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusInRangeEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent StylusInRangeEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent StylusInRangeEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.StylusInRangeEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.StylusInRange" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusLeaveEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent StylusLeaveEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent StylusLeaveEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.StylusLeaveEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.StylusLeave" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusMoveEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent StylusMoveEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent StylusMoveEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.StylusMoveEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.StylusMove" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusOutOfRangeEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent StylusOutOfRangeEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent StylusOutOfRangeEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.StylusOutOfRangeEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.StylusOutOfRange" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusSystemGestureEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent StylusSystemGestureEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent StylusSystemGestureEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.StylusSystemGestureEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.StylusSystemGesture" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusUpEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent StylusUpEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent StylusUpEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Stylus.StylusUpEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Input.Stylus.StylusUp" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronize">
+      <MemberSignature Language="C#" Value="public static void Synchronize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Synchronize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Stylus.Synchronize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Synchronisiert den Cursor und die Benutzeroberfläche.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungen müssen möglicherweise das Element zu bestimmen, auf dem sich der Cursor befindet. Wenn die Anwendung Animation, verwendet die <xref:System.Windows.Input.Stylus.DirectlyOver%2A> Methodenrückgabewert möglicherweise ein Element, das aus der Cursor jedoch verschoben wurde. Rufen Sie <xref:System.Windows.Input.Stylus.Synchronize%2A> um sicherzustellen, dass <xref:System.Windows.Input.Stylus.DirectlyOver%2A> das richtige Element zurückgibt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie das Element abgerufen werden, das unter dem Cursor befindet. Aufrufen von <xref:System.Windows.Input.Stylus.Synchronize%2A> wird sichergestellt, dass <xref:System.Windows.Input.Stylus.DirectlyOver%2A> das richtige Element zurückgibt.  
+  
+ [!code-csharp[StylusSamples#24](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusSamples/CSharp/Window2.xaml.cs#24)]
+ [!code-vb[StylusSamples#24](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusSamples/VisualBasic/Window2.xaml.vb#24)]  
+[!code-csharp[StylusSamples#25](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusSamples/CSharp/Window2.xaml.cs#25)]
+[!code-vb[StylusSamples#25](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusSamples/VisualBasic/Window2.xaml.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

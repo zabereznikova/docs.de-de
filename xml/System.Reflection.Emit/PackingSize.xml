@@ -1,0 +1,290 @@
+<Type Name="PackingSize" FullName="System.Reflection.Emit.PackingSize">
+  <TypeSignature Language="C#" Value="public enum PackingSize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed PackingSize extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.PackingSize" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt einen von zwei Faktoren an, welche die Speicherausrichtung von Feldern bestimmen, wenn ein Typ gemarshallt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Komprimierungsgröße wirkt sich auf die Ausrichtung der Felder in Strukturen und Klassen, deren Organisation <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType>. Die Komprimierungsgröße ist einer von zwei Faktoren, die den Offset eines Felds zu bestimmen, wenn die Struktur oder Klasse gemarshallt wird. der andere Faktor ist die effektive Größe des Felds. So bestimmen Sie den Offset eines Felds  
+  
+1.  Berechnen Sie den Mindestwert für den Offset durch die Größe des vorhergehenden Felds den Offset des vorhergehenden Feldes hinzufügen.  
+  
+2.  Berechnen Sie die eigentliche Komprimierungsgröße für das Feld: Wenn das Feld einen einfachen Datentyp ist, verwenden Sie die Größe. Wenn das Feld ein Array ist, verwenden Sie die Größe eines Arrayelements. Wenn das Feld selbst eine Struktur ist, vergleichen Sie die Komprimierungsgröße dieser Struktur auf die Größe des größten Felds in der Struktur, und verwenden Sie den kleineren der beiden Werte.  
+  
+3.  Vergleichen die Komprimierungsgröße, um die natürliche Komprimierungsgröße des Felds berechnet, die in Schritt 2, um die effektive Komprimierungsgröße zu berechnen. Verwenden Sie den kleineren der beiden Zahlen.  
+  
+4.  Den Offset zu berechnen. Der Offset ist die erste Speicheradresse, die gleich oder größer als der Mindestwert ist, und ein Vielfaches von die effektive Komprimierungsgröße in Schritt 3 berechnet.  
+  
+> [!NOTE]
+>  Sobald für alle Felder in der Klasse oder Struktur Offsets berechnet wurden, wird die Auffüllung hinzugefügt, sodass die Gesamtgröße ein Vielfaches von die Komprimierungsgröße ist.  
+  
+ Z. B. in einer Klasse mit einer `byte` und ein `long`mit Komprimierungsgröße `Size1`, den Offset des der `byte` Feld ist NULL (0) und den Offset des der `long` Feld ist eins (1). Wenn die Komprimierungsgröße `Size4`, die `long` Feld offset verfügt über vier (4). In einer Klasse mit zwei `short` Felder mit beliebiger Komprimierungsgröße der Offset des zweiten `short` Feld ist zwei (2).  
+  
+> [!NOTE]
+>  Ändern die Komprimierungsgröße kann die Leistung beeinträchtigen, wenn er bewirkt, dass Felder für Offsets ausgerichtet werden, die ein Vielfaches von ihrer Größe nicht sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Size1">
+      <MemberSignature Language="C#" Value="Size1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size1 = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Komprimierungsgröße ist 1 Byte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size128">
+      <MemberSignature Language="C#" Value="Size128" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size128 = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size128" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Komprimierungsgröße ist 128 Bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size16">
+      <MemberSignature Language="C#" Value="Size16" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size16 = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size16" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Komprimierungsgröße ist 16 Bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size2">
+      <MemberSignature Language="C#" Value="Size2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size2 = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Komprimierungsgröße ist 2 Bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size32">
+      <MemberSignature Language="C#" Value="Size32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size32 = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Komprimierungsgröße ist 32 Bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size4">
+      <MemberSignature Language="C#" Value="Size4" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size4 = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size4" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Komprimierungsgröße ist 4 Bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size64">
+      <MemberSignature Language="C#" Value="Size64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size64 = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Komprimierungsgröße ist 64 Bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size8">
+      <MemberSignature Language="C#" Value="Size8" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size8 = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size8" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Komprimierungsgröße ist 8 Byte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unspecified">
+      <MemberSignature Language="C#" Value="Unspecified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Unspecified = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Unspecified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Komprimierungsgröße ist nicht angegeben.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

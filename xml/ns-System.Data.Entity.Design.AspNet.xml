@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Entity.Design.AspNet">
+  <Docs>
+    <summary>Der <see cref="N:System.Data.Entity.Design.AspNet" />-Namespace enthält die EDM (Entity Data Model)-Buildanbieter für die ASP.NET-Buildumgebung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

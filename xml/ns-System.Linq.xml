@@ -1,0 +1,19 @@
+<Namespace Name="System.Linq">
+  <Docs>
+    <summary>Der <see cref="N:System.Linq" />-Namespace stellt Klassen und Schnittstellen bereit, die Abfragen mit Language-Integrated Query (LINQ) unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Linq> Namespace befindet sich in der Assembly "System.Core" (in "System.Core.dll").  
+  
+ Die <xref:System.Linq.Enumerable> Klasse enthält [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Standardabfrageoperatoren, die auf Objekte angewendet werden, die implementieren <xref:System.Collections.Generic.IEnumerable%601>.  
+  
+ Die <xref:System.Linq.Queryable> Klasse enthält [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Standardabfrageoperatoren, die auf Objekte angewendet werden, die implementieren <xref:System.Linq.IQueryable%601>.  
+  
+ Informationen zu LINQ to SQL finden Sie unter [LINQ to SQL &#91; LINQ to SQL &#93; ](http://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

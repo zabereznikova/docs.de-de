@@ -1,0 +1,6 @@
+<Namespace Name="System.Net.Configuration">
+  <Docs>
+    <summary>Die <see cref="N:System.Net.Configuration" /> -Namespace enthält Klassen, die Anwendungen verwenden den programmgesteuerten Zugriff auf und Aktualisieren der Konfigurationseinstellungen für die <see cref="N:System.Net" /> Namespaces.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

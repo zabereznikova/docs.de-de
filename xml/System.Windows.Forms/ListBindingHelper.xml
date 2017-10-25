@@ -1,0 +1,290 @@
+<Type Name="ListBindingHelper" FullName="System.Windows.Forms.ListBindingHelper">
+  <TypeSignature Language="C#" Value="public static class ListBindingHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ListBindingHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListBindingHelper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Funktionalität, um eine bindbare Liste und die Eigenschaften der Wenn gegenüber der öffentlichen Eigenschaften des Objekts unterschieden, sie binden, in der Liste enthaltenen Elemente zu ermitteln.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird von Klassen verwendet, z. B. <xref:System.Windows.Forms.BindingSource>.  
+  
+ Beachten Sie, dass diese Klasse für Smartphone-Anwendungen, Windows Mobile Version 5.0-Software für Smartphones erfordert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetList">
+      <MemberSignature Language="C#" Value="public static object GetList (object list);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetList(object list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetList(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="list">Die Datenquelle, auf die zugrunde liegende Liste untersucht werden soll.</param>
+        <summary>Gibt eine Liste der angegebenen Datenquelle zugeordnet.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , die zugrunde liegenden Liste darstellt, sofern es vorhanden ist; andernfalls, die ursprüngliche Datenquelle angegebene durch <paramref name="list" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn von die Datenquelle angegeben die `list` -Parameter implementiert die <xref:System.ComponentModel.IListSource> -Schnittstelle, die <xref:System.Windows.Forms.ListBindingHelper.GetList%2A> Methodenrückgabewert ein Objekt vom Typ <xref:System.Collections.IList> , zugeordnete Liste darstellt. Andernfalls gibt diese Methode nur die angegebene Datenquelle zurück, da keine zugrunde liegende Liste vorhanden ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetList">
+      <MemberSignature Language="C#" Value="public static object GetList (object dataSource, string dataMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetList(object dataSource, string dataMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetList(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Die Datenquelle, aus der Liste gesucht werden soll.</param>
+        <param name="dataMember">Der Name der Data Source-Eigenschaft, die die Liste enthält. Dieser Wert kann <see langword="null" /> sein.</param>
+        <summary>Gibt ein Objekt, in der Regel eine Liste, aus der Auswertung einer angegebenen Datenquelle und optionalen Datenmember zurück.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , das die zugrunde liegende Liste darstellt, sofern es gefunden; andernfalls wurde <paramref name="dataSource" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Datenelement ist `null` oder eine leere Zeichenfolge (""), wird die <xref:System.Windows.Forms.ListBindingHelper.GetList%2A> -Methode zurückkehrt `dataSource`.  
+  
+ Wenn `dataSource` ist keine Liste, <xref:System.Windows.Forms.ListBindingHelper.GetList%2A> gibt den Wert der die `dataSource` -Eigenschaft, die entspricht der `dataMember` Wert.  
+  
+ Wenn `dataSource` ist eine Liste, implementiert die <xref:System.Windows.Forms.ICurrencyManagerProvider> oder <xref:System.Collections.IEnumerable> Schnittstellen, und klicken Sie dann die zugrunde liegende Liste abgerufen werden, durch ein Element aus der Liste auswählen und dieses Element für den Wert der Eigenschaft mit dem Namen von Abfragen `dataMember`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die angegebenen Datenmembernamen entsprach nicht der Eigenschaften für die Datenquelle gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListItemProperties">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.PropertyDescriptorCollection GetListItemProperties (object list);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.PropertyDescriptorCollection GetListItemProperties(object list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetListItemProperties(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="list">Die Datenquelle, um Eigenschaftsinformationen zu untersuchen.</param>
+        <summary>Gibt die <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , beschreibt die Eigenschaften eines Elementtyps in einer angegebenen Datenquelle oder Eigenschaften der angegebenen Datenquelle enthalten.</summary>
+        <returns>Die <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> mit den Eigenschaften der Elemente im <paramref name="list" />, oder Eigenschaften<paramref name="list." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A> Methode wird verwendet, um die Auflistung von Eigenschaften für eine Datenquelle zu überprüfen. Die Aktion dieser Methode hängt von den tatsächlichen Typ, der die `list` Parameter entsprechend der folgenden Tabelle:  
+  
+|Parametertyp|Aktion|  
+|--------------------|------------|  
+|Ein Typ, der eine Liste oder eine Auflistung der Elemente ist.|Gibt eine <xref:System.ComponentModel.PropertyDescriptorCollection> , beschreibt die Eigenschaften für den Elementtyp in der Liste enthalten sind.|  
+|Ein Typ, der keiner Liste oder einer Auflistung ist.|Gibt eine <xref:System.ComponentModel.PropertyDescriptorCollection> , die die Eigenschaften des Typs beschreibt.|  
+|`null`|Gibt ein leeres <xref:System.ComponentModel.PropertyDescriptorCollection> zurück.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListItemProperties">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.PropertyDescriptorCollection GetListItemProperties (object list, System.ComponentModel.PropertyDescriptor[] listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.PropertyDescriptorCollection GetListItemProperties(object list, class System.ComponentModel.PropertyDescriptor[] listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetListItemProperties(System.Object,System.ComponentModel.PropertyDescriptor[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Object" />
+        <Parameter Name="listAccessors" Type="System.ComponentModel.PropertyDescriptor[]" />
+      </Parameters>
+      <Docs>
+        <param name="list">Die Datenquelle für die Eigenschaftsinformationen untersucht werden.</param>
+        <param name="listAccessors">Die <see cref="T:System.ComponentModel.PropertyDescriptor" /> Array beschreibt, welche Eigenschaften des ausgewählten Datenquelle überprüfen. Dieser Wert kann <see langword="null" /> sein.</param>
+        <summary>Gibt die <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , beschreibt die Eigenschaften eines Elementtyps in eine Auflistungseigenschaft einer Datenquelle enthalten sind. Verwendet die angegebene <see cref="T:System.ComponentModel.PropertyDescriptor" /> Array, um anzugeben, welche Eigenschaften untersucht.</summary>
+        <returns>Die <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , beschreibt die Eigenschaften für den Elementtyp in der Datenquelle eine Auflistungseigenschaft enthalten sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A> Methode ist nützlich, wenn die Datenquelle über Eigenschaften verfügt, die eine Auflistung von Elementen sind, und Sie müssen wissen, Eigenschaften für den Elementtyp in der Auflistung, nicht die Eigenschaften des Sammlungstyps.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListItemProperties">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.PropertyDescriptorCollection GetListItemProperties (object dataSource, string dataMember, System.ComponentModel.PropertyDescriptor[] listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.PropertyDescriptorCollection GetListItemProperties(object dataSource, string dataMember, class System.ComponentModel.PropertyDescriptor[] listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetListItemProperties(System.Object,System.String,System.ComponentModel.PropertyDescriptor[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="listAccessors" Type="System.ComponentModel.PropertyDescriptor[]" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Die Datenquelle für die Eigenschaftsinformationen untersucht werden.</param>
+        <param name="dataMember">Der optionale Datenmember für die Eigenschaftsinformationen untersucht werden. Dieser Wert kann <see langword="null" /> sein.</param>
+        <param name="listAccessors">Die <see cref="T:System.ComponentModel.PropertyDescriptor" /> Array beschreibt, welche Eigenschaften des Datenmembers untersuchen. Dieser Wert kann <see langword="null" /> sein.</param>
+        <summary>Gibt die <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , beschreibt die Eigenschaften eines Elementtyps in den angegebenen Datenmember einer Datenquelle enthalten sind. Verwendet die angegebene <see cref="T:System.ComponentModel.PropertyDescriptor" /> Array, um anzugeben, welche Eigenschaften untersucht.</summary>
+        <returns>Die <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , beschreibt die Eigenschaften eines Elementtyps in eine Auflistungseigenschaft der angegebenen Datenquelle enthalten sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `dataMember` Parameter möglich `null`, in diesem Fall die <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A> Methodenrückgabewert Beschreibungen der Eigenschaften, die mit der Datenquelle und die <xref:System.ComponentModel.PropertyDescriptor> Array.  
+  
+ <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>ist nützlich, wenn es sich bei der Datenmember enthält Eigenschaften, die eine Auflistung von Elementen sind und Sie Eigenschaften für den Elementtyp in der Auflistung, nicht die Eigenschaften des Sammlungstyps wissen müssen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das angegebene Datenelement konnte nicht in der angegebenen Datenquelle gefunden werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListItemType">
+      <MemberSignature Language="C#" Value="public static Type GetListItemType (object list);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Type GetListItemType(object list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetListItemType(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="list">Die Liste für die Typinformationen jedoch genauer untersucht werden.</param>
+        <summary>Gibt den Datentyp der Elemente in der angegebenen Liste zurück.</summary>
+        <returns>Die <see cref="T:System.Type" /> in der Liste enthaltenen Elemente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `list` Parameter keiner Liste oder einem Array ist, der Typ, der zurückgegeben werden, die von der `list` Parameter selbst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListItemType">
+      <MemberSignature Language="C#" Value="public static Type GetListItemType (object dataSource, string dataMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Type GetListItemType(object dataSource, string dataMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetListItemType(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Die Datenquelle für Elemente zu untersuchen.</param>
+        <param name="dataMember">Der optionale Name der Eigenschaft für die Datenquelle, die als Datenmember verwendet werden soll. Dieser Wert kann <see langword="null" /> sein.</param>
+        <summary>Gibt den Datentyp der Elemente in der angegebenen Datenquelle zurück.</summary>
+        <returns>Für komplexe Datenbindung, die <see cref="T:System.Type" /> Elemente dargestellt werden, indem Sie die <paramref name="dataMember" /> in der Datenquelle, andernfalls die <see cref="T:System.Type" /> des Elements in der Liste selbst.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Version von den <xref:System.Windows.Forms.ListBindingHelper.GetListItemType%2A> Methode wird verwendet, um zu bestimmen, den Typ der Elemente, die in komplexen oder einfache Datenbindung Schemas verwendet. Diese statische Methode kann bestimmen, ob eine vorgeschlagene Datenbindungsfunktionen Schema geeignet ist, bevor Sie versuchen, es hilfreich sein.  
+  
+ Wenn `dataSource` ist `null`, die eigenschaftsbeschreibungen für die Listenelemente des angegebenen Datenmembers gefunden werden können oder wenn der Eigenschaftendeskriptor für das Listenelement ein <xref:System.ComponentModel.ICustomTypeDescriptor>, gibt diese Methode den Typ des der <xref:System.Object> Klasse.  
+  
+ Wenn `dataMember` ist `null` oder leer ist, klicken Sie dann diese Methode gibt die <xref:System.Type> der Elemente in der Datenquelle, wenn sie eine Liste; ist, andernfalls gibt diese Methode die <xref:System.Type> des ausgewählten Datenquelle selbst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListName">
+      <MemberSignature Language="C#" Value="public static string GetListName (object list, System.ComponentModel.PropertyDescriptor[] listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetListName(object list, class System.ComponentModel.PropertyDescriptor[] listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBindingHelper.GetListName(System.Object,System.ComponentModel.PropertyDescriptor[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Object" />
+        <Parameter Name="listAccessors" Type="System.ComponentModel.PropertyDescriptor[]" />
+      </Parameters>
+      <Docs>
+        <param name="list">Die Datenquelle, in der nach dem Listennamen gesucht werden soll.</param>
+        <param name="listAccessors">Ein Array aus <see cref="T:System.ComponentModel.PropertyDescriptor" />-Objekten, die in der Datenquelle gesucht werden sollen. Dieser Wert kann <see langword="null" /> sein.</param>
+        <summary>Gibt den Namen einer zugrunde liegenden Liste zurück, wenn eine Datenquelle und ein optionales <see cref="T:System.ComponentModel.PropertyDescriptor" />-Array übergeben wurden.</summary>
+        <returns>Der Name der Liste in der Datenquelle, wie durch <paramref name="listAccessors" /> beschrieben, oder der Name des Datenquellentyps.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `listAccessors` ist `null` oder leer ist, die <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A> Methode gibt den Namen der Typ der Datenquelle zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

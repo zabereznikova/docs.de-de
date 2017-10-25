@@ -1,0 +1,157 @@
+<Type Name="IContextManager" FullName="System.ServiceModel.Channels.IContextManager">
+  <TypeSignature Language="C#" Value="public interface IContextManager" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContextManager" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IContextManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.WorkflowServices, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert eine Schnittstelle, die Ihnen ermöglicht, den Kontext für den Kanal abzurufen und festzulegen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Channels, für die <xref:System.ServiceModel.WSHttpContextBinding> mit dem festgelegten Wert <xref:System.ServiceModel.SessionMode.NotAllowed> verwendet wird, kann der Kontext nicht auf dem Client mithilfe von <xref:System.ServiceModel.Channels.IContextManager> abgerufen werden, da bei jedem Aufruf von <xref:System.ServiceModel.Channels.IChannelFactory.GetProperty%2A> zum Erzwingen der <xref:System.ServiceModel.SessionMode.NotAllowed>-Semantik eines Channels ein neuer Channel zum Einrichten der Sitzung erstellt wird. Das bedeutet, dass der Kontext nicht mithilfe von <xref:System.ServiceModel.Channels.IContextManager> abgerufen werden kann, obgleich er in diesem Fall ordnungsgemäß an den Client zurückgegeben wurde. Zum Abrufen kann jedoch noch <xref:System.ServiceModel.Channels.ContextMessageProperty> verwendet werden. Dies wird im folgenden Code veranschaulicht:  
+  
+```csharp  
+using (new OperationContextScope((IContextChannel)channel))  
+{  
+    channel.MyChannel("Test");  
+    ContextMessageProperty context;  
+    if (ContextMessageProperty.TryGet(OperationContext.Current.IncomingMessageProperties, out context))  
+    {  
+        Console.WriteLine(context.Count);  
+    }  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IContextManager.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Kontextverwaltung aktiviert wurde, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn der Kontext aktiviert ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei aktivierter Kontextverwaltung nimmt der Kontextkanal eine Zwischenspeicherung des Kontexts in seiner Lebensdauer vor. Der Kontext kann über den Kanaleigenschaft `IContextManager` durch einen Aufruf der <xref:System.ServiceModel.Channels.IContextManager.GetContext%2A>-Methode vom Kanal abgerufen werden. Der Kanal kann auch vor dem Öffnen vorab mit einem Kontext initialisiert werden, indem die <xref:System.ServiceModel.Channels.IContextManager.SetContext%2A>-Methode für die Kanaleigenschaft aufgerufen wird. Sobald der Kanal mit einem Kontext initialisiert wurde, kann er nicht mehr zurückgesetzt werden.  
+  
+ Nachfolgend sind Invarianten in diesem Modus aufgeführt:  
+  
+-   Durch jeden Aufruf von <xref:System.ServiceModel.Channels.IContextManager.SetContext%2A> nach dem Öffnen des Kanals wird eine `InvalidOperationException` ausgelöst.  
+  
+-   Jeder Versuch, Kontext mithilfe der `ContextMessageProperty` in einer ausgehenden Nachricht zu senden, löst eine `InvalidOperationException` aus.  
+  
+-   Wird vom Server eine Nachricht mit Kontext empfangen, wenn der Kanal bereits mit einem Kontext intialisiert wurde, wird eine `ProtocolException` ausgelöst. Anfangskontext kann von einem Server empfangen werden, falls der Kanal ohne ausdrückliches Festlegen des Kontexts geöffnet wird.  
+  
+-   Die `ContextMessageProperty` einer eingehenden Nachricht ist immer always `null`.  
+  
+ Wenn Kontextverwaltung nicht aktiviert wird, wird der Kontext vom Kontextkanal nicht verwaltet. Es ist Aufgabe der Anwendung, den Kontext mithilfe von `ContextMessageProperty` abzurufen, zu verwalten und zu übernehmen. Jeder Versuch, <xref:System.ServiceModel.Channels.IContextManager.GetContext%2A> oder <xref:System.ServiceModel.Channels.IContextManager.SetContext%2A> über die `IContextManager`-Channeleigenschaft aufzurufen, führt zu `InvalidOperationException`.  
+  
+ Mit Ausnahme von Kontext-HTTP-Cookies werden alle HTTP-Cookies auf Kanalebene behandelt. Kontext-HTTP-Cookies werden auf Anwendungsebene verwaltet. Dies kann unerwartete Auswirkungen haben, wenn Kanäle für die Kommunikation mit verschiedenen Zielinstanzen von <xref:System.ServiceModel.Channels.ContextMessageProperty> freigegeben werden. In der folgenden Tabelle sind die Auswirkungen auf HTTP-Cookies aufgeführt, wenn <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> entweder auf `true` oder auf `false` festgelegt ist.  
+  
+|Bindung|IContextManager.Enabled-Wert|Bereich für Kontext-HTTP-Cookies|Bereich für andere HTTP-Cookies|  
+|-------------|-----------------------------------|-------------------------------|------------------------------|  
+|BasicHttpBinding|nicht verfügbar|ChannelFactory|ChannelFactory|  
+|BasicHttpContextBinding|true|Kanal|Kanal|  
+|BasicHttpContextBinding|false|Für jede (explizit von der Anwendung verwaltete) Nachricht|Kanal|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContext">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; GetContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GetContext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IContextManager.GetContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Kontext ab.</summary>
+        <returns>Das <see cref="T:System.Collections.Generic.IDictionary`2" /> von Schlüssel/Wert-Paaren mit dem Namespace und dem Namen des Kontexts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Code wird das Abrufen des Kontexts von einer typisierten Proxyinstanz auf dem Client veranschaulicht:  
+  
+```  
+IDictionary<string, string> context;  
+CalculatorProxy proxy;  
+IContextManager cm = proxy.InnerChannel.GetProperty<IContextManager>();  
+if (cm != null)  
+    context = cm.GetContext();  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetContext">
+      <MemberSignature Language="C#" Value="public void SetContext (System.Collections.Generic.IDictionary&lt;string,string&gt; context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetContext(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IContextManager.SetContext(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="context">Das <see cref="T:System.Collections.Generic.IDictionary`2" /> von Schlüssel/Wert-Paaren mit dem Namespace und dem Namen des festgelegten Kontexts.</param>
+        <summary>Legt den Kontext fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Code wird gezeigt, wie der Kontext auf dem Client festgelegt werden kann:  
+  
+```  
+IDictionary<string, string> context;  
+CalculatorProxy proxy;  
+IContextManager cm = proxy.InnerChannel.GetProperty<IContextManager>();  
+if (cm != null)  
+    cm.SetContext(context);  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

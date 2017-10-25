@@ -1,0 +1,67 @@
+<Type Name="EdgeMode" FullName="System.Windows.Media.EdgeMode">
+  <TypeSignature Language="C#" Value="public enum EdgeMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EdgeMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.EdgeMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Bestimmt, wie die Ränder von Zeichnungsprimitiven ohne Text gerendert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Textobjekte werden immer mit Antialiasing angezeigt und sind nicht betroffen, durch Festlegen des Werts des Edge-Modus. Der Standardwert für Zeichnungsprimitiven ohne Text, z. B. <xref:System.Windows.Shapes.Ellipse> und <xref:System.Windows.Shapes.Polygon>, ist nicht angegeben.  
+  
+ Wenn Sie den Wert des Edge-Modus eines visuellen Objekts festlegen, werden alle untergeordneten Zeichnungsprimitiven des visuellen Objekts auf den gleichen festgelegt <xref:System.Windows.Media.EdgeMode.Unspecified> Wert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Media.RenderOptions.SetEdgeMode%2A> Methode, um die Edge-Modus für eine Zeichnung Primitiv Alias festgelegt.  
+  
+ [!code-csharp[VisualSnippets#SetEdgeMode](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Snippets.cs#setedgemode)]
+ [!code-vb[VisualSnippets#SetEdgeMode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualSnippets/visualbasic/snippets.vb#setedgemode)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Aliased">
+      <MemberSignature Language="C#" Value="Aliased" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.EdgeMode Aliased = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.EdgeMode.Aliased" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.EdgeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rendert die Ränder von Zeichnungsprimitiven ohne Text als Ränder ohne Glättung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unspecified">
+      <MemberSignature Language="C#" Value="Unspecified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.EdgeMode Unspecified = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.EdgeMode.Unspecified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.EdgeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es ist kein Randmodus angegeben. Der aktuelle Randmodus von Zeichnungsprimitiven ohne Text wird nicht geändert Dies ist der Standardwert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

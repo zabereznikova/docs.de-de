@@ -1,0 +1,161 @@
+<Type Name="UIPermissionWindow" FullName="System.Security.Permissions.UIPermissionWindow">
+  <TypeSignature Language="C#" Value="public enum UIPermissionWindow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed UIPermissionWindow extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.UIPermissionWindow" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Typ von Fenstern, die Code verwendet werden darf.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, indem Sie <xref:System.Security.Permissions.UIPermission>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllWindows">
+      <MemberSignature Language="C#" Value="AllWindows" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.UIPermissionWindow AllWindows = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.UIPermissionWindow.AllWindows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.UIPermissionWindow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Benutzer können alle Fenster und Benutzereingabeereignisse uneingeschränkt verwenden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoWindows">
+      <MemberSignature Language="C#" Value="NoWindows" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.UIPermissionWindow NoWindows = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.UIPermissionWindow.NoWindows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.UIPermissionWindow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Benutzer können nicht willkürlich Fenster oder Benutzeroberflächenereignisse verwenden. Es kann keine Benutzeroberfläche verwendet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeSubWindows">
+      <MemberSignature Language="C#" Value="SafeSubWindows" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.UIPermissionWindow SafeSubWindows = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.UIPermissionWindow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Benutzer können nur <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /> zum Zeichnen und Benutzereingabeereignisse können nur für die Benutzeroberfläche in diesem untergeordneten Fenster verwenden. Beispiele für <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /> sind eine <see cref="T:System.Windows.Forms.MessageBox" />, allgemeine Dialogfeldsteuerelemente und ein Steuerelement in einem Browser angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeTopLevelWindows">
+      <MemberSignature Language="C#" Value="SafeTopLevelWindows" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.UIPermissionWindow SafeTopLevelWindows = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.UIPermissionWindow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Benutzer können nur <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows" /> und <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /> zum Zeichnen und Benutzereingabeereignisse können nur für die Benutzeroberfläche in diese Fenster auf oberster Ebene und untergeordnete Fenster verwenden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn es unter SafeTopLevelWindows Berechtigung, die Anwendung ausgeführt wird:  
+  
+-   Wird die DNS-Namen oder die IP-Adresse der Website an dem die Anwendung geladen wurde in der Titelleiste angezeigt.  
+  
+-   Bei der ersten Anzeige informiert den Benutzer, den er unter einem eingeschränkten Vertrauensebene ausgeführt wird, wird Tool-SprechblasenInfo angezeigt wird.  
+  
+-   Titelleiste muss jederzeit angezeigt werden.  
+  
+-   Window-Steuerelemente auf die Formulare muss angezeigt werden.  
+  
+-   Das Hauptfenster beim Start kann nicht minimieren.  
+  
+-   Die Windows nicht außerhalb des Bildschirms verschoben werden.  
+  
+-   Können keine der <xref:System.Windows.Forms.Form.Opacity%2A> Eigenschaft <xref:System.Windows.Forms.Form.Opacity%2A> um ihre Windows kleiner als 50 % transparent zu gestalten.  
+  
+-   Muss nur rechteckiges Fenster, und den Fensterrahmen enthalten muss. Windows Forms hat keine Auswirkungen Einstellung <xref:System.Windows.Forms.Form.FormBorderStyle%2A> auf `None`.  
+  
+-   Windows, die nicht sichtbar sein soll, kann nicht vorgenommen werden. Jeder Versuch durch die Anwendung Festlegen der <xref:System.Windows.Forms.Control.Visible%2A> -Eigenschaft für seine <xref:System.Windows.Forms.Form> -Objekte `False` werden ignoriert.  
+  
+-   Sie benötigen einen Eintrag in der Taskleiste.  
+  
+-   Nicht zulässig, den Zugriff auf Steuerelemente müssen die <xref:System.Windows.Forms.Control.Parent%2A> Eigenschaft. Durch Verwirkung, werden Steuerelemente auch Zugriff auf die gleichgeordnete Elemente – d. h. für andere Steuerelemente auf der gleichen Ebene der Schachtelung ausgeschlossen werden.  
+  
+-   Können nicht steuern, den Fokus mit der <xref:System.Windows.Forms.Control.Focus%2A> Methode.  
+  
+-   Eingeschränkten wird Zugriff, Tastatureingaben verfügen, damit ein Formular oder Steuerelement nur Tastaturereignisse für sich selbst und seine untergeordneten Elemente zugreifen kann.  
+  
+-   Wird der Zugriff auf Mauskoordinaten, ist insofern eingeschränkt, eines Formulars oder Steuerelements nur Mauskoordinaten lesen kann, wenn der Mauszeiger über der sichtbare Bereich befindet.  
+  
+-   Kann nicht festgelegt werden die <xref:System.Windows.Forms.Form.TopMost%2A> Eigenschaft.  
+  
+-   Können nicht steuern die Z-Reihenfolge von Steuerelementen auf dem Formular mithilfe der <xref:System.Windows.Forms.Control.BringToFront%2A> und <xref:System.Windows.Forms.Control.SendToBack%2A> Methoden.  
+  
+ Diese Einschränkungen verhindern, dass potenziell schädlichen Code Spoofingangriffe, z. B. imitating vertrauenswürdigen Systems Dialogfelder.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

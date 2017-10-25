@@ -1,0 +1,15 @@
+<Namespace Name="System.Web.UI">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.UI" /> Namespace stellt Klassen und Schnittstellen, mit denen Sie ASP.NET-Serversteuerelemente und ASP.NET Web Pages für die Benutzeroberfläche von ASP.NET-Webanwendungen erstellen können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Namespace enthält die <xref:System.Web.UI.Control> -Klasse, die bietet einen allgemeinen Satz von Funktionen für alle Steuerelemente, die HTML-Serversteuerelemente, Webserver-Steuerelemente und Benutzersteuerelemente enthält. Es beinhaltet außerdem die <xref:System.Web.UI.Page> Klasse. Diese Klasse wird automatisch generiert, wenn eine Anforderung für eine ASPX-Datei in eine ASP.NET-Webanwendung erfolgt. Sie können von beiden Klassen erben.  
+  
+ Der Namespace beinhaltet auch Klassen, die die Serversteuerelemente Datenbindungsfunktion, die Fähigkeit zum Speichern des Ansichtszustands für ein bestimmtes Steuerelement oder eine Seite und Analysefunktionen bereitstellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

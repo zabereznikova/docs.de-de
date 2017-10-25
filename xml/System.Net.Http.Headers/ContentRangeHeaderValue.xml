@@ -1,0 +1,450 @@
+<Type Name="ContentRangeHeaderValue" FullName="System.Net.Http.Headers.ContentRangeHeaderValue">
+  <TypeSignature Language="C#" Value="public class ContentRangeHeaderValue : ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContentRangeHeaderValue extends System.Object implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Http.Headers.ContentRangeHeaderValue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Http</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt den Wert des Content-Range-Headers dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentRangeHeaderValue (long length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ContentRangeHeaderValue.#ctor(System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="length" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="length">Der Start- oder Endpunkt des Bereichs in Bytes.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.Headers.ContentRangeHeaderValue" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentRangeHeaderValue (long from, long to);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 from, int64 to) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ContentRangeHeaderValue.#ctor(System.Int64,System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="from" Type="System.Int64" />
+        <Parameter Name="to" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="from">Die Position in Bytes, an der mit dem Senden von Daten begonnen werden soll.</param>
+        <param name="to">Die Position in Bytes, bei dem Senden von Daten beendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.Headers.ContentRangeHeaderValue" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentRangeHeaderValue (long from, long to, long length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 from, int64 to, int64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ContentRangeHeaderValue.#ctor(System.Int64,System.Int64,System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="from" Type="System.Int64" />
+        <Parameter Name="to" Type="System.Int64" />
+        <Parameter Name="length" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="from">Die Position in Bytes, an der mit dem Senden von Daten begonnen werden soll.</param>
+        <param name="to">Die Position in Bytes, bei dem Senden von Daten beendet werden soll.</param>
+        <param name="length">Der Start- oder Endpunkt des Bereichs in Bytes.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.Headers.ContentRangeHeaderValue" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ContentRangeHeaderValue.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit dem aktuellen Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene Objekt und das aktuelle <see cref="T:System.Net.Http.Headers.ContentRangeHeaderValue" />-Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene <see cref="T:System.Object" /> gleich dem aktuellen Objekt ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="From">
+      <MemberSignature Language="C#" Value="public Nullable&lt;long&gt; From { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; From" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.ContentRangeHeaderValue.From" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position ab, an der mit dem Senden von Daten begonnen werden soll.</summary>
+        <value>Die Position in Bytes, an der mit dem Senden von Daten begonnen werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ContentRangeHeaderValue.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für ein <see cref="T:System.Net.Http.Headers.ContentRangeHeaderValue" />-Objekt.</summary>
+        <returns>Ein Hashcode für das aktuelle Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Hashcode ist ein numerischer Wert, der zum Identifizieren eines Objekts während der Gleichheitstests der auf verwendet wird. Es kann auch als Index für ein Objekt in einer Auflistung dienen.  
+  
+ Die <xref:System.Net.Http.Headers.ContentRangeHeaderValue.GetHashCode%2A> Methode eignet sich für die Verwendung in Hashalgorithmen und Datenstrukturen wie Hashtabellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasLength">
+      <MemberSignature Language="C#" Value="public bool HasLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasLength" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.ContentRangeHeaderValue.HasLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob für den Inhaltsbereichsheader eine Länge angegeben ist.</summary>
+        <value>
+          <see langword="true" />, wenn für den Inhaltsbereichsheader eine Länge angegeben ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasRange">
+      <MemberSignature Language="C#" Value="public bool HasRange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasRange" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.ContentRangeHeaderValue.HasRange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob für den Inhaltsbereich ein Bereich angegeben ist.</summary>
+        <value>
+          <see langword="true" />, wenn für den Inhaltsbereich ein Bereich angegeben ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public Nullable&lt;long&gt; Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; Length" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.ContentRangeHeaderValue.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge des vollständigen Entitätskörpers ab.</summary>
+        <value>Die Länge des vollständigen Entitätskörpers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Net.Http.Headers.ContentRangeHeaderValue Parse (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Http.Headers.ContentRangeHeaderValue Parse(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ContentRangeHeaderValue.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.Headers.ContentRangeHeaderValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">Eine Zeichenfolge, die Headerwertinformationen für Inhaltsbereiche darstellt.</param>
+        <summary>Konvertiert eine Zeichenfolge in eine <see cref="T:System.Net.Http.Headers.ContentRangeHeaderValue" />-Instanz.</summary>
+        <returns>Eine <see cref="T:System.Net.Http.Headers.ContentRangeHeaderValue" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="input" /> ist ein <see langword="null" />-Verweis.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="input" /> ist keine gültige Headerwertinformation für Inhaltsbereiche.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ContentRangeHeaderValue.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt, das eine Kopie der aktuellen <see cref="T:System.Net.Http.Headers.ContentRangeHeaderValue" />-Instanz ist.</summary>
+        <returns>Eine Kopie der aktuellen Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="To">
+      <MemberSignature Language="C#" Value="public Nullable&lt;long&gt; To { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; To" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.ContentRangeHeaderValue.To" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position ab, an der das Senden von Daten beendet werden soll.</summary>
+        <value>Die Position, an der das Senden von Daten beendet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ContentRangeHeaderValue.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle <see cref="T:System.Net.Http.Headers.ContentRangeHeaderValue" />-Objekt darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParse">
+      <MemberSignature Language="C#" Value="public static bool TryParse (string input, out System.Net.Http.Headers.ContentRangeHeaderValue parsedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse(string input, [out] class System.Net.Http.Headers.ContentRangeHeaderValue&amp; parsedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.ContentRangeHeaderValue.TryParse(System.String,System.Net.Http.Headers.ContentRangeHeaderValue@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="parsedValue" Type="System.Net.Http.Headers.ContentRangeHeaderValue&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="input">Die zu überprüfende Zeichenfolge.</param>
+        <param name="parsedValue">Die <see cref="T:System.Net.Http.Headers.ContentRangeHeaderValue" />-Version der Zeichenfolge.</param>
+        <summary>Bestimmt, ob eine Zeichenfolge eine gültige <see cref="T:System.Net.Http.Headers.ContentRangeHeaderValue" />-Information ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="input" /> eine gültige <see cref="T:System.Net.Http.Headers.ContentRangeHeaderValue" />-Information ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unit">
+      <MemberSignature Language="C#" Value="public string Unit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Unit" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.Headers.ContentRangeHeaderValue.Unit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die verwendeten Bereichseinheiten.</summary>
+        <value>Eine <see cref="T:System.String" />, die Bereichseinheiten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die einzige Bereich Einheit von HTTP/1.1 definiert ist "Bytes".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

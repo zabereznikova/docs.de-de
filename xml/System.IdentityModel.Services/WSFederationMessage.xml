@@ -1,0 +1,290 @@
+<Type Name="WSFederationMessage" FullName="System.IdentityModel.Services.WSFederationMessage">
+  <TypeSignature Language="C#" Value="public abstract class WSFederationMessage : System.IdentityModel.Services.FederationMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WSFederationMessage extends System.IdentityModel.Services.FederationMessage" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.WSFederationMessage" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Services.FederationMessage</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine WS-Verbund-Nachricht dar und definiert die Basisklasse, die von der spezielle WS-Verbund-Nachrichtenklassen abgeleitet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Services.WSFederationMessage> -Klasse stellt eine WS-Verbund-Anforderung oder einer WS-Verbund-Antwort dar. Spezielle Klassen, die bestimmte Nachrichten, die WS-Verbund darstellen abgeleitet <xref:System.IdentityModel.Services.WSFederationMessage>, z. B. die <xref:System.IdentityModel.Services.SignInRequestMessage> Klasse, die Anforderungsnachricht einen WS-Verbund-Anmeldung darstellt.  
+  
+ Die <xref:System.IdentityModel.Services.WSFederationMessage> Klasse macht mehrere Eigenschaften, die zum Festlegen oder den Zugriff auf einzelne Nachrichtenparameter verwendet werden können. Diese Parameter können auch festlegen oder erfolgt über die <xref:System.IdentityModel.Services.FederationMessage.Parameters%2A> Wörterbuch. Beispielsweise erfahren Sie dem Wencoding-Parameter in der Nachricht entweder über die <xref:System.IdentityModel.Services.WSFederationMessage.Encoding%2A> Eigenschaft oder durch Angabe von "Wencoding" als Schlüssel für die <xref:System.IdentityModel.Services.FederationMessage.Parameters%2A> Wörterbuch.  
+  
+ Die <xref:System.IdentityModel.Services.WSFederationMessage> enthält statische Methoden, die Sie aufrufen können, um das Erstellen der entsprechenden WS-Verbund-Meldung aus: eine URL, die eine Abfragezeichenfolge enthält, eine Basis-URL und eine Auflistung von WS-Verbund-Parameternamen und -Werte oder Form senden Sie Daten in einer HTTP-Anforderung.  
+  
+ [!INCLUDE[wif_wsfed_ref](~/includes/wif-wsfed-ref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSFederationMessage (Uri baseUrl, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri baseUrl, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.WSFederationMessage.#ctor(System.Uri,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="baseUrl" Type="System.Uri" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseUrl">Die Basis-URL für die die WS-Verbund-Nachricht gilt. Dies ist die URL ohne Abfrageparameter an. Legt die <see cref="P:System.IdentityModel.Services.FederationMessage.BaseUri" />-Eigenschaft fest.</param>
+        <param name="action">Der wa-Parameter der Nachricht. Gibt die auszuführende Aktion an. Beispiel: "wsignin1.0" für eine WS-Verbund-anmelden-Anforderung. Legt die <see cref="P:System.IdentityModel.Services.WSFederationMessage.Action" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Services.WSFederationMessage" /> Klasse von Basis-URL für die die Nachricht angewendet wird und die Aktion ausgeführt (wa-Message-Parameter).</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="baseUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          Der <paramref name="action" /> ist <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.IdentityModel.Services.WSFederationMessageException">
+          <paramref name="baseUri" />ist kein gültiger, absolute URI.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public string Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.WSFederationMessage.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Parameter "wa" der Nachricht.</summary>
+        <value>Der Wert des Parameters wa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der wa-Parameter gibt die auszuführende Aktion an. Z. B. für anmeldeszenarien die <xref:System.IdentityModel.Services.WSFederationMessage.Action%2A> -Eigenschaft gesetzt ist, um "wsignin1.0" und für die Abmeldung Szenarien, die Eigenschaft auf "wsignout1.0" festgelegt ist. Der wa-Parameter ist erforderlich, damit diese Eigenschaft nicht werden, um festgelegt kann `null` oder eine leere Zeichenfolge.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Versuch, einen Wert festzulegen, ist <see langword="null" /> oder leere auftritt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public string Context { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Context" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.WSFederationMessage.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wctx-Parameter der Nachricht.</summary>
+        <value>Der Wert des Parameters Wctx.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt einen Kontextwert, der mit dem ausgestellten Token zurückgegeben werden muss, wenn sie in der Anforderung übergeben wird. Der Wert nicht transparent, d. h. seine Semantik bekanntermaßen nur durch den Absender der Nachricht (in der Regel eine vertrauende – RP); Es ist nicht vom Empfänger der Nachricht oder eine beliebige Vermittler interpretiert. Der Wctx-Parameter ist optional. Legen Sie die <xref:System.IdentityModel.Services.WSFederationMessage.Context%2A> Eigenschaft `null` oder eine leere Zeichenfolge das Wctx-Parameter aus der Nachricht zu entfernen.  
+  
+> [!IMPORTANT]
+>  Wenn Ihre Anwendung eine WS-Verbund-Meldung mit der Parametersatz Wctx empfängt, sollten sie sicherstellen, dass der gleiche Wert in alle Antworten an den Absender zurückgegeben, oder weitergeleitet, wenn die Nachricht an eine andere Partei übergeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFormPost">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Services.WSFederationMessage CreateFromFormPost (System.Web.HttpRequestBase request);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Services.WSFederationMessage CreateFromFormPost(class System.Web.HttpRequestBase request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.WSFederationMessage.CreateFromFormPost(System.Web.HttpRequestBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.WSFederationMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Web.HttpRequestBase" />
+      </Parameters>
+      <Docs>
+        <param name="request">Die Anforderung, die die Formular-Post enthält.</param>
+        <summary>Erstellt eine WS-Verbund-Nachricht aus der formularbereitstellung in die angegebene Anforderung empfangen wurde.</summary>
+        <returns>Die Meldung, die erstellt wurde oder <see langword="null" /> , wenn eine Nachricht kann nicht erstellt werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Nachricht erstellt werden kann, gibt die Methode eine geeignete Implementierung der <xref:System.IdentityModel.Services.WSFederationMessage> basierend auf dem wa-Parameter, die in das Formular übermittelt, post, z. B., wenn wa-Parameter "wsignout1.0" ist ein <xref:System.IdentityModel.Services.SignOutRequestMessage> Objekt wird zurückgegeben.  
+  
+ Ruft die Basis-URL und die Auflistung der vom Client in der Anforderung gesendeten Formularvariablen ab und ruft die <xref:System.IdentityModel.Services.WSFederationMessage.CreateFromNameValueCollection%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="request" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromNameValueCollection">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Services.WSFederationMessage CreateFromNameValueCollection (Uri baseUrl, System.Collections.Specialized.NameValueCollection collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Services.WSFederationMessage CreateFromNameValueCollection(class System.Uri baseUrl, class System.Collections.Specialized.NameValueCollection collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.WSFederationMessage.CreateFromNameValueCollection(System.Uri,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.WSFederationMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseUrl" Type="System.Uri" />
+        <Parameter Name="collection" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="baseUrl">Die Basis-URL zu dem die Nachricht vorgesehen ist.</param>
+        <param name="collection">Die <see cref="T:System.Collections.Specialized.NameValueCollection" /> , die die Parameter für die Nachricht enthält.</param>
+        <summary>Erstellt eine WS-Verbund-Nachricht von einem <see cref="T:System.Collections.Specialized.NameValueCollection" /> von Parametern.</summary>
+        <returns>Die Meldung, die erstellt wurde oder <see langword="null" /> , wenn eine Nachricht kann nicht erstellt werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameters-Auflistung muss einen Eintrag für den Parameter wa enthalten die durchzuführende Aktion angibt. Wenn der wa-Eintrag keiner Aktion erkannt wird, wird eine Ausnahme ausgelöst. Die Parameterauflistung dürfen entsprechenden Parameter für die Art der Nachricht durch den Parameter "wa" in der Auflistung angegeben. Der Methodenrückgabewert einer geeigneten Implementierung der <xref:System.IdentityModel.Services.WSFederationMessage> basierend auf dem wa-Parameter. Die folgende Tabelle enthält die <xref:System.IdentityModel.Services.WSFederationMessage> Implementierung für verschiedene Parameterkombinationen zurückgegeben.  
+  
+|Zurückgegebener Typ|angegebener WA-Abfrageparameter|Kommentare|  
+|-------------------|----------------------------------|--------------|  
+|<xref:System.IdentityModel.Services.AttributeRequestMessage>|wattr1.0|--|  
+|<xref:System.IdentityModel.Services.PseudonymRequestMessage>|wpseudo1.0|--|  
+|<xref:System.IdentityModel.Services.SignInRequestMessage>|wsignin1.0|`collection`muss eine Wtrealm oder einen Wreply-Parameter enthalten. Wenn `collection` enthält eine Wresult oder einen Parameter Wresultptr eine Anmeldeantwort Nachricht zurückgegeben (siehe folgende Zeile).|  
+|<xref:System.IdentityModel.Services.SignInResponseMessage>|wsignin1.0|Zurückgegeben werden, wenn `collection` enthält einen Wresult oder Wresultptr-Parameter. Es kann nur jeweils vorhanden sein. Wenn beide vorhanden sind, wird eine Ausnahme ausgelöst.|  
+|<xref:System.IdentityModel.Services.SignOutRequestMessage>|wsignout1.0|--|  
+|<xref:System.IdentityModel.Services.SignOutCleanupRequestMessage>|wsignoutcleanup1.0|--|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="baseUrl" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="collection" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Services.WSFederationMessageException">Der Parameter "wa" in der Parameterauflistung wurde nicht erkannt.</exception>
+        <exception cref="T:System.ArgumentException">Eine Anmeldeantwort-Nachricht besitzt sowohl die Wresultptr der Wresult-Parameter in der Parameterauflistung. (Eine gültige Antwort-Meldung enthält den wa Parameter gleich "wsignin1.0" und entweder die Wresult oder den Wresultptr-Parameter, aber nicht beides.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromUri">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Services.WSFederationMessage CreateFromUri (Uri requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Services.WSFederationMessage CreateFromUri(class System.Uri requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.WSFederationMessage.CreateFromUri(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.WSFederationMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, von dem die Nachricht zu erstellen. Message-Parameter werden in der Abfragezeichenfolge angegeben. Der wa-Parameter muss vorhanden sein.</param>
+        <summary>Erstellt eine WS-Verbund-Nachricht aus den angegebenen URI. Es wird angenommen, dass die Parameter in der Abfragezeichenfolge angegeben werden.</summary>
+        <returns>Die Meldung, die erstellt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt eine geeignete Implementierung der <xref:System.IdentityModel.Services.WSFederationMessage> basierend auf dem wa-Parameter in der Abfragezeichenfolge; Wenn wa-Parameter "wsignout1.0" ist beispielsweise ein <xref:System.IdentityModel.Services.SignOutRequestMessage> Objekt wird zurückgegeben.  
+  
+ Je nach Kombination und Werte von Parametern in der Abfragezeichenfolge vorhanden möglicherweise andere Ausnahmen ausgelöst werden.  
+  
+ Ruft die <xref:System.IdentityModel.Services.WSFederationMessage.TryCreateFromUri%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Services.WSFederationMessageException">Eine Nachricht kann nicht aus dem angegebenen URI erstellt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public string Encoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Encoding" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.WSFederationMessage.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den wencoding-Parameter der Nachricht ab, bzw. legt ihn fest.</summary>
+        <value>Der Wert des wencoding-Parameters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt an, die Art der Codierung für beliebige XML-Daten verwendet werden soll, in die Nachricht eingebettet. Der Wencoding-Parameter ist optional. Legen Sie die <xref:System.IdentityModel.Services.WSFederationMessage.Encoding%2A> Eigenschaft `null` oder eine leere Zeichenfolge das Wencoding-Parameter aus der Nachricht zu entfernen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryCreateFromUri">
+      <MemberSignature Language="C#" Value="public static bool TryCreateFromUri (Uri requestUri, out System.IdentityModel.Services.WSFederationMessage fedMsg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryCreateFromUri(class System.Uri requestUri, [out] class System.IdentityModel.Services.WSFederationMessage&amp; fedMsg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.WSFederationMessage.TryCreateFromUri(System.Uri,System.IdentityModel.Services.WSFederationMessage@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+        <Parameter Name="fedMsg" Type="System.IdentityModel.Services.WSFederationMessage&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="requestUri">Der URI, von dem die Nachricht zu erstellen. Message-Parameter werden in der Abfragezeichenfolge angegeben. Der wa-Parameter muss vorhanden sein.</param>
+        <param name="fedMsg">Wenn diese Methode zurückgibt, enthält die Meldung, die erstellt wurde oder <see langword="null" /> , wenn eine Nachricht konnte nicht erstellt werden. Dieser Parameter wird nicht initialisiert behandelt.</param>
+        <summary>Versucht, eine WS-Verbund-Nachricht aus dem angegebenen URI zu erstellen. Es wird angenommen, dass die Parameter als Abfragezeichenfolge angegeben werden.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Nachricht erfolgreich erstellt wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Nachricht erstellt werden kann, gibt die Methode eine geeignete Implementierung der <xref:System.IdentityModel.Services.WSFederationMessage> basierend auf dem wa-Parameter in der Abfragezeichenfolge; Wenn wa-Parameter "wsignout1.0" ist beispielsweise ein <xref:System.IdentityModel.Services.SignOutRequestMessage> Objekt wird zurückgegeben.  
+  
+ Ruft die <xref:System.IdentityModel.Services.WSFederationMessage.CreateFromNameValueCollection%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="requestUri" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

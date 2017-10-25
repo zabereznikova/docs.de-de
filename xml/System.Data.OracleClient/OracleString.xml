@@ -1,0 +1,727 @@
+<Type Name="OracleString" FullName="System.Data.OracleClient.OracleString">
+  <TypeSignature Language="C#" Value="public struct OracleString : IComparable, System.Data.SqlTypes.INullable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit OracleString extends System.ValueType implements class System.Data.SqlTypes.INullable, class System.IComparable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OracleString" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.SqlTypes.INullable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Stream variabler Länge von Zeichen gespeichert oder aus der Datenbank abgerufen werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Abrufen einer <xref:System.Data.OracleClient.OracleString> -Objekt, rufen Sie die <xref:System.Data.OracleClient.OracleDataReader.GetOracleString%2A> Methode.  
+  
+   
+  
+## Examples  
+  
+```  
+using System;  
+using System.Data.OracleClient;  
+public class Class1 {  
+   public static void Main() {  
+      OracleString oraclestring1 = new OracleString("MyOracleString1");  
+      OracleString oraclestring2 = new OracleString("MyOracleString2");  
+      OracleString oraclestring3 = new OracleString("MyOracleString1");  
+  
+      // Type: System.Data.OracleClient.OracleString  
+      Console.WriteLine("Type: " + oraclestring1.GetType());  
+  
+      // Length: 15  
+      Console.WriteLine("Length: " + oraclestring1.Length);  
+  
+      // False  
+      Console.WriteLine(oraclestring1.IsNull);  
+  
+      // -1  
+      Console.WriteLine(oraclestring1.CompareTo(oraclestring2));  
+  
+      // 0  
+      Console.WriteLine(oraclestring1.CompareTo(oraclestring3));  
+  
+      // 1  
+      Console.WriteLine(oraclestring2.CompareTo(oraclestring3));  
+  
+      // False  
+      Console.WriteLine(oraclestring1.Equals(oraclestring2));  
+  
+      // True  
+      Console.WriteLine(oraclestring1.Equals(oraclestring3));  
+  
+      // MyOracleString1  
+      Console.WriteLine(oraclestring1.Value);  
+  
+      // MyOracleString2  
+      Console.WriteLine(oraclestring2.ToString());  
+   }  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleString (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die Zeichenfolge zu speichern.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleString" /> -Klasse und gibt die Zeichenfolge zu speichern.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu vergleichende Objekt.</param>
+        <summary>Vergleicht diese Instanz des <see cref="T:System.Data.OracleClient.OracleString" /> mit dem angegebenen Objekt und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.</summary>
+        <returns>Eine Zahl mit Vorzeichen, die die relativen Werte dieser Instanz und das Objekt angibt.  
+  
+ <list type="table"><listheader><term>Rückgabewert  
+  
+ </term><description>Bedingung  
+  
+ </description></listheader><item><term>Kleiner als 0 (null)  
+  
+ </term><description>Diese Instanz ist kleiner als-Objekt.  
+  
+ </description></item><item><term>0 (null)  
+  
+ </term><description>Diese Instanz ist mit dem Objekt identisch.  
+  
+ </description></item><item><term>Größer als 0 (null)  
+  
+ </term><description>Diese Instanz ist größer als-Objekt  
+  
+ - oder -   
+  
+ Objekt ist ein null-Verweis (<see langword="Nothing" />)  
+  
+ </description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Concat">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleString Concat (System.Data.OracleClient.OracleString x, System.Data.OracleClient.OracleString y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleString Concat(valuetype System.Data.OracleClient.OracleString x, valuetype System.Data.OracleClient.OracleString y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.Concat(System.Data.OracleClient.OracleString,System.Data.OracleClient.OracleString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleString</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleString" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleString" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <summary>Verkettet die beiden angegebenen <see cref="T:System.Data.OracleClient.OracleString" /> Strukturen.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleString" /> mit dem neu verketteten Wert, der den Inhalt der beiden darstellt <see cref="T:System.Data.OracleClient.OracleString" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.OracleClient.OracleString Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.OracleClient.OracleString Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OracleClient.OracleString.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine leere Zeichenfolge, die zugewiesen werden, können, die <see cref="P:System.Data.OracleClient.OracleString.Value" /> -Eigenschaft einer Instanz von der <see cref="T:System.Data.OracleClient.OracleString" /> Struktur.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu vergleichende Objekt.</param>
+        <summary>Vergleicht den-Parameter angegebene Objekt mit dem <see cref="P:System.Data.OracleClient.OracleString.Value" /> Eigenschaft von der <see cref="T:System.Data.OracleClient.OracleString" /> Objekt.</summary>
+        <returns>Ist gleich zurück <see langword="true" /> Wenn das Objekt eine Instanz von <see cref="T:System.Data.OracleClient.OracleString" /> und die beiden gleich sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean Equals (System.Data.OracleClient.OracleString x, System.Data.OracleClient.OracleString y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean Equals(valuetype System.Data.OracleClient.OracleString x, valuetype System.Data.OracleClient.OracleString y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.Equals(System.Data.OracleClient.OracleString,System.Data.OracleClient.OracleString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleString" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleString" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <summary>Führt einen logischen Vergleich der beiden <see cref="T:System.Data.OracleClient.OracleString" /> Operanden, um festzustellen, ob sie gleich sind.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die beiden Instanzen gleich sind oder <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> , wenn die beiden Instanzen ungleich sind. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleString" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für diese Instanz ab.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreaterThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean GreaterThan (System.Data.OracleClient.OracleString x, System.Data.OracleClient.OracleString y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean GreaterThan(valuetype System.Data.OracleClient.OracleString x, valuetype System.Data.OracleClient.OracleString y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.GreaterThan(System.Data.OracleClient.OracleString,System.Data.OracleClient.OracleString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleString" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleString" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <summary>Führt einen logischen Vergleich der beiden <see cref="T:System.Data.OracleClient.OracleString" /> Operanden, um festzustellen, ob die erste größer als das zweite ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> ist die erste Instanz größer als die zweite Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleString" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean GreaterThanOrEqual (System.Data.OracleClient.OracleString x, System.Data.OracleClient.OracleString y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean GreaterThanOrEqual(valuetype System.Data.OracleClient.OracleString x, valuetype System.Data.OracleClient.OracleString y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.GreaterThanOrEqual(System.Data.OracleClient.OracleString,System.Data.OracleClient.OracleString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleString" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleString" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <summary>Führt einen logischen Vergleich der beiden <see cref="T:System.Data.OracleClient.OracleString" /> Operanden, um festzustellen, ob die erste größer als oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die erste Instanz größer oder gleich der zweiten Instanz ist <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleString" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNull" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleString.IsNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die <see cref="P:System.Data.OracleClient.OracleString.Value" /> von der <see cref="T:System.Data.OracleClient.OracleString" /> ist <see cref="F:System.Data.OracleClient.OracleString.Null" />.</summary>
+        <value>
+          <see langword="true" />Wenn <see cref="P:System.Data.OracleClient.OracleString.Value" /> ist <see cref="F:System.Data.OracleClient.OracleString.Null" />, da andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public char this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleString.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position des Bytes abgerufen werden sollen.</param>
+        <summary>Ruft das einzelne Byte aus dem <see langword="Value" /> Eigenschaft befindet sich an der Position, die durch den Integer-Parameter angegebenen <paramref name="index" />.</summary>
+        <value>Das Byte, die an der durch den Integer-Parameter angegebenen Position befindet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `index` gibt eine Position hinter dem Ende des Bytearrays, wird eine Ausnahme ausgelöst.  
+  
+ Um zu vermeiden, eine Ausnahme auszulösen, überprüfen Sie immer die <xref:System.Data.OracleClient.OracleString.IsNull%2A> Eigenschaft und die `Length` Eigenschaft vor dem Lesen `this`.  
+  
+ Diese Eigenschaft ist schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleString.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge der Zeichenfolge, die in diesem gespeichert sind <see cref="T:System.Data.OracleClient.OracleString" /> Struktur.</summary>
+        <value>Die Länge der Zeichenfolge, die gespeichert werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean LessThan (System.Data.OracleClient.OracleString x, System.Data.OracleClient.OracleString y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean LessThan(valuetype System.Data.OracleClient.OracleString x, valuetype System.Data.OracleClient.OracleString y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.LessThan(System.Data.OracleClient.OracleString,System.Data.OracleClient.OracleString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleString" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleString" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <summary>Führt einen logischen Vergleich der beiden <see cref="T:System.Data.OracleClient.OracleString" /> Operanden, um festzustellen, ob der erste kleiner ist als der zweite.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn der erste kleiner als die zweite Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleString" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean LessThanOrEqual (System.Data.OracleClient.OracleString x, System.Data.OracleClient.OracleString y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean LessThanOrEqual(valuetype System.Data.OracleClient.OracleString x, valuetype System.Data.OracleClient.OracleString y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.LessThanOrEqual(System.Data.OracleClient.OracleString,System.Data.OracleClient.OracleString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleString" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleString" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <summary>Führt einen logischen Vergleich der beiden <see cref="T:System.Data.OracleClient.OracleString" /> Operanden, um festzustellen, ob der erste kleiner oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> ist die erste Instanz kleiner oder gleich der zweiten Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleString" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotEquals">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean NotEquals (System.Data.OracleClient.OracleString x, System.Data.OracleClient.OracleString y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean NotEquals(valuetype System.Data.OracleClient.OracleString x, valuetype System.Data.OracleClient.OracleString y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.NotEquals(System.Data.OracleClient.OracleString,System.Data.OracleClient.OracleString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleString" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleString" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <summary>Führt einen logischen Vergleich der beiden <see cref="T:System.Data.OracleClient.OracleString" /> Operanden, um festzustellen, ob diese ungleich sind.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die beiden Instanzen ungleich sind oder <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> , wenn die beiden Instanzen gleich sind. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleString" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.OracleClient.OracleString Null;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.OracleClient.OracleString Null" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OracleClient.OracleString.Null" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen null-Wert, der zugewiesen werden kann die <see cref="P:System.Data.OracleClient.OracleString.Value" /> -Eigenschaft einer Instanz von der <see cref="T:System.Data.OracleClient.OracleString" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Null`fungiert als eine Konstante für die `OracleString` Struktur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleString operator + (System.Data.OracleClient.OracleString x, System.Data.OracleClient.OracleString y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleString op_Addition(valuetype System.Data.OracleClient.OracleString x, valuetype System.Data.OracleClient.OracleString y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.op_Addition(System.Data.OracleClient.OracleString,System.Data.OracleClient.OracleString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleString</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleString" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleString" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <summary>Verkettet die beiden angegebenen <see cref="T:System.Data.OracleClient.OracleString" /> Strukturen.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleString" /> mit dem neu verketteten Wert, der den Inhalt der beiden darstellt <see cref="T:System.Data.OracleClient.OracleString" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleString.Concat%28System.Data.OracleClient.OracleString%2CSystem.Data.OracleClient.OracleString%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator == (System.Data.OracleClient.OracleString x, System.Data.OracleClient.OracleString y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_Equality(valuetype System.Data.OracleClient.OracleString x, valuetype System.Data.OracleClient.OracleString y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.op_Equality(System.Data.OracleClient.OracleString,System.Data.OracleClient.OracleString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleString" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleString" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <summary>Führt einen logischen Vergleich der beiden <see cref="T:System.Data.OracleClient.OracleString" /> Operanden, um festzustellen, ob sie gleich sind.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die beiden Instanzen gleich sind oder <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> , wenn die beiden Instanzen ungleich sind. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleString" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleString.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator string (System.Data.OracleClient.OracleString x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname string op_Explicit(valuetype System.Data.OracleClient.OracleString x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.op_Explicit(System.Data.OracleClient.OracleString)~System.String" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleString" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &gt; (System.Data.OracleClient.OracleString x, System.Data.OracleClient.OracleString y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_GreaterThan(valuetype System.Data.OracleClient.OracleString x, valuetype System.Data.OracleClient.OracleString y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.op_GreaterThan(System.Data.OracleClient.OracleString,System.Data.OracleClient.OracleString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleString" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleString" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <summary>Führt einen logischen Vergleich der beiden <see cref="T:System.Data.OracleClient.OracleString" /> Operanden, um festzustellen, ob die erste größer als das zweite ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> ist die erste Instanz größer als die zweite Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleString" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleString.GreaterThan%28System.Data.OracleClient.OracleString%2CSystem.Data.OracleClient.OracleString%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &gt;= (System.Data.OracleClient.OracleString x, System.Data.OracleClient.OracleString y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_GreaterThanOrEqual(valuetype System.Data.OracleClient.OracleString x, valuetype System.Data.OracleClient.OracleString y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.op_GreaterThanOrEqual(System.Data.OracleClient.OracleString,System.Data.OracleClient.OracleString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleString" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleString" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <summary>Führt einen logischen Vergleich der beiden <see cref="T:System.Data.OracleClient.OracleString" /> Operanden, um festzustellen, ob die erste größer als oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die erste Instanz größer oder gleich der zweiten Instanz ist <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleString" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleString.GreaterThanOrEqual%28System.Data.OracleClient.OracleString%2CSystem.Data.OracleClient.OracleString%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Data.OracleClient.OracleString (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleString op_Implicit(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.op_Implicit(System.String)~System.Data.OracleClient.OracleString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleString</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator != (System.Data.OracleClient.OracleString x, System.Data.OracleClient.OracleString y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_Inequality(valuetype System.Data.OracleClient.OracleString x, valuetype System.Data.OracleClient.OracleString y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.op_Inequality(System.Data.OracleClient.OracleString,System.Data.OracleClient.OracleString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleString" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleString" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <summary>Führt einen logischen Vergleich der beiden <see cref="T:System.Data.OracleClient.OracleString" /> Operanden, um festzustellen, ob sie gleich sind.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn die beiden Instanzen ungleich sind oder <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> , wenn die beiden Instanzen gleich sind. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleString" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleString.NotEquals%28System.Data.OracleClient.OracleString%2CSystem.Data.OracleClient.OracleString%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &lt; (System.Data.OracleClient.OracleString x, System.Data.OracleClient.OracleString y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_LessThan(valuetype System.Data.OracleClient.OracleString x, valuetype System.Data.OracleClient.OracleString y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.op_LessThan(System.Data.OracleClient.OracleString,System.Data.OracleClient.OracleString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleString" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleString" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <summary>Führt einen logischen Vergleich der beiden <see cref="T:System.Data.OracleClient.OracleString" /> Operanden, um festzustellen, ob der erste kleiner ist als der zweite.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> , wenn der erste kleiner als die zweite Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleString" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleString.LessThan%28System.Data.OracleClient.OracleString%2CSystem.Data.OracleClient.OracleString%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &lt;= (System.Data.OracleClient.OracleString x, System.Data.OracleClient.OracleString y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_LessThanOrEqual(valuetype System.Data.OracleClient.OracleString x, valuetype System.Data.OracleClient.OracleString y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.op_LessThanOrEqual(System.Data.OracleClient.OracleString,System.Data.OracleClient.OracleString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleString" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleString" />
+      </Parameters>
+      <Docs>
+        <param name="x">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <param name="y">Eine <see cref="T:System.Data.OracleClient.OracleString" />.</param>
+        <summary>Führt einen logischen Vergleich der beiden <see cref="T:System.Data.OracleClient.OracleString" /> Operanden, um festzustellen, ob der erste kleiner oder gleich dem zweiten ist.</summary>
+        <returns>Ein <see cref="T:System.Data.OracleClient.OracleBoolean" /> also <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> ist die erste Instanz kleiner oder gleich der zweiten Instanz ist, andernfalls <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Wenn eine der Instanzen von <see cref="T:System.Data.OracleClient.OracleString" /> null ist, die <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> von der <see cref="T:System.Data.OracleClient.OracleBoolean" /> werden <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Data.OracleClient.OracleString.LessThanOrEqual%28System.Data.OracleClient.OracleString%2CSystem.Data.OracleClient.OracleString%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleString.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert eine <see langword="OracleString" /> -Objekt an eine <see langword="String" />.</summary>
+        <returns>Ein <see langword="String" /> mit demselben Wert wie diese <see langword="OracleString" /> Struktur.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleString.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeichenfolge ab, die in gespeichert ist die <see cref="T:System.Data.OracleClient.OracleString" /> Struktur.</summary>
+        <value>Die Zeichenfolge, die gespeichert werden.  
+  
+ Diese Eigenschaft ist schreibgeschützt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

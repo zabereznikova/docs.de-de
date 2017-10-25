@@ -1,0 +1,2447 @@
+<Type Name="MethodBase" FullName="System.Reflection.MethodBase">
+  <TypeSignature Language="C#" Value="public abstract class MethodBase : System.Reflection.MemberInfo, System.Runtime.InteropServices._MethodBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit MethodBase extends System.Reflection.MemberInfo implements class System.Runtime.InteropServices._MethodBase" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.MethodBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.MemberInfo</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._MethodBase</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._MethodBase))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Informationen über Methoden und Konstruktoren zur Verfügung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `MethodBase`ist die Basisklasse der <xref:System.Reflection.MethodInfo> und <xref:System.Reflection.ConstructorInfo>.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von <see langword="MethodBase" />, müssen Sie die folgenden Member überschreiben: <see cref="M:System.Reflection.MethodBase.GetParameters" />, <see cref="M:System.Reflection.MethodBase.Invoke(System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />, <see cref="M:System.Reflection.MethodBase.GetMethodImplementationFlags" />, <see cref="P:System.Reflection.MethodBase.MethodHandle" />, <see cref="P:System.Reflection.MethodBase.Attributes" />, <see cref="P:System.Reflection.MemberInfo.Name" />, <see cref="P:System.Reflection.MemberInfo.DeclaringType" />, <see cref="P:System.Reflection.MemberInfo.MemberType" />, <see cref="P:System.Reflection.MemberInfo.ReflectedType" />, <see cref="M:System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean)" /> , <see cref="M:System.Reflection.MemberInfo.GetCustomAttributes(System.Type,System.Boolean)" />, und <see cref="M:System.Reflection.MemberInfo.IsDefined(System.Type,System.Boolean)" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MethodBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.MethodBase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.MethodAttributes Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.MethodAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Attribute dieser Methode zugeordnet.</summary>
+        <value>Einer der <see cref="T:System.Reflection.MethodAttributes" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Elemente verfügen über einen Satz von Attributen, die in Bezug auf den spezifischen Typ der Member definiert sind.  
+  
+ Zum Abrufen der <xref:System.Reflection.MethodAttributes>, rufen Sie zunächst den Typ. Bekommen Sie den Typ der Methodennamens. Abrufen von der Methode, die <xref:System.Reflection.MethodAttributes>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Attribute der benutzerdefinierten Methode Mymethod an.  
+  
+ [!code-cpp[Classic MethodBase.Attributes Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MethodBase.Attributes Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MethodBase.Attributes Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MethodBase.Attributes Example/CS/source.cs#1)]
+ [!code-vb[Classic MethodBase.Attributes Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MethodBase.Attributes Example/VB/source.vb#1)]  
+  
+ Dieser Code erzeugt die folgende Ausgabe:  
+  
+ Beispiel Reflection.MethodBase.Attributes  
+  
+ Mymethodbase = "void" Mymethod (Int32, System.String ByRef System.String ByRef)  
+  
+ PrivateScope  
+  
+ FamANDAssem  
+  
+ Produktreihe  
+  
+ Öffentlich  
+  
+ HideBySig  
+  
+ ReuseSlot  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Verwenden der <see cref="P:System.Reflection.MethodBase.Attributes" /> Eigenschaft, um zu bestimmen, ob eine Methode ist <see langword="public" />, <see langword="private" />, <see langword="final" />, <see langword="virtual" />und so weiter.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CallingConvention">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.CallingConventions CallingConvention { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.CallingConventions CallingConvention" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.CallingConvention" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.CallingConventions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, der Aufrufkonventionen für diese Methode.</summary>
+        <value>Die <see cref="T:System.Reflection.CallingConventions" /> für diese Methode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsGenericParameters">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsGenericParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContainsGenericParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.ContainsGenericParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die generische Methode nicht zugewiesene generische Typparameter enthält.</summary>
+        <value>
+          <see langword="true" />Wenn die aktuelle <see cref="T:System.Reflection.MethodBase" /> Objekt stellt eine generische Methode, die nicht zugewiesene generische Typparameter; enthält andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine generische Methode kann aufgerufen werden, nur dann, wenn keine generischen Typdefinitionen oder offen konstruierte Typen, die die Typargumente für die Methode selbst oder alle einschließenden Typen vorhanden sind. Da Typen beliebig komplex sein können, ist diese rekursive Ermittlung es schwierig. Der Einfachheit halber und reduziert die Wahrscheinlichkeit des Fehlers, der <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A> Eigenschaft bietet eine standardmöglichkeit zum unterscheiden von geschlossener konstruierter Methoden, die aufgerufen werden kann, und öffnen erstellt, Methoden, die nicht. Wenn die <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A> -Eigenschaft gibt `true`, die Methode kann nicht aufgerufen werden.  
+  
+ Die <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A> -Eigenschaft sucht rekursiv für Typparameter angegeben. Es gibt z. B. `true` für eine beliebige Methode in einen offenen Typ `A<T>` (`A(Of T)` in Visual Basic), auch wenn die Methode selbst nicht generisch ist. Vergleichen Sie dies mit dem Verhalten von der <xref:System.Reflection.MethodBase.IsGenericMethod%2A> Eigenschaft, die zurückgibt `false` für eine solche Methode.  
+  
+ Auf ähnliche Weise die <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A> "Property"-Parameter gibt `true` für jeden Konstruktor in ein offener Typ, obwohl Konstruktoren sind keine eigenen Typparameter.  
+  
+ Eine Liste der invarianten Bedingungen für Begriffe, die speziell für generische Methoden, finden Sie unter der <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType> Eigenschaft. Eine Liste der invarianten Bedingungen für die anderen Begriffe in generischen Reflektion verwendet, finden Sie unter der <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt, das mit dieser Instanz verglichen werden soll, oder <see langword="null" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> dem Typ und dem Wert dieser Instanz entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentMethod">
+      <MemberSignature Language="C#" Value="public static System.Reflection.MethodBase GetCurrentMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.MethodBase GetCurrentMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.GetCurrentMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodBase</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein <see langword="MethodBase" />-Objekt zurück, das die aktuell ausgeführte Methode darstellt.</summary>
+        <returns>
+          <see cref="M:System.Reflection.MethodBase.GetCurrentMethod" /> ist eine statische Methode, die aus einer ausgeführten Methode aufgerufen wird und Informationen zu dieser Methode zurückgibt.  
+  
+ Ein <see langword="MethodBase" />-Objekt, das die aktuell ausgeführte Methode darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die derzeit ausgeführte Methode für einen generischen Typ definiert ist die <xref:System.Reflection.MethodInfo> von zurückgegebenen <xref:System.Reflection.MethodBase.GetCurrentMethod%2A> stammt von der generischen Typdefinition (d. h. <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A?displayProperty=nameWithType> gibt `true`). Deshalb spiegelt nicht die Typargumente wider, die verwendet wurden, wenn die Methode aufgerufen wurde. Wenn eine Methode z. B. `M()` für einen generischen Typ definiert ist `C<T>` (`C(Of T)` in Visual Basic), und <xref:System.Reflection.MethodBase.GetCurrentMethod%2A> aus aufgerufen wird `C<string>.M()`, klicken Sie dann <xref:System.Reflection.MethodBase.GetCurrentMethod%2A> gibt `C<T>.M()` (`C(Of T).M()` in Visual Basic).  
+  
+ Wenn die derzeit ausgeführte Methode eine generische Methode ist <xref:System.Reflection.MethodBase.GetCurrentMethod%2A> gibt die generischen Methodendefinition. Wenn die generische Methode für einen generischen Typ definiert ist die <xref:System.Reflection.MethodInfo> aus der generischen Typdefinition abgerufen wird.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel werden zwei Typen definiert. Die erste ist eine nicht generische Klasse `TestClass`, enthält einen Konstruktor, eine Methode namens `GetValue`, und eine Schreib /-Leseeigenschaft, die mit dem Namen `GetValue`. Das zweite ist eine generische Klasse namens `TestClass<T>` enthält einen Konstruktor eine `GetValue` , und eine generische Methode `ConvertValue<Y>`. Jeder Konstruktor, Methode und Eigenschaftenaccessor enthält einen Aufruf an die <xref:System.Reflection.MethodBase.GetCurrentMethod%2A> Methode.  
+  
+ [!code-csharp[System.Reflection.MethodBase.GetCurrentMethod#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.Reflection.MethodBase.GetCurrentMethod/cs/GetCurentMethod1.cs#1)]
+ [!code-vb[System.Reflection.MethodBase.GetCurrentMethod#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Reflection.MethodBase.GetCurrentMethod/vb/GetCurentMethod1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.TargetException">Dieser Member wurde durch einen Mechanismus mit später Bindung aufgerufen.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGenericArguments">
+      <MemberSignature Language="C#" Value="public virtual Type[] GetGenericArguments ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type[] GetGenericArguments() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.GetGenericArguments" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Array von <see cref="T:System.Type" />-Objekten zurück, die die Typargumente einer generischen Methode oder die Typparameter einer generischen Methodendefinition darstellen.</summary>
+        <returns>Ein Array von <see cref="T:System.Type" />-Objekten, die die Typargumente einer generischen Methode oder die Typparameter einer generischen Methodendefinition darstellen. Gibt ein leeres Array zurück, wenn die aktuelle Methode keine generische Methode ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Elemente des zurückgegebenen Arrays sind in der Reihenfolge, in der sie in der Liste der Typparameter der generischen Methode angezeigt werden.  
+  
+-   Wenn die aktuelle Methode eine geschlossen konstruierte Methode ist (d. h. der <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A> -Eigenschaft gibt `false`), das zurückgegebene Array der <xref:System.Reflection.MethodBase.GetGenericArguments%2A> Methode enthält die Typen, die die generischen Typparameter der aufgerufenen generischen Methode zugewiesen wurden Definition.  
+  
+-   Wenn die aktuelle Methode eine generische Methodendefinition ist, enthält das Array die Typparameter an.  
+  
+-   Wenn die aktuelle Methode eine offen konstruierte Methode ist (d. h. die <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A> -Eigenschaft gibt `true`) in denen bestimmten Typen einige Typparameter und Typ zugewiesen wurden einschließenden generische Typen in anderen Typ zugewiesen wurden Parameter, das Array enthält sowohl Typen als auch Parameter. Verwenden der <xref:System.Type.IsGenericParameter%2A> Eigenschaft, um Sie voneinander zu unterscheiden. Eine Demonstration dieses Szenarios, finden Sie unter dem Codebeispiel für die <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A> Eigenschaft.  
+  
+ Generische Konstruktoren werden in .NET Framework, Version 2.0 nicht unterstützt. Diese Eigenschaft löst <xref:System.NotSupportedException> nicht in einer abgeleiteten Klasse überschrieben wird, also eine Ausnahme wird ausgelöst, wenn die aktuelle Instanz des Typs ist <xref:System.Reflection.ConstructorInfo>.  
+  
+ Eine Liste der invarianten Bedingungen für Begriffe, die speziell für generische Methoden, finden Sie unter der <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType> Eigenschaft. Eine Liste der invarianten Bedingungen für die anderen Begriffe in generischen Reflektion verwendet, finden Sie unter der <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Das aktuelle Objekt ist eine <see cref="T:System.Reflection.ConstructorInfo" />. Generische Konstruktoren werden in .NET Framework, Version 2.0 nicht unterstützt. Diese Ausnahme ist das Standardverhalten, wenn diese Methode nicht in einer abgeleiteten Klasse überschrieben wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodBody">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.MethodBody GetMethodBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodBody GetMethodBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.GetMethodBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodBody</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse eine <see cref="T:System.Reflection.MethodBody" /> Objekt, das Zugriff auf den MSIL-Stream, lokale Variablen und Ausnahmen für die aktuelle Methode bereitstellt.</summary>
+        <returns>Ein <see cref="T:System.Reflection.MethodBody" /> Objekt, das Zugriff auf den MSIL-Stream, lokale Variablen und Ausnahmen für die aktuelle Methode bereitstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen nicht außer Kraft setzen die <xref:System.Reflection.MethodBase.GetMethodBody%2A> um sie zu verwenden. Sie erreichen die <xref:System.Reflection.MethodBase.GetMethodBody%2A> Methode <xref:System.Reflection.MethodInfo> und <xref:System.Reflection.ConstructorInfo> Objekten, da die Methode in der Common Language Runtime-Versionen dieser Klassen außer Kraft gesetzt wird. Beispielsweise die Laufzeitversion von der <xref:System.Reflection.MethodInfo> Klasse leitet sich von der <xref:System.Reflection.MethodInfo> -Klasse, die wiederum von abgeleitet ist die <xref:System.Reflection.MethodBase> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert eine Testmethode, die mit dem Namen `MethodBodyExample` und ihre lokalen Variableninformationen und Ausnahmebehandlungsklauseln angezeigt. Die <xref:System.Reflection.MethodBase.GetMethodBody%2A?displayProperty=nameWithType> Methode wird zum Abrufen einer <xref:System.Reflection.MethodBody> Objekt für die Testmethode.  
+  
+ Die <xref:System.Reflection.MethodBody.LocalVariables%2A> Eigenschaft wird zum Abrufen einer Liste von <xref:System.Reflection.LocalVariableInfo> Objekte und Anzeigen ihrer Typen und Indexreihenfolge. Die <xref:System.Reflection.MethodBody.ExceptionHandlingClauses%2A> Eigenschaft wird verwendet, um eine Liste mit Ausnahmebehandlung Klauseln zu erhalten.  
+  
+> [!NOTE]
+>  Nicht alle Computersprachen generieren <xref:System.Reflection.ExceptionHandlingClauseOptions?displayProperty=nameWithType> Klauseln. Visual Basic-Beispiel zeigt eine Filterklausel mit einem Visual Basic `When` Ausdruck, der in den Beispielen für andere Sprachen ausgelassen wird.  
+  
+ [!code-cpp[MethodBody#1](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#1)]
+ [!code-csharp[MethodBody#1](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#1)]
+ [!code-vb[MethodBody#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Diese Methode ist ungültig, es sei denn, die in einer abgeleiteten Klasse außer Kraft gesetzt.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">für den Zugriff auf die Metadaten für Elemente. Berechtigungswert:<see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodFromHandle">
+      <MemberSignature Language="C#" Value="public static System.Reflection.MethodBase GetMethodFromHandle (RuntimeMethodHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.MethodBase GetMethodFromHandle(valuetype System.RuntimeMethodHandle handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.GetMethodFromHandle(System.RuntimeMethodHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.RuntimeMethodHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Handle für die Methode.</param>
+        <summary>Ruft die Methodeninformationen mithilfe der Methode interne Metadatendarstellung (behandeln) ab.</summary>
+        <returns>Ein <see langword="MethodBase" /> mit Informationen über die Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Handles gelten nur in der Anwendungsdomäne, in der sie erworben wurden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="handle" /> ist ungültig.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodFromHandle">
+      <MemberSignature Language="C#" Value="public static System.Reflection.MethodBase GetMethodFromHandle (RuntimeMethodHandle handle, RuntimeTypeHandle declaringType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.MethodBase GetMethodFromHandle(valuetype System.RuntimeMethodHandle handle, valuetype System.RuntimeTypeHandle declaringType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.GetMethodFromHandle(System.RuntimeMethodHandle,System.RuntimeTypeHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.RuntimeMethodHandle" />
+        <Parameter Name="declaringType" Type="System.RuntimeTypeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Ein Handle für die interne Metadatendarstellung einer Konstruktor oder eine Methode.</param>
+        <param name="declaringType">Ein Handle für den generischen Typ, der den Konstruktor oder die Methode definiert.</param>
+        <summary>Ruft eine <see cref="T:System.Reflection.MethodBase" /> Objekt für den Konstruktor oder eine Methode, die durch das angegebene Handle für den angegebenen generischen Typ dargestellt.</summary>
+        <returns>Ein <see cref="T:System.Reflection.MethodBase" /> Objekt, das die Methode oder der Konstruktor, der gemäß darstellt <paramref name="handle" />, in dem vom angegebenen generischen Typ <paramref name="declaringType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Handles gelten nur in der Anwendungsdomäne, in der sie erworben wurden.  
+  
+ Ein <xref:System.RuntimeMethodHandle> -Struktur für einen Konstruktor oder eine Methode eines generischen Typs kann unterschiedliche darstellen <xref:System.Reflection.MethodBase> Objekte, abhängig von den Abfragetypen, die die Typparameter eines generischen Typs angegeben. Z. B. wenn `class G<T>` (`class G(Of T)` in Visual Basic `generic <T> ref class G` in C++) verfügt über eine Methode mit dem Rückgabetyp `T`, <xref:System.Reflection.MethodBase> -Objekt für diese Methode in einer konstruierten Klasse wie `G<int>` unterscheidet sich von der <xref:System.Reflection.MethodBase>Objekt für diese Methode in der generischen Typdefinition.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="handle" /> ist ungültig.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodImplementationFlags">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.MethodImplAttributes GetMethodImplementationFlags ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Reflection.MethodImplAttributes GetMethodImplementationFlags() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.GetMethodImplementationFlags" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodImplAttributes</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt beim Überschreiben in einer abgeleiteten Klasse die <see cref="T:System.Reflection.MethodImplAttributes" />-Flags.</summary>
+        <returns>Die <see langword="MethodImplAttributes" />-Flags.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird ein Konstruktor in einer dynamischen Assembly definiert und verwendet dann die <xref:System.Reflection.MethodBase.GetMethodImplementationFlags%2A> Methode, um die Methodenimplementierungsflags anzuzeigen, die standardmäßig festgelegt werden.  
+  
+ [!code-cpp[ConstructorBuilder_GetModule_4#3](~/samples/snippets/cpp/VS_Snippets_CLR/ConstructorBuilder_GetModule_4/CPP/constructorbuilder_getmodule_4.cpp#3)]
+ [!code-csharp[ConstructorBuilder_GetModule_4#3](~/samples/snippets/csharp/VS_Snippets_CLR/ConstructorBuilder_GetModule_4/CS/constructorbuilder_getmodule_4.cs#3)]
+ [!code-vb[ConstructorBuilder_GetModule_4#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/ConstructorBuilder_GetModule_4/VB/constructorbuilder_getmodule_4.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameters">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.ParameterInfo[] GetParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.ParameterInfo[] GetParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.GetParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ParameterInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft die Parameter der angegebenen Methode oder des Konstruktors ab.</summary>
+        <returns>Ein Array vom Typ <see langword="ParameterInfo" /> von diesem wiedergegeben, die Informationen, die die Signatur der Methode (oder Konstruktor) entspricht <see langword="MethodBase" /> Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Reflection.MethodBase.GetParameters%2A> die Parameter der abzurufenden Methode der `Invoke` Methode eines Delegaten.  
+  
+ Im Beispiel definiert einen Delegaten, der mit dem Namen `MyDelegate` und ein Ereignis namens `ev` vom Typ `MyDelegate`. Der Code in der `Main` Methode ermittelt die Ereignissignatur durch Abrufen den Delegattyp des Ereignisses, Abrufen der `Invoke` Methode der Delegattyp, und klicken Sie dann abrufen und Anzeigen von den Parametern.  
+  
+ [!code-cpp[eventarg#1](~/samples/snippets/cpp/VS_Snippets_CLR/EventArg/CPP/eventarg.cpp#1)]
+ [!code-csharp[eventarg#1](~/samples/snippets/csharp/VS_Snippets_CLR/EventArg/CS/eventarg.cs#1)]
+ [!code-vb[eventarg#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventArg/VB/eventarg.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (object obj, object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Invoke(object obj, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.Invoke(System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, für das Methode oder Konstruktor aufgerufen werden soll. Wenn eine Methode statisch ist, wird dieses Argument ignoriert. Wenn ein Konstruktor statisch ist, muss dieses Argument <see langword="null" /> oder eine Instanz der Klasse sein, die den Konstruktor definiert.</param>
+        <param name="parameters">Eine Argumentliste für die aufgerufene Methode oder den Konstruktor. Diese ist ein Array von Objekten, die hinsichtlich Anzahl, Reihenfolge und Typ mit den Parametern der aufzurufenden Methode bzw. des aufzurufenden Konstruktors identisch sind. Wenn keine Parameter vorhanden sind <c>Parameter</c> muss <see langword="null" />.  
+  
+ Wenn dieser Methode oder diesem Konstruktor gemäß Darstellung durch diese Instanz ein <see langword="ref" />-Parameter übergeben wird (<see langword="ByRef" /> in Visual Basic), ist kein besonderes Attribut für diesen Parameter erforderlich, um die Methode oder den Konstruktor mit dieser Funktion aufzurufen. Jedes Objekt im Array, das nicht explizit mit einem Wert initialisiert wird, wird den Standardwert für diesen Objekttyp enthalten. Bei Verweistypelementen ist dieser Wert <see langword="null" />. Bei Werttypelementen ist dieser Wert je nach Typ des jeweiligen Elements 0, 0.0 oder <see langword="false" />.</param>
+        <summary>Ruft die Methode oder den Konstruktor, die/der durch die aktuelle Instanz dargestellt wird, mit den angegebenen Parametern auf.</summary>
+        <returns>Ein Objekt, das den Rückgabewert der aufgerufenen Methode enthält, bzw. <see langword="null" /> im Falle eines Konstruktors.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine bequeme Methode, die Aufrufe der <xref:System.Reflection.MethodBase.Invoke%28System.Object%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%29> methodenüberladung, übergeben <xref:System.Reflection.BindingFlags.Default> für `invokeAttr` und `null` für `binder` und `culture`.  
+  
+ Wenn die aufgerufene Methode löst eine Ausnahme aus, die <xref:System.Exception.GetBaseException%2A?displayProperty=nameWithType> Methode gibt die Ausnahme zurück.  
+  
+ Zum Aufrufen einer statischen Methode mithilfe der <xref:System.Reflection.MethodInfo> Objekt, und übergeben `null` für `obj`.  
+  
+> [!NOTE]
+>  Wenn Überladung dieser Methode verwendet wird, um einen Instanzkonstruktor und aufzurufen, wird das Objekt für angegeben `obj` wird erneut initialisiert; d. h. alle Instanz Initialisierer ausgeführt werden. Der Rückgabewert ist `null`. Wenn ein Klassenkonstruktor aufgerufen wird, wird die Klasse initialisiert; d. h., alle Klasseninitialisierer werden ausgeführt. Der Rückgabewert ist `null`.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Methode kann verwendet werden, auf nicht öffentliche Member zuzugreifen, wenn der Aufrufer erteilt wurde <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> kennzeichnen und erteilen Sie der Berechtigungssatz für die nicht öffentlichen Member an des Aufrufers beschränkt ist Set- oder eine Teilmenge davon. (Siehe [Sicherheitsüberlegungen für die Reflektion](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.   
+  
+ Wenn ein Parameter der aktuellen Methode einen Werttyp und das entsprechende Argument in ist `parameters` ist `null`, die Common Language Runtime übergibt eine Instanz 0 (null) initialisiert, der den Werttyp.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, dynamische Methodensuche über Reflektion ermöglicht. Beachten Sie, das nicht der <xref:System.Reflection.MethodInfo> Objekt aus der Basisklasse, um die überschriebene Methode in der abgeleiteten Klasse aufgerufen werden, da der späten Bindung Außerkraftsetzungen aufgelöst werden kann.  
+  
+ [!code-cpp[Classic MethodBase.Invoke1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MethodBase.Invoke1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MethodBase.Invoke1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MethodBase.Invoke1 Example/CS/source.cs#1)]
+ [!code-vb[Classic MethodBase.Invoke1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MethodBase.Invoke1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.TargetException">
+          <block subset="none" type="note">
+            <para>  
+ In der [.NET für Windows Store-apps](http://go.microsoft.com/fwlink/?LinkID=247912) oder [Portable Class Library](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), catch <see cref="T:System.Exception" /> stattdessen.  
+  
+</para>
+          </block>  
+  
+ Der <paramref name="obj" />-Parameter ist <see langword="null" />, und die Methode ist nicht statisch.  
+  
+ - oder -   
+  
+ Die Methode ist nicht deklariert oder von der Klasse von <paramref name="obj" /> geerbt worden.  
+  
+ - oder -   
+  
+ Ein statischer Konstruktor wird aufgerufen, und <paramref name="obj" /> ist weder <see langword="null" /> noch eine Instanz der Klasse, die den Konstruktor deklariert hat.</exception>
+        <exception cref="T:System.ArgumentException">Die Elemente der <paramref name="parameters" /> Array entsprechen nicht die Signatur der Methode oder des Konstruktors, die von dieser Instanz reflektiert wird.</exception>
+        <exception cref="T:System.Reflection.TargetInvocationException">Die aufgerufene Methode bzw. der aufgerufene Konstruktor löst eine Ausnahme aus.  
+  
+ - oder -   
+  
+ Die aktuelle Instanz ist eine <see cref="T:System.Reflection.Emit.DynamicMethod" />, die nicht überprüfbaren Code enthält. Weitere Informationen finden Sie im Abschnitt „Überprüfung“ für <see cref="T:System.Reflection.Emit.DynamicMethod" />.</exception>
+        <exception cref="T:System.Reflection.TargetParameterCountException">Das <paramref name="parameters" />-Array weist nicht die richtige Anzahl von Argumenten auf.</exception>
+        <exception cref="T:System.MethodAccessException">
+          <block subset="none" type="note">
+            <para>  
+ In der [.NET für Windows Store-apps](http://go.microsoft.com/fwlink/?LinkID=247912) oder [Portable Class Library](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), fangen Sie die basisklassenausnahme <see cref="T:System.MemberAccessException" />, stattdessen.  
+  
+</para>
+          </block>  
+  
+ Der Aufrufer verfügt nicht über die Berechtigung zum Ausführen der Methode oder des Konstruktors, die/der von der aktuellen Instanz dargestellt wird.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Typ, der die Methode deklariert, ist ein offener generischer Typ. D.h., die <see cref="P:System.Type.ContainsGenericParameters" />-Eigenschaft gibt <see langword="true" /> für den deklarierenden Typ zurück.</exception>
+        <exception cref="T:System.NotSupportedException">Die aktuelle Instanz ist ein <see cref="T:System.Reflection.Emit.MethodBuilder" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public abstract object Invoke (object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object[] parameters, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Invoke(object obj, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object[] parameters, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.Invoke(System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, für das Methode oder Konstruktor aufgerufen werden soll. Wenn eine Methode statisch ist, wird dieses Argument ignoriert. Wenn ein Konstruktor statisch ist, muss dieses Argument <see langword="null" /> oder eine Instanz der Klasse sein, die den Konstruktor definiert.</param>
+        <param name="invokeAttr">Eine Bitmaske, die eine Kombination von 0 oder mehr Bitflags aus <see cref="T:System.Reflection.BindingFlags" />. Wenn <c>Binder</c> ist <see langword="null" />, dieser Parameter wird den Wert zugewiesen <see cref="F:System.Reflection.BindingFlags.Default" />daher alle übergebenen werden ignoriert.</param>
+        <param name="binder">Ein Objekt, das die Bindung, die Umwandlung von Argumenttypen, das Aufrufen von Membern und das Abrufen von <see langword="MemberInfo" />-Objekten über Reflektion ermöglicht. Wenn <c>Binder</c> ist <see langword="null" />, wird der Standardbinder verwendet.</param>
+        <param name="parameters">Eine Argumentliste für die aufgerufene Methode oder den Konstruktor. Diese ist ein Array von Objekten, die hinsichtlich Anzahl, Reihenfolge und Typ mit den Parametern der aufzurufenden Methode bzw. des aufzurufenden Konstruktors identisch sind. Wenn keine Parameter vorhanden sind, werden diese <see langword="null" />.  
+  
+ Wenn die Methode oder der Konstruktor, der von dieser Instanz dargestellten einen ByRef-Parameter akzeptiert, es ist kein besonderes Attribut für diesen Parameter erforderlich, um die Methode oder der Konstruktor, der mit dieser Funktion aufzurufen. Jedes Objekt im Array, das nicht explizit mit einem Wert initialisiert wird, wird den Standardwert für diesen Objekttyp enthalten. Bei Verweistypelementen ist dieser Wert <see langword="null" />. Bei Werttypelementen ist dieser Wert je nach Typ des jeweiligen Elements 0, 0.0 oder <see langword="false" />.</param>
+        <param name="culture">Eine Instanz von <see langword="CultureInfo" /> für die Steuerung der Umwandlung von Typen. Wenn dies <see langword="null" /> ist, wird die <see langword="CultureInfo" /> des aktuellen Threads verwendet. (Dies ist z. B. erforderlich, um einen <see langword="String" />, der 1000 darstellt, in einen <see langword="Double" />-Wert zu konvertieren, da 1000 in verschiedenen Kulturen unterschiedlich dargestellt wird.)</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die reflektierte Methode oder der Konstruktor mit den angegebenen Parametern auf.</summary>
+        <returns>Ein <see langword="Object" /> , enthält den Rückgabewert der aufgerufenen Methode oder <see langword="null" /> im Falle eines Konstruktors oder <see langword="null" /> , wenn der Rückgabetyp der Methode ist <see langword="void" />. Vor dem Aufrufen der Methode oder der Konstruktor, <see langword="Invoke" /> prüft, ob der Benutzer über die Zugriffsberechtigung verfügt, und stellt sicher, dass der Parameter gültig sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft dynamisch auf die Methode, die von dieser Instanz reflektiert wird, auf `obj`, und übergibt dabei die angegebenen Parameter. Wenn die Methode statisch ist, ist die `obj` Parameter wird ignoriert. Bei nicht statischen Methoden `obj` muss eine Instanz einer Klasse, die erbt oder die Methode deklariert und muss denselben Typ wie diese Klasse. Wenn die Methode keine Parameter, den Wert der hat `parameters` muss `null`. Andernfalls, Anzahl, Typ und Reihenfolge der Elemente in `parameters` muss identisch mit der Anzahl, Typ und die Reihenfolge der Parameter für die Methode, die von dieser Instanz reflektiert wird.  
+  
+ Optionale Parameter in aufrufen kann nicht ausgelassen werden `Invoke`. Zum Aufrufen einer Methode, die optionale Parameter auslassen, rufen Sie `Type.InvokeMember` stattdessen.  
+  
+> [!NOTE]
+>  Wenn Überladung dieser Methode verwendet wird, um einen Instanzkonstruktor und aufzurufen, wird das Objekt für angegeben `obj` wird erneut initialisiert; d. h. alle Instanz Initialisierer ausgeführt werden. Der Rückgabewert ist `null`. Wenn ein Klassenkonstruktor aufgerufen wird, wird die Klasse initialisiert; d. h., alle Klasseninitialisierer werden ausgeführt. Der Rückgabewert ist `null`.  
+  
+ Für primitive Pass-by-Value-Parameter, normale Erweiterung wird ausgeführt (Int16 -> Int32, z. B.). Für Verweisparameter übergeben nach Wert ist das normale Verweis widening (abgeleitete Klasse, um die Basisklasse und die Basisklasse in Schnittstellentyp) zulässig. Allerdings müssen für primitive Parameter durch Verweis übergeben, die Typen genau entsprechen. Bei Verweisparameter übergeben als Verweis bezieht sich die normalen erweiternde weiterhin.  
+  
+ Zum Beispiel wenn Methode durch reflektierte diese Instanz wird deklariert als `public boolean Compare(String a, String b)`, klicken Sie dann `parameters` muss ein Array von `Objects` mit der Länge 2 so, dass `parameters[0] = new Object("SomeString1") and parameters[1] = new Object("SomeString2")`.  
+  
+ Wenn ein Parameter der aktuellen Methode einen Werttyp und das entsprechende Argument in ist `parameters` ist `null`, die Common Language Runtime übergibt eine Instanz 0 (null) initialisiert, der den Werttyp.  
+  
+ Reflektion verwendet die dynamische Methodensuche virtuelle Methoden aufrufen. Nehmen wir beispielsweise an, dass die Klasse B von Klasse A erbt und beide implementieren eine virtuelle Methode mit dem Namen M. Angenommen, Sie haben eine `MethodInfo` Objekt, das für die Klasse a M darstellt Bei Verwendung der `Invoke` Methode M für ein Objekt vom Typ B aufgerufen werden soll, verwendet der Reflektion die von Klasse b angegebene Implementierung Auch wenn das Objekt vom Typ B zu A umgewandelt wird, wird die Implementierung von Klasse B angegebene verwendet (siehe unten stehendes Codebeispiel).  
+  
+ Andererseits, wenn die Methode nicht virtuell ist, wird mithilfe der Reflektion die Implementierung, die durch den Typ angegeben wird, von dem die `MethodInfo` abgerufen wurde, unabhängig vom Typ des Objekts, das als Ziel übergeben.  
+  
+ Zugriffseinschränkungen für vollständig vertrauenswürdige Code ignoriert. D. h. können private Konstruktoren, Methoden, Felder und Eigenschaften werden zugegriffen und per Reflektion aufgerufen werden, wenn der Code vollständig vertrauenswürdig ist.  
+  
+ Wenn die aufgerufene Methode eine Ausnahme auslöst, `TargetInvocationException.GetException` gibt die Ausnahme zurück. Diese Implementierung löst eine `NotSupportedException`.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Methode kann verwendet werden, auf nicht öffentliche Member zuzugreifen, wenn der Aufrufer erteilt wurde <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> kennzeichnen und erteilen Sie der Berechtigungssatz für die nicht öffentlichen Member an des Aufrufers beschränkt ist Set- oder eine Teilmenge davon. (Siehe [Sicherheitsüberlegungen für die Reflektion](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.   
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt alle Elemente der <xref:System.Reflection.Binder?displayProperty=nameWithType> -Klasse unter Verwendung einer Überladung von <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>. Die private Methode `CanConvertFrom` kompatible Typen eines bestimmten Typs sucht. Ein weiteres Beispiel für das Aufrufen von Membern in einem Szenario mit benutzerdefinierten Bindung finden Sie unter [dynamisches Laden und Verwenden von Typen](~/docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
+  
+ [!code-cpp[Binder_1#1](~/samples/snippets/cpp/VS_Snippets_CLR/Binder_1/CPP/binder.cpp#1)]
+ [!code-csharp[Binder_1#1](~/samples/snippets/csharp/VS_Snippets_CLR/Binder_1/CS/binder.cs#1)]
+ [!code-vb[Binder_1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Binder_1/VB/binder.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.TargetException">Der <paramref name="obj" />-Parameter ist <see langword="null" />, und die Methode ist nicht statisch.  
+  
+ - oder -   
+  
+ Die Methode ist nicht deklariert oder von der Klasse von <paramref name="obj" /> geerbt worden.  
+  
+ - oder -   
+  
+ Ein statischer Konstruktor wird aufgerufen, und <paramref name="obj" /> ist weder <see langword="null" /> noch eine Instanz der Klasse, die den Konstruktor deklariert hat.</exception>
+        <exception cref="T:System.ArgumentException">Der Typ des der <paramref name="parameters" /> Parameter entspricht nicht die Signatur der Methode oder des Konstruktors, die von dieser Instanz reflektiert wird.</exception>
+        <exception cref="T:System.Reflection.TargetParameterCountException">Das <paramref name="parameters" />-Array weist nicht die richtige Anzahl von Argumenten auf.</exception>
+        <exception cref="T:System.Reflection.TargetInvocationException">Die aufgerufene Methode bzw. der aufgerufene Konstruktor löst eine Ausnahme aus.</exception>
+        <exception cref="T:System.MethodAccessException">Der Aufrufer verfügt nicht über die Berechtigung zum Ausführen der Methode oder des Konstruktors, die/der von der aktuellen Instanz dargestellt wird.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Typ, der die Methode deklariert, ist ein offener generischer Typ. D.h., die <see cref="P:System.Type.ContainsGenericParameters" />-Eigenschaft gibt <see langword="true" /> für den deklarierenden Typ zurück.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAbstract">
+      <MemberSignature Language="C#" Value="public bool IsAbstract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAbstract" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsAbstract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Methode abstrakt ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Methode abstrakt ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein abstrakter Member in einer Basisklasse deklariert wird und keine Implementierung angegeben hat.  
+  
+ Zum Abrufen der <xref:System.Reflection.MethodBase>, rufen Sie zunächst den Typ. Bekommen Sie den Typ der Methodennamens. Abrufen von der Methode, die `MethodBase`. Wenn die `MethodBase` oder Konstruktor ist nicht öffentlich, geschützt ist und nicht ohne weiteres möglich. Legen Sie für den Zugriff auf eine nicht öffentliche Methode, die <xref:System.Reflection.BindingFlags> -Maske auf `NonPublic` in `GetMethod`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird bestimmt, ob die angegebene Methode ist abstrakt und das Ergebnis wird angezeigt.  
+  
+ [!code-cpp[Classic MethodBase.IsAbstract Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MethodBase.IsAbstract Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MethodBase.IsAbstract Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MethodBase.IsAbstract Example/CS/source.cs#1)]
+ [!code-vb[Classic MethodBase.IsAbstract Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MethodBase.IsAbstract Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAssembly">
+      <MemberSignature Language="C#" Value="public bool IsAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, ob die potenzielle Sichtbarkeit dieser Methode oder der Konstruktor von beschrieben wird <see cref="F:System.Reflection.MethodAttributes.Assembly" />; also die Methode oder der Konstruktor sichtbar ist höchstens in andere Typen in derselben Assembly, und ist nicht sichtbar ist, um abgeleitete Typen außerhalb der Assembly.</summary>
+        <value>
+          <see langword="true" />Wenn die Sichtbarkeit von dieser Methode oder der Konstruktor von genau beschrieben ist <see cref="F:System.Reflection.MethodAttributes.Assembly" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die tatsächliche Sichtbarkeit einer Methode wird von der Sichtbarkeit seines Typs beschränkt. Die <xref:System.Reflection.MethodBase.IsAssembly%2A> Eigenschaft möglicherweise `true` für eine Methode, aber wenn sie eine Methode eines privaten geschachtelten Typs und dann die Methode nicht außerhalb des enthaltenden Typs angezeigt wird.  
+  
+ Die Sichtbarkeit einer Methode oder der Konstruktor wird von genau beschrieben <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> ist der einzige Sichtbarkeitsmodifizierer `internal` (`Friend` in Visual Basic). Diese Eigenschaft ist `false` für Methoden, sind `protected internal` in c# (`Protected Friend` in Visual Basic `protected public` in C++); verwenden Sie die <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A> Eigenschaft, um solche Methoden zu identifizieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert Methoden, mit unterschiedlichen Sichtbarkeitsebenen und zeigt die Werte ihrer <xref:System.Reflection.MethodBase.IsAssembly%2A>, <xref:System.Reflection.MethodBase.IsFamily%2A>, <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A>, und <xref:System.Reflection.MethodBase.IsFamilyAndAssembly%2A> Eigenschaften.  
+  
+> [!NOTE]
+>  Die Programmiersprachen Visual Basic und c# können keine Methoden mit definieren <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> Sichtbarkeit; nur in der C++-Beispiel Zugriffsebene angezeigt wird.  
+  
+ [!code-cpp[Classic MethodBase.IsAssembly Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MethodBase.IsAssembly Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MethodBase.IsAssembly Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MethodBase.IsAssembly Example/CS/source.cs#1)]
+ [!code-vb[Classic MethodBase.IsAssembly Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MethodBase.IsAssembly Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConstructor">
+      <MemberSignature Language="C#" Value="public bool IsConstructor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConstructor" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsConstructor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Methode einen Konstruktor ist.</summary>
+        <value>
+          <see langword="true" />Wenn diese Methode einen Konstruktor, dargestellt durch eine <see cref="T:System.Reflection.ConstructorInfo" /> Objekt (finden Sie in den Hinweisen zu <see cref="T:System.Reflection.Emit.ConstructorBuilder" /> Objekte) ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Reflection.MethodBase.IsConstructor%2A> -Eigenschaft gibt `false` für eine <xref:System.Reflection.Emit.ConstructorBuilder> -Objekt in einen dynamischen Typ ist, es sei denn, die <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> Flag enthalten war, der `attributes` -Parameter, wenn der Konstruktor definiert wurde. Das Weglassen der <xref:System.Reflection.MethodAttributes.RTSpecialName> Flag wirkt sich nicht auf die Richtigkeit des ausgegebenen Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFamily">
+      <MemberSignature Language="C#" Value="public bool IsFamily { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFamily" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsFamily" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, ob die Sichtbarkeit von dieser Methode oder der Konstruktor von beschrieben wird <see cref="F:System.Reflection.MethodAttributes.Family" />; d. h. die Methode oder der Konstruktor ist nur innerhalb der Klasse und abgeleitete Klassen sichtbar.</summary>
+        <value>
+          <see langword="true" />Wenn Zugriff auf diese Methode oder der Konstruktor wird von genau beschrieben <see cref="F:System.Reflection.MethodAttributes.Family" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Sichtbarkeit einer Methode oder der Konstruktor wird von genau beschrieben <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> ist der einzige Sichtbarkeitsmodifizierer `protected`. Diese Eigenschaft ist `false` für Methoden, sind `protected internal` in c# (`Protected Friend` in Visual Basic `protected public` in C++); verwenden Sie die <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A> Eigenschaft, um solche Methoden zu identifizieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert Methoden, mit unterschiedlichen Sichtbarkeitsebenen und zeigt die Werte ihrer <xref:System.Reflection.MethodBase.IsAssembly%2A>, <xref:System.Reflection.MethodBase.IsFamily%2A>, <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A>, und <xref:System.Reflection.MethodBase.IsFamilyAndAssembly%2A> Eigenschaften.  
+  
+> [!NOTE]
+>  Die Programmiersprachen Visual Basic und c# können keine Methoden mit definieren <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> Sichtbarkeit; nur in der C++-Beispiel Zugriffsebene angezeigt wird.  
+  
+ [!code-cpp[Classic MethodBase.IsAssembly Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MethodBase.IsAssembly Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MethodBase.IsAssembly Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MethodBase.IsAssembly Example/CS/source.cs#1)]
+ [!code-vb[Classic MethodBase.IsAssembly Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MethodBase.IsAssembly Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFamilyAndAssembly">
+      <MemberSignature Language="C#" Value="public bool IsFamilyAndAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFamilyAndAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsFamilyAndAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, ob die Sichtbarkeit von dieser Methode oder der Konstruktor von beschrieben wird <see cref="F:System.Reflection.MethodAttributes.FamANDAssem" />; d. h. die Methode oder der Konstruktor kann aufgerufen werden von abgeleiteten Klassen, jedoch nur, wenn sie sich in derselben Assembly befinden.</summary>
+        <value>
+          <see langword="true" />Wenn Zugriff auf diese Methode oder der Konstruktor wird von genau beschrieben <see cref="F:System.Reflection.MethodAttributes.FamANDAssem" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Sichtbarkeit einer Methode oder der Konstruktor wird von genau beschrieben <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> ist der Sichtbarkeitsmodifizierer `protected private` in C++. Methoden mit dieser Sichtbarkeit können nicht in Visual Basic oder c# definiert werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert Methoden, mit unterschiedlichen Sichtbarkeitsebenen und zeigt die Werte ihrer <xref:System.Reflection.MethodBase.IsAssembly%2A>, <xref:System.Reflection.MethodBase.IsFamily%2A>, <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A>, und <xref:System.Reflection.MethodBase.IsFamilyAndAssembly%2A> Eigenschaften.  
+  
+> [!NOTE]
+>  Die Programmiersprachen Visual Basic und c# können keine Methoden mit definieren <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> Sichtbarkeit; nur in der C++-Beispiel Zugriffsebene angezeigt wird.  
+  
+ [!code-cpp[Classic MethodBase.IsAssembly Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MethodBase.IsAssembly Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MethodBase.IsAssembly Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MethodBase.IsAssembly Example/CS/source.cs#1)]
+ [!code-vb[Classic MethodBase.IsAssembly Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MethodBase.IsAssembly Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFamilyOrAssembly">
+      <MemberSignature Language="C#" Value="public bool IsFamilyOrAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFamilyOrAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsFamilyOrAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, ob die potenzielle Sichtbarkeit dieser Methode oder der Konstruktor von beschrieben wird <see cref="F:System.Reflection.MethodAttributes.FamORAssem" />; d. h. die Methode oder der Konstruktor kann aufgerufen werden von abgeleiteten Klassen wo sie gespeichert sind und von Klassen in derselben Assembly.</summary>
+        <value>
+          <see langword="true" />Wenn Zugriff auf diese Methode oder der Konstruktor wird von genau beschrieben <see cref="F:System.Reflection.MethodAttributes.FamORAssem" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Typmember <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> Sichtbarkeit, es kann aufgerufen werden aus jeweils ein Element in einer abgeleiteten Klasse oder ein Member in derselben Assembly, jedoch nicht von irgendeinem anderen Typ.  
+  
+ Die tatsächliche Sichtbarkeit einer Methode wird von der Sichtbarkeit seines Typs beschränkt. Die <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A> Eigenschaft möglicherweise `true` für eine Methode, aber wenn sie eine Methode eines privaten geschachtelten Typs und dann die Methode nicht außerhalb des enthaltenden Typs angezeigt wird.  
+  
+ Die Sichtbarkeit einer Methode oder der Konstruktor wird von genau beschrieben <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> ist der Sichtbarkeitsmodifizierer `protected internal` in c# (`Protected Friend` in Visual Basic `protected public` in C++).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert Methoden, mit unterschiedlichen Sichtbarkeitsebenen und zeigt die Werte ihrer <xref:System.Reflection.MethodBase.IsAssembly%2A>, <xref:System.Reflection.MethodBase.IsFamily%2A>, <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A>, und <xref:System.Reflection.MethodBase.IsFamilyAndAssembly%2A> Eigenschaften.  
+  
+> [!NOTE]
+>  Die Programmiersprachen Visual Basic und c# können keine Methoden mit definieren <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> Sichtbarkeit; nur in der C++-Beispiel Zugriffsebene angezeigt wird.  
+  
+ [!code-cpp[Classic MethodBase.IsAssembly Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MethodBase.IsAssembly Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MethodBase.IsAssembly Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MethodBase.IsAssembly Example/CS/source.cs#1)]
+ [!code-vb[Classic MethodBase.IsAssembly Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MethodBase.IsAssembly Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFinal">
+      <MemberSignature Language="C#" Value="public bool IsFinal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFinal" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsFinal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob diese Methode ist <see langword="final" />.</summary>
+        <value>
+          <see langword="true" />, wenn diese Methode <see langword="final" /> ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu bestimmen, ob eine Methode überschrieben werden kann, ist es nicht überprüfen, ob ausreichend <xref:System.Reflection.MethodBase.IsVirtual%2A> ist `true`. Für eine Methode überschrieben werden `IsVirtual` muss `true` und `IsFinal` muss `false`. Angenommen, eine Methode kann nicht virtuell sein, aber eine Schnittstellenmethode implementiert. Die common Language Runtime erfordert, dass alle Methoden, die Schnittstellenmember implementieren als gekennzeichnet werden müssen `virtual`daher den Compilerfehler kennzeichnet die Methode `virtual final`. Daher gibt es eine Methode als gekennzeichnet ist `virtual` jedoch noch nicht überschrieben werden kann.  
+  
+ Um mit Sicherheit festzustellen, ob eine Methode überschrieben werden kann, verwenden Sie Code wie diese:  
+  
+ `if (MethodInfo.IsVirtual && !MethodInfo.IsFinal)`  
+  
+ Wenn `IsVirtual` ist `false` oder `IsFinal` ist `true`, und klicken Sie dann die Methode nicht überschrieben werden kann.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt `false` für `IsFinal`, kann der Eindruck, dass MyMethod überschreibbar ist führen. Der Code druckt `false` , obwohl MyMethod nicht gekennzeichnet ist `virtual` und kann daher nicht überschrieben werden.  
+  
+ [!code-cpp[Classic MethodBase.IsVirtual Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MethodBase.IsVirtual Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MethodBase.IsVirtual Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MethodBase.IsVirtual Example/CS/source.cs#1)]
+ [!code-vb[Classic MethodBase.IsVirtual Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MethodBase.IsVirtual Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGenericMethod">
+      <MemberSignature Language="C#" Value="public virtual bool IsGenericMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGenericMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsGenericMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Methode generisch ist.</summary>
+        <value>
+          <see langword="true" />Wenn die aktuelle <see cref="T:System.Reflection.MethodBase" /> eine generische Methode darstellt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Reflection.MethodBase.IsGenericMethod%2A> -Eigenschaft können Sie bestimmen, ob die aktuelle <xref:System.Reflection.MethodBase> -Objekt eine generische Methode darstellt. Verwenden der <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A> -Eigenschaft können Sie bestimmen, ob die aktuelle <xref:System.Reflection.MethodBase> -Objekt eine offen konstruierte Methode oder geschlossen konstruierte Methode darstellt.  
+  
+> [!NOTE]
+>  Generika werden standardmäßig nicht unterstützt. Diese Eigenschaft gibt `false` nicht in einer abgeleiteten Klasse überschrieben. Generische Konstruktoren werden nicht in .NET Framework, Version 2.0, unterstützt, sodass diese Eigenschaft zurückgegeben `false` Wenn die aktuelle Instanz vom Typ <xref:System.Reflection.ConstructorInfo>.  
+  
+ Eine Liste der invarianten Bedingungen für Begriffe, die speziell für generische Methoden, finden Sie unter der <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType> Eigenschaft. Eine Liste der invarianten Bedingungen für die anderen Begriffe in generischen Reflektion verwendet, finden Sie unter der <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGenericMethodDefinition">
+      <MemberSignature Language="C#" Value="public virtual bool IsGenericMethodDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGenericMethodDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsGenericMethodDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Methode eine generische Methodendefinition ist.</summary>
+        <value>
+          <see langword="true" />, wenn das aktuelle <see cref="T:System.Reflection.MethodBase" />-Objekt die Definition einer generischen Methode darstellt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die aktuelle <xref:System.Reflection.MethodBase> eine generische Methodendefinition darstellt:  
+  
+-   Die <xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>-Eigenschaft ist `true`.  
+  
+-   Für jede <xref:System.Type> Objekt in das zurückgegebene Array die <xref:System.Reflection.MethodBase.GetGenericArguments%2A> Methode:  
+  
+    -   Die <xref:System.Type.IsGenericParameter%2A?displayProperty=nameWithType>-Eigenschaft ist `true`.  
+  
+    -   Die <xref:System.Type.DeclaringMethod%2A?displayProperty=nameWithType> Eigenschaft gibt die aktuelle Instanz zurück.  
+  
+    -   Die <xref:System.Type.GenericParameterPosition%2A?displayProperty=nameWithType> Eigenschaft ist identisch mit die Position des der <xref:System.Type> Objekt im Array.  
+  
+> [!NOTE]
+>  Generika werden standardmäßig nicht unterstützt. Diese Eigenschaft gibt `false` nicht in einer abgeleiteten Klasse überschrieben. Generische Konstruktoren werden nicht in .NET Framework, Version 2.0, unterstützt, sodass diese Eigenschaft zurückgegeben `false` Wenn die aktuelle Instanz vom Typ <xref:System.Reflection.ConstructorInfo>.  
+  
+ Eine Liste der invarianten Bedingungen für Begriffe, die speziell für generische Methoden, finden Sie unter der <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType> Eigenschaft. Eine Liste der invarianten Bedingungen für die anderen Begriffe in generischen Reflektion verwendet, finden Sie unter der <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHideBySig">
+      <MemberSignature Language="C#" Value="public bool IsHideBySig { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHideBySig" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsHideBySig" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob nur ein Mitglied der gleichen Art genau die gleiche Signatur in der abgeleiteten Klasse ausgeblendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn das Element, nach Signatur ausgeblendet ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Element in einer abgeleiteten Klasse deklariert wird, mit dem C#- `new` Modifizierer oder Visual Basic `Shadows` Modifizierer verwenden, können sie ein Element mit demselben Namen in der Basisklasse ausblenden. C#-Blendet Basisklassenmember durch Signatur an. Also wenn Member der Basisklasse mehrere Überladungen besitzt, ist die einzige, die ausgeblendet ist diejenige, die dieselbe Signatur hat. Im Gegensatz dazu werden Visual Basic alle Überladungen der Basisklasse ausgeblendet. Folglich <xref:System.Reflection.MethodBase.IsHideBySig%2A> gibt `false` auf ein Member deklariert, die von Visual Basic `Shadows` -Modifizierer und `true` für ein Element mit dem c# deklariert `new` Modifizierer.  
+  
+> [!WARNING]
+>  Diese Eigenschaft bestimmt, ob eine Methode enthält nicht die <xref:System.Reflection.MethodAttributes.NewSlot> Attribut. Eine Methode, die entweder mit deklariert wird die `new` oder die `Shadows` Modifizierer müssen die <xref:System.Reflection.MethodAttributes.NewSlot> -Attribut, sondern nur Methoden, die mit deklariert `new` (d. h. nur C#-Methoden) müssen die <xref:System.Reflection.MethodBase.IsHideBySig%2A> Eigenschaftensatz zu `true`.  Um festzustellen, ob eine Methode verfügt über die <xref:System.Reflection.MethodAttributes.NewSlot> -Attribut angegeben wird, verwenden Sie Code ähnlich dem folgenden: `if ((myMethodInfo.Attributes & MethodAttributes.VtableLayoutMask) == MethodAttributes.NewSlot)` in c# oder `If (myMethodInfo.Attributes And MethodAttributes.VtableLayoutMask) = MethodAttributes.NewSlot` in Visual Basic. Beachten Sie jedoch, obwohl alle Methoden mit deklariert `new` oder `Shadows` haben die <xref:System.Reflection.MethodAttributes.NewSlot> -Attributs sind nicht alle Methoden, die über die <xref:System.Reflection.MethodAttributes.NewSlot> Attribut deklariert sind, mit `new` oder `Shadows`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel enthält eine Basisklasse mit einer überladenen Methode, und einer abgeleiteten Klasse, die eine der Überladungen ausblendet. In Visual Basic-Version des Codebeispiels wird die <xref:System.Reflection.MethodBase.IsHideBySig%2A> -Eigenschaft gibt `false` für das Element in der abgeleiteten Klasse. In der C#-Version des Codebeispiels, gibt die Eigenschaft `true` für das Element in der abgeleiteten Klasse.  
+  
+ [!code-cpp[System.Reflection.MethodBase.IsHideBySig#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.MethodBase.IsHideBySig/cpp/hide.cpp#1)]
+ [!code-csharp[System.Reflection.MethodBase.IsHideBySig#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.MethodBase.IsHideBySig/CS/hide.cs#1)]
+ [!code-vb[System.Reflection.MethodBase.IsHideBySig#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.MethodBase.IsHideBySig/VB/hide.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrivate">
+      <MemberSignature Language="C#" Value="public bool IsPrivate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrivate" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsPrivate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob es sich bei diesem Member privat ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Zugriff auf diese Methode auf andere Member der Klasse selbst beschränkt ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Typmember `Private` Ebene Sichtbarkeit, es kann aus aufgerufen werden jeweils ein Element in der gleichen Klasse und keine andere.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPublic">
+      <MemberSignature Language="C#" Value="public bool IsPublic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPublic" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsPublic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob es sich um eine öffentliche Methode handelt.</summary>
+        <value>
+          <see langword="true" />Wenn diese Methode öffentlich ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Abrufen der <xref:System.Reflection.MethodBase>, rufen Sie zunächst den Typ. Bekommen Sie den Typ der Methodennamens. Abrufen von der Methode, die `MethodBase`. Wenn die `MethodBase` oder Konstruktor ist nicht öffentlich, geschützt ist und nicht ohne weiteres möglich. Legen Sie für den Zugriff auf eine nicht öffentliche Methode, die <xref:System.Reflection.BindingFlags> -Maske auf `NonPublic` in `GetMethod`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Reflection.MethodBase.IsPublic%2A> Eigenschaft, um eine Meldung angezeigt, der angibt, ob die angegebene Methode öffentlich ist.  
+  
+ [!code-cpp[Classic MethodBase.IsPublic Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MethodBase.IsPublic Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MethodBase.IsPublic Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MethodBase.IsPublic Example/CS/source.cs#1)]
+ [!code-vb[Classic MethodBase.IsPublic Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MethodBase.IsPublic Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecurityCritical">
+      <MemberSignature Language="C#" Value="public virtual bool IsSecurityCritical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecurityCritical" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsSecurityCritical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die aktuelle Methode oder der Konstruktor der aktuellen Vertrauensebene sicherheitstransparent oder sicherheitsrelevant und sicher zugänglich ist und daher wichtige Vorgänge ausführen darf.</summary>
+        <value>
+          <see langword="true" />Wenn die aktuelle Methode oder der Konstruktor sicherheitstransparent oder sicherheitsrelevant und sicher zugänglich auf der aktuellen Vertrauensebene ist; <see langword="false" /> wenn er sicherheitstransparent ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.MethodBase.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, und <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A> Eigenschaften melden die Transparenzebene eines die Methode oder der Konstruktor mit der aktuellen Vertrauensebene wie von der common Language Runtime (CLR) bestimmt. In der folgenden Tabelle werden die Kombinationen dieser Eigenschaften gezeigt:  
+  
+|Sicherheitsstufe|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
+|--------------------|------------------------|----------------------------|---------------------------|  
+|Kritisch|`true`|`false`|`false`|  
+|Safe ist kritisch|`true`|`true`|`false`|  
+|Transparent|`false`|`false`|`true`|  
+  
+ Die Verwendung dieser Eigenschaften ist deutlich einfacher als das Untersuchen der sicherheitsanmerkungen einer Assembly und ihre Typen und Member, das Überprüfen der aktuellen Vertrauensebene und das versuchen, die laufzeitregeln zu duplizieren.  
+  
+> [!IMPORTANT]
+>  Für teilweise vertrauenswürdige Assemblys ist der Wert dieser Eigenschaft hängt von der aktuellen Vertrauensebene der Assembly. Wenn die Assembly in einer teilweise vertrauenswürdigen Anwendungsdomäne (z. B. in einer Sandkastenanwendungsdomäne) geladen wird, ignoriert die Laufzeit die sicherheitsanmerkungen der Assembly an. Die Assembly und alle zugehörigen Typen werden als transparent behandelt. Die Common Language Runtime zahlt Beachtung der sicherheitsanmerkungen einer teilweise vertrauenswürdigen Assembly nur, wenn diese Assembly in eine voll vertrauenswürdige Anwendungsdomäne (z. B. in der Standardanwendungsdomäne einer Desktopanwendung) geladen wird. Dagegen ist eine vertrauenswürdige Assembly (d. h. eine Assembly mit starkem Namen, die im globalen Assemblycache installiert ist) immer mit voller Vertrauenswürdigkeit unabhängig von der Vertrauensebene der Anwendungsdomäne geladen, damit der aktuellen Vertrauensebene immer voll vertrauenswürdig ist. Sie können die aktuellen Vertrauensebenen von Assemblys und Anwendungsdomänen bestimmen, indem Sie mit der <xref:System.Reflection.Assembly.IsFullyTrusted%2A?displayProperty=nameWithType> und <xref:System.AppDomain.IsFullyTrusted%2A?displayProperty=nameWithType> Eigenschaften.  
+  
+ Weitere Informationen über Reflektion und Transparenz finden Sie unter [Sicherheitsüberlegungen für die Reflektion](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md). Informationen zur Transparenz finden Sie unter [Sicherheitsänderungen](~/docs/framework/security/security-changes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecuritySafeCritical">
+      <MemberSignature Language="C#" Value="public virtual bool IsSecuritySafeCritical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecuritySafeCritical" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsSecuritySafeCritical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die aktuelle Methode oder der Konstruktor auf der aktuellen Vertrauensebene sicherheitsrelevant und sicher zugänglich ist. d. h. ob er wichtige Vorgänge ausführen darf und kann von transparentem Code zugegriffen werden.</summary>
+        <value>
+          <see langword="true" />Wenn die Methode oder der Konstruktor auf der aktuellen Vertrauensebene sicherheitsrelevant und sicher zugänglich ist. <see langword="false" /> , wenn er sicherheitstransparent oder sicherheitsrelevant ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.MethodBase.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, und <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A> Eigenschaften melden die Transparenzebene eines die Methode oder der Konstruktor mit der aktuellen Vertrauensebene wie von der common Language Runtime (CLR) bestimmt. In der folgenden Tabelle werden die Kombinationen dieser Eigenschaften gezeigt:  
+  
+|Sicherheitsstufe|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
+|--------------------|------------------------|----------------------------|---------------------------|  
+|Kritisch|`true`|`false`|`false`|  
+|Safe ist kritisch|`true`|`true`|`false`|  
+|Transparent|`false`|`false`|`true`|  
+  
+ Die Verwendung dieser Eigenschaften ist deutlich einfacher als das Untersuchen der sicherheitsanmerkungen einer Assembly und ihre Typen und Member, das Überprüfen der aktuellen Vertrauensebene und das versuchen, die laufzeitregeln zu duplizieren.  
+  
+> [!IMPORTANT]
+>  Für teilweise vertrauenswürdige Assemblys ist der Wert dieser Eigenschaft hängt von der aktuellen Vertrauensebene der Assembly. Wenn die Assembly in einer teilweise vertrauenswürdigen Anwendungsdomäne (z. B. in einer Sandkastenanwendungsdomäne) geladen wird, ignoriert die Laufzeit die sicherheitsanmerkungen der Assembly an. Die Assembly und alle zugehörigen Typen werden als transparent behandelt. Die Common Language Runtime zahlt Beachtung der sicherheitsanmerkungen einer teilweise vertrauenswürdigen Assembly nur, wenn diese Assembly in eine voll vertrauenswürdige Anwendungsdomäne (z. B. in der Standardanwendungsdomäne einer Desktopanwendung) geladen wird. Dagegen ist eine vertrauenswürdige Assembly (d. h. eine Assembly mit starkem Namen, die im globalen Assemblycache installiert ist) immer mit voller Vertrauenswürdigkeit unabhängig von der Vertrauensebene der Anwendungsdomäne geladen, damit der aktuellen Vertrauensebene immer voll vertrauenswürdig ist. Sie können die aktuellen Vertrauensebenen von Assemblys und Anwendungsdomänen bestimmen, indem Sie mit der <xref:System.Reflection.Assembly.IsFullyTrusted%2A?displayProperty=nameWithType> und <xref:System.AppDomain.IsFullyTrusted%2A?displayProperty=nameWithType> Eigenschaften.  
+  
+ Weitere Informationen über Reflektion und Transparenz finden Sie unter [Sicherheitsüberlegungen für die Reflektion](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md). Informationen zur Transparenz finden Sie unter [Sicherheitsänderungen](~/docs/framework/security/security-changes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecurityTransparent">
+      <MemberSignature Language="C#" Value="public virtual bool IsSecurityTransparent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecurityTransparent" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsSecurityTransparent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die aktuelle Methode oder der Konstruktor ist transparent auf der aktuellen Vertrauensebene und daher wichtige Vorgänge ausführen kann.</summary>
+        <value>
+          <see langword="true" />Wenn die Methode oder der Konstruktor auf der aktuellen Vertrauensebene sicherheitstransparent ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft gibt `true`, <xref:System.Reflection.MethodBase.IsSecurityCritical%2A> und <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> Eigenschaften zurückgeben `false`.  
+  
+ Die <xref:System.Reflection.MethodBase.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, und <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A> Eigenschaften melden die Transparenzebene eines die Methode oder der Konstruktor mit der aktuellen Vertrauensebene wie von der common Language Runtime (CLR) bestimmt. Die Verwendung dieser Eigenschaften ist deutlich einfacher als das Untersuchen der sicherheitsanmerkungen einer Assembly und ihre Typen und Member, das Überprüfen der aktuellen Vertrauensebene und das versuchen, die laufzeitregeln zu duplizieren.  
+  
+> [!IMPORTANT]
+>  Für teilweise vertrauenswürdige Assemblys ist der Wert dieser Eigenschaft hängt von der aktuellen Vertrauensebene der Assembly. Wenn die Assembly in einer teilweise vertrauenswürdigen Anwendungsdomäne (z. B. in einer Sandkastenanwendungsdomäne) geladen wird, ignoriert die Laufzeit die sicherheitsanmerkungen der Assembly an. Die Assembly und alle zugehörigen Typen werden als transparent behandelt. Die Common Language Runtime zahlt Beachtung der sicherheitsanmerkungen einer teilweise vertrauenswürdigen Assembly nur, wenn diese Assembly in eine voll vertrauenswürdige Anwendungsdomäne (z. B. in der Standardanwendungsdomäne einer Desktopanwendung) geladen wird. Dagegen ist eine vertrauenswürdige Assembly (d. h. eine Assembly mit starkem Namen, die im globalen Assemblycache installiert ist) immer mit voller Vertrauenswürdigkeit unabhängig von der Vertrauensebene der Anwendungsdomäne geladen, damit der aktuellen Vertrauensebene immer voll vertrauenswürdig ist. Sie können die aktuellen Vertrauensebenen von Assemblys und Anwendungsdomänen bestimmen, indem Sie mit der <xref:System.Reflection.Assembly.IsFullyTrusted%2A?displayProperty=nameWithType> und <xref:System.AppDomain.IsFullyTrusted%2A?displayProperty=nameWithType> Eigenschaften.  
+  
+ Weitere Informationen über Reflektion und Transparenz finden Sie unter [Sicherheitsüberlegungen für die Reflektion](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md). Informationen zur Transparenz finden Sie unter [Sicherheitsänderungen](~/docs/framework/security/security-changes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSpecialName">
+      <MemberSignature Language="C#" Value="public bool IsSpecialName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSpecialName" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsSpecialName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob diese Methode einen besonderen Namen hat.</summary>
+        <value>
+          <see langword="true" />Wenn diese Methode einen besonderen Namen hat. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.MethodAttributes.SpecialName> Bit ist gesetzt, um Elemente zu kennzeichnen, die von einigen Compilern (z. B. Eigenschaftenaccessoren and -Operator Überladen von Methoden) auf besondere Weise behandelt werden.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel veranschaulicht die Verwendung der <xref:System.Reflection.MethodBase.IsSpecialName%2A> filtern, die interne oder Private Member aus einer Liste.  
+  
+ [!code-cpp[Classic Type.IsSpecialName Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Type.IsSpecialName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Type.IsSpecialName Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Type.IsSpecialName Example/CS/source.cs#1)]
+ [!code-vb[Classic Type.IsSpecialName Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Type.IsSpecialName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStatic">
+      <MemberSignature Language="C#" Value="public bool IsStatic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStatic" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsStatic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Methode <see langword="static" /> ist.</summary>
+        <value>
+          <see langword="true" />, wenn diese Methode <see langword="static" /> ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein statisches Element kann nicht implizit die Daten in einer Klasse verweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVirtual">
+      <MemberSignature Language="C#" Value="public bool IsVirtual { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVirtual" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.IsVirtual" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Methode <see langword="virtual" /> ist.</summary>
+        <value>
+          <see langword="true" />, wenn diese Methode <see langword="virtual" /> ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein virtuelles Member verweisen möglicherweise auf die Daten in einer Klasse und muss über eine Instanz der Klasse verwiesen werden.  
+  
+ Um zu bestimmen, ob eine Methode überschrieben werden kann, ist es nicht überprüfen, ob ausreichend `IsVirtual` ist `true`. Für eine Methode überschrieben werden `IsVirtual` muss `true` und <xref:System.Reflection.MethodBase.IsFinal%2A> muss `false`. Angenommen, eine Methode kann nicht virtuell sein, aber eine Schnittstellenmethode implementiert. Die common Language Runtime erfordert, dass alle Methoden, die Schnittstellenmember implementieren als gekennzeichnet werden müssen `virtual`daher den Compilerfehler kennzeichnet die Methode `virtual final`. Daher gibt es eine Methode als gekennzeichnet ist `virtual` jedoch noch nicht überschrieben werden kann.  
+  
+ Um mit Sicherheit festzustellen, ob eine Methode überschrieben werden kann, verwenden Sie Code wie diese:  
+  
+```csharp  
+if (MethodInfo.IsVirtual && !MethodInfo.IsFinal)  
+```  
+  
+```vb  
+If MethodInfo.IsVirtual AndAlso Not MethodInfo.IsFinal Then  
+```  
+  
+ Wenn `IsVirtual` ist `false` oder `IsFinal` ist `true`, und klicken Sie dann die Methode nicht überschrieben werden kann.  
+  
+ Sie können bestimmen, ob die aktuelle Methode durch Aufrufen eine Methode in einer Basisklasse überschreibt die <xref:System.Reflection.MethodInfo.GetBaseDefinition%2A?displayProperty=nameWithType> Methode. Das folgende Beispiel implementiert eine `IsOverride` Methode, die dies tut.  
+  
+ [!code-csharp[system.reflection.methodinfo.getbasedefinition#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.methodinfo.getbasedefinition/cs/IsOverride1.cs#2)]
+ [!code-vb[system.reflection.methodinfo.getbasedefinition#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflection.methodinfo.getbasedefinition/vb/IsOverride1.vb#2)]  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt `false` für `IsFinal`, kann der Eindruck, die führen `MyMethod` überschrieben werden kann. Der Code druckt `false` , obwohl `MyMethod` nicht gekennzeichnet `virtual` und kann daher nicht überschrieben werden.  
+  
+ [!code-cpp[Classic MethodBase.IsVirtual Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MethodBase.IsVirtual Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MethodBase.IsVirtual Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MethodBase.IsVirtual Example/CS/source.cs#1)]
+ [!code-vb[Classic MethodBase.IsVirtual Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MethodBase.IsVirtual Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodHandle">
+      <MemberSignature Language="C#" Value="public abstract RuntimeMethodHandle MethodHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.RuntimeMethodHandle MethodHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.MethodHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeMethodHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Handle für die interne Metadatendarstellung einer Methode ab.</summary>
+        <value>Ein <see cref="T:System.RuntimeMethodHandle" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Handles gelten nur in der Anwendungsdomäne, in der sie erworben wurden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodImplementationFlags">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.MethodImplAttributes MethodImplementationFlags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.MethodImplAttributes MethodImplementationFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.MethodImplementationFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodImplAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Reflection.MethodImplAttributes" /> Flags, die die Attribute einer methodenimplementierung angeben.</summary>
+        <value>Die Methodenimplementierungsflags.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der <xref:System.Reflection.MethodBase.GetMethodImplementationFlags%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Reflection.MethodBase left, System.Reflection.MethodBase right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Reflection.MethodBase left, class System.Reflection.MethodBase right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.op_Equality(System.Reflection.MethodBase,System.Reflection.MethodBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Reflection.MethodBase" />
+        <Parameter Name="right" Type="System.Reflection.MethodBase" />
+      </Parameters>
+      <Docs>
+        <param name="left">Das erste zu vergleichende Objekt.</param>
+        <param name="right">Das zweite zu vergleichende Objekt.</param>
+        <summary>Gibt an, ob zwei <see cref="T:System.Reflection.MethodBase" />-Objekte gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="left" /> und <paramref name="right" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Reflection.MethodBase left, System.Reflection.MethodBase right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Reflection.MethodBase left, class System.Reflection.MethodBase right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.op_Inequality(System.Reflection.MethodBase,System.Reflection.MethodBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Reflection.MethodBase" />
+        <Parameter Name="right" Type="System.Reflection.MethodBase" />
+      </Parameters>
+      <Docs>
+        <param name="left">Das erste zu vergleichende Objekt.</param>
+        <param name="right">Das zweite zu vergleichende Objekt.</param>
+        <summary>Gibt an, ob zwei <see cref="T:System.Reflection.MethodBase" />-Objekte ungleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="left" /> und <paramref name="right" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _MethodBase.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._MethodBase.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="rgszNames">Das übergebene Array von zuzuordnenden Namen.</param>
+        <param name="cNames">Die Anzahl der zuzuordnenden Namen.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem die Namen interpretiert werden sollen.</param>
+        <param name="rgDispId">Das vom Aufrufer zugewiesene Array, das die IDs entsprechend den Namen empfängt.</param>
+        <summary>Ordnet eine Reihe von Namen einer entsprechenden Reihe von Dispatchbezeichnern zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetIDsOfNames`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.GetType">
+      <MemberSignature Language="C#" Value="Type _MethodBase.GetType ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Type System.Runtime.InteropServices._MethodBase.GetType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#GetType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Runtime.InteropServices._MethodBase.GetType" />.</summary>
+        <returns>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Runtime.InteropServices._MethodBase.GetType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Reflection.MethodBase>-Instanz in eine <xref:System.Runtime.InteropServices._MethodBase>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _MethodBase.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._MethodBase.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">Die zurückzugebenden Typinformationen.</param>
+        <param name="lcid">Der Gebietsschemabezeichner für die Typinformationen.</param>
+        <param name="ppTInfo">Empfängt einen Zeiger auf das angeforderte Objekt mit den Typinformationen.</param>
+        <summary>Ruft die Typinformationen für ein Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfo`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _MethodBase.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._MethodBase.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Zeigt auf einen Speicherort, der die Anzahl der Schnittstellen mit Typinformationen empfängt, die vom Objekt bereitgestellt werden.</param>
+        <summary>Ruft die Anzahl der Schnittstellen mit Typinformationen ab, die von einem Objekt bereitgestellt werden (0 oder 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfoCount`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.Invoke">
+      <MemberSignature Language="C#" Value="void _MethodBase.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._MethodBase.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Bezeichnet den Member.</param>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem Argumente interpretiert werden sollen.</param>
+        <param name="wFlags">Flags, die den Kontext des Aufrufs beschreiben.</param>
+        <param name="pDispParams">Ein Zeiger auf eine Struktur, die ein Array von Argumenten und ein Array von Argument-DISPIDs für benannte Argumente sowie Zähler für die Anzahl der Elemente in jedem Array enthält.</param>
+        <param name="pVarResult">Ein Verweis auf den Speicherort, an dem das Ergebnis gespeichert werden soll.</param>
+        <param name="pExcepInfo">Ein Zeiger auf eine Struktur mit Ausnahmeinformationen.</param>
+        <param name="puArgErr">Der Index des ersten Arguments mit einem Fehler.</param>
+        <summary>Stellt den Zugriff auf von einem Objekt verfügbar gemachte Eigenschaften und Methoden bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::Invoke`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.IsAbstract">
+      <MemberSignature Language="C#" Value="bool System.Runtime.InteropServices._MethodBase.IsAbstract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Runtime.InteropServices._MethodBase.IsAbstract" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#IsAbstract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsAbstract" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsAbstract" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Reflection.MethodBase>-Instanz in eine <xref:System.Runtime.InteropServices._MethodBase>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.IsAssembly">
+      <MemberSignature Language="C#" Value="bool System.Runtime.InteropServices._MethodBase.IsAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Runtime.InteropServices._MethodBase.IsAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#IsAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsAssembly" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsAssembly" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Reflection.MethodBase>-Instanz in eine <xref:System.Runtime.InteropServices._MethodBase>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.IsConstructor">
+      <MemberSignature Language="C#" Value="bool System.Runtime.InteropServices._MethodBase.IsConstructor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Runtime.InteropServices._MethodBase.IsConstructor" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#IsConstructor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsConstructor" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsConstructor" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Reflection.MethodBase>-Instanz in eine <xref:System.Runtime.InteropServices._MethodBase>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.IsFamily">
+      <MemberSignature Language="C#" Value="bool System.Runtime.InteropServices._MethodBase.IsFamily { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Runtime.InteropServices._MethodBase.IsFamily" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#IsFamily" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsFamily" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsFamily" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Reflection.MethodBase>-Instanz in eine <xref:System.Runtime.InteropServices._MethodBase>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.IsFamilyAndAssembly">
+      <MemberSignature Language="C#" Value="bool System.Runtime.InteropServices._MethodBase.IsFamilyAndAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Runtime.InteropServices._MethodBase.IsFamilyAndAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#IsFamilyAndAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsFamilyAndAssembly" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsFamilyAndAssembly" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Reflection.MethodBase>-Instanz in eine <xref:System.Runtime.InteropServices._MethodBase>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.IsFamilyOrAssembly">
+      <MemberSignature Language="C#" Value="bool System.Runtime.InteropServices._MethodBase.IsFamilyOrAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Runtime.InteropServices._MethodBase.IsFamilyOrAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#IsFamilyOrAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsFamilyOrAssembly" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsFamilyOrAssembly" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Reflection.MethodBase>-Instanz in eine <xref:System.Runtime.InteropServices._MethodBase>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.IsFinal">
+      <MemberSignature Language="C#" Value="bool System.Runtime.InteropServices._MethodBase.IsFinal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Runtime.InteropServices._MethodBase.IsFinal" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#IsFinal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsFinal" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsFinal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Reflection.MethodBase>-Instanz in eine <xref:System.Runtime.InteropServices._MethodBase>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.IsHideBySig">
+      <MemberSignature Language="C#" Value="bool System.Runtime.InteropServices._MethodBase.IsHideBySig { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Runtime.InteropServices._MethodBase.IsHideBySig" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#IsHideBySig" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsHideBySig" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsHideBySig" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Reflection.MethodBase>-Instanz in eine <xref:System.Runtime.InteropServices._MethodBase>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.IsPrivate">
+      <MemberSignature Language="C#" Value="bool System.Runtime.InteropServices._MethodBase.IsPrivate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Runtime.InteropServices._MethodBase.IsPrivate" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#IsPrivate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsPrivate" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsPrivate" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Reflection.MethodBase>-Instanz in eine <xref:System.Runtime.InteropServices._MethodBase>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.IsPublic">
+      <MemberSignature Language="C#" Value="bool System.Runtime.InteropServices._MethodBase.IsPublic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Runtime.InteropServices._MethodBase.IsPublic" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#IsPublic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsPublic" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsPublic" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Reflection.MethodBase>-Instanz in eine <xref:System.Runtime.InteropServices._MethodBase>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.IsSpecialName">
+      <MemberSignature Language="C#" Value="bool System.Runtime.InteropServices._MethodBase.IsSpecialName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Runtime.InteropServices._MethodBase.IsSpecialName" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#IsSpecialName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsSpecialName" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsSpecialName" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Reflection.MethodBase>-Instanz in eine <xref:System.Runtime.InteropServices._MethodBase>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.IsStatic">
+      <MemberSignature Language="C#" Value="bool System.Runtime.InteropServices._MethodBase.IsStatic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Runtime.InteropServices._MethodBase.IsStatic" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#IsStatic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsStatic" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsStatic" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Reflection.MethodBase>-Instanz in eine <xref:System.Runtime.InteropServices._MethodBase>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodBase.IsVirtual">
+      <MemberSignature Language="C#" Value="bool System.Runtime.InteropServices._MethodBase.IsVirtual { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Runtime.InteropServices._MethodBase.IsVirtual" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodBase.System#Runtime#InteropServices#_MethodBase#IsVirtual" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsVirtual" />.</summary>
+        <value>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Runtime.InteropServices._MethodBase.IsVirtual" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Reflection.MethodBase>-Instanz in eine <xref:System.Runtime.InteropServices._MethodBase>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,183 @@
+<Type Name="UploadProgressChangedEventArgs" FullName="System.Net.UploadProgressChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class UploadProgressChangedEventArgs : System.ComponentModel.ProgressChangedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UploadProgressChangedEventArgs extends System.ComponentModel.ProgressChangedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Net.UploadProgressChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.WebClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.ProgressChangedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Net.WebClient.UploadProgressChanged" /> -Ereignis für ein <see cref="T:System.Net.WebClient" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instanzen dieser Klasse übergeben werden, um die <xref:System.Net.UploadProgressChangedEventHandler>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BytesReceived">
+      <MemberSignature Language="C#" Value="public long BytesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 BytesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.UploadProgressChangedEventArgs.BytesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der empfangenen Bytes.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Anzahl der empfangenen Bytes angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hochladen von Daten auf einem Server kann dazu führen, dass ein Download vom Server. Nehmen Sie beispielsweise an, dass Ihre Anwendung eine POST-Anforderung an einen Webserver hochladen. Der resultierende Download aktualisiert <xref:System.Net.UploadProgressChangedEventArgs.BytesReceived%2A> und <xref:System.Net.UploadProgressChangedEventArgs.TotalBytesToReceive%2A>.  
+  
+ Um zu bestimmen, welcher Prozentsatz der Übertragung aufgetreten ist, verwenden die <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> Eigenschaft. Wenn das Hochladen abgeschlossen ist, ist <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 50 %. Wenn der Download abgeschlossen ist, <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 100 %.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BytesSent">
+      <MemberSignature Language="C#" Value="public long BytesSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 BytesSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.UploadProgressChangedEventArgs.BytesSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der gesendeten Bytes.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Anzahl der gesendeten Bytes angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hochladen von Daten auf einem Server kann dazu führen, dass ein Download vom Server. Nehmen Sie beispielsweise an, dass Ihre Anwendung eine POST-Anforderung an einen Webserver hochladen. Der resultierende Download aktualisiert <xref:System.Net.UploadProgressChangedEventArgs.BytesReceived%2A> und <xref:System.Net.UploadProgressChangedEventArgs.TotalBytesToReceive%2A>.  
+  
+ Um zu bestimmen, welcher Prozentsatz der Übertragung aufgetreten ist, verwenden die <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> Eigenschaft. Wenn das Hochladen abgeschlossen ist, ist <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 50 %. Wenn der Download abgeschlossen ist, <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 100 %.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalBytesToReceive">
+      <MemberSignature Language="C#" Value="public long TotalBytesToReceive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TotalBytesToReceive" />
+      <MemberSignature Language="DocId" Value="P:System.Net.UploadProgressChangedEventArgs.TotalBytesToReceive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtanzahl von Bytes in einem <see cref="T:System.Net.WebClient" /> Vorgang zum Hochladen von Daten.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Anzahl von Bytes angibt, die empfangen werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Bestimmen der Anzahl der Bytes, die bereits empfangen die <xref:System.Net.DownloadProgressChangedEventArgs.BytesReceived%2A> Eigenschaft.  
+  
+ Hochladen von Daten auf einem Server kann dazu führen, dass ein Download vom Server. Nehmen Sie beispielsweise an, dass Ihre Anwendung eine POST-Anforderung an einen Webserver hochladen. Der resultierende Download aktualisiert <xref:System.Net.UploadProgressChangedEventArgs.BytesReceived%2A> und <xref:System.Net.UploadProgressChangedEventArgs.TotalBytesToReceive%2A>.  
+  
+ Um zu bestimmen, welcher Prozentsatz der Übertragung aufgetreten ist, verwenden die <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> Eigenschaft. Wenn das Hochladen abgeschlossen ist, ist <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 50 %. Wenn der Download abgeschlossen ist, <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 100 %.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalBytesToSend">
+      <MemberSignature Language="C#" Value="public long TotalBytesToSend { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TotalBytesToSend" />
+      <MemberSignature Language="DocId" Value="P:System.Net.UploadProgressChangedEventArgs.TotalBytesToSend" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtanzahl der zu sendenden Bytes ab.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die Anzahl von Bytes angibt, die gesendet werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anzahl der Bytes, die bereits gesendet ermitteln Sie mithilfe der <xref:System.Net.UploadProgressChangedEventArgs.BytesSent%2A> Eigenschaft.  
+  
+ Hochladen von Daten auf einem Server kann dazu führen, dass ein Download vom Server. Nehmen Sie beispielsweise an, dass Ihre Anwendung eine POST-Anforderung an einen Webserver hochladen. Der resultierende Download aktualisiert <xref:System.Net.UploadProgressChangedEventArgs.BytesReceived%2A> und <xref:System.Net.UploadProgressChangedEventArgs.TotalBytesToReceive%2A>.  
+  
+ Um zu bestimmen, welcher Prozentsatz der Übertragung aufgetreten ist, verwenden die <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> Eigenschaft. Wenn das Hochladen abgeschlossen ist, ist <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 50 %. Wenn der Download abgeschlossen ist, <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 100 %.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

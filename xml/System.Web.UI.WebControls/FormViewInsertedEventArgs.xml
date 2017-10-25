@@ -1,0 +1,268 @@
+<Type Name="FormViewInsertedEventArgs" FullName="System.Web.UI.WebControls.FormViewInsertedEventArgs">
+  <TypeSignature Language="C#" Value="public class FormViewInsertedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormViewInsertedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewInsertedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.FormView.ItemInserted" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FormView> -Steuerelement löst die <xref:System.Web.UI.WebControls.FormView.ItemInserted> Ereignis aus, wenn eine Schaltfläche zum Einfügen (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Einfügen") innerhalb des Steuerelements geklickt wird, aber nachdem die <xref:System.Web.UI.WebControls.FormView> Steuerelement einfügen des Datensatzes. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, z. B. Überprüfen der Ergebnisse einer Insert-Vorgang aus, wenn dieses Ereignis tritt auf.  
+  
+ Ein <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs> Ereignisbehandlungsmethode, wodurch Sie zum Bestimmen der Anzahl der betroffenen Datensätze und alle Ausnahmen, die möglicherweise aufgetreten-Objekt übergeben wird. Verwenden Sie zum Bestimmen der Anzahl der Datensätze, die von der Insert-Vorgang betroffen sind der <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.AffectedRows%2A> Eigenschaft. Verwenden der <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.Exception%2A> Eigenschaft, um zu bestimmen, ob Ausnahmen aufgetreten sind. Sie können auch angeben, ob die Ausnahme in der Ereignisbehandlungsmethode, indem behandelt wurde die <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.ExceptionHandled%2A> Eigenschaft. Wenn Sie die Werte von den eingefügten Datensatz zugreifen müssen, verwenden Sie die <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.Values%2A> Eigenschaft.  
+  
+ Wird standardmäßig die <xref:System.Web.UI.WebControls.FormView> steuerelementrückgabe für den Modus gemäß der <xref:System.Web.UI.WebControls.FormView.DefaultMode%2A> Eigenschaft nach dem Einfügevorgang. Falls eine Ausnahme während des Einfügevorgangs auftritt, können Sie aufbewahren der <xref:System.Web.UI.WebControls.FormView> Steuerelement im Einfügemodus durch Festlegen der <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.KeepInInsertMode%2A> Eigenschaft `true`.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs> -Objekt übergeben, um die Ereignisbehandlungsmethode für den <xref:System.Web.UI.WebControls.FormView.ItemInserted> Ereignis, um zu bestimmen, ob eine Ausnahme während einer Insert-Vorgang aufgetreten ist.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormViewInsertedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewInsertedEventArgs/CS/formviewinsertedeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewInsertedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewInsertedEventArgs/VB/formviewinsertedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormViewInsertedEventArgs (int affectedRows, Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 affectedRows, class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FormViewInsertedEventArgs.#ctor(System.Int32,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="affectedRows" Type="System.Int32" />
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="affectedRows">Die Anzahl der Zeilen, die von der Insert-Vorgang betroffen sind.</param>
+        <param name="e">Eine <see cref="T:System.Exception" /> , die die Ausnahme ausgelöst, wenn der Einfügevorgang ausgeführt wurde darstellt. Wenn keine Ausnahme ausgelöst wurde, verwenden Sie <see langword="null" /> für diesen Parameter.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.FormViewInsertedEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs> Klasse.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs>-Instanz aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.AffectedRows%2A>|Der Wert des `affectedRows`-Parameters.|  
+|<xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.Exception%2A>|Die <xref:System.Exception?displayProperty=nameWithType> Objekt in der `e` Parameter.|  
+|<xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.ExceptionHandled%2A>|Initialisiert auf `false`.|  
+|<xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.KeepInInsertMode%2A>|Initialisiert auf `false`.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectedRows">
+      <MemberSignature Language="C#" Value="public int AffectedRows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AffectedRows" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewInsertedEventArgs.AffectedRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der von der Insert-Vorgang betroffenen Zeilen.</summary>
+        <value>Die Anzahl der Zeilen, die von der Insert-Vorgang betroffen sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.AffectedRows%2A> -Eigenschaft können Sie bestimmen die Anzahl der Datensätze, die von der Insert-Vorgang betroffen sind. Diese Eigenschaft wird häufig verwendet, um sicherzustellen, dass die richtige Anzahl von Datensätzen in den folgenden Situationen eingefügt wurde:  
+  
+-   Stellen Sie sicher, dass nur ein einzelner Datensatz eingefügt wurde. In einigen Fällen kann eine falsch geschriebene Insert-Anweisung mehrere Datensätze einfügen.  
+  
+-   Stellen Sie sicher, dass ein Datensatz eingefügt wurde, wenn ein Fehler während des Einfügevorgangs auftritt, der keine Ausnahme auslöst.  
+  
+-   Stellen Sie sicher, dass ein Datensatz eingefügt wurde, wenn ein Datenquellen-Steuerelement, die konflikterkennung (vollständige Parallelität), z. B. unterstützt die <xref:System.Web.UI.WebControls.SqlDataSource> und <xref:System.Web.UI.WebControls.ObjectDataSource> steuert, hat die <xref:System.Web.UI.WebControls.SqlDataSource.ConflictDetection%2A> -Eigenschaftensatz auf die `ConflictOptions.CompareAllValues` Enumerationswert. Bei dieser Einstellung kann ein Datensatz mit den gleichen Schlüsselwert als einen Datensatz von einem anderen Benutzer gleichzeitig nicht eingefügt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.AffectedRows%2A> Eigenschaft, um sicherzustellen, dass ein Datensatz während des Einfügevorgangs eingefügt wurde.  
+  
+ [!code-aspx-csharp[FormViewInsertedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewInsertedEventArgs/CS/formviewinsertedeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewInsertedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewInsertedEventArgs/VB/formviewinsertedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewInsertedEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausnahme (falls vorhanden), die während des Einfügevorgangs ausgelöst wurde.</summary>
+        <value>Eine <see cref="T:System.Exception" /> , die die Ausnahme, die während des Einfügevorgangs ausgelöste darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.Exception%2A> Eigenschaft, um die Ausnahme (sofern vorhanden) zu bestimmen, die während des Einfügevorgangs ausgelöst wurde. Wenn keine Ausnahmen ausgelöst wurden, gibt diese Eigenschaft `null`.  
+  
+> [!NOTE]
+>  Wenn eine Ausnahme ausgelöst wurde und Sie zur Behandlung von Ausnahmen im Ereignishandler entscheiden, müssen Sie festlegen der <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.ExceptionHandled%2A> Eigenschaft `true`ist, andernfalls der <xref:System.Web.UI.WebControls.FormView> Steuerelement löst die Ausnahme erneut aus.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.Exception%2A> Eigenschaft, um zu bestimmen, ob eine Ausnahme bei einem Einfügevorgang ausgelöst wurde.  
+  
+ [!code-aspx-csharp[FormViewInsertedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewInsertedEventArgs/CS/formviewinsertedeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewInsertedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewInsertedEventArgs/VB/formviewinsertedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionHandled">
+      <MemberSignature Language="C#" Value="public bool ExceptionHandled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExceptionHandled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewInsertedEventArgs.ExceptionHandled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Ausnahme, die während des Einfügevorgangs ausgelöst wurde im Ereignishandler behandelt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Ausnahme im Ereignishandler behandelt wurde; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn während des Einfügevorgangs eine Ausnahme ausgelöst wird, verwenden Sie die <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.ExceptionHandled%2A> Eigenschaft, um anzugeben, ob die Ausnahme im Ereignishandler behandelt wurde. Wenn diese Eigenschaft festgelegt wird, um `true`, gilt die Ausnahme behandelt und nicht erneut ausgelöst. Wenn diese Eigenschaft, um festgelegt wird `false`die <xref:System.Web.UI.WebControls.FormView> Steuerelement löst die Ausnahme erneut aus. Um zu bestimmen, welche Ausnahme ausgelöst wurde, verwenden die <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.Exception%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.ExceptionHandled%2A> Eigenschaft, um anzugeben, dass die Ausnahme im Ereignishandler behandelt wurde.  
+  
+ [!code-aspx-csharp[FormViewInsertedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewInsertedEventArgs/CS/formviewinsertedeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewInsertedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewInsertedEventArgs/VB/formviewinsertedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepInInsertMode">
+      <MemberSignature Language="C#" Value="public bool KeepInInsertMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeepInInsertMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewInsertedEventArgs.KeepInInsertMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.FormView" /> -Steuerelement nach einem Einfügevorgang im Einfügemodus bleiben soll.</summary>
+        <value>
+          <see langword="true" />Um nach einem Einfügevorgang im Einfügemodus zu bleiben. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Web.UI.WebControls.FormView> steuerelementrückgabe für den Modus gemäß der <xref:System.Web.UI.WebControls.FormView.DefaultMode%2A> Eigenschaft. Verwenden der <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.KeepInInsertMode%2A> Eigenschaft, um anzugeben, ob die <xref:System.Web.UI.WebControls.FormView> -Steuerelement nach einem Einfügevorgang im Einfügemodus bleiben soll. Beibehalten der <xref:System.Web.UI.WebControls.FormView> im Einfügemodus steuern, legen Sie diese Eigenschaft auf `true`.  
+  
+> [!NOTE]
+>  Diese Eigenschaft sollte verwendet werden, nur, wenn eine Situation (z. B. eine Ausnahme ausgelöst wird) ausgeführt wird, die das Steuerelement in ein anderes Verhalten als üblich erfordert. Wenn die <xref:System.Web.UI.WebControls.FormView> Steuerelement muss standardmäßig im Einfügemodus bleiben, legen Sie die <xref:System.Web.UI.WebControls.FormView.DefaultMode%2A> Eigenschaft stattdessen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.KeepInInsertMode%2A> Eigenschaft beibehalten der <xref:System.Web.UI.WebControls.FormView> Steuerelement im Einfügemodus tritt eine Ausnahme bei einem Einfügevorgang.  
+  
+ [!code-aspx-csharp[FormViewInsertedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewInsertedEventArgs/CS/formviewinsertedeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewInsertedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewInsertedEventArgs/VB/formviewinsertedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewInsertedEventArgs.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch, das die Feld Name/Wert-Paare für den eingefügten Datensatz enthält.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> Objekt, das ein Wörterbuch von Name/Wert-Paare für den eingefügten Datensatz Schlüsselfeld enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.Values%2A> Eigenschaft, um den Zugriff auf die Werte der Felder für den eingefügten Datensatz. Diese Werte können Sie z. B. eingefügte Datensätze protokollieren.  
+  
+ Die <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.Values%2A> -Eigenschaft gibt ein <xref:System.Collections.Specialized.OrderedDictionary> Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary?displayProperty=nameWithType> Schnittstelle. Die <xref:System.Collections.Specialized.OrderedDictionary> Objekt enthält <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> Objekte, die die Felder des eingefügten Datensatz darstellen. Verwenden Sie für den Zugriff auf den Feldnamen, die <xref:System.Collections.Specialized.OrderedDictionary.Keys%2A> Eigenschaft von der <xref:System.Collections.Specialized.OrderedDictionary> Objekt. Auf ähnliche Weise können Sie die Feldwerte zugreifen, mithilfe der <xref:System.Collections.Specialized.OrderedDictionary.Values%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie auch den Indexer, der die <xref:System.Collections.Specialized.OrderedDictionary> Objekt Zugriff auf das Feld Werte direkt. Der Vorteil der Verwendung des Indexers ist, dass es Feldwerte direkt zurückgibt. Datenquellen-Steuerelementen, die abhängig von der Reihenfolge der Felder (z. B. <xref:System.Web.UI.WebControls.AccessDataSource>) können nur über einen Index auf Feldwerte zugreifen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Durchlaufen der Elemente in der <xref:System.Web.UI.WebControls.FormViewInsertedEventArgs.Values%2A> Auflistung.  
+  
+ [!code-aspx-csharp[FormViewInsertedEventArgsValues#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewInsertedEventArgsValues/CS/formviewinsertedeventargsvaluescs.aspx#1)]
+ [!code-aspx-vb[FormViewInsertedEventArgsValues#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewInsertedEventArgsValues/VB/formviewinsertedeventargsvaluesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

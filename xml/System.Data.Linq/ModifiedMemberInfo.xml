@@ -1,0 +1,73 @@
+<Type Name="ModifiedMemberInfo" FullName="System.Data.Linq.ModifiedMemberInfo">
+  <TypeSignature Language="C#" Value="public struct ModifiedMemberInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ModifiedMemberInfo extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.ModifiedMemberInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält die Werte der Elemente, die in LINQ to SQL-Anwendungen geändert wurden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CurrentValue">
+      <MemberSignature Language="C#" Value="public object CurrentValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CurrentValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.ModifiedMemberInfo.CurrentValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Wert des geänderten Members.</summary>
+        <value>Der Wert des Members.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public System.Reflection.MemberInfo Member { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MemberInfo Member" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.ModifiedMemberInfo.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Memberinformationen für das geänderte Element.</summary>
+        <value>Informationen zum Member in Konflikt stehen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalValue">
+      <MemberSignature Language="C#" Value="public object OriginalValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object OriginalValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.ModifiedMemberInfo.OriginalValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den ursprünglichen Wert des geänderten Members.</summary>
+        <value>Der ursprüngliche Wert für das geänderte Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

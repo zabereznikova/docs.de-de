@@ -1,0 +1,125 @@
+<Type Name="PrintSystemDesiredAccess" FullName="System.Printing.PrintSystemDesiredAccess">
+  <TypeSignature Language="C#" Value="public enum PrintSystemDesiredAccess" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PrintSystemDesiredAccess extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintSystemDesiredAccess" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, die verschiedene Zugriffsrechte (oder Zugriffsebenen) zum Drucken von Objekten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zugriffsrechte, die auf jeder Ebene des Zugriffs verfügbar sind, variieren je nach Folgendes:  
+  
+-   Gibt an, ob der Druckserver einen Computer oder einem Druckserver Einheit ist.  
+  
+-   Das Betriebssystem, das verwendet wird.  
+  
+-   Die Sicherheitsupdates, die installiert werden.  
+  
+-   Die Sicherheitsrichtlinien, die unterstützt werden.  
+  
+ Aus diesem Grund Zugriff rechten Beschreibungen im Abschnitt "Member" sind typisch für die Rechte, die jede Zugriffsebene zugeordnet ist, aber die Zugriffsebenen aufgeführt möglicherweise mehr oder weniger Rechte auf bestimmten Systemen zur Verfügung.  
+  
+ Diese Werte werden in erster Linie verwendet, als Parameter für <xref:System.Printing.PrintServer> und <xref:System.Printing.PrintQueue> Konstruktoren. Die Konstruktoren löst Ausnahmen aus, wenn Sie einen Wert verwenden, der nur auf eine andere Art von Objekt angewendet werden kann. Übergeben Sie z. B. nicht AdministratePrinter auf eine <xref:System.Printing.PrintServer> Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie auf diese Enumeration verwenden, um einen zweiten Drucker, der unterscheidet sich in ihren Eigenschaften aus einem bereits vorhandenen Drucker nur in Speicherort, Port und freigegebenen Status zu installieren.  
+  
+ [!code-csharp[ClonePrinter#ClonePrinter](~/samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
+ [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AdministratePrinter">
+      <MemberSignature Language="C#" Value="AdministratePrinter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PrintSystemDesiredAccess AdministratePrinter = int32(983052)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PrintSystemDesiredAccess.AdministratePrinter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemDesiredAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, führen Sie alle administrative Aufgaben für die Druckerwarteschlange, einschließlich des Rechts zum Anhalten und Fortsetzen von jeder Druckauftrag; und das Recht, alle Aufträge aus der Warteschlange zu löschen. Diese Zugriffsebene umfasst auch alle Rechte unter <see cref="F:System.Printing.PrintSystemDesiredAccess.UsePrinter" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AdministrateServer">
+      <MemberSignature Language="C#" Value="AdministrateServer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PrintSystemDesiredAccess AdministrateServer = int32(983041)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PrintSystemDesiredAccess.AdministrateServer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemDesiredAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Ausführen aller Verwaltungsaufgaben für den Druckserver. Ist diese Zugriffsebene *nicht* enthalten <see cref="F:System.Printing.PrintSystemDesiredAccess.AdministratePrinter" /> Rechte für die Druckwarteschlangen vom Server gehostet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateServer">
+      <MemberSignature Language="C#" Value="EnumerateServer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PrintSystemDesiredAccess EnumerateServer = int32(131074)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PrintSystemDesiredAccess.EnumerateServer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemDesiredAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, die Warteschlangen auf dem Druckerserver aufzulisten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PrintSystemDesiredAccess None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PrintSystemDesiredAccess.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemDesiredAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Kein Zugriff.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePrinter">
+      <MemberSignature Language="C#" Value="UsePrinter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PrintSystemDesiredAccess UsePrinter = int32(131080)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PrintSystemDesiredAccess.UsePrinter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemDesiredAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht Druckaufträge zur Warteschlange hinzuzufügen und zu löschen und einen eigenen Aufträge auflisten.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

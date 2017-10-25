@@ -1,0 +1,168 @@
+<Type Name="CompilationRelaxationsAttribute" FullName="System.Runtime.CompilerServices.CompilationRelaxationsAttribute">
+  <TypeSignature Language="C#" Value="public class CompilationRelaxationsAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CompilationRelaxationsAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.CompilationRelaxationsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Module | System.AttributeTargets.Class | System.AttributeTargets.Method)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Steuert die Strenge des Codes, der vom Just-in-Time (JIT)-Compiler der Common Language Runtime generiert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwenden der <xref:System.Runtime.CompilerServices.CompilationRelaxationsAttribute> -Attribut auf Assemblys Assembly Kompilierung Parameter angeben.  Verwenden der <xref:System.Runtime.CompilerServices.CompilationRelaxations> Enumeration Kompilierungsoptionen angeben.  
+  
+ Dieses Attribut wird in Microsoft .NET Framework, Version 1.0, ignoriert.  
+  
+ Die Klassen in <xref:System.Runtime.CompilerServices> für nur Compilerautoren verwendet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Anwenden der <xref:System.Runtime.CompilerServices.CompilationRelaxationsAttribute>.  
+  
+ [!code-csharp[Runtime.CompilerServices.CompilationRelaxationsAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/Runtime.CompilerServices.CompilationRelaxationsAttribute/cs/example.cs#1)]
+ [!code-vb[Runtime.CompilerServices.CompilationRelaxationsAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Runtime.CompilerServices.CompilationRelaxationsAttribute/vb/example.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompilationRelaxationsAttribute (int relaxations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 relaxations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.CompilationRelaxationsAttribute.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="relaxations" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="relaxations">Die Kompilierung Relaxations.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.CompilerServices.CompilationRelaxationsAttribute" /> Klasse mit dem angegebenen Kompilierung Relaxations.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwenden der <xref:System.Runtime.CompilerServices.CompilationRelaxationsAttribute> -Attribut auf Assemblys Assembly Kompilierung Parameter angeben.  
+  
+ Dieses Attribut wird in Microsoft .NET Framework, Version 1.0, ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompilationRelaxationsAttribute (System.Runtime.CompilerServices.CompilationRelaxations relaxations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.CompilerServices.CompilationRelaxations relaxations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.CompilationRelaxationsAttribute.#ctor(System.Runtime.CompilerServices.CompilationRelaxations)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="relaxations" Type="System.Runtime.CompilerServices.CompilationRelaxations" />
+      </Parameters>
+      <Docs>
+        <param name="relaxations">Einer der <see cref="T:System.Runtime.CompilerServices.CompilationRelaxations" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.CompilerServices.CompilationRelaxationsAttribute" />-Klasse mit dem angegebenen <see cref="T:System.Runtime.CompilerServices.CompilationRelaxations" />-Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwenden der <xref:System.Runtime.CompilerServices.CompilationRelaxationsAttribute> -Attribut auf Assemblys Assembly Kompilierung Parameter angeben.  
+  
+ Dieses Attribut wird in Microsoft .NET Framework, Version 1.0, ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompilationRelaxations">
+      <MemberSignature Language="C#" Value="public int CompilationRelaxations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CompilationRelaxations" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.CompilerServices.CompilationRelaxationsAttribute.CompilationRelaxations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kompilierung Relaxations angegeben, wenn das aktuelle Objekt erstellt wurde.</summary>
+        <value>Die Kompilierung Relaxations angegeben, wenn das aktuelle Objekt erstellt wurde.  
+  
+ Verwenden der <see cref="T:System.Runtime.CompilerServices.CompilationRelaxations" /> Enumeration mit den <see cref="P:System.Runtime.CompilerServices.CompilationRelaxationsAttribute.CompilationRelaxations" /> Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

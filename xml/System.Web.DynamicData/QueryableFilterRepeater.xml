@@ -1,0 +1,310 @@
+<Type Name="QueryableFilterRepeater" FullName="System.Web.DynamicData.QueryableFilterRepeater">
+  <TypeSignature Language="C#" Value="public class QueryableFilterRepeater : System.Web.UI.Control, System.Web.DynamicData.IFilterExpressionProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit QueryableFilterRepeater extends System.Web.UI.Control implements class System.Web.DynamicData.IFilterExpressionProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.QueryableFilterRepeater" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.DynamicData.IFilterExpressionProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement mit Vorlagen bereit, das automatisch die Benutzeroberfläche generiert, in der Tabellenzeilen nach unterstützten Spaltentypen gefiltert werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [Klassenkontext](#ClassContext)  
+  
+-   [Deklarationssyntax](#DeclarativeSyntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Die <xref:System.Web.DynamicData.QueryableFilterRepeater> Steuerelement wird im Seitenmarkup zum automatischen Generieren von der Benutzeroberfläche zum Filtern von Tabellenzeilen verwendet. Standardmäßig erstellt Dynamic Data die Benutzeroberfläche für jeden unterstützten Spaltentyp mithilfe der Filter-Standardvorlagen, die sich im Verzeichnis ~\DynamicData\Filters befinden.  
+  
+ Die Standardvorlagen unterstützen Fremdschlüssel, Boolean und Enumeration.  
+  
+ Die folgende Tabelle enthält die Aufgaben, die zugeordnet sind die <xref:System.Web.DynamicData.QueryableFilterRepeater> Typ.  
+  
+|Aufgabe|Beschreibung|  
+|----------|-----------------|  
+|Erstellen Sie die Benutzeroberfläche zum Filtern von Tabellenzeilen.|Hinzufügen <xref:System.Web.DynamicData.DynamicFilter> Steuerelemente zum Erstellen der Benutzeroberfläche mithilfe der <xref:System.Web.DynamicData.QueryableFilterRepeater.ItemTemplate%2A> Eigenschaft.|  
+|Überprüfen Sie, ob die <xref:System.Web.DynamicData.QueryableFilterRepeater> Steuerelement enthält Datenfeldfilter.|Führen Sie das Kontrollkästchen in der <xref:System.Web.DynamicData.QueryableFilterRepeater.OnPreRender%2A> Methode.|  
+  
+<a name="ClassContext"></a>   
+## <a name="class-context"></a>Klassenkontext  
+ Die <xref:System.Web.DynamicData.QueryableFilterRepeater> Steuerelement ist dienen zum Arbeiten mit der <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement. Zudem muss der Verweis über eine <xref:System.Web.DynamicData.DynamicFilterExpression> -Instanz innerhalb einer <xref:System.Web.UI.WebControls.QueryExtender> Objekt im Seitenmarkup.  
+  
+ Die folgende Abbildung zeigt die Schritte, die Dynamic Data folgt, um automatische Tabelle zeilenfilterung zu implementieren.  
+  
+ ![Dynamic Data Tabelle Elemente zur Zeilenfilterung](~/add/media/dynamic-autofilter.png "Dynamic Data-Tabellenzeile Elemente filtern")  
+  
+1.  Die <xref:System.Web.DynamicData.DynamicFilter> Steuerelemente (die enthalten sind, der <xref:System.Web.DynamicData.QueryableFilterRepeater> Steuerelement), übergeben Sie den Spaltenwert, die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement.  
+  
+2.  Die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement verwendet diesen Wert zum Erstellen der Abfrage Filterinformationen, übergibt sie dann an die Datenquellen-Steuerelements.  
+  
+3.  Datenquellen-Steuerelements übergibt die Abfrage, die Informationen an den Datenquellenanbieter filtern.  
+  
+4.  Der Datenquellenanbieter übergibt die Abfrage mit der Datenbank.  
+  
+5.  Die Datenbank gibt Zeilen der gefilterten Tabelle zurück.  
+  
+6.  Der Datenquellenanbieter sendet diese Daten zurück an das Datenquellensteuerelement an.  
+  
+7.  Dieses Steuerelement übergibt die Zeilen der gefilterten Tabelle für das datengebundene Steuerelement für die Anzeige.  
+  
+<a name="DeclarativeSyntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:QueryableFilterRepeater   
+    ID="string"  
+    DynamicFilterContainerId="string"   
+    EnableViewState="True|False"   
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"   
+    Visible="true"  
+    runat="server" />  
+```  
+  
+   
+  
+## Examples  
+ An dieser Stelle ist ein Visual Studio-Projekt mit Quellcode zur Verfügung: [Gerüstbau Dynamic Data](http://go.microsoft.com/fwlink/?LinkId=168914).  
+  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.DynamicData.QueryableFilterRepeater> Steuerelement, um die Benutzeroberfläche zum Filtern von Tabellenzeilen zu generieren. Die wiederholungsvorlage Element enthält eine <xref:System.Web.DynamicData.DynamicFilter> Steuerelement, das die Benutzeroberfläche für die einzelnen erstellt unterstützt Spaltentyp.  
+  
+ Im Beispiel wird Folgendes vorausgesetzt:  
+  
+-   Eine Dynamic Data-Website oder eine Dynamic Data-Webanwendung. Weitere Informationen finden Sie unter `Walkthrough: Creating a New Dynamic Data Web Site using Scaffolding`.  
+  
+ [!code-aspx-csharp[System.Web.DynamicData.QueryableFilterRepeater#1](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.dynamicdata.queryablefilterrepeater/cs/queryablefilterrepeater.aspx#1)]
+ [!code-aspx-vb[System.Web.DynamicData.QueryableFilterRepeater#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.dynamicdata.queryablefilterrepeater/vb/queryablefilterrepeater.aspx#1)]  
+  
+ [!code-csharp[System.Web.DynamicData.QueryableFilterRepeater#3](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.dynamicdata.queryablefilterrepeater/cs/queryablefilterrepeater.aspx.cs#3)]
+ [!code-vb[System.Web.DynamicData.QueryableFilterRepeater#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.dynamicdata.queryablefilterrepeater/vb/queryablefilterrepeater.aspx.vb#3)]  
+  
+ [!code-csharp[System.Web.DynamicData.QueryableFilterRepeater#4](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.dynamicdata.queryablefilterrepeater/cs/awltl2spartials.cs#4)]
+ [!code-vb[System.Web.DynamicData.QueryableFilterRepeater#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.dynamicdata.queryablefilterrepeater/vb/awltpartiall2sclasses.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryableFilterRepeater ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.QueryableFilterRepeater.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.DynamicData.QueryableFilterRepeater" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel können nicht dieser Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.DynamicData.QueryableFilterRepeater> Klasse. Geben Sie stattdessen die <xref:System.Web.DynamicData.QueryableFilterRepeater> -Steuerelement im Seitenmarkup und das Steuerelement wird automatisch initialisiert, wenn die Seite ausgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DynamicFilterContainerId">
+      <MemberSignature Language="C#" Value="public string DynamicFilterContainerId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DynamicFilterContainerId" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.QueryableFilterRepeater.DynamicFilterContainerId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("DynamicFilter")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.IDReferenceProperty(typeof(System.Web.DynamicData.QueryableFilterUserControl))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ID des ein <see cref="T:System.Web.DynamicData.DynamicFilter" /> Steuerelement in der Vorlage, die so konfiguriert ist, dass ein Filter für eine Spalte sein.</summary>
+        <value>Die ID des ein <see cref="T:System.Web.DynamicData.DynamicFilter" /> Steuerelement in der Vorlage, die so konfiguriert ist, dass ein Filter für eine Spalte sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die ID nicht festgelegt ist, ist der Standardwert für die ID "DynamicFilter".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate ItemTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate ItemTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.QueryableFilterRepeater.ItemTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.INamingContainer))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Steuerelemente, die Auffüllen der <see cref="T:System.Web.DynamicData.QueryableFilterRepeater" /> Klasse.</summary>
+        <value>Ein Objekt, das definiert, wie Elemente in der <see cref="T:System.Web.DynamicData.QueryableFilterRepeater" /> -Steuerelement angezeigt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.QueryableFilterRepeater.ItemTemplate%2A> -Eigenschaft definiert das Verhalten, das zum Auffüllen der <xref:System.Web.DynamicData.QueryableFilterRepeater> Steuerelement mit untergeordneten Steuerelementen. Die untergeordneten Steuerelemente darstellen, die Inlinevorlagen, die auf der Seite definiert sind.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Web.DynamicData.QueryableFilterRepeater> des Steuerelements <xref:System.Web.DynamicData.QueryableFilterRepeater.ItemTemplate%2A> Eigenschaft so, dass diese enthält <xref:System.Web.DynamicData.DynamicFilter> Steuerelemente zum Erstellen der Benutzeroberfläche für jeden unterstützten Spaltentyp.  
+  
+ [!code-aspx-csharp[System.Web.DynamicData.QueryableFilterRepeater#2](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.dynamicdata.queryablefilterrepeater/cs/queryablefilterrepeater.aspx#2)]
+ [!code-aspx-vb[System.Web.DynamicData.QueryableFilterRepeater#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.dynamicdata.queryablefilterrepeater/vb/queryablefilterrepeater.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.QueryableFilterRepeater.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Überprüft, ob das Steuerelement Daten Feldfilter enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Daten Feld Filter angewendet wurden, legt diese Methode die <xref:System.Web.UI.Control.Visible%2A> Eigenschaft von der <xref:System.Web.DynamicData.QueryableFilterRepeater> -Objekt `false`. Diese Methode wird aufgerufen, nachdem die <xref:System.Web.DynamicData.QueryableFilterRepeater> Steuerelement ist geladen, aber bevor er gerendert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.DynamicData.IFilterExpressionProvider.GetQueryable">
+      <MemberSignature Language="C#" Value="System.Linq.IQueryable IFilterExpressionProvider.GetQueryable (System.Linq.IQueryable source);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Linq.IQueryable System.Web.DynamicData.IFilterExpressionProvider.GetQueryable(class System.Linq.IQueryable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.QueryableFilterRepeater.System#Web#DynamicData#IFilterExpressionProvider#GetQueryable(System.Linq.IQueryable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Linq.IQueryable" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Datenquellenabfrage.</param>
+        <summary>Ruft die geänderte Abfrage mithilfe des aktuellen Werts für den Filter ab.</summary>
+        <returns>Der Filter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.DynamicData.QueryableFilterRepeater>-Instanz in eine <xref:System.Web.DynamicData.IFilterExpressionProvider>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.DynamicData.IFilterExpressionProvider.Initialize">
+      <MemberSignature Language="C#" Value="void IFilterExpressionProvider.Initialize (System.Web.UI.WebControls.IQueryableDataSource dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.DynamicData.IFilterExpressionProvider.Initialize(class System.Web.UI.WebControls.IQueryableDataSource dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.QueryableFilterRepeater.System#Web#DynamicData#IFilterExpressionProvider#Initialize(System.Web.UI.WebControls.IQueryableDataSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Web.UI.WebControls.IQueryableDataSource" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Die Datenquelle</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.DynamicData.QueryableFilterRepeater" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.DynamicData.QueryableFilterRepeater>-Instanz in eine <xref:System.Web.DynamicData.IFilterExpressionProvider>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,118 @@
+<Type Name="FilterFactory" FullName="System.Web.DynamicData.FilterFactory">
+  <TypeSignature Language="C#" Value="public class FilterFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FilterFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.FilterFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt eine Filtervorlage.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.FilterFactory> Klasse dient zur Laufzeit durch dynamische Daten, eine Instanz einer Filter-Vorlage für einen bestimmten Spaltentyp abzurufen.  
+  
+ Sie können die Methoden überschreiben, die definiert werden, in dieser Klasse anpassen, wie die Filterung von Vorlagen geladen werden. Eine benutzerdefinierte Implementierung kann z. B. die Filterung von Vorlagen aus einem anderen als den Standardordner ~/DynamicData/Filters geladen werden.  
+  
+ Dynamic Data stellt Filterung von Vorlagen für foreign Key, Boolean und Enumeration Spalte und sie mithilfe zeigt einer <xref:System.Web.UI.WebControls.DropDownList> Steuerelement. Sie können auch benutzerdefinierte Vorlagen erstellen.  
+  
+   
+  
+## Examples  
+ Ein Beispiel für das Filtern von Tabellenzeilen filtern Standardvorlagen verwendet wird, finden Sie unter der <xref:System.Web.DynamicData.QueryableFilterRepeater> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FilterFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FilterFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.DynamicData.FilterFactory" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFilterControl">
+      <MemberSignature Language="C#" Value="public virtual System.Web.DynamicData.QueryableFilterUserControl CreateFilterControl (System.Web.DynamicData.MetaColumn column, string filterUIHint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.DynamicData.QueryableFilterUserControl CreateFilterControl(class System.Web.DynamicData.MetaColumn column, string filterUIHint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FilterFactory.CreateFilterControl(System.Web.DynamicData.MetaColumn,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.QueryableFilterUserControl</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Web.DynamicData.MetaColumn" />
+        <Parameter Name="filterUIHint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="column">Die Datenspalte für die die Filtervorlage gilt.</param>
+        <param name="filterUIHint">Der Name der Filtervorlage verwenden.</param>
+        <summary>Erstellt eine Instanz der Filtervorlage.</summary>
+        <returns>Eine Instanz der <see cref="T:System.Web.DynamicData.QueryableFilterUserControl" />-Klasse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von Dynamic Data zum Abrufen einer Instanz einer Filtervorlage aufgerufen. Abgeleitete Klassen können überschreiben Sie diese Methode, um anzupassen, wie Instanzen der Filterung von Vorlagen erstellt werden. Eine benutzerdefinierte Implementierung kann z. B. Vorlagen aus einer kompilierten Assembly statt aus den Standardordner für ~/DynamicData/Filters geladen werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="column" />ist **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFilterVirtualPath">
+      <MemberSignature Language="C#" Value="public virtual string GetFilterVirtualPath (System.Web.DynamicData.MetaColumn column, string filterUIHint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetFilterVirtualPath(class System.Web.DynamicData.MetaColumn column, string filterUIHint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FilterFactory.GetFilterVirtualPath(System.Web.DynamicData.MetaColumn,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Web.DynamicData.MetaColumn" />
+        <Parameter Name="filterUIHint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="column">Die Datenspalte für die die Filtervorlage gilt.</param>
+        <param name="filterUIHint">Die Filtervorlage verwenden.</param>
+        <summary>Ruft den virtuellen Pfad der Filtervorlage ab.</summary>
+        <returns>Der virtuelle Pfad der Filtervorlage.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Filterung von Vorlagen befinden sich standardmäßig im Ordner "~/DynamicData/Filers".  
+  
+ Diese Methode bestimmt den virtuellen Pfad des Ordners, der die Feldvorlage enthält. Abgeleitete Klassen können diese Methode, um die Filterung von Vorlagen aus einem anderen virtuellen Pfad bereitstellen überschreiben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="column" />ist **null**.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

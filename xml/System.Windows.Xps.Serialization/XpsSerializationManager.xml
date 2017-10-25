@@ -1,0 +1,237 @@
+<Type Name="XpsSerializationManager" FullName="System.Windows.Xps.Serialization.XpsSerializationManager">
+  <TypeSignature Language="C#" Value="public class XpsSerializationManager : System.Windows.Xps.Serialization.PackageSerializationManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XpsSerializationManager extends System.Windows.Xps.Serialization.PackageSerializationManager" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Serialization.XpsSerializationManager" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Xps.Serialization.PackageSerializationManager</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet synchrone XML Paper Specification (XPS)-Serialisierungsprogramme und Typkonverter.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.Serialization.XpsSerializationManager>verwaltet synchrone Serialisierungsprogramme und Typkonverter, die Inhalt zum Schreiben einer <xref:System.Windows.Xps.Packaging.XpsDocument>.  
+  
+ <xref:System.Windows.Xps.Serialization.XpsSerializationManagerAsync>verwaltet asynchrone Serialisierungsprogramme und Typkonverter, die Inhalt zum Speichern einer <xref:System.Windows.Xps.Packaging.XpsDocument>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XpsSerializationManager (System.Windows.Xps.Serialization.BasePackagingPolicy packagingPolicy, bool batchMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Xps.Serialization.BasePackagingPolicy packagingPolicy, bool batchMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsSerializationManager.#ctor(System.Windows.Xps.Serialization.BasePackagingPolicy,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="packagingPolicy" Type="System.Windows.Xps.Serialization.BasePackagingPolicy" />
+        <Parameter Name="batchMode" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="packagingPolicy">Ein Objekt, das Methoden zum Abrufen und-Writern für die verschiedenen Teile von Ereignissen ein [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] Dokument.</param>
+        <param name="batchMode">
+          <see langword="true" />Batchmodus angeben; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Xps.Serialization.XpsSerializationManager" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public virtual void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsSerializationManager.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Commit für alle Änderungen, und schreibt alle gepufferten Daten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBatchMode">
+      <MemberSignature Language="C#" Value="public bool IsBatchMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBatchMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Serialization.XpsSerializationManager.IsBatchMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Serialisierungs-Manager im Batchmodus ausgeführt wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Manager im Batchmodus ausgeführt wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Batchmodus festgelegt ist, der `batchMode` Parameter von der <xref:System.Windows.Xps.Serialization.XpsSerializationManager.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAsXaml">
+      <MemberSignature Language="C#" Value="public override void SaveAsXaml (object serializedObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SaveAsXaml(object serializedObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsSerializationManager.SaveAsXaml(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializedObject">Die [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] zu speichernden Objekts serialisiert.</param>
+        <summary>Speichert ein angegebenes [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] -Objekt, das Dokumentpaket serialisiert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontSubsettingCountPolicy">
+      <MemberSignature Language="C#" Value="public void SetFontSubsettingCountPolicy (int countPolicy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontSubsettingCountPolicy(int32 countPolicy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsSerializationManager.SetFontSubsettingCountPolicy(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="countPolicy" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="countPolicy">Die Anzahl der Seiten oder Dokumente, die für Schriftarten Teilmengen gleichzeitig verarbeiten.</param>
+        <summary>Legt die Anzahl der Seiten oder Dokumente Schriftarten-Teilmengen nicht verarbeiten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standard-Schriftart-Teilmengen `countPolicy` ist 1.  
+  
+ `countPolicy`definiert eine Reihe von Seiten oder Dokumenten, die abhängig von der <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies> Enumerationswert angegeben, um die <xref:System.Windows.Xps.Serialization.XpsSerializationManager.SetFontSubsettingPolicy%2A> Methode.  
+  
+|FontSubsetterCommitPolicy|CountPolicy|  
+|-------------------------------|-----------------|  
+|<xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitEntireSequence>|Immer 1 (die gesamte Dokumentsequenz).|  
+|<xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitPerDocument>|Anzahl von Dokumenten.|  
+|<xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitPerPage>|Anzahl der Seiten.|  
+|<xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.None>|Nicht zutreffend.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontSubsettingPolicy">
+      <MemberSignature Language="C#" Value="public void SetFontSubsettingPolicy (System.Windows.Xps.Serialization.FontSubsetterCommitPolicies policy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontSubsettingPolicy(valuetype System.Windows.Xps.Serialization.FontSubsetterCommitPolicies policy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsSerializationManager.SetFontSubsettingPolicy(System.Windows.Xps.Serialization.FontSubsetterCommitPolicies)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="policy" Type="System.Windows.Xps.Serialization.FontSubsetterCommitPolicies" />
+      </Parameters>
+      <Docs>
+        <param name="policy">Einer der Enumerationswerte, der die Schriftarten-Teilmengen Richtlinie angibt.</param>
+        <summary>Legt die Granularität, mit der Schriftart-Teilmengen ausgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Schriftart-Teilmengen Standardrichtlinie ist <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitEntireSequence>.  
+  
+ Wenn Schriftartensymbole für Text in ein [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Dokument in das Dokumentpaket gespeichert werden, den Text des Dokuments werden identisch angezeigt, auf einem beliebigen Computer oder Drucker.  Wenn Symbole nicht im Dokument gespeichert sind und die erforderliche Schriftart nicht auf dem lokalen Computer oder Drucker installiert ist, muss die renderinggerät Symbole in eine andere Schriftart ersetzen.  Ersetzen von Symbolen kann zum Ändern der Darstellung des Texts, wenn eine andere Schriftart verwendet wird.  
+  
+ <xref:System.Windows.Xps.Serialization.XpsSerializationManager.SetFontSubsettingPolicy%2A>Bestimmt die Granularität von Schriftarten-Teilmengen.  
+  
+ <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitEntireSequence>(Standard) ist der effizienteste und die Seiten aller Dokumente in einer Dokumentsequenz eine Schriftart-Teilmenge freigeben, die nur die Symbole enthält, die tatsächlich verwendet werden kann.  
+  
+ Beim Erstellen von Dokumenten geschachtelten kann Schriftarten-Teilmengen in einer Dokumentsequenz erfordern eine große Menge an Arbeitsspeicher, um das gesamte Dokument zu speichern, bis die letzte Schriftart-Teilmenge bestimmt werden kann.  <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitPerPage>oder <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitPerDocument> angegeben werden, um die Anforderungen bei der Erstellung interleaved Dokumente Anwendungsspeicher reduzieren.  
+  
+ Wenn `policy` ist <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.None>, alle Symbole für alle Schriftarten, die in verwendet werden die [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Dokument gespeichert werden, auch Symbole für Zeichen, die nicht tatsächlich im Text verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XpsSerializationPrintTicketRequired">
+      <MemberSignature Language="C#" Value="public event System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventHandler XpsSerializationPrintTicketRequired;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventHandler XpsSerializationPrintTicketRequired" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Xps.Serialization.XpsSerializationManager.XpsSerializationPrintTicketRequired" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Serialisierungsprogramm Anforderungen eine <see cref="T:System.Printing.PrintTicket" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu Ereignishandlern finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XpsSerializationProgressChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler XpsSerializationProgressChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler XpsSerializationProgressChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Xps.Serialization.XpsSerializationManager.XpsSerializationProgressChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Seite oder ein Dokument Serialisierung abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu Ereignishandlern finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

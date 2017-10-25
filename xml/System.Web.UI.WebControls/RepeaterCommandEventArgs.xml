@@ -1,0 +1,134 @@
+<Type Name="RepeaterCommandEventArgs" FullName="System.Web.UI.WebControls.RepeaterCommandEventArgs">
+  <TypeSignature Language="C#" Value="public class RepeaterCommandEventArgs : System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RepeaterCommandEventArgs extends System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.RepeaterCommandEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.CommandEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Web.UI.WebControls.Repeater.ItemCommand" /> -Ereignis für ein <see cref="T:System.Web.UI.WebControls.Repeater" />. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.RepeaterCommandEventArgs>, finden Sie unter der <xref:System.Web.UI.WebControls.RepeaterCommandEventArgs.%23ctor%2A> Konstruktor. Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht eine Möglichkeit zum Verarbeiten einer <xref:System.Web.UI.WebControls.Repeater.ItemCommand> -Ereignis für die <xref:System.Web.UI.WebControls.Repeater>. Informationen über die Schaltfläche wird angezeigt. Sobald eine <xref:System.Web.UI.WebControls.Button> -Steuerelement innerhalb der <xref:System.Web.UI.WebControls.Repeater> geklickt wird.  
+  
+ [!code-aspx-csharp[Classic RepeaterCommandEventArgs Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RepeaterCommandEventArgs Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic RepeaterCommandEventArgs Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RepeaterCommandEventArgs Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RepeaterCommandEventArgs (System.Web.UI.WebControls.RepeaterItem item, object commandSource, System.Web.UI.WebControls.CommandEventArgs originalArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.RepeaterItem item, object commandSource, class System.Web.UI.WebControls.CommandEventArgs originalArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RepeaterCommandEventArgs.#ctor(System.Web.UI.WebControls.RepeaterItem,System.Object,System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.WebControls.RepeaterItem" />
+        <Parameter Name="commandSource" Type="System.Object" />
+        <Parameter Name="originalArgs" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="item">Ein <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> , die stellt ein Element in der <see cref="T:System.Web.UI.WebControls.Repeater" />. Die <see cref="P:System.Web.UI.WebControls.RepeaterCommandEventArgs.Item" /> Eigenschaft auf diesen Wert festgelegt ist.</param>
+        <param name="commandSource">Quell-Befehl. Die <see cref="P:System.Web.UI.WebControls.RepeaterCommandEventArgs.CommandSource" /> Eigenschaft auf diesen Wert festgelegt ist.</param>
+        <param name="originalArgs">Die ursprünglichen Ereignisargumente.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.RepeaterCommandEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.RepeaterCommandEventArgs>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|`Item`|`item`Parameter|  
+|`CommandSource`|`commandSource`Parameter|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandSource">
+      <MemberSignature Language="C#" Value="public object CommandSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeaterCommandEventArgs.CommandSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Quelle des Befehls ab.</summary>
+        <value>Quell-Befehl.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um die Quelle des Befehls zu bestimmen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Befehlsquelle aus bestimmen die <xref:System.Web.UI.WebControls.RepeaterCommandEventArgs.CommandSource%2A> Eigenschaft.  
+  
+ [!code-csharp[Classic RepeaterCommandEventArgs.CommandSource Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RepeaterCommandEventArgs.CommandSource Example/CS/source.cs#1)]
+ [!code-vb[Classic RepeaterCommandEventArgs.CommandSource Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RepeaterCommandEventArgs.CommandSource Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.RepeaterItem Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.RepeaterItem Item" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeaterCommandEventArgs.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeaterItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> mit dem Ereignis verknüpft sind.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> mit dem Ereignis verknüpft sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie die Eigenschaften der Zugriff auf die <xref:System.Web.UI.WebControls.RepeaterItem> mit diesem Ereignis verknüpft sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Indexnummer aus bestimmen die <xref:System.Web.UI.WebControls.RepeaterCommandEventArgs.Item%2A> Eigenschaft.  
+  
+ [!code-csharp[Classic RepeaterCommandEventArgs.Item Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RepeaterCommandEventArgs.Item Example/CS/source.cs#1)]
+ [!code-vb[Classic RepeaterCommandEventArgs.Item Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RepeaterCommandEventArgs.Item Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

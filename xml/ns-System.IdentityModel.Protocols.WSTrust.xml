@@ -1,0 +1,8 @@
+<Namespace Name="System.IdentityModel.Protocols.WSTrust">
+  <Docs>
+    <summary>Die <see cref="N:System.IdentityModel.Protocols.WSTrust" /> -Namespace enthält Klassen, die WS-Trust-Elemente darstellen. Dazu gehören die <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> (RST) und <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> (RSTR) Klassen und mehrere Serialisierungsprogramme, die serialisieren und Deserialisieren von WS-Trust-Elemente, bei der Übertragung und ihrer Darstellung im Objektmodell können.  
+  
+ Out-of-the-Box-, Windows Identity Foundation (WIF) enthält Unterstützung für die folgenden WS-Trust-Spezifikationen: <see href="http://go.microsoft.com/fwlink/?LinkID=210149">WS-Trust Februar 2005</see> (http://go.Microsoft.com/fwlink/?) LinkID = 210149), <see href="http://go.microsoft.com/fwlink/?LinkID=210148">WS-Trust 1.3</see> (http://go.Microsoft.com/fwlink/?) LinkID = 210148), oder <see href="http://go.microsoft.com/fwlink/?LinkID=210229">WS-Trust 1.4</see> (http://go.Microsoft.com/fwlink/?) LinkID = 210229).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

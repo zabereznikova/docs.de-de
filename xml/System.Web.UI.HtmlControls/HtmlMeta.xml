@@ -1,0 +1,271 @@
+<Type Name="HtmlMeta" FullName="System.Web.UI.HtmlControls.HtmlMeta">
+  <TypeSignature Language="C#" Value="public class HtmlMeta : System.Web.UI.HtmlControls.HtmlControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlMeta extends System.Web.UI.HtmlControls.HtmlControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlMeta" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlControls.HtmlControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht den programmgesteuerten Zugriff auf das HTML-Tag <see langword="&lt;meta&gt;" /> auf dem Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlMeta> Steuerelement ermöglicht den programmgesteuerten Zugriff auf das HTML `<meta>` Element auf dem Server. Der HTML-Code `<meta>` Element ist ein Container für Daten bezüglich der gerenderten Seite, jedoch nicht für den Seiteninhalt selbst. Die `<meta>` Tag ist zwischen den öffnenden und schließenden HTML platziert `<head>` Elemente. Jede `<meta>` -Element beschreibt einen Metadaten-Eigenschaftsnamen und den zugehörigen Wert.  
+  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlMeta> des Steuerelements <xref:System.Web.UI.HtmlControls.HtmlMeta.Name%2A> Eigenschaft an, dass der Name der Metadaten, und die <xref:System.Web.UI.HtmlControls.HtmlMeta.Content%2A> Eigenschaft zum Angeben des Werts der Metadateneigenschaft. Verwenden der <xref:System.Web.UI.HtmlControls.HtmlMeta.Scheme%2A> Eigenschaft, um zusätzliche Informationen zur Benutzer-Agents zum Interpretieren der Metadateneigenschaft anzugeben. Verwenden der <xref:System.Web.UI.HtmlControls.HtmlMeta.HttpEquiv%2A> Eigenschaft anstelle der <xref:System.Web.UI.HtmlControls.HtmlMeta.Name%2A> Eigenschaft, wenn die resultierende Metadateneigenschaft über HTTP abgerufen werden.  
+  
+ Erhalten Sie einen Verweis auf die Seite `<head>` Element mit dem <xref:System.Web.UI.Page.Header%2A> Eigenschaft von der <xref:System.Web.UI.Page> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlMeta> Steuerelement HTML definieren `<meta>` Elemente für eine Webseite. Zwei `<meta>` Elemente definiert sind, werden eine Liste von Schlüsselwörtern, die beschreiben, auf der Seite und eine Liste, die das Datum der Seite "erstellt wurde.  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/cs/sourcecs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/vb/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlMeta ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlMeta.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.HtmlControls.HtmlMeta> Steuerelement.  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlMeta>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.HtmlControls.HtmlControl.TagName%2A>|Das Zeichenfolgenliteral "Meta".|  
+  
+   
+  
+## Examples  
+ Ein Beispiel zum Verwenden der <xref:System.Web.UI.HtmlControls.HtmlMeta.%23ctor%2A> Konstruktor finden Sie unter der <xref:System.Web.UI.HtmlControls.HtmlMeta> Übersichtsthema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public virtual string Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Content" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlMeta.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der Metadaten-Eigenschaft definiert, indem die <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" /> Steuerelement.</summary>
+        <value>Der Wert der Metadateneigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlMeta.Content%2A> Eigenschaft zusammen mit der <xref:System.Web.UI.HtmlControls.HtmlMeta.Name%2A> -Eigenschaft definiert eine Metadateneigenschaft der Seite.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlMeta.Content%2A> Eigenschaft wird gerendert, um die `content` Attribut mit dem resultierenden HTML `<meta>` Element.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlMeta> Steuerelement HTML definieren `<meta>` Elemente für eine Webseite. Zwei `<meta>` Elemente definiert sind, werden eine Liste von Schlüsselwörtern, die beschreiben, auf der Seite und eine Liste, die das Datum der Seite "erstellt wurde. Die <xref:System.Web.UI.HtmlControls.HtmlMeta.Content%2A> Eigenschaft dient zum Definieren der `content` Attribut für jede `<meta>` Tag.  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/cs/sourcecs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/vb/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpEquiv">
+      <MemberSignature Language="C#" Value="public virtual string HttpEquiv { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HttpEquiv" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlMeta.HttpEquiv" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" /> Steuerelementeigenschaft, die in den HTTP-Antwortheader enthalten ist.</summary>
+        <value>Der Name des HTTP-Antwort-Header-Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlMeta.HttpEquiv%2A> Eigenschaft anstelle von der <xref:System.Web.UI.HtmlControls.HtmlMeta.Name%2A> Eigenschaft, um Informationen zu identifizieren, die in die Antwortheader einer HTTP-Anforderung eingeschlossen werden sollen.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlMeta.HttpEquiv%2A> Eigenschaft wird gerendert, um die `http-equiv` Attribut mit dem resultierenden HTML `<meta>` Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlMeta.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest von definierten Namen der Metadaten der <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" /> Steuerelement.</summary>
+        <value>Der Eigenschaftenname.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlMeta.Name%2A> Eigenschaft zusammen mit der <xref:System.Web.UI.HtmlControls.HtmlMeta.Content%2A> -Eigenschaft definiert eine Metadateneigenschaft der Seite.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlMeta.Name%2A> Eigenschaft wird gerendert, um die `name` Attribut mit dem resultierenden HTML `<meta>` Element.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlMeta> Steuerelement HTML definieren `<meta>` Elemente für eine Webseite. Zwei `<meta>` Tags definiert sind, werden eine Liste von Schlüsselwörtern, die beschreiben, auf der Seite und eine Liste, die das Datum der Seite "erstellt wurde. Die <xref:System.Web.UI.HtmlControls.HtmlMeta.Name%2A> Eigenschaft dient zum Definieren der `name` -Attribut der einzelnen `<meta>` Tag.  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/cs/sourcecs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/vb/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlMeta.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> zum Rendern verwendet die <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" /> Steuerelementinhalt im Browser des Clients.</param>
+        <summary>Rendert die <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" /> Steuerelement in den Browser des Clients, die unter Verwendung des angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlMeta> -Steuerelement rendert eine <xref:System.Web.UI.HtmlTextWriter.SelfClosingTagEnd> HTML Klammer (/ >) auf die `<meta>` Element, wenn der Clientbrowser XHTML-kompatibel ist. Weitere Informationen zum Konfigurieren von ASP.NET für nicht-XHTML-Rendering finden Sie unter [NIB: Vorgehensweise: Konfigurieren von XHTML-Rendering in ASP.NET Web Sites](http://msdn.microsoft.com/en-us/42483a54-f1ae-44e1-88e6-4370f8690149).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" /> steuern, überschreiben die <see cref="M:System.Web.UI.HtmlControls.HtmlMeta.Render(System.Web.UI.HtmlTextWriter)" /> Methode, um benutzerdefiniertes Rendering bereitzustellen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public virtual string Scheme { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlMeta.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest ein <see langword="scheme" /> zum Interpretieren des Werts der Metadateneigenschaft Attribut definiert, durch die <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" /> Steuerelement.</summary>
+        <value>Die <see langword="scheme" /> Attribut.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlMeta.Scheme%2A> Eigenschaft ermöglicht Ihnen die Angabe einer `scheme` -Attribut des gerenderten HTML `<meta>` Element. Die `scheme` Attribut kann zum Bereitstellen von Benutzer-Agents verwendet werden, z. B. Clientbrowser oder Suchmaschinen zusätzlichen Kontext für das Interpretieren der Metadateneigenschaft.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlMeta.Scheme%2A> Eigenschaft wird gerendert, um die `scheme` Attribut mit dem resultierenden HTML `<meta>` Element.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlMeta> Steuerelement HTML definieren `<meta>` Elemente für eine Webseite. Zwei `<meta>` Tags definiert sind, werden eine Liste von Schlüsselwörtern, die beschreiben, auf der Seite und eine Liste, die das Datum der Seite "erstellt wurde. Die <xref:System.Web.UI.HtmlControls.HtmlMeta.Scheme%2A> Eigenschaft wird verwendet, für die datumsbezogenen `<meta>` -Tag, um die Benutzer-Agents, die den Datumswert lesen zu erleichtern.  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/cs/sourcecs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/vb/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

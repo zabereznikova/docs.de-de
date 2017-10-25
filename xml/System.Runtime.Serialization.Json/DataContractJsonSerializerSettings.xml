@@ -1,0 +1,299 @@
+<Type Name="DataContractJsonSerializerSettings" FullName="System.Runtime.Serialization.Json.DataContractJsonSerializerSettings">
+  <TypeSignature Language="C#" Value="public class DataContractJsonSerializerSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataContractJsonSerializerSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.4.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, <see cref="T:System.Runtime.Serialization.Json.DataContractJsonSerializer" /> Einstellungen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataContractJsonSerializerSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataContractSurrogate">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.IDataContractSurrogate DataContractSurrogate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.IDataContractSurrogate DataContractSurrogate" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.DataContractSurrogate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.IDataContractSurrogate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen ersatzzeichentyp, der für die angegebene Instanz des IDataContractSurrogate gerade aktiv ist.</summary>
+        <value>Das ersatzzeichentyp, der für die angegebene Instanz des IDataContractSurrogate gerade aktiv ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DateTimeFormat">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.DateTimeFormat DateTimeFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.DateTimeFormat DateTimeFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.DateTimeFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.DateTimeFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen DateTimeFormat, das die Kultur spezifische Format zum Anzeigen von Datumsangaben und Uhrzeiten definiert.</summary>
+        <value>DateTimeFormat, das die Kultur spezifische Format zum Anzeigen von Datumsangaben und Uhrzeiten definiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmitTypeInformation">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.EmitTypeInformation EmitTypeInformation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.EmitTypeInformation EmitTypeInformation" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.EmitTypeInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.EmitTypeInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die JSON Einstellungen für den Datenvertragsserialisierer Typinformationen.</summary>
+        <value>Die JSON-serialisierungsprogrammeinstellungen Typinformationen des Datenvertrags.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreExtensionDataObject">
+      <MemberSignature Language="C#" Value="public bool IgnoreExtensionDataObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreExtensionDataObject" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.IgnoreExtensionDataObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Daten von einer Erweiterung der Klasse angegeben werden, wenn die Klasse wird ignoriert werden sollen, serialisiert oder deserialisiert.</summary>
+        <value>
+          <see langword="True" />Ignorieren von Daten, die von einer Erweiterung der Klasse bereitgestellt wird, wenn die Klasse serialisiert oder deserialisiert; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KnownTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Type&gt; KnownTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; KnownTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.KnownTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einer Auflistung von Typen, die möglicherweise in dem Objektdiagramm serialisiert diese Instanz mit der DataContractJsonSerializerSettings.</summary>
+        <value>Eine Auflistung von Typen, die in dem Objektdiagramm mit dieser Instanz der DataContractJsonSerializerSettings serialisiert werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxItemsInObjectGraph">
+      <MemberSignature Language="C#" Value="public int MaxItemsInObjectGraph { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxItemsInObjectGraph" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.MaxItemsInObjectGraph" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Anzahl von Elementen in einem Objektdiagramm, die zum Serialisieren oder Deserialisieren.</summary>
+        <value>Die maximale Anzahl von Elementen in einem Objektdiagramm, die zum Serialisieren oder Deserialisieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootName">
+      <MemberSignature Language="C#" Value="public string RootName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RootName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.RootName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des ausgewählten Objekts.</summary>
+        <value>Der Stammname des ausgewählten Objekts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeReadOnlyTypes">
+      <MemberSignature Language="C#" Value="public bool SerializeReadOnlyTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SerializeReadOnlyTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.SerializeReadOnlyTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob nur Typen zum Serialisieren lesen.</summary>
+        <value>
+          <see langword="True" />Lesen nur Typen zum Serialisieren. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSimpleDictionaryFormat">
+      <MemberSignature Language="C#" Value="public bool UseSimpleDictionaryFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseSimpleDictionaryFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.UseSimpleDictionaryFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine einfache Wörterbuchformat verwendet.</summary>
+        <value>
+          <see langword="True" />Um eine einfache Wörterbuchformat zu verwenden; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

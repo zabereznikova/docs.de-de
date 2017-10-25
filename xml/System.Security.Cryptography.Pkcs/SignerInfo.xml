@@ -1,0 +1,424 @@
+<Type Name="SignerInfo" FullName="System.Security.Cryptography.Pkcs.SignerInfo">
+  <TypeSignature Language="C#" Value="public sealed class SignerInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SignerInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.SignerInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Security.Cryptography.Pkcs.SignerInfo" /> Klasse stellt einen zugeordneten Signaturgeber einen <see cref="T:System.Security.Cryptography.Pkcs.SignedCms" /> Objekt, das eine CMS/PKCS #7-Meldung darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Signaturen, dargestellt durch die <xref:System.Security.Cryptography.Pkcs.SignerInfo> Klasse kann entweder über Nachrichteninhalt oder eine Signatur vorhanden sein. Die zweite Art der Signatur wird als bezeichnet eine *Gegensignatur*.  
+  
+ Diese Implementierung von CMS/PKCS #7 unterstützt nur eine Ebene der Gegensignatur.  D. h. eine Signatur signiert werden, bildet eine Gegensignatur, aber Gegensignatur kann nicht erneut signiert werden.  
+  
+ Diese Klasse keinen öffentlichen Konstruktor; aus diesem Grund kann es öffentlich instanziiert werden. Es ist eine nur-Lese Klasse, die aus zugegriffen werden kann die <xref:System.Security.Cryptography.Pkcs.SignedCms.SignerInfos%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Certificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 Certificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 Certificate" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SignerInfo.Certificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.SignerInfo.Certificate" /> -Eigenschaft ruft das Signaturzertifikat, das Informationen über den Signaturgeber zugeordnet.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> Objekt, das das Signaturzertifikat darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Signaturzertifikat nicht am Zeitpunkt mithilfe der Signatur ist die <xref:System.Security.Cryptography.Pkcs.CmsSigner.IncludeOption%2A?displayProperty=nameWithType> -Eigenschaft, und klicken Sie dann auf das Zertifikat nicht zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckHash">
+      <MemberSignature Language="C#" Value="public void CheckHash ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CheckHash() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignerInfo.CheckHash" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignerInfo.CheckHash" /> Methode überprüft, ob die Datenintegrität der CMS/PKCS #7-Informationen für die Nachricht über den Signaturgeber. <see cref="M:System.Security.Cryptography.Pkcs.SignerInfo.CheckHash" />ist eine spezielle Methode in bestimmten Infrastruktur sicherheitsanwendungen bei der das Subjekt verwendet, verwendet der **HashOnly** Mitglied der <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifierType" /> Enumeration beim Einrichten einer <see cref="T:System.Security.Cryptography.Pkcs.CmsSigner" /> Objekt. <see cref="M:System.Security.Cryptography.Pkcs.SignerInfo.CheckHash" />die Informationen über den Signaturgeber ist nicht authentifiziert werden, da diese Methode nicht überprüfen einer digitalen Signatur. Allgemeine zur Überprüfung der Integrität und die Authentizität der CMS/PKCS #7-Meldungsinformationen Signaturgeber und Gegensignaturen verwenden die <see cref="M:System.Security.Cryptography.Pkcs.SignerInfo.CheckSignature(System.Boolean)" /> oder <see cref="M:System.Security.Cryptography.Pkcs.SignerInfo.CheckSignature(System.Security.Cryptography.X509Certificates.X509Certificate2Collection,System.Boolean)" /> Methoden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet keine Authentifizierung des CMS/PKCS #7-Informationen für die Nachricht über den Signaturgeber.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckSignature">
+      <MemberSignature Language="C#" Value="public void CheckSignature (bool verifySignatureOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CheckSignature(bool verifySignatureOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignerInfo.CheckSignature(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verifySignatureOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="verifySignatureOnly">Ein boolescher Wert, der angibt, ob nur die digitale Signatur überprüft wird. Wenn <c>VerifySignatureOnly</c> ist <see langword="true" />, nur die Signatur wird überprüft. Wenn <c>VerifySignatureOnly</c> ist <see langword="false" />, die digitale Signatur überprüft wird, wird die Zertifikatkette überprüft und im Rahmen der Zertifikate überprüft werden. Im Rahmen der Certificate werden als gültig betrachtet, wenn das Zertifikat keine Schlüsselverwendung aufweist oder wenn die Schlüsselverwendung "digitale Signatur oder Nichtabstreitbarkeit" unterstützt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignerInfo.CheckSignature(System.Boolean)" /> Methode überprüft die digitale Signatur der Nachricht und, optional, das das Zertifikat überprüft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst eine Ausnahme aus, wenn die Überprüfung der digitalen Signatur ein Fehler auftritt oder Überprüfung nicht erfüllt sind.  
+  
+ Wenn Sie eine komplexere Validierung erforderlich ist, kann der Aufrufer angeben, dass nur die Signatur wird überprüft, und klicken Sie dann mithilfe einer <xref:System.Security.Cryptography.X509Certificates.X509Chain> Objekt eine benutzerdefinierte Validierung ausführen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+        <exception cref="T:System.InvalidOperationException">Ein Methodenaufruf war für den aktuellen Zustands des Objekts ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckSignature">
+      <MemberSignature Language="C#" Value="public void CheckSignature (System.Security.Cryptography.X509Certificates.X509Certificate2Collection extraStore, bool verifySignatureOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CheckSignature(class System.Security.Cryptography.X509Certificates.X509Certificate2Collection extraStore, bool verifySignatureOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignerInfo.CheckSignature(System.Security.Cryptography.X509Certificates.X509Certificate2Collection,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extraStore" Type="System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />
+        <Parameter Name="verifySignatureOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="extraStore">Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> -Objekt, das mit die Kette validiert werden kann. Wenn keine weiteren Zertifikate verwendet werden, verwenden, um die Validierung der Kette <see cref="M:System.Security.Cryptography.Pkcs.SignerInfo.CheckSignature(System.Boolean)" /> anstelle von <see cref="M:System.Security.Cryptography.Pkcs.SignerInfo.CheckSignature(System.Security.Cryptography.X509Certificates.X509Certificate2Collection,System.Boolean)" />.</param>
+        <param name="verifySignatureOnly">Ein boolescher Wert, der angibt, ob nur die digitale Signatur überprüft wird. Wenn <c>VerifySignatureOnly</c> ist <see langword="true" />, nur die Signatur wird überprüft. Wenn <c>VerifySignatureOnly</c> ist <see langword="false" />, die digitale Signatur überprüft wird, wird die Zertifikatkette überprüft und im Rahmen der Zertifikate überprüft werden. Im Rahmen der Certificate werden als gültig betrachtet, wenn das Zertifikat keine Schlüsselverwendung aufweist oder wenn die Schlüsselverwendung "digitale Signatur oder Nichtabstreitbarkeit" unterstützt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignerInfo.CheckSignature(System.Security.Cryptography.X509Certificates.X509Certificate2Collection,System.Boolean)" /> -Methode überprüft die digitale Signatur der Nachricht mithilfe der angegebenen Auflistung von Zertifikaten und optional das Zertifikat überprüft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst eine Ausnahme aus, wenn die Überprüfung der digitalen Signatur ein Fehler auftritt oder Überprüfung nicht erfüllt sind.  
+  
+ Wenn Sie eine komplexere Validierung erforderlich ist, kann der Aufrufer angeben, dass nur die Signatur wird überprüft, und klicken Sie dann mithilfe einer <xref:System.Security.Cryptography.X509Certificates.X509Chain> Objekt eine benutzerdefinierte Validierung ausführen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+        <exception cref="T:System.InvalidOperationException">Ein Methodenaufruf war für den aktuellen Zustands des Objekts ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeCounterSignature">
+      <MemberSignature Language="C#" Value="public void ComputeCounterSignature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ComputeCounterSignature() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignerInfo.ComputeCounterSignature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignerInfo.ComputeCounterSignature" /> Methode der Benutzer aufgefordert, ein Signaturzertifikat auswählen, erstellt eine Gegensignatur und fügt die Signatur der CMS/PKCS #7-Meldung hinzu. Gegensignaturen sind bis zu einer Ebene eingeschränkt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung von CMS/PKCS #7 unterstützt nur eine Ebene der Gegensignatur.  D. h. eine Signatur signiert werden, bildet eine Gegensignatur, aber Gegensignatur kann nicht erneut signiert werden.  
+  
+ Diese Methode zeigt eine Benutzeroberfläche, in der Sie Signaturgeber für diese Nachricht auswählen. Dies erfordert, dass der aktuelle Prozess, in ausgeführt wird *interaktiven Modus*, d. h., die die <xref:System.Environment.UserInteractive%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `true`. Ein Prozess befindet sich normalerweise im interaktiven Modus, es sei denn, eine Dienstprozess oder die Ausführung in einer Webanwendung ist.  
+  
+ Signaturgeber, dessen Zertifikate die folgenden Bedingungen erfüllen, werden in der Liste angezeigt werden:  
+  
+-   Das Zertifikat verfügt über einen zugeordneten privaten Schlüssel.  
+  
+-   Das Zertifikat ist in seinem Gültigkeitszeitraum liegen.  
+  
+-   Das Zertifikat weist keine Schlüsselverwendung oder eine Schlüsselverwendung, die digitale Signaturen oder Nichtabstreitbarkeit unterstützt.  
+  
+ Signaturgeberzertifikate ausgewählt sind, aus dem persönlichen Speicher.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Die folgenden Berechtigungen sind erforderlich, um die Benutzeroberfläche anzuzeigen:  
+  
+-   <xref:System.Security.Permissions.UIPermissionWindow?displayProperty=nameWithType>  
+  
+ Die folgenden Berechtigungen sind erforderlich, auf den Signaturschlüssel zuzugreifen:  
+  
+-   <xref:System.Security.Permissions.KeyContainerPermissionFlags?displayProperty=nameWithType>  
+  
+-   <xref:System.Security.Permissions.KeyContainerPermissionFlags?displayProperty=nameWithType>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeCounterSignature">
+      <MemberSignature Language="C#" Value="public void ComputeCounterSignature (System.Security.Cryptography.Pkcs.CmsSigner signer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ComputeCounterSignature(class System.Security.Cryptography.Pkcs.CmsSigner signer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignerInfo.ComputeCounterSignature(System.Security.Cryptography.Pkcs.CmsSigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signer" Type="System.Security.Cryptography.Pkcs.CmsSigner" />
+      </Parameters>
+      <Docs>
+        <param name="signer">Ein <see cref="T:System.Security.Cryptography.Pkcs.CmsSigner" /> -Objekt, das den Signaturgeber Leistungsindikator darstellt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignerInfo.ComputeCounterSignature(System.Security.Cryptography.Pkcs.CmsSigner)" /> Methode erstellt mithilfe des angegebenen Signaturgebers eine Gegensignatur und fügt die Signatur der CMS/PKCS #7-Meldung hinzu. Gegensignaturen sind bis zu einer Ebene eingeschränkt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung von CMS/PKCS #7 unterstützt nur eine Ebene der Gegensignatur.  D. h. eine Signatur signiert werden, bildet eine Gegensignatur, aber Gegensignatur kann nicht erneut signiert werden.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Die folgenden Berechtigungen sind erforderlich, auf den Signaturschlüssel zuzugreifen:  
+  
+-   <xref:System.Security.Permissions.KeyContainerPermissionFlags?displayProperty=nameWithType>  
+  
+-   <xref:System.Security.Permissions.KeyContainerPermissionFlags?displayProperty=nameWithType>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterSignerInfos">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Pkcs.SignerInfoCollection CounterSignerInfos { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Pkcs.SignerInfoCollection CounterSignerInfos" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SignerInfo.CounterSignerInfos" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.SignerInfoCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.SignerInfo.CounterSignerInfos" /> -Eigenschaft ruft den Satz von Leistungsindikator Signaturgeber, die die Informationen über den Signaturgeber zugeordnet.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.Pkcs.SignerInfoCollection" /> Sammlung, die den Signaturgeber Leistungsindikator für die Informationen über den Signaturgeber darstellt. Wenn kein Indikator Signaturgeber sind, ist die Eigenschaft eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung von CMS/PKCS #7 unterstützt nur eine Ebene der Gegensignatur. D. h. eine Signatur signiert werden, bildet eine Gegensignatur, aber Gegensignatur kann nicht erneut signiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DigestAlgorithm">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Oid DigestAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Oid DigestAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SignerInfo.DigestAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Oid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.SignerInfo.DigestAlgorithm" /> -Eigenschaft ruft die <see cref="T:System.Security.Cryptography.Oid" /> -Objekt, das die in die Berechnung der Signaturen verwendeten Hashalgorithmus darstellt.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.Oid" /> Objekt, das den Hashalgorithmus, der mit der Signatur darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCounterSignature">
+      <MemberSignature Language="C#" Value="public void RemoveCounterSignature (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveCounterSignature(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignerInfo.RemoveCounterSignature(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Gegensignatur.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignerInfo.RemoveCounterSignature(System.Int32)" /> -Methode entfernt die Gegensignatur am angegebenen Index aus der <see cref="P:System.Security.Cryptography.Pkcs.SignerInfo.CounterSignerInfos" /> Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCounterSignature">
+      <MemberSignature Language="C#" Value="public void RemoveCounterSignature (System.Security.Cryptography.Pkcs.SignerInfo counterSignerInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveCounterSignature(class System.Security.Cryptography.Pkcs.SignerInfo counterSignerInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.SignerInfo.RemoveCounterSignature(System.Security.Cryptography.Pkcs.SignerInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="counterSignerInfo" Type="System.Security.Cryptography.Pkcs.SignerInfo" />
+      </Parameters>
+      <Docs>
+        <param name="counterSignerInfo">Ein <see cref="T:System.Security.Cryptography.Pkcs.SignerInfo" /> -Objekt, das die zu entfernende Gegensignatur darstellt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.SignerInfo.RemoveCounterSignature(System.Security.Cryptography.Pkcs.SignerInfo)" /> -Methode entfernt die Gegensignatur für das angegebene <see cref="T:System.Security.Cryptography.Pkcs.SignerInfo" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert eines Arguments war außerhalb des zulässigen Bereichs von Werten, wie von der aufgerufenen Methode definiert.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Ein kryptografischer Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedAttributes">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CryptographicAttributeObjectCollection SignedAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CryptographicAttributeObjectCollection SignedAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SignerInfo.SignedAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CryptographicAttributeObjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.SignerInfo.SignedAttributes" /> -Eigenschaft ruft die <see cref="T:System.Security.Cryptography.CryptographicAttributeObjectCollection" /> Auflistung von Attributen mit Vorzeichen, die die Informationen über den Signaturgeber zugeordnet ist. Signierte Attribute werden zusammen mit dem Rest des Nachrichteninhalts signiert.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.CryptographicAttributeObjectCollection" /> -Auflistung, die die signierten Attribute darstellt. Wenn keine signierten Attribute vorhanden sind, ist die Eigenschaft eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel für ein signiertes Attribut, das in aufgenommen werden kann die <xref:System.Security.Cryptography.CryptographicAttributeObjectCollection> Auflistung abgerufen werden, indem Sie die <xref:System.Security.Cryptography.Pkcs.SignerInfo.SignedAttributes%2A> Eigenschaft ist die <xref:System.Security.Cryptography.Pkcs.Pkcs9SigningTime> Signieren Zeit-Attribut.  
+  
+ Signierte Attribute werden zusammen mit dem Rest des signiert die <xref:System.Security.Cryptography.Pkcs.SignedCms> Inhalt der Nachricht. Dies bedeutet, dass eine Partei, die die Signatur die Überprüfung erfolgreich besteht vertrauen kann, dass der Inhalt dieser Attribute authentisch sind und nicht geändert wurden.  
+  
+ Ein <xref:System.Security.Cryptography.Pkcs.Pkcs9ContentType> Objekt und ein <xref:System.Security.Cryptography.Pkcs.Pkcs9MessageDigest> Objekt wird automatisch generiert und platziert Sie der <xref:System.Security.Cryptography.Pkcs.SignerInfo.SignedAttributes%2A> Eigenschaft immer die <xref:System.Security.Cryptography.Pkcs.CmsSigner.SignedAttributes%2A?displayProperty=nameWithType> -Eigenschaft für den entsprechenden Signaturgeber ist nicht leer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignerIdentifier">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Pkcs.SubjectIdentifier SignerIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Pkcs.SubjectIdentifier SignerIdentifier" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SignerInfo.SignerIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.SubjectIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.SignerInfo.SignerIdentifier" /> -Eigenschaft ruft den Bezeichner des Zertifikats des Signaturgebers, die Informationen über den Signaturgeber zugeordnet.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifier" /> -Objekt, das Informationen über den Signaturgeber zugeordnete Zertifikat eindeutig identifiziert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsignedAttributes">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CryptographicAttributeObjectCollection UnsignedAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CryptographicAttributeObjectCollection UnsignedAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SignerInfo.UnsignedAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CryptographicAttributeObjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.SignerInfo.UnsignedAttributes" /> -Eigenschaft ruft die <see cref="T:System.Security.Cryptography.CryptographicAttributeObjectCollection" /> Auflistung von nicht signierten Attribute, die mit zugeordnetem der <see cref="T:System.Security.Cryptography.Pkcs.SignerInfo" /> Inhalt. Nicht signierte Attribute können geändert werden, ohne die Signatur ungültig.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.CryptographicAttributeObjectCollection" /> Sammlung, die ohne Vorzeichen Attribute darstellt. Wenn keine nicht signierten Attribute vorhanden sind, ist die Eigenschaft eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nicht signierte Attribute werden nicht zusammen mit dem Rest des signiert die <xref:System.Security.Cryptography.Pkcs.SignedCms> Inhalt der Nachricht. Obwohl eine Partei die Signatur wurde erfolgreich bestätigt hat, wird die ohne Vorzeichen Attribute wurde geändert und sollte nicht als Authenticity (Echtheitszertifikat) oder die Integrität aufweisen.  
+  
+ Ein Beispiel für ein nicht signiertes Attribut, das in aufgenommen werden kann die <xref:System.Security.Cryptography.CryptographicAttributeObjectCollection> Auflistung abgerufen werden, indem Sie die <xref:System.Security.Cryptography.Pkcs.SignerInfo.UnsignedAttributes%2A> Eigenschaft ist eine Gegensignatur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public int Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Version" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.SignerInfo.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.SignerInfo.Version" /> -Eigenschaft ruft die Version der Signaturgeber Informationen ab.</summary>
+        <value>Int-Wert, der die Version der Signaturgeber-Informationen angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Version bestimmt, ob die Nachricht eine PKCS #7-Nachricht oder eine Nachricht Cryptographic Message Syntax (CMS) ist. CMS ist eine neuere Obermenge von PKCS #7.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

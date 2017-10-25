@@ -1,0 +1,219 @@
+<Type Name="GridViewUpdateEventArgs" FullName="System.Web.UI.WebControls.GridViewUpdateEventArgs">
+  <TypeSignature Language="C#" Value="public class GridViewUpdateEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewUpdateEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewUpdateEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.GridView.RowUpdating" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.GridView> -Steuerelement löst die <xref:System.Web.UI.WebControls.GridView.RowUpdating> Ereignis aus, wenn eine Zeile der Schaltfläche "Aktualisieren", jedoch bevor geklickt wird die <xref:System.Web.UI.WebControls.GridView> Steuerelement aktualisiert die Zeile. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, z. B. den Update-Vorgang abbrechen, wenn dieses Ereignis tritt auf.  
+  
+ Ein <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs> Objekt übergeben wird, an die Methode für die Ereignisbehandlung, wodurch Sie den Index der aktuellen Zeile ermitteln und um anzugeben, dass der Update-Vorgang abgebrochen werden soll. Legen Sie zum Abbrechen des Update-Vorgangs der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs> -Objekt `true`. Sie können auch Bearbeiten der <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.Keys%2A>, <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.OldValues%2A>, und <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.NewValues%2A> Auflistungen, falls erforderlich, bevor die Werte an die Datenquelle übergeben werden. Ein gängiges Verfahren zum Verwenden dieser Sammlungen ist für die HTML-Codierung die Werte, die vom Benutzer angegeben werden, bevor sie in der Datenquelle gespeichert werden. Dadurch werden Script-Injection-Angriffe verhindert.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs>, finden Sie unter der <xref:System.Web.UI.WebControls.GridViewSelectEventArgs.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs> , übergeben die Ereignisbehandlungsmethode für die HTML-Codierung alle Werte, die vom Benutzer vor dem Aktualisieren der Datenquelle angegeben.  
+  
+ [!code-aspx-csharp[GridViewRowUpdating#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowUpdating/CS/gridviewrowupdatingcs.aspx#1)]
+ [!code-aspx-vb[GridViewRowUpdating#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowUpdating/VB/gridviewrowupdatingvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewUpdateEventArgs (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewUpdateEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index des zu aktualisierenden Zeile.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.GridViewUpdateEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs> -Klasse unter Verwendung den angegebenen Zeilenindex.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.RowIndex%2A>|Der Wert in der `rowIndex` Parameter.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewUpdateEventArgs.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch von Name/Wert-Paaren, die den Primärschlüssel, der die zu aktualisierende Zeile darstellen.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> Objekt, das enthält Name/Wert-Paaren, die den Primärschlüssel, der die zu aktualisierende Zeile darstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Web.UI.WebControls.GridView.DataKeyNames%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.GridView> Steuerelement festgelegt ist, verwenden die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.Keys%2A> -Eigenschaft (Wörterbuch) Zugriff auf den Wert des Primärschlüssels in der zu aktualisierenden Zeile.  
+  
+> [!NOTE]
+>  Verwenden Sie die Werte der Felder nicht-Schlüssel für den Zugriff auf die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.NewValues%2A> oder <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.OldValues%2A> Eigenschaften. Die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.NewValues%2A> Eigenschaft enthält die aktualisierten Werte während der <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.OldValues%2A> Eigenschaft enthält die ursprünglichen Werte.  
+  
+ Die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.Keys%2A> Wörterbuch automatisch durch die Name/Wert-Paare des Felds oder der in der angegebenen Felder ersetzt die <xref:System.Web.UI.WebControls.GridView.DataKeyNames%2A> Eigenschaft. Wenn mehrere Felder den primären Schlüssel bilden, wird ein separater Eintrag hinzugefügt, auf die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.Keys%2A> Wörterbuch für jede Schlüsselfeld.  
+  
+ Verwenden Sie den Namen eines Schlüsselfelds zu ermitteln, die <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> Eigenschaft eine <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> in enthaltenes Objekt die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.Keys%2A> Wörterbuch. Um den Wert eines Schlüsselfelds zu bestimmen, verwenden die <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Keys%2A> Eigenschaft, um den Zugriff auf die Werte der wichtigsten Felder in die zu aktualisierende Zeile. Die Werte werden dann in eine Protokolldatei des aktualisierten Datensätze geschrieben werden.  
+  
+ [!code-aspx-csharp[GridViewUpdateEventArgsKeys#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewUpdateEventArgsKeys/CS/gridviewupdateeventargskeyscs.aspx#1)]
+ [!code-aspx-vb[GridViewUpdateEventArgsKeys#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewUpdateEventArgsKeys/VB/gridviewupdateeventargskeysvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary NewValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary NewValues" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewUpdateEventArgs.NewValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch mit den geänderten Werten Schlüsselfelder Name/Wert-Paare in der Zeile zu aktualisieren.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> Objekt enthält die geänderten Werte der Schlüsselfelder Name/Wert-Paare in der Zeile zu aktualisieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.NewValues%2A> Eigenschaft (Wörterbuch), um den Zugriff auf die Werte der überarbeitete nichtschlüssel-Felder in die zu aktualisierende Zeile.  
+  
+> [!NOTE]
+>  Der primäre oder Primärschlüsselfelder sind in diesem Wörterbuch nicht enthalten. Verwenden Sie die Werte der Felder Primärschlüsselfelds für den Zugriff auf die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.Keys%2A> Eigenschaft. Verwenden Sie die ursprünglichen Werte der Felder nicht-Schlüssel in der Zeile für den Zugriff auf die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.OldValues%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.NewValues%2A> Eigenschaft wird automatisch mit den Name/Wert-Paaren überarbeitete nichtschlüssel-Felder in der Zeile angegeben. Ein separater Eintrag wird hinzugefügt, um die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.NewValues%2A> -Eigenschaft für jedes nicht-Schlüssel-Feld in der Zeile.  
+  
+ Verwenden Sie zum Bestimmen der Feldname eines Eintrags der <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> Eigenschaft eine <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> in enthaltenes Objekt die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.NewValues%2A> Wörterbuch. Um den Wert eines Eintrags zu ermitteln, verwenden die <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.NewValues%2A> Eigenschaft für die HTML-Codierung alle Werte, die vom Benutzer vor dem Aktualisieren der Datenquelle bereitgestellt.  
+  
+ [!code-aspx-csharp[GridViewRowUpdating#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowUpdating/CS/gridviewrowupdatingcs.aspx#1)]
+ [!code-aspx-vb[GridViewRowUpdating#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowUpdating/VB/gridviewrowupdatingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary OldValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary OldValues" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewUpdateEventArgs.OldValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch, enthält die ursprünglichen Feld Name/Wert-Paare in der Zeile zu aktualisieren.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> -Objekt, das die ursprünglichen Werte für das Feld Name/Wert-Paare in die zu aktualisierende Zeile.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.OldValues%2A> Eigenschaft (Wörterbuch), um die ursprünglichen Werte der Felder in der zu aktualisierenden Zeile zugreifen. Dieses Wörterbuch enthält alle Felder in der Zeile mit Ausnahme der Schlüsselfelder. Die Schlüsselfelder sind definiert, der <xref:System.Web.UI.WebControls.GridView.DataKeyNames%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+> [!NOTE]
+>  Sie können die wichtigsten Felder einer Zeile zugreifen, mithilfe der <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.Keys%2A> Eigenschaft. Verwenden Sie die überarbeitete Werte der Felder nicht-Schlüssel in der Zeile für den Zugriff auf die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.NewValues%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.OldValues%2A> Eigenschaft wird automatisch mit den ursprünglichen Werten aller Name/Wert-Paare der Felder in der Zeile angegeben. Ein separater Eintrag wird hinzugefügt, um die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.OldValues%2A> -Eigenschaft für jedes Feld in der Zeile.  
+  
+ Verwenden Sie zum Bestimmen der Feldname eines Eintrags der <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> Eigenschaft eine <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> in enthaltenes Objekt die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.OldValues%2A> Wörterbuch. Um den Wert eines Eintrags zu ermitteln, verwenden die <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.OldValues%2A> Eigenschaft, um die ursprünglichen Werte der Felder in der zu aktualisierenden Zeile zugreifen. Die Werte werden dann in eine Protokolldatei des aktualisierten Datensätze geschrieben werden.  
+  
+ [!code-aspx-csharp[GridViewUpdateEventArgsOldValues#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewUpdateEventArgsOldValues/CS/gridviewupdateeventargsoldvaluescs.aspx#1)]
+ [!code-aspx-vb[GridViewUpdateEventArgsOldValues#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewUpdateEventArgsOldValues/VB/gridviewupdateeventargsoldvaluesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewUpdateEventArgs.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index der Zeile aktualisiert wird.</summary>
+        <value>Der Index des zu aktualisierenden Zeile.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.GridViewUpdateEventArgs.RowIndex%2A> -Eigenschaft bestimmt den Index des zu aktualisierenden Zeile. Der Zeilenindex wird häufig verwendet, um die entsprechende Zeile aus abgerufen der <xref:System.Web.UI.WebControls.GridView.Rows%2A> Auflistung von der <xref:System.Web.UI.WebControls.GridView> -Steuerelement, das Sie Eigenschaften der Zeile zugreifen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

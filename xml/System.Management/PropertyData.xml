@@ -1,0 +1,271 @@
+<Type Name="PropertyData" FullName="System.Management.PropertyData">
+  <TypeSignature Language="C#" Value="public class PropertyData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertyData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.PropertyData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Informationen zum WMI-Eigenschaft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel listet Informationen über die **Win32_OperatingSystem** -Klasse unter Verwendung der <xref:System.Management.PropertyData> Klasse. Weitere Informationen zu **Win32_OperatingSystem**, finden Sie in der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ [!code-csharp[wminet_PropertyData#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_PropertyData/cs/PropertyData.cs#1)]
+ [!code-vb[wminet_PropertyData#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_PropertyData/vb/PropertyData.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsArray">
+      <MemberSignature Language="C#" Value="public bool IsArray { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsArray" />
+      <MemberSignature Language="DocId" Value="P:System.Management.PropertyData.IsArray" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Eigenschaft ein Array ist.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die Eigenschaft ein Array ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn die Eigenschaft ein Array ist. andernfalls `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLocal">
+      <MemberSignature Language="C#" Value="public bool IsLocal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLocal" />
+      <MemberSignature Language="DocId" Value="P:System.Management.PropertyData.IsLocal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Eigenschaft in der aktuellen WMI-Klasse definiert wurde.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die Eigenschaft in der aktuellen WMI-Klasse definiert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`Wenn die Eigenschaft in der aktuellen WMI-Klasse definiert wurde; andernfalls `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.PropertyData.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Eigenschaft ab.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der den Namen der Eigenschaft enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine Zeichenfolge, die mit dem Namen der Eigenschaft.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet Informationen über die **Win32_OperatingSystem** -Klasse unter Verwendung der <xref:System.Management.PropertyData> Klasse. Weitere Informationen zu **Win32_OperatingSystem**, finden Sie in der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ [!code-csharp[wminet_PropertyData_Name#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_PropertyData_Name/cs/PropertyData_Name.cs#1)]
+ [!code-vb[wminet_PropertyData_Name#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_PropertyData_Name/vb/PropertyData_Name.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Origin">
+      <MemberSignature Language="C#" Value="public string Origin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Origin" />
+      <MemberSignature Language="DocId" Value="P:System.Management.PropertyData.Origin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der WMI-Klasse in der Hierarchie, in der die Eigenschaft eingeführt wurde.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> -Wert mit dem Namen der WMI-Klasse in der Hierarchie, in denen die Eigenschaft eingeführt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine Zeichenfolge, die mit dem Namen der ursprünglichen WMI-Klasse.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Qualifiers">
+      <MemberSignature Language="C#" Value="public System.Management.QualifierDataCollection Qualifiers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.QualifierDataCollection Qualifiers" />
+      <MemberSignature Language="DocId" Value="P:System.Management.PropertyData.Qualifiers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.QualifierDataCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Satz der Qualifizierer, die für die Eigenschaft definiert.</summary>
+        <value>Gibt eine <see cref="T:System.Management.QualifierDataCollection" /> mit den Qualifizierer für die Eigenschaft definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Ein <xref:System.Management.QualifierDataCollection> , das den Berechtigungssatz für die Eigenschaft definierten Qualifizierer darstellt.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet Informationen über die **Win32_OperatingSystem** -Klasse unter Verwendung der <xref:System.Management.PropertyData> Klasse. Weitere Informationen zu **Win32_OperatingSystem**, finden Sie in der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ [!code-csharp[wminet_PropertyData_Qualifiers#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_PropertyData_Qualifiers/cs/PropertyData_Qualifiers.cs#1)]
+ [!code-vb[wminet_PropertyData_Qualifiers#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_PropertyData_Qualifiers/vb/PropertyData_Qualifiers.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Management.CimType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.CimType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Management.PropertyData.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.CimType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den CIM-Typ der Eigenschaft ab.</summary>
+        <value>Gibt eine <see cref="T:System.Management.CimType" /> -Enumerationswert, der den CIM-Typ der Eigenschaft darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Ein <xref:System.Management.CimType> Wert, der den CIM-Typ der Eigenschaft darstellt.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet Informationen über die **Win32_OperatingSystem** -Klasse unter Verwendung der <xref:System.Management.PropertyData> Klasse. Weitere Informationen zu **Win32_OperatingSystem**, finden Sie in der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ [!code-csharp[wminet_PropertyData_Type#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_PropertyData_Type/cs/PropertyData_Type.cs#1)]
+ [!code-vb[wminet_PropertyData_Type#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_PropertyData_Type/vb/PropertyData_Type.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Management.PropertyData.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den aktuellen Wert der Eigenschaft.</summary>
+        <value>Gibt ein <see cref="T:System.Object" /> Wert, der den Wert der Eigenschaft darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Ein Objekt, mit dem Wert der Eigenschaft.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet Informationen über die **Win32_OperatingSystem** -Klasse unter Verwendung der <xref:System.Management.PropertyData> Klasse. Weitere Informationen zu **Win32_OperatingSystem**, finden Sie in der Windows-Verwaltungsinstrumentation-Dokumentation in der MSDN Library unter http://msdn.microsoft.com/library.  
+  
+ [!code-csharp[wminet_PropertyData_Value#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_PropertyData_Value/cs/PropertyData_Value.cs#1)]
+ [!code-vb[wminet_PropertyData_Value#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_PropertyData_Value/vb/PropertyData_Value.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

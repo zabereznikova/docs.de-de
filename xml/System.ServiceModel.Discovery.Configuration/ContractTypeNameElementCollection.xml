@@ -1,0 +1,71 @@
+<Type Name="ContractTypeNameElementCollection" FullName="System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection">
+  <TypeSignature Language="C#" Value="public sealed class ContractTypeNameElementCollection : System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection&lt;System.ServiceModel.Discovery.Configuration.ContractTypeNameElement&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContractTypeNameElementCollection extends System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1&lt;class System.ServiceModel.Discovery.Configuration.ContractTypeNameElement&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection&lt;System.ServiceModel.Discovery.Configuration.ContractTypeNameElement&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.ServiceModel.Discovery.Configuration.ContractTypeNameElement</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.ServiceModel.Discovery.Configuration.ContractTypeNameElement))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Vertragstypname ist eine Eigenschaft, die auf den Kriteriensatz verweist, der in der Regel beim Suchen nach einem Dienst verwendet wird. Der Kriteriensatz oder Vertrag ist eine Auflistung der Vorgänge, die angeben, welche Informationen vom Endpunkt nach außen gegeben werden. Jeder Vorgang ist ein Nachrichtenaustausch. Beispielsweise bilden eine Anforderungsmeldung und eine zugeordnete Antwortmeldung einen Anforderung/Antwort-Nachrichtenaustausch.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContractTypeNameElementCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

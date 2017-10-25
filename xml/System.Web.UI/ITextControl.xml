@@ -1,0 +1,70 @@
+<Type Name="ITextControl" FullName="System.Web.UI.ITextControl">
+  <TypeSignature Language="C#" Value="public interface ITextControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITextControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ITextControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Schnittstelle, die ein Steuerelement implementiert, um den Textinhalt abzurufen oder festzulegen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ITextControl> Schnittstelle definiert die <xref:System.Web.UI.ITextControl.Text%2A> Eigenschaft, die ein Steuerelement implementiert wird, zum Abrufen oder Festlegen des Textinhalts. Die <xref:System.Web.UI.ITextControl.Text%2A> Eigenschaft kann programmgesteuert oder durch Benutzereingabe festgelegt werden.  
+  
+> [!CAUTION]
+>  Ein Steuerelement implementieren diese Schnittstelle kann zum Anzeigen von Benutzereingaben verwendet werden. Die Eingabe muss vor der Anzeige von Benutzereingaben, schädlichen Client-Skripts, z. B. ausführbare Skript- oder SQL-Anweisungen überprüft werden. ASP.NET bietet eine Funktion für den Überprüfung eingabeanforderung zum Blockieren von Skript und HTML in Benutzereingaben. Server-Validierungssteuerelemente werden ebenfalls bereitgestellt, um Benutzereingaben zu bewerten. Weitere Informationen finden Sie unter [Validation Server Control Syntax](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt ein benutzerdefiniertes Steuerelement, das implementiert die <xref:System.Web.UI.ITextControl> Schnittstelle. Ein Standardwert zugewiesen ist, um die <xref:System.Web.UI.ITextControl.Text%2A> Eigenschaft Wenn `null` an die Eigenschaft übergeben wird.  
+  
+ [!code-csharp[System.Web.UI.ITextControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ITextControl/CS/CustomTextControl.cs#1)]
+ [!code-vb[System.Web.UI.ITextControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ITextControl/VB/CustomTextControl.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ITextControl.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Textinhalt eines Steuerelements.</summary>
+        <value>Der Textinhalt eines Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ITextControl.Text%2A> Eigenschaft kann programmgesteuert oder durch Benutzereingabe festgelegt werden.  
+  
+> [!CAUTION]
+>  Ein Steuerelement implementieren diese Schnittstelle kann zum Anzeigen von Benutzereingaben verwendet werden. Die Eingabe muss vor der Anzeige von Benutzereingaben, schädlichen Client-Skripts, z. B. ausführbare Skript- oder SQL-Anweisungen überprüft werden. ASP.NET bietet eine Funktion für den Überprüfung eingabeanforderung zum Blockieren von Skript und HTML in Benutzereingaben. Server-Validierungssteuerelemente werden ebenfalls bereitgestellt, um Benutzereingaben zu bewerten. Weitere Informationen finden Sie unter [Validation Server Control Syntax](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt ein benutzerdefiniertes Steuerelement, das implementiert die <xref:System.Web.UI.ITextControl> Schnittstelle. Ein Standardwert zugewiesen ist, um die <xref:System.Web.UI.ITextControl.Text%2A> Eigenschaft Wenn `null` an die Eigenschaft übergeben wird.  
+  
+ [!code-csharp[System.Web.UI.ITextControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ITextControl/CS/CustomTextControl.cs#1)]
+ [!code-vb[System.Web.UI.ITextControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ITextControl/VB/CustomTextControl.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

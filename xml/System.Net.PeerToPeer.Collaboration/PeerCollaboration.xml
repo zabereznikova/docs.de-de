@@ -1,0 +1,764 @@
+<Type Name="PeerCollaboration" FullName="System.Net.PeerToPeer.Collaboration.PeerCollaboration">
+  <TypeSignature Language="C#" Value="public static class PeerCollaboration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit PeerCollaboration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Interagiert mit der Infrastruktur für die Peer-Zusammenarbeit. Viele der zusammenarbeitsszenarien beginnen mit dieser Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ist eine statische Klasse – es ist versiegelt, abstrakt und verfügt nicht über einen öffentlichen Konstruktor. Es wird verwendet, enthalten und Verwalten der Anwendung, Objekt- und Anwesenheitsinformationen für Peers, die zu einer Sitzung für die Zusammenarbeit Einladungen akzeptiert haben. Im Hinblick auf Peers, Objekte und Anwendungen enthält die PeerCollaboration-Klasse drei Accessoren für jede Sammlung, wie eine Schnittstelle oder Verbindungspunkt für alle anderen auf dem Computer aufzeichnen.  Diese Klasse kann nicht geerbt werden. ein Fehler während der Kompilierung erfolgt, wenn diese versiegelten Klasse als Basisklasse angegeben ist.  
+  
+ Methoden und Eigenschaften in dieser Klasse können für Folgendes verwendet werden:  
+  
+-   Starten und Verwalten von Anwendungen für die Zusammenarbeit  
+  
+-   Registrieren und Löschen von Anwendungen und Zusammenarbeit-Objekte (z. B. Zertifikate, Bilder, Avatare und textbeschreibungen)  
+  
+-   Einladen von Peers Zusammenarbeit Sitzungen, einschließlich der Elemente, z. B. Bereich und Objekte, die sie über das Internet zu identifizieren, wird  
+  
+-   Zulassen von Peers <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignIn%2A> und <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignOut%2A> der Infrastruktur für die Zusammenarbeit, verwalten Sie Listen der Kontakte oder ihre Anwesenheit miteinander  
+  
+-   Verwenden Sie <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SynchronizingObject%2A> Eigenschaften und Ereignisse zum Koordinieren der asynchronen Anwendungskommunikation, insbesondere bei Änderungen im Namen, Anwesenheit, Anwendung oder andere Objekte.  
+  
+ "Verbindungslokale Cloud", "peer-Subnetzes des aufrufenden" und "NearMe-Bereich" werden Synonyme Begriffe. "Internet Scope" und "serverlose Vorhandensein" sind Synonym. Die standortlokale <xref:System.Net.PeerToPeer.PnrpScope> hat keine Entsprechung in den Zusammenarbeitsnamespace.  
+  
+ Die Verwendung von jeder Methode oder Eigenschaft in dieser Klasse benötigt ein <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Zustand wird erstellt, wenn die Peer-Zusammenarbeit-Sitzung startet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationLaunchInfo">
+      <MemberSignature Language="C#" Value="public static System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo ApplicationLaunchInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo ApplicationLaunchInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerCollaboration.ApplicationLaunchInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo" /> Objekt, das beim Start einer Anwendung aufgrund einer Zusammenarbeit-Anforderung von einem Remotecomputer Peer erforderlichen Informationen enthält.</summary>
+        <value>Wenn die Anwendung aufgrund einer Einladung gestartet wurde eine <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo" /> -Objekt, das beide Informationen zu den Peer enthält, die die Anwendung der Einladung auch selbst gesendet wird zurückgegeben, andernfalls <see langword="null" /> wird zurückgegeben.  Der Standardwert für diese Eigenschaft ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird von einer Zusammenarbeit-fähig zu verwendende <xref:System.Net.PeerToPeer.Collaboration.PeerApplication> Instanz, nachdem sie gestartet wird, um zu bestimmen, ob es aufgrund einer Zusammenarbeit-Anforderung von einem Remotecomputer Peer gestartet wurde.  Überprüfen Sie die aufrufende Anwendung sollte die <xref:System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.Data%2A> und <xref:System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.Message%2A> Eigenschaften, um weitere Informationen zur Anforderung Einladung erhalten.  
+  
+ Zugriff auf diese Eigenschaft erfordert einen <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.Peer> Zusammenarbeit Sitzung begonnen hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContactManager">
+      <MemberSignature Language="C#" Value="public static System.Net.PeerToPeer.Collaboration.ContactManager ContactManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.PeerToPeer.Collaboration.ContactManager ContactManager" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerCollaboration.ContactManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.ContactManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den permanenten Speicher, die alle enthält <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> Objekte für Remotepeers.</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" />Objekt, das alle Objekte auf derselben Ebene Kontakt für Remotepeers enthält. Der Standardwert für diese Eigenschaft ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteObject">
+      <MemberSignature Language="C#" Value="public static void DeleteObject (System.Net.PeerToPeer.Collaboration.PeerObject peerObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DeleteObject(class System.Net.PeerToPeer.Collaboration.PeerObject peerObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.DeleteObject(System.Net.PeerToPeer.Collaboration.PeerObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerObject" Type="System.Net.PeerToPeer.Collaboration.PeerObject" />
+      </Parameters>
+      <Docs>
+        <param name="peerObject">Das <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />, dessen Registrierung aufgehoben werden soll.</param>
+        <summary>Hebt die Registrierung eines <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> auf, das dem aufrufenden Peer zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objekte auf derselben Ebene werden automatisch aufgehoben (entfernt) aus der Infrastruktur für die Peer-Zusammenarbeit bei der ein Verweis auf das Objekt nicht mehr gültig ist.  Wenn ein Aufrufer nicht verwalten, einen Verweis auf das Objekt ist, wird es von der Infrastruktur für die Peer-Zusammenarbeit aufgehoben.  Alternativ kann ein Objekt manuell aufgehoben werden, mithilfe dieser Methode.  
+  
+ Beim Aufrufen dieser Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.Peer> Zusammenarbeit Sitzung begonnen hat.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="peerObject" />-Parameter darf nicht <see langword="null" /> sein.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException"><see cref="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.DeleteObject(System.Net.PeerToPeer.Collaboration.PeerObject)" />-Vorgang kann nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetLocalRegisteredApplications">
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> Objekte, die auf dem lokalen Computer registriert sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer erforderlich, um die Anmeldung bei der Peer-Zusammenarbeit-Infrastruktur über die <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignIn%2A> Methode oder vor der Verwendung dieser Methode.  
+  
+ Zugriff auf diese Eigenschaft erfordert einen <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.Peer> Zusammenarbeit Sitzung begonnen hat.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht das Abrufen einer Auflistung von Anwendungen, die bei der Infrastruktur für die Zusammenarbeit registriert:  
+  
+ [!code-csharp[NCLPNRPContacts#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPNRPContacts/CS/NCLPNRPContacts.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetLocalRegisteredApplications">
+      <MemberSignature Language="C#" Value="public static System.Net.PeerToPeer.Collaboration.PeerApplicationCollection GetLocalRegisteredApplications ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.PeerToPeer.Collaboration.PeerApplicationCollection GetLocalRegisteredApplications() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.GetLocalRegisteredApplications" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerApplicationCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft alle <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> Objekte, die auf dem lokalen Computer registriert sind.</summary>
+        <returns>Ein <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationCollection" /> , enthält alle Anwendungen, die auf dem lokalen Computer registriert sind. Wenn eine Anwendung nicht gefunden wird, wird eine Auflistung der Größe 0 (null) zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss zur Anmeldung an der Peer-Zusammenarbeit-Infrastruktur über die <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignIn%2A> Methode vor der Verwendung dieser Methode.  
+  
+ Zugriff auf diese Eigenschaft erfordert einen <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.Peer> Zusammenarbeit Sitzung begonnen hat.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Ein ungültiger Wert wurde zurückgegeben, wenn diese Methode hat versucht, die für diesen Peer registrierte Anwendung aufzulisten. Stellen Sie sicher, dass alle Anwendungen gültige Registrierungswerte verfügen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalRegisteredApplications">
+      <MemberSignature Language="C#" Value="public static System.Net.PeerToPeer.Collaboration.PeerApplicationCollection GetLocalRegisteredApplications (System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.PeerToPeer.Collaboration.PeerApplicationCollection GetLocalRegisteredApplications(valuetype System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.GetLocalRegisteredApplications(System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerApplicationCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType" />
+      </Parameters>
+      <Docs>
+        <param name="type">
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType" />für die angegebene Anwendung zurückgegeben.</param>
+        <summary>Ruft eine Auflistung aller <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> Objekte, die auf dem lokalen Computer für den angegebenen registriert sind <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType" />.</summary>
+        <returns>Ein <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationCollection" /> , enthält alle Anwendungen des angegebenen <paramref name="type" /> auf dem lokalen Computer registriert sind. Wenn eine Anwendung nicht gefunden wird, wird eine Auflistung der Größe 0 (null) zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss zur Anmeldung an der Infrastruktur der Peer-Zusammenarbeit über die <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignIn%2A> Methode vor der Verwendung dieser Methode.  
+  
+ Zugriff auf diese Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.Peer> Zusammenarbeit Sitzung begonnen hat.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="type" /> Parametersatz ist nicht auf einen bekannten Wert in der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType" /> Enumeration.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Ein ungültiger Wert wurde zurückgegeben, wenn diese Methode hat versucht, die für diesen Peer registrierte Anwendung aufzulisten. Stellen Sie sicher, dass alle Anwendungen gültige Registrierungswerte verfügen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalSetObjects">
+      <MemberSignature Language="C#" Value="public static System.Net.PeerToPeer.Collaboration.PeerObjectCollection GetLocalSetObjects ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.PeerToPeer.Collaboration.PeerObjectCollection GetLocalSetObjects() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.GetLocalSetObjects" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerObjectCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft alle <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> registrierte Instanzen von der aufrufenden Peer mit dem <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> Infrastruktur auf diesem Computer.</summary>
+        <returns>Ein <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObjectCollection" /> enthält alle der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> registrierte Instanzen von der aufrufenden Peer mit dem <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> Infrastruktur auf dem lokalen Computer.  
+  
+ Wenn registriert <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> Instanzen werden nicht auf dem lokalen Computer ermittelt, der eine Auflistung der Größe 0 (null) zurückgegeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zugriff auf diese Eigenschaft erfordert einen <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.Peer> Zusammenarbeit Sitzung begonnen hat.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Ein ungültiger Wert wurde zurückgegeben, wenn diese Methode hat versucht, alle verfügbaren aufzählen <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> Instanzen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPeersNearMe">
+      <MemberSignature Language="C#" Value="public static System.Net.PeerToPeer.Collaboration.PeerNearMeCollection GetPeersNearMe ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.PeerToPeer.Collaboration.PeerNearMeCollection GetPeersNearMe() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.GetPeersNearMe" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerNearMeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung aller der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> Endpunkte, die sich im Subnetz des aufrufenden Peers derzeit angemeldet.</summary>
+        <returns>Ein <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMeCollection" /> , die alle enthält die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> Endpunkte, die in den Bereich "Personen in meiner Umgebung" angemeldet.  
+  
+ Wenn Peers nicht im Subnetz ermittelt wurden, wird eine Auflistung der Größe 0 (null) zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Rückgabe von ein vollständig aufgefüllter <xref:System.Net.PeerToPeer.Collaboration.PeerNearMeCollection> über diese Methode kann einen unbestimmten Zeitraum nach der Anmeldung je nach Netzwerktopologie und Latenz erfordern.  
+  
+ Beim Aufrufen dieser Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.Peer> Zusammenarbeit Sitzung begonnen hat.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen von PeersNearMe als eine PeerNearMeCollection abrufen:  
+  
+ [!code-csharp[NCLPNRPContacts#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPNRPContacts/CS/NCLPNRPContacts.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Peer ist nicht zum Bereich "in der Nähe von" angemeldet.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Ein ungültiger Wert wurde zurückgegeben, wenn diese Methode hat versucht, alle bekannten Personen in meiner Endpunkte aufgelistet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalApplicationChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler&lt;System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs&gt; LocalApplicationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs&gt; LocalApplicationChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalApplicationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wird ausgelöst, wenn eine <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> in der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationCollection" /> für den lokale Peer auf dem lokalen Host geändert wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalEndPointName">
+      <MemberSignature Language="C#" Value="public static string LocalEndPointName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property string LocalEndPointName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalEndPointName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> aufrufenden Peer zugeordnet.</summary>
+        <value>
+          <see cref="T:System.String" />enthält den Namen der aufrufenden Peer-Endpunkt zugeordnet ist (als die <see cref="P:System.Net.PeerToPeer.Collaboration.PeerEndPoint.Name" /> Eigenschaft). Der Standardwert für diese Eigenschaft ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zugriff auf diese Eigenschaft erfordert einen <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.Peer> Zusammenarbeit Sitzung begonnen hat.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Kann nicht festgelegt werden <see cref="P:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalEndPointName" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalNameChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler&lt;System.Net.PeerToPeer.Collaboration.NameChangedEventArgs&gt; LocalNameChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.NameChangedEventArgs&gt; LocalNameChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalNameChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.NameChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wird ausgelöst, wenn der Name des der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> auf dem lokalen Host für den lokalen Peer geändert hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalObjectChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler&lt;System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs&gt; LocalObjectChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs&gt; LocalObjectChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalObjectChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> in der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObjectCollection" /> für den lokale Peer auf dem lokalen Host geändert wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalPresenceChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler&lt;System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs&gt; LocalPresenceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs&gt; LocalPresenceChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalPresenceChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerPresenceInfo" /> der den lokalen Peer auf dem lokalen Host hat sich geändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalPresenceInfo">
+      <MemberSignature Language="C#" Value="public static System.Net.PeerToPeer.Collaboration.PeerPresenceInfo LocalPresenceInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.PeerToPeer.Collaboration.PeerPresenceInfo LocalPresenceInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalPresenceInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerPresenceInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Vorhandensein für den aufrufenden Peer innerhalb der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> Infrastruktur.</summary>
+        <value>Die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerPresenceInfo" /> Anwesenheitsinformationen für den aufrufenden Peer, die für registriert wurden enthält eine <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> Sitzung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.Peer> Zusammenarbeit Sitzung begonnen hat.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerPresenceInfo" />kann nicht angegeben werden<see langword="null" /></exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">-   <see cref="T:System.Net.PeerToPeer.Collaboration.PeerPresenceStatus" />ist offline.  
+  
+-   Kann nicht festgelegt<see cref="T:System.Net.PeerToPeer.Collaboration.PeerPresenceInfo" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterApplication">
+      <MemberSignature Language="C#" Value="public static void RegisterApplication (System.Net.PeerToPeer.Collaboration.PeerApplication application, System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterApplication(class System.Net.PeerToPeer.Collaboration.PeerApplication application, valuetype System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.RegisterApplication(System.Net.PeerToPeer.Collaboration.PeerApplication,System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="application" Type="System.Net.PeerToPeer.Collaboration.PeerApplication" />
+        <Parameter Name="type" Type="System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType" />
+      </Parameters>
+      <Docs>
+        <param name="application">Die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" />, für die der aufrufende Peer im zugeordneten Bereich (global, lokal und verbindungslokal) registriert werden soll.</param>
+        <param name="type">Der Typ der auszuführenden Registrierung.  Die Anwendung kann nur für den aufrufenden Peer oder für alle Peers, die den Computer verwenden, registriert werden.</param>
+        <summary>Registriert die angegebene <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> für eine Zusammenarbeit mit dem aufrufenden Peer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der aufrufende Peer ist erforderlich, um die Anmeldung bei der Peer-Infrastruktur für die Zusammenarbeit mit dem <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignIn%2A> Methode vor dem Aufruf dieser Methode.  
+  
+ Zugriff auf diese Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.Peer> Zusammenarbeit Sitzung begonnen hat.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Anwendung mit der Infrastruktur für die Zusammenarbeit zu registrieren:  
+  
+ [!code-csharp[NCLPNRPContacts#4](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPNRPContacts/CS/NCLPNRPContacts.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">-   Die <see cref="P:System.Net.PeerToPeer.Collaboration.PeerApplication.Path" />-Eigenschaft des <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" />-Objekts, die an <paramref name="application" /> übergeben wird, ist <see langword="null." />.  
+  
+-   Die bereitgestellte Peeranwendungsinstanz verfügt über die gleiche global eindeutige <see cref="P:System.Net.PeerToPeer.Collaboration.PeerApplication.Id" /> wie eine Anwendung, die bereits registriert ist.  Die vorhandene Registrierung muss aufgehoben werden, bevor eine neue Anwendung mit dem bereitgestellten Bezeichner registriert werden kann.</exception>
+        <exception cref="T:System.ArgumentNullException">Die Parameter <paramref name="application" /> und <paramref name="type" /> dürfen nicht gleich <see langword="null" /> sein.  Beide Parameter müssen angegeben werden.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Typparameter ist in der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType" />-Enumeration nicht auf einen bekannten Wert festgelegt.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Der <see cref="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.RegisterApplication(System.Net.PeerToPeer.Collaboration.PeerApplication,System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType)" />-Vorgang kann nicht abgeschlossen werden, solange der Aufrufer sich nicht bei der Infrastruktur angemeldet hat.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetObject">
+      <MemberSignature Language="C#" Value="public static void SetObject (System.Net.PeerToPeer.Collaboration.PeerObject peerObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetObject(class System.Net.PeerToPeer.Collaboration.PeerObject peerObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SetObject(System.Net.PeerToPeer.Collaboration.PeerObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerObject" Type="System.Net.PeerToPeer.Collaboration.PeerObject" />
+      </Parameters>
+      <Docs>
+        <param name="peerObject">Die zu registrierende <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />.</param>
+        <summary>Registriert ein <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />, das dem aufrufenden Peer zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht das Objekt, das abgefragt werden, indem Remotepeers Einbeziehung in den Bereich, in dem das Objekt registriert wurde. Wenn das Objekt bereits registriert wurde, aktualisiert diese Methode seine Registrierung aus. Wenn ein registriertes Objekt außerhalb des gültigen Bereichs liegt, sie können einfach abgerufen werden über die <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.GetLocalSetObjects%2A> Methode.  
+  
+ Die Größe des Datenanteils der <xref:System.Net.PeerToPeer.Collaboration.PeerObject> muss kleiner oder gleich 16.384 Bytes sein.  
+  
+ Zugriff auf diese Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.Peer> Zusammenarbeit Sitzung begonnen hat.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Objekt ist bereits registriert.</exception>
+        <exception cref="T:System.ArgumentNullException">-   <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> darf nicht <see langword="null." /> sein.  
+  
+-   <see cref="P:System.Net.PeerToPeer.Collaboration.PeerObject.Id" /> darf nicht <see langword="null." /> sein.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Der <see cref="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SetObject(System.Net.PeerToPeer.Collaboration.PeerObject)" />-Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignIn">
+      <MemberSignature Language="C#" Value="public static void SignIn (System.Net.PeerToPeer.Collaboration.PeerScope peerScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SignIn(valuetype System.Net.PeerToPeer.Collaboration.PeerScope peerScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignIn(System.Net.PeerToPeer.Collaboration.PeerScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerScope" Type="System.Net.PeerToPeer.Collaboration.PeerScope" />
+      </Parameters>
+      <Docs>
+        <param name="peerScope">Der Bereich, den der Peer zur Teilnahme an der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" />-Aktivität verwendet.</param>
+        <summary>Meldet den Peer mit dem angegebenen <see cref="T:System.Net.PeerToPeer.Collaboration.PeerScope" /> bei der Zusammenarbeitsinfrastruktur an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anzeigenamen sind nicht unbedingt eindeutig. Benutzer sollten überprüfen, ob die Identität der Person, die mit dem Anzeigenamen per E-mail, Telefon oder persönlich, bevor Sie eine Einladung zur Zusammenarbeit akzeptieren.  
+  
+ Diese Funktion meldet die Benutzer in der Infrastruktur für die Zusammenarbeit.  
+  
+ Zugriff auf diese Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.Peer> Zusammenarbeit Sitzung begonnen hat.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie sich die Benutzer in der Infrastruktur für die Zusammenarbeit.  
+  
+ [!code-csharp[NCLPNRPContacts#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPNRPContacts/CS/NCLPNRPContacts.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          Für <paramref name="peerScope" /> ist <see cref="F:System.Net.PeerToPeer.Collaboration.PeerScope.None" /> festgelegt.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="peerScope" />-Parameter enthält einen ungültigen Enumerationswert.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Der <see cref="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignIn(System.Net.PeerToPeer.Collaboration.PeerScope)" />-Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignInScope">
+      <MemberSignature Language="C#" Value="public static System.Net.PeerToPeer.Collaboration.PeerScope SignInScope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Net.PeerToPeer.Collaboration.PeerScope SignInScope" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignInScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerScope" /> in denen der aufrufende Peer Vorhandensein, Funktionen und Objekte Informationen veröffentlichen kann.</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerScope" />Objekt, das den Bereich angibt, in dem der aufrufende Peer einbezogen werden. Der Standardwert für diese Eigenschaft ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Peerhost oder die hostanwendung kann beschränken oder Teilnahme an Peer-Zusammenarbeitsaktivitäten mithilfe von separaten Bereichen unterscheiden.  
+  
+ Der aufrufende Peer sollte überprüfen, den Rückgabewert dieser Methode, um zu bestimmen, welche weiteren Aktionen er erfolgreich ausführen zu kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignOut">
+      <MemberSignature Language="C#" Value="public static void SignOut (System.Net.PeerToPeer.Collaboration.PeerScope peerScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SignOut(valuetype System.Net.PeerToPeer.Collaboration.PeerScope peerScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignOut(System.Net.PeerToPeer.Collaboration.PeerScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerScope" Type="System.Net.PeerToPeer.Collaboration.PeerScope" />
+      </Parameters>
+      <Docs>
+        <param name="peerScope">Durch <see cref="T:System.Net.PeerToPeer.Collaboration.PeerScope" /> angegebene Bereichsenumeration.</param>
+        <summary>Meldet den Peer aus dem angegebenen Bereich ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht mit anwendungsspezifischen und Abmelden wirkt sich möglicherweise auf andere Anwendungen, die zurzeit ausgeführt werden können. Wenn der Benutzer nicht bereits in den angegebenen Bereich aufrufen signiert ist führt diese Methode keine Aktion ausgeführt.  
+  
+ Wenn ein Benutzer Personen in meiner abmeldet, wird ihre veröffentlichten Informationen gelöscht, von der <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> endpunktsatz-Objekt.  Dies schließt <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalEndPointName%2A> und <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalPresenceInfo%2A>, identifizieren Sie zusätzlich zu anderen Objekten, die vom aufrufenden Peer registriert werden, in der Infrastruktur für die Zusammenarbeit. Da diese Informationen gelöscht wird, ist es nicht mehr verfügbar, Remotepeers oder einem Peerhost für die Zusammenarbeit. Aus der Perspektive eines der <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> -Klasse, andere Freigabe der Informationen, die mit vertrauenswürdigen Kontakten ist nicht relevant; verwenden Sie von der <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> Klasse wirkt sich nicht auf andere Objekte, in denen diese Informationen, z. B. eine Remotepeers beibehaltenwurden<xref:System.Net.PeerToPeer.Collaboration.ContactManager>Objekt. Ebenso löschen einen Peer aus der <xref:System.Net.PeerToPeer.Collaboration.ContactManager> wirkt sich nicht auf das Vorhandensein in einer Anwendung für die Zusammenarbeit; andere Kontaktpersonen werden dennoch das Vorhandensein anzeigen und mit ihm zusammenarbeiten.  
+  
+ Beim Aufrufen dieser Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.Peer> Zusammenarbeit Sitzung begonnen hat.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="peerScope" />-Parameter enthält einen ungültigen Enumerationswert.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Der <see cref="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignOut(System.Net.PeerToPeer.Collaboration.PeerScope)" />-Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SynchronizingObject">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.ISynchronizeInvoke SynchronizingObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.ISynchronizeInvoke SynchronizingObject" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SynchronizingObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Description("SynchronizingObject")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ISynchronizeInvoke</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ereignishandler Rückrufobjekt für alle Ereignishandler.</summary>
+        <value>Ein Objekt mit <see cref="T:System.ComponentModel.ISynchronizeInvoke" /> implementiert ist, für die Anwendungsthreadsynchronisierung verwendet werden.  
+  
+ Der Standardwert für diese Eigenschaft ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterApplication">
+      <MemberSignature Language="C#" Value="public static void UnregisterApplication (System.Net.PeerToPeer.Collaboration.PeerApplication application, System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void UnregisterApplication(class System.Net.PeerToPeer.Collaboration.PeerApplication application, valuetype System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.UnregisterApplication(System.Net.PeerToPeer.Collaboration.PeerApplication,System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="application" Type="System.Net.PeerToPeer.Collaboration.PeerApplication" />
+        <Parameter Name="type" Type="System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType" />
+      </Parameters>
+      <Docs>
+        <param name="application">Die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" />, deren Registrierung für den aufrufenden Peer aufgehoben werden soll.</param>
+        <param name="type">Der Typ der Registrierungsaufhebung, die entweder für den aufrufenden Peer oder für alle auf dem Computer vorhandenen Peers durchgeführt werden soll.</param>
+        <summary>Hebt die Registrierung der angegebenen <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> bei der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" />-Infrastruktur auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufheben der Registrierung einer <xref:System.Net.PeerToPeer.Collaboration.PeerApplication> beendet den aufrufenden Peer Zusammenarbeit Einladungen dafür empfangen.  Wenn die Anwendung, deren Registrierung aufgehoben wird zuvor nicht registriert wurde, ist dies nicht möglich.  
+  
+ Beim Aufrufen dieser Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>. Dieser Status wird erstellt, wenn die <xref:System.Net.PeerToPeer.Collaboration.Peer> Zusammenarbeit Sitzung begonnen hat.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die global eindeutige <see cref="P:System.Net.PeerToPeer.Collaboration.PeerApplication.Id" /> für die angegebene Anwendung ist nicht vorhanden oder leer.</exception>
+        <exception cref="T:System.ArgumentNullException">Der Parameter <paramref name="application" /> oder der Parameter <paramref name="type" /> ist auf <see langword="null." /> festgelegt.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="type" />-Parameter ist in <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType" /> nicht auf einen bekannten Wert festgelegt.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Der <see cref="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.UnregisterApplication(System.Net.PeerToPeer.Collaboration.PeerApplication,System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType)" />-Vorgang konnte nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

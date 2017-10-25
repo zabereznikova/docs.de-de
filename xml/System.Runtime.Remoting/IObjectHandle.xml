@@ -1,0 +1,60 @@
+<Type Name="IObjectHandle" FullName="System.Runtime.Remoting.IObjectHandle">
+  <TypeSignature Language="C#" Value="public interface IObjectHandle" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IObjectHandle" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.IObjectHandle" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("C460E2B4-E199-412a-8456-84DC3E4838C3")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Schnittstelle für Entpacken Marshal-by-Value-Objekte aus der Dereferenzierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Marshal-by-Value-Objekte können zurückgegeben werden, durch eine Dereferenzierung, sodass Aufrufer Steuerelement aus, wenn das Objekt in ihrer Domäne geladen werden. Der Aufrufer kann das Objekt aus der Dereferenzierung über diese Schnittstelle entpacken.  
+  
+ Implementierende Klasse der <xref:System.Runtime.Remoting.IObjectHandle> Schnittstelle kann übergeben eines Objekts (in einem umbrochenen Zustand) verwendet werden, zwischen mehreren Anwendungsdomänen Laden der Metadaten für das umschlossene Objekt in jeder <xref:System.AppDomain> über den die <xref:System.Runtime.Remoting.IObjectHandle> übertragen werden. Daher die <xref:System.Runtime.Remoting.IObjectHandle> -Klasse ermöglicht es die Aufrufer Kontrolle über den Zeitpunkt der <xref:System.Type> des Remoteobjekts wird in ihrer Domäne geladen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Unwrap">
+      <MemberSignature Language="C#" Value="public object Unwrap ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Unwrap() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.IObjectHandle.Unwrap" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Das Objekt entpackt.</summary>
+        <returns>Die entpackte-Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="usage">
+          <para>Ein <see cref="T:System.Runtime.Remoting.ObjectHandle" /> ist ein prozessübergreifendes <see cref="T:System.MarshalByRefObject" /> und wird von der Lebensdauer Remotingdienst nachverfolgt. Ein Aufruf der aktuellen Methode kann fehlschlagen, wenn der Lebensdauerlease für das <see cref="T:System.Runtime.Remoting.ObjectHandle" /> läuft ab.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

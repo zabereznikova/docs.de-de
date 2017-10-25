@@ -1,0 +1,360 @@
+<Type Name="WebReference" FullName="System.Web.Services.Description.WebReference">
+  <TypeSignature Language="C#" Value="public sealed class WebReference" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebReference extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.WebReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Beschreibt einen Verweis auf eine Auflistung von XML-Webdienste.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.Services.Description.WebReference> Objekt wird verwendet, um Informationen über eine Reihe von Webdiensten an die statische weitergeben <xref:System.Web.Services.Description.ServiceDescriptionImporter.GenerateWebReferences%2A> Methode der <xref:System.Web.Services.Description.ServiceDescriptionImporter> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Klasse.  
+  
+ [!code-csharp[WebServices_GenerateWebReferences#0](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_GenerateWebReferences/CS/webreference.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.WebReference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebReference (System.Web.Services.Discovery.DiscoveryClientDocumentCollection documents, System.CodeDom.CodeNamespace proxyCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.Services.Discovery.DiscoveryClientDocumentCollection documents, class System.CodeDom.CodeNamespace proxyCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.WebReference.#ctor(System.Web.Services.Discovery.DiscoveryClientDocumentCollection,System.CodeDom.CodeNamespace)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="documents" Type="System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />
+        <Parameter Name="proxyCode" Type="System.CodeDom.CodeNamespace" />
+      </Parameters>
+      <Docs>
+        <param name="documents">Ein <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" /> , die eine Auflistung von Beschreibung Dokumente angibt.</param>
+        <param name="proxyCode">Ein <see cref="T:System.CodeDom.CodeNamespace" /> , einen Namespace für Codekompilierung angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Description.WebReference" /> -Klasse mit der angegebenen Beschreibung Dokument Auflistung und Proxy CodeNamespace.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `documents` Auflistung dürfen nur <xref:System.Web.Services.Description.ServiceDescription> und <xref:System.Xml.Schema.XmlSchema> Objekte; die <xref:System.Web.Services.Description.ServiceDescriptionImporter.GenerateWebReferences%2A> Methode ist nicht interpretieren kann <xref:System.Web.Services.Discovery.DiscoveryDocument> Objekte.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Konstruktors. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Services.Description.WebReference> Klasse.  
+  
+ [!code-csharp[WebServices_GenerateWebReferences#4](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_GenerateWebReferences/CS/webreference.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebReference (System.Web.Services.Discovery.DiscoveryClientDocumentCollection documents, System.CodeDom.CodeNamespace proxyCode, string appSettingUrlKey, string appSettingBaseUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.Services.Discovery.DiscoveryClientDocumentCollection documents, class System.CodeDom.CodeNamespace proxyCode, string appSettingUrlKey, string appSettingBaseUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.WebReference.#ctor(System.Web.Services.Discovery.DiscoveryClientDocumentCollection,System.CodeDom.CodeNamespace,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="documents" Type="System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />
+        <Parameter Name="proxyCode" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="appSettingUrlKey" Type="System.String" />
+        <Parameter Name="appSettingBaseUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="documents">Ein <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" /> , die eine Auflistung von Beschreibung Dokumente angibt.</param>
+        <param name="proxyCode">Ein <see cref="T:System.CodeDom.CodeNamespace" /> , einen Namespace für Codekompilierung angibt.</param>
+        <param name="appSettingUrlKey">Der URL-Schlüssel des Webverweises.</param>
+        <param name="appSettingBaseUrl">Die Basis-URL des Webverweises.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Description.WebReference" /> -Klasse mit den angegebenen Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `documents` Auflistung dürfen nur <xref:System.Web.Services.Description.ServiceDescription> und <xref:System.Xml.Schema.XmlSchema> Objekte; die <xref:System.Web.Services.Description.ServiceDescriptionImporter.GenerateWebReferences%2A> Methode ist nicht interpretieren kann <xref:System.Web.Services.Discovery.DiscoveryDocument> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebReference (System.Web.Services.Discovery.DiscoveryClientDocumentCollection documents, System.CodeDom.CodeNamespace proxyCode, string protocolName, string appSettingUrlKey, string appSettingBaseUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.Services.Discovery.DiscoveryClientDocumentCollection documents, class System.CodeDom.CodeNamespace proxyCode, string protocolName, string appSettingUrlKey, string appSettingBaseUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.WebReference.#ctor(System.Web.Services.Discovery.DiscoveryClientDocumentCollection,System.CodeDom.CodeNamespace,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="documents" Type="System.Web.Services.Discovery.DiscoveryClientDocumentCollection" />
+        <Parameter Name="proxyCode" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="protocolName" Type="System.String" />
+        <Parameter Name="appSettingUrlKey" Type="System.String" />
+        <Parameter Name="appSettingBaseUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="documents">Ein <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" /> , die eine Auflistung von Beschreibung Dokumente angibt.</param>
+        <param name="proxyCode">Ein <see cref="T:System.CodeDom.CodeNamespace" /> , einen Namespace für Codekompilierung angibt.</param>
+        <param name="protocolName">Das Protokoll, das durch den XML-Webdienst verwendet.</param>
+        <param name="appSettingUrlKey">Der URL-Schlüssel des Webverweises.</param>
+        <param name="appSettingBaseUrl">Die Basis-URL des Webverweises.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Description.WebReference" /> -Klasse mit den angegebenen Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `documents` Auflistung dürfen nur <xref:System.Web.Services.Description.ServiceDescription> und <xref:System.Xml.Schema.XmlSchema> Objekte; die <xref:System.Web.Services.Description.ServiceDescriptionImporter.GenerateWebReferences%2A> Methode ist nicht interpretieren kann <xref:System.Web.Services.Discovery.DiscoveryDocument> Objekte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[System.Web.Services.Description.WebReference#11](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Web.Services.Description.WebReference/CS/webreference.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppSettingBaseUrl">
+      <MemberSignature Language="C#" Value="public string AppSettingBaseUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AppSettingBaseUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.WebReference.AppSettingBaseUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Basis-URL des Webverweises ab.</summary>
+        <value>Ein <see cref="T:System.String" /> , die die base-URL des Webverweises enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Services.Description.WebReference> Klasse.  
+  
+ [!code-csharp[WebServices_GenerateWebReferences#5](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_GenerateWebReferences/CS/webreference.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppSettingUrlKey">
+      <MemberSignature Language="C#" Value="public string AppSettingUrlKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AppSettingUrlKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.WebReference.AppSettingUrlKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den URL-Schlüssel des Webverweises ab.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem URL-Schlüssel, der den Webverweis.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Services.Description.WebReference> Klasse.  
+  
+ [!code-csharp[WebServices_GenerateWebReferences#5](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_GenerateWebReferences/CS/webreference.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Documents">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Discovery.DiscoveryClientDocumentCollection Documents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Discovery.DiscoveryClientDocumentCollection Documents" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.WebReference.Documents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Discovery.DiscoveryClientDocumentCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Webverweis zugeordneten Beschreibung-Dokumente.</summary>
+        <value>Die <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" /> zur Initialisierung der <see cref="T:System.Web.Services.Description.WebReference" /> Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Beschreibung Dokument-Sammlung, die einen Webverweis zugeordnet dürfen nur <xref:System.Web.Services.Description.ServiceDescription> und <xref:System.Xml.Schema.XmlSchema> Objekte; die <xref:System.Web.Services.Description.ServiceDescriptionImporter.GenerateWebReferences%2A> Methode ist nicht interpretieren kann <xref:System.Web.Services.Discovery.DiscoveryDocument> Objekte.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Services.Description.WebReference> Klasse.  
+  
+ [!code-csharp[WebServices_GenerateWebReferences#5](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_GenerateWebReferences/CS/webreference.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtocolName">
+      <MemberSignature Language="C#" Value="public string ProtocolName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProtocolName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.WebReference.ProtocolName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert das Protokoll, das den Webverweis zugeordnet.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem Namen des Protokolls, die den Webverweis zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zulässig sind "Soap" (d. h. SOAP 1.0) und "Soap12" (d. h. SOAP 1.2). Der Wert dieser Eigenschaft bestimmt das Protokoll von Proxyclients verwendet werden, bei der Kontaktaufnahme zu einem XML-Webdienst in der <xref:System.Web.Services.Description.WebReference.Documents%2A> Auflistung.  
+  
+ Weitere Informationen zu SOAP finden Sie unter der World Wide Web Consortium Website unter www.w3.org.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieser Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Services.Description.WebReference> Klasse.  
+  
+ [!code-csharp[WebServices_GenerateWebReferences#4](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_GenerateWebReferences/CS/webreference.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyCode">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeNamespace ProxyCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeNamespace ProxyCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.WebReference.ProxyCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeNamespace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den CodeNamespace, der den Webverweis zugeordnet.</summary>
+        <value>Die <see cref="T:System.CodeDom.CodeNamespace" /> welche Proxy Code werden generiert, wenn die <see cref="M:System.Web.Services.Description.ServiceDescriptionImporter.GenerateWebReferences(System.Web.Services.Description.WebReferenceCollection,System.CodeDom.Compiler.CodeDomProvider,System.CodeDom.CodeCompileUnit,System.Web.Services.Description.WebReferenceOptions)" /> Methode wird aufgerufen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Services.Description.WebReference.ProxyCode%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Services.Description.WebReference#11](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Web.Services.Description.WebReference/CS/webreference.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationWarnings">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection ValidationWarnings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection ValidationWarnings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.WebReference.ValidationWarnings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Warnungen generiert, wenn die Beschreibung Dokumente zu überprüfen.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.StringCollection" /> der Warnungstext Überprüfung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Services.Description.WebReference.ValidationWarnings%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Services.Description.WebReference#11](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Web.Services.Description.WebReference/CS/webreference.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Warnings">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescriptionImportWarnings Warnings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Description.ServiceDescriptionImportWarnings Warnings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.WebReference.Warnings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescriptionImportWarnings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Warnungen generiert, wenn die Web Services Description Language (WSDL) Beschreibung datendienstdokumente zu importieren.</summary>
+        <value>Ein <see cref="T:System.Web.Services.Description.ServiceDescriptionImportWarnings" /> Auflistung von Warnungen, die beim Importieren von WSDL-Beschreibung dienstdokumente generiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Services.Description.WebReference.Warnings%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Services.Description.WebReference#11](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Web.Services.Description.WebReference/CS/webreference.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

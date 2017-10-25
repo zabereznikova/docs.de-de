@@ -1,0 +1,2112 @@
+<Type Name="MessagePropertyFilter" FullName="System.Messaging.MessagePropertyFilter">
+  <TypeSignature Language="C#" Value="public class MessagePropertyFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessagePropertyFilter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessagePropertyFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Steuert, und wählt die Eigenschaften, die beim Einsehen oder Empfangen von aus einer Warteschlange Nachrichten abgerufen werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Messaging.MessagePropertyFilter> auf eine <xref:System.Messaging.MessageQueue> Instanz steuert den Satz von Eigenschaften, die beim Einsehen oder Empfangen einer Nachricht abgerufen werden. Der Filter ist festgelegt, für die Instanz von <xref:System.Messaging.MessageQueue> , die Informationen abruft. Beim Festlegen einer <xref:System.Messaging.MessagePropertyFilter> Element booleschen Werten `false`, Sie verhindern, dass die Informationen der zugeordneten <xref:System.Messaging.Message> Eigenschaft abgerufen werden, indem Sie die <xref:System.Messaging.MessageQueue>.  
+  
+ Es gibt mehrere Filtereigenschaften, die nicht boolesche Werte sind. Sie sind ganzzahlige Werte, die abzurufenden oder festzulegenden Standardgrößen für die <xref:System.Messaging.Message.Body%2A?displayProperty=nameWithType>, <xref:System.Messaging.Message.Extension%2A?displayProperty=nameWithType>, oder <xref:System.Messaging.Message.Label%2A?displayProperty=nameWithType>.  
+  
+ Einen eingeschränkten Satz an Eigenschaften abrufen lässt die Leistung zu verbessern, da kleinere Mengen von Daten aus der Warteschlange übertragen werden.  
+  
+ Beim Festlegen einer Eigenschaft auf <xref:System.Messaging.MessagePropertyFilter>, Sie werden nur an, ob diese Eigenschaft abgerufen wird, wenn eine Nachricht empfangen oder eingesehen wird. Ändern Sie nicht den Wert der zugehörigen Eigenschaft für die <xref:System.Messaging.Message>.  
+  
+ Die <xref:System.Messaging.MessagePropertyFilter.%23ctor%2A> -Konstruktor legt alle Filtereigenschaften mit ihren Standardwerten, die für die booleschen Werte `false`. Finden Sie im Thema Konstruktor den Standardwerten, die Eigenschaften Ganzzahlwerttyp zugewiesen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird zwei Nachrichten unterschiedliche Prioritäten an die Warteschlange sendet, und sie werden später abgerufen.  
+  
+ [!code-cpp[Message.DefaultPropertiesToSend#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CPP/message_defaultandpriority.cpp#1)]
+ [!code-csharp[Message.DefaultPropertiesToSend#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CS/message_defaultandpriority.cs#1)]
+ [!code-vb[Message.DefaultPropertiesToSend#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/VB/message_defaultandpriority.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessagePropertyFilter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessagePropertyFilter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.MessagePropertyFilter" /> -Klasse und legt die Standardwerte für alle Eigenschaften fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.MessagePropertyFilter.%23ctor%2A> -Konstruktor legt alle booleschen Werte auf `false` und die Ganzzahlwerttyp Eigenschaften auf die Standardwerte, die in der folgenden Tabelle gezeigt fest.  
+  
+|Eigenschaft|Standardwert|  
+|--------------|-------------------|  
+|<xref:System.Messaging.MessagePropertyFilter.DefaultBodySize%2A>|1024|  
+|<xref:System.Messaging.MessagePropertyFilter.DefaultExtensionSize%2A>|255|  
+|<xref:System.Messaging.MessagePropertyFilter.DefaultLabelSize%2A>|255|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter> Konstruktor.  
+  
+ [!code-cpp[MessagePropertyFilter#40](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#40)]
+ [!code-csharp[MessagePropertyFilter#40](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#40)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcknowledgeType">
+      <MemberSignature Language="C#" Value="public bool AcknowledgeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AcknowledgeType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.AcknowledgeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAcknowledgeType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.AcknowledgeType" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.AcknowledgeType" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.AcknowledgeType%2A> Eigenschaft von der <xref:System.Messaging.Message> -Klasse gibt den Typ der Bestätigungsnachricht an, die von der sendenden Anwendung angefordert. Der Typ der Bestätigung wird definiert, wenn Bestätigungen zurückgegeben werden. Legen Sie die <xref:System.Messaging.Message.AcknowledgeType%2A?displayProperty=nameWithType> Eigenschaft vor dem Senden der Nachricht, um einen bestimmten Typ von Bestätigung anzufordern.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.AcknowledgeType%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#1)]
+ [!code-csharp[MessagePropertyFilter#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Acknowledgment">
+      <MemberSignature Language="C#" Value="public bool Acknowledgment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Acknowledgment" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.Acknowledgment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAcknowledgement")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.Acknowledgment" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.Acknowledgment" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.Acknowledgment%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Messaging.Message> -Klasse gibt der Typ der Bestätigung Nachrichten das Systembeiträge in die Verwaltungswarteschlange, die bestimmt, wann die Bestätigungen generiert werden.  
+  
+ Bestätigungen werden aus der Zielwarteschlange zurückgegeben und als Nachrichten an die <xref:System.Messaging.Message.AdministrationQueue%2A> gemäß der ursprünglichen Nachricht. Der Typ der Bestätigung generiert wird, hängt davon ab, was angefordert wurde.  
+  
+ Lesen der <xref:System.Messaging.Message.Acknowledgment%2A?displayProperty=nameWithType> Eigenschaft beim Empfang einer Nachricht von einer Verwaltungswarteschlange zum Überprüfen des Status der ursprünglich an die Nachrichtenwarteschlange gesendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel sendet und empfängt eine Nachricht, die eine Bestellung in und aus einer Warteschlange enthält. Eine positive Bestätigung wird ausdrücklich angefordert, wenn die ursprüngliche Nachricht erreicht wurde oder wird aus der Warteschlange abgerufen.  
+  
+ [!code-cpp[Message.Acknowledgment#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Acknowledgment/CPP/message_acknowledgment.cpp#1)]
+ [!code-csharp[Message.Acknowledgment#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Acknowledgment/CS/message_acknowledgment.cs#1)]
+ [!code-vb[Message.Acknowledgment#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Acknowledgment/VB/message_acknowledgment.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdministrationQueue">
+      <MemberSignature Language="C#" Value="public bool AdministrationQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AdministrationQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.AdministrationQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAdministrationQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.AdministrationQueue" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.AdministrationQueue" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.AdministrationQueue%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt den Namen der Warteschlange, die vom System generierte Bestätigungen empfängt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.AdministrationQueue%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#2](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#2)]
+ [!code-csharp[MessagePropertyFilter#2](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppSpecific">
+      <MemberSignature Language="C#" Value="public bool AppSpecific { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AppSpecific" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.AppSpecific" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAppSpecific")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.AppSpecific" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.AppSpecific" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.AppSpecific%2A> Eigenschaft von der <xref:System.Messaging.Message> -Klasse enthält zusätzliche, anwendungsspezifische Informationen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.AppSpecific%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#3](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#3)]
+ [!code-csharp[MessagePropertyFilter#3](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrivedTime">
+      <MemberSignature Language="C#" Value="public bool ArrivedTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ArrivedTime" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.ArrivedTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgArrivedTime")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.ArrivedTime" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.ArrivedTime" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.ArrivedTime%2A> Eigenschaft von der <xref:System.Messaging.Message> -Ereignisklasse zeigt an, wenn die Nachricht in der Zielwarteschlange anzeigt. Dies ist die lokale Zeit von GMT, von dem Computer, auf dem die Nachricht abgerufen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.ArrivedTime%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#4](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#4)]
+ [!code-csharp[MessagePropertyFilter#4](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachSenderId">
+      <MemberSignature Language="C#" Value="public bool AttachSenderId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AttachSenderId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.AttachSenderId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAttachSenderId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.AttachSenderId" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.AttachSenderId" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.AttachSenderId%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse angibt, ob die <xref:System.Messaging.Message.SenderId%2A?displayProperty=nameWithType> werden soll, oder an die Nachricht angefügt wurde. Die <xref:System.Messaging.Message.SenderId%2A?displayProperty=nameWithType> wird vom Message Queuing festgelegt und wird von den empfangenden Warteschlangen-Manager um zu überprüfen, ob der Absender über die Zugriffsrechte für eine Warteschlange wurde verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.AttachSenderId%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#5](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#5)]
+ [!code-csharp[MessagePropertyFilter#5](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authenticated">
+      <MemberSignature Language="C#" Value="public bool Authenticated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Authenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.Authenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAuthenticated")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.Authenticated" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.Authenticated" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.Authenticated%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse wird von der empfangenden Anwendung verwendet, um festzustellen, ob eine Authentifizierung angefordert wurde. Wenn Authentifizierung angefordert wurde, und die Nachricht in der Warteschlange ist, wird die Nachricht authentifiziert.  
+  
+ Es ist nicht möglich, betrachten Sie die Eigenschaften einer Nachricht, und ermitteln, ob eine Nachricht Fehler bei der Authentifizierung. Nachrichten, die die Authentifizierung fehl verworfen und nicht an die Warteschlange übermittelt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.Authenticated%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#6](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#6)]
+ [!code-csharp[MessagePropertyFilter#6](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationProviderName">
+      <MemberSignature Language="C#" Value="public bool AuthenticationProviderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AuthenticationProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.AuthenticationProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAuthenticationProviderName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.AuthenticationProviderName" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.AuthenticationProviderName" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.AuthenticationProviderName%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt den Namen des Kryptografieanbieters verwendet, um die digitale Signatur der Nachricht zu generieren. <xref:System.Messaging.Message.AuthenticationProviderName%2A?displayProperty=nameWithType>wird normalerweise verwendet, bei der Arbeit mit fremden Warteschlangen.  
+  
+ In einem Queuing-System als Microsoft Message Queuing ist eine fremde Warteschlange vorhanden. Microsoft Message Queuing kommuniziert mit solchen Warteschlangen über einen Connector-Anwendung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.AuthenticationProviderName%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#7](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#7)]
+ [!code-csharp[MessagePropertyFilter#7](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationProviderType">
+      <MemberSignature Language="C#" Value="public bool AuthenticationProviderType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AuthenticationProviderType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.AuthenticationProviderType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAuthenticationProviderType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.AuthenticationProviderType" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.AuthenticationProviderType" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.AuthenticationProviderType%2A> Eigenschaft von der <xref:System.Messaging.Message> -Klasse gibt den Typ des Kryptografieanbieters, die zum Generieren der digitalen Signatur der Nachricht. <xref:System.Messaging.Message.AuthenticationProviderType%2A>wird normalerweise verwendet, bei der Arbeit mit fremden Warteschlangen.  
+  
+ In einem Queuing-System als Microsoft Message Queuing ist eine fremde Warteschlange vorhanden. Microsoft Message Queuing kommuniziert mit solchen Warteschlangen über einen Connector-Anwendung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.AuthenticationProviderType%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#8](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#8)]
+ [!code-csharp[MessagePropertyFilter#8](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public bool Body { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Body" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgBody")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.Body" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.Body" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.Body%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse den serialisierten Inhalt der Nachricht darstellt. Der Text kann bis zu 4 MB Daten enthalten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.Body%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#9](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#9)]
+ [!code-csharp[MessagePropertyFilter#9](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearAll">
+      <MemberSignature Language="C#" Value="public void ClearAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessagePropertyFilter.ClearAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt alle booleschen Filterwerte auf <see langword="false" />, sodass keine Nachrichteneigenschaften abgerufen werden, wenn eine Nachricht empfangen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Messaging.MessagePropertyFilter.ClearAll%2A> alle festzulegende <xref:System.Messaging.MessagePropertyFilter> booleschen Eigenschaften `false`. Dies bewirkt, dass keine Nachrichteneigenschaften abgerufen werden soll, wenn Sie Nachrichten empfangen. <xref:System.Messaging.MessagePropertyFilter.ClearAll%2A>wirkt sich nicht auf die Werte für <xref:System.Messaging.MessagePropertyFilter.DefaultBodySize%2A>, <xref:System.Messaging.MessagePropertyFilter.DefaultExtensionSize%2A>, oder <xref:System.Messaging.MessagePropertyFilter.DefaultLabelSize%2A>.  
+  
+ Nach dem Aufruf <xref:System.Messaging.MessagePropertyFilter.ClearAll%2A>, es ist erforderlich, die über mindestens ein Filter-Eigenschaft auf festgelegt `true` zum Empfangen von Daten im Zusammenhang mit einer Nachricht. Sie können entweder einzelne Festlegen von Eigenschaften zum `true`, oder Sie rufen <xref:System.Messaging.MessagePropertyFilter.SetDefaults%2A> oder <xref:System.Messaging.MessagePropertyFilter.SetAll%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft die <xref:System.Messaging.MessagePropertyFilter.ClearAll%2A> Methode.  
+  
+ [!code-cpp[MessagePropertyFilter#37](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#37)]
+ [!code-csharp[MessagePropertyFilter#37](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#37)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessagePropertyFilter.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine flache Kopie des Objekts an.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , die eine Instanz von darstellt, die <see cref="T:System.Messaging.MessagePropertyFilter" /> Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectorType">
+      <MemberSignature Language="C#" Value="public bool ConnectorType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ConnectorType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.ConnectorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgConnectorType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.ConnectorType" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.ConnectorType" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.ConnectorType%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse ist erforderlich, wenn eine Anwendung eine Nachrichteneigenschaft festlegt, die von Message Queuing in der Regel festgelegt ist. Es wird in den folgenden zwei Situationen verwendet:  
+  
+-   Wenn eine Nachricht von einem Connector-Anwendung übergeben, wird die <xref:System.Messaging.Message.ConnectorType%2A?displayProperty=nameWithType> ist erforderlich für die sendenden und empfangenden Anwendungen die Sicherheit und die Bestätigung der Nachricht zu interpretieren.  
+  
+-   Beim Senden von Nachrichten Anwendung verschlüsselt die <xref:System.Messaging.Message.ConnectorType%2A?displayProperty=nameWithType> -Eigenschaft informiert Message Queuing, um den symmetrischen Schlüssel zu verwenden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.ConnectorType%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#10](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#10)]
+ [!code-csharp[MessagePropertyFilter#10](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationId">
+      <MemberSignature Language="C#" Value="public bool CorrelationId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CorrelationId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.CorrelationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgCorrelationId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.CorrelationId" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.CorrelationId" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.CorrelationId%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt eine Nachrichten-ID, die von Bestätigungs- und Berichtsnachrichten Nachrichten verwendet wird, um auf um die ursprüngliche Nachricht zu verweisen. Er bietet einen Anwendung definierte Bezeichner, den die empfangende Anwendung verwenden können, um Nachrichten zu sortieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel sendet und empfängt eine Nachricht, die eine Bestellung in und aus einer Warteschlange enthält. Eine positive Bestätigung wird ausdrücklich angefordert, wenn die ursprüngliche Nachricht erreicht wurde oder wird aus der Warteschlange abgerufen.  
+  
+ [!code-cpp[Message.Acknowledgment#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Acknowledgment/CPP/message_acknowledgment.cpp#1)]
+ [!code-csharp[Message.Acknowledgment#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Acknowledgment/CS/message_acknowledgment.cs#1)]
+ [!code-vb[Message.Acknowledgment#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Acknowledgment/VB/message_acknowledgment.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultBodySize">
+      <MemberSignature Language="C#" Value="public int DefaultBodySize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DefaultBodySize" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.DefaultBodySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1024)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgDefaultBodySize")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe des standardpuffers für Text in Bytes.</summary>
+        <value>Der Text Standardpuffergröße erstellen, wenn die Nachricht empfangen wird. Der Standardwert ist 1024 Byte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardgröße für Text gibt die Anzahl der Bytes, die für den Inhalt des Nachrichtentexts zugeordnet. Die <xref:System.Messaging.Message.Body%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse den serialisierten Inhalt der Nachricht darstellt. Der Text kann bis zu 4 MB Daten enthalten. Beschränken die Textgröße kann die Leistung verbessern.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.DefaultBodySize%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#11](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#11)]
+ [!code-csharp[MessagePropertyFilter#11](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der zugewiesene Wert ist negativ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultExtensionSize">
+      <MemberSignature Language="C#" Value="public int DefaultExtensionSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DefaultExtensionSize" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.DefaultExtensionSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(255)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgDefaultExtensionSize")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe des standardpuffers für die Erweiterung in Bytes.</summary>
+        <value>Die Erweiterung Standardpuffergröße erstellen, wenn die Nachricht empfangen wird. Der Standardwert ist 255 Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardgröße für die Erweiterung gibt die Anzahl der Bytes, die für die Nachricht Erweiterung zugeordnet. Die <xref:System.Messaging.Message.Extension%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse stellt zusätzliche anwendungsspezifische Informationen, die der Nachricht, z. B. ein binary large Object zugeordnet. Es ist Aufgabe der Anwendung zum Interpretieren des Inhalts von den <xref:System.Messaging.Message.Extension%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.DefaultExtensionSize%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#12](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#12)]
+ [!code-csharp[MessagePropertyFilter#12](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der zugewiesene Wert ist negativ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultLabelSize">
+      <MemberSignature Language="C#" Value="public int DefaultLabelSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DefaultLabelSize" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.DefaultLabelSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(255)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgDefaultLabelSize")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe des standardpuffers für Bezeichnung in Bytes.</summary>
+        <value>Die Bezeichnung Standardpuffergröße erstellen, wenn die Nachricht empfangen wird. Der Standardwert ist 255 Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardgröße für die Bezeichnung gibt die Anzahl der Bytes, die für die Bezeichnung der Nachricht zugeordnet. Die <xref:System.Messaging.Message.Label%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt die Bezeichnung der Nachricht.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.DefaultLabelSize%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#13](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#13)]
+ [!code-csharp[MessagePropertyFilter#13](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der zugewiesene Wert ist negativ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationQueue">
+      <MemberSignature Language="C#" Value="public bool DestinationQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DestinationQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.DestinationQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgDestinationQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.DestinationQueue" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.DestinationQueue" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.DestinationQueue%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse identifiziert die ursprüngliche Zielwarteschlange der Nachricht. Es wird normalerweise verwendet, das ursprüngliche Ziel eine Nachricht zu ermitteln, die in einer Journalwarteschlange oder Dead Letter-Warteschlange befindet. Sie können auch beim Senden einer Antwortnachricht zurück an eine Antwortwarteschlange verwendet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.DestinationQueue%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#14](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#14)]
+ [!code-csharp[MessagePropertyFilter#14](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationSymmetricKey">
+      <MemberSignature Language="C#" Value="public bool DestinationSymmetricKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DestinationSymmetricKey" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.DestinationSymmetricKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgDestinationSymmetricKey")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.DestinationSymmetricKey" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.DestinationSymmetricKey" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.DestinationSymmetricKey%2A> Eigenschaft von der <xref:System.Messaging.Message> -Klasse gibt den symmetrischen Schlüssel zum Verschlüsseln der Nachricht verwendet. Es ist erforderlich, wenn Sie die Anwendung-verschlüsselte Nachrichten senden oder beim Senden von verschlüsselten Nachrichten an eine fremde Warteschlange.  
+  
+ In einem Queuing-System als Microsoft Message Queuing ist eine fremde Warteschlange vorhanden. Microsoft Message Queuing kommuniziert mit solchen Warteschlangen über einen Connector-Anwendung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.DestinationSymmetricKey%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#15](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#15)]
+ [!code-csharp[MessagePropertyFilter#15](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DigitalSignature">
+      <MemberSignature Language="C#" Value="public bool DigitalSignature { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DigitalSignature" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.DigitalSignature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgDigitalSignature")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.DigitalSignature" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.DigitalSignature" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.DigitalSignature%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt die digitale Signatur, die zum Authentifizieren der Nachrichteninhalts verwendet. In den meisten Fällen ist es generiert und vom Message Queuing festgelegt, wenn die sendende Anwendung eine Authentifizierung anfordert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.DigitalSignature%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#16](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#16)]
+ [!code-csharp[MessagePropertyFilter#16](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionAlgorithm">
+      <MemberSignature Language="C#" Value="public bool EncryptionAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EncryptionAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.EncryptionAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgEncryptionAlgorithm")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.EncryptionAlgorithm" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.EncryptionAlgorithm" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Nachricht privat ist, wird sie verschlüsselt, bevor er gesendet und entschlüsselt, wenn sie empfangen werden. Die <xref:System.Messaging.Message.EncryptionAlgorithm%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt an, der zum Verschlüsseln des Nachrichtentextes einer privaten Nachricht verwendeten Algorithmus.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.EncryptionAlgorithm%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#17](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#17)]
+ [!code-csharp[MessagePropertyFilter#17](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extension">
+      <MemberSignature Language="C#" Value="public bool Extension { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Extension" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.Extension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgExtension")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.Extension" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.Extension" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.Extension%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse bietet zusätzliche anwendungsspezifische Informationen, die die Nachricht, z. B. ein großes binäres Objekt zugeordnet ist. Es liegt in der Verantwortung der empfangenden Anwendung Interpretieren des Inhalts von den <xref:System.Messaging.Message.Extension%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.Extension%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#18](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#18)]
+ [!code-csharp[MessagePropertyFilter#18](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashAlgorithm">
+      <MemberSignature Language="C#" Value="public bool HashAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HashAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.HashAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgHashAlgorithm")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.HashAlgorithm" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.HashAlgorithm" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.HashAlgorithm%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse identifiziert den Hashalgorithmus Message Queuing beim Authentifizieren von Nachrichten verwendet. Der Hashalgorithmus wird auch verwendet, für die Erstellung eine digitale Signatur für eine Nachricht.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.HashAlgorithm%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#19](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#19)]
+ [!code-csharp[MessagePropertyFilter#19](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#19)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public bool Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Id" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.Id" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.Id" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.Id%2A> Eigenschaft von der <xref:System.Messaging.Message> -Ereignisklasse zeigt an, die von Message Queuing generierte eindeutige Bezeichner der Nachricht. Dieser Bezeichner wird generiert, wenn die Nachricht gesendet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.Id%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#20](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#20)]
+ [!code-csharp[MessagePropertyFilter#20](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFirstInTransaction">
+      <MemberSignature Language="C#" Value="public bool IsFirstInTransaction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFirstInTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.IsFirstInTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgIsFirstInTransaction")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.IsFirstInTransaction" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.IsFirstInTransaction" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.IsFirstInTransaction%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse wird von empfangenden Anwendungen um zu überprüfen, ob eine Nachricht die zuerst gesendete Nachricht in einer einzelnen Transaktion für eine einzelne Warteschlange wird verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.IsFirstInTransaction%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#50](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#50)]
+ [!code-csharp[MessagePropertyFilter#50](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#50)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLastInTransaction">
+      <MemberSignature Language="C#" Value="public bool IsLastInTransaction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLastInTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.IsLastInTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgIsLastInTransaction")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.IsLastInTransaction" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.IsLastInTransaction" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.IsLastInTransaction%2A> Eigenschaft von der <xref:System.Messaging.Message> -Klasse wird von der empfangenden Anwendungen verwendet, um zu überprüfen, ob eine Nachricht die letzte Meldung, die aus einer einzelnen Transaktion zu einer einzelnen Warteschlange gesendet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.IsLastInTransaction%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#51](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#51)]
+ [!code-csharp[MessagePropertyFilter#51](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#51)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public bool Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Label" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgLabel")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.Label" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.Label" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.Label%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt die Bezeichnung der Nachricht.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.Label%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#21](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#21)]
+ [!code-csharp[MessagePropertyFilter#21](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupId">
+      <MemberSignature Language="C#" Value="public bool LookupId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LookupId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.LookupId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgLookupId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.LookupId" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.LookupId" /> Eigenschaftsinformationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.LookupId%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt die Nachschlage-ID der Nachricht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageType">
+      <MemberSignature Language="C#" Value="public bool MessageType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MessageType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.MessageType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgMessageType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.MessageType" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.MessageType" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.MessageType%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse identifiziert den Typ der Nachricht. Eine Nachricht kann es sich um eine normale Nachricht, eine positive oder negative Bestätigungsnachricht oder eine berichtsnachricht sein.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.MessageType%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#22](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#22)]
+ [!code-csharp[MessagePropertyFilter#22](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public bool Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgPriority")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.Priority" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.Priority" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.Priority%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse wirkt sich auf wie die Nachricht Message Queuing verwaltet werden, während Routings, als auch bei die Nachricht in die Warteschlange gestellt wird.  
+  
+ Die Nachrichtenpriorität kann nur sinnvoll für nicht transaktionale Nachrichten festgelegt werden. Die Priorität für die transaktionale Nachrichten wird automatisch auf 0 (null), festgelegt, daraufhin Transaktionsnachricht Priorität, ignoriert werden sollen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird zwei Nachrichten unterschiedliche Prioritäten an die Warteschlange sendet, und sie werden später abgerufen.  
+  
+ [!code-cpp[Message.DefaultPropertiesToSend#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CPP/message_defaultandpriority.cpp#1)]
+ [!code-csharp[Message.DefaultPropertiesToSend#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CS/message_defaultandpriority.cs#1)]
+ [!code-vb[Message.DefaultPropertiesToSend#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/VB/message_defaultandpriority.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Recoverable">
+      <MemberSignature Language="C#" Value="public bool Recoverable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Recoverable" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.Recoverable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgRecoverable")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.Recoverable" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.Recoverable" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.Recoverable%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt an, ob die Übermittlung einer Nachricht garantiert ist, selbst wenn ein Computer stürzt ab, während die Nachricht an die Zielwarteschlange gestellt wird.  
+  
+ Wenn Übermittlung einer Nachricht garantiert ist, wird die Nachricht bei jedem Schritt lokal gespeichert, bis die Nachricht erfolgreich an den nächsten Computer weitergeleitet wird. Festlegen von <xref:System.Messaging.Message.Recoverable%2A?displayProperty=nameWithType> zu `true` für die Nachricht kann den Durchsatz beeinträchtigen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.Recoverable%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#23](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#23)]
+ [!code-csharp[MessagePropertyFilter#23](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseQueue">
+      <MemberSignature Language="C#" Value="public bool ResponseQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ResponseQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.ResponseQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgResponseQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.ResponseQueue" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.ResponseQueue" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.ResponseQueue%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse kennzeichnet die Warteschlange, die Anwendung generierte Antwortnachrichten empfängt, die zurück an die sendende Anwendung von der empfangenden Anwendung gesendet werden. Antwortwarteschlangen werden von der sendenden Anwendung angegeben werden, wenn die Anwendung die Nachrichten sendet. Jede verfügbare Warteschlange kann als Antwortwarteschlange ausgewählt werden.  
+  
+ An die Antwortwarteschlange zurückgesendete Nachrichten sind anwendungsspezifisch. Die Anwendung muss definieren, was in den Nachrichten sowie die neuerungen durchgeführt werden, wenn eine Nachricht empfangen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.ResponseQueue%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#24](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#24)]
+ [!code-csharp[MessagePropertyFilter#24](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderCertificate">
+      <MemberSignature Language="C#" Value="public bool SenderCertificate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SenderCertificate" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.SenderCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgSenderCertificate")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.SenderCertificate" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.SenderCertificate" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.SenderCertificate%2A> Eigenschaft von der <xref:System.Messaging.Message> -Klasse gibt das Sicherheitszertifikat, das zum Authentifizieren von Nachrichten verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.SenderCertificate%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#25](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#25)]
+ [!code-csharp[MessagePropertyFilter#25](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderId">
+      <MemberSignature Language="C#" Value="public bool SenderId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SenderId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.SenderId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgSenderId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.SenderId" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.SenderId" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.SenderId%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse wird hauptsächlich von den empfangenden Warteschlangen-Manager verwendet, wenn eine Nachricht zu authentifizieren. Die Eigenschaft wird vom Message Queuing festgelegt und wird durch den Warteschlangen-Manager verwendet, um zu überprüfen, wer die Nachricht gesendet hat, dass der Absender über die Zugriffsrechte für die empfangende Warteschlange hat.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.SenderId%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#26](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#26)]
+ [!code-csharp[MessagePropertyFilter#26](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#26)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderVersion">
+      <MemberSignature Language="C#" Value="public bool SenderVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SenderVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.SenderVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgSenderVersion")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.SenderVersion" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.SenderVersion" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.SenderVersion%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt die Version der Message Queuing zum Senden der Nachricht verwendet. Die Eigenschaft ist wichtig zu Bedenken Sie bei Verwendung von Features wie die Verarbeitung von Transaktionen, die nur von Message Queuing, Version 2.0 unterstützt werden und später erneut, oder digitale Signaturen, die zum Authentifizieren von Version 1.0 gesendeten Nachrichten verwendet werden.  
+  
+ <xref:System.Messaging.Message.SenderVersion%2A?displayProperty=nameWithType>wird von der sendende Warteschlangen-Manager festgelegt werden, wenn die Nachricht gesendet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.SenderVersion%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#27](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#27)]
+ [!code-csharp[MessagePropertyFilter#27](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#27)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SentTime">
+      <MemberSignature Language="C#" Value="public bool SentTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SentTime" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.SentTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgSentTime")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.SentTime" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.SentTime" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.SentTime%2A> Eigenschaft von der <xref:System.Messaging.Message> -Ereignisklasse zeigt an, des sendenden Computers Datum und Uhrzeit, wann die Nachricht vom Quellwarteschlangen-Manager gesendet wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.SentTime%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#28](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#28)]
+ [!code-csharp[MessagePropertyFilter#28](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAll">
+      <MemberSignature Language="C#" Value="public void SetAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessagePropertyFilter.SetAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, um alle Nachrichteneigenschaften abzurufen, wenn eine Nachricht empfangen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Messaging.MessagePropertyFilter.SetAll%2A> festzulegende alle booleschen <xref:System.Messaging.MessagePropertyFilter> Eigenschaften `true`. Dies bewirkt, dass alle Nachrichteneigenschaften abgerufen werden soll, wenn Sie Nachrichten empfangen. <xref:System.Messaging.MessagePropertyFilter.SetAll%2A>wirkt sich nicht auf die Werte für <xref:System.Messaging.MessagePropertyFilter.DefaultBodySize%2A>, <xref:System.Messaging.MessagePropertyFilter.DefaultExtensionSize%2A>, oder <xref:System.Messaging.MessagePropertyFilter.DefaultLabelSize%2A>.  
+  
+ Nach dem Aufruf <xref:System.Messaging.MessagePropertyFilter.SetAll%2A>, Sie können einzelne Filterwerte festlegen, um `false` beschränkt die Eigenschaften, die abgerufen, wenn die Nachricht empfangen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft die <xref:System.Messaging.MessagePropertyFilter.SetAll%2A> Methode.  
+  
+ [!code-cpp[MessagePropertyFilter#39](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#39)]
+ [!code-csharp[MessagePropertyFilter#39](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#39)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDefaults">
+      <MemberSignature Language="C#" Value="public void SetDefaults ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDefaults() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessagePropertyFilter.SetDefaults" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die Filterwerte allgemeiner Eigenschaften, die an die Message Queuing- <see langword="true" /> und die Ganzzahlwerttyp Eigenschaften mit ihren Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Messaging.MessagePropertyFilter.SetDefaults%2A> um Folgendes festzulegen <xref:System.Messaging.MessagePropertyFilter> booleschen Eigenschaften `true`. Dies sind die am häufigsten verwendeten Eigenschaften einer <xref:System.Messaging.MessageQueue> wird in der Regel interagieren mit den folgenden:  
+  
+-   <xref:System.Messaging.MessagePropertyFilter.AcknowledgeType%2A>  
+  
+-   <xref:System.Messaging.MessagePropertyFilter.Acknowledgment%2A>  
+  
+-   <xref:System.Messaging.MessagePropertyFilter.AdministrationQueue%2A>  
+  
+-   <xref:System.Messaging.MessagePropertyFilter.Body%2A>  
+  
+-   <xref:System.Messaging.MessagePropertyFilter.Id%2A>  
+  
+-   <xref:System.Messaging.MessagePropertyFilter.Label%2A>  
+  
+-   <xref:System.Messaging.MessagePropertyFilter.LookupId%2A>  
+  
+-   <xref:System.Messaging.MessagePropertyFilter.MessageType%2A>  
+  
+-   <xref:System.Messaging.MessagePropertyFilter.ResponseQueue%2A>  
+  
+-   <xref:System.Messaging.MessagePropertyFilter.UseDeadLetterQueue%2A>  
+  
+-   <xref:System.Messaging.MessagePropertyFilter.UseJournalQueue%2A>  
+  
+ <xref:System.Messaging.MessagePropertyFilter.SetDefaults%2A>die Eigenschaften festgelegt in der folgenden Tabelle auf ihre Standardwerte.  
+  
+|Eigenschaft|Standardwert|  
+|--------------|-------------------|  
+|<xref:System.Messaging.MessagePropertyFilter.DefaultBodySize%2A>|1024|  
+|<xref:System.Messaging.MessagePropertyFilter.DefaultExtensionSize%2A>|255|  
+|<xref:System.Messaging.MessagePropertyFilter.DefaultLabelSize%2A>|255|  
+  
+ Die <xref:System.Messaging.MessageQueue.MessageReadPropertyFilter%2A?displayProperty=nameWithType> Eigenschaft stellt einen <xref:System.Messaging.MessagePropertyFilter> auf dem <xref:System.Messaging.MessagePropertyFilter.SetDefaults%2A> aufgerufen wurde.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft die <xref:System.Messaging.MessagePropertyFilter.SetDefaults%2A> Methode.  
+  
+ [!code-cpp[MessagePropertyFilter#38](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#38)]
+ [!code-csharp[MessagePropertyFilter#38](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#38)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceMachine">
+      <MemberSignature Language="C#" Value="public bool SourceMachine { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SourceMachine" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.SourceMachine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgSourceMachine")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.SourceMachine" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.SourceMachine" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.SourceMachine%2A> Eigenschaft von der <xref:System.Messaging.Message> -Klasse gibt den Computer, von dem die Nachricht stammt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.SourceMachine%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#29](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#29)]
+ [!code-csharp[MessagePropertyFilter#29](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#29)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToBeReceived">
+      <MemberSignature Language="C#" Value="public bool TimeToBeReceived { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TimeToBeReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.TimeToBeReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTimeToBeReceived")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.TimeToBeReceived" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.TimeToBeReceived" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.TimeToBeReceived%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt die Gesamtzeit in Sekunden für eine gesendete Nachricht aus der Zielwarteschlange empfangen werden soll. Das Zeitlimit für die Nachricht aus der Zielwarteschlange abgerufen werden sollen, enthält die Zeit an, der für das erste an die Zielwarteschlange sowie die verstrichene Zeit in der Warteschlange warten, bevor die Nachricht von einer Anwendung abgerufen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.TimeToBeReceived%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#30](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#30)]
+ [!code-csharp[MessagePropertyFilter#30](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#30)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToReachQueue">
+      <MemberSignature Language="C#" Value="public bool TimeToReachQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TimeToReachQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.TimeToReachQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTimeToReachQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.TimeToReachQueue" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.TimeToReachQueue" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.TimeToReachQueue%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt ein Zeitlimit in Sekunden ab dem Zeitpunkt für sie in der Zielwarteschlange eintreffen kann die Nachricht gesendet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.TimeToReachQueue%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#31](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#31)]
+ [!code-csharp[MessagePropertyFilter#31](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionId">
+      <MemberSignature Language="C#" Value="public bool TransactionId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransactionId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.TransactionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTransactionId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.TransactionId" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.TransactionId" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.TransactionId%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse identifiziert die Transaktion, die die Nachricht gesendet. Verwenden Sie diese Eigenschaft in einer empfangenden Anwendung, um sicherzustellen, dass eine Nachricht als Teil einer bestimmten Transaktion gesendet wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.TransactionId%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#52](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#52)]
+ [!code-csharp[MessagePropertyFilter#52](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#52)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionStatusQueue">
+      <MemberSignature Language="C#" Value="public bool TransactionStatusQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransactionStatusQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.TransactionStatusQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTransactionStatusQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.TransactionStatusQueue" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.TransactionStatusQueue" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.TransactionStatusQueue%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt die Transaktionsstatus-Warteschlange auf dem Quellcomputer. Die Eigenschaft wird verwendet, für die Bestätigungsnachricht zurück an die sendende Anwendung zu senden. Die Transaktionsstatus-Warteschlange wird von Connectoranwendungen, die beim Empfangen von Transaktionsnachrichten an eine fremde Warteschlange gesendet.  
+  
+ In einem Queuing-System als Microsoft Message Queuing ist eine fremde Warteschlange vorhanden. Microsoft Message Queuing kommuniziert mit solchen Warteschlangen über einen Connector-Anwendung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.TransactionStatusQueue%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#53](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#53)]
+ [!code-csharp[MessagePropertyFilter#53](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#53)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAuthentication">
+      <MemberSignature Language="C#" Value="public bool UseAuthentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.UseAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseAuthentication")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.UseAuthentication" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.UseAuthentication" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.UseAuthentication%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt an, ob die Nachricht authentifiziert werden muss.  
+  
+ Es ist nicht möglich, betrachten Sie die Eigenschaften einer Nachricht, und ermitteln, ob eine Nachricht Fehler bei der Authentifizierung. Nachrichten, die die Authentifizierung fehl verworfen und nicht an die Warteschlange übermittelt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.UseAuthentication%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#32](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#32)]
+ [!code-csharp[MessagePropertyFilter#32](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDeadLetterQueue">
+      <MemberSignature Language="C#" Value="public bool UseDeadLetterQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDeadLetterQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.UseDeadLetterQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseDeadLetterQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.UseDeadLetterQueue" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.UseDeadLetterQueue" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.UseDeadLetterQueue%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt an, ob eine Kopie einer Nachricht, die nicht zugestellt werden konnte, die an eine Dead Letter-Warteschlange gesendet werden soll.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.UseDeadLetterQueue%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#33](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#33)]
+ [!code-csharp[MessagePropertyFilter#33](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseEncryption">
+      <MemberSignature Language="C#" Value="public bool UseEncryption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseEncryption" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.UseEncryption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseEncryption")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.UseEncryption" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.UseEncryption" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.UseEncryption%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt an, ob zum Verschlüsseln einer Nachricht.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.UseEncryption%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#34](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#34)]
+ [!code-csharp[MessagePropertyFilter#34](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseJournalQueue">
+      <MemberSignature Language="C#" Value="public bool UseJournalQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseJournalQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.UseJournalQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseJournalQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.UseJournalQueue" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.UseJournalQueue" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.UseJournalQueue%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse angibt, ob eine Kopie der Nachricht in einem Computerjournal auf dem Ursprungscomputer beibehalten werden soll.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.UseJournalQueue%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#35](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#35)]
+ [!code-csharp[MessagePropertyFilter#35](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#35)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseTracing">
+      <MemberSignature Language="C#" Value="public bool UseTracing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseTracing" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagePropertyFilter.UseTracing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseTracing")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob abzurufen <see cref="P:System.Messaging.Message.UseTracing" /> Eigenschaftsinformationen oder beim Empfang einer Nachricht.</summary>
+        <value>
+          <see langword="true" />zum Empfangen von <see cref="P:System.Messaging.Message.UseTracing" /> Informationen ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.UseTracing%2A> Eigenschaft von der <xref:System.Messaging.Message> Klasse gibt an, ob die Route einer Nachricht verfolgen, wie die Weiterleitung an die Zielwarteschlange verschoben. Wenn `true`, wird jedes Mal die ursprüngliche Nachricht durchläuft eine routing Message Queuing-Server, ein Message Queuing generierte Bericht an die Berichtswarteschlange System gesendet wird.  
+  
+ Verwenden der Ablaufverfolgung umfasst die Active Directory einrichten und eine Berichtswarteschlange für die Message Queuing-Organisation angeben. Diese Einstellungen werden vom Administrator konfiguriert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.MessagePropertyFilter.UseTracing%2A> Eigenschaft.  
+  
+ [!code-cpp[MessagePropertyFilter#36](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePropertyFilter/CPP/class1.cpp#36)]
+ [!code-csharp[MessagePropertyFilter#36](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePropertyFilter/CS/class1.cs#36)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

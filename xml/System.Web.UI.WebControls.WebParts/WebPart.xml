@@ -1,0 +1,2016 @@
+<Type Name="WebPart" FullName="System.Web.UI.WebControls.WebParts.WebPart">
+  <TypeSignature Language="C#" Value="public abstract class WebPart : System.Web.UI.WebControls.WebParts.Part, System.Web.UI.WebControls.WebParts.IWebActionable, System.Web.UI.WebControls.WebParts.IWebEditable, System.Web.UI.WebControls.WebParts.IWebPart" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WebPart extends System.Web.UI.WebControls.WebParts.Part implements class System.Web.UI.WebControls.WebParts.IWebActionable, class System.Web.UI.WebControls.WebParts.IWebEditable, class System.Web.UI.WebControls.WebParts.IWebPart" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.Part</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.WebParts.IWebActionable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.WebParts.IWebEditable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.WebParts.IWebPart</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.WebParts.WebPartDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient als Basisklasse für benutzerdefinierte ASP.NET-Webparts-Steuerelemente hinzufügen, die auf der Basis von <see cref="T:System.Web.UI.WebControls.WebParts.Part" /> -Basisklassenfunktionen einige zusätzliche Benutzer Benutzeroberfläche (UI)-Eigenschaften, die Fähigkeit zum Erstellen von Verbindungen sowie personalisierungsverhalten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen von Steuerelementen mit Webparts-Funktionen haben Sie zwei grundlegende Optionen. Benutzerdefinierte Steuerelemente, die ableiten können die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klasse, oder Sie erstellen oder andere Serversteuerelemente verwenden können. Vorhandene ASP.NET-Steuerelementen, benutzerdefinierte Serversteuerelemente und Benutzersteuerelemente können alle erhalten vollständige Webparts-Funktionalität durch Deklarieren diese in (oder programmgesteuert hinzufügen) eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zone-Steuerelement, mit dem Ergebnis, dass sie mit umbrochenwerden<xref:System.Web.UI.WebControls.WebParts.GenericWebPart>Objekte zur Laufzeit und behandelt Sie als "true" <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Einzelheiten finden Sie in der Dokumentation für die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Klasse. Für die Geschwindigkeit der Entwicklung und maximale Wiederverwendung von Code kann mit vorhandenen Serversteuerelemente eine gute Wahl sein. Maximale programmgesteuerte Kontrolle über das Verhalten und die Funktionalität von Webparts-Steuerelemente, erstellen ein benutzerdefiniertes Steuerelement, erbt Sie von der <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse ist häufig die beste Option.  
+  
+ Die abstrakte <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse erbt von der Basisklasse <xref:System.Web.UI.WebControls.WebParts.Part> -Steuerelement und stellt die grundlegenden Elemente für alle <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Die Klasse enthält eine Reihe von Eigenschaften, die die Darstellung der Benutzeroberfläche betreffen. Die <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowClose%2A>, <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowConnect%2A>, <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowEdit%2A>, <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowHide%2A>, <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowMinimize%2A>, und <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowZoneChange%2A> Eigenschaften angeben, ob der Benutzer einer Webanwendung für die Interaktion mit dem Teilsteuerelement bei der Datenerfassung, angegeben durch die angegebene Eigenschaft zulässig ist Der Name. Die <xref:System.Web.UI.WebControls.WebParts.WebPart.CatalogIconImageUrl%2A>, <xref:System.Web.UI.WebControls.WebParts.WebPart.ChromeState%2A>, <xref:System.Web.UI.WebControls.WebParts.WebPart.ChromeType%2A>, <xref:System.Web.UI.WebControls.WebParts.WebPart.Description%2A>, <xref:System.Web.UI.WebControls.WebParts.WebPart.Height%2A>, <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpUrl%2A>, <xref:System.Web.UI.WebControls.WebParts.WebPart.Hidden%2A>, <xref:System.Web.UI.WebControls.WebParts.WebPart.Title%2A>, <xref:System.Web.UI.WebControls.WebParts.WebPart.TitleIconImageUrl%2A>, <xref:System.Web.UI.WebControls.WebParts.WebPart.TitleUrl%2A>, und <xref:System.Web.UI.WebControls.WebParts.WebPart.Width%2A> Eigenschaften bestimmen die Größe, Sichtbarkeit , Darstellung und Inhalt (z. B. einen Titel und Beschreibung) für die Unterstützung einer <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ Die Beziehung zwischen einer <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement seinen Kontext innerhalb des Webparts-Steuerelementsatzes sich nach Eigenschaften wie z. B. richtet <xref:System.Web.UI.WebControls.WebParts.WebPart.WebPartManager%2A>, der einen Verweis auf das Steuerelement enthält zugeordnete <xref:System.Web.UI.WebControls.WebParts.WebPartManager> -Objekt, und <xref:System.Web.UI.WebControls.WebParts.WebPart.Zone%2A>, der Verweise der <xref:System.Web.UI.WebControls.WebParts.WebZone> , die das Steuerelement enthält. Es kann nur eine <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement pro Seite, und jede Instanz von einer <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement kann in nur einem befinden <xref:System.Web.UI.WebControls.WebParts.WebZone> zu einem Zeitpunkt.  
+  
+> [!NOTE]
+>  Ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement außerhalb einer Zone auf einer Webseite platziert werden kann, aber in diesem Fall funktioniert es als normaler Serversteuerelement und verliert fast alle Webparts-Funktionen.  
+  
+ Mehrere wichtigen Eigenschaften beeinflussen Features von <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Die <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> -Eigenschaft ermöglicht es Entwicklern, eine beliebige Zeichenfolge festlegen, die zur Laufzeit als Filter verwendet werden kann, um zu bestimmen, ob die Seite ein Steuerelement hinzugefügt wird. Zusammen mit einer Funktion wie z. B. die Rollenverwaltung, verwendet die <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> Eigenschaft bietet nützlichsten Mechanismus zum Erstellen von Sichten auf Grundlage der definierten Benutzerrollen. Die <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> Eigenschaft gibt an, ob während eines Exports alle verfügbaren Eigenschaftendaten für ein Steuerelement exportiert wird, oder nur die nicht vertraulichen Daten. Dadurch können Entwickler zur Unterscheidung zwischen den Daten, die vertraulich ist und die Daten, die aus Sicherheitsgründen nicht der Fall ist. Die <xref:System.Web.UI.WebControls.WebParts.WebPart.WebBrowsableObject%2A> Eigenschaft gibt einen Verweis auf eine Instanz von einer <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, damit ein <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement bearbeiten kann, wenn die Seite im Bearbeitungsmodus befindet. Schließlich sind einige Eigenschaften, die der Status des Steuerelements relativ zu den Rest der Seite an. Die <xref:System.Web.UI.WebControls.WebParts.WebPart.IsClosed%2A> Eigenschaft gibt an, ob ein Steuerelement geschlossen wird (und somit eine <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> Objekt), oder es öffnen und auf der Seite verfügbar ist. Die <xref:System.Web.UI.WebControls.WebParts.WebPart.IsShared%2A> Eigenschaft gibt an, ob ein Steuerelement ein freigegebenes Steuerelement (im Gegensatz zu einem benutzerspezifischen-Steuerung) ist, was bedeutet, dass es für alle Benutzer einer Webseite angezeigt wird. Die <xref:System.Web.UI.WebControls.WebParts.WebPart.IsStandalone%2A> Eigenschaft gibt an, ob ein Steuerelement sich derzeit in befindet einer <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase>-abgeleiteten Zone (z. B. <xref:System.Web.UI.WebControls.WebParts.WebPartZone>). Der Wert `false` bedeutet, dass das Steuerelement innerhalb einer Zone und somit hat vollständige Webparts-Funktionalität. Die <xref:System.Web.UI.WebControls.WebParts.WebPart.IsStatic%2A> Eigenschaft gibt an, ob ein Steuerelement statisch oder dynamisch ist. Ein statisches Steuerelement wird im Markup einer Webseite deklariert, während ein dynamisches Steuerelement programmgesteuert hinzugefügt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klasse stellt auch mehrere Methoden, die bestimmen, was im Lebenszyklus des Steuerelements an verschiedenen Punkten geschieht. Z. B. die <xref:System.Web.UI.WebControls.WebParts.WebPart.OnConnectModeChanged%2A> und <xref:System.Web.UI.WebControls.WebParts.WebPart.OnEditModeChanged%2A> Methoden können sowohl in einer abgeleiteten Klasse programmgesteuerte Kontrolle über das Rendern des Inhalts eines Steuerelements während des Ereignisses bereitstellen, die die Namen der jeweiligen Methode entspricht überschrieben werden.  
+  
+ Abgeleitete Klassen <xref:System.Web.UI.WebControls.WebParts.WebPart> können hinzufügen <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Datenbankobjekte in der <xref:System.Web.UI.WebControls.WebParts.WebPart.Verbs%2A> Auflistung. Die Verben werden gerendert, in einem Verbmenü, die in der Titelleiste angezeigt wird ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. <xref:System.Web.UI.WebControls.WebParts.WebPartVerb>-Objekte stellen einfache Benutzeroberflächenelemente für häufige Benutzeraktionen wie ausblenden oder Minimieren des Steuerelements oder zum Anzeigen der Hilfe.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart.CreateEditorParts%2A> Methode erstellt eine Auflistung von benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente, die zugeordnet sind ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Entwickler können diese Methode überschreiben, sodass benutzerdefinierte Steuerelemente, die speziell dazu entwickelt erstellt, bearbeiten ihre <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Die Methode wird aufgerufen, wenn ein Benutzer auf das Verb bearbeiten klickt ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Web.UI.WebControls.WebParts.WebPart> steuern und auf einer Webseite zu verweisen.  
+  
+ Der erste Teil des Beispiels enthält den Code für ein benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement namens `TextDisplayWebPart`. Dieses Steuerelement veranschaulicht das Erstellen eine einfachen benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, ermöglicht Ihnen Zugriff auf die Funktionen des Webparts-Steuerelementsatzes. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel wird davon ausgegangen, dass Sie den Quellcode in eine Assembly kompilieren, fügen Sie ihn in einen Unterordner "bin" Ihrer Webanwendung und verweisen auf die Assembly mit einem `Register` -Direktive in der Webseite. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_General_TextDisplayPart#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_General_TextDisplayPart/CS/textdisplaywebpart.cs#2)]
+ [!code-vb[WebParts_General_TextDisplayPart#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_General_TextDisplayPart/VB/textdisplaywebpart.vb#2)]  
+  
+ Der zweite Teil des Beispiels wird gezeigt, wie auf die `TextDisplayWebPart` -Steuerelement in eine ASP.NET-Webseite. Beachten Sie, dass viele der verschiedenen <xref:System.Web.UI.WebControls.WebParts.WebPart> Eigenschaften können deklarativ zugewiesen werden, um das benutzerdefinierte Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_General_TextDisplayPart#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_General_TextDisplayPart/CS/textwebpartcs.aspx#1)]
+ [!code-aspx-vb[WebParts_General_TextDisplayPart#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_General_TextDisplayPart/VB/textwebpartvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebPart ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPart.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die Klasse zur Verwendung durch eine geerbte Klasseninstanz. Dieser Konstruktor kann nur von einer geerbten Klasse aufgerufen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart.%23ctor%2A> Konstruktor initialisiert die Standardwerte für mehrere UI-orientierten Eigenschaften, einschließlich der verschiedenen `Allow` Eigenschaften, die die Funktionen des Steuerelements zu bestimmen. Diese Eigenschaften werden dann in eine geerbte Klasseninstanz integriert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Steuerelement, das von abgeleitet ist die <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse erbt die Standardeigenschaftswerte legen Sie in der Basisklasse <xref:System.Web.UI.WebControls.WebParts.WebPart.%23ctor%2A> Konstruktor, klicken Sie dann den Wert einer Eigenschaft im Konstruktor des abgeleiteten Steuerelements ändert.  
+  
+ Der erste Teil dieses Beispiels enthält den Code für ein benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement namens `TextDisplayWebPart`. Dieses Steuerelement veranschaulicht das Erstellen eine einfachen benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, ermöglicht Ihnen Zugriff auf die Funktionen des Webparts-Steuerelementsatzes. Beachten Sie, dass im Konstruktor des benutzerdefinierten Steuerelements, das `TextDisplayWebPart.AllowClose` -Eigenschaftensatz auf `false`, dem wirkt sich der Benutzer daran gehindert, das Steuerelement auf einer Webseite zu schließen. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel wird davon ausgegangen, dass Sie den Quellcode in eine Assembly kompilieren, fügen Sie ihn in einen Unterordner "bin" Ihrer Webanwendung und verweisen auf die Assembly mit einem `Register` -Direktive in der Webseite. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_General_TextDisplayPart#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_General_TextDisplayPart/CS/textdisplaywebpart.cs#2)]
+ [!code-vb[WebParts_General_TextDisplayPart#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_General_TextDisplayPart/VB/textdisplaywebpart.vb#2)]  
+  
+ Der zweite Teil des Beispiels wird gezeigt, wie auf die `TextDisplayWebPart` -Steuerelement in eine ASP.NET-Webseite. Nachdem die Seite in einem Browser zu laden, wenn Sie in der Titelleiste des benutzerdefinierten Verbmenü auf <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, das Schließen-Verb ist jetzt deaktiviert, die verhindert, dass Benutzer das Steuerelement zu schließen.  
+  
+ [!code-aspx-csharp[WebParts_General_TextDisplayPart#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_General_TextDisplayPart/CS/textwebpartcs.aspx#1)]
+ [!code-aspx-vb[WebParts_General_TextDisplayPart#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_General_TextDisplayPart/VB/textwebpartvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowClose">
+      <MemberSignature Language="C#" Value="public virtual bool AllowClose { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowClose" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.AllowClose" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable(System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Endbenutzer schließen können einer <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement auf einer Webseite.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement auf einer Webseite geschlossen werden kann; andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachdem ein Benutzer schließt eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement auf einer Webseite, die das Steuerelement ist nicht mehr sichtbar oder auf der Seite verfügbar. Das Steuerelement geschlossene wird Seitenkatalog, eine Webparts-Entität hinzugefügt, die einen Verweis auf das Steuerelement speichert. Wenn ein Entwickler Fügt eine <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> Steuerelement auf der Seite innerhalb einer <xref:System.Web.UI.WebControls.WebParts.CatalogZone> -Steuerelement, Benutzer können auf der Seite zu Kataloganzeigemodus wechseln, wählen Sie das geschlossene Steuerelement im Seitenkatalog und wieder die Seite hinzufügen.  
+  
+> [!NOTE]
+>  Geschlossene <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement kann hinzugefügt werden auf einer Seite entweder programmgesteuert oder durch einen Benutzer, wählt das geschlossene Steuerelement aus dem Seitenkatalog aus, wenn die Seite im Katalog, Anzeigemodus.  
+  
+ Schließen einer <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement unterscheidet sich von löschen. Ein geschlossenes Steuerelement kann eine Seite wieder hinzugefügt werden, während gelöschte Steuerelemente dauerhaft entfernt. Weitere Informationen zum Löschen von Steuerelementen finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DeleteWebPart%2A> Methode. Schließen eines Steuerelements unterscheidet sich auch von ausblenden. Ein Steuerelement, das ausgeblendet ist, ist noch vorhanden, auf der Seite noch Seite Lebenszyklusereignisse beteiligt ist, und wird nur aus Sicht des Benutzers ausgeblendet, aber ein geschlossenes Steuerelement ist nicht auf einer Seite gerendert.  
+  
+ Statische und dynamische <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente (statische Steuerelemente in deklariert eine Seitenmarkup während dynamische Steuerelemente programmgesteuert hinzugefügt werden) können geschlossen werden.  
+  
+ Wenn ein Entwickler legt die <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowClose%2A> Eigenschaft, um `false`eine schließen-Verb wird nicht auf dem Steuerelement angezeigt und der Benutzer ist kein Steuerelement geschlossen werden konnte.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ Die Personalisierungsbereich dieser Eigenschaft wird festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und kann nur von autorisierten Benutzern geändert werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> und [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie so ändern Sie die Standardeinstellung für die <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowClose%2A> -Eigenschaft für eine benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, sodass es nicht geschlossen werden kann.  
+  
+ Der erste Teil dieses Beispiels enthält den Code für ein benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement namens `TextDisplayWebPart`. Beachten Sie, dass im Konstruktor des benutzerdefinierten Steuerelements, das `TextDisplayWebPart.AllowClose` -Eigenschaftensatz auf `false`, dem wirkt sich der Benutzer daran gehindert, das Steuerelement auf einer Webseite zu schließen. Dies bedeutet, dass der schließen-Verb im Verbmenü des Steuerelements wird für Benutzer deaktiviert werden. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel wird davon ausgegangen, dass Sie den Quellcode in eine Assembly kompilieren, fügen Sie ihn in einen Unterordner "bin" Ihrer Webanwendung und verweisen auf die Assembly mit einem `Register` -Direktive in der Webseite. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_General_TextDisplayPart#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_General_TextDisplayPart/CS/textdisplaywebpart.cs#2)]
+ [!code-vb[WebParts_General_TextDisplayPart#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_General_TextDisplayPart/VB/textdisplaywebpart.vb#2)]  
+  
+ Der zweite Teil des Beispiels wird gezeigt, wie auf die `TextDisplayWebPart` -Steuerelement in eine ASP.NET-Webseite. Beachten Sie, dass in der `<aspSample:TextDisplayWebPart>` -Element, das Steuerelement verweist, konnte Sie auch den Wert der Eigenschaft festgelegt, die vom Konstruktor des Steuerelements ändern. Um das Steuerelement geschlossen werden kann, fügen Sie einfach eine `AllowClose="true"` -Attribut auf das Element im deklarativen Markup.  
+  
+ [!code-aspx-csharp[WebParts_General_TextDisplayPart#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_General_TextDisplayPart/CS/textwebpartcs.aspx#1)]
+ [!code-aspx-vb[WebParts_General_TextDisplayPart#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_General_TextDisplayPart/VB/textwebpartvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowConnect">
+      <MemberSignature Language="C#" Value="public virtual bool AllowConnect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowConnect" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.AllowConnect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable(System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement können Sie andere Steuerelemente zum Herstellen der Verbindung mit ihm.</summary>
+        <value>Ein boolescher Wert, der angibt, ob Verbindungen mit dem Steuerelement formatiert werden können. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Eigenschaftswert kann deklarativ im Seitenmarkup oder programmgesteuert festgelegt werden.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ Die Personalisierungsbereich dieser Eigenschaft wird festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und kann nur von autorisierten Benutzern geändert werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> und [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowEdit">
+      <MemberSignature Language="C#" Value="public virtual bool AllowEdit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowEdit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.AllowEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable(System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Endbenutzer ändern, können eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Kontrolle über die Benutzeroberfläche (UI) von einem oder mehreren bereitgestellten <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement geändert werden kann; andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ermöglicht Benutzern das Bearbeiten einer <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, das <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowEdit%2A> Eigenschaft muss festgelegt werden, um `true` (Standard), Anzeigemodus für die Seite muss sich im Bearbeitungsmodus befindet. Anzeigemodi werden durch Felder im dargestellt die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement. In diesem Fall der Modus ist <xref:System.Web.UI.WebControls.WebParts.WebPartManager.EditDisplayMode>. Anzeigen der Details zu den Seiten Modi und zum Ändern finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> -Klassenübersicht.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowEdit%2A> -Eigenschaftensatz auf `false` Bearbeitungsoptionen deklarativ oder programmgesteuert beschränkt sind. Die sind nur mögliche Bearbeitungsvorgänge Änderungen an der Seite Layout, mithilfe einer <xref:System.Web.UI.WebControls.WebParts.LayoutEditorPart> Steuerelement oder andere grundlegende Vorgänge, die durch benutzerdefinierte aktiviert <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente.  
+  
+ Ein Beispiel, verwendet <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente aus der Webparts Steuerelement festgelegt und wird gezeigt, wie die Bearbeitung eines benutzerdefinierten Webparts-Steuerelements aktivieren finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer Webparts-Seite](http://msdn.microsoft.com/library/e05b659c-d6da-46cb-b177-48efe55f2770).  
+  
+> [!IMPORTANT]
+>  Die Auswirkung, die die <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowEdit%2A> Eigenschaft weist auf ein Steuerelement Verhalten wird auch die vom aktuellen Gültigkeitsbereich Personalisierung der Webseite beeinträchtigt, und die einzelnen Webparts-Steuerelemente auf dieser Seite. Weitere Informationen finden Sie unter [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ Die Personalisierungsbereich dieser Eigenschaft wird festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und kann nur von autorisierten Benutzern geändert werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> und [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie so ändern Sie die Standardeinstellung für die <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowEdit%2A> -Eigenschaft für eine Webparts-Steuerelement, sodass das Steuerelement nicht bearbeitet werden kann. In diesem Beispiel wird davon ausgegangen, die Verwendung von einer <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, `TextDisplayWebPart`, befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klassenübersicht.  
+  
+ Das Codebeispiel verwendet auch ein benutzerdefiniertes Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webparts-Seite zu ändern. Das Benutzersteuerelement verwiesen wird, von der eine `Register` -Direktive am oberen Rand der Webseite, die das Benutzersteuerelement hostet. Eine ausführliche Beschreibung zum Erstellen dieses Benutzersteuerelement und Anzeigemodi verwenden, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-aspx-csharp[WebParts_WebPart_AllowEdit#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_AllowEdit/CS/displaymodemenucs.ascx#5)]
+ [!code-aspx-vb[WebParts_WebPart_AllowEdit#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_AllowEdit/VB/displaymodemenuvb.ascx#5)]  
+  
+ Im deklarativen Markup für die Webseite auf die `<aspSample:TextDisplayWebPart>` -Element, das Steuerelement verweist, beachten Sie die `AllowEdit="false"` Attribut. Obwohl `true` ist die Standardeinstellung, wurde das Attribut festgelegt, um `false` für die Zwecke dieses Beispiels. Laden Sie die Seite in einem Browser und die Verwendung der **Anzeigemodus** Dropdown-Listensteuerelement so ändern Sie den Anzeigemodus Bearbeitungsmodus. Klicken Sie auf, in der Titelleiste des Verbmenü der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, und beachten Sie, dass das Bearbeiten-Verb fehlt, da Sie auf das Steuerelement bearbeiten deaktiviert.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_AllowEdit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_AllowEdit/CS/alloweditCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_AllowEdit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_AllowEdit/VB/alloweditVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowHide">
+      <MemberSignature Language="C#" Value="public virtual bool AllowHide { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowHide" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.AllowHide" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable(System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Endbenutzer Ausblenden einer <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement ausgeblendet ist, andernfalls kann <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowHide%2A> -Eigenschaft bestimmt, ob Benutzer ändern, können die <xref:System.Web.UI.WebControls.WebParts.WebPart.Hidden%2A> Eigenschaft. Im Standardfall, wenn der Eigenschaftswert ist `true`, Benutzer können den Wert ändern, wenn das Steuerelement bearbeitet wird. Standardmäßig werden Steuerelemente nicht ausgeblendet und ihre <xref:System.Web.UI.WebControls.WebParts.WebPart.Hidden%2A> Eigenschaftswert ist `false`. Wenn eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement bearbeitet wird, wenn ein Benutzer ein Kontrollkästchen zum Ausblenden des Steuerelements auswählt (welche legt die <xref:System.Web.UI.WebControls.WebParts.WebPart.Hidden%2A> Eigenschaft, um `true`), das Steuerelement wird nicht mehr sichtbar sein, wenn die Seite wird zurückgegeben, auf die Durchsuchen-Modus.  
+  
+ Ausgeblendete Steuerelemente sind Steuerelemente, die geschlossen werden, unterscheiden, da die <xref:System.Web.UI.WebControls.WebParts.WebPart.Hidden%2A> Eigenschaft verfügt über eine unterschiedliche Bedeutung innerhalb des Webparts-Steuerelementsatzes. Geschlossene Steuerelemente auch nicht auf einer Seite gerendert werden und Lebenszyklusereignisse Seite nicht beteiligt. Im Gegensatz dazu sind zwar ausgeblendet <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente sind nicht für Benutzer sichtbar, noch auf einer Webseite gerendert werden, immer noch in einer Zone enthalten sind, können weiterhin Verbindungen mit anderen beibehalten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente als Teil einer Webparts-Anwendung.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ Die Personalisierungsbereich dieser Eigenschaft wird festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und kann nur von autorisierten Benutzern geändert werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> und [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie so ändern Sie die Standardeinstellung für die <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowHide%2A> -Eigenschaft für eine benutzerdefinierte Webparts gesteuert, so, dass das benutzerdefinierte Steuerelement von einem Benutzer nicht ausgeblendet werden. In diesem Beispiel wird davon ausgegangen, das die Verwendung einer benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement `TextDisplayWebPart`, befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klassenübersicht.  
+  
+ Das Codebeispiel verwendet auch ein benutzerdefiniertes Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webparts-Seite zu ändern. Das Benutzersteuerelement verwiesen wird, von der eine `Register` -Direktive am oberen Rand der Webseite, die das Benutzersteuerelement hostet. Eine ausführliche Beschreibung zum Erstellen dieses Benutzersteuerelement und Anzeigemodi verwenden, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-aspx-csharp[WebParts_WebPart_AllowHide#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_AllowHide/CS/displaymodemenucs.ascx#5)]
+ [!code-aspx-vb[WebParts_WebPart_AllowHide#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_AllowHide/VB/displaymodemenuvb.ascx#5)]  
+  
+ Im deklarativen Markup für die Webseite auf die `<aspSample:TextDisplayWebPart>` -Element, das Steuerelement verweist, Hinweis der `AllowHide="false"` -Attribut, das verhindert, dass einen Benutzer, die das Steuerelement, um ihn auszublenden können nicht bearbeitet wird. Laden Sie die Seite in einem Browser und die Verwendung der **Anzeigemodus** Dropdown-Listensteuerelement so ändern Sie den Anzeigemodus Bearbeitungsmodus. Klicken Sie auf, in der Titelleiste des Verbmenü die <xref:System.Web.UI.WebControls.WebParts.WebPart> steuern, und klicken Sie auf das Verb bearbeiten. Wie die bearbeiten-Benutzeroberfläche (UI) angezeigt wird, sehen Sie, dass die Benutzeroberfläche zum Bearbeiten der <xref:System.Web.UI.WebControls.WebParts.WebPart.Hidden%2A> Eigenschaft ist jetzt deaktiviert, der aufgetreten ist, da Sie festlegen, die <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowHide%2A> Eigenschaftswert angibt, der `false`.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_AllowHide#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_AllowHide/CS/allowhidecs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_AllowHide#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_AllowHide/VB/allowhidevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowMinimize">
+      <MemberSignature Language="C#" Value="public virtual bool AllowMinimize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowMinimize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.AllowMinimize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable(System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Endbenutzer minimieren, kann ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement minimiert werden kann, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowMinimize%2A> -Eigenschaft, wenn auf festgelegt `false`, verhindert einen Endbenutzer können das Steuerelement und die Benutzeroberfläche (UI) für minimieren, minimieren das Steuerelement nicht in der Titelleiste des Steuerelements angezeigt wird. In der Terminologie von Webparts bei der <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowMinimize%2A> -Eigenschaftensatz auf `false`, minimieren-Verb nicht im Verbmenü des Steuerelements angezeigt wird.  
+  
+ Wenn ein Benutzer ein Steuerelement minimiert wird, reduziert die Größe des Steuerelements auf einen minimalen Bereich, in dem nur ein Teil des Steuerelements Titelleiste und Titel angezeigt.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ Die Personalisierungsbereich dieser Eigenschaft wird festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und kann nur von autorisierten Benutzern geändert werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> und [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie so ändern Sie die Standardeinstellung für die <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowMinimize%2A> -Eigenschaft für eine benutzerdefinierte Webparts Steuerelement, sodass das Steuerelement nicht von einem Benutzer minimiert werden kann. In diesem Beispiel wird davon ausgegangen, das die Verwendung einer benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement `TextDisplayWebPart`, befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klassenübersicht.  
+  
+ Im deklarativen Markup für die Webseite auf die `<aspSample:TextDisplayWebPart>` -Element, das Steuerelement verweist, Hinweis der `AllowMinimize="false"` -Attribut, das das Minimieren-Verb in Blendet Sie aus der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement Verbmenü des und verhindert, dass einen Benutzer die Möglichkeit zum Minimieren der -Steuerelement. Laden Sie die Seite in einem Browser, und klicken Sie im Verbenmenü, auf die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Minimieren Verbs an, normalerweise im Verbmenü vorhanden wäre, wird ausgeblendet, da Sie es im deklarativen Markup für das Steuerelement deaktiviert.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_AllowMinimize#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_AllowMinimize/CS/allowminimizecs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_AllowMinimize#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_AllowMinimize/VB/allowminimizevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowZoneChange">
+      <MemberSignature Language="C#" Value="public virtual bool AllowZoneChange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowZoneChange" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.AllowZoneChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable(System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Benutzer wechseln kann eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> zwischen steuern <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> Zonen.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement zwischen den Bereichen; verschieben kann, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowZoneChange%2A> Eigenschaft `true`, und eine Webseite, die in einen Anzeigemodus, die Änderungen am Layout (z. B. bearbeiten oder Entwurfsmodus) ermöglicht wird, ein Benutzer kann das Seitenlayout ändern, indem Sie ein Steuerelement in einen anderen verschieben <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone auf der Seite. Wenn die Eigenschaft, um festgelegt wird `false`, ein Steuerelement kann nicht verschoben werden, zwischen den Bereichen, aber immer noch innerhalb der aktuellen Zone verschoben werden kann.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ Die Personalisierungsbereich dieser Eigenschaft wird festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und kann nur von autorisierten Benutzern geändert werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> und [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie so ändern Sie die Standardeinstellung für die <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowZoneChange%2A> -Eigenschaft für eine benutzerdefinierte Webparts-Steuerelement, sodass Benutzer das Steuerelement in eine andere Zone verschoben werden kann. In diesem Beispiel wird davon ausgegangen, die Verwendung eines benutzerdefinierten Steuerelements `TextDisplayWebPart`, befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klassenübersicht.  
+  
+ Das Codebeispiel verwendet auch ein benutzerdefiniertes Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webparts-Seite zu ändern. Das Benutzersteuerelement verwiesen wird, von der eine `Register` -Direktive am oberen Rand der Webseite, die das Benutzersteuerelement hostet. Eine ausführliche Beschreibung zum Erstellen dieses Benutzersteuerelement und Anzeigemodi verwenden, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-aspx-csharp[WebParts_WebPart_AllowZoneChange#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_AllowZoneChange/CS/displaymodemenucs.ascx#5)]
+ [!code-aspx-vb[WebParts_WebPart_AllowZoneChange#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_AllowZoneChange/VB/displaymodemenuvb.ascx#5)]  
+  
+ Im deklarativen Markup für die Webseite, auf der zweiten `<aspSample:TextDisplayWebPart>` -Element, notieren Sie die `AllowZoneChange="false"` Attribut. Zur Laufzeit konnte ein Endbenutzer das erste Steuerelement in ziehen **WebPartZone2**, aber nicht identisch mit dem zweiten Steuerelement ausführen konnten. Laden Sie die Seite in einem Browser und die Verwendung der **Anzeigemodus** Dropdown-Listensteuerelement den Anzeigemodus in den Entwurfsmodus zu ändern. Versucht, jede ziehen die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in eine andere zone, und beachten Sie das unterschiedliche Verhalten basierend auf den Werten von ihren <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowZoneChange%2A> Eigenschaften.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_AllowZoneChange#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_AllowZoneChange/CS/allowzonechangecs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_AllowZoneChange#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_AllowZoneChange/VB/allowzonechangevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorizationFilter">
+      <MemberSignature Language="C#" Value="public virtual string AuthorizationFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthorizationFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable(System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine beliebige Zeichenfolge ein, um zu bestimmen, ob ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement autorisiert ist, eine Seite hinzugefügt werden.</summary>
+        <value>Eine Zeichenfolge, die ein Steuerelement zu einer Webseite hinzuzufügende autorisiert. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Webparts-Steuerelementsatzes implementiert keine Standardverhalten für die <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> Eigenschaft. Jedoch die Eigenschaft bereitgestellt wird, damit einen beliebiger Zeichenfolgenwert für eine benutzerdefinierte zugewiesen werden können <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement; diese Eigenschaft kann von geprüft werden die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern, die während seiner <xref:System.Web.UI.WebControls.WebParts.WebPartManager.AuthorizeWebPart> Ereignis, um zu bestimmen, ob das Steuerelement auf der Seite hinzugefügt werden kann .  
+  
+ In einigen Fällen die <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> Eigenschaft möglicherweise mit der ASP.NET Rollen-Manager-Feature verwendet werden, damit, auch wenn ein Benutzer in einer bestimmten Rolle ist, und wenn der Zeichenfolgenwert, der die <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> Eigenschaft erfüllt bestimmter Bedingungen, die vom Entwickler festgelegt, und klicken Sie dann das Steuerelement hinzugefügt werden kann. Dieser Ansatz ermöglicht Entwicklern das Erstellen benutzerdefinierter Ansichten von einer Seite basierend auf einer Kombination von Rollen und andere Autorisierungskriterien, die sie angeben.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ Die Personalisierungsbereich dieser Eigenschaft wird festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und kann nur von autorisierten Benutzern geändert werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> und [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> Eigenschaft. Es zeigt, wie einen benutzerdefinierte Methodenhandler für das <xref:System.Web.UI.WebControls.WebParts.WebPartManager.AuthorizeWebPart> -Ereignis, benutzerdefinierten Filtern Code für der Handler bereitstellen zu kann die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.OnAuthorizeWebPart%2A> Methode. In diesem Beispiel wäre eine typische Möglichkeit für Entwickler einer Seite Geben Sie eine Filterung Szenario und die Autorisierung des <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente auf einer Seite hinzugefügt werden.  
+  
+ Im Webseitencode, beachten Sie, dass die `<asp:webpartmanager>` Element verfügt über die `OnAuthorizeWebPart` Attribut mit dem Namen des ereignishandlers zugewiesen. Diese Methode überprüft, ob die Steuerelemente auf der Seite haben ihre <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> -Eigenschaftswert festgelegt wird, um `admin`, und wenn dies der Fall ist, gibt `true`, was bedeutet, dass sie autorisiert und zur Seite hinzugefügt.  
+  
+> [!NOTE]
+>  Beachten Sie, die steuert, die keinen Wert zugewiesen ist, die <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> Eigenschaft werden ebenfalls hinzugefügt, da sie nicht als Teil eines Filterszenarios angenommen werden. Wäre dies eine gängige Methode in einem Filterszenario: Einige Steuerelemente werden gefiltert und andere nicht, da davon ausgegangen, wird werden für alle Benutzer verfügbar sein.  
+  
+ [!code-aspx-csharp[WebParts_WebPartManager_AuthorizeWebPart#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartManager_AuthorizeWebPart/CS/AuthorizeWebPartCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartManager_AuthorizeWebPart#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartManager_AuthorizeWebPart/VB/AuthorizeWebPartVB.aspx#1)]  
+  
+ Da Einrichten von Benutzern zu Rollen nicht Gegenstand dieses Themas ist, wird in diesem Codebeispiel wird von Benutzerrollen in die Filterung nicht überprüft. Allerdings ist das Szenario der Filterung Steuerelemente entsprechend Benutzerrollen wahrscheinlich eines der häufigsten Verwendungszwecke von diesem Filterfunktion. Wenn Sie auf der Website-Rollen haben und Sie Benutzerrollen in diese Methode, um Steuerelemente zu filtern überprüfen möchten, ähnelt die Methode den folgenden Codeblock (im Gegensatz zu den einfacherer Ansatz im vorangehenden Codebeispiel, das keine Rollen verwendet).  
+  
+```  
+protected void mgr1_AuthorizeWebPart(object sender,   
+  WebPartAuthorizationEventArgs e)  
+{  
+  if (!String.IsNullOrEmpty(e.AuthorizationFilter))  
+  {  
+    if(Roles.IsUserInRole(Page.User.Identity.Name, e.authorizationFilter))  
+      e.IsAuthorized = true;  
+    else  
+      e.IsAuthorized = false;  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Um diese Eigenschaft zu verwenden, erstellen Sie eine benutzerdefinierte <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> steuern, und überschreiben Sie entweder die <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.OnAuthorizeWebPart(System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs)" /> Methode oder den zugehörigen <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.IsAuthorized(System.Web.UI.WebControls.WebParts.WebPart)" /> Methode, um die Prüfung auf behandeln die <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter" /> Eigenschaft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CatalogIconImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string CatalogIconImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CatalogIconImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.CatalogIconImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable(System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild, das eine Webparts-Steuerelement in einem Katalog von Steuerelementen darstellt.</summary>
+        <value>Eine Zeichenfolge, die URL zu einem Bild verwendet, um die Darstellung des Steuerelements in einem Katalog darstellt. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Personalisierungsbereich dieser Eigenschaft wird festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und kann nur von autorisierten Benutzern geändert werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> und [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Web.UI.WebControls.WebParts.WebPart.CatalogIconImageUrl%2A> -Eigenschaft für eine <xref:System.Web.UI.WebControls.WebParts.WebPart> zu steuern, sodass ein Bild mit dem Steuerelement in einem Katalog von Steuerelementen angezeigt wird. In diesem Beispiel wird davon ausgegangen, die Verwendung eines benutzerdefinierten Steuerelements `TextDisplayWebPart`, im Abschnitt Beispiel erstellt die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klassenübersicht.  
+  
+ Das Codebeispiel verwendet auch ein benutzerdefiniertes Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webparts-Seite zu ändern. Das Benutzersteuerelement verwiesen wird, von der eine `Register` -Direktive am oberen Rand der Webseite, die das Benutzersteuerelement hostet. Eine ausführliche Beschreibung zum Erstellen dieses Benutzersteuerelement und Anzeigemodi verwenden, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-aspx-csharp[WebParts_WebPart_CatalogIconImageUrl#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_CatalogIconImageURL/CS/displaymodemenucs.ascx#5)]
+ [!code-aspx-vb[WebParts_WebPart_CatalogIconImageUrl#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_CatalogIconImageURL/VB/displaymodemenuvb.ascx#5)]  
+  
+ Beachten Sie im deklarativen Markup der Webseite, die `<asp:CatalogZone>` Element. Darin sind mehrere Elemente geschachtelt, einschließlich einer `<aspSample:TextDisplayWebPart>` Element. Dieser Satz von Elementen ermöglicht, die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement in einem Katalog angezeigt. In das Markup für die `<aspSample:TextDisplayWebPart>` Element, beachten Sie, dass die `CatalogIconImageUrl` -Attribut ist eine Zeichenfolge, die URL zu einer Bilddatei enthält, zugewiesen. Laden Sie die Seite in einem Browser und die Verwendung der **Anzeigemodus** Dropdown-Listensteuerelement so ändern Sie den Anzeigemodus in den Katalogmodus. Klicken Sie dann die Katalog-Benutzeroberfläche (UI) verwenden, um die benutzerdefinierte hinzufügen- <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement auf der Seite.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_CatalogIconImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_CatalogIconImageURL/CS/catalogiconimageurlcs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_CatalogIconImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_CatalogIconImageURL/VB/catalogiconimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die interne Überprüfungssystem hat ergeben, dass die URL möglicherweise Script-Angriffe enthalten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChromeState">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WebParts.PartChromeState ChromeState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.WebParts.PartChromeState ChromeState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.ChromeState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob ein Teilsteuerelement in einem Zustand minimiert oder normal ist.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeState" />-Werte. Die Standardeinstellung ist <see cref="F:System.Web.UI.WebControls.WebParts.PartChromeState.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein des Teilsteuerelements <xref:System.Web.UI.WebControls.WebParts.WebPart.ChromeState%2A> Eigenschaftswert kann normal oder minimiert werden. Die <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse überschreibt die Basiseigenschaft, damit Endbenutzer, die sie anpassen können.  
+  
+ Ein Codebeispiel, das diese Eigenschaft verwendet, finden Sie unter der Base <xref:System.Web.UI.WebControls.WebParts.Part.ChromeState%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Wert ist nicht der <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeState" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChromeType">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WebParts.PartChromeType ChromeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.WebParts.PartChromeType ChromeType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.ChromeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des Rahmens, der eine Webparts-Steuerelemente umgibt.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeType" />-Werte. Die Standardeinstellung ist <see cref="F:System.Web.UI.WebControls.WebParts.PartChromeType.Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein des Teilsteuerelements <xref:System.Web.UI.WebControls.WebParts.WebPart.WebPartManager%2A> Eigenschaft bestimmt die Art des Rahmens des Steuerelements umgibt. Zu den Optionen gehören anzeigen nur einen Titel, nur einen Rahmen, einen Titel und Rahmen, weder oder die Standardoption, die einfach den Wert des verwendet die <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeType%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse überschreibt die Basiseigenschaft, damit Endbenutzer, die sie anpassen können.  
+  
+ Ein Codebeispiel, das diese Eigenschaft verwendet, finden Sie unter der Base <xref:System.Web.UI.WebControls.WebParts.Part.ChromeType%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist keiner der <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeType" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectErrorMessage">
+      <MemberSignature Language="C#" Value="public string ConnectErrorMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.ConnectErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Fehlermeldung für Benutzer angezeigt werden soll, wenn Fehler, während des Verbindungsvorgangs auftreten ab.</summary>
+        <value>Eine Zeichenfolge, die die Fehlermeldung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt der <xref:System.Web.UI.WebControls.WebParts.WebPart.ConnectErrorMessage%2A> -Eigenschaft intern durch den Webparts-Steuerelementsatz angegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEditorParts">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.EditorPartCollection CreateEditorParts ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.WebControls.WebParts.EditorPartCollection CreateEditorParts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPart.CreateEditorParts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.EditorPartCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung von benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente, die verwendet werden können, so bearbeiten Sie eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> steuern, wenn es sich um im Bearbeitungsmodus.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartCollection" /> enthält benutzerdefinierte <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Kontrollen hinsichtlich einer <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entwickler können diese Methode zum Erstellen von Instanzen von benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente, die sie zuordnen möchten eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Die Methode wird aufgerufen, wenn ein Benutzer auf das Verb bearbeiten klickt ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+> [!NOTE]
+>  Jede neue Instanz einer <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement, das in dieser Methode erstellt wird, benötigen einen Wert der ID-Eigenschaft zugewiesen werden, bevor sie hinzugefügt werden kann die <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase.EditorParts%2A> Auflistung.  
+  
+ Ein Codebeispiel, das verwendet die <xref:System.Web.UI.WebControls.WebParts.WebPart.CreateEditorParts%2A> -Methode finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Klassenübersicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public override string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable(System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen kurzen Ausdruck, der das Webpart-Steuerelement, für die Verwendung in QuickInfos und Kataloge Teilsteuerelemente Wirkungsweise zusammenfasst.</summary>
+        <value>Eine Zeichenfolge zusammenfasst, Kurzform Funktionalität Teilsteuerelements. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart.Description%2A> Eigenschaft ist in der Regel eine Zeichenfolge, die in Katalogen verwendet wird, die Listen von Teilsteuerelemente und als QuickInfo in der Titelleiste des bereitstellen. Der Inhalt der <xref:System.Web.UI.WebControls.WebParts.WebPart.Description%2A> Eigenschaft wird als QuickInfo angezeigt, wenn Sie den Mauszeiger über den Text in der Titelleiste ein des Teilsteuerelements positionieren. Der QuickInfo-Text wird erstellt, aus dem Wert der <xref:System.Web.UI.WebControls.WebParts.WebPart.DisplayTitle%2A> -Eigenschaft, gefolgt von einem Bindestrich gefolgt von der <xref:System.Web.UI.WebControls.WebParts.WebPart.Description%2A> Eigenschaftswert.  
+  
+ Ein Codebeispiel, das diese Eigenschaft verwendet, finden Sie unter der Base <xref:System.Web.UI.WebControls.WebParts.Part.Description%2A> Eigenschaft.  
+  
+ Die Personalisierungsbereich dieser Eigenschaft wird festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und kann nur von autorisierten Benutzern geändert werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> und [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.ContentDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ContentDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ContentDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest, der Inhalt innerhalb des Steuerelements fließt horizontalen Richtung.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.ContentDirection" /> , der angibt, der Inhalt horizontaler Richtung fließt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse überschreibt die Basiseigenschaftenwerte, damit Benutzer die Eigenschaft personalisieren können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayTitle">
+      <MemberSignature Language="C#" Value="public string DisplayTitle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.DisplayTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die den vollständigen Titeltext, der tatsächlich in der Titelleiste des angezeigten enthält eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Instanz des Steuerelements.</summary>
+        <value>Eine Zeichenfolge, die vollständige darstellt, angezeigten Titel des Steuerelements. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart.DisplayTitle%2A> Eigenschaft gibt den aktuellen Wert von der <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> Eigenschaft oder, wenn das Steuerelement über keinen Titel, einen berechneten Wert verfügt. Der berechnete Wert besteht aus einer lokalisierbaren Ressourcenzeichenfolge für unbenannte Steuerelemente, und (falls es mehrere Steuerelemente in der Zone gibt) wird eine Zahl für den Index des Steuerelements in der Zone Grundlage.  
+  
+ Für benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert, wo die <xref:System.Web.UI.WebControls.WebParts.WebPart.Subtitle%2A> Eigenschaft überschrieben, um einen Zeichenfolgenwert für die Verwendung als Untertitel Zurückgeben der <xref:System.Web.UI.WebControls.WebParts.WebPart.DisplayTitle%2A> Eigenschaft mit den Untertitel aus, um einen vollständigen Titel erzeugen verkettet wird.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart.DisplayTitle%2A> Eigenschaftswert dient auch als Teil einer QuickInfo, die wird, wenn angezeigt eine Benutzerpositionen der Mauszeiger die Form über der Titelleiste eines Steuerelements. Die vollständige QuickInfo besteht aus den <xref:System.Web.UI.WebControls.WebParts.WebPart.DisplayTitle%2A> Werts, gefolgt von einem Bindestrich gefolgt von den Wert des Steuerelements <xref:System.Web.UI.WebControls.WebParts.WebPart.Description%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportMode">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.WebPartExportMode ExportMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.WebParts.WebPartExportMode ExportMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.ExportMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable(System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartExportMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob alle, einige oder keine der eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Eigenschaften des Steuerelements exportiert werden können.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartExportMode" />-Werte. Die Standardeinstellung ist <see cref="F:System.Web.UI.WebControls.WebParts.WebPartExportMode.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement kann nicht exportiert werden kann und die zugehörige <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.WebParts.WebPartExportMode.None>. Legen Sie zum Aktivieren der Export aller Eigenschaften für das Steuerelement die <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> Wert <xref:System.Web.UI.WebControls.WebParts.WebPartExportMode.All>. Exportieren Sie nur bestimmte Eigenschaften während verhindert den Export von Eigenschaften, die vertrauliche Daten enthalten, legen Sie den Eigenschaftswert auf <xref:System.Web.UI.WebControls.WebParts.WebPartExportMode.NonSensitiveData>.  
+  
+ So exportieren Sie den Wert der eigenschaftsbeschreibungen für eine <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, die Eigenschaften müssen ebenfalls mit markiert werden die `Personalizable` Attribut in den Metadaten für die Eigenschaft Quellcode einfügen. Ausführliche Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute>.  
+  
+> [!NOTE]
+>  Damit kann die Exportfunktion für eine Webanwendung, die Webparts-Steuerelemente in der Datei "Web.config" für die Anwendung enthält, müssen Sie ein Attribut zum Hinzufügen der `<webParts>` Element innerhalb der `<system.web>` Abschnitt, wie das folgende Markup.  
+>   
+>  `<webParts  enableExport="true">`  
+>   
+>  `</webParts>`  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ Die Personalisierungsbereich dieser Eigenschaft wird festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und kann nur von autorisierten Benutzern geändert werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> und [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> Eigenschaft. Beachten Sie, dass für den Export Codebeispiel funktioniert, Sie ebenfalls die Datei "Web.config" aktualisieren müssen durch Hinzufügen des Attributs `enableExport="true"` auf die `<webParts>` Element, wie im Abschnitt "Hinweise" angegeben.  
+  
+ Der erste Teil dieses Beispiels enthält den Code für ein Steuerelement namens `TextDisplayWebPart`. Dieses Steuerelement ist identisch mit das benutzerdefinierte Steuerelement, das im Abschnitt "Beispiel" der gefunden wird die <xref:System.Web.UI.WebControls.WebParts.WebPart> Klassenübersicht, mit dem Unterschied, dass er fügt eine `Personalizable` -Attribut auf die `TextDisplayWebPart.ContentText` Eigenschaft, sodass die Eigenschaft exportiert werden kann. Beachten Sie, dass die Attributdeklaration enthält den Wert `true` für die `isSensitive` Dies bedeutet, dass die Eigenschaft markiert ist, wie vertrauliche Daten zu exportieren. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel wird davon ausgegangen, dass Sie den Quellcode in eine Assembly kompilieren, fügen Sie ihn in einen Unterordner "bin" Ihrer Webanwendung und verweisen auf die Assembly mit einem `Register` -Direktive in der Webseite. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPart_ExportMode#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_ExportMode/CS/textdisplaywebpart.cs#2)]
+ [!code-vb[WebParts_WebPart_ExportMode#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_ExportMode/VB/textdisplaywebpart.vb#2)]  
+  
+ Der zweite Teil des Beispiels wird gezeigt, wie auf die `TextDisplayWebPart` -Steuerelement in eine ASP.NET-Webseite. Beachten Sie, dass im deklarativen Markup der <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> Eigenschaftswert festgelegt ist, um <xref:System.Web.UI.WebControls.WebParts.WebPartExportMode.All>, was bedeutet, dass auch Eigenschaften mit vertraulichen Werte exportiert werden sollen.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_ExportMode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_ExportMode/CS/exportmodecs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_ExportMode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_ExportMode/VB/exportmodevb.aspx#1)]  
+  
+ Laden Sie die Webseite in einem Browser, und klicken Sie auf die Verbmenü des der <xref:System.Web.UI.WebControls.WebParts.WebPart> steuern, klicken Sie auf das Exportieren-Verb, und befolgen Sie die Anweisungen zum Exportieren einer Beschreibungsdatei, die das Steuerelement Zustands- und Daten enthält.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Wert ist nicht der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartExportMode" /> Werte.</exception>
+        <exception cref="T:System.InvalidOperationException">Das Steuerelement bereits geladen ist und der Personalisierungsbereich des Steuerelements festgelegt ist, um die <see cref="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.User" /> Bereich.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasSharedData">
+      <MemberSignature Language="C#" Value="public bool HasSharedData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasSharedData" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.HasSharedData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Steuerelement freigegebene Personalisierungsdaten zugeordnet.</summary>
+        <value>Ein boolescher Wert, der angibt, ob das Steuerelement Personalisierungsdaten freigegeben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bezieht sich auf Personalisierungsdaten, die festgelegt werden auf ein Steuerelement im freigegebenen Bereich, d. h., die von allen Benutzern angezeigt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasUserData">
+      <MemberSignature Language="C#" Value="public bool HasUserData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasUserData" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.HasUserData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Steuerelement Personalisierung Benutzerdaten zugeordnet.</summary>
+        <value>Ein boolescher Wert, der angibt, ob das Steuerelement Personalisierung Benutzerdaten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bezieht sich auf benutzerdefinierte Personalisierungsdaten, die benutzerspezifische – anders ausgedrückt, ist von einem Benutzer auf ein Steuerelement spezifische Einstellungen, die nur für diesen Benutzer sichtbar sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.Unit Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit Height" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Höhe einer Zone fest.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.Unit" /> -Objekt, das die Höhe der gibt an, eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZone" />. Der Standardtyp der eine <see cref="T:System.Web.UI.WebControls.Unit" /> Pixel ist, durch die <see cref="P:System.Web.UI.WebControls.Unit.Type" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Internet Explorer-Renderingmodi können die Höhe des beeinflussen ein <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement und die Höhe der Zone, die es enthält. Internet Explorer rendert Webseiten im Kompatibilitätsmodus (abwärtskompatibel mit früheren Browserversionen) oder im Standards-Modus (bestimmt durch das Vorhandensein von einem `DOCTYPE` Deklaration auf der Seite). Informationen über diese Modi finden Sie unter den DHTML [CompatMode](http://go.microsoft.com/fwlink/?LinkId=57175) Eigenschaft.  
+  
+ Wenn eine Seite im Standardmodus von Internet Explorer gerendert wird, unter bestimmten Umständen möglicherweise nicht Größe Zellen in Tabellen, selbst wenn eine Zelle HTML-Markup `<td height="100%">`. Folglich <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente und die Zone gerendert werden, damit die Steuerelemente nicht auf die Höhe der Zone gestreckt werden.  
+  
+ Wenn Internet Explorer im Modus "standard" ist, werden Steuerelemente nicht gerendert, um auf ihre vollständige Höhe in den folgenden Fällen zu Strecken:  
+  
+-   Wenn einer Zone <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.LayoutOrientation%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.Orientation.Vertical> und die Höhe explizit festlegen, für die Zone. Um Steuerelemente zu füllen Sie die vollständige Höhe der Zone zu aktivieren, geben Sie die Höhe einer horizontal ausgerichteten Zone nicht.  
+  
+-   Wenn einer Zone <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.LayoutOrientation%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.Orientation.Horizontal> und die Höhe der Zone oder der darin enthaltenen Steuerelemente nicht explizit festgelegt. Um Steuerelemente zu füllen Sie die vollständige Höhe der Zone zu aktivieren, legen Sie die Höhe der Zone oder der Steuerelemente in einer Zone vertikal ausgerichtet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Renderingproblem, das die Höhe des wirkt sich auf <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in einem <xref:System.Web.UI.WebControls.WebParts.WebPartZone>.  Um dieses Problem zu demonstrieren, müssen Sie die Seite in Internet Explorer ausführen.  
+  
+ Beachten Sie, dass die Ausrichtung der Zone auf horizontal festgelegt ist und die Höhe der Zone und die darin enthaltenen Steuerelemente nicht explizit festgelegt ist.  Das Ergebnis ist, dass in der <xref:System.Web.UI.WebControls.WebParts.WebPartZone>, desto kürzere <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement Schaltfläche erstreckt sich nicht auf die Höhe der Zone beim Rendern.  Jedoch, wenn Sie entfernen die `DOCTYPE` -Deklaration aus der Seite und führen Sie die Seite erneut, das Problem tritt nicht auf, da jetzt der Browser die Seite im Standards-Modus nicht gerendert werden.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_Height#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_Height/CS/Defaultcs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_Height#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_Height/VB/Defaultvb.aspx#1)]  
+  
+ Um zu sehen, wie die problemumgehung (beschrieben im Abschnitt "Hinweise") funktioniert, versuchen Sie eine `height` -Attribut auf die `<asp:webpartzone>` -Element, während auf die `DOCTYPE` Deklaration auf der Seite.  Im folgenden Code können Sie das Attribut des Tags hinzufügen:  
+  
+ `Height="200px"`  
+  
+ Führen Sie die Seite, und jetzt die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> auf die explizit deklarierten der Zone erstrecken Strecken steuert.  
+  
+ Sie können auch experimentieren Sie mit diesem Codebeispiel wird die Höhe bezogene renderfehler in einem anderen Szenario beobachten, das auftritt, wenn der Zone <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.LayoutOrientation%2A> festgelegt ist, um <xref:System.Web.UI.WebControls.Orientation.Vertical>.  Entfernen Sie das vorhandene `LayoutOrientation` Attribut und seinen Wert aus der `<asp:webpartzone>` -Element, das die Ausrichtung der Zone, um die standardmäßige vertikale Ausrichtung wiederherzustellen verursacht.  Legen Sie die Height-Attribut für die `<asp:webpartzone>` Element auf 200 Pixel skaliert, wie oben, und führen Sie die Seite.  Höhe der Zone sieht zu groß, und die Steuerelemente sind nicht auf die Zone Höhe proportional angepasst.  Jetzt entfernen Sie die Height-Attribut, und führen Sie die Seite erneut aus.  Die Steuerelemente werden relativ zur Höhe der Zone nun gerendert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpMode">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.WebPartHelpMode HelpMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.WebParts.WebPartHelpMode HelpMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.HelpMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable(System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartHelpMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Benutzeroberfläche (UI) zum Anzeigen der Hilfe für ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartHelpMode" />-Werte. Die Standardeinstellung ist <see cref="F:System.Web.UI.WebControls.WebParts.WebPartHelpMode.Modal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpMode%2A> -Eigenschaft können Sie bestimmen, wie ein Browser Hilfeinhalt für ein Steuerelement angezeigt wird. Die folgende Tabelle enthält die Auswirkungen der verschiedenen Modi für die Hilfe in einem Browser beim Hilfeinhalt für ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement angezeigt wird.  
+  
+|Hilfemodus|Browserverhalten|  
+|---------------|----------------------|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPartHelpMode.Modal>|Öffnet ein separates Browserfenster, wenn der Browser über diese Fähigkeit verfügt. Ein Benutzer muss das Fenster schließen, bevor der Webparts-Seite zurückgegeben.|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPartHelpMode.Modeless>|Öffnet ein separates Browserfenster, wenn der Browser über diese Fähigkeit verfügt. Ein Benutzer besitzt nicht das Fenster zu schließen, vor der Rückgabe auf die Webseite.|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPartHelpMode.Navigate>|Ersetzt die Webparts-Seite im Browserfenster.|  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ Die Personalisierungsbereich dieser Eigenschaft wird festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und kann nur von autorisierten Benutzern geändert werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> und [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpMode%2A> Eigenschaft zum Anzeigen von Hilfe für ein Steuerelement im gleichen Browserfenster. Der erste Teil dieses Beispiels wird davon ausgegangen, die Verwendung eines benutzerdefinierten Steuerelements `TextDisplayWebPart`, befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klassenübersicht.  
+  
+ Das Codebeispiel enthält auch eine HTML-Seite, die fiktiven Hilfeinhalt für enthält die `TextDisplayWebPart` Steuerelement. Für dieses Beispiel funktioniert müssen Sie den folgenden Code in einer Datei namens Textwebparthelp.htm speichern und platzieren Sie es im selben Verzeichnis wie die ASPX‑Seite Ihrer Website.  
+  
+```  
+<html>  
+<head runat="server">  
+    <title>Text Content WebPart Help</title>  
+</head>  
+<body>  
+  <div>  
+  <h1>Text Content WebPart Help</h1>  
+  To make the WebPart control work...  
+  </div>  
+</body>  
+</html>  
+```  
+  
+ Der letzte Teil des Beispiels ist eine Webseite, die zeigt, wie auf die `TextDisplayWebPart` Steuerelement. Beachten Sie, dass im deklarativen Markup der <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpMode%2A> Eigenschaftswert festgelegt ist, um <xref:System.Web.UI.WebControls.WebParts.WebPartHelpMode.Navigate>, und der Code wird auch der Wert der die <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpUrl%2A> -Eigenschaft auf den Namen der HTML-Datei, die den Hilfe-Inhalt enthält. Laden Sie die Seite in einem Browser, und klicken Sie auf das im Verbmenü des Hilfe-Verb der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_HelpMode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_HelpMode/CS/helpmodecs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_HelpMode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_HelpMode/VB/helpmodevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Wert ist nicht der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartHelpMode" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpUrl">
+      <MemberSignature Language="C#" Value="public virtual string HelpUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.HelpUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable(System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einer Hilfedatei für ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die URL zu einer Hilfedatei darstellt. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ So aktivieren Sie ein Verbenmenü Hilfe-Verb im Verbmenü des eine <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, geben Sie einen Wert für die <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpUrl%2A> Eigenschaft. Die Art und Weise, in dem der Inhalt der Hilfe, im Browser angezeigt wird, richtet sich nach den Wert von der <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpMode%2A> Eigenschaft.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ Die Personalisierungsbereich dieser Eigenschaft wird festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und kann nur von autorisierten Benutzern geändert werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> und [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpUrl%2A> Eigenschaft. In diesem Beispiel wird davon ausgegangen, die Verwendung eines benutzerdefinierten Steuerelements `TextDisplayWebPart`, befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klassenübersicht.  
+  
+ Das Codebeispiel enthält auch eine HTML-Seite, die fiktiven Hilfeinhalt für enthält die `TextDisplayWebPart` Steuerelement. Für dieses Beispiel funktioniert müssen Sie den folgenden Code in einer Datei namens Textwebparthelp.htm speichern und platzieren Sie es im selben Verzeichnis wie die ASPX‑Seite Ihrer Website.  
+  
+```  
+<html>  
+<head runat="server">  
+    <title>Text Content WebPart Help</title>  
+</head>  
+<body>  
+  <div>  
+  <h1>Text Content WebPart Help</h1>  
+  To make the WebPart control work...  
+  </div>  
+</body>  
+</html>  
+```  
+  
+ Der letzte Teil des Beispiels ist eine Webseite, die zeigt, wie auf die `TextDisplayWebPart` Steuerelement. Beachten Sie, dass im deklarativen Markup der <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpMode%2A> Eigenschaftswert festgelegt ist, um <xref:System.Web.UI.WebControls.WebParts.WebPartHelpMode.Navigate>, und der Code wird auch der Wert der die <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpUrl%2A> -Eigenschaft auf den Namen der HTML-Datei, die den Hilfe-Inhalt enthält. Laden Sie die Seite in einem Browser, und klicken Sie auf das im Verbmenü des Hilfe-Verb der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_HelpMode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_HelpMode/CS/helpmodecs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_HelpMode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_HelpMode/VB/helpmodevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die interne Überprüfungssystem hat ergeben, dass die URL möglicherweise Script-Angriffe enthalten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Hidden">
+      <MemberSignature Language="C#" Value="public virtual bool Hidden { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Hidden" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.Hidden" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement auf einer Webseite angezeigt wird.</summary>
+        <value>
+          <see langword="false" />Wenn die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement ist auf einer Webseite angezeigt, andernfalls <see langword="true" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das ausgeblendeten verbleiben in der Zone tatsächlich auf der Seite gerendert wird, und Seite beteiligt Lebenszyklusphasen wie z. B. die `PreRender` phase, obwohl es nicht in einem Browser angezeigt wird. Dies unterscheidet sich von <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, die geschlossen werden, da die geschlossenen Steuerelemente auf einer Seite nicht selbst gerendert werden, während die ausgeblendete Steuerelemente gerendert und im Webparts-Anwendungen aktiv zwar für Benutzer nicht sichtbar sind,. Der Webparts-Steuerelementsatz Satz Blendet die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement durch Festlegen seiner Stil cascading Stylesheet (CSS) auf einen Wert von `display:none`.  
+  
+ Auch wenn die <xref:System.Web.UI.WebControls.WebParts.WebPart.Hidden%2A> Eigenschaft für ein Steuerelement festgelegt ist, um `true`, das Steuerelement wird weiterhin angezeigt, wenn der aktuelle Anzeigemodus auf der Seite ausgeblendete Steuerelemente angezeigt werden kann. Bearbeiten Sie z. B. Modus ermöglicht ausgeblendete Steuerelementen angezeigt werden, damit, dass Benutzer, die sie bearbeiten können. Wenn ausgeblendete Steuerelemente in bestimmten Anzeigemodi sichtbar sind, zeigt der Titel des Steuerelements eine Zeichenfolge, die angibt, dass das Steuerelement in ausgeblendeten Status befindet.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.WebParts.WebPart.Hidden%2A> Eigenschaft auf einen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement auf festgelegt ist `false`, Hierbei handelt es sich um die Standardeinstellung, wird das Steuerelement auf der Seite angezeigt. Beachten Sie, dass bei der <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowHide%2A> -Eigenschaftensatz auf `false`, Endbenutzer sind nicht zulässig, so bearbeiten Sie die <xref:System.Web.UI.WebControls.WebParts.WebPart.Hidden%2A> Eigenschaftswert.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPart.Hidden%2A> -Eigenschaft für eine benutzerdefinierte Webparts gesteuert. In diesem Beispiel wird davon ausgegangen, die Verwendung eines benutzerdefinierten Steuerelements `TextDisplayWebPart`, befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klassenübersicht.  
+  
+ Beachten Sie, dass die Webseite im deklarativen Markup für die `<aspSample:TextDisplayWebPart>` Element, das `Hidden` Attributwert wird festgelegt, um `true`. Die `TextDisplayWebPart` Steuerelement wird nicht angezeigt, wenn die Seite in einem Browser geladen wird. Allerdings das Steuerelement ist weiterhin vorhanden, auf der Seite und in der Zone, und er weiterhin konnte Teil Verbindungen mit anderen <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert, ob Sie diese Verbindungen erstellt haben.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_Hidden#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_Hidden/CS/hiddencs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_Hidden#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_Hidden/VB/hiddenvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportErrorMessage">
+      <MemberSignature Language="C#" Value="public virtual string ImportErrorMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImportErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.ImportErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable(System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Fehlermeldung angezeigt, die verwendet wird, wenn Fehler auftreten, wenn ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement wird importiert.</summary>
+        <value>Eine Zeichenfolge, die die Fehlermeldung enthält. Der Standardwert ist eine Standard-Fehlermeldung, der von der Webparts-Steuerelementsatz bereitgestellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart.ImportErrorMessage%2A> -Eigenschaft können Sie eine benutzerdefinierte Fehlermeldung festlegen, die angezeigt wird, wenn ein Fehler auftritt, wenn ein Benutzer versucht, ein des Teilsteuerelements-Beschreibungsdatei in einen Katalog von Webparts-Steuerelemente zu importieren. Sie können die Eigenschaft deklarativ auf Festlegen einer <xref:System.Web.UI.WebControls.WebParts.WebPart> zu steuern, Hinzufügen der `ImportErrorMessage` Attribut innerhalb des öffnenden Tags des Steuerelements und folgender Fehlermeldungszeichenfolge zuweisen. Sie können den Wert der Eigenschaft auch programmgesteuert festlegen.  
+  
+ Für ein vollständiges Codebeispiel zeigt, dass sowohl exportieren und importieren. Beschreibungsdateien für WebPart <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, einschließlich der Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPart.ImportErrorMessage%2A> Eigenschaft finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Klasse.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+ Die Personalisierungsbereich dieser Eigenschaft wird festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und kann nur von autorisierten Benutzern geändert werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> und [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClosed">
+      <MemberSignature Language="C#" Value="public bool IsClosed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClosed" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.IsClosed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement derzeit auf einer Webparts-Seite geschlossen wird.</summary>
+        <value>Ein boolescher Wert, der angibt, ob das Steuerelement geschlossen wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das geschlossen wird nicht auf der Seite gerendert, und nicht Page-Ereignisse beteiligt. Allerdings wird von der Webparts-Anwendung in einem Seitenkatalog beibehalten und erneut an die Seite vom Benutzer hinzugefügt werden, wenn die entsprechende Benutzeroberfläche (UI) bereitgestellt wird. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowClose%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsShared">
+      <MemberSignature Language="C#" Value="public bool IsShared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsShared" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.IsShared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement freigegeben, was bedeutet, dass es für alle Benutzer einer Webparts-Seite angezeigt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement Benutzer Sichtbarkeit auf einer Webseite; freigegeben wurde, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein freigegebenes Webparts-Steuerelement ist für alle Benutzer einer Webseite sichtbar. Das Gegenteil eines freigegebenen Steuerelements ist ein Steuerelement pro Benutzer, die benutzerspezifische und steht nur für den Benutzer, die steuern, die eine Seite hinzugefügt.  
+  
+ Wenn ein dynamisches Steuerelement hinzugefügt wird, während ein Benutzer die Seite im freigegebenen Personalisierungsbereich anzeigt, wird das Steuerelement freigegeben werden. Wenn das Steuerelement hinzugefügt wird, während der Benutzer Benutzer Personalisierungsbereich, wird die <xref:System.Web.UI.WebControls.WebParts.WebPart.IsShared%2A> Eigenschaft-Wert für dieses Steuerelement `false`.  
+  
+ Weitere Informationen zu freigegebenen und Benutzersteuerelemente, finden Sie unter [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPart.IsShared%2A> -Eigenschaft für eine benutzerdefinierte Webparts gesteuert. In diesem Beispiel wird davon ausgegangen, die Verwendung eines benutzerdefinierten Steuerelements `TextDisplayWebPart`, im Abschnitt Beispiel erstellt die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klassenübersicht.  
+  
+ Beim Laden der Webseite in einem Browser und klicken Sie auf die **Freigabe überprüfen** Schaltfläche im Code wird überprüft die <xref:System.Web.UI.WebControls.WebParts.WebPart.IsShared%2A> Eigenschaft auf die `TextDisplayWebPart` Steuerelements und der Wert der Eigenschaft ist `true`, da das Steuerelement verwiesen wird als ein statisches Steuerelement im deklarativen Markup der Seite.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_IsShared#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_IsShared/CS/issharedcs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_IsShared#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_IsShared/VB/issharedvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStandalone">
+      <MemberSignature Language="C#" Value="public bool IsStandalone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStandalone" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.IsStandalone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Steuerelement ist eigenständig, was bedeutet, dass es nicht enthalten ist eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> Zone.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement ist nicht Bestandteil einer <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> zone; anderenfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStatic">
+      <MemberSignature Language="C#" Value="public bool IsStatic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStatic" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.IsStatic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Steuerelement ist ein statisches Steuerelement, d. h. das Steuerelement im Markup einer Webparts-Seite deklariert und nicht programmgesteuert auf der Seite hinzugefügt wird.</summary>
+        <value>Ein boolescher Wert, der angibt, ob das Steuerelement statisch ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine statische <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement wird im Markup einer Webparts-Seite deklariert ist. Dies steht im Gegensatz zu einer dynamischen <xref:System.Web.UI.WebControls.WebParts.WebPart> zu steuern, die entweder programmgesteuert hinzugefügt oder von einem Benutzer auswählen des Steuerelements aus einem Katalog von Steuerelementen zur Laufzeit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosing">
+      <MemberSignature Language="C#" Value="protected virtual void OnClosing (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnClosing(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPart.OnClosing(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Ermöglicht es abgeleiteten Klassen das Bereitstellen einer benutzerdefinierten Behandlung, wenn ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement auf einer Webparts-Seite geschlossen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode in der <xref:System.Web.UI.WebControls.WebParts.WebPart> Basisklasse enthält keine Implementierung. Abgeleitete <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente können die Methode überschreiben, falls erforderlich, um das Bereitstellen einer benutzerdefinierten Behandlung, wenn das Steuerelement geschlossen wird. Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement aufruft, automatisch die <xref:System.Web.UI.WebControls.WebParts.WebPart.OnClosing%2A> Methode, wenn Sie eine Implementierung in einer abgeleiteten Klasse bereitstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnConnectModeChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnConnectModeChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnConnectModeChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPart.OnConnectModeChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Ermöglicht es abgeleiteten Klassen das Bereitstellen einer benutzerdefinierten Behandlung, wenn ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement beginnt oder beendet den Prozess zum Herstellen einer Verbindung mit anderen Steuerelementen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode in der <xref:System.Web.UI.WebControls.WebParts.WebPart> Basisklasse enthält keine Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ein abgeleitetes Steuerelement überschreiben, muss die <see cref="M:System.Web.UI.WebControls.WebParts.WebPart.OnConnectModeChanged(System.EventArgs)" /> Methode. Entwickler können benutzerdefinierte Ereignisse auslösen oder andere Aktionen ausführen. Die Methode wird aufgerufen, indem Sie die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> steuern, wann die <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.BeginWebPartConnecting(System.Web.UI.WebControls.WebParts.WebPart)" /> und <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.EndWebPartConnecting" /> Methoden werden aufgerufen, um Verbindungen zwischen Steuerelementen herzustellen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeleting">
+      <MemberSignature Language="C#" Value="protected virtual void OnDeleting (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnDeleting(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPart.OnDeleting(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Ermöglicht es abgeleiteten Klassen das Bereitstellen einer benutzerdefinierten Behandlung, wenn ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement wird von einer Webparts-Seite dauerhaft entfernt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode in der <xref:System.Web.UI.WebControls.WebParts.WebPart> Basisklasse enthält keine Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ein abgeleitetes Steuerelement überschreiben, muss die <see cref="M:System.Web.UI.WebControls.WebParts.WebPart.OnDeleting(System.EventArgs)" /> Methode. Entwickler können benutzerdefinierte Ereignisse auslösen oder andere Aktionen ausführen. Die Methode wird aufgerufen, wenn die <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.DeleteWebPart(System.Web.UI.WebControls.WebParts.WebPart)" /> -Methode aufgerufen wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEditModeChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnEditModeChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnEditModeChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPart.OnEditModeChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Ermöglicht es abgeleiteten Klassen das Bereitstellen einer benutzerdefinierten Behandlung, wenn ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement eingeben oder Bearbeitungsmodus verlassen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode in der <xref:System.Web.UI.WebControls.WebParts.WebPart> Basisklasse enthält keine Implementierung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ein abgeleitetes Steuerelement überschreiben, muss die <see cref="M:System.Web.UI.WebControls.WebParts.WebPart.OnEditModeChanged(System.EventArgs)" /> -Methode, und verwenden Sie die überschriebene Methode, um ein benutzerdefiniertes Ereignis auszulösen. Entwickler können benutzerdefinierte Ereignisse auslösen oder andere Aktionen ausführen. Die Methode wird aufgerufen, wenn die <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.BeginWebPartEditing(System.Web.UI.WebControls.WebParts.WebPart)" /> und <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.EndWebPartEditing" /> Methoden werden während der Bearbeitung aufgerufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPersonalizationDirty">
+      <MemberSignature Language="C#" Value="protected void SetPersonalizationDirty ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetPersonalizationDirty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt ein Flag, das angibt, dass Personalisierungsdaten, für die aktuelle geändert wurden <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Instanz des Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty%2A> Methode legt ein Flag gibt an, dass Daten des Steuerelementzustands (personalisiert) geändert wurde eine <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, und dass die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement aus diesem Grund muss die Personalisierungsdaten langfristige Speicherung persistent zu speichern.  
+  
+ Normalerweise die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> permanent gespeichert personalisierungsänderungen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente ohne Bedarf an Entwickler, die zum Aufrufen der <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty%2A> Methode. Aber es gibt zwei Fälle, in denen Entwickler diese Methode aufrufen müssen. Der erste Fall tritt die Änderung von Daten des Steuerelementzustands während einer HTTP `GET` Anforderung zu einer Seite. Standardmäßig ändert, um die Daten des Steuerelementzustands während einer `GET` Anforderung (aus Sicherheitsgründen) werden nicht persistent gespeichert. Aber die <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty%2A> Methode bietet eine Möglichkeit, legitimen personalisierungsänderungen bestehen, <xref:System.Web.UI.WebControls.WebParts.WebPart> in diesem Fall steuert.  
+  
+ Der zweite Fall für das Aufrufen der <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty%2A> Methode tritt auf, während ein HTTP `POST` Anforderung zu einer Seite. Wenn eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement verfügt über komplexe personalisierbar Eigenschaften (z. B. eine Eigenschaft, enthält ein <xref:System.Collections.ArrayList> Objekt), und die Daten des Steuerelementzustands in diese Eigenschaften während personalisiert werden eine `POST` anfordern, müssen Entwickler Aufrufen der <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty%2A> Methode, um sicherzustellen, dass die Änderungen beibehalten werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.WebPartManager" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPersonalizationDirty">
+      <MemberSignature Language="C#" Value="public static void SetPersonalizationDirty (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetPersonalizationDirty(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Die <see cref="T:System.Web.UI.Control" /> für die die Personalisierungsdaten geändert hat.</param>
+        <summary>Ein Flag ab, der angibt, dass Personalisierungsdaten für das angegebene Serversteuerelement geändert wurden, in dem sich befindet, eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> Zone.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty%2A?displayProperty=nameWithType> Methode hat den gleichen Zweck wie das <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty?displayProperty=nameWithType> -Methode, die besteht darin, ein Flag gibt an, dass die Daten des Steuerelementzustands (personalisiert) auf ein Webserversteuerelement während einer HTTP geändert wurde `GET` Anforderung. Der Unterschied zwischen dieser Methoden ist, dass die <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty%2A?displayProperty=nameWithType> Methode dient für Webserversteuerelemente, die nicht von erben die <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse, aber in platziert werden <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zonen zur Teilnahme an Webparts-Anwendungen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das Objekt in der <paramref name="control" /> Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Das Steuerelement leitet sich von <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />. Steuerelemente, die Ableitung <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> sollten den geschützten verwenden <see cref="M:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty" /> Methode stattdessen.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Seite mit dem Steuerelement verknüpfte verfügt nicht über eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtitle">
+      <MemberSignature Language="C#" Value="public virtual string Subtitle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subtitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.Subtitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die verkettet wird, mit der <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.Title" /> Eigenschaftswert, um einen vollständigen Titel für bilden eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die als Untertitel für das Steuerelement dient. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.WebParts.WebPart.Subtitle%2A> optional zurückzugebende Eigenschaft eine Zeichenfolge für die standard-Untertitel in Ihrer benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das an den Titel des Steuerelements angehängt wird.  
+  
+ Wenn Sie einen Wert für die <xref:System.Web.UI.WebControls.WebParts.WebPart.Subtitle%2A> Eigenschaft in einem benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> zu steuern, den den Webparts-Steuerelementsatz automatisch fügt diese an den Wert des der <xref:System.Web.UI.WebControls.WebParts.WebPart.Title%2A> Eigenschaft um einen vollständigen Titel für das Steuerelement zu erstellen.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ermöglichen einen Untertitel für Instanzen eines benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ Der erste Teil dieses Beispiels enthält den Code für ein benutzerdefiniertes Steuerelement mit dem Namen `TextDisplayWebPart`. Dieses Steuerelement ist identisch mit das benutzerdefinierte Steuerelement an die im Abschnitt Beispiel ist die <xref:System.Web.UI.WebControls.WebParts.WebPart> Klassenübersicht, außer dass auch überschreibt die <xref:System.Web.UI.WebControls.WebParts.WebPart.Subtitle%2A> Eigenschaft geben Sie einen standard Untertitel hinzu, die mit einem fiktiven Firmennamen für Instanzen von das benutzerdefinierte Steuerelement. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel wird davon ausgegangen, dass Sie den Quellcode in eine Assembly kompilieren, fügen Sie ihn in einen Unterordner "bin" Ihrer Webanwendung und verweisen auf die Assembly mit einem `Register` -Direktive in der Webseite. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPart_Subtitle#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_Subtitle/CS/textdisplaywebpart.cs#2)]
+ [!code-vb[WebParts_WebPart_Subtitle#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_Subtitle/VB/textdisplaywebpart.vb#2)]  
+  
+ Der zweite Teil des Beispiels ist eine Webseite, die zeigt, wie auf die `TextDisplayWebPart` -Steuerelement in eine ASP.NET-Webseite. Laden Sie die Seite in einem Browser, enthält der Text der Fenstertitelleiste des Steuerelements den Titel, zugewiesen an das Steuerelement in deklarativem Markup, einen Bindestrich als Trennzeichen und den Wert des benutzerdefinierten Untertitels aus der `TextDisplayWebPart` Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_Subtitle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_Subtitle/CS/subtitlecs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_Subtitle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_Subtitle/VB/subtitlevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Geben Sie einen Untertitel für Instanzen eines benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Steuerelement, müssen Sie überschreiben die <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.Subtitle" /> Eigenschaft.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public override string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert den Titel eines Teil-Steuerelements.</summary>
+        <value>Eine Zeichenfolge, die den Titel des Steuerelements darstellt. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Entwickler einen Wert zuweist der <xref:System.Web.UI.WebControls.WebParts.WebPart.Title%2A> -Eigenschaft, dann ist der Wert bestimmt den gesamten (oder zumindest teilweise) den Text in der Titelleiste des Steuerelements. Der Titeltext wird auch als Teil der QuickInfo-Text angezeigt, wenn Sie den Mauszeiger über die Titelleiste des positionieren eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement oder einem anderen Serversteuerelement, die in angezeigt wird eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Zone.  
+  
+ Außerdem wird der vollständige Text angezeigt, in der Titelleiste eines Steuerelements durch beeinflusst die <xref:System.Web.UI.WebControls.WebParts.WebPart.Subtitle%2A> Eigenschaft. Wenn diese Eigenschaft einen Wert zugewiesen wurde, wird der Wert für den Titel der verkettet. Wenn kein Wert zugewiesen wird die <xref:System.Web.UI.WebControls.WebParts.WebPart.Title%2A> Eigenschaft einen berechneten Titel wird angezeigt. Zu einem beliebigen Zeitpunkt können Entwickler Abrufen der gesamten tatsächlichen Text angezeigt, die einer <xref:System.Web.UI.WebControls.WebParts.WebPart> des Steuerelements Titelleiste durch Abrufen des Werts für die <xref:System.Web.UI.WebControls.WebParts.WebPart.DisplayTitle%2A> Eigenschaft.  
+  
+ Das Format des Titeltexts richtet sich nach der <xref:System.Web.UI.WebControls.WebParts.WebZone.PartTitleStyle%2A> -Eigenschaft der Zone, die das Steuerelement enthält.  
+  
+ Ein Codebeispiel, das die Verwendung der Basiseigenschaft veranschaulicht, finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleIconImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string TitleIconImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TitleIconImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.TitleIconImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable(System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild zur Darstellung von Webparts-Steuerelement in der Titelleiste des Steuerelements fest.</summary>
+        <value>Eine Zeichenfolge, die URL zu einem Bild verwendet, um die Darstellung des Steuerelements in der Titelleiste darstellt. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Personalisierungsbereich dieser Eigenschaft wird festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und kann nur von autorisierten Benutzern geändert werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> und [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Web.UI.WebControls.WebParts.WebPart.TitleIconImageUrl%2A> -Eigenschaft für eine benutzerdefinierte Webparts Steuerelement, sodass das Steuerelement in einem Katalog von Steuerelementen mit einem Bild angezeigt wird. In diesem Beispiel wird davon ausgegangen, die Verwendung eines benutzerdefinierten Steuerelements `TextDisplayWebPart`, im Abschnitt Beispiel erstellt die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klassenübersicht.  
+  
+ Beachten Sie im deklarativen Markup der Webseite, die `<aspSample:TextDisplayWebPart>` Element. Die `TitleIconImageUrl` -Attribut ist eine Zeichenfolge, die URL zu einer Bilddatei enthält, zugewiesen. Laden Sie die Seite in einem Browser, und wenn Sie eine gültige URL zu einem Bild bereitgestellt, das Bild wird angezeigt, in der Titelleiste der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_TitleIconImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_TitleIconImageUrl/CS/titleiconimageurlcs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_TitleIconImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_TitleIconImageUrl/VB/titleiconimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die interne Überprüfungssystem hat ergeben, dass die URL möglicherweise Script-Angriffe enthalten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleUrl">
+      <MemberSignature Language="C#" Value="public virtual string TitleUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TitleUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.TitleUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable(System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine URL zu Zusatzinformationen zu einem <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die eine URL zu weiteren Informationen darstellt, zu der <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine URL zum Zuweisen der <xref:System.Web.UI.WebControls.WebParts.WebPart.TitleUrl%2A> -Eigenschaft, den Titel des Steuerelements wird ein Link zu zusätzlichen Informationen über das Steuerelement. Die URL wird nicht gerendert, wenn die Seite im einen Anzeigemodus befindet, in dem Steuerelemente können, z. B. Entwurf, bearbeiten oder Katalogmodus gezogen werden.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ Die Personalisierungsbereich dieser Eigenschaft wird festgelegt, um <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> und kann nur von autorisierten Benutzern geändert werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> und [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Web.UI.WebControls.WebParts.WebPart.TitleUrl%2A> -Eigenschaft für eine benutzerdefinierte Webparts gesteuert. In diesem Beispiel wird davon ausgegangen, die Verwendung eines benutzerdefinierten Steuerelements `TextDisplayWebPart`, befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klassenübersicht.  
+  
+ Beachten Sie, dass die `<aspSample:TextDisplayWebPart>` Element enthält die `TitleUrl` Attribut mit einer fiktiven URL. Wenn Sie die Seite in einem Browser, den Titel der laden die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement ist nun ein Link auf die Ressource verweist, zu der <xref:System.Web.UI.WebControls.WebParts.WebPart.TitleUrl%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_TitleUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_TitleUrl/CS/titleurlcs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_TitleUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_TitleUrl/VB/titleurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die interne Überprüfungssystem hat ergeben, dass die URL möglicherweise Script-Angriffe enthalten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPart.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass das Steuerelement Änderungen an seinem Ansichtszustand nachverfolgt, damit sie in des Objekts gespeichert werden können <see cref="P:System.Web.UI.Control.ViewState" /> Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbs">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.WebPartVerbCollection Verbs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartVerbCollection Verbs" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.Verbs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerbCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von benutzerdefinierten zugeordneten Verben eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerbCollection" /> enthält benutzerdefinierte <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> Objekte zugeordnet sind und eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement. Der Standardwert ist <see cref="F:System.Web.UI.WebControls.WebParts.WebPartVerbCollection.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verben Ableiten der <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Klasse, und geben Sie Benutzer Benutzeroberfläche (UI) Aktionen, die Benutzer ausführen können, auf eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. In der Regel werden die Verben in der Benutzeroberfläche als Schaltflächen, Links oder Menüelemente dargestellt. Allgemeine Webparts-Verben werden standardmäßig in einem Dropdown-Verbenmenü in den einzelnen <xref:System.Web.UI.WebControls.WebParts.WebPart> Titelleiste des Steuerelements. Es gibt Standardverben zum Öffnen, schließen, bearbeiten und Minimieren eines Steuerelements und andere Verben zum Exportieren einer Definition für das Steuerelement oder das Laden einer Hilfedatei. Diese Verben sind nicht enthalten, der <xref:System.Web.UI.WebControls.WebParts.WebPart.Verbs%2A> Sammlung, da die Auflistung nur benutzerdefinierte Verben, die Sie erstellen und Wiederherstellen enthält, indem Sie diese Eigenschaft in einer abgeleiteten Klasse überschreiben.  
+  
+ Wenn Sie benutzerdefinierte Verben erstellen und Hinzufügen der <xref:System.Web.UI.WebControls.WebParts.WebPart.Verbs%2A> -Auflistung kann zugegriffen werden die Verben programmgesteuert aus einem <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Zugriff auf die <xref:System.Web.UI.WebControls.WebParts.WebPart.Verbs%2A> -Eigenschaft für eine benutzerdefinierte Webparts gesteuert. In diesem Beispiel wird davon ausgegangen, die Verwendung eines benutzerdefinierten Steuerelements `TextDisplayWebPart`, im Abschnitt Beispiel erstellt die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klassenübersicht.  
+  
+ Beachten Sie, dass für das Codebeispiel funktioniert, Sie eine Einstellung in der Datei "Web.config" So aktivieren Sie die Webparts Description-Dateien exportieren hinzufügen müssen. Stellen Sie sicher, dass Sie eine Datei "Web.config" im gleichen Verzeichnis wie die Webseite für dieses Codebeispiel verfügen. Innerhalb der `<system.web>` Abschnitt, stellen Sie sicher, dass eine `<webParts>` Element mit einem `enableExport` -Attributsatz zur `true`, wie im folgenden Markup.  
+  
+ `<webParts enableExport="true">`  
+  
+ `...`  
+  
+ `</webParts>`  
+  
+ Laden Sie die Webseite in einem Browser. Beim Klicken auf die **Verb Anzeigezähler** Schaltfläche, Zugriff auf die <xref:System.Web.UI.WebControls.WebParts.WebPart.Verbs%2A> Eigenschaft, um die Anzahl der benutzerdefinierten Verben für den `TextDisplayWebPart` steuern und zeigt die Anzahl der in einer Beschriftung. Da keine benutzerdefinierten Verben in diesem Fall an das Steuerelement hinzugefügt wurden, ist der Wert 0 (null).  
+  
+ [!code-aspx-csharp[WebParts_WebPart_Verbs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_Verbs/CS/verbscs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_Verbs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_Verbs/VB/verbsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen können überschreiben die <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.Verbs" /> Eigenschaft, um Benutzern das Hinzufügen benutzerdefinierter ermöglichen <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> -Objekten, die verbauflistung für eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WebBrowsableObject">
+      <MemberSignature Language="C#" Value="public virtual object WebBrowsableObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object WebBrowsableObject" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.WebBrowsableObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement zu aktivieren, für die Bearbeitung durch benutzerdefinierte <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelemente.</summary>
+        <value>Ein <see cref="T:System.Object" /> , besteht das untergeordnete Steuerelement von einem <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Erstellung einer benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.WebPart> steuern und erstellen Sie außerdem entsprechende benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.EditorPart> Laufzeit für Steuerelemente, mit denen Benutzer das Steuerelement zu bearbeiten, müssen Sie implementieren die <xref:System.Web.UI.WebControls.WebParts.IWebEditable> -Schnittstelle, die umfasst die <xref:System.Web.UI.WebControls.WebParts.WebPart.WebBrowsableObject%2A> Eigenschaft.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement in den Bearbeitungsmodus wechselt, der <xref:System.Web.UI.WebControls.WebParts.WebPart.WebBrowsableObject%2A> Eigenschaft wird aufgerufen, indem ein <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement zum Abrufen eines Verweises auf die <xref:System.Web.UI.WebControls.WebParts.WebPart> steuern, und aktivieren Sie das benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente zu bearbeiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebPartManager">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebParts.WebPartManager WebPartManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartManager WebPartManager" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.WebPartManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> zugeordneten Steuerelements eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Instanz des Steuerelements.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> zugeordneten ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Webparts-Seite verfügt immer über eine einzelne Instanz einer <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement. Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement nachverfolgt und verwaltet Sie alle anderen Webparts-Steuerelemente auf einer Seite, z. B. alle Zonen, die von der Basisklasse ableiten <xref:System.Web.UI.WebControls.WebParts.WebZone> -Klasse, und alle Teilsteuerelemente, die von der Basisklasse abgeleitet werden <xref:System.Web.UI.WebControls.WebParts.Part> Klasse.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart.WebPartManager%2A> Eigenschaft vorhanden ist, damit jeder <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement zugeordnet sein kann seine <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement. Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> -Steuerelement wiederum eine Auflistung aller verwaltet die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente auf einer Seite in seiner <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebParts%2A> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.Unit Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit Width" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Web.UI.WebControls.WebParts.Personalizable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Breite des Webserver-Steuerelements ab oder legt sie fest.</summary>
+        <value>Eine <see cref="T:System.Web.UI.WebControls.Unit" />, die die Breite des Steuerelements darstellt. Die Standardeinstellung ist <see cref="F:System.Web.UI.WebControls.Unit.Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zone">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartZoneBase Zone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartZoneBase Zone" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.Zone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartZoneBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> Zone, die derzeit enthält eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> enthält, die derzeit Webparts-Steuerelement auf einer Webseite. Wenn ein Steuerelement-Webparts auf einer Seite derzeit geschlossen ist, ist der Rückgabewert <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Architektur des Webparts-Steuerelementsatzes können Steuerelemente Webparts-Funktionen verfügen, nur dann, wenn sie innerhalb eines funktionieren <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zonen. Der Standard <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone, die auf Webseiten ist die <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Steuerelement. Obwohl Endbenutzer Webparts-Steuerelemente zwischen den verschiedenen Bereichen auf einer Webseite verschieben können, kann eine bestimmte Instanz eines Steuerelements zu einem Zeitpunkt nur in einer Zone befinden. Webparts-Steuerelement, und die zugehörigen <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern, verwenden Sie die <xref:System.Web.UI.WebControls.WebParts.WebPart.Zone%2A> Eigenschaft zum Nachverfolgen der das Steuerelement gegenwärtig zone befindet sich im und welche gemeinsame Merkmale von Layout und Format der Zone für alle enthaltenen gelten Webparts-Steuerelemente.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Zugriff auf die <xref:System.Web.UI.WebControls.WebParts.WebPart.Zone%2A> und <xref:System.Web.UI.WebControls.WebParts.WebPart.ZoneIndex%2A> Eigenschaften für einen benutzerdefinierten Webparts-Steuerelement. In diesem Beispiel wird davon ausgegangen, die Verwendung eines benutzerdefinierten Steuerelements `TextDisplayWebPart`, im Abschnitt Beispiel erstellt die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klassenübersicht.  
+  
+ Das Codebeispiel enthält ein benutzerdefiniertes Steuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webparts-Seite zu ändern. Das Benutzersteuerelement verwiesen wird, von der eine `Register` -Direktive am oberen Rand der Webseite, die das Benutzersteuerelement hostet. Eine ausführliche Beschreibung zum Erstellen dieses Benutzersteuerelement und Anzeigemodi verwenden, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-aspx-csharp[WebParts_WebPart_Zone#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_Zone/CS/displaymodemenucs.ascx#5)]
+ [!code-aspx-vb[WebParts_WebPart_Zone#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_Zone/VB/displaymodemenuvb.ascx#5)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite. Es gibt zwei `<asp:webpartzone>` Elemente auf der Seite, die jeweils eine Webparts-Zone darstellen. Die erste Zone enthält einen Standard <xref:System.Web.UI.WebControls.Calendar> Steuerung, welche verhält sich wie ein <xref:System.Web.UI.WebControls.WebParts.WebPart> zur Laufzeit zu steuern, da es in einer Zone ist. Die zweite Zone enthält die `TextDisplayWebPart` Steuerelement. Ein Benutzer klickt der **Zoneninformationen** Schaltfläche, die `Label1` Steuerelement zeigt die Werte der <xref:System.Web.UI.WebControls.WebParts.WebPart.ZoneIndex%2A> -Eigenschaft für das Steuerelement und die <xref:System.Web.UI.Control.ID%2A> Eigenschaft der Zone, die derzeit das Steuerelement enthält.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_Zone#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_Zone/CS/webpartzoneindexcs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_Zone#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_Zone/VB/webpartzoneindexvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoneIndex">
+      <MemberSignature Language="C#" Value="public int ZoneIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ZoneIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPart.ZoneIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Indexposition des ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement innerhalb der Zone.</summary>
+        <value>Die numerische Reihenfolge eines Steuerelements in der Zone. Das erste Steuerelement in einer Zone verfügt über einen Indexwert von 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart.ZoneIndex%2A> Eigenschaft gibt eine Webparts-Steuerelement numerische Reihenfolge (oder Ordnungsposition) innerhalb der Zone relativ zu anderen Steuerelementen in der Zone. Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement verwendet diese Eigenschaft zum Nachverfolgen und Verwalten ihrer Auflistung von Webparts-Steuerelemente auf einer Webseite.  
+  
+> [!IMPORTANT]
+>  Sie können nicht davon ausgehen, dass der Wert des der <xref:System.Web.UI.WebControls.WebParts.WebPart.ZoneIndex%2A> Eigenschaft für ein Steuerelement ist gleich den Indexwert für dasselbe Steuerelement innerhalb der <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.WebParts%2A> Auflistung der Zone des Steuerelements. Häufig ein Steuerelement relative Position in der Zone (dessen <xref:System.Web.UI.WebControls.WebParts.WebPart.ZoneIndex%2A> Wert), und der zugehörige Index innerhalb der <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.WebParts%2A> Auflistung von Zonenname, werden unterschiedliche Werte aus, wie Steuerelemente hinzugefügt und daraus Zonen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Zugriff auf die <xref:System.Web.UI.WebControls.WebParts.WebPart.Zone%2A> und <xref:System.Web.UI.WebControls.WebParts.WebPart.ZoneIndex%2A> Eigenschaften für einen benutzerdefinierten Webparts-Steuerelement. In diesem Beispiel wird davon ausgegangen, die Verwendung eines benutzerdefinierten Steuerelements `TextDisplayWebPart`, im Abschnitt Beispiel erstellt die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klassenübersicht.  
+  
+ Das Codebeispiel enthält ein benutzerdefiniertes Steuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webparts-Seite zu ändern. Das Benutzersteuerelement verwiesen wird, von der eine `Register` -Direktive am oberen Rand der Webseite, die das Benutzersteuerelement hostet. Eine ausführliche Beschreibung zum Erstellen dieses Benutzersteuerelement und Anzeigemodi verwenden, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-aspx-csharp[WebParts_WebPart_Zone#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_Zone/CS/displaymodemenucs.ascx#5)]
+ [!code-aspx-vb[WebParts_WebPart_Zone#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_Zone/VB/displaymodemenuvb.ascx#5)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite. Es gibt zwei `<asp:webpartzone>` Elemente auf der Seite, die jeweils eine Webparts-Zone darstellen. Die erste Zone enthält einen Standard <xref:System.Web.UI.WebControls.Calendar> Steuerung, welche verhält sich wie ein <xref:System.Web.UI.WebControls.WebParts.WebPart> zur Laufzeit zu steuern, da es in einer Zone ist. Die zweite Zone enthält die `TextDisplayWebPart` Steuerelement. Ein Benutzer klickt der **Zoneninformationen** Schaltfläche, die `Label1` Steuerelement zeigt die Werte der <xref:System.Web.UI.WebControls.WebParts.WebPart.ZoneIndex%2A> -Eigenschaft für das Steuerelement und die <xref:System.Web.UI.Control.ID%2A> Eigenschaft der Zone, die derzeit das Steuerelement enthält.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_Zone#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_Zone/CS/webpartzoneindexcs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_Zone#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_Zone/VB/webpartzoneindexvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

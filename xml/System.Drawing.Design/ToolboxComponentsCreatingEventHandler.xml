@@ -1,0 +1,41 @@
+<Type Name="ToolboxComponentsCreatingEventHandler" FullName="System.Drawing.Design.ToolboxComponentsCreatingEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ToolboxComponentsCreatingEventHandler(object sender, ToolboxComponentsCreatingEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolboxComponentsCreatingEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.ToolboxComponentsCreatingEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Drawing.Design.ToolboxComponentsCreatingEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Drawing.Design.ToolboxComponentsCreatingEventArgs" />, das Daten für das Ereignis bereitstellt.</param>
+    <summary>Stellt die Methode dar, die das <see cref="E:System.Drawing.Design.ToolboxItem.ComponentsCreating" />-Ereignis behandelt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Drawing.Design.ToolboxComponentsCreatingEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode stellt eine Methode, die Fügt einen Ereignishandler für das <xref:System.Drawing.Design.ToolboxItem.ComponentsCreating> -Ereignis für ein <xref:System.Drawing.Design.ToolboxItem>, und ein <xref:System.Drawing.Design.ToolboxComponentsCreatingEventHandler> Ereignishandlermethode, die den Namen des Typs der Komponente schreibt, die die neue Komponente bzw. Komponenten empfangen um die <xref:System.Console> wann wird der Ereignishandler ausgelöst, durch eine <xref:System.Drawing.Design.ToolboxItem.ComponentsCreating> Ereignis.  
+  
+ [!code-cpp[MoreEventHandlerExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/MoreEventHandlerExamples/CPP/form1.cpp#3)]
+ [!code-csharp[MoreEventHandlerExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/MoreEventHandlerExamples/CS/form1.cs#3)]
+ [!code-vb[MoreEventHandlerExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MoreEventHandlerExamples/VB/form1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,246 @@
+<Type Name="WorkflowTrackingRecord" FullName="System.Workflow.Runtime.Tracking.WorkflowTrackingRecord">
+  <TypeSignature Language="C#" Value="public class WorkflowTrackingRecord : System.Workflow.Runtime.Tracking.TrackingRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowTrackingRecord extends System.Workflow.Runtime.Tracking.TrackingRecord" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Tracking.TrackingRecord</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält die Daten, die bei einem Abgleich von <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackPoint" /> von der Laufzeitverfolgungsinfrastruktur an einen Überwachungsdienst gesendet werden. Diese Klasse wird auch in einer Rückgabeliste der <see cref="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowEvents" />-Eigenschaft verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Wenn die Laufzeitverfolgungsinfrastruktur <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> in <xref:System.Workflow.Runtime.Tracking.TrackingProfile> abgleicht, wird <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord> an einen Überwachungsdienst gesendet. Dazu wird der <xref:System.Workflow.Runtime.Tracking.TrackingChannel> verwendet, der diesem Überwachungsdienst zugeordnet ist. Der Überwachungsdienst kann jede beliebige Aktion ausführen, die für die Daten im Verfolgungsdatensatz erforderlich sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Konstruktor wird von der Laufzeitverfolgungsinfrastruktur aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowTrackingRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird von der Laufzeitverfolgungsinfrastruktur aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowTrackingRecord (System.Workflow.Runtime.Tracking.TrackingWorkflowEvent trackingWorkflowEvent, DateTime eventDateTime, int eventOrder, EventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent trackingWorkflowEvent, valuetype System.DateTime eventDateTime, int32 eventOrder, class System.EventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.#ctor(System.Workflow.Runtime.Tracking.TrackingWorkflowEvent,System.DateTime,System.Int32,System.EventArgs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="trackingWorkflowEvent" Type="System.Workflow.Runtime.Tracking.TrackingWorkflowEvent" />
+        <Parameter Name="eventDateTime" Type="System.DateTime" />
+        <Parameter Name="eventOrder" Type="System.Int32" />
+        <Parameter Name="eventArgs" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="trackingWorkflowEvent">Einer der <see cref="T:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent" />-Werte.</param>
+        <param name="eventDateTime"><see cref="T:System.DateTime" /> mit der Angabe des Datums und der Uhrzeit des Workflowstatusereignisses, das dem Verfolgungsdatensatz zugeordnet ist.</param>
+        <param name="eventOrder">Die relative Reihenfolge, in der das Workflowstatusereignis, das diesem Verfolgungsdatensatz zugeordnet ist, in der Workflowinstanz eingetreten ist.</param>
+        <param name="eventArgs"><see cref="T:System.Workflow.Runtime.Tracking.TrackingWorkflowSuspendedEventArgs" />, <see cref="T:System.Workflow.Runtime.Tracking.TrackingWorkflowTerminatedEventArgs" />, <see cref="T:System.Workflow.Runtime.Tracking.TrackingWorkflowExceptionEventArgs" /> oder ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord" />-Klasse mit dem angegebenen <see cref="T:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent" />-Wert, <see cref="T:System.DateTime" />, Nummer und <see cref="T:System.EventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `eventDateTime` wird als Coordinated Universal Time (UTC) ausgedrückt. `eventOrder` ist in einer Workflowinstanz immer eindeutig, jedoch nicht notwendigerweise sequenziell.  
+  
+ Dieser Konstruktor wird von der Laufzeitverfolgungsinfrastruktur aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public override System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingAnnotationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Anmerkungen ab, die dem abgeglichenen <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackPoint" /> zugeordnet sind.</summary>
+        <value><see cref="T:System.Workflow.Runtime.Tracking.TrackingAnnotationCollection" /> mit den Anmerkungen, die <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackPoint" /> zugeordnet sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird von der Laufzeitverfolgungsinfrastruktur festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventArgs">
+      <MemberSignature Language="C#" Value="public override EventArgs EventArgs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.EventArgs EventArgs" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.EventArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.EventArgs" />-Klasse ab, die zusätzliche, bestimmten Typen von Workflowstatusereignissen zugeordnete Daten enthält, oder legt sie fest.</summary>
+        <value><see cref="T:System.Workflow.Runtime.Tracking.TrackingWorkflowSuspendedEventArgs" />, <see cref="T:System.Workflow.Runtime.Tracking.TrackingWorkflowTerminatedEventArgs" />, <see cref="T:System.Workflow.Runtime.Tracking.TrackingWorkflowExceptionEventArgs" /> oder ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei den meisten Workflowstatusereignissen ist <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.EventArgs%2A> ein NULL-Verweis (`Nothing`). Für bestimmte Arten von Workflowstatusereignissen verwendet die Laufzeitverfolgungsinfrastruktur jedoch <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.EventArgs%2A>, um zusätzliche Daten zum Workflowstatusereignis zurückzugeben. Die folgende Tabelle enthält die <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent>-Werte, die diesen speziellen Workflowstatusereignissen entsprechen, und den Typ des in <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.EventArgs%2A> für jedes dieser Workflowstatusereignisse zurückgegebenen Objekts.  
+  
+|<xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent>-Wert|<xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.EventArgs%2A>-Objekt|  
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Exception>|<xref:System.Workflow.Runtime.Tracking.TrackingWorkflowExceptionEventArgs>|  
+|<xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Suspended>|<xref:System.Workflow.Runtime.Tracking.TrackingWorkflowSuspendedEventArgs>|  
+|<xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Terminated>|<xref:System.Workflow.Runtime.Tracking.TrackingWorkflowTerminatedEventArgs>|  
+  
+ Diese Eigenschaft wird von der Laufzeitverfolgungsinfrastruktur festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime EventDateTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime EventDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.EventDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Datum und Uhrzeit ab, zu der das Workflowverfolgungsereignis eingetreten ist, oder legt Datum und Uhrzeit fest.</summary>
+        <value><see cref="T:System.DateTime" /> mit der Angabe des Datums und der Uhrzeit des Workflowstatusereignisses.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.DateTime> bezieht sich auf Coordinated Universal Time (UTC).  
+  
+ Diese Eigenschaft wird von der Laufzeitverfolgungsinfrastruktur festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventOrder">
+      <MemberSignature Language="C#" Value="public override int EventOrder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EventOrder" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.EventOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die Reihenfolge des Workflowstatusereignisses in der Workflowinstanz angibt, das mit dem <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackPoint" /> übereinstimmte, oder legt den Wert fest.</summary>
+        <value>Ein Wert, der die Reihenfolge des Workflowstatusereignisses in der Workflowinstanz angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.EventOrder%2A> gibt die relative Reihenfolge des Verfolgungsereignisses in der Workflowinstanz an, das mit <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> übereinstimmte.  <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.EventOrder%2A>  ist in einer Workflowinstanz eindeutig, jedoch nicht notwendigerweise sequenziell.  
+  
+ Diese Eigenschaft wird von der Laufzeitverfolgungsinfrastruktur festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackingWorkflowEvent">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.TrackingWorkflowEvent TrackingWorkflowEvent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent TrackingWorkflowEvent" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.TrackingWorkflowEvent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingWorkflowEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Workflowstatusereignisses ab, das dem Verfolgungsdatensatz zugeordnet ist, oder legt den Typ fest.</summary>
+        <value>Einer der <see cref="T:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `TrackingWorkflowEvent` enthält einen der <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent>-Werte und gibt die Art des Workflowstatusereignisses an, das von der Laufzeitverfolgungsinfrastruktur abgeglichenen wurde und das Senden von <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord> bewirkte. Damit wird der aktuelle Status der Workflowinstanz wiedergegeben. Eine Workflowinstanz gibt nur Workflowstatusereignisse aus, wenn sich ihr Status ändert. Folglich kann <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> nur im Fall einer Workflowstatusänderung abgeglichen werden.  
+  
+ Diese Eigenschaft wird von der Laufzeitverfolgungsinfrastruktur festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

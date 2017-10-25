@@ -1,0 +1,79 @@
+<Type Name="ManagementCommitAttribute" FullName="System.Management.Instrumentation.ManagementCommitAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ManagementCommitAttribute : System.Management.Instrumentation.ManagementMemberAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagementCommitAttribute extends System.Management.Instrumentation.ManagementMemberAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.ManagementCommitAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Instrumentation.ManagementMemberAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Das ManagementCommit-Attribut markiert eine Methode, die aufgerufen wird, wenn eine Reihe von Lese-/Schreibeigenschaften in einem atomaren Vorgang aktualisiert werden muss.  
+  
+ Hinweis: Die WMI .NET-Bibliotheken werden jetzt als abgeschlossen betrachtet, und keine weiteren Entwicklungen, Verbesserungen oder Updates werden für nicht sicherheitsrelevante Aspekte verfügbar sein, die diese Bibliotheken betreffen. Die [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) für alle neuen Entwicklungen verwendet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Lese-/ Schreibzugriff Eigenschaften einer Klasse mit gekennzeichnet sind die <xref:System.Management.Instrumentation.ManagementConfigurationAttribute> Attribut. Darüber hinaus jede Eigenschaft Lese-/ Schreibzugriff kann eine von zwei Typen: <xref:System.Management.Instrumentation.ManagementConfigurationType.Apply> oder <xref:System.Management.Instrumentation.ManagementConfigurationType.OnCommit>. Besitzt eine Klasse Eigenschaften mit Lese-/ Schreibzugriff, die als OnCommit konfiguriert sind, müssen die Klasse eine Methode, die mit dem ManagementCommit-Attribut markiert ist. Die zugeordnete Methode wird aufgerufen, wenn alle OnCommit-Eigenschaften festgelegt wurden.  
+  
+ Die markierte Methode ist nicht threadsicher.  
+  
+ Wenn keine Methode mit dem ManagementCommit-Attribut markiert ist, verwaltet die Klasse die konfigurationsupdates allein ohne Hinweis, der das Update abgeschlossen ist.  
+  
+ Die mit dem ManagementCommit-Attribut markierte Methode akzeptiert keine Parameter und kann einen void-Rückgabetyp.  
+  
+   
+  
+## Examples  
+  
+```csharp  
+public class Process  
+{  
+    /// Key attribute marks a key property. Keys are not changeable.  
+    /// Keys have to be unique information.  
+    [ManagementKey]  
+    public int Id   
+    {  
+        get {    }  
+    }  
+  
+    /// ManagementConfiguration stands for read/write manageable  
+    /// property from a read/write field.  
+    [ManagementConfiguration]  
+    public string UserDefinedString;  
+  
+    [ManagementCommit]  
+    void SaveOnDevice();  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementCommitAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.ManagementCommitAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Management.ManagementCommitAttribute" />-Klasse. Dies ist der Standardkonstruktor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

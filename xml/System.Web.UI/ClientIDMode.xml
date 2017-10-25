@@ -1,0 +1,114 @@
+<Type Name="ClientIDMode" FullName="System.Web.UI.ClientIDMode">
+  <TypeSignature Language="C#" Value="public enum ClientIDMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ClientIDMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ClientIDMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie ASP.NET generiert die <see cref="P:System.Web.UI.Control.ClientID" /> für ein Steuerelement, das in Clientskripts zugegriffen werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Web.UI.ClientIDMode> Enumeration, die beim Festlegen der <xref:System.Web.UI.Control.ClientIDMode%2A> -Eigenschaft für ein Steuerelement. Der Wert, den Sie zum Zuweisen der <xref:System.Web.UI.Control.ClientIDMode%2A> Eigenschaft bestimmt, wie die <xref:System.Web.UI.Control.ClientID%2A> Eigenschaft generiert wird. Der Wert von der <xref:System.Web.UI.Control.ClientID%2A> Eigenschaft als gerendert wird die `id` -Attribut im Markup, und es ist der Wert, der für den Zugriff auf das Steuerelement von Clientskripts. Der Wert, den Sie zuweisen der <xref:System.Web.UI.Control.ClientIDMode%2A> Eigenschaft beeinflusst nicht die <xref:System.Web.UI.Control.ID%2A> Eigenschaft des Serversteuerelements, nur die `id` Attribut des entsprechenden HTML-Elements.  
+  
+ Der Standardwert von <xref:System.Web.UI.Control.ClientIDMode%2A> für eine Seite vorhersagbar ist. Der Standardwert von <xref:System.Web.UI.Control.ClientIDMode%2A> für ein Steuerelement erben kann.  
+  
+ Da der Standardwert für Steuerelemente erben ist, ist der Standardmodus für die Generierung vorhersagbar. (Jedoch, wenn Sie Visual Studio verwenden, um ein Webprojekt in ASP.NET 4 aus einer früheren Version zu konvertieren, legt Visual Studio automatisch die Websitestandardeinstellung auf AutoID in der Datei "Web.config".)  
+  
+ Sie können festlegen, die `ClientIDMode` Wert für alle Seiten auf einer Website durch Festlegen des Elements in der Datei Web.config der Site. Sie können festlegen, die `ClientIDMode` Wert für eine Seite in der Direktive.  
+  
+ Weitere Informationen finden Sie unter [Steuerelementidentifikation in Web Forms](http://msdn.microsoft.com/library/45a8c3ef-5ac7-48f1-862a-0cd5073742e7).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt <xref:System.Web.UI.WebControls.Label> Steuerelementen in einem <xref:System.Web.UI.WebControls.ListView> Steuerelement. Auf der <xref:System.Web.UI.WebControls.ListView> -Steuerelement, das <xref:System.Web.UI.Control.ClientIDMode%2A> Eigenschaft auf vorhersagbar festgelegt ist und die <xref:System.Web.UI.WebControls.ListView.ClientIDRowSuffix%2A> -Eigenschaftensatz auf `ProductID`. Von Clientskripts, erreichen Sie eine bestimmte Instanz einer <xref:System.Web.UI.WebControls.Label> basierend auf den `ProductID` Wert der Instanz, die Sie zugreifen möchten.  
+  
+ Dieses Beispiel erstellt HTML mit drei `ProductIDLabel` Steuerelemente. Wenn die Seite ausgeführt wird, werden die IDs für die Steuerelemente Folgendes sein:  
+  
+-   `ListView1_ProductIDLabel_1`  
+  
+-   `ListView1_ProductIDLabel_34`  
+  
+-   `ListView1_ProductIDLabel_43`  
+  
+ Weitere Informationen finden Sie unter [Identifikation von ASP.NET Web-Server-Steuerelement](http://msdn.microsoft.com/library/45a8c3ef-5ac7-48f1-862a-0cd5073742e7)  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutoID">
+      <MemberSignature Language="C#" Value="AutoID" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ClientIDMode AutoID = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ClientIDMode.AutoID" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ClientIDMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Web.UI.Control.ClientID" /> Wert generiert, durch die Aneinanderreihung der <see cref="P:System.Web.UI.Control.ID" /> Werte der einzelnen übergeordneten Benennungscontainer mit dem <see cref="P:System.Web.UI.Control.ID" /> Wert des Steuerelements. In Datenbindungsszenarien, in dem mehrere Instanzen eines Steuerelements gerendert werden, wird ein inkrementeller Wert vor des Steuerelements eingefügt <see cref="P:System.Web.UI.Control.ID" /> Wert. Jedes Segment wird durch einen Unterstrich (_) getrennt. Dieser Algorithmus ist der einzige, die in früheren Versionen von ASP.NET als ASP.NET 4 verfügbar war.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inherit">
+      <MemberSignature Language="C#" Value="Inherit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ClientIDMode Inherit = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ClientIDMode.Inherit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ClientIDMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement erbt die <see cref="T:System.Web.UI.ClientIDMode" /> festlegen, der seine <see cref="P:System.Web.UI.Control.NamingContainer" /> Steuerelement.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Predictable">
+      <MemberSignature Language="C#" Value="Predictable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ClientIDMode Predictable = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ClientIDMode.Predictable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ClientIDMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Algorithmus wird für Steuerelemente verwendet, die in datengebundenen Steuerelementen sind. Die <see cref="P:System.Web.UI.Control.ClientID" /> Wert generiert, durch die Aneinanderreihung der <see cref="P:System.Web.UI.Control.ClientID" /> Wert, der den übergeordneten Benennungscontainer mit dem <see cref="P:System.Web.UI.Control.ID" /> Wert des Steuerelements. Wenn das Steuerelement ein datengebundenes Steuerelement, die mehrere Zeilen generiert ist, wird der Wert des Datenfelds in angegebenen die <see cref="P:System.Web.UI.WebControls.IDataBoundListControl.ClientIDRowSuffix" /> Eigenschaft wird am Ende hinzugefügt. Für die <see cref="T:System.Web.UI.WebControls.GridView" /> -Steuerelement können mehrere Felder angegeben werden können. Wenn die <see cref="P:System.Web.UI.WebControls.IDataBoundListControl.ClientIDRowSuffix" /> -Eigenschaft leer ist, am Ende statt ein Datenfeldwert eine laufende Nummer hinzugefügt wird. Jedes Segment wird durch einen Unterstrich (_) getrennt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Static">
+      <MemberSignature Language="C#" Value="Static" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ClientIDMode Static = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ClientIDMode.Static" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ClientIDMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Web.UI.Control.ClientID" /> Wert wird festgelegt, auf den Wert, der die <see cref="P:System.Web.UI.Control.ID" /> Eigenschaft. Wenn das Steuerelement einem Benennungscontainer ist, wird das Steuerelement verwendet, als Anfang der Hierarchie für die Benennung von Containern für alle Steuerelemente, die es enthält.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,329 @@
+<Type Name="AtomPub10CategoriesDocumentFormatter" FullName="System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter">
+  <TypeSignature Language="C#" Value="public class AtomPub10CategoriesDocumentFormatter : System.ServiceModel.Syndication.CategoriesDocumentFormatter, System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AtomPub10CategoriesDocumentFormatter extends System.ServiceModel.Syndication.CategoriesDocumentFormatter implements class System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Syndication.CategoriesDocumentFormatter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xml.Serialization.IXmlSerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlRoot("categories", Namespace="http://www.w3.org/2007/app")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine Klasse, die eine <see cref="T:System.ServiceModel.Syndication.CategoriesDocument" />-Instanz in das/aus dem Atom&amp;#160;1.0-Format serialisiert.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AtomPub10CategoriesDocumentFormatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AtomPub10CategoriesDocumentFormatter (System.ServiceModel.Syndication.CategoriesDocument documentToWrite);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Syndication.CategoriesDocument documentToWrite) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter.#ctor(System.ServiceModel.Syndication.CategoriesDocument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="documentToWrite" Type="System.ServiceModel.Syndication.CategoriesDocument" />
+      </Parameters>
+      <Docs>
+        <param name="documentToWrite">Das <see cref="T:System.ServiceModel.Syndication.CategoriesDocument" />, das serialisiert werden soll.</param>
+        <summary>Erstellt eine neue Instanz der Klasse <see cref="T:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter" /> mit dem angegebenen <see cref="T:System.ServiceModel.Syndication.CategoriesDocument" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AtomPub10CategoriesDocumentFormatter (Type inlineDocumentType, Type referencedDocumentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type inlineDocumentType, class System.Type referencedDocumentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="inlineDocumentType" Type="System.Type" />
+        <Parameter Name="referencedDocumentType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="inlineDocumentType">Ein <see cref="T:System.ServiceModel.Syndication.InlineCategoriesDocument" /> , die serialisiert werden kann, in eine &lt; <see langword="atom:categories" /> &gt; Element innerhalb einer dienstdokument und der Satz Kategorien werden innerhalb des Elements angegeben.</param>
+        <param name="referencedDocumentType">Ein <see cref="T:System.ServiceModel.Syndication.ReferencedCategoriesDocument" /> , die serialisiert werden kann, in eine &lt; <see langword="atom:categories" /> &gt; Element in einem dienstdokument und Kategorien sind mit einer URI referenziert.</param>
+        <summary>Erstellt eine neue Instanz der Klasse <see cref="T:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter" /> mit dem angegebenen <see cref="T:System.ServiceModel.Syndication.CategoriesDocument" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public override bool CanRead (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanRead(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter.CanRead(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <summary>Überprüft, ob der angegebene <see cref="T:System.Xml.XmlReader" /> ein gültiges Atom 1.0-Kategoriendokument enthält.</summary>
+        <returns>Ein Wert, der angibt, ob der <see cref="T:System.Xml.XmlReader" /> ein gültiges Atom&amp;#160;1.0-Kategoriendokument enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInlineCategoriesDocument">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Syndication.InlineCategoriesDocument CreateInlineCategoriesDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Syndication.InlineCategoriesDocument CreateInlineCategoriesDocument() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter.CreateInlineCategoriesDocument" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.InlineCategoriesDocument</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine <see cref="T:System.ServiceModel.Syndication.InlineCategoriesDocument" /> , die serialisiert werden kann, in einem &lt; <see langword="atom:categories" /> &gt; Element innerhalb eines Dienstdokuments und enthält den Satz Kategorien im Element.</summary>
+        <returns>Gibt eine <see cref="T:System.ServiceModel.Syndication.InlineCategoriesDocument" /> , die serialisiert werden kann, in einem &lt; <see langword="atom:categories" /> &gt; Element innerhalb eines Dienstdokuments.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateReferencedCategoriesDocument">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Syndication.ReferencedCategoriesDocument CreateReferencedCategoriesDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Syndication.ReferencedCategoriesDocument CreateReferencedCategoriesDocument() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter.CreateReferencedCategoriesDocument" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.ReferencedCategoriesDocument</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine <see cref="T:System.ServiceModel.Syndication.ReferencedCategoriesDocument" /> , die serialisiert werden kann, in einem &lt; <see langword="atom:categories" /> &gt; Element innerhalb eines Dienstdokuments und enthält einen URI-Verweis auf den Satz der Kategorien im Element.</summary>
+        <returns>Gibt eine <see cref="T:System.ServiceModel.Syndication.ReferencedCategoriesDocument" /> , die serialisiert werden kann, in einem &lt; <see langword="atom:categories" /> &gt; Element innerhalb eines Dienstdokuments.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadFrom">
+      <MemberSignature Language="C#" Value="public override void ReadFrom (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ReadFrom(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter.ReadFrom(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <summary>Liest ein Atom 1.0 &lt; <see langword="atom:categories" /> &gt; Element aus dem angegebenen <see cref="T:System.Xml.XmlReader" /> Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.GetSchema">
+      <MemberSignature Language="C#" Value="System.Xml.Schema.XmlSchema IXmlSerializable.GetSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Xml.Schema.XmlSchema System.Xml.Serialization.IXmlSerializable.GetSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter.System#Xml#Serialization#IXmlSerializable#GetSchema" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Implementiert die <see cref="M:System.Xml.Serialization.IXmlSerializable.GetSchema" />-Methode.</summary>
+        <returns>
+          <see langword="Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreiben, um ein eigenes Schema zurückzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.ReadXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.ReadXml (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.ReadXml(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter.System#Xml#Serialization#IXmlSerializable#ReadXml(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Die <see cref="T:System.Xml.XmlReader" /> zum Lesen des XML-Dokuments verwenden.</param>
+        <summary>Implementiert die <see cref="M:System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)" />-Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.WriteXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.WriteXml (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.WriteXml(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter.System#Xml#Serialization#IXmlSerializable#WriteXml(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Xml.XmlWriter" /> zum Schreiben von XML-Knoten verwendet.</param>
+        <summary>Implementiert die <see cref="M:System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)" />-Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public override string Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Syndication-Version des Formatierungsprogramms ab.</summary>
+        <value>Die Syndication-Version des Formatierungsprogramms.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[indigo1](~/includes/indigo1-md.md)] unterstützt die Syndication-Versionen Atom&#160;1.0 und RSS&#160;2.0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public override void WriteTo (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteTo(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den geschrieben werden soll.</param>
+        <summary>Schreibt die <see cref="T:System.ServiceModel.Syndication.CategoriesDocument" /> zugeordneten der <see cref="T:System.ServiceModel.Syndication.AtomPub10CategoriesDocumentFormatter" /> in den angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

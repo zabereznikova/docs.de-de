@@ -1,0 +1,250 @@
+<Type Name="ICollectionViewLiveShaping" FullName="System.ComponentModel.ICollectionViewLiveShaping">
+  <TypeSignature Language="C#" Value="public interface ICollectionViewLiveShaping" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICollectionViewLiveShaping" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ICollectionViewLiveShaping" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Eigenschaften, die es ermöglicht, Sortierung, Gruppierung und Filterung für eine <see cref="T:System.Windows.Data.CollectionView" /> in Echtzeit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn live Sortierung, Gruppierung oder Filterung aktiviert ist, eine <xref:System.Windows.Data.CollectionView> wird die Position der Daten in Neuanordnen der <xref:System.Windows.Data.CollectionView> wann die Daten geändert werden.  Angenommen, eine Anwendung listet mit <xref:System.Windows.Controls.DataGrid> die Aktien an einer Börse auf, und die Aktien werden nach Aktienwert sortiert.  Wenn die Livesortierung in der <xref:System.Windows.Data.CollectionView> der Aktien aktiviert ist, ändert sich die Position einer Aktie in <xref:System.Windows.Controls.DataGrid>, wenn der Wert der Aktie über oder unter den Wert einer anderen Aktie steigt oder sinkt.  
+  
+ Die <xref:System.Windows.Data.ListCollectionView>, <xref:System.Windows.Data.BindingListCollectionView>, und <xref:System.Windows.Controls.ItemCollection> Klassen implementieren die <xref:System.ComponentModel.ICollectionViewLiveShaping> Schnittstelle. Die <xref:System.Windows.Data.CollectionViewSource> Klasse implementiert auch die Eigenschaften von definierten <xref:System.ComponentModel.ICollectionViewLiveShaping> So aktivieren Sie die Eigenschaften in XAML festlegen.  
+  
+## <a name="notes-for-inheritors"></a>Hinweise zur Vererbung  
+ Implementieren Sie diese Schnittstelle in Ihrem benutzerdefinierten <xref:System.Windows.Data.CollectionView> zu sortieren, gruppieren und Filtern von Daten in Echtzeit zu unterstützen. Ihre <xref:System.Windows.Data.CollectionView> können implementieren, durch die Sortierung, Gruppierung und Filtervorgängen selbst, oder Sie können delegieren eine oder mehrere dieser Header auf ein anderes Objekt, z. B. die zugrunde liegende Auflistung. Wenn Sie die Strukturierung Vorgänge delegieren der <xref:System.Windows.Data.CollectionView> möglicherweise nicht steuern, ob der live-Strukturierung aktiviert ist. Ihre <xref:System.Windows.Data.CollectionView> zustimmen, dass das Verhalten des Objekts, zu dem delegiert. In diesem Fall legen Sie die geeignete **CanChange*** Eigenschaften `false`.  Wenn Ihre <xref:System.Windows.Data.CollectionView> weiß, ob das Delegatobjekt live-Strukturierung unterstützt, können die entsprechenden festlegen `IsLive`* zu den bekannten Werten Eigenschaften.  Andernfalls die <xref:System.Windows.Data.CollectionView> sollte festgelegt die `IsLive`* Eigenschaften `null`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanChangeLiveFiltering">
+      <MemberSignature Language="C#" Value="public bool CanChangeLiveFiltering { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanChangeLiveFiltering" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveFiltering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistungsansicht das Ein- oder Ausschalten von Filterdaten in Echtzeit unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn die Auflistungsansicht das Ein- oder Ausschalten der dynamischen Filterung unterstützt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="notes-for-inheritors"></a>Hinweise zur Vererbung  
+ Ihre <xref:System.Windows.Data.CollectionView> kann Filtern selbst implementieren Live- oder Sie können diese live Filtern auf ein anderes Objekt, z. B. die zugrunde liegende Auflistung delegieren. Wenn Sie live zu filtern delegieren, die <xref:System.Windows.Data.CollectionView> möglicherweise nicht steuern, ob sie aktiviert ist. Ihre <xref:System.Windows.Data.CollectionView> zustimmen, dass das Verhalten des Objekts, zu dem delegiert. Legen Sie in diesem Fall die <xref:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveFiltering%2A> Eigenschaft `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanChangeLiveGrouping">
+      <MemberSignature Language="C#" Value="public bool CanChangeLiveGrouping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanChangeLiveGrouping" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveGrouping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Auflistungsansicht Umwandlung Gruppierung von Daten in Echtzeit ein- oder ausschalten unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn die Auflistungsansicht eingeräumt live Gruppierung ein- oder ausschalten unterstützt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="notes-for-inheritors"></a>Hinweise zur Vererbung  
+ Ihre <xref:System.Windows.Data.CollectionView> kann gruppieren selbst implementieren Live- oder Sie können diese live Gruppierung in ein anderes Objekt, z. B. die zugrunde liegende Auflistung delegieren. Wenn Sie live Gruppierung Delegieren der <xref:System.Windows.Data.CollectionView> möglicherweise nicht steuern, ob sie aktiviert ist. Ihre <xref:System.Windows.Data.CollectionView> zustimmen, dass das Verhalten des Objekts, zu dem delegiert. Legen Sie in diesem Fall die <xref:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveGrouping%2A> Eigenschaft `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanChangeLiveSorting">
+      <MemberSignature Language="C#" Value="public bool CanChangeLiveSorting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanChangeLiveSorting" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveSorting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Auflistungsansicht das Sortieren von Daten in Echtzeit zu aktivieren unterstützt, aktivieren oder deaktivieren.</summary>
+        <value>
+          <see langword="true" />Wenn die Auflistungsansicht das Deaktivieren der live Sortierung, ein- oder ausschalten unterstützt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="notes-for-inheritors"></a>Hinweise zur Vererbung  
+ Ihre <xref:System.Windows.Data.CollectionView> kann Sortierung selbst implementieren Live- oder Sie können diese live Sortieren in ein anderes Objekt, z. B. die zugrunde liegende Auflistung delegieren. Wenn Sie live zu sortieren delegieren, die <xref:System.Windows.Data.CollectionView> möglicherweise nicht steuern, ob sie aktiviert ist. Ihre <xref:System.Windows.Data.CollectionView> zustimmen, dass das Verhalten des Objekts, zu dem delegiert. Legen Sie in diesem Fall die <xref:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveSorting%2A> Eigenschaft `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiveFiltering">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsLiveFiltering { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsLiveFiltering" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.IsLiveFiltering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Daten in Echtzeit-Filterung aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn Daten in Echtzeit-Filterung aktiviert ist; <see langword="false" /> Wenn live Filtern nicht aktiviert ist. <see langword="null" /> Wenn nicht ermittelt werden kann, ob die Auflistungsansicht live Filterung implementiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="notes-for-inheritors"></a>Hinweise zur Vererbung  
+ Ihre <xref:System.Windows.Data.CollectionView> kann Filtern selbst implementieren Live- oder Sie können diese live Filtern auf ein anderes Objekt, z. B. die zugrunde liegende Auflistung delegieren. Wenn Sie live zu filtern delegieren, die <xref:System.Windows.Data.CollectionView> möglicherweise nicht steuern, ob sie aktiviert ist. Ihre <xref:System.Windows.Data.CollectionView> zustimmen, dass das Verhalten des Objekts, zu dem delegiert. Wenn Ihre <xref:System.Windows.Data.CollectionView> weiß, ob das Delegatobjekt unterstützt live filtern, legen die <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveFiltering%2A> Eigenschaft, um den bekannten Werten.  Legen Sie andernfalls <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveFiltering%2A> auf `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiveGrouping">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsLiveGrouping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsLiveGrouping" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.IsLiveGrouping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Gruppierung von Daten in Echtzeit aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Gruppieren von Daten in Echtzeit ist zu aktivieren. <see langword="false" /> live Gruppierung nicht aktiviert ist; <see langword="null" /> Wenn nicht ermittelt werden kann, ob die Auflistungsansicht live Gruppierung implementiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="notes-for-inheritors"></a>Hinweise zur Vererbung  
+ Ihre <xref:System.Windows.Data.CollectionView> kann gruppieren selbst implementieren Live- oder Sie können diese live Gruppierung in ein anderes Objekt, z. B. die zugrunde liegende Auflistung delegieren. Wenn Sie live Gruppierung Delegieren der <xref:System.Windows.Data.CollectionView> möglicherweise nicht steuern, ob sie aktiviert ist. Ihre <xref:System.Windows.Data.CollectionView> zustimmen, dass das Verhalten des Objekts, zu dem delegiert. Wenn Ihre <xref:System.Windows.Data.CollectionView> weiß, ob das Delegatobjekt unterstützt live gruppieren, legen Sie die <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveGrouping%2A> Eigenschaft, um den bekannten Werten.  Legen Sie andernfalls <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveGrouping%2A> auf `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiveSorting">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsLiveSorting { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsLiveSorting" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.IsLiveSorting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Sortierung in Echtzeit aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Sortieren von Daten in Echtzeit ist zu aktivieren. <see langword="false" /> live Sortierung nicht aktiviert ist; <see langword="null" /> Wenn nicht ermittelt werden kann, ob die Auflistungsansicht live Sortierung implementiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="notes-for-inheritors"></a>Hinweise zur Vererbung  
+ Ihre <xref:System.Windows.Data.CollectionView> kann Sortierung selbst implementieren Live- oder Sie können diese live Sortieren in ein anderes Objekt, z. B. die zugrunde liegende Auflistung delegieren. Wenn Sie live zu sortieren delegieren, die <xref:System.Windows.Data.CollectionView> möglicherweise nicht steuern, ob sie aktiviert ist. Ihre <xref:System.Windows.Data.CollectionView> zustimmen, dass das Verhalten des Objekts, zu dem delegiert. Wenn Ihre <xref:System.Windows.Data.CollectionView> weiß, ob das Delegatobjekt unterstützt live sortieren, legen Sie die <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveSorting%2A> Eigenschaft, um den bekannten Werten.  Legen Sie andernfalls <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveSorting%2A> auf `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiveFilteringProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ObservableCollection&lt;string&gt; LiveFilteringProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;string&gt; LiveFilteringProperties" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.LiveFilteringProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Zeichenfolgen, die die Eigenschaften, die einbezogen im Filtern von Daten in Echtzeit angeben.</summary>
+        <value>Eine Auflistung von Zeichenfolgen, die die Eigenschaften, die einbezogen beim Filtern von Daten in Echtzeit angeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiveGroupingProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ObservableCollection&lt;string&gt; LiveGroupingProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;string&gt; LiveGroupingProperties" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.LiveGroupingProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Zeichenfolgen, die die Eigenschaften, die einbezogen in Gruppieren von Daten in Echtzeit angeben.</summary>
+        <value>Eine Auflistung von Zeichenfolgen, die die Eigenschaften, die einbezogen in Gruppieren von Daten in Echtzeit angeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiveSortingProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ObservableCollection&lt;string&gt; LiveSortingProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;string&gt; LiveSortingProperties" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.LiveSortingProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Zeichenfolgen, die die Eigenschaften, die einbezogen in Sortieren von Daten in Echtzeit angeben.</summary>
+        <value>Eine Auflistung von Zeichenfolgen, die die Eigenschaften, die einbezogen in Sortieren von Daten in Echtzeit angeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

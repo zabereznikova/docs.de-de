@@ -1,0 +1,91 @@
+<Type Name="HttpCookieMode" FullName="System.Web.HttpCookieMode">
+  <TypeSignature Language="C#" Value="public enum HttpCookieMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpCookieMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpCookieMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie Cookies für eine Webanwendung verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpCookieMode> Enumeration dient zum Angeben des Werts eines der `cookieless` Attribut in der `sessionState` Konfigurationsabschnitt. Es wird von allen Funktionen, die Authentifizierung ohne Cookies unterstützen.  
+  
+ Die <xref:System.Web.HttpCookieMode> Enumerationswerte angeben, wie ein Cookie verwendet werden soll, um Informationen über den Benutzer zu verwalten. Wenn die automatische Erkennung verwendet wird, fragt ASP.NET den Browser oder das Gerät, um zu bestimmen, ob Cookies unterstützt. Wenn der Browser oder das Gerät Cookies unterstützt, werden Cookies verwendet, um Benutzerdaten. Andernfalls wird ein Bezeichner in der Abfragezeichenfolge verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutoDetect">
+      <MemberSignature Language="C#" Value="AutoDetect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.HttpCookieMode AutoDetect = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.HttpCookieMode.AutoDetect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookieMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ASP.NET bestimmt, ob der anfordernde Browser oder das Gerät Cookies unterstützt. Wenn der anfordernden Browser oder das Gerät Cookies unterstützt <see cref="F:System.Web.HttpCookieMode.AutoDetect" /> verwendet Cookies zum Speichern von Benutzerdaten; andernfalls wird ein Bezeichner in der Abfragezeichenfolge verwendet. Wenn der Browser oder das Gerät die Verwendung von Cookies unterstützt, jedoch Cookies sind derzeit deaktiviert, werden Cookies immer noch von dem anfordernden Feature verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseCookies">
+      <MemberSignature Language="C#" Value="UseCookies" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.HttpCookieMode UseCookies = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.HttpCookieMode.UseCookies" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookieMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cookies werden zum Speichern von Benutzerdaten, unabhängig davon, ob der Browser oder das Gerät Cookies unterstützt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDeviceProfile">
+      <MemberSignature Language="C#" Value="UseDeviceProfile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.HttpCookieMode UseDeviceProfile = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.HttpCookieMode.UseDeviceProfile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookieMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ASP.NET bestimmt, ob die Verwendung von Cookies basierend auf <see cref="T:System.Web.HttpBrowserCapabilities" /> Einstellung. Wenn die Einstellung gibt an, dass der Browser oder das Gerät Cookies unterstützt, werden Cookies verwendet. Andernfalls wird ein Bezeichner in der Abfragezeichenfolge verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseUri">
+      <MemberSignature Language="C#" Value="UseUri" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.HttpCookieMode UseUri = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.HttpCookieMode.UseUri" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookieMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die aufrufende Funktion verwendet die Abfragezeichenfolge zum Speichern eines Bezeichners, unabhängig davon, ob der Browser oder das Gerät Cookies unterstützt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

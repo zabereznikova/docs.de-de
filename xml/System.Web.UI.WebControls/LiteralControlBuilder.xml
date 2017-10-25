@@ -1,0 +1,126 @@
+<Type Name="LiteralControlBuilder" FullName="System.Web.UI.WebControls.LiteralControlBuilder">
+  <TypeSignature Language="C#" Value="public class LiteralControlBuilder : System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LiteralControlBuilder extends System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LiteralControlBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ControlBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Interagiert mit dem Parser ein <see cref="T:System.Web.UI.WebControls.Literal" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird hauptsächlich für Entwickler von Steuerelementen verwendet. So erstellen einen benutzerdefiniertes Steuerelement-Generator für eine <xref:System.Web.UI.WebControls.Literal> abgeleiteten Steuerelements, müssen Sie von dieser Klasse erben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LiteralControlBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LiteralControlBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.LiteralControlBuilder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowWhitespaceLiterals">
+      <MemberSignature Language="C#" Value="public override bool AllowWhitespaceLiterals ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool AllowWhitespaceLiterals() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LiteralControlBuilder.AllowWhitespaceLiterals" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob der Steuerelementgenerator die Leerzeichenliterale verarbeiten soll, die durch das <see cref="T:System.Web.UI.WebControls.Literal" />-Steuerelement dargestellt werden.</summary>
+        <returns>
+          <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LiteralControlBuilder.AllowWhitespaceLiterals%2A> Methode überschreibt die geerbte Implementierung von der <xref:System.Web.UI.ControlBuilder.AllowWhitespaceLiterals%2A?displayProperty=nameWithType> aufzurufende Methode immer angeben, dass das Whitepaper "Speicherplätze" unter den Text, der zugeordnet sind die <xref:System.Web.UI.WebControls.Literal> Steuerelement nicht als dargestellt <xref:System.Web.UI.WebControls.Literal?displayProperty=nameWithType> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendLiteralString">
+      <MemberSignature Language="C#" Value="public override void AppendLiteralString (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AppendLiteralString(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LiteralControlBuilder.AppendLiteralString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Der dem Steuerelement hinzuzufügende Inhalt.</param>
+        <summary>Fügt den angegebenen literalen Inhalt einem Steuerelement hinzu. Die <see cref="M:System.Web.UI.WebControls.LiteralControlBuilder.AppendLiteralString(System.String)" /> Methode wird durch das ASP.NET-Seitenframework aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Zeichenfolge Leerzeichen ist, wird Sie entsprechend der Einstellung von behandelt die <xref:System.Web.UI.WebControls.LiteralControlBuilder.AllowWhitespaceLiterals%2A> Methode. Andernfalls behandelt, als wäre der innere Text stellt die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Das Zeichenfolgenliteral ist nicht wohlgeformt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSubBuilder">
+      <MemberSignature Language="C#" Value="public override void AppendSubBuilder (System.Web.UI.ControlBuilder subBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AppendSubBuilder(class System.Web.UI.ControlBuilder subBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LiteralControlBuilder.AppendSubBuilder(System.Web.UI.ControlBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subBuilder" Type="System.Web.UI.ControlBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="subBuilder">Die <see cref="T:System.Web.UI.ControlBuilder" /> Objekt, das untergeordnete Steuerelement-Generatoren hinzugefügt werden.</param>
+        <summary>Löst <see cref="T:System.Web.HttpException" />, da das Hinzufügen von untergeordneten Steuerelement-Generatoren gelten nicht für die <see cref="T:System.Web.UI.WebControls.Literal" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der <xref:System.Web.UI.ControlBuilder> Basisklasse, die diese Methode fügt der Generatoren für alle untergeordneten Steuerelemente zugeordnet der <xref:System.Web.UI.WebControls.Literal> Steuerelement mit dem angegebenen <xref:System.Web.UI.ControlBuilder?displayProperty=nameWithType> Objekt. Diese Methode wird vom geerbt der <xref:System.Web.UI.ControlBuilder?displayProperty=nameWithType> Klasse und gilt nicht für die <xref:System.Web.UI.WebControls.LiteralControlBuilder>. In der überschriebenen Implementierung in <xref:System.Web.UI.WebControls.LiteralControlBuilder>, löst die Methode immer <xref:System.Web.HttpException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Es wird versucht, diese Methode verwendet wird.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

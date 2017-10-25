@@ -1,0 +1,206 @@
+<Type Name="ContentInfo" FullName="System.Security.Cryptography.Pkcs.ContentInfo">
+  <TypeSignature Language="C#" Value="public sealed class ContentInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContentInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.ContentInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Security.Cryptography.Pkcs.ContentInfo" /> Klasse CMS/PKCS #7 ContentInfo-Datenstruktur dar, der im Dokument CMS/PKCS #7-Standards definiert. Diese Datenstruktur bildet die Grundlage für alle CMS/PKCS #7-Nachrichten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentInfo (byte[] content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.ContentInfo.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="content" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="content">Ein Array von Bytewerten, das die Daten aus dem Erstellen der <see cref="T:System.Security.Cryptography.Pkcs.ContentInfo" /> Objekt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.ContentInfo.#ctor(System.Byte[])" /> Konstruktor erstellt eine Instanz der <see cref="T:System.Security.Cryptography.Pkcs.ContentInfo" /> Klasse, indem Sie ein Array von Bytewerten als Daten und den Standardwert <paramref name="object identifier" /> (OID), die den Inhaltstyp darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Pkcs.ContentInfo> -Klasse verfügt über die folgenden Standardwerte für die Eigenschaft.  
+  
+|Eigenschaft|Standardwert|  
+|--------------|-------------------|  
+|<xref:System.Security.Cryptography.Pkcs.ContentInfo.ContentType%2A>|1.2.840.113549.1.7.1 (Daten)|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentInfo (System.Security.Cryptography.Oid contentType, byte[] content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.Oid contentType, unsigned int8[] content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.ContentInfo.#ctor(System.Security.Cryptography.Oid,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentType" Type="System.Security.Cryptography.Oid" />
+        <Parameter Name="content" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="contentType">Ein <see cref="T:System.Security.Cryptography.Oid" /> -Objekt, enthält ein <c>-Objektbezeichner</c> (OID), die den Inhaltstyp des Inhalts angibt. Dies kann die Daten, DigestedData, EncryptedData, EnvelopedData, HashedData, SignedAndEnvelopedData oder SignedData sein.  Weitere Informationen finden Sie unter "Hinweise".</param>
+        <param name="content">Ein Array von Bytewerten, das die Daten aus dem Erstellen der <see cref="T:System.Security.Cryptography.Pkcs.ContentInfo" /> Objekt.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.ContentInfo.#ctor(System.Security.Cryptography.Oid,System.Byte[])" /> Konstruktor erstellt eine Instanz der <see cref="T:System.Security.Cryptography.Pkcs.ContentInfo" /> Klasse, indem Sie den angegebenen Inhaltstyp und ein Array von Bytewerten als Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die DigestedData und EncryptedData Inhaltstypen, die im Dokument CMS/PKCS #7-Standards angezeigt werden, sind nicht Inhaltstypen, die von dieser Implementierung gefertigt werden können. Jedoch können diese Inhaltstypen für diesen Konstruktor übergeben werden.  
+  
+ Verwenden Sie die folgenden OID-Zeichenfolgen als Argumente für die <xref:System.Security.Cryptography.Pkcs.ContentInfo.%23ctor%28System.Security.Cryptography.Oid%2CSystem.Byte%5B%5D%29> Konstruktor zum Erstellen der `contentType` Content-Type-Parameter.  
+  
+|`contentType`Inhaltstyp|OID-Zeichenfolge|  
+|--------------------------------|----------------|  
+|Daten|1.2.840.113549.1.7.1|  
+|digestedData|1.2.840.113549.1.7.5|  
+|encryptedData|1.2.840.113549.1.7.6|  
+|envelopedData|1.2.840.113549.1.7.3|  
+|hashedData|1.2.840.113549.1.7.5|  
+|signedAndEnvelopedData|1.2.840.113549.1.7.4|  
+|signedData|1.2.840.113549.1.7.2|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public byte[] Content { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Content" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.ContentInfo.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.ContentInfo.Content" /> Eigenschaft ruft den Inhalt der CMS/PKCS #7-Meldung ab.</summary>
+        <value>Ein Array von Bytewerten, das die Inhaltsdaten darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Oid ContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Oid ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.ContentInfo.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Oid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.ContentInfo.ContentType" /> -Eigenschaft ruft die <see cref="T:System.Security.Cryptography.Oid" /> -Objekt, enthält die <paramref name="object identifier" /> (OID) des Inhaltstyps des inneren Inhalts der CMS/PKCS #7-Meldung.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.Oid" /> -Objekt, das den OID-Wert enthält, die den Inhaltstyp darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ContentInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.ContentInfo.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Nicht verwaltete Ressourcen frei und führt andere Bereinigungsvorgänge vor der <see cref="T:System.Security.Cryptography.Pkcs.ContentInfo" /> Instanz durch die Garbagecollection wieder zugänglich gemacht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentType">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.Oid GetContentType (byte[] encodedMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.Oid GetContentType(unsigned int8[] encodedMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.ContentInfo.GetContentType(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Oid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encodedMessage" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="encodedMessage">Ein Array von Bytewerten, das codierte darstellt <see cref="T:System.Security.Cryptography.Pkcs.ContentInfo" /> Nachricht aus der äußeren Inhaltstyp abgerufen.</param>
+        <summary>Die <see cref="M:System.Security.Cryptography.Pkcs.ContentInfo.GetContentType(System.Byte[])" /> statische Methode ruft den äußeren Inhaltstyp der codierten <see cref="T:System.Security.Cryptography.Pkcs.ContentInfo" /> Nachricht, die durch ein Array von Bytewerten dargestellt.</summary>
+        <returns>Wenn die Methode erfolgreich ist, gibt die Methode eine <see cref="T:System.Security.Cryptography.Oid" /> -Objekt, das den äußeren Inhaltstyp der angegebenen codierten enthält <see cref="T:System.Security.Cryptography.Pkcs.ContentInfo" /> Nachricht.  
+  
+ Wenn die Methode fehlschlägt, löst eine Ausnahme aus.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Ein null-Verweis wurde an eine Methode übergeben, die nicht als gültiges Argument akzeptiert.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Während einer kryptographischen Operation ist ein Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

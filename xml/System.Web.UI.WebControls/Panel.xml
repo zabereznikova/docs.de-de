@@ -1,0 +1,618 @@
+<Type Name="Panel" FullName="System.Web.UI.WebControls.Panel">
+  <TypeSignature Language="C#" Value="public class Panel : System.Web.UI.WebControls.WebControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Panel extends System.Web.UI.WebControls.WebControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Panel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.PanelContainerDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement dar, das als Container für eine Gruppe anderer Steuerelemente fungiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [Deklarationssyntax](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Die <xref:System.Web.UI.WebControls.Panel> Steuerelement ist ein Container für andere Steuerelemente. Er ist besonders nützlich, wenn Sie Steuerelemente programmgesteuert zu generieren, eine Gruppe von Steuerelementen ein-/ausblenden oder eine Gruppe von Steuerelementen zu lokalisieren möchten.  
+  
+ Die <xref:System.Web.UI.WebControls.Panel.Direction%2A> Eigenschaft ist nützlich zum Lokalisieren einer <xref:System.Web.UI.WebControls.Panel> der Inhalt des Steuerelements anzuzeigende Text für Sprachen, die von rechts nach links, z. B. Arabisch oder Hebräisch geschrieben werden.  
+  
+ Die <xref:System.Web.UI.WebControls.Panel> Steuerelement verfügt über mehrere Eigenschaften, mit denen das Verhalten und die Anzeige von seinen Inhalt angepasst werden kann. Verwenden der <xref:System.Web.UI.WebControls.Panel.BackImageUrl%2A> Eigenschaft zum Anzeigen eines benutzerdefinierten Abbilds für die <xref:System.Web.UI.WebControls.Panel> Steuerelement. Verwenden der <xref:System.Web.UI.WebControls.Panel.ScrollBars%2A> -Eigenschaft Bildlaufleisten für das Steuerelement an.  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:Panel  
+    AccessKey="string"  
+    BackColor="color name|#dddddd"  
+    BackImageUrl="uri"  
+    BorderColor="color name|#dddddd"  
+    BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|Groove|Ridge|  
+        Inset|Outset"  
+    BorderWidth="size"  
+    CssClass="string"  
+    DefaultButton="string"  
+    Direction="NotSet|LeftToRight|RightToLeft"  
+    Enabled="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    Font-Bold="True|False"  
+    Font-Italic="True|False"  
+    Font-Names="string"  
+    Font-Overline="True|False"  
+    Font-Size="string|Smaller|Larger|XX-Small|X-Small|Small|Medium|  
+        Large|X-Large|XX-Large"  
+    Font-Strikeout="True|False"  
+    Font-Underline="True|False"  
+    ForeColor="color name|#dddddd"  
+    GroupingText="string"  
+    Height="size"  
+    HorizontalAlign="NotSet|Left|Center|Right|Justify"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    ScrollBars="None|Horizontal|Vertical|Both|Auto"  
+    SkinID="string"  
+    Style="string"  
+    TabIndex="integer"  
+    ToolTip="string"  
+    Visible="True|False"  
+    Width="size"  
+    Wrap="True|False"  
+/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von einem <xref:System.Web.UI.WebControls.Panel> Steuerelement, um Steuerelemente programmgesteuert zu generieren und ein-/ausblenden einer Gruppe von Steuerelementen.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic Panel Example 2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Panel Example 2/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Panel Example 2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Panel Example 2/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Panel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Panel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Panel" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.Panel> Steuerelement mit einer <xref:System.Web.UI.WebControls.Label> Steuerelement, das rechts ausgerichtet wird.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic Panel.Panel Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Panel.Panel Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Panel.Panel Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Panel.Panel Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Panel.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />, der den Ausgabestream für das Rendering von HTML-Inhalten auf dem Client darstellt.</param>
+        <summary>Die Liste der zu rendernden Attribute hinzugefügt Informationen zum Hintergrundbild, Ausrichtung, Zeilenumbruch und die Richtung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Panel.AddAttributesToRender%2A> Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Panel.AddAttributesToRender%2A> -Methode in ein benutzerdefiniertes Steuerelement, damit die <xref:System.Web.UI.WebControls.Panel> Text immer fett formatiert angezeigt.  
+  
+ [!code-aspx-csharp[CustomPanelAddAttributesToRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomPanelAddAttributesToRender/CS/custom_panel_addattributestorendercs.aspx#1)]
+ [!code-aspx-vb[CustomPanelAddAttributesToRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomPanelAddAttributesToRender/VB/custom_panel_addattributestorendervb.aspx#1)]  
+  
+ [!code-csharp[CustomPanelAddAttributesToRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomPanelAddAttributesToRender/CS/custom_panel_addattributestorender.cs#2)]
+ [!code-vb[CustomPanelAddAttributesToRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomPanelAddAttributesToRender/VB/custom_panel_addattributestorender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.WebControls.Panel.DefaultButton" /> Eigenschaft von der <see cref="T:System.Web.UI.WebControls.Panel" /> Steuerelement muss es sich um die ID eines Steuerelements vom Typ <see cref="T:System.Web.UI.WebControls.IButtonControl" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string BackImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BackImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Panel.BackImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL des Hintergrundbilds für das Panel-Steuerelement fest.</summary>
+        <value>Die URL des Hintergrundbilds für das Panel-Steuerelement. Die Standardeinstellung ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft zum Anzeigen eines benutzerdefinierten Abbilds für die <xref:System.Web.UI.WebControls.Panel> Steuerelement.  
+  
+ Wenn das Bild größer ist die <xref:System.Web.UI.WebControls.Panel>, wird Auffüllvorgangs gekachelt der <xref:System.Web.UI.WebControls.Panel>.  
+  
+> [!NOTE]
+>  Diese Eigenschaft ist nur auf Browsern, die mit Unterstützung für HTML 4.0 oder höher unterstützt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht, wie Sie programmgesteuert festlegen der <xref:System.Web.UI.WebControls.Panel.BackImageUrl%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Panel>.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic Panel.BackImageUrl Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Panel.BackImageUrl Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Panel.BackImageUrl Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Panel.BackImageUrl Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlStyle">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.Style CreateControlStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.Style CreateControlStyle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Panel.CreateControlStyle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein Formatvorlagenobjekt, das vom <see cref="T:System.Web.UI.WebControls.Panel" />-Steuerelement intern zum Implementieren aller auf Formatvorlagen bezogenen Eigenschaften verwendet wird.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.PanelStyle" />, der die Stileigenschaften des Steuerelements enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Panel.CreateControlStyle%2A> Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultButton">
+      <MemberSignature Language="C#" Value="public virtual string DefaultButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Panel.DefaultButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Bezeichner für die Standardschaltfläche, die in enthalten ist das <see cref="T:System.Web.UI.WebControls.Panel" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge entsprechenden Wert der <see cref="P:System.Web.UI.Control.ID" /> für ein Schaltflächen-Steuerelement enthalten sind, der <see cref="T:System.Web.UI.WebControls.Panel" />. Der Standardwert ist eine leere Zeichenfolge ist, gibt an, dass die <see cref="T:System.Web.UI.WebControls.Panel" /> hat keinen Standard.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Panel.DefaultButton%2A> Eigenschaft, um anzugeben, wann auf welches Steuerelement die Schaltfläche geklickt Ruft die <xref:System.Web.UI.WebControls.Panel> Steuerelement den Fokus hat und der Benutzer drückt die EINGABETASTE. Die <xref:System.Web.UI.WebControls.Panel.DefaultButton%2A> kann festgelegt werden, auf den Bezeichner für eine <xref:System.Web.UI.WebControls.Button> Steuerelement oder jedes Steuerelement implementiert die <xref:System.Web.UI.WebControls.IButtonControl> außer Schnittstelle eine <xref:System.Web.UI.WebControls.LinkButton> Steuerelement.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.Panel.DefaultButton%2A> festgelegt ist, um ein Steuerelement, das nicht implementiert die <xref:System.Web.UI.WebControls.IButtonControl> -Schnittstelle, oder um ein Steuerelement, das nicht in enthalten ist die <xref:System.Web.UI.WebControls.Panel> -Steuerelement, die <xref:System.Web.UI.WebControls.Panel> Steuerelement löst eine Ausnahme während der Wiedergabe aus.  
+  
+ Festlegen der <xref:System.Web.UI.WebControls.Panel.DefaultButton%2A> Eigenschaft wird nicht für die folgenden Szenarien unterstützt:  
+  
+-   Festlegen des Fokus außerhalb der Eingabesteuerelemente in der Systemsteuerung, und klicken Sie dann die EINGABETASTE drücken. Ist nicht sichergestellt, dass die Standardaktion Postback auslösen.  
+  
+-   Durch Drücken der EINGABETASTE mit Fokus in einem mehrzeiligen Textfeld ein. In einem mehrzeiligen Textfeld sollte durch Drücken der EINGABETASTE eine neue Zeile in das Textfeld erstellen, die das erwartete Verhalten ist. In Browsern, wobei das drücken die EINGABETASTE in einem mehrzeiligen Textfeld-Triggern ein Postback, aber Sie möchten die EINGABETASTE, um eine neue Zeile zu erstellen können Sie stattdessen eine JavaScript-Funktion anfügen, um das Eingabesteuerelement. Das Skript sollte erfassen die EINGABETASTE, und beenden das Postback. Beispielsweise können Sie der <xref:System.Web.UI.WebControls.WebControl.Attributes%2A> hinzuzufügende Clientskripts für die Auflistung von Eigenschaften der `onKeyPress` Ereignis.  
+  
+-   Verweisen auf eine Standardschaltfläche, der eine <xref:System.Web.UI.WebControls.LinkButton> Steuerelement. Nur <xref:System.Web.UI.WebControls.Button> und <xref:System.Web.UI.WebControls.ImageButton> Steuerelemente werden unterstützt.  
+  
+-   Ändern der <xref:System.Web.UI.WebControls.Panel.DefaultButton%2A> programmgesteuert während eines asynchronen sichern bei der <xref:System.Web.UI.WebControls.Panel> -Steuerelement ist nicht in der ein <xref:System.Web.UI.UpdatePanel> Steuerelement. Asynchrone Postbacks können auf einer Seite aktiviert werden, indem Sie eine oder mehrere <xref:System.Web.UI.UpdatePanel> Steuerelemente auf der Seite. <xref:System.Web.UI.UpdatePanel>Steuerelemente können verwendet werden, zum Aktualisieren der ausgewählten Bereiche einer Seite, statt die gesamte Seite mit einem Postback aktualisiert. Weitere Informationen finden Sie unter [Übersicht über das Steuerelement UpdatePanel](http://msdn.microsoft.com/library/29a2265d-9674-4c19-b70e-e5560ee9689a) und [Teilrendering von Seiten Rendering Overview](http://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
+  
+-   Wenn diese Eigenschaft von Designs oder Stylesheet-Designs. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ContentDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ContentDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Panel.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ContentDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Richtung, in die Steuerelemente angezeigt werden sollen, die Text enthalten eine <see cref="T:System.Web.UI.WebControls.Panel" /> Steuerelement.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.ContentDirection" />-Enumerationswerte. Die Standardeinstellung ist <see langword="NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Panel.Direction%2A> Eigenschaft, um die Richtung der Anzeige für Steuerelemente anzugeben, die Text enthalten eine <xref:System.Web.UI.WebControls.Panel> Steuerelement. Diese Eigenschaft wird festgelegt, mit einer von der <xref:System.Web.UI.WebControls.ContentDirection> Enumerationswerte. In der folgenden Tabelle sind die möglichen Werte aufgeführt.  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`NotSet`|Die Richtung des Inhalte ist nicht festgelegt.|  
+|`LeftToRight`|Die Richtung des Inhalte wird von links nach rechts.|  
+|`RightToLeft`|Die Richtung des Inhalte wird von rechts nach links.|  
+  
+ Bei Angabe von `LeftToRight`, untergeordnete Steuerelemente, die Text enthalten, die von links nach rechts angezeigt. Bei Angabe von `RightToLeft`, untergeordnete Steuerelemente, die Text enthalten rechts nach links anzeigen. Verwendung `RightToLeft` zum Anzeigen von Text für Sprachen, die von rechts nach links, z. B. Arabisch oder Hebräisch geschrieben werden.  
+  
+> [!NOTE]
+>  Diese Eigenschaft ist nur auf Browsern, die mit Unterstützung für HTML 4.0 oder höher unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie programmgesteuert festlegen der <xref:System.Web.UI.WebControls.Panel.Direction%2A> Eigenschaft. Ein <xref:System.Web.UI.WebControls.ListBox> Steuerelement wird aufgefüllt, mit der <xref:System.Web.UI.WebControls.ContentDirection> Enumerationswerte. Die Richtung der Anzeige der Bezeichnung und Radio Schaltflächen auf den Bereich ändern, basierend auf dem Wert, den der Benutzer aus dem Listenfeld aus. Beachten Sie, dass in diesem Beispiel englischen Text verwendet. Aus diesem Grund, wenn die `RightToLeft` Wert ausgewählt ist, wird der Text auf der rechten Seite des gerechtfertigt ist die <xref:System.Web.UI.WebControls.Panel> -Steuerelement, aber die links-nach-rechts-Reihenfolge der englischen Text wird beibehalten. In einer realen Anwendung würde Sie nicht Festlegen der <xref:System.Web.UI.WebControls.Panel.Direction%2A> Eigenschaft `RightToLeft` , wenn Sie Text für eine Sprache von links nach rechts angezeigt würden.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-vb[Panel.Direction#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Panel.Direction/VB/panel.directionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupingText">
+      <MemberSignature Language="C#" Value="public virtual string GroupingText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupingText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Panel.GroupingText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschriftung für die Gruppe von Steuerelementen, die enthalten ist, in das Panel-Steuerelement.</summary>
+        <value>Der Beschriftungstext für die untergeordneten Steuerelemente in das Panel-Steuerelement enthalten sind. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Panel.GroupingText%2A> Eigenschaft, um anzuzeigen, einen Frame und die Beschriftung für die Gruppe von Steuerelementen in der <xref:System.Web.UI.WebControls.Panel> Steuerelement.  
+  
+ Die <xref:System.Web.UI.WebControls.Panel.GroupingText%2A> Wert, der eine <xref:System.Web.UI.WebControls.Panel> Steuerelement gerendert wird, mithilfe der FIELDSET ' und ' LEGEND-Elemente, die in der HTML 4.0-Spezifikation eingeführt wurden. Wenn der Clientbrowser HTML 3.2 verwendet die <xref:System.Web.UI.WebControls.Panel.GroupingText%2A> Wert wird nicht gerendert. Finden Sie in der Browserdokumentation Client ausführliche Informationen wie das FIELDSET ' und ' LEGEND-Elemente angezeigt werden.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [ASP.NET-Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalAlign">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.HorizontalAlign HorizontalAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.HorizontalAlign HorizontalAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Panel.HorizontalAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.HorizontalAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die horizontale Ausrichtung des Inhalts in der Systemsteuerung.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.HorizontalAlign" />-Werte. Die Standardeinstellung ist <see langword="NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft zum Angeben der Ausrichtung der Elemente in der <xref:System.Web.UI.WebControls.Panel>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie rechtsbündig auszurichten oder linksbündig Steuerelemente innerhalb der <xref:System.Web.UI.WebControls.Panel>.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic Panel.HorizontalAlign Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Panel.HorizontalAlign Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Panel.HorizontalAlign Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Panel.HorizontalAlign Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die horizontale Ausrichtung ist nicht die <see cref="T:System.Web.UI.WebControls.HorizontalAlign" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginTag">
+      <MemberSignature Language="C#" Value="public override void RenderBeginTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RenderBeginTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Panel.RenderBeginTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />, der den Ausgabestream für das Rendering von HTML-Inhalten auf dem Client darstellt.</param>
+        <summary>Rendert das öffnende Tag des HTML-die <see cref="T:System.Web.UI.WebControls.Panel" /> Steuerelement in den angegebenen Writer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Panel.RenderBeginTag%2A> Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndTag">
+      <MemberSignature Language="C#" Value="public override void RenderEndTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RenderEndTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Panel.RenderEndTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />, der den Ausgabestream für das Rendering von HTML-Inhalten auf dem Client darstellt.</param>
+        <summary>Rendert das schließende Tag des HTML-die <see cref="T:System.Web.UI.WebControls.Panel" /> Steuerelement in den angegebenen Writer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Panel.RenderEndTag%2A> Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollBars">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ScrollBars ScrollBars { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ScrollBars ScrollBars" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Panel.ScrollBars" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ScrollBars</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, die Sichtbarkeit und der Position des Bildlaufleisten in einem <see cref="T:System.Web.UI.WebControls.Panel" /> Steuerelement.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.ScrollBars" />-Enumerationswerte. Die Standardeinstellung ist <see langword="None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Panel.ScrollBars%2A> Eigenschaft, um die Sichtbarkeit und der Position des Bildlaufs anzugeben Steuerleisten in einem <xref:System.Web.UI.WebControls.Panel> Steuerelement. Diese Eigenschaft wird festgelegt, mit einer von der <xref:System.Web.UI.WebControls.ScrollBars> Enumerationswerte. In der folgenden Tabelle sind die möglichen Werte aufgeführt.  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`None`|Es werden keine Schiebeleisten angezeigt.|  
+|`Horizontal`|Es wird nur eine horizontale Bildlaufleiste angezeigt.|  
+|`Vertical`|Es wird nur eine vertikale Bildlaufleiste angezeigt.|  
+|`Both`|Beide horizontale und vertikale Bildlaufleisten angezeigt werden.|  
+|`Auto`|Bei Bedarf werden horizontal, vertikal oder beide Bildlaufleisten angezeigt. Andernfalls werden keine Schiebeleisten angezeigt.|  
+  
+ Bei Angabe von `Auto` für die <xref:System.Web.UI.WebControls.Panel.ScrollBars%2A> Eigenschaft Bildlaufleisten werden automatisch angezeigt, wenn die Größe des Inhalts in eine <xref:System.Web.UI.WebControls.Panel> Steuerelement überschreitet die Größe des der <xref:System.Web.UI.WebControls.Panel> selbst steuern. Z. B. wenn ein <xref:System.Web.UI.WebControls.Panel> Steuerelement enthält eine Tabelle und der Bereich ist nicht breit genug, um alle Zeilen in der Tabelle anzeigen, eine vertikale Bildlaufleiste angezeigt wird. Wenn die Größe der Tabelle die Höhe und Breite des Bereichs überschreitet, werden beide vertikalen und horizontalen Bildlaufleisten angezeigt.  
+  
+> [!NOTE]
+>  Diese Eigenschaft ist nur auf Browsern, die mit Unterstützung für HTML 4.0 oder höher unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarative Festlegen der <xref:System.Web.UI.WebControls.Panel.ScrollBars%2A> Eigenschaft `Auto`. Der Bereich enthält eine Tabelle, die den gesamten, die Inhalt aus, von denen die Größe des Bereichs übersteigen. Dies bewirkt, dass beide vertikalen und horizontalen Bildlaufleisten, um automatisch angezeigt werden, wenn der Bereich gerendert wird. Der Benutzer kann dann einen Bildlauf zum Anzeigen aller Daten in der Tabelle.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Panel.Scrollbars#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Panel.Scrollbars/CS/panel.scrollbarscs.aspx#1)]
+ [!code-aspx-vb[Panel.Scrollbars#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Panel.Scrollbars/VB/panel.scrollbarsvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie programmgesteuert festlegen der <xref:System.Web.UI.WebControls.Panel.ScrollBars%2A> Eigenschaft. Ein <xref:System.Web.UI.WebControls.ListBox> Steuerelement wird aufgefüllt, mit der <xref:System.Web.UI.WebControls.ScrollBars> Enumerationswerte. Die Bildlaufleisten, die auf den Bereich ändern, basierend auf dem Wert, den der Benutzer aus dem Listenfeld angezeigt wird.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Panel.Scrollbars2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Panel.Scrollbars2/CS/panel.scrollbars2cs.aspx#1)]
+ [!code-aspx-vb[Panel.Scrollbars2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Panel.Scrollbars2/VB/panel.scrollbars2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDisabledAttribute">
+      <MemberSignature Language="C#" Value="public override bool SupportsDisabledAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDisabledAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Panel.SupportsDisabledAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob vom Steuerelement das <see langword="disabled" />-Attribut des gerenderten HTML-Elements auf "disabled" festgelegt werden soll, wenn die <see cref="P:System.Web.UI.WebControls.WebControl.IsEnabled" />-Eigenschaft des Steuerelements <see langword="false" /> ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> Eigenschaft gibt an, eine frühere ASP.NET-Version als <c>4.0</c>ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, wie ASP.NET HTML für ein Steuerelement rendern soll, wenn das Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `true`, rendert ASP.NET ein `disabled` Attribut, wenn ein Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `false`, rendert ASP.NET ein `class` Attribut, wenn ein Steuerelement deaktiviert ist. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrap">
+      <MemberSignature Language="C#" Value="public virtual bool Wrap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Wrap" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Panel.Wrap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Inhalt des Bereichs umbrochen wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Inhalt des Bereichs umbrochen wird; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um den Inhalt zu umschließen die <xref:System.Web.UI.WebControls.Panel>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht, wie Sie programmgesteuert festlegen der <xref:System.Web.UI.WebControls.Panel.Wrap%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Panel> Steuerelement.  
+  
+> [!NOTE]
+>  Im folgenden Codebeispiel wird das Einzeldatei Codemodell verwendet und möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn direkt in einem Code-Behind-Datei kopiert. In diesem Codebeispiel muss in eine leere Textdatei kopiert werden, die eine ASPX-Erweiterung verfügt. Weitere Informationen über das Web Forms-Codemodell finden Sie unter [Codemodell für ASP.NET Web Forms-Seite](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic Panel.Wrap Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Panel.Wrap Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Panel.Wrap Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Panel.Wrap Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

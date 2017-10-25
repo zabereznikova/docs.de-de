@@ -1,0 +1,98 @@
+<Type Name="SecurityIdentity" FullName="System.EnterpriseServices.SecurityIdentity">
+  <TypeSignature Language="C#" Value="public sealed class SecurityIdentity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SecurityIdentity extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.SecurityIdentity" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen, die in Bezug auf eine Identität in einer COM+-Aufrufkette an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neue Instanzen werden nicht programmgesteuert erstellt werden. Stattdessen erstellen Sie neue Instanzen von <xref:System.EnterpriseServices.SecurityCallContext> und <xref:System.EnterpriseServices.SecurityCallers>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AccountName">
+      <MemberSignature Language="C#" Value="public string AccountName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AccountName" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.SecurityIdentity.AccountName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Benutzers, der durch diese Identität beschrieben.</summary>
+        <value>Der Name des Benutzers, der durch diese Identität beschrieben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationLevel">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.AuthenticationOption AuthenticationLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.AuthenticationOption AuthenticationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.SecurityIdentity.AuthenticationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.AuthenticationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Authentifizierungsebene des Benutzers, der durch diese Identität beschrieben.</summary>
+        <value>Einer der <see cref="T:System.EnterpriseServices.AuthenticationOption" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationService">
+      <MemberSignature Language="C#" Value="public int AuthenticationService { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AuthenticationService" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.SecurityIdentity.AuthenticationService" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Authentifizierungsdienst, der durch diese Identität beschrieben.</summary>
+        <value>Der Authentifizierungsdienst, der durch diese Identität beschrieben wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImpersonationLevel">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.ImpersonationLevelOption ImpersonationLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.ImpersonationLevelOption ImpersonationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.SecurityIdentity.ImpersonationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.ImpersonationLevelOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ebene des Identitätswechsels des Benutzers, der durch diese Identität beschrieben.</summary>
+        <value>Ein <see cref="T:System.EnterpriseServices.ImpersonationLevelOption" />-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

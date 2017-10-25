@@ -1,0 +1,116 @@
+<Type Name="HandledMouseEventArgs" FullName="System.Windows.Forms.HandledMouseEventArgs">
+  <TypeSignature Language="C#" Value="public class HandledMouseEventArgs : System.Windows.Forms.MouseEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HandledMouseEventArgs extends System.Windows.Forms.MouseEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HandledMouseEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.MouseEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Können Sie ein benutzerdefiniertes Steuerelement, um zu verhindern, dass die <see cref="E:System.Windows.Forms.Control.MouseWheel" /> Ereignis an den übergeordneten Container gesendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie verwenden möchten <xref:System.Windows.Forms.HandledMouseEventArgs> in erster Linie, wenn ein Steuerelement entwickeln, muss Wheel Mausereignisse selbst zu behandeln und verhindern, indem Sie die unmittelbar übergeordneten Containers des Steuerelements angezeigt wird. <xref:System.Windows.Forms.HandledMouseEventArgs>wird nicht direkt vom übergeben <xref:System.Windows.Forms.MouseEventHandler> wenn er behandelt die <xref:System.Windows.Forms.Control.MouseWheel> Ereignis. Stattdessen <xref:System.Windows.Forms.MouseEventHandler> verwendet eine <xref:System.Windows.Forms.MouseEventArgs>, der umgewandelt werden muss eine <xref:System.Windows.Forms.HandledMouseEventArgs> um ein Vorkommen von "Abbrechen" <xref:System.Windows.Forms.Control.MouseWheel>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie das Mausereignis Rad in ein benutzerdefiniertes Steuerelement als behandelt markiert.  
+  
+ [!code-vb[System.Windows.Forms.HandledMouseEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HandledMouseEventArgs/VB/MouseWheelControl.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HandledMouseEventArgs (System.Windows.Forms.MouseButtons button, int clicks, int x, int y, int delta);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.MouseButtons button, int32 clicks, int32 x, int32 y, int32 delta) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HandledMouseEventArgs.#ctor(System.Windows.Forms.MouseButtons,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="button" Type="System.Windows.Forms.MouseButtons" />
+        <Parameter Name="clicks" Type="System.Int32" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="delta" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="button">Eines der <see cref="T:System.Windows.Forms.MouseButtons" /> Werte, der angibt, welche Maustaste gedrückt wurde.</param>
+        <param name="clicks">Die Anzahl der Häufigkeit, mit die eine Maustaste gedrückt wurde.</param>
+        <param name="x">Die X-Koordinate der Maus klicken, in Pixel.</param>
+        <param name="y">Die y-Koordinate der Maus klicken, in Pixel.</param>
+        <param name="delta">Ein Zähler mit Vorzeichen für die Anzahl der arretierungen ab, die das Mausrad gedreht wurde, um.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.HandledMouseEventArgs" /> -Klasse mit der angegebenen los, Anzahl der Maustaste klickt, horizontalen und vertikalen Bildschirmkoordinaten, und die Änderung der Mauszeigerposition.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HandledMouseEventArgs (System.Windows.Forms.MouseButtons button, int clicks, int x, int y, int delta, bool defaultHandledValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.MouseButtons button, int32 clicks, int32 x, int32 y, int32 delta, bool defaultHandledValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HandledMouseEventArgs.#ctor(System.Windows.Forms.MouseButtons,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="button" Type="System.Windows.Forms.MouseButtons" />
+        <Parameter Name="clicks" Type="System.Int32" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="delta" Type="System.Int32" />
+        <Parameter Name="defaultHandledValue" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="button">Eines der <see cref="T:System.Windows.Forms.MouseButtons" /> Werte, der angibt, welche Maustaste gedrückt wurde.</param>
+        <param name="clicks">Die Anzahl der Häufigkeit, mit die eine Maustaste gedrückt wurde.</param>
+        <param name="x">Die X-Koordinate der Maus klicken, in Pixel.</param>
+        <param name="y">Die y-Koordinate der Maus klicken, in Pixel.</param>
+        <param name="delta">Ein Zähler mit Vorzeichen für die Anzahl der arretierungen ab, die das Mausrad gedreht wurde, um.</param>
+        <param name="defaultHandledValue">
+          <see langword="true" />Wenn das Ereignis behandelt wird; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.HandledMouseEventArgs" /> Klasse mit dem angegebenen los, die Anzahl der Mausklicks, die horizontale und vertikale Bildschirm-Koordinaten vorliegen, die Änderung der Mauszeigerposition, und der Wert, der angibt, ob das Ereignis behandelt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HandledMouseEventArgs.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob dieses Ereignis an die übergeordnete Container des Steuerelements weitergeleitet werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn das Mausereignis an das übergeordnete Steuerelement eingefügt werden sollen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie das Mausereignis Rad in ein benutzerdefiniertes Steuerelement als behandelt markiert.  
+  
+ [!code-vb[System.Windows.Forms.HandledMouseEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HandledMouseEventArgs/VB/MouseWheelControl.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

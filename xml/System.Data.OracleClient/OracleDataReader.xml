@@ -1,0 +1,1652 @@
+<Type Name="OracleDataReader" FullName="System.Data.OracleClient.OracleDataReader">
+  <TypeSignature Language="C#" Value="public sealed class OracleDataReader : System.Data.Common.DbDataReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OracleDataReader extends System.Data.Common.DbDataReader" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OracleDataReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbDataReader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Möglichkeit, einen Vorwärtsstream von Datenzeilen aus einer Datenquelle zu lesen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Erstellen einer <xref:System.Data.OracleClient.OracleDataReader>, rufen Sie die <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A> Methode der <xref:System.Data.OracleClient.OracleCommand> -Objekt, anstatt direkt einen Konstruktor.  
+  
+ Änderungen an ein Resultset von einem anderen Prozess oder Thread während des Lesens von Daten ist möglicherweise für den Benutzer der sichtbare der <xref:System.Data.OracleClient.OracleDataReader>.  
+  
+ <xref:System.Data.OracleClient.OracleDataReader.IsClosed%2A>und <xref:System.Data.OracleClient.OracleDataReader.RecordsAffected%2A> sind die einzigen Eigenschaften, die Sie, nachdem aufrufen können die <xref:System.Data.OracleClient.OracleDataReader> geschlossen wird. In einigen Fällen müssen Sie aufrufen <xref:System.Data.OracleClient.OracleDataReader.Close%2A> vor dem Aufruf können <xref:System.Data.OracleClient.OracleDataReader.RecordsAffected%2A>.  
+  
+ Mehrere <xref:System.Data.OracleClient.OracleDataReader> können gleichzeitig geöffnet sein.  
+  
+ Die beiden folgenden Visual Basic-Beispiele veranschaulichen, wie mit einer <xref:System.Data.OracleClient.OracleDataReader> zum Abrufen einer Oracle `REF CURSOR`. Diese Beispiele verwenden die Tabellen, die im Oracle Scott/Tiger-Schema definiert sind und das folgende PL/SQL-Paket und Paketkörper benötigen. Sie müssen diese auf dem Server anhand der Beispiele erstellen.  
+  
+ Erstellen Sie das folgende Oracle-Paket auf dem Oracle-Server.  
+  
+```  
+CREATE OR REPLACE PACKAGE CURSPKG AS   
+   TYPE T_CURSOR IS REF CURSOR;   
+   PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,   
+      IO_CURSOR IN OUT T_CURSOR);   
+   PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,   
+      DEPTCURSOR OUT T_CURSOR);  
+END CURSPKG;  
+/  
+```  
+  
+ Erstellen Sie den folgenden Oracle-Paketkörper auf dem Oracle-Server.  
+  
+```  
+  
+CREATE OR REPLACE PACKAGE BODY CURSPKG AS   
+    PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,   
+                               IO_CURSOR OUT T_CURSOR)   
+    IS   
+        V_CURSOR T_CURSOR;   
+    BEGIN   
+        IF N_EMPNO <> 0 THEN   
+             OPEN V_CURSOR FOR   
+             SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME   
+                  FROM EMP, DEPT   
+                  WHERE EMP.DEPTNO = DEPT.DEPTNO   
+                        AND EMP.EMPNO = N_EMPNO;   
+        ELSE   
+             OPEN V_CURSOR FOR   
+             SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME   
+                  FROM EMP, DEPT   
+                  WHERE EMP.DEPTNO = DEPT.DEPTNO;   
+        END IF;   
+        IO_CURSOR := V_CURSOR;   
+    END OPEN_ONE_CURSOR;   
+    PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,   
+                                DEPTCURSOR OUT T_CURSOR)   
+    IS   
+        V_CURSOR1 T_CURSOR;   
+        V_CURSOR2 T_CURSOR;   
+    BEGIN   
+        OPEN V_CURSOR1 FOR SELECT * FROM EMP;   
+        OPEN V_CURSOR2 FOR SELECT * FROM DEPT;   
+        EMPCURSOR  := V_CURSOR1;   
+        DEPTCURSOR := V_CURSOR2;   
+    END OPEN_TWO_CURSORS;   
+END CURSPKG;  
+/  
+```  
+  
+ In diesem Beispiel Visual Basic führt eine gespeicherte PL/SQL-Prozedur, die zurückgibt eine `REF CURSOR` Parameter, und liest den Wert als ein <xref:System.Data.OracleClient.OracleDataReader>.  
+  
+```vb  
+Private Sub ReadOracleData(ByVal connectionString As String)  
+   Dim connection As New OracleConnection(connectionString)  
+   Dim command As New OracleCommand()  
+   Dim reader As OracleDataReader  
+  
+   connection.Open()  
+   command.Connection = connection  
+   command.CommandText = "CURSPKG.OPEN_ONE_CURSOR"  
+   command.CommandType = CommandType.StoredProcedure  
+   command.Parameters.Add(New OracleParameter("N_EMPNO", OracleType.Number)).Value = 7369  
+   command.Parameters.Add(New OracleParameter("IO_CURSOR", OracleType.Cursor)).Direction = ParameterDirection.Output  
+  
+   reader = command.ExecuteReader()  
+   While (reader.Read())  
+      ' Do something with the values.  
+   End While  
+   reader.Close()  
+   connection.Close()  
+End Sub  
+```  
+  
+ In diesem Beispiel Visual Basic führt eine gespeicherte PL/SQL-Prozedur, die zwei zurückgibt `REF CURSOR` Parameter, und liest die Werte mithilfe einer <xref:System.Data.OracleClient.OracleDataReader>.  
+  
+```vb  
+Private Sub ReadOracleData(ByVal connectionString As String)  
+   Dim dataSet As New DataSet()  
+   Dim connection As New OracleConnection(connectionString)  
+   Dim command As New OracleCommand()  
+   Dim reader As OracleDataReader  
+  
+   connection.Open()  
+   command.Connection = connection  
+   command.CommandText = "CURSPKG.OPEN_TWO_CURSORS"  
+   command.CommandType = CommandType.StoredProcedure  
+   command.Parameters.Add(New OracleParameter("EMPCURSOR", OracleType.Cursor)).Direction = ParameterDirection.Output  
+   command.Parameters.Add(New OracleParameter("DEPTCURSOR", OracleType.Cursor)).Direction = ParameterDirection.Output  
+  
+   reader = command.ExecuteReader(CommandBehavior.CloseConnection)  
+   While (reader.Read())  
+      ' Do something with the values.  
+   End While  
+   reader.NextResult()  
+   While (reader.Read())  
+        ' Do something with the values.  
+   End While  
+   reader.Close()  
+   connection.Close()  
+ End Sub  
+```  
+  
+ Dieses C#-Beispiel wird eine Oracle-Tabelle erstellt und mit Daten gefüllt wird. Führen Sie in diesem Beispiel vor dem Ausführen der nachfolgenden Beispiel veranschaulicht die Verwendung einer <xref:System.Data.OracleClient.OracleDataReader> für den Datenzugriff mithilfe von OracleType-Strukturen.  
+  
+```csharp  
+public void Setup(string connectionString)  
+{  
+   OracleConnection connection = new OracleConnection(connectionString);  
+   try  
+   {  
+      connection.Open();  
+      OracleCommand command = connection.CreateCommand();  
+      command.CommandText ="CREATE TABLE OracleTypesTable (MyVarchar2 varchar2(3000),MyNumber number(28,4) PRIMARY KEY,MyDate date, MyRaw raw(255))";  
+      command.ExecuteNonQuery();  
+      command.CommandText ="INSERT INTO OracleTypesTable VALUES ('test', 2, to_date('2000-01-11 12:54:01','yyyy-mm-dd hh24:mi:ss'), '0001020304')";  
+      command.ExecuteNonQuery();  
+      command.CommandText="SELECT * FROM OracleTypesTable";  
+   }  
+   catch(Exception)  
+   {  
+   }  
+   finally  
+   {  
+      connection.Close();  
+   }  
+}  
+```  
+  
+ Dieses C#-Beispiel verwendet eine <xref:System.Data.OracleClient.OracleDataReader> für den Datenzugriff, und verwendet mehrere <xref:System.Data.OracleClient.OracleType> Strukturen zum Anzeigen der Daten.  
+  
+```csharp  
+public void ReadOracleTypesExample(string connectionString)  
+{  
+   OracleConnection connection = new OracleConnection(connectionString);  
+   connection.Open();  
+   OracleCommand command = connection.CreateCommand();  
+   try  
+   {  
+      command.CommandText = "SELECT * FROM OracleTypesTable";  
+      OracleDataReader reader = command.ExecuteReader();  
+      reader.Read();  
+      //Using the Oracle specific getters for each type is faster than  
+      //using GetOracleValue.  
+      //First column, MyVarchar2, is a VARCHAR2 data type in Oracle Server  
+      //and maps to OracleString.  
+      OracleString oraclestring1 = reader.GetOracleString(0);  
+      Console.WriteLine("OracleString " + oraclestring1.ToString());  
+  
+      //Second column, MyNumber, is a NUMBER data type in Oracle Server  
+      //and maps to OracleNumber.  
+      OracleNumber oraclenumber1 = reader.GetOracleNumber(1);  
+      Console.WriteLine("OracleNumber " + oraclenumber1.ToString());  
+  
+      //Third column, MyDate, is a DATA data type in Oracle Server  
+      //and maps to OracleDateTime.  
+      OracleDateTime oracledatetime1 = reader.GetOracleDateTime(2);  
+      Console.WriteLine("OracleDateTime " + oracledatetime1.ToString());  
+  
+      //Fourth column, MyRaw, is a RAW data type in Oracle Server and  
+      //maps to OracleBinary.  
+      OracleBinary oraclebinary1 = reader.GetOracleBinary(3);  
+  
+      //Calling value on a null OracleBinary throws  
+      //OracleNullValueException; therefore, check for a null value.  
+      if (oraclebinary1.IsNull==false)  
+      {  
+         foreach(byte b in oraclebinary1.Value)  
+         {  
+            Console.WriteLine("byte " + b.ToString());  
+         }  
+      }  
+      reader.Close();  
+   }  
+   catch(Exception e)  
+   {  
+      Console.WriteLine(e.ToString());  
+   }  
+   finally  
+   {  
+      connection.Close();  
+   }  
+}  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleConnection>, wird ein <xref:System.Data.OracleClient.OracleCommand>, und ein <xref:System.Data.OracleClient.OracleDataReader>. Das Beispiel liest durch die Daten, die an die Konsole schreiben. Im Beispiel wird schließlich schließt die <xref:System.Data.OracleClient.OracleDataReader>, und klicken Sie dann die <xref:System.Data.OracleClient.OracleConnection>.  
+  
+ [!code-csharp[Classic WebData OracleDataReader#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OracleDataReader/CS/source.cs#1)]
+ [!code-vb[Classic WebData OracleDataReader#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OracleDataReader/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt das <see cref="T:System.Data.OracleClient.OracleDataReader" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mehrere <xref:System.Data.OracleClient.OracleDataReader> können gleichzeitig geöffnet sein.  
+  
+> [!CAUTION]
+>  Rufen Sie nicht `Close` oder `Dispose` für eine Verbindung eine `DataReader`, oder ein anderes verwaltetes Objekt in der `Finalize` -Methode der Klasse. In einer Finalize-Methode sollten Sie nur nicht verwaltete Ressourcen freizugeben, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](http://msdn.microsoft.com/library/22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Depth">
+      <MemberSignature Language="C#" Value="public override int Depth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Depth" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataReader.Depth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die Tiefe der Schachtelung für die aktuelle Zeile angibt.</summary>
+        <value>Die Tiefe der Schachtelung für die aktuelle Zeile.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die äußerste Tabelle hat die Tiefe 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldCount">
+      <MemberSignature Language="C#" Value="public override int FieldCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FieldCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataReader.FieldCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Spalten in der aktuellen Zeile ab.</summary>
+        <value>Falls in keinem gültigen Recordset 0 positioniert; andernfalls die Anzahl der Spalten im aktuellen Datensatz. Der Standard ist -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Schließt ausgeblendete Felder ein. Verwenden Sie <xref:System.Data.Common.DbDataReader.VisibleFieldCount%2A>, um ausgeblendete Felder auszuschließen.  
+  
+ Nach der Ausführung einer Abfrage, die keine Zeilen zurückgibt <xref:System.Data.OracleClient.OracleDataReader.FieldCount%2A> gibt 0 zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es ist keine Verbindung mit einer Datenquelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoolean">
+      <MemberSignature Language="C#" Value="public override bool GetBoolean (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetBoolean(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetBoolean(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als booleschen Wert ab.</summary>
+        <returns>Ein boolescher Wert, der den Wert der Spalte ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByte">
+      <MemberSignature Language="C#" Value="public override byte GetByte (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8 GetByte(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetByte(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als ein Byte ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein Byte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public override long GetBytes (int i, long fieldOffset, byte[] buffer2, int bufferoffset, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetBytes(int32 i, int64 fieldOffset, unsigned int8[] buffer2, int32 bufferoffset, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+        <Parameter Name="fieldOffset" Type="System.Int64" />
+        <Parameter Name="buffer2" Type="System.Byte[]" />
+        <Parameter Name="bufferoffset" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="fieldOffset">Der Index innerhalb des Felds, in dem der Lesevorgang begonnen werden soll.</param>
+        <param name="buffer2">Der Puffer, in den der Bytedatenstrom gelesen werden soll.</param>
+        <param name="bufferoffset">Der Index, in dem <c>Puffer</c> den Schreibvorgang beginnen soll.</param>
+        <param name="length">Die Anzahl der zu lesenden Bytes.</param>
+        <summary>Liest einen Datenstrom aus dem angegebenen Spaltenoffset als Array in den Puffer, beginnend am angegebenen Pufferoffset.</summary>
+        <returns>Die tatsächlich gelesene Anzahl von Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OracleClient.OracleDataReader.GetBytes%2A>Gibt die Anzahl der verfügbaren Bytes in das Feld zurück. In den meisten Fällen ist dies die genaue Länge des Felds. Allerdings die zurückgegebene Anzahl möglicherweise kleiner als die tatsächliche Länge des Felds Wenn `GetBytes` bereits zum Abrufen von Bytes aus dem Feld verwendet wurde. Dies kann der Fall, z. B. sein, wenn die <xref:System.Data.OracleClient.OracleDataReader> ist eine umfangreiche Datenstruktur in einen Puffer lesen. Weitere Informationen finden Sie unter der `SequentialAccess` Einstellung des <xref:System.Data.CommandBehavior>.  
+  
+ Wenn Sie einen Puffer übergeben, die einen null-Wert ist <xref:System.Data.OracleClient.OracleDataReader.GetBytes%2A> gibt die Länge des Felds in Bytes zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChar">
+      <MemberSignature Language="C#" Value="public override char GetChar (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance char GetChar(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetChar(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als Zeichen ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein Zeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChars">
+      <MemberSignature Language="C#" Value="public override long GetChars (int i, long fieldOffset, char[] buffer2, int bufferoffset, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetChars(int32 i, int64 fieldOffset, char[] buffer2, int32 bufferoffset, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+        <Parameter Name="fieldOffset" Type="System.Int64" />
+        <Parameter Name="buffer2" Type="System.Char[]" />
+        <Parameter Name="bufferoffset" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <param name="fieldOffset">Der Index innerhalb der Zeile, in dem der Lesevorgang begonnen werden soll.</param>
+        <param name="buffer2">Der Puffer, in denen Daten kopiert werden soll.</param>
+        <param name="bufferoffset">Der Index, in dem <c>Puffer</c> den Schreibvorgang beginnen soll.</param>
+        <param name="length">Die Anzahl der zu lesenden Zeichen.</param>
+        <summary>Liest einen Zeichendatenstrom aus dem angegebenen Spaltenoffset als Array in den Puffer, beginnend am angegebenen Pufferoffset.</summary>
+        <returns>Die tatsächlich gelesene Anzahl von Zeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OracleClient.OracleDataReader.GetChars%2A>Gibt die Anzahl der verfügbaren Zeichen im Feld zurück. In den meisten Fällen ist dies die genaue Länge des Felds. Allerdings die zurückgegebene Anzahl möglicherweise kleiner als die tatsächliche Länge des Felds Wenn `GetChars` bereits zum Abrufen von Zeichen aus dem Feld verwendet wurde. Dies kann der Fall, z. B. sein, wenn die <xref:System.Data.OracleClient.OracleDataReader> ist eine umfangreiche Datenstruktur in einen Puffer lesen. Weitere Informationen finden Sie unter der `SequentialAccess` Einstellung des <xref:System.Data.CommandBehavior>.  
+  
+ Wenn Sie einen Puffer, der einen null-Wert ist übergeben. <xref:System.Data.OracleClient.OracleDataReader.GetChars%2A>Gibt die Länge des Felds in Zeichen zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataTypeName">
+      <MemberSignature Language="C#" Value="public override string GetDataTypeName (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDataTypeName(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetDataTypeName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Namen des Quelldatentyps ab.</summary>
+        <returns>Der Name des Quelldatentyps.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime GetDateTime (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime GetDateTime(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetDateTime(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als <see langword="DateTime" />-Objekt ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein <see langword="DateTime" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDecimal">
+      <MemberSignature Language="C#" Value="public override decimal GetDecimal (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Decimal GetDecimal(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetDecimal(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als <see langword="Decimal" />-Objekt ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein <see langword="Decimal" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDouble">
+      <MemberSignature Language="C#" Value="public override double GetDouble (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance float64 GetDouble(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetDouble(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als Gleitkommazahl mit doppelter Genauigkeit ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als Gleitkommazahl mit doppelter Genauigkeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen <see cref="T:System.Collections.IEnumerator" /> zurück, mit dem die Zeilen im Datenleser durchlaufen werden können.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />, mit dem die Zeilen im Datenleser durchlaufen werden können.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl Sie mit dieser Methode einen expliziten Enumerator abrufen können, in Sprachen, die eine Foreach unterstützen, es ist einfacher, das Schleifenkonstrukt direkt, um die Zeilen im Datenleser durchlaufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFieldType">
+      <MemberSignature Language="C#" Value="public override Type GetFieldType (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetFieldType(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetFieldType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft die <see cref="T:System.Type" /> also der Datentyp des Objekts.</summary>
+        <returns>Der <see cref="T:System.Type" />, der der Datentyp des Objekts ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFloat">
+      <MemberSignature Language="C#" Value="public override float GetFloat (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance float32 GetFloat(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetFloat(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als Gleitkommazahl mit einfacher Genauigkeit ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als Gleitkommazahl mit einfacher Genauigkeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGuid">
+      <MemberSignature Language="C#" Value="public override Guid GetGuid (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Guid GetGuid(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetGuid(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als global eindeutigen Bezeichner (Globally Unique Identifier, GUID) ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als GUID.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt16">
+      <MemberSignature Language="C#" Value="public override short GetInt16 (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int16 GetInt16(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetInt16(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine 16-Bit-Ganzzahl mit Vorzeichen ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als eine 16-Bit-Ganzzahl mit Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt32">
+      <MemberSignature Language="C#" Value="public override int GetInt32 (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetInt32(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetInt32(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine 32-Bit-Ganzzahl mit Vorzeichen ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als eine 32-Bit-Ganzzahl mit Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt64">
+      <MemberSignature Language="C#" Value="public override long GetInt64 (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetInt64(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetInt64(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als 64-Bit-Ganzzahl mit Vorzeichen ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als eine 64-Bit-Ganzzahl mit Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public override string GetName (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetName(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Namen der angegebenen Spalte ab.</summary>
+        <returns>Eine Zeichenfolge, die den Namen der angegebenen Spalte.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOracleBFile">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleBFile GetOracleBFile (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OracleClient.OracleBFile GetOracleBFile(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetOracleBFile(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleBFile" /> Objekt.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleBFile" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOracleBinary">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleBinary GetOracleBinary (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.OracleClient.OracleBinary GetOracleBinary(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetOracleBinary(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBinary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleBinary" /> Objekt.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleBinary" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOracleDateTime">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleDateTime GetOracleDateTime (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.OracleClient.OracleDateTime GetOracleDateTime(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetOracleDateTime(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleDateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleDateTime" /> Objekt.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleDateTime" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOracleLob">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleLob GetOracleLob (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OracleClient.OracleLob GetOracleLob(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetOracleLob(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleLob</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOracleMonthSpan">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleMonthSpan GetOracleMonthSpan (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.OracleClient.OracleMonthSpan GetOracleMonthSpan(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetOracleMonthSpan(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleMonthSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> Objekt.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOracleNumber">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleNumber GetOracleNumber (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.OracleClient.OracleNumber GetOracleNumber(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetOracleNumber(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleNumber" /> Objekt.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleNumber" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOracleString">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleString GetOracleString (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.OracleClient.OracleString GetOracleString(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetOracleString(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleString</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleString" /> Objekt.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleString" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOracleTimeSpan">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleTimeSpan GetOracleTimeSpan (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.OracleClient.OracleTimeSpan GetOracleTimeSpan(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetOracleTimeSpan(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleTimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleTimeSpan" /> Objekt.</summary>
+        <returns>Der Wert der angegebenen Spalte als ein <see cref="T:System.Data.OracleClient.OracleTimeSpan" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOracleValue">
+      <MemberSignature Language="C#" Value="public object GetOracleValue (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetOracleValue(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetOracleValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der Spalte an der angegebenen Ordnungsposition in der Oracle-Format ab.</summary>
+        <returns>Der Oracle-Wert, der zurückgegeben werden soll.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt <xref:System.DBNull> für null-Datenbankspalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOracleValues">
+      <MemberSignature Language="C#" Value="public int GetOracleValues (object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetOracleValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetOracleValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Ein Array vom Typ <see cref="T:System.Object" /> in das die Attributspalten kopiert.</param>
+        <summary>Ruft die Attributspalten in der aktuellen Zeile im Oracle-Format ab.</summary>
+        <returns>Die Anzahl der Instanzen von <see cref="T:System.Object" /> im Array.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die meisten Anwendungen die <xref:System.Data.OracleClient.OracleDataReader.GetOracleValues%2A> Methode ein effizientes Instrument für jede Spalte einzeln abrufen, statt alle Spalten abgerufen.  
+  
+ Sie können übergeben ein <xref:System.Object> Array, das weniger als die Anzahl der Spalten in der resultierenden Zeile enthält. Nur die Menge der Daten die <xref:System.Object> Array enthält, wird in das Array kopiert. Sie können auch übergeben ein <xref:System.Object> Array, dessen Länge größer als die Anzahl der Spalten in der resultierenden Zeile enthalten ist.  
+  
+ Diese Methode gibt <xref:System.DBNull> für null-Datenbankspalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrdinal">
+      <MemberSignature Language="C#" Value="public override int GetOrdinal (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetOrdinal(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetOrdinal(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <summary>Ruft den Namen der Spalte anhand der Spalte ordinal, ab.</summary>
+        <returns>Die nullbasierte Ordnungszahl der Spalte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OracleClient.OracleDataReader.GetOrdinal%2A>führt zuerst eine Suche Groß-/Kleinschreibung beachtet. Falls dies fehlschlägt, wird eine zweite Suche Groß-und Kleinschreibung hergestellt. Die Methode löst eine `IndexOutOfRange` -Ausnahme aus, wenn die nullbasierte Ordnungszahl der Spalte nicht gefunden wird.  
+  
+ <xref:System.Data.OracleClient.OracleDataReader.GetOrdinal%2A>wird die Laufweite von Kana nicht beachtet.  
+  
+ Da Ordnungszahlen basierende Suchvorgänge effizienter als Nachschlagevorgänge nach Namen, ist es ineffizient, rufen Sie <xref:System.Data.OracleClient.OracleDataReader.GetOrdinal%2A> innerhalb einer Schleife. Rufen Sie stattdessen <xref:System.Data.OracleClient.OracleDataReader.GetOrdinal%2A> einmal und weisen dann die Ergebnisse in eine ganzzahlige Variable für innerhalb der Schleife verwenden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Data.OracleClient.OracleDataReader.GetOrdinal%2A>-Methode veranschaulicht.  
+  
+```vb  
+Public Sub ReadOracleData(ByVal connectionString As String)  
+  
+    Dim queryString As String = "SELECT OrderID, CustomerID FROM Orders"  
+    Dim connection As New OracleConnection(connectionString)  
+    Dim command As New OracleCommand(queryString, connectionString)  
+  
+    connection.Open()  
+  
+    Dim reader As OracleDataReader = command.ExecuteReader()  
+  
+    Dim custIdCol As Integer = reader.GetOrdinal("CustomerID")  
+  
+    Do While reader.Read()  
+        Console.WriteLine("CustomerID = {0}", reader.GetString(custIdCol))  
+    Loop  
+  
+    reader.Close()  
+    connection.Close()  
+End Sub  
+```  
+  
+```csharp  
+public void ReadOracleData(string connectionString)  
+{  
+    string queryString = "SELECT OrderID, CustomerID FROM Orders";  
+    OracleConnection connection = new OracleConnection(connectionString);  
+    OracleCommand command = new OracleCommand(queryString,connection);  
+  
+    connection.Open();  
+    OracleDataReader reader = command.ExecuteReader();  
+  
+    int custIdCol = reader.GetOrdinal("CustomerID");  
+  
+    while (reader.Read())  
+        Console.WriteLine("CustomerID = {0}", reader.GetString(custIdCol));  
+  
+    reader.Close();  
+    connection.Close();  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderSpecificFieldType">
+      <MemberSignature Language="C#" Value="public override Type GetProviderSpecificFieldType (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetProviderSpecificFieldType(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetProviderSpecificFieldType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Eine <see cref="T:System.Int32" />.</param>
+        <summary>Ruft eine <see langword="Object" /> also eine Darstellung der zugrunde liegenden Anbieter bestimmte Feldtyp.</summary>
+        <returns>Ruft eine <see cref="T:System.Object" /> also eine Darstellung der zugrunde liegenden Anbieter bestimmte Feldtyp.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderSpecificValue">
+      <MemberSignature Language="C#" Value="public override object GetProviderSpecificValue (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetProviderSpecificValue(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetProviderSpecificValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Eine <see cref="T:System.Int32" />.</param>
+        <summary>Ruft eine <see langword="Object" /> also eine Darstellung der zugrunde liegenden Anbieter bestimmte Feldtyp.</summary>
+        <returns>Ruft eine <see cref="T:System.Object" /> also eine Darstellung der zugrunde liegenden Anbieter bestimmte Feldtyp.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderSpecificValues">
+      <MemberSignature Language="C#" Value="public override int GetProviderSpecificValues (object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetProviderSpecificValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetProviderSpecificValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Ein Array von <see cref="T:System.Object" />.</param>
+        <summary>Ruft ein Array von Objekten, die eine Darstellung der zugrunde liegenden Anbieter bestimmte Werte sind.</summary>
+        <returns>Die Anzahl der Instanzen von <see cref="T:System.Object" /> im Array.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die meisten Anwendungen die <xref:System.Data.OracleClient.OracleDataReader.GetProviderSpecificValues%2A> Methode ein effizientes Instrument für jede Spalte einzeln abrufen, statt alle Spalten abgerufen.  
+  
+ Sie können übergeben ein <xref:System.Object> Array, das weniger als die Anzahl der Spalten in der resultierenden Zeile enthält. Nur die Menge der Daten die <xref:System.Object> Array enthält, wird in das Array kopiert. Sie können auch übergeben ein <xref:System.Object> Array, dessen Länge größer als die Anzahl der Spalten in der resultierenden Zeile enthalten ist.  
+  
+ Diese Methode gibt <xref:System.DBNull> für null-Datenbankspalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchemaTable">
+      <MemberSignature Language="C#" Value="public override System.Data.DataTable GetSchemaTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Data.DataTable GetSchemaTable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetSchemaTable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Data.DataTable" /> , die die Spaltenmetadaten des OracleDataReader beschreibt.</summary>
+        <returns>Eine <see cref="T:System.Data.DataTable" />, die die Spaltenmetadaten beschreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OracleClient.OracleDataReader.GetSchemaTable%2A> Methodenrückgabe Metadaten zu jeder Spalte in der folgenden Reihenfolge:  
+  
+|DataReader-Spalte|Beschreibung|  
+|-----------------------|-----------------|  
+|Spaltenname|Der Name der Spalte; dies möglicherweise nicht eindeutig sein. Wenn der Spaltenname nicht bestimmt werden kann, wird ein null-Wert zurückgegeben. Dieser Name gibt immer die aktuellste Benennung der Spalte in der aktuellen Ansichts- oder Befehlstext wieder.|  
+|ColumnOrdinal|Die nullbasierte Ordnungszahl der Spalte. Diese Spalte kann nicht auf einen null-Wert enthalten.|  
+|ColumnSize|Die maximal mögliche Länge eines Werts in der Spalte. Für Spalten, die einen Datentyp mit fester Länge verwenden, ist dies die Größe des Datentyps.|  
+|NumericPrecision|Wenn <xref:System.Data.OracleClient.OracleParameter.DbType%2A> ein numerischen Datentyp aufweisen, ist dies die maximale Genauigkeit der Spalte ist. Die Genauigkeit hängt von der Definition der Spalte ab. `Float`und `Double` in Oracle-Datentypen sind binäre Genauigkeit.|  
+|NumericScale|Wenn <xref:System.Data.OracleClient.OracleParameter.DbType%2A> ist ein numerischen Datentyp aufweisen, die Anzahl der Ziffern rechts vom Dezimaltrennzeichen an. `Float`und `Double` in Oracle-Datentypen sind binäre Skala.|  
+|DataType|Führt eine Zuordnung zum Typ common Language Runtime von <xref:System.Data.OracleClient.OracleParameter.DbType%2A>.|  
+|IsLong|`true`Wenn die Spalte eine lange BLOB (Binary Object), die sehr lange Daten enthält enthält.|  
+|AllowDBNull|`true`Wenn der Consumer die Spalte auf einen null-Wert festlegen kann; andernfalls `false`. Eine Spalte kann null-Werte enthalten, selbst wenn sie auf den Wert null festgelegt werden kann.|  
+|IsUnique|`true`: Keine zwei Zeilen in der Tabelle der Basistabelle im zurückgegebenen <xref:System.Data.Common.SchemaTableColumn.BaseTableName> -haben den gleichen Wert in dieser Spalte. **IsUnique** ist garantiert `true` , wenn die Spalte selbst einen Schlüssel bilden oder wenn es eine Einschränkung des Typs UNIQUE, die nur für diese Spalte gilt. `false`: Die Spalte kann in der Basistabelle doppelte Werte enthalten. Der Standardwert für diese Spalte ist "false".|  
+|IsKey|`true`: Die Spalte gehört zu einem Satz von Spalten im Rowset, die zusammen die Zeile eindeutig identifizieren. Die Anzahl der Spalten mit **IsKey** festlegen auf "true" muss eine Zeile im Rowset eindeutig identifizieren. Es ist nicht erforderlich, dass dieser Satz von Spalten einen minimalen Satz von Spalten ist. Diese Gruppe von Spalten kann aus einem Primärschlüssel der Basistabelle, eine unique-Einschränkung oder einen eindeutigen Index generiert werden. `false`: Die Spalte ist nicht erforderlich, um die Zeile eindeutig zu identifizieren.|  
+|"BaseTableName"|Der Name der Tabelle oder Sicht im Datenspeicher, der die Spalte enthält. Ein null-Wert, wenn der Name der Basistabelle nicht bestimmt werden kann. Der Standardwert für diese Spalte ist ein null-Wert.|  
+|BaseColumnName|Der Name der Spalte im Datenspeicher. Dies ist möglicherweise anders als Namen der Spalte zurückgegeben, die der **ColumnName** Spalte ein Alias verwendet wurde. Ein null-Wert, wenn der Name der Basisspalte nicht bestimmt werden kann oder wenn die Spalte des Rowsets abgeleitet, jedoch nicht identisch mit ist, eine Spalte in den Daten speichern. Der Standardwert für diese Spalte ist ein null-Wert.|  
+|BaseSchemaName|Der Name des Schemas im Datenspeicher, der die Spalte enthält. Ein null-Wert, wenn der Name des Basisschemas nicht bestimmt werden kann. Der Standardwert für diese Spalte ist ein null-Wert.|  
+  
+ Eine Zeile für jede Spalte im Resultset zurückgegeben.  
+  
+> [!NOTE]
+>  Um sicherzustellen, dass die Metadatenspalten die richtigen Informationen zurückgeben, rufen Sie <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A> mit der `behavior` Parametersatz auf `KeyInfo`. Andernfalls möglicherweise einige der Spalten in der Schematabelle in der Standardeinstellung null oder falsche Daten zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public override string GetString (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetString(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetString(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als Zeichenfolge ab.</summary>
+        <returns>Der Wert der angegebenen Spalte als Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTimeSpan">
+      <MemberSignature Language="C#" Value="public TimeSpan GetTimeSpan (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.TimeSpan GetTimeSpan(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetTimeSpan(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der angegebenen Spalte als eine <see langword="System.TimeSpan" />.</summary>
+        <returns>Der Wert der angegebenen Spalte als <see cref="T:System.TimeSpan" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.OracleClient.OracleDataReader.IsDBNull%2A> für null-Werte zu überprüfen, vor dem Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die angegebene Umwandlung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public override object GetValue (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetValue(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft den Wert der Spalte an der angegebenen Ordnungsposition im systemeigenen Format ab.</summary>
+        <returns>Der zurückzugebende Wert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt <xref:System.DBNull> für null-Datenbankspalten. Von dieser Methode zurückgegebene Wert möglicherweise das Ergebnis der Konvertierung von Oracle Datentyp Number zu .NET Decimal-Typ. Wenn der Wert in .NET Decimal, das zu speichernde zu groß ist, löst diese Methode eine <xref:System.Data.OracleClient.OracleException> also eine Überlaufausnahme auslösen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.OracleClient.OracleException">Der Wert ist zu groß, um in der .NET Decimal gespeichert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public override int GetValues (object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.GetValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Ein Array vom Typ <see cref="T:System.Object" /> in das die Attributspalten kopiert.</param>
+        <summary>Füllt ein Objektarray mit den Spaltenwerten der aktuellen Zeile.</summary>
+        <returns>Die Anzahl der Instanzen von <see cref="T:System.Object" /> im Array.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die meisten Anwendungen die <xref:System.Data.OracleClient.OracleDataReader.GetValues%2A> Methode ein effizientes Instrument für jede Spalte einzeln abrufen, statt alle Spalten abgerufen.  
+  
+ Sie können übergeben ein <xref:System.Object> Array, das weniger als die Anzahl der Spalten in der resultierenden Zeile enthält. Nur die Menge der Daten die <xref:System.Object> Array enthält, wird in das Array kopiert. Sie können auch übergeben ein <xref:System.Object> Array, dessen Länge größer als die Anzahl der Spalten in der resultierenden Zeile enthalten ist.  
+  
+ Diese Methode gibt <xref:System.DBNull> für null-Datenbankspalten. Der zurückgegebene Wert in der <xref:System.Object> Array kann das Ergebnis der Konvertierung von Oracle Datentyp Number zu .NET Decimal-Typ sein. Wenn der Wert in .NET Decimal, das zu speichernde zu groß ist, löst diese Methode eine <xref:System.Data.OracleClient.OracleException> also eine Überlaufausnahme auslösen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.OracleClient.OracleException">Der Wert ist zu groß, um in der .NET Decimal gespeichert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasRows">
+      <MemberSignature Language="C#" Value="public override bool HasRows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasRows" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataReader.HasRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Data.OracleClient.OracleDataReader" /> eine oder mehrere Zeilen enthält.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Data.OracleClient.OracleDataReader" /> enthält eine oder mehrere Zeilen; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClosed">
+      <MemberSignature Language="C#" Value="public override bool IsClosed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClosed" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataReader.IsClosed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die <see cref="T:System.Data.OracleClient.OracleDataReader" /> geschlossen wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Data.OracleClient.OracleDataReader" /> geschlossen ist, andernfalls wird <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OracleClient.OracleDataReader.IsClosed%2A>und <xref:System.Data.OracleClient.OracleDataReader.RecordsAffected%2A> sind die einzigen Eigenschaften, die Sie, nachdem aufrufen können die <xref:System.Data.OracleClient.OracleDataReader> geschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDBNull">
+      <MemberSignature Language="C#" Value="public override bool IsDBNull (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDBNull(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.IsDBNull(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die nullbasierte Ordnungszahl der Spalte.</param>
+        <summary>Ruft einen Wert, der angibt, ob die Spalte nicht vorhandene oder fehlende Werte enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Spaltenwert gleich <see cref="T:System.DBNull" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu vermeiden, ein Fehler ausgelöst wird, rufen Sie diese Methode, überprüfen Sie, ob null-Spaltenwerte vor dem Aufruf typisierter Get-Methoden (z. B. <xref:System.Data.OracleClient.OracleDataReader.GetByte%2A>, <xref:System.Data.OracleClient.OracleDataReader.GetChar%2A>usw.).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[int i] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataReader.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Die Spaltenordnungszahl.</param>
+        <summary>Ruft den Wert der angegebenen Spalte im systemeigenen Format angegebener Spaltenordnungszahl ab.</summary>
+        <value>Der Wert der angegebenen Spalte im systemeigenen Format.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index lag außerhalb des Bereichs von 0 bis <see cref="P:System.Data.IDataRecord.FieldCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataReader.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Spaltenname</param>
+        <summary>Ruft den Wert der angegebenen Spalte im systemeigenen Format Berücksichtigung des Spaltennamens.</summary>
+        <value>Der Wert der angegebenen Spalte im systemeigenen Format.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Keine Spalte mit dem angegebenen Namen wurde gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NextResult">
+      <MemberSignature Language="C#" Value="public override bool NextResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool NextResult() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.NextResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die <see cref="T:System.Data.OracleClient.OracleDataReader" /> auf das nächste Ergebnis</summary>
+        <returns>
+          <see langword="true" />Falls weitere Resultsets vorhanden sind; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie eine `REF CURSOR` beim Aufrufen dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override bool Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleDataReader.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den <see cref="T:System.Data.OracleClient.OracleDataReader" /> auf den nächsten Datensatz.</summary>
+        <returns>
+          <see langword="true" />, wenn mehrere Zeilen vorhanden sind; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardposition des der <xref:System.Data.OracleClient.OracleDataReader> wird vor dem ersten Datensatz. Aus diesem Grund müssen Sie aufrufen <xref:System.Data.OracleClient.OracleDataReader.Read%2A> um den Zugriff auf alle Daten zu beginnen.  
+  
+ Mehrere <xref:System.Data.OracleClient.OracleDataReader> können gleichzeitig geöffnet sein.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleConnection>, wird ein <xref:System.Data.OracleClient.OracleCommand>, und ein <xref:System.Data.OracleClient.OracleDataReader>. Das Beispiel liest durch die Daten, die an die Konsole schreiben. Im Beispiel wird schließlich schließt die <xref:System.Data.OracleClient.OracleDataReader>, und klicken Sie dann die <xref:System.Data.OracleClient.OracleConnection>.  
+  
+ [!code-csharp[Classic WebData IDataReader.Read Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData IDataReader.Read Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData IDataReader.Read Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData IDataReader.Read Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordsAffected">
+      <MemberSignature Language="C#" Value="public override int RecordsAffected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RecordsAffected" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleDataReader.RecordsAffected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der durch die Ausführung der SQL-Anweisung geänderten, eingefügten oder gelöschten Zeilen ab.</summary>
+        <value>Die Anzahl der geänderten, eingefügten oder gelöschten Zeilen. -1 für SELECT-Anweisungen; Fehler bei 0, wenn keine Zeilen betroffen sind oder die Anweisung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OracleClient.OracleDataReader.RecordsAffected%2A> Eigenschaft ist nicht festgelegt, bis alle Zeilen gelesen wurden, und Sie schließen die <xref:System.Data.OracleClient.OracleDataReader>.  
+  
+ <xref:System.Data.OracleClient.OracleDataReader.IsClosed%2A>und <xref:System.Data.OracleClient.OracleDataReader.RecordsAffected%2A> sind die einzigen Eigenschaften, die Sie, nachdem aufrufen können die <xref:System.Data.OracleClient.OracleDataReader> geschlossen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

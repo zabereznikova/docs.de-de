@@ -1,0 +1,134 @@
+<Type Name="ResXResourceSet" FullName="System.Resources.ResXResourceSet">
+  <TypeSignature Language="C#" Value="public class ResXResourceSet : System.Resources.ResourceSet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResXResourceSet extends System.Resources.ResourceSet" />
+  <TypeSignature Language="DocId" Value="T:System.Resources.ResXResourceSet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Resources.ResourceSet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt alle Ressourcen in einer XML-Ressourcendatei (.resx) dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Resources.ResXResourceSet> Listet die Klasse über eine <xref:System.Resources.IResourceReader>lädt alle Namen und Wert und speichert sie in einer Hashtabelle. Sie können dann Auflisten der Ressourcen in der <xref:System.Resources.ResXResourceSet> Objekt oder einzelne Ressourcen anhand des Namens abrufen.  
+  
+> [!NOTE]
+>  Diese Klasse enthält eine <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> und ein <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> auf Klassenebene, die für alle Member gilt. Ein <xref:System.Security.SecurityException> Ausnahme wird ausgelöst, wenn nicht für den unmittelbaren Aufrufer oder eine abgeleitete Klasse volle Vertrauenswürdigkeit verfügt.  
+  
+ Ein <xref:System.Resources.ResXResourceSet> Objekt bietet eine einfache Möglichkeit, alle Ressourcen in einer RESX-Datei in den Speicher eingelesen. Sie können die <xref:System.Resources.ResourceSet.GetObject%2A> Methode, um eine bestimmte Ressource abzurufen, wenn die RESX-Datei in gelesen wurde eine <xref:System.Resources.ResXResourceSet> Instanz.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen <xref:System.Resources.ResXResourceSet> Objekt, und veranschaulicht, wie ihre Ressourcen auflisten und einzelne Ressourcen anhand des Namens abrufen. Für jede Ressource, die aufgezählt, die im Beispiel wird die <xref:System.Collections.IDictionaryEnumerator.Key%2A?displayProperty=nameWithType> Eigenschaft in einem Aufruf der `GetString` oder `GetObject` -Methode, je nachdem, ob der Wert der Ressource, eine Zeichenfolge oder ein Objekt.  
+  
+ [!code-csharp[System.Resources.ResXResourceSet.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resxresourceset.class/cs/example1.cs#1)]
+ [!code-vb[System.Resources.ResXResourceSet.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resxresourceset.class/vb/example1.vb#1)]  
+  
+ Im Beispiel wird eine `CreateResXFile` Methode, um die erforderlichen XML-Ressourcendatei zu erstellen. Es muss eine Bitmap-Datei mit dem Namen Logo.bmp in das Verzeichnis, in dem das Beispiel ausgeführt wird.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+    <block subset="none" type="overrides">
+      <para>Abgeleitete Klassen von <see cref="T:System.Resources.ResXResourceSet" /> , die ihre eigenen Ressourcenreaders verwenden und Writer sollten überschreiben die <see cref="M:System.Resources.ResXResourceSet.GetDefaultReader" /> und <see cref="M:System.Resources.ResXResourceSet.GetDefaultWriter" /> Methoden zur Bereitstellung der entsprechenden Funktionalität für das Interpretieren der <see cref="T:System.Resources.ResXResourceSet" /> Instanz.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceSet (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceSet.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der <see cref="T:System.IO.Stream" /> der zu lesenden Ressourcen. Der Stream muss auf eine vorhandene Ressourcendatei verweisen.</param>
+        <summary>Initialisiert mit dem als Standard festgelegten <see cref="T:System.Resources.ResXResourceSet" /> eine neue Instanz der <see cref="T:System.Resources.ResXResourceReader" />-Klasse, um Ressourcen aus dem angegebenen Stream zu lesen.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceSet (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceSet.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der Datei, aus der Ressourcen gelesen werden sollen.</param>
+        <summary>Initialisiert mit dem als Standard festgelegten <see cref="T:System.Resources.ResXResourceSet" /> eine neue Instanz der <see cref="T:System.Resources.ResXResourceReader" />-Klasse, um Ressourcen aus der angegebenen Datei zu öffnen und zu lesen.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultReader">
+      <MemberSignature Language="C#" Value="public override Type GetDefaultReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetDefaultReader() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceSet.GetDefaultReader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die bevorzugte Klasse von Ressourcenreadern für diese Art von <see cref="T:System.Resources.ResXResourceSet" /> zurück.</summary>
+        <returns>Der <see cref="T:System.Type" /> des bevorzugten Ressourcenreaders für diese Art von <see cref="T:System.Resources.ResXResourceSet" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen von <see cref="T:System.Resources.ResXResourceSet" /> mithilfe ihrer eigenen Ressourcenreaders überschreiben sollten <see cref="M:System.Resources.ResXResourceSet.GetDefaultReader" /> und <see cref="M:System.Resources.ResXResourceSet.GetDefaultWriter" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultWriter">
+      <MemberSignature Language="C#" Value="public override Type GetDefaultWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetDefaultWriter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceSet.GetDefaultWriter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die bevorzugte Klasse von Ressourcenwritern für diese Art von <see cref="T:System.Resources.ResXResourceSet" /> zurück.</summary>
+        <returns>Der <see cref="T:System.Type" /> des bevorzugten Ressourcenwriters für diese Art von <see cref="T:System.Resources.ResXResourceSet" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen von <see cref="T:System.Resources.ResXResourceSet" /> mithilfe ihrer eigenen Ressourcenreaders überschreiben sollten <see cref="M:System.Resources.ResXResourceSet.GetDefaultReader" /> und <see cref="M:System.Resources.ResXResourceSet.GetDefaultWriter" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

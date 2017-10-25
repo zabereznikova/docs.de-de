@@ -1,0 +1,87 @@
+<Type Name="TableDesigner" FullName="System.Web.UI.Design.WebControls.TableDesigner">
+  <TypeSignature Language="C#" Value="public class TableDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TableDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.TableDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.Design.SupportsPreviewControl(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Erweitert das Entwurfszeitverhalten für das <see cref="T:System.Web.UI.WebControls.Table" />-Webserversteuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie beim Ableiten einer Klasse von der <xref:System.Web.UI.Design.WebControls.TableDesigner> Klasse. Im zweiten Codebeispiel wird veranschaulicht, wie zum Anzeigen der `StyledTable` Klasse zur Entwurfszeit.  
+  
+ Das folgende Codebeispiel veranschaulicht das Erstellen einer Klasse mit dem Namen `StyledTableDesigner`, abgeleitet aus dem <xref:System.Web.UI.Design.WebControls.TableDesigner> Klasse, und dient zum Anzeigen von zwei Zellen zur Entwurfszeit für eine Klasse, die abgeleitet ist die <xref:System.Web.UI.WebControls.Table> Klasse.  
+  
+ [!code-vb[System.Web.UI.Design.WebControls.TableDesigner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.TableDesigner/VB/customtabledesigner.vb#1)]  
+  
+ Im folgenden Codebeispiel wird mit der `DesignerAttribute` zum Zuordnen der `StyledTableDesigner` -Klasse mit der `StyledTable` Klasse, damit es zur Entwurfszeit angezeigt werden kann.  
+  
+ [!code-vb[System.Web.UI.Design.WebControls.TableDesigner#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.TableDesigner/VB/customtable.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.TableDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.TableDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.TableDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den HTML-Code ab, der für die Darstellung des Steuerelements zur Entwurfszeit verwendet wird.</summary>
+        <returns>Die HTML-Darstellung des Steuerelements zur Entwurfszeit verwendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.TableDesigner.GetDesignTimeHtml%2A> Methode wird sichergestellt, dass die Tabelle mindestens eine Zeile und eine Zelle verfügt und die Zellen Text für die Anzeige zur Entwurfszeit enthalten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.TableDesigner.GetDesignTimeHtml%2A> Methode, um anzuzeigen, Zeilen und Zellen für die `StyledTable` Klasse auf der Entwurfsoberfläche angezeigt. In der `Try` blockieren, dem Code wird überprüft, ob die Tabelle Zeilen oder Zellen enthält, wenn nicht, wird eine Zeile erstellt und führt eine Schleife zum Erstellen von zwei Zellen für die Zeile, zusammen mit den Platzhaltertext zur Entwurfszeit in jeder Zelle angezeigt. Wenn die Tabelle nicht leer ist, aber eine Zeile ist, führt der Code dieselbe Schleife zum Erstellen und füllen Sie die Zellen aus. In der `Finally` Block, der Code gibt die Werte in ihren ursprünglichen Zustand zurück.  
+  
+ [!code-vb[System.Web.UI.Design.WebControls.TableDesigner#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.TableDesigner/VB/customtabledesigner.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

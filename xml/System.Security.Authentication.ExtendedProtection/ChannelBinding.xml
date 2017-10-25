@@ -1,0 +1,139 @@
+<Type Name="ChannelBinding" FullName="System.Security.Authentication.ExtendedProtection.ChannelBinding">
+  <TypeSignature Language="C#" Value="public abstract class ChannelBinding : Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ChannelBinding extends Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Authentication.ExtendedProtection.ChannelBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.InteropServices.SafeHandle</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Security.Authentication.ExtendedProtection.ChannelBinding" /> Klasse kapselt einen Zeiger auf die nicht transparenten Daten, die zum Binden einer authentifizierten Transaktion an einen sicheren Channel verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Kanalbindungstoken in einer <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> Klasseninstanz wird verwendet, um erweiterten Schutz für integrierte Windows-Authentifizierung zu bieten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ChannelBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Authentication.ExtendedProtection.ChannelBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Authentication.ExtendedProtection.ChannelBinding" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Kanalbindungstoken wird verwendet, um erweiterten Schutz für integrierte Windows-Authentifizierung bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ChannelBinding (bool ownsHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool ownsHandle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Authentication.ExtendedProtection.ChannelBinding.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownsHandle" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="ownsHandle">Ein boolescher Wert, der angibt, ob die Anwendung das sichere Handle zu einer systemeigenen Speicherbereich besitzt, enthält die Bytedaten, die in systemeigene Aufrufe übergeben werden, die erweiterten Schutz für integrierte Windows-Authentifizierung bereitstellen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Authentication.ExtendedProtection.ChannelBinding" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.%23ctor%2A> Konstruktor zurecht, wie die Bindung abgerufen wird, um zum Belegen und freigeben benötigen, in den systemeigenen aufrufen zu kompensieren, die erweiterten Schutz für integrierte Windows-Authentifizierung bereitstellen soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public abstract int Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Size" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size" /> Eigenschaft ruft die Größe in Bytes, der das Kanalbindungstoken zugeordneten der <see cref="T:System.Security.Authentication.ExtendedProtection.ChannelBinding" /> Instanz.</summary>
+        <value>Die Größe in Bytes, der das Kanalbindungstoken in die <see cref="T:System.Security.Authentication.ExtendedProtection.ChannelBinding" /> Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Größe der Kanalbindungstoken dürfen von abgeleiteten Klassen verwendet werden, bei der Übergabe der <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> Instanz, die ein Kanalbindungstoken für andere Klassen oder die systemeigenen Windows-Sicherheit enthält Funktionen implementiert, erweiterter Schutz. Das Kanalbindungstoken wird verwendet, um erweiterten Schutz für die integrierte Windows-Authentifizierung bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

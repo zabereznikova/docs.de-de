@@ -1,0 +1,83 @@
+<Type Name="ErrorHandlerModule" FullName="System.Web.Mobile.ErrorHandlerModule">
+  <TypeSignature Language="C#" Value="public class ErrorHandlerModule : System.Web.IHttpModule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ErrorHandlerModule extends System.Object implements class System.Web.IHttpModule" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Mobile.ErrorHandlerModule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpModule</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fehler aufgefangen, und Nachrichten für das entsprechende Gerät formatiert. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorHandlerModule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Mobile.ErrorHandlerModule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Web.Mobile.ErrorHandlerModule" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpModule.Dispose">
+      <MemberSignature Language="C#" Value="void IHttpModule.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.IHttpModule.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Mobile.ErrorHandlerModule.System#Web#IHttpModule#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die vom Modul verwendeten Ressourcen (mit Ausnahme des Speichers) frei. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpModule.Init">
+      <MemberSignature Language="C#" Value="void IHttpModule.Init (System.Web.HttpApplication application);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.IHttpModule.Init(class System.Web.HttpApplication application) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Mobile.ErrorHandlerModule.System#Web#IHttpModule#Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="application" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="application">Eine <see cref="T:System.Web.HttpApplication" />, die den Zugriff auf die Methoden, Eigenschaften und Ereignisse ermöglicht, die allen Anwendungsobjekten in einer ASP.NET-Anwendung gemeinsam sind.</param>
+        <summary>Das Modul initialisiert und vorbereitet werden kann, um Anforderungen zu verarbeiten. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,358 @@
+<Type Name="XmlCDataSection" FullName="System.Xml.XmlCDataSection">
+  <TypeSignature Language="C#" Value="public class XmlCDataSection : System.Xml.XmlCharacterData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlCDataSection extends System.Xml.XmlCharacterData" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlCDataSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlCharacterData</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen CDATA-Abschnitt dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ CDATA-Abschnitte werden verwendet, um Textblöcke verhindern, dass dieser Text wird als Markupsprache interpretiert Escapezeichen oder Anführungszeichen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlCDataSection (string data, System.Xml.XmlDocument doc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string data, class System.Xml.XmlDocument doc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlCDataSection.#ctor(System.String,System.Xml.XmlDocument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="data" Type="System.String" />
+        <Parameter Name="doc" Type="System.Xml.XmlDocument" />
+      </Parameters>
+      <Docs>
+        <param name="data">
+          <see cref="T:System.String" />Zeichendaten enthält.</param>
+        <param name="doc">
+          <see cref="T:System.Xml.XmlDocument" />-Objekt</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlCDataSection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneNode">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode CloneNode (bool deep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlNode CloneNode(bool deep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlCDataSection.CloneNode(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deep" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="deep">
+          <see langword="true" />, wenn die Teilstruktur unter dem angegebenen Knoten rekursiv geklont werden soll, <see langword="false" />, wenn nur der Knoten selbst geklont werden soll. Da CDATA-Knoten, unabhängig von der Parametereinstellung, keine untergeordneten Elemente aufweisen, enthält der geklonte Knoten immer den Dateninhalt.</param>
+        <summary>Erstellt ein Duplikat dieses Knotens.</summary>
+        <returns>Der geklonte Knoten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `CloneNode`Dient als einen Kopierkonstruktor für Knoten. Verhalten von dieser Methode mit anderen Knotentypen finden Sie unter der <xref:System.Xml.XmlNode.CloneNode%2A> Methode in der `XmlNode` Klasse.  
+  
+ Der geklonte Knoten weist kein übergeordnetes Element (<xref:System.Xml.XmlNode.ParentNode%2A> gibt `null`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalName">
+      <MemberSignature Language="C#" Value="public override string LocalName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlCDataSection.LocalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den lokalen Namen des Knotens ab.</summary>
+        <value>Für CDATA-Knoten lautet der lokale Name <see langword="#cdata-section" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlCDataSection.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den qualifizierten Namen des Knotens ab.</summary>
+        <value>Für CDATA-Knoten lautet der Name <see langword="#cdata-section" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlCDataSection.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des aktuellen Knotens ab.</summary>
+        <value>Der Knotentyp. Für CDATA-Knoten ist der Wert XmlNodeType.CDATA.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentNode">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode ParentNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNode ParentNode" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlCDataSection.ParentNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das übergeordnete Element dieses Knotens ab (bei Knoten, die über übergeordnete Elemente verfügen können).</summary>
+        <value>Der <see langword="XmlNode" />, der das übergeordnete Element des aktuellen Knotens ist. Wenn ein Knoten gerade erstellt, jedoch noch nicht der Struktur hinzugefügt oder aus dieser entfernt wurde, ist das übergeordnete Element <see langword="null" />. Für alle anderen Knoten hängt der zurückgegebene Wert vom <see cref="P:System.Xml.XmlNode.NodeType" /> des Knotens ab. In der folgenden Tabelle werden die möglichen Rückgabewerte für die <see langword="ParentNode" />-Eigenschaft beschrieben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousText">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode PreviousText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNode PreviousText" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlCDataSection.PreviousText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Textknoten ab, der diesem Knoten unmittelbar vorausgeht.</summary>
+        <value>Gibt <see cref="T:System.Xml.XmlNode" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteContentTo">
+      <MemberSignature Language="C#" Value="public override void WriteContentTo (System.Xml.XmlWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteContentTo(class System.Xml.XmlWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlCDataSection.WriteContentTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">Der <see langword="XmlWriter" />, in dem gespeichert werden soll.</param>
+        <summary>Speichert die untergeordneten Elemente des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da CDATA-Knoten keine untergeordneten Elemente, `WriteContentTo` hat keine Auswirkungen.  
+  
+ Diese Methode ist eine Microsoft-Erweiterung, die (DOKUMENTOBJEKTMODELL).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public override void WriteTo (System.Xml.XmlWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteTo(class System.Xml.XmlWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlCDataSection.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">Der <see langword="XmlWriter" />, in dem gespeichert werden soll.</param>
+        <summary>Speichert den Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine Microsoft-Erweiterung, die (DOKUMENTOBJEKTMODELL).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

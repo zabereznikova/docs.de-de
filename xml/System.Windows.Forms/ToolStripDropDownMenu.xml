@@ -1,0 +1,391 @@
+<Type Name="ToolStripDropDownMenu" FullName="System.Windows.Forms.ToolStripDropDownMenu">
+  <TypeSignature Language="C#" Value="public class ToolStripDropDownMenu : System.Windows.Forms.ToolStripDropDown" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolStripDropDownMenu extends System.Windows.Forms.ToolStripDropDown" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripDropDownMenu" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ToolStripDropDown</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.ToolStripDropDownDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisfunktionen für die <see cref="T:System.Windows.Forms.ContextMenuStrip" /> Steuerelement. Obwohl <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" /> und <see cref="T:System.Windows.Forms.ToolStripDropDown" /> ersetzt und funktionell die <see cref="T:System.Windows.Forms.Menu" /> -Steuerelement früherer Versionen <see cref="T:System.Windows.Forms.Menu" /> wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolStripDropDownMenu>ist die Basisklasse für <xref:System.Windows.Forms.ContextMenuStrip>, erforderlichen Paint-Ereignisse und Layout-Eigenschaften und Methoden bereitstellt. Werden die Eigenschaften dieser Klasse, die Sie höchstwahrscheinlich direkt verwenden, werden die <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> und <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> Eigenschaften, die bestimmen, ob das Kontextmenü ein Häkchen, ein Bild oder beides anzeigen kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen und initialisieren Sie ein <xref:System.Windows.Forms.ContextMenuStrip> Steuerelement durch die Kontrollkästchen- und Bildrändern festlegen.  
+  
+> [!IMPORTANT]
+>  Dieser Code ist kein vollständiges Beispiel, damit er nicht kompiliert werden. Eine vollständige Codebeispiel finden Sie unter [Vorgehensweise: Aktivieren überprüfen Aktivierungs- und Bildrands in ContextMenuStrip-Steuerelementen](~/docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#61)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#61)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripDropDownMenu ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownMenu.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen und initialisieren Sie ein <xref:System.Windows.Forms.ContextMenuStrip> Steuerelement. Eine vollständige Codebeispiel finden Sie unter [Vorgehensweise: Aktivieren überprüfen Aktivierungs- und Bildrands in ContextMenuStrip-Steuerelementen](~/docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#62](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#62)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#62](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#62)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultItem">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ToolStripItem CreateDefaultItem (string text, System.Drawing.Image image, EventHandler onClick);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Windows.Forms.ToolStripItem CreateDefaultItem(string text, class System.Drawing.Image image, class System.EventHandler onClick) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownMenu.CreateDefaultItem(System.String,System.Drawing.Image,System.EventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="onClick" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text, der für das <see cref="T:System.Windows.Forms.ToolStripMenuItem" />-Objekt verwendet werden soll. Wenn die <c>Text</c> -Parameter ein Bindestrich (-) ist, erstellt diese Methode eine <see cref="T:System.Windows.Forms.ToolStripSeparator" />.</param>
+        <param name="image">Das <see cref="T:System.Drawing.Image" />, das für das <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> angezeigt werden soll.</param>
+        <param name="onClick">Ein Ereignishandler, der das <see cref="E:System.Windows.Forms.ToolStripItem.Click" />-Ereignis auslöst, wenn auf das <see cref="T:System.Windows.Forms.ToolStripMenuItem" />-Objekt geklickt wird.</param>
+        <summary>Erstellt ein Standard- <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> mit dem angegebenen Text, Image und dem angegebenen Ereignishandler auf einem neuen <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.ToolStripMenuItem" />- oder ein <see cref="T:System.Windows.Forms.ToolStripSeparator" />-Objekt, wenn der <paramref name="text" />-Parameter ein Bindestrich (-) ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.ToolStripDropDownMenu.CreateDefaultItem%2A> -Methode zum Hinzufügen einer <xref:System.Windows.Forms.ToolStripMenuItem> mit häufig verwendeten Eigenschaften einer <xref:System.Windows.Forms.ToolStripDropDownMenu>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPadding">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.Padding DefaultPadding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding DefaultPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripDropDownMenu.DefaultPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den internen Abstand des Steuerelements in Pixel ab.</summary>
+        <value>Ein <see langword="Padding" /> Objekt, das den Abstand darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayRectangle">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Rectangle DisplayRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle DisplayRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripDropDownMenu.DisplayRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Rechteck, das den Anzeigebereich des stellt die <see cref="T:System.Windows.Forms.ToolStripDropDownMenu" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" /> , das den Anzeigebereich darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LayoutEngine">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.Layout.LayoutEngine LayoutEngine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Layout.LayoutEngine LayoutEngine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripDropDownMenu.LayoutEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Layout.LayoutEngine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Übergibt einen Verweis auf das zwischengespeicherte <see cref="P:System.Windows.Forms.Control.LayoutEngine" />, das von der Layoutmodulschnittstelle zurückgegeben wird.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Layout.LayoutEngine" />, das das zwischengespeicherte, von der Layoutmodulschnittstelle zurückgegebene Layoutmodul darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LayoutStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripLayoutStyle LayoutStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ToolStripLayoutStyle LayoutStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripDropDownMenu.LayoutStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripLayoutStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, wie die Elemente des <see cref="T:System.Windows.Forms.ContextMenuStrip" /> werden angezeigt.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ToolStripLayoutStyle" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.ToolStripLayoutStyle.Flow" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig <xref:System.Windows.Forms.ContextMenuStrip> Elemente fließen, horizontal oder vertikal nach Bedarf. Finden Sie unter der <xref:System.Windows.Forms.ToolStripLayoutStyle> Enumeration für die weitere Möglichkeiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxItemSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size MaxItemSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size MaxItemSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripDropDownMenu.MaxItemSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Höhe und die Breite des <see cref="T:System.Windows.Forms.ContextMenuStrip" />-Objekts in Pixel ab.</summary>
+        <value>Ein <see langword="Size" /> Objekt, das die Höhe und Breite des Steuerelements in Pixel darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFontChanged">
+      <MemberSignature Language="C#" Value="protected override void OnFontChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFontChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownMenu.OnFontChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ToolStripDropDown.FontChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolStripDropDownMenu.OnFontChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolStripDropDownMenu.OnFontChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolStripDropDownMenu.OnFontChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLayout">
+      <MemberSignature Language="C#" Value="protected override void OnLayout (System.Windows.Forms.LayoutEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLayout(class System.Windows.Forms.LayoutEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownMenu.OnLayout(System.Windows.Forms.LayoutEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.LayoutEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.LayoutEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.Layout" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ToolStripDropDownMenu.OnLayout%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.ToolStripDropDownMenu.OnLayout(System.Windows.Forms.LayoutEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.ToolStripDropDownMenu.OnLayout(System.Windows.Forms.LayoutEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaintBackground">
+      <MemberSignature Language="C#" Value="protected override void OnPaintBackground (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaintBackground(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownMenu.OnPaintBackground(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.PaintEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Zeichnet den Hintergrund des Steuerelements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDisplayedItems">
+      <MemberSignature Language="C#" Value="protected override void SetDisplayedItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDisplayedItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownMenu.SetDisplayedItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die Auflistung von angezeigten Elementen und Überlaufelementen zurück, nachdem ein Layout fertiggestellt wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowCheckMargin">
+      <MemberSignature Language="C#" Value="public bool ShowCheckMargin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowCheckMargin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Speicherplatz für ein Häkchen, auf dem linken Rand angezeigt wird der <see cref="T:System.Windows.Forms.ToolStripMenuItem" />.</summary>
+        <value>
+          <see langword="true" />Wenn der Rand Kontrollkästchen angezeigt wird. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> Eigenschaft `true` ein Häkchen angezeigt, wenn Benutzer die <xref:System.Windows.Forms.ToolStripMenuItem>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen und initialisieren Sie ein <xref:System.Windows.Forms.ContextMenuStrip> Steuerelement durch die Kontrollkästchen- und Bildrändern festlegen. Eine vollständige Codebeispiel finden Sie unter [Vorgehensweise: Aktivieren überprüfen Aktivierungs- und Bildrands in ContextMenuStrip-Steuerelementen](~/docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#61)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#61)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowImageMargin">
+      <MemberSignature Language="C#" Value="public bool ShowImageMargin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowImageMargin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Speicherplatz für ein Bild, auf dem linken Rand angezeigt wird der <see cref="T:System.Windows.Forms.ToolStripMenuItem" />.</summary>
+        <value>
+          <see langword="true" />Wenn der Bildrand angezeigt wird. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> Eigenschaft `true` anzuzeigenden eine Grafik mit den <xref:System.Windows.Forms.ToolStripMenuItem>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen und initialisieren Sie ein <xref:System.Windows.Forms.ContextMenuStrip> Steuerelement durch die Kontrollkästchen- und Bildrändern festlegen. Eine vollständige Codebeispiel finden Sie unter [Vorgehensweise: Aktivieren überprüfen Aktivierungs- und Bildrands in ContextMenuStrip-Steuerelementen](~/docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#61)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#61)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

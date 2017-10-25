@@ -1,0 +1,397 @@
+<Type Name="Margins" FullName="System.Drawing.Printing.Margins">
+  <TypeSignature Language="C#" Value="public class Margins : ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Margins extends System.Object implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Printing.Margins" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.Printing.MarginsConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Größe der Ränder einer gedruckten Seite.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Printing.Margins> Klasse wird verwendet, um die Breite des endrands in Bearbeitung <xref:System.Drawing.Printing.PageSettings> und <xref:System.Drawing.Printing.PrintController>. <xref:System.Drawing.Printing.MarginsConverter>der Typdeskriptor für diese Klasse ist.  
+  
+ <xref:System.Drawing.Printing.Margins.Left%2A>, <xref:System.Drawing.Printing.Margins.Right%2A>, <xref:System.Drawing.Printing.Margins.Top%2A>, und <xref:System.Drawing.Printing.Margins.Bottom%2A> sind Eigenschaften, die die Ränder zu definieren. <xref:System.Drawing.Printing.Margins.Clone%2A>erstellt einen identischen <xref:System.Drawing.Printing.Margins>. <xref:System.Drawing.Printing.Margins.Equals%2A>Bestimmt, ob ein anderes Objekt als die gleichen Dimensionen verfügt über eine <xref:System.Drawing.Printing.Margins>.  
+  
+ Weitere Informationen zu drucken, finden Sie unter der <xref:System.Drawing.Printing> Namespace (Übersicht).  
+  
+   
+  
+## Examples  
+ Verwenden der <xref:System.Drawing>, <xref:System.Drawing.Printing>, und <xref:System.IO> Namespaces für dieses Beispiel.  
+  
+ Im folgenden Codebeispiel wird die Standardeinstellung legt seiteneinstellungen fest für ein Dokument an den Rändern des 1 Zoll auf jeder Seite.  
+  
+ [!code-cpp[Classic Margins Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Margins Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Margins Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Margins Example/CS/source.cs#1)]
+ [!code-vb[Classic Margins Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Margins Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Margins ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.Margins.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Printing.Margins" /> Klasse mit 1 Zoll breit Rändern.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Margins (int left, int right, int top, int bottom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 left, int32 right, int32 top, int32 bottom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.Margins.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="left" Type="System.Int32" />
+        <Parameter Name="right" Type="System.Int32" />
+        <Parameter Name="top" Type="System.Int32" />
+        <Parameter Name="bottom" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der linke Rand in Zoll Hundertstelsekunden.</param>
+        <param name="right">Der rechte Rand in Zoll Hundertstelsekunden.</param>
+        <param name="top">Der obere Rand in Zoll Hundertstelsekunden.</param>
+        <param name="bottom">Den unteren Rand in Zoll Hundertstelsekunden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Printing.Margins" /> -Klasse mit dem angegebenen Links, rechts, oben und unten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Verwenden der <xref:System.Drawing>, <xref:System.Drawing.Printing>, und <xref:System.IO> Namespaces für dieses Beispiel.  
+  
+ Im folgenden Codebeispiel wird legt die Standardeinstellung seiteneinstellungen für ein Dokument an den Rändern des 1 Zoll Breite auf jeder Seite.  
+  
+ [!code-cpp[Classic Margins Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Margins Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Margins Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Margins Example/CS/source.cs#1)]
+ [!code-vb[Classic Margins Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Margins Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="left" /> Parameterwert ist kleiner als 0.  
+  
+ - oder -   
+  
+ Die <paramref name="right" /> Parameterwert ist kleiner als 0.  
+  
+ - oder -   
+  
+ Die <paramref name="top" /> Parameterwert ist kleiner als 0.  
+  
+ - oder -   
+  
+ Die <paramref name="bottom" /> Parameterwert ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="public int Bottom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Bottom" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.Margins.Bottom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den unteren Rand in Zoll Hundertstelsekunden fest.</summary>
+        <value>Den unteren Rand in Zoll Hundertstelsekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die Ränder in Millimetern messen, Multiplizieren die Randbreite Sie möchten in Millimeter mit 3,937 bestimmen das richtige Maß Randbreite in Zoll. Z. B. Wenn Sie einen Rand von 25 mm möchten, wird multiply 3,937 und das Ergebnis 98 beim abgerundet. Legen Sie dann die entsprechende <xref:System.Drawing.Printing.Margins> Member 98.  
+  
+   
+  
+## Examples  
+ Verwenden der <xref:System.Drawing>, <xref:System.Drawing.Printing>, und <xref:System.IO> Namespaces für dieses Beispiel.  
+  
+ Das folgende Codebeispiel legt die Standardeinstellungen für die Seite für ein Dokument auf der linken und rechten Rand von 1 Zoll Breite und die oberen und unteren Rand des 1,5 Zoll Breite fest.  
+  
+ [!code-cpp[Classic Margins.Left Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Margins.Left Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Margins.Left Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Margins.Left Example/CS/source.cs#1)]
+ [!code-vb[Classic Margins.Left Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Margins.Left Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Drawing.Printing.Margins.Bottom" /> Eigenschaft auf einen Wert kleiner als 0 festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.Margins.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Duplikat dieses Objekts, die von Mitgliedern ab.</summary>
+        <returns>Ein Duplikat dieses Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.Margins.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das dem verglichen werden soll dies <see cref="T:System.Drawing.Printing.Margins" />.</param>
+        <summary>Vergleicht dieses <see cref="T:System.Drawing.Printing.Margins" /> in den angegebenen <see cref="T:System.Object" /> um zu bestimmen, ob sie die gleichen Dimensionen aufweisen.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Objekt eine <see cref="T:System.Drawing.Printing.Margins" /> und hat die gleiche <see cref="P:System.Drawing.Printing.Margins.Top" />, <see cref="P:System.Drawing.Printing.Margins.Bottom" />, <see cref="P:System.Drawing.Printing.Margins.Right" /> und <see cref="P:System.Drawing.Printing.Margins.Left" /> wie diese Werte <see cref="T:System.Drawing.Printing.Margins" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.Margins.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Berechnet, und ruft einen Hashcode basierend auf die Breite der Links, rechts, oberen und unteren Seitenrand.</summary>
+        <returns>Ein Hashcode basierend auf der Links, rechts, oberen und unteren Seitenrand.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public int Left { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Left" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.Margins.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite des linken Rands in hunderstel Zoll.</summary>
+        <value>Die Breite des linken Rand in Zoll Hundertstelsekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die Ränder in Millimetern messen, Multiplizieren die Randbreite Sie möchten in Millimeter mit 3,937 bestimmen das richtige Maß Randbreite in Zoll. Z. B. Wenn Sie einen Rand von 25 mm möchten, wird multiply 3,937 und das Ergebnis 98 beim abgerundet. Legen Sie dann die entsprechende <xref:System.Drawing.Printing.Margins> Member 98.  
+  
+   
+  
+## Examples  
+ Verwenden der <xref:System.Drawing>, <xref:System.Drawing.Printing>, und <xref:System.IO> Namespaces für dieses Beispiel.  
+  
+ Das folgende Codebeispiel legt die Standardeinstellungen für die Seite für ein Dokument auf der linken und rechten Rand von 1 Zoll Breite und die oberen und unteren Rand des 1,5 Zoll Breite fest.  
+  
+ [!code-cpp[Classic Margins.Left Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Margins.Left Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Margins.Left Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Margins.Left Example/CS/source.cs#1)]
+ [!code-vb[Classic Margins.Left Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Margins.Left Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Drawing.Printing.Margins.Left" /> Eigenschaft auf einen Wert kleiner als 0 festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Drawing.Printing.Margins m1, System.Drawing.Printing.Margins m2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Drawing.Printing.Margins m1, class System.Drawing.Printing.Margins m2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.Margins.op_Equality(System.Drawing.Printing.Margins,System.Drawing.Printing.Margins)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m1" Type="System.Drawing.Printing.Margins" />
+        <Parameter Name="m2" Type="System.Drawing.Printing.Margins" />
+      </Parameters>
+      <Docs>
+        <param name="m1">Die erste <see cref="T:System.Drawing.Printing.Margins" /> auf Gleichheit verglichen werden soll.</param>
+        <param name="m2">Die zweite <see cref="T:System.Drawing.Printing.Margins" /> auf Gleichheit verglichen werden soll.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Drawing.Printing.Margins" /> zu bestimmen, ob sie die gleichen Dimensionen aufweisen.</summary>
+        <returns>
+          <see langword="true" />um anzugeben, die <see cref="P:System.Drawing.Printing.Margins.Left" />, <see cref="P:System.Drawing.Printing.Margins.Right" />, <see cref="P:System.Drawing.Printing.Margins.Top" />, und <see cref="P:System.Drawing.Printing.Margins.Bottom" /> Eigenschaften für beide Ränder den gleichen Wert aufweisen, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Drawing.Printing.Margins.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Drawing.Printing.Margins m1, System.Drawing.Printing.Margins m2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Drawing.Printing.Margins m1, class System.Drawing.Printing.Margins m2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.Margins.op_Inequality(System.Drawing.Printing.Margins,System.Drawing.Printing.Margins)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m1" Type="System.Drawing.Printing.Margins" />
+        <Parameter Name="m2" Type="System.Drawing.Printing.Margins" />
+      </Parameters>
+      <Docs>
+        <param name="m1">Die erste <see cref="T:System.Drawing.Printing.Margins" /> auf Ungleichheit zu vergleichen.</param>
+        <param name="m2">Die zweite <see cref="T:System.Drawing.Printing.Margins" /> auf Ungleichheit zu vergleichen.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Drawing.Printing.Margins" /> zu bestimmen, ob sie der Breite ungleich sind.</summary>
+        <returns>
+          <see langword="true" />um anzugeben, ob die <see cref="P:System.Drawing.Printing.Margins.Left" />, <see cref="P:System.Drawing.Printing.Margins.Right" />, <see cref="P:System.Drawing.Printing.Margins.Top" />, oder <see cref="P:System.Drawing.Printing.Margins.Bottom" /> Eigenschaften für beide Ränder sind nicht gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.Drawing.Printing.Margins.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public int Right { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Right" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.Margins.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite des rechten Rands in hunderstel Zoll fest.</summary>
+        <value>Die Breite des rechten Rands in hunderstel Zoll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die Ränder in Millimetern messen, Multiplizieren die Randbreite Sie möchten in Millimeter mit 3,937 bestimmen das richtige Maß Randbreite in Zoll. Z. B. Wenn Sie einen Rand von 25 mm möchten, wird Multiplizieren von 3,937 und das Ergebnis 98 abgerundet. Legen Sie dann die entsprechende <xref:System.Drawing.Printing.Margins> Member 98.  
+  
+   
+  
+## Examples  
+ Verwenden der <xref:System.Drawing>, <xref:System.Drawing.Printing>, und <xref:System.IO> Namespaces für dieses Beispiel.  
+  
+ Das folgende Codebeispiel legt die Standardeinstellungen für die Seite für ein Dokument auf der linken und rechten Rand von 1 Zoll Breite und die oberen und unteren Rand des 1,5 Zoll Breite fest.  
+  
+ [!code-cpp[Classic Margins.Left Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Margins.Left Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Margins.Left Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Margins.Left Example/CS/source.cs#1)]
+ [!code-vb[Classic Margins.Left Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Margins.Left Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Drawing.Printing.Margins.Right" /> Eigenschaft auf einen Wert kleiner als 0 festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="public int Top { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Top" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.Margins.Top" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite des oberen Rands in hunderstel Zoll fest.</summary>
+        <value>Die Breite des oberen Rands in hunderstel Zoll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die Ränder in Millimetern messen, möchten multiply die Randbreite Sie in Millimeter mit 3,937 richtig Winkelmaß in Hundertstelsekunden Zoll bestimmen. Z. B. Wenn Sie einen Rand von 25 mm möchten, wird multiply 3,937 und das Ergebnis 98 beim abgerundet. Legen Sie dann die entsprechende <xref:System.Drawing.Printing.Margins> Member 98.  
+  
+   
+  
+## Examples  
+ Verwenden der <xref:System.Drawing>, <xref:System.Drawing.Printing>, und <xref:System.IO> Namespaces für dieses Beispiel.  
+  
+ Das folgende Codebeispiel legt die Standardeinstellungen für die Seite für ein Dokument auf der linken und rechten Rand von 1 Zoll Breite und die oberen und unteren Rand des 1,5 Zoll Breite fest.  
+  
+ [!code-cpp[Classic Margins.Left Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Margins.Left Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Margins.Left Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Margins.Left Example/CS/source.cs#1)]
+ [!code-vb[Classic Margins.Left Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Margins.Left Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Drawing.Printing.Margins.Top" /> Eigenschaft auf einen Wert kleiner als 0 festgelegt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.Margins.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert die <see cref="T:System.Drawing.Printing.Margins" /> in eine Zeichenfolge.</summary>
+        <returns>Eine <see cref="T:System.String" />-Darstellung des <see cref="T:System.Drawing.Printing.Margins" />-Elements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

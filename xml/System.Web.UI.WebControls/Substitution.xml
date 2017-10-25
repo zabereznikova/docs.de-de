@@ -1,0 +1,228 @@
+<Type Name="Substitution" FullName="System.Web.UI.WebControls.Substitution">
+  <TypeSignature Language="C#" Value="public class Substitution : System.Web.UI.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Substitution extends System.Web.UI.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Substitution" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("MethodName")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.SubstitutionDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt einen Abschnitt auf einer Webseite mit Ausgabecache an, der von der Zwischenspeicherung ausgenommen ist. An dieser Stelle werden dynamische Inhalte abgerufen und ersetzt die <see cref="T:System.Web.UI.WebControls.Substitution" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [Deklarationssyntax](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Verwenden der <xref:System.Web.UI.WebControls.Substitution> Steuerelement, um einen Abschnitt auf einer Webseite Ausgabe zwischengespeichert angeben, wo Sie dynamischen Inhalt soll, für das Steuerelement ersetzt. Die <xref:System.Web.UI.WebControls.Substitution> Steuerelement bietet eine vereinfachte Lösung für die partielle Zwischenspeichern von Seiten, in dem der Großteil der Inhalt zwischengespeichert wird. Sie können Ausgabecache-die gesamte Seite, und klicken Sie dann <xref:System.Web.UI.WebControls.Substitution> Steuerelemente an, die von der Zwischenspeicherung ausgenommen sind die Teile der Seite. Zwischengespeicherte Bereiche werden nur einmal ausgeführt und aus dem Cache wiedergegeben werden, bis der Cacheeintrag abläuft oder gelöscht wird. Dynamische Bereiche werden jedes Mal, wenn die Seite angefordert wird ausgeführt. Dieses Modell des Zwischenspeicherns vereinfacht den Code für Seiten, die in erster Linie statische sind, weil Sie nicht besitzen, um in den Abschnitten zum Cache im Web-Benutzersteuerelemente zu kapseln. Dieses Zwischenspeichern Modell ist beispielsweise nützlich, in einem Szenario, in dem Sie eine Seite mit statischem Inhalt, wie Nachrichten, Geschichten, haben, und ein <xref:System.Web.UI.WebControls.AdRotator> Steuerelement, in dem Ankündigungen angezeigt. Die Nachrichten, Geschichten ändere nicht, was bedeutet, dass sie zwischengespeichert werden können. Jedoch jedes Mal ein Benutzer die Seite fordert Sie eine neue Ankündigung anzeigen möchten. Die <xref:System.Web.UI.WebControls.AdRotator> Steuerelement direkt nach der Zwischenspeicher unterstützt und rendert eine neue Ankündigung jedes Mal die Seite sendet zurück, unabhängig davon, ob die Seite zwischengespeichert wird.  
+  
+> [!NOTE]
+>  Sie können Platzieren einer <xref:System.Web.UI.WebControls.Substitution> Steuerelement in einem Benutzersteuerelement, das in einer zwischengespeicherten Seite enthalten ist. Allerdings können Sie nicht platziert eine <xref:System.Web.UI.WebControls.Substitution> -Steuerelement in ein Benutzersteuerelement mit Ausgabe zwischengespeichert.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.Substitution> -Steuerelement ausgeführt wird, ruft es eine Methode, die eine Zeichenfolge zurückgibt. Die Zeichenfolge, die der Methodenrückgabe befindet sich der Inhalt auf der Seite auf den Speicherort der anzuzeigenden der <xref:System.Web.UI.WebControls.Substitution> Steuerelement. Verwenden der <xref:System.Web.UI.WebControls.Substitution.MethodName%2A> -Eigenschaft an den Namen der Rückrufmethode darstellt, die beim Aufrufen der <xref:System.Web.UI.WebControls.Substitution> -Steuerelement ausgeführt wird. Die Rückrufmethode, die Sie angeben, muss eine statische Methode für die Seite oder das Benutzersteuerelement, das enthält die <xref:System.Web.UI.WebControls.Substitution> Steuerelement. Die Signatur für die Rückrufmethode übereinstimmen die Signatur für ein <xref:System.Web.HttpResponseSubstitutionCallback> Delegaten, die akzeptiert ein <xref:System.Web.HttpContext> Parameter und gibt eine Zeichenfolge zurück.  
+  
+ Zum Ändern des Ausgabecaches für eine Seite, können Sie die [@ OutputCache](http://msdn.microsoft.com/en-us/28a9e101-fb44-4198-9cb6-b8a52312fec2) Richtlinie, die <xref:System.Web.HttpCachePolicy> -Klasse, oder die <xref:System.Web.HttpResponse.Cache%2A> Eigenschaft. Weitere Informationen zum Zwischenspeichern von Seiten finden Sie unter [ASP.NET-Seiten Caching](http://msdn.microsoft.com/library/e9666a1b-88df-4931-af0b-a754fc65660b) und [Zwischenspeichern Teile einer ASP.NET-Seite](http://msdn.microsoft.com/library/cdd8e523-7305-4685-a456-c5be1de1367e).  
+  
+ Als Alternative zur Verwendung der <xref:System.Web.UI.WebControls.Substitution> -Steuerelement, Sie können auch erzielen Verhalten mithilfe einer <xref:System.Web.HttpResponseSubstitutionCallback> delegieren. Darüber hinaus erhalten Sie Verhalten auf Steuerelemente, z. B. caching Ersetzung der <xref:System.Web.UI.WebControls.AdRotator> -Steuerelement, die direkt auf dieses Feature unterstützen. Weitere Informationen finden Sie unter [dynamisches Aktualisieren von Bereichen einer zwischengespeicherten Seite](http://msdn.microsoft.com/library/09c9bd9a-0d68-4a5c-aa6f-1b461c208795).  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:Substitution  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    MethodName="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Visible="True|False"  
+/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Hinzufügen einer <xref:System.Web.UI.WebControls.Substitution> Steuerelement deklarativ zu einer Webseite Ausgabe zwischengespeichert. Beim Laden der Seite werden das aktuelle Datum und die Uhrzeit für den Benutzer in einer Bezeichnung angezeigt. Dieser Abschnitt der Seite zwischengespeichert und nur alle 60 Sekunden aktualisiert. Wenn die <xref:System.Web.UI.WebControls.Substitution> -Steuerelement ausgeführt wird, ruft er die `GetCurrentDateTime` Methode. Die zurückgegebene Zeichenfolge `GetCurrentDateTime` wird dem Benutzer angezeigt. Dieser Abschnitt der Seite wird nicht zwischengespeichert und wird jedes Mal aktualisiert, die Seite aktualisiert wird.  
+  
+ [!code-aspx-csharp[SubstitutionsClass1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SubstitutionsClass1/CS/substitutionclass1cs.aspx#1)]
+ [!code-aspx-vb[SubstitutionsClass1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SubstitutionsClass1/VB/substitutionclass1vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Substitution ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Substitution.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Substitution" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Substitution.%23ctor%2A> Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.Substitution> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Hinzufügen einer <xref:System.Web.UI.WebControls.Substitution> Steuerelement programmgesteuert zu einer Webseite Ausgabe zwischengespeichert. Beim Laden der Seite werden das aktuelle Datum und die Uhrzeit für den Benutzer in einer Bezeichnung angezeigt. Dieser Abschnitt der Seite zwischengespeichert und nur alle 60 Sekunden aktualisiert. Wenn die <xref:System.Web.UI.WebControls.Substitution> -Steuerelement ausgeführt wird, ruft er die `GetCurrentDateTime` Methode. Die zurückgegebene Zeichenfolge `GetCurrentDateTime` wird dem Benutzer angezeigt. Dieser Abschnitt der Seite wird nicht zwischengespeichert und wird jedes Mal aktualisiert, die Seite aktualisiert wird.  
+  
+ [!code-aspx-csharp[SubstitutionCstr#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SubstitutionCstr/CS/substitutioncstrcs.aspx#1)]
+ [!code-aspx-vb[SubstitutionCstr#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SubstitutionCstr/VB/substitutioncstrvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Substitution.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Web.UI.EmptyControlCollection" /> Objekt gibt an, dass die <see cref="T:System.Web.UI.WebControls.Substitution" /> Steuerelement unterstützt nicht die untergeordneten Steuerelemente.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.EmptyControlCollection" />, gibt an, dass das Steuerelement untergeordnete Steuerelemente nicht unterstützt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Substitution.CreateControlCollection%2A> Methode wird in der Regel zum Erstellen einer <xref:System.Web.UI.ControlCollection> Objekt, das die untergeordneten Steuerelemente für ein Steuerelement gespeichert. Die Implementierung von der <xref:System.Web.UI.WebControls.Substitution.CreateControlCollection%2A> Methode für eine <xref:System.Web.UI.WebControls.Substitution> steuern immer gibt eine <xref:System.Web.UI.EmptyControlCollection> -Objekt, um anzugeben, dass die <xref:System.Web.UI.WebControls.Substitution> Steuerelement unterstützt nicht die untergeordneten Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.Substitution" /> -Steuerelement, überschreiben Sie die <see cref="M:System.Web.UI.WebControls.Substitution.CreateControlCollection" /> Methode in einer abgeleiteten Klasse zur Unterstützung von untergeordneten Steuerelementen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public virtual string MethodName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Substitution.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Rückrufmethode darstellt, die beim Aufrufen der <see cref="T:System.Web.UI.WebControls.Substitution" /> -Steuerelement ausgeführt wird.</summary>
+        <value>Eine Zeichenfolge mit dem Namen der Methode, die beim Aufrufen der <see cref="T:System.Web.UI.WebControls.Substitution" /> -Steuerelement ausgeführt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Substitution.MethodName%2A> -Eigenschaft an den Namen der Rückrufmethode darstellt, die beim Aufrufen der <xref:System.Web.UI.WebControls.Substitution> -Steuerelement ausgeführt wird. Die Rückrufmethode, die Sie angeben, muss eine statische Methode für die Seite oder das Benutzersteuerelement, das enthält die <xref:System.Web.UI.WebControls.Substitution> Steuerelement. Die Signatur für die Rückrufmethode übereinstimmen die Signatur für eine <xref:System.Web.HttpResponseSubstitutionCallback> Delegaten, die akzeptiert ein <xref:System.Web.HttpContext> Parameter und gibt eine Zeichenfolge zurück. Die Zeichenfolge, die die Rückrufmethode gibt befindet sich der Inhalt auf der Seite auf den Speicherort der anzuzeigenden der <xref:System.Web.UI.WebControls.Substitution> Steuerelement.  
+  
+ Die <xref:System.Web.HttpContext> -Parameter kapselt alle HTTP-spezifische Informationen über eine einzelne HTTP-Anforderung. Sie können es Sitzungsvariablen, Autorisierungsinformationen und Personalisierungsdetails zugreifen. Weitere Informationen finden Sie unter <xref:System.Web.HttpResponseSubstitutionCallback>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Hinzufügen einer <xref:System.Web.UI.WebControls.Substitution> Steuerelement deklarativ zu einer Webseite Ausgabe zwischengespeichert. Beim Laden der Seite ist eine statische Liste mit Aufzählungszeichen aus, die dem Benutzer angezeigt. Dieser Abschnitt der Seite zwischengespeichert und nur alle 60 Sekunden aktualisiert. Wenn die <xref:System.Web.UI.WebControls.Substitution> -Steuerelement ausgeführt wird, ruft er die `GetUser` Methode, die eine Zeichenfolge zurückgibt, die den aktuellen Benutzer darstellt. Diese Zeichenfolge wird angezeigt, an der die <xref:System.Web.UI.WebControls.Substitution> Steuerelement auf der Seite. Dieser Abschnitt der Seite wird nicht zwischengespeichert und wird jedes Mal aktualisiert, die Seite aktualisiert wird.  
+  
+ [!code-aspx-csharp[Substitution.MethodName#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Substitution.MethodName/CS/substitution.methodnamecs.aspx#1)]
+ [!code-aspx-vb[Substitution.MethodName#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Substitution.MethodName/VB/substitution.methodnamevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Substitution.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">Das übergeordnete Steuerelement oder die Masterseite wird zwischengespeichert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Substitution.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt, das den Inhalt des Serversteuerelements empfängt.</param>
+        <summary>Inhalt des Serversteuerelements an ein bereitgestelltes sendet <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt, das den zu rendernden Inhalt auf den Client schreibt</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

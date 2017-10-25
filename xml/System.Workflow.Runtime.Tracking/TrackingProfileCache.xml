@@ -1,0 +1,63 @@
+<Type Name="TrackingProfileCache" FullName="System.Workflow.Runtime.Tracking.TrackingProfileCache">
+  <TypeSignature Language="C#" Value="public static class TrackingProfileCache" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TrackingProfileCache extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.TrackingProfileCache" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Methode bereit, die eine Hostanwendung zum Löschen des Verfolgungsprofilcache verwenden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Wenn ein oder mehrere Überwachungsdienste im Workflowlaufzeitmodul registriert sind, muss die Laufzeitverfolgungsinfrastruktur bestimmen, ob Verfolgungsprofile für einen im Arbeitspeicher geladenen Workflow vorhanden sind. Die Laufzeitverfolgungsinfrastruktur verwaltet einen Cache mit Verfolgungsprofilen, den sie überprüft, bevor sie ein <xref:System.Workflow.Runtime.Tracking.TrackingProfile> für den Workflow von jedem Überwachungsdienst anfordert. Die <xref:System.Workflow.Runtime.Tracking.TrackingProfileCache>-Klasse stellt eine statische Methode bereit, <xref:System.Workflow.Runtime.Tracking.TrackingProfileCache.Clear%2A>, die eine Hostanwendung zum Löschen des Verfolgungsprofilcache verwenden kann. Dadurch wird die Laufzeitverfolgungsinfrastruktur gezwungen, für Workflowinstanzen, die nach dem Löschen des Cache in den Arbeitsspeicher geladen werden, Verfolgungsprofile aus ihren registrierten Überwachungsdiensten zu laden.  
+  
+> [!NOTE]
+>  <xref:System.Workflow.Runtime.Tracking.TrackingProfile>-Zwischenspeicherung wird für Workflows nicht unterstützt, die nur mit Markups definiert sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public static void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingProfileCache.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle Verfolgungsprofile aus dem von der Laufzeitverfolgungsinfrastruktur verwalteten Verfolgungsprofilcache.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Löschen des Cache lädt die Laufzeitverfolgungsinfrastruktur für Workflowinstanzen, die in den Arbeitsspeicher geladen werden, die Verfolgungsprofile direkt aus ihren registrierten Überwachungsdiensten. Für Workflowinstanzen, die sich im Arbeitsspeicher befinden und ausgeführt werden, müssen die Verfolgungsprofile nicht erneut geladen werden. Die Profile müssen jedoch erneut geladen werden, wenn der Workflow entladen und dann erneut in den Arbeitsspeicher geladen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

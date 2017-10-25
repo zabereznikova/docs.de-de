@@ -1,0 +1,138 @@
+<Type Name="XpsResource" FullName="System.Windows.Xps.Packaging.XpsResource">
+  <TypeSignature Language="C#" Value="public class XpsResource : System.Windows.Xps.Packaging.XpsPartBase, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XpsResource extends System.Windows.Xps.Packaging.XpsPartBase implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.XpsResource" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Xps.Packaging.XpsPartBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert die Basisklasse für Ressourcen, die hinzugefügt werden, kann, ein <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie hinzuzufügende <xref:System.Windows.Xps.Packaging.XpsResource> abgeleiteten Typen, ein <xref:System.Windows.Xps.Packaging.XpsDocument>.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpageresources)]
+ [!code-csharp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpageresources)]
+ [!code-vb[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpageresources)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.XpsResource.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Commit für alle Änderungen durch und entleert die Ressource in das Dokumentpaket.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anhand der Einstellungen der <xref:System.Windows.Xps.Serialization.XpsSerializationManager> und <xref:System.Windows.Xps.Serialization.XpsPackagingPolicy>, wie z. B. <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies> und <xref:System.Windows.Xps.Packaging.PackageInterleavingOrder>, die Leerung des der <xref:System.Windows.Xps.Packaging.XpsResource.Commit%2A> Methode kann verzögert werden, bis die gesamte <xref:System.Windows.Xps.Packaging.XpsDocument> geschlossen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Xps.Packaging.XpsResource.Commit%2A> -Methode (in einer abgeleiteten Klasse) beim Hinzufügen von Ressourcen, um eine <xref:System.Windows.Xps.Packaging.XpsDocument>.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpageresources)]
+ [!code-csharp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpageresources)]
+ [!code-vb[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpageresources)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStream">
+      <MemberSignature Language="C#" Value="public virtual System.IO.Stream GetStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream GetStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.XpsResource.GetStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die e/a-Datenstrom zum Lesen oder Schreiben der Ressource zurück.</summary>
+        <returns>Die <see cref="T:System.IO.Stream" /> zum Lesen oder Schreiben der Ressource.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Methode (in einer abgeleiteten Klasse) verwendet wird, zum Hinzufügen von Ressourcen zu einer <xref:System.Windows.Xps.Packaging.XpsDocument>.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpageresources)]
+ [!code-csharp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpageresources)]
+ [!code-vb[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpageresources)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativeUri">
+      <MemberSignature Language="C#" Value="public Uri RelativeUri (Uri inUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Uri RelativeUri(class System.Uri inUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.XpsResource.RelativeUri(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="inUri">Ein absoluter anfänglicher [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</param>
+        <summary>Gibt die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] der Ressource, die relativ zu einem angegebenen absoluten ist [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</summary>
+        <returns>Die <see cref="T:System.Uri" /> der Ressource, der relativ zum angegebenen absoluten <paramref name="inUri" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.XpsResource.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member unterstützt die [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

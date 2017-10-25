@@ -1,0 +1,106 @@
+<Type Name="LockRecursionPolicy" FullName="System.Threading.LockRecursionPolicy">
+  <TypeSignature Language="C#" Value="public enum LockRecursionPolicy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LockRecursionPolicy extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.LockRecursionPolicy" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob eine Sperre mehrmals dem gleichen Thread zugewiesen werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardrichtlinie für die Rekursion hängt vom Typ der Sperre. Die Standardrichtlinie und das genaue Verhalten der Sperre Rekursion für alle angegebenen Sperrtyp finden Sie in der Dokumentation für den Typ. Z. B. die <xref:System.Threading.ReaderWriterLockSlim> Klasse lässt sich nicht auf einen Thread die Sperre im Schreibmodus, wenn er die Sperre im Lesemodus, unabhängig von der Einstellung bereits zugewiesen, um die Wahrscheinlichkeit von Deadlocks zu reduzieren.  
+  
+ Derzeit nur eine Sperre diese Enumeration wird verwendet:  
+  
+-   <xref:System.Threading.ReaderWriterLockSlim>. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Threading.ReaderWriterLockSlim.RecursionPolicy%2A>-Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt zwei Ausnahme Szenarien, die von abhängig ist die <xref:System.Threading.LockRecursionPolicy> festlegen und eine, die nicht der Fall ist.  
+  
+ Im ersten Szenario wird der Thread die Sperre im Lesemodus und versucht dann Lesemodus rekursiv eingeben. Wenn die <xref:System.Threading.ReaderWriterLockSlim> wird erstellt, mit dem Standardkonstruktor, der Rekursionsrichtlinie für die NoRecursion festgelegt ist, wird eine Ausnahme ausgelöst. Wenn SupportsRecursion, zum Erstellen verwendet wird der <xref:System.Threading.ReaderWriterLockSlim>, wird keine Ausnahme ausgelöst.  
+  
+ Im zweiten Szenario wird der Thread die Sperre im Lesemodus und versucht dann, die Sperre im Schreibmodus. <xref:System.Threading.LockRecursionException>unabhängig von der Rekursionsrichtlinie der Sperre ausgelöst.  
+  
+ [!code-csharp[System.Threading.LockRecursionPolicy#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.LockRecursionPolicy/cs/example1.cs#1)]
+ [!code-vb[System.Threading.LockRecursionPolicy#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.LockRecursionPolicy/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NoRecursion">
+      <MemberSignature Language="C#" Value="NoRecursion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.LockRecursionPolicy NoRecursion = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.LockRecursionPolicy.NoRecursion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.LockRecursionPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn ein Thread versucht, einen Sperre rekursiv einzugeben, wird eine Ausnahme ausgelöst. Einige Klassen möglicherweise bestimmte Rekursionen zulassen, wenn diese Einstellung aktiviert ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsRecursion">
+      <MemberSignature Language="C#" Value="SupportsRecursion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.LockRecursionPolicy SupportsRecursion = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.LockRecursionPolicy.SupportsRecursion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.LockRecursionPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Thread kann einen Sperre rekursiv geben. Einige Klassen möglicherweise diese Funktion zu beschränken.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

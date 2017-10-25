@@ -1,0 +1,57 @@
+<Type Name="InstanceCompletionAction" FullName="System.Activities.DurableInstancing.InstanceCompletionAction">
+  <TypeSignature Language="C#" Value="public enum InstanceCompletionAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed InstanceCompletionAction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.DurableInstancing.InstanceCompletionAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.DurableInstancing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enthält Optionen, die angeben, ob der Dauerhaftigkeitsanbieter die Zustandsinformationen für eine Instanz nach deren Abschluss im Beibehaltungsspeicher belassen oder daraus löschen soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Lieferumfang von [!INCLUDE[netfx40_short](~/includes/netfx40-short-md.md)] ist ein SQL-Dauerhaftigkeitsanbieter als Bestandteil des SQL-Workflowinstanzspeichers enthalten, bei dem es sich um eine konkrete Implementierung der <xref:System.Runtime.Persistence.InstanceStore>-Klasse handelt und mit dem Zustandsinformationen dauerhaft in der SQL Server-Datenbank gespeichert werden. Wenn der `InstanceComplectionAction` -Attribut festgelegt ist, auf DeleteNothing für die <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Dienstverhalten verknüpft mit einem Dienst, der SQL-Persistenz-Provider behält die Zustandsinformationen für die Instanz in der SQL Server-Persistenz zur Datenbank auch nach der Instanz abgeschlossen ist, und wann die `InstanceComplectionAction` Attribut auf DeleteAll (d. h. den Standardwert) festgelegt ist, wird der Persistenz-Provider löscht alle instanzstatusinformationen aus, wenn die Instanz abgeschlossen ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DeleteAll">
+      <MemberSignature Language="C#" Value="DeleteAll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.DurableInstancing.InstanceCompletionAction DeleteAll = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.DurableInstancing.InstanceCompletionAction.DeleteAll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.DurableInstancing.InstanceCompletionAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Daten und Metadaten für eine Workflowinstanz aus dem Beibehaltungsspeicher gelöscht werden müssen, nachdem die Workflowinstanz abgeschlossen wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteNothing">
+      <MemberSignature Language="C#" Value="DeleteNothing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.DurableInstancing.InstanceCompletionAction DeleteNothing = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.DurableInstancing.InstanceCompletionAction.DeleteNothing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.DurableInstancing.InstanceCompletionAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Daten und Metadaten für eine Workflowinstanz im Beibehaltungsdatenbank belassen werden müssen, auch nachdem die Workflowinstanz abgeschlossen wurde.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

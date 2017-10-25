@@ -1,0 +1,626 @@
+<Type Name="SrgsRuleRef" FullName="System.Speech.Recognition.SrgsGrammar.SrgsRuleRef">
+  <TypeSignature Language="C#" Value="public class SrgsRuleRef : System.Speech.Recognition.SrgsGrammar.SrgsElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SrgsRuleRef extends System.Speech.Recognition.SrgsGrammar.SrgsElement" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Speech.Recognition.SrgsGrammar.SrgsElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ImmutableObject(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{DebuggerDisplayString()}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Grammatik-Element, das einen Verweis auf eine Regel angibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef> Klasse ist besonders nützlich, wenn Sie wiederverwenden möchten, ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Element, dessen Inhalt bereits definiert wurde. Durch das Wiederverwenden vorhandener Regeln, können Sie komplexe Grammatiken schneller erstellen.  
+  
+ Können Sie die Konstruktoren des der <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef> -Klasse zur Referenz ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt oder ein `rule` Element, sofern Folgendes zutrifft:  
+  
+-   Die <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt befindet sich in der enthaltenden Grammatik und der Wert von dessen <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.Scope%2A> Eigenschaft ist <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleScope.Public> oder <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleScope.Private>.  
+  
+-   Die `rule` -Element ist in einer externen Grammatik und der Wert des seine `scope` -Attribut ist `public`.  
+  
+-   Der `rule` einer externen Grammatik, den Wert des Elements ist seine `scope` Attribut ist `private`, und es deklariert wird, als die `root rule` der externen Grammatik.  
+  
+ Diese Klasse stellt die `ruleref` Element im World Wide Web Consortium (W3C) definierten [Speech Recognition Grammatik Specification (SRGS) Version 1.0](http://go.microsoft.com/fwlink/?LinkId=201761). Informationen zu den SRGS `ruleref` Element und Details über die Unterstützung von System.Speech, finden Sie unter [Ruleref Element](http://msdn.microsoft.com/en-us/56eb0031-4908-4788-83ab-7c5e19aa4ac0).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsRuleRef (System.Speech.Recognition.SrgsGrammar.SrgsRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Speech.Recognition.SrgsGrammar.SrgsRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.#ctor(System.Speech.Recognition.SrgsGrammar.SrgsRule)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Speech.Recognition.SrgsGrammar.SrgsRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Das Objekt, auf das verwiesen werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef" /> -Klasse und gibt die Regel zu verweisen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt einen Regelverweis auf ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt innerhalb der enthaltenden Grammatik. So erstellen einen Verweis auf eine Regel auf ein `rule` Element in einer externen Grammatik, verwenden Sie keines der folgenden Konstruktoren:  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%28System.Uri%2CSystem.String%2CSystem.String%2CSystem.String%29>  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Grammatik, die den Ausdruck erkennt "ein, die die WM gewonnen hat Nation ist" gefolgt vom Namen des ein Land, die die WM gewonnen hat. Nach dem Erstellen der <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt `winnerRule` und Übergabe der Zeichenfolgenbezeichner `WorldCupWinner`, im Beispiel fügt die Zeichenfolge ein, die die WM gewonnen hat Nation "is", für die Regel. Mit <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> Objekte, die im Beispiel erstellt eine Liste der europäischen Ländern und eine Liste von Ländern Südamerika danach jede Liste auf die entsprechende Regel fügt `ruleEurope` oder `ruleSAmerica`. Das Beispiel erstellt dann die Regel Verweise für `ruleEurope` und `ruleSAmerica` und fügt sie der `WorldCupWinner` Regel.  
+  
+```  
+public void WorldSoccerWinners ()  
+{  
+  
+  // Create an SrgsDocument, create a new rule  
+  // and set its scope to public.  
+  SrgsDocument document = new SrgsDocument();  
+  SrgsRule winnerRule = new SrgsRule("WorldCupWinner");  
+  winnerRule.Scope = SrgsRuleScope.Public;  
+  
+  // Add the introduction.  
+  winnerRule.Elements.Add(new SrgsItem("A nation that has won the world cup is: "));  
+  
+  // Create the rule for the European nations.  
+  SrgsOneOf oneOfEurope = new SrgsOneOf(new SrgsItem[] {new SrgsItem("England"),   
+    new SrgsItem("France"), new SrgsItem("Germany"), new SrgsItem("Italy")});  
+  SrgsRule ruleEurope = (new SrgsRule("EuropeanNations", new SrgsElement[] {oneOfEurope}));  
+  
+  // Create the rule for the South American nations.  
+  SrgsOneOf oneOfSAmerica = new SrgsOneOf(new SrgsItem[] {new SrgsItem("Argentina"),   
+    new SrgsItem("Brazil"), new SrgsItem("Uruguay")});  
+  SrgsRule ruleSAmerica = (new SrgsRule("SouthAmericanNations", new SrgsElement[] {oneOfSAmerica}));  
+  
+  // Add references to winnerRule for ruleEurope and ruleSAmerica.  
+  winnerRule.Elements.Add(new SrgsOneOf(new SrgsItem[] {(new SrgsItem   
+    (new SrgsRuleRef(ruleEurope))), new SrgsItem(new SrgsRuleRef(ruleSAmerica))}));  
+  
+  // Add all the rules to the document and make winnerRule   
+  // the root rule of the document.  
+  document.Rules.Add(new SrgsRule[] {winnerRule, ruleEurope, ruleSAmerica});  
+  document.Root = winnerRule;  
+}  
+```  
+  
+ Die erstellte Grammatik weist folgende Form.  
+  
+```  
+<grammar version="1.0" xml:lang="en-US" xmlns="http://www.w3.org/2001/06/grammar" root="WorldCupWinner">  
+    <rule id="WorldCupWinner" scope="public">  
+        <item> A nation that has won the world cup is </item>  
+        <one-of>  
+            <item>  
+                <ruleref uri="#EuropeanNations" />  
+            </item>  
+            <item>  
+                <ruleref uri="#SouthAmericanNations" />  
+            </item>  
+        </one-of>  
+    </rule>  
+    <rule id="EuropeanNations">  
+        <one-of>  
+            <item> England </item>  
+            <item> France </item>  
+            <item> Germany </item>  
+            <item> Italy </item>  
+        </one-of>  
+    </rule>  
+    <rule id="SouthAmericanNations">  
+        <one-of>  
+            <item> Argentina </item>  
+            <item> Brazil </item>  
+            <item> Uruguay </item>  
+        </one-of>  
+    </rule>  
+</grammar>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsRuleRef (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Der Speicherort einer Datei Grammatik außerhalb der enthaltenden Grammatik.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef" /> -Klasse und gibt den Speicherort der externen Grammatikdatei verweisen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt einen Verweis auf eine Regel in einer externen Grammatikdatei. Der URI kann auch den Bezeichner einer Regel zu verweisen, z. B. enthalten `http://www.contoso.com/ExternalGrammar.grxml#targetRule`.  Wenn die `uri` -Parameter gibt keinen Regelbezeichner, den Verweis auf eine Regel für die Stammregel der Ziel-Grammatik verweist. So erstellen einen Verweis auf eine Regel auf ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> -Objekts innerhalb der gleichen Grammatik, verwenden Sie eine der folgenden Konstruktoren:  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Grammatik für eine Anwendung, die Informationen zur Bereichssymbol ereignisbusdienst zurückgibt. Die erste Methode `GrammarUrlForRoute`, akzeptiert eine Zeichenfolge, die eine Route gibt an, und fügt diese an eine Zeichenfolge, die den Speicherort der Grammatik angibt. Hiermit wird eine bestimmte Regel in dieser Grammatik. Die Methode gibt ein `Uri` für diese Regel.  
+  
+ Die zweite Methode `CreateGrammarForRoute`, erstellt eine <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> Element mit dem Namen `grammar` mit einer Regelverweis gemäß der `Uri` übergeben, indem sie `GrammarUrlForRoute`. Beachten Sie, dass die Variable mit dem Namen _route Mitglied einer einschließenden Klasse.  
+  
+```  
+private Uri GrammarUrlForRoute(string route)  
+{  
+  return new Uri("http://localhost/MyBus/MyBusLocations.grxml#LocationsForRoute" + route);  
+}  
+  
+private SrgsDocument CreateGrammarForRoute()  
+{  
+  SrgsDocument grammar = new SrgsDocument();  
+  grammar.Mode = SrgsGrammarMode.Voice;  
+  SrgsRule rule = new SrgsRule("LocationsForRoute" + _route);  
+  SrgsRuleRef ruleref = new SrgsRuleRef(GrammarUrlForRoute(_route));  
+  
+  SrgsSemanticInterpretationTag tag = new SrgsSemanticInterpretationTag ("$.Location = $$");  
+  
+  rule.Elements.Add(ruleref);  
+  rule.Elements.Add(tag);  
+  grammar.Rules.Add(rule);  
+  grammar.Root = rule;  
+  return grammar;  
+}  
+```  
+  
+> [!NOTE]
+>  Die Variable mit dem Namen _`route` nicht deklarierte und nicht im vorhergehenden Beispiel definiert ist. Es sollten als deklariert eine <xref:System.String> und die Anzahl der Route für eine bestimmte Bus Route enthalten, bevor das vorhergehende Beispiel kompiliert und ausgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uri" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsRuleRef (System.Speech.Recognition.SrgsGrammar.SrgsRule rule, string semanticKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Speech.Recognition.SrgsGrammar.SrgsRule rule, string semanticKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.#ctor(System.Speech.Recognition.SrgsGrammar.SrgsRule,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Speech.Recognition.SrgsGrammar.SrgsRule" />
+        <Parameter Name="semanticKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Das Objekt, auf das verwiesen werden soll.</param>
+        <param name="semanticKey">Der semantische Schlüssel.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef" /> -Klasse und gibt die Regel Verweis und eine Zeichenfolge, die einen semantische Schlüssel enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt einen Regelverweis auf ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt innerhalb der enthaltenden Grammatik. So erstellen einen Verweis auf eine Regel auf ein `rule` Element in einer externen Grammatik, verwenden Sie keines der folgenden Konstruktoren:  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%28System.Uri%2CSystem.String%2CSystem.String%2CSystem.String%29>  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Grammatik für die Orte für ein Flug auswählen. Das Beispiel erstellt zwei <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef> Instanzen, von denen jede einen semantische Schlüssel angibt. Beide Verweise als Ziel die gleiche Regel <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt, mit dem Namen `cities`, aber das Erkennungsergebnis von den Verweis auf eine Regel mit einem anderen semantische Schlüssel zu kennzeichnen. Die semantischen Schlüssel identifiziert eine erkannte Stadt als Anfangspunkt Stadt oder den Ort der Ankunft des Flugs. Der Handler für das <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechRecognized> Ereignis verwendet die Schlüssel zum Abrufen der Semantik Werte mit erstellt <xref:System.Speech.Recognition.SrgsGrammar.SrgsNameValueTag.%23ctor%2A> aus dem Erkennungsergebnis.  
+  
+```  
+using System;  
+using System.Speech.Recognition;  
+using System.Speech.Recognition.SrgsGrammar;  
+  
+namespace SampleRecognition  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+  
+    // Initialize a SpeechRecognitionEngine object.  
+    {  
+      using (SpeechRecognitionEngine recognizer =  
+         new SpeechRecognitionEngine(new System.Globalization.CultureInfo("en-US")))  
+      {  
+  
+        // Build a rule with a list of cities, assign a semantic value to each city.  
+        SrgsItem chi = new SrgsItem("Chicago");  
+        chi.Add(new SrgsNameValueTag("ORD"));  
+        SrgsItem bos = new SrgsItem("Boston");  
+        bos.Add(new SrgsNameValueTag("BOS"));  
+        SrgsItem mia = new SrgsItem("Miami");  
+        mia.Add(new SrgsNameValueTag("MIA"));  
+        SrgsItem dal = new SrgsItem("Dallas");  
+        dal.Add(new SrgsNameValueTag("DFW"));  
+  
+        SrgsOneOf cities = new SrgsOneOf(new SrgsItem[] { chi, bos, mia, dal });  
+        SrgsRule citiesRule = new SrgsRule("flightCities");  
+        citiesRule.Add(cities);  
+  
+        // Build the root rule, add rule references to the cities rule.  
+        SrgsRule flightBooker = new SrgsRule("bookFlight");  
+        flightBooker.Add(new SrgsItem("I want to fly from"));  
+        flightBooker.Add(new SrgsRuleRef(citiesRule, "departureCity"));  
+        flightBooker.Add(new SrgsItem("to"));  
+        flightBooker.Add(new SrgsRuleRef(citiesRule, "arrivalCity"));  
+  
+        // Build an SrgsDocument object from the flightBooker rule and add the cities rule.  
+        SrgsDocument cityChooser = new SrgsDocument(flightBooker);  
+        cityChooser.Rules.Add(citiesRule);  
+  
+        // Create a Grammar object from the SrgsDocument and load it to the recognizer.  
+        Grammar departArrive = new Grammar(cityChooser);  
+        departArrive.Name = ("Cities Grammar");  
+        recognizer.LoadGrammarAsync(departArrive);  
+  
+        // Configure recognizer input.  
+        recognizer.SetInputToDefaultAudioDevice();  
+  
+        // Attach a handler for the SpeechRecognized event.  
+        recognizer.SpeechRecognized +=  
+          new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);  
+  
+        // Start asynchronous recognition.  
+        recognizer.RecognizeAsync();  
+        Console.WriteLine("Starting asynchronous recognition...");  
+  
+        // Keep the console window open.  
+        Console.ReadLine();  
+      }  
+    }  
+  
+    // Handle the SpeechRecognized event.  
+    static void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)  
+    {  
+      Console.WriteLine("Speech recognized: " + e.Result.Text);  
+      Console.WriteLine();  
+      Console.WriteLine("Semantic results:");  
+      Console.WriteLine("  The departure city is: " + e.Result.Semantics["departureCity"].Value);  
+      Console.WriteLine("  The destination city is: " + e.Result.Semantics["arrivalCity"].Value);  
+    }  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsRuleRef (Uri uri, string rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri uri, string rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.#ctor(System.Uri,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="rule" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Der Speicherort einer Datei Grammatik außerhalb der enthaltenden Grammatik.</param>
+        <param name="rule">Der Bezeichner der Regel zu verweisen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef" /> -Klasse und gibt den Speicherort der Grammatikdatei externe und der Bezeichner der Regel zu verweisen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt einen Regelverweis auf eine `rule` Element in einer externen Grammatikdatei. So erstellen einen Verweis auf eine Regel auf ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> -Objekts innerhalb der gleichen Grammatik, verwenden Sie eine der folgenden Konstruktoren:  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uri" /> ist <see langword="null" />.  
+  
+ <paramref name="rule" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="rule" /> ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsRuleRef (System.Speech.Recognition.SrgsGrammar.SrgsRule rule, string semanticKey, string parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Speech.Recognition.SrgsGrammar.SrgsRule rule, string semanticKey, string parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.#ctor(System.Speech.Recognition.SrgsGrammar.SrgsRule,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Speech.Recognition.SrgsGrammar.SrgsRule" />
+        <Parameter Name="semanticKey" Type="System.String" />
+        <Parameter Name="parameters" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Das Objekt, auf das verwiesen werden soll.</param>
+        <param name="semanticKey">Der semantische Schlüssel.</param>
+        <param name="parameters">Der Initialisierungsparameter für eine <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef" /> -Klasse, die Regel zu verweisen, die Zeichenfolge Alias der semantischen Wörterbuch und Initialisierungsparameter angibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt einen Regelverweis auf ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt innerhalb der enthaltenden Grammatik. So erstellen einen Verweis auf eine Regel auf ein `rule` Element in einer externen Grammatik, verwenden Sie keines der folgenden Konstruktoren:  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%28System.Uri%2CSystem.String%2CSystem.String%2CSystem.String%29>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsRuleRef (Uri uri, string rule, string semanticKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri uri, string rule, string semanticKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.#ctor(System.Uri,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="rule" Type="System.String" />
+        <Parameter Name="semanticKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Der Speicherort einer Datei Grammatik außerhalb der enthaltenden Grammatik.</param>
+        <param name="rule">Der Bezeichner der Regel zu verweisen.</param>
+        <param name="semanticKey">Eine Aliaszeichenfolge für die semantische Wörterbuch.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef" /> -Klasse und gibt den Speicherort der externen Grammatik-Datei, der Bezeichner der Regel, und der Zeichenfolge Alias des semantischen Wörterbuchs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt einen Regelverweis auf eine `rule` Element in einer externen Grammatikdatei. So erstellen einen Verweis auf eine Regel auf ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> -Objekts innerhalb der gleichen Grammatik, verwenden Sie eine der folgenden Konstruktoren:  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uri" /> ist <see langword="null" />.  
+  
+ <paramref name="semanticKey" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="semanticKey" /> ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsRuleRef (Uri uri, string rule, string semanticKey, string parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri uri, string rule, string semanticKey, string parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.#ctor(System.Uri,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="rule" Type="System.String" />
+        <Parameter Name="semanticKey" Type="System.String" />
+        <Parameter Name="parameters" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Der Speicherort einer Datei Grammatik außerhalb der enthaltenden Grammatik.</param>
+        <param name="rule">Der Bezeichner der Regel zu verweisen.</param>
+        <param name="semanticKey">Der semantische Schlüssel.</param>
+        <param name="parameters">Der Initialisierungsparameter für eine <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef" /> -Klasse und gibt den Speicherort der externen Grammatik-Datei, der Bezeichner der Regel, die Zeichenfolge Alias der semantischen Wörterbuch und Initialisierungsparametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt einen Regelverweis auf eine `rule` Element in einer externen Grammatikdatei. So erstellen einen Verweis auf eine Regel auf ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> -Objekts innerhalb der gleichen Grammatik, verwenden Sie eine der folgenden Konstruktoren:  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dictation">
+      <MemberSignature Language="C#" Value="public static readonly System.Speech.Recognition.SrgsGrammar.SrgsRuleRef Dictation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Speech.Recognition.SrgsGrammar.SrgsRuleRef Dictation" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.Dictation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsRuleRef</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Definiert eine Regel, die gemäß der Definition von zugeordneten dieser Grammatik diktieren Thema Spracheingabe verglichen werden kann.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Garbage">
+      <MemberSignature Language="C#" Value="public static readonly System.Speech.Recognition.SrgsGrammar.SrgsRuleRef Garbage;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Speech.Recognition.SrgsGrammar.SrgsRuleRef Garbage" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.Garbage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsRuleRef</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Definiert eine Regel, die eine beliebige Sprache bis zur nächsten Regel Übereinstimmung, das nächste Token oder bis zum Ende der gesprochenen Eingabe abgestimmt werden kann.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MnemonicSpelling">
+      <MemberSignature Language="C#" Value="public static readonly System.Speech.Recognition.SrgsGrammar.SrgsRuleRef MnemonicSpelling;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Speech.Recognition.SrgsGrammar.SrgsRuleRef MnemonicSpelling" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.MnemonicSpelling" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsRuleRef</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Spracheingabe geschrieben Out Buchstaben eines Worts enthalten, und diese Schreibweise Out Buchstaben als Wort erkannt werden können.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static readonly System.Speech.Recognition.SrgsGrammar.SrgsRuleRef Null;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Speech.Recognition.SrgsGrammar.SrgsRuleRef Null" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.Null" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsRuleRef</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Definiert eine Regel, die automatisch abgeglichen wird in Abwesenheit Audioeingabe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Params">
+      <MemberSignature Language="C#" Value="public string Params { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Params" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.Params" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Initialisierungsparameter für eine <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef" /> Element.</summary>
+        <value>Der Initialisierungsparameter für eine <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef" /> Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SemanticKey">
+      <MemberSignature Language="C#" Value="public string SemanticKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SemanticKey" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.SemanticKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Aliaszeichenfolge für die semantische Wörterbuch ab.</summary>
+        <value>Eine Aliaszeichenfolge für die semantische Wörterbuch.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den URI für die Regel, die dies <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef" /> Elementverweise.</summary>
+        <value>Der Speicherort der Regel zu verweisen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Void">
+      <MemberSignature Language="C#" Value="public static readonly System.Speech.Recognition.SrgsGrammar.SrgsRuleRef Void;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Speech.Recognition.SrgsGrammar.SrgsRuleRef Void" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.Void" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsRuleRef</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Definiert eine Regel, die nie vorgelesen werden kann. "Void" wird automatisch in einer Sequenz eingefügt, wird diese Sequenz unspeakable.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

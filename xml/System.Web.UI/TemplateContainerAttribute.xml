@@ -1,0 +1,163 @@
+<Type Name="TemplateContainerAttribute" FullName="System.Web.UI.TemplateContainerAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TemplateContainerAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TemplateContainerAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.TemplateContainerAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Deklariert den Basistyp des Containersteuerelements einer Eigenschaft, die zurückgibt ein <see cref="T:System.Web.UI.ITemplate" /> -Schnittstelle und wird mit der <see cref="T:System.Web.UI.TemplateContainerAttribute" /> Attribut. Das Steuerelement mit dem <see cref="T:System.Web.UI.ITemplate" /> -Eigenschaft muss implementiert die <see cref="T:System.Web.UI.INamingContainer" /> Schnittstelle. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Type> -Objekt, das als Parameter übergeben wird die <xref:System.Web.UI.TemplateContainerAttribute> Objekt wird vom Parser als Typ des verwendet <xref:System.ComponentModel.Container> -Objekt, das in Datenbindungsausdrücken verwendet wird. Das Steuerelement, dessen Eigenschaft gibt, eine <xref:System.Web.UI.ITemplate> -Schnittstelle und wird mit der <xref:System.Web.UI.TemplateContainerAttribute>, implementieren müssen die <xref:System.Web.UI.INamingContainer> Schnittstelle.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Steuerelement mit Vorlagen, die mit dem Namen erstellen `TemplatedFirstControl` und ordnen ihr ein Container namens `FirstTemplateContainer`. Dies ermöglicht das Erstellen von benutzerdefinierten Steuerelementen, die die Serverzeit anzeigen, wenn die Vorlage nicht angegeben wird, und der Inhalt der Vorlage, wenn die Vorlage angegeben ist.  
+  
+ [!code-csharp[SystemWebUI_TemplateContainerAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/CS/templatecontainerattribute.cs#1)]
+ [!code-vb[SystemWebUI_TemplateContainerAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/VB/templatecontainerattribute.vb#1)]  
+  
+ Das folgende Web Form veranschaulicht, wie das benutzerdefinierte Steuerelement im vorangehenden Codebeispiel erstellt. Zwei Instanzen der `TemplatedFirstControl` auf der Seite eingefügt werden:  
+  
+-   Die erste Instanz umfasst die Vorlage `<FirstTemplate>`.  
+  
+-   Die zweite Instanz enthält keinen `<FirstTemplate>`, daher braucht es zeigt nur die Zeit.  
+  
+ [!code-aspx-csharp[SystemWebUI_TemplateContainerAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/CS/templatecontainerattribute.aspx#2)]
+ [!code-aspx-vb[SystemWebUI_TemplateContainerAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/VB/templatecontainerattribute.aspx#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateContainerAttribute (Type containerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type containerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateContainerAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="containerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="containerType">Die <see cref="T:System.Type" /> für das Containersteuerelement.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.TemplateContainerAttribute" /> -Klasse unter Verwendung der angegebenen Containertyp.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Steuerelement mit Vorlagen, die mit dem Namen erstellen `TemplatedFirstControl` und ordnen ihr ein Container namens `FirstTemplateContainer`. Dies ermöglicht das Erstellen von benutzerdefinierten Steuerelementen, die die Serverzeit anzeigen, wenn die Vorlage nicht angegeben wird, und der Inhalt der Vorlage, wenn die Vorlage angegeben ist. Die <xref:System.Web.UI.TemplateContainerAttribute> Klasse wird verwendet, für die `FirstTemplate` Eigenschaft.  
+  
+ [!code-csharp[SystemWebUI_TemplateContainerAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/CS/templatecontainerattribute.cs#1)]
+ [!code-vb[SystemWebUI_TemplateContainerAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/VB/templatecontainerattribute.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateContainerAttribute (Type containerType, System.ComponentModel.BindingDirection bindingDirection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type containerType, valuetype System.ComponentModel.BindingDirection bindingDirection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateContainerAttribute.#ctor(System.Type,System.ComponentModel.BindingDirection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="containerType" Type="System.Type" />
+        <Parameter Name="bindingDirection" Type="System.ComponentModel.BindingDirection" />
+      </Parameters>
+      <Docs>
+        <param name="containerType">Die <see cref="T:System.Type" /> für das Containersteuerelement.</param>
+        <param name="bindingDirection">Die <see cref="P:System.Web.UI.TemplateContainerAttribute.BindingDirection" /> für das Containersteuerelement.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.TemplateContainerAttribute" /> -Klasse unter Verwendung der angegebenen Containertyp und den <see cref="P:System.Web.UI.TemplateContainerAttribute.BindingDirection" /> Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingDirection">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.BindingDirection BindingDirection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.BindingDirection BindingDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.TemplateContainerAttribute.BindingDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.BindingDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Richtung der Bindung des Containersteuerelements ab.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.BindingDirection" /> , der angibt, des Containersteuerelements Richtung Bindung. Die Standardeinstellung ist <see cref="F:System.ComponentModel.BindingDirection.OneWay" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.TemplateContainerAttribute.BindingDirection%2A> Eigenschaft kann es sich um die <xref:System.ComponentModel.BindingDirection.OneWay> Feld, in dem die Vorlage kann nur die Eigenschaftswerte akzeptieren oder die <xref:System.ComponentModel.BindingDirection.TwoWay> Feld, in dem die Vorlage übernehmen und Verfügbarmachen von Eigenschaftswerten kann. Im zweiten Szenario von datengebundenen Steuerelementen automatisch können Update, Delete und Insert-Vorgänge von einer Datenquelle mithilfe der `Bind` Datenbindung Syntax.  
+  
+ Weitere Informationen über die Datenbindung finden Sie unter [Binden an Datenbanken](http://msdn.microsoft.com/en-us/ab7b2846-975b-4057-a948-45527497c742) und [Datenbindungsfunktionen Expressions Overview](http://msdn.microsoft.com/library/14cdd57d-0f82-4667-b503-73e1a96f136a).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Steuerelement mit Vorlagen, die mit dem Namen erstellen `TemplatedFirstControl` und ordnen ihr ein Container namens `FirstTemplateContainer`. Dies ermöglicht die Erstellung benutzerdefinierter Steuerelemente, die die Serverzeit anzeigen, wenn die Vorlage nicht angegeben wird, und den Inhalt der Vorlage bei die Vorlage angegeben ist. Die <xref:System.Attribute.GetCustomAttribute%2A> Methode bestimmt die <xref:System.Web.UI.TemplateContainerAttribute.BindingDirection%2A> Eigenschaft von der `FirstTemplate` Eigenschaft der `TemplateFirstControl`.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.TemplateContainerAttribute> Klasse.  
+  
+ [!code-csharp[SystemWebUI_TemplateContainerAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/CS/templatecontainerattribute.aspx#3)]
+ [!code-vb[SystemWebUI_TemplateContainerAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/VB/templatecontainerattribute.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerType">
+      <MemberSignature Language="C#" Value="public Type ContainerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ContainerType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.TemplateContainerAttribute.ContainerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Containersteuerelements ab.</summary>
+        <value>Das Containersteuerelement <see cref="T:System.Type" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Steuerelement mit Vorlagen, die mit dem Namen erstellen `TemplatedFirstControl` und ordnen ihr ein Container namens `FirstTemplateContainer`. Dies ermöglicht das Erstellen von benutzerdefinierten Steuerelementen, die die Serverzeit anzeigen, wenn die Vorlage nicht angegeben wird, und der Inhalt der Vorlage, wenn die Vorlage angegeben ist. Die <xref:System.Web.UI.TemplateContainerAttribute> Klasse wird verwendet, für die `FirstTemplate` Eigenschaft und zum Angeben der <xref:System.Web.UI.TemplateContainerAttribute.ContainerType%2A> Eigenschaft als `FirstTemplateContainer`.  
+  
+ [!code-csharp[SystemWebUI_TemplateContainerAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/CS/templatecontainerattribute.cs#1)]
+ [!code-vb[SystemWebUI_TemplateContainerAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/VB/templatecontainerattribute.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

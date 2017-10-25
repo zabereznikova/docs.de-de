@@ -1,0 +1,734 @@
+<Type Name="XmlNamespaceManager" FullName="System.Xml.XmlNamespaceManager">
+  <TypeSignature Language="C#" Value="public class XmlNamespaceManager : System.Collections.IEnumerable, System.Xml.IXmlNamespaceResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlNamespaceManager extends System.Object implements class System.Collections.IEnumerable, class System.Xml.IXmlNamespaceResolver" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlNamespaceManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Xml.IXmlNamespaceResolver</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Löst Namespaces auf, fügt sie einer Auflistung hinzu bzw. entfernt sie daraus und ermöglicht die Verwaltung der Gültigkeitsbereiche dieser Namespaces.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Allgemeine Informationen darüber, wie Namespaces deklariert und in XML-Dokumenten verwendet werden, finden Sie unter [Verwalten von Namespaces in einem XML-Dokument](~/docs/standard/data/xml/managing-namespaces-in-an-xml-document.md).  
+  
+ <xref:System.Xml.XmlNamespaceManager>Speichert Präfixe und Namespaces als Zeichenfolgen an. Hier ist eine Zusammenfassung der Verwaltungs- und Suchaufgaben Aufgaben mit dieser Klasse ausgeführt werden können. Weitere Informationen und Beispiele finden Sie, indem Sie den Links zur Referenzseite der einzelnen Methoden oder Eigenschaften folgen.  
+  
+|So wird's gemacht|Verwendung|  
+|--------|---------|  
+|Hinzufügen eines Namespaces|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>-Methode|  
+|Entfernen eines Namespaces|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>-Methode|  
+|Suchen des URIs für den Standardnamespace|<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A>-Eigenschaft|  
+|Suchen des URIs für ein Namespacepräfix|<xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A>-Methode|  
+|Suchen des Präfixes für einen Namespace-URI|<xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A>-Methode|  
+|Abrufen einer Namespaceliste im aktuellen Knoten|<xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A>-Methode|  
+|Festlegen des Gültigkeitsbereichs für einen Namespace|Die Methoden <xref:System.Xml.XmlNamespaceManager.PushScope%2A> und <xref:System.Xml.XmlNamespaceManager.PopScope%2A>|  
+|Überprüfen, ob im aktuellen Gültigkeitsbereich ein Präfix definiert ist|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>-Methode|  
+|Abrufen der Namenstabelle, die für die Suche nach Präfixen und URIs verwendet wird|<xref:System.Xml.XmlNamespaceManager.NameTable%2A>-Eigenschaft|  
+  
+ Um Namespaces zu dem Namespace-Manager hinzuzufügen, erstellen Sie eine <xref:System.Xml.XmlNamespaceManager> -Objekts und anschließendes Verwenden der <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> Methode. Dem Namespace-Manager werden beim Erstellen automatisch Standardpaare aus Präfix und Namespace hinzugefügt.  
+  
+ Wenn Sie den Namespace-Manager erstellen, können Sie angeben, dass eine Namenstabelle aus der <xref:System.Xml.XmlReader>, <xref:System.Xml.Xsl.XsltContext>, oder <xref:System.Xml.XmlDocument> Klasse, und klicken Sie dann die <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> Methode, um die Namespaces hinzuzufügen.  
+  
+ Sie können angeben, die <xref:System.Xml.XmlNamespaceManager> Objekt als Parameter an die <xref:System.Xml.XmlNode.SelectNodes%2A> oder <xref:System.Xml.XmlNode.SelectSingleNode%2A> Methode der <xref:System.Xml.XmlDocument> Klasse zum Ausführen von XPath-Abfrageausdrücke, die auf Namespace-qualifizierten Namen für Element- und Attributnamen verweisen.  
+  
+ Der Namespace-Manager wird davon ausgegangen, dass Präfixe und Namespaces bereits überprüft wurden und entsprechen dem [W3C-Namespaces](http://www.w3.org/TR/REC-xml-names/) Spezifikation. Der Namespace-Manager führt keine Validierung.  
+  
+ Der Namespace-Manager atomisiert die Zeichenfolgen, wenn sie mithilfe von hinzugefügt werden die <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> -Methode, und wenn eine Suche ausgeführt wird, mithilfe der <xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A> oder <xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A> Methode.  
+  
+ Der Namespace-Manager unterstützt Enumerationen sowie das Hinzufügen und Abrufen von Namespaces. Sie können die Schleife durchlaufen die Informationen in der Namespace-Manager gespeichert werden, mithilfe der `foreach` erstellen. Wenn Sie einen Namespace-Manager mit dem Namen erstellen z. B. `nsmanager`, Sie können die Tabelle durchlaufen, mit `foreach (String prefix in nsmanager)`.  
+  
+ Da der Namespace-Manager einen Zeichenfolgenvergleich mit dem Präfix und den Namespaces als Objekte bereitstellt, kann durch Verwendung des Namespace-Managers anstelle des direkten Zeichenfolgenvergleichs eine Leistungssteigerung erzielt werden.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie das Präfix gebunden `xsd` mit der Namespace-URI des `http://www.w3.org/2001/XMLSchema` und der Namespace-Manager hinzuzufügen:  
+  
+```vb  
+nsmgr.AddNamespace("xsd", "http://www.w3.org/2001/XMLSchema")  
+```  
+  
+```csharp  
+nsmgr.AddNamespace("xsd", "http://www.w3.org/2001/XMLSchema");  
+```  
+  
+ Sie erhalten dann den Namespace mithilfe der <xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A> Methode:  
+  
+```vb  
+nsmgr.LookupNamespace("xsd")  
+```  
+  
+```csharp  
+nsmgr.LookupNamespace("xsd");  
+```  
+  
+ Das folgende Beispiel erstellt eine <xref:System.Xml.XmlNamespaceManager> der Namenstabelle aus einem XML-Reader mit:  
+  
+```vb  
+Dim reader As New XmlTextReader("myfile.xml")  
+Dim nsmanager As New XmlNamespaceManager(reader.NameTable)  
+nsmanager.AddNamespace("msbooks", "www.microsoft.com/books")  
+nsmanager.PushScope()  
+nsmanager.AddNamespace("msstore", "www.microsoft.com/store")  
+While reader.Read()  
+    Console.WriteLine("Reader Prefix:{0}", reader.Prefix)  
+    Console.WriteLine("XmlNamespaceManager Prefix:{0}",  
+     nsmanager.LookupPrefix(nsmanager.NameTable.Get(reader.NamespaceURI)))  
+End While  
+```  
+  
+```csharp  
+XmlTextReader reader = new XmlTextReader("myfile.xml");  
+XmlNamespaceManager nsmanager = new XmlNamespaceManager(reader.NameTable);  
+nsmanager.AddNamespace("msbooks", "www.microsoft.com/books");  
+nsmanager.PushScope();  
+nsmanager.AddNamespace("msstore", "www.microsoft.com/store");  
+while (reader.Read())  
+{  
+    Console.WriteLine("Reader Prefix:{0}", reader.Prefix);  
+    Console.WriteLine("XmlNamespaceManager Prefix:{0}",  
+    nsmanager.LookupPrefix(nsmanager.NameTable.Get(reader.NamespaceURI)));  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlNamespaceManager (System.Xml.XmlNameTable nameTable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlNameTable nameTable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamespaceManager.#ctor(System.Xml.XmlNameTable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="nameTable" Type="System.Xml.XmlNameTable" />
+      </Parameters>
+      <Docs>
+        <param name="nameTable">Der zu verwendende <see cref="T:System.Xml.XmlNameTable" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlNamespaceManager" />-Klasse mit der angegebenen <see cref="T:System.Xml.XmlNameTable" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Namenstabelle wird verwendet, um Präfixe und Namespaces zu suchen. Im Konstruktor kann eine vorhandene Namenstabelle mit vorab atomisierten Zeichenfolgen angegeben werden. Es gibt mehrere Vorteile in diesem Fall ein. Beispielsweise, wenn der Namenstabelle des ein <xref:System.Xml.XmlReader> Objekt verwendet wird, nach jedem Lesevorgang, Namespace und Präfix Zeichenfolgen, die in den der Namenstabelle erneut von verwendet werden können <xref:System.Xml.XmlNamespaceManager>.  
+  
+ Weitere Informationen zu atomisierten Zeichenfolgen finden Sie unter <xref:System.Xml.XmlNameTable>.  
+  
+> [!NOTE]
+>  Wenn Sie eine vorhandene Namenstabelle angeben, die Namespaces in der Namenstabelle werden nicht automatisch hinzugefügt <xref:System.Xml.XmlNamespaceManager>. Verwenden Sie <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> und <xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> hinzufügen oder Entfernen von Namespaces.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Xml.XmlNamespaceManager> mithilfe der Namenstabelle des Readers.  
+  
+ [!code-cpp[Classic WebData XmlNamespaceManager.XmlNamespaceManager Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNamespaceManager.XmlNamespaceManager Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNamespaceManager.XmlNamespaceManager Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNamespaceManager.XmlNamespaceManager Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNamespaceManager.XmlNamespaceManager Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNamespaceManager.XmlNamespaceManager Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">
+          <see langword="null" />wird an den Konstruktor übergeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNamespace">
+      <MemberSignature Language="C#" Value="public virtual void AddNamespace (string prefix, string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddNamespace(string prefix, string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamespaceManager.AddNamespace(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Präfix, das dem hinzugefügten Namespace zugeordnet werden soll. Verwenden Sie String.Empty, um einen Standardnamespace hinzuzufügen.  
+  
+ **Hinweis**Wenn die <see cref="T:System.Xml.XmlNamespaceManager" /> verwendet zum Auflösen von Namespaces in einem Ausdruck XML Path Language (XPath), muss ein Präfix angegeben werden. Wenn ein XPath-Ausdruck kein Präfix enthält, wird davon ausgegangen, dass der Namespace-URI (Uniform Resource Identifier) der leere Namespace ist. Weitere Informationen zu XPath-Ausdrücke und die <see cref="T:System.Xml.XmlNamespaceManager" />, finden Sie in der <see cref="M:System.Xml.XmlNode.SelectNodes(System.String)" /> und <see cref="M:System.Xml.XPath.XPathExpression.SetContext(System.Xml.XmlNamespaceManager)" /> Methoden.</param>
+        <param name="uri">Der hinzuzufügende Namespace.</param>
+        <summary>Fügt der Auflistung den angegebenen Namespace hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xml.XmlNamespaceManager>überprüft nicht `prefix` und `uri` auf Übereinstimmung.  
+  
+ <xref:System.Xml.XmlReader>Namen, einschließlich der Präfixe und Namespaces, um sicherzustellen, dass sie gültige XML-Namen gemäß der World Wide Web Consortium (W3C) überprüft [Spezifikation Namespaces](http://www.w3.org/TR/REC-xml-names/). <xref:System.Xml.XmlNamespaceManager>wird intern von verwendet <xref:System.Xml.XmlReader>, damit der bemühungen, tragen <xref:System.Xml.XmlNamespaceManager> wird vorausgesetzt, alle Präfixe und Namespaces sind gültig.  
+  
+ Wenn das Präfix und Namespace bereits im aktuellen Gültigkeitsbereich vorhanden, wird die neue Paar aus Präfix- und Namespace vorhandenen Tagpräfix-Namespace-Kombination ersetzt. Die gleiche Präfix und Namespace-Kombination können in verschiedenen Gültigkeitsbereichen vorhanden sein.  
+  
+ Die folgenden Paare von Tagpräfix-Namespace werden hinzugefügt, werden standardmäßig die <xref:System.Xml.XmlNamespaceManager>. Sie können in jedem Bereich bestimmt werden.  
+  
+|Präfix|Namespace|  
+|------------|---------------|  
+|xmlns|http://www.w3.org/2000/xmlns/ (das Präfix "Xmlns" Namespace)|  
+|xml|http://www.w3.org/XML/1998/Namespace (XML-Namespace)|  
+|String.Empty|"String.Empty" (der leere Namespace). Dieser Wert kann ein anderes Präfix zugewiesen. Z. B. Xmlns = "" definiert die Standard-Namespace um den leeren Namespace werden|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Xml.XmlNamespaceManager> zum Auflösen von Namespaces in einem XML-Fragment.  
+  
+ [!code-csharp[Classic WebData XmlNamespaceManager.AddNamespace Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNamespaceManager.AddNamespace Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNamespaceManager.AddNamespace Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNamespaceManager.AddNamespace Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Wert für <paramref name="prefix" /> "Xml" oder "Xmlns" ist.</exception>
+        <exception cref="T:System.ArgumentNullException">Der Wert für <paramref name="prefix" /> oder <paramref name="uri" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultNamespace">
+      <MemberSignature Language="C#" Value="public virtual string DefaultNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNamespaceManager.DefaultNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace-URI für den Standardnamespace ab.</summary>
+        <value>Gibt den Namespace-URI für den Standardnamespace zurück oder String.Empty, wenn kein Standardnamespace vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entspricht dem Aufruf von LookupNamespace(String.Empty).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Standardnamespace, sofern vorhanden.  
+  
+ [!code-cpp[Classic WebData XmlNamespaceManager.DefaultNamespace Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNamespaceManager.DefaultNamespace Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNamespaceManager.DefaultNamespace Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNamespaceManager.DefaultNamespace Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNamespaceManager.DefaultNamespace Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNamespaceManager.DefaultNamespace Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamespaceManager.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zum Durchlaufen der Namespaces in der <see cref="T:System.Xml.XmlNamespaceManager" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> , enthält die Präfixe gespeichert werden, indem Sie die <see cref="T:System.Xml.XmlNamespaceManager" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der folgende Code zeigt, wie Sie die <xref:System.Collections.IEnumerator> alle Anzeigen der Namespacepaare, in gespeichert der <xref:System.Xml.XmlNamespaceManager> Objekt.  
+  
+```  
+Dim nsEnum As IEnumerator = nsmgr.GetEnumerator()  
+Do While nsEnum.MoveNext  
+  If nsEnum.Current <> "" Then  
+    MsgBox("xmlns:" + nsEnum.Current + "=" + nsmgr.LookupNamespace(nsEnum.Current))  
+  End If  
+Loop  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNamespacesInScope">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IDictionary&lt;string,string&gt; GetNamespacesInScope (System.Xml.XmlNamespaceScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GetNamespacesInScope(valuetype System.Xml.XmlNamespaceScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamespaceManager.GetNamespacesInScope(System.Xml.XmlNamespaceScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Xml.XmlNamespaceScope" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Ein Enumerationswert, der den Typ der Namespaceknoten angibt, die zurückgegeben werden sollen.</param>
+        <summary>Ruft eine Auflistung von Namen sortiert nach Präfix ab, mit der die aktuell im Gültigkeitsbereich vorhanden Namespaces durchlaufen werden können.</summary>
+        <returns>Eine Auflistung der derzeit im Gültigkeitsbereich vorhandenen Paare aus Namespace und Präfix.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Wörterbuch besteht aus einer Auflistung von Namen sortiert nach Präfix. Es kann verwendet werden, die im Gültigkeitsbereich befindlichen Namespaces aufgelistet werden. Das Wörterbuch ist eine nicht verbundene Kopie der Namespaceliste. Es bleibt unverändert, wenn der aktuelle Namespace im Gültigkeitsbereich befindlichen Liste geändert.  
+  
+ Die folgende Tabelle zeigt, wie <xref:System.Xml.XmlNamespaceScope> Werte wirken sich auf die Namespaces, die zurückgegeben werden, indem Sie die <xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A> Methode.  
+  
+|XmlNamespaceScope-Wert|xmlns: XML|xmlns:xmlns|Xmlns = ""|  
+|-----------------------------|---------------|-----------------|---------------|  
+|`All`|Ja|Nein|Nein|  
+|`ExcludeXml`|Nein|Nein|Nein|  
+|`Local`|Nein|Nein|Ja|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasNamespace">
+      <MemberSignature Language="C#" Value="public virtual bool HasNamespace (string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasNamespace(string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamespaceManager.HasNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Präfix des Namespaces, die Sie suchen möchten.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob für das angegebene Präfix ein Namespace für den aktuellen abgelegten Gültigkeitsbereich definiert ist.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Namespace definiert; vorhanden ist andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um festzustellen, ob ein Standardwert leerer Namespace definiert ist, legen Sie `prefix` auf "String.Empty". Ein Rückgabewert von `true` gibt an, dass ein Standardnamespace definiert, die im aktuellen Bereich; `false` gibt an, dass kein Standardnamespace definiert ist.  
+  
+> [!NOTE]
+>  xmlns: x = "" ist nicht zulässig, gemäß der [W3C-Namespaces](http://www.w3.org/TR/REC-xml-names/) Empfehlung.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Standardnamespace, sofern vorhanden.  
+  
+ [!code-cpp[Classic WebData XmlNamespaceManager.DefaultNamespace Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNamespaceManager.DefaultNamespace Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNamespaceManager.DefaultNamespace Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNamespaceManager.DefaultNamespace Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNamespaceManager.DefaultNamespace Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNamespaceManager.DefaultNamespace Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupNamespace">
+      <MemberSignature Language="C#" Value="public virtual string LookupNamespace (string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string LookupNamespace(string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamespaceManager.LookupNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Präfix, dessen Namespace-URI aufgelöst werden soll. Um eine Übereinstimmung mit dem Standardnamespace zu suchen, übergeben Sie String.Empty.</param>
+        <summary>Ruft den Namespace-URI für das angegebene Präfix ab.</summary>
+        <returns>Gibt den Namespace-URI für <paramref name="prefix" /> oder <see langword="null" /> , wenn kein zugeordneter Namespace vorhanden ist. Die zurückgegebene Zeichenfolge ist atomisiert.  
+  
+ Weitere Informationen zu atomisierten Zeichenfolgen finden Sie unter der <see cref="T:System.Xml.XmlNameTable" /> Klasse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Tagpräfix-Namespace-Paaren, die <xref:System.Xml.XmlNamespaceManager>, und klicken Sie dann alle Paare in der Auflistung angezeigt.  
+  
+ [!code-cpp[Classic WebData XmlNamespaceManager.PopScope Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNamespaceManager.PopScope Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNamespaceManager.PopScope Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNamespaceManager.PopScope Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNamespaceManager.PopScope Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNamespaceManager.PopScope Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupPrefix">
+      <MemberSignature Language="C#" Value="public virtual string LookupPrefix (string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string LookupPrefix(string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamespaceManager.LookupPrefix(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Für das Präfix aufzulösende Namespace.</param>
+        <summary>Sucht das für den angegebenen Namespace-URI deklarierte Präfix.</summary>
+        <returns>Das passende Präfix. Wenn es kein zugeordnetes Präfix gibt, gibt die Methode den Wert "String.Empty" zurück. Wenn ein null-Wert, klicken Sie dann angegeben wird <see langword="null" /> zurückgegeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sucht das zugeordnete Präfix durch das Durchlaufen des Stapels (d. h. die Anzeige Global). Die angegebene Zeichenfolge muss für die Suche erfolgreich ist atomisiert werden. Das heißt, das angegebene String-Objekt muss vorhanden sein in der Namespace-Manager-Namenstabelle (<xref:System.Xml.XmlNamespaceManager.NameTable%2A>).  
+  
+ Die zurückgegebene Zeichenfolge ist ebenfalls atomisiert werden. Weitere Informationen zu atomisierten Zeichenfolgen finden Sie unter der <xref:System.Xml.XmlNameTable> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A> Methode, wenn ein Attribut zu schreiben. Verwendet die <xref:System.Xml.XmlWriter.WriteStartAttribute%2A?displayProperty=nameWithType> Methode, um das Attribut zu starten, sucht das Präfix für die `urn:samples` Namespace-URI, und verwendet dann das Präfix in der <xref:System.Xml.XmlWriter.WriteStartAttribute%2A?displayProperty=nameWithType> beim Schreiben der `ISBN` Attribut:  
+  
+```vb  
+Dim prefix As String = nsMgr.LookupPrefix("urn:samples")  
+writer.WriteStartAttribute(prefix, "ISBN", "urn:samples")  
+  
+```  
+  
+```csharp  
+XmlNameTable nt = new XmlNameTable();  
+XmlNamespaceManager nsMgr = new XmlNamespaceManager(nt);  
+nsMgr.AddNamespace("bk","urn:samples");string prefix = writer nsMgr.LookupPrefix("urn:samples");  
+writer.WriteStartAttribute(prefix, "ISBN", "urn:samples");  
+```  
+  
+ Im folgenden Beispiel wird <xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A> das Präfix definiert für ein Element gefunden.  
+  
+```vb  
+writer.WriteStartElement("root", "book")  
+writer.WriteStartElement("x", "node", "author")  
+s = writer.LookupPrefix("author")  
+CError.Compare(s, "x", "Error in nested element")  
+writer.WriteEndElement()  
+s = writer.LookupPrefix("book")  
+CError.Compare(s, Nothing, "Error in root element")  
+writer.WriteEndElement()  
+  
+```  
+  
+ **Ausgabe**  
+  
+```  
+<root xmlns="book">  
+  <x:node xmlns:x="author" />   
+</root>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameTable">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNameTable NameTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNameTable NameTable" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNamespaceManager.NameTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNameTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xml.XmlNameTable" /> diesem Objekt zugeordnet.</summary>
+        <value>Der von diesem Objekt verwendete <see cref="T:System.Xml.XmlNameTable" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Namenstabelle wird verwendet, um die Suche nach Präfixen und Namespace-URIs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopScope">
+      <MemberSignature Language="C#" Value="public virtual bool PopScope ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool PopScope() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamespaceManager.PopScope" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Holt einen Namespacebereich vom Stapel.</summary>
+        <returns>
+          <see langword="true" />Wenn Namespacebereiche auf dem Stapel; verbleibenden vorhanden sind <see langword="false" /> , wenn keine weitere Namespaces per pop ausgelesen werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode alle Namespaces, die hinzugefügt wurden <xref:System.Xml.XmlNamespaceManager> (durch Aufrufen von <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>) seit dem letzten Aufruf von <xref:System.Xml.XmlNamespaceManager.PopScope%2A> werden entfernt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Tagpräfix-Namespace-Paaren, die <xref:System.Xml.XmlNamespaceManager> und anschließend alle Paare in der Auflistung angezeigt.  
+  
+ [!code-cpp[Classic WebData XmlNamespaceManager.PopScope Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNamespaceManager.PopScope Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNamespaceManager.PopScope Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNamespaceManager.PopScope Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNamespaceManager.PopScope Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNamespaceManager.PopScope Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PushScope">
+      <MemberSignature Language="C#" Value="public virtual void PushScope ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PushScope() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamespaceManager.PushScope" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt einen Namespacebereich auf den Stapel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach einem Aufruf dieser Methode, die alle Namespaces, die hinzugefügt werden <xref:System.Xml.XmlNamespaceManager> (durch Aufrufen von <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>), zum Namespacebereich mithilfe von Push-gehört.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Tagpräfix-Namespace-Paaren, die <xref:System.Xml.XmlNamespaceManager> und anschließend alle Paare in der Auflistung angezeigt.  
+  
+ [!code-cpp[Classic WebData XmlNamespaceManager.PopScope Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNamespaceManager.PopScope Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNamespaceManager.PopScope Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNamespaceManager.PopScope Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNamespaceManager.PopScope Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNamespaceManager.PopScope Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveNamespace">
+      <MemberSignature Language="C#" Value="public virtual void RemoveNamespace (string prefix, string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveNamespace(string prefix, string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNamespaceManager.RemoveNamespace(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Präfix für den Namespace.</param>
+        <param name="uri">Der für das angegebene Präfix zu entfernende Namespace. Der entfernte Namespace stammt aus dem aktuellen Namespacebereich. Namespaces außerhalb des aktuellen Gültigkeitsbereichs werden ignoriert.</param>
+        <summary>Entfernt den angegebenen Namespace für das angegebene Präfix.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert der <paramref name="prefix" /> oder <paramref name="uri" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

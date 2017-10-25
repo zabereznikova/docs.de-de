@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.InteropServices">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.InteropServices" /> Namespace bietet einer Vielzahl von Membern bereit, die Unterstützung für COM-Interop und Plattformaufrufe Dienste. Wenn Sie mit diesen Diensten nicht vertraut sind, finden Sie unter [Interoperation mit nicht verwaltetem Code](~/docs/framework/interop/index.md).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Member dieses Namespace bieten verschiedene Kategorien von Funktionen, wie in der folgenden Tabelle gezeigt. Attribute steuern die Marshalling-Verhalten, z. B. das Anordnen von Strukturen oder Gewusst wie: Darstellen von Zeichenfolgen. Die wichtigsten Attribute sind <xref:System.Runtime.InteropServices.DllImportAttribute>, Plattform definieren mit Aufrufen von Methoden für den Zugriff auf nicht verwaltete APIs und <xref:System.Runtime.InteropServices.MarshalAsAttribute>, die Sie verwenden, um anzugeben, wie Daten zwischen gemarshallt werden verwalteten und nicht verwalteten Speicher.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

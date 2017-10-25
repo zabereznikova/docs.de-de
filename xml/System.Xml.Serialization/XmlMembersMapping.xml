@@ -1,0 +1,224 @@
+<Type Name="XmlMembersMapping" FullName="System.Xml.Serialization.XmlMembersMapping">
+  <TypeSignature Language="C#" Value="public class XmlMembersMapping : System.Xml.Serialization.XmlMapping" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlMembersMapping extends System.Xml.Serialization.XmlMapping" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlMembersMapping" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Serialization.XmlMapping</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Zuordnungen zwischen .NET Framework-Webdienstmethoden und Web Services Description Language (WSDL)-Nachrichten, die definiert, sind für SOAP-Webdienste bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlMembersMapping> Klasse wird nicht direkt verwendet werden. Stattdessen wird es verwendet:  
+  
+-   Vom Tool Wsdl.exe oder die <xref:System.Web.Services.Description.ServiceDescriptionImporter> -Klasse, bei der Generierung von Clientproxyklassen oder abstrakten Klassen aus einem WSDL-Dokument. Das WSDL-Dokument gibt die Verwendung des SOAP-Protokolls an.  
+  
+-   Initialisieren <xref:System.Xml.Serialization.XmlSerializer> Objekte während der .NET Framework einen SOAP-Web-Dienst oder Client initialisiert wird.  
+  
+-   Durch die <xref:System.Web.Services.Description.ServiceDescriptionReflector> Klasse beim Erstellen von <xref:System.Web.Services.Description.ServiceDescription> Objekte von Klassen, die als SOAP-Webdienste identifiziert werden.  
+  
+ Die <xref:System.Xml.Serialization.XmlMembersMapping> Klasse ist ein Ersatz für die <xref:System.Xml.Serialization.XmlTypeMapping> Klasse für die Zuordnung zwischen den Methoden des Webdiensts und Nachrichten. Es wird verwendet, um die folgenden Entitäten, die zu einer SOAP-Webdienstmethode gehören enthalten:  
+  
+-   Eingabeparameter.  
+  
+-   Output-Parameter und Rückgabewert.  
+  
+-   SOAP-Anforderungsheader.  
+  
+-   SOAP-Antwortheader.  
+  
+ Insbesondere stellt die Klasse Zuordnungen für die Definition eines WSDL-Nachricht gemäß den folgenden Auswahlmöglichkeiten an:  
+  
+-   Für eine Webdienstmethode, die SOAP-Codierung verwendet: der obersten Ebene <xref:System.Xml.Serialization.XmlMapping.ElementName%2A> und <xref:System.Xml.Serialization.XmlTypeMapping.TypeName%2A> Eigenschaften beziehen sich auf ein übergeordnetes Wrapperelement; die Teile der Nachricht durch Arraymember dargestellt werden. Allerdings in dem seltenen Fall, wenn die Webdienstvorgang Dokumentstile in Verbindung mit einer umschlossenen Bindung an eine .NET Framework-Methode sowie die SOAP-Codierung, die auf der obersten Ebene verwendet <xref:System.Xml.Serialization.XmlMapping.ElementName%2A> und <xref:System.Xml.Serialization.XmlTypeMapping.TypeName%2A> Eigenschaften beziehen sich auf den einzelnen **Teil** -Element, das in einem generierten WSDL-Dokument angezeigt wird.  
+  
+-   Für einen Webdienst verwenden Methode, mit der literalen, XML-Schema-Definitionen: Wenn eine Webnachricht-Dienst oder einen Vorgang lediglich einen einzelnen Nachrichtenteil der obersten Ebene definiert oder eine umschlossene Bindung an eine .NET Framework-Methode verwendet <xref:System.Xml.Serialization.XmlMapping.ElementName%2A> und <xref:System.Xml.Serialization.XmlTypeMapping.TypeName%2A> Eigenschaften beziehen sich auf den Teil. Wenn es mehrere Teile (untypisch Fall) der obersten Ebene sind <xref:System.Xml.Serialization.XmlMapping.ElementName%2A> und <xref:System.Xml.Serialization.XmlTypeMapping.TypeName%2A> Eigenschaften beziehen sich auf ein übergeordnetes Wrapperelement; die Teile von dargestellt sind die <xref:System.Xml.Serialization.XmlMembersMapping.Count%2A> und indizierte Eigenschaften des Array-Zugriff. Darüber hinaus XSD `any` Element empfängt besondere Behandlung.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlMembersMapping.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von .NET Framework-Code-Entitäten, die zu einer Webdienstmethode gehören, die eine SOAP-Nachricht zugeordnet werden.</summary>
+        <value>Die Anzahl der Zuordnungen in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung kann Folgendes enthalten:  
+  
+-   Web Service-Methode Eingabeparameter.  
+  
+-   Webdienstmethode auszugeben Parameter plus 1 für den Rückgabetyp, falls dies nicht "void".  
+  
+-   Eingabe SOAP-Header.  
+  
+-   Header der SOAP-Ausgabe.  
+  
+ Finden Sie unter der <xref:System.Xml.Serialization.XmlMembersMapping> Klasse für die Bedingungen, unter dem diese Entitäten in übersetzt `part` Elemente in einem Dokument Web Services Description Language (WSDL).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlMemberMapping this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlMemberMapping Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlMembersMapping.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlMemberMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des zurückzugebenden Zuordnung.</param>
+        <summary>Ruft ein Element, internen Typ enthält, Informationen für eine .NET Framework-Code-Entität zuordnen, zu der gehört eine Webdienstmethode, die einer SOAP-Nachricht zugeordnet wird.</summary>
+        <value>Der angeforderte <see cref="T:System.Xml.Serialization.XmlMemberMapping" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der indiziertes Array Zugriffsoperator für die <xref:System.Xml.Serialization.XmlMembersMapping> Klasse ruft angegebenen Eintrags aus einem Array von keines der folgenden:  
+  
+-   Web Service-Methode Eingabeparameter.  
+  
+-   Ausgabeparameter sowie den Rückgabetyp, wenn dies nicht "void" angezeigt wird, am index 0.  
+  
+-   Eingabe SOAP-Header.  
+  
+-   Header der SOAP-Ausgabe.  
+  
+ Finden Sie unter der <xref:System.Xml.Serialization.XmlMembersMapping> Klasse für die Bedingungen, unter dem diese Entitäten in übersetzt `part` Elemente in einem Dokument Web Services Description Language (WSDL).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlMembersMapping.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der .NET Framework-Typ zugeordnet werden, in den Datentyp eines XML-Schema-Elements, das eine SOAP-Nachricht darstellt.</summary>
+        <value>Der Name des .NET Framework-Typs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine SOAP-Nachricht wird in ein Dokument mit Web Services Description Language (WSDL) definiert die `message` Element.  
+  
+ Finden Sie unter der <xref:System.Xml.Serialization.XmlMembersMapping> Klasse für die Bedingungen, unter denen die <xref:System.Xml.Serialization.XmlMembersMapping.TypeName%2A> Eigenschaft bezieht sich auf einen Codeentität, die in einer Webdienstmethode (ein Wert für Parameter oder Rückgabetyp) anstelle von einem zusätzlichen übergeordneten oder den Wrapper-Element definiert.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TypeNamespace">
+      <MemberSignature Language="C#" Value="public string TypeNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlMembersMapping.TypeNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace der .NET Framework-Typ zugeordnet werden, in den Datentyp eines XML-Schema-Elements, das eine SOAP-Nachricht darstellt.</summary>
+        <value>Der .NET Framework-Namespace der Zuordnung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine SOAP-Nachricht wird in ein Dokument mit Web Services Description Language (WSDL) definiert die `message` Element.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

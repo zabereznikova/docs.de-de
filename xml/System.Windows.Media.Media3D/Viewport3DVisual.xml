@@ -1,0 +1,441 @@
+<Type Name="Viewport3DVisual" FullName="System.Windows.Media.Media3D.Viewport3DVisual">
+  <TypeSignature Language="C#" Value="public sealed class Viewport3DVisual : System.Windows.Media.Visual" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Viewport3DVisual extends System.Windows.Media.Visual" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.Viewport3DVisual" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Visual</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Children")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Rendert die <see cref="T:System.Windows.Media.Media3D.Visual3D" /> untergeordneten Elemente innerhalb der Grenzen des angegebenen 2D Viewport.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.Media3D.Viewport3DVisual> wird eine 2D-Drehung visuelle Element mit untergeordneten 3D-Objekten. Die <xref:System.Windows.Media.Media3D.Viewport3DVisual> bietet die erforderliche Infrastruktur für die <xref:System.Windows.Controls.Viewport3D> Element.  Die meisten Benutzer ist sinnvoll, den <xref:System.Windows.Controls.Viewport3D> Element.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Viewport3DVisual ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Viewport3DVisual.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Media3D.Viewport3DVisual" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BitmapEffect">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.BitmapEffect BitmapEffect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Effects.BitmapEffect BitmapEffect" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport3DVisual.BitmapEffect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("BitmapEffects are deprecated and no longer function.  Consider using Effects where appropriate instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.BitmapEffect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.Effects.BitmapEffect" /> auf die Viewport3DVisual angewendet.</summary>
+        <value>BitmapEffect auf die Viewport3DVisual angewendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bitmapeffekte sind Software gerendert. Jedes Objekt, das einen Effekt anwendet, wird auch in der Software gerendert werden. Bitmapeffekte sollten nicht auf große visuelle Objekte oder Animationen angewendet werden, da dies die Leistung beeinträchtigen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BitmapEffectInput">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.BitmapEffectInput BitmapEffectInput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Effects.BitmapEffectInput BitmapEffectInput" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport3DVisual.BitmapEffectInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("BitmapEffects are deprecated and no longer function.  Consider using Effects where appropriate instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.BitmapEffectInput</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Media.Effects.BitmapEffectInput" /> angewendet, um die <see cref="T:System.Windows.Media.Media3D.Viewport3DVisual" />.</summary>
+        <value>BitmapEffectInput auf die Viewport3DVisual angewendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Effects.BitmapEffectInput>Wendet die <xref:System.Windows.Media.Effects.BitmapEffect> in bestimmten die <xref:System.Windows.Media.Media3D.Viewport3DVisual.BitmapEffect%2A> Eigenschaft in einem angegebenen Bereich des visuellen Objekts.  
+  
+ Bitmapeffekte sind Software gerendert. Jedes Objekt, das einen Effekt anwendet, wird auch in der Software gerendert werden. Bitmapeffekte sollten nicht auf große visuelle Objekte oder Animationen angewendet werden, da dies die Leistung beeinträchtigen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Camera">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Camera Camera { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.Camera Camera" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport3DVisual.Camera" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Camera</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Media.Media3D.Camera" /> verwendet werden, indem Sie die <see cref="T:System.Windows.Media.Media3D.Viewport3DVisual" />.</summary>
+        <value>Kamera verwendet werden, indem Sie die <see cref="T:System.Windows.Media.Media3D.Viewport3DVisual" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CameraProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CameraProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CameraProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.Viewport3DVisual.CameraProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.Viewport3DVisual.Camera" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Visual3DCollection Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.Visual3DCollection Children" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport3DVisual.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Visual3DCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Windows.Media.Media3D.Visual3D" /> enthaltenen Objekte <see cref="T:System.Windows.Media.Media3D.Viewport3DVisual" />.</summary>
+        <value>Auflistung der Objekte von der <see cref="T:System.Windows.Media.Media3D.Viewport3DVisual" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clip">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry Clip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Geometry Clip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport3DVisual.Clip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ausschneidebereich der <see cref="T:System.Windows.Media.Media3D.Viewport3DVisual" />.</summary>
+        <value>
+          <see cref="T:System.Windows.Media.Geometry" />die Clippingbereichs definiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentBounds">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect ContentBounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect ContentBounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport3DVisual.ContentBounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das umgebende Feld für den Inhalt der <see cref="T:System.Windows.Media.Media3D.Viewport3DVisual" />.</summary>
+        <value>
+          <see cref="T:System.Windows.Rect" />Das umgebende Feld definiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DescendantBounds">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect DescendantBounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect DescendantBounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport3DVisual.DescendantBounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vereinigung aller umgebenden Felder für alle von den nachfolgenden Werten des Inhalts der <see cref="T:System.Windows.Media.Media3D.Viewport3DVisual" />, aber nicht einschließlich des Inhalts des der Viewport3DVisual.</summary>
+        <value>
+          <see cref="T:System.Windows.Rect" />definiert die Union.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.HitTestResult HitTest (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.HitTestResult HitTest(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Viewport3DVisual.HitTest(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.HitTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Zeigen Sie an, für den ein Treffertest ausgeführt.</param>
+        <summary>Gibt das oberste visuelle Objekt eines Treffertests ausgeführt wird, zu einem angegebenen <see cref="T:System.Windows.Point" />.</summary>
+        <returns>Das als <see cref="T:System.Windows.Media.HitTestResult" />-Typ zurückgegebene Ergebnis des Treffertests.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public void HitTest (System.Windows.Media.HitTestFilterCallback filterCallback, System.Windows.Media.HitTestResultCallback resultCallback, System.Windows.Media.HitTestParameters hitTestParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void HitTest(class System.Windows.Media.HitTestFilterCallback filterCallback, class System.Windows.Media.HitTestResultCallback resultCallback, class System.Windows.Media.HitTestParameters hitTestParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Viewport3DVisual.HitTest(System.Windows.Media.HitTestFilterCallback,System.Windows.Media.HitTestResultCallback,System.Windows.Media.HitTestParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filterCallback" Type="System.Windows.Media.HitTestFilterCallback" />
+        <Parameter Name="resultCallback" Type="System.Windows.Media.HitTestResultCallback" />
+        <Parameter Name="hitTestParameters" Type="System.Windows.Media.HitTestParameters" />
+      </Parameters>
+      <Docs>
+        <param name="filterCallback">Wert des Typs HitTestFilterCallback.</param>
+        <param name="resultCallback">Wert des Typs HitTestResultCallback.</param>
+        <param name="hitTestParameters">Wert des Typs <see cref="T:System.Windows.Media.HitTestParameters" />.</param>
+        <summary>Initiiert einen Treffertest für das <see cref="T:System.Windows.Media.Media3D.Viewport3DVisual" /> mithilfe der <see cref="T:System.Windows.Media.HitTestFilterCallback" /> und <see cref="T:System.Windows.Media.HitTestResultCallback" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `filterCallback` Parameter kann null sein, in diesem Fall wird es ignoriert. Wenn `filterCallback` ist kein null-Verweis (`Nothing` in Visual Basic), wird aufgerufen, bevor `resultCallback`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTestCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.GeometryHitTestResult HitTestCore (System.Windows.Media.GeometryHitTestParameters hitTestParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.GeometryHitTestResult HitTestCore(class System.Windows.Media.GeometryHitTestParameters hitTestParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Viewport3DVisual.HitTestCore(System.Windows.Media.GeometryHitTestParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GeometryHitTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hitTestParameters" Type="System.Windows.Media.GeometryHitTestParameters" />
+      </Parameters>
+      <Docs>
+        <param name="hitTestParameters">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public System.Windows.Vector Offset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Vector Offset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport3DVisual.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Vector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Offsetwert der <see cref="T:System.Windows.Media.Media3D.Viewport3DVisual" />.</summary>
+        <value>
+          <see cref="T:System.Windows.Vector" />die den Offset der Viewport3DVisual-Wert darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opacity">
+      <MemberSignature Language="C#" Value="public double Opacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Opacity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport3DVisual.Opacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Deckkraft der <see cref="T:System.Windows.Media.Media3D.Viewport3DVisual" />.</summary>
+        <value>Der Wert der Eigenschaft Deckkraft wird als Wert zwischen 0 und 1, Angeben eines Datumsbereichs aus vollständig transparent auf vollständig deckendes angegeben. Der Wert 0 gibt an, dass die Deckkraft beim Wert 1 gibt an, dass die Deckkraft vollständig deckend ist vollständig transparent ist. Der Wert 0,5 würde angeben, dass die Deckkraft ist 50 % undurchsichtig ist, der Wert 0,725 würde bedeuten, dass die Deckkraft zu 72,5 % undurchsichtig usw. ist. Kleinere Werte als 0 werden als 0 behandelt, größere Werte als 1 als 1.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpacityMask">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush OpacityMask { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush OpacityMask" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport3DVisual.OpacityMask" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die Deckkraft des der <see cref="T:System.Windows.Media.Media3D.Viewport3DVisual" />.</summary>
+        <value>
+          <see cref="T:System.Windows.Media.Brush" />die Wert für die Deckkraft des der Viewport3DVisual darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObject Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyObject Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport3DVisual.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das übergeordnete Element <see cref="T:System.Windows.Media.Visual" /> für die Viewport3DVisual.</summary>
+        <value>Visuelles übergeordnetes Element von der Viewport3DVisual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Transform Transform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Transform Transform" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport3DVisual.Transform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Transform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Transformationswert für das <see cref="T:System.Windows.Media.Media3D.Viewport3DVisual" />.</summary>
+        <value>
+          <see cref="T:System.Windows.Media.Transform" />auf der Viewport3DVisual angewendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Viewport">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect Viewport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect Viewport" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Viewport3DVisual.Viewport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie das Rechteck, in dem die <see cref="T:System.Windows.Media.Media3D.Viewport3DVisual" /> gerendert wird.</summary>
+        <value>Rechteck, in dem der Inhalt der Viewport3D gerendert werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Viewport"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.Viewport3DVisual.ViewportProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ViewportProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ViewportProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.Viewport3DVisual.ViewportProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.Viewport3DVisual.Viewport" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

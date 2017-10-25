@@ -1,0 +1,294 @@
+<Type Name="LoginName" FullName="System.Web.UI.WebControls.LoginName">
+  <TypeSignature Language="C#" Value="public class LoginName : System.Web.UI.WebControls.WebControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LoginName extends System.Web.UI.WebControls.WebControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LoginName" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("FormatString")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.LoginNameDesigner,System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Zeigt den Wert der <see langword="System.Web.UI.Page.User.Identity.Name" /> Eigenschaft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [Barrierefreiheit](#accessibility)  
+  
+-   [Deklarationssyntax](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Wird standardmäßig die <xref:System.Web.UI.WebControls.LoginName> Steuerelement zeigt den Namen, die in enthaltenen der <xref:System.Web.UI.Page.User%2A> Eigenschaft von der <xref:System.Web.UI.Page> Klasse. Wenn die `System.Web.UI.Page.User.Identity.Name` -Eigenschaft leer ist, nicht das Steuerelement gerendert wird.  
+  
+> [!NOTE]
+>  Wenn Sie nicht mit dem Festlegen der Anmeldesteuerelemente in ASP.NET vertraut sind, finden Sie unter [ASP.NET-Anmeldungssteuerelemente"](http://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d) bevor Sie fortfahren. Eine Liste mit anderen Themen im Zusammenhang mit Anmeldesteuerelementen und Mitgliedschaft finden Sie [Verwalten von Benutzern durch Mitgliedschaft](http://msdn.microsoft.com/library/824c3a24-f0af-427c-a652-0d2d1e9397cd).  
+  
+ Zum Ändern des Texts angezeigt, indem die <xref:System.Web.UI.WebControls.LoginName> steuern, legen Sie die <xref:System.Web.UI.WebControls.LoginName.FormatString%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.LoginName> Steuerelement kann nicht verwendet werden, außerhalb der `<form>` auf einer Webseite zu kennzeichnen. Insbesondere die <xref:System.Web.UI.WebControls.LoginName> kann nicht verwendet werden, um den Namen des Benutzers im Titel einer Seite platzieren.  
+  
+<a name="accessibility"></a>   
+## <a name="accessibility"></a>Barrierefreiheit  
+ Weitere Informationen dazu, wie das Steuerelement so konfigurieren, dass er Markup generiert, das den Accessibility Standards entspricht, finden Sie unter [Barrierefreiheit in Visual Studio und ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) und [ASP.NET-Steuerelemente und Barrierefreiheit](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:LoginName  
+    AccessKey="string"  
+    BackColor="color name|#dddddd"  
+    BorderColor="color name|#dddddd"  
+    BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|Groove|Ridge|  
+        Inset|Outset"  
+    BorderWidth="size"  
+    CssClass="string"  
+    Enabled="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    Font-Bold="True|False"  
+    Font-Italic="True|False"  
+    Font-Names="string"  
+    Font-Overline="True|False"  
+    Font-Size="string|Smaller|Larger|XX-Small|X-Small|Small|Medium|  
+        Large|X-Large|XX-Large"  
+    Font-Strikeout="True|False"  
+    Font-Underline="True|False"  
+    ForeColor="color name|#dddddd"  
+    FormatString="string"  
+    Height="size"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Style="string"  
+    TabIndex="integer"  
+    ToolTip="string"  
+    Visible="True|False"  
+    Width="size"  
+/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.LoginName> Klasse auf einer Seite. Klicken auf die Schaltfläche ändert sich das Anzeigeformat aus.  
+  
+ [!code-aspx-csharp[LoginNameTextFormat#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginNameTextFormat/CS/loginnametextformatcs.aspx#1)]
+ [!code-aspx-vb[LoginNameTextFormat#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginNameTextFormat/VB/loginnametextformatvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LoginName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginName.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die <see cref="T:System.Web.UI.WebControls.LoginName" /> Steuerelement auf ihre Standardwerte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt eine neue Instanz der dem <xref:System.Web.UI.WebControls.LoginName> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatString">
+      <MemberSignature Language="C#" Value="public virtual string FormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LoginName.FormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("{0}")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bietet eine Formatzeichenfolge-Element angezeigt.</summary>
+        <value>Eine Zeichenfolge mit Formatelementen zum Anzeigen der Name des Benutzers. Der Standardwert ist "{0}".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LoginName.FormatString%2A> Eigenschaft enthält eine Zeichenfolge der standard-Text-Format, in dem der Name des Benutzers auf der Webseite angezeigt. Die Zeichenfolge "{0}" gibt an, in dem in der Zeichenfolge der Name des Benutzers eingefügt wird. Die folgende Tabelle beschreibt die verfügbaren eigenschafteneinstellungen.  
+  
+|Einstellung der Eigenschaft|Verhalten|  
+|----------------------|--------------|  
+|Standard ("{0}")|Der Name des Benutzers wird angezeigt, wenn der Benutzer angemeldet ist. Andernfalls wird nichts angezeigt.|  
+|<xref:System.String.Empty>|Identisch mit der Standardeinstellung. Um das Steuerelement auszublenden, legen Sie die <xref:System.Web.UI.Control.Visible%2A> Eigenschaft `false`.|  
+|"Willkommen auf Meine Website, {0}".|Zeigt die Zeichenfolge "Willkommen bei meinem Standort *Benutzername*." Wenn der Benutzer angemeldet ist. Wenn der Benutzer nicht angemeldet ist, wird nichts angezeigt.|  
+|"Willkommen auf Meine Website".|Wenn die <xref:System.Web.UI.WebControls.LoginName.FormatString%2A> Eigenschaft in eine Zeichenfolge festgelegt ist, wird die Zeichenfolge angezeigt, wenn der Benutzer angemeldet ist. Da die Zeichenfolge keine "{0}" enthält, wird der Name des Benutzers nicht angezeigt. Wenn der Benutzer nicht angemeldet ist, wird nichts angezeigt.|  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.LoginName.FormatString%2A> Eigenschaft auf einer Seite. Klicken auf die Schaltfläche ändert sich das Anzeigeformat aus.  
+  
+ [!code-aspx-csharp[LoginNameTextFormat#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginNameTextFormat/CS/loginnametextformatcs.aspx#1)]
+ [!code-aspx-vb[LoginNameTextFormat#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginNameTextFormat/VB/loginnametextformatvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">Die Formatzeichenfolge ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginName.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , die gerenderte Ausgabe empfängt.</param>
+        <summary>Rendert die <see cref="T:System.Web.UI.WebControls.LoginName" /> Steuerelement mit dem angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginTag">
+      <MemberSignature Language="C#" Value="public override void RenderBeginTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RenderBeginTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginName.RenderBeginTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" /> -Objekt, das den Ausgabestream darstellt, die HTML-Inhalt an den Client rendert.</param>
+        <summary>Rendert die HTML-Starttag des Steuerelements in den angegebenen Writer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginName.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" /> -Objekt, das den Ausgabestream darstellt, die HTML-Inhalt an den Client rendert.</param>
+        <summary>Rendert den Inhalt des Steuerelements in dem angegebenen Writer. Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.FormatException">Die <see cref="P:System.Web.UI.WebControls.LoginName.FormatString" /> Eigenschaft ist nicht auf eine gültige Formatzeichenfolge festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndTag">
+      <MemberSignature Language="C#" Value="public override void RenderEndTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RenderEndTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginName.RenderEndTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" /> -Objekt, das den Ausgabestream darstellt, die HTML-Inhalt an den Client rendert.</param>
+        <summary>Rendert das schließende HTML-Tag des Steuerelements in den angegebenen Writer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDisabledAttribute">
+      <MemberSignature Language="C#" Value="public override bool SupportsDisabledAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDisabledAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LoginName.SupportsDisabledAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob vom Steuerelement das <see langword="disabled" />-Attribut des gerenderten HTML-Elements auf "disabled" festgelegt werden soll, wenn die <see cref="P:System.Web.UI.WebControls.WebControl.IsEnabled" />-Eigenschaft des Steuerelements <see langword="false" /> ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> Eigenschaft gibt an, eine frühere ASP.NET-Version als <c>4.0</c>ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, wie ASP.NET HTML für ein Steuerelement rendern soll, wenn das Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `true`, rendert ASP.NET ein `disabled` Attribut, wenn ein Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `false`, rendert ASP.NET ein `class` Attribut, wenn ein Steuerelement deaktiviert ist. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

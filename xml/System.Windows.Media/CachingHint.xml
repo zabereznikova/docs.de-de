@@ -1,0 +1,69 @@
+<Type Name="CachingHint" FullName="System.Windows.Media.CachingHint">
+  <TypeSignature Language="C#" Value="public enum CachingHint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CachingHint extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.CachingHint" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob Objekte Kacheleffekt zwischengespeichert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] zwischenspeichert, den gerenderten Inhalt <xref:System.Windows.Media.DrawingBrush> und <xref:System.Windows.Media.VisualBrush> Objekte. In statischen Szenarien, in denen der Inhalt weder die Verwendung des Pinsels in der Szene geändert wird, bietet nicht Zwischenspeichern der Vorteil, da Videospeicher gespart wird. Wenn ein Pinsel mit statischem Inhalt verwendet wird, auf eine nicht statische Weise das Standardverhalten des [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] besteht darin, den gesamten Inhalt des Pinsels erneut zu rendern jeden Frame, selbst wenn der Inhalt unverändert bleibt. Dies wird z. B. vorkommen, wenn ein statischer <xref:System.Windows.Media.DrawingBrush> oder <xref:System.Windows.Media.VisualBrush> auf die Oberfläche eines Objekts für das Drehen von 3D zugeordnet ist. Den statischen Inhalt erneut rendern kann sich negativ auf die Leistung auswirken.  
+  
+ Durch Festlegen der <xref:System.Windows.Media.RenderOptions.CachingHint%2A> -Eigenschaft auf den Pinsel, Cache, können Sie die Leistung erhöhen, mithilfe von zwischengespeicherten Versionen der Kacheleffekt Objekte.  
+  
+ Die <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> und <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> Eigenschaftswerte sind Werte für die relative Größe, die bestimmen, wann die <xref:System.Windows.Media.TileBrush> Objekt aufgrund von Änderungen in Skalierung neu generiert werden sollte. Z. B. durch Festlegen der <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> Eigenschaft 2.0, den Cache für die <xref:System.Windows.Media.TileBrush> muss nur erneut generiert werden, wenn seine Größe zweimal der Größe des aktuellen Caches überschreitet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die Option zum Zwischenspeichern Hinweis für ein <xref:System.Windows.Media.DrawingBrush>.  
+  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cache">
+      <MemberSignature Language="C#" Value="Cache" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.CachingHint Cache = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.CachingHint.Cache" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.CachingHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zwischenspeichern Kacheleffekt Objekte in ein außerhalb des Bildschirmbereichs befindet Puffer, der vom angegebenen Abfragehinweise den Zwischenspeichern mithilfe der <see cref="T:System.Windows.Media.RenderOptions" /> Einstellungen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unspecified">
+      <MemberSignature Language="C#" Value="Unspecified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.CachingHint Unspecified = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.CachingHint.Unspecified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.CachingHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine caching-Hinweise werden angegeben.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

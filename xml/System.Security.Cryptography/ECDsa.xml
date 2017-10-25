@@ -1,0 +1,886 @@
+<Type Name="ECDsa" FullName="System.Security.Cryptography.ECDsa">
+  <TypeSignature Language="C#" Value="public abstract class ECDsa : System.Security.Cryptography.AsymmetricAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ECDsa extends System.Security.Cryptography.AsymmetricAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.ECDsa" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.AsymmetricAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine abstrakte Basisklasse, die den ECDSA (Elliptic Curve Digital Signature Algorithm) kapselt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient als abstrakte Basisklasse für <xref:System.Security.Cryptography.ECDsaCng> ableitungen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ECDsa ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.ECDsa" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird aufgerufen, durch abgeleitete Klassen die <xref:System.Security.Cryptography.ECDsa> Klasse. Die <xref:System.Security.Cryptography.ECDsaCng> Klasse ist die einzige Implementierung, die derzeit vom unterstützt die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Sie können eigene benutzerdefinierte Implementierung bereitstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ECDsa Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.ECDsa Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDsa</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der Standardimplementierung des ECDSA (ELLIPTIC Curve Digital Signature Algorithm).</summary>
+        <returns>Eine neue Instanz der Standardimplementierung (<see cref="T:System.Security.Cryptography.ECDsaCng" />) dieser Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ECDsa Create (System.Security.Cryptography.ECCurve curve);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.ECDsa Create(valuetype System.Security.Cryptography.ECCurve curve) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.Create(System.Security.Cryptography.ECCurve)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDsa</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="curve" Type="System.Security.Cryptography.ECCurve" />
+      </Parameters>
+      <Docs>
+        <param name="curve">Die Kurve für die Schlüsselgenerierung.</param>
+        <summary>Erstellt eine neue Instanz der ECDSA-Standardimplementierung (Elliptic Curve Digital Signature Algorithm) mit einem neu generierten Schlüssel über der angegebenen Kurve.</summary>
+        <returns>Eine neue Instanz der Standardimplementierung (<see cref="T:System.Security.Cryptography.ECDsaCng" />) dieser Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ECDsa Create (System.Security.Cryptography.ECParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.ECDsa Create(valuetype System.Security.Cryptography.ECParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.Create(System.Security.Cryptography.ECParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDsa</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Security.Cryptography.ECParameters" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Die Parameter, die den zu verwendenden Schlüssel darstellen.</param>
+        <summary>Erstellt eine neue Instanz der ECDSA-Standardimplementierung (Elliptic Curve Digital Signature Algorithm) mit den angegebenen Parametern als Schlüssel.</summary>
+        <returns>Eine neue Instanz der Standardimplementierung (<see cref="T:System.Security.Cryptography.ECDsaCng" />) dieser Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ECDsa Create (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.ECDsa Create(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDsa</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Der Name des ECDSA-Implementierung. In der folgenden Zeichenfolgen, die alle finden Sie in der gleichen-Implementierung, die derzeit die einzige Implementierung ist unterstützt das [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]:  
+  
+ \-"ECDsa"  
+  
+ \-"ECDsaCng"  
+  
+ \-"System.Security.Cryptography.ECDsaCng"  
+  
+ Sie können auch den Namen einer benutzerdefinierten ECDSA-Implementierung bereitstellen.</param>
+        <summary>Erstellt eine neue Instanz der angegebenen Implementierung des ECDSA (ELLIPTIC Curve Digital Signature Algorithm).</summary>
+        <returns>Eine neue Instanz der angegebenen Implementierung dieser Klasse. Wenn der angegebene Algorithmusname ECDSA-Implementierung nicht zugeordnet ist, gibt diese Methode <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie Ihre eigene Implementierung der entwickeln eine <xref:System.Security.Cryptography.ECDsa> -Objekt können Sie die <xref:System.Security.Cryptography.ECDsa.Create%28System.String%29> -methodenüberladung, um das Erstellen eines benutzerdefinierten `algorithm` Zeichenfolge, die Ihre Implementierung angibt.  
+  
+ Wenn Sie einen benutzerdefinierten Wert für angeben der `algorithm` Parameter, der <xref:System.Security.Cryptography.CryptoConfig> Objekt wird verwendet, um zu bestimmen, ob ein ECDSA-Objekt erstellt werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="algorithm" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportExplicitParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.ECParameters ExportExplicitParameters (bool includePrivateParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Security.Cryptography.ECParameters ExportExplicitParameters(bool includePrivateParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.ExportExplicitParameters(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECParameters</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includePrivateParameters">
+          <see langword="true" />, wenn private Parameter angegeben werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Exportiert beim Überschreiben in einer abgeleiteten Klasse die expliziten Parameter für eine elliptische Kurve.</summary>
+        <returns>Die Parameter, die unter Verwendung des expliziten Kurvenformats den Punkt auf der Kurve für diesen Schlüssel darstellen.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.ECParameters ExportParameters (bool includePrivateParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Security.Cryptography.ECParameters ExportParameters(bool includePrivateParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.ExportParameters(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECParameters</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includePrivateParameters">
+          <see langword="true" />, wenn private Parameter angegeben werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Exportiert beim Überschreiben in einer abgeleiteten Klasse die benannten oder expliziten Parameter für eine elliptische Kurve. Wenn die Kurve einen Namen besitzt, die <see cref="F:System.Security.Cryptography.ECParameters.Curve" /> benannte Kurvenzugparameter enthält, andernfalls enthält sie explizite Parameter.</summary>
+        <returns>Die Parameter, die den Punkt auf der Kurve für diesen Schlüssel darstellen.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXmlString">
+      <MemberSignature Language="C#" Value="public override void FromXmlString (string xmlString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXmlString(string xmlString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.FromXmlString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlString">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateKey">
+      <MemberSignature Language="C#" Value="public virtual void GenerateKey (System.Security.Cryptography.ECCurve curve);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GenerateKey(valuetype System.Security.Cryptography.ECCurve curve) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.GenerateKey(System.Security.Cryptography.ECCurve)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="curve" Type="System.Security.Cryptography.ECCurve" />
+      </Parameters>
+      <Docs>
+        <param name="curve">Die zu verwendende Kurve.</param>
+        <summary>Generiert beim Überschreiben in einer abgeleiteten Klasse ein neues Paar aus privatem und öffentlichem Schlüssel für die angegebene Kurve.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HashData">
+      <MemberSignature Language="C#" Value="protected virtual byte[] HashData (System.IO.Stream data, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] HashData(class System.IO.Stream data, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.HashData(System.IO.Stream,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.IO.Stream" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Der binäre Datenstrom, für den der Hashwert berechnet werden soll.</param>
+        <param name="hashAlgorithm">Der Algorithmus, der zum Bestimmen des Hashwerts der Daten verwendet werden soll.</param>
+        <summary>Berechnet, falls in einer abgeleiteten Klasse überschrieben, den Hashwert des angegebenen Binärdatenstroms mithilfe des angegebenen Hashalgorithmus.</summary>
+        <returns>Die Daten, für die der Hashwert berechnet wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HashData">
+      <MemberSignature Language="C#" Value="protected virtual byte[] HashData (byte[] data, int offset, int count, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] HashData(unsigned int8[] data, int32 offset, int32 count, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.HashData(System.Byte[],System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die Daten, für die der Hashwert berechnet werden soll.</param>
+        <param name="offset">Der Index des ersten Bytes im <c>Daten</c> Hash hinzugefügt werden soll.</param>
+        <param name="count">Die Anzahl der Bytes, für die der Hashwert berechnet werden soll.</param>
+        <param name="hashAlgorithm">Der Algorithmus, der zum Bestimmen des Hashwerts der Daten verwendet werden soll.</param>
+        <summary>Berechnet, falls in einer abgeleiteten Klasse überschrieben, den Hashwert des angegebenen Teils eines Bytearrays mithilfe des angegebenen Hashalgorithmus.</summary>
+        <returns>Die Daten, für die der Hashwert berechnet wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportParameters">
+      <MemberSignature Language="C#" Value="public virtual void ImportParameters (System.Security.Cryptography.ECParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ImportParameters(valuetype System.Security.Cryptography.ECParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.ImportParameters(System.Security.Cryptography.ECParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Security.Cryptography.ECParameters" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Die Kurvenparameter.</param>
+        <summary>Importiert beim Überschreiben in einer abgeleiteten Klasse die angegebenen Parameter.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyExchangeAlgorithm">
+      <MemberSignature Language="C#" Value="public override string KeyExchangeAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyExchangeAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECDsa.KeyExchangeAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Algorithmus für den Schlüsselaustausch ab.</summary>
+        <value>Immer <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird geerbt, aus der <xref:System.Security.Cryptography.AsymmetricAlgorithm> Basisklasse.  
+  
+ Die ECDSA (ELLIPTIC Curve Digital Signature Algorithm), die für die Generierung der digitalen Signatur verwendet wird. Er wird nicht verwendet, für die schlüsselableitung daher, diese Eigenschaft gibt `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureAlgorithm">
+      <MemberSignature Language="C#" Value="public override string SignatureAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SignatureAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECDsa.SignatureAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Signaturalgorithmus ab.</summary>
+        <value>Die Zeichenfolge "ECDsa".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignData">
+      <MemberSignature Language="C#" Value="public virtual byte[] SignData (byte[] data, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] SignData(unsigned int8[] data, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.SignData(System.Byte[],System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die Eingabedaten, für die der Hashwert berechnet werden soll.</param>
+        <param name="hashAlgorithm">Der zum Erstellen des Hashwerts zu verwendende Hashalgorithmus.</param>
+        <summary>Berechnet den Hashwert des angegebenen Bytearrays mithilfe des angegebenen Hashalgorithmus und signiert den resultierenden Hashwert.</summary>
+        <returns>Die ECDSA-Signatur für die angegebenen Daten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignData">
+      <MemberSignature Language="C#" Value="public virtual byte[] SignData (System.IO.Stream data, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] SignData(class System.IO.Stream data, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.SignData(System.IO.Stream,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.IO.Stream" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Der Eingabedatenstrom, für den der Hashwert berechnet werden soll.</param>
+        <param name="hashAlgorithm">Der zum Erstellen des Hashwerts zu verwendende Hashalgorithmus.</param>
+        <summary>Berechnet den Hashwert des angegebenen Datenstroms mithilfe des angegebenen Hashalgorithmus und signiert den resultierenden Hashwert.</summary>
+        <returns>Die ECDSA-Signatur für die angegebenen Daten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignData">
+      <MemberSignature Language="C#" Value="public virtual byte[] SignData (byte[] data, int offset, int count, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] SignData(unsigned int8[] data, int32 offset, int32 count, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.SignData(System.Byte[],System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die Eingabedaten, für die der Hashwert berechnet werden soll.</param>
+        <param name="offset">Der Offset im Array, ab dem Daten verwendet werden sollen.</param>
+        <param name="count">Die Anzahl der Bytes im Array, die als Daten verwendet werden sollen.</param>
+        <param name="hashAlgorithm">Der zum Erstellen des Hashwerts zu verwendende Hashalgorithmus.</param>
+        <summary>Berechnet den Hashwert eines Teils des angegebenen Bytearrays mithilfe des angegebenen Hashalgorithmus und signiert den sich ergebenden Hashwert.</summary>
+        <returns>Die ECDSA-Signatur für die angegebenen Daten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="count" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="offset" /> + <paramref name="count" />– 1 Ergebnisse in einem Index, der größer als die Obergrenze von <paramref name="data" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignHash">
+      <MemberSignature Language="C#" Value="public abstract byte[] SignHash (byte[] hash);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] SignHash(unsigned int8[] hash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.SignHash(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="hash">Der Hashwert der signierten Daten.</param>
+        <summary>Generiert eine digitale Signatur für den angegebenen Hashwert.</summary>
+        <returns>Eine digitale Signatur, die aus dem angegebenen Hashwert besteht, der mit dem privaten Schlüssel verschlüsselt wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="hash" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlString">
+      <MemberSignature Language="C#" Value="public override string ToXmlString (bool includePrivateParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToXmlString(bool includePrivateParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.ToXmlString(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includePrivateParameters">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyData">
+      <MemberSignature Language="C#" Value="public bool VerifyData (byte[] data, byte[] signature, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool VerifyData(unsigned int8[] data, unsigned int8[] signature, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.VerifyData(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die signierten Daten.</param>
+        <param name="signature">Die zu überprüfenden Signaturdaten.</param>
+        <param name="hashAlgorithm">Der Hashalgorithmus, der zum Erstellen des Hashwerts der Daten verwendet wird.</param>
+        <summary>Überprüft, ob eine digitale Signatur gültig ist, indem der Hashwert der angegebenen Daten unter Verwendung des angegebenen Hashalgorithmus und durch Vergleichen mit der angegebenen Signatur berechnet wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die Signatur gültig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="signature" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyData">
+      <MemberSignature Language="C#" Value="public bool VerifyData (System.IO.Stream data, byte[] signature, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool VerifyData(class System.IO.Stream data, unsigned int8[] signature, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.VerifyData(System.IO.Stream,System.Byte[],System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.IO.Stream" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die signierten Daten.</param>
+        <param name="signature">Die zu überprüfenden Signaturdaten.</param>
+        <param name="hashAlgorithm">Der Hashalgorithmus, der zum Erstellen des Hashwerts der Daten verwendet wird.</param>
+        <summary>Überprüft, ob eine digitale Signatur gültig ist, indem der Hashwert des angegebenen Datenstroms unter Verwendung des angegebenen Hashalgorithmus und durch Vergleichen mit der angegebenen Signatur berechnet wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die Signatur gültig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="signature" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyData">
+      <MemberSignature Language="C#" Value="public virtual bool VerifyData (byte[] data, int offset, int count, byte[] signature, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool VerifyData(unsigned int8[] data, int32 offset, int32 count, unsigned int8[] signature, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.VerifyData(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die signierten Daten.</param>
+        <param name="offset">Der Startindex, an dem der Hashwert berechnet werden soll.</param>
+        <param name="count">Die Anzahl der Bytes, für die der Hashwert berechnet werden soll.</param>
+        <param name="signature">Die zu überprüfenden Signaturdaten.</param>
+        <param name="hashAlgorithm">Der Hashalgorithmus, der zum Erstellen des Hashwerts der Daten verwendet wird.</param>
+        <summary>Überprüft, ob eine digitale Signatur gültig ist, indem der Hashwert der Daten in einem Teil eines Bytearrays unter Verwendung des angegebenen Hashalgorithmus und durch Vergleichen mit der angegebenen Signatur berechnet wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die Signatur gültig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="signature" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="count" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="offset" /> + <paramref name="count" />– 1 Ergebnisse in einem Index, der größer als die Obergrenze von <paramref name="data" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyHash">
+      <MemberSignature Language="C#" Value="public abstract bool VerifyHash (byte[] hash, byte[] signature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool VerifyHash(unsigned int8[] hash, unsigned int8[] signature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDsa.VerifyHash(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Byte[]" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="hash">Der Hashwert eines Datenblocks.</param>
+        <param name="signature">Die digitale Signatur, die überprüft werden soll.</param>
+        <summary>Überprüft eine digitale Signatur mit dem angegebenen Hashwert.</summary>
+        <returns>
+          <see langword="true" />, wenn der Hashwert mit der entschlüsselten Signatur übereinstimmt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Signatur ist zunächst mit dem öffentlichen Schlüssel entschlüsselt, und klicken Sie dann im Vergleich zu den Hashwert für die Überprüfung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,609 @@
+<Type Name="FontInfo" FullName="System.Web.UI.WebControls.FontInfo">
+  <TypeSignature Language="C#" Value="public sealed class FontInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FontInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FontInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Kapselt die Schriftarteigenschaften von Text an. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FontInfo> Klasse, um die Eigenschaften für die Schriftart des Texts zu kapseln. Sie können die Schriftart und Schriftgröße angeben. Sie können auch angeben, ob der Schriftschnitt der Schriftart fett, kursiv, überstrichen, durchgestrichen oder unterstrichen.  
+  
+ Diese Klasse wird häufig in einer Eigenschaft für eine Klasse, die Informationen zur Schriftart, z. B. erfordert verwendet die <xref:System.Web.UI.WebControls.WebControl.Font%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.WebControl> Klasse.  
+  
+> [!NOTE]
+>  Diese Klasse keinen öffentlichen Konstruktor. Eine neue Instanz der Klasse kann nicht direkt erstellt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie beim Ändern der Eigenschaften einer <xref:System.Web.UI.WebControls.FontInfo> Objekt programmgesteuert an die Schriftarteigenschaften für eine <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ [!code-aspx-csharp[FontInfo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FontInfo/CS/fontinfocs.aspx#1)]
+ [!code-aspx-vb[FontInfo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FontInfo/VB/fontinfovb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bold">
+      <MemberSignature Language="C#" Value="public bool Bold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Bold" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FontInfo.Bold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Schriftart fett formatiert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Schriftart fett formatiert ist. andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FontInfo.Bold%2A> Eigenschaft festzulegen oder zu bestimmen, ob die Schriftart fett formatiert ist.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FontInfo.Bold%2A> -Eigenschaft an, dass programmgesteuert fett formatierter Schrift für den Text in einem <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ [!code-aspx-csharp[FontInfo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FontInfo/CS/fontinfocs.aspx#1)]
+ [!code-aspx-vb[FontInfo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FontInfo/VB/fontinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearDefaults">
+      <MemberSignature Language="C#" Value="public void ClearDefaults ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearDefaults() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontInfo.ClearDefaults" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt alle <see cref="T:System.Web.UI.WebControls.FontInfo" /> Eigenschaften festgelegten Zustand und löscht den Ansichtszustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.WebControls.FontInfo>Eigenschaften sind nicht festgelegt, wenn die <xref:System.Web.UI.WebControls.FontInfo> Objekt erstellt wird. Wenn zunächst eine Eigenschaft festgelegt ist, wird der Wert hinzugefügt, um Status anzuzeigen. Die <xref:System.Web.UI.WebControls.FontInfo.ClearDefaults%2A> Methode wird verwendet, um alle legen die <xref:System.Web.UI.WebControls.FontInfo> Eigenschaften für die Festlegung Zustand als auch alle Einträge im Ansichtszustand entfernen. Die folgenden Eigenschaften werden zurückgesetzt:  
+  
+-   <xref:System.Web.UI.WebControls.FontInfo.Names%2A>  
+  
+-   <xref:System.Web.UI.WebControls.FontInfo.Name%2A>  
+  
+-   <xref:System.Web.UI.WebControls.FontInfo.Size%2A>  
+  
+-   <xref:System.Web.UI.WebControls.FontInfo.Bold%2A>  
+  
+-   <xref:System.Web.UI.WebControls.FontInfo.Italic%2A>  
+  
+-   <xref:System.Web.UI.WebControls.FontInfo.Underline%2A>  
+  
+-   <xref:System.Web.UI.WebControls.FontInfo.Overline%2A>  
+  
+-   <xref:System.Web.UI.WebControls.FontInfo.Strikeout%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public void CopyFrom (System.Web.UI.WebControls.FontInfo f);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyFrom(class System.Web.UI.WebControls.FontInfo f) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontInfo.CopyFrom(System.Web.UI.WebControls.FontInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="f" Type="System.Web.UI.WebControls.FontInfo" />
+      </Parameters>
+      <Docs>
+        <param name="f">Ein <see cref="T:System.Web.UI.WebControls.FontInfo" /> , enthält die Schriftarteigenschaften zu duplizieren.</param>
+        <summary>Dupliziert die Schriftarteigenschaften der angegebenen <see cref="T:System.Web.UI.WebControls.FontInfo" /> in der Instanz von der <see cref="T:System.Web.UI.WebControls.FontInfo" /> Klasse, die diese Methode aufgerufen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FontInfo.CopyFrom%2A> Methode, um die Schriftarteigenschaften der angegebenen doppelte <xref:System.Web.UI.WebControls.FontInfo> in der Instanz von der <xref:System.Web.UI.WebControls.FontInfo> Klasse, die diese Methode aufgerufen wird.  
+  
+> [!CAUTION]
+>  Alle Eigenschaften in der aktuellen Instanz der dem <xref:System.Web.UI.WebControls.FontInfo> Klasse ersetzt werden durch die zugeordnete Eigenschaft in der `f` Parameter.  
+  
+ Bei der Registrierung eines Stils mit <xref:System.Web.UI.IStyleSheet.RegisterStyle%2A>, und klicken Sie dann unter Verwendung von kopiert <xref:System.Web.UI.WebControls.Style.CopyFrom%28System.Web.UI.WebControls.Style%29?displayProperty=nameWithType>, nur die <xref:System.Web.UI.WebControls.Style.CssClass%2A> -Eigenschaft ist dem Ziel nicht alle einzelnen Eigenschaften kopiert. Aus diesem Grund bei Verwendung von <xref:System.Web.UI.WebControls.FontInfo.CopyFrom%28System.Web.UI.WebControls.FontInfo%29?displayProperty=nameWithType> Schriftartinformationen aus kopiert die <xref:System.Web.UI.WebControls.Style.Font%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.Style> , registriert ist, rufen Sie nicht die einzelnen Einstellungen der Schriftart aus den Stil.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FontInfo.CopyFrom%2A> Methode, um die Schriftarteigenschaften der doppelte eine <xref:System.Web.UI.WebControls.FontInfo> in der <xref:System.Web.UI.WebControls.WebControl.Font%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ [!code-aspx-csharp[FontInfoCopyFrom#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FontInfoCopyFrom/CS/fontinfocopycs.aspx#1)]
+ [!code-aspx-vb[FontInfoCopyFrom#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FontInfoCopyFrom/VB/fontinfocopyvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Italic">
+      <MemberSignature Language="C#" Value="public bool Italic { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Italic" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FontInfo.Italic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Schriftart kursiv formatiert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Schriftart kursiv formatiert ist. andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FontInfo.Italic%2A> Eigenschaft festzulegen oder zu bestimmen, ob die Schriftart kursiv formatiert ist.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FontInfo.Italic%2A> -Eigenschaft an, dass programmgesteuert eine kursive Schriftart für den Text in einem <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ [!code-aspx-csharp[FontInfo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FontInfo/CS/fontinfocs.aspx#1)]
+ [!code-aspx-vb[FontInfo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FontInfo/VB/fontinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeWith">
+      <MemberSignature Language="C#" Value="public void MergeWith (System.Web.UI.WebControls.FontInfo f);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MergeWith(class System.Web.UI.WebControls.FontInfo f) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontInfo.MergeWith(System.Web.UI.WebControls.FontInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="f" Type="System.Web.UI.WebControls.FontInfo" />
+      </Parameters>
+      <Docs>
+        <param name="f">Ein <see cref="T:System.Web.UI.WebControls.FontInfo" /> , das die zu kombinierenden Schriftarteigenschaften enthält.</param>
+        <summary>Kombiniert die Schriftarteigenschaften der angegebenen <see cref="T:System.Web.UI.WebControls.FontInfo" /> mit der Instanz von der <see cref="T:System.Web.UI.WebControls.FontInfo" /> Klasse, die diese Methode aufgerufen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FontInfo.MergeWith%2A> kombiniert die Schriftarteigenschaften der angegebenen Methode <xref:System.Web.UI.WebControls.FontInfo> mit der Instanz von der <xref:System.Web.UI.WebControls.FontInfo> Klasse, die diese Methode aufgerufen wird.  
+  
+> [!NOTE]
+>  Diese Methode verknüpft die Eigenschaften der beiden <xref:System.Web.UI.WebControls.FontInfo> Objekte, indem Sie jede Eigenschaft, die nicht in der aktuellen Instanz der festgelegt wird die <xref:System.Web.UI.WebControls.FontInfo> Klasse mit dem Wert in der entsprechenden Eigenschaft des der `f` Parameter. Nur Eigenschaften, die nicht festgelegt wurden, werden ersetzt. Wenn eine Eigenschaft in der `f` Parameter nicht festgelegt ist, ersetzt nicht die entsprechende Eigenschaft in der aktuellen Instanz von der <xref:System.Web.UI.WebControls.FontInfo> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FontInfo.MergeWith%2A> kombiniert die Schriftarteigenschaften der Methode ein <xref:System.Web.UI.WebControls.FontInfo> in der <xref:System.Web.UI.WebControls.WebControl.Font%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ [!code-aspx-csharp[FontInfoCopyFrom#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FontInfoCopyFrom/CS/fontinfocopycs.aspx#1)]
+ [!code-aspx-vb[FontInfoCopyFrom#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FontInfoCopyFrom/VB/fontinfocopyvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FontInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Drawing.Design.FontNameEditor, System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.FontConverter/FontNameConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schriftartnamen des primären fest.</summary>
+        <value>Der Schriftartname des primären. Der Standardwert ist <see cref="F:System.String.Empty" />, was bedeutet, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FontInfo.Name%2A> Eigenschaft angeben oder den Namen der primären Schriftart zu ermitteln. Der primäre Schriftartname bestimmt die Schriftart, die verwendet wird, zum Anzeigen von Text in das zugeordnete Steuerelement die <xref:System.Web.UI.WebControls.FontInfo>.  
+  
+> [!NOTE]
+>  Beim Festlegen der <xref:System.Web.UI.WebControls.FontInfo.Names%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.FontInfo.Name%2A> Eigenschaft wird automatisch aktualisiert, mit dem ersten Element in der <xref:System.Web.UI.WebControls.FontInfo.Names%2A> Eigenschaft. Wenn Sie festlegen, die <xref:System.Web.UI.WebControls.FontInfo.Name%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.FontInfo.Names%2A> Eigenschaft wird automatisch aktualisiert, mit einem einzelnen Element-Array, das mit dem Wert des der <xref:System.Web.UI.WebControls.FontInfo.Name%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FontInfo.Name%2A> -Eigenschaft den Schriftartnamen für programmgesteuert an eine <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ [!code-aspx-csharp[FontInfo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FontInfo/CS/fontinfocs.aspx#1)]
+ [!code-aspx-vb[FontInfo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FontInfo/VB/fontinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Name der angegebenen Schriftart ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Names">
+      <MemberSignature Language="C#" Value="public string[] Names { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Names" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FontInfo.Names" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.StringArrayEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.FontNamesConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein geordnetes Array von Namen von Schriftarten.</summary>
+        <value>Ein geordnetes Array von Schriftartnamen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FontInfo.Names%2A> Eigenschaft anzugeben oder zu ermitteln, ein geordnetes Array von Namen von Schriftarten für eine <xref:System.Web.UI.WebControls.FontInfo>. Die <xref:System.Web.UI.WebControls.FontInfo.Names%2A> Eigenschaft wird häufig verwendet, um eine Liste der verfügbaren Schriftarten zu speichern.  
+  
+> [!NOTE]
+>  Beim Festlegen der <xref:System.Web.UI.WebControls.FontInfo.Names%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.FontInfo.Name%2A> Eigenschaft wird automatisch aktualisiert, mit dem ersten Element in der <xref:System.Web.UI.WebControls.FontInfo.Names%2A> Eigenschaft. Wenn Sie festlegen, die <xref:System.Web.UI.WebControls.FontInfo.Name%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.FontInfo.Names%2A> Eigenschaft wird automatisch aktualisiert, mit einem einzelnen Element-Array, das mit dem Wert des der <xref:System.Web.UI.WebControls.FontInfo.Name%2A> Eigenschaft.  
+  
+ An den Schriftartnamen für die <xref:System.Web.UI.WebControls.FontInfo> mithilfe der <xref:System.Web.UI.WebControls.FontInfo.Names%2A> Arrays, legen Sie das erste Element im Array, die den Schriftartnamen, die Sie verwenden möchten. Seit der <xref:System.Web.UI.WebControls.FontInfo.Names%2A> Eigenschaft wird automatisch aktualisiert, wenn die <xref:System.Web.UI.WebControls.FontInfo.Name%2A> festgelegt wird, müssen Sie zum Bearbeiten der <xref:System.Web.UI.WebControls.FontInfo.Names%2A> Array, um die Reihenfolge der Elemente im Array anstatt durch die Einstellung der <xref:System.Web.UI.WebControls.FontInfo.Name%2A> -Eigenschaft direkt.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Overline">
+      <MemberSignature Language="C#" Value="public bool Overline { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Overline" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FontInfo.Overline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Schriftart überstrichen ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Schriftart überstrichen ist; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FontInfo.Overline%2A> Eigenschaft festzulegen oder zu bestimmen, ob die Schriftart eine Zeile oberhalb der Text enthält.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+> [!NOTE]
+>  Die Schriftart "Unterstreichen" Verhalten für Links generiert, indem Sie die <xref:System.Web.UI.WebControls.LinkButton>, <xref:System.Web.UI.WebControls.HyperLink>, und <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelemente wird durch die Einstellung beeinflusst die <xref:System.Web.UI.WebControls.FontInfo.Overline%2A> Eigenschaft der <xref:System.Web.UI.WebControls.FontInfo> für das Steuerelement. Wenn die <xref:System.Web.UI.WebControls.FontInfo.Overline%2A> Eigenschaft festgelegt ist, unabhängig vom Wert des Werts, müssen Sie festlegen der <xref:System.Web.UI.WebControls.FontInfo.Underline%2A> Eigenschaft explizit, wenn Sie den Link unterstrichen werden sollen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FontInfo.Overline%2A> -Eigenschaft an, dass programmgesteuert eine überstrichene Schriftart für den Text in einem <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ [!code-aspx-csharp[FontInfo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FontInfo/CS/fontinfocs.aspx#1)]
+ [!code-aspx-vb[FontInfo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FontInfo/VB/fontinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeNames">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontInfo.ShouldSerializeNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die <see cref="P:System.Web.UI.WebControls.FontInfo.Names" /> -Eigenschaft beibehalten werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="P:System.Web.UI.WebControls.FontInfo.Names" /> -Eigenschaft ihren Standardwert; geändert wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FontInfo.ShouldSerializeNames%2A> Methode, um zu bestimmen, ob die <xref:System.Web.UI.WebControls.FontInfo.Names%2A> -Eigenschaft ihren Standardwert geändert hat. Diese Methode wird häufig verwendet, wenn Sie entweder einen Designer für das Erstellen der <xref:System.Web.UI.WebControls.FontInfo> Klasse oder erstellen eine eigene Steuerelement einbinden der <xref:System.Web.UI.WebControls.FontInfo> Klasse.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.FontInfo.Names%2A> Eigenschaft benötigen mindestens einen Eintrag, serialisiert werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.FontUnit Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.FontUnit Size" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FontInfo.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.FontUnit), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schriftgrad fest.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.FontUnit" /> , die den Schriftgrad darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FontInfo.Size%2A> Eigenschaft, um die Größe der Schriftart anzugeben.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FontInfo.Size%2A> Eigenschaft programmgesteuert ändern die Größe der Schriftart für eine <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ [!code-aspx-csharp[FontInfo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FontInfo/CS/fontinfocs.aspx#1)]
+ [!code-aspx-vb[FontInfo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FontInfo/VB/fontinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Schriftgrad ist ein negativer Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Strikeout">
+      <MemberSignature Language="C#" Value="public bool Strikeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Strikeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FontInfo.Strikeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Schriftart durchgestrichen ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Schriftart durchgestrichen ist; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FontInfo.Strikeout%2A> Eigenschaft festzulegen oder zu bestimmen, ob die Schriftart durchgestrichenen Text enthält.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+> [!NOTE]
+>  Die Schriftart "Unterstreichen" Verhalten für Links generiert, indem Sie die <xref:System.Web.UI.WebControls.LinkButton>, <xref:System.Web.UI.WebControls.HyperLink>, und <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelemente wird durch die Einstellung beeinflusst die <xref:System.Web.UI.WebControls.FontInfo.Strikeout%2A> Eigenschaft der <xref:System.Web.UI.WebControls.FontInfo> für das Steuerelement. Wenn die <xref:System.Web.UI.WebControls.FontInfo.Strikeout%2A> Eigenschaft festgelegt ist, unabhängig vom Wert, müssen Sie festlegen der <xref:System.Web.UI.WebControls.FontInfo.Underline%2A> Eigenschaft explizit, wenn Sie den Link unterstrichen werden sollen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FontInfo.Strikeout%2A> -Eigenschaft eine durchgestrichene Schriftart für programmgesteuert an eine <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ [!code-aspx-csharp[FontInfo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FontInfo/CS/fontinfocs.aspx#1)]
+ [!code-aspx-vb[FontInfo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FontInfo/VB/fontinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontInfo.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, die Schriftart und Schriftgröße für eine Instanz der enthält, die <see cref="T:System.Web.UI.WebControls.FontInfo" /> Klasse.</summary>
+        <returns>Eine Zeichenfolge, die Schriftart und Schriftgröße für eine Instanz der enthält, die <see cref="T:System.Web.UI.WebControls.FontInfo" /> Klasse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FontInfo.ToString%2A> Methode, um eine Zeichenfolge zu erstellen, enthält die Schriftart und Schriftgröße, getrennt durch ein Komma, für eine Instanz von der <xref:System.Web.UI.WebControls.FontInfo> Klasse.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.FontInfo.Size%2A> Eigenschaft nicht festgelegt ist, wird nur der Schriftartname zurückgegeben.  
+  
+   
+  
+## Examples  
+ [!code-aspx-csharp[FontInfo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FontInfo/CS/fontinfocs.aspx#1)]
+ [!code-aspx-vb[FontInfo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FontInfo/VB/fontinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Underline">
+      <MemberSignature Language="C#" Value="public bool Underline { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Underline" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FontInfo.Underline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Schriftart unterstrichen ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Schriftart unterstrichen ist. andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FontInfo.Underline%2A> Eigenschaft festzulegen oder zu bestimmen, ob die Schriftart eine Linie unter dem Text enthält.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+> [!NOTE]
+>  Die Schriftart "Unterstreichen" Verhalten für Links generiert, indem Sie die <xref:System.Web.UI.WebControls.LinkButton>, <xref:System.Web.UI.WebControls.HyperLink>, und <xref:System.Web.UI.HtmlControls.HtmlAnchor> Steuerelemente wird durch die Einstellung beeinflusst die <xref:System.Web.UI.WebControls.FontInfo.Strikeout%2A> und die <xref:System.Web.UI.WebControls.FontInfo.Overline%2A> Eigenschaften des der <xref:System.Web.UI.WebControls.FontInfo> für das Steuerelement. Wenn die <xref:System.Web.UI.WebControls.FontInfo.Strikeout%2A> oder <xref:System.Web.UI.WebControls.FontInfo.Overline%2A> Eigenschaften werden unabhängig von deren Wert festgelegt, müssen Sie festlegen der <xref:System.Web.UI.WebControls.FontInfo.Underline%2A> Eigenschaft explizit, wenn Sie den Link unterstrichen werden sollen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FontInfo.Underline%2A> -Eigenschaft eine unterstrichene Schriftart für programmgesteuert an eine <xref:System.Web.UI.WebControls.Label> Steuerelement.  
+  
+ [!code-aspx-csharp[FontInfo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FontInfo/CS/fontinfocs.aspx#1)]
+ [!code-aspx-vb[FontInfo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FontInfo/VB/fontinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

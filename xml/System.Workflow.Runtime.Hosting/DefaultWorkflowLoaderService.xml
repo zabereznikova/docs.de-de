@@ -1,0 +1,98 @@
+<Type Name="DefaultWorkflowLoaderService" FullName="System.Workflow.Runtime.Hosting.DefaultWorkflowLoaderService">
+  <TypeSignature Language="C#" Value="public class DefaultWorkflowLoaderService : System.Workflow.Runtime.Hosting.WorkflowLoaderService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DefaultWorkflowLoaderService extends System.Workflow.Runtime.Hosting.WorkflowLoaderService" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Hosting.DefaultWorkflowLoaderService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Hosting.WorkflowLoaderService</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Standardversion von <see cref="T:System.Workflow.Runtime.Hosting.WorkflowLoaderService" /> dar, die vom Workflowlaufzeitmodul erstellt wird, wenn kein anderer Dienst für das Workflowladeprogramm hinzugefügt wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Die <xref:System.Workflow.Runtime.WorkflowRuntime>-Klasse erstellt beim Starten des Workflowlaufzeitmoduls ein <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowLoaderService>-Objekt, wenn kein anderer von <xref:System.Workflow.Runtime.Hosting.WorkflowLoaderService> abgeleiteter Dienst für das Workflowladeprogramm hinzugefügt wurde.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultWorkflowLoaderService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowLoaderService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowLoaderService" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.Activity CreateInstance (Type workflowType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Workflow.ComponentModel.Activity CreateInstance(class System.Type workflowType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowLoaderService.CreateInstance(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="workflowType">Der <see cref="T:System.Type" /> des zu erstellenden Workflows.</param>
+        <summary>Erstellt mit dem angegebenen <see cref="T:System.Type" /> des Workflows eine Definitionsstruktur der Stammaktivität.</summary>
+        <returns>Ein <see cref="T:System.Workflow.ComponentModel.Activity" />-Objekt, das die Definitionsstruktur der Stammaktivität darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.Activity CreateInstance (System.Xml.XmlReader workflowDefinitionReader, System.Xml.XmlReader rulesReader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Workflow.ComponentModel.Activity CreateInstance(class System.Xml.XmlReader workflowDefinitionReader, class System.Xml.XmlReader rulesReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowLoaderService.CreateInstance(System.Xml.XmlReader,System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowDefinitionReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="rulesReader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="workflowDefinitionReader">
+          <see cref="T:System.Xml.XmlReader" />, der die XOML-Workflowdefinition (XOML-Datei) enthält.</param>
+        <param name="rulesReader">
+          <see cref="T:System.Xml.XmlReader" />, der die Workflowregeln (RULES-Datei) enthält.</param>
+        <summary>Erstellt durch Deserialisieren der XOML- und RULES-Dateien eine neue Definitionsstruktur der Stammaktivität.</summary>
+        <returns>Ein <see cref="T:System.Workflow.ComponentModel.Activity" />-Objekt, das die Definitionsstruktur der Stammaktivität darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,32 @@
+<Type Name="HttpWorkerRequest+EndOfSendNotification" FullName="System.Web.HttpWorkerRequest+EndOfSendNotification">
+  <TypeSignature Language="C#" Value="public delegate void HttpWorkerRequest.EndOfSendNotification(HttpWorkerRequest wr, object extraData);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed HttpWorkerRequest/EndOfSendNotification extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpWorkerRequest.EndOfSendNotification" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="wr" Type="System.Web.HttpWorkerRequest" />
+    <Parameter Name="extraData" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="wr">Der aktuelle <see cref="T:System.Web.HttpWorkerRequest" />.</param>
+    <param name="extraData">Alle zusätzlichen Daten, die zum Verarbeiten der Anforderung erforderlich sind.</param>
+    <summary>Stellt die Methode, dass Aufrufer benachrichtigt, wenn das Senden der Antwort abgeschlossen ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Host kann diese Benachrichtigung verwenden, um Puffer Wiederverwendung implementieren zu können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

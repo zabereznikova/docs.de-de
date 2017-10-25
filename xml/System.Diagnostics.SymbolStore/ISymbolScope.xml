@@ -1,0 +1,239 @@
+<Type Name="ISymbolScope" FullName="System.Diagnostics.SymbolStore.ISymbolScope">
+  <TypeSignature Language="C#" Value="public interface ISymbolScope" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISymbolScope" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SymbolStore.ISymbolScope" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen lexikalischen Gültigkeitsbereich in <see cref="T:System.Diagnostics.SymbolStore.ISymbolMethod" /> dar, der Zugriff auf den Anfangs- und den Endoffset des Gültigkeitsbereichs sowie auf die zugehörigen untergeordneten und übergeordneten Gültigkeitsbereiche bietet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.SymbolStore.ISymbolScope> Schnittstelle bietet außerdem Zugriff auf alle "lokal", die im aktuellen Gültigkeitsbereich definiert.  
+  
+> [!NOTE]
+>  Diese Schnittstelle ist, der die verwaltete Entsprechung der `ISymUnmanagedScope` -Schnittstelle, die eines der nicht verwalteten Diagnosesymbolspeicher-Schnittstellen ist, bieten eine alternative Möglichkeit zum Lesen und Schreiben von Debugsymbolinformationen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EndOffset">
+      <MemberSignature Language="C#" Value="public int EndOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.ISymbolScope.EndOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Endoffset des aktuellen lexikalischen Gültigkeitsbereichs ab.</summary>
+        <value>Der Endoffset des aktuellen lexikalischen Gültigkeitsbereichs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildren">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SymbolStore.ISymbolScope[] GetChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolScope[] GetChildren() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolScope.GetChildren" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolScope[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die untergeordneten lexikalischen Gültigkeitsbereiche des aktuellen lexikalischen Gültigkeitsbereichs ab.</summary>
+        <returns>Die untergeordneten lexikalischen Gültigkeitsbereiche des aktuellen lexikalischen Gültigkeitsbereichs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocals">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SymbolStore.ISymbolVariable[] GetLocals ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolVariable[] GetLocals() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolScope.GetLocals" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolVariable[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die lokalen Variablen im aktuellen lexikalischen Gültigkeitsbereich ab.</summary>
+        <returns>Die lokalen Variablen im aktuellen lexikalischen Gültigkeitsbereich.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die lokalen Variablen werden in keiner bestimmten Reihenfolge zurückgegeben. Wenn eine lokale Variable die Adresse im aktuellen Gültigkeitsbereich geändert wird, wird diese Variable mehrmals, jeweils mit einem anderen Offsetbereich zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNamespaces">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SymbolStore.ISymbolNamespace[] GetNamespaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolNamespace[] GetNamespaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolScope.GetNamespaces" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolNamespace[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Namespaces, die im aktuellen Gültigkeitsbereich verwendet werden.</summary>
+        <returns>Die Namespaces, die im aktuellen Gültigkeitsbereich verwendet werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SymbolStore.ISymbolMethod Method { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.SymbolStore.ISymbolMethod Method" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.ISymbolScope.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Methode ab, die den aktuellen lexikalischen Gültigkeitsbereich enthält.</summary>
+        <value>Die Methode, die den aktuellen lexikalischen Gültigkeitsbereich enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SymbolStore.ISymbolScope Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.SymbolStore.ISymbolScope Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.ISymbolScope.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den übergeordneten lexikalischen Gültigkeitsbereich des aktuellen Gültigkeitsbereichs ab.</summary>
+        <value>Den übergeordneten lexikalischen Gültigkeitsbereich des aktuellen Gültigkeitsbereichs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartOffset">
+      <MemberSignature Language="C#" Value="public int StartOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.ISymbolScope.StartOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anfangsoffset des aktuellen lexikalischen Gültigkeitsbereichs ab.</summary>
+        <value>Der Anfangsoffset des aktuellen lexikalischen Gültigkeitsbereichs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,77 @@
+<Type Name="AmbientAttribute" FullName="System.Windows.Markup.AmbientAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AmbientAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AmbientAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.AmbientAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method | System.AttributeTargets.Property, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine Eigenschaft oder ein Typ als Umgebung behandelt werden soll. Das Umgebungskonzept bezieht sich darauf, wie XAML-Prozessoren Typbesitzer von Membern bestimmen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ambiente-Eigenschaft ist eine Eigenschaft, in dem der Wert muss in der Parserkontext verfügbar sein, für die Erstellung eines Objektdiagramms, jedoch typische Typmember Suche angehalten wird, im Rahmen der unmittelbaren Verwendung von XAML-Knoten festgelegt, wird erstellt. Es gibt zwei Hauptszenarien für das Umgebungskonzept:  
+  
+-   Eine andere Eigenschaft desselben Objekts beeinflusst und qualifiziert die Funktionsweise dieser Objekteigenschaft Suche.  
+  
+-   Die Eigenschaft stellt einen größeren Deferral-Mechanismus dar, und die ambient-Funktionen für das Nachschlagen der Elementwert erweitern, um alle Objekte innerhalb des aktuellen Objekts.  
+  
+ Dieses Attribut kann auf bestimmte Eigenschaften, die Container erwartet haben, mit die eine ambient-Eigenschaft Suchverhalten können angewendet werden oder auf eine Klasse, um das Verhalten der ambient-Eigenschaft in allen Fällen dieses Werttyps für eine Eigenschaft aktivieren angewendet werden kann.  
+  
+ <xref:System.Windows.Markup.AmbientAttribute>kann auch auf einer CLR-Methode, um eine XAML-anfügbare Eigenschaft als ambient Attributierung zu unterstützen angewendet werden. Dies ist möglicherweise erforderlich, da in einer CLR-Implementierung eine XAML-angefügte Eigenschaft implementiert/für die Reflektion als ein Accessor Muster mit dargestellt wird `get` und `set` Methoden. Keine tatsächliche CLR-Eigenschaft Attribut vorhanden ist, so einschränken Nutzung für <xref:System.AttributeTargets> auf `Property` würde nicht angeben eines anfügbaren Members als Umgebung aktiviert haben. Attribut für eine anfügbare-Element, das Sie als Umgebung melden möchten, die `get` Accessor. Sie sollten nicht Attribut Methoden, die nicht speziell Unterstützungsmethoden anfügbare Member sind.  
+  
+ In früheren Versionen von .NET Framework war diese Klasse in der WPF-spezifischen Assembly WindowsBase. In [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.AmbientAttribute> befindet sich in der System.Xaml-Assembly. Weitere Informationen finden Sie unter [aus WPF zu System.Xaml migrierte Typen](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+ Ambient-Typen (Typen, bei denen <xref:System.Windows.Markup.AmbientAttribute> wird angewendet auf Typebene) für bestimmte XAML-Verarbeitungssituationen, in denen der Typ einer Eigenschaft werden außerhalb der Reihenfolge behoben muss, verwendet werden können.  
+  
+## <a name="object-writer-scenarios"></a>Objekt-Writer-Szenarien  
+ Wenn Sie einen XAML-Objektwriter definieren, und, eine Eigenschaft, die Methode oder den Typ treten, in dem <xref:System.Windows.Markup.AmbientAttribute> wird angewendet, Sie in der Regel müssen Zugriff auf einen Dienst, um das Suchverhalten vorgesehenen ambient-Eigenschaft zu bestimmen, die zum Schreiben von Objekten erforderlich ist. Weitere Informationen finden Sie unter <xref:System.Xaml.IAmbientProvider>.  
+  
+## <a name="value-converters"></a>Wertkonverter  
+ Den Einsatz von Typkonvertern oder Markuperweiterungen müssen möglicherweise die Ambiente-Informationen zu kennen, um Eigenschaften zu verarbeiten, die indirekte typzuordnungen, z. B. Eigenschaften darstellen, die von Zeichenfolgennamen mit oder ohne Qualifizierung Membern oder Typen angeben. In diesem Szenario <xref:System.Windows.Markup.AmbientAttribute> nicht direkt für den Wert Code Konverterlogik verwendet werden soll. Der Wertkonverter sollten stattdessen auf die Verwendung von XAML-Writer Verarbeitungsverhalten, das weitergeleitet werden verlassen <xref:System.Xaml.IAmbientProvider> in seinen Dienstkontexten auf Ihre Wert die Konvertermethoden aufruft, wenn aufgerufen.  
+  
+## <a name="wpf-scenarios-for-ambientattribute"></a>WPF-Szenarien für AmbientAttribute  
+  
+-   Eine Eigenschaft einer <xref:System.Windows.Style> (<xref:System.Windows.Style.TargetType%2A>) können Sie die erforderliche Eigenschaft Name Suchvorgänge, die erforderlich sind, finden Sie die unterstützende Verweise für Eigenschaftsnamen in qualifizieren <xref:System.Windows.Setter.Property%2A?displayProperty=nameWithType> Werte.  
+  
+-   Alle Inhalte innerhalb einer `Resources` Eigenschaft (Elemente eine <xref:System.Windows.ResourceDictionary>) sowie den Inhalt der Vorlage muss auf anderen Peers als Werte zugreifen. Deklarieren die gesamte `Resources` -Eigenschaft als ambient ruft eine Logik, die dadurch in der WPF XAML-Parser.  
+  
+ Finden Sie unter <xref:System.Windows.ResourceDictionary> für ein Beispiel für ein Szenario für die Einstellung <xref:System.Windows.Markup.AmbientAttribute> auf Typebene.  
+  
+<a name="xamlTextUsage_AmbientAttribute"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AmbientAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.AmbientAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.AmbientAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

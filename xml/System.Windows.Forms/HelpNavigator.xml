@@ -1,0 +1,150 @@
+<Type Name="HelpNavigator" FullName="System.Windows.Forms.HelpNavigator">
+  <TypeSignature Language="C#" Value="public enum HelpNavigator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HelpNavigator extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HelpNavigator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt Konstanten an, der angibt, welche Elemente der Hilfedatei anzeigen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, durch die <xref:System.Windows.Forms.Help> und <xref:System.Windows.Forms.HelpProvider> Klassen für den Zugriff auf bestimmte Elemente einer Hilfedatei. Z. B. bei Verwendung mit der <xref:System.Windows.Forms.HelpProvider> Komponente, die F1-Hilfe, die TopicId oder ein Thema verbindet konnte angegeben werden, um Hilfe zu einem Thema kontextspezifisch zu öffnen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt ein Formular mit drei Schaltflächen, die für die Interaktion mit der Hilfedatei mspaint.chm verwendet werden kann. Die **Hilfe anzeigen** Schaltfläche zeigt den **Index** Registerkarte für die Hilfedatei. Die **Hilfe anzeigen** Schaltfläche zeigt den Inhalt in der Hilfedatei, die auf Grundlage des Werts im ausgewählten der **Help Navigator** Liste. Die **Schlüsselwort anzeigen** Schaltfläche zeigt den Inhalt in der Hilfedatei, die basierend auf dem Schlüsselwort angegeben werden, der **Schlüsselwort** Textfeld.  
+  
+ Um die Hilfeseite zu Ellipsen durch den Indexwert anzuzeigen, wählen Sie beispielsweise den KeywordIndex-Wert in der **Help Navigator** Dropdown-Liste, geben **Ovale** in der **Parameter** Textfeld und klicken Sie dann auf die **Hilfe anzeigen** Schaltfläche. Geben Sie zum Anzeigen im Hilfethema "So zeichnen mit einem Pinsel" durch das Schlüsselwort **mspaint.chm::/paint_brush.htm** in der **Schlüsselwort** Textfeld, und klicken Sie dann auf die **Schlüsselwort anzeigen** Schaltfläche.  
+  
+ Im Beispiel wird die <xref:System.Windows.Forms.Help.ShowHelp%2A> Methode, um die verschiedenen Registerkarten für Hilfe und -Hilfethemen anzuzeigen und die <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> Methode, um den Index für die Hilfe anzuzeigen.  
+  
+ [!code-cpp[System.Windows.Forms.Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Help/CPP/helpsnippet.cpp#1)]
+ [!code-csharp[System.Windows.Forms.Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Help/CS/helpsnippet.cs#1)]
+ [!code-vb[System.Windows.Forms.Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Help/VB/helpsnippet.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AssociateIndex">
+      <MemberSignature Language="C#" Value="AssociateIndex" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HelpNavigator AssociateIndex = int32(-2147483643)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HelpNavigator.AssociateIndex" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HelpNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Hilfedatei, die zu diesem Indexeintrag für den ersten Buchstaben eines angegebenen Themas wird geöffnet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="Find" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HelpNavigator Find = int32(-2147483644)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HelpNavigator.Find" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HelpNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Hilfedatei, die auf der Seite "Suche" wird geöffnet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="Index" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HelpNavigator Index = int32(-2147483645)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HelpNavigator.Index" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HelpNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Hilfedatei, die dem Index wird geöffnet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KeywordIndex">
+      <MemberSignature Language="C#" Value="KeywordIndex" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HelpNavigator KeywordIndex = int32(-2147483642)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HelpNavigator.KeywordIndex" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HelpNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Hilfedatei wird an das Thema mit dem angegebenen Index-Eintrag geöffnet, falls vorhanden; Andernfalls wird der Indexeintrag mit dem angegebenen Schlüsselwort am nächsten gelegenen angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TableOfContents">
+      <MemberSignature Language="C#" Value="TableOfContents" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HelpNavigator TableOfContents = int32(-2147483646)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HelpNavigator.TableOfContents" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HelpNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Hilfedatei des Inhaltsverzeichnisses wird geöffnet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Topic">
+      <MemberSignature Language="C#" Value="Topic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HelpNavigator Topic = int32(-2147483647)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HelpNavigator.Topic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HelpNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Hilfedatei öffnet mit einem angegebenen Thema auf, wenn das Thema vorhanden ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopicId">
+      <MemberSignature Language="C#" Value="TopicId" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HelpNavigator TopicId = int32(-2147483641)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HelpNavigator.TopicId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HelpNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Hilfedatei, die an ein Thema, angegeben durch einen numerischen Themenbezeichner wird geöffnet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

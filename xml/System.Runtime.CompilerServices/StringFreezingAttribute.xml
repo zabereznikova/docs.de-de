@@ -1,0 +1,90 @@
+<Type Name="StringFreezingAttribute" FullName="System.Runtime.CompilerServices.StringFreezingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class StringFreezingAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit StringFreezingAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.StringFreezingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Veraltet. Fixiert ein Zeichenfolgenliteral beim Erstellen von systemeigenen Abbildern mithilfe der [Ngen.exe (Native Image Generator)](~/docs/framework/tools/ngen-exe-native-image-generator.md). Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Runtime.CompilerServices.StringFreezingAttribute> Klasse ist veraltet in .NET Framework, Version 3.5 Service Pack 1 (SP1) und höheren Versionen.  
+  
+ Eine fixierte Zeichenfolge ist ein Zeichenfolgenliteral-Objekt, das ist kompatibel mit dem verwalteten Heap und ein systemeigenes Image von serialisiert wurde die [Ngen.exe (Native Image Generator)](~/docs/framework/tools/ngen-exe-native-image-generator.md).  Die <xref:System.Runtime.CompilerServices.StringFreezingAttribute> -Attributs können Sie den Code zu optimieren, indem Sie Vorabzuordnung Zeichenfolgenliteralen während der Generierung von systemeigenen Images statt zur Laufzeit.  Nachdem ein Zeichenfolgenliteral gesperrt wurde, kann Code einfach auf die Zeichenfolge, die mit der Adresse in das systemeigene Abbild verweisen.  
+  
+ Die <xref:System.Runtime.CompilerServices.StringFreezingAttribute> auf Assemblyebene angewendet werden muss.  
+  
+ Beachten Sie, dass die common Language Runtime (CLR) eine beliebige systemeigene Images entladen kann, die eine fixierte Zeichenfolge aufweist, da jedes Objekt im Heap auf die fixierte Zeichenfolge verweisen kann.  Daher sollten Sie verwenden die <xref:System.Runtime.CompilerServices.StringFreezingAttribute> Klasse nur in Fällen, in denen das systemeigene Abbild mit der fixierten Zeichenfolge intensiv gemeinsam verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Anwenden der <xref:System.Runtime.CompilerServices.StringFreezingAttribute> zu einer Assembly an.  
+  
+ [!code-csharp[Runtime.CompilerServices.StringFreezingAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/Runtime.CompilerServices.StringFreezingAttribute/cs/example.cs#1)]
+ [!code-vb[Runtime.CompilerServices.StringFreezingAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Runtime.CompilerServices.StringFreezingAttribute/vb/example.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StringFreezingAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.StringFreezingAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.CompilerServices.StringFreezingAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Anwenden der <xref:System.Runtime.CompilerServices.StringFreezingAttribute> zu einer Assembly an.  
+  
+ [!code-csharp[Runtime.CompilerServices.StringFreezingAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/Runtime.CompilerServices.StringFreezingAttribute/cs/example.cs#1)]
+ [!code-vb[Runtime.CompilerServices.StringFreezingAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Runtime.CompilerServices.StringFreezingAttribute/vb/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,693 @@
+<Type Name="WizardStepCollection" FullName="System.Web.UI.WebControls.WizardStepCollection">
+  <TypeSignature Language="C#" Value="public sealed class WizardStepCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WizardStepCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WizardStepCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleiteten Objekte in einem Steuerelement, das als Assistent fungiert. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WizardStepCollection> Klasse dient zum Speichern und verwalten eine Auflistung von <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleiteten Objekte in einem Steuerelement, das als Assistent, wie z. B. fungiert die <xref:System.Web.UI.WebControls.CreateUserWizard> Steuerelement oder <xref:System.Web.UI.WebControls.Wizard> Steuerelement. Z. B. die <xref:System.Web.UI.WebControls.Wizard> steuern verwendet der <xref:System.Web.UI.WebControls.WizardStepCollection> -Klasse für die <xref:System.Web.UI.WebControls.Wizard.WizardSteps%2A> Eigenschaft.  
+  
+ Es gibt mehrere Möglichkeiten, die Sie erreichen die <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleiteten Objekte in der <xref:System.Web.UI.WebControls.WizardStepCollection>:  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.WizardStepCollection.Item%2A> Eigenschaft den direkten Zugriff auf eine <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt am angegebenen nullbasierten Index.  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.WizardStepCollection.GetEnumerator%2A> Methode zum Erstellen eines Enumerators, der zum Durchlaufen der Auflistung verwendet werden kann.  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.WizardStepCollection.CopyTo%2A> Methode zum Kopieren der Inhalte der <xref:System.Web.UI.WebControls.WizardStepCollection> Auflistung in ein <xref:System.Array> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Auffüllen der <xref:System.Web.UI.WebControls.WizardStepCollection> Auflistung verwenden deklarativen Syntax.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.WizardStepCollectionDeclare#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepCollectionDeclare/CS/wizardstepcollectiondeclarecs.aspx#3)]
+ [!code-aspx-vb[System.Web.UI.WebControls.WizardStepCollectionDeclare#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepCollectionDeclare/VB/wizardstepcollectiondeclarevb.aspx#3)]  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie Programmgesteuertes Auffüllen einer <xref:System.Web.UI.WebControls.WizardStepCollection> Auflistung.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.WizardStepCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepCollection/CS/wizardstepcollectioncs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.WizardStepCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepCollection/VB/wizardstepcollectionvb.aspx#1)]  
+  
+ Im folgenden finden die CodeBehind-Datei für die Webseite im vorherigen Beispiel.  
+  
+ [!code-csharp[System.Web.UI.WebControls.WizardStepCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepCollection/CS/wizardstepcollection.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.WizardStepCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepCollection/VB/wizardstepcollection.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.WebControls.WizardStepBase wizardStep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.UI.WebControls.WizardStepBase wizardStep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.Add(System.Web.UI.WebControls.WizardStepBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wizardStep" Type="System.Web.UI.WebControls.WizardStepBase" />
+      </Parameters>
+      <Docs>
+        <param name="wizardStep">Die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt zum Anfügen an die <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt an das Ende der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WizardStepCollection.Add%2A> Methode fügt die <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt an das Ende der <xref:System.Web.UI.WebControls.WizardStepCollection> Auflistung. Hinzufügen einer <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitete Objekt der Auflistung an einer bestimmten Indexposition verwenden die <xref:System.Web.UI.WebControls.WizardStepCollection.AddAt%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das programmgesteuert erstellen eine <xref:System.Web.UI.WebControls.Wizard> Steuerelement und mithilfe der <xref:System.Web.UI.WebControls.WizardStepCollection.Add%2A> -Methode zum Hinzufügen <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitet <xref:System.Web.UI.WebControls.WizardStep> Datenbankobjekte in der <xref:System.Web.UI.WebControls.Wizard.WizardSteps%2A> Auflistung. Beachten Sie, dass im Beispiel die <xref:System.Web.UI.WebControls.Wizard.WizardSteps%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Wizard> -Steuerelement ist eine Instanz von der <xref:System.Web.UI.WebControls.WizardStepCollection> Klasse.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.WizardSteps#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardSteps/CS/wizardstepscs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.WizardSteps#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardSteps/VB/wizardstepsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes übergebene Objekt ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAt">
+      <MemberSignature Language="C#" Value="public void AddAt (int index, System.Web.UI.WebControls.WizardStepBase wizardStep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAt(int32 index, class System.Web.UI.WebControls.WizardStepBase wizardStep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.AddAt(System.Int32,System.Web.UI.WebControls.WizardStepBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="wizardStep" Type="System.Web.UI.WebControls.WizardStepBase" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Indexposition, an dem eingefügt <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt.</param>
+        <param name="wizardStep">Die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt zum Anfügen an die <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt der Auflistung an der angegebenen Indexposition.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WizardStepCollection.AddAt%2A> Methode fügt die <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt der Auflistung an der angegebenen Indexposition.  
+  
+ Hinzufügen einer <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt an das Ende der <xref:System.Web.UI.WebControls.WizardStepCollection> Sammlung, Nutzung der <xref:System.Web.UI.WebControls.WizardStepCollection.Add%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes übergebene Objekt ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleiteten Objekte aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.WizardStepCollection.Clear%2A> Methode, um alle Entfernen der <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleiteten Objekte aus der <xref:System.Web.UI.WebControls.WizardStepCollection> Auflistung.  
+  
+> [!NOTE]
+>  Nach der <xref:System.Web.UI.WebControls.WizardStepCollection.Clear%2A> Methode entfernt die <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleiteten Objekte aus der Auflistung der <xref:System.Web.UI.WebControls.WizardStepCollection.Count%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.WizardStepCollection> Auflistung hat den Wert 0 (null).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.WizardStepBase wizardStep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.WizardStepBase wizardStep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.Contains(System.Web.UI.WebControls.WizardStepBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wizardStep" Type="System.Web.UI.WebControls.WizardStepBase" />
+      </Parameters>
+      <Docs>
+        <param name="wizardStep">Die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt finden Sie in der <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung.</param>
+        <summary>Bestimmt, ob die <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung enthält einen bestimmten <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitete Objekt befindet sich der <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.WizardStepCollection.Contains%2A> Methode, um zu bestimmen, ob eine <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt in der Auflistung enthalten ist. Diese Methode wird häufig verwendet, um das Vorhandensein einer <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt vor dem Ausführen einer Aufgabe, wie z. B. das Entfernen einer <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt aus der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="wizardStep" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.WizardStepBase[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.WizardStepBase[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.CopyTo(System.Web.UI.WebControls.WizardStepBase[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.WizardStepBase[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein nullbasiertes Array von <see cref="T:System.Web.UI.WebControls.WizardStepBase" /> Kopieren von Objekten, die die Elemente aus der Auflistung.</param>
+        <param name="index">Die Position im Zielarray, an dem das Array startet den Empfang von kopierten Elemente.</param>
+        <summary>Kopiert alle Elemente aus einem <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung in ein kompatibles eindimensionales Array von <see cref="T:System.Web.UI.WebControls.WizardStepBase" /> -Objekten, beginnend am angegebenen Index im Zielarray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.WizardStepCollection.CopyTo%2A> Methode, um den Inhalt der Auflistung in das angegebene nullbasierte Array kopieren. Elemente werden kopiert, beginnend am angegebenen Index des Zielarrays. Nachdem die Elemente in einem Array sind, können Sie Arraysyntax verwenden, den Zugriff auf die Elemente in der <xref:System.Web.UI.WebControls.WizardStepCollection> Auflistung.  
+  
+ Als Alternative können Sie auch die <xref:System.Web.UI.WebControls.WizardStepCollection.GetEnumerator%2A> Methode, um einen Enumerator zu erstellen, die Zugriff auf die Elemente in der Auflistung verwendet werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WizardStepCollection.CopyTo%2A> Methode zum Kopieren der <xref:System.Web.UI.WebControls.WizardStepBase> Objekte aus der Auflistung in ein Array. Dann wird das Array durchlaufen, zum Anzeigen der <xref:System.Web.UI.Control.ID%2A> -Eigenschaft jedes <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt. Beachten Sie, dass im Beispiel die <xref:System.Web.UI.WebControls.Wizard.WizardSteps%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Wizard> -Steuerelement ist eine Instanz von der <xref:System.Web.UI.WebControls.WizardStepCollection> Klasse.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.WizardStepCollectionCopyTo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepCollectionCopyTo/CS/wizardstepcollectioncopytocs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.WizardStepCollectionCopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepCollectionCopyTo/VB/wizardstepcollectioncopytovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardStepCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleiteten Objekte in der <see cref="T:System.Web.UI.WebControls.Wizard" /> des Steuerelements <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung.</summary>
+        <value>Die Anzahl der <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleiteten Objekte in der <see cref="T:System.Web.UI.WebControls.Wizard" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.WizardStepCollection.Count%2A> -Eigenschaft können Sie bestimmen die Anzahl der <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleiteten Objekte in der <xref:System.Web.UI.WebControls.WizardStepCollection> Auflistung. Die <xref:System.Web.UI.WebControls.WizardStepCollection.Count%2A> Eigenschaft wird häufig verwendet, beim Durchlaufen des Auflistung zum Bestimmen der oberen Grenze.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Collections.IEnumerator" />-implementiert-Objekt, das zum Durchlaufen verwendet werden kann die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleiteten Objekte in der Auflistung.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, das alle enthält implementiert die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleiteten Objekte in der <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.WizardStepBase wizardStep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.WizardStepBase wizardStep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.IndexOf(System.Web.UI.WebControls.WizardStepBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wizardStep" Type="System.Web.UI.WebControls.WizardStepBase" />
+      </Parameters>
+      <Docs>
+        <param name="wizardStep">Die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitete Objekt, das Suchen der <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung.</param>
+        <summary>Bestimmt den Indexwert, der die Position des angegebenen <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt in der Auflistung.</summary>
+        <returns>Wenn gefunden, der den nullbasierten Index des ersten Vorkommens der <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitete Objekt innerhalb der aktuellen übergeben <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung enthalten ist, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.WizardStepCollection.IndexOf%2A> Methode, um zu bestimmen, den Index des angegebenen <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt in der aktuellen <xref:System.Web.UI.WebControls.WizardStepCollection> Auflistung. Wenn die <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitete Objekt ist nicht in der Auflistung, die Methode gibt-1 zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes übergebene Objekt ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.UI.WebControls.WizardStepBase wizardStep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.UI.WebControls.WizardStepBase wizardStep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.Insert(System.Int32,System.Web.UI.WebControls.WizardStepBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="wizardStep" Type="System.Web.UI.WebControls.WizardStepBase" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Indexposition zum Einfügen der <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt.</param>
+        <param name="wizardStep">Die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt zum Einfügen in die <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt in der Auflistung an der angegebenen Indexposition.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WizardStepCollection.Insert%2A> Methode fügt die <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt der Auflistung an der angegebenen Indexposition.  
+  
+ Alternativ können Sie die <xref:System.Web.UI.WebControls.WizardStepCollection.AddAt%2A> -Methode zum Hinzufügen der <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt der Auflistung. Hinzufügen einer <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt an das Ende der <xref:System.Web.UI.WebControls.WizardStepCollection> Sammlung, Nutzung der <xref:System.Web.UI.WebControls.WizardStepCollection.Add%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.WizardStepCollection.Insert%2A> Methode und die <xref:System.Web.UI.WebControls.WizardStepCollection.AddAt%2A> -Methode führen im Wesentlichen die gleiche Funktion. Wenn die <xref:System.Web.UI.WebControls.WizardStepCollection.Insert%2A> -Methode aufgerufen wird, übergibt diese einfach die `wizardStep` und `index` Parameter für die <xref:System.Web.UI.WebControls.WizardStepCollection.AddAt%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das programmgesteuert erstellen eine <xref:System.Web.UI.WebControls.Wizard> Steuerelement und Verwenden der <xref:System.Web.UI.WebControls.WizardStepCollection.Insert%2A> -Methode zum Hinzufügen <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitete Objekte, die <xref:System.Web.UI.WebControls.Wizard.WizardSteps%2A> Auflistung. Beachten Sie, dass im Beispiel die <xref:System.Web.UI.WebControls.Wizard.WizardSteps%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Wizard> -Steuerelement ist eine Instanz von der <xref:System.Web.UI.WebControls.WizardStepCollection> Klasse.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.WizardStepCollectionInsert#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepCollectionInsert/CS/wizardstepcollectioninsertcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.WizardStepCollectionInsert#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepCollectionInsert/VB/wizardstepcollectioninsertvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardStepCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleiteten Objekte in der Auflistung können geändert werden.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung kann geändert werden; andernfalls, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardStepCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die Auflistung synchronisiert (threadsicher) ist.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stammt aus dem <xref:System.Collections.ICollection> -Schnittstelle und wird überschrieben, um stets `false`.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.WizardStepCollection.IsSynchronized%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.IsSynchronized%2A> Eigenschaft von der <xref:System.Collections.ICollection> Schnittstelle  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WizardStepBase this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WizardStepBase Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardStepCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WizardStepBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des der <see cref="T:System.Web.UI.WebControls.WizardStep" /> abzurufenden Objekts.</param>
+        <summary>Ruft eine <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt aus der Auflistung am angegebenen Index.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt in der <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung an der angegebenen Indexposition.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.WizardStepCollection.Item%2A> Eigenschaft zum Abrufen der <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt an der angegebenen Indexposition in der <xref:System.Web.UI.WebControls.WizardStepCollection> mithilfe der Arraynotation Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.WebControls.WizardStepBase wizardStep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.WebControls.WizardStepBase wizardStep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.Remove(System.Web.UI.WebControls.WizardStepBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wizardStep" Type="System.Web.UI.WebControls.WizardStepBase" />
+      </Parameters>
+      <Docs>
+        <param name="wizardStep">Die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitet aus der Auflistung zu entfernende Objekt.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.WizardStepCollection.Remove%2A> -Methode zum Entfernen der <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt aus der <xref:System.Web.UI.WebControls.WizardStepCollection> Auflistung. Alternativ können Sie die <xref:System.Web.UI.WebControls.WizardStepCollection.RemoveAt%2A> -Methode zum Entfernen einer <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt aus einer angegebenen Position in der <xref:System.Web.UI.WebControls.WizardStepCollection> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WizardStepCollection.Remove%2A> -Methode zum Entfernen einer <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt aus der <xref:System.Web.UI.WebControls.WizardStepCollection> Auflistung. Beachten Sie, dass im Beispiel die <xref:System.Web.UI.WebControls.Wizard.WizardSteps%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Wizard> -Steuerelement ist eine Instanz von der <xref:System.Web.UI.WebControls.WizardStepCollection> Klasse.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.WizardStepCollectionRemove#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepCollectionRemove/CS/wizardstepcollectionremovecs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.WizardStepCollectionRemove#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.WizardStepCollectionRemove/VB/wizardstepcollectionremovevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes übergebene Objekt ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des der <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt entfernen.</param>
+        <summary>Entfernt die <see cref="T:System.Web.UI.WebControls.WizardStepBase" />-abgeleitetes Objekt aus der Auflistung am angegebenen Speicherort.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.WizardStepCollection.RemoveAt%2A> -Methode zum Entfernen der <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt aus der <xref:System.Web.UI.WebControls.WizardStepCollection> Auflistung an der angegebenen Indexposition. Alternativ können Sie einen bestimmten entfernen <xref:System.Web.UI.WebControls.WizardStepBase>-abgeleitetes Objekt aus der Auflistung über den <xref:System.Web.UI.WebControls.WizardStepCollection.Remove%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardStepCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Web.UI.WebControls.WizardStepCollection" />-Auflistung synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das in dieser Implementierung zurückgegebene Objekt stellt der <xref:System.Web.UI.WebControls.WizardStepCollection> Objekt selbst.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.WizardStepCollection.SyncRoot%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.SyncRoot%2A> Eigenschaft von der <xref:System.Collections.ICollection> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Eine nullbasierte <see cref="T:System.Array" /> , empfängt der kopierten Elemente aus der <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung.</param>
+        <param name="index">Die Position im Zielarray, an dem Empfang des kopierten Inhalts beginnen.</param>
+        <summary>Kopiert alle Elemente aus einem <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> Auflistung in ein eindimensionales Array, beginnend am angegebenen Index im Zielarray.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Object" /> , an das Ende der Auflistung angefügt werden soll.</param>
+        <summary>Fügt das angegebene Objekt am Ende der Auflistung.</summary>
+        <returns>Die Position, an der das neue Element eingefügt wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Object" />, die in der Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt, ob die Auflistung das angegebene Objekt enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Object" /> befindet sich der <see cref="T:System.Collections.IList" />andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das in der Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt den Indexwert, der die Position des angegebenen Objekts in der Auflistung darstellt.</summary>
+        <returns>Der Indexwert des angegebenen Objekts in der Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index, an dem das Objekt in die Auflistung eingefügt werden soll.</param>
+        <param name="value">Das Objekt, das in die Auflistung eingefügt werden soll.</param>
+        <summary>Fügt das angegebene Objekt in der Auflistung an der angegebenen Position.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardStepCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung eine feste Größe aufweist.</summary>
+        <value>
+          <see langword="true" />Wenn die Auflistung eine feste Größe hat. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WizardStepCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Objekts aus der Auflistung abgerufen werden soll.</param>
+        <summary>Ruft das Objekt am angegebenen Index in der Sammlung ab.</summary>
+        <value>Das Objekt abgerufen werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht den Zugriff auf ein bestimmtes Element in der Auflistung mit folgender Syntax: myCollection[index].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStepCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das aus der Auflistung zu entfernende Objekt.</param>
+        <summary>Entfernt das angegebene Objekt aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

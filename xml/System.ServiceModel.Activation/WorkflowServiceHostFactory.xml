@@ -1,0 +1,99 @@
+<Type Name="WorkflowServiceHostFactory" FullName="System.ServiceModel.Activation.WorkflowServiceHostFactory">
+  <TypeSignature Language="C#" Value="public class WorkflowServiceHostFactory : System.ServiceModel.Activation.ServiceHostFactoryBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowServiceHostFactory extends System.ServiceModel.Activation.ServiceHostFactoryBase" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activation.WorkflowServiceHostFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.WorkflowServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Activation.ServiceHostFactoryBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The WF3 types are deprecated.  Instead, please use the new WF4 types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Factory, von der Instanzen von <see cref="T:System.ServiceModel.WorkflowServiceHost" /> in verwalteten Hostumgebungen bereitgestellt werden. Die Hostinstanz wird hierbei dynamisch gemäß den eingehenden Nachrichten erstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei den verwalteten Hostumgebungen mit Unterstützung für dynamische Aktivierung handelt es sich um Internet Information Services (IIS) und Windows Process Activation Service (WAS).  
+  
+ Wurde eine benutzerdefinierte Ableitung von <xref:System.ServiceModel.WorkflowServiceHost> implementiert, sollte das zusätzliche Implementieren einer von der <xref:System.ServiceModel.Activation.WorkflowServiceHostFactory>-Klasse abgeleiteten Factory in Betracht gezogen werden.  
+  
+ Wurde dagegen eine benutzerdefinierte Ableitung von <xref:System.ServiceModel.ServiceHostBase> implementiert, sollte das zusätzliche Implementieren einer Factory in Betracht gezogen werden, durch die die verwendete Factory direkt von <xref:System.ServiceModel.Activation.ServiceHostFactoryBase> abgeleitet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowServiceHostFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.WorkflowServiceHostFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activation.WorkflowServiceHostFactory" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateServiceHost">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.ServiceHostBase CreateServiceHost (string constructorString, Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.ServiceHostBase CreateServiceHost(string constructorString, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.WorkflowServiceHostFactory.CreateServiceHost(System.String,System.Uri[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ServiceHostBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constructorString" Type="System.String" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]" />
+      </Parameters>
+      <Docs>
+        <param name="constructorString">Der Dateiname der Workflowmarkupdatei, von der der Workflowdienst oder der Typname des Workflowdiensttyps definiert wird.</param>
+        <param name="baseAddresses">Ein Array vom Typ <see cref="T:System.Uri" />, das die Basisadressen für den gehosteten Dienst enthält.</param>
+        <summary>Erstellt einen <see cref="T:System.ServiceModel.WorkflowServiceHost" /> aus einer Zeichenfolge mit dem Dateinamen, der Workflowmarkupdatei oder dem Typnamen des Workflowdiensttyps und der Basisadresse des angegebenen Diensts.</summary>
+        <returns>Ein dem Workflowdienst zugeordnetes <see cref="T:System.ServiceModel.ServiceHostBase" />-Objekt. Von der Standardimplementierung wird ein <see cref="T:System.ServiceModel.WorkflowServiceHost" />-Objekt mit den angegebenen Basisadressen zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei dem `constructorString`-Argument kann es sich entweder um einen vollqualifizierten Workflowtypnamen oder um den relativen Dateipfad der Workflowdefinitionsdatei (gemäß Deklaration in der SVC-Datei mit den <xref:System.ServiceModel.Activation.ServiceHostFactory>-Direktiven) handeln.  
+  
+> [!NOTE]
+>  Benennen Sie die Rollendefinitionsdatei mit dem gleichen Namen wie die Workflowdefinitionsdatei, versehen Sie sie mit der Erweiterung RULES, und legen Sie sie im gleichen Verzeichnis ab wie die Workflowdefinitionsdatei, um einer Workflowdefinition eine Regeldefinition zuzuordnen. So muss sich beispielsweise die Regeldefinitionsdatei CalculatorServiceWorkflow.rules im gleichen Verzeichnis wie CalculatorServiceWorkflow.xoml befinden.  
+  
+   
+  
+## Examples  
+ Im Folgenden finden Sie ein Beispiel für einen typbasierten Verweis auf den Workflowdienst CalculatorServiceWorkflow:  
+  
+```  
+<%@ServiceHost language=c# Debug="true" Factory="System.ServiceModel.Activation.WorkflowServiceHostFactory" Service="CalculatorServiceWorkflow" %>  
+```  
+  
+ Im Folgenden finden Sie ein Beispiel für den Verweis einer Workflowdefinitionsdatei auf den Workflowdienst CalculatorServiceWorkflow:  
+  
+```  
+<%@ServiceHost language=c# Debug="true" Factory="System.ServiceModel.Activation.WorkflowServiceHostFactory" Service="CalculatorServiceWorkflow.xoml" %>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

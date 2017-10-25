@@ -1,0 +1,133 @@
+<Type Name="MidpointRounding" FullName="System.MidpointRounding">
+  <TypeSignature Language="C#" Value="public enum MidpointRounding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MidpointRounding extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.MidpointRounding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, wie mathematische Rundungsmethoden eine Zahl verarbeiten sollen, die genau zwischen zwei Zahlen liegt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.MidpointRounding> mit entsprechenden Überladungen der <xref:System.Math.Round%2A?displayProperty=nameWithType> um mehr Kontrolle über die Rundung Prozess bereitzustellen.  
+  
+ Eine Rundung nimmt es sich um eine ursprüngliche Anzahl mit impliziten oder angegebene Genauigkeit; untersucht die nächste Ziffer, die am weiterhin Genauigkeit plus eins ist. und gibt die nächste Zahl mit der gleichen Genauigkeit als die ursprüngliche Nummer zurück. Für positive Zahlen ist die nächste Ziffer zwischen 0 und 4, die nächste Zahl in Richtung minus unendlich. Wenn die nächste Ziffer 6 bis 9 ist, wird die nächste Zahl in Richtung plus unendlich. Für negative Zahlen ist die nächste Ziffer zwischen 0 und 4, die nächste Zahl in Richtung plus unendlich. Wenn die nächste Ziffer 6 bis 9 ist, wird die nächste Zahl in Richtung minus unendlich.  
+  
+ In den vorherigen Fällen die <xref:System.MidpointRounding> Enumeration wirkt sich nicht auf das Ergebnis der Rundung. Allerdings ist, wenn die nächste Ziffer 5 ist, also in der Mitte zwischen zwei möglichen Ergebnissen, und alle verbleibenden Ziffern 0 (null) oder keine verbleibenden Ziffern vorhanden sind, die nächste Zahl mehrdeutig. In diesem Fall die <xref:System.MidpointRounding> -Enumeration können Sie angeben, ob die Rundungsvorgang die nächste Zahl Weg von 0 (null) oder die nächste gerade Zahl zurückgegeben.  
+  
+ Die folgende Tabelle enthält die Ergebnisse der negativen und positiven Zahlen in Verbindung mit den Werten der Abrundung <xref:System.MidpointRounding>. Die Genauigkeit verwendet, um die Zahlen gerundet wird, ist 0 (null), d. h., nach dem Dezimaltrennzeichen auf den Rundungsvorgang. Beispielsweise ist die Ziffer nach dem Dezimaltrennzeichen für die Anzahl-2.5, 5. Da diese Ziffer in der Mitte liegt, können Sie eine <xref:System.MidpointRounding> Wert, der das Ergebnis der Rundung zu bestimmen. Wenn AwayFromZero angegeben ist, wird-3 zurückgegeben, da es sich um die nächste Zahl Weg von 0 (null) mit einer Genauigkeit von 0 (null) ist. Wenn ToEven angegeben wird, wird die-2 zurückgegeben, da es sich um die nächste gerade Zahl mit einer Genauigkeit von 0 (null) ist.  
+  
+|Ursprüngliche Anzahl|AwayFromZero|ToEven|  
+|---------------------|------------------|------------|  
+|3.5|4|4|  
+|2.8|3|3|  
+|2.5|3|2|  
+|2.1|2|2|  
+|-2.1|-2|-2|  
+|-2.5|-3|-2|  
+|-2.8|-3|-3|  
+|-3.5|-4|-4|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die <xref:System.Math.Round%2A> Methode in Verbindung mit der <xref:System.MidpointRounding.ToEven> Enumeration.  
+  
+ [!code-cpp[math.midpointrounding#1](~/samples/snippets/cpp/VS_Snippets_CLR/math.midpointrounding/cpp/mpr.cpp#1)]
+ [!code-csharp[math.midpointrounding#1](~/samples/snippets/csharp/VS_Snippets_CLR/math.midpointrounding/CS/mpr.cs#1)]
+ [!code-vb[math.midpointrounding#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/math.midpointrounding/VB/mpr.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AwayFromZero">
+      <MemberSignature Language="C#" Value="AwayFromZero" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.MidpointRounding AwayFromZero = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.MidpointRounding.AwayFromZero" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.MidpointRounding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn eine Zahl genau zwischen zwei Zahlen liegt, wird sie auf die nächste größere Zahl aufgerundet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ToEven">
+      <MemberSignature Language="C#" Value="ToEven" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.MidpointRounding ToEven = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.MidpointRounding.ToEven" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.MidpointRounding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn eine Zahl genau zwischen zwei Zahlen liegt, wird sie auf die nächste gerade Zahl gerundet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

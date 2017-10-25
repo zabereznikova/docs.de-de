@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.UI.HtmlControls">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.UI.HtmlControls" /> -Namespace enthält Klassen, die Ihnen die Erstellung von HTML-Serversteuerelemente auf einer Web Forms-Seite zu ermöglichen. HTML-Serversteuerelemente auf dem Server ausgeführt und sind direkt standardmäßigen HTML-Tags, die von den meisten Browsern unterstützt. Dadurch können Sie die HTML-Elemente auf einer Web Forms-Seite programmgesteuert zu steuern.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

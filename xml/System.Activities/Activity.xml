@@ -1,0 +1,298 @@
+<Type Name="Activity" FullName="System.Activities.Activity">
+  <TypeSignature Language="C#" Value="public abstract class Activity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Activity extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Activity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Implementation")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine abstrakte Basisklasse, die verwendet wird, um zusammengesetzte Aktivitäten aus bereits vorhandenen <see cref="T:System.Activities.Activity" />-Objekten zu erstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.Activity> ist die Basisklasse in der Aktivitätstyphierarchie. Alle anderen Aktivitätstypen wie <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity>, <xref:System.Activities.AsyncCodeActivity>, <xref:System.Activities.DynamicActivity> und <xref:System.Activities.ActivityWithResult> sind von dieser Klasse abgeleitet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine einfache Implementierung einer von <xref:System.Activities.Activity> abgeleiteten Klasse veranschaulicht.  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Activity ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Activity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Activity" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheId">
+      <MemberSignature Language="C#" Value="protected int CacheId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CacheId" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Activity.CacheId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner des Caches ab, der innerhalb des Bereichs der Workflowdefinition eindeutig ist.</summary>
+        <value>Der Bezeichner des Caches, der innerhalb des Bereichs der Workflowdefinition eindeutig ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected virtual void CacheMetadata (System.Activities.ActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CacheMetadata(valuetype System.Activities.ActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Activity.CacheMetadata(System.Activities.ActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.ActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Die Metadaten der Aktivität, die die Argumente, Variablen, untergeordnete Aktivitäten und Aktivitätsdelegaten der Aktivität kapseln.</param>
+        <summary>Erstellt und überprüft eine Beschreibung der Argumente, Variablen, untergeordneten Aktivitäten und Aktivitätsdelegaten der Aktivität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Workflowlaufzeit verwendet die Standardimplementierung von <xref:System.Activities.Activity.CacheMetadata%2A>, um die richtige Konstruktion eines Workflows sicherzustellen sowie Laufzeitbeziehungen und Lebensdauerregeln zu verwalten. Die Standardimplementierung von <xref:System.Activities.Activity.CacheMetadata%2A> untersucht die öffentlichen Eigenschaften des Aktivitätstyps mit dem <xref:System.ComponentModel.TypeDescriptor> des Typs. Diese öffentlichen Member haben den Typ <xref:System.Activities.Argument>, <xref:System.Activities.Variable>, `IEnumerable<System.Activities.Variable>`, <xref:System.Activities.Activity>, `IEnumerable<System.Activities.Activity>` oder <xref:System.Activities.ActivityDelegate>. Sie können diese Methode überschreiben, um die Erstellung der Laufzeitbeschreibung der Aktivität anzupassen und benutzerdefinierte Validierungslogik bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Constraints">
+      <MemberSignature Language="C#" Value="protected System.Collections.ObjectModel.Collection&lt;System.Activities.Validation.Constraint&gt; Constraints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Activities.Validation.Constraint&gt; Constraints" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Activity.Constraints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Activities.Validation.Constraint&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Activities.Validation.Constraint" />-Aktivitäten ab, die so konfiguriert werden kann, dass sie die Validierung für <see cref="T:System.Activities.Activity" /> bereitstellt.</summary>
+        <value>Die Auflistung der Einschränkungen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Activity.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen optionalen Anzeigenamen ab, der für Debugging, Validierung, Ausnahmebehandlung und Nachverfolgung verwendet wird, oder legt ihn fest.</summary>
+        <value>Ein Anzeigename, der für Debugging, Validierung, Ausnahmebehandlung und Nachverfolgung verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist zur Laufzeit schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Activity.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Bezeichner ab, der innerhalb des Bereichs der Workflowdefinition eindeutig ist.</summary>
+        <value>Ein Bezeichner, der innerhalb des Bereichs der Workflowdefinition eindeutig ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.Activity.Id%2A> wird für Nachverfolgung und Validierung verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Implementation">
+      <MemberSignature Language="C#" Value="protected virtual Func&lt;System.Activities.Activity&gt; Implementation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`1&lt;class System.Activities.Activity&gt; Implementation" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Activity.Implementation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.Ambient</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.XamlDeferLoad(typeof(System.Activities.XamlIntegration.FuncDeferringLoader), typeof(System.Activities.Activity))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Activities.Activity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Delegaten ab, der eine <see cref="T:System.Activities.Activity" /> mit der Ausführungslogik zurückgibt, oder legt diesen fest.</summary>
+        <value>Der Delegat, der der Ausführungslogik enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausführungslogik kann als mehrere Aktivitätsobjekte implementiert werden, indem sie in eine Sequence-Aktivität oder eine andere zusammengesetzte Aktivität aufgenommen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplementationVersion">
+      <MemberSignature Language="C#" Value="protected virtual Version ImplementationVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version ImplementationVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Activity.ImplementationVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Activities.XamlIntegration.ImplementationVersionConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Version von der Implementierung verwendet.</summary>
+        <value>Die Version der Implementierung</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateDynamicUpdateMap">
+      <MemberSignature Language="C#" Value="protected virtual void OnCreateDynamicUpdateMap (System.Activities.DynamicUpdate.UpdateMapMetadata metadata, System.Activities.Activity originalActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCreateDynamicUpdateMap(class System.Activities.DynamicUpdate.UpdateMapMetadata metadata, class System.Activities.Activity originalActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Activity.OnCreateDynamicUpdateMap(System.Activities.DynamicUpdate.UpdateMapMetadata,System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.DynamicUpdate.UpdateMapMetadata" />
+        <Parameter Name="originalActivity" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Die Metadaten, die verwendet wird.</param>
+        <param name="originalActivity">Die ursprünglichen Aktivität.</param>
+        <summary>Löst ein Ereignis aus, wenn dynamische updatezuordnung zu erstellen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeDisplayName">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeDisplayName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeDisplayName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Activity.ShouldSerializeDisplayName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die <see cref="P:System.Activities.Activity.DisplayName" />- Eigenschaft serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="P:System.Activities.Activity.DisplayName" /> Eigenschaftswert werden soll, andernfalls serialisierten <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Activity.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.String" /> zurück, die <see cref="P:System.Activities.Activity.Id" /> und <see cref="P:System.Activities.Activity.DisplayName" /> von <see cref="T:System.Activities.Activity" /> enthält.</summary>
+        <returns>Die ID und der Anzeigename der Aktivität.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

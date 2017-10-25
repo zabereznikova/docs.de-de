@@ -1,0 +1,156 @@
+<Type Name="ITableMapping" FullName="System.Data.ITableMapping">
+  <TypeSignature Language="C#" Value="public interface ITableMapping" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITableMapping" />
+  <TypeSignature Language="DocId" Value="T:System.Data.ITableMapping" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Tabelle in einer Quelltabelle ordnet eine <see cref="T:System.Data.DataSet" />, und wird implementiert, indem die <see cref="T:System.Data.Common.DataTableMapping" /> -Klasse, die von .NET Framework-Datenanbietern gemeinsam verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.ITableMapping> Schnittstelle ermöglicht es eine erbende Klasse zum Implementieren einer TableMapping-Klasse, die Spalte mit einer Datenquelle ordnet eine <xref:System.Data.DataSet> Spalte. Weitere Informationen finden Sie unter [DataAdapter DataTable- und DataColumn-Zuordnungen](~/docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md).  
+  
+ Eine Anwendung erstellt eine Instanz der nicht der <xref:System.Data.ITableMapping> -Schnittstelle direkt, sondern erstellt eine Instanz einer Klasse, die erbt <xref:System.Data.ITableMapping>.  
+  
+ Klassen, erben <xref:System.Data.ITableMapping> müssen Sie die geerbten Member implementieren und definieren Sie in der Regel zusätzliche Elemente, um die anbieterspezifische Funktionalität hinzufügen. Z. B. die <xref:System.Data.ITableMapping> Schnittstelle definiert die <xref:System.Data.ITableMapping.DataSetTable%2A> Eigenschaft. Wiederum die <xref:System.Data.Common.DataTableMapping> Klasse erbt Sie diese Eigenschaft, und definiert auch die <xref:System.Data.Common.DataTableMapping.GetDataTableBySchemaAction%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Instanz der abgeleiteten Klasse <xref:System.Data.Common.DataTableMapping>, und fügt es einer <xref:System.Data.Common.DataTableMappingCollection> Auflistung. Anschließend wird dem Benutzer darüber informiert, dass die Zuordnung der Auflistung hinzugefügt wurde und die übergeordnete Zuordnung zeigt.  
+  
+ [!code-csharp[Classic WebData DataTableMapping Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableMapping Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableMapping Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableMapping Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von der <see cref="T:System.Data.ITableMapping" /> -Schnittstelle, implementieren Sie die folgenden Konstruktoren:  
+  
+ <list type="table"><listheader><term>Element  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term>DataTableMapping()  
+  
+ </term><description>Initialisiert eine neue Instanz der TableMapping-Klasse.  
+  
+ </description></item><item><term>TableMapping (SourceTable Zeichenfolge, Zeichenfolge DataSetTable)  
+  
+ </term><description>Initialisiert eine neue Instanz der TableMapping-Klasse mit einer Datenquelle aus, wenn kein Quelltabellenname angegeben und <see cref="T:System.Data.DataTable" /> Name.  
+  
+ </description></item><item><term>TableMapping (SourceTable Zeichenfolge, Zeichenfolge DataSetTable DataColumnMapping [] ColumnMappings)  
+  
+ </term><description>Initialisiert eine neue Instanz der TableMapping-Klasse, wenn ein Quelltabellenname einer <see cref="T:System.Data.DataTable" /> Name und ein Array von ColumnMapping-Objekten.  
+  
+ </description></item></list></para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="ColumnMappings">
+      <MemberSignature Language="C#" Value="public System.Data.IColumnMappingCollection ColumnMappings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IColumnMappingCollection ColumnMappings" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ITableMapping.ColumnMappings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IColumnMappingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die abgeleitete <see cref="T:System.Data.Common.DataColumnMappingCollection" /> für die <see cref="T:System.Data.DataTable" />.</summary>
+        <value>Eine Auflistung von spaltenzuordnungen Daten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Instanz der abgeleiteten Klasse <xref:System.Data.Common.DataTableMapping>, einige seiner Eigenschaften und Kopien legt seine <xref:System.Data.Common.DataTableMapping.ColumnMappings%2A> in ein Array. In diesem Beispiel wird vorausgesetzt, dass eine <xref:System.Data.Common.DataColumnMappingCollection> erstellt wurde.  
+  
+ [!code-csharp[Classic WebData DataTableMapping.ColumnMappings Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.ColumnMappings Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableMapping.ColumnMappings Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.ColumnMappings Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSetTable">
+      <MemberSignature Language="C#" Value="public string DataSetTable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSetTable" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ITableMapping.DataSetTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Groß-/Kleinschreibung Name der Tabelle innerhalb der <see cref="T:System.Data.DataSet" />.</summary>
+        <value>Die Groß-/Kleinschreibung Name der Tabelle innerhalb der <see cref="T:System.Data.DataSet" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceTable">
+      <MemberSignature Language="C#" Value="public string SourceTable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceTable" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ITableMapping.SourceTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Groß-/Kleinschreibung beachtet Namen der Quelltabelle.</summary>
+        <value>Der Name der Quelltabelle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

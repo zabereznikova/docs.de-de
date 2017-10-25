@@ -1,0 +1,144 @@
+<Type Name="CancelEventArgs" FullName="System.ComponentModel.CancelEventArgs">
+  <TypeSignature Language="C#" Value="public class CancelEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CancelEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.CancelEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für ein abbrechbares Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein abbrechbares Ereignis wird von einer Komponente ausgelöst, wenn es eine Aktion ausführen, die, wie z. B. abgebrochen werden kann, ist die <xref:System.Windows.Forms.Form.Closing> -Ereignis für ein <xref:System.Windows.Forms.Form>.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.Form.Closing> Ereignis ist veraltet und wurde ersetzt durch <xref:System.Windows.Forms.Form.FormClosing>. Er wird hier als Beispiel angeboten, nur für die Verwendung von veranschaulichen <xref:System.ComponentModel.CancelEventArgs>.  
+  
+ <xref:System.ComponentModel.CancelEventArgs>Stellt die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft, um anzugeben, ob das Ereignis abgebrochen werden soll.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.ComponentModel.CancelEventArgs> und ein <xref:System.ComponentModel.CancelEventHandler> behandelt die <xref:System.Windows.Forms.Form.Closing> -Ereignis für ein <xref:System.Windows.Forms.Form>. Mit diesem Code wird davon ausgegangen, dass Sie erstellt haben eine <xref:System.Windows.Forms.Form> mit einem auf Klassenebene <xref:System.Boolean> Variable mit dem Namen `isDataSaved`. Außerdem wird angenommen, dass Sie eine Anweisung aufzurufenden hinzugefügt haben, die `OtherInitialize` Methode aus des Formulars <xref:System.Windows.Forms.Form.Load> -Methode oder der Konstruktor (nach dem Aufruf von `InitializeComponent`).  
+  
+ [!code-cpp[Classic CancelEventArgs Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CancelEventArgs Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CancelEventArgs Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CancelEventArgs Example/CS/source.cs#1)]
+ [!code-vb[Classic CancelEventArgs Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CancelEventArgs Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CancelEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CancelEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.CancelEventArgs" /> -Klasse mit der <see cref="P:System.ComponentModel.CancelEventArgs.Cancel" /> -Eigenschaftensatz auf <see langword="false" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CancelEventArgs (bool cancel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool cancel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CancelEventArgs.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cancel" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="cancel">
+          <see langword="true" />um das Ereignis abzubrechen; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.CancelEventArgs" /> -Klasse mit der <see cref="P:System.ComponentModel.CancelEventArgs.Cancel" /> -Eigenschaft auf den angegebenen Wert festgelegt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public bool Cancel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Cancel" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CancelEventArgs.Cancel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Ereignis abgebrochen werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn das Ereignis abgebrochen werden soll; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.ComponentModel.CancelEventArgs> und ein <xref:System.ComponentModel.CancelEventHandler> behandelt die <xref:System.Windows.Forms.Form.FormClosing> -Ereignis für ein <xref:System.Windows.Forms.Form>. Mit diesem Code wird davon ausgegangen, dass Sie erstellt haben eine <xref:System.Windows.Forms.Form> mit einem auf Klassenebene <xref:System.Boolean> Variable mit dem Namen `isDataSaved`. Außerdem wird angenommen, dass Sie eine Anweisung aufzurufenden hinzugefügt haben, die `OtherInitialize` Methode aus des Formulars <xref:System.Windows.Forms.Form.Load> -Methode oder der Konstruktor (nach dem Aufruf von `InitializeComponent`).  
+  
+ [!code-cpp[Classic CancelEventArgs Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CancelEventArgs Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CancelEventArgs Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CancelEventArgs Example/CS/source.cs#1)]
+ [!code-vb[Classic CancelEventArgs Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CancelEventArgs Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

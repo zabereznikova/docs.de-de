@@ -1,0 +1,15 @@
+<Namespace Name="System.Runtime.Remoting.MetadataServices">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Remoting.MetadataServices" /> -Namespace enthält Klassen, mit denen, die <see href="http://msdn.microsoft.com/en-us/40f6f8c8-b80c-4e9f-a920-31bcd0cf45c5">Soapsuds-Tool (Soapsuds.exe)</see> Befehlszeilentool und dem Benutzercode zum Konvertieren von Metadaten in und aus XML-Schema für das Remotinginfrastruktur. Einige der wichtigsten Klassen dieses Namespace werden die <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSink" /> Klasse und die <see cref="T:System.Runtime.Remoting.MetadataServices.MetaData" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.MetadataServices.SdlChannelSink> -Klasse wird von Remoting-Infrastruktur verwendet, um Web Services Description Language (WSDL) auf dem Server zu generieren.  
+  
+ Die <xref:System.Runtime.Remoting.MetadataServices.MetaData> Klasse stellt die Funktionalität von der [Soapsuds-Tool (Soapsuds.exe)](http://msdn.microsoft.com/en-us/40f6f8c8-b80c-4e9f-a920-31bcd0cf45c5) Befehlszeilen-tool und programmgesteuert verwendet werden können, um das gleiche Ergebnis zu erzielen. Die Methoden der <xref:System.Runtime.Remoting.MetadataServices.MetaData> -Klasse kann verwendet werden, um XML-Schemas zu erstellen, die Dienste beschreiben, die im Quellcode bereitgestellt werden und C#-Code aus XML-Schema zu erstellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

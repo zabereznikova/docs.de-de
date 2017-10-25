@@ -1,0 +1,384 @@
+<Type Name="CodeTypeParameterCollection" FullName="System.CodeDom.CodeTypeParameterCollection">
+  <TypeSignature Language="C#" Value="public class CodeTypeParameterCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeTypeParameterCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeTypeParameterCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.CodeDom.CodeTypeParameter" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.CodeDom.CodeTypeParameterCollection>-Klasse stellt ein einfaches Auflistungsobjekt bereit, mit dem ein Satz von <xref:System.CodeDom.CodeTypeParameter>-Objekten gespeichert werden kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeParameterCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeParameterCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue, leere Instanz der dem <see cref="T:System.CodeDom.CodeTypeParameterCollection" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeParameterCollection (System.CodeDom.CodeTypeParameter[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeTypeParameter[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeParameterCollection.#ctor(System.CodeDom.CodeTypeParameter[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeParameter[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Array von <see cref="T:System.CodeDom.CodeTypeParameter" /> Objekten, mit denen die Auflistung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeTypeParameterCollection" /> Klasse, die das angegebene Array von enthält <see cref="T:System.CodeDom.CodeTypeParameter" /> Objekte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeParameterCollection (System.CodeDom.CodeTypeParameterCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeTypeParameterCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeParameterCollection.#ctor(System.CodeDom.CodeTypeParameterCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.CodeDom.CodeTypeParameterCollection" /> mit dem die Auflistung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeTypeParameterCollection" /> Klasse, die die Elemente der Auflistung angegebenen Quelle enthält.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.CodeDom.CodeTypeParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.CodeDom.CodeTypeParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeParameterCollection.Add(System.CodeDom.CodeTypeParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende <see cref="T:System.CodeDom.CodeTypeParameter" />.</param>
+        <summary>Fügt der Auflistung das angegebene <see cref="T:System.CodeDom.CodeTypeParameter" />-Objekt hinzu.</summary>
+        <returns>Der nullbasierte Index, an dem das neue Element eingefügt wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeParameterCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Name eines Datentyps für das Hinzufügen der <see cref="T:System.CodeDom.CodeTypeParameter" /> Objekt der Auflistung.</param>
+        <summary>Fügt das angegebene <see cref="T:System.CodeDom.CodeTypeParameter" /> Objekt, das der Auflistung mit den Namen des angegebenen Datentyps.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.CodeDom.CodeTypeParameter[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.CodeDom.CodeTypeParameter[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeParameterCollection.AddRange(System.CodeDom.CodeTypeParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeParameter[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Array vom Typ <see cref="T:System.CodeDom.CodeTypeParameter" /> mit den Objekten, das der Auflistung hinzugefügt.</param>
+        <summary>Kopiert die Elemente des angegebenen <see cref="T:System.CodeDom.CodeTypeParameter" /> Array an das Ende der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.CodeDom.CodeTypeParameterCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.CodeDom.CodeTypeParameterCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeParameterCollection.AddRange(System.CodeDom.CodeTypeParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.CodeDom.CodeTypeParameterCollection" /> , enthält die <see cref="T:System.CodeDom.CodeTypeParameter" /> Objekten, die der Auflistung hinzugefügt.</param>
+        <summary>Kopiert die Elemente des angegebenen <see cref="T:System.CodeDom.CodeTypeParameterCollection" /> an das Ende der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.CodeDom.CodeTypeParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.CodeDom.CodeTypeParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeParameterCollection.Contains(System.CodeDom.CodeTypeParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.CodeDom.CodeTypeParameter" /> Objekt, das in der Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt, ob die Auflistung das angegebene enthält <see cref="T:System.CodeDom.CodeTypeParameter" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.CodeDom.CodeTypeParameter" /> Objekt ist in der Auflistung enthalten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.CodeDom.CodeTypeParameter[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.CodeDom.CodeTypeParameter[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeParameterCollection.CopyTo(System.CodeDom.CodeTypeParameter[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.CodeDom.CodeTypeParameter[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" /> , die das Ziel der aus der Auflistung kopierten Werte ist.</param>
+        <param name="index">Der Index des Arrays, bei dem eingefügt werden soll.</param>
+        <summary>Kopiert die Elemente in der Auflistung in das angegebene eindimensionale <see cref="T:System.Array" /> am angegebenen Index.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der <see cref="T:System.CodeDom.CodeTypeParameterCollection" /> ist größer als der verfügbare Platz zwischen dem Index des Zielarrays gemäß <paramref name="index" /> und das Ende des Zielarrays.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />ist kleiner als die niedrigsten Index im Zielarray.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.CodeDom.CodeTypeParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.CodeDom.CodeTypeParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeParameterCollection.IndexOf(System.CodeDom.CodeTypeParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.CodeDom.CodeTypeParameter" /> in der Auflistung zu suchende Objekt.</param>
+        <summary>Ruft den Index in der Auflistung des angegebenen <see cref="T:System.CodeDom.CodeTypeParameter" /> Objekt, wenn sie in der Auflistung vorhanden ist.</summary>
+        <returns>Der nullbasierte Index des angegebenen <see cref="T:System.CodeDom.CodeTypeParameter" /> Objekt in der Auflistung, sofern gefunden, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.CodeDom.CodeTypeParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.CodeDom.CodeTypeParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeParameterCollection.Insert(System.Int32,System.CodeDom.CodeTypeParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeParameter" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem das Element eingefügt werden soll.</param>
+        <param name="value">Die <see cref="T:System.CodeDom.CodeTypeParameter" /> einzufügende Objekt.</param>
+        <summary>Fügt das angegebene <see cref="T:System.CodeDom.CodeTypeParameter" /> Objekt am angegebenen Index in die Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeParameter this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeParameter Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeParameterCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Auflistungsobjekts auf.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.CodeDom.CodeTypeParameter" /> Objekt am angegebenen Index in der Auflistung.</summary>
+        <value>Das <see cref="T:System.CodeDom.CodeTypeParameter" />-Objekt am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist ein Indexer, der zum Zugriff auf die Auflistung verwendet werden kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />liegt außerhalb des gültigen Bereichs von Indizes für die Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.CodeDom.CodeTypeParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.CodeDom.CodeTypeParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeParameterCollection.Remove(System.CodeDom.CodeTypeParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das <see cref="T:System.CodeDom.CodeTypeParameter" />-Objekt, das aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.CodeDom.CodeTypeParameter" />-Objekt aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Das angegebene Objekt ist nicht in der Auflistung gefunden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

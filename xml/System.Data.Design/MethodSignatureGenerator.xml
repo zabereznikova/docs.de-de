@@ -1,0 +1,284 @@
+<Type Name="MethodSignatureGenerator" FullName="System.Data.Design.MethodSignatureGenerator">
+  <TypeSignature Language="C#" Value="public class MethodSignatureGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MethodSignatureGenerator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Design.MethodSignatureGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Diese Klasse dient zum Generieren einer Signatur der Datenbank-Abfrage-Methode, wie es durch die typisierten Dataset-Generator erstellt wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MethodSignatureGenerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.MethodSignatureGenerator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see langword="MethodSignatureGenerator" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeProvider">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CodeDomProvider CodeProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.Compiler.CodeDomProvider CodeProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Design.MethodSignatureGenerator.CodeProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CodeDomProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.CodeDom.Compiler.CodeDomProvider" />-Objekt ab oder legt es fest.</summary>
+        <value>Die <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> -Objekt, das Code generieren und Code-Kompilierung-Schnittstellen zum Generieren von Code und Verwalten der Kompilierung für eine einzelnes Programmiersprache enthält. Code-Generatoren können zum Generieren von Code in einer bestimmten Sprache verwendet werden, und Codecompiler zum Kompilieren von Code in Assemblys verwendet werden können.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerParameterType">
+      <MemberSignature Language="C#" Value="public Type ContainerParameterType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ContainerParameterType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Design.MethodSignatureGenerator.ContainerParameterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des Objekts, das ausgefüllt werden, dass Sie die Abfrage fest.</summary>
+        <value>Der Typ des Objekts, das die Abfrage ausgefüllt werden. Der Typ ist entweder <see cref="T:System.Data.DataSet" /> oder <see cref="T:System.Data.DataTable" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSetClassName">
+      <MemberSignature Language="C#" Value="public string DataSetClassName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSetClassName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Design.MethodSignatureGenerator.DataSetClassName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typnamen des typisierten Datasets ab, das ausgefüllt werden soll, oder legt den Typnamen fest.</summary>
+        <value>Eine Zeichenfolge, die den Typnamen des typisierten Datasets darstellt, das ausgefüllt werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateMethod">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeMemberMethod GenerateMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.CodeDom.CodeMemberMethod GenerateMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.MethodSignatureGenerator.GenerateMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeMemberMethod</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erfolgt die Methodenrückgabe Code Member, die die Datenbankabfrage darstellt wie von typisierten Dataset-Generator generiert.</summary>
+        <returns>Die <see cref="T:System.CodeDom.CodeMemberMethod" /> Objekt, das die Datenbankabfrage darstellt, wie von typisierten Dataset-Generator generiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateMethodSignature">
+      <MemberSignature Language="C#" Value="public string GenerateMethodSignature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GenerateMethodSignature() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.MethodSignatureGenerator.GenerateMethodSignature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, die die Methodensignatur der Datenbank-Abfrage darstellt, wie von typisierten Dataset-Generator generiert.</summary>
+        <returns>Eine Zeichenfolge, die die Methodensignatur der Datenbank-Abfrage darstellt, wie Sie vom typisierten Dataset-Generator generiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateUpdatingMethods">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeDeclaration GenerateUpdatingMethods ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.CodeDom.CodeTypeDeclaration GenerateUpdatingMethods() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.MethodSignatureGenerator.GenerateUpdatingMethods" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeDeclaration</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Code Typdeklaration, enthält die INSERT-, Update- und Löschen von Methoden, die von der Datenbankabfrage zugeordnet.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.CodeTypeDeclaration" /> Objekt enthält die <see langword="Insert" />, <see langword="Update" />, und <see langword="Delete" /> Methoden, die von der Datenbankabfrage zugeordnet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGetMethod">
+      <MemberSignature Language="C#" Value="public bool IsGetMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGetMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Design.MethodSignatureGenerator.IsGetMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob die generierte Signatur zurückgeben muss ein <see cref="T:System.Data.DataTable" /> Objekt.</summary>
+        <value>Ein boolescher Wert, der angibt, ob die generierte Signatur zurückgeben muss eine <see cref="T:System.Data.DataTable" /> Objekt: <see langword="True" /> , wenn die generierte Signatur eine Datentabelle zurück, andernfalls muss <see langword="False" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagingMethod">
+      <MemberSignature Language="C#" Value="public bool PagingMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PagingMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Design.MethodSignatureGenerator.PagingMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob die Methode Paging unterstützt.</summary>
+        <value>Ein boolescher Wert, der angibt, ob die Methode Paging unterstützt: <see langword="True" /> , wenn die Methode Paging unterstützt; <see langword="False" /> Wenn dies nicht der Fall.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterOption">
+      <MemberSignature Language="C#" Value="public System.Data.Design.ParameterGenerationOption ParameterOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Design.ParameterGenerationOption ParameterOption" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Design.MethodSignatureGenerator.ParameterOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Design.ParameterGenerationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen die Kategorie von Typen, die für Parameter zu verwenden.</summary>
+        <value>Ein <see langword="ParameterGenerationOption" /> Wert, der die Kategorie der Typen zur Verwendung bei Parameter angibt: <see cref="F:System.Data.Design.ParameterGenerationOption.ClrTypes" /> (Standard), <see cref="F:System.Data.Design.ParameterGenerationOption.SqlTypes" />, oder <see cref="F:System.Data.Design.ParameterGenerationOption.Objects" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.Data.Design.ParameterGenerationOption>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDesignTableContent">
+      <MemberSignature Language="C#" Value="public void SetDesignTableContent (string designTableContent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDesignTableContent(string designTableContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.MethodSignatureGenerator.SetDesignTableContent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designTableContent" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="designTableContent">Eine Zeichenfolgendarstellung des Tabellenschemas.</param>
+        <summary>Bestimmt das Schema der Tabelle Entwurf für die Datenbank-Abfragemethode generiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Beim Aufrufen dieser Methode mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Rufen Sie diese Methode nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMethodSourceContent">
+      <MemberSignature Language="C#" Value="public void SetMethodSourceContent (string methodSourceContent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMethodSourceContent(string methodSourceContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Design.MethodSignatureGenerator.SetMethodSourceContent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodSourceContent" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="methodSourceContent">Eine Zeichenfolgendarstellung der Datenbankabfrage.</param>
+        <summary>Legt fest, von der Datenbankabfrage, die für die Signatur der Methode generiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Beim Aufrufen dieser Methode mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Rufen Sie diese Methode nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TableClassName">
+      <MemberSignature Language="C#" Value="public string TableClassName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TableClassName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Design.MethodSignatureGenerator.TableClassName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typnamen des typisierten Tabelle ausfüllen.</summary>
+        <value>Eine Zeichenfolge, der angibt, der des Typnamen des typisierten Tabelle ausfüllen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

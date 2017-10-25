@@ -1,0 +1,138 @@
+<Type Name="ScaffoldTableAttribute" FullName="System.ComponentModel.DataAnnotations.ScaffoldTableAttribute">
+  <TypeSignature Language="C#" Value="public class ScaffoldTableAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScaffoldTableAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.ScaffoldTableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, ob eine Klasse oder eine Datentabelle Gerüstbau verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gerüstbau ist der Mechanismus zum Generieren von Webseitenvorlagen anhand des Datenbankschemas. ASP.NET Dynamic Data verwendet Gerüstbau webbasierte Benutzeroberfläche generiert, mit dem einen Benutzer zum Anzeigen und Aktualisieren einer Datenbank. Diese Klasse verwendet die <xref:System.ComponentModel.DataAnnotations.ScaffoldTableAttribute.Scaffold%2A> Eigenschaft zum Aktivieren des Gerüsts einzelner Tabellen in einer Dynamic Data-Website. Gerüstbau erhöht das ASP.NET-Seitenframework, indem dynamisch basierende auf dem Datenmodell keine physische Seiten benötigt Seiten angezeigt werden.  
+  
+ Gerüstbau stellt Folgendes bereit:  
+  
+-   Minimalen oder keinen Code zum Erstellen eines datengesteuerten-Webanwendung.  
+  
+-   Schnelle Entwicklungszeit.  
+  
+-   Seiten, die anzeigen, einfügen, bearbeiten, löschen, Sortieren und Paging Funktionen einschließlich voll funktionsfähig sind.  
+  
+-   Integrierte datenvalidierung basierend auf dem Datenbankschema.  
+  
+-   Filter, die erstellt werden für jede foreign key- oder boolescher Felder.  
+  
+ Diese Klasse kann verwendet werden, aktivieren oder Deaktivieren von Gerüstbau Datentabellen in einem Datenmodell durch Anwenden dieses Attributs der partiellen Klasse, die die Tabelle darstellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird Blendet die ErrorLog-Tabelle in der AdventureWorksLT-Datenbank durch Anwenden des Attributs Gerüst der partiellen ErrorLog-Klasse, die die ErrorLog-Tabelle darstellt. Die Gerüst-Eigenschaft ist auf festgelegt`false.`  
+  
+```csharp  
+[MetadataType (typeof(ErrorLogMetada))]  
+[ScaffoldTable(false)]  
+public partial class ErrorLog  
+{  
+  
+}  
+  
+public class ErrorLogMetada  
+{  
+  
+}  
+```  
+
+```vb  
+<MetadataType(GetType(ErrorLogMetada))> _   
+<ScaffoldTable(False)>   
+Public Partial Class ErrorLog   
+  
+End Class   
+  
+Public Class ErrorLogMetada  
+  
+End Class   
+```  
+  
+ Zum Kompilieren des Beispielcodes benötigen Sie Folgendes:  
+  
+-   Visual Studio 2008 Service Pack 1 oder Visual Developer 2008 Express Edition Service Pack 1.  
+  
+-   Die Beispieldatenbank "AdventureWorksLT". Informationen zum Herunterladen und Installieren der SQL Server-Beispieldatenbank finden Sie unter [Microsoft SQL Server Product Samples: Database](http://go.microsoft.com/fwlink/?LinkId=117483) auf der CodePlex-Website. Stellen Sie sicher, dass Sie die richtige Version der Beispieldatenbank für die Version von SQL Server installieren, dass Sie (SQL Server 2005 oder SQL Server 2008) ausgeführt werden.  
+  
+-   Eine Dynamic Data-Website. Dadurch können Sie erstellen einen Datenkontext für die Datenbank und die Klasse, die im Datenfeld anpassen und die Methoden überschreiben. Außerdem erstellt es die Umgebung aus, die die zuvor beschriebene Seite verwenden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: erstellen eine neue dynamische Website mithilfe von Datengerüstbau](http://msdn.microsoft.com/library/1564aef2-9103-436a-9806-c8ad7abd616a).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScaffoldTableAttribute (bool scaffold);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool scaffold) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ScaffoldTableAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scaffold" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="scaffold">Der Wert, der angibt, ob Gerüstbau aktiviert ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DataAnnotations.ScaffoldTableAttribute" /> mithilfe der <see cref="P:System.ComponentModel.DataAnnotations.ScaffoldTableAttribute.Scaffold" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können festlegen, `scaffold` auf `true` für das gesamte Datenmodell verfügbar zu machen alle Datentabellen in der Datenbank für CRUD (Create, Read, Update und Delete) oder verfügbar machen CRUD-Vorgänge für einzelne Tabellen durch Festlegen von `scaffold` für einzelne Tabellen `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scaffold">
+      <MemberSignature Language="C#" Value="public bool Scaffold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Scaffold" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ScaffoldTableAttribute.Scaffold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert, der angibt, ob Gerüstbau aktiviert ist.</summary>
+        <value>
+          <see langword="true" />, wenn Gerüstbau aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gerüstbau ist der Mechanismus Webseitenvorlagen basierend auf Datenbankschemas zu generieren. ASP.NET Dynamic Data verwendet Gerüstbau webbasierte Benutzeroberfläche generiert, mit dem einen Benutzer zum Anzeigen und Aktualisieren einer Datenbank. Weitere Informationen über das Gerüst-Attribut finden Sie unter <xref:System.ComponentModel.DataAnnotations.ScaffoldTableAttribute>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

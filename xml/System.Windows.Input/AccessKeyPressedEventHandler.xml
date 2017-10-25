@@ -1,0 +1,32 @@
+<Type Name="AccessKeyPressedEventHandler" FullName="System.Windows.Input.AccessKeyPressedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void AccessKeyPressedEventHandler(object sender, AccessKeyPressedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AccessKeyPressedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.AccessKeyPressedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Input.AccessKeyPressedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Das Objekt, an das der Ereignishandler angefügt ist.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Windows.Input.AccessKeyManager.AccessKeyPressed" /> angefügtes Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zugriffsschlüssel in [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] behandelt werden, durch eine Managerklasse, die verhält sich ähnlich wie ein Dienst zum Zugriffsschlüssel und leitet Tasteneingaben von den Zugriff auf die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] -Eingabesystems. Anstatt die Behandlung von Zugriffstaste gedrückt Ereignisse insbesondere durch Anfügen einen Handler für die <xref:System.Windows.Input.AccessKeyManager.AccessKeyPressed> angefügtes Ereignis auf ein bestimmtes Objekt ist im Allgemeinen eine bessere Methode besteht, einen bestimmten Befehl über eine Bindung Befehl den Zugriffsschlüssel zugeordnet werden soll und klicken Sie dann die weitergeleiteten Befehlen, die über die entsprechenden weitergeleitete Ereignisse zu behandeln. Diese Technik bietet ein einheitliche Ereignissystem für Benutzereingaben, unabhängig davon, welche Eingabemodus die Eingabe initiiert. Weitere Informationen finden Sie unter [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>
